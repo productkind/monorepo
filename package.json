@@ -1,0 +1,23 @@
+{
+  "name": "productkind",
+  "version": "0.1.0",
+  "description": "productkind monorepo",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/productkind/monorepo.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/productkind/monorepo/issues"
+  },
+  "homepage": "https://github.com/productkind/monorepo#readme",
+  "devDependencies": {
+    "zod": "^3.25.55",
+    "zx": "^8.5.5"
+  }
+}
