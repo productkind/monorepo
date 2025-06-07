@@ -16,7 +16,7 @@ const AssetTypeSchema = z.union([
   z.literal('profile'),
   z.literal('cover'),
   z.literal('email-banner'),
-  z.literal('watermark'),
+  z.literal('wordmark'),
   z.literal('email-footer'),
 ])
 
@@ -66,7 +66,7 @@ const LOGO_K_PLATFORMS = ['substack', 'youtube', 'instagram', 'linkedin', 'githu
 
 const asset_to_input_image: Partial<Record<`${PlatformName}-${AssetType}`, string>> = {
   ...(fromEntriesConst(LOGO_K_PLATFORMS.map((p) => [`${p}-profile` as const, logoK]))),
-  'substack-watermark': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-thoughts-by-productkind-linear.svg'),
+  'substack-wordmark': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-thoughts-by-productkind-linear.svg'),
   'substack-email-banner': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-thoughts-by-productkind-gradient-background.svg'),
   'substack-cover': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-thoughts-by-productkind-gradient-background-square.svg'),
 }
