@@ -7,7 +7,7 @@
         "size": [256, 256]
       },
       {
-        "type": "watermark",
+        "type": "wordmark",
         "size": [1344, 256]
       },
       {
