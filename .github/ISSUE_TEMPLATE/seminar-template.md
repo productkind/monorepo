@@ -7,6 +7,15 @@ assignees: ''
 
 ---
 
+# Content
+**Topic:**
+
+**Title:**
+
+**Description:**
+
+
+
 # What needs to be done
 
 ## Pre-event
@@ -30,6 +39,7 @@ assignees: ''
 - [ ] Create feedback form
 - [ ] Create Miro board to share during event
 - [ ] Create slides
+- [ ] Print sign to room
 
 ## During event
 - [ ] Check participants in via Meetup organiser app
@@ -41,4 +51,4 @@ assignees: ''
 
 ## Post-event
 - [ ] Send thank you message to Meetup participants
-- [ ] Add participants' data to main DB
+- [ ] Add participants' data to main DB to track retention
