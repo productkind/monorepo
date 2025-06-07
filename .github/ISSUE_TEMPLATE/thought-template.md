@@ -11,6 +11,7 @@ assignees: ''
 
 ### Marketing
 - [ ] SEO title & description
+- [ ] Add tag to article
 - [ ] Thumbnail
 - [ ] LinkedIn post
 - [ ] 3 cartoons for Notes & Instagram
