@@ -83,10 +83,10 @@ const images: Image[] = platforms.flatMap((platform) =>
     }
  })
 )
-.filter(filterDefinedByKey('inputFilePath'));
+.filter(filterDefinedByKey('inputFilePath'))
 
 // Ensure the output directory exists
-await $`mkdir -p ${path.join(absoluteBaseDir, ASSETS_DIR, OUTPUT_DIR)}`;
+await $`mkdir -p ${path.join(absoluteBaseDir, ASSETS_DIR, OUTPUT_DIR)}`
 
 for (const image of images) {
   console.log(`Exporting ${image.outputFilePath}...`);
