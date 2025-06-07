@@ -67,6 +67,7 @@ const asset_to_input_image: Partial<Record<`${PlatformName}-${AssetType}`, strin
   ...(fromEntriesConst(LOGO_K_PLATFORMS.map((p) => [`${p}-profile` as const, logoK]))),
   'substack-watermark': path.join(PRODUCT_BASE_DIR, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-thoughts-by-productkind-linear.svg'),
   'substack-email-banner': path.join(PRODUCT_BASE_DIR, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-thoughts-by-productkind-gradient-background.svg'),
+  'substack-cover': path.join(PRODUCT_BASE_DIR, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-thoughts-by-productkind-gradient-background-square.svg'),
 }
 
 const images: Image[] = platforms.flatMap((platform) =>
