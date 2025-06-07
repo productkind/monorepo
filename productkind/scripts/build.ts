@@ -49,6 +49,7 @@ const PRODUCT_BASE_DIR = '../'
 const ASSETS_DIR = 'assets'
 const SOURCE_DIR = 'src'
 const OUTPUT_DIR = 'dist'
+const absoluteBaseDir = path.resolve(__dirname, PRODUCT_BASE_DIR);
 
 const exportImage = async ({
   inputFilePath,
@@ -59,21 +60,21 @@ const exportImage = async ({
   await $`inkscape --export-type png --export-filename ${outputFilePath} --export-background ${background} -w ${width} -h ${height} ${inputFilePath}`
 }
 
-const logoK: string = path.join(PRODUCT_BASE_DIR, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-k.svg')
+const logoK: string = path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-k.svg')
 
 const LOGO_K_PLATFORMS = ['substack', 'youtube', 'instagram', 'linkedin', 'github'] as const;
 
 const asset_to_input_image: Partial<Record<`${PlatformName}-${AssetType}`, string>> = {
   ...(fromEntriesConst(LOGO_K_PLATFORMS.map((p) => [`${p}-profile` as const, logoK]))),
-  'substack-watermark': path.join(PRODUCT_BASE_DIR, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-thoughts-by-productkind-linear.svg'),
-  'substack-email-banner': path.join(PRODUCT_BASE_DIR, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-thoughts-by-productkind-gradient-background.svg'),
-  'substack-cover': path.join(PRODUCT_BASE_DIR, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-thoughts-by-productkind-gradient-background-square.svg'),
+  'substack-watermark': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-thoughts-by-productkind-linear.svg'),
+  'substack-email-banner': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-thoughts-by-productkind-gradient-background.svg'),
+  'substack-cover': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-thoughts-by-productkind-gradient-background-square.svg'),
 }
 
 const images: Image[] = platforms.flatMap((platform) =>
   platform.profileImages.map((profileImage) => {
     const outputFileName = `${platform.platform}-${profileImage.type}-${profileImage.size[0]}x${profileImage.size[1]}.png`
-    const outputFilePath = path.join(PRODUCT_BASE_DIR, ASSETS_DIR, OUTPUT_DIR, outputFileName)
+    const outputFilePath = path.join(absoluteBaseDir, ASSETS_DIR, OUTPUT_DIR, outputFileName)
     const inputFilePath = asset_to_input_image[`${platform.platform}-${profileImage.type}` as const]
     return {
       inputFilePath,
@@ -85,7 +86,7 @@ const images: Image[] = platforms.flatMap((platform) =>
 .filter(filterDefinedByKey('inputFilePath'));
 
 // Ensure the output directory exists
-await $`mkdir -p ${path.join(PRODUCT_BASE_DIR, ASSETS_DIR, OUTPUT_DIR)}`;
+await $`mkdir -p ${path.join(absoluteBaseDir, ASSETS_DIR, OUTPUT_DIR)}`;
 
 for (const image of images) {
   console.log(`Exporting ${image.outputFilePath}...`);
