@@ -1,0 +1,145 @@
+[
+  {
+    "platform": "substack",
+    "profileImages": [
+      {
+        "type": "profile",
+        "size": [256, 256]
+      },
+      {
+        "type": "watermark",
+        "size": [1344, 256]
+      },
+      {
+        "type": "email-banner",
+        "size": [1100, 220]
+      },
+      {
+        "type": "email-footer",
+        "size": [1200, 600]
+      },
+      {
+        "type": "cover",
+        "size": [600, 600]
+      }
+    ],
+    "contentImages": [
+      {
+        "type": "post",
+        "minSize": [420, 300],
+        "maxSize": [1456, 1048]
+      }
+    ]
+  },
+  {
+    "platform": "github",
+    "profileImages": [
+      {
+        "type": "profile",
+        "size": [400, 400]
+      }
+    ]
+  },
+  {
+    "platform": "youtube",
+    "profileImages": [
+      {
+        "type": "profile",
+        "size": [800, 800]
+      },
+      {
+        "type": "cover",
+        "size": [2560, 1440]
+      }
+    ],
+    "contentImages": [
+      {
+        "type": "thumbnail",
+        "minSize": [1280, 720],
+        "maxSize": [1280, 720]
+      }
+    ]
+  },
+  {
+    "platform": "instagram",
+    "profileImages": [
+      {
+        "type": "profile",
+        "size": [320, 320]
+      }
+    ],
+    "contentImages": [
+      {
+        "type": "post",
+        "minSize": [1080, 566],
+        "maxSize": [1080, 1350]
+      },
+      {
+        "type": "post",
+        "minSize": [1080, 1080],
+        "maxSize": [1080, 1080]
+      },
+      {
+        "type": "event-cover",
+        "minSize": [1080, 1920],
+        "maxSize": [1080, 1920]
+      },
+      {
+        "type": "thumbnail",
+        "minSize": [161, 201],
+        "maxSize": [161, 201]
+      }
+    ]
+  },
+  {
+    "platform": "linkedin",
+    "profileImages": [
+      {
+        "type": "profile",
+        "size": [400, 400]
+      },
+      {
+        "type": "cover",
+        "size": [1584, 396]
+      }
+    ],
+    "contentImages": [
+      {
+        "type": "post",
+        "minSize": [1200, 627],
+        "maxSize": [1200, 1200]
+      },
+      {
+        "type": "event-cover",
+        "minSize": [1600, 900],
+        "maxSize": [1600, 900]
+      }
+    ]
+  },
+  {
+    "platform": "meetup",
+    "profileImages": [
+      {
+        "type": "profile",
+        "size": [360, 360]
+      }
+    ],
+    "contentImages": [
+      {
+        "type": "event-cover",
+        "minSize": [1200, 675],
+        "maxSize": [1200, 675]
+      },
+      {
+        "type": "post",
+        "minSize": [700, 400],
+        "maxSize": [700, 400]
+      },
+      {
+        "type": "thumbnail",
+        "minSize": [300, 300],
+        "maxSize": [300, 300]
+      }
+    ]
+  }
+]
