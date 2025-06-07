@@ -7,11 +7,13 @@ assignees: ''
 
 ---
 
-## What needs to be done
+# What needs to be done
 
-## Offline
+## Pre-event
+### Offline
 - [ ] Find venue
 - [ ] Organise catering
+- [ ] Prepare jumpsuit & dungaree
 
 ### Meetup.com
 - [ ] Create event title
@@ -23,3 +25,20 @@ assignees: ''
 - [ ] Share in Portuguese Women in Tech group
 - [ ] Share in Geek Girls email list
 - [ ] Share in AIhub WhatsApp
+
+### Materials
+- [ ] Create feedback form
+- [ ] Create Miro board to share during event
+- [ ] Create slides
+
+## During event
+- [ ] Check participants in via Meetup organiser app
+- [ ] Setup catering
+- [ ] Take photos
+- [ ] Share slides
+- [ ] Share Miro board
+- [ ] Share feedback form
+
+## Post-event
+- [ ] Send thank you message to Meetup participants
+- [ ] Add participants' data to main DB
