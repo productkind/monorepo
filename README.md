@@ -18,7 +18,15 @@ All the assets and content for the Kim and Tim comics
 
 ### [`thoughts/`](thoughts/) - ✍
 
-All the assets and content for the Thoughts by productkind substack
+All the assets and content for the Thoughts by productkind Substack
+
+### [`little-parrot/`](little-parrot/) - 🦜
+
+Online education platform
+
+### [`dungarees/`](dungarees/) - 👖
+
+Shared library for code used across the productkind monorepo
 
 ## Scripts
 
@@ -39,3 +47,8 @@ git clone https://github.com/productkind/monorepo.git
 npm install
 npm run init
 ```
+
+## License
+
+This repository is licensed under several licenses, depending on the directory. Please refer to the
+individual directories for their respective licenses.
