@@ -2,6 +2,7 @@ import { $ } from 'zx'
 import platformsRaw from '../config/platforms.json' with { type: 'json' }
 import { z } from 'zod'
 import path from 'node:path'
+import { rasterizeSvg , type SvgToRasterize } from '@dungarees/zx/image.ts'
 
 const PlatformNameSchema = z.union([
   z.literal('github'),
@@ -38,27 +39,11 @@ type AssetType = z.infer<typeof AssetTypeSchema>
 
 type PlatformName = z.infer<typeof PlatformNameSchema>
 
-type Image = {
-  inputFilePath: string,
-  outputFilePath: string,
-  size: [number, number],
-  background?: string,
-}
-
 const PRODUCT_BASE_DIR = '../'
 const ASSETS_DIR = 'assets'
 const SOURCE_DIR = 'src'
 const OUTPUT_DIR = 'dist'
 const absoluteBaseDir = path.resolve(__dirname, PRODUCT_BASE_DIR);
-
-const exportImage = async ({
-  inputFilePath,
-  outputFilePath,
-  size: [width, height],
-  background = 'ffffffff'
-}: Image) => {
-  await $`inkscape --export-type png --export-filename ${outputFilePath} --export-background ${background} -w ${width} -h ${height} ${inputFilePath}`
-}
 
 const logoK: string = path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-k.svg')
 
@@ -72,7 +57,7 @@ const asset_to_input_image: Partial<Record<`${PlatformName}-${AssetType}`, strin
   'meetup-cover': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-seminars-by-productkind-gradient.svg'),
 }
 
-const images: Image[] = platforms.flatMap((platform) =>
+const images: SvgToRasterize[] = platforms.flatMap((platform) =>
   platform.profileImages.map((profileImage) => {
     const outputFileName = `${platform.platform}-${profileImage.type}-${profileImage.size[0]}x${profileImage.size[1]}.png`
     const outputFilePath = path.join(absoluteBaseDir, ASSETS_DIR, OUTPUT_DIR, outputFileName)
@@ -91,7 +76,7 @@ await $`mkdir -p ${path.join(absoluteBaseDir, ASSETS_DIR, OUTPUT_DIR)}`
 
 for (const image of images) {
   console.log(`Exporting ${image.outputFilePath}...`);
-  await exportImage(image);
+  await rasterizeSvg(image);
 }
 
 

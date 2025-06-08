@@ -1,0 +1,18 @@
+{
+  "name": "@productkind/scripts",
+  "version": "0.1.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/productkind/monorepo.git"
+  },
+  "author": "info@productkind.com",
+  "bugs": {
+    "url": "https://github.com/productkind/monorepo/issues"
+  },
+  "devDependencies": {
+    "@dungarees/zx": "*"
+  }
+}

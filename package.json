@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/productkind/monorepo.git"
   },
-  "author": "",
+  "author": "info@productkind.com",
   "bugs": {
     "url": "https://github.com/productkind/monorepo/issues"
   },
@@ -22,5 +22,10 @@
     "zod": "^3.25.55",
     "zx": "^8.5.5"
   },
-  "license": "SEE LICENSE IN LICENSE.md"
+  "license": "SEE LICENSE IN LICENSE.md",
+  "workspaces": [
+    "dungarees/src/*",
+    "productkind/scripts/",
+    "seminars/scripts/"
+  ]
 }

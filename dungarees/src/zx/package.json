@@ -1,0 +1,19 @@
+{
+  "name": "@dungarees/zx",
+  "version": "0.1.0",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/productkind/monorepo.git"
+  },
+  "author": "info@productkind.com",
+  "bugs": {
+    "url": "https://github.com/productkind/monorepo/issues"
+  },
+  "license": "MIT",
+  "description": "A collection of useful utilities for zx scripts in the Dungarees ecosystem."
+}
