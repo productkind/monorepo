@@ -1,5 +1,5 @@
 {
-  "name": "@productkind/scripts",
+  "name": "@seminars/scripts",
   "version": "0.1.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,6 +15,7 @@
   "devDependencies": {
     "zod": "^3.25.55",
     "zx": "^8.5.5",
-    "@dungarees/zx": "*"
+    "@dungarees/zx": "*",
+    "@dungarees/fs": "*"
   }
 }

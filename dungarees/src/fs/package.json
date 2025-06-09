@@ -1,0 +1,19 @@
+{
+  "name": "@dungarees/fs",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "memfs": "^4.17.0"
+  },
+  "dependencies": {
+    "@dungarees/core": "*",
+    "glob": "^11.0.2"
+  },
+  "devDependencies": {
+    "vitest": "^3.0.2"
+  },
+  "author": "info@productkind.com",
+  "license": "MIT"
+}

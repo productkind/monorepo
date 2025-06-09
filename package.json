@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "zx ./productkind/scripts/build.ts",
+    "build": "zx ./productkind/scripts/build.ts && zx ./seminars/scripts/build.ts",
     "init": "zx ./productkind/scripts/init.ts"
   },
   "repository": {
@@ -18,10 +18,6 @@
     "url": "https://github.com/productkind/monorepo/issues"
   },
   "homepage": "https://github.com/productkind/monorepo#readme",
-  "devDependencies": {
-    "zod": "^3.25.55",
-    "zx": "^8.5.5"
-  },
   "license": "SEE LICENSE IN LICENSE.md",
   "workspaces": [
     "dungarees/src/*",
