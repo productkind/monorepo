@@ -4,6 +4,7 @@ import { createFileSystem } from '@dungarees/fs/service.ts'
 import fs from 'node:fs'
 import path from 'node:path'
 import {rasterizeSvg} from '@dungarees/zx/image.ts'
+import { $ } from 'zx'
 
 const fsService = createFileSystem(fs)
 
