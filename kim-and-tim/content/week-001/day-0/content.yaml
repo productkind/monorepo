@@ -1,0 +1,58 @@
+id: "001"
+caption: "Introducing the product team"
+panels:
+  - characters:
+      - name: "Chick"
+        dialogue: null
+    caption: |
+      Chick – Junior Product Manager
+
+      Pros:
+        - eager to learn
+        - kind
+        - empathetic
+
+      Cons:
+        - inexperienced
+        - anxious
+  - characters:
+      - name: "Snail"
+        dialogue: null
+    caption: |
+      Snail – Software Developer
+
+      Pros:
+        - builds the perfect architecture
+        - uses Linux
+        - loves stickers
+
+      Cons:
+        - uses Linux
+        - builds the perfect architecture
+  - characters:
+      - name: "Cat"
+        dialogue: null
+    caption: |
+      Cat – Product Designer
+
+      Pros:
+        - immaculate style
+        - Figma and Penpot whizz
+        - CSS expert
+
+      Cons:
+        - likes animations
+        - shopaholic
+  - characters:
+      - name: "AI"
+        dialogue: null
+    caption: |
+      AI – Polymath
+      Pros:
+        - read the whole internet
+        - friendly
+        - eager to please
+
+      Cons:
+        - overconfident
+        - hallucinates
