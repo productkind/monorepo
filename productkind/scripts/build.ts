@@ -47,10 +47,11 @@ const absoluteBaseDir = path.resolve(__dirname, PRODUCT_BASE_DIR);
 
 const logoK: string = path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-k.svg')
 
-const LOGO_K_PLATFORMS = ['substack', 'youtube', 'instagram', 'linkedin', 'github'] as const;
+const LOGO_K_PLATFORMS = ['substack', 'youtube', 'linkedin', 'github'] as const;
 
 const asset_to_input_image: Partial<Record<`${PlatformName}-${AssetType}`, string>> = {
   ...(fromEntriesConst(LOGO_K_PLATFORMS.map((p) => [`${p}-profile` as const, logoK]))),
+  'instagram-profile': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-kim-and-tim-by-productkind.svg'),
   'substack-wordmark': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-thoughts-by-productkind-linear.svg'),
   'substack-email-banner': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-thoughts-by-productkind-gradient-background.svg'),
   'substack-cover': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-thoughts-by-productkind-gradient-background-square.svg'),
