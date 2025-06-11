@@ -3,8 +3,8 @@
 
 <svg
    width="1080"
-   height="1080"
-   viewBox="0 0 285.74999 285.75"
+   height="1350"
+   viewBox="0 0 285.74999 357.1875"
    version="1.1"
    id="svg1"
    inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
@@ -23,34 +23,34 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="1.3357794"
-     inkscape:cx="681.99883"
-     inkscape:cy="584.67737"
-     inkscape:window-width="1104"
-     inkscape:window-height="1057"
-     inkscape:window-x="3187"
-     inkscape:window-y="355"
+     inkscape:zoom="0.17805627"
+     inkscape:cx="982.83537"
+     inkscape:cy="407.17465"
+     inkscape:window-width="1280"
+     inkscape:window-height="692"
+     inkscape:window-x="1280"
+     inkscape:window-y="720"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1" />
   <defs
      id="defs1">
     <rect
        x="337.60629"
-       y="293.08678"
-       width="868.13047"
-       height="871.84043"
+       y="293.08679"
+       width="868.13049"
+       height="871.84045"
        id="rect26" />
     <rect
-       x="358.01107"
+       x="358.01108"
        y="335.75131"
-       width="877.40537"
-       height="734.57194"
+       width="877.4054"
+       height="734.57196"
        id="rect25" />
     <rect
-       x="418.44796"
+       x="418.44797"
        y="244.75258"
-       width="748.07442"
-       height="801.36732"
+       width="748.0744"
+       height="801.36731"
        id="rect16" />
   </defs>
   <g
@@ -78,68 +78,86 @@
        x="272.11707"
        y="188.47469"
        id="text28-3-3"
-       transform="matrix(3.1749999,0,0,3.1749999,-853.42854,-568.22078)"><tspan
+       transform="matrix(3.1749999,0,0,3.1749999,-852.33038,-562.95294)"><tspan
          x="272.11707"
          y="188.47469"
-         id="tspan14"><tspan
+         id="tspan13"><tspan
+           style="font-weight:bold;font-size:10px;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
+           id="tspan1">Snail</tspan><tspan
            style="font-weight:bold;font-size:8px;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
-           id="tspan12">Snail</tspan><tspan
-           style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
-           id="tspan13"> – Software Developer
+           id="tspan12">
 </tspan></tspan><tspan
          x="272.11707"
-         y="196.7396"
-         id="tspan28"><tspan
-           style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
-           id="tspan27">
-</tspan></tspan><tspan
-         x="272.11707"
-         y="204.25453"
-         id="tspan30"><tspan
-           style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
-           id="tspan29">Pros:
-</tspan></tspan><tspan
-         x="272.11707"
-         y="211.76945"
-         id="tspan32"><tspan
-           style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
-           id="tspan31">  - builds the perfect architecture
-</tspan></tspan><tspan
-         x="272.11707"
-         y="219.28437"
+         y="197.4896"
          id="tspan34"><tspan
            style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
-           id="tspan33">  - uses Linux
+           id="tspan14">Software Developer
 </tspan></tspan><tspan
          x="272.11707"
-         y="226.7993"
+         y="205.00453"
          id="tspan36"><tspan
            style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
-           id="tspan35">  - loves stickers
+           id="tspan35">
 </tspan></tspan><tspan
          x="272.11707"
-         y="234.31422"
+         y="212.51945"
          id="tspan38"><tspan
            style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
-           id="tspan37">
+           id="tspan37">Pros:
 </tspan></tspan><tspan
          x="272.11707"
-         y="241.82914"
+         y="220.03437"
          id="tspan40"><tspan
            style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
-           id="tspan39">Cons:
+           id="tspan39">  - builds the
 </tspan></tspan><tspan
          x="272.11707"
-         y="249.34406"
+         y="227.5493"
          id="tspan42"><tspan
            style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
-           id="tspan41">  - uses Linux 
+           id="tspan41">    perfect architecture
 </tspan></tspan><tspan
          x="272.11707"
-         y="256.85899"
+         y="235.06422"
          id="tspan44"><tspan
            style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
-           id="tspan43">  - builds the perfect architecture
+           id="tspan43">  - uses Linux
+</tspan></tspan><tspan
+         x="272.11707"
+         y="242.57914"
+         id="tspan46"><tspan
+           style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
+           id="tspan45">  - loves stickers
+</tspan></tspan><tspan
+         x="272.11707"
+         y="250.09406"
+         id="tspan48"><tspan
+           style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
+           id="tspan47">
+</tspan></tspan><tspan
+         x="272.11707"
+         y="257.60899"
+         id="tspan50"><tspan
+           style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
+           id="tspan49">Cons:
+</tspan></tspan><tspan
+         x="272.11707"
+         y="265.1239"
+         id="tspan52"><tspan
+           style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
+           id="tspan51">  - builds the
+</tspan></tspan><tspan
+         x="272.11707"
+         y="272.63882"
+         id="tspan54"><tspan
+           style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
+           id="tspan53">    perfect architecture
+</tspan></tspan><tspan
+         x="272.11707"
+         y="280.15374"
+         id="tspan56"><tspan
+           style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
+           id="tspan55">  - uses Linux 
 </tspan></tspan></text>
     <text
        xml:space="preserve"
@@ -150,91 +168,22 @@
        id="text10-7"><tspan
          x="272.11707"
          y="188.47469"
-         id="tspan46"><tspan
+         id="tspan58"><tspan
            style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
-           id="tspan45"> </tspan></tspan></text>
-    <rect
-       style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#370188;stroke-width:3.175;stroke-dasharray:none;stroke-opacity:1"
-       id="rect113-4-2"
-       width="282.57498"
-       height="282.57498"
-       x="1.5875"
-       y="1.5875" />
-    <rect
-       width="9.7521629"
-       height="15.794302"
-       rx="0"
-       ry="0"
-       fill="#6002ee"
-       stroke-width="0"
-       id="rect1-3-4-39-4-2-0-5-6"
-       x="247.90634"
-       y="261.64355" />
-    <text
-       font-family="Montserrat"
-       font-size="618.11px"
-       font-weight="200"
-       stroke-width="0"
-       fill="#33333"
-       id="text3-0-3-0-0-5-3-3-2"
-       x="248.63976"
-       y="274.20306"
-       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0109px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light'"
-       transform="scale(0.99938968,1.0006107)"><tspan
-         y="274.20306"
-         font-weight="200"
-         stroke-width="0"
-         id="tspan1-4-8-6-2-1-2-5-9"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0109px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light'"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0109px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light';fill:#ffffff;fill-opacity:1;stroke-width:0"
-           id="tspan3-6-3-13-5-2-1-6-6">k</tspan></tspan></text>
-    <text
-       dx="0"
-       dy="0"
-       font-family="Montserrat"
-       font-size="465.256px"
-       font-weight="200"
-       stroke-width="0"
-       fill="#33333"
-       id="text3-0-3-6-8-4-0-8-9"
-       x="195.74937"
-       y="274.20306"
-       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0109px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light'"
-       transform="scale(0.99938968,1.0006107)"><tspan
-         y="274.20306"
-         font-weight="200"
-         stroke-width="0"
-         id="tspan1-4-8-3-9-0-0-6-9"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0109px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light'">product</tspan></text>
-    <text
-       font-family="Montserrat"
-       font-size="465.256px"
-       font-weight="200"
-       stroke-width="0"
-       fill="#33333"
-       id="text3-0-3-6-4-3-4-3-7-8"
-       x="258.0387"
-       y="274.20306"
-       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0109px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light'"
-       transform="scale(0.99938968,1.0006107)"><tspan
-         y="274.20306"
-         font-weight="200"
-         stroke-width="0"
-         id="tspan1-4-8-3-6-9-9-9-7-0"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0109px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light'">ind</tspan></text>
+           id="tspan57"> </tspan></tspan></text>
     <path
        style="fill:#bb7a02;fill-opacity:1;stroke:#370188;stroke-width:3.175;stroke-dasharray:none;stroke-opacity:1"
-       d="m 179.34222,210.06511 31.97746,5.88806 42.11444,-6.06376 -13.47289,-36.36905 -48.2159,-2.95889 z"
+       d="m 183.80008,273.96111 31.97746,5.88806 42.11444,-6.06376 -13.47289,-36.36905 -48.2159,-2.95889 z"
        id="path31"
        sodipodi:nodetypes="cccccc" />
     <path
        style="fill:#fdc458;fill-opacity:1;stroke:#370188;stroke-width:3.175;stroke-dasharray:none;stroke-opacity:1"
-       d="m 163.58403,169.49015 c -5.55973,0.9605 -8.23371,4.3201 -9.96277,6.15952 -2.63135,2.79928 -4.99161,2.40659 -4.65757,-0.7292 0.59754,-5.60935 10.19091,-11.53087 14.20248,-11.90652"
+       d="m 168.04189,233.38615 c -5.55973,0.9605 -8.23371,4.3201 -9.96277,6.15952 -2.63135,2.79928 -4.99161,2.40659 -4.65757,-0.7292 0.59754,-5.60935 10.19091,-11.53087 14.20248,-11.90652"
        id="path30"
        sodipodi:nodetypes="cssc" />
     <path
        style="fill:#fdc458;fill-opacity:1;stroke:#370188;stroke-width:3.175;stroke-dasharray:none;stroke-opacity:1"
-       d="m 179.75119,134.48004 c -12.13056,0.26607 -15.89227,11.18217 -16.14989,18.02856 -0.35985,9.56319 -1.39128,41.01085 1.92154,52.84228 3.3128,11.83142 5.2058,15.61748 24.13607,16.09074 18.9303,0.47325 66.25599,-0.47326 66.25599,-0.47326 0,0 -50.40306,-5.73794 -56.08215,-15.67634 -5.67909,-9.93839 -6.6762,-42.05426 -6.38778,-52.47267 0.20733,-7.48503 -2.33563,-17.86605 -13.69378,-18.33931 z"
+       d="m 184.20905,198.37604 c -12.13056,0.26607 -15.89227,11.18217 -16.14989,18.02856 -0.35985,9.56319 -1.39128,41.01085 1.92154,52.84228 3.3128,11.83142 5.2058,15.61748 24.13607,16.09074 18.9303,0.47325 66.25599,-0.47326 66.25599,-0.47326 0,0 -50.40306,-5.73794 -56.08215,-15.67634 -5.67909,-9.93839 -6.6762,-42.05426 -6.38778,-52.47267 0.20733,-7.48503 -2.33563,-17.86605 -13.69378,-18.33931 z"
        id="path26"
        sodipodi:nodetypes="cssscssc" />
     <path
@@ -249,49 +198,118 @@
        sodipodi:argument="-18.497511"
        sodipodi:t0="0.12886804"
        d="m 105.69006,39.348002 c -0.32401,0.23185 -0.69518,-0.169724 -0.77545,-0.456763 -0.23505,-0.84048 0.61833,-1.513252 1.36817,-1.59391 1.54382,-0.166068 2.64192,1.346958 2.66371,2.75927 0.0376,2.433734 -2.34374,4.074062 -4.61129,3.978909 -3.50843,-0.147224 -5.803332,-3.600767 -5.534662,-6.911455 0.386726,-4.765445 5.112132,-7.824404 9.650082,-7.326992 2.50124,0.274164 4.82855,1.527219 6.51074,3.386706"
-       transform="matrix(-4.5664566,0,0,4.5664566,719.49551,16.033349)" />
+       transform="matrix(-4.5664566,0,0,4.5664566,723.95337,79.929348)" />
     <circle
        style="fill:#fdc458;fill-opacity:1;stroke:#370188;stroke-width:3.175;stroke-dasharray:none;stroke-opacity:1"
        id="path28"
-       cx="160.18546"
-       cy="115.9282"
+       cx="164.64331"
+       cy="179.8242"
        r="2.4649308" />
     <path
        style="fill:#ffffff;fill-opacity:1;stroke:#370188;stroke-width:3.175;stroke-dasharray:none;stroke-opacity:1"
-       d="m 169.55217,137.3238 -7.88775,-18.53628"
+       d="m 174.01003,201.2198 -7.88775,-18.53628"
        id="path29" />
     <circle
        style="fill:#fdc458;fill-opacity:1;stroke:#370188;stroke-width:3.175;stroke-dasharray:none;stroke-opacity:1"
        id="path28-0"
-       cx="-197.34203"
-       cy="115.60795"
+       cx="-201.7999"
+       cy="179.50395"
        r="2.4649308"
        transform="scale(-1,1)" />
     <path
        style="fill:#ffffff;fill-opacity:1;stroke:#370188;stroke-width:3.175;stroke-dasharray:none;stroke-opacity:1"
-       d="m 187.9753,137.00355 7.88775,-18.53628"
+       d="m 192.43316,200.89955 7.88775,-18.53628"
        id="path29-6" />
     <circle
        style="fill:#370188;fill-opacity:1;stroke:none;stroke-width:12.6211;stroke-dasharray:none;stroke-opacity:1"
        id="path9"
-       cx="172.99544"
-       cy="148.36871"
+       cx="177.45331"
+       cy="212.26471"
        r="2.6458333" />
     <circle
        style="fill:#370188;fill-opacity:1;stroke:none;stroke-width:12.6211;stroke-dasharray:none;stroke-opacity:1"
        id="path9-5"
-       cx="183.07474"
-       cy="148.93329"
+       cx="187.53259"
+       cy="212.82928"
        r="2.6458333" />
     <path
        style="fill:#fdc458;fill-opacity:1;stroke:#370188;stroke-width:3.175;stroke-dasharray:none;stroke-opacity:1"
-       d="m 191.28105,168.92895 c 5.55971,0.9605 7.91991,6.20282 9.64898,8.04224 2.63135,2.79929 5.30539,1.67442 4.97135,-1.46137 -0.59753,-5.60935 -10.19092,-12.68142 -14.20247,-13.05707"
+       d="m 195.73891,232.82495 c 5.55971,0.9605 7.91991,6.20282 9.64898,8.04224 2.63135,2.79929 5.30539,1.67442 4.97135,-1.46137 -0.59753,-5.60935 -10.19092,-12.68142 -14.20247,-13.05707"
        id="path30-2"
        sodipodi:nodetypes="cssc" />
     <path
        style="mix-blend-mode:normal;fill:#02ee25;fill-opacity:1;fill-rule:nonzero;stroke:#370188;stroke-width:3.175;stroke-dasharray:none;stroke-opacity:1"
-       d="m 160.94117,163.40347 1.62537,6.72842 -0.67368,5.19753 c 0,4.76464 -0.0632,31.61077 -8.46842,42.20189 15.83811,0.55553 79.83357,-0.15519 88.3358,-0.18221 -37.05259,-4.98841 -47.55622,-40.64825 -49.38614,-44.23874 -0.26352,-0.51678 -0.23241,-2.66961 -0.23241,-2.66961 l 2.67863,-6.24797 -2.90824,-3.10851 -4.96751,6.207 -19.50784,-0.1624 -3.45027,-6.30801 z"
+       d="m 165.39903,227.29947 1.62537,6.72842 -0.67368,5.19753 c 0,4.76464 -0.0632,31.61077 -8.46842,42.20189 15.83811,0.55553 79.83357,-0.15519 88.3358,-0.18221 -37.05259,-4.98841 -47.55622,-40.64825 -49.38614,-44.23874 -0.26352,-0.51678 -0.23241,-2.66961 -0.23241,-2.66961 l 2.67863,-6.24797 -2.90824,-3.10851 -4.96751,6.207 -19.50784,-0.1624 -3.45027,-6.30801 z"
        id="path33"
        sodipodi:nodetypes="cccccsccccccc" />
+    <rect
+       style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#370188;stroke-width:3.175;stroke-dasharray:none;stroke-opacity:1"
+       id="rect113-4-2"
+       width="282.57498"
+       height="354.01248"
+       x="1.5875"
+       y="1.5875" />
+    <rect
+       width="9.8019896"
+       height="15.875"
+       rx="0"
+       ry="0"
+       fill="#6002ee"
+       stroke-width="0"
+       id="rect1-3-4-39-4-2-0-5-6"
+       x="247.60098"
+       y="332.84583" />
+    <text
+       font-family="Montserrat"
+       font-size="618.11px"
+       font-weight="200"
+       stroke-width="0"
+       fill="#33333"
+       id="text3-0-3-0-0-5-3-3-2"
+       x="248.3372"
+       y="345.42688"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0774px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light'"
+       transform="scale(0.99938968,1.0006107)"><tspan
+         y="345.42688"
+         font-weight="200"
+         stroke-width="0"
+         id="tspan1-4-8-6-2-1-2-5-9"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0774px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light'"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0774px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light';fill:#ffffff;fill-opacity:1;stroke-width:0"
+           id="tspan3-6-3-13-5-2-1-6-6">k</tspan></tspan></text>
+    <text
+       dx="0"
+       dy="0"
+       font-family="Montserrat"
+       font-size="465.256px"
+       font-weight="200"
+       stroke-width="0"
+       fill="#33333"
+       id="text3-0-3-6-8-4-0-8-9"
+       x="195.17656"
+       y="345.42688"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0774px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light'"
+       transform="scale(0.99938968,1.0006107)"><tspan
+         y="345.42688"
+         font-weight="200"
+         stroke-width="0"
+         id="tspan1-4-8-3-9-0-0-6-9"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0774px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light'">product</tspan></text>
+    <text
+       font-family="Montserrat"
+       font-size="465.256px"
+       font-weight="200"
+       stroke-width="0"
+       fill="#33333"
+       id="text3-0-3-6-4-3-4-3-7-8"
+       x="257.78415"
+       y="345.42688"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0774px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light'"
+       transform="scale(0.99938968,1.0006107)"><tspan
+         y="345.42688"
+         font-weight="200"
+         stroke-width="0"
+         id="tspan1-4-8-3-6-9-9-9-7-0"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0774px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light'">ind</tspan></text>
   </g>
 </svg>

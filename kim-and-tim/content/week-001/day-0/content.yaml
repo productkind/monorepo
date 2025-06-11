@@ -27,8 +27,8 @@ panels:
         - loves stickers
 
       Cons:
-        - uses Linux
         - builds the perfect architecture
+        - uses Linux
   - characters:
       - name: "Cat"
         dialogue: null
@@ -36,9 +36,9 @@ panels:
       Cat – Product Designer
 
       Pros:
-        - immaculate style
         - Figma and Penpot whizz
-        - CSS expert
+        - immaculate style
+        - knows CSS as the back of their paw
 
       Cons:
         - likes animations

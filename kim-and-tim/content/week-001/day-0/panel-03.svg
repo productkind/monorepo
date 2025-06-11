@@ -3,12 +3,12 @@
 
 <svg
    width="1080"
-   height="1080"
-   viewBox="0 0 285.74999 285.75"
+   height="1350"
+   viewBox="0 0 285.74999 357.1875"
    version="1.1"
    id="svg1"
    inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
-   sodipodi:docname="panel-003.svg"
+   sodipodi:docname="panel-03.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -23,34 +23,40 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="0.45535266"
-     inkscape:cx="256.94371"
-     inkscape:cy="590.75092"
-     inkscape:window-width="1728"
-     inkscape:window-height="1057"
-     inkscape:window-x="2560"
-     inkscape:window-y="355"
+     inkscape:zoom="0.34144138"
+     inkscape:cx="231.37208"
+     inkscape:cy="721.93945"
+     inkscape:window-width="1280"
+     inkscape:window-height="1412"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1" />
   <defs
      id="defs1">
     <rect
+       x="428.68566"
+       y="181.78443"
+       width="865.51092"
+       height="1069.001"
+       id="rect1" />
+    <rect
        x="337.60629"
-       y="293.08678"
-       width="868.13047"
-       height="871.84043"
+       y="293.08679"
+       width="868.13049"
+       height="871.84045"
        id="rect26" />
     <rect
-       x="358.01107"
+       x="358.01108"
        y="335.75131"
-       width="877.40537"
-       height="734.57194"
+       width="877.4054"
+       height="734.57196"
        id="rect25" />
     <rect
-       x="418.44796"
+       x="418.44797"
        y="244.75258"
-       width="748.07442"
-       height="801.36732"
+       width="748.0744"
+       height="801.36731"
        id="rect16" />
   </defs>
   <g
@@ -63,64 +69,82 @@
        x="272.11707"
        y="188.47469"
        id="text28-3"
-       transform="matrix(3.1749999,0,0,3.1749999,-853.42852,-568.22076)"><tspan
+       transform="matrix(3.1749999,0,0,3.1749999,-852.99713,-563.52444)"><tspan
          x="272.11707"
          y="188.47469"
-         id="tspan8"><tspan
-           style="font-weight:bold;font-size:8px;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
-           id="tspan5">AI</tspan><tspan
-           style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
-           id="tspan6"> - Polymath</tspan><tspan
-           style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
-           id="tspan7">
+         id="tspan3"><tspan
+           style="font-weight:bold;font-size:10px;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
+           id="tspan2">AI
 </tspan></tspan><tspan
          x="272.11707"
-         y="196.7396"
-         id="tspan12"><tspan
+         y="197.4896"
+         id="tspan7"><tspan
            style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
-           id="tspan9">Pros:
+           id="tspan4">Polymath
 </tspan></tspan><tspan
          x="272.11707"
-         y="204.25453"
-         id="tspan14"><tspan
+         y="205.00453"
+         id="tspan11"><tspan
            style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
-           id="tspan13">- Read the whole internet       
+           id="tspan10">
 </tspan></tspan><tspan
          x="272.11707"
-         y="211.76945"
-         id="tspan16"><tspan
+         y="212.51945"
+         id="tspan25"><tspan
            style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
-           id="tspan15">- Friendly
+           id="tspan17">Pros:
 </tspan></tspan><tspan
          x="272.11707"
-         y="219.28437"
-         id="tspan19"><tspan
+         y="220.03437"
+         id="tspan33"><tspan
            style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
-           id="tspan18">- Eager to please
+           id="tspan26">  </tspan><tspan
+           style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
+           id="tspan32">- read the whole internet       
 </tspan></tspan><tspan
          x="272.11707"
-         y="226.7993"
-         id="tspan21"><tspan
+         y="227.5493"
+         id="tspan36"><tspan
            style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
-           id="tspan20">
+           id="tspan34">  </tspan><tspan
+           style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
+           id="tspan35">- friendly
 </tspan></tspan><tspan
          x="272.11707"
-         y="234.31422"
-         id="tspan23"><tspan
+         y="235.06422"
+         id="tspan39"><tspan
            style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
-           id="tspan22">Cons:
+           id="tspan37">  </tspan><tspan
+           style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
+           id="tspan38">- eager to please
 </tspan></tspan><tspan
          x="272.11707"
-         y="241.82914"
-         id="tspan27"><tspan
+         y="242.57914"
+         id="tspan41"><tspan
            style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
-           id="tspan24">- Overconfident
+           id="tspan40">
 </tspan></tspan><tspan
          x="272.11707"
-         y="249.34406"
-         id="tspan29"><tspan
+         y="250.09406"
+         id="tspan43"><tspan
            style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
-           id="tspan28">- Hallucinates</tspan></tspan></text>
+           id="tspan42">Cons:
+</tspan></tspan><tspan
+         x="272.11707"
+         y="257.60899"
+         id="tspan46"><tspan
+           style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
+           id="tspan44">  </tspan><tspan
+           style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
+           id="tspan45">- overconfident
+</tspan></tspan><tspan
+         x="272.11707"
+         y="265.1239"
+         id="tspan49"><tspan
+           style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
+           id="tspan47">  </tspan><tspan
+           style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
+           id="tspan48">- hallucinates</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:6px;font-family:'Playwrite HU';-inkscape-font-specification:'Playwrite HU';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;inline-size:74.418;display:inline;fill:#370188;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
@@ -130,16 +154,9 @@
        id="text10"><tspan
          x="272.11707"
          y="188.47469"
-         id="tspan31"><tspan
+         id="tspan51"><tspan
            style="font-weight:bold;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold'"
-           id="tspan30"> </tspan></tspan></text>
-    <rect
-       style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#370188;stroke-width:3.175;stroke-dasharray:none;stroke-opacity:1"
-       id="rect113-4"
-       width="282.57498"
-       height="282.57498"
-       x="1.5875"
-       y="1.5875" />
+           id="tspan50"> </tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="scale(0.26458333)"
@@ -147,7 +164,7 @@
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:60px;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect16);display:inline;fill:#000000;fill-opacity:0;stroke:#370188;stroke-width:12;stroke-opacity:1" />
     <g
        id="g1"
-       transform="matrix(3.1749999,0,0,3.1749999,60.759205,-16.547159)">
+       transform="matrix(3.1749999,0,0,3.1749999,60.269472,54.578766)">
       <rect
          style="fill:#9a58fd;fill-opacity:1;stroke:#370188;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
          id="rect18"
@@ -357,40 +374,47 @@
        xml:space="preserve"
        transform="scale(0.26458333)"
        id="text25"
-       style="fill:#000000;text-orientation:auto;-inkscape-font-specification:'Josefin Slab Bold';font-family:'Josefin Slab';font-size:60px;letter-spacing:0px;word-spacing:0px;stroke-width:12;stroke:#370188;text-align:start;writing-mode:lr-tb;direction:ltr;stroke-opacity:1;fill-opacity:0;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;white-space:pre;shape-inside:url(#rect25)" />
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:60px;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect25);display:inline;fill:#000000;fill-opacity:0;stroke:#370188;stroke-width:12;stroke-opacity:1" />
     <text
        xml:space="preserve"
        transform="scale(0.26458333)"
        id="text26"
-       style="fill:#000000;text-orientation:auto;-inkscape-font-specification:'Josefin Slab Bold';font-family:'Josefin Slab';font-size:60px;letter-spacing:0px;word-spacing:0px;stroke-width:12;stroke:#370188;text-align:start;writing-mode:lr-tb;direction:ltr;stroke-opacity:1;fill-opacity:0;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;white-space:pre;shape-inside:url(#rect26)" />
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:60px;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect26);display:inline;fill:#000000;fill-opacity:0;stroke:#370188;stroke-width:12;stroke-opacity:1" />
     <rect
-       width="9.7521629"
-       height="15.794302"
+       style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#370188;stroke-width:3.175;stroke-dasharray:none;stroke-opacity:1"
+       id="rect113-4-2-7"
+       width="282.57498"
+       height="354.01248"
+       x="1.5875"
+       y="1.5875" />
+    <rect
+       width="9.8019896"
+       height="15.875"
        rx="0"
        ry="0"
        fill="#6002ee"
        stroke-width="0"
-       id="rect1-3-4-39-4-2-0-5"
-       x="247.90634"
-       y="261.64355" />
+       id="rect1-3-4-39-4-2-0-5-6-3"
+       x="247.60098"
+       y="332.84583" />
     <text
        font-family="Montserrat"
        font-size="618.11px"
        font-weight="200"
        stroke-width="0"
        fill="#33333"
-       id="text3-0-3-0-0-5-3-3"
-       x="248.63977"
-       y="274.20316"
-       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0109px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light'"
+       id="text3-0-3-0-0-5-3-3-2-2"
+       x="248.33719"
+       y="345.42688"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0774px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light'"
        transform="scale(0.99938968,1.0006107)"><tspan
-         y="274.20316"
+         y="345.42688"
          font-weight="200"
          stroke-width="0"
-         id="tspan1-4-8-6-2-1-2-5"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0109px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light'"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0109px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light';fill:#ffffff;fill-opacity:1;stroke-width:0"
-           id="tspan3-6-3-13-5-2-1-6">k</tspan></tspan></text>
+         id="tspan1-4-8-6-2-1-2-5-9-6"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0774px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light'"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0774px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light';fill:#ffffff;fill-opacity:1;stroke-width:0"
+           id="tspan3-6-3-13-5-2-1-6-6-3">k</tspan></tspan></text>
     <text
        dx="0"
        dy="0"
@@ -399,31 +423,36 @@
        font-weight="200"
        stroke-width="0"
        fill="#33333"
-       id="text3-0-3-6-8-4-0-8"
-       x="195.74937"
-       y="274.20316"
-       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0109px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light'"
+       id="text3-0-3-6-8-4-0-8-9-8"
+       x="195.17654"
+       y="345.42688"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0774px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light'"
        transform="scale(0.99938968,1.0006107)"><tspan
-         y="274.20316"
+         y="345.42688"
          font-weight="200"
          stroke-width="0"
-         id="tspan1-4-8-3-9-0-0-6"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0109px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light'">product</tspan></text>
+         id="tspan1-4-8-3-9-0-0-6-9-0"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0774px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light'">product</tspan></text>
     <text
        font-family="Montserrat"
        font-size="465.256px"
        font-weight="200"
        stroke-width="0"
        fill="#33333"
-       id="text3-0-3-6-4-3-4-3-7"
-       x="258.0387"
-       y="274.20316"
-       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0109px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light'"
+       id="text3-0-3-6-4-3-4-3-7-8-6"
+       x="257.78415"
+       y="345.42688"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0774px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light'"
        transform="scale(0.99938968,1.0006107)"><tspan
-         y="274.20316"
+         y="345.42688"
          font-weight="200"
          stroke-width="0"
-         id="tspan1-4-8-3-6-9-9-9-7"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0109px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light'">ind</tspan></text>
+         id="tspan1-4-8-3-6-9-9-9-7-0-6"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0774px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light'">ind</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text1"
+       style="font-weight:bold;font-size:120px;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect1);display:inline;fill:none;stroke:#370188;stroke-width:12" />
   </g>
 </svg>
