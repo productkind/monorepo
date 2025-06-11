@@ -1,0 +1,21 @@
+{
+  "name": "@kim-and-tim/scripts",
+  "version": "0.1.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/productkind/monorepo.git"
+  },
+  "author": "info@productkind.com",
+  "bugs": {
+    "url": "https://github.com/productkind/monorepo/issues"
+  },
+  "devDependencies": {
+    "@dungarees/fs": "*",
+    "@dungarees/zx": "*",
+    "@xmldom/xmldom": "^0.9.8",
+    "zx": "^8.5.5"
+  }
+}

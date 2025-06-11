@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "zx ./productkind/scripts/build.ts && zx ./seminars/scripts/build.ts",
+    "build": "zx ./productkind/scripts/build.ts && zx ./seminars/scripts/build.ts && zx ./kim-and-tim/scripts/build.ts",
     "init": "zx ./productkind/scripts/init.ts"
   },
   "repository": {
@@ -22,6 +22,7 @@
   "workspaces": [
     "dungarees/src/*",
     "productkind/scripts/",
-    "seminars/scripts/"
+    "seminars/scripts/",
+    "kim-and-tim/scripts/"
   ]
 }
