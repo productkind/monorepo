@@ -5,7 +5,8 @@ panels:
       - name: "Chick"
         dialogue: null
     caption: |
-      Chick – Junior Product Manager
+      Chick
+      Junior Product Manager
 
       Pros:
         - eager to learn
@@ -19,7 +20,8 @@ panels:
       - name: "Snail"
         dialogue: null
     caption: |
-      Snail – Software Developer
+      Snail
+      Software Developer
 
       Pros:
         - builds the perfect architecture
@@ -33,7 +35,8 @@ panels:
       - name: "Cat"
         dialogue: null
     caption: |
-      Cat – Product Designer
+      Cat
+      Product Designer
 
       Pros:
         - Figma and Penpot whizz
@@ -47,7 +50,9 @@ panels:
       - name: "AI"
         dialogue: null
     caption: |
-      AI – Polymath
+      AI
+      Polymath
+
       Pros:
         - read the whole internet
         - friendly
