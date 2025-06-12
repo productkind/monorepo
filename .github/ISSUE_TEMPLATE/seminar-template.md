@@ -36,6 +36,7 @@ assignees: ''
 - [ ] Share in Portuguese Women in Tech group
 - [ ] Share in Geek Girls email list
 - [ ] Share in AIhub WhatsApp
+- [ ] Remind participants a few days before the event with a message
 
 ### Materials
 - [ ] Create feedback form
