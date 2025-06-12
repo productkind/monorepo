@@ -1,0 +1,55 @@
+id: "001"
+panels:
+  - characters:
+      - name: "Kim"
+        dialogue: null
+    caption: |
+      Kim – Product Coach
+      Pros:
+        - attention to detail
+        - product mindset
+        - curious
+
+      Cons:
+       - people pleaser
+       - expensive coffee
+         taste
+  - characters:
+      - name: "Tim"
+        dialogue: null
+    caption: |
+      Tim – Educator
+      Pros:
+        - Enjoys talking
+        - Generous
+        - Good cook
+
+      Cons:
+        - Enjoys talking
+        - Eats a lot
+  - characters:
+      - name: "Chick"
+        dialogue: null
+    caption: |
+      Chick – Junior Product Manager
+      Pros:
+        - Eager to learn
+        - Kind
+        - Empathetic
+
+      Cons:
+        - Inexperienced
+        - Anxious
+  - characters:
+      - name: "AI"
+        dialogue: null
+    caption: |
+      AI – Polymath
+      Pros:
+        - Read the whole internet
+        - Friendly
+        - Eager to please
+
+      Cons:
+        - Overconfident
+        - Hallucinates
