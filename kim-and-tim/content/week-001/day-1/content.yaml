@@ -1,0 +1,63 @@
+id: "001"
+caption: "Introducing the Business Stakeholders"
+panels:
+  - characters:
+      - name: "Croc"
+        dialogue: null
+    caption: |
+      Croc
+      Chief Executive Officer
+
+      Pros:
+        - amazing storyteller
+        - listens to people
+        - was a tennis champion at uni
+
+      Cons:
+        - always has a "great" idea
+        - often running late
+  - characters:
+      - name: "Rabbit"
+        dialogue: null
+    caption: |
+      Rabbit
+      Sales Manager
+
+      Pros:
+        - could sell anything
+        - CrossFit enthusiast
+        - very social
+
+      Cons:
+        - would sell anything
+        - talks a lot (about CrossFit)
+  - characters:
+      - name: "Mouse"
+        dialogue: null
+    caption: |
+      Mouse
+      Marketing Manager
+
+      Pros:
+        - online analytics expert
+        - knows the latest trends
+        - always has snacks
+
+      Cons:
+        - drinks too much coffee
+        - rushes things
+  - characters:
+      - name: "Owl"
+        dialogue: null
+    caption: |
+      Owl
+      Human Resources Manager
+
+      Pros:
+        - people person
+        - hydrates regularly
+        - creates a safe space
+
+      Cons:
+        - loves paperwork
+        - constantly needs tech support
