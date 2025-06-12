@@ -23,6 +23,8 @@ assignees: ''
 - [ ] Find venue
 - [ ] Organise catering
 - [ ] Prepare jumpsuit & dungaree
+- [ ] Pack clicker
+- [ ] Pack HDMI converter
 
 ### Meetup.com
 - [ ] Create event title
@@ -40,6 +42,8 @@ assignees: ''
 - [ ] Create Miro board to share during event
 - [ ] Create slides
 - [ ] Print sign to room
+- [ ] Create cheat sheet
+- [ ] Set up automation: if feedback form is completed, receive cheat sheet
 
 ## During event
 - [ ] Check participants in via Meetup organiser app
@@ -47,7 +51,7 @@ assignees: ''
 - [ ] Take photos
 - [ ] Share slides
 - [ ] Share Miro board
-- [ ] Share feedback form
+- [ ] Share feedback form - tell the group if they complete it, they will receive a cheat sheet
 
 ## Post-event
 - [ ] Send thank you message to Meetup participants
