@@ -72,9 +72,11 @@ const combineSvgFiles = async (inputPaths: string[], outputPath: string, [cols, 
     const g = combinedDoc.createElementNS(svgNS, 'g');
     const viewBox = originalSvg.getAttribute('viewBox');
 
+    const isThirdAndLast = index === inputPaths.length - 1 && inputPaths.length % (cols * rows) === 3;
+
     const col = index % cols;
     const row = Math.floor(index / cols);
-    const x = gapX + col * (imageWidth + gapX);
+    const x = gapX + col * (imageWidth + gapX) + (isThirdAndLast ? (imageWidth + gapX) / 2 : 0);
     const y = gapY + row * (imageHeight + gapY);
     g.setAttribute('transform', `translate(${x}, ${y})`);
 
