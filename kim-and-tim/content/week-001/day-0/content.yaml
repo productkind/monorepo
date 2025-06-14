@@ -1,0 +1,47 @@
+id: "w001d0"
+caption: |
+  User stories are conversations, not documents.
+  All emojis designed by OpenMoji – the open-source emoji and icon project. License: CC BY-SA 4.0
+panels:
+  - characters:
+      - name: "Chick"
+        state: "thinking"
+        properties:
+          - in front of a computer
+        dialogue: "Hmm... Should I write this user story like a haiku? Or maybe in emoji? 🦒🍕🌈"
+  - characters:
+      - name: "Kim"
+        state: "happy"
+        properties: null
+        dialogue: |
+          Honestly, Chick, don't sweat the format!
+          The most important thing is to spark a conversation in your product team.
+      - name: "Chick"
+        state: "normal-left"
+        properties:
+          - in front of a computer
+        dialogue: "Phew! So I don’t need to write it in iambic pentameter?"
+  - characters:
+      - name: "Kim"
+        state: "happy"
+        properties: null
+        dialogue: |
+          What's important to communicate is who wants to achieve what, and why.
+      - name: "Chick"
+        state: "normal-left"
+        properties:
+          - in front of a computer
+        dialogue: |
+          Thank you, Kim! I will try that.
+  - characters:
+      - name: "Kim"
+        state: "happy"
+        properties: null
+        dialogue: |
+          You're welcome, Chick! User stories are conversations, not documents.
+      - name: "Chick"
+        state: "normal-left"
+        properties:
+          - in front of a computer
+        dialogue: |
+          Thanks, Kim! You’ve saved me from writing a sonnet about button placement.
