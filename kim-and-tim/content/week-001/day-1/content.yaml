@@ -1,0 +1,85 @@
+id: "w001d1"
+caption: |
+  After Jeff Patton: User Story Mapping
+panels:
+  - characters:
+      - name: "Chick"
+        state: "normal"
+        properties:
+          - thinking about red square
+        dialogue: "I'm glad we all agree."
+      - name: "Cat"
+        state: "normal"
+        properties:
+          - thinking about green circle
+        dialogue: "I'm glad we all agree."
+      - name: "Snail"
+        state: "normal"
+        properties:
+          - thinking about blue triangle
+        dialogue: "I'm glad we all agree."
+    caption: null
+    environment: null
+  - characters:
+      - name: "Chick"
+        state: "back"
+        properties:
+          - red square on the blackboard
+        dialogue: "ohh..."
+      - name: "Cat"
+        state: "back"
+        properties:
+          - green circle on the blackboard
+        dialogue: "ohh..."
+      - name: "Snail"
+        state: "back"
+        properties:
+          - blue triangle on the blackboard
+        dialogue: "ohh..."
+    caption: null
+    environment:
+      - name: "blackboard"
+        properties:
+          - red square
+          - green circle
+          - blue triangle
+  - characters:
+      - name: "Chick"
+        state: "back"
+        properties: null
+        dialogue: "Ah ha!"
+      - name: "Cat"
+        state: "back"
+        properties: null
+        dialogue: "Ah ha!"
+      - name: "Snail"
+        state: "back"
+        properties: null
+        dialogue: "Ah ha!"
+    caption: null
+    environment:
+      - name: "blackboard"
+        properties:
+          - red square, green circle, blue triangle
+          - arrow
+          - mix of shapes first iteration
+          - arrow
+          - mix of shapes second iteration
+  - characters:
+      - name: "Chick"
+        state: "happy"
+        properties:
+          - thinking about mix of shapes second iteration
+        dialogue: "I'm glad we all agree!"
+      - name: "Cat"
+        state: "happy"
+        properties:
+          - thinking about mix of shapes second iteration
+        dialogue: "I'm glad we all agree!"
+      - name: "Snail"
+        state: "normal"
+        properties:
+          - thinking about mix of shapes second iteration
+        dialogue: "I'm glad we all agree!"
+    caption: "After Jeff Patton: User Story Mapping"
+    environment: null
