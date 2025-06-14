@@ -1,6 +1,7 @@
 {
   "name": "@seminars/scripts",
   "version": "0.1.0",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,9 +14,10 @@
     "url": "https://github.com/productkind/monorepo/issues"
   },
   "devDependencies": {
-    "zod": "^3.25.55",
-    "zx": "^8.5.5",
+    "@dungarees/fs": "*",
     "@dungarees/zx": "*",
-    "@dungarees/fs": "*"
+    "qrcode": "^1.5.4",
+    "zod": "^3.25.55",
+    "zx": "^8.5.5"
   }
 }

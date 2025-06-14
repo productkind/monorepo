@@ -26,7 +26,7 @@
      inkscape:document-units="mm"
      showguides="true"
      inkscape:zoom="0.34400982"
-     inkscape:cx="709.28207"
+     inkscape:cx="709.28208"
      inkscape:cy="502.89262"
      inkscape:window-width="1728"
      inkscape:window-height="1057"
@@ -109,7 +109,7 @@
        x2="234.1161"
        y2="51.148426"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(2.4625659,0,0,0.71171979,-432.50268,134.5)" />
+       gradientTransform="matrix(2.4621657,0,0,1.0429902,-432.43239,46.297107)" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient11"
@@ -155,23 +155,23 @@
        x2="436.23601"
        y2="75.0125"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1.002802,0,0,1,2.5416828,10.791059)" />
+       gradientTransform="matrix(1.002802,0,0,1,128.54,-64.611941)" />
   </defs>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="opacity:1;fill:url(#linearGradient3);stroke:none;stroke-width:2.64777;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:url(#linearGradient3);stroke:none;stroke-width:3.20502;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        id="rect1"
-       width="576.09363"
-       height="162"
+       width="576"
+       height="237.403"
        x="0"
-       y="162" />
+       y="86.597" />
     <g
        id="g9"
        style="fill:url(#linearGradient12)"
-       transform="matrix(0.0143091,0,0,0.0143091,145.72741,94.344099)">
+       transform="matrix(0.0143091,0,0,0.0143091,271.73,18.941099)">
       <g
          id="g10"
          style="fill:url(#linearGradient15);fill-opacity:1">
@@ -192,22 +192,22 @@
        stroke-width="0"
        fill="#33333"
        id="text3-9-1-0-4-3-6-37-3-7-3-5-5-3-9-8-9-1-9-9"
-       x="221.64476"
-       y="198.55453"
+       x="347.64062"
+       y="123.15154"
        style="fill:#ffffff;fill-opacity:1;stroke:none"><tspan
          style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light';fill:#ffffff;fill-opacity:1;stroke-width:0"
          id="tspan1">by</tspan></text>
     <path
        style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.80112;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-       d="M 136,214.77956 H 440"
+       d="M 262,139.37656 H 566"
        id="path23" />
     <path
        style="fill:none;fill-opacity:1;stroke:url(#linearGradient24);stroke-width:0.80112;stroke-linejoin:miter;stroke-dasharray:none"
-       d="M 136,85.80356 H 440"
+       d="M 262,10.40056 H 566"
        id="path23-4" />
     <path
        id="rect1-3-4-39-4-2-0-5"
-       d="m 369.50593,172 v 32.37929 h 19.99254 V 172 Z m 4.01814,6.28786 h 1.33291 v 14.01083 l 8.90335,-8.13916 h 1.70596 l -5.98695,5.62787 6.57341,8.30394 h -1.65273 l -5.92737,-7.44428 -3.61567,3.30831 v 4.13597 h -1.33291 z"
+       d="m 495.51,96.597 v 32.37929 H 515.5 V 96.597 Z m 4.01,6.28786 h 1.34 v 14.01083 l 8.9,-8.13916 h 1.71 l -5.99,5.62787 6.57,8.30394 h -1.65 l -5.93,-7.44428 -3.61,3.30831 v 4.13597 h -1.34 z"
        style="fill:#ffffff;fill-opacity:1;stroke-width:0.207728" />
     <text
        dx="0"
@@ -218,11 +218,11 @@
        stroke-width="0"
        fill="#33333"
        id="text3-0-3-6-8-4-0-8"
-       x="262.49649"
-       y="197.96991"
+       x="388.57172"
+       y="122.61299"
        style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:26.673px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light';fill:#ffffff;fill-opacity:1"
        transform="scale(0.99938887,1.0006115)"><tspan
-         y="197.96991"
+         y="122.61299"
          font-weight="200"
          stroke-width="0"
          id="tspan1-4-8-3-9-0-0-6"
@@ -234,11 +234,11 @@
        stroke-width="0"
        fill="#33333"
        id="text3-0-3-6-4-3-4-3-7"
-       x="390.19348"
-       y="197.96991"
+       x="516.25922"
+       y="122.61299"
        style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:26.673px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light';fill:#ffffff;fill-opacity:1"
        transform="scale(0.99938887,1.0006115)"><tspan
-         y="197.96991"
+         y="122.61299"
          font-weight="200"
          stroke-width="0"
          id="tspan1-4-8-3-6-9-9-9-7"
