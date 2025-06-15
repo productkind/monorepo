@@ -17,6 +17,7 @@ panels:
        - people pleaser
        - expensive coffee
          taste
+    environment: null
   - characters:
       - name: "Tim"
         dialogue: null
@@ -32,6 +33,7 @@ panels:
       Cons:
         - Enjoys talking
         - Eats a lot
+    environment: null
   - characters:
       - name: "Giraffe"
         dialogue: null
@@ -47,3 +49,4 @@ panels:
       Cons:
         - doesn't understand product development
         - doesn't update the browse
+    environment: null

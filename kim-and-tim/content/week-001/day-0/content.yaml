@@ -9,6 +9,8 @@ panels:
         properties:
           - in front of a computer
         dialogue: "Hmm... Should I write this user story like a haiku? Or maybe in emoji? 🦒🍕🌈"
+    caption: null
+    environment: null
   - characters:
       - name: "Kim"
         state: "happy"
@@ -17,31 +19,37 @@ panels:
           Honestly, Chick, don't sweat the format!
           The most important thing is to spark a conversation in your product team.
       - name: "Chick"
-        state: "normal-left"
+        state: "normal"
         properties:
           - in front of a computer
         dialogue: "Phew! So I don’t need to write it in iambic pentameter?"
+    caption: null
+    environment: null
   - characters:
       - name: "Kim"
-        state: "happy"
+        state: "normal"
         properties: null
         dialogue: |
           What's important to communicate is who wants to achieve what, and why.
       - name: "Chick"
-        state: "normal-left"
+        state: "normal"
         properties:
           - in front of a computer
         dialogue: |
           Thank you, Kim! I will try that.
+    caption: null
+    environment: null
   - characters:
       - name: "Kim"
-        state: "happy"
+        state: "normal"
         properties: null
         dialogue: |
           You're welcome, Chick! User stories are conversations, not documents.
       - name: "Chick"
-        state: "normal-left"
+        state: "happy"
         properties:
           - in front of a computer
         dialogue: |
           Thanks, Kim! You’ve saved me from writing a sonnet about button placement.
+    caption: null
+    environment: null

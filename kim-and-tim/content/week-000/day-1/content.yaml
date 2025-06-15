@@ -16,6 +16,7 @@ panels:
       Cons:
         - always has a "great" idea
         - often running late
+    environment: null
   - characters:
       - name: "Rabbit"
         dialogue: null
@@ -31,6 +32,7 @@ panels:
       Cons:
         - would sell anything
         - talks a lot (about CrossFit)
+    environment: null
   - characters:
       - name: "Mouse"
         dialogue: null
@@ -46,6 +48,7 @@ panels:
       Cons:
         - drinks too much coffee
         - rushes things
+    environment: null
   - characters:
       - name: "Owl"
         dialogue: null
@@ -61,3 +64,4 @@ panels:
       Cons:
         - loves paperwork
         - constantly needs tech support
+    environment: null

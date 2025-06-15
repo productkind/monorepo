@@ -16,6 +16,7 @@ panels:
       Cons:
         - inexperienced
         - anxious
+    environment: null
   - characters:
       - name: "Snail"
         dialogue: null
@@ -31,6 +32,7 @@ panels:
       Cons:
         - builds the perfect architecture
         - uses Linux
+    environment: null
   - characters:
       - name: "Cat"
         dialogue: null
@@ -46,6 +48,7 @@ panels:
       Cons:
         - likes animations
         - shopaholic
+    environment: null
   - characters:
       - name: "AI"
         dialogue: null
@@ -61,3 +64,4 @@ panels:
       Cons:
         - overconfident
         - hallucinates
+    environment: null
