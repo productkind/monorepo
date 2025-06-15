@@ -13,8 +13,10 @@
     "url": "https://github.com/productkind/monorepo/issues"
   },
   "devDependencies": {
+    "@dungarees/zx": "*",
+    "@realfavicongenerator/generate-favicon": "^0.4.16",
+    "@realfavicongenerator/image-adapter-node": "^0.4.16",
     "zod": "^3.25.55",
-    "zx": "^8.5.5",
-    "@dungarees/zx": "*"
+    "zx": "^8.5.5"
   }
 }

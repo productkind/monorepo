@@ -3,6 +3,12 @@ import platformsRaw from '../config/platforms.json' with { type: 'json' }
 import { z } from 'zod'
 import path from 'node:path'
 import { rasterizeSvg , type SvgToRasterize } from '@dungarees/zx/image.ts'
+import { type FaviconSettings, IconTransformationType, type MasterIcon, generateFaviconFiles } from '@realfavicongenerator/generate-favicon';
+import { getNodeImageAdapter, loadAndConvertToSvg } from "@realfavicongenerator/image-adapter-node";
+import fs from 'node:fs'
+import { createFileSystem } from '@dungarees/fs/service.ts'
+
+const fsService = createFileSystem(fs)
 
 const PlatformNameSchema = z.union([
   z.literal('github'),
@@ -105,3 +111,56 @@ function filterDefinedByKey<
   return (item): item is T & { [P in K]-?: Exclude<T[P], undefined> } =>
     item[key] !== undefined;
 }
+
+const imageAdapter = await getNodeImageAdapter();
+
+const masterIcon: MasterIcon = {
+  icon: await loadAndConvertToSvg(path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-k-crop-to-content.svg')),
+}
+
+const faviconSettings: FaviconSettings = {
+  icon: {
+    desktop: {
+      regularIconTransformation: {
+        type: IconTransformationType.Background,
+        backgroundColor: "#ffffff",
+        backgroundRadius: 0.4,
+        imageScale: 0.8,
+      },
+      darkIconType: "none",
+    },
+    touch: {
+      transformation: {
+        type: IconTransformationType.Background,
+        backgroundColor: "#ffffff",
+        backgroundRadius: 0,
+        imageScale: 0.7,
+      },
+      appTitle: "productkind"
+    },
+    webAppManifest: {
+      transformation: {
+        type: IconTransformationType.Background,
+        backgroundColor: "#ffffff",
+        backgroundRadius: 0,
+        imageScale: 0.7,
+      },
+      backgroundColor: "#ffffff",
+      themeColor: "#ffffff",
+      name: "productkind",
+      shortName: "productkind"
+    }
+  },
+  path: "/",
+};
+
+await $`mkdir -p ${path.join(absoluteBaseDir, ASSETS_DIR, OUTPUT_DIR, 'favicon')}`
+
+// Generate files
+const files = await generateFaviconFiles(masterIcon, faviconSettings, imageAdapter);
+// Do something with the files: store them, etc.
+Object.entries(files).forEach(([name, content]) => {
+  const outputFilePath = path.join(absoluteBaseDir, ASSETS_DIR, OUTPUT_DIR, 'favicon', name)
+  console.log(`Writing ${outputFilePath}`)
+  fsService.writeFileSync(outputFilePath, content)
+})
