@@ -11,6 +11,7 @@ const PlatformNameSchema = z.union([
   z.literal('instagram'),
   z.literal('linkedin'),
   z.literal('meetup'),
+  z.literal('website'),
 ])
 
 const AssetTypeSchema = z.union([
@@ -19,6 +20,8 @@ const AssetTypeSchema = z.union([
   z.literal('email-banner'),
   z.literal('wordmark'),
   z.literal('email-footer'),
+  z.literal('logo'),
+  z.literal('logo-inverted'),
 ])
 
 const PlatformSchema = z.array(
@@ -27,7 +30,7 @@ const PlatformSchema = z.array(
     profileImages: z.array(
       z.object({
         type: AssetTypeSchema,
-        size: z.tuple([z.number(), z.number()]),
+        size: z.tuple([z.number(), z.number()]).or(z.number()),
       })
     ),
   })
@@ -56,11 +59,15 @@ const asset_to_input_image: Partial<Record<`${PlatformName}-${AssetType}`, strin
   'substack-email-banner': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-thoughts-by-productkind-gradient-background.svg'),
   'substack-cover': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-thoughts-by-productkind-gradient-background-square.svg'),
   'meetup-cover': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-seminars-by-productkind-gradient.svg'),
+  'website-logo': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-crop-to-content.svg'),
+  'website-logo-inverted': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-crop-to-content-monochrome-white.svg'),
 }
 
 const images: SvgToRasterize[] = platforms.flatMap((platform) =>
   platform.profileImages.map((profileImage) => {
-    const outputFileName = `${platform.platform}-${profileImage.type}-${profileImage.size[0]}x${profileImage.size[1]}.png`
+    const isSingleDimension = typeof profileImage.size === 'number'
+    const size = isSingleDimension ? String(profileImage.size) : `${profileImage.size[0]}x${profileImage.size[1]}`
+    const outputFileName = `${platform.platform}-${profileImage.type}-${size}.png`
     const outputFilePath = path.join(absoluteBaseDir, ASSETS_DIR, OUTPUT_DIR, outputFileName)
     const inputFilePath = asset_to_input_image[`${platform.platform}-${profileImage.type}` as const]
     return {
