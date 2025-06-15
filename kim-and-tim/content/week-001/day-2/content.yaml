@@ -1,0 +1,52 @@
+id: "w001d2"
+caption: |
+  Shared documents are not shared understanding!
+panels:
+  - characters:
+      - name: "Chick"
+        state: "hand"
+        properties:
+          - giving a note to Rhino
+        dialogue: null
+      - name: "Rhino"
+        state: "hand"
+        properties:
+          - receiving a note from Chick
+        dialogue: "I'm glad we all agree."
+    caption: null
+    environment: null
+  - characters:
+      - name: "Chick"
+        state: "scared"
+        properties: null
+        dialogue: null
+      - name: "Rhino"
+        state: "normal"
+        properties:
+          - baker outfit
+          - holds a cake
+        dialogue: null
+    caption: null
+    environment: null
+  - characters: null
+    caption: "Source: cakewrecks.com"
+    environment:
+      - name: "An image of a cake"
+        properties:
+          - "An image of a real cake that has a text that reads 'Thanks for a great year in purple'"
+  - characters:
+      - name: "Tim"
+        state: "happy-tongue-out"
+        properties:
+          - Eating a cake
+        dialogue: null
+      - name: "Chick"
+        state: "happy"
+        properties: null
+        dialogue: null
+      - name: "Kim"
+        state: "happy"
+        properties: null
+        dialogue: "Shared documents are not shared understanding!"
+    caption: null
+    environment: null
