@@ -41,6 +41,7 @@ weeks.forEach(week => {
         inputFilePath: filePath,
         outputFilePath: outputPngPath,
         size: [imageWidth, imageHeight],
+        background: 'ffffffff',
       });
       console.log(`Generated PNG for ${filePath} at ${outputPngPath}`);
     })
@@ -48,6 +49,7 @@ weeks.forEach(week => {
       inputFilePath: path.join(distPath, 'strip.svg'),
       outputFilePath: path.join(distPath, 'strip.png'),
       size: [imageWidth, imageHeight],
+      background: 'ffffffff',
     });
     console.log(`Generated combined PNG for ${day} at ${path.join(distPath, 'strip.png')}`);
   })

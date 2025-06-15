@@ -126,6 +126,7 @@ const faviconSettings: FaviconSettings = {
         backgroundColor: "#ffffff",
         backgroundRadius: 0.4,
         imageScale: 0.8,
+        brightness: 1,
       },
       darkIconType: "none",
     },
@@ -135,6 +136,7 @@ const faviconSettings: FaviconSettings = {
         backgroundColor: "#ffffff",
         backgroundRadius: 0,
         imageScale: 0.7,
+        brightness: 1,
       },
       appTitle: "productkind"
     },
@@ -144,6 +146,7 @@ const faviconSettings: FaviconSettings = {
         backgroundColor: "#ffffff",
         backgroundRadius: 0,
         imageScale: 0.7,
+        brightness: 1,
       },
       backgroundColor: "#ffffff",
       themeColor: "#ffffff",
