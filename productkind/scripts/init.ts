@@ -7,6 +7,7 @@ if (process.platform === 'darwin') {
   }
   await $`brew install --cask font-montserrat`
   await $`brew install --cask font-josefin-slab`
+  await $`brew install --cask font-nanum-pen-script`
   await $`brew install inkscape`
 } else {
   console.error('Not supported OS')
