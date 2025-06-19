@@ -1,0 +1,67 @@
+id: "w002d0"
+caption: |
+  A layered cake... with holes?
+panels:
+  - characters:
+      - name: "Chick"
+        state: "nirmal"
+        properties: null
+        dialogue: |
+          What’s this cake thing everyone was talking about in standup?
+          Are we getting cake or is it another metaphor?
+      - name: "Kim"
+        state: "normal"
+        properties: null
+        dialogue: null
+    caption: null
+    environment: null
+  - characters:
+      - name: "Chick"
+        state: "normal"
+        properties: null
+        dialogue: null
+      - name: "Kim"
+        state: "normal"
+        properties: null
+        dialogue: |
+          It’s a metaphor.
+          A good user story
+          is like a layer cake.
+    caption: null
+    environment:
+      - name: "table with sliced cake"
+        properties: null
+  - characters:
+      - name: "Chick"
+        state: "normal"
+        properties: null
+        dialogue: null
+      - name: "Kim"
+        state: "normal"
+        properties: null
+        dialogue: |
+          Frontend.
+          Backend.
+          Infrastructure.
+          All working together
+          to deliver real value.
+    caption: null
+    environment: null
+  - characters:
+      - name: "Chick"
+        state: "normal"
+        properties: null
+        dialogue: null
+      - name: "Tim"
+        state: "happy-tongue-out"
+        properties:
+          - has smudges of icing on face
+        dialogue: |
+          It’s a metaphor.
+          A good user story
+          is like a layer cake.
+    caption: null
+    environment:
+      - name: "table with sliced holey cake"
+        properties: null
+
