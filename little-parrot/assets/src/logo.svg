@@ -27,9 +27,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="0.1553508"
-     inkscape:cx="-360.47448"
-     inkscape:cy="1448.335"
+     inkscape:zoom="0.35802447"
+     inkscape:cx="472.03478"
+     inkscape:cy="519.51756"
      inkscape:window-width="1728"
      inkscape:window-height="1057"
      inkscape:window-x="0"
@@ -53,35 +53,35 @@
        id="linearGradient6"
        inkscape:collect="always">
       <stop
-         style="stop-color:#7fff05;stop-opacity:1;"
+         style="stop-color:#26fd46;stop-opacity:1;"
          offset="0"
          id="stop4" />
       <stop
-         style="stop-color:#afff05;stop-opacity:1;"
+         style="stop-color:#8efd23;stop-opacity:1;"
          offset="0.14"
          id="stop1" />
       <stop
-         style="stop-color:#d1ff05;stop-opacity:1;"
+         style="stop-color:#c4fd23;stop-opacity:1;"
          offset="0.28"
          id="stop2" />
       <stop
-         style="stop-color:#ecff05;stop-opacity:1;"
+         style="stop-color:#eafd24;stop-opacity:1;"
          offset="0.43000001"
          id="stop3" />
       <stop
-         style="stop-color:#fff905;stop-opacity:1;"
+         style="stop-color:#fdf024;stop-opacity:1;"
          offset="0.56999999"
          id="stop6" />
       <stop
-         style="stop-color:#ffe505;stop-opacity:1;"
+         style="stop-color:#fdd825;stop-opacity:1;"
          offset="0.70999998"
          id="stop7" />
       <stop
-         style="stop-color:#ffd405;stop-opacity:1;"
+         style="stop-color:#fdc425;stop-opacity:1;"
          offset="0.86000001"
          id="stop8" />
       <stop
-         style="stop-color:#ffc505;stop-opacity:1;"
+         style="stop-color:#fdb226;stop-opacity:1;"
          offset="1"
          id="stop5" />
     </linearGradient>
@@ -91,27 +91,27 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:24.0991;stroke-dasharray:none;stroke-opacity:1"
+       style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#230156;stroke-width:24.0991;stroke-dasharray:none;stroke-opacity:1"
        d="M 653.762,844.59631 1047.3658,657.0655 195.54974,384.26915 C 347.4452,536.95564 383.49478,743.92159 653.762,844.59631 Z"
        id="path17-0-2-4"
        sodipodi:nodetypes="cccc" />
     <path
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:15.1279;stroke-dasharray:none;stroke-opacity:1"
+       style="display:inline;fill:#230156;fill-opacity:1;stroke:#230156;stroke-width:15.1279;stroke-dasharray:none;stroke-opacity:1"
        d="M 558.96826,811.84788 840.63213,679.39936 59.713635,410.70339 Z"
        id="path17-3-4-2-3"
        sodipodi:nodetypes="cccc" />
     <path
-       style="display:inline;fill:url(#linearGradient3);stroke:#000000;stroke-width:24.0991;stroke-dasharray:none;stroke-opacity:1"
-       d="m 459.71215,192.53063 -76.8215,-23.52568 64.53415,-64.53408 C 429.62392,24.360535 567.4436,-51.356538 599.75414,95.079978 612.06552,150.87729 612.27835,297.41162 698.10789,359.13029 791.84487,426.5352 901.93371,506.07095 965.88403,509.47178 863.9822,628.81251 696.64196,664.85806 478.87345,670.03081 Z"
+       style="display:inline;fill:url(#linearGradient3);stroke:#230156;stroke-width:24.0991;stroke-dasharray:none;stroke-opacity:1"
+       d="m 459.71215,192.53063 -76.8215,-23.52568 64.53415,-64.53408 C 436.65174,55.988253 482.877,9.1147321 528.21786,12.11964 c 29.57819,1.960256 58.78002,25.146914 71.53628,82.960338 12.31142,55.797302 12.52421,202.331642 98.35375,264.050312 93.73698,67.40491 203.82582,146.94066 267.77614,150.34149 C 863.9822,628.81251 696.64196,664.85806 478.87345,670.03081 Z"
        id="path2-5-52-8"
-       sodipodi:nodetypes="cccssccc" />
+       sodipodi:nodetypes="cccsssccc" />
     <path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:24.0991;stroke-dasharray:none;stroke-opacity:1"
+       style="display:inline;fill:none;stroke:#230156;stroke-width:24.0991;stroke-dasharray:none;stroke-opacity:1"
        d="m 383.26583,169.11621 136.46018,41.02175 z"
        id="path15-7-27-4"
        sodipodi:nodetypes="ccc" />
     <path
-       style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:24.0991;stroke-dasharray:none;stroke-opacity:1"
+       style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#230156;stroke-width:24.0991;stroke-dasharray:none;stroke-opacity:1"
        d="m 13.987134,629.05475 -1.87599,-499.99263 630.241506,196.32889 -0.79962,515.2848 z"
        id="path16-1-1-0"
        sodipodi:nodetypes="ccccc" />
@@ -124,21 +124,21 @@
        ry="6.3725247" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.1349px;font-family:'Monaspace Neon';-inkscape-font-specification:'Monaspace Neon';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;inline-size:140.957;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.524481;stroke-dasharray:none;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.1349px;font-family:'Monaspace Neon';-inkscape-font-specification:'Monaspace Neon';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;inline-size:140.957;display:inline;fill:#230156;fill-opacity:1;stroke:none;stroke-width:0.524481;stroke-dasharray:none;stroke-opacity:1"
        x="17.849133"
        y="118.99422"
        id="text18-6-2-9"
        transform="matrix(4.7742302,0,0,4.7742323,20.890871,-121.5138)"><tspan
          x="17.849133"
          y="118.99422"
-         id="tspan2"><tspan
+         id="tspan6"><tspan
            style="font-weight:bold;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold'"
-           id="tspan1">Little
+           id="tspan5">Little
 </tspan></tspan><tspan
          x="17.849133"
          y="151.07274"
-         id="tspan4"><tspan
+         id="tspan8"><tspan
            style="font-weight:bold;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold'"
-           id="tspan3">Parrot</tspan></tspan></text>
+           id="tspan7">Parrot</tspan></tspan></text>
   </g>
 </svg>
