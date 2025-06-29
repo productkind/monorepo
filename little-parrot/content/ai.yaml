@@ -1,0 +1,155 @@
+concepts:
+  - name: ['AI', 'Artificial Intelligence']
+    what: |
+      Artificial Intelligence refers to an ability of a machine to perform tasks that typically
+      require human intelligence. This includes learning, comprehension, reasoning,
+      problem-solving, perception, language understanding, and more.
+    why: |
+      There are many problems that are too complex to be solved by traditional programming
+      techniques. AI provides a way to tackle these problems, and help automate tasks that
+      would otherwise require human intervention.
+    when:
+      - 'Chatbots that can understand and respond to human queries.'
+      - 'Image recognition systems that can identify objects in photos.'
+      - 'Recommendation systems that suggest products based on user preferences.'
+    like: null
+    levelRange: [1, 1]
+  - name: ['AI Model', 'Model']
+    what: |
+      An AI Model is a program that has been trained on a set of data to perform specific tasks
+      such as recognise patterns, make decisions, prediction, or generate content.
+    why: null
+    when:
+      - 'A neural network trained to classify images into categories.'
+      - "OpenAI's GPT 4o"
+      - "Claude 4 sonnet"
+    like: |
+      You can think of an AI model as the recipe for pizza. The input is the ingredients
+      (data), the model is the recipe (algorithm), and the output is the pizza (predictions or
+      results). The recipe of pizza was created through a process of using the recipe then changing
+      its parameters to improve the taste of the pizza (training). I has changed a lot over time
+      from the first roman bread with toppings to the modern pizza we know today.
+    levelRange: [1, 3]
+  - name: ['Model Training', 'Training']
+    what: |
+      Training a model involves feeding an algorithm with data that adjusts the model's internal
+      parameters to improve its performance on a specific task.
+    why: |
+      Compared to traditional programming, where rules are explicitly defined, training
+      allows models to learn from data and adapt to new information, making them more flexible
+      and capable of handling complex tasks.
+    when: null
+    like: |
+      Training the model is how the recipe is changed to improve the taste of the pizza after
+      every time it is made. The more you make the pizza, the better the recipe becomes.
+  - name: 'Parameter'
+    what: |
+      Parameters are the internal variables of a model that are set during training. They are
+      adjusted to minimize the error in the model's predictions.
+    when: null
+    like: |
+      Parameters are like the processing steps in a recipe.
+  - name: ['LLM', 'Large Language Model']
+    what: |
+      A Large Language Model is a type of AI model that has been trained on vast amounts of text
+      data to understand and generate human language.
+    when:
+      - "OpenAI's GPT 4o"
+      - "Google's Gemini"
+      - "Meta's LLaMA"
+    like: null
+  - name: 'Prompt'
+    what: |
+      A prompt is an input piece of text given to an AI model to receive a specific output.
+    when:
+      - 'What is the capital of France?'
+      - 'Write a poem about the sea.'
+    like: |
+      In our pizza analogy, a prompt is the ingredients you provide to the recipe. The better
+      the ingredients, the better the pizza will turn out.
+  - name: 'Token'
+    what: |
+      A token is a unit of text that the model processes. It can be a word, part of a word, or
+      even punctuation.
+    when:
+      - 'In natural language processing, a token could be a word or punctuation mark.'
+      - 'In programming, a token could be a keyword, identifier, or operator.'
+    like: |
+      Tokens are like the individual ingredients in our pizza recipe. Each ingredient contributes
+      to the overall flavor of the pizza.
+aspects:
+  - name: 'Current AI Solutions'
+    level: 1
+    related_concepts:
+      - AI
+    aspect:
+      Current AI solutions are based on machine learning particularly deep learning techniques.
+  - name: 'Model Input and Output'
+    level: 1
+    related_concepts:
+      - Model
+    aspect:
+      Always has an input and an output.
+  - name: 'Model Input and Output Types'
+    level: 1
+    related_concepts:
+      - Model
+    aspect:
+      The input and output types of a model can vary widely depending on the task it is designed
+      to perform. For example, a model for image recognition might take an image as input and
+      output a label or a set of labels, while a model for text generation might take a prompt
+      as input and output a generated text.
+  - name: 'Model Training'
+    level: 1
+    related_concepts:
+      - Model
+      - Training
+    aspect:
+      Models are created through a process called training, where they learn from a large dataset
+      to improve their performance on a specific task.
+  - name: 'LLMs are not thinking'
+    level: 1
+    related_concepts:
+      - LLM
+    aspect:
+      LLMs do not think or understand in the way humans do. They just follow the statistical
+      patterns they have learned from the data they were trained on. They are just always
+      predicting the most probable next token based on the previous tokens in the input.
+exercises:
+  - type: 'Quiz'
+    level: 1
+    question: |
+      What is an AI model?
+    options:
+      - An AI model is a program that has been trained on a set of data to perform specific tasks.
+      - An AI model is a type of hardware used to run AI applications.
+      - An AI model is a programming language used to create AI applications.
+    answer: 0
+  - type: 'Quiz Multiple Choice'
+    level: 1
+    question: |
+      What are the possible inputs and outputs of an AI model?
+    options:
+      - Text
+      - Images
+      - Audio
+      - Video
+    answer: [0, 1, 2, 3]
+  - type: 'Quiz Multiple'
+    level: 1
+    question: |
+      What are examples of AI?
+    options:
+      - Chatbots that can understand and respond to human queries.
+      - Image recognition systems that can identify objects in photos.
+      - Recommendation systems that suggest products based on user preferences.
+    answer: [0, 1, 2]
+  - type: 'Quiz'
+    level: 1
+    question: |
+      An AI returns some false information, then it corrects it when you point it out.
+      What could be the reason for this?
+    options:
+      - The AI model learns from the user input right away.
+      - The AI model's thinking process is not perfect yet.
+      - The correct answer is more probable after the whole conversation.
