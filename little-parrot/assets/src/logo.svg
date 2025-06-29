@@ -9,7 +9,7 @@
    id="svg1"
    inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
    sodipodi:docname="logo.svg"
-   inkscape:export-filename="logo.png"
+   inkscape:export-filename="/Users/eggdice/Projects/little-parrot-awakens/public/lovable-uploads/fb3c6bc9-f876-4cca-8f84-59ee996c268d.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -27,12 +27,12 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="0.35802447"
-     inkscape:cx="472.03478"
-     inkscape:cy="519.51756"
-     inkscape:window-width="1728"
+     inkscape:zoom="1.7683707"
+     inkscape:cx="558.70638"
+     inkscape:cy="203.01173"
+     inkscape:window-width="1104"
      inkscape:window-height="1057"
-     inkscape:window-x="0"
+     inkscape:window-x="627"
      inkscape:window-y="32"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1"
@@ -116,7 +116,7 @@
        id="path16-1-1-0"
        sodipodi:nodetypes="ccccc" />
     <ellipse
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:22.0838;stroke-dasharray:none;stroke-opacity:1"
+       style="display:inline;fill:#230156;fill-opacity:1;stroke:#230156;stroke-width:22.0838;stroke-dasharray:none;stroke-opacity:1"
        id="path18-0-5-0"
        cx="501.37683"
        cy="88.196915"
@@ -131,14 +131,14 @@
        transform="matrix(4.7742302,0,0,4.7742323,20.890871,-121.5138)"><tspan
          x="17.849133"
          y="118.99422"
-         id="tspan6"><tspan
+         id="tspan2"><tspan
            style="font-weight:bold;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold'"
-           id="tspan5">Little
+           id="tspan1">Little
 </tspan></tspan><tspan
          x="17.849133"
          y="151.07274"
-         id="tspan8"><tspan
+         id="tspan4"><tspan
            style="font-weight:bold;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold'"
-           id="tspan7">Parrot</tspan></tspan></text>
+           id="tspan3">Parrot</tspan></tspan></text>
   </g>
 </svg>
