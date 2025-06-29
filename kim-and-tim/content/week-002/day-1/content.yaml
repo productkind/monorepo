@@ -1,0 +1,54 @@
+id: "w002d1"
+caption: |
+  Clear titles make your backlog easier to navigate.
+panels:
+  - characters:
+      - name: "Chick"
+        state: "confused"
+        properties:
+          - looking at Chira board on laptop
+        dialogue: null
+    caption: null
+    environment: null
+  - characters:
+      - name: "Kim"
+        state: "explaining"
+        properties:
+          - holding a mug that says "Curiosity"
+        dialogue: |
+          Chick, save the full story for the description.
+      - name: "Chick"
+        state: "thinking"
+        properties:
+          - tapping keyboard
+        dialogue: |
+          So I shouldn’t copy it all into the title?
+    caption: null
+    environment: null
+  - characters:
+      - name: "Kim"
+        state: "normal"
+        properties:
+          - pointing at screen
+        dialogue: |
+          Exactly. Good titles say who does what, simply.
+          “Giraffe can view courses” is clear and easy to scan.
+      - name: "Chick"
+        state: "relieved"
+        properties:
+          - typing with a smile
+        dialogue: |
+          Oh, my Chira board will finally make sense!
+    caption: null
+    environment: null
+  - characters:
+      - name: "Chick"
+        state: "happy"
+        properties:
+          - back view at laptop
+        dialogue: null
+    caption: null
+    environment: |
+      The screen shows user story titles written entirely in emojis:
+      🦒📚   🦒📝   🦒🔒
+
