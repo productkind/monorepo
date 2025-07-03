@@ -74,27 +74,17 @@ language understanding, and more.
 
 ### Video
 
-In general, Artificial Intelligence refers to the ability of a machine to perform tasks that
-typically require human intelligence. This includes learning, comprehension, reasoning,
-problem-solving, perception, and language understanding.
+In simple terms, Artificial Intelligence is the capability of a machine to perform tasks that would normally require human intelligence. This includes things like learning from data, understanding language, recognising patterns, and making decisions.
 
-Many problems are too complex to be solved by traditional programming techniques. AI provides a way
-to tackle these problems and help automate tasks that would otherwise require human intervention.
+Many problems are too complex for traditional, rule-based programming. AI gives us new ways to tackle these challenges: it can help us automate repetitive tasks, personalise user experiences, and make better predictions.
 
-Nowadays, in our day-to-day life, when we are using systems like ChatGPT or Gemini, we refer to
-them as Artificial Intelligence, but they are Large Language Models that are just one type of AI.
+Today, when we use tools like ChatGPT or Gemini, we often call them Artificial Intelligence. Technically, they’re a specific kind of AI known as Large Language Models, or LLMs.
 
-Let's define what an LLM is. For that, we need to understand what an AI model is.
+So, what exactly is an LLM? To answer that, let’s start with the basics: an AI model.
 
-An AI Model is a program trained on a set of data to perform specific tasks such as recognizing
-patterns, making decisions, predicting, or generating content.
+An AI model is simply a program that’s trained on data to do a particular job, for example, classifying images, spotting trends, or generating text. A model always takes an input and produces an output. The input and output can be text, images, audio, or other forms of data.
 
-A Model always has an input and output. Both the input and output can be in various forms such as
-text, images, audio, etc.
-
-An LLM is a type of AI model that is specifically designed to understand and generate human
-language. It is trained on vast amounts of text data to learn the patterns and structures of
-language.
+A Large Language Model is a type of AI model that’s specialised in human language. It’s trained on vast amounts of text to learn the structure and patterns of how we write and speak. This allows it to generate text, summarise information, answer questions, and even help you brainstorm ideas.
 
 ### Quiz
 
