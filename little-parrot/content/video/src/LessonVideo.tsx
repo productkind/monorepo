@@ -6,7 +6,6 @@ import {
   Audio,
   staticFile,
   Video,
-  Freeze,
   spring,
   interpolate,
 } from "remotion";
@@ -82,7 +81,7 @@ export const LessonVideo: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({c
           images={[
             {image: staticFile('section4.mp4'), delay: 0},
             {image: staticFile('section4-2.mp4'), delay: 70},
-            {image: staticFile('section4-3.mp4'), delay: 136, offset: -280},
+            {image: staticFile('section4-3.mp4'), delay: 136, offset: -320},
           ]}
         />
       </Sequence>
@@ -259,45 +258,44 @@ const getCaptionSentences = (captions: Captions, maxSentenceLength: number): Cap
   return sentences;
 };
 
-const ImageSteps: React.FC<{images: { image: string, delay: number, offset?: number, scale?: number }[], allDuration: number}> = ({ images, allDuration }) => {
-  const frame = useCurrentFrame()
+const ImageSteps: React.FC<{images: { image: string, delay: number, offset?: number, scale?: number}[], allDuration: number}> = ({ images, allDuration }) => {
   return (
     <AbsoluteFill className="bg-black" style={{
       fontFamily: spaceMonoFontFamily,
     }}>
           {images.map(({delay}, index) => {
             const height = 1920 / images.length
-            const duration = images[index + 1] !== undefined ? images[index + 1].delay - delay : allDuration - delay
+            const durationLeft = allDuration - delay
             return (
-              <Sequence from={delay} durationInFrames={duration} key={index}>
+              <Sequence from={delay} durationInFrames={durationLeft} key={index}>
                 <div className="flex flex-col items-center justify-center h-full w-full">
                   {
-                    images.map(({image, delay: internalDelay, offset = 0, scale = 1}, i) => {
+                    images.map(({image, offset = 0, scale = 1}, i) => {
                       const isVideo = image.endsWith('.mp4')
-                      return <div style={{ opacity: frame < internalDelay ? 0 : 1 }}>
-                      <Freeze active={frame < internalDelay} frame={0}>
+                      return <div>
                         <div key={i} style={{
                           width: 1080,
                           height,
                           overflow: 'hidden',
                         }}>
-                          {isVideo ? <Video loop src={image} trimBefore={0} width={1080} style={{
-                            translate: `0 ${offset}px`,
-                          }}/>
-                          : 
-                          <div className="flex items-center justify-center" style={{
-                            width: 1080,
-                            height,
-                            overflow: 'hidden',
-                          }}>
-                            <img src={image} width={1080} style={{
+                          {isVideo ? 
+                            i === index ? <Video loop src={image} trimBefore={0} width={1080} style={{
                               translate: `0 ${offset}px`,
-                              scale,
-                            }}/>
+                            }}/> :
+                            <div></div>
+                          : 
+                            <div className="flex items-center justify-center" style={{
+                              width: 1080,
+                              height,
+                              overflow: 'hidden',
+                            }}>
+                              <img src={image} width={1080} style={{
+                                translate: `0 ${offset}px`,
+                                scale,
+                              }}/>
                           </div>
                           }
                         </div>
-                      </Freeze>
                       </div>
                     })
                   }
