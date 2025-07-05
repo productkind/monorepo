@@ -8,14 +8,18 @@ import {
   Video,
   Freeze,
   spring,
+  interpolate,
 } from "remotion";
 import {Gif} from '@remotion/gif';
-import { loadFont } from '@remotion/google-fonts/SpaceMono';
+import { loadFont as loadSpaceMono } from '@remotion/google-fonts/SpaceMono';
+import { loadFont as loadMontserrat } from '@remotion/google-fonts/Lexend';
 import './styles.css';
 import { PropsWithChildren } from "react";
 import { z } from "zod";
+import { FRAME_RATE } from "./config";
 
-const {fontFamily} = loadFont();
+const {fontFamily: spaceMonoFontFamily} = loadSpaceMono();
+const {fontFamily: montserratFontFamily} = loadMontserrat();
 
 export const CaptionsSchema = z.array(z.object({
   text: z.string(),
@@ -28,9 +32,18 @@ export type Captions = z.infer<typeof CaptionsSchema>
 export const LessonVideoPropsSchema = z.object({
   captions: CaptionsSchema,
   titleDuration: z.number().default(60),
+  endDuration: z.number().default(60),
+  allDuration: z.number().default(100),
 })
 
-export const LessonVideo: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({captions, titleDuration}) => {
+export const LessonVideo: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({captions, titleDuration, endDuration, allDuration}) => {
+  const frame = useCurrentFrame()
+  const startMusicCutoff = 65;
+  const startMusicDuration = 35;
+  const volume = interpolate(frame, [startMusicCutoff, startMusicCutoff + startMusicDuration], [0.4, 0.05], { 
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  })
 
   return (
     <>
@@ -43,18 +56,106 @@ export const LessonVideo: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({c
           <TypingText delay={24}>AI Models</TypingText>
         </FullScreenText>
       </Sequence>
+      <Sequence from={0} durationInFrames={allDuration}>
+        <Audio src={staticFile('start.mp3')} volume={volume} />
+      </Sequence>
       <Sequence from={titleDuration} durationInFrames={218}>
         <FullScreenGif src={staticFile('section1.gif')} />
       </Sequence>
-      <Sequence from={titleDuration + 218} durationInFrames={218}>
+      <Sequence from={titleDuration + 218} durationInFrames={205}>
         <ImageSteps
+          allDuration={205}
           images={[
-            [staticFile('section2.mp4'), 0],
-            [staticFile('section2.mp4'), 50],
-            [staticFile('section2.mp4'), 100],
-            [staticFile('section2.mp4'), 150],
+            {image: staticFile('section2.mp4'), delay: 0},
+            {image: staticFile('section2-2.mp4'), delay: 70, offset: -100},
+            {image: staticFile('section2-3.mp4'), delay: 110},
+            {image: staticFile('section2-4.mp4'), delay: 155, offset: -150},
           ]}
         />
+      </Sequence>
+      <Sequence from={titleDuration + 218 + 205} durationInFrames={230}>
+        <FullScreenGif src={staticFile('section3.gif')} offset={-500} />
+      </Sequence>
+      <Sequence from={titleDuration + 218 + 205 + 230} durationInFrames={200}>
+        <ImageSteps
+          allDuration={200}
+          images={[
+            {image: staticFile('section4.mp4'), delay: 0},
+            {image: staticFile('section4-2.mp4'), delay: 70},
+            {image: staticFile('section4-3.mp4'), delay: 136, offset: -280},
+          ]}
+        />
+      </Sequence>
+      <Sequence from={titleDuration + 218 + 205 + 230 + 200} durationInFrames={188}>
+        <ImageSteps
+          allDuration={188}
+          images={[
+            {image: staticFile('section5.jpg'), delay: 0},
+            {image: staticFile('section5-2.jpg'), delay: 70},
+          ]}
+        />
+      </Sequence>
+      <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188} durationInFrames={274}>
+        <FullScreenGif src={staticFile('section6.gif')} />
+      </Sequence>
+      <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188 + 274} durationInFrames={104}>
+        <FullScreenGif src={staticFile('section7.gif')} />    
+      </Sequence>
+      <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188 + 274 + 104} durationInFrames={98}>
+        <FullScreenGif src={staticFile('section8.gif')} />    
+      </Sequence>
+      <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188 + 274 + 104 + 98} durationInFrames={86}>
+        <FullScreenGif src={staticFile('section9.gif')} />
+      </Sequence>
+      <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188 + 274 + 104 + 98 + 86} durationInFrames={148}>
+        <ImageSteps
+          allDuration={148}
+          images={[
+            {image: staticFile('section10.mp4'), delay: 0},
+            {image: staticFile('section10-2.mp4'), delay: 65, offset: -100},
+            {image: staticFile('section10-3.mp4'), delay: 101, offset: -100},
+          ]}
+        />
+      </Sequence>
+      <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188 + 274 + 104 + 98 + 86 + 148} durationInFrames={110}>
+        <FullScreenGif src={staticFile('section11.gif')} />
+      </Sequence>
+      <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188 + 274 + 104 + 98 + 86 + 148 + 110} durationInFrames={178}>
+        <ImageSteps
+          allDuration={178}
+          images={[
+            {image: staticFile('section12.mp4'), delay: 0, offset: -250},
+            {image: staticFile('section12-2.mp4'), delay: 65, offset: -100},
+            {image: staticFile('section12-3.mp4'), delay: 92, offset: -240},
+            {image: staticFile('section12-4.mp4'), delay: 118},
+          ]}
+        />
+      </Sequence>
+      <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188 + 274 + 104 + 98 + 86 + 148 + 110 + 178} durationInFrames={88}>
+        <FullScreenGif src={staticFile('section6.gif')} />
+      </Sequence>
+      <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188 + 274 + 104 + 98 + 86 + 148 + 110 + 178 + 88} durationInFrames={65}>
+        <FullScreenGif src={staticFile('section14.gif')} />
+      </Sequence>
+      <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188 + 274 + 104 + 98 + 86 + 148 + 110 + 178 + 88 + 65} durationInFrames={74}>
+        <FullScreenGif src={staticFile('section15.gif')} />
+      </Sequence>
+      <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188 + 274 + 104 + 98 + 86 + 148 + 110 + 178 + 88 + 65 + 74} durationInFrames={96}>
+        <FullScreenGif src={staticFile('section16.gif')} />
+      </Sequence>
+      <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188 + 274 + 104 + 98 + 86 + 148 + 110 + 178 + 88 + 65 + 74 + 96} durationInFrames={194}>
+        <ImageSteps
+          allDuration={200}
+          images={[
+            {image: staticFile('section17.mp4'), delay: 0, offset: -160},
+            {image: staticFile('section17-2.mp4'), delay: 54, offset: -20},
+            {image: staticFile('section17-3.mp4'), delay: 98, offset: -420},
+            {image: staticFile('section17-4.mp4'), delay: 138, offset: -200},
+          ]}
+        />
+      </Sequence>
+      <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188 + 274 + 104 + 98 + 86 + 148 + 110 + 178 + 88 + 65 + 74 + 96 + 194} durationInFrames={endDuration}>
+        <FullScreenEnd />
       </Sequence>
       <Sequence from={titleDuration}>
         <Captions captions={captions} />
@@ -68,24 +169,24 @@ export const LessonVideo: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({c
 
 const Captions: React.FC<{captions: Captions}> = ({captions}) => {
   const frame = useCurrentFrame()
-  const sentences = getCaptionSentences(captions, 60)
+  const sentences = getCaptionSentences(captions, 26)
   const sentence = sentences.find((sentence) => sentence.start <= frame && sentence.end >= frame)
 
   return (
     <AbsoluteFill style={{
-      fontFamily,
+      fontFamily: montserratFontFamily,
     }}>
       <div className="flex flex-col items-center justify-end h-full w-full">
-        <div className="font-black text-6xl text-center w-full p-10 min-h-1/8" style={{
-          WebkitTextStroke: '2px #fff',
-        }}>
+        <div className="font-bold text-8xl text-center w-full p-10 min-h-1/8">
           {sentence?.words.map((word, index) => {
             const isCurrentWord = word.start <= frame && word.end >= frame
             return (
-              <span key={index} style={{
-                WebkitTextStroke: isCurrentWord ? '2px #fdb226' : '2px #fff',
+              <span key={index} className="inline-block m-4 line-height-1" style={{
+                backgroundColor: isCurrentWord ? '#fdb226' : '#fff',
+                color: '#230156',
+                height: '112px',
               }}>
-                {`${word.text} `}
+                {word.text}
               </span>
             )
           })}
@@ -158,30 +259,52 @@ const getCaptionSentences = (captions: Captions, maxSentenceLength: number): Cap
   return sentences;
 };
 
-const ImageSteps: React.FC<{images: [string, number][]}> = ({ images }) => {
+const ImageSteps: React.FC<{images: { image: string, delay: number, offset?: number, scale?: number }[], allDuration: number}> = ({ images, allDuration }) => {
   const frame = useCurrentFrame()
   return (
     <AbsoluteFill className="bg-black" style={{
-      fontFamily,
+      fontFamily: spaceMonoFontFamily,
     }}>
-        <div className="flex flex-col items-center justify-center h-full w-full">
-          {images.map(([image, delay], index) => {
+          {images.map(({delay}, index) => {
             const height = 1920 / images.length
+            const duration = images[index + 1] !== undefined ? images[index + 1].delay - delay : allDuration - delay
             return (
-              <div key={index} style={{
-                width: 1080,
-                height,
-                overflow: 'hidden',
-              }}>
-                <Freeze active={frame < delay} frame={delay}>
-                  <Video loop src={image} width={1080} style={{
-                    opacity: frame < delay ? 0 : 1,
-                  }}/>
-                </Freeze>
-              </div>
+              <Sequence from={delay} durationInFrames={duration} key={index}>
+                <div className="flex flex-col items-center justify-center h-full w-full">
+                  {
+                    images.map(({image, delay: internalDelay, offset = 0, scale = 1}, i) => {
+                      const isVideo = image.endsWith('.mp4')
+                      return <div style={{ opacity: frame < internalDelay ? 0 : 1 }}>
+                      <Freeze active={frame < internalDelay} frame={0}>
+                        <div key={i} style={{
+                          width: 1080,
+                          height,
+                          overflow: 'hidden',
+                        }}>
+                          {isVideo ? <Video loop src={image} trimBefore={0} width={1080} style={{
+                            translate: `0 ${offset}px`,
+                          }}/>
+                          : 
+                          <div className="flex items-center justify-center" style={{
+                            width: 1080,
+                            height,
+                            overflow: 'hidden',
+                          }}>
+                            <img src={image} width={1080} style={{
+                              translate: `0 ${offset}px`,
+                              scale,
+                            }}/>
+                          </div>
+                          }
+                        </div>
+                      </Freeze>
+                      </div>
+                    })
+                  }
+                </div>
+              </Sequence>
             )
           })}
-        </div>
     </AbsoluteFill>
   )
 }
@@ -211,11 +334,13 @@ const FullScreenText: React.FC<PropsWithChildren> = ({ children }) => {
   });
   return (
     <AbsoluteFill className="bg-[image:var(--gradient)]" style={{
-      fontFamily,
+      fontFamily: spaceMonoFontFamily,
     }}>
       <img src={staticFile('logo.png')} className="absolute top-10 left-10 w-60" />
       <div className="flex flex-col items-center justify-center h-full w-full">
-        <div className="font-black text-9xl text-center w-full">
+        <div className="font-black text-9xl text-center w-full" style={{
+          color: '#230156'
+        }}>
           {children}
         </div>
       </div>
@@ -239,15 +364,35 @@ const TypingText: React.FC<{children: string, delay?: number}> = ({ children, de
   </>
 }
 
-const FullScreenGif: React.FC<{src: string}> = ({ src }) => {
+const FullScreenGif: React.FC<{src: string, offset?: number}> = ({ src, offset = 0 }) => {
   return (
     <AbsoluteFill>
+      <div className="flex flex-col items-center justify-center h-full w-full">
       <Gif
         src={src}
-        width={1080}
+        width={1080 + Math.abs(offset) * 2}
         height={1920}
         fit="cover"
+        style={{
+          translate: `${offset}px 0`,
+        }}
       />
+      </div>
+    </AbsoluteFill>
+  )
+}
+
+const FullScreenEnd: React.FC = () => {
+  return (
+    <AbsoluteFill className="bg-[#230156]">
+      <div className="flex flex-col items-center justify-center h-full w-full">
+        <img src={staticFile('logo.png')} className="w-120" />
+      </div>
+      <div className="absolute bottom-10 right-10 w-240 text-white font-black text-3xl">
+        Flow by Moavii | https://www.youtube.com/@MoaviiMusic <br />
+        Free To Use | https://freetouse.com/music <br />
+        Music promoted by https://www.free-stock-music.com
+      </div>
     </AbsoluteFill>
   )
 }

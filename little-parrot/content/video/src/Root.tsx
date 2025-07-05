@@ -18,18 +18,22 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{
           captions: [],
           titleDuration: 60,
+          endDuration: 60,
+          allDuration: 100,
         }}
         calculateMetadata={async ({props}) => {
           const titleDuration = 60
+          const endDuration = 60
           const response = await fetch(staticFile('text.json'))
           const captions = await response.json()
-          const duration = Math.ceil(captions.at(-1).end * FRAME_RATE) + titleDuration
+          const duration = Math.ceil(captions.at(-1).end * FRAME_RATE) + titleDuration + endDuration
           
           return {
             durationInFrames: duration,
             props: {
               ...props,
               captions: transformCaptionsToFrames(captions),
+              allDuration: duration,
             }
           }
         }}
