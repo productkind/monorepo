@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+@theme {
+  --gradient: linear-gradient(113deg, #fdb226 0%, #fdc425 20%, #fdd825 40%, #fdf024 60%, #eafd24 80%, #c4fd23 100%);
+}

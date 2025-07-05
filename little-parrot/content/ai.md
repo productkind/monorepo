@@ -116,3 +116,9 @@ cases they are hallucinating outputs that are useful and correct.
 
 Because of this prediction based nature, you can expect totally different output for asking
 verifications on a previous output, or asking the same question multiple times.
+
+### try AI
+
+### Video
+
+what is a prompt and what is prompt engineering

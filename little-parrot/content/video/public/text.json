@@ -1,0 +1,1057 @@
+[
+  {
+    "text": "In",
+    "start": 0.046,
+    "end": 0.139
+  },
+  {
+    "text": "simple",
+    "start": 0.197,
+    "end": 0.441
+  },
+  {
+    "text": "terms,",
+    "start": 0.464,
+    "end": 0.952
+  },
+  {
+    "text": "Artificial",
+    "start": 1.126,
+    "end": 1.579
+  },
+  {
+    "text": "Intelligence",
+    "start": 1.625,
+    "end": 2.136
+  },
+  {
+    "text": "is",
+    "start": 2.183,
+    "end": 2.264
+  },
+  {
+    "text": "the",
+    "start": 2.322,
+    "end": 2.392
+  },
+  {
+    "text": "capability",
+    "start": 2.426,
+    "end": 2.914
+  },
+  {
+    "text": "of",
+    "start": 2.961,
+    "end": 3.007
+  },
+  {
+    "text": "a",
+    "start": 3.053,
+    "end": 3.077
+  },
+  {
+    "text": "machine",
+    "start": 3.135,
+    "end": 3.622
+  },
+  {
+    "text": "to",
+    "start": 3.738,
+    "end": 3.843
+  },
+  {
+    "text": "perform",
+    "start": 3.901,
+    "end": 4.18
+  },
+  {
+    "text": "tasks",
+    "start": 4.238,
+    "end": 4.725
+  },
+  {
+    "text": "that",
+    "start": 4.818,
+    "end": 4.957
+  },
+  {
+    "text": "would",
+    "start": 4.981,
+    "end": 5.097
+  },
+  {
+    "text": "normally",
+    "start": 5.143,
+    "end": 5.433
+  },
+  {
+    "text": "require",
+    "start": 5.503,
+    "end": 5.921
+  },
+  {
+    "text": "human",
+    "start": 5.968,
+    "end": 6.211
+  },
+  {
+    "text": "intelligence.",
+    "start": 6.246,
+    "end": 6.978
+  },
+  {
+    "text": "This",
+    "start": 7.419,
+    "end": 7.593
+  },
+  {
+    "text": "includes",
+    "start": 7.639,
+    "end": 7.918
+  },
+  {
+    "text": "things",
+    "start": 7.953,
+    "end": 8.15
+  },
+  {
+    "text": "like",
+    "start": 8.185,
+    "end": 8.336
+  },
+  {
+    "text": "learning",
+    "start": 8.394,
+    "end": 8.649
+  },
+  {
+    "text": "from",
+    "start": 8.684,
+    "end": 8.8
+  },
+  {
+    "text": "data,",
+    "start": 8.858,
+    "end": 9.392
+  },
+  {
+    "text": "understanding",
+    "start": 9.671,
+    "end": 10.124
+  },
+  {
+    "text": "language,",
+    "start": 10.182,
+    "end": 10.751
+  },
+  {
+    "text": "recognising",
+    "start": 10.995,
+    "end": 11.529
+  },
+  {
+    "text": "patterns,",
+    "start": 11.587,
+    "end": 12.179
+  },
+  {
+    "text": "and",
+    "start": 12.353,
+    "end": 12.504
+  },
+  {
+    "text": "making",
+    "start": 12.562,
+    "end": 12.794
+  },
+  {
+    "text": "decisions.",
+    "start": 12.84,
+    "end": 13.491
+  },
+  {
+    "text": "Many",
+    "start": 14.187,
+    "end": 14.385
+  },
+  {
+    "text": "problems",
+    "start": 14.443,
+    "end": 14.745
+  },
+  {
+    "text": "are",
+    "start": 14.779,
+    "end": 14.861
+  },
+  {
+    "text": "too",
+    "start": 14.895,
+    "end": 15.023
+  },
+  {
+    "text": "complex",
+    "start": 15.093,
+    "end": 15.522
+  },
+  {
+    "text": "for",
+    "start": 15.58,
+    "end": 15.685
+  },
+  {
+    "text": "traditional,",
+    "start": 15.743,
+    "end": 16.3
+  },
+  {
+    "text": "rule-based",
+    "start": 16.358,
+    "end": 16.927
+  },
+  {
+    "text": "programming.",
+    "start": 16.985,
+    "end": 17.693
+  },
+  {
+    "text": "AI",
+    "start": 18.506,
+    "end": 18.947
+  },
+  {
+    "text": "gives",
+    "start": 19.029,
+    "end": 19.226
+  },
+  {
+    "text": "us",
+    "start": 19.272,
+    "end": 19.377
+  },
+  {
+    "text": "new",
+    "start": 19.447,
+    "end": 19.586
+  },
+  {
+    "text": "ways",
+    "start": 19.621,
+    "end": 19.83
+  },
+  {
+    "text": "to",
+    "start": 19.876,
+    "end": 19.934
+  },
+  {
+    "text": "tackle",
+    "start": 20.004,
+    "end": 20.317
+  },
+  {
+    "text": "these",
+    "start": 20.341,
+    "end": 20.503
+  },
+  {
+    "text": "challenges:",
+    "start": 20.538,
+    "end": 21.223
+  },
+  {
+    "text": "it",
+    "start": 21.734,
+    "end": 21.838
+  },
+  {
+    "text": "can",
+    "start": 21.873,
+    "end": 21.978
+  },
+  {
+    "text": "help",
+    "start": 22.036,
+    "end": 22.175
+  },
+  {
+    "text": "us",
+    "start": 22.233,
+    "end": 22.337
+  },
+  {
+    "text": "automate",
+    "start": 22.419,
+    "end": 22.813
+  },
+  {
+    "text": "repetitive",
+    "start": 22.848,
+    "end": 23.278
+  },
+  {
+    "text": "tasks,",
+    "start": 23.313,
+    "end": 24.009
+  },
+  {
+    "text": "personalise",
+    "start": 24.334,
+    "end": 24.926
+  },
+  {
+    "text": "user",
+    "start": 24.996,
+    "end": 25.24
+  },
+  {
+    "text": "experiences,",
+    "start": 25.298,
+    "end": 26.122
+  },
+  {
+    "text": "and",
+    "start": 26.331,
+    "end": 26.494
+  },
+  {
+    "text": "make",
+    "start": 26.552,
+    "end": 26.726
+  },
+  {
+    "text": "better",
+    "start": 26.784,
+    "end": 27.052
+  },
+  {
+    "text": "predictions.",
+    "start": 27.11,
+    "end": 27.864
+  },
+  {
+    "text": "Today,",
+    "start": 28.468,
+    "end": 28.863
+  },
+  {
+    "text": "when",
+    "start": 28.886,
+    "end": 29.014
+  },
+  {
+    "text": "we",
+    "start": 29.06,
+    "end": 29.13
+  },
+  {
+    "text": "use",
+    "start": 29.199,
+    "end": 29.374
+  },
+  {
+    "text": "tools",
+    "start": 29.42,
+    "end": 29.733
+  },
+  {
+    "text": "like",
+    "start": 29.791,
+    "end": 29.919
+  },
+  {
+    "text": "ChatGPT",
+    "start": 29.966,
+    "end": 30.558
+  },
+  {
+    "text": "or",
+    "start": 30.697,
+    "end": 30.79
+  },
+  {
+    "text": "Gemini,",
+    "start": 30.871,
+    "end": 31.545
+  },
+  {
+    "text": "we",
+    "start": 31.963,
+    "end": 32.067
+  },
+  {
+    "text": "often",
+    "start": 32.113,
+    "end": 32.322
+  },
+  {
+    "text": "call",
+    "start": 32.369,
+    "end": 32.52
+  },
+  {
+    "text": "them",
+    "start": 32.578,
+    "end": 32.694
+  },
+  {
+    "text": "Artificial",
+    "start": 32.926,
+    "end": 33.588
+  },
+  {
+    "text": "Intelligence.",
+    "start": 33.634,
+    "end": 34.447
+  },
+  {
+    "text": "Technically,",
+    "start": 34.865,
+    "end": 35.596
+  },
+  {
+    "text": "they’re",
+    "start": 35.759,
+    "end": 35.968
+  },
+  {
+    "text": "a",
+    "start": 35.991,
+    "end": 36.014
+  },
+  {
+    "text": "specific",
+    "start": 36.061,
+    "end": 36.56
+  },
+  {
+    "text": "kind",
+    "start": 36.595,
+    "end": 36.734
+  },
+  {
+    "text": "of",
+    "start": 36.781,
+    "end": 36.827
+  },
+  {
+    "text": "AI",
+    "start": 36.943,
+    "end": 37.373
+  },
+  {
+    "text": "known",
+    "start": 37.628,
+    "end": 37.965
+  },
+  {
+    "text": "as",
+    "start": 38.023,
+    "end": 38.139
+  },
+  {
+    "text": "Large",
+    "start": 38.302,
+    "end": 38.592
+  },
+  {
+    "text": "Language",
+    "start": 38.65,
+    "end": 38.987
+  },
+  {
+    "text": "Models,",
+    "start": 39.033,
+    "end": 39.555
+  },
+  {
+    "text": "or",
+    "start": 39.753,
+    "end": 39.915
+  },
+  {
+    "text": "LLMs.",
+    "start": 39.997,
+    "end": 40.809
+  },
+  {
+    "text": "So,",
+    "start": 41.471,
+    "end": 41.866
+  },
+  {
+    "text": "what",
+    "start": 42.063,
+    "end": 42.226
+  },
+  {
+    "text": "exactly",
+    "start": 42.272,
+    "end": 42.655
+  },
+  {
+    "text": "is",
+    "start": 42.702,
+    "end": 42.771
+  },
+  {
+    "text": "an",
+    "start": 42.818,
+    "end": 42.888
+  },
+  {
+    "text": "LLM?",
+    "start": 42.957,
+    "end": 43.654
+  },
+  {
+    "text": "To",
+    "start": 44.316,
+    "end": 44.42
+  },
+  {
+    "text": "answer",
+    "start": 44.489,
+    "end": 44.722
+  },
+  {
+    "text": "that,",
+    "start": 44.768,
+    "end": 45.07
+  },
+  {
+    "text": "let’s",
+    "start": 45.233,
+    "end": 45.43
+  },
+  {
+    "text": "start",
+    "start": 45.465,
+    "end": 45.662
+  },
+  {
+    "text": "with",
+    "start": 45.685,
+    "end": 45.778
+  },
+  {
+    "text": "the",
+    "start": 45.813,
+    "end": 45.883
+  },
+  {
+    "text": "basics:",
+    "start": 45.999,
+    "end": 46.8
+  },
+  {
+    "text": "an",
+    "start": 47.404,
+    "end": 47.52
+  },
+  {
+    "text": "AI",
+    "start": 47.566,
+    "end": 47.856
+  },
+  {
+    "text": "model.",
+    "start": 47.938,
+    "end": 48.437
+  },
+  {
+    "text": "An",
+    "start": 49.041,
+    "end": 49.192
+  },
+  {
+    "text": "AI",
+    "start": 49.25,
+    "end": 49.47
+  },
+  {
+    "text": "model",
+    "start": 49.528,
+    "end": 49.784
+  },
+  {
+    "text": "is",
+    "start": 49.807,
+    "end": 49.853
+  },
+  {
+    "text": "simply",
+    "start": 49.888,
+    "end": 50.167
+  },
+  {
+    "text": "a",
+    "start": 50.213,
+    "end": 50.236
+  },
+  {
+    "text": "program",
+    "start": 50.306,
+    "end": 50.631
+  },
+  {
+    "text": "that’s",
+    "start": 50.654,
+    "end": 50.84
+  },
+  {
+    "text": "trained",
+    "start": 50.898,
+    "end": 51.188
+  },
+  {
+    "text": "on",
+    "start": 51.223,
+    "end": 51.305
+  },
+  {
+    "text": "data",
+    "start": 51.374,
+    "end": 51.699
+  },
+  {
+    "text": "to",
+    "start": 51.908,
+    "end": 52.013
+  },
+  {
+    "text": "do",
+    "start": 52.071,
+    "end": 52.152
+  },
+  {
+    "text": "a",
+    "start": 52.21,
+    "end": 52.233
+  },
+  {
+    "text": "particular",
+    "start": 52.291,
+    "end": 52.733
+  },
+  {
+    "text": "job,",
+    "start": 52.791,
+    "end": 53.313
+  },
+  {
+    "text": "for",
+    "start": 53.522,
+    "end": 53.65
+  },
+  {
+    "text": "example,",
+    "start": 53.696,
+    "end": 54.277
+  },
+  {
+    "text": "classifying",
+    "start": 54.451,
+    "end": 54.973
+  },
+  {
+    "text": "images,",
+    "start": 55.008,
+    "end": 55.531
+  },
+  {
+    "text": "spotting",
+    "start": 55.647,
+    "end": 56.018
+  },
+  {
+    "text": "trends,",
+    "start": 56.065,
+    "end": 56.645
+  },
+  {
+    "text": "or",
+    "start": 56.854,
+    "end": 56.982
+  },
+  {
+    "text": "generating",
+    "start": 57.04,
+    "end": 57.481
+  },
+  {
+    "text": "text.",
+    "start": 57.539,
+    "end": 58.096
+  },
+  {
+    "text": "A",
+    "start": 58.7,
+    "end": 58.77
+  },
+  {
+    "text": "model",
+    "start": 58.851,
+    "end": 59.106
+  },
+  {
+    "text": "always",
+    "start": 59.164,
+    "end": 59.408
+  },
+  {
+    "text": "takes",
+    "start": 59.443,
+    "end": 59.664
+  },
+  {
+    "text": "an",
+    "start": 59.699,
+    "end": 59.757
+  },
+  {
+    "text": "input",
+    "start": 59.803,
+    "end": 60.105
+  },
+  {
+    "text": "and",
+    "start": 60.152,
+    "end": 60.256
+  },
+  {
+    "text": "produces",
+    "start": 60.314,
+    "end": 60.802
+  },
+  {
+    "text": "an",
+    "start": 60.86,
+    "end": 60.93
+  },
+  {
+    "text": "output.",
+    "start": 60.976,
+    "end": 61.499
+  },
+  {
+    "text": "The",
+    "start": 62.102,
+    "end": 62.218
+  },
+  {
+    "text": "input",
+    "start": 62.276,
+    "end": 62.532
+  },
+  {
+    "text": "and",
+    "start": 62.578,
+    "end": 62.648
+  },
+  {
+    "text": "output",
+    "start": 62.694,
+    "end": 62.961
+  },
+  {
+    "text": "can",
+    "start": 62.996,
+    "end": 63.112
+  },
+  {
+    "text": "be",
+    "start": 63.159,
+    "end": 63.345
+  },
+  {
+    "text": "text,",
+    "start": 63.519,
+    "end": 64.157
+  },
+  {
+    "text": "images,",
+    "start": 64.227,
+    "end": 65.005
+  },
+  {
+    "text": "audio,",
+    "start": 65.121,
+    "end": 65.876
+  },
+  {
+    "text": "or",
+    "start": 66.003,
+    "end": 66.154
+  },
+  {
+    "text": "other",
+    "start": 66.212,
+    "end": 66.386
+  },
+  {
+    "text": "forms",
+    "start": 66.433,
+    "end": 66.688
+  },
+  {
+    "text": "of",
+    "start": 66.735,
+    "end": 66.781
+  },
+  {
+    "text": "data.",
+    "start": 66.828,
+    "end": 67.269
+  },
+  {
+    "text": "A",
+    "start": 68.081,
+    "end": 68.151
+  },
+  {
+    "text": "Large",
+    "start": 68.232,
+    "end": 68.453
+  },
+  {
+    "text": "Language",
+    "start": 68.488,
+    "end": 68.766
+  },
+  {
+    "text": "Model",
+    "start": 68.801,
+    "end": 69.033
+  },
+  {
+    "text": "is",
+    "start": 69.057,
+    "end": 69.103
+  },
+  {
+    "text": "a",
+    "start": 69.15,
+    "end": 69.184
+  },
+  {
+    "text": "type",
+    "start": 69.231,
+    "end": 69.428
+  },
+  {
+    "text": "of",
+    "start": 69.463,
+    "end": 69.521
+  },
+  {
+    "text": "AI",
+    "start": 69.649,
+    "end": 69.974
+  },
+  {
+    "text": "model",
+    "start": 70.043,
+    "end": 70.345
+  },
+  {
+    "text": "that’s",
+    "start": 70.392,
+    "end": 70.612
+  },
+  {
+    "text": "specialised",
+    "start": 70.937,
+    "end": 71.599
+  },
+  {
+    "text": "in",
+    "start": 71.634,
+    "end": 71.704
+  },
+  {
+    "text": "human",
+    "start": 71.785,
+    "end": 72.075
+  },
+  {
+    "text": "language.",
+    "start": 72.133,
+    "end": 72.679
+  },
+  {
+    "text": "It’s",
+    "start": 73.12,
+    "end": 73.329
+  },
+  {
+    "text": "trained",
+    "start": 73.387,
+    "end": 73.677
+  },
+  {
+    "text": "on",
+    "start": 73.712,
+    "end": 73.805
+  },
+  {
+    "text": "vast",
+    "start": 73.898,
+    "end": 74.316
+  },
+  {
+    "text": "amounts",
+    "start": 74.362,
+    "end": 74.676
+  },
+  {
+    "text": "of",
+    "start": 74.722,
+    "end": 74.78
+  },
+  {
+    "text": "text",
+    "start": 74.838,
+    "end": 75.256
+  },
+  {
+    "text": "to",
+    "start": 75.581,
+    "end": 75.698
+  },
+  {
+    "text": "learn",
+    "start": 75.756,
+    "end": 75.93
+  },
+  {
+    "text": "the",
+    "start": 75.965,
+    "end": 76.035
+  },
+  {
+    "text": "structure",
+    "start": 76.093,
+    "end": 76.487
+  },
+  {
+    "text": "and",
+    "start": 76.511,
+    "end": 76.58
+  },
+  {
+    "text": "patterns",
+    "start": 76.638,
+    "end": 77.033
+  },
+  {
+    "text": "of",
+    "start": 77.091,
+    "end": 77.161
+  },
+  {
+    "text": "how",
+    "start": 77.207,
+    "end": 77.3
+  },
+  {
+    "text": "we",
+    "start": 77.347,
+    "end": 77.428
+  },
+  {
+    "text": "write",
+    "start": 77.463,
+    "end": 77.683
+  },
+  {
+    "text": "and",
+    "start": 77.718,
+    "end": 77.788
+  },
+  {
+    "text": "speak.",
+    "start": 77.834,
+    "end": 78.287
+  },
+  {
+    "text": "This",
+    "start": 78.798,
+    "end": 78.972
+  },
+  {
+    "text": "allows",
+    "start": 79.018,
+    "end": 79.274
+  },
+  {
+    "text": "it",
+    "start": 79.32,
+    "end": 79.39
+  },
+  {
+    "text": "to",
+    "start": 79.413,
+    "end": 79.471
+  },
+  {
+    "text": "generate",
+    "start": 79.529,
+    "end": 79.878
+  },
+  {
+    "text": "text,",
+    "start": 79.912,
+    "end": 80.458
+  },
+  {
+    "text": "summarise",
+    "start": 80.609,
+    "end": 81.05
+  },
+  {
+    "text": "information,",
+    "start": 81.085,
+    "end": 81.77
+  },
+  {
+    "text": "answer",
+    "start": 82.014,
+    "end": 82.316
+  },
+  {
+    "text": "questions,",
+    "start": 82.374,
+    "end": 83.024
+  },
+  {
+    "text": "and",
+    "start": 83.349,
+    "end": 83.488
+  },
+  {
+    "text": "even",
+    "start": 83.535,
+    "end": 83.686
+  },
+  {
+    "text": "help",
+    "start": 83.732,
+    "end": 83.871
+  },
+  {
+    "text": "you",
+    "start": 83.929,
+    "end": 84.011
+  },
+  {
+    "text": "brainstorm",
+    "start": 84.092,
+    "end": 84.649
+  },
+  {
+    "text": "ideas.",
+    "start": 84.707,
+    "end": 85.137
+  }
+]
