@@ -7,7 +7,7 @@
    viewBox="0 0 285.74999 357.1875"
    version="1.1"
    id="svg1"
-   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
    sodipodi:docname="panel-01.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -24,12 +24,12 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
      inkscape:zoom="0.42904704"
-     inkscape:cx="144.5063"
-     inkscape:cy="801.77688"
-     inkscape:window-width="1728"
-     inkscape:window-height="1057"
-     inkscape:window-x="2560"
-     inkscape:window-y="355"
+     inkscape:cx="143.34093"
+     inkscape:cy="801.77689"
+     inkscape:window-width="1712"
+     inkscape:window-height="965"
+     inkscape:window-x="0"
+     inkscape:window-y="39"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1"
      showguides="false">
@@ -268,12 +268,12 @@
          style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0774px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light'">ind</tspan></text>
     <path
        style="fill:none;fill-opacity:1;stroke:#370188;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-       d="m 167.45017,155.79161 c 0.19775,-29.04434 13.06938,-38.76948 5.25519,-63.466411"
+       d="m 169.91688,157.02496 c 0.19775,-22.2609 18.61947,-15.95244 17.58872,-32.63257"
        id="path13-1-4"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;fill-opacity:1;stroke:#370188;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-       d="m 44.224425,174.10536 c 0.19775,-29.04434 37.119773,-3.00223 29.305583,-27.69916"
+       d="M 31.89089,169.17195 C 12.971661,143.82767 41.876887,86.618417 34.062697,61.921487"
        id="path13-1-4-5"
        sodipodi:nodetypes="cc" />
     <g
@@ -547,18 +547,18 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.05px;font-family:'Nanum Pen';-inkscape-font-specification:'Nanum Pen';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;white-space:pre;inline-size:274.682;display:inline;fill:#370188;fill-opacity:1;stroke:none;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-       x="15.039584"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.05px;font-family:'Nanum Pen';-inkscape-font-specification:'Nanum Pen';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:end;white-space:pre;inline-size:274.682;display:inline;fill:#370188;fill-opacity:1;stroke:none;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       x="123.84371"
        y="156.49693"
        id="text17-7"
-       transform="translate(149.44788,-103.82481)"><tspan
-         x="15.039584"
+       transform="translate(152.53126,-64.974176)"><tspan
+         x="123.84371"
          y="156.49693"
-         id="tspan1">It’ll make waiting more exciting!
+         id="tspan4">It’ll make waiting more exciting!
 </tspan><tspan
-         x="15.039584"
+         x="123.84371"
          y="180.30944"
-         id="tspan2">Imagine sparkly progress!</tspan></text>
+         id="tspan5">Imagine sparkly progress!</tspan></text>
     <g
        id="g10"
        transform="translate(-122.05327,20.125805)"
@@ -796,18 +796,17 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.05px;font-family:'Nanum Pen';-inkscape-font-specification:'Nanum Pen';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;white-space:pre;inline-size:176.014;display:inline;fill:#370188;fill-opacity:1;stroke:none;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-       x="15.039584"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.05px;font-family:'Nanum Pen';-inkscape-font-specification:'Nanum Pen';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;inline-size:262.349;display:inline;fill:#370188;fill-opacity:1;stroke:none;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       x="-82.163055"
        y="156.49693"
        id="text17-7-9"
-       transform="translate(64.547205,-41.63038)"><tspan
-         x="15.039584"
+       transform="translate(92.297653,-130.43183)"><tspan
+         x="-82.163055"
          y="156.49693"
-         id="tspan3">What problem are we<tspan
-   y="156.49693"
-   id="tspan4"> </tspan></tspan><tspan
-         x="15.039584"
+         id="tspan6">What problem are we 
+</tspan><tspan
+         x="-82.163055"
          y="180.30944"
-         id="tspan5">solving by doing this?</tspan></text>
+         id="tspan7">solving by doing this?</tspan></text>
   </g>
 </svg>
