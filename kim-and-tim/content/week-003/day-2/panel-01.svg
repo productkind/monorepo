@@ -268,13 +268,8 @@
          style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0774px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light'">ind</tspan></text>
     <path
        style="fill:none;fill-opacity:1;stroke:#370188;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-       d="m 169.91688,157.02496 c 0.19775,-22.2609 18.61947,-15.95244 17.58872,-32.63257"
+       d="M 169.91688,157.02496 C 157.6225,138.22155 197.21091,92.648327 189.35563,60.874686"
        id="path13-1-4"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;fill-opacity:1;stroke:#370188;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-       d="M 31.89089,169.17195 C 12.971661,143.82767 41.876887,86.618417 34.062697,61.921487"
-       id="path13-1-4-5"
        sodipodi:nodetypes="cc" />
     <g
        id="g4"
@@ -551,14 +546,14 @@
        x="123.84371"
        y="156.49693"
        id="text17-7"
-       transform="translate(152.53126,-64.974176)"><tspan
+       transform="translate(153.14794,-126.64185)"><tspan
          x="123.84371"
          y="156.49693"
-         id="tspan4">It’ll make waiting more exciting!
+         id="tspan1">It’ll make waiting more exciting!
 </tspan><tspan
          x="123.84371"
          y="180.30944"
-         id="tspan5">Imagine sparkly progress!</tspan></text>
+         id="tspan2">Imagine sparkly progress!</tspan></text>
     <g
        id="g10"
        transform="translate(-122.05327,20.125805)"
@@ -800,13 +795,18 @@
        x="-82.163055"
        y="156.49693"
        id="text17-7-9"
-       transform="translate(92.297653,-130.43183)"><tspan
+       transform="translate(91.0643,-59.514005)"><tspan
          x="-82.163055"
          y="156.49693"
-         id="tspan6">What problem are we 
+         id="tspan3">What problem are we 
 </tspan><tspan
          x="-82.163055"
          y="180.30944"
-         id="tspan7">solving by doing this?</tspan></text>
+         id="tspan4">solving by doing this?</tspan></text>
+    <path
+       style="fill:none;fill-opacity:1;stroke:#370188;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 27.464554,167.50847 c -1.035599,-22.2609 44.519899,-6.70229 39.789082,-38.18266"
+       id="path1"
+       sodipodi:nodetypes="cc" />
   </g>
 </svg>
