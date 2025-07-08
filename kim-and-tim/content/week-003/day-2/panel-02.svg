@@ -7,7 +7,7 @@
    viewBox="0 0 285.74999 357.1875"
    version="1.1"
    id="svg1"
-   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
    sodipodi:docname="panel-02.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -24,12 +24,12 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
      inkscape:zoom="0.42904704"
-     inkscape:cx="41.953442"
-     inkscape:cy="829.74585"
-     inkscape:window-width="1728"
-     inkscape:window-height="1057"
-     inkscape:window-x="2560"
-     inkscape:window-y="355"
+     inkscape:cx="354.27351"
+     inkscape:cy="661.93208"
+     inkscape:window-width="1712"
+     inkscape:window-height="965"
+     inkscape:window-x="0"
+     inkscape:window-y="39"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1"
      showguides="false">
@@ -279,12 +279,12 @@
          style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:13.0774px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light'">ind</tspan></text>
     <path
        style="fill:none;fill-opacity:1;stroke:#370188;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-       d="m 167.45017,155.79161 c 0.19775,-29.04434 24.78624,-88.720296 16.97205,-113.417227"
+       d="M 133.53296,173.05856 C 109.37803,167.23704 101.54397,141.85061 97.410866,111.38741 93.775883,84.595607 66.373599,61.243601 71.570377,46.074443"
        id="path13-1-4"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="csc" />
     <path
        style="fill:none;fill-opacity:1;stroke:#370188;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-       d="M 94.17524,195.07237 C 74.022658,165.41135 93.061056,151.98615 77.846745,126.05587"
+       d="m 234.77754,220.35612 c 1.4145,-34.75787 -34.48291,-58.08697 -29.27871,-89.36684"
        id="path13-1-4-5"
        sodipodi:nodetypes="cc" />
     <g
@@ -562,10 +562,10 @@
        x="15.039584"
        y="156.49693"
        id="text17-7"
-       transform="translate(161.78141,-119.85841)"><tspan
+       transform="translate(85.930172,-117.39171)"><tspan
          x="15.039584"
          y="156.49693"
-         id="tspan5">Erm... Boredom? Maybe?</tspan></text>
+         id="tspan1">Erm... Boredom? Maybe?</tspan></text>
     <g
        id="g10"
        transform="translate(-122.05327,20.125805)"
@@ -648,19 +648,19 @@
        x="15.039584"
        y="156.49693"
        id="text17-7-9"
-       transform="translate(67.630589,-84.734893)"><tspan
+       transform="translate(187.88255,-77.334772)"><tspan
          x="15.039584"
          y="156.49693"
-         id="tspan6">Hmm...
+         id="tspan2">Hmm...
 </tspan><tspan
          x="15.039584"
          y="180.30944"
-         id="tspan7">Or we could make the<tspan
+         id="tspan3">Or we could make the<tspan
    y="180.30944"
-   id="tspan8"> </tspan></tspan><tspan
+   id="tspan4"> </tspan></tspan><tspan
          x="15.039584"
          y="204.12194"
-         id="tspan9">wait shorter instead?</tspan></text>
+         id="tspan5">wait shorter instead?</tspan></text>
     <g
        id="g11"
        transform="translate(115.31855,-20.967009)"
