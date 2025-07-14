@@ -35,6 +35,59 @@ export const LessonVideoPropsSchema = z.object({
   allDuration: z.number().default(100),
 })
 
+export const LessonVideo2: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({captions, titleDuration, endDuration, allDuration}) => {
+   const frame = useCurrentFrame()
+  const startMusicCutoff = 65;
+  const startMusicDuration = 35;
+  const volume = interpolate(frame, [startMusicCutoff, startMusicCutoff + startMusicDuration], [0.4, 0.05], { 
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  })
+
+  return (
+    <>
+      <Sequence durationInFrames={titleDuration}>
+        <FullScreenText>
+          <TypingText delay={0}>Prompting Technique</TypingText>
+          <br/>
+          <TypingText delay={22}>#1</TypingText>
+          <br/>
+          <TypingText delay={24}>Tone and Style</TypingText>
+        </FullScreenText>
+      </Sequence>
+      <Sequence from={0} durationInFrames={allDuration}>
+        <Audio src={staticFile('start.mp3')} volume={volume} />
+      </Sequence>
+      <Sequence from={titleDuration} durationInFrames={44}>
+        <FullScreenGif src={staticFile('video-2/section1.gif')} />
+      </Sequence>
+      <Sequence from={titleDuration + 44} durationInFrames={72}>
+        <FullScreenGif src={staticFile('video-2/section2.gif')} fit="contain" color="#f6adcd" />
+      </Sequence>
+      <Sequence from={titleDuration + 116} durationInFrames={76}>
+        <FullScreenGif src={staticFile('video-2/section3.gif')} fit="contain" color="#fcedc4" />
+      </Sequence>
+      <Sequence from={titleDuration + 116 + 76} durationInFrames={54}>
+        <FullScreenGif src={staticFile('video-2/section4.gif')} fit="contain" color="#fefefe" />
+      </Sequence>
+      <Sequence from={titleDuration + 116 + 76 + 54} durationInFrames={116}>
+        <FullScreenGif src={staticFile('video-2/section5.gif')} fit="contain" />
+      </Sequence>
+      <Sequence from={titleDuration + 116 + 76 + 54 + 116} durationInFrames={endDuration}>
+        <FullScreenEnd />
+      </Sequence>
+      <Sequence from={titleDuration}>
+        <Captions captions={captions} />
+      </Sequence>
+      <Sequence from={titleDuration}>
+        <Audio src={staticFile('video-2/speech.wav')} />
+      </Sequence>
+    </>
+  )
+}
+  
+  
+
 export const LessonVideo: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({captions, titleDuration, endDuration, allDuration}) => {
   const frame = useCurrentFrame()
   const startMusicCutoff = 65;
@@ -362,15 +415,20 @@ const TypingText: React.FC<{children: string, delay?: number}> = ({ children, de
   </>
 }
 
-const FullScreenGif: React.FC<{src: string, offset?: number}> = ({ src, offset = 0 }) => {
+const FullScreenGif: React.FC<{src: string, offset?: number, fit?: 'cover' | 'contain', color?: string}> = ({
+  src,
+  offset = 0,
+  fit = 'cover',
+  color = '#000',
+}) => {
   return (
     <AbsoluteFill>
-      <div className="flex flex-col items-center justify-center h-full w-full">
+      <div className="flex flex-col items-center justify-center h-full w-full" style={{backgroundColor: color}}>
       <Gif
         src={src}
         width={1080 + Math.abs(offset) * 2}
         height={1920}
-        fit="cover"
+        fit={fit}
         style={{
           translate: `${offset}px 0`,
         }}
