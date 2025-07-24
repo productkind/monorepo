@@ -5,10 +5,8 @@
   },
   "type": "module",
   "dependencies": {
-    "memfs": "^4.17.0"
-  },
-  "dependencies": {
     "@dungarees/core": "*",
+    "memfs": "^4.17.0",
     "glob": "^11.0.2"
   },
   "devDependencies": {

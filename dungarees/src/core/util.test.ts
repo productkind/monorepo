@@ -3,7 +3,6 @@ import {
   assertTypeByGuard,
   camelCase2kebabCase,
   capitalize,
-  collectValuesFrom,
   deepEqualPartial,
   type FindByDefault,
   type FindByPartialPattern,
@@ -209,13 +208,6 @@ test('assertTypeByGuard', () => {
       message: (value) => `oops: ${value}`,
     }),
   ).toThrow('oops: str')
-})
-
-test('collectValuesFrom', async () => {
-  const input: Observable<number> = of(1, 2, 3, 4, 5)
-  const values = await collectValuesFrom(input)
-  assert<Equals<typeof values, number[]>>()
-  expect(values).toEqual([1, 2, 3, 4, 5])
 })
 
 test('unPrototypeProperties', () => {
