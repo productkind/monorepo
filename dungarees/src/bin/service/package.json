@@ -1,0 +1,15 @@
+{
+  "name": "@dungarees/bin-service",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "dependencies": {
+    "@dungarees/core": "*",
+    "@dungarees/cli": "*",
+    "@dungarees/fs": "*",
+    "@dungarees/rxjs": "*"
+  },
+  "type": "module",
+  "author": "info@productkind.com",
+  "license": "MIT"
+}

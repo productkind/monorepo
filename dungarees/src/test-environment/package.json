@@ -1,0 +1,14 @@
+{
+  "name": "@dungarees/test-environment",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "@dungarees/core": "*"
+  },
+  "devDependencies": {
+  },
+  "author": "info@productkind.com",
+  "license": "MIT"
+}

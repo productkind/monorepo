@@ -1,0 +1,13 @@
+{
+  "name": "@dungarees/cli",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "dependencies": {
+    "@dungarees/core": "*",
+    "rxjs": "^7.8.1"
+  },
+  "type": "module",
+  "author": "info@productkind.com",
+  "license": "MIT"
+}

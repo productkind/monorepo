@@ -1,0 +1,19 @@
+{
+  "name": "@dungarees/bin",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "@dungarees/core": "*"
+  },
+  "devDependencies": {
+    "vitest": "^3.0.2"
+  },
+  "bin": {
+    "dungarees": "./dungarees.ts"
+  },
+  "author": "info@productkind.com",
+  "license": "MIT"
+}

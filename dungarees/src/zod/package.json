@@ -1,0 +1,15 @@
+{
+  "name": "@dungarees/zod",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "@dungarees/core": "*"
+  },
+  "devDependencies": {
+    "vitest": "^3.0.2"
+  },
+  "author": "info@productkind.com",
+  "license": "MIT"
+}
