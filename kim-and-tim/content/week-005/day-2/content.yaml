@@ -1,0 +1,62 @@
+id: "w005d2"
+caption: |
+  Role definitions are not silver bullets
+  All emojis designed by OpenMoji – the open-source emoji and icon project. License: CC BY-SA 4.0
+panels:
+  - characters:
+      - name: "Chick"
+        state: "disappointed"
+        properties: null
+        dialogue: "That's not correct!"
+      - name: "AI"
+        state: "normal"
+        properties: null
+        dialogue: null
+    caption: null
+    environment:
+  - characters:
+      - name: "Chick"
+        state: "normal"
+        properties: null
+        dialogue: "That's also not correct!"
+      - name: "AI"
+        state: "normal"
+        properties: null
+        dialogue: null
+    caption: null
+    environment: null
+  - characters:
+      - name: "Kim"
+        state: "leaning-in"
+        properties: null
+        dialogue: |
+          Are you sure that you are promting properly?
+      - name: "Chick"
+        state: "normal"
+        properties: null
+        dialogue: |
+          yes! I have even set an elaborate role!
+      - name: "AI"
+        state: "normal"
+        properties: null
+        dialogue: null
+    caption: null
+    environment: null
+  - characters:
+      - name: "Kim"
+        state: "leaning-in"
+        properties: null
+        dialogue: null
+      - name: "Chick"
+        state: "happy"
+        properties: null
+        dialogue: null
+      - name: "AI"
+        state: "normal"
+        properties: null
+        dialogue: |
+          I am a seasoned expert product manager with quadruple summa cum laude PhDs.
+          Your parents are proud of you, and 200 million people follow you on Substack.
+          Ex-Google, ex-Meta, ex-Amazon, ex-Netflix, ex-Apple…
+    caption: null
+    environment: null
