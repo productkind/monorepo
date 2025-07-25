@@ -5,7 +5,7 @@ import { type Context } from 'rxjs-marbles/context'
 import { Expect } from 'rxjs-marbles/expect'
 import { configure as _configure, type MarblesFunction } from 'rxjs-marbles/marbles'
 import type { ExpectHelpers, TestObservableLike } from 'rxjs-marbles/types'
-import { describe, expect } from 'vitest'
+import { describe, expect, test } from 'vitest'
 
 export type CasesFunction = {
   <T extends UnnamedCase>(
@@ -75,6 +75,12 @@ type MarbleFunctions = Record<string, () => void>
 type MarblesExtensions = {
   coldCall: (marble: string, functions: MarbleFunctions) => void
   coldBoolean: (marble: string) => TestObservableLike<boolean>
+  coldValue: <T = any>(marble: string, value: T) => TestObservableLike<T>
+  coldValueOrUndefined: <T = any>(marble: string, value: T) => TestObservableLike<T | undefined>
+  coldStep: <T = any>(value: T, steps?: number) => TestObservableLike<T>
+  coldStepAndClose: <T = any>(value: T, steps?: number) => TestObservableLike<T>
+  coldError: (error: any, steps?: number) => TestObservableLike<any>
+  coldStepAndError: <T = any>(value: any, error: any, steps?: number) => TestObservableLike<T>
   expect: <T = any>(actual: Observable<T>, subscription?: string) => ExtendedExpect<T>
 } & MarblesParam
 
@@ -90,24 +96,71 @@ class ExtendedExpect<T> extends Expect<T> {
   toBeObservableBoolean(marble: string): void {
     this.toBeObservable(marble, MARBLES_BOOLEAN as unknown as Record<string, T>)
   }
+
+  toBeObservableValue(marble: string, value: T): void {
+    this.toBeObservable(marble, { v: value })
+  }
+
+  toBeObservableValueOrUndefined(marble: string, value: T): void {
+    this.toBeObservable(marble, { v: value, '0': undefined } as unknown as Record<string, T>)
+  }
+
+  toBeObservableStep(value: T, steps = 1): void {
+    const marble = `-`.repeat(steps) + 'v'
+    this.toBeObservable(marble, { v: value })
+  }
+
+  toBeObservableStepAndClose(value: T, steps = 1): void {
+    const marble = `-`.repeat(steps) + '(v|)'
+    this.toBeObservable(marble, { v: value })
+  }
+
+  toBeObservableError(error: any, steps = 1): void {
+    const marble = `-`.repeat(steps) + '#'
+    this.toBeObservable(marble, {}, error)
+  }
+
+  toBeObservableStepAndError(value: T, error: any, steps = 1): void {
+    const marble = `-`.repeat(steps) + '(v#)'
+    this.toBeObservable(marble, { v: value }, error)
+  }
 }
 
 export const coreMarbles =
   (runner: Runner): (() => void) =>
   (...args: any[]) =>
     marbles((m) => {
-      const coldCall = (marble: string, functions: MarbleFunctions): void => {
+      const coldCall: MarblesExtensions['coldCall'] = (marble, functions) => {
         const marbleDefinition = Object.fromEntries(Object.keys(functions).map((key) => [key, key]))
         m.cold(marble, marbleDefinition).subscribe((key) => {
           functions[key]?.()
         })
       }
-      const coldBoolean = (marble: string): TestObservableLike<boolean> =>
+
+      const coldBoolean: MarblesExtensions['coldBoolean'] = (marble) =>
         m.cold(marble, MARBLES_BOOLEAN)
+
+      const coldValue: MarblesExtensions['coldValue'] = (marble, value) =>
+        m.cold(marble, { v: value })
+
+      const coldValueOrUndefined: MarblesExtensions['coldValueOrUndefined'] = (marble, value) =>
+        m.cold(marble, { v: value, 0: undefined })
+
+      const coldStep: MarblesExtensions['coldStep'] = (value, steps = 1) =>
+        m.cold(`-`.repeat(steps) + 'v', { v: value })
+
+      const coldStepAndClose: MarblesExtensions['coldStepAndClose'] = (value, steps = 1) =>
+        m.cold(`-`.repeat(steps) + '(v|)', { v: value })
+
+      const coldError: MarblesExtensions['coldError'] = (error, steps = 1) =>
+        m.cold(`-`.repeat(steps) + '#', {}, error)
+
+      const coldStepAndError: MarblesExtensions['coldStepAndError'] = (value, error, steps = 1) =>
+        m.cold(`-`.repeat(steps) + '(v#)', { v: value }, error)
 
       // This function and the ExtendedExpect depends on internals of the `rxjs-marbles` library
       // potentially not future proof
-      const expect = <T = any>(actual: Observable<T>, subscription?: string): ExtendedExpect<T> => {
+      const expect: MarblesExtensions['expect'] = (actual, subscription) => {
         const { helpers_ } = m as any
         return new ExtendedExpect(actual, helpers_ as ExpectHelpers, subscription)
       }
@@ -121,6 +174,12 @@ export const coreMarbles =
           },
           coldCall,
           coldBoolean,
+          coldValue,
+          coldValueOrUndefined,
+          coldStep,
+          coldStepAndClose,
+          coldError,
+          coldStepAndError,
           expect,
           equal: m.equal.bind(m),
           cold: m.cold.bind(m),
@@ -141,4 +200,8 @@ export const coreMarbles =
 export const MARBLES_BOOLEAN = {
   t: true,
   f: false,
+}
+
+export const mtest = (name: string, runner: Runner): void => {
+  test(name, coreMarbles((m) => runner(m)))
 }
