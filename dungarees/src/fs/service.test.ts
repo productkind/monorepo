@@ -1,11 +1,12 @@
-import { createFakeFs } from './fake.ts'
+import { createFakeNodeFs } from './fake.ts'
 import { createFileSystem } from './service.ts'
 
 import * as fs from 'fs'
+import { lastValueFrom } from 'rxjs'
 import { expect, test } from 'vitest'
 
 test('FileSystem should write and read file sync', () => {
-  const fakeFs = createFakeFs()
+  const fakeFs = createFakeNodeFs()
   const fileSystem = createFileSystem(fakeFs)
   fileSystem.writeFileSync('/test.txt', 'test')
   expect(fileSystem.readFileSync('/test.txt', 'utf-8')).toBe('test')
@@ -17,27 +18,27 @@ test('FileSystem should work with the real fs', () => {
 })
 
 test('Fake FileSystem should initialize with json', () => {
-  const fakeFs = createFakeFs({
+  const fakeFs = createFakeNodeFs({
     'test.txt': 'test',
   })
   const fileSystem = createFileSystem(fakeFs)
   expect(fileSystem.readFileSync('test.txt', 'utf8')).toBe('test')
 })
 
-test('FileSystem should have a glob method', async () => {
-  const fakeFs = createFakeFs({
+test('FileSystem should have a globAsync method', async () => {
+  const fakeFs = createFakeNodeFs({
     '/test.txt': 'test',
     '/test2.txt': 'test2',
     '/test3.json': '{"test": "test3"}',
   })
   const fileSystem = createFileSystem(fakeFs)
-  expect(await fileSystem.glob('/*.txt')).toContain('/test.txt')
-  expect(await fileSystem.glob('/*.txt')).toContain('/test2.txt')
-  expect(await fileSystem.glob('/*.json')).toEqual(['/test3.json'])
+  expect(await fileSystem.globAsync('/*.txt')).toContain('/test.txt')
+  expect(await fileSystem.globAsync('/*.txt')).toContain('/test2.txt')
+  expect(await fileSystem.globAsync('/*.json')).toEqual(['/test3.json'])
 })
 
 test('FileSystem should have a globSync method', () => {
-  const fakeFs = createFakeFs({
+  const fakeFs = createFakeNodeFs({
     '/test.txt': 'test',
     '/test2.txt': 'test2',
     '/test3.json': '{"test": "test3"}',
@@ -46,4 +47,91 @@ test('FileSystem should have a globSync method', () => {
   expect(fileSystem.globSync('/*.txt')).toContain('/test.txt')
   expect(fileSystem.globSync('/*.txt')).toContain('/test2.txt')
   expect(fileSystem.globSync('/*.json')).toEqual(['/test3.json'])
+})
+
+test('FileSystem should have a glob method', async () => {
+  const fakeFs = createFakeNodeFs({
+    '/test.txt': 'test',
+    '/test2.txt': 'test2',
+    '/test3.json': '{"test": "test3"}',
+  })
+  const fileSystem = createFileSystem(fakeFs)
+  expect(await lastValueFrom(fileSystem.glob('/*.txt'))).toContain('/test.txt')
+  expect(await lastValueFrom(fileSystem.glob('/*.txt'))).toContain('/test2.txt')
+  expect(await lastValueFrom(fileSystem.glob('/*.json'))).toEqual(['/test3.json'])
+})
+
+test('FileSystem should have a readDirAsync method', async () => {
+  const fakeFs = createFakeNodeFs({
+    '/dir/test.txt': 'test',
+    '/dir/test2.txt': 'test2',
+    '/dir/test3.json': '{"test": "test3"}',
+  })
+  const fileSystem = createFileSystem(fakeFs)
+  const files = await fileSystem.readDirAsync('/dir')
+  expect(files).toEqual(['test.txt', 'test2.txt', 'test3.json'])
+})
+
+test('FileSystem should have a readFileAsync method', async () => {
+  const fakeFs = createFakeNodeFs({
+    '/test.txt': 'test',
+  })
+  const fileSystem = createFileSystem(fakeFs)
+  expect(await fileSystem.readFileAsync('/test.txt', 'utf8')).toBe('test')
+})
+
+test('FileSystem should have a writeFile method', async () => {
+  const fakeFs = createFakeNodeFs()
+  const fileSystem = createFileSystem(fakeFs)
+  await fileSystem.writeFileAsync('/test.txt', 'test')
+  expect(fakeFs.readFileSync('/test.txt', 'utf8')).toBe('test')
+})
+
+test('FileSystem should have a mkdir method', async () => {
+  const fakeFs = createFakeNodeFs()
+  const fileSystem = createFileSystem(fakeFs)
+  await fileSystem.mkdirAsync('/dir/subdir')
+  await fileSystem.writeFileAsync('/dir/subdir/test.txt', 'test')
+})
+
+test('FileSystem should have a readFile method', async () => {
+  const fakeFs = createFakeNodeFs({
+    '/test.txt': 'test',
+  })
+  const fileSystem = createFileSystem(fakeFs)
+  expect(await lastValueFrom(fileSystem.readFile('/test.txt', 'utf8'))).toBe('test')
+})
+
+test('FileSystem should have a writeFile method', async () => {
+  const fakeFs = createFakeNodeFs()
+  const fileSystem = createFileSystem(fakeFs)
+  await lastValueFrom(fileSystem.writeFile('/test.txt', 'test'))
+  expect(fakeFs.readFileSync('/test.txt', 'utf8')).toBe('test')
+})
+
+test('FileSystem should have a readDir method', async () => {
+  const fakeFs = createFakeNodeFs({
+    '/dir/test.txt': 'test',
+    '/dir/test2.txt': 'test2',
+    '/dir/test3.json': '{"test": "test3"}',
+  })
+  const fileSystem = createFileSystem(fakeFs)
+  const files = await lastValueFrom(fileSystem.readDir('/dir'))
+  expect(files).toEqual(['test.txt', 'test2.txt', 'test3.json'])
+})
+
+test('FileSystem should have a mkdir method', async () => {
+  const fakeFs = createFakeNodeFs()
+  const fileSystem = createFileSystem(fakeFs)
+  await lastValueFrom(fileSystem.mkdir('/dir/subdir'))
+  await lastValueFrom(fileSystem.writeFile('/dir/subdir/test.txt', 'test'))
+  expect(fakeFs.readFileSync('/dir/subdir/test.txt', 'utf8')).toBe('test')
+})
+
+test('FileSystem should have a mkdirSync method', () => {
+  const fakeFs = createFakeNodeFs()
+  const fileSystem = createFileSystem(fakeFs)
+  fileSystem.mkdirSync('/dir/subdir')
+  fileSystem.writeFileSync('/dir/subdir/test.txt', 'test')
+  expect(fakeFs.readFileSync('/dir/subdir/test.txt', 'utf8')).toBe('test')
 })

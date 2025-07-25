@@ -6,6 +6,8 @@
   "type": "module",
   "dependencies": {
     "@dungarees/core": "*",
+    "@dungarees/rxjs": "*",
+    "rxjs": "^7.8.1",
     "memfs": "^4.17.0",
     "glob": "^11.0.2"
   },
