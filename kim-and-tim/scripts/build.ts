@@ -34,7 +34,9 @@ weeks.forEach(week => {
     const dailyFiles = fsService.globSync(path.join(dayPath, '*.svg'), { nodir: true }).sort();
     const distPath = path.join(absoluteBaseDir, ASSETS_DIR, OUTPUT_DIR, week, day);
     await $`mkdir -p ${distPath}`
-    await combineSvgFiles(dailyFiles, path.join(distPath, 'strip.svg'), [cols, rows], [imageWidth, imageHeight], [gapX, gapY]);
+    if (days.length > 1) {
+      await combineSvgFiles(dailyFiles, path.join(distPath, 'strip.svg'), [cols, rows], [imageWidth, imageHeight], [gapX, gapY]);
+    }
     dailyFiles.forEach(async (filePath) => {
       const outputPngPath = path.join(distPath, path.basename(filePath).replace('.svg', '.png'));
       await rasterizeSvg({
@@ -45,12 +47,14 @@ weeks.forEach(week => {
       });
       console.log(`Generated PNG for ${filePath} at ${outputPngPath}`);
     })
-    await rasterizeSvg({
-      inputFilePath: path.join(distPath, 'strip.svg'),
-      outputFilePath: path.join(distPath, 'strip.png'),
-      size: [imageWidth, imageHeight],
-      background: 'ffffffff',
-    });
+    if (days.length > 1) {
+      await rasterizeSvg({
+        inputFilePath: path.join(distPath, 'strip.svg'),
+        outputFilePath: path.join(distPath, 'strip.png'),
+        size: [imageWidth, imageHeight],
+        background: 'ffffffff',
+      });
+    }
     console.log(`Generated combined PNG for ${day} at ${path.join(distPath, 'strip.png')}`);
   })
 })
