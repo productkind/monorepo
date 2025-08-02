@@ -150,45 +150,45 @@
        transform="translate(465.5108,110.2909)"><tspan
          x="-332.49213"
          y="156.49693"
-         id="tspan2"><tspan
+         id="tspan19"><tspan
            style="font-weight:bold;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold'"
-           id="tspan1">Be Specific and Clear
+           id="tspan3">Be Specific and Clear
 </tspan></tspan><tspan
          x="-332.49213"
          y="168.45944"
-         id="tspan5"><tspan
+         id="tspan21"><tspan
            style="font-weight:bold;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold'"
-           id="tspan4">Provide Context
+           id="tspan20">Provide Context
 </tspan></tspan><tspan
          x="-332.49213"
          y="180.42195"
-         id="tspan7"><tspan
+         id="tspan23"><tspan
            style="font-weight:bold;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold'"
-           id="tspan6"> Define Persona and Role
+           id="tspan22"> Define Persona and Role
 </tspan></tspan><tspan
          x="-332.49213"
          y="192.38446"
-         id="tspan9"><tspan
+         id="tspan25"><tspan
            style="font-weight:bold;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold'"
-           id="tspan8">Define Tone and Style
+           id="tspan24">Define Tone and Style
 </tspan></tspan><tspan
          x="-332.49213"
          y="204.34697"
-         id="tspan11"><tspan
+         id="tspan27"><tspan
            style="font-weight:bold;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold'"
-           id="tspan10">Specify Output Format
+           id="tspan26">Specify Output Format
 </tspan></tspan><tspan
          x="-332.49213"
          y="216.30948"
-         id="tspan13"><tspan
+         id="tspan29"><tspan
            style="font-weight:bold;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold'"
-           id="tspan12">Provide Examples
+           id="tspan28">Provide Examples
 </tspan></tspan><tspan
          x="-332.49213"
          y="228.27199"
-         id="tspan15"><tspan
+         id="tspan31"><tspan
            style="font-weight:bold;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold'"
-           id="tspan14">Use Direct Statements</tspan></tspan></text>
+           id="tspan30">Use Direct Statements</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.525px;font-family:'Nanum Pen';-inkscape-font-specification:'Nanum Pen';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;white-space:pre;inline-size:134.065;display:inline;fill:#370188;fill-opacity:1;stroke:none;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
@@ -200,40 +200,40 @@
        inkscape:transform-center-y="-62.013886"><tspan
          x="-394.78116"
          y="156.49693"
-         id="tspan17"><tspan
+         id="tspan33"><tspan
    style="font-weight:bold;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';text-align:start;text-anchor:start"
-   id="tspan16">Break Down Complex</tspan><tspan
+   id="tspan32">Break Down Complex</tspan><tspan
    y="156.49693"
-   id="tspan18"> </tspan></tspan><tspan
+   id="tspan34"> </tspan></tspan><tspan
          x="-394.78116"
          y="168.45944"
-         id="tspan40"><tspan
+         id="tspan36"><tspan
            style="font-weight:bold;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';text-align:start;text-anchor:start"
-           id="tspan39">Tasks
+           id="tspan35">Tasks
 </tspan></tspan><tspan
          x="-394.78116"
          y="180.42195"
-         id="tspan42"><tspan
+         id="tspan38"><tspan
            style="font-weight:bold;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';text-align:start;text-anchor:start"
-           id="tspan41">Chain-of-Thought
+           id="tspan37">Chain-of-Thought
 </tspan></tspan><tspan
          x="-394.78116"
          y="192.38446"
-         id="tspan44"><tspan
+         id="tspan57"><tspan
            style="font-weight:bold;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';text-align:start;text-anchor:start"
-           id="tspan43">Encourage Analysis
+           id="tspan56">Encourage Analysis
 </tspan></tspan><tspan
          x="-394.78116"
          y="204.34697"
-         id="tspan46"><tspan
+         id="tspan59"><tspan
            style="font-weight:bold;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';text-align:start;text-anchor:start"
-           id="tspan45">Encourage Self-Criticism
+           id="tspan58">Encourage Self-Criticism
 </tspan></tspan><tspan
          x="-394.78116"
          y="216.30948"
-         id="tspan48"><tspan
+         id="tspan61"><tspan
            style="font-weight:bold;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';text-align:start;text-anchor:start"
-           id="tspan47">Decomposition</tspan></tspan></text>
+           id="tspan60">Decomposition</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.525px;font-family:'Nanum Pen';-inkscape-font-specification:'Nanum Pen';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;white-space:pre;inline-size:134.065;display:inline;fill:#370188;fill-opacity:1;stroke:none;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
@@ -245,9 +245,9 @@
        inkscape:transform-center-y="-62.013886"><tspan
          x="-394.78116"
          y="156.49693"
-         id="tspan50"><tspan
+         id="tspan63"><tspan
            style="font-weight:bold;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';text-align:start;text-anchor:start"
-           id="tspan49">Iterate and Refine</tspan></tspan></text>
+           id="tspan62">Iterate and Refine</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:'Nanum Pen';-inkscape-font-specification:'Nanum Pen';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;white-space:pre;inline-size:169.991;display:inline;fill:#370188;fill-opacity:1;stroke:none;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
@@ -259,16 +259,16 @@
        inkscape:transform-center-y="-62.013886"><tspan
          x="-394.78116"
          y="156.49693"
-         id="tspan52"><tspan
+         id="tspan65"><tspan
    style="font-weight:bold;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold'"
-   id="tspan51">Prompting Techniques</tspan><tspan
+   id="tspan64">Prompting Techniques</tspan><tspan
    y="156.49693"
-   id="tspan53"> </tspan></tspan><tspan
+   id="tspan66"> </tspan></tspan><tspan
          x="-394.78116"
          y="172.44695"
-         id="tspan55"><tspan
+         id="tspan68"><tspan
            style="font-weight:bold;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold'"
-           id="tspan54">by frequency of use</tspan></tspan></text>
+           id="tspan67">by Frequency of Use</tspan></tspan></text>
     <path
        style="fill:#b902ee;fill-opacity:1;stroke:none;stroke-width:1.00012"
        id="path3"
