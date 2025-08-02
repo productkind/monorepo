@@ -346,6 +346,23 @@ export const assertTypeByGuard = <T, V>({
   return value
 }
 
+type AssertPredicateArg<T> = {
+  value: T
+  predicate: (value: T) => boolean
+  message: ErrorMessage<T>
+}
+
+export const assertPredicate = <T>({
+  value,
+  predicate,
+  message,
+}: AssertPredicateArg<T>): T => {
+  if (!predicate(value)) {
+    throw new Error(getErrorMessage(message, value))
+  }
+  return value
+}
+
 const getErrorMessage = <T>(message: ErrorMessage<T>, value: T): string =>
   typeof message === 'function' ? message(value) : message
 

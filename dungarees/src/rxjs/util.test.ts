@@ -1,12 +1,14 @@
 import {
+  assertMap,
   asyncFunctionToObservable,
   syncFunctionToObservable,
   collectValuesFrom,
   catchAndRethrow,
   catchValueAndRethrow,
+  tryPipe,
 } from './util.ts'
 
-import { lastValueFrom, type Observable, of } from 'rxjs'
+import { lastValueFrom, type Observable, of, catchError, map } from 'rxjs'
 import { assert, type Equals } from 'tsafe'
 import { expect, test } from 'vitest'
 import { mtest } from '@dungarees/core/marbles-vitest.ts'
@@ -37,6 +39,9 @@ mtest('syncFunctionToObservable', ({expect}) => {
 
   const resultDelayed$ = observableFnDelayed(2, 3)
   expect(resultDelayed$).toBeObservable('-(5|)', { '5': 5 })
+
+  const resultError$ = syncFunctionToObservable(() => { throw new Error('Test error') })()
+  expect(resultError$).toBeObservable('#', {}, new Error('Test error'))
 })
 
 mtest('catchAndRethrow', ({expect, cold}) => {
@@ -65,4 +70,45 @@ mtest('catchValueAndRethrow', ({expect, cold}) => {
     { '1': 'Test error' },
     new Error('Caught error: Test error'),
   )
+})
+
+mtest('tryPipe no error', ({ expect }) => {
+  const result$ = of(1).pipe(
+    tryPipe(
+      map((x) => x + 1),
+      catchError((error) => of(`Error: ${error.message}`)),
+    )
+  )
+  expect(result$).toBeObservable('(2|)', { '2': 2 })
+})
+
+mtest('tryPipe with error', ({ expect }) => {
+  const result$ = of(1).pipe(
+    tryPipe(
+      map(() => { throw new Error('Test error') }),
+      catchError((error) => of(`Error: ${error.message}`)),
+    )
+  )
+  expect(result$).toBeObservable('(e|)', { 'e': 'Error: Test error'})
+})
+
+mtest('tryPipe with error outside', ({ expect }) => {
+  const result$ = of(1).pipe(
+    map(() => { throw new Error('Test error') }),
+    tryPipe(
+      catchError((error) => of(`Error: ${error.message}`)),
+    )
+  )
+  expect(result$).toBeObservable('#', {}, new Error('Test error'))
+})
+
+mtest('assertMap with valid input', ({ expect }) => {
+  const input$ = of(30)
+  const result$ = input$.pipe(
+    assertMap(
+      (age) => age >= 18,
+      'Age must be at least 18',
+    ),
+  )
+  expect(result$).toBeObservable('(a|)', { 'a': 30 })
 })

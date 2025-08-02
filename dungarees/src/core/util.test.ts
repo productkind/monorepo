@@ -1,5 +1,6 @@
 import {
   assertDefined,
+  assertPredicate,
   assertTypeByGuard,
   camelCase2kebabCase,
   capitalize,
@@ -19,7 +20,6 @@ import {
   unPrototypeProperties,
 } from './util.ts'
 
-import { type Observable, of } from 'rxjs'
 import { assert, type Equals } from 'tsafe'
 import { expect, test } from 'vitest'
 
@@ -208,6 +208,15 @@ test('assertTypeByGuard', () => {
       message: (value) => `oops: ${value}`,
     }),
   ).toThrow('oops: str')
+})
+
+test('assertPredicate', () => {
+  const predicate = (value: number) => value > 0
+  expect(assertPredicate({ value: 1, predicate, message: 'oops' })).toBe(1)
+  expect(() => assertPredicate({ value: -1, predicate, message: 'oops' })).toThrow('oops')
+  expect(() =>
+    assertPredicate({ value: -1, predicate, message: (value) => `oops: ${value}` }),
+  ).toThrow('oops: -1')
 })
 
 test('unPrototypeProperties', () => {
