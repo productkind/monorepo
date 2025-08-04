@@ -1,0 +1,63 @@
+id: "w007d1"
+caption: |
+  Prompt like a pro, or prepare for precision zoo facts.
+panels:
+  - characters:
+      - name: "Rabbit"
+        state: "intense"
+        properties:
+          - mid-typing at laptop
+        dialogue: |
+          AI, where do the most giraffes live that might need umbrellas?
+    caption: null
+    environment: "office, rain lightly tapping the window"
+  - characters:
+      - name: "AI"
+        state: "confident"
+        properties:
+          - speaking from screen
+        dialogue: |
+          Giraffes adapted to the rainy season in Africa, they don't need umbrellas.
+    caption: null
+    environment: null
+  - characters:
+      - name: "Rabbit"
+        state: "disappointed"
+        properties: null
+        dialogue: |
+          What? What do you mean?
+      - name: "Kim"
+        state: "helpful"
+        properties: null
+        dialogue: |
+          Try chain-of-thought prompting. It stops the AI from... doing that.
+  - characters:
+      - name: "Rabbit"
+        state: "focused"
+        properties:
+          - retyping on laptop
+        dialogue: |
+          AI, where do the most giraffes live that might need umbrellas? Think step by step.
+    caption: null
+    environment: null
+  - characters:
+      - name: "AI"
+        state: "enlightened"
+        properties:
+          - screen showing loading dots
+        dialogue: |
+          Giraffes → mostly East Africa. Rain → seasonal in Kenya. Combine → plausible umbrella demand.
+    caption: null
+    environment: null
+  - characters:
+      - name: "Rabbit"
+        state: "impressed"
+        properties: null
+        dialogue: |
+          Now we’re talking. Somewhere between useful and oddly poetic.
+      - name: "Kim"
+        state: "deadpan"
+        properties: null
+        dialogue: |
+          Imagine what else we could solve. Once we stop asking it like a game show host.
+
