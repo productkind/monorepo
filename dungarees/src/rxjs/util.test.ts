@@ -6,6 +6,7 @@ import {
   catchAndRethrow,
   catchValueAndRethrow,
   tryPipe,
+  createGetTransformSet,
 } from './util.ts'
 
 import { lastValueFrom, type Observable, of, catchError, map } from 'rxjs'
@@ -111,4 +112,14 @@ mtest('assertMap with valid input', ({ expect }) => {
     ),
   )
   expect(result$).toBeObservable('(a|)', { 'a': 30 })
+})
+
+mtest('getTransformSet', ({ expect, coldStepAndClose }) => {
+  const getter = () => coldStepAndClose(1)
+  const setter = (value: number) => coldStepAndClose(undefined, value)
+  const getTransformSet = createGetTransformSet(getter, setter)
+  const result$ = getTransformSet(
+    map((x: number) => x + 1),
+  )
+  expect(result$).toBeObservableStepAndClose(undefined, 3)
 })

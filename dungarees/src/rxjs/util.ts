@@ -1,5 +1,5 @@
 import { lastValueFrom, type Observable, scan, defer, of, map, delay, mergeMap, catchError, throwError, concat, type OperatorFunction } from 'rxjs'
-import { assertPredicate } from '@dungarees/core/util'
+import { assertPredicate } from '@dungarees/core/util.ts'
 
 export const collectValuesFrom = async <T>(values$: Observable<T>): Promise<T[]> =>
   await lastValueFrom(values$.pipe(scan((acc, value) => [...acc, value], [] as T[])))
@@ -95,3 +95,16 @@ export const assertMap =
       predicate,
       message,
     }))
+
+type GetTransformSet<G, S> = (operator: OperatorFunction<G, S>) => Observable<void>
+
+export const createGetTransformSet = <G, S>(
+  getter: () => Observable<G>,
+  setter: (value: S) => Observable<void>
+): GetTransformSet<G, S> =>
+  (operator: OperatorFunction<G, S>): Observable<void> => {
+    return getter().pipe(
+        operator,
+        mergeMap((value: S) => setter(value)),
+      )
+  }
