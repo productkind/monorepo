@@ -25,11 +25,11 @@
      inkscape:document-units="px"
      inkscape:zoom="0.77529976"
      inkscape:cx="711.98268"
-     inkscape:cy="619.76028"
-     inkscape:window-width="2560"
-     inkscape:window-height="1412"
-     inkscape:window-x="4288"
-     inkscape:window-y="0"
+     inkscape:cy="619.11537"
+     inkscape:window-width="1728"
+     inkscape:window-height="1057"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1"
      showguides="true"
@@ -532,7 +532,7 @@
        transform="translate(142.80419,-82.800752)"><tspan
          x="-0.31834134"
          y="156.49693"
-         id="tspan1">I hear you... It’s rough.</tspan></text><path
+         id="tspan3">I hear you... It’s tough.</tspan></text><path
        style="fill:#b98bfe;fill-opacity:1;fill-rule:nonzero;stroke:#370188;stroke-width:3.175;stroke-dasharray:none;stroke-opacity:1"
        d="m 172.27917,268.54149 c 14.38475,-0.25686 19.43239,-7.842 21.83393,-15.15534 3.22396,-9.8177 7.98586,-11.95542 12.58662,-3.08245 3.59623,6.9355 7.96303,2.05497 5.13747,-2.05496 -2.82559,-4.10992 -6.39572,-10.61688 -14.89853,-8.21985 -8.74871,2.46636 -4.88052,24.14581 -25.43013,23.63207"
        id="path68-84"
@@ -674,9 +674,9 @@
        transform="translate(54.951917,-135.25561)"><tspan
          x="23.771687"
          y="156.49693"
-         id="tspan5"><tspan
+         id="tspan7"><tspan
            style="font-weight:bold;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold'"
-           id="tspan2">What you should do:</tspan></tspan></text><path
+           id="tspan6">What you should do:</tspan></tspan></text><path
        style="fill:#370188;fill-opacity:1;stroke:none;stroke-width:12.6211;stroke-dasharray:none;stroke-opacity:1"
        id="path9-5-7-8"
        sodipodi:type="arc"

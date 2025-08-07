@@ -25,11 +25,11 @@
      inkscape:document-units="px"
      inkscape:zoom="0.41092839"
      inkscape:cx="0"
-     inkscape:cy="765.34016"
-     inkscape:window-width="2560"
-     inkscape:window-height="1412"
-     inkscape:window-x="4330"
-     inkscape:window-y="0"
+     inkscape:cy="764.1234"
+     inkscape:window-width="1728"
+     inkscape:window-height="1057"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1"
      showguides="true"
@@ -469,14 +469,18 @@
        x="-0.31834134"
        y="156.49693"
        id="text17-6"
-       transform="translate(142.80419,-82.800752)"><tspan
+       transform="translate(141.51646,-105.33611)"><tspan
          x="-0.31834134"
          y="156.49693"
-         id="tspan2">So the coffee machine’s broken,
+         id="tspan1">What?!
 </tspan><tspan
          x="-0.31834134"
          y="180.30944"
-         id="tspan3">no coffee today?</tspan></text><path
+         id="tspan5">The coffee machine’s broken??
+</tspan><tspan
+         x="-0.31834134"
+         y="204.12194"
+         id="tspan6">NO COFFEE TODAY???</tspan></text><path
        style="fill:#b98bfe;fill-opacity:1;fill-rule:nonzero;stroke:#370188;stroke-width:3.175;stroke-dasharray:none;stroke-opacity:1"
        d="m 172.27917,268.54149 c 14.38475,-0.25686 19.43239,-7.842 21.83393,-15.15534 3.22396,-9.8177 7.98586,-11.95542 12.58662,-3.08245 3.59623,6.9355 7.96303,2.05497 5.13747,-2.05496 -2.82559,-4.10992 -6.39572,-10.61688 -14.89853,-8.21985 -8.74871,2.46636 -4.88052,24.14581 -25.43013,23.63207"
        id="path68-84"
@@ -621,7 +625,7 @@
        d="m 157.60676,176.57061 -4.77475,-4.77477"
        id="path7-3" /><path
        style="fill:none;fill-opacity:1;stroke:#370188;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-       d="m 242.1042,185.4859 c -1.25491,-12.53763 -98.47172,-67.02473 -98.99809,-80.54612"
+       d="M 245.9674,208.02125 C 244.71249,172.3044 143.63248,118.46117 143.10611,104.93978"
        id="path13-1-9-2-1"
        sodipodi:nodetypes="cc" /><g
        id="g2"
