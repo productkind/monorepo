@@ -23,13 +23,13 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="0.41092839"
-     inkscape:cx="686.25096"
-     inkscape:cy="438.03253"
-     inkscape:window-width="1728"
+     inkscape:zoom="0.40293589"
+     inkscape:cx="464.09367"
+     inkscape:cy="119.12565"
+     inkscape:window-width="1064"
      inkscape:window-height="1057"
-     inkscape:window-x="2560"
-     inkscape:window-y="355"
+     inkscape:window-x="667"
+     inkscape:window-y="32"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1"
      showguides="true"
@@ -459,7 +459,7 @@
        transform="matrix(-0.96921458,-0.24621757,-0.24621757,0.96921458,0,0)"
        clip-path="url(#clipPath4)" /><path
        style="fill:none;fill-opacity:1;stroke:#370188;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-       d="m 60.56425,192.60704 c -1.25491,-12.53763 66.35828,-49.64032 65.83191,-63.16171"
+       d="m 60.005194,187.07772 c -1.25491,-12.53763 65.986096,-37.11136 65.937776,-50.63275"
        id="path13-1-9-2"
        sodipodi:nodetypes="cc" /><text
        xml:space="preserve"
@@ -476,23 +476,23 @@
        transform="translate(142.16032,-125.29599)"><tspan
          x="-0.31834134"
          y="156.49693"
-         id="tspan1">I’m afraid I’ve got some bad news...
+         id="tspan7">I’m afraid I’ve got some bad news...
 </tspan><tspan
          x="-0.31834134"
          y="180.30944"
-         id="tspan2">
+         id="tspan8">
 </tspan><tspan
          x="-0.31834134"
          y="204.12194"
-         id="tspan3">
+         id="tspan9">
 </tspan><tspan
          x="-0.31834134"
          y="227.93444"
-         id="tspan5">The coffee machine’s broken,
+         id="tspan10">The coffee machine’s broken,
 </tspan><tspan
          x="-0.31834134"
          y="251.74694"
-         id="tspan6">no coffee today.</tspan></text><path
+         id="tspan11">no coffee today.</tspan></text><path
        style="fill:#b98bfe;fill-opacity:1;fill-rule:nonzero;stroke:#370188;stroke-width:3.175;stroke-dasharray:none;stroke-opacity:1"
        d="m 172.27917,268.54149 c 14.38475,-0.25686 19.43239,-7.842 21.83393,-15.15534 3.22396,-9.8177 7.98586,-11.95542 12.58662,-3.08245 3.59623,6.9355 7.96303,2.05497 5.13747,-2.05496 -2.82559,-4.10992 -6.39572,-10.61688 -14.89853,-8.21985 -8.74871,2.46636 -4.88052,24.14581 -25.43013,23.63207"
        id="path68-84"
@@ -637,7 +637,7 @@
        d="m 157.60676,176.57061 -4.77475,-4.77477"
        id="path7-3" /><path
        style="fill:none;fill-opacity:1;stroke:#370188;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-       d="m 132.64677,83.111006 c -1.25491,-12.53763 15.49278,-30.324302 14.96641,-43.845692"
+       d="m 126.58234,81.071629 c 0.0199,-12.856333 21.64931,-28.384363 21.12294,-41.905753"
        id="path13-1-9-2-1"
        sodipodi:nodetypes="cc" /><g
        id="g2"
