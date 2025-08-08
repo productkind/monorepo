@@ -23,11 +23,11 @@ export const RemotionRoot: React.FC = () => {
         }}
         calculateMetadata={async ({props}) => {
           const titleDuration = 60
-          const endDuration = 60
+          const endDuration = 0
           const response = await fetch(staticFile('text.json'))
           const captions = await response.json()
           const duration = Math.ceil(captions.at(-1).end * FRAME_RATE) + titleDuration + endDuration
-          
+
           return {
             durationInFrames: duration,
             props: {
@@ -54,11 +54,11 @@ export const RemotionRoot: React.FC = () => {
         }}
         calculateMetadata={async ({props}) => {
           const titleDuration = 60
-          const endDuration = 30
+          const endDuration = 0
           const response = await fetch(staticFile('video-2/text.json'))
           const captions = await response.json()
           const duration = Math.ceil(captions.at(-1).end * FRAME_RATE) + titleDuration + endDuration
-        
+
           return {
             durationInFrames: duration,
             props: {
@@ -82,4 +82,4 @@ const transformCaptionsToFrames = (captions: Captions): Captions => {
     }
   })
 }
-  
+

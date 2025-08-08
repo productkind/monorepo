@@ -36,13 +36,13 @@ export const LessonVideoPropsSchema = z.object({
 })
 
 export const LessonVideo2: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({captions, titleDuration, endDuration, allDuration}) => {
-   const frame = useCurrentFrame()
+ /*  const frame = useCurrentFrame()
   const startMusicCutoff = 65;
   const startMusicDuration = 35;
-  const volume = interpolate(frame, [startMusicCutoff, startMusicCutoff + startMusicDuration], [0.4, 0.05], { 
+  const volume = interpolate(frame, [startMusicCutoff, startMusicCutoff + startMusicDuration], [0.4, 0.05], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
-  })
+    })*/
 
   return (
     <>
@@ -55,9 +55,11 @@ export const LessonVideo2: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({
           <TypingText delay={24}>Tone and Style</TypingText>
         </FullScreenText>
       </Sequence>
+      { /*
       <Sequence from={0} durationInFrames={allDuration}>
         <Audio src={staticFile('start.mp3')} volume={volume} />
       </Sequence>
+      */ }
       <Sequence from={titleDuration} durationInFrames={44}>
         <FullScreenGif src={staticFile('video-2/section1.gif')} />
       </Sequence>
@@ -73,9 +75,12 @@ export const LessonVideo2: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({
       <Sequence from={titleDuration + 116 + 76 + 54} durationInFrames={116}>
         <FullScreenGif src={staticFile('video-2/section5.gif')} fit="contain" />
       </Sequence>
+      { /*
       <Sequence from={titleDuration + 116 + 76 + 54 + 116} durationInFrames={endDuration}>
         <FullScreenEnd />
       </Sequence>
+         */
+      }
       <Sequence from={titleDuration}>
         <Captions captions={captions} />
       </Sequence>
@@ -85,14 +90,14 @@ export const LessonVideo2: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({
     </>
   )
 }
-  
-  
+
+
 
 export const LessonVideo: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({captions, titleDuration, endDuration, allDuration}) => {
   const frame = useCurrentFrame()
   const startMusicCutoff = 65;
   const startMusicDuration = 35;
-  const volume = interpolate(frame, [startMusicCutoff, startMusicCutoff + startMusicDuration], [0.4, 0.05], { 
+  const volume = interpolate(frame, [startMusicCutoff, startMusicCutoff + startMusicDuration], [0.4, 0.05], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
   })
@@ -108,9 +113,11 @@ export const LessonVideo: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({c
           <TypingText delay={24}>AI Models</TypingText>
         </FullScreenText>
       </Sequence>
-      <Sequence from={0} durationInFrames={allDuration}>
+      { /*
+      <Sequence  durationInFrames={allDuration}>
         <Audio src={staticFile('start.mp3')} volume={volume} />
       </Sequence>
+      */ }
       <Sequence from={titleDuration} durationInFrames={218}>
         <FullScreenGif src={staticFile('section1.gif')} />
       </Sequence>
@@ -151,10 +158,10 @@ export const LessonVideo: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({c
         <FullScreenGif src={staticFile('section6.gif')} />
       </Sequence>
       <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188 + 274} durationInFrames={104}>
-        <FullScreenGif src={staticFile('section7.gif')} />    
+        <FullScreenGif src={staticFile('section7.gif')} />
       </Sequence>
       <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188 + 274 + 104} durationInFrames={98}>
-        <FullScreenGif src={staticFile('section8.gif')} />    
+        <FullScreenGif src={staticFile('section8.gif')} />
       </Sequence>
       <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188 + 274 + 104 + 98} durationInFrames={86}>
         <FullScreenGif src={staticFile('section9.gif')} />
@@ -209,9 +216,11 @@ export const LessonVideo: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({c
       <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188 + 274 + 104 + 98 + 86 + 148 + 110 + 178 + 88 + 65 + 74 + 96 + 194} durationInFrames={endDuration}>
         <FullScreenEnd />
       </Sequence>
+      { /*
       <Sequence from={titleDuration}>
         <Captions captions={captions} />
       </Sequence>
+      */ }
       <Sequence from={titleDuration}>
         <Audio src={staticFile('section1.wav')} />
       </Sequence>
@@ -262,7 +271,7 @@ const getCaptionSentences = (captions: Captions, maxSentenceLength: number): Cap
   }
 
   let currentSentenceWords: Captions = [];
-  
+
   for (const caption of captions) {
     const newWords = [...currentSentenceWords, caption];
     const newText = newWords.map(c => c.text).join(' ');
@@ -331,12 +340,12 @@ const ImageSteps: React.FC<{images: { image: string, delay: number, offset?: num
                           height,
                           overflow: 'hidden',
                         }}>
-                          {isVideo ? 
+                          {isVideo ?
                             i === index ? <Video loop src={image} trimBefore={0} width={1080} style={{
                               translate: `0 ${offset}px`,
                             }}/> :
                             <div></div>
-                          : 
+                          :
                             <div className="flex items-center justify-center" style={{
                               width: 1080,
                               height,
