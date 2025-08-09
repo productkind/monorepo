@@ -3,6 +3,7 @@ import { FileSystem } from "@dungarees/fs/service"
 
 import { concat, mergeMap, map, catchError } from 'rxjs'
 import {createOutDir, readPackageJson} from "./operations";
+import {createFileOperations} from "@dungarees/fs/file-operations";
 
 type PublishLib = {
   build: (args: { srcDir: string; outDir: string, version?: string }) =>
@@ -15,11 +16,19 @@ export const createPublishLibService = (fileSystem: FileSystem): PublishLib => {
       const originalPackageJsonPath = `${srcDir}/package.json`
       const destinationPackageJsonPath = `${outDir}/package.json`
 
+      const fileOperations = createFileOperations(fileSystem)
+
+      const transformer = fileOperations.transformFile(
+        {
+          input: originalPackageJsonPath,
+          output: destinationPackageJsonPath,
+        }
+      )
+
       const createOutDir$ = createOutDir(fileSystem.mkdir(outDir), outDir)
 
       const readPackageJson$ = readPackageJson(
-        fileSystem.readFile(originalPackageJsonPath, 'utf8'),
-        (content) => fileSystem.writeFile(destinationPackageJsonPath, content),
+        transformer,
         destinationPackageJsonPath,
         version
       )

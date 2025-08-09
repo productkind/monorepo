@@ -9,10 +9,10 @@ import {
   createGetTransformSet,
 } from './util.ts'
 
-import { lastValueFrom, type Observable, of, catchError, map } from 'rxjs'
+import { lastValueFrom, type Observable, of, catchError, map, Subject } from 'rxjs'
 import { assert, type Equals } from 'tsafe'
-import { expect, test } from 'vitest'
-import { mtest } from '@dungarees/core/marbles-vitest.ts'
+import { test, expect } from 'vitest';
+import { mtest } from '@dungarees/core/marbles-vitest.ts';
 
 test('collectValuesFrom', async () => {
   const input: Observable<number> = of(1, 2, 3, 4, 5)
@@ -115,11 +115,30 @@ mtest('assertMap with valid input', ({ expect }) => {
 })
 
 mtest('getTransformSet', ({ expect, coldStepAndClose }) => {
-  const getter = () => coldStepAndClose(1)
-  const setter = (value: number) => coldStepAndClose(undefined, value)
-  const getTransformSet = createGetTransformSet(getter, setter)
+  const setterArgument$ = new Subject<number>();
+  const getter = () => coldStepAndClose(1);
+  const setter = (value: number) => {
+    setterArgument$.next(value);
+    return coldStepAndClose(undefined, 1);
+  };
+  const getTransformSet = createGetTransformSet(getter, setter);
+  const result$ = getTransformSet(map((x: number) => x + 1));
+  expect(result$).toBeObservableStepAndClose(undefined, 2);
+  expect(setterArgument$).toBeObservableStep(2)
+})
+
+mtest('getTransformSet multiple operators', ({ expect, coldStepAndClose }) => {
+  const setterArgument$ = new Subject<number>();
+  const getter = () => coldStepAndClose(1);
+  const setter = (value: number) => {
+    setterArgument$.next(value);
+    return coldStepAndClose(undefined, 1);
+  };
+  const getTransformSet = createGetTransformSet(getter, setter);
   const result$ = getTransformSet(
-    map((x: number) => x + 1),
-  )
-  expect(result$).toBeObservableStepAndClose(undefined, 3)
+    map((x) => x + 1),
+    map((x) => x * 2)
+  );
+  expect(result$).toBeObservableStepAndClose(undefined, 2);
+  expect(setterArgument$).toBeObservableStep(4)
 })

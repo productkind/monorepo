@@ -4,7 +4,6 @@ import { assertPredicate } from '@dungarees/core/util.ts'
 export const collectValuesFrom = async <T>(values$: Observable<T>): Promise<T[]> =>
   await lastValueFrom(values$.pipe(scan((acc, value) => [...acc, value], [] as T[])))
 
-
 export const asyncFunctionToObservable = <RETURN, ARGS extends any[]>(asyncFn: (...args: ARGS) => Promise<RETURN>): ((...args: ARGS) => Observable<RETURN>) => {
   return (...args: ARGS): Observable<RETURN> => {
     return defer(() => asyncFn(...args))
@@ -96,15 +95,56 @@ export const assertMap =
       message,
     }))
 
-type GetTransformSet<G, S> = (operator: OperatorFunction<G, S>) => Observable<void>
+export type GetTransformSet<GET, SET> = {
+  (op1: OperatorFunction<GET, SET>): Observable<void>
+  <A>(op1: OperatorFunction<GET, A>, op2: OperatorFunction<A, SET>): Observable<void>
+  <A, B>(
+    op1: OperatorFunction<GET, A>,
+    op2: OperatorFunction<A, B>,
+    op3: OperatorFunction<B, SET>
+  ): Observable<void>
+  <A, B, C>(
+    op1: OperatorFunction<GET, A>,
+    op2: OperatorFunction<A, B>,
+    op3: OperatorFunction<B, C>,
+    op4: OperatorFunction<C, SET>
+  ): Observable<void>
+  <A, B, C, D>(
+    op1: OperatorFunction<GET, A>,
+    op2: OperatorFunction<A, B>,
+    op3: OperatorFunction<B, C>,
+    op4: OperatorFunction<C, D>,
+    op5: OperatorFunction<D, SET>
+  ): Observable<void>
+  <A, B, C, D, E>(
+    op1: OperatorFunction<GET, A>,
+    op2: OperatorFunction<A, B>,
+    op3: OperatorFunction<B, C>,
+    op4: OperatorFunction<C, D>,
+    op5: OperatorFunction<D, E>,
+    op6: OperatorFunction<E, SET>
+  ): Observable<void>
+  <A, B, C, D, E, F>(
+    ...operators: [
+      OperatorFunction<GET, A>,
+      OperatorFunction<A, B>,
+      OperatorFunction<B, C>,
+      OperatorFunction<C, D>,
+      OperatorFunction<D, E>,
+      OperatorFunction<E, F>,
+      ...[OperatorFunction<F, any>, ...OperatorFunction<any, any>[], OperatorFunction<any, SET>]
+    ]
+  ): Observable<void>
+}
 
-export const createGetTransformSet = <G, S>(
-  getter: () => Observable<G>,
-  setter: (value: S) => Observable<void>
-): GetTransformSet<G, S> =>
-  (operator: OperatorFunction<G, S>): Observable<void> => {
+export const createGetTransformSet = <GET, SET>(
+  getter: () => Observable<GET>,
+  setter: (value: SET) => Observable<void>
+): GetTransformSet<GET, SET> =>
+  ((...operators: OperatorFunction<any, any>[]): Observable<void> => {
     return getter().pipe(
-        operator,
-        mergeMap((value: S) => setter(value)),
-      )
-  }
+      ...operators as [OperatorFunction<GET, SET>],
+      mergeMap(setter),
+    )
+  }) as GetTransformSet<GET, SET>
+
