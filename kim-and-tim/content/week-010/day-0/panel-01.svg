@@ -25,11 +25,11 @@
      inkscape:document-units="px"
      inkscape:zoom="0.56748743"
      inkscape:cx="463.44639"
-     inkscape:cy="814.11494"
+     inkscape:cy="814.11495"
      inkscape:window-width="1728"
      inkscape:window-height="1057"
-     inkscape:window-x="0"
-     inkscape:window-y="32"
+     inkscape:window-x="2560"
+     inkscape:window-y="355"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1"
      showgrid="false" />
@@ -303,25 +303,20 @@
        transform="translate(118.65266,-89.672392)"><tspan
          x="23.771687"
          y="156.49693"
-         id="tspan1">Hmm, I should really<tspan
+         id="tspan8">Hmm, I should really<tspan
    y="156.49693"
-   id="tspan2"> </tspan></tspan><tspan
+   id="tspan9"> </tspan></tspan><tspan
          x="23.771687"
          y="180.30944"
-         id="tspan3">try this vibe coding<tspan
+         id="tspan10">try this vibe coding<tspan
    y="180.30944"
-   id="tspan4"> </tspan></tspan><tspan
+   id="tspan11"> </tspan></tspan><tspan
          x="23.771687"
          y="204.12194"
-         id="tspan5">on the this user<tspan
-   y="204.12194"
-   id="tspan6"> </tspan></tspan><tspan
-         x="23.771687"
-         y="227.93444"
-         id="tspan7">story.</tspan></text>
+         id="tspan12">on this user story.</tspan></text>
     <path
        style="fill:none;fill-opacity:1;stroke:#370188;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-       d="m 125.28164,180.33366 c 10.09251,-9.08303 16.66763,-24.41777 16.95535,-35.92652"
+       d="m 125.28164,180.33366 c 10.09251,-9.08303 20.39752,-44.46594 20.68524,-55.97469"
        id="path13-1"
        sodipodi:nodetypes="cc" />
     <rect
