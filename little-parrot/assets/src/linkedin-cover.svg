@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1128"
+   height="231"
+   viewBox="0 0 298.45 61.118749"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="/Users/eggdice/linkedin-cover.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   sodipodi:docname="linkedin-cover.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="0.65420511"
+     inkscape:cx="477.67893"
+     inkscape:cy="313.35738"
+     inkscape:window-width="1728"
+     inkscape:window-height="1057"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     inkscape:export-bgcolor="#ffffffff" />
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient22"
+       inkscape:label="Little Parrot">
+      <stop
+         style="stop-color:#26fd46;stop-opacity:1;"
+         offset="0"
+         id="stop15" />
+      <stop
+         style="stop-color:#8efd23;stop-opacity:1;"
+         offset="0.14"
+         id="stop16" />
+      <stop
+         style="stop-color:#c4fd23;stop-opacity:1;"
+         offset="0.28"
+         id="stop17" />
+      <stop
+         style="stop-color:#eafd24;stop-opacity:1;"
+         offset="0.43000001"
+         id="stop18" />
+      <stop
+         style="stop-color:#fdf024;stop-opacity:1;"
+         offset="0.56999999"
+         id="stop19" />
+      <stop
+         style="stop-color:#fdd825;stop-opacity:1;"
+         offset="0.70999998"
+         id="stop20" />
+      <stop
+         style="stop-color:#fdc425;stop-opacity:1;"
+         offset="0.86000001"
+         id="stop21" />
+      <stop
+         style="stop-color:#fdb226;stop-opacity:1;"
+         offset="1"
+         id="stop22" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient22"
+       id="linearGradient13"
+       x1="787.60699"
+       y1="474.97601"
+       x2="683.25073"
+       y2="423.17599"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.848809,0,0,0.58339969,-1946.006,-232.61939)" />
+    <linearGradient
+       id="linearGradient6-1"
+       inkscape:label="Little Parrot">
+      <stop
+         style="stop-color:#26fd46;stop-opacity:1;"
+         offset="0"
+         id="stop4-2" />
+      <stop
+         style="stop-color:#8efd23;stop-opacity:1;"
+         offset="0.14"
+         id="stop1" />
+      <stop
+         style="stop-color:#c4fd23;stop-opacity:1;"
+         offset="0.28"
+         id="stop2" />
+      <stop
+         style="stop-color:#eafd24;stop-opacity:1;"
+         offset="0.43000001"
+         id="stop3-4" />
+      <stop
+         style="stop-color:#fdf024;stop-opacity:1;"
+         offset="0.56999999"
+         id="stop6" />
+      <stop
+         style="stop-color:#fdd825;stop-opacity:1;"
+         offset="0.70999998"
+         id="stop7" />
+      <stop
+         style="stop-color:#fdc425;stop-opacity:1;"
+         offset="0.86000001"
+         id="stop8" />
+      <stop
+         style="stop-color:#fdb226;stop-opacity:1;"
+         offset="1"
+         id="stop5" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6-1"
+       id="linearGradient4"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.74504081,0,0,0.12615496,-408.2598,-10.847951)"
+       x1="787.60699"
+       y1="474.97601"
+       x2="683.25073"
+       y2="423.17599" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient22"
+       id="linearGradient3"
+       x1="858.01971"
+       y1="628.94928"
+       x2="828.27228"
+       y2="558.86871"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.34576884,0.0387842,0.0387842,0.34576884,531.05497,-211.66892)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6-1"
+       id="linearGradient26"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.74504081,0,0,0.12615496,-408.3127,-30.757721)"
+       x1="787.60699"
+       y1="474.97601"
+       x2="683.25073"
+       y2="423.17599" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:0.17;fill:url(#linearGradient13);fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none"
+       id="rect11"
+       width="298.45001"
+       height="61.118748"
+       x="0"
+       y="0"
+       rx="0"
+       ry="0"
+       inkscape:label="Background" />
+    <rect
+       style="fill:url(#linearGradient4);fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none"
+       id="rect11-6"
+       width="78.052773"
+       height="13.216382"
+       x="100.67362"
+       y="39.453907"
+       rx="0"
+       ry="0"
+       inkscape:label="Background" />
+    <rect
+       style="fill:url(#linearGradient26);fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none"
+       id="rect11-6-2"
+       width="78.158569"
+       height="1.8967746"
+       x="100.62072"
+       y="19.544134"
+       rx="0"
+       ry="0"
+       inkscape:label="Background" />
+    <path
+       id="path5"
+       style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:3.01385;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:label="LaptopOutline"
+       d="m 289.59569,16.723686 -27.00257,10.514655 v 8.947226 l -16.99138,5.933838 16.49687,6.792605 c 9.16384,-3.574002 18.33108,-7.139633 27.49708,-10.70818 z"
+       sodipodi:nodetypes="ccccccc" />
+    <path
+       style="display:inline;fill:none;stroke:#ffffff;stroke-width:3.01383;stroke-dasharray:none;stroke-opacity:1"
+       d="m 270.79599,19.286047 3.08793,-1.392658 -2.97327,-2.373526 c -0.0455,-2.134649 -1.09764,-3.811812 -3.77607,-3.366625 -1.04378,0.173491 -2.46499,1.329037 -2.57797,3.685426 -0.11408,2.379173 0.42134,8.440008 -2.84747,11.395592 -3.56994,3.227887 -7.76091,7.034288 -10.39432,7.472331 4.77593,4.470323 15.32716,6.336762 19.55399,3.711683 3.58036,-2.223588 1.23704,-13.744792 -0.0728,-19.132223 -0.84653,0.354369 -1.72976,0.730271 -2.63715,0.743834 0.90745,-0.01379 1.79036,-0.388993 2.63715,-0.743834 z"
+       id="path1"
+       sodipodi:nodetypes="cccssscsccc"
+       inkscape:label="ParrotOutline" />
+    <g
+       id="g3-9"
+       transform="matrix(-0.04455253,0,0,0.04455253,228.76613,29.449516)"
+       inkscape:label="LaptopBottom">
+      <path
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#230156;stroke-width:22.5485;stroke-dasharray:none;stroke-opacity:1"
+         d="M -748.16065,436.84446 -377.88192,284.38035 -1176.5677,5.4587446 c 142.122,142.8622154 175.5296,337.1886854 428.40705,431.3857154 z"
+         id="path17-0-2-4-7"
+         sodipodi:nodetypes="cccc"
+         inkscape:label="LaptopBase" />
+      <path
+         style="display:inline;fill:#230156;fill-opacity:1;stroke:#230156;stroke-width:14.1545;stroke-dasharray:none;stroke-opacity:1"
+         d="M -836.53258,405.52587 -572.99174,281.59945 -1303.6638,30.192125 Z"
+         id="path17-3-4-2-3-5"
+         sodipodi:nodetypes="cccc"
+         inkscape:label="LaptopKeyboard" />
+    </g>
+    <path
+       style="display:inline;fill:url(#linearGradient3);stroke:#230156;stroke-width:1.00459;stroke-dasharray:none;stroke-opacity:1"
+       d="m 270.79599,19.286047 3.08793,-1.392658 -2.97327,-2.373526 c -0.0455,-2.134649 -1.09764,-3.811812 -3.77607,-3.366625 -1.04378,0.173491 -2.46499,1.329037 -2.57797,3.685426 -0.11408,2.379173 0.42134,8.440008 -2.84747,11.395592 -3.56994,3.227887 -7.76091,7.034288 -10.39432,7.472331 4.77593,4.470323 15.32716,6.336762 19.55399,3.711683 3.58036,-2.223588 1.23704,-13.744792 -0.0728,-19.132223 -0.84653,0.354369 -1.72976,0.730271 -2.63715,0.743834 0.90745,-0.01379 1.79036,-0.388993 2.63715,-0.743834 z"
+       id="path2-5-52-8"
+       sodipodi:nodetypes="cccssscsccc"
+       inkscape:label="ParrotBody" />
+    <circle
+       style="display:inline;fill:#230156;fill-opacity:1;stroke:none;stroke-width:0.920583;stroke-dasharray:none;stroke-opacity:1"
+       id="path18-0-5-0"
+       cx="-265.19568"
+       cy="44.917686"
+       r="0.80194527"
+       inkscape:label="ParrotEyes"
+       transform="matrix(-0.99376792,0.11146893,0.11146893,0.99376792,0,0)" />
+    <g
+       id="g2-5"
+       inkscape:label="LaptopTop"
+       transform="matrix(-0.04455253,0,0,0.04455253,290.17484,12.837433)"
+       style="display:inline">
+      <path
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#230156;stroke-width:22.5485;stroke-dasharray:none;stroke-opacity:1"
+         d="M 12.9997,569.3592 V 87.2282 l 606.0833,236.006 -3e-4,482.13 z"
+         id="path16-1-1-0-2"
+         sodipodi:nodetypes="ccccc"
+         inkscape:label="LaptopLid" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.2507px;font-family:'Monaspace Neon';-inkscape-font-specification:'Monaspace Neon';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;inline-size:140.957;display:inline;fill:#230156;fill-opacity:1;stroke:none;stroke-width:0.524481;stroke-dasharray:none;stroke-opacity:1"
+         x="17.849133"
+         y="118.99422"
+         id="text18-6-2-9"
+         transform="matrix(-4.7742302,0,0,4.7742323,614.58111,-153.77943)"
+         inkscape:label="LittleParrotText"><tspan
+           x="17.849133"
+           y="118.99422"
+           id="tspan2"><tspan
+             style="font-weight:bold;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold'"
+             id="tspan1">Little
+</tspan></tspan><tspan
+           x="17.849133"
+           y="149.94428"
+           id="tspan4"><tspan
+             style="font-weight:bold;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold'"
+             id="tspan3">Parrot</tspan></tspan></text>
+      <ellipse
+         style="display:none;fill:#230156;fill-opacity:1;stroke:none;stroke-width:6"
+         id="path1-4"
+         cx="513.46521"
+         cy="188.19118"
+         rx="60"
+         ry="48"
+         transform="rotate(34.56757)"
+         inkscape:label="LaptopLogo" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:12.4306px;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;opacity:1;fill:#230156;fill-opacity:1;stroke:none;stroke-width:7.26295;stroke-linecap:square"
+       x="140.11034"
+       y="35.159763"
+       id="text22"><tspan
+         sodipodi:role="line"
+         style="opacity:1;fill:#230156;fill-opacity:1;stroke-width:7.26295"
+         x="140.11034"
+         y="35.159763"
+         id="tspan23">Master Product Skills</tspan><tspan
+         sodipodi:role="line"
+         style="opacity:1;fill:#230156;fill-opacity:1;stroke-width:7.26295"
+         x="140.11034"
+         y="50.698017"
+         id="tspan24">In Minutes</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:10.9069px;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#230156;fill-opacity:1;stroke:none;stroke-width:6.37263;stroke-linecap:square"
+       x="139.77647"
+       y="16.515959"
+       id="text22-2"><tspan
+         sodipodi:role="line"
+         style="opacity:1;fill:#230156;fill-opacity:1;stroke-width:6.37263"
+         x="139.77647"
+         y="16.515959"
+         id="tspan24-5">Litte Parrot</tspan></text>
+    <path
+       id="rect1-3-4-39-4-2-0-5"
+       d="m 206.30251,11.935613 v 5.777281 h 3.56718 v -5.777281 z m 0.71693,1.12191 h 0.23783 v 2.499886 l 1.58859,-1.452232 h 0.30438 l -1.06822,1.004155 1.17286,1.481633 h -0.29489 l -1.0576,-1.328251 -0.64512,0.590289 v 0.737962 h -0.23783 z"
+       style="fill:#230156;fill-opacity:1;stroke-width:0.0370641" />
+    <text
+       dx="0"
+       dy="0"
+       font-family="Montserrat"
+       font-size="465.256px"
+       font-weight="200"
+       stroke-width="0"
+       fill="#33333"
+       id="text3-0-3-6-8-4-0-8"
+       x="187.29515"
+       y="16.580832"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.75913px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light';fill:#230156;fill-opacity:1"
+       transform="scale(0.99938887,1.0006115)"><tspan
+         y="16.580832"
+         font-weight="200"
+         stroke-width="0"
+         id="tspan1-4-8-3-9-0-0-6"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.75913px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light';fill:#230156;fill-opacity:1">product</tspan></text>
+    <text
+       font-family="Montserrat"
+       font-size="465.256px"
+       font-weight="200"
+       stroke-width="0"
+       fill="#33333"
+       id="text3-0-3-6-4-3-4-3-7"
+       x="210.0795"
+       y="16.580832"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.75913px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light';fill:#230156;fill-opacity:1"
+       transform="scale(0.99938887,1.0006115)"><tspan
+         y="16.580832"
+         font-weight="200"
+         stroke-width="0"
+         id="tspan1-4-8-3-6-9-9-9-7"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.75913px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light';fill:#230156;fill-opacity:1">ind</tspan></text>
+    <text
+       font-family="Montserrat"
+       font-size="465.256px"
+       font-weight="200"
+       stroke-width="0"
+       fill="#33333"
+       id="text3-0-3-6-8-4-0-8-2"
+       x="180.37901"
+       y="16.580759"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.75913px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light';fill:#230156;fill-opacity:1"
+       transform="scale(0.99938887,1.0006115)"><tspan
+         y="16.580759"
+         font-weight="200"
+         stroke-width="0"
+         id="tspan1-4-8-3-9-0-0-6-2"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.75913px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light';fill:#230156;fill-opacity:1">by</tspan></text>
+  </g>
+</svg>

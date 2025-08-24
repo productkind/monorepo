@@ -114,8 +114,15 @@ When the output is not correct, or has mistakes we usually say that the model is
 It is better to have the mental model that LLMs are always hallucinating, and in most of the
 cases they are hallucinating outputs that are useful and correct.
 
+
+
+
+Chat AI the whole context
+
 Because of this prediction based nature, you can expect totally different output for asking
 verifications on a previous output, or asking the same question multiple times.
+
+pizza
 
 ### try AI
 

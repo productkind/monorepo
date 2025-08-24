@@ -3,13 +3,13 @@
 
 <svg
    width="1080"
-   height="852.77399"
-   viewBox="0 0 1080 852.77399"
+   height="867.47699"
+   viewBox="0 0 1080 867.47699"
    version="1.1"
    id="svg1"
    inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
    sodipodi:docname="logo.svg"
-   inkscape:export-filename="/Users/eggdice/Projects/little-parrot-awakens/public/lovable-uploads/fb3c6bc9-f876-4cca-8f84-59ee996c268d.png"
+   inkscape:export-filename="../../content/video/public/logo.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -27,16 +27,17 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="1.7683707"
-     inkscape:cx="558.70638"
-     inkscape:cy="203.01173"
-     inkscape:window-width="1104"
+     inkscape:zoom="0.28562703"
+     inkscape:cx="1634.9993"
+     inkscape:cy="164.55025"
+     inkscape:window-width="1728"
      inkscape:window-height="1057"
-     inkscape:window-x="627"
+     inkscape:window-x="0"
      inkscape:window-y="32"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer1"
-     showguides="true" />
+     inkscape:current-layer="g8"
+     showguides="true"
+     showgrid="false" />
   <defs
      id="defs1">
     <linearGradient
@@ -48,7 +49,7 @@
        x2="828.27228"
        y2="558.86871"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(8.3466433,0,0,8.3466433,-6361.7763,-4615.9502)" />
+       gradientTransform="matrix(-7.5076549,0.84211843,0.84211843,7.5076549,6208.6438,-3424.455)" />
     <linearGradient
        id="linearGradient6"
        inkscape:collect="always">
@@ -90,55 +91,93 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <path
-       style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#230156;stroke-width:24.0991;stroke-dasharray:none;stroke-opacity:1"
-       d="M 653.762,844.59631 1047.3658,657.0655 195.54974,384.26915 C 347.4452,536.95564 383.49478,743.92159 653.762,844.59631 Z"
-       id="path17-0-2-4"
-       sodipodi:nodetypes="cccc" />
-    <path
-       style="display:inline;fill:#230156;fill-opacity:1;stroke:#230156;stroke-width:15.1279;stroke-dasharray:none;stroke-opacity:1"
-       d="M 558.96826,811.84788 840.63213,679.39936 59.713635,410.70339 Z"
-       id="path17-3-4-2-3"
-       sodipodi:nodetypes="cccc" />
-    <path
-       style="display:inline;fill:url(#linearGradient3);stroke:#230156;stroke-width:24.0991;stroke-dasharray:none;stroke-opacity:1"
-       d="m 459.71215,192.53063 -76.8215,-23.52568 64.53415,-64.53408 C 436.65174,55.988253 482.877,9.1147321 528.21786,12.11964 c 29.57819,1.960256 58.78002,25.146914 71.53628,82.960338 12.31142,55.797302 12.52421,202.331642 98.35375,264.050312 93.73698,67.40491 203.82582,146.94066 267.77614,150.34149 C 863.9822,628.81251 696.64196,664.85806 478.87345,670.03081 Z"
-       id="path2-5-52-8"
-       sodipodi:nodetypes="cccsssccc" />
-    <path
-       style="display:inline;fill:none;stroke:#230156;stroke-width:24.0991;stroke-dasharray:none;stroke-opacity:1"
-       d="m 383.26583,169.11621 136.46018,41.02175 z"
-       id="path15-7-27-4"
-       sodipodi:nodetypes="ccc" />
-    <path
-       style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#230156;stroke-width:24.0991;stroke-dasharray:none;stroke-opacity:1"
-       d="m 13.987134,629.05475 -1.87599,-499.99263 630.241506,196.32889 -0.79962,515.2848 z"
-       id="path16-1-1-0"
-       sodipodi:nodetypes="ccccc" />
-    <ellipse
-       style="display:inline;fill:#230156;fill-opacity:1;stroke:#230156;stroke-width:22.0838;stroke-dasharray:none;stroke-opacity:1"
-       id="path18-0-5-0"
-       cx="501.37683"
-       cy="88.196915"
-       rx="7.6470289"
-       ry="6.3725247" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.1349px;font-family:'Monaspace Neon';-inkscape-font-specification:'Monaspace Neon';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;inline-size:140.957;display:inline;fill:#230156;fill-opacity:1;stroke:none;stroke-width:0.524481;stroke-dasharray:none;stroke-opacity:1"
-       x="17.849133"
-       y="118.99422"
-       id="text18-6-2-9"
-       transform="matrix(4.7742302,0,0,4.7742323,20.890871,-121.5138)"><tspan
-         x="17.849133"
-         y="118.99422"
-         id="tspan2"><tspan
-           style="font-weight:bold;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold'"
-           id="tspan1">Little
+    <g
+       id="g8"
+       transform="translate(81.424977,-1401.293)"
+       inkscape:label="Logo">
+      <path
+         id="path5"
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:65.4394;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:label="LaptopOutline"
+         d="m 965.85533,1534.6181 -586.30487,228.304 v 194.2705 L 10.617624,2086.0336 368.81308,2233.521 c 198.97383,-77.6021 398.02136,-155.0224 597.04225,-232.506 z"
+         sodipodi:nodetypes="ccccccc" />
+      <path
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:65.439;stroke-dasharray:none;stroke-opacity:1"
+         d="m 557.65863,1590.2545 67.04804,-30.2387 -64.55834,-51.5362 c -0.9878,-46.3495 -23.83319,-82.7656 -81.9895,-73.0993 -22.6637,3.767 -53.52215,28.8573 -55.97545,80.0214 -2.47702,51.6588 9.14854,183.2573 -61.82659,247.4317 -77.51405,70.0869 -168.51235,152.735 -225.69138,162.2462 103.6995,97.0638 332.79741,137.5897 424.57451,80.5915 77.74019,-48.2806 26.85962,-298.4397 -1.58129,-415.4166 -18.38076,7.6944 -37.55821,15.8563 -57.26025,16.1508 19.70343,-0.2994 38.87374,-8.4462 57.26025,-16.1508 z"
+         id="path1"
+         sodipodi:nodetypes="cccssscsccc"
+         inkscape:label="ParrotOutline" />
+      <g
+         id="g3-9"
+         transform="matrix(-0.96736572,0,0,0.96736572,-354.93262,1810.9332)"
+         inkscape:label="LaptopBottom">
+        <path
+           style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#230156;stroke-width:22.5485;stroke-dasharray:none;stroke-opacity:1"
+           d="M -748.16065,436.84446 -377.88192,284.38035 -1176.5677,5.4587446 c 142.122,142.8622154 175.5296,337.1886854 428.40705,431.3857154 z"
+           id="path17-0-2-4-7"
+           sodipodi:nodetypes="cccc"
+           inkscape:label="LaptopBase" />
+        <path
+           style="display:inline;fill:#230156;fill-opacity:1;stroke:#230156;stroke-width:14.1545;stroke-dasharray:none;stroke-opacity:1"
+           d="M -836.53258,405.52587 -572.99174,281.59945 -1303.6638,30.192125 Z"
+           id="path17-3-4-2-3-5"
+           sodipodi:nodetypes="cccc"
+           inkscape:label="LaptopKeyboard" />
+      </g>
+      <path
+         style="display:inline;fill:url(#linearGradient3);stroke:#230156;stroke-width:21.8126;stroke-dasharray:none;stroke-opacity:1"
+         d="m 557.65863,1590.2545 67.04804,-30.2387 -64.55834,-51.5362 c -0.9878,-46.3495 -23.83319,-82.7656 -81.9895,-73.0993 -22.6637,3.767 -53.52215,28.8573 -55.97545,80.0214 -2.47702,51.6588 9.14854,183.2573 -61.82659,247.4317 -77.51405,70.0869 -168.51235,152.735 -225.69138,162.2462 103.6995,97.0638 332.79741,137.5897 424.57451,80.5915 77.74019,-48.2806 26.85962,-298.4397 -1.58129,-415.4166 -18.38076,7.6944 -37.55821,15.8563 -57.26025,16.1508 19.70343,-0.2994 38.87374,-8.4462 57.26025,-16.1508 z"
+         id="path2-5-52-8"
+         sodipodi:nodetypes="cccssscsccc"
+         inkscape:label="ParrotBody" />
+      <circle
+         style="display:inline;fill:#230156;fill-opacity:1;stroke:none;stroke-width:19.9886;stroke-dasharray:none;stroke-opacity:1"
+         id="path18-0-5-0"
+         cx="-338.64096"
+         cy="1546.241"
+         r="17.412582"
+         inkscape:label="ParrotEyes"
+         transform="matrix(-0.99376792,0.11146893,0.11146893,0.99376792,0,0)" />
+      <g
+         id="g2-5"
+         inkscape:label="LaptopTop"
+         transform="matrix(-0.96736572,0,0,0.96736572,978.43017,1450.2362)"
+         style="display:inline">
+        <path
+           style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#230156;stroke-width:22.5485;stroke-dasharray:none;stroke-opacity:1"
+           d="M 12.9997,569.3592 V 87.2282 l 606.0833,236.006 -3e-4,482.13 z"
+           id="path16-1-1-0-2"
+           sodipodi:nodetypes="ccccc"
+           inkscape:label="LaptopLid" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.2507px;font-family:'Monaspace Neon';-inkscape-font-specification:'Monaspace Neon';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;inline-size:140.957;display:inline;fill:#230156;fill-opacity:1;stroke:none;stroke-width:0.524481;stroke-dasharray:none;stroke-opacity:1"
+           x="17.849133"
+           y="118.99422"
+           id="text18-6-2-9"
+           transform="matrix(-4.7742302,0,0,4.7742323,614.58111,-153.77943)"
+           inkscape:label="LittleParrotText"><tspan
+             x="17.849133"
+             y="118.99422"
+             id="tspan6"><tspan
+               style="font-weight:bold;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold'"
+               id="tspan5">Little
 </tspan></tspan><tspan
-         x="17.849133"
-         y="151.07274"
-         id="tspan4"><tspan
-           style="font-weight:bold;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold'"
-           id="tspan3">Parrot</tspan></tspan></text>
+             x="17.849133"
+             y="149.94428"
+             id="tspan8"><tspan
+               style="font-weight:bold;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold'"
+               id="tspan7">Parrot</tspan></tspan></text>
+        <ellipse
+           style="display:none;fill:#230156;fill-opacity:1;stroke:none;stroke-width:6"
+           id="path1-4"
+           cx="513.46521"
+           cy="188.19118"
+           rx="60"
+           ry="48"
+           transform="rotate(34.56757)"
+           inkscape:label="LaptopLogo" />
+      </g>
+    </g>
   </g>
 </svg>
