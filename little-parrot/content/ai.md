@@ -114,6 +114,18 @@ When the output is not correct, or has mistakes we usually say that the model is
 It is better to have the mental model that LLMs are always hallucinating, and in most of the
 cases they are hallucinating outputs that are useful and correct.
 
+### Video
+
+AI models are created in an evolutionary process. Similarly how the human civilization created the
+recipe of pizza. The recipe that results the pizza that you can order from your from your favourite
+place differs a lot from the first pizza like flat breads of ancient Italy. A recipe is evolving
+by each time it is followed through people can taste the pizza and adjust its parameters based on
+the taste. A model also has parameters and the learning process that creates it, involves running
+the model millions of times and based on the output it creates these parameters are changed to
+have better results. When the model is used, as you type into an AI chat interface, just runs the
+billions of parameters parameters that have been set during training and delivers you your answer
+quite a bit faster than your pizza is delivered to you after somebody executed the few parameters
+the pizza recipe we as society created through centuries.
 
 
 
