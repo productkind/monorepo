@@ -41,7 +41,43 @@
      id="defs1">
     <linearGradient
        id="linearGradient6"
-       inkscape:collect="always">
+       inkscape:label="Little Parrot">
+      <stop
+         style="stop-color:#26fd46;stop-opacity:1;"
+         offset="0"
+         id="stop9" />
+      <stop
+         style="stop-color:#8efd23;stop-opacity:1;"
+         offset="0.14"
+         id="stop10" />
+      <stop
+         style="stop-color:#c4fd23;stop-opacity:1;"
+         offset="0.28"
+         id="stop11" />
+      <stop
+         style="stop-color:#eafd24;stop-opacity:1;"
+         offset="0.43000001"
+         id="stop12" />
+      <stop
+         style="stop-color:#fdf024;stop-opacity:1;"
+         offset="0.56999999"
+         id="stop13" />
+      <stop
+         style="stop-color:#fdd825;stop-opacity:1;"
+         offset="0.70999998"
+         id="stop14" />
+      <stop
+         style="stop-color:#fdc425;stop-opacity:1;"
+         offset="0.86000001"
+         id="stop15" />
+      <stop
+         style="stop-color:#fdb226;stop-opacity:1;"
+         offset="1"
+         id="stop16" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient6-1"
+       inkscape:label="Little Parrot">
       <stop
          style="stop-color:#26fd46;stop-opacity:1;"
          offset="0"
@@ -77,7 +113,7 @@
     </linearGradient>
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient6"
+       xlink:href="#linearGradient6-1"
        id="linearGradient13"
        x1="756.87366"
        y1="501.5217"
