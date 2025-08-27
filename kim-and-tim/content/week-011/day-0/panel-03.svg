@@ -7,7 +7,7 @@
    viewBox="0 0 285.74999 357.1875"
    version="1.1"
    id="svg1"
-   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
    sodipodi:docname="panel-03.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -24,12 +24,12 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
      inkscape:zoom="0.76953218"
-     inkscape:cx="479.51211"
-     inkscape:cy="349.56303"
-     inkscape:window-width="1728"
-     inkscape:window-height="1057"
+     inkscape:cx="484.06033"
+     inkscape:cy="385.94877"
+     inkscape:window-width="1712"
+     inkscape:window-height="965"
      inkscape:window-x="0"
-     inkscape:window-y="32"
+     inkscape:window-y="39"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1" />
   <defs
@@ -268,14 +268,20 @@
        transform="translate(92.840155,-126.8013)"><tspan
          x="50.677452"
          y="156.49693"
-         id="tspan1">As the experts, what's
-</tspan><tspan
+         id="tspan2">I'm not sure. You have more<tspan
+   y="156.49693"
+   id="tspan3"> </tspan></tspan><tspan
          x="50.677452"
          y="180.30944"
-         id="tspan2">the best way to proceed?</tspan></text>
+         id="tspan4">expertise in this topic. How do you<tspan
+   y="180.30944"
+   id="tspan5"> </tspan></tspan><tspan
+         x="50.677452"
+         y="204.12194"
+         id="tspan6">think we should proceed?</tspan></text>
     <path
        style="fill:none;fill-opacity:1;stroke:#370188;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-       d="M 153.81044,100.58461 C 153.36728,91.266319 142.85011,79.554054 143.09049,57.375744"
+       d="m 155.52956,101.9599 c -0.44316,-9.318287 -11.64798,-0.74496 -11.4076,-22.923269"
        id="path13-1-9-2-1"
        sodipodi:nodetypes="cc" />
     <g
