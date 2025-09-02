@@ -7,7 +7,8 @@ import {
   staticFile,
   Video,
   spring,
-  interpolate,
+  Img,
+  Series,
 } from "remotion";
 import {Gif} from '@remotion/gif';
 import { loadFont as loadSpaceMono } from '@remotion/google-fonts/SpaceMono';
@@ -15,10 +16,13 @@ import { loadFont as loadMontserrat } from '@remotion/google-fonts/Lexend';
 import './styles.css';
 import { PropsWithChildren } from "react";
 import { z } from "zod";
-import { FRAME_RATE } from "./config";
 
 const {fontFamily: spaceMonoFontFamily} = loadSpaceMono();
 const {fontFamily: montserratFontFamily} = loadMontserrat();
+
+const DARK_PURPLE = '#230156'
+const BG_PURPLE = '#0e0023'
+const BG_CLASS = 'bg-[#0e0023]'
 
 export const CaptionsSchema = z.array(z.object({
   text: z.string(),
@@ -35,184 +39,156 @@ export const LessonVideoPropsSchema = z.object({
   allDuration: z.number().default(100),
 })
 
-export const LessonVideo2: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({captions, titleDuration, endDuration, allDuration}) => {
- /*  const frame = useCurrentFrame()
-  const startMusicCutoff = 65;
-  const startMusicDuration = 35;
-  const volume = interpolate(frame, [startMusicCutoff, startMusicCutoff + startMusicDuration], [0.4, 0.05], {
-    extrapolateLeft: 'clamp',
-    extrapolateRight: 'clamp',
-    })*/
-
+export const LessonVideo2: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({captions, titleDuration}) => {
   return (
-    <>
-      <Sequence durationInFrames={titleDuration}>
-        <FullScreenText>
-          <TypingText delay={0}>Prompting Technique</TypingText>
-          <br/>
-          <TypingText delay={22}>#1</TypingText>
-          <br/>
-          <TypingText delay={24}>Tone and Style</TypingText>
-        </FullScreenText>
-      </Sequence>
-      { /*
-      <Sequence from={0} durationInFrames={allDuration}>
-        <Audio src={staticFile('start.mp3')} volume={volume} />
-      </Sequence>
-      */ }
-      <Sequence from={titleDuration} durationInFrames={44}>
-        <FullScreenGif src={staticFile('video-2/section1.gif')} />
-      </Sequence>
-      <Sequence from={titleDuration + 44} durationInFrames={72}>
-        <FullScreenGif src={staticFile('video-2/section2.gif')} fit="contain" color="#f6adcd" />
-      </Sequence>
-      <Sequence from={titleDuration + 116} durationInFrames={76}>
-        <FullScreenGif src={staticFile('video-2/section3.gif')} fit="contain" color="#fcedc4" />
-      </Sequence>
-      <Sequence from={titleDuration + 116 + 76} durationInFrames={54}>
-        <FullScreenGif src={staticFile('video-2/section4.gif')} fit="contain" color="#fefefe" />
-      </Sequence>
-      <Sequence from={titleDuration + 116 + 76 + 54} durationInFrames={116}>
-        <FullScreenGif src={staticFile('video-2/section5.gif')} fit="contain" />
-      </Sequence>
-      { /*
-      <Sequence from={titleDuration + 116 + 76 + 54 + 116} durationInFrames={endDuration}>
-        <FullScreenEnd />
-      </Sequence>
-         */
-      }
+    <AbsoluteFill className={BG_CLASS}>
+      <Series>
+        <Series.Sequence durationInFrames={titleDuration}>
+          <FullScreenText>
+            <TypingText delay={0}>Prompting Technique</TypingText>
+            <br/>
+            <TypingText delay={22}>#1</TypingText>
+            <br/>
+            <TypingText delay={24}>Tone and Style</TypingText>
+          </FullScreenText>
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={44}>
+          <FullScreenGif src={staticFile('video-2/section1.gif')} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={72}>
+          <FullScreenGif src={staticFile('video-2/section2.gif')} fit="contain" color="#f6adcd" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={76}>
+          <FullScreenGif src={staticFile('video-2/section3.gif')} fit="contain" color="#fcedc4" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={54}>
+          <FullScreenGif src={staticFile('video-2/section4.gif')} fit="contain" color="#fefefe" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={116}>
+          <FullScreenGif src={staticFile('video-2/section5.gif')} fit="contain" />
+        </Series.Sequence>
+      </Series>
       <Sequence from={titleDuration}>
         <Captions captions={captions} />
       </Sequence>
       <Sequence from={titleDuration}>
         <Audio src={staticFile('video-2/speech.wav')} />
       </Sequence>
-    </>
+    </AbsoluteFill>
   )
 }
 
 
 
-export const LessonVideo: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({captions, titleDuration, endDuration, allDuration}) => {
-  const frame = useCurrentFrame()
-  const startMusicCutoff = 65;
-  const startMusicDuration = 35;
-  const volume = interpolate(frame, [startMusicCutoff, startMusicCutoff + startMusicDuration], [0.4, 0.05], {
-    extrapolateLeft: 'clamp',
-    extrapolateRight: 'clamp',
-  })
-
+export const LessonVideo: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({captions, titleDuration, endDuration}) => {
   return (
-    <>
-      <Sequence durationInFrames={titleDuration}>
-        <FullScreenText>
-          <TypingText delay={0}>Artificial Intelligence</TypingText>
-          <br/>
-          <TypingText delay={22}>&amp;</TypingText>
-          <br/>
-          <TypingText delay={24}>AI Models</TypingText>
-        </FullScreenText>
-      </Sequence>
-      { /*
-      <Sequence  durationInFrames={allDuration}>
-        <Audio src={staticFile('start.mp3')} volume={volume} />
-      </Sequence>
-      */ }
-      <Sequence from={titleDuration} durationInFrames={218}>
-        <FullScreenGif src={staticFile('section1.gif')} />
-      </Sequence>
-      <Sequence from={titleDuration + 218} durationInFrames={205}>
-        <ImageSteps
-          allDuration={205}
-          images={[
-            {image: staticFile('section2.mp4'), delay: 0},
-            {image: staticFile('section2-2.mp4'), delay: 70, offset: -100},
-            {image: staticFile('section2-3.mp4'), delay: 110},
-            {image: staticFile('section2-4.mp4'), delay: 155, offset: -150},
-          ]}
-        />
-      </Sequence>
-      <Sequence from={titleDuration + 218 + 205} durationInFrames={230}>
-        <FullScreenGif src={staticFile('section3.gif')} offset={-500} />
-      </Sequence>
-      <Sequence from={titleDuration + 218 + 205 + 230} durationInFrames={200}>
-        <ImageSteps
-          allDuration={200}
-          images={[
-            {image: staticFile('section4.mp4'), delay: 0},
-            {image: staticFile('section4-2.mp4'), delay: 70},
-            {image: staticFile('section4-3.mp4'), delay: 136, offset: -320},
-          ]}
-        />
-      </Sequence>
-      <Sequence from={titleDuration + 218 + 205 + 230 + 200} durationInFrames={188}>
-        <ImageSteps
-          allDuration={188}
-          images={[
-            {image: staticFile('section5.jpg'), delay: 0},
-            {image: staticFile('section5-2.jpg'), delay: 70},
-          ]}
-        />
-      </Sequence>
-      <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188} durationInFrames={274}>
-        <FullScreenGif src={staticFile('section6.gif')} />
-      </Sequence>
-      <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188 + 274} durationInFrames={104}>
-        <FullScreenGif src={staticFile('section7.gif')} />
-      </Sequence>
-      <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188 + 274 + 104} durationInFrames={98}>
-        <FullScreenGif src={staticFile('section8.gif')} />
-      </Sequence>
-      <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188 + 274 + 104 + 98} durationInFrames={86}>
-        <FullScreenGif src={staticFile('section9.gif')} />
-      </Sequence>
-      <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188 + 274 + 104 + 98 + 86} durationInFrames={148}>
-        <ImageSteps
-          allDuration={148}
-          images={[
-            {image: staticFile('section10.mp4'), delay: 0},
-            {image: staticFile('section10-2.mp4'), delay: 65, offset: -100},
-            {image: staticFile('section10-3.mp4'), delay: 101, offset: -100},
-          ]}
-        />
-      </Sequence>
-      <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188 + 274 + 104 + 98 + 86 + 148} durationInFrames={110}>
-        <FullScreenGif src={staticFile('section11.gif')} />
-      </Sequence>
-      <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188 + 274 + 104 + 98 + 86 + 148 + 110} durationInFrames={178}>
-        <ImageSteps
-          allDuration={178}
-          images={[
-            {image: staticFile('section12.mp4'), delay: 0, offset: -250},
-            {image: staticFile('section12-2.mp4'), delay: 65, offset: -100},
-            {image: staticFile('section12-3.mp4'), delay: 92, offset: -240},
-            {image: staticFile('section12-4.mp4'), delay: 118},
-          ]}
-        />
-      </Sequence>
-      <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188 + 274 + 104 + 98 + 86 + 148 + 110 + 178} durationInFrames={88}>
-        <FullScreenGif src={staticFile('section6.gif')} />
-      </Sequence>
-      <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188 + 274 + 104 + 98 + 86 + 148 + 110 + 178 + 88} durationInFrames={65}>
-        <FullScreenGif src={staticFile('section14.gif')} />
-      </Sequence>
-      <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188 + 274 + 104 + 98 + 86 + 148 + 110 + 178 + 88 + 65} durationInFrames={74}>
-        <FullScreenGif src={staticFile('section15.gif')} />
-      </Sequence>
-      <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188 + 274 + 104 + 98 + 86 + 148 + 110 + 178 + 88 + 65 + 74} durationInFrames={96}>
-        <FullScreenGif src={staticFile('section16.gif')} />
-      </Sequence>
-      <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188 + 274 + 104 + 98 + 86 + 148 + 110 + 178 + 88 + 65 + 74 + 96} durationInFrames={194}>
-        <ImageSteps
-          allDuration={200}
-          images={[
-            {image: staticFile('section17.mp4'), delay: 0, offset: -160},
-            {image: staticFile('section17-2.mp4'), delay: 54, offset: -20},
-            {image: staticFile('section17-3.mp4'), delay: 98, offset: -420},
-            {image: staticFile('section17-4.mp4'), delay: 138, offset: -200},
-          ]}
-        />
-      </Sequence>
+    <AbsoluteFill className={BG_CLASS}>
+      <Series>
+        <Series.Sequence durationInFrames={titleDuration}>
+          <FullScreenText>
+            <TypingText delay={0}>Artificial Intelligence</TypingText>
+            <br/>
+            <TypingText delay={22}>&amp;</TypingText>
+            <br/>
+            <TypingText delay={24}>AI Models</TypingText>
+          </FullScreenText>
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={218}>
+          <FullScreenGif src={staticFile('section1.gif')} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={205}>
+          <ImageSteps
+            allDuration={205}
+            images={[
+              {image: staticFile('section2.mp4'), delay: 0},
+              {image: staticFile('section2-2.mp4'), delay: 70, offset: -100},
+              {image: staticFile('section2-3.mp4'), delay: 110},
+              {image: staticFile('section2-4.mp4'), delay: 155, offset: -150},
+            ]}
+          />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={230}>
+          <FullScreenGif src={staticFile('section3.gif')} offset={-500} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={200}>
+          <ImageSteps
+            allDuration={200}
+            images={[
+              {image: staticFile('section4.mp4'), delay: 0},
+              {image: staticFile('section4-2.mp4'), delay: 70},
+              {image: staticFile('section4-3.mp4'), delay: 136, offset: -320},
+            ]}
+          />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={188}>
+          <ImageSteps
+            allDuration={188}
+            images={[
+              {image: staticFile('section5.jpg'), delay: 0},
+              {image: staticFile('section5-2.jpg'), delay: 70},
+            ]}
+          />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={274}>
+          <FullScreenGif src={staticFile('section6.gif')} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={104}>
+          <FullScreenGif src={staticFile('section7.gif')} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={98}>
+          <FullScreenGif src={staticFile('section8.gif')} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={86}>
+          <FullScreenGif src={staticFile('section9.gif')} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={148}>
+          <ImageSteps
+            allDuration={148}
+            images={[
+              {image: staticFile('section10.mp4'), delay: 0},
+              {image: staticFile('section10-2.mp4'), delay: 65, offset: -100},
+              {image: staticFile('section10-3.mp4'), delay: 101, offset: -100},
+            ]}
+          />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={110}>
+          <FullScreenGif src={staticFile('section11.gif')} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={178}>
+          <ImageSteps
+            allDuration={178}
+            images={[
+              {image: staticFile('section12.mp4'), delay: 0, offset: -250},
+              {image: staticFile('section12-2.mp4'), delay: 65, offset: -100},
+              {image: staticFile('section12-3.mp4'), delay: 92, offset: -240},
+              {image: staticFile('section12-4.mp4'), delay: 118},
+            ]}
+          />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={88}>
+          <FullScreenGif src={staticFile('section6.gif')} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={65}>
+          <FullScreenGif src={staticFile('section14.gif')} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={74}>
+          <FullScreenGif src={staticFile('section15.gif')} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={96}>
+          <FullScreenGif src={staticFile('section16.gif')} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={194}>
+          <ImageSteps
+            allDuration={200}
+            images={[
+              {image: staticFile('section17.mp4'), delay: 0, offset: -160},
+              {image: staticFile('section17-2.mp4'), delay: 54, offset: -20},
+              {image: staticFile('section17-3.mp4'), delay: 98, offset: -420},
+              {image: staticFile('section17-4.mp4'), delay: 138, offset: -200},
+            ]}
+          />
+        </Series.Sequence>
+      </Series>
       <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188 + 274 + 104 + 98 + 86 + 148 + 110 + 178 + 88 + 65 + 74 + 96 + 194} durationInFrames={endDuration}>
         <FullScreenEnd />
       </Sequence>
@@ -222,7 +198,7 @@ export const LessonVideo: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({c
       <Sequence from={titleDuration}>
         <Audio src={staticFile('section1.wav')} />
       </Sequence>
-    </>
+    </AbsoluteFill>
   );
 };
 
@@ -242,7 +218,7 @@ const Captions: React.FC<{captions: Captions}> = ({captions}) => {
             return (
               <span key={index} className="inline-block m-4 line-height-1" style={{
                 backgroundColor: isCurrentWord ? '#fdb226' : '#fff',
-                color: '#230156',
+                color: DARK_PURPLE,
                 height: '112px',
               }}>
                 {word.text}
@@ -320,7 +296,7 @@ const getCaptionSentences = (captions: Captions, maxSentenceLength: number): Cap
 
 const ImageSteps: React.FC<{images: { image: string, delay: number, offset?: number, scale?: number}[], allDuration: number}> = ({ images, allDuration }) => {
   return (
-    <AbsoluteFill className="bg-black" style={{
+    <AbsoluteFill className={BG_CLASS} style={{
       fontFamily: spaceMonoFontFamily,
     }}>
           {images.map(({delay}, index) => {
@@ -349,7 +325,7 @@ const ImageSteps: React.FC<{images: { image: string, delay: number, offset?: num
                               height,
                               overflow: 'hidden',
                             }}>
-                              <img src={image} width={1080} style={{
+                              <Img src={image} width={1080} style={{
                                 translate: `0 ${offset}px`,
                                 scale,
                               }}/>
@@ -394,15 +370,15 @@ const FullScreenText: React.FC<PropsWithChildren> = ({ children }) => {
     <AbsoluteFill className="bg-[image:var(--gradient)]" style={{
       fontFamily: spaceMonoFontFamily,
     }}>
-      <img src={staticFile('logo.png')} className="absolute top-10 left-10 w-60" />
+      <Img src={staticFile('logo.png')} className="absolute top-10 left-10 w-60" />
       <div className="flex flex-col items-center justify-center h-full w-full">
         <div className="font-black text-9xl text-center w-full" style={{
-          color: '#230156'
+          color: DARK_PURPLE,
         }}>
           {children}
         </div>
       </div>
-      <img src={staticFile('parrot.png')} className="absolute bottom-10 right-10 w-240" style={{
+      <Img src={staticFile('parrot.png')} className="absolute bottom-10 right-10 w-240" style={{
         rotate: `${rotation}deg`,
         transformOrigin: 'bottom',
         translate: `${translate}px 0`,
@@ -449,7 +425,7 @@ const FullScreenEnd: React.FC = () => {
   return (
     <AbsoluteFill className="bg-[#230156]">
       <div className="flex flex-col items-center justify-center h-full w-full">
-        <img src={staticFile('logo.png')} className="w-120" />
+        <Img src={staticFile('logo.png')} className="w-120" />
       </div>
       <div className="absolute bottom-10 right-10 w-240 text-white font-black text-3xl">
         Flow by Moavii | https://www.youtube.com/@MoaviiMusic <br />
