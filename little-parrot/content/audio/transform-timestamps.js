@@ -69,8 +69,8 @@ function processCharacterData(data) {
 
 // --- Main execution block ---
 async function main() {
-    const inputFilePath = 'timestamps-tip.json';
-    const outputFilePath = 'output-tip.json';
+    const inputFilePath = 'alignment-video4.json';
+    const outputFilePath = 'output-video4.json';
 
     try {
         // 1. Read the input JSON file
