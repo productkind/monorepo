@@ -114,7 +114,7 @@ When the output is not correct, or has mistakes we usually say that the model is
 It is better to have the mental model that LLMs are always hallucinating, and in most of the
 cases they are hallucinating outputs that are useful and correct.
 
-### Video
+### Reel Video
 
 AI models are created in an evolutionary process. Similarly how the human civilization created the
 recipe of pizza. The recipe that results the pizza that you can order from your from your favourite
@@ -126,6 +126,38 @@ have better results. When the model is used, as you type into an AI chat interfa
 billions of parameters parameters that have been set during training and delivers you your answer
 quite a bit faster than your pizza is delivered to you after somebody executed the few parameters
 the pizza recipe we as society created through centuries.
+
+### Last AI Video
+
+Every time when you give your prompt in a chat interface for an LLM, a system prompt is stitched to
+your input. The system prompt is a prompt written by the creators of that LLM it contains general
+rules how it should behave when it is chatting with you. After processing all the tokens of the
+system prompt and your prompt, it listing internally what would would be the most probable tokens
+that could be the next right after the input based on the statistical relationships between tokens.
+It randomly picks one from the top of this list, then it repeats this process for the next token.
+By repeating this process over and over it generates the most probable answer to your prompt.
+This random picking it the reason why LLMs are giving different answers for the same prompt every
+time. How does the LLM remembers the conversation that you had in the chat? The LLM does not have
+any memory, so the previous messages both by you and the LLM, are simply prepended to your latest
+message automatically. Anything that is prepended to your current prompt, like previous messages or
+attached files are called the context. By latest studies it is shown that the last 5000 to 7000
+tokens have the most influence to the output. That is why it can feel that it forgets things from a
+long context.
+
+
+
+
+AI models evolve like pizza recipes.
+The first pizzas were simple flatbreads.
+Over time, people tweak the recipe: cook, taste, adjust, repeat.
+Training a model works the same way.
+A model has parameters. An algorithm runs the model millions of times, checks the output, nudges adjusts the parameters if the output is incorrect, then runs it again until it improves.
+This process is called machine learning.
+When you type into an chat with AI chat, you are not training it.
+You are using the final recipe.
+Billions of fixed parameters work together to serve your answer in seconds.
+No half-hour wait like a pizza delivery.
+
 
 
 
