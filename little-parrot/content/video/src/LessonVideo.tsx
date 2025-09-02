@@ -216,11 +216,9 @@ export const LessonVideo: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({c
       <Sequence from={titleDuration + 218 + 205 + 230 + 200 + 188 + 274 + 104 + 98 + 86 + 148 + 110 + 178 + 88 + 65 + 74 + 96 + 194} durationInFrames={endDuration}>
         <FullScreenEnd />
       </Sequence>
-      { /*
       <Sequence from={titleDuration}>
         <Captions captions={captions} />
       </Sequence>
-      */ }
       <Sequence from={titleDuration}>
         <Audio src={staticFile('section1.wav')} />
       </Sequence>
