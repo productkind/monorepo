@@ -90,7 +90,13 @@ async function generateSpeech(
 }
 
 const ELEVENLABS_API_KEY = 'sk_91544f2e0c841dcc7f863f643795881543dcd0f56baddfce';
-const VOICE_ID = 'iP95p4xoKVk53GoZ742B'; // The voice ID you provided
+const DEFAULT = 'iP95p4xoKVk53GoZ742B'; // The voice ID you provided
+const ARIA = '9BWtsMINqrJLrRacOk9x'; // Aria
+const LILY = 'pFZP5JQG7iQjIQuC4Bku'; // Lily
+const SARAH = 'EXAVITQu4vr4xnSDxMaL'; // Sarah
+const ELIZABETH = 'AXdMgz6evoL7OPd7eU12'; // Elizabeth
+const BETH = '8N2ng9i2uiUWqstgmWlH'; // Beth
+const VOICE_ID = ELIZABETH; // Change to the desired voice ID
 const video2 = `
 Set the tone and style how the AI is expected to phrase its replies.
 Especially useful when crafting messages that need to reflect your authentic voice, rather than generic AI-generated hyperbole.
@@ -101,7 +107,7 @@ AI models evolve like pizza recipes.
 The first pizzas were simple flatbreads.
 Over time, people tweak the recipe: cook, taste, adjust, repeat.
 Training a model works the same way.
-A model has parameters. An algorithm runs the model millions of times, checks the output, nudges adjusts the parameters if the output is incorrect, then runs it again until it improves.
+An algorithm runs the model millions of times, checks the output, adjusts the parameters if the output is incorrect, then runs it again until it improves.
 When you chat with AI, you are not training it.
 You are using the final recipe.
 Billions of fixed parameters work together to serve your answer in seconds.
@@ -119,12 +125,12 @@ In short: AI replies are built step by step, one token at a time, guided by both
 
 const TEXT_TO_GENERATE = video4
 const MODEL_ID = 'eleven_multilingual_v2'; //'eleven_v3_turbo'; // The v3 model as requested
-const OUTPUT_FILE_NAME = 'generated_speech-video4.wav';
+const OUTPUT_FILE_NAME = 'generated_speech-video4-elizabeth.wav';
 const OUTPUT_FILE_PATH = OUTPUT_FILE_NAME // Saves in the same directory as the script
 
 
 // Call the function to generate speech and handle the returned alignment data
-generateSpeech(TEXT_TO_GENERATE, VOICE_ID, MODEL_ID, ELEVENLABS_API_KEY, OUTPUT_FILE_PATH, 'alignment-video4.json')
+generateSpeech(TEXT_TO_GENERATE, VOICE_ID, MODEL_ID, ELEVENLABS_API_KEY, OUTPUT_FILE_PATH, 'alignment-video4-elizabeth.json')
     .then(alignment => {
         if (alignment) {
             console.log('Successfully retrieved speech and timestamp data.');

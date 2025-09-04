@@ -123,7 +123,7 @@ mtest('getTransformSet', ({ expect, coldStepAndClose }) => {
   };
   const getTransformSet = createGetTransformSet(getter, setter);
   const result$ = getTransformSet(map((x: number) => x + 1));
-  expect(result$).toBeObservableStepAndClose(undefined, 2);
+  expect(result$).toBeObservableStepAndClose({get: 1, set: 2 }, 2);
   expect(setterArgument$).toBeObservableStep(2)
 })
 
@@ -142,3 +142,4 @@ mtest('getTransformSet multiple operators', ({ expect, coldStepAndClose }) => {
   expect(result$).toBeObservableStepAndClose(undefined, 2);
   expect(setterArgument$).toBeObservableStep(4)
 })
+

@@ -102,20 +102,20 @@ export type GetTransformSet<GET, SET> = {
     op1: OperatorFunction<GET, A>,
     op2: OperatorFunction<A, B>,
     op3: OperatorFunction<B, SET>
-  ): Observable<void>
+  ): Observable<{ get: GET, set: SET }>
   <A, B, C>(
     op1: OperatorFunction<GET, A>,
     op2: OperatorFunction<A, B>,
     op3: OperatorFunction<B, C>,
     op4: OperatorFunction<C, SET>
-  ): Observable<void>
+  ): Observable<{ get: GET, set: SET }>
   <A, B, C, D>(
     op1: OperatorFunction<GET, A>,
     op2: OperatorFunction<A, B>,
     op3: OperatorFunction<B, C>,
     op4: OperatorFunction<C, D>,
     op5: OperatorFunction<D, SET>
-  ): Observable<void>
+  ): Observable<{ get: GET, set: SET }>
   <A, B, C, D, E>(
     op1: OperatorFunction<GET, A>,
     op2: OperatorFunction<A, B>,
@@ -123,7 +123,7 @@ export type GetTransformSet<GET, SET> = {
     op4: OperatorFunction<C, D>,
     op5: OperatorFunction<D, E>,
     op6: OperatorFunction<E, SET>
-  ): Observable<void>
+  ): Observable<{ get: GET, set: SET }>
   <A, B, C, D, E, F>(
     ...operators: [
       OperatorFunction<GET, A>,
@@ -134,17 +134,22 @@ export type GetTransformSet<GET, SET> = {
       OperatorFunction<E, F>,
       ...[OperatorFunction<F, any>, ...OperatorFunction<any, any>[], OperatorFunction<any, SET>]
     ]
-  ): Observable<void>
+  ): Observable<{ get: GET, set: SET }>
 }
 
 export const createGetTransformSet = <GET, SET>(
   getter: () => Observable<GET>,
   setter: (value: SET) => Observable<void>
 ): GetTransformSet<GET, SET> =>
-  ((...operators: OperatorFunction<any, any>[]): Observable<void> => {
-    return getter().pipe(
-      ...operators as [OperatorFunction<GET, SET>],
-      mergeMap(setter),
+  ((...operators: OperatorFunction<any, any>[]): Observable<{ get: GET, set: SET }> =>
+    getter().pipe(
+      mergeMap(getValue =>
+        of(getValue).pipe(
+          ...operators as [OperatorFunction<GET, SET>],
+          mergeMap(setter),
+          map(() => ({ get: getValue }))
+        )
+      )
     )
-  }) as GetTransformSet<GET, SET>
+  ) as GetTransformSet<GET, SET>
 

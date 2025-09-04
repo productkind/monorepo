@@ -41,4 +41,4 @@ export const readPackageJson = (
     map(() => stdout(`Package.json written to ${destinationPath} with version: ${packageJson.version}`)),
     catchError((error) => [stderr(`Error writing package.json: ${error.message}`)]),
   )
-    
+
