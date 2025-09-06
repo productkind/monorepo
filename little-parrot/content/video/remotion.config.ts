@@ -9,3 +9,21 @@ import { enableTailwind } from '@remotion/tailwind-v4';
 Config.setVideoImageFormat("jpeg");
 Config.setOverwriteOutput(true);
 Config.overrideWebpackConfig(enableTailwind);
+
+Config.overrideWebpackConfig((conf) => ({
+  ...conf,
+  experiments: { 
+    asyncWebAssembly: true,
+    syncWebAssembly: true 
+  },
+  module: {
+    ...conf.module,
+    rules: [
+      ...(conf.module?.rules || []),
+      {
+        test: /\.wasm$/,
+        type: 'webassembly/async',
+      }
+    ]
+  }
+}));

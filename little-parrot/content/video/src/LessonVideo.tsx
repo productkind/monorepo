@@ -16,6 +16,8 @@ import { loadFont as loadMontserrat } from '@remotion/google-fonts/Lexend';
 import './styles.css';
 import { PropsWithChildren } from "react";
 import { z } from "zod";
+import "@rive-app/canvas-single";
+import {RemotionRiveCanvas} from "@remotion/rive";
 
 const {fontFamily: spaceMonoFontFamily} = loadSpaceMono();
 const {fontFamily: montserratFontFamily} = loadMontserrat();
@@ -57,38 +59,40 @@ export const LessonVideo4: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({
         <Series.Sequence durationInFrames={76}>
           <FullScreenImage src={staticFile('video-4/section5-dog-lab.gif')} fit="contain" />
         </Series.Sequence>
-        <Series.Sequence durationInFrames={114}>
+        <Series.Sequence durationInFrames={88}>
           <FullScreenImage src={staticFile('video-4/section6-list.gif')} fit="contain" />
         </Series.Sequence>
-        <Series.Sequence durationInFrames={110}>
-          <FullScreenImage src={staticFile('video-4/section7-take.gif')} fit="contain" />
-        </Series.Sequence>
-        <Series.Sequence durationInFrames={62}>
-          <FullScreenImage src={staticFile('video-4/section8-cut.gif')} fit="contain" />
-        </Series.Sequence>
-        <Series.Sequence durationInFrames={64}>
-          <FullScreenImage src={staticFile('video-4/section9-math.gif')} fit="contain" />
-        </Series.Sequence>
-        <Series.Sequence durationInFrames={50}>
-          <FullScreenImage src={staticFile('video-3/section10.gif')} fit="contain" />
-        </Series.Sequence>
-        <Series.Sequence durationInFrames={86}>
-          <FullScreenImage src={staticFile('video-3/section7.gif')} fit="contain" />
-        </Series.Sequence>
-        <Series.Sequence durationInFrames={74}>
-          <FullScreenImage src={staticFile('video-3/section11.gif')} fit="contain" />
-        </Series.Sequence>
-        <Series.Sequence durationInFrames={52}>
-          <FullScreenImage src={staticFile('video-3/section12.gif')} fit="contain" />
-        </Series.Sequence>
-        <Series.Sequence durationInFrames={68}>
-          <FullScreenImage src={staticFile('video-3/section13.gif')} fit="contain" />
+        <Series.Sequence durationInFrames={840}>
+          <AbsoluteFill>
+            <RemotionRiveCanvas src={staticFile('video-4/ai-video.riv')} />
+          </AbsoluteFill>
         </Series.Sequence>
         <Series.Sequence durationInFrames={165}>
-          <FullScreenImage src={staticFile('video-3/section14.gif')} fit="contain" />
+          <FullScreenImage src={staticFile('video-4/section8-sample.gif')} fit="contain" />
         </Series.Sequence>
-        <Series.Sequence durationInFrames={86}>
-          <FullScreenImage src={staticFile('video-3/section15.gif')} fit="contain" />
+        <Series.Sequence durationInFrames={96}>
+          <FullScreenImage src={staticFile('video-4/section9-different.gif')} fit="contain" color="#ffffff" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={60}>
+          <FullScreenImage src={staticFile('video-4/section10-memory.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={102}>
+          <FullScreenImage src={staticFile('video-4/section11-remember.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={58}>
+          <FullScreenImage src={staticFile('video-4/section12-feed.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={165}>
+          <FullScreenImage src={staticFile('video-4/section13-conversation.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={161}>
+          <FullScreenImage src={staticFile('video-4/section14-bundle.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={207}>
+          <FullScreenImage src={staticFile('video-4/section15-look.gif')} fit="contain" color="#000000" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={200}>
+          <FullScreenImage src={staticFile('video-4/section16-remember.gif')} fit="contain" />
         </Series.Sequence>
       </Series>
       <Sequence from={titleDuration}>

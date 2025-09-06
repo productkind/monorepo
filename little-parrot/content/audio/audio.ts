@@ -115,12 +115,19 @@ No half-hour wait like a pizza delivery.
 `
 
 const video4 = `
-When you type a message into an AI chat, your prompt isn’t processed on its own. Behind the scenes, the system adds another piece: a hidden system prompt. This is written by the model’s creators and sets the ground rules for how the AI should behave with you.
-The model then takes both the system prompt and your prompt, breaks them down into tokens, and starts predicting what comes next. A token can be as short as a single letter or as long as a short word.
-At each step, the model ranks possible next tokens by likelihood, chooses from the top candidates, and then repeats the process. By stringing these predictions together, one token at a time, it produces a full reply. Because it samples from the top options rather than always picking the single most likely one, the same prompt can lead to slightly different answers.
-But what about memory? The model doesn’t actually remember past interactions. Instead, the app feeds it the conversation history again each time you send a new message. This history, along with any files you’ve attached, is bundled into the latest prompt and called the context.
-The model pays most attention to the most recent few thousand tokens—roughly five to seven thousand. This is why, in long conversations, it can seem like the AI forgets earlier details.
-In short: AI replies are built step by step, one token at a time, guided by both the hidden system prompt and the conversation context you provide.
+When you type a message into an AI chat, your prompt isn’t processed on its own.
+Behind the scenes, the system adds another piece: a hidden system prompt.
+This is written by the model’s creators and sets the ground rules for how the AI should behave with you.
+The model then takes both the system prompt and your prompt, breaks them down into tokens,
+and starts predicting what comes next.
+A token can be as short as a single letter or as long as a word.
+At each step, the model ranks possible next tokens by likelihood, chooses from the top candidates,
+and then repeats the process. By stringing these predictions together, one token at a time, it produces a full reply. Because it samples from the top options rather than always picking the single most likely one, the same prompt can lead to slightly different answers.
+But what about memory? The model doesn’t actually remember past interactions.
+Instead, the app feeds it the conversation history again each time you send a new message.
+This history, along with any files you’ve attached, is bundled into the latest prompt and called the context.
+The model pays most attention to the most recent few thousand tokens, roughly five to seven thousand.
+This is why, in long conversations, it can seem like the AI forgets earlier details.
 `
 
 const TEXT_TO_GENERATE = video4

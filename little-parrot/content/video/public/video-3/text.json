@@ -1,0 +1,452 @@
+[
+  {
+    "text": "AI",
+    "start": 0.046,
+    "end": 0.36
+  },
+  {
+    "text": "models",
+    "start": 0.418,
+    "end": 0.755
+  },
+  {
+    "text": "evolve",
+    "start": 0.824,
+    "end": 1.231
+  },
+  {
+    "text": "like",
+    "start": 1.277,
+    "end": 1.451
+  },
+  {
+    "text": "pizza",
+    "start": 1.498,
+    "end": 1.834
+  },
+  {
+    "text": "recipes.",
+    "start": 1.892,
+    "end": 2.624
+  },
+  {
+    "text": "The",
+    "start": 3.065,
+    "end": 3.181
+  },
+  {
+    "text": "first",
+    "start": 3.239,
+    "end": 3.471
+  },
+  {
+    "text": "pizzas",
+    "start": 3.518,
+    "end": 3.855
+  },
+  {
+    "text": "were",
+    "start": 3.913,
+    "end": 4.04
+  },
+  {
+    "text": "simple",
+    "start": 4.087,
+    "end": 4.493
+  },
+  {
+    "text": "flatbreads.",
+    "start": 4.574,
+    "end": 5.399
+  },
+  {
+    "text": "Over",
+    "start": 5.84,
+    "end": 6.142
+  },
+  {
+    "text": "time,",
+    "start": 6.2,
+    "end": 6.711
+  },
+  {
+    "text": "people",
+    "start": 6.803,
+    "end": 7.14
+  },
+  {
+    "text": "tweak",
+    "start": 7.187,
+    "end": 7.535
+  },
+  {
+    "text": "the",
+    "start": 7.651,
+    "end": 7.732
+  },
+  {
+    "text": "recipe:",
+    "start": 7.79,
+    "end": 8.406
+  },
+  {
+    "text": "cook,",
+    "start": 8.847,
+    "end": 9.358
+  },
+  {
+    "text": "taste,",
+    "start": 9.683,
+    "end": 10.356
+  },
+  {
+    "text": "adjust,",
+    "start": 10.739,
+    "end": 11.587
+  },
+  {
+    "text": "repeat.",
+    "start": 11.912,
+    "end": 12.585
+  },
+  {
+    "text": "Training",
+    "start": 13.189,
+    "end": 13.607
+  },
+  {
+    "text": "a",
+    "start": 13.653,
+    "end": 13.677
+  },
+  {
+    "text": "model",
+    "start": 13.735,
+    "end": 14.002
+  },
+  {
+    "text": "works",
+    "start": 14.071,
+    "end": 14.396
+  },
+  {
+    "text": "the",
+    "start": 14.466,
+    "end": 14.559
+  },
+  {
+    "text": "same",
+    "start": 14.617,
+    "end": 14.884
+  },
+  {
+    "text": "way.",
+    "start": 14.93,
+    "end": 15.43
+  },
+  {
+    "text": "An",
+    "start": 15.871,
+    "end": 16.022
+  },
+  {
+    "text": "algorithm",
+    "start": 16.08,
+    "end": 16.625
+  },
+  {
+    "text": "runs",
+    "start": 16.695,
+    "end": 16.939
+  },
+  {
+    "text": "the",
+    "start": 17.009,
+    "end": 17.078
+  },
+  {
+    "text": "model",
+    "start": 17.125,
+    "end": 17.38
+  },
+  {
+    "text": "millions",
+    "start": 17.496,
+    "end": 17.949
+  },
+  {
+    "text": "of",
+    "start": 17.984,
+    "end": 18.054
+  },
+  {
+    "text": "times,",
+    "start": 18.135,
+    "end": 18.727
+  },
+  {
+    "text": "checks",
+    "start": 18.901,
+    "end": 19.273
+  },
+  {
+    "text": "the",
+    "start": 19.308,
+    "end": 19.389
+  },
+  {
+    "text": "output,",
+    "start": 19.447,
+    "end": 20.027
+  },
+  {
+    "text": "adjusts",
+    "start": 20.178,
+    "end": 20.736
+  },
+  {
+    "text": "the",
+    "start": 20.782,
+    "end": 20.852
+  },
+  {
+    "text": "parameters",
+    "start": 20.898,
+    "end": 21.513
+  },
+  {
+    "text": "if",
+    "start": 21.688,
+    "end": 21.839
+  },
+  {
+    "text": "the",
+    "start": 21.897,
+    "end": 21.978
+  },
+  {
+    "text": "output",
+    "start": 22.048,
+    "end": 22.396
+  },
+  {
+    "text": "is",
+    "start": 22.454,
+    "end": 22.535
+  },
+  {
+    "text": "incorrect,",
+    "start": 22.605,
+    "end": 23.359
+  },
+  {
+    "text": "then",
+    "start": 23.603,
+    "end": 23.87
+  },
+  {
+    "text": "runs",
+    "start": 23.986,
+    "end": 24.277
+  },
+  {
+    "text": "it",
+    "start": 24.335,
+    "end": 24.416
+  },
+  {
+    "text": "again",
+    "start": 24.462,
+    "end": 24.799
+  },
+  {
+    "text": "until",
+    "start": 24.915,
+    "end": 25.252
+  },
+  {
+    "text": "it",
+    "start": 25.31,
+    "end": 25.391
+  },
+  {
+    "text": "improves.",
+    "start": 25.449,
+    "end": 26.32
+  },
+  {
+    "text": "When",
+    "start": 27.272,
+    "end": 27.481
+  },
+  {
+    "text": "you",
+    "start": 27.539,
+    "end": 27.62
+  },
+  {
+    "text": "chat",
+    "start": 27.702,
+    "end": 27.911
+  },
+  {
+    "text": "with",
+    "start": 27.957,
+    "end": 28.085
+  },
+  {
+    "text": "AI,",
+    "start": 28.143,
+    "end": 28.77
+  },
+  {
+    "text": "you",
+    "start": 28.944,
+    "end": 29.048
+  },
+  {
+    "text": "are",
+    "start": 29.118,
+    "end": 29.257
+  },
+  {
+    "text": "not",
+    "start": 29.339,
+    "end": 29.594
+  },
+  {
+    "text": "training",
+    "start": 29.64,
+    "end": 30.07
+  },
+  {
+    "text": "it.",
+    "start": 30.14,
+    "end": 30.453
+  },
+  {
+    "text": "You",
+    "start": 30.778,
+    "end": 30.964
+  },
+  {
+    "text": "are",
+    "start": 31.057,
+    "end": 31.185
+  },
+  {
+    "text": "using",
+    "start": 31.254,
+    "end": 31.556
+  },
+  {
+    "text": "the",
+    "start": 31.626,
+    "end": 31.695
+  },
+  {
+    "text": "final",
+    "start": 31.812,
+    "end": 32.206
+  },
+  {
+    "text": "recipe.",
+    "start": 32.288,
+    "end": 32.961
+  },
+  {
+    "text": "Billions",
+    "start": 33.402,
+    "end": 33.971
+  },
+  {
+    "text": "of",
+    "start": 34.017,
+    "end": 34.087
+  },
+  {
+    "text": "fixed",
+    "start": 34.168,
+    "end": 34.47
+  },
+  {
+    "text": "parameters",
+    "start": 34.528,
+    "end": 35.12
+  },
+  {
+    "text": "work",
+    "start": 35.213,
+    "end": 35.48
+  },
+  {
+    "text": "together",
+    "start": 35.55,
+    "end": 35.979
+  },
+  {
+    "text": "to",
+    "start": 36.223,
+    "end": 36.351
+  },
+  {
+    "text": "serve",
+    "start": 36.444,
+    "end": 36.734
+  },
+  {
+    "text": "your",
+    "start": 36.769,
+    "end": 36.908
+  },
+  {
+    "text": "answer",
+    "start": 36.978,
+    "end": 37.303
+  },
+  {
+    "text": "in",
+    "start": 37.361,
+    "end": 37.442
+  },
+  {
+    "text": "seconds.",
+    "start": 37.558,
+    "end": 38.208
+  },
+  {
+    "text": "No",
+    "start": 38.533,
+    "end": 38.742
+  },
+  {
+    "text": "half-hour",
+    "start": 38.859,
+    "end": 39.346
+  },
+  {
+    "text": "wait",
+    "start": 39.462,
+    "end": 39.741
+  },
+  {
+    "text": "like",
+    "start": 39.822,
+    "end": 40.008
+  },
+  {
+    "text": "a",
+    "start": 40.031,
+    "end": 40.054
+  },
+  {
+    "text": "pizza",
+    "start": 40.124,
+    "end": 40.519
+  },
+  {
+    "text": "delivery.",
+    "start": 40.588,
+    "end": 41.227
+  }
+]
