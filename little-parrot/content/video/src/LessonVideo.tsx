@@ -229,29 +229,29 @@ export const LessonVideo: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({c
           </FullScreenText>
         </Series.Sequence>
         <Series.Sequence durationInFrames={218}>
-          <FullScreenImage src={staticFile('section1.gif')} />
+          <FullScreenImage src={staticFile('video-1/section1.gif')} />
         </Series.Sequence>
         <Series.Sequence durationInFrames={205}>
           <ImageSteps
             allDuration={205}
             images={[
-              {image: staticFile('section2.mp4'), delay: 0},
-              {image: staticFile('section2-2.mp4'), delay: 70, offset: -100},
-              {image: staticFile('section2-3.mp4'), delay: 110},
-              {image: staticFile('section2-4.mp4'), delay: 155, offset: -150},
+              {image: staticFile('video-1/section2.mp4'), delay: 0},
+              {image: staticFile('video-1/section2-2.mp4'), delay: 70, offset: -100},
+              {image: staticFile('video-1/section2-3.mp4'), delay: 110},
+              {image: staticFile('video-1/section2-4.mp4'), delay: 155, offset: -150},
             ]}
           />
         </Series.Sequence>
         <Series.Sequence durationInFrames={230}>
-          <FullScreenImage src={staticFile('section3.gif')} offset={-500} />
+          <FullScreenImage src={staticFile('video-1/section3.gif')} offset={-500} />
         </Series.Sequence>
         <Series.Sequence durationInFrames={200}>
           <ImageSteps
             allDuration={200}
             images={[
-              {image: staticFile('section4.mp4'), delay: 0},
-              {image: staticFile('section4-2.mp4'), delay: 70},
-              {image: staticFile('section4-3.mp4'), delay: 136, offset: -320},
+              {image: staticFile('video-1/section4.mp4'), delay: 0},
+              {image: staticFile('video-1/section4-2.mp4'), delay: 70},
+              {image: staticFile('video-1/section4-3.mp4'), delay: 136, offset: -320},
             ]}
           />
         </Series.Sequence>
@@ -259,67 +259,67 @@ export const LessonVideo: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({c
           <ImageSteps
             allDuration={188}
             images={[
-              {image: staticFile('section5.jpg'), delay: 0},
-              {image: staticFile('section5-2.jpg'), delay: 70},
+              {image: staticFile('video-1/section5.jpg'), delay: 0},
+              {image: staticFile('video-1/section5-2.jpg'), delay: 70},
             ]}
           />
         </Series.Sequence>
         <Series.Sequence durationInFrames={274}>
-          <FullScreenImage src={staticFile('section6.gif')} />
+          <FullScreenImage src={staticFile('video-1/section6.gif')} />
         </Series.Sequence>
         <Series.Sequence durationInFrames={104}>
-          <FullScreenImage src={staticFile('section7.gif')} />
+          <FullScreenImage src={staticFile('video-1/section7.gif')} />
         </Series.Sequence>
         <Series.Sequence durationInFrames={98}>
-          <FullScreenImage src={staticFile('section8.gif')} />
+          <FullScreenImage src={staticFile('video-1/section8.gif')} />
         </Series.Sequence>
         <Series.Sequence durationInFrames={86}>
-          <FullScreenImage src={staticFile('section9.gif')} />
+          <FullScreenImage src={staticFile('video-1/section9.gif')} />
         </Series.Sequence>
         <Series.Sequence durationInFrames={148}>
           <ImageSteps
             allDuration={148}
             images={[
-              {image: staticFile('section10.mp4'), delay: 0},
-              {image: staticFile('section10-2.mp4'), delay: 65, offset: -100},
-              {image: staticFile('section10-3.mp4'), delay: 101, offset: -100},
+              {image: staticFile('video-1/section10.mp4'), delay: 0},
+              {image: staticFile('video-1/section10-2.mp4'), delay: 65, offset: -100},
+              {image: staticFile('video-1/section10-3.mp4'), delay: 101, offset: -100},
             ]}
           />
         </Series.Sequence>
         <Series.Sequence durationInFrames={110}>
-          <FullScreenImage src={staticFile('section11.gif')} />
+          <FullScreenImage src={staticFile('video-1/section11.gif')} />
         </Series.Sequence>
         <Series.Sequence durationInFrames={178}>
           <ImageSteps
             allDuration={178}
             images={[
-              {image: staticFile('section12.mp4'), delay: 0, offset: -250},
-              {image: staticFile('section12-2.mp4'), delay: 65, offset: -100},
-              {image: staticFile('section12-3.mp4'), delay: 92, offset: -240},
-              {image: staticFile('section12-4.mp4'), delay: 118},
+              {image: staticFile('video-1/section12.mp4'), delay: 0, offset: -250},
+              {image: staticFile('video-1/section12-2.mp4'), delay: 65, offset: -100},
+              {image: staticFile('video-1/section12-3.mp4'), delay: 92, offset: -240},
+              {image: staticFile('video-1/section12-4.mp4'), delay: 118},
             ]}
           />
         </Series.Sequence>
         <Series.Sequence durationInFrames={88}>
-          <FullScreenImage src={staticFile('section6.gif')} />
+          <FullScreenImage src={staticFile('video-1/section6.gif')} />
         </Series.Sequence>
         <Series.Sequence durationInFrames={65}>
-          <FullScreenImage src={staticFile('section14.gif')} />
+          <FullScreenImage src={staticFile('video-1/section14.gif')} />
         </Series.Sequence>
         <Series.Sequence durationInFrames={74}>
-          <FullScreenImage src={staticFile('section15.gif')} />
+          <FullScreenImage src={staticFile('video-1/section15.gif')} />
         </Series.Sequence>
         <Series.Sequence durationInFrames={96}>
-          <FullScreenImage src={staticFile('section16.gif')} />
+          <FullScreenImage src={staticFile('video-1/section16.gif')} />
         </Series.Sequence>
         <Series.Sequence durationInFrames={194}>
           <ImageSteps
             allDuration={200}
             images={[
-              {image: staticFile('section17.mp4'), delay: 0, offset: -160},
-              {image: staticFile('section17-2.mp4'), delay: 54, offset: -20},
-              {image: staticFile('section17-3.mp4'), delay: 98, offset: -420},
-              {image: staticFile('section17-4.mp4'), delay: 138, offset: -200},
+              {image: staticFile('video-1/section17.mp4'), delay: 0, offset: -160},
+              {image: staticFile('video-1/section17-2.mp4'), delay: 54, offset: -20},
+              {image: staticFile('video-1/section17-3.mp4'), delay: 98, offset: -420},
+              {image: staticFile('video-1/section17-4.mp4'), delay: 138, offset: -200},
             ]}
           />
         </Series.Sequence>
@@ -328,7 +328,7 @@ export const LessonVideo: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({c
         <Captions captions={captions} />
       </Sequence>
       <Sequence from={titleDuration}>
-        <Audio src={staticFile('section1.wav')} />
+        <Audio src={staticFile('video-1/speech.wav')} />
       </Sequence>
     </AbsoluteFill>
   );
