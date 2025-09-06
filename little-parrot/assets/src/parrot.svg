@@ -3,13 +3,13 @@
 
 <svg
    width="1080"
-   height="852.77399"
-   viewBox="0 0 1080 852.77399"
+   height="867.47699"
+   viewBox="0 0 1080 867.47699"
    version="1.1"
    id="svg1"
    inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
    sodipodi:docname="parrot.svg"
-   inkscape:export-filename="../../content/video/public/parrot.png"
+   inkscape:export-filename="../../content/video/public/logo.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -27,16 +27,17 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="0.39702767"
-     inkscape:cx="202.75665"
-     inkscape:cy="198.97857"
+     inkscape:zoom="0.46985129"
+     inkscape:cx="579.97074"
+     inkscape:cy="97.903317"
      inkscape:window-width="1728"
      inkscape:window-height="1057"
-     inkscape:window-x="2560"
-     inkscape:window-y="355"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1"
-     showguides="true" />
+     showguides="true"
+     showgrid="false" />
   <defs
      id="defs1">
     <linearGradient
@@ -48,7 +49,7 @@
        x2="828.27228"
        y2="558.86871"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(8.3466433,0,0,8.3466433,-6497.3232,-4523.8064)" />
+       gradientTransform="matrix(-7.5076549,0.84211843,0.84211843,7.5076549,6208.6438,-3424.455)" />
     <linearGradient
        id="linearGradient6"
        inkscape:collect="always">
@@ -90,22 +91,30 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <path
-       style="display:inline;fill:url(#linearGradient3);stroke:#230156;stroke-width:24.0991;stroke-dasharray:none;stroke-opacity:1"
-       d="m 324.16527,284.67445 -76.8215,-23.52568 64.53415,-64.53408 c -10.77306,-48.48262 35.4522,-95.35614 80.79306,-92.35123 29.57819,1.96026 58.78002,25.14692 71.53628,82.96034 12.31142,55.7973 12.52421,202.33164 98.35375,264.05031 93.73698,67.40491 203.82582,146.94066 267.77614,150.34149 -65.85945,77.13026 -157.55009,115.96068 -272.96238,135.17643 -63.16077,10.51606 -133.87701,25.38323 -180.51324,-12.87971 -37.1238,-30.45842 -38.126,-138.92239 -38.126,-138.92239 z"
-       id="path2-5-52-8"
-       sodipodi:nodetypes="cccssscsacc" />
-    <path
-       style="display:inline;fill:none;stroke:#230156;stroke-width:24.0991;stroke-dasharray:none;stroke-opacity:1"
-       d="m 247.71895,261.26003 136.46018,41.02175 z"
-       id="path15-7-27-4"
-       sodipodi:nodetypes="ccc" />
-    <ellipse
-       style="display:inline;fill:#230156;fill-opacity:1;stroke:#230156;stroke-width:22.0838;stroke-dasharray:none;stroke-opacity:1"
-       id="path18-0-5-0"
-       cx="365.82996"
-       cy="180.34073"
-       rx="7.6470289"
-       ry="6.3725247" />
+    <g
+       id="g8"
+       transform="translate(164.56473,-1299.4863)"
+       inkscape:label="Logo">
+      <path
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:65.439;stroke-dasharray:none;stroke-opacity:1"
+         d="m 557.65863,1590.2545 67.04804,-30.2387 -64.55834,-51.5362 c -0.9878,-46.3495 -23.83319,-82.7656 -81.9895,-73.0993 -22.6637,3.767 -53.52215,28.8573 -55.97545,80.0214 -2.47702,51.6588 9.14854,183.2573 -61.82659,247.4317 -77.51405,70.0869 -168.51235,152.735 -225.69138,162.2462 103.6995,97.0638 332.79741,137.5897 424.57451,80.5915 77.74019,-48.2806 26.85962,-298.4397 -1.58129,-415.4166 -18.38076,7.6944 -37.55821,15.8563 -57.26025,16.1508 19.70343,-0.2994 38.87374,-8.4462 57.26025,-16.1508 z"
+         id="path1"
+         sodipodi:nodetypes="cccssscsccc"
+         inkscape:label="ParrotOutline" />
+      <path
+         style="display:inline;fill:url(#linearGradient3);stroke:#230156;stroke-width:21.8126;stroke-dasharray:none;stroke-opacity:1"
+         d="m 557.65863,1590.2545 67.04804,-30.2387 -64.55834,-51.5362 c -0.9878,-46.3495 -23.83319,-82.7656 -81.9895,-73.0993 -22.6637,3.767 -53.52215,28.8573 -55.97545,80.0214 -2.47702,51.6588 9.14854,183.2573 -61.82659,247.4317 -77.51405,70.0869 -168.51235,152.735 -225.69138,162.2462 103.6995,97.0638 332.79741,137.5897 424.57451,80.5915 77.74019,-48.2806 26.85962,-298.4397 -1.58129,-415.4166 -18.38076,7.6944 -37.55821,15.8563 -57.26025,16.1508 19.70343,-0.2994 38.87374,-8.4462 57.26025,-16.1508 z"
+         id="path2-5-52-8"
+         sodipodi:nodetypes="cccssscsccc"
+         inkscape:label="ParrotBody" />
+      <circle
+         style="display:inline;fill:#230156;fill-opacity:1;stroke:none;stroke-width:19.9886;stroke-dasharray:none;stroke-opacity:1"
+         id="path18-0-5-0"
+         cx="-338.64096"
+         cy="1546.241"
+         r="17.412582"
+         inkscape:label="ParrotEyes"
+         transform="matrix(-0.99376792,0.11146893,0.11146893,0.99376792,0,0)" />
+    </g>
   </g>
 </svg>

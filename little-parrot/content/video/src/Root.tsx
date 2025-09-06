@@ -24,7 +24,7 @@ export const RemotionRoot: React.FC = () => {
         calculateMetadata={async ({props}) => {
           const titleDuration = 60
           const endDuration = 0
-          const response = await fetch(staticFile('text.json'))
+          const response = await fetch(staticFile('video-1/text.json'))
           const captions = await response.json()
           const duration = Math.ceil(captions.at(-1).end * FRAME_RATE) + titleDuration + endDuration
 
@@ -111,12 +111,12 @@ export const RemotionRoot: React.FC = () => {
         schema={LessonVideoPropsSchema}
         defaultProps={{
           captions: [],
-          titleDuration: 0,
+          titleDuration: 60,
           endDuration: 30,
           allDuration: 100,
         }}
         calculateMetadata={async ({props}) => {
-          const titleDuration = 0
+          const titleDuration = 60
           const endDuration = 0
           const response = await fetch(staticFile('video-4/text.json'))
           const captions = await response.json()

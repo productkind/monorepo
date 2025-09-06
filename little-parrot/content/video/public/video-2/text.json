@@ -2,156 +2,156 @@
   {
     "text": "Set",
     "start": 0.046,
-    "end": 0.232
+    "end": 0.29
   },
   {
     "text": "the",
-    "start": 0.267,
-    "end": 0.337
+    "start": 0.348,
+    "end": 0.418
   },
   {
     "text": "tone",
-    "start": 0.395,
-    "end": 0.662
+    "start": 0.476,
+    "end": 0.766
   },
   {
     "text": "and",
-    "start": 0.685,
-    "end": 0.755
+    "start": 0.801,
+    "end": 0.871
   },
   {
     "text": "style",
-    "start": 0.801,
-    "end": 1.161
+    "start": 0.929,
+    "end": 1.335
   },
   {
     "text": "how",
-    "start": 1.196,
-    "end": 1.3
+    "start": 1.382,
+    "end": 1.533
   },
   {
     "text": "the",
-    "start": 1.358,
-    "end": 1.428
+    "start": 1.591,
+    "end": 1.672
   },
   {
     "text": "AI",
-    "start": 1.498,
-    "end": 1.8
+    "start": 1.753,
+    "end": 2.078
   },
   {
     "text": "is",
-    "start": 1.869,
-    "end": 1.95
+    "start": 2.148,
+    "end": 2.229
   },
   {
     "text": "expected",
-    "start": 2.009,
-    "end": 2.426
+    "start": 2.287,
+    "end": 2.74
   },
   {
     "text": "to",
-    "start": 2.461,
-    "end": 2.519
+    "start": 2.775,
+    "end": 2.833
   },
   {
     "text": "phrase",
-    "start": 2.589,
-    "end": 2.926
+    "start": 2.891,
+    "end": 3.228
   },
   {
     "text": "its",
-    "start": 2.972,
-    "end": 3.088
+    "start": 3.262,
+    "end": 3.39
   },
   {
     "text": "replies.",
-    "start": 3.146,
-    "end": 3.796
+    "start": 3.437,
+    "end": 4.191
   },
   {
     "text": "Especially",
-    "start": 4.4,
-    "end": 4.888
+    "start": 4.516,
+    "end": 5.143
   },
   {
     "text": "useful",
-    "start": 4.946,
-    "end": 5.201
+    "start": 5.213,
+    "end": 5.561
   },
   {
     "text": "when",
-    "start": 5.236,
-    "end": 5.352
+    "start": 5.608,
+    "end": 5.735
   },
   {
     "text": "crafting",
-    "start": 5.399,
-    "end": 5.759
+    "start": 5.793,
+    "end": 6.2
   },
   {
     "text": "messages",
-    "start": 5.805,
-    "end": 6.235
+    "start": 6.258,
+    "end": 6.722
   },
   {
     "text": "that",
-    "start": 6.269,
-    "end": 6.385
+    "start": 6.78,
+    "end": 6.896
   },
   {
     "text": "need",
-    "start": 6.432,
-    "end": 6.583
+    "start": 6.943,
+    "end": 7.105
   },
   {
     "text": "to",
-    "start": 6.606,
-    "end": 6.664
-  },
-  {
-    "text": "reflect",
-    "start": 6.734,
-    "end": 7.036
-  },
-  {
-    "text": "your",
-    "start": 7.07,
+    "start": 7.129,
     "end": 7.175
   },
   {
+    "text": "reflect",
+    "start": 7.233,
+    "end": 7.616
+  },
+  {
+    "text": "your",
+    "start": 7.663,
+    "end": 7.79
+  },
+  {
     "text": "authentic",
-    "start": 7.21,
-    "end": 7.581
+    "start": 7.825,
+    "end": 8.313
   },
   {
     "text": "voice,",
-    "start": 7.639,
-    "end": 8.127
+    "start": 8.382,
+    "end": 8.87
   },
   {
     "text": "rather",
-    "start": 8.638,
-    "end": 8.882
+    "start": 9.195,
+    "end": 9.462
   },
   {
     "text": "than",
-    "start": 8.928,
-    "end": 9.044
+    "start": 9.497,
+    "end": 9.636
   },
   {
     "text": "generic",
-    "start": 9.102,
-    "end": 9.555
+    "start": 9.706,
+    "end": 10.194
   },
   {
     "text": "AI-generated",
-    "start": 9.671,
-    "end": 10.658
+    "start": 10.263,
+    "end": 11.169
   },
   {
     "text": "hyperbole.",
-    "start": 10.704,
-    "end": 11.366
+    "start": 11.215,
+    "end": 11.935
   }
 ]

@@ -97,6 +97,11 @@ const SARAH = 'EXAVITQu4vr4xnSDxMaL'; // Sarah
 const ELIZABETH = 'AXdMgz6evoL7OPd7eU12'; // Elizabeth
 const BETH = '8N2ng9i2uiUWqstgmWlH'; // Beth
 const VOICE_ID = ELIZABETH; // Change to the desired voice ID
+const video1 = `
+In simple terms, Artificial Intelligence is the capability of a machine to perform tasks that would normally require human intelligence. This includes things like learning from data, understanding language, recognising patterns, and making decisions. Many problems are too complex for traditional, rule-based programming. AI gives us new ways to tackle these challenges: it can help us automate repetitive tasks, personalise user experiences, and make better predictions. Today, when we use tools like ChatGPT or Gemini, we often call them Artificial Intelligence. Technically, they’re a specific kind of AI known as Large Language Models, or LLMs. So, what exactly is an LLM? To answer that, let’s start with the basics: an AI model. An AI model is simply a program that’s trained on data to do a particular job, for example, classifying images, spotting trends, or generating text. A model always takes an input and produces an output. The input and output can be text, images, audio, or other forms of data. A Large Language Model is a type of AI model that’s specialised in human language. It’s trained on vast amounts of text to learn the structure and patterns of how we write and speak. This allows it to generate text, summarise information, answer questions, and even help you brainstorm ideas.
+`
+
+
 const video2 = `
 Set the tone and style how the AI is expected to phrase its replies.
 Especially useful when crafting messages that need to reflect your authentic voice, rather than generic AI-generated hyperbole.
@@ -130,14 +135,14 @@ The model pays most attention to the most recent few thousand tokens, roughly fi
 This is why, in long conversations, it can seem like the AI forgets earlier details.
 `
 
-const TEXT_TO_GENERATE = video4
+const TEXT_TO_GENERATE = video2
 const MODEL_ID = 'eleven_multilingual_v2'; //'eleven_v3_turbo'; // The v3 model as requested
-const OUTPUT_FILE_NAME = 'generated_speech-video4-elizabeth.wav';
+const OUTPUT_FILE_NAME = 'generated_speech-video2-elizabeth.wav';
 const OUTPUT_FILE_PATH = OUTPUT_FILE_NAME // Saves in the same directory as the script
 
 
 // Call the function to generate speech and handle the returned alignment data
-generateSpeech(TEXT_TO_GENERATE, VOICE_ID, MODEL_ID, ELEVENLABS_API_KEY, OUTPUT_FILE_PATH, 'alignment-video4-elizabeth.json')
+generateSpeech(TEXT_TO_GENERATE, VOICE_ID, MODEL_ID, ELEVENLABS_API_KEY, OUTPUT_FILE_PATH, 'alignment-video2-elizabeth.json')
     .then(alignment => {
         if (alignment) {
             console.log('Successfully retrieved speech and timestamp data.');
