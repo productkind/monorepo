@@ -178,6 +178,7 @@ export const LessonVideo3: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({
       <Sequence from={titleDuration}>
         <Audio src={staticFile('video-3/speech.wav')} />
         <Audio src={staticFile('soundtrack.wav')} volume={0.1} />
+        <RemotionRiveCanvas src={staticFile('video-3/reel_parrot.riv')} />
       </Sequence>
     </AbsoluteFill>
   )
