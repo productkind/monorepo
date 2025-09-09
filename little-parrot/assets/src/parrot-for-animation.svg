@@ -27,15 +27,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="0.46427992"
-     inkscape:cx="580.46879"
-     inkscape:cy="96.924287"
+     inkscape:zoom="0.18525597"
+     inkscape:cx="2445.2653"
+     inkscape:cy="-437.23288"
      inkscape:window-width="1728"
      inkscape:window-height="1057"
      inkscape:window-x="0"
      inkscape:window-y="32"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g2-5"
+     inkscape:current-layer="g3-9"
      showguides="true"
      showgrid="false" />
   <defs
@@ -119,7 +119,7 @@
            inkscape:label="LaptopBase" />
         <path
            style="display:inline;fill:#230156;fill-opacity:1;stroke:#230156;stroke-width:14.1545;stroke-dasharray:none;stroke-opacity:1"
-           d="M -836.53258,405.52587 -572.99174,281.59945 -1303.6638,30.192125 Z"
+           d="M -836.53258,405.52587 -565.49401,287.69136 -1303.6638,30.192125 Z"
            id="path17-3-4-2-3-5"
            sodipodi:nodetypes="cccc"
            inkscape:label="LaptopKeyboard" />
@@ -159,15 +159,15 @@
            inkscape:label="LittleParrotText"><tspan
              x="17.849133"
              y="118.99422"
-             id="tspan2"><tspan
+             id="tspan6"><tspan
                style="font-weight:bold;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold'"
-               id="tspan1">Little
+               id="tspan5">Little
 </tspan></tspan><tspan
              x="17.849133"
              y="149.94428"
-             id="tspan4"><tspan
+             id="tspan8"><tspan
                style="font-weight:bold;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold'"
-               id="tspan3">Parrot</tspan></tspan></text>
+               id="tspan7">Parrot</tspan></tspan></text>
         <ellipse
            style="display:inline;fill:#230156;fill-opacity:1;stroke:none;stroke-width:6"
            id="path1-4"
