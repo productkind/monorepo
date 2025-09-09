@@ -464,30 +464,35 @@
          id="tspan2">I am just too tired </tspan><tspan
          x="-12.420934"
          y="180.30944"
-         id="tspan3">to give feedback...</tspan></text>
+         id="tspan3">to give him feedback...</tspan></text>
     <path
        style="fill:none;fill-opacity:1;stroke:#370188;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-       d="M 91.846305,122.19449 C 91.403145,112.8762 67.076438,73.149289 66.748798,66.309029"
+       d="M 91.846305,121.60711 C 91.403145,112.28882 67.076438,72.561912 66.748798,65.721652"
        id="path13-1-9-2-1-7-8"
        sodipodi:nodetypes="cc" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.05px;font-family:'Nanum Pen';-inkscape-font-specification:'Nanum Pen';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:end;white-space:pre;inline-size:148.152;display:inline;fill:#370188;fill-opacity:1;stroke:none;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.05px;font-family:'Nanum Pen';-inkscape-font-specification:'Nanum Pen';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:end;white-space:pre;inline-size:156.963;display:inline;fill:#370188;fill-opacity:1;stroke:none;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
        x="123.73898"
        y="156.49693"
        id="text17-6-5-0-9"
-       transform="translate(150.05405,-55.924548)"><tspan
+       transform="translate(151.81619,-71.196362)"><tspan
          x="123.73898"
          y="156.49693"
-         id="tspan4">It doesn’t need to be<tspan
+         id="tspan4">It doesn’t have to be<tspan
    y="156.49693"
    id="tspan5"> </tspan></tspan><tspan
          x="123.73898"
          y="180.30944"
-         id="tspan6">today. Fancy a rant?</tspan></text>
+         id="tspan6">today. I am here if you<tspan
+   y="180.30944"
+   id="tspan7"> </tspan></tspan><tspan
+         x="123.73898"
+         y="204.12194"
+         id="tspan8">just want to rant.</tspan></text>
     <path
        style="fill:none;fill-opacity:1;stroke:#370188;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-       d="m 205.4464,155.12837 c -0.29709,-5.37427 9.364,-14.82686 9.03636,-19.47599"
+       d="m 205.44639,157.47787 c -0.29709,-5.37427 9.364,-14.82686 9.03636,-19.47599"
        id="path13-1-9-2-1-7-8-0"
        sodipodi:nodetypes="cc" />
   </g>
