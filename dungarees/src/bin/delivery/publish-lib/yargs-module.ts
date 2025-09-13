@@ -1,4 +1,4 @@
-import { type SkidBinInternalServices } from '../internal-services/type.ts'
+import { type DungareesBinInternalServices } from '../internal-services/type.ts'
 
 import { type CommandModule } from '@dungarees/cli/type.ts'
 
@@ -11,6 +11,7 @@ export const publishLibYargsModule = (_: DungareesBinInternalServices): CommandM
         .positional('lib-path', {
           type: 'string',
         })
+        .option('registry', { type: 'string' })
         .default('lib-path', '.'),
     handler: async (args) => {
       console.log(args)

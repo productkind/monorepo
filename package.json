@@ -8,7 +8,7 @@
     "test": "vitest",
     "build": "zx ./productkind/scripts/build.ts && zx ./seminars/scripts/build.ts && zx ./kim-and-tim/scripts/build.ts",
     "init": "zx ./productkind/scripts/init.ts",
-    "publish:dungarees": "dungarees publish ./dungarees/src"
+    "publish:dungarees": "dungarees publish-lib ./dungarees/src"
   },
   "repository": {
     "type": "git",

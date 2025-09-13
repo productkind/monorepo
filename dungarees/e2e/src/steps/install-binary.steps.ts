@@ -2,22 +2,22 @@ import type { CommandResult, ExecContext } from '@dungarees/test-environment/int
 import { Given, Then, When } from '../support/test-environment.ts'
 
 
-Given('the Skid Binary is published', async function (world) {
+Given('the Dungarees Binary is published', async function (world) {
   const npmPublisher = world.get('dungareesNpmPublisher')
-  await publishSkidBinary(npmPublisher.execWithAssertions)
+  await publishDungareesBinary(npmPublisher.execWithAssertions)
 })
 
-When('the user installs the Skid Binary', async function (world) {
+When('the user installs the Dungarees Binary', async function (world) {
   const nodeCommandLine = world.get('nodeCommandLine')
   console.log(await nodeCommandLine.execWithAssertions('npm install -g @dungarees/core --registry http://npmregistry:4873'))
 })
 
-Then('the user should be able to run skid', async function (world) {
+Then('the user should be able to run dungarees', async function (world) {
   const nodeCommandLine = world.get('nodeCommandLine')
   console.log(await nodeCommandLine.execWithAssertions('dungarees --help'))
 })
 
-const publishSkidBinary = async (npmPublisherExec: (command: string, context?: Partial<ExecContext>) => Promise<CommandResult>) => {
+const publishDungareesBinary = async (npmPublisherExec: (command: string, context?: Partial<ExecContext>) => Promise<CommandResult>) => {
   await authenticateNpmRegistry(npmPublisherExec)
   await npmPublisherExec('npm install', { workingDir: '/opt/app/' })
   await npmPublisherExec('npm run publish:dungarees -- --registry http://npmregistry:4873', { workingDir: '/opt/app/' })

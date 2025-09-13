@@ -1,6 +1,6 @@
 import { getExternalServices } from './external-services/get.ts'
 
-import { createApplication } from '@skid-lib/core/application.ts'
+import { createApplication } from '@dungarees/core/application.ts'
 
 import { baseApplication } from '../delivery/app/app.ts'
 

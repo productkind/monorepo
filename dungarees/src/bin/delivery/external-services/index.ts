@@ -1,1 +1,1 @@
-export type SkidBinExternalServices = {}
+export type DungareesBinExternalServices = {}
