@@ -1,8 +1,8 @@
 import { type Observable } from 'rxjs'
-import { map, mergeMap, catchError } from 'rxjs/operators'
+import { map, catchError } from 'rxjs/operators'
 import { stdout, stderr } from '@dungarees/cli/utils.ts'
 import type {StdioMessage} from '@dungarees/cli/type.ts'
-import {catchValueAndRethrow, assertMap, GetTransformSet} from '@dungarees/rxjs/util'
+import {catchValueAndRethrow, assertMap, GetTransformSetContext} from '@dungarees/rxjs/util'
 
 export const createOutDir = (
   createOutDir$: Observable<void>,
@@ -17,7 +17,7 @@ export const createOutDir = (
   )
 
 export const readPackageJson = (
-  fileTransform: GetTransformSet<string, string>,
+  fileTransform: GetTransformSetContext<string, string, string>,
   destinationPath: string,
   version?: string
 ): Observable<StdioMessage> =>
@@ -31,14 +31,12 @@ export const readPackageJson = (
       ...packageJsonContent,
       version: version || packageJsonContent.version,
     })),
-  //  mergeMap((packageJson) => {
-  //    return writeFile$(JSON.stringify(packageJson, null, 2)).pipe(
-  //      map(() => stdout(`Package.json written to ${destinationPath} with version: ${packageJson.version}`)),
-  //      catchError((error) => [stderr(`Error writing package.json: ${error.message}`)]),
-  //    )
-  //  }),
+    map((packageJson) => ({
+      set: JSON.stringify(packageJson, null, 2),
+      context: packageJson.version,
+    })),
   ).pipe(
-    map(() => stdout(`Package.json written to ${destinationPath} with version: ${packageJson.version}`)),
-    catchError((error) => [stderr(`Error writing package.json: ${error.message}`)]),
+    map(({context: version}) => stdout(`Package.json written to ${destinationPath} with version: ${version}`)),
+  //  catchError((error) => [stderr(`Error writing package.json: ${error.message}`)]),
   )
 

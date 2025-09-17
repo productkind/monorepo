@@ -68,7 +68,7 @@ test('fileOperations should handle write errors', async () => {
       input: '/test.txt',
       output: '/nonexistent/output.txt',
     }
-  ) 
+  )
   await expect(lastValueFrom(transformer(
     map(content => content),
   ))).rejects.toThrow('Could not write output: /nonexistent/output.txt')
@@ -92,3 +92,43 @@ test('fileOperations should handle write errors with custom message', async () =
   ))).rejects.toThrow('Cannot write to /nonexistent/output.txt')
   expect(() => fakeFileSystem.readFileSync('/nonexistent/output.txt', 'utf-8')).toThrow()
 })
+
+test('fileOperations should handle empty input files', async () => {
+  const fakeFileSystem = createFakeFileSystem({
+    '/empty.txt': '',
+  })
+  const fileOperations = createFileOperations(fakeFileSystem)
+  const transformer = fileOperations.transformFile(
+    {
+      input: '/empty.txt',
+      output: '/output.txt',
+    }
+  )
+  await lastValueFrom(transformer(
+    map(content => content + ' processed'),
+  ))
+  expect(fakeFileSystem.readFileSync('/output.txt', 'utf-8')).toBe(' processed')
+})
+
+test('fileOperations should save transform context', async () => {
+  const fakeFileSystem = createFakeFileSystem({
+    '/test.txt': 'test',
+  })
+  const fileOperations = createFileOperations(fakeFileSystem)
+  const transformer = fileOperations.transformFileContext<number>(
+    {
+      input: '/test.txt',
+      output: '/output.txt',
+    }
+  )
+  const transform = await lastValueFrom(transformer(
+    map(content => content.length),
+    map(length => length * 2),
+    map(content => String(content)),
+    map(set => ({ set, context: 1 }))
+  ))
+  expect(fakeFileSystem.readFileSync('/output.txt', 'utf-8')).toBe('8')
+  expect(transform.context).toBe(1)
+})
+
+

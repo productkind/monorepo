@@ -7,6 +7,7 @@ import {
   catchValueAndRethrow,
   tryPipe,
   createGetTransformSet,
+  createGetTransformSetContext,
 } from './util.ts'
 
 import { lastValueFrom, type Observable, of, catchError, map, Subject } from 'rxjs'
@@ -128,10 +129,8 @@ mtest('getTransformSet', ({ expect, coldStepAndClose }) => {
 })
 
 mtest('getTransformSet multiple operators', ({ expect, coldStepAndClose }) => {
-  const setterArgument$ = new Subject<number>();
   const getter = () => coldStepAndClose(1);
-  const setter = (value: number) => {
-    setterArgument$.next(value);
+  const setter = (_: number) => {
     return coldStepAndClose(undefined, 1);
   };
   const getTransformSet = createGetTransformSet(getter, setter);
@@ -139,7 +138,21 @@ mtest('getTransformSet multiple operators', ({ expect, coldStepAndClose }) => {
     map((x) => x + 1),
     map((x) => x * 2)
   );
-  expect(result$).toBeObservableStepAndClose(undefined, 2);
-  expect(setterArgument$).toBeObservableStep(4)
+  expect(result$).toBeObservableStepAndClose({ get: 1, set: 4 }, 2);
 })
+
+mtest('getTransformSetContext providing context', ({ expect, coldStepAndClose }) => {
+  const getter = () => coldStepAndClose(1);
+  const setter = (_: number) => {
+    return coldStepAndClose(undefined, 1);
+  };
+  const getTransformSet = createGetTransformSetContext<string, number, number>(getter, setter);
+  const result$ = getTransformSet(
+    map((x) => x + 1),
+    map((x) => x * 2),
+    map((x) => ({ set: x, context: 'hello' })),
+  );
+  expect(result$).toBeObservableStepAndClose({ get: 1, set: 4, context: 'hello' }, 2);
+})
+
 

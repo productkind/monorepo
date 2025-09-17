@@ -96,8 +96,8 @@ export const assertMap =
     }))
 
 export type GetTransformSet<GET, SET> = {
-  (op1: OperatorFunction<GET, SET>): Observable<void>
-  <A>(op1: OperatorFunction<GET, A>, op2: OperatorFunction<A, SET>): Observable<void>
+  (op1: OperatorFunction<GET, SET>): Observable<{ get: GET, set: SET }>
+  <A>(op1: OperatorFunction<GET, A>, op2: OperatorFunction<A, SET>): Observable<{ get: GET, set: SET }>
   <A, B>(
     op1: OperatorFunction<GET, A>,
     op2: OperatorFunction<A, B>,
@@ -146,10 +146,80 @@ export const createGetTransformSet = <GET, SET>(
       mergeMap(getValue =>
         of(getValue).pipe(
           ...operators as [OperatorFunction<GET, SET>],
-          mergeMap(setter),
-          map(() => ({ get: getValue }))
+          mergeMap((setValue) =>
+            setter(setValue).pipe(
+              map(() => ({ get: getValue, set: setValue }))
+            )
+          ),
         )
       )
     )
   ) as GetTransformSet<GET, SET>
+
+export type GetTransformSetContext<CONTEXT, GET, SET> = {
+  (op1: OperatorFunction<GET, { set: SET, context: CONTEXT }>):
+    Observable<{ get: GET, set: SET, context: CONTEXT }>
+  <A>(op1: OperatorFunction<GET, A>, op2: OperatorFunction<A, { set: SET, context: CONTEXT }>):
+    Observable<{ get: GET, set: SET, context: CONTEXT }>
+  <A, B>(
+    op1: OperatorFunction<GET, A>,
+    op2: OperatorFunction<A, B>,
+    op3: OperatorFunction<B, { set: SET, context: CONTEXT }>
+  ): Observable<{ get: GET, set: SET, context: CONTEXT }>
+  <A, B, C>(
+    op1: OperatorFunction<GET, A>,
+    op2: OperatorFunction<A, B>,
+    op3: OperatorFunction<B, C>,
+    op4: OperatorFunction<C, { set: SET, context: CONTEXT }>
+  ): Observable<{ get: GET, set: SET, context: CONTEXT }>
+  <A, B, C, D>(
+    op1: OperatorFunction<GET, A>,
+    op2: OperatorFunction<A, B>,
+    op3: OperatorFunction<B, C>,
+    op4: OperatorFunction<C, D>,
+    op5: OperatorFunction<D, { set: SET, context: CONTEXT }>
+  ): Observable<{ get: GET, set: SET, context: CONTEXT }>
+  <A, B, C, D, E>(
+    op1: OperatorFunction<GET, A>,
+    op2: OperatorFunction<A, B>,
+    op3: OperatorFunction<B, C>,
+    op4: OperatorFunction<C, D>,
+    op5: OperatorFunction<D, E>,
+    op6: OperatorFunction<E, { set: SET, context: CONTEXT }>
+  ): Observable<{ get: GET, set: SET, context: CONTEXT }>
+  <A, B, C, D, E, F>(
+    ...operators: [
+      OperatorFunction<GET, A>,
+      OperatorFunction<A, B>,
+      OperatorFunction<B, C>,
+      OperatorFunction<C, D>,
+      OperatorFunction<D, E>,
+      OperatorFunction<E, F>,
+      ...[
+        OperatorFunction<F, any>,
+        ...OperatorFunction<any, any>[],
+        OperatorFunction<any, { set: SET, context: CONTEXT }>
+      ]
+    ]
+  ): Observable<{ get: GET, set: SET, context: CONTEXT }>
+}
+
+export const createGetTransformSetContext = <CONTEXT, GET, SET>(
+  getter: () => Observable<GET>,
+  setter: (value: SET) => Observable<void>
+): GetTransformSetContext<CONTEXT, GET, SET> =>
+  ((...operators: OperatorFunction<any, any>[]): Observable<{ get: GET, set: SET, context: CONTEXT }> =>
+    getter().pipe(
+      mergeMap(getValue =>
+        of(getValue).pipe(
+          ...operators as [OperatorFunction<GET, { set: SET, context: CONTEXT }>],
+          mergeMap(({ set: setValue, context }) =>
+            setter(setValue).pipe(
+              map(() => ({ get: getValue, set: setValue, context }))
+            )
+          ),
+        )
+      )
+    )
+  ) as GetTransformSetContext<CONTEXT, GET, SET>
 

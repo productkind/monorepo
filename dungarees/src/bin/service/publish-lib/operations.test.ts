@@ -1,7 +1,7 @@
 import { mtest } from '@dungarees/core/marbles-vitest.ts'
 import { stdout, stderr } from '@dungarees/cli/utils.ts'
 import { createOutDir, readPackageJson } from './operations.ts'
-import { createGetTransformSet } from '@dungarees/rxjs/util.ts'
+import { createGetTransformSetContext } from '@dungarees/rxjs/util.ts'
 
 mtest('create output directory', ({expect, coldStepAndClose}) => {
   const createOutDir$ = createOutDir(coldStepAndClose(undefined), '/out')
@@ -22,7 +22,7 @@ mtest('readPackageJson with version from file', ({expect, coldStepAndClose}) => 
   const readFile = () => coldStepAndClose(packageJsonContent)
   const writeFile = () => coldStepAndClose(undefined)
 
-  const transformer = createGetTransformSet(
+  const transformer = createGetTransformSetContext<string, string, string>(
     readFile,
     writeFile,
   )
@@ -39,7 +39,7 @@ mtest('readPackageJson with version override', ({expect, coldStepAndClose}) => {
   const readFile = () => coldStepAndClose(packageJsonContent)
   const writeFile = () => coldStepAndClose(undefined)
 
-  const transformer = createGetTransformSet(
+  const transformer = createGetTransformSetContext<string, string, string>(
     readFile,
     writeFile,
   )
@@ -56,7 +56,7 @@ mtest('readPackageJson without version in file or parameter', ({expect, coldStep
   const readFile = () => coldStepAndClose(packageJsonContent)
   const writeFile = () => coldStepAndClose(undefined)
 
-  const transformer = createGetTransformSet(
+  const transformer = createGetTransformSetContext<string, string, string>(
     readFile,
     writeFile,
   )
@@ -72,7 +72,7 @@ mtest('readPackageJson with write error', ({expect, coldStepAndClose, coldError}
   const readFile = () => coldStepAndClose(packageJsonContent)
   const writeFile = () => coldError(new Error('Write failed'))
 
-  const transformer = createGetTransformSet(
+  const transformer = createGetTransformSetContext<string, string, string>(
     readFile,
     writeFile,
   )
@@ -89,7 +89,7 @@ mtest('readPackageJson with invalid JSON', ({expect, coldStepAndClose}) => {
   const readFile = () => coldStepAndClose(invalidJson)
   const writeFile = () => coldStepAndClose(undefined)
 
-  const transformer = createGetTransformSet(
+  const transformer = createGetTransformSetContext<string, string, string>(
     readFile,
     writeFile,
   )

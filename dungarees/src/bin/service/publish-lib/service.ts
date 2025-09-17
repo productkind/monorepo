@@ -18,7 +18,7 @@ export const createPublishLibService = (fileSystem: FileSystem): PublishLib => {
 
       const fileOperations = createFileOperations(fileSystem)
 
-      const transformer = fileOperations.transformFile(
+      const transformer = fileOperations.transformFileContext<string>(
         {
           input: originalPackageJsonPath,
           output: destinationPackageJsonPath,

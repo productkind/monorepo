@@ -1,5 +1,11 @@
 import {FileSystem} from './service';
-import {catchAndRethrow, createGetTransformSet, type GetTransformSet} from '@dungarees/rxjs/util'
+import {
+  catchAndRethrow,
+  createGetTransformSet,
+  createGetTransformSetContext,
+  type GetTransformSetContext,
+  type GetTransformSet
+} from '@dungarees/rxjs/util'
 
 type Options = {
   input: string;
@@ -12,6 +18,9 @@ type FileOperations = {
   transformFile(
     options: Options,
   ): GetTransformSet<string, string>
+  transformFileContext<CONTEXT>(
+    options: Options,
+  ): GetTransformSetContext<CONTEXT, string, string>
 }
 
 export const createFileOperations = (fileSystem: FileSystem): FileOperations => {
@@ -25,7 +34,19 @@ export const createFileOperations = (fileSystem: FileSystem): FileOperations => 
       return createGetTransformSet(readFile, writeFile)
   }
 
+  const transformFileContext: FileOperations['transformFileContext'] = <CONTEXT>({ input, output, readError, writeError }: Options) => {
+      const readFile = () => fileSystem.readFile(input, 'utf-8').pipe(
+        catchAndRethrow((cause) => new Error(readError?.(input) ?? `Could not read input: ${input}`, { cause })),
+      )
+      const writeFile = (content: string) => fileSystem.writeFile(output, content).pipe(
+        catchAndRethrow((cause) => new Error(writeError?.(output) ?? `Could not write output: ${output}`, { cause })),
+      )
+      return createGetTransformSetContext<CONTEXT, string, string>(readFile, writeFile)
+  }
+
+
   return {
     transformFile,
+    transformFileContext,
   }
 }
