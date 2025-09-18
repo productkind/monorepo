@@ -23,6 +23,22 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y inkscape
 
+      - name: Install custom fonts
+        run: |
+          mkdir -p ~/.local/share/fonts
+          cd ~/.local/share/fonts
+          # Montserrat
+          curl -L -o Montserrat.zip https://github.com/google/fonts/raw/main/ofl/montserrat/Montserrat%5Bwght%5D.ttf
+          # Josefin Slab
+          curl -L -o JosefinSlab.zip https://github.com/google/fonts/raw/main/ofl/josefinslab/JosefinSlab%5Bwght%5D.ttf
+          # Nanum Pen Script
+          curl -L -o NanumPenScript.ttf https://github.com/google/fonts/raw/main/ofl/nanumpenscript/NanumPenScript-Regular.ttf
+          # VT323
+          curl -L -o VT323.ttf https://github.com/google/fonts/raw/main/ofl/vt323/VT323-Regular.ttf
+
+          # Refresh font cache
+          fc-cache -fv
+
       - name: Set up Node.js (example, adjust for your stack)
         uses: actions/setup-node@v4
         with:
@@ -54,6 +70,5 @@ jobs:
           name: Release ${{ steps.tag_version.outputs.new_tag }}
           files: |
             kim-and-tim/assets/dist/**/*.png
-            kim-and-tim/assets/dist/**/*.svg
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
