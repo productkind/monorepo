@@ -41,12 +41,17 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DEFAULT_BUMP: patch   # can be 'patch', 'minor', 'major'
 
+      - name: Debug artifact paths
+        run: |
+          echo "Listing build outputs..."
+          ls -R kim-and-tim/assets/dist || echo "No dist directory"
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.tag_version.outputs.new_tag }}
           name: Release ${{ steps.tag_version.outputs.new_tag }}
           files: |
-            monorepo/kim-and-tim/assets/dist/**   # upload built files
+            kim-and-tim/assets/dist/**   # upload built files
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
