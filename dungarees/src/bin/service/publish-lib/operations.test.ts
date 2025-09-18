@@ -62,8 +62,9 @@ mtest('readPackageJson without version in file or parameter', ({expect, coldStep
   )
 
   const readPackageJson$ = readPackageJson(transformer, '/out/package.json')
-  expect(readPackageJson$).toBeObservableError(
-    new Error('Version is required in package.json or as an argument')
+  expect(readPackageJson$).toBeObservableStepAndError(
+    stderr('File transform failed: Version is required in package.json or as an argument'),
+    new Error('File transform failed')
   )
 })
 
@@ -78,8 +79,9 @@ mtest('readPackageJson with write error', ({expect, coldStepAndClose, coldError}
   )
 
   const readPackageJson$ = readPackageJson(transformer, '/out/package.json')
-  expect(readPackageJson$).toBeObservableStepAndClose(
-    stderr('Error writing package.json: Write failed'),
+  expect(readPackageJson$).toBeObservableStepAndError(
+    stderr('File transform failed: Write failed'),
+    new Error('File transform failed'),
     2
   )
 })
@@ -95,7 +97,11 @@ mtest('readPackageJson with invalid JSON', ({expect, coldStepAndClose}) => {
   )
 
   const readPackageJson$ = readPackageJson(transformer, '/out/package.json')
-  expect(readPackageJson$).toBeObservableError(
-    new SyntaxError('Unexpected token \'i\', "invalid json content" is not valid JSON')
+  expect(readPackageJson$).toBeObservableStepAndError(
+    stderr('File transform failed: Invalid source package.json: Unexpected token \'i\', "invalid json content" is not valid JSON'),
+    new Error('File transform failed'),
   )
+//  expect(readPackageJson$).toBeObservableError(
+//    new SyntaxError('Unexpected token \'i\', "invalid json content" is not valid JSON')
+//  )
 })

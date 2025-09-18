@@ -61,6 +61,6 @@ test('build with no version in package.json', async () => {
   await expect(async () => await collectValuesFrom(service.build({
     srcDir: '/src',
     outDir: '/dist',
-  }).stdio$)).rejects.toThrow('Version is required in package.json or as an argument')
+  }).stdio$)).rejects.toThrow('File transform failed')
 })
 
