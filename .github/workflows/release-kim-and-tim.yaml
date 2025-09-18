@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'kim-and-tim/assets/**'   # only trigger if something changes inside /src
+      - 'kim-and-tim/assets/**'
 
 permissions:
   contents: write
@@ -27,16 +27,10 @@ jobs:
         run: |
           mkdir -p ~/.local/share/fonts
           cd ~/.local/share/fonts
-          # Montserrat
           curl -L -o Montserrat.zip https://github.com/google/fonts/raw/main/ofl/montserrat/Montserrat%5Bwght%5D.ttf
-          # Josefin Slab
           curl -L -o JosefinSlab.zip https://github.com/google/fonts/raw/main/ofl/josefinslab/JosefinSlab%5Bwght%5D.ttf
-          # Nanum Pen Script
           curl -L -o NanumPenScript.ttf https://github.com/google/fonts/raw/main/ofl/nanumpenscript/NanumPenScript-Regular.ttf
-          # VT323
           curl -L -o VT323.ttf https://github.com/google/fonts/raw/main/ofl/vt323/VT323-Regular.ttf
-
-          # Refresh font cache
           fc-cache -fv
 
       - name: Set up Node.js
@@ -55,7 +49,7 @@ jobs:
         uses: anothrNick/github-tag-action@1.75.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DEFAULT_BUMP: patch   # can be 'patch', 'minor', 'major'
+          DEFAULT_BUMP: patch
           TAG_PREFIX: v
 
       - name: Create GitHub Release
