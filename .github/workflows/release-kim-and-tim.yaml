@@ -1,4 +1,4 @@
-name: Release on Directory Change
+name: Release Kim and Tim Assets
 
 on:
   push:
@@ -39,7 +39,7 @@ jobs:
           # Refresh font cache
           fc-cache -fv
 
-      - name: Set up Node.js (example, adjust for your stack)
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 24
@@ -57,11 +57,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DEFAULT_BUMP: patch   # can be 'patch', 'minor', 'major'
           TAG_PREFIX: v
-
-      - name: Debug artifact paths
-        run: |
-          echo "Listing build outputs..."
-          ls -R kim-and-tim/assets/dist || echo "No dist directory"
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2

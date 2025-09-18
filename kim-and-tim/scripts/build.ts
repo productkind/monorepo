@@ -37,9 +37,9 @@ weeks.forEach(week => {
     if (days.length > 1) {
       await combineSvgFiles(dailyFiles, path.join(distPath, 'strip.svg'), [cols, rows], [imageWidth, imageHeight], [gapX, gapY]);
     }
-    const namePrefix = `w${String(week).padStart(3, '0')}d${day}`;
+    const namePrefix = `${week}-${day}-`;
     dailyFiles.forEach(async (filePath) => {
-      const outputPngPath = path.join(distPath, path.basename(namePrefix + filePath).replace('.svg', '.png'));
+      const outputPngPath = path.join(distPath, namePrefix + path.basename(filePath).replace('.svg', '.png'));
       await rasterizeSvg({
         inputFilePath: filePath,
         outputFilePath: outputPngPath,
