@@ -36,7 +36,7 @@ jobs:
 
       - name: Bump version and create tag
         id: tag_version
-        uses: anothrNick/github-tag-action@1.71.0
+        uses: anothrNick/github-tag-action@1.75.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DEFAULT_BUMP: patch   # can be 'patch', 'minor', 'major'
@@ -53,6 +53,7 @@ jobs:
           tag_name: ${{ steps.tag_version.outputs.new_tag }}
           name: Release ${{ steps.tag_version.outputs.new_tag }}
           files: |
-            kim-and-tim/assets/dist/**   # upload built files
+            kim-and-tim/assets/dist/**/*.png
+            kim-and-tim/assets/dist/**/*.svg
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
