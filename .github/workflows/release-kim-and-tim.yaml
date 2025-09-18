@@ -1,0 +1,49 @@
+name: Release on Directory Change
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'kim-and-tim/assets/**'   # only trigger if something changes inside /src
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Inkscape
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y inkscape
+
+      - name: Set up Node.js (example, adjust for your stack)
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Bump version and create tag
+        id: tag_version
+        uses: anothrNick/github-tag-action@1.71.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEFAULT_BUMP: patch   # can be 'patch', 'minor', 'major'
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.tag_version.outputs.new_tag }}
+          name: Release ${{ steps.tag_version.outputs.new_tag }}
+          files: |
+            kim-and-tim/assets/dist/**   # upload built files
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
