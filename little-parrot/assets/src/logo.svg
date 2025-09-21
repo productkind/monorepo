@@ -9,7 +9,7 @@
    id="svg1"
    inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
    sodipodi:docname="logo.svg"
-   inkscape:export-filename="/Users/eggdice/Projects/little-parrot-awakens/public/logo.png"
+   inkscape:export-filename="../../content/video/public/logo.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -27,9 +27,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="1.4192333"
-     inkscape:cx="362.16737"
-     inkscape:cy="732.79001"
+     inkscape:zoom="0.27909291"
+     inkscape:cx="96.741978"
+     inkscape:cy="770.35279"
      inkscape:window-width="1728"
      inkscape:window-height="1057"
      inkscape:window-x="0"
@@ -159,15 +159,15 @@
            inkscape:label="LittleParrotText"><tspan
              x="17.849133"
              y="118.99422"
-             id="tspan2"><tspan
+             id="tspan6"><tspan
                style="font-weight:bold;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold'"
-               id="tspan1">Little
+               id="tspan5">Little
 </tspan></tspan><tspan
              x="17.849133"
              y="149.94428"
-             id="tspan4"><tspan
+             id="tspan8"><tspan
                style="font-weight:bold;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold'"
-               id="tspan3">Parrot</tspan></tspan></text>
+               id="tspan7">Parrot</tspan></tspan></text>
         <ellipse
            style="display:none;fill:#230156;fill-opacity:1;stroke:none;stroke-width:6"
            id="path1-4"

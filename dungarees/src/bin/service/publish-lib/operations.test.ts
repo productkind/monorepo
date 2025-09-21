@@ -101,7 +101,4 @@ mtest('readPackageJson with invalid JSON', ({expect, coldStepAndClose}) => {
     stderr('File transform failed: Invalid source package.json: Unexpected token \'i\', "invalid json content" is not valid JSON'),
     new Error('File transform failed'),
   )
-//  expect(readPackageJson$).toBeObservableError(
-//    new SyntaxError('Unexpected token \'i\', "invalid json content" is not valid JSON')
-//  )
 })

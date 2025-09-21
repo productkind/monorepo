@@ -47,6 +47,8 @@ weeks.forEach(week => {
         background: 'ffffffff',
       });
       console.log(`Generated PNG for ${filePath} at ${outputPngPath}`);
+      const texts = await extractTextFromSvg(filePath)
+      console.log('Extracted texts:', texts);
     })
     if (days.length > 1) {
       await rasterizeSvg({
@@ -106,6 +108,30 @@ const updateIdsAndReferences = (element, prefix, idMap) => {
       updateIdsAndReferences(child, prefix, idMap);
     });
   }
+};
+
+const extractTextFromSvg = (svgPath: string): string[] => {
+  const parser = new DOMParser();
+  const svgContent = fsService.readFileSync(svgPath, 'utf-8');
+  const doc = parser.parseFromString(svgContent, 'image/svg+xml');
+
+  const textContents: string[] = [];
+
+  const extractText = (element: Node) => {
+    if (element.nodeType === 1) {
+      const elementNode = element as Element;
+      if (elementNode.nodeName === 'text') {
+        const text = elementNode.textContent?.trim();
+        if (text) {
+          textContents.push(text);
+        }
+      }
+      Array.from(element.childNodes).forEach(child => extractText(child));
+    }
+  };
+
+  extractText(doc.documentElement);
+  return textContents;
 };
 
 const combineSvgFiles = async (inputPaths: string[], outputPath: string, [cols, rows]: [number, number], [imageWidth, imageHeight]: [number, number], [gapX, gapY]: [number, number]) => {
