@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'kim-and-tim/assets/**'
+      - 'kim-and-tim/**'
 
 permissions:
   contents: write
