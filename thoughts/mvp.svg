@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="840"
+   height="600"
+   viewBox="0 0 222.25 158.75"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   sodipodi:docname="mvp.svg"
+   inkscape:export-filename="mvp.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="0.79338627"
+     inkscape:cx="388.8396"
+     inkscape:cy="163.85461"
+     inkscape:window-width="1728"
+     inkscape:window-height="1057"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g2-5"
+     inkscape:export-bgcolor="#ffffffff" />
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient2"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#fdb226;stop-opacity:0.33000001;"
+         offset="0"
+         id="stop2" />
+      <stop
+         style="stop-color:#26fd46;stop-opacity:0.33000001;"
+         offset="1"
+         id="stop3" />
+    </linearGradient>
+    <rect
+       x="223.41458"
+       y="115.23489"
+       width="65.848509"
+       height="26.652968"
+       id="rect2" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2"
+       id="linearGradient3"
+       x1="54.610629"
+       y1="61.916198"
+       x2="130.4032"
+       y2="61.916198"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text2"
+       style="font-weight:bold;font-size:24px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect2);display:inline;fill:#370188;fill-opacity:1;stroke:none;stroke-width:12;stroke-dasharray:none;stroke-opacity:1" />
+    <g
+       id="g5"
+       transform="translate(2.465538,2.9587303)">
+      <path
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#230156;stroke-width:3.09377;stroke-dasharray:6.18755, 3.09377;stroke-dashoffset:0;stroke-opacity:1"
+         d="M 91.165334,132.93674 40.360186,112.01747 149.94612,73.747238 C 130.44586,93.349055 125.86208,120.01217 91.165334,132.93674 Z"
+         id="path17-0-2-4-7"
+         sodipodi:nodetypes="cccc"
+         inkscape:label="LaptopBase" />
+      <path
+         style="display:inline;fill:none;fill-opacity:1;stroke:#230156;stroke-width:3.06917;stroke-dasharray:6.13833, 3.06917;stroke-dashoffset:0;stroke-opacity:1"
+         d="M 103.29063,128.63959 65.880931,112.92613 167.3847,77.140852 Z"
+         id="path17-3-4-2-3-5"
+         sodipodi:nodetypes="cccc"
+         inkscape:label="LaptopKeyboard" />
+      <path
+         style="display:inline;fill:url(#linearGradient3);stroke:#230156;stroke-width:3.09377292;stroke-dasharray:6.18754583,3.09377292;stroke-dashoffset:0;stroke-opacity:1;fill-opacity:1;opacity:1"
+         d="m 117.95061,41.697942 9.50987,-4.288954 -9.15673,-7.309718 c -0.14011,-6.574055 -3.38042,-11.73919 -11.62911,-10.368155 -3.21454,0.534298 -7.591394,4.093021 -7.939361,11.349962 -0.351327,7.327107 1.297591,25.992588 -8.769254,35.094866 -10.994327,9.940886 -23.901215,21.66341 -32.011293,23.012445 14.708383,13.767202 47.202818,19.515252 60.220168,11.430822 11.0264,-6.847954 3.80968,-42.329665 -0.22429,-58.921268 -2.60706,1.091347 -5.32712,2.249003 -8.12159,2.290774 2.79466,-0.04247 5.51372,-1.19798 8.12159,-2.290774 z"
+         id="path2-5-52-8"
+         sodipodi:nodetypes="cccssscsccc"
+         inkscape:label="ParrotBody" />
+      <circle
+         style="display:inline;fill:#230156;fill-opacity:1;stroke:none;stroke-width:2.83511;stroke-dasharray:none;stroke-opacity:1"
+         id="path18-0-5-0"
+         cx="-107.13826"
+         cy="40.932064"
+         r="2.4697411"
+         inkscape:label="ParrotEyes"
+         transform="matrix(-0.99376792,0.11146893,0.11146893,0.99376792,0,0)" />
+      <g
+         id="g2-5"
+         inkscape:label="LaptopTop"
+         transform="matrix(-0.13720784,0,0,0.13720784,182.39394,21.838225)"
+         style="display:inline">
+        <path
+           style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#230156;stroke-width:22.5485;stroke-dasharray:45.097, 22.5485;stroke-dashoffset:0;stroke-opacity:1"
+           d="M 47.70982,569.3592 V 87.2282 l 606.0833,236.006 -3e-4,482.13 z"
+           id="path16-1-1-0-2"
+           sodipodi:nodetypes="ccccc"
+           inkscape:label="LaptopLid" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.2507px;font-family:'Monaspace Neon';-inkscape-font-specification:'Monaspace Neon';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;inline-size:140.957;display:inline;fill:none;fill-opacity:1;stroke:#230156;stroke-width:0.807812;stroke-dasharray:2.42343, 2.42343;stroke-dashoffset:0;stroke-opacity:1"
+           x="17.849133"
+           y="118.99422"
+           id="text18-6-2-9"
+           transform="matrix(-4.7742302,0,0,4.7742323,649.29123,-153.77943)"
+           inkscape:label="LittleParrotText"><tspan
+             x="17.849133"
+             y="118.99422"
+             id="tspan6"><tspan
+               style="font-weight:bold;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold'"
+               id="tspan5">Little
+</tspan></tspan><tspan
+             x="17.849133"
+             y="149.94428"
+             id="tspan8"><tspan
+               style="font-weight:bold;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold'"
+               id="tspan7">Parrot</tspan></tspan></text>
+        <path
+           style="fill:none;stroke:#230156;stroke-width:21.2117;stroke-linecap:butt;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           d="M 1307.4364,-131.55285 H 1134.541"
+           id="path1" />
+        <path
+           style="fill:none;stroke:#230156;stroke-width:21.2117;stroke-linecap:butt;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           d="M 1298.1227,-141.79646 V 32.957956"
+           id="path2" />
+        <path
+           style="display:inline;fill:none;stroke:#230156;stroke-width:21.2117;stroke-linecap:butt;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           d="M 1307.4364,924.81511 H 1134.541"
+           id="path1-9" />
+        <path
+           style="display:inline;fill:none;stroke:#230156;stroke-width:21.2117;stroke-linecap:butt;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           d="M 1298.1227,935.05872 V 760.3043"
+           id="path2-8" />
+        <path
+           style="display:inline;fill:none;stroke:#230156;stroke-width:21.2117;stroke-linecap:butt;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           d="M -227.50323,924.81512 H -54.607817"
+           id="path1-9-0" />
+        <path
+           style="display:inline;fill:none;stroke:#230156;stroke-width:21.2117;stroke-linecap:butt;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           d="M -218.18958,935.05873 V 760.30431"
+           id="path2-8-0" />
+        <path
+           style="display:inline;fill:none;stroke:#230156;stroke-width:21.2117;stroke-linecap:butt;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           d="M -231.35982,-125.76783 H -58.464402"
+           id="path1-9-0-9" />
+        <path
+           style="display:inline;fill:none;stroke:#230156;stroke-width:21.2117;stroke-linecap:butt;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           d="M -222.04617,-136.01144 V 38.74298"
+           id="path2-8-0-4" />
+      </g>
+    </g>
+  </g>
+</svg>
