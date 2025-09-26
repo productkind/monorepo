@@ -23,15 +23,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="0.50461106"
-     inkscape:cx="400.30831"
-     inkscape:cy="782.7811"
+     inkscape:zoom="0.32897436"
+     inkscape:cx="-343.49182"
+     inkscape:cy="121.59002"
      inkscape:window-width="1728"
      inkscape:window-height="1057"
      inkscape:window-x="0"
      inkscape:window-y="32"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g3"
      showgrid="false" />
   <defs
      id="defs1">
@@ -266,23 +266,23 @@
        transform="matrix(3.1749999,0,0,3.1749999,-1513.2297,-614.26618)">
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.05px;font-family:'Nanum Pen';-inkscape-font-specification:'Nanum Pen';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;white-space:pre;inline-size:165.539;display:inline;fill:#370188;fill-opacity:1;stroke:none;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-         x="-17.829039"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.05px;font-family:'Nanum Pen';-inkscape-font-specification:'Nanum Pen';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:end;white-space:pre;inline-size:146.663;display:inline;fill:#370188;fill-opacity:1;stroke:none;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         x="64.695572"
          y="156.49693"
          id="text17-6-5-0-9-6"
-         transform="matrix(0.31496063,0,0,0.31496063,527.54838,157.3397)"
+         transform="matrix(0.31496063,0,0,0.31496063,542.7416,167.74375)"
          inkscape:label="text-1"><tspan
-           x="-17.829039"
+           x="64.695572"
            y="156.49693"
-           id="tspan1">You need to run an<tspan
+           id="tspan2">You have to get<tspan
    y="156.49693"
-   id="tspan2"> </tspan></tspan><tspan
-           x="-17.829039"
+   id="tspan3"> </tspan></tspan><tspan
+           x="64.695572"
            y="180.30944"
-           id="tspan3">experiment.</tspan></text>
+           id="tspan4">feedback from them.</tspan></text>
       <path
          style="fill:none;fill-opacity:1;stroke:#370188;stroke-width:0.5;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-         d="m 537.26961,240.38834 c -0.17689,-10.58645 -15.02798,-12.92572 -15.02997,-23.003"
+         d="m 537.26961,240.38834 c -0.17689,-10.58645 5.11955,-4.50339 5.11756,-14.58067"
          id="path13-1-9-2-1-7-8-0-7-8"
          sodipodi:nodetypes="cc"
          inkscape:label="text-anchor" />
@@ -294,7 +294,7 @@
          id="text5"><tspan
            sodipodi:role="line"
            id="tspan5"
-           style="stroke-width:0.611667"></tspan></text>
+           style="stroke-width:0.611667" /></text>
     </g>
     <rect
        style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#370188;stroke-width:3.175;stroke-dasharray:none;stroke-opacity:1"
@@ -443,6 +443,39 @@
          d="m 46.020175,43.036177 c 1.06223,-0.97291 1.93515,0.56908 0.9729,1.17231"
          id="path15-1-0-5-7"
          sodipodi:nodetypes="cc" />
+    </g>
+    <g
+       id="g3"
+       inkscape:label="text-bubble-chick"
+       transform="matrix(3.1749999,0,0,3.1749999,-1654.7991,-642.05573)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.05px;font-family:'Nanum Pen';-inkscape-font-specification:'Nanum Pen';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:end;white-space:pre;inline-size:146.663;display:inline;fill:#370188;fill-opacity:1;stroke:none;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         x="64.695572"
+         y="156.49693"
+         id="text1"
+         transform="matrix(0.31496063,0,0,0.31496063,529.65827,162.99375)"
+         inkscape:label="text-1"><tspan
+           x="64.695572"
+           y="156.49693"
+           id="tspan6">Then what?</tspan></text>
+      <path
+         style="fill:none;fill-opacity:1;stroke:#370188;stroke-width:0.5;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         d="m 549.42861,259.64009 c 0.83636,-16.66595 -15.39876,-28.56808 -14.89413,-44.97817"
+         id="path1"
+         sodipodi:nodetypes="cc"
+         inkscape:label="text-anchor" />
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:6px;line-height:normal;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';text-align:center;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;white-space:pre;fill:#0b0b0d;stroke:#0b0b0d;stroke-width:0.611667;stroke-linecap:round"
+         x="512.31982"
+         y="205.02739"
+         id="text2"><tspan
+           sodipodi:role="line"
+           id="tspan1"
+           style="stroke-width:0.611667"
+           x="512.31982"
+           y="210.54195" /></text>
     </g>
   </g>
 </svg>
