@@ -31,7 +31,7 @@
      inkscape:window-x="0"
      inkscape:window-y="32"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g8"
      showgrid="false" />
   <defs
      id="defs1">
@@ -645,7 +645,7 @@
    id="tspan11"> </tspan></tspan><tspan
            x="69.40097"
            y="204.12194"
-           id="tspan12">you want to solve</tspan></text>
+           id="tspan12">you want to solve.</tspan></text>
       <path
          style="fill:none;fill-opacity:1;stroke:#370188;stroke-width:0.5;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
          d="m 525.04898,227.83742 c -0.34203,-3.9807 4.62412,-1.53081 4.45698,-5.16748"
