@@ -131,7 +131,10 @@ img {
 }
 
 .menu-items {
-  margin-left: 4rem;
+  padding: 2rem 4rem;
+  position: absolute;
+  background: var(--color-black);
+  top: 75px
 }
 
 [data-menu-open="false"] .menu-items {

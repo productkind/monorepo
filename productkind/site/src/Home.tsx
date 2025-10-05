@@ -9,6 +9,10 @@ const Home = () => {
     setIsMenuOpen(!isMenuOpen);
   }
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  }
+
   return <main className="site">
     <header className="site-header" data-menu-open={isMenuOpen}>
       <nav className="site-navigation">
@@ -16,12 +20,24 @@ const Home = () => {
             <img src="assets/logo-invert.svg" width="48" alt="productkind logo"/>
         </a>
         <span className="menu-items">
-          <a href="#hero" className="navigation-link"><span className="navigation-link-text">Home</span></a>
-          <a href="#our-product" className="navigation-link navigation-link-product"><span className="navigation-link-text">Our&nbsp;Product</span></a>
-          <a href="#about" className="navigation-link"><span className="navigation-link-text">About</span></a>
-          <a href="#newsletter" className="navigation-link"><span className="navigation-link-text">Newsletter</span></a>
-          <a href="#seminars" className="navigation-link"><span className="navigation-link-text">Seminars</span></a>
-          <a href="#our-talks" className="navigation-link"><span className="navigation-link-text">Our&nbsp;Talks</span></a>
+          <a href="#hero" className="navigation-link" onClick={closeMenu}>
+            <span className="navigation-link-text">Home</span>
+          </a>
+          <a href="#our-product" className="navigation-link navigation-link-product" onClick={closeMenu}>
+            <span className="navigation-link-text">Our&nbsp;Product</span>
+          </a>
+          <a href="#about" className="navigation-link" onClick={closeMenu}>
+            <span className="navigation-link-text">About</span>
+          </a>
+          <a href="#newsletter" className="navigation-link" onClick={closeMenu}>
+            <span className="navigation-link-text">Newsletter</span>
+          </a>
+          <a href="#seminars" className="navigation-link" onClick={closeMenu}>
+            <span className="navigation-link-text">Seminars</span>
+          </a>
+          <a href="#our-talks" className="navigation-link" onClick={closeMenu}>
+            <span className="navigation-link-text">Our&nbsp;Talks</span>
+          </a>
         </span>
         <div className="hamburger-button" onClick={toggleMenu} aria-label="Toggle menu" aria-expanded={isMenuOpen}>
           <span className="hamburger-bar"></span>
