@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="600"
+   height="59.775002"
+   viewBox="0 0 600 59.775002"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   sodipodi:docname="logo-thoughts.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showguides="true"
+     inkscape:zoom="1.3440046"
+     inkscape:cx="339.28454"
+     inkscape:cy="199.40407"
+     inkscape:window-width="1728"
+     inkscape:window-height="1057"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g1" />
+  <defs
+     id="defs1">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient57"
+       id="linearGradient7"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.53498008,0,0,0.53498008,-939.16529,-1088.4152)"
+       x1="2236.4951"
+       y1="2222.7791"
+       x2="1752.0898"
+       y2="1986.3248" />
+    <linearGradient
+       id="linearGradient57"
+       inkscape:collect="always"
+       inkscape:label="ez">
+      <stop
+         style="stop-color:#00e5f0;stop-opacity:1;"
+         offset="0.20183486"
+         id="stop53" />
+      <stop
+         style="stop-color:#a7d4ff;stop-opacity:1;"
+         offset="0.34709349"
+         id="stop54" />
+      <stop
+         style="stop-color:#dac5ff;stop-opacity:1;"
+         offset="0.4966068"
+         id="stop55" />
+      <stop
+         style="stop-color:#ffb9ee;stop-opacity:1;"
+         offset="0.64847851"
+         id="stop56" />
+      <stop
+         style="stop-color:#ffbeca;stop-opacity:1;"
+         offset="0.80035025"
+         id="stop57" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g1">
+      <rect
+         style="fill:url(#linearGradient7);stroke:none;stroke-width:26.7491;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         id="rect63-90"
+         width="256.74515"
+         height="25.750462"
+         x="0"
+         y="24.715538"
+         ry="0" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:37.83px;line-height:0;font-family:Montserrat;-inkscape-font-specification:'Montserrat Heavy';text-align:start;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.71051;stroke-linecap:round;stroke-dasharray:none"
+         x="348.06461"
+         y="43.322884"
+         id="text1-3-8-8-9-2-1-4-0-0-6-0-45"
+         inkscape:label="logo-productkind"><tspan
+           sodipodi:role="line"
+           id="tspan1-5-4-1-0-5-2-5-4-8-4-7-81"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:39.0504px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';writing-mode:lr-tb;fill:#0b0b0d;fill-opacity:1;stroke:none;stroke-width:2.71051;stroke-dasharray:none"
+           x="348.06461"
+           y="43.322884">productkind</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:37.83px;line-height:2;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.71051;stroke-dasharray:none"
+           x="348.06461"
+           y="43.322884"
+           id="tspan2-5-7-7" /></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:59.7752px;line-height:2;font-family:Montserrat;-inkscape-font-specification:'Montserrat Ultra-Bold';text-align:center;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;white-space:pre;fill:#0b0b0d;fill-opacity:1;stroke:none;stroke-width:24.9064;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         x="167.89041"
+         y="44.831398"
+         id="text8-1"><tspan
+           sodipodi:role="line"
+           id="tspan8-3"
+           x="167.89041"
+           y="44.831398"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:59.7752px;font-family:'Josefin Slab';-inkscape-font-specification:'Josefin Slab Bold';stroke-width:24.9064">Thoughts by</tspan></text>
+    </g>
+  </g>
+</svg>
