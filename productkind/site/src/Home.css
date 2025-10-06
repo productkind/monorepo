@@ -279,17 +279,21 @@ img {
 }
 
 .box.kim::after {
+  width: 200px;
+  height: 200px;
   background: url('assets/kim.svg') no-repeat center;
   background-size: contain;
-  transform: scale(-1, 1) translateX(-20px) translateY(120px);
+  transform: scale(-1, 1) translateX(-20px) translateY(220px);
   bottom: 0;
   left: 0;
 }
 
 .box.tim::after {
+  width: 200px;
+  height: 200px;
   background: url('assets/tim.svg') no-repeat center;
   background-size: contain;
-  transform: scale(-1, 1) translateX(-20px) translateY(120px);
+  transform: scale(-1, 1) translateX(-20px) translateY(220px);
   bottom: 0;
   left: 0;
 }
@@ -311,11 +315,11 @@ img {
 }
 
 .box.kim:hover::after {
-  transform: scale(-1, 1) translateX(-20px) translateY(35px);
+  transform: scale(-1, 1) translateX(-20px) translateY(60px);
 }
 
 .box.tim:hover::after {
-  transform: scale(-1, 1) translateX(-20px) translateY(35px);
+  transform: scale(-1, 1) translateX(-20px) translateY(60px);
 }
 
 .box.box-highlight {
