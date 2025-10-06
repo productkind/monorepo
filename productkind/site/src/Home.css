@@ -196,6 +196,8 @@ img {
     margin-left: 0;
     display: flex;
     gap: 2rem;
+    position: static;
+    padding: 0;
   }
 
   [data-menu-open="false"] .menu-items {
