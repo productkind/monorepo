@@ -115,6 +115,7 @@ img {
 
 .site-header {
   position: sticky;
+  z-index: 100;
   top: 0;
   background: var(--color-black);
   border-top: var(--border-width) solid var(--color-border);
@@ -243,6 +244,78 @@ img {
 .box {
   background-color: var(--color-background);
   padding: var(--box-padding);
+  overflow: hidden;
+  position: relative;
+}
+
+.box::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: url('assets/little-parrot.svg') no-repeat center;
+  background-size: contain;
+  transform: scale(-1, 1) translateX(20px) translateY(120px);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: transform 0.5s ease;
+}
+
+.box.right::after {
+  transform: scale(-1, 1) translateX(-120px) translateY(0) rotate(90deg);
+}
+
+.box.left::after {
+  transform: translateX(-120px) translateY(0) rotate(90deg);
+  bottom: 0;
+  left: 0;
+}
+
+.box.top::after {
+  transform: scale(-1, 1) translateX(20px) translateY(-120px) rotate(180deg);
+  top: 0;
+  right: 0;
+}
+
+.box.kim::after {
+  background: url('assets/kim.svg') no-repeat center;
+  background-size: contain;
+  transform: scale(-1, 1) translateX(-20px) translateY(120px);
+  bottom: 0;
+  left: 0;
+}
+
+.box.tim::after {
+  background: url('assets/tim.svg') no-repeat center;
+  background-size: contain;
+  transform: scale(-1, 1) translateX(-20px) translateY(120px);
+  bottom: 0;
+  left: 0;
+}
+
+.box:hover::after {
+  transform: scale(-1, 1) translateX(20px) translateY(35px);
+}
+
+.box.right:hover::after {
+  transform: scale(-1, 1) translateX(-30px) translateY(0px) rotate(90deg);
+}
+
+.box.left:hover::after {
+  transform: translateX(-30px) translateY(0px) rotate(90deg);
+}
+
+.box.top:hover::after {
+  transform: scale(-1, 1) translateX(20px) translateY(-35px) rotate(180deg);
+}
+
+.box.kim:hover::after {
+  transform: scale(-1, 1) translateX(-20px) translateY(35px);
+}
+
+.box.tim:hover::after {
+  transform: scale(-1, 1) translateX(-20px) translateY(35px);
 }
 
 .box.box-highlight {

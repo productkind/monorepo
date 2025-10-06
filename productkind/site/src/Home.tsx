@@ -47,13 +47,13 @@ const Home = () => {
       </nav>
     </header>
     <section id="hero" className="bento hero">
-      <div className="box hero-logo">
+      <div className="box left hero-logo">
         <img className="hero-logo-image" src="assets/logo.svg" width="200" alt="productkind logo"/>
       </div>
       <div className="box box-highlight hero-tagline">
         <h1 className="tagline">You build-build, so we build-build for you</h1>
       </div>
-      <div className="box hero-what-we-do">
+      <div className="box right hero-what-we-do">
         <h2>What we do</h2>
         <p>
           lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -69,7 +69,7 @@ const Home = () => {
       <div className="box box-highlight-product our-product-header">
         <h2>Our Product</h2>
       </div>
-      <div className="box our-product-image">
+      <div className="box top our-product-image">
         <img className="our-product-logo" src="assets/logo-little-parrot.svg" width="200" alt="Little Parrot logo"/>
       </div>
       <div className="box our-product-description">
@@ -97,7 +97,7 @@ const Home = () => {
       <div className="box box-highlight about-header">
         <h2>About Us</h2>
       </div>
-      <div className="box about-description">
+      <div className="box right about-description">
         <h3>Conception of productkind</h3>
         <p>
           lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -116,10 +116,10 @@ const Home = () => {
           mollit anim id est laborum.
         </p>
       </div>
-      <div className="box about-team box-highlight box-vertical">
+      <div className="box right about-team box-highlight box-vertical">
         <h3>Team</h3>
       </div>
-      <div className="box about-kinga-description">
+      <div className="box kim about-kinga-description">
         <h4>Kinga Magyar</h4>
         <h5>Product Builder &amp; Coach</h5>
         <p>
@@ -131,10 +131,10 @@ const Home = () => {
           mollit anim id est laborum.
         </p>
       </div>
-      <div className="box about-image about-kinga-image">
+      <div className="box kim about-image about-kinga-image">
         <img className="image-kinga" src="assets/photo-kinga.webp" width="400" alt="Photo of the productkind team"/>
       </div>
-      <div className="box about-kinga-description">
+      <div className="box tim about-kinga-description">
         <h4>Tamas Kokeny</h4>
         <h5>Educator</h5>
         <p>
@@ -146,15 +146,15 @@ const Home = () => {
           mollit anim id est laborum.
         </p>
       </div>
-      <div className="box about-image about-tamas-image">
+      <div className="box tim about-image about-tamas-image">
         <img className="image-kinga" src="assets/photo-tamas.webp" width="400" alt="Photo of the productkind team"/>
       </div>
     </section>
     <section id="newsletter" className="bento newsletter">
-      <div className="box box-highlight newsletter-header">
+      <div className="box right box-highlight newsletter-header">
         <h2>Newsletter</h2>
       </div>
-      <div className="box newsletter-description">
+      <div className="box left newsletter-description">
         <p>
           lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -165,7 +165,7 @@ const Home = () => {
         </p>
         <a href="#" className="button button-primary-newsletter">Subscribe</a>
       </div>
-      <div className="box newsletter-image">
+      <div className="box top newsletter-image">
         <img className="newsletter-logo" src="assets/logo-thoughts.svg" width="600" alt="Thoughts by productkind logo"/>
       </div>
     </section>
@@ -173,7 +173,7 @@ const Home = () => {
       <div className="box box-highlight seminars-header">
         <h2>Seminars</h2>
       </div>
-      <div className="box seminars-description">
+      <div className="box left seminars-description">
         <p>
           lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -184,7 +184,7 @@ const Home = () => {
         </p>
         <a href="#" className="button button-primary-seminars">See upcoming seminars</a>
       </div>
-      <div className="box seminars-image">
+      <div className="box right seminars-image">
         <img className="seminars-logo" src="assets/logo-seminars.svg" width="300" alt="Seminars by productkind logo"/>
       </div>
     </section>
@@ -192,7 +192,7 @@ const Home = () => {
       <div className="box box-highlight our-talks-header">
         <h2>Our Talks</h2>
       </div>
-      <div className="box our-talks-description">
+      <div className="box top our-talks-description">
         <p>
           lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
