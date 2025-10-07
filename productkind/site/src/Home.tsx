@@ -3,14 +3,14 @@ import { useState } from 'react'
 import { Instagram, Linkedin } from 'lucide-react'
 
 const Home = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(!isMenuOpen)
   }
 
   const closeMenu = () => {
-    setIsMenuOpen(false);
+    setIsMenuOpen(false)
   }
 
   return <main className="site">
