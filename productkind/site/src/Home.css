@@ -253,7 +253,7 @@ img {
   display: block;
   width: 100px;
   height: 100px;
-  background: url('assets/little-parrot.svg') no-repeat center;
+  background: url('little-parrot.svg') no-repeat center;
   background-size: contain;
   transform: scale(-1, 1) translateX(20px) translateY(120px);
   position: absolute;
@@ -281,7 +281,7 @@ img {
 .box.kim::after {
   width: 200px;
   height: 200px;
-  background: url('assets/kim.svg') no-repeat center;
+  background: url('kim.svg') no-repeat center;
   background-size: contain;
   transform: scale(-1, 1) translateX(-20px) translateY(220px);
   bottom: 0;
@@ -291,7 +291,7 @@ img {
 .box.tim::after {
   width: 200px;
   height: 200px;
-  background: url('assets/tim.svg') no-repeat center;
+  background: url('tim.svg') no-repeat center;
   background-size: contain;
   transform: scale(-1, 1) translateX(-20px) translateY(220px);
   bottom: 0;
