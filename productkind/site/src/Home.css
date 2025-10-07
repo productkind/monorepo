@@ -68,7 +68,7 @@ img {
 }
 
 ::selection {
-  background: #ffb9ee;
+  background: #ffbeca;
   color: var(--color-black);
   animation: selection 0.3s infinite;
 }

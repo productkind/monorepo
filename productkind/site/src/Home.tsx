@@ -1,6 +1,7 @@
 import './Home.css'
 import { useState } from 'react'
 import { Instagram, Linkedin } from 'lucide-react'
+import {Typography} from './Typography'
 
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -51,100 +52,120 @@ const Home = () => {
         <img className="hero-logo-image" src="assets/logo.svg" width="200" alt="productkind logo"/>
       </div>
       <div className="box box-highlight hero-tagline">
-        <h1 className="tagline">You build-build, so we build-build for you</h1>
+        <Typography component="h1" variant="h1" className="tagline">
+          You build-build, so we build-build for you
+        </Typography>
       </div>
       <div className="box right hero-what-we-do">
-        <h2>What we do</h2>
-        <p>
+        <Typography component="h2" variant="h2">What we do</Typography>
+        <Typography component="p" variant="body">
           lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
           exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
           dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
           mollit anim id est laborum.
-        </p>
+        </Typography>
       </div>
     </section>
     <section id="our-product" className="bento our-product">
       <div className="box box-highlight-product our-product-header">
-        <h2>Our Product</h2>
+        <Typography component="h2" variant="h2">
+          Our Product
+        </Typography>
       </div>
       <div className="box top our-product-image">
         <img className="our-product-logo" src="assets/logo-little-parrot.svg" width="200" alt="Little Parrot logo"/>
       </div>
       <div className="box our-product-description">
-        <h3>What it is</h3>
-        <p>
+        <Typography component="h3" variant="h3">
+          What it is
+        </Typography>
+        <Typography component="p" variant="body">
           lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
           exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
           dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
           mollit anim id est laborum.
-        </p>
-        <p>
+        </Typography>
+        <Typography component="p" variant="body">
           lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
           exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
           dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
           mollit anim id est laborum.
-        </p>
+        </Typography>
         <a href="#" className="button button-primary-product">Check it out</a>
       </div>
     </section>
     <section id="about" className="bento about">
       <div className="box box-highlight about-header">
-        <h2>About Us</h2>
+        <Typography component="h2" variant="h2">
+          About Us
+        </Typography>
       </div>
       <div className="box right about-description">
-        <h3>Conception of productkind</h3>
-        <p>
+        <Typography component="h3" variant="h3">
+          Conception of productkind
+        </Typography>
+        <Typography component="p" variant="body">
           lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
           exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
           dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
           mollit anim id est laborum.
-        </p>
-        <p>
+        </Typography>
+        <Typography component="p" variant="body">
           lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
           exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
           dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
           mollit anim id est laborum.
-        </p>
+        </Typography>
       </div>
       <div className="box right about-team box-highlight box-vertical">
-        <h3>Team</h3>
+        <Typography component="h3" variant="h3">
+          Team
+        </Typography>
       </div>
       <div className="box kim about-kinga-description">
-        <h4>Kinga Magyar</h4>
-        <h5>Product Builder &amp; Coach</h5>
-        <p>
+        <Typography component="h4" variant="h3">
+          Kinga Magyar
+        </Typography>
+        <Typography component="h5" variant="h4">
+          Product Builder &amp; Coach
+        </Typography>
+        <Typography component="p" variant="body">
           lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
           exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
           dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
           mollit anim id est laborum.
-        </p>
+        </Typography>
       </div>
       <div className="box kim about-image about-kinga-image">
         <img className="image-kinga" src="assets/photo-kinga.webp" width="400" alt="Photo of the productkind team"/>
       </div>
       <div className="box tim about-kinga-description">
-        <h4>Tamas Kokeny</h4>
-        <h5>Educator</h5>
-        <p>
+        <Typography component="h4" variant="h3">
+          Tamas Kokeny
+        </Typography>
+        <Typography component="h5" variant="h4">
+          Educator
+        </Typography>
+        <Typography component="p" variant="body">
           lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
           exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
           dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
           mollit anim id est laborum.
-        </p>
+        </Typography>
       </div>
       <div className="box tim about-image about-tamas-image">
         <img className="image-kinga" src="assets/photo-tamas.webp" width="400" alt="Photo of the productkind team"/>
@@ -152,17 +173,19 @@ const Home = () => {
     </section>
     <section id="newsletter" className="bento newsletter">
       <div className="box right box-highlight newsletter-header">
-        <h2>Newsletter</h2>
+        <Typography component="h2" variant="h2">
+          Newsletter
+        </Typography>
       </div>
       <div className="box left newsletter-description">
-        <p>
+        <Typography component="p" variant="body">
           lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
           exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
           dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
           mollit anim id est laborum.
-        </p>
+        </Typography>
         <a href="#" className="button button-primary-newsletter">Subscribe</a>
       </div>
       <div className="box top newsletter-image">
@@ -171,17 +194,19 @@ const Home = () => {
     </section>
     <section id="seminars" className="bento seminars">
       <div className="box box-highlight seminars-header">
-        <h2>Seminars</h2>
+        <Typography component="h2" variant="h2">
+          Seminars
+        </Typography>
       </div>
       <div className="box left seminars-description">
-        <p>
+        <Typography component="p" variant="body">
           lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
           exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
           dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
           mollit anim id est laborum.
-        </p>
+        </Typography>
         <a href="#" className="button button-primary-seminars">See upcoming seminars</a>
       </div>
       <div className="box right seminars-image">
@@ -190,17 +215,19 @@ const Home = () => {
     </section>
     <section id="our-talks" className="bento our-talks">
       <div className="box box-highlight our-talks-header">
-        <h2>Our Talks</h2>
+        <Typography component="h2" variant="h2">
+          Our Talks
+        </Typography>
       </div>
       <div className="box top our-talks-description">
-        <p>
+        <Typography component="p" variant="body">
           lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
           exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
           dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
           mollit anim id est laborum.
-        </p>
+        </Typography>
       </div>
     </section>
     <footer className="site-footer">
@@ -212,7 +239,9 @@ const Home = () => {
         <a className="footer-link" href="https://www.instagram.com/by_productkind/" target="_blank" rel="noopener noreferrer"><Instagram /></a>
         <a className="footer-link" href="https://www.linkedin.com/company/productkind" target="_blank" rel="noopener noreferrer"><Linkedin /></a>
       </div>
-      <p>© 2025 productkind. All rights reserved.</p>
+      <Typography component="p" variant="body">
+        © 2025 productkind. All rights reserved.
+      </Typography>
     </footer>
   </main>
 }
