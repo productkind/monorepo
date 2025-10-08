@@ -1,21 +1,44 @@
+.typography.typography-h1,
+.typography.typography-h2,
+.typography.typography-h3,
+.typography.typography-h4 {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  margin: 0;
+}
+
 .typography.typography-h1 {
   font-size: 4rem;
-  font-weight: 900;
 }
 
 .typography.typography-h2 {
   font-size: 3rem;
-  font-weight: 900;
 }
 
 .typography.typography-h3 {
   font-size: 2.5rem;
-  font-weight: 900;
 }
 
 .typography.typography-h4 {
   font-size: 2rem;
-  font-weight: 900;
+}
+
+@media (max-width: 420px) {
+  .typography.typography-h1 {
+    font-size: 3rem;
+  }
+
+  .typography.typography-h2 {
+    font-size: 2rem;
+  }
+
+  .typography.typography-h3 {
+    font-size: 1.5rem;
+  }
+
+  .typography.typography-h4 {
+    font-size: 1.5rem;
+  }
 }
 
 .typography.typography-p {
