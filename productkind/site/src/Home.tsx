@@ -52,7 +52,7 @@ const Home = () => {
         <img className="hero-logo-image" src="assets/logo.svg" width="200" alt="productkind logo"/>
       </div>
       <div className="box box-highlight hero-tagline">
-        <Typography component="h1" variant="h1" className="tagline">
+        <Typography component="h1" variant="h1" className="tagline main-title">
           We build products to teach how to build products
         </Typography>
       </div>
@@ -73,7 +73,7 @@ const Home = () => {
     </section>
     <section id="our-product" className="bento our-product">
       <div className="box box-highlight-product our-product-header">
-        <Typography component="h2" variant="h2">
+        <Typography component="h2" variant="h2" className="main-title">
           Our Product
         </Typography>
       </div>
@@ -114,7 +114,7 @@ const Home = () => {
     </section>
     <section id="about" className="bento about">
       <div className="box box-highlight about-header">
-        <Typography component="h2" variant="h2">
+        <Typography component="h2" variant="h2" className="main-title">
           About Us
         </Typography>
       </div>
@@ -146,7 +146,7 @@ const Home = () => {
         </Typography>
       </div>
       <div className="box right about-team box-highlight box-vertical">
-        <Typography component="h3" variant="h3">
+        <Typography component="h3" variant="h3" className="main-title">
           Team
         </Typography>
       </div>
@@ -188,7 +188,7 @@ const Home = () => {
     </section>
     <section id="newsletter" className="bento newsletter">
       <div className="box right box-highlight newsletter-header">
-        <Typography component="h2" variant="h2">
+        <Typography component="h2" variant="h2" className="main-title">
           Newsletter
         </Typography>
       </div>
@@ -219,7 +219,7 @@ const Home = () => {
     </section>
     <section id="seminars" className="bento seminars">
       <div className="box box-highlight seminars-header">
-        <Typography component="h2" variant="h2">
+        <Typography component="h2" variant="h2" className="main-title">
           Seminars
         </Typography>
       </div>
@@ -247,7 +247,7 @@ const Home = () => {
     </section>
     <section id="our-talks" className="bento our-talks">
       <div className="box box-highlight our-talks-header">
-        <Typography component="h2" variant="h2">
+        <Typography component="h2" variant="h2" className="main-title">
           Our Talks
         </Typography>
       </div>

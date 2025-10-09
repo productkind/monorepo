@@ -139,6 +139,13 @@ img {
   top: 75px
 }
 
+.typography.typography-h1.main-title,
+.typography.typography-h2.main-title,
+.typography.typography-h3.main-title,
+.typography.typography-h4.main-title {
+  margin: 0;
+}
+
 [data-menu-open="false"] .menu-items {
   display: none;
 }
