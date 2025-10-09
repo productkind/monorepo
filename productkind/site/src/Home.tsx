@@ -109,7 +109,7 @@ const Home = () => {
             and helps you grow step by step.
           </Typography>
         </div>
-        <a href="https://littleparrot.app" about="_blank" className="button button-primary-product">Check it out</a>
+        <a href="https://littleparrot.app/?utm_source=website&utm_medium=internal&utm_campaign=website" about="_blank" className="button button-primary-product">Check it out</a>
       </div>
     </section>
     <section id="about" className="bento about">
@@ -211,7 +211,7 @@ const Home = () => {
             collaborate. It leads to better outcomes, and makes the work far more enjoyable too.
           </Typography>
         </div>
-        <a href="https://productkind.substack.com/" about="_blank" className="button button-primary-newsletter">Subscribe</a>
+        <a href="https://productkind.substack.com/p/the-product-persons-guide-to-mentoring?utm_source=website&utm_medium=internal&utm_campaign=website" about="_blank" className="button button-primary-newsletter">Subscribe</a>
       </div>
       <div className="box top newsletter-image">
         <img className="newsletter-logo" src="assets/logo-thoughts.svg" width="600" alt="Thoughts by productkind logo"/>

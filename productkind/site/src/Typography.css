@@ -4,7 +4,7 @@
 .typography.typography-h4 {
   font-family: var(--font-heading);
   font-weight: 900;
-  margin: 0;
+  margin: 0 0 1rem 0;
 }
 
 .typography.typography-h1 {
@@ -41,8 +41,8 @@
   }
 }
 
-.typography.typography-p {
-  font-size: 1rem;
+.typography.typography-body {
+  font-size: var(--font-size-body);
   line-height: 1.5;
-  margin: 0;
+  margin: 0 0 1rem 0;
 }
