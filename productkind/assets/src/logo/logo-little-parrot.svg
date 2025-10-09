@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="600"
+   height="494.94699"
+   viewBox="0 0 600 494.94701"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   sodipodi:docname="logo-little-parrot.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="0.50856983"
+     inkscape:cx="66.854143"
+     inkscape:cy="375.56298"
+     inkscape:window-width="1728"
+     inkscape:window-height="1057"
+     inkscape:window-x="2560"
+     inkscape:window-y="355"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6-6"
+       id="linearGradient3"
+       x1="858.01971"
+       y1="628.94928"
+       x2="828.27228"
+       y2="558.86871"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-4.0246681,0.45143887,0.45143887,4.0246681,3368.977,-2571.3307)" />
+    <linearGradient
+       id="linearGradient6-6"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#00e5f0;stop-opacity:1;"
+         offset="0"
+         id="stop4" />
+      <stop
+         style="stop-color:#00eab9;stop-opacity:1;"
+         offset="0.20201835"
+         id="stop2" />
+      <stop
+         style="stop-color:#71ea00;stop-opacity:1;"
+         offset="0.40477064"
+         id="stop3" />
+      <stop
+         style="stop-color:#e0d300;stop-opacity:1;"
+         offset="0.59752291"
+         id="stop6-0" />
+      <stop
+         style="stop-color:#ffc299;stop-opacity:1;"
+         offset="0.80174309"
+         id="stop7-9" />
+      <stop
+         style="stop-color:#ffbeca;stop-opacity:1;"
+         offset="1"
+         id="stop5" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g1"
+       inkscape:label="logo"
+       transform="matrix(1.1228123,0,0,1.1228125,-33.5963,-30.605622)">
+      <path
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#0b0b0d;stroke-width:11.6932;stroke-dasharray:none;stroke-opacity:1"
+         d="M 238.38783,461.77064 46.368364,382.70568 460.55153,238.06228 c -73.70177,74.08561 -91.02629,174.85959 -222.1637,223.70836 z"
+         id="path17-0-2-4-7"
+         sodipodi:nodetypes="cccc"
+         inkscape:label="LaptopBase" />
+      <path
+         style="display:inline;fill:#0b0b0d;fill-opacity:1;stroke:#0b0b0d;stroke-width:7.33999;stroke-dasharray:none;stroke-opacity:1"
+         d="M 284.21582,445.52944 142.82473,386.13999 526.46113,250.88854 Z"
+         id="path17-3-4-2-3-5"
+         sodipodi:nodetypes="cccc"
+         inkscape:label="LaptopKeyboard" />
+      <path
+         style="display:inline;fill:url(#linearGradient3);stroke:#0b0b0d;stroke-width:11.6932;stroke-dasharray:none;stroke-opacity:1"
+         d="m 339.62362,116.93108 35.94282,-16.21022 -34.60812,-27.627277 c -0.52955,-24.84682 -12.77639,-44.36859 -43.95254,-39.18673 -12.14944,2.0194 -28.69191,15.46969 -30.00707,42.8975 -1.32786,27.692997 4.90432,98.239697 -33.1437,132.642007 -41.55337,37.57186 -90.33531,81.87746 -120.98757,86.97618 55.59074,52.03351 178.40446,73.75843 227.60389,43.2031 41.67458,-25.88203 14.39879,-159.98613 -0.84771,-222.69456 -9.85346,4.12478 -20.134,8.50017 -30.69577,8.65805 10.56249,-0.16052 20.83925,-4.5278 30.69577,-8.65805 z"
+         id="path2-5-52-8"
+         sodipodi:nodetypes="cccssscsccc"
+         inkscape:label="ParrotBody" />
+      <circle
+         style="display:inline;fill:#0b0b0d;fill-opacity:1;stroke:none;stroke-width:10.7154;stroke-dasharray:none;stroke-opacity:1"
+         id="path18-0-5-0"
+         cx="-303.95285"
+         cy="102.45479"
+         r="9.3344545"
+         inkscape:label="ParrotEyes"
+         transform="matrix(-0.99376792,0.11146893,0.11146893,0.99376792,0,0)" />
+      <g
+         id="g2-5"
+         inkscape:label="LaptopTop"
+         transform="matrix(-0.51858082,0,0,0.51858082,565.18885,41.870743)"
+         style="display:inline">
+        <path
+           style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#0b0b0d;stroke-width:22.5485;stroke-dasharray:none;stroke-opacity:1"
+           d="M 12.9997,569.3592 V 87.2282 l 606.0833,236.006 -3e-4,482.13 z"
+           id="path16-1-1-0-2"
+           sodipodi:nodetypes="ccccc"
+           inkscape:label="LaptopLid" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.2507px;font-family:'Monaspace Neon';-inkscape-font-specification:'Monaspace Neon';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;inline-size:140.957;display:inline;fill:#0b0b0d;fill-opacity:1;stroke:none;stroke-width:0.524481;stroke-dasharray:none;stroke-opacity:1"
+           x="17.849133"
+           y="118.99422"
+           id="text18-6-2-9"
+           transform="matrix(-4.7742302,0,0,4.7742323,614.58111,-153.77943)"
+           inkscape:label="LittleParrotText"><tspan
+             x="17.849133"
+             y="118.99422"
+             id="tspan5"><tspan
+               style="font-weight:bold;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold'"
+               id="tspan1">Little
+</tspan></tspan><tspan
+             x="17.849133"
+             y="149.94428"
+             id="tspan7"><tspan
+               style="font-weight:bold;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold'"
+               id="tspan6">Parrot</tspan></tspan></text>
+        <ellipse
+           style="display:none;fill:#230156;fill-opacity:1;stroke:none;stroke-width:6"
+           id="path1-4"
+           cx="513.46521"
+           cy="188.19118"
+           rx="60"
+           ry="48"
+           transform="rotate(34.56757)"
+           inkscape:label="LaptopLogo" />
+      </g>
+    </g>
+  </g>
+</svg>
