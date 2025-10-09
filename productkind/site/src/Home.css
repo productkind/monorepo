@@ -210,6 +210,10 @@ img {
     transition: border-top 0.3s, border-bottom 0.3s;
   }
 
+  .navigation-link:hover {
+    text-decoration: none;
+  }
+
   .navigation-link-text {
     background: var(--color-border);
   }
