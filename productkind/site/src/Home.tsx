@@ -59,7 +59,7 @@ const Home = () => {
       <div className="box right hero-what-we-do">
         <Typography component="h2" variant="h2">What we do</Typography>
         <Typography component="p" variant="body">
-          At productkind, we teach curious people product and tech skills in a nurturing, human way.
+          At productkind, we teach curious people product and tech skills in a nurturing, and kind environment.
           Our goal is to help people learn and succeed who might not otherwise have the opportunity,
           to replace skill anxiety with confidence, curiosity, and a sense of purpose.
         </Typography>
@@ -88,7 +88,7 @@ const Home = () => {
           <Typography component="p" variant="body">
             <strong>Little Parrot</strong> is a science-based microlearning platform built for busy
             product people. It’s designed to help you master product skills in minutes, not hours, by
-            breaking down complex topics into digestible, evidence-backed lessons.
+            breaking down complex topics into digestible, practical lessons.
           </Typography>
           <Typography component="p" variant="body">
             With Little Parrot, you’ll get:
@@ -125,11 +125,11 @@ const Home = () => {
         <Typography component="p" variant="body">
           productkind grew out of a simple wish: to create the kind of environment we’d always
           wanted to learn and work in. A place where people believe in what they’re building, where
-          curiosity is encouraged, and where kindness isn’t seen as a strength
+          curiosity is encouraged, and where kindness is seen as strength
           that helps everyone do better work.
         </Typography>
         <Typography component="p" variant="body">
-          We were inspired by moments of genuine collaboration and learning, in great teams, in
+          We were inspired collaboration and learning, in great teams, in
           thoughtful companies, at events where people shared ideas freely and helped each other
           grow. We wanted to bring that same sense of abundance and purpose to people who might not
           otherwise have access to it.
@@ -137,8 +137,7 @@ const Home = () => {
         <Typography component="p" variant="body">
           At its heart, productkind exists to give opportunities to those who might otherwise be
           left out. We teach the skills and mindsets that help people succeed and feel fulfilled:
-          thinking critically, questioning the status quo, and applying product mindset to things
-          that matter.
+          thinking critically, questioning the status quo, and applying product mindset to creating and beyond.
         </Typography>
         <Typography component="p" variant="body">
           We believe that when people are supported, they create value not just for themselves but
