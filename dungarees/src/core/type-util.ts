@@ -11,7 +11,9 @@ export type JsonType =
   | null
   | undefined
   | JsonType[]
-  | { [key: string]: JsonType }
+  | JsonObject
+
+export type JsonObject = { [key: string]: JsonType }
 
 export type TypedArray =
   | Int8Array

@@ -1,8 +1,10 @@
-import { type Observable } from 'rxjs'
-import { map, catchError } from 'rxjs/operators'
+import { type Observable, type OperatorFunction, pipe } from 'rxjs'
+import { map } from 'rxjs/operators'
 import { stdout, stderr } from '@dungarees/cli/utils.ts'
 import type {StdioMessage} from '@dungarees/cli/type.ts'
-import {catchValueAndRethrow, assertMap, GetTransformSetContext, catchAndRethrow} from '@dungarees/rxjs/util'
+import {catchValueAndRethrow, GetTransformSetContext, catchAndRethrow, assertTypeByGuardMap, assertSchema} from '@dungarees/rxjs/util'
+import {JsonObject} from '@dungarees/core/type-util'
+import { z } from 'zod'
 
 export const createOutDir = (
   createOutDir$: Observable<void>,
@@ -22,16 +24,15 @@ export const readPackageJson = (
   version?: string
 ): Observable<StdioMessage> =>
   fileTransform(
-    map((content) => JSON.parse(content)),
-    catchAndRethrow((error) => new Error(`Invalid source package.json: ${error.message}`, { cause: error })),
-    assertMap(
-      ({version: v}) => v || version,
-      'Version is required in package.json or as an argument',
-    ),
+    parsePackageJson(),
     map((packageJsonContent) => ({
       ...packageJsonContent,
-      version: version || packageJsonContent.version,
+      version: version || packageJsonContent['version'],
     })),
+    assertSchema(
+      z.object({ version: z.string().min(1) }),
+      'Version is required in package.json or as an argument',
+    ),
     map((packageJson) => ({
       set: JSON.stringify(packageJson, null, 2),
       context: packageJson.version,
@@ -44,3 +45,13 @@ export const readPackageJson = (
     )
   )
 
+
+const parsePackageJson = (): OperatorFunction<string, JsonObject> =>
+  pipe(
+    map((content) => JSON.parse(content)),
+    catchAndRethrow((error) => new Error(`Invalid source package.json: ${error.message}`, { cause: error })),
+    assertTypeByGuardMap(
+      (packageJson): packageJson is JsonObject => typeof packageJson === 'object' && packageJson !== null && !Array.isArray(packageJson),
+      'package.json must be a JSON object',
+    ),
+  )

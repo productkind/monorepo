@@ -1,5 +1,7 @@
 import { lastValueFrom, type Observable, scan, defer, of, map, delay, mergeMap, catchError, throwError, concat, type OperatorFunction } from 'rxjs'
-import { assertPredicate } from '@dungarees/core/util.ts'
+import { assertPredicate, assertTypeByGuard } from '@dungarees/core/util.ts'
+import { type Guard } from '@dungarees/core/type-util.ts'
+import { type ZodSchema } from 'zod'
 
 export const collectValuesFrom = async <T>(values$: Observable<T>): Promise<T[]> =>
   await lastValueFrom(values$.pipe(scan((acc, value) => [...acc, value], [] as T[])))
@@ -94,6 +96,25 @@ export const assertMap =
       predicate,
       message,
     }))
+
+export const assertTypeByGuardMap = <T>(
+  guard: Guard<T>,
+  message: string
+): OperatorFunction<unknown, T> =>
+  map((value: unknown) => assertTypeByGuard({
+    value,
+    guard,
+    message,
+  }))
+
+export const assertSchema = <T>(schema: ZodSchema<T>, message: string): OperatorFunction<unknown, T> =>
+  map((value: unknown) => {
+    return assertTypeByGuard({
+      value,
+      guard: (v): v is T => schema.safeParse(v).success,
+      message,
+    })
+  })
 
 export type GetTransformSet<GET, SET> = {
   (op1: OperatorFunction<GET, SET>): Observable<{ get: GET, set: SET }>

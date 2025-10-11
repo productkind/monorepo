@@ -1,5 +1,6 @@
 import {
   assertMap,
+  assertTypeByGuardMap,
   asyncFunctionToObservable,
   syncFunctionToObservable,
   collectValuesFrom,
@@ -8,11 +9,13 @@ import {
   tryPipe,
   createGetTransformSet,
   createGetTransformSetContext,
+  assertSchema,
 } from './util.ts'
 
 import { lastValueFrom, type Observable, of, catchError, map, Subject } from 'rxjs'
 import { assert, type Equals } from 'tsafe'
-import { test, expect } from 'vitest';
+import { test, expect } from 'vitest'
+import { z } from 'zod'
 import { mtest } from '@dungarees/core/marbles-vitest.ts';
 
 test('collectValuesFrom', async () => {
@@ -114,6 +117,61 @@ mtest('assertMap with valid input', ({ expect }) => {
   )
   expect(result$).toBeObservable('(a|)', { 'a': 30 })
 })
+
+mtest('assertMap with invalid input', ({ expect }) => {
+  const input$ = of(10)
+  const result$ = input$.pipe(
+    assertMap(
+      (age) => age >= 18,
+      'Age must be at least 18',
+    ),
+  )
+  expect(result$).toBeObservable('#', {}, new Error('Age must be at least 18'))
+})
+
+mtest('assertTypeByGuardMap with valid input', ({ expect }) => {
+  const input$: Observable<object> = of({ name: 'John' })
+  const result$ = input$.pipe(
+    assertTypeByGuardMap(
+      (obj): obj is { name: string } => 'string' === typeof (obj as any).name,
+      'Name is required and must be a string',
+    ),
+    map((obj) => {
+      type Obj = typeof obj
+      assert<Equals<Obj, { name: string }>>()
+      return obj
+    }),
+  )
+  expect(result$).toBeObservable('(a|)', { a: { name: 'John' }})
+})
+
+mtest('assertTypeByGuardMap with invalid input', ({ expect }) => {
+  const input$: Observable<object> = of({ age: 30 })
+  const result$ = input$.pipe(
+    assertTypeByGuardMap(
+      (obj): obj is { name: string } => 'string' === typeof (obj as any).name,
+      'Name is required and must be a string',
+    ),
+  )
+  expect(result$).toBeObservable('#', {}, new Error('Name is required and must be a string'))
+})
+
+mtest('assertSchema with valid input', ({ expect }) => {
+  const input$: Observable<object> = of({ name: 'John' })
+  const result$ = input$.pipe(
+    assertSchema(
+      z.object({ name: z.string() }),
+      'Name is required and must be a string',
+    ),
+    map((obj) => {
+      type Obj = typeof obj
+      assert<Equals<Obj, { name: string }>>()
+      return obj
+    }),
+  )
+  expect(result$).toBeObservable('(a|)', { a: { name: 'John' }})
+})
+
 
 mtest('getTransformSet', ({ expect, coldStepAndClose }) => {
   const setterArgument$ = new Subject<number>();
