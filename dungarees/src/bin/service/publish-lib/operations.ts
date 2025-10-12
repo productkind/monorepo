@@ -2,7 +2,7 @@ import { type Observable, type OperatorFunction, pipe } from 'rxjs'
 import { map } from 'rxjs/operators'
 import { stdout, stderr } from '@dungarees/cli/utils.ts'
 import type {StdioMessage} from '@dungarees/cli/type.ts'
-import {catchValueAndRethrow, GetTransformSetContext, catchAndRethrow, assertTypeByGuardMap, assertSchema} from '@dungarees/rxjs/util'
+import {catchValueAndRethrow, GetTransformSetContext, catchAndRethrow, assertTypeByGuardMap, assertSchemaMap} from '@dungarees/rxjs/util'
 import {JsonObject} from '@dungarees/core/type-util'
 import { z } from 'zod'
 
@@ -29,7 +29,7 @@ export const readPackageJson = (
       ...packageJsonContent,
       version: version || packageJsonContent['version'],
     })),
-    assertSchema(
+    assertSchemaMap(
       z.object({ version: z.string().min(1) }),
       'Version is required in package.json or as an argument',
     ),

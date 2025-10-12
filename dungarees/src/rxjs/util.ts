@@ -107,7 +107,7 @@ export const assertTypeByGuardMap = <T>(
     message,
   }))
 
-export const assertSchema = <T>(schema: ZodSchema<T>, message: string): OperatorFunction<unknown, T> =>
+export const assertSchemaMap = <T>(schema: ZodSchema<T>, message: string): OperatorFunction<unknown, T> =>
   map((value: unknown) => {
     return assertTypeByGuard({
       value,

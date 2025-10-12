@@ -9,7 +9,7 @@ import {
   tryPipe,
   createGetTransformSet,
   createGetTransformSetContext,
-  assertSchema,
+  assertSchemaMap,
 } from './util.ts'
 
 import { lastValueFrom, type Observable, of, catchError, map, Subject } from 'rxjs'
@@ -156,10 +156,10 @@ mtest('assertTypeByGuardMap with invalid input', ({ expect }) => {
   expect(result$).toBeObservable('#', {}, new Error('Name is required and must be a string'))
 })
 
-mtest('assertSchema with valid input', ({ expect }) => {
+mtest('assertSchemaMap with valid input', ({ expect }) => {
   const input$: Observable<object> = of({ name: 'John' })
   const result$ = input$.pipe(
-    assertSchema(
+    assertSchemaMap(
       z.object({ name: z.string() }),
       'Name is required and must be a string',
     ),
