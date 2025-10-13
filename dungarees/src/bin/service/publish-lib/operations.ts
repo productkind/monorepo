@@ -25,24 +25,10 @@ export const readPackageJson = (
 ): Observable<StdioMessage> =>
   fileTransform(
     parsePackageJson(),
-    map((packageJsonContent) => ({
-      ...packageJsonContent,
-      version: version || packageJsonContent['version'],
-    })),
-    assertSchemaMap(
-      z.object({ version: z.string().min(1) }),
-      'Version is required in package.json or as an argument',
-    ),
-    map((packageJson) => ({
-      set: JSON.stringify(packageJson, null, 2),
-      context: packageJson.version,
-    })),
+    setPackageJsonVersion(version),
+    stringifyPackageJson(),
   ).pipe(
-    map(({context: version}) => stdout(`Package.json written to ${destinationPath} with version: ${version}`)),
-    catchValueAndRethrow(
-      (cause) => stderr(`File transform failed: ${cause.message}`),
-      (cause) => new Error('File transform failed', { cause })
-    )
+    handleTransformEnd(destinationPath),
   )
 
 
@@ -54,4 +40,33 @@ const parsePackageJson = (): OperatorFunction<string, JsonObject> =>
       (packageJson): packageJson is JsonObject => typeof packageJson === 'object' && packageJson !== null && !Array.isArray(packageJson),
       'package.json must be a JSON object',
     ),
+  )
+
+const setPackageJsonVersion = (version: string | undefined): OperatorFunction<JsonObject, { version: string }> =>
+  pipe(
+    map((packageJson) => ({
+      ...packageJson,
+      version: version || packageJson['version']
+    })),
+    assertSchemaMap(
+      z.object({ version: z.string().min(1) }),
+      'Version is required in package.json or as an argument',
+    ),
+  )
+
+const stringifyPackageJson = (): OperatorFunction<{ version: string }, { set: string, context: string }> =>
+  pipe(
+    map((packageJson) => ({
+      set: JSON.stringify(packageJson, null, 2),
+      context: packageJson.version,
+    })),
+  )
+
+const handleTransformEnd = (destinationPath: string): OperatorFunction<{ context: string }, StdioMessage> =>
+  pipe(
+    map(({context: version}) => stdout(`Package.json written to ${destinationPath} with version: ${version}`)),
+    catchValueAndRethrow(
+      (cause) => stderr(`File transform failed: ${cause.message}`),
+      (cause) => new Error('File transform failed', { cause })
+    )
   )
