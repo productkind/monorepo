@@ -24,13 +24,13 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="0.39505023"
-     inkscape:cx="377.16723"
-     inkscape:cy="3890.6445"
-     inkscape:window-width="1728"
-     inkscape:window-height="1057"
-     inkscape:window-x="0"
-     inkscape:window-y="32"
+     inkscape:zoom="0.075922149"
+     inkscape:cx="2173.2788"
+     inkscape:cy="3852.6307"
+     inkscape:window-width="1280"
+     inkscape:window-height="452"
+     inkscape:window-x="1280"
+     inkscape:window-y="480"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1"
      showguides="true"
@@ -848,17 +848,17 @@
          y="0"><tspan
            x="143.04102"
            y="2463.6286"
-           id="tspan3"><tspan
+           id="tspan14"><tspan
              style="font-size:64px;fill:#370188;stroke:none"
-             id="tspan1">CHIRA</tspan><tspan
+             id="tspan12">CHIRA</tspan><tspan
              style="font-weight:900;-inkscape-font-specification:'Montserrat Heavy';fill:#370188;stroke:none"
-             id="tspan2">
+             id="tspan13">
 </tspan></tspan><tspan
            x="143.04102"
            y="2528.9231"
-           id="tspan5"><tspan
+           id="tspan16"><tspan
              style="font-weight:900;-inkscape-font-specification:'Montserrat Heavy';fill:#370188;stroke:none"
-             id="tspan4">
+             id="tspan15">
 </tspan></tspan></text>
       <text
          xml:space="preserve"
@@ -867,27 +867,27 @@
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect57);display:inline;fill:#370188;fill-opacity:1;stroke:none;stroke-width:12;stroke-dasharray:none;stroke-opacity:1"><tspan
            x="112.28516"
            y="2487.2747"
-           id="tspan6">ANML-20455 - As Giraffe, I want t...
+           id="tspan17">ANML-20455 - As Giraffe, I want t...
 </tspan><tspan
            x="112.28516"
            y="2547.2747"
-           id="tspan7">ANML-20456 - As Giraffe, I want t...
+           id="tspan18">ANML-20456 - As Giraffe, I want t...
 </tspan><tspan
            x="112.28516"
            y="2607.2747"
-           id="tspan8">ANML-20457 - As Giraffe, I want t...
+           id="tspan19">ANML-20457 - As Giraffe, I want t...
 </tspan><tspan
            x="112.28516"
            y="2667.2747"
-           id="tspan9">ANML-20458 - As Giraffe, I want t...
+           id="tspan20">ANML-20458 - As Giraffe, I want t...
 </tspan><tspan
            x="112.28516"
            y="2727.2747"
-           id="tspan10">ANML-20459 - As Giraffe, I want t...
+           id="tspan21">ANML-20459 - As Giraffe, I want t...
 </tspan><tspan
            x="112.28516"
            y="2787.2747"
-           id="tspan11">ANML-20460 - As Giraffe, I want t...</tspan></text>
+           id="tspan22">ANML-20460 - As Giraffe, I want t...</tspan></text>
     </g>
     <text
        xml:space="preserve"
@@ -1860,6 +1860,54 @@
          id="path2-41-3"
          sodipodi:nodetypes="ccccccc"
          inkscape:label="postit-yellow" />
+    </g>
+    <g
+       id="g27"
+       inkscape:label="notepad">
+      <path
+         style="fill:#ffffff;stroke:#370188;stroke-width:1;stroke-linecap:round;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1"
+         d="m 106.94842,347.6351 h 6.96114 l 2.75741,-10.2908 h -7.18722 z"
+         id="path17"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         style="fill:none;stroke:#370188;stroke-width:0.25;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         d="m 109.26879,338.56453 h 7.17209"
+         id="path27" />
+      <path
+         style="fill:none;stroke:#370188;stroke-width:0.25;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         d="m 108.45833,340.24991 h 7.17209"
+         id="path27-4" />
+      <path
+         style="fill:none;stroke:#370188;stroke-width:0.25;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         d="m 108.20311,341.94267 h 7.17209"
+         id="path27-8" />
+      <path
+         style="fill:none;stroke:#370188;stroke-width:0.25;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         d="m 107.70866,343.63776 h 7.17209"
+         id="path27-6" />
+      <path
+         style="fill:none;stroke:#370188;stroke-width:0.25;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         d="m 107.57673,345.22621 h 7.17209"
+         id="path27-4-6" />
+      <path
+         style="fill:none;stroke:#370188;stroke-width:0.25;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         d="m 107.03071,346.7251 h 7.17209"
+         id="path27-8-3" />
+    </g>
+    <g
+       id="g27-0"
+       inkscape:label="marker"
+       transform="translate(34.934168,-14.270108)">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#370188;stroke-width:0.472441;stroke-linecap:round;stroke-opacity:1"
+         d="m 120.31706,335.98819 3.82316,5.73475 2.36136,-1.4618 -3.91873,-5.79799 -1.7288,-1.0415 -0.81946,0.57911 z"
+         id="path17-9"
+         sodipodi:nodetypes="ccccccc" />
+      <path
+         style="fill:#370188;fill-opacity:1;stroke:#370188;stroke-width:0.472441;stroke-linecap:round;stroke-opacity:1"
+         d="m 119.98555,333.68813 -0.32682,-0.6128 0.27662,-0.70833 0.62215,0.95345 z"
+         id="path27-0"
+         sodipodi:nodetypes="ccccc" />
     </g>
   </g>
 </svg>
