@@ -129,7 +129,7 @@ const Home = () => {
           that helps everyone do better work.
         </Typography>
         <Typography component="p" variant="body">
-          We were inspired collaboration and learning, in great teams, in
+          We were inspired by collaboration and learning, in great teams, in
           thoughtful companies, at events where people shared ideas freely and helped each other
           grow. We wanted to bring that same sense of abundance and purpose to people who might not
           otherwise have access to it.
