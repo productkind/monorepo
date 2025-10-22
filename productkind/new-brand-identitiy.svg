@@ -24,9 +24,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="0.35466548"
-     inkscape:cx="1697.3741"
-     inkscape:cy="1570.494"
+     inkscape:zoom="2.4346601"
+     inkscape:cx="1856.1113"
+     inkscape:cy="2424.5684"
      inkscape:window-width="1728"
      inkscape:window-height="1057"
      inkscape:window-x="0"
@@ -35,6 +35,72 @@
      inkscape:current-layer="layer1" />
   <defs
      id="defs1">
+    <linearGradient
+       id="linearGradient73"
+       inkscape:collect="always"
+       inkscape:label="ez">
+      <stop
+         style="stop-color:#00575b;stop-opacity:1;"
+         offset="0"
+         id="stop69" />
+      <stop
+         style="stop-color:#00537a;stop-opacity:1;"
+         offset="0.25"
+         id="stop70" />
+      <stop
+         style="stop-color:#7300c1;stop-opacity:1;"
+         offset="0.4966068"
+         id="stop71" />
+      <stop
+         style="stop-color:#91007d;stop-opacity:1;"
+         offset="0.74939597"
+         id="stop72" />
+      <stop
+         style="stop-color:#9d0040;stop-opacity:1;"
+         offset="1"
+         id="stop73" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient68"
+       inkscape:collect="always"
+       inkscape:label="ez">
+      <stop
+         style="stop-color:#008d93;stop-opacity:1;"
+         offset="0"
+         id="stop64" />
+      <stop
+         style="stop-color:#0086c2;stop-opacity:1;"
+         offset="0.25"
+         id="stop65" />
+      <stop
+         style="stop-color:#a551ff;stop-opacity:1;"
+         offset="0.4966068"
+         id="stop66" />
+      <stop
+         style="stop-color:#e700c7;stop-opacity:1;"
+         offset="0.74939597"
+         id="stop67" />
+      <stop
+         style="stop-color:#f8006a;stop-opacity:1;"
+         offset="1"
+         id="stop68" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient63"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#ff4bdf;stop-opacity:1;"
+         offset="0"
+         id="stop47" />
+      <stop
+         style="stop-color:#b57dff;stop-opacity:1;"
+         offset="0.5"
+         id="stop62" />
+      <stop
+         style="stop-color:#00a2e8;stop-opacity:1;"
+         offset="1"
+         id="stop63" />
+    </linearGradient>
     <linearGradient
        id="linearGradient42"
        inkscape:collect="always"
@@ -529,6 +595,36 @@
        y1="3067.6568"
        x2="955.69615"
        y2="3067.6568" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient63"
+       id="linearGradient1"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-214.67551,220.1367)"
+       x1="877.67548"
+       y1="3067.6568"
+       x2="955.69615"
+       y2="3067.6568" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient68"
+       id="linearGradient64"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.877869,0,0,2.877869,350.53622,1754.9245)"
+       x1="89.213554"
+       y1="380.12003"
+       x2="74.424019"
+       y2="354.50381" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient73"
+       id="linearGradient69"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.877869,0,0,2.877869,163.53621,1831.9247)"
+       x1="89.213554"
+       y1="380.12003"
+       x2="74.424019"
+       y2="354.50381" />
   </defs>
   <g
      id="g1"
@@ -1151,6 +1247,50 @@
        height="81.030495"
        x="877.90961"
        y="3244.4041" />
+    <rect
+       style="fill:url(#linearGradient1);fill-opacity:1;stroke:none;stroke-width:8.00001;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect45-1-6-5-2-2-2-2-1-3-0"
+       width="78.020676"
+       height="81.030495"
+       x="663"
+       y="3247.2783" />
+    <rect
+       style="fill:url(#linearGradient64);stroke:none;stroke-width:6.0915;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1-5-6-6-7-3-0-5-1-2-1-2-9"
+       width="78"
+       height="78"
+       x="547"
+       y="2773"
+       inkscape:label="logo-rect" />
+    <rect
+       style="fill:url(#linearGradient69);stroke:none;stroke-width:6.0915;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1-5-6-6-7-3-0-5-1-2-1-2-7-5"
+       width="78"
+       height="78"
+       x="360"
+       y="2850"
+       inkscape:label="logo-rect" />
+    <rect
+       style="fill:#e99000;fill-opacity:1;stroke:none;stroke-width:8.00001;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect45-1-6-5-2-6-7"
+       width="78.020676"
+       height="81.030495"
+       x="547"
+       y="1710" />
+    <rect
+       style="fill:#7400c0;fill-opacity:1;stroke:none;stroke-width:8.00001;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect45-1-6-5-2-6-5"
+       width="78.020676"
+       height="81.030495"
+       x="539"
+       y="1867" />
+    <rect
+       style="fill:#7400c0;fill-opacity:1;stroke:none;stroke-width:8.00001;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect45-1-6-5-2-6-5-1"
+       width="78.020676"
+       height="81.030495"
+       x="1922.3209"
+       y="2354.0723" />
   </g>
   <g
      id="g5"
@@ -1214,15 +1354,15 @@
          inkscape:label="LittleParrotText"><tspan
            x="17.849133"
            y="118.99422"
-           id="tspan5"><tspan
+           id="tspan3"><tspan
              style="font-weight:bold;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold'"
-             id="tspan1">Little
+             id="tspan2">Little
 </tspan></tspan><tspan
            x="17.849133"
            y="149.94428"
-           id="tspan7"><tspan
+           id="tspan8"><tspan
              style="font-weight:bold;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold'"
-             id="tspan6">Parrot</tspan></tspan></text>
+             id="tspan4">Parrot</tspan></tspan></text>
       <ellipse
          style="display:none;fill:#230156;fill-opacity:1;stroke:none;stroke-width:6"
          id="path1-4"
