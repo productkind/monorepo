@@ -1,6 +1,6 @@
-Feature: Install Skid Binary
+Feature: Install Dungarees Binary
 
-  Scenario: Install Skid Binary
-    Given the Skid Binary is published
-    When the user installs the Skid Binary
-    Then the user should be able to run skid
+  Scenario: Install Dungarees Binary
+    Given the Dungarees Binary is published
+    When the user installs the Dungarees Binary
+    Then the user should be able to run dungarees

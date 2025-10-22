@@ -1,11 +1,11 @@
-import {StdioMessageFeatureOutput} from "@dungarees/cli/type";
-import { FileSystem } from "@dungarees/fs/service"
+import type { StdioMessageFeatureOutput } from "@dungarees/cli/type.ts";
+import type { FileSystem } from "@dungarees/fs/service.ts"
 
 import { concat, mergeMap, map, catchError } from 'rxjs'
-import {createOutDir, readPackageJson} from "./operations";
-import {createFileOperations} from "@dungarees/fs/file-operations";
+import { createOutDir, readPackageJson } from "./operations.ts";
+import { createFileOperations } from "@dungarees/fs/file-operations.ts";
 
-type PublishLib = {
+export type PublishLib = {
   build: (args: { srcDir: string; outDir: string, version?: string }) =>
     StdioMessageFeatureOutput
 }
@@ -15,18 +15,14 @@ export const createPublishLibService = (fileSystem: FileSystem): PublishLib => {
     build: ({ srcDir, outDir, version }) => {
       const originalPackageJsonPath = `${srcDir}/package.json`
       const destinationPackageJsonPath = `${outDir}/package.json`
-
       const fileOperations = createFileOperations(fileSystem)
-
       const transformer = fileOperations.transformFileContext<string>(
         {
           input: originalPackageJsonPath,
           output: destinationPackageJsonPath,
         }
       )
-
       const createOutDir$ = createOutDir(fileSystem.mkdir(outDir), outDir)
-
       const readPackageJson$ = readPackageJson(
         transformer,
         destinationPackageJsonPath,

@@ -130,5 +130,3 @@ test('fileOperations should save transform context', async () => {
   expect(fakeFileSystem.readFileSync('/output.txt', 'utf-8')).toBe('8')
   expect(transform.context).toBe(1)
 })
-
-

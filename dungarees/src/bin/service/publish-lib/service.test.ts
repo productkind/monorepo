@@ -64,3 +64,27 @@ test('build with no version in package.json', async () => {
   }).stdio$)).rejects.toThrow('File transform failed')
 })
 
+test('copy files in subdirectories', async () => {
+  const fileSystem = createFakeFileSystem({
+    '/src/index.ts': 'console.log("Hello, world!")',
+    '/src/package.json': JSON.stringify({
+      name: 'my-lib',
+      version: '1.0.0',
+      main: 'index.js',
+    }),
+    '/src/lib/util.ts': 'export const util = () => {};',
+  })
+  const service = createPublishLibService(fileSystem)
+  await collectValuesFrom(service.build({
+    srcDir: '/src',
+    outDir: '/dist',
+  }).stdio$)
+  const publishedFiles = fileSystem.toJSON()
+  expect(publishedFiles['/dist/index.ts']).toBe('console.log("Hello, world!")')
+  expect(JSON.parse(publishedFiles['/dist/package.json'] ?? '')).toEqual({
+    name: 'my-lib',
+    version: '1.0.0',
+    main: 'index.js',
+  })
+  expect(publishedFiles['/dist/lib/util.ts']).toBe('export const util = () => {};')
+})

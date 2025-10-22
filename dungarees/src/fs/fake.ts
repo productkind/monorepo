@@ -1,7 +1,7 @@
 import {syncFunctionToObservable} from '@dungarees/rxjs/util.ts'
-import { createFileSystem, FileSystem, NodeFs } from './service.ts'
+import { createFileSystem, type FileSystem, type NodeFs } from './service.ts'
 
-import { DirectoryJSON, Volume } from 'memfs'
+import { type DirectoryJSON, Volume } from 'memfs'
 
 type FakeVolume = {
   toJSON: () => DirectoryJSON<string | null>
@@ -25,7 +25,7 @@ export const createFakeFileSystem = (files?: Record<string, string>): FakeFileSy
 
   const fileSystem: FileSystem = createFileSystem(fs)
 
-  const observableMethodNames = ['writeFile', 'readDir', 'mkdir', 'glob'] as const;
+  const observableMethodNames = ['writeFile', 'readDir', 'readDirDeep', 'mkdir', 'glob'] as const;
 
   const observableMethods = observableMethodNames.map((methodName) => {
     return [methodName, syncFunctionToObservable(fileSystem[`${methodName}Sync`], 1)] as const

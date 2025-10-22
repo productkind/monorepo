@@ -1,4 +1,4 @@
-import { StdioErrorMessage, StdioOutputMessage, type StdioMessage } from './type'
+import type { StdioErrorMessage, StdioOutputMessage, StdioMessage } from './type.ts'
 
 import { EOL } from 'node:os'
 import { lastValueFrom, map, type Observable } from 'rxjs'

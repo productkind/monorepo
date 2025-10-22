@@ -14,7 +14,7 @@ export const publishLibYargsModule = (_: DungareesBinInternalServices): CommandM
         .option('registry', { type: 'string' })
         .default('lib-path', '.'),
     handler: async (args) => {
-      console.log(args)
+      console.log(args, _)
     },
   }
 }

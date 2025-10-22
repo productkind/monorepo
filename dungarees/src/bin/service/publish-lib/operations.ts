@@ -2,8 +2,14 @@ import { type Observable, type OperatorFunction, pipe } from 'rxjs'
 import { map } from 'rxjs/operators'
 import { stdout, stderr } from '@dungarees/cli/utils.ts'
 import type {StdioMessage} from '@dungarees/cli/type.ts'
-import {catchValueAndRethrow, GetTransformSetContext, catchAndRethrow, assertTypeByGuardMap, assertSchemaMap} from '@dungarees/rxjs/util'
-import {JsonObject} from '@dungarees/core/type-util'
+import {
+  catchValueAndRethrow,
+  type GetTransformSetContext,
+  catchAndRethrow,
+  assertTypeByGuardMap,
+  assertSchemaMap
+} from '@dungarees/rxjs/util.ts'
+import type {JsonObject} from '@dungarees/core/type-util.ts'
 import { z } from 'zod'
 
 export const createOutDir = (

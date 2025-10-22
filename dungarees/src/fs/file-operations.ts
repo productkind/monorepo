@@ -1,11 +1,12 @@
-import {FileSystem} from './service';
+import type { FileSystem } from './service.ts';
 import {
   catchAndRethrow,
   createGetTransformSet,
   createGetTransformSetContext,
   type GetTransformSetContext,
   type GetTransformSet
-} from '@dungarees/rxjs/util'
+} from '@dungarees/rxjs/util.ts'
+import type { Observable } from 'rxjs';
 
 type Options = {
   input: string;
@@ -21,29 +22,29 @@ type FileOperations = {
   transformFileContext<CONTEXT>(
     options: Options,
   ): GetTransformSetContext<CONTEXT, string, string>
+  readDirDeep(path: string): Observable<string[]>
 }
 
 export const createFileOperations = (fileSystem: FileSystem): FileOperations => {
   const transformFile: FileOperations['transformFile'] = ({ input, output, readError, writeError }: Options): GetTransformSet<string, string> => {
-      const readFile = () => fileSystem.readFile(input, 'utf-8').pipe(
-        catchAndRethrow((cause) => new Error(readError?.(input) ?? `Could not read input: ${input}`, { cause })),
-      )
-      const writeFile = (content: string) => fileSystem.writeFile(output, content).pipe(
-        catchAndRethrow((cause) => new Error(writeError?.(output) ?? `Could not write output: ${output}`, { cause })),
-      )
-      return createGetTransformSet(readFile, writeFile)
+    const readFile = () => fileSystem.readFile(input, 'utf-8').pipe(
+      catchAndRethrow((cause) => new Error(readError?.(input) ?? `Could not read input: ${input}`, { cause })),
+    )
+    const writeFile = (content: string) => fileSystem.writeFile(output, content).pipe(
+      catchAndRethrow((cause) => new Error(writeError?.(output) ?? `Could not write output: ${output}`, { cause })),
+    )
+    return createGetTransformSet(readFile, writeFile)
   }
 
   const transformFileContext: FileOperations['transformFileContext'] = <CONTEXT>({ input, output, readError, writeError }: Options) => {
-      const readFile = () => fileSystem.readFile(input, 'utf-8').pipe(
-        catchAndRethrow((cause) => new Error(readError?.(input) ?? `Could not read input: ${input}`, { cause })),
-      )
-      const writeFile = (content: string) => fileSystem.writeFile(output, content).pipe(
-        catchAndRethrow((cause) => new Error(writeError?.(output) ?? `Could not write output: ${output}`, { cause })),
-      )
-      return createGetTransformSetContext<CONTEXT, string, string>(readFile, writeFile)
+    const readFile = () => fileSystem.readFile(input, 'utf-8').pipe(
+      catchAndRethrow((cause) => new Error(readError?.(input) ?? `Could not read input: ${input}`, { cause })),
+    )
+    const writeFile = (content: string) => fileSystem.writeFile(output, content).pipe(
+      catchAndRethrow((cause) => new Error(writeError?.(output) ?? `Could not write output: ${output}`, { cause })),
+    )
+    return createGetTransformSetContext<CONTEXT, string, string>(readFile, writeFile)
   }
-
 
   return {
     transformFile,

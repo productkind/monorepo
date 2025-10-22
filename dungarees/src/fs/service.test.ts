@@ -1,4 +1,4 @@
-import { createFakeNodeFs } from './fake.ts'
+import { createFakeNodeFs, createFakeFileSystem } from './fake.ts'
 import { createFileSystem } from './service.ts'
 
 import * as fs from 'fs'
@@ -134,4 +134,46 @@ test('FileSystem should have a mkdirSync method', () => {
   fileSystem.mkdirSync('/dir/subdir')
   fileSystem.writeFileSync('/dir/subdir/test.txt', 'test')
   expect(fakeFs.readFileSync('/dir/subdir/test.txt', 'utf8')).toBe('test')
+})
+
+test('FileSystem readDirDeepSync', () => {
+  const fakeFileSystem = createFakeFileSystem({
+    '/dir/file1.txt': 'content1',
+    '/dir/subdir/file2.txt': 'content2',
+    '/dir/subdir/nested/file3.txt': 'content3',
+  })
+  const files = fakeFileSystem.readDirDeepSync('/dir')
+  expect(files.sort()).toEqual([
+    '/dir/file1.txt',
+    '/dir/subdir/file2.txt',
+    '/dir/subdir/nested/file3.txt',
+  ].sort())
+})
+
+test('FileSystem readDirDeepAsync', async () => {
+  const fakeFileSystem = createFakeFileSystem({
+    '/dir/file1.txt': 'content1',
+    '/dir/subdir/file2.txt': 'content2',
+    '/dir/subdir/nested/file3.txt': 'content3',
+  })
+  const files = await fakeFileSystem.readDirDeepAsync('/dir')
+  expect(files.sort()).toEqual([
+    '/dir/file1.txt',
+    '/dir/subdir/file2.txt',
+    '/dir/subdir/nested/file3.txt',
+  ].sort())
+})
+
+test('FileSystem readDirDeep', async () => {
+  const fakeFileSystem = createFakeFileSystem({
+    '/dir/file1.txt': 'content1',
+    '/dir/subdir/file2.txt': 'content2',
+    '/dir/subdir/nested/file3.txt': 'content3',
+  })
+  const files = await lastValueFrom(fakeFileSystem.readDirDeep('/dir'))
+  expect(files.sort()).toEqual([
+    '/dir/file1.txt',
+    '/dir/subdir/file2.txt',
+    '/dir/subdir/nested/file3.txt',
+  ].sort())
 })
