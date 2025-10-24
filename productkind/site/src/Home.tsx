@@ -271,7 +271,9 @@ const Home = () => {
             Productized, Lisbon, Oct 2025
           </dt>
           <dd>
-            Lessons in Prompting and Vibe Coding: Building an Education Platform for Product People
+            <a href="https://www.youtube.com/watch?v=WrImWJ0KsJM" about="_blank">
+              Lessons in Prompting and Vibe Coding: Building an Education Platform for Product People
+            </a>
           </dd>
           <dt>
             Copenhagen Developers Festival, Copenhagen, Sep 2025
