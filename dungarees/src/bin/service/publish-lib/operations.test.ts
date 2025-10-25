@@ -1,6 +1,6 @@
 import { mtest } from '@dungarees/core/marbles-vitest.ts'
 import { stdout, stderr } from '@dungarees/cli/utils.ts'
-import { createOutDir, readPackageJson } from './operations.ts'
+import { createOutDir, readPackageJson, copyFiles } from './operations.ts'
 import { createGetTransformSetContext } from '@dungarees/rxjs/util.ts'
 
 mtest('create output directory', ({expect, coldStepAndClose}) => {
@@ -100,5 +100,19 @@ mtest('readPackageJson with invalid JSON', ({expect, coldStepAndClose}) => {
   expect(readPackageJson$).toBeObservableStepAndError(
     stderr('File transform failed: Invalid source package.json: Unexpected token \'i\', "invalid json content" is not valid JSON'),
     new Error('File transform failed'),
+  )
+})
+
+mtest('copyFiles successfully', ({expect, coldStepAndClose}) => {
+  const copyFiles$ = copyFiles(coldStepAndClose(undefined), '/src', '/out')
+  expect(copyFiles$).toBeObservableStepAndClose(stdout('Copied files from /src to /out'))
+})
+
+mtest('copyFiles with error', ({expect, coldError}) => {
+  const input$ = coldError(new Error('Permission denied'))
+  const copyFiles$ = copyFiles(input$, '/src', '/out')
+  expect(copyFiles$).toBeObservableStepAndError(
+    stderr('Error copying files from /src to /out: Permission denied'),
+    new Error('Could not copy files'),
   )
 })

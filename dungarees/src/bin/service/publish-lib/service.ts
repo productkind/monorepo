@@ -1,10 +1,9 @@
 import type { StdioMessageFeatureOutput } from "@dungarees/cli/type.ts";
 import type { FileSystem } from "@dungarees/fs/service.ts"
 
-import { concat, map } from 'rxjs'
-import { createOutDir, readPackageJson } from "./operations.ts";
+import { concat } from 'rxjs'
+import { createOutDir, readPackageJson, copyFiles } from "./operations.ts";
 import { createFileOperations } from "@dungarees/fs/file-operations.ts";
-import {stdout} from "@dungarees/cli/utils.ts";
 
 export type PublishLib = {
   build: (args: { srcDir: string; outDir: string, version?: string }) =>
@@ -29,8 +28,10 @@ export const createPublishLibService = (fileSystem: FileSystem): PublishLib => {
         destinationPackageJsonPath,
         version
       )
-      const copyFiles$ = fileOperations.copyDirectory(srcDir, outDir, ['package.json']).pipe(
-        map(() => stdout(`Copied files from ${srcDir} to ${outDir}`)),
+      const copyFiles$ = copyFiles(
+        fileOperations.copyDirectory(srcDir, outDir, ['package.json']),
+        srcDir,
+        outDir
       )
 
       return {

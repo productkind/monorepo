@@ -76,3 +76,16 @@ const handleTransformEnd = (destinationPath: string): OperatorFunction<{ context
       (cause) => new Error('File transform failed', { cause })
     )
   )
+
+export const copyFiles = (
+  copyFiles$: Observable<void>,
+  srcDir: string,
+  outDir: string
+): Observable<StdioMessage> =>
+  copyFiles$.pipe(
+    map(() => stdout(`Copied files from ${srcDir} to ${outDir}`)),
+    catchValueAndRethrow(
+      (cause) => stderr(`Error copying files from ${srcDir} to ${outDir}: ${cause.message}`),
+      (cause) => new Error('Could not copy files', { cause })
+    ),
+  )
