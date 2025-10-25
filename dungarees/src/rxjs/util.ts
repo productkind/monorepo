@@ -117,6 +117,7 @@ export const assertSchemaMap = <T>(schema: ZodSchema<T>, message: string): Opera
   })
 
 export type GetTransformSet<GET, SET> = {
+  (): Observable<{ get: GET, set: SET }>
   (op1: OperatorFunction<GET, SET>): Observable<{ get: GET, set: SET }>
   <A>(op1: OperatorFunction<GET, A>, op2: OperatorFunction<A, SET>): Observable<{ get: GET, set: SET }>
   <A, B>(

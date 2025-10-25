@@ -6,7 +6,8 @@ import {
   type GetTransformSetContext,
   type GetTransformSet
 } from '@dungarees/rxjs/util.ts'
-import type { Observable } from 'rxjs';
+import { type Observable, map, mergeMap, forkJoin } from 'rxjs'
+import path from 'path'
 
 type Options = {
   input: string;
@@ -22,7 +23,15 @@ type FileOperations = {
   transformFileContext<CONTEXT>(
     options: Options,
   ): GetTransformSetContext<CONTEXT, string, string>
-  readDirDeep(path: string): Observable<string[]>
+  copyFile(
+    source: string,
+    destination: string,
+  ): Observable<void>
+  copyDirectory(
+    source: string,
+    destination: string,
+    exclude?: string[],
+  ): Observable<void>
 }
 
 export const createFileOperations = (fileSystem: FileSystem): FileOperations => {
@@ -46,8 +55,44 @@ export const createFileOperations = (fileSystem: FileSystem): FileOperations => 
     return createGetTransformSetContext<CONTEXT, string, string>(readFile, writeFile)
   }
 
+  const copyFile: FileOperations['copyFile'] = (source: string, destination: string): Observable<void> => {
+    const destinationDir = path.dirname(destination)
+    const transform = transformFile({ input: source, output: destination })
+    return fileSystem.mkdir(destinationDir).pipe(
+      mergeMap(() => transform()),
+      map(() => undefined),
+    )
+  }
+
+  const copyDirectory: FileOperations['copyDirectory'] = (source: string, destination: string, exclude: string[] = []): Observable<void> => {
+    const excludeGlobs = exclude.map(pattern => fileSystem.glob(path.join(source, pattern)))
+    return forkJoin([
+      fileSystem.readDirDeep(source),
+      ...excludeGlobs,
+    ] as const).pipe(
+      map(([allFiles, ...excludedFilesArrays]) => {
+        const excludedFiles = new Set(excludedFilesArrays.flat())
+        return allFiles.filter(file => !excludedFiles.has(file))
+      }),
+      map(files => files.map(file => ({
+        from: file,
+        to: file.replace(source, destination),
+      }))),
+      mergeMap(filePairs =>
+        forkJoin(
+          filePairs.map(({ from, to }) =>
+            copyFile(from, to)
+          )
+        )
+      ),
+      map(() => undefined),
+    )
+  }
+
   return {
     transformFile,
     transformFileContext,
+    copyFile,
+    copyDirectory,
   }
 }

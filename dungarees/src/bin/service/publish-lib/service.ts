@@ -1,9 +1,10 @@
 import type { StdioMessageFeatureOutput } from "@dungarees/cli/type.ts";
 import type { FileSystem } from "@dungarees/fs/service.ts"
 
-import { concat, mergeMap, map, catchError } from 'rxjs'
+import { concat, map } from 'rxjs'
 import { createOutDir, readPackageJson } from "./operations.ts";
 import { createFileOperations } from "@dungarees/fs/file-operations.ts";
+import {stdout} from "@dungarees/cli/utils.ts";
 
 export type PublishLib = {
   build: (args: { srcDir: string; outDir: string, version?: string }) =>
@@ -28,28 +29,10 @@ export const createPublishLibService = (fileSystem: FileSystem): PublishLib => {
         destinationPackageJsonPath,
         version
       )
-      const copyFiles$ = fileSystem.readDir(srcDir).pipe(
-        mergeMap(files => {
-          const restFiles = files.filter(file => file !== 'package.json')
-          return concat(
-            ...restFiles.map(file => {
-              const srcFilePath = `${srcDir}/${file}`
-              const destFilePath = `${outDir}/${file}`
-              return fileSystem.readFile(srcFilePath, 'utf8').pipe(
-                mergeMap(content => fileSystem.writeFile(destFilePath, content)),
-                map(() => ({
-                  type: 'stdout' as const,
-                  message: `Copied ${file} to ${outDir}`,
-                })),
-                catchError(error => [{
-                  type: 'stderr' as const,
-                  message: `Error copying ${file}: ${error.message}`,
-                }]),
-              )
-            })
-          )
-        }),
+      const copyFiles$ = fileOperations.copyDirectory(srcDir, outDir, ['package.json']).pipe(
+        map(() => stdout(`Copied files from ${srcDir} to ${outDir}`)),
       )
+
       return {
         stdio$: concat(
           createOutDir$,
