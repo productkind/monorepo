@@ -23,6 +23,10 @@
   font-size: 2rem;
 }
 
+.typography.typography-h5 {
+  font-size: 1.5rem;
+}
+
 @media (max-width: 420px) {
   .typography.typography-h1 {
     font-size: 3rem;
@@ -37,6 +41,10 @@
   }
 
   .typography.typography-h4 {
+    font-size: 1.5rem;
+  }
+
+  .typography.typography-h5 {
     font-size: 1.5rem;
   }
 }

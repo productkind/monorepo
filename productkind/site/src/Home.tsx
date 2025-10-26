@@ -53,21 +53,19 @@ const Home = () => {
       </div>
       <div className="box box-highlight hero-tagline">
         <Typography component="h1" variant="h1" className="tagline main-title">
-          We build products to teach how to build products
+          Practical product skills, taught with kindness.
         </Typography>
       </div>
       <div className="box right hero-what-we-do">
         <Typography component="h2" variant="h2">What we do</Typography>
         <Typography component="p" variant="body">
-          At productkind, we teach curious people product and tech skills in a nurturing, and kind environment.
-          Our goal is to help people learn and succeed who might not otherwise have the opportunity,
-          to replace skill anxiety with confidence, curiosity, and a sense of purpose.
+          We believe good product management starts with empathy and curiosity. We’re building
+          educational tech products that help product managers grow practical skills, strengthen
+          their mindset, and create work they’re proud of.
         </Typography>
         <Typography component="p" variant="body">
-          We build products that teach how to build products. By combining a product mindset,
-          critical thinking, questioning the status quo, and learning through experimentation, with
-          a supportive community, we help people grow into fulfilled, capable builders who create
-          real value for society.
+          We’re on a mission to make product and tech skills accessible to everyone, regardless of
+          their background.
         </Typography>
       </div>
     </section>
@@ -123,26 +121,39 @@ const Home = () => {
           Conception of productkind
         </Typography>
         <Typography component="p" variant="body">
-          productkind grew out of a simple wish: to create the kind of environment we’d always
-          wanted to learn and work in. A place where people believe in what they’re building, where
-          curiosity is encouraged, and where kindness is seen as strength
-          that helps everyone do better work.
+          productkind started from a simple idea: learning should happen in a space where you can
+          experiment, make mistakes, and grow without fear.
         </Typography>
         <Typography component="p" variant="body">
-          We were inspired by collaboration and learning, in great teams, in
-          thoughtful companies, at events where people shared ideas freely and helped each other
-          grow. We wanted to bring that same sense of abundance and purpose to people who might not
-          otherwise have access to it.
+          Too much of product management education relies on creating anxiety, the “you’re behind”
+          narrative that generates stress but not solutions. We’re building something different: an
+          environment that’s both inspiring and practical, where you develop skills at your own
+          pace.
         </Typography>
         <Typography component="p" variant="body">
-          At its heart, productkind exists to give opportunities to those who might otherwise be
-          left out. We teach the skills and mindsets that help people succeed and feel fulfilled:
-          thinking critically, questioning the status quo, and applying product mindset to creating and beyond.
+          We agree with Maya Angelou: “Success is liking yourself, liking what you do, and liking
+          how you do it.” That thinking shapes everything we build.
+        </Typography>
+      </div>
+      <div className="box right about-values">
+        <Typography component="h3" variant="h3">
+          Our Values
         </Typography>
         <Typography component="p" variant="body">
-          We believe that when people are supported, they create value not just for themselves but
-          for society. That’s what we’re building, a nurturing community where learning feels
-          meaningful, sustainable, and kind.
+          <strong>Curiosity</strong> - We make space for questions, experimentation, and learning out loud. Every interaction
+          includes room for “what are we missing?” or “what else could we try?”
+        </Typography>
+        <Typography component="p" variant="body">
+          <strong>Kindness</strong> - We celebrate progress, offer support when things feel hard, and assume positive intent
+          in all our interactions.
+        </Typography>
+        <Typography component="p" variant="body">
+          <strong>Integrity</strong> - We’re transparent about our decisions and honest when we fall short. We address concerns
+          directly and do what we say we’ll do.
+        </Typography>
+        <Typography component="p" variant="body">
+          <strong>Diversity</strong> - We actively seek different perspectives in our content and community, regularly review
+          our materials for inclusivity, and welcome feedback on how we can do better.
         </Typography>
       </div>
       <div className="box right about-team box-highlight box-vertical">
@@ -192,6 +203,9 @@ const Home = () => {
           Newsletter
         </Typography>
       </div>
+      <div className="box top newsletter-image">
+        <img className="newsletter-logo" src="assets/logo-thoughts.svg" width="600" alt="Thoughts by productkind logo"/>
+      </div>
       <div className="box with-link left newsletter-description">
         <div>
           <Typography component="p" variant="body">
@@ -213,15 +227,15 @@ const Home = () => {
         </div>
         <a href="https://productkind.substack.com/p/the-product-persons-guide-to-mentoring?utm_source=website&utm_medium=internal&utm_campaign=website" about="_blank" className="button button-primary-newsletter">Subscribe</a>
       </div>
-      <div className="box top newsletter-image">
-        <img className="newsletter-logo" src="assets/logo-thoughts.svg" width="600" alt="Thoughts by productkind logo"/>
-      </div>
     </section>
     <section id="seminars" className="bento seminars">
       <div className="box box-highlight seminars-header">
         <Typography component="h2" variant="h2" className="main-title">
           Seminars
         </Typography>
+      </div>
+      <div className="box right seminars-image">
+        <img className="seminars-logo" src="assets/logo-seminars.svg" width="300" alt="Seminars by productkind logo"/>
       </div>
       <div className="box with-link left seminars-description">
         <div>
@@ -241,9 +255,6 @@ const Home = () => {
         </div>
         <a href="https://www.meetup.com/seminars-by-productkind" className="button button-primary-seminars">See upcoming seminars</a>
       </div>
-      <div className="box right seminars-image">
-        <img className="seminars-logo" src="assets/logo-seminars.svg" width="300" alt="Seminars by productkind logo"/>
-      </div>
     </section>
     <section id="our-talks" className="bento our-talks">
       <div className="box box-highlight our-talks-header">
@@ -257,7 +268,9 @@ const Home = () => {
             Wey Wey Web, Málaga, Nov 2025
           </dt>
           <dd>
-            Build Your AI Product Coach: A Hands-on Workshop for Writing Impactful User Stories
+            <a href="https://www.weyweyweb.com/workshops/build-your-ai-product-coach/">
+              Build Your AI Product Coach: A Hands-on Workshop for Writing Impactful User Stories
+            </a>
           </dd>
           <dt>
             NDC Porto, Porto, Oct 2025
