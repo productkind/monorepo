@@ -89,3 +89,18 @@ export const copyFiles = (
       (cause) => new Error('Could not copy files', { cause })
     ),
   )
+
+export const publishLib = (
+  publish$: Observable<{ exitCode: number | undefined, stderror: string | undefined }>,
+): Observable<StdioMessage> =>
+  publish$.pipe(
+    map(({exitCode, stderror}) =>
+      exitCode === 0 ?
+        stdout(`Published successfully`) :
+        stderr(`Publish failed with exit code ${exitCode}, and error: ${stderror}`)
+    ),
+    catchValueAndRethrow(
+      (cause) => stderr(`Error publishing library: ${cause.message}`),
+      (cause) => new Error('Could not publish library', { cause })
+    ),
+  )

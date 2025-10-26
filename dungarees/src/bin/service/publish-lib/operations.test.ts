@@ -1,6 +1,6 @@
 import { mtest } from '@dungarees/core/marbles-vitest.ts'
 import { stdout, stderr } from '@dungarees/cli/utils.ts'
-import { createOutDir, readPackageJson, copyFiles } from './operations.ts'
+import { createOutDir, readPackageJson, copyFiles, publishLib } from './operations.ts'
 import { createGetTransformSetContext } from '@dungarees/rxjs/util.ts'
 
 mtest('create output directory', ({expect, coldStepAndClose}) => {
@@ -114,5 +114,24 @@ mtest('copyFiles with error', ({expect, coldError}) => {
   expect(copyFiles$).toBeObservableStepAndError(
     stderr('Error copying files from /src to /out: Permission denied'),
     new Error('Could not copy files'),
+  )
+})
+
+mtest('publishLib with successful exit code', ({expect, coldStepAndClose}) => {
+  const publish$ = publishLib(coldStepAndClose({ exitCode: 0, stderror: undefined }))
+  expect(publish$).toBeObservableStepAndClose(stdout('Published successfully'))
+})
+
+mtest('publishLib with failed exit code', ({expect, coldStepAndClose}) => {
+  const publish$ = publishLib(coldStepAndClose({ exitCode: 1, stderror: 'Some error' }))
+  expect(publish$).toBeObservableStepAndClose(stderr('Publish failed with exit code 1, and error: Some error'))
+})
+
+mtest('publishLib with error', ({expect, coldError}) => {
+  const input$ = coldError(new Error('Network timeout'))
+  const publish$ = publishLib(input$)
+  expect(publish$).toBeObservableStepAndError(
+    stderr('Error publishing library: Network timeout'),
+    new Error('Could not publish library'),
   )
 })

@@ -1,11 +1,10 @@
 import type { StdioMessageFeatureOutput } from "@dungarees/cli/type.ts";
 import type { FileSystem } from "@dungarees/fs/service.ts"
 
-import { concat, map } from 'rxjs'
-import { createOutDir, readPackageJson, copyFiles } from "./operations.ts";
+import { concat } from 'rxjs'
+import { createOutDir, readPackageJson, copyFiles, publishLib } from "./operations.ts";
 import { createFileOperations } from "@dungarees/fs/file-operations.ts";
 import type { ProcessService } from "@dungarees/process/type.ts";
-import {stderr, stdout} from "@dungarees/cli/utils.ts";
 
 export type PublishLib = {
   build: (args: { srcDir: string; outDir: string, version?: string }) =>
@@ -53,14 +52,7 @@ export const createPublishLibService = ({ fileSystem, process }: PublishLibArgs)
 
   const publishSingleLib: PublishLib['publishSingleLib'] = ({ srcDir, outDir, version }) => {
     const { stdio$ } = build({ srcDir, outDir, ...(version ? {version} : {}) })
-    const publish$ = process.run('npm', ['publish', '--access', 'public']).output$.pipe(
-      map(
-        ({exitCode}) =>
-          exitCode === 0 ?
-            stdout(`Published successfully`) :
-            stderr(`Publish failed with exit code ${exitCode}`)
-      ),
-    )
+    const publish$ = publishLib(process.run('npm', ['publish', '--access', 'public']).output$)
 
     return {
       stdio$: concat(stdio$, publish$),
