@@ -169,10 +169,34 @@ const Home = () => {
           Product Leader &amp; Founder
         </Typography>
         <Typography component="p" variant="body">
-          Kinga is a curious product leader and founder of the education company productkind.
-          Kinga is passionate about making product skills accessible to everyone, regardless of
-          background or experience. Through her newsletter, Thoughts by productkind, she shares
-          practical, hands-on advice to help product people grow their skills and mindset.
+          Kinga founded productkind after spending a decade in tech across Denmark, Hungary, and
+          Portugal, with earlier career experience in Singapore, Italy, and Belgium.
+        </Typography>
+        <Typography component="p" variant="body">
+          She started her career in luxury fashion, drawn to the business side of the industry. But
+          the culture didn't fit, it wasn't the kind or caring environment she was looking for.
+          When she moved back to Copenhagen and joined Citrix as an account manager, she found what
+          she'd been missing. The office was full of people from different countries – smart, open,
+          curious – and she fell in love with the tech industry. She wanted to understand how
+          software worked, so she joined a coding bootcamp.
+        </Typography>
+        <Typography component="p" variant="body">
+          As a product manager, she led teams across diverse industries and product types, from
+          ecommerce and sales management platforms to enterprise automation systems. Along the way,
+          she noticed how hard it was to find truly actionable product advice. That's why she
+          started writing her newsletter, Thoughts by productkind, and eventually built Little
+          Parrot to give people the practical skills they need, without the overwhelm.
+        </Typography>
+        <Typography component="p" variant="body">
+          Kinga believes diverse teams with different viewpoints build better products. She's
+          worked with international teams throughout her career and has seen how curiosity and
+          openness create stronger collaboration. She's also passionate about making tech more
+          welcoming to women and non-binary folks through the language we use and the environments
+          we create.
+        </Typography>
+        <Typography component="p" variant="body">
+          She's a certified executive coach, organises ProductTank meetups in Lisbon, and speaks at
+          conferences about AI-assisted development and modern product practices.
         </Typography>
       </div>
       <div className="box kim about-image about-kinga-image">
