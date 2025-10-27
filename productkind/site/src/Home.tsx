@@ -140,19 +140,19 @@ const Home = () => {
           Our Values
         </Typography>
         <Typography component="p" variant="body">
-          <strong>Curiosity</strong> - We make space for questions, experimentation, and learning out loud. Every interaction
+          <strong>Curiosity</strong> – We make space for questions, experimentation, and learning out loud. Every interaction
           includes room for “what are we missing?” or “what else could we try?”
         </Typography>
         <Typography component="p" variant="body">
-          <strong>Kindness</strong> - We celebrate progress, offer support when things feel hard, and assume positive intent
+          <strong>Kindness</strong> – We celebrate progress, offer support when things feel hard, and assume positive intent
           in all our interactions.
         </Typography>
         <Typography component="p" variant="body">
-          <strong>Integrity</strong> - We’re transparent about our decisions and honest when we fall short. We address concerns
+          <strong>Integrity</strong> – We’re transparent about our decisions and honest when we fall short. We address concerns
           directly and do what we say we’ll do.
         </Typography>
         <Typography component="p" variant="body">
-          <strong>Diversity</strong> - We actively seek different perspectives in our content and community, regularly review
+          <strong>Diversity</strong> – We actively seek different perspectives in our content and community, regularly review
           our materials for inclusivity, and welcome feedback on how we can do better.
         </Typography>
       </div>
@@ -166,7 +166,7 @@ const Home = () => {
           Kinga Magyar
         </Typography>
         <Typography component="h5" variant="h4">
-          Product Builder &amp; Coach
+          Product Leader &amp; Founder
         </Typography>
         <Typography component="p" variant="body">
           Kinga is a curious product leader and founder of the education company productkind.
