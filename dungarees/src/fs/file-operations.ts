@@ -76,7 +76,7 @@ export const createFileOperations = (fileSystem: FileSystem): FileOperations => 
       }),
       map(files => files.map(file => ({
         from: file,
-        to: file.replace(source, destination),
+        to: path.join(destination, path.relative(source, file)),
       }))),
       mergeMap(filePairs =>
         forkJoin(

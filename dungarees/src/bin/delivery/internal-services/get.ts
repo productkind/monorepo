@@ -5,6 +5,6 @@ export type DungareesBinInternalServices = {
   publishLib: PublishLib,
 }
 
-export const getInternalServices = ({ fileSystem }: DungareesBinExternalServices) => ({
-  publishLib: createPublishLibService(fileSystem),
+export const getInternalServices = ({ fileSystem, process }: DungareesBinExternalServices) => ({
+  publishLib: createPublishLibService({fileSystem, process}),
 })

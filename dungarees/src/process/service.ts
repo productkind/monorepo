@@ -3,11 +3,11 @@ import { type ProcessService, type Spawn } from './type.ts'
 import { combineLatest, firstValueFrom, map, scan, startWith, Subject } from 'rxjs'
 
 export const createProcessService = (spawn: Spawn): ProcessService => {
-  const run: ProcessService['run'] = (command, args) => {
+  const run: ProcessService['run'] = (command, args, options = {}) => {
     const stdout$ = new Subject<string>()
     const stderror$ = new Subject<string>()
     const exitCode$ = new Subject<number | undefined>()
-    const spawnProcess = spawn(command, args ?? [], {})
+    const spawnProcess = spawn(command, args ?? [], options)
     const accumulateOutput = (acc: string, value: string): string => acc + value
     const output$ = combineLatest([
       stdout$.pipe(startWith(''), scan(accumulateOutput, '')),

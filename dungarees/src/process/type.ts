@@ -7,6 +7,9 @@ export type ProcessService = {
   run: (
     command: string,
     args?: string[],
+    options?: {
+      cwd?: string
+    }
   ) => {
     stdout$: Observable<string>
     stderror$: Observable<string>

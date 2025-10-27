@@ -9,12 +9,12 @@ Given('the Dungarees Binary is published', async function (world) {
 
 When('the user installs the Dungarees Binary', async function (world) {
   const nodeCommandLine = world.get('nodeCommandLine')
-  console.log(await nodeCommandLine.execWithAssertions('npm install -g @dungarees/core --registry http://npmregistry:4873'))
+  await nodeCommandLine.execWithAssertions('npm install -g @dungarees/bin --registry http://npmregistry:4873')
 })
 
 Then('the user should be able to run dungarees', async function (world) {
   const nodeCommandLine = world.get('nodeCommandLine')
-  console.log(await nodeCommandLine.execWithAssertions('dungarees --help'))
+  await nodeCommandLine.execWithAssertions('dungarees --help')
 })
 
 const publishDungareesBinary = async (npmPublisherExec: (command: string, context?: Partial<ExecContext>) => Promise<CommandResult>) => {
