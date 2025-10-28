@@ -1,5 +1,5 @@
-import { parseUrl, stringifyUrl } from './url'
-import type { Url } from './url'
+import { parseUrl, stringifyUrl } from './url.ts'
+import type { Url } from './url.ts'
 
 import { expect, test } from 'vitest'
 

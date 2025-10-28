@@ -1,7 +1,7 @@
 import type { Observable } from 'rxjs'
-import { Expect } from 'rxjs-marbles/expect'
-import { marbles } from 'rxjs-marbles/jest'
-import type { ExpectHelpers, TestObservableLike } from 'rxjs-marbles/types'
+import { Expect } from 'rxjs-marbles/expect.js'
+import { marbles } from 'rxjs-marbles/jest/index.js'
+import type { ExpectHelpers, TestObservableLike } from 'rxjs-marbles/types.js'
 
 type Marbles = typeof marbles
 type MarblesRunner = Parameters<Marbles>[0]

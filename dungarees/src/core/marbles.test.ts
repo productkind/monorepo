@@ -1,4 +1,4 @@
-import { coreMarbles } from '@bobcats-coding/skid/core/marbles'
+import { coreMarbles } from '@dungarees/core/marbles.ts'
 
 import { Subject } from 'rxjs'
 import { test } from 'vitest'

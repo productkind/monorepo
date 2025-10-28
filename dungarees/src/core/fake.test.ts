@@ -1,4 +1,4 @@
-import { addErrorMethodsToFake } from './fake'
+import { addErrorMethodsToFake } from './fake.ts'
 
 import { coreMarbles } from '@dungarees/core/marbles-vitest.ts'
 

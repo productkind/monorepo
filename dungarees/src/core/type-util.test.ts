@@ -27,7 +27,7 @@ import type {
   ToKebabCase,
   TokenNonEmptyString,
   ToSnakeCase,
-} from './type-util'
+} from './type-util.ts'
 
 import { assert } from 'tsafe'
 import type { Equals } from 'tsafe'

@@ -1,10 +1,10 @@
 import type { Observable } from 'rxjs'
-import { _cases, type NamedCase, type UnnamedCase } from 'rxjs-marbles/cases'
-import { type Configuration, defaults } from 'rxjs-marbles/configuration'
-import { type Context } from 'rxjs-marbles/context'
-import { Expect } from 'rxjs-marbles/expect'
-import { configure as _configure, type MarblesFunction } from 'rxjs-marbles/marbles'
-import type { ExpectHelpers, TestObservableLike } from 'rxjs-marbles/types'
+import { _cases, type NamedCase, type UnnamedCase } from 'rxjs-marbles/cases.js'
+import { type Configuration, defaults } from 'rxjs-marbles/configuration.js'
+import { type Context } from 'rxjs-marbles/context.js'
+import { Expect } from 'rxjs-marbles/expect.js'
+import { configure as _configure, type MarblesFunction } from 'rxjs-marbles/marbles.js'
+import type { ExpectHelpers, TestObservableLike } from 'rxjs-marbles/types.js'
 import { describe, expect, test } from 'vitest'
 
 export type CasesFunction = {

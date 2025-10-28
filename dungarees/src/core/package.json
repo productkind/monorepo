@@ -3,10 +3,14 @@
   "engines": {
     "node": ">=22.0.0"
   },
+  "scripts": {
+    "type-check": "tsc --noEmit"
+  },
   "type": "module",
   "devDependencies": {
     "react": "^19.1.0",
     "rxjs-marbles": "^7.0.1",
+    "typescript": "^5.9.3",
     "vitest": "^3.0.2"
   },
   "author": "info@productkind.com",
