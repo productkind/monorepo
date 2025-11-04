@@ -104,7 +104,7 @@
     };
 
     const createColorBox = (hue, saturation, lightness, isMain = false) => {
-      const colorName = `okhsl<br>(${hue}, ${saturation}%, ${lightness}%)`;
+      const colorName = `okhsl<br>(${hue % 360}, ${saturation}%, ${lightness}%)`;
       const hex = convertColor(hue, saturation, lightness);
         return `
           <div class="color-card${isMain ? ' color-main' : ''}">
