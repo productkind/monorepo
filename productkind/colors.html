@@ -34,18 +34,38 @@
       display: block;
       text-align: center;
     }
+
+    .color-primary {
+      outline: 4px dashed black;
+    }
+
+    .main-colors {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .gradient-display {
+      width: 100%;
+      height: 48px;
+      margin: 12px 0;
+      border: 2px solid black;
+    }
   </style>
-  <script src="https://github.com/hsluv/hsluv-javascript/releases/download/v1.0.1/hsluv-1.0.1.min.js"></script>
 </head>
 <body>
   <h1>Colors</h1>
   <div class="colors"></div>
-  <script>
+  <script type="module">
+    import Color from "https://colorjs.io/dist/color.js";
+
+
     const SATURATION_BASE = 100
     const SATURATION_GREY = 5
-    const HUE_BASE = 280
+    const HUE_BASE = 290
     const COLOR_COUNT = 18;
-    const BASE_LIGHTNESS = 53;
+    const BASE_LIGHTNESS = 50;
     const LIGHTNESS_STEP = 10;
     const LIGHTNESS_VARIANT_COUNT = 5;
 
@@ -59,34 +79,40 @@
       ...getLightnessVariants(BASE_LIGHTNESS, -LIGHTNESS_STEP, LIGHTNESS_VARIANT_COUNT)
     ]
 
-    lightnessVariants[0] = 97;
+    lightnessVariants[0] = 95;
+    lightnessVariants[lightnessVariants.length -1] = 5;
 
 
     const root = document.querySelector('.colors');
-    const createColorHue = (hue, saturation) => {
+    const createColorHue = (hue, saturation, isPrimary) => {
       return `
-        <div class="color-hue">
+        <div class="color-hue${isPrimary ? ' color-primary' : ''}">
           ${createColorBoxes(hue, saturation)}
         </div>`;
     };
+
     const createColorBoxes = (hue, saturation) => {
-      return lightnessVariants.map(lightness => {
-        const color = `hsluv<br>(${hue}, ${saturation}%, ${lightness}%)`;
-        const conv = new Hsluv();
-        conv.hsluv_h = hue;
-        conv.hsluv_s = saturation;
-        conv.hsluv_l = lightness;
-        conv.hsluvToRgb();
-        conv.hsluvToHex();
-        const isMain = lightness === BASE_LIGHTNESS;
+      return lightnessVariants.map((lightness, index) => {
+        const isMain = index === 6;
+        return createColorBox(hue, saturation, lightness, isMain);
+      }).join('');
+    };
+
+    const convertColor = (hue, saturation, lightness) => {
+      const color = new Color('okhsl', [hue, saturation / 100, lightness / 100]);
+      return color.toString({ format: 'hex'});
+    };
+
+    const createColorBox = (hue, saturation, lightness, isMain = false) => {
+      const colorName = `okhsl<br>(${hue}, ${saturation}%, ${lightness}%)`;
+      const hex = convertColor(hue, saturation, lightness);
         return `
           <div class="color-card${isMain ? ' color-main' : ''}">
-            <div class="color-box" style="background-color: ${conv.hex};"></div>
-            <code class="color-code">${color}</code>
-            <code class="color-code">${conv.hex}</code>
+            <div class="color-box" style="background-color: ${hex};"></div>
+            <code class="color-code">${colorName}</code>
+            <code class="color-code">${hex}</code>
           </div>
         `;
-      }).join('');
     };
 
     const hues = Array.from({ length: COLOR_COUNT }, (_, i) => {
@@ -94,8 +120,88 @@
       return (HUE_BASE + i * hueStep) % 360;
     });
 
-    hues.forEach(hue => {
-      root.innerHTML += createColorHue(hue, SATURATION_BASE);
+    const secondaryColorStep = 100;
+
+    const productkindGradentStep = 20;
+
+    const productkindGradientSteps = [
+      ...Array.from({ length: 6 }, (_, i) => HUE_BASE + (i + 1) * productkindGradentStep).reverse(),
+      HUE_BASE,
+      ...Array.from({ length: 6 }, (_, i) => HUE_BASE - (i + 1) * productkindGradentStep),
+    ]
+
+    const productkindGradient = productkindGradientSteps.reduce((acc, hue) => {
+      return acc + createColorBox(hue, SATURATION_BASE, BASE_LIGHTNESS + 3 * LIGHTNESS_STEP);
+    }, '');
+
+    const productkindGradientHexes = productkindGradientSteps.map((hue) => {
+      const hex = convertColor(hue, SATURATION_BASE, BASE_LIGHTNESS + 3 * LIGHTNESS_STEP);
+      return hex;
+    })
+
+    const productkindGradientCss = `linear-gradient(120deg, ${productkindGradientHexes.join(',')})`;
+
+    const littleParrotGradientSteps = [
+      [HUE_BASE + 180 - 40, SATURATION_BASE, BASE_LIGHTNESS + 2 * LIGHTNESS_STEP],
+      [HUE_BASE + 180 - 20, SATURATION_BASE, BASE_LIGHTNESS + 3 * LIGHTNESS_STEP],
+      [HUE_BASE + 180, SATURATION_BASE, 95],
+      [HUE_BASE + 180 + 20, SATURATION_BASE, BASE_LIGHTNESS + 4 * LIGHTNESS_STEP],
+      [HUE_BASE + 180 + 40, SATURATION_BASE, BASE_LIGHTNESS + 3 * LIGHTNESS_STEP],
+    ]
+
+    const littleParrotGradient = littleParrotGradientSteps.reduce((acc, [hue, saturation, lightness]) => {
+      return acc + createColorBox(hue, saturation, lightness);
+    }, '');
+
+    const littleParrotGradientHexes = littleParrotGradientSteps.map(([hue, saturation, lightness]) => {
+      const hex = convertColor(hue, saturation, lightness);
+      return hex;
+    })
+
+    const littleParrotGradientCss = `linear-gradient(120deg, ${littleParrotGradientHexes.join(',')})`;
+
+    root.innerHTML = `
+      <h2>Main Colors</h2>
+      <h3>productkind</h3>
+      <div class="main-colors">
+        ${createColorBox(HUE_BASE, SATURATION_BASE, BASE_LIGHTNESS - LIGHTNESS_STEP)}
+        ${createColorBox(HUE_BASE, SATURATION_BASE, 100)}
+        ${createColorBox(HUE_BASE, SATURATION_BASE, 5)}
+        ${createColorBox(HUE_BASE + secondaryColorStep, SATURATION_BASE, BASE_LIGHTNESS + 3 * LIGHTNESS_STEP)}
+        ${createColorBox(HUE_BASE - secondaryColorStep, SATURATION_BASE, BASE_LIGHTNESS + 3 * LIGHTNESS_STEP)}
+      </div>
+      <h4>gradient</h4>
+      <div class="main-colors">
+        ${productkindGradient}
+      </div>
+      <div>
+        <div class="gradient-display" style="background: ${productkindGradientCss}"></div>
+        <code class="color-code">${productkindGradientCss}</code>
+      </div>
+      <h3>Little Parrot</h3>
+      <div class="main-colors">
+        ${createColorBox(HUE_BASE, SATURATION_BASE, BASE_LIGHTNESS - LIGHTNESS_STEP)}
+        ${createColorBox(HUE_BASE, SATURATION_BASE, 100)}
+        ${createColorBox(HUE_BASE, SATURATION_BASE, 5)}
+        ${createColorBox(HUE_BASE + 180 - 40, SATURATION_BASE, BASE_LIGHTNESS + 3 * LIGHTNESS_STEP)}
+        ${createColorBox(HUE_BASE + 180 + 40, SATURATION_BASE, BASE_LIGHTNESS + 3 * LIGHTNESS_STEP)}
+        ${createColorBox(HUE_BASE, SATURATION_BASE, BASE_LIGHTNESS - 3 * LIGHTNESS_STEP)}
+        ${createColorBox(HUE_BASE + 180, SATURATION_BASE, 95)}
+      </div>
+      <h4>gradient</h4>
+      <div class="main-colors">
+        ${littleParrotGradient}
+      </div>
+      <div>
+        <div class="gradient-display" style="background: ${littleParrotGradientCss}"></div>
+        <code class="color-code">${littleParrotGradientCss}</code>
+      </div>
+
+      <h2>All Colors</h2>
+    `;
+
+    hues.forEach((hue, index) => {
+      root.innerHTML += createColorHue(hue, SATURATION_BASE, index % 2 === 0);
     });
     root.innerHTML += createColorHue(HUE_BASE, SATURATION_GREY);
   </script>

@@ -9,6 +9,9 @@
    id="svg1"
    inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
    sodipodi:docname="logo.svg"
+   inkscape:export-filename="logo.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -32,37 +35,12 @@
      inkscape:window-x="0"
      inkscape:window-y="32"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="g2" />
   <defs
      id="defs1">
     <linearGradient
-       id="linearGradient57"
        inkscape:collect="always"
-       inkscape:label="ez">
-      <stop
-         style="stop-color:#00e5f0;stop-opacity:1;"
-         offset="0.20183486"
-         id="stop53" />
-      <stop
-         style="stop-color:#a7d4ff;stop-opacity:1;"
-         offset="0.34709349"
-         id="stop54" />
-      <stop
-         style="stop-color:#dac5ff;stop-opacity:1;"
-         offset="0.4966068"
-         id="stop55" />
-      <stop
-         style="stop-color:#ffb9ee;stop-opacity:1;"
-         offset="0.64847851"
-         id="stop56" />
-      <stop
-         style="stop-color:#ffbeca;stop-opacity:1;"
-         offset="0.80035025"
-         id="stop57" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient57"
+       xlink:href="#linearGradient253"
        id="linearGradient4-2"
        gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(3.7795276,0,0,3.7795276,438.9826,-1186.0465)"
@@ -70,6 +48,63 @@
        y1="512.28522"
        x2="92.345604"
        y2="340.58286" />
+    <linearGradient
+       id="linearGradient253"
+       inkscape:collect="always"
+       inkscape:label="ez">
+      <stop
+         style="stop-color:#00e8b6;stop-opacity:1;"
+         offset="0"
+         id="stop241" />
+      <stop
+         style="stop-color:#00e4db;stop-opacity:1;"
+         offset="0.09633028"
+         id="stop242" />
+      <stop
+         style="stop-color:#00dffa;stop-opacity:1;"
+         offset="0.2"
+         id="stop243" />
+      <stop
+         style="stop-color:#77d4ff;stop-opacity:1;"
+         offset="0.27247897"
+         id="stop244" />
+      <stop
+         style="stop-color:#9accff;stop-opacity:1;"
+         offset="0.34938708"
+         id="stop245" />
+      <stop
+         style="stop-color:#b1c5ff;stop-opacity:1;"
+         offset="0.42299694"
+         id="stop246" />
+      <stop
+         style="stop-color:#c5bdff;stop-opacity:1;"
+         offset="0.4966068"
+         id="stop247" />
+      <stop
+         style="stop-color:#deb2ff;stop-opacity:1;"
+         offset="0.57254267"
+         id="stop248" />
+      <stop
+         style="stop-color:#ff9ff7;stop-opacity:1;"
+         offset="0.64847851"
+         id="stop249" />
+      <stop
+         style="stop-color:#ffa8d1;stop-opacity:1;"
+         offset="0.72441435"
+         id="stop250" />
+      <stop
+         style="stop-color:#ffacb8;stop-opacity:1;"
+         offset="0.80035025"
+         id="stop251" />
+      <stop
+         style="stop-color:#ffafa2;stop-opacity:1;"
+         offset="0.90137613"
+         id="stop252" />
+      <stop
+         style="stop-color:#ffb288;stop-opacity:1;"
+         offset="0.99770641"
+         id="stop253" />
+    </linearGradient>
   </defs>
   <g
      inkscape:label="Layer 1"
