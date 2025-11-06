@@ -21,7 +21,7 @@ export const createTranspileService = (fs: NodeFs): Transpile => {
     output: string;
     type?: string;
   }): Promise<void> => {
-    // 1) Read the source
+    // 1) Read the source using the provided fs
     const source = await fsp.readFile(input, "utf8");
 
     // 2) Setup compiler options
@@ -39,26 +39,36 @@ export const createTranspileService = (fs: NodeFs): Transpile => {
       skipDefaultLibCheck: true,
     };
 
-    // 3) Create an in-memory host for the compiler
-    const host = ts.createCompilerHost(compilerOptions);
-    const originalGetSourceFile = host.getSourceFile;
-
-    host.getSourceFile = (fileName, languageVersion, onError, shouldCreateNewSourceFile) => {
-      if (fileName === input) {
-        return ts.createSourceFile(fileName, source, languageVersion, true);
-      }
-      return originalGetSourceFile(fileName, languageVersion, onError, shouldCreateNewSourceFile);
+    // 3) Create a custom compiler host that uses the provided fs
+    const host: ts.CompilerHost = {
+      getSourceFile: (fileName, languageVersion) => {
+        if (fileName === input) {
+          return ts.createSourceFile(fileName, source, languageVersion, true);
+        }
+        // For any other files (like lib.d.ts), return undefined
+        // since we're using noResolve
+        return undefined;
+      },
+      getDefaultLibFileName: () => "lib.d.ts",
+      writeFile: () => {}, // We'll handle writing ourselves
+      getCurrentDirectory: () => path.dirname(input),
+      getDirectories: () => [],
+      fileExists: (fileName) => fileName === input,
+      readFile: (fileName) => (fileName === input ? source : undefined),
+      getCanonicalFileName: (fileName) => fileName,
+      useCaseSensitiveFileNames: () => true,
+      getNewLine: () => "\n",
     };
 
     // Store output in memory
     const outputs: Map<string, string> = new Map();
-    host.writeFile = (fileName, data) => {
+    const writeFile = (fileName: string, data: string) => {
       outputs.set(fileName, data);
     };
 
     // 4) Create program and emit
     const program = ts.createProgram([input], compilerOptions, host);
-    const emitResult = program.emit();
+    const emitResult = program.emit(undefined, writeFile);
 
     // 5) Check for syntax diagnostics only (skip semantic checks)
     const sourceFile = program.getSourceFile(input);
@@ -71,14 +81,14 @@ export const createTranspileService = (fs: NodeFs): Transpile => {
         syntacticDiagnostics,
         {
           getCanonicalFileName: (f) => f,
-          getCurrentDirectory: () => process.cwd(),
+          getCurrentDirectory: () => path.dirname(input),
           getNewLine: () => "\n",
         }
       );
       throw new Error(`TypeScript transpile error:\n${formatted}`);
     }
 
-    // 6) Write outputs to disk
+    // 6) Write outputs using the provided fs
     await fsp.mkdir(path.dirname(output), { recursive: true });
 
     // Write JS output
