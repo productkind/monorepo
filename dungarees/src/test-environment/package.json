@@ -1,7 +1,10 @@
 {
   "name": "@dungarees/test-environment",
   "engines": {
-    "node": ">=22.0.0"
+    "node": ">=25.0.0"
+  },
+  "scripts": {
+    "type-check": "tsc --noEmit"
   },
   "type": "module",
   "dependencies": {

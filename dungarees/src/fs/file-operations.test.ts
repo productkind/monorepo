@@ -1,5 +1,5 @@
-import {createFakeFileSystem} from './fake'
-import { createFileOperations } from './file-operations'
+import {createFakeFileSystem} from './fake.ts'
+import { createFileOperations } from './file-operations.ts'
 import { lastValueFrom} from 'rxjs'
 import { expect, test } from 'vitest'
 import { map } from 'rxjs/operators'

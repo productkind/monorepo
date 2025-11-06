@@ -1,8 +1,10 @@
 {
   "name": "@dungarees/bin",
-  "version": "0.0.1",
   "engines": {
-    "node": ">=22.0.0"
+    "node": ">=25.0.0"
+  },
+  "scripts": {
+    "type-check": "tsc --noEmit"
   },
   "type": "module",
   "dependencies": {
@@ -10,6 +12,7 @@
     "yargs": "^18.0.0"
   },
   "devDependencies": {
+    "typescript": "^5.9.3",
     "vitest": "^3.0.2"
   },
   "bin": {

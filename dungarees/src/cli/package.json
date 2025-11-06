@@ -1,11 +1,18 @@
 {
   "name": "@dungarees/cli",
   "engines": {
-    "node": ">=22.0.0"
+    "node": ">=25.0.0"
+  },
+  "scripts": {
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@dungarees/core": "*",
     "rxjs": "^7.8.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vitest": "^3.0.2"
   },
   "type": "module",
   "author": "info@productkind.com",
