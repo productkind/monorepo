@@ -1,30 +1,13 @@
 import type {NodeFs} from "@dungarees/fs/service";
 import type {Observable} from "rxjs";
-import * as rollup from "rollup";
 import {asyncFunctionToObservable} from "@dungarees/rxjs/util";
-import typescript from '@rollup/plugin-typescript'
-import { build } from 'vite'
 import path from "node:path";
 import * as ts from "typescript";
 
 
 type Transpile = {
-  transpile(options: { input: string; output: string }): Observable<void>;
+  transpile(options: { input: string; output: string; type?: string }): Observable<void>;
 }
-
-		/*
-		const bundle = await rollup.rollup({
-			input: input,
-			fs: fs.promises,
-			plugins: [typescript()],
-		})
-
-		await bundle.write({
-			file: output,
-			format: 'esm'
-		})
-    await bundle.close();
-		*/
 
 export const createTranspileService = (fs: NodeFs): Transpile => {
   const fsp = fs.promises;
@@ -32,36 +15,60 @@ export const createTranspileService = (fs: NodeFs): Transpile => {
   const transpileAsync = async ({
     input,
     output,
+    type,
   }: {
     input: string;
     output: string;
+    type?: string;
   }): Promise<void> => {
     // 1) Read the source
     const source = await fsp.readFile(input, "utf8");
 
-    // 2) Transpile with TS (no typechecking/bundling; just strip types -> ESM)
+    // 2) Setup compiler options
     const compilerOptions: ts.CompilerOptions = {
       target: ts.ScriptTarget.ES2020,
       module: ts.ModuleKind.ESNext,
-      jsx: ts.JsxEmit.ReactJSX, // harmless for .ts; useful if you later pass .tsx
-      declaration: false,
+      jsx: ts.JsxEmit.ReactJSX,
+      declaration: !!type, // Generate declarations if type path is provided
       sourceMap: false,
       removeComments: false,
       esModuleInterop: true,
       moduleResolution: ts.ModuleResolutionKind.Node10,
-      // keep exports as-is; no bundling/renaming occurs with TS alone
+      noResolve: true, // Don't resolve module imports
+      skipLibCheck: true,
+      skipDefaultLibCheck: true,
     };
 
-    const result = ts.transpileModule(source, {
-      compilerOptions,
-      fileName: input,
-      reportDiagnostics: true,
-    });
+    // 3) Create an in-memory host for the compiler
+    const host = ts.createCompilerHost(compilerOptions);
+    const originalGetSourceFile = host.getSourceFile;
 
-    // 3) Fail on diagnostics (optional but helpful)
-    if (result.diagnostics?.length) {
+    host.getSourceFile = (fileName, languageVersion, onError, shouldCreateNewSourceFile) => {
+      if (fileName === input) {
+        return ts.createSourceFile(fileName, source, languageVersion, true);
+      }
+      return originalGetSourceFile(fileName, languageVersion, onError, shouldCreateNewSourceFile);
+    };
+
+    // Store output in memory
+    const outputs: Map<string, string> = new Map();
+    host.writeFile = (fileName, data) => {
+      outputs.set(fileName, data);
+    };
+
+    // 4) Create program and emit
+    const program = ts.createProgram([input], compilerOptions, host);
+    const emitResult = program.emit();
+
+    // 5) Check for syntax diagnostics only (skip semantic checks)
+    const sourceFile = program.getSourceFile(input);
+    const syntacticDiagnostics = sourceFile
+      ? program.getSyntacticDiagnostics(sourceFile)
+      : [];
+
+    if (syntacticDiagnostics.length > 0) {
       const formatted = ts.formatDiagnosticsWithColorAndContext(
-        result.diagnostics,
+        syntacticDiagnostics,
         {
           getCanonicalFileName: (f) => f,
           getCurrentDirectory: () => process.cwd(),
@@ -71,42 +78,24 @@ export const createTranspileService = (fs: NodeFs): Transpile => {
       throw new Error(`TypeScript transpile error:\n${formatted}`);
     }
 
-    // 4) Write output exactly where requested
+    // 6) Write outputs to disk
     await fsp.mkdir(path.dirname(output), { recursive: true });
-    await fsp.writeFile(output, result.outputText, "utf8");
-  }
-  /*
-  const transpileAsync = async ({ input, output }: { input: string; output: string }): Promise<void> => {
-    const viteConfig = {
-      logLevel: 'silent' as const,
-      build: {
-        write: false,
-        emptyOutDir: false,
-        lib: { entry: input, formats: ['es' as const], fileName: () => 'bundle' },
-        rollupOptions: {
-          output: {
-            format: 'es' as const,
-            inlineDynamicImports: true,
-            entryFileNames: 'bundle.js',
-          },
-        },
-      },
+
+    // Write JS output
+    const jsOutput = outputs.get(input.replace(/\.ts$/, '.js'));
+    if (jsOutput) {
+      await fsp.writeFile(output, jsOutput, "utf8");
     }
 
-    const res = await build(viteConfig)
-    const outputs = Array.isArray(res) ? res : [res]
-
-    const first = outputs[0]
-    if (!('output' in first)) throw new Error('Unexpected Vite build output')
-
-    const entryChunk = first.output.find(
-      (o) => o.type === 'chunk' && (o as any).isEntry
-    ) as import('rollup').OutputChunk | undefined
-
-    if (!entryChunk) throw new Error('No entry chunk produced')
-    await fs.promises.mkdir(path.dirname(output), { recursive: true })
-    await fs.promises.writeFile(output, entryChunk.code, 'utf8')
-  }*/
+    // Write declaration file if requested
+    if (type) {
+      await fsp.mkdir(path.dirname(type), { recursive: true });
+      const dtsOutput = outputs.get(input.replace(/\.ts$/, '.d.ts'));
+      if (dtsOutput) {
+        await fsp.writeFile(type, dtsOutput, "utf8");
+      }
+    }
+  }
 
   return {
     transpile: asyncFunctionToObservable(transpileAsync),
