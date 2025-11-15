@@ -135,14 +135,27 @@ The model pays most attention to the most recent few thousand tokens, roughly fi
 This is why, in long conversations, it can seem like the AI forgets earlier details.
 `
 
+const video5 = `
+Until recently, building applications was much harder. Now, with AI app builders such as Lovable,
+anyone can get started. Still, it helps to understand the basic building blocks of a typical
+application. By learning key terms from design and software development, you can become better at
+prompting these AI tools. In this micro-course, we’ll focus on demystifying the common terms used
+when building software, so you can grow your vocabulary and confidence.
+
+By the end, you’ll be able to:
+ - Understand key terms used in app design and development
+ - Recognise these terms in AI app builders
+ - Use them to create clearer prompts for AI app builders
+`
+
 const TEXT_TO_GENERATE = video2
 const MODEL_ID = 'eleven_multilingual_v2'; //'eleven_v3_turbo'; // The v3 model as requested
-const OUTPUT_FILE_NAME = 'generated_speech-video2-elizabeth.wav';
+const OUTPUT_FILE_NAME = 'generated_speech-video5-elizabeth.wav';
 const OUTPUT_FILE_PATH = OUTPUT_FILE_NAME // Saves in the same directory as the script
 
 
 // Call the function to generate speech and handle the returned alignment data
-generateSpeech(TEXT_TO_GENERATE, VOICE_ID, MODEL_ID, ELEVENLABS_API_KEY, OUTPUT_FILE_PATH, 'alignment-video2-elizabeth.json')
+generateSpeech(TEXT_TO_GENERATE, VOICE_ID, MODEL_ID, ELEVENLABS_API_KEY, OUTPUT_FILE_PATH, 'alignment-video5-elizabeth.json')
     .then(alignment => {
         if (alignment) {
             console.log('Successfully retrieved speech and timestamp data.');

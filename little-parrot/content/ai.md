@@ -173,3 +173,22 @@ pizza
 ### Video
 
 what is a prompt and what is prompt engineering
+
+
+
+
+### Motivational video
+
+
+Until recently, building applications was much harder. Now, with AI app builders such as Lovable,
+anyone can get started. Still, it helps to understand the basic building blocks of a typical
+application. By learning key terms from design and software development, you can become better at
+prompting these AI tools. In this micro-course, we’ll focus on demystifying the common terms used
+when building software, so you can grow your vocabulary and confidence.
+
+By the end, you’ll be able to:
+ - Understand key terms used in app design and development
+ - Recognise these terms in AI app builders
+ - Use them to create clearer prompts for AI app builders
+
+

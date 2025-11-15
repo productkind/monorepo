@@ -93,7 +93,7 @@
        inkscape:collect="always"
        inkscape:label="LP">
       <stop
-         style="stop-color:#ff8535;stop-opacity:1;"
+         style="stop-color:#eb9600;stop-opacity:1;"
          offset="0.05045871"
          id="stop215-1" />
       <stop
@@ -109,7 +109,7 @@
          offset="0.70326835"
          id="stop218-5" />
       <stop
-         style="stop-color:#00e8b6;stop-opacity:1;"
+         style="stop-color:#00ed70;stop-opacity:1;"
          offset="0.94954127"
          id="stop219-7" />
     </linearGradient>
@@ -186,15 +186,15 @@
            inkscape:label="LittleParrotText"><tspan
              x="17.849133"
              y="118.99422"
-             id="tspan2"><tspan
+             id="tspan6"><tspan
                style="font-weight:bold;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold'"
-               id="tspan1">Little
+               id="tspan5">Little
 </tspan></tspan><tspan
              x="17.849133"
              y="149.94428"
-             id="tspan4"><tspan
+             id="tspan8"><tspan
                style="font-weight:bold;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold'"
-               id="tspan3">Parrot</tspan></tspan></text>
+               id="tspan7">Parrot</tspan></tspan></text>
         <ellipse
            style="display:none;fill:#230156;fill-opacity:1;stroke:none;stroke-width:6"
            id="path1-4"
