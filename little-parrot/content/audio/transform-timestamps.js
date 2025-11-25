@@ -67,8 +67,8 @@ function processCharacterData(data) {
 
 // --- Main execution block ---
 async function main() {
-    const inputFilePath = 'alignment-video2-elizabeth.json';
-    const outputFilePath = 'output-video2-elizabeth.json';
+    const inputFilePath = 'alignment-video7-elizabeth.json';
+    const outputFilePath = 'output-video7-elizabeth.json';
 
     try {
         // 1. Read the input JSON file

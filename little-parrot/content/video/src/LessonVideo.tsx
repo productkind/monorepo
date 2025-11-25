@@ -13,6 +13,7 @@ import {
 import {Gif} from '@remotion/gif';
 import { loadFont as loadSpaceMono } from '@remotion/google-fonts/SpaceMono';
 import { loadFont as loadMontserrat } from '@remotion/google-fonts/Lexend';
+import { loadFont as loadInter } from '@remotion/google-fonts/Inter';
 import './styles.css';
 import { PropsWithChildren } from "react";
 import { z } from "zod";
@@ -21,9 +22,12 @@ import {RemotionRiveCanvas} from "@remotion/rive";
 
 const {fontFamily: spaceMonoFontFamily} = loadSpaceMono();
 const {fontFamily: montserratFontFamily} = loadMontserrat();
+const {fontFamily: interFontFamily} = loadInter();
 
-const DARK_PURPLE = '#230156'
-const BG_CLASS = 'bg-[#0e0023]'
+const DARK_PURPLE = '#1a0044'
+const BLACK = '#080809'
+const BG_CLASS = 'bg-[#1a0044]'
+const CURRENT_TEXT_COLOR = '#ffb65b'
 
 export const CaptionsSchema = z.array(z.object({
   text: z.string(),
@@ -39,6 +43,161 @@ export const LessonVideoPropsSchema = z.object({
   endDuration: z.number().default(60),
   allDuration: z.number().default(100),
 })
+
+export const LessonVideo7: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({captions, titleDuration}) => {
+  return (
+    <AbsoluteFill className={BG_CLASS}>
+      <Series>
+        <Series.Sequence durationInFrames={titleDuration}>
+          <FullScreenText>
+            <TypingText delay={0}>Micro Course</TypingText>
+            <br/>
+            <br/>
+            <TypingText delay={20}>Overview</TypingText>
+          </FullScreenText>
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={68}>
+          <FullScreenImage src={staticFile('video-7/section1-start.gif')} fit="contain"/>
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={78}>
+          <FullScreenImage src={staticFile('video-7/section2-where.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={52}>
+          <FullScreenImage src={staticFile('video-7/section3-micro.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={74}>
+          <FullScreenImage src={staticFile('video-7/section4-solve.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={66}>
+          <FullScreenImage src={staticFile('video-7/section5-understand.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={144}>
+          <FullScreenImage src={staticFile('video-7/section6-storyboard.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={135}>
+          <FullScreenImage src={staticFile('video-7/section7-mapping.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={84}>
+          <FullScreenImage src={staticFile('video-7/section8-shape.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={116}>
+          <FullScreenImage src={staticFile('video-7/section9-prompt.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={103}>
+          <FullScreenImage src={staticFile('video-7/section10-ready.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={95}>
+          <FullScreenImage src={staticFile('video-7/section11-plan.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={181}>
+          <FullScreenImage src={staticFile('video-7/section12-step.gif')} fit="contain" />
+        </Series.Sequence>
+      </Series>
+      <Sequence from={titleDuration}>
+        <Captions captions={captions} />
+      </Sequence>
+      <Sequence from={titleDuration}>
+        <Audio src={staticFile('video-7/speech.wav')} />
+      </Sequence>
+    </AbsoluteFill>
+  )
+}
+
+export const LessonVideo6: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({captions, titleDuration}) => {
+  return (
+    <AbsoluteFill className={BG_CLASS}>
+      <Series>
+        <Series.Sequence durationInFrames={titleDuration}>
+          <FullScreenText>
+            <TypingText delay={0}>Box Model</TypingText>
+          </FullScreenText>
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={840}>
+          <AbsoluteFill>
+            <RemotionRiveCanvas src={staticFile('video-6/box-model.riv')} />
+          </AbsoluteFill>
+        </Series.Sequence>
+      </Series>
+      <Sequence from={titleDuration}>
+        <Captions captions={captions} />
+      </Sequence>
+      <Sequence from={titleDuration}>
+        <Audio src={staticFile('video-6/speech.wav')} />
+      </Sequence>
+    </AbsoluteFill>
+  )
+}
+
+export const LessonVideo5: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({captions, titleDuration}) => {
+  return (
+    <AbsoluteFill className={BG_CLASS}>
+      <Series>
+        <Series.Sequence durationInFrames={titleDuration}>
+          <FullScreenText>
+            <TypingText delay={0}>Micro Course</TypingText>
+            <br/>
+            <br/>
+            <TypingText delay={20}>Overview</TypingText>
+          </FullScreenText>
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={108}>
+          <FullScreenImage src={staticFile('video-5/section1-beaver.gif')} fit="contain"/>
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={54}>
+          <FullScreenImage src={staticFile('video-5/section2-robot.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={34}>
+          <FullScreenImage src={staticFile('video-5/section3-lovable.gif')} fit="contain" color="#ffffff" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={50}>
+          <FullScreenImage src={staticFile('video-5/section4-start-button.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={52}>
+          <FullScreenImage src={staticFile('video-5/section5-understand.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={88}>
+          <FullScreenImage src={staticFile('video-5/section6-building-block.gif')} fit="contain" color="#8dff83" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={110}>
+          <FullScreenImage src={staticFile('video-5/section7-learning.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={96}>
+          <FullScreenImage src={staticFile('video-5/section8-typing.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={42}>
+          <FullScreenImage src={staticFile('video-5/section9-micro-pig.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={85}>
+          <FullScreenImage src={staticFile('video-5/section10-crystal-ball.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={45}>
+          <FullScreenImage src={staticFile('video-5/section11-building-software.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={88}>
+          <FullScreenImage src={staticFile('video-5/section12-confidence.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={54}>
+          <FullScreenImage src={staticFile('video-5/section13-we-can.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={107}>
+          <FullScreenImage src={staticFile('video-5/section14-cat-turn.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={84}>
+          <FullScreenImage src={staticFile('video-5/section15-leo-point.gif')} fit="contain" color="#000000" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={200}>
+          <FullScreenImage src={staticFile('video-5/section16-type.gif')} fit="contain" />
+        </Series.Sequence>
+      </Series>
+      <Sequence from={titleDuration}>
+        <Captions captions={captions} />
+      </Sequence>
+      <Sequence from={titleDuration}>
+        <Audio src={staticFile('video-5/speech.wav')} />
+      </Sequence>
+    </AbsoluteFill>
+  )
+}
 
 export const LessonVideo4: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({captions, titleDuration}) => {
   return (
@@ -359,8 +518,8 @@ const Captions: React.FC<{captions: Captions}> = ({captions}) => {
             const isCurrentWord = word.start <= frame && word.end >= frame
             return (
               <span key={index} className="inline-block m-4 line-height-1" style={{
-                backgroundColor: isCurrentWord ? '#fdb226' : '#fff',
-                color: DARK_PURPLE,
+                backgroundColor: isCurrentWord ? CURRENT_TEXT_COLOR : '#fff',
+                color: BLACK,
                 height: '112px',
               }}>
                 {word.text}
@@ -517,12 +676,12 @@ const FullScreenText: React.FC<PropsWithChildren> = ({ children }) => {
       <Img src={staticFile('logo.png')} className="absolute top-10 left-10 w-60" />
       <div className="flex flex-col items-center justify-center h-full w-full">
         <div className="font-black text-9xl text-center w-full" style={{
-          color: DARK_PURPLE,
+          color: BLACK,
         }}>
           {children}
         </div>
       </div>
-      <Img src={staticFile('parrot.png')} className="absolute bottom-10 right-10 w-240" style={{
+      <Img src={staticFile('parrot.png')} className="absolute bottom-10 right-75 w-100" style={{
         rotate: `${rotation}deg`,
         transformOrigin: 'bottom',
         translate: `${translate}px 0`,
@@ -547,7 +706,7 @@ const FullScreenImage: React.FC<{src: string, offset?: number, fit?: 'cover' | '
   src,
   offset = 0,
   fit = 'cover',
-  color = '#0e0023',
+  color = DARK_PURPLE,
   scale = 1,
 }) => {
   const isGif = src.endsWith('.gif')
@@ -584,7 +743,7 @@ const FullScreenImage: React.FC<{src: string, offset?: number, fit?: 'cover' | '
 
 const FullScreenEnd: React.FC = () => {
   return (
-    <AbsoluteFill className="bg-[#230156]">
+    <AbsoluteFill className={BG_CLASS}>
       <div className="flex flex-col items-center justify-center h-full w-full">
         <Img src={staticFile('logo.png')} className="w-120" />
       </div>

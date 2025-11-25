@@ -1,0 +1,542 @@
+[
+  {
+    "text": "When",
+    "start": 0.046,
+    "end": 0.209
+  },
+  {
+    "text": "you",
+    "start": 0.255,
+    "end": 0.325
+  },
+  {
+    "text": "start",
+    "start": 0.395,
+    "end": 0.615
+  },
+  {
+    "text": "working",
+    "start": 0.662,
+    "end": 0.987
+  },
+  {
+    "text": "on",
+    "start": 1.057,
+    "end": 1.138
+  },
+  {
+    "text": "an",
+    "start": 1.184,
+    "end": 1.254
+  },
+  {
+    "text": "app",
+    "start": 1.3,
+    "end": 1.463
+  },
+  {
+    "text": "idea,",
+    "start": 1.544,
+    "end": 2.067
+  },
+  {
+    "text": "it",
+    "start": 2.31,
+    "end": 2.426
+  },
+  {
+    "text": "can",
+    "start": 2.461,
+    "end": 2.577
+  },
+  {
+    "text": "be",
+    "start": 2.624,
+    "end": 2.717
+  },
+  {
+    "text": "hard",
+    "start": 2.786,
+    "end": 3.042
+  },
+  {
+    "text": "to",
+    "start": 3.088,
+    "end": 3.146
+  },
+  {
+    "text": "know",
+    "start": 3.204,
+    "end": 3.355
+  },
+  {
+    "text": "where",
+    "start": 3.413,
+    "end": 3.646
+  },
+  {
+    "text": "to",
+    "start": 3.692,
+    "end": 3.762
+  },
+  {
+    "text": "begin.",
+    "start": 3.831,
+    "end": 4.4
+  },
+  {
+    "text": "In",
+    "start": 5.004,
+    "end": 5.155
+  },
+  {
+    "text": "this",
+    "start": 5.213,
+    "end": 5.399
+  },
+  {
+    "text": "micro-course,",
+    "start": 5.492,
+    "end": 6.444
+  },
+  {
+    "text": "you’ll",
+    "start": 6.653,
+    "end": 6.873
+  },
+  {
+    "text": "define",
+    "start": 6.908,
+    "end": 7.256
+  },
+  {
+    "text": "the",
+    "start": 7.291,
+    "end": 7.361
+  },
+  {
+    "text": "problem",
+    "start": 7.43,
+    "end": 7.848
+  },
+  {
+    "text": "you",
+    "start": 7.918,
+    "end": 8.011
+  },
+  {
+    "text": "want",
+    "start": 8.069,
+    "end": 8.255
+  },
+  {
+    "text": "to",
+    "start": 8.29,
+    "end": 8.359
+  },
+  {
+    "text": "solve,",
+    "start": 8.44,
+    "end": 8.975
+  },
+  {
+    "text": "understand",
+    "start": 9.358,
+    "end": 9.892
+  },
+  {
+    "text": "your",
+    "start": 9.95,
+    "end": 10.077
+  },
+  {
+    "text": "target",
+    "start": 10.124,
+    "end": 10.507
+  },
+  {
+    "text": "user,",
+    "start": 10.588,
+    "end": 11.076
+  },
+  {
+    "text": "and",
+    "start": 11.285,
+    "end": 11.459
+  },
+  {
+    "text": "sketch",
+    "start": 11.54,
+    "end": 11.912
+  },
+  {
+    "text": "a",
+    "start": 11.958,
+    "end": 11.981
+  },
+  {
+    "text": "simple",
+    "start": 12.063,
+    "end": 12.434
+  },
+  {
+    "text": "storyboard",
+    "start": 12.469,
+    "end": 13.131
+  },
+  {
+    "text": "that",
+    "start": 13.305,
+    "end": 13.502
+  },
+  {
+    "text": "shows",
+    "start": 13.549,
+    "end": 13.897
+  },
+  {
+    "text": "how",
+    "start": 13.978,
+    "end": 14.164
+  },
+  {
+    "text": "your",
+    "start": 14.234,
+    "end": 14.362
+  },
+  {
+    "text": "product",
+    "start": 14.42,
+    "end": 14.826
+  },
+  {
+    "text": "helps",
+    "start": 14.884,
+    "end": 15.163
+  },
+  {
+    "text": "them.",
+    "start": 15.209,
+    "end": 15.511
+  },
+  {
+    "text": "You’ll",
+    "start": 16.115,
+    "end": 16.359
+  },
+  {
+    "text": "then",
+    "start": 16.405,
+    "end": 16.579
+  },
+  {
+    "text": "break",
+    "start": 16.672,
+    "end": 16.939
+  },
+  {
+    "text": "your",
+    "start": 16.997,
+    "end": 17.113
+  },
+  {
+    "text": "idea",
+    "start": 17.171,
+    "end": 17.473
+  },
+  {
+    "text": "into",
+    "start": 17.543,
+    "end": 17.729
+  },
+  {
+    "text": "buildable",
+    "start": 17.845,
+    "end": 18.344
+  },
+  {
+    "text": "steps",
+    "start": 18.379,
+    "end": 18.727
+  },
+  {
+    "text": "using",
+    "start": 18.808,
+    "end": 19.064
+  },
+  {
+    "text": "user",
+    "start": 19.157,
+    "end": 19.435
+  },
+  {
+    "text": "story",
+    "start": 19.482,
+    "end": 19.795
+  },
+  {
+    "text": "mapping,",
+    "start": 19.853,
+    "end": 20.376
+  },
+  {
+    "text": "shape",
+    "start": 20.701,
+    "end": 21.014
+  },
+  {
+    "text": "a",
+    "start": 21.038,
+    "end": 21.061
+  },
+  {
+    "text": "focused",
+    "start": 21.177,
+    "end": 21.63
+  },
+  {
+    "text": "minimum",
+    "start": 21.699,
+    "end": 22.071
+  },
+  {
+    "text": "viable",
+    "start": 22.141,
+    "end": 22.558
+  },
+  {
+    "text": "product,",
+    "start": 22.605,
+    "end": 23.22
+  },
+  {
+    "text": "and",
+    "start": 23.394,
+    "end": 23.557
+  },
+  {
+    "text": "turn",
+    "start": 23.627,
+    "end": 23.894
+  },
+  {
+    "text": "it",
+    "start": 23.952,
+    "end": 24.045
+  },
+  {
+    "text": "into",
+    "start": 24.103,
+    "end": 24.277
+  },
+  {
+    "text": "a",
+    "start": 24.358,
+    "end": 24.381
+  },
+  {
+    "text": "clear",
+    "start": 24.463,
+    "end": 24.741
+  },
+  {
+    "text": "prompt",
+    "start": 24.822,
+    "end": 25.194
+  },
+  {
+    "text": "for",
+    "start": 25.264,
+    "end": 25.38
+  },
+  {
+    "text": "an",
+    "start": 25.426,
+    "end": 25.496
+  },
+  {
+    "text": "AI",
+    "start": 25.577,
+    "end": 26.018
+  },
+  {
+    "text": "app",
+    "start": 26.076,
+    "end": 26.308
+  },
+  {
+    "text": "builder.",
+    "start": 26.401,
+    "end": 26.982
+  },
+  {
+    "text": "You’ll",
+    "start": 27.493,
+    "end": 27.713
+  },
+  {
+    "text": "finish",
+    "start": 27.76,
+    "end": 28.062
+  },
+  {
+    "text": "with",
+    "start": 28.108,
+    "end": 28.236
+  },
+  {
+    "text": "a",
+    "start": 28.271,
+    "end": 28.294
+  },
+  {
+    "text": "small,",
+    "start": 28.375,
+    "end": 28.781
+  },
+  {
+    "text": "workable",
+    "start": 28.828,
+    "end": 29.361
+  },
+  {
+    "text": "version",
+    "start": 29.408,
+    "end": 29.745
+  },
+  {
+    "text": "of",
+    "start": 29.779,
+    "end": 29.837
+  },
+  {
+    "text": "your",
+    "start": 29.895,
+    "end": 30.035
+  },
+  {
+    "text": "idea",
+    "start": 30.104,
+    "end": 30.511
+  },
+  {
+    "text": "and",
+    "start": 30.72,
+    "end": 30.894
+  },
+  {
+    "text": "a",
+    "start": 30.964,
+    "end": 30.987
+  },
+  {
+    "text": "plan",
+    "start": 31.056,
+    "end": 31.382
+  },
+  {
+    "text": "for",
+    "start": 31.463,
+    "end": 31.579
+  },
+  {
+    "text": "gathering",
+    "start": 31.625,
+    "end": 32.055
+  },
+  {
+    "text": "early",
+    "start": 32.171,
+    "end": 32.473
+  },
+  {
+    "text": "feedback.",
+    "start": 32.543,
+    "end": 33.251
+  },
+  {
+    "text": "Most",
+    "start": 33.855,
+    "end": 34.098
+  },
+  {
+    "text": "importantly,",
+    "start": 34.145,
+    "end": 34.981
+  },
+  {
+    "text": "you’ll",
+    "start": 35.224,
+    "end": 35.445
+  },
+  {
+    "text": "see",
+    "start": 35.515,
+    "end": 35.747
+  },
+  {
+    "text": "that",
+    "start": 35.805,
+    "end": 35.944
+  },
+  {
+    "text": "you",
+    "start": 36.014,
+    "end": 36.118
+  },
+  {
+    "text": "can",
+    "start": 36.188,
+    "end": 36.316
+  },
+  {
+    "text": "move",
+    "start": 36.385,
+    "end": 36.618
+  },
+  {
+    "text": "an",
+    "start": 36.653,
+    "end": 36.722
+  },
+  {
+    "text": "idea",
+    "start": 36.78,
+    "end": 37.129
+  },
+  {
+    "text": "forward",
+    "start": 37.221,
+    "end": 37.674
+  },
+  {
+    "text": "one",
+    "start": 37.825,
+    "end": 38.162
+  },
+  {
+    "text": "clear",
+    "start": 38.255,
+    "end": 38.661
+  },
+  {
+    "text": "step",
+    "start": 38.777,
+    "end": 39.056
+  },
+  {
+    "text": "at",
+    "start": 39.114,
+    "end": 39.195
+  },
+  {
+    "text": "a",
+    "start": 39.242,
+    "end": 39.276
+  },
+  {
+    "text": "time.",
+    "start": 39.334,
+    "end": 39.834
+  }
+]

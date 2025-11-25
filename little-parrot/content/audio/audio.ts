@@ -143,19 +143,30 @@ prompting these AI tools. In this micro-course, we’ll focus on demystifying th
 when building software, so you can grow your vocabulary and confidence.
 
 By the end, you’ll be able to:
- - Understand key terms used in app design and development
- - Recognise these terms in AI app builders
- - Use them to create clearer prompts for AI app builders
+
+Understand key terms used in app design and development,
+recognise these terms in AI app builders, and
+use them to create clearer prompts for AI app builders.
 `
 
-const TEXT_TO_GENERATE = video2
+const video6 = `
+Everything on the web is made up of boxes. Each box has a width and height, usually defined in pixels. A box can have a border, and you can set how thick it is and what colour it has. Inside the border is the padding, which defines the space between the border and the box’s content. Outside the border is the margin, which defines the space between this box and the other boxes around it.
+`
+
+const video7 = `
+When you start working on an app idea, it can be hard to know where to begin. In this micro-course, you’ll define the problem you want to solve, understand your target user, and sketch a simple storyboard that shows how your product helps them.
+You’ll then break your idea into buildable steps using user story mapping, shape a focused minimum viable product, and turn it into a clear prompt for an AI app builder.
+You’ll finish with a small, workable version of your idea and a plan for gathering early feedback. Most importantly, you’ll see that you can move an idea forward one clear step at a time.
+`
+
+const TEXT_TO_GENERATE = video7
 const MODEL_ID = 'eleven_multilingual_v2'; //'eleven_v3_turbo'; // The v3 model as requested
-const OUTPUT_FILE_NAME = 'generated_speech-video5-elizabeth.wav';
+const OUTPUT_FILE_NAME = 'generated_speech-video7-elizabeth.wav';
 const OUTPUT_FILE_PATH = OUTPUT_FILE_NAME // Saves in the same directory as the script
 
 
 // Call the function to generate speech and handle the returned alignment data
-generateSpeech(TEXT_TO_GENERATE, VOICE_ID, MODEL_ID, ELEVENLABS_API_KEY, OUTPUT_FILE_PATH, 'alignment-video5-elizabeth.json')
+generateSpeech(TEXT_TO_GENERATE, VOICE_ID, MODEL_ID, ELEVENLABS_API_KEY, OUTPUT_FILE_PATH, 'alignment-video6-elizabeth.json')
     .then(alignment => {
         if (alignment) {
             console.log('Successfully retrieved speech and timestamp data.');

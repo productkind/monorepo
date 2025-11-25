@@ -191,4 +191,49 @@ By the end, you’ll be able to:
  - Recognise these terms in AI app builders
  - Use them to create clearer prompts for AI app builders
 
+## Design course
 
+- Wireframes
+- Components
+- User flows
+- Visual hierarchy
+- Box Model
+- Colors
+- Typography
+- Icons
+
+## Box model
+
+
+Everything on the web is made up of boxes. Each box has a width and height usually defined in
+pixels. A box can have a border, and we can define how thick the border is and what color it has.
+Inside the border there is a padding area that defines how much space there is between the border
+and the content of the box. Outside the border there is a margin area that defines how much space
+there is between this box and other boxes around it.
+
+### Landing
+
+We’re living through a moment that could reshape who gets to build the future. AI builders let
+anyone turn ideas into real software just by using plain English. It should be a huge opening for
+women.
+
+But here’s the problem. Women are being left out of this revolution. Women make up a huge share of
+online workers and business owners, yet only around one in five vibe coders are women. And we’ve
+been here before. Before 1984, the percentage of women majoring in computer science was rising
+faster than the percentage of men. Then personal computers were marketed as toys for boys, and we
+lost that momentum.
+
+We’re not letting that happen again.
+
+Right now, the people shipping apps often look the same. They deserve to be there, but they
+shouldn’t be the only ones. Women have ideas worth building. They have communities to serve.
+They deserve the tools to create, not just to consume.
+
+Little Parrot exists because women have ideas worth building. They have businesses, they have
+ambition, and they are often the ones juggling the most unpaid work at home. Long courses and
+expensive bootcamps don’t fit into their lives, but microlearning does. So we teach women how to
+build real software products in tiny, science-based steps that fit into spare moments. No
+overwhelm, no jargon, no gatekeeping. Just practical skills and a supportive community.
+
+Software is power. And power should be shared. When women can build, they can change their income,
+their businesses, and their communities. That’s the future we’re working on at Little Parrot.

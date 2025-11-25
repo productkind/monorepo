@@ -1,7 +1,7 @@
 import './index.css';
 
 import { Composition, staticFile } from "remotion";
-import { LessonVideo, LessonVideoPropsSchema, Captions, LessonVideo2, LessonVideo3, LessonVideo4 } from "./LessonVideo";
+import { LessonVideo, LessonVideoPropsSchema, Captions, LessonVideo2, LessonVideo3, LessonVideo4, LessonVideo5, LessonVideo6, LessonVideo7 } from "./LessonVideo";
 import { FRAME_HEIGHT, FRAME_RATE, FRAME_WIDTH } from './config';
 
 export const RemotionRoot: React.FC = () => {
@@ -133,6 +133,103 @@ export const RemotionRoot: React.FC = () => {
           }
         }}
       />
+      <Composition
+        id="lesson-00-video-04"
+        component={LessonVideo5}
+        durationInFrames={FRAME_RATE}
+        fps={FRAME_RATE}
+        width={FRAME_WIDTH}
+        height={FRAME_HEIGHT}
+        schema={LessonVideoPropsSchema}
+        defaultProps={{
+          captions: [],
+          titleDuration: 60,
+          endDuration: 30,
+          allDuration: 100,
+        }}
+        calculateMetadata={async ({props}) => {
+          const titleDuration = 60
+          const endDuration = 0
+          const response = await fetch(staticFile('video-5/text.json'))
+          const captions = await response.json()
+          console.log(captions)
+          const duration = Math.ceil(captions.at(-1).end * FRAME_RATE) + titleDuration + endDuration
+
+          return {
+            durationInFrames: duration,
+            props: {
+              ...props,
+              captions: transformCaptionsToFrames(captions),
+              allDuration: duration,
+            }
+          }
+        }}
+      />
+      <Composition
+        id="lesson-00-video-05"
+        component={LessonVideo6}
+        durationInFrames={FRAME_RATE}
+        fps={FRAME_RATE}
+        width={FRAME_WIDTH}
+        height={FRAME_HEIGHT}
+        schema={LessonVideoPropsSchema}
+        defaultProps={{
+          captions: [],
+          titleDuration: 60,
+          endDuration: 30,
+          allDuration: 100,
+        }}
+        calculateMetadata={async ({props}) => {
+          const titleDuration = 60
+          const endDuration = 0
+          const response = await fetch(staticFile('video-6/text.json'))
+          const captions = await response.json()
+          console.log(captions)
+          const duration = Math.ceil(captions.at(-1).end * FRAME_RATE) + titleDuration + endDuration
+
+          return {
+            durationInFrames: duration,
+            props: {
+              ...props,
+              captions: transformCaptionsToFrames(captions),
+              allDuration: duration,
+            }
+          }
+        }}
+      />
+      <Composition
+        id="lesson-00-video-06"
+        component={LessonVideo7}
+        durationInFrames={FRAME_RATE}
+        fps={FRAME_RATE}
+        width={FRAME_WIDTH}
+        height={FRAME_HEIGHT}
+        schema={LessonVideoPropsSchema}
+        defaultProps={{
+          captions: [],
+          titleDuration: 60,
+          endDuration: 30,
+          allDuration: 100,
+        }}
+        calculateMetadata={async ({props}) => {
+          const titleDuration = 60
+          const endDuration = 0
+          const response = await fetch(staticFile('video-7/text.json'))
+          const captions = await response.json()
+          console.log(captions)
+          const duration = Math.ceil(captions.at(-1).end * FRAME_RATE) + titleDuration + endDuration
+
+          return {
+            durationInFrames: duration,
+            props: {
+              ...props,
+              captions: transformCaptionsToFrames(captions),
+              allDuration: duration,
+            }
+          }
+        }}
+      />
+
     </>
   )
 }

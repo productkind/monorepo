@@ -1,0 +1,532 @@
+[
+  {
+    "text": "Until",
+    "start": 0.035,
+    "end": 0.325
+  },
+  {
+    "text": "recently,",
+    "start": 0.395,
+    "end": 1.033
+  },
+  {
+    "text": "building",
+    "start": 1.184,
+    "end": 1.567
+  },
+  {
+    "text": "applications",
+    "start": 1.614,
+    "end": 2.241
+  },
+  {
+    "text": "was",
+    "start": 2.287,
+    "end": 2.426
+  },
+  {
+    "text": "much",
+    "start": 2.554,
+    "end": 2.833
+  },
+  {
+    "text": "harder.",
+    "start": 2.902,
+    "end": 3.402
+  },
+  {
+    "text": "Now,",
+    "start": 3.843,
+    "end": 4.238
+  },
+  {
+    "text": "with",
+    "start": 4.296,
+    "end": 4.481
+  },
+  {
+    "text": "AI",
+    "start": 4.528,
+    "end": 4.783
+  },
+  {
+    "text": "app",
+    "start": 4.853,
+    "end": 4.969
+  },
+  {
+    "text": "builders",
+    "start": 5.004,
+    "end": 5.341
+  },
+  {
+    "text": "such",
+    "start": 5.364,
+    "end": 5.55
+  },
+  {
+    "text": "as",
+    "start": 5.584,
+    "end": 5.666
+  },
+  {
+    "text": "Lovable,",
+    "start": 5.759,
+    "end": 6.351
+  },
+  {
+    "text": "anyone",
+    "start": 6.525,
+    "end": 6.908
+  },
+  {
+    "text": "can",
+    "start": 6.943,
+    "end": 7.059
+  },
+  {
+    "text": "get",
+    "start": 7.105,
+    "end": 7.233
+  },
+  {
+    "text": "started.",
+    "start": 7.291,
+    "end": 7.918
+  },
+  {
+    "text": "Still,",
+    "start": 8.359,
+    "end": 8.754
+  },
+  {
+    "text": "it",
+    "start": 8.8,
+    "end": 8.94
+  },
+  {
+    "text": "helps",
+    "start": 8.998,
+    "end": 9.218
+  },
+  {
+    "text": "to",
+    "start": 9.265,
+    "end": 9.311
+  },
+  {
+    "text": "understand",
+    "start": 9.381,
+    "end": 9.857
+  },
+  {
+    "text": "the",
+    "start": 9.915,
+    "end": 9.985
+  },
+  {
+    "text": "basic",
+    "start": 10.054,
+    "end": 10.426
+  },
+  {
+    "text": "building",
+    "start": 10.507,
+    "end": 10.879
+  },
+  {
+    "text": "blocks",
+    "start": 10.937,
+    "end": 11.215
+  },
+  {
+    "text": "of",
+    "start": 11.262,
+    "end": 11.32
+  },
+  {
+    "text": "a",
+    "start": 11.366,
+    "end": 11.389
+  },
+  {
+    "text": "typical",
+    "start": 11.459,
+    "end": 11.854
+  },
+  {
+    "text": "application.",
+    "start": 11.9,
+    "end": 12.655
+  },
+  {
+    "text": "By",
+    "start": 13.259,
+    "end": 13.421
+  },
+  {
+    "text": "learning",
+    "start": 13.514,
+    "end": 13.827
+  },
+  {
+    "text": "key",
+    "start": 13.886,
+    "end": 14.06
+  },
+  {
+    "text": "terms",
+    "start": 14.141,
+    "end": 14.443
+  },
+  {
+    "text": "from",
+    "start": 14.478,
+    "end": 14.617
+  },
+  {
+    "text": "design",
+    "start": 14.687,
+    "end": 15.082
+  },
+  {
+    "text": "and",
+    "start": 15.128,
+    "end": 15.198
+  },
+  {
+    "text": "software",
+    "start": 15.267,
+    "end": 15.674
+  },
+  {
+    "text": "development,",
+    "start": 15.697,
+    "end": 16.37
+  },
+  {
+    "text": "you",
+    "start": 16.544,
+    "end": 16.649
+  },
+  {
+    "text": "can",
+    "start": 16.707,
+    "end": 16.823
+  },
+  {
+    "text": "become",
+    "start": 16.869,
+    "end": 17.16
+  },
+  {
+    "text": "better",
+    "start": 17.218,
+    "end": 17.508
+  },
+  {
+    "text": "at",
+    "start": 17.554,
+    "end": 17.624
+  },
+  {
+    "text": "prompting",
+    "start": 17.682,
+    "end": 18.1
+  },
+  {
+    "text": "these",
+    "start": 18.147,
+    "end": 18.332
+  },
+  {
+    "text": "AI",
+    "start": 18.367,
+    "end": 18.669
+  },
+  {
+    "text": "tools.",
+    "start": 18.727,
+    "end": 19.331
+  },
+  {
+    "text": "In",
+    "start": 19.772,
+    "end": 19.923
+  },
+  {
+    "text": "this",
+    "start": 19.981,
+    "end": 20.132
+  },
+  {
+    "text": "micro-course,",
+    "start": 20.213,
+    "end": 21.037
+  },
+  {
+    "text": "we’ll",
+    "start": 21.154,
+    "end": 21.351
+  },
+  {
+    "text": "focus",
+    "start": 21.409,
+    "end": 21.746
+  },
+  {
+    "text": "on",
+    "start": 21.804,
+    "end": 21.897
+  },
+  {
+    "text": "demystifying",
+    "start": 21.966,
+    "end": 22.756
+  },
+  {
+    "text": "the",
+    "start": 22.802,
+    "end": 22.872
+  },
+  {
+    "text": "common",
+    "start": 22.918,
+    "end": 23.185
+  },
+  {
+    "text": "terms",
+    "start": 23.243,
+    "end": 23.592
+  },
+  {
+    "text": "used",
+    "start": 23.673,
+    "end": 23.917
+  },
+  {
+    "text": "when",
+    "start": 23.952,
+    "end": 24.091
+  },
+  {
+    "text": "building",
+    "start": 24.149,
+    "end": 24.474
+  },
+  {
+    "text": "software,",
+    "start": 24.532,
+    "end": 25.171
+  },
+  {
+    "text": "so",
+    "start": 25.449,
+    "end": 25.577
+  },
+  {
+    "text": "you",
+    "start": 25.647,
+    "end": 25.716
+  },
+  {
+    "text": "can",
+    "start": 25.763,
+    "end": 25.89
+  },
+  {
+    "text": "grow",
+    "start": 25.948,
+    "end": 26.134
+  },
+  {
+    "text": "your",
+    "start": 26.181,
+    "end": 26.285
+  },
+  {
+    "text": "vocabulary",
+    "start": 26.332,
+    "end": 26.982
+  },
+  {
+    "text": "and",
+    "start": 27.04,
+    "end": 27.132
+  },
+  {
+    "text": "confidence.",
+    "start": 27.202,
+    "end": 27.991
+  },
+  {
+    "text": "By",
+    "start": 28.374,
+    "end": 28.525
+  },
+  {
+    "text": "the",
+    "start": 28.583,
+    "end": 28.665
+  },
+  {
+    "text": "end,",
+    "start": 28.734,
+    "end": 28.943
+  },
+  {
+    "text": "you’ll",
+    "start": 28.978,
+    "end": 29.164
+  },
+  {
+    "text": "be",
+    "start": 29.21,
+    "end": 29.28
+  },
+  {
+    "text": "able",
+    "start": 29.315,
+    "end": 29.524
+  },
+  {
+    "text": "to:",
+    "start": 29.57,
+    "end": 29.93
+  },
+  {
+    "text": "Understand",
+    "start": 30.255,
+    "end": 30.801
+  },
+  {
+    "text": "key",
+    "start": 30.882,
+    "end": 31.056
+  },
+  {
+    "text": "terms",
+    "start": 31.126,
+    "end": 31.463
+  },
+  {
+    "text": "used",
+    "start": 31.544,
+    "end": 31.776
+  },
+  {
+    "text": "in",
+    "start": 31.823,
+    "end": 31.892
+  },
+  {
+    "text": "app",
+    "start": 31.95,
+    "end": 32.078
+  },
+  {
+    "text": "design",
+    "start": 32.148,
+    "end": 32.473
+  },
+  {
+    "text": "and",
+    "start": 32.519,
+    "end": 32.601
+  },
+  {
+    "text": "development,",
+    "start": 32.647,
+    "end": 33.402
+  },
+  {
+    "text": "recognise",
+    "start": 33.785,
+    "end": 34.342
+  },
+  {
+    "text": "these",
+    "start": 34.377,
+    "end": 34.563
+  },
+  {
+    "text": "terms",
+    "start": 34.609,
+    "end": 34.934
+  },
+  {
+    "text": "in",
+    "start": 34.981,
+    "end": 35.05
+  },
+  {
+    "text": "AI",
+    "start": 35.108,
+    "end": 35.399
+  },
+  {
+    "text": "app",
+    "start": 35.433,
+    "end": 35.573
+  },
+  {
+    "text": "builders,",
+    "start": 35.619,
+    "end": 36.188
+  },
+  {
+    "text": "and",
+    "start": 36.467,
+    "end": 36.629
+  },
+  {
+    "text": "use",
+    "start": 36.71,
+    "end": 36.943
+  },
+  {
+    "text": "them",
+    "start": 36.977,
+    "end": 37.117
+  },
+  {
+    "text": "to",
+    "start": 37.186,
+    "end": 37.256
+  },
+  {
+    "text": "create",
+    "start": 37.326,
+    "end": 37.662
+  },
+  {
+    "text": "clearer",
+    "start": 37.709,
+    "end": 38.092
+  },
+  {
+    "text": "prompts",
+    "start": 38.15,
+    "end": 38.498
+  },
+  {
+    "text": "for",
+    "start": 38.545,
+    "end": 38.649
+  },
+  {
+    "text": "AI",
+    "start": 38.707,
+    "end": 39.056
+  },
+  {
+    "text": "app",
+    "start": 39.09,
+    "end": 39.218
+  },
+  {
+    "text": "builders.",
+    "start": 39.265,
+    "end": 39.834
+  }
+]
