@@ -184,7 +184,7 @@
           "Cloud Computing",
           "UI"
         ],
-        "description": "Get familiar with the core parts of an app so you can brief an AI builder clearly.",
+        "description": "Learn what makes up an application, so you can tell your AI app builder exactly what to build or fix.",
         "completionTime": "7:00"
       },
       {
@@ -460,7 +460,7 @@
           "Colours",
           "Fonts"
         ],
-        "description": "Get the words to describe layout and style so outputs match your intent.",
+        "description": "Get the vocabulary to describe how you want things to look, so you get it right on the first try.",
         "completionTime": "9:30"
       },
       {
@@ -658,7 +658,7 @@
           "Box Model",
           "HTML Semantics"
         ],
-        "description": "Learn the terms that make frontends appear the way you intend.",
+        "description": "Understand what's happening when your AI app builder builds your screens, so you can give better feedback.",
         "completionTime": "10:00"
       },
       {
@@ -828,7 +828,7 @@
           "Authentication",
           "Backend Design"
         ],
-        "description": "Discover how to specify behaviours, permissions, and integrations cleanly.",
+        "description": "Learn to prompt for features like login, emails, and payments – the powerful stuff behind the scenes.",
         "completionTime": "10:30"
       },
       {
@@ -989,7 +989,7 @@
           "SQL",
           "Data Types"
         ],
-        "description": "Model entities and relationships and design guardrails for irreversible actions.",
+        "description": "Understand how your app stores and remembers data, and how to avoid losing it.",
         "completionTime": "9:30"
       }
     ],
@@ -997,6 +997,6 @@
       "Basics of Software",
       "for Vibe Coding"
     ],
-    "description": "A practical foundation in how software works, so you can guide AI more efficiently when you build digital products with vibe coding."
+    "description": "Learn the language of software, so you can tell your AI app builder exactly what you want and understand what it builds."
   }
 }
