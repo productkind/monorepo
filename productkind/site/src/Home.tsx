@@ -53,18 +53,16 @@ const Home = () => {
       </div>
       <div className="box box-highlight hero-tagline">
         <Typography component="h1" variant="h1" className="tagline main-title">
-          Practical product skills, taught with kindness.
+          Building a more equitable tech industry.
         </Typography>
       </div>
       <div className="box right hero-what-we-do">
         <Typography component="h2" variant="h2">What we do</Typography>
         <Typography component="p" variant="body">
-          We believe good product management starts with empathy and curiosity. We’re building
-          educational tech products that help product managers grow practical skills, strengthen
-          their mindset, and create work they’re proud of.
+          We’re building educational tech products that help women and underrepresented groups grow practical tech skills, develop a product mindset – the ability to identify problems worth solving and build valuable solutions – and create with AI. All in a kind, supportive space where everyone belongs.
         </Typography>
         <Typography component="p" variant="body">
-          We’re on a mission to make product and tech skills accessible to everyone, regardless of
+          We’re on a mission to build an equitable tech industry by making product and tech skills accessible to everyone, regardless of
           their background.
         </Typography>
       </div>
@@ -84,22 +82,20 @@ const Home = () => {
             What it is
           </Typography>
           <Typography component="p" variant="body">
-            <strong>Little Parrot</strong> is a science-based microlearning platform built for busy
-            product people. It’s designed to help you master product skills in minutes, not hours, by
-            breaking down complex topics into digestible, practical lessons.
+            <strong>Little Parrot</strong> offers science-based micro-courses that make building with AI and vibe coding accessible to everyone. These courses are designed to help you master product and tech skills in minutes, not hours, by breaking down complex topics into digestible, practical challenges.
           </Typography>
           <Typography component="p" variant="body">
             With Little Parrot, you’ll get:
           </Typography>
           <ul>
             <li>
-              Quick, focused lessons you can squeeze into your day
+              Quick, focused lessons designed for busy lives.
             </li>
             <li>
-              Practical skills you can apply immediately
+              Practical skills you can apply immediately.
             </li>
             <li>
-              A calm, confidence-building path into topics like AI, prompting, and product thinking
+              A calm, confidence-building path into topics like AI, vibe coding, prompting, technology and product thinking.
             </li>
           </ul>
           <Typography component="p" variant="body">
@@ -107,7 +103,7 @@ const Home = () => {
             and helps you grow step by step.
           </Typography>
         </div>
-        <a href="https://littleparrot.app/?utm_source=website&utm_medium=internal&utm_campaign=website" about="_blank" className="button button-primary-product">Check it out</a>
+        <a href="https://littleparrot.app/?utm_source=website&utm_medium=internal&utm_campaign=website" about="_blank" className="button button-primary-product">Start learning</a>
       </div>
     </section>
     <section id="about" className="bento about">
@@ -121,11 +117,11 @@ const Home = () => {
           Conception of productkind
         </Typography>
         <Typography component="p" variant="body">
-          productkind started from a simple idea: learning should happen in a space where you can
+          productkind started from a simple belief: learning should happen in a space where you can
           experiment, make mistakes, and grow without fear.
         </Typography>
         <Typography component="p" variant="body">
-          Too much of product management education relies on creating anxiety, the “you’re behind”
+          Too much of tech education relies on creating anxiety, the “you’re behind”
           narrative that generates stress but not solutions. We’re building something different: an
           environment that’s both inspiring and practical, where you develop skills at your own
           pace.
@@ -133,6 +129,26 @@ const Home = () => {
         <Typography component="p" variant="body">
           We agree with Maya Angelou: “Success is liking yourself, liking what you do, and liking
           how you do it.” That thinking shapes everything we build.
+        </Typography>
+      </div>
+      <div className="box right about-our-why">
+        <Typography component="h3" variant="h3">
+          Our ‘Why’
+        </Typography>
+        <Typography component="p" variant="body">
+          We’re living through a moment that could reshape who gets to build the future. AI and vibe coding now make it possible for anyone to turn an idea into working software.
+        </Typography>
+        <Typography component="p" variant="body">
+          Yet women are being left out. They make up a large share of online workers and business owners, but only about one in five vibe coders are women. We’ve seen this pattern before, in the early 1980s, women were entering computer science faster than men, until personal computers were marketed mainly to boys.
+        </Typography>
+        <Typography component="p" variant="body">
+          We don’t want to see history repeat itself.
+        </Typography>
+        <Typography component="p" variant="body">
+          Software is a form of power, and power should be shared. When a woman builds something, she creates economic independence, solves problems that matter to her community, and becomes a role model for future generations.
+        </Typography>
+        <Typography component="p" variant="body">
+          That’s why we build educational products that make tech and products skills accessible; taught in a way that fits into busy lives.
         </Typography>
       </div>
       <div className="box right about-values">
@@ -211,10 +227,16 @@ const Home = () => {
         </Typography>
         <Typography component="p" variant="body">
           Tamas is an enthusiastic software engineer with a background in product development,
-          technical leadership, and education. Tamas is deeply committed to fostering talent and
-          sharing knowledge. He served as the Head of Education and Co-Founder at Green Fox Academy,
+          technical leadership, and education. He’s deeply committed to fostering talent and
+          sharing knowledge, and has spent the past 11 years mentoring women and girls in software development. He served as Head of Education and Co-Founder at Green Fox Academy,
           a programming bootcamp in Central Europe, where he managed international mentor teams,
           created educational content, and designed curricula.
+        </Typography>
+        <Typography component="p" variant="body">
+          As a serial entrepreneur, Tamas has co-founded multiple ventures and exited one. He’s held technical roles at companies such as Datadog, Cazoo, and Cloudera, where he spearheaded initiatives in software architecture design and led development teams.
+        </Typography>
+        <Typography component="p" variant="body">
+          He brings deep expertise in making technical concepts accessible and helping people from all backgrounds develop confidence in building with technology.
         </Typography>
       </div>
       <div className="box tim about-image about-tamas-image">
@@ -271,7 +293,7 @@ const Home = () => {
             building tech products.
           </Typography>
           <Typography component="p" variant="body">
-            Our vision with Seminars by productkind is to empower individuals and teams to create
+            Our vision with Seminars by productkind is to inspire individuals and teams to create
             more societal value, through exercising product mindset, which ultimately enables them to
             experience fulfilment. We believe that cultivating a product mindset is beneficial in any
             part of your life.
@@ -292,9 +314,18 @@ const Home = () => {
             Wey Wey Web, Málaga, Nov 2025
           </dt>
           <dd>
-            <a href="https://www.weyweyweb.com/workshops/build-your-ai-product-coach/">
-              Build Your AI Product Coach: A Hands-on Workshop for Writing Impactful User Stories
-            </a>
+            <ul>
+              <li>
+                <a href="https://www.weyweyweb.com/workshops/build-your-ai-product-coach/">
+                  Build Your AI Product Coach: A Hands-on Workshop for Writing Impactful User Stories
+                </a>
+              </li>
+              <li>
+                <a href="https://www.weyweyweb.com/speakers/?speaker=Tamas%20Kokeny">
+                  The Infrastructure Gap: Where AI Falls Short in Product Development
+                </a>
+              </li>
+            </ul>
           </dd>
           <dt>
             NDC Porto, Porto, Oct 2025
