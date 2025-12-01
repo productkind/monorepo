@@ -159,14 +159,34 @@ You’ll then break your idea into buildable steps using user story mapping, sha
 You’ll finish with a small, workable version of your idea and a plan for gathering early feedback. Most importantly, you’ll see that you can move an idea forward one clear step at a time.
 `
 
-const TEXT_TO_GENERATE = video7
+const videoLanding = `
+We’re living through a moment that could reshape who gets to build the future. With AI app builders, anyone can turn an idea into working software using simple prompts.
+
+Yet women are being left out. They make up a large share of online workers and business owners, but only about one in five vibe coders are women. We have seen a pattern like this before. In the early 1980s, women were entering computer science at a faster rate than men. Then personal computers were marketed mainly to boys, and that progress faded.
+
+We don’t want to see history repeat itself.
+
+Right now, many of the people building apps come from similar backgrounds. They absolutely belong there, but they shouldn’t be the only ones.
+
+We care because software is a form of power, and power should be shared. When a woman builds something, she creates economic independence, solves problems that matter to her community, and becomes a role model for future generations.
+
+At Little Parrot, we’re helping women gain the skills to create value and opportunity through software.
+
+Our microlearning approach fits into busy lives. Short, science-backed lessons make it possible to learn during coffee breaks, commutes, or after the children are asleep, without career interruptions or major sacrifices.
+
+And this all happens in a kind, welcoming space where curiosity is encouraged, mistakes are part of learning, and everyone belongs.
+`
+
+const TEXT_TO_GENERATE = videoLanding;
 const MODEL_ID = 'eleven_multilingual_v2'; //'eleven_v3_turbo'; // The v3 model as requested
-const OUTPUT_FILE_NAME = 'generated_speech-video7-elizabeth.wav';
+const videoName = 'video-landing-elizabeth';
+const OUTPUT_FILE_NAME = `generated_speech-${videoName}.wav`; // e.g.,
+const ALIGNMENT_JSON_FILE_NAME = `alignment-${videoName}.json`;
 const OUTPUT_FILE_PATH = OUTPUT_FILE_NAME // Saves in the same directory as the script
 
 
 // Call the function to generate speech and handle the returned alignment data
-generateSpeech(TEXT_TO_GENERATE, VOICE_ID, MODEL_ID, ELEVENLABS_API_KEY, OUTPUT_FILE_PATH, 'alignment-video6-elizabeth.json')
+generateSpeech(TEXT_TO_GENERATE, VOICE_ID, MODEL_ID, ELEVENLABS_API_KEY, OUTPUT_FILE_PATH, ALIGNMENT_JSON_FILE_NAME)
     .then(alignment => {
         if (alignment) {
             console.log('Successfully retrieved speech and timestamp data.');

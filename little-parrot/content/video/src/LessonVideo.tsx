@@ -44,6 +44,144 @@ export const LessonVideoPropsSchema = z.object({
   allDuration: z.number().default(100),
 })
 
+export const LessonVideoLanding: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({captions, titleDuration}) => {
+  return (
+    <AbsoluteFill className={BG_CLASS}>
+      <Series>
+        <Series.Sequence durationInFrames={titleDuration}>
+          <FullScreenText>
+            <TypingText delay={0}>Little</TypingText>
+            <br/>
+            <TypingText delay={10}>Parrot</TypingText>
+          </FullScreenText>
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={128}>
+          <FullScreenImage src={staticFile('video-landing/section-1-planting.gif')} fit="contain"/>
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={124}>
+          <FullScreenImage src={staticFile('video-landing/section-2-builder.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={48}>
+          <FullScreenImage src={staticFile('video-landing/section-3-app.gif')} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={58}>
+          <FullScreenImage src={staticFile('video-landing/section-4-prompt.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={66}>
+          <FullScreenImage src={staticFile('video-landing/section-5-leave.gif')} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={134}>
+          <FullScreenImage src={staticFile('video-landing/section-6-women-do.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={120}>
+          <FullScreenImage src={staticFile('video-landing/section-7-odd.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={84}>
+          <FullScreenImage src={staticFile('video-landing/section-8-seen.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={176}>
+          <FullScreenImage src={staticFile('video-landing/section-9-women-cs.png')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={63}>
+          <FullScreenImage src={staticFile('video-landing/section-10-pc.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={57}>
+          <FullScreenImage src={staticFile('video-landing/section-11-pc.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={65}>
+          <FullScreenImage src={staticFile('video-landing/section-12-fade.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={79}>
+          <FullScreenImage src={staticFile('video-landing/section-13-nope.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={30}>
+          <FullScreenImage src={staticFile('video-landing/section-14-now.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={106}>
+          <FullScreenImage src={staticFile('video-landing/section-15-bro.jpg')} fit="contain" color="#ffffff" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={60}>
+          <FullScreenImage src={staticFile('video-landing/section-16-belong.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={64}>
+          <FullScreenImage src={staticFile('video-landing/section-17-women.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={76}>
+          <FullScreenImage src={staticFile('video-landing/section-18-power.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={54}>
+          <FullScreenImage src={staticFile('video-landing/section-19-share.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={48}>
+          <FullScreenImage src={staticFile('video-landing/section-20-build.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={66}>
+          <FullScreenImage src={staticFile('video-landing/section-21-work.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={82}>
+          <FullScreenImage src={staticFile('video-landing/section-22-community.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={95}>
+          <FullScreenImage src={staticFile('video-landing/section-23-role-model.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={38}>
+          <FullScreenImage src={staticFile('video-landing/section-24-parrot.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={152}>
+          <FullScreenImage src={staticFile('video-landing/section-25-helping.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={108}>
+          <FullScreenImage src={staticFile('video-landing/section-26-learning.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={92}>
+          <FullScreenImage src={staticFile('video-landing/section-27-lesson.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={123}>
+          <ImageSteps
+            allDuration={123}
+            images={[
+              {image: staticFile('video-landing/section-28-coffee.mp4'), delay: 0, offset: -160},
+              {image: staticFile('video-landing/section-28-train.mp4'), delay: 38},
+              {image: staticFile('video-landing/section-28-sleep.mp4'), delay: 72},
+            ]}
+          />
+        </Series.Sequence>
+
+        <Series.Sequence durationInFrames={109}>
+          <FullScreenImage src={staticFile('video-landing/section-29-too-much.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={106}>
+          <FullScreenImage src={staticFile('video-landing/section-30-kind.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={66}>
+          <FullScreenImage src={staticFile('video-landing/section-31-what.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={50}>
+          <FullScreenImage src={staticFile('video-landing/section-32-mistake.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={74}>
+          <FullScreenImage src={staticFile('video-landing/section-33-belong.gif')} fit="contain" color="#ffffff" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={200}>
+          <AbsoluteFill style={{ scale: 0.8 }}>
+            <RemotionRiveCanvas src={staticFile('video-landing/little-parrot-greet.riv')} />
+          </AbsoluteFill>
+        </Series.Sequence>
+      </Series>
+      <Sequence from={titleDuration}>
+        <Captions captions={captions} />
+      </Sequence>
+      <Sequence from={titleDuration}>
+        <Audio src={staticFile('video-landing/speech.wav')} />
+        <Audio src={staticFile('soundtrack.wav')} volume={0.1} />
+      </Sequence>
+      <Sequence from={titleDuration + 1736} durationInFrames={540}>
+        <RemotionRiveCanvas src={staticFile('video-3/reel-parrot.riv')} />
+      </Sequence>
+    </AbsoluteFill>
+  )
+}
+
 export const LessonVideo7: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({captions, titleDuration}) => {
   return (
     <AbsoluteFill className={BG_CLASS}>
