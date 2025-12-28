@@ -2,6 +2,7 @@ import {
   assertDefined,
   assertPredicate,
   assertTypeByGuard,
+  assertImpossible,
   camelCase2kebabCase,
   capitalize,
   deepEqualPartial,
@@ -217,6 +218,10 @@ test('assertPredicate', () => {
   expect(() =>
     assertPredicate({ value: -1, predicate, message: (value) => `oops: ${value}` }),
   ).toThrow('oops: -1')
+})
+
+test('assertImpossible', () => {
+  expect(() => assertImpossible('some message')).toThrow('some message')
 })
 
 test('unPrototypeProperties', () => {

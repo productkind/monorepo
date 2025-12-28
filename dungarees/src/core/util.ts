@@ -363,6 +363,10 @@ export const assertPredicate = <T>({
   return value
 }
 
+export const assertImpossible = (message: string): never => {
+  throw new Error(message)
+}
+
 const getErrorMessage = <T>(message: ErrorMessage<T>, value: T): string =>
   typeof message === 'function' ? message(value) : message
 
@@ -373,7 +377,6 @@ type AssertTypeByGuardArg<T, V> = {
   guard: Guard<T>
   message: ErrorMessage<V>
 }
-
 
 export const unPrototypeProperties = <const T extends Record<string, any>, const KEYS extends keyof T>(obj: T, keys: KEYS[]): Pick<T, KEYS> => {
   const propertyEntries = keys.map((key) => {
