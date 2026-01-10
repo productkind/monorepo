@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "Bash(cat:*)",
-      "Bash(npx vitest:*)"
+      "Bash(npx vitest:*)",
+      "Bash(npm test:*)",
+      "Bash(npm t:*)",
+      "Bash(node -e:*)"
     ],
     "deny": [],
     "ask": []
