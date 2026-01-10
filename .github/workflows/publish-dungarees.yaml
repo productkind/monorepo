@@ -7,9 +7,14 @@ on:
     paths:
       - 'dungarees/config/version.json'
 
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   publish:
     runs-on: ubuntu-latest
+    environment: npm-publish
 
     steps:
       - name: Checkout repository
@@ -26,5 +31,3 @@ jobs:
 
       - name: Publish to npm
         run: npm run publish:dungarees
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

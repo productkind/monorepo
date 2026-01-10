@@ -5,7 +5,8 @@
       "Bash(npx vitest:*)",
       "Bash(npm test:*)",
       "Bash(npm t:*)",
-      "Bash(node -e:*)"
+      "Bash(node -e:*)",
+      "WebSearch"
     ],
     "deny": [],
     "ask": []
