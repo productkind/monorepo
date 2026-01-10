@@ -10,18 +10,21 @@ export type FileSystem = {
   writeFileSync: (path: string, data: string | TypedArray) => void
   readDirSync: (path: string) => string[]
   readDirDeepSync: (path: string) => string[]
+  readBulkSync: (paths: string[]) => Record<string, string>
   mkdirSync: (path: string) => void
   globSync: (path: string) => string[]
   writeFileAsync: (path: string, data: string | TypedArray) => Promise<void>
   readFileAsync: (path: string, encoding: BufferEncoding) => Promise<string>
   readDirAsync: (path: string) => Promise<string[]>
   readDirDeepAsync: (path: string) => Promise<string[]>
+  readBulkAsync: (paths: string[]) => Promise<Record<string, string>>
   mkdirAsync: (path: string) => Promise<void>
   globAsync: (path: string) => Promise<string[]>
   readFile: (path: string, encoding: BufferEncoding) => Observable<string>
   writeFile: (path: string, data: string | TypedArray) => Observable<void>
   readDir: (path: string) => Observable<string[]>
   readDirDeep: (path: string) => Observable<string[]>
+  readBulk: (paths: string[]) => Observable<Record<string, string>>
   mkdir: (path: string) => Observable<void>
   glob: (path: string) => Observable<string[]>
 }
@@ -121,16 +124,36 @@ export const createFileSystem = (fs: NodeFs): FileSystem => {
     await fs.promises.mkdir(path, { recursive: true })
   }
 
+  const readBulkAsync: FileSystem['readBulkAsync'] = async (paths) => {
+    return Object.fromEntries(await Promise.all(
+      paths.map(async (filePath) => {
+        const content = await fs.promises.readFile(filePath, 'utf8')
+        return [filePath, content]
+      })
+    ))
+  }
+
+  const readBulkSync: FileSystem['readBulkSync'] = (paths) => {
+    return Object.fromEntries(
+      paths.map((filePath) => {
+        const content = fs.readFileSync(filePath, 'utf8')
+        return [filePath, content]
+      })
+    )
+  }
+
   return {
     readFileSync,
     writeFileSync,
     readDirSync,
     readDirDeepSync,
+    readBulkSync,
     mkdirSync,
     readFileAsync,
     writeFileAsync,
     readDirAsync,
     readDirDeepAsync,
+    readBulkAsync,
     mkdirAsync,
     globAsync: (path) => glob(path),
     globSync: (path) => globSync(path),
@@ -138,6 +161,7 @@ export const createFileSystem = (fs: NodeFs): FileSystem => {
     writeFile: asyncFunctionToObservable(writeFileAsync),
     readDir: asyncFunctionToObservable(readDirAsync),
     readDirDeep: asyncFunctionToObservable(readDirDeepAsync),
+    readBulk: asyncFunctionToObservable(readBulkAsync),
     mkdir: asyncFunctionToObservable(mkdirAsync),
     glob: asyncFunctionToObservable(glob),
   }

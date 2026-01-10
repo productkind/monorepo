@@ -5,7 +5,8 @@
   },
   "type": "module",
   "dependencies": {
-    "@dungarees/core": "*"
+    "@dungarees/core": "*",
+    "zod": "^3.25.76"
   },
   "devDependencies": {
     "vitest": "^3.0.2"

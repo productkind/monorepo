@@ -7,6 +7,7 @@
   "dependencies": {
     "@dungarees/core": "*",
     "@dungarees/fs": "*",
+    "@dungarees/rxjs": "*",
     "@rollup/plugin-typescript": "^12.3.0",
     "rollup": "4.52.5"
   },

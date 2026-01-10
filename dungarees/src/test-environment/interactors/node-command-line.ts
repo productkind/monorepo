@@ -70,7 +70,11 @@ export const nodeCommandLineInteractor = ({
     const runCommand = async (command: string, context?: Partial<ExecContext>) => {
       // Unfortunately, testcontainers does not support reading stderr
       const redirectedCommand = `${command} 2>&1`
-      const result = await container.exec(['sh', '-c', redirectedCommand], context)
+      const result = await container.exec(['sh', '-c', redirectedCommand], {
+        user: context?.user,
+        workingDir: context?.workingDir,
+        env: { ...environment, ...context?.environment },
+      })
       reportEntry$.next({
         entry: `Command executed: ${command}\nExit code: ${result.exitCode}`,
         type: 'text/plain'

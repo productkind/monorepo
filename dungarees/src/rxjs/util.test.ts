@@ -10,6 +10,8 @@ import {
   createGetTransformSet,
   createGetTransformSetContext,
   assertSchemaMap,
+  SyncFunctionToObservable,
+  getObservableMethodsFromSync,
 } from './util.ts'
 
 import { lastValueFrom, type Observable, of, catchError, map, Subject } from 'rxjs'
@@ -213,4 +215,43 @@ mtest('getTransformSetContext providing context', ({ expect, coldStepAndClose })
   expect(result$).toBeObservableStepAndClose({ get: 1, set: 4, context: 'hello' }, 2);
 })
 
+test('SyncFunctionToObservable<FUNC>', () => {
+  type ObservableFunc = SyncFunctionToObservable<(a: 1, b: 2) => 3>
+  assert<Equals<ObservableFunc, (a: 1, b: 2) => Observable<3>>>()
+})
 
+mtest('getObservableMethodsFromSync', ({expect}) => {
+  const service = {
+    addSync: (a: number, b: number): number => a + b,
+    multiplySync: (a: number, b: number): number => a * b,
+  }
+
+  const observableMethods = getObservableMethodsFromSync(service, ['add', 'multiply'] as const)
+  type ObservableService = typeof observableMethods
+
+  assert<Equals<ObservableService, {
+    add: (a: number, b: number) => Observable<number>,
+    multiply: (a: number, b: number) => Observable<number>,
+  }>>()
+
+  const add$ = observableMethods.add(2, 3)
+  expect(add$).toBeObservable('(5|)', { '5': 5 })
+  const multiply$ = observableMethods.multiply(2, 3)
+  expect(multiply$).toBeObservable('(6|)', { '6': 6 })
+})
+
+mtest('getObservableMethodsFromSync delay', ({expect}) => {
+  const service = {
+    addSync: (a: number, b: number): number => a + b,
+  }
+
+  const observableMethods = getObservableMethodsFromSync(service, ['add'] as const, 1)
+  type ObservableService = typeof observableMethods
+
+  assert<Equals<ObservableService, {
+    add: (a: number, b: number) => Observable<number>,
+  }>>()
+
+  const add$ = observableMethods.add(2, 3)
+  expect(add$).toBeObservable('-(5|)', { '5': 5 })
+})

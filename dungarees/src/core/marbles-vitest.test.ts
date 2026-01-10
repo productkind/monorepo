@@ -94,6 +94,18 @@ mtest('it should assert a value marble', ({ expect, coldStep }) => {
   expect(coldStep(true)).toBeObservableValue('-v', true)
 })
 
+mtest('it should assert a value marble default pattern', ({ expect, coldStep }) => {
+  expect(coldStep(true, 0)).toBeObservableValue(true)
+})
+
+mtest('it should assert a value and close marble', ({ expect, coldStepAndClose }) => {
+  expect(coldStepAndClose(true, 0)).toBeObservableValueAndClose(true)
+})
+
+mtest('it should assert a value and close marble', ({ expect, coldStepAndError }) => {
+  expect(coldStepAndError(true, new Error('test error'), 0)).toBeObservableValueAndError(true, new Error('test error'))
+})
+
 mtest('it should assert a value marble or undefined', ({ expect, coldValueOrUndefined }) => {
   expect(coldValueOrUndefined('-v0', true)).toBeObservableValueOrUndefined('-v0', true)
 })

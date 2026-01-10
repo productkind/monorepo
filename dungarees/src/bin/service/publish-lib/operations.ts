@@ -11,6 +11,8 @@ import {
 } from '@dungarees/rxjs/util.ts'
 import type {JsonObject} from '@dungarees/core/type-util.ts'
 import { z } from 'zod'
+import type {TranspileDirOutput} from '@dungarees/transpile/service.ts'
+import path from 'node:path'
 
 export const createOutDir = (
   createOutDir$: Observable<void>,
@@ -24,17 +26,73 @@ export const createOutDir = (
     ),
   )
 
-export const readPackageJson = (
+export const transformPackageJson = (
   fileTransform: GetTransformSetContext<string, string, string>,
-  destinationPath: string,
-  version?: string
+  { srcDir, outDir, version, transpiledFiles }: {
+    srcDir: string,
+    outDir: string,
+    version: string | undefined,
+    transpiledFiles: TranspileDirOutput[],
+  }
 ): Observable<StdioMessage> =>
   fileTransform(
     parsePackageJson(),
     setPackageJsonVersion(version),
+    setExports({ srcDir, outDir, transpiledFiles }),
+    setBin(),
     stringifyPackageJson(),
   ).pipe(
-    handleTransformEnd(destinationPath),
+    handleTransformEnd(outDir),
+  )
+
+type ExportMap = Record<string, {
+  import: string,
+  types: string,
+}>
+
+type BinMap = Record<string, string>
+
+const setBin = (): OperatorFunction<{ version: string, bin?: BinMap }, { version: string, bin?: BinMap }> =>
+  pipe(
+    map(packageJsonContent => {
+      const bin: BinMap = Object.fromEntries(
+        Object.entries(packageJsonContent.bin ?? {}).map(([name, binPath]) => [
+          name,
+          binPath.replace(/\.ts$/, '.js'),
+        ])
+      )
+      return {
+        ...packageJsonContent,
+        ...( packageJsonContent.bin === undefined ? {} : { bin } ),
+      }
+    })
+  )
+
+const setExports = (
+  { srcDir, outDir, transpiledFiles }: {
+    srcDir: string,
+    outDir: string,
+    transpiledFiles: TranspileDirOutput[],
+  }
+): OperatorFunction<{ version: string }, { version: string, exports?: ExportMap }> =>
+  pipe(
+    map(packageJsonContent => {
+      const exports: ExportMap = Object.fromEntries(
+        transpiledFiles.map(({ input, output, type }) => {
+          const exportFile = path.relative(srcDir, input)
+          const importFile = path.relative(outDir, output)
+          const typeFile = path.relative(outDir, type)
+          return [`./${exportFile}`, {
+            'import': `./${importFile}`,
+            types: `./${typeFile}`,
+          }]
+        })
+      )
+      return {
+        ...packageJsonContent,
+        ...(transpiledFiles.length > 0 ? { exports } : {}),
+      }
+    })
   )
 
 
@@ -70,7 +128,7 @@ const stringifyPackageJson = (): OperatorFunction<{ version: string }, { set: st
 
 const handleTransformEnd = (destinationPath: string): OperatorFunction<{ context: string }, StdioMessage> =>
   pipe(
-    map(({context: version}) => stdout(`Package.json written to ${destinationPath} with version: ${version}`)),
+    map(({context: version}) => stdout(`Package.json written to ${destinationPath}/package.json with version: ${version}`)),
     catchValueAndRethrow(
       (cause) => stderr(`File transform failed: ${cause.message}`),
       (cause) => new Error('File transform failed', { cause })

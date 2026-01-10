@@ -11,6 +11,7 @@ import type {
   ToCamelCase,
   ToKebabCase,
 } from './type-util.ts'
+import type { Call, Fn } from 'hotscript'
 
 export const typeKey = Symbol('type')
 
@@ -387,3 +388,25 @@ export const unPrototypeProperties = <const T extends Record<string, any>, const
 }
 
 const isFunction = (value: unknown): value is (...args: any[]) => any => value instanceof Function
+
+type MapConstResult<ARRAY extends readonly any[], F extends Fn> = {
+  readonly [K in keyof ARRAY]: Call<F, ARRAY[K]>
+}
+
+export const mapConst = <const ARRAY extends readonly any[]>(
+  array: ARRAY,
+) => <F extends Fn>(
+  transformer: (value: ARRAY[number]) => unknown,
+): MapConstResult<ARRAY, F> => {
+  return array.map((item) => transformer(item)) as MapConstResult<ARRAY, F>
+}
+
+export const objectFromConstEntries = <const ENTRIES extends readonly (readonly [string, any])[]>(
+  entries: ENTRIES,
+): {
+  [K in ENTRIES[number] as K[0]]: K[1]
+} => {
+  return Object.fromEntries(entries) as {
+    [K in ENTRIES[number] as K[0]]: K[1]
+  }
+}

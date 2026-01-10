@@ -177,3 +177,50 @@ test('FileSystem readDirDeep', async () => {
     '/dir/subdir/nested/file3.txt',
   ].sort())
 })
+
+test('FileSystem should have a readBulkAsync method', async () => {
+  const fakeFs = createFakeNodeFs({
+    '/test.txt': 'test',
+    '/test2.txt': 'test2',
+    '/test3.json': '{"test": "test3"}',
+  })
+  const fileSystem = createFileSystem(fakeFs)
+  const results = await fileSystem.readBulkAsync(['/test.txt', '/test2.txt', '/test3.json'])
+  expect(results).toEqual({
+    '/test.txt': 'test',
+    '/test2.txt': 'test2',
+    '/test3.json': '{"test": "test3"}',
+  })
+})
+
+test('FileSystem should have a readBulkSync method', () => {
+  const fakeFs = createFakeNodeFs({
+    '/test.txt': 'test',
+    '/test2.txt': 'test2',
+    '/test3.json': '{"test": "test3"}',
+  })
+  const fileSystem = createFileSystem(fakeFs)
+  const results = fileSystem.readBulkSync(['/test.txt', '/test2.txt', '/test3.json'])
+  expect(results).toEqual({
+    '/test.txt': 'test',
+    '/test2.txt': 'test2',
+    '/test3.json': '{"test": "test3"}',
+  })
+})
+
+test('FileSystem should have a readBulk method', async () => {
+  const fakeFs = createFakeNodeFs({
+    '/test.txt': 'test',
+    '/test2.txt': 'test2',
+    '/test3.json': '{"test": "test3"}',
+  })
+  const fileSystem = createFileSystem(fakeFs)
+  const results = await lastValueFrom(fileSystem.readBulk(['/test.txt', '/test2.txt', '/test3.json']))
+  expect(results).toEqual({
+    '/test.txt': 'test',
+    '/test2.txt': 'test2',
+    '/test3.json': '{"test": "test3"}',
+  })
+})
+
+

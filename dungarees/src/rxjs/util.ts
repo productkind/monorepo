@@ -1,7 +1,14 @@
 import { lastValueFrom, type Observable, scan, defer, of, map, delay, mergeMap, catchError, throwError, concat, type OperatorFunction } from 'rxjs'
-import { assertPredicate, assertTypeByGuard } from '@dungarees/core/util.ts'
+import { assertPredicate, assertTypeByGuard, mapConst, objectFromConstEntries } from '@dungarees/core/util.ts'
 import { type Guard } from '@dungarees/core/type-util.ts'
 import { type ZodSchema } from 'zod'
+import type {Fn} from 'hotscript'
+
+export type SyncFunctionToObservable<FUNC extends (...args: any[]) => any> = FUNC extends (
+  ...args: infer ARGS
+) => infer RETURN
+  ? (...args: ARGS) => Observable<RETURN>
+  : never
 
 export const collectValuesFrom = async <T>(values$: Observable<T>): Promise<T[]> =>
   await lastValueFrom(values$.pipe(scan((acc, value) => [...acc, value], [] as T[])))
@@ -12,10 +19,14 @@ export const asyncFunctionToObservable = <RETURN, ARGS extends any[]>(asyncFn: (
   }
 }
 
-export const syncFunctionToObservable = <RETURN, ARGS extends any[]>(syncFn: (...args: ARGS) => RETURN, delayMs: number = 0): ((...args: ARGS) => Observable<RETURN>) => {
-  return (...args: ARGS): Observable<RETURN> => {
+export const syncFunctionToObservable = <F extends (...args: any[]) => any>(
+  syncFn: F,
+  delayMs: number = 0
+): SyncFunctionToObservable<F> => {
+  const wrapped = (...args: Parameters<F>): Observable<ReturnType<F>> => {
     return defer(() => of(syncFn(...args))).pipe(delay(delayMs))
   }
+  return wrapped as SyncFunctionToObservable<F>
 }
 
 export const catchAndRethrow = <T>(rethrowFn: (error: any) => Error): OperatorFunction<T, T> =>
@@ -244,4 +255,41 @@ export const createGetTransformSetContext = <CONTEXT, GET, SET>(
       )
     )
   ) as GetTransformSetContext<CONTEXT, GET, SET>
+
+interface ToObservableEntryFn<SERVICE> extends Fn {
+  return: this['arg0'] extends string
+    ? `${this['arg0']}Sync` extends keyof SERVICE
+      ? SERVICE[`${this['arg0']}Sync`] extends (...args: any[]) => any
+        ? [this['arg0'], SyncFunctionToObservable<SERVICE[`${this['arg0']}Sync`]>]
+        : never
+      : never
+    : never
+}
+
+type SyncMethodBase<SERVICE> = {
+  [K in keyof SERVICE]: K extends `${infer BASE}Sync` ? BASE : never
+}[keyof SERVICE]
+
+export const getObservableMethodsFromSync = <
+  SERVICE,
+  const METHOD_NAMES extends readonly SyncMethodBase<SERVICE>[],
+>(
+  service: SERVICE,
+  methodNames: METHOD_NAMES,
+  delayMs: number = 0,
+): {
+  [K in METHOD_NAMES[number]]: `${K & string}Sync` extends keyof SERVICE
+    ? SERVICE[`${K & string}Sync`] extends (...args: infer ARGS) => infer RETURN
+      ? (...args: ARGS) => Observable<RETURN>
+      : never
+    : never
+} => {
+  const observableMethods = mapConst(methodNames)<ToObservableEntryFn<SERVICE>>((methodName) => {
+    return [methodName, syncFunctionToObservable((service as any)[`${methodName}Sync`], delayMs)]
+  })
+
+  return objectFromConstEntries(observableMethods) as any
+}
+
+
 

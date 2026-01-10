@@ -26,6 +26,7 @@ export const createProcessService = (spawn: Spawn): ProcessService => {
     })
 
     spawnProcess.stderr?.on('data', (data) => {
+      console.log(data)
       stderror$.next(String(data))
     })
 

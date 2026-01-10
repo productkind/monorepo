@@ -14,13 +14,16 @@ import {
   join,
   kebabCase2camelCase,
   makeObjectFromStringLiteral,
+  mapConst,
   type OptionalPatternList,
   optionalPatternToList,
   pluralize,
   split,
   unPrototypeProperties,
+  objectFromConstEntries,
 } from './util.ts'
 
+import { type Fn } from 'hotscript'
 import { assert, type Equals } from 'tsafe'
 import { expect, test } from 'vitest'
 
@@ -248,4 +251,34 @@ test('unPrototypeProperties', () => {
   expect(() => clone.method2()).toThrow('method2 is not a function')
   // @ts-expect-error method3 is not a property of clone
   unPrototypeProperties(clone, ['method3'])
+})
+
+interface AppendConstFn extends Fn {
+  return: this['arg0'] extends string ? `${this['arg0']}-const` : never
+}
+
+test('mapConst', () => {
+  const input = ['a', 'b', 'c'] as const
+  const output = mapConst(input)<AppendConstFn>((value) => `${value}-const`)
+  assert<Equals<typeof output, readonly ['a-const', 'b-const', 'c-const']>>()
+  expect(output).toEqual(['a-const', 'b-const', 'c-const'])
+})
+
+test('mapConst infers input type from array', () => {
+  const input = ['a', 'b', 'c'] as const
+  mapConst(input)<AppendConstFn>((value) => {
+    assert<Equals<typeof value, 'a' | 'b' | 'c'>>()
+    return `${value}-const`
+  })
+})
+
+test('objectFromConstEntries', () => {
+  const entries = [
+    ['a', 1],
+    ['b', 2],
+    ['c', 3],
+  ] as const
+  const obj = objectFromConstEntries(entries)
+  assert<Equals<typeof obj, { a: 1; b: 2; c: 3 }>>()
+  expect(obj).toEqual({ a: 1, b: 2, c: 3 })
 })

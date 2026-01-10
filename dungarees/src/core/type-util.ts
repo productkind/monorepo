@@ -155,7 +155,7 @@ export type DeepPartial<T> = {
   [K in keyof T]?: T[K] extends object ? DeepPartial<T[K]> : T[K]
 }
 
-export type FunctionToAsync<FUNC extends (...args: any[]) => any> = FUNC extends (
+export type SyncFunctionToAsync<FUNC extends (...args: any[]) => any> = FUNC extends (
   ...args: infer ARGS
 ) => infer RETURN
   ? (...args: ARGS) => Promise<RETURN>

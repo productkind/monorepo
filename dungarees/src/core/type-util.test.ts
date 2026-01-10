@@ -5,7 +5,7 @@ import type {
   FromCamelCase,
   FromKebabCase,
   FromSnakeCase,
-  FunctionToAsync,
+  SyncFunctionToAsync,
   GetAllPaths,
   GetGuarded,
   GetKey,
@@ -223,7 +223,7 @@ test('DeepPartial<T> - nested props', () => {
   assert<Equals<OptionalA, { a?: string; b?: { d?: boolean; e?: boolean } }>>()
 })
 
-test('FunctionToAsync<FUNC>', () => {
-  type AsyncFunc = FunctionToAsync<(a: 1, b: 2) => 3>
+test('SyncFunctionToAsync<FUNC>', () => {
+  type AsyncFunc = SyncFunctionToAsync<(a: 1, b: 2) => 3>
   assert<Equals<AsyncFunc, (a: 1, b: 2) => Promise<3>>>()
 })

@@ -97,8 +97,21 @@ class ExtendedExpect<T> extends Expect<T> {
     this.toBeObservable(marble, MARBLES_BOOLEAN as unknown as Record<string, T>)
   }
 
-  toBeObservableValue(marble: string, value: T): void {
+  toBeObservableValue(value: T): void;
+  toBeObservableValue(marble: string, value: T): void;
+  toBeObservableValue(...args: any[]): void {
+    const value = args.length === 1 ? args[0] : args[1]
+    const marble = args.length === 1 ? 'v' : args[0]
     this.toBeObservable(marble, { v: value })
+  }
+
+  toBeObservableValueAndClose(value: T): void {
+    this.toBeObservable('(v|)', { v: value })
+  }
+
+  toBeObservableValueAndError(value: T, error: any): void {
+    const marble = '(v#)'
+    this.toBeObservable(marble, { v: value }, error)
   }
 
   toBeObservableValueOrUndefined(marble: string, value: T): void {
