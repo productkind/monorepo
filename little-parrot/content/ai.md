@@ -237,3 +237,50 @@ overwhelm, no jargon, no gatekeeping. Just practical skills and a supportive com
 
 Software is power. And power should be shared. When women can build, they can change their income,
 their businesses, and their communities. That’s the future we’re working on at Little Parrot.
+
+
+
+
+- skills
+    - Chat-bar
+    - chat mode
+    - code view
+    - visual edit
+    - knowledge file
+    - credit use
+    - changes
+    - revert
+    - api key prompt
+    - sql prompt
+    - auth setup
+    - preview
+    - changes
+    - mindeset about credits
+    - publish
+    - security review
+    - database view
+    - database edit
+    - backend logs
+    - frontend logs
+    - migrations
+    - github connect
+    - google auth
+    - sending emails
+    - sending texts
+    - reading third party apis
+    - CMS
+    - DNS
+    - Metrics
+    - Favicon
+    - social tags
+    - seo
+    - payment
+
+### Debugging
+
+When you create applications with AI app builders, sometimes things don’t work as expected.
+Debugging is the process of identifying and fixing these issues. In this micro-lesson, we’ll cover
+techniques, and foundational knowledge to help you troubleshoot problems in your AI-built
+applications. By the end, you’ll be able to: Understand common issues that arise in AI-built
+applications, use systematic approaches to identify the root cause of problems, and apply
+techniques to fix issues effectively.

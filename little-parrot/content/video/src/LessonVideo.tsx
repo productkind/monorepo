@@ -9,6 +9,8 @@ import {
   spring,
   Img,
   Series,
+  interpolate,
+  Easing,
 } from "remotion";
 import {Gif} from '@remotion/gif';
 import { loadFont as loadSpaceMono } from '@remotion/google-fonts/SpaceMono';
@@ -48,6 +50,9 @@ export const LessonVideoLanding: React.FC<z.infer<typeof LessonVideoPropsSchema>
   return (
     <AbsoluteFill className={BG_CLASS}>
       <Series>
+        <Series.Sequence durationInFrames={700}>
+          <VideoZoom src={staticFile('video-8/screen-1.mkv')} zoom={[[50, 0, 0, 1], [100, -30, -30, 4], [200, 20, 20, 2], [300, 0, 0, 1]]} duration={700} />
+        </Series.Sequence>
         <Series.Sequence durationInFrames={titleDuration}>
           <FullScreenText>
             <TypingText delay={0}>Little</TypingText>
@@ -889,6 +894,46 @@ const FullScreenEnd: React.FC = () => {
         Flow by Moavii | https://www.youtube.com/@MoaviiMusic <br />
         Free To Use | https://freetouse.com/music <br />
         Music promoted by https://www.free-stock-music.com
+      </div>
+    </AbsoluteFill>
+  )
+}
+
+// [Time, X, Y, Scale]
+type Zoom = [number, number, number, number]
+
+const VideoZoom: React.FC<{ src: string, zoom: Zoom[], duration: number }> = ({ src, zoom, duration }) => {
+  const frame = useCurrentFrame();
+  const zoomWithBeginning = zoom[0][0] === 0 ? zoom : [[0, ...zoom[0].slice(1)], ...zoom]
+  const zoomWithEnds = zoomWithBeginning[zoomWithBeginning.length - 1][0] === duration ? zoomWithBeginning : [...zoomWithBeginning, [duration, ...zoomWithBeginning[zoomWithBeginning.length - 1].slice(1)]]
+  const now = zoomWithEnds.filter(([time]) => time <= frame)
+  const before = now[now.length - 1]
+  const after = zoomWithEnds[now.length]
+  console.log(before, after, frame)
+  const scale = interpolate(frame, [before[0], after[0]], [before[3], after[3]], {
+    extrapolateRight: 'clamp',
+    easing: Easing.inOut(Easing.ease),
+  });
+  const x = interpolate(frame, [before[0], after[0]], [before[1], after[1]], {
+    extrapolateRight: 'clamp',
+    easing: Easing.inOut(Easing.ease),
+  });
+  const y = interpolate(frame, [before[0], after[0]], [before[1], after[1]], {
+    extrapolateRight: 'clamp',
+    easing: Easing.inOut(Easing.ease),
+  });
+
+
+  return (
+    <AbsoluteFill>
+      <div className="flex flex-col items-center justify-center h-full w-full">
+        <Video
+          src={src}
+          width={1080}
+          style={{
+            transform: `scale(${scale}) translate(${x}%, ${y}%)`,
+          }}
+        />
       </div>
     </AbsoluteFill>
   )
