@@ -23,11 +23,12 @@ export const createProcessService = (spawn: Spawn): ProcessService => {
 
     spawnProcess.stdout?.on('data', (data) => {
       stdout$.next(String(data))
+      console.log(String(data))
     })
 
     spawnProcess.stderr?.on('data', (data) => {
-      console.log(data)
       stderror$.next(String(data))
+      console.log(String(data))
     })
 
     spawnProcess.on('close', (exitCode) => {
