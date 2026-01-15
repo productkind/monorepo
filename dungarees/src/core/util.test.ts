@@ -23,7 +23,6 @@ import {
   objectFromConstEntries,
   mapConstKeysToEntries,
   mapObjectFromKeys,
-  mapConstKeysToEntries2,
 } from './util.ts'
 
 import { type Fn } from 'hotscript'
@@ -285,6 +284,20 @@ test('mapConst infers input type from array', () => {
   expect(output).toEqual([0, 1, 2])
 })
 
+test('mapConst non-curried infers input type from array', () => {
+  const input = ['a', 'b', 'c'] as const
+  const output: number[] = []
+  const result = mapConst(input, (value, index) => {
+    assert<Equals<typeof value, 'a' | 'b' | 'c'>>()
+    assert<Equals<typeof index, 0 | 1 | 2>>()
+    output.push(index)
+    return 1 as const
+  })
+  assert<Equals<typeof result, readonly [1, 1, 1]>>()
+  expect(result).toEqual([1, 1, 1])
+  expect(output).toEqual([0, 1, 2])
+})
+
 test('mapConstKeysToEntries infers input type from array', () => {
   const input = ['a', 'b', 'c'] as const
   const output = mapConstKeysToEntries(input)<AppendConstFn>((value) => `${value}-const`)
@@ -301,7 +314,7 @@ test('mapConstKeysToEntries expets a lambda with a correct return type', () => {
 test('mapConstKeysToEntries infers input type from array', () => {
   const input = ['a', 'b', 'c'] as const
   const output: number[] = []
-  const a = mapConstKeysToEntries2(input, (value, index) => {
+  const a = mapConstKeysToEntries(input, (value, index) => {
     assert<Equals<typeof value, 'a' | 'b' | 'c'>>()
     assert<Equals<typeof index, 0 | 1 | 2>>()
     output.push(index)
@@ -347,15 +360,13 @@ test('mapObjectFromKeys', () => {
   expect(obj).toEqual({ a: 'a-const', b: 'b-const', c: 'c-const' })
 })
 
-/*
-test('mapObjectFromKeys2', () => {
+test('mapObjectFromKeys non-curried infers input type from array', () => {
   const keys = ['a', 'b', 'c'] as const
-  const obj = mapObjectFromKeys2(keys, (key, index) => {
+  const obj = mapObjectFromKeys(keys, (key, index) => {
     assert<Equals<typeof key, 'a' | 'b' | 'c'>>()
     assert<Equals<typeof index, 0 | 1 | 2>>()
-    return `${key}-const`
+    return 1 as const
   })
-  assert<Equals<typeof obj, { a: 'a-const'; b: 'b-const'; c: 'c-const' }>>()
-  expect(obj).toEqual({ a: 'a-const', b: 'b-const', c: 'c-const' })
+  assert<Equals<typeof obj, { a: 1; b: 1; c: 1 }>>()
+  expect(obj).toEqual({ a: 1, b: 1, c: 1 })
 })
-*/

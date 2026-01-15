@@ -393,34 +393,58 @@ type MapConstResult<ARRAY extends readonly any[], F extends Fn> = {
   readonly [K in keyof ARRAY]: Call<F, ARRAY[K]>
 }
 
-export const mapConst = <const ARRAY extends readonly any[]>(
+export function mapConst<const ARRAY extends readonly any[]>(
   array: ARRAY,
-) => <F extends Fn>(
-  transformer: (value: ARRAY[number], index: Pipe<ARRAY, [ Objects.Keys ]>) => MapConstResult<ARRAY, F>[number],
-): MapConstResult<ARRAY, F> => {
-  return array.map((item, index) => transformer(item, index as Pipe<ARRAY, [ Objects.Keys ]>)) as MapConstResult<ARRAY, F>
+): <F extends Fn>(
+  transformer: (value: ARRAY[number], index: Pipe<ARRAY, [Objects.Keys]>) => MapConstResult<ARRAY, F>[number],
+) => MapConstResult<ARRAY, F>
+
+export function mapConst<const ARRAY extends readonly any[], const R>(
+  array: ARRAY,
+  transformer: (value: ARRAY[number], index: Pipe<ARRAY, [Objects.Keys]>) => R,
+): { readonly [K in keyof ARRAY]: R }
+
+export function mapConst<const ARRAY extends readonly any[], const R>(
+  array: ARRAY,
+  transformer?: (value: ARRAY[number], index: Pipe<ARRAY, [Objects.Keys]>) => R,
+) {
+  return transformer === undefined
+    ? <F extends Fn>(
+        t: (value: ARRAY[number], index: Pipe<ARRAY, [Objects.Keys]>) => MapConstResult<ARRAY, F>[number],
+      ): MapConstResult<ARRAY, F> => {
+        return array.map((item, index) => t(item, index as Pipe<ARRAY, [Objects.Keys]>)) as MapConstResult<ARRAY, F>
+      }
+    : array.map((item, index) => transformer(item, index as Pipe<ARRAY, [Objects.Keys]>)) as { readonly [K in keyof ARRAY]: R }
 }
 
 type MapConstKeysToEntriesResult<ARRAY extends readonly any[], F extends Fn> = {
   readonly [K in keyof ARRAY]: [ARRAY[K], Call<F, ARRAY[K]>]
 }
 
-export const mapConstKeysToEntries = <const ARRAY extends readonly any[]>(
+export function mapConstKeysToEntries<const ARRAY extends readonly any[]>(
   array: ARRAY,
-) => <F extends Fn>(
-  transformer: (value: ARRAY[number], index: Pipe<ARRAY, [ Objects.Keys ]>  ) => MapConstKeysToEntriesResult<ARRAY, F>[number][1],
-): MapConstKeysToEntriesResult<ARRAY, F> => {
-  return array.map((item, index) => [item, transformer(item, index as Pipe<ARRAY, [ Objects.Keys ]>)]) as MapConstKeysToEntriesResult<ARRAY, F>
-}
+): <F extends Fn>(
+  transformer: (value: ARRAY[number], index: Pipe<ARRAY, [Objects.Keys]>) => MapConstKeysToEntriesResult<ARRAY, F>[number][1],
+) => MapConstKeysToEntriesResult<ARRAY, F>
 
-export const mapConstKeysToEntries2 = <const ARRAY extends readonly any[], const R>(
+export function mapConstKeysToEntries<const ARRAY extends readonly any[], const R>(
   array: ARRAY,
-  transformer: (value: ARRAY[number], index: Pipe<ARRAY, [ Objects.Keys ]>  ) => R,
-): { readonly [K in keyof ARRAY] : [ARRAY[K], R] } => {
-  return array.map((item, index) => [item, transformer(item, index as Pipe<ARRAY, [ Objects.Keys ]>)]) as { readonly [K in keyof ARRAY] : [ARRAY[K], R] }
+  transformer: (value: ARRAY[number], index: Pipe<ARRAY, [Objects.Keys]>) => R,
+): { readonly [K in keyof ARRAY]: [ARRAY[K], R] }
+
+export function mapConstKeysToEntries<const ARRAY extends readonly any[], const R>(
+  array: ARRAY,
+  transformer?: (value: ARRAY[number], index: Pipe<ARRAY, [Objects.Keys]>) => R,
+) {
+  return transformer === undefined ?
+      <F extends Fn>(
+        t: (value: ARRAY[number], index: Pipe<ARRAY, [Objects.Keys]>) => MapConstKeysToEntriesResult<ARRAY, F>[number][1],
+      ): MapConstKeysToEntriesResult<ARRAY, F> => {
+        return array.map((item, index) => [item, t(item, index as Pipe<ARRAY, [Objects.Keys]>)]) as MapConstKeysToEntriesResult<ARRAY, F>
+      }
+    :
+      array.map((item, index) => [item, transformer(item, index as Pipe<ARRAY, [Objects.Keys]>)]) as { readonly [K in keyof ARRAY]: [ARRAY[K], R] }
 }
-
-
 
 export const objectFromConstEntries = <const ENTRIES extends readonly (readonly [string, any])[]>(
   entries: ENTRIES,
@@ -432,11 +456,28 @@ export const objectFromConstEntries = <const ENTRIES extends readonly (readonly 
   }
 }
 
-export const mapObjectFromKeys = <const KEYS extends readonly string[]>(
+export function mapObjectFromKeys<const KEYS extends readonly string[]>(
   keys: KEYS,
-) => <F extends Fn>(
-  transformer: (key: KEYS[number], index: Pipe<KEYS, [ Objects.Keys ]>) => Call<F, KEYS[number]>,
-): {
+): <F extends Fn>(
+  transformer: (key: KEYS[number], index: Pipe<KEYS, [Objects.Keys]>) => Call<F, KEYS[number]>,
+) => {
   [K in MapConstKeysToEntriesResult<KEYS, F>[number] as K[0]]: K[1]
-} =>
-  objectFromConstEntries(mapConstKeysToEntries(keys)<F>(transformer))
+}
+
+export function mapObjectFromKeys<const KEYS extends readonly string[], const R>(
+  keys: KEYS,
+  transformer: (key: KEYS[number], index: Pipe<KEYS, [Objects.Keys]>) => R,
+): { [K in KEYS[number]]: R }
+
+export function mapObjectFromKeys<const KEYS extends readonly string[], const R>(
+  keys: KEYS,
+  transformer?: (key: KEYS[number], index: Pipe<KEYS, [Objects.Keys]>) => R,
+) {
+  return transformer === undefined
+    ? <F extends Fn>(
+        t: (key: KEYS[number], index: Pipe<KEYS, [Objects.Keys]>) => Call<F, KEYS[number]>,
+      ): {
+        [K in MapConstKeysToEntriesResult<KEYS, F>[number] as K[0]]: K[1]
+      } => objectFromConstEntries(mapConstKeysToEntries(keys)<F>(t))
+    : objectFromConstEntries(mapConstKeysToEntries(keys, transformer))
+}

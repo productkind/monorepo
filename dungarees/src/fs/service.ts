@@ -222,11 +222,9 @@ export const createFileSystem = (fs: NodeFs): FileSystem => {
     const permissionValues = [4, 2, 1] as const
 
     const getPermissionGroup =
-      mapObjectFromKeys(permissionGroupNames)<StaticFn<FilePermissions>>((_, index) =>
-        objectFromConstEntries(
-          mapConstKeysToEntries(permissionNames)<StaticFn<boolean>>((_, permIndex) =>
-            Boolean(stat.mode & groupSelectors[index] * permissionValues[permIndex])
-          )
+      mapObjectFromKeys(permissionGroupNames, (_, index) =>
+        mapObjectFromKeys(permissionNames, (_, permissionIndex) =>
+          Boolean(stat.mode & groupSelectors[index] * permissionValues[permissionIndex])
         )
       )
 
