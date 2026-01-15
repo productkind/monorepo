@@ -1,5 +1,5 @@
 import { lastValueFrom, type Observable, scan, defer, of, map, delay, mergeMap, catchError, throwError, concat, type OperatorFunction } from 'rxjs'
-import { assertPredicate, assertTypeByGuard, mapConst, objectFromConstEntries } from '@dungarees/core/util.ts'
+import { assertDefined, assertPredicate, assertTypeByGuard, mapConst, mapConstKeysToEntries, objectFromConstEntries } from '@dungarees/core/util.ts'
 import { type Guard } from '@dungarees/core/type-util.ts'
 import { type ZodSchema } from 'zod'
 import type {Fn} from 'hotscript'
@@ -260,7 +260,7 @@ interface ToObservableEntryFn<SERVICE> extends Fn {
   return: this['arg0'] extends string
     ? `${this['arg0']}Sync` extends keyof SERVICE
       ? SERVICE[`${this['arg0']}Sync`] extends (...args: any[]) => any
-        ? [this['arg0'], SyncFunctionToObservable<SERVICE[`${this['arg0']}Sync`]>]
+        ? SyncFunctionToObservable<SERVICE[`${this['arg0']}Sync`]>
         : never
       : never
     : never
@@ -271,7 +271,7 @@ type SyncMethodBase<SERVICE> = {
 }[keyof SERVICE]
 
 export const getObservableMethodsFromSync = <
-  SERVICE,
+  SERVICE extends Record<`${string}Sync`, (...args: any[]) => any>,
   const METHOD_NAMES extends readonly SyncMethodBase<SERVICE>[],
 >(
   service: SERVICE,
@@ -284,9 +284,12 @@ export const getObservableMethodsFromSync = <
       : never
     : never
 } => {
-  const observableMethods = mapConst(methodNames)<ToObservableEntryFn<SERVICE>>((methodName) => {
-    return [methodName, syncFunctionToObservable((service as any)[`${methodName}Sync`], delayMs)]
-  })
+  const observableMethods = mapConstKeysToEntries(methodNames)<ToObservableEntryFn<SERVICE>>((methodName) =>
+    syncFunctionToObservable(
+      assertDefined((service)[`${methodName}Sync`], `Method "${methodName}Sync" don't exists`),
+      delayMs,
+    )
+  )
 
   return objectFromConstEntries(observableMethods) as any
 }

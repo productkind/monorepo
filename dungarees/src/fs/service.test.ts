@@ -5,6 +5,9 @@ import * as fs from 'fs'
 import { lastValueFrom } from 'rxjs'
 import { expect, test } from 'vitest'
 
+const EXECUTABLE_PERMISSIONS = 0o755
+const NON_EXECUTABLE_PERMISSIONS = 0o644
+
 test('FileSystem should write and read file sync', () => {
   const fakeFs = createFakeNodeFs()
   const fileSystem = createFileSystem(fakeFs)
@@ -208,19 +211,85 @@ test('FileSystem should have a readBulkSync method', () => {
   })
 })
 
-test('FileSystem should have a readBulk method', async () => {
+test('FileSystem should read the file stats correctly', () => {
   const fakeFs = createFakeNodeFs({
-    '/test.txt': 'test',
-    '/test2.txt': 'test2',
-    '/test3.json': '{"test": "test3"}',
+    '/dir/test.txt': 'test',
   })
   const fileSystem = createFileSystem(fakeFs)
-  const results = await lastValueFrom(fileSystem.readBulk(['/test.txt', '/test2.txt', '/test3.json']))
-  expect(results).toEqual({
-    '/test.txt': 'test',
-    '/test2.txt': 'test2',
-    '/test3.json': '{"test": "test3"}',
+  fakeFs.chmodSync('/dir/test.txt', 0o654)
+  fakeFs.chownSync('/dir/test.txt', 1000, 1001)
+  const stat = fileSystem.getStatSync('/dir/test.txt')
+  expect(stat.isDirectory).toBe(false)
+  expect(stat.mode).toBe(0o100654)
+  expect(stat.userId).toBe(1000)
+  expect(stat.groupId).toBe(1001)
+  expect(stat.permissions).toEqual({
+    user: { read: true, write: true, execute: false },
+    group: { read: true, write: false, execute: true },
+    others: { read: true, write: false, execute: false },
   })
 })
 
 
+test('FileSystem executable checks: executable file is reported executable', async () => {
+  const fakeFs = createFakeNodeFs()
+
+  fakeFs.writeFileSync('/exec-world.sh', '#!/bin/sh\necho hello')
+  fakeFs.chmodSync('/exec-world.sh', EXECUTABLE_PERMISSIONS)
+
+  const fileSystem = createFileSystem(fakeFs)
+
+  expect(fileSystem.isExeSync('/exec-world.sh')).toBe(true)
+  await expect(fileSystem.isExecAsync('/exec-world.sh')).resolves.toBe(true)
+  await expect(lastValueFrom(fileSystem.isExec('/exec-world.sh'))).resolves.toBe(true)
+})
+
+test('FileSystem executable checks: non-executable file is reported non-executable', async () => {
+  const fakeFs = createFakeNodeFs()
+
+  fakeFs.writeFileSync('/non-exec.txt', 'hello')
+  fakeFs.chmodSync('/non-exec.txt', NON_EXECUTABLE_PERMISSIONS)
+
+  const fileSystem = createFileSystem(fakeFs)
+
+  expect(fileSystem.isExeSync('/non-exec.txt')).toBe(false)
+  await expect(fileSystem.isExecAsync('/non-exec.txt')).resolves.toBe(false)
+  await expect(lastValueFrom(fileSystem.isExec('/non-exec.txt'))).resolves.toBe(false)
+})
+
+test('FileSystem executable checks: directories are not treated as executable files', async () => {
+  const fakeFs = createFakeNodeFs()
+
+  fakeFs.mkdirSync('/dir')
+  fakeFs.chmodSync('/dir', EXECUTABLE_PERMISSIONS)
+
+  const fileSystem = createFileSystem(fakeFs)
+
+  expect(fileSystem.isExeSync('/dir')).toBe(false)
+  await expect(fileSystem.isExecAsync('/dir')).resolves.toBe(false)
+  await expect(lastValueFrom(fileSystem.isExec('/dir'))).resolves.toBe(false)
+})
+
+test('FileSystem executable checks: throws when uid/gid cannot be resolved', () => {
+  const fakeFs = createFakeNodeFs()
+
+  fakeFs.writeFileSync('/exec-world.sh', '#!/bin/sh\necho hello')
+  fakeFs.chmodSync('/exec-world.sh', EXECUTABLE_PERMISSIONS)
+
+  const fileSystem = createFileSystem(fakeFs)
+
+  const originalGetuid = (process as unknown as { getuid?: (() => number) | undefined }).getuid
+  const originalGetgid = (process as unknown as { getgid?: (() => number) | undefined }).getgid
+
+  try {
+    ;(process as unknown as { getuid?: (() => number) | undefined }).getuid =
+      () => undefined as unknown as number
+    ;(process as unknown as { getgid?: (() => number) | undefined }).getgid =
+      () => undefined as unknown as number
+
+    expect(() => fileSystem.isExeSync('/exec-world.sh')).toThrowError('cannot get uid or gid')
+  } finally {
+    ;(process as unknown as { getuid?: (() => number) | undefined }).getuid = originalGetuid
+    ;(process as unknown as { getgid?: (() => number) | undefined }).getgid = originalGetgid
+  }
+})

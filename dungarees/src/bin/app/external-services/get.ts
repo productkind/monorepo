@@ -1,6 +1,6 @@
 import type { DungareesBinExternalServices } from "@dungarees/bin/delivery/external-services/index.ts"
 import { createFileSystem } from "@dungarees/fs/service.ts"
-import {createProcessService} from "@dungarees/process/service.ts"
+import {createProcessService} from "@dungarees/sub-process/service.ts"
 import * as fs from "node:fs"
 import { spawn } from 'node:child_process'
 

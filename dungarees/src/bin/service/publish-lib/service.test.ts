@@ -1,6 +1,6 @@
 import { test, expect } from 'vitest'
 import { createFakeFileSystem } from '@dungarees/fs/fake.ts'
-import { createFakeProcessService } from '@dungarees/process/fake.ts'
+import { createFakeProcessService } from '@dungarees/sub-process/fake.ts'
 import { createPublishLibService } from './service.ts'
 import { collectValuesFrom } from '@dungarees/rxjs/util.ts'
 

@@ -1,3 +1,5 @@
+import {Fn} from "hotscript";
+
 export type StringLiteral<T> = T extends string ? (string extends T ? never : T) : never
 
 export type ObjectWithStringLiteralKey<KEY, VALUE> = {
@@ -160,3 +162,7 @@ export type SyncFunctionToAsync<FUNC extends (...args: any[]) => any> = FUNC ext
 ) => infer RETURN
   ? (...args: ARGS) => Promise<RETURN>
   : never
+
+export interface StaticFn<RETURN> extends Fn {
+  'return': RETURN
+}

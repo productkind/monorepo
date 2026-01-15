@@ -1,57 +1,22 @@
-import { type ProcessService, type Spawn } from './type.ts'
+import { assertDefined } from '@dungarees/core/util.ts'
 
-import { combineLatest, firstValueFrom, map, scan, startWith, Subject } from 'rxjs'
+type ProcessService = {
+  getUserId: () => number
+  getGroups: () => number[]
+}
 
-export const createProcessService = (spawn: Spawn): ProcessService => {
-  const run: ProcessService['run'] = (command, args, options = {}) => {
-    const stdout$ = new Subject<string>()
-    const stderror$ = new Subject<string>()
-    const exitCode$ = new Subject<number | undefined>()
-    const spawnProcess = spawn(command, args ?? [], options)
-    const accumulateOutput = (acc: string, value: string): string => acc + value
-    const output$ = combineLatest([
-      stdout$.pipe(startWith(''), scan(accumulateOutput, '')),
-      stderror$.pipe(startWith(''), scan(accumulateOutput, '')),
-      exitCode$,
-    ]).pipe(
-      map(([stdout, stderror, exitCode]) => ({
-        stdout,
-        stderror,
-        exitCode,
-      })),
-    )
-
-    spawnProcess.stdout?.on('data', (data) => {
-      stdout$.next(String(data))
-      console.log(String(data))
-    })
-
-    spawnProcess.stderr?.on('data', (data) => {
-      stderror$.next(String(data))
-      console.log(String(data))
-    })
-
-    spawnProcess.on('close', (exitCode) => {
-      exitCode$.next(exitCode ?? undefined)
-      stderror$.complete()
-      stdout$.complete()
-      exitCode$.complete()
-    })
-
-    return {
-      stdout$,
-      stderror$,
-      exitCode$,
-      output$,
-    }
-  }
-
-  const runAsync: ProcessService['runAsync'] = async (command, args) => {
-    return await firstValueFrom(run(command, args).output$)
-  }
-
+export const createProcessService = (nodeProcess: NodeJS.Process): ProcessService => {
   return {
-    run,
-    runAsync,
+    getUserId: () => {
+      const uid = nodeProcess.getuid?.()
+      return assertDefined(uid, `getuid is not supported on this platform: ${nodeProcess.platform}`)
+    },
+    getGroups: () => {
+      const groups = nodeProcess.getgroups?.()
+      return assertDefined(
+        groups,
+        `getgroups is not supported on this platform: ${nodeProcess.platform}`,
+      )
+    },
   }
 }

@@ -10,7 +10,7 @@
   "dependencies": {
     "@dungarees/core": "*",
     "@dungarees/fs": "*",
-    "@dungarees/process": "*",
+    "@dungarees/sub-process": "*",
     "@dungarees/transpile": "*",
     "@dungarees/cli": "*",
     "yargs": "^18.0.0",

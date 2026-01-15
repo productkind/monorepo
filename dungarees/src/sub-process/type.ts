@@ -3,29 +3,31 @@ import { type Observable } from 'rxjs'
 
 export type Spawn = (command: string, args: string[], options: SpawnOptions) => ChildProcess
 
+export type ProcessServiceOutput = {
+  stdout: string
+  stderror: string
+  exitCode: number | undefined
+}
+
+export type RunOptions = {
+  cwd?: string
+}
+
 export type ProcessService = {
   run: (
     command: string,
     args?: string[],
-    options?: {
-      cwd?: string
-    }
+    options?: RunOptions,
   ) => {
     stdout$: Observable<string>
     stderror$: Observable<string>
     exitCode$: Observable<number | undefined>
-    output$: Observable<{
-      stdout: string
-      stderror: string
-      exitCode: number | undefined
-    }>
+    output$: Observable<ProcessServiceOutput>
   }
   runAsync: (
     command: string,
     args?: string[],
-  ) => Promise<{
-    stdout: string
-    stderror: string
-    exitCode: number | undefined
-  }>
+    options?: RunOptions,
+  ) => Promise<ProcessServiceOutput>
 }
+

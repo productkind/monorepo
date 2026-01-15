@@ -1,5 +1,5 @@
 {
-  "name": "@dungarees/process",
+  "name": "@dungarees/sub-process",
   "engines": {
     "node": ">=25.0.0"
   },
@@ -8,7 +8,11 @@
   },
   "type": "module",
   "dependencies": {
-    "@dungarees/core": "*"
+    "@dungarees/core": "*",
+    "@dungarees/rxjs": "*",
+    "@dungarees/cli": "*",
+    "@dungarees/fs": "*",
+    "rxjs": "^7.8.1"
   },
   "devDependencies": {
     "typescript": "^5.9.3",

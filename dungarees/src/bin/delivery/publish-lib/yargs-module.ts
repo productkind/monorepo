@@ -15,10 +15,9 @@ export const publishLibYargsModule = ({ publishLib }: DungareesBinInternalServic
         .option('registry', { type: 'string' })
         .default('lib-path', '.'),
     handler: async (args) => {
-      console.log(args)
       const { stdio$ } = publishLib.publishMultiLib({
         dir: args.libPath!,
-        ...(args['registry'] ? { registry: String(args['registry']) } : {}),
+        registry: String(args['registry']),
       })
       await printStido(stdio$)
     },

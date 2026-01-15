@@ -7,7 +7,7 @@
     "@dungarees/core": "*",
     "@dungarees/cli": "*",
     "@dungarees/fs": "*",
-    "@dungarees/process": "*",
+    "@dungarees/sub-process": "*",
     "@dungarees/rxjs": "*"
   },
   "type": "module",

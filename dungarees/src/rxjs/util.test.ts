@@ -240,6 +240,18 @@ mtest('getObservableMethodsFromSync', ({expect}) => {
   expect(multiply$).toBeObservable('(6|)', { '6': 6 })
 })
 
+test('getObservableMethodsFromSync', () => {
+  const service = {
+    addSync: (a: number, b: number): number => a + b,
+  }
+
+  expect(() => {
+    // @ts-expect-error multiplySync doesn't exist
+    getObservableMethodsFromSync(service, ['multiply'] as const)
+  }).toThrow('Method "multiplySync" don\'t exists')
+})
+
+
 mtest('getObservableMethodsFromSync delay', ({expect}) => {
   const service = {
     addSync: (a: number, b: number): number => a + b,

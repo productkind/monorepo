@@ -21,6 +21,9 @@ import {
   split,
   unPrototypeProperties,
   objectFromConstEntries,
+  mapConstKeysToEntries,
+  mapObjectFromKeys,
+  mapConstKeysToEntries2,
 } from './util.ts'
 
 import { type Fn } from 'hotscript'
@@ -254,7 +257,7 @@ test('unPrototypeProperties', () => {
 })
 
 interface AppendConstFn extends Fn {
-  return: this['arg0'] extends string ? `${this['arg0']}-const` : never
+  'return': `${this['arg0']}-const`
 }
 
 test('mapConst', () => {
@@ -264,13 +267,63 @@ test('mapConst', () => {
   expect(output).toEqual(['a-const', 'b-const', 'c-const'])
 })
 
+test('mapConst expets a lambda with a correct return type', () => {
+  const input = ['a', 'b', 'c'] as const
+  // @ts-expect-error The return type of the lambda should depend on the input value
+  mapConst(input)<AppendConstFn>(() => 1)
+})
+
 test('mapConst infers input type from array', () => {
   const input = ['a', 'b', 'c'] as const
-  mapConst(input)<AppendConstFn>((value) => {
+  const output: number[] = []
+  mapConst(input)<AppendConstFn>((value, index) => {
     assert<Equals<typeof value, 'a' | 'b' | 'c'>>()
+    assert<Equals<typeof index, 0 | 1 | 2>>()
+    output.push(index)
     return `${value}-const`
   })
+  expect(output).toEqual([0, 1, 2])
 })
+
+test('mapConstKeysToEntries infers input type from array', () => {
+  const input = ['a', 'b', 'c'] as const
+  const output = mapConstKeysToEntries(input)<AppendConstFn>((value) => `${value}-const`)
+  assert<Equals<typeof output, readonly [['a', 'a-const'], ['b', 'b-const'], ['c', 'c-const']]>>()
+  expect(output).toEqual([['a', 'a-const'], ['b', 'b-const'], ['c', 'c-const']])
+})
+
+test('mapConstKeysToEntries expets a lambda with a correct return type', () => {
+  const input = ['a', 'b', 'c'] as const
+  // @ts-expect-error The return type of the lambda should depend on the input value
+  mapConstKeysToEntries(input)<AppendConstFn>(() => 1)
+})
+
+test('mapConstKeysToEntries infers input type from array', () => {
+  const input = ['a', 'b', 'c'] as const
+  const output: number[] = []
+  const a = mapConstKeysToEntries2(input, (value, index) => {
+    assert<Equals<typeof value, 'a' | 'b' | 'c'>>()
+    assert<Equals<typeof index, 0 | 1 | 2>>()
+    output.push(index)
+    return 1 as const
+  })
+  assert<Equals<typeof a, readonly [['a', 1], ['b', 1], ['c', 1]]>>()
+  expect(a).toEqual([['a', 1], ['b', 1], ['c', 1]])
+  expect(output).toEqual([0, 1, 2])
+})
+
+test('mapConstKeysToEntries infers input type from array', () => {
+  const input = ['a', 'b', 'c'] as const
+  const output: number[] = []
+  mapConstKeysToEntries(input)<AppendConstFn>((value, index) => {
+    assert<Equals<typeof value, 'a' | 'b' | 'c'>>()
+    assert<Equals<typeof index, 0 | 1 | 2>>()
+    output.push(index)
+    return `${value}-const`
+  })
+  expect(output).toEqual([0, 1, 2])
+})
+
 
 test('objectFromConstEntries', () => {
   const entries = [
@@ -282,3 +335,27 @@ test('objectFromConstEntries', () => {
   assert<Equals<typeof obj, { a: 1; b: 2; c: 3 }>>()
   expect(obj).toEqual({ a: 1, b: 2, c: 3 })
 })
+
+test('mapObjectFromKeys', () => {
+  const keys = ['a', 'b', 'c'] as const
+  const obj = mapObjectFromKeys(keys)<AppendConstFn>((key, index) => {
+    assert<Equals<typeof key, 'a' | 'b' | 'c'>>()
+    assert<Equals<typeof index, 0 | 1 | 2>>()
+    return `${key}-const`
+  })
+  assert<Equals<typeof obj, { a: 'a-const'; b: 'b-const'; c: 'c-const' }>>()
+  expect(obj).toEqual({ a: 'a-const', b: 'b-const', c: 'c-const' })
+})
+
+/*
+test('mapObjectFromKeys2', () => {
+  const keys = ['a', 'b', 'c'] as const
+  const obj = mapObjectFromKeys2(keys, (key, index) => {
+    assert<Equals<typeof key, 'a' | 'b' | 'c'>>()
+    assert<Equals<typeof index, 0 | 1 | 2>>()
+    return `${key}-const`
+  })
+  assert<Equals<typeof obj, { a: 'a-const'; b: 'b-const'; c: 'c-const' }>>()
+  expect(obj).toEqual({ a: 'a-const', b: 'b-const', c: 'c-const' })
+})
+*/

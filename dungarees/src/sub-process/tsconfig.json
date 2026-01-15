@@ -2,7 +2,7 @@
   "extends": "@dungarees/core/tsconfig.base.json",
   "compilerOptions": {
     "paths": {
-      "@dungarees/process/*": ["./*"]
+      "@dungarees/sub-process/*": ["./*"]
     },
     "noEmit": true,
     "module": "NodeNext"

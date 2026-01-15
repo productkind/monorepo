@@ -5,7 +5,7 @@ import { concat, map, forkJoin, mergeMap, defer } from 'rxjs'
 import { createOutDir, transformPackageJson, copyFiles, publishLib } from "./operations.ts";
 import { createFileOperations } from "@dungarees/fs/file-operations.ts";
 import { createTranspilerService } from "@dungarees/transpile/service.ts";
-import type { ProcessService } from "@dungarees/process/type.ts";
+import type { ProcessService } from "@dungarees/sub-process/type.ts";
 import { stdout, stderr } from '@dungarees/cli/utils.ts'
 
 import { of } from 'rxjs'
