@@ -1,8 +1,7 @@
 import { lastValueFrom, type Observable, scan, defer, of, map, delay, mergeMap, catchError, throwError, concat, type OperatorFunction } from 'rxjs'
-import { assertDefined, assertPredicate, assertTypeByGuard, mapConst, mapConstKeysToEntries, objectFromConstEntries } from '@dungarees/core/util.ts'
+import { assertDefined, assertPredicate, assertTypeByGuard, mapConstKeysToEntries, objectFromConstEntries } from '@dungarees/core/util.ts'
 import { type Guard } from '@dungarees/core/type-util.ts'
 import { type ZodSchema } from 'zod'
-import type {Fn} from 'hotscript'
 
 export type SyncFunctionToObservable<FUNC extends (...args: any[]) => any> = FUNC extends (
   ...args: infer ARGS
@@ -256,42 +255,43 @@ export const createGetTransformSetContext = <CONTEXT, GET, SET>(
     )
   ) as GetTransformSetContext<CONTEXT, GET, SET>
 
-interface ToObservableEntryFn<SERVICE> extends Fn {
-  return: this['arg0'] extends string
-    ? `${this['arg0']}Sync` extends keyof SERVICE
-      ? SERVICE[`${this['arg0']}Sync`] extends (...args: any[]) => any
-        ? SyncFunctionToObservable<SERVICE[`${this['arg0']}Sync`]>
-        : never
-      : never
-    : never
-}
-
 type SyncMethodBase<SERVICE> = {
   [K in keyof SERVICE]: K extends `${infer BASE}Sync` ? BASE : never
 }[keyof SERVICE]
 
-export const getObservableMethodsFromSync = <
+type ObservableMethodsFromSync<
   SERVICE extends Record<`${string}Sync`, (...args: any[]) => any>,
-  const METHOD_NAMES extends readonly SyncMethodBase<SERVICE>[],
->(
-  service: SERVICE,
-  methodNames: METHOD_NAMES,
-  delayMs: number = 0,
-): {
+  METHOD_NAMES extends readonly SyncMethodBase<SERVICE>[],
+> = {
   [K in METHOD_NAMES[number]]: `${K & string}Sync` extends keyof SERVICE
     ? SERVICE[`${K & string}Sync`] extends (...args: infer ARGS) => infer RETURN
       ? (...args: ARGS) => Observable<RETURN>
       : never
     : never
-} => {
-  const observableMethods = mapConstKeysToEntries(methodNames)<ToObservableEntryFn<SERVICE>>((methodName) =>
+}
+
+export function getObservableMethodsFromSync<
+  SERVICE extends Record<`${string}Sync`, (...args: any[]) => any>,
+  const METHOD_NAMES extends readonly SyncMethodBase<SERVICE>[],
+>(
+  service: SERVICE,
+  methodNames: METHOD_NAMES,
+  delayMs?: number,
+): ObservableMethodsFromSync<SERVICE, METHOD_NAMES>
+
+export function getObservableMethodsFromSync(
+  service: Record<`${string}Sync`, (...args: any[]) => any>,
+  methodNames: readonly string[],
+  delayMs: number = 0,
+) {
+  const observableMethods = mapConstKeysToEntries(methodNames, (methodName) =>
     syncFunctionToObservable(
-      assertDefined((service)[`${methodName}Sync`], `Method "${methodName}Sync" don't exists`),
+      assertDefined(service[`${methodName}Sync`], `Method "${methodName}Sync" don't exists`),
       delayMs,
     )
   )
 
-  return objectFromConstEntries(observableMethods) as any
+  return objectFromConstEntries(observableMethods)
 }
 
 
