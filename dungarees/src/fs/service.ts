@@ -50,6 +50,8 @@ export type FileSystem = {
   isExecAsync: (path: string) => Promise<boolean>
   isExec: (path: string) => Observable<boolean>
   getStatSync: (path: string) => FileStats
+  getStatAsync: (path: string) => Promise<FileStats>
+  getStat: (path: string) => Observable<FileStats>
 }
 
 type UsedFsMethods =
@@ -213,15 +215,13 @@ export const createFileSystem = (fs: NodeFs): FileSystem => {
     return checkStat(stat, {})
   }
 
-  const getStatSync: FileSystem['getStatSync'] = (path) => {
-    const stat = fs.lstatSync(path)
+  const permissionGroupNames = ['user', 'group', 'others'] as const
+  const groupSelectors = [0o100, 0o010, 0o001] as const
+  const permissionNames = ['read', 'write', 'execute'] as const
+  const permissionValues = [4, 2, 1] as const
 
-    const permissionGroupNames = ['user', 'group', 'others'] as const
-    const groupSelectors = [0o100, 0o010, 0o001] as const
-    const permissionNames = ['read', 'write', 'execute'] as const
-    const permissionValues = [4, 2, 1] as const
-
-    const getPermissionGroup =
+  const statToFileStats = (stat: Stats): FileStats => {
+    const permissions =
       mapObjectFromKeys(permissionGroupNames, (_, index) =>
         mapObjectFromKeys(permissionNames, (_, permissionIndex) =>
           Boolean(stat.mode & groupSelectors[index] * permissionValues[permissionIndex])
@@ -233,8 +233,18 @@ export const createFileSystem = (fs: NodeFs): FileSystem => {
       mode: stat.mode,
       userId: stat.uid,
       groupId: stat.gid,
-      permissions: getPermissionGroup,
+      permissions,
     }
+  }
+
+  const getStatSync: FileSystem['getStatSync'] = (path) => {
+    const stat = fs.lstatSync(path)
+    return statToFileStats(stat)
+  }
+
+  const getStatAsync: FileSystem['getStatAsync'] = async (path) => {
+    const stat = await fs.promises.lstat(path)
+    return statToFileStats(stat)
   }
 
   return {
@@ -263,5 +273,7 @@ export const createFileSystem = (fs: NodeFs): FileSystem => {
     isExecAsync,
     isExec: asyncFunctionToObservable(isExecAsync),
     getStatSync,
+    getStatAsync,
+    getStat: asyncFunctionToObservable(getStatAsync),
   }
 }

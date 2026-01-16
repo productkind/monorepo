@@ -25,7 +25,7 @@ export const createFakeFileSystem = (files?: Record<string, string>): FakeFileSy
 
   const fileSystem: FileSystem = createFileSystem(fs)
 
-  const observableMethodNames = ['writeFile', 'readDir', 'readDirDeep', 'mkdir', 'glob', 'readBulk'] as const;
+  const observableMethodNames = ['writeFile', 'readDir', 'readDirDeep', 'mkdir', 'glob', 'readBulk', 'getStat'] as const;
 
   const observableFake = getObservableMethodsFromSync(
     fileSystem,

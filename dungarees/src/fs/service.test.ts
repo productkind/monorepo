@@ -230,6 +230,44 @@ test('FileSystem should read the file stats correctly', () => {
   })
 })
 
+test('FileSystem should read the file stats correctly with getStatAsync', async () => {
+  const fakeFs = createFakeNodeFs({
+    '/dir/test.txt': 'test',
+  })
+  const fileSystem = createFileSystem(fakeFs)
+  fakeFs.chmodSync('/dir/test.txt', 0o654)
+  fakeFs.chownSync('/dir/test.txt', 1000, 1001)
+  const stat = await fileSystem.getStatAsync('/dir/test.txt')
+  expect(stat.isDirectory).toBe(false)
+  expect(stat.mode).toBe(0o100654)
+  expect(stat.userId).toBe(1000)
+  expect(stat.groupId).toBe(1001)
+  expect(stat.permissions).toEqual({
+    user: { read: true, write: true, execute: false },
+    group: { read: true, write: false, execute: true },
+    others: { read: true, write: false, execute: false },
+  })
+})
+
+test('FileSystem should read the file stats correctly with getStat observable', async () => {
+  const fakeFs = createFakeNodeFs({
+    '/dir/test.txt': 'test',
+  })
+  const fileSystem = createFileSystem(fakeFs)
+  fakeFs.chmodSync('/dir/test.txt', 0o654)
+  fakeFs.chownSync('/dir/test.txt', 1000, 1001)
+  const stat = await lastValueFrom(fileSystem.getStat('/dir/test.txt'))
+  expect(stat.isDirectory).toBe(false)
+  expect(stat.mode).toBe(0o100654)
+  expect(stat.userId).toBe(1000)
+  expect(stat.groupId).toBe(1001)
+  expect(stat.permissions).toEqual({
+    user: { read: true, write: true, execute: false },
+    group: { read: true, write: false, execute: true },
+    others: { read: true, write: false, execute: false },
+  })
+})
+
 
 test('FileSystem executable checks: executable file is reported executable', async () => {
   const fakeFs = createFakeNodeFs()
