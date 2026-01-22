@@ -6,6 +6,15 @@
     "title": "Fix Bugs with Confidence: Debugging Your Lovable App",
     "challenges": [
       {
+        "title": "The Anatomy of a Bug",
+        "isFree": true,
+        "skills": [
+          "Bug Definition",
+          "Debugging",
+          "Bug Types"
+        ],
+        "description": "Understand what bugs are, how they are categorised, and develop the mindset to solve them effectively.",
+        "completionTime": "8:00",
         "steps": [
           {
             "type": "comic",
@@ -44,7 +53,7 @@
             "type": "text",
             "title": "Bugs are normal",
             "content": {
-              "body": "THIS WILL BE THE VIDEO - [incorporate this text into script?]  Here's a secret that professional developers know: **bugs happen to everyone**. Even the most experienced engineers spend a significant part of their day fixing things that don't work quite right.\n\nThe difference between getting stuck and moving forward isn't about being \"technical enough.\" It's about knowing what to do when things go wrong. That's exactly what this micro-course will teach you.",
+              "body": "THIS WILL BE THE VIDEO\nWhen you build applications with AI app builders, things will sometimes break. Debugging is simply\nthe process of finding and fixing those problems. In this micro-lesson, you’ll learn practical\ntechniques and core concepts to help you troubleshoot issues in AI-built applications. By the end,\nyou’ll be able to recognise common problems, identify their root causes, and fix them more\neffectively. Here’s something professional developers know well: bugs happen to everyone. Even\nexperienced engineers spend much of their time fixing things that do not work as expected. Progress\nis not about being “technical enough”. It’s about knowing what to do when things go wrong or prevent\nthem occurring on the first place. That’s exactly what this micro-course is designed to teach.",
               "imageUrl": "/courses/vibe-coding-debugging-00/bugs-normal.gif"
             },
             "subtitle": "Every builder encounters them"
@@ -61,90 +70,170 @@
             "type": "text",
             "title": "Types of bugs",
             "content": {
-              "body": "Bugs can be categorised in many ways. For our purposes, it makes sense to categorise them based on the action needed to fix them.\n\nBugs typically fall into a few common categories:\n\n**Launch blockers:**\nThe app will not start or load, and you only see an error message.\n\n**Crashes, freezes and misbehaviours:**\nThe app starts, but specific features do not work as expected.\n\n**Visual glitches:**\nThings look wrong, such as incorrect colours, broken layouts, or text appearing in the wrong place.\n\n**Security vulnerabilities:**\nData leaks, unauthorised access, or other safety-related issues.\n\nUnderstanding these different scenarios can help you identify bugs more quickly.\n\nLet's go through on the categories in more detail."
+              "body": "Bugs can be categorised in many ways. For our purposes, it makes sense to categorise them based on the action needed to fix them.\n\nBugs typically fall into a few common categories:\n\n- **Launch blockers:** The app will not start or load, and you only see an error message.\n- **Freezes and misbehaviours:** The app starts, but specific features do not work as expected.\n- **Visual glitches:** Things look wrong, such as incorrect colours, or broken layouts.\n- **Security vulnerabilities:** Potential data leaks, unauthorised access threat, or other safety-related issues.\n\nUnderstanding these different scenarios can help you fix these bugs more quickly."
             },
             "subtitle": "Different problems need different approaches"
           },
           {
             "type": "text",
+            "title": "Types of bugs",
+            "content": {
+              "body": "Let ’s briefly explore each type of bug in the next steps. Some of them are so easy to\nfix that we cover them in the challenge right away, but others require more depth so\nthere is going to be a dedicated challenge later in the course."
+            },
+            "subtitle": "Overview of bug categories"
+          },
+          {
+            "type": "text",
             "title": "Types of bugs: Launch blockers",
             "content": {
-              "body": "Launch blockers prevent your app from starting at all. In technical terms, these are known as **build errors** or **compile-time errors**.\n\nBuild or compile time refers to the process of transforming your app’s code into a runnable program. If errors occur during this process, the app will not launch.\n\nThese errors can look intimidating, but they usually come with clear messages explaining what went wrong. Common causes include syntax errors, missing files, or incompatible code.\n\nBecause these instructions are explicit and easy to interpret, and because AI is well suited to reading them, launch blockers are often the easiest bugs to fix.\n\nLovable is even designed to automatically show a **Try to Fix** button when these errors occur, allowing you to resolve them quickly with a single click.",
+              "body": "Launch blockers prevent your app from starting at all. In technical terms, these are known as **build errors** or **compile-time errors**.\n\nBuild or compile time refers to the process of transforming your app’s code into a runnable program. If errors occur during this process, the app will not launch.",
               "imageUrl": "/courses/vibe-coding-debugging-00/build-error.png"
             },
             "subtitle": "When the app won't start"
           },
           {
             "type": "text",
-            "title": "Types of bugs: Crashes, freezes and misbehaviours",
+            "title": "Types of bugs: Launch blockers",
             "content": {
-              "body": "These bugs occur when specific features or actions in your app do not work as expected. The app starts, but something goes wrong during use.\nIn technical terms, these are often called **runtime errors** or **logical errors**.\n\nExamples include:\n- A button that does nothing when clicked\n- Data that fails to save or load correctly\n- Features that behave inconsistently or unpredictably\n\nThese bugs can be trickier to diagnose because they may not produce clear error messages. They often require careful investigation to understand the root cause.\n\nIn this course, we'll focus heavily on these types of bugs, as they are the most common and challenging to resolve effectively.",
+              "body": "These errors can look intimidating, but they usually come with clear messages explaining what went wrong. Common causes include syntax errors, missing files, or incompatible code.\n\nBecause these instructions are explicit and easy to interpret, and because AI is well suited to reading them, launch blockers are often the easiest bugs to fix.\n\nLovable is even designed to automatically show a **Try to Fix** button when these errors occur, allowing you to resolve them quickly with a single click.\n\nIf it doesn’t show the button, you can always prompt Lovable directly: `\"There’s a build error: [paste error message]. Fix it.\"`",
+              "imageUrl": "/courses/vibe-coding-debugging-00/build-error.png"
+            },
+            "subtitle": "When the app won't start"
+          },
+          {
+            "type": "text",
+            "title": "Types of bugs: Freezes and misbehaviours",
+            "content": {
+              "body": "These bugs occur when specific features or actions in your app do not work as expected. The app starts, but something goes wrong during use.\nIn technical terms, these are often called **runtime errors** or **logical errors**.\nRuntime refers to when the app is running, and logical errors mean the code runs but produces incorrect results.\n\nExamples include:\n- A button that does nothing when clicked\n- Data that fails to save or load correctly\n- Features that behave inconsistently or unpredictably",
               "imageUrl": "/courses/vibe-coding-debugging-00/misbehaviour.png"
             },
             "subtitle": "When features don't work as expected"
           },
           {
             "type": "text",
-            "title": "Meet Dalmie's challenge",
+            "title": "Types of bugs: Freezes and misbehaviours",
             "content": {
-              "body": "Dalmie is building her Book Club Organiser app in Lovable. Yesterday, everything was working beautifully. Members could suggest books and vote on them.\n\nToday, she added a feature to show how many votes each book has received. But now when she clicks the Vote button... nothing happens. No error message appears. The vote count doesn't change. The button looks normal.\n\nWe could call this a **silent bug** – the app doesn't crash or show an error, it just quietly doesn't do what it should.",
-              "imageUrl": "/courses/vibe-coding-debugging-00/dalmie-stuck.png"
+              "body": "These bugs can be trickier to diagnose because they may not produce clear error messages. They often require careful investigation to understand the root cause.\n\nIn this course, we'll focus heavily on these types of bugs, as they are the most common and challenging to resolve effectively.\n\nWe will dedicate an entire challenge to mastering the investigation and fixing of these bugs."
             },
-            "subtitle": "A debugging story"
+            "subtitle": "When features don't work as expected"
           },
           {
             "type": "text",
-            "title": "The debugging mindset",
+            "title": "Types of bugs: Visual glitches",
             "content": {
-              "body": "Let's shift how we think about bugs:\n\n**Old mindset:** \"Something's broken. I must have done something wrong. Let me ask Lovable to fix it immediately.\"\n\n**New mindset:** \"Something's not working yet. Let me understand what's happening before I try to fix it.\"\n\nThe key insight: **diagnose before fixing**. Spending time investigating (rather than immediately attempting fixes) actually gets you to a solution faster."
+              "body": "Visual glitches affect the appearance of your app. These bugs may involve incorrect colours, misaligned elements, or broken layouts.\n\nWhile they may not impact functionality directly, visual glitches can harm user experience and make your app look unprofessional.",
+              "imageUrl": "/courses/vibe-coding-debugging-00/visual-glitch.png"
             },
-            "subtitle": "Diagnose before you fix"
+            "subtitle": "When things look wrong"
           },
           {
             "type": "text",
-            "title": "The three-attempt rule",
+            "title": "Types of bugs: Visual glitches",
             "content": {
-              "body": "Here's a crucial lesson from experienced Lovable users: **if your fix attempts aren't working after three tries, stop and change your approach**.\n\nEach failed fix can make things worse by introducing new changes on top of broken code. You end up in a \"bug loop\" where fixes create new problems.\n\nAfter three attempts:\n- Stop trying the same approach\n- Investigate more deeply\n- Try a completely different strategy\n- Consider reverting to a working version\n\nWe'll learn all these strategies in this course."
+              "body": "In many cases visual glitches are not easily fixed by only prompting Lovable, but\nfortunately you can attach screenshots to your prompts to help Lovable understand exactly\nwhat is wrong.",
+              "imageUrl": "/courses/vibe-coding-debugging-00/screenshot.png"
             },
-            "subtitle": "When to stop and rethink"
+            "subtitle": "When things look wrong"
+          },
+          {
+            "type": "text",
+            "title": "Types of bugs: Security vulnerabilities",
+            "content": {
+              "body": "Security vulnerabilities are bugs that could potentially expose your app or its data to unauthorized access or malicious attacks.\n\nThe features of your app could work perfectly well, but if there are weaknesses in how data is handled or protected, users' safety could be at risk.\n\nSoftware developers are auditing their code for security vulnerabilities all the time, as these problems can have serious consequences.",
+              "imageUrl": "/courses/vibe-coding-debugging-00/security.png"
+            },
+            "subtitle": "When safety is at risk"
+          },
+          {
+            "type": "text",
+            "title": "Types of bugs: Security vulnerabilities",
+            "content": {
+              "body": "While security vulnerabilities can be complex, Lovable can help you identify and fix many common issues.\n\nLovable has a built-in security auditor that can scan your app for potential vulnerabilities and suggest fixes.\n\nWe will dedicate an entire challenge later in the course to understanding and addressing security vulnerabilities effectively."
+            },
+            "subtitle": "When safety is at risk"
           },
           {
             "type": "quiz-question",
-            "title": "Quiz: Types of bugs",
+            "title": "Quiz: What is a bug?",
             "content": {
+              "question": "What best describes a bug in an app?",
               "options": [
-                "An error message bug",
-                "A visual bug",
-                "A silent bug",
-                "A data bug"
+                "When the app crashes completely",
+                "When the app behaves differently from what you intended",
+                "When users do not like the design",
+                "When the code is too long"
               ],
-              "question": "Dalmie clicks the Vote button but nothing happens – no error, no change, the button looks normal. What type of bug is this?",
-              "explanation": "This is a silent bug – the trickiest kind because there's no obvious error to follow. The app doesn't crash or show a message, it just quietly fails to do what it should. These require careful investigation to find the cause.",
-              "correctAnswer": 2
+              "correctAnswer": 1,
+              "explanation": "A bug is any mismatch between what you expect your app to do and what actually happens. It does not have to be a crash. Even small unexpected behaviours count."
             }
           },
           {
             "type": "quiz-question",
-            "title": "Quiz: The debugging mindset",
+            "title": "Quiz: Build errors",
             "content": {
+              "question": "What is a build or compile-time error?",
               "options": [
-                "Immediately ask Lovable to fix the problem",
-                "Investigate what's happening before attempting fixes",
-                "Delete the feature and try again",
-                "Ignore the bug and hope users won't notice"
+                "A visual issue that looks unpolished",
+                "A feature that behaves inconsistently",
+                "A bug that prevents the app from starting at all",
+                "A minor performance slowdown"
               ],
-              "question": "What's the most effective first response when you encounter a bug?",
-              "explanation": "Investigation first! Understanding what's actually happening before attempting fixes leads to better solutions and fewer wasted attempts. Jumping straight to fixes often makes things worse.",
-              "correctAnswer": 1
+              "correctAnswer": 2,
+              "explanation": "These errors stop the app from loading entirely. They are usually come with clear error messages."
+            }
+          },
+          {
+            "type": "quiz-question",
+            "title": "Quiz: Fixing build errors",
+            "content": {
+              "question": "Why are build errors often the easiest bugs to fix?",
+              "options": [
+                "They usually include clear error messages that AI can interpret well",
+                "They do not affect users",
+                "They fix themselves after a refresh",
+                "They only happen once"
+              ],
+              "correctAnswer": 0,
+              "explanation": "Build errors typically provide explicit messages about what went wrong. This makes them well suited for AI-assisted fixes, such as Lovable’s Try to Fix feature."
+            }
+          },
+          {
+            "type": "quiz-question",
+            "title": "Quiz: Freezes and misbehaviours",
+            "content": {
+              "question": "Which of the following is an example of a freeze or misbehaviour?",
+              "options": [
+                "The app fails to start and shows an error message",
+                "The layout colours are slightly off",
+                "A button does nothing when clicked",
+                "A missing image in the header"
+              ],
+              "correctAnswer": 2,
+              "explanation": "Freezes and misbehaviours happen at runtime. The app starts, but specific features do not behave as expected."
+            }
+          },
+          {
+            "type": "quiz-question",
+            "title": "Quiz: Visual glitches",
+            "content": {
+              "question": "What is a helpful way to debug visual glitches in Lovable?",
+              "options": [
+                "Ignore them if the app works",
+                "Restart the app repeatedly",
+                "Prompt Lovable without any extra information",
+                "Attach screenshots to your prompt"
+              ],
+              "correctAnswer": 3,
+              "explanation": "Visual issues are easier to diagnose when you show Lovable exactly what looks wrong. Screenshots provide important context that text alone may miss."
             }
           },
           {
             "type": "reflection",
-            "title": "Your debugging story",
+            "title": "Reflection: Debugging mindset",
             "content": {
-              "description": "Think of a time when you tried to fix something (in any app, tool, or even in real life) by trying the same approach repeatedly. What finally helped you move forward?",
-              "placeholder": "Describe a moment when you had to step back and try a different approach...",
-              "subDescription": "Recognising when to pause and rethink is a superpower. There's no wrong answer here!"
+              "description": "What is one mindset shift you can make to approach bugs more effectively?",
+              "placeholder": "One mindset shift I can make is...",
+              "subDescription": "Effective debugging starts with the right mindset. Reflect on how you currently approach bugs and consider one change you can make to improve your process."
             }
           },
           {
@@ -156,18 +245,7 @@
               "subDescription": "Remember: diagnose before you fix, and follow the three-attempt rule. Now let's learn how to prevent many bugs from happening in the first place!"
             }
           }
-        ],
-        "title": "The Debugging Mindset",
-        "isFree": true,
-        "skills": [
-          "Bug Definition",
-          "Debugging",
-          "Problem Solving",
-          "Three-Attempt Rule",
-          "Bug Types"
-        ],
-        "description": "Understand what bugs are and develop the mindset to solve them effectively.",
-        "completionTime": "6:00"
+        ]
       },
       {
         "steps": [
@@ -292,6 +370,61 @@
       },
       {
         "steps": [
+          {
+            "type": "text",
+            "title": "Meet Dalmie's challenge",
+            "content": {
+              "body": "Dalmie is building her Book Club Organiser app in Lovable. Yesterday, everything was working beautifully. Members could suggest books and vote on them.\n\nToday, she added a feature to show how many votes each book has received. But now when she clicks the Vote button... nothing happens. No error message appears. The vote count doesn't change. The button looks normal.\n\nWe could call this a **silent bug** – the app doesn't crash or show an error, it just quietly doesn't do what it should.",
+              "imageUrl": "/courses/vibe-coding-debugging-00/dalmie-stuck.png"
+            },
+            "subtitle": "A debugging story"
+          },
+          {
+            "type": "text",
+            "title": "The debugging mindset",
+            "content": {
+              "body": "Let's shift how we think about bugs:\n\n**Old mindset:** \"Something's broken. I must have done something wrong. Let me ask Lovable to fix it immediately.\"\n\n**New mindset:** \"Something's not working yet. Let me understand what's happening before I try to fix it.\"\n\nThe key insight: **diagnose before fixing**. Spending time investigating (rather than immediately attempting fixes) actually gets you to a solution faster."
+            },
+            "subtitle": "Diagnose before you fix"
+          },
+          {
+            "type": "text",
+            "title": "The three-attempt rule",
+            "content": {
+              "body": "Here's a crucial lesson from experienced Lovable users: **if your fix attempts aren't working after three tries, stop and change your approach**.\n\nEach failed fix can make things worse by introducing new changes on top of broken code. You end up in a \"bug loop\" where fixes create new problems.\n\nAfter three attempts:\n- Stop trying the same approach\n- Investigate more deeply\n- Try a completely different strategy\n- Consider reverting to a working version\n\nWe'll learn all these strategies in this course."
+            },
+            "subtitle": "When to stop and rethink"
+          },
+          {
+            "type": "quiz-question",
+            "title": "Quiz: Types of bugs",
+            "content": {
+              "options": [
+                "An error message bug",
+                "A visual bug",
+                "A silent bug",
+                "A data bug"
+              ],
+              "question": "Dalmie clicks the Vote button but nothing happens – no error, no change, the button looks normal. What type of bug is this?",
+              "explanation": "This is a silent bug – the trickiest kind because there's no obvious error to follow. The app doesn't crash or show a message, it just quietly fails to do what it should. These require careful investigation to find the cause.",
+              "correctAnswer": 2
+            }
+          },
+          {
+            "type": "quiz-question",
+            "title": "Quiz: The debugging mindset",
+            "content": {
+              "options": [
+                "Immediately ask Lovable to fix the problem",
+                "Investigate what's happening before attempting fixes",
+                "Delete the feature and try again",
+                "Ignore the bug and hope users won't notice"
+              ],
+              "question": "What's the most effective first response when you encounter a bug?",
+              "explanation": "Investigation first! Understanding what's actually happening before attempting fixes leads to better solutions and fewer wasted attempts. Jumping straight to fixes often makes things worse.",
+              "correctAnswer": 1
+            }
+          },
           {
             "type": "text",
             "title": "How developers investigate",

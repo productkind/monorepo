@@ -278,9 +278,11 @@ their businesses, and their communities. That’s the future we’re working on 
 
 ### Debugging
 
-When you create applications with AI app builders, sometimes things don’t work as expected.
-Debugging is the process of identifying and fixing these issues. In this micro-lesson, we’ll cover
-techniques, and foundational knowledge to help you troubleshoot problems in your AI-built
-applications. By the end, you’ll be able to: Understand common issues that arise in AI-built
-applications, use systematic approaches to identify the root cause of problems, and apply
-techniques to fix issues effectively.
+When you build applications with AI app builders, things will sometimes break. Debugging is simply
+the process of finding and fixing those problems. In this micro-lesson, you’ll learn practical
+techniques and core concepts to help you troubleshoot issues in AI-built applications. By the end,
+you’ll be able to recognise common problems, identify their root causes, and fix them more
+effectively. Here’s something professional developers know well: bugs happen to everyone. Even
+experienced engineers spend much of their time fixing things that do not work as expected. Progress
+is not about being “technical enough”. It’s about knowing what to do when things go wrong or prevent
+them occurring on the first place. That’s exactly what this micro-course is designed to teach.
