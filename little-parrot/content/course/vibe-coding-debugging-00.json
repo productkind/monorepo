@@ -53,9 +53,35 @@
             "type": "text",
             "title": "What is debugging?",
             "content": {
-              "body": "**Debugging** is the process of finding and fixing bugs. It has two parts:\n\n**1. Investigation:** Understanding what's wrong and why.\n\n**2. Fixing:** Making changes to solve the problem.\n\nMany beginners jump straight to fixing. But experienced developers know that **investigation is the most important part**. If you don't understand the problem, your fix might not work, or might break something else."
+              "body": "**Debugging** is the process of finding and fixing bugs. It has two parts:\n\n**1. Investigation:** Understanding what's wrong and why.\n\n**2. Fixing:** Making changes to solve the problem.\n\nMany beginners jump straight to fixing. But experienced developers know that **investigation is the most important part**. If you don't understand the problem, your fix might not work, or might break something else.\n\nThis is true for vibe coding too! Effective debugging in Lovable means knowing how to investigate issues before trying to fix them."
             },
             "subtitle": "The art of finding and fixing"
+          },
+          {
+            "type": "text",
+            "title": "Types of bugs",
+            "content": {
+              "body": "Bugs can be categorised in many ways. For our purposes, it makes sense to categorise them based on the action needed to fix them.\n\nBugs typically fall into a few common categories:\n\n**Launch blockers:**\nThe app will not start or load, and you only see an error message.\n\n**Crashes, freezes and misbehaviours:**\nThe app starts, but specific features do not work as expected.\n\n**Visual glitches:**\nThings look wrong, such as incorrect colours, broken layouts, or text appearing in the wrong place.\n\n**Security vulnerabilities:**\nData leaks, unauthorised access, or other safety-related issues.\n\nUnderstanding these different scenarios can help you identify bugs more quickly.\n\nLet's go through on the categories in more detail."
+            },
+            "subtitle": "Different problems need different approaches"
+          },
+          {
+            "type": "text",
+            "title": "Types of bugs: Launch blockers",
+            "content": {
+              "body": "Launch blockers prevent your app from starting at all. In technical terms, these are known as **build errors** or **compile-time errors**.\n\nBuild or compile time refers to the process of transforming your app’s code into a runnable program. If errors occur during this process, the app will not launch.\n\nThese errors can look intimidating, but they usually come with clear messages explaining what went wrong. Common causes include syntax errors, missing files, or incompatible code.\n\nBecause these instructions are explicit and easy to interpret, and because AI is well suited to reading them, launch blockers are often the easiest bugs to fix.\n\nLovable is even designed to automatically show a **Try to Fix** button when these errors occur, allowing you to resolve them quickly with a single click.",
+              "imageUrl": "/courses/vibe-coding-debugging-00/build-error.png"
+            },
+            "subtitle": "When the app won't start"
+          },
+          {
+            "type": "text",
+            "title": "Types of bugs: Crashes, freezes and misbehaviours",
+            "content": {
+              "body": "These bugs occur when specific features or actions in your app do not work as expected. The app starts, but something goes wrong during use.\nIn technical terms, these are often called **runtime errors** or **logical errors**.\n\nExamples include:\n- A button that does nothing when clicked\n- Data that fails to save or load correctly\n- Features that behave inconsistently or unpredictably\n\nThese bugs can be trickier to diagnose because they may not produce clear error messages. They often require careful investigation to understand the root cause.\n\nIn this course, we'll focus heavily on these types of bugs, as they are the most common and challenging to resolve effectively.",
+              "imageUrl": "/courses/vibe-coding-debugging-00/misbehaviour.png"
+            },
+            "subtitle": "When features don't work as expected"
           },
           {
             "type": "text",
@@ -65,14 +91,6 @@
               "imageUrl": "/courses/vibe-coding-debugging-00/dalmie-stuck.png"
             },
             "subtitle": "A debugging story"
-          },
-          {
-            "type": "text",
-            "title": "Types of bugs",
-            "content": {
-              "body": "Bugs come in different flavours:\n\n**Silent bugs** — Nothing visibly breaks, but features don't work. These are the trickiest because there's no obvious error to follow.\n\n**Error message bugs** — The app shows an error or crashes. These are actually easier because the error gives you clues.\n\n**Visual bugs** — Things look wrong: wrong colours, broken layouts, text in the wrong place.\n\n**Data bugs** — Information doesn't save, loads incorrectly, or shows the wrong values.\n\nKnowing these different error scenarios can help you identify a bug quicker."
-            },
-            "subtitle": "Different problems need different approaches"
           },
           {
             "type": "text",
