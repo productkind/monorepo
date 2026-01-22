@@ -35,7 +35,7 @@
             "type": "text",
             "title": "What is a bug?",
             "content": {
-              "body": "A **bug** is when your app behaves differently from what you intended. Maybe a button does not respond, data does not save, or the screen shows `\"undefined\"` instead of real content.\n\nThe term comes from the early days of computing. Grace Hopper, a pioneering computer scientist, documented an incident where a moth got stuck inside a computer and caused it to malfunction. The team taped the insect into the logbook and wrote that they had “debugged” the machine.\n\nToday, bugs are simply mismatches between what you expected and what actually happens.",
+              "body": "A **bug** is when your app behaves differently from what you intended. Maybe a button does not respond, data does not save, or the screen shows `\"undefined\"` instead of real content.\n\nThe term comes from the early days of computing. *Grace Hopper*, a pioneering computer scientist, documented an incident where a moth got stuck inside a computer and caused it to malfunction. The team taped the insect into the logbook and wrote that they had **“debugged”** the machine.\n\nToday, bugs are simply **mismatches between what you expected and what actually happens.**",
               "imageUrl": "/courses/vibe-coding-debugging-00/bug.png"
             },
             "subtitle": "When reality doesn't match expectations"
@@ -133,7 +133,7 @@
             "type": "challenge-end",
             "title": "You've got the debugging mindset! 🔍",
             "content": {
-              "nextModule": "**Next:** Prevention is better than cure! Learn simple habits that dramatically reduce how often you encounter bugs.",
+              "nextModule": "**Next:** Prevention is better than cure! Learn powerful habits that dramatically reduce how often you encounter bugs.",
               "description": "You understand what bugs are and how to approach them.",
               "subDescription": "Remember: diagnose before you fix, and follow the three-attempt rule. Now let's learn how to prevent many bugs from happening in the first place!"
             }
@@ -446,7 +446,7 @@
           "Bug Reproduction",
           "Stack Traces"
         ],
-        "description": "Learn the same investigation techniques that professional developers and Lovable use.",
+        "description": "Learn the same investigation techniques that professional developers and the agent behind Lovable use.",
         "completionTime": "12:00"
       },
       {
@@ -582,7 +582,7 @@
           "Visual Edits",
           "Try to Fix"
         ],
-        "description": "Master Lovable's three debugging tools and know when to use each one.",
+        "description": "Master Lovable’s built-in tools to debug your projects. You’ll understand what each one is useful for and how to use them to fix issues faster and keep moving forward.",
         "completionTime": "15:00"
       },
       {
