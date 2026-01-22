@@ -7,7 +7,7 @@ import { spawn } from 'node:child_process'
 import { firstValueFrom } from 'rxjs'
 import { expect, test } from 'vitest'
 
-mtest('processService.$stdout', ({ expect }) => {
+mtest('subProcessService.$stdout', ({ expect }) => {
   const { spawn: fakeSpawn } = createFakeSpawn([
     {
       command: 'ls',
@@ -16,13 +16,13 @@ mtest('processService.$stdout', ({ expect }) => {
       exitCode: 1,
     },
   ])
-  const processService = createSubProcessService(fakeSpawn)
-  expect(processService.run('ls').stdout$).toBeObservable('-(1|)', {
+  const subProcessService = createSubProcessService(fakeSpawn)
+  expect(subProcessService.run('ls').stdout$).toBeObservable('-(1|)', {
     '1': 'file.ts',
   })
 })
 
-mtest('processService.$stderror', ({ expect }) => {
+mtest('subProcessService.$stderror', ({ expect }) => {
   const { spawn: fakeSpawn } = createFakeSpawn([
     {
       command: 'ls',
@@ -32,13 +32,13 @@ mtest('processService.$stderror', ({ expect }) => {
       exitCode: 1,
     },
   ])
-  const processService = createSubProcessService(fakeSpawn)
-  expect(processService.run('ls').stderror$).toBeObservable('-(1|)', {
+  const subProcessService = createSubProcessService(fakeSpawn)
+  expect(subProcessService.run('ls').stderror$).toBeObservable('-(1|)', {
     '1': 'Error',
   })
 })
 
-mtest('processService.$exitCode', ({ expect }) => {
+mtest('subProcessService.$exitCode', ({ expect }) => {
   const { spawn: fakeSpawn } = createFakeSpawn([
     {
       command: 'ls',
@@ -47,13 +47,13 @@ mtest('processService.$exitCode', ({ expect }) => {
       exitCode: 1,
     },
   ])
-  const processService = createSubProcessService(fakeSpawn)
-  expect(processService.run('ls').exitCode$).toBeObservable('-(1|)', {
+  const subProcessService = createSubProcessService(fakeSpawn)
+  expect(subProcessService.run('ls').exitCode$).toBeObservable('-(1|)', {
     '1': 1,
   })
 })
 
-mtest('processService.$output', ({ expect }) => {
+mtest('subProcessService.$output', ({ expect }) => {
   const { spawn: fakeSpawn } = createFakeSpawn([
     {
       command: 'ls',
@@ -63,8 +63,8 @@ mtest('processService.$output', ({ expect }) => {
       exitCode: 1,
     },
   ])
-  const processService = createSubProcessService(fakeSpawn)
-  expect(processService.run('ls').output$).toBeObservable('-(1|)', {
+  const subProcessService = createSubProcessService(fakeSpawn)
+  expect(subProcessService.run('ls').output$).toBeObservable('-(1|)', {
     '1': {
       stdout: 'file.ts',
       stderror: 'Error',
@@ -73,7 +73,7 @@ mtest('processService.$output', ({ expect }) => {
   })
 })
 
-mtest('processService.$output no error', ({ expect }) => {
+mtest('subProcessService.$output no error', ({ expect }) => {
   const { spawn: fakeSpawn } = createFakeSpawn([
     {
       command: 'ls',
@@ -82,8 +82,8 @@ mtest('processService.$output no error', ({ expect }) => {
       exitCode: 1,
     },
   ])
-  const processService = createSubProcessService(fakeSpawn)
-  expect(processService.run('ls').output$).toBeObservable('-(1|)', {
+  const subProcessService = createSubProcessService(fakeSpawn)
+  expect(subProcessService.run('ls').output$).toBeObservable('-(1|)', {
     '1': {
       stdout: 'file.ts',
       stderror: '',
@@ -92,7 +92,7 @@ mtest('processService.$output no error', ({ expect }) => {
   })
 })
 
-mtest('processService $executedCommands', ({ expect }) => {
+mtest('subProcessService $executedCommands', ({ expect }) => {
   const { spawn: fakeSpawn, $executedCommands } = createFakeSpawn([
     {
       command: 'ls',
@@ -101,8 +101,8 @@ mtest('processService $executedCommands', ({ expect }) => {
       exitCode: 1,
     },
   ])
-  const processService = createSubProcessService(fakeSpawn)
-  processService.run('ls')
+  const subProcessService = createSubProcessService(fakeSpawn)
+  subProcessService.run('ls')
   expect($executedCommands).toBeObservable('-1', {
     '1': {
       command: 'ls',
@@ -111,7 +111,7 @@ mtest('processService $executedCommands', ({ expect }) => {
   })
 })
 
-test('processService.runAsync', async () => {
+test('subProcessService.runAsync', async () => {
   const { spawn: fakeSpawn, executedCommands } = createFakeSpawn([
     {
       command: 'ls',
@@ -120,34 +120,34 @@ test('processService.runAsync', async () => {
       exitCode: 1,
     },
   ])
-  const processService = createSubProcessService(fakeSpawn)
-  const { stdout, stderror, exitCode } = await processService.runAsync('ls')
+  const subProcessService = createSubProcessService(fakeSpawn)
+  const { stdout, stderror, exitCode } = await subProcessService.runAsync('ls')
   expect(stdout).toBe('file.ts')
   expect(stderror).toBe('')
   expect(exitCode).toBe(1)
   expect(executedCommands).toEqual([{ command: 'ls', args: [] }])
 })
 
-test('processService integration', async () => {
-  const processService = createSubProcessService(spawn)
-  const { stdout, stderror, exitCode } = await firstValueFrom(processService.run('ls').output$)
+test('subProcessService integration', async () => {
+  const subProcessService = createSubProcessService(spawn)
+  const { stdout, stderror, exitCode } = await firstValueFrom(subProcessService.run('ls').output$)
   expect(typeof stdout).toBe('string')
   expect(typeof stderror).toBe('string')
   expect(typeof exitCode).toBe('number')
 })
 
-test('processService integration on error no command', async () => {
-  const processService = createSubProcessService(spawn)
-  const observableFn = async () => await firstValueFrom(processService.run('non-existent-command').output$)
+test('subProcessService integration on error no command', async () => {
+  const subProcessService = createSubProcessService(spawn)
+  const observableFn = async () => await firstValueFrom(subProcessService.run('non-existent-command').output$)
   await expect(observableFn()).rejects.toThrow()
-  const asyncFs = async () => await processService.runAsync('non-existent-command')
+  const asyncFs = async () => await subProcessService.runAsync('non-existent-command')
   await expect(asyncFs()).rejects.toThrow()
 })
 
-test('processService integration on error no cwd dir', async () => {
-  const processService = createSubProcessService(spawn)
-  const observableFn = async () => await firstValueFrom(processService.run('ls', [], { cwd: '/non-existent-dir' }).output$)
+test('subProcessService integration on error no cwd dir', async () => {
+  const subProcessService = createSubProcessService(spawn)
+  const observableFn = async () => await firstValueFrom(subProcessService.run('ls', [], { cwd: '/non-existent-dir' }).output$)
   await expect(observableFn()).rejects.toThrow()
-  const asyncFs = async () => await processService.runAsync('ls', [], { cwd: '/non-existent-dir' })
+  const asyncFs = async () => await subProcessService.runAsync('ls', [], { cwd: '/non-existent-dir' })
   await expect(asyncFs()).rejects.toThrow()
 })

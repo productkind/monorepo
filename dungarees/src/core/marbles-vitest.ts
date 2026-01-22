@@ -7,6 +7,7 @@ import { configure as _configure, type MarblesFunction } from 'rxjs-marbles/marb
 import type { ExpectHelpers, TestObservableLike } from 'rxjs-marbles/types.js'
 import { describe, expect, test } from 'vitest'
 
+
 export type CasesFunction = {
   <T extends UnnamedCase>(
     name: string,
@@ -218,3 +219,9 @@ export const MARBLES_BOOLEAN = {
 export const mtest = (name: string, runner: Runner): void => {
   test(name, coreMarbles((m) => runner(m)))
 }
+
+mtest.each = <T>(cases: T[]): (name: string, runner: Runner) => void => {
+  return (name: string, runner: Runner): void =>
+    test.each(cases)(name, coreMarbles((m, ...args) => runner(m, ...args)))
+}
+

@@ -278,8 +278,8 @@ test('FileSystem executable checks: executable file is reported executable', asy
   const fileSystem = createFileSystem(fakeFs)
 
   expect(fileSystem.isExeSync('/exec-world.sh')).toBe(true)
-  await expect(fileSystem.isExecAsync('/exec-world.sh')).resolves.toBe(true)
-  await expect(lastValueFrom(fileSystem.isExec('/exec-world.sh'))).resolves.toBe(true)
+  await expect(fileSystem.isExeAsync('/exec-world.sh')).resolves.toBe(true)
+  await expect(lastValueFrom(fileSystem.isExe('/exec-world.sh'))).resolves.toBe(true)
 })
 
 test('FileSystem executable checks: non-executable file is reported non-executable', async () => {
@@ -291,8 +291,8 @@ test('FileSystem executable checks: non-executable file is reported non-executab
   const fileSystem = createFileSystem(fakeFs)
 
   expect(fileSystem.isExeSync('/non-exec.txt')).toBe(false)
-  await expect(fileSystem.isExecAsync('/non-exec.txt')).resolves.toBe(false)
-  await expect(lastValueFrom(fileSystem.isExec('/non-exec.txt'))).resolves.toBe(false)
+  await expect(fileSystem.isExeAsync('/non-exec.txt')).resolves.toBe(false)
+  await expect(lastValueFrom(fileSystem.isExe('/non-exec.txt'))).resolves.toBe(false)
 })
 
 test('FileSystem executable checks: directories are not treated as executable files', async () => {
@@ -304,8 +304,8 @@ test('FileSystem executable checks: directories are not treated as executable fi
   const fileSystem = createFileSystem(fakeFs)
 
   expect(fileSystem.isExeSync('/dir')).toBe(false)
-  await expect(fileSystem.isExecAsync('/dir')).resolves.toBe(false)
-  await expect(lastValueFrom(fileSystem.isExec('/dir'))).resolves.toBe(false)
+  await expect(fileSystem.isExeAsync('/dir')).resolves.toBe(false)
+  await expect(lastValueFrom(fileSystem.isExe('/dir'))).resolves.toBe(false)
 })
 
 test('FileSystem executable checks: throws when uid/gid cannot be resolved', () => {
@@ -330,4 +330,45 @@ test('FileSystem executable checks: throws when uid/gid cannot be resolved', () 
     ;(process as unknown as { getuid?: (() => number) | undefined }).getuid = originalGetuid
     ;(process as unknown as { getgid?: (() => number) | undefined }).getgid = originalGetgid
   }
+})
+
+test('FileSystem.chmod sets permissions based on mode', async () => {
+  const fakeFs = createFakeNodeFs({
+    '/test.txt': 'test',
+  })
+  fakeFs.chmodSync('/test.txt', 0o644)
+  const fileSystem = createFileSystem(fakeFs)
+  fileSystem.chmodSync('/test.txt', 0o754)
+  const stat = fileSystem.getStatSync('/test.txt')
+  expect(stat.mode & 0o777).toBe(0o754)
+
+  await fileSystem.chmodAsync('/test.txt', 0o700)
+  const statAsync = fileSystem.getStatSync('/test.txt')
+  expect(statAsync.mode & 0o777).toBe(0o700)
+
+  await lastValueFrom(fileSystem.chmod('/test.txt', 0o600))
+  const statObservable = fileSystem.getStatSync('/test.txt')
+  expect(statObservable.mode & 0o777).toBe(0o600)
+})
+
+test('FileSystem.chown sets owner', async () => {
+  const fakeFs = createFakeNodeFs({
+    '/test.txt': 'test',
+  })
+  fakeFs.chownSync('/test.txt', 1000, 1000)
+  const fileSystem = createFileSystem(fakeFs)
+  fileSystem.chownSync('/test.txt', 1001, 1001)
+  const stat = fileSystem.getStatSync('/test.txt')
+  expect(stat.userId).toBe(1001)
+  expect(stat.groupId).toBe(1001)
+
+  await fileSystem.chownAsync('/test.txt', 1002, 1002)
+  const statAsync = fileSystem.getStatSync('/test.txt')
+  expect(statAsync.userId).toBe(1002)
+  expect(statAsync.groupId).toBe(1002)
+
+  await lastValueFrom(fileSystem.chown('/test.txt', 1003, 1003))
+  const statObservable = fileSystem.getStatSync('/test.txt')
+  expect(statObservable.userId).toBe(1003)
+  expect(statObservable.groupId).toBe(1003)
 })

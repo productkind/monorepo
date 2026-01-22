@@ -3,6 +3,34 @@ import { assertDefined, assertPredicate, assertTypeByGuard, mapConstKeysToEntrie
 import { type Guard } from '@dungarees/core/type-util.ts'
 import { type ZodSchema } from 'zod'
 
+
+export const UNSAFE_MARBLE_TESTING = Symbol('UNSAFE_MARBLE_TESTING')
+export const UNSAFE_MARBLE_TESTING_OBSERVABLE = Symbol('UNSAFE_MARBLE_OBSERVABLE')
+export const UNSAFE_MARBLE_TESTING_OBSERVABLE_FUNCTION = Symbol('UNSAFE_MARBLE_TESTING_OBSERVABLE_FUNCTION')
+
+export type UnsafeMarbleTestingObservable<T extends Observable<any>> = T & {
+  [UNSAFE_MARBLE_TESTING]: typeof UNSAFE_MARBLE_TESTING_OBSERVABLE
+}
+
+export type UnsafeMarbleTestingObservableFunction<T extends (...args: any[]) => any> =
+  (...args: Parameters<T>) => UnsafeMarbleTestingObservable<ReturnType<T>>& {
+  [UNSAFE_MARBLE_TESTING]: typeof UNSAFE_MARBLE_TESTING_OBSERVABLE_FUNCTION
+}
+
+
+export type UnsafeService<SERVICE extends Record<string, (...args: any[]) => any>> = {
+  [K in keyof SERVICE]: SERVICE[K] extends (...args: any[]) => Observable<any>
+    ? UnsafeMarbleTestingObservableFunction<SERVICE[K]>
+    : SERVICE[K]
+}
+
+export type UnsafeObservable = UnsafeForMarbleTesting<(...args: any[]) => Observable<any>>
+
+export const markUnsafeForMarbleTesting = <T extends (...args: any[]) => any>(fn: T): UnsafeForMarbleTesting<T> => {
+  (fn as UnsafeForMarbleTesting<T>)[UNSAFE_MARBLE_TESTING] = true
+  return fn as UnsafeForMarbleTesting<T>
+}
+
 export type SyncFunctionToObservable<FUNC extends (...args: any[]) => any> = FUNC extends (
   ...args: infer ARGS
 ) => infer RETURN
@@ -12,10 +40,11 @@ export type SyncFunctionToObservable<FUNC extends (...args: any[]) => any> = FUN
 export const collectValuesFrom = async <T>(values$: Observable<T>): Promise<T[]> =>
   await lastValueFrom(values$.pipe(scan((acc, value) => [...acc, value], [] as T[])))
 
-export const asyncFunctionToObservable = <RETURN, ARGS extends any[]>(asyncFn: (...args: ARGS) => Promise<RETURN>): ((...args: ARGS) => Observable<RETURN>) => {
-  return (...args: ARGS): Observable<RETURN> => {
+export const asyncFunctionToObservable = <RETURN, ARGS extends any[]>(asyncFn: (...args: ARGS) => Promise<RETURN>): UnsafeForMarbleTesting<((...args: ARGS) => Observable<RETURN>)> => {
+  const wrapped = (...args: ARGS): Observable<RETURN> => {
     return defer(() => asyncFn(...args))
   }
+  return markUnsafeForMarbleTesting(wrapped)
 }
 
 export const syncFunctionToObservable = <F extends (...args: any[]) => any>(

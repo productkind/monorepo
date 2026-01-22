@@ -17,6 +17,17 @@ test.each([
   }),
 )
 
+mtest.each([
+  ['tf', 'tf'],
+  ['ft', 'ft'],
+])(
+  'mtest should work with each',
+  ({ expect, coldBoolean }, a: string, b: string) => {
+    expect(coldBoolean(a)).toBeObservableBoolean(b)
+  },
+)
+
+
 mtest('it should run without the wrapper', ({ expect, coldBoolean }) => {
   expect(coldBoolean('tf')).toBeObservableBoolean('tf')
 })

@@ -1,9 +1,9 @@
 import { type TypedArray, type StaticFn } from '@dungarees/core/type-util.ts'
 import { mapConst, mapConstKeysToEntries, mapObjectFromKeys, objectFromConstEntries, unPrototypeProperties } from '@dungarees/core/util.ts'
-import { asyncFunctionToObservable } from '@dungarees/rxjs/util.ts'
+import { asyncFunctionToObservable, UnsafeService } from '@dungarees/rxjs/util.ts'
 import { glob as libGlob, globSync as libGlobSync } from 'glob'
 import { type Stats } from 'node:fs'
-import { type Observable } from 'rxjs'
+import { type Observable, of } from 'rxjs'
 import { join } from 'node:path'
 
 export type FilePermissions = {
@@ -47,11 +47,17 @@ export type FileSystem = {
   globAsync: (path: string) => Promise<string[]>
   glob: (path: string) => Observable<string[]>
   isExeSync: (path: string) => boolean
-  isExecAsync: (path: string) => Promise<boolean>
-  isExec: (path: string) => Observable<boolean>
+  isExeAsync: (path: string) => Promise<boolean>
+  isExe: (path: string) => Observable<boolean>
   getStatSync: (path: string) => FileStats
   getStatAsync: (path: string) => Promise<FileStats>
   getStat: (path: string) => Observable<FileStats>
+  chmodSync: (path: string, mode: number) => void
+  chmodAsync: (path: string, mode: number) => Promise<void>
+  chmod: (path: string, mode: number) => Observable<void>
+  chownSync: (path: string, uid: number, gid: number) => void
+  chownAsync: (path: string, uid: number, gid: number) => Promise<void>
+  chown: (path: string, uid: number, gid: number) => Observable<void>
 }
 
 type UsedFsMethods =
@@ -74,6 +80,8 @@ type UsedPromisesMethods =
   | 'readFile'
   | 'writeFile'
   | 'mkdir'
+  | 'chmod'
+  | 'chown'
 
 export type NodeFs =
   Pick<typeof import('fs'), UsedFsMethods>
@@ -81,7 +89,7 @@ export type NodeFs =
     promises: Pick<(typeof import('fs'))['promises'], UsedPromisesMethods>
   }
 
-export const createFileSystem = (fs: NodeFs): FileSystem => {
+export const createFileSystem = (fs: NodeFs): UnsafeService<FileSystem> => {
   type IsexeOptions = {
     uid?: number
     gid?: number
@@ -210,7 +218,7 @@ export const createFileSystem = (fs: NodeFs): FileSystem => {
     return checkStat(stat, {})
   }
 
-  const isExecAsync: FileSystem['isExecAsync'] = async (path) => {
+  const isExeAsync: FileSystem['isExeAsync'] = async (path) => {
     const stat = await fs.promises.lstat(path)
     return checkStat(stat, {})
   }
@@ -247,33 +255,55 @@ export const createFileSystem = (fs: NodeFs): FileSystem => {
     return statToFileStats(stat)
   }
 
+  const chmodSync: FileSystem['chmodSync'] = (path, mode) => {
+    fs.chmodSync(path, mode)
+  }
+
+  const chmodAsync: FileSystem['chmodAsync'] = async (path, mode) => {
+    await fs.promises.chmod(path, mode)
+  }
+
+  const chownSync: FileSystem['chownSync'] = (path, uid, gid) => {
+    fs.chownSync(path, uid, gid)
+  }
+
+  const chownAsync: FileSystem['chownAsync'] = async (path, uid, gid) => {
+    await fs.promises.chown(path, uid, gid)
+  }
+
   return {
     readFileSync,
-    writeFileSync,
-    readDirSync,
-    readDirDeepSync,
-    readBulkSync,
-    mkdirSync,
     readFileAsync,
+    readFile: asyncFunctionToObservable(readFileAsync),
+    writeFileSync,
     writeFileAsync,
+    writeFile: asyncFunctionToObservable(writeFileAsync),
+    readDirSync,
     readDirAsync,
+    readDir: asyncFunctionToObservable(readDirAsync),
+    readDirDeepSync,
     readDirDeepAsync,
+    readDirDeep: asyncFunctionToObservable(readDirDeepAsync),
+    readBulkSync,
     readBulkAsync,
+    readBulk: asyncFunctionToObservable(readBulkAsync),
+    mkdirSync,
     mkdirAsync,
+    mkdir: asyncFunctionToObservable(mkdirAsync),
     globAsync: (path) => glob(path),
     globSync: (path) => globSync(path),
-    readFile: asyncFunctionToObservable(readFileAsync),
-    writeFile: asyncFunctionToObservable(writeFileAsync),
-    readDir: asyncFunctionToObservable(readDirAsync),
-    readDirDeep: asyncFunctionToObservable(readDirDeepAsync),
-    readBulk: asyncFunctionToObservable(readBulkAsync),
-    mkdir: asyncFunctionToObservable(mkdirAsync),
     glob: asyncFunctionToObservable(glob),
     isExeSync,
-    isExecAsync,
-    isExec: asyncFunctionToObservable(isExecAsync),
+    isExeAsync,
+    isExe: asyncFunctionToObservable(isExeAsync),
     getStatSync,
     getStatAsync,
     getStat: asyncFunctionToObservable(getStatAsync),
+    chmodSync,
+    chmodAsync,
+    chmod: asyncFunctionToObservable(chmodAsync),
+    chownSync,
+    chownAsync,
+    chown: asyncFunctionToObservable(chownAsync),
   }
 }

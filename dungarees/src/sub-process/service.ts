@@ -1,9 +1,9 @@
-import { ProcessServiceOutput, type ProcessService, type Spawn } from './type.ts'
+import { ProcessServiceOutput, type SubProcessService, type Spawn } from './type.ts'
 
 import { combineLatest, firstValueFrom, map, merge, scan, startWith, Subject } from 'rxjs'
 
-export const createSubProcessService = (spawn: Spawn): ProcessService => {
-  const run: ProcessService['run'] = (command, args, options = {}) => {
+export const createSubProcessService = (spawn: Spawn): SubProcessService => {
+  const run: SubProcessService['run'] = (command, args, options = {}) => {
     const stdout$ = new Subject<string>()
     const stderror$ = new Subject<string>()
     const exitCode$ = new Subject<number | undefined>()
@@ -56,7 +56,7 @@ export const createSubProcessService = (spawn: Spawn): ProcessService => {
     }
   }
 
-  const runAsync: ProcessService['runAsync'] = async (command, args, options) => {
+  const runAsync: SubProcessService['runAsync'] = async (command, args, options) => {
     return await firstValueFrom(run(command, args, options).output$)
   }
 

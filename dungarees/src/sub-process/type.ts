@@ -13,7 +13,7 @@ export type RunOptions = {
   cwd?: string
 }
 
-export type ProcessService = {
+export type SubProcessService = {
   run: (
     command: string,
     args?: string[],

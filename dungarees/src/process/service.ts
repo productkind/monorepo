@@ -1,8 +1,9 @@
 import { assertDefined } from '@dungarees/core/util.ts'
 
-type ProcessService = {
+export type ProcessService = {
   getUserId: () => number
   getGroups: () => number[]
+  isRoot: () => boolean
 }
 
 export const createProcessService = (nodeProcess: NodeJS.Process): ProcessService => {
@@ -18,5 +19,12 @@ export const createProcessService = (nodeProcess: NodeJS.Process): ProcessServic
         `getgroups is not supported on this platform: ${nodeProcess.platform}`,
       )
     },
+    isRoot: () => {
+      const uid = nodeProcess.getuid?.()
+      return assertDefined(
+        uid,
+        `getuid is not supported on this platform: ${nodeProcess.platform}`,
+      ) === 0
+    }
   }
 }

@@ -12,6 +12,10 @@ import {
   assertSchemaMap,
   SyncFunctionToObservable,
   getObservableMethodsFromSync,
+  UnsafeService,
+  UnsafeForMarbleTesting,
+  UnsafeMarbleTestingObservableFunction,
+  UnsafeMarbleTestingObservable,
 } from './util.ts'
 
 import { lastValueFrom, type Observable, of, catchError, map, Subject } from 'rxjs'
@@ -266,4 +270,23 @@ mtest('getObservableMethodsFromSync delay', ({expect}) => {
 
   const add$ = observableMethods.add(2, 3)
   expect(add$).toBeObservable('-(5|)', { '5': 5 })
+})
+
+test('UnsafeService', () => {
+  type Service = {
+    safeMethod: (a: number) => string
+    unsafeMethod: (b: string) => Observable<number>
+  }
+
+  type UnsafeVersion = UnsafeService<Service>
+
+  assert<Equals<UnsafeVersion, {
+    safeMethod: (a: number) => string
+    unsafeMethod: UnsafeMarbleTestingObservableFunction<(b: string) => Observable<number>>
+  }>>()
+
+  type Return = UnsafeVersion['unsafeMethod']
+  type a = ReturnType<Return>
+
+  assert<Equals<Return, UnsafeMarbleTestingObservable<number>>()
 })

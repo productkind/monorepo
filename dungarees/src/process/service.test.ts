@@ -35,3 +35,19 @@ test('processService getGroups throws on unsupported platform', () => {
     'getgroups is not supported on this platform: win32'
   )
 })
+
+test('processService.isRoot true if user id is 0', () => {
+  const fakeProcess = createFakeNodeProcess({ userId: 0 })
+  const processService = createProcessService(fakeProcess)
+
+  expect(processService.isRoot()).toBe(true)
+})
+
+test('processService.isRoot throws on unsupported platform', () => {
+  const fakeProcess = createFakeNodeProcess({ platform: 'win32' })
+  const processService = createProcessService(fakeProcess)
+
+  expect(() => processService.isRoot()).toThrow(
+    'getuid is not supported on this platform: win32'
+  )
+})
