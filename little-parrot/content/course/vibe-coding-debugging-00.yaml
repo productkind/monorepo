@@ -244,7 +244,15 @@ course:
         subDescription: 'Remember: diagnose before you fix, and follow the three-attempt
           rule. Now let''s learn how to prevent many bugs from happening in the first
           place!'
-  - steps:
+  - title: Preventing Bugs Before They Happen
+    isFree: true
+    skills:
+    - Small Prompts
+    - Testing
+    - Version Bookmarking
+    description: Learn simple habits that dramatically reduce frustrating bugs.
+    completionTime: '10:00'
+    steps:
     - type: text
       title: Prevention is easier than cure
       content:
@@ -276,7 +284,7 @@ course:
 
           **Bugs are easier to find.** If something breaks, you know it was the last small change you made.
 
-          **Bugs are easier to fix.** Less code changed means less to review and undo.
+          **Bugs are easier to fix.** Less code changed means less to test and undo.
 
           **You feel more in control.** Each small win builds confidence.
 
@@ -292,7 +300,7 @@ course:
           1. Click the Vote button
           2. Does the vote count increase on screen?
           3. Refresh the page – is the vote still there?
-          4. Try voting from a different browser or account
+          4. Try voting from a different account
 
           If something's wrong, you'll catch it while the change is fresh. Catching bugs early means they're much easier to fix.
         imageUrl: "/courses/vibe-coding-debugging-00/test-each-change.gif"
@@ -338,6 +346,8 @@ course:
           Even if you spend credits on several conversations to fix a bug, compare that to hiring a developer at $50-150 per hour. A debugging session that costs a few credits is incredibly cost-effective!
 
           Don't let credit concerns stop you from proper testing and investigation. A few credits spent finding the root cause can save many more wasted on repeated failed fixes.
+
+          Also, if you follow the prevention habits, you'll use fewer credits overall by avoiding complex bugs.
       subtitle: Credits well spent
     - type: quiz-question
       title: 'Quiz: Small prompts'
@@ -352,7 +362,7 @@ course:
         explanation: When you work in small steps, you always know what changed if
           something breaks. If a bug appears, it must be from the last small change
           — making it much easier to find and fix than hunting through a large, complex
-          change.
+          change. Also it makes sure that Lovable adds less unwanted functionality.
         correctAnswer: 3
     - type: quiz-question
       title: 'Quiz: Bookmarking'
@@ -371,29 +381,50 @@ course:
       title: 'Practice: Break it down'
       content:
         description: Dalmie wants to add a comments feature where book club members
-          can discuss each book suggestion. Instead of one big prompt, break this
-          down into small, testable steps. Write 4-5 small prompts she should use,
-          in order.
+          can discuss each book suggestion. What are the best practices she should
+          follow to prevent bugs while building this feature?
         placeholder: |-
-          1. First prompt: ...
+          1. First, Dalmie should...
 
-          2. Second prompt: ...
+          2. Then she should...
 
-          3. Third prompt: ...
+          3. Next, she should...
+        systemPrompt: |-
+          You are a debugging mentor for writing applications using AI app builders like Lovable
+          evaluating a best practice preventing bugs.
 
-          4. Fourth prompt: ...
-        systemPrompt: 'You are a debugging mentor helping a learner break down features
-          into small prompts. They were given this task: ''Dalmie wants to add a comments
-          feature where book club members can discuss each book suggestion. Instead
-          of one big prompt, break this down into small, testable steps. Write 4-5
-          small prompts she should use, in order.'' Good answers have each prompt
-          focused on one testable piece, like: (1) add a comment input field below
-          each book, (2) save comments when submitted, (3) display saved comments
-          below each book, (4) show commenter''s name with each comment, (5) add timestamp
-          to comments. If prompts are too big or combine multiple features, suggest
-          breaking them down further. Congratulate clear, incremental thinking. End
-          with encouragement.'
-        checkerPrompt: These are small prompts to build a comments feature incrementally.
+          ## Description for the assignment:
+
+          Dalmie wants to add a comments feature where book club members
+          can discuss each book suggestion. What are the best practices she should
+          follow to prevent bugs while building this feature?
+
+          ## Context for related content in the course:
+
+          When Dalmie adds a new feature to her Book Club Organiser, she now follows this checklist:
+
+          ✓ **One feature at a time.** First the Vote button. Then the vote count display. Then preventing double votes.
+
+          ✓ **Test immediately.** After each change, she clicks through to make sure it works.
+
+          ✓ **Bookmark when it works.** Each stable version gets bookmarked.
+
+          This simple routine has cut her debugging time dramatically. When bugs do appear, she knows exactly where to look.
+
+
+          ## Assessment criteria:
+
+          Good answers mention:
+          (1) breaking the feature into small, testable parts
+          (2) testing each part immediately after addition
+          (3) bookmarking stable versions after each successful test. Praise systematic approaches.If they miss key prevention steps, suggest them.
+          End with encouragement.
+
+          ## Things to avoid:
+
+          - Do not provide code or implementation details.
+          - Don't mention version control systems outside of Lovable's bookmarking feature.
+          - Don't mention too much besides the prevention habits taught in this challenge.
     - type: challenge-end
       title: "You've got the prevention habits! \U0001F6E1️"
       content:
@@ -403,14 +434,6 @@ course:
         subDescription: Small prompts + immediate testing + bookmarked versions =
           fewer bugs and easier fixes. These habits will serve you throughout your
           building journey!
-    title: Preventing Bugs Before They Happen
-    isFree: false
-    skills:
-    - Small Prompts
-    - Testing
-    - Version Bookmarking
-    description: Learn simple habits that dramatically reduce frustrating bugs.
-    completionTime: '10:00'
   - steps:
     - type: text
       title: Meet Dalmie's challenge
@@ -419,8 +442,6 @@ course:
           Dalmie is building her Book Club Organiser app in Lovable. Yesterday, everything was working beautifully. Members could suggest books and vote on them.
 
           Today, she added a feature to show how many votes each book has received. But now when she clicks the Vote button... nothing happens. No error message appears. The vote count doesn't change. The button looks normal.
-
-          We could call this a **silent bug** – the app doesn't crash or show an error, it just quietly doesn't do what it should.
         imageUrl: "/courses/vibe-coding-debugging-00/dalmie-stuck.png"
       subtitle: A debugging story
     - type: text
@@ -436,52 +457,6 @@ course:
           The key insight: **diagnose before fixing**. Spending time investigating (rather than immediately attempting fixes) actually gets you to a solution faster.
       subtitle: Diagnose before you fix
     - type: text
-      title: The three-attempt rule
-      content:
-        body: |-
-          Here's a crucial lesson from experienced Lovable users: **if your fix attempts aren't working after three tries, stop and change your approach**.
-
-          Each failed fix can make things worse by introducing new changes on top of broken code. You end up in a "bug loop" where fixes create new problems.
-
-          After three attempts:
-          - Stop trying the same approach
-          - Investigate more deeply
-          - Try a completely different strategy
-          - Consider reverting to a working version
-
-          We'll learn all these strategies in this course.
-      subtitle: When to stop and rethink
-    - type: quiz-question
-      title: 'Quiz: Types of bugs'
-      content:
-        options:
-        - An error message bug
-        - A visual bug
-        - A silent bug
-        - A data bug
-        question: Dalmie clicks the Vote button but nothing happens – no error, no
-          change, the button looks normal. What type of bug is this?
-        explanation: This is a silent bug – the trickiest kind because there's no
-          obvious error to follow. The app doesn't crash or show a message, it just
-          quietly fails to do what it should. These require careful investigation
-          to find the cause.
-        correctAnswer: 2
-    - type: quiz-question
-      title: 'Quiz: The debugging mindset'
-      content:
-        options:
-        - Immediately ask Lovable to fix the problem
-        - Investigate what's happening before attempting fixes
-        - Delete the feature and try again
-        - Ignore the bug and hope users won't notice
-        question: What's the most effective first response when you encounter a bug?
-        explanation: Investigation first! Understanding what's actually happening
-          before attempting fixes leads to better solutions and fewer wasted attempts.
-          Jumping straight to fixes often makes things worse.
-        correctAnswer: 1
-
-
-    - type: text
       title: How developers investigate
       content:
         body: |-
@@ -496,9 +471,11 @@ course:
         body: |-
           The first question developers ask: is this a **frontend** bug or a **backend** bug?
 
+          The data flows through the frontend and backed part of the application, we would need to figure out which side the problem is on.
+
           **Frontend bugs** affect what users see:
           - Button doesn't respond to clicks
-          - Text shows "undefined" instead of data
+          - Text shows "undefined" or "NaN" instead of data
           - Layout looks broken
           - Colours or styles are wrong
 
@@ -511,6 +488,15 @@ course:
           Different bugs leave clues in different places.
       subtitle: The first question to ask
     - type: text
+      title: Pinpointing the issue
+      content:
+        body: |-
+          Beside the clues in the previous step, there are tools and strategies to help you investigate further.
+          We need to check each part of the application to see where the problem lies, from the user interface
+          (frontend) to the server and database (backend).
+        imageUrl: "/courses/vibe-coding-debugging-00/investigate.gif"
+      subtitle: A systematic approach
+    - type: text
       title: 'Frontend logs: The browser Console'
       content:
         body: |-
@@ -522,25 +508,59 @@ course:
           - **Or:** Right-click anywhere on the page → "Inspect" → click "Console" tab
 
           When something goes wrong on the frontend, error messages appear here in red. Even when there's no visible error, the Console might contain clues.
-        imageUrl: "/courses/vibe-coding-debugging-00/devtools-console.png ADD GIF"
+        imageUrl: "/courses/vibe-coding-debugging-00/devtools-console.gif"
       subtitle: Where frontend errors appear
     - type: text
-      title: Common Console errors
+      title: What is the Console?
       content:
         body: |-
-          Here are errors you might see in the Console:
+          The Console is like a diary for your app. It records:
+          - Errors that occur
+          - Warnings about potential issues
+          - Debug messages from the code
 
-          **`Cannot read properties of undefined (reading 'title')`**
-          The code expected data (like a book title) to exist, but it didn't. Maybe the data hasn't loaded yet, or doesn't exist.
+          Developers (and Lovable) use the Console to see what went wrong when bugs appear. Even if nothing seems broken on screen, the Console might reveal hidden problems.
+      subtitle: The app's diary of events
+    - type: text
+      title: Errors in software
+      content:
+        body: |-
+          When code runs into a problem, it often throws an **error**, or also known as **Exception**. Errors are like red flags that something went wrong.
 
-          **`TypeError: X is not a function`**
-          The code tried to run something that isn't actually a function. Usually a typo or missing piece.
+          Usually an error looks like this in the Console:
 
-          **`Failed to fetch` or `Network error`**
-          Your app couldn't reach the backend. Check internet connection or if the backend is running.
+          ```
+          Uncaught TypeError: Cannot read properties of undefined (reading 'title')
+              at renderBook (BookList.js:45)
+              at onClick (VoteButton.js:10)
+          ```
+          The first line describes the error type and message. The lines below show where in the code the error occurred (called a **stack trace**).
 
-          You don't need to understand these fully – just copy them and share with Lovable!
-      subtitle: Recognising common patterns
+          It can look scary, but you do not need to understand every detail. Simply knowing that an
+          error occurred is already a big clue. We are even happy to see it, because when we pass
+          the error message to Lovable, it can often fix the problem straight away.
+      subtitle: When code runs into problems
+    - type: text
+      title: Errors are you friend
+      content:
+        body: |-
+          We advise you to read error messages carefully. They are your friends when debugging. At
+          first, they may seem like gibberish, but there is a good chance they already contain
+          hints that help you understand what is wrong. Over time, you will also get better at
+          reading error messages as you practise more.
+    - type: text
+      title: How to produce the error messages
+      content:
+        body: |-
+          To see error messages in the Console, you often need to **reproduce the bug** while DevTools is open.
+
+          For Dalmie's Vote button bug:
+          1. Open the app preview in a new tab
+          2. Open DevTools (on that tab) and go to the Console tab
+          3. Click the Vote button
+          4. Look for any new error messages that appear in red
+
+          If an error shows up, copy the entire message (including the stack trace) to share with Lovable. This information is crucial for diagnosing and fixing the bug.
     - type: text
       title: The Network tab
       content:
@@ -548,10 +568,10 @@ course:
           Next to the Console in DevTools is the **Network tab**. This shows every request your app makes to the backend.
 
           Each row is a request. Look for:
-          - **Green (200)** — Success, request worked
+          - **Default color (200)** — Success, request worked
           - **Red (400, 401, 403, 404, 500)** — Failed, something went wrong
 
-          Clicking a failed request shows details about what went wrong. This is especially useful for silent bugs where nothing appears in the Console.
+          Clicking a failed request shows details about what went wrong. This is especially useful for cases where nothing appears in the Console.
 
           **Dalmie's discovery:** When her Vote button did nothing, the Console was empty. But the Network tab showed a red `401` error on the vote request – the backend was rejecting her request because she wasn't properly logged in!
         imageUrl: "/courses/vibe-coding-debugging-00/network-tab.png ADD GIF"
@@ -560,7 +580,8 @@ course:
       title: HTTP status codes
       content:
         body: |-
-          Those numbers on requests (200, 401, etc.) are **status codes**. Here are the important ones:
+          The frontend talks to the backend using **HTTP requests**. Each request gets a response with a **status code** indicating success or failure.
+          Those numbers on requests (200, 401, etc.) are the **status codes**. Here are the important ones:
 
           **200** — Success! Everything worked.
 
@@ -577,6 +598,16 @@ course:
           The first digit tells you the category: 2xx = success, 4xx = client problem, 5xx = server problem.
       subtitle: What the numbers mean
     - type: text
+      title: Investigate further
+      content:
+        body: |-
+          If the Console and Network tab don't reveal the full issue, it's time to check the backend logs.
+
+          Backend logs record what happens on the server side, so you cannot read it in the browser's console.
+
+          In the next step, we'll explore how to access and interpret Lovable's backend logs.
+        imageUrl: "/courses/vibe-coding-debugging-00/investigate-further.gif"
+    - type: text
       title: 'Backend logs: Lovable Cloud'
       content:
         body: |-
@@ -590,7 +621,7 @@ course:
           The logs show:
           - When backend functions ran
           - What data they received
-          - Any errors that occurred
+          - Any errors that occurred (the same type of error messages you saw in the Console)
           - Success or failure messages
 
           This is where you'll find clues for silent bugs that don't show errors in the browser.
@@ -631,49 +662,47 @@ course:
         imageUrl: "/courses/vibe-coding-debugging-00/database-check.png"
       subtitle: Is the data actually there?
     - type: text
-      title: Reproducing the bug
+      title: Putting it all together
       content:
         body: |-
-          Before investigating deeply, try to **reproduce** the bug: make it happen again on purpose. This helps you (and Lovable) understand exactly what triggers it.
+          When investigating bugs, follow this systematic approach:
 
-          **Steps:**
-          - Open the preview in a new tab.
-          - Open the DevTools > Network tab.
-          - Reproduce the bug.
+          1. **Reproduce the bug** while DevTools is open.
+          2. **Check the Console** for frontend errors.
+          3. **Check the Network tab** for failed backend requests and status codes.
+          4. If needed, **check Lovable Cloud logs** for backend function errors.
+          5. Finally, **check the database** to see if data is saved correctly.
 
-          **Ask yourself:**
-          - What exactly did I click or type?
-          - What page was I on?
-          - Was I logged in or logged out?
-          - What data was on screen?
-          - Does it happen every time, or only sometimes?
-
-          **Specific is better:**
-          ❌ "The vote button doesn't work."
-          ✅ "The Vote button doesn't respond when I click it on books that have zero votes. It works fine on books that already have votes."
-
-          That second description immediately suggests where the bug might be!
-      subtitle: Make it happen again
+          Gathering clues from each of these places helps you pinpoint where the problem lies, making it much easier to fix.
+        imageUrl: "/courses/vibe-coding-debugging-00/systematic-approach.gif"
+      subtitle: A step-by-step investigation
     - type: text
-      title: Reading a stack trace
+      title: When there is no error message
       content:
         body: |-
-          Sometimes errors include a **stack trace** — a list of steps the code took before crashing. It looks intimidating:
+          Not all bugs produce error messages 😱. Sometimes things just don't work as expected, but
+          nothing appears in red.
 
-          ```
-          Error: Cannot find book with ID 123
-              at getBook (books.js:42)
-              at handleVote (voting.js:15)
-              at onClick (VoteButton.jsx:8)
-          ```
+          In these cases, you can prompt Lovable to add logging statements to your code. These are messages that print out
+          internal state at key points, helping lovable and you understand what's happening.
 
-          **How to read it:**
-          1. **Top line** = The actual error message (most important!)
-          2. **Lines below** = The path through the code that led to the error
+          After lovable adds logs, reproduce the bug again and check the Console and Cloud logs for the new messages.
 
-          You don't need to understand the whole thing. Just copy the **top line** (the error message) and share it with Lovable. That's usually enough!
-        imageUrl: "/courses/vibe-coding-debugging-00/stack-trace.png"
-      subtitle: Don't panic at the wall of text
+          In your prompt, be specific about what is the expected vs actual behaviour, so lovable knows what to log.
+      subtitle: Your debugging toolkit
+    - type: quiz-question
+      title: 'Quiz: The debugging mindset'
+      content:
+        options:
+        - Immediately ask Lovable to fix the problem
+        - Investigate what's happening before attempting fixes
+        - Delete the feature and try again
+        - Ignore the bug and hope users won't notice
+        question: What's the most effective first response when you encounter a bug?
+        explanation: Investigation first! Understanding what's actually happening
+          before attempting fixes leads to better solutions and fewer wasted attempts.
+          Jumping straight to fixes often makes things worse.
+        correctAnswer: 1
     - type: quiz-question
       title: 'Quiz: Finding clues'
       content:
@@ -818,25 +847,7 @@ course:
           **For getting options before fixing:**
           - "Investigate but don't write code yet. Suggest 3 possible causes."
           - "Take a step back. Analyse the problem and suggest a different approach."
-
-          **For persistent problems:**
-          - "We've tried fixing this three times. Investigate more deeply to find the exact root cause."
       subtitle: Prompts that work
-    - type: text
-      title: Dalmie uses Chat mode
-      content:
-        body: |-
-          When Dalmie's voting feature stopped working, here's how she used Chat mode:
-
-          **Her prompt:**
-          "When I click the Vote button on a book, nothing happens. The vote count doesn't change. I checked the Network tab and saw a 401 error. Can you investigate what's causing this?"
-
-          **Lovable's response:**
-          "I've investigated and found that the vote function requires authentication, but the user token isn't being passed correctly in the request. The 401 error confirms the backend is rejecting the request because it can't identify the user..."
-
-          **What Dalmie learned:**
-          The bug isn't in the voting logic – it's in how authentication is handled. Now she understands the real problem!
-      subtitle: Investigation in action
     - type: text
       title: 'Visual edits: Point and click'
       content:
@@ -879,16 +890,16 @@ course:
           When Lovable detects a specific error, an orange **Try to Fix** button may appear. Clicking it tells Lovable to automatically attempt a repair.
 
           **When it works well:**
-          - Syntax errors (typos in code)
+          - Build errors
           - Missing dependencies
-          - Straightforward build failures
+          - Error messages in Console or Cloud logs
 
           **When it doesn't work well:**
           - Silent bugs (no error to see)
           - Complex logic problems
           - Bugs requiring context or understanding
 
-          **Remember the three-attempt rule:** If 'Try to Fix' fails three times, stop and switch to Chat mode for proper investigation.
+          **The three-attempt rule:** If 'Try to Fix' fails three times, stop and switch to Chat mode for proper investigation.
       subtitle: Quick fixes for clear errors
     - type: text
       title: 'Decision guide: Which tool?'
@@ -1001,6 +1012,22 @@ course:
         imageUrl: "/courses/vibe-coding-debugging-00/bug-loop.gif"
       subtitle: When fixes break other things
     - type: text
+      title: The three-attempt rule
+      content:
+        body: |-
+          Here's a crucial lesson from experienced Lovable users: **if your fix attempts aren't working after three tries, stop and change your approach**.
+
+          Each failed fix can make things worse by introducing new changes on top of broken code. You end up in a "bug loop" where fixes create new problems.
+
+          After three attempts:
+          - Stop trying the same approach
+          - Investigate more deeply
+          - Try a completely different strategy
+          - Consider reverting to a working version
+
+          We'll learn all these strategies in this course.
+      subtitle: When to stop and rethink
+    - type: text
       title: 'Strategy 1: The revert button'
       content:
         body: |-
@@ -1061,7 +1088,18 @@ course:
           - Can we disable everything else and test just this one thing?
       subtitle: One thing at a time
     - type: text
-      title: 'Strategy 5: Know when to start fresh'
+      title: 'Strategy 5: Rewrite the feature'
+      content:
+        body: |-
+          If a feature is deeply tangled, sometimes the fastest way forward is to rewrite it from scratch.
+          You can revert not just before the bugloop started, but all the way back to before the feature existed.
+
+          Then, prompt Lovable to build the feature again, but with a different approach or simpler design.
+
+          Because building features with AI builders got so fast and cheap, rewriting can be quicker than untangling.
+          It is literally less credits to start fresh than to spend hours debugging, not just compared to a developer.
+    - type: text
+      title: 'Strategy 6: Know when to start fresh'
       content:
         body: |-
           Sometimes the kindest thing is to start over. Lovable's **Remix** option (in Project Settings) creates a clean copy.
@@ -1076,23 +1114,6 @@ course:
           **The liberating truth:**
           Experienced users report that rebuilding with better prompts takes far less time than expected. Everything you learned from the first attempt makes the second much faster.
       subtitle: The fresh start option
-    - type: text
-      title: Dalmie escapes her loop
-      content:
-        body: |-
-          Dalmie has been trying to fix her voting feature for 45 minutes. Each fix breaks something else.
-
-          She stops and thinks: what are my options?
-
-          **She chooses: Isolate**
-          She prompts: "Let's simplify. Remove the vote count display and notifications for now. Just get the basic Vote button saving correctly."
-
-          Lovable strips away the complexity. The basic vote now works!
-
-          She tests, bookmarks the version, then adds back the vote count display as a separate small prompt. This time it works without breaking the button.
-
-          **The lesson:** Sometimes you need to take a step back to move forward.
-      subtitle: Putting strategies into practice
     - type: quiz-question
       title: 'Quiz: Escaping bug loops'
       content:
