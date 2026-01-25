@@ -612,6 +612,7 @@ course:
       content:
         body: |-
           When your app has backend functions, Lovable Cloud keeps logs of what happens.
+          (If you don't remember, backend functions are pieces of code that run on the server to handle tasks like saving data, sending emails, or processing payments.)
 
           **How to access logs:**
           1. In Lovable, click the **`+` button** next to Preview
@@ -873,7 +874,7 @@ course:
       title: 'Visual edits: Static vs dynamic'
       content:
         body: |-
-          **Critical limitation:** Visual edits only work on **static elements**.
+          **Critical limitation:** Visual editing content only work on **static elements**.
 
           **Static elements** stay the same for everyone: a logo, a heading that says "Welcome", a button labelled "Submit".
 
@@ -882,12 +883,13 @@ course:
           **How to tell:** Hover over an element in Visual edit mode. If you can't select it, it's dynamic.
 
           For dynamic elements, use Chat mode to investigate and fix.
+          The design of both static and dynamic elements can be changed in Visual edits mode.
       subtitle: Know the limitation
     - type: text
       title: 'Try to Fix: Automated repair'
       content:
         body: |-
-          When Lovable detects a specific error, an orange **Try to Fix** button may appear. Clicking it tells Lovable to automatically attempt a repair.
+          When Lovable detects a specific error, an **Try to Fix** button may appear. Clicking it tells Lovable to automatically attempt a repair.
 
           **When it works well:**
           - Build errors
@@ -1098,22 +1100,6 @@ course:
 
           Because building features with AI builders got so fast and cheap, rewriting can be quicker than untangling.
           It is literally less credits to start fresh than to spend hours debugging, not just compared to a developer.
-    - type: text
-      title: 'Strategy 6: Know when to start fresh'
-      content:
-        body: |-
-          Sometimes the kindest thing is to start over. Lovable's **Remix** option (in Project Settings) creates a clean copy.
-
-          **Signs it's time for a fresh start:**
-          - You've been stuck on the same bug for an hour+
-          - Multiple interconnected bugs keep appearing
-          - Lovable's responses are becoming repetitive and unhelpful
-          - You've lost track of what's broken
-          - You haven't invested that much time yet
-
-          **The liberating truth:**
-          Experienced users report that rebuilding with better prompts takes far less time than expected. Everything you learned from the first attempt makes the second much faster.
-      subtitle: The fresh start option
     - type: quiz-question
       title: 'Quiz: Escaping bug loops'
       content:
@@ -1129,41 +1115,6 @@ course:
           a different, simpler approach. Continuing the same pattern won't magically
           start working.
         correctAnswer: 2
-    - type: quiz-question
-      title: 'Quiz: When to start fresh'
-      content:
-        options:
-        - After the very first bug appears
-        - When multiple interconnected bugs appear and you've lost track of what's
-          broken
-        - Every time you finish a feature
-        - Whenever you run out of credits
-        question: When is it appropriate to use Remix for a fresh start?
-        explanation: 'Starting fresh is for when you''re deeply stuck: multiple tangled
-          bugs, losing track of what''s broken, spending an hour+ on the same issue.
-          It''s not for first bugs (try other strategies!) or routine use. Sometimes
-          fresh really is faster.'
-        correctAnswer: 1
-    - type: free-text-exercise
-      title: 'Practice: Escape plan'
-      content:
-        description: |-
-          Dalmie has been stuck for 40 minutes. Her voting feature worked, then she added a "most voted" badge. Now neither works, and each fix attempt changes unrelated code.
-
-          Write out her escape plan: what strategy should she use first, what should she try if that doesn't work, and what's her last resort?
-        placeholder: |-
-          First strategy: ...
-
-          If that doesn't work: ...
-
-          Last resort: ...
-        systemPrompt: 'You are a debugging mentor evaluating escape plans. Good answers
-          include strategies in order: (1) Revert to the version before the badge
-          was added, (2) Use Chat mode to understand what the badge change broke,
-          (3) Isolate by removing the badge and getting voting working again, (4)
-          If still stuck after significant time, consider a fresh start with Remix.
-          Praise strategic thinking. Suggest any missed strategies. End with encouragement.'
-        checkerPrompt: This is an escape plan for a 40-minute bug loop.
     - type: challenge-end
       title: "You can escape bug loops! \U0001F513"
       content:

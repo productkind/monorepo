@@ -480,7 +480,7 @@
             "type": "text",
             "title": "Backend logs: Lovable Cloud",
             "content": {
-              "body": "When your app has backend functions, Lovable Cloud keeps logs of what happens.\n\n**How to access logs:**\n1. In Lovable, click the **`+` button** next to Preview\n2. Select the **Cloud tab**\n3. Click **Logs**\n\nThe logs show:\n- When backend functions ran\n- What data they received\n- Any errors that occurred (the same type of error messages you saw in the Console)\n- Success or failure messages\n\nThis is where you'll find clues for silent bugs that don't show errors in the browser.",
+              "body": "When your app has backend functions, Lovable Cloud keeps logs of what happens.\n(If you don't remember, backend functions are pieces of code that run on the server to handle tasks like saving data, sending emails, or processing payments.)\n\n**How to access logs:**\n1. In Lovable, click the **`+` button** next to Preview\n2. Select the **Cloud tab**\n3. Click **Logs**\n\nThe logs show:\n- When backend functions ran\n- What data they received\n- Any errors that occurred (the same type of error messages you saw in the Console)\n- Success or failure messages\n\nThis is where you'll find clues for silent bugs that don't show errors in the browser.",
               "imageUrl": "/courses/vibe-coding-debugging-00/cloud-logs-location.png ADD GIF"
             },
             "subtitle": "Behind-the-scenes clues"
@@ -663,7 +663,7 @@
             "type": "text",
             "title": "Visual edits: Static vs dynamic",
             "content": {
-              "body": "**Critical limitation:** Visual edits only work on **static elements**.\n\n**Static elements** stay the same for everyone: a logo, a heading that says \"Welcome\", a button labelled \"Submit\".\n\n**Dynamic elements** change based on data or user state: a list of books from the database, a user's name after login, a vote count that updates.\n\n**How to tell:** Hover over an element in Visual edit mode. If you can't select it, it's dynamic.\n\nFor dynamic elements, use Chat mode to investigate and fix."
+              "body": "**Critical limitation:** Visual editing content only work on **static elements**.\n\n**Static elements** stay the same for everyone: a logo, a heading that says \"Welcome\", a button labelled \"Submit\".\n\n**Dynamic elements** change based on data or user state: a list of books from the database, a user's name after login, a vote count that updates.\n\n**How to tell:** Hover over an element in Visual edit mode. If you can't select it, it's dynamic.\n\nFor dynamic elements, use Chat mode to investigate and fix.\nThe design of both static and dynamic elements can be changed in Visual edits mode."
             },
             "subtitle": "Know the limitation"
           },
@@ -671,7 +671,7 @@
             "type": "text",
             "title": "Try to Fix: Automated repair",
             "content": {
-              "body": "When Lovable detects a specific error, an orange **Try to Fix** button may appear. Clicking it tells Lovable to automatically attempt a repair.\n\n**When it works well:**\n- Build errors\n- Missing dependencies\n- Error messages in Console or Cloud logs\n\n**When it doesn't work well:**\n- Silent bugs (no error to see)\n- Complex logic problems\n- Bugs requiring context or understanding\n\n**The three-attempt rule:** If 'Try to Fix' fails three times, stop and switch to Chat mode for proper investigation."
+              "body": "When Lovable detects a specific error, an **Try to Fix** button may appear. Clicking it tells Lovable to automatically attempt a repair.\n\n**When it works well:**\n- Build errors\n- Missing dependencies\n- Error messages in Console or Cloud logs\n\n**When it doesn't work well:**\n- Silent bugs (no error to see)\n- Complex logic problems\n- Bugs requiring context or understanding\n\n**The three-attempt rule:** If 'Try to Fix' fails three times, stop and switch to Chat mode for proper investigation."
             },
             "subtitle": "Quick fixes for clear errors"
           },
@@ -803,14 +803,6 @@
             }
           },
           {
-            "type": "text",
-            "title": "Strategy 6: Know when to start fresh",
-            "content": {
-              "body": "Sometimes the kindest thing is to start over. Lovable's **Remix** option (in Project Settings) creates a clean copy.\n\n**Signs it's time for a fresh start:**\n- You've been stuck on the same bug for an hour+\n- Multiple interconnected bugs keep appearing\n- Lovable's responses are becoming repetitive and unhelpful\n- You've lost track of what's broken\n- You haven't invested that much time yet\n\n**The liberating truth:**\nExperienced users report that rebuilding with better prompts takes far less time than expected. Everything you learned from the first attempt makes the second much faster."
-            },
-            "subtitle": "The fresh start option"
-          },
-          {
             "type": "quiz-question",
             "title": "Quiz: Escaping bug loops",
             "content": {
@@ -823,31 +815,6 @@
               "question": "You've been trying to fix the same bug for 30 minutes with no progress, and each fix creates new problems. What's the best approach?",
               "explanation": "When you're stuck in a loop, stop and use Chat mode to understand what's actually wrong. Then revert to a working version to try again with a different, simpler approach. Continuing the same pattern won't magically start working.",
               "correctAnswer": 2
-            }
-          },
-          {
-            "type": "quiz-question",
-            "title": "Quiz: When to start fresh",
-            "content": {
-              "options": [
-                "After the very first bug appears",
-                "When multiple interconnected bugs appear and you've lost track of what's broken",
-                "Every time you finish a feature",
-                "Whenever you run out of credits"
-              ],
-              "question": "When is it appropriate to use Remix for a fresh start?",
-              "explanation": "Starting fresh is for when you're deeply stuck: multiple tangled bugs, losing track of what's broken, spending an hour+ on the same issue. It's not for first bugs (try other strategies!) or routine use. Sometimes fresh really is faster.",
-              "correctAnswer": 1
-            }
-          },
-          {
-            "type": "free-text-exercise",
-            "title": "Practice: Escape plan",
-            "content": {
-              "description": "Dalmie has been stuck for 40 minutes. Her voting feature worked, then she added a \"most voted\" badge. Now neither works, and each fix attempt changes unrelated code.\n\nWrite out her escape plan: what strategy should she use first, what should she try if that doesn't work, and what's her last resort?",
-              "placeholder": "First strategy: ...\n\nIf that doesn't work: ...\n\nLast resort: ...",
-              "systemPrompt": "You are a debugging mentor evaluating escape plans. Good answers include strategies in order: (1) Revert to the version before the badge was added, (2) Use Chat mode to understand what the badge change broke, (3) Isolate by removing the badge and getting voting working again, (4) If still stuck after significant time, consider a fresh start with Remix. Praise strategic thinking. Suggest any missed strategies. End with encouragement.",
-              "checkerPrompt": "This is an escape plan for a 40-minute bug loop."
             }
           },
           {
