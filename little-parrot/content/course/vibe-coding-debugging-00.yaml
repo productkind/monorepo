@@ -434,7 +434,21 @@ course:
         subDescription: Small prompts + immediate testing + bookmarked versions =
           fewer bugs and easier fixes. These habits will serve you throughout your
           building journey!
-  - steps:
+  - title: How Developers Investigate Bugs
+    isFree: false
+    skills:
+    - Frontend Logs
+    - Backend Logs
+    - Network Tab
+    - Status Codes
+    - Function Invocations
+    - Database Checking
+    - Bug Reproduction
+    - Stack Traces
+    description: Learn the same investigation techniques that professional developers
+      and the agent behind Lovable use.
+    completionTime: '12:00'
+    steps:
     - type: text
       title: Meet Dalmie's challenge
       content:
@@ -574,7 +588,7 @@ course:
           Clicking a failed request shows details about what went wrong. This is especially useful for cases where nothing appears in the Console.
 
           **Dalmie's discovery:** When her Vote button did nothing, the Console was empty. But the Network tab showed a red `401` error on the vote request – the backend was rejecting her request because she wasn't properly logged in!
-        imageUrl: "/courses/vibe-coding-debugging-00/network-tab.png ADD GIF"
+        imageUrl: "/courses/vibe-coding-debugging-00/network-tab.png"
       subtitle: Watching backend communication
     - type: text
       title: HTTP status codes
@@ -596,6 +610,7 @@ course:
           **500** — Server error. Something crashed on the backend.
 
           The first digit tells you the category: 2xx = success, 4xx = client problem, 5xx = server problem.
+          If there is a failed request, that will also show up in the Console as an error message.
       subtitle: What the numbers mean
     - type: text
       title: Investigate further
@@ -626,7 +641,7 @@ course:
           - Success or failure messages
 
           This is where you'll find clues for silent bugs that don't show errors in the browser.
-        imageUrl: "/courses/vibe-coding-debugging-00/cloud-logs-location.png ADD GIF"
+        imageUrl: "/courses/vibe-coding-debugging-00/cloud-logs-location.png"
       subtitle: Behind-the-scenes clues
     - type: text
       title: Function invocations
@@ -646,7 +661,7 @@ course:
           - What was the status code? (Tells you why it failed)
 
           Clicking an invocation often shows more details about what went wrong.
-        imageUrl: "/courses/vibe-coding-debugging-00/invocations.png ADD GIF"
+        imageUrl: "/courses/vibe-coding-debugging-00/invocations.png"
       subtitle: Did the function even run?
     - type: text
       title: Checking your database
@@ -708,25 +723,24 @@ course:
       title: 'Quiz: Finding clues'
       content:
         options:
-        - The browser Console (DevTools)
         - Lovable Cloud Logs
-        - The Network tab in DevTools
+        - The Database
+        - Click on chat mode
         - 'Just prompt Lovable: ''It doesn''t work.'''
         question: Dalmie's Vote button does nothing when clicked, and there's no error
-          in the Console. Where should she look next?
-        explanation: The Network tab shows requests to the backend. If the Console
-          is empty but the button isn't working, the problem might be in the backend
-          communication — which the Network tab will reveal. She might see a failed
-          request with a status code explaining the issue.
-        correctAnswer: 2
+          in the Console or the Network Tab. Where should she look next?
+        explanation: The next step is to check Lovable Cloud logs. Backend function errors
+          often appear there when nothing shows up in the browser Console or Network
+          tab.
+        correctAnswer: 0
     - type: quiz-question
       title: 'Quiz: Status codes'
       content:
         options:
-        - Success – everything worked (200)
-        - The user needs to log in (401)
-        - Something crashed on the server (500)
-        - The data sent was wrong (400)
+        - Success – everything worked
+        - The user is not authorised
+        - Something crashed on the server
+        - The data sent was wrong
         question: A request in the Network tab shows status code 401. What does this
           mean?
         explanation: 401 means 'Unauthorised' – the user needs to be logged in but
@@ -737,16 +751,24 @@ course:
       title: 'Quiz: Stack traces'
       content:
         options:
-        - The last line at the bottom
-        - The file names
-        - The error message at the top
-        - The line numbers
-        question: When you see a stack trace, which part is most useful to copy and
-          share with Lovable?
-        explanation: The error message at the top is the most important part – it
-          tells you what actually went wrong. The rest shows where it happened, which
-          can be helpful but isn't essential. Copying the top line is usually enough!
-        correctAnswer: 2
+        - The entire error message including the stack trace
+        - Only the file names
+        - Only the line numbers
+        - Just the button that caused the error
+        question: What should you copy and share with Lovable when you see an error in the Console?
+        explanation: Sharing the full error message, including the stack trace, gives Lovable the most useful context to diagnose and fix the issue quickly.
+        correctAnswer: 0
+    - type: quiz-question
+      title: 'Quiz: When there is no error'
+      content:
+        options:
+        - Keep clicking the button until it works
+        - Rewrite the feature from scratch
+        - Assume the bug will fix itself
+        - Ask Lovable to add logging to inspect what is happening
+        question: What should you do when a bug produces no error messages?
+        explanation: When there are no visible errors, adding logging helps reveal what the code is actually doing. This makes invisible bugs visible and much easier to diagnose.
+        correctAnswer: 3
     - type: free-text-exercise
       title: 'Practice: Investigation plan'
       content:
@@ -782,20 +804,6 @@ course:
         subDescription: These investigation techniques are exactly what professional
           developers use. Now when you encounter a bug, you know where to look for
           clues before trying to fix anything!
-    title: How Developers Investigate Bugs
-    isFree: false
-    skills:
-    - Frontend Logs
-    - Backend Logs
-    - Network Tab
-    - Status Codes
-    - Function Invocations
-    - Database Checking
-    - Bug Reproduction
-    - Stack Traces
-    description: Learn the same investigation techniques that professional developers
-      and the agent behind Lovable use.
-    completionTime: '12:00'
   - steps:
     - type: text
       title: Lovable's debugging tools
@@ -818,7 +826,7 @@ course:
           **How to access it:** Look at the bottom of your screen where you type prompts. You'll see a button that says "Chat". Click it to highlight **Chat** in blue.
 
           **The key difference:** In Chat mode, Lovable **investigates without changing your code** until you explicitly approve or click the **Chat** button again to switch back to **Agent** mode that writes code. This makes it safe for investigation – you won't accidentally make things worse while exploring.
-        imageUrl: "/courses/vibe-coding-debugging-00/chat-mode-location.png ADD GIF"
+        imageUrl: "/courses/vibe-coding-debugging-00/chat-mode-location.png"
       subtitle: Investigation mode
     - type: text
       title: What Chat mode can do
@@ -867,8 +875,7 @@ course:
           - Quick appearance tweaks
 
           **Bonus:** Simple changes like text and colours often cost fewer or no credits!
-        imageUrl: "/courses/vibe-coding-debugging-00/visual-edit-location.png ADD
-          GIF"
+        imageUrl: "/courses/vibe-coding-debugging-00/visual-edit-location.png"
       subtitle: For appearance issues
     - type: text
       title: 'Visual edits: Static vs dynamic'
@@ -926,20 +933,16 @@ course:
           → Visual edits
       subtitle: Quick reference for tools in Lovable
     - type: quiz-question
-      title: 'Quiz: Choosing the right tool'
+      title: 'Quiz: What Chat mode is for'
       content:
         options:
-        - Chat mode
-        - Visual edits
-        - Try to Fix
-        - Restart the project
-        question: Dalmie's Vote button appears on screen but nothing happens when
-          she clicks it. There's no error message. Which tool should she use in Lovable?
-        explanation: This is a silent bug – the button exists but doesn't work. Chat
-          mode is perfect for investigating why the button's action isn't working.
-          Visual edits only change appearance, and 'Try to Fix' needs a visible error
-          to act on.
-        correctAnswer: 0
+        - Changing colours and fonts
+        - Investigating issues without changing code
+        - Automatically fixing errors without explanation
+        - Editing database tables directly
+        question: What is the main purpose of Chat mode in Lovable?
+        explanation: Chat mode is for investigation. It lets Lovable search files, inspect logs, reason through problems, and explain what is happening without modifying your code until you approve a fix.
+        correctAnswer: 1
     - type: quiz-question
       title: 'Quiz: Visual edits limitation'
       content:
@@ -955,6 +958,17 @@ course:
           fixed headings or labels. Dalmie would need Chat mode to modify how dynamic
           titles are displayed.
         correctAnswer: 2
+    - type: quiz-question
+      title: 'Quiz: Try to Fix'
+      content:
+        options:
+        - When the layout looks wrong
+        - When a clear error appears in the Console or Cloud logs
+        - When a bug has no visible error
+        - When you want to understand how the code works
+        question: When is the 'Try to Fix' button most effective?
+        explanation: "'Try to Fix' works best when Lovable detects a clear, specific error such as a build failure or an error message in the Console or backend logs."
+        correctAnswer: 1
     - type: free-text-exercise
       title: 'Practice: Match tools to problems'
       content:
@@ -1043,7 +1057,7 @@ course:
 
           **When to use it:**
           When you've made 3+ fix attempts and things are getting worse, not better.
-        imageUrl: "/courses/vibe-coding-debugging-00/revert-button.png ADD GIF"
+        imageUrl: "/courses/vibe-coding-debugging-00/revert-button.png"
       subtitle: Your emergency brake
     - type: text
       title: 'Strategy 2: Compare versions'
@@ -1101,20 +1115,38 @@ course:
           Because building features with AI builders got so fast and cheap, rewriting can be quicker than untangling.
           It is literally less credits to start fresh than to spend hours debugging, not just compared to a developer.
     - type: quiz-question
-      title: 'Quiz: Escaping bug loops'
+      title: 'Quiz: The three-attempt rule'
       content:
         options:
-        - Keep trying the same approach – it will eventually work
-        - Add more features to work around the bug
-        - Stop, revert to a working version, then try a different approach
-        - Close Lovable and try again tomorrow
-        question: You've been trying to fix the same bug for 30 minutes with no progress,
-          and each fix creates new problems. What's the best approach?
-        explanation: When you're stuck in a loop, stop and use Chat mode to understand
-          what's actually wrong. Then revert to a working version to try again with
-          a different, simpler approach. Continuing the same pattern won't magically
-          start working.
-        correctAnswer: 2
+        - Keep trying the same fix until it works
+        - Ask Lovable to apply bigger fixes
+        - Ignore the bug for now
+        - Stop and change your approach
+        question: According to the three-attempt rule, what should you do after three failed fix attempts?
+        explanation: After three attempts, continuing usually makes things worse. The rule exists to stop bug loops and encourage investigation, rethinking, or reverting instead of piling on more fixes.
+        correctAnswer: 3
+    - type: quiz-question
+      title: 'Quiz: Using the revert button'
+      content:
+        options:
+        - It deletes all later messages permanently
+        - It rewinds the project to an earlier working state
+        - It fixes bugs automatically
+        - It bookmarks the current version
+        question: What does the revert button do?
+        explanation: Reverting restores your project to a previous working state while keeping the full history visible. This lets you undo bad changes without losing context.
+        correctAnswer: 1
+    - type: quiz-question
+      title: 'Quiz: Choosing the right escape strategy'
+      content:
+        options:
+        - Ask Lovable to explain what is broken before changing anything
+        - Keep fixing until the error disappears
+        - Immediately rewrite the entire app
+        - Ignore related features and ship anyway
+        question: You're stuck in a fix-break loop and no longer understand what's wrong. Which strategy should you try first?
+        explanation: Asking for explanation before fixing forces a step back. It helps uncover flawed assumptions, tangled bugs, or simpler solutions before more changes are made.
+        correctAnswer: 0
     - type: challenge-end
       title: "You can escape bug loops! \U0001F513"
       content:
@@ -1287,6 +1319,17 @@ course:
           you provide, the faster Lovable can find and fix the issue without breaking
           other things.
         correctAnswer: 0
+    - type: quiz-question
+      title: 'Quiz: The debugging prompt formula'
+      content:
+        options:
+        - Only what is broken
+        - What you clicked and what error appeared
+        - Expected behaviour, actual behaviour, and clues found
+        - A long description of the entire app
+        question: Which elements make up an effective debugging prompt?
+        explanation: The most effective prompts clearly state what you did, what you expected, what actually happened, and any clues you found. This structure dramatically improves fix quality.
+        correctAnswer: 2
     - type: quiz-question
       title: 'Quiz: Guardrails'
       content:
