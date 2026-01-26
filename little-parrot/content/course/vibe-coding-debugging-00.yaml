@@ -95,7 +95,7 @@ course:
           Launch blockers prevent your app from starting at all. In technical terms, these are known as **build errors** or **compile-time errors**.
 
           Build or compile time refers to the process of transforming your app’s code into a runnable program. If errors occur during this process, the app will not launch.
-        imageUrl: "/courses/vibe-coding-debugging-00/build-error.png"
+        imageUrl: "/courses/vibe-coding-debugging-00/error.gif"
       subtitle: When the app won't start
     - type: text
       title: "Types of bugs: Launch blockers"
