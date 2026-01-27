@@ -28,6 +28,8 @@ const AssetTypeSchema = z.union([
   z.literal('email-footer'),
   z.literal('logo'),
   z.literal('logo-inverted'),
+  z.literal('logo-vertical'),
+  z.literal('logo-vertical-inverted'),
 ])
 
 const PlatformSchema = z.array(
@@ -54,19 +56,21 @@ const SOURCE_DIR = 'src'
 const OUTPUT_DIR = 'dist'
 const absoluteBaseDir = path.resolve(__dirname, PRODUCT_BASE_DIR);
 
-const logoK: string = path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-k.svg')
+const logo: string = path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo.svg')
 
 const LOGO_K_PLATFORMS = ['substack', 'youtube', 'linkedin', 'github'] as const;
 
 const asset_to_input_image: Partial<Record<`${PlatformName}-${AssetType}`, string>> = {
-  ...(fromEntriesConst(LOGO_K_PLATFORMS.map((p) => [`${p}-profile` as const, logoK]))),
+  ...(fromEntriesConst(LOGO_K_PLATFORMS.map((p) => [`${p}-profile` as const, logo]))),
   'instagram-profile': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-kim-and-tim-by-productkind.svg'),
   'substack-wordmark': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-thoughts-by-productkind-linear.svg'),
   'substack-email-banner': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-thoughts-by-productkind-gradient-background.svg'),
   'substack-cover': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-thoughts-by-productkind-gradient-background-square.svg'),
   'meetup-cover': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-seminars-by-productkind-gradient.svg'),
-  'website-logo': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-crop-to-content.svg'),
-  'website-logo-inverted': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-crop-to-content-monochrome-white.svg'),
+  'website-logo': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo.svg'),
+  'website-logo-inverted': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-inverted.svg'),
+  'website-logo-vertical': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-vertical.svg'),
+  'website-logo-vertical-inverted': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-vertical-inverted.svg'),
 }
 
 const images: SvgToRasterize[] = platforms.flatMap((platform) =>
