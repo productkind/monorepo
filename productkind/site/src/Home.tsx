@@ -53,7 +53,7 @@ const Home = () => {
       </div>
       <div className="box box-highlight hero-tagline">
         <Typography component="h1" variant="h1" className="tagline main-title">
-          Building a more equitable tech industry.
+          Closing the gender gap in AI technology adoption.
         </Typography>
       </div>
       <div className="box right hero-what-we-do">
@@ -62,7 +62,7 @@ const Home = () => {
           We’re building educational tech products that help women and underrepresented groups grow practical tech skills, develop a product mindset – the ability to identify problems worth solving and build valuable solutions – and create with AI. All in a kind, supportive space where everyone belongs.
         </Typography>
         <Typography component="p" variant="body">
-          We’re on a mission to build an equitable tech industry by making product and tech skills accessible to everyone, regardless of
+          We’re on a mission to close the gender gap in AI technology adoption by making tech and product skills accessible to everyone, regardless of
           their background.
         </Typography>
       </div>
