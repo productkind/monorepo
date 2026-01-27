@@ -108,7 +108,7 @@ course:
           Lovable is even designed to automatically show a **Try to Fix** button when these errors occur, allowing you to resolve them quickly with a single click.
 
           If it doesn’t show the button, you can always prompt Lovable directly: `"There’s a build error: [paste error message]. Fix it."`
-        imageUrl: "/courses/vibe-coding-debugging-00/build-error.png"
+        imageUrl: "/courses/vibe-coding-debugging-00/build-error.webp"
       subtitle: When the app won't start
     - type: text
       title: "Types of bugs: Freezes and misbehaviours"
@@ -122,7 +122,7 @@ course:
           - A button that does nothing when clicked
           - Data that fails to save or load correctly
           - Features that behave inconsistently or unpredictably
-        imageUrl: "/courses/vibe-coding-debugging-00/misbehaviour.png"
+        imageUrl: "/courses/vibe-coding-debugging-00/wrong.webp"
       subtitle: When features don't work as expected
     - type: text
       title: "Types of bugs: Freezes and misbehaviours"
@@ -141,7 +141,7 @@ course:
           Visual glitches affect the appearance of your app. These bugs may involve incorrect colours, misaligned elements, or broken layouts.
 
           While they may not impact functionality directly, visual glitches can harm user experience and make your app look unprofessional.
-        imageUrl: "/courses/vibe-coding-debugging-00/visual-glitch.png"
+        imageUrl: "/courses/vibe-coding-debugging-00/glitch.webp"
       subtitle: When things look wrong
     - type: text
       title: "Types of bugs: Visual glitches"
@@ -150,7 +150,7 @@ course:
           In many cases visual glitches are not easily fixed by only prompting Lovable, but
           fortunately you can attach screenshots to your prompts to help Lovable understand exactly
           what is wrong.
-        imageUrl: "/courses/vibe-coding-debugging-00/screenshot.png"
+        imageUrl: "/courses/vibe-coding-debugging-00/attach.png"
       subtitle: When things look wrong
     - type: text
       title: "Types of bugs: Security vulnerabilities"
@@ -161,7 +161,7 @@ course:
           The features of your app could work perfectly well, but if there are weaknesses in how data is handled or protected, users' safety could be at risk.
 
           Software developers are auditing their code for security vulnerabilities all the time, as these problems can have serious consequences.
-        imageUrl: "/courses/vibe-coding-debugging-00/security.png"
+        imageUrl: "/courses/vibe-coding-debugging-00/lock.gif"
       subtitle: When safety is at risk
     - type: text
       title: "Types of bugs: Security vulnerabilities"
@@ -260,7 +260,7 @@ course:
           The best debugging strategy? Avoid bugs in the first place! While you can't prevent every bug, certain habits dramatically reduce how often you get stuck.
 
           Think of it like cooking: it's much easier to add salt gradually and taste as you go than to try to fix an over-salted dish. The same principle applies to building apps.
-        imageUrl: "/courses/vibe-coding-debugging-00/prevention.gif"
+        imageUrl: "/courses/vibe-coding-debugging-00/wash-hand.gif"
       subtitle: Simple habits that save hours of frustration
     - type: text
       title: The small prompt habit
@@ -303,7 +303,7 @@ course:
           4. Try voting from a different account
 
           If something's wrong, you'll catch it while the change is fresh. Catching bugs early means they're much easier to fix.
-        imageUrl: "/courses/vibe-coding-debugging-00/test-each-change.gif"
+        imageUrl: "/courses/vibe-coding-debugging-00/test.gif"
       subtitle: Catch bugs while they're fresh
     - type: text
       title: Bookmark your stable versions
@@ -435,7 +435,7 @@ course:
           fewer bugs and easier fixes. These habits will serve you throughout your
           building journey!
   - title: How Developers Investigate Bugs
-    isFree: false
+    isFree: true
     skills:
     - Frontend Logs
     - Backend Logs
@@ -456,7 +456,7 @@ course:
           Dalmie is building her Book Club Organiser app in Lovable. Yesterday, everything was working beautifully. Members could suggest books and vote on them.
 
           Today, she added a feature to show how many votes each book has received. But now when she clicks the Vote button... nothing happens. No error message appears. The vote count doesn't change. The button looks normal.
-        imageUrl: "/courses/vibe-coding-debugging-00/dalmie-stuck.png"
+        imageUrl: "/comics/vibe-coding-debugging-00/panel-04.png"
       subtitle: A debugging story
     - type: text
       title: The debugging mindset
@@ -477,7 +477,7 @@ course:
           When professional developers encounter a bug, they don't guess. They gather clues systematically using specific techniques and tools.
 
           In this challenge, you'll learn the same investigation techniques that developers use – and that Lovable uses too. Understanding these will help you find bugs faster and communicate with Lovable more effectively.
-        imageUrl: "/courses/vibe-coding-debugging-00/detective.gif"
+        imageUrl: "/courses/vibe-coding-debugging-00/spy.gif"
       subtitle: Gathering clues like a professional
     - type: text
       title: 'Frontend vs Backend: Where is the bug?'
@@ -508,7 +508,7 @@ course:
           Beside the clues in the previous step, there are tools and strategies to help you investigate further.
           We need to check each part of the application to see where the problem lies, from the user interface
           (frontend) to the server and database (backend).
-        imageUrl: "/courses/vibe-coding-debugging-00/investigate.gif"
+        imageUrl: "/courses/vibe-coding-debugging-00/checklist.gif"
       subtitle: A systematic approach
     - type: text
       title: 'Frontend logs: The browser Console'
@@ -522,7 +522,7 @@ course:
           - **Or:** Right-click anywhere on the page → "Inspect" → click "Console" tab
 
           When something goes wrong on the frontend, error messages appear here in red. Even when there's no visible error, the Console might contain clues.
-        imageUrl: "/courses/vibe-coding-debugging-00/devtools-console.gif"
+        imageUrl: "/courses/vibe-coding-debugging-00/devtools.webp"
       subtitle: Where frontend errors appear
     - type: text
       title: What is the Console?
@@ -621,7 +621,7 @@ course:
           Backend logs record what happens on the server side, so you cannot read it in the browser's console.
 
           In the next step, we'll explore how to access and interpret Lovable's backend logs.
-        imageUrl: "/courses/vibe-coding-debugging-00/investigate-further.gif"
+        imageUrl: "/courses/vibe-coding-debugging-00/detective.gif"
     - type: text
       title: 'Backend logs: Lovable Cloud'
       content:
@@ -641,7 +641,7 @@ course:
           - Success or failure messages
 
           This is where you'll find clues for silent bugs that don't show errors in the browser.
-        imageUrl: "/courses/vibe-coding-debugging-00/cloud-logs-location.png"
+        imageUrl: "/courses/vibe-coding-debugging-00/cloud-logs.webp"
       subtitle: Behind-the-scenes clues
     - type: text
       title: Function invocations
@@ -661,7 +661,7 @@ course:
           - What was the status code? (Tells you why it failed)
 
           Clicking an invocation often shows more details about what went wrong.
-        imageUrl: "/courses/vibe-coding-debugging-00/invocations.png"
+        imageUrl: "/courses/vibe-coding-debugging-00/invocations.webp"
       subtitle: Did the function even run?
     - type: text
       title: Checking your database
@@ -675,7 +675,7 @@ course:
           3. Check if the data you expected is actually there
 
           **Dalmie's discovery:** Her vote function showed "Success (200)" but votes weren't displaying. She checked the `votes` table and found her votes WERE being saved – but with the wrong `book_id`. The bug was in what data was being sent, not in the saving process!
-        imageUrl: "/courses/vibe-coding-debugging-00/database-check.png"
+        imageUrl: "/courses/vibe-coding-debugging-00/database-check.webp"
       subtitle: Is the data actually there?
     - type: text
       title: Putting it all together
@@ -690,7 +690,6 @@ course:
           5. Finally, **check the database** to see if data is saved correctly.
 
           Gathering clues from each of these places helps you pinpoint where the problem lies, making it much easier to fix.
-        imageUrl: "/courses/vibe-coding-debugging-00/systematic-approach.gif"
       subtitle: A step-by-step investigation
     - type: text
       title: When there is no error message
@@ -821,11 +820,11 @@ course:
       title: 'Chat mode: Your debugging partner'
       content:
         body: |-
-          **Chat mode** transforms Lovable from a code generator into an investigative partner. This is your most powerful debugging tool.
+          **Chat mode** or **Plan** transforms Lovable from a code generator into an investigative partner. This is your most powerful debugging tool.
 
-          **How to access it:** Look at the bottom of your screen where you type prompts. You'll see a button that says "Chat". Click it to highlight **Chat** in blue.
+          **How to access it:** Look at the bottom of your screen where you type prompts. You'll see a button that says "Plan". Click it to highlight **Plan** in blue.
 
-          **The key difference:** In Chat mode, Lovable **investigates without changing your code** until you explicitly approve or click the **Chat** button again to switch back to **Agent** mode that writes code. This makes it safe for investigation – you won't accidentally make things worse while exploring.
+          **The key difference:** In Chat mode, Lovable **investigates without changing your code** until you explicitly approve or click the **Plan** button again to switch back to **Agent** mode that writes code. This makes it safe for investigation – you won't accidentally make things worse while exploring.
         imageUrl: "/courses/vibe-coding-debugging-00/chat-mode-location.png"
       subtitle: Investigation mode
     - type: text
@@ -875,7 +874,7 @@ course:
           - Quick appearance tweaks
 
           **Bonus:** Simple changes like text and colours often cost fewer or no credits!
-        imageUrl: "/courses/vibe-coding-debugging-00/visual-edit-location.png"
+        imageUrl: "/courses/vibe-coding-debugging-00/visual-edit.webp"
       subtitle: For appearance issues
     - type: text
       title: 'Visual edits: Static vs dynamic'
@@ -1006,7 +1005,7 @@ course:
           static appearance changes, Try to Fix for clear errors (but only three times!).
           The right tool makes debugging much faster.
     title: Lovable's Debugging Toolkit
-    isFree: false
+    isFree: true
     skills:
     - Chat Mode
     - Visual Edits
@@ -1025,7 +1024,7 @@ course:
           You're stuck in a **bug loop** – each fix attempt makes the codebase more tangled, and you feel like you're going backwards.
 
           This challenge teaches you specific strategies to escape, and when to cut your losses and revert to a previous version.
-        imageUrl: "/courses/vibe-coding-debugging-00/bug-loop.gif"
+        imageUrl: "/courses/vibe-coding-debugging-00/loop.gif"
       subtitle: When fixes break other things
     - type: text
       title: The three-attempt rule
@@ -1157,7 +1156,7 @@ course:
           when to start fresh. These escape routes will save you hours of frustration.
           Sometimes going back is the fastest way forward!
     title: Escaping Bug Loops
-    isFree: false
+    isFree: true
     skills:
     - Revert
     - Version Comparison
@@ -1173,7 +1172,7 @@ course:
           You've learned to investigate bugs and find clues. Now let's learn how to communicate those findings effectively so Lovable can actually fix the problem.
 
           The way you write your debugging prompts makes a huge difference in how quickly you get to a solution.
-        imageUrl: "/courses/vibe-coding-debugging-00/clues-to-fixes.gif"
+        imageUrl: "/courses/vibe-coding-debugging-00/disaster.gif"
       subtitle: Communicating for effective fixes
     - type: text
       title: The debugging prompt formula
@@ -1393,7 +1392,7 @@ course:
           constantly. You now have the same toolkit they use. The bugs will come,
           but so will the fixes. Happy building! \U0001F4AA"
     title: How to Guide Lovable to Fix Bugs
-    isFree: false
+    isFree: true
     skills:
     - Debugging Prompts
     - Guardrails
