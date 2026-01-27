@@ -1,6 +1,6 @@
 import { type TypedArray, type StaticFn } from '@dungarees/core/type-util.ts'
 import { mapConst, mapConstKeysToEntries, mapObjectFromKeys, objectFromConstEntries, unPrototypeProperties } from '@dungarees/core/util.ts'
-import { asyncFunctionToObservable, UnsafeService } from '@dungarees/rxjs/util.ts'
+import { asyncFunctionToObservable, type UnsafeService } from '@dungarees/rxjs/util.ts'
 import { glob as libGlob, globSync as libGlobSync } from 'glob'
 import { type Stats } from 'node:fs'
 import { type Observable, of } from 'rxjs'

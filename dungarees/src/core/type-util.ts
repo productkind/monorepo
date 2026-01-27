@@ -1,4 +1,4 @@
-import {Fn} from "hotscript";
+import type {Fn} from "hotscript";
 
 export type StringLiteral<T> = T extends string ? (string extends T ? never : T) : never
 
