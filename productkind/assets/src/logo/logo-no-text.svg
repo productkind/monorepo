@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="600"
+   height="600"
+   viewBox="0 0 600 600.00002"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   sodipodi:docname="logo-no-text.svg"
+   inkscape:export-filename="logo.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="0.39359932"
+     inkscape:cx="177.84584"
+     inkscape:cy="619.91977"
+     inkscape:window-width="1728"
+     inkscape:window-height="1057"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient253"
+       id="linearGradient4-2"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(3.7795276,0,0,3.7795276,438.9826,-1186.0465)"
+       x1="191.478"
+       y1="512.28522"
+       x2="92.345604"
+       y2="340.58286" />
+    <linearGradient
+       id="linearGradient253"
+       inkscape:collect="always"
+       inkscape:label="ez">
+      <stop
+         style="stop-color:#00e8b6;stop-opacity:1;"
+         offset="0"
+         id="stop241" />
+      <stop
+         style="stop-color:#00e4db;stop-opacity:1;"
+         offset="0.09633028"
+         id="stop242" />
+      <stop
+         style="stop-color:#00dffa;stop-opacity:1;"
+         offset="0.2"
+         id="stop243" />
+      <stop
+         style="stop-color:#77d4ff;stop-opacity:1;"
+         offset="0.27247897"
+         id="stop244" />
+      <stop
+         style="stop-color:#9accff;stop-opacity:1;"
+         offset="0.34938708"
+         id="stop245" />
+      <stop
+         style="stop-color:#b1c5ff;stop-opacity:1;"
+         offset="0.42299694"
+         id="stop246" />
+      <stop
+         style="stop-color:#c5bdff;stop-opacity:1;"
+         offset="0.4966068"
+         id="stop247" />
+      <stop
+         style="stop-color:#deb2ff;stop-opacity:1;"
+         offset="0.57254267"
+         id="stop248" />
+      <stop
+         style="stop-color:#ff9ff7;stop-opacity:1;"
+         offset="0.64847851"
+         id="stop249" />
+      <stop
+         style="stop-color:#ffa8d1;stop-opacity:1;"
+         offset="0.72441435"
+         id="stop250" />
+      <stop
+         style="stop-color:#ffacb8;stop-opacity:1;"
+         offset="0.80035025"
+         id="stop251" />
+      <stop
+         style="stop-color:#ffafa2;stop-opacity:1;"
+         offset="0.90137613"
+         id="stop252" />
+      <stop
+         style="stop-color:#ffb288;stop-opacity:1;"
+         offset="0.99770641"
+         id="stop253" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g2"
+       inkscape:label="logo"
+       transform="translate(-672,-126)">
+      <rect
+         style="fill:url(#linearGradient4-2);stroke:#0b0b0d;stroke-width:50;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1-5-6-6-7-3-0-5-1-2-0-0"
+         width="550"
+         height="550"
+         x="697"
+         y="151"
+         inkscape:label="logo-rect" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:224px;line-height:normal;font-family:Montserrat;-inkscape-font-specification:'Montserrat Heavy';text-align:start;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;fill:#0b0b0d;fill-opacity:1;stroke:none;stroke-width:1.00157;stroke-linecap:round;stroke-dasharray:none"
+         x="-1208.1226"
+         y="646.20044"
+         id="text1-3-8-8-3-9-8-16-2-5-7-5-4-1-2"
+         transform="scale(-1,1)"
+         inkscape:label="logo-k"><tspan
+           sodipodi:role="line"
+           id="tspan1-5-4-1-8-6-4-3-2-4-3-6-29-5-1"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:224px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';writing-mode:lr-tb;fill:#0b0b0d;fill-opacity:1;stroke:none;stroke-width:1.00157;stroke-dasharray:none"
+           x="-1208.1226"
+           y="646.20044">k</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:228px;line-height:normal;font-family:Montserrat;-inkscape-font-specification:'Montserrat Heavy';text-align:start;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;fill:#0b0b0d;fill-opacity:1;stroke:none;stroke-width:1.00157;stroke-linecap:round;stroke-dasharray:none"
+         x="735.58398"
+         y="330.48804"
+         id="text1-3-8-8-3-9-40-2-2-2-5-0-5"
+         inkscape:label="logo-p"><tspan
+           sodipodi:role="line"
+           id="tspan1-5-4-1-8-6-1-0-0-2-6-5-0"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:228px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';writing-mode:lr-tb;fill:#0b0b0d;fill-opacity:1;stroke:none;stroke-width:1.00157;stroke-dasharray:none"
+           x="735.58398"
+           y="330.48804">p</tspan></text>
+    </g>
+  </g>
+</svg>

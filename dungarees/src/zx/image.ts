@@ -24,5 +24,10 @@ export const rasterizeSvg = async ({
     inputFilePath
   ]
 
+  // check if file exists first
+  await $`echo "Checking if input file exists: ${inputFilePath}"`.verbose()
+  await $`test -f ${inputFilePath}`
+
+  // generate
   await $`inkscape ${baseArgs}`
 }

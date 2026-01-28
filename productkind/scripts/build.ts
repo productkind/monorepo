@@ -58,14 +58,15 @@ const absoluteBaseDir = path.resolve(__dirname, PRODUCT_BASE_DIR);
 
 const logo: string = path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo.svg')
 
-const LOGO_K_PLATFORMS = ['substack', 'youtube', 'linkedin', 'github'] as const;
+const PRODUCTKIND_LOGO_PLATFORMS = ['youtube', 'linkedin', 'github'] as const;
 
 const asset_to_input_image: Partial<Record<`${PlatformName}-${AssetType}`, string>> = {
-  ...(fromEntriesConst(LOGO_K_PLATFORMS.map((p) => [`${p}-profile` as const, logo]))),
+  ...(fromEntriesConst(PRODUCTKIND_LOGO_PLATFORMS.map((p) => [`${p}-profile` as const, logo]))),
   'instagram-profile': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-kim-and-tim-by-productkind.svg'),
   'substack-wordmark': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-thoughts-by-productkind-linear.svg'),
   'substack-email-banner': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-thoughts-by-productkind-gradient-background.svg'),
   'substack-cover': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-thoughts-by-productkind-gradient-background-square.svg'),
+  'substack-profile': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-lets-build-digital-products.svg'),
   'meetup-cover': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-seminars-by-productkind-gradient.svg'),
   'website-logo': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo.svg'),
   'website-logo-inverted': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-inverted.svg'),
@@ -119,7 +120,7 @@ function filterDefinedByKey<
 const imageAdapter = await getNodeImageAdapter();
 
 const masterIcon: MasterIcon = {
-  icon: await loadAndConvertToSvg(path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-k-crop-to-content.svg')),
+  icon: await loadAndConvertToSvg(path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-no-text.svg')),
 }
 
 const faviconSettings: FaviconSettings = {
@@ -128,8 +129,8 @@ const faviconSettings: FaviconSettings = {
       regularIconTransformation: {
         type: IconTransformationType.Background,
         backgroundColor: "#ffffff",
-        backgroundRadius: 0.4,
-        imageScale: 0.8,
+        backgroundRadius: 0,
+        imageScale: 1,
         brightness: 1,
       },
       darkIconType: "none",
@@ -139,7 +140,7 @@ const faviconSettings: FaviconSettings = {
         type: IconTransformationType.Background,
         backgroundColor: "#ffffff",
         backgroundRadius: 0,
-        imageScale: 0.7,
+        imageScale: 1,
         brightness: 1,
       },
       appTitle: "productkind"
@@ -149,7 +150,7 @@ const faviconSettings: FaviconSettings = {
         type: IconTransformationType.Background,
         backgroundColor: "#ffffff",
         backgroundRadius: 0,
-        imageScale: 0.7,
+        imageScale: 1,
         brightness: 1,
       },
       backgroundColor: "#ffffff",
@@ -161,13 +162,13 @@ const faviconSettings: FaviconSettings = {
   path: "/",
 };
 
-await $`mkdir -p ${path.join(absoluteBaseDir, ASSETS_DIR, OUTPUT_DIR, 'favicon')}`
+await $`mkdir -p ${path.join(absoluteBaseDir, ASSETS_DIR, OUTPUT_DIR, 'favicon-productkind')}`
 
 // Generate files
 const files = await generateFaviconFiles(masterIcon, faviconSettings, imageAdapter);
 // Do something with the files: store them, etc.
 Object.entries(files).forEach(([name, content]) => {
-  const outputFilePath = path.join(absoluteBaseDir, ASSETS_DIR, OUTPUT_DIR, 'favicon', name)
+  const outputFilePath = path.join(absoluteBaseDir, ASSETS_DIR, OUTPUT_DIR, 'favicon-productkind', name)
   console.log(`Writing ${outputFilePath}`)
   fsService.writeFileSync(outputFilePath, content)
 })
