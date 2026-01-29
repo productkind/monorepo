@@ -1099,7 +1099,7 @@ course:
           When you're in a loop, stop asking for fixes. Switch to **Plan mode** and ask for explanation:
 
           ```
-          We've been going back and forth on this bug. Before making any more changes, explain what might be the rootcause of [explain bug]. I want to understand before we proceed.
+          We've been going back and forth on this bug. Before making any more changes, explain what might be the root cause of [explain bug]. I want to understand before we proceed.
           ```
 
           This forces a step back. You might discover:
@@ -1160,7 +1160,7 @@ course:
       title: 'Quiz: Choosing the right escape strategy'
       content:
         options:
-        - Ask Lovable to investigate the rootcause of a broken feature before changing anything
+        - Ask Lovable to investigate the root cause of a broken feature before changing anything
         - Keep telling Lovable to fix the issue until the error disappears
         - Start a new project to rewrite the entire app
         - Ignore broken features and ship anyway
@@ -1201,19 +1201,19 @@ course:
         body: |-
           Structure your debugging prompts like this:
 
-          **1. What you were doing**
+          **1. What you were doing:**
           "I clicked the Vote button on a book suggestion."
 
-          **2. What you expected**
+          **2. What you expected:**
           "The vote count should increase by 1."
 
-          **3. What actually happened**
+          **3. What actually happened:**
           "Nothing changed on screen."
 
-          **4. The clues you found**
+          **4. The clues you found:**
           "The Network tab shows a 401 error on the vote request."
 
-          **5. What you've tried (if anything)**
+          **5. What you've tried (if anything):**
           "I tried logging out and back in, but same result."
 
           This formula works for almost any bug!
@@ -1285,7 +1285,7 @@ course:
           **After adding logs:**
           1. Reproduce the bug
           2. Check the Console for the new messages
-          3. Share what you find with Lovable
+          3. Share what you've found with Lovable
 
           This gives you step-by-step visibility into what's happening.
       subtitle: Getting more visibility
@@ -1293,12 +1293,14 @@ course:
       title: When you're frustrated
       content:
         body: |-
-          If standard approaches aren't working, communicate the context:
+          If standard approaches aren't working, switch to **Plan mode** and communicate the context:
 
-          "I'm frustrated because we've tried three different approaches to fix this voting bug and none have worked. Before making any more changes, please:
+          ```
+          I'm frustrated because we've tried three different approaches to fix this voting bug and none have worked. Before making any more changes, please:
           1. Analyse what we've tried so far
           2. Explain why each approach might have failed
-          3. Suggest a completely different approach"
+          3. Suggest a completely different approach
+          ```
 
           This signals that the situation needs extra care and encourages deeper analysis rather than more quick fixes.
       subtitle: Communicate when stuck
@@ -1308,7 +1310,8 @@ course:
         body: |-
           Here's a complete example putting it all together:
 
-          "## Bug
+          ```markdown
+          ## Bug
 
           On the `/books` page, when I click the Vote button on a book suggestion, nothing happens.
 
@@ -1316,11 +1319,12 @@ course:
 
           **Actual:** No change on screen.
 
-          **Clues:** The Network tab shows the vote request returning 401. The Console has no errors. I'm logged in – I can see my name in the header.
+          **Clues:** The Network tab shows the vote request returning 401. The Console has no errors. I'm logged in, I can see my name in the header.
 
-          **Tried:** Refreshing the page, logging out and back in – same result.
+          **Tried:** Refreshing the page, logging out and back in, but same result.
 
-          Can you investigate what's causing the 401 error? Please don't modify the login system or navigation – just focus on the voting function."
+          Can you investigate what's causing the 401 error? Please don't modify anything else, just focus on the voting function.
+          ```
 
           This gives Lovable everything needed to investigate and fix effectively.
       subtitle: Putting it all together
@@ -1328,11 +1332,11 @@ course:
       title: 'Quiz: Debugging prompts'
       content:
         options:
-        - '"On /books, clicking Vote returns a 401 error. Expected: count increases.
-          Actual: nothing happens. Please don''t touch the auth system."'
+        - '"On /books, clicking the Vote button returns a 401 error. Expected: count increases.
+          Actual: nothing happens. Investigate the root cause. Do not modify other components."'
         - '"Fix the bug please."'
         - '"Something''s broken with voting I think."'
-        - '"The vote thing doesn''t work sometimes."'
+        - '"The app is not working as expected."'
         question: Which debugging prompt would get the fastest, most accurate fix?
         explanation: Specific location + expected behaviour + actual behaviour + clues
           found + guardrails = effective debugging prompt. The more specific information
@@ -1345,10 +1349,10 @@ course:
         options:
         - Only what is broken
         - What you clicked and what error appeared
-        - Expected behaviour, actual behaviour, and clues found
+        - Specific location, expected behaviour, actual behaviour, and clues found
         - A long description of the entire app
         question: Which elements make up an effective debugging prompt?
-        explanation: The most effective prompts clearly state what you did, what you expected, what actually happened, and any clues you found. This structure dramatically improves fix quality.
+        explanation: The most effective prompts clearly state what you did exactly where in your app, what you expected, what actually happened, and any clues you found. This structure dramatically improves fix quality.
         correctAnswer: 2
     - type: quiz-question
       title: 'Quiz: Guardrails'
@@ -1372,12 +1376,11 @@ course:
 
           Write a complete debugging prompt using the formula we learned.
         placeholder: Write your debugging prompt here...
-        systemPrompt: 'You are a debugging mentor evaluating debugging prompts. A
+        systemPrompt: 'You are a debugging mentor evaluating debugging prompts for Lovable – and AI-development tool. A
           good prompt includes: location (/books page), user role (organiser), what
           happens (form submits, success message shows), what''s wrong (book doesn''t
-          appear in list), clues found (data IS in database — so this is a display/fetch
-          issue, not a save issue), and ideally guardrails. Praise complete, well-structured
-          prompts. If missing elements, suggest additions. End with encouragement.'
+          appear in list), clues found (data IS in database), and ideally guardrails. Praise complete, well-structured
+          prompts. If missing elements, suggest additions that a non-technical person understands. End with encouraging statement.'
         checkerPrompt: This is a debugging prompt for a book that saves to the database
           but doesn't appear in the list.
     - type: reflection
@@ -1393,21 +1396,21 @@ course:
         subDescription: Writing this down helps cement the learning. You've built
           real debugging skills that professional developers use every day!
     - type: course-end
-      title: "Congratulations! You're a debugging-capable builder! \U0001F389"
+      title: "Congratulations! You're a Debugging Pro! \U0001F389"
       content:
         nextModule: "**Your next step:** Return to your project with fresh confidence.
           When your next bug appears (and it will!), you'll know exactly what to do.
           Investigate first, find clues, and communicate clearly with Lovable. You've
-          got this!"
+          got this! 🤗"
         description: Look at everything you've learned!
         subDescription: "✓ **The debugging mindset:** Diagnose before fixing, follow
           the three-attempt rule, and recognise different types of bugs.\n\n✓ **Prevention
           habits:** Small prompts, immediate testing, and bookmarking stable versions.\n\n✓
-          **Investigation techniques:** Browser Console, Network tab, Cloud logs,
-          function invocations, and database checking – the same tools developers
+          **Investigation techniques:** Browser Console, Network tab, Lovable Cloud logs,
+          and database checking – the same tools developers
           use.\n\n✓ **Lovable's toolkit:** Plan mode for investigation, Visual edits
           for appearance, and Try to Fix for clear errors.\n\n✓ **Escape strategies:**
-          Revert, compare versions, isolate problems, and know when to start fresh.\n\n✓
+          Revert, compare versions, explain before fixing, isolate problems, and know when to start fresh.\n\n✓
           **Effective communication:** The debugging prompt formula, guardrails, specificity,
           and asking for logs.\n\n**Remember:** Every professional developer debugs
           constantly. You now have the same toolkit they use. The bugs will come,
