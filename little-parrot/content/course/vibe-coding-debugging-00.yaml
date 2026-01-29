@@ -1038,7 +1038,7 @@ course:
 
           You're stuck in a **bug loop** – each fix attempt makes the codebase more tangled, and you feel like you're going backwards.
 
-          This challenge teaches you specific strategies to escape, and when to cut your losses and revert to a previous version.
+          This challenge teaches you specific strategies to escape this frustrating loop, and when to cut your losses and revert to a previous version.
         imageUrl: "/courses/vibe-coding-debugging-00/loop.gif"
       subtitle: When fixes break other things
     - type: text
@@ -1047,13 +1047,14 @@ course:
         body: |-
           Here's a crucial lesson from experienced Lovable users: **if your fix attempts aren't working after three tries, stop and change your approach**.
 
-          Each failed fix can make things worse by introducing new changes on top of broken code. You end up in a "bug loop" where fixes create new problems.
+          Each failed fix can make things worse by introducing new changes on top of broken code. You end up in a **bug loop** where fixes create new problems.
 
           After three attempts:
-          - Stop trying the same approach
-          - Investigate more deeply
-          - Try a completely different strategy
-          - Consider reverting to a working version
+          - Revert to a previous working version
+          - Switch to Plan mode to compare versions
+          - Ask Lovable to explain the root cause before making more changes
+          - Isolate the problem to one feature at a time
+          - Rewrite the feature from scratch if it's too tangled
 
           We'll learn all these strategies in this course.
       subtitle: When to stop and rethink
@@ -1064,26 +1065,30 @@ course:
           Every response in your chat history has a **revert option** underneath it. This is your emergency brake.
 
           **How it works:**
-          Find the last response where things were working. Click the revert option. Your project goes back to that state.
+          Find the last response where things were working. Click the revert option. Your project goes back to that state. Any changes made after that point are undone.
 
           **What you don't lose:**
-          All the messages and changes after that point remain visible in your history. You can read through them to understand what went wrong, or selectively re-apply good changes.
+          All the messages and changes after that point remain visible in your history. You can read through them to understand what went wrong.
 
           **When to use it:**
-          When you've made 3+ fix attempts and things are getting worse, not better.
+          When you've made 3 fix attempts and things are getting worse, not better.
         imageUrl: "/courses/vibe-coding-debugging-00/revert-button.png"
       subtitle: Your emergency brake
     - type: text
       title: 'Strategy 2: Compare versions'
       content:
         body: |-
-          If you're not sure what change caused the problem, ask Lovable to compare:
+          If you're not sure what change caused the problem, switch to **Plan mode** and ask Lovable to compare:
 
-          "Compare the current version to the last bookmarked version. What changed? What might be breaking?"
+          ```
+          Compare the current version to the last bookmarked version. What changed? What might cause [describe the bug]?
+          ```
 
           **Or:**
 
-          "Compare the code from 3 changes ago to now. List all the differences and which might cause [describe the bug]."
+          ```
+          Compare the code from 3 changes ago to now. List all the differences and which might cause [describe the bug].
+          ```
 
           This surfaces exactly what changed, often revealing the culprit immediately. This is why bookmarking stable versions is so valuable!
       subtitle: Find what changed
@@ -1091,17 +1096,16 @@ course:
       title: 'Strategy 3: Explain before fixing'
       content:
         body: |-
-          When you're in a loop, stop asking for fixes. Switch to Plan mode and ask for explanation:
+          When you're in a loop, stop asking for fixes. Switch to **Plan mode** and ask for explanation:
 
-          "We've been going back and forth on this bug. Before making any more changes, explain what's broken and what you would change. I want to understand before we proceed."
+          ```
+          We've been going back and forth on this bug. Before making any more changes, explain what might be the rootcause of [explain bug]. I want to understand before we proceed.
+          ```
 
           This forces a step back. You might discover:
           - The approach itself is flawed
           - There's a simpler solution
           - Multiple bugs are tangled together
-
-          **Power prompt for persistent issues:**
-          "The same problem keeps happening. Do NOT make any code changes yet. Investigate thoroughly to find the exact root cause."
       subtitle: Understanding over action
     - type: text
       title: 'Strategy 4: Isolate the problem'
@@ -1109,25 +1113,27 @@ course:
         body: |-
           Sometimes bugs are tangled together. Untangle them by isolating:
 
-          "Let's focus only on the Vote button for now. Ignore the vote count display, the leaderboard, and the notifications. Just get the Vote button to successfully save a vote."
+          ```
+          Let's focus only on the Vote button for now. Ignore the vote count display, the leaderboard, and the notifications. Just get the Vote button to successfully save a vote.
+          ```
 
           Once that works, add the next piece. This prevents fixes for one thing from breaking another.
 
           **Ask yourself:**
           - What's the simplest version of this feature that would work?
-          - Can we disable everything else and test just this one thing?
+          - How can we disregard everything else and test just this one thing?
       subtitle: One thing at a time
     - type: text
       title: 'Strategy 5: Rewrite the feature'
       content:
         body: |-
           If a feature is deeply tangled, sometimes the fastest way forward is to rewrite it from scratch.
-          You can revert not just before the bugloop started, but all the way back to before the feature existed.
+          You can **revert** not just before the bugloop started, but all the way back **to before the feature existed**.
 
           Then, prompt Lovable to build the feature again, but with a different approach or simpler design.
 
-          Because building features with AI builders got so fast and cheap, rewriting can be quicker than untangling.
-          It is literally less credits to start fresh than to spend hours debugging, not just compared to a developer.
+          Because building features with AI builders got so fast and cheap, **rewriting can be quicker than untangling**.
+          It is literally less credits to start fresh than to spend hours debugging.
     - type: quiz-question
       title: 'Quiz: The three-attempt rule'
       content:
@@ -1144,25 +1150,25 @@ course:
       content:
         options:
         - It deletes all later messages permanently
-        - It rewinds the project to an earlier working state
+        - It rewinds the project to an earlier state
         - It fixes bugs automatically
         - It bookmarks the current version
         question: What does the revert button do?
-        explanation: Reverting restores your project to a previous working state while keeping the full history visible. This lets you undo bad changes without losing context.
+        explanation: Reverting restores your project to a previous state while keeping the full history visible. This lets you undo bad changes without losing context.
         correctAnswer: 1
     - type: quiz-question
       title: 'Quiz: Choosing the right escape strategy'
       content:
         options:
-        - Ask Lovable to explain what is broken before changing anything
-        - Keep fixing until the error disappears
-        - Immediately rewrite the entire app
-        - Ignore related features and ship anyway
+        - Ask Lovable to investigate the rootcause of a broken feature before changing anything
+        - Keep telling Lovable to fix the issue until the error disappears
+        - Start a new project to rewrite the entire app
+        - Ignore broken features and ship anyway
         question: You're stuck in a fix-break loop and no longer understand what's wrong. Which strategy should you try first?
         explanation: Asking for explanation before fixing forces a step back. It helps uncover flawed assumptions, tangled bugs, or simpler solutions before more changes are made.
         correctAnswer: 0
     - type: challenge-end
-      title: "You can escape bug loops! \U0001F513"
+      title: "You can escape bug loops! 🪽"
       content:
         nextModule: "**Next:** Finally, let's master the art of communicating with
           Lovable to get bugs fixed effectively."
