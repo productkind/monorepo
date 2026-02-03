@@ -1,0 +1,779 @@
+course:
+  id: 04f97ee5-c02c-422d-b020-0c73e0255c5a
+  note: '*Note on timing:* The estimated times for each challenge include thinking and doing time. They''re designed so you can immediately apply the techniques to your own product idea, not just skim the content.'
+  cover: /courses/vibe-coding-product-management-00/cover.gif
+  title: 'Build a Valuable Product: How to Break Down Your Idea for Vibe Coding'
+  challenges:
+    - steps:
+        - type: comic
+          content:
+            imageUrl: /comics/vibe-coding-product-management-00/panel-00.png
+        - type: comic
+          content:
+            imageUrl: /comics/vibe-coding-product-management-00/panel-01.png
+        - type: comic
+          content:
+            imageUrl: /comics/vibe-coding-product-management-00/panel-02.png
+        - type: video
+          title: Build a Valuable Product
+          content:
+            youtubeId: w0Nwtxyi5zg
+            videoUrl: /videos/lesson-vibe-coding-product-management-00-video-00.mp4
+        - type: text
+          title: Start with the problem
+          content:
+            body: |+
+              Before building anything, pause and ask: **What problem will this solve for the user of my digital product?** Great products solve a problem, fulfil a need or desire for your user. If you skip this step, you might create something nobody truly needs or wants.
+
+          subtitle: Got an idea for a great app?
+        - type: text
+          title: What are you solving for your users?
+          content:
+            body: |-
+              **I am** [your user]...
+
+              **I am trying to** [desired outcome]...
+
+              **But** [barrier / problem]...
+
+              **Because** [root cause]...
+
+              **Which makes me feel** [emotions].
+          subtitle: 'You can use this problem statement template to define what you''re solving for your user:'
+        - type: text
+          title: The Book Club Organiser Example
+          content:
+            body: |-
+              **I am** a book club organiser
+
+              **I am trying to** efficiently select and vote on monthly book choices and coordinate club activities,
+
+              **But** our coordination is a mess,
+
+              **Because** messages are scattered across WhatsApp and our group chat buries the important stuff in off-topic messages
+
+              **Which makes me feel** frustrated and exhausted.
+          subtitle: 'Let''s see how the problem statement works in practice for our example app, the **Book Club Organiser**:'
+        - type: free-text-exercise
+          title: Write your problem statement
+          content:
+            description: |-
+              Now, it's your turn. Draft your problem statement using the template:
+
+              **I am** [your user]...
+
+              **I am trying to** [desired outcome]...
+
+              **But** [barrier / problem]...
+
+              **Because** [root cause]...
+
+              **Which makes me feel** [emotions].
+
+              Don't worry about getting it perfect on the first try, you can refine it as you learn more.
+            placeholder: |-
+              I am [your user]...
+
+              I am trying to [desired outcome]...
+
+              But [barrier / problem]...
+
+              Because [root cause]...
+
+              Which makes me feel [emotions].
+            systemPrompt: 'You are a product management mentor. Help the user refine their problem statement with the aim to clarify what opportunity we solve for the user before getting into the solution space. They were given this problem statement template to fill: "I am [user] trying to [outcome], but [barrier] because [root cause]. This makes me feel [emotion]." End with an encouraging note (e.g. ''Defining the problem clearly is a great first step!'').'
+            checkerPrompt: 'Check if this problem statement includes a specific target user, a clear barrier/problem, and a clear outcome for the user to achieve. If it only lists features, explain the difference between an output (something we produce, e.g. a feature) and an outcome (the value for the user). This is the problem statement:'
+        - type: challenge-end
+          title: "Great start! You've defined the problem. \U0001F389"
+          content:
+            nextModule: '**Next:** Now that you''ve nailed the problem, let''s figure out **who** exactly has this problem.'
+            description: By focusing on a specific problem, you've given your idea a clear purpose.
+            subDescription: Every successful product begins with understanding a real user need, pain point or desire. Whenever you feel lost in features, come back to this problem statement. It's your north star!
+      title: Craft a Problem Statement
+      isFree: true
+      skills:
+        - Problem Definition
+        - User Needs
+        - Product Thinking
+      description: Identify the core user need your idea addresses.
+      completionTime: 25:00
+    - steps:
+        - type: text
+          title: Who are you building this product for?
+          content:
+            body: |-
+              To design a great solution, you need a clear picture of the **target user**. Think of a specific person or group who desperately needs your solution.
+
+              The more precisely you define your user, the easier it is to design something they'll love.
+          subtitle: It can't be for everyone.
+        - type: text
+          title: What's a user persona?
+          content:
+            body: In product design, we often create a **persona**, a fictional yet realistic character representing our typical user. This persona is an archetype based on real user research or assumptions; it captures the user's key characteristics, frustrations, and goals.
+          subtitle: ""
+        - type: text
+          title: Why create a persona?
+          content:
+            body: |-
+              A persona helps you keep the user in mind throughout development. Whenever you're making a decision, you can ask: *'Would this help [Persona's Name] achieve their goals? What would [Persona] think of this feature?'*
+
+              It's a way to build empathy and ensure you're solving the right problems for the right people
+          subtitle: ""
+        - type: text
+          title: User persona for the Book Club Organiser
+          content:
+            body: |-
+              Here is the persona for our Book Club Organiser:
+
+              *Note: We wrote their frustrations from their perspective. This helps to empathise with them better.*
+
+              **Persona:** Sarah, the overwhelmed book club organiser
+
+              **About:**
+              * Started a book club with friends,
+              * Loves reading but has limited free time,
+              * Comfortable with basic apps,
+              * Not technical but willing to try simple tools.
+
+              **Frustrations:**
+              * "I can't find the book suggestion in the chat history"
+              * "We spend 30 minutes each meeting just figuring out what to read next"
+              * "Half the group doesn't vote because they miss the message"
+              * "I feel like a nag constantly reminding people about deadlines"
+
+              **Goals:**
+              * Spend maximum 10 minutes per month on book club admin.
+              * Get everyone to actually participate in choosing books.
+              * Never lose a good book suggestion again.
+              * Keep the club fun, not let it become a chore.
+          subtitle: Meet Sarah
+        - type: free-text-exercise
+          title: Let's create your user persona
+          content:
+            description: "Describe the primary user of your product. Who are they? Focus on their main characteristics, frustrations, and goals. You can always improve on this as you learn more about your users. \n\nUse this template:\n\n**Persona:** Give them a name and a descriptive title, so they feel like a real person.\n\n**About:** Basic background relevant to your product. What is their situation or context?\n\n**Frustrations:** What pain points or problems do they encounter (especially related to the problem you identified)?\n\n**Goals:** What do they ultimately want to achieve? What does success or happiness look like for them?"
+            placeholder: |-
+              Persona:
+
+              About:
+
+              Frustrations:
+
+              Goals:
+            systemPrompt: |-
+              You are a product management mentor helping a learner describe their target user more clearly for their product idea. They were asked to follow this template: brief Persona description, About, Frustrations, Goals. Provide friendly, concise feedback (2-3 sentences) in British English.
+              - If the description is very broad (e.g. 'everyone' or 'anyone who...'), gently encourage them to be more specific about a particular group or role.
+              - If it's somewhat specific but could be clearer (maybe it names a broad category like 'students' without details), praise the start and suggest one detail to narrow it down (like a context or a specific need).
+              - If the description clearly identifies a specific user and their context, congratulate them on a well-defined target user.
+              End with an encouraging note (e.g. 'Knowing your user helps you build better!').
+            checkerPrompt: This is the description of the primary user of my product. Who they are, their main characteristics, frustrations, and goals.
+        - type: challenge-end
+          title: "Great job! You've identified your target user! \U0001F3AF"
+          content:
+            nextModule: '**Next:** With a clear user and problem in mind, you''ll visualise their journey from struggle to success with storyboarding.'
+            description: You now know exactly who you're building for.
+            subDescription: Keeping a specific user in mind (like Sarah) will guide your choices. It's like designing for one person – making it far more likely your product will really resonate.
+      title: Define Your Target User
+      isFree: false
+      skills:
+        - Target Audience
+        - User Persona
+        - Product Strategy
+      description: Create a user persona who'll help guide all your decisions.
+      completionTime: 25:00
+    - steps:
+        - type: text
+          title: 'Storyboard: From struggle to solution'
+          content:
+            body: 'Now that you know **who** you''re designing for and **what problem** you need to solve, let''s visualize how your solution will help your user. A great way to do this is by creating a **storyboard**. This is a series of panels or sketches that illustrate the user''s journey: from experiencing the problem, to using your solution, to reaching a happy outcome.'
+          subtitle: A storyboard communicates your user's story through images.
+        - type: text
+          title: Why storyboard?
+          content:
+            body: Because 'seeing' the user's experience step by step helps you identify what exactly your solution needs to do. It highlights critical moments that your product must address. Plus, it's a fun, creative exercise to ensure you truly empathise with your user's experience.
+          subtitle: A storyboard communicates your user's story through images.
+        - type: text
+          title: Steps of the storyboard
+          content:
+            body: |2-
+
+              1. Draw what the user struggles with.
+              2. Visualise what the user can do and how they feel once the struggle is resolved.
+              3. Sketch all the moments that lead the user from the initial struggling moment to their happy ending. Show how your solution helps them get there.
+          subtitle: 'You can follow these three steps to create your storyboard:'
+        - type: text
+          title: Let's see the 1st step on the Book Club Organiser example
+          content:
+            body: Sarah is stressed at the kitchen table, scrolling through endless WhatsApp messages looking for a book title. She's overwhelmed trying to track suggestions.
+            imageUrl: /courses/vibe-coding-product-management-00/1-the-struggle.png
+          subtitle: 1. Draw what the user struggles with.
+        - type: free-text-exercise
+          title: 'Now it''s your turn: Describe your target user''s struggle'
+          content:
+            description: Now we invite you to get a piece of paper and sketch out what your user struggles with. Even if you're not an artist, simple sketches or stick figures are fine. The point is to capture the idea. Then write it down in a few sentences below.
+            placeholder: Describe the moment your user is facing the problem your product will solve. What are they doing, and how do they feel?
+            systemPrompt: |-
+              You are a product management mentor helping a learner build a storyboard. They were tasked with describing their target user's struggle. Provide friendly, concise feedback (2-3 sentences) in British English.
+              - If the description is very broad, gently encourage them to be more specific about what their user is struggling with.
+              - If it's somewhat specific but could be clearer, praise the start and suggest one detail to make it more specific.
+              - If the description clearly identifies a specific user and their context, congratulate them on defining clearly what their user struggles with.
+              End with an encouraging note (e.g. 'Describing your users' stuggle clearly, helps you build a better solution for them!').
+            checkerPrompt: This is the description of my target user's struggle with the problem my product will solve.
+        - type: text
+          title: Let's see the 2nd step on the Book Club Organiser example
+          content:
+            body: 'Sarah is relaxing on the sofa with a book and wine. This panel shows the outcome when the problem is solved: Sarah enjoys reading, coordination is easy.'
+            imageUrl: /courses/vibe-coding-product-management-00/2-the-happy-ending.png
+          subtitle: 2. Visualise what the user can do and how they feel once the struggle is resolved.
+        - type: free-text-exercise
+          title: 'Now it''s your turn: Visualise what your user can do and how they feel once the struggle is resolved.'
+          content:
+            description: On the piece of paper, draw what your user can do and how they feel once the struggle is resolved. Then write it down in a few sentences below.
+            placeholder: Describe the happy ending for your user. What can they do, and how do they feel?
+            systemPrompt: |-
+              You are a product management mentor helping a learner build a storyboard. They were tasked with describing the second step of the storyboard: their target user's happy ending. Provide friendly, concise feedback (2-3 sentences) in British English.
+              - If the description is very broad, gently encourage them to be more specific about what their user's happy ending looks like.
+              - If it's somewhat specific but could be clearer, praise the start and suggest one detail to make it more specific.
+              - If the description clearly identifies a specific user and their context, congratulate them on defining clearly how their user's happy ending looks like.
+              End with an encouraging note (e.g. 'Visualising what your user can do and how they feel once their struggle is resolved, helps you come up with better solutions for them!').
+            checkerPrompt: This is the description of my target user's happy ending, once their struggle is resolved.
+        - type: text
+          title: Let's see the 3rd step on the Book Club Organiser example
+          content:
+            body: Sarah finds a new app and creates her book club easily -> Sarah adds book suggestions -> Friends add book suggestions -> Sarah & friends vote -> App announces the next book to read.
+            imageUrl: /courses/vibe-coding-product-management-00/3-6-discovery-to-decision.png
+          subtitle: 3. Sketch all the moments that lead the user from the initial struggling moment to their happy ending. Show how your solution helps them get there.
+        - type: free-text-exercise
+          title: 'Now it''s your turn: Sketch all the moments inbetween'
+          content:
+            description: On the piece of paper, sketch all the moments that lead the user from the initial struggling moment to their happy ending. Show how your solution helps them get there. Then write it down in a few sentences below.
+            placeholder: Describe the key moments that lead the user from the initial struggling moment to their happy ending and how your solution helps them get there.
+            systemPrompt: |-
+              You are a product management mentor helping a learner build a storyboard. They were tasked with describing the key moments that lead their user from the initial struggling moment to their happy ending and how their solution helps them get there. Provide friendly, concise feedback (2-3 sentences) in British English.
+              - If the description is very broad, gently encourage them to be more specific about what their user's steps.
+              - If it's somewhat specific but could be clearer, praise the start and suggest one detail to make it more specific.
+              - If the description clearly identifies the steps, congratulate them on defining clearly the key moments that lead their user from the initial struggling moment to their happy ending and how their solution helps them get there.
+              End with an encouraging note (e.g. 'Creating these steps of a storyboard helps you envision how your product will help your user!').
+            checkerPrompt: This is the description of the key moments that lead my user from the initial struggling moment to their happy ending and how my solution helps them get there.
+        - type: challenge-end
+          title: "Great story! \U0001F4D6"
+          content:
+            nextModule: '**Next:** Time to get granular. You''ll learn about **user story mapping**, a simple way to turn your idea into a plan of features to build.'
+            description: You've envisioned how your product will help your user solve their problem.
+            subDescription: This storyboard is your compass. Whenever you're in doubt, remember how your solution makes your user's life better. Now, let's break this story into actual steps and features.
+      title: 'Storyboard: From Struggle to Solution'
+      isFree: false
+      skills:
+        - Storyboard
+        - Solution Ideation
+      description: Visualise how your user goes from a problem to a solution using your product.
+      completionTime: 35:00
+    - steps:
+        - type: text
+          title: What is a user story?
+          content:
+            body: |-
+              With a clear story in mind, it's time to break down your solution into pieces that you can build. We'll do this with user story mapping.
+
+              **User stories** were first introduced in the late 1990s by a developer who encouraged teams to move away from handing over lengthy requirements documents about what to build. Reading a document often leads to individual interpretations, and makes it harder to know if everyone is aligned.
+            imageUrl: /courses/vibe-coding-product-management-00/cake-wrecks.jpeg
+          subtitle: User stories help teams build shared understanding.
+        - type: text
+          title: The idea behind user stories
+          content:
+            body: By talking about what a user wants to do in the product, the team can build a shared understanding of the problem and make better decisions about what to build. This helps us focus on delivering something truly valuable for the people who will use our product.
+          subtitle: The idea behind user stories is **not to create more written documentation**, but **to elicit conversations**.
+        - type: text
+          title: What is user story mapping?
+          content:
+            body: |-
+              The technique of **user story mapping** helps you break down an idea into small pieces you can build.
+
+              Once you mapped out what your user will do in your product, you can understand better your whole product experience, and see a granular map of what your product needs to do.
+
+              This makes it easier to decide what to build first, stay focused, and avoid feeling overwhelmed. It also keeps attention on the user and the parts of the product that are the most valuable for them.
+            imageUrl: /courses/vibe-coding-product-management-00/slicing-0.png
+          subtitle: A simple way to break ideas into buildable steps.
+        - type: text
+          title: The structure of a user story map
+          content:
+            body: A user story map is usually organised in three layers. At the top, you place the main activities the user performs to accomplish their goals.
+            imageUrl: /courses/vibe-coding-product-management-00/slicing-1.png
+          subtitle: 1) High-level user activities.
+        - type: text
+          title: The structure of a user story map
+          content:
+            body: Under each activity, you lay out the steps in a narrative flow your user will take in your product. These steps show how someone moves through your product from start to finish.
+            imageUrl: /courses/vibe-coding-product-management-00/slicing-2.png
+          subtitle: 2) Steps the user takes to accomplish each activity.
+        - type: text
+          title: The structure of a user story map
+          content:
+            body: Finally, you break each step into details. These are the small pieces of work you can actually build.
+            imageUrl: /courses/vibe-coding-product-management-00/slicing-3.png
+          subtitle: 3) Details of what the user and product do at each step.
+        - type: text
+          title: The structure of a user story map
+          content:
+            body: This structure helps you see the whole experience, spot gaps, and choose what to build first while keeping the user's experience front and centre. Map the whole process as it crosses through a number of types of users (if you have more than one type). Later, we will prioritise what to build first.
+            imageUrl: /courses/vibe-coding-product-management-00/slicing-0.png
+          subtitle: Seeing your user's journey through your product at a glance.
+        - type: text
+          title: Let's see user story mapping in action
+          content:
+            body: |-
+              Let's peek at the Book Club Organiser story map at a high level. The main user activities might be:
+              * Access the Book Club Organiser
+              * Set up book club
+              * Choose next book
+              * Read together
+              * Discuss book
+               * Manage book club history
+            imageUrl: /courses/vibe-coding-product-management-00/book-club-organiser-activities.png
+          subtitle: The Book Club Organiser example
+        - type: free-text-exercise
+          title: 'Now it''s your turn: Map out the big picture'
+          content:
+            description: |-
+              What are the main activities your user will perform in your product to achieve their goals?
+
+              Write them down on separate sticky notes in the order they would happen, so you can move them around as you identify more activities.
+
+              Then add the activities below.
+            placeholder: |-
+              e.g.,
+
+              - Access the Book Club Organiser
+              - Set up book club
+              - Choose next book
+              - Read together
+            systemPrompt: |-
+              You are a product management mentor helping a learner build a user story map. They were tasked with mapping out the main activities the user wants to perform in their product to achieve their goals. Provide friendly, concise feedback (2-3 sentences) in British English.
+              - If the activities are too granular, gently encourage them to focus on the main activities their user wants to perform. Activities organise tasks done by similar people at similar times to reach a goal (e.g. for an email software, activities might include: Going through my inbox, Configuring my email client, Organizing messages into folders).
+              - If the activites are not user-focused, encourage them to phrase each activity as the user does them.
+              - If the description clearly identifies the user activities, congratulate them on defining them clearly.
+              End with an encouraging note (e.g. 'Great job outlining the main activities! This will help you figure out what to build first.').
+            checkerPrompt: These are the main activities on my user story map.
+        - type: text
+          title: Mapping out the steps your user takes
+          content:
+            body: |-
+              In case of the Book Club Organiser, the steps under the 'Access the Book Club Organiser' activity might be:
+              - Discover service
+              - Create account
+              - Sign in
+
+              Under 'Set up book club', the steps might be:
+              - Create club profile
+              - Invite members
+              - Establish Rule
+
+              Under 'Choose next book', the steps could be:
+              - Suggest books
+              - Browse suggestions
+              - Discuss options
+              - Vote on books
+              - Announce winner
+
+              See how each activity breaks down into specific steps the user takes? Now, it's your turn to map out the steps for your product.
+            imageUrl: /courses/vibe-coding-product-management-00/book-club-organiser-steps.png
+          subtitle: The Book Club Organiser example
+        - type: free-text-exercise
+          title: 'Now it''s your turn: Map out the steps'
+          content:
+            description: |-
+              What are the steps your user will take in your product to accomplish each activity?
+
+              Write each step down on separate sticky notes in the order they would happen.
+
+              Then add them below.
+            placeholder: |-
+              e.g., 'Access the Book Club Organiser'
+              - Discover service
+              - Create account
+              - Sign in
+
+              'Set up book club':
+              - Create club profile
+              - Invite members
+              - Establish Rule
+            systemPrompt: |-
+              You are a product management mentor helping a learner build a user story map. They were tasked with mapping out the main steps the user takes in the product. Provide friendly, concise feedback (2-3 sentences) in British English.
+              - User steps are short verb phrases that are the basic building block of a map. If the learner wrote the steps in a different way, encourage them to use verb phrases. You can tell them the example: 'If I ask you what you did earlier today when using email, you’ll likely respond with tasks like: Read an email message, Respond to a message, Mark a message as spam.'
+              - If the steps are too granular, gently encourage them to focus on the main steps, and add the details under them (we'll tackle that in the next step of the micro-course).
+              - If the steps are not user-focused, encourage them to phrase each step as the user does them.
+              - If the description clearly identifies the user steps, congratulate them on defining them clearly.
+              End with an encouraging note (e.g. 'Great job outlining the main steps you user will take in your product!').
+            checkerPrompt: These are the steps on my user story map.
+        - type: text
+          title: Mapping out the details of each step
+          content:
+            body: |-
+              In case of the Book Club Organiser, the details under the 'Create account' step might be:
+              - Enter email and password
+              - Use Google login
+              - Verify email address
+              - Set username/display name
+              - Add profile photo
+
+              Under 'Create club profile', the details might be:
+              - Enter club name
+              - Add club description
+              - Set reading pace
+              - Choose club type
+
+              Now, it's your turn to map out the details for each step.
+            imageUrl: /courses/vibe-coding-product-management-00/book-club-organiser-details.png
+          subtitle: The Book Club Organiser example
+        - type: free-text-exercise
+          title: 'Now it''s your turn: Map out the details'
+          content:
+            description: |-
+              What are the details under each step that needs to be built? Go through all the steps and break them down into specific details. It's okay if your list gets a bit long, you'll prioritise them soon.
+
+              For now, capture everything the user or app does in each step. Use separate sticky notes for each detail.
+
+              Then add the details below.
+            placeholder: |-
+              e.g., 'Create account':
+              - Enter email and password
+              - Use Google login
+              - Verify email address
+              - Set username/display name
+              - Add profile photo
+
+              'Create club profile':
+              - Enter club name
+              - Add club description
+              - Set reading pace
+              - Choose club type
+            systemPrompt: |-
+              You are a product management mentor helping a learner build a user story map. They were tasked with mapping out the details for the main steps. Details are the small pieces of work the learner can actually build. Provide friendly, concise feedback (2-3 sentences) in British English.
+              - If the details don't start with an action word (e.g. set, enter, add), encourage them to phrase each detail as the user does them.
+              - If the description clearly identifies the details, congratulate them on defining them clearly.
+              End with an encouraging note (e.g. 'Wonderful, now you have mapped out your idea into buildable pieces!').
+            checkerPrompt: These are the details on my user story map.
+        - type: challenge-end
+          title: "Amazing work, you've got your user story map! \U0001F5FA️"
+          content:
+            nextModule: '**Next:** We''ll decide which are the most essential features to build first and define your MVP (Minimum Viable Product).'
+            description: You've mapped out every part of your solution.
+            subDescription: 'Now you can see your entire product at a glance. It''s normal if it feels like a lot! The good news: you don''t need to build all of it at once.'
+      title: Break Down Your Idea Into Buildable Steps
+      isFree: false
+      skills:
+        - User Story Mapping
+        - Planning
+        - User Story
+      description: 'Map out your solution: what the user does in your app.'
+      completionTime: 50:00
+    - steps:
+        - type: text
+          title: Time to prioritise
+          content:
+            body: You likely have more steps in your story map than you can (or should) build immediately. Successful products often start small, with just the core functionality that delivers value, this is your MVP (Minimum Viable Product). It's the first real version you'll build and test. Everything else can come later.
+          subtitle: Carve out the smallest feature set that delivers value.
+        - type: text
+          title: What's an MVP?
+          content:
+            body: It means the simplest version of the product that is **usable** and **valuable** to users. It's not a crappy, half-baked product or just a prototype you slap together. It should be a complete loop that solves the primary problem, but with no extra bells and whistles. Think of it as the 'smallest possible piece' of your idea that still delivers the main value. By keeping it minimal, you can build and launch faster, then learn from real users and iterate.
+          subtitle: It stands for Minimum Viable Product.
+        - type: text
+          title: Why build only an MVP first?
+          content:
+            body: |-
+              - **Speed and focus:** With fewer features, you can develop and launch quickly. This means you get your solution into users' hands sooner.
+              - **User feedback:** An MVP allows you to test your assumptions. You can find out early if you're solving the right problem. If not, you can pivot or adjust with less wasted work.
+              - **Resource savings:** You avoid spending time and money on features that users don't actually need or want. Build the core that matters most, and save the 'nice-to-haves' for later.
+              - **Clarity:** For you and your team, an MVP forces clarity on what's truly essential. It's easy to get caught up thinking everything is important. But when you constrain scope, you make tough choices about what will have the biggest impact on the user's problem.
+          subtitle: 'There are many benefits:'
+        - type: quiz-question
+          title: 'Quiz: The Minimum Viable Product'
+          content:
+            options:
+              - An MVP is a prototype with every feature, just not polished.
+              - An MVP is the smallest version of the product that still delivers core value to the user.
+              - An MVP should be of low quality since it's only a test version.
+              - An MVP should have fancy features to dazzle the users.
+            question: Which statement about an MVP is true?
+            explanation: An MVP focuses on delivering the core value with minimal features, allowing for quick development and user feedback. So we learn from real users sooner and can course correct if needed.
+            correctAnswer: 1
+        - type: text
+          title: How to carve out your MVP
+          content:
+            body: |-
+              You can decide what to build first by **revisiting your problem statement**. What did you want to solve for your users?
+
+              Then look at your **user story map** and pick out the must-have functionalities that will help solve that core problem.
+
+              Often, the MVP is a subset of your story map, maybe the first one or two activities, or even just a single core workflow, while other nice features are left out initially. It could happen that some steps within an activity, or certain details are skipped or simplified to keep things minimal.
+          subtitle: Minimise what you build and maximise impact.
+        - type: text
+          title: The goal is to learn fast
+          content:
+            body: |-
+              Remember, it's tempting to add more, but **keep it lean**. A smaller scope means you can build and test sooner. You can always expand once you've validated the core idea!
+
+               You can draw horizontal lines on your user story map to visualise the MVP scope versus future releases. The MVP is the **top section**, everything below is **for later**.
+            imageUrl: /courses/vibe-coding-product-management-00/slicing-0.png
+          subtitle: Build less faster.
+        - type: text
+          title: The Book Club Organiser
+          content:
+            body: |-
+              From the story map we created, what's the smallest version of the product that still makes book club organising easier? Probably:
+
+              'Create club':
+              - Enter club name
+
+              'Invite members':
+              - Generate shareable link
+
+              'Suggest books':
+              - Add title and author
+
+              'Browse suggestions':
+              - View as list
+
+              'Vote on books':
+              - Cast vote
+              - View vote counts
+
+              These pieces alone would already **help Sarah with her biggest pain**: scattered suggestions and chaotic voting.
+            imageUrl: /courses/vibe-coding-product-management-00/book-club-organiser-mvp.png
+          subtitle: How does the MVP look for our example app?
+        - type: text
+          title: The Book Club Organiser
+          content:
+            body: |-
+              Notice how **many steps are completely excluded** from the MVP because none of their details are essential at this stage. And in some steps, **only one or two details are included**, which means only that small slice of the step appears in the MVP.
+
+              A step only makes it into the MVP if you choose to include any of its details. If none of its details are included, then the entire step is left out for now. The same goes for an activity.
+
+              So we are only addressing two activities in the MVP, because those are the most important for Sarah.
+
+              We can exclude features like user profiles, notifications, discussion forums, etc., in the first version. Those aren't strictly needed to solve the immediate problem (though they might be nice later).
+            imageUrl: /courses/vibe-coding-product-management-00/book-club-organiser-mvp.png
+          subtitle: How does the MVP look for our example app?
+        - type: free-text-exercise
+          title: 'Your turn: define your MVP'
+          content:
+            description: |-
+              Go through your user story map and chose the steps and details that will be in your MVP.
+
+              Ask yourself, 'Do I really need this feature to test my core value proposition?' Write your MVP below as bullet points or a short paragraph.
+            placeholder: |-
+              e.g., 'Create club':
+              - Enter club name
+
+              'Invite members':
+              - Generate shareable link
+
+              'Suggest books':
+              - Add title and author
+
+              'Browse suggestions':
+              - View as list
+
+              'Vote on books':
+              - Cast vote
+              - View vote counts
+            systemPrompt: |-
+              You are a product management mentor helping a learner carve out a Minimum Viable Product (MVP) from their user story map. They were tasked with going through their user story map and carving out an MVP. Provide friendly, concise feedback (2-3 sentences) in British English.
+              - If the MVP has too many features, gently challenge them on the redundant-looking features.
+              - If their proposed features seem complex, suggest simpler solutions, but base the suggestion on supported software engineering knowledge.
+              - If it seems like an important feature is missing (e.g. the logic of their list of features don't seem right), kindly ask them about it.
+              End with an encouraging note (e.g. 'Great job carving out an MVP, this will help you learn quicker from your users!').
+            checkerPrompt: This is the Minimum Viable Product I plan to build.
+        - type: challenge-end
+          title: "Wonderful work: MVP scoped! \U0001F680"
+          content:
+            nextModule: '**Next:** Let''s turn your plan into action. You''ll learn to translate your MVP into a prompt that an AI tool can use to build your app.'
+            description: You've decided what to build first (and what to postpone).
+            subDescription: Great job resisting the urge to do everything at once. A clear MVP means you can move faster and learn from real users sooner.
+      title: 'Decide What to Build First: Define Your MVP'
+      isFree: false
+      skills:
+        - MVP
+        - Prioritization
+        - Lean Product
+      description: Carve out the minimal set of features (the MVP) to build now.
+      completionTime: 30:00
+    - steps:
+        - type: text
+          title: Write instructions for the AI
+          content:
+            body: |-
+              You have a clear plan: problem, persona, and MVP features. Now it's time to **tell an AI app builder (like Lovable) what to create**. This means writing a prompt that clearly explains your app.
+
+              Your goal is to give the AI enough info to build the core functionality of your MVP, without overwhelming it with unnecessary details.
+          subtitle: Clearly explain your idea and MVP so an AI tool can build it.
+        - type: text
+          title: How to structure prompts for an AI builder
+          content:
+            body: |-
+              - **Product overview:** a brief description of your product (e.g., "a web app for book club organisers to vote on which book to read next").
+              - **Target user:** Who you're building the app for (your persona).
+              - **User flow:** List the main things your user will do in the app (your MVP features).
+              - **Platform requirements:** If there's anything specific you need (e.g., "mobile-first, accessible"), mention it.
+              - **Design system:** Main colours, fonts you want to use.
+
+              Keep it straightforward and concise. You don't need to write a novel; just ensure the AI has the crucial info.
+          subtitle: 'When instructing an AI tool (like Lovable or others), include the key points:'
+        - type: text
+          title: Tips for a well structured prompt
+          content:
+            body: |-
+              You can use Markdown to give clear sections to your prompt. For example:
+
+              ```markdown
+              ## Product Overview
+              - A web app for book club organisers to vote on which book to read next.
+
+              ## Target User
+              - Book club organisers who struggle to coordinate book choices among members.
+
+              ## User Flow
+              1. Create club profile by adding a name
+              2. Invite members with a shareable link
+              3. Suggest books
+              4. Vote on books
+              5. View most voted book
+
+              ## Platform Requirements
+              - It's a mobile-first platform. Optimise layout, font sizes, and buttons for mobile. Prioritise speed and readability.
+              - The platform is accessible: it meets the WCAG AA requirements.
+
+              ## Design System
+              - Primary colour: #06BEAC,
+              - Font: Arial.
+              ```
+
+              This structure helps the AI parse your instructions clearly and reduces ambiguity.
+          subtitle: AI app builders work best with structured instructions.
+        - type: text
+          title: Start building with AI
+          content:
+            body: |-
+              Copy this structure and fill in your product details to start building:
+
+              ```markdown
+              ## Product Overview
+              - A web app for book club organisers to vote on which book to read next.
+
+              ## Target User
+              - Book club organisers who struggle to coordinate book choices among members.
+
+              ## User Flow
+              1. Create club profile by adding a name
+              2. Invite members with a shareable link
+              3. Suggest books
+              4. Vote on books
+              5. View most votes book
+
+              ## Platform Requirements
+              - It's a mobile-first platform. Optimise layout, font sizes, and buttons for mobile. Prioritise speed and readability.
+              - The platform is accessible: it meets the WCAG AA requirements.
+
+              ## Design System
+              - Primary colour: #06BEAC,
+              - Font: Arial.
+              ```
+
+              Paste your completed prompt into the AI builder and let it generate your MVP app. You can then review, test, and iterate as needed.
+          subtitle: Open Lovable or your chosen AI app builder and input your prompt.
+        - type: text
+          title: Pro tip
+          content:
+            body: |-
+              When you're building with Lovable or any AI tool, it's best to go step-by-step.
+
+              After the initial build, test what you have, then use follow-up prompts to add the next most important feature, fix something that isn't right, or polish the design.
+
+              This iterative cycle is how you co-create with AI effectively.
+          subtitle: Remember to go step-by-step.
+        - type: challenge-end
+          title: "Well done! Prompt ready to go! \U0001F4A1"
+          content:
+            nextModule: '**Next:** Almost there! You''ll learn how to test your idea with real users ASAP.'
+            description: You translated your plan into a clear AI prompt.
+            subDescription: It's like giving the AI a blueprint of your product. With a solid prompt in hand, you're one step away from actually building something. Finally, let's prepare to build and gather feedback!
+      title: Create a Prompt to Build Your MVP with AI
+      isFree: false
+      skills:
+        - Prompting
+        - AI Tools
+        - Vibe Coding
+      description: Turn your user story map into clear building instructions for an AI app builder to follow.
+      completionTime: 20:00
+    - steps:
+        - type: text
+          title: Test early, test often
+          content:
+            body: |-
+              You've defined the problem, designed a solution, and soon you'll have a first version built. Fantastic!
+
+              Now, don't wait for perfection: **get it in front of real users as soon as you can**. Testing early will save you tons of time and heartache.
+          subtitle: Don't wait until it's "perfect". Showing real people now will make your product better.
+        - type: text
+          title: Why test now?
+          content:
+            body: |-
+              When you show your product (or even just a prototype) to users, you learn what works and what doesn't. Maybe something you thought was crystal clear actually confuses them. Or they might tell you about a need you hadn't thought of.
+
+              Early user testing helps you catch these things before you invest too much in building more. As the Lean Startup mantra goes: you want to "build – measure – learn" in quick cycles.
+          subtitle: Users will surprise you.
+        - type: text
+          title: How to test your MVP
+          content:
+            body: |-
+              In practice, "testing" could be as simple as showing your MVP to a few target users (maybe colleagues, friends, or friendly potential customers who fit your persona) and asking them to use it.
+
+              Watch how they use it. Do they get stuck anywhere? What do they love, and what would they change?
+
+              The goal isn't to prove you're right, it's to learn. Be open to what you hear. If Sarah says, "I wish it could do X," or "I didn't understand this part," that's gold. It shows you where to improve. We can do all the research in the world, but nothing beats that first customer trying the product.
+          subtitle: Find a few people.
+        - type: text
+          title: Book Club Organiser example
+          content:
+            body: |-
+              For the book club app, testing might involve **asking a couple of book club organisers** to try coordinating their next pick with the app. **Their feedback** (e.g., "It was great except I wish I could notify people in-app rather than separately") would directly **inform what to build next** (maybe notifications become a priority).
+
+              We might also **learn that some features we thought were essential aren't used much**, allowing us to learn about the reasons (e.g., maybe users didn't find them, didn't understand how they work, or simply they are not as useful as we thought they were).
+          subtitle: How testing looks like for our example app
+        - type: text
+          title: Plan your user test
+          content:
+            body: |-
+              Ideally, someone who **matches your persona** or at least has the problem you're solving. It could be a friend, a co-worker, or a small group of potential users. **You don't need a fully polished MVP to start testing** – even the early version from Lovable is fine.
+
+              Remember, early testers are usually forgiving. They know it's a work in progress. Involve them and they'll feel invested in your product's success. So, take a deep breath and share your creation. You'll be glad you did!
+          subtitle: Think about who could give you honest feedback on your product idea.
+        - type: text
+          title: Test often
+          content:
+            body: It's a mindset of **continually learning and improving**. After your first test, you might go back to your prompt, refine the app, then test again with more users or different features.
+          subtitle: Remember, testing isn't a one-time thing.
+        - type: reflection
+          title: Plan your first user test
+          content:
+            description: 'Think of one way you''ll get feedback: Who can you show your prototype or MVP to, and what will you ask them or observe? Write down a quick plan below.'
+            placeholder: e.g. "I will invite my friend (who is my target user persona) to use the app for her next book club meeting. I'll watch how she adds suggestions and votes, and interview her afterwards about what was easy or hard. If something frustrates her or if she still falls back to WhatsApp, that's a sign I need to improve that part."
+            subDescription: By planning this out, you commit to actually getting real-world input. This is where your product becomes truly valuable, when it's in the hands of users and making their lives better. Testing early and often is the key to building something people love (and it saves you from building the wrong thing).
+        - type: course-end
+          title: "Congratulations! You're ready to build a valuable product! \U0001F38A"
+          content:
+            nextModule: "Now it's time to bring your idea to life. Use your prompt to start building with AI, then let real users guide your next steps. Good luck and happy building! \U0001F917"
+            description: 'In this micro-course, you started with a raw idea and ended with:'
+            subDescription: "✓ A well-defined problem statement (so you know exactly what you're solving).\n\n✓ A clear persona (so you know who you're solving it for).\n\n✓ A visualised storyboard of the user journey (so you understand how your solution fits into their life).\n\n✓ A detailed user story map of steps and features (your feature roadmap).\n\n✓ A scoped-down MVP plan (your immediate build target).\n\n✓ A crafted AI prompt to start building your product in Lovable (your development instructions).\n\n✓ A plan to test with users and get feedback right away (so you learn quickly).\n\nBy breaking the process into these steps, you've made a daunting task (building a product) much more manageable. This is the same approach experienced product managers and founders use. You're now equipped to build something people truly need. \n\nRemember, **keep the user in focus, start small, and iterate**. You've got this!"
+      title: Get Feedback on What You've Built
+      isFree: false
+      skills:
+        - User Testing
+        - Feedback
+        - Iteration
+      description: Plan how to gather feedback quickly by testing your idea with real users.
+      completionTime: 15:00
+  titleSplit:
+    - 'Build a Valuable Product:'
+    - How to Break Down Your Idea for Vibe Coding
+  description: A hands-on guide to break down your product idea into small, doable steps.

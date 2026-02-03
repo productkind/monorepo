@@ -1,0 +1,693 @@
+course:
+  id: 01995295-e1db-77cb-b5b6-8a85cec22f98
+  cover: /courses/writing-with-ai-00/cover.gif
+  title: 'Write Better with AI: Prompting Foundations for Product Managers'
+  challenges:
+    - steps:
+        - type: text
+          title: Prompting AI to capture the right tone
+          content:
+            body: |-
+              You reported it to the developers some time ago, but you haven't heard back yet. **A fix is urgent**, so you need to check on their progress.
+
+              **The challenge:** you want to ask without sounding controlling.
+
+              This is where prompting AI can help. It can draft a message in the right **tone** (collaborative, professional, friendly) and **style** (short and direct, or more detailed).
+
+              Let's give it a try!
+          subtitle: Your team is working on fixing a critical bug.
+        - type: prompting-exercise
+          title: Try prompting
+          content:
+            description: |-
+              **Bug:** The checkout page takes 12 seconds to load, causing users to abandon their carts.
+
+              Click the **eye** icon to view the prompt. Then hit **Check** to see the output.
+
+              As you read the AI's response, ask yourself: *Would I actually send this to my team? If not, why not?*
+            sourceItems: []
+            targetItems:
+              - id: context
+                content: Write a Slack message asking the devs if the checkout page slow loading issue has been fixed.
+                isFixed: true
+                readOnly: true
+            systemPrompt: You are a helpful AI assistant that provides constructive feedback on prompts and helps users improve their prompting skills.
+            fixedMockAnswer: "Hey team! \U0001F44B\nQuick question about the checkout page performance issue we've been tracking. Has the slow loading problem been resolved?\nSpecifically:\n\n* Are the recent optimizations addressing the page load time?\n* Have we seen any improvements in our performance metrics?\n* If it's not fixed, what's the current status and expected timeline?\n\nWould appreciate an update when you have a moment. Thanks!"
+            hideSourceItems: true
+            workImmediately: true
+          subtitle: Let's see what happens with a simple prompt.
+        - type: prompting-exercise
+          title: Make it your own
+          content:
+            description: |-
+              The prompt is split into two parts.
+              - *Part 1* is the base request.
+              - *Part 2* defines the tone and style.
+
+              Click the **pencil** icon to edit Part 2 so it sounds more like you. Then save it and hit **Check** to see the AI's reply.
+            sourceItems: []
+            targetItems:
+              - id: context
+                content: Write a Slack message to the development team asking about the status of the checkout page slow loading issue.
+                isFixed: true
+                readOnly: true
+              - id: context2
+                content: |-
+                  Tone: friendly, warm, collaborative, and confident.
+                  Style: 1-2 sentences, plain, conversational Slack style, direct ask for current status or ETA, end with a brief thanks.
+                isFixed: true
+            hideSourceItems: true
+            workImmediately: true
+            isPlainAIResponse: true
+          subtitle: Now let's refine the prompt by guiding the AI on tone and style.
+        - type: video
+          title: Define tone and style
+          content:
+            youtubeId: mHHfPwMHw50
+            videoUrl: /videos/lesson-write-better-with-ai-00-video-00.mp4
+        - type: quiz-question
+          title: Why specify tone and style
+          content:
+            options:
+              - It makes the AI run faster.
+              - It ensures the message comes across as intended to your audience.
+              - It guarantees the bug will be fixed sooner.
+              - It adds technical details about the bug automatically.
+            question: Why is it important to specify tone and style when prompting AI for a Slack message?
+            explanation: Tone and style shape how your message comes across. Without them, AI might sound blunt or too formal. By guiding both, you make sure the message matches your intent and fits your audience.
+            correctAnswer: 1
+        - type: quiz-question
+          title: Fixing long-winded AI replies
+          content:
+            options:
+              - Add style instructions like "1 – 2 sentences, plain, direct language"
+              - Re-run the same prompt until it gets shorter
+              - Add more bug details to the prompt
+              - Switch to a different AI tool
+            question: You prompt AI for a Slack message but it produces a long, four-paragraph response. What's the best way to fix this?
+            explanation: Style guidance shapes the length and clarity of the message.
+            correctAnswer: 0
+        - type: text
+          title: How to approach defining the tone and style
+          content:
+            body: "\U0001F538 **State the style explicitly:** Specify tone (formal, casual), perspective (mentor, peer), and voice (academic, marketing).\n\n\U0001F538 **Name the audience:** State who it's for (students, execs, PMs) to control depth and jargon.\n\n\U0001F538 **Show a style example:** Provide a short style sample or reference (like Lenny's Newsletter) so it can mirror the pattern.\n\n\U0001F538 **Specify the length:** 3 paragraphs, few sentences, ≤200 words."
+          subtitle: ""
+        - type: quiz-question
+          title: Why set tone and style
+          content:
+            options:
+              - To make the output sound like you.
+              - To have less factual errors in the response.
+              - To write in a consistent style in all of your content.
+            question: What are the possible goals of setting the tone and style of an output?
+            explanation: By setting the tone and style of the output, you can make it sound more like you and keep your content consistent. But it doesn't reduce the number of factual errors in the response.
+            correctAnswer:
+              - 0
+              - 2
+        - type: quiz-question
+          title: Select the most effective prompt
+          content:
+            options:
+              - '"Give me a detailed report on the new feature. Make sure it''s good."'
+              - '"Create a one-pager on the new feature for senior management, focusing on key metrics."'
+              - '"Write a 300-word one-pager for a new feature proposal. The audience is senior executives, the tone is formal and persuasive, and the style is similar to a McKinsey consulting report."'
+              - '"Draft a document about the new feature for executives. It should be concise."'
+            question: You need a brief, clear, and compelling one-pager for a new feature proposal to senior executives. Which prompt is most effective to create one?
+            explanation: 'The prompt is highly effective if it explicitly defines all the necessary parameters: a specific length, the target audience, a clear tone, and a concrete style example to guide the generation.'
+            correctAnswer: 2
+        - type: reflection
+          title: Micro-reflection
+          content:
+            description: Take a moment to write down your key takeaways from the prompting techniques you've just learned.
+            placeholder: Type your answer here...
+            subDescription: This quick reflection will make it easier to adapt the techniques later, no matter the tool or context.
+        - type: challenge-end
+          title: "You've learned your first prompting techniques! \U0001F389"
+          content:
+            cta: Next
+            nextModule: '**Next up:** We''ll go beyond tone. You''ll learn how to give context and background in your prompts, a technique that makes AI replies clearer, more relevant, and more useful.'
+            description: Simple techniques make a big difference.
+            subDescription: |-
+              AI prompting isn't magic. It's a set of small techniques you can use to get better results.
+
+              You may already be doing some of them without noticing. Here, you're learning to use them with intention, so they become tools you can apply in your day-to-day work.
+
+              Before moving on, think about a time when AI gave you an answer that felt off-track or irrelevant. Chances are, it was missing context.
+      title: Prompt AI to communicate confidently in high pressure situations
+      isFree: true
+      skills:
+        - Prompting
+        - AI
+        - Slack
+        - Tone and Style
+      description: Communicate with your team by prompting AI to help you draft a Slack message in the right tone, and style.
+      completionTime: 8:00
+    - steps:
+        - type: text
+          title: Clear updates for stakeholders
+          content:
+            body: |-
+              You stare at the list of Jira tickets that went into building this feature. How do you turn them into an update people will actually feel excited about?
+
+              Too vague, and no one sees the value. Too detailed, and they'll stop reading halfway through.
+
+              In this section, you'll learn **how to use AI to help you draft an update that's clear, engaging, and easy for everyone** in your company to understand.
+          subtitle: 'You''ve just shipped a new feature and now you have to communicate it in your company''s #releases Slack channel.'
+        - type: text
+          title: Giving context & background
+          content:
+            body: |-
+              Ever seen AI give you a vague answer that feels… useless?
+
+              That usually happens when it doesn't have enough **context.** As a product manager, context is everything.
+
+              Without it, your update could sound generic.
+
+              With it, you get focused, useful writing that hits **the right level of detail.**
+          subtitle: ""
+        - type: prompting-exercise
+          title: When you don't give context
+          content:
+            description: Click the **eye** icon to view the prompt, then press **Check** to see its output.
+            sourceItems: []
+            targetItems:
+              - id: context
+                content: Write a short product update for my whole company about the new "saved dashboard view" feature.
+                isFixed: true
+                readOnly: true
+            systemPrompt: You are a helpful AI assistant that helps users write product updates.
+            fixedMockAnswer: |-
+              Hey team!
+
+              We're excited to announce the launch of our new Saved Dashboard View feature! This update allows users to save their preferred dashboard configurations for easy access later.
+
+              With this feature, you can now customize your dashboard and save multiple views based on your needs. No more reconfiguring your dashboard every time you log in!
+
+              The feature is now live for all users. We hope this improves your workflow and makes data analysis more efficient.
+
+              Let us know if you have any questions!
+            hideSourceItems: true
+            workImmediately: true
+          subtitle: Here's what happens when you only give AI a bare prompt.
+        - type: text
+          title: Why give context and background
+          content:
+            body: "Without context, AI guesses, and you end up with answers that feel vague or off the mark.\n\nWith context, it has the information it needs to respond in a way that's relevant and useful.\n\n\U0001F538 **Share the background details** the AI needs to understand the full scope of your request.\n\n\U0001F538 **Add files or notes** when it helps (e.g. your company vision, sales data, or a user interview script)."
+          subtitle: ""
+        - type: prompting-exercise
+          title: When you give the right context
+          content:
+            description: |-
+              - What the new feature is in a bit **more details**
+              - Who your **target users** are
+              - What **problem** it solves or what **value** it provides
+              - Any key details about **how it works** or **when it's available**
+
+              Click the *pencil* icon to view the improved prompt, feel free to modify it. Then press *Check* to see the output.
+            sourceItems: []
+            targetItems:
+              - id: context
+                content: |-
+                  Write a short Slack update to my whole company about our new "Saved Dashboard Views" feature. It lets users save their favourite dashboard filters for quick access. This was a top customer request.
+
+                  - Customer value: it reduces time spent setting filters each session. We've already got very positive feedback from our beta testers on how much time it saves for them.
+                  - Release: It was released to the whole user base today.
+                  - Message tone: clear but concise.
+                  - Message audience: internal team, acknowledge Team Thunderbird's work.
+            hideSourceItems: true
+            workImmediately: true
+            isPlainAIResponse: true
+          subtitle: 'Now see how the AI''s response changes when you include:'
+        - type: reflection
+          title: Micro-reflection
+          content:
+            description: |-
+              Compare the two outputs. What difference did adding context and background make?
+
+              How could you use this approach in your own work?
+            placeholder: Type your answer here...
+            subDescription: ""
+          subtitle: ""
+        - type: text
+          title: "AI vs LLM – what's the difference? \U0001F914"
+          content:
+            body: |-
+              So far, we've been talking about AI as if it's one big thing. In reality, the tool you're prompting is a specific kind of AI called a **Large Language Model (LLM)**.
+
+              AI is the big umbrella term, it covers everything from self-driving cars to face recognition. An **LLM is a specific type of AI built to work with text:** reading it, understanding it, and generating it.
+
+              Once you see what an LLM really is, you'll understand why your prompts work the way they do.
+          subtitle: ""
+        - type: text
+          title: What is an LLM?
+          content:
+            body: It's a type of AI model **trained on huge amounts of text** – books, articles, websites, and more – to understand and generate **human-like language**. They learn the patterns, grammar, facts, and different ways people communicate. The bigger the training data, the better it can **recognise patterns** and generate realistic language.
+          subtitle: LLM stands for Large Language Model
+        - type: text
+          title: What can LLMs do?
+          content:
+            body: |-
+              - Answer questions
+              - Summarize content
+              - Generate text
+              - Translate languages
+              - Write code
+              - Assist with creative tasks
+          subtitle: ""
+        - type: text
+          title: 'Examples: Popular LLMs'
+          content:
+            body: |-
+              - OpenAI: GPT-5, o3
+              - Anthropic: Claude Sonnet 4, Claude Opus 4.1
+              - Google: Gemini 2.5 Pro, Gemini 2.5 Flash
+              - Meta: LLaMA 3, LLaMA 4
+          subtitle: ""
+        - type: text
+          title: Not thinking. Predicting.
+          content:
+            body: |-
+              LLMs aren't thinking – they're **predicting** what comes next in a sequence.
+
+              They do this using **tokens**.
+            imageUrl: /prediction.gif
+          subtitle: ""
+        - type: text
+          title: What's a token?
+          content:
+            body: |-
+              A token is a **small unit of text** – a word, part of a word, or punctuation.
+
+              LLMs break your input into tokens and **predict the next token** one by one until they generate a complete response.
+          subtitle: ""
+        - type: text
+          title: 'The mental model: Think autocomplete'
+          content:
+            body: |-
+              Think of an LLM as an **advanced autocomplete**.
+              It generates what comes next, based on **patterns**, not true understanding.
+            imageUrl: /autocomplete.gif
+          subtitle: ""
+        - type: text
+          title: Hallucinations happen
+          content:
+            body: |-
+              When the output is incorrect or nonsensical, that's called **hallucination**.
+              LLMs are always hallucinating. The good news is they usually produce useful, correct answers.
+              But **they can get things wrong!**
+            imageUrl: /hallucination.gif
+          subtitle: ""
+        - type: text
+          title: Answers can vary
+          content:
+            body: "Because **LLMs rely on predictions**, you might get different answers if you:\n\n\U0001F538 Ask the same question twice\n\n\U0001F538 Ask it to verify itself"
+          subtitle: ""
+        - type: text
+          title: Key takeaways
+          content:
+            body: "\U0001F7E2 LLM = a type of AI model **trained on** huge amounts of **text**\n\n\U0001F7E2 They're large **pattern-recognition** systems, not thinkers\n\n\U0001F7E2 A token is a **small unit of text** – a word, part of a word, or punctuation"
+          subtitle: ""
+        - type: quiz-question
+          title: Do LLMs understand text like humans?
+          content:
+            options:
+              - "True"
+              - "False"
+            question: A Large Language Model understands text in the same way a human does.
+            explanation: An LLM predicts the next word or token in a sequence based on patterns it learned from huge amounts of text. It doesn't truly "understand" language like a person. It simply generates statistically likely text.
+            correctAnswer: 1
+        - type: quiz-question
+          title: Why is it large?
+          content:
+            options:
+              - The physical size of the computer it runs on
+              - The length of the output it generates
+              - The number of people using it
+              - The amount of training data it has learned from
+            question: What does the "Large" in Large Language Model refer to?
+            explanation: '"Large" means it''s trained on huge volumes of text – think trillions of words from books, articles, websites, forums, code, etc. It means the model can generate text on a wide range of topics, in many tones and formats.'
+            correctAnswer: 3
+        - type: quiz-question
+          title: What's a token?
+          content:
+            options:
+              - 'a small unit of text: word, part of a word, or punctuation.'
+              - always the same as a whole word.
+              - storing the semantic meaning of a word in its entirety.
+              - the same as a byte.
+              - a fixed-length chunk of text, always four letters long.
+            question: A token is...
+            explanation: A token is a basic unit the model uses to process text. Sometimes, a token is an entire word (e.g., "dog"). Sometimes, a single word is split into subword tokens, for example, "unbelievable" might be tokenised as "un" + "believ" + "able". Punctuation marks (like ".", ",", "!") and even whitespace can also be tokens.
+            correctAnswer: 0
+        - type: reflection
+          title: Micro-reflection
+          content:
+            description: In one sentence, write down how you'd explain what an LLM is, in your own words.
+            placeholder: Type your answer here...
+            subDescription: This helps you to deepen understanding by using active recall and personalisation.
+          subtitle: ""
+        - type: challenge-end
+          title: "You've levelled up your prompting toolkit! \U0001F389"
+          content:
+            cta: Next
+            nextModule: |-
+              **Up next:** We'll take things further. Instead of a quick team message, you'll craft a LinkedIn post that feels natural, engaging, and true to your voice.
+
+              Ready?
+            description: 'In this section, you learned that:'
+            subDescription: |-
+              Adding **context and background** makes AI output more relevant and useful.
+
+              The "AI" you're prompting is actually an **LLM**, a model built for language.
+
+              LLMs process text in **tokens** – small pieces of words and characters – which is how they read, predict, and generate responses.
+
+              And sometimes they make things up. That's **hallucination**, and knowing this helps you pause, verify facts, and avoid passing on incorrect information.
+
+              With these foundations, you're no longer just "trying prompts," you understand how the system works, and how to **guide it with intention**.
+      title: Write clear internal product updates with less effort
+      isFree: false
+      skills:
+        - Prompting
+        - AI
+        - Product Updates
+        - Context and Background
+        - LLM
+        - Tokens
+      description: Turn your Jira tickets into clear, and concise product updates stakeholders feel excited about.
+      completionTime: 12:30
+    - steps:
+        - type: text
+          title: Make LinkedIn posts feel natural
+          content:
+            body: |-
+              But when you try to write a LinkedIn post, the second-guessing creeps in: *Am I being too formal? Too casual? Does this sound braggy?*
+
+               Before long, every sentence feels wrong. If posting feels awkward or staged, you're not alone.
+
+              **The good news?** You don't need to force it. In this challenge, you'll learn simple ways to guide AI so the post it creates actually sounds like you, whether that's casual, professional, witty, or inspiring.
+
+              Let's dive in!
+          subtitle: Being visible at work and in your industry shouldn't feel like showing off.
+        - type: prompting-exercise
+          title: Try prompting
+          content:
+            description: "The kind of generic LinkedIn post you've seen a hundred times: dramatic pauses, endless em dashes (—), buzzwords and phrases like *\"no fluff \U0001F680.\"*\n\nClick the **eye** icon to see the prompt. Then hit **Check** to watch the AI try its best LinkedIn-guru impression."
+            sourceItems: []
+            targetItems:
+              - id: context
+                content: 'You are helping me write a LinkedIn post. Task: Draft a short post announcing that I''ve learned practical prompting techniques at a Little Parrot micro-course.'
+                isFixed: true
+                readOnly: true
+            systemPrompt: You are a helpful AI assistant that helps users write LinkedIn posts.
+            fixedMockAnswer: "\U0001F680 Exciting news! I've just completed an incredible journey learning prompting techniques at Little Parrot!\n\n\U0001F4A1 Key takeaways that completely transformed my approach:\n\n- Mastering the art of strategic prompting\n- Unlocking AI's full potential through precise communication\n- Driving 10x productivity gains in my workflow\n\nThis isn't just about technology—it's about revolutionizing how we work, collaborate, and innovate in the digital age.\n\nThe future is here, and I'm thrilled to be part of this transformation! Who else is leveraging AI prompting to level up their game?\n\n#AITransformation #PromptEngineering #Innovation #FutureOfWork #LittleParrot #ProfessionalDevelopment"
+            hideSourceItems: true
+            workImmediately: true
+          subtitle: If you give AI only a simple request like this, the result will often feel fake.
+        - type: prompting-exercise
+          title: Make it your own
+          content:
+            description: |-
+              **Part 1:** the main request (already in the "Your Prompt" area).
+
+              **Part 2:** the tone and style.
+
+              We've given you two tone options for Part 2.
+
+              Use the **pencil** icon to adjust the one that feels closest to how you would write. Or pull in words from both until it matches your style.
+
+              When you're done, save it, move the selected to the "Your Prompt" field, and press **Check** to see how the AI responds.
+            sourceItems:
+              - id: context1
+                content: |-
+                  Tone and style:
+                  - Friendly, approachable, understated, genuine
+                  - Plain, sincere wording
+                  - Clear and balanced, avoid exaggeration
+                  - Keep it concise, no more than 5-6 sentences
+              - id: context2
+                content: |-
+                  Tone and style:
+                  - Positive, motivating tone
+                  - Highlight growth and future potential
+                  - Use simple, encouraging phrases
+                  - Concise: 4-5 sentences
+            targetItems:
+              - id: context
+                content: 'You are helping me write a LinkedIn post. Task: Draft a short post announcing that I just completed a practical Little Parrot micro-course on AI prompting techniques.'
+            isPlainAIResponse: true
+          subtitle: 'This prompt has two parts:'
+        - type: prompting-exercise
+          title: Let's add some context and background
+          content:
+            description: |-
+              Since we only gave the AI the vague context "learned prompting techniques," it filled in the blanks and made some things up. That means the output wasn't very informative.
+
+              Let's fix that by adding more context about what you've actually learned in this micro-course.
+
+              **Now your prompt will have 3 parts:**
+              1. The main request
+              2. Tone and style
+              3. Context and background
+
+              Use the pencil icon to adjust the text so it feels like something you would naturally write. When you're done, save it and press **Check** to see how the AI responds.
+            targetItems:
+              - id: context1
+                content: 'You are helping me write a LinkedIn post. Task: Draft a short post announcing that I just completed a practical Little Parrot micro-course on AI prompting techniques.'
+              - id: context2
+                content: |-
+                  Tone and style:
+                  - Tone: [INSERT YOUR PREFERRED TONE: e.g., "conversational and genuine, not overly promotional, like someone sharing a useful discovery with colleagues”]
+                  - Style: [INSERT YOUR STYLE PREFERENCES: e.g., "2-3 short paragraphs, plain language, avoid excessive emojis and LinkedIn buzzwords like 'game-changer' or '10x productivity'"]
+              - id: context3
+                content: |-
+                  Context and background:
+                  - The course focused on using AI for professional communication (Slack messages, product updates, LinkedIn posts)
+                  - Key learning: AI prompting isn't magic - it's specific techniques you can learn and apply
+                  - Main techniques learned: setting tone and style, providing context and background, understanding how LLMs actually work (they predict tokens, don't truly "think")
+            hideSourceItems: true
+            workImmediately: true
+            isPlainAIResponse: true
+          subtitle: Have you noticed that the output was quite generic?
+        - type: video
+          title: What's really behind "AI"
+          content:
+            youtubeId: -VRucj3q7GE
+            videoUrl: /videos/lesson-write-better-with-ai-00-video-01.mp4
+        - type: quiz-question
+          title: What's really going on inside an AI model
+          content:
+            options:
+              - It follows a strict set of if-then rules written by humans.
+              - It recognises patterns in data it has seen before to predict or generate outputs.
+              - It reads your mind to know exactly what you want.
+              - It randomly generates answers with no logic.
+            question: Which best describes how an AI model works?
+            explanation: Unlike rule-based systems, AI models are pattern-based.
+            correctAnswer: 1
+        - type: quiz-question
+          title: AI and text
+          content:
+            options:
+              - "True"
+              - "False"
+            question: An AI model can only work with text as input and output.
+            explanation: A model always takes an input and produces an output. The input and output can be text, images, audio, or other forms of data.
+            correctAnswer: 1
+        - type: quiz-question
+          title: LLM is a type of AI
+          content:
+            options:
+              - human language
+              - classifying images
+              - spotting trends
+              - generating video
+            question: A Large Language Model is a type of AI model that's specialised in _________.
+            explanation: Because a Large Language Model (LLM) is specifically trained on huge amounts of text data to learn the patterns, structure, and meaning of human language. So it can understand prompts, generate text, summarise, answer questions, or even help you brainstorm.
+            correctAnswer: 0
+        - type: quiz-question
+          title: AI's inputs and outputs
+          content:
+            options:
+              - They must always be images.
+              - The input must be text and the output must be text.
+              - They can be text, images, audio, or other data.
+              - There's no input or output.
+            question: What's true about an AI model's inputs and outputs?
+            explanation: An AI model can handle different data types – text, images, audio – depending on what it's trained for. It always takes an input and gives an output.
+            correctAnswer: 2
+        - type: reflection
+          title: Micro-reflection
+          content:
+            description: In one or two sentences, write down how you'd explain "What is an AI model?" to a colleague new to AI.
+            placeholder: Type your answer here...
+            subDescription: Use your own words. This helps you remember better!
+        - type: challenge-end
+          title: "Nicely done! You've used tone, style, and context to shape a LinkedIn post \U0001F389"
+          content:
+            nextModule: '**Next up:** we''ll dive into how you can use AI for quickly learning new concepts that you can customise to your level. Let''s jump in!'
+            description: See how much more natural it feels when the AI writes in your voice, and how adding context makes the output clearer and more useful?
+            subDescription: You've now shaped AI output for both quick team messages and public posts, two very different contexts. That's a big step in making AI work for you.
+      title: Craft impactful LinkedIn posts that sound like you
+      isFree: false
+      skills:
+        - Prompting
+        - AI
+        - Tone and Style
+        - LinkedIn
+      description: Learn how to craft LinkedIn posts that actually sound like you, whether that's casual, professional, witty, or inspiring.
+      completionTime: 10:00
+    - steps:
+        - type: text
+          title: Learn faster with AI
+          content:
+            body: |-
+              You were in stand-up and "Redis" kept coming up. Everyone nodded along; you smiled, but inside you were thinking, *"What is Redis, and why do we use it in our product?"*
+
+              In this challenge, you'll **learn practical prompts** to get AI to **explain terms** like Redis in plain English, show where they fit in your product, so you can **communicate** with the developers **confidently**.
+          subtitle: ""
+        - type: free-text-exercise
+          title: Prompting strategy
+          content:
+            description: |-
+              Imagine you're writing a prompt asking AI to explain *what Redis is* and *why it's relevant for your product*.
+
+              What key details would you include so the answer is clear and useful for you as a PM?
+
+              **Think about:**
+              - The level of explanation you need (plain English vs. technical)
+              - The context (how it's used in your product)
+              - The purpose (e.g. so you can talk about it in stand-up)
+
+              Write down the details you'd add to the prompt. When you're done, hit *Check* to get AI feedback on how to structure a stronger prompt.
+            placeholder: Type your answer here...
+            systemPrompt: 'You are a mentor guiding a product manager learning how to prompt AI effectively.  The learner has been asked: *"Imagine you''re writing a prompt asking AI to explain what Redis is and why it''s relevant for your product. What key details would you include so the answer is clear and useful for you as a PM?" *Your job is to give short, supportive feedback on their answer.  **Instructions:**- Always use a friendly, clear, understated tone.  - Keep feedback to 2-3 sentences.  - Write in **British English**.  - If their answer is vague (e.g. "explain Redis"), tell them to add:    - the level of explanation they want (plain English vs. technical)    - the context (how it''s used in their product)    - the purpose (why they need the explanation, e.g. for a stand-up).  - If they include one or two of those, praise them, then suggest what''s missing.  - If they include all three (clarity + context + purpose), praise them and confirm it''s a strong prompt.  **Output style:**- Supportive and conversational (e.g. "Good start…" / "Nice — asking for plain English makes a big difference…").  - No jargon, no overexplaining.  - End with encouragement (e.g. "That''s how you get answers you can actually use.").'
+            checkerPrompt: ""
+          subtitle: ""
+        - type: prompting-exercise
+          title: Now it's your turn to build a strong prompt
+          content:
+            description: Once you've placed them, click the *pencil* icon to customise the wording so it fits your own style.
+            sourceItems:
+              - id: base1
+                content: Explain what Redis is to a product manager.
+              - id: base2
+                content: Describe Redis simply, without technical jargon.
+              - id: context1
+                content: Explain how Redis is commonly used in software products.
+              - id: context2
+                content: Show typical use cases for Redis in product development.
+              - id: context3
+                content: Include one example of how a product team might rely on Redis.
+              - id: purpose1
+                content: Give me an example explanation I could share with my designer colleague.
+            targetItems: []
+            hideSourceItems: false
+            workImmediately: false
+            isPlainAIResponse: true
+          subtitle: Drag and drop the best-fitting parts of the prompt from the top area into the bottom area.
+        - type: quiz-question
+          title: Why AI gets details wrong
+          content:
+            options:
+              - They can "hallucinate" or make things up
+              - They always get facts 100% right
+              - They predict text based on patterns, not understanding
+              - They can't be used for any tasks
+            question: You ask an LLM to summarise a long user research report. You get a few details wrong in the summary. What does this show about LLMs?
+            explanation: LLMs don't "understand" the way people do. They predict the next bit of text based on patterns they've seen in their training data. That means they can sound confident while actually making mistakes, like inventing details that weren't in your user research report. This behaviour is called hallucination. It happens because the model is generating what looks likely, not what is factually true. That's why it's important to use your own judgement and double-check important details when relying on AI.
+            correctAnswer:
+              - 0
+              - 2
+        - type: quiz-question
+          title: Setting the tone and style
+          content:
+            options:
+              - '"Use a tone that is confident, authoritative, and professional."'
+              - '"Write in the style of Chimamanda Ngozi Adichie."'
+              - Giving it a sample of your writing.
+              - '"Write a LinkedIn post."'
+            question: Which of the following are setting the tone and style of an output?
+            explanation: 'Because AI learns patterns from massive amounts of text, the way you describe the output you want acts like a signal. Adjectives ("friendly," "confident"), adverbs ("politely," "clearly"), or examples of your own writing give the model a style to imitate. Referring to a well-known author or even naming the medium ("as a LinkedIn post," "in a Slack message") anchors the model to familiar patterns of tone, vocabulary, and structure. In short: the more concrete your instructions, the more the AI can match the voice and context you have in mind.'
+            correctAnswer:
+              - 0
+              - 1
+              - 2
+              - 3
+        - type: text
+          title: "You're doing great so far! \U0001F64C"
+          content:
+            body: "Ever wondered what **AI** has in common with **pizza?** \U0001F355\n\nHere's a quick reel that serves up LLM training as if it was a recipe.\n\nEnjoy the slice of fun before we dive back in!"
+          subtitle: Time for a quick break with something fun.
+        - type: video
+          title: "How LLMs are trained: \U0001F355 metaphor"
+          content:
+            youtubeId: 7DWwilYGH8U
+            videoUrl: /videos/lesson-write-better-with-ai-00-video-03.mp4
+        - type: quiz-question
+          title: Same question, different answer
+          content:
+            options:
+              - It runs out of data
+              - It randomly changes answers for no reason
+              - Its prediction process can generate variations each time
+              - It learns new facts from your prompts instantly
+            question: Why might you get a different answer when you ask an LLM the same question twice?
+            explanation: LLMs rely on probabilities, so the same input can produce slightly different outputs.
+            correctAnswer: 2
+        - type: quiz-question
+          title: How to think about LLMs
+          content:
+            options:
+              - A thinking machine with human judgement
+              - A perfect database of facts
+              - A super-powered autocomplete predicting text
+              - A person with full common sense
+            question: What's a good mental model for how an LLM works?
+            explanation: LLMs generate text like an advanced autocomplete, they don't "understand" but predict what comes next.
+            correctAnswer: 2
+        - type: reflection
+          title: Your key takeaways
+          content:
+            description: Take a minute and think trough what you learned in this micro-course about prompting, AI, and LLMs.
+            placeholder: Type your answer here...
+            subDescription: It's a cognitive science trick, called retrieval practice, that helps you to retain the knowledge you learned.
+          subtitle: ""
+        - type: course-end
+          title: "Congratulations! You've completed the micro-course! \U0001F38A"
+          content:
+            nextModule: Keep practicing these techniques, and watch how AI becomes your most valuable productivity partner!
+            description: You've mastered essential AI prompting techniques that will transform how you work.
+            subDescription: |-
+              **What you can now do:**
+
+              ✓ **Write better team messages**: Draft Slack updates that capture the right tone without sounding controlling
+
+              ✓ **Create clear product updates**: Transform Jira tickets into stakeholder updates people understand and feel excited about
+
+              ✓ **Post authentically on LinkedIn**: Craft posts that sound like you, not a generic AI guru with buzzwords
+
+              ✓ **Learn technical concepts faster**: Get AI to explain complex terms in plain English so you can participate confidently in technical discussions
+
+              **Your new toolkit:**
+              * Setting tone and style to match your voice
+              * Adding context for relevant, useful outputs
+              * Understanding how LLMs work (they predict, not think)
+              * Recognising when AI might hallucinate
+
+              These skills will save you time and help you communicate more effectively every day.
+      title: Learn more efficiently by using AI
+      isFree: false
+      skills:
+        - Prompting
+        - AI
+        - Learning
+        - Prompting Strategy
+        - LLM
+        - Training
+      description: Learn practical prompts to get AI to explain technical terms in plain English, customised to your needs.
+      completionTime: 8:00
+  titleSplit:
+    - 'Write Better with AI:'
+    - Prompting Foundations for Product Managers
+  description: Learn practical prompting techniques through hands-on challenges
