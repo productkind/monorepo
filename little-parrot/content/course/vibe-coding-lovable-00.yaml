@@ -1,0 +1,949 @@
+course:
+  id: b7e8f4a2-3c1d-4e5f-9a6b-0d2c8e9f1a3b
+  note: ''
+  cover: /courses/vibe-coding-lovable-00/cover.gif
+  title: 'Build Your First App with Lovable'
+  challenges:
+    - title: What is Lovable and Vibe Coding?
+      isFree: true
+      skills:
+        - Vibe Coding
+        - Lovable Basics
+        - AI App Building
+      description: Understand what Lovable is, what vibe coding means, and what you can build with it.
+      completionTime: '8:00'
+      steps:
+        - type: comic
+          content:
+            imageUrl: /comics/vibe-coding-lovable-00/panel-00.png
+            altText: |-
+              A dalmatian dog (called Dalmie) wearing a red shirt sits at a desk looking at a laptop.
+              Dalmie says, "I have this great idea for an app, but I don't know how to code..."
+        - type: comic
+          content:
+            imageUrl: /comics/vibe-coding-lovable-00/panel-01.png
+            altText: |-
+              A brightly coloured bird (called Little Parrot) appears next to Dalmie at the desk.
+              Little Parrot says cheerfully, "What if I told you that you don't need to know how to
+              code anymore? Let me show you something called Lovable!"
+        - type: video
+          title: Welcome to Lovable
+          content:
+            videoUrl: /videos/lesson-vibe-coding-lovable-00-video-00.mp4
+            transcript: |-
+              Have you ever had a brilliant idea for an app but felt stuck because you can't code?
+              That's exactly what Lovable is here to change. Lovable is an AI-powered app builder
+              that turns your words into working web applications. You describe what you want in
+              plain English, and Lovable builds it for you. No coding required. In this micro-course,
+              you'll learn the basics of building with Lovable, from your very first prompt to
+              publishing your app online. By the end, you'll have the confidence to bring your
+              ideas to life. Let's get started!
+        - type: text
+          title: What is Lovable?
+          content:
+            body: |-
+              **Lovable** is an AI-powered tool that builds web applications from your descriptions. You tell it what you want in everyday language, and it writes the code for you.
+
+              Think of it as having a developer on call who works incredibly fast and never gets tired. You describe, it builds. You give feedback, it improves. It's a conversation that results in a working app.
+            imageUrl: /courses/vibe-coding-lovable-00/lovable-interface.png
+          subtitle: Your AI development partner
+        - type: text
+          title: What is vibe coding?
+          content:
+            body: |-
+              **Vibe coding** is the practice of building software by describing what you want rather than writing code yourself. You focus on the *vibe* you're going for, the look, the feel, the functionality, and the AI handles the technical details.
+
+              It's called vibe coding because you're communicating your vision, not syntax. The better you can describe what you want, the better the results. This micro-course will teach you exactly how to do that.
+          subtitle: Building with words, not code
+        - type: text
+          title: What can you build with Lovable?
+          content:
+            body: |-
+              Currently, Lovable builds **web applications**. These are apps that run in a web browser on any device, phone, tablet, or computer.
+
+              You can build things like:
+              - Landing pages for your business
+              - Simple tools and calculators
+              - Personal dashboards
+              - Community platforms
+              - Booking systems
+              - And much more!
+
+              If it can live in a browser, Lovable can likely help you build it.
+            imageUrl: /courses/vibe-coding-lovable-00/webapp-examples.png
+          subtitle: Web apps that run anywhere
+        - type: quiz-question
+          title: 'Quiz: Lovable basics'
+          content:
+            question: What type of applications can Lovable currently build?
+            options:
+              - Mobile apps for the App Store
+              - Web applications that run in browsers
+              - Desktop software like Photoshop
+              - Video games
+            correctAnswer: 1
+            explanation: Lovable specialises in building web applications. These run in any browser, which means they work on phones, tablets, and computers without needing to download anything from an app store.
+        - type: quiz-question
+          title: 'Quiz: Vibe coding'
+          content:
+            question: What is vibe coding?
+            options:
+              - Writing code while listening to music
+              - Building software by describing what you want in plain language
+              - A programming language for beginners
+              - Copying code from the internet
+            correctAnswer: 1
+            explanation: Vibe coding means building software by describing what you want rather than writing code yourself. You communicate your vision, and AI tools like Lovable handle the technical implementation.
+        - type: reflection
+          title: What will you build?
+          content:
+            description: Think about an app idea you've had. What problem would it solve? Who would use it? Write down your initial thoughts, even if they're rough.
+            placeholder: |-
+              My app idea is...
+
+              It would help people who...
+
+              The main thing it would do is...
+            subDescription: Don't worry about whether it's technically possible yet. Capturing your idea is the first step. You can refine it as you learn more!
+        - type: challenge-end
+          title: "You understand the basics!"
+          content:
+            description: You now know what Lovable is and what vibe coding means.
+            subDescription: Lovable turns your descriptions into working web apps. Vibe coding is about communicating what you want, not how to build it. That's a powerful shift in how anyone can create software.
+            nextModule: "**Next:** Let's set realistic expectations about what AI app building can and can't do, so you're prepared for the journey ahead."
+
+    - title: Setting Realistic Expectations
+      isFree: true
+      skills:
+        - Expectation Management
+        - Product Mindset
+        - Iteration
+      description: Understand what AI app building can realistically achieve and develop the right mindset for building.
+      completionTime: '7:00'
+      steps:
+        - type: text
+          title: The 0 to 80% reality
+          content:
+            body: |-
+              Here's an honest truth about AI app building: **Lovable can get you from 0 to 80% remarkably fast**, often in minutes or hours rather than weeks.
+
+              But that last 20%? That takes more time and iteration. It's the fine-tuning, the edge cases, the small details that make an app truly polished.
+
+              This isn't a limitation; it's actually incredible. Getting 80% of the way to a working app in an afternoon is something that wasn't possible just a few years ago!
+            imageUrl: /courses/vibe-coding-lovable-00/progress-chart.png
+          subtitle: Fast progress, then refinement
+        - type: text
+          title: The 80 to 100% journey
+          content:
+            body: |-
+              That remaining 20% is where **iteration** comes in. You'll test your app, find things that don't quite work, and improve them. This is normal! Even professional developers spend most of their time in this refinement phase.
+
+              The good news: each iteration gets faster as you learn to communicate more clearly with Lovable. What took several attempts at first will soon take just one well-crafted prompt.
+          subtitle: Where the polish happens
+        - type: text
+          title: Products vs projects
+          content:
+            body: |-
+              Here's a mindset shift that will serve you well: **a product is never truly "done"**.
+
+              Projects have end dates. Products evolve. The apps you use every day, your email, your favourite social media, they're constantly being updated and improved.
+
+              Your app is the same. Launch it when it's useful, then keep making it better based on what you learn from real users. Perfect is the enemy of shipped!
+            imageUrl: /courses/vibe-coding-lovable-00/product-evolution.gif
+          subtitle: Why "done" is a myth
+        - type: text
+          title: Embrace the learning curve
+          content:
+            body: |-
+              Vibe coding is an evolving field. Lovable itself updates frequently with new capabilities. What worked last month might have an even better approach today.
+
+              This means:
+              - Be patient with yourself as you learn
+              - Experiment and explore
+              - Don't be afraid to start over if something isn't working
+              - Join communities to learn from others
+
+              Everyone starts somewhere. The skills you build now will only become more valuable as AI tools improve.
+          subtitle: A rapidly changing landscape
+        - type: quiz-question
+          title: 'Quiz: Expectations'
+          content:
+            question: What does "0 to 80%" mean in the context of AI app building?
+            options:
+              - Lovable only builds 80% of features
+              - You can get most of a working app quickly, but refinement takes more time
+              - The app will only work 80% of the time
+              - You need to write 20% of the code yourself
+            correctAnswer: 1
+            explanation: AI app builders like Lovable can get you most of the way to a working app very quickly. The remaining polish and fine-tuning requires iteration, but you'll have something functional to work with much faster than traditional development.
+        - type: quiz-question
+          title: 'Quiz: Product mindset'
+          content:
+            question: Why is it important to think of your app as a "product" rather than a "project"?
+            options:
+              - Products cost more money
+              - Products are never truly finished; they evolve based on user feedback
+              - Projects are easier to build
+              - Products require a team
+            correctAnswer: 1
+            explanation: Thinking of your app as a product helps you embrace continuous improvement rather than waiting for "perfect." Launch when it's useful, then keep making it better based on real feedback.
+        - type: challenge-end
+          title: "You've got the right mindset!"
+          content:
+            description: You understand what to expect from AI app building.
+            subDescription: Fast initial progress, then thoughtful iteration. Products that evolve, not projects that end. This mindset will serve you well throughout your building journey.
+            nextModule: "**Next:** Time to get your hands dirty! You'll write your very first prompt and see Lovable in action."
+
+    - title: Your First Prompt
+      isFree: true
+      skills:
+        - Prompting
+        - Lovable Interface
+        - Iteration
+      description: Write your first prompt and see Lovable build something for you.
+      completionTime: '10:00'
+      steps:
+        - type: text
+          title: Let's build something!
+          content:
+            body: |-
+              Enough theory! It's time to open Lovable and build something real.
+
+              In this challenge, you'll write a simple prompt and watch Lovable turn it into a working page. Don't worry about getting it perfect; the goal is to experience the magic of vibe coding firsthand.
+
+              Go to [lovable.dev](https://lovable.dev) and create a free account if you haven't already.
+            imageUrl: /courses/vibe-coding-lovable-00/lovable-start.png
+          subtitle: Time to experience the magic
+        - type: text
+          title: Meet Dalmie's Book Club
+          content:
+            body: |-
+              Throughout this course, we'll follow **Dalmie**, who's building a Book Club Organiser app. Dalmie runs a book club but struggles with the chaos of coordinating which book to read next.
+
+              **The problem:** Messages scattered across WhatsApp, important decisions buried in off-topic chat, and half the members missing the vote.
+
+              **The solution:** A simple app where members can suggest books and vote on what to read next.
+
+              You can follow along with Dalmie's example or adapt the prompts for your own idea!
+            imageUrl: /courses/vibe-coding-lovable-00/dalmie-problem.png
+          subtitle: Our example app
+        - type: text
+          title: Your first prompt
+          content:
+            body: |-
+              Start simple. Here's Dalmie's first prompt:
+
+              ```
+              Create a simple page where book club members can see a list of suggested books and vote for their favourite.
+              ```
+
+              That's it! No technical details needed. Lovable will interpret this and create something for you.
+
+              **Your turn:** Type a similar prompt into Lovable. You can use Dalmie's exact words, or describe your own simple idea.
+            imageUrl: /courses/vibe-coding-lovable-00/first-prompt.png
+          subtitle: Keep it simple
+        - type: text
+          title: Watch it build
+          content:
+            body: |-
+              After you submit your prompt, Lovable will start generating your app. You'll see code appearing on the left and a preview on the right.
+
+              **What to notice:**
+              - The preview updates as code is written
+              - You can click around in the preview to test it
+              - It might not be exactly what you imagined, and that's okay!
+
+              This first version is your starting point. You'll refine it with more prompts.
+            imageUrl: /courses/vibe-coding-lovable-00/building-preview.gif
+          subtitle: The magic in action
+        - type: text
+          title: It's cheap to start over
+          content:
+            body: |-
+              Here's a liberating truth: **if you don't like what Lovable created, just try again**.
+
+              Unlike traditional development where starting over means losing weeks of work, with Lovable you can simply write a different prompt. The AI doesn't get tired or frustrated. Experiment freely!
+
+              If your first result feels off, try describing it differently. Use words like "simple," "minimal," "modern," or "clean" to guide the style.
+          subtitle: Experiment without fear
+        - type: prompting-exercise
+          title: 'Practice: Write your prompt'
+          content:
+            description: |-
+              Write a simple prompt describing a basic app or page you want to build. Keep it to 1-2 sentences describing the main purpose.
+            placeholder: |-
+              Create a simple page that...
+            subDescription: Remember, simple is better for your first prompt. You can always add more features later!
+            checkerPrompt: |-
+              This is a first prompt for an AI app builder. Evaluate whether it's appropriately simple for a beginner. Good first prompts are 1-2 sentences describing one main feature. If it's too complex, suggest simplifying. If it's good, encourage them to try it in Lovable.
+            systemPrompt: |-
+              You are a vibe coding mentor helping a beginner write their first prompt for Lovable, an AI app builder. Provide friendly feedback in British English. Good first prompts are simple and focused on one main feature. Encourage experimentation and remind them they can always iterate.
+        - type: quiz-question
+          title: 'Quiz: First prompts'
+          content:
+            question: What should you do if your first result isn't what you expected?
+            options:
+              - Give up and try a different tool
+              - Write a different prompt and try again
+              - Spend hours trying to fix the code manually
+              - Complain to customer support
+            correctAnswer: 1
+            explanation: One of the best things about AI app building is how cheap it is to experiment. If something doesn't work, simply describe it differently. Each attempt teaches you how to communicate more effectively with the AI.
+        - type: challenge-end
+          title: "You've built your first thing!"
+          content:
+            description: You've written a prompt and seen Lovable in action.
+            subDescription: That first moment of seeing your words turn into a working interface is special. You've just experienced something that was impossible for non-coders just a few years ago. Now let's learn how to make your prompts even better!
+            nextModule: "**Next:** Learn the prompt formula that helps you get better results from Lovable."
+
+    - title: The Prompt Formula
+      isFree: true
+      skills:
+        - Prompt Structure
+        - Clear Communication
+        - Requirements Definition
+      description: Learn a structured approach to writing prompts that get better results.
+      completionTime: '12:00'
+      steps:
+        - type: text
+          title: Structure gets results
+          content:
+            body: |-
+              While simple prompts work, **structured prompts work better**. A well-organised prompt helps Lovable understand exactly what you want, reducing back-and-forth.
+
+              Think of it like giving directions. "Go left, then right" might work, but "Turn left at the bakery, then right at the post office, the blue house is third on the left" gets you there faster.
+
+              Let's learn a prompt formula that works consistently.
+            imageUrl: /courses/vibe-coding-lovable-00/prompt-structure.png
+          subtitle: Better prompts, better apps
+        - type: text
+          title: The prompt formula
+          content:
+            body: |-
+              Here's a structure that works well:
+
+              ```markdown
+              ## Product overview
+              [What is this app? What problem does it solve?]
+
+              ## User flow
+              [What will users do in the app, step by step?]
+
+              ## Platform requirements
+              - It's a mobile-first platform. Optimise layout, font sizes, and buttons for mobile. Prioritise speed and readability.
+              - The platform is accessible. Implement WCAG AA compliance.
+
+              ## Design system
+              [Colours, fonts, overall style]
+
+              ## Implementation details
+              [Any specific technical requirements]
+
+              ## Target user
+              [Who is this for?]
+              ```
+
+              You don't need to fill in every section for every prompt, but having this structure in mind helps you provide clearer instructions.
+          subtitle: A template that works
+        - type: text
+          title: Section by section
+          content:
+            body: |-
+              **Product overview:** One or two sentences explaining what you're building and why. This gives Lovable context.
+
+              **User flow:** List the main things users will do, in order. "First they see a list of books, then they click to vote, then they see updated results."
+
+              **Platform requirements:** Technical considerations. Mobile-first design is almost always a good default. Accessibility matters too!
+
+              **Design system:** Describe the look you want. Colours, fonts, or reference a style ("clean and minimal like Apple").
+          subtitle: What each part does
+        - type: text
+          title: Dalmie's structured prompt
+          content:
+            body: |-
+              Here's how Dalmie rewrote her prompt using the formula:
+
+              ```markdown
+              ## Product overview
+              A book club organiser app where members suggest books and vote on what to read next.
+
+              ## User flow
+              1. See a list of suggested books with vote counts
+              2. Add a new book suggestion (title and author)
+              3. Vote for a book by clicking a button
+              4. See the current leader highlighted
+
+              ## Platform requirements
+              - Mobile-first design
+              - Accessible for all users
+
+              ## Design system
+              - Warm, cozy colours (deep reds, cream backgrounds)
+              - Friendly, readable fonts
+              - Simple and uncluttered layout
+              ```
+
+              Notice how much clearer this is? Lovable has everything it needs to build something close to Dalmie's vision.
+          subtitle: The formula in action
+        - type: text
+          title: Progress in small steps
+          content:
+            body: |-
+              Even with a great initial prompt, **progress in small steps**. Don't try to add everything at once.
+
+              Lovable tends to generate more than you ask for when prompts are vague. It tends to generate exactly what you need when you're specific and progress incrementally.
+
+              **Good approach:**
+              1. Build the basic page
+              2. Add voting functionality
+              3. Add the ability to suggest new books
+              4. Polish the design
+
+              **Risky approach:**
+              - "Build everything including user accounts, notifications, book covers from APIs, reading tracking, and a discussion forum"
+
+              Small steps = fewer surprises = better results.
+          subtitle: Don't ask for everything at once
+        - type: quiz-question
+          title: 'Quiz: Prompt structure'
+          content:
+            question: Why is a structured prompt better than a simple one?
+            options:
+              - It uses more credits
+              - It helps Lovable understand exactly what you want
+              - It makes the code run faster
+              - Simple prompts don't work at all
+            correctAnswer: 1
+            explanation: Structured prompts give Lovable clear context about what you're building, who it's for, and how it should work. This reduces misunderstandings and gets you closer to what you want on the first try.
+        - type: quiz-question
+          title: 'Quiz: Small steps'
+          content:
+            question: Why should you progress in small steps rather than asking for everything at once?
+            options:
+              - To save money on credits
+              - Because Lovable can only handle one feature
+              - To get more predictable results and catch issues early
+              - Because small apps are better than big apps
+            correctAnswer: 2
+            explanation: Building incrementally means you can test each feature as you add it. If something goes wrong, you know exactly what caused it. Large, complex prompts can lead to unexpected results that are harder to fix.
+        - type: prompting-exercise
+          title: 'Practice: Structure your prompt'
+          content:
+            description: |-
+              Take your app idea and write a structured prompt using the formula. Include at least: Product overview, User flow (3-5 steps), and one design preference.
+            placeholder: |-
+              ## Product overview
+              [What is this app?]
+
+              ## User flow
+              1. [First thing users do]
+              2. [Second thing users do]
+              3. [Third thing users do]
+
+              ## Design system
+              - [Colour or style preference]
+            subDescription: You don't need to fill every section perfectly. The goal is to practice organising your thoughts clearly.
+            checkerPrompt: |-
+              This is a structured prompt using the prompt formula. Evaluate whether it has clear sections and provides enough context for an AI app builder. Praise good organisation, suggest improvements where sections are vague.
+            systemPrompt: |-
+              You are a vibe coding mentor helping a beginner improve their prompt structure. Provide friendly feedback in British English. Focus on clarity and completeness of sections, not technical perfection.
+        - type: challenge-end
+          title: "You've learned the prompt formula!"
+          content:
+            description: You now have a structured approach to writing better prompts.
+            subDescription: Structure helps Lovable understand you. Small steps keep you in control. These two principles will serve you throughout your building journey.
+            nextModule: "**Next:** Let's explore Lovable's key features that help you build, test, and improve your app."
+
+    - title: Essential Lovable Features
+      isFree: false
+      skills:
+        - Bookmarking
+        - Reverting
+        - Visual Edits
+        - Preview Mode
+      description: Master the key features that make building with Lovable efficient and safe.
+      completionTime: '10:00'
+      steps:
+        - type: text
+          title: Your safety net features
+          content:
+            body: |-
+              Lovable has several features designed to keep you safe while you experiment. Think of these as your "undo" buttons and preview tools.
+
+              In this challenge, you'll learn:
+              - Bookmarking versions (your save points)
+              - Reverting changes (your undo button)
+              - Visual edits (click-to-change)
+              - Preview mode (see your app full-screen)
+
+              These features let you experiment fearlessly!
+            imageUrl: /courses/vibe-coding-lovable-00/safety-features.png
+          subtitle: Experiment without fear
+        - type: text
+          title: Bookmarking versions
+          content:
+            body: |-
+              When your app is working well, **bookmark that version**. It's like saving your game before a boss fight.
+
+              **How:** Click the bookmark icon on a response in your chat history.
+
+              **Why:** If future changes break something, you have a known good state to return to. You can also ask Lovable to "compare the current version to the last bookmarked version" to see what changed.
+
+              **When:** After every feature that works! Make it a habit.
+            imageUrl: /courses/vibe-coding-lovable-00/bookmark.png
+          subtitle: Save points for your app
+        - type: text
+          title: Reverting changes
+          content:
+            body: |-
+              Made a change that broke things? **Revert** to a previous version.
+
+              **How:** Find a previous response in your chat history and click the revert option.
+
+              **What happens:** Your project returns to that state. Changes after that point are undone (but the chat history remains, so you can see what went wrong).
+
+              **Pro tip:** Messages stay visible after reverting, so you can learn from what didn't work and try a different approach.
+            imageUrl: /courses/vibe-coding-lovable-00/revert.png
+          subtitle: Your undo button
+        - type: text
+          title: Visual edits
+          content:
+            body: |-
+              Want to change how something looks without writing a prompt? Use **Visual edits**.
+
+              **How:** Click the Visual edits button at the bottom of the screen, then click on any element you want to change.
+
+              **What you can do:**
+              - Change colours
+              - Edit text directly
+              - Adjust spacing
+              - Modify fonts
+
+              **Limitation:** This only works for static elements. Dynamic content (like book titles from a database) needs prompts.
+
+              **Bonus:** Editing text in Visual edits mode costs zero credits!
+            imageUrl: /courses/vibe-coding-lovable-00/visual-edits.png
+          subtitle: Point and click editing
+        - type: text
+          title: Preview mode
+          content:
+            body: |-
+              The preview panel shows your app, but it's small. To see it full-screen (as your users will), use **Preview**.
+
+              **How:** Click the expand/preview button to open your app in a new tab.
+
+              **Why:** Testing on the actual size helps you catch issues with layout, readability, and mobile responsiveness.
+
+              **Pro tip:** Test on your phone too! Share the preview link to yourself and open it on mobile.
+            imageUrl: /courses/vibe-coding-lovable-00/preview.png
+          subtitle: See your app as users will
+        - type: quiz-question
+          title: 'Quiz: Bookmarking'
+          content:
+            question: When should you bookmark a version in Lovable?
+            options:
+              - Only at the very end when the app is complete
+              - After every working feature is confirmed
+              - Once per week
+              - Only when Lovable suggests it
+            correctAnswer: 1
+            explanation: Bookmark after every working feature! Each bookmark is a safe point you can return to. If something breaks later, you'll know exactly where to go back to.
+        - type: quiz-question
+          title: 'Quiz: Visual edits'
+          content:
+            question: What can you NOT do with Visual edits?
+            options:
+              - Change button colours
+              - Edit static text
+              - Modify dynamic content from a database
+              - Adjust spacing
+            correctAnswer: 2
+            explanation: Visual edits work on static elements like headings and button labels. Dynamic content (things that change based on data) requires prompts to modify.
+        - type: text
+          title: The Code view
+          content:
+            body: |-
+              Lovable also has a **Code view** where you can see the actual code being generated. You don't need to understand it, but it's there if you're curious!
+
+              **When it's useful:**
+              - If you're learning and want to peek under the hood
+              - If something isn't working and you want to share the code with someone who can help
+              - If Lovable asks you to check something specific
+
+              For most building, you can ignore it completely and work purely through prompts and visual edits.
+            imageUrl: /courses/vibe-coding-lovable-00/code-view.png
+          subtitle: For the curious (optional)
+        - type: challenge-end
+          title: "You know your safety features!"
+          content:
+            description: You can now bookmark, revert, use visual edits, and preview like a pro.
+            subDescription: These features are your safety net. Bookmark often, revert when needed, and use visual edits for quick changes. Now you can experiment with confidence!
+            nextModule: "**Next:** Learn about credits, how they work, and how to use them wisely."
+
+    - title: Understanding Credits
+      isFree: false
+      skills:
+        - Credits
+        - Efficiency
+        - Cost Management
+      description: Learn how Lovable credits work and how to use them efficiently.
+      completionTime: '6:00'
+      steps:
+        - type: text
+          title: How credits work
+          content:
+            body: |-
+              Lovable uses a credit system. **Credits are consumed based on the complexity of your request**, not simply the number of prompts.
+
+              A simple text change uses fewer credits than generating an entire new feature. This is why structured, clear prompts matter; they help Lovable understand what you want without wasted effort.
+            imageUrl: /courses/vibe-coding-lovable-00/credits.png
+          subtitle: Complexity drives cost
+        - type: text
+          title: Tips for using credits wisely
+          content:
+            body: |-
+              **Progress in small steps:** Instead of one massive prompt, break your work into smaller pieces. Easier to understand = fewer wasted credits on fixing misunderstandings.
+
+              **Be specific:** Vague prompts lead to Lovable guessing, which might not match what you wanted. The clearer you are, the fewer revision cycles you need.
+
+              **Use visual edits for small changes:** Changing text, colours, or spacing? Visual edits are often free or very low cost compared to prompts.
+
+              **Bookmark working versions:** If you need to revert and redo, you won't waste credits rebuilding from scratch.
+          subtitle: Work smarter, not harder
+        - type: text
+          title: Don't let credits stop you
+          content:
+            body: |-
+              Here's an important mindset: **don't avoid building iteratively to "save" credits**.
+
+              Trying to cram everything into one prompt to save credits usually backfires. The resulting mess often costs more credits to fix than a steady, incremental approach.
+
+              Think of credits as fuel for exploration. A few well-spent credits on clear, small prompts can save many more later. Some back-and-forth while refining is normal and expected!
+          subtitle: Progress matters more than perfection
+        - type: quiz-question
+          title: 'Quiz: Credits'
+          content:
+            question: What's the best way to use credits efficiently?
+            options:
+              - Write one massive prompt with everything you want
+              - Avoid using Lovable until you have the perfect prompt
+              - Use small, clear prompts and iterate
+              - Only use visual edits
+            correctAnswer: 2
+            explanation: Small, clear prompts lead to predictable results. Large, vague prompts often need multiple revisions. Iterating in small steps is both more efficient and produces better results.
+        - type: challenge-end
+          title: "You understand credits!"
+          content:
+            description: You know how credits work and how to use them wisely.
+            subDescription: Clear prompts, small steps, and smart use of visual edits will help you build efficiently. Don't let credit worries stop you from experimenting; that's how you learn!
+            nextModule: "**Next:** Learn how to handle security issues and get ready to publish your app."
+
+    - title: Publishing Your App
+      isFree: false
+      skills:
+        - Publishing
+        - Security
+        - Metadata
+      description: Learn how to handle security issues and publish your app for the world to see.
+      completionTime: '10:00'
+      steps:
+        - type: text
+          title: Handling security issues
+          content:
+            body: |-
+              Before publishing, Lovable runs security checks on your app. If it finds potential issues, it will flag them.
+
+              **Don't panic!** Security warnings are normal in development. Lovable is just being careful. Usually, you can:
+              1. Click to see what the issue is
+              2. Ask Lovable to fix it
+              3. Review and approve the fix
+
+              Most issues have straightforward solutions that Lovable can handle for you.
+            imageUrl: /courses/vibe-coding-lovable-00/security-check.png
+          subtitle: Warnings are normal
+        - type: text
+          title: Before you publish
+          content:
+            body: |-
+              Before clicking publish, set up a few things:
+
+              **Favicon:** The small icon that appears in browser tabs. You can upload an image or ask Lovable to generate one.
+
+              **Meta tags:** These control how your app appears when shared on social media or search results. Include a title and description.
+
+              **Thumbnail:** The image shown when someone shares your link on social media.
+
+              You can prompt: *"Add a favicon, meta title 'Book Club Organiser', and description 'Vote on your next read together'."*
+            imageUrl: /courses/vibe-coding-lovable-00/metadata.png
+          subtitle: Favicon, meta tags, and thumbnail
+        - type: text
+          title: Publishing your app
+          content:
+            body: |-
+              Ready to publish? Click the **Publish** button and Lovable will make your app available on the internet.
+
+              You'll get a URL like `your-project-name.lovable.app` that anyone can visit.
+
+              **Important truth:** Don't wait for "perfect." Nobody will randomly find your app on the internet unless you share the link. You can publish early, share with a few people for feedback, and keep improving. Publishing doesn't mean it's finished!
+            imageUrl: /courses/vibe-coding-lovable-00/publish.png
+          subtitle: Your app goes live
+        - type: text
+          title: Lovable Cloud
+          content:
+            body: |-
+              **Lovable Cloud** is where your app's backend lives, the database, functions, and server-side logic.
+
+              When you enable features like user authentication or saving data, Lovable Cloud handles them. You can access it through the **Cloud** tab to:
+              - View logs (helpful for debugging)
+              - Check your database
+              - See function invocations
+
+              You don't need to understand everything here when starting out. Just know it exists for when you need it!
+            imageUrl: /courses/vibe-coding-lovable-00/lovable-cloud.png
+          subtitle: Your app's backend home
+        - type: quiz-question
+          title: 'Quiz: Publishing'
+          content:
+            question: Why should you not wait for your app to be "perfect" before publishing?
+            options:
+              - Because perfect apps get rejected
+              - Because nobody will find it unless you share the link, and you can keep improving it
+              - Because Lovable doesn't allow updates after publishing
+              - Because it costs more credits to wait
+            correctAnswer: 1
+            explanation: Publishing early lets you get real feedback while you continue improving. Your app won't appear in search results unless you promote it. You can publish, share with a few testers, and iterate based on their feedback.
+        - type: quiz-question
+          title: 'Quiz: Before publishing'
+          content:
+            question: What should you set up before publishing your app?
+            options:
+              - A marketing budget
+              - Favicon, meta tags, and thumbnail for sharing
+              - A legal team
+              - At least 100 features
+            correctAnswer: 1
+            explanation: Favicon (browser tab icon), meta tags (title and description), and thumbnail (social sharing image) help your app look professional when shared. These are quick to set up and make a good first impression!
+        - type: challenge-end
+          title: "You're ready to publish!"
+          content:
+            description: You know how to handle security issues, set up metadata, and publish your app.
+            subDescription: Publishing is exciting but also just the beginning. Share your URL, gather feedback, and keep building. Your app is now real and on the internet!
+            nextModule: "**Next:** Learn about advanced features like Planning mode, Knowledge files, and design themes."
+
+    - title: Powerful Features for Better Apps
+      isFree: false
+      skills:
+        - Planning Mode
+        - Knowledge Files
+        - Design Themes
+        - Assets
+      description: Discover advanced features that help you build more sophisticated apps.
+      completionTime: '10:00'
+      steps:
+        - type: text
+          title: Planning mode
+          content:
+            body: |-
+              **Planning mode** tells Lovable to think before acting. Instead of immediately building, it creates a plan and asks for your approval first.
+
+              **How to use it:** Click the mode toggle and select "Plan" instead of "Agent."
+
+              **When it's useful:**
+              - When you're unsure about the best approach
+              - When making significant changes
+              - When you want to understand what will change before it happens
+
+              Planning mode is like asking for a blueprint before construction starts.
+            imageUrl: /courses/vibe-coding-lovable-00/planning-mode.png
+          subtitle: Think before building
+        - type: text
+          title: Knowledge files
+          content:
+            body: |-
+              **Knowledge files** let you give Lovable persistent context about your project. Instead of repeating information in every prompt, you add it to a knowledge file.
+
+              **What to include:**
+              - Your brand guidelines
+              - Specific requirements that apply to every feature
+              - Terminology unique to your project
+              - Design preferences
+
+              Think of it as a briefing document that Lovable always has access to.
+            imageUrl: /courses/vibe-coding-lovable-00/knowledge-file.png
+          subtitle: Persistent context for your project
+        - type: text
+          title: Design themes
+          content:
+            body: |-
+              **Design themes** let you apply consistent styling across your app. You can set colours, fonts, and other visual properties that apply everywhere.
+
+              This is especially useful once your app grows beyond a few screens. Instead of specifying "use this blue for buttons" in every prompt, the theme handles it automatically.
+
+              You can access themes through the settings or ask Lovable to "set up a design theme with [your preferences]."
+            imageUrl: /courses/vibe-coding-lovable-00/design-themes.png
+          subtitle: Consistent styling everywhere
+        - type: text
+          title: Adding assets and API keys
+          content:
+            body: |-
+              **Assets** are files you upload to use in your app: images, icons, PDFs, etc. You can upload them through the interface and reference them in prompts.
+
+              **API keys** are secrets needed to connect to external services (like payment processors or email services). Lovable has a special "Secrets" section where you can safely store these.
+
+              **Important:** Never paste API keys directly into your prompts! Always use the dedicated Secrets section.
+            imageUrl: /courses/vibe-coding-lovable-00/assets-api-keys.png
+          subtitle: Files and secrets
+        - type: quiz-question
+          title: 'Quiz: Planning mode'
+          content:
+            question: When should you use Planning mode?
+            options:
+              - Never, it slows things down
+              - When you want to understand what will change before it happens
+              - Only for the first prompt
+              - Only when debugging
+            correctAnswer: 1
+            explanation: Planning mode is perfect for significant changes where you want to review the approach before Lovable starts building. It helps you catch potential issues before they happen and understand what you're about to get.
+        - type: quiz-question
+          title: 'Quiz: API keys'
+          content:
+            question: Where should you store API keys in Lovable?
+            options:
+              - In your prompts
+              - In the code directly
+              - In the dedicated Secrets section
+              - In knowledge files
+            correctAnswer: 2
+            explanation: API keys should always go in the Secrets section, never in prompts or code. This keeps them secure and prevents them from being accidentally exposed.
+        - type: challenge-end
+          title: "You've learned the power features!"
+          content:
+            description: You now know about Planning mode, Knowledge files, Design themes, and how to handle assets and secrets.
+            subDescription: These features help you build more sophisticated apps efficiently. Use Planning mode for big changes, Knowledge files for persistent context, and always keep secrets secure!
+            nextModule: "**Next:** It's time to build your first real app from start to finish!"
+
+    - title: Build Your Book Club Organiser
+      isFree: false
+      skills:
+        - Full App Building
+        - Practical Application
+        - End-to-End Development
+      description: Apply everything you've learned to build a complete app from scratch.
+      completionTime: '15:00'
+      steps:
+        - type: text
+          title: Putting it all together
+          content:
+            body: |-
+              You've learned the concepts. Now it's time to build something real!
+
+              In this challenge, you'll follow along as we build the **Book Club Organiser** step by step. You can:
+              - Build it exactly as shown
+              - Adapt the prompts for your own idea
+              - Or do both!
+
+              Remember: progress in small steps, bookmark often, and don't aim for perfect.
+            imageUrl: /courses/vibe-coding-lovable-00/lets-build.gif
+          subtitle: From idea to working app
+        - type: text
+          title: 'Step 1: The basic page'
+          content:
+            body: |-
+              Start with this prompt:
+
+              ```markdown
+              ## Product overview
+              A book club organiser where members suggest and vote on books.
+
+              ## User flow
+              1. See a list of suggested books with vote counts
+              2. Click a vote button to add a vote
+
+              ## Design system
+              - Warm, cozy colours (deep burgundy, cream)
+              - Clean, simple layout
+              - Mobile-first design
+              ```
+
+              Submit this and watch Lovable build your foundation. **Bookmark this version** once it's working!
+          subtitle: Foundation first
+        - type: text
+          title: 'Step 2: Add book suggestions'
+          content:
+            body: |-
+              Now add the ability to suggest books:
+
+              ```
+              Add a form at the top where users can suggest a new book. The form should have fields for book title and author name. When submitted, the book appears in the list with 0 votes.
+              ```
+
+              Test it by adding a few books. Does it work? **Bookmark this version!**
+          subtitle: Let users contribute
+        - type: text
+          title: 'Step 3: Polish the design'
+          content:
+            body: |-
+              Now make it look great:
+
+              ```
+              Make the book list visually appealing:
+              - Each book should be a card with slight shadow
+              - The book with the most votes should be highlighted with a subtle gold border
+              - Add a small icon next to the vote count
+              - Make the vote button more prominent
+              ```
+
+              Use Visual edits to fine-tune any text or colours that aren't quite right.
+          subtitle: Make it beautiful
+        - type: text
+          title: 'Step 4: Add finishing touches'
+          content:
+            body: |-
+              Before publishing, add the metadata:
+
+              ```
+              Add a favicon with a book icon, set the page title to "Book Club Organiser", and add a meta description "Vote on your next book club read together."
+              ```
+
+              Now publish your app! Share the link with someone and ask them to suggest a book and vote.
+          subtitle: Ready for the world
+        - type: reflection
+          title: Reflect on your build
+          content:
+            description: What surprised you about building this app? What would you do differently next time? What feature would you add next?
+            placeholder: |-
+              I was surprised by...
+
+              Next time I would...
+
+              The next feature I'd add is...
+            subDescription: Every app you build teaches you something. These reflections help cement your learning and prepare you for future projects.
+        - type: course-end
+          title: "Congratulations! You built your first app!"
+          content:
+            description: You've gone from zero to a working, published app!
+            subDescription: |-
+              In this micro-course, you learned:
+
+              ✓ **What Lovable and vibe coding are:** Building with words, not code
+
+              ✓ **Realistic expectations:** Fast initial progress, then thoughtful iteration
+
+              ✓ **The prompt formula:** Structured prompts get better results
+
+              ✓ **Essential features:** Bookmarking, reverting, visual edits, preview
+
+              ✓ **Credit efficiency:** Small steps and clear prompts
+
+              ✓ **Publishing:** Security, metadata, and going live
+
+              ✓ **Power features:** Planning mode, knowledge files, themes
+
+              You now have the foundation to build any web app idea you can imagine. Keep experimenting, keep learning, and most importantly—keep building!
+
+              **Recommended next:** Take our "Debugging with Lovable" micro-course to learn how to fix things when they go wrong, or "Build Valuable Products" to learn how to turn ideas into well-designed prompts.
+            nextModule: "Go build something amazing!"
+  titleSplit:
+    - 'Build Your First App'
+    - with Lovable
+  description: Learn the fundamentals of building web applications with Lovable, the AI-powered app builder. No coding required.
