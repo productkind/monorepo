@@ -8,17 +8,39 @@ course:
         - type: comic
           content:
             imageUrl: /comics/vibe-coding-product-management-00/panel-00.png
+            altText: |-
+              A dalmatian dog (called Dalmie) wearing a red shirt and yellow trousers stands in
+              front of a large empty whiteboard, holding a sticky note. Dalmie says, “Let’s figure
+              out exactly what I want to build…”
         - type: comic
           content:
             imageUrl: /comics/vibe-coding-product-management-00/panel-01.png
+            altText: |-
+              Dalmie stands in front of the board, now covered with many pink and yellow sticky
+              notes scattered across it. The dog looks overwhelmed, with spirals in its eyes,
+              and says, “I feel overwhelmed and unsure how to structure this. I have so many
+              ideas…”
         - type: comic
           content:
             imageUrl: /comics/vibe-coding-product-management-00/panel-02.png
+            altText: |-
+              The dog remains by the board full of sticky notes, now joined by a brightly coloured
+              bird (called Little Parrot) standing beside them. The bird speaks reassuringly,
+              saying, “Don’t worry, we can use some helpful frameworks for this. Let me walk
+              you through them.”
         - type: video
           title: Build a Valuable Product
           content:
-            youtubeId: w0Nwtxyi5zg
             videoUrl: /videos/lesson-vibe-coding-product-management-00-video-00.mp4
+            transcript: |-
+              When you start working on an app idea, it can be hard to know where to begin. In this
+              micro-course, you’ll define the problem you want to solve, understand your target
+              user, and sketch a simple storyboard that shows how your product helps them. You’ll
+              then break your idea into buildable steps using user story mapping, shape a focused
+              minimum viable product, and turn it into a clear prompt for an AI app builder.
+              You’ll finish with a small, workable version of your idea and a plan for gathering
+              early feedback. Most importantly, you’ll see that you can move an idea forward one
+              clear step at a time.
         - type: text
           title: Start with the problem
           content:
