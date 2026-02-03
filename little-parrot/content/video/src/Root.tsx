@@ -198,7 +198,7 @@ export const RemotionRoot: React.FC = () => {
         }}
       />
       <Composition
-        id="lesson-vibe-coding-tech-00-video-02"
+        id="lesson-vibe-coding-product-management-00-video-00"
         component={LessonVideo7}
         durationInFrames={FRAME_RATE}
         fps={FRAME_RATE}
