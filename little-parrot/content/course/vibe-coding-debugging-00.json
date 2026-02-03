@@ -19,25 +19,29 @@
           {
             "type": "comic",
             "content": {
-              "imageUrl": "/comics/vibe-coding-debugging-00/panel-00.png"
+              "imageUrl": "/comics/vibe-coding-debugging-00/panel-00.png",
+              "altText": "A dalmatian dog (called Dalmie) wearing a red shirt sits at a desk with a laptop, facing\nan orange robot. The robot asks, “Hi Dalmie, what would you like to build today?”"
             }
           },
           {
             "type": "comic",
             "content": {
-              "imageUrl": "/comics/vibe-coding-debugging-00/panel-01.png"
+              "imageUrl": "/comics/vibe-coding-debugging-00/panel-01.png",
+              "altText": "The dog and the orange robot sit side by side again at the desk. The dog says, “Let’s \nbuild the voting feature for my book club organiser application!” The robot replies\nconfidently, “Okay, here it is. Check it out!”"
             }
           },
           {
             "type": "comic",
             "content": {
-              "imageUrl": "/comics/vibe-coding-debugging-00/panel-02.png"
+              "imageUrl": "/comics/vibe-coding-debugging-00/panel-02.png",
+              "altText": "The dog looks frustrated, with spirals in its eyes, staring at the laptop. The dog says,\n“I’ve checked it and it doesn’t work…” and then, “It still doesn’t work…” The robot\nresponds apologetically, saying, “You’re absolutely right, I apologise. It’s fixed now!”"
             }
           },
           {
             "type": "comic",
             "content": {
-              "imageUrl": "/comics/vibe-coding-debugging-00/panel-03.png"
+              "imageUrl": "/comics/vibe-coding-debugging-00/panel-03.png",
+              "altText": "The dog and robot are back at the desk, joined by a brightly coloured bird (called Little\nParrot). Little Parrot says cheerfully, “Let’s put our detective hats on and figure out\ntogether what’s happening here!” The mood shifts towards collaborative problem-solving."
             }
           },
           {
@@ -53,7 +57,8 @@
             "type": "video",
             "title": "Fix Bugs with Confidence",
             "content": {
-              "videoUrl": "/videos/lesson-vibe-coding-debugging-00-video-00.mp4"
+              "videoUrl": "/videos/lesson-vibe-coding-debugging-00-video-00.mp4",
+              "transcript": "If you’ve ever built something in Lovable and thought, \"Why isn't this working?\", you’re already debugging.\nDebugging isn’t a sign that you’ve failed, or that you’re not technical enough. It’s simply the process of understanding why your app isn't doing what you expected, and then fixing it.\nHere’s something that might surprise you: even experienced developers spend a massive part of their day fixing things that don't work. Bugs happen to everyone.\nThe difference between someone who feels stuck and someone who moves forward isn't being \"more technical.\" It’s knowing what to do when things go wrong.\nThat’s exactly what you’ll learn here: how to debug with confidence.\nIn this micro-course, you’ll learn to identify different types of bugs, spot their root causes, and investigate properly before jumping into fixes.\nYou’ll pick up the same habits professional developers use:\nHow to prevent bugs in the first place. How to investigate issues step by step.\nAnd how to use Lovable’s debugging tools properly, instead of guessing or getting stuck in \"fix-break\" loops.\nBy the end, you’ll have a practical toolkit for troubleshooting. When something breaks, you’ll know where to look, what questions to ask, and exactly how to move forward.\nBugs will still happen. But they won’t stop you anymore."
             }
           },
           {
