@@ -50,13 +50,11 @@
             "subtitle": "When reality doesn't match expectations"
           },
           {
-            "type": "text",
-            "title": "Bugs are normal",
+            "type": "video",
+            "title": "Fix Bugs with Confidence",
             "content": {
-              "body": "THIS WILL BE THE VIDEO\nWhen you build applications with AI app builders, things will sometimes break. Debugging is simply\nthe process of finding and fixing those problems. In this micro-lesson, you’ll learn practical\ntechniques and core concepts to help you troubleshoot issues in AI-built applications. By the end,\nyou’ll be able to recognise common problems, identify their root causes, and fix them more\neffectively. Here’s something professional developers know well: bugs happen to everyone. Even\nexperienced engineers spend much of their time fixing things that do not work as expected. Progress\nis not about being “technical enough”. It’s about knowing what to do when things go wrong or prevent\nthem occurring on the first place. That’s exactly what this micro-course is designed to teach.",
-              "imageUrl": "/courses/vibe-coding-debugging-00/bugs-normal.gif"
-            },
-            "subtitle": "Every builder encounters them"
+              "videoUrl": "/videos/lesson-vibe-coding-debugging-00-video-00.mp4"
+            }
           },
           {
             "type": "text",
@@ -78,7 +76,7 @@
             "type": "text",
             "title": "Types of bugs",
             "content": {
-              "body": "Let ’s briefly explore each type of bug in the next steps. Some of them are so easy to\nfix that we cover them in the challenge right away, but others require more depth so\nthere is going to be a dedicated challenge later in the course."
+              "body": "Let ’s briefly explore each type of bug in the next steps. Some of them are so easy to\nfix that we cover them in this challenge right away. Others require more depth, so\nthey get their own dedicated challenges later in the course."
             },
             "subtitle": "Overview of bug categories"
           },
@@ -96,7 +94,7 @@
             "title": "Types of bugs: Launch blockers",
             "content": {
               "body": "These errors can look intimidating, but they usually come with clear messages explaining what went wrong. Common causes include syntax errors, missing files, or incompatible code.\n\nBecause these instructions are explicit and easy to interpret, and because AI is well suited to reading them, launch blockers are often the easiest bugs to fix.\n\nLovable is even designed to automatically show a **Try to Fix** button when these errors occur, allowing you to resolve them quickly with a single click.\n\nIf it doesn’t show the button, you can always prompt Lovable directly: `\"There’s a build error: [paste error message]. Fix it.\"`",
-              "imageUrl": "/courses/vibe-coding-debugging-00/build-error.png"
+              "imageUrl": "/courses/vibe-coding-debugging-00/build-error.webp"
             },
             "subtitle": "When the app won't start"
           },
@@ -104,8 +102,8 @@
             "type": "text",
             "title": "Types of bugs: Freezes and misbehaviours",
             "content": {
-              "body": "These bugs occur when specific features or actions in your app do not work as expected. The app starts, but something goes wrong during use.\nIn technical terms, these are often called **runtime errors** or **logical errors**.\nRuntime refers to when the app is running, and logical errors mean the code runs but produces incorrect results.\n\nExamples include:\n- A button that does nothing when clicked\n- Data that fails to save or load correctly\n- Features that behave inconsistently or unpredictably",
-              "imageUrl": "/courses/vibe-coding-debugging-00/misbehaviour.png"
+              "body": "These bugs occur when specific features or actions in your app do not work as expected. The app starts, but something goes wrong during use.\nIn technical terms, these are often called **runtime errors** or **logical errors**.\n\nRuntime refers to when the app is running, and logical errors mean the code runs but produces incorrect results.\n\nExamples include:\n- A button that does nothing when clicked\n- Data that fails to save or load correctly\n- Features that behave inconsistently or unpredictably",
+              "imageUrl": "/courses/vibe-coding-debugging-00/wrong.webp"
             },
             "subtitle": "When features don't work as expected"
           },
@@ -122,7 +120,7 @@
             "title": "Types of bugs: Visual glitches",
             "content": {
               "body": "Visual glitches affect the appearance of your app. These bugs may involve incorrect colours, misaligned elements, or broken layouts.\n\nWhile they may not impact functionality directly, visual glitches can harm user experience and make your app look unprofessional.",
-              "imageUrl": "/courses/vibe-coding-debugging-00/visual-glitch.png"
+              "imageUrl": "/courses/vibe-coding-debugging-00/glitch.webp"
             },
             "subtitle": "When things look wrong"
           },
@@ -131,7 +129,7 @@
             "title": "Types of bugs: Visual glitches",
             "content": {
               "body": "In many cases visual glitches are not easily fixed by only prompting Lovable, but\nfortunately you can attach screenshots to your prompts to help Lovable understand exactly\nwhat is wrong.",
-              "imageUrl": "/courses/vibe-coding-debugging-00/screenshot.png"
+              "imageUrl": "/courses/vibe-coding-debugging-00/attach.png"
             },
             "subtitle": "When things look wrong"
           },
@@ -139,8 +137,8 @@
             "type": "text",
             "title": "Types of bugs: Security vulnerabilities",
             "content": {
-              "body": "Security vulnerabilities are bugs that could potentially expose your app or its data to unauthorized access or malicious attacks.\n\nThe features of your app could work perfectly well, but if there are weaknesses in how data is handled or protected, users' safety could be at risk.\n\nSoftware developers are auditing their code for security vulnerabilities all the time, as these problems can have serious consequences.",
-              "imageUrl": "/courses/vibe-coding-debugging-00/security.png"
+              "body": "Security vulnerabilities are bugs that could potentially expose your app or its data to unauthorised access or malicious attacks.\n\nThe features of your app could work perfectly well, but if there are weaknesses in how data is handled or protected, users' safety could be at risk.\n\nSoftware developers are auditing their code for security vulnerabilities all the time, as these problems can have serious consequences.",
+              "imageUrl": "/courses/vibe-coding-debugging-00/lock.gif"
             },
             "subtitle": "When safety is at risk"
           },
@@ -148,7 +146,7 @@
             "type": "text",
             "title": "Types of bugs: Security vulnerabilities",
             "content": {
-              "body": "While security vulnerabilities can be complex, Lovable can help you identify and fix many common issues.\n\nLovable has a built-in security auditor that can scan your app for potential vulnerabilities and suggest fixes.\n\nWe will dedicate an entire challenge later in the course to understanding and addressing security vulnerabilities effectively."
+              "body": "While security vulnerabilities can be complex, Lovable helps you identify and fix many common issues.\n\nLovable has a **built-in security auditor** that scans your app for potential vulnerabilities and suggests fixes.\n\nWe dedicate an entire challenge in this course to understanding and addressing security vulnerabilities effectively."
             },
             "subtitle": "When safety is at risk"
           },
@@ -179,7 +177,7 @@
                 "A minor performance slowdown"
               ],
               "correctAnswer": 2,
-              "explanation": "These errors stop the app from loading entirely. They are usually come with clear error messages."
+              "explanation": "These errors stop the app from loading entirely. They usually come with clear error messages in Lovable."
             }
           },
           {
@@ -194,7 +192,7 @@
                 "They only happen once"
               ],
               "correctAnswer": 0,
-              "explanation": "Build errors typically provide explicit messages about what went wrong. This makes them well suited for AI-assisted fixes, such as Lovable’s Try to Fix feature."
+              "explanation": "Build errors typically provide explicit messages about what went wrong. This makes them well suited for AI-assisted fixes, such as Lovable’s 'Try to Fix' feature."
             }
           },
           {
@@ -204,7 +202,7 @@
               "question": "Which of the following is an example of a freeze or misbehaviour?",
               "options": [
                 "The app fails to start and shows an error message",
-                "The layout colours are slightly off",
+                "The layout is slightly off",
                 "A button does nothing when clicked",
                 "A missing image in the header"
               ],
@@ -242,7 +240,7 @@
             "content": {
               "nextModule": "**Next:** Prevention is better than cure! Learn powerful habits that dramatically reduce how often you encounter bugs.",
               "description": "You understand what bugs are and how to approach them.",
-              "subDescription": "Remember: diagnose before you fix, and follow the three-attempt rule. Now let's learn how to prevent many bugs from happening in the first place!"
+              "subDescription": "Remember: diagnose before you fix. Understanding the different types of bugs helps you to guide Lovable in fixing them more effectively. This mindset is the first step to becoming a debugging master \\U0001F4AA. Great job! Now let's learn how to prevent many bugs from happening in the first place!"
             }
           }
         ]
@@ -262,8 +260,8 @@
             "type": "text",
             "title": "Prevention is easier than cure",
             "content": {
-              "body": "The best debugging strategy? Avoid bugs in the first place! While you can't prevent every bug, certain habits dramatically reduce how often you get stuck.\n\nThink of it like cooking: it's much easier to add salt gradually and taste as you go than to try to fix an over-salted dish. The same principle applies to building apps.",
-              "imageUrl": "/courses/vibe-coding-debugging-00/prevention.gif"
+              "body": "The best debugging strategy? **Avoid bugs in the first place!** While you can't prevent every bug, certain habits dramatically reduce how often you get stuck.\n\nThink of it like cooking: it's much easier to add salt gradually and taste as you go than to try to fix an over-salted dish. The same principle applies to building apps.",
+              "imageUrl": "/courses/vibe-coding-debugging-00/wash-hand.gif"
             },
             "subtitle": "Simple habits that save hours of frustration"
           },
@@ -271,7 +269,7 @@
             "type": "text",
             "title": "The small prompt habit",
             "content": {
-              "body": "One of the most common causes of bugs is asking for too much at once. When you give Lovable a huge, complex prompt, many things can go wrong, and it's hard to know which part caused the problem.\n\n**Instead of this:**\n\"Add voting functionality with a vote button that increases the count, shows who voted, prevents double voting, sends notifications, and displays a leaderboard.\"\n\n**Try this:**\n\"Add a Vote button next to each book suggestion that increases the count if pushed.\"\n\nThen test. Then add the next small piece."
+              "body": "One of the most common causes of bugs is asking for too much at once. When you give Lovable a huge, complex prompt, many things can go wrong, and it's hard to know which part caused the problem.\n\n**Instead of this:**\n\"Add voting functionality with a vote button that increases the count, shows who voted, prevents double voting, sends notifications, and displays a leaderboard.\"\n\n**Try this:**\n\"Add a Vote button next to each book suggestion that increases the count if pushed.\"\n\nThen test if it works as you intended. \n\nThen add the next small piece."
             },
             "subtitle": "One thing at a time"
           },
@@ -279,7 +277,7 @@
             "type": "text",
             "title": "Why small prompts work",
             "content": {
-              "body": "When you work in small steps:\n\n**Bugs are easier to find.** If something breaks, you know it was the last small change you made.\n\n**Bugs are easier to fix.** Less code changed means less to test and undo.\n\n**You feel more in control.** Each small win builds confidence.\n\nProfessional developers follow this same pattern. They call it \"making small commits\" – completing and testing one small piece before moving to the next."
+              "body": "When you work in small steps:\n\n- **Bugs are easier to find.** If something breaks, you know it was the last small change you made.\n\n- **Bugs are easier to fix.** Less code changed means less to test and undo.\n\n- **You feel more in control.** Each small win builds confidence.\n\nProfessional developers follow this same pattern. They call it \"making small commits\" – completing and testing one small piece before moving to the next."
             },
             "subtitle": "The wisdom behind the habit"
           },
@@ -288,7 +286,7 @@
             "title": "Test after every change",
             "content": {
               "body": "After Lovable makes a change, **test it immediately**. Don't wait until you've added five more features.\n\nFor Dalmie's voting feature, testing means:\n1. Click the Vote button\n2. Does the vote count increase on screen?\n3. Refresh the page – is the vote still there?\n4. Try voting from a different account\n\nIf something's wrong, you'll catch it while the change is fresh. Catching bugs early means they're much easier to fix.",
-              "imageUrl": "/courses/vibe-coding-debugging-00/test-each-change.gif"
+              "imageUrl": "/courses/vibe-coding-debugging-00/test.gif"
             },
             "subtitle": "Catch bugs while they're fresh"
           },
@@ -296,7 +294,7 @@
             "type": "text",
             "title": "Bookmark your stable versions",
             "content": {
-              "body": "Lovable keeps a history of every change. You can **bookmark** working versions so you can always get back to them.\n\n**After every working feature:**\nClick the bookmark option to mark that version as stable.\n\n**Why this matters:**\nIf a bug appears later, you have a known good state to return to. You can compare what changed between the working version and the broken one.\n\n**Pro tip:** After bookmarking, you can prompt Lovable:\n\"Compare the current version to the last bookmarked version. What changed?\"",
+              "body": "Lovable keeps a history of every change. You can **bookmark** working versions so you can always get back to them.\n\n**After every working feature:**\nClick the bookmark option to mark that version as stable.\n\n**Why this matters:**\nIf a bug appears later, you have a known good state to return to. You can compare what changed between the working version and the broken one.\n\n**Pro tip:** If you use bookmarks and something in your app breaks, you can prompt Lovable:\n\n```\nCompare the current version to the last bookmarked version. What has changed?\n```",
               "imageUrl": "/courses/vibe-coding-debugging-00/bookmark-version.png"
             },
             "subtitle": "Always have a safe point to return to"
@@ -305,15 +303,15 @@
             "type": "text",
             "title": "Dalmie's prevention checklist",
             "content": {
-              "body": "When Dalmie adds a new feature to her Book Club Organiser, she now follows this checklist:\n\n✓ **One feature at a time.** First the Vote button. Then the vote count display. Then preventing double votes.\n\n✓ **Test immediately.** After each change, she clicks through to make sure it works.\n\n✓ **Bookmark when it works.** Each stable version gets bookmarked.\n\nThis simple routine has cut her debugging time dramatically. When bugs do appear, she knows exactly where to look."
+              "body": "When Dalmie adds a new feature to her Book Club Organiser, she now follows this checklist:\n\n✓ **One feature at a time.** First the Vote button. Then the vote count display. Then preventing double votes.\n\n✓ **Test immediately.** After each change, she clicks through her app to make sure it works as expected.\n\n✓ **Bookmark when it works.** Each stable version gets bookmarked.\n\nThis simple routine has cut her debugging time dramatically. When bugs do appear, she knows exactly which change caused the issue."
             },
             "subtitle": "A practical routine"
           },
           {
             "type": "text",
-            "title": "Understanding credits",
+            "title": "Aren't small prompts more expensive?",
             "content": {
-              "body": "You might worry about using credits while building and debugging. Here's some perspective:\n\n**Building iteratively is normal.** Lovable's pricing accounts for back-and-forth conversation.\n\nEven if you spend credits on several conversations to fix a bug, compare that to hiring a developer at $50-150 per hour. A debugging session that costs a few credits is incredibly cost-effective!\n\nDon't let credit concerns stop you from proper testing and investigation. A few credits spent finding the root cause can save many more wasted on repeated failed fixes.\n\nAlso, if you follow the prevention habits, you'll use fewer credits overall by avoiding complex bugs."
+              "body": "It’s tempting to cram everything into one big prompt to save credits. In practice, this usually costs more.\n\nLarge prompts increase the chance that something goes wrong, which leads to rework and wasted credits.\n\nPrompting Lovable in smaller, clearer steps is often cheaper overall. You get more predictable results, spot issues earlier, and avoid messy fixes.\n\n**Lovable is designed for iterative work.** A bit of back-and-forth while debugging is also normal.\n\nDon’t avoid building iteratively to “save” credits. A few well-spent credits to build in small steps can save many more later on."
             },
             "subtitle": "Credits well spent"
           },
@@ -328,7 +326,7 @@
                 "To make bugs easier to find and fix"
               ],
               "question": "Why is breaking features into small prompts helpful for preventing bugs?",
-              "explanation": "When you work in small steps, you always know what changed if something breaks. If a bug appears, it must be from the last small change — making it much easier to find and fix than hunting through a large, complex change. Also it makes sure that Lovable adds less unwanted functionality.",
+              "explanation": "When you work in small steps, you always know what changed if something breaks. If a bug appears, it must be from the last small change, making it much easier to find and fix than hunting through a large, complex change. Also it makes sure that Lovable adds less unwanted functionality.",
               "correctAnswer": 3
             }
           },
@@ -369,7 +367,7 @@
       },
       {
         "title": "How Developers Investigate Bugs",
-        "isFree": false,
+        "isFree": true,
         "skills": [
           "Frontend Logs",
           "Backend Logs",
@@ -387,8 +385,8 @@
             "type": "text",
             "title": "Meet Dalmie's challenge",
             "content": {
-              "body": "Dalmie is building her Book Club Organiser app in Lovable. Yesterday, everything was working beautifully. Members could suggest books and vote on them.\n\nToday, she added a feature to show how many votes each book has received. But now when she clicks the Vote button... nothing happens. No error message appears. The vote count doesn't change. The button looks normal.",
-              "imageUrl": "/courses/vibe-coding-debugging-00/dalmie-stuck.png"
+              "body": "Dalmie is building her Book Club Organiser app in Lovable. Yesterday, everything was working beautifully, members could suggest books for the book club.\n\nToday, she added a feature to be able to vote on each book. But now when she clicks the Vote button... nothing happens. No error message appears. The vote count doesn't change. The button looks normal.",
+              "imageUrl": "/comics/vibe-coding-debugging-00/panel-04.png"
             },
             "subtitle": "A debugging story"
           },
@@ -404,8 +402,8 @@
             "type": "text",
             "title": "How developers investigate",
             "content": {
-              "body": "When professional developers encounter a bug, they don't guess. They gather clues systematically using specific techniques and tools.\n\nIn this challenge, you'll learn the same investigation techniques that developers use – and that Lovable uses too. Understanding these will help you find bugs faster and communicate with Lovable more effectively.",
-              "imageUrl": "/courses/vibe-coding-debugging-00/detective.gif"
+              "body": "When professional developers encounter a bug, they don't guess. They gather clues systematically using specific techniques and tools.\n\nIn this challenge, you'll learn the same **investigation techniques** that developers use – and that Lovable uses too. Understanding these will help you to communicate with Lovable more effectively and fix bugs faster.",
+              "imageUrl": "/courses/vibe-coding-debugging-00/spy.gif"
             },
             "subtitle": "Gathering clues like a professional"
           },
@@ -422,7 +420,7 @@
             "title": "Pinpointing the issue",
             "content": {
               "body": "Beside the clues in the previous step, there are tools and strategies to help you investigate further.\nWe need to check each part of the application to see where the problem lies, from the user interface\n(frontend) to the server and database (backend).",
-              "imageUrl": "/courses/vibe-coding-debugging-00/investigate.gif"
+              "imageUrl": "/courses/vibe-coding-debugging-00/checklist.gif"
             },
             "subtitle": "A systematic approach"
           },
@@ -430,8 +428,8 @@
             "type": "text",
             "title": "Frontend logs: The browser Console",
             "content": {
-              "body": "Your web browser has a secret superpower called **DevTools**. It includes a **Console** where your app writes messages and errors.\n\n**To open DevTools:**\n- **Windows/Linux:** Press `F12` or `Ctrl + Shift + I`\n- **Mac:** Press `Cmd + Option + I`\n- **Or:** Right-click anywhere on the page → \"Inspect\" → click \"Console\" tab\n\nWhen something goes wrong on the frontend, error messages appear here in red. Even when there's no visible error, the Console might contain clues.",
-              "imageUrl": "/courses/vibe-coding-debugging-00/devtools-console.gif"
+              "body": "Your web browser has a secret superpower called **DevTools**. It includes a **Console** where your app writes messages and errors.\n\n**To open DevTools:**\n- **Windows/Linux:** Press `F12` or `Ctrl + Shift + I`\n- **Mac:** Press `Cmd + Option + I`\n- **Or:** Right-click anywhere on the page → \"Inspect\"\n\nThen click the **Console** tab.\n\nWhen something goes wrong on the frontend, error messages appear here in red. Even when there's no visible error, the Console might contain clues.",
+              "imageUrl": "/courses/vibe-coding-debugging-00/devtools.webp"
             },
             "subtitle": "Where frontend errors appear"
           },
@@ -439,7 +437,7 @@
             "type": "text",
             "title": "What is the Console?",
             "content": {
-              "body": "The Console is like a diary for your app. It records:\n- Errors that occur\n- Warnings about potential issues\n- Debug messages from the code\n\nDevelopers (and Lovable) use the Console to see what went wrong when bugs appear. Even if nothing seems broken on screen, the Console might reveal hidden problems."
+              "body": "The **Console** is like a diary for your app. It records:\n- Errors that occur\n- Warnings about potential issues\n- Messages you add the code to check what your app is doing at a specific moment\n\nDevelopers (and Lovable) use the Console **to see what went wrong** when bugs appear. Even if nothing seems broken on the screen, the Console might reveal hidden problems."
             },
             "subtitle": "The app's diary of events"
           },
@@ -447,7 +445,7 @@
             "type": "text",
             "title": "Errors in software",
             "content": {
-              "body": "When code runs into a problem, it often throws an **error**, or also known as **Exception**. Errors are like red flags that something went wrong.\n\nUsually an error looks like this in the Console:\n\n```\nUncaught TypeError: Cannot read properties of undefined (reading 'title')\n    at renderBook (BookList.js:45)\n    at onClick (VoteButton.js:10)\n```\nThe first line describes the error type and message. The lines below show where in the code the error occurred (called a **stack trace**).\n\nIt can look scary, but you do not need to understand every detail. Simply knowing that an\nerror occurred is already a big clue. We are even happy to see it, because when we pass\nthe error message to Lovable, it can often fix the problem straight away."
+              "body": "When code runs into a problem, it often throws an **error**, or also known as an **Exception**. Errors are like red flags that something went wrong.\n\nUsually an error looks like this in the Console:\n\n```\nUncaught TypeError: Cannot read properties of undefined (reading 'title')\n    at renderBook (BookList.js:45)\n    at onClick (VoteButton.js:10)\n```\nThe first line describes the error type and message. The lines below show where in the code the error occurred (called a **stack trace**).\n\nIt can look scary, but you do not need to understand every detail. Simply knowing that an\nerror occurred is already a big clue, and you can copy-past it for Lovable. \n\nWe are even happy to see it, because when we pass\nthe error message to Lovable, it can often fix the problem straight away."
             },
             "subtitle": "When code runs into problems"
           },
@@ -455,21 +453,22 @@
             "type": "text",
             "title": "Errors are you friend",
             "content": {
-              "body": "We advise you to read error messages carefully. They are your friends when debugging. At\nfirst, they may seem like gibberish, but there is a good chance they already contain\nhints that help you understand what is wrong. Over time, you will also get better at\nreading error messages as you practise more."
-            }
+              "body": "We advise you to read error messages carefully. They are your friends when debugging. At\nfirst, they may seem like gibberish, but there is a good chance they contain\nhints that help you understand what is wrong. Over time, you will also get better at\nreading error messages as you practise more."
+            },
+            "subtitle": "Read the error messages"
           },
           {
             "type": "text",
             "title": "How to produce the error messages",
             "content": {
-              "body": "To see error messages in the Console, you often need to **reproduce the bug** while DevTools is open.\n\nFor Dalmie's Vote button bug:\n1. Open the app preview in a new tab\n2. Open DevTools (on that tab) and go to the Console tab\n3. Click the Vote button\n4. Look for any new error messages that appear in red\n\nIf an error shows up, copy the entire message (including the stack trace) to share with Lovable. This information is crucial for diagnosing and fixing the bug."
+              "body": "To see error messages in the Console, you often need to **reproduce the bug** while DevTools is open.\n\nFor Dalmie's Vote button bug:\n1. Open the **app preview** in a new tab\n2. Open **DevTools** (on that tab) and go to the **Console** tab\n3. **Click** the Vote button\n4. Look for any new **error messages** that appear in red\n\nIf an error shows up, copy **the entire message** (including the stack trace) to share with Lovable. This information is crucial for diagnosing and fixing the bug."
             }
           },
           {
             "type": "text",
             "title": "The Network tab",
             "content": {
-              "body": "Next to the Console in DevTools is the **Network tab**. This shows every request your app makes to the backend.\n\nEach row is a request. Look for:\n- **Default color (200)** — Success, request worked\n- **Red (400, 401, 403, 404, 500)** — Failed, something went wrong\n\nClicking a failed request shows details about what went wrong. This is especially useful for cases where nothing appears in the Console.\n\n**Dalmie's discovery:** When her Vote button did nothing, the Console was empty. But the Network tab showed a red `401` error on the vote request – the backend was rejecting her request because she wasn't properly logged in!",
+              "body": "In the DevTools, there is also a **Network tab**. This shows every request your app makes to the backend.\n\nEach row is a request. In the **Status** column, look for:\n- **200** – Success, request worked\n- **400, 401, 403, 404, or 500** – Failed, something went wrong\n\n**Clicking a failed request** shows details about what went wrong. This is especially useful for cases where nothing appears in the Console.\n\n**Dalmie's discovery:** When her Vote button did nothing, the Network tab showed a red `500` error on the vote request. This means, the backend crashed because something didn't work on the server.",
               "imageUrl": "/courses/vibe-coding-debugging-00/network-tab.png"
             },
             "subtitle": "Watching backend communication"
@@ -478,7 +477,7 @@
             "type": "text",
             "title": "HTTP status codes",
             "content": {
-              "body": "The frontend talks to the backend using **HTTP requests**. Each request gets a response with a **status code** indicating success or failure.\nThose numbers on requests (200, 401, etc.) are the **status codes**. Here are the important ones:\n\n**200** — Success! Everything worked.\n\n**400** — Bad request. The data sent was wrong or missing something.\n\n**401** — Not authenticated. The user needs to log in.\n\n**403** — Forbidden. User is logged in but doesn't have permission.\n\n**404** — Not found. The thing requested doesn't exist.\n\n**500** — Server error. Something crashed on the backend.\n\nThe first digit tells you the category: 2xx = success, 4xx = client problem, 5xx = server problem.\nIf there is a failed request, that will also show up in the Console as an error message."
+              "body": "The frontend talks to the backend using **HTTP requests**. Each request gets a response with a **status code** indicating success or failure.\nThose numbers on requests (200, 401, etc.) are the **status codes**. Here are the important ones:\n\n**200** — Success! Everything worked.\n\n**400** — Bad request. The data sent was wrong or missing something.\n\n**401** — Not authenticated. The user needs to log in.\n\n**403** — Forbidden. User is logged in but doesn't have permission.\n\n**404** — Not found. The thing requested doesn't exist.\n\n**500** — Server error. Something crashed on the backend.\n\nThe first digit tells you the category: \n- **2xx = success**, \n- **4xx = client problem**, \n- **5xx = server problem**.\n\nIf there is a failed request, it will likely also show up in the Console as an error message."
             },
             "subtitle": "What the numbers mean"
           },
@@ -486,16 +485,16 @@
             "type": "text",
             "title": "Investigate further",
             "content": {
-              "body": "If the Console and Network tab don't reveal the full issue, it's time to check the backend logs.\n\nBackend logs record what happens on the server side, so you cannot read it in the browser's console.\n\nIn the next step, we'll explore how to access and interpret Lovable's backend logs.",
-              "imageUrl": "/courses/vibe-coding-debugging-00/investigate-further.gif"
+              "body": "If the **Console** and **Network** tabs don't reveal the full issue, it's time to check the backend logs.\n\n**Backend logs** record what happens on the server side, so you cannot read them in the browser's console.\n\nIn the next step, we'll explore how to access and interpret Lovable's backend logs.",
+              "imageUrl": "/courses/vibe-coding-debugging-00/detective.gif"
             }
           },
           {
             "type": "text",
             "title": "Backend logs: Lovable Cloud",
             "content": {
-              "body": "When your app has backend functions, Lovable Cloud keeps logs of what happens.\n(If you don't remember, backend functions are pieces of code that run on the server to handle tasks like saving data, sending emails, or processing payments.)\n\n**How to access logs:**\n1. In Lovable, click the **`+` button** next to Preview\n2. Select the **Cloud tab**\n3. Click **Logs**\n\nThe logs show:\n- When backend functions ran\n- What data they received\n- Any errors that occurred (the same type of error messages you saw in the Console)\n- Success or failure messages\n\nThis is where you'll find clues for silent bugs that don't show errors in the browser.",
-              "imageUrl": "/courses/vibe-coding-debugging-00/cloud-logs-location.png"
+              "body": "When your app has backend functions, Lovable Cloud keeps logs of what happens.\n\n*(As a reminder, backend functions are pieces of code that run on the server to handle tasks like saving data, sending emails, or processing payments.)*\n\n**How to access the backend logs:**\n1. In Lovable, click the **`+` button** next to Preview\n2. Select the **Cloud tab**\n3. Click **Logs**\n\n**The logs show:**\n- When backend functions ran\n- What data they received\n- Any errors that occurred (the same type of error messages you saw in the Console)\n- Success or failure messages\n\nThis is where you'll find clues for silent bugs that don't show errors in the browser.",
+              "imageUrl": "/courses/vibe-coding-debugging-00/cloud-logs.webp"
             },
             "subtitle": "Behind-the-scenes clues"
           },
@@ -503,8 +502,8 @@
             "type": "text",
             "title": "Function invocations",
             "content": {
-              "body": "In the Cloud tab, you can see **function invocations** – a record of each time a backend function was called.\n\nYou'll see entries like:\n\n✅ `submit-vote` - Success (200)\n❌ `submit-vote` - Failed (500)\n❌ `submit-vote` - Failed (401)\n\nThis tells you:\n- Was the function called at all? (Maybe the button isn't connected)\n- Did it succeed or fail?\n- What was the status code? (Tells you why it failed)\n\nClicking an invocation often shows more details about what went wrong.",
-              "imageUrl": "/courses/vibe-coding-debugging-00/invocations.png"
+              "body": "In Lovable, in the **Cloud** tab, you can see **function invocations**. They are records of each time a backend function was called.\n\nYou'll see entries like:\n\n- ✅ `submit-vote` - Success (200)\n- ❌ `submit-vote` - Failed (500)\n- ❌ `submit-vote` - Failed (401)\n\nThis tells you:\n- Was the function called at all? (Maybe the button isn't connected)\n- Did it succeed or fail?\n- What was the status code? (Tells you why it failed)\n\nClicking an invocation often shows more details about what went wrong.",
+              "imageUrl": "/courses/vibe-coding-debugging-00/invocations.webp"
             },
             "subtitle": "Did the function even run?"
           },
@@ -513,7 +512,7 @@
             "title": "Checking your database",
             "content": {
               "body": "Sometimes the function runs successfully, but data still seems wrong. The next place to check is the **database itself**.\n\nIn the Lovable Cloud tab, you can view your database tables:\n1. Look for the **Database** section\n2. Click on the table you're investigating (e.g., `votes`)\n3. Check if the data you expected is actually there\n\n**Dalmie's discovery:** Her vote function showed \"Success (200)\" but votes weren't displaying. She checked the `votes` table and found her votes WERE being saved – but with the wrong `book_id`. The bug was in what data was being sent, not in the saving process!",
-              "imageUrl": "/courses/vibe-coding-debugging-00/database-check.png"
+              "imageUrl": "/courses/vibe-coding-debugging-00/database-check.webp"
             },
             "subtitle": "Is the data actually there?"
           },
@@ -521,8 +520,7 @@
             "type": "text",
             "title": "Putting it all together",
             "content": {
-              "body": "When investigating bugs, follow this systematic approach:\n\n1. **Reproduce the bug** while DevTools is open.\n2. **Check the Console** for frontend errors.\n3. **Check the Network tab** for failed backend requests and status codes.\n4. If needed, **check Lovable Cloud logs** for backend function errors.\n5. Finally, **check the database** to see if data is saved correctly.\n\nGathering clues from each of these places helps you pinpoint where the problem lies, making it much easier to fix.",
-              "imageUrl": "/courses/vibe-coding-debugging-00/systematic-approach.gif"
+              "body": "When investigating bugs, follow this systematic approach:\n\n1. **Reproduce the bug** while DevTools is open.\n2. **Check the Console** for frontend errors.\n3. **Check the Network tab** for failed backend requests and status codes.\n4. If needed, **check Lovable Cloud logs** for backend function errors.\n5. Finally, **check the database** to see if data is saved correctly.\n\nGathering clues from each of these places helps you pinpoint where the problem lies, making it much easier to fix."
             },
             "subtitle": "A step-by-step investigation"
           },
@@ -530,7 +528,7 @@
             "type": "text",
             "title": "When there is no error message",
             "content": {
-              "body": "Not all bugs produce error messages 😱. Sometimes things just don't work as expected, but\nnothing appears in red.\n\nIn these cases, you can prompt Lovable to add logging statements to your code. These are messages that print out\ninternal state at key points, helping lovable and you understand what's happening.\n\nAfter lovable adds logs, reproduce the bug again and check the Console and Cloud logs for the new messages.\n\nIn your prompt, be specific about what is the expected vs actual behaviour, so lovable knows what to log."
+              "body": "Not all bugs produce error messages. 😱 Sometimes things just don't work as expected, but\nnothing appears in red.\n\nIn these cases, you can prompt Lovable to add logging statements to your code. These are messages that print out\ninternal state at key points, helping Lovable and you understand what's happening.\n\nAfter Lovable adds logs, reproduce the bug again and check the Console and Cloud logs for the new messages.\n\nIn your prompt, be specific about what is the expected vs actual behaviour, so Lovable knows what to log."
             },
             "subtitle": "Your debugging toolkit"
           },
@@ -556,7 +554,7 @@
               "options": [
                 "Lovable Cloud Logs",
                 "The Database",
-                "Click on chat mode",
+                "Click on Plan mode",
                 "Just prompt Lovable: 'It doesn't work.'"
               ],
               "question": "Dalmie's Vote button does nothing when clicked, and there's no error in the Console or the Network Tab. Where should she look next?",
@@ -575,7 +573,7 @@
                 "The data sent was wrong"
               ],
               "question": "A request in the Network tab shows status code 401. What does this mean?",
-              "explanation": "401 means 'Unauthorised' – the user needs to be logged in but isn't, or their session has expired. This is a common cause of silent bugs where actions seem to fail for no reason.",
+              "explanation": "401 means 'Unauthorised' – the user needs to be logged in but isn't, or their session has expired.",
               "correctAnswer": 1
             }
           },
@@ -615,8 +613,8 @@
             "content": {
               "description": "Dalmie's Book Club Organiser has a bug: when she adds a new book, it shows on screen briefly, but disappears after she refreshes the page.\n\nDescribe how she should investigate this bug. What places should she check, and in what order? What clues might she find?",
               "placeholder": "1. First, Dalmie should check...\n\n2. Then she should look at...\n\n3. She might find...",
-              "systemPrompt": "You are a debugging mentor evaluating investigation plans. Good answers mention: (1) checking the Network tab to see if the save request succeeded or failed and what status code, (2) checking Cloud logs to see if the backend function ran, (3) checking the database to see if the data was actually saved. The bug description suggests the save might not be working. Praise systematic approaches. If they miss key investigation steps, suggest them. End with encouragement.",
-              "checkerPrompt": "I was given this task: 'Dalmie's Book Club Organiser has a bug: when she adds a new book, it shows on screen briefly, but disappears after she refreshes the page. Describe how she should investigate this bug. What places should she check, and in what order? What clues might she find?' Evaluate my answer in a helpful manner."
+              "systemPrompt": "You are a debugging mentor evaluating investigation plans for learners building digital products with Lovable – the AI-development tool. Good answers mention: (1) checking the Network tab to see if the save request succeeded or failed and what status code, (2) checking Cloud logs to see if the backend function ran, (3) checking the database to see if the data was actually saved. The bug description suggests the save might not be working. Praise systematic approaches. If they miss key investigation steps, suggest them. End with encouragement.",
+              "checkerPrompt": "I was given this task: 'Dalmie's Book Club Organiser has a bug: when she adds a new book, it shows on screen briefly, but disappears after she refreshes the page. Describe how she should investigate this bug with Lovable. What places should she check, and in what order? What clues might she find?' Evaluate my answer in a helpful manner."
             }
           },
           {
@@ -624,7 +622,7 @@
             "title": "You can investigate like a developer! 🕵️",
             "content": {
               "nextModule": "**Next:** Now that you know where to find clues, let's learn Lovable's specific debugging tools and when to use each one.",
-              "description": "You know where to find clues in the Console, Network tab, Logs, and Database.",
+              "description": "You know where to find clues in the Console, Network tab, Backend Logs, and Database.",
               "subDescription": "These investigation techniques are exactly what professional developers use. Now when you encounter a bug, you know where to look for clues before trying to fix anything!"
             }
           }
@@ -636,32 +634,32 @@
             "type": "text",
             "title": "Lovable's debugging tools",
             "content": {
-              "body": "Lovable gives you three distinct debugging tools. Using the right one for the situation makes all the difference:\n\n- **Chat mode** — For investigating problems and understanding what's wrong.\n- **Visual edits** — For fixing how things look (colours, text, spacing).\n- **'Try to Fix' button** — For quick automated repairs when errors appear.\n\nLet's explore each one in depth so you know exactly when to reach for which tool."
+              "body": "Lovable gives you three distinct debugging tools. Using the right one for a specific situation makes all the difference:\n\n- **Plan mode** – For investigating problems and understanding what's wrong.\n- **Visual edits** – For fixing how things look (colours, text, spacing).\n- **'Try to Fix' button** – For quick automated repairs when errors appear.\n\nLet's explore each one in depth so you know exactly when to reach for which tool."
             },
             "subtitle": "Three tools for three situations"
           },
           {
             "type": "text",
-            "title": "Chat mode: Your debugging partner",
+            "title": "Plan mode: Your debugging partner",
             "content": {
-              "body": "**Chat mode** transforms Lovable from a code generator into an investigative partner. This is your most powerful debugging tool.\n\n**How to access it:** Look at the bottom of your screen where you type prompts. You'll see a button that says \"Chat\". Click it to highlight **Chat** in blue.\n\n**The key difference:** In Chat mode, Lovable **investigates without changing your code** until you explicitly approve or click the **Chat** button again to switch back to **Agent** mode that writes code. This makes it safe for investigation – you won't accidentally make things worse while exploring.",
+              "body": "**Plan mode** or **Plan** transforms Lovable from a code generator into an investigative partner. This is your most powerful debugging tool.\n\n**How to access it:** Look at the bottom of your screen where you type prompts. You'll see a button that says \"Plan\". Click it to highlight **Plan** in blue.\n\n**The key difference:** In Plan mode, Lovable **investigates without changing your code** until you explicitly approve or click the **Plan** button again to switch back to **Agent** mode that writes code. This makes it safe for investigation – you won't accidentally make things worse while exploring.",
               "imageUrl": "/courses/vibe-coding-debugging-00/chat-mode-location.png"
             },
             "subtitle": "Investigation mode"
           },
           {
             "type": "text",
-            "title": "What Chat mode can do",
+            "title": "What Plan mode can do",
             "content": {
-              "body": "Chat mode can autonomously:\n\n- **Search through your files** to find relevant code\n- **Inspect logs** to see what happened\n- **Query your database** to check if data exists\n- **Reason through multi-step problems** and explain them\n\nWhen you describe an issue, Chat mode creates a step-by-step investigation plan. Once you're satisfied with the analysis, an **\"Implement the plan\"** button appears – clicking it switches to **Agent** mode and applies the fix.\n\nThis \"investigate first, fix second\" approach embodies the debugging mindset!"
+              "body": "Plan mode can autonomously:\n\n- **Search through your files** to find relevant code\n- **Inspect logs** to see what happened\n- **Query your database** to check if data exists\n- **Reason through multi-step problems** and explain them\n\nWhen you describe an issue, Plan mode creates a step-by-step investigation plan. Once you're satisfied with the analysis, an **\"Implement the plan\"** button appears; clicking it switches to **Agent** mode and applies the fix.\n\nThis **\"investigate first, fix second\"** approach embodies the debugging mindset!"
             },
             "subtitle": "Superpowers for investigation"
           },
           {
             "type": "text",
-            "title": "Effective Chat mode prompts",
+            "title": "Effective Plan mode prompts",
             "content": {
-              "body": "Here are investigation prompts that work well:\n\n**For understanding what's wrong:**\n- \"The Vote button isn't working. Can you investigate what happens when it's clicked?\"\n- \"What is the root cause of this error: [paste error from Console or Network tab]?\"\n\n**For getting options before fixing:**\n- \"Investigate but don't write code yet. Suggest 3 possible causes.\"\n- \"Take a step back. Analyse the problem and suggest a different approach.\""
+              "body": "Here are investigation prompts that work well:\n\n**For understanding what's wrong:**\n- ```The Vote button isn't working. Can you investigate what happens when it's clicked?```\n- ```What is the root cause of this error: [paste error from Console or Network tab]?```\n\n**For getting options before fixing:**\n- ```Investigate but don't write code yet. Suggest 3 possible causes.```\n- ```Take a step back. Analyse the problem and suggest a different approach.```"
             },
             "subtitle": "Prompts that work"
           },
@@ -669,8 +667,8 @@
             "type": "text",
             "title": "Visual edits: Point and click",
             "content": {
-              "body": "**Visual edits** let you click directly on elements in your app preview and change their appearance instantly.\n\n**How to access it:**\n1. Click the **`+` button** next to the Preview panel\n2. Select **Design view**\n3. Switch to the **Visual edit** tab\n\n**Best for:**\n- Changing colours, fonts, sizes\n- Fixing text content\n- Adjusting spacing and layout\n- Quick appearance tweaks\n\n**Bonus:** Simple changes like text and colours often cost fewer or no credits!",
-              "imageUrl": "/courses/vibe-coding-debugging-00/visual-edit-location.png"
+              "body": "**Visual edits** let you click directly on elements in your app preview and change their appearance instantly.\n\n**How to access it:**\n1. Look at the bottom of your screen where you type prompts\n2. Click the **Visual edits** button\n2. Click on any element in your app you want to change\n3. Type your prompt into the text box that appears\n\n**Best for:**\n- Changing colours, fonts, sizes\n- Fixing text content\n- Adjusting spacing and layout\n- Quick appearance tweaks\n\n**Bonus:** To change the text, you just need to click on the paragraph you want to edit in **Visual edits** mode and type the new text. It will cost no credits!",
+              "imageUrl": "/courses/vibe-coding-debugging-00/visual-edit.webp"
             },
             "subtitle": "For appearance issues"
           },
@@ -678,7 +676,7 @@
             "type": "text",
             "title": "Visual edits: Static vs dynamic",
             "content": {
-              "body": "**Critical limitation:** Visual editing content only work on **static elements**.\n\n**Static elements** stay the same for everyone: a logo, a heading that says \"Welcome\", a button labelled \"Submit\".\n\n**Dynamic elements** change based on data or user state: a list of books from the database, a user's name after login, a vote count that updates.\n\n**How to tell:** Hover over an element in Visual edit mode. If you can't select it, it's dynamic.\n\nFor dynamic elements, use Chat mode to investigate and fix.\nThe design of both static and dynamic elements can be changed in Visual edits mode."
+              "body": "**Critical limitation:** Visually editing content only work on **static elements**.\n\n- **Static elements** stay the same for everyone: a logo, a heading that says \"Welcome\", a button labelled \"Submit\", a paragraph describing your team.\n\n- **Dynamic elements** change based on data or user state: a list of books from the database, a user's name after login, a vote count that updates.\n\n**How to tell:** Hover over an element in Visual edit mode. If you can't edit the text, it's dynamic.\n\nFor dynamic elements, use Plan mode to investigate and fix.\nThe design of both static and dynamic elements can be changed in Visual edits mode."
             },
             "subtitle": "Know the limitation"
           },
@@ -686,7 +684,7 @@
             "type": "text",
             "title": "Try to Fix: Automated repair",
             "content": {
-              "body": "When Lovable detects a specific error, an **Try to Fix** button may appear. Clicking it tells Lovable to automatically attempt a repair.\n\n**When it works well:**\n- Build errors\n- Missing dependencies\n- Error messages in Console or Cloud logs\n\n**When it doesn't work well:**\n- Silent bugs (no error to see)\n- Complex logic problems\n- Bugs requiring context or understanding\n\n**The three-attempt rule:** If 'Try to Fix' fails three times, stop and switch to Chat mode for proper investigation."
+              "body": "When Lovable detects a specific error, a **Try to Fix** button may appear. Clicking it tells Lovable to automatically attempt a repair.\n\n**When it works well:**\n- Build errors\n- Missing dependencies\n- Error messages in Console or Cloud logs\n\n**When it doesn't work well:**\n- Silent bugs (no error to see)\n- Complex logic problems\n- Bugs requiring context or understanding\n\n**The three-attempt rule:** If 'Try to Fix' fails three times, stop and switch to **Plan mode** for proper investigation."
             },
             "subtitle": "Quick fixes for clear errors"
           },
@@ -694,13 +692,13 @@
             "type": "text",
             "title": "Decision guide: Which tool?",
             "content": {
-              "body": "**The button is the wrong colour:**\n→ Visual edits (click and change it)\n\n**The button doesn't do anything when clicked:**\n→ Chat mode (investigate the logic)\n\n**A red error appeared after your last change:**\n→ Try to Fix first (up to 3 times), then Chat mode\n\n**Data isn't saving correctly:**\n→ Chat mode (investigate backend behaviour)\n\n**Text shows \"undefined\" instead of book titles:**\n→ Chat mode (data isn't loading correctly)\n\n**Spacing looks weird on a static heading:**\n→ Visual edits"
+              "body": "**The button is the wrong colour**\n→ Visual edits (click and change it)\n\n**The button doesn't do anything when clicked**\n→ Plan mode (investigate the logic)\n\n**A red error appeared in your chat sidebar, after your last change**\n→ Try to Fix first (up to 3 times), then Plan mode\n\n**Data isn't saving correctly**\n→ Plan mode (investigate backend behaviour)\n\n**Text shows \"undefined\" instead of book titles**\n→ Plan mode (data isn't loading correctly)\n\n**Spacing looks weird on a static heading**\n→ Visual edits"
             },
             "subtitle": "Quick reference for tools in Lovable"
           },
           {
             "type": "quiz-question",
-            "title": "Quiz: What Chat mode is for",
+            "title": "Quiz: What Plan mode is for",
             "content": {
               "options": [
                 "Changing colours and fonts",
@@ -708,8 +706,8 @@
                 "Automatically fixing errors without explanation",
                 "Editing database tables directly"
               ],
-              "question": "What is the main purpose of Chat mode in Lovable?",
-              "explanation": "Chat mode is for investigation. It lets Lovable search files, inspect logs, reason through problems, and explain what is happening without modifying your code until you approve a fix.",
+              "question": "What can you use Plan mode for in debugging?",
+              "explanation": "Plan mode is useful for investigation. It lets Lovable search files, inspect logs, reason through problems, and explain what is happening without modifying your code until you approve a fix.",
               "correctAnswer": 1
             }
           },
@@ -719,12 +717,12 @@
             "content": {
               "options": [
                 "The element is too small to click",
-                "Visual edits mode isn't turned on",
+                "The element is static",
                 "The element is dynamic (changes based on data)",
                 "The element is inside a button"
               ],
-              "question": "In Visual edit mode, Dalmie hovers over the book titles but can't select them. Why?",
-              "explanation": "Book titles that come from the database are dynamic elements – they change based on data. Visual edits only work on static elements like fixed headings or labels. Dalmie would need Chat mode to modify how dynamic titles are displayed.",
+              "question": "In Visual edits mode, Dalmie hovers over the book titles but can't edit them. Why?",
+              "explanation": "Book titles that come from the database are dynamic elements – they change based on data. Changing the text with Visual edits only work on static elements like fixed headings or labels.",
               "correctAnswer": 2
             }
           },
@@ -736,10 +734,10 @@
                 "When the layout looks wrong",
                 "When a clear error appears in the Console or Cloud logs",
                 "When a bug has no visible error",
-                "When you want to understand how the code works"
+                "When Lovable explains you how the code works"
               ],
-              "question": "When is the 'Try to Fix' button most effective?",
-              "explanation": "'Try to Fix' works best when Lovable detects a clear, specific error such as a build failure or an error message in the Console or backend logs.",
+              "question": "When does the 'Try to Fix' button appear in Lovable?",
+              "explanation": "'Try to Fix' appears when Lovable detects a clear, specific error such as a build failure or an error message in the Console or Backend Logs.",
               "correctAnswer": 1
             }
           },
@@ -747,9 +745,9 @@
             "type": "free-text-exercise",
             "title": "Practice: Match tools to problems",
             "content": {
-              "description": "For each bug Dalmie encounters, write which tool she should use (Chat mode, Visual edits, or Try to Fix) and briefly explain why:\n\n1. The \"Add Book\" button is grey but should be teal.\n2. After adding a book, it appears but disappears when she refreshes the page.\n3. A red \"Build unsuccessful\" error appeared after her last prompt.\n4. The list of books shows \"undefined\" for each title.",
+              "description": "For each bug Dalmie encounters, write which tool she should use (Plan mode, Visual edits, or Try to Fix) and briefly explain why:\n\n1. The \"Add Book\" button is grey but should be teal.\n2. After adding a book, it appears but disappears when she refreshes the page.\n3. A red \"Build unsuccessful\" error appeared after her last prompt.\n4. The list of books shows \"undefined\" for each title.",
               "placeholder": "1. [Tool] because...\n\n2. [Tool] because...\n\n3. [Tool] because...\n\n4. [Tool] because...",
-              "systemPrompt": "You are a debugging mentor helping a learner match debugging tools to problems. Evaluate their answers: (1) Visual edits — simple colour change on a static button, (2) Chat mode — data not persisting is a backend/logic issue, (3) Try to Fix (up to 3 times) — clear build error, (4) Chat mode — undefined values suggest data loading issue. Provide friendly feedback in British English. Praise correct reasoning. Gently correct wrong answers with explanation. End with encouragement.",
+              "systemPrompt": "You are a debugging mentor helping a learner match debugging tools to problems. Evaluate their answers: (1) Visual edits — simple colour change on a static button, (2) Plan mode — data not persisting is a backend/logic issue, (3) Try to Fix (up to 3 times) — clear build error, (4) Plan mode — undefined values suggest data loading issue. Provide friendly feedback in British English. Praise correct reasoning. Gently correct wrong answers with explanation. End with encouragement.",
               "checkerPrompt": "These are tool choices for four debugging scenarios."
             }
           },
@@ -757,16 +755,16 @@
             "type": "challenge-end",
             "title": "You know your debugging toolkit! 🧰",
             "content": {
-              "nextModule": "**Next:** Sometimes bugs get tangled and fixing one breaks another. Learn strategies to escape frustrating bug loops.",
-              "description": "You've learned when to use Chat mode, Visual edits, and Try to Fix.",
-              "subDescription": "Chat mode for investigation and logic bugs, Visual edits for static appearance changes, Try to Fix for clear errors (but only three times!). The right tool makes debugging much faster."
+              "nextModule": "**Next:** Sometimes fixing one bug creates another. Learn strategies to escape frustrating bug loops.",
+              "description": "You've learned when to use Plan mode, Visual edits, and Try to Fix.",
+              "subDescription": "Plan mode for investigation and logic bugs, Visual edits for static appearance changes, Try to Fix for clear errors (but only three times!). The right tool makes debugging much faster."
             }
           }
         ],
         "title": "Lovable's Debugging Toolkit",
-        "isFree": false,
+        "isFree": true,
         "skills": [
-          "Chat Mode",
+          "Plan Mode",
           "Visual Edits",
           "Try to Fix"
         ],
@@ -779,8 +777,8 @@
             "type": "text",
             "title": "The dreaded bug loop",
             "content": {
-              "body": "The most frustrating experience: you try to fix something, but your fix breaks something else. So you fix that, which breaks the first thing again...\n\nYou're stuck in a **bug loop** – each fix attempt makes the codebase more tangled, and you feel like you're going backwards.\n\nThis challenge teaches you specific strategies to escape, and when to cut your losses and revert to a previous version.",
-              "imageUrl": "/courses/vibe-coding-debugging-00/bug-loop.gif"
+              "body": "The most frustrating experience: you try to fix something, but your fix breaks something else. So you fix that, which breaks the first thing again...\n\nYou're stuck in a **bug loop** – each fix attempt makes the codebase more tangled, and you feel like you're going backwards.\n\nThis challenge teaches you specific strategies to escape this frustrating loop, and when to cut your losses and revert to a previous version.",
+              "imageUrl": "/courses/vibe-coding-debugging-00/loop.gif"
             },
             "subtitle": "When fixes break other things"
           },
@@ -788,7 +786,7 @@
             "type": "text",
             "title": "The three-attempt rule",
             "content": {
-              "body": "Here's a crucial lesson from experienced Lovable users: **if your fix attempts aren't working after three tries, stop and change your approach**.\n\nEach failed fix can make things worse by introducing new changes on top of broken code. You end up in a \"bug loop\" where fixes create new problems.\n\nAfter three attempts:\n- Stop trying the same approach\n- Investigate more deeply\n- Try a completely different strategy\n- Consider reverting to a working version\n\nWe'll learn all these strategies in this course."
+              "body": "Here's a crucial lesson from experienced Lovable users: **if your fix attempts aren't working after three tries, stop and change your approach**.\n\nEach failed fix can make things worse by introducing new changes on top of broken code. You end up in a **bug loop** where fixes create new problems.\n\nAfter three attempts:\n- Revert to a previous working version\n- Switch to Plan mode to compare versions\n- Ask Lovable to explain the root cause before making more changes\n- Isolate the problem to one feature at a time\n- Rewrite the feature from scratch if it's too tangled\n\nWe'll learn all these strategies in this course."
             },
             "subtitle": "When to stop and rethink"
           },
@@ -796,7 +794,7 @@
             "type": "text",
             "title": "Strategy 1: The revert button",
             "content": {
-              "body": "Every response in your chat history has a **revert option** underneath it. This is your emergency brake.\n\n**How it works:**\nFind the last response where things were working. Click the revert option. Your project goes back to that state.\n\n**What you don't lose:**\nAll the messages and changes after that point remain visible in your history. You can read through them to understand what went wrong, or selectively re-apply good changes.\n\n**When to use it:**\nWhen you've made 3+ fix attempts and things are getting worse, not better.",
+              "body": "Every response in your chat history has a **revert option** underneath it. This is your emergency brake.\n\n**How it works:**\nFind the last response where things were working. Click the revert option. Your project goes back to that state. Any changes made after that point are undone.\n\n**What you don't lose:**\nAll the messages and changes after that point remain visible in your history. You can read through them to understand what went wrong.\n\n**When to use it:**\nWhen you've made 3 fix attempts and things are getting worse, not better.",
               "imageUrl": "/courses/vibe-coding-debugging-00/revert-button.png"
             },
             "subtitle": "Your emergency brake"
@@ -805,7 +803,7 @@
             "type": "text",
             "title": "Strategy 2: Compare versions",
             "content": {
-              "body": "If you're not sure what change caused the problem, ask Lovable to compare:\n\n\"Compare the current version to the last bookmarked version. What changed? What might be breaking?\"\n\n**Or:**\n\n\"Compare the code from 3 changes ago to now. List all the differences and which might cause [describe the bug].\"\n\nThis surfaces exactly what changed, often revealing the culprit immediately. This is why bookmarking stable versions is so valuable!"
+              "body": "If you're not sure what change caused the problem, switch to **Plan mode** and ask Lovable to compare:\n\n```\nCompare the current version to the last bookmarked version. What changed? What might cause [describe the bug]?\n```\n\n**Or:**\n\n```\nCompare the code from 3 changes ago to now. List all the differences and which might cause [describe the bug].\n```\n\nThis surfaces exactly what changed, often revealing the culprit immediately. This is why bookmarking stable versions is so valuable!"
             },
             "subtitle": "Find what changed"
           },
@@ -813,7 +811,7 @@
             "type": "text",
             "title": "Strategy 3: Explain before fixing",
             "content": {
-              "body": "When you're in a loop, stop asking for fixes. Switch to Chat mode and ask for explanation:\n\n\"We've been going back and forth on this bug. Before making any more changes, explain what's broken and what you would change. I want to understand before we proceed.\"\n\nThis forces a step back. You might discover:\n- The approach itself is flawed\n- There's a simpler solution\n- Multiple bugs are tangled together\n\n**Power prompt for persistent issues:**\n\"The same problem keeps happening. Do NOT make any code changes yet. Investigate thoroughly to find the exact root cause.\""
+              "body": "When you're in a loop, stop asking for fixes. Switch to **Plan mode** and ask for explanation:\n\n```\nWe've been going back and forth on this bug. Before making any more changes, explain what might be the root cause of [explain bug]. I want to understand before we proceed.\n```\n\nThis forces a step back. You might discover:\n- The approach itself is flawed\n- There's a simpler solution\n- Multiple bugs are tangled together"
             },
             "subtitle": "Understanding over action"
           },
@@ -821,7 +819,7 @@
             "type": "text",
             "title": "Strategy 4: Isolate the problem",
             "content": {
-              "body": "Sometimes bugs are tangled together. Untangle them by isolating:\n\n\"Let's focus only on the Vote button for now. Ignore the vote count display, the leaderboard, and the notifications. Just get the Vote button to successfully save a vote.\"\n\nOnce that works, add the next piece. This prevents fixes for one thing from breaking another.\n\n**Ask yourself:**\n- What's the simplest version of this feature that would work?\n- Can we disable everything else and test just this one thing?"
+              "body": "Sometimes bugs are tangled together. Untangle them by isolating:\n\n```\nLet's focus only on the Vote button for now. Ignore the vote count display, the leaderboard, and the notifications. Just get the Vote button to successfully save a vote.\n```\n\nOnce that works, add the next piece. This prevents fixes for one thing from breaking another.\n\n**Ask yourself:**\n- What's the simplest version of this feature that would work?\n- How can we disregard everything else and test just this one thing?"
             },
             "subtitle": "One thing at a time"
           },
@@ -829,7 +827,7 @@
             "type": "text",
             "title": "Strategy 5: Rewrite the feature",
             "content": {
-              "body": "If a feature is deeply tangled, sometimes the fastest way forward is to rewrite it from scratch.\nYou can revert not just before the bugloop started, but all the way back to before the feature existed.\n\nThen, prompt Lovable to build the feature again, but with a different approach or simpler design.\n\nBecause building features with AI builders got so fast and cheap, rewriting can be quicker than untangling.\nIt is literally less credits to start fresh than to spend hours debugging, not just compared to a developer."
+              "body": "If a feature is deeply tangled, sometimes the fastest way forward is to rewrite it from scratch.\nYou can **revert** not just before the bugloop started, but all the way back **to before the feature existed**.\n\nThen, prompt Lovable to build the feature again, but with a different approach or simpler design.\n\nBecause building features with AI builders got so fast and cheap, **rewriting can be quicker than untangling**.\nIt is literally less credits to start fresh than to spend hours debugging."
             }
           },
           {
@@ -853,12 +851,12 @@
             "content": {
               "options": [
                 "It deletes all later messages permanently",
-                "It rewinds the project to an earlier working state",
+                "It rewinds the project to an earlier state",
                 "It fixes bugs automatically",
                 "It bookmarks the current version"
               ],
               "question": "What does the revert button do?",
-              "explanation": "Reverting restores your project to a previous working state while keeping the full history visible. This lets you undo bad changes without losing context.",
+              "explanation": "Reverting restores your project to a previous state while keeping the full history visible. This lets you undo bad changes without losing context.",
               "correctAnswer": 1
             }
           },
@@ -867,10 +865,10 @@
             "title": "Quiz: Choosing the right escape strategy",
             "content": {
               "options": [
-                "Ask Lovable to explain what is broken before changing anything",
-                "Keep fixing until the error disappears",
-                "Immediately rewrite the entire app",
-                "Ignore related features and ship anyway"
+                "Ask Lovable to investigate the root cause of a broken feature before changing anything",
+                "Keep telling Lovable to fix the issue until the error disappears",
+                "Start a new project to rewrite the entire app",
+                "Ignore broken features and ship anyway"
               ],
               "question": "You're stuck in a fix-break loop and no longer understand what's wrong. Which strategy should you try first?",
               "explanation": "Asking for explanation before fixing forces a step back. It helps uncover flawed assumptions, tangled bugs, or simpler solutions before more changes are made.",
@@ -879,7 +877,7 @@
           },
           {
             "type": "challenge-end",
-            "title": "You can escape bug loops! 🔓",
+            "title": "You can escape bug loops! 🪽",
             "content": {
               "nextModule": "**Next:** Finally, let's master the art of communicating with Lovable to get bugs fixed effectively.",
               "description": "You have strategies for when things get stuck.",
@@ -888,7 +886,7 @@
           }
         ],
         "title": "Escaping Bug Loops",
-        "isFree": false,
+        "isFree": true,
         "skills": [
           "Revert",
           "Version Comparison",
@@ -905,7 +903,7 @@
             "title": "From clues to fixes",
             "content": {
               "body": "You've learned to investigate bugs and find clues. Now let's learn how to communicate those findings effectively so Lovable can actually fix the problem.\n\nThe way you write your debugging prompts makes a huge difference in how quickly you get to a solution.",
-              "imageUrl": "/courses/vibe-coding-debugging-00/clues-to-fixes.gif"
+              "imageUrl": "/courses/vibe-coding-debugging-00/disaster.gif"
             },
             "subtitle": "Communicating for effective fixes"
           },
@@ -913,7 +911,7 @@
             "type": "text",
             "title": "The debugging prompt formula",
             "content": {
-              "body": "Structure your debugging prompts like this:\n\n**1. What you were doing**\n\"I clicked the Vote button on a book suggestion.\"\n\n**2. What you expected**\n\"The vote count should increase by 1.\"\n\n**3. What actually happened**\n\"Nothing changed on screen.\"\n\n**4. The clues you found**\n\"The Network tab shows a 401 error on the vote request.\"\n\n**5. What you've tried (if anything)**\n\"I tried logging out and back in, but same result.\"\n\nThis formula works for almost any bug!"
+              "body": "Structure your debugging prompts like this:\n\n**1. What you were doing:**\n\"I clicked the Vote button on a book suggestion.\"\n\n**2. What you expected:**\n\"The vote count should increase by 1.\"\n\n**3. What actually happened:**\n\"Nothing changed on screen.\"\n\n**4. The clues you found:**\n\"The Network tab shows a 401 error on the vote request.\"\n\n**5. What you've tried (if anything):**\n\"I tried logging out and back in, but same result.\"\n\nThis formula works for almost any bug!"
             },
             "subtitle": "The structure that works"
           },
@@ -945,7 +943,7 @@
             "type": "text",
             "title": "Asking Lovable to add logs",
             "content": {
-              "body": "When you need more visibility into what's happening, ask Lovable to add temporary logging:\n\n\"The vote isn't saving but I can't figure out why. Can you add console logs to the vote submission process so I can see:\n1. What data is being sent when the button is clicked\n2. What response comes back from the backend\n3. Any errors that occur\"\n\n**After adding logs:**\n1. Reproduce the bug\n2. Check the Console for the new messages\n3. Share what you find with Lovable\n\nThis gives you step-by-step visibility into what's happening."
+              "body": "When you need more visibility into what's happening, ask Lovable to add temporary logging:\n\n\"The vote isn't saving but I can't figure out why. Can you add console logs to the vote submission process so I can see:\n1. What data is being sent when the button is clicked\n2. What response comes back from the backend\n3. Any errors that occur\"\n\n**After adding logs:**\n1. Reproduce the bug\n2. Check the Console for the new messages\n3. Share what you've found with Lovable\n\nThis gives you step-by-step visibility into what's happening."
             },
             "subtitle": "Getting more visibility"
           },
@@ -953,7 +951,7 @@
             "type": "text",
             "title": "When you're frustrated",
             "content": {
-              "body": "If standard approaches aren't working, communicate the context:\n\n\"I'm frustrated because we've tried three different approaches to fix this voting bug and none have worked. Before making any more changes, please:\n1. Analyse what we've tried so far\n2. Explain why each approach might have failed\n3. Suggest a completely different approach\"\n\nThis signals that the situation needs extra care and encourages deeper analysis rather than more quick fixes."
+              "body": "If standard approaches aren't working, switch to **Plan mode** and communicate the context:\n\n```\nI'm frustrated because we've tried three different approaches to fix this voting bug and none have worked. Before making any more changes, please:\n1. Analyse what we've tried so far\n2. Explain why each approach might have failed\n3. Suggest a completely different approach\n```\n\nThis signals that the situation needs extra care and encourages deeper analysis rather than more quick fixes."
             },
             "subtitle": "Communicate when stuck"
           },
@@ -961,7 +959,7 @@
             "type": "text",
             "title": "Complete debugging prompt example",
             "content": {
-              "body": "Here's a complete example putting it all together:\n\n\"## Bug\n\nOn the `/books` page, when I click the Vote button on a book suggestion, nothing happens.\n\n**Expected:** Vote count increases by 1.\n\n**Actual:** No change on screen.\n\n**Clues:** The Network tab shows the vote request returning 401. The Console has no errors. I'm logged in – I can see my name in the header.\n\n**Tried:** Refreshing the page, logging out and back in – same result.\n\nCan you investigate what's causing the 401 error? Please don't modify the login system or navigation – just focus on the voting function.\"\n\nThis gives Lovable everything needed to investigate and fix effectively."
+              "body": "Here's a complete example putting it all together:\n\n```markdown\n## Bug\n\nOn the `/books` page, when I click the Vote button on a book suggestion, nothing happens.\n\n**Expected:** Vote count increases by 1.\n\n**Actual:** No change on screen.\n\n**Clues:** The Network tab shows the vote request returning 401. The Console has no errors. I'm logged in, I can see my name in the header.\n\n**Tried:** Refreshing the page, logging out and back in, but same result.\n\nCan you investigate what's causing the 401 error? Please don't modify anything else, just focus on the voting function.\n```\n\nThis gives Lovable everything needed to investigate and fix effectively."
             },
             "subtitle": "Putting it all together"
           },
@@ -970,10 +968,10 @@
             "title": "Quiz: Debugging prompts",
             "content": {
               "options": [
-                "\"On /books, clicking Vote returns a 401 error. Expected: count increases. Actual: nothing happens. Please don't touch the auth system.\"",
+                "\"On /books, clicking the Vote button returns a 401 error. Expected: count increases. Actual: nothing happens. Investigate the root cause. Do not modify other components.\"",
                 "\"Fix the bug please.\"",
                 "\"Something's broken with voting I think.\"",
-                "\"The vote thing doesn't work sometimes.\""
+                "\"The app is not working as expected.\""
               ],
               "question": "Which debugging prompt would get the fastest, most accurate fix?",
               "explanation": "Specific location + expected behaviour + actual behaviour + clues found + guardrails = effective debugging prompt. The more specific information you provide, the faster Lovable can find and fix the issue without breaking other things.",
@@ -987,11 +985,11 @@
               "options": [
                 "Only what is broken",
                 "What you clicked and what error appeared",
-                "Expected behaviour, actual behaviour, and clues found",
+                "Specific location, expected behaviour, actual behaviour, and clues found",
                 "A long description of the entire app"
               ],
               "question": "Which elements make up an effective debugging prompt?",
-              "explanation": "The most effective prompts clearly state what you did, what you expected, what actually happened, and any clues you found. This structure dramatically improves fix quality.",
+              "explanation": "The most effective prompts clearly state what you did exactly where in your app, what you expected, what actually happened, and any clues you found. This structure dramatically improves fix quality.",
               "correctAnswer": 2
             }
           },
@@ -1016,7 +1014,7 @@
             "content": {
               "description": "Dalmie's Book Club Organiser has a bug: The \"Add Book\" form submits successfully (she sees a success message), but the new book doesn't appear in the list. She checked the database and the book IS saved with correct data. She's on the `/books` page logged in as an organiser.\n\nWrite a complete debugging prompt using the formula we learned.",
               "placeholder": "Write your debugging prompt here...",
-              "systemPrompt": "You are a debugging mentor evaluating debugging prompts. A good prompt includes: location (/books page), user role (organiser), what happens (form submits, success message shows), what's wrong (book doesn't appear in list), clues found (data IS in database — so this is a display/fetch issue, not a save issue), and ideally guardrails. Praise complete, well-structured prompts. If missing elements, suggest additions. End with encouragement.",
+              "systemPrompt": "You are a debugging mentor evaluating debugging prompts for Lovable – and AI-development tool. A good prompt includes: location (/books page), user role (organiser), what happens (form submits, success message shows), what's wrong (book doesn't appear in list), clues found (data IS in database), and ideally guardrails. Praise complete, well-structured prompts. If missing elements, suggest additions that a non-technical person understands. End with encouraging statement.",
               "checkerPrompt": "This is a debugging prompt for a book that saves to the database but doesn't appear in the list."
             }
           },
@@ -1031,16 +1029,16 @@
           },
           {
             "type": "course-end",
-            "title": "Congratulations! You're a debugging-capable builder! 🎉",
+            "title": "Congratulations! You're a Debugging Pro! 🎉",
             "content": {
-              "nextModule": "**Your next step:** Return to your project with fresh confidence. When your next bug appears (and it will!), you'll know exactly what to do. Investigate first, find clues, and communicate clearly with Lovable. You've got this!",
+              "nextModule": "**Your next step:** Return to your project with fresh confidence. When your next bug appears (and it will!), you'll know exactly what to do. Investigate first, find clues, and communicate clearly with Lovable. You've got this! 🤗",
               "description": "Look at everything you've learned!",
-              "subDescription": "✓ **The debugging mindset:** Diagnose before fixing, follow the three-attempt rule, and recognise different types of bugs.\n\n✓ **Prevention habits:** Small prompts, immediate testing, and bookmarking stable versions.\n\n✓ **Investigation techniques:** Browser Console, Network tab, Cloud logs, function invocations, and database checking – the same tools developers use.\n\n✓ **Lovable's toolkit:** Chat mode for investigation, Visual edits for appearance, and Try to Fix for clear errors.\n\n✓ **Escape strategies:** Revert, compare versions, isolate problems, and know when to start fresh.\n\n✓ **Effective communication:** The debugging prompt formula, guardrails, specificity, and asking for logs.\n\n**Remember:** Every professional developer debugs constantly. You now have the same toolkit they use. The bugs will come, but so will the fixes. Happy building! 💪"
+              "subDescription": "✓ **The debugging mindset:** Diagnose before fixing, follow the three-attempt rule, and recognise different types of bugs.\n\n✓ **Prevention habits:** Small prompts, immediate testing, and bookmarking stable versions.\n\n✓ **Investigation techniques:** Browser Console, Network tab, Lovable Cloud logs, and database checking – the same tools developers use.\n\n✓ **Lovable's toolkit:** Plan mode for investigation, Visual edits for appearance, and Try to Fix for clear errors.\n\n✓ **Escape strategies:** Revert, compare versions, explain before fixing, isolate problems, and know when to start fresh.\n\n✓ **Effective communication:** The debugging prompt formula, guardrails, specificity, and asking for logs.\n\n**Remember:** Every professional developer debugs constantly. You now have the same toolkit they use. The bugs will come, but so will the fixes. Happy building! 💪"
             }
           }
         ],
         "title": "How to Guide Lovable to Fix Bugs",
-        "isFree": false,
+        "isFree": true,
         "skills": [
           "Debugging Prompts",
           "Guardrails",

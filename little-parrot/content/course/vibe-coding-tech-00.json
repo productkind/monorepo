@@ -43,7 +43,8 @@
             "type": "video",
             "title": "Building blocks of an application",
             "content": {
-              "youtubeId": "awgGgaMmsBs"
+              "youtubeId": "awgGgaMmsBs",
+              "videoUrl": "/videos/lesson-vibe-coding-tech-00-video-00.mp4"
             }
           },
           {
@@ -523,7 +524,8 @@
             "type": "video",
             "title": "The box model",
             "content": {
-              "youtubeId": "PROSbOyXF3U"
+              "youtubeId": "PROSbOyXF3U",
+              "videoUrl": "/videos/lesson-vibe-coding-tech-00-video-01.mp4"
             }
           },
           {

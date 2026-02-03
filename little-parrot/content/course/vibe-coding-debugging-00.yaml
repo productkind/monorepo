@@ -36,21 +36,10 @@ course:
           Today, bugs are simply **mismatches between what you expected and what actually happens.**
         imageUrl: "/courses/vibe-coding-debugging-00/bug.png"
       subtitle: When reality doesn't match expectations
-    - type: text
-      title: Bugs are normal
+    - type: video
+      title: Fix Bugs with Confidence
       content:
-        body: |-
-          THIS WILL BE THE VIDEO
-          When you build applications with AI app builders, things will sometimes break. Debugging is simply
-          the process of finding and fixing those problems. In this micro-lesson, you’ll learn practical
-          techniques and core concepts to help you troubleshoot issues in AI-built applications. By the end,
-          you’ll be able to recognise common problems, identify their root causes, and fix them more
-          effectively. Here's something professional developers know well: bugs happen to everyone. Even
-          experienced engineers spend much of their time fixing things that do not work as expected. Progress
-          is not about being "technical enough". It's about knowing what to do when things go wrong or prevent
-          them occurring in the first place. That’s exactly what this micro-course is designed to teach.
-        imageUrl: "/courses/vibe-coding-debugging-00/bugs-normal.gif"
-      subtitle: Every builder encounters them
+        videoUrl: "/videos/lesson-vibe-coding-debugging-00-video-00.mp4"
     - type: text
       title: What is debugging?
       content:
