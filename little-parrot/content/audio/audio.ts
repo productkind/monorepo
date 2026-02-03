@@ -1,5 +1,4 @@
 import * as fs from 'fs';
-import * as path from 'path';
 
 // If you are using an older Node.js version that doesn't have global fetch,
 // you might need to install 'node-fetch' and uncomment the line below:
@@ -177,9 +176,23 @@ Our microlearning approach fits into busy lives. Short, science-backed lessons m
 And this all happens in a kind, welcoming space where curiosity is encouraged, mistakes are part of learning, and everyone belongs.
 `
 
-const TEXT_TO_GENERATE = videoLanding;
+const videoDebugging1 = `
+If you’ve ever built something in Lovable and thought, "Why isn't this working?", you’re already debugging.
+Debugging isn’t a sign that you’ve failed, or that you’re not technical enough. It’s simply the process of understanding why your app isn't doing what you expected, and then fixing it.
+Here’s something that might surprise you: even experienced developers spend a massive part of their day fixing things that don't work. Bugs happen to everyone.
+The difference between someone who feels stuck and someone who moves forward isn't being "more technical." It’s knowing what to do when things go wrong.
+That’s exactly what you’ll learn here: how to debug with confidence.
+In this micro-course, you’ll learn to identify different types of bugs, spot their root causes, and investigate properly before jumping into fixes.
+You’ll pick up the same habits professional developers use:
+How to prevent bugs in the first place. How to investigate issues step by step.
+And how to use Lovable’s debugging tools properly, instead of guessing or getting stuck in "fix-break" loops.
+By the end, you’ll have a practical toolkit for troubleshooting. When something breaks, you’ll know where to look, what questions to ask, and exactly how to move forward.
+Bugs will still happen. But they won’t stop you anymore.
+`
+
+const TEXT_TO_GENERATE = videoDebugging1;
 const MODEL_ID = 'eleven_multilingual_v2'; //'eleven_v3_turbo'; // The v3 model as requested
-const videoName = 'video-landing-elizabeth';
+const videoName = 'video-debugging-1-elizabeth';
 const OUTPUT_FILE_NAME = `generated_speech-${videoName}.wav`; // e.g.,
 const ALIGNMENT_JSON_FILE_NAME = `alignment-${videoName}.json`;
 const OUTPUT_FILE_PATH = OUTPUT_FILE_NAME // Saves in the same directory as the script

@@ -25,4 +25,4 @@ export const stdout = (message: string): StdioOutputMessage => ({
 export const stderr = (message: string): StdioErrorMessage => ({
   type: 'stderr',
   message,
-})
+}

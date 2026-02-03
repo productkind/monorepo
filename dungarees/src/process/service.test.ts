@@ -1,6 +1,6 @@
 import { test, expect } from 'vitest'
-import {createFakeNodeProcess} from './fake'
-import {createProcessService} from './service'
+import { createFakeNodeProcess } from './fake'
+import { createProcessService } from './service'
 
 test('processService getUserId returns correct user ID', () => {
   const fakeProcess = createFakeNodeProcess({ userId: 1001 })
