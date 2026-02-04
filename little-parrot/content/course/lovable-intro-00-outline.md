@@ -20,7 +20,7 @@ This micro-course takes complete beginners from zero to a published web app usin
 ## Structure
 
 ### 1. Your First Prompt (Free Challenge)
-Build something real in the first few minutes.
+Build working software in the first few minutes.
 
 **Hook:** You're about to build a working app. No code. No setup. Just words and a structure that works.
 
@@ -44,9 +44,7 @@ Build something real in the first few minutes.
     ```
 - Example: The Book Club Organiser prompt (learners can use this or adapt for their own idea)
 - Exercise: Open Lovable, paste your structured prompt, and hit enter
-- See instant output: the "aha!" moment
-
-**Aha moment:** You gave Lovable a clear structure, and it built exactly what you described. That feeling of "wait, I made that?" is the hook. The structure gave you control from the start.
+- See instant output
 
 ### 2. Iterate and Improve
 Build in small steps; test after each one.
@@ -56,7 +54,7 @@ Build in small steps; test after each one.
 - Lovable usually builds more than you specify; small steps help you stay in control
 - The rebuild mindset: it's cheap to start over, so experiment freely
 - When to tweak vs when to start fresh
-- Exercise: Add one feature to your app with a follow-up prompt, then test it
+- Exercise: Add a new feature to your app, then test it
 
 ### 3. Navigate the Lovable Interface
 Find your way around without getting lost.
@@ -66,11 +64,12 @@ Find your way around without getting lost.
 - Visual edits: click elements to change text, colours, spacing
 - Adding assets: images, logos, and where they live
 - Design themes: quick ways to change the overall look
-- Exercise: Make three visual edits to your app without prompting
+- Exercise: Update three things in your app with the 'Visual edits' tool
 
-### 4. Save Your Progress (and Undo Mistakes)
+### 4. Experiment and Undo Mistakes
 Be prepared when something breaks.
 
+- Lovable automatically saves all your changes
 - Bookmarking versions: mark stable versions before risky changes
 - Reverting: how to go back when something breaks
 - When to revert vs when to fix changes
@@ -79,7 +78,7 @@ Be prepared when something breaks.
 ### 5. Go Beyond the Interface
 Make your app more complex.
 
-- Planning mode: let Lovable think through complex features before building (but don't over-plan; Lovable works best when you build as you go)
+- Planning mode: let Lovable think through complex features before building (but don't over-plan; Lovable works best when you build as you go – explain context rot)
 - Knowledge files: give Lovable context it can reference
 - API keys and the Secrets panel: where to put them, why never in prompts
 - Lovable Cloud: backend features without setup
@@ -96,7 +95,7 @@ Put your work on the internet.
 - The 80/20 reality: getting to 80% takes 20% of the effort; the final 20% takes the remaining 80%
 - Products vs projects: apps are never finished, they evolve
 - Exercise: Set your favicon and meta tags, then publish
-- What to do next: share with one person and ask what confused them
+- What to do next: share with one person and ask for feedback
 
 ---
 
