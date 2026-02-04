@@ -37,7 +37,21 @@ Build something real in the first five minutes.
 Learn the structure that gets better results.
 
 - Why vague prompts get vague results
-- The prompt formula: Product Overview, User Flow, Platform Requirements, Design System
+- The prompt formula:
+    ```markdown
+    ## Product overview
+    ## User flow
+    ## Platform Requirements
+    - It's a mobile-first platform. Optimise layout, font sizes, and buttons for mobile. Prioritise speed and readability.
+    - The platform is accessible. Implement WCAG AA compliance.
+    ## Design system
+    - Brand colours
+    - Heading font
+    - Paragraph font
+    - Logo
+    ## Implementation details
+    ## Target user
+    ```
 - Example: Building the Book Club Organiser step by step
 - Mobile-first and accessibility: two lines that improve every app
 - Exercise: Write a structured prompt for your own idea (or use the Book Club example)
@@ -47,25 +61,27 @@ Learn the structure that gets better results.
 Find your way around without getting lost.
 
 - Preview mode: see your app full-screen, test on mobile
-- Code view: you don't need to understand it, but it's there
+- Prompt in small steps -> test -> improve
+- Lovable usually builds more than you specify, with small steps, you can ensure it builds what you asked for
+- Code view: you don't need to understand it, but it's there. It will get more useful as you acquire more skills
 - Visual edits: click elements to change text, colours, spacing
 - Adding assets: images, logos, and where they live
 - Design themes: quick ways to change the overall look
 - Exercise: Make three visual edits to your app without prompting
 
-### 4. Save Your Progress (and Undo Mistakes)
-Protect your work and experiment freely.
+### 4. Experiment Freely (and Undo Mistakes)
+Experiment freely and be prepared when something breaks.
 
-- Bookmarking versions: save before risky changes
+- Bookmarking versions: mark stable versions
 - Reverting: how to go back when something breaks
 - The rebuild mindset: it's cheap to start over, so experiment boldly
-- When to revert vs when to rebuild from scratch
+- When to revert vs when to fix changes
 - Exercise: Bookmark your current version, try something risky, then revert
 
 ### 5. Go Beyond the Interface
-Connect your app to real functionality.
+Make your app more complex.
 
-- Planning mode: let Lovable think through complex features before building
+- Planning mode: let Lovable think through complex features before building, but be mindful about planning too much ahead (context rot)
 - Knowledge files: give Lovable context it can reference
 - API keys and the Secrets panel: where to put them, why never in prompts
 - Lovable Cloud: backend features without setup
@@ -79,6 +95,7 @@ Put your work on the internet.
 - The publish button: what happens when you click it
 - Your published URL: it's live, but nobody will find it unless you share it
 - Why "not done" is fine: ship early, learn from real use
+- Reaching 80% of what you want to build is 20% of effort; completing the last 20% of your app's scope is 80% of the effort
 - Products vs projects: apps are never finished, they evolve
 - Exercise: Set your favicon and meta tags, then publish
 - What to do next: share with one person and ask what confused them
@@ -92,7 +109,7 @@ The course follows a confidence progression:
 1. **Proof:** I can make something appear (first prompt)
 2. **Control:** I can shape what it looks like (prompt structure, visual edits)
 3. **Safety:** I can experiment without losing work (bookmarks, reverts)
-4. **Depth:** I can add real functionality (planning mode, APIs, cloud)
+4. **Depth:** I can add more functionality (planning mode, APIs, cloud)
 5. **Shipping:** I can put it in the world (publish, share, iterate)
 
 Each challenge builds on the previous. Learners always have something working; each step makes it better.
@@ -116,7 +133,7 @@ Learners can follow along with this example or apply each concept to their own i
 ## Teaching Approach
 
 - **Hands-on from minute one:** First prompt happens immediately, not after explanation
-- **Mindset woven into practice:** "It's cheap to rebuild" taught while they're bookmarking, not in a separate lesson
+- **Mindset woven into practice:** "It's cheap to rebuild" taught while they're bookmarking, not in a separate challenge
 - **Show the interface:** Screenshots and screen recordings of actual Lovable UI
 - **Normalise imperfection:** Encourage publishing before it's "ready"
 - **Link to other courses:** Debugging, software basics, and product planning courses referenced where relevant
