@@ -6,12 +6,12 @@
 
 This micro-course takes complete beginners from zero to a published web app using Lovable. Within the first challenge, learners write their first prompt and see real output. By the end, they'll have a working app live on the internet.
 
-**The transformation:** You'll go from "I've never built anything" to "I just shipped my first app." You'll understand how to prompt Lovable, navigate its interface, handle common issues, and publish your work. More importantly, you'll have the confidence to keep building.
+**The transformation:** You'll go from "I've never built anything" to "I just shipped my first app." You'll understand how to prompt Lovable, navigate its interface, handle common issues, and publish your work. You'll also have the confidence to keep building.
 
 **What you'll be able to do after this course:**
 - Write structured prompts that get you closer to what you want on the first try
 - Use Lovable's interface confidently: preview, edit, bookmark, revert
-- Handle security warnings without panic
+- Handle security warnings calmly
 - Publish your app and share it with others
 - Know when to start over vs when to iterate
 
@@ -20,23 +20,13 @@ This micro-course takes complete beginners from zero to a published web app usin
 ## Structure
 
 ### 1. Your First Prompt (Free Challenge)
-Build something real in the first five minutes.
+Build something real in the first few minutes.
 
-**Hook:** You're about to build a working app. No code. No setup. Just words.
+**Hook:** You're about to build a working app. No code. No setup. Just words and a structure that works.
 
-- Open Lovable and write your first prompt (guided, simple example)
-- See instant output: the "aha!" moment
-- What just happened: Lovable translated your words into a working interface
 - What vibe coding is: building by describing, not by writing code
 - What Lovable produces: web apps that run in browsers (mobile and desktop)
-- Exercise: Tweak your prompt and see what changes
-
-**Aha moment:** You described something in plain English, and it exists now. That feeling of "wait, I made that?" is the hook.
-
-### 2. Write Prompts That Work
-Learn the structure that gets better results.
-
-- Why vague prompts get vague results
+- Why structure matters: vague prompts get vague results
 - The prompt formula:
     ```markdown
     ## Product overview
@@ -52,36 +42,44 @@ Learn the structure that gets better results.
     ## Implementation details
     ## Target user
     ```
-- Example: Building the Book Club Organiser step by step
-- Mobile-first and accessibility: two lines that improve every app
-- Exercise: Write a structured prompt for your own idea (or use the Book Club example)
-- Tip: Credits are based on complexity; detailed prompts often use fewer credits than vague ones followed by fixes
+- Example: The Book Club Organiser prompt (learners can use this or adapt for their own idea)
+- Exercise: Open Lovable, paste your structured prompt, and hit enter
+- See instant output: the "aha!" moment
+
+**Aha moment:** You gave Lovable a clear structure, and it built exactly what you described. That feeling of "wait, I made that?" is the hook. The structure gave you control from the start.
+
+### 2. Iterate and Improve
+Build in small steps; test after each one.
+
+- Credits are based on complexity; detailed prompts often use fewer credits than vague ones followed by fixes
+- Prompt in small steps: describe one feature at a time, test, then add the next
+- Lovable usually builds more than you specify; small steps help you stay in control
+- The rebuild mindset: it's cheap to start over, so experiment freely
+- When to tweak vs when to start fresh
+- Exercise: Add one feature to your app with a follow-up prompt, then test it
 
 ### 3. Navigate the Lovable Interface
 Find your way around without getting lost.
 
 - Preview mode: see your app full-screen, test on mobile
-- Prompt in small steps -> test -> improve
-- Lovable usually builds more than you specify, with small steps, you can ensure it builds what you asked for
-- Code view: you don't need to understand it, but it's there. It will get more useful as you acquire more skills
+- Code view: you don't need to understand it, but it's there (it gets more useful as you acquire more skills)
 - Visual edits: click elements to change text, colours, spacing
 - Adding assets: images, logos, and where they live
 - Design themes: quick ways to change the overall look
 - Exercise: Make three visual edits to your app without prompting
 
-### 4. Experiment Freely (and Undo Mistakes)
-Experiment freely and be prepared when something breaks.
+### 4. Save Your Progress (and Undo Mistakes)
+Be prepared when something breaks.
 
-- Bookmarking versions: mark stable versions
+- Bookmarking versions: mark stable versions before risky changes
 - Reverting: how to go back when something breaks
-- The rebuild mindset: it's cheap to start over, so experiment boldly
 - When to revert vs when to fix changes
 - Exercise: Bookmark your current version, try something risky, then revert
 
 ### 5. Go Beyond the Interface
 Make your app more complex.
 
-- Planning mode: let Lovable think through complex features before building, but be mindful about planning too much ahead (context rot)
+- Planning mode: let Lovable think through complex features before building (but don't over-plan; Lovable works best when you build as you go)
 - Knowledge files: give Lovable context it can reference
 - API keys and the Secrets panel: where to put them, why never in prompts
 - Lovable Cloud: backend features without setup
@@ -91,11 +89,11 @@ Make your app more complex.
 ### 6. Publish Your App
 Put your work on the internet.
 
-- Before you publish: favicon, meta tags, thumbnail (the details that matter)
+- Before you publish: favicon, meta tags, thumbnail
 - The publish button: what happens when you click it
 - Your published URL: it's live, but nobody will find it unless you share it
 - Why "not done" is fine: ship early, learn from real use
-- Reaching 80% of what you want to build is 20% of effort; completing the last 20% of your app's scope is 80% of the effort
+- The 80/20 reality: getting to 80% takes 20% of the effort; the final 20% takes the remaining 80%
 - Products vs projects: apps are never finished, they evolve
 - Exercise: Set your favicon and meta tags, then publish
 - What to do next: share with one person and ask what confused them
@@ -106,11 +104,12 @@ Put your work on the internet.
 
 The course follows a confidence progression:
 
-1. **Proof:** I can make something appear (first prompt)
-2. **Control:** I can shape what it looks like (prompt structure, visual edits)
-3. **Safety:** I can experiment without losing work (bookmarks, reverts)
-4. **Depth:** I can add more functionality (planning mode, APIs, cloud)
-5. **Shipping:** I can put it in the world (publish, share, iterate)
+1. **Proof:** I can make something appear with structure (first prompt with formula)
+2. **Control:** I can improve it step by step (iteration, small prompts)
+3. **Refinement:** I can shape how it looks (visual edits, interface)
+4. **Safety:** I can experiment without losing work (bookmarks, reverts)
+5. **Depth:** I can add more functionality (planning mode, APIs, cloud)
+6. **Shipping:** I can put it in the world (publish, share, iterate)
 
 Each challenge builds on the previous. Learners always have something working; each step makes it better.
 
@@ -119,10 +118,10 @@ Each challenge builds on the previous. Learners always have something working; e
 ## Running Example
 
 The **Book Club Organiser** appears throughout as a worked example:
-- Challenge 1: Simple first prompt to create the basic app
-- Challenge 2: Structured prompt with the full formula
+- Challenge 1: Structured prompt with the full formula to create the app
+- Challenge 2: Add a voting feature with a follow-up prompt
 - Challenge 3: Visual edits to refine the design
-- Challenge 4: Bookmark before adding voting feature
+- Challenge 4: Bookmark before adding a risky feature
 - Challenge 5: Add a feature using planning mode
 - Challenge 6: Publish and share with a friend
 
@@ -132,7 +131,7 @@ Learners can follow along with this example or apply each concept to their own i
 
 ## Teaching Approach
 
-- **Hands-on from minute one:** First prompt happens immediately, not after explanation
+- **Hands-on from minute one:** Structured prompt formula taught immediately, then learners use it
 - **Mindset woven into practice:** "It's cheap to rebuild" taught while they're bookmarking, not in a separate challenge
 - **Show the interface:** Screenshots and screen recordings of actual Lovable UI
 - **Normalise imperfection:** Encourage publishing before it's "ready"
