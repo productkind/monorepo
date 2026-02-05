@@ -164,11 +164,11 @@ course:
           title: What's NOT in this prompt
           content:
             body: |-
-              Notice what Dalmie left out: voting, deadlines, current book tracking, organiser controls. Those will come later.
+              Notice **what Dalmie left out:** voting, deadlines, current book tracking, organiser controls. Those will come later.
 
-              Right now, she just wants to see if Lovable can create a clean list where people can add suggestions. One thing at a time.
+              Right now, she just wants to see Lovable create a clean list where people can add suggestions. **One thing at a time.**
 
-              This approach means if something goes wrong, she knows exactly what caused it. And she stays in control of how her app grows.
+              This approach means if something goes wrong, she knows exactly what caused it. And she **stays in control** of how her app grows.
           subtitle: The power of leaving things out
         - type: quiz-question
           title: 'Quiz: Structured prompts'
@@ -177,28 +177,28 @@ course:
             options:
               - They use fewer credits
               - They help Lovable understand exactly what you want
-              - They make the app run faster
+              - They make the app you're building run faster
               - They look more professional
             correctAnswer: 1
-            explanation: Structured prompts give Lovable clear information about what you're building, reducing misunderstandings and getting you closer to what you want on the first try.
+            explanation: Research shows that AI works better with structured prompts. When you clearly lay out what you’re building – using markdown formatting, numbered lists – Lovable is less likely to misunderstand you, which saves time and gets you better results sooner.
         - type: quiz-question
           title: 'Quiz: Starting small'
           content:
             question: Why should you start with one core user flow instead of describing everything at once?
             options:
-              - It's cheaper
+              - It's cheaper, and I really don't want to spend too many credits
               - Big prompts are not allowed
               - If something goes wrong, you know what caused it and can fix it easily
               - Lovable can only build one feature at a time
             correctAnswer: 2
-            explanation: Building one feature at a time means problems are easier to spot and fix. You stay in control of how your app grows, instead of untangling a complex mess.
+            explanation: When you build one feature at a time, you can quickly spot anything that’s off, whether it’s something you didn’t ask for, something you don’t like, or something that doesn’t work properly. It keeps things manageable and puts you in control of how your app develops.
         - type: reflection
           title: 'Your turn: Build your first app'
           content:
             description: |-
-              Open Lovable (lovable.dev), paste Dalmie's structured prompt (or adapt it for your own idea), and press Enter.
+              Open Lovable ([Lovable.dev](https://lovable.dev/)), paste Dalmie's structured prompt (or adapt it for your own idea), and press Enter.
 
-              Watch what happens. In less than a minute, you'll have a working app.
+              Watch what happens. In a couple of minutes, you'll have a working app.
 
               Click around. Test the buttons. See what Lovable created. It might not be perfect, and that's completely fine.
 
@@ -213,7 +213,7 @@ course:
           content:
             nextModule: "**Next:** Now that you have something working, let's make it better by adding features one step at a time."
             description: You've experienced the core of vibe coding.
-            subDescription: You described what you wanted, and Lovable built it. This is just the beginning. Every app you build from now on starts the same way.
+            subDescription: You described what you wanted, and Lovable built it. This is just the beginning. For every app you build from now, you can use the structured prompt formula to get better results faster.
 
     - title: Iterate and Improve
       isFree: false
@@ -228,10 +228,11 @@ course:
           title: Why small steps beat big prompts
           content:
             body: |-
-              You might be wondering: why didn't we include voting, deadlines, and everything else in the first prompt? Wouldn't it be faster to describe it all at once?
+              You might be wondering: why didn't we include voting, deadlines, and everything else in the first prompt? **Wouldn't it be faster to describe it all at once?**
 
-              Here's what actually happens when you try that:
+              Here's **what actually happens** when you try that:
               - Lovable might misunderstand one part, and that mistake ripples through everything else
+              - It might build something that you didn't quite imagine
               - You get a complex app that's harder to understand and fix
               - You spend more time untangling problems than you saved by combining prompts
           subtitle: The temptation of big prompts
@@ -239,22 +240,22 @@ course:
           title: The benefits of building one feature at a time
           content:
             body: |-
-              Building one feature at a time means:
+              Building **one feature at a time** means:
               - You can test each piece before adding the next
               - Problems are easier to spot and fix
               - You stay in control of how your app grows
 
-              This also helps with credits. Lovable uses credits based on the complexity of your request. A detailed, focused prompt often uses fewer credits than a vague mega-prompt followed by lots of fixes.
+              **This also helps with credits.** Lovable uses credits based on the complexity of your request. A detailed, focused prompt often uses fewer credits than a mega-prompt followed by lots of fixes.
           subtitle: Stay in control
         - type: text
           title: The rebuild mindset
           content:
             body: |-
-              Here's a freeing thought: **it's cheap to start over**.
+              Here’s a freeing thought: **starting over is often cheap**, especially early on.
+              
+              After your first few prompts, **pause and take a look** at what Lovable has built. If something fundamental feels off, it’s usually faster to start again with a clearer prompt than to keep fixing it.
 
-              If Lovable creates something that's 70% right but the 30% that's wrong is fundamental, don't spend hours trying to fix it. Just start fresh with a better prompt.
-
-              This might feel wasteful if you're used to thinking about code as precious. But in vibe coding, your prompt is the valuable thing, not the output. A clearer prompt will give you a cleaner result.
+              This doesn’t mean you should throw everything away after weeks of work. But in the early stages, restarting can save time and frustration.
           subtitle: Starting over is okay
         - type: text
           title: When to tweak vs when to start fresh
@@ -271,21 +272,124 @@ course:
               - Lovable built something completely different from what you described
           subtitle: A simple decision guide
         - type: text
-          title: 'Example: Adding voting to the Book Club app'
+          title: 'Example: Improving the book suggestion form'
           content:
             body: |-
-              Dalmie's app can now collect book suggestions. Time for the next piece: letting Sarah and her friends vote.
+              Dalmie looks at her app and notices the form for adding book suggestions misses an 'author' field.
 
-              Here's Dalmie's follow-up prompt:
+              Here's her follow-up prompt:
+
+              ```
+              Improve the book suggestion form. Add an "Author" field with the placeholder text that says "e.g., Harper Lee."
+              ```
+
+              See how specific that is? She's describing exactly what she wants to change about the existing feature.
+          subtitle: Dalmie's next step
+        - type: text
+          title: More ways to improve with prompts
+          content:
+            body: |-
+              You can improve many things about your existing features using follow-up prompts:
+              - Make text clearer or more friendly
+              - Add helpful placeholder text or labels
+              - Show confirmation or error messages
+              - Improve the layout or spacing
+              - Make buttons more descriptive
+
+              Each improvement gets its own prompt. Test after each change. This is how you polish your app step by step.
+          subtitle: Polish what you have
+        - type: quiz-question
+          title: 'Quiz: The rebuild mindset'
+          content:
+            question: What should you do if Lovable creates something that's 70% right but fundamentally wrong in important ways?
+            options:
+              - Start fresh with a clearer prompt
+              - Spend hours fixing it piece by piece
+              - Delete everything and give up
+              - Ask Lovable to fix all the problems at once
+            correctAnswer: 0
+            explanation: In vibe coding, your prompt is the valuable thing, not the output. Starting fresh with a better prompt often gets you to a good result faster than trying to fix a flawed foundation.
+        - type: reflection
+          title: 'Your turn: Improve your app'
+          content:
+            description: |-
+              Prompt an improvement to your app in Lovable. Then take a moment to reflect on what happened.
+
+              Was the change close to what you had in mind, or did it surface something you’d describe differently next time?
+            placeholder: |-
+              I noticed that...
+            subDescription: Notice how a small, focused prompt led to a specific change.
+        - type: challenge-end
+          title: "You've learned the iterative approach! 🔄"
+          content:
+            nextModule: "**Next:** Before adding new features, let's connect your app to Lovable Cloud so your data is saved properly."
+            description: You now know how to improve your app step by step.
+            subDescription: Small prompts, test often, and don't be afraid to start over. This approach keeps you in control and makes your app better with each iteration.
+
+    - title: Connect to Lovable Cloud
+      isFree: false
+      skills:
+        - Lovable Cloud
+        - Backend Basics
+        - Data Storage
+      description: Set up a backend early so your app can save data and grow without problems.
+      completionTime: '8:00'
+      steps:
+        - type: text
+          title: Why connect to a backend now?
+          content:
+            body: |-
+              Right now, Dalmie's app stores data locally in the browser. That means if Sarah closes the tab or uses a different device, all the book suggestions disappear.
+
+              For a real app that multiple people can use, you need a **backend**: a place to store data that everyone can access.
+
+              **Why do this early?** Adding a backend later, after you've built lots of features, often causes problems. Things that worked locally might break when connected to real storage. It's much easier to set this up now, while your app is still simple.
+          subtitle: Local storage isn't enough
+        - type: text
+          title: What is Lovable Cloud?
+          content:
+            body: |-
+              **Lovable Cloud** takes care of the behind-the-scenes work your app needs. It gives your app:
+              - **Data storage:** Save book suggestions, votes, and anything else so they persist
+              - **User accounts:** Let people create an account and sign in
+              - **Shared access:** Multiple people can use the same app and see the same data
+              - **Connections to other services:** Send emails, process payments, and more
+
+              For most apps, Lovable Cloud is the simplest way to add these capabilities.
+
+              If you’re curious about what’s happening under the hood, you can take our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) micro-course. It explains these ideas in simple, non-technical terms.
+            imageUrl: /courses/lovable-intro-00/lovable-cloud.png
+          subtitle: Backend without the complexity
+        - type: text
+          title: Enable Lovable Cloud
+          content:
+            body: |-
+              To connect your app to Lovable Cloud, you can simply prompt Lovable:
+
+              ```
+              Connect this app to Lovable Cloud so that data is saved and accessible from any device.
+              ```
+
+              Lovable will set up the backend for you. After this, any data your app creates will be stored properly.
+
+              You only need to do this once. From now on, new features you add will automatically use the backend.
+          subtitle: One prompt to set it up
+        - type: text
+          title: 'Now you can add features that need data'
+          content:
+            body: |-
+              With Lovable Cloud connected, Dalmie can add features that need to save and share data. Time for the next piece: letting Sarah and her friends vote on books.
+
+              Here's Dalmie's prompt:
 
               ```
               Add a voting feature. Each club member can vote for one book from the suggestions. Show vote counts next to each book. Highlight the book with the most votes.
               ```
 
-              See how specific that is? She's not saying "make voting work." She's describing exactly what voting means for this app: one vote per person, visible counts, and a clear winner.
-          subtitle: Dalmie's next step
+              Because the backend is set up, votes will be saved properly and everyone will see the same counts.
+          subtitle: Adding voting with a backend
         - type: text
-          title: One step at a time
+          title: One feature at a time (with backend)
           content:
             body: |-
               After voting works, Dalmie might add:
@@ -293,43 +397,41 @@ course:
               - A "currently reading" section
               - Reading deadlines
 
-              Each feature gets its own prompt. Each prompt gets tested before moving on. This is how apps grow without becoming a tangled mess.
-          subtitle: How apps grow
+              Each feature gets its own prompt. Each prompt gets tested before moving on. Because Lovable Cloud is already connected, all these features will work with real data storage.
+          subtitle: How apps grow with a backend
         - type: quiz-question
-          title: 'Quiz: The rebuild mindset'
+          title: 'Quiz: Why add a backend early?'
           content:
-            question: What should you do if Lovable creates something that's 70% right but fundamentally wrong in important ways?
+            question: Why is it better to connect Lovable Cloud early rather than waiting until later?
             options:
-              - Spend hours fixing it piece by piece
-              - Start fresh with a clearer prompt
-              - Delete everything and give up
-              - Ask Lovable to fix all the problems at once
+              - It costs fewer credits
+              - Adding a backend later often causes problems with features that worked locally
+              - Lovable requires it before you can add more features
+              - It makes your app run faster
             correctAnswer: 1
-            explanation: In vibe coding, your prompt is the valuable thing, not the output. Starting fresh with a better prompt often gets you to a good result faster than trying to fix a flawed foundation.
+            explanation: Features built with local storage might break when you add a real backend later. Setting up Lovable Cloud early means everything you build from now on will work properly with real data storage.
         - type: reflection
-          title: 'Your turn: Add a feature'
+          title: 'Your turn: Connect and add a feature'
           content:
             description: |-
-              Think of the next feature your app needs. Just one. Resist the temptation to add three things at once.
+              What will you do differently now that you know about Lovable Cloud?
+              1. Prompt Lovable to connect your app to Lovable Cloud
+              2. Once connected, add a feature that needs to save data (like voting, or something for your own app idea)
 
-              Maybe it's:
-              - A way to filter or sort items
-              - A confirmation message when something is saved
-              - A place to add notes or comments
-              - A button to delete or edit entries
-
-              Write a follow-up prompt that adds one specific feature to your app. Be as detailed as you can about what it should do and look like.
+              What feature did you add? How did it work?
             placeholder: |-
-              My follow-up prompt:
+              I connected to Lovable Cloud by:
 
-              Add...
-            subDescription: Test it in Lovable. If it works, think about what comes next. If it doesn't, try describing it more clearly or consider starting fresh.
+              Then I added this feature:
+
+              What happened:
+            subDescription: With your backend connected, your app can now save real data that persists and can be shared with others.
         - type: challenge-end
-          title: "You've learned the iterative approach! 🔄"
+          title: "Your app has a backend! ☁️"
           content:
             nextModule: "**Next:** Let's explore Lovable's interface so you can make quick changes without writing prompts."
-            description: You now know how to build features one at a time.
-            subDescription: Small steps, test often, and don't be afraid to start over. This approach keeps you in control and makes problems easy to fix.
+            description: You've connected your app to Lovable Cloud.
+            subDescription: Now your app can save data properly. Features you add from here will work with real storage, and multiple people can use your app together.
 
     - title: Navigate the Lovable Interface
       isFree: false
@@ -513,15 +615,14 @@ course:
         - Planning Mode
         - Knowledge Files
         - API Keys
-        - Lovable Cloud
       description: Unlock more capabilities with advanced features.
-      completionTime: '8:00'
+      completionTime: '7:00'
       steps:
         - type: text
           title: More powerful features
           content:
             body: |-
-              So far you've been working in the main interface. Now let's explore some features that unlock more possibilities.
+              So far you've been working with prompts, visual edits, and Lovable Cloud. Now let's explore some additional features that can help as your app grows.
 
               These are optional but powerful. Use them when you need them.
           subtitle: Level up your building
@@ -559,14 +660,6 @@ course:
 
               **Never put API keys in your prompts.** Lovable has a dedicated secrets panel for storing them safely. Look for it in the settings.
           subtitle: Connect to other services
-        - type: text
-          title: Lovable Cloud
-          content:
-            body: |-
-              Lovable Cloud handles backend features like user accounts and data storage without you needing to set up servers.
-
-              For most apps, it's the simplest way to add these capabilities. When you need features that require saving data or managing users, Lovable Cloud makes it straightforward.
-          subtitle: Backend without servers
         - type: text
           title: Handling security warnings
           content:
