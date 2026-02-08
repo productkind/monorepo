@@ -420,6 +420,8 @@ course:
               ```
 
               Lovable Cloud makes this straightforward. After this prompt, users can **log in**, and the app will know who they are.
+
+              *Try it for your app! Adding authentication is a common prerequisite for many features.*
           subtitle: Let users log in
         - type: text
           title: Now add voting
@@ -599,7 +601,7 @@ course:
           title: Things will break (and that's okay)
           content:
             body: |-
-              Here's the truth about building apps: things will break. You'll try something and it won't work. This is normal. What matters is knowing how to recover.
+              Here's the truth about building apps: **things will break**. You'll add a new functionality and sometimes it will not work as expected. **This is normal.** What matters is knowing how to recover.
 
               Lovable has tools that make experimentation safe. Let's learn how to use them.
           subtitle: The reality of building
@@ -607,7 +609,7 @@ course:
           title: Automatic saving
           content:
             body: |-
-              Good news: Lovable automatically saves every version of your app. You can't accidentally lose everything with an errant click.
+              Good news: Lovable **automatically saves** every version of your app. You can't accidentally lose everything with an errant click.
 
               Every time you make a change, Lovable keeps a record. This history is your safety net.
           subtitle: Your safety net
@@ -615,13 +617,13 @@ course:
           title: Bookmarking versions
           content:
             body: |-
-              Before you try something risky (like a big structural change), bookmark your current version. It's like saving your game before a boss fight.
+              Bookmarks let you **mark stable or important versions** so you can find and restore them easily later. They keep your edits organised and make it simpler to manage and revert changes without scrolling through every version.
 
-              Look for the bookmark icon in the version history. Give it a name you'll recognise, like "Working version before adding login."
+              Look for the bookmark icon in the version history, and click it.
 
               If things go wrong, you can always return to this bookmark.
             imageUrl: /courses/lovable-intro-01/bookmarking.png
-          subtitle: Save before risky changes
+          subtitle: Mark and revisit key versions
         - type: text
           title: Reverting
           content:
@@ -630,7 +632,7 @@ course:
 
               **When to revert:**
               - The change broke something fundamental
-              - You created a mess you can't easily untangle
+              - Lovable created a mess you can't easily untangle
 
               **When to fix instead:**
               - It's a small issue
@@ -642,24 +644,22 @@ course:
             question: When should you bookmark a version?
             options:
               - Only at the very end when your app is complete
-              - Before trying something risky or making a big change
+              - When you have a stable version
               - Every time you open Lovable
               - Only when Lovable suggests it
             correctAnswer: 1
-            explanation: Bookmarking before risky changes gives you a safe point to return to. If the experiment fails, you can easily get back to a working state.
+            explanation: Bookmarking a version that works as you expect it, gives you a safe point to return to. If making a change fails, you can easily get back to a working state.
         - type: reflection
           title: 'Your turn: Practice safe experimentation'
           content:
             description: |-
-              1. Bookmark your current app version with a clear name
-              2. Try something experimental (something you're not sure will work)
+              1. Bookmark your latest stable app version
+              2. Make an experimental change (something you're not sure will work)
               3. If it breaks things, practise reverting to your bookmarked version
               4. If it works, great! Bookmark the new version too
 
               What did you try? What happened?
             placeholder: |-
-              I bookmarked my version as:
-
               I tried:
 
               What happened:
@@ -669,7 +669,7 @@ course:
           content:
             nextModule: "**Next:** Let's explore some advanced features that unlock more possibilities."
             description: You know how to recover when things go wrong.
-            subDescription: Bookmarks before risky changes, reverts when needed. Now you can try bold experiments knowing you can always go back.
+            subDescription: Bookmark stable versions, revert when needed. Now you can try bold experiments knowing you can always go back.
 
     - title: Go Beyond the Interface
       isFree: false
