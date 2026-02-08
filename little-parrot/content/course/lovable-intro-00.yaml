@@ -674,9 +674,10 @@ course:
     - title: Go Beyond the Interface
       isFree: false
       skills:
-        - Planning Mode
-        - Knowledge Files
+        - Plan Mode
+        - Project Knowledge
         - API Keys
+        - Security Issues
       description: Unlock more capabilities with advanced features.
       completionTime: '7:00'
       steps:
@@ -684,43 +685,55 @@ course:
           title: More powerful features
           content:
             body: |-
-              So far you've been working with prompts, visual edits, and Lovable Cloud. Now let's explore some additional features that can help as your app grows.
+              You've built, iterated, and connected your app to the cloud. You're no longer a beginner. Now it's time to unlock the features that let you build like a pro.
 
-              These are optional but powerful. Use them when you need them.
-          subtitle: Level up your building
+              By the end of this challenge, you'll know how to think through complex problems with Lovable as your partner, give it lasting context about your project, connect to external services safely, handle security warnings without panic, and even ask Lovable to test your app for you.
+
+              These are the tools that separate "I made an app" from "I can build anything I imagine."
+          subtitle: Build like a pro
         - type: text
-          title: Planning mode
+          title: Plan mode
           content:
             body: |-
-              For complex features, you can ask Lovable to plan before building. This is helpful when you're not quite sure how something should work.
+              When you need a partner **to discuss your ideas or questions with**, you can switch to Plan mode.
 
-              Enable planning mode and describe what you want. Lovable will outline an approach and check with you before writing code.
-          subtitle: Think before building
+              **Plan mode** in Lovable is a way to think, explore, and map out your ideas before any code is changed or written. It’s like having a helpful partner who talks through your problem, compares options, investigates bugs, and helps you choose the best approach before you build anything. 
+              
+              You can use it to ask questions, debug issues, and get a clear plan. When you’re happy with the plan, you can switch to Agent mode (unselect *Plan*) to build it.
+
+              Click **Plan** below the input field to discuss with Lovable without writing any code.
+          subtitle: Discuss before writing code
         - type: text
           title: "Don't over-plan"
           content:
             body: |-
               A word of caution: **Lovable works best when you build as you go**.
 
-              Planning too far ahead leads to what's called "context rot," meaning the plan becomes outdated as you learn what actually works.
+              Planning too far ahead leads to what's called "context rot." 
+              
+              **Context rot** is what happens when an AI model starts to get worse at using everything you’ve already told it because the conversation or input has become too long or cluttered. Even though the earlier information is still technically there, the model begins to ignore, forget, or misinterpret those details, leading to less accurate or confused responses.
 
               Plan one feature at a time, not your entire product roadmap. Build, test, learn, then plan the next thing.
           subtitle: Keep plans small
         - type: text
-          title: Knowledge files
+          title: Knowledge
           content:
             body: |-
-              You can give Lovable documents to reference, like brand guidelines, product requirements, or examples of what you like.
+              You can capture key details about your app in your project's **Knowledge** panel. It acts like the project’s central reference and is sent with AI prompts so the AI can better understand your context, and rules.
+              
+              You can use it to store things like your user personas, design rules, naming conventions, and other guidelines. This makes the AI’s responses more relevant and consistent with your project’s needs.
 
-              Upload them as knowledge files, and Lovable can refer to them when building. This is useful when you want consistent styling or behaviour across your app.
+              This is useful when you want consistent styling or behaviour across your app.
           subtitle: Give Lovable context
         - type: text
           title: API keys and secrets
           content:
             body: |-
-              If you want to connect your app to other services (like sending emails or processing payments), you'll need API keys. These are like passwords that let your app talk to other services.
+              If you want to **connect your app to other services** (like sending emails or processing payments), you'll need API keys. These are like passwords that let your app talk to other services.
 
-              **Never put API keys in your prompts.** Lovable has a dedicated secrets panel for storing them safely. Look for it in the settings.
+              **Never put API keys in your prompts.** Lovable has a dedicated secrets panel for storing them safely. When you add a feature that needs an API key, Lovable will directly ask you for it in a secure **Add Secret** panel.
+
+              *If you want to know more about using API keys and connecting to other services, check out our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) micro-course.*
           subtitle: Connect to other services
         - type: text
           title: Handling security warnings
@@ -728,52 +741,66 @@ course:
             body: |-
               Sometimes Lovable will flag security issues before you publish. Don't panic. This is normal and helpful. Developers deal with security considerations all the time.
 
-              Read what Lovable suggests and follow its guidance. Usually it's something straightforward, like making sure certain data isn't publicly accessible.
+              Check the security errors and warnings in the **Security** panel, and click "Try to fix all". Usually Lovable takes care of all issues, like making sure certain data isn't publicly accessible.
+
+              It can happen that new warnings appear after fixing others. As long as you don't have any security errors, you are good to publish your app.
+              
+              *You can find more guidance on security in our [Fix Bugs with Confidence: Debugging Your Lovable App](https://littleparrot.app/aaab45b7-209a-4578-a515-3e55687f0c53/course-overview) micro-course.*
           subtitle: Stay calm and follow the guidance
+        - type: text
+          title: Browser testing
+          content:
+            body: |-
+              Lovable has a feature that lets you ask it to **test your app in a real browser**. This means Lovable can interact with your app like a real user would, and report back what it finds.
+
+              **What browser testing can do:**
+              - Capture screenshots to verify layouts look right
+              - Simulate clicks and user interactions
+              - Monitor what's happening behind the scenes
+              - Test how your app looks on different screen sizes
+
+              **How to use it:** After building a feature, send a follow-up prompt asking Lovable to verify it works. Phrases like `verify it works`, `test this`, or `check if clicking the button does what it should` will trigger browser testing.
+
+              **Best practice:** Verify the test steps actually make sense for what you want to check. You can even specify exact actions for Lovable to perform.
+
+              **Note:** Browser testing cannot test everything in your app, for example it cannot automatically log in with Google authentication. It’s best for straightforward interactions. So you should still manually test important features yourself. 
+          subtitle: Ask Lovable to test your app
         - type: quiz-question
           title: 'Quiz: Planning mode'
           content:
             question: What's the risk of planning too far ahead?
             options:
+              - Lovable forgets important details
               - It uses too many credits
-              - Plans become outdated as you learn what actually works
               - Lovable refuses to build complex features
-              - It makes your app slower
-            correctAnswer: 1
-            explanation: This is called "context rot." As you build and test, you learn what works. Plans made too early become outdated. Better to plan one feature at a time.
+              - Too many plans make your app slower
+            correctAnswer: 0
+            explanation: This is called "context rot." When the conversation becomes too long or cluttered, the AI model starts to ignore, forget, or misinterpret earlier details, leading to less accurate or confused responses.
         - type: quiz-question
           title: 'Quiz: API keys'
           content:
             question: Where should you put API keys?
             options:
-              - In your prompts so Lovable can use them
-              - In the dedicated secrets panel in settings
+              - Directly in your prompts so Lovable can use them
               - In a text file in your app
-              - Share them in the chat
-            correctAnswer: 1
-            explanation: Never put API keys in your prompts. Use Lovable's dedicated secrets panel to store them safely. This keeps your keys secure.
+              - In the dedicated Visual edits panel
+              - In the dedicated Add Secret panel
+            correctAnswer: 3
+            explanation: Never put API keys in your prompts. Use Lovable's dedicated "Add Secret" panel to store them safely. This keeps your keys secure.
         - type: reflection
-          title: 'Your turn: Try planning mode'
+          title: 'Your turn: Try Plan mode'
           content:
             description: |-
-              Enable planning mode and ask Lovable to add a feature to your app.
-
-              Watch how it breaks down the problem before building. Decide whether you like the plan or want to adjust it.
-
-              What feature did you ask for? What did the plan look like?
+              What have you always wanted to know about building software? Go to Lovable, switch to Plan mode, and ask your question.
             placeholder: |-
-              Feature I asked for:
-
-              The plan included:
-
-              I decided to:
-            subDescription: Planning mode is useful for complex features where you want to review the approach before building.
+              I learned...
+            subDescription: What did you learn about building software from your conversation in Plan mode?
         - type: challenge-end
           title: "You've unlocked advanced features! ⚡"
           content:
             nextModule: "**Next:** Time to share your creation with the world. Let's publish your app."
-            description: You know how to use planning mode, knowledge files, API keys, and handle security warnings.
-            subDescription: These tools are here when you need them. Most apps start simple and add these features as they grow.
+            description: You know how to use plan mode, project knowledge, API keys, and handle security errors and warnings.
+            subDescription: You can now plan and build apps in Lovable confidently and safely by combining these core skills.
 
     - title: Publish Your App
       isFree: false
