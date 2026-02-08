@@ -375,64 +375,104 @@ course:
               You only need to do this once. From now on, new features you add will automatically use the backend.
           subtitle: One prompt to set it up
         - type: text
-          title: 'Now you can add features that need data'
+          title: Approving database changes
           content:
             body: |-
-              With Lovable Cloud connected, Dalmie can add features that need to save and share data. Time for the next piece: letting Sarah and her friends vote on books.
+              When Lovable needs to change how your data is stored, it will ask for your permission first. You'll see a **Modify database** message showing exactly what Lovable plans to do, like creating a new table for book suggestions or adding a column for votes.
 
-              Here's Dalmie's prompt:
+              **This is normal and expected.** Lovable is being careful with your data. Simply review what it wants to do and click to **allow** the changes.
 
-              ```
-              Add a voting feature. Each club member can vote for one book from the suggestions. Show vote counts next to each book. Highlight the book with the most votes.
-              ```
+              You don't need to understand every detail. The key thing is that Lovable won't modify your database without checking with you first. This keeps you in control of what's happening with your app's data.
 
-              Because the backend is set up, votes will be saved properly and everyone will see the same counts.
-          subtitle: Adding voting with a backend
+              *If you're curious about what databases are and how they work, our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) micro-course explains these concepts in friendly terms.*
+            imageUrl: /courses/lovable-intro-00/database-approval.png
+          subtitle: Lovable asks before changing your data
         - type: text
-          title: One feature at a time (with backend)
+          title: What if something goes wrong?
           content:
             body: |-
-              After voting works, Dalmie might add:
-              - The ability to close voting
-              - A "currently reading" section
-              - Reading deadlines
+              Sometimes errors happen when connecting to Lovable Cloud or making changes to your app. Don't worry, this is a normal part of building.
 
-              Each feature gets its own prompt. Each prompt gets tested before moving on. Because Lovable Cloud is already connected, all these features will work with real data storage.
-          subtitle: How apps grow with a backend
+              If you see an error, look for the **Try to fix** button. Clicking it tells Lovable to attempt an automatic repair. This often resolves the issue quickly.
+
+              If the error persists or there's no "Try to fix" button, you'll need to investigate further. Debugging is a skill that every builder develops over time.
+
+              *Want to learn how to handle errors confidently? Our [Fix Bugs with Confidence: Debugging Your Lovable App](https://littleparrot.app/aaab45b7-209a-4578-a515-3e55687f0c53/course-overview) micro-course teaches you exactly how to investigate and fix problems.*
+          subtitle: Errors are part of building
+        - type: text
+          title: Think through prerequisites
+          content:
+            body: |-
+              With Lovable Cloud connected, Dalmie wants to add voting. But wait, if anyone can vote without logging in, how would the app know who voted? Someone could vote multiple times.
+
+              **Before building a feature, ask yourself: what does this feature need to work properly?**
+
+              For voting, Dalmie needs users to log in first. That way, the app knows who each person is and can ensure everyone only votes once.
+          subtitle: What does this feature need?
+        - type: text
+          title: Add authentication first
+          content:
+            body: |-
+              Dalmie adds **Google Authentication** so book club members can log in:
+
+              ```
+              Add Google Authentication. Users should be able to sign in with their Google account. Show a "Sign in" button in the header. Once signed in, show their name and a "Sign out" button instead.
+              ```
+
+              Lovable Cloud makes this straightforward. After this prompt, users can **log in**, and the app will know who they are.
+          subtitle: Let users log in
+        - type: text
+          title: Now add voting
+          content:
+            body: |-
+              With authentication in place, Dalmie can **add voting**:
+
+              ```
+              Add a voting feature. Each logged-in user can vote for one book from the suggestions. Show vote counts next to each book. When a user votes, update the count in real-time. Ensure each user can only vote once.
+              ```
+
+              Because users are logged in, the app knows who voted and can prevent duplicate votes.
+          subtitle: Voting that works
+        - type: text
+          title: Test that it actually works
+          content:
+            body: |-
+              After adding a feature, take a moment to verify it works as expected. For the voting feature, Dalmie tests:
+
+              1. **Try voting without logging in.** The app should prevent this or prompt to sign in.
+              2. **Log in and vote.** The vote count should update.
+              3. **Try voting again on the same book.** The app should prevent duplicate votes.
+              4. **Check with another user.** Open the app in a different browser or incognito window, log in as someone else, and confirm the votes are visible.
+
+              This quick check catches problems early. Get into the habit of testing each feature before moving on to the next.
+          subtitle: Verify before moving on
         - type: quiz-question
           title: 'Quiz: Why add a backend early?'
           content:
             question: Why is it better to connect Lovable Cloud early rather than waiting until later?
             options:
-              - It costs fewer credits
-              - Adding a backend later often causes problems with features that worked locally
+              - It costs fewer credits to set up early
               - Lovable requires it before you can add more features
               - It makes your app run faster
-            correctAnswer: 1
-            explanation: Features built with local storage might break when you add a real backend later. Setting up Lovable Cloud early means everything you build from now on will work properly with real data storage.
+              - You'll have to redo and retest already built features
+            correctAnswer: 3
+            explanation: If you wait to connect Lovable Cloud – the system that saves and manages data – until after you’ve built most of the screens, you’ll probably have to redo a lot of work later, as the structure of your app changed. You'll also need to retest everything you've built up to that point to make sure everything still works.
         - type: reflection
-          title: 'Your turn: Connect and add a feature'
+          title: 'Your Takeaway'
           content:
             description: |-
-              What will you do differently now that you know about Lovable Cloud?
-              1. Prompt Lovable to connect your app to Lovable Cloud
-              2. Once connected, add a feature that needs to save data (like voting, or something for your own app idea)
+              What is your takeaway from this challenge?
 
-              What feature did you add? How did it work?
+              What surprised you when you added Lovable Cloud?
             placeholder: |-
-              I connected to Lovable Cloud by:
-
-              Then I added this feature:
-
-              What happened:
+              My takeaway is...
             subDescription: With your backend connected, your app can now save real data that persists and can be shared with others.
         - type: challenge-end
-          title: "Your app has a backend! ☁️"
+          title: "Your app saves data! ☁️"
           content:
-            nextModule: "**Next:** Let's explore Lovable's interface so you can make quick changes without writing prompts."
+            nextModule: "**Next:** Let's explore the Lovable interface so you can make changes more effectively."
             description: You've connected your app to Lovable Cloud.
-            subDescription: Now your app can save data properly. Features you add from here will work with real storage, and multiple people can use your app together.
-
+            subDescription: Now your app can store data, run logic, and remember things even when users close the browser.
     - title: Navigate the Lovable Interface
       isFree: false
       skills:
