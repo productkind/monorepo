@@ -766,7 +766,7 @@ course:
               **Note:** Browser testing cannot test everything in your app, for example it cannot automatically log in with Google authentication. It’s best for straightforward interactions. So you should still manually test important features yourself. 
           subtitle: Ask Lovable to test your app
         - type: quiz-question
-          title: 'Quiz: Planning mode'
+          title: 'Quiz: Plan mode'
           content:
             question: What's the risk of planning too far ahead?
             options:
@@ -806,7 +806,8 @@ course:
       isFree: false
       skills:
         - Publishing
-        - Favicon and Meta Tags
+        - Icon
+        - Share Image
         - Sharing and Feedback
       description: Put your work on the internet and share it with others.
       completionTime: '6:00'
@@ -825,18 +826,41 @@ course:
             body: |-
               Take a few minutes to set up:
               - **Favicon:** The small icon that appears in browser tabs. Upload something simple, like your logo.
-              - **Meta tags:** The title and description that appear when someone shares your link. Make them clear and inviting.
-              - **Thumbnail:** The image that shows when your app is shared on social media.
+              - **Title and Description:** These appear when someone shares your link. Make them clear and inviting.
+              - **Share Image:** The image that shows when your app is shared on social media.
 
-              These small details make your app feel more polished and professional.
+              All these details can be reffered to as **meta tags** in web development.
+
+              These small details can be accessed by 
+              1. clicking the **Publish** button and 
+              2. opening the **Website info** section. 
+              
+              They will make your app feel more polished and professional.
           subtitle: Polish the details
+        - type: text
+          title: Choose your URL
+          content:
+            body: |-
+              By default, Lovable gives your app a URL (e.g. book-club-picks.lovable.app). That works, but it might not be what you want.
+
+              You can set a **Published URL** to make your link easier to remember:
+              1. Click the **Publish** button
+              2. In the **Published URL** field, enter something short and descriptive
+              3. Save your changes
+
+              A clean URL makes your app feel more professional and is easier for people to remember and type.
+
+              **Note:** Your URL will end with `.lovable.app`. If you want a custom domain (like `book-club.com`) you'll need to buy it separately and set it in Lovable.
+          subtitle: Make it memorable
         - type: text
           title: The publish button
           content:
             body: |-
-              When you're ready, click publish. Lovable will give you a URL where your app lives. It's now on the internet.
+              When you're ready, click **Publish** in the Publish panel. It's now on the internet!
 
-              Here's something reassuring: **nobody will find your app unless you share the link**. It's not going to appear in Google searches. So don't worry if it's not perfect.
+              Here's something reassuring: **nobody will find your app on the internet**. So don't worry if it's not perfect yet. It takes digital marketing work to get discovered.
+              
+              This means you can publish early and improve based on feedback without worrying about it being "perfect."
           subtitle: Click and go live
         - type: text
           title: Why "not done" is fine
