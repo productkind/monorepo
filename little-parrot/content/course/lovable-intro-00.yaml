@@ -483,18 +483,18 @@ course:
       completionTime: '7:00'
       steps:
         - type: text
-          title: Beyond the chat window
+          title: Beyond the Chat Window
           content:
             body: |-
               Lovable has several helpful features beyond the chat window. Let's explore the ones you'll use most.
 
-              These tools help you make quick changes without writing another prompt, and let you see your app the way users will see it.
+              These tools help you make changes effectively, and let you see your app the way users will see it.
           subtitle: More ways to build
         - type: text
-          title: Preview mode
+          title: Preview Mode
           content:
             body: |-
-              The preview shows your app as users will see it. You can:
+              The **preview** shows your app as users will see it. You can:
               - View it full-screen (click the expand icon)
               - Test how it looks on mobile vs desktop (use the device toggle)
               - Click around to test all the interactions
@@ -503,66 +503,88 @@ course:
             imageUrl: /courses/lovable-intro-01/preview-mode.png
           subtitle: See what users see
         - type: text
-          title: Code view
+          title: Code View
           content:
             body: |-
-              There's a tab that shows the actual code Lovable is generating. You don't need to understand it. But it's there if you're curious, and it becomes more useful as you build more apps and start recognising patterns.
+              There's a tab that shows **the code Lovable is generating**. You don't need to understand it. But it's there if you're curious, and it becomes more useful as you build more apps and start recognising patterns.
 
               Think of it like the engine of a car. You don't need to be a mechanic to drive, but knowing where the engine is doesn't hurt.
           subtitle: For the curious
         - type: text
-          title: Visual edits
+          title: Visual Edits
           content:
             body: |-
-              This is one of the most useful features for quick tweaks. Click the paintbrush icon to enter visual edit mode. Now you can:
+              This is one of the most useful features for targeted tweaks. Click **Visual edits** in your "Ask Lovable..." input field to enter visual edit mode. Now you can:
               - Click on any text to change it
               - Adjust colours by clicking on elements
               - Tweak spacing and sizing
+              - Prompt Lovable to make changes on selected elements
 
-              It's perfect for small refinements without writing another prompt.
+              It's perfect for small, targeted refinements.
             imageUrl: /courses/lovable-intro-01/visual-edits.png
           subtitle: Point and click changes
         - type: text
-          title: Adding assets and design themes
+          title: Design Themes
           content:
             body: |-
-              **Assets:** Want to add your logo or images? Look for the assets panel. You can upload images here and reference them in your prompts.
+              Want to change the overall look of your app? Click the **Design** menu in the top bar.
 
-              **Design themes:** Lovable offers pre-built themes that can change the overall look of your app with one click. It's a quick way to experiment with different styles before committing to a design direction.
-          subtitle: Polish your app
+              From here **you can**:
+              - Change your app's colour palette
+              - Update typography (fonts and text styles)
+              - Experiment with different visual themes
+
+              It's a quick way to try different styles before committing to a design direction. You can always change it later.
+          subtitle: Change colours and typography
+        - type: text
+          title: Attach images for inspiration
+          content:
+            body: |-
+              Sometimes it's easier to show Lovable what you want rather than describe it. Click the **+** button in the input field to attach an image.
+
+              **You can attach:**
+              - Screenshots of designs you like
+              - Sketches or wireframes
+              - Examples from other apps
+
+              Lovable will use the image as a reference when building. This is especially helpful for visual design or layout changes that are hard to put into words.
+          subtitle: Show rather than tell
         - type: quiz-question
           title: 'Quiz: Visual edits'
           content:
             question: What's the best use for visual edits?
             options:
+              - Making targeted changes
               - Adding complex new features
-              - Quick tweaks like changing text, colours, or spacing
               - Debugging backend problems
               - Writing prompts faster
-            correctAnswer: 1
-            explanation: Visual edits are perfect for small refinements like fixing typos, adjusting colours, or tweaking spacing. For bigger changes, use prompts.
+            correctAnswer: 0
+            explanation: Visual edits are perfect for targeted refinements like fixing typos, adjusting colours, or tweaking spacing. They let you point and click on elements to make quick changes without writing long prompts.
+        - type: quiz-question
+          title: 'Quiz: Preview mode'
+          content:
+            question: Why should you check the preview after every change?
+            options:
+              - It uses fewer credits
+              - It makes Lovable build faster
+              - It's the quickest way to spot problems
+              - It's required before you can make another change
+            correctAnswer: 2
+            explanation: The preview shows your app exactly as users will see it. Checking it after every change helps you catch problems early, before they become harder to fix.
         - type: reflection
           title: 'Your turn: Explore the interface'
           content:
             description: |-
-              Open your app in Lovable and make three changes using the visual edit tool. Maybe:
-              - Fix a typo
-              - Adjust a colour
-              - Change the spacing on a button
-
-              Get comfortable clicking around. These tools will save you time on small changes.
+              How will you use these tools as you continue building?
             placeholder: |-
-              Changes I made:
-              1.
-              2.
-              3.
-            subDescription: The more comfortable you are with the interface, the faster you can build.
+              I will use...
+            subDescription: Get comfortable clicking around. These tools will save you time as you build.
         - type: challenge-end
           title: "You know your way around! 🧭"
           content:
             nextModule: "**Next:** Let's learn how to experiment safely with bookmarks and reverts."
             description: You can now use Lovable's interface confidently.
-            subDescription: Preview, visual edits, assets, and themes. These tools help you polish your app without writing prompts for every small change.
+            subDescription: Preview, visual edits, themes, and attaching images. These tools help you improve your app in a clear and efficient way.
 
     - title: Experiment and Undo Mistakes
       isFree: false
@@ -570,7 +592,7 @@ course:
         - Version Bookmarking
         - Reverting Changes
         - Safe Experimentation
-      description: Be prepared when something breaks with bookmarks and reverts.
+      description: Be prepared when something breaks by using bookmarks and reverts.
       completionTime: '6:00'
       steps:
         - type: text
