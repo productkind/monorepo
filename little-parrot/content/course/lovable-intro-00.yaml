@@ -380,7 +380,7 @@ course:
               For most apps, Lovable Cloud is the simplest way to add these capabilities.
 
               If you’re curious about what’s happening under the hood, you can take our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) micro-course. It explains these ideas in simple, non-technical terms.
-            imageUrl: /courses/lovable-intro-00/lovable-cloud.png
+            imageUrl: /courses/lovable-intro-00/enable-lovable-cloud.webp
           subtitle: Backend without the complexity
         - type: text
           title: Enable Lovable Cloud
