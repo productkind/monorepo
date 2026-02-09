@@ -63,7 +63,7 @@ course:
               **Vibe coding** is a way of building software by describing what you want instead of writing code. You explain how the app should look, feel, and behave, and an AI tool like Lovable translates your words into a working product.
 
               It's called "vibe coding" because you're communicating the vibe of what you want, not the technical details. The AI handles the technical bits.
-            imageUrl: /courses/lovable-intro-01/vibe-coding.gif
+            imageUrl: /courses/lovable-intro-00/vibe-coding.webp
           subtitle: Building by describing
         - type: text
           title: What does Lovable create?
@@ -72,6 +72,7 @@ course:
               Lovable builds **web applications**, meaning software that runs in a browser on phones, tablets, and computers. Think of apps like Notion, Trello, or Google Docs. These are all web apps if you open them in a browser.
 
               *Fun fact:* Little Parrot (the platform you are using right now) was built with Lovable.
+            imageUrl: /courses/lovable-intro-00/little-parrot-in-lovable.webp
           subtitle: Web apps that work everywhere
         - type: text
           title: Why structure is important
@@ -177,6 +178,7 @@ course:
               ## Target user
               Sarah, a book club organiser who wants to spend less time on admin and more time reading with friends.
               ```
+            imageUrl: /courses/lovable-intro-00/list-of-books.webp
           subtitle: One core flow to start
         - type: text
           title: What's NOT in this prompt
@@ -302,6 +304,7 @@ course:
               ```
 
               See how specific that is? She's describing exactly what she wants to change about the existing feature.
+            imageUrl: /courses/lovable-intro-00/book-suggestion-form.webp
           subtitle: Dalmie's next step
         - type: text
           title: More ways to improve with prompts
@@ -315,6 +318,7 @@ course:
               - Make buttons more descriptive
 
               Each improvement gets its own prompt. Test after each change. This is how you polish your app step by step.
+            imageUrl: /courses/lovable-intro-00/book-suggestion-form-with-author-field.webp
           subtitle: Polish what you have
         - type: quiz-question
           title: 'Quiz: The rebuild mindset'
@@ -403,7 +407,7 @@ course:
               You don't need to understand every detail. The key thing is that Lovable won't modify your database without checking with you first. This keeps you in control of what's happening with your app's data.
 
               *If you're curious about what databases are and how they work, our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) micro-course explains these concepts in friendly terms.*
-            imageUrl: /courses/lovable-intro-00/database-approval.png
+            imageUrl: /courses/lovable-intro-00/modify-database-popup.webp
           subtitle: Lovable asks before changing your data
         - type: text
           title: What if something goes wrong?
@@ -416,6 +420,7 @@ course:
               If the error persists or there's no "Try to fix" button, you'll need to investigate further. Debugging is a skill that every builder develops over time.
 
               *Want to learn how to handle errors confidently? Our [Fix Bugs with Confidence: Debugging Your Lovable App](https://littleparrot.app/aaab45b7-209a-4578-a515-3e55687f0c53/course-overview) micro-course teaches you exactly how to investigate and fix problems.*
+            imageUrl: /courses/lovable-intro-00/click-try-to-fix.webp
           subtitle: Errors are part of building
         - type: text
           title: Think through prerequisites
@@ -440,6 +445,7 @@ course:
               Lovable Cloud makes this straightforward. After this prompt, users can **log in**, and the app will know who they are.
 
               *Try it for your app! Adding authentication is a common prerequisite for many features.*
+            imageUrl: /courses/lovable-intro-00/add-google-auth-prompt.webp
           subtitle: Let users log in
         - type: text
           title: Now add voting
@@ -465,6 +471,7 @@ course:
               4. **Check with another user.** Open the app in a different browser or incognito window, log in as someone else, and confirm the votes are visible.
 
               This quick check catches problems early. Get into the habit of testing each feature before moving on to the next.
+            imageUrl: /courses/lovable-intro-00/vote-on-book.webp
           subtitle: Verify before moving on
         - type: quiz-question
           title: 'Quiz: Why add a backend early?'
@@ -511,7 +518,7 @@ course:
               These tools help you make changes effectively, and let you see your app the way users will see it.
           subtitle: More ways to build
         - type: text
-          title: Preview Mode
+          title: Preview
           content:
             body: |-
               The **preview** shows your app as users will see it. You can:
@@ -520,7 +527,7 @@ course:
               - Click around to test all the interactions
 
               Get in the habit of checking the preview after every change. It's the quickest way to spot problems.
-            imageUrl: /courses/lovable-intro-01/preview-mode.png
+            imageUrl: /courses/lovable-intro-00/full-preview-device-preview.webp
           subtitle: See what users see
         - type: text
           title: Code View
@@ -529,19 +536,20 @@ course:
               There's a tab that shows **the code Lovable is generating**. You don't need to understand it. But it's there if you're curious, and it becomes more useful as you build more apps and start recognising patterns.
 
               Think of it like the engine of a car. You don't need to be a mechanic to drive, but knowing where the engine is doesn't hurt.
+            imageUrl: /courses/lovable-intro-00/code-view.webp
           subtitle: For the curious
         - type: text
           title: Visual Edits
           content:
             body: |-
-              This is one of the most useful features for targeted tweaks. Click **Visual edits** in your "Ask Lovable..." input field to enter visual edit mode. Now you can:
+              This is one of the most useful features for targeted tweaks. Click **Visual edits** below your "Ask Lovable..." input field to enter visual edit mode. Now you can:
               - Click on any text to change it
               - Adjust colours by clicking on elements
               - Tweak spacing and sizing
               - Prompt Lovable to make changes on selected elements
 
               It's perfect for small, targeted refinements.
-            imageUrl: /courses/lovable-intro-01/visual-edits.png
+            imageUrl: /courses/lovable-intro-00/visual-edits.webp
           subtitle: Point and click changes
         - type: text
           title: Design Themes
@@ -555,6 +563,7 @@ course:
               - Experiment with different visual themes
 
               It's a quick way to try different styles before committing to a design direction. You can always change it later.
+            imageUrl: /courses/lovable-intro-00/design-themes.webp
           subtitle: Change colours and typography
         - type: text
           title: Attach images for inspiration
@@ -568,6 +577,7 @@ course:
               - Examples from other apps
 
               Lovable will use the image as a reference when building. This is especially helpful for visual design or layout changes that are hard to put into words.
+            imageUrl: /courses/lovable-intro-00/attach-image.webp
           subtitle: Show rather than tell
         - type: quiz-question
           title: 'Quiz: Visual edits'
@@ -622,6 +632,7 @@ course:
               Here's the truth about building apps: **things will break**. You'll add a new functionality and sometimes it will not work as expected. **This is normal.** What matters is knowing how to recover.
 
               Lovable has tools that make experimentation safe. Let's learn how to use them.
+            imageUrl: /courses/lovable-intro-00/runtime-error.webp
           subtitle: The reality of building
         - type: text
           title: Automatic saving
@@ -630,6 +641,7 @@ course:
               Good news: Lovable **automatically saves** every version of your app. You can't accidentally lose everything with an errant click.
 
               Every time you make a change, Lovable keeps a record. This history is your safety net.
+            imageUrl: /courses/lovable-intro-00/view-history.webp
           subtitle: Your safety net
         - type: text
           title: Bookmarking versions
@@ -640,7 +652,7 @@ course:
               Look for the bookmark icon in the version history, and click it.
 
               If things go wrong, you can always return to this bookmark.
-            imageUrl: /courses/lovable-intro-01/bookmarking.png
+            imageUrl: /courses/lovable-intro-00/add-bookmark.webp
           subtitle: Mark and revisit key versions
         - type: text
           title: Reverting
@@ -655,6 +667,7 @@ course:
               **When to fix instead:**
               - It's a small issue
               - You can describe clearly what went wrong
+            imageUrl: /courses/lovable-intro-00/revert-to-version.webp
           subtitle: Go back in time
         - type: quiz-question
           title: 'Quiz: Bookmarking'
@@ -720,6 +733,7 @@ course:
               You can use it to ask questions, debug issues, and get a clear plan. When you’re happy with the plan, you can switch to Agent mode (unselect *Plan*) to build it.
 
               Click **Plan** below the input field to discuss with Lovable without writing any code.
+            imageUrl: /courses/lovable-intro-00/plan-mode.webp
           subtitle: Discuss before writing code
         - type: text
           title: "Don't over-plan"
@@ -742,6 +756,7 @@ course:
               You can use it to store things like your user personas, design rules, naming conventions, and other guidelines. This makes the AI’s responses more relevant and consistent with your project’s needs.
 
               This is useful when you want consistent styling or behaviour across your app.
+            imageUrl: /courses/lovable-intro-00/project-knowledge.webp
           subtitle: Give Lovable context
         - type: text
           title: API keys and secrets
@@ -752,9 +767,10 @@ course:
               **Never put API keys in your prompts.** Lovable has a dedicated secrets panel for storing them safely. When you add a feature that needs an API key, Lovable will directly ask you for it in a secure **Add Secret** panel.
 
               *If you want to know more about using API keys and connecting to other services, check out our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) micro-course.*
+            imageUrl: /courses/lovable-intro-00/api-key-panel.webp
           subtitle: Connect to other services
         - type: text
-          title: Handling security warnings
+          title: Handling security errors and warnings
           content:
             body: |-
               Sometimes Lovable will flag security issues before you publish. Don't panic. This is normal and helpful. Developers deal with security considerations all the time.
@@ -764,6 +780,7 @@ course:
               It can happen that new warnings appear after fixing others. As long as you don't have any security errors, you are good to publish your app.
               
               *You can find more guidance on security in our [Fix Bugs with Confidence: Debugging Your Lovable App](https://littleparrot.app/aaab45b7-209a-4578-a515-3e55687f0c53/course-overview) micro-course.*
+            imageUrl: /courses/lovable-intro-00/security-errors-and-warnings.webp
           subtitle: Stay calm and follow the guidance
         - type: text
           title: Browser testing
@@ -782,6 +799,7 @@ course:
               **Best practice:** Verify the test steps actually make sense for what you want to check. You can even specify exact actions for Lovable to perform.
 
               **Note:** Browser testing cannot test everything in your app, for example it cannot automatically log in with Google authentication. It’s best for straightforward interactions. So you should still manually test important features yourself. 
+            imageUrl: /courses/lovable-intro-00/browser-testing.webp
           subtitle: Ask Lovable to test your app
         - type: quiz-question
           title: 'Quiz: Plan mode'
@@ -854,6 +872,7 @@ course:
               2. opening the **Website info** section. 
               
               They will make your app feel more polished and professional.
+            imageUrl: /courses/lovable-intro-00/publish-your-app-menu.webp
           subtitle: Polish the details
         - type: text
           title: Choose your URL
@@ -869,6 +888,7 @@ course:
               A clean URL makes your app feel more professional and is easier for people to remember and type.
 
               **Note:** Your URL will end with `.lovable.app`. If you want a custom domain (like `book-club.com`) you'll need to buy it separately and set it in Lovable.
+            imageUrl: /courses/lovable-intro-00/published-url.webp
           subtitle: Make it memorable
         - type: text
           title: The publish button
@@ -881,6 +901,7 @@ course:
               This means you can **publish early and improve based on feedback** without worrying about it being "perfect."
 
               Digital products are never done. They evolve. The apps you use every day get updates constantly.
+            imageUrl: /courses/lovable-intro-00/publish-your-app-menu-and-button.webp
           subtitle: Click and go live
         - type: text
           title: The 80/20 of Vibe Coding
