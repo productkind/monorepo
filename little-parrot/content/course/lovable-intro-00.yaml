@@ -235,7 +235,7 @@ course:
       isFree: false
       skills:
         - Iterative Building
-        - Feature Prompts
+        - Improvement Prompts
         - Rebuild Mindset
       description: Build in small steps and know when to tweak vs start fresh.
       completionTime: '8:00'
@@ -494,9 +494,9 @@ course:
     - title: Navigate the Lovable Interface
       isFree: false
       skills:
-        - Preview Mode
+        - Preview
         - Visual Edits
-        - Assets and Themes
+        - Design Themes
       description: Find your way around Lovable's features for quick changes.
       completionTime: '7:00'
       steps:
@@ -822,7 +822,7 @@ course:
       isFree: false
       skills:
         - Publishing
-        - Icon
+        - Favicon
         - Share Image
         - Sharing and Feedback
       description: Put your work on the internet and share it with others.
