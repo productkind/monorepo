@@ -43,7 +43,7 @@ course:
         - type: video
           title: Build Your First App with Lovable
           content:
-            videoUrl: /videos/lesson-lovable-intro-01-video-00.mp4
+            videoUrl: /videos/lesson-vibe-coding-lovable-basics-00-video-00.mp4
             transcript: |-
               You have an idea for an app. Maybe it's something to help your community, your
               business, or just solve a problem that's been bugging you. But you don't know how
