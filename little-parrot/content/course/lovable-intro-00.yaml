@@ -45,15 +45,17 @@ course:
           content:
             videoUrl: /videos/lesson-lovable-intro-01-video-00.mp4
             transcript: |-
-              What if you could build a real app, not a mockup, not a prototype, but actual working
-              software, just by describing what you want? That's exactly what you're about to do.
-              In this micro-course, you'll learn vibe coding: a way of building apps by explaining
-              what you want in plain English. No coding required. You'll write your first structured
-              prompt, see Lovable turn it into a working app, and learn to add features one step at
-              a time. By the end, you'll have a published app live on the internet that you can share
-              with anyone. Along the way, you'll discover Lovable's interface, learn to experiment
-              safely with bookmarks and reverts, and understand when to tweak versus when to start
-              fresh. Ready to build something real? Let's go!
+              You have an idea for an app. Maybe it's something to help your community, your
+              business, or just solve a problem that's been bugging you. But you don't know how
+              to code, so that idea stays stuck in your head.
+              What if that changed today? What if you could describe what you want and watch it
+              become real software, live on the internet, that you can share with anyone?
+              That's exactly what's about to happen. By the end of this micro-course, you'll go
+              from "I can't build apps" to "I just published my first one." You'll know how to
+              turn ideas into working products by describing what you want. No coding required.
+              Along the way, you'll learn to build step by step, handle problems calmly, and
+              experiment without fear of breaking things.
+              Ready to become someone who builds? Let's go!
         - type: text
           title: What is vibe coding?
           content:
