@@ -67,7 +67,7 @@ course:
           title: What does Lovable create?
           content:
             body: |-
-              Lovable builds **web applications**, meaning software that runs in a browser on phones, tablets, and computers. Think of apps like Notion, Trello, or Google Docs. These are all web apps.
+              Lovable builds **web applications**, meaning software that runs in a browser on phones, tablets, and computers. Think of apps like Notion, Trello, or Google Docs. These are all web apps if you open them in a browser.
 
               *Fun fact:* Little Parrot (the platform you are using right now) was built with Lovable.
           subtitle: Web apps that work everywhere
@@ -113,6 +113,20 @@ course:
               Don't worry if you don't know what to put in every section yet. You can start simple and add detail later. The structure itself helps Lovable understand what you're after.
           subtitle: A structure that works
         - type: text
+          title: What's with all those symbols?
+          content:
+            body: |-
+              The prompt formula uses **markdown**, a simple way to format text that AI tools understand well.
+
+              Here's what the symbols mean:
+              - `##` creates a heading (like a section title)
+              - `-` creates a bullet point
+              - `**text**` makes text bold
+              - `1. 2. 3.` creates a numbered list
+
+              You don't need to memorise this. Just copy the formula and fill in the brackets with your own content. The formatting helps Lovable see the structure of your request clearly.
+          subtitle: A quick guide to markdown
+        - type: text
           title: Start small, then grow
           content:
             body: |-
@@ -121,6 +135,8 @@ course:
               It's tempting to describe your entire vision in one big prompt. But this often backfires. Lovable might misunderstand part of it, or build things in a way that you envisioned differently. You end up spending more effort fixing than you would have spent building step by step.
 
               Instead, start with one core user flow. Get that working. Then add the next piece.
+
+              If you need help deciding what to build first, check out our [Build a Valuable Product: How to Break Down Your Idea for Vibe Coding](https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview) micro-course.
           subtitle: The mindset that saves time
         - type: text
           title: 'Example: The Book Club Organiser'
@@ -860,26 +876,30 @@ course:
 
               Here's something reassuring: **nobody will find your app on the internet**. So don't worry if it's not perfect yet. It takes digital marketing work to get discovered.
               
-              This means you can publish early and improve based on feedback without worrying about it being "perfect."
+              This means you can **publish early and improve based on feedback** without worrying about it being "perfect."
+
+              Digital products are never done. They evolve. The apps you use every day get updates constantly.
           subtitle: Click and go live
         - type: text
-          title: Why "not done" is fine
+          title: The 80/20 of Vibe Coding
           content:
             body: |-
-              Products are never done. They evolve. The apps you use every day get updates constantly.
+              Here's something important to understand about vibe coding: **generating something is fast, but perfecting it takes time**.
 
-              There's a useful rule called the 80/20 reality: **getting to 80% takes 20% of the effort. The final 20% takes the remaining 80%.**
+              With Lovable, you can create a working app in minutes. That's the easy part. The effort comes in refining the details: getting the layout exactly right, handling every edge case, polishing the user experience.
 
-              This means a simple, working version is achievable quickly. Polishing every detail takes much longer. For now, focus on getting something useful out there.
-          subtitle: Ship early, improve often
+              This is the 80/20 reality of vibe coding: **the first 80% happens quickly, but the final 20% takes most of your time**.
+
+              **Don't let this discourage you.** It means you can get something useful out there fast, then improve it based on user feedback. That's more valuable than polishing in isolation.
+          subtitle: Fast to start, slow to perfect
         - type: text
           title: What to do next
           content:
             body: |-
-              Share your app with one person. Maybe a friend, a potential user, or someone who fits your target audience. Ask them:
-              - What makes sense?
-              - What's confusing?
-              - What would they want to see added?
+              **Share your app** with at least one person. Maybe a friend, a potential user, or someone who fits your target audience. **Ask them:**
+              - What did you try to do first?
+              - What frustrated you or didn’t work how you expected?
+              - What one thing would you change to make it better?
 
               Their feedback is more valuable than any amount of solo polishing.
           subtitle: Get real feedback
@@ -888,29 +908,27 @@ course:
           content:
             question: What happens when you publish your app?
             options:
-              - It appears on Google immediately
-              - Everyone on the internet can find it
-              - It gets a URL that only people you share it with will see
-              - It costs extra credits
+              - You can only access it from your Lovable account
+              - You can only share it with Lovable users
+              - It gets a URL, but nobody will find it unless you share the link
+              - It will get many visitors automatically who easily find it online
             correctAnswer: 2
             explanation: Your published app gets a URL, but nobody will find it unless you share the link. This means you can publish early and improve based on feedback without worrying about it being "perfect."
         - type: reflection
-          title: 'Your turn: Publish and share'
+          title: 'Reflect on your journey'
           content:
             description: |-
-              1. Set your favicon and meta tags
-              2. Hit publish
-              3. Copy your URL and share it with at least one person
-              4. Ask them for honest feedback
+              You started this course without knowing how to build an app. Now you have one live on the internet.
 
-              What feedback did you get?
+              Take a moment to reflect on what you've learned and experienced:
+              - What surprised you most about vibe coding?
+              - What felt easier than you expected?
+              - What was harder?
             placeholder: |-
-              My app URL:
+              What surprised me most:
 
-              I shared it with:
-
-              Their feedback:
-            subDescription: Congratulations on publishing your first app! Real feedback from real people is how apps get better.
+              What felt easier and what was harder:
+            subDescription: You've come a long way. From your first prompt to a published app, you now have the skills to bring ideas to life.
         - type: course-end
           title: "Congratulations! You've published your first app! 🎉"
           content:
@@ -920,7 +938,7 @@ course:
 
               ✓ **Build in small steps**, testing each feature before adding the next
 
-              ✓ **Use Lovable's interface** confidently: preview, visual edits, bookmarks, reverts
+              ✓ **Use Lovable's interface** confidently: preview, visual edits, bookmarks, reverting, plan mode, project knowledge, adding API keys
 
               ✓ **Handle security warnings** calmly, knowing they're normal and fixable
 
@@ -928,13 +946,17 @@ course:
 
               ✓ **Know when to start over** vs when to iterate
 
-              Most importantly, you've experienced the core truth of vibe coding: **you can build real things by describing what you want.**
+              Most importantly, you've experienced the power of vibe coding: **you can build digital products by describing what you want.**
 
               **Keep going:** The more you build, the better you'll get at describing what you want. Every app teaches you something new.
 
               Good luck, and happy building! 🚀
-            nextModule: "**Explore more:** Try our *Debugging with Lovable* course to learn how to fix things when they break, or *Build Valuable Products* to go from idea to a product people actually want."
+            nextModule: |- 
+              **Explore more:**
 
+              - Try our [Build a Valuable Product: How to Break Down Your Idea for Vibe Coding](https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview) micro-course to learn how to structure your big ideas into small, promptable pieces.
+              - Check out our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) micro-course to communicate more effectively with Lovable by understanding core software concepts.
+              - Dive into our [Fix Bugs with Confidence: Debugging Your Lovable App](https://littleparrot.app/aaab45b7-209a-4578-a515-3e55687f0c53/course-overview) micro-course to learn how to fix things when they break.
   titleSplit:
     - 'Build Your First App'
     - 'with Lovable'
