@@ -1,7 +1,7 @@
 course:
   id: f8e2a1b3-c4d5-6789-e0f1-234567890abc
   note: ''
-  cover: /courses/lovable-intro-01/cover.gif
+  cover: /courses/lovable-intro-00/cover.gif
   title: 'Build Your First App with Lovable'
   challenges:
     - title: Your First Prompt
@@ -15,27 +15,27 @@ course:
       steps:
         - type: comic
           content:
-            imageUrl: /comics/lovable-intro-01/panel-00.png
+            imageUrl: /comics/lovable-intro-00/panel-00.png
             altText: |-
               A dalmatian dog (called Dalmie) wearing a red shirt sits with her friend Sarah at a
               café table. Sarah looks frustrated, phone in hand. Sarah says, "Our book club is such
               a mess! Suggestions get lost in WhatsApp, and nobody knows what we're reading next."
         - type: comic
           content:
-            imageUrl: /comics/lovable-intro-01/panel-01.png
+            imageUrl: /comics/lovable-intro-00/panel-01.png
             altText: |-
               Dalmie looks thoughtful and says, "What if I built you an app to organise everything?"
               Sarah looks surprised and replies, "But you don't know how to code!"
         - type: comic
           content:
-            imageUrl: /comics/lovable-intro-01/panel-02.png
+            imageUrl: /comics/lovable-intro-00/panel-02.png
             altText: |-
               Dalmie sits at a desk with a laptop, looking uncertain with a thought bubble showing
               question marks. Dalmie says, "She's right… I have no idea where to start. How do
               people build apps without coding?"
         - type: comic
           content:
-            imageUrl: /comics/lovable-intro-01/panel-03.png
+            imageUrl: /comics/lovable-intro-00/panel-03.png
             altText: |-
               A brightly coloured bird (called Little Parrot) appears next to Dalmie at the desk.
               Little Parrot smiles and says, "Don't worry! With vibe coding, you describe what you
