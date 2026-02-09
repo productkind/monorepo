@@ -46,6 +46,91 @@ export const LessonVideoPropsSchema = z.object({
   allDuration: z.number().default(100),
 })
 
+export const LessonVideoLovableBasics01: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({ captions, titleDuration }) => {
+  return (
+    <AbsoluteFill className={BG_CLASS}>
+      <Series>
+        <Series.Sequence durationInFrames={titleDuration}>
+          <FullScreenText>
+            <TypingText delay={0}>Micro Course</TypingText>
+            <br />
+            <TypingText delay={20}>Overview</TypingText>
+          </FullScreenText>
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={70}>
+          <FullScreenImage src={staticFile('video-lovable-basics-01/section-01-idea.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={167}>
+          <ImageSteps
+            allDuration={167}
+            images={[
+              { image: staticFile('video-lovable-basics-01/section-02-women-group.mp4'), delay: 0, offset: 60 },
+              { image: staticFile('video-lovable-basics-01/section-02-business.mp4'), delay: 63 },
+              { image: staticFile('video-lovable-basics-01/section-02-solve.mp4'), delay: 87 },
+            ]}
+          />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={56}>
+          <FullScreenImage src={staticFile('video-lovable-basics-01/section-03-delete-computer.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={84}>
+          <FullScreenImage src={staticFile('video-lovable-basics-01/section-04-stuck.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={58}>
+          <FullScreenImage src={staticFile('video-lovable-basics-01/section-05-transformation.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={58}>
+          <FullScreenImage src={staticFile('video-lovable-basics-01/section-06-typing.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={66}>
+          <FullScreenImage src={staticFile('video-lovable-basics-01/section-07-typing.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={86}>
+          <FullScreenImage src={staticFile('video-lovable-basics-01/section-08-internet.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={76}>
+          <FullScreenImage src={staticFile('video-lovable-basics-01/section-09-exactly.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={54}>
+          <FullScreenImage src={staticFile('video-lovable-basics-01/section-10-small.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={76}>
+          <FullScreenImage src={staticFile('video-lovable-basics-01/section-11-dog-computer.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={59}>
+          <FullScreenImage src={staticFile('video-lovable-basics-01/section-12-success.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={144}>
+          <FullScreenImage src={staticFile('video-lovable-basics-01/section-13-woman-type.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={56}>
+          <FullScreenImage src={staticFile('video-lovable-basics-01/section-14-coding.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={92}>
+          <FullScreenImage src={staticFile('video-lovable-basics-01/section-15-step.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={62}>
+          <FullScreenImage src={staticFile('video-lovable-basics-01/section-16-calm-down.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={94}>
+          <FullScreenImage src={staticFile('video-lovable-basics-01/section-17-experiment.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={148}>
+          <FullScreenImage src={staticFile('video-lovable-basics-01/section-18-build.gif')} fit="contain" />
+        </Series.Sequence>
+      </Series>
+      <Sequence from={titleDuration}>
+        <Captions captions={captions} />
+      </Sequence>
+      <Sequence from={titleDuration}>
+        <Audio src={staticFile('video-lovable-basics-01/speech.wav')} />
+      </Sequence>
+    </AbsoluteFill>
+  )
+}
+
+
+
 export const LessonVideoDebugging01: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({ captions, titleDuration }) => {
   return (
     <AbsoluteFill className={BG_CLASS}>

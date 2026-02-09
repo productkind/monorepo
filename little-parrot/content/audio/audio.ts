@@ -8,9 +8,9 @@ import * as fs from 'fs';
  * Interface for the alignment data received from ElevenLabs API.
  */
 interface Alignment {
-    char_start_times_ms: number[];
-    chars_durations_ms: number[];
-    chars: string[];
+  char_start_times_ms: number[];
+  chars_durations_ms: number[];
+  chars: string[];
 }
 
 /**
@@ -24,68 +24,68 @@ interface Alignment {
  * @returns A Promise that resolves with the Alignment data if successful, otherwise void.
  */
 async function generateSpeech(
-    text: string,
-    voiceId: string,
-    modelId: string,
-    apiKey: string,
-    outputPath: string,
-    jsonOutputPath?: string
+  text: string,
+  voiceId: string,
+  modelId: string,
+  apiKey: string,
+  outputPath: string,
+  jsonOutputPath?: string
 ): Promise<Alignment | void> {
-    // Changed the URL to request timestamps
-    const url = `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}/with-timestamps`;
+  // Changed the URL to request timestamps
+  const url = `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}/with-timestamps`;
 
-    try {
-        const response = await fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'xi-api-key': apiKey,
-            },
-            body: JSON.stringify({
-                text: text,
-                model_id: modelId,
-                voice_settings: {
-                    stability: 0.5,
-                    similarity_boost: 0.75
-                },
-                output_format: 'wav_44100' // Request WAV format directly at 44.1 kHz sample rate
-            })
-        });
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'xi-api-key': apiKey,
+      },
+      body: JSON.stringify({
+        text: text,
+        model_id: modelId,
+        voice_settings: {
+          stability: 0.5,
+          similarity_boost: 0.75
+        },
+        output_format: 'wav_44100' // Request WAV format directly at 44.1 kHz sample rate
+      })
+    });
 
-        if (!response.ok) {
-            const errorText = await response.text();
-            throw new Error(`ElevenLabs API error: ${response.status} ${response.statusText} - ${errorText}`);
-        }
-
-        // The response is now JSON, containing audio_base64 and alignment
-        const responseData = await response.json();
-        const audioBase64 = responseData.audio_base64;
-        const alignment: Alignment = responseData.alignment;
-
-        if (!audioBase64) {
-            throw new Error('No audio_base64 found in the response.');
-        }
-
-        // Decode the base64 audio data
-        const buffer = Buffer.from(audioBase64, 'base64');
-
-        // Write the buffer to the specified output path
-        fs.writeFileSync(outputPath, buffer);
-        console.log(`Speech generated and saved to ${outputPath}`);
-        console.log('Timestamp (Alignment) Data:');
-        console.log(JSON.stringify(alignment, null, 2));
-        // Optionally save the alignment data to a JSON file
-        if (jsonOutputPath) {
-            fs.writeFileSync(jsonOutputPath, JSON.stringify(alignment, null, 2));
-            console.log(`Alignment data saved to ${jsonOutputPath}`);
-        }
-
-
-        return alignment;
-
-    } catch (error) {
-        console.error('Error generating speech:', error);
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`ElevenLabs API error: ${response.status} ${response.statusText} - ${errorText}`);
     }
+
+    // The response is now JSON, containing audio_base64 and alignment
+    const responseData = await response.json();
+    const audioBase64 = responseData.audio_base64;
+    const alignment: Alignment = responseData.alignment;
+
+    if (!audioBase64) {
+      throw new Error('No audio_base64 found in the response.');
+    }
+
+    // Decode the base64 audio data
+    const buffer = Buffer.from(audioBase64, 'base64');
+
+    // Write the buffer to the specified output path
+    fs.writeFileSync(outputPath, buffer);
+    console.log(`Speech generated and saved to ${outputPath}`);
+    console.log('Timestamp (Alignment) Data:');
+    console.log(JSON.stringify(alignment, null, 2));
+    // Optionally save the alignment data to a JSON file
+    if (jsonOutputPath) {
+      fs.writeFileSync(jsonOutputPath, JSON.stringify(alignment, null, 2));
+      console.log(`Alignment data saved to ${jsonOutputPath}`);
+    }
+
+
+    return alignment;
+
+  } catch (error) {
+    console.error('Error generating speech:', error);
+  }
 }
 
 const ELEVENLABS_API_KEY = 'sk_91544f2e0c841dcc7f863f643795881543dcd0f56baddfce';
@@ -190,9 +190,29 @@ By the end, you’ll have a practical toolkit for troubleshooting. When somethin
 Bugs will still happen. But they won’t stop you anymore.
 `
 
-const TEXT_TO_GENERATE = videoDebugging1;
+const videoLovableBasics1 = `
+You have an idea for an app.
+---
+Maybe it's something to help your community, your
+business, or just solve a problem that's been bugging you. But you don't know how
+to code, so that idea stays stuck in your head.
+What if that changed today? What if you could describe what you want and watch it
+become real software, live on the internet, that you can share with anyone?
+---
+That's exactly what's about to happen. By the end of this micro-course, you'll go
+from "I can't build apps" to "I just published my first one." You'll know how to
+turn ideas into working products by describing what you want. No coding required.
+Along the way, you'll learn to build step by step, handle problems calmly, and
+experiment without fear of breaking things.
+---
+Ready to become someone who builds?
+---
+Let's go!
+`
+
+const TEXT_TO_GENERATE = videoLovableBasics1;
 const MODEL_ID = 'eleven_multilingual_v2'; //'eleven_v3_turbo'; // The v3 model as requested
-const videoName = 'video-debugging-1-elizabeth';
+const videoName = 'video-lovable-basics-1-elizabeth';
 const OUTPUT_FILE_NAME = `generated_speech-${videoName}.wav`; // e.g.,
 const ALIGNMENT_JSON_FILE_NAME = `alignment-${videoName}.json`;
 const OUTPUT_FILE_PATH = OUTPUT_FILE_NAME // Saves in the same directory as the script
@@ -200,19 +220,19 @@ const OUTPUT_FILE_PATH = OUTPUT_FILE_NAME // Saves in the same directory as the 
 
 // Call the function to generate speech and handle the returned alignment data
 generateSpeech(TEXT_TO_GENERATE, VOICE_ID, MODEL_ID, ELEVENLABS_API_KEY, OUTPUT_FILE_PATH, ALIGNMENT_JSON_FILE_NAME)
-    .then(alignment => {
-        if (alignment) {
-            console.log('Successfully retrieved speech and timestamp data.');
-            // You can now use the 'alignment' object for video synchronization
-            // For example, you could iterate through alignment.chars and alignment.char_start_times_ms
-            // to display text on screen at the correct time.
-        } else {
-            console.log('Speech generation completed, but no alignment data was returned or an error occurred.');
-        }
-    })
-    .catch(error => {
-        console.error('Unhandled promise rejection:', error);
-    });
+  .then(alignment => {
+    if (alignment) {
+      console.log('Successfully retrieved speech and timestamp data.');
+      // You can now use the 'alignment' object for video synchronization
+      // For example, you could iterate through alignment.chars and alignment.char_start_times_ms
+      // to display text on screen at the correct time.
+    } else {
+      console.log('Speech generation completed, but no alignment data was returned or an error occurred.');
+    }
+  })
+  .catch(error => {
+    console.error('Unhandled promise rejection:', error);
+  });
 
 
 

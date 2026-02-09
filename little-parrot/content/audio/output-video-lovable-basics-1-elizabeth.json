@@ -1,0 +1,722 @@
+[
+  {
+    "text": "You",
+    "start": 0.07,
+    "end": 0.163
+  },
+  {
+    "text": "have",
+    "start": 0.232,
+    "end": 0.383
+  },
+  {
+    "text": "an",
+    "start": 0.418,
+    "end": 0.476
+  },
+  {
+    "text": "idea",
+    "start": 0.522,
+    "end": 0.859
+  },
+  {
+    "text": "for",
+    "start": 0.929,
+    "end": 1.045
+  },
+  {
+    "text": "an",
+    "start": 1.103,
+    "end": 1.161
+  },
+  {
+    "text": "app.",
+    "start": 1.219,
+    "end": 1.741
+  },
+  {
+    "text": "---",
+    "start": 2.183,
+    "end": 2.264
+  },
+  {
+    "text": "Maybe",
+    "start": 2.357,
+    "end": 2.635
+  },
+  {
+    "text": "it's",
+    "start": 2.682,
+    "end": 2.798
+  },
+  {
+    "text": "something",
+    "start": 2.821,
+    "end": 3.135
+  },
+  {
+    "text": "to",
+    "start": 3.181,
+    "end": 3.228
+  },
+  {
+    "text": "help",
+    "start": 3.286,
+    "end": 3.46
+  },
+  {
+    "text": "your",
+    "start": 3.518,
+    "end": 3.634
+  },
+  {
+    "text": "community,",
+    "start": 3.692,
+    "end": 4.389
+  },
+  {
+    "text": "your",
+    "start": 4.435,
+    "end": 4.598
+  },
+  {
+    "text": "business,",
+    "start": 4.667,
+    "end": 5.19
+  },
+  {
+    "text": "or",
+    "start": 5.224,
+    "end": 5.352
+  },
+  {
+    "text": "just",
+    "start": 5.445,
+    "end": 5.666
+  },
+  {
+    "text": "solve",
+    "start": 5.712,
+    "end": 5.956
+  },
+  {
+    "text": "a",
+    "start": 5.979,
+    "end": 6.014
+  },
+  {
+    "text": "problem",
+    "start": 6.072,
+    "end": 6.432
+  },
+  {
+    "text": "that's",
+    "start": 6.478,
+    "end": 6.664
+  },
+  {
+    "text": "been",
+    "start": 6.699,
+    "end": 6.838
+  },
+  {
+    "text": "bugging",
+    "start": 6.885,
+    "end": 7.187
+  },
+  {
+    "text": "you.",
+    "start": 7.256,
+    "end": 7.581
+  },
+  {
+    "text": "But",
+    "start": 7.906,
+    "end": 8.069
+  },
+  {
+    "text": "you",
+    "start": 8.115,
+    "end": 8.197
+  },
+  {
+    "text": "don't",
+    "start": 8.278,
+    "end": 8.487
+  },
+  {
+    "text": "know",
+    "start": 8.522,
+    "end": 8.673
+  },
+  {
+    "text": "how",
+    "start": 8.731,
+    "end": 8.882
+  },
+  {
+    "text": "to",
+    "start": 8.963,
+    "end": 9.033
+  },
+  {
+    "text": "code,",
+    "start": 9.125,
+    "end": 9.659
+  },
+  {
+    "text": "so",
+    "start": 9.81,
+    "end": 9.938
+  },
+  {
+    "text": "that",
+    "start": 10.008,
+    "end": 10.159
+  },
+  {
+    "text": "idea",
+    "start": 10.24,
+    "end": 10.6
+  },
+  {
+    "text": "stays",
+    "start": 10.681,
+    "end": 10.948
+  },
+  {
+    "text": "stuck",
+    "start": 11.006,
+    "end": 11.273
+  },
+  {
+    "text": "in",
+    "start": 11.331,
+    "end": 11.389
+  },
+  {
+    "text": "your",
+    "start": 11.447,
+    "end": 11.587
+  },
+  {
+    "text": "head.",
+    "start": 11.645,
+    "end": 12.086
+  },
+  {
+    "text": "What",
+    "start": 12.597,
+    "end": 12.771
+  },
+  {
+    "text": "if",
+    "start": 12.829,
+    "end": 12.899
+  },
+  {
+    "text": "that",
+    "start": 12.945,
+    "end": 13.085
+  },
+  {
+    "text": "changed",
+    "start": 13.143,
+    "end": 13.491
+  },
+  {
+    "text": "today?",
+    "start": 13.538,
+    "end": 14.141
+  },
+  {
+    "text": "What",
+    "start": 14.466,
+    "end": 14.664
+  },
+  {
+    "text": "if",
+    "start": 14.71,
+    "end": 14.791
+  },
+  {
+    "text": "you",
+    "start": 14.85,
+    "end": 14.919
+  },
+  {
+    "text": "could",
+    "start": 14.977,
+    "end": 15.117
+  },
+  {
+    "text": "describe",
+    "start": 15.151,
+    "end": 15.616
+  },
+  {
+    "text": "what",
+    "start": 15.651,
+    "end": 15.778
+  },
+  {
+    "text": "you",
+    "start": 15.836,
+    "end": 15.918
+  },
+  {
+    "text": "want",
+    "start": 15.987,
+    "end": 16.289
+  },
+  {
+    "text": "and",
+    "start": 16.44,
+    "end": 16.637
+  },
+  {
+    "text": "watch",
+    "start": 16.684,
+    "end": 16.893
+  },
+  {
+    "text": "it",
+    "start": 16.939,
+    "end": 16.997
+  },
+  {
+    "text": "become",
+    "start": 17.032,
+    "end": 17.322
+  },
+  {
+    "text": "real",
+    "start": 17.392,
+    "end": 17.659
+  },
+  {
+    "text": "software,",
+    "start": 17.74,
+    "end": 18.425
+  },
+  {
+    "text": "live",
+    "start": 18.634,
+    "end": 18.832
+  },
+  {
+    "text": "on",
+    "start": 18.867,
+    "end": 18.948
+  },
+  {
+    "text": "the",
+    "start": 18.994,
+    "end": 19.064
+  },
+  {
+    "text": "internet,",
+    "start": 19.134,
+    "end": 19.575
+  },
+  {
+    "text": "that",
+    "start": 19.61,
+    "end": 19.737
+  },
+  {
+    "text": "you",
+    "start": 19.807,
+    "end": 19.911
+  },
+  {
+    "text": "can",
+    "start": 19.981,
+    "end": 20.097
+  },
+  {
+    "text": "share",
+    "start": 20.144,
+    "end": 20.376
+  },
+  {
+    "text": "with",
+    "start": 20.411,
+    "end": 20.562
+  },
+  {
+    "text": "anyone?",
+    "start": 20.62,
+    "end": 21.154
+  },
+  {
+    "text": "---",
+    "start": 21.665,
+    "end": 21.769
+  },
+  {
+    "text": "That's",
+    "start": 21.827,
+    "end": 22.152
+  },
+  {
+    "text": "exactly",
+    "start": 22.21,
+    "end": 22.71
+  },
+  {
+    "text": "what's",
+    "start": 22.744,
+    "end": 22.942
+  },
+  {
+    "text": "about",
+    "start": 22.977,
+    "end": 23.209
+  },
+  {
+    "text": "to",
+    "start": 23.244,
+    "end": 23.302
+  },
+  {
+    "text": "happen.",
+    "start": 23.371,
+    "end": 23.801
+  },
+  {
+    "text": "By",
+    "start": 24.242,
+    "end": 24.393
+  },
+  {
+    "text": "the",
+    "start": 24.451,
+    "end": 24.521
+  },
+  {
+    "text": "end",
+    "start": 24.579,
+    "end": 24.718
+  },
+  {
+    "text": "of",
+    "start": 24.776,
+    "end": 24.823
+  },
+  {
+    "text": "this",
+    "start": 24.869,
+    "end": 24.997
+  },
+  {
+    "text": "micro-course,",
+    "start": 25.078,
+    "end": 25.809
+  },
+  {
+    "text": "you'll",
+    "start": 25.833,
+    "end": 26.018
+  },
+  {
+    "text": "go",
+    "start": 26.065,
+    "end": 26.181
+  },
+  {
+    "text": "from",
+    "start": 26.262,
+    "end": 26.471
+  },
+  {
+    "text": "\"I",
+    "start": 26.68,
+    "end": 26.866
+  },
+  {
+    "text": "can't",
+    "start": 26.982,
+    "end": 27.249
+  },
+  {
+    "text": "build",
+    "start": 27.295,
+    "end": 27.528
+  },
+  {
+    "text": "apps\"",
+    "start": 27.586,
+    "end": 27.957
+  },
+  {
+    "text": "to",
+    "start": 28.004,
+    "end": 28.247
+  },
+  {
+    "text": "\"I",
+    "start": 28.572,
+    "end": 28.712
+  },
+  {
+    "text": "just",
+    "start": 28.828,
+    "end": 29.002
+  },
+  {
+    "text": "published",
+    "start": 29.048,
+    "end": 29.408
+  },
+  {
+    "text": "my",
+    "start": 29.432,
+    "end": 29.524
+  },
+  {
+    "text": "first",
+    "start": 29.594,
+    "end": 29.884
+  },
+  {
+    "text": "one.\"",
+    "start": 29.942,
+    "end": 30.256
+  },
+  {
+    "text": "You'll",
+    "start": 30.697,
+    "end": 30.929
+  },
+  {
+    "text": "know",
+    "start": 30.976,
+    "end": 31.173
+  },
+  {
+    "text": "how",
+    "start": 31.243,
+    "end": 31.382
+  },
+  {
+    "text": "to",
+    "start": 31.44,
+    "end": 31.51
+  },
+  {
+    "text": "turn",
+    "start": 31.579,
+    "end": 31.835
+  },
+  {
+    "text": "ideas",
+    "start": 31.893,
+    "end": 32.311
+  },
+  {
+    "text": "into",
+    "start": 32.38,
+    "end": 32.555
+  },
+  {
+    "text": "working",
+    "start": 32.636,
+    "end": 32.996
+  },
+  {
+    "text": "products",
+    "start": 33.054,
+    "end": 33.437
+  },
+  {
+    "text": "by",
+    "start": 33.483,
+    "end": 33.6
+  },
+  {
+    "text": "describing",
+    "start": 33.658,
+    "end": 34.238
+  },
+  {
+    "text": "what",
+    "start": 34.285,
+    "end": 34.401
+  },
+  {
+    "text": "you",
+    "start": 34.447,
+    "end": 34.528
+  },
+  {
+    "text": "want.",
+    "start": 34.598,
+    "end": 35.074
+  },
+  {
+    "text": "No",
+    "start": 35.399,
+    "end": 35.573
+  },
+  {
+    "text": "coding",
+    "start": 35.654,
+    "end": 36.014
+  },
+  {
+    "text": "required.",
+    "start": 36.084,
+    "end": 36.769
+  },
+  {
+    "text": "Along",
+    "start": 37.094,
+    "end": 37.419
+  },
+  {
+    "text": "the",
+    "start": 37.466,
+    "end": 37.535
+  },
+  {
+    "text": "way,",
+    "start": 37.582,
+    "end": 37.965
+  },
+  {
+    "text": "you'll",
+    "start": 38.139,
+    "end": 38.348
+  },
+  {
+    "text": "learn",
+    "start": 38.383,
+    "end": 38.58
+  },
+  {
+    "text": "to",
+    "start": 38.638,
+    "end": 38.696
+  },
+  {
+    "text": "build",
+    "start": 38.766,
+    "end": 39.045
+  },
+  {
+    "text": "step",
+    "start": 39.114,
+    "end": 39.346
+  },
+  {
+    "text": "by",
+    "start": 39.405,
+    "end": 39.521
+  },
+  {
+    "text": "step,",
+    "start": 39.59,
+    "end": 40.031
+  },
+  {
+    "text": "handle",
+    "start": 40.31,
+    "end": 40.682
+  },
+  {
+    "text": "problems",
+    "start": 40.717,
+    "end": 41.135
+  },
+  {
+    "text": "calmly,",
+    "start": 41.193,
+    "end": 41.82
+  },
+  {
+    "text": "and",
+    "start": 41.994,
+    "end": 42.145
+  },
+  {
+    "text": "experiment",
+    "start": 42.215,
+    "end": 42.923
+  },
+  {
+    "text": "without",
+    "start": 42.981,
+    "end": 43.329
+  },
+  {
+    "text": "fear",
+    "start": 43.422,
+    "end": 43.712
+  },
+  {
+    "text": "of",
+    "start": 43.77,
+    "end": 43.84
+  },
+  {
+    "text": "breaking",
+    "start": 43.921,
+    "end": 44.304
+  },
+  {
+    "text": "things.",
+    "start": 44.362,
+    "end": 44.862
+  },
+  {
+    "text": "---",
+    "start": 45.303,
+    "end": 45.372
+  },
+  {
+    "text": "Ready",
+    "start": 45.523,
+    "end": 45.79
+  },
+  {
+    "text": "to",
+    "start": 45.848,
+    "end": 45.906
+  },
+  {
+    "text": "become",
+    "start": 45.965,
+    "end": 46.255
+  },
+  {
+    "text": "someone",
+    "start": 46.29,
+    "end": 46.591
+  },
+  {
+    "text": "who",
+    "start": 46.615,
+    "end": 46.731
+  },
+  {
+    "text": "builds?",
+    "start": 46.789,
+    "end": 47.358
+  },
+  {
+    "text": "---",
+    "start": 47.532,
+    "end": 47.613
+  },
+  {
+    "text": "Let's",
+    "start": 47.741,
+    "end": 48.008
+  },
+  {
+    "text": "go!",
+    "start": 48.054,
+    "end": 48.496
+  }
+]
