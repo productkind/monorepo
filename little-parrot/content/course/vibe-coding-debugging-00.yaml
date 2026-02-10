@@ -246,11 +246,11 @@ course:
             correctAnswer: 3
             explanation: Visual issues are easier to diagnose when you show Lovable exactly what looks wrong. Screenshots provide important context that text alone may miss.
         - type: reflection
-          title: "Reflection: Debugging mindset"
+          title: "Reflection: Your project"
           content:
-            description: What is one mindset shift you can make to approach bugs more effectively?
-            placeholder: One mindset shift I can make is...
-            subDescription: Effective debugging starts with the right mindset. Reflect on how you currently approach bugs and consider one change you can make to improve your process.
+            description: What are you building with Lovable, and how will knowing more about debugging will help you?
+            placeholder: I'm building... and knowing more about debugging will help me...
+            subDescription: Knowing what you expect to gain from this course helps you get the most out of the challenges ahead.
         - type: challenge-end
           title: You've got the debugging mindset! 🔍
           content:
@@ -311,7 +311,7 @@ course:
               **For Dalmie's voting feature, testing means:**
               1. Click the **Vote** button
               2. Does the vote count **increase** on screen?
-              3. **Refresh** the page – is the vote **still there**?
+              3. **Refresh** the page. Is the vote **still there**?
               4. Try voting from a **different account**
 
               If something's wrong, you'll catch it while the change is fresh. Catching bugs early means they're much **easier to fix**.
@@ -399,52 +399,12 @@ course:
             question: When should you bookmark a stable version?
             explanation: Bookmark after every working feature! Each bookmark is a safe point you can return to. If bugs appear later, you'll have clear checkpoints to revert to and can compare what changed between versions.
             correctAnswer: 2
-        - type: free-text-exercise
-          title: "Practice: Break it down"
+        - type: reflection
+          title: "Reflection: Your prevention habits"
           content:
-            description: Dalmie wants to add a comments feature where book club members can discuss each book suggestion. What are the best practices she should follow to prevent bugs while building this feature?
-            placeholder: |-
-              1. First, Dalmie should...
-
-              2. Then she should...
-
-              3. Next, she should...
-            systemPrompt: |-
-              You are a debugging mentor for writing applications using AI app builders like Lovable
-              evaluating a best practice preventing bugs.
-
-              ## Description for the assignment:
-
-              Dalmie wants to add a comments feature where book club members
-              can discuss each book suggestion. What are the best practices she should
-              follow to prevent bugs while building this feature?
-
-              ## Context for related content in the course:
-
-              When Dalmie adds a new feature to her Book Club Organiser, she now follows this checklist:
-
-              ✓ **One feature at a time.** First the Vote button. Then the vote count display. Then preventing double votes.
-
-              ✓ **Test immediately.** After each change, she clicks through to make sure it works.
-
-              ✓ **Bookmark when it works.** Each stable version gets bookmarked.
-
-              This simple routine has cut her debugging time dramatically. When bugs do appear, she knows exactly where to look.
-
-
-              ## Assessment criteria:
-
-              Good answers mention:
-              (1) breaking the feature into small, testable parts
-              (2) testing each part immediately after addition
-              (3) bookmarking stable versions after each successful test. Praise systematic approaches.If they miss key prevention steps, suggest them.
-              End with encouragement.
-
-              ## Things to avoid:
-
-              - Do not provide code or implementation details.
-              - Don't mention version control systems outside of Lovable's bookmarking feature.
-              - Don't mention too much besides the prevention habits taught in this challenge.
+            description: Think about the next feature you want to build in your Lovable project. How will you work differently after learning these prevention habits?
+            placeholder: I will...
+            subDescription: Having a plan before you start building makes a difference.
         - type: challenge-end
           title: You've got the prevention habits! 🛡️
           content:
@@ -503,7 +463,7 @@ course:
             body: |-
               When professional developers encounter a bug, they don't guess. They gather clues systematically using specific techniques and tools.
 
-              In this challenge, you'll learn the same **investigation techniques** that developers use – and that Lovable uses too. Understanding these will help you to communicate with Lovable more effectively and fix bugs faster.
+              In this challenge, you'll learn the same **investigation techniques** that developers use, and that Lovable uses too. Understanding these will help you to communicate with Lovable more effectively and fix bugs faster.
             imageUrl: /courses/vibe-coding-debugging-00/spy.gif
           subtitle: Gathering clues like a professional
         - type: text
@@ -533,8 +493,8 @@ course:
           content:
             body: |-
               Beside the clues in the previous step, there are tools and strategies to help you investigate further.
-              We need to check each part of the application to see where the problem lies, from the user interface
-              (frontend) to the server and database (backend).
+              We need to check **each part of the application** to see where the problem lies, from the **user interface**
+              (frontend) to the **server** and **database** (backend).
             imageUrl: /courses/vibe-coding-debugging-00/checklist.gif
           subtitle: A systematic approach
         - type: text
@@ -735,7 +695,7 @@ course:
 
               In the Lovable Cloud tab, you can view your database tables:
               1. Look for the **Database** section
-              2. Click on the table you're investigating (e.g., `votes`)
+              2. Click on the table you're investigating (e.g., `book_votes`)
               3. Check if the data you expected is actually there
 
               **Dalmie's discovery:** Her vote function showed "Success (200)" but votes weren't displaying. She checked the `votes` table and found her votes WERE being saved, but with the wrong `book_id`. The bug was in what data was being sent, not in the saving process!
@@ -802,21 +762,12 @@ course:
             question: What should you do when a bug produces no error messages?
             explanation: When there are no visible errors, adding logging helps reveal what the code is actually doing. This makes invisible bugs visible and much easier to diagnose.
             correctAnswer: 3
-        - type: free-text-exercise
-          title: "Practice: Investigation plan"
+        - type: reflection
+          title: "Reflection: Your investigation checklist"
           content:
-            description: |-
-              Dalmie's Book Club Organiser has a bug: when she adds a new book, it shows on screen briefly, but disappears after she refreshes the page.
-
-              Describe how she should investigate this bug. What places should she check, and in what order? What clues might she find?
-            placeholder: |-
-              1. First, Dalmie should check...
-
-              2. Then she should look at...
-
-              3. She might find...
-            systemPrompt: "You are a debugging mentor evaluating investigation plans for learners building digital products with Lovable – the AI-development tool. Good answers mention: (1) checking the Network tab to see if the save request succeeded or failed and what status code, (2) checking Cloud logs to see if the backend function ran, (3) checking the database to see if the data was actually saved. The bug description suggests the save might not be working. Praise systematic approaches. If they miss key investigation steps, suggest them. End with encouragement."
-            checkerPrompt: "I was given this task: 'Dalmie's Book Club Organiser has a bug: when she adds a new book, it shows on screen briefly, but disappears after she refreshes the page. Describe how she should investigate this bug with Lovable. What places should she check, and in what order? What clues might she find?' Evaluate my answer in a helpful manner."
+            description: Think about a bug you've encountered before, while building with Lovable. How would you investigate it differently now?
+            placeholder: It was a bug where..., I'd investigate it by...
+            subDescription: Write down the investigation steps you'd follow, in your own words. Writing this down helps it stick.
         - type: challenge-end
           title: You can investigate like a developer! 🕵️
           content:
@@ -1006,26 +957,12 @@ course:
             question: When does the 'Try to Fix' button appear in Lovable?
             explanation: "'Try to Fix' appears when Lovable detects a clear, specific error such as a build failure or an error message in the Console or Backend Logs."
             correctAnswer: 1
-        - type: free-text-exercise
-          title: "Practice: Match tools to problems"
+        - type: reflection
+          title: "Reflection: Choosing the right tool"
           content:
-            description: |-
-              For each bug Dalmie encounters, write which tool she should use (Plan mode, Visual edits, or Try to Fix) and briefly explain why:
-
-              1. The "Add Book" button is grey but should be teal.
-              2. After adding a book, it appears but disappears when she refreshes the page.
-              3. A red "Build unsuccessful" error appeared after her last prompt.
-              4. The list of books shows "undefined" for each title.
-            placeholder: |-
-              1. [Tool] because...
-
-              2. [Tool] because...
-
-              3. [Tool] because...
-
-              4. [Tool] because...
-            systemPrompt: "You are a debugging mentor helping a learner match debugging tools to problems. Evaluate their answers: (1) Visual edits — simple colour change on a static button, (2) Plan mode — data not persisting is a backend/logic issue, (3) Try to Fix (up to 3 times) — clear build error, (4) Plan mode — undefined values suggest data loading issue. Provide friendly feedback in British English. Praise correct reasoning. Gently correct wrong answers with explanation. End with encouragement."
-            checkerPrompt: These are tool choices for four debugging scenarios.
+            description: Think about a bug you've encountered in your Lovable project. Which of the three tools would you reach for first, and why?
+            placeholder: The tool I'd use is... because the bug was about...
+            subDescription: Knowing which tool to use before you start saves time and credits.
         - type: challenge-end
           title: You know your debugging toolkit! 🧰
           content:
@@ -1378,7 +1315,7 @@ course:
         - type: reflection
           title: "Reflection: Your debugging communication"
           content:
-            description: Think about the last time you asked Lovable to fix a bug. What information did you include in your prompt? What would you do differently now that you know the debugging prompt formula?
+            description: Think about the last time you asked Lovable to fix a bug. What would you do differently now that you know the debugging prompt formula?
             placeholder: Last time I probably said something like... Next time I would also include...
             subDescription: Even small changes to how you communicate bugs can make a big difference in how quickly they get fixed.
         - type: challenge-end
@@ -1612,6 +1549,12 @@ course:
               That's it! No need to memorise long checklists. This three-step approach works for any security finding you'll encounter.
             imageUrl: /courses/vibe-coding-debugging-00/inline-chat-in-security-view.webp
           subtitle: A simple process for any security finding
+        - type: reflection
+          title: "Reflection: Your app's security context"
+          content:
+            description: "What type of app are you building: a personal tool, something for your team, or a public app as a business? How does that influence whether you decide to fix or ignore security warnings?"
+            placeholder: My app is... so I'd...
+            subDescription: There's no one-size-fits-all answer to security. Your app's context is what matters most.
         - type: quiz-question
           title: "Quiz: First step"
           content:
@@ -1635,12 +1578,11 @@ course:
             correctAnswer: 3
             explanation: Lovable needs to know who uses your app, what it's about, and what type of app it is (prototype, hobby project, or production app). This context helps Lovable tell you whether a remaining issue matters for your specific situation or if you can safely ignore it.
         - type: reflection
-          title: Your debugging and security journey
+          title: "Reflection: What's next for you?"
           content:
-            description: Think about everything you've learned in this micro-course. Which technique or concept do you think will be most valuable for you?
-            placeholder: |-
-              The most valuable thing I learned is...
-            subDescription: Writing this down helps cement the learning. You've built real debugging and security skills that professional developers use every day!
+            description: Now that you've learned debugging and security, what's the next skill you'd like to master for your Lovable project?
+            placeholder: The next thing I'd like to learn is...
+            subDescription: Every new skill builds on the last. You've come a long way!
         - type: course-end
           title: Congratulations! You're a Debugging Pro! 🎉
           content:
