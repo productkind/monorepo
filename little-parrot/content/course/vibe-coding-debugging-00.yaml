@@ -418,7 +418,6 @@ course:
         - Backend Logs
         - Network Tab
         - Status Codes
-        - Function Invocations
         - Database Checking
         - Bug Reproduction
         - Stack Traces
@@ -655,8 +654,9 @@ course:
 
               **How to access the backend logs:**
               1. In Lovable, click the **`+` button** next to Preview
-              2. Select the **Cloud tab**
+              2. Select the **Cloud** tab
               3. Click **Logs**
+              4. Select **Function logs** from the dropdown
 
               **The logs show:**
               - When backend functions ran
@@ -667,26 +667,6 @@ course:
               This is where you'll find clues for silent bugs that don't show errors in the browser.
             imageUrl: /courses/vibe-coding-debugging-00/cloud-logs.webp
           subtitle: Behind-the-scenes clues
-        - type: text
-          title: Function invocations
-          content:
-            body: |-
-              In Lovable, in the **Cloud** tab, you can see **function invocations**. They are records of each time a backend function was called.
-
-              You'll see entries like:
-
-              - ✅ `submit-vote` - Success (200)
-              - ❌ `submit-vote` - Failed (500)
-              - ❌ `submit-vote` - Failed (401)
-
-              This tells you:
-              - Was the function called at all? (Maybe the button isn't connected)
-              - Did it succeed or fail?
-              - What was the status code? (Tells you why it failed)
-
-              Clicking an invocation often shows more details about what went wrong.
-            imageUrl: /courses/vibe-coding-debugging-00/invocations.webp
-          subtitle: Did the function even run?
         - type: text
           title: Checking your database
           content:
