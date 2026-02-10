@@ -77,32 +77,28 @@ course:
 
               **2. Fixing:** Making changes to solve the problem.
 
-              Many beginners jump straight to fixing. But experienced developers know that **investigation is the most important part**. If you don't understand the problem, your fix might not work, or might break something else.
+              It's tempting to jump straight to fixing. But experienced developers know that **investigation is the most important part**. If you don't understand the problem, your fix might not work, or might break something else.
 
-              This is true for vibe coding too! Effective debugging in Lovable means knowing how to investigate issues before trying to fix them.
+              This is true for vibe coding too. Effective debugging in Lovable means knowing how to investigate issues before trying to fix them.
           subtitle: The art of finding and fixing
         - type: text
           title: Types of bugs
           content:
             body: |-
-              Bugs can be categorised in many ways. For our purposes, it makes sense to categorise them based on the action needed to fix them.
-
-              Bugs typically fall into a few common categories:
+              Not all bugs are the same, and different kinds need different approaches. Here are the main categories you'll encounter:
 
               - **Launch blockers:** The app will not start or load, and you only see an error message.
               - **Freezes and misbehaviours:** The app starts, but specific features do not work as expected.
               - **Visual glitches:** Things look wrong, such as incorrect colours, or broken layouts.
               - **Security vulnerabilities:** Potential data leaks, unauthorised access threat, or other safety-related issues.
 
-              Understanding these different scenarios can help you fix these bugs more quickly.
+              Once you recognise which type you're dealing with, you'll know where to start fixing it.
           subtitle: Different problems need different approaches
         - type: text
           title: Types of bugs
           content:
             body: |-
-              Let ’s briefly explore each type of bug in the next steps. Some of them are so easy to
-              fix that we cover them in this challenge right away. Others require more depth, so
-              they get their own dedicated challenges later in the course.
+              Let's briefly explore each type of bug in the next steps. Some are so easy to fix that we'll cover them in this challenge right away. Others need more depth, so they get their own dedicated challenges later in the course.
           subtitle: Overview of bug categories
         - type: text
           title: "Types of bugs: Launch blockers"
@@ -145,19 +141,17 @@ course:
           title: "Types of bugs: Freezes and misbehaviours"
           content:
             body: |-
-              These bugs can be trickier to diagnose because they may not produce clear error messages. They often require careful investigation to understand the root cause.
+              These bugs can be trickier to figure out because they don't always produce clear error messages. They often need some careful detective work to understand what's really going on.
 
-              In this course, we'll focus heavily on these types of bugs, as they are the most common and challenging to resolve effectively.
-
-              We will dedicate an entire challenge to mastering the investigation and fixing of these bugs.
+              These are the most common bugs you'll run into, so we'll dedicate an entire challenge to investigating and fixing them. You'll feel much more confident after that one.
           subtitle: When features don't work as expected
         - type: text
           title: "Types of bugs: Visual glitches"
           content:
             body: |-
-              Visual glitches affect the appearance of your app. These bugs may involve incorrect colours, misaligned elements, or broken layouts.
+              Visual glitches affect how your app looks. Maybe the colours are off, elements are misaligned, or the layout breaks on certain screens.
 
-              While they may not impact functionality directly, visual glitches can harm user experience and make your app look unprofessional.
+              Your app still works, but it doesn't look the way you intended. These are usually the least stressful bugs to deal with.
             imageUrl: /courses/vibe-coding-debugging-00/glitch.webp
           subtitle: When things look wrong
         - type: text
@@ -173,22 +167,20 @@ course:
           title: "Types of bugs: Security vulnerabilities"
           content:
             body: |-
-              Security vulnerabilities are bugs that could potentially expose your app or its data to unauthorised access or malicious attacks.
+              Security vulnerabilities are weaknesses that could expose your app or its data to unauthorised access.
 
-              The features of your app could work perfectly well, but if there are weaknesses in how data is handled or protected, users' safety could be at risk.
+              Your app's features might work perfectly, but if there are gaps in how data is handled or protected, your users' safety could be at risk.
 
-              Software developers are auditing their code for security vulnerabilities all the time, as these problems can have serious consequences.
+              Even experienced developers keep an eye out for these, because the consequences can be serious.
             imageUrl: /courses/vibe-coding-debugging-00/lock.gif
           subtitle: When safety is at risk
         - type: text
           title: "Types of bugs: Security vulnerabilities"
           content:
             body: |-
-              While security vulnerabilities can be complex, Lovable helps you identify and fix many common issues.
+              Security vulnerabilities can feel intimidating, but Lovable has your back. It includes a **built-in security auditor** that scans your app for potential issues and suggests fixes.
 
-              Lovable has a **built-in security auditor** that scans your app for potential vulnerabilities and suggests fixes.
-
-              We dedicate an entire challenge in this course to understanding and addressing security vulnerabilities effectively.
+              We'll dedicate an entire challenge in this course to understanding and handling security warnings. By the end, you'll know exactly what to do when they pop up.
           subtitle: When safety is at risk
         - type: quiz-question
           title: "Quiz: What is a bug?"
@@ -256,7 +248,7 @@ course:
           content:
             nextModule: "**Next:** Prevention is better than cure! Learn powerful habits that dramatically reduce how often you encounter bugs."
             description: You understand what bugs are and how to approach them.
-            subDescription: "Remember: diagnose before you fix. Understanding the different types of bugs helps you to guide Lovable in fixing them more effectively. This mindset is the first step to becoming a debugging master \\U0001F4AA. Great job! Now let's learn how to prevent many bugs from happening in the first place!"
+            subDescription: "Remember: diagnose before you fix. Understanding the different types of bugs helps you guide Lovable in fixing them more effectively. Great job on completing the first challenge! Now let's learn how to prevent many bugs from happening in the first place."
     - title: Preventing Bugs Before They Happen
       isFree: true
       skills:
@@ -488,7 +480,7 @@ course:
             body: |-
               The first question developers ask: is this a **frontend** bug or a **backend** bug?
 
-              The data flows through the frontend and backed part of the application, we would need to figure out which side the problem is on.
+              Data flows through both parts of your application, so the first step is figuring out which side the problem is on.
 
               **Frontend bugs** affect what users see:
               - Button doesn't respond to clicks
@@ -544,7 +536,7 @@ course:
           title: Errors in software
           content:
             body: |-
-              When code runs into a problem, it often throws an **error**, or also known as an **Exception**. Errors are like red flags that something went wrong.
+              When code runs into a problem, it often throws an **error** (also called an **exception**). Errors are like red flags that something went wrong.
 
               Usually an error looks like this in the Console:
 
@@ -555,20 +547,17 @@ course:
               ```
               The first line describes the error type and message. The lines below show where in the code the error occurred (called a **stack trace**).
 
-              It can look scary, but you do not need to understand every detail. Simply knowing that an
-              error occurred is already a big clue, and you can copy-past it for Lovable. 
+              It can look scary, but you don't need to understand every detail. Knowing that an error occurred is already a big clue, and you can copy and paste it for Lovable.
 
-              We are even happy to see it, because when we pass
-              the error message to Lovable, it can often fix the problem straight away.
+              In fact, error messages are good news! When you share them with Lovable, it can often fix the problem straight away.
           subtitle: When code runs into problems
         - type: text
-          title: Errors are you friend
+          title: Errors are your friend
           content:
             body: |-
-              We advise you to read error messages carefully. They are your friends when debugging. At
-              first, they may seem like gibberish, but there is a good chance they contain
-              hints that help you understand what is wrong. Over time, you will also get better at
-              reading error messages as you practise more.
+              Try reading error messages before passing them to Lovable. They're your friends when debugging! At first, they might seem like gibberish, but there's a good chance they contain hints about what went wrong.
+
+              Don't worry if you can't make sense of them yet. You'll get better at reading error messages the more you practise. For now, the important thing is to copy and share them with Lovable.
           subtitle: Read the error messages
         - type: text
           title: How to produce the error messages
@@ -880,7 +869,7 @@ course:
           title: "Visual edits: Static vs dynamic"
           content:
             body: |-
-              **Critical limitation:** Visually editing content only work on **static elements**.
+              **Good to know:** Editing text in Visual edits only works on **static elements**.
 
               - **Static elements** stay the same for everyone: a logo, a heading that says "Welcome", a button labelled "Submit", a paragraph describing your team.
               - **Dynamic elements** change based on data or user state: a list of books from the database, a user's name after login, a vote count that updates.
@@ -950,7 +939,7 @@ course:
               - The element is dynamic (changes based on data)
               - The element is inside a button
             question: In Visual edits mode, Dalmie hovers over the book titles but can't edit them. Why?
-            explanation: Book titles that come from the database are dynamic elements – they change based on data. Changing the text with Visual edits only work on static elements like fixed headings or labels.
+            explanation: Book titles that come from the database are dynamic elements – they change based on data. Changing the text with Visual edits only works on static elements like fixed headings or labels.
             correctAnswer: 2
         - type: quiz-question
           title: "Quiz: Try to Fix"
@@ -959,7 +948,7 @@ course:
               - When the layout looks wrong
               - When a clear error appears in the Console or Cloud logs
               - When a bug has no visible error
-              - When Lovable explains you how the code works
+              - When Lovable explains to you how the code works
             question: When does the 'Try to Fix' button appear in Lovable?
             explanation: "'Try to Fix' appears when Lovable detects a clear, specific error such as a build failure or an error message in the Console or Backend Logs."
             correctAnswer: 1
@@ -1101,8 +1090,7 @@ course:
 
               Then, prompt Lovable to build the feature again, but with a different approach or simpler design.
 
-              Because building features with AI builders got so fast and cheap, **rewriting can be quicker than untangling**.
-              It is literally less credits to start fresh than to spend hours debugging.
+              Because building features with AI builders has become so fast, **rewriting can be quicker than untangling**. It can literally cost fewer credits to start fresh than to spend ages debugging.
         - type: quiz-question
           title: "Quiz: The three-attempt rule"
           content:
@@ -1410,15 +1398,23 @@ course:
             body: |-
               The security warning you'll see most often is about **Row Level Security**, or **RLS** for short.
 
-              Your app stores data in database tables (think of them like spreadsheets). Each row is a piece of data: a user's profile, a book suggestion, or a vote on a book. **RLS is a set of rules that controls who can see and change each row.**
+              Your app stores data in database tables (think of them like spreadsheets). Each row is a piece of data: a user's profile, a book suggestion, or a vote on a book.
 
-              Here's the tricky part: your app might look completely fine. When Dalmie uses her Book Club Organiser, she only sees her own data. Everything works as expected. **So what's the problem?**
-
-              Behind the scenes, your app's database has a public address and a public key (called the `anon` key) that are embedded in your app's code. These are visible to anyone. **Without RLS, someone who finds these (which is easy) can bypass your app entirely and read all the data in your tables directly.** Not through your app's interface, but by talking to the database itself.
-
-              Imagine a stranger reading every member's email address, book preferences, and voting history from Dalmie's book club, without ever opening the app. That's what **missing RLS** makes possible.
+              **RLS is a set of rules that controls who can see and change each row.** Without these rules, the data in that table has no protection.
             imageUrl: /courses/vibe-coding-debugging-00/no-rls-policy.webp
           subtitle: Who can see your data?
+        - type: text
+          title: "RLS: The hidden danger"
+          content:
+            body: |-
+              Here's the tricky part: **your app might look completely fine.** When Dalmie uses her Book Club Organiser, she only sees her own data. Everything works as expected. So what's the problem?
+
+              Behind the scenes, your app's database has a public address and a public key (called the `anon` key) that are embedded in your app's code. These are visible to anyone.
+
+              **Without RLS, someone who finds these (which is easy) can bypass your app entirely and read all the data in your tables directly.** Not through your app's interface, but by talking to the database itself.
+
+              Imagine a stranger reading every member's email address, book preferences, and voting history from Dalmie's book club, without ever opening the app. That's what missing RLS makes possible.
+          subtitle: The app looks fine, but the database is wide open
         - type: text
           title: "RLS: How to fix it"
           content:
@@ -1432,15 +1428,21 @@ course:
               **Step 2:** Lovable will add policies that typically restrict each user to only see and modify their own data.
 
               **Step 3:** **Run the security scan again** to confirm the warning is gone. If Lovable's scanner no longer flags the table, the policies are in place.
+          subtitle: Let Lovable help
+        - type: text
+          title: "RLS: When the fix needs adjusting"
+          content:
+            body: |-
+              The scanner checks whether policies *exist*, but not whether they perfectly match your app's needs.
 
-              **One thing to keep in mind:** The scanner checks whether policies *exist*, but not whether they perfectly match your app's needs. If your app has data that should be visible to everyone (like public book suggestions), the auto-fix might be too restrictive and break things. In that case, prompt Lovable to adjust:
+              If your app has data that should be visible to everyone (like public book suggestions), the auto-fix might be too restrictive and break things. In that case, prompt Lovable to adjust:
 
               ```
               The book_suggestions table should be readable by all authenticated users, but only editable by the user who created the suggestion. Update the RLS policies accordingly.
               ```
 
               If the fix causes a feature to stop working (for example, users can no longer see shared content), that's a sign the policy needs adjusting, not removing. Prompt Lovable in **Plan mode** to investigate.
-          subtitle: Let Lovable help
+          subtitle: Shared data needs custom rules
         - type: quiz-question
           title: "Quiz: Row Level Security"
           content:
@@ -1463,8 +1465,6 @@ course:
               When you integrate a service with your app (for example, connecting Stripe for payments), you get a key. If that key ends up in your app's frontend code, **anyone can see it** by opening their browser's developer tools.
 
               That means someone could use your key to access the service on your behalf, potentially racking up charges or accessing private data.
-
-              Lovable is smart about this: it blocks around 1,200 API keys per day from being accidentally inserted into code. If you paste a key into the chat, Lovable will warn you and guide you to store it safely instead.
           subtitle: Don't leave the keys under the doormat
         - type: text
           title: "API keys: How to fix it"
@@ -1477,24 +1477,36 @@ course:
               **2. For Lovable Cloud apps:** Go to **Cloud > Secrets** to manage your keys securely.
 
               **3. Rotate the exposed key.** If a key was ever visible in your code (even briefly), treat it as compromised. Go to the service's dashboard (Stripe, OpenAI, etc.) and generate a new key. Then store the new key securely.
-
-              **One important exception:** Your Supabase `anon` key (the one labelled "anon" or "public") is *designed* to be in your frontend code. It's safe as long as your RLS policies are set up correctly. That's why RLS is so important!
           subtitle: Store them safely
         - type: text
-          title: Authentication settings
+          title: "API keys: Good to know"
           content:
             body: |-
-              If your app has user sign-up and login, Lovable may flag warnings about your **authentication configuration**. The two most common ones:
+              Lovable is smart about this: it blocks around 1,200 API keys per day from being accidentally inserted into code. If you paste a key into the chat, Lovable will warn you and guide you to store it safely instead.
 
-              **Leaked password protection disabled:** This means your app doesn't check whether a user's chosen password has appeared in known data breaches. Without this check, users might sign up with passwords like "password123" that attackers already know.
+              **One important exception:** Your Supabase `anon` key (the one labelled "anon" or "public") is *designed* to be in your frontend code. It's safe as long as your RLS policies are set up correctly. That's why RLS is so important!
+          subtitle: Lovable has your back
+        - type: text
+          title: "Authentication: Leaked password protection"
+          content:
+            body: |-
+              If your app has user sign-up and login, Lovable may flag warnings about your **authentication configuration**.
+
+              The first common one: **leaked password protection disabled.** This means your app doesn't check whether a user's chosen password has appeared in known data breaches. Without this check, users might sign up with passwords like "password123" that attackers already know.
 
               **How to fix:** In your Lovable Cloud settings (Cloud > Users > Auth Settings > Email), enable the **"Password HIBP Check"** toggle. This checks passwords against a database of billions of known compromised passwords.
+            imageUrl: /courses/vibe-coding-debugging-00/leaked-password-protection.webp
+          subtitle: Blocking known compromised passwords
+        - type: text
+          title: "Authentication: OTP expiry"
+          content:
+            body: |-
+              The second common authentication warning: **OTP expiry too long.**
 
-              **OTP expiry too long:** A one-time password (the code sent to your email for login) stays valid for too long. If someone intercepts it, they have a bigger window to use it.
+              An OTP (one-time password) is the code sent to your email when you log in. If it stays valid for too long, someone who intercepts it has a bigger window to use it.
 
               **How to fix:** Reduce the OTP expiry time to 5-15 minutes in your authentication settings.
-            imageUrl: /courses/vibe-coding-debugging-00/leaked-password-protection.webp
-          subtitle: Login and signup safety
+          subtitle: Keep login codes short-lived
         - type: quiz-question
           title: "Quiz: API keys"
           content:
@@ -1513,38 +1525,47 @@ course:
               Security isn't only about what's in your code. Some issues are about how and where your app runs. This is called **infrastructure security**.
 
               Think of it this way: you could have the strongest lock on your front door, but if the walls are made of cardboard, it doesn't matter much.
-
-              Common infrastructure-level warnings include:
-
+          subtitle: It's not just about the code
+        - type: text
+          title: Common infrastructure warnings
+          content:
+            body: |-
               **Missing security headers:** Your app's server isn't sending certain instructions to the browser about how to behave securely. For example, the browser might not know to block malicious scripts from running or to force secure (HTTPS) connections.
 
               **Client-side only authentication:** Your app checks whether a user is logged in on the frontend, but the server doesn't double-check. This means someone with basic technical knowledge could bypass login entirely and access your data directly.
 
               **Missing email verification:** Users can sign up and access your app without confirming their email address, which means anyone could create an account using someone else's email.
-          subtitle: It's not just about the code
+          subtitle: What the scanner might flag
         - type: text
           title: "Infrastructure fixes: What you can do"
           content:
             body: |-
-              For most infrastructure warnings, Lovable can help, but some may require adjustments in your hosting or database settings.
+              For most infrastructure warnings, Lovable can help. Here are prompts you can use:
 
-              **For missing security headers:** Prompt Lovable to add them:
+              **For missing security headers:**
               ```
               Add security headers to the app: Content-Security-Policy, Strict-Transport-Security, X-Frame-Options, and X-Content-Type-Options.
               ```
 
-              **For client-side only authentication:** Prompt Lovable to add server-side checks:
+              **For client-side only authentication:**
               ```
               Make sure authentication is verified on the server side too, not just in the frontend components. Add checks to all API routes and backend functions.
               ```
 
               **For missing email verification:** Enable it in your authentication settings and prompt Lovable to add a verification step to the signup flow.
+          subtitle: Practical prompts
+        - type: text
+          title: When a warning feels too technical
+          content:
+            body: |-
+              If a warning feels too technical to understand, you can always prompt Lovable in **Plan mode**:
 
-              If a warning feels too technical, you can always prompt Lovable in **Plan mode**:
               ```
               The security scanner flagged [paste the warning]. Explain what this means and suggest how to fix it. Don't make changes yet.
               ```
-          subtitle: Practical steps
+
+              This way, Lovable investigates without changing your code. Once you understand the issue, you can decide whether and how to fix it.
+          subtitle: Let Lovable explain it
         - type: text
           title: Your security decision framework
           content:
@@ -1645,4 +1666,4 @@ course:
   titleSplit:
     - "Fix Bugs with Confidence:"
     - Debugging Your Lovable App
-  description: Learn to find and fix bugs confidently, even without technical knowledge. No more panic when things go wrong! By the end, you'll understand security warnings too.
+  description: Learn to find and fix bugs confidently while building with Lovable, even without technical knowledge. No more panic when things go wrong! By the end, you'll understand security warnings too.
