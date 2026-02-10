@@ -1335,9 +1335,8 @@ course:
       isFree: true
       skills:
         - Security Auditor
-        - Row Level Security
-        - API Key Safety
-        - Auth Configuration
+        - Row Level Security (RLS)
+        - Authentication Safety
         - Security Context
       description: Understand what Lovable's security warnings mean and how to handle them based on your app's purpose.
       completionTime: '12:00'
@@ -1352,16 +1351,16 @@ course:
 
               Her first reaction? Panic. *"Is my app broken? Did I do something wrong?"*
 
-              Not at all. Security issues are not bugs. They're **Lovable looking out for you**, flagging potential risks before your app goes live. Think of it like a friend checking your doors and windows before you leave the house.
+              Not at all. Security issues mean **Lovable's looking out for you**, flagging potential risks before your app goes live. Think of it like a friend checking your doors and windows before you leave the house.
             imageUrl: /courses/vibe-coding-debugging-00/lock.gif
-          subtitle: Security issues are not bugs
+          subtitle: Looking out for security issues
         - type: text
           title: Lovable's security auditor
           content:
             body: |-
-              Lovable has a **built-in security scanner** that checks your app before you publish it. You'll see the results in the **Security** menu for apps that use a database.
+              Lovable has a **built-in security scanner** that checks your app before you publish it. You'll see the results in the **Security** menu.
 
-              The scanner checks three things:
+              The scanner checks different parts of your app, including:
 
               **1. Your database settings:** Are your data tables protected so only the right people can access them?
 
@@ -1369,26 +1368,34 @@ course:
 
               **3. Your code:** Does your code accidentally expose sensitive information?
 
-              Each finding is labelled with a severity level:
+              **4. Your infrastructure:** Is your app's hosting environment set up securely?
+          subtitle: What gets checked
+        - type: text
+          title: "The findings list"
+          content:
+            body: |-
+              When the security scan finishes, you'll see a list of **findings**, the potential security issues Lovable discovered.
+
+              Each finding is labelled with a **severity level**:
 
               - **Error** (red): Critical issues you should address before publishing.
               - **Warning** (orange): Important concerns worth reviewing.
               - **Info** (white): General recommendations and best practices.
             imageUrl: /courses/vibe-coding-debugging-00/security-menu.webp
-          subtitle: What gets checked
+          subtitle: Understanding the findings
         - type: text
           title: "The big question: Does it matter for MY app?"
           content:
             body: |-
               Here's something most security guides won't tell you: **not every security warning matters equally for every app**.
 
-              The severity of a security issue depends on what your app does and who uses it:
+              The **severity** of a security issue depends on what your app does and who uses it:
 
               **Personal tool** (just for you): A to-do list only you use? Most security warnings are low priority. There's no sensitive user data to protect beyond your own.
 
               **Internal team tool** (for your company or club): Dalmie's Book Club Organiser with 15 trusted members? Medium priority. You want basic protections, but the risk is lower than a public app.
 
-              **Public app** (anyone on the internet): A marketplace where strangers sign up and share personal data? High priority. Every security warning deserves attention.
+              **Public app** (for anyone on the internet): A marketplace where strangers sign up and share personal data? High priority. Every security warning deserves attention.
 
               This doesn't mean you should ignore warnings for personal tools. But it helps you **prioritise** what to fix first and how urgently.
           subtitle: Context determines priority
@@ -1407,11 +1414,11 @@ course:
           title: "RLS: The hidden danger"
           content:
             body: |-
-              Here's the tricky part: **your app might look completely fine.** When Dalmie uses her Book Club Organiser, she only sees her own data. Everything works as expected. So what's the problem?
+              Here's the tricky part: **your app might look completely fine.** When Dalmie uses her Book Club Organiser, she only sees her own data. Everything works as expected. **So what's the problem?**
 
               Behind the scenes, your app's database has a public address and a public key (called the `anon` key) that are embedded in your app's code. These are visible to anyone.
 
-              **Without RLS, someone who finds these (which is easy) can bypass your app entirely and read all the data in your tables directly.** Not through your app's interface, but by talking to the database itself.
+              **Without RLS, someone who finds these** (which is easy) **can bypass your app entirely and read all the data in your tables directly.** Not through your app's interface, but by talking to the database itself.
 
               Imagine a stranger reading every member's email address, book preferences, and voting history from Dalmie's book club, without ever opening the app. That's what missing RLS makes possible.
           subtitle: The app looks fine, but the database is wide open
@@ -1423,101 +1430,50 @@ course:
 
               The good news: Lovable can fix most RLS issues for you.
 
-              **Step 1:** In the security findings, click **"Try to fix"** next to the RLS warning.
+              **Step 1:** In the security findings, open the RLS warning and ask Lovable to *"Add Row Level Security policies."* in the inline chat within the Security view or click the **Try to fix all** button to tackle all the identified issues.
 
-              **Step 2:** Lovable will add policies that typically restrict each user to only see and modify their own data.
+              **Step 2:** Lovable will **add policies** that typically restrict each user to only see and modify their own data.
 
               **Step 3:** **Run the security scan again** to confirm the warning is gone. If Lovable's scanner no longer flags the table, the policies are in place.
+            imageUrl: /courses/vibe-coding-debugging-00/fix-rls-issue.webp
           subtitle: Let Lovable help
-        - type: text
-          title: "RLS: When the fix needs adjusting"
-          content:
-            body: |-
-              The scanner checks whether policies *exist*, but not whether they perfectly match your app's needs.
-
-              If your app has data that should be visible to everyone (like public book suggestions), the auto-fix might be too restrictive and break things. In that case, prompt Lovable to adjust:
-
-              ```
-              The book_suggestions table should be readable by all authenticated users, but only editable by the user who created the suggestion. Update the RLS policies accordingly.
-              ```
-
-              If the fix causes a feature to stop working (for example, users can no longer see shared content), that's a sign the policy needs adjusting, not removing. Prompt Lovable in **Plan mode** to investigate.
-          subtitle: Shared data needs custom rules
         - type: quiz-question
           title: "Quiz: Row Level Security"
           content:
             question: Dalmie's Book Club Organiser has an RLS warning on the "members" table. What does this mean?
             options:
-              - The members table has a bug in it
+              - The members table in the database has corrupted data in it
               - The table might be accessible to anyone, not just authorised users
-              - The table is empty and needs data
-              - The app will not load until it's fixed
+              - The database table is empty and needs data
+              - Users won't be able to use the app until it's fixed
             correctAnswer: 1
-            explanation: An RLS warning means the table might not have rules controlling who can read or modify its data. Without these rules, the data could potentially be accessed by anyone.
-        - type: text
-          title: "Exposed API keys: Your app's passwords"
-          content:
-            body: |-
-              The second most common security warning is about **exposed API keys**.
-
-              An **API key** is like a password that lets your app talk to other services: your database, a payment system, an email provider, or an AI tool.
-
-              When you integrate a service with your app (for example, connecting Stripe for payments), you get a key. If that key ends up in your app's frontend code, **anyone can see it** by opening their browser's developer tools.
-
-              That means someone could use your key to access the service on your behalf, potentially racking up charges or accessing private data.
-          subtitle: Don't leave the keys under the doormat
-        - type: text
-          title: "API keys: How to fix it"
-          content:
-            body: |-
-              If Lovable flags an exposed API key, here's what to do:
-
-              **1. Store the key securely.** Use Lovable's built-in secret storage. When Lovable asks you for an API key, use the **"Add Key"** button that appears in the chat. This stores the key safely on the server, not in your frontend code.
-
-              **2. For Lovable Cloud apps:** Go to **Cloud > Secrets** to manage your keys securely.
-
-              **3. Rotate the exposed key.** If a key was ever visible in your code (even briefly), treat it as compromised. Go to the service's dashboard (Stripe, OpenAI, etc.) and generate a new key. Then store the new key securely.
-          subtitle: Store them safely
-        - type: text
-          title: "API keys: Good to know"
-          content:
-            body: |-
-              Lovable is smart about this: it blocks around 1,200 API keys per day from being accidentally inserted into code. If you paste a key into the chat, Lovable will warn you and guide you to store it safely instead.
-
-              **One important exception:** Your Supabase `anon` key (the one labelled "anon" or "public") is *designed* to be in your frontend code. It's safe as long as your RLS policies are set up correctly. That's why RLS is so important!
-          subtitle: Lovable has your back
+            explanation: An RLS (Row Level Security) warning means the table might not have rules controlling who can read or modify its data. Without these rules, the data could potentially be accessed by anyone by talking directly to the database.
         - type: text
           title: "Authentication: Leaked password protection"
           content:
             body: |-
               If your app has user sign-up and login, Lovable may flag warnings about your **authentication configuration**.
 
-              The first common one: **leaked password protection disabled.** This means your app doesn't check whether a user's chosen password has appeared in known data breaches. Without this check, users might sign up with passwords like "password123" that attackers already know.
-
-              **How to fix:** In your Lovable Cloud settings (Cloud > Users > Auth Settings > Email), enable the **"Password HIBP Check"** toggle. This checks passwords against a database of billions of known compromised passwords.
+              The first common one: **Leaked password protection disabled.** 
+              
+              This means your app doesn't check whether a user's chosen password has appeared in known data breaches. Without this check, users might sign up with passwords that have been exposed in public data leaks.
             imageUrl: /courses/vibe-coding-debugging-00/leaked-password-protection.webp
           subtitle: Blocking known compromised passwords
         - type: text
-          title: "Authentication: OTP expiry"
+          title: "Leaked password protection fix"
           content:
             body: |-
-              The second common authentication warning: **OTP expiry too long.**
+              **To fix "Leaked password protection disabled":** 
 
-              An OTP (one-time password) is the code sent to your email when you log in. If it stays valid for too long, someone who intercepts it has a bigger window to use it.
-
-              **How to fix:** Reduce the OTP expiry time to 5-15 minutes in your authentication settings.
-          subtitle: Keep login codes short-lived
-        - type: quiz-question
-          title: "Quiz: API keys"
-          content:
-            question: Why is it a problem if an API key is visible in your app's frontend code?
-            options:
-              - It makes the app slower
-              - It changes the app's appearance
-              - Anyone can find it using browser tools and use it on your behalf
-              - It prevents the app from loading
-            correctAnswer: 2
-            explanation: API keys in frontend code are visible to anyone who opens the browser's developer tools. An attacker could use the key to access services on your behalf, potentially causing charges or data breaches.
+              1. In your Lovable Cloud settings (**Cloud** menu) 
+              2. Select **Users**
+              3. Open **Auth Settings**
+              4. Click **Email** among the "Sign in methods"
+              5. Enable the **"Password HIBP Check"** toggle. 
+              
+              This checks passwords against a database of billions of known compromised passwords.
+            imageUrl: /courses/vibe-coding-debugging-00/password-hibp-check.webp
+          subtitle: How to fix?
         - type: text
           title: "Beyond the code: Infrastructure security"
           content:
@@ -1660,7 +1616,7 @@ course:
 
               ✓ **Effective communication:** The debugging prompt formula, guardrails, specificity, and asking for logs.
 
-              ✓ **Security awareness:** Understanding RLS, API key safety, authentication settings, and infrastructure security. Knowing what to prioritise based on your app's context.
+              ✓ **Security awareness:** Understanding RLS, authentication settings, and infrastructure security. Knowing what to prioritise based on your app's context.
 
               **Remember:** Every professional developer debugs constantly and takes security seriously. You now have the same toolkit they use. The bugs will come, but so will the fixes. Happy building! 💪
   titleSplit:

@@ -12,7 +12,10 @@
       "Bash(npx tsc:*)",
       "Bash(npm run typecheck:*)",
       "Bash(npm run check:*)",
-      "WebFetch(domain:docs.lovable.dev)"
+      "WebFetch(domain:docs.lovable.dev)",
+      "WebFetch(domain:freelanceunlocked.com)",
+      "WebFetch(domain:www.freelanceunlocked.com)",
+      "WebFetch(domain:2025.freelanceunlocked.com)"
     ],
     "deny": [],
     "ask": []
