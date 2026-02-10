@@ -671,16 +671,27 @@ course:
           title: Checking your database
           content:
             body: |-
-              Sometimes the function runs successfully, but data still seems wrong. The next place to check is the **database itself**.
+              Sometimes a feature doesn't behave as expected and you're not sure why. The next place to check is the **database itself**: is the data actually being saved?
 
-              In the Lovable Cloud tab, you can view your database tables:
+              Think of the database like a spreadsheet. Each table is a sheet, and each row is a piece of data. You can open it and look directly at what's stored.
+
+              In the **Cloud** tab, you can view your database tables:
               1. Look for the **Database** section
               2. Click on the table you're investigating (e.g., `book_votes`)
               3. Check if the data you expected is actually there
-
-              **Dalmie's discovery:** Her vote function showed "Success (200)" but votes weren't displaying. She checked the `votes` table and found her votes WERE being saved, but with the wrong `book_id`. The bug was in what data was being sent, not in the saving process!
             imageUrl: /courses/vibe-coding-debugging-00/database-check.webp
           subtitle: Is the data actually there?
+        - type: text
+          title: "Dalmie's discovery: The missing vote"
+          content:
+            body: |-
+              Dalmie clicked "Vote" on "The Midnight Library," but the vote count on screen didn't change.
+
+              She opened the `book_votes` table in the database and sorted by the `created_at` column (which records when each vote was made). No new row appeared after her click. The vote was never saved!
+
+              That told her the problem was in the saving process, not in how the screen displays votes. Now she knew exactly where to point Lovable.
+            imageUrl: /courses/vibe-coding-debugging-00/book-votes-table.webp
+          subtitle: The database reveals the truth
         - type: text
           title: Putting it all together
           content:
@@ -699,8 +710,7 @@ course:
           title: When there is no error message
           content:
             body: |-
-              Not all bugs produce error messages. 😱 Sometimes things just don't work as expected, but
-              nothing appears in red.
+              Not all bugs produce error messages. Sometimes things just don't work as expected, but nothing appears in red.
 
               In these cases, you can prompt Lovable to add logging statements to your code. These are messages that print out
               internal state at key points, helping Lovable and you understand what's happening.
