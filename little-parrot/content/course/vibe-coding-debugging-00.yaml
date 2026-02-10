@@ -38,8 +38,16 @@ course:
             imageUrl: /comics/vibe-coding-debugging-00/panel-03.png
             altText: |-
               The dog and robot are back at the desk, joined by a brightly coloured bird (called Little
-              Parrot). Little Parrot says cheerfully, “Let’s put our detective hats on and figure out
-              together what’s happening here!” The mood shifts towards collaborative problem-solving.
+              Parrot). Little Parrot says cheerfully, "Let's put our detective hats on and figure out
+              together what's happening here!" The mood shifts towards collaborative problem-solving.
+        - type: text
+          title: Before we start
+          content:
+            body: |-
+              This course uses some technical terms like **frontend**, **backend**, **database**, **server**, and **data table**. If these words are new to you, we recommend completing our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) course first. It will give you the foundation to get the most out of this debugging course.
+
+              If you're already comfortable with these terms, you're good to go! Let's dive in.
+          subtitle: A quick heads-up
         - type: text
           title: What is a bug?
           content:
@@ -81,6 +89,17 @@ course:
 
               This is true for vibe coding too. Effective debugging in Lovable means knowing how to investigate issues before trying to fix them.
           subtitle: The art of finding and fixing
+        - type: quiz-question
+          title: "Quiz: What is a bug?"
+          content:
+            question: What best describes a bug in an app?
+            options:
+              - When you open the app, and it crashes completely
+              - When users cannot find something, because the design is confusing
+              - When the code is too tangled to read
+              - When the app behaves differently from what you intended
+            correctAnswer: 3
+            explanation: A bug is any mismatch between what you expect your app to do and what actually happens. It does not have to be a crash. Even small unexpected behaviours count.
         - type: text
           title: Types of bugs
           content:
@@ -182,17 +201,6 @@ course:
 
               We'll dedicate an entire challenge in this course to understanding and handling security warnings. By the end, you'll know exactly what to do when they pop up.
           subtitle: When safety is at risk
-        - type: quiz-question
-          title: "Quiz: What is a bug?"
-          content:
-            question: What best describes a bug in an app?
-            options:
-              - When the app crashes completely
-              - When the app behaves differently from what you intended
-              - When users do not like the design
-              - When the code is too long
-            correctAnswer: 1
-            explanation: A bug is any mismatch between what you expect your app to do and what actually happens. It does not have to be a crash. Even small unexpected behaviours count.
         - type: quiz-question
           title: "Quiz: Build errors"
           content:
@@ -328,6 +336,19 @@ course:
               ```
             imageUrl: /courses/vibe-coding-debugging-00/bookmark-version.png
           subtitle: Always have a safe point to return to
+        - type: text
+          title: "Pause and try this: Bookmark your version"
+          content:
+            body: |-
+              Take a moment to **try this now**:
+
+              1. **Open** your Lovable project
+              2. Find the **bookmark** option in your **version history**
+              3. **Bookmark** your current version as a stable checkpoint
+
+              From now on, try to bookmark after every feature that **works as expected**.
+            imageUrl: /courses/vibe-coding-debugging-00/bookmark-your-version.webp
+          subtitle: Create your first safety net
         - type: text
           title: Dalmie's prevention checklist
           content:
@@ -465,6 +486,17 @@ course:
 
               The key insight: **diagnose before fixing**. Spending time investigating (rather than immediately attempting fixes) actually gets you to a solution faster.
           subtitle: Diagnose before you fix
+        - type: quiz-question
+          title: "Quiz: The debugging mindset"
+          content:
+            options:
+              - Immediately ask Lovable to fix the problem
+              - Revert to the last bookmarked version and try again
+              - Investigate what's happening before attempting fixes
+              - Ignore the bug and hope users won't notice
+            question: What's the most effective first response when you encounter a bug?
+            explanation: Investigation first! Understanding what's actually happening before attempting fixes leads to better solutions and fewer wasted attempts. Jumping straight to fixes often makes things worse.
+            correctAnswer: 2
         - type: text
           title: How developers investigate
           content:
@@ -512,9 +544,10 @@ course:
               Your web browser has a secret superpower called **DevTools**. It includes a **Console** where your app writes messages and errors.
 
               **To open DevTools:**
-              - **Windows/Linux:** Press `F12` or `Ctrl + Shift + I`
-              - **Mac:** Press `Cmd + Option + I`
-              - **Or:** Right-click anywhere on the page → "Inspect"
+              - **Google Chrome:** Press `F12` or `Ctrl + Shift + I` (Windows/Linux) / `Cmd + Option + I` (Mac)
+              - **Safari:** Go to Safari menu → Settings → Advanced → tick "Show features for web developers". Then press `Cmd + Option + I`
+              - **Edge:** Press `F12` or `Ctrl + Shift + I` (Windows/Linux) / `Cmd + Option + I` (Mac)
+              - **Or:** Right-click anywhere on the page → "Inspect" (works in Chrome and Edge)
 
               Then click the **Console** tab.
 
@@ -532,6 +565,24 @@ course:
 
               Developers (and Lovable) use the Console **to see what went wrong** when bugs appear. Even if nothing seems broken on the screen, the Console might reveal hidden problems.
           subtitle: The app's diary of events
+        - type: text
+          title: "Pause and try this: Open DevTools"
+          content:
+            body: |-
+              Let's see the **Console** for real. Open your app's preview in a new browser tab, then open the **DevTools**:
+
+              - **Google Chrome:** Press `F12` or `Ctrl + Shift + I` (Windows/Linux) / `Cmd + Option + I` (Mac)
+              - **Safari:** Go to Safari menu → Settings → Advanced → tick "Show features for web developers". Then press `Cmd + Option + I`
+              - **Edge:** Press `F12` or `Ctrl + Shift + I` (Windows/Linux) / `Cmd + Option + I` (Mac)
+              - **Or:** Right-click anywhere on the page → "Inspect" (works in Chrome and Edge)
+
+              Click the **Console** tab. Do you see any messages? Maybe some warnings in yellow, or even errors in red?
+
+              Don't worry if it looks empty or confusing. The important thing is knowing where to find it. Next time something goes wrong in your app, this is the first place to check.
+
+              You can also try it on any website! Every website has a Console.
+            imageUrl: /courses/vibe-coding-debugging-00/dev-tools-console.webp
+          subtitle: See the Console for yourself
         - type: text
           title: Errors in software
           content:
@@ -613,6 +664,17 @@ course:
 
               If there is a failed request, it will likely also show up in the Console as an error message.
           subtitle: What the numbers mean
+        - type: quiz-question
+          title: "Quiz: Status codes"
+          content:
+            options:
+              - Success, everything worked
+              - The user is not authorised
+              - Something crashed on the server
+              - The data sent was wrong
+            question: A request in the Network tab shows status code 401. What does this mean?
+            explanation: 401 means 'Unauthorised', the user needs to be logged in but isn't, or their session has expired.
+            correctAnswer: 1
         - type: text
           title: Investigate further
           content:
@@ -708,17 +770,6 @@ course:
               In your prompt, be specific about what is the expected vs actual behaviour, so Lovable knows what to log.
           subtitle: Your debugging toolkit
         - type: quiz-question
-          title: "Quiz: The debugging mindset"
-          content:
-            options:
-              - Immediately ask Lovable to fix the problem
-              - Investigate what's happening before attempting fixes
-              - Delete the feature and try again
-              - Ignore the bug and hope users won't notice
-            question: What's the most effective first response when you encounter a bug?
-            explanation: Investigation first! Understanding what's actually happening before attempting fixes leads to better solutions and fewer wasted attempts. Jumping straight to fixes often makes things worse.
-            correctAnswer: 1
-        - type: quiz-question
           title: "Quiz: Finding clues"
           content:
             options:
@@ -729,17 +780,6 @@ course:
             question: Dalmie's Vote button does nothing when clicked, and there's no error in the Console or the Network Tab. Where should she look next?
             explanation: The next step is to check Lovable Cloud logs. Backend function errors often appear there when nothing shows up in the browser Console or Network tab.
             correctAnswer: 0
-        - type: quiz-question
-          title: "Quiz: Status codes"
-          content:
-            options:
-              - Success – everything worked
-              - The user is not authorised
-              - Something crashed on the server
-              - The data sent was wrong
-            question: A request in the Network tab shows status code 401. What does this mean?
-            explanation: 401 means 'Unauthorised' – the user needs to be logged in but isn't, or their session has expired.
-            correctAnswer: 1
         - type: quiz-question
           title: "Quiz: Stack traces"
           content:
@@ -844,6 +884,20 @@ course:
               - ```Investigate but don't write code yet. Suggest 3 possible causes.```
               - ```Take a step back. Analyse the problem and suggest a different approach.```
           subtitle: Prompts that work
+        - type: text
+          title: "Pause and try this: Plan mode"
+          content:
+            body: |-
+              Open **your Lovable project** and try Plan mode right now (it will cost one credit):
+
+              1. Click the **Plan** button at the bottom of your screen
+              2. Type: ```Explain the architecture of this project to a non-technical person. What are the main components?```
+              3. Watch how Lovable investigates your code and explains what it finds
+
+              Notice how it explores without changing anything. That's the beauty of Plan mode: safe investigation.
+
+              When you're done, click **Plan** again to switch back to Agent mode.
+          subtitle: Try it in your own project
         - type: text
           title: "Visual edits: Point and click"
           content:
@@ -1122,8 +1176,14 @@ course:
               - Start a new project to rewrite the entire app
               - Ignore broken features and ship anyway
             question: You're stuck in a fix-break loop and no longer understand what's wrong. Which strategy should you try first?
-            explanation: Asking for explanation before fixing forces a step back. It helps uncover flawed assumptions, tangled bugs, or simpler solutions before more changes are made.
+            explanation: Asking for explanation before fixing forces a step back. It helps uncover flawed assumptions, tangled bugs, or simpler solutions before more changes are made. If every fix attempt has failed, you can alsways revert to a previous working version.
             correctAnswer: 0
+        - type: reflection
+          title: "Reflection: Your escape plan"
+          content:
+            description: Think about a time you got stuck in a frustrating fix-break loop (or imagine one). Which escape strategy from this challenge would you try first, and why?
+            placeholder: The strategy I'd reach for first is... because...
+            subDescription: There's no wrong answer here. The important thing is having a plan ready so you don't panic when it happens.
         - type: challenge-end
           title: You can escape bug loops! 🪽
           content:
@@ -1315,16 +1375,12 @@ course:
             question: What's the purpose of including guardrails ("don't modify X") in debugging prompts?
             explanation: Guardrails keep fixes focused on the problem area. Without them, Lovable might modify working code while trying to fix the bug, potentially creating new problems. This is especially important when escaping bug loops!
             correctAnswer: 3
-        - type: free-text-exercise
-          title: "Practice: Write a complete debugging prompt"
+        - type: reflection
+          title: "Reflection: Your debugging communication"
           content:
-            description: |-
-              Dalmie's Book Club Organiser has a bug: The "Add Book" form submits successfully (she sees a success message), but the new book doesn't appear in the list. She checked the database and the book IS saved with correct data. She's on the `/books` page logged in as an organiser.
-
-              Write a complete debugging prompt using the formula we learned.
-            placeholder: Write your debugging prompt here...
-            systemPrompt: "You are a debugging mentor evaluating debugging prompts for Lovable – and AI-development tool. A good prompt includes: location (/books page), user role (organiser), what happens (form submits, success message shows), what's wrong (book doesn't appear in list), clues found (data IS in database), and ideally guardrails. Praise complete, well-structured prompts. If missing elements, suggest additions that a non-technical person understands. End with encouraging statement."
-            checkerPrompt: This is a debugging prompt for a book that saves to the database but doesn't appear in the list.
+            description: Think about the last time you asked Lovable to fix a bug. What information did you include in your prompt? What would you do differently now that you know the debugging prompt formula?
+            placeholder: Last time I probably said something like... Next time I would also include...
+            subDescription: Even small changes to how you communicate bugs can make a big difference in how quickly they get fixed.
         - type: challenge-end
           title: You can communicate bugs clearly! 💬
           content:
@@ -1363,6 +1419,20 @@ course:
               It uses four automated scanners, each looking at a different part of your app. Let's walk through what each one does so you know what to expect.
             imageUrl: /courses/vibe-coding-debugging-00/find-security-panel.webp
           subtitle: Four scanners working for you
+        - type: text
+          title: "Pause and try this: Open the Security panel"
+          content:
+            body: |-
+              Before we look at each scanner, take a moment to see it for yourself.
+
+              If you have a Lovable project:
+              1. Open your project in Lovable
+              2. Click on the **Security** menu
+              3. Run a scan and see what findings come up
+
+              Don't worry about fixing anything yet. Just look at the list and notice the severity labels (Error, Warning, Info). We'll walk through what each one means in the next steps.
+            imageUrl: /courses/vibe-coding-debugging-00/open-security-panel.webp
+          subtitle: See it for yourself
         - type: text
           title: "Scanner 1: Database security check"
           content:
