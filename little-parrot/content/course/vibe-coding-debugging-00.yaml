@@ -676,7 +676,7 @@ course:
               2. Click on the table you're investigating (e.g., `votes`)
               3. Check if the data you expected is actually there
 
-              **Dalmie's discovery:** Her vote function showed "Success (200)" but votes weren't displaying. She checked the `votes` table and found her votes WERE being saved – but with the wrong `book_id`. The bug was in what data was being sent, not in the saving process!
+              **Dalmie's discovery:** Her vote function showed "Success (200)" but votes weren't displaying. She checked the `votes` table and found her votes WERE being saved, but with the wrong `book_id`. The bug was in what data was being sent, not in the saving process!
             imageUrl: /courses/vibe-coding-debugging-00/database-check.webp
           subtitle: Is the data actually there?
         - type: text
@@ -1358,18 +1358,51 @@ course:
           title: Lovable's security auditor
           content:
             body: |-
-              Lovable has a **built-in security scanner** that checks your app before you publish it. You'll see the results in the **Security** menu.
+              Lovable has a **built-in security scanner** that checks your app for potential risks. You'll find the results in the **Security** menu.
 
-              The scanner checks different parts of your app, including:
+              It uses four automated scanners, each looking at a different part of your app. Let's walk through what each one does so you know what to expect.
+            imageUrl: /courses/vibe-coding-debugging-00/find-security-panel.webp
+          subtitle: Four scanners working for you
+        - type: text
+          title: "Scanner 1: Database security check"
+          content:
+            body: |-
+              The first scanner looks at your **database setup** as a whole. It reviews how your tables are structured and whether the overall security configuration is solid.
 
-              **1. Your database settings:** Are your data tables protected so only the right people can access them?
+              Think of it as checking that the building itself is sturdy: are the walls solid, the foundation secure, and the general structure safe?
+          subtitle: Is your database set up safely?
+        - type: text
+          title: "Scanner 2: RLS analysis"
+          content:
+            body: |-
+              The second scanner zooms in on **Row Level Security** (RLS) policies. We'll cover RLS in detail soon, but in short: RLS controls who can see and change the data in your database tables.
 
-              **2. Your authentication settings:** Are your login and signup features configured safely?
+              While the first scanner checks the building as a whole, this one checks whether each room has a lock on the door. It reviews the access rules on each table and flags any that are missing protection.
+          subtitle: Are the right people accessing the right data?
+        - type: text
+          title: "Scanner 3: Code security review"
+          content:
+            body: |-
+              The third scanner reads through your **application code** and looks for common security mistakes. For example:
 
-              **3. Your code:** Does your code accidentally expose sensitive information?
+              - Are there any secret keys or passwords accidentally left in the code?
+              - Could someone inject harmful content through a form or input field?
+              - Are there places where user data isn't handled safely?
 
-              **4. Your infrastructure:** Is your app's hosting environment set up securely?
-          subtitle: What gets checked
+              You don't need to understand the technical details of these issues. If this scanner finds something, Lovable will explain what's wrong and often offer to fix it for you.
+          subtitle: Does your code have security gaps?
+        - type: text
+          title: "Scanner 4: Dependency audit"
+          content:
+            body: |-
+              Your app is built with many small building blocks created by other developers. These are called **dependencies** (think of them like ingredients in a recipe).
+
+              Sometimes a security flaw is discovered in one of these building blocks. The fourth scanner checks whether any of your app's dependencies have **known vulnerabilities**, meaning security issues that have already been identified and reported.
+
+              If it finds one, Lovable can usually update the affected dependency to a safer version.
+
+              These issues can appear even if you haven't made any changes to your app recently.
+          subtitle: Are your building blocks up to date?
         - type: text
           title: "The findings list"
           content:
@@ -1430,7 +1463,7 @@ course:
 
               The good news: Lovable can fix most RLS issues for you.
 
-              **Step 1:** In the security findings, open the RLS warning and ask Lovable to *"Add Row Level Security policies."* in the inline chat within the Security view or click the **Try to fix all** button to tackle all the identified issues.
+              **Step 1:** In the security findings, open the RLS warning and ask Lovable to *"Add Row Level Security policies"* in the inline chat within the Security view or click the **Try to fix all** button to tackle all the identified issues.
 
               **Step 2:** Lovable will **add policies** that typically restrict each user to only see and modify their own data.
 
@@ -1473,130 +1506,70 @@ course:
               
               This checks passwords against a database of billions of known compromised passwords.
             imageUrl: /courses/vibe-coding-debugging-00/password-hibp-check.webp
-          subtitle: How to fix?
-        - type: text
-          title: "Beyond the code: Infrastructure security"
-          content:
-            body: |-
-              Security isn't only about what's in your code. Some issues are about how and where your app runs. This is called **infrastructure security**.
-
-              Think of it this way: you could have the strongest lock on your front door, but if the walls are made of cardboard, it doesn't matter much.
-          subtitle: It's not just about the code
-        - type: text
-          title: Common infrastructure warnings
-          content:
-            body: |-
-              **Missing security headers:** Your app's server isn't sending certain instructions to the browser about how to behave securely. For example, the browser might not know to block malicious scripts from running or to force secure (HTTPS) connections.
-
-              **Client-side only authentication:** Your app checks whether a user is logged in on the frontend, but the server doesn't double-check. This means someone with basic technical knowledge could bypass login entirely and access your data directly.
-
-              **Missing email verification:** Users can sign up and access your app without confirming their email address, which means anyone could create an account using someone else's email.
-          subtitle: What the scanner might flag
-        - type: text
-          title: "Infrastructure fixes: What you can do"
-          content:
-            body: |-
-              For most infrastructure warnings, Lovable can help. Here are prompts you can use:
-
-              **For missing security headers:**
-              ```
-              Add security headers to the app: Content-Security-Policy, Strict-Transport-Security, X-Frame-Options, and X-Content-Type-Options.
-              ```
-
-              **For client-side only authentication:**
-              ```
-              Make sure authentication is verified on the server side too, not just in the frontend components. Add checks to all API routes and backend functions.
-              ```
-
-              **For missing email verification:** Enable it in your authentication settings and prompt Lovable to add a verification step to the signup flow.
-          subtitle: Practical prompts
+          subtitle: How to fix it?
         - type: text
           title: When a warning feels too technical
           content:
             body: |-
-              If a warning feels too technical to understand, you can always prompt Lovable in **Plan mode**:
+              If a warning feels too technical or unfamiliar, you can always prompt Lovable using the **inline chat within the Security view** to ask for guidance for **free**:
 
               ```
-              The security scanner flagged [paste the warning]. Explain what this means and suggest how to fix it. Don't make changes yet.
+              Explain what this means and suggest how to fix it. Don't make changes to the user experience.
               ```
 
-              This way, Lovable investigates without changing your code. Once you understand the issue, you can decide whether and how to fix it.
-          subtitle: Let Lovable explain it
+              This way, Lovable investigates without costing you credits. If you ask the same question in the main chat, it will cost credits. 
+              
+              So the **Security view's inline chat** is a great place to get free explanations and guidance on security issues.
+            imageUrl: /courses/vibe-coding-debugging-00/zero-credits-used.webp
+          subtitle: Let Lovable explain it for free
         - type: text
           title: Your security decision framework
           content:
             body: |-
-              When you see security warnings, use this framework to decide what to do:
+              When you see security errors and warnings, here's a simple framework to help you decide what to do:
 
-              **Always fix, regardless of app type:**
-              - Exposed API keys (except the Supabase public `anon` key)
-              - Missing RLS on tables with personal data
+              **Step 1: Let Lovable try first.** Click the "Try to fix all" button to let Lovable attempt automatic fixes. You can do this up to 3 times. Sometimes new security issues appear in subsequent rounds.
 
-              **Fix for team and public apps:**
-              - Authentication configuration (password checks, OTP expiry)
-              - Missing email verification
-              - Client-side only authentication
+              **Step 2: Ask for guidance on what's left.** If any issues remain after 3 rounds, go through them one by one. Click on the top issue and give Lovable some context in the issue's inline chat:
+              - Who uses your app? (just you, your team, or the public)
+              - What is your app about?
+              - What type of app is it? (a prototype, a hobby project, or a production app)
 
-              **Fix for public apps (high priority):**
-              - All security headers
-              - All infrastructure warnings
-              - Every finding flagged as "Error"
+              Lovable will then tell you if that specific issue matters for your situation or you can safely ignore it.
 
-              When in doubt, fix it. A few extra minutes of security configuration can save a lot of trouble later.
-          subtitle: What to fix and when
+              **Step 3: Decide.** Based on Lovable's advice, choose whether to fix or ignore each remaining issue. There's no single right answer here. It depends on your app and your users.
+
+              That's it! No need to memorise long checklists. This three-step approach works for any security finding you'll encounter.
+            imageUrl: /courses/vibe-coding-debugging-00/inline-chat-in-security-view.webp
+          subtitle: A simple process for any security finding
         - type: quiz-question
-          title: "Quiz: Security context"
+          title: "Quiz: First step"
           content:
-            question: Dalmie's Book Club Organiser is used by 15 trusted friends. She sees a warning about missing security headers. What should she do?
+            question: You've just run Lovable's security scanner and it shows 2 errors and 3 warnings. What should you do first?
             options:
-              - Ignore all security warnings since it's just for friends
-              - Fix it immediately, it's critical
-              - Review it but prioritise fixing RLS and exposed keys first
-              - Rewrite the app from scratch
-            correctAnswer: 2
-            explanation: For a small internal app, RLS and exposed keys are the highest priority. Security headers are worth fixing too, but they are less urgent when the app is only used by a small group of trusted people.
+              - Click "Try to fix all" to let Lovable attempt automatic fixes
+              - Try to understand and fix each issue yourself
+              - Ask a developer friend to review the issues
+              - Ignore the warnings, fix the errors and focus on building new features
+            correctAnswer: 0
+            explanation: The first step is always to let Lovable try to fix the issues automatically. You can click "Try to fix all" up to 3 times. Only after that do you need to look at what's left, if there are any issues remaining.
         - type: quiz-question
-          title: "Quiz: Infrastructure security"
+          title: "Quiz: Asking for guidance"
           content:
-            question: What does "client-side only authentication" mean?
+            question: After clicking "Try to fix all" three times, 2 warnings remain. What context should you share with Lovable in the inline chat?
             options:
-              - The app doesn't have a login feature
-              - Login only works on mobile devices
-              - The server doesn't verify whether users are actually logged in
-              - The login page has a visual bug
-            correctAnswer: 2
-            explanation: Client-side only authentication means the app checks login status in the browser, but the server doesn't double-check. Someone could bypass the frontend entirely and access data directly through the server.
-        - type: free-text-exercise
-          title: "Practice: Prioritise Dalmie's security warnings"
-          content:
-            description: |-
-              Dalmie's Book Club Organiser is ready to publish. The security scanner shows these findings:
-
-              1. Error: RLS not enabled on the "members" table
-              2. Warning: Leaked password protection is disabled
-              3. Info: Missing X-Frame-Options header
-              4. Warning: An API key for her email service is visible in the frontend code
-
-              She wants to share the app with her 15 book club members. Which warnings should she fix first, and why? Are there any she could address later?
-            placeholder: |-
-              The most urgent issue is...
-
-              Next, she should fix...
-
-              She could address later...
-            systemPrompt: |-
-              You are a security mentor for learners building applications with Lovable. Evaluate the learner's prioritisation of security findings.
-
-              Good answers should prioritise: (1) the exposed API key because it gives anyone access to her email service, (2) RLS on the members table because it protects personal data, (3) leaked password protection as a good security practice, and (4) the X-Frame-Options header as lower priority for a small internal app. Accept reasonable variations in ordering between items 1 and 2 since both are critical. Praise clear reasoning about why certain issues are more urgent. If they miss key priorities, explain why exposed keys and missing RLS are the top concerns. End with encouragement.
-            checkerPrompt: This is a prioritisation exercise for four security findings in a small internal app.
+              - Your Lovable password and API keys for connected services
+              - Screenshots of every page in your app
+              - The exact error messages and your programming experience
+              - Who uses your app, what it's about, and what type of app it is
+            correctAnswer: 3
+            explanation: Lovable needs to know who uses your app, what it's about, and what type of app it is (prototype, hobby project, or production app). This context helps Lovable tell you whether a remaining issue matters for your specific situation or if you can safely ignore it.
         - type: reflection
           title: Your debugging and security journey
           content:
-            description: Think about everything you've learned in this micro-course. Which technique or concept do you think will be most valuable for you? How will you apply it in your next building session?
+            description: Think about everything you've learned in this micro-course. Which technique or concept do you think will be most valuable for you?
             placeholder: |-
               The most valuable thing I learned is...
-
-              I plan to use it by...
             subDescription: Writing this down helps cement the learning. You've built real debugging and security skills that professional developers use every day!
         - type: course-end
           title: Congratulations! You're a Debugging Pro! 🎉
@@ -1616,7 +1589,7 @@ course:
 
               ✓ **Effective communication:** The debugging prompt formula, guardrails, specificity, and asking for logs.
 
-              ✓ **Security awareness:** Understanding RLS, authentication settings, and infrastructure security. Knowing what to prioritise based on your app's context.
+              ✓ **Security awareness:** Understanding RLS, authentication settings, and handling security errors and warnings. Knowing what to prioritise based on your app's context.
 
               **Remember:** Every professional developer debugs constantly and takes security seriously. You now have the same toolkit they use. The bugs will come, but so will the fixes. Happy building! 💪
   titleSplit:
