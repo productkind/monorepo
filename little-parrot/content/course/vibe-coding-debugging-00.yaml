@@ -1314,14 +1314,14 @@ course:
             nextModule: "**Next:** Your app works great, but is it safe? Let's tackle the security warnings Lovable flags and learn what they actually mean."
             description: You know how to write effective debugging prompts for Lovable.
             subDescription: Specific location + expected behaviour + actual behaviour + clues + guardrails = effective debugging. With this formula, you'll get faster, more accurate fixes every time!
-    - title: Handling Security Warnings
+    - title: Handling Security Errors and Warnings
       isFree: true
       skills:
         - Security Auditor
         - Row Level Security (RLS)
         - Authentication Safety
         - Security Context
-      description: Understand what Lovable's security warnings mean and how to handle them based on your app's purpose.
+      description: Understand what Lovable's security errors and warnings mean and how to handle them based on your app's purpose.
       completionTime: '12:00'
       steps:
         - type: text
