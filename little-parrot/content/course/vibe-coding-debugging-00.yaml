@@ -44,9 +44,9 @@ course:
           title: Before we start
           content:
             body: |-
-              This course uses some technical terms like **frontend**, **backend**, **database**, **server**, and **data table**. If these words are new to you, we recommend completing our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) course first. It will give you the foundation to get the most out of this debugging course.
+              This course uses some technical terms like **frontend**, **backend**, **server**, **database**, and **database table**. If these words are new to you, we recommend completing our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) course first. It will give you the foundation to get the most out of this debugging course.
 
-              If you're already comfortable with these terms, you're good to go! Let's dive in.
+              If you're already comfortable with these terms, you're good to go! **Let's dive in.**
           subtitle: A quick heads-up
         - type: text
           title: What is a bug?
@@ -101,7 +101,7 @@ course:
             correctAnswer: 3
             explanation: A bug is any mismatch between what you expect your app to do and what actually happens. It does not have to be a crash. Even small unexpected behaviours count.
         - type: text
-          title: Types of bugs
+          title: Four types of bugs
           content:
             body: |-
               Not all bugs are the same, and different kinds need different approaches. Here are the main categories you'll encounter:
@@ -114,93 +114,93 @@ course:
               Once you recognise which type you're dealing with, you'll know where to start fixing it.
           subtitle: Different problems need different approaches
         - type: text
-          title: Types of bugs
+          title: "Let's explore each one"
           content:
             body: |-
-              Let's briefly explore each type of bug in the next steps. Some are so easy to fix that we'll cover them in this challenge right away. Others need more depth, so they get their own dedicated challenges later in the course.
-          subtitle: Overview of bug categories
+              Let's briefly explore each type of bug in the next steps. Some are so easy to fix that we'll cover them in this challenge **right away**. Others need more depth, so they get their own **dedicated challenges** later in the course.
+          subtitle: A quick overview
         - type: text
-          title: "Types of bugs: Launch blockers"
+          title: Launch blockers
           content:
             body: |-
-              Launch blockers prevent your app from starting at all. In technical terms, these are known as **build errors** or **compile-time errors**.
+              Launch blockers **prevent your app from starting at all**. In technical terms, these are known as **build errors** or **compile-time errors**.
 
-              Build or compile time refers to the process of transforming your app’s code into a runnable program. If errors occur during this process, the app will not launch.
+              *Build* or *compile time* refers to the process of transforming your app's code into a runnable program. If errors occur during this process, the app will not launch.
             imageUrl: /courses/vibe-coding-debugging-00/error.gif
           subtitle: When the app won't start
         - type: text
-          title: "Types of bugs: Launch blockers"
+          title: Fixing launch blockers
           content:
             body: |-
-              These errors can look intimidating, but they usually come with clear messages explaining what went wrong. Common causes include syntax errors, missing files, or incompatible code.
+              These errors can look intimidating, but they usually come with **clear messages** explaining what went wrong. Common causes include syntax errors, missing files, or incompatible code.
 
-              Because these instructions are explicit and easy to interpret, and because AI is well suited to reading them, launch blockers are often the easiest bugs to fix.
+              Because these messages are explicit and easy to interpret, and because AI is well suited to reading them, launch blockers are often **the easiest bugs to fix**.
 
               Lovable is even designed to automatically show a **Try to Fix** button when these errors occur, allowing you to resolve them quickly with a single click.
 
-              If it doesn’t show the button, you can always prompt Lovable directly: `"There’s a build error: [paste error message]. Fix it."`
+              If it doesn't show the button, you can always prompt Lovable directly: `"There's a build error: [paste error message]. Fix it."`
             imageUrl: /courses/vibe-coding-debugging-00/build-error.webp
-          subtitle: When the app won't start
+          subtitle: The easiest bugs to fix
         - type: text
-          title: "Types of bugs: Freezes and misbehaviours"
+          title: Freezes and misbehaviours
           content:
             body: |-
-              These bugs occur when specific features or actions in your app do not work as expected. The app starts, but something goes wrong during use.
+              These bugs occur when specific features or actions in your app **do not work as expected**. The app starts, but something goes wrong during use.
               In technical terms, these are often called **runtime errors** or **logical errors**.
 
-              Runtime refers to when the app is running, and logical errors mean the code runs but produces incorrect results.
+              *Runtime* refers to when the app is running, and *logical errors* mean the code runs but produces incorrect results.
 
               Examples include:
-              - A button that does nothing when clicked
-              - Data that fails to save or load correctly
-              - Features that behave inconsistently or unpredictably
+              - A button that **does nothing** when clicked
+              - Data that **fails to save** or load correctly
+              - Features that **behave inconsistently** or unpredictably
             imageUrl: /courses/vibe-coding-debugging-00/wrong.webp
-          subtitle: When features don't work as expected
+          subtitle: When the app works, but not correctly
         - type: text
-          title: "Types of bugs: Freezes and misbehaviours"
+          title: Fixing freezes and misbehaviours
           content:
             body: |-
-              These bugs can be trickier to figure out because they don't always produce clear error messages. They often need some careful detective work to understand what's really going on.
+              These bugs can be **trickier to figure out** because they don't always produce clear error messages. They often need some careful detective work to understand what's really going on.
 
-              These are the most common bugs you'll run into, so we'll dedicate an entire challenge to investigating and fixing them. You'll feel much more confident after that one.
-          subtitle: When features don't work as expected
+              These are the **most common bugs** you'll run into, so we'll dedicate an entire challenge to investigating and fixing them. You'll learn what handy tools developers use to investigate them to feel much more confident after.
+          subtitle: Detective work ahead
         - type: text
-          title: "Types of bugs: Visual glitches"
+          title: Visual glitches
           content:
             body: |-
-              Visual glitches affect how your app looks. Maybe the colours are off, elements are misaligned, or the layout breaks on certain screens.
+              Visual glitches affect **how your app looks**. Maybe the colours are off, elements are misaligned, or the layout breaks on certain screens.
 
-              Your app still works, but it doesn't look the way you intended. These are usually the least stressful bugs to deal with.
+              Your app still works, but it **doesn't look the way you intended**. These are usually the least stressful bugs to deal with.
             imageUrl: /courses/vibe-coding-debugging-00/glitch.webp
           subtitle: When things look wrong
         - type: text
-          title: "Types of bugs: Visual glitches"
+          title: Fixing visual glitches
           content:
             body: |-
               In many cases visual glitches are not easily fixed by only prompting Lovable, but
-              fortunately you can attach screenshots to your prompts to help Lovable understand exactly
+              fortunately you can **attach screenshots** to your prompts to help Lovable understand exactly
               what is wrong.
             imageUrl: /courses/vibe-coding-debugging-00/attach.png
-          subtitle: When things look wrong
+          subtitle: Screenshots are your best friend
         - type: text
-          title: "Types of bugs: Security vulnerabilities"
+          title: Security vulnerabilities
           content:
             body: |-
-              Security vulnerabilities are weaknesses that could expose your app or its data to unauthorised access.
+              Security vulnerabilities are weaknesses that could **expose your app or its data** to unauthorised access.
 
               Your app's features might work perfectly, but if there are gaps in how data is handled or protected, your users' safety could be at risk.
 
-              Even experienced developers keep an eye out for these, because the consequences can be serious.
+              Even experienced developers keep an eye out for these, because **the consequences can be serious**.
             imageUrl: /courses/vibe-coding-debugging-00/lock.gif
           subtitle: When safety is at risk
         - type: text
-          title: "Types of bugs: Security vulnerabilities"
+          title: Handling security vulnerabilities
           content:
             body: |-
-              Security vulnerabilities can feel intimidating, but Lovable has your back. It includes a **built-in security auditor** that scans your app for potential issues and suggests fixes.
+              Security vulnerabilities can feel intimidating, but **Lovable has your back**. It includes a **built-in security auditor** that scans your app for potential issues and suggests fixes.
 
-              We'll dedicate an entire challenge in this course to understanding and handling security warnings. By the end, you'll know exactly what to do when they pop up.
-          subtitle: When safety is at risk
+              We'll dedicate an **entire challenge** in this course to understanding and handling security warnings. By the end, you'll know **exactly what to do** when they pop up.
+          subtitle: Lovable has your back
         - type: quiz-question
           title: "Quiz: Build errors"
           content:
@@ -256,9 +256,9 @@ course:
           content:
             nextModule: "**Next:** Prevention is better than cure! Learn powerful habits that dramatically reduce how often you encounter bugs."
             description: You understand what bugs are and how to approach them.
-            subDescription: "Remember: diagnose before you fix. Understanding the different types of bugs helps you guide Lovable in fixing them more effectively. Great job on completing the first challenge! Now let's learn how to prevent many bugs from happening in the first place."
+            subDescription: "Remember: diagnose before you fix. Understanding the different types of bugs helps you guide Lovable in fixing them more effectively. Great job on completing the first challenge!"
     - title: Preventing Bugs Before They Happen
-      isFree: true
+      isFree: false
       skills:
         - Small Prompts
         - Testing
@@ -412,7 +412,7 @@ course:
             description: You know how to reduce bugs before they happen.
             subDescription: Small prompts + immediate testing + bookmarked versions = fewer bugs and easier fixes. These habits will serve you throughout your building journey!
     - title: How Developers Investigate Bugs
-      isFree: true
+      isFree: false
       skills:
         - Frontend Logs
         - Backend Logs
@@ -765,7 +765,7 @@ course:
             description: You know where to find clues in the Console, Network tab, Backend Logs, and Database.
             subDescription: These investigation techniques are exactly what professional developers use. Now when you encounter a bug, you know where to look for clues before trying to fix anything!
     - title: Lovable's Debugging Toolkit
-      isFree: true
+      isFree: false
       skills:
         - Plan Mode
         - Visual Edits
@@ -960,7 +960,7 @@ course:
             description: You've learned when to use Plan mode, Visual edits, and Try to Fix.
             subDescription: Plan mode for investigation and logic bugs, Visual edits for static appearance changes, Try to Fix for clear errors (but only three times!). The right tool makes debugging much faster.
     - title: Escaping Bug Loops
-      isFree: true
+      isFree: false
       skills:
         - Revert
         - Version Comparison
@@ -1118,7 +1118,7 @@ course:
             description: You have strategies for when things get stuck.
             subDescription: Revert, compare, explain before fixing, isolate, and know when to start fresh. These escape routes will save you hours of frustration. Sometimes going back is the fastest way forward!
     - title: How to Guide Lovable to Fix Bugs
-      isFree: true
+      isFree: false
       skills:
         - Debugging Prompts
         - Guardrails
@@ -1315,7 +1315,7 @@ course:
             description: You know how to write effective debugging prompts for Lovable.
             subDescription: Specific location + expected behaviour + actual behaviour + clues + guardrails = effective debugging. With this formula, you'll get faster, more accurate fixes every time!
     - title: Handling Security Errors and Warnings
-      isFree: true
+      isFree: false
       skills:
         - Security Auditor
         - Row Level Security (RLS)
