@@ -62,7 +62,8 @@ course:
         - type: video
           title: Fix Bugs with Confidence
           content:
-            videoUrl: /videos/lesson-vibe-coding-debugging-00-video-00.mp4
+            videoRemotionId: lesson-vibe-coding-debugging-00-video-00
+            vimeoId: 1164637862
             transcript: |-
               If you’ve ever built something in Lovable and thought, "Why isn't this working?", you’re already debugging.
               Debugging isn’t a sign that you’ve failed, or that you’re not technical enough. It’s simply the process of understanding why your app isn't doing what you expected, and then fixing it.

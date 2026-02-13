@@ -31,7 +31,8 @@ course:
         - type: video
           title: Build a Valuable Product
           content:
-            videoUrl: /videos/lesson-vibe-coding-product-management-00-video-00.mp4
+            videoRemotionId: lesson-vibe-coding-product-management-00-video-00
+            vimeoId: 1164637967
             transcript: |-
               When you start working on an app idea, it can be hard to know where to begin. In this
               micro-course, you’ll define the problem you want to solve, understand your target

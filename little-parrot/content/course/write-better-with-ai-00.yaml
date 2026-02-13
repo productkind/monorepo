@@ -63,8 +63,8 @@ course:
         - type: video
           title: Define tone and style
           content:
-            youtubeId: mHHfPwMHw50
-            videoUrl: /videos/lesson-write-better-with-ai-00-video-00.mp4
+            vimeoId: 1164638073
+            videoRemotionId: lesson-write-better-with-ai-00-video-00
         - type: quiz-question
           title: Why specify tone and style
           content:
@@ -472,8 +472,8 @@ course:
         - type: video
           title: What's really behind "AI"
           content:
-            youtubeId: -VRucj3q7GE
-            videoUrl: /videos/lesson-write-better-with-ai-00-video-01.mp4
+            vimeoId: 1164638096
+            videoRemotionId: lesson-write-better-with-ai-00-video-01
         - type: quiz-question
           title: What's really going on inside an AI model
           content:
@@ -622,8 +622,8 @@ course:
         - type: video
           title: "How LLMs are trained: \U0001F355 metaphor"
           content:
-            youtubeId: 7DWwilYGH8U
-            videoUrl: /videos/lesson-write-better-with-ai-00-video-03.mp4
+            vimeoId: 1164638275
+            videoRemotionId: lesson-write-better-with-ai-00-video-03
         - type: quiz-question
           title: Same question, different answer
           content:

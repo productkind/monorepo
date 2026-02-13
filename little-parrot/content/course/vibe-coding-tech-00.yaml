@@ -32,7 +32,7 @@ course:
               The bird smiles and reassures the dog, saying, “No worries, I’m here to help.
               I’ll teach you the terms you need when talking with AI.”
         - type: text
-          title:What is vibe coding?
+          title: What is vibe coding?
           content:
             body: |-
               **Vibe coding** is building software by describing what you want in natural language instead of writing code yourself. You tell an AI app builder (like Lovable) how your app should look, feel, and behave, and it turns your words into working features.
@@ -43,7 +43,8 @@ course:
         - type: video
           title: Building blocks of an application
           content:
-            videoUrl: /videos/lesson-vibe-coding-tech-00-video-00.mp4
+            videoRemotionId: lesson-vibe-coding-tech-00-video-00
+            vimeoId: 1164638011
             transcript: |-
               Until recently, building applications was much harder. Now, with AI app builders such
               as Lovable, anyone can get started. Still, it helps to understand the basic building
@@ -150,7 +151,7 @@ course:
           title: 'Quiz: Building blocks'
           content:
             options:
-- The app won't load images or animations.
+              - The app won't load images or animations.
               - The app looks fine but can't load or save data.
               - The app's colours change randomly.
               - The database will automatically repair itself.
@@ -508,7 +509,8 @@ course:
         - type: video
           title: The box model
           content:
-            videoUrl: /videos/lesson-vibe-coding-tech-00-video-01.mp4
+            videoRemotionId: lesson-vibe-coding-tech-00-video-01
+            vimeoId: 1164638055
             transcript: |-
               Everything on the web is made up of boxes. Each box has a width and height, usually
               defined in pixels. A box can have a border, and you can set how thick it is and what
