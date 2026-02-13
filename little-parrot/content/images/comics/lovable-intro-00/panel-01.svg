@@ -110,58 +110,56 @@
     <g
        id="g2-6"
        inkscape:label="text-bubble-dalmie"
-       transform="matrix(3.1749999,0,0,3.1749999,-1406.1539,-663.07335)">
+       transform="matrix(3.1749999,0,0,3.1749999,-1423.9863,-664.30317)">
       <path
          style="fill:none;fill-opacity:1;stroke:#080809;stroke-width:0.5;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-         d="m 469.37163,247.49338 c -0.11277,-11.5509 4.98761,-12.03743 5.0598,-20.10875"
+         d="m 475.76284,247.88073 c -0.11277,-11.5509 -6.43909,-7.19561 -6.3669,-15.26693"
          id="path13-1-9-2-1-7-8-0-7-8"
          sodipodi:nodetypes="cc"
          inkscape:label="text-anchor" />
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9333px;font-family:'Nanum Pen';-inkscape-font-specification:'Nanum Pen';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;inline-size:212.869;display:inline;fill:#080809;fill-opacity:1;stroke:none;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9333px;font-family:'Nanum Pen';-inkscape-font-specification:'Nanum Pen';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;inline-size:244.23;display:inline;fill:#080809;fill-opacity:1;stroke:none;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
          x="83.874496"
          y="156.49693"
          id="text5"
-         transform="matrix(0.31496064,0,0,0.31496064,426.11933,169.77454)"><tspan
+         transform="matrix(0.31496064,0,0,0.31496064,425.90631,167.65986)"><tspan
            x="83.874496"
            y="156.49693"
-           id="tspan1">What if I built you an app to </tspan><tspan
+           id="tspan1">Ohh Sarah, that shounds so frustrating!
+</tspan><tspan
            x="83.874496"
            y="177.66356"
-           id="tspan2">organise everything?</tspan></text>
+           id="tspan2">What if I built you an app to organise </tspan><tspan
+           x="83.874496"
+           y="198.83019"
+           id="tspan3">everything?</tspan></text>
     </g>
     <g
        id="g2"
        inkscape:label="text-bubble-owl"
-       transform="matrix(3.1749999,0,0,3.1749999,-1406.1539,-663.07334)">
+       transform="matrix(3.1749999,0,0,3.1749999,-1398.7451,-655.13579)">
       <path
          style="fill:none;fill-opacity:1;stroke:#080809;stroke-width:0.5;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-         d="m 469.37163,247.49338 c -0.11277,-11.5509 4.98761,-12.03743 5.0598,-20.10875"
-         id="path2"
-         sodipodi:nodetypes="cc"
-         inkscape:label="text-anchor" />
-      <path
-         style="fill:none;fill-opacity:1;stroke:#080809;stroke-width:0.5;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-         d="m 504.05087,251.2537 c -0.11277,-6.02503 8.70911,-2.2262 8.55575,-7.81651"
+         d="m 500.5508,249.08699 c -0.30644,-3.50728 4.83565,-1.25784 4.29495,-4.71774"
          id="path2-5"
          sodipodi:nodetypes="cc"
          inkscape:label="text-anchor" />
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9333px;font-family:'Nanum Pen';-inkscape-font-specification:'Nanum Pen';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:end;white-space:pre;inline-size:121.923;display:inline;fill:#080809;fill-opacity:1;stroke:none;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9333px;font-family:'Nanum Pen';-inkscape-font-specification:'Nanum Pen';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:end;white-space:pre;inline-size:179.11;display:inline;fill:#080809;fill-opacity:1;stroke:none;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
          x="255.23956"
          y="156.49693"
          id="text2"
          transform="matrix(0.31496064,0,0,0.31496064,446.30566,186.23936)"><tspan
            x="255.23956"
            y="156.49693"
-           id="tspan3">But you don't know<tspan
+           id="tspan4">That would be great! But you<tspan
    y="156.49693"
-   id="tspan4"> </tspan></tspan><tspan
+   id="tspan5"> </tspan></tspan><tspan
            x="255.23956"
            y="177.66356"
-           id="tspan5">how to code!</tspan></text>
+           id="tspan6">don't know how to code!</tspan></text>
     </g>
     <g
        id="g9"

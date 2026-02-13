@@ -273,7 +273,7 @@ course:
               The best debugging strategy? **Avoid bugs in the first place!** While you can't prevent every bug, certain habits dramatically reduce how often you get stuck.
 
               **Think of it like cooking:** it's much easier to add salt gradually and taste as you go than to try to fix an over-salted dish. The same principle applies to building apps.
-            imageUrl: /courses/vibe-coding-debugging-00/wash-hand.gif
+            imageUrl: /courses/vibe-coding-debugging-00/salt.gif
           subtitle: Simple habits that save hours of frustration
         - type: text
           title: The small prompt habit
