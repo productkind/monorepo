@@ -1,5 +1,5 @@
 course:
-  id: b3a7c1d9-e2f4-5678-90ab-cdef12345678
+  id: ff736c4f-8ccc-41b6-96c6-68806804c5d8
   note: '*Note on timing:* Some challenges involve external tools (like domain registrars or Termly). The estimated times include the hands-on work, but signing up for external services may take a few extra minutes.'
   cover: /courses/lovable-publishing-00/cover.gif
   title: 'Launch and Grow Your Lovable App'
@@ -11,7 +11,7 @@ course:
         - Preview vs Production
         - Meta Tags
         - Favicon
-      description: Make your app production-ready and share it with a real person.
+      description: Make your app production-ready and share it with a potential user.
       completionTime: '10:00'
       steps:
         - type: comic
@@ -66,17 +66,18 @@ course:
             body: |-
               When you **publish** in Lovable, your app becomes accessible on the internet. Anyone with the link can visit it from their phone, tablet, or computer.
 
-              Before publishing, your app exists only in Lovable's editor. After publishing, it gets a real URL that you can share with anyone.
+              **Before publishing**, your app exists only in Lovable's editor. **After publishing**, it gets a real URL that you can share with anyone.
 
               Publishing is a bit like opening a shop. Before you open the doors, you want to make sure the shelves are stocked and the sign looks right. That's what the next few steps are about.
+            imageUrl: /images/lovable-publishing-00/publish.gif
           subtitle: From your editor to the internet
         - type: text
           title: "Preview vs production: two different worlds"
           content:
             body: |-
-              Lovable gives you two environments:
+              Lovable gives you **two environments**:
 
-              **Preview** is your testing playground. It's where you try things out, see how features work, and experiment without consequences. Think of it like a dress rehearsal.
+              **Preview** is your testing playground. It's where you build your product, test how it works, and experiment without consequences. Think of it like a dress rehearsal.
 
               **Production** is the real thing. It's what your users see when they visit your published URL.
 
@@ -86,18 +87,25 @@ course:
           title: Switch to real API keys before going live
           content:
             body: |-
-              If your app connects to external services (like Stripe for payments or a third-party email provider), you may have **test API keys** stored in Lovable. These work fine for development, but they won't work properly for real users.
+              If your app connects to **external services** (like Stripe for payments or a third-party email provider), you may have **test API keys** stored in Lovable. These work fine for development, but they won't work properly for real users.
 
-              **How to check and update your API keys:**
-              1. In your Lovable project, open the **Cloud** tab (click the **+** button next to Preview mode at the top of the screen)
-              2. Go to the **Secrets** section. You'll see a list of all the secrets (API keys) your app uses. Some keys are added automatically by Lovable Cloud and cannot be deleted.
-              3. For each key you added yourself, check whether it's a test or production key. Test keys often contain words like `test`, `sandbox`, or `dev` in them. If you're unsure, log into the external service's dashboard (e.g., your Stripe account) and look for the production/live keys there
-              4. To update a key, click on it, replace the value with the production version, and save
-
-              Forgetting this step is a common gotcha. Your app will look like it works, but behind the scenes, data might not save, emails might not send, or payments might not process. A quick check now saves confusion later.
+              **Forgetting to switch them** is a common gotcha. Your app will look like it works, but behind the scenes, data might not save, emails might not send, or payments might not process. A quick check now saves confusion later.
 
               *If API keys are new to you, our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) micro-course explains them in friendly terms.*
           subtitle: A common gotcha to avoid
+        - type: text
+          title: How to check and update your API keys
+          content:
+            body: |-
+              **Here's how to find and update your API keys in Lovable:**
+
+              1. In your Lovable project, open the **Cloud** tab (click the **+** button next to Preview mode at the top of the screen)
+              2. Go to the **Secrets** section. You'll see a list of all the secrets (API keys) your app uses. Some keys are added automatically by Lovable Cloud and cannot be deleted. (These will have a "Lovable" label next to them.)
+              3. To update a key you added, copy its name (e.g., `STRIPE_API_KEY`), paste it in the **Name** field and add the corresponding production key from your external service, and paste that in the value field. Make sure to save your changes. This will override the previously saved key.
+
+              If your app doesn't use any external services yet, you can skip this step. Lovable Cloud's own keys are managed automatically.
+            imageUrl: /images/lovable-publishing-00/update-api-key.webp
+          subtitle: Finding the Secrets panel
         - type: text
           title: Give your app a favicon
           content:
