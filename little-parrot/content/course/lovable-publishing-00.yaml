@@ -88,7 +88,11 @@ course:
             body: |-
               If your app connects to external services (like Supabase for data storage, or Stripe for payments), you may have **test API keys** in your secrets panel. These work fine for development, but they won't work properly for real users.
 
-              Before publishing, open the **Secrets** panel in Lovable and check that your API keys are the production versions from each service.
+              **How to check and update your API keys:**
+              1. In your Lovable project, click the **green Supabase icon** in the top menu bar (or look for the **Integrations** panel in the sidebar)
+              2. You'll see a list of all the secrets (API keys) your app uses
+              3. For each key, check whether it's a test or production key. Test keys often contain words like `test`, `sandbox`, or `dev` in them. If you're unsure, check the service's dashboard (e.g., log into your Supabase or Stripe account and look for the production/live keys there)
+              4. To update a key, click on it, replace the value with the production version, and save
 
               Forgetting this step is a common gotcha. Your app will look like it works, but behind the scenes, data might not save, emails might not send, or payments might not process. A quick check now saves confusion later.
 
@@ -100,12 +104,12 @@ course:
             body: |-
               A **favicon** is the small icon that appears in browser tabs next to your app's name. Without one, your app shows a generic icon, which makes it look unfinished.
 
-              You can create a favicon for free using tools like [favicon.io](https://favicon.io/) or [realfavicongenerator.net](https://realfavicongenerator.net/). Upload your logo, your brand initials, or a simple icon that represents your product.
+              You can create a favicon for free using tools like [favicon.io](https://favicon.io/) or [realfavicongenerator.net](https://realfavicongenerator.net/). Upload your logo, your brand initials, or a simple icon that represents your product. These tools will generate the right file format and sizes for you automatically.
 
               To set your favicon in Lovable:
-              1. Click the **Publish** button
+              1. Click the **Publish** button in the top-right corner
               2. Open the **Website info** section
-              3. Upload your favicon
+              3. Click the favicon area and upload your generated file
 
               It's a small detail, but it makes a noticeable difference. When Sarah sees the Book Club Organiser tab in her browser with a proper icon, it feels like a real product.
           subtitle: The small icon that makes a big difference
@@ -119,9 +123,11 @@ course:
               - **Description:** A short summary that appears below the title
               - **Share image:** The image that shows in social media previews
 
-              You can set all of these in the **Website info** section of the Publish panel.
+              You can set all of these in the **Website info** section of the Publish panel (the same place you uploaded your favicon).
 
-              Make your title clear (e.g., "Book Club Organiser") and your description inviting (e.g., "The easiest way to pick your book club's next read"). When someone shares your link, these details are the first impression.
+              Make your title clear (e.g., "Book Club Organiser") and your description inviting (e.g., "The easiest way to pick your book club's next read"). For the share image, use a 1200x630 pixel image for best results on social media. You can create one for free with tools like [Canva](https://www.canva.com/).
+
+              When someone shares your link, these details are the first impression.
           subtitle: Control how your link looks when shared
         - type: text
           title: "Dalmie publishes the Book Club Organiser"
@@ -229,10 +235,11 @@ course:
               1. Click the **Publish** button in Lovable
               2. Find the **Custom domain** section
               3. Enter your domain name
-              4. Lovable will show you the DNS records you need to add
-              5. Go to your domain registrar and add those records in the DNS settings
+              4. Lovable will show you the **DNS records** you need to add (usually a CNAME or A record)
+              5. Go to your domain registrar's website, log in, and look for **DNS Management**, **DNS Settings**, or **Advanced DNS** (the exact name varies, but it's usually in the domain's settings page)
+              6. Add the records exactly as Lovable shows them. You'll typically need to enter a **Type** (like CNAME), a **Host** (like `@` or `www`), and a **Value** (the address Lovable gives you)
 
-              DNS changes can take a few minutes to a few hours to take effect. Don't worry if it doesn't work immediately. This is normal.
+              DNS changes can take a few minutes to a few hours to take effect. Don't worry if it doesn't work immediately. This is called **DNS propagation** and it's completely normal.
 
               *DNS (Domain Name System) is like a phone book for the internet. It tells browsers which server to connect to when someone types your domain name.*
           subtitle: From registrar to Lovable
@@ -343,6 +350,12 @@ course:
 
               The questionnaire walks you through each decision, so you don't need legal knowledge. If you're unsure about an answer, Termly explains what each option means.
 
+              Once Termly generates your documents, you have two options:
+              - **Use Termly's hosted pages:** Copy the URL that Termly gives you (it looks like `app.termly.io/document/privacy-policy/your-id`). You'll link to these from your app's footer.
+              - **Create pages in your app:** Prompt Lovable to create a Privacy Policy page and a Terms of Use page, then paste the generated text into those pages.
+
+              The hosted option is easier to start with and updates automatically if you change your policies later.
+
               **Tip:** If you're using Google Analytics or Lovable Cloud (which uses Supabase), you are collecting user data. Make sure to mention these in the questionnaire.
           subtitle: Free legal pages without a lawyer
         - type: text
@@ -356,13 +369,17 @@ course:
               - **Terms of Use** (sometimes called Terms of Service)
               - **Contact** (an email address or contact form)
 
-              You can prompt Lovable to add these:
+              You can prompt Lovable to add these. If you're using Termly's hosted pages, include the URLs in your prompt:
 
               ```
-              Add a footer to all pages with links to Privacy Policy, Terms of Use, and a Contact email. Use a subtle design that doesn't distract from the main content.
+              Add a footer to all pages with links to:
+              - Privacy Policy: [paste your Termly privacy policy URL here]
+              - Terms of Use: [paste your Termly terms URL here]
+              - Contact: [your email address]
+              Use a subtle design that doesn't distract from the main content. Open the links in a new tab.
               ```
 
-              Then create separate pages for your privacy policy and terms, or link to the hosted versions on Termly.
+              If you created the pages inside your app instead, replace the URLs with the page paths (e.g., `/privacy-policy`).
           subtitle: Where to put your legal links
         - type: text
           title: "Cookie banners: when you need one"
@@ -375,7 +392,13 @@ course:
               - If you use Google Analytics, advertising tools, or third-party tracking, you need one
               - If you only use essential cookies (like keeping users logged in), you may not need one, but it's often safer to have one
 
-              Termly can also generate a cookie banner for you. It provides a script you can add to your app, or you can prompt Lovable to create a basic one.
+              You can add a cookie banner by prompting Lovable directly:
+
+              ```
+              Add a cookie consent banner that appears at the bottom of the screen when a user first visits. It should have a brief message about using cookies, an "Accept" button, and a "Manage preferences" link. Save the user's choice so the banner doesn't appear again on their next visit.
+              ```
+
+              Alternatively, Termly can generate a cookie banner for you. If you use Termly's banner, it will give you a script tag to add. You can prompt Lovable: `"Add this script to the <head> of the app:"` and paste the Termly snippet.
 
               When in doubt, adding a cookie banner is the safer choice. It shows your users you respect their privacy.
           subtitle: Respecting your users' privacy
@@ -468,10 +491,10 @@ course:
               Here are more things you can do:
               - **Use clear page titles** that describe what each page does
               - **Write descriptive headings** using heading tags (h1, h2, h3) in your content
-              - **Add alt text to images** so search engines understand what they show
-              - **Make your app fast** by keeping images small and avoiding unnecessary complexity
+              - **Add alt text to images** by prompting Lovable: `"Add descriptive alt text to all images in the app for accessibility and SEO"`
+              - **Make your app fast** by keeping images small (compress them before uploading) and avoiding unnecessary complexity
 
-              You can prompt Lovable to help: `"Review this page for SEO best practices and suggest improvements."`
+              You can also ask Lovable to do a general review: `"Review this page for SEO best practices and suggest improvements."`
           subtitle: Help Google understand your product
         - type: text
           title: Setting expectations about timing
@@ -486,7 +509,13 @@ course:
 
               This can feel frustrating, but it's normal. Search engines need time to discover, crawl, and index your website. The Google site verification you set up in the previous challenge helps speed this up.
 
-              You can submit your sitemap through [Google Search Console](https://search.google.com/search-console) to nudge Google to notice your site sooner. A **sitemap** is a file that lists all the pages on your website, making it easier for search engines to find and index them.
+              You can submit your **sitemap** through [Google Search Console](https://search.google.com/search-console) to nudge Google to notice your site sooner. A sitemap is a file that lists all the pages on your website, making it easier for search engines to find and index them.
+
+              To submit your sitemap:
+              1. Open Google Search Console and select your property (the domain you verified in Challenge 2)
+              2. Click **Sitemaps** in the left menu
+              3. Enter your sitemap URL. For most Lovable apps, try `https://yourdomain.com/sitemap.xml`. If you're not sure whether your app has one, ask Lovable: `"Does this app have a sitemap.xml? If not, generate one."`
+              4. Click **Submit**
 
               Don't let the wait discourage you. Every SEO improvement you make now compounds over time. The earlier you start, the sooner results arrive.
           subtitle: Patience is part of the process
@@ -605,7 +634,12 @@ course:
           title: Built-in Lovable metrics
           content:
             body: |-
-              Lovable provides **built-in metrics** for your published app. You can find them in the **Analytics** section of your project settings.
+              Lovable provides **built-in metrics** for your published app.
+
+              To find them:
+              1. Open your project in Lovable
+              2. Click on your **project name** in the top-left corner to go to the project dashboard
+              3. Look for the **Analytics** tab
 
               These metrics give you a basic picture of:
               - How many people visit your app
@@ -628,8 +662,11 @@ course:
 
               To set it up:
               1. Create a free account at [analytics.google.com](https://analytics.google.com/)
-              2. Create a property for your app and get your Measurement ID (it looks like `G-XXXXXXXXXX`)
-              3. Prompt Lovable: `"Add Google Analytics with Measurement ID G-XXXXXXXXXX to the app"`
+              2. Click **Admin** (gear icon at the bottom-left), then click **Create** and select **Property**
+              3. Give your property a name (e.g., "Book Club Organiser"), select your country and time zone, then click through the setup steps
+              4. When asked to choose a platform, select **Web**, enter your app's URL, and give your stream a name
+              5. Google will show you a **Measurement ID** that starts with `G-` (e.g., `G-ABC123XYZ`). Copy it.
+              6. Back in Lovable, prompt: `"Add Google Analytics with Measurement ID G-ABC123XYZ to the app"` (replacing with your actual ID)
 
               Lovable will add the tracking code to your app. After publishing, data will start appearing in your Google Analytics dashboard within a few hours.
 
@@ -824,7 +861,7 @@ course:
               - ☐ Switch to production API keys
               - ☐ Create and upload a favicon
               - ☐ Set meta tags (title, description, share image)
-              - ☐ Check your app on mobile and desktop
+              - ☐ Check your app on mobile and desktop (use the device toggle in Lovable's preview, and test on your own phone after publishing)
 
               **Professional touches:**
               - ☐ Connect a custom domain
