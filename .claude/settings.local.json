@@ -17,7 +17,12 @@
       "WebFetch(domain:www.freelanceunlocked.com)",
       "WebFetch(domain:2025.freelanceunlocked.com)",
       "Bash(python3:*)",
-      "Bash(npx:*)"
+      "Bash(npx:*)",
+      "WebFetch(domain:lovable-f9060f1e.mintlify.app)",
+      "WebFetch(domain:medium.com)",
+      "WebFetch(domain:www.nocode.mba)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:www.rapidevelopers.com)"
     ],
     "deny": [],
     "ask": []

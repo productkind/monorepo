@@ -86,12 +86,12 @@ course:
           title: Switch to real API keys before going live
           content:
             body: |-
-              If your app connects to external services (like Supabase for data storage, or Stripe for payments), you may have **test API keys** in your secrets panel. These work fine for development, but they won't work properly for real users.
+              If your app connects to external services (like Stripe for payments or a third-party email provider), you may have **test API keys** stored in Lovable. These work fine for development, but they won't work properly for real users.
 
               **How to check and update your API keys:**
-              1. In your Lovable project, click the **green Supabase icon** in the top menu bar (or look for the **Integrations** panel in the sidebar)
-              2. You'll see a list of all the secrets (API keys) your app uses
-              3. For each key, check whether it's a test or production key. Test keys often contain words like `test`, `sandbox`, or `dev` in them. If you're unsure, check the service's dashboard (e.g., log into your Supabase or Stripe account and look for the production/live keys there)
+              1. In your Lovable project, open the **Cloud** tab (click the **+** button next to Preview mode at the top of the screen)
+              2. Go to the **Secrets** section. You'll see a list of all the secrets (API keys) your app uses. Some keys are added automatically by Lovable Cloud and cannot be deleted.
+              3. For each key you added yourself, check whether it's a test or production key. Test keys often contain words like `test`, `sandbox`, or `dev` in them. If you're unsure, log into the external service's dashboard (e.g., your Stripe account) and look for the production/live keys there
               4. To update a key, click on it, replace the value with the production version, and save
 
               Forgetting this step is a common gotcha. Your app will look like it works, but behind the scenes, data might not save, emails might not send, or payments might not process. A quick check now saves confusion later.
@@ -356,7 +356,7 @@ course:
 
               The hosted option is easier to start with and updates automatically if you change your policies later.
 
-              **Tip:** If you're using Google Analytics or Lovable Cloud (which uses Supabase), you are collecting user data. Make sure to mention these in the questionnaire.
+              **Tip:** If you're using Google Analytics or Lovable Cloud (for data storage and authentication), you are collecting user data. Make sure to mention these in the questionnaire.
           subtitle: Free legal pages without a lawyer
         - type: text
           title: Add footer links to your app
@@ -406,7 +406,7 @@ course:
           title: Dalmie builds trust
           content:
             body: |-
-              Dalmie generates her privacy policy and terms of use on Termly. She mentions that the Book Club Organiser uses Google Authentication and stores data in Supabase. Termly produces both documents in a few minutes.
+              Dalmie generates her privacy policy and terms of use on Termly. She mentions that the Book Club Organiser uses Google Authentication and stores data in Lovable Cloud. Termly produces both documents in a few minutes.
 
               She prompts Lovable to add a footer with links to the privacy policy and terms. Since she's planning to add Google Analytics and her users include people in the UK, she also adds a cookie banner.
 
@@ -838,7 +838,7 @@ course:
             body: |-
               As your product grows, you might wonder: **can Lovable handle more users?**
 
-              For most products, the answer is yes. Lovable apps are hosted on infrastructure designed to handle growth. And if you're using Lovable Cloud (Supabase) for your backend, it also scales as your usage increases.
+              For most products, the answer is yes. Lovable apps are hosted on infrastructure designed to handle growth. Lovable Cloud automatically scales your backend (database, authentication, storage) as your usage increases.
 
               **One thing to watch: the 512MB deployment limit.**
 
