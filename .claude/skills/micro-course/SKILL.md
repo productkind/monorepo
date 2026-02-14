@@ -15,8 +15,45 @@ description: Use this checklist when generating micro-course content from an out
 - Include in the micro-course description the transformation the learner will realise by the end. Include what the learner will be able to do after completing the micro-course.
 - When creating quiz steps, vary which answer is the correct one (not always the second one).
 
+---
 
-## 1. Single-Concept Focus
+## Narrative Structure
+
+**Start with a relatable problem, not a lesson.** Use comics or a story to show someone's frustration before any teaching begins. Learners should feel "that's me" before they learn anything.
+
+**Transformation hook in the first video/intro.** Frame the course as identity change: "From X to Y." Not "You'll learn A, B, C" but "You'll become someone who..." Example: "From 'I can't build apps' to 'I just published my first one.'"
+
+**One running example throughout.** Use a single persona building a single project across all challenges. Don't switch examples mid-course. Consistency makes abstract concepts tangible and helps learners follow along.
+
+**Challenge openers set emotional tone.** The first step of each challenge should excite and preview the transformation, not just list what's coming. Acknowledge progress ("You're no longer a beginner") and build anticipation for what they'll be able to do.
+
+**Final reflection is about the journey, not the last task.** Ask "What surprised you? What do you want to build next?" not "Did you complete the steps?" Send learners forward with momentum.
+
+---
+
+## Teaching Approach
+
+**Teach prerequisites thinking.** Before introducing a feature, model the question: "What does this feature need to work properly?" This is a meta-skill learners should internalise. Example: "Before adding voting, we need authentication so the app knows who's voting."
+
+**Specific test cases after features.** After teaching how to build something, include explicit verification steps. Not "test your feature" but specific actions: "1. Try voting without logging in. 2. Log in and vote. 3. Try voting again on the same book." This builds testing habits.
+
+**Cross-reference at the moment of relevance.** Link to other courses when the learner might want to go deeper, not in a list at the end. Example: "Curious about databases? Our Basics of Software course explains this in friendly terms."
+
+---
+
+## Tone and Expectations
+
+**Name the difficulty explicitly.** Use step titles like "Things will break (and that's okay)." Don't hide struggle; normalise it. Learners trust content that acknowledges reality.
+
+**Reframe universal principles for the specific context.** Generic wisdom needs contextual translation. Example: The 80/20 rule became "the 80/20 of vibe coding" with specific meaning: generating is fast, perfecting takes time.
+
+**Model what you teach.** If the course teaches "build incrementally," the course itself should build incrementally. The running example should start simple and grow, mirroring the learner's journey. Don't dump all features in the first prompt example.
+
+
+## Checklist for Micro-course Content
+Micro-course content should follow these principles to ensure it's engaging, effective, and aligned with our educational philosophy. Use this checklist as a guide when creating or reviewing micro-course content.
+
+### 1. Single-Concept Focus
 
 **Requirement:** Each challenge teaches exactly one action-oriented concept, skill, or problem.
 
@@ -29,7 +66,7 @@ description: Use this checklist when generating micro-course content from an out
 
 ---
 
-## 2. Immediate Applicability
+### 2. Immediate Applicability
 
 **Requirement:** The learner can apply what they learned within 5 minutes of finishing.
 
@@ -46,7 +83,7 @@ description: Use this checklist when generating micro-course content from an out
 
 ---
 
-## 3. Built-In Practice
+### 3. Built-In Practice
 
 **Requirement:** The challenge includes multiple moments where the learner does something, not just watches or reads.
 
@@ -68,7 +105,7 @@ description: Use this checklist when generating micro-course content from an out
 
 ---
 
-## 4. Completion Time
+### 4. Completion Time
 
 **Requirement:** One challenge (content + practice) is completable in one sitting.
 
@@ -85,7 +122,7 @@ description: Use this checklist when generating micro-course content from an out
 
 ---
 
-## 5. Jargon-Free Language
+### 5. Jargon-Free Language
 
 **Requirement:** A learner with no technical background can understand every sentence.
 
@@ -103,7 +140,7 @@ description: Use this checklist when generating micro-course content from an out
 
 ---
 
-## 6. Clear Progression
+### 6. Clear Progression
 
 **Requirement:** This challenge fits logically in the course sequence.
 
@@ -118,7 +155,7 @@ description: Use this checklist when generating micro-course content from an out
 
 ---
 
-## 7. Welcoming Tone
+### 7. Welcoming Tone
 
 **Requirement:** The content makes learners feel empowered and capable, not intimidated.
 
@@ -143,7 +180,7 @@ description: Use this checklist when generating micro-course content from an out
 
 ## Summary Checklist
 
-Before finalising any challenge, confirm:
+Before finalising any **challenge**, confirm:
 
 - [ ] Single outcome, one sentence, no "and"
 - [ ] Ends with specific action learner can take in 5 minutes
@@ -152,6 +189,18 @@ Before finalising any challenge, confirm:
 - [ ] No unexplained jargon
 - [ ] Only assumes knowledge from previous challenges
 - [ ] Tone is welcoming and normalises struggle
+
+Before finalising **the full course**, confirm:
+
+- [ ] Starts with a relatable problem (comics/story) before teaching
+- [ ] First video/intro frames transformation as identity change ("From X to Y")
+- [ ] One consistent running example throughout all challenges
+- [ ] Challenge openers excite and preview transformation
+- [ ] Final reflection asks about the full journey and what's next
+- [ ] Features include specific test cases for verification
+- [ ] Cross-references to other courses appear at relevant moments
+- [ ] Difficulty is named explicitly, not hidden
+- [ ] The course models the behaviour it teaches (e.g., builds incrementally)
 
 ---
 

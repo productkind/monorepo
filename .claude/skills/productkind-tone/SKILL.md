@@ -1,6 +1,6 @@
 ---
 name: productkind-tone
-description: Apply ProductKind's educational writing style for micro-courses, tutorials, and learning content. Use when creating educational materials, course content, challenge plans, tutorials, explanatory guides, or any content that teaches concepts to non-technical audiences. Triggers include requests for "microlearning content", "course material", "tutorial", "educational content", "challenge", or requests to write in a "warm", "encouraging", "accessible", or "beginner-friendly" tone.
+description: Apply productkind's educational writing style for micro-courses, tutorials, and learning content. Use when creating educational materials, course content, challenge plans, tutorials, explanatory guides, or any content that teaches concepts to non-technical audiences. Triggers include requests for "microlearning content", "course material", "tutorial", "educational content", "challenge", or requests to write in a "warm", "encouraging", "accessible", or "beginner-friendly" tone.
 ---
 
 # ProductKind Educational Tone & Style
@@ -9,11 +9,31 @@ Apply this style when creating educational content, courses, tutorials, or expla
 
 ## Core Voice Principles
 
-**Warm and encouraging** — Write as a supportive mentor, not a lecturer. Use phrases like "Now it's your turn", "Don't worry about getting it perfect", "Great job!", "You've got this!"
+**Warm and encouraging** — Write as a supportive mentor, not a lecturer. Use phrases like "Now it's your turn", "Don't worry about getting it perfect", "You've got this!" Celebrate progress genuinely, not performatively.
 
-**Authentic over polished** — Avoid marketing buzzwords and corporate speak. Be direct and human. Say "this is hard" when something is hard.
+**Authentic over polished** — Avoid marketing buzzwords and corporate speak. Be direct and human. Say "this is hard" when something is hard. Acknowledge struggle openly.
 
 **Curious and exploratory** — Frame learning as discovery, not instruction. Invite questions and reflection.
+
+**Transformation-focused** — Frame courses and content around identity change, not just skill acquisition. "From 'I can't do X' to 'I just did X'" is more powerful than "Learn how to do X."
+
+---
+
+## The Mentor Voice
+
+Write as if you're sitting next to the learner, guiding them through something new. A good mentor:
+
+**Acknowledges where they are.** "You might be feeling overwhelmed right now. That's completely normal." Don't pretend everything is easy when it isn't.
+
+**Names difficulty explicitly.** Use step titles like "Things will break (and that's okay)" or "This part is tricky." Learners trust content that acknowledges reality.
+
+**Normalises mistakes.** "If something goes wrong, don't worry. This is a normal part of building." Make it safe to fail.
+
+**Celebrates progress genuinely.** "You've come a long way. From your first prompt to a published app." Be specific about what they've achieved, not generic ("Great job!").
+
+**Points forward.** End with momentum: "What do you want to build next?" Send learners into their future, not just through your content.
+
+**Doesn't oversimplify.** Avoid "It's easy!" or "Simply do X." If it were easy, they wouldn't need a course. Respect the learning process.
 
 ## Structural Patterns
 
@@ -140,11 +160,27 @@ Good luck, and happy [doing the thing]! 🚀
 
 ## Anti-Patterns to Avoid
 
-- ❌ Corporate buzwords ("leverage", "synergy", "optimise")
+- ❌ Corporate buzzwords ("leverage", "synergy", "optimise")
 - ❌ Passive, distant tone ("It is recommended that...")
 - ❌ Walls of text without structure
 - ❌ Abstract concepts without examples
 - ❌ Assuming prior knowledge without explanation
 - ❌ Ending sections without clear next actions
 - ❌ Excessive emoji use (more than 1-2 per section)
-- ❌ Condescending simplification ("It's easy!" when it's not)
+- ❌ Condescending simplification ("It's easy!" or "Simply do X" when it's not)
+- ❌ "Obviously" or "of course" (implies they should already know)
+- ❌ "Just" before instructions ("Just click the button") — minimises the learning
+- ❌ Hiding difficulty — pretending everything is straightforward when it isn't
+- ❌ Generic encouragement ("Amazing!" "Great job!") without specifics
+- ❌ Lecturing tone — talking at the learner rather than guiding them
+
+## Good vs Bad Examples
+
+| ❌ Avoid | ✅ Prefer |
+|---------|----------|
+| "Simply add authentication" | "Adding authentication takes a few steps. Let's walk through it." |
+| "It's easy to fix bugs" | "Bugs are a normal part of building. Here's how to approach them." |
+| "Obviously you'll need a backend" | "Your app needs a backend to save data. Here's why..." |
+| "Great job!" | "You've just built your first feature. That's the hardest part done." |
+| "Learn to build apps" | "Go from 'I can't build apps' to 'I just published my first one'" |
+| "This will teach you X" | "By the end, you'll be able to X" |
