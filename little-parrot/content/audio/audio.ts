@@ -210,9 +210,30 @@ Ready to become someone who builds?
 Let's go!
 `
 
-const TEXT_TO_GENERATE = videoLovableBasics1;
+const videoLovablePublish1 = `
+You've built an app with Lovable.
+---
+That's a real achievement!
+---
+But right now, it probably lives on a generic URL, has a default favicon, and maybe still uses test
+data. If you share it with someone, they might wonder: is this a real product?
+---
+That's about to change. In this micro-course, you'll go from "I built an app" to "I'm running a digital
+product that people can find, trust, and use." You'll publish your app properly, set up a
+custom domain, add legal pages, make it discoverable through search engines and AI
+tools, track how people use it, and plan your growth.
+By the end, you won't just have an app. You'll have a live product with a
+professional presence on the internet. And you'll know exactly how to keep
+improving it based on what your users tell you.
+---
+Ready to launch?
+---
+Let's go!
+`
+
+const TEXT_TO_GENERATE = videoLovablePublish1;
 const MODEL_ID = 'eleven_multilingual_v2'; //'eleven_v3_turbo'; // The v3 model as requested
-const videoName = 'video-lovable-basics-1-elizabeth';
+const videoName = 'video-lovable-publish-1-elizabeth';
 const OUTPUT_FILE_NAME = `generated_speech-${videoName}.wav`; // e.g.,
 const ALIGNMENT_JSON_FILE_NAME = `alignment-${videoName}.json`;
 const OUTPUT_FILE_PATH = OUTPUT_FILE_NAME // Saves in the same directory as the script
