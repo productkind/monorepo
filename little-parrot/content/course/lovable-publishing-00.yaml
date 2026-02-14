@@ -19,29 +19,29 @@ course:
             imageUrl: /comics/lovable-publishing-00/panel-00.png
             altText: |-
               A dalmatian dog (called Dalmie) wearing a red shirt sits at a desk with a laptop,
-              looking excited. Dalmie says, "The Book Club Organiser is ready! Time to share it
-              with Sarah!"
+              looking excited. Dalmie says, "The Book Club Organiser is ready! Sarah's book club
+              is already using it. I want to share it with other book clubs too!"
         - type: comic
           content:
             imageUrl: /comics/lovable-publishing-00/panel-01.png
             altText: |-
-              Sarah sits on a sofa looking at her phone with a confused expression. The screen
-              shows a generic favicon and a long lovable.app URL. Sarah says, "Is this... real?
-              It looks a bit unfinished."
+              Dalmie stares at the Lovable Publish button on the laptop screen. A large thought
+              bubble shows a swirl of worries: "Do I need legal pages? How will people find it?
+              Is it safe for strangers to use? What am I forgetting?"
         - type: comic
           content:
             imageUrl: /comics/lovable-publishing-00/panel-02.png
             altText: |-
-              Dalmie sits at the desk looking embarrassed, with a thought bubble showing Sarah's
-              confused face. Dalmie says, "She's right... it works, but it doesn't look like a
-              real product yet. How do I make it professional?"
+              Dalmie leans back in the chair, looking overwhelmed with spirals in her eyes.
+              Dalmie says, "I built the app, but I have no idea what it takes to actually
+              launch a product..."
         - type: comic
           content:
             imageUrl: /comics/lovable-publishing-00/panel-03.png
             altText: |-
               A brightly coloured bird (called Little Parrot) appears next to Dalmie at the desk.
-              Little Parrot smiles and says, "A few small steps will make it look polished and
-              trustworthy. Let me walk you through it!"
+              Little Parrot smiles and says, "Don't worry, Dalmie! From publishing to getting more
+              users, I'll walk you through everything step by step."
         - type: video
           title: Launch and Grow Your Lovable App
           content:
