@@ -24,15 +24,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="0.088059685"
-     inkscape:cx="-1158.3053"
-     inkscape:cy="3917.7973"
+     inkscape:zoom="0.891619"
+     inkscape:cx="805.27669"
+     inkscape:cy="635.92184"
      inkscape:window-width="1728"
      inkscape:window-height="1057"
      inkscape:window-x="0"
      inkscape:window-y="32"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g3"
+     inkscape:current-layer="layer1"
      showguides="true"
      showgrid="false">
     <sodipodi:guide
@@ -440,19 +440,19 @@
        sodipodi:nodetypes="ccccccc"
        inkscape:label="postit-yellow" />
     <path
-       style="fill:#ffffff;fill-opacity:1;stroke:#370188;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#ffffff;fill-opacity:1;stroke:#080809;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
        d="m 62.047534,40.490654 c 0.205241,6.4309 8.369301,6.48952 8.50612,-0.01"
        id="path18-9"
        sodipodi:nodetypes="cc" />
     <ellipse
-       style="fill:#ffffff;fill-opacity:1;stroke:#370188;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#ffffff;fill-opacity:1;stroke:#080809;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
        id="path2-7"
        cx="66.299744"
        cy="40.515556"
        rx="4.2585411"
        ry="1.1075325" />
     <ellipse
-       style="fill:#370188;fill-opacity:1;stroke:none;stroke-width:1.95987"
+       style="fill:#080809;fill-opacity:1;stroke:none;stroke-width:1.95987"
        id="path20-3"
        cx="66.318848"
        cy="40.76722"
@@ -848,17 +848,17 @@
          y="0"><tspan
            x="143.04102"
            y="2463.6286"
-           id="tspan3"><tspan
+           id="tspan14"><tspan
              style="font-size:64px;fill:#370188;stroke:none"
-             id="tspan1">CHIRA</tspan><tspan
+             id="tspan12">CHIRA</tspan><tspan
              style="font-weight:900;-inkscape-font-specification:'Montserrat Heavy';fill:#370188;stroke:none"
-             id="tspan2">
+             id="tspan13">
 </tspan></tspan><tspan
            x="143.04102"
            y="2528.9231"
-           id="tspan5"><tspan
+           id="tspan16"><tspan
              style="font-weight:900;-inkscape-font-specification:'Montserrat Heavy';fill:#370188;stroke:none"
-             id="tspan4">
+             id="tspan15">
 </tspan></tspan></text>
       <text
          xml:space="preserve"
@@ -867,27 +867,27 @@
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect57);display:inline;fill:#370188;fill-opacity:1;stroke:none;stroke-width:12;stroke-dasharray:none;stroke-opacity:1"><tspan
            x="112.28516"
            y="2487.2747"
-           id="tspan6">ANML-20455 - As Giraffe, I want t...
+           id="tspan17">ANML-20455 - As Giraffe, I want t...
 </tspan><tspan
            x="112.28516"
            y="2547.2747"
-           id="tspan7">ANML-20456 - As Giraffe, I want t...
+           id="tspan18">ANML-20456 - As Giraffe, I want t...
 </tspan><tspan
            x="112.28516"
            y="2607.2747"
-           id="tspan8">ANML-20457 - As Giraffe, I want t...
+           id="tspan19">ANML-20457 - As Giraffe, I want t...
 </tspan><tspan
            x="112.28516"
            y="2667.2747"
-           id="tspan9">ANML-20458 - As Giraffe, I want t...
+           id="tspan20">ANML-20458 - As Giraffe, I want t...
 </tspan><tspan
            x="112.28516"
            y="2727.2747"
-           id="tspan10">ANML-20459 - As Giraffe, I want t...
+           id="tspan21">ANML-20459 - As Giraffe, I want t...
 </tspan><tspan
            x="112.28516"
            y="2787.2747"
-           id="tspan11">ANML-20460 - As Giraffe, I want t...</tspan></text>
+           id="tspan22">ANML-20460 - As Giraffe, I want t...</tspan></text>
     </g>
     <text
        xml:space="preserve"

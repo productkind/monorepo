@@ -9,7 +9,7 @@
    id="svg1"
    inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
    sodipodi:docname="lets-build-digital-products-together.svg"
-   inkscape:export-filename="thumbnail-canvas-222.png"
+   inkscape:export-filename="/Users/eggdice/thumbnail.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -27,9 +27,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="0.69608635"
-     inkscape:cx="890.69409"
-     inkscape:cy="693.87943"
+     inkscape:zoom="0.38421693"
+     inkscape:cx="879.71136"
+     inkscape:cy="741.76845"
      inkscape:window-width="1728"
      inkscape:window-height="1057"
      inkscape:window-x="0"
@@ -37,7 +37,8 @@
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1"
      showguides="true"
-     inkscape:export-bgcolor="#ffffffff">
+     inkscape:export-bgcolor="#ffffffff"
+     showgrid="false">
     <sodipodi:guide
        position="0,824"
        orientation="0,1"
