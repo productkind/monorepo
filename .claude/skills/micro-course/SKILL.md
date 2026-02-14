@@ -9,9 +9,9 @@ description: Use this checklist when generating micro-course content from an out
 - Each step has a type: see all the types in [`./courseSteps.ts`](./courseSteps.ts)
 
 ## Important Aspects to Follow
-- You don't have to follow the exact structure of the course outline given. It's important that you craft the course in a way that engages learners and help them efficiently acquire new skills.
+- You don't have to follow the exact structure of the course outline given. It's important that you craft the micro-course in a way that engages learners and help them efficiently acquire new skills.
 - It's crucial to include an 'aha!' moment in the first challenge and make its hook powerful, because the learner will decide based on the first challenge if they want to subscribe for the micro-course.
-- The learner should encounter a practical and hands-on step in the micro-course as soon as possible. Build their mindset during the course, connecting it to practical experiences, not in a separate challenge focusing only on the mindset.
+- The learner should encounter a practical and hands-on step in the micro-course as soon as possible. Build their mindset during the micro-course, connecting it to practical experiences, not in a separate challenge focusing only on the mindset.
 - Include in the micro-course description the transformation the learner will realise by the end. Include what the learner will be able to do after completing the micro-course.
 - When creating quiz steps, vary which answer is the correct one (not always the second one).
 
