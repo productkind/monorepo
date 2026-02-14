@@ -1,6 +1,6 @@
 ---
-name: tone-of-voice
-description: Apply productkind's tone of voice when writing LinkedIn posts, Substack Notes, website copy, and course content.
+name: personal-tone-of-voice
+description: Apply this personal tone of voice when writing LinkedIn posts, Substack Notes.
 ---
 
 ## Audience
