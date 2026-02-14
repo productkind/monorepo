@@ -1,8 +1,6 @@
 ---
 name: micro-course
 description: Use this checklist when generating micro-course content from an outline. Every course must meet these criteria before being considered complete.
-skills: 
-  - productkind-tone
 ---
 
 ## Micro-course structure
@@ -163,9 +161,10 @@ When generating a micro-course, structure it as the examples. Make sure to use d
 
 ### Example Micro-courses
 
-- `course-examples/vibe-coding-debugging-00.yaml`
-- `course-examples/vibe-coding-product-management-00.yaml`
-- `course-examples/vibe-coding-tech-00.yaml`
+- `../../../little-parrot/content/course/vibe-coding-product-management-00.yaml`
+- `../../../little-parrot/content/course/vibe-coding-tech-00.yaml`
+- `../../../little-parrot/content/course/lovable-intro-00.yaml`
+- `../../../little-parrot/content/course/vibe-coding-debugging-00.yaml`
 
 ### Save Micro-course
-Save the generated micro-course to this folder: `/Users/kingamagyar/Documents/productkind/monorepo/little-parrot/content/course`
+Save the generated micro-course to this folder: `../../../little-parrot/content/course`

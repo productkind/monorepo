@@ -18,7 +18,8 @@ export interface VideoStep extends BaseStep {
   content: {
     description?: string;
     videoPlaceholder?: string;
-    videoUrl: string;
+    videoRemotionId: string;
+    vimeoId: string;
     transcript: string;
   };
 }
