@@ -1,0 +1,920 @@
+course:
+  id: b3a7c1d9-e2f4-5678-90ab-cdef12345678
+  note: '*Note on timing:* Some challenges involve external tools (like domain registrars or Termly). The estimated times include the hands-on work, but signing up for external services may take a few extra minutes.'
+  cover: /courses/lovable-publishing-00/cover.gif
+  title: 'Launch and Grow Your Lovable App'
+  challenges:
+    - title: "Go Live: Your First Real Launch"
+      isFree: true
+      skills:
+        - Publishing
+        - Preview vs Production
+        - Meta Tags
+        - Favicon
+      description: Make your app production-ready and share it with a real person.
+      completionTime: '10:00'
+      steps:
+        - type: comic
+          content:
+            imageUrl: /comics/lovable-publishing-00/panel-00.png
+            altText: |-
+              A dalmatian dog (called Dalmie) wearing a red shirt sits at a desk with a laptop,
+              looking excited. Dalmie says, "The Book Club Organiser is ready! Time to share it
+              with Sarah!"
+        - type: comic
+          content:
+            imageUrl: /comics/lovable-publishing-00/panel-01.png
+            altText: |-
+              Sarah sits on a sofa looking at her phone with a confused expression. The screen
+              shows a generic favicon and a long lovable.app URL. Sarah says, "Is this... real?
+              It looks a bit unfinished."
+        - type: comic
+          content:
+            imageUrl: /comics/lovable-publishing-00/panel-02.png
+            altText: |-
+              Dalmie sits at the desk looking embarrassed, with a thought bubble showing Sarah's
+              confused face. Dalmie says, "She's right... it works, but it doesn't look like a
+              real product yet. How do I make it professional?"
+        - type: comic
+          content:
+            imageUrl: /comics/lovable-publishing-00/panel-03.png
+            altText: |-
+              A brightly coloured bird (called Little Parrot) appears next to Dalmie at the desk.
+              Little Parrot smiles and says, "A few small steps will make it look polished and
+              trustworthy. Let me walk you through it!"
+        - type: video
+          title: Launch and Grow Your Lovable App
+          content:
+            videoRemotionId: lesson-lovable-publishing-00-video-00
+            vimeoId: TBD
+            transcript: |-
+              You've built an app with Lovable. That's a real achievement. But right now, it
+              probably lives on a generic URL, has a default favicon, and maybe still uses test
+              data. If you share it with someone, they might wonder: is this a real product?
+              That's about to change.
+              In this micro-course, you'll go from "I built an app" to "I'm running a product
+              that people can find, trust, and use." You'll publish your app properly, set up a
+              custom domain, add legal pages, make it discoverable through search engines and AI
+              tools, track how people use it, and plan your growth.
+              By the end, you won't just have an app. You'll have a live product with a
+              professional presence on the internet. And you'll know exactly how to keep
+              improving it based on what your users tell you.
+              Ready to launch? Let's go!
+        - type: text
+          title: What "publish" means in Lovable
+          content:
+            body: |-
+              When you **publish** in Lovable, your app becomes accessible on the internet. Anyone with the link can visit it from their phone, tablet, or computer.
+
+              Before publishing, your app exists only in Lovable's editor. After publishing, it gets a real URL that you can share with anyone.
+
+              Publishing is a bit like opening a shop. Before you open the doors, you want to make sure the shelves are stocked and the sign looks right. That's what the next few steps are about.
+          subtitle: From your editor to the internet
+        - type: text
+          title: "Preview vs production: two different worlds"
+          content:
+            body: |-
+              Lovable gives you two environments:
+
+              **Preview** is your testing playground. It's where you try things out, see how features work, and experiment without consequences. Think of it like a dress rehearsal.
+
+              **Production** is the real thing. It's what your users see when they visit your published URL.
+
+              Changes you make in the editor show up in preview immediately. But they only reach production when you click **Publish**. This separation is your safety net. You can break things in preview, fix them, and your users never see a thing.
+          subtitle: Testing vs the real thing
+        - type: text
+          title: Switch to real API keys before going live
+          content:
+            body: |-
+              If your app connects to external services (like Supabase for data storage, or Stripe for payments), you may have **test API keys** in your secrets panel. These work fine for development, but they won't work properly for real users.
+
+              Before publishing, open the **Secrets** panel in Lovable and check that your API keys are the production versions from each service.
+
+              Forgetting this step is a common gotcha. Your app will look like it works, but behind the scenes, data might not save, emails might not send, or payments might not process. A quick check now saves confusion later.
+
+              *If API keys are new to you, our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) micro-course explains them in friendly terms.*
+          subtitle: A common gotcha to avoid
+        - type: text
+          title: Give your app a favicon
+          content:
+            body: |-
+              A **favicon** is the small icon that appears in browser tabs next to your app's name. Without one, your app shows a generic icon, which makes it look unfinished.
+
+              You can create a favicon for free using tools like [favicon.io](https://favicon.io/) or [realfavicongenerator.net](https://realfavicongenerator.net/). Upload your logo, your brand initials, or a simple icon that represents your product.
+
+              To set your favicon in Lovable:
+              1. Click the **Publish** button
+              2. Open the **Website info** section
+              3. Upload your favicon
+
+              It's a small detail, but it makes a noticeable difference. When Sarah sees the Book Club Organiser tab in her browser with a proper icon, it feels like a real product.
+          subtitle: The small icon that makes a big difference
+        - type: text
+          title: Set your meta tags
+          content:
+            body: |-
+              **Meta tags** control how your app appears when someone shares the link on social media, WhatsApp, or Slack. They include:
+
+              - **Title:** The name that appears in link previews and browser tabs
+              - **Description:** A short summary that appears below the title
+              - **Share image:** The image that shows in social media previews
+
+              You can set all of these in the **Website info** section of the Publish panel.
+
+              Make your title clear (e.g., "Book Club Organiser") and your description inviting (e.g., "The easiest way to pick your book club's next read"). When someone shares your link, these details are the first impression.
+          subtitle: Control how your link looks when shared
+        - type: text
+          title: "Dalmie publishes the Book Club Organiser"
+          content:
+            body: |-
+              Dalmie checks her API keys, uploads a favicon with a little book icon, and writes meta tags that describe the Book Club Organiser clearly. She clicks **Publish**.
+
+              A few seconds later, her app has a real URL. She sends it to Sarah again.
+
+              This time, Sarah sees a polished link preview in WhatsApp with the app name, description, and a nice share image. She taps it, and the Book Club Organiser loads with a proper favicon in the browser tab. "This looks great!" Sarah says.
+
+              That's the difference a few small steps make. Your app goes from "something I'm tinkering with" to "a product someone would actually use."
+          subtitle: From tinkering to professional
+        - type: quiz-question
+          title: "Quiz: Preview vs production"
+          content:
+            question: What is the difference between preview and production in Lovable?
+            options:
+              - Preview is faster, production is slower
+              - Preview is free, production costs extra
+              - Preview is your testing environment, production is what real users see
+              - Preview shows code, production shows the app
+            correctAnswer: 2
+            explanation: Preview is where you test changes safely. Production is the live version your users see. Changes only reach production when you click Publish, which means you can experiment in preview without affecting real users.
+        - type: quiz-question
+          title: "Quiz: API keys"
+          content:
+            question: Why should you check your API keys before publishing?
+            options:
+              - Test keys won't work properly for real users
+              - Production keys are cheaper to use
+              - Test keys make the app slower
+              - Production keys unlock more features in Lovable
+            correctAnswer: 0
+            explanation: Test API keys are designed for development, not real users. If you forget to switch to production keys, features like data storage, emails, or payments might not work, even though the app looks fine on the surface.
+        - type: reflection
+          title: "Your turn: Publish your app"
+          content:
+            description: |-
+              Time to go live! Follow these steps:
+
+              1. Check your API keys in the Secrets panel
+              2. Create and upload a favicon
+              3. Set your title, description, and share image in Website info
+              4. Click **Publish**
+              5. Share the link with one person and watch them use it
+
+              What was their first reaction? What did they notice?
+            placeholder: |-
+              Their first reaction was...
+
+              They noticed...
+            subDescription: You've taken your app from preview to production. That's a real milestone. The next challenges will help you make it even more professional and discoverable.
+        - type: challenge-end
+          title: "Your app is live on the internet! 💫"
+          content:
+            nextModule: "**Next:** Give your product a proper home with a custom domain."
+            description: You've published your first production-ready app.
+            subDescription: You've checked your API keys, added a favicon, set meta tags, and published. Someone out there is using something you built. That's worth celebrating.
+
+    - title: "Claim Your Corner of the Internet: Custom Domains"
+      isFree: false
+      skills:
+        - Custom Domains
+        - Domain Registration
+        - Google Site Verification
+      description: Give your product a branded address that people can remember.
+      completionTime: '8:00'
+      steps:
+        - type: text
+          title: Why a custom domain is useful
+          content:
+            body: |-
+              Right now, your app lives at something like `book-club-picks.lovable.app`. That works, but it's not very memorable. And when Sarah shares it with other book club organisers, they might hesitate to click a link they don't recognise.
+
+              A **custom domain** like `bookcluborganiser.com` gives your product:
+              - **Credibility:** It looks like a real business, not a side project
+              - **Memorability:** People can type it from memory
+              - **Ownership:** You control the address, even if you move to a different platform later
+
+              A custom domain is not required to launch. But if you're serious about growing your product, it's one of the most impactful steps you can take.
+          subtitle: More than a vanity URL
+        - type: text
+          title: How to check if a domain is available
+          content:
+            body: |-
+              Before you buy, you need to check if your desired domain name is available. Here are a few ways to do this:
+
+              - Visit a domain registrar like [Namecheap](https://www.namecheap.com/), [GoDaddy](https://www.godaddy.com/), or [Google Domains](https://domains.google/) and search for your name
+              - Try variations if your first choice is taken (e.g., `getbookclub.com`, `mybookclub.app`, `bookclubhq.com`)
+
+              **Tips for choosing a good domain:**
+              - Keep it short and easy to spell
+              - Avoid hyphens and numbers if possible
+              - `.com` is the most recognised, but `.app`, `.io`, and country-specific domains (like `.co.uk`) work well too
+              - Say it out loud. If you have to spell it for someone, it might be too complicated
+          subtitle: Finding the right name
+        - type: text
+          title: How to buy and connect a domain
+          content:
+            body: |-
+              Once you've found an available domain, buying it takes a few minutes on the registrar's website. Most domains cost between $10-15 per year.
+
+              To connect it to your Lovable app:
+              1. Click the **Publish** button in Lovable
+              2. Find the **Custom domain** section
+              3. Enter your domain name
+              4. Lovable will show you the DNS records you need to add
+              5. Go to your domain registrar and add those records in the DNS settings
+
+              DNS changes can take a few minutes to a few hours to take effect. Don't worry if it doesn't work immediately. This is normal.
+
+              *DNS (Domain Name System) is like a phone book for the internet. It tells browsers which server to connect to when someone types your domain name.*
+          subtitle: From registrar to Lovable
+        - type: text
+          title: Add Google site verification
+          content:
+            body: |-
+              While you're in your domain settings, it's a good time to set up **Google site verification**. This proves to Google that you own the domain, which is useful for:
+              - Submitting your site to Google Search (so it can be found)
+              - Accessing Google Search Console (to see how people find you)
+              - Setting up Google Analytics later
+
+              To verify your domain:
+              1. Go to [Google Search Console](https://search.google.com/search-console)
+              2. Add your domain
+              3. Google will give you a TXT record to add to your DNS settings
+              4. Add it in your domain registrar, the same place you added the Lovable DNS records
+
+              This step takes less than five minutes and unlocks tools you'll use in later challenges.
+          subtitle: Prove ownership to Google
+        - type: text
+          title: "Dalmie's custom domain"
+          content:
+            body: |-
+              Dalmie registers `bookcluborganiser.com` and connects it to her Lovable app. She also adds the Google site verification record while she's in the DNS settings.
+
+              When she shares the new URL with Sarah, Sarah's reaction is immediate: "This looks so professional! I've been telling my friends about it." The link is easy to remember, easy to share, and looks trustworthy.
+
+              Even the small step of having a custom domain changes how people perceive your product. It signals that you're serious about what you're building.
+          subtitle: A proper home for the Book Club Organiser
+        - type: quiz-question
+          title: "Quiz: Custom domains"
+          content:
+            question: What's the most important benefit of a custom domain for a new product?
+            options:
+              - It makes the app load faster
+              - It builds credibility and makes the product easier to share
+              - It's required by Lovable before you can publish
+              - It protects your app from hackers
+            correctAnswer: 1
+            explanation: A custom domain makes your product look professional and trustworthy. People are more likely to click, share, and remember a clean domain name. It's not required for publishing, but it's one of the most impactful steps for growth.
+        - type: quiz-question
+          title: "Quiz: DNS changes"
+          content:
+            question: What should you do if your custom domain doesn't work immediately after adding DNS records?
+            options:
+              - Delete the records and start over
+              - Contact Lovable support immediately
+              - Change your domain name to something else
+              - Wait a few hours, as DNS changes can take time to propagate
+            correctAnswer: 3
+            explanation: DNS changes can take anywhere from a few minutes to several hours to take effect across the internet. This is called DNS propagation and it's completely normal. Give it some time before troubleshooting.
+        - type: reflection
+          title: "Your turn: Choose your domain"
+          content:
+            description: |-
+              Search for a domain name for your product on a registrar like Namecheap or GoDaddy.
+
+              If you're ready to commit, buy it and connect it to your Lovable app following the steps in this challenge. If you're not ready to buy yet, that's fine too. Write down your top three choices.
+
+              What domain did you choose (or shortlist)?
+            placeholder: |-
+              My domain choice:
+
+              Why I chose it:
+            subDescription: Having a custom domain is a significant step. Even if you're still deciding, thinking about your domain name helps you think about your brand.
+        - type: challenge-end
+          title: "Your product has a proper address! 🏠"
+          content:
+            nextModule: "**Next:** Build trust with your visitors by adding essential legal pages."
+            description: You know how to find, buy, and connect a custom domain.
+            subDescription: A custom domain gives your product a professional identity. Whether you've connected one now or have it on your list, you've taken an important step towards building a trustworthy product.
+
+    - title: "Build Trust: Legal Pages and Compliance"
+      isFree: false
+      skills:
+        - Privacy Policy
+        - Terms of Use
+        - Cookie Banners
+        - Legal Compliance
+      description: Add the legal essentials that make visitors feel safe using your product.
+      completionTime: '8:00'
+      steps:
+        - type: text
+          title: Why legal pages are important
+          content:
+            body: |-
+              When someone visits your product for the first time, they're making a quick decision: **do I trust this enough to use it?**
+
+              Legal pages like a privacy policy and terms of use aren't exciting, but they signal that you take your product (and your users) seriously. They tell visitors:
+              - How their data is handled
+              - What they can expect from your product
+              - That there's a real person or business behind it
+
+              If you're collecting any user data (even email addresses for login), most countries require you to have a privacy policy. It's not about bureaucracy. It's about transparency and trust.
+          subtitle: Trust starts with transparency
+        - type: text
+          title: Generate your privacy policy and terms with Termly
+          content:
+            body: |-
+              Writing legal documents from scratch sounds intimidating, but you don't have to. **Termly** ([termly.io](https://termly.io/)) is a free tool that generates privacy policies and terms of use based on your answers to a questionnaire.
+
+              Here's how it works:
+              1. Create a free account on Termly
+              2. Answer questions about your product (what data you collect, whether you use cookies, etc.)
+              3. Termly generates the legal documents for you
+              4. Copy the generated text or embed the hosted pages
+
+              The questionnaire walks you through each decision, so you don't need legal knowledge. If you're unsure about an answer, Termly explains what each option means.
+
+              **Tip:** If you're using Google Analytics or Lovable Cloud (which uses Supabase), you are collecting user data. Make sure to mention these in the questionnaire.
+          subtitle: Free legal pages without a lawyer
+        - type: text
+          title: Add footer links to your app
+          content:
+            body: |-
+              Once you have your legal pages, you need to make them accessible. The standard place for legal links is the **footer** of your website, the section at the very bottom of the page.
+
+              Common footer links include:
+              - **Privacy Policy**
+              - **Terms of Use** (sometimes called Terms of Service)
+              - **Contact** (an email address or contact form)
+
+              You can prompt Lovable to add these:
+
+              ```
+              Add a footer to all pages with links to Privacy Policy, Terms of Use, and a Contact email. Use a subtle design that doesn't distract from the main content.
+              ```
+
+              Then create separate pages for your privacy policy and terms, or link to the hosted versions on Termly.
+          subtitle: Where to put your legal links
+        - type: text
+          title: "Cookie banners: when you need one"
+          content:
+            body: |-
+              A **cookie banner** is the notification that appears when you first visit a website, asking you to accept or manage cookies. Cookies are small files that websites store on your browser to remember things like your preferences or login status.
+
+              **When do you need a cookie banner?**
+              - If your users are in the EU or UK, you likely need one (GDPR and the UK's Privacy and Electronic Communications Regulations require consent for non-essential cookies)
+              - If you use Google Analytics, advertising tools, or third-party tracking, you need one
+              - If you only use essential cookies (like keeping users logged in), you may not need one, but it's often safer to have one
+
+              Termly can also generate a cookie banner for you. It provides a script you can add to your app, or you can prompt Lovable to create a basic one.
+
+              When in doubt, adding a cookie banner is the safer choice. It shows your users you respect their privacy.
+          subtitle: Respecting your users' privacy
+        - type: text
+          title: Dalmie builds trust
+          content:
+            body: |-
+              Dalmie generates her privacy policy and terms of use on Termly. She mentions that the Book Club Organiser uses Google Authentication and stores data in Supabase. Termly produces both documents in a few minutes.
+
+              She prompts Lovable to add a footer with links to the privacy policy and terms. Since she's planning to add Google Analytics and her users include people in the UK, she also adds a cookie banner.
+
+              The next time a new book club signs up, they see professional footer links and a clear cookie consent notice. It's a small thing, but it means people who don't know Dalmie personally still feel comfortable creating an account.
+          subtitle: Professional touches for the Book Club Organiser
+        - type: quiz-question
+          title: "Quiz: Privacy policies"
+          content:
+            question: When do you need a privacy policy for your web app?
+            options:
+              - When you collect any user data, including email addresses for login
+              - Only when you sell products through your app
+              - Only when you have more than 1,000 users
+              - Only when users specifically ask for one
+            correctAnswer: 0
+            explanation: If your app collects any personal data, including email addresses for login, most countries require a privacy policy. It's about being transparent with your users about how their information is handled.
+        - type: quiz-question
+          title: "Quiz: Cookie banners"
+          content:
+            question: Which of the following is a good reason to add a cookie banner?
+            options:
+              - It makes your website load faster
+              - It improves your app's visual design
+              - Your app uses Google Analytics and you have users in the EU or UK
+              - Cookie banners are required by Lovable before publishing
+            correctAnswer: 2
+            explanation: EU and UK privacy regulations (GDPR) require consent for non-essential cookies like those used by analytics tools. If you use Google Analytics and have users in these regions, a cookie banner is the right thing to add.
+        - type: reflection
+          title: "Your turn: Add your legal pages"
+          content:
+            description: |-
+              Head to [Termly](https://termly.io/) and generate a privacy policy and terms of use for your product. Then prompt Lovable to add footer links.
+
+              If you're collecting data from users in the EU or UK, consider adding a cookie banner too.
+
+              What did you find surprising about the process?
+            placeholder: |-
+              I was surprised by...
+
+              The hardest part was...
+            subDescription: Legal pages might not be the most exciting part of building a product, but they're an important foundation. You're building something people can trust.
+        - type: challenge-end
+          title: "Your product looks trustworthy! 🛡️"
+          content:
+            nextModule: "**Next:** Help people find your product without you having to share every link by hand."
+            description: You've added the legal essentials that build trust.
+            subDescription: Privacy policy, terms of use, footer links, and a cookie banner if needed. These foundations make the difference between a side project and a product people feel safe using.
+
+    - title: "Get Found: SEO and Discoverability"
+      isFree: false
+      skills:
+        - SEO
+        - GEO
+        - Backlinks
+        - Google Business
+      description: Help people find your product through search engines and AI tools.
+      completionTime: '10:00'
+      steps:
+        - type: text
+          title: How users actually find websites
+          content:
+            body: |-
+              Right now, the only way someone can reach your product is if you share the link directly. That's fine for your first few users, but it doesn't scale.
+
+              People find websites through several channels:
+              - **Search engines** like Google (someone types "book club organiser app")
+              - **AI assistants** like ChatGPT, Perplexity, or Google's AI Overview (someone asks "what's a good tool for organising a book club?")
+              - **Social media** (someone shares your link on LinkedIn, X, or Instagram)
+              - **Word of mouth** (Sarah tells another book club organiser about it)
+              - **Backlinks** from other websites that mention your product
+
+              In this challenge, you'll learn how to improve your chances of being found through search engines and AI tools. The social media and word-of-mouth parts come down to marketing, which is a whole topic on its own.
+          subtitle: Beyond sharing links by hand
+        - type: text
+          title: SEO basics for your Lovable app
+          content:
+            body: |-
+              **SEO** stands for Search Engine Optimisation. It's the practice of making your website easier for search engines like Google to find and understand.
+
+              The good news? You've already done some SEO work. Setting your meta tags (title and description) in Challenge 1 was your first step.
+
+              Here are more things you can do:
+              - **Use clear page titles** that describe what each page does
+              - **Write descriptive headings** using heading tags (h1, h2, h3) in your content
+              - **Add alt text to images** so search engines understand what they show
+              - **Make your app fast** by keeping images small and avoiding unnecessary complexity
+
+              You can prompt Lovable to help: `"Review this page for SEO best practices and suggest improvements."`
+          subtitle: Help Google understand your product
+        - type: text
+          title: Setting expectations about timing
+          content:
+            body: |-
+              Here's something important to know: **SEO results take time**.
+
+              After you publish and set everything up, it might take:
+              - **A few days** in the best case to start appearing in Google results
+              - **A few weeks** in the typical case
+              - **A few months** if your product is in a competitive space
+
+              This can feel frustrating, but it's normal. Search engines need time to discover, crawl, and index your website. The Google site verification you set up in the previous challenge helps speed this up.
+
+              You can submit your sitemap through [Google Search Console](https://search.google.com/search-console) to nudge Google to notice your site sooner. A **sitemap** is a file that lists all the pages on your website, making it easier for search engines to find and index them.
+
+              Don't let the wait discourage you. Every SEO improvement you make now compounds over time. The earlier you start, the sooner results arrive.
+          subtitle: Patience is part of the process
+        - type: text
+          title: "GEO: Being found by AI tools"
+          content:
+            body: |-
+              **GEO** stands for Generative Engine Optimisation. It's a newer concept that focuses on making your product discoverable by AI tools like ChatGPT, Perplexity, and Google's AI Overview.
+
+              When someone asks an AI assistant "what's a good tool for organising book clubs?", the AI draws from information it has found online. To increase your chances of being mentioned:
+
+              - **Have a clear, descriptive homepage** that explains what your product does and who it's for
+              - **Create helpful content** like a blog post or FAQ page that answers questions your target users might ask
+              - **Get mentioned on other websites** (more on this in a moment)
+
+              GEO and SEO overlap a lot. The same practices that help search engines understand your product also help AI tools recommend it.
+          subtitle: The new frontier of discoverability
+        - type: text
+          title: Register your business on Google
+          content:
+            body: |-
+              If your product serves a local community or has a physical business location, registering on **Google Business Profile** ([business.google.com](https://business.google.com/)) can boost your discoverability.
+
+              Even if your product is fully online, having a Google Business Profile can help because:
+              - It makes your business appear in Google Maps and local search results
+              - It adds credibility (Google shows your business info in search results)
+              - It gives you another place to collect reviews
+
+              Not every product needs this, but if yours has any local component (like a local book club organiser, a neighbourhood service, or a business with a physical address), it's worth the few minutes to set up.
+          subtitle: Boost local discoverability
+        - type: text
+          title: "Backlinks: getting other sites to link to you"
+          content:
+            body: |-
+              **Backlinks** are links from other websites that point to yours. Search engines treat them as votes of confidence. The more quality backlinks you have, the higher you'll rank.
+
+              How to start building backlinks:
+              - **List your product on directories** like Product Hunt, Indie Hackers, or niche directories for your industry
+              - **Write a guest blog post** for a site that your target users read
+              - **Ask partners or collaborators** to link to your product from their website
+              - **Create something worth linking to**, like a useful guide, a free tool, or an interesting case study
+
+              Dalmie writes a short blog post about "How I organised my book club with an app" and shares it on a few community forums. Within a few weeks, other book club blogs start linking to the Book Club Organiser. Her search ranking improves steadily.
+
+              Backlink building is a long-term effort, but even a few quality links make a difference.
+          subtitle: Votes of confidence from around the web
+        - type: quiz-question
+          title: "Quiz: SEO timing"
+          content:
+            question: After publishing and optimising your app for SEO, how long does it typically take to appear in Google search results?
+            options:
+              - Immediately, within seconds of publishing
+              - Within 24 hours
+              - Between a few hours and a few days
+              - Usually a few weeks, sometimes longer in competitive spaces
+            correctAnswer: 3
+            explanation: SEO takes patience. Search engines need time to discover, crawl, and index your website. It typically takes a few weeks, and in competitive spaces it can take months. Submitting your sitemap through Google Search Console can help speed things up.
+        - type: quiz-question
+          title: "Quiz: Backlinks"
+          content:
+            question: What are backlinks, and why do they help with SEO?
+            options:
+              - Links within your own website that connect your pages together
+              - Links from other websites to yours that search engines treat as votes of confidence
+              - Links in your footer that point to legal pages
+              - Links to your social media profiles
+            correctAnswer: 1
+            explanation: Backlinks are links from external websites pointing to yours. Search engines like Google use them as a signal that your content is valuable and trustworthy, which helps improve your search ranking.
+        - type: reflection
+          title: "Your turn: Start your SEO foundation"
+          content:
+            description: |-
+              Pick at least two actions from this challenge and do them now:
+
+              1. Review your meta tags (title and description) on each page
+              2. Submit your sitemap to Google Search Console
+              3. Register on Google Business Profile (if relevant)
+              4. List your product on one directory (like Product Hunt or a niche directory)
+
+              Which actions did you take?
+            placeholder: |-
+              I took these actions:
+
+              My next SEO step will be:
+            subDescription: SEO is a marathon, not a sprint. Every small action you take now compounds over time. You've planted seeds that will grow into organic traffic.
+        - type: challenge-end
+          title: "People can start finding you! 🔍"
+          content:
+            nextModule: "**Next:** Track what's happening with your product and listen to what your users think."
+            description: You've laid the foundation for being discovered online.
+            subDescription: SEO, GEO, Google verification, backlinks. These aren't one-time tasks, but you've started building the habits that will make your product more discoverable over time.
+
+    - title: "Track Your App Is Used: Metrics and Feedback"
+      isFree: false
+      skills:
+        - Analytics
+        - Google Analytics
+        - User Feedback
+        - Distribution
+      description: Understand how people use your product and what they actually think.
+      completionTime: '8:00'
+      steps:
+        - type: text
+          title: Why tracking matters
+          content:
+            body: |-
+              You've published your product, set up a domain, and started working on discoverability. But here's a question: **do you know what's actually happening?**
+
+              Are people visiting? Which pages do they look at? Where do they drop off? What features do they use most?
+
+              Without data, you're guessing. With data, you're making informed decisions about what to build next, what to fix, and where to focus your energy.
+
+              Tracking doesn't need to be complicated. A few basic metrics can tell you a lot.
+          subtitle: Stop guessing, start knowing
+        - type: text
+          title: Built-in Lovable metrics
+          content:
+            body: |-
+              Lovable provides **built-in metrics** for your published app. You can find them in the **Analytics** section of your project settings.
+
+              These metrics give you a basic picture of:
+              - How many people visit your app
+              - When they visit (time of day, day of week)
+              - Basic usage patterns
+
+              This is a great starting point. For most early-stage products, built-in metrics are enough to understand whether people are using your app and how often.
+
+              Check your metrics regularly. Even a quick weekly glance helps you spot trends and notice if something changes unexpectedly.
+          subtitle: What's already available
+        - type: text
+          title: Adding Google Analytics
+          content:
+            body: |-
+              For more detailed insights, you can add **Google Analytics** to your app. It's free and gives you data about:
+              - Where your visitors come from (search, social media, direct links)
+              - Which pages they visit and how long they stay
+              - What devices and browsers they use
+              - Where they drop off in your user flow
+
+              To set it up:
+              1. Create a free account at [analytics.google.com](https://analytics.google.com/)
+              2. Create a property for your app and get your Measurement ID (it looks like `G-XXXXXXXXXX`)
+              3. Prompt Lovable: `"Add Google Analytics with Measurement ID G-XXXXXXXXXX to the app"`
+
+              Lovable will add the tracking code to your app. After publishing, data will start appearing in your Google Analytics dashboard within a few hours.
+
+              **Remember:** If you add Google Analytics and have users in the EU or UK, make sure you have a cookie banner (Challenge 3 covered this).
+          subtitle: A step-by-step walkthrough
+        - type: text
+          title: What to track early on (and what to ignore)
+          content:
+            body: |-
+              It's tempting to get lost in dashboards and numbers. Here's what actually matters when you're starting out:
+
+              **Track these:**
+              - **Active users:** Are people coming back, or do they visit once and leave?
+              - **Traffic sources:** How are people finding you? This tells you where to focus your marketing efforts.
+              - **Key actions:** Are users completing the main action your app is designed for? (For Dalmie, that's adding book suggestions and voting.)
+
+              **Ignore these (for now):**
+              - Bounce rate on individual pages (too noisy with small traffic)
+              - Detailed demographic breakdowns (not useful until you have more visitors)
+              - Vanity metrics like total page views without context
+
+              Dalmie discovers that most of her users visit on Sunday evenings, right before their book club meetings. She starts sending a reminder to her book clubs on Sunday afternoons, and engagement goes up.
+
+              The point isn't to track everything. It's to find the signals that help you make better decisions.
+          subtitle: Focus on what helps you decide
+        - type: text
+          title: How to ask users for feedback
+          content:
+            body: |-
+              Analytics tell you **what** people do. Feedback tells you **why**.
+
+              The best feedback comes from real conversations. Here's how to ask without being annoying:
+
+              **Ask specific questions, not generic ones:**
+              - Instead of "What do you think?" try "What's the one thing you'd change?"
+              - Instead of "Is it good?" try "What frustrated you when you used it?"
+              - Instead of "Any feedback?" try "What did you try to do that didn't work?"
+
+              **Ways to collect feedback:**
+              - Have a short conversation (in person or video call) with 3-5 users
+              - Add a simple feedback form or link in your app
+              - Watch someone use your app without guiding them (you'll learn more from watching than asking)
+
+              Every piece of feedback is a gift. It tells you what to build next and what to fix first.
+          subtitle: The "why" behind the numbers
+        - type: text
+          title: Distribution channels to reach more people
+          content:
+            body: |-
+              Your product won't grow on its own. You need to actively share it where your target users spend time.
+
+              Here are some distribution channels to consider:
+              - **Social media:** Share your product story on LinkedIn, X, Instagram, or Facebook groups
+              - **Online communities:** Post in relevant forums, subreddits, or Slack groups
+              - **Product directories:** List on Product Hunt, Indie Hackers, or niche directories
+              - **Email:** If you have a mailing list, share updates and invite people to try your product
+              - **Partnerships:** Collaborate with complementary products or creators
+
+              Don't try all of these at once. Pick one or two channels where your target users are most active, and focus your energy there.
+
+              Dalmie joins a few online book club communities on Facebook and Reddit. She shares her story of building the Book Club Organiser and offers it for free to a few groups. Word starts spreading organically.
+          subtitle: Where to share your product
+        - type: quiz-question
+          title: "Quiz: Analytics"
+          content:
+            question: Which metric is most useful for an early-stage product?
+            options:
+              - Total page views
+              - Detailed demographic breakdowns
+              - Whether users are completing the main action your app is designed for
+              - Average time on page for every individual page
+            correctAnswer: 2
+            explanation: Early on, the most important thing to know is whether users are doing the thing your app was built for. Are they adding book suggestions? Voting? Completing the core action? This tells you whether your product is delivering value.
+        - type: quiz-question
+          title: "Quiz: User feedback"
+          content:
+            question: "What's a more effective way to ask for feedback than \"What do you think?\""
+            options:
+              - "What's the one thing you'd change?"
+              - "Do you like it?"
+              - "Is it good enough?"
+              - "Would you recommend it?"
+            correctAnswer: 0
+            explanation: Specific questions get specific answers. "What's the one thing you'd change?" gives you actionable feedback. Broad questions like "What do you think?" often result in polite but unhelpful responses like "It's nice!"
+        - type: reflection
+          title: "Your turn: Set up tracking and plan a feedback conversation"
+          content:
+            description: |-
+              Do two things:
+
+              1. **Set up analytics:** Check your built-in Lovable metrics, and if you're ready, add Google Analytics using the steps in this challenge.
+
+              2. **Plan a feedback conversation:** Think of one person you can ask for honest feedback. What specific questions will you ask them?
+
+              What did you set up, and who will you talk to?
+            placeholder: |-
+              I set up:
+
+              I'll ask feedback from:
+
+              My specific questions will be:
+            subDescription: Data and feedback together give you a clear picture of what's working and what needs attention. You're no longer building in the dark.
+        - type: challenge-end
+          title: "You know what's happening with your product! 📊"
+          content:
+            nextModule: "**Next:** Adopt the mindset and habits that turn a side project into a growing product."
+            description: You can now track usage and gather meaningful feedback.
+            subDescription: Built-in metrics, Google Analytics, specific feedback questions, and distribution channels. These tools help you make decisions based on evidence, not guesses.
+
+    - title: "Launch Early, Grow Steadily"
+      isFree: false
+      skills:
+        - Agile Development
+        - Launch Strategy
+        - Scaling
+        - Production Checklist
+      description: Adopt the mindset and habits that turn a side project into a growing product.
+      completionTime: '10:00'
+      steps:
+        - type: text
+          title: "The case for launching \"before you're ready\""
+          content:
+            body: |-
+              If you've been waiting for your product to be "done" before sharing it widely, here's a perspective shift: **your product will never feel done**. The apps you use every day, from Instagram to Google Maps, are constantly updated. "Done" doesn't exist in the world of digital products.
+
+              Launching early means:
+              - You learn from real users sooner
+              - You avoid building features nobody wants
+              - You build momentum instead of staying stuck in "almost ready" mode
+
+              There's a famous quote from Reid Hoffman, the founder of LinkedIn: *"If you're not embarrassed by the first version of your product, you've launched too late."*
+
+              This doesn't mean shipping broken software. It means shipping something that works, even if it's basic, and improving it based on what you learn.
+          subtitle: Perfect is the enemy of launched
+        - type: text
+          title: "How Buffer launched with almost nothing"
+          content:
+            body: |-
+              **Buffer**, the social media scheduling tool used by millions, started with a landing page and nothing else.
+
+              The founder, Joel Gascoigne, created a simple page that described what Buffer would do and had a "Plans and Pricing" button. When people clicked, they saw a message: "We're not quite ready yet. Leave your email and we'll let you know when we launch."
+
+              That was the entire product. A landing page and an email signup form.
+
+              But it answered the most important question: **do people actually want this?** Enough people signed up that Joel knew it was worth building. He then created a basic version, launched it to those email subscribers, and grew from there.
+
+              The lesson? You don't need everything figured out before you launch. You need enough to test whether people care. Start small, learn fast, and grow from what works.
+          subtitle: A real-world example of launching lean
+        - type: text
+          title: "Agile development: what it means for solo builders"
+          content:
+            body: |-
+              **Agile development** is a way of building software in short cycles instead of one big push. Professional teams use agile frameworks with sprints, standups, and retrospectives. But for solo builders, the core idea is what matters:
+
+              **Build, measure, learn, repeat.**
+
+              1. **Build** one small feature or improvement
+              2. **Measure** whether it works (check your analytics, test it yourself)
+              3. **Learn** from what happened (did users engage with it? Did it break something?)
+              4. **Repeat** with the next most important thing
+
+              This cycle keeps you moving forward without getting overwhelmed. Instead of planning months of features, you focus on the next small step.
+
+              Dalmie adopts this rhythm. Each week, she picks one improvement based on user feedback, builds it, publishes it, and checks how it's received. Her app gets better every week, and her users notice.
+          subtitle: Build, measure, learn, repeat
+        - type: text
+          title: Scaling with Lovable
+          content:
+            body: |-
+              As your product grows, you might wonder: **can Lovable handle more users?**
+
+              For most products, the answer is yes. Lovable apps are hosted on infrastructure designed to handle growth. And if you're using Lovable Cloud (Supabase) for your backend, it also scales as your usage increases.
+
+              **One thing to watch: the 512MB deployment limit.**
+
+              Lovable has a hard limit of 512MB on the encoded project size for deployment. You're unlikely to hit this with code and normal assets, but you might run into it if you store large files directly in your project, like MP4 videos, many GIFs, or high-resolution images.
+
+              If you're approaching this limit:
+              - Host large videos on platforms like YouTube or Vimeo and embed them
+              - Use an image hosting service or CDN for large image collections
+              - Compress images before adding them to your project
+
+              For most products, this limit won't be a concern. But it's good to know about before it surprises you.
+          subtitle: What to know as your user base grows
+        - type: text
+          title: Your production-ready checklist
+          content:
+            body: |-
+              Here's everything you've learned in this micro-course, collected into one checklist. Use it every time you prepare a product for launch:
+
+              **Before publishing:**
+              - ☐ Switch to production API keys
+              - ☐ Create and upload a favicon
+              - ☐ Set meta tags (title, description, share image)
+              - ☐ Check your app on mobile and desktop
+
+              **Professional touches:**
+              - ☐ Connect a custom domain
+              - ☐ Set up Google site verification
+              - ☐ Add privacy policy and terms of use
+              - ☐ Add footer links to legal pages
+              - ☐ Add a cookie banner (if needed)
+
+              **Discoverability:**
+              - ☐ Optimise pages for SEO (headings, alt text, clear content)
+              - ☐ Submit sitemap to Google Search Console
+              - ☐ Register on Google Business Profile (if relevant)
+              - ☐ List on at least one product directory
+
+              **Growth:**
+              - ☐ Set up analytics (built-in + Google Analytics)
+              - ☐ Plan your first feedback conversation
+              - ☐ Choose one distribution channel to focus on
+
+              Save this checklist. Come back to it whenever you launch something new.
+          subtitle: Everything in one place
+        - type: quiz-question
+          title: "Quiz: Launching early"
+          content:
+            question: Why is it better to launch early than to wait until your product feels "done"?
+            options:
+              - Because users prefer unfinished products
+              - Because you learn from real users sooner and avoid building features nobody wants
+              - Because Lovable gives you more credits for launching quickly
+              - Because search engines rank new products higher
+            correctAnswer: 1
+            explanation: Launching early lets you learn from real users before investing too much time in features that might not matter. You can always improve based on what you learn. The longer you wait for "perfect," the more time you risk spending on the wrong things.
+        - type: quiz-question
+          title: "Quiz: The agile cycle"
+          content:
+            question: What is the core cycle of agile development for solo builders?
+            options:
+              - Plan everything, build everything, launch once
+              - Write detailed specifications, then hand them to AI
+              - Build fast, ignore feedback, add more features
+              - Build one thing, measure the result, learn from it, repeat
+            correctAnswer: 3
+            explanation: The agile cycle for solo builders is "build, measure, learn, repeat." You build one small feature, check if it works, learn from the result, and then decide what to do next. This keeps you moving forward without getting overwhelmed.
+        - type: reflection
+          title: "Your turn: Create your launch plan"
+          content:
+            description: |-
+              Think about the next step for your product:
+
+              1. If you haven't launched yet, set a launch date (make it soon!)
+              2. Pick one distribution channel where your target users spend time
+              3. Decide on your first "build, measure, learn" cycle: what's the one thing you'll improve this week?
+
+              Write down your plan.
+            placeholder: |-
+              My launch date:
+
+              My distribution channel:
+
+              This week I'll improve:
+            subDescription: Having a plan, even a simple one, makes the difference between "someday" and "this week." You've got the tools. Now it's time to use them.
+        - type: course-end
+          title: "Congratulations! You're ready to grow your product! 🎉"
+          content:
+            description: "Look at how far you've come:"
+            subDescription: |-
+              ✓ **Published your app** with proper API keys, a favicon, and meta tags
+
+              ✓ **Set up a custom domain** to give your product a professional address
+
+              ✓ **Added legal pages** so visitors feel safe and trust your product
+
+              ✓ **Started your SEO and GEO foundation** so people can find you through search engines and AI tools
+
+              ✓ **Set up analytics and feedback loops** so you know what's working and what needs attention
+
+              ✓ **Adopted the agile mindset** of building, measuring, learning, and repeating
+
+              You started with an app that lived only in your Lovable editor. Now you have a live product with a professional presence, legal foundations, discoverability, and a plan for growth.
+
+              Most importantly, you've learned that launching is not the end. It's the beginning. Every week, you can make your product a little better, reach a few more users, and learn something new.
+
+              Good luck, and happy growing! 🚀
+            nextModule: |-
+              **Keep building:**
+
+              - If you haven't taken it yet, our [Build a Valuable Product: How to Break Down Your Idea for Vibe Coding](https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview) micro-course helps you structure your next big idea into small, promptable pieces.
+              - Our [Fix Bugs with Confidence: Debugging Your Lovable App](https://littleparrot.app/aaab45b7-209a-4578-a515-3e55687f0c53/course-overview) micro-course teaches you how to handle problems when they come up.
+              - Check out our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) micro-course to communicate more effectively with Lovable by understanding core software concepts.
+  titleSplit:
+    - 'Launch and Grow'
+    - 'Your Lovable App'
+  description: You've built an app in Lovable. Now turn it into a real product. In six challenges, you'll publish to production, set up a custom domain, add legal pages, make your product discoverable through search engines and AI, track how it's being used, and plan your growth strategy. By the end, you'll have a live, trustworthy product that people can find and use, and a repeatable checklist for launching anything you build next.

@@ -15,7 +15,9 @@
       "WebFetch(domain:docs.lovable.dev)",
       "WebFetch(domain:freelanceunlocked.com)",
       "WebFetch(domain:www.freelanceunlocked.com)",
-      "WebFetch(domain:2025.freelanceunlocked.com)"
+      "WebFetch(domain:2025.freelanceunlocked.com)",
+      "Bash(python3:*)",
+      "Bash(npx:*)"
     ],
     "deny": [],
     "ask": []
