@@ -57,36 +57,29 @@ export const LessonVideoLovablePublish01: React.FC<z.infer<typeof LessonVideoPro
             <TypingText delay={20}>Overview</TypingText>
           </FullScreenText>
         </Series.Sequence>
-        <Series.Sequence durationInFrames={70}>
-          <FullScreenImage src={staticFile('video-lovable-basics-01/section-01-idea.gif')} fit="contain" />
+        <Series.Sequence durationInFrames={72}>
+          <FullScreenImage src={staticFile('video-lovable-publish-01/section-01-built.gif')} fit="contain" />
         </Series.Sequence>
-        <Series.Sequence durationInFrames={167}>
-          <ImageSteps
-            allDuration={167}
-            images={[
-              { image: staticFile('video-lovable-basics-01/section-02-women-group.mp4'), delay: 0, offset: 60 },
-              { image: staticFile('video-lovable-basics-01/section-02-business.mp4'), delay: 63 },
-              { image: staticFile('video-lovable-basics-01/section-02-solve.mp4'), delay: 87 },
-            ]}
-          />
+        <Series.Sequence durationInFrames={53}>
+          <FullScreenImage src={staticFile('video-lovable-publish-01/section-02-congrats.gif')} fit="contain" />
         </Series.Sequence>
-        <Series.Sequence durationInFrames={56}>
-          <FullScreenImage src={staticFile('video-lovable-basics-01/section-03-delete-computer.gif')} fit="contain" />
+        <Series.Sequence durationInFrames={214}>
+          <FullScreenImage src={staticFile('video-lovable-publish-01/section-03-boring.gif')} fit="contain" />
         </Series.Sequence>
-        <Series.Sequence durationInFrames={84}>
-          <FullScreenImage src={staticFile('video-lovable-basics-01/section-04-stuck.gif')} fit="contain" />
+        <Series.Sequence durationInFrames={38}>
+          <FullScreenImage src={staticFile('video-lovable-publish-01/section-04-share.gif')} fit="contain" />
         </Series.Sequence>
-        <Series.Sequence durationInFrames={58}>
-          <FullScreenImage src={staticFile('video-lovable-basics-01/section-05-transformation.gif')} fit="contain" />
+        <Series.Sequence durationInFrames={111}>
+          <FullScreenImage src={staticFile('video-lovable-publish-01/section-05-wondering.gif')} fit="contain" />
         </Series.Sequence>
-        <Series.Sequence durationInFrames={58}>
-          <FullScreenImage src={staticFile('video-lovable-basics-01/section-06-typing.gif')} fit="contain" />
+        <Series.Sequence durationInFrames={48}>
+          <FullScreenImage src={staticFile('video-lovable-publish-01/section-06-change.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={51}>
+          <FullScreenImage src={staticFile('video-lovable-publish-01/section-07-small-cat.gif')} fit="contain" />
         </Series.Sequence>
         <Series.Sequence durationInFrames={66}>
-          <FullScreenImage src={staticFile('video-lovable-basics-01/section-07-typing.gif')} fit="contain" />
-        </Series.Sequence>
-        <Series.Sequence durationInFrames={86}>
-          <FullScreenImage src={staticFile('video-lovable-basics-01/section-08-internet.gif')} fit="contain" />
+          <FullScreenImage src={staticFile('video-lovable-publish-01/section-08-built.gif')} fit="contain" />
         </Series.Sequence>
         <Series.Sequence durationInFrames={76}>
           <FullScreenImage src={staticFile('video-lovable-basics-01/section-09-exactly.gif')} fit="contain" />
