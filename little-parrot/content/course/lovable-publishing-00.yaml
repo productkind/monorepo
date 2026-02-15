@@ -513,6 +513,27 @@ course:
               ```
           subtitle: Help Google understand your product
         - type: text
+          title: "Heading tags: helping search engines read your pages"
+          content:
+            body: |-
+              We mentioned **heading tags** (h1, h2, h3) in the previous step. These are worth a closer look, because they're one of the easiest ways to improve your SEO.
+
+              Heading tags tell search engines **what your page is about and how the content is structured**. Think of them like a table of contents in a book:
+              - **h1** is the main title of the page (there should be only one per page)
+              - **h2** tags are section headings
+              - **h3** tags are sub-sections within an `h2`
+
+              Search engines **use this hierarchy** to understand which parts of your page are the most important. If your headings are clear and descriptive, Google has a much easier time figuring out what your page offers.
+
+              The good news is that Lovable can sort this out for you. Try this prompt:
+
+              ```
+              Review all pages in the app and fix the heading tag hierarchy. Each page should have exactly one h1 tag as the main title, h2 tags for section headings, and h3 tags for sub-sections. List what you changed.
+              ```
+
+              *Curious about HTML and how web pages are built? Our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) micro-course explains these concepts in friendly terms.*
+          subtitle: Structure your content for Google
+        - type: text
           title: Setting expectations about timing
           content:
             body: |-
