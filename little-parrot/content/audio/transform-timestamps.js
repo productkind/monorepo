@@ -65,7 +65,7 @@ function processCharacterData(data) {
   return words;
 }
 
-const videoName = 'lovable-basics-1-elizabeth';
+const videoName = 'lovable-publish-1-elizabeth';
 
 // --- Main execution block ---
 async function main() {
