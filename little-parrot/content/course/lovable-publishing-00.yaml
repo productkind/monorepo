@@ -368,7 +368,7 @@ course:
           title: Generate your privacy policy and terms
           content:
             body: |-
-              Writing legal documents from scratch sounds intimidating, but you don't have to. You could **use an AI chatbot** (like Gemini, Claude or ChatGPT) to get started, before investing into consulting with a lawyer. You can prompt it with:
+              Writing legal documents from scratch sounds intimidating, but you don't have to. You could **use an AI assistant** (like Gemini, Claude or ChatGPT) to get started, before investing into consulting with a lawyer. You can prompt it with:
 
               ```
               You are an expert lawyer. What information do you need from me to write a Privacy Policy and Terms of Use for my [brief description of your product] where I collect [data you collect, e.g., email addresses, customers' payment methods]? 
@@ -378,7 +378,7 @@ course:
               
               If you want something more trustworthy, you could use a tool like [Termly](https://termly.io/). It generates legal documents based on your answers to a questionnaire. It's free up to one document, and the generated documents are more reliable than a generic AI response.
 
-              **Tip:** If you're using Google Analytics or Lovable Cloud (for data storage and authentication), you are collecting user data. Make sure to mention these in the questionnaire or the AI chatbot.
+              **Tip:** If you're using Google Analytics or Lovable Cloud (for data storage and authentication), you are collecting user data. Make sure to mention these in the questionnaire or the AI assistant.
 
               *Important note: This step is for educational purposes only. It is not legal advice.*
           subtitle: Legal pages to get started with
@@ -479,16 +479,16 @@ course:
           title: How users actually find websites
           content:
             body: |-
-              Right now, the only way someone can reach your product is if you share the link directly. That's fine for your first few users, but it doesn't scale.
+              Right now, the only way someone can reach your product is if you share the link directly. That's fine for your first few users, but it **doesn't scale**.
 
-              People find websites through several channels:
+              People **find websites through several channels:**
               - **Search engines** like Google (someone types "book club organiser app")
-              - **AI assistants** like ChatGPT, Perplexity, or Google's AI Overview (someone asks "what's a good tool for organising a book club?")
+              - **AI assistants** like Claude, Perplexity, or Google's AI Overview (someone asks "what's a good tool for organising a book club?")
               - **Social media** (someone shares your link on LinkedIn, X, or Instagram)
               - **Word of mouth** (Sarah tells another book club organiser about it)
               - **Backlinks** from other websites that mention your product
 
-              In this challenge, you'll learn how to improve your chances of being found through search engines and AI tools. The social media and word-of-mouth parts come down to marketing, which is a whole topic on its own.
+              In this challenge, you'll learn **how to improve your chances of being found** through search engines and AI tools. The social media and word-of-mouth parts come down to marketing, which is a whole topic on its own.
           subtitle: Beyond sharing links by hand
         - type: text
           title: SEO basics for your Lovable app
@@ -496,15 +496,21 @@ course:
             body: |-
               **SEO** stands for Search Engine Optimisation. It's the practice of making your website easier for search engines like Google to find and understand.
 
-              The good news? You've already done some SEO work. Setting your meta tags (title and description) in Challenge 1 was your first step.
+              The good news? You've already done some SEO work. Setting your meta tags (title and description) in *Challenge 1* was your first step.
 
-              Here are more things you can do:
+              Here are **more things you can do**:
               - **Use clear page titles** that describe what each page does
               - **Write descriptive headings** using heading tags (h1, h2, h3) in your content
-              - **Add alt text to images** by prompting Lovable: `"Add descriptive alt text to all images in the app for accessibility and SEO"`
-              - **Make your app fast** by keeping images small (compress them before uploading) and avoiding unnecessary complexity
+              - **Add alt text to images** by prompting Lovable:
+              ```
+              Add descriptive alt text to all images in the app for accessibility and SEO.
+              ```
+              - **Make your app fast** by keeping images small (compress them before uploading)
 
-              You can also ask Lovable to do a general review: `"Review this page for SEO best practices and suggest improvements."`
+              *You can also ask Lovable to do a general review:*
+              ```
+              Review this app for SEO best practices and suggest improvements.
+              ```
           subtitle: Help Google understand your product
         - type: text
           title: Setting expectations about timing
