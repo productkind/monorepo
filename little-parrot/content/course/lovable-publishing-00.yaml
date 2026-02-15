@@ -99,56 +99,59 @@ course:
             body: |-
               **Here's how to find and update your API keys in Lovable:**
 
-              1. In your Lovable project, open the **Cloud** tab (click the **+** button next to Preview mode at the top of the screen)
-              2. Go to the **Secrets** section. You'll see a list of all the secrets (API keys) your app uses. Some keys are added automatically by Lovable Cloud and cannot be deleted. (These will have a "Lovable" label next to them.)
-              3. To update a key you added, copy its name (e.g., `STRIPE_API_KEY`), paste it in the **Name** field and add the corresponding production key from your external service, and paste that in the value field. Make sure to save your changes. This will override the previously saved key.
+              1. In your Lovable project, open the **Cloud** tab (click the **+** button next to Preview at the top of the screen)
+              2. Go to the **Secrets** section. You'll see a list of all the secrets (API keys) your app uses. Some keys are added automatically by Lovable and cannot be deleted. (These will have a *Lovable* label next to them.)
+              3. To **update a key** you added, copy its name (e.g., `STRIPE_API_KEY`), paste it in the **Name** field. Then add the corresponding production API key from your external service, and paste that in the **Value** field. Make sure to save your changes. This will override the previously saved key.
 
-              If your app doesn't use any external services yet, you can skip this step. Lovable Cloud's own keys are managed automatically.
+              If your app doesn't use any external services yet, you can skip this step. Lovable's own API keys are managed automatically.
             imageUrl: /images/lovable-publishing-00/update-api-key.webp
           subtitle: Finding the Secrets panel
         - type: text
           title: Give your app a favicon
           content:
             body: |-
-              A **favicon** is the small icon that appears in browser tabs next to your app's name. Without one, your app shows a generic icon, which makes it look unfinished.
+              A **favicon** is the small icon that appears in browser tabs next to your app's name. Without one, your app shows Lovable's icon, which is a bit misleading for your users.
 
-              You can create a favicon for free using tools like [favicon.io](https://favicon.io/) or [realfavicongenerator.net](https://realfavicongenerator.net/). Upload your logo, your brand initials, or a simple icon that represents your product. These tools will generate the right file format and sizes for you automatically.
+              You can **create a favicon for free** using tools like [realfavicongenerator.net](https://realfavicongenerator.net/). Upload your logo, your brand initials, or a simple icon that represents your product. These tools will generate the right file format and sizes for you automatically.
 
-              To set your favicon in Lovable:
-              1. Click the **Publish** button in the top-right corner
-              2. Open the **Website info** section
-              3. Click the favicon area and upload your generated file
-
-              It's a small detail, but it makes a noticeable difference. When Sarah sees the Book Club Organiser tab in her browser with a proper icon, it feels like a real product.
+              It's a small detail, but it **makes a noticeable difference**. When Sarah sees the Book Club Organiser tab in her browser with a proper icon, it feels like a real product. Let's see how to set it.
+            imageUrl: /images/lovable-publishing-00/favicon.webp
           subtitle: The small icon that makes a big difference
+        - type: text
+          title: Set your favicon
+          content:
+            body: |-
+              If you **haven't published** yet:
+              1. Click the **Publish** button in the top-right corner
+              2. Follow the steps until you reach the one called **Website info**
+              2. In the **Icon & title** section, click the favicon area (a Lovable logo appears there by default) and upload your generated file
+
+              If you've **already published**:
+              1. Click the **Publish** button in the top-right corner
+              2. Click the **Edit settings** button
+              2. In the **Website info** section, click the pencil icon
+              3. In the **Icon & title** section, click the favicon area and upload your generated file
+
+              You can **change your favicon at any time**, so don't worry about getting it perfect on the first try. Once you set your custom favicon, publish your app and it will show up in the browser tab when users visit your app.
+            imageUrl: /images/lovable-publishing-00/upload-favicon.webp
+          subtitle: To set your favicon in Lovable
         - type: text
           title: Set your meta tags
           content:
             body: |-
-              **Meta tags** control how your app appears when someone shares the link on social media, WhatsApp, or Slack. They include:
+              **Meta tags** control how your app appears when someone shares the link on social media, or messaging services (like WhatsApp, or Slack). They include:
 
               - **Title:** The name that appears in link previews and browser tabs
               - **Description:** A short summary that appears below the title
-              - **Share image:** The image that shows in social media previews
+              - **Social image:** The image that shows in social media previews
 
               You can set all of these in the **Website info** section of the Publish panel (the same place you uploaded your favicon).
 
               Make your title clear (e.g., "Book Club Organiser") and your description inviting (e.g., "The easiest way to pick your book club's next read"). For the share image, use a 1200x630 pixel image for best results on social media. You can create one for free with tools like [Canva](https://www.canva.com/).
 
-              When someone shares your link, these details are the first impression.
+              When someone shares your link, these details are the **first impression**.
+            imageUrl: /images/lovable-publishing-00/set-meta-tags.webp
           subtitle: Control how your link looks when shared
-        - type: text
-          title: "Dalmie publishes the Book Club Organiser"
-          content:
-            body: |-
-              Dalmie checks her API keys, uploads a favicon with a little book icon, and writes meta tags that describe the Book Club Organiser clearly. She clicks **Publish**.
-
-              A few seconds later, her app has a real URL. She sends it to Sarah again.
-
-              This time, Sarah sees a polished link preview in WhatsApp with the app name, description, and a nice share image. She taps it, and the Book Club Organiser loads with a proper favicon in the browser tab. "This looks great!" Sarah says.
-
-              That's the difference a few small steps make. Your app goes from "something I'm tinkering with" to "a product someone would actually use."
-          subtitle: From tinkering to professional
         - type: quiz-question
           title: "Quiz: Preview vs production"
           content:
@@ -159,7 +162,7 @@ course:
               - Preview is your testing environment, production is what real users see
               - Preview shows code, production shows the app
             correctAnswer: 2
-            explanation: Preview is where you test changes safely. Production is the live version your users see. Changes only reach production when you click Publish, which means you can experiment in preview without affecting real users.
+            explanation: Preview is the environment where you build your app and test changes safely. Production is the live version your users see. Changes only reach production when you click Publish, which means you can experiment in preview without affecting real users.
         - type: quiz-question
           title: "Quiz: API keys"
           content:
@@ -170,29 +173,25 @@ course:
               - Test keys make the app slower
               - Production keys unlock more features in Lovable
             correctAnswer: 0
-            explanation: Test API keys are designed for development, not real users. If you forget to switch to production keys, features like data storage, emails, or payments might not work, even though the app looks fine on the surface.
+            explanation: Test API keys are designed for development and testing your app works as expected, not real users. If you forget to switch to production keys, features like payments, or sending emails will not work, even though the app looks fine on the surface.
         - type: reflection
           title: "Your turn: Publish your app"
           content:
             description: |-
-              Time to go live! Follow these steps:
+              Time to go live!
 
-              1. Check your API keys in the Secrets panel
-              2. Create and upload a favicon
-              3. Set your title, description, and share image in Website info
-              4. Click **Publish**
-              5. Share the link with one person and watch them use it
-
-              What was their first reaction? What did they notice?
+              What are you building, and who did you share it with, or are planning to share it with?
             placeholder: |-
-              Their first reaction was...
+              I'm building:
 
-              They noticed...
-            subDescription: You've taken your app from preview to production. That's a real milestone. The next challenges will help you make it even more professional and discoverable.
+              I shared it with / I'm planning to share it with:
+
+              Their first reaction was:
+            subDescription: You've taken your app from preview to production. That's a real milestone.
         - type: challenge-end
           title: "Your app is live on the internet! 💫"
           content:
-            nextModule: "**Next:** Give your product a proper home with a custom domain."
+            nextModule: "**Next:** Make your digital product even more professional, and give it a proper home with a custom domain."
             description: You've published your first production-ready app.
             subDescription: You've checked your API keys, added a favicon, set meta tags, and published. Someone out there is using something you built. That's worth celebrating.
 
@@ -308,11 +307,11 @@ course:
 
               If you're ready to commit, buy it and connect it to your Lovable app following the steps in this challenge. If you're not ready to buy yet, that's fine too. Write down your top three choices.
 
-              What domain did you choose (or shortlist)?
+              What domain did you choose (or shortlist), and what made you choose this name?
             placeholder: |-
               My domain choice:
 
-              Why I chose it:
+              I chose this name because:
             subDescription: Having a custom domain is a significant step. Even if you're still deciding, thinking about your domain name helps you think about your brand.
         - type: challenge-end
           title: "Your product has a proper address! 🏠"
@@ -450,11 +449,11 @@ course:
 
               If you're collecting data from users in the EU or UK, consider adding a cookie banner too.
 
-              What did you find surprising about the process?
+              What data does your app collect from users?
             placeholder: |-
-              I was surprised by...
+              My app collects:
 
-              The hardest part was...
+              I added these legal pages:
             subDescription: Legal pages might not be the most exciting part of building a product, but they're an important foundation. You're building something people can trust.
         - type: challenge-end
           title: "Your product looks trustworthy! 🛡️"
@@ -603,11 +602,11 @@ course:
               3. Register on Google Business Profile (if relevant)
               4. List your product on one directory (like Product Hunt or a niche directory)
 
-              Which actions did you take?
+              How do you expect your users to find your product?
             placeholder: |-
-              I took these actions:
+              I expect my users to find me through:
 
-              My next SEO step will be:
+              I took these SEO actions:
             subDescription: SEO is a marathon, not a sprint. Every small action you take now compounds over time. You've planted seeds that will grow into organic traffic.
         - type: challenge-end
           title: "People can start finding you! 🔍"
@@ -769,13 +768,13 @@ course:
 
               2. **Plan a feedback conversation:** Think of one person you can ask for honest feedback. What specific questions will you ask them?
 
-              What did you set up, and who will you talk to?
+              Do you have users already? If yes, how many and how did they find you?
             placeholder: |-
-              I set up:
+              My users so far:
+
+              They found me through:
 
               I'll ask feedback from:
-
-              My specific questions will be:
             subDescription: Data and feedback together give you a clear picture of what's working and what needs attention. You're no longer building in the dark.
         - type: challenge-end
           title: "You know what's happening with your product! 📊"
@@ -923,13 +922,13 @@ course:
               2. Pick one distribution channel where your target users spend time
               3. Decide on your first "build, measure, learn" cycle: what's the one thing you'll improve this week?
 
-              Write down your plan.
+              What's the one thing holding you back from launching (or growing) right now?
             placeholder: |-
+              What's holding me back:
+
               My launch date:
 
               My distribution channel:
-
-              This week I'll improve:
             subDescription: Having a plan, even a simple one, makes the difference between "someday" and "this week." You've got the tools. Now it's time to use them.
         - type: course-end
           title: "Congratulations! You're ready to grow your product! 🎉"
