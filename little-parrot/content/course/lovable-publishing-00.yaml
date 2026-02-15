@@ -107,6 +107,28 @@ course:
             imageUrl: /images/lovable-publishing-00/update-api-key.webp
           subtitle: Finding the Secrets panel
         - type: text
+          title: Your app's first address
+          content:
+            body: |-
+              When you publish your app, Lovable gives it a **subdomain URL** like `book-club-picks.lovable.app`. This is the first address your app will have on the internet, and it's completely free.
+
+              A **subdomain** is the part before the main domain name. In `book-club-picks.lovable.app`, `book-club-picks` is the subdomain and `lovable.app` is Lovable's domain. Think of it like an apartment number in a building: `lovable.app` is the building, and your subdomain is your own front door within it.
+          imageUrl: /images/lovable-publishing-00/lovable-subdomain.webp
+          subtitle: Your free Lovable subdomain
+        - type: text
+          title: Customising your subdomain
+          content:
+            body: |-
+              You can **customise this subdomain** to make it cleaner and more recognisable:
+              1. Click the **Publish** button in the top-right corner
+              2. If you *haven't published yet*, you'll see the **Website address**, click the pencil icon to change your subdomain. If you've *already published*, click **Edit settings**, then click the pencil icon in the **URL** section
+              3. **Change the subdomain** to something short and descriptive (e.g., `bookcluborganiser.lovable.app`)
+              4. Save your changes by **clicking the checkmark icon**
+
+              This URL works perfectly for **sharing your app early on**. Later, in *Challenge 2*, you'll learn how to connect a custom domain (like `bookcluborganiser.com`) if you want an even more professional address. But the Lovable subdomain is a great starting point, and you can keep using it for as long as you like.
+          imageUrl: /images/lovable-publishing-00/lovable-subdomain-updated.webp
+          subtitle: Make it your own
+        - type: text
           title: Give your app a favicon
           content:
             body: |-
@@ -193,7 +215,7 @@ course:
           content:
             nextModule: "**Next:** Make your digital product even more professional, and give it a proper home with a custom domain."
             description: You've published your first production-ready app.
-            subDescription: You've checked your API keys, added a favicon, set meta tags, and published. Someone out there is using something you built. That's worth celebrating.
+            subDescription: You've checked your API keys, customised your Lovable subdomain, added a favicon, set meta tags, and published. Your app has its first real address on the internet, and someone out there can use something you built. That's worth celebrating.
 
     - title: "Claim Your Corner of the Internet: Custom Domains"
       isFree: false
@@ -208,7 +230,7 @@ course:
           title: Why a custom domain is useful
           content:
             body: |-
-              Right now, your app lives at something like `book-club-picks.lovable.app`. That works, but it's not very memorable. And when Sarah shares it with other book club organisers, they might hesitate to click a link they don't recognise.
+              Right now, your app lives at something like `book-club-picks.lovable.app`. That works, but it might be loo long.
 
               A **custom domain** like `bookcluborganiser.com` gives your product:
               - **Credibility:** It looks like a real business, not a side project
@@ -223,7 +245,7 @@ course:
             body: |-
               Before you buy, you need to check if your desired domain name is available. Here are a few ways to do this:
 
-              - Visit a domain registrar like [Namecheap](https://www.namecheap.com/), [GoDaddy](https://www.godaddy.com/), or [Google Domains](https://domains.google/) and search for your name
+              - Visit a domain registrar like [GoDaddy](https://www.godaddy.com/) and search for your desired domain name
               - Try variations if your first choice is taken (e.g., `getbookclub.com`, `mybookclub.app`, `bookclubhq.com`)
 
               **Tips for choosing a good domain:**
@@ -231,6 +253,8 @@ course:
               - Avoid hyphens and numbers if possible
               - `.com` is the most recognised, but `.app`, `.io`, and country-specific domains (like `.co.uk`) work well too
               - Say it out loud. If you have to spell it for someone, it might be too complicated
+
+              **Pro tip:** Check social media platforms too. You want to make sure you can get a matching handle (like @bookcluborganiser) on Instagram, LinkedIn, etc.
           subtitle: Finding the right name
         - type: text
           title: How to buy and connect a domain
@@ -238,13 +262,17 @@ course:
             body: |-
               Once you've found an available domain, buying it takes a few minutes on the registrar's website. Most domains cost between $10-15 per year.
 
-              To connect it to your Lovable app:
-              1. Click the **Publish** button in Lovable
-              2. Find the **Custom domain** section
-              3. Enter your domain name
-              4. Lovable will show you the **DNS records** you need to add (usually a CNAME or A record)
-              5. Go to your domain registrar's website, log in, and look for **DNS Management**, **DNS Settings**, or **Advanced DNS** (the exact name varies, but it's usually in the domain's settings page)
-              6. Add the records exactly as Lovable shows them. You'll typically need to enter a **Type** (like CNAME), a **Host** (like `@` or `www`), and a **Value** (the address Lovable gives you)
+              You can **set a custom domain after publishing your app in Lovable**.
+
+              To **connect your custom domain** to your Lovable app:
+              1. Click the **Publish** button in your Lovable project
+              2. Click the **Edit settings** button
+              3. In the **URL** section, click the pencil icon
+              4. Click **Add custom domain**
+              5. In the **Add existing domain** section, click **Connect domain**
+              6. In the popup, **enter the domain** you bought (e.g., `bookcluborganiser.com`) and click **Connect domain**, then follow the instructions (you will have to log into your domain registrar, like GoDaddy, to connect your domain)
+
+              Lovable will take care of the necessary changes. 
 
               DNS changes can take a few minutes to a few hours to take effect. Don't worry if it doesn't work immediately. This is called **DNS propagation** and it's completely normal.
 
@@ -255,61 +283,54 @@ course:
           content:
             body: |-
               While you're in your domain settings, it's a good time to set up **Google site verification**. This proves to Google that you own the domain, which is useful for:
-              - Submitting your site to Google Search (so it can be found)
-              - Accessing Google Search Console (to see how people find you)
-              - Setting up Google Analytics later
+              - Submitting your site to **Google Search** (so it can be found)
+              - Accessing **Google Search Console** (to see how people find you)
+              - Setting up **Google Analytics** later
 
-              To verify your domain:
+              **To verify your domain:**
               1. Go to [Google Search Console](https://search.google.com/search-console)
-              2. Add your domain
-              3. Google will give you a TXT record to add to your DNS settings
-              4. Add it in your domain registrar, the same place you added the Lovable DNS records
+              2. **Sign in** with your Google account
+              3. Add your **domain**
+              4. Click **Start verification** 
+              5. **Sign into** your domain registrar (like GoDaddy)
+              6. **Connect** to verify your domain (Google will automatically check for the verification record in your DNS settings)
+              7. Once Google confirms the record is found, **your domain is verified!**
 
               This step takes less than five minutes and unlocks tools you'll use in later challenges.
           subtitle: Prove ownership to Google
-        - type: text
-          title: "Dalmie's custom domain"
-          content:
-            body: |-
-              Dalmie registers `bookcluborganiser.com` and connects it to her Lovable app. She also adds the Google site verification record while she's in the DNS settings.
-
-              When she shares the new URL with Sarah, Sarah's reaction is immediate: "This looks so professional! I've been telling my friends about it." The link is easy to remember, easy to share, and looks trustworthy.
-
-              Even the small step of having a custom domain changes how people perceive your product. It signals that you're serious about what you're building.
-          subtitle: A proper home for the Book Club Organiser
         - type: quiz-question
           title: "Quiz: Custom domains"
           content:
             question: What's the most important benefit of a custom domain for a new product?
             options:
-              - It makes the app load faster
+              - It makes the your product load faster
               - It builds credibility and makes the product easier to share
-              - It's required by Lovable before you can publish
-              - It protects your app from hackers
+              - It's required by Lovable before you can publish your app
+              - It's the only way for users you don't know to access your app 
             correctAnswer: 1
             explanation: A custom domain makes your product look professional and trustworthy. People are more likely to click, share, and remember a clean domain name. It's not required for publishing, but it's one of the most impactful steps for growth.
         - type: quiz-question
           title: "Quiz: DNS changes"
           content:
-            question: What should you do if your custom domain doesn't work immediately after adding DNS records?
+            question: What should you do if your custom domain doesn't work immediately after connecting it with Lovable?
             options:
-              - Delete the records and start over
+              - Delete the domain you connected to Lovable and start over
               - Contact Lovable support immediately
-              - Change your domain name to something else
+              - Change your domain name to something else in the Lovable settings
               - Wait a few hours, as DNS changes can take time to propagate
             correctAnswer: 3
-            explanation: DNS changes can take anywhere from a few minutes to several hours to take effect across the internet. This is called DNS propagation and it's completely normal. Give it some time before troubleshooting.
+            explanation: When you add your custom domain to Lovable, it adds a record to the internet's phonebook. This requires a DNS (Domain Name System) change. DNS changes can take anywhere from a few minutes to several hours to take effect across the internet. This is called DNS propagation and it's completely normal. Give it some time before troubleshooting.
         - type: reflection
           title: "Your turn: Choose your domain"
           content:
             description: |-
-              Search for a domain name for your product on a registrar like Namecheap or GoDaddy.
+              Search for a domain name for your product on a registrar like GoDaddy.
 
               If you're ready to commit, buy it and connect it to your Lovable app following the steps in this challenge. If you're not ready to buy yet, that's fine too. Write down your top three choices.
 
-              What domain did you choose (or shortlist), and what made you choose this name?
+              What domain did you choose (or shortlist), and what made you choose this name? If you decided against a custom domain for now, what are your reasons?
             placeholder: |-
-              My domain choice:
+              My domain choice / I decided against a custom domain for now because:
 
               I chose this name because:
             subDescription: Having a custom domain is a significant step. Even if you're still deciding, thinking about your domain name helps you think about your brand.
