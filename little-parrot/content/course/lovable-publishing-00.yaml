@@ -357,129 +357,111 @@ course:
             body: |-
               When someone visits your product for the first time, they're making a quick decision: **do I trust this enough to use it?**
 
-              Legal pages like a privacy policy and terms of use aren't exciting, but they signal that you take your product (and your users) seriously. They tell visitors:
+              Legal pages like a **privacy policy** and **terms of use** aren't exciting, but they signal that you take your product (and your users) seriously. They tell visitors:
               - How their data is handled
               - What they can expect from your product
               - That there's a real person or business behind it
 
-              If you're collecting any user data (even email addresses for login), most countries require you to have a privacy policy. It's not about bureaucracy. It's about transparency and trust.
+              If you're collecting any user data (even email addresses for login), most countries require you to have a privacy policy.
           subtitle: Trust starts with transparency
         - type: text
-          title: Generate your privacy policy and terms with Termly
+          title: Generate your privacy policy and terms
           content:
             body: |-
-              Writing legal documents from scratch sounds intimidating, but you don't have to. **Termly** ([termly.io](https://termly.io/)) is a free tool that generates privacy policies and terms of use based on your answers to a questionnaire.
+              Writing legal documents from scratch sounds intimidating, but you don't have to. You could **use an AI chatbot** (like Gemini, Claude or ChatGPT) to get started, before investing into consulting with a lawyer. You can prompt it with:
 
-              Here's how it works:
-              1. Create a free account on Termly
-              2. Answer questions about your product (what data you collect, whether you use cookies, etc.)
-              3. Termly generates the legal documents for you
-              4. Copy the generated text or embed the hosted pages
+              ```
+              You are an expert lawyer. What information do you need from me to write a Privacy Policy and Terms of Use for my [brief description of your product] where I collect [data you collect, e.g., email addresses, customers' payment methods]? 
+              
+              The Privacy Policy must describe the information collected, its purpose of use, to whom and how to disclose it and reasonable security practices followed to safeguard such information.
+              ```
+              
+              If you want something more trustworthy, you could use a tool like [Termly](https://termly.io/). It generates legal documents based on your answers to a questionnaire. It's free up to one document, and the generated documents are more reliable than a generic AI response.
 
-              The questionnaire walks you through each decision, so you don't need legal knowledge. If you're unsure about an answer, Termly explains what each option means.
+              **Tip:** If you're using Google Analytics or Lovable Cloud (for data storage and authentication), you are collecting user data. Make sure to mention these in the questionnaire or the AI chatbot.
 
-              Once Termly generates your documents, you have two options:
-              - **Use Termly's hosted pages:** Copy the URL that Termly gives you (it looks like `app.termly.io/document/privacy-policy/your-id`). You'll link to these from your app's footer.
-              - **Create pages in your app:** Prompt Lovable to create a Privacy Policy page and a Terms of Use page, then paste the generated text into those pages.
-
-              The hosted option is easier to start with and updates automatically if you change your policies later.
-
-              **Tip:** If you're using Google Analytics or Lovable Cloud (for data storage and authentication), you are collecting user data. Make sure to mention these in the questionnaire.
-          subtitle: Free legal pages without a lawyer
+              *Important note: This step is for educational purposes only. It is not legal advice.*
+          subtitle: Legal pages to get started with
         - type: text
           title: Add footer links to your app
           content:
             body: |-
               Once you have your legal pages, you need to make them accessible. The standard place for legal links is the **footer** of your website, the section at the very bottom of the page.
 
-              Common footer links include:
+              **Common footer links include:**
               - **Privacy Policy**
               - **Terms of Use** (sometimes called Terms of Service)
               - **Contact** (an email address or contact form)
 
-              You can prompt Lovable to add these. If you're using Termly's hosted pages, include the URLs in your prompt:
+              You can prompt Lovable to add these:
 
               ```
               Add a footer to all pages with links to:
-              - Privacy Policy: [paste your Termly privacy policy URL here]
-              - Terms of Use: [paste your Termly terms URL here]
+              - Privacy Policy: [attach your privacy policy document]
+              - Terms of Use: [attach your terms of use document]
               - Contact: [your email address]
               Use a subtle design that doesn't distract from the main content. Open the links in a new tab.
               ```
-
-              If you created the pages inside your app instead, replace the URLs with the page paths (e.g., `/privacy-policy`).
           subtitle: Where to put your legal links
         - type: text
           title: "Cookie banners: when you need one"
           content:
             body: |-
-              A **cookie banner** is the notification that appears when you first visit a website, asking you to accept or manage cookies. Cookies are small files that websites store on your browser to remember things like your preferences or login status.
+              A **cookie banner** is the notification that appears when you first visit a website, asking you to accept or manage cookies. **Cookies** are data that websites store on your browser to remember things like your preferences or login status.
 
               **When do you need a cookie banner?**
-              - If your users are in the EU or UK, you likely need one (GDPR and the UK's Privacy and Electronic Communications Regulations require consent for non-essential cookies)
-              - If you use Google Analytics, advertising tools, or third-party tracking, you need one
-              - If you only use essential cookies (like keeping users logged in), you may not need one, but it's often safer to have one
+              - If your **users are in the EU or UK**, you likely need one (GDPR and the UK's Privacy and Electronic Communications Regulations require consent for non-essential cookies)
+              - If you **use Google Analytics, advertising tools, or third-party tracking**, you need one, and the the tracking cookies must be disabled until the user gives consent
+              - If you **only use essential cookies** (like keeping users logged in), you may not need one, but it's often safer to have one
 
-              You can add a cookie banner by prompting Lovable directly:
+              You can add a cookie banner by **prompting Lovable directly**:
 
               ```
-              Add a cookie consent banner that appears at the bottom of the screen when a user first visits. It should have a brief message about using cookies, an "Accept" button, and a "Manage preferences" link. Save the user's choice so the banner doesn't appear again on their next visit.
+              Add a GDPR compliant cookie consent banner that appears at the bottom of the screen when a user first visits. 
+              - It should have a brief message about using cookies
+              - An "Accept" button
+              - A "Customise cookies" feature where they can select which types of cookies to allow (e.g., essential, analytics, marketing)
+              - Tracking cookies (like Google Analytics) should be disabled until the user gives consent 
+              - Save the user's choice so the banner doesn't appear again on their next visit.
               ```
-
-              Alternatively, Termly can generate a cookie banner for you. If you use Termly's banner, it will give you a script tag to add. You can prompt Lovable: `"Add this script to the <head> of the app:"` and paste the Termly snippet.
 
               When in doubt, adding a cookie banner is the safer choice. It shows your users you respect their privacy.
+            imageUrl: /images/lovable-publishing-00/cookie-banner.webp
           subtitle: Respecting your users' privacy
-        - type: text
-          title: Dalmie builds trust
-          content:
-            body: |-
-              Dalmie generates her privacy policy and terms of use on Termly. She mentions that the Book Club Organiser uses Google Authentication and stores data in Lovable Cloud. Termly produces both documents in a few minutes.
-
-              She prompts Lovable to add a footer with links to the privacy policy and terms. Since she's planning to add Google Analytics and her users include people in the UK, she also adds a cookie banner.
-
-              The next time a new book club signs up, they see professional footer links and a clear cookie consent notice. It's a small thing, but it means people who don't know Dalmie personally still feel comfortable creating an account.
-          subtitle: Professional touches for the Book Club Organiser
         - type: quiz-question
-          title: "Quiz: Privacy policies"
+          title: "Quiz: Privacy policy"
           content:
             question: When do you need a privacy policy for your web app?
             options:
               - When you collect any user data, including email addresses for login
-              - Only when you sell products through your app
+              - Only when you sell products through your app, and ask for payment information
               - Only when you have more than 1,000 users
-              - Only when users specifically ask for one
+              - Only when you're using Google Analytics
             correctAnswer: 0
             explanation: If your app collects any personal data, including email addresses for login, most countries require a privacy policy. It's about being transparent with your users about how their information is handled.
         - type: quiz-question
           title: "Quiz: Cookie banners"
           content:
-            question: Which of the following is a good reason to add a cookie banner?
+            question: Which of the following are good reasons to add a cookie banner?
             options:
               - It makes your website load faster
-              - It improves your app's visual design
-              - Your app uses Google Analytics and you have users in the EU or UK
-              - Cookie banners are required by Lovable before publishing
-            correctAnswer: 2
+              - You have users in the EU or UK
+              - Your app uses Google Analytics
+              - Cookie banners are required by Lovable before publishing for the first time
+            correctAnswer: [1, 2]
             explanation: EU and UK privacy regulations (GDPR) require consent for non-essential cookies like those used by analytics tools. If you use Google Analytics and have users in these regions, a cookie banner is the right thing to add.
         - type: reflection
-          title: "Your turn: Add your legal pages"
+          title: "Your turn: Think about data protection"
           content:
             description: |-
-              Head to [Termly](https://termly.io/) and generate a privacy policy and terms of use for your product. Then prompt Lovable to add footer links.
-
-              If you're collecting data from users in the EU or UK, consider adding a cookie banner too.
-
-              What data does your app collect from users?
+              Think it through: what data does your app collect from users?
             placeholder: |-
               My app collects:
-
-              I added these legal pages:
-            subDescription: Legal pages might not be the most exciting part of building a product, but they're an important foundation. You're building something people can trust.
+            subDescription: Thinking about data protection might not be the most exciting part of building a product, but they're an important foundation. You're building something people can trust.
         - type: challenge-end
           title: "Your product looks trustworthy! 🛡️"
           content:
-            nextModule: "**Next:** Help people find your product without you having to share every link by hand."
+            nextModule: "**Next:** Right now, only people you share the link with can find your product. In the next challenge, you'll change that. You'll learn how to make your app discoverable through search engines and AI tools, so people you've never met can find what you've built."
             description: You've added the legal essentials that build trust.
             subDescription: Privacy policy, terms of use, footer links, and a cookie banner if needed. These foundations make the difference between a side project and a product people feel safe using.
 
