@@ -237,7 +237,7 @@ course:
             subDescription: You described what you wanted, and Lovable built it. This is just the beginning. For every app you build from now, you can use the structured prompt formula to get better results faster.
 
     - title: Iterate and Improve
-      isFree: false
+      isFree: true
       skills:
         - Iterative Building
         - Improvement Prompts
@@ -350,7 +350,7 @@ course:
             subDescription: Small prompts, test often, and don't be afraid to start over. This approach keeps you in control and makes your app better with each iteration.
 
     - title: Connect to Lovable Cloud
-      isFree: false
+      isFree: true
       skills:
         - Lovable Cloud
         - Backend Basics
@@ -502,7 +502,7 @@ course:
             description: You've connected your app to Lovable Cloud.
             subDescription: Now your app can store data, run logic, and remember things even when users close the browser.
     - title: Navigate the Lovable Interface
-      isFree: false
+      isFree: true
       skills:
         - Preview
         - Visual Edits
@@ -618,7 +618,7 @@ course:
             subDescription: Preview, visual edits, themes, and attaching images. These tools help you improve your app in a clear and efficient way.
 
     - title: Experiment and Undo Mistakes
-      isFree: false
+      isFree: true
       skills:
         - Version Bookmarking
         - Reverting Changes
@@ -704,7 +704,7 @@ course:
             subDescription: Bookmark stable versions, revert when needed. Now you can try bold experiments knowing you can always go back.
 
     - title: Go Beyond the Interface
-      isFree: false
+      isFree: true
       skills:
         - Plan Mode
         - Project Knowledge
@@ -840,7 +840,7 @@ course:
             subDescription: You can now plan and build apps in Lovable confidently and safely by combining these core skills.
 
     - title: Publish Your App
-      isFree: false
+      isFree: true
       skills:
         - Publishing
         - Favicon
