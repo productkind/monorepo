@@ -52,7 +52,7 @@ export const LessonVideoLovablePublish01: React.FC<z.infer<typeof LessonVideoPro
       <Series>
         <Series.Sequence durationInFrames={titleDuration}>
           <FullScreenText>
-            <TypingText delay={0}>Micro Course</TypingText>
+            <TypingText delay={0}>Micro-course</TypingText>
             <br />
             <TypingText delay={20}>Overview</TypingText>
           </FullScreenText>
@@ -81,35 +81,41 @@ export const LessonVideoLovablePublish01: React.FC<z.infer<typeof LessonVideoPro
         <Series.Sequence durationInFrames={66}>
           <FullScreenImage src={staticFile('video-lovable-publish-01/section-08-built.gif')} fit="contain" />
         </Series.Sequence>
-        <Series.Sequence durationInFrames={76}>
-          <FullScreenImage src={staticFile('video-lovable-basics-01/section-09-exactly.gif')} fit="contain" />
-        </Series.Sequence>
-        <Series.Sequence durationInFrames={54}>
-          <FullScreenImage src={staticFile('video-lovable-basics-01/section-10-small.gif')} fit="contain" />
-        </Series.Sequence>
-        <Series.Sequence durationInFrames={76}>
-          <FullScreenImage src={staticFile('video-lovable-basics-01/section-11-dog-computer.gif')} fit="contain" />
-        </Series.Sequence>
-        <Series.Sequence durationInFrames={59}>
-          <FullScreenImage src={staticFile('video-lovable-basics-01/section-12-success.gif')} fit="contain" />
-        </Series.Sequence>
-        <Series.Sequence durationInFrames={144}>
-          <FullScreenImage src={staticFile('video-lovable-basics-01/section-13-woman-type.gif')} fit="contain" />
-        </Series.Sequence>
         <Series.Sequence durationInFrames={56}>
-          <FullScreenImage src={staticFile('video-lovable-basics-01/section-14-coding.gif')} fit="contain" />
+          <FullScreenImage src={staticFile('video-lovable-publish-01/section-09-app.gif')} fit="contain" />
         </Series.Sequence>
-        <Series.Sequence durationInFrames={92}>
-          <FullScreenImage src={staticFile('video-lovable-basics-01/section-15-step.gif')} fit="contain" />
+        <Series.Sequence durationInFrames={100}>
+          <FullScreenImage src={staticFile('video-lovable-publish-01/section-10-trust.gif')} fit="contain" />
         </Series.Sequence>
-        <Series.Sequence durationInFrames={62}>
-          <FullScreenImage src={staticFile('video-lovable-basics-01/section-16-calm-down.gif')} fit="contain" />
+        <Series.Sequence durationInFrames={70}>
+          <FullScreenImage src={staticFile('video-lovable-publish-01/section-11-submit.gif')} fit="contain" />
         </Series.Sequence>
-        <Series.Sequence durationInFrames={94}>
-          <FullScreenImage src={staticFile('video-lovable-basics-01/section-17-experiment.gif')} fit="contain" />
+        <Series.Sequence durationInFrames={55}>
+          <FullScreenImage src={staticFile('video-lovable-publish-01/section-12-neon-sign.gif')} fit="contain" color="#000000" />
         </Series.Sequence>
-        <Series.Sequence durationInFrames={148}>
-          <FullScreenImage src={staticFile('video-lovable-basics-01/section-18-build.gif')} fit="contain" />
+        <Series.Sequence durationInFrames={46}>
+          <FullScreenImage src={staticFile('video-lovable-publish-01/section-13-legal.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={100}>
+          <FullScreenImage src={staticFile('video-lovable-publish-01/section-14-search-engine.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={48}>
+          <FullScreenImage src={staticFile('video-lovable-publish-01/section-15-dashboard.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={58}>
+          <FullScreenImage src={staticFile('video-lovable-publish-01/section-16-planning.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={79}>
+          <FullScreenImage src={staticFile('video-lovable-publish-01/section-17-app.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={120}>
+          <FullScreenImage src={staticFile('video-lovable-publish-01/section-18-internet.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={140}>
+          <FullScreenImage src={staticFile('video-lovable-publish-01/section-19-grow.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={67}>
+          <FullScreenImage src={staticFile('video-lovable-publish-01/section-20-launch.gif')} fit="contain" />
         </Series.Sequence>
       </Series>
       <Sequence from={titleDuration}>
@@ -130,7 +136,7 @@ export const LessonVideoLovableBasics01: React.FC<z.infer<typeof LessonVideoProp
       <Series>
         <Series.Sequence durationInFrames={titleDuration}>
           <FullScreenText>
-            <TypingText delay={0}>Micro Course</TypingText>
+            <TypingText delay={0}>Micro-course</TypingText>
             <br />
             <TypingText delay={20}>Overview</TypingText>
           </FullScreenText>
@@ -215,7 +221,7 @@ export const LessonVideoDebugging01: React.FC<z.infer<typeof LessonVideoPropsSch
       <Series>
         <Series.Sequence durationInFrames={titleDuration}>
           <FullScreenText>
-            <TypingText delay={0}>Micro Course</TypingText>
+            <TypingText delay={0}>Micro-course</TypingText>
             <br />
             <TypingText delay={20}>Overview</TypingText>
           </FullScreenText>
@@ -470,7 +476,7 @@ export const LessonVideo7: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({
       <Series>
         <Series.Sequence durationInFrames={titleDuration}>
           <FullScreenText>
-            <TypingText delay={0}>Micro Course</TypingText>
+            <TypingText delay={0}>Micro-course</TypingText>
             <br />
             <br />
             <TypingText delay={20}>Overview</TypingText>
@@ -554,7 +560,7 @@ export const LessonVideo5: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({
       <Series>
         <Series.Sequence durationInFrames={titleDuration}>
           <FullScreenText>
-            <TypingText delay={0}>Micro Course</TypingText>
+            <TypingText delay={0}>Micro-course</TypingText>
             <br />
             <br />
             <TypingText delay={20}>Overview</TypingText>
