@@ -69,7 +69,7 @@ course:
               **Before publishing**, your app exists only in Lovable's editor. **After publishing**, it gets a real URL that you can share with anyone.
 
               Publishing is a bit like opening a shop. Before you open the doors, you want to make sure the shelves are stocked and the sign looks right. That's what the next few steps are about.
-            imageUrl: /images/lovable-publishing-00/publish.gif
+            imageUrl: /courses/lovable-publishing-00/publish.gif
           subtitle: From your editor to the internet
         - type: text
           title: "Preview vs production: two different worlds"
@@ -104,7 +104,7 @@ course:
               3. To **update a key** you added, copy its name (e.g., `STRIPE_API_KEY`), paste it in the **Name** field. Then add the corresponding production API key from your external service, and paste that in the **Value** field. Make sure to save your changes. This will override the previously saved key.
 
               If your app doesn't use any external services yet, you can skip this step. Lovable's own API keys are managed automatically.
-            imageUrl: /images/lovable-publishing-00/update-api-key.webp
+            imageUrl: /courses/lovable-publishing-00/update-api-key.webp
           subtitle: Finding the Secrets panel
         - type: text
           title: Your app's first address
@@ -113,7 +113,7 @@ course:
               When you publish your app, Lovable gives it a **subdomain URL** like `book-club-picks.lovable.app`. This is the first address your app will have on the internet, and it's completely free.
 
               A **subdomain** is the part before the main domain name. In `book-club-picks.lovable.app`, `book-club-picks` is the subdomain and `lovable.app` is Lovable's domain. Think of it like an apartment number in a building: `lovable.app` is the building, and your subdomain is your own front door within it.
-          imageUrl: /images/lovable-publishing-00/lovable-subdomain.webp
+          imageUrl: /courses/lovable-publishing-00/lovable-subdomain.webp
           subtitle: Your free Lovable subdomain
         - type: text
           title: Customising your subdomain
@@ -126,7 +126,7 @@ course:
               4. Save your changes by **clicking the checkmark icon**
 
               This URL works perfectly for **sharing your app early on**. Later, in *Challenge 2*, you'll learn how to connect a custom domain (like `bookcluborganiser.com`) if you want an even more professional address. But the Lovable subdomain is a great starting point, and you can keep using it for as long as you like.
-          imageUrl: /images/lovable-publishing-00/lovable-subdomain-updated.webp
+          imageUrl: /courses/lovable-publishing-00/lovable-subdomain-updated.webp
           subtitle: Make it your own
         - type: text
           title: Give your app a favicon
@@ -137,7 +137,7 @@ course:
               You can **create a favicon for free** using tools like [realfavicongenerator.net](https://realfavicongenerator.net/). Upload your logo, your brand initials, or a simple icon that represents your product. These tools will generate the right file format and sizes for you automatically.
 
               It's a small detail, but it **makes a noticeable difference**. When Sarah sees the Book Club Organiser tab in her browser with a proper icon, it feels like a real product. Let's see how to set it.
-            imageUrl: /images/lovable-publishing-00/favicon.webp
+            imageUrl: /courses/lovable-publishing-00/favicon.webp
           subtitle: The small icon that makes a big difference
         - type: text
           title: Set your favicon
@@ -155,7 +155,7 @@ course:
               3. In the **Icon & title** section, click the favicon area and upload your generated file
 
               You can **change your favicon at any time**, so don't worry about getting it perfect on the first try. Once you set your custom favicon, publish your app and it will show up in the browser tab when users visit your app.
-            imageUrl: /images/lovable-publishing-00/upload-favicon.webp
+            imageUrl: /courses/lovable-publishing-00/upload-favicon.webp
           subtitle: To set your favicon in Lovable
         - type: text
           title: Set your meta tags
@@ -172,7 +172,7 @@ course:
               Make your title clear (e.g., "Book Club Organiser") and your description inviting (e.g., "The easiest way to pick your book club's next read"). For the share image, use a 1200x630 pixel image for best results on social media. You can create one for free with tools like [Canva](https://www.canva.com/).
 
               When someone shares your link, these details are the **first impression**.
-            imageUrl: /images/lovable-publishing-00/set-meta-tags.webp
+            imageUrl: /courses/lovable-publishing-00/set-meta-tags.webp
           subtitle: Control how your link looks when shared
         - type: text
           title: Test on mobile and desktop before publishing
@@ -190,7 +190,7 @@ course:
               If something looks off, you can prompt Lovable to fix it by **attaching a screenshot** and explaining the issue.
 
               After publishing, it's also worth opening your app on your actual phone to double-check. The preview is helpful, but nothing beats testing on a real device.
-            imageUrl: /images/lovable-publishing-00/device-toggle.webp
+            imageUrl: /courses/lovable-publishing-00/device-toggle.webp
           subtitle: Make sure it looks right everywhere
         - type: quiz-question
           title: "Quiz: Preview vs production"
@@ -445,7 +445,7 @@ course:
               ```
 
               When in doubt, adding a cookie banner is the safer choice. It shows your users you respect their privacy.
-            imageUrl: /images/lovable-publishing-00/cookie-banner.webp
+            imageUrl: /courses/lovable-publishing-00/cookie-banner.webp
           subtitle: Respecting your users' privacy
         - type: quiz-question
           title: "Quiz: Privacy policy"
@@ -583,7 +583,7 @@ course:
               4. Click **Submit**
 
               This nudges Google to notice your site sooner rather than waiting for it to discover you on its own.
-            imageUrl: /images/lovable-publishing-00/sitemap.webp
+            imageUrl: /courses/lovable-publishing-00/sitemap.webp
           subtitle: Help Google find your pages faster
         - type: text
           title: "GEO: Being found by AI tools"
@@ -894,7 +894,7 @@ course:
               But it answered the most important question: **do people actually want this?** Enough people signed up that Joel knew it was worth building. He then created a basic version, launched it to those email subscribers, and grew from there.
 
               The lesson? **You don't need everything figured out before you launch.** You need enough to test whether people are interested. Start small, learn fast, and grow from there.
-            imageUrl: /images/lovable-publishing-00/buffer-mvp.webp
+            imageUrl: /courses/lovable-publishing-00/buffer-mvp.webp
           subtitle: A real-world example of launching lean
         - type: text
           title: "Agile development: what it means for solo builders"
