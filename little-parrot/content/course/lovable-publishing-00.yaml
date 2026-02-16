@@ -231,11 +231,11 @@ course:
         - type: challenge-end
           title: "Your app is live on the internet! 💫"
           content:
-            nextModule: "**Next:** Make your digital product even more professional, and give it a proper home with a custom domain."
+            nextModule: "**Next:** Your app is live, but its address is still something like `bookclub.lovable.app`. What if it could be `bookcluborganiser.com`? In the next challenge, you'll claim a custom domain and give your product a professional home on the internet."
             description: You've published your first production-ready app.
-            subDescription: You've checked your API keys, customised your Lovable subdomain, added a favicon, set meta tags, and published. Your app has its first real address on the internet, and someone out there can use something you built. That's worth celebrating.
+            subDescription: You've checked your API keys, customised your Lovable subdomain, added a favicon, set meta tags, tested on mobile and desktop, and published. Your app has its first real address on the internet, and someone out there can use something you built. That's worth celebrating.
 
-    - title: "Claim Your Corner of the Internet: Custom Domains"
+    - title: "Connect a Custom Domain"
       isFree: false
       skills:
         - Custom Domains
@@ -355,18 +355,19 @@ course:
         - type: challenge-end
           title: "Your product has a proper address! 🏠"
           content:
-            nextModule: "**Next:** Build trust with your visitors by adding essential legal pages."
+            nextModule: "**Next:** Your product has a proper address and looks professional. But when a stranger lands on it for the first time, will they feel safe enough to sign up? In the next challenge, you'll add the legal pages and trust signals that make visitors feel confident using your product."
             description: You know how to find, buy, and connect a custom domain.
-            subDescription: A custom domain gives your product a professional identity. Whether you've connected one now or have it on your list, you've taken an important step towards building a trustworthy product.
+            subDescription: |-
+              You've learned how to check domain availability, choose a memorable name, buy and connect a custom domain to your Lovable app, and verify ownership with Google. Whether you've connected one now or have it on your list, you've taken an important step towards building a recognisable brand.
 
-    - title: "Build Trust: Legal Pages and Compliance"
+    - title: "Build Trust: Legal Pages That Protect You and Your Users"
       isFree: false
       skills:
         - Privacy Policy
         - Terms of Use
         - Cookie Banners
         - Legal Compliance
-      description: Add the legal essentials that make visitors feel safe using your product.
+      description: Make strangers feel safe enough to sign up, by adding the legal foundations every serious product needs.
       completionTime: '8:00'
       steps:
         - type: text
@@ -481,7 +482,8 @@ course:
           content:
             nextModule: "**Next:** Right now, only people you share the link with can find your product. In the next challenge, you'll change that. You'll learn how to make your app discoverable through search engines and AI tools, so people you've never met can find what you've built."
             description: You've added the legal essentials that build trust.
-            subDescription: Privacy policy, terms of use, footer links, and a cookie banner if needed. These foundations make the difference between a side project and a product people feel safe using.
+            subDescription: |-
+              You've generated a privacy policy and terms of use, added footer links so visitors can find them, and learned when and how to set up a cookie banner. These foundations make the difference between a side project and a product people feel safe using.
 
     - title: "Get Found: SEO and Discoverability"
       isFree: false
@@ -490,7 +492,7 @@ course:
         - GEO
         - Backlinks
         - Google Business
-      description: Help people find your product through search engines and AI tools.
+      description: Make your product discoverable through search engines and AI tools, so people you've never met can find what you've built.
       completionTime: '10:00'
       steps:
         - type: text
@@ -680,14 +682,14 @@ course:
               
               These aren't one-time tasks, but you've started building the habits that will make your product more discoverable over time.
 
-    - title: "Track How Your App Is Used: Metrics and Feedback"
+    - title: "Know Your Users: Metrics, Feedback, and Distribution"
       isFree: false
       skills:
         - Metrics
         - Google Analytics
         - User Feedback
         - Distribution
-      description: Understand how people use your product and what they actually think.
+      description: Find out who's using your product, what they do with it, and how to reach more people like them.
       completionTime: '8:00'
       steps:
         - type: text
