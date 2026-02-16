@@ -1,6 +1,6 @@
 course:
   id: ff736c4f-8ccc-41b6-96c6-68806804c5d8
-  note: '*Note on timing:* Some challenges involve external tools (like domain registrars or Termly). The estimated times include the hands-on work, but signing up for external services may take a few extra minutes.'
+  note:
   cover: /courses/lovable-publishing-00/cover.gif
   title: 'Launch and Grow Your Lovable App'
   challenges:
@@ -45,8 +45,8 @@ course:
         - type: video
           title: Launch and Grow Your Lovable App
           content:
-            videoRemotionId: lesson-lovable-publishing-00-video-00
-            vimeoId: TBD
+            videoRemotionId: lesson-vibe-coding-lovable-publish-00-video-00
+            vimeoId: 1165274396
             transcript: |-
               You've built an app with Lovable. That's a real achievement. But right now, it
               probably lives on a generic URL, has a default favicon, and maybe still uses test
@@ -174,6 +174,24 @@ course:
               When someone shares your link, these details are the **first impression**.
             imageUrl: /images/lovable-publishing-00/set-meta-tags.webp
           subtitle: Control how your link looks when shared
+        - type: text
+          title: Test on mobile and desktop before publishing
+          content:
+            body: |-
+              Before you hit Publish, take a moment to check how your app looks on **different screen sizes**. Many of your users will visit from their phones, and what looks great on a laptop can look broken on a smaller screen.
+
+              Lovable makes this easy. In the preview panel, look for the **device toggle** at the top. It lets you switch between a desktop, tablet and mobile view without leaving the editor.
+
+              **Things to check:**
+              - Does the **layout** look right on all views?
+              - Are **buttons** and **text** large enough to tap on mobile?
+              - Does the **navigation** still work on a smaller screen?
+
+              If something looks off, you can prompt Lovable to fix it by **attaching a screenshot** and explaining the issue.
+
+              After publishing, it's also worth opening your app on your actual phone to double-check. The preview is helpful, but nothing beats testing on a real device.
+            imageUrl: /images/lovable-publishing-00/device-toggle.webp
+          subtitle: Make sure it looks right everywhere
         - type: quiz-question
           title: "Quiz: Preview vs production"
           content:
@@ -500,12 +518,11 @@ course:
 
               Here are **more things you can do**:
               - **Use clear page titles** that describe what each page does
-              - **Write descriptive headings** using heading tags (h1, h2, h3) in your content
+              - **Write descriptive headings** using heading tags (h1, h2, h3) in your content – *more on this in the next step*
               - **Add alt text to images** by prompting Lovable:
               ```
               Add descriptive alt text to all images in the app for accessibility and SEO.
               ```
-              - **Make your app fast** by keeping images small (compress them before uploading)
 
               *You can also ask Lovable to do a general review:*
               ```
@@ -528,7 +545,7 @@ course:
               The good news is that Lovable can sort this out for you. Try this prompt:
 
               ```
-              Review all pages in the app and fix the heading tag hierarchy. Each page should have exactly one h1 tag as the main title, h2 tags for section headings, and h3 tags for sub-sections. List what you changed.
+              Review all pages in the app and fix the heading tag hierarchy. Each page should have exactly one h1 tag as the main title. Make sure the heading hierarchy follows HTML structure best practices. List what you changed.
               ```
 
               *Curious about HTML and how web pages are built? Our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) micro-course explains these concepts in friendly terms.*
@@ -546,23 +563,33 @@ course:
 
               This can feel frustrating, but it's normal. Search engines need time to discover, crawl, and index your website. The Google site verification you set up in the previous challenge helps speed this up.
 
-              You can submit your **sitemap** through [Google Search Console](https://search.google.com/search-console) to nudge Google to notice your site sooner. A sitemap is a file that lists all the pages on your website, making it easier for search engines to find and index them.
+              Don't let the wait discourage you. Every SEO improvement you make now **compounds over time**. The earlier you start, the sooner results arrive.
+          subtitle: Patience is part of the process
+        - type: text
+          title: Submit your sitemap to Google
+          content:
+            body: |-
+              You can **speed things up** by submitting your sitemap through [Google Search Console](https://search.google.com/search-console). A **sitemap** is a file that lists all the pages on your website, making it easier for search engines to find and index them.
 
-              To submit your sitemap:
-              1. Open Google Search Console and select your property (the domain you verified in Challenge 2)
+              **To submit your sitemap:**
+              1. Open [Google Search Console](https://search.google.com/search-console) and select your property (the domain you verified in *Challenge 2*)
               2. Click **Sitemaps** in the left menu
-              3. Enter your sitemap URL. For most Lovable apps, try `https://yourdomain.com/sitemap.xml`. If you're not sure whether your app has one, ask Lovable: `"Does this app have a sitemap.xml? If not, generate one."`
+              3. Enter your **sitemap URL**. For most Lovable apps, try `https://yourdomain.com/sitemap.xml`. If you're not sure whether your app has one, ask Lovable:
+              ```
+              Does this app have a sitemap.xml? If not, generate one.
+              ```
               4. Click **Submit**
 
-              Don't let the wait discourage you. Every SEO improvement you make now compounds over time. The earlier you start, the sooner results arrive.
-          subtitle: Patience is part of the process
+              This nudges Google to notice your site sooner rather than waiting for it to discover you on its own.
+            imageUrl: /images/lovable-publishing-00/sitemap.webp
+          subtitle: Help Google find your pages faster
         - type: text
           title: "GEO: Being found by AI tools"
           content:
             body: |-
               **GEO** stands for Generative Engine Optimisation. It's a newer concept that focuses on making your product discoverable by AI tools like ChatGPT, Perplexity, and Google's AI Overview.
 
-              When someone asks an AI assistant "what's a good tool for organising book clubs?", the AI draws from information it has found online. To increase your chances of being mentioned:
+              When someone asks an AI assistant *"what's a good tool for organising book clubs?"*, the AI draws from information it has found online. To increase your chances of being mentioned:
 
               - **Have a clear, descriptive homepage** that explains what your product does and who it's for
               - **Create helpful content** like a blog post or FAQ page that answers questions your target users might ask
@@ -574,12 +601,12 @@ course:
           title: Register your business on Google
           content:
             body: |-
-              If your product serves a local community or has a physical business location, registering on **Google Business Profile** ([business.google.com](https://business.google.com/)) can boost your discoverability.
+              If your product serves a local community or has a physical business location, registering on [Google Business Profile](https://business.google.com/) can boost your discoverability.
 
-              Even if your product is fully online, having a Google Business Profile can help because:
-              - It makes your business appear in Google Maps and local search results
-              - It adds credibility (Google shows your business info in search results)
-              - It gives you another place to collect reviews
+              Even if your product is fully online, **having a Google Business Profile can help** because:
+              - It makes your business **appear in Google Maps and local search results**
+              - It **adds credibility** (Google shows your business info in search results)
+              - It gives you another place to **collect reviews** (which can improve your SEO and attract more users)
 
               Not every product needs this, but if yours has any local component (like a local book club organiser, a neighbourhood service, or a business with a physical address), it's worth the few minutes to set up.
           subtitle: Boost local discoverability
@@ -589,15 +616,13 @@ course:
             body: |-
               **Backlinks** are links from other websites that point to yours. Search engines treat them as votes of confidence. The more quality backlinks you have, the higher you'll rank.
 
-              How to start building backlinks:
+              **How to start building backlinks:**
               - **List your product on directories** like Product Hunt, Indie Hackers, or niche directories for your industry
               - **Write a guest blog post** for a site that your target users read
               - **Ask partners or collaborators** to link to your product from their website
               - **Create something worth linking to**, like a useful guide, a free tool, or an interesting case study
 
-              Dalmie writes a short blog post about "How I organised my book club with an app" and shares it on a few community forums. Within a few weeks, other book club blogs start linking to the Book Club Organiser. Her search ranking improves steadily.
-
-              Backlink building is a long-term effort, but even a few quality links make a difference.
+              Backlink building is a long-term effort, but even a few quality links help.
           subtitle: Votes of confidence from around the web
         - type: quiz-question
           title: "Quiz: SEO timing"
@@ -617,38 +642,48 @@ course:
             options:
               - Links within your own website that connect your pages together
               - Links from other websites to yours that search engines treat as votes of confidence
-              - Links in your footer that point to legal pages
-              - Links to your social media profiles
+              - Links in your footer that point to legal pages, social media profiles, and contact information
+              - Links from Google Ads to your website
             correctAnswer: 1
             explanation: Backlinks are links from external websites pointing to yours. Search engines like Google use them as a signal that your content is valuable and trustworthy, which helps improve your search ranking.
         - type: reflection
-          title: "Your turn: Start your SEO foundation"
+          title: "Your turn: Plan your backlink strategy"
           content:
             description: |-
-              Pick at least two actions from this challenge and do them now:
+              Think about where your target users spend time online. Where could you share your product or write about it to earn backlinks?
 
-              1. Review your meta tags (title and description) on each page
-              2. Submit your sitemap to Google Search Console
-              3. Register on Google Business Profile (if relevant)
-              4. List your product on one directory (like Product Hunt or a niche directory)
+              Consider:
+              - Which **online communities** (Reddit, Facebook groups, Slack groups, forums) are your target users active in?
+              - Which **blogs or websites** would be a good fit for a guest post about your product or the problem it solves?
+              - Which **product directories** (like Product Hunt, Indie Hackers, or niche directories for your industry) could you list on?
 
-              How do you expect your users to find your product?
+              Write down at least three specific places where you could share your product.
             placeholder: |-
-              I expect my users to find me through:
+              Communities my users are in:
 
-              I took these SEO actions:
-            subDescription: SEO is a marathon, not a sprint. Every small action you take now compounds over time. You've planted seeds that will grow into organic traffic.
+              Blogs or websites I could write for:
+
+              Directories I'll list on:
+            subDescription: Having a concrete list of places to share your product is more valuable than a vague plan to "do marketing." You can start with one and build from there.
         - type: challenge-end
           title: "People can start finding you! 🔍"
           content:
-            nextModule: "**Next:** Track what's happening with your product and listen to what your users think."
+            nextModule: "**Next:** People are starting to find your product. But how many? And what do they do when they get there? In the next challenge, you'll set up analytics and learn how to get feedback that actually helps you improve."
             description: You've laid the foundation for being discovered online.
-            subDescription: SEO, GEO, Google verification, backlinks. These aren't one-time tasks, but you've started building the habits that will make your product more discoverable over time.
+            subDescription: |-
+              You've done a lot in this challenge:
 
-    - title: "Track Your App Is Used: Metrics and Feedback"
+              - You now know how to optimise your pages for search engines with meta tags, heading tags, and alt text
+              - You've submitted your sitemap to Google Search Console
+              - Learned how AI tools discover products through GEO 
+              - You have a plan for building backlinks in communities where your users spend time
+              
+              These aren't one-time tasks, but you've started building the habits that will make your product more discoverable over time.
+
+    - title: "Track How Your App Is Used: Metrics and Feedback"
       isFree: false
       skills:
-        - Analytics
+        - Metrics
         - Google Analytics
         - User Feedback
         - Distribution
@@ -656,7 +691,7 @@ course:
       completionTime: '8:00'
       steps:
         - type: text
-          title: Why tracking matters
+          title: Why metrics are essential for growth
           content:
             body: |-
               You've published your product, set up a domain, and started working on discoverability. But here's a question: **do you know what's actually happening?**
@@ -673,61 +708,66 @@ course:
             body: |-
               Lovable provides **built-in metrics** for your published app.
 
-              To find them:
+              **To find them:**
               1. Open your project in Lovable
-              2. Click on your **project name** in the top-left corner to go to the project dashboard
-              3. Look for the **Analytics** tab
+              2. Click on **...** at the top, next to Preview
+              3. Select the **Analytics** tab
 
-              These metrics give you a basic picture of:
-              - How many people visit your app
-              - When they visit (time of day, day of week)
-              - Basic usage patterns
+              These metrics **give you a basic picture** of:
+              - **How many** people visit your app
+              - **Where** they come from (referral source)
+              - **Which pages** they visit
+              - **Which country** they're in
+              - **What device** they're using
 
               This is a great starting point. For most early-stage products, built-in metrics are enough to understand whether people are using your app and how often.
 
               Check your metrics regularly. Even a quick weekly glance helps you spot trends and notice if something changes unexpectedly.
           subtitle: What's already available
         - type: text
-          title: Adding Google Analytics
+          title: Why add Google Analytics?
           content:
             body: |-
               For more detailed insights, you can add **Google Analytics** to your app. It's free and gives you data about:
-              - Where your visitors come from (search, social media, direct links)
-              - Which pages they visit and how long they stay
-              - What devices and browsers they use
-              - Where they drop off in your user flow
+              - **Where your visitors come from** (search, social media, direct links)
+              - **Which pages** they visit and how long they stay
+              - **What devices and browsers** they use
+              - **Where they drop off** in your user flow
 
-              To set it up:
+              Lovable's built-in metrics are great for a quick overview, but Google Analytics lets you dig deeper. It's especially useful once you start sharing your product more widely and want to understand which channels bring the most users, and where they leave your site.
+          subtitle: Going beyond built-in metrics
+        - type: text
+          title: How to set up Google Analytics
+          content:
+            body: |-
+              **To set it up:**
               1. Create a free account at [analytics.google.com](https://analytics.google.com/)
               2. Click **Admin** (gear icon at the bottom-left), then click **Create** and select **Property**
-              3. Give your property a name (e.g., "Book Club Organiser"), select your country and time zone, then click through the setup steps
+              3. Give your property a **name** (e.g., "Book Club Organiser"), select your country and time zone, then click through the setup steps
               4. When asked to choose a platform, select **Web**, enter your app's URL, and give your stream a name
               5. Google will show you a **Measurement ID** that starts with `G-` (e.g., `G-ABC123XYZ`). Copy it.
-              6. Back in Lovable, prompt: `"Add Google Analytics with Measurement ID G-ABC123XYZ to the app"` (replacing with your actual ID)
+              6. Back **in Lovable**, prompt: `"Add Google Analytics with Measurement ID G-ABC123XYZ to the app"` (replacing with your actual ID)
 
               Lovable will add the tracking code to your app. After publishing, data will start appearing in your Google Analytics dashboard within a few hours.
 
-              **Remember:** If you add Google Analytics and have users in the EU or UK, make sure you have a cookie banner (Challenge 3 covered this).
+              **Remember:** If you add Google Analytics and have users in the EU or UK, make sure you have a cookie banner (*Challenge 3* covered this).
           subtitle: A step-by-step walkthrough
         - type: text
           title: What to track early on (and what to ignore)
           content:
             body: |-
-              It's tempting to get lost in dashboards and numbers. Here's what actually matters when you're starting out:
+              It's tempting to get lost in dashboards and numbers. Here's what you could **track** when you're starting out:
 
-              **Track these:**
               - **Active users:** Are people coming back, or do they visit once and leave?
               - **Traffic sources:** How are people finding you? This tells you where to focus your marketing efforts.
               - **Key actions:** Are users completing the main action your app is designed for? (For Dalmie, that's adding book suggestions and voting.)
+              - **Where people leave:** Is your value proposition clear, or are people leaving immediately?
 
-              **Ignore these (for now):**
-              - Bounce rate on individual pages (too noisy with small traffic)
+              *Ignore these (for now):*
               - Detailed demographic breakdowns (not useful until you have more visitors)
               - Vanity metrics like total page views without context
 
-              Dalmie discovers that most of her users visit on Sunday evenings, right before their book club meetings. She starts sending a reminder to her book clubs on Sunday afternoons, and engagement goes up.
-
-              The point isn't to track everything. It's to find the signals that help you make better decisions.
+              The point isn't to track everything. It's to **find the signals that help you make better decisions.**
           subtitle: Focus on what helps you decide
         - type: text
           title: How to ask users for feedback
@@ -738,16 +778,16 @@ course:
               The best feedback comes from real conversations. Here's how to ask without being annoying:
 
               **Ask specific questions, not generic ones:**
-              - Instead of "What do you think?" try "What's the one thing you'd change?"
-              - Instead of "Is it good?" try "What frustrated you when you used it?"
-              - Instead of "Any feedback?" try "What did you try to do that didn't work?"
+              - Instead of "What do you think?" try *"What's the one thing you'd change?"*
+              - Instead of "Is it good?" try *"What frustrated you when you used it?"*
+              - Instead of "Any feedback?" try *"What did you try to do that didn't work?"*
 
               **Ways to collect feedback:**
               - Have a short conversation (in person or video call) with 3-5 users
               - Add a simple feedback form or link in your app
-              - Watch someone use your app without guiding them (you'll learn more from watching than asking)
+              - Watch someone use your app without guiding them (resist the urge to explain or help, even if they get stuck)
 
-              Every piece of feedback is a gift. It tells you what to build next and what to fix first.
+              Every piece of feedback is a gift. It tells you what to change and what to build next.
           subtitle: The "why" behind the numbers
         - type: text
           title: Distribution channels to reach more people
@@ -755,16 +795,14 @@ course:
             body: |-
               Your product won't grow on its own. You need to actively share it where your target users spend time.
 
-              Here are some distribution channels to consider:
+              Here are some **distribution channels** to consider:
               - **Social media:** Share your product story on LinkedIn, X, Instagram, or Facebook groups
               - **Online communities:** Post in relevant forums, subreddits, or Slack groups
-              - **Product directories:** List on Product Hunt, Indie Hackers, or niche directories
+              - **Product directories:** List on Product Hunt, Indie Hackers, BetaList or niche directories
               - **Email:** If you have a mailing list, share updates and invite people to try your product
               - **Partnerships:** Collaborate with complementary products or creators
 
-              Don't try all of these at once. Pick one or two channels where your target users are most active, and focus your energy there.
-
-              Dalmie joins a few online book club communities on Facebook and Reddit. She shares her story of building the Book Club Organiser and offers it for free to a few groups. Word starts spreading organically.
+              Don't try all of these at once. Pick one or two channels where your target users are most active, and focus your energy there. Share your product, ask for feedback, and listen to what people say. Then iterate based on what you learn.
           subtitle: Where to share your product
         - type: quiz-question
           title: "Quiz: Analytics"
@@ -787,31 +825,32 @@ course:
               - "Is it good enough?"
               - "Would you recommend it?"
             correctAnswer: 0
-            explanation: Specific questions get specific answers. "What's the one thing you'd change?" gives you actionable feedback. Broad questions like "What do you think?" often result in polite but unhelpful responses like "It's nice!"
+            explanation: Specific questions get specific answers. "What's the one thing you'd change?" gives you actionable feedback. Broad questions like "What do you think?", or leading questions like "Is it good enough?" often result in polite but unhelpful responses like "It's nice!"
         - type: reflection
-          title: "Your turn: Set up tracking and plan a feedback conversation"
+          title: "Your turn: Plan a feedback conversation"
           content:
             description: |-
-              Do two things:
-
-              1. **Set up analytics:** Check your built-in Lovable metrics, and if you're ready, add Google Analytics using the steps in this challenge.
-
-              2. **Plan a feedback conversation:** Think of one person you can ask for honest feedback. What specific questions will you ask them?
-
-              Do you have users already? If yes, how many and how did they find you?
+              Stop for a moment and think about what you'll ask users when you talk to them about your product. 
+              
+              What do you want to learn from them? What questions will help you get that information?
             placeholder: |-
-              My users so far:
-
-              They found me through:
-
-              I'll ask feedback from:
-            subDescription: Data and feedback together give you a clear picture of what's working and what needs attention. You're no longer building in the dark.
+              I'll ask users these questions:
+            subDescription: Remember, ask specific, open-ended questions that will give you actionable insights, not just general opinions.
         - type: challenge-end
           title: "You know what's happening with your product! 📊"
           content:
-            nextModule: "**Next:** Adopt the mindset and habits that turn a side project into a growing product."
+            nextModule: "**Next:** You've got a live product, people can find it, and you know what they're doing. So what separates a side project from a product that keeps growing? In the final challenge, you'll learn the mindset and habits that keep the momentum going."
             description: You can now track usage and gather meaningful feedback.
-            subDescription: Built-in metrics, Google Analytics, specific feedback questions, and distribution channels. These tools help you make decisions based on evidence, not guesses.
+            subDescription: |-
+              You've set yourself up to understand what's really happening with your product:
+
+              - You know where to find **Lovable's built-in metrics** for a quick overview of visits and traffic
+              - You've learned how to add **Google Analytics** for deeper insights into where users come from and where they drop off
+              - You know **what to track** early on (and what to ignore so you don't get overwhelmed)
+              - You have **specific feedback questions** ready that will give you actionable answers, not polite "it's nice" responses
+              - You've identified **distribution channels** where your target users spend time
+
+              You're no longer building in the dark. From here, every decision you make can be backed by real data and real conversations.
 
     - title: "Launch Early, Grow Steadily"
       isFree: false
@@ -829,14 +868,16 @@ course:
             body: |-
               If you've been waiting for your product to be "done" before sharing it widely, here's a perspective shift: **your product will never feel done**. The apps you use every day, from Instagram to Google Maps, are constantly updated. "Done" doesn't exist in the world of digital products.
 
-              Launching early means:
-              - You learn from real users sooner
-              - You avoid building features nobody wants
-              - You build momentum instead of staying stuck in "almost ready" mode
+              **Launching early means:**
+              - You **learn** from real users sooner
+              - You **avoid** building features nobody wants
+              - You **build** momentum instead of staying stuck in "almost ready" mode
 
-              There's a famous quote from Reid Hoffman, the founder of LinkedIn: *"If you're not embarrassed by the first version of your product, you've launched too late."*
+              There's a famous quote from Reid Hoffman, the co-founder of LinkedIn: *"If you're not embarrassed by the first version of your product, you've launched too late."*
 
-              This doesn't mean shipping broken software. It means shipping something that works, even if it's basic, and improving it based on what you learn.
+              This doesn't mean shipping broken software. It means **shipping the smallest possible piece of your product that can deliver core user value**. Then getting this limited scope into users' hands to validate whether it's valuable for them.
+
+              *Want to dig deeper into this idea? Our article [The Dilemma of the MVP](https://productkind.substack.com/p/the-dilemma-of-the-mvp) explores how to decide what's "enough" to launch. And if you need help slicing out an Minimum Viable Product from your idea, our [Build a Valuable Product](https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview) micro-course walks you through it step by step.*
           subtitle: Perfect is the enemy of launched
         - type: text
           title: "How Buffer launched with almost nothing"
@@ -844,30 +885,27 @@ course:
             body: |-
               **Buffer**, the social media scheduling tool used by millions, started with a landing page and nothing else.
 
-              The founder, Joel Gascoigne, created a simple page that described what Buffer would do and had a "Plans and Pricing" button. When people clicked, they saw a message: "We're not quite ready yet. Leave your email and we'll let you know when we launch."
+              The founder, *Joel Gascoigne*, created a simple page that described what Buffer would do and had a "Plans and Pricing" button. When people clicked, they saw a message: "We're not quite ready yet. Leave your email and we'll let you know when we launch."
 
               That was the entire product. A landing page and an email signup form.
 
               But it answered the most important question: **do people actually want this?** Enough people signed up that Joel knew it was worth building. He then created a basic version, launched it to those email subscribers, and grew from there.
 
-              The lesson? You don't need everything figured out before you launch. You need enough to test whether people care. Start small, learn fast, and grow from what works.
+              The lesson? **You don't need everything figured out before you launch.** You need enough to test whether people are interested. Start small, learn fast, and grow from there.
+            imageUrl: /images/lovable-publishing-00/buffer-mvp.webp
           subtitle: A real-world example of launching lean
         - type: text
           title: "Agile development: what it means for solo builders"
           content:
             body: |-
-              **Agile development** is a way of building software in short cycles instead of one big push. Professional teams use agile frameworks with sprints, standups, and retrospectives. But for solo builders, the core idea is what matters:
-
-              **Build, measure, learn, repeat.**
+              **Agile development** is a way of building software in short cycles instead of one big push. For solo builders, the core idea is:
 
               1. **Build** one small feature or improvement
-              2. **Measure** whether it works (check your analytics, test it yourself)
-              3. **Learn** from what happened (did users engage with it? Did it break something?)
-              4. **Repeat** with the next most important thing
+              2. **Measure** whether it works (check your analytics, test with users)
+              3. **Learn** from user feedback (did users engage with it? Did they find it valuable?)
+              4. **Repeat** with the next most important thing (either improving the same feature or building something new)
 
-              This cycle keeps you moving forward without getting overwhelmed. Instead of planning months of features, you focus on the next small step.
-
-              Dalmie adopts this rhythm. Each week, she picks one improvement based on user feedback, builds it, publishes it, and checks how it's received. Her app gets better every week, and her users notice.
+              This cycle keeps you from spending a lot of time building something your users won't use. It also helps you move forward without getting overwhelmed. Instead of planning months of features, you focus on the **next small step**. You build, see if it works, learn from it, and then decide what to do next. This way, you're always **building based on real user needs and feedback, not assumptions**.
           subtitle: Build, measure, learn, repeat
         - type: text
           title: Scaling with Lovable
@@ -879,11 +917,11 @@ course:
 
               **One thing to watch: the 512MB deployment limit.**
 
-              Lovable has a hard limit of 512MB on the encoded project size for deployment. You're unlikely to hit this with code and normal assets, but you might run into it if you store large files directly in your project, like MP4 videos, many GIFs, or high-resolution images.
+              Lovable has a hard limit of 512MB on the project size for deployment. You're unlikely to hit this with code and normal assets, but you might run into it if you store large files directly in your project, like MP4 videos, many GIFs, or high-resolution images.
 
-              If you're approaching this limit:
+              **If you're approaching this limit:**
               - Host large videos on platforms like YouTube or Vimeo and embed them
-              - Use an image hosting service or CDN for large image collections
+              - Use an image hosting service for large image collections
               - Compress images before adding them to your project
 
               For most products, this limit won't be a concern. But it's good to know about before it surprises you.
@@ -925,12 +963,12 @@ course:
           content:
             question: Why is it better to launch early than to wait until your product feels "done"?
             options:
-              - Because users prefer unfinished products
+              - It's not better; you should always wait until your product is perfect before launching
               - Because you learn from real users sooner and avoid building features nobody wants
               - Because Lovable gives you more credits for launching quickly
               - Because search engines rank new products higher
             correctAnswer: 1
-            explanation: Launching early lets you learn from real users before investing too much time in features that might not matter. You can always improve based on what you learn. The longer you wait for "perfect," the more time you risk spending on the wrong things.
+            explanation: Launching early lets you learn from real users before investing too much time in features that might not be important. You can always improve based on what you learn. The longer you wait for "perfect," the more time you risk spending on the wrong things. Until you get real user feedback on your product, everything you think you know is just an assumption.
         - type: quiz-question
           title: "Quiz: The agile cycle"
           content:
@@ -943,23 +981,15 @@ course:
             correctAnswer: 3
             explanation: The agile cycle for solo builders is "build, measure, learn, repeat." You build one small feature, check if it works, learn from the result, and then decide what to do next. This keeps you moving forward without getting overwhelmed.
         - type: reflection
-          title: "Your turn: Create your launch plan"
+          title: "Your turn: Get ready to launch and grow"
           content:
             description: |-
-              Think about the next step for your product:
-
-              1. If you haven't launched yet, set a launch date (make it soon!)
-              2. Pick one distribution channel where your target users spend time
-              3. Decide on your first "build, measure, learn" cycle: what's the one thing you'll improve this week?
+              Think about this:
 
               What's the one thing holding you back from launching (or growing) right now?
             placeholder: |-
               What's holding me back:
-
-              My launch date:
-
-              My distribution channel:
-            subDescription: Having a plan, even a simple one, makes the difference between "someday" and "this week." You've got the tools. Now it's time to use them.
+            subDescription: The first step to overcoming a barrier is naming it. Whether it's fear of imperfection, uncertainty about what to build next, or something else, acknowledging it is the first step to moving past it. You've got this!
         - type: course-end
           title: "Congratulations! You're ready to grow your product! 🎉"
           content:
@@ -973,7 +1003,7 @@ course:
 
               ✓ **Started your SEO and GEO foundation** so people can find you through search engines and AI tools
 
-              ✓ **Set up analytics and feedback loops** so you know what's working and what needs attention
+              ✓ **Set up analytics and feedback loops** so you know what's working and what needs to be improved
 
               ✓ **Adopted the agile mindset** of building, measuring, learning, and repeating
 

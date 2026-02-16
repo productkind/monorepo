@@ -123,7 +123,7 @@ Invite self-assessment:
 
 **Refrain from using em dashes (—)** – Avoid using em dashes for more natural language.
 
-**Avoid AI buzzwords** – "why it matters", "here's the thing", "this one's for you" are off-limits.
+**Avoid AI buzzwords** – "why it matters", "here's the thing", "this one's for you", "Not X, but Y", "It's not... it's...", "X isn't... it's..." are off-limits.
 
 ## Content Structure Template
 
