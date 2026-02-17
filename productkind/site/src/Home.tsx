@@ -82,14 +82,14 @@ const Home = () => {
             What it is
           </Typography>
           <Typography component="p" variant="body">
-            <strong>Little Parrot</strong> offers science-based micro-courses that make building with AI and vibe coding accessible to everyone. These courses are designed to help you master product and tech skills in minutes, not hours, by breaking down complex topics into digestible, practical challenges.
+            <strong>Little Parrot</strong> offers vibe coding and AI courses for women in business. These courses are designed to help you master product and tech skills in minutes, not hours, by breaking down complex topics into digestible, practical challenges.
           </Typography>
           <Typography component="p" variant="body">
             With Little Parrot, you’ll get:
           </Typography>
           <ul>
             <li>
-              Quick, focused lessons designed for busy lives.
+              Quick, focused challenges designed for busy lives.
             </li>
             <li>
               Practical skills you can apply immediately.
