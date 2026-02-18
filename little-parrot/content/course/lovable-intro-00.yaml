@@ -217,7 +217,7 @@ course:
           title: 'Your turn: Build your first app'
           content:
             description: |-
-              Open Lovable ([Lovable.dev](https://lovable.dev/)), paste Dalmie's structured prompt (or adapt it for your own idea), and press Enter.
+              Open [Lovable](https://lovable.dev/), paste Dalmie's structured prompt (or adapt it for your own idea), and press Enter.
 
               Watch what happens. In a couple of minutes, you'll have a working app.
 
