@@ -22,7 +22,8 @@
       "WebFetch(domain:medium.com)",
       "WebFetch(domain:www.nocode.mba)",
       "WebFetch(domain:github.com)",
-      "WebFetch(domain:www.rapidevelopers.com)"
+      "WebFetch(domain:www.rapidevelopers.com)",
+      "WebFetch(domain:shebuilds.lovable.app)"
     ],
     "deny": [],
     "ask": []

@@ -10,7 +10,7 @@ course:
         - Vibe Coding
         - Prompt Structure
         - Lovable Basics
-      description: Create a working web app in minutes by describing what you want.
+      description: You'll understand what vibe coding is, how to describe your idea with a structured prompt formula, and why starting with one core feature is the secret to faster results.
       completionTime: '12:00'
       steps:
         - type: comic
@@ -232,7 +232,7 @@ course:
         - type: challenge-end
           title: "You've built your first app! 💫"
           content:
-            nextModule: "**Next:** Now that you have something working, let's make it better by adding features one step at a time."
+            nextModule: "**Next:** Now that you have something working, let's make it better by adding features one step at a time. You'll learn how to improve your app with focused prompts, when to tweak vs start fresh, and how to keep improving without getting stuck in endless fixes."
             description: You've experienced the core of vibe coding.
             subDescription: You described what you wanted, and Lovable built it. This is just the beginning. For every app you build from now, you can use the structured prompt formula to get better results faster.
 
@@ -242,7 +242,7 @@ course:
         - Iterative Building
         - Improvement Prompts
         - Rebuild Mindset
-      description: Build in small steps and know when to tweak vs start fresh.
+      description: You'll know how to improve your app with focused follow-up prompts, when to tweak vs start fresh, and acquire the habits that make iteration faster without getting stuck in endless fixes
       completionTime: '8:00'
       steps:
         - type: text
@@ -345,17 +345,17 @@ course:
         - type: challenge-end
           title: "You've learned the iterative approach! 🔄"
           content:
-            nextModule: "**Next:** Before adding new features, let's connect your app to Lovable Cloud so your data is saved properly."
+            nextModule: "**Next:** Your app works, but the data disappears when you close the browser. Before adding new features, let's fix that by connecting to Lovable Cloud."
             description: You now know how to improve your app step by step.
             subDescription: Small prompts, test often, and don't be afraid to start over. This approach keeps you in control and makes your app better with each iteration.
 
-    - title: Connect to Lovable Cloud
+    - title: Save Data with Lovable Cloud
       isFree: true
       skills:
         - Lovable Cloud
         - Backend Basics
         - Data Storage
-      description: Set up a backend early so your app can save data and grow without problems.
+      description: Link your app to its “behind the scenes” system so it can save data and know who is using it. Approve database changes confidently, add Google login, and test that everything works smoothly.
       completionTime: '8:00'
       steps:
         - type: text
@@ -445,7 +445,7 @@ course:
 
               Lovable Cloud makes this straightforward. After this prompt, users can **log in**, and the app will know who they are.
 
-              *Try it for your app! Adding authentication is a common prerequisite for many features.*
+              *Try it for your app! Adding user login is a common prerequisite for many features.*
             imageUrl: /courses/lovable-intro-00/add-google-auth-prompt.webp
           subtitle: Let users log in
         - type: text
@@ -498,16 +498,17 @@ course:
         - type: challenge-end
           title: "Your app saves data! ☁️"
           content:
-            nextModule: "**Next:** Let's explore the Lovable interface so you can make changes more effectively."
+            nextModule: "**Next:** Let's explore the tools Lovable provides so you can make changes more effectively. You'll learn how to preview your app on different devices, make targeted changes, and use design themes to refine the look and feel."
             description: You've connected your app to Lovable Cloud.
             subDescription: Now your app can store data, run logic, and remember things even when users close the browser.
-    - title: Navigate the Lovable Interface
+    - title: Make Quick Changes with the Tools Lovable Provides
       isFree: true
       skills:
         - Preview
         - Visual Edits
         - Design Themes
-      description: Find your way around Lovable's features for quick changes.
+      description: |-
+        You'll learn how to make changes more effectively: preview your app on different devices, make visual edits, and use design themes to refine the look and feel of your app.
       completionTime: '7:00'
       steps:
         - type: text
@@ -613,17 +614,17 @@ course:
         - type: challenge-end
           title: "You know your way around! 🧭"
           content:
-            nextModule: "**Next:** Let's learn how to experiment safely with bookmarks and reverts."
+            nextModule: "**Next:** Things will break as you build. Let's make sure you're never afraid to experiment. You'll learn how to bookmark stable versions and revert changes so you exactly know what to do when things go wrong."
             description: You can now use Lovable's interface confidently.
-            subDescription: Preview, visual edits, themes, and attaching images. These tools help you improve your app in a clear and efficient way.
+            subDescription: Preview, visual edits, themes, and attaching images. You can now refine your app visually, try different styles, and show Lovable exactly what you want.
 
-    - title: Experiment and Undo Mistakes
+    - title: Experiment and Undo Mistakes Safely
       isFree: true
       skills:
         - Version Bookmarking
         - Reverting Changes
         - Safe Experimentation
-      description: Be prepared when something breaks by using bookmarks and reverts.
+      description: You'll know exactly what to do when things go wrong, and how to recover without losing your work or getting stuck. Learn to experiment freely with confidence by using Lovable's version history features. 
       completionTime: '6:00'
       steps:
         - type: text
@@ -699,18 +700,18 @@ course:
         - type: challenge-end
           title: "You can experiment safely! 🛡️"
           content:
-            nextModule: "**Next:** Let's explore some advanced features that unlock more possibilities."
+            nextModule: "**Next:** Let's unlock more possibilities by using plan mode to think before building, browser testing to verify features, and API keys to connect external services. You'll also learn how to handle security warnings confidently and keep your app safe."
             description: You know how to recover when things go wrong.
             subDescription: Bookmark stable versions, revert when needed. Now you can try bold experiments knowing you can always go back.
 
-    - title: Go Beyond the Interface
+    - title: Plan, Test, and Connect Services
       isFree: true
       skills:
         - Plan Mode
         - Project Knowledge
         - API Keys
         - Security Issues
-      description: Unlock more capabilities with advanced features.
+      description: You'll learn how to think through complex problems with Lovable as your partner, give it lasting context about your project, connect to external services safely, handle security warnings confidently, and even ask Lovable to test your app for you.
       completionTime: '7:00'
       steps:
         - type: text
@@ -835,18 +836,18 @@ course:
         - type: challenge-end
           title: "You've unlocked advanced features! ⚡"
           content:
-            nextModule: "**Next:** Time to share your creation with the world. Let's publish your app."
+            nextModule: "**Next:** Time to share your creation with the world. Let's publish your app. You'll learn how to set your favicon, meta tags, and custom URL, then publish your app, and techniques to gather feedback."
             description: You know how to use plan mode, project knowledge, API keys, and handle security errors and warnings.
             subDescription: You can now plan and build apps in Lovable confidently and safely by combining these core skills.
 
-    - title: Publish Your App
+    - title: Publish and Share Your App
       isFree: true
       skills:
         - Publishing
         - Favicon
         - Share Image
-        - Sharing and Feedback
-      description: Put your work on the internet and share it with others.
+        - Gathering Feedback
+      description: How to set your favicon, meta tags, and custom URL, then publish your app, and techniques to gather feedback.
       completionTime: '6:00'
       steps:
         - type: text
@@ -984,4 +985,4 @@ course:
   titleSplit:
     - 'Build Your First App'
     - 'with Lovable'
-  description: Build and publish your first digital product, without writing code. You’ll use Lovable to turn your idea into a working app by using structured prompts. You’ll connect your app to real data, experiment without fear of breaking things, and publish it on the internet. By the end, you’ll have a live app you can share and a repeatable way to turn you ideas into working products.
+  description: Build and publish your first digital product, without writing code. You’ll use Lovable to turn your idea into a working app by using structured prompts. You’ll connect your app to real data, experiment without fear of breaking things, and publish it on the internet. By the end, you’ll have a live app you can share with others and a repeatable way to turn you ideas into working products.
