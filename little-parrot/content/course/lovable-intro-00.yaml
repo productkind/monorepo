@@ -624,7 +624,7 @@ course:
         - Version Bookmarking
         - Reverting Changes
         - Safe Experimentation
-      description: You'll know exactly what to do when things go wrong, and how to recover without losing your work or getting stuck. Learn to experiment freely with confidence by using Lovable's version history features. 
+      description: You'll know exactly what to do when things go wrong, and how to recover without losing your work or getting stuck. Learn to experiment freely by using Lovable's version history features. 
       completionTime: '6:00'
       steps:
         - type: text
@@ -847,7 +847,7 @@ course:
         - Favicon
         - Share Image
         - Gathering Feedback
-      description: How to set your favicon, meta tags, and custom URL, then publish your app, and techniques to gather feedback.
+      description: How to make your app more professional before you share it with the world by setting your favicon, meta tags, and custom URL. You'll also learn techniques to gather feedback and improve your app.
       completionTime: '6:00'
       steps:
         - type: text
