@@ -2,11 +2,12 @@ import { $ } from 'zx'
 import platformsRaw from '../config/platforms.json' with { type: 'json' }
 import { z } from 'zod'
 import path from 'node:path'
-import { rasterizeSvg , type SvgToRasterize } from '@dungarees/zx/image.ts'
+import { rasterizeSvg, type SvgToRasterize } from '@dungarees/zx/image.ts'
 import { type FaviconSettings, IconTransformationType, type MasterIcon, generateFaviconFiles } from '@realfavicongenerator/generate-favicon';
 import { getNodeImageAdapter, loadAndConvertToSvg } from "@realfavicongenerator/image-adapter-node";
 import fs from 'node:fs'
 import { createFileSystem } from '@dungarees/fs/service.ts'
+import { fileURLToPath } from "node:url";
 
 const fsService = createFileSystem(fs)
 
@@ -54,19 +55,20 @@ const PRODUCT_BASE_DIR = '../'
 const ASSETS_DIR = 'assets'
 const SOURCE_DIR = 'src'
 const OUTPUT_DIR = 'dist'
-const absoluteBaseDir = path.resolve(__dirname, PRODUCT_BASE_DIR);
+const baseDir = path.dirname(fileURLToPath(import.meta.url))
+const absoluteBaseDir = path.resolve(baseDir, PRODUCT_BASE_DIR);
 
-const logo: string = path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo.svg')
+const logo: string = path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-400-base.svg')
 
 const PRODUCTKIND_LOGO_PLATFORMS = ['youtube', 'linkedin', 'github'] as const;
 
 const asset_to_input_image: Partial<Record<`${PlatformName}-${AssetType}`, string>> = {
   ...(fromEntriesConst(PRODUCTKIND_LOGO_PLATFORMS.map((p) => [`${p}-profile` as const, logo]))),
-  'instagram-profile': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-kim-and-tim-by-productkind.svg'),
   'substack-wordmark': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-thoughts-by-productkind-linear.svg'),
   'substack-email-banner': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-thoughts-by-productkind-gradient-background.svg'),
   'substack-cover': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-thoughts-by-productkind-gradient-background-square.svg'),
   'substack-profile': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-lets-build-digital-products.svg'),
+  'instagram-profile': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-kim-and-tim-by-productkind.svg'),
   'meetup-cover': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-seminars-by-productkind-gradient.svg'),
   'website-logo': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo.svg'),
   'website-logo-inverted': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-inverted.svg'),
@@ -86,9 +88,9 @@ const images: SvgToRasterize[] = platforms.flatMap((platform) =>
       outputFilePath,
       size: profileImage.size,
     }
- })
+  })
 )
-.filter(filterDefinedByKey('inputFilePath'))
+  .filter(filterDefinedByKey('inputFilePath'))
 
 // Ensure the output directory exists
 await $`mkdir -p ${path.join(absoluteBaseDir, ASSETS_DIR, OUTPUT_DIR)}`
@@ -102,8 +104,8 @@ for (const image of images) {
 function fromEntriesConst<
   const T extends readonly (readonly [PropertyKey, unknown])[]
 >(entries: T): {
-  [K in T[number] as K[0]]: K[1];
-} {
+    [K in T[number]as K[0]]: K[1];
+  } {
   return Object.fromEntries(entries) as any;
 }
 
