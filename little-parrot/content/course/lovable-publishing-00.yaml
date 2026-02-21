@@ -180,7 +180,7 @@ course:
             body: |-
               Before you hit Publish, take a moment to check how your app looks on **different screen sizes**. Many of your users will visit from their phones, and what looks great on a laptop can look broken on a smaller screen.
 
-              Lovable makes this easy. In the preview panel, look for the **device toggle** at the top. It lets you switch between a desktop, tablet and mobile view without leaving the editor.
+              Lovable makes this easy. In the preview panel, look for the **device toggle** at the top. It lets you switch between a desktop, and mobile view without leaving the editor.
 
               **Things to check:**
               - Does the **layout** look right on all views?
