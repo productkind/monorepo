@@ -104,8 +104,8 @@ course:
               Because [root cause]...
 
               Which makes me feel [emotions].
-            systemPrompt: 'You are a product management mentor. Help the user refine their problem statement with the aim to clarify what opportunity we solve for the user before getting into the solution space. They were given this problem statement template to fill: "I am [user] trying to [outcome], but [barrier] because [root cause]. This makes me feel [emotion]." End with an encouraging note (e.g. ''Defining the problem clearly is a great first step!'').'
-            checkerPrompt: 'Check if this problem statement includes a specific target user, a clear barrier/problem, and a clear outcome for the user to achieve. If it only lists features, explain the difference between an output (something we produce, e.g. a feature) and an outcome (the value for the user). This is the problem statement:'
+            systemPrompt: 'You are a product management mentor. Help the user refine their problem statement with the aim to clarify what opportunity they solve for the user before getting into the solution space. They were given this problem statement template to fill: "I am [user] trying to [outcome], but [barrier] because [root cause]. This makes me feel [emotion]." Provide friendly, concise feedback (in max. 7 bullet points) in British English. End with an encouraging note (e.g. ''Defining the problem clearly is a great first step!'').'
+            checkerPrompt: 'Check if this problem statement includes a specific target user, a clear barrier/problem, and a clear outcome for the user to achieve. Only explain the difference between an output (something we produce, e.g. a feature) and an outcome (the value for the user) if the problem statement lists features. This is the problem statement:'
         - type: challenge-end
           title: "Great start! You've defined the problem. \U0001F389"
           content:
