@@ -1,4 +1,4 @@
-import type {Fn} from "hotscript";
+import type { Fn } from "hotscript";
 
 export type StringLiteral<T> = T extends string ? (string extends T ? never : T) : never
 
@@ -52,16 +52,12 @@ export type GetKey<ENTRIES extends EntryTuple> = ENTRIES[0]
 
 export type GetValue<ENTRIES extends EntryTuple> = ENTRIES[1]
 
-export type FilterRecord2<RECORD extends Record<string | number | symbol, any>, TYPE> = Pick<
+export type FilterRecord<RECORD extends Record<string | number | symbol, any>, TYPE> = Pick<
   RECORD,
   {
     [K in keyof RECORD]: RECORD[K] extends TYPE ? K : never
   }[keyof RECORD]
 >
-
-export type FilterRecord<RECORD extends Record<string | number | symbol, any>, TYPE> = {
-  [K in keyof RECORD]: RECORD[K] extends TYPE ? RECORD[K] : never
-}
 
 export type Split<STRING extends string, DELIMITER extends string> = SplitHelper<STRING, DELIMITER>
 
@@ -81,23 +77,23 @@ export type GetAllPaths<OBJECT, PATH extends string = ''> = PathsHelper<OBJECT, 
 
 type PathsHelper<OBJECT, PATH extends string, ACC extends string> =
   | {
-      [K in keyof OBJECT & string]: PATH extends ''
-        ? K | (OBJECT[K] extends Record<string, any> ? PathsHelper<OBJECT[K], K, K> : never)
-        :
-            | `${PATH}.${K}`
-            | (OBJECT[K] extends Record<string, any>
-                ? PathsHelper<OBJECT[K], `${PATH}.${K}`, `${PATH}.${K}` | ACC>
-                : never)
-    }[keyof OBJECT & string]
+    [K in keyof OBJECT & string]: PATH extends ''
+    ? K | (OBJECT[K] extends Record<string, any> ? PathsHelper<OBJECT[K], K, K> : never)
+    :
+    | `${PATH}.${K}`
+    | (OBJECT[K] extends Record<string, any>
+      ? PathsHelper<OBJECT[K], `${PATH}.${K}`, `${PATH}.${K}` | ACC>
+      : never)
+  }[keyof OBJECT & string]
   | ACC
 
 export type GetValueByPath<OBJECT, PATH extends string> = PATH extends keyof OBJECT
   ? OBJECT[PATH]
   : PATH extends `${infer K}.${infer Rest}`
-    ? K extends keyof OBJECT
-      ? GetValueByPath<OBJECT[K], Rest & string>
-      : never
-    : never
+  ? K extends keyof OBJECT
+  ? GetValueByPath<OBJECT[K], Rest & string>
+  : never
+  : never
 
 export type JoinArray<
   STRINGS extends readonly string[],
@@ -106,14 +102,14 @@ export type JoinArray<
 > = STRINGS extends []
   ? ''
   : STRINGS extends [infer L, ...infer R]
-    ? L extends string
-      ? R['length'] extends 0
-        ? `${ACC}${L & string}`
-        : R extends string[]
-          ? JoinArray<R, DELIMITER, `${ACC}${L}${DELIMITER}`>
-          : never
-      : ACC
-    : never
+  ? L extends string
+  ? R['length'] extends 0
+  ? `${ACC}${L & string}`
+  : R extends string[]
+  ? JoinArray<R, DELIMITER, `${ACC}${L}${DELIMITER}`>
+  : never
+  : ACC
+  : never
 
 type CamelCaseSegments<
   S extends string,
@@ -121,13 +117,13 @@ type CamelCaseSegments<
   AccumulatedSegments extends readonly string[] = readonly [],
 > = S extends `${infer First}${infer Rest}`
   ? First extends Uppercase<First>
-    ? CurrentSegment extends ''
-      ? CamelCaseSegments<Rest, First, AccumulatedSegments>
-      : CamelCaseSegments<Rest, First, readonly [...AccumulatedSegments, Lowercase<CurrentSegment>]>
-    : CamelCaseSegments<Rest, `${CurrentSegment}${First}`, AccumulatedSegments>
+  ? CurrentSegment extends ''
+  ? CamelCaseSegments<Rest, First, AccumulatedSegments>
+  : CamelCaseSegments<Rest, First, readonly [...AccumulatedSegments, Lowercase<CurrentSegment>]>
+  : CamelCaseSegments<Rest, `${CurrentSegment}${First}`, AccumulatedSegments>
   : CurrentSegment extends ''
-    ? AccumulatedSegments
-    : readonly [...AccumulatedSegments, Lowercase<CurrentSegment>]
+  ? AccumulatedSegments
+  : readonly [...AccumulatedSegments, Lowercase<CurrentSegment>]
 
 type CamelCaseArray<
   SEGMENTS extends readonly string[],

@@ -12,10 +12,8 @@ import {
   assertSchemaMap,
   SyncFunctionToObservable,
   getObservableMethodsFromSync,
-  UnsafeService,
-  UnsafeForMarbleTesting,
-  UnsafeMarbleTestingObservableFunction,
-  UnsafeMarbleTestingObservable,
+  markUnsafeForMarbleTesting,
+  getUnsafeMethodNames,
 } from './util.ts'
 
 import { lastValueFrom, type Observable, of, catchError, map, Subject } from 'rxjs'
@@ -39,7 +37,7 @@ test('asyncFunctionToObservable', async () => {
   expect(await lastValueFrom(result$)).toBe(5)
 })
 
-mtest('syncFunctionToObservable', ({expect}) => {
+mtest('syncFunctionToObservable', ({ expect }) => {
   const syncFn = (a: number, b: number): number => a + b
   const observableFn = syncFunctionToObservable(syncFn)
 
@@ -55,7 +53,7 @@ mtest('syncFunctionToObservable', ({expect}) => {
   expect(resultError$).toBeObservable('#', {}, new Error('Test error'))
 })
 
-mtest('catchAndRethrow', ({expect, cold}) => {
+mtest('catchAndRethrow', ({ expect, cold }) => {
   const input$ = cold('-#', {}, new Error('Test error'))
 
   const result$ = input$.pipe(
@@ -69,7 +67,7 @@ mtest('catchAndRethrow', ({expect, cold}) => {
   )
 })
 
-mtest('catchValueAndRethrow', ({expect, cold}) => {
+mtest('catchValueAndRethrow', ({ expect, cold }) => {
   const input$ = cold('-#', {}, new Error('Test error'))
 
   const result$ = input$.pipe(
@@ -100,7 +98,7 @@ mtest('tryPipe with error', ({ expect }) => {
       catchError((error) => of(`Error: ${error.message}`)),
     )
   )
-  expect(result$).toBeObservable('(e|)', { 'e': 'Error: Test error'})
+  expect(result$).toBeObservable('(e|)', { 'e': 'Error: Test error' })
 })
 
 mtest('tryPipe with error outside', ({ expect }) => {
@@ -148,7 +146,7 @@ mtest('assertTypeByGuardMap with valid input', ({ expect }) => {
       return obj
     }),
   )
-  expect(result$).toBeObservable('(a|)', { a: { name: 'John' }})
+  expect(result$).toBeObservable('(a|)', { a: { name: 'John' } })
 })
 
 mtest('assertTypeByGuardMap with invalid input', ({ expect }) => {
@@ -175,7 +173,7 @@ mtest('assertSchemaMap with valid input', ({ expect }) => {
       return obj
     }),
   )
-  expect(result$).toBeObservable('(a|)', { a: { name: 'John' }})
+  expect(result$).toBeObservable('(a|)', { a: { name: 'John' } })
 })
 
 
@@ -188,7 +186,7 @@ mtest('getTransformSet', ({ expect, coldStepAndClose }) => {
   };
   const getTransformSet = createGetTransformSet(getter, setter);
   const result$ = getTransformSet(map((x: number) => x + 1));
-  expect(result$).toBeObservableStepAndClose({get: 1, set: 2 }, 2);
+  expect(result$).toBeObservableStepAndClose({ get: 1, set: 2 }, 2);
   expect(setterArgument$).toBeObservableStep(2)
 })
 
@@ -224,7 +222,7 @@ test('SyncFunctionToObservable<FUNC>', () => {
   assert<Equals<ObservableFunc, (a: 1, b: 2) => Observable<3>>>()
 })
 
-mtest('getObservableMethodsFromSync', ({expect}) => {
+mtest('getObservableMethodsFromSync', ({ expect }) => {
   const service = {
     addSync: (a: number, b: number): number => a + b,
     multiplySync: (a: number, b: number): number => a * b,
@@ -256,7 +254,7 @@ test('getObservableMethodsFromSync', () => {
 })
 
 
-mtest('getObservableMethodsFromSync delay', ({expect}) => {
+mtest('getObservableMethodsFromSync delay', ({ expect }) => {
   const service = {
     addSync: (a: number, b: number): number => a + b,
   }
@@ -272,21 +270,12 @@ mtest('getObservableMethodsFromSync delay', ({expect}) => {
   expect(add$).toBeObservable('-(5|)', { '5': 5 })
 })
 
-test('UnsafeService', () => {
-  type Service = {
-    safeMethod: (a: number) => string
-    unsafeMethod: (b: string) => Observable<number>
-  }
-
-  type UnsafeVersion = UnsafeService<Service>
-
-  assert<Equals<UnsafeVersion, {
-    safeMethod: (a: number) => string
-    unsafeMethod: UnsafeMarbleTestingObservableFunction<(b: string) => Observable<number>>
-  }>>()
-
-  type Return = UnsafeVersion['unsafeMethod']
-  type a = ReturnType<Return>
-
-  assert<Equals<Return, UnsafeMarbleTestingObservable<number>>()
+test('getUnsafeMethodNames', () => {
+  const service = {
+    safe: () => of(undefined),
+    unsafe: markUnsafeForMarbleTesting(() => of(undefined)),
+  } as const
+  const methodNames = getUnsafeMethodNames(service)
+  expect(methodNames).toEqual(['unsafe'])
+  assert<Equals<typeof methodNames[0], 'unsafe'>>()
 })

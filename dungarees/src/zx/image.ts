@@ -21,6 +21,7 @@ export const rasterizeSvg = async ({
     ...(isBackgroundDefined ? ['--export-background', background] : []),
     '--export-width', isSingleDimension ? size : size[0],
     ...(isSingleDimension ? [] : ['--export-height', size[1]]),
+    '--export-dpi', '300',
     inputFilePath
   ]
 

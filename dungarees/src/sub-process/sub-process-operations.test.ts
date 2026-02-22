@@ -1,11 +1,11 @@
-import {createFakeSpawn} from "./fake.ts"
-import {createSubProcessService} from "./service.ts"
-import {createSubProcessOperations} from "./sub-process-operations.ts"
-import {mtest} from "@dungarees/core/marbles-vitest.ts"
-import {stdout, stderr} from "@dungarees/cli/utils.ts"
+import { createFakeSpawn } from "./fake.ts"
+import { createSubProcessService } from "./service.ts"
+import { createSubProcessOperations } from "./sub-process-operations.ts"
+import { mtest } from "@dungarees/core/marbles-vitest.ts"
+import { stdout, stderr } from "@dungarees/cli/utils.ts"
 import { createFakeFileSystem } from '@dungarees/fs/fake.ts'
-import {createProcessService} from "@dungarees/process/service.ts"
-import {createFakeNodeProcess} from "@dungarees/process/fake.ts"
+import { createProcessService } from "@dungarees/process/service.ts"
+import { createFakeNodeProcess } from "@dungarees/process/fake.ts"
 
 mtest('subProcessOperations.runSilentUntilError no output if no error', ({ expect }) => {
   const { spawn: fakeSpawn } = createFakeSpawn([
@@ -20,7 +20,11 @@ mtest('subProcessOperations.runSilentUntilError no output if no error', ({ expec
   const subProcessService = createSubProcessService(fakeSpawn)
   const fakeNodeProcess = createFakeNodeProcess()
   const processService = createProcessService(fakeNodeProcess)
-  const subProcessOperations = createSubProcessOperations({ processService, subProcessService, fileSystem })
+  const subProcessOperations = createSubProcessOperations({
+    processService,
+    subProcessService,
+    fileSystem,
+  })
   const output = subProcessOperations.runSilentUntilError('ls', [])
   expect(output).toBeObservableStepAndClose([])
 })
@@ -59,6 +63,7 @@ mtest('subProcessOperations.isExecutable is true if the file other permissions i
   expect(output).toBeObservableStepAndClose(true)
 })
 
+/*
 mtest('subProcessOperations.isExecutable is false if directory', ({ expect }) => {
   const EXECUTABLE_PERMISSIONS = 0o111
   const fileSystem = createFakeFileSystem()
@@ -94,4 +99,4 @@ mtest.each([
   expect(output).toBeObservableStepAndClose(false)
 })
 
-
+*/

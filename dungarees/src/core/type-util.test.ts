@@ -95,7 +95,7 @@ test('JsonType', () => {
 
   // @ts-expect-error it cannot be a function
   const nonJson: JsonType = {
-    f: () => {},
+    f: () => { },
   }
   assert<Equals<typeof nonJson, typeof nonJson>>()
 })
@@ -131,8 +131,7 @@ test('EntryTuples', () => {
 
 test('FilterRecord<RECORD, TYPE>', () => {
   type Filtered = FilterRecord<{ a: 1; b: 2; c: '3' }, number>
-  // TODO remove the keys as well
-  assert<Equals<Filtered, { a: 1; b: 2; c: never }>>()
+  assert<Equals<Filtered, { a: 1; b: 2 }>>()
 })
 
 test('GetAllPaths<OBJECT>', () => {

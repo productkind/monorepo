@@ -1,34 +1,32 @@
 import { lastValueFrom, type Observable, scan, defer, of, map, delay, mergeMap, catchError, throwError, concat, type OperatorFunction } from 'rxjs'
 import { assertDefined, assertPredicate, assertTypeByGuard, mapConstKeysToEntries, objectFromConstEntries } from '@dungarees/core/util.ts'
-import { type Guard } from '@dungarees/core/type-util.ts'
+import { FilterRecord, type Guard } from '@dungarees/core/type-util.ts'
 import { type ZodSchema } from 'zod'
 
 
-export const UNSAFE_MARBLE_TESTING = Symbol('UNSAFE_MARBLE_TESTING')
-export const UNSAFE_MARBLE_TESTING_OBSERVABLE = Symbol('UNSAFE_MARBLE_OBSERVABLE')
 export const UNSAFE_MARBLE_TESTING_OBSERVABLE_FUNCTION = Symbol('UNSAFE_MARBLE_TESTING_OBSERVABLE_FUNCTION')
 
-export type UnsafeMarbleTestingObservable<T extends Observable<any>> = T & {
-  [UNSAFE_MARBLE_TESTING]: typeof UNSAFE_MARBLE_TESTING_OBSERVABLE
-}
+export type UnsafeMarbleTestingObservableFunction<
+  T extends (...args: any[]) => any = (...args: any[]) => any
+> =
+  T & {
+    [UNSAFE_MARBLE_TESTING_OBSERVABLE_FUNCTION]: true
+  }
 
-export type UnsafeMarbleTestingObservableFunction<T extends (...args: any[]) => any> =
-  (...args: Parameters<T>) => UnsafeMarbleTestingObservable<ReturnType<T>>& {
-  [UNSAFE_MARBLE_TESTING]: typeof UNSAFE_MARBLE_TESTING_OBSERVABLE_FUNCTION
-}
-
+export type SafeMarbleTestingObservableFunction<T extends (...args: any[]) => any> =
+  T & {
+    [UNSAFE_MARBLE_TESTING_OBSERVABLE_FUNCTION]: false
+  }
 
 export type UnsafeService<SERVICE extends Record<string, (...args: any[]) => any>> = {
   [K in keyof SERVICE]: SERVICE[K] extends (...args: any[]) => Observable<any>
-    ? UnsafeMarbleTestingObservableFunction<SERVICE[K]>
-    : SERVICE[K]
+  ? UnsafeMarbleTestingObservableFunction<SERVICE[K]>
+  : SERVICE[K]
 }
 
-export type UnsafeObservable = UnsafeForMarbleTesting<(...args: any[]) => Observable<any>>
-
-export const markUnsafeForMarbleTesting = <T extends (...args: any[]) => any>(fn: T): UnsafeForMarbleTesting<T> => {
-  (fn as UnsafeForMarbleTesting<T>)[UNSAFE_MARBLE_TESTING] = true
-  return fn as UnsafeForMarbleTesting<T>
+export const markUnsafeForMarbleTesting = <T extends (...args: any[]) => any>(fn: T): UnsafeMarbleTestingObservableFunction<T> => {
+  (fn as UnsafeMarbleTestingObservableFunction<T>)[UNSAFE_MARBLE_TESTING_OBSERVABLE_FUNCTION] = true
+  return fn as UnsafeMarbleTestingObservableFunction<T>
 }
 
 export type SyncFunctionToObservable<FUNC extends (...args: any[]) => any> = FUNC extends (
@@ -40,7 +38,7 @@ export type SyncFunctionToObservable<FUNC extends (...args: any[]) => any> = FUN
 export const collectValuesFrom = async <T>(values$: Observable<T>): Promise<T[]> =>
   await lastValueFrom(values$.pipe(scan((acc, value) => [...acc, value], [] as T[])))
 
-export const asyncFunctionToObservable = <RETURN, ARGS extends any[]>(asyncFn: (...args: ARGS) => Promise<RETURN>): UnsafeForMarbleTesting<((...args: ARGS) => Observable<RETURN>)> => {
+export const asyncFunctionToObservable = <RETURN, ARGS extends any[]>(asyncFn: (...args: ARGS) => Promise<RETURN>): UnsafeMarbleTestingObservableFunction<((...args: ARGS) => Observable<RETURN>)> => {
   const wrapped = (...args: ARGS): Observable<RETURN> => {
     return defer(() => asyncFn(...args))
   }
@@ -292,12 +290,12 @@ type ObservableMethodsFromSync<
   SERVICE extends Record<`${string}Sync`, (...args: any[]) => any>,
   METHOD_NAMES extends readonly SyncMethodBase<SERVICE>[],
 > = {
-  [K in METHOD_NAMES[number]]: `${K & string}Sync` extends keyof SERVICE
+    [K in METHOD_NAMES[number]]: `${K & string}Sync` extends keyof SERVICE
     ? SERVICE[`${K & string}Sync`] extends (...args: infer ARGS) => infer RETURN
-      ? (...args: ARGS) => Observable<RETURN>
-      : never
+    ? (...args: ARGS) => Observable<RETURN>
     : never
-}
+    : never
+  }
 
 export function getObservableMethodsFromSync<
   SERVICE extends Record<`${string}Sync`, (...args: any[]) => any>,
@@ -323,5 +321,13 @@ export function getObservableMethodsFromSync(
   return objectFromConstEntries(observableMethods)
 }
 
-
+export const getUnsafeMethodNames =
+  <const SERVICE extends Record<string, any | UnsafeMarbleTestingObservableFunction>>
+    (service: SERVICE): Array<keyof FilterRecord<SERVICE, UnsafeMarbleTestingObservableFunction>> =>
+    Object.keys(service)
+      .filter((key) =>
+        typeof service[key] === 'function' &&
+        UNSAFE_MARBLE_TESTING_OBSERVABLE_FUNCTION in service[key] &&
+        service[key][UNSAFE_MARBLE_TESTING_OBSERVABLE_FUNCTION] === true
+      ) as Array<keyof FilterRecord<SERVICE, UnsafeMarbleTestingObservableFunction>>
 
