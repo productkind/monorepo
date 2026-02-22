@@ -7,6 +7,32 @@ export type NpmRegistryRunnerConfig = {
   environment?: Record<string, string>
   network?: StartedNetwork
   alias?: string
+  localScopes?: string[]
+}
+
+const generateVerdaccioConfig = (localScopes: string[]): string => {
+  const localScopeRules = localScopes
+    .map(scope => `  '${scope}/*':\n    access: $all\n    publish: $authenticated`)
+    .join('\n')
+
+  return `storage: /verdaccio/storage/data
+auth:
+  htpasswd:
+    file: /verdaccio/storage/htpasswd
+uplinks:
+  npmjs:
+    url: https://registry.npmjs.org/
+packages:
+${localScopeRules}
+  '@*/*':
+    access: $all
+    publish: $authenticated
+    proxy: npmjs
+  '**':
+    access: $all
+    publish: $authenticated
+    proxy: npmjs
+`
 }
 
 export const npmRegistryRunner = ({
@@ -14,6 +40,7 @@ export const npmRegistryRunner = ({
   environment = {},
   network,
   alias,
+  localScopes,
 }: NpmRegistryRunnerConfig): Runner => {
   let runningContainer: StartedTestContainer | undefined
 
@@ -35,6 +62,13 @@ export const npmRegistryRunner = ({
       })
     })
     .withWaitStrategy(Wait.forListeningPorts().withStartupTimeout(300_000))
+
+  if (localScopes !== undefined) {
+    container.withCopyContentToContainer([{
+      content: generateVerdaccioConfig(localScopes),
+      target: '/verdaccio/conf/config.yaml',
+    }])
+  }
 
   if (alias !== undefined) {
     container.withName(alias)

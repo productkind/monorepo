@@ -45,6 +45,7 @@ export const { Given, When, Then } = createCucumberTestEnvironment({
         port: 4873,
         network: await getNetworkSingleton(),
         alias: 'npmregistry',
+        localScopes: ['@dungarees'],
       }),
     type: 'runner',
     hook: 'before-all',

@@ -1,4 +1,4 @@
-import { ProcessServiceOutput, type SubProcessService, type Spawn } from './type.ts'
+import type { ProcessServiceOutput, Spawn, SubProcessService } from './type.ts'
 
 import { combineLatest, firstValueFrom, map, merge, scan, startWith, Subject } from 'rxjs'
 
