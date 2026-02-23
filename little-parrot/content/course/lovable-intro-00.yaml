@@ -1,6 +1,11 @@
 course:
   id: f8e2a1b3-c4d5-6789-e0f1-234567890abc
-  note: ''
+  note: |-
+    **Free until International Women's Day 🎉** 
+    
+    *We're making this course completely free until 8th March. International Women's Day is about creating opportunity, and we think there's no better way to mark it than by helping as many women as possible build their first digital product.*
+    
+    *Start learning now, and by 8th March you could have your own app.*
   cover: /courses/lovable-intro-00/cover.gif
   title: 'Build Your First App with Lovable'
   challenges:
