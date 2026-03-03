@@ -65,6 +65,12 @@ course:
           content:
             vimeoId: 1164638073
             videoRemotionId: lesson-write-better-with-ai-00-video-00
+            youtubeId: "lkgGfm06oIo"
+            transcript: |-
+              Set the tone and style how the AI is expected to phrase its replies.
+
+              Especially useful when crafting messages that need to reflect your authentic voice,
+              rather than generic AI-generated hyperbole.
         - type: quiz-question
           title: Why specify tone and style
           content:
@@ -474,6 +480,29 @@ course:
           content:
             vimeoId: 1164638096
             videoRemotionId: lesson-write-better-with-ai-00-video-01
+            youtubeId: "W2tYdcUyQqM"
+            transcript: |-
+              In simple terms, Artificial Intelligence is the capability of a machine to perform
+              tasks that would normally require human intelligence. This includes things like
+              learning from data, understanding language, recognising patterns, and making
+              decisions.
+
+              Many problems are too complex for traditional, rule-based programming. AI gives us
+              new ways to tackle these challenges: it can help us automate repetitive tasks,
+              personalise user experiences, and make better predictions. Today, when we use tools
+              like ChatGPT or Gemini, we often call them Artificial Intelligence.
+
+              Technically, they’re a specific kind of AI known as Large Language Models, or LLMs.
+              So, what exactly is an LLM? To answer that, let’s start with the basics: an AI model.
+              An AI model is simply a program that’s trained on data to do a particular job, for
+              example, classifying images, spotting trends, or generating text.
+
+              A model always takes an input and produces an output. The input and output can be
+              text, images, audio, or other forms of data. A Large Language Model is a type of
+              AI model that’s specialised in human language. It’s trained on vast amounts of text
+              to learn the structure and patterns of how we write and speak. This allows it to
+              generate text, summarise information, answer questions, and even help you brainstorm
+              ideas.
         - type: quiz-question
           title: What's really going on inside an AI model
           content:
@@ -624,6 +653,32 @@ course:
           content:
             vimeoId: 1164638275
             videoRemotionId: lesson-write-better-with-ai-00-video-03
+            youtubeId: "OYPhqMhI-98"
+            transcript: |-
+              When you type a message into an AI chat, your prompt isn’t processed on its own.
+              Behind the scenes, the system adds another piece: a hidden system prompt.
+              This is written by the model’s creators and sets the ground rules for how the AI
+              should behave with you.
+              
+              The model then takes both the system prompt and your prompt, breaks them down into
+              tokens, and starts predicting what comes next.
+
+              A token can be as short as a single letter or as long as a word. At each step, the
+              model ranks possible next tokens by likelihood, chooses from the top candidates,
+              and then repeats the process. By stringing these predictions together, one token at a
+              time, it produces a full reply. Because it samples from the top options rather than
+              always picking the single most likely one, the same prompt can lead to slightly
+              different answers.
+
+              But what about memory?
+
+              The model doesn’t actually remember past interactions. Instead, the app feeds it the
+              conversation history again each time you send a new message. This history, along with
+              any files you’ve attached, is bundled into the latest prompt and called the context.
+
+              The model pays most attention to the most recent few thousand tokens, roughly five to
+              seven thousand. This is why, in long conversations, it can seem like the AI forgets
+              earlier details.
         - type: quiz-question
           title: Same question, different answer
           content:

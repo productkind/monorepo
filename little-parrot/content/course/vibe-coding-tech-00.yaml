@@ -45,15 +45,21 @@ course:
           content:
             videoRemotionId: lesson-vibe-coding-tech-00-video-00
             vimeoId: 1164638011
+            youtubeId: "ZamAz_W2VwY"
             transcript: |-
               Until recently, building applications was much harder. Now, with AI app builders such
-              as Lovable, anyone can get started. Still, it helps to understand the basic building
-              blocks of a typical application. By learning key terms from design and software
-              development, you can become better at prompting these AI tools. In this micro-course,
-              we’ll focus on demystifying the common terms used when building software, so you can
-              grow your vocabulary and confidence. By the end, you’ll be able to: Understand key
-              terms used in app design and development, recognise these terms in AI app builders,
-              and use them to create clearer prompts for AI app builders.
+              as Lovable, anyone can get started.
+
+              Still, it helps to understand the basic building blocks of a typical application. By
+              learning key terms from design and software development, you can become better at
+              prompting these AI tools.
+
+              In this micro-course, we’ll focus on demystifying the common terms used when building
+              software, so you can grow your vocabulary and confidence.
+
+              By the end, you’ll be able to: Understand key terms used in app design and
+              development, recognise these terms in AI app builders, and use them to create clearer
+              prompts for AI app builders.
         - type: text
           title: How apps are built
           content:
@@ -511,12 +517,19 @@ course:
           content:
             videoRemotionId: lesson-vibe-coding-tech-00-video-01
             vimeoId: 1164638055
+            youtubeId: "YHhq_ziY8XY"
             transcript: |-
-              Everything on the web is made up of boxes. Each box has a width and height, usually
-              defined in pixels. A box can have a border, and you can set how thick it is and what
-              colour it has. Inside the border is the padding, which defines the space between the
-              border and the box’s content. Outside the border is the margin, which defines the
-              space between this box and the other boxes around it.
+              Everything on the web is made up of boxes.
+
+              Each box has a width and height, usually defined in pixels.
+
+              A box can have a border, and you can set how thick it is and what colour it has.
+
+              Inside the border is the padding, which defines the space between the border and the
+              box’s content.
+
+              Outside the border is the margin, which defines the space between this box and the
+              other boxes around it.
         - type: text
           title: Reusable components
           content:
