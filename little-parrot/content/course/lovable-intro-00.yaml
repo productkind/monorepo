@@ -241,7 +241,7 @@ course:
         - type: challenge-end
           title: "You've built your first app! 💫"
           content:
-            nextModule: "**Next:** Now that you have something working, let's make it better by adding features one step at a time. You'll learn how to improve your app with focused prompts, when to tweak vs start fresh, and how to keep improving without getting stuck in endless fixes."
+            nextModule: "**Next challenge:** Now that you have something working, let's make it better by adding features one step at a time. You'll learn how to improve your app with focused prompts, when to tweak vs start fresh, and how to keep improving without getting stuck in endless fixes."
             description: You've experienced the core of vibe coding.
             subDescription: You described what you wanted, and Lovable built it. This is just the beginning. For every app you build from now, you can use the structured prompt formula to get better results faster.
 
@@ -354,7 +354,7 @@ course:
         - type: challenge-end
           title: "You've learned the iterative approach! 🔄"
           content:
-            nextModule: "**Next:** Your app works, but the data disappears when you close the browser. Before adding new features, let's fix that by connecting to Lovable Cloud."
+            nextModule: "**Next challenge:** Your app works, but the data disappears when you close the browser. Before adding new features, let's fix that by connecting to Lovable Cloud."
             description: You now know how to improve your app step by step.
             subDescription: Small prompts, test often, and don't be afraid to start over. This approach keeps you in control and makes your app better with each iteration.
 
@@ -623,7 +623,7 @@ course:
         - type: challenge-end
           title: "You know your way around! 🧭"
           content:
-            nextModule: "**Next:** Things will break as you build. Let's make sure you're never afraid to experiment. You'll learn how to bookmark stable versions and revert changes so you exactly know what to do when things go wrong."
+            nextModule: "**Next challenge:** Things will break as you build. Let's make sure you're never afraid to experiment. You'll learn how to bookmark stable versions and revert changes so you exactly know what to do when things go wrong."
             description: You can now use Lovable's interface confidently.
             subDescription: Preview, visual edits, themes, and attaching images. You can now refine your app visually, try different styles, and show Lovable exactly what you want.
 
@@ -709,7 +709,7 @@ course:
         - type: challenge-end
           title: "You can experiment safely! 🛡️"
           content:
-            nextModule: "**Next:** Let's unlock more possibilities by using plan mode to think before building, browser testing to verify features, and API keys to connect external services. You'll also learn how to handle security warnings confidently and keep your app safe."
+            nextModule: "**Next challenge:** Let's unlock more possibilities by using plan mode to think before building, browser testing to verify features, and API keys to connect external services. You'll also learn how to handle security warnings confidently and keep your app safe."
             description: You know how to recover when things go wrong.
             subDescription: Bookmark stable versions, revert when needed. Now you can try bold experiments knowing you can always go back.
 
@@ -845,7 +845,7 @@ course:
         - type: challenge-end
           title: "You've unlocked advanced features! ⚡"
           content:
-            nextModule: "**Next:** Time to share your creation with the world. Let's publish your app. You'll learn how to set your favicon, meta tags, and custom URL, then publish your app, and techniques to gather feedback."
+            nextModule: "**Next challenge:** Time to share your creation with the world. Let's publish your app. You'll learn how to set your favicon, meta tags, and custom URL, then publish your app, and techniques to gather feedback."
             description: You know how to use plan mode, project knowledge, API keys, and handle security errors and warnings.
             subDescription: You can now plan and build apps in Lovable confidently and safely by combining these core skills.
 

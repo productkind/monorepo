@@ -131,7 +131,7 @@ course:
           title: "You've learned your first prompting techniques! \U0001F389"
           content:
             cta: Next
-            nextModule: '**Next up:** We''ll go beyond tone. You''ll learn how to give context and background in your prompts, a technique that makes AI replies clearer, more relevant, and more useful.'
+            nextModule: '**Next challenge:** We''ll go beyond tone. You''ll learn how to give context and background in your prompts, a technique that makes AI replies clearer, more relevant, and more useful.'
             description: Simple techniques make a big difference.
             subDescription: |-
               AI prompting isn't magic. It's a set of small techniques you can use to get better results.
@@ -357,7 +357,7 @@ course:
           content:
             cta: Next
             nextModule: |-
-              **Up next:** We'll take things further. Instead of a quick team message, you'll craft a LinkedIn post that feels natural, engaging, and true to your voice.
+              **Next challenge:** We'll take things further. Instead of a quick team message, you'll craft a LinkedIn post that feels natural, engaging, and true to your voice.
 
               Ready?
             description: 'In this section, you learned that:'
@@ -554,7 +554,7 @@ course:
         - type: challenge-end
           title: "Nicely done! You've used tone, style, and context to shape a LinkedIn post \U0001F389"
           content:
-            nextModule: '**Next up:** we''ll dive into how you can use AI for quickly learning new concepts that you can customise to your level. Let''s jump in!'
+            nextModule: '**Next challenge:** we''ll dive into how you can use AI for quickly learning new concepts that you can customise to your level. Let''s jump in!'
             description: See how much more natural it feels when the AI writes in your voice, and how adding context makes the output clearer and more useful?
             subDescription: You've now shaped AI output for both quick team messages and public posts, two very different contexts. That's a big step in making AI work for you.
       title: Craft impactful LinkedIn posts that sound like you

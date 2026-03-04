@@ -272,7 +272,7 @@ course:
         - type: challenge-end
           title: You've got the debugging mindset! 🔍
           content:
-            nextModule: "**Next:** Prevention is better than cure! Learn powerful habits that dramatically reduce how often you encounter bugs."
+            nextModule: "**Next challenge:** Prevention is better than cure! Learn powerful habits that dramatically reduce how often you encounter bugs."
             description: You understand what bugs are and how to approach them.
             subDescription: "Remember: diagnose before you fix. Understanding the different types of bugs helps you guide Lovable in fixing them more effectively. Great job on completing the first challenge!"
     - title: Preventing Bugs Before They Happen
@@ -430,7 +430,7 @@ course:
         - type: challenge-end
           title: You've got the prevention habits! 🛡️
           content:
-            nextModule: "**Next:** When bugs do happen, developers have specific techniques to investigate them. Let's learn how to find clues like a professional."
+            nextModule: "**Next challenge:** When bugs do happen, developers have specific techniques to investigate them. Let's learn how to find clues like a professional."
             description: You know how to reduce bugs before they happen.
             subDescription: Small prompts + immediate testing + bookmarked versions = fewer bugs and easier fixes. These habits will serve you throughout your building journey!
     - title: How Developers Investigate Bugs
@@ -805,7 +805,7 @@ course:
         - type: challenge-end
           title: You can investigate like a developer! 🕵️
           content:
-            nextModule: "**Next:** Now that you know where to find clues, let's learn Lovable's specific debugging tools and when to use each one."
+            nextModule: "**Next challenge:** Now that you know where to find clues, let's learn Lovable's specific debugging tools and when to use each one."
             description: You know where to find clues in the Console, Network tab, Backend Logs, and Database.
             subDescription: These investigation techniques are exactly what professional developers use. Now when you encounter a bug, you know where to look for clues before trying to fix anything!
     - title: Lovable's Debugging Toolkit
@@ -985,7 +985,7 @@ course:
         - type: challenge-end
           title: You know your debugging toolkit! 🧰
           content:
-            nextModule: "**Next:** Sometimes fixing one bug creates another. Learn strategies to escape frustrating bug loops."
+            nextModule: "**Next challenge:** Sometimes fixing one bug creates another. Learn strategies to escape frustrating bug loops."
             description: You've learned when to use Plan mode, Visual edits, and Try to Fix.
             subDescription: |-
               - **Plan mode** for investigation and logic bugs, 
@@ -1145,7 +1145,7 @@ course:
         - type: challenge-end
           title: You can escape bug loops! 🪽
           content:
-            nextModule: "**Next:** Let's master the art of communicating with Lovable to get bugs fixed effectively."
+            nextModule: "**Next challenge:** Let's master the art of communicating with Lovable to get bugs fixed effectively."
             description: You have strategies for when things get stuck.
             subDescription: Revert, compare, explain before fixing, isolate, and know when to start fresh. These escape routes will save you hours of frustration. Sometimes going back is the fastest way forward!
     - title: How to Guide Lovable to Fix Bugs
@@ -1352,7 +1352,7 @@ course:
         - type: challenge-end
           title: You can communicate bugs clearly! 💬
           content:
-            nextModule: "**Next:** Your app works great, but is it safe? Let's tackle the security issues Lovable flags and learn what they actually mean."
+            nextModule: "**Next challenge:** Your app works great, but is it safe? Let's tackle the security issues Lovable flags and learn what they actually mean."
             description: You know how to write effective debugging prompts for Lovable.
             subDescription: Specific location + expected behaviour + actual behaviour + clues + tried + guardrails = effective debugging. With this formula, you'll get faster, more accurate fixes every time!
     - title: Handling Security Errors and Warnings

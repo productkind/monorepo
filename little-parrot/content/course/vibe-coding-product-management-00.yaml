@@ -113,7 +113,7 @@ course:
         - type: challenge-end
           title: "Great start! You've defined the problem. \U0001F389"
           content:
-            nextModule: '**Next:** Now that you''ve nailed the problem, let''s figure out **who** exactly has this problem.'
+            nextModule: '**Next challenge:** Now that you''ve nailed the problem, let''s figure out **who** exactly has this problem.'
             description: By focusing on a specific problem, you've given your idea a clear purpose.
             subDescription: Every successful product begins with understanding a real user need, pain point or desire. Whenever you feel lost in features, come back to this problem statement. It's your north star!
       title: Craft a Problem Statement
@@ -196,7 +196,7 @@ course:
         - type: challenge-end
           title: "Great job! You've identified your target user! \U0001F3AF"
           content:
-            nextModule: '**Next:** With a clear user and problem in mind, you''ll visualise their journey from struggle to success with storyboarding.'
+            nextModule: '**Next challenge:** With a clear target user and problem in mind, you''ll visualise their journey from struggle to success with storyboarding.'
             description: You now know exactly who you're building for.
             subDescription: Keeping a specific user in mind (like Sarah) will guide your choices. It's like designing for one person – making it far more likely your product will really resonate.
       title: Define Your Target User
@@ -284,7 +284,7 @@ course:
         - type: challenge-end
           title: "Great story! \U0001F4D6"
           content:
-            nextModule: '**Next:** Time to get granular. You''ll learn about **user story mapping**, a simple way to turn your idea into a plan of features to build.'
+            nextModule: '**Next challenge:** Time to get granular. You''ll learn about **user story mapping**, a simple way to turn your idea into a plan of features to build.'
             description: You've envisioned how your product will help your user solve their problem.
             subDescription: This storyboard is your compass. Whenever you're in doubt, remember how your solution makes your user's life better. Now, let's break this story into actual steps and features.
       title: 'Storyboard: From Struggle to Solution'
@@ -482,7 +482,7 @@ course:
         - type: challenge-end
           title: "Amazing work, you've got your user story map! \U0001F5FA️"
           content:
-            nextModule: '**Next:** We''ll decide which are the most essential features to build first and define your MVP (Minimum Viable Product).'
+            nextModule: '**Next challenge:** We''ll decide which are the most essential features to build first and define your MVP (Minimum Viable Product).'
             description: You've mapped out every part of your solution.
             subDescription: 'Now you can see your entire product at a glance. It''s normal if it feels like a lot! The good news: you don''t need to build all of it at once.'
       title: Break Down Your Idea Into Buildable Steps
@@ -614,7 +614,7 @@ course:
         - type: challenge-end
           title: "Wonderful work: MVP scoped! \U0001F680"
           content:
-            nextModule: '**Next:** Let''s turn your plan into action. You''ll learn to translate your MVP into a prompt that an AI tool can use to build your app.'
+            nextModule: '**Next challenge:** Let''s turn your plan into action. You''ll learn to translate your MVP into a prompt that an AI tool can use to build your app.'
             description: You've decided what to build first (and what to postpone).
             subDescription: Great job resisting the urge to do everything at once. A clear MVP means you can move faster and learn from real users sooner.
       title: 'Decide What to Build First: Define Your MVP'
@@ -721,7 +721,7 @@ course:
         - type: challenge-end
           title: "Well done! Prompt ready to go! \U0001F4A1"
           content:
-            nextModule: '**Next:** Almost there! You''ll learn how to test your idea with real users ASAP.'
+            nextModule: '**Next challenge:** Almost there! You''ll learn how to test your idea with real users ASAP.'
             description: You translated your plan into a clear AI prompt.
             subDescription: It's like giving the AI a blueprint of your product. With a solid prompt in hand, you're one step away from actually building something. Finally, let's prepare to build and gather feedback!
       title: Create a Prompt to Build Your MVP with AI

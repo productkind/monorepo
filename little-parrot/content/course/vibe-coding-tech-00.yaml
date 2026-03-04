@@ -176,7 +176,7 @@ course:
         - type: challenge-end
           title: "You've learned how an app is structured! \U0001F389"
           content:
-            nextModule: '**Next up:** Now that you know the parts of an app, let''s learn the **design vocabulary** that helps you describe exactly how you want things to look and feel. No more "make it nicer,"you''ll have the words to say exactly what you mean!'
+            nextModule: '**Next challenge:** Now that you know the parts of an app, let''s learn the **design vocabulary** that helps you describe exactly how you want things to look and feel. No more "make it nicer,"you''ll have the words to say exactly what you mean!'
             description: You now have a mental map of how apps are built.
             subDescription: It's powerful to know the difference between frontend and backend. It means you can point the AI app builder to exactly the right place. Try noticing which part you're talking about in your next prompt, it makes a real difference!
       title: Building Blocks of an Application
@@ -437,7 +437,7 @@ course:
           title: "You can now describe look and layout clearly! \U0001F3A8"
           content:
             cta: Next
-            nextModule: '**Next up:** Let''s peek under the hood at the **frontend**, how HTML, CSS, and components actually work together. Don''t worry, you won''t need to write code! But understanding the basics helps you troubleshoot when things look off and guide the AI app builder more efficiently.'
+            nextModule: '**Next challenge:** Let''s peek under the hood at the **frontend**, how HTML, CSS, and components actually work together. Don''t worry, you won''t need to write code! But understanding the basics helps you troubleshoot when things look off and guide the AI app builder more efficiently.'
             description: You've got the vocabulary to describe exactly what you're picturing!
             subDescription: This is huge. Instead of "make it look nicer," you can now say "use a card with rounded corners" or "add a modal for the confirmation." Open an AI app builder and try describing one screen using at least three component names, notice how much more accurate the result is!
       title: Design Elements for Vibe Coders
@@ -641,7 +641,7 @@ course:
           title: "Well done! Frontend foundations locked in! \U0001F4BB"
           content:
             cta: Next
-            nextModule: '**Next up:** Time to explore the **backend**—where the real magic happens behind the scenes. You''ll learn about APIs, authentication, and how your app talks to other services. This is what turns a pretty interface into a powerful, functional product!'
+            nextModule: '**Next challenge:** Time to explore the **backend**—where the real magic happens behind the scenes. You''ll learn about APIs, authentication, and how your app talks to other services. This is what turns a pretty interface into a powerful, functional product!'
             description: You now understand what's happening when the AI app builder generates your interface!
             subDescription: This knowledge is like having X-ray vision. Next time the AI app builder shows you code, see if you can spot the HTML elements (look for those angle brackets!). You'll start recognising the structure of what you're building. It's oddly satisfying!
       title: Frontend for Vibe Coders
@@ -805,7 +805,7 @@ course:
           title: "Amazing work! Backend basics locked in! \U0001F510"
           content:
             cta: Next
-            nextModule: '**Next up:** Let''s talk about **databases**, where your app stores and remembers everything. You''ll learn how data is organised, how tables connect to each other, and (importantly!) how to avoid accidentally deleting everything. This is where your app gets its memory!'
+            nextModule: '**Next challenge:** Let''s talk about **databases**, where your app stores and remembers everything. You''ll learn how data is organised, how tables connect to each other, and (importantly!) how to avoid accidentally deleting everything. This is where your app gets its memory!'
             description: You can now prompt for features that go beyond what users see!
             subDescription: This is a big deal. You're moving from shaping what users see to handling things like sending emails or processing payments. Think of one third-party service your app might need. Look up their website and find where API keys are created. Even a bit of exploration helps you feel more at home with these tools.
       title: Backend for Vibe Coders
