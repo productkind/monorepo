@@ -176,7 +176,7 @@ course:
         - type: challenge-end
           title: "You've learned how an app is structured! \U0001F389"
           content:
-            nextModule: '**Next challenge:** Now that you know the parts of an app, let''s learn the **design vocabulary** that helps you describe exactly how you want things to look and feel. No more "make it nicer,"you''ll have the words to say exactly what you mean!'
+            nextModule: '**Next challenge:** Now that you know the parts of an app, let''s learn the **design vocabulary** that helps you describe exactly how you want things to look and feel. No more "make it nicer," you''ll have the words to say exactly what you mean!'
             description: You now have a mental map of how apps are built.
             subDescription: It's powerful to know the difference between frontend and backend. It means you can point the AI app builder to exactly the right place. Try noticing which part you're talking about in your next prompt, it makes a real difference!
       title: Building Blocks of an Application
