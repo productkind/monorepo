@@ -1,0 +1,28 @@
+{
+  "name": "Little Parrot Lovable Tutor",
+  "description": "A tutor extension for Lovable to help users learn how to use Lovable effectively.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_icon": "extension-icon.png",
+    "default_title": "Open Little Parrot Tutor"
+  },
+  "side_panel": {
+    "default_path": "index.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "sidePanel",
+    "activeTab",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://lovable.dev/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
