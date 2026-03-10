@@ -1,11 +1,6 @@
 course:
   id: f8e2a1b3-c4d5-6789-e0f1-234567890abc
-  note: |-
-    **Free until International Women's Day 🎉** 
-    
-    *We're making this course completely free until 8th March. International Women's Day is about creating opportunity, and we think there's no better way to mark it than by helping as many women as possible build their first digital product.*
-    
-    *Start learning now, and by 8th March you could have your own app.*
+  note: ""
   cover: /courses/lovable-intro-00/cover.gif
   title: 'Build Your First App with Lovable'
   challenges:
@@ -246,7 +241,7 @@ course:
             subDescription: You described what you wanted, and Lovable built it. This is just the beginning. For every app you build from now, you can use the structured prompt formula to get better results faster.
 
     - title: Iterate and Improve
-      isFree: true
+      isFree: false
       skills:
         - Iterative Building
         - Improvement Prompts
@@ -359,7 +354,7 @@ course:
             subDescription: Small prompts, test often, and don't be afraid to start over. This approach keeps you in control and makes your app better with each iteration.
 
     - title: Save Data with Lovable Cloud
-      isFree: true
+      isFree: false
       skills:
         - Lovable Cloud
         - Backend Basics
@@ -511,7 +506,7 @@ course:
             description: You've connected your app to Lovable Cloud.
             subDescription: Now your app can store data, run logic, and remember things even when users close the browser.
     - title: Make Quick Changes with the Tools Lovable Provides
-      isFree: true
+      isFree: false
       skills:
         - Preview
         - Visual Edits
@@ -628,7 +623,7 @@ course:
             subDescription: Preview, visual edits, themes, and attaching images. You can now refine your app visually, try different styles, and show Lovable exactly what you want.
 
     - title: Experiment and Undo Mistakes Safely
-      isFree: true
+      isFree: false
       skills:
         - Version Bookmarking
         - Reverting Changes
@@ -714,7 +709,7 @@ course:
             subDescription: Bookmark stable versions, revert when needed. Now you can try bold experiments knowing you can always go back.
 
     - title: Plan, Test, and Connect Services
-      isFree: true
+      isFree: false
       skills:
         - Plan Mode
         - Project Knowledge
@@ -850,7 +845,7 @@ course:
             subDescription: You can now plan and build apps in Lovable confidently and safely by combining these core skills.
 
     - title: Publish and Share Your App
-      isFree: true
+      isFree: false
       skills:
         - Publishing
         - Favicon
