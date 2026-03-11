@@ -88,6 +88,8 @@ course:
               If you tell Lovable `make me an app for my book club,` you'll get something generic. It might work, but it probably won't match what you imagined.
 
               The secret to getting closer to what you want on the first try? A **structured prompt**.
+
+              *Prompting Lovable uses credits, by default you get 5 free credits every day. A single prompt can use multiple credits depending on how much the AI needs to do.*
           subtitle: The secret to better results
         - type: text
           title: The prompt formula
@@ -183,6 +185,8 @@ course:
               ## Target user
               Sarah, a book club organiser who wants to spend less time on admin and more time reading with friends.
               ```
+
+              *A starting prompt like this might use around 1-3 credits, depending on how much Lovable needs to do to build it. By clicking the "..." menu next to Lovable's response, you can see exactly how many credits were used for each prompt.*
             imageUrl: /courses/lovable-intro-00/list-of-books.webp
           subtitle: One core flow to start
         - type: text
@@ -739,6 +743,8 @@ course:
               You can use it to ask questions, debug issues, and get a clear plan. When you’re happy with the plan, you can switch to Agent mode (unselect *Plan*) to build it.
 
               Click **Plan** below the input field to discuss with Lovable without writing any code.
+
+              *Each Plan mode prompt uses 1 credit regardless the complexity of the question.*
             imageUrl: /courses/lovable-intro-00/plan-mode.webp
           subtitle: Discuss before writing code
         - type: text
