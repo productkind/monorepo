@@ -3,6 +3,13 @@ course:
   note: '*Note on timing:* The estimated times for each challenge include thinking and doing time. They''re designed so you can immediately apply the techniques to your own product idea, not just skim the content.'
   cover: /courses/vibe-coding-product-management-00/cover.gif
   title: 'Build a Valuable Product: How to Break Down Your Idea for Vibe Coding'
+  learningOutcomes:
+    - Define the core problem your product solves using a clear problem statement
+    - Create a user persona that guides every product decision
+    - Visualise your user's journey from struggle to solution with a storyboard
+    - Break your idea into buildable steps using user story mapping
+    - Decide what to build first by shaping a focused MVP
+    - Turn your plan into a clear prompt for an AI app builder
   challenges:
     - steps:
         - type: comic
@@ -803,4 +810,4 @@ course:
   titleSplit:
     - 'Build a Valuable Product:'
     - How to Break Down Your Idea for Vibe Coding
-  description: A hands-on guide to break down your product idea into small, doable steps.
+  description: Turn a messy app idea into a clear, buildable plan. You'll define who it's for, what problem it solves, and break it down into steps you can build with an AI app builder.

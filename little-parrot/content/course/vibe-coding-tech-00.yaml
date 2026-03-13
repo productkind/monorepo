@@ -2,6 +2,12 @@ course:
   id: 7e2c2d2c-0d7b-4b1f-8c2e-3a3ab0d9a1e7
   cover: /courses/vibe-coding-tech-00/cover.gif
   title: Basics of Software for Vibe Coding
+  learningOutcomes:
+    - Explain what frontend, backend, and databases do using friendly language
+    - Use correct design terminology to describe how you want your app to look
+    - Communicate more precisely with AI app builders like Lovable
+    - Understand what's happening behind the scenes when your app is built
+    - Identify which part of your app to reference when something needs changing
   challenges:
     - steps:
         - type: comic
@@ -974,4 +980,4 @@ course:
   titleSplit:
     - Basics of Software
     - for Vibe Coding
-  description: Learn the language of software, so you can tell your AI app builder exactly what you want and understand what it builds.
+  description: Learn the language of software, so you can tell your AI app builder exactly what you want, and understand what it builds. No boring technical jargon, just the essential vocabulary explained through everyday analogies to level up your vibe coding skills.

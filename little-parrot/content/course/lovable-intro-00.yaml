@@ -3,6 +3,13 @@ course:
   note: ""
   cover: /courses/lovable-intro-00/cover.gif
   title: 'Build Your First App with Lovable'
+  learningOutcomes:
+    - Build a working web app from a structured prompt, no coding required
+    - Iterate on your app step by step using focused follow-up prompts
+    - Connect your app to a real database so it saves data and supports user login
+    - Recover from mistakes confidently using version history and bookmarks
+    - Connect external services and handle security warnings without panic
+    - Publish your app on the internet and share it with real users
   challenges:
     - title: Your First Prompt
       isFree: true

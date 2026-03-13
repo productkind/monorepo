@@ -45,7 +45,7 @@ actually, genuinely
 but here’s the catch, to cut through the chaos, that moment stuck with me, cutting through the noise, that actually lands, that sticks
 
 ### Pseudo punchlines
-Here's the thing, Bottom line:, No fluff, This one's for you, Why this matters, What moved me, This matters because
+Here's the thing, Bottom line:, No fluff, This one's for you, Why this matters, What moved me, This matters because, that matters
 
 ### Rhetorical formulas
 "Not X, but Y", "It's not... it's...", "X isn't... it's...", "In this piece"

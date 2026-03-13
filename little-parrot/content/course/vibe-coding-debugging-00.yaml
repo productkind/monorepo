@@ -3,6 +3,13 @@ course:
   note: ''
   cover: /courses/vibe-coding-debugging-00/cover.gif
   title: "Fix Bugs with Confidence: Debugging Your Lovable App"
+  learningOutcomes:
+    - Identify and categorise different types of bugs in your app
+    - Prevent common bugs before they happen using simple habits
+    - Investigate issues step by step, the way professional developers do
+    - Use Lovable's built-in debugging tools to fix problems faster
+    - Escape frustrating fix-break-fix loops with specific strategies
+    - Handle security errors and warnings confidently
   challenges:
     - title: The Anatomy of a Bug
       isFree: true

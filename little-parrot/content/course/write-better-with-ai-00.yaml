@@ -2,6 +2,11 @@ course:
   id: 01995295-e1db-77cb-b5b6-8a85cec22f98
   cover: /courses/writing-with-ai-00/cover.gif
   title: 'Write Better with AI: Prompting Foundations for Product Managers'
+  learningOutcomes:
+    - Draft team messages in the right tone for any high-pressure situation
+    - Turn messy Jira tickets into clear, compelling stakeholder updates
+    - Create LinkedIn posts that reflect your authentic voice
+    - Use AI to learn technical concepts, customised to your level
   challenges:
     - steps:
         - type: text
@@ -745,4 +750,4 @@ course:
   titleSplit:
     - 'Write Better with AI:'
     - Prompting Foundations for Product Managers
-  description: Learn practical prompting techniques through hands-on challenges
+  description: Master practical prompting techniques to write faster and communicate more effectively at work. From team messages to stakeholder updates to LinkedIn posts, craft content that sounds like you, not like a robot.

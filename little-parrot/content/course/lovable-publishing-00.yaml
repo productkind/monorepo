@@ -3,6 +3,13 @@ course:
   note:
   cover: /courses/lovable-publishing-00/cover.gif
   title: 'Launch and Grow Your Lovable App'
+  learningOutcomes:
+    - Publish your app to production with professional meta tags and branding
+    - Set up a custom domain that makes your product memorable
+    - Add the legal pages that make strangers feel safe signing up
+    - Make your product discoverable through Google and AI search tools
+    - Track how people use your app and make data-informed decisions
+    - Plan and execute a growth strategy for your product
   challenges:
     - title: "Go Live: Your First Real Launch"
       isFree: true
@@ -1028,4 +1035,4 @@ course:
   titleSplit:
     - 'Launch and Grow'
     - 'Your Lovable App'
-  description: You've built an app in Lovable. Now turn it into a real product. In six challenges, you'll publish to production, set up a custom domain, add legal pages, make your product discoverable through search engines and AI, track how it's being used, and plan your growth strategy. By the end, you'll have a live, trustworthy product that people can find and use, and a repeatable checklist for launching anything you build next.
+  description: You've built an app in Lovable. Now turn it into a live, trustworthy product that people can find and use. Go from a generic Lovable URL to a professional, discoverable product with its own domain, legal pages, and growth plan. By the end, you'll have a repeatable checklist for launching anything you build next.

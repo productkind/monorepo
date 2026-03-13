@@ -1,8 +1,6 @@
 ---
 name: linkedin-post
 description: Apply this structure to LinkedIn posts or Substack Notes.
-skills: 
-  - tone-of-voice
 ---
 
 ## Audience
