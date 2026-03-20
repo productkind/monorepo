@@ -103,14 +103,23 @@
       return color.toString({ format: 'hex'});
     };
 
+    const convertColorToHsl = (hue, saturation, lightness) => {
+      const color = new Color('okhsl', [hue, saturation / 100, lightness / 100]);
+      const hsl = color.to('hsl');
+      const [h, s, l] = hsl.coords;
+      return `hsl(${Math.round(h || 0)}, ${Math.round(s)}%, ${Math.round(l)}%)`;
+    };
+
     const createColorBox = (hue, saturation, lightness, isMain = false) => {
       const colorName = `okhsl<br>(${hue % 360}, ${saturation}%, ${lightness}%)`;
       const hex = convertColor(hue, saturation, lightness);
+      const hsl = convertColorToHsl(hue, saturation, lightness);
         return `
           <div class="color-card${isMain ? ' color-main' : ''}">
             <div class="color-box" style="background-color: ${hex};"></div>
             <code class="color-code">${colorName}</code>
             <code class="color-code">${hex}</code>
+            <code class="color-code">${hsl}</code>
           </div>
         `;
     };
