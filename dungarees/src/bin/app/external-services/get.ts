@@ -7,9 +7,9 @@ import * as fs from 'node:fs'
 
 export const getExternalServices = (): DungareesBinExternalServices => {
   const fileSystem = createFileSystem(fs)
-  const process = createSubProcessService(spawn)
+  const subProcess = createSubProcessService(spawn)
   return {
     fileSystem,
-    process,
+    subProcess,
   }
 }

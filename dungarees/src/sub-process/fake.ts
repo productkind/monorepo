@@ -1,10 +1,10 @@
-import { ProcessService, type Spawn } from './type.ts'
+import { createSubProcessService } from './service.js'
+import { type Spawn, SubProcessService } from './type.ts'
 
 import { assertDefined } from '@dungarees/core/util.ts'
 
 import { type ChildProcess } from 'node:child_process'
 import { type Observable, Subject, timer } from 'rxjs'
-import {createSubProcessService} from './service.js'
 
 export const createFakeSpawn = (config: FakeSpawnConfig): FakeSpawn => {
   const $executedCommands = new Subject<ExecutedCommand>()
@@ -62,11 +62,11 @@ export const createFakeSpawn = (config: FakeSpawnConfig): FakeSpawn => {
   }
 }
 
-export const createFakeProcessService = (config: FakeSpawnConfig): FakeProcessService => {
+export const createFakeSubProcessService = (config: FakeSpawnConfig): FakeSubProcessService => {
   const { spawn, $executedCommands, executedCommands } = createFakeSpawn(config)
-  const processService = createSubProcessService(spawn)
+  const subProcessService = createSubProcessService(spawn)
   return {
-    process: processService,
+    subProcess: subProcessService,
     $executedCommands,
     executedCommands,
   }
@@ -102,8 +102,8 @@ export type FakeSpawn = {
   executedCommands: ExecutedCommand[]
 }
 
-export type FakeProcessService = {
-  process: ProcessService,
+export type FakeSubProcessService = {
+  subProcess: SubProcessService
   $executedCommands: Observable<ExecutedCommand>
   executedCommands: ExecutedCommand[]
 }
