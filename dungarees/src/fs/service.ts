@@ -1,8 +1,8 @@
 import { type TypedArray, type StaticFn } from '@dungarees/core/type-util.ts'
-import { mapConst, mapConstKeysToEntries, mapObjectFromKeys, objectFromConstEntries, unPrototypeProperties } from '@dungarees/core/util.ts'
+import { boolFromThrow, boolFromThrowAsync, mapConst, mapConstKeysToEntries, mapObjectFromKeys, objectFromConstEntries, unPrototypeProperties } from '@dungarees/core/util.ts'
 import { asyncFunctionToObservable, type UnsafeService } from '@dungarees/rxjs/util.ts'
 import { glob as libGlob, globSync as libGlobSync } from 'glob'
-import { type Stats } from 'node:fs'
+import { constants, type Stats } from 'node:fs'
 import { type Observable, of } from 'rxjs'
 import { join } from 'node:path'
 
@@ -23,6 +23,8 @@ export type FileStats = {
     others: FilePermissions
   }
 }
+
+export type AccessMode = 'readable' | 'writable' | 'executable' | 'visible'
 
 export type FileSystem = {
   readFileSync: (path: string, encoding: BufferEncoding) => string
@@ -46,10 +48,7 @@ export type FileSystem = {
   globSync: (path: string) => string[]
   globAsync: (path: string) => Promise<string[]>
   glob: (path: string) => Observable<string[]>
-  isExeSync: (path: string) => boolean
-  isExeAsync: (path: string) => Promise<boolean>
-  isExe: (path: string) => Observable<boolean>
-  getStatSync: (path: string) => FileStats
+getStatSync: (path: string) => FileStats
   getStatAsync: (path: string) => Promise<FileStats>
   getStat: (path: string) => Observable<FileStats>
   chmodSync: (path: string, mode: number) => void
@@ -58,6 +57,9 @@ export type FileSystem = {
   chownSync: (path: string, uid: number, gid: number) => void
   chownAsync: (path: string, uid: number, gid: number) => Promise<void>
   chown: (path: string, uid: number, gid: number) => Observable<void>
+  accessSync: (path: string, modes: AccessMode[]) => boolean
+  accessAsync: (path: string, modes: AccessMode[]) => Promise<boolean>
+  access: (path: string, modes: AccessMode[]) => Observable<boolean>
 }
 
 type UsedFsMethods =
@@ -71,6 +73,7 @@ type UsedFsMethods =
   | 'mkdirSync'
   | 'chmodSync'
   | 'chownSync'
+  | 'accessSync'
 
 type UsedPromisesMethods =
   | 'lstat'
@@ -82,6 +85,7 @@ type UsedPromisesMethods =
   | 'mkdir'
   | 'chmod'
   | 'chown'
+  | 'access'
 
 export type NodeFs =
   Pick<typeof import('fs'), UsedFsMethods>
@@ -90,42 +94,6 @@ export type NodeFs =
   }
 
 export const createFileSystem = (fs: NodeFs): UnsafeService<FileSystem> => {
-  type IsexeOptions = {
-    uid?: number
-    gid?: number
-    groups?: number[]
-  }
-
-  const checkMode = (stat: Stats, options: IsexeOptions) => {
-    const myUid = options.uid ?? process.getuid?.()
-    const myGroups = options.groups ?? process.getgroups?.() ?? []
-    const myGid = options.gid ?? process.getgid?.() ?? myGroups[0]
-    if (myUid === undefined || myGid === undefined) {
-      throw new Error('cannot get uid or gid')
-    }
-
-    const groups = new Set([myGid, ...myGroups])
-
-    const mod = stat.mode
-    const uid = stat.uid
-    const gid = stat.gid
-
-    const u = parseInt('100', 8)
-    const g = parseInt('010', 8)
-    const o = parseInt('001', 8)
-    const ug = u | g
-
-    return !!(
-      mod & o ||
-      (mod & g && groups.has(gid)) ||
-      (mod & u && uid === myUid) ||
-      (mod & ug && myUid === 0)
-    )
-  }
-
-  const checkStat = (stat: Stats, options: IsexeOptions) =>
-    stat.isFile() && checkMode(stat, options)
-
   const fsForGlob = {
     ...unPrototypeProperties(fs, [
       'lstatSync',
@@ -213,16 +181,6 @@ export const createFileSystem = (fs: NodeFs): UnsafeService<FileSystem> => {
     )
   }
 
-  const isExeSync: FileSystem['isExeSync'] = (path) => {
-    const stat = fs.lstatSync(path)
-    return checkStat(stat, {})
-  }
-
-  const isExeAsync: FileSystem['isExeAsync'] = async (path) => {
-    const stat = await fs.promises.lstat(path)
-    return checkStat(stat, {})
-  }
-
   const permissionGroupNames = ['user', 'group', 'others'] as const
   const groupSelectors = [0o100, 0o010, 0o001] as const
   const permissionNames = ['read', 'write', 'execute'] as const
@@ -271,6 +229,22 @@ export const createFileSystem = (fs: NodeFs): UnsafeService<FileSystem> => {
     await fs.promises.chown(path, uid, gid)
   }
 
+  const accessModeToConstant: Record<AccessMode, number> = {
+    readable: constants.R_OK,
+    writable: constants.W_OK,
+    executable: constants.X_OK,
+    visible: constants.F_OK,
+  }
+
+  const modesToFlag = (modes: AccessMode[]): number =>
+    modes.reduce((flag, mode) => flag | accessModeToConstant[mode], 0)
+
+  const accessSync: FileSystem['accessSync'] = (path, modes) =>
+    boolFromThrow(() => fs.accessSync(path, modesToFlag(modes)))
+
+  const accessAsync: FileSystem['accessAsync'] = (path, modes) =>
+    boolFromThrowAsync(() => fs.promises.access(path, modesToFlag(modes)))
+
   return {
     readFileSync,
     readFileAsync,
@@ -293,10 +267,7 @@ export const createFileSystem = (fs: NodeFs): UnsafeService<FileSystem> => {
     globAsync: (path) => glob(path),
     globSync: (path) => globSync(path),
     glob: asyncFunctionToObservable(glob),
-    isExeSync,
-    isExeAsync,
-    isExe: asyncFunctionToObservable(isExeAsync),
-    getStatSync,
+getStatSync,
     getStatAsync,
     getStat: asyncFunctionToObservable(getStatAsync),
     chmodSync,
@@ -305,5 +276,8 @@ export const createFileSystem = (fs: NodeFs): UnsafeService<FileSystem> => {
     chownSync,
     chownAsync,
     chown: asyncFunctionToObservable(chownAsync),
+    accessSync,
+    accessAsync,
+    access: asyncFunctionToObservable(accessAsync),
   }
 }

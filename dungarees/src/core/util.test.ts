@@ -3,6 +3,8 @@ import {
   assertPredicate,
   assertTypeByGuard,
   assertImpossible,
+  boolFromThrow,
+  boolFromThrowAsync,
   camelCase2kebabCase,
   capitalize,
   deepEqualPartial,
@@ -369,4 +371,20 @@ test('mapObjectFromKeys non-curried infers input type from array', () => {
   })
   assert<Equals<typeof obj, { a: 1; b: 1; c: 1 }>>()
   expect(obj).toEqual({ a: 1, b: 1, c: 1 })
+})
+
+test('boolFromThrow returns true when function does not throw', () => {
+  expect(boolFromThrow(() => {})).toBe(true)
+})
+
+test('boolFromThrow returns false when function throws', () => {
+  expect(boolFromThrow(() => { throw new Error('fail') })).toBe(false)
+})
+
+test('boolFromThrowAsync returns true when async function does not throw', async () => {
+  await expect(boolFromThrowAsync(async () => {})).resolves.toBe(true)
+})
+
+test('boolFromThrowAsync returns false when async function rejects', async () => {
+  await expect(boolFromThrowAsync(async () => { throw new Error('fail') })).resolves.toBe(false)
 })

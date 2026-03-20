@@ -36,7 +36,9 @@
       "WebFetch(domain:verdaccio.org)",
       "WebFetch(domain:www.verdaccio.org)",
       "WebFetch(domain:hub.docker.com)",
-      "Bash(du -sh /Users/eggdice/Projects/productkind/dungarees/src/*/)"
+      "Bash(du -sh /Users/eggdice/Projects/productkind/dungarees/src/*/)",
+      "Bash(npm view:*)",
+      "Bash(npm update:*)"
     ],
     "deny": [],
     "ask": []

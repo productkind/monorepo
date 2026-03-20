@@ -5,8 +5,13 @@ import { createSubProcessOperations } from './sub-process-operations.ts'
 import { stderr, stdout } from '@dungarees/cli/utils.ts'
 import { mtest } from '@dungarees/core/marbles-vitest.ts'
 import { createFakeFileSystem } from '@dungarees/fs/fake.ts'
-import { createFakeNodeProcess } from '@dungarees/process/fake.ts'
-import { createProcessService } from '@dungarees/process/service.ts'
+import { lastValueFrom } from 'rxjs'
+import { test, expect } from 'vitest'
+
+const OTHERS_EXECUTE = 0o001
+const USER_EXECUTE = 0o100
+const ALL_EXECUTE = 0o111
+const NO_PERMISSIONS = 0o000
 
 mtest('subProcessOperations.runSilentUntilError no output if no error', ({ expect }) => {
   const { spawn: fakeSpawn } = createFakeSpawn([
@@ -19,10 +24,7 @@ mtest('subProcessOperations.runSilentUntilError no output if no error', ({ expec
   ])
   const fileSystem = createFakeFileSystem()
   const subProcessService = createSubProcessService(fakeSpawn)
-  const fakeNodeProcess = createFakeNodeProcess()
-  const processService = createProcessService(fakeNodeProcess)
   const subProcessOperations = createSubProcessOperations({
-    processService,
     subProcessService,
     fileSystem,
   })
@@ -42,10 +44,7 @@ mtest('subProcessOperations.runSilentUntilError both output on error', ({ expect
   ])
   const fileSystem = createFakeFileSystem()
   const subProcessService = createSubProcessService(fakeSpawn)
-  const fakeNodeProcess = createFakeNodeProcess()
-  const processService = createProcessService(fakeNodeProcess)
   const subProcessOperations = createSubProcessOperations({
-    processService,
     subProcessService,
     fileSystem,
   })
@@ -54,19 +53,15 @@ mtest('subProcessOperations.runSilentUntilError both output on error', ({ expect
 })
 
 mtest(
-  'subProcessOperations.isExecutable is true if the file other permissions is executable',
+  'subProcessOperations.isExecutable is true if the file has executable permissions',
   ({ expect }) => {
-    const EXECUTABLE_PERMISSIONS = 0o001
     const fileSystem = createFakeFileSystem({
       '/exec-world.sh': '#!/bin/sh\necho hello',
     })
-    fileSystem.chmodSync('/exec-world.sh', EXECUTABLE_PERMISSIONS)
+    fileSystem.chmodSync('/exec-world.sh', OTHERS_EXECUTE)
     const { spawn } = createFakeSpawn([])
     const subProcessService = createSubProcessService(spawn)
-    const fakeNodeProcess = createFakeNodeProcess()
-    const processService = createProcessService(fakeNodeProcess)
     const subProcessOperations = createSubProcessOperations({
-      processService,
       subProcessService,
       fileSystem,
     })
@@ -76,16 +71,12 @@ mtest(
 )
 
 mtest('subProcessOperations.isExecutable is false if directory', ({ expect }) => {
-  const EXECUTABLE_PERMISSIONS = 0o111
   const fileSystem = createFakeFileSystem()
   fileSystem.mkdirSync('/exec-world')
-  fileSystem.chmodSync('/exec-world', EXECUTABLE_PERMISSIONS)
+  fileSystem.chmodSync('/exec-world', ALL_EXECUTE)
   const { spawn } = createFakeSpawn([])
   const subProcessService = createSubProcessService(spawn)
-  const fakeNodeProcess = createFakeNodeProcess()
-  const processService = createProcessService(fakeNodeProcess)
   const subProcessOperations = createSubProcessOperations({
-    processService,
     subProcessService,
     fileSystem,
   })
@@ -93,25 +84,84 @@ mtest('subProcessOperations.isExecutable is false if directory', ({ expect }) =>
   expect(output).toBeObservableStepAndClose(false)
 })
 
-mtest.each([0o000, 0o100, 0o010, 0o110])(
-  'subProcessOperations.isExecutable is false if there are no executable permissions for the user',
-  ({ expect }, permissions) => {
-    const NON_EXECUTABLE_PERMISSIONS = permissions
+mtest(
+  'subProcessOperations.isExecutable is false if there are no executable permissions',
+  ({ expect }) => {
     const fileSystem = createFakeFileSystem({
       '/exec-world.sh': '#!/bin/sh\necho hello',
     })
-    fileSystem.chmodSync('/exec-world.sh', NON_EXECUTABLE_PERMISSIONS)
-
+    fileSystem.chmodSync('/exec-world.sh', NO_PERMISSIONS)
     const { spawn } = createFakeSpawn([])
     const subProcessService = createSubProcessService(spawn)
-    const fakeNodeProcess = createFakeNodeProcess({ userId: 1000 })
-    const processService = createProcessService(fakeNodeProcess)
     const subProcessOperations = createSubProcessOperations({
-      processService,
       subProcessService,
       fileSystem,
     })
     const output = subProcessOperations.isExecutable('/exec-world.sh')
     expect(output).toBeObservableStepAndClose(false)
+  },
+)
+
+// These tests use `test` + `lastValueFrom` instead of `mtest` because mtest's
+// marble scheduler flushes after the runner returns, which means the `finally`
+// block restores process.getuid before the observable is actually subscribed.
+test(
+  'subProcessOperations.isExecutable is false for user-executable file when called by non-owner',
+  async () => {
+    const fileSystem = createFakeFileSystem({
+      '/exec.sh': '#!/bin/sh\necho hello',
+    })
+    fileSystem.chmodSync('/exec.sh', USER_EXECUTE)
+    fileSystem.chownSync('/exec.sh', 1000, 1000)
+
+    const originalGetuid = (process as unknown as { getuid?: (() => number) | undefined }).getuid
+    const originalGetgid = (process as unknown as { getgid?: (() => number) | undefined }).getgid
+
+    try {
+      ;(process as unknown as { getuid?: (() => number) | undefined }).getuid = () => 2000
+      ;(process as unknown as { getgid?: (() => number) | undefined }).getgid = () => 2000
+
+      const { spawn } = createFakeSpawn([])
+      const subProcessService = createSubProcessService(spawn)
+      const subProcessOperations = createSubProcessOperations({
+        subProcessService,
+        fileSystem,
+      })
+      const result = await lastValueFrom(subProcessOperations.isExecutable('/exec.sh'))
+      expect(result).toBe(false)
+    } finally {
+      ;(process as unknown as { getuid?: (() => number) | undefined }).getuid = originalGetuid
+      ;(process as unknown as { getgid?: (() => number) | undefined }).getgid = originalGetgid
+    }
+  },
+)
+
+test(
+  'subProcessOperations.isExecutable is true for user-executable file when called by owner',
+  async () => {
+    const originalGetuid = (process as unknown as { getuid?: (() => number) | undefined }).getuid
+    const originalGetgid = (process as unknown as { getgid?: (() => number) | undefined }).getgid
+
+    try {
+      ;(process as unknown as { getuid?: (() => number) | undefined }).getuid = () => 1000
+      ;(process as unknown as { getgid?: (() => number) | undefined }).getgid = () => 1000
+
+      const fileSystem = createFakeFileSystem({
+        '/exec.sh': '#!/bin/sh\necho hello',
+      })
+      fileSystem.chmodSync('/exec.sh', USER_EXECUTE)
+
+      const { spawn } = createFakeSpawn([])
+      const subProcessService = createSubProcessService(spawn)
+      const subProcessOperations = createSubProcessOperations({
+        subProcessService,
+        fileSystem,
+      })
+      const result = await lastValueFrom(subProcessOperations.isExecutable('/exec.sh'))
+      expect(result).toBe(true)
+    } finally {
+      ;(process as unknown as { getuid?: (() => number) | undefined }).getuid = originalGetuid
+      ;(process as unknown as { getgid?: (() => number) | undefined }).getgid = originalGetgid
+    }
   },
 )

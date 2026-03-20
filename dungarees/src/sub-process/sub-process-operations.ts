@@ -3,9 +3,8 @@ import type { RunOptions, SubProcessService } from './type.ts'
 import type { StdioMessage } from '@dungarees/cli/type.ts'
 import { stderr, stdout } from '@dungarees/cli/utils.ts'
 import type { FileSystem } from '@dungarees/fs/service.ts'
-import type { ProcessService } from '@dungarees/process/service.ts'
 
-import { map, merge, type Observable, toArray } from 'rxjs'
+import { combineLatest, map, merge, type Observable, toArray } from 'rxjs'
 
 type ProcessOperations = {
   runSilentUntilError(
@@ -17,13 +16,11 @@ type ProcessOperations = {
 }
 
 type CreateProcessOperationsOptions = {
-  processService: ProcessService
   subProcessService: SubProcessService
   fileSystem: FileSystem
 }
 
 export const createSubProcessOperations = ({
-  processService,
   subProcessService,
   fileSystem,
 }: CreateProcessOperationsOptions): ProcessOperations => {
@@ -41,17 +38,12 @@ export const createSubProcessOperations = ({
   }
 
   const isExecutable: ProcessOperations['isExecutable'] = (path) => {
-    return fileSystem
-      .getStat(path)
-      .pipe(
-        map(
-          (stat) =>
-            !stat.isDirectory &&
-            (stat.permissions.others.execute ||
-              ((stat.permissions.group.execute || stat.permissions.user.execute) &&
-                processService.isRoot())),
-        ),
-      )
+    return combineLatest([
+      fileSystem.access(path, ['executable']),
+      fileSystem.getStat(path),
+    ]).pipe(
+      map(([canExecute, stat]) => canExecute && !stat.isDirectory),
+    )
   }
 
   return {

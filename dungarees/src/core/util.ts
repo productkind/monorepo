@@ -389,6 +389,24 @@ export const unPrototypeProperties = <const T extends Record<string, any>, const
 
 const isFunction = (value: unknown): value is (...args: any[]) => any => value instanceof Function
 
+export const boolFromThrow = (fn: () => void): boolean => {
+  try {
+    fn()
+    return true
+  } catch {
+    return false
+  }
+}
+
+export const boolFromThrowAsync = async (fn: () => Promise<void>): Promise<boolean> => {
+  try {
+    await fn()
+    return true
+  } catch {
+    return false
+  }
+}
+
 type MapConstResult<ARRAY extends readonly any[], F extends Fn> = {
   readonly [K in keyof ARRAY]: Call<F, ARRAY[K]>
 }

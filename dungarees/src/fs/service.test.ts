@@ -5,8 +5,6 @@ import * as fs from 'fs'
 import { lastValueFrom } from 'rxjs'
 import { expect, test } from 'vitest'
 
-const EXECUTABLE_PERMISSIONS = 0o755
-const NON_EXECUTABLE_PERMISSIONS = 0o644
 
 test('FileSystem should write and read file sync', () => {
   const fakeFs = createFakeNodeFs()
@@ -269,67 +267,75 @@ test('FileSystem should read the file stats correctly with getStat observable', 
 })
 
 
-test('FileSystem executable checks: executable file is reported executable', async () => {
+
+test('FileSystem.accessSync returns true for executable file', () => {
   const fakeFs = createFakeNodeFs()
-
-  fakeFs.writeFileSync('/exec-world.sh', '#!/bin/sh\necho hello')
-  fakeFs.chmodSync('/exec-world.sh', EXECUTABLE_PERMISSIONS)
-
+  fakeFs.writeFileSync('/exec.sh', '#!/bin/sh\necho hello')
+  fakeFs.chmodSync('/exec.sh', 0o755)
   const fileSystem = createFileSystem(fakeFs)
-
-  expect(fileSystem.isExeSync('/exec-world.sh')).toBe(true)
-  await expect(fileSystem.isExeAsync('/exec-world.sh')).resolves.toBe(true)
-  await expect(lastValueFrom(fileSystem.isExe('/exec-world.sh'))).resolves.toBe(true)
+  expect(fileSystem.accessSync('/exec.sh', ['executable'])).toBe(true)
 })
 
-test('FileSystem executable checks: non-executable file is reported non-executable', async () => {
+test('FileSystem.accessSync returns false for non-executable file', () => {
   const fakeFs = createFakeNodeFs()
-
-  fakeFs.writeFileSync('/non-exec.txt', 'hello')
-  fakeFs.chmodSync('/non-exec.txt', NON_EXECUTABLE_PERMISSIONS)
-
+  fakeFs.writeFileSync('/file.txt', 'hello')
+  fakeFs.chmodSync('/file.txt', 0o644)
   const fileSystem = createFileSystem(fakeFs)
-
-  expect(fileSystem.isExeSync('/non-exec.txt')).toBe(false)
-  await expect(fileSystem.isExeAsync('/non-exec.txt')).resolves.toBe(false)
-  await expect(lastValueFrom(fileSystem.isExe('/non-exec.txt'))).resolves.toBe(false)
+  expect(fileSystem.accessSync('/file.txt', ['executable'])).toBe(false)
 })
 
-test('FileSystem executable checks: directories are not treated as executable files', async () => {
+test('FileSystem.accessSync returns true for readable file', () => {
   const fakeFs = createFakeNodeFs()
-
-  fakeFs.mkdirSync('/dir')
-  fakeFs.chmodSync('/dir', EXECUTABLE_PERMISSIONS)
-
+  fakeFs.writeFileSync('/file.txt', 'hello')
+  fakeFs.chmodSync('/file.txt', 0o644)
   const fileSystem = createFileSystem(fakeFs)
-
-  expect(fileSystem.isExeSync('/dir')).toBe(false)
-  await expect(fileSystem.isExeAsync('/dir')).resolves.toBe(false)
-  await expect(lastValueFrom(fileSystem.isExe('/dir'))).resolves.toBe(false)
+  expect(fileSystem.accessSync('/file.txt', ['readable'])).toBe(true)
 })
 
-test('FileSystem executable checks: throws when uid/gid cannot be resolved', () => {
+test('FileSystem.accessSync returns false for non-existent file with visible', () => {
   const fakeFs = createFakeNodeFs()
-
-  fakeFs.writeFileSync('/exec-world.sh', '#!/bin/sh\necho hello')
-  fakeFs.chmodSync('/exec-world.sh', EXECUTABLE_PERMISSIONS)
-
   const fileSystem = createFileSystem(fakeFs)
+  expect(fileSystem.accessSync('/does-not-exist', ['visible'])).toBe(false)
+})
 
-  const originalGetuid = (process as unknown as { getuid?: (() => number) | undefined }).getuid
-  const originalGetgid = (process as unknown as { getgid?: (() => number) | undefined }).getgid
+test('FileSystem.accessSync supports combining modes', () => {
+  const fakeFs = createFakeNodeFs()
+  fakeFs.writeFileSync('/exec.sh', '#!/bin/sh')
+  fakeFs.chmodSync('/exec.sh', 0o755)
+  const fileSystem = createFileSystem(fakeFs)
+  expect(fileSystem.accessSync('/exec.sh', ['readable', 'executable'])).toBe(true)
 
-  try {
-    ;(process as unknown as { getuid?: (() => number) | undefined }).getuid =
-      () => undefined as unknown as number
-    ;(process as unknown as { getgid?: (() => number) | undefined }).getgid =
-      () => undefined as unknown as number
+  fakeFs.writeFileSync('/readonly.txt', 'hello')
+  fakeFs.chmodSync('/readonly.txt', 0o444)
+  expect(fileSystem.accessSync('/readonly.txt', ['readable', 'executable'])).toBe(false)
+})
 
-    expect(() => fileSystem.isExeSync('/exec-world.sh')).toThrowError('cannot get uid or gid')
-  } finally {
-    ;(process as unknown as { getuid?: (() => number) | undefined }).getuid = originalGetuid
-    ;(process as unknown as { getgid?: (() => number) | undefined }).getgid = originalGetgid
-  }
+test('FileSystem.accessAsync returns true for executable file', async () => {
+  const fakeFs = createFakeNodeFs()
+  fakeFs.writeFileSync('/exec.sh', '#!/bin/sh\necho hello')
+  fakeFs.chmodSync('/exec.sh', 0o755)
+  const fileSystem = createFileSystem(fakeFs)
+  await expect(fileSystem.accessAsync('/exec.sh', ['executable'])).resolves.toBe(true)
+})
+
+test('FileSystem.accessAsync returns false for non-existent file', async () => {
+  const fakeFs = createFakeNodeFs()
+  const fileSystem = createFileSystem(fakeFs)
+  await expect(fileSystem.accessAsync('/does-not-exist', ['visible'])).resolves.toBe(false)
+})
+
+test('FileSystem.access observable returns true for executable file', async () => {
+  const fakeFs = createFakeNodeFs()
+  fakeFs.writeFileSync('/exec.sh', '#!/bin/sh\necho hello')
+  fakeFs.chmodSync('/exec.sh', 0o755)
+  const fileSystem = createFileSystem(fakeFs)
+  await expect(lastValueFrom(fileSystem.access('/exec.sh', ['executable']))).resolves.toBe(true)
+})
+
+test('FileSystem.access observable returns false for non-existent file', async () => {
+  const fakeFs = createFakeNodeFs()
+  const fileSystem = createFileSystem(fakeFs)
+  await expect(lastValueFrom(fileSystem.access('/does-not-exist', ['visible']))).resolves.toBe(false)
 })
 
 test('FileSystem.chmod sets permissions based on mode', async () => {
