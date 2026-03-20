@@ -25,6 +25,7 @@ export type NodeCommandLineConfig = {
   environment?: Record<string, string>
   network?: StartedNetwork
   path?: string
+  bindMount?: string
 }
 
 export const nodeCommandLineInteractor = ({
@@ -32,6 +33,7 @@ export const nodeCommandLineInteractor = ({
   environment = {},
   network,
   path,
+  bindMount,
 }: NodeCommandLineConfig): Interactor<NodeCommandLineContext> => {
   let runningContainer: StartedTestContainer | undefined
   const reportEntry$ = new ReplaySubject<{ entry: string; type: 'text/plain' }>()
@@ -57,7 +59,15 @@ export const nodeCommandLineInteractor = ({
     container.withNetwork(network)
   }
 
-  if (path !== undefined) {
+  if (bindMount !== undefined) {
+    container.withBindMounts([
+      {
+        source: bindMount,
+        target: '/opt/app/',
+        mode: 'rw',
+      },
+    ])
+  } else if (path !== undefined) {
     container.withCopyDirectoriesToContainer([
       {
         source: path,

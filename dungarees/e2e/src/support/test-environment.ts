@@ -6,6 +6,9 @@ import { npmRegistryRunner } from '@dungarees/test-environment/runners/npm-regis
 import { networkInteractor } from '@dungarees/test-environment/interactors/network.ts'
 
 import { type StartedNetwork } from 'testcontainers'
+import { resolve } from 'node:path'
+
+const useHostNodeModules = process.env.E2E_USE_HOST_NODE_MODULES === 'true'
 
 let networkSingleton: StartedNetwork | undefined
 let initializationPromise: Promise<StartedNetwork> | null = null
@@ -51,9 +54,12 @@ export const { Given, When, Then } = createCucumberTestEnvironment({
     hook: 'before-all',
   },
   dungareesNpmPublisher: {
-    creator: async () =>
-      nodeCommandLineInteractor({
-        path: `${String(process.cwd()) ?? ''}/../..`,
+    creator: async () => {
+      const monorepoRoot = resolve(process.cwd(), '../..')
+      return nodeCommandLineInteractor({
+        ...(useHostNodeModules
+          ? { bindMount: monorepoRoot }
+          : { path: monorepoRoot }),
         workingDir: '/opt/app',
         network: await getNetworkSingleton(),
         environment: {
@@ -64,7 +70,8 @@ export const { Given, When, Then } = createCucumberTestEnvironment({
           NPM_CONFIG_EMAIL: 'test@example.com',
           NPM_CONFIG_AUTH_TYPE: 'legacy'
         }
-      }),
+      })
+    },
     type: 'interactor',
     hook: 'before-all',
   },

@@ -35,7 +35,8 @@
       "Bash(grep -r \"withCopyFilesToContainer\\\\|withCopyFile\" /Users/eggdice/Projects/productkind --include=\"*.ts\" 2>/dev/null | head -20)",
       "WebFetch(domain:verdaccio.org)",
       "WebFetch(domain:www.verdaccio.org)",
-      "WebFetch(domain:hub.docker.com)"
+      "WebFetch(domain:hub.docker.com)",
+      "Bash(du -sh /Users/eggdice/Projects/productkind/dungarees/src/*/)"
     ],
     "deny": [],
     "ask": []
