@@ -1,5 +1,5 @@
 {
-  "name": "@dungarees/sub-process",
+  "name": "@dungarees/key-value-stores",
   "engines": {
     "node": ">=25.0.0"
   },
@@ -9,11 +9,7 @@
   "type": "module",
   "dependencies": {
     "@dungarees/core": "*",
-    "@dungarees/rxjs": "*",
-    "@dungarees/cli": "*",
-    "@dungarees/fs": "*",
-    "@dungarees/key-value-stores": "*",
-    "rxjs": "^7.8.1",
+    "@dungarees/zod": "*",
     "zod": "^3.25.76"
   },
   "devDependencies": {

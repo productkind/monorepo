@@ -5,13 +5,23 @@ import { createSubProcessOperations } from './sub-process-operations.ts'
 import { stderr, stdout } from '@dungarees/cli/utils.ts'
 import { mtest } from '@dungarees/core/marbles-vitest.ts'
 import { createFakeFileSystem } from '@dungarees/fs/fake.ts'
+import { createMemoryRawKeyValueStore } from '@dungarees/key-value-stores/raw-stores/memory.ts'
+import { createKeyValueStore } from '@dungarees/key-value-stores/service.ts'
 import { lastValueFrom } from 'rxjs'
 import { test, expect } from 'vitest'
+import { z } from 'zod'
 
 const OTHERS_EXECUTE = 0o001
 const USER_EXECUTE = 0o100
 const ALL_EXECUTE = 0o111
 const NO_PERMISSIONS = 0o000
+
+const createEnvironment = (path: string) => {
+  const rawStore = createMemoryRawKeyValueStore<string | undefined>()
+  const environment = createKeyValueStore(rawStore, { PATH: z.string() })
+  environment.set('PATH', path)
+  return environment
+}
 
 mtest('subProcessOperations.runSilentUntilError no output if no error', ({ expect }) => {
   const { spawn: fakeSpawn } = createFakeSpawn([
@@ -27,6 +37,7 @@ mtest('subProcessOperations.runSilentUntilError no output if no error', ({ expec
   const subProcessOperations = createSubProcessOperations({
     subProcessService,
     fileSystem,
+    environment: createEnvironment(''),
   })
   const output = subProcessOperations.runSilentUntilError('ls', [])
   expect(output).toBeObservableStepAndClose([])
@@ -47,13 +58,14 @@ mtest('subProcessOperations.runSilentUntilError both output on error', ({ expect
   const subProcessOperations = createSubProcessOperations({
     subProcessService,
     fileSystem,
+    environment: createEnvironment(''),
   })
   const output = subProcessOperations.runSilentUntilError('ls', [])
   expect(output).toBeObservableStepAndClose([stdout('file.ts'), stderr('Error')])
 })
 
 mtest(
-  'subProcessOperations.isExecutable is true if the file has executable permissions',
+  'subProcessOperations.isExecutableFile is true if the file has executable permissions',
   ({ expect }) => {
     const fileSystem = createFakeFileSystem({
       '/exec-world.sh': '#!/bin/sh\necho hello',
@@ -64,13 +76,14 @@ mtest(
     const subProcessOperations = createSubProcessOperations({
       subProcessService,
       fileSystem,
+      environment: createEnvironment(''),
     })
-    const output = subProcessOperations.isExecutable('/exec-world.sh')
+    const output = subProcessOperations.isExecutableFile('/exec-world.sh')
     expect(output).toBeObservableStepAndClose(true)
   },
 )
 
-mtest('subProcessOperations.isExecutable is false if directory', ({ expect }) => {
+mtest('subProcessOperations.isExecutableFile is false if directory', ({ expect }) => {
   const fileSystem = createFakeFileSystem()
   fileSystem.mkdirSync('/exec-world')
   fileSystem.chmodSync('/exec-world', ALL_EXECUTE)
@@ -79,13 +92,14 @@ mtest('subProcessOperations.isExecutable is false if directory', ({ expect }) =>
   const subProcessOperations = createSubProcessOperations({
     subProcessService,
     fileSystem,
+    environment: createEnvironment(''),
   })
-  const output = subProcessOperations.isExecutable('/exec-world')
+  const output = subProcessOperations.isExecutableFile('/exec-world')
   expect(output).toBeObservableStepAndClose(false)
 })
 
 mtest(
-  'subProcessOperations.isExecutable is false if there are no executable permissions',
+  'subProcessOperations.isExecutableFile is false if there are no executable permissions',
   ({ expect }) => {
     const fileSystem = createFakeFileSystem({
       '/exec-world.sh': '#!/bin/sh\necho hello',
@@ -96,8 +110,9 @@ mtest(
     const subProcessOperations = createSubProcessOperations({
       subProcessService,
       fileSystem,
+      environment: createEnvironment(''),
     })
-    const output = subProcessOperations.isExecutable('/exec-world.sh')
+    const output = subProcessOperations.isExecutableFile('/exec-world.sh')
     expect(output).toBeObservableStepAndClose(false)
   },
 )
@@ -106,7 +121,7 @@ mtest(
 // marble scheduler flushes after the runner returns, which means the `finally`
 // block restores process.getuid before the observable is actually subscribed.
 test(
-  'subProcessOperations.isExecutable is false for user-executable file when called by non-owner',
+  'subProcessOperations.isExecutableFile is false for user-executable file when called by non-owner',
   async () => {
     const fileSystem = createFakeFileSystem({
       '/exec.sh': '#!/bin/sh\necho hello',
@@ -126,8 +141,9 @@ test(
       const subProcessOperations = createSubProcessOperations({
         subProcessService,
         fileSystem,
+        environment: createEnvironment(''),
       })
-      const result = await lastValueFrom(subProcessOperations.isExecutable('/exec.sh'))
+      const result = await lastValueFrom(subProcessOperations.isExecutableFile('/exec.sh'))
       expect(result).toBe(false)
     } finally {
       ;(process as unknown as { getuid?: (() => number) | undefined }).getuid = originalGetuid
@@ -137,7 +153,7 @@ test(
 )
 
 test(
-  'subProcessOperations.isExecutable is true for user-executable file when called by owner',
+  'subProcessOperations.isExecutableFile is true for user-executable file when called by owner',
   async () => {
     const originalGetuid = (process as unknown as { getuid?: (() => number) | undefined }).getuid
     const originalGetgid = (process as unknown as { getgid?: (() => number) | undefined }).getgid
@@ -156,12 +172,125 @@ test(
       const subProcessOperations = createSubProcessOperations({
         subProcessService,
         fileSystem,
+        environment: createEnvironment(''),
       })
-      const result = await lastValueFrom(subProcessOperations.isExecutable('/exec.sh'))
+      const result = await lastValueFrom(subProcessOperations.isExecutableFile('/exec.sh'))
       expect(result).toBe(true)
     } finally {
       ;(process as unknown as { getuid?: (() => number) | undefined }).getuid = originalGetuid
       ;(process as unknown as { getgid?: (() => number) | undefined }).getgid = originalGetgid
     }
+  },
+)
+
+test(
+  'subProcessOperations.isExecutable is true for a command found in PATH',
+  async () => {
+    const fileSystem = createFakeFileSystem({
+      '/usr/bin/npm': '#!/bin/sh',
+    })
+    fileSystem.chmodSync('/usr/bin/npm', ALL_EXECUTE)
+    const { spawn } = createFakeSpawn([])
+    const subProcessService = createSubProcessService(spawn)
+    const subProcessOperations = createSubProcessOperations({
+      subProcessService,
+      fileSystem,
+      environment: createEnvironment('/usr/bin'),
+    })
+    const result = await lastValueFrom(subProcessOperations.isExecutable('npm'))
+    expect(result).toBe(true)
+  },
+)
+
+test(
+  'subProcessOperations.isExecutable is false for a command not found in PATH',
+  async () => {
+    const fileSystem = createFakeFileSystem({
+      '/usr/bin/npm': '#!/bin/sh',
+    })
+    fileSystem.chmodSync('/usr/bin/npm', ALL_EXECUTE)
+    const { spawn } = createFakeSpawn([])
+    const subProcessService = createSubProcessService(spawn)
+    const subProcessOperations = createSubProcessOperations({
+      subProcessService,
+      fileSystem,
+      environment: createEnvironment('/usr/bin'),
+    })
+    const result = await lastValueFrom(subProcessOperations.isExecutable('node'))
+    expect(result).toBe(false)
+  },
+)
+
+test(
+  'subProcessOperations.isExecutable is false for a command in PATH that is not executable',
+  async () => {
+    const fileSystem = createFakeFileSystem({
+      '/usr/bin/npm': '#!/bin/sh',
+    })
+    fileSystem.chmodSync('/usr/bin/npm', NO_PERMISSIONS)
+    const { spawn } = createFakeSpawn([])
+    const subProcessService = createSubProcessService(spawn)
+    const subProcessOperations = createSubProcessOperations({
+      subProcessService,
+      fileSystem,
+      environment: createEnvironment('/usr/bin'),
+    })
+    const result = await lastValueFrom(subProcessOperations.isExecutable('npm'))
+    expect(result).toBe(false)
+  },
+)
+
+test(
+  'subProcessOperations.isExecutable delegates to isExecutableFile for paths with /',
+  async () => {
+    const fileSystem = createFakeFileSystem({
+      '/usr/bin/npm': '#!/bin/sh',
+    })
+    fileSystem.chmodSync('/usr/bin/npm', ALL_EXECUTE)
+    const { spawn } = createFakeSpawn([])
+    const subProcessService = createSubProcessService(spawn)
+    const subProcessOperations = createSubProcessOperations({
+      subProcessService,
+      fileSystem,
+      environment: createEnvironment(''),
+    })
+    const result = await lastValueFrom(subProcessOperations.isExecutable('/usr/bin/npm'))
+    expect(result).toBe(true)
+  },
+)
+
+test(
+  'subProcessOperations.isExecutable finds command in second PATH directory',
+  async () => {
+    const fileSystem = createFakeFileSystem({
+      '/usr/local/bin/npm': '#!/bin/sh',
+    })
+    fileSystem.mkdirSync('/usr/bin')
+    fileSystem.chmodSync('/usr/local/bin/npm', ALL_EXECUTE)
+    const { spawn } = createFakeSpawn([])
+    const subProcessService = createSubProcessService(spawn)
+    const subProcessOperations = createSubProcessOperations({
+      subProcessService,
+      fileSystem,
+      environment: createEnvironment('/usr/bin:/usr/local/bin'),
+    })
+    const result = await lastValueFrom(subProcessOperations.isExecutable('npm'))
+    expect(result).toBe(true)
+  },
+)
+
+test(
+  'subProcessOperations.isExecutable is false for empty PATH',
+  async () => {
+    const fileSystem = createFakeFileSystem()
+    const { spawn } = createFakeSpawn([])
+    const subProcessService = createSubProcessService(spawn)
+    const subProcessOperations = createSubProcessOperations({
+      subProcessService,
+      fileSystem,
+      environment: createEnvironment(''),
+    })
+    const result = await lastValueFrom(subProcessOperations.isExecutable('npm'))
+    expect(result).toBe(false)
   },
 )
