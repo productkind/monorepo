@@ -120,7 +120,7 @@ Test the [feature name] feature. Try [specific action 1, e.g. "adding a book sug
 
 ## 3. Pre-Publish Checklist
 
-Go through this list before every publish. It takes five minutes and makes your app feel noticeably more professional.
+Go through this list before you publish your app for the first time. It takes five minutes and makes your app feel noticeably more professional.
 
 ### Branding and first impressions
 
@@ -145,7 +145,7 @@ Go through this list before every publish. It takes five minutes and makes your 
 
 ### Final step
 
-- [ ] **Bookmark this version.** Before publishing, bookmark the current version in Lovable's version history. If anything goes wrong after publishing, you can revert to this stable point.
+- [ ] **Bookmark this version.** Before publishing, bookmark the current version in Lovable's version history. If you add new features later on, and anything goes wrong, you can revert to this stable point.
 
 ---
 
@@ -196,21 +196,21 @@ Thank the person who gave you feedback. They just saved you hours of guessing. A
 
 ## 5. Project Knowledge Starter Template
 
-Paste this template into Lovable's Knowledge panel (look for it in the project settings). Fill in the sections that apply to your project. You don't need to complete everything at once. Start with the target user and design rules, then add more as your project grows.
+Paste this template into Lovable's Knowledge panel (in your project, click `+` in the chat input, and select `Knowledge`). Fill in the sections that apply to your project. You don't need to complete everything at once. Start with the target user and design system, then add more as your project grows.
 
 Lovable reads this context with every prompt you send, so it keeps your app consistent without you having to repeat yourself.
 
 ```markdown
 ## Target user
-Name: [e.g. Sarah]
-Who they are: [e.g. A book club organiser who coordinates a group of 8-12 members]
-What they need: [e.g. A simple way to collect book suggestions and vote on what to read next]
-What frustrates them: [e.g. Book suggestions get lost in WhatsApp, and organising votes is chaotic]
+- Persona name: [e.g. Sarah]
+- Who they are: [e.g. A book club organiser who coordinates a group of 8-12 members]
+- What they need: [e.g. A simple way to collect book suggestions and vote on what to read next]
+- What frustrates them: [e.g. Book suggestions get lost in WhatsApp, and organising votes is chaotic]
 
-## Product purpose
+## Product outcome
 This app helps [target user] to [core outcome, e.g. "organise book club activities without the chaos of group chats"].
 
-## Design rules
+## Design system
 - Style: [e.g. warm, friendly, bookish]
 - Primary colour: [e.g. #FDF6E3 (warm cream)]
 - Accent colour: [e.g. #E07A5F (coral)]
@@ -229,26 +229,20 @@ The app should feel [e.g. "friendly and encouraging, like talking to a helpful f
 - Users are called: [e.g. "members", not "users"]
 - The main items are called: [e.g. "suggestions", not "entries" or "posts"]
 
-## Technical decisions
+## Technical requirements
 - Backend: Lovable Cloud
 - Authentication: Google Sign-In
+- It's a mobile-first platform. Optimise layout, font sizes, and buttons for mobile. Prioritise speed and readability.
+- The platform is accessible. Implement WCAG AA compliance.
+- The platform is SEO-optimised. Implement SEO best practices to ensure it's easily discoverable.
+- The platform is GEO-optimised. Implement GEO best practices to ensure it's easily discoverable.
+- Use [name of anaytics tool, e.g. PostHog] for product analytics. Implement event tracking for each new feature. 
 - [Any other decisions you've made, e.g. "No payment features in version 1"]
-
-## What's been built so far
-- [e.g. Book suggestion list with title, author, and note]
-- [e.g. Google authentication]
-- [e.g. Voting feature (one vote per user)]
-- [Update this section as you build]
-
-## What's planned next
-- [e.g. "Currently reading" section]
-- [e.g. Reading deadline per book]
-- [Update this as your plans evolve]
 ```
 
 ### Tips for using Project Knowledge well
 
-- **Update it as you build.** When you add a new feature, add it to the "What's been built" section. This helps Lovable understand the current state of your app.
+- **Update it as you build.** When you go a different direction, than ititially planned (e.g. change your brand colours), update the corresponding section. This helps Lovable understand the current direction of your app.
 - **Keep it concise.** Short, clear bullet points work better than long paragraphs. Lovable reads this with every prompt, so keep it scannable.
 - **Include decisions, not just plans.** If you decided "no payment features in version 1", write that down. It stops Lovable from suggesting Stripe integration when you ask for a new feature.
 - **Add rules when things go wrong.** If Lovable keeps using the wrong tone or style, add a rule to Project Knowledge. For example: "Never use the word 'synergy' anywhere in the app."
