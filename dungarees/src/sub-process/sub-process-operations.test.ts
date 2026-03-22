@@ -117,9 +117,9 @@ mtest(
   },
 )
 
-// These tests use `test` + `lastValueFrom` instead of `mtest` because mtest's
-// marble scheduler flushes after the runner returns, which means the `finally`
-// block restores process.getuid before the observable is actually subscribed.
+// These tests use `test` + `lastValueFrom` instead of `mtest` because memfs
+// Node.canExecute() uses the global process.getuid, not the instance-level one,
+// so we still need to monkey-patch the global process for permission checks.
 test(
   'subProcessOperations.isExecutableFile is false for user-executable file when called by non-owner',
   async () => {
