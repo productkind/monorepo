@@ -1,4 +1,4 @@
-import type { RunOptions, SubProcessService } from './type.ts'
+import type { ProcessServiceOutput, RunOptions, SubProcessService } from './type.ts'
 
 import type { StdioMessage } from '@dungarees/cli/type.ts'
 import { stderr, stdout } from '@dungarees/cli/utils.ts'
@@ -16,12 +16,23 @@ import {
   merge,
   type Observable,
   of,
+  switchMap,
   toArray,
 } from 'rxjs'
 import type { ZodString } from 'zod'
 
 type ProcessOperations = {
   runSilentUntilError(
+    command: string,
+    args: string[],
+    options?: RunOptions,
+  ): Observable<StdioMessage[]>
+  runValidated(
+    command: string,
+    args: string[],
+    options?: RunOptions,
+  ): Observable<ProcessServiceOutput>
+  runSilentUntilErrorValidated(
     command: string,
     args: string[],
     options?: RunOptions,
@@ -54,11 +65,47 @@ export const createSubProcessOperations = ({
     )
   }
 
-  const isExecutableFile: ProcessOperations['isExecutableFile'] = (path) => {
-    return combineLatest([
-      fileSystem.access(path, ['executable']),
-      fileSystem.getStat(path),
+  const isCwdAccessible = (cwd: string): Observable<boolean> =>
+    combineLatest([fileSystem.access(cwd, ['readable']), fileSystem.getStat(cwd)]).pipe(
+      map(([canRead, stat]) => canRead && stat.isDirectory),
+      catchError(() => of(false)),
+    )
+
+  const validate = (command: string, options?: RunOptions): Observable<string[]> =>
+    combineLatest([
+      isExecutable(command),
+      options?.cwd ? isCwdAccessible(options.cwd) : of(true),
     ]).pipe(
+      map(([commandExecutable, cwdAccessible]) => [
+        ...(!commandExecutable ? [`Command not executable: ${command}`] : []),
+        ...(!cwdAccessible ? [`Working directory not accessible: ${options?.cwd}`] : []),
+      ]),
+    )
+
+  const runValidated: ProcessOperations['runValidated'] = (command, args, options) =>
+    validate(command, options).pipe(
+      switchMap((errors) =>
+        errors.length > 0
+          ? of({ stdout: '', stderror: errors.join('\n'), exitCode: 1 })
+          : subProcessService.run(command, args, options).output$,
+      ),
+    )
+
+  const runSilentUntilErrorValidated: ProcessOperations['runSilentUntilErrorValidated'] = (
+    command,
+    args,
+    options,
+  ) =>
+    validate(command, options).pipe(
+      switchMap((errors) =>
+        errors.length > 0
+          ? of(errors.map((e) => stderr(e)))
+          : runSilentUntilError(command, args, options),
+      ),
+    )
+
+  const isExecutableFile: ProcessOperations['isExecutableFile'] = (path) => {
+    return combineLatest([fileSystem.access(path, ['executable']), fileSystem.getStat(path)]).pipe(
       map(([canExecute, stat]) => canExecute && !stat.isDirectory),
       catchError(() => of(false)),
     )
@@ -82,6 +129,8 @@ export const createSubProcessOperations = ({
 
   return {
     runSilentUntilError,
+    runValidated,
+    runSilentUntilErrorValidated,
     isExecutableFile,
     isExecutable,
   }

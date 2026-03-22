@@ -60,7 +60,9 @@
       "Bash(grep -E \"\\\\.\\(ts|tsx\\)$\")",
       "Bash(npm install:*)",
       "Bash(npm run:*)",
-      "Bash(git stash:*)"
+      "Bash(git stash:*)",
+      "Bash(grep -r '\"\"memfs\"\"' */package.json package.json)",
+      "Bash(ls node_modules/memfs/lib/*.d.ts)"
     ],
     "deny": [],
     "ask": []

@@ -294,3 +294,256 @@ test(
     expect(result).toBe(false)
   },
 )
+
+test(
+  'subProcessOperations.runValidated runs command when executable and cwd accessible',
+  async () => {
+    const fileSystem = createFakeFileSystem({
+      '/usr/bin/ls': '#!/bin/sh',
+    })
+    fileSystem.chmodSync('/usr/bin/ls', ALL_EXECUTE)
+    fileSystem.mkdirSync('/work')
+    const { spawn } = createFakeSpawn([
+      {
+        command: 'ls',
+        args: [],
+        stdout: 'file.ts',
+        exitCode: 0,
+      },
+    ])
+    const subProcessService = createSubProcessService(spawn)
+    const subProcessOperations = createSubProcessOperations({
+      subProcessService,
+      fileSystem,
+      environment: createEnvironment('/usr/bin'),
+    })
+    const result = await lastValueFrom(
+      subProcessOperations.runValidated('ls', [], { cwd: '/work' }),
+    )
+    expect(result).toEqual({
+      stdout: 'file.ts',
+      stderror: '',
+      exitCode: 0,
+    })
+  },
+)
+
+test(
+  'subProcessOperations.runValidated returns error when command is not executable',
+  async () => {
+    const fileSystem = createFakeFileSystem()
+    fileSystem.mkdirSync('/work')
+    const { spawn } = createFakeSpawn([])
+    const subProcessService = createSubProcessService(spawn)
+    const subProcessOperations = createSubProcessOperations({
+      subProcessService,
+      fileSystem,
+      environment: createEnvironment('/usr/bin'),
+    })
+    const result = await lastValueFrom(
+      subProcessOperations.runValidated('nonexistent', [], { cwd: '/work' }),
+    )
+    expect(result).toEqual({
+      stdout: '',
+      stderror: 'Command not executable: nonexistent',
+      exitCode: 1,
+    })
+  },
+)
+
+test(
+  'subProcessOperations.runValidated returns error when cwd is not accessible',
+  async () => {
+    const fileSystem = createFakeFileSystem({
+      '/usr/bin/ls': '#!/bin/sh',
+    })
+    fileSystem.chmodSync('/usr/bin/ls', ALL_EXECUTE)
+    const { spawn } = createFakeSpawn([])
+    const subProcessService = createSubProcessService(spawn)
+    const subProcessOperations = createSubProcessOperations({
+      subProcessService,
+      fileSystem,
+      environment: createEnvironment('/usr/bin'),
+    })
+    const result = await lastValueFrom(
+      subProcessOperations.runValidated('ls', [], { cwd: '/nonexistent' }),
+    )
+    expect(result).toEqual({
+      stdout: '',
+      stderror: 'Working directory not accessible: /nonexistent',
+      exitCode: 1,
+    })
+  },
+)
+
+test(
+  'subProcessOperations.runValidated returns both errors when command and cwd are invalid',
+  async () => {
+    const fileSystem = createFakeFileSystem()
+    const { spawn } = createFakeSpawn([])
+    const subProcessService = createSubProcessService(spawn)
+    const subProcessOperations = createSubProcessOperations({
+      subProcessService,
+      fileSystem,
+      environment: createEnvironment('/usr/bin'),
+    })
+    const result = await lastValueFrom(
+      subProcessOperations.runValidated('nonexistent', [], { cwd: '/nonexistent' }),
+    )
+    expect(result.stderror).toContain('Command not executable: nonexistent')
+    expect(result.stderror).toContain('Working directory not accessible: /nonexistent')
+    expect(result.exitCode).toBe(1)
+  },
+)
+
+test(
+  'subProcessOperations.runValidated runs without cwd validation when no cwd provided',
+  async () => {
+    const fileSystem = createFakeFileSystem({
+      '/usr/bin/ls': '#!/bin/sh',
+    })
+    fileSystem.chmodSync('/usr/bin/ls', ALL_EXECUTE)
+    const { spawn } = createFakeSpawn([
+      {
+        command: 'ls',
+        args: [],
+        stdout: 'file.ts',
+        exitCode: 0,
+      },
+    ])
+    const subProcessService = createSubProcessService(spawn)
+    const subProcessOperations = createSubProcessOperations({
+      subProcessService,
+      fileSystem,
+      environment: createEnvironment('/usr/bin'),
+    })
+    const result = await lastValueFrom(subProcessOperations.runValidated('ls', []))
+    expect(result).toEqual({
+      stdout: 'file.ts',
+      stderror: '',
+      exitCode: 0,
+    })
+  },
+)
+
+test(
+  'subProcessOperations.runSilentUntilErrorValidated returns no output on success',
+  async () => {
+    const fileSystem = createFakeFileSystem({
+      '/usr/bin/ls': '#!/bin/sh',
+    })
+    fileSystem.chmodSync('/usr/bin/ls', ALL_EXECUTE)
+    fileSystem.mkdirSync('/work')
+    const { spawn } = createFakeSpawn([
+      {
+        command: 'ls',
+        args: [],
+        stdout: 'file.ts',
+        exitCode: 0,
+      },
+    ])
+    const subProcessService = createSubProcessService(spawn)
+    const subProcessOperations = createSubProcessOperations({
+      subProcessService,
+      fileSystem,
+      environment: createEnvironment('/usr/bin'),
+    })
+    const result = await lastValueFrom(
+      subProcessOperations.runSilentUntilErrorValidated('ls', [], { cwd: '/work' }),
+    )
+    expect(result).toEqual([])
+  },
+)
+
+test(
+  'subProcessOperations.runSilentUntilErrorValidated returns stderr error for non-executable command',
+  async () => {
+    const fileSystem = createFakeFileSystem()
+    fileSystem.mkdirSync('/work')
+    const { spawn } = createFakeSpawn([])
+    const subProcessService = createSubProcessService(spawn)
+    const subProcessOperations = createSubProcessOperations({
+      subProcessService,
+      fileSystem,
+      environment: createEnvironment('/usr/bin'),
+    })
+    const result = await lastValueFrom(
+      subProcessOperations.runSilentUntilErrorValidated('nonexistent', [], { cwd: '/work' }),
+    )
+    expect(result).toEqual([stderr('Command not executable: nonexistent')])
+  },
+)
+
+test(
+  'subProcessOperations.runSilentUntilErrorValidated returns stderr error for inaccessible cwd',
+  async () => {
+    const fileSystem = createFakeFileSystem({
+      '/usr/bin/ls': '#!/bin/sh',
+    })
+    fileSystem.chmodSync('/usr/bin/ls', ALL_EXECUTE)
+    const { spawn } = createFakeSpawn([])
+    const subProcessService = createSubProcessService(spawn)
+    const subProcessOperations = createSubProcessOperations({
+      subProcessService,
+      fileSystem,
+      environment: createEnvironment('/usr/bin'),
+    })
+    const result = await lastValueFrom(
+      subProcessOperations.runSilentUntilErrorValidated('ls', [], { cwd: '/nonexistent' }),
+    )
+    expect(result).toEqual([stderr('Working directory not accessible: /nonexistent')])
+  },
+)
+
+test(
+  'subProcessOperations.runSilentUntilErrorValidated returns both errors when command and cwd are invalid',
+  async () => {
+    const fileSystem = createFakeFileSystem()
+    const { spawn } = createFakeSpawn([])
+    const subProcessService = createSubProcessService(spawn)
+    const subProcessOperations = createSubProcessOperations({
+      subProcessService,
+      fileSystem,
+      environment: createEnvironment('/usr/bin'),
+    })
+    const result = await lastValueFrom(
+      subProcessOperations.runSilentUntilErrorValidated('nonexistent', [], {
+        cwd: '/nonexistent',
+      }),
+    )
+    expect(result).toEqual([
+      stderr('Command not executable: nonexistent'),
+      stderr('Working directory not accessible: /nonexistent'),
+    ])
+  },
+)
+
+test(
+  'subProcessOperations.runSilentUntilErrorValidated shows all output on process stderr',
+  async () => {
+    const fileSystem = createFakeFileSystem({
+      '/usr/bin/ls': '#!/bin/sh',
+    })
+    fileSystem.chmodSync('/usr/bin/ls', ALL_EXECUTE)
+    fileSystem.mkdirSync('/work')
+    const { spawn } = createFakeSpawn([
+      {
+        command: 'ls',
+        args: [],
+        stdout: 'file.ts',
+        stderror: 'Error',
+        exitCode: 1,
+      },
+    ])
+    const subProcessService = createSubProcessService(spawn)
+    const subProcessOperations = createSubProcessOperations({
+      subProcessService,
+      fileSystem,
+      environment: createEnvironment('/usr/bin'),
+    })
+    const result = await lastValueFrom(
+      subProcessOperations.runSilentUntilErrorValidated('ls', [], { cwd: '/work' }),
+    )
+    expect(result).toEqual([stdout('file.ts'), stderr('Error')])
+  },
+)

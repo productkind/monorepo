@@ -11,7 +11,7 @@
     "@dungarees/core": "*",
     "@dungarees/rxjs": "*",
     "glob": "^11.0.2",
-    "memfs": "^4.56.11",
+    "memfs": "^4.57.1",
     "rxjs": "^7.8.1"
   },
   "devDependencies": {
