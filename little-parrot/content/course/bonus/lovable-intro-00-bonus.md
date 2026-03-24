@@ -3,6 +3,7 @@
 ---
 
 ## 1. First Prompt Template
+**Challenge 1: Your First Prompt**
 
 Copy this template, replace the text in brackets with your own idea, and paste it into Lovable. You don't need to fill in every section perfectly. Start with what you know, and refine it later.
 
@@ -43,6 +44,7 @@ Copy this template, replace the text in brackets with your own idea, and paste i
 ---
 
 ## 2. Prompt Library: Common Features
+**Challenges 2–3: Iterate and Improve & Save Data with Lovable Cloud**
 
 These prompts follow the pattern taught in the course: specific, focused, one feature at a time. Copy the one you need, adjust the details in brackets, and paste it into Lovable as a follow-up prompt.
 
@@ -119,6 +121,7 @@ Test the [feature name] feature. Try [specific action 1, e.g. "adding a book sug
 ---
 
 ## 3. Pre-Publish Checklist
+**Challenge 7: Publish and Share Your App**
 
 Go through this list before you publish your app for the first time. It takes five minutes and makes your app feel noticeably more professional.
 
@@ -150,6 +153,7 @@ Go through this list before you publish your app for the first time. It takes fi
 ---
 
 ## 4. First User Feedback Script
+**Challenge 7: Publish and Share Your App**
 
 You've published your app. Now share it with one person and learn from how they use it. This script gives you a simple structure for gathering feedback that you can turn into your next prompt.
 
@@ -195,6 +199,7 @@ Thank the person who gave you feedback. They just saved you hours of guessing. A
 ---
 
 ## 5. Project Knowledge Starter Template
+**Challenge 6: Plan, Test, and Connect Services**
 
 Paste this template into Lovable's Knowledge panel (in your project, click `+` in the chat input, and select `Knowledge`). Fill in the sections that apply to your project. You don't need to complete everything at once. Start with the target user and design system, then add more as your project grows.
 
