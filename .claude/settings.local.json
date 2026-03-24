@@ -38,7 +38,14 @@
       "WebFetch(domain:hub.docker.com)",
       "Bash(du -sh /Users/eggdice/Projects/productkind/dungarees/src/*/)",
       "Bash(npm view:*)",
-      "Bash(npm update:*)"
+      "Bash(npm update:*)",
+      "WebFetch(domain:littleparrot.app)",
+      "Bash(grep:*)",
+      "WebFetch(domain:lovable.dev)",
+      "WebFetch(domain:analysedigital.com)",
+      "WebFetch(domain:christiangrech.medium.com)",
+      "WebFetch(domain:supabase.com)",
+      "Bash(gh issue:*)"
     ],
     "deny": [],
     "ask": []

@@ -1,0 +1,123 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Use Markdown in Lovable Prompts (With Examples)",
+    "description": "Learn how to use markdown in Lovable prompts to get better results. Covers headings, lists, bold, code, and links with copy-paste examples for non-technical builders.",
+    "author": {
+      "@type": "Organization",
+      "name": "Little Parrot",
+      "url": "https://littleparrot.app"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Little Parrot",
+      "url": "https://littleparrot.app"
+    },
+    "datePublished": "2026-03-24",
+    "dateModified": "2026-03-24",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://littleparrot.app/articles/markdown-for-lovable-prompts"
+    },
+    "keywords": ["markdown for lovable prompts", "lovable prompts", "how to write prompts for lovable", "vibe coding prompts", "lovable app builder tips"],
+    "articleSection": "Vibe Coding",
+    "inLanguage": "en-GB"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Use Markdown in Lovable Prompts",
+    "description": "A step-by-step guide to formatting your Lovable prompts with markdown for better AI app building results.",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Add headings to separate sections",
+        "text": "Use ## followed by a space to create section headings. Break your prompt into sections like Product overview, User flow, Design system, and Implementation details. Lovable treats each heading as a separate topic."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Use bullet points for unordered lists",
+        "text": "Use - followed by a space to list requirements, features, or design details where order doesn't matter. For example: platform requirements, brand colours, or style guidelines."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Use numbered lists for user flows",
+        "text": "Use 1. 2. 3. to describe steps that happen in sequence. Numbered lists tell Lovable these things happen in this order. Essential for user flows and onboarding steps."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Bold key decisions and constraints",
+        "text": "Wrap important words in **double asterisks** to highlight key decisions Lovable shouldn't miss. For example: **No login** required, **Mobile-first** layout."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Use inline code for exact values",
+        "text": "Wrap exact values in single backticks to tell Lovable to use them precisely. Use for hex colours like `#FDF6E3`, button labels, placeholder text, and error messages."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 6,
+        "name": "Use code blocks for longer exact content",
+        "text": "Wrap multiple lines in triple backticks for blocks of text your app should display exactly as written. Useful for welcome messages, email templates, or landing page copy."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 7,
+        "name": "Add links for design references",
+        "text": "Use [text](URL) to point Lovable to visual references, design inspiration, or documentation for third-party services you want to integrate."
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does Lovable actually read markdown formatting?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Lovable's AI processes markdown natively. When you use headings, lists, and other formatting, Lovable interprets them as structural instructions. A ## heading signals a new topic. A numbered list signals a sequence. Bold text signals emphasis. This means your formatting directly shapes how Lovable understands and builds your app."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to learn markdown before using Lovable?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. You can start prompting Lovable in plain text and get results. But adding even basic formatting, like ## headings to separate your sections, noticeably improves the accuracy of what Lovable builds. You don't need to memorise the syntax. Keep a reference guide open while you write your prompts."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the most important markdown feature for Lovable prompts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Headings (##). They're the single most impactful formatting tool because they tell Lovable where one part of your request ends and another begins. If you only learn one piece of markdown, make it headings."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use markdown in follow-up prompts too?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. Markdown works in every prompt you send to Lovable, not just the first one. Follow-up prompts benefit from structure just as much. For example, when adding a new feature, use headings to separate what the feature does from how it should look."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the difference between inline code and code blocks in Lovable prompts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Inline code (single backticks) is for short, exact values within a sentence: a hex colour like #FDF6E3, a button label like Save, or an error message. Code blocks (triple backticks) are for longer blocks of exact text: a welcome message, an email template, or a paragraph of landing page copy. Both tell Lovable to use the content exactly as written."
+        }
+      }
+    ]
+  }
+]

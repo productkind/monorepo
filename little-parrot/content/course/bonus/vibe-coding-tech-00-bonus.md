@@ -248,6 +248,7 @@ Integrate Stripe for payments. Users should be able to [describe, e.g. "pay a on
 | Service | What it does | Free tier? |
 |---------|-------------|------------|
 | **Resend** | Send transactional emails (confirmations, notifications) | 100 emails/day free |
+| **Mailtrap** | Send transactional emails (confirmations, notifications) | 100 emails/day free |
 
 ```
 Integrate Resend for email. Send a [type, e.g. "welcome"] email when a user [trigger, e.g. "signs up"]. The email should include [what content, e.g. "their name and a link to get started"].
@@ -320,7 +321,7 @@ Your database doesn't have an undo button. Go through this checklist whenever yo
 ### Before launching a feature that writes data
 
 - [ ] **Test with fake data first.** Add a test entry, check it appears, try editing it, try deleting it. Don't test with real user data.
-- [ ] **Check who can see what.** If your app has user accounts, verify that users can only see their own data. Ask Lovable: `Can other users see this user's data? Set up RLS if not.`
+- [ ] **Check who can see what.** If your app has user accounts, verify that users can only see their own data. Log in with your test user, add test data, log out, then log in with another test user to see what they see.
 - [ ] **Verify data persists.** Add something, close the browser, reopen it. Is the data still there?
 
 ### Ongoing habits

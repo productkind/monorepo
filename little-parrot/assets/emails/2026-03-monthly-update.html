@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>What we built for you in March</title>
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <![endif]-->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+    * { margin: 0; padding: 0; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #08080a;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    .email-wrapper {
+      width: 100%;
+      background-color: #f5f5f5;
+      padding: 32px 16px;
+    }
+
+    .email-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border: 2px solid #08080a;
+      box-shadow: 4px 4px 2px rgba(8, 8, 9, 0.25);
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(90deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020);
+      padding: 32px 40px;
+      text-align: center;
+      border-bottom: 2px solid #08080a;
+    }
+
+    .header img {
+      max-width: 220px;
+      height: auto;
+    }
+
+    .header-subtitle {
+      font-family: 'Space Mono', monospace;
+      font-size: 13px;
+      color: hsl(245, 3%, 48%);
+      margin-top: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    /* Content */
+    .content {
+      padding: 40px;
+    }
+
+    .greeting {
+      font-size: 17px;
+      margin-bottom: 16px;
+    }
+
+    .intro {
+      color: hsl(245, 3%, 38%);
+      margin-bottom: 32px;
+      font-size: 15px;
+    }
+
+    /* Section */
+    .section {
+      margin-bottom: 32px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #08080a;
+    }
+
+    .section-emoji {
+      font-size: 20px;
+      margin-right: 10px;
+    }
+
+    h2 {
+      font-family: 'Space Mono', monospace;
+      font-size: 18px;
+      font-weight: 700;
+      color: #08080a;
+      margin: 0;
+    }
+
+    .section p, .section li {
+      font-size: 15px;
+      color: hsl(245, 3%, 28%);
+      line-height: 1.7;
+    }
+
+    .section p {
+      margin-bottom: 12px;
+    }
+
+    /* Feature cards */
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .feature-list li {
+      padding: 12px 16px;
+      margin-bottom: 8px;
+      background-color: #ffffff;
+      border: 2px solid #08080a;
+      box-shadow: 2px 2px 1px rgba(8, 8, 9, 0.15);
+    }
+
+    .feature-list li strong {
+      color: #08080a;
+      display: block;
+      margin-bottom: 2px;
+      font-size: 15px;
+    }
+
+    .feature-list li span {
+      font-size: 14px;
+      color: hsl(245, 3%, 38%);
+    }
+
+    .feature-list li .thanks {
+      display: block;
+      font-size: 13px;
+      color: hsl(245, 3%, 48%);
+      margin-top: 6px;
+      font-style: italic;
+    }
+
+    /* Highlight box */
+    .highlight-box {
+      background: linear-gradient(90deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020);
+      border: 2px solid #08080a;
+      box-shadow: 4px 4px 2px rgba(8, 8, 9, 0.25);
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+
+    .highlight-box h2 {
+      margin-bottom: 12px;
+    }
+
+    .highlight-box p {
+      font-size: 15px;
+      color: hsl(245, 3%, 28%);
+      margin-bottom: 0;
+    }
+
+    /* Bug fix pills */
+    .fix-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .fix-pill {
+      display: inline-block;
+      background-color: hsl(130, 100%, 91%);
+      border: 2px solid #08080a;
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      color: hsl(148, 100%, 28%);
+    }
+
+    /* Behind the scenes */
+    .bts-item {
+      padding-left: 20px;
+      border-left: 3px solid hsl(33, 100%, 68%);
+      margin-bottom: 16px;
+    }
+
+    .bts-item p {
+      margin-bottom: 0;
+    }
+
+    /* CTA */
+    .cta-section {
+      text-align: center;
+      padding: 32px 40px;
+      border-top: 2px solid #08080a;
+      background: linear-gradient(90deg, #ffb65b10, #fdd82510, #fbfb0010, #8efd2310, #00ed7010);
+    }
+
+    .cta-section p {
+      font-size: 15px;
+      color: hsl(245, 3%, 38%);
+      margin-bottom: 16px;
+    }
+
+    .cta-section .signoff {
+      font-family: 'Space Mono', monospace;
+      font-weight: 700;
+      font-size: 16px;
+      color: #08080a;
+      margin-top: 20px;
+    }
+
+    .cta-section .brand {
+      font-size: 13px;
+      color: hsl(245, 3%, 48%);
+      margin-top: 4px;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 24px 40px;
+      text-align: center;
+      font-size: 12px;
+      color: hsl(245, 3%, 58%);
+      line-height: 1.8;
+    }
+
+    .footer a {
+      color: hsl(245, 3%, 48%);
+      text-decoration: underline;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid hsl(245, 5%, 89%);
+      margin: 0;
+    }
+
+    /* Mobile */
+    @media only screen and (max-width: 620px) {
+      .content { padding: 24px 20px; }
+      .header { padding: 24px 20px; }
+      .cta-section { padding: 24px 20px; }
+      .footer { padding: 20px; }
+      h2 { font-size: 16px; }
+      .fix-grid { gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="email-wrapper">
+    <div class="email-container">
+
+      <!-- Header -->
+      <div class="header">
+        <img src="https://littleparrot.app/logo-little-parrot.svg" alt="Little Parrot" />
+        <div class="header-subtitle">MARCH 2026 UPDATE</div>
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+
+        <p class="greeting">Hi there,</p>
+
+        <p class="greeting">We're Kinga and Tamas, the two-person team behind Little Parrot. Every month, we want to share what we've been working on, because your subscription funds every improvement, and you deserve to see where that goes.</p>
+
+        <p class="greeting">March was a big month.</p>
+
+        <!-- Toolkit -->
+        <div class="highlight-box">
+          <h2>🧰 Introducing the Toolkit</h2>
+          <p>Each course now comes with its own Toolkit you can use while you build: prompt templates, cheat sheets, troubleshooting guides, pre-publish checklists, and more. Two courses have their Toolkits ready, and we're gradually adding them to every course.</p>
+          <p style="margin-bottom: 0;"><a href="https://littleparrot.app/nest/toolkit/?ref=email" style="color: #08080a; font-weight: 700; text-decoration: underline;">Explore the Toolkit</a></p>
+        </div>
+
+        <!-- Smoother experience -->
+        <div class="section">
+          <div class="section-header">
+            <h2>Your learning experience got smoother</h2>
+          </div>
+          <p>We fixed a lot of things that were getting in your way. Several of you reported video issues, mobile quirks, and loading frustrations. Thank you for telling us. We fixed every one of them.</p>
+          <ul class="feature-list">
+            <li>
+              <strong>Video playback works properly now</strong>
+              <span>Videos no longer freeze, the seeker bar works, and you can mute on iOS too.</span>
+              <span class="thanks">Thanks to Berto and Julia for flagging this 🙏</span>
+            </li>
+            <li>
+              <strong>Mobile is much better</strong>
+              <span>The hamburger menu is back, the Nest pages fit on smaller screens, and you no longer need to tap "Previous" twice to go back.</span>
+            </li>
+            <li>
+              <strong>No more loading spinners in courses</strong>
+              <span>We replaced them with subtle skeletons so you're never staring at a blank screen.</span>
+            </li>
+            <li>
+              <strong>Smoother navigation</strong>
+              <span>You can browse courses without leaving your Nest, and the top bar takes up less of your screen so you can focus on learning.</span>
+            </li>
+            <li>
+              <strong>Prompts available right where you need them</strong>
+              <span>When we encourage you to try something in Lovable, the prompt template is now right there in the same step. No more going back to find it.</span>
+              <span class="thanks">Thanks to Charlotte, Simon, and Evelien for this suggestion 🤩</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- New features -->
+        <div class="section">
+          <div class="section-header">
+            <h2>New features to help you learn</h2>
+          </div>
+          <ul class="feature-list">
+            <li>
+              <strong>Navigate back to completed challenges</strong>
+              <span>Revisit any challenge you've already finished, right from the course overview. No more losing track of where that one useful tip was.</span>
+              <span class="thanks">Thanks to Fanni for this feedback 🤗</span>
+            </li>
+            <li>
+              <strong>Credit estimates in the Intro to Lovable course</strong>
+              <span>Before each prompt, you can now see roughly how many Lovable credits it'll cost. No more surprises mid-build.</span>
+              <span class="thanks">Thanks to Natalia, Maria, Zsofia, Marketa, Liso, Pop, Simoni, Neha, and Maya for raising this 🌟</span>
+            </li>
+            <li>
+              <strong>Video transcripts</strong>
+              <span>Prefer reading over watching? Every video now has a transcript you can open with one click.</span>
+            </li>
+            <li>
+              <strong>Feedback button on every step</strong>
+              <span>See something unclear or wrong? Flag it directly and we'll fix it. Your feedback shapes the course content.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Community -->
+        <div class="section">
+          <div class="section-header">
+            <h2>Community</h2>
+          </div>
+          <p>We launched the Little Parrot Discord community. It's a space to ask questions, share what you're building, and connect with other women who are learning alongside you. If you haven't joined yet, look for the link in <a href="https://littleparrot.app/nest/my-learning/?ref=email" style="color: #08080a; font-weight: 700; text-decoration: underline;">your Nest.</a></p>
+        </div>
+
+        <!-- Fresh new look -->
+        <div class="section">
+          <div class="section-header">
+            <h2>A fresh new look</h2>
+          </div>
+          <p>You may have noticed: Little Parrot got a visual overhaul. New logo, new brand colours, and a bolder design language across the platform. We wanted the experience to feel as edgy and welcoming as the community we're building.</p>
+        </div>
+
+
+      </div>
+
+      <!-- CTA / Sign-off -->
+      <div class="cta-section">
+        <p>We're continuing to improve the course experience and working on new content. If there's something you'd love to learn, hit reply and tell us. We read every message.</p>
+        <p>Thank you for being part of this. You're helping us build something that can change who gets to create with technology. 💛</p>
+        <div class="signoff">Kinga, Tamas &amp; Little Parrot</div>
+        <div class="brand">Little Parrot by productkind</div>
+      </div>
+
+      <!-- Footer -->
+      <hr class="divider">
+      <div class="footer">
+        <p>You're receiving this because you have a Little Parrot subscription.<br>
+        <a href="https://littleparrot.app">littleparrot.app</a><br><br></p>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

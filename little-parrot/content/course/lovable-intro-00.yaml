@@ -128,6 +128,8 @@ course:
               ```
 
               Don't worry if you don't know what to put in every section yet. You can start simple and add detail later. The structure itself helps Lovable understand what you're after.
+
+              You can find this template in your [Toolkit](https://littleparrot.app/nest/toolkit/17e40eb9-e190-40ed-b3d3-44300f2e2b08).
           subtitle: A structure that works
         - type: text
           title: What's with all those symbols?
@@ -142,6 +144,8 @@ course:
               - `1. 2. 3.` creates a numbered list
 
               You don't need to memorise this. Just copy the formula and fill in the brackets with your own content. The formatting helps Lovable see the structure of your request clearly.
+
+              Use the [Markdown Guide](https://littleparrot.app/nest/toolkit/17e472a2-d2f4-4c99-8b1f-1a0b540df31a) in your Toolkit if you want to learn more about how to format your prompts effectively.
           subtitle: A quick guide to markdown
         - type: text
           title: Start small, then grow
@@ -193,7 +197,7 @@ course:
               Sarah, a book club organiser who wants to spend less time on admin and more time reading with friends.
               ```
 
-              *A starting prompt like this might use around 1-3 credits, depending on how much Lovable needs to do to build it. By clicking the "..." menu next to Lovable's response, you can see exactly how many credits were used for each prompt.*
+              *A starting prompt like this might use around 1-3 credits, depending on how much Lovable builds. By clicking the "..." menu under Lovable's response, you can see exactly how many credits were used for each prompt.*
             imageUrl: /courses/lovable-intro-00/list-of-books.webp
           subtitle: One core flow to start
         - type: text
@@ -232,7 +236,7 @@ course:
           title: 'Your turn: Build your first app'
           content:
             description: |-
-              Open [Lovable](https://lovable.dev/), paste Dalmie's structured prompt (or adapt it for your own idea), and press Enter.
+              Open [Lovable](https://lovable.dev/), paste [Dalmie's structured prompt](https://littleparrot.app/nest/toolkit/17e40eb9-e190-40ed-b3d3-44300f2e2b08) (or adapt it for your own idea), and press Enter.
 
               Watch what happens. In a couple of minutes, you'll have a working app.
 
