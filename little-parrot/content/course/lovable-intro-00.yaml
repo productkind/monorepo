@@ -483,7 +483,7 @@ course:
           title: Test that it actually works
           content:
             body: |-
-              After adding a feature, take a moment to verify it works as expected. For the voting feature, Dalmie tests:
+              After adding a feature, take a moment to verify it works as expected. For the voting feature, Dalmie manually tests:
 
               1. **Try voting without logging in.** The app should prevent this or prompt to sign in.
               2. **Log in and vote.** The vote count should update.
