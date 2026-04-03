@@ -1,0 +1,829 @@
+# Visual Component Guide
+**Challenge 2: Design Elements for Vibe Coders**
+
+When you're prompting Lovable, using the right component name gets you what you want on the first try. This guide shows you what each component looks like, what it's called, and when to use it. Lovable uses a component library called **shadcn/ui**, so the names below are the ones Lovable understands best.
+
+### Actions
+
+These are the components your users click to make something happen.
+
+#### Button
+
+A clickable rectangle with text like "Save" or "Submit". Comes in styles: **primary** (filled, colourful), **secondary** (outline), **ghost** (text only), and **destructive** (red, for delete actions).
+
+**When to use it:** Any time the user needs to trigger an action.
+
+<ComponentDisplay>
+  <div className="flex gap-4 flex-wrap items-center">
+    <DefaultButton>Default</DefaultButton>
+    <DefaultButton variant="secondary">Secondary</DefaultButton>
+    <DefaultButton variant="outline">Outline</DefaultButton>
+    <DefaultButton variant="destructive">Destructive</DefaultButton>
+    <DefaultButton variant="ghost">Ghost</DefaultButton>
+    <DefaultButton variant="link">Link</DefaultButton>
+  </div>
+</ComponentDisplay>
+
+#### Toggle
+
+A small button that switches between on and off (like bold/italic in a text editor).
+
+**When to use it:** When the user needs to turn a single option on or off, like "Show completed items".
+
+<ComponentDisplay>
+  <Toggle aria-label="Toggle bold">
+    <strong>B</strong>
+  </Toggle>
+</ComponentDisplay>
+
+#### Toggle Group
+
+A row of toggle buttons where the user picks one or more options. Looks like a segmented bar.
+
+**When to use it:** When the user chooses between a few visual options, like switching between grid view and list view.
+
+<ComponentDisplay>
+  <ToggleGroup type="multiple">
+    <ToggleGroupItem value="bold" aria-label="Toggle bold"><strong>B</strong></ToggleGroupItem>
+    <ToggleGroupItem value="italic" aria-label="Toggle italic"><em>I</em></ToggleGroupItem>
+    <ToggleGroupItem value="underline" aria-label="Toggle underline"><u>U</u></ToggleGroupItem>
+  </ToggleGroup>
+</ComponentDisplay>
+
+### Getting user input
+
+These components collect information from your users.
+
+#### Input
+
+A single-line text box. The user types short text like a name, email, or title.
+
+**When to use it:** For short text: names, emails, search queries, titles.
+
+<ComponentDisplay>
+  <Input placeholder="Type something…" className="max-w-sm" />
+</ComponentDisplay>
+
+#### Textarea
+
+A multi-line text box, taller than an input. The user types longer text like descriptions or notes.
+
+**When to use it:** For longer text: descriptions, comments, messages, notes.
+
+<ComponentDisplay>
+  <Textarea placeholder="Write your message here…" className="max-w-sm" />
+</ComponentDisplay>
+
+#### Select
+
+A dropdown that opens a list of options when clicked. The user picks one.
+
+**When to use it:** When the user chooses from a predefined list (e.g., category, country, role).
+
+<ComponentDisplay>
+  <Select>
+    <SelectTrigger className="w-[200px]">
+      <SelectValue placeholder="Select a fruit" />
+    </SelectTrigger>
+    <SelectContent>
+      <SelectItem value="apple">Apple</SelectItem>
+      <SelectItem value="banana">Banana</SelectItem>
+      <SelectItem value="cherry">Cherry</SelectItem>
+      <SelectItem value="date">Date</SelectItem>
+    </SelectContent>
+  </Select>
+</ComponentDisplay>
+
+#### Combobox
+
+Like a Select, but the user can also type to search through the options.
+
+**When to use it:** When the list of options is long and the user needs to filter (e.g., searching for a city).
+
+<ComponentDisplay>
+  <Combobox />
+</ComponentDisplay>
+
+#### Checkbox
+
+A small square that can be ticked or unticked. Often appears in a list where multiple can be selected.
+
+**When to use it:** When the user can select multiple options (e.g., "Select your interests").
+
+<ComponentDisplay>
+  <div className="flex items-center gap-2">
+    <Checkbox id="terms" />
+    <Label htmlFor="terms">Accept terms and conditions</Label>
+  </div>
+</ComponentDisplay>
+
+#### Radio Group
+
+A set of circles where only one can be selected at a time.
+
+**When to use it:** When the user must pick exactly one option from a small set (e.g., "Free plan" or "Pro plan").
+
+<ComponentDisplay>
+  <RadioGroup defaultValue="option-1">
+    <div className="flex items-center gap-2">
+      <RadioGroupItem value="option-1" id="r1" />
+      <Label htmlFor="r1">Option One</Label>
+    </div>
+    <div className="flex items-center gap-2">
+      <RadioGroupItem value="option-2" id="r2" />
+      <Label htmlFor="r2">Option Two</Label>
+    </div>
+    <div className="flex items-center gap-2">
+      <RadioGroupItem value="option-3" id="r3" />
+      <Label htmlFor="r3">Option Three</Label>
+    </div>
+  </RadioGroup>
+</ComponentDisplay>
+
+#### Switch
+
+A small sliding toggle, like the ones on your phone's settings screen.
+
+**When to use it:** For on/off settings (e.g., "Enable notifications", "Dark mode").
+
+<ComponentDisplay>
+  <div className="flex items-center gap-2">
+    <Switch id="airplane-mode" />
+    <Label htmlFor="airplane-mode">Airplane Mode</Label>
+  </div>
+</ComponentDisplay>
+
+#### Slider
+
+A horizontal bar with a draggable handle. The user slides it to choose a value within a range.
+
+**When to use it:** For numeric ranges (e.g., price range, volume, brightness).
+
+<ComponentDisplay>
+  <div className="p-4" style={{width: '200px'}}>
+    <Slider defaultValue={[350]} max={500} step={10} />
+  </div>
+</ComponentDisplay>
+
+#### Date Picker
+
+A text field that opens a calendar when clicked. The user picks a date.
+
+**When to use it:** When the user needs to select a date (e.g., deadline, event date, birthday).
+
+<ComponentDisplay>
+  <DatePicker />
+</ComponentDisplay>
+
+#### Calendar
+
+A full calendar grid always visible on the page.
+
+**When to use it:** When dates are the main focus of the page (e.g., booking system, event planner).
+
+<ComponentDisplay>
+  <Calendar mode="single" className="rounded-md border" />
+</ComponentDisplay>
+
+#### Input OTP
+
+A row of individual boxes, one for each digit. Used for entering verification codes.
+
+**When to use it:** For verification codes sent by email or SMS.
+
+<ComponentDisplay>
+  <InputOTP maxLength={6}>
+    <InputOTPGroup>
+      <InputOTPSlot index={0} />
+      <InputOTPSlot index={1} />
+      <InputOTPSlot index={2} />
+    </InputOTPGroup>
+    <InputOTPSeparator />
+    <InputOTPGroup>
+      <InputOTPSlot index={3} />
+      <InputOTPSlot index={4} />
+      <InputOTPSlot index={5} />
+    </InputOTPGroup>
+  </InputOTP>
+</ComponentDisplay>
+
+#### File Upload
+
+A box or button where the user can drag and drop or browse to upload a file. Sometimes called **Dropzone**.
+
+**When to use it:** When the user needs to upload images, documents, or other files.
+
+<ComponentDisplay>
+  <div className="w-full max-w-md">
+    <FileUpload />
+  </div>
+</ComponentDisplay>
+
+### Showing content
+
+These components display information to your users.
+
+#### Card
+
+A rectangular box with a subtle border or shadow, grouping related content together (image, title, description, button).
+
+**When to use it:** For displaying items in a collection: products, blog posts, team members, recipes.
+
+<ComponentDisplay>
+  <DefaultCard className="w-[350px]">
+    <DefaultCardHeader>
+      <DefaultCardTitle>Card Title</DefaultCardTitle>
+      <DefaultCardDescription>Card description goes here.</DefaultCardDescription>
+    </DefaultCardHeader>
+    <DefaultCardContent>
+      <p>Card content and details live here.</p>
+    </DefaultCardContent>
+    <DefaultCardFooter>
+      <DefaultButton variant="outline" size="sm">Cancel</DefaultButton>
+      <DefaultButton size="sm">Save</DefaultButton>
+    </DefaultCardFooter>
+  </DefaultCard>
+</ComponentDisplay>
+
+#### Accordion
+
+A list of headings that expand and collapse to reveal content underneath. Only one (or a few) sections are open at a time.
+
+**When to use it:** For FAQs, settings panels, or any content where users don't need to see everything at once.
+
+<ComponentDisplay>
+  <Accordion type="single" collapsible className="w-full max-w-md">
+    <AccordionItem value="item-1">
+      <AccordionTrigger>Is it accessible?</AccordionTrigger>
+      <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+      <AccordionTrigger>Is it styled?</AccordionTrigger>
+      <AccordionContent>Yes. It comes with default styles that match your design system.</AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-3">
+      <AccordionTrigger>Is it animated?</AccordionTrigger>
+      <AccordionContent>Yes. It's animated by default with smooth transitions.</AccordionContent>
+    </AccordionItem>
+  </Accordion>
+</ComponentDisplay>
+
+#### Tabs
+
+A row of labels at the top. Clicking a label shows different content below it.
+
+**When to use it:** When you have related sections the user switches between (e.g., "Overview", "Reviews", "Specs").
+
+<ComponentDisplay>
+  <Tabs defaultValue="account" className="w-[400px]">
+    <TabsList>
+      <TabsTrigger value="account">Account</TabsTrigger>
+      <TabsTrigger value="password">Password</TabsTrigger>
+    </TabsList>
+    <TabsContent value="account">Make changes to your account here.</TabsContent>
+    <TabsContent value="password">Change your password here.</TabsContent>
+  </Tabs>
+</ComponentDisplay>
+
+#### Carousel
+
+A horizontal slider showing one item at a time, with arrows or swipe to move between items.
+
+**When to use it:** For image galleries, testimonials, or featured content.
+
+<ComponentDisplay>
+  <Carousel className="w-full max-w-xs">
+    <CarouselContent>
+      <CarouselItem>
+        <div className="p-4 border rounded-lg text-center">
+          <span className="text-3xl font-semibold">1</span>
+        </div>
+      </CarouselItem>
+      <CarouselItem>
+        <div className="p-4 border rounded-lg text-center">
+          <span className="text-3xl font-semibold">2</span>
+        </div>
+      </CarouselItem>
+      <CarouselItem>
+        <div className="p-4 border rounded-lg text-center">
+          <span className="text-3xl font-semibold">3</span>
+        </div>
+      </CarouselItem>
+    </CarouselContent>
+    <CarouselPrevious />
+    <CarouselNext />
+  </Carousel>
+</ComponentDisplay>
+
+#### Table
+
+Rows and columns of data, like a spreadsheet.
+
+**When to use it:** For structured data: pricing comparisons, order histories, user lists.
+
+<ComponentDisplay>
+  <Table>
+    <TableHeader>
+      <TableRow>
+        <TableHead>Name</TableHead>
+        <TableHead>Status</TableHead>
+        <TableHead>Role</TableHead>
+      </TableRow>
+    </TableHeader>
+    <TableBody>
+      <TableRow>
+        <TableCell>Alice</TableCell>
+        <TableCell>Active</TableCell>
+        <TableCell>Admin</TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell>Bob</TableCell>
+        <TableCell>Inactive</TableCell>
+        <TableCell>User</TableCell>
+      </TableRow>
+    </TableBody>
+  </Table>
+</ComponentDisplay>
+
+#### Data Table
+
+A Table with extra features: sorting, filtering, pagination, and row selection.
+
+**When to use it:** When your table has lots of data and users need to search, sort, or filter it.
+
+<ComponentDisplay>
+  <div className="w-full max-w-lg">
+    <DataTable />
+  </div>
+</ComponentDisplay>
+
+#### Avatar
+
+A small circle showing a user's photo or their initials as a fallback.
+
+**When to use it:** Next to usernames, in comments, in navigation headers, in team lists.
+
+<ComponentDisplay>
+  <div className="flex gap-4 items-center">
+    <Avatar>
+      <AvatarImage src="https://github.com/kingamagyar.png" alt="@shadcn" />
+      <AvatarFallback>CN</AvatarFallback>
+    </Avatar>
+    <Avatar>
+      <AvatarFallback>LP</AvatarFallback>
+    </Avatar>
+  </div>
+</ComponentDisplay>
+
+#### Badge
+
+A small coloured label, often rounded, displaying a status or category (e.g., "New", "Pro", "Pending").
+
+**When to use it:** For status indicators, tags, categories, or notification counts.
+
+<ComponentDisplay>
+  <div className="flex gap-3 flex-wrap items-center">
+    <DefaultBadge>Default</DefaultBadge>
+    <DefaultBadge variant="secondary">Secondary</DefaultBadge>
+    <DefaultBadge variant="outline">Outline</DefaultBadge>
+    <DefaultBadge variant="destructive">Destructive</DefaultBadge>
+  </div>
+</ComponentDisplay>
+
+#### Separator
+
+A thin horizontal or vertical line.
+
+**When to use it:** To visually divide sections of content on a page.
+
+<ComponentDisplay>
+  <div className="w-full max-w-sm space-y-2">
+    <p className="text-sm">Above the separator</p>
+    <Separator />
+    <p className="text-sm">Below the separator</p>
+  </div>
+</ComponentDisplay>
+
+#### Skeleton
+
+Grey placeholder shapes that pulse while content is loading. Looks like a greyed-out version of the real content.
+
+**When to use it:** To show users something is loading instead of a blank screen.
+
+<ComponentDisplay>
+  <div className="flex items-center gap-4">
+    <Skeleton className="h-12 w-12 rounded-full" />
+    <div className="space-y-2">
+      <Skeleton className="h-4 w-[250px]" />
+      <Skeleton className="h-4 w-[200px]" />
+    </div>
+  </div>
+</ComponentDisplay>
+
+#### Chart
+
+A visual representation of data: bar chart, line chart, pie chart, etc.
+
+**When to use it:** For dashboards, analytics pages, or anywhere you display trends and numbers.
+
+### Feedback and status
+
+These components tell users what's happening.
+
+#### Alert
+
+A coloured box with a message, usually at the top of a section. Often includes an icon (info, warning, error, success).
+
+**When to use it:** For important messages that stay visible: warnings, errors, tips, success confirmations.
+
+<ComponentDisplay>
+  <Alert className="max-w-md">
+    <AlertTitle>Heads up!</AlertTitle>
+    <AlertDescription>You can add components to your app using the CLI.</AlertDescription>
+  </Alert>
+</ComponentDisplay>
+
+#### Toast
+
+A small notification that slides in from the corner and disappears after a few seconds. Also called **Sonner** in shadcn.
+
+**When to use it:** For temporary feedback after an action: "Saved!", "Item deleted", "Link copied".
+
+#### Alert Dialog
+
+A pop-up box that blocks everything else until the user responds. Has a message and buttons like "Cancel" and "Confirm".
+
+**When to use it:** For destructive actions that need confirmation: "Are you sure you want to delete this?"
+
+<ComponentDisplay>
+  <AlertDialog>
+    <AlertDialogTrigger asChild>
+      <DefaultButton variant="outline">Open Alert Dialog</DefaultButton>
+    </AlertDialogTrigger>
+    <AlertDialogContent>
+      <AlertDialogHeader>
+        <AlertDialogTitle>This is a test dialog</AlertDialogTitle>
+        <AlertDialogDescription>Here is the description</AlertDialogDescription>
+      </AlertDialogHeader>
+      <AlertDialogFooter>
+        <AlertDialogCancel>Cancel</AlertDialogCancel>
+        <AlertDialogAction>Continue</AlertDialogAction>
+      </AlertDialogFooter>
+    </AlertDialogContent>
+  </AlertDialog>
+</ComponentDisplay>
+
+#### Progress
+
+A horizontal bar that fills up to show how far along a process is.
+
+**When to use it:** For upload progress, multi-step forms, onboarding completion.
+
+<ComponentDisplay>
+  <p style={{ width: '200px' }}>
+    <Progress value={60} className="w-[60%]" />
+  </p>
+</ComponentDisplay>
+
+#### Spinner
+
+A small spinning circle.
+
+**When to use it:** To show something is loading or processing (e.g., after clicking a button).
+
+<ComponentDisplay>
+  <div className="flex gap-6 items-center">
+    <Spinner size="sm" />
+    <Spinner />
+    <Spinner size="lg" />
+  </div>
+</ComponentDisplay>
+
+### Navigation
+
+These components help users move around your app.
+
+#### Navigation Menu
+
+A row of links at the top of the page, sometimes with dropdown sub-menus.
+
+**When to use it:** For the main menu of your app or website.
+
+#### Sidebar
+
+A vertical panel on the left (or right) side of the screen with links, icons, and sections. Often collapsible.
+
+**When to use it:** For apps with many pages or sections (e.g., dashboards, admin panels).
+
+#### Breadcrumb
+
+A horizontal trail showing where the user is: Home > Products > Shoes. Each part is a clickable link.
+
+**When to use it:** For apps with nested pages so users can navigate back easily.
+
+<ComponentDisplay>
+  <Breadcrumb>
+    <BreadcrumbList>
+      <BreadcrumbItem>
+        <BreadcrumbLink href="">Home</BreadcrumbLink>
+      </BreadcrumbItem>
+      <BreadcrumbSeparator />
+      <BreadcrumbItem>
+        <BreadcrumbLink href="">Components</BreadcrumbLink>
+      </BreadcrumbItem>
+      <BreadcrumbSeparator />
+      <BreadcrumbItem>
+        <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+      </BreadcrumbItem>
+    </BreadcrumbList>
+  </Breadcrumb>
+</ComponentDisplay>
+
+#### Pagination
+
+Page numbers with Previous/Next buttons at the bottom of a list.
+
+**When to use it:** When your content spans multiple pages (e.g., search results, product listings).
+
+<ComponentDisplay>
+  <Pagination>
+    <PaginationContent>
+      <PaginationItem>
+        <PaginationPrevious href="" />
+      </PaginationItem>
+      <PaginationItem>
+        <PaginationLink href="" isActive>1</PaginationLink>
+      </PaginationItem>
+      <PaginationItem>
+        <PaginationLink href="">2</PaginationLink>
+      </PaginationItem>
+      <PaginationItem>
+        <PaginationLink href="">3</PaginationLink>
+      </PaginationItem>
+      <PaginationItem>
+        <PaginationEllipsis />
+      </PaginationItem>
+      <PaginationItem>
+        <PaginationNext href="" />
+      </PaginationItem>
+    </PaginationContent>
+  </Pagination>
+</ComponentDisplay>
+
+#### Menubar
+
+A horizontal bar with dropdown menus (like File, Edit, View in desktop apps).
+
+**When to use it:** For app-like interfaces that need many organised actions.
+
+<ComponentDisplay>
+  <Menubar>
+    <MenubarMenu>
+      <MenubarTrigger>File</MenubarTrigger>
+      <MenubarContent>
+        <MenubarItem>New Tab <MenubarShortcut>⌘T</MenubarShortcut></MenubarItem>
+        <MenubarItem>New Window <MenubarShortcut>⌘N</MenubarShortcut></MenubarItem>
+        <MenubarSeparator />
+        <MenubarItem>Print <MenubarShortcut>⌘P</MenubarShortcut></MenubarItem>
+      </MenubarContent>
+    </MenubarMenu>
+    <MenubarMenu>
+      <MenubarTrigger>Edit</MenubarTrigger>
+      <MenubarContent>
+        <MenubarItem>Undo <MenubarShortcut>⌘Z</MenubarShortcut></MenubarItem>
+        <MenubarItem>Redo <MenubarShortcut>⇧⌘Z</MenubarShortcut></MenubarItem>
+      </MenubarContent>
+    </MenubarMenu>
+  </Menubar>
+</ComponentDisplay>
+
+#### Command
+
+A search-style popup (often opened with Ctrl+K or Cmd+K) that lets users type to find actions or pages quickly.
+
+**When to use it:** For power-user features: quick search, keyboard-driven navigation.
+
+<ComponentDisplay>
+  <Command className="rounded-lg border shadow-md max-w-sm">
+    <CommandInput placeholder="Type a command or search…" />
+    <CommandList>
+      <CommandEmpty>No results found.</CommandEmpty>
+      <CommandGroup heading="Suggestions">
+        <CommandItem>Calendar</CommandItem>
+        <CommandItem>Search</CommandItem>
+        <CommandItem>Settings</CommandItem>
+      </CommandGroup>
+    </CommandList>
+  </Command>
+</ComponentDisplay>
+
+#### Context Menu
+
+A menu that appears when the user right-clicks on something.
+
+**When to use it:** For additional actions on specific items (e.g., right-click a file to rename, delete, or move it).
+
+<ComponentDisplay>
+  <ContextMenu>
+    <ContextMenuTrigger className="flex h-[120px] w-[250px] items-center justify-center rounded-md border border-dashed text-sm">
+      Right-click here
+    </ContextMenuTrigger>
+    <ContextMenuContent>
+      <ContextMenuItem>Profile</ContextMenuItem>
+      <ContextMenuItem>Settings</ContextMenuItem>
+      <ContextMenuSeparator />
+      <ContextMenuItem>Logout</ContextMenuItem>
+    </ContextMenuContent>
+  </ContextMenu>
+</ComponentDisplay>
+
+### Overlays and popups
+
+These components appear on top of the main content.
+
+#### Dialog
+
+A centred pop-up window that dims the background. Has a title, content, and action buttons. Also called **Modal**.
+
+**When to use it:** For forms, confirmations, or detailed views that need focus without leaving the page.
+
+<ComponentDisplay>
+  <Dialog>
+    <DialogTrigger asChild>
+      <DefaultButton variant="outline">Open Dialog</DefaultButton>
+    </DialogTrigger>
+    <DialogContent>
+      <DialogHeader>
+        <DialogTitle>This is a test Dialog</DialogTitle>
+        <DialogDescription>It can contain other elements</DialogDescription>
+      </DialogHeader>
+      <div className="py-4">
+        <Input placeholder="Add text here" />
+      </div>
+      <DialogFooter>
+        <DefaultButton>Button</DefaultButton>
+      </DialogFooter>
+    </DialogContent>
+  </Dialog>
+</ComponentDisplay>
+
+#### Drawer
+
+A panel that slides in from the bottom (mobile) or side (desktop). Also called **Sheet** in shadcn.
+
+**When to use it:** For mobile-friendly forms, filters, or detail views.
+
+<ComponentDisplay>
+  <Drawer>
+    <DrawerTrigger asChild>
+      <DefaultButton variant="outline">Open Drawer</DefaultButton>
+    </DrawerTrigger>
+    <DrawerContent>
+      <DrawerHeader>
+        <DrawerTitle>Move Goal</DrawerTitle>
+        <DrawerDescription>Set your daily activity goal.</DrawerDescription>
+      </DrawerHeader>
+      <div className="p-4">
+        <Slider defaultValue={[350]} max={500} step={10} />
+      </div>
+      <DrawerFooter>
+        <DefaultButton>Submit</DefaultButton>
+        <DrawerClose asChild>
+          <DefaultButton variant="outline">Cancel</DefaultButton>
+        </DrawerClose>
+      </DrawerFooter>
+    </DrawerContent>
+  </Drawer>
+</ComponentDisplay>
+
+#### Popover
+
+A small floating box that appears when the user clicks a trigger element.
+
+**When to use it:** For extra options, colour pickers, or small forms that don't need a full dialog.
+
+<ComponentDisplay>
+  <Popover>
+    <PopoverTrigger asChild>
+      <DefaultButton variant="outline">Open Popover</DefaultButton>
+    </PopoverTrigger>
+    <PopoverContent className="w-80">
+      <div className="space-y-2">
+        <h4 className="font-medium leading-none">Dimensions</h4>
+        <p className="text-sm text-muted-foreground">Set the dimensions for the layer.</p>
+      </div>
+    </PopoverContent>
+  </Popover>
+</ComponentDisplay>
+
+#### Tooltip
+
+A tiny text label that appears when the user hovers over (or focuses on) an element.
+
+**When to use it:** To explain what an icon or button does without cluttering the interface.
+
+<ComponentDisplay>
+  <TooltipProvider>
+    <Tooltip>
+      <TooltipTrigger asChild>
+        <DefaultButton variant="outline">Hover me</DefaultButton>
+      </TooltipTrigger>
+      <TooltipContent>
+        <p>This is a tooltip</p>
+      </TooltipContent>
+    </Tooltip>
+  </TooltipProvider>
+</ComponentDisplay>
+
+#### Hover Card
+
+Like a tooltip, but richer: can contain images, links, and formatted text. Appears on hover.
+
+**When to use it:** For previewing content behind a link (e.g., hovering over a username to see their profile).
+
+<ComponentDisplay>
+  <HoverCard>
+    <HoverCardTrigger asChild>
+      <DefaultButton variant="link">@littleparrot</DefaultButton>
+    </HoverCardTrigger>
+    <HoverCardContent className="w-80">
+      <p className="text-sm">Little Parrot – courses that teach non-technical women to build digital products using AI-powered development tools.</p>
+    </HoverCardContent>
+  </HoverCard>
+</ComponentDisplay>
+
+### Layout and structure
+
+These components organise the overall structure of your pages.
+
+#### Collapsible
+
+A section that can be expanded or collapsed with a click. Unlike Accordion, each Collapsible works independently.
+
+**When to use it:** For optional details the user can show or hide (e.g., "Advanced settings").
+
+<ComponentDisplay>
+  <Collapsible className="w-[300px] space-y-2">
+    <CollapsibleTrigger asChild>
+      <DefaultButton variant="outline" size="sm" className="w-full justify-between">
+        Toggle content
+      </DefaultButton>
+    </CollapsibleTrigger>
+    <CollapsibleContent className="space-y-2">
+      <div className="rounded-md border px-4 py-3 text-sm">Item 1</div>
+      <div className="rounded-md border px-4 py-3 text-sm">Item 2</div>
+    </CollapsibleContent>
+  </Collapsible>
+</ComponentDisplay>
+
+#### Resizable
+
+Panels that the user can drag to resize, splitting the screen into adjustable sections.
+
+**When to use it:** For side-by-side layouts where users control how much space each section gets.
+
+<ComponentDisplay>
+  <ResizablePanelGroup direction="horizontal" className="max-w-md rounded-lg border">
+    <ResizablePanel defaultSize={50}>
+      <div className="flex h-[120px] items-center justify-center p-6">
+        <span className="font-semibold">Panel A</span>
+      </div>
+    </ResizablePanel>
+    <ResizableHandle />
+    <ResizablePanel defaultSize={50}>
+      <div className="flex h-[120px] items-center justify-center p-6">
+        <span className="font-semibold">Panel B</span>
+      </div>
+    </ResizablePanel>
+  </ResizablePanelGroup>
+</ComponentDisplay>
+
+#### Scroll Area
+
+A scrollable container with custom-styled scrollbars.
+
+**When to use it:** For content that overflows its container (e.g., a long list in a sidebar or a chat window).
+
+<ComponentDisplay>
+  <ScrollArea className="rounded-md border p-4" style={{ height: '120px' }}>
+    <div className="space-y-4">
+      {["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"].map((m) => (
+        <div key={m} className="text-sm">{m}</div>
+      ))}
+    </div>
+  </ScrollArea>
+</ComponentDisplay>
+
+#### Aspect Ratio
+
+An invisible wrapper that keeps content at a specific width-to-height ratio (e.g., 16:9).
+
+**When to use it:** For images and videos that need to maintain their proportions.
+
+<ComponentDisplay>
+  <div style={{width: '300px', maxWidth: '300px'}}>
+    <AspectRatio ratio={16 / 9} className="w-full max-w-sm rounded-lg bg-muted flex" style={{placeItems: 'center'}}>
+      <div style={{ textAlign: 'center', width: '100%' }}>16 / 9</div>
+    </AspectRatio>
+  </div>
+</ComponentDisplay>
