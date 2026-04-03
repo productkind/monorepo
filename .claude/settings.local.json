@@ -51,7 +51,12 @@
       "Bash(convert --version)",
       "Bash(convert -background none -density 384 /tmp/icon-linkedin.svg -resize 48x48 /Users/kingamagyar/Documents/productkind/little-parrot-awakens/public/icon-linkedin.png)",
       "Bash(convert -background none -density 384 /tmp/icon-instagram.svg -resize 48x48 /Users/kingamagyar/Documents/productkind/little-parrot-awakens/public/icon-instagram.png)",
-      "Bash(cd:*)"
+      "Bash(cd:*)",
+      "Bash(mv software-vocabulary-cheat-sheet.md toolkit-software-vocabulary-cheat-sheet.md)",
+      "Bash(mv visual-component-guide.md toolkit-visual-component-guide.md)",
+      "Bash(mv component-prompt-library.md toolkit-component-prompt-library.md)",
+      "Bash(mv where-is-the-problem-troubleshooting-guide.md toolkit-where-is-the-problem-troubleshooting-guide.md)",
+      "Bash(mv third-party-services-quick-reference.md toolkit-third-party-services-quick-reference.md)"
     ],
     "deny": [],
     "ask": []
