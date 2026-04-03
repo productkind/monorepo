@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Welcome to Little Parrot</title>
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <![endif]-->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+    * { margin: 0; padding: 0; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #08080a;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    .email-wrapper {
+      width: 100%;
+      background-color: #f5f5f5;
+      padding: 32px 16px;
+    }
+
+    .email-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border: 2px solid #08080a;
+      box-shadow: 4px 4px 2px rgba(8, 8, 9, 0.25);
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(90deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020);
+      padding: 32px 40px;
+      text-align: center;
+      border-bottom: 2px solid #08080a;
+    }
+
+    .header img {
+      max-width: 220px;
+      height: auto;
+    }
+
+    .header-subtitle {
+      font-family: 'Space Mono', monospace;
+      font-size: 13px;
+      color: hsl(245, 3%, 48%);
+      margin-top: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    /* Content */
+    .content {
+      padding: 40px;
+    }
+
+    .greeting {
+      font-size: 17px;
+      margin-bottom: 16px;
+    }
+
+    .body-text {
+      font-size: 15px;
+      color: hsl(245, 3%, 28%);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    /* Section headers */
+    h2 {
+      font-family: 'Space Mono', monospace;
+      font-size: 16px;
+      font-weight: 700;
+      color: #08080a;
+      margin: 0 0 12px;
+    }
+
+    /* Highlight box */
+    .highlight-box {
+      background: linear-gradient(90deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020);
+      border: 2px solid #08080a;
+      box-shadow: 4px 4px 2px rgba(8, 8, 9, 0.25);
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    .highlight-box p {
+      font-size: 15px;
+      color: hsl(245, 3%, 28%);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .highlight-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* CTA button */
+    .cta-button {
+      display: inline-block;
+      background: linear-gradient(90deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70);
+      color: #08080a;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 14px 32px;
+      border: 2px solid #08080a;
+      box-shadow: 4px 4px 2px rgba(8, 8, 9, 0.25);
+    }
+
+    .cta-wrapper {
+      text-align: center;
+      margin: 28px 0 8px;
+    }
+
+    /* Sign-off */
+    .cta-section {
+      text-align: center;
+      padding: 32px 40px;
+      border-top: 2px solid #08080a;
+      background: linear-gradient(90deg, #ffb65b10, #fdd82510, #fbfb0010, #8efd2310, #00ed7010);
+    }
+
+    .cta-section p {
+      font-size: 15px;
+      color: hsl(245, 3%, 38%);
+      margin-bottom: 16px;
+    }
+
+    .cta-section .signoff {
+      font-family: 'Space Mono', monospace;
+      font-weight: 700;
+      font-size: 16px;
+      color: #08080a;
+      margin-top: 20px;
+    }
+
+    .cta-section .brand {
+      font-size: 13px;
+      color: hsl(245, 3%, 48%);
+      margin-top: 4px;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 24px 40px;
+      text-align: center;
+      font-size: 12px;
+      color: hsl(245, 3%, 58%);
+      line-height: 1.8;
+    }
+
+    .footer a {
+      color: hsl(245, 3%, 48%);
+      text-decoration: underline;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid hsl(245, 5%, 89%);
+      margin: 0;
+    }
+
+    /* Mobile */
+    @media only screen and (max-width: 620px) {
+      .content { padding: 24px 20px; }
+      .header { padding: 24px 20px; }
+      .cta-section { padding: 24px 20px; }
+      .footer { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="email-wrapper">
+    <div class="email-container">
+
+      <!-- Header -->
+      <div class="header">
+        <a href="https://littleparrot.app/?ref=sub-welcome-email" style="text-decoration: none;"><img src="https://littleparrot.app/logo-little-parrot.svg" alt="Little Parrot" /></a>
+        <div class="header-subtitle">WELCOME TO LITTLE PARROT 🎉</div>
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+
+        <p class="greeting">Hi {{first_name}},</p>
+
+        <p class="body-text">Thank you for subscribing. We're so glad you're here.</p>
+
+        <p class="body-text">We're Kinga and Tamas, a two-person team with over a decade of product development experience. We've poured all of that into building these courses, and you now have access to everything.</p>
+
+        <!-- What you get -->
+        <p class="body-text" style="margin-top: 24px; margin-bottom: 8px;"><strong style="color: #08080a;">Here's what's included:</strong></p>
+        <p class="body-text" style="margin-bottom: 6px; padding-left: 8px;">✅ <strong style="color: #08080a;">All courses</strong> – learn at your own pace, from building your first app to debugging, working with AI, and thinking like a product builder</p>
+        <p class="body-text" style="margin-bottom: 6px; padding-left: 8px;">✅ <strong style="color: #08080a;">Toolkits</strong> – prompt templates, cheat sheets, and checklists to help you put everything you learn into practice</p>
+        <p class="body-text" style="margin-bottom: 6px; padding-left: 8px;">✅ <strong style="color: #08080a;">The Little Parrot community</strong> – a space to ask questions, share what you're building, and connect with other women who are learning alongside you</p>
+        <p class="body-text" style="margin-bottom: 6px; padding-left: 8px;">✅ <strong style="color: #08080a;">Direct access to us</strong> – as a paid subscriber, you can use the 《🙋🏽‍♀️》pro-questions channel to ask questions directly to Kinga (Lead Product Manager) and Tamas (Principal Software Engineer)</p>
+
+        <!-- Discord -->
+        <div class="highlight-box" style="margin-top: 24px;">
+          <h2>Join the community</h2>
+          <p>If you haven't joined our Little Parrot community on Discord yet, here's your invite link:</p>
+          <p style="text-align: center; margin-top: 4px;">
+            <a href="https://discord.gg/mUWkgHnwmX" class="cta-button" style="color: #08080a">Join Discord</a>
+          </p>
+        </div>
+
+        <!-- Course request -->
+        <p class="body-text">One more thing. We're building new courses all the time, and we'd love your input. Is there a topic or challenge you'd like us to cover? You can <a href="https://forms.gle/SeUmFm3RMKyXsW7x8" style="color: #08080a; font-weight: 700; text-decoration: underline;">fill in this short form</a> or reply directly to this email. Knowing what's most useful to you helps us decide what to build next.</p>
+
+        <div class="cta-wrapper">
+          <a href="https://littleparrot.app/nest/my-learning/?ref=sub-welcome-email&auth=login" class="cta-button" style="color: #08080a">Start learning</a>
+        </div>
+
+      </div>
+
+      <!-- Sign-off -->
+      <div class="cta-section">
+        <p>Thank you for joining us at the start. Your support means everything to our small team. 💛</p>
+        <div class="signoff">Kinga, Tamas &amp; Little Parrot</div>
+        <div class="brand">Little Parrot by productkind</div>
+      </div>
+
+      <!-- Footer -->
+      <hr class="divider">
+      <div class="footer">
+        <p style="margin-bottom: 12px;">
+          <a href="https://www.linkedin.com/company/productkind/" style="text-decoration: none; margin: 0 8px;">
+            <img src="https://littleparrot.app/icon-linkedin.png" width="24" height="24" alt="LinkedIn" style="vertical-align: middle; border: 0;" />
+          </a>
+          <a href="https://www.instagram.com/by_productkind/" style="text-decoration: none; margin: 0 8px;">
+            <img src="https://littleparrot.app/icon-instagram.png" width="24" height="24" alt="Instagram" style="vertical-align: middle; border: 0;" />
+          </a>
+        </p>
+        <p>You're receiving this because you have an active Little Parrot subscription.<br>
+        <a href="https://littleparrot.app/?ref=sub-welcome-email">littleparrot.app</a><br><br>
+        <a href="__unsubscribe_url__">unsubscribe</a></p>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
