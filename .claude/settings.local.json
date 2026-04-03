@@ -50,7 +50,8 @@
       "WebFetch(domain:ui.shadcn.com)",
       "Bash(convert --version)",
       "Bash(convert -background none -density 384 /tmp/icon-linkedin.svg -resize 48x48 /Users/kingamagyar/Documents/productkind/little-parrot-awakens/public/icon-linkedin.png)",
-      "Bash(convert -background none -density 384 /tmp/icon-instagram.svg -resize 48x48 /Users/kingamagyar/Documents/productkind/little-parrot-awakens/public/icon-instagram.png)"
+      "Bash(convert -background none -density 384 /tmp/icon-instagram.svg -resize 48x48 /Users/kingamagyar/Documents/productkind/little-parrot-awakens/public/icon-instagram.png)",
+      "Bash(cd:*)"
     ],
     "deny": [],
     "ask": []
