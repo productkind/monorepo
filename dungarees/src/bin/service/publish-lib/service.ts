@@ -1,14 +1,18 @@
-import { copyFiles, createOutDir, publishLib, transformPackageJson } from './operations.ts'
+import {
+  createOutDir,
+  getBuildStartMessage,
+  publishLib,
+  transformPackageJson,
+} from './operations.ts'
 
 import type { StdioMessageFeatureOutput } from '@dungarees/cli/type.ts'
-import { stderr, stdout } from '@dungarees/cli/utils.ts'
+import { stdout } from '@dungarees/cli/utils.ts'
 import { createFileOperations } from '@dungarees/fs/file-operations.ts'
 import type { FileSystem } from '@dungarees/fs/service.ts'
 import type { SubProcessService } from '@dungarees/sub-process/type.ts'
 import { createTranspilerService } from '@dungarees/transpile/service.ts'
 
 import { concat, defer, forkJoin, map, mergeMap } from 'rxjs'
-import { of } from 'rxjs'
 
 export type PublishLib = {
   build: (args: {
@@ -39,7 +43,7 @@ export const createPublishLibService = ({ fileSystem, subProcess }: PublishLibAr
 
   const build: PublishLib['build'] = ({ srcDir, outDir, version }) => {
     const originalPackageJsonPath = `${srcDir}/package.json`
-    const startMessage = `Building package from ${srcDir} to ${outDir} with version: ${version ?? 'original version'}`
+    const startMessage$ = getBuildStartMessage({ srcDir, outDir, version })
     const transformer = fileOperations.transformFileContext<string>({
       input: originalPackageJsonPath,
       output: `${outDir}/package.json`,
@@ -56,7 +60,7 @@ export const createPublishLibService = ({ fileSystem, subProcess }: PublishLibAr
         ),
       )
     return {
-      stdio$: concat(of(stdout(startMessage)), createOutDir$, transpile$),
+      stdio$: concat(startMessage$, createOutDir$, transpile$),
     }
   }
 
