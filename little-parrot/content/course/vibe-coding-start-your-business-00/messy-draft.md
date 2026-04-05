@@ -31,3 +31,8 @@ business.
 - Tell what your product does to people 1on1 to learn what message works
 - Consider pivoting on no traction
 - Consistent but small amount of work week by week can get you far 
+- Register on https://business.google.com/en-all/business-profile/
+- when to invest in your business or quit your job
+- Simple pricing strategies — how to decide what to charge, free vs freemium vs paid, pricing psychology basics for a first product
+- Simple free banking solutions: Wise, Revolut
+- Talk to an accountant about your tax situatuion in your location
