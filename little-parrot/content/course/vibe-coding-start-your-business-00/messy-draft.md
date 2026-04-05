@@ -9,17 +9,18 @@ business.
 
 ## Content
 
-- GA
-- Posthog
-- Domain
+- How to connect GA and Posthog, explain basic ideas like session, pageview, custom events, and
+  visitor info
+- How to purchase a Domain, considerations when buying it
 - Google workspace
 - Don't spend more money than 10-20 dollars
-- Report a bug / feedback
+- Report a bug / feedback feature
 - Where to add your link (product hunt, betalist, https://boukar.notion.site/Ultimate-Startup-Directory-Launch-List-86-2f0af2714ad280618f46ef08b95b39a8)
-- Stripe
+- Explain what is Stripe and what is required for it. We will have a course about stripe and other
+  3rd party integrations
 - Check out the "Launch and Grow Your Lovable App" course
-- waiting lists
-- lead magnets
+- Use waiting lists to test early and talk to your customers
+- What are lead magnets and how to use them
 - find the easiest/cheapest legal framework to operate, only start a company if you have solid
   revenue or a deal requires it
 - Validate before “officially launching”
