@@ -1,5 +1,7 @@
-# Component Prompt Library
-**Challenge 2: Design Elements for Vibe Coders**
+---
+challenge: "2 - Design Elements for Vibe Coders"
+---
+## Component Prompt Library
 
 Ready-to-use prompts that use the correct component names. Copy, adjust the details in brackets, and paste into Lovable.
 

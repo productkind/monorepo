@@ -184,7 +184,10 @@ course:
           content:
             nextModule: '**Next challenge:** Now that you know the parts of an app, let''s learn the **design vocabulary** that helps you describe exactly how you want things to look and feel. No more "make it nicer," you''ll have the words to say exactly what you mean!'
             description: You now have a mental map of how apps are built.
-            subDescription: It's powerful to know the difference between frontend and backend. It means you can point the AI app builder to exactly the right place. Try noticing which part you're talking about in your next prompt, it makes a real difference!
+            subDescription: |-
+              It's powerful to know the difference between frontend and backend. It means you can point the AI app builder to exactly the right place. Try noticing which part you're talking about in your next prompt, it makes a real difference!
+
+              **Toolkit:** When something goes wrong with your app, the ["Where Is the Problem?" Troubleshooting Guide](https://littleparrot.app/nest/toolkit/10bfa9f3-7e39-4b67-aa66-8f9c95716a4f) helps you figure out which part is causing it and what to say to your AI app builder.
       title: Building Blocks of an Application
       isFree: true
       skills:
@@ -445,7 +448,10 @@ course:
             cta: Next
             nextModule: '**Next challenge:** Let''s peek under the hood at the **frontend**, how HTML, CSS, and components actually work together. Don''t worry, you won''t need to write code! But understanding the basics helps you troubleshoot when things look off and guide the AI app builder more efficiently.'
             description: You've got the vocabulary to describe exactly what you're picturing!
-            subDescription: This is huge. Instead of "make it look nicer," you can now say "use a card with rounded corners" or "add a modal for the confirmation." Open an AI app builder and try describing one screen using at least three component names, notice how much more accurate the result is!
+            subDescription: |-
+              This is huge. Instead of "make it look nicer," you can now say "use a card with rounded corners" or "add a modal for the confirmation." Open an AI app builder and try describing one screen using at least three component names, notice how much more accurate the result is!
+
+              **Toolkit:** Browse the [Visual Component Guide](https://littleparrot.app/nest/toolkit/bcc544b5-26aa-498a-bc46-ff75f76e3a19) to see what every component looks like, and grab ready-to-use prompts from the [Component Prompt Library](https://littleparrot.app/nest/toolkit/954f1c91-6a56-4c4c-8c16-489f45915fb8).
       title: Design Elements for Vibe Coders
       isFree: false
       skills:
@@ -967,7 +973,7 @@ course:
           content:
             nextModule: '**Your next step:** Take one of your ideas and start building it in Lovable. Keep the scope tiny—one screen, one feature. Ship it, share it with someone real, and learn from their feedback. That''s how real products are born. You''ve got this!'
             description: Look at everything you've learned!
-            subDescription: "✓ **You understand the architecture:** Frontend (what users see), backend (the brain), database (the memory), infrastructure (the backbone). You can point your AI app builder to exactly the right place.\n\n✓ **You speak design language:** Wireframes, components, colours, fonts. You can describe exactly what you're picturing, no more \"make it nicer.\"\n\n✓ **You know what's under the hood:** HTML, CSS, JavaScript. You can give meaningful feedback to your AI app builder and ask better questions.\n\n✓ **You can prompt for backend features:** APIs, authentication, backend functions. You've graduated from pretty interfaces to powerful, functional products.\n\n✓ **You understand data:** Tables, relationships, SQL. You can think about how your app remembers things and ask the right questions.\n\n✓ **You know the danger zones:** Irreversible database changes, exposed API keys. You can protect yourself from common mistakes that trip up beginners.\n\n✓ **You share a vocabulary with developers:** Collaboration just got so much easier. You're no longer on the outside looking in.\n\nTools will change, but these foundations won't. The more you practise describing what you want in this language, the more powerful your vibe coding becomes.\n\n**Remember:** Start small, describe clearly, ship often, and learn from real users. You've built a superpower. Now go use it! \U0001F4AA"
+            subDescription: "✓ **You understand the architecture:** Frontend (what users see), backend (the brain), database (the memory), infrastructure (the backbone). You can point your AI app builder to exactly the right place.\n\n✓ **You speak design language:** Wireframes, components, colours, fonts. You can describe exactly what you're picturing, no more \"make it nicer.\"\n\n✓ **You know what's under the hood:** HTML, CSS, JavaScript. You can give meaningful feedback to your AI app builder and ask better questions.\n\n✓ **You can prompt for backend features:** APIs, authentication, backend functions. You've graduated from pretty interfaces to powerful, functional products.\n\n✓ **You understand data:** Tables, relationships, SQL. You can think about how your app remembers things and ask the right questions.\n\n✓ **You know the danger zones:** Irreversible database changes, exposed API keys. You can protect yourself from common mistakes that trip up beginners.\n\n✓ **You share a vocabulary with developers:** Collaboration just got so much easier. You're no longer on the outside looking in.\n\nTools will change, but these foundations won't. The more you practise describing what you want in this language, the more powerful your vibe coding becomes.\n\n**Remember:** Start small, describe clearly, ship often, and learn from real users. You've built a superpower. Now go use it! \U0001F4AA\n\n**Toolkit:** Keep the [Software Vocabulary Cheat Sheet](https://littleparrot.app/nest/toolkit/ac7e9348-f7e1-459e-b46c-9078e909d282) open while you build. It has every term from this course in one quick-reference guide."
       title: Databases for Vibe Coders
       isFree: false
       skills:

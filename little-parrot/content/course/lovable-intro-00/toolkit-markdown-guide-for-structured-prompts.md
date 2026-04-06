@@ -1,5 +1,7 @@
-# Markdown Guide for Structured Prompts
-**Challenge 1: Your First Prompt**
+---
+challenge: "1 - Your First Prompt"
+---
+## Markdown Guide for Structured Prompts
 
 Lovable understands markdown, a simple way to format text that helps it read the structure of your request. You don't need to memorise any of this. Keep this guide open while you write your prompts, and copy the formatting you need.
 

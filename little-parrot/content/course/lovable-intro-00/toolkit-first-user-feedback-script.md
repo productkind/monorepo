@@ -1,5 +1,7 @@
-# First User Feedback Script
-**Challenge 7: Publish and Share Your App**
+---
+challenge: "7 - Publish and Share Your App"
+---
+## First User Feedback Script
 
 You've published your app. Now share it with one person and learn from how they use it. This script gives you a simple structure for gathering feedback that you can turn into your next prompt.
 

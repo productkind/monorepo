@@ -1,5 +1,7 @@
-# Prompt Library: Common Features
-**Challenges 2–3: Iterate and Improve & Save Data with Lovable Cloud**
+---
+challenge: "3 - Save Data with Lovable Cloud"
+---
+## Prompts for Common Features
 
 These prompts follow the pattern taught in the course: specific, focused, one feature at a time. Copy the one you need, adjust the details in brackets, and paste it into Lovable as a follow-up prompt.
 

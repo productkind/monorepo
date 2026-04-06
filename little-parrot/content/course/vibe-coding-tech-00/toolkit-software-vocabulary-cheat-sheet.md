@@ -1,5 +1,7 @@
-# Software Vocabulary Cheat Sheet
-**Challenge 5: Databases for Vibe Coders**
+---
+challenge: "5 - Databases for Vibe Coders"
+---
+## Software Vocabulary Cheat Sheet
 
 A quick-reference guide to every term covered in the Basics of Software for Vibe Coding course. Bookmark it and come back whenever you need the right word for your prompt.
 

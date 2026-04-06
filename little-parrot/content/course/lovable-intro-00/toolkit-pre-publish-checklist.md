@@ -1,5 +1,7 @@
-# Pre-Publish Checklist
-**Challenge 7: Publish and Share Your App**
+---
+challenge: "7 - Publish and Share Your App"
+---
+## Pre-Publish Checklist
 
 Go through this list before you publish your app for the first time. It takes five minutes and makes your app feel noticeably more professional.
 

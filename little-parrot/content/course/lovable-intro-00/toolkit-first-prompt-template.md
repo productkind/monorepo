@@ -1,5 +1,7 @@
-# First Prompt Template
-**Challenge 1: Your First Prompt**
+---
+challenge: "1 - Your First Prompt"
+---
+## First Prompt Template
 
 Copy this template, replace the text in brackets with your own idea, and paste it into Lovable. You don't need to fill in every section perfectly. Start with what you know, and refine it later.
 

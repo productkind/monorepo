@@ -1,5 +1,7 @@
-# Project Knowledge Starter Template
-**Challenge 6: Plan, Test, and Connect Services**
+---
+challenge: "6 - Plan, Test, and Connect Services"
+---
+## Project Knowledge Starter Template
 
 Paste this template into Lovable's Knowledge panel (in your project, click `+` in the chat input, and select `Knowledge`). Fill in the sections that apply to your project. You don't need to complete everything at once. Start with the target user and design system, then add more as your project grows.
 

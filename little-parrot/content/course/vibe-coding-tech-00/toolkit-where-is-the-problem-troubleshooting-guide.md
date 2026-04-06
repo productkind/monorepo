@@ -1,5 +1,7 @@
-# "Where Is the Problem?" Troubleshooting Guide
-**Challenge 1: Building Blocks of an Application**
+---
+challenge: "1 - Building Blocks of an Application"
+---
+## "Where Is the Problem?" Troubleshooting Guide
 
 When something goes wrong with your app, this guide helps you point your AI app builder in the right direction. Knowing which part of the app is affected makes your bug report clearer and the fix faster.
 

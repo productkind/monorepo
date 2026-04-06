@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Your subscription has been cancelled</title>
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <![endif]-->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+    * { margin: 0; padding: 0; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #08080a;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    .email-wrapper {
+      width: 100%;
+      background-color: #f5f5f5;
+      padding: 32px 16px;
+    }
+
+    .email-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border: 2px solid #08080a;
+      box-shadow: 4px 4px 2px rgba(8, 8, 9, 0.25);
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(90deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020);
+      padding: 32px 40px;
+      text-align: center;
+      border-bottom: 2px solid #08080a;
+    }
+
+    .header img {
+      max-width: 220px;
+      height: auto;
+    }
+
+    /* Content */
+    .content {
+      padding: 40px;
+    }
+
+    .greeting {
+      font-size: 17px;
+      margin-bottom: 16px;
+    }
+
+    .body-text {
+      font-size: 15px;
+      color: hsl(245, 3%, 28%);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    /* Highlight box */
+    .highlight-box {
+      background: linear-gradient(90deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020);
+      border: 2px solid #08080a;
+      box-shadow: 4px 4px 2px rgba(8, 8, 9, 0.25);
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    .highlight-box h2 {
+      font-family: 'Space Mono', monospace;
+      font-size: 16px;
+      font-weight: 700;
+      color: #08080a;
+      margin: 0 0 12px;
+    }
+
+    .highlight-box p {
+      font-size: 15px;
+      color: hsl(245, 3%, 28%);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .highlight-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Sign-off */
+    .cta-section {
+      text-align: center;
+      padding: 32px 40px;
+      border-top: 2px solid #08080a;
+      background: linear-gradient(90deg, #ffb65b10, #fdd82510, #fbfb0010, #8efd2310, #00ed7010);
+    }
+
+    .cta-section p {
+      font-size: 15px;
+      color: hsl(245, 3%, 38%);
+      margin-bottom: 16px;
+    }
+
+    .cta-section .signoff {
+      font-family: 'Space Mono', monospace;
+      font-weight: 700;
+      font-size: 16px;
+      color: #08080a;
+      margin-top: 20px;
+    }
+
+    .cta-section .brand {
+      font-size: 13px;
+      color: hsl(245, 3%, 48%);
+      margin-top: 4px;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 24px 40px;
+      text-align: center;
+      font-size: 12px;
+      color: hsl(245, 3%, 58%);
+      line-height: 1.8;
+    }
+
+    .footer a {
+      color: hsl(245, 3%, 48%);
+      text-decoration: underline;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid hsl(245, 5%, 89%);
+      margin: 0;
+    }
+
+    /* Mobile */
+    @media only screen and (max-width: 620px) {
+      .content { padding: 24px 20px; }
+      .header { padding: 24px 20px; }
+      .cta-section { padding: 24px 20px; }
+      .footer { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="email-wrapper">
+    <div class="email-container">
+
+      <!-- Header -->
+      <div class="header">
+        <a href="https://littleparrot.app/?ref=sub-cancelled-email" style="text-decoration: none;"><img src="https://littleparrot.app/logo-little-parrot.svg" alt="Little Parrot" /></a>
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+
+        <p class="greeting">Hi {{first_name}},</p>
+
+        <p class="body-text">We've received your cancellation request. Your subscription will not renew.</p>
+
+        <div class="highlight-box">
+          <h2>You still have full access until {{subscription_end_date}}</h2>
+          <p>Until then, everything stays the same. You have access to:</p>
+          <p style="margin-bottom: 6px; padding-left: 8px;">✅ All <a href="https://littleparrot.app/courses/?ref=sub-cancelled-email&auth=login" style="color: #08080a; font-weight: 700; text-decoration: underline;">courses</a></p>
+          <p style="margin-bottom: 6px; padding-left: 8px;">✅ All tools in the <a href="https://littleparrot.app/nest/toolkit/?ref=sub-cancelled-email&auth=login" style="color: #08080a; font-weight: 700; text-decoration: underline;">Toolkit</a></p>
+          <p style="margin-bottom: 6px; padding-left: 8px;">✅ The <a href="https://discord.com/channels/1475746744309518480/1478631753882013777" style="color: #08080a; font-weight: 700; text-decoration: underline;">🙋🏽‍♀️ pro-questions</a> channel in Discord</p>
+        </div>
+
+        <p class="body-text">If there's anything we could do to change your mind, or if something wasn't working for you, we'd love to hear about it. Reply to this email and let us know.</p>
+
+        <p class="body-text">We're a small team and your feedback helps us get better.</p>
+
+      </div>
+
+      <!-- Sign-off -->
+      <div class="cta-section">
+        <p>Thank you for being part of Little Parrot. We hope to see you again. 💛</p>
+        <div class="signoff">Kinga, Tamas &amp; Little Parrot</div>
+        <div class="brand">Little Parrot by productkind</div>
+      </div>
+
+      <!-- Footer -->
+      <hr class="divider">
+      <div class="footer">
+        <p style="margin-bottom: 12px;">
+          <a href="https://www.linkedin.com/company/productkind/" style="text-decoration: none; margin: 0 8px;">
+            <img src="https://littleparrot.app/icon-linkedin.png" width="24" height="24" alt="LinkedIn" style="vertical-align: middle; border: 0;" />
+          </a>
+          <a href="https://www.instagram.com/by_productkind/" style="text-decoration: none; margin: 0 8px;">
+            <img src="https://littleparrot.app/icon-instagram.png" width="24" height="24" alt="Instagram" style="vertical-align: middle; border: 0;" />
+          </a>
+        </p>
+        <p>You're receiving this because you had an active Little Parrot subscription.<br>
+        <a href="https://littleparrot.app/?ref=sub-cancelled-email">littleparrot.app</a><br><br>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

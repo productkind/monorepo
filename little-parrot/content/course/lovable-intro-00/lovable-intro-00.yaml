@@ -519,7 +519,10 @@ course:
           content:
             nextModule: "**Next:** Let's explore the tools Lovable provides so you can make changes more effectively. You'll learn how to preview your app on different devices, make targeted changes, and use design themes to refine the look and feel."
             description: You've connected your app to Lovable Cloud.
-            subDescription: Now your app can store data, run logic, and remember things even when users close the browser.
+            subDescription: |-
+              Now your app can store data, run logic, and remember things even when users close the browser.
+
+              **Toolkit:** The [Prompts for Common Features](https://littleparrot.app/nest/toolkit/43475578-0f46-41a8-8375-0c8a153a1882) has ready-to-use prompts for authentication, voting, search, delete, and more. Copy and paste them when you're adding features to your app.
     - title: Make Quick Changes with the Tools Lovable Provides
       isFree: false
       skills:
@@ -859,7 +862,10 @@ course:
           content:
             nextModule: "**Next challenge:** Time to share your creation with the world. Let's publish your app. You'll learn how to set your favicon, meta tags, and custom URL, then publish your app, and techniques to gather feedback."
             description: You know how to use plan mode, project knowledge, API keys, and handle security errors and warnings.
-            subDescription: You can now plan and build apps in Lovable confidently and safely by combining these core skills.
+            subDescription: |-
+              You can now plan and build apps in Lovable confidently and safely by combining these core skills.
+
+              **Toolkit:** Use the [Project Knowledge Starter Template](https://littleparrot.app/nest/toolkit/55ce36be-cab9-4e46-a154-65606bca12ee) to set up your project's Knowledge panel with a ready-made structure for your target user, design system, tone of voice, and technical decisions.
 
     - title: Publish and Share Your App
       isFree: false
@@ -924,6 +930,8 @@ course:
               This means you can **publish early and improve based on feedback** without worrying about it being "perfect."
 
               Digital products are never done. They evolve. The apps you use every day get updates constantly.
+
+              *Before you publish, run through the [Pre-Publish Checklist](https://littleparrot.app/nest/toolkit/321f3b1f-bc1b-412b-943a-e507a22bb46f) in your Toolkit to make sure you haven't missed anything.*
             imageUrl: /courses/lovable-intro-00/publish-your-app-menu-and-button.webp
           subtitle: Click and go live
         - type: text
@@ -948,6 +956,8 @@ course:
               - What one thing would you change to make it better?
 
               Their feedback is more valuable than any amount of solo polishing.
+
+              **Toolkit:** The [First User Feedback Script](https://littleparrot.app/nest/toolkit/74d1c10f-5eba-4cca-9779-a2cb8594e113) has a ready-to-send message, the three questions above with explanations of what each one reveals, and examples of how to turn feedback into your next Lovable prompt.
           subtitle: Get real feedback
         - type: quiz-question
           title: 'Quiz: Publishing'

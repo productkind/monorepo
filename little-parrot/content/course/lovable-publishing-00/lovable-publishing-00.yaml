@@ -245,7 +245,10 @@ course:
           content:
             nextModule: "**Next challenge:** Your app is live, but its address is still something like `bookclub.lovable.app`. What if it could be `bookcluborganiser.com`? In the next challenge, you'll claim a custom domain and give your product a professional home on the internet."
             description: You've published your first production-ready app.
-            subDescription: You've checked your API keys, customised your Lovable subdomain, added a favicon, set meta tags, tested on mobile and desktop, and published. Your app has its first real address on the internet, and someone out there can use something you built. That's worth celebrating.
+            subDescription: |-
+              You've checked your API keys, customised your Lovable subdomain, added a favicon, set meta tags, tested on mobile and desktop, and published. Your app has its first real address on the internet, and someone out there can use something you built. That's worth celebrating.
+
+              **Toolkit:** Need to revisit these steps later? Use the [Meta Tags and Favicon Setup Guide](https://littleparrot.app/nest/toolkit/0b1f2dca-14c3-4db6-a653-e139cf8222f4) for a quick reference.
 
     - title: "Connect a Custom Domain"
       isFree: false
@@ -497,6 +500,8 @@ course:
             subDescription: |-
               You've generated a privacy policy and terms of use, added footer links so visitors can find them, and learned when and how to set up a cookie banner. These foundations make the difference between a side project and a product people feel safe using.
 
+              **Toolkit:** The [Legal Pages Prompt Library](https://littleparrot.app/nest/toolkit/6f1be631-8fdd-4353-96a1-2d4cdefdad1a) has all the prompts from this challenge ready to copy and paste.
+
     - title: "Get Found: SEO and Discoverability"
       isFree: false
       skills:
@@ -694,6 +699,8 @@ course:
               
               These aren't one-time tasks, but you've started building the habits that will make your product more discoverable over time.
 
+              **Toolkit:** The [SEO and Discoverability Quick-Start Checklist](https://littleparrot.app/nest/toolkit/aceb0958-b112-4abc-8710-5d49e8b60c8b) has every step from this challenge as a tick-box list you can work through at your own pace.
+
     - title: "Know Your Users: Metrics, Feedback, and Distribution"
       isFree: false
       skills:
@@ -866,6 +873,8 @@ course:
 
               You're no longer building in the dark. From here, every decision you make can be backed by real data and real conversations.
 
+              **Toolkit:** The [User Feedback Question Bank](https://littleparrot.app/nest/toolkit/ab78ba0e-37bb-4c6c-b21b-a7466df4b19d) has a full collection of questions organised by what you want to learn, plus tips on spotting patterns across conversations.
+
     - title: "Launch Early, Grow Steadily"
       isFree: false
       skills:
@@ -970,7 +979,7 @@ course:
               - ☐ Plan your first feedback conversation
               - ☐ Choose one distribution channel to focus on
 
-              Save this checklist. Come back to it whenever you launch something new.
+              **Toolkit:** This checklist is also available as the [Production-Ready Launch Checklist](https://littleparrot.app/nest/toolkit/5066c12c-66ad-4844-a768-1bdae81c86ec) in your Toolkit, with detailed instructions for each step. Save it and come back to it whenever you launch something new.
           subtitle: Everything in one place
         - type: quiz-question
           title: "Quiz: Launching early"
