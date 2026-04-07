@@ -6,7 +6,7 @@
 
 This micro-course helps learners who have already built a digital product with an AI app builder take the next step: turning it into a real business. It walks through the full journey from testing your message, setting up your online presence, and preparing to capture visitors, to driving traffic, learning from real users, and setting up pricing and payments.
 
-The learner will go from "I built something cool" to "I have paying users and a plan to grow." By the end, the learner will have a tested pitch, an audience, a professional online presence, real traffic, user feedback and testimonials, analytics set up, a pricing model, and a clear path to accepting their first payment.
+The learner will go from "I built something cool" to "I have paying users and a plan to grow." By the end, the learner will have a tested pitch, a professional online presence, email capture in place, analytics showing how people use their product, real traffic, user feedback and testimonials, a pricing model, and a clear path to accepting their first payment.
 
 The narrative follows Dalmie, who built the Book Club Organiser app with Lovable as a hobby project for her friend's book club. It works well for them, and now she's wondering: could this become something bigger? This course follows her journey as she finds out whether anyone else would use it, and does the work to turn a hobby project into a product with paying users.
 
@@ -30,7 +30,7 @@ Pick the right name and set up a professional presence without overspending.
 
 - Why this comes first, before driving traffic: your domain is the address people will see in directories, community posts, and emails. Get it in place before you start sending people anywhere.
 - How to choose a domain name: keep it short, memorable, and easy to spell. Avoid hyphens and numbers.
-- Top-level domain trade-offs: .com is the most recognised but often taken or expensive. .co, .app, .io are alternatives at different price points. Compare what's available for your product name and what fits your budget.
+- Top-level domain trade-offs: .com is the most recognised but often taken or expensive. .co, .app, .io are alternatives at different price points. Compare on GoDaddy what's available for your product name and what fits your budget.
 - Why you need a professional email: sending from a gmail.com address undermines trust when you're emailing customers. Google Workspace lets you send from your own domain (e.g., hello@yourdomain.com).
 - Budget rule: domain + email shouldn't cost more than $20-30 at this stage
 - Register on Google Business Profile to improve your visibility in search
@@ -41,13 +41,13 @@ Pick the right name and set up a professional presence without overspending.
 ### 3. Build Your Audience Before You Launch
 Set up the net before you start fishing. Prepare to capture every visitor before you drive traffic.
 
-- Why this comes before getting traffic: every visitor who lands on your site without a way to stay in touch is a lost opportunity. Set up your wait list and lead magnet first, so that when traffic arrives in the next challenge, you're ready to capture it.
+- Why this comes before getting traffic: every visitor who lands on your site without a way to stay in touch is a lost opportunity. Set up email capture first, so that when traffic arrives, you're ready.
 - Don't wait with getting an email list until you launch your product
-- Wait lists: why they work and how to set one up (collect emails before your product is "ready"). You can embed a Google Form on your site, you don't need a backend at the beginning.
-- Lead magnets: what they are and how to use a simple one to attract sign-ups
+- Email capture first: add a wait list or sign-up form to your site. This is the foundation. You can embed a Google Form on your site, you don't need a backend at the beginning.
+- Then, add a lead magnet to give people a reason to sign up: a free PDF, a checklist, a template. The lead magnet makes your email capture more compelling, but it only works if the email capture is already in place. The visitor gets the lead magnet in exchange for their email address.
 - Small, consistent effort each week adds up
-- Example: Dalmie adds a wait list to the Book Club Organiser's landing page and offers a free "Book Club Starter Kit" PDF (discussion questions and a reading schedule template) to attract sign-ups. She's ready to capture visitors. Now she needs to send some.
-- Exercise: Choose one audience-building tactic (wait list or lead magnet) and add it to your product
+- Example: Dalmie adds a wait list form to the Book Club Organiser's landing page. Then she creates a free "Book Club Starter Kit" PDF (discussion questions and a reading schedule template) and offers it to anyone who signs up. She's ready to capture visitors. Now she needs to send some.
+- Exercise: Add an email capture form (wait list or sign-up) to your product's landing page. Then create a simple lead magnet that your target audience would find useful and offer it as a reason to sign up.
 
 ### 4. Set Up Analytics Before Your First Visitors Arrive
 Install Posthog so you can learn from every visitor from day one.
@@ -70,7 +70,7 @@ Everything is in place. Now drive real people to your product.
 - How to share your product in online communities without being spammy: lead with the problem you solve, not a link. Contribute to the community first. Share your product when it's relevant to a conversation, not as a cold announcement. Include a template for a community post that feels helpful rather than promotional.
 - Why talking to people one-on-one is still your best marketing at this stage
 - Mention the "Launch and Grow Your Lovable App" course for deeper publishing and growth strategies
-- Example: Dalmie writes a community post in a book lovers' forum: "We run a monthly book club and used to lose track of suggestions in WhatsApp. I built a free tool to collect and vote on book picks. Would love feedback from other book club organisers." She gets 20 visitors in the first week. Her Product Hunt listing uses her pitch from Challenge 1 and a screenshot of the voting feature. Her wait list captures 12 email addresses, and Posthog shows her exactly which pages people visit and where they drop off.
+- Example: Dalmie writes a community post in a book lovers' forum: "We run a monthly book club and used to lose track of suggestions in WhatsApp. I built a free tool to collect and vote on book picks. Would love feedback from other book club organisers." She gets 20 visitors in the first week. Her BetaList listing uses her pitch from Challenge 1 and a screenshot of the voting feature. Her wait list captures 12 email addresses, and Posthog shows her exactly which pages people visit and where they drop off.
 - Exercise: Write a directory submission and a community post for your product using the templates. Submit to at least one directory and share in one community where your users spend time.
 
 ### 6. Listen to Your First Users
@@ -87,20 +87,20 @@ Turn early visitors into a conversation that improves your product.
 Choose a pricing model that fits your product and your audience.
 
 - Pricing strategies for a first product: free vs freemium vs paid
-- Pricing psychology basics: how to pick a number that feels right
+- Pricing psychology basics (decoy, anchoring, bundle pricing, etc.): how to pick a number that feels right
 - How to use what you learned from Posthog and user feedback to inform your pricing: which features do people use most? That's what they'd pay for.
-- Example: Dalmie looks at her Posthog data and feedback. The voting feature and reading deadlines are what people use most. She chooses a freemium model: free for book clubs with up to 5 members, $5/month for unlimited members and features like reading stats.
+- Example: Dalmie looks at her Posthog data and feedback. The voting feature and reading deadlines are what people use most. She chooses a freemium model: free for book clubs with up to 3 members, $5/month for unlimited members and features like reading stats.
 - Exercise: Write down your pricing model and the reasoning behind it. Connect it to what you've learned from your analytics and user feedback.
 
 ### 8. Get Ready to Accept Payment
 Set up the financial and legal basics so you can receive your first payment.
 
-- What Stripe is and what you need to set it up (e.g., tax number). A separate course covers Stripe integration in detail.
+- What Stripe is and what you need to set it up (e.g., tax number).
 - Simple, free banking solutions for receiving payments: Wise, Revolut
 - Before you accept your first payment: find the easiest and cheapest legal framework in your location. Only register a company when you have solid revenue or a deal requires it. Setting up and running a company is costly. Talk to an accountant about your tax situation and the best structure for where you live.
 - When to invest more in your business vs keep it as a side project
 - When (and whether) to quit your job: recommendations based on traction, not hope
-- Example: Dalmie signs up for Stripe and connects a Wise account. She doesn't register a company yet. She books a one-hour call with an accountant to understand her tax obligations as a sole trader and keeps her day job, dedicating five hours a week to growing the Book Club Organiser.
+- Example: Dalmie signs up for Stripe and connects a Wise account. She doesn't register a company yet. She books a one-hour call with an accountant to understand her tax obligations, register as a sole trader and keeps her day job, dedicating five hours a week to growing the Book Club Organiser.
 - Exercise: If you're ready, create a Stripe account. Research the simplest legal framework for your location. Book a call with an accountant if you're earning (or about to earn) revenue.
 
 ---
@@ -128,7 +128,7 @@ Each challenge builds on the previous one. Dalmie's Book Club Organiser serves a
 - **Budget-conscious throughout:** Every recommendation considers cost. The learner shouldn't spend more than $20-30 until they have traction.
 - **Action over theory:** Each challenge ends with a concrete exercise the learner completes with their own product
 - **No premature complexity:** Legal structures, company registration, and investor conversations are explicitly deferred until they're needed
-- **Cross-references to other courses:** "Build a Valuable Product" for idea validation, "Launch and Grow Your Lovable App" for publishing, and a future Stripe integration course
+- **Cross-references to other courses:** "Build a Valuable Product" for idea validation and breaking down a large idea, "Launch and Grow Your Lovable App" for publishing, and "Build Your First App With Lovable" for building your digital product (if you haven't yet)
 - **Toolkit for technical steps:** Domain DNS setup, Google Workspace configuration, and email verification are covered in a separate toolkit guide, keeping the course focused on business decisions
 
 ---
@@ -137,11 +137,11 @@ Each challenge builds on the previous one. Dalmie's Book Club Organiser serves a
 
 - Idea and message validation (pitch testing)
 - Domain selection and professional email
-- Audience building (wait lists, lead magnets)
+- Audience building (email capture, wait lists, lead magnets)
 - Product analytics with Posthog
 - Product distribution and traffic generation (directories, community posts)
 - Collecting user feedback and real testimonials
-- Pricing strategy for first products
+- Pricing strategy and psychology (free vs freemium vs paid, anchoring, decoy pricing)
 - Legal and financial basics for solo founders
 
 ---
