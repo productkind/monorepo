@@ -1,0 +1,1065 @@
+course:
+  id: b3d7f1a2-8c4e-4b9a-a6d2-f0e8c7b5a3d1
+  note: '*Note on timing:* Some challenges involve real-world actions (like purchasing a domain or posting in a community) that happen outside this course. The estimated times cover the learning and planning, not the waiting.'
+  cover: /courses/vibe-coding-start-your-business-00/cover.gif
+  title: 'Build a Business: From Vibe Coded Product to Paying Users'
+  learningOutcomes:
+    - Test your product message and find the pitch that makes people lean in
+    - Choose a domain and set up a professional online presence on a small budget
+    - Set up email capture and a lead magnet to build your audience before launch
+    - Install analytics so you can learn from every visitor from day one
+    - Get your first real visitors through directories and community posts
+    - Collect honest user feedback and real testimonials
+    - Choose a pricing model informed by real usage data
+    - Set up the financial and legal basics to accept your first payment
+  challenges:
+    - title: Find Your One-Line Pitch
+      isFree: true
+      skills:
+        - Message Testing
+        - Pitch Writing
+        - Validation
+      description: Discover the words that make people say "I need that" by testing your message on real people.
+      completionTime: '10:00'
+      steps:
+        - type: comic
+          content:
+            imageUrl: /comics/vibe-coding-start-your-business-00/panel-00.png
+            altText: |-
+              Dalmie, a dalmatian dog wearing a red shirt, sits at a desk looking at the Book Club
+              Organiser app on a laptop screen. Dalmie looks thoughtful and says, "My friends love
+              this app. But could it become something bigger?"
+        - type: comic
+          content:
+            imageUrl: /comics/vibe-coding-start-your-business-00/panel-01.png
+            altText: |-
+              Dalmie stands in front of a mirror, practising a pitch. Dalmie says, "I built a book
+              club app..." and in the mirror's reflection, the audience looks bored with blank
+              expressions.
+        - type: comic
+          content:
+            imageUrl: /comics/vibe-coding-start-your-business-00/panel-02.png
+            altText: |-
+              Dalmie is now joined by Little Parrot, the brightly coloured bird. Little Parrot says,
+              "The words you use to describe your product matter more than you think. Let me show
+              you a formula that helps you find the right ones."
+        - type: text
+          title: You already have something valuable
+          content:
+            body: |-
+              You've built a digital product. It works. People around you have used it and found it helpful.
+
+              Now you're wondering: could this become a real business?
+
+              The answer starts with one question: **can you describe what you built in a way that makes someone who's never seen it say, "I need that"?**
+
+              Most people struggle with this. They describe their product in terms of what it does ("it's a book club app") instead of what problem it solves. And that's the difference between a polite nod and someone asking for the link.
+
+              In this challenge, you'll get a formula to find the right words, and a method to test which version works best.
+          subtitle: From hobby project to business starts with the right words
+        - type: text
+          title: The pitch test formula
+          content:
+            body: |-
+              Here's a simple formula for describing your product:
+
+              **"I built [product] that helps [who] do [what] without [pain point]."**
+
+              This formula works because it packs four things into one sentence:
+              - **What it is** (so people can picture it)
+              - **Who it's for** (so the right people recognise themselves)
+              - **What it does** (so people understand the value)
+              - **What pain it removes** (so people feel the relief)
+
+              The trick is: you won't nail it on the first try. You need to test different versions and see which one makes people react.
+          subtitle: Four elements in one sentence
+        - type: text
+          title: "Dalmie's three pitches"
+          content:
+            body: |-
+              Dalmie tried three versions of her pitch for the Book Club Organiser:
+
+              **Version 1:** "I built a book club app."
+              *Reaction: polite nods. "Oh, cool." End of conversation.*
+
+              **Version 2:** "I built a tool for book clubs to manage their reading lists."
+              *Reaction: some interest. "What does it do exactly?"*
+
+              **Version 3:** "I built an app that helps book clubs pick their next read without endless WhatsApp debates."
+              *Reaction: eyes light up. "Oh, we need that! How does it work?"*
+
+              Version 3 won because it named the specific pain point ("endless WhatsApp debates") that book club organisers instantly recognise. The first two were too vague to trigger that recognition.
+          subtitle: Same product, different reactions
+        - type: text
+          title: How to run a pitch test
+          content:
+            body: |-
+              Here's how to test your pitch:
+
+              1. Write three versions of your pitch using the formula.
+              2. Tell five people what your product does, one-on-one. Use a different version each time.
+              3. After each conversation, write down their **exact reaction**. Did they ask a follow-up question? Did they change the subject? Did their eyes light up?
+              4. The version that made someone ask "How does it work?" or "Can I try it?" is your winner.
+
+              You don't need a focus group or a survey. Five casual conversations will tell you more than you expect.
+
+              **What if none of them work?** That's useful information too. It might mean the problem you're solving isn't painful enough, or you haven't found the right audience yet.
+          subtitle: Five conversations, three versions, one winner
+        - type: text
+          title: What you don't need (yet)
+          content:
+            body: |-
+              Before we go further, let's clear something up. To start a business from your product, you **don't need:**
+
+              - A registered company
+              - Investors
+              - A perfect product
+              - A business plan
+              - A logo designed by a professional
+
+              What you **do need** is people getting value from what you built. That's it. Everything else comes later, when you have evidence it's working.
+
+              If you want to go deeper on making sure your product solves a real problem, check out our [Build a Valuable Product](https://littleparrot.app) course.
+          subtitle: Permission to start small
+        - type: quiz-question
+          title: "Quiz: What makes a pitch work?"
+          content:
+            question: Why did Dalmie's third pitch get the best reaction?
+            options:
+              - It was the shortest version
+              - It named a specific pain point the audience recognised
+              - It mentioned more features than the other versions
+              - It used more professional language
+            correctAnswer: 1
+            explanation: The third pitch worked because it named a specific, relatable pain point ("endless WhatsApp debates") that book club organisers immediately recognised as their own struggle.
+        - type: quiz-question
+          title: "Quiz: Testing your pitch"
+          content:
+            question: What's the best sign that your pitch is working?
+            options:
+              - The person says "that sounds interesting"
+              - The person nods politely
+              - The person asks a follow-up question like "how does it work?"
+              - The person says "good luck with that"
+            correctAnswer: 2
+            explanation: A follow-up question means the person is engaged and wants to know more. Polite nods and generic encouragement often mean the pitch didn't land.
+        - type: free-text-exercise
+          title: Write your three pitch versions
+          content:
+            description: |-
+              Write three versions of your pitch using the formula:
+
+              **"I built [product] that helps [who] do [what] without [pain point]."**
+
+              Try different angles. Change who it's for, what it does, or what pain it removes. The goal is to find the version that sparks the most interest.
+            placeholder: |-
+              Version 1: I built...
+
+              Version 2: I built...
+
+              Version 3: I built...
+            systemPrompt: 'You are a business mentor helping a learner refine their product pitch. They were given the formula "I built [product] that helps [who] do [what] without [pain point]" and asked to write three versions. Provide friendly, concise feedback (max 5 bullet points) in British English. Check if each version includes all four elements (what, who, value, pain point). If a version is too vague, suggest how to make it more specific. Highlight which version feels strongest and why. End with encouragement.'
+            checkerPrompt: 'Check if the user has written three distinct versions of their pitch, and whether each version includes a product, a target audience, a value, and a pain point. This is what they wrote:'
+        - type: challenge-end
+          title: "You've found your words! \U0001F4AC"
+          content:
+            nextModule: "**Next challenge:** Now that you can describe your product, let's give it a proper home online."
+            description: You now have a tested pitch that makes people lean in.
+            subDescription: "This pitch will come back again and again throughout the course: in your directory listings, community posts, and landing page. Keep refining it as you learn more about your audience."
+
+    - title: Choose Your Domain
+      isFree: false
+      skills:
+        - Domain Selection
+        - Professional Presence
+        - Budget Management
+      description: Pick the right name and set up a professional online presence without overspending.
+      completionTime: '10:00'
+      steps:
+        - type: text
+          title: Your product needs an address
+          content:
+            body: |-
+              Before you start telling people about your product, you need a place to send them. Your domain is the address people will see in directories, community posts, and emails. It's one of the first things that signals whether your product is a hobby project or something to take seriously.
+
+              Getting this right doesn't need to cost much. But getting it in place **before** you start driving traffic matters, because every link you share will carry this address.
+          subtitle: Why this comes before anything else
+        - type: text
+          title: How to choose a good domain name
+          content:
+            body: |-
+              A few rules of thumb:
+
+              - **Keep it short and memorable.** If someone hears it once, can they type it from memory?
+              - **Make it easy to spell.** Avoid words people commonly misspell.
+              - **Avoid hyphens and numbers.** They're confusing when spoken aloud. "Is that a dash or...?"
+              - **Match your product name if possible.** Consistency between your product name and domain builds trust.
+
+              Don't overthink it. A good-enough domain that you own today is better than the perfect domain you spend weeks debating.
+          subtitle: Short, memorable, easy to spell
+        - type: text
+          title: Top-level domain trade-offs
+          content:
+            body: |-
+              The part after the dot matters more than you might think:
+
+              - **.com** is the most recognised and trusted. People type it out of habit. But good .com names are often taken or expensive.
+              - **.co** is a popular alternative. Cheaper than .com, feels modern. Some people might accidentally type .com instead.
+              - **.app** signals that you've built software. Slightly more technical feel. Good for tech-savvy audiences.
+              - **.io** is popular in the tech world but less familiar to non-technical audiences.
+
+              Head to a domain registrar like GoDaddy and search for your product name. Compare what's available across different extensions and what fits your budget.
+
+              For most first products aimed at a non-technical audience, **.com is the safest bet** if you can get one at a reasonable price.
+          subtitle: ".com, .co, .app, .io: what's the difference?"
+        - type: text
+          title: Set up a professional email
+          content:
+            body: |-
+              Once you have a domain, set up a professional email address. Sending emails from **hello@yourproduct.com** instead of **yourname123@gmail.com** makes a noticeable difference in how people perceive your product.
+
+              **Google Workspace** lets you create email addresses on your own domain. It costs around $6-7/month, which is worth it when you start emailing customers, responding to feedback, or reaching out to communities.
+
+              The technical setup (connecting your domain to Google Workspace, configuring email settings) can feel intimidating. We've included a **step-by-step setup guide in the toolkit** for this course that walks you through every click.
+          subtitle: Trust starts in the inbox
+        - type: text
+          title: Register on Google Business Profile
+          content:
+            body: |-
+              While you're setting things up, register your product on **Google Business Profile** (business.google.com). It's free and helps your product appear in Google search results.
+
+              You don't need a physical office. Digital products can register with a service area. Fill in your product name, website, and a brief description (use your pitch from Challenge 1).
+
+              This is a small step that takes five minutes but can improve your visibility in search over time.
+          subtitle: A free way to improve your search visibility
+        - type: text
+          title: "Dalmie's domain decision"
+          content:
+            body: |-
+              Dalmie searched for domains and found two options:
+
+              - **bookclub.app** at $14/year
+              - **bookcluborganiser.com** at $12/year
+
+              She went with the **.com** because her audience (book club organisers) isn't particularly technical, and .com feels more familiar to them. She set up **hello@bookcluborganiser.com** through Google Workspace and registered her Google Business Profile.
+
+              **Total cost: under $25.**
+
+              She could have spent days agonising over the perfect name. Instead, she picked something clear and moved on. The domain can always be changed later if needed, but momentum can't.
+          subtitle: Under $25 for a professional presence
+        - type: quiz-question
+          title: "Quiz: Choosing a domain"
+          content:
+            question: Which domain would be the best choice for a recipe-sharing app aimed at home cooks?
+            options:
+              - recipe-sharing-app-2024.io
+              - recipeshare.com
+              - rs.app
+              - my-recipes.co.uk
+            correctAnswer: 1
+            explanation: It's short, memorable, easy to spell, has no hyphens or numbers, and uses .com which is the most recognised extension for a non-technical audience.
+        - type: quiz-question
+          title: "Quiz: Professional email"
+          content:
+            question: Why does sending emails from hello@yourproduct.com matter?
+            options:
+              - It's technically required for sending bulk emails
+              - It makes your emails load faster
+              - It signals professionalism and builds trust with customers
+              - It prevents your emails from going to spam
+            correctAnswer: 2
+            explanation: A professional email on your own domain signals that your product is serious. It builds trust when you're reaching out to potential users, responding to feedback, or sending updates.
+        - type: reflection
+          title: Research your domain options
+          content:
+            description: Search for available domains for your product on a registrar like GoDaddy. Compare at least two top-level domain options (.com, .co, .app, etc.) on price and fit. Which one will you go with, and why?
+            placeholder: "I searched for... The options I found were... I'm going with... because..."
+            subDescription: "Remember: a good-enough domain you own today is better than the perfect one you debate for weeks."
+        - type: challenge-end
+          title: "Your product has a home! \U0001F3E0"
+          content:
+            nextModule: "**Next challenge:** Before you send anyone to your new domain, let's make sure you can capture every visitor."
+            description: You've chosen a domain and set up a professional presence.
+            subDescription: "Your domain, email, and Google Business Profile are the foundation of your online presence. With these in place, everything you share from now on looks professional. Check the toolkit for the technical setup guide if you haven't configured your email yet."
+
+    - title: Build Your Audience Before You Launch
+      isFree: false
+      skills:
+        - Email Capture
+        - Lead Magnets
+        - Audience Building
+      description: Set up email capture and a lead magnet so you're ready to keep in touch with every visitor.
+      completionTime: '10:00'
+      steps:
+        - type: text
+          title: Set up the net before you fish
+          content:
+            body: |-
+              You're about to start sending people to your product. But before you do, ask yourself: **if someone visits your site today and likes what they see, can they stay in touch with you?**
+
+              If the answer is no, every visitor is a lost opportunity. They come, they look around, they leave, and you have no way to reach them again.
+
+              This challenge is about setting up your email capture **before** you drive traffic, so that when visitors arrive, you're ready.
+          subtitle: Why this comes before getting traffic
+        - type: text
+          title: Start with email capture
+          content:
+            body: |-
+              The simplest version of email capture is a **wait list or sign-up form** on your landing page. It doesn't have to be fancy.
+
+              You can start with a **Google Form** embedded on your site. You don't need a backend, a database, or an email marketing tool at the beginning. You need one thing: a way for someone to leave their email address.
+
+              Add a clear call to action: "Join the wait list", "Get early access", or "Be the first to know when we launch." Keep it visible. Don't hide it at the bottom of the page.
+
+              Don't wait until your product is "ready" to start collecting emails. The earlier you start, the more people you'll have to reach out to when you launch.
+          subtitle: The foundation you need
+        - type: text
+          title: Add a lead magnet
+          content:
+            body: |-
+              A **lead magnet** is something valuable you give away for free in exchange for someone's email address. It makes your email capture more compelling.
+
+              Examples of lead magnets:
+              - A PDF checklist or template
+              - A short guide or how-to
+              - A free tool or calculator
+              - Early access to a feature
+
+              The lead magnet should be **useful to your target audience** and related to the problem your product solves. It doesn't have to be long or polished. A one-page checklist that saves someone 30 minutes is more valuable than a 20-page ebook nobody reads.
+
+              **Important:** the lead magnet only works if email capture is already in place. The visitor gets the lead magnet **in exchange for** their email address. Set up the form first, then add the lead magnet as the incentive.
+          subtitle: Give people a reason to sign up
+        - type: text
+          title: "Dalmie's wait list and lead magnet"
+          content:
+            body: |-
+              Dalmie added a wait list form to the Book Club Organiser's landing page. She embedded a simple Google Form with one field: email address.
+
+              Then she created a **"Book Club Starter Kit"** PDF: a one-page document with discussion questions for popular books and a reading schedule template. Anyone who signs up gets the PDF sent to their email.
+
+              The starter kit took her about an hour to make. It's directly useful to book club organisers (her target audience) and it gives them a taste of the kind of value the app provides.
+
+              She's now ready to capture visitors. All she needs is to send some.
+          subtitle: A simple form and a one-page PDF
+        - type: quiz-question
+          title: "Quiz: Email capture"
+          content:
+            question: Why should you set up email capture before driving traffic to your product?
+            options:
+              - Because search engines rank sites with forms higher
+              - Because visitors who leave without giving their email are lost opportunities you can't reach again
+              - Because email forms make your site look more professional
+              - Because you need at least 100 emails before you can launch
+            correctAnswer: 1
+            explanation: Every visitor who leaves without a way to stay in touch is someone you can't reach again. Setting up capture before traffic means you don't lose your earliest and most valuable visitors.
+        - type: quiz-question
+          title: "Quiz: Lead magnets"
+          content:
+            question: What makes a good lead magnet?
+            options:
+              - It should be at least 20 pages long to feel valuable
+              - It should be useful to your target audience and related to the problem your product solves
+              - It should be about your product's features and pricing
+              - It should require a paid subscription to access
+            correctAnswer: 1
+            explanation: A good lead magnet is useful and relevant. A one-page checklist that saves someone time is more valuable than a long ebook nobody reads. It should relate to the problem your product solves.
+        - type: free-text-exercise
+          title: Plan your email capture and lead magnet
+          content:
+            description: |-
+              Plan what you'll set up:
+
+              1. **Email capture:** Where on your landing page will you add a sign-up form? What will the call to action say?
+              2. **Lead magnet:** What could you create that would be useful to your target audience? It doesn't have to be long. Think: what small thing would save them time or effort?
+            placeholder: |-
+              Email capture: I'll add a form that says...
+
+              Lead magnet idea: I'll create a... because my target audience would find it useful for...
+            systemPrompt: 'You are a business mentor helping a learner plan their email capture and lead magnet. They should describe where they will add a sign-up form, what the call to action will say, and what lead magnet they will create. Provide friendly, concise feedback (max 5 bullet points) in British English. Check that the lead magnet is relevant to their target audience and related to the problem their product solves. If the lead magnet is too ambitious, suggest simplifying it. End with encouragement.'
+            checkerPrompt: 'Check if the user has planned both an email capture form (with a call to action) and a lead magnet (that is relevant to their target audience). This is their plan:'
+        - type: challenge-end
+          title: "Your net is ready! \U0001F3A3"
+          content:
+            nextModule: "**Next challenge:** One more thing to set up before the traffic arrives: analytics. You'll want to see what visitors do from the very first day."
+            description: You have a plan to capture every visitor's email.
+            subDescription: "Once your form is live and your lead magnet is ready, every visitor has a reason to stay in touch. You're building an audience before you've even officially launched."
+
+    - title: Set Up Analytics Before Your First Visitors Arrive
+      isFree: false
+      skills:
+        - Analytics
+        - Posthog
+        - Data-Informed Decisions
+      description: Install Posthog so you can learn from every visitor from day one.
+      completionTime: '12:00'
+      steps:
+        - type: text
+          title: Don't fly blind
+          content:
+            body: |-
+              You're almost ready to send people to your product. But before you do, there's one more thing to set up: **analytics**.
+
+              Why now? Because if you set up analytics **after** you've already driven traffic, you've lost data from your first visitors. Those early visitors are the most valuable ones to learn from. They're the people who saw your pitch, clicked through, and tried your product for the first time.
+
+              Set up tracking now, so that when traffic arrives, you see **everything**.
+          subtitle: Why this comes before driving traffic
+        - type: text
+          title: What is Posthog?
+          content:
+            body: |-
+              **Posthog** is a free analytics tool that shows you what visitors do inside your app. Unlike basic tools that only count page views, Posthog lets you see the full journey: which pages people visit, which buttons they click, where they get stuck, and where they leave.
+
+              It's free for up to 1 million events per month, which is more than enough for a product that's just getting started.
+
+              Think of it as a window into how real people experience your product. Instead of guessing what's working, you'll know.
+          subtitle: Your window into user behaviour
+        - type: text
+          title: Key concepts
+          content:
+            body: |-
+              Before you set up Posthog, here are three terms you'll see in the dashboard:
+
+              **Sessions:** One visit to your app. A person opens your app, browses around, and leaves. That's one session. If they come back tomorrow, that's a new session.
+
+              **Pageviews:** Each page someone opens within a session. If a visitor looks at your homepage, then your pricing page, that's two pageviews in one session.
+
+              **Custom events:** Specific actions you choose to track, like clicking a "Sign up" button or submitting a form. These are the most useful because they tell you what people actually **do**, not where they browse.
+          subtitle: Sessions, pageviews, and custom events
+        - type: text
+          title: How to add Posthog to your app
+          content:
+            body: |-
+              You'll use your AI app builder to add Posthog. But this is one of those tasks where the AI often makes mistakes. Common problems:
+
+              - The tracking code gets added but **doesn't actually fire** (nothing shows up in Posthog)
+              - Events are **named inconsistently** (sometimes "signup_click", sometimes "SignupClick", sometimes "click_signup")
+              - The code is placed in the wrong part of the app and **only tracks some pages**
+
+              To avoid these issues, use a structured prompt. The next step has a template you can adapt.
+          subtitle: Common mistakes to avoid
+        - type: text
+          title: Prompt template for adding Posthog
+          content:
+            body: |-
+              Here's a prompt template you can adapt for your AI app builder:
+
+              ---
+
+              *Add Posthog analytics to my app. Here's what I need:*
+
+              *1. Install the Posthog JavaScript library*
+              *2. Initialise it on every page with my project API key: [YOUR_KEY]*
+              *3. Track these custom events with these exact names:*
+              *- "page_viewed" on every page load, including the page path*
+              *- "signup_form_submitted" when someone submits the sign-up form*
+              *- "feedback_button_clicked" when someone clicks the feedback button*
+              *- [add your own events here]*
+              *4. Verify it works: after setup, log one test event and confirm it appears in the Posthog dashboard*
+
+              ---
+
+              Replace the example events with the actions that matter most for your product. Be explicit about event names so they're consistent.
+          subtitle: A structured prompt that avoids the common mistakes
+        - type: text
+          title: What to look at first
+          content:
+            body: |-
+              Once Posthog is running and you have some visitors, you don't need to analyse everything. At this stage, you're answering **one question:**
+
+              **"Are people using the thing I built, and which parts?"**
+
+              Start with:
+              - **Which pages get the most visits?** This tells you what attracts people.
+              - **Where do people drop off?** This tells you where something is confusing or broken.
+              - **Which custom events fire most?** This tells you which features people actually use.
+
+              Don't get lost in dashboards. Check these three things once a week and use what you find to improve your product.
+          subtitle: Three things to check each week
+        - type: text
+          title: Dalmie sets up Posthog
+          content:
+            body: |-
+              Dalmie signed up for Posthog (free plan), got her API key, and used the prompt template to ask Lovable to add tracking to the Book Club Organiser.
+
+              She tracked three custom events:
+              - **"book_club_created"** when someone creates a new book club
+              - **"book_suggestion_added"** when someone adds a book
+              - **"vote_cast"** when someone votes on a book
+
+              After setup, she visited her own app and checked the Posthog dashboard. Her session appeared, and all three events fired correctly when she tested them.
+
+              She's now ready to see what real visitors do.
+          subtitle: Three custom events, one test visit
+        - type: quiz-question
+          title: "Quiz: Why set up analytics now?"
+          content:
+            question: Why is it important to set up analytics before driving traffic?
+            options:
+              - Analytics tools take several weeks to start working
+              - You need analytics data to create a Stripe account
+              - Data from your first visitors is the most valuable and can't be recovered if you miss it
+              - Search engines require analytics to index your site
+            correctAnswer: 2
+            explanation: Your first visitors are the most valuable to learn from. If you set up analytics after they've already visited, that data is gone. You can't go back and see what they did.
+        - type: quiz-question
+          title: "Quiz: Custom events"
+          content:
+            question: What's the difference between a pageview and a custom event?
+            options:
+              - Pageviews track clicks, custom events track pages
+              - Pageviews are free, custom events cost money
+              - Pageviews record which pages are opened, custom events record specific actions you choose to track
+              - There is no difference, they mean the same thing
+            correctAnswer: 2
+            explanation: Pageviews automatically record each page someone opens. Custom events track specific actions you define, like clicking a button or submitting a form. Custom events are more useful because they tell you what people actually do.
+        - type: reflection
+          title: Plan your Posthog setup
+          content:
+            description: What are the three most important actions a visitor can take in your product? These will become your custom events. Think about the actions that tell you whether someone is getting value from your product.
+            placeholder: |-
+              The three most important actions in my product are:
+              1.
+              2.
+              3.
+            subDescription: "These events will tell you whether people are using the core of your product, or getting stuck before they reach it."
+        - type: challenge-end
+          title: "You're ready to see everything! \U0001F4CA"
+          content:
+            nextModule: "**Next challenge:** Everything is in place. A tested pitch, a professional domain, email capture, and analytics. Time to open the doors and let people in."
+            description: You've set up analytics so every visitor teaches you something.
+            subDescription: "You now have a tested pitch (Challenge 1), a professional domain (Challenge 2), email capture (Challenge 3), and analytics tracking (this challenge). Nothing will be wasted when traffic arrives."
+
+    - title: Get Your First Visitors
+      isFree: false
+      skills:
+        - Product Distribution
+        - Community Marketing
+        - Directory Submissions
+      description: Drive real people to your product through directories and community posts.
+      completionTime: '12:00'
+      steps:
+        - type: text
+          title: Everything is in place
+          content:
+            body: |-
+              This is the moment everything comes together.
+
+              You have a **tested pitch** (Challenge 1) that makes people lean in. A **professional domain** (Challenge 2) that looks credible. **Email capture** (Challenge 3) ready to keep visitors in touch. And **analytics** (Challenge 4) tracking every action from day one.
+
+              You're not sending people into a void. Every visitor who arrives will be captured, tracked, and learned from. Now it's time to send some.
+          subtitle: Time to open the doors
+        - type: text
+          title: Where to list your product
+          content:
+            body: |-
+              There are platforms where people actively look for new products to try. Here are three good starting points:
+
+              **BetaList** (betalist.com) — a directory of early-stage startups and products looking for beta testers. Your audience here is people who enjoy trying new things and giving feedback. Good for getting early adopters.
+
+              **Product Hunt** (producthunt.com) — a larger platform where new products are "launched" and voted on by the community. More competitive, but a well-timed launch can bring a significant spike of visitors. Save this for when you feel confident about your product.
+
+              **Startup directories** — there are dozens of smaller directories that list new products. Search for "submit startup" or "startup directory list" and you'll find curated lists of places to submit.
+
+              You don't need to be on all of them. Pick one or two that fit your product and your audience.
+          subtitle: Directories where people discover new products
+        - type: text
+          title: What a good submission looks like
+          content:
+            body: |-
+              Most directory listings ask for the same things. Here's how to make yours stand out:
+
+              **A clear one-line description.** Use your pitch from Challenge 1. Not "A platform for book clubs" but "Helps book clubs pick their next read without endless WhatsApp debates."
+
+              **A screenshot that shows the product in action.** Not a logo or a landing page. Show the product doing the thing it does. If your app has a voting feature, show a vote in progress.
+
+              **A short "why this exists" paragraph.** Two to three sentences about the problem you noticed and why you built this. Keep it personal and specific.
+
+              **A weak submission** looks like: "BookClubApp - A book club management platform. Features include: book lists, voting, member management, reading schedules, and more."
+
+              **A strong submission** looks like: "Book Club Organiser - Helps book clubs pick their next read without the WhatsApp chaos. I built this because my own book club spent more time debating what to read than actually reading."
+
+              Notice the difference? The strong version has personality, names a specific problem, and doesn't list features.
+          subtitle: Pitch, screenshot, and why it exists
+        - type: text
+          title: Sharing in communities without being spammy
+          content:
+            body: |-
+              Online communities (forums, Facebook groups, Reddit, Discord servers) can be a great source of early visitors. But nobody likes the person who joins a group and immediately drops a link.
+
+              **The rule:** lead with the problem you solve, not with a link.
+
+              Here's a template for a community post that feels helpful rather than promotional:
+
+              *"We run a [relevant activity] and used to struggle with [specific problem]. I built a free tool to [what it does]. Would love feedback from others who [share this problem]."*
+
+              Notice what's happening: you're sharing a relatable experience, offering something free, and asking for feedback. You're contributing to the community, not advertising.
+
+              **Before posting:**
+              - Spend a few days in the community first. Read, comment, be helpful.
+              - Check the community rules about self-promotion.
+              - Only post when it's genuinely relevant to a discussion or topic.
+          subtitle: Lead with the problem, not the link
+        - type: text
+          title: One-on-one conversations still matter
+          content:
+            body: |-
+              At this stage, talking to people individually is still your most powerful marketing tool. A personal message to someone who fits your target audience is more likely to lead to a sign-up than a directory listing that reaches hundreds.
+
+              When you find someone who matches your target user (in a community, through friends, at an event), tell them your pitch and ask if they'd try it. A direct invitation feels personal and builds a stronger connection than a public post.
+
+              Want to go deeper into publishing and growing your app? Check out our [Launch and Grow Your Lovable App](https://littleparrot.app) course.
+          subtitle: Your best marketing channel right now
+        - type: text
+          title: "Dalmie's first visitors"
+          content:
+            body: |-
+              Dalmie wrote a community post in a book lovers' forum:
+
+              *"We run a monthly book club and used to lose track of suggestions in WhatsApp. I built a free tool to collect and vote on book picks. Would love feedback from other book club organisers."*
+
+              She got 20 visitors in the first week. Her BetaList listing used her pitch from Challenge 1 and a screenshot of the voting feature.
+
+              Her wait list captured **12 email addresses**, and Posthog showed her exactly which pages people visited and where they dropped off. Everything she set up in the previous challenges is now working together.
+          subtitle: 20 visitors, 12 emails, and real data
+        - type: quiz-question
+          title: "Quiz: Directory submissions"
+          content:
+            question: Which of these is the strongest one-line description for a directory listing?
+            options:
+              - "MealPlan Pro - A comprehensive meal planning and grocery management platform with AI-powered recipe suggestions"
+              - "MealPlan Pro - Helps busy parents plan a week of dinners in 5 minutes instead of 45"
+              - "MealPlan Pro - The best meal planning app on the market"
+              - "MealPlan Pro - Features include: meal plans, grocery lists, recipe search, nutrition tracking"
+            correctAnswer: 1
+            explanation: It names a specific audience (busy parents), a specific outcome (plan a week of dinners), and a specific improvement (5 minutes instead of 45). It's a pitch, not a feature list.
+        - type: free-text-exercise
+          title: Write your directory submission
+          content:
+            description: |-
+              Write the three pieces of a strong directory submission for your product:
+
+              1. **One-line description** (use your pitch from Challenge 1)
+              2. **Screenshot description** (what will your screenshot show the product doing?)
+              3. **"Why this exists" paragraph** (2-3 sentences: what problem did you notice, and why did you build this?)
+            placeholder: |-
+              One-line description:
+
+              Screenshot will show:
+
+              Why this exists:
+            systemPrompt: 'You are a business mentor helping a learner write a directory submission. Check if they have a clear one-line description that names a specific problem, a screenshot idea that shows the product in action (not a logo or landing page), and a personal "why this exists" paragraph. Provide friendly, concise feedback (max 5 bullet points) in British English. If the one-line description is too generic or feature-listy, suggest how to make it more specific. End with encouragement.'
+            checkerPrompt: 'Check if the user has written a one-line description, a screenshot description, and a "why this exists" paragraph. The one-line description should name a specific problem, not list features. This is what they wrote:'
+        - type: free-text-exercise
+          title: Write your community post
+          content:
+            description: |-
+              Write a community post using this template:
+
+              *"We [do relevant activity] and used to struggle with [specific problem]. I built a free tool to [what it does]. Would love feedback from others who [share this problem]."*
+
+              Think about which community you'd post this in and adapt the language to fit.
+            placeholder: "My community post:"
+            systemPrompt: 'You are a business mentor helping a learner write a community post that feels helpful rather than promotional. Check if it leads with a relatable problem (not a product link), offers something free, and asks for feedback. If it reads like an advertisement, suggest how to make it more personal and community-friendly. Provide friendly, concise feedback (max 4 bullet points) in British English. End with encouragement.'
+            checkerPrompt: 'Check if this community post leads with a problem (not a product link), mentions what the product does, and asks for feedback. It should not read like an advertisement. This is the post:'
+        - type: challenge-end
+          title: "Your first visitors are on their way! \U0001F680"
+          content:
+            nextModule: "**Next challenge:** Now that people are using your product, it's time to listen to what they have to say."
+            description: You've written a directory submission and community post, and you know where to share them.
+            subDescription: "Submit to at least one directory and share in one community where your users spend time. Then watch your Posthog dashboard and email list. Real data is about to start flowing in."
+
+    - title: Listen to Your First Users
+      isFree: false
+      skills:
+        - User Feedback
+        - Testimonial Collection
+        - Product Improvement
+      description: Turn early visitors into a conversation that improves your product and builds social proof.
+      completionTime: '10:00'
+      steps:
+        - type: text
+          title: Traffic is a conversation, not a number
+          content:
+            body: |-
+              You have visitors. Your Posthog dashboard shows real sessions, real pageviews, and real events. Your wait list has email addresses from people you've never met.
+
+              But numbers alone don't tell you **why**. Why did someone sign up? Why did someone leave after 30 seconds? Why did someone create an account but never come back?
+
+              To answer the "why," you need to talk to your users. This challenge is about turning one-way traffic into a two-way conversation.
+          subtitle: Numbers tell you what. People tell you why.
+        - type: text
+          title: Add a feedback feature
+          content:
+            body: |-
+              The simplest way to start a conversation is to **make it easy for visitors to talk to you**. Add a small "Send feedback" or "Report a bug" button to your product.
+
+              This doesn't need to be complex. A button that opens a simple form with one text field ("Tell us what you think" or "Something not working? Let us know") is enough.
+
+              You can prompt your AI app builder to add this. Something like:
+
+              *"Add a small 'Send feedback' button in the bottom-right corner. When clicked, it opens a simple form with a text area and a submit button. When submitted, send the feedback to [your email address]."*
+
+              Every piece of feedback is a gift. Someone took time to tell you what's working or what's broken. That's more valuable than any analytics dashboard.
+          subtitle: Make it easy for visitors to talk to you
+        - type: text
+          title: How to ask for feedback directly
+          content:
+            body: |-
+              Don't wait for people to find the feedback button. Reach out directly to people who have used your product.
+
+              A short email is enough:
+
+              *"Hi [name], I saw you signed up for [product]. I'd love to hear how it went. Two quick questions: What did you use it for? What was confusing?"*
+
+              **When to ask:** after someone has used your product at least once or twice. Not on their first visit. Give them time to form an opinion.
+
+              **What to listen for:** patterns. If three people mention the same confusing step, that's a clear signal. If one person has a unique complaint, note it but don't rush to fix it.
+          subtitle: Two questions that tell you everything
+        - type: text
+          title: Combine feedback with analytics
+          content:
+            body: |-
+              Here's where your Posthog data from Challenge 4 becomes powerful.
+
+              **Feedback tells you *why* something is confusing.** A user writes: "I couldn't figure out how to add a second book."
+
+              **Analytics tells you *where* people get stuck.** Posthog shows that 80% of visitors create a book club but never add a second book suggestion.
+
+              Together, they give you the full picture: you know **what's broken** (the "add a book" flow) and **why it's broken** (the interface is confusing). One prompt to your AI builder and it's fixed.
+
+              Check your Posthog data and your feedback side by side. The overlaps are where you'll find the biggest improvements.
+          subtitle: Feedback says why. Analytics says where.
+        - type: text
+          title: Collecting real testimonials
+          content:
+            body: |-
+              When someone shares something positive in their feedback, ask if you can use it on your landing page.
+
+              A simple follow-up: *"That's great to hear! Would you mind if I used your words on our website? I can use just your first name."*
+
+              Most people say yes. One honest sentence from a real user is worth more than ten polished quotes you wrote yourself.
+
+              **Do not generate fake testimonials with AI.** It's tempting, but it undermines trust the moment anyone suspects they're not real. And people can usually tell. Start with one real testimonial. It's enough.
+
+              **When to ask:** after someone has expressed genuine satisfaction. Not after their first visit. Not in an automated email. After a real exchange where they've told you something positive.
+          subtitle: One real sentence beats ten fake ones
+        - type: text
+          title: "Dalmie listens to her users"
+          content:
+            body: |-
+              Dalmie added a small "Send feedback" button to the Book Club Organiser. She also emailed five book club organisers who signed up through her wait list.
+
+              Three replied:
+              - *"Love the idea but I couldn't figure out how to add a second book."*
+              - *"The voting feature is great. Can you add deadlines?"*
+              - *"We finally stopped arguing in the group chat about what to read next."*
+
+              Her Posthog data confirmed the first complaint: most visitors created a book club but never added a second book suggestion. The "add a book" flow was confusing.
+
+              She fixed it with one prompt to Lovable. Usage jumped the following week.
+
+              The third reply? That became her first testimonial. She asked permission and added it to her landing page: *"We finally stopped arguing in the group chat about what to read next."*
+          subtitle: Three emails, one fix, and a testimonial
+        - type: quiz-question
+          title: "Quiz: Collecting testimonials"
+          content:
+            question: When is the right time to ask a user for a testimonial?
+            options:
+              - Immediately after they sign up
+              - After they've used your product and expressed genuine satisfaction
+              - Before they've tried the product, to build anticipation
+              - Never. You should write testimonials yourself based on what you think users would say.
+            correctAnswer: 1
+            explanation: Ask for a testimonial after a real exchange where the user has expressed genuine satisfaction. They need to have experienced your product before they can honestly recommend it.
+        - type: quiz-question
+          title: "Quiz: Feedback and analytics"
+          content:
+            question: How do user feedback and Posthog analytics complement each other?
+            options:
+              - They don't. You only need one or the other.
+              - Feedback tells you where people get stuck, analytics tells you why
+              - Feedback tells you why something is confusing, analytics tells you where people get stuck
+              - Analytics replaces the need for user feedback entirely
+            correctAnswer: 2
+            explanation: Feedback gives you the "why" (users explain what confused them), while analytics gives you the "where" (data shows where people drop off). Together, they point you to the biggest improvements.
+        - type: reflection
+          title: Plan your feedback approach
+          content:
+            description: How will you collect feedback from your first users? Think about what feedback feature you'll add to your product, and draft the short email you'll send to your first sign-ups.
+            placeholder: |-
+              Feedback feature: I'll add...
+
+              My feedback email draft:
+              Hi [name], I saw you signed up for...
+            subDescription: "You don't need many replies to find useful patterns. Even three responses can reveal what needs fixing."
+        - type: challenge-end
+          title: "You're learning from real users! \U0001F4AC"
+          content:
+            nextModule: "**Next challenge:** Now that you know what people value, it's time to figure out what they'd pay for."
+            description: You know how to collect feedback, combine it with analytics, and earn real testimonials.
+            subDescription: "Add a feedback feature to your product. Reach out to at least three people who have used it. Listen for patterns, not individual opinions. And if someone says something positive, ask to use it."
+
+    - title: Decide What to Charge
+      isFree: false
+      skills:
+        - Pricing Strategy
+        - Pricing Psychology
+        - Data-Informed Decisions
+      description: Choose a pricing model informed by real usage data and user feedback.
+      completionTime: '8:00'
+      steps:
+        - type: text
+          title: You've earned this decision
+          content:
+            body: |-
+              Pricing is the part where many first-time founders freeze. It feels like a huge, irreversible decision.
+
+              But you're not guessing. You have **real data** from Posthog showing which features people use most. You have **real feedback** from users telling you what they value. This makes pricing much less scary, because you're basing it on evidence, not hope.
+
+              The pricing model you choose now isn't permanent. You can change it later. What matters is picking something reasonable and moving forward.
+          subtitle: You have the data. Now use it.
+        - type: text
+          title: "Three pricing models for a first product"
+          content:
+            body: |-
+              **Free:** Everyone can use everything. You make money later (or not at all). Good for building an audience fast. Risky if you never find a way to charge.
+
+              **Freemium:** A free version with limits, and a paid version with more. Good for products where the free version gives real value but power users want more. This is the most common model for early-stage products.
+
+              **Paid only:** Everyone pays from day one. Good if your product saves people significant time or money. Harder to get initial adoption because there's no free way to try it.
+
+              For most first products, **freemium** is the safest starting point. It lets people try before they buy, and the free tier acts as marketing.
+          subtitle: Free, freemium, or paid
+        - type: text
+          title: Pricing psychology basics
+          content:
+            body: |-
+              A few psychological principles that help you pick a price:
+
+              **Anchoring:** People judge a price relative to the first number they see. If you show a $15/month plan next to a $5/month plan, the $5 feels like a bargain. If you only show the $5 plan, people have nothing to compare it to.
+
+              **Decoy pricing:** Offer three tiers where the middle one is the best value. People tend to avoid the cheapest (feels too basic) and the most expensive (feels excessive) and pick the middle.
+
+              **Round numbers feel like estimates. Specific numbers feel researched.** $5/month feels like you picked a round number. $4.99/month feels like you calculated it. Neither is wrong, but be intentional about which signal you're sending.
+
+              **Start lower than you think.** You can always raise prices later. It's much harder to lower them. Your first users are taking a risk on an unproven product, so give them a price that feels easy to say yes to.
+          subtitle: How people make decisions about money
+        - type: text
+          title: Let your data inform your pricing
+          content:
+            body: |-
+              Look at your Posthog data and feedback together:
+
+              - **Which features do people use most?** These are the features worth paying for. Put them in the paid tier.
+              - **Where do people drop off?** If many people leave before reaching the valuable features, your free tier might need to include more so people experience the value.
+              - **What did users say they wanted?** Requested features can become premium additions.
+
+              The goal is to make the free version useful enough that people experience the value, and the paid version compelling enough that power users upgrade.
+          subtitle: Which features are worth paying for?
+        - type: text
+          title: "Dalmie's pricing decision"
+          content:
+            body: |-
+              Dalmie looked at her Posthog data and feedback. The voting feature and reading deadlines were what people used most. The "add book suggestions" feature was the entry point.
+
+              She chose a **freemium model:**
+              - **Free:** Book clubs with up to 3 members. Includes book suggestions and basic voting.
+              - **$5/month:** Unlimited members, reading deadlines, reading stats, and priority support.
+
+              Why $5? Her target users (casual book club organisers) aren't paying for expensive software. $5 feels easy to say yes to, and she can always increase it later when she has more features and more proof of value.
+
+              She chose the $5 price point deliberately, not $4.99. Her audience values simplicity and honesty over corporate pricing tricks.
+          subtitle: Free for small clubs, $5/month for everything
+        - type: quiz-question
+          title: "Quiz: Pricing models"
+          content:
+            question: Why is freemium often the best starting model for a first product?
+            options:
+              - Because free products always make more money in the long run
+              - Because it lets people experience value before paying, and the free tier acts as marketing
+              - Because investors prefer freemium businesses
+              - Because it's easier to build than a paid product
+            correctAnswer: 1
+            explanation: Freemium lets people try your product risk-free. The free tier acts as marketing because happy free users tell others. And people who experience real value are more likely to upgrade.
+        - type: quiz-question
+          title: "Quiz: Anchoring"
+          content:
+            question: What is anchoring in pricing psychology?
+            options:
+              - Setting your price to match competitors
+              - Making people judge a price relative to the first number they see
+              - Offering a free trial before charging
+              - Pricing your product based on how much it cost to build
+            correctAnswer: 1
+            explanation: Anchoring means people judge a price based on comparison. Showing a higher-priced plan alongside a lower-priced plan makes the lower one feel like a better deal.
+        - type: free-text-exercise
+          title: Write your pricing model
+          content:
+            description: |-
+              Based on what you've learned from your analytics and user feedback, write down your pricing model:
+
+              1. **Which model?** Free, freemium, or paid?
+              2. **If freemium:** What's in the free tier? What's in the paid tier? What's the price?
+              3. **Why this price?** Connect it to what you've learned about your users.
+            placeholder: |-
+              Pricing model:
+
+              Free tier includes:
+
+              Paid tier ($X/month) includes:
+
+              Why this price:
+            systemPrompt: 'You are a business mentor helping a learner choose a pricing model for their first product. They should explain their model, what is free vs paid, the price, and why they chose it. Provide friendly, concise feedback (max 5 bullet points) in British English. Check that the pricing connects to user data or feedback (not arbitrary). If the price seems too high for a first product, gently suggest starting lower. If the free tier gives away too much, flag it. End with encouragement.'
+            checkerPrompt: 'Check if the user has described a pricing model, explained what is free vs paid, chosen a price, and connected it to what they know about their users. This is their pricing model:'
+        - type: challenge-end
+          title: "You've got a pricing model! \U0001F4B0"
+          content:
+            nextModule: "**Next challenge:** The final step. Let's set up the financial and legal basics so you can accept your first payment."
+            description: You've chosen a pricing model based on real data, not guesswork.
+            subDescription: "Your pricing isn't set in stone. Start with what feels right based on your data and feedback, then adjust as you learn more. The important thing is that you have a model and a number."
+
+    - title: Get Ready to Accept Payment
+      isFree: false
+      skills:
+        - Payment Setup
+        - Legal Basics
+        - Business Planning
+      description: Set up the financial and legal basics so you can receive your first payment.
+      completionTime: '10:00'
+      steps:
+        - type: text
+          title: The final step
+          content:
+            body: |-
+              You've come a long way. You have a tested pitch, a professional domain, an audience, analytics, real traffic, user feedback, testimonials, and a pricing model.
+
+              This final challenge covers the practical steps to actually accept money: payment processing, banking, and the legal basics. None of this needs to be expensive or complicated at this stage.
+          subtitle: From product to business
+        - type: text
+          title: What is Stripe?
+          content:
+            body: |-
+              **Stripe** is a payment processing service. It handles the technical and financial complexity of accepting credit card payments online, so you don't have to.
+
+              When a customer pays through Stripe, the money goes to your Stripe account. You then transfer it to your bank account. Stripe takes a small fee per transaction (typically around 2.9% + a fixed amount per transaction).
+
+              To set up Stripe, you'll need:
+              - An email address
+              - Your personal details (name, address, date of birth)
+              - A bank account to receive payouts
+              - Depending on your location, a tax identification number
+
+              Integrating Stripe into your product is a topic on its own. We'll cover that in a separate course. For now, the goal is to **create your Stripe account** so it's ready when you need it.
+          subtitle: The tool that handles payments for you
+        - type: text
+          title: Simple banking solutions
+          content:
+            body: |-
+              You need a bank account that can receive payments from Stripe. If you don't want to use your personal bank account (or if your bank charges high fees for international transactions), two free options work well:
+
+              **Wise** (wise.com) — Great for receiving payments in multiple currencies with low fees. Especially useful if your customers are international.
+
+              **Revolut** (revolut.com) — A free business account that's easy to set up. Good for keeping your business finances separate from your personal ones.
+
+              Both are free to open. You don't need a registered company to use them (personal accounts work fine at this stage).
+
+              Having a separate account for your product's income makes it much easier to track how your business is doing, and your accountant will thank you later.
+          subtitle: Keep business money separate from personal money
+        - type: text
+          title: Legal basics (keep it simple)
+          content:
+            body: |-
+              Here's what many first-time founders get wrong: they spend weeks researching company structures before they've earned their first pound.
+
+              **The rule:** only register a company when you have solid revenue or a specific deal requires it. Setting up and operating a company costs money (registration fees, annual filings, accountant fees). Until you're earning enough to justify those costs, keep it simple.
+
+              In most countries, you can operate as a **sole trader** (also called sole proprietor or self-employed) to start. This means you're personally responsible for the business, but there's minimal paperwork and cost.
+
+              **What you should do now:**
+              - Research the simplest legal framework for your location
+              - Book a one-hour call with an accountant to understand your tax obligations
+              - Keep records of your income and expenses from day one
+
+              An accountant can tell you exactly what structure makes sense for your situation and location. A one-hour consultation is a small investment that can save you from expensive mistakes.
+          subtitle: Don't register a company until you need one
+        - type: text
+          title: When to invest more (and when to keep your day job)
+          content:
+            body: |-
+              A common question at this stage: **should I go all in?**
+
+              Base this decision on traction, not hope:
+
+              - **Keep it as a side project** if you have fewer than 50 active users and no paying customers. Dedicate a few hours a week and keep growing steadily.
+              - **Consider investing more time** when you have paying customers and can see a path to covering your basic expenses. Maybe go part-time at your day job.
+              - **Consider going full-time** when your product revenue can cover your living expenses for at least 6 months, or you have savings to bridge the gap.
+
+              There's no rush. Many successful products started as side projects that grew slowly over months or years. Small, consistent effort each week can get you further than you expect.
+          subtitle: Decisions based on traction, not hope
+        - type: text
+          title: "Dalmie's next steps"
+          content:
+            body: |-
+              Dalmie signed up for Stripe and connected a Wise account to keep her business finances separate.
+
+              She didn't register a company. Instead, she booked a one-hour call with an accountant to understand her tax obligations and registered as a sole trader.
+
+              She keeps her day job and dedicates five hours a week to growing the Book Club Organiser. She knows that if she reaches 100 paying users at $5/month, that's $500/month in revenue, not enough to quit her job, but enough to justify investing more time and maybe some money into marketing.
+
+              One step at a time.
+          subtitle: Stripe, Wise, accountant, five hours a week
+        - type: quiz-question
+          title: "Quiz: When to register a company"
+          content:
+            question: When should you register a company for your product?
+            options:
+              - Before you start building the product
+              - As soon as you have the idea
+              - When you have solid revenue or a specific deal requires it
+              - After your first visitor
+            correctAnswer: 2
+            explanation: Company registration costs money and creates ongoing obligations. Until you have revenue that justifies those costs, operating as a sole trader is simpler and cheaper.
+        - type: quiz-question
+          title: "Quiz: Going full-time"
+          content:
+            question: What's the best signal that it might be time to invest more time in your product?
+            options:
+              - You've had the idea for more than a year
+              - You have paying customers and can see a path to covering basic expenses
+              - Your friends think it's a great idea
+              - You've listed it on five directories
+            correctAnswer: 1
+            explanation: Paying customers and a clear revenue path are concrete signals. Friends' enthusiasm and time spent thinking about the idea are not reliable indicators of business viability.
+        - type: reflection
+          title: Your business next steps
+          content:
+            description: |-
+              What are the three most important next steps for your product right now? Think about what you've learned across all eight challenges: your pitch, your domain, your audience, your analytics, your traffic, your feedback, your pricing, and your payment setup.
+            placeholder: |-
+              My three most important next steps:
+              1.
+              2.
+              3.
+            subDescription: "Write down what you'll do this week. Not this month. This week."
+        - type: course-end
+          title: "You're in business! \U0001F389"
+          content:
+            description: |-
+              Look at what you've built across this course:
+
+              - A **tested pitch** that makes people lean in
+              - A **professional domain** and email
+              - **Email capture** and a lead magnet building your audience
+              - **Analytics** showing you how people use your product
+              - **Real visitors** from directories and communities
+              - **User feedback** and a real testimonial on your landing page
+              - A **pricing model** based on real data
+              - A clear path to **accepting your first payment**
+
+              You went from "I built something cool" to "I'm running a product." That's a transformation most people only dream about.
+            subDescription: |-
+              What surprised you most during this course? What will you do differently now?
+
+              Your product isn't done. Products are never done. But you now have the foundation, the tools, and the mindset to grow it into something real.
+
+              Good luck, and happy building!
