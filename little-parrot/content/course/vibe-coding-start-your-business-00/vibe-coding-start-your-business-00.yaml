@@ -1,6 +1,6 @@
 course:
   id: b3d7f1a2-8c4e-4b9a-a6d2-f0e8c7b5a3d1
-  note: '*Note on timing:* Some challenges involve real-world actions (like purchasing a domain or posting in a community) that happen outside this course. The estimated times cover the learning and planning, not the waiting.'
+  note: ''
   cover: /courses/vibe-coding-start-your-business-00/cover.gif
   title: 'Build a Business: From Vibe Coded Product to Paying Users'
   learningOutcomes:
@@ -27,22 +27,25 @@ course:
             imageUrl: /comics/vibe-coding-start-your-business-00/panel-00.png
             altText: |-
               Dalmie, a dalmatian dog wearing a red shirt, sits at a desk looking at the Book Club
-              Organiser app on a laptop screen. Dalmie looks thoughtful and says, "My friends love
-              this app. But could it become something bigger?"
+              Organiser app on a laptop screen. A friend sits next to Dalmie and says, "This app is
+              great! You should charge for it." Dalmie looks surprised and says, "Wait... could this
+              actually become a business?"
         - type: comic
           content:
             imageUrl: /comics/vibe-coding-start-your-business-00/panel-01.png
             altText: |-
-              Dalmie stands in front of a mirror, practising a pitch. Dalmie says, "I built a book
-              club app..." and in the mirror's reflection, the audience looks bored with blank
-              expressions.
+              Dalmie stands overwhelmed in front of a whiteboard covered with sticky notes that read
+              things like "domain?", "pricing??", "legal stuff", "how do people find me?", "Stripe?",
+              "analytics". Dalmie has spirals in their eyes and says, "There's so much to figure out.
+              Where do I even start?"
         - type: comic
           content:
             imageUrl: /comics/vibe-coding-start-your-business-00/panel-02.png
             altText: |-
-              Dalmie is now joined by Little Parrot, the brightly coloured bird. Little Parrot says,
-              "The words you use to describe your product matter more than you think. Let me show
-              you a formula that helps you find the right ones."
+              Little Parrot, the brightly coloured bird, appears next to Dalmie at the whiteboard.
+              Little Parrot starts rearranging the sticky notes into a clear sequence and says,
+              "One step at a time! First, let's find the right words to describe what you've built.
+              Then we'll set up everything you need before your first visitor arrives."
         - type: text
           title: You already have something valuable
           content:

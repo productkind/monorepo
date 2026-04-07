@@ -7,6 +7,7 @@ description: Use this checklist when generating micro-course content from an out
 - Each micro-course is made up of challenges.
 - Each challenge is made up of steps.
 - Each step has a type: see all the types in [`./courseSteps.ts`](./courseSteps.ts)
+- The `note` field on the course is optional. Only include it if the course has something genuinely important to flag (e.g., timing expectations that differ from normal, prerequisites). Don't add a note by default.
 
 ## Important Aspects to Follow
 - You don't have to follow the exact structure of the course outline given. It's important that you craft the micro-course in a way that engages learners and help them efficiently acquire new skills.
