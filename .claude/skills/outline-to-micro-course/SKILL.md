@@ -1,5 +1,5 @@
 ---
-name: micro-course
+name: outline-to-micro-course
 description: Use this checklist when generating micro-course content from an outline. Every course must meet these criteria before being considered complete.
 ---
 
@@ -10,8 +10,8 @@ description: Use this checklist when generating micro-course content from an out
 
 ## Important Aspects to Follow
 - You don't have to follow the exact structure of the course outline given. It's important that you craft the micro-course in a way that engages learners and help them efficiently acquire new skills.
-- It's crucial to include an 'aha!' moment in the first challenge and make its hook powerful, because the learner will decide based on the first challenge if they want to subscribe for the micro-course.
-- The learner should encounter a practical and hands-on step in the micro-course as soon as possible. Build their mindset during the micro-course, connecting it to practical experiences, not in a separate challenge focusing only on the mindset.
+- The first challenge must hook the learner with a specific, reusable tool they can apply immediately: a formula, a template, a checklist, or a practical technique. The learner decides based on the first challenge whether to subscribe, so they need to walk away with concrete value, not just motivation or mindset. Avoid hooks that rely on unrealistic scenarios (e.g., "strangers start asking for your product"). Most learners have to work hard for attention, so the hook should equip them to do that work.
+- The learner should encounter a practical and hands-on step in the micro-course as soon as possible. Build their mindset during the micro-course, connecting it to practical experiences, not in a separate challenge focusing only on the mindset. Mindset points (like "you don't need investors") work best as supporting content after the learner has already engaged with a practical exercise.
 - Include in the micro-course description the transformation the learner will realise by the end. Include what the learner will be able to do after completing the micro-course.
 - When creating quiz steps, vary which answer is the correct one (not always the second one).
 
@@ -23,7 +23,7 @@ description: Use this checklist when generating micro-course content from an out
 
 **Transformation hook in the first video/intro.** Frame the course as identity change: "From X to Y." Not "You'll learn A, B, C" but "You'll become someone who..." Example: "From 'I can't build apps' to 'I just published my first one.'"
 
-**One running example throughout.** Use a single persona building a single project across all challenges. Don't switch examples mid-course. Consistency makes abstract concepts tangible and helps learners follow along.
+**One running example throughout.** Use Dalmie (a dalmatian dog character) building the Book Club Organiser app as the running persona and project across all challenges, consistent with other Little Parrot courses. Don't switch examples mid-course. Consistency makes abstract concepts tangible and helps learners follow along.
 
 **Challenge openers set emotional tone.** The first step of each challenge should excite and preview the transformation, not just list what's coming. Acknowledge progress ("You're no longer a beginner") and build anticipation for what they'll be able to do.
 
@@ -80,6 +80,7 @@ Micro-course content should follow these principles to ensure it's engaging, eff
 **Fail indicators:**
 - The challenge ends with conceptual understanding only
 - The suggested action is vague ("experiment with this technique")
+- The exercise offers a choice between tactics where one depends on the other (e.g., "choose a wait list or lead magnet" when a lead magnet requires email capture). If tactics have prerequisites, make the sequence explicit rather than presenting them as alternatives.
 
 ---
 
@@ -148,10 +149,12 @@ Micro-course content should follow these principles to ensure it's engaging, eff
 - Does this challenge assume only knowledge taught in previous challenges?
 - Does this challenge prepare the learner for what comes next?
 - Is there a clear reason this challenge comes at this point in the sequence?
+- If the course has a "go live" moment (e.g., driving traffic, launching publicly), are all setup challenges (analytics, email capture, feedback mechanisms) placed before it? Data lost before tracking is set up can't be recovered. Explain the *why* behind the ordering in the content so the learner builds this mindset.
 
 **Fail indicators:**
 - Challenge references concepts not yet introduced
 - Challenge repeats content from earlier challenges without building on it
+- A setup step (analytics, email capture) comes after the moment it's needed
 
 ---
 
@@ -183,11 +186,12 @@ Micro-course content should follow these principles to ensure it's engaging, eff
 Before finalising any **challenge**, confirm:
 
 - [ ] Single outcome, one sentence, no "and"
-- [ ] Ends with specific action learner can take in 5 minutes
+- [ ] Ends with specific, realistic action learner can take in 5 minutes (no hidden prerequisites)
 - [ ] Includes practice that takes under 3 minutes
 - [ ] Total completion time under 15 minutes (ideally under 10)
 - [ ] No unexplained jargon
 - [ ] Only assumes knowledge from previous challenges
+- [ ] Setup challenges (analytics, email capture) come before the moment they're needed
 - [ ] Tone is welcoming and normalises struggle
 
 Before finalising **the full course**, confirm:
@@ -210,10 +214,10 @@ When generating a micro-course, structure it as the examples. Make sure to use d
 
 ### Example Micro-courses
 
-- `../../../little-parrot/content/course/vibe-coding-product-management-00.yaml`
-- `../../../little-parrot/content/course/vibe-coding-tech-00.yaml`
-- `../../../little-parrot/content/course/lovable-intro-00.yaml`
-- `../../../little-parrot/content/course/vibe-coding-debugging-00.yaml`
+- `../../../little-parrot/content/course/vibe-coding-product-management-00/vibe-coding-product-management-00.yaml`
+- `../../../little-parrot/content/course/vibe-coding-tech-00/vibe-coding-tech-00.yaml`
+- `../../../little-parrot/content/course/lovable-intro-00/lovable-intro-00.yaml`
+- `../../../little-parrot/content/course/vibe-coding-debugging-00/vibe-coding-debugging-00.yaml`
 
 ### Save Micro-course
 Save the generated micro-course to this folder: `../../../little-parrot/content/course`

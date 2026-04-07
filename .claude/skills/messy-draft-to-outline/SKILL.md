@@ -11,6 +11,8 @@ description: Use this checklist when generating an outline for a micro-course fr
 - After drafting the outline, cross-check every bullet point in the messy draft against the outline. Flag any topics from the draft that were dropped and explain why (out of scope, covered in another course, etc.). Don't silently omit content.
 - **Scope check after first draft:** Review whether the course is trying to cover too much. If a challenge is purely technical setup (e.g., configuring DNS, step-by-step tool installation), it likely belongs in a toolkit item rather than a challenge. Challenges should teach decisions and skills, not walk through configuration screens. Prefer shorter challenges over fewer long ones, so the learner feels progress as they complete each one.
 - **Dependency ordering:** Check that each challenge only assumes things the learner has done in previous challenges. If a challenge requires users, it must come after a challenge that gets users. If it requires traffic, it must come after a challenge that drives traffic. Read the challenges in order and ask: "Does the learner have what they need to do this right now?"
+- **Prepare before the switch flips:** When a course has a "go live" moment (e.g., driving traffic, launching publicly), everything that captures or measures that moment must be set up in earlier challenges. Analytics, email capture, feedback mechanisms: all need to be in place before the first visitor arrives, or the learner loses data they can't get back. Explain *why* this ordering matters in the challenge content so the learner builds this mindset.
+- **Exercises must be realistic:** Check that each exercise is something the learner can actually do at that point in the course. If an exercise offers a choice between two tactics, make sure both are achievable with what the learner has set up so far. If one tactic depends on another (e.g., a lead magnet requires email capture), the exercise should make that sequence explicit, not present them as alternatives.
 
 ## Narrative Structure
 
@@ -18,7 +20,7 @@ description: Use this checklist when generating an outline for a micro-course fr
 
 **Transformation hook in the first video/intro.** Frame the course as identity change: "From X to Y." Not "You'll learn A, B, C" but "You'll become someone who..." Example: "From 'I can't build apps' to 'I just published my first one.'"
 
-**One running example throughout.** Use a single persona building a single project across all challenges. Don't switch examples mid-course. Consistency makes abstract concepts tangible and helps learners follow along.
+**One running example throughout.** Use Dalmie (a dalmatian dog character) building the Book Club Organiser app as the running persona and project across all challenges, consistent with other Little Parrot courses. Don't switch examples mid-course. Consistency makes abstract concepts tangible and helps learners follow along.
 
 ## Output Format for Generated Outline
 
