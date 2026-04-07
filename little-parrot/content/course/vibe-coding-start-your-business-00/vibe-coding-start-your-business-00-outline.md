@@ -4,11 +4,11 @@
 
 ## Overview
 
-This micro-course helps learners who have already built a digital product with an AI app builder take the next step: turning it into a real business. It covers validation, audience building, choosing a domain, getting traffic, understanding usage with analytics, and pricing.
+This micro-course helps learners who have already built a digital product with an AI app builder take the next step: turning it into a real business. It walks through the full journey from testing your message, building an audience, and getting your first visitors, to collecting real user feedback, understanding what people do in your product with analytics, and setting up pricing and payments.
 
-The learner will go from "I built something cool" to "I have paying users and a plan to grow." No company registration required. No investors needed. By the end, the learner will have validated their idea, claimed a professional domain, started getting real traffic, and chosen a pricing model.
+The learner will go from "I built something cool" to "I have paying users and a plan to grow." By the end, the learner will have a tested pitch, an audience, a professional online presence, real traffic, user feedback and testimonials, analytics set up, a pricing model, and a clear path to accepting their first payment.
 
-The narrative follows Dalmie, who built the Book Club Organiser app with Lovable as a hobby project for her friend's book club. Other book clubs have started asking if they can use it too, and Dalmie realises she might have something people would pay for. This course follows her journey from "free tool I made for friends" to "product with paying customers."
+The narrative follows Dalmie, who built the Book Club Organiser app with Lovable as a hobby project for her friend's book club. It works well for them, and now she's wondering: could this become something bigger? This course follows her journey as she finds out whether anyone else would use it, and does the work to turn a hobby project into a product with paying users.
 
 ---
 
