@@ -4,7 +4,7 @@ course:
   cover: /courses/vibe-coding-start-your-business-00/cover.gif
   title: 'Build a Business: From Vibe Coded Product to Paying Users'
   learningOutcomes:
-    - Test your product message and find the pitch that makes people lean in
+    - Craft a clear value proposition that makes people say "I need that"
     - Choose a domain and set up a professional online presence on a small budget
     - Set up email capture and a lead magnet to build your audience before launch
     - Install analytics so you can learn from every visitor from day one
@@ -13,13 +13,13 @@ course:
     - Choose a pricing model informed by real usage data
     - Set up the financial and legal basics to accept your first payment
   challenges:
-    - title: Find Your One-Line Pitch
+    - title: Craft Your Value Proposition
       isFree: true
       skills:
+        - Value Proposition
         - Message Testing
-        - Pitch Writing
         - Validation
-      description: Discover the words that make people say "I need that" by testing your message on real people.
+      description: Describe the value your product delivers in one sentence, then test it on real people.
       completionTime: '10:00'
       steps:
         - type: comic
@@ -46,26 +46,41 @@ course:
               "One step at a time! First, let's find the right words to describe what you've built.
               Then we'll set up everything you need before your first visitor arrives."
         - type: text
-          title: You already have something valuable
+          title: What you don't need (yet)
           content:
             body: |-
-              You've built a digital product. It works. People around you have used it and found it helpful.
+              You've built a digital product. It works. People around you have used it and found it helpful. Now you're wondering: could this become a real business?
 
-              Now you're wondering: could this become a real business?
+              Here's where most people get stuck. They think they need to sort out a hundred things before they can start:
 
-              The answer starts with one question: **can you describe what you built in a way that makes someone who's never seen it say, "I need that"?**
+              - A registered company
+              - Investors
+              - A trademark
+              - A business plan
+              - A logo designed by a professional
+              - Business cards
 
-              Most people struggle with this. They describe their product in terms of what it does ("it's a book club app") instead of what problem it solves. And that's the difference between a polite nod and someone asking for the link.
-
-              In this challenge, you'll get a formula to find the right words, and a method to test which version works best.
-          subtitle: From hobby project to business starts with the right words
+              **You don't need any of that right now.** Setting up a company costs money. Trademarking costs money. Business cards end up in a drawer. None of it matters if nobody's using your product.
+          subtitle: The biggest mistake first-time founders make
         - type: text
-          title: The pitch test formula
+          title: What you do need
           content:
             body: |-
-              Here's a simple formula for describing your product:
+              One thing: **people getting value from what you built.** That's the only proof that counts.
 
-              **"I built [product] that helps [who] do [what] without [pain point]."**
+              Everything else comes later, once you have evidence that people want what you built. This course will walk you through how to get that evidence, step by step.
+
+              But first, let's find out if you can describe your product in a way that makes someone who's never seen it say, "I need that." That starts with your **value proposition**: a clear description of the value your product delivers.
+
+              If you want to go deeper on making sure your product solves a real problem, check out our [Build a Valuable Product](https://littleparrot.app) course.
+          subtitle: Just one thing
+        - type: text
+          title: The value proposition formula
+          content:
+            body: |-
+              A **value proposition** is a clear description of the value your product delivers. Here's a simple formula:
+
+              **"[Product] helps [who] do [what] without [pain point]."**
 
               This formula works because it packs four things into one sentence:
               - **What it is** (so people can picture it)
@@ -76,10 +91,10 @@ course:
               The trick is: you won't nail it on the first try. You need to test different versions and see which one makes people react.
           subtitle: Four elements in one sentence
         - type: text
-          title: "Dalmie's three pitches"
+          title: "Dalmie's three versions"
           content:
             body: |-
-              Dalmie tried three versions of her pitch for the Book Club Organiser:
+              Dalmie tried three versions of her value proposition for the Book Club Organiser:
 
               **Version 1:** "I built a book club app."
               *Reaction: polite nods. "Oh, cool." End of conversation.*
@@ -93,12 +108,12 @@ course:
               Version 3 won because it named the specific pain point ("endless WhatsApp debates") that book club organisers instantly recognise. The first two were too vague to trigger that recognition.
           subtitle: Same product, different reactions
         - type: text
-          title: How to run a pitch test
+          title: How to test your value proposition
           content:
             body: |-
-              Here's how to test your pitch:
+              Here's how to test your value proposition:
 
-              1. Write three versions of your pitch using the formula.
+              1. Write three versions using the formula.
               2. Tell five people what your product does, one-on-one. Use a different version each time.
               3. After each conversation, write down their **exact reaction**. Did they ask a follow-up question? Did they change the subject? Did their eyes light up?
               4. The version that made someone ask "How does it work?" or "Can I try it?" is your winner.
@@ -107,51 +122,35 @@ course:
 
               **What if none of them work?** That's useful information too. It might mean the problem you're solving isn't painful enough, or you haven't found the right audience yet.
           subtitle: Five conversations, three versions, one winner
-        - type: text
-          title: What you don't need (yet)
-          content:
-            body: |-
-              Before we go further, let's clear something up. To start a business from your product, you **don't need:**
-
-              - A registered company
-              - Investors
-              - A perfect product
-              - A business plan
-              - A logo designed by a professional
-
-              What you **do need** is people getting value from what you built. That's it. Everything else comes later, when you have evidence it's working.
-
-              If you want to go deeper on making sure your product solves a real problem, check out our [Build a Valuable Product](https://littleparrot.app) course.
-          subtitle: Permission to start small
         - type: quiz-question
-          title: "Quiz: What makes a pitch work?"
+          title: "Quiz: What makes a value proposition work?"
           content:
-            question: Why did Dalmie's third pitch get the best reaction?
+            question: Why did Dalmie's third version get the best reaction?
             options:
               - It was the shortest version
               - It named a specific pain point the audience recognised
               - It mentioned more features than the other versions
               - It used more professional language
             correctAnswer: 1
-            explanation: The third pitch worked because it named a specific, relatable pain point ("endless WhatsApp debates") that book club organisers immediately recognised as their own struggle.
+            explanation: The third version worked because it named a specific, relatable pain point ("endless WhatsApp debates") that book club organisers immediately recognised as their own struggle.
         - type: quiz-question
-          title: "Quiz: Testing your pitch"
+          title: "Quiz: Testing your value proposition"
           content:
-            question: What's the best sign that your pitch is working?
+            question: What's the best sign that your value proposition is working?
             options:
               - The person says "that sounds interesting"
               - The person nods politely
               - The person asks a follow-up question like "how does it work?"
               - The person says "good luck with that"
             correctAnswer: 2
-            explanation: A follow-up question means the person is engaged and wants to know more. Polite nods and generic encouragement often mean the pitch didn't land.
+            explanation: A follow-up question means the person is engaged and wants to know more. Polite nods and generic encouragement often mean the message didn't land.
         - type: free-text-exercise
-          title: Write your three pitch versions
+          title: Write three versions of your value proposition
           content:
             description: |-
-              Write three versions of your pitch using the formula:
+              Write three versions of your value proposition using the formula:
 
-              **"I built [product] that helps [who] do [what] without [pain point]."**
+              **"[Product] helps [who] do [what] without [pain point]."**
 
               Try different angles. Change who it's for, what it does, or what pain it removes. The goal is to find the version that sparks the most interest.
             placeholder: |-
@@ -160,14 +159,14 @@ course:
               Version 2: I built...
 
               Version 3: I built...
-            systemPrompt: 'You are a business mentor helping a learner refine their product pitch. They were given the formula "I built [product] that helps [who] do [what] without [pain point]" and asked to write three versions. Provide friendly, concise feedback (max 5 bullet points) in British English. Check if each version includes all four elements (what, who, value, pain point). If a version is too vague, suggest how to make it more specific. Highlight which version feels strongest and why. End with encouragement.'
-            checkerPrompt: 'Check if the user has written three distinct versions of their pitch, and whether each version includes a product, a target audience, a value, and a pain point. This is what they wrote:'
+            systemPrompt: 'You are a business mentor helping a learner refine their value proposition. They were given the formula "[Product] helps [who] do [what] without [pain point]" and asked to write three versions. Provide friendly, concise feedback (max 5 bullet points) in British English. Check if each version includes all four elements (what, who, value, pain point). If a version is too vague, suggest how to make it more specific. Highlight which version feels strongest and why. End with encouragement.'
+            checkerPrompt: 'Check if the user has written three distinct versions of their value proposition, and whether each version includes a product, a target audience, a value, and a pain point. This is what they wrote:'
         - type: challenge-end
           title: "You've found your words! \U0001F4AC"
           content:
-            nextModule: "**Next challenge:** Now that you can describe your product, let's give it a proper home online."
-            description: You now have a tested pitch that makes people lean in.
-            subDescription: "This pitch will come back again and again throughout the course: in your directory listings, community posts, and landing page. Keep refining it as you learn more about your audience."
+            nextModule: "**Next challenge:** Now that you can describe your product's value, let's give it a proper home online."
+            description: You now have a clear value proposition that makes people lean in.
+            subDescription: "This value proposition will come back again and again throughout the course: in your directory listings, community posts, and landing page. Keep refining it as you learn more about your audience."
 
     - title: Choose Your Domain
       isFree: false
@@ -230,7 +229,7 @@ course:
             body: |-
               While you're setting things up, register your product on **Google Business Profile** (business.google.com). It's free and helps your product appear in Google search results.
 
-              You don't need a physical office. Digital products can register with a service area. Fill in your product name, website, and a brief description (use your pitch from Challenge 1).
+              You don't need a physical office. Digital products can register with a service area. Fill in your product name, website, and a brief description (use your value proposition from Challenge 1).
 
               This is a small step that takes five minutes but can improve your visibility in search over time.
           subtitle: A free way to improve your search visibility
@@ -401,7 +400,7 @@ course:
             body: |-
               You're almost ready to send people to your product. But before you do, there's one more thing to set up: **analytics**.
 
-              Why now? Because if you set up analytics **after** you've already driven traffic, you've lost data from your first visitors. Those early visitors are the most valuable ones to learn from. They're the people who saw your pitch, clicked through, and tried your product for the first time.
+              Why now? Because if you set up analytics **after** you've already driven traffic, you've lost data from your first visitors. Those early visitors are the most valuable ones to learn from. They're the people who saw your value proposition, clicked through, and tried your product for the first time.
 
               Set up tracking now, so that when traffic arrives, you see **everything**.
           subtitle: Why this comes before driving traffic
@@ -527,9 +526,9 @@ course:
         - type: challenge-end
           title: "You're ready to see everything! \U0001F4CA"
           content:
-            nextModule: "**Next challenge:** Everything is in place. A tested pitch, a professional domain, email capture, and analytics. Time to open the doors and let people in."
+            nextModule: "**Next challenge:** Everything is in place. A clear value proposition, a professional domain, email capture, and analytics. Time to open the doors and let people in."
             description: You've set up analytics so every visitor teaches you something.
-            subDescription: "You now have a tested pitch (Challenge 1), a professional domain (Challenge 2), email capture (Challenge 3), and analytics tracking (this challenge). Nothing will be wasted when traffic arrives."
+            subDescription: "You now have a clear value proposition (Challenge 1), a professional domain (Challenge 2), email capture (Challenge 3), and analytics tracking (this challenge). Nothing will be wasted when traffic arrives."
 
     - title: Get Your First Visitors
       isFree: false
@@ -546,7 +545,7 @@ course:
             body: |-
               This is the moment everything comes together.
 
-              You have a **tested pitch** (Challenge 1) that makes people lean in. A **professional domain** (Challenge 2) that looks credible. **Email capture** (Challenge 3) ready to keep visitors in touch. And **analytics** (Challenge 4) tracking every action from day one.
+              You have a **clear value proposition** (Challenge 1) that makes people lean in. A **professional domain** (Challenge 2) that looks credible. **Email capture** (Challenge 3) ready to keep visitors in touch. And **analytics** (Challenge 4) tracking every action from day one.
 
               You're not sending people into a void. Every visitor who arrives will be captured, tracked, and learned from. Now it's time to send some.
           subtitle: Time to open the doors
@@ -570,7 +569,7 @@ course:
             body: |-
               Most directory listings ask for the same things. Here's how to make yours stand out:
 
-              **A clear one-line description.** Use your pitch from Challenge 1. Not "A platform for book clubs" but "Helps book clubs pick their next read without endless WhatsApp debates."
+              **A clear one-line description.** Use your value proposition from Challenge 1. Not "A platform for book clubs" but "Helps book clubs pick their next read without endless WhatsApp debates."
 
               **A screenshot that shows the product in action.** Not a logo or a landing page. Show the product doing the thing it does. If your app has a voting feature, show a vote in progress.
 
@@ -581,7 +580,7 @@ course:
               **A strong submission** looks like: "Book Club Organiser - Helps book clubs pick their next read without the WhatsApp chaos. I built this because my own book club spent more time debating what to read than actually reading."
 
               Notice the difference? The strong version has personality, names a specific problem, and doesn't list features.
-          subtitle: Pitch, screenshot, and why it exists
+          subtitle: Value proposition, screenshot, and why it exists
         - type: text
           title: Sharing in communities without being spammy
           content:
@@ -607,7 +606,7 @@ course:
             body: |-
               At this stage, talking to people individually is still your most powerful marketing tool. A personal message to someone who fits your target audience is more likely to lead to a sign-up than a directory listing that reaches hundreds.
 
-              When you find someone who matches your target user (in a community, through friends, at an event), tell them your pitch and ask if they'd try it. A direct invitation feels personal and builds a stronger connection than a public post.
+              When you find someone who matches your target user (in a community, through friends, at an event), describe the value and ask if they'd try it. A direct invitation feels personal and builds a stronger connection than a public post.
 
               Want to go deeper into publishing and growing your app? Check out our [Launch and Grow Your Lovable App](https://littleparrot.app) course.
           subtitle: Your best marketing channel right now
@@ -619,7 +618,7 @@ course:
 
               *"We run a monthly book club and used to lose track of suggestions in WhatsApp. I built a free tool to collect and vote on book picks. Would love feedback from other book club organisers."*
 
-              She got 20 visitors in the first week. Her BetaList listing used her pitch from Challenge 1 and a screenshot of the voting feature.
+              She got 20 visitors in the first week. Her BetaList listing used her value proposition from Challenge 1 and a screenshot of the voting feature.
 
               Her wait list captured **12 email addresses**, and Posthog showed her exactly which pages people visited and where they dropped off. Everything she set up in the previous challenges is now working together.
           subtitle: 20 visitors, 12 emails, and real data
@@ -633,14 +632,14 @@ course:
               - "MealPlan Pro - The best meal planning app on the market"
               - "MealPlan Pro - Features include: meal plans, grocery lists, recipe search, nutrition tracking"
             correctAnswer: 1
-            explanation: It names a specific audience (busy parents), a specific outcome (plan a week of dinners), and a specific improvement (5 minutes instead of 45). It's a pitch, not a feature list.
+            explanation: It names a specific audience (busy parents), a specific outcome (plan a week of dinners), and a specific improvement (5 minutes instead of 45). It communicates value, not a feature list.
         - type: free-text-exercise
           title: Write your directory submission
           content:
             description: |-
               Write the three pieces of a strong directory submission for your product:
 
-              1. **One-line description** (use your pitch from Challenge 1)
+              1. **One-line description** (use your value proposition from Challenge 1)
               2. **Screenshot description** (what will your screenshot show the product doing?)
               3. **"Why this exists" paragraph** (2-3 sentences: what problem did you notice, and why did you build this?)
             placeholder: |-
@@ -933,7 +932,7 @@ course:
           title: The final step
           content:
             body: |-
-              You've come a long way. You have a tested pitch, a professional domain, an audience, analytics, real traffic, user feedback, testimonials, and a pricing model.
+              You've come a long way. You have a clear value proposition, a professional domain, an audience, analytics, real traffic, user feedback, testimonials, and a pricing model.
 
               This final challenge covers the practical steps to actually accept money: payment processing, banking, and the legal basics. None of this needs to be expensive or complicated at this stage.
           subtitle: From product to business
@@ -1036,7 +1035,7 @@ course:
           title: Your business next steps
           content:
             description: |-
-              What are the three most important next steps for your product right now? Think about what you've learned across all eight challenges: your pitch, your domain, your audience, your analytics, your traffic, your feedback, your pricing, and your payment setup.
+              What are the three most important next steps for your product right now? Think about what you've learned across all eight challenges: your value proposition, your domain, your audience, your analytics, your traffic, your feedback, your pricing, and your payment setup.
             placeholder: |-
               My three most important next steps:
               1.
@@ -1049,7 +1048,7 @@ course:
             description: |-
               Look at what you've built across this course:
 
-              - A **tested pitch** that makes people lean in
+              - A **clear value proposition** that makes people lean in
               - A **professional domain** and email
               - **Email capture** and a lead magnet building your audience
               - **Analytics** showing you how people use your product

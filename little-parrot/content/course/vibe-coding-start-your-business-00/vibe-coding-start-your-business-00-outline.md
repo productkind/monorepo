@@ -6,7 +6,7 @@
 
 This micro-course helps learners who have already built a digital product with an AI app builder take the next step: turning it into a real business. It walks through the full journey from testing your message, setting up your online presence, and preparing to capture visitors, to driving traffic, learning from real users, and setting up pricing and payments.
 
-The learner will go from "I built something cool" to "I have paying users and a plan to grow." By the end, the learner will have a tested pitch, a professional online presence, email capture in place, analytics showing how people use their product, real traffic, user feedback and testimonials, a pricing model, and a clear path to accepting their first payment.
+The learner will go from "I built something cool" to "I have paying users and a plan to grow." By the end, the learner will have a clear value proposition, a professional online presence, email capture in place, analytics showing how people use their product, real traffic, user feedback and testimonials, a pricing model, and a clear path to accepting their first payment.
 
 The narrative follows Dalmie, who built the Book Club Organiser app with Lovable as a hobby project for her friend's book club. It works well for them, and now she's wondering: could this become something bigger? This course follows her journey as she finds out whether anyone else would use it, and does the work to turn a hobby project into a product with paying users.
 
@@ -14,16 +14,16 @@ The narrative follows Dalmie, who built the Book Club Organiser app with Lovable
 
 ## Structure
 
-### 1. Find Your One-Line Pitch
-Discover the words that make people say "I need that" by testing your message on real people.
+### 1. Craft Your Value Proposition
+Describe the value your product delivers in one sentence, then test it on real people.
 
-- The pitch test formula: "I built [product] that helps [who] do [what] without [pain point]." Try different versions and notice which one gets a reaction.
-- How to run a pitch test: tell five people what your product does, one-on-one, using a different version of your pitch each time. Write down their exact reaction. Which version made them ask a follow-up question? That's your pitch.
-- The "you don't need" list: a company, investors, a perfect product. You need users getting value from what you built.
+- The "you don't need" list: a company, investors, a perfect product, a trademark, business cards. You need users getting value from what you built. Everything else comes later.
+- The value proposition formula: "[Product] helps [who] do [what] without [pain point]." Try different versions and notice which one gets a reaction.
+- How to test your value proposition: tell five people what your product does, one-on-one, using a different version each time. Write down their exact reaction. Which version made them ask a follow-up question? That's your value proposition.
 - Consider pivoting early if there's no traction
 - Reference to "Build a Valuable Product: How to Break Down Your Idea for Vibe Coding" for deeper product thinking
-- Example: Dalmie tries three versions of her pitch. "I built a book club app" gets polite nods. "I built an app that helps book clubs pick their next read without endless WhatsApp debates" gets people leaning in and asking how it works. She's found her pitch.
-- Exercise: Write three versions of your pitch using the formula. Test each one on a different person. Write down their reactions and pick the version that sparked the most interest.
+- Example: Dalmie tries three versions. "A book club app" gets polite nods. "Helps book clubs pick their next read without endless WhatsApp debates" gets people leaning in and asking how it works. She's found her value proposition.
+- Exercise: Write three versions of your value proposition using the formula. Test each one on a different person. Write down their reactions and pick the version that sparked the most interest.
 
 ### 2. Choose Your Domain
 Pick the right name and set up a professional presence without overspending.
@@ -64,13 +64,13 @@ Install Posthog so you can learn from every visitor from day one.
 ### 5. Get Your First Visitors
 Everything is in place. Now drive real people to your product.
 
-- Why this is the moment: you have a tested pitch (Challenge 1), a professional domain (Challenge 2), a way to capture emails (Challenge 3), and analytics tracking every visit (Challenge 4). You're not sending people into a void. Every visitor will be captured, tracked, and learned from.
+- Why this is the moment: you have a clear value proposition (Challenge 1), a professional domain (Challenge 2), a way to capture emails (Challenge 3), and analytics tracking every visit (Challenge 4). You're not sending people into a void. Every visitor will be captured, tracked, and learned from.
 - Where to list your product: Product Hunt, BetaList, and startup directories. What each platform expects and how to choose which ones fit your product.
-- What a good directory submission looks like: a clear one-line description (use your pitch from Challenge 1), a screenshot that shows the product in action, and a short "why this exists" paragraph. Walk through a before/after example of a weak vs strong submission.
+- What a good directory submission looks like: a clear one-line description (use your value proposition from Challenge 1), a screenshot that shows the product in action, and a short "why this exists" paragraph. Walk through a before/after example of a weak vs strong submission.
 - How to share your product in online communities without being spammy: lead with the problem you solve, not a link. Contribute to the community first. Share your product when it's relevant to a conversation, not as a cold announcement. Include a template for a community post that feels helpful rather than promotional.
 - Why talking to people one-on-one is still your best marketing at this stage
 - Mention the "Launch and Grow Your Lovable App" course for deeper publishing and growth strategies
-- Example: Dalmie writes a community post in a book lovers' forum: "We run a monthly book club and used to lose track of suggestions in WhatsApp. I built a free tool to collect and vote on book picks. Would love feedback from other book club organisers." She gets 20 visitors in the first week. Her BetaList listing uses her pitch from Challenge 1 and a screenshot of the voting feature. Her wait list captures 12 email addresses, and Posthog shows her exactly which pages people visit and where they drop off.
+- Example: Dalmie writes a community post in a book lovers' forum: "We run a monthly book club and used to lose track of suggestions in WhatsApp. I built a free tool to collect and vote on book picks. Would love feedback from other book club organisers." She gets 20 visitors in the first week. Her BetaList listing uses her value proposition from Challenge 1 and a screenshot of the voting feature. Her wait list captures 12 email addresses, and Posthog shows her exactly which pages people visit and where they drop off.
 - Exercise: Write a directory submission and a community post for your product using the templates. Submit to at least one directory and share in one community where your users spend time.
 
 ### 6. Listen to Your First Users
@@ -109,7 +109,7 @@ Set up the financial and legal basics so you can receive your first payment.
 
 The course follows a deliberate progression: prepare, then act, then learn, then earn.
 
-**Prepare (Challenges 1-4):** Before sending a single visitor to your product, get everything in place. A tested pitch, a professional domain, a way to capture emails, and analytics to track what happens. This way, nothing is wasted when traffic arrives.
+**Prepare (Challenges 1-4):** Before sending a single visitor to your product, get everything in place. A clear value proposition, a professional domain, a way to capture emails, and analytics to track what happens. This way, nothing is wasted when traffic arrives.
 
 **Act (Challenge 5):** Now drive traffic. Every visitor lands on a site with a professional domain, gets captured by your wait list, and is tracked by your analytics.
 
@@ -135,7 +135,7 @@ Each challenge builds on the previous one. Dalmie's Book Club Organiser serves a
 
 ## Skills Covered
 
-- Idea and message validation (pitch testing)
+- Value proposition and message testing
 - Domain selection and professional email
 - Audience building (email capture, wait lists, lead magnets)
 - Product analytics with Posthog
