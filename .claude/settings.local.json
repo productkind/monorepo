@@ -62,7 +62,9 @@
       "Bash(npm run:*)",
       "Bash(git stash:*)",
       "Bash(grep -r '\"\"memfs\"\"' */package.json package.json)",
-      "Bash(ls node_modules/memfs/lib/*.d.ts)"
+      "Bash(ls node_modules/memfs/lib/*.d.ts)",
+      "Read(//private/tmp/**)",
+      "Read(//Users/kingamagyar/**)"
     ],
     "deny": [],
     "ask": []
