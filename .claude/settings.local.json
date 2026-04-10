@@ -64,7 +64,10 @@
       "Bash(grep -r '\"\"memfs\"\"' */package.json package.json)",
       "Bash(ls node_modules/memfs/lib/*.d.ts)",
       "Read(//private/tmp/**)",
-      "Read(//Users/kingamagyar/**)"
+      "Read(//Users/kingamagyar/**)",
+      "Bash(ls -la /Users/kingamagyar/Documents/productkind/activity-tracker/logs/*.md)",
+      "Bash(/bin/date -v-1d +\"%Y-%m-%d\")",
+      "Bash(/bin/date +\"%Y-%m-%d\")"
     ],
     "deny": [],
     "ask": []
