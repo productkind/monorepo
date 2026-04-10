@@ -15,6 +15,9 @@ description: Use this checklist when generating micro-course content from an out
 - The learner should encounter a practical and hands-on step in the micro-course as soon as possible. Build their mindset during the micro-course, connecting it to practical experiences, not in a separate challenge focusing only on the mindset. Mindset points (like "you don't need investors") work best as supporting content after the learner has already engaged with a practical exercise.
 - Include in the micro-course description the transformation the learner will realise by the end. Include what the learner will be able to do after completing the micro-course.
 - When creating quiz steps, vary which answer is the correct one (not always the second one).
+- **Reusable artifact per challenge:** Every challenge should give the learner something they can reuse outside the course: a formula, a template, a checklist, a prompt template, or a script. If a challenge only explains a concept without a reusable artifact, it's incomplete.
+- **Realistic examples:** Assume the learner has zero traction, zero audience, and no business experience. Every example must be achievable by someone starting from nothing. Don't show outcomes that require luck or organic demand (e.g., "40 sign-ups in two weeks" or "strangers start asking for your product"). Show outcomes that result from specific actions the learner took.
+- **Correct URLs:** Check `../../../little-parrot/content/course/course-links.md` for course URLs and `../../../little-parrot/content/course/toolkit-links.md` for toolkit URLs before generating any cross-references. Never invent placeholder URLs.
 
 ---
 
@@ -206,6 +209,18 @@ Before finalising **the full course**, confirm:
 - [ ] Cross-references to other courses appear at relevant moments
 - [ ] Difficulty is named explicitly, not hidden
 - [ ] The course models the behaviour it teaches (e.g., builds incrementally)
+
+---
+
+## Verify Techniques Before Generating
+
+Before writing the full course content, list every technique, formula, framework, and method that will be taught across all challenges. Present this list to the user and ask for confirmation before proceeding. For each item, state:
+
+- **What it is** (e.g., "Value proposition formula: '[Product] helps [who] do [what] without [pain point]'")
+- **Where it's used** (e.g., "Challenge 1, reused in Challenge 5 for directory submissions")
+- **Source or basis** (e.g., "Simplified version of Steve Blank's positioning statement" or "Custom formula, not based on a specific framework")
+
+This step catches misaligned or unreliable techniques before they're baked into hundreds of lines of content. If you're unsure whether a technique is the right one for the audience, flag it explicitly rather than defaulting to general knowledge.
 
 ---
 
