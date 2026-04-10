@@ -67,7 +67,11 @@
       "Read(//Users/kingamagyar/**)",
       "Bash(ls -la /Users/kingamagyar/Documents/productkind/activity-tracker/logs/*.md)",
       "Bash(/bin/date -v-1d +\"%Y-%m-%d\")",
-      "Bash(/bin/date +\"%Y-%m-%d\")"
+      "Bash(/bin/date +\"%Y-%m-%d\")",
+      "WebFetch(domain:help.maven.com)",
+      "WebFetch(domain:maven.com)",
+      "WebFetch(domain:growglobal.substack.com)",
+      "WebFetch(domain:posthog.com)"
     ],
     "deny": [],
     "ask": []

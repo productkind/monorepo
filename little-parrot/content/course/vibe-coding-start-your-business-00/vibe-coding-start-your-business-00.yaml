@@ -315,30 +315,54 @@ course:
               Don't wait until your product is "ready" to start collecting emails. The earlier you start, the more people you'll have to reach out to when you launch.
           subtitle: The foundation you need
         - type: text
-          title: Add a lead magnet
+          title: What is a lead magnet?
           content:
             body: |-
-              A **lead magnet** is something valuable you give away for free in exchange for someone's email address. It makes your email capture more compelling.
+              A **lead magnet** is something valuable you give away for free in exchange for someone's email address. It makes your email capture more compelling. The principle is simple: **add value in public, sell in private.**
 
-              Examples of lead magnets:
-              - A PDF checklist or template
-              - A short guide or how-to
-              - A free tool or calculator
-              - Early access to a feature
-
-              The lead magnet should be **useful to your target audience** and related to the problem your product solves. It doesn't have to be long or polished. A one-page checklist that saves someone 30 minutes is more valuable than a 20-page ebook nobody reads.
+              Instead of asking people to sign up for "updates" (vague and uninspiring), you offer them something useful right now. They get immediate value, you get their email address.
 
               **Important:** the lead magnet only works if email capture is already in place. The visitor gets the lead magnet **in exchange for** their email address. Set up the form first, then add the lead magnet as the incentive.
           subtitle: Give people a reason to sign up
+        - type: text
+          title: What makes a good lead magnet?
+          content:
+            body: |-
+              A lead magnet needs to meet three criteria:
+
+              **1. It solves a real problem.** It should address a specific challenge or question your target audience has. Not a vague topic, but something they're actively dealing with.
+
+              **2. It offers unique value.** If someone could get the same information from a quick Google search or by asking ChatGPT, it's not compelling enough. Your lead magnet should contain something that comes from your own experience or expertise.
+
+              **3. It's well executed.** It doesn't need to be long, but it needs to feel thoughtful. A clean one-page checklist beats a sloppy ten-page ebook.
+
+              One more thing to keep in mind: **a lead magnet won't generate direct sales.** Its job is to start a relationship. You're building a list of people who trust you and are interested in what you're building. Sales come later.
+          subtitle: Three criteria to get it right
+        - type: text
+          title: Formats that work
+          content:
+            body: |-
+              The best-performing lead magnets tend to be **short, practical, and immediately useful.** PDF formats consistently outperform video-based lead magnets in conversion rates.
+
+              Formats that work well:
+              - **Templates** (fill-in-the-blank documents people can use right away)
+              - **Checklists** (step-by-step lists for a specific task)
+              - **Short guides** (one to three pages on a focused topic)
+              - **Calculators or spreadsheets** (tools that help people make decisions)
+
+              The easiest way to create one? **Repurpose knowledge you already have.** You built a product in this space, so you already know the domain. Turn what you know into a one-page template, a checklist, or a short guide. Don't create from scratch if you don't have to.
+          subtitle: Start with what you already know
         - type: text
           title: "Dalmie's wait list and lead magnet"
           content:
             body: |-
               Dalmie added a wait list form to the Book Club Organiser's landing page. She embedded a simple Google Form with one field: email address.
 
-              Then she created a **"Book Club Starter Kit"** PDF: a one-page document with discussion questions for popular books and a reading schedule template. Anyone who signs up gets the PDF sent to their email.
+              For her lead magnet, she asked herself: "What do I already know about running a book club that other organisers would find useful?" The answer was obvious: she'd been running one for a year and had figured out which discussion questions spark great conversations and how to structure a reading schedule so people actually finish the book.
 
-              The starter kit took her about an hour to make. It's directly useful to book club organisers (her target audience) and it gives them a taste of the kind of value the app provides.
+              She turned this into a **"Book Club Starter Kit"** PDF: a one-page document with her favourite discussion questions and a reading schedule template. It took about an hour to make.
+
+              It passes all three criteria: it solves a real problem (figuring out how to run a good book club meeting), it offers unique value (her own tested discussion questions, not generic ones), and it's clean and easy to use.
 
               She's now ready to capture visitors. All she needs is to send some.
           subtitle: A simple form and a one-page PDF
@@ -356,14 +380,25 @@ course:
         - type: quiz-question
           title: "Quiz: Lead magnets"
           content:
-            question: What makes a good lead magnet?
+            question: Which of these would make the strongest lead magnet for a fitness tracking app?
             options:
-              - It should be at least 20 pages long to feel valuable
-              - It should be useful to your target audience and related to the problem your product solves
-              - It should be about your product's features and pricing
-              - It should require a paid subscription to access
+              - A 30-page ebook about the history of fitness tracking
+              - A one-page "Weekly Workout Planner" template based on the creator's own routine
+              - A list of ten fitness apps with links to their websites
+              - A video explaining what the app does
             correctAnswer: 1
-            explanation: A good lead magnet is useful and relevant. A one-page checklist that saves someone time is more valuable than a long ebook nobody reads. It should relate to the problem your product solves.
+            explanation: It's short, practical, immediately useful, and based on unique experience. The ebook is too long, the app list is generic information anyone could Google, and the video is a product demo, not a lead magnet.
+        - type: quiz-question
+          title: "Quiz: Lead magnet criteria"
+          content:
+            question: What should you NOT expect a lead magnet to do?
+            options:
+              - Build a list of interested people
+              - Start a relationship with potential users
+              - Generate direct sales or revenue
+              - Give your target audience immediate value
+            correctAnswer: 2
+            explanation: "A lead magnet starts a relationship. It builds trust and interest. Direct sales come later, after people have experienced your product. Expecting a lead magnet to drive revenue sets you up for disappointment."
         - type: free-text-exercise
           title: Plan your email capture and lead magnet
           content:
@@ -371,19 +406,25 @@ course:
               Plan what you'll set up:
 
               1. **Email capture:** Where on your landing page will you add a sign-up form? What will the call to action say?
-              2. **Lead magnet:** What could you create that would be useful to your target audience? It doesn't have to be long. Think: what small thing would save them time or effort?
+              2. **Lead magnet:** What knowledge do you already have that your target audience would find useful? How will you package it (template, checklist, guide)?
+              3. **Three-criteria check:** Does your lead magnet idea solve a real problem, offer unique value, and can you execute it well?
             placeholder: |-
               Email capture: I'll add a form that says...
 
               Lead magnet idea: I'll create a... because my target audience would find it useful for...
-            systemPrompt: 'You are a business mentor helping a learner plan their email capture and lead magnet. They should describe where they will add a sign-up form, what the call to action will say, and what lead magnet they will create. Provide friendly, concise feedback (max 5 bullet points) in British English. Check that the lead magnet is relevant to their target audience and related to the problem their product solves. If the lead magnet is too ambitious, suggest simplifying it. End with encouragement.'
-            checkerPrompt: 'Check if the user has planned both an email capture form (with a call to action) and a lead magnet (that is relevant to their target audience). This is their plan:'
+
+              Three-criteria check:
+              - Solves a real problem: yes/no, because...
+              - Unique value: yes/no, because...
+              - I can execute it well: yes/no, because...
+            systemPrompt: 'You are a business mentor helping a learner plan their email capture and lead magnet. They should describe where they will add a sign-up form, what the call to action will say, and what lead magnet they will create. Provide friendly, concise feedback (max 5 bullet points) in British English. Check against the three criteria: does it solve a real problem, offer unique value (not generic info), and is it well scoped for execution? If the lead magnet could be found via a Google search, flag it and suggest how to make it more unique. If it is too ambitious, suggest simplifying. Remind them that lead magnets build relationships, not direct sales. End with encouragement.'
+            checkerPrompt: 'Check if the user has planned both an email capture form (with a call to action) and a lead magnet. The lead magnet should solve a real problem, offer unique value (not generic), and be realistic to execute. This is their plan:'
         - type: challenge-end
           title: "Your net is ready! \U0001F3A3"
           content:
             nextModule: "**Next challenge:** One more thing to set up before the traffic arrives: analytics. You'll want to see what visitors do from the very first day."
-            description: You have a plan to capture every visitor's email.
-            subDescription: "Once your form is live and your lead magnet is ready, every visitor has a reason to stay in touch. You're building an audience before you've even officially launched."
+            description: You have a plan to capture every visitor's email and give them a reason to stay in touch.
+            subDescription: "Remember: add value in public, sell in private. Your lead magnet starts a relationship. Once your form is live and your lead magnet is ready, every visitor has a reason to stay in touch. You're building an audience before you've even officially launched."
 
     - title: Set Up Analytics Before Your First Visitors Arrive
       isFree: false
