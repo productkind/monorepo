@@ -449,89 +449,134 @@ course:
           title: What is Posthog?
           content:
             body: |-
-              **Posthog** is a free analytics tool that shows you what visitors do inside your app. Unlike basic tools that only count page views, Posthog lets you see the full journey: which pages people visit, which buttons they click, where they get stuck, and where they leave.
+              **Posthog** is a free analytics tool that shows you what visitors do inside your app. It goes beyond counting page views: you can see which pages people visit, which buttons they click, where they get stuck, and where they leave.
 
-              It's free for up to 1 million events per month, which is more than enough for a product that's just getting started.
+              It's free for up to 1 million events per month, which is more than enough for a product that's getting started.
 
-              Think of it as a window into how real people experience your product. Instead of guessing what's working, you'll know.
+              Posthog also has a **session replay** feature that records how people navigate through your product. You can watch a real visitor's session like a video: see where they clicked, where they hesitated, and where they gave up. This is incredibly useful for spotting confusing parts of your product that you'd never notice yourself.
           subtitle: Your window into user behaviour
         - type: text
-          title: Key concepts
+          title: What Posthog tracks automatically
           content:
             body: |-
-              Before you set up Posthog, here are three terms you'll see in the dashboard:
+              Here's good news: once Posthog is installed, it automatically tracks a lot of useful things without any extra setup. This is called **autocapture**.
 
-              **Sessions:** One visit to your app. A person opens your app, browses around, and leaves. That's one session. If they come back tomorrow, that's a new session.
+              Out of the box, Posthog records:
+              - **Pageviews:** which pages people open
+              - **Page leaves:** when they leave a page
+              - **Clicks:** which buttons and links they interact with
+              - **Form submissions:** when they fill in and submit a form
 
-              **Pageviews:** Each page someone opens within a session. If a visitor looks at your homepage, then your pricing page, that's two pageviews in one session.
-
-              **Custom events:** Specific actions you choose to track, like clicking a "Sign up" button or submitting a form. These are the most useful because they tell you what people actually **do**, not where they browse.
-          subtitle: Sessions, pageviews, and custom events
+              This means you get useful data from the moment your first visitor arrives, even before you set up any custom tracking.
+          subtitle: You get a lot for free
         - type: text
-          title: How to add Posthog to your app
+          title: Custom events for what matters most
           content:
             body: |-
-              You'll use your AI app builder to add Posthog. But this is one of those tasks where the AI often makes mistakes. Common problems:
+              Autocapture handles the basics, but for the actions that matter most to your business, you'll want to set up **custom events**.
 
-              - The tracking code gets added but **doesn't actually fire** (nothing shows up in Posthog)
-              - Events are **named inconsistently** (sometimes "signup_click", sometimes "SignupClick", sometimes "click_signup")
-              - The code is placed in the wrong part of the app and **only tracks some pages**
+              A custom event is a specific action you choose to track by name. For example: "book club created", "vote cast", or "user signed up".
 
-              To avoid these issues, use a structured prompt. The next step has a template you can adapt.
-          subtitle: Common mistakes to avoid
+              Why bother when autocapture already tracks clicks? Two reasons:
+
+              1. **Clarity:** autocapture labels a button click as "clicked button". A custom event called "book club created" tells you exactly what happened in your product.
+              2. **Reliability:** if you change your design (rename a button, move a form), autocapture labels change too. Custom event names stay consistent.
+
+              Posthog recommends naming custom events in **[object] [verb]** format: "book club created", "book suggestion added", "vote cast". This keeps your events readable as the list grows.
+          subtitle: Name the actions that matter
         - type: text
-          title: Prompt template for adding Posthog
+          title: The prompt to add Posthog to your app
           content:
             body: |-
-              Here's a prompt template you can adapt for your AI app builder:
+              You'll use your AI app builder to add Posthog. Here's a concrete prompt you can copy and adapt:
 
               ---
 
-              *Add Posthog analytics to my app. Here's what I need:*
+              *Add Posthog analytics to my app using the posthog-js library. Here's what I need:*
 
-              *1. Install the Posthog JavaScript library*
-              *2. Initialise it on every page with my project API key: [YOUR_KEY]*
-              *3. Track these custom events with these exact names:*
-              *- "page_viewed" on every page load, including the page path*
-              *- "signup_form_submitted" when someone submits the sign-up form*
-              *- "feedback_button_clicked" when someone clicks the feedback button*
-              *- [add your own events here]*
-              *4. Verify it works: after setup, log one test event and confirm it appears in the Posthog dashboard*
+              *1. Install the posthog-js package*
+              *2. Initialise Posthog on app startup so it runs on every page. Use my project token: [YOUR_KEY_HERE] and the host: https://us.i.posthog.com (or https://eu.i.posthog.com if you're in Europe). Enable debug mode during development so I can verify events are firing.*
+              *3. Enable session replay so I can watch how users navigate my app.*
+              *4. Track these custom events using posthog.capture() with these exact names:*
+              *- "signup form submitted" when someone submits the sign-up form*
+              *- "feedback button clicked" when someone clicks the feedback button*
+              *- [add your own events here, using "object verb" naming]*
+              *5. Make sure Posthog initialises on every page, not only the homepage.*
 
               ---
 
-              Replace the example events with the actions that matter most for your product. Be explicit about event names so they're consistent.
-          subtitle: A structured prompt that avoids the common mistakes
+              **Where to find your project token:** Sign up at posthog.com (free), create a project, and you'll find your project token in the project settings.
+
+              **Replace the example events** with the actions that matter most in your product. Use the "object verb" naming format to keep things consistent.
+          subtitle: Copy, adapt, and paste into your AI app builder
         - type: text
-          title: What to look at first
+          title: How to verify it works
+          content:
+            body: |-
+              After your AI app builder has added Posthog, you need to check that it's actually working. Here's how:
+
+              1. Open your app in a browser
+              2. Click around: visit a few pages, click some buttons, submit a form
+              3. Go to your Posthog dashboard (app.posthog.com)
+              4. Look for your session in the **Activity** or **Events** tab
+
+              If debug mode is enabled (as the prompt requests), you'll also see events logged in your browser's developer console. Don't worry if you're not sure how to open that. The important check is: **does your session appear in the Posthog dashboard?**
+
+              If nothing shows up, the most common causes are:
+              - The project token is wrong or missing
+              - Posthog was only initialised on one page, not all of them
+              - An ad blocker in your browser is blocking Posthog
+
+              Try in an incognito/private browser window with ad blockers disabled.
+          subtitle: Check the dashboard, not the code
+        - type: text
+          title: Session replay
+          content:
+            body: |-
+              Once Posthog is running, open the **Replay** section in your dashboard. Here you can watch recordings of real visitor sessions.
+
+              You'll see exactly what your visitors saw: which pages they opened, where they clicked, where they scrolled, where they paused, and where they left. It's like looking over someone's shoulder as they use your product.
+
+              This is one of the most powerful tools for improving your product. You'll spot things that analytics numbers alone can't show:
+              - A button that people hover over but never click (confusing label?)
+              - A page where people scroll up and down repeatedly (looking for something they can't find?)
+              - A form that people start filling in but abandon halfway (too long or unclear?)
+
+              You don't need to watch every session. Start by watching a few each week, especially sessions where someone signed up or where someone left quickly. The patterns will stand out.
+          subtitle: Watch how real people use your product
+        - type: text
+          title: What to look at each week
           content:
             body: |-
               Once Posthog is running and you have some visitors, you don't need to analyse everything. At this stage, you're answering **one question:**
 
               **"Are people using the thing I built, and which parts?"**
 
-              Start with:
+              Check these things once a week:
               - **Which pages get the most visits?** This tells you what attracts people.
               - **Where do people drop off?** This tells you where something is confusing or broken.
               - **Which custom events fire most?** This tells you which features people actually use.
+              - **Watch 2-3 session replays.** Pick one from someone who signed up and one from someone who left quickly. What did they do differently?
 
-              Don't get lost in dashboards. Check these three things once a week and use what you find to improve your product.
-          subtitle: Three things to check each week
+              Don't get lost in dashboards. These four checks are enough for now.
+          subtitle: Four things, once a week
         - type: text
           title: Dalmie sets up Posthog
           content:
             body: |-
-              Dalmie signed up for Posthog (free plan), got her API key, and used the prompt template to ask Lovable to add tracking to the Book Club Organiser.
+              Dalmie signed up for Posthog (free plan), got her project token, and adapted the prompt to ask Lovable to add tracking to the Book Club Organiser.
 
-              She tracked three custom events:
-              - **"book_club_created"** when someone creates a new book club
-              - **"book_suggestion_added"** when someone adds a book
-              - **"vote_cast"** when someone votes on a book
+              She set up three custom events:
+              - **"book club created"** when someone creates a new book club
+              - **"book suggestion added"** when someone adds a book
+              - **"vote cast"** when someone votes on a book
 
-              After setup, she visited her own app and checked the Posthog dashboard. Her session appeared, and all three events fired correctly when she tested them.
+              She also enabled session replay so she could watch how people navigate the app.
+
+              After setup, she opened the app in an incognito window and clicked around. She checked the Posthog dashboard: her session appeared, all three custom events fired correctly, and she could see her own session replay.
 
               She's now ready to see what real visitors do.
-          subtitle: Three custom events, one test visit
+          subtitle: Three custom events, session replay, one test visit
         - type: quiz-question
           title: "Quiz: Why set up analytics now?"
           content:
@@ -544,31 +589,45 @@ course:
             correctAnswer: 2
             explanation: Your first visitors are the most valuable to learn from. If you set up analytics after they've already visited, that data is gone. You can't go back and see what they did.
         - type: quiz-question
-          title: "Quiz: Custom events"
+          title: "Quiz: Autocapture vs custom events"
           content:
-            question: What's the difference between a pageview and a custom event?
+            question: Why should you set up custom events when Posthog already autocaptures clicks?
             options:
-              - Pageviews track clicks, custom events track pages
-              - Pageviews are free, custom events cost money
-              - Pageviews record which pages are opened, custom events record specific actions you choose to track
-              - There is no difference, they mean the same thing
+              - Autocapture doesn't work on mobile devices
+              - Custom events have clearer names and stay consistent even when you change your design
+              - Custom events are faster than autocapture
+              - You need custom events before Posthog will start recording sessions
+            correctAnswer: 1
+            explanation: Autocapture labels actions generically ("clicked button") and the labels change if you redesign. Custom events like "book club created" are clear, specific, and stay consistent over time.
+        - type: quiz-question
+          title: "Quiz: Session replay"
+          content:
+            question: What can session replay help you spot that analytics numbers alone cannot?
+            options:
+              - How many visitors you had last week
+              - Which country your visitors come from
+              - A button that people hover over but never click, or a form they abandon halfway
+              - How fast your pages load
             correctAnswer: 2
-            explanation: Pageviews automatically record each page someone opens. Custom events track specific actions you define, like clicking a button or submitting a form. Custom events are more useful because they tell you what people actually do.
+            explanation: Session replay shows you the qualitative side of user behaviour. You can see hesitation, confusion, and frustration that numbers alone can't reveal.
         - type: reflection
           title: Plan your Posthog setup
           content:
-            description: What are the three most important actions a visitor can take in your product? These will become your custom events. Think about the actions that tell you whether someone is getting value from your product.
+            description: |-
+              What are the three most important actions a visitor can take in your product? These will become your custom events. Use the "object verb" naming format.
+
+              Think about the actions that tell you whether someone is getting value from your product.
             placeholder: |-
               The three most important actions in my product are:
-              1.
-              2.
-              3.
+              1. "[object] [verb]" — when someone...
+              2. "[object] [verb]" — when someone...
+              3. "[object] [verb]" — when someone...
             subDescription: "These events will tell you whether people are using the core of your product, or getting stuck before they reach it."
         - type: challenge-end
           title: "You're ready to see everything! \U0001F4CA"
           content:
             nextModule: "**Next challenge:** Everything is in place. A clear value proposition, a professional domain, email capture, and analytics. Time to open the doors and let people in."
-            description: You've set up analytics so every visitor teaches you something.
+            description: You've set up analytics and session replay so every visitor teaches you something.
             subDescription: "You now have a clear value proposition (Challenge 1), a professional domain (Challenge 2), email capture (Challenge 3), and analytics tracking (this challenge). Nothing will be wasted when traffic arrives."
 
     - title: Get Your First Visitors

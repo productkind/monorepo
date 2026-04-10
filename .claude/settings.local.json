@@ -71,7 +71,9 @@
       "WebFetch(domain:help.maven.com)",
       "WebFetch(domain:maven.com)",
       "WebFetch(domain:growglobal.substack.com)",
-      "WebFetch(domain:posthog.com)"
+      "WebFetch(domain:posthog.com)",
+      "Bash(curl -sL \"https://api.github.com/repos/PostHog/posthog.com/git/trees/master?recursive=1\")",
+      "WebFetch(domain:raw.githubusercontent.com)"
     ],
     "deny": [],
     "ask": []
