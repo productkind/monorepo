@@ -73,7 +73,9 @@
       "WebFetch(domain:growglobal.substack.com)",
       "WebFetch(domain:posthog.com)",
       "Bash(curl -sL \"https://api.github.com/repos/PostHog/posthog.com/git/trees/master?recursive=1\")",
-      "WebFetch(domain:raw.githubusercontent.com)"
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:stripe.com)",
+      "Bash(curl -sL \"https://webcache.googleusercontent.com/search?q=cache:stripe.com/en-pt/resources/more/how-to-calculate-the-break-even-point\" -H \"User-Agent: Mozilla/5.0\")"
     ],
     "deny": [],
     "ask": []

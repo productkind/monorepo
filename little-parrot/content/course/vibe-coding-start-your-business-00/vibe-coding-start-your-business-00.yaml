@@ -11,7 +11,7 @@ course:
     - Get your first real visitors through directories and community posts
     - Collect honest user feedback and real testimonials
     - Choose a pricing model informed by real usage data
-    - Set up the financial and legal basics to accept your first payment
+    - Calculate your break-even point and build a sustainable business
   challenges:
     - title: Craft Your Value Proposition
       isFree: true
@@ -1015,48 +1015,97 @@ course:
         - type: challenge-end
           title: "You've got a pricing model! \U0001F4B0"
           content:
-            nextModule: "**Next challenge:** The final step. Let's set up the financial and legal basics so you can accept your first payment."
+            nextModule: "**Next challenge:** The final step. Let's know your numbers, set up payments, and build a business that lasts."
             description: You've chosen a pricing model based on real data, not guesswork.
             subDescription: "Your pricing isn't set in stone. Start with what feels right based on your data and feedback, then adjust as you learn more. The important thing is that you have a model and a number."
 
-    - title: Get Ready to Accept Payment
+    - title: Build a Sustainable Business
       isFree: false
       skills:
-        - Payment Setup
-        - Legal Basics
-        - Business Planning
-      description: Set up the financial and legal basics so you can receive your first payment.
-      completionTime: '10:00'
+        - Financial Health
+        - Break-Even Analysis
+        - Business Sustainability
+      description: Know your numbers, set up payments, and build a business that lasts.
+      completionTime: '12:00'
       steps:
         - type: text
-          title: The final step
+          title: Sustainable over fast
           content:
             body: |-
-              You've come a long way. You have a clear value proposition, a professional domain, an audience, analytics, real traffic, user feedback, testimonials, and a pricing model.
+              There's a narrative in the startup world that says you need to grow fast or die. Raise money, hire a team, scale at all costs.
 
-              This final challenge covers the practical steps to actually accept money: payment processing, banking, and the legal basics. None of this needs to be expensive or complicated at this stage.
-          subtitle: From product to business
+              That's not the only way. And for most people building a product from a side project, it's not the right way.
+
+              You're building a **bootstrapped business**: a product that earns its own money, without investors, without debt, and without the pressure to grow at someone else's pace. The goal is **profitability**, not headcount. **Freedom**, not funding rounds.
+
+              Most bootstrapped products that reach sustainable income do so within 12 to 18 months of launching a paid version. That's a realistic timeline. Not weeks, not years. Months of consistent, focused work.
+
+              This challenge is about knowing your numbers and setting up the basics so your business can sustain itself.
+          subtitle: You're not building the next unicorn. You're building something that lasts.
         - type: text
-          title: What is Stripe?
+          title: Know your break-even point
           content:
             body: |-
-              **Stripe** is a payment processing service. It handles the technical and financial complexity of accepting credit card payments online, so you don't have to.
+              The most important number for your business right now is your **break-even point**: the minimum you need to earn each month to cover your costs.
 
-              When a customer pays through Stripe, the money goes to your Stripe account. You then transfer it to your bank account. Stripe takes a small fee per transaction (typically around 2.9% + a fixed amount per transaction).
+              The formula is straightforward:
 
-              To set up Stripe, you'll need:
-              - An email address
-              - Your personal details (name, address, date of birth)
-              - A bank account to receive payouts
-              - Depending on your location, a tax identification number
+              **Break-even point = Fixed costs / (Price per user - Variable cost per user)**
 
-              Integrating Stripe into your product is a topic on its own. We'll cover that in a separate course. For now, the goal is to **create your Stripe account** so it's ready when you need it.
-          subtitle: The tool that handles payments for you
+              **Fixed costs** are what you pay every month regardless of how many users you have: your domain, Google Workspace, any tools you subscribe to. These stay the same whether you have 1 user or 1,000.
+
+              **Variable costs** are what increases with each paying user: Stripe's transaction fee (typically around 2.9% + a fixed amount per transaction) is the main one at this stage.
+
+              **Price per user** is what you charge per month (from Challenge 7).
+
+              Your break-even point tells you: **how many paying users do I need each month to stop losing money?** Everything above that number is profit.
+          subtitle: The one number that tells you if your business is viable
         - type: text
-          title: Simple banking solutions
+          title: "Dalmie's break-even calculation"
           content:
             body: |-
-              You need a bank account that can receive payments from Stripe. If you don't want to use your personal bank account (or if your bank charges high fees for international transactions), two free options work well:
+              Dalmie's monthly fixed costs:
+              - Domain: ~$1/month ($12/year)
+              - Google Workspace: $7/month
+              - Posthog: $0 (free tier)
+              - **Total fixed costs: $8/month**
+
+              Her price: **$5/month** per paying book club.
+
+              Her variable cost per user: Stripe takes about 2.9% + $0.30 per transaction. On a $5 payment, that's roughly **$0.45 per user per month**.
+
+              **Break-even = $8 / ($5.00 - $0.45) = $8 / $4.55 ≈ 2 paying users**
+
+              Dalmie only needs **2 paying book clubs** to cover her costs. Everything after that is profit.
+
+              This changes how she thinks about growth. She doesn't need hundreds of users to have a viable business. She needs two. That feels achievable.
+          subtitle: Two paying users to break even
+        - type: text
+          title: Metrics that matter vs metrics that feel good
+          content:
+            body: |-
+              When you start getting data, it's tempting to check numbers that make you feel good: page views, sign-ups, social media followers. These are **vanity metrics**. They look impressive but don't tell you if your business is healthy.
+
+              A simple test: **if improving this number directly increases your revenue or reduces your costs, it's a real metric. If it only makes you feel good, it's vanity.**
+
+              **Vanity metrics** (don't obsess over these):
+              - Total sign-ups (if most never come back)
+              - Page views (traffic without conversion is noise)
+              - Social media followers (followers don't pay bills)
+
+              **Metrics that matter** (check these regularly):
+              - **Paying users:** how many people are actually paying you?
+              - **Churn:** how many paying users cancel each month? If you're losing users as fast as you're gaining them, growth is an illusion.
+              - **Break-even gap:** are you above or below your break-even point?
+              - **Retention:** do users come back after the first week? If they don't, your product isn't delivering enough value to keep them.
+          subtitle: "The test: does this number pay the bills?"
+        - type: text
+          title: Keep your money separate from day one
+          content:
+            body: |-
+              Open a **separate bank account** for your product's income. This is one of the simplest things you can do, and it makes everything easier: tracking how your business is doing, preparing for taxes, and understanding your cash flow.
+
+              Two free options that work well:
 
               **Wise** (wise.com) — Great for receiving payments in multiple currencies with low fees. Especially useful if your customers are international.
 
@@ -1064,17 +1113,33 @@ course:
 
               Both are free to open. You don't need a registered company to use them (personal accounts work fine at this stage).
 
-              Having a separate account for your product's income makes it much easier to track how your business is doing, and your accountant will thank you later.
-          subtitle: Keep business money separate from personal money
+              Cash flow problems are one of the main reasons small businesses fail. Keeping your business money separate means you always know exactly how much your product is earning and spending. Your accountant will thank you later.
+          subtitle: A separate account changes how you see your business
+        - type: text
+          title: Set up Stripe
+          content:
+            body: |-
+              **Stripe** is a payment processing service that handles accepting credit card payments online.
+
+              When a customer pays through Stripe, the money goes to your Stripe account. You then transfer it to your separate business bank account.
+
+              To set up Stripe, you'll need:
+              - An email address
+              - Your personal details (name, address, date of birth)
+              - A bank account to receive payouts
+              - Depending on your location, a tax identification number
+
+              Integrating Stripe into your product is a topic on its own. For now, the goal is to **create your Stripe account** so it's ready when you need it.
+          subtitle: Get your payment account ready
         - type: text
           title: Legal basics (keep it simple)
           content:
             body: |-
-              Here's what many first-time founders get wrong: they spend weeks researching company structures before they've earned their first pound.
+              Many first-time founders spend weeks researching company structures before they've earned a single payment.
 
               **The rule:** only register a company when you have solid revenue or a specific deal requires it. Setting up and operating a company costs money (registration fees, annual filings, accountant fees). Until you're earning enough to justify those costs, keep it simple.
 
-              In most countries, you can operate as a **sole trader** (also called sole proprietor or self-employed) to start. This means you're personally responsible for the business, but there's minimal paperwork and cost.
+              In most countries, you can operate as a **sole trader** (also called sole proprietor or self-employed) to start. Minimal paperwork, minimal cost.
 
               **What you should do now:**
               - Research the simplest legal framework for your location
@@ -1082,33 +1147,45 @@ course:
               - Keep records of your income and expenses from day one
 
               An accountant can tell you exactly what structure makes sense for your situation and location. A one-hour consultation is a small investment that can save you from expensive mistakes.
+
+              **Toolkit:** The [Accountant Call Preparation Template](https://littleparrot.app/nest/toolkit/TODO) has a list of questions to bring to your first accountant call, covering legal structure, taxes, deductible expenses, and record-keeping. Fill in your details before the call so you make the most of the time.
           subtitle: Don't register a company until you need one
         - type: text
-          title: When to invest more (and when to keep your day job)
+          title: "Dalmie's sustainable plan"
           content:
             body: |-
-              A common question at this stage: **should I go all in?**
+              Dalmie opened a Wise account for the Book Club Organiser's finances. She signed up for Stripe and connected it to the Wise account.
 
-              Base this decision on traction, not hope:
+              She didn't register a company. She booked a one-hour call with an accountant to understand her tax obligations and registered as a sole trader.
 
-              - **Keep it as a side project** if you have fewer than 50 active users and no paying customers. Dedicate a few hours a week and keep growing steadily.
-              - **Consider investing more time** when you have paying customers and can see a path to covering your basic expenses. Maybe go part-time at your day job.
-              - **Consider going full-time** when your product revenue can cover your living expenses for at least 6 months, or you have savings to bridge the gap.
+              She keeps her day job and dedicates five hours a week to growing the Book Club Organiser. Her break-even point is 2 paying book clubs. Her goal for the first three months: reach 10 paying users. That's $45.50/month in profit after Stripe fees. Not life-changing, but it proves the model works.
 
-              There's no rush. Many successful products started as side projects that grew slowly over months or years. Small, consistent effort each week can get you further than you expect.
-          subtitle: Decisions based on traction, not hope
-        - type: text
-          title: "Dalmie's next steps"
-          content:
-            body: |-
-              Dalmie signed up for Stripe and connected a Wise account to keep her business finances separate.
-
-              She didn't register a company. Instead, she booked a one-hour call with an accountant to understand her tax obligations and registered as a sole trader.
-
-              She keeps her day job and dedicates five hours a week to growing the Book Club Organiser. She knows that if she reaches 100 paying users at $5/month, that's $500/month in revenue, not enough to quit her job, but enough to justify investing more time and maybe some money into marketing.
+              She tracks three numbers each month: paying users, churn, and whether she's above break-even. She ignores how many people visited her landing page. She focuses on how many people are paying and staying.
 
               One step at a time.
-          subtitle: Stripe, Wise, accountant, five hours a week
+          subtitle: Five hours a week, three numbers to track
+        - type: quiz-question
+          title: "Quiz: Break-even point"
+          content:
+            question: "Your fixed costs are $15/month. You charge $8/month. Stripe takes about $0.53 per transaction. Roughly how many paying users do you need to break even?"
+            options:
+              - 1 user
+              - 2 users
+              - 5 users
+              - 15 users
+            correctAnswer: 1
+            explanation: "Break-even = $15 / ($8.00 - $0.53) = $15 / $7.47 ≈ 2 users. You need about 2 paying users to cover your fixed costs each month."
+        - type: quiz-question
+          title: "Quiz: Vanity vs real metrics"
+          content:
+            question: Which of these is a vanity metric?
+            options:
+              - Number of paying users
+              - Monthly churn rate
+              - Total sign-ups (including those who never came back)
+              - Whether you're above or below your break-even point
+            correctAnswer: 2
+            explanation: "Total sign-ups look impressive but don't tell you if your business is healthy. If most sign-ups never return, the number is misleading. Paying users, churn, and break-even directly connect to your business viability."
         - type: quiz-question
           title: "Quiz: When to register a company"
           content:
@@ -1120,28 +1197,48 @@ course:
               - After your first visitor
             correctAnswer: 2
             explanation: Company registration costs money and creates ongoing obligations. Until you have revenue that justifies those costs, operating as a sole trader is simpler and cheaper.
-        - type: quiz-question
-          title: "Quiz: Going full-time"
-          content:
-            question: What's the best signal that it might be time to invest more time in your product?
-            options:
-              - You've had the idea for more than a year
-              - You have paying customers and can see a path to covering basic expenses
-              - Your friends think it's a great idea
-              - You've listed it on five directories
-            correctAnswer: 1
-            explanation: Paying customers and a clear revenue path are concrete signals. Friends' enthusiasm and time spent thinking about the idea are not reliable indicators of business viability.
-        - type: reflection
-          title: Your business next steps
+        - type: free-text-exercise
+          title: Calculate your break-even point
           content:
             description: |-
-              What are the three most important next steps for your product right now? Think about what you've learned across all eight challenges: your value proposition, your domain, your audience, your analytics, your traffic, your feedback, your pricing, and your payment setup.
+              Calculate your break-even point using your own numbers:
+
+              1. **Fixed costs:** List your monthly fixed costs (domain, email, tools). Add them up.
+              2. **Price per user:** What do you charge per month? (from Challenge 7)
+              3. **Variable cost per user:** Stripe takes roughly 2.9% + $0.30 per transaction. Calculate what that is for your price.
+              4. **Break-even:** Fixed costs / (Price - Variable cost) = how many paying users?
             placeholder: |-
-              My three most important next steps:
+              My monthly fixed costs:
+              -
+              -
+              Total: $
+
+              Price per user: $/month
+              Variable cost per user (Stripe fee): ~$
+              Contribution per user: $
+
+              Break-even = $ / $ = approximately __ paying users
+            systemPrompt: 'You are a business mentor helping a learner calculate their break-even point. They should list their fixed costs, their price per user, their variable cost (Stripe fees), and calculate how many paying users they need. Provide friendly, concise feedback (max 5 bullet points) in British English. Check the maths. If they forgot common fixed costs (domain, email), mention them. If the break-even number seems surprisingly high, suggest they review their pricing or costs. Remind them that this is the minimum, not the goal. End with encouragement.'
+            checkerPrompt: 'Check if the user has listed fixed costs, a price per user, a variable cost per user, and calculated a break-even number. Verify the arithmetic is roughly correct. This is their calculation:'
+        - type: reflection
+          title: Your sustainable business plan
+          content:
+            description: |-
+              Based on everything you've learned across the eight challenges, write down:
+
+              1. **Your break-even point** (how many paying users you need)
+              2. **The three metrics you'll track each month** (no vanity metrics)
+              3. **One thing you'll do this week** to move closer to your first paying user
+            placeholder: |-
+              Break-even: I need __ paying users to cover my costs.
+
+              Three metrics I'll track:
               1.
               2.
               3.
-            subDescription: "Write down what you'll do this week. Not this month. This week."
+
+              This week I will:
+            subDescription: "You don't need a business plan. You need three numbers and one next step."
         - type: course-end
           title: "You're in business! \U0001F389"
           content:
@@ -1151,16 +1248,17 @@ course:
               - A **clear value proposition** that makes people lean in
               - A **professional domain** and email
               - **Email capture** and a lead magnet building your audience
-              - **Analytics** showing you how people use your product
+              - **Analytics and session replay** showing you how people use your product
               - **Real visitors** from directories and communities
               - **User feedback** and a real testimonial on your landing page
               - A **pricing model** based on real data
-              - A clear path to **accepting your first payment**
+              - A **break-even point** you calculated yourself
+              - The **financial and legal basics** to accept your first payment
 
-              You went from "I built something cool" to "I'm running a product." That's a transformation most people only dream about.
+              You went from "I built something cool" to "I know exactly what it takes to make this sustainable." That's a transformation most people only dream about.
             subDescription: |-
-              What surprised you most during this course? What will you do differently now?
+              You're not chasing hypergrowth. You're building something profitable, sustainable, and yours. No investors telling you what to do. No pressure to scale before you're ready. Your product, your pace, your business.
 
-              Your product isn't done. Products are never done. But you now have the foundation, the tools, and the mindset to grow it into something real.
+              Products are never done. But you now have the foundation, the numbers, and the mindset to grow this into something real.
 
               Good luck, and happy building!
