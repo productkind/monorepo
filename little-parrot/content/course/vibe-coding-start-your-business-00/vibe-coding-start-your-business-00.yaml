@@ -1,5 +1,5 @@
 course:
-  id: b3d7f1a2-8c4e-4b9a-a6d2-f0e8c7b5a3d1
+  id: b7455f5a-166c-4614-a4ca-be83369ff7f1
   note: ''
   cover: /courses/vibe-coding-start-your-business-00/cover.gif
   title: 'Build a Business: From Vibe Coded Product to Paying Users'
@@ -68,7 +68,7 @@ course:
             body: |-
               One thing: **people getting value from what you built.** That's the only proof that counts.
 
-              Everything else comes later, once you have evidence that people want what you built. This course will walk you through how to get that evidence, step by step.
+              Everything else comes later, once you have evidence that people want what you built. This course will walk you through how to get that evidence.
 
               But first, let's find out if you can describe your product in a way that makes someone who's never seen it say, "I need that." That starts with your **value proposition**: a clear description of the value your product delivers.
 
