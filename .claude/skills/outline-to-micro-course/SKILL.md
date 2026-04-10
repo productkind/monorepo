@@ -94,23 +94,35 @@ Micro-course content should follow these principles to ensure it's engaging, eff
 
 ### 3. Built-In Practice
 
-**Requirement:** The challenge includes multiple moments where the learner does something, not just watches or reads.
+**Requirement:** The challenge includes multiple moments where the learner does something, not just watches or reads. Interactive steps should be distributed throughout the challenge, not clumped at the end.
+
+**Effort gradient within a challenge:** Structure interactions so effort increases gradually:
+- **Low effort (after 1-2 text steps):** Scenario-based quiz where the learner makes a judgement call on a given example. Not recall ("What is X?") but evaluation ("Is this a good X? Why?").
+- **Medium effort (mid-challenge):** Evaluate someone else's work using the criteria just taught. "Your friend made a 30-page PDF about the history of meal planning. Is this a good lead magnet for her meal planning app?" The learner applies criteria to a given situation, not their own.
+- **High effort (end of challenge):** Apply what they've learned to their own product. By this point, they've practised the judgement on easier examples, so applying it to their own situation feels like a natural next step rather than a cold start.
+
+**The pattern to avoid:** Read, read, read, read, quiz, quiz, exercise. This makes the learner passive for too long and then overwhelmed at the end.
+
+**The pattern to follow:** Text, text, quiz (judge a scenario), text, text, quiz (evaluate someone's work), exercise (apply to your own). The learner never reads more than 2-3 text steps before doing something.
+
+**Important:** Don't ask the learner to apply concepts to their own product after every text step. That requires high mental effort and becomes exhausting. Save "apply to yours" for the end of the challenge. Mid-challenge interactions should ask the learner to evaluate given examples, not generate their own.
 
 **Acceptable practice formats:**
-- "Pause and try this" practical micro-exercise
-- Guided replication of a demonstrated technique
+- Scenario-based quiz (judgement, not recall)
+- Evaluate a given example against criteria just taught
 - Reflection question that requires writing a response
-- Quiz questions
+- Free-text exercise applying concepts to the learner's own product
 
 **Practice must:**
-- Appear before the challenge ends
+- Be distributed throughout the challenge, not grouped at the end
 - Take under 3 minutes to complete
-- Directly reinforce the single concept being taught
-- Multiple quiz questions are included in a challenge
+- Directly reinforce the concept taught in the preceding text steps
 
 **Fail indicators:**
-- Practice requires significant time investment
-- Practice tests something not explicitly taught in this challenge
+- All interactive steps are grouped at the end of the challenge
+- Quiz questions test recall of definitions instead of judgement or application
+- The learner reads more than 3 text steps in a row without doing something
+- Every interactive step asks the learner to apply to their own product (too much high-effort)
 
 ---
 

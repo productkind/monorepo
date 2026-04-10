@@ -122,6 +122,17 @@ course:
 
               Version 3 won because it named the specific pain point ("endless WhatsApp debates") that book club organisers instantly recognise. The first two were too vague to trigger that recognition.
           subtitle: Same product, different reactions
+        - type: quiz-question
+          title: "Quiz: Evaluate a value proposition"
+          content:
+            question: "A friend built a habit-tracking app. She describes it as: \"HabitFlow is a productivity platform with gamification features, push notifications, social sharing, and AI-powered insights.\" What's the biggest problem with this value proposition?"
+            options:
+              - It's too short
+              - It lists features instead of naming who it helps and what pain it removes
+              - It doesn't mention the price
+              - It uses too many technical terms
+            correctAnswer: 1
+            explanation: "A strong value proposition names who it's for and what pain it removes. \"HabitFlow helps busy professionals build daily habits without relying on willpower\" would be stronger because it names the audience and the pain point."
         - type: text
           title: How to test your value proposition
           content:
@@ -137,17 +148,6 @@ course:
 
               **What if none of them work?** That's useful information too. It might mean the problem you're solving isn't painful enough, or you haven't found the right audience yet.
           subtitle: Five conversations, three versions, one winner
-        - type: quiz-question
-          title: "Quiz: What makes a value proposition work?"
-          content:
-            question: Why did Dalmie's third version get the best reaction?
-            options:
-              - It was the shortest version
-              - It named a specific pain point the audience recognised
-              - It mentioned more features than the other versions
-              - It used more professional language
-            correctAnswer: 1
-            explanation: The third version worked because it named a specific, relatable pain point ("endless WhatsApp debates") that book club organisers immediately recognised as their own struggle.
         - type: quiz-question
           title: "Quiz: Testing your value proposition"
           content:
@@ -228,6 +228,17 @@ course:
 
               For most first products aimed at a non-technical audience, **.com is the safest bet** if you can get one at a reasonable price.
           subtitle: ".com, .co, .app, .io: what's the difference?"
+        - type: quiz-question
+          title: "Quiz: Choosing a domain"
+          content:
+            question: Which domain would be the best choice for a recipe-sharing app aimed at home cooks?
+            options:
+              - recipe-sharing-app-2024.io
+              - recipeshare.com
+              - rs.app
+              - my-recipes.co.uk
+            correctAnswer: 1
+            explanation: It's short, memorable, easy to spell, has no hyphens or numbers, and uses .com which is the most recognised extension for a non-technical audience.
         - type: text
           title: Set up a professional email
           content:
@@ -238,6 +249,17 @@ course:
 
               The technical setup (connecting your domain to Google Workspace, configuring email settings) can feel intimidating. We've included a **step-by-step setup guide in the toolkit** for this course that walks you through every click.
           subtitle: Trust starts in the inbox
+        - type: quiz-question
+          title: "Quiz: Professional email"
+          content:
+            question: Why does sending emails from hello@yourproduct.com matter?
+            options:
+              - It's technically required for sending bulk emails
+              - It makes your emails load faster
+              - It signals professionalism and builds trust with customers
+              - It prevents your emails from going to spam
+            correctAnswer: 2
+            explanation: A professional email on your own domain signals that your product is serious. It builds trust when you're reaching out to potential users, responding to feedback, or sending updates.
         - type: text
           title: Register on Google Business Profile
           content:
@@ -263,28 +285,6 @@ course:
 
               She could have spent days agonising over the perfect name. Instead, she picked something clear and moved on. The domain can always be changed later if needed, but momentum can't.
           subtitle: Under $25 for a professional presence
-        - type: quiz-question
-          title: "Quiz: Choosing a domain"
-          content:
-            question: Which domain would be the best choice for a recipe-sharing app aimed at home cooks?
-            options:
-              - recipe-sharing-app-2024.io
-              - recipeshare.com
-              - rs.app
-              - my-recipes.co.uk
-            correctAnswer: 1
-            explanation: It's short, memorable, easy to spell, has no hyphens or numbers, and uses .com which is the most recognised extension for a non-technical audience.
-        - type: quiz-question
-          title: "Quiz: Professional email"
-          content:
-            question: Why does sending emails from hello@yourproduct.com matter?
-            options:
-              - It's technically required for sending bulk emails
-              - It makes your emails load faster
-              - It signals professionalism and builds trust with customers
-              - It prevents your emails from going to spam
-            correctAnswer: 2
-            explanation: A professional email on your own domain signals that your product is serious. It builds trust when you're reaching out to potential users, responding to feedback, or sending updates.
         - type: reflection
           title: Research your domain options
           content:
@@ -329,6 +329,17 @@ course:
 
               Don't wait until your product is "ready" to start collecting emails. The earlier you start, the more people you'll have to reach out to when you launch.
           subtitle: The foundation you need
+        - type: quiz-question
+          title: "Quiz: Email capture"
+          content:
+            question: Why should you set up email capture before driving traffic to your product?
+            options:
+              - Because search engines rank sites with forms higher
+              - Because visitors who leave without giving their email are lost opportunities you can't reach again
+              - Because email forms make your site look more professional
+              - Because you need at least 100 emails before you can launch
+            correctAnswer: 1
+            explanation: Every visitor who leaves without a way to stay in touch is someone you can't reach again. Setting up capture before traffic means you don't lose your earliest and most valuable visitors.
         - type: text
           title: What is a lead magnet?
           content:
@@ -353,6 +364,17 @@ course:
 
               One more thing to keep in mind: **a lead magnet won't generate direct sales.** Its job is to start a relationship. You're building a list of people who trust you and are interested in what you're building. Sales come later.
           subtitle: Three criteria to get it right
+        - type: quiz-question
+          title: "Quiz: Evaluate a lead magnet"
+          content:
+            question: Which of these would make the strongest lead magnet for a fitness tracking app?
+            options:
+              - A 30-page ebook about the history of fitness tracking
+              - A one-page "Weekly Workout Planner" template based on the creator's own routine
+              - A list of ten fitness apps with links to their websites
+              - A video explaining what the app does
+            correctAnswer: 1
+            explanation: It's short, practical, immediately useful, and based on unique experience. The ebook is too long, the app list is generic information anyone could Google, and the video is a product demo, not a lead magnet.
         - type: text
           title: Formats that work
           content:
@@ -382,29 +404,7 @@ course:
               She's now ready to capture visitors. All she needs is to send some.
           subtitle: A simple form and a one-page PDF
         - type: quiz-question
-          title: "Quiz: Email capture"
-          content:
-            question: Why should you set up email capture before driving traffic to your product?
-            options:
-              - Because search engines rank sites with forms higher
-              - Because visitors who leave without giving their email are lost opportunities you can't reach again
-              - Because email forms make your site look more professional
-              - Because you need at least 100 emails before you can launch
-            correctAnswer: 1
-            explanation: Every visitor who leaves without a way to stay in touch is someone you can't reach again. Setting up capture before traffic means you don't lose your earliest and most valuable visitors.
-        - type: quiz-question
-          title: "Quiz: Lead magnets"
-          content:
-            question: Which of these would make the strongest lead magnet for a fitness tracking app?
-            options:
-              - A 30-page ebook about the history of fitness tracking
-              - A one-page "Weekly Workout Planner" template based on the creator's own routine
-              - A list of ten fitness apps with links to their websites
-              - A video explaining what the app does
-            correctAnswer: 1
-            explanation: It's short, practical, immediately useful, and based on unique experience. The ebook is too long, the app list is generic information anyone could Google, and the video is a product demo, not a lead magnet.
-        - type: quiz-question
-          title: "Quiz: Lead magnet criteria"
+          title: "Quiz: Realistic expectations"
           content:
             question: What should you NOT expect a lead magnet to do?
             options:
@@ -460,6 +460,17 @@ course:
 
               Set up tracking now, so that when traffic arrives, you see **everything**.
           subtitle: Why this comes before driving traffic
+        - type: quiz-question
+          title: "Quiz: Why set up analytics now?"
+          content:
+            question: Why is it important to set up analytics before driving traffic?
+            options:
+              - Analytics tools take several weeks to start working
+              - You need analytics data to create a Stripe account
+              - Data from your first visitors is the most valuable and can't be recovered if you miss it
+              - Search engines require analytics to index your site
+            correctAnswer: 2
+            explanation: Your first visitors are the most valuable to learn from. If you set up analytics after they've already visited, that data is gone. You can't go back and see what they did.
         - type: text
           title: What is Posthog?
           content:
@@ -499,6 +510,17 @@ course:
 
               Posthog recommends naming custom events in **[object] [verb]** format: "book club created", "book suggestion added", "vote cast". This keeps your events readable as the list grows.
           subtitle: Name the actions that matter
+        - type: quiz-question
+          title: "Quiz: Autocapture vs custom events"
+          content:
+            question: Why should you set up custom events when Posthog already autocaptures clicks?
+            options:
+              - Autocapture doesn't work on mobile devices
+              - Custom events have clearer names and stay consistent even when you change your design
+              - Custom events are faster than autocapture
+              - You need custom events before Posthog will start recording sessions
+            correctAnswer: 1
+            explanation: Autocapture labels actions generically ("clicked button") and the labels change if you redesign. Custom events like "book club created" are clear, specific, and stay consistent over time.
         - type: text
           title: The prompt to add Posthog to your app
           content:
@@ -559,6 +581,17 @@ course:
 
               You don't need to watch every session. Start by watching a few each week, especially sessions where someone signed up or where someone left quickly. The patterns will stand out.
           subtitle: Watch how real people use your product
+        - type: quiz-question
+          title: "Quiz: Session replay"
+          content:
+            question: What can session replay help you spot that analytics numbers alone cannot?
+            options:
+              - How many visitors you had last week
+              - Which country your visitors come from
+              - A button that people hover over but never click, or a form they abandon halfway
+              - How fast your pages load
+            correctAnswer: 2
+            explanation: Session replay shows you the qualitative side of user behaviour. You can see hesitation, confusion, and frustration that numbers alone can't reveal.
         - type: text
           title: What to look at each week
           content:
@@ -592,39 +625,6 @@ course:
 
               She's now ready to see what real visitors do.
           subtitle: Three custom events, session replay, one test visit
-        - type: quiz-question
-          title: "Quiz: Why set up analytics now?"
-          content:
-            question: Why is it important to set up analytics before driving traffic?
-            options:
-              - Analytics tools take several weeks to start working
-              - You need analytics data to create a Stripe account
-              - Data from your first visitors is the most valuable and can't be recovered if you miss it
-              - Search engines require analytics to index your site
-            correctAnswer: 2
-            explanation: Your first visitors are the most valuable to learn from. If you set up analytics after they've already visited, that data is gone. You can't go back and see what they did.
-        - type: quiz-question
-          title: "Quiz: Autocapture vs custom events"
-          content:
-            question: Why should you set up custom events when Posthog already autocaptures clicks?
-            options:
-              - Autocapture doesn't work on mobile devices
-              - Custom events have clearer names and stay consistent even when you change your design
-              - Custom events are faster than autocapture
-              - You need custom events before Posthog will start recording sessions
-            correctAnswer: 1
-            explanation: Autocapture labels actions generically ("clicked button") and the labels change if you redesign. Custom events like "book club created" are clear, specific, and stay consistent over time.
-        - type: quiz-question
-          title: "Quiz: Session replay"
-          content:
-            question: What can session replay help you spot that analytics numbers alone cannot?
-            options:
-              - How many visitors you had last week
-              - Which country your visitors come from
-              - A button that people hover over but never click, or a form they abandon halfway
-              - How fast your pages load
-            correctAnswer: 2
-            explanation: Session replay shows you the qualitative side of user behaviour. You can see hesitation, confusion, and frustration that numbers alone can't reveal.
         - type: reflection
           title: Plan your Posthog setup
           content:
@@ -696,6 +696,17 @@ course:
 
               Notice the difference? The strong version has personality, names a specific problem, and doesn't list features.
           subtitle: Value proposition, screenshot, and why it exists
+        - type: quiz-question
+          title: "Quiz: Directory submissions"
+          content:
+            question: Which of these is the strongest one-line description for a directory listing?
+            options:
+              - "MealPlan Pro - A comprehensive meal planning and grocery management platform with AI-powered recipe suggestions"
+              - "MealPlan Pro - Helps busy parents plan a week of dinners in 5 minutes instead of 45"
+              - "MealPlan Pro - The best meal planning app on the market"
+              - "MealPlan Pro - Features include: meal plans, grocery lists, recipe search, nutrition tracking"
+            correctAnswer: 1
+            explanation: It names a specific audience (busy parents), a specific outcome (plan a week of dinners), and a specific improvement (5 minutes instead of 45). It communicates value, not a feature list.
         - type: text
           title: Sharing in communities without being spammy
           content:
@@ -737,17 +748,6 @@ course:
 
               Her wait list captured **12 email addresses**, and Posthog showed her exactly which pages people visited and where they dropped off. Everything she set up in the previous challenges is now working together.
           subtitle: 20 visitors, 12 emails, and real data
-        - type: quiz-question
-          title: "Quiz: Directory submissions"
-          content:
-            question: Which of these is the strongest one-line description for a directory listing?
-            options:
-              - "MealPlan Pro - A comprehensive meal planning and grocery management platform with AI-powered recipe suggestions"
-              - "MealPlan Pro - Helps busy parents plan a week of dinners in 5 minutes instead of 45"
-              - "MealPlan Pro - The best meal planning app on the market"
-              - "MealPlan Pro - Features include: meal plans, grocery lists, recipe search, nutrition tracking"
-            correctAnswer: 1
-            explanation: It names a specific audience (busy parents), a specific outcome (plan a week of dinners), and a specific improvement (5 minutes instead of 45). It communicates value, not a feature list.
         - type: free-text-exercise
           title: Write your directory submission
           content:
@@ -845,6 +845,17 @@ course:
 
               Check your Posthog data and your feedback side by side. The overlaps are where you'll find the biggest improvements.
           subtitle: Feedback says why. Analytics says where.
+        - type: quiz-question
+          title: "Quiz: Feedback and analytics"
+          content:
+            question: How do user feedback and Posthog analytics complement each other?
+            options:
+              - They don't. You only need one or the other.
+              - Feedback tells you where people get stuck, analytics tells you why
+              - Feedback tells you why something is confusing, analytics tells you where people get stuck
+              - Analytics replaces the need for user feedback entirely
+            correctAnswer: 2
+            explanation: Feedback gives you the "why" (users explain what confused them), while analytics gives you the "where" (data shows where people drop off). Together, they point you to the biggest improvements.
         - type: text
           title: Collecting real testimonials
           content:
@@ -859,6 +870,17 @@ course:
 
               **When to ask:** after someone has expressed genuine satisfaction. Not after their first visit. Not in an automated email. After a real exchange where they've told you something positive.
           subtitle: One real sentence beats ten fake ones
+        - type: quiz-question
+          title: "Quiz: Collecting testimonials"
+          content:
+            question: When is the right time to ask a user for a testimonial?
+            options:
+              - Immediately after they sign up
+              - After they've used your product and expressed genuine satisfaction
+              - Before they've tried the product, to build anticipation
+              - Never. You should write testimonials yourself based on what you think users would say.
+            correctAnswer: 1
+            explanation: Ask for a testimonial after a real exchange where the user has expressed genuine satisfaction. They need to have experienced your product before they can honestly recommend it.
         - type: text
           title: "Dalmie listens to her users"
           content:
@@ -876,28 +898,6 @@ course:
 
               The third reply? That became her first testimonial. She asked permission and added it to her landing page: *"We finally stopped arguing in the group chat about what to read next."*
           subtitle: Three emails, one fix, and a testimonial
-        - type: quiz-question
-          title: "Quiz: Collecting testimonials"
-          content:
-            question: When is the right time to ask a user for a testimonial?
-            options:
-              - Immediately after they sign up
-              - After they've used your product and expressed genuine satisfaction
-              - Before they've tried the product, to build anticipation
-              - Never. You should write testimonials yourself based on what you think users would say.
-            correctAnswer: 1
-            explanation: Ask for a testimonial after a real exchange where the user has expressed genuine satisfaction. They need to have experienced your product before they can honestly recommend it.
-        - type: quiz-question
-          title: "Quiz: Feedback and analytics"
-          content:
-            question: How do user feedback and Posthog analytics complement each other?
-            options:
-              - They don't. You only need one or the other.
-              - Feedback tells you where people get stuck, analytics tells you why
-              - Feedback tells you why something is confusing, analytics tells you where people get stuck
-              - Analytics replaces the need for user feedback entirely
-            correctAnswer: 2
-            explanation: Feedback gives you the "why" (users explain what confused them), while analytics gives you the "where" (data shows where people drop off). Together, they point you to the biggest improvements.
         - type: reflection
           title: Plan your feedback approach
           content:
@@ -946,6 +946,17 @@ course:
 
               For most first products, **freemium** is the safest starting point. It lets people try before they buy, and the free tier acts as marketing.
           subtitle: Free, freemium, or paid
+        - type: quiz-question
+          title: "Quiz: Pricing models"
+          content:
+            question: Why is freemium often the best starting model for a first product?
+            options:
+              - Because free products always make more money in the long run
+              - Because it lets people experience value before paying, and the free tier acts as marketing
+              - Because investors prefer freemium businesses
+              - Because it's easier to build than a paid product
+            correctAnswer: 1
+            explanation: Freemium lets people try your product risk-free. The free tier acts as marketing because happy free users tell others. And people who experience real value are more likely to upgrade.
         - type: text
           title: Pricing psychology basics
           content:
@@ -960,6 +971,17 @@ course:
 
               **Start lower than you think.** You can always raise prices later. It's much harder to lower them. Your first users are taking a risk on an unproven product, so give them a price that feels easy to say yes to.
           subtitle: How people make decisions about money
+        - type: quiz-question
+          title: "Quiz: Anchoring"
+          content:
+            question: What is anchoring in pricing psychology?
+            options:
+              - Setting your price to match competitors
+              - Making people judge a price relative to the first number they see
+              - Offering a free trial before charging
+              - Pricing your product based on how much it cost to build
+            correctAnswer: 1
+            explanation: Anchoring means people judge a price based on comparison. Showing a higher-priced plan alongside a lower-priced plan makes the lower one feel like a better deal.
         - type: text
           title: Let your data inform your pricing
           content:
@@ -986,28 +1008,6 @@ course:
 
               She chose the $5 price point deliberately, not $4.99. Her audience values simplicity and honesty over corporate pricing tricks.
           subtitle: Free for small clubs, $5/month for everything
-        - type: quiz-question
-          title: "Quiz: Pricing models"
-          content:
-            question: Why is freemium often the best starting model for a first product?
-            options:
-              - Because free products always make more money in the long run
-              - Because it lets people experience value before paying, and the free tier acts as marketing
-              - Because investors prefer freemium businesses
-              - Because it's easier to build than a paid product
-            correctAnswer: 1
-            explanation: Freemium lets people try your product risk-free. The free tier acts as marketing because happy free users tell others. And people who experience real value are more likely to upgrade.
-        - type: quiz-question
-          title: "Quiz: Anchoring"
-          content:
-            question: What is anchoring in pricing psychology?
-            options:
-              - Setting your price to match competitors
-              - Making people judge a price relative to the first number they see
-              - Offering a free trial before charging
-              - Pricing your product based on how much it cost to build
-            correctAnswer: 1
-            explanation: Anchoring means people judge a price based on comparison. Showing a higher-priced plan alongside a lower-priced plan makes the lower one feel like a better deal.
         - type: free-text-exercise
           title: Write your pricing model
           content:
@@ -1095,6 +1095,17 @@ course:
 
               This changes how she thinks about growth. She doesn't need hundreds of users to have a viable business. She needs two. That feels achievable.
           subtitle: Two paying users to break even
+        - type: quiz-question
+          title: "Quiz: Break-even point"
+          content:
+            question: "Your fixed costs are $15/month. You charge $8/month. Stripe takes about $0.53 per transaction. Roughly how many paying users do you need to break even?"
+            options:
+              - 1 user
+              - 2 users
+              - 5 users
+              - 15 users
+            correctAnswer: 1
+            explanation: "Break-even = $15 / ($8.00 - $0.53) = $15 / $7.47 ≈ 2 users. You need about 2 paying users to cover your fixed costs each month."
         - type: text
           title: Metrics that matter vs metrics that feel good
           content:
@@ -1114,6 +1125,17 @@ course:
               - **Break-even gap:** are you above or below your break-even point?
               - **Retention:** do users come back after the first week? If they don't, your product isn't delivering enough value to keep them.
           subtitle: "The test: does this number pay the bills?"
+        - type: quiz-question
+          title: "Quiz: Vanity vs real metrics"
+          content:
+            question: Which of these is a vanity metric?
+            options:
+              - Number of paying users
+              - Monthly churn rate
+              - Total sign-ups (including those who never came back)
+              - Whether you're above or below your break-even point
+            correctAnswer: 2
+            explanation: "Total sign-ups look impressive but don't tell you if your business is healthy. If most sign-ups never return, the number is misleading. Paying users, churn, and break-even directly connect to your business viability."
         - type: text
           title: Keep your money separate from day one
           content:
@@ -1165,6 +1187,17 @@ course:
 
               **Toolkit:** The [Accountant Call Preparation Template](https://littleparrot.app/nest/toolkit/TODO) has a list of questions to bring to your first accountant call, covering legal structure, taxes, deductible expenses, and record-keeping. Fill in your details before the call so you make the most of the time.
           subtitle: Don't register a company until you need one
+        - type: quiz-question
+          title: "Quiz: When to register a company"
+          content:
+            question: When should you register a company for your product?
+            options:
+              - Before you start building the product
+              - As soon as you have the idea
+              - When you have solid revenue or a specific deal requires it
+              - After your first visitor
+            correctAnswer: 2
+            explanation: Company registration costs money and creates ongoing obligations. Until you have revenue that justifies those costs, operating as a sole trader is simpler and cheaper.
         - type: text
           title: "Dalmie's sustainable plan"
           content:
@@ -1179,39 +1212,6 @@ course:
 
               One step at a time.
           subtitle: Five hours a week, three numbers to track
-        - type: quiz-question
-          title: "Quiz: Break-even point"
-          content:
-            question: "Your fixed costs are $15/month. You charge $8/month. Stripe takes about $0.53 per transaction. Roughly how many paying users do you need to break even?"
-            options:
-              - 1 user
-              - 2 users
-              - 5 users
-              - 15 users
-            correctAnswer: 1
-            explanation: "Break-even = $15 / ($8.00 - $0.53) = $15 / $7.47 ≈ 2 users. You need about 2 paying users to cover your fixed costs each month."
-        - type: quiz-question
-          title: "Quiz: Vanity vs real metrics"
-          content:
-            question: Which of these is a vanity metric?
-            options:
-              - Number of paying users
-              - Monthly churn rate
-              - Total sign-ups (including those who never came back)
-              - Whether you're above or below your break-even point
-            correctAnswer: 2
-            explanation: "Total sign-ups look impressive but don't tell you if your business is healthy. If most sign-ups never return, the number is misleading. Paying users, churn, and break-even directly connect to your business viability."
-        - type: quiz-question
-          title: "Quiz: When to register a company"
-          content:
-            question: When should you register a company for your product?
-            options:
-              - Before you start building the product
-              - As soon as you have the idea
-              - When you have solid revenue or a specific deal requires it
-              - After your first visitor
-            correctAnswer: 2
-            explanation: Company registration costs money and creates ongoing obligations. Until you have revenue that justifies those costs, operating as a sole trader is simpler and cheaper.
         - type: free-text-exercise
           title: Calculate your break-even point
           content:
