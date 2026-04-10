@@ -91,6 +91,21 @@ course:
               The trick is: you won't nail it on the first try. You need to test different versions and see which one makes people react.
           subtitle: Four elements in one sentence
         - type: text
+          title: Where you'll use your value proposition
+          content:
+            body: |-
+              This isn't an exercise for its own sake. Your value proposition will come back throughout this course and beyond:
+
+              - **Your landing page** heading and subheading
+              - **Directory submissions** (Challenge 5) when you list your product on BetaList or Product Hunt
+              - **Community posts** (Challenge 5) when you share your product in online groups
+              - **Your Google Business Profile** (Challenge 2) description
+              - **Emails to early users** (Challenge 6) when you introduce yourself and ask for feedback
+              - **Your social media bio** when you talk about what you're building
+
+              Every time someone asks "What's your product about?", your value proposition is the answer. Getting it right now saves you from rewriting everything later.
+          subtitle: This sentence will follow you everywhere
+        - type: text
           title: "Dalmie's three versions"
           content:
             body: |-
