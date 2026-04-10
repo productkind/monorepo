@@ -18,12 +18,16 @@ description: Use this checklist when generating micro-course content from an out
 - **Reusable artifact per challenge:** Every challenge should give the learner something they can reuse outside the course: a formula, a template, a checklist, a prompt template, or a script. If a challenge only explains a concept without a reusable artifact, it's incomplete.
 - **Realistic examples:** Assume the learner has zero traction, zero audience, and no business experience. Every example must be achievable by someone starting from nothing. Don't show outcomes that require luck or organic demand (e.g., "40 sign-ups in two weeks" or "strangers start asking for your product"). Show outcomes that result from specific actions the learner took.
 - **Correct URLs:** Check `../../../little-parrot/content/course/course-links.md` for course URLs and `../../../little-parrot/content/course/toolkit-links.md` for toolkit URLs before generating any cross-references. Never invent placeholder URLs.
+- **Address the learner's biggest fear first.** Before teaching anything, identify the misconception or fear that's stopping the learner from starting and address it head-on. ("You don't need to know how to code", "You don't need a company or investors", "You don't need to be creative.") Clear the blocker, then teach. This should be the first text step after the comics.
+- **Don't open with overwhelming text blocks.** The learner's first reading experience after the comics sets their expectations for the whole course. If the first text step is long, split it into two shorter steps. Short, focused steps feel approachable. A wall of text feels like homework.
+- **Show where reusable tools will come back.** When a challenge teaches a formula, template, or technique that the learner will reuse in later challenges, add a step listing where it will show up. This motivates the learner to take it seriously and connects the dots across the course. Don't leave the learner wondering "why does this matter?"
+- **Verify tool-specific advice against official documentation.** When a course teaches how to use a specific tool (e.g., Posthog, Stripe, Google Workspace), check the tool's actual documentation before writing setup instructions, configuration steps, or terminology. Use the tool's own names for settings, buttons, and concepts. Don't generate setup instructions from general knowledge.
 
 ---
 
 ## Narrative Structure
 
-**Start with a relatable problem, not a lesson.** Use comics or a story to show someone's frustration before any teaching begins. Learners should feel "that's me" before they learn anything.
+**Start with a relatable problem, not a lesson.** Use comics or a story to show someone's frustration before any teaching begins. Learners should feel "that's me" before they learn anything. The comics should set up the **full course arc** (the spark, the overwhelm, the guide offering a path), not only introduce the first challenge's topic.
 
 **Transformation hook in the first video/intro.** Frame the course as identity change: "From X to Y." Not "You'll learn A, B, C" but "You'll become someone who..." Example: "From 'I can't build apps' to 'I just published my first one.'"
 
