@@ -105,6 +105,16 @@ Non-technical women learning AI-assisted development.
 
 ---
 
+## Copy Rules
+
+- **Describe experiences, not features.** "You get practical courses that fit into a busy day" instead of "Short, practical courses, toolkits, community access." Use "you get" and "you can" to make it about the reader.
+- **Don't repeat information across paragraphs.** Say it once, say it well.
+- **Don't include pricing in promotional posts.** Let the landing page do that work. The post's job is to get the click.
+- **When introducing Little Parrot to a new audience, one sentence of context is enough.** Don't over-explain.
+- **Thank partners by name.** It's human and builds relationships publicly.
+
+---
+
 ## Self-Check
 
 Before publishing, verify:
@@ -113,3 +123,5 @@ Before publishing, verify:
 2. Is there a specific example, tool, or scenario?
 3. Does the ending advance thinking rather than summarise?
 4. Would I trust this if someone else wrote it?
+5. Am I describing experiences or listing features?
+6. Is any information repeated across paragraphs?
