@@ -1,7 +1,6 @@
-# GitHub for Vibe Codes: One of the best ways to save credits
+# How to Save Credits for Vibe Coders: GitHub Practices
 
-This micro-course aims to give skills how to use GitHub to track the code of their application
-and make edits without spending credits on Lovable or similar tools.
+This micro-course aims to give skills to save credits for vibe coders, using tools like Lovable. It details how to use GitHub to track the code of their application and make edits without spending credits on Lovable or similar tools.
 
 ## Target Audience
 
@@ -21,7 +20,7 @@ GitHub instead of Lovable.
   features.
 - Explain what is the difference between the code in GitHub and the code in Lovable, and how to keep
   them in sync.
-- Explain what is the difference between Git and Git
+- Explain what is the difference between Github and Git
 - Explain what is a commmit
 
 Show the command line and tell the masic flow of git commands, but do not go into details of how to
