@@ -91,7 +91,7 @@ course:
 
               But first, let's find out if you can describe your product in a way that makes someone who's never seen it say, "I need that." That starts with your **value proposition**: a clear description of the value your product delivers.
 
-              If you want to go deeper on making sure your product solves a real problem, check out our [Build a Valuable Product](https://littleparrot.app) course.
+              If you want to go deeper on making sure your product solves a real problem, check out our [Build a Valuable Product: How to Break Down Your Idea for Vibe Coding](https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview) course.
           subtitle: Just one thing
         - type: text
           title: The value proposition formula
@@ -99,12 +99,12 @@ course:
             body: |-
               A **value proposition** is a clear description of the value your product delivers. Here's a simple formula:
 
-              **"[Product] helps [who] do [what] without [pain point]."**
+              **"[Product] helps [who] to [achieve what] without [pain point]."**
 
               This formula works because it packs four things into one sentence:
               - **What it is** (so people can picture it)
               - **Who it's for** (so the right people recognise themselves)
-              - **What it does** (so people understand the value)
+              - **What it helps achieve** (so people understand the value)
               - **What pain it removes** (so people feel the relief)
 
               The trick is: you won't nail it on the first try. You need to test different versions and see which one makes people react.
@@ -116,7 +116,7 @@ course:
               This isn't an exercise for its own sake. Your value proposition will come back throughout this course and beyond:
 
               - **Your landing page** heading and subheading
-              - **Directory submissions** (Challenge 5) when you list your product on BetaList or Product Hunt
+              - **Directory submissions** (Challenge 5) when you list your product on websites like BetaList or Product Hunt, where people go to discover new products
               - **Community posts** (Challenge 5) when you share your product in online groups
               - **Your Google Business Profile** (Challenge 2) description
               - **Emails to early users** (Challenge 6) when you introduce yourself and ask for feedback
@@ -146,12 +146,12 @@ course:
           content:
             question: "A friend built a habit-tracking app. She describes it as: \"HabitFlow is a productivity platform with gamification features, push notifications, social sharing, and AI-powered insights.\" What's the biggest problem with this value proposition?"
             options:
-              - It's too short
+              - It's too short, and doesn't list enough features
               - It lists features instead of naming who it helps and what pain it removes
-              - It doesn't mention the price
-              - It uses too many technical terms
+              - It doesn't mention the price and subscription model, so people don't know how to buy it
+              - It uses too many technical terms, which might scare non-technical users away
             correctAnswer: 1
-            explanation: "A strong value proposition names who it's for and what pain it removes. \"HabitFlow helps busy professionals build daily habits without relying on willpower\" would be stronger because it names the audience and the pain point."
+            explanation: "Features don't equal value. A list of features tells people what the product has, but not why they should care. A strong value proposition names who it's for and what pain it removes. \"HabitFlow helps busy professionals build daily habits without relying on willpower\" would be stronger because it answers the question people actually have: \"What's in it for me?\""
         - type: text
           title: How to test your value proposition
           content:
@@ -159,11 +159,13 @@ course:
               Here's how to test your value proposition:
 
               1. Write three versions using the formula.
-              2. Tell five people what your product does, one-on-one. Use a different version each time.
+              2. Find five people **who match your target audience** and tell them what your product does, one-on-one. Use a different version each time.
               3. After each conversation, write down their **exact reaction**. Did they ask a follow-up question? Did they change the subject? Did their eyes light up?
               4. The version that made someone ask "How does it work?" or "Can I try it?" is your winner.
 
-              You don't need a focus group or a survey. Five casual conversations will tell you more than you expect.
+              **Why your target audience?** A polite nod from your mum doesn't tell you much. You need reactions from people who actually have the problem your product solves. If you built an app for book club organisers, test your value proposition on people who run book clubs, not on friends who've never been in one.
+
+              You don't need a focus group or a survey. Five conversations with the right people will tell you more than you expect.
 
               **What if none of them work?** That's useful information too. It might mean the problem you're solving isn't painful enough, or you haven't found the right audience yet.
           subtitle: Five conversations, three versions, one winner
@@ -173,34 +175,34 @@ course:
             question: What's the best sign that your value proposition is working?
             options:
               - The person says "that sounds interesting"
-              - The person nods politely
+              - The person nods politely, then changes the subject
               - The person asks a follow-up question like "how does it work?"
               - The person says "good luck with that"
             correctAnswer: 2
-            explanation: A follow-up question means the person is engaged and wants to know more. Polite nods and generic encouragement often mean the message didn't land.
+            explanation: A follow-up question means the person is engaged and wants to know more. Polite nods and generic encouragement often mean the message wasn't compelling.
         - type: free-text-exercise
           title: Write three versions of your value proposition
           content:
             description: |-
               Write three versions of your value proposition using the formula:
 
-              **"[Product] helps [who] do [what] without [pain point]."**
+              **"[Product] helps [who] to [achieve what] without [pain point]."**
 
               Try different angles. Change who it's for, what it does, or what pain it removes. The goal is to find the version that sparks the most interest.
             placeholder: |-
-              Version 1: I built...
+              Version 1:...
 
-              Version 2: I built...
+              Version 2:...
 
-              Version 3: I built...
-            systemPrompt: 'You are a business mentor helping a learner refine their value proposition. They were given the formula "[Product] helps [who] do [what] without [pain point]" and asked to write three versions. Provide friendly, concise feedback (max 5 bullet points) in British English. Check if each version includes all four elements (what, who, value, pain point). If a version is too vague, suggest how to make it more specific. Highlight which version feels strongest and why. End with encouragement.'
+              Version 3:...
+            systemPrompt: 'You are a business mentor helping a learner refine their value proposition. They were given the formula "[Product] helps [who] to [achieve what] without [pain point]" and asked to write three versions. Provide friendly, concise feedback (max 5 bullet points) in British English. Check if each version includes all four elements (what, who, value, pain point). If a version is too vague, suggest how to make it more specific. Highlight which version feels strongest and why. End with encouragement.'
             checkerPrompt: 'Check if the user has written three distinct versions of their value proposition, and whether each version includes a product, a target audience, a value, and a pain point. This is what they wrote:'
         - type: challenge-end
           title: "You've found your words! \U0001F4AC"
           content:
             nextModule: "**Next challenge:** Now that you can describe your product's value, let's give it a proper home online."
             description: You now have a clear value proposition that makes people lean in.
-            subDescription: "This value proposition will come back again and again throughout the course: in your directory listings, community posts, and landing page. Keep refining it as you learn more about your audience."
+            subDescription: "Keep this sentence close. It will come in handy every time you explain what you do to someone new, whether at a dinner party, in a community, or in a casual conversation. You never know when the person you're talking to is your next user."
 
     - title: Choose Your Domain
       isFree: false

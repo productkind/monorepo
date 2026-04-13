@@ -18,7 +18,7 @@ The narrative follows Dalmie, who built the Book Club Organiser app with Lovable
 Describe the value your product delivers in one sentence, then test it on real people.
 
 - The "you don't need" list: a company, investors, a perfect product, a trademark, business cards. You need users getting value from what you built. Everything else comes later.
-- The value proposition formula: "[Product] helps [who] do [what] without [pain point]." Try different versions and notice which one gets a reaction.
+- The value proposition formula: "[Product] helps [who] to [achieve what] without [pain point]." Try different versions and notice which one gets a reaction.
 - How to test your value proposition: tell five people what your product does, one-on-one, using a different version each time. Write down their exact reaction. Which version made them ask a follow-up question? That's your value proposition.
 - Consider pivoting early if there's no traction
 - Reference to "Build a Valuable Product: How to Break Down Your Idea for Vibe Coding" for deeper product thinking
