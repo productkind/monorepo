@@ -508,14 +508,14 @@ course:
             body: |-
               Autocapture handles the basics, but for the actions that are the most important to your business, you'll want to set up **custom events**.
 
-              A custom event is a specific action you choose to track by name. For example: "book club created", "vote cast", or "user signed up".
+              A custom event is a specific action you choose to track by name. For example: "book-club-created", "vote-cast", or "user-signed-up".
 
               Why bother when autocapture already tracks clicks? Two reasons:
 
-              1. **Clarity:** autocapture labels a button click as "clicked button". A custom event called "book club created" tells you exactly what happened in your product.
+              1. **Clarity:** autocapture labels a button click as "clicked button". A custom event called "book-club-created" tells you exactly what happened in your product.
               2. **Reliability:** if you change your design (rename a button, move a form), autocapture labels change too. Custom event names stay consistent.
 
-              Posthog recommends naming custom events in **[object] [verb]** format: "book club created", "book suggestion added", "vote cast". This keeps your events readable as the list grows.
+              Posthog recommends naming custom events in **[object] [verb]** format: "book-club-created", "book-suggestion-added", "vote-cast". This keeps your events readable as the list grows.
           subtitle: Name the actions that you want to see
         - type: quiz-question
           title: "Quiz: Autocapture vs custom events"
@@ -534,7 +534,7 @@ course:
             body: |-
               You'll use your AI app builder to add Posthog. Here's a concrete prompt you can copy and adapt:
 
-              ---
+              ```
 
               *Add Posthog analytics to my app using the posthog-js library. Here's what I need:*
 
@@ -542,12 +542,12 @@ course:
               *2. Initialise Posthog on app startup so it runs on every page. Use my project token: [YOUR_KEY_HERE] and the host: https://us.i.posthog.com (or https://eu.i.posthog.com if you're in Europe). Enable debug mode during development so I can verify events are firing.*
               *3. Enable session replay so I can watch how users navigate my app.*
               *4. Track these custom events using posthog.capture() with these exact names:*
-              *- "signup form submitted" when someone submits the sign-up form*
-              *- "feedback button clicked" when someone clicks the feedback button*
+              *- "signup-form-submitted" when someone submits the sign-up form*
+              *- "feedback-button-clicked" when someone clicks the feedback button*
               *- [add your own events here, using "object verb" naming]*
               *5. Make sure Posthog initialises on every page, not only the homepage.*
 
-              ---
+              ```
 
               **Where to find your project token:** Sign up at posthog.com (free), create a project, and you'll find your project token in the project settings.
 
