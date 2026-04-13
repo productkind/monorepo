@@ -49,7 +49,9 @@ course:
           title: What you'll walk away with
           content:
             body: |-
-              By the end of this course, you'll have:
+              Turning a product into a business can feel overwhelming. There are so many things to figure out, and it's hard to know where to start.
+
+              This course breaks it down into eight small challenges. By the end, you'll have:
 
               - A **clear value proposition** that makes people want to try your product
               - A **professional domain** and email that look credible
@@ -60,8 +62,8 @@ course:
               - A **pricing model** based on real data
               - Your **break-even point** calculated, so you know exactly what it takes to be sustainable
 
-              You'll go from "I built something cool" to "I know how to turn this into a business." Let's start.
-          subtitle: Eight challenges, one transformation
+              Each challenge builds on the one before it. You don't need to figure everything out at once. One step at a time.
+          subtitle: Eight small challenges, one big transformation
         - type: text
           title: What you don't need (yet)
           content:
