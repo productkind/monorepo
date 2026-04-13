@@ -46,6 +46,23 @@ course:
               "One step at a time! First, let's find the right words to describe what you've built.
               Then we'll set up everything you need before your first visitor arrives."
         - type: text
+          title: What you'll walk away with
+          content:
+            body: |-
+              By the end of this course, you'll have:
+
+              - A **clear value proposition** that makes people want to try your product
+              - A **professional domain** and email that look credible
+              - **Email capture** ready to build your audience from day one
+              - **Analytics** showing you exactly how people use your product
+              - **Real visitors** from directories and communities
+              - **User feedback** and testimonials on your landing page
+              - A **pricing model** based on real data
+              - Your **break-even point** calculated, so you know exactly what it takes to be sustainable
+
+              You'll go from "I built something cool" to "I know how to turn this into a business." Let's start.
+          subtitle: Eight challenges, one transformation
+        - type: text
           title: What you don't need (yet)
           content:
             body: |-
