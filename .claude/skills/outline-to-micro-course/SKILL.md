@@ -61,6 +61,8 @@ description: Use this checklist when generating micro-course content from an out
 
 **SystemPrompts for free-text exercises must avoid em dashes.** Consistent with the productkind tone guidelines.
 
+**Copy-paste prompts must be in markdown code blocks.** When the course includes a prompt the learner can copy and paste into an AI app builder or other tool, wrap it in a markdown code block so it's clearly distinguished from the surrounding text and easy to copy.
+
 ---
 
 ## Tone and Expectations
