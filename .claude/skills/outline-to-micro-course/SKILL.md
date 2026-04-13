@@ -33,7 +33,7 @@ description: Use this checklist when generating micro-course content from an out
 
 **Transformation hook in the first video/intro.** Frame the course as identity change: "From X to Y." Not "You'll learn A, B, C" but "You'll become someone who..." Example: "From 'I can't build apps' to 'I just published my first one.'"
 
-**One running example throughout.** Use Dalmie (a dalmatian dog character) building the Book Club Organiser app as the running persona and project across all challenges, consistent with other Little Parrot courses. Don't switch examples mid-course. Consistency makes abstract concepts tangible and helps learners follow along.
+**One running example throughout.** Use Dalmie (a dalmatian dog character) building the Book Club Organiser app as the running persona and project across all challenges, consistent with other Little Parrot courses. Don't switch examples mid-course. Consistency makes abstract concepts tangible and helps learners follow along. **Keep Dalmie's backstory consistent:** Dalmie built the app for her friend Sarah, who is the book club organiser. Sarah is the domain expert. When Dalmie needs domain knowledge (e.g., what book club organisers struggle with), she asks Sarah rather than knowing it herself.
 
 **Challenge openers set emotional tone.** The first step of each challenge should excite and preview the transformation, not just list what's coming. Acknowledge progress ("You're no longer a beginner") and build anticipation for what they'll be able to do.
 
@@ -54,6 +54,12 @@ description: Use this checklist when generating micro-course content from an out
 **Specify who in exercises that involve other people.** If an exercise asks the learner to talk to people, test something on others, or collect feedback, specify who those people should be (e.g., "people who match your target audience", not "five people"). Without this, learners default to friends and family who may not give useful reactions.
 
 **Quiz explanations should teach, not just confirm.** Use the explanation text after a quiz answer as a teaching moment. Introduce a principle, reframe the concept, or add nuance that wasn't in the text steps. "Correct, B is the right answer" wastes a learning opportunity. "Features don't equal value. A list of features tells people what the product has, but not what they can achieve with it" teaches something new.
+
+**Examples should model the thinking process, not just the output.** When showing Dalmie's example, focus on *how* she arrived at her decision, not just what she decided. The learner benefits more from seeing a replicable thought process ("she asked Sarah what she struggles with most") than from seeing the finished result ("she made a PDF"). Show the question that led to the answer.
+
+**Exercises should focus on one thing.** Don't bundle multiple tasks into a single exercise. "Plan your email capture + design your lead magnet + check it against three criteria" is three exercises pretending to be one. One clear question or task per exercise. If you need the learner to do multiple things, use separate steps.
+
+**SystemPrompts for free-text exercises must avoid em dashes.** Consistent with the productkind tone guidelines.
 
 ---
 
