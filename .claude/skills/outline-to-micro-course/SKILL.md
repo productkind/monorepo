@@ -29,6 +29,8 @@ description: Use this checklist when generating micro-course content from an out
 
 **Start with a relatable problem, not a lesson.** Use comics or a story to show someone's frustration before any teaching begins. Learners should feel "that's me" before they learn anything. The comics should set up the **full course arc** (the spark, the overwhelm, the guide offering a path), not only introduce the first challenge's topic.
 
+**Introduce the course after the comics.** Add a brief step after the comics that tells the learner what they'll walk away with. List the concrete outcomes, not the topics. Jumping straight from comics into teaching feels too abrupt. The learner needs a moment to understand what they're signing up for before the first lesson starts.
+
 **Transformation hook in the first video/intro.** Frame the course as identity change: "From X to Y." Not "You'll learn A, B, C" but "You'll become someone who..." Example: "From 'I can't build apps' to 'I just published my first one.'"
 
 **One running example throughout.** Use Dalmie (a dalmatian dog character) building the Book Club Organiser app as the running persona and project across all challenges, consistent with other Little Parrot courses. Don't switch examples mid-course. Consistency makes abstract concepts tangible and helps learners follow along.
@@ -46,6 +48,12 @@ description: Use this checklist when generating micro-course content from an out
 **Specific test cases after features.** After teaching how to build something, include explicit verification steps. Not "test your feature" but specific actions: "1. Try voting without logging in. 2. Log in and vote. 3. Try voting again on the same book." This builds testing habits.
 
 **Cross-reference at the moment of relevance.** Link to other courses when the learner might want to go deeper, not in a list at the end. Example: "Curious about databases? Our Basics of Software course explains this in friendly terms."
+
+**Define unfamiliar terms inline.** If a concept is mentioned before its dedicated challenge (e.g., "directory submissions" in Challenge 1 that are taught in Challenge 5), add a brief inline explanation so the learner isn't confused. Don't assume they'll know what it means because it's covered later.
+
+**Specify who in exercises that involve other people.** If an exercise asks the learner to talk to people, test something on others, or collect feedback, specify who those people should be (e.g., "people who match your target audience", not "five people"). Without this, learners default to friends and family who may not give useful reactions.
+
+**Quiz explanations should teach, not just confirm.** Use the explanation text after a quiz answer as a teaching moment. Introduce a principle, reframe the concept, or add nuance that wasn't in the text steps. "Correct, B is the right answer" wastes a learning opportunity. "Features don't equal value. A list of features tells people what the product has, but not what they can achieve with it" teaches something new.
 
 ---
 

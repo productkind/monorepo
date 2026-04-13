@@ -151,7 +151,7 @@ course:
               - It doesn't mention the price and subscription model, so people don't know how to buy it
               - It uses too many technical terms, which might scare non-technical users away
             correctAnswer: 1
-            explanation: "Features don't equal value. A list of features tells people what the product has, but not why they should care. A strong value proposition names who it's for and what pain it removes. \"HabitFlow helps busy professionals build daily habits without relying on willpower\" would be stronger because it answers the question people actually have: \"What's in it for me?\""
+            explanation: "Features don't equal value. A list of features tells people what the product has, but not what they will be able to do as a result of using the product. A strong value proposition names who it's for and what pain it removes. \"HabitFlow helps busy professionals build daily habits without relying on willpower\" would be stronger because it answers the question people actually have: \"What can I achieve with it?\""
         - type: text
           title: How to test your value proposition
           content:
@@ -195,7 +195,7 @@ course:
               Version 2:...
 
               Version 3:...
-            systemPrompt: 'You are a business mentor helping a learner refine their value proposition. They were given the formula "[Product] helps [who] to [achieve what] without [pain point]" and asked to write three versions. Provide friendly, concise feedback (max 5 bullet points) in British English. Check if each version includes all four elements (what, who, value, pain point). If a version is too vague, suggest how to make it more specific. Highlight which version feels strongest and why. End with encouragement.'
+            systemPrompt: 'You are a business mentor helping a learner refine their value proposition. They were given the formula "[Product] helps [who] to [achieve what] without [pain point]" and asked to write three versions. Provide friendly, concise feedback (max 5 bullet points) in British English, avoid using em dashes. Check if each version includes all four elements (what, who, value, pain point). If a version is too vague, suggest how to make it more specific. Highlight which version feels strongest and why. End with encouragement.'
             checkerPrompt: 'Check if the user has written three distinct versions of their value proposition, and whether each version includes a product, a target audience, a value, and a pain point. This is what they wrote:'
         - type: challenge-end
           title: "You've found your words! \U0001F4AC"
@@ -217,7 +217,9 @@ course:
           title: Your product needs an address
           content:
             body: |-
-              Before you start telling people about your product, you need a place to send them. Your domain is the address people will see in directories, community posts, and emails. It's one of the first things that signals whether your product is a hobby project or something to take seriously.
+              Before you start telling people about your product, you need a place to send them. That place is your **domain**: the web address people type into their browser to find you. For example, **littleparrot.app** is our domain. It's what you see in the browser's address bar when you visit our site.
+
+              Your domain is what people will see in directories, community posts, and emails. It's one of the first things that signals whether your product is a hobby project or something to take seriously.
 
               Getting this right doesn't need to cost much. But getting it in place **before** you start driving traffic matters, because every link you share will carry this address.
           subtitle: Why this comes before anything else
@@ -245,7 +247,7 @@ course:
               - **.app** signals that you've built software. Slightly more technical feel. Good for tech-savvy audiences.
               - **.io** is popular in the tech world but less familiar to non-technical audiences.
 
-              Head to a domain registrar like GoDaddy and search for your product name. Compare what's available across different extensions and what fits your budget.
+              Head to a domain registrar like [GoDaddy](https://www.godaddy.com/) and search for your product name. Compare what's available across different extensions and what fits your budget.
 
               For most first products aimed at a non-technical audience, **.com is the safest bet** if you can get one at a reasonable price.
           subtitle: ".com, .co, .app, .io: what's the difference?"
@@ -255,16 +257,16 @@ course:
             question: Which domain would be the best choice for a recipe-sharing app aimed at home cooks?
             options:
               - recipe-sharing-app-2024.io
-              - recipeshare.com
               - rs.app
               - my-recipes.co.uk
-            correctAnswer: 1
+              - recipeshare.com
+            correctAnswer: 3
             explanation: It's short, memorable, easy to spell, has no hyphens or numbers, and uses .com which is the most recognised extension for a non-technical audience.
         - type: text
           title: Set up a professional email
           content:
             body: |-
-              Once you have a domain, set up a professional email address. Sending emails from **hello@yourproduct.com** instead of **yourname123@gmail.com** makes a noticeable difference in how people perceive your product.
+              Once you have a domain, set up a professional email address. Sending emails from **hello@yourproduct.com** instead of **yourname12@gmail.com** makes a noticeable difference in how people perceive your product.
 
               **Google Workspace** lets you create email addresses on your own domain. It costs around $6-7/month, which is worth it when you start emailing customers, responding to feedback, or reaching out to communities.
 
@@ -285,7 +287,7 @@ course:
           title: Register on Google Business Profile
           content:
             body: |-
-              While you're setting things up, register your product on **Google Business Profile** (business.google.com). It's free and helps your product appear in Google search results.
+              While you're setting things up, register your product on [Google Business Profile](https://business.google.com/). It's free and helps your product appear in Google search results.
 
               You don't need a physical office. Digital products can register with a service area. Fill in your product name, website, and a brief description (use your value proposition from Challenge 1).
 
@@ -307,11 +309,14 @@ course:
               She could have spent days agonising over the perfect name. Instead, she picked something clear and moved on. The domain can always be changed later if needed, but momentum can't.
           subtitle: Under $25 for a professional presence
         - type: reflection
-          title: Research your domain options
+          title: Brainstorm your domain name
           content:
-            description: Search for available domains for your product on a registrar like GoDaddy. Compare at least two top-level domain options (.com, .co, .app, etc.) on price and fit. Which one will you go with, and why?
-            placeholder: "I searched for... The options I found were... I'm going with... because..."
-            subDescription: "Remember: a good-enough domain you own today is better than the perfect one you debate for weeks."
+            description: Write down three domain name ideas for your product. Keep them short, memorable, and easy to spell.
+            placeholder: |-
+              1.
+              2.
+              3.
+            subDescription: "You can check if they're available on a registrar like GoDaddy. Don't overthink it. A good-enough domain you own today is better than the perfect one you debate for weeks."
         - type: challenge-end
           title: "Your product has a home! \U0001F3E0"
           content:
@@ -355,22 +360,20 @@ course:
           content:
             question: Why should you set up email capture before driving traffic to your product?
             options:
-              - Because search engines rank sites with forms higher
               - Because visitors who leave without giving their email are lost opportunities you can't reach again
-              - Because email forms make your site look more professional
+              - Because search engines rank sites with forms higher in search results
+              - Because email forms make your site look more professional 
               - Because you need at least 100 emails before you can launch
-            correctAnswer: 1
-            explanation: Every visitor who leaves without a way to stay in touch is someone you can't reach again. Setting up capture before traffic means you don't lose your earliest and most valuable visitors.
+            correctAnswer: 0
+            explanation: Every visitor who leaves without a way to stay in touch is someone you can't reach again. Setting up capture before traffic means you don't lose your earliest visitors.
         - type: text
-          title: What is a lead magnet?
+          title: Give people a reason to sign up
           content:
             body: |-
               A **lead magnet** is something valuable you give away for free in exchange for someone's email address. It makes your email capture more compelling. The principle is simple: **add value in public, sell in private.**
 
               Instead of asking people to sign up for "updates" (vague and uninspiring), you offer them something useful right now. They get immediate value, you get their email address.
-
-              **Important:** the lead magnet only works if email capture is already in place. The visitor gets the lead magnet **in exchange for** their email address. Set up the form first, then add the lead magnet as the incentive.
-          subtitle: Give people a reason to sign up
+          subtitle: What is a lead magnet?
         - type: text
           title: What makes a good lead magnet?
           content:
@@ -390,12 +393,12 @@ course:
           content:
             question: Which of these would make the strongest lead magnet for a fitness tracking app?
             options:
-              - A 30-page ebook about the history of fitness tracking
-              - A one-page "Weekly Workout Planner" template based on the creator's own routine
+              - A 30-page ebook about the history of fitness tracking to establish authority
               - A list of ten fitness apps with links to their websites
-              - A video explaining what the app does
-            correctAnswer: 1
-            explanation: It's short, practical, immediately useful, and based on unique experience. The ebook is too long, the app list is generic information anyone could Google, and the video is a product demo, not a lead magnet.
+              - A video explaining what the app does in detail, showing a demo of the features
+              - A one-page "Weekly Workout Planner" template based on the creator's own routine
+            correctAnswer: 3
+            explanation: A one-page "Weekly Workout Planner" template is short, practical, immediately useful, and based on unique experience. The ebook is too long, the app list is generic information anyone could Google, and the video is a product demo that doesn't provide immediate value for the user.
         - type: text
           title: Formats that work
           content:
@@ -408,53 +411,36 @@ course:
               - **Short guides** (one to three pages on a focused topic)
               - **Calculators or spreadsheets** (tools that help people make decisions)
 
-              The easiest way to create one? **Repurpose knowledge you already have.** You built a product in this space, so you already know the domain. Turn what you know into a one-page template, a checklist, or a short guide. Don't create from scratch if you don't have to.
+              The easiest way to create one? **Repurpose knowledge you already have.** You built a product in this space, so you already know the domain. Turn what you know into a one-page template, a checklist, or a short guide.
           subtitle: Start with what you already know
         - type: text
-          title: "Dalmie's wait list and lead magnet"
+          title: "Dalmie's lead magnet"
           content:
             body: |-
-              Dalmie added a wait list form to the Book Club Organiser's landing page. She embedded a simple Google Form with one field: email address.
+              Dalmie didn't start by asking "what PDF should I make?" She asked her friend Sarah, a book club organiser: **"What do you struggle with most when running your book club?"**
 
-              For her lead magnet, she asked herself: "What do I already know about running a book club that other organisers would find useful?" The answer was obvious: she'd been running one for a year and had figured out which discussion questions spark great conversations and how to structure a reading schedule so people actually finish the book.
+              Sarah said the hardest part was getting good conversations going. People would show up and not know what to say beyond "I liked it." So Dalmie created a short guide: **"How to Craft Open-Ended Questions for an Engaging Book Club Discussion."** It took about an hour.
 
-              She turned this into a **"Book Club Starter Kit"** PDF: a one-page document with her favourite discussion questions and a reading schedule template. It took about an hour to make.
-
-              It passes all three criteria: it solves a real problem (figuring out how to run a good book club meeting), it offers unique value (her own tested discussion questions, not generic ones), and it's clean and easy to use.
-
-              She's now ready to capture visitors. All she needs is to send some.
-          subtitle: A simple form and a one-page PDF
+              That's the shortcut to a good lead magnet: ask your target audience what they struggle with, then package the answer.
+          subtitle: Ask your target audience, then package the answer
         - type: quiz-question
           title: "Quiz: Realistic expectations"
           content:
             question: What should you NOT expect a lead magnet to do?
             options:
+              - Generate direct sales or revenue
               - Build a list of interested people
               - Start a relationship with potential users
-              - Generate direct sales or revenue
               - Give your target audience immediate value
-            correctAnswer: 2
+            correctAnswer: 0
             explanation: "A lead magnet starts a relationship. It builds trust and interest. Direct sales come later, after people have experienced your product. Expecting a lead magnet to drive revenue sets you up for disappointment."
         - type: free-text-exercise
-          title: Plan your email capture and lead magnet
+          title: Plan your lead magnet
           content:
-            description: |-
-              Plan what you'll set up:
-
-              1. **Email capture:** Where on your landing page will you add a sign-up form? What will the call to action say?
-              2. **Lead magnet:** What knowledge do you already have that your target audience would find useful? How will you package it (template, checklist, guide)?
-              3. **Three-criteria check:** Does your lead magnet idea solve a real problem, offer unique value, and can you execute it well?
-            placeholder: |-
-              Email capture: I'll add a form that says...
-
-              Lead magnet idea: I'll create a... because my target audience would find it useful for...
-
-              Three-criteria check:
-              - Solves a real problem: yes/no, because...
-              - Unique value: yes/no, because...
-              - I can execute it well: yes/no, because...
-            systemPrompt: 'You are a business mentor helping a learner plan their email capture and lead magnet. They should describe where they will add a sign-up form, what the call to action will say, and what lead magnet they will create. Provide friendly, concise feedback (max 5 bullet points) in British English. Check against the three criteria: does it solve a real problem, offer unique value (not generic info), and is it well scoped for execution? If the lead magnet could be found via a Google search, flag it and suggest how to make it more unique. If it is too ambitious, suggest simplifying. Remind them that lead magnets build relationships, not direct sales. End with encouragement.'
-            checkerPrompt: 'Check if the user has planned both an email capture form (with a call to action) and a lead magnet. The lead magnet should solve a real problem, offer unique value (not generic), and be realistic to execute. This is their plan:'
+            description: Who's your target audience and what do they struggle with? What could you create that would help them? Describe your lead magnet idea.
+            placeholder: "My target audience struggles with... so I'll create a..."
+            systemPrompt: 'You are a business mentor helping a learner plan a lead magnet for their product. They should describe what their target audience struggles with and what they will create to help. Provide friendly, concise feedback (max 4 bullet points) in British English, avoid using em dashes. Check against the three criteria: does it solve a real problem, offer unique value (not generic info you could Google), and is it realistic to create? If the lead magnet is too ambitious, suggest simplifying. End with encouragement.'
+            checkerPrompt: 'Check if the user has described what their target audience struggles with and what lead magnet they will create. It should solve a real problem and not be generic. This is their plan:'
         - type: challenge-end
           title: "Your net is ready! \U0001F3A3"
           content:
@@ -477,9 +463,9 @@ course:
             body: |-
               You're almost ready to send people to your product. But before you do, there's one more thing to set up: **analytics**.
 
-              Why now? Because if you set up analytics **after** you've already driven traffic, you've lost data from your first visitors. Those early visitors are the most valuable ones to learn from. They're the people who saw your value proposition, clicked through, and tried your product for the first time.
+              Why now? Because if you set up analytics **after** you've already driven traffic, you've lost data from your first visitors. Those early visitors are one of the most valuable ones to learn from. They're the people who saw your value proposition, clicked through, and tried your product for the first time.
 
-              Set up tracking now, so that when traffic arrives, you see **everything**.
+              Set up tracking now, so that when traffic arrives, you see **everything that helps you make decisions**.
           subtitle: Why this comes before driving traffic
         - type: quiz-question
           title: "Quiz: Why set up analytics now?"
@@ -784,7 +770,7 @@ course:
               Screenshot will show:
 
               Why this exists:
-            systemPrompt: 'You are a business mentor helping a learner write a directory submission. Check if they have a clear one-line description that names a specific problem, a screenshot idea that shows the product in action (not a logo or landing page), and a personal "why this exists" paragraph. Provide friendly, concise feedback (max 5 bullet points) in British English. If the one-line description is too generic or feature-listy, suggest how to make it more specific. End with encouragement.'
+            systemPrompt: 'You are a business mentor helping a learner write a directory submission. Check if they have a clear one-line description that names a specific problem, a screenshot idea that shows the product in action (not a logo or landing page), and a personal "why this exists" paragraph. Provide friendly, concise feedback (max 5 bullet points) in British English, avoid using em dashes. If the one-line description is too generic or feature-listy, suggest how to make it more specific. End with encouragement.'
             checkerPrompt: 'Check if the user has written a one-line description, a screenshot description, and a "why this exists" paragraph. The one-line description should name a specific problem, not list features. This is what they wrote:'
         - type: free-text-exercise
           title: Write your community post
@@ -796,7 +782,7 @@ course:
 
               Think about which community you'd post this in and adapt the language to fit.
             placeholder: "My community post:"
-            systemPrompt: 'You are a business mentor helping a learner write a community post that feels helpful rather than promotional. Check if it leads with a relatable problem (not a product link), offers something free, and asks for feedback. If it reads like an advertisement, suggest how to make it more personal and community-friendly. Provide friendly, concise feedback (max 4 bullet points) in British English. End with encouragement.'
+            systemPrompt: 'You are a business mentor helping a learner write a community post that feels helpful rather than promotional. Check if it leads with a relatable problem (not a product link), offers something free, and asks for feedback. If it reads like an advertisement, suggest how to make it more personal and community-friendly. Provide friendly, concise feedback (max 4 bullet points) in British English, avoid using em dashes. End with encouragement.'
             checkerPrompt: 'Check if this community post leads with a problem (not a product link), mentions what the product does, and asks for feedback. It should not read like an advertisement. This is the post:'
         - type: challenge-end
           title: "Your first visitors are on their way! \U0001F680"
@@ -1046,7 +1032,7 @@ course:
               Paid tier ($X/month) includes:
 
               Why this price:
-            systemPrompt: 'You are a business mentor helping a learner choose a pricing model for their first product. They should explain their model, what is free vs paid, the price, and why they chose it. Provide friendly, concise feedback (max 5 bullet points) in British English. Check that the pricing connects to user data or feedback (not arbitrary). If the price seems too high for a first product, gently suggest starting lower. If the free tier gives away too much, flag it. End with encouragement.'
+            systemPrompt: 'You are a business mentor helping a learner choose a pricing model for their first product. They should explain their model, what is free vs paid, the price, and why they chose it. Provide friendly, concise feedback (max 5 bullet points) in British English, avoid using em dashes. Check that the pricing connects to user data or feedback (not arbitrary). If the price seems too high for a first product, gently suggest starting lower. If the free tier gives away too much, flag it. End with encouragement.'
             checkerPrompt: 'Check if the user has described a pricing model, explained what is free vs paid, chosen a price, and connected it to what they know about their users. This is their pricing model:'
         - type: challenge-end
           title: "You've got a pricing model! \U0001F4B0"
@@ -1254,7 +1240,7 @@ course:
               Contribution per user: $
 
               Break-even = $ / $ = approximately __ paying users
-            systemPrompt: 'You are a business mentor helping a learner calculate their break-even point. They should list their fixed costs, their price per user, their variable cost (Stripe fees), and calculate how many paying users they need. Provide friendly, concise feedback (max 5 bullet points) in British English. Check the maths. If they forgot common fixed costs (domain, email), mention them. If the break-even number seems surprisingly high, suggest they review their pricing or costs. Remind them that this is the minimum, not the goal. End with encouragement.'
+            systemPrompt: 'You are a business mentor helping a learner calculate their break-even point. They should list their fixed costs, their price per user, their variable cost (Stripe fees), and calculate how many paying users they need. Provide friendly, concise feedback (max 5 bullet points) in British English, avoid using em dashes. Check the maths. If they forgot common fixed costs (domain, email), mention them. If the break-even number seems surprisingly high, suggest they review their pricing or costs. Remind them that this is the minimum, not the goal. End with encouragement.'
             checkerPrompt: 'Check if the user has listed fixed costs, a price per user, a variable cost per user, and calculated a break-even number. Verify the arithmetic is roughly correct. This is their calculation:'
         - type: reflection
           title: Your sustainable business plan
