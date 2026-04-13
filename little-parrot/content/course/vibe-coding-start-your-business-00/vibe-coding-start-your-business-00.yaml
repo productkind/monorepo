@@ -474,15 +474,15 @@ course:
             options:
               - Analytics tools take several weeks to start working
               - You need analytics data to create a Stripe account
-              - Data from your first visitors is the most valuable and can't be recovered if you miss it
               - Search engines require analytics to index your site
-            correctAnswer: 2
-            explanation: Your first visitors are the most valuable to learn from. If you set up analytics after they've already visited, that data is gone. You can't go back and see what they did.
+              - Every visitor you miss is data you can never recover
+            correctAnswer: 3
+            explanation: Every visitor teaches you something about how people experience your product. If you set up analytics after they've already visited, that data is gone. You can't go back and see what they did. Set up tracking before the traffic arrives so you don't lose a single visit.
         - type: text
           title: What is Posthog?
           content:
             body: |-
-              **Posthog** is a free analytics tool that shows you what visitors do inside your app. It goes beyond counting page views: you can see which pages people visit, which buttons they click, where they get stuck, and where they leave.
+              **[Posthog](https://posthog.com)** is an analytics tool that shows you what visitors do inside your app. It goes beyond counting page views: you can see which pages people visit, which buttons they click, where they get stuck, and where they leave.
 
               It's free for up to 1 million events per month, which is more than enough for a product that's getting started.
 
@@ -506,7 +506,7 @@ course:
           title: Custom events for what matters most
           content:
             body: |-
-              Autocapture handles the basics, but for the actions that matter most to your business, you'll want to set up **custom events**.
+              Autocapture handles the basics, but for the actions that are the most important to your business, you'll want to set up **custom events**.
 
               A custom event is a specific action you choose to track by name. For example: "book club created", "vote cast", or "user signed up".
 
@@ -516,7 +516,7 @@ course:
               2. **Reliability:** if you change your design (rename a button, move a form), autocapture labels change too. Custom event names stay consistent.
 
               Posthog recommends naming custom events in **[object] [verb]** format: "book club created", "book suggestion added", "vote cast". This keeps your events readable as the list grows.
-          subtitle: Name the actions that matter
+          subtitle: Name the actions that you want to see
         - type: quiz-question
           title: "Quiz: Autocapture vs custom events"
           content:
