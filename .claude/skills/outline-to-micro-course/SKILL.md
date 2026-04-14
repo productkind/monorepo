@@ -37,6 +37,8 @@ description: Use this checklist when generating micro-course content from an out
 
 **Challenge openers set emotional tone.** The first step of each challenge should excite and preview the transformation, not just list what's coming. Acknowledge progress ("You're no longer a beginner") and build anticipation for what they'll be able to do.
 
+**Challenge-end steps have distinct roles.** The `nextModule` field should excite and build anticipation for what's coming next. The `subDescription` should reflect on the value the learner got from this specific challenge, not recap the whole course so far. Don't repeat the same information in both fields.
+
 **Final reflection is about the journey, not the last task.** Ask "What surprised you? What do you want to build next?" not "Did you complete the steps?" Send learners forward with momentum.
 
 ---
@@ -134,9 +136,14 @@ Micro-course content should follow these principles to ensure it's engaging, eff
 - Take under 3 minutes to complete
 - Directly reinforce the concept taught in the preceding text steps
 
+**Quiz answer formatting:**
+- Keep all options similar in length. If the correct answer is noticeably longer than the others, the learner picks it without thinking.
+- Prefer scenario-based questions ("Your data shows 70% drop-off. What should you do next?") over recognition questions ("What can X help you spot?"). Scenarios force the learner to think through a real decision.
+
 **Fail indicators:**
 - All interactive steps are grouped at the end of the challenge
 - Quiz questions test recall of definitions instead of judgement or application
+- The correct quiz answer is visually obvious because it's the longest option
 - The learner reads more than 3 text steps in a row without doing something
 - Every interactive step asks the learner to apply to their own product (too much high-effort)
 
@@ -165,6 +172,7 @@ Micro-course content should follow these principles to ensure it's engaging, eff
 
 **Rules:**
 - Every technical term is either explained on first use OR avoided entirely
+- Explanations use plain language inline, e.g., "**kebab-case** (all lowercase, words separated by hyphens)". Don't assume any term is too basic to explain for this audience.
 - Explanations use analogies to familiar, everyday concepts
 - Acronyms are spelled out and explained on first use
 

@@ -648,9 +648,12 @@ course:
             body: |-
               This is the moment everything comes together.
 
-              You have a **clear value proposition** (Challenge 1) that makes people lean in. A **professional domain** (Challenge 2) that looks credible. **Email capture** (Challenge 3) ready to keep visitors in touch. And **analytics** (Challenge 4) tracking every action from day one.
+              - You have a **clear value proposition** (Challenge 1) that makes people lean in. 
+              - A **professional domain** (Challenge 2) that looks credible. 
+              - **Email capture** (Challenge 3) ready to keep visitors in touch. 
+              - And **analytics** (Challenge 4) tracking every action from day one.
 
-              You're not sending people into a void. Every visitor who arrives will be captured, tracked, and learned from. Now it's time to send some.
+              You're not sending people into a void. Every visitor who arrives will be captured, tracked, and learned from. Now it's time to get some traffic.
           subtitle: Time to open the doors
         - type: text
           title: Where to list your product
@@ -658,13 +661,13 @@ course:
             body: |-
               There are platforms where people actively look for new products to try. Here are three good starting points:
 
-              **BetaList** (betalist.com) — a directory of early-stage startups and products looking for beta testers. Your audience here is people who enjoy trying new things and giving feedback. Good for getting early adopters.
+              **[BetaList](https://betalist.com/)** – a directory of early-stage startups and products looking for beta testers. Your audience here is people who enjoy trying new things and giving feedback. Good for getting early adopters.
 
-              **Product Hunt** (producthunt.com) — a larger platform where new products are "launched" and voted on by the community. More competitive, but a well-timed launch can bring a significant spike of visitors. Save this for when you feel confident about your product.
+              **[Product Hunt](https://producthunt.com)** – a larger platform where new products are "launched" and voted on by the community. More competitive, but a well-timed launch can bring a significant spike of visitors. Save this for when you feel confident about your product.
 
-              **Startup directories** — there are dozens of smaller directories that list new products. Search for "submit startup" or "startup directory list" and you'll find curated lists of places to submit.
+              **Startup directories** – there are dozens of smaller directories that list new products. Search for "submit startup" or "startup directory list" and you'll find curated lists of places to submit.
 
-              You don't need to be on all of them. Pick one or two that fit your product and your audience.
+              You don't need to be on all of them. Pick a few that fit your product and your audience.
           subtitle: Directories where people discover new products
         - type: text
           title: What a good submission looks like
