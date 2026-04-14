@@ -665,7 +665,7 @@ course:
 
               **[Product Hunt](https://producthunt.com)** – a larger platform where new products are "launched" and voted on by the community. More competitive, but a well-timed launch can bring a significant spike of visitors. Save this for when you feel confident about your product.
 
-              **Startup directories** – there are dozens of smaller directories that list new products. Search for "submit startup" or "startup directory list" and you'll find curated lists of places to submit.
+              **Startup directories** – there are dozens of smaller directories that list new products. We've put together a [Startup Directory List](https://littleparrot.app/nest/toolkit/TODO) in the Toolkit with links to directories you can submit to.
 
               You don't need to be on all of them. Pick a few that fit your product and your audience.
           subtitle: Directories where people discover new products
@@ -679,24 +679,18 @@ course:
 
               **A screenshot that shows the product in action.** Not a logo or a landing page. Show the product doing the thing it does. If your app has a voting feature, show a vote in progress.
 
-              **A short "why this exists" paragraph.** Two to three sentences about the problem you noticed and why you built this. Keep it personal and specific.
-
-              **A weak submission** looks like: "BookClubApp - A book club management platform. Features include: book lists, voting, member management, reading schedules, and more."
-
-              **A strong submission** looks like: "Book Club Organiser - Helps book clubs pick their next read without the WhatsApp chaos. I built this because my own book club spent more time debating what to read than actually reading."
-
-              Notice the difference? The strong version has personality, names a specific problem, and doesn't list features.
-          subtitle: Value proposition, screenshot, and why it exists
+              **A short paragraph about the pain point or need it addresses.** Two to three sentences about what your users struggle with and how your product helps. Keep it personal and specific.
+          subtitle: Value proposition, screenshot, and the pain point it solves
         - type: quiz-question
           title: "Quiz: Directory submissions"
           content:
             question: Which of these is the strongest one-line description for a directory listing?
             options:
-              - "MealPlan Pro - A comprehensive meal planning and grocery management platform with AI-powered recipe suggestions"
               - "MealPlan Pro - Helps busy parents plan a week of dinners in 5 minutes instead of 45"
+              - "MealPlan Pro - A comprehensive meal planning and grocery management platform with AI-powered recipe suggestions"
               - "MealPlan Pro - The best meal planning app on the market"
               - "MealPlan Pro - Features include: meal plans, grocery lists, recipe search, nutrition tracking"
-            correctAnswer: 1
+            correctAnswer: 0
             explanation: It names a specific audience (busy parents), a specific outcome (plan a week of dinners), and a specific improvement (5 minutes instead of 45). It communicates value, not a feature list.
         - type: text
           title: Sharing in communities without being spammy
@@ -704,76 +698,52 @@ course:
             body: |-
               Online communities (forums, Facebook groups, Reddit, Discord servers) can be a great source of early visitors. But nobody likes the person who joins a group and immediately drops a link.
 
-              **The rule:** lead with the problem you solve, not with a link.
+              **The approach:** be helpful first, and be transparent about what you've built. Don't hide that it's a product. People respect honesty. What they don't respect is someone who only shows up to promote.
 
-              Here's a template for a community post that feels helpful rather than promotional:
-
-              *"We run a [relevant activity] and used to struggle with [specific problem]. I built a free tool to [what it does]. Would love feedback from others who [share this problem]."*
-
-              Notice what's happening: you're sharing a relatable experience, offering something free, and asking for feedback. You're contributing to the community, not advertising.
-
-              **Before posting:**
-              - Spend a few days in the community first. Read, comment, be helpful.
+              **Before you ever post about your product:**
+              - Spend a few days in the community first. Read, comment, answer questions, be helpful.
+              - Build a presence so people recognise your name before they see your product.
               - Check the community rules about self-promotion.
-              - Only post when it's genuinely relevant to a discussion or topic.
+
+              **When you do share your product**, lead with the problem it solves and be upfront:
+
+              *"I noticed a lot of people here struggle with [specific problem]. I built a product that helps with this: [one sentence about what it does]. It has a free tier / free trial if you want to try it. Happy to answer any questions."*
+
+              Notice what's happening: you're naming a real problem the community cares about, being transparent that it's your product, and not pushing anyone. You're inviting, not advertising.
           subtitle: Lead with the problem, not the link
         - type: text
           title: One-on-one conversations still matter
           content:
             body: |-
-              At this stage, talking to people individually is still your most powerful marketing tool. A personal message to someone who fits your target audience is more likely to lead to a sign-up than a directory listing that reaches hundreds.
+              At this stage, talking to people individually is still your most powerful marketing tool. A personal message to someone who fits your target audience is **more likely to lead to a sign-up** than a directory listing that reaches hundreds.
 
               When you find someone who matches your target user (in a community, through friends, at an event), describe the value and ask if they'd try it. A direct invitation feels personal and builds a stronger connection than a public post.
-
-              Want to go deeper into publishing and growing your app? Check out our [Launch and Grow Your Lovable App](https://littleparrot.app) course.
           subtitle: Your best marketing channel right now
         - type: text
-          title: "Dalmie's first visitors"
+          title: "Dalmie's directory submission"
           content:
             body: |-
-              Dalmie wrote a community post in a book lovers' forum:
+              Here's what Dalmie wrote for her BetaList listing:
 
-              *"We run a monthly book club and used to lose track of suggestions in WhatsApp. I built a free tool to collect and vote on book picks. Would love feedback from other book club organisers."*
+              - **One-line description:** "Book Club Organiser helps people who run small book clubs with friends pick their next read in minutes instead of endless group chat debates."
+              - **Screenshot:** The voting screen showing three book suggestions with vote counts.
+              - **Pain point:** "Small book clubs that coordinate through WhatsApp waste time every month. Suggestions get buried, half the group misses the vote, and the organiser ends up deciding alone. Book Club Organiser gives every member a voice and picks the next book in one click."
 
-              She got 20 visitors in the first week. Her BetaList listing used her value proposition from Challenge 1 and a screenshot of the voting feature.
-
-              Her wait list captured **12 email addresses**, and Posthog showed her exactly which pages people visited and where they dropped off. Everything she set up in the previous challenges is now working together.
-          subtitle: 20 visitors, 12 emails, and real data
-        - type: free-text-exercise
-          title: Write your directory submission
-          content:
-            description: |-
-              Write the three pieces of a strong directory submission for your product:
-
-              1. **One-line description** (use your value proposition from Challenge 1)
-              2. **Screenshot description** (what will your screenshot show the product doing?)
-              3. **"Why this exists" paragraph** (2-3 sentences: what problem did you notice, and why did you build this?)
-            placeholder: |-
-              One-line description:
-
-              Screenshot will show:
-
-              Why this exists:
-            systemPrompt: 'You are a business mentor helping a learner write a directory submission. Check if they have a clear one-line description that names a specific problem, a screenshot idea that shows the product in action (not a logo or landing page), and a personal "why this exists" paragraph. Provide friendly, concise feedback (max 5 bullet points) in British English, avoid using em dashes. If the one-line description is too generic or feature-listy, suggest how to make it more specific. End with encouragement.'
-            checkerPrompt: 'Check if the user has written a one-line description, a screenshot description, and a "why this exists" paragraph. The one-line description should name a specific problem, not list features. This is what they wrote:'
+              Notice how each piece works: the one-line description names a **specific audience** (people who run small book clubs with friends, not large community book clubs), a **specific outcome** (pick their next read in minutes), and a **specific improvement** (instead of endless group chat debates). The pain point paragraph goes deeper into what that specific audience struggles with.
+          subtitle: A real example before you write yours
         - type: free-text-exercise
           title: Write your community post
           content:
-            description: |-
-              Write a community post using this template:
-
-              *"We [do relevant activity] and used to struggle with [specific problem]. I built a free tool to [what it does]. Would love feedback from others who [share this problem]."*
-
-              Think about which community you'd post this in and adapt the language to fit.
-            placeholder: "My community post:"
-            systemPrompt: 'You are a business mentor helping a learner write a community post that feels helpful rather than promotional. Check if it leads with a relatable problem (not a product link), offers something free, and asks for feedback. If it reads like an advertisement, suggest how to make it more personal and community-friendly. Provide friendly, concise feedback (max 4 bullet points) in British English, avoid using em dashes. End with encouragement.'
-            checkerPrompt: 'Check if this community post leads with a problem (not a product link), mentions what the product does, and asks for feedback. It should not read like an advertisement. This is the post:'
+            description: Think of one online community where your target audience spends time. Write a short post that introduces your product in a helpful, transparent way. Remember to lead with the problem you're solving.
+            placeholder: "I noticed a lot of people here struggle with [specific problem]. I built a product that helps with this: [one sentence about what it does]. It has a free tier / free trial if you want to try it. Happy to answer any questions."
+            systemPrompt: 'You are a business mentor helping a learner write a community post about their product. It should lead with a problem the community cares about, be transparent that it is their product, and invite people to try it without being pushy. If it reads like an ad or hides the commercial intent, flag it. If it does not name a specific problem, suggest how to add one. Provide friendly, concise feedback (max 4 bullet points) in British English, avoid using em dashes. End with encouragement.'
+            checkerPrompt: 'Check if this community post leads with a problem (not a product link), is transparent about it being the learner''s product, and invites without being pushy. This is what they wrote:'
         - type: challenge-end
           title: "Your first visitors are on their way! \U0001F680"
           content:
-            nextModule: "**Next challenge:** Now that people are using your product, it's time to listen to what they have to say."
-            description: You've written a directory submission and community post, and you know where to share them.
-            subDescription: "Submit to at least one directory and share in one community where your users spend time. Then watch your Posthog dashboard and email list. Real data is about to start flowing in."
+            nextModule: "**Next challenge:** Now that people are using your product, it's time to listen to what they have to say and build social proof."
+            description: You know where to list your product, how to write a strong submission, and how to show up in communities without being spammy.
+            subDescription: "You've practised the hardest part: talking about your product honestly and helpfully. Use the Startup Directory List in the Toolkit to find directories that fit your product, and post in one community this week."
 
     - title: Listen to Your First Users
       isFree: false
@@ -802,11 +772,13 @@ course:
 
               This doesn't need to be complex. A button that opens a simple form with one text field ("Tell us what you think" or "Something not working? Let us know") is enough.
 
-              You can prompt your AI app builder to add this. Something like:
+              You can prompt your AI app builder to add this:
 
-              *"Add a small 'Send feedback' button in the bottom-right corner. When clicked, it opens a simple form with a text area and a submit button. When submitted, send the feedback to [your email address]."*
+              ```
+              Add a small "Send feedback" button in the bottom-right corner. When clicked, it opens a simple form with a text area with the placeholder text "Tell us what you think" and a submit button. When submitted, save the feedback to the database.
+              ```
 
-              Every piece of feedback is a gift. Someone took time to tell you what's working or what's broken. That's more valuable than any analytics dashboard.
+              Every piece of feedback is a gift. Someone took time to tell you what's working or what's broken.
           subtitle: Make it easy for visitors to talk to you
         - type: text
           title: How to ask for feedback directly
@@ -816,93 +788,60 @@ course:
 
               A short email is enough:
 
-              *"Hi [name], I saw you signed up for [product]. I'd love to hear how it went. Two quick questions: What did you use it for? What was confusing?"*
+              ```
+              Hi [name], 
+              
+              I'm [your name], the creator of [product]. I saw you signed up recently and I'd love to hear how it went. Two quick questions:
+
+              1. What were you hoping it would help you achieve?
+              2. What was confusing or unclear?
+
+              I really appreciate any feedback you have.
+              Thank you,
+              [Your name]
+              ```
 
               **When to ask:** after someone has used your product at least once or twice. Not on their first visit. Give them time to form an opinion.
 
               **What to listen for:** patterns. If three people mention the same confusing step, that's a clear signal. If one person has a unique complaint, note it but don't rush to fix it.
           subtitle: Two questions that tell you everything
-        - type: text
-          title: Combine feedback with analytics
-          content:
-            body: |-
-              Here's where your Posthog data from Challenge 4 becomes powerful.
-
-              **Feedback tells you *why* something is confusing.** A user writes: "I couldn't figure out how to add a second book."
-
-              **Analytics tells you *where* people get stuck.** Posthog shows that 80% of visitors create a book club but never add a second book suggestion.
-
-              Together, they give you the full picture: you know **what's broken** (the "add a book" flow) and **why it's broken** (the interface is confusing). One prompt to your AI builder and it's fixed.
-
-              Check your Posthog data and your feedback side by side. The overlaps are where you'll find the biggest improvements.
-          subtitle: Feedback says why. Analytics says where.
         - type: quiz-question
-          title: "Quiz: Feedback and analytics"
+          title: "Quiz: Using feedback to improve"
           content:
-            question: How do user feedback and Posthog analytics complement each other?
+            question: "You email three users who signed up last week. Two of them reply: 'I created an account but couldn't figure out what to do next.' You look at your Posthog data that shows 70% of new users leave within 30 seconds of signing up. What are the two best next steps?"
             options:
-              - They don't. You only need one or the other.
-              - Feedback tells you where people get stuck, analytics tells you why
-              - Feedback tells you why something is confusing, analytics tells you where people get stuck
-              - Analytics replaces the need for user feedback entirely
-            correctAnswer: 2
-            explanation: Feedback gives you the "why" (users explain what confused them), while analytics gives you the "where" (data shows where people drop off). Together, they point you to the biggest improvements.
+              - Send more traffic to the sign-up page to get more data
+              - Add a feedback form to your product so future users can tell you what's confusing
+              - Redesign the entire onboarding flow from scratch
+              - Reply to the two users with a follow-up question or invite them for a short call
+            correctAnswer: [1, 3]
+            explanation: "These two users just told you something valuable. Reply to them and dig deeper: what were they hoping to do? A short call can reveal more than ten emails. And adding a feedback form means you'll hear from future users without having to email each one. Sending more traffic won't help if new users get stuck. Redesigning everything before understanding the problem risks fixing the wrong thing."
         - type: text
           title: Collecting real testimonials
           content:
             body: |-
               When someone shares something positive in their feedback, ask if you can use it on your landing page.
 
-              A simple follow-up: *"That's great to hear! Would you mind if I used your words on our website? I can use just your first name."*
+              A simple follow-up: 
+
+              ```
+              That's great to hear! We're building out a testimonials section on our website and would love to feature what you wrote. I can use just your first name, if you prefer.
+              ```
 
               Most people say yes. One honest sentence from a real user is worth more than ten polished quotes you wrote yourself.
 
-              **Do not generate fake testimonials with AI.** It's tempting, but it undermines trust the moment anyone suspects they're not real. And people can usually tell. Start with one real testimonial. It's enough.
-
-              **When to ask:** after someone has expressed genuine satisfaction. Not after their first visit. Not in an automated email. After a real exchange where they've told you something positive.
+              **Do not generate fake testimonials with AI.** It's tempting, but it undermines trust the moment anyone suspects they're not real. And people can usually tell. Start with one real testimonial, then grow from there.
           subtitle: One real sentence beats ten fake ones
-        - type: quiz-question
-          title: "Quiz: Collecting testimonials"
-          content:
-            question: When is the right time to ask a user for a testimonial?
-            options:
-              - Immediately after they sign up
-              - After they've used your product and expressed genuine satisfaction
-              - Before they've tried the product, to build anticipation
-              - Never. You should write testimonials yourself based on what you think users would say.
-            correctAnswer: 1
-            explanation: Ask for a testimonial after a real exchange where the user has expressed genuine satisfaction. They need to have experienced your product before they can honestly recommend it.
-        - type: text
-          title: "Dalmie listens to her users"
-          content:
-            body: |-
-              Dalmie added a small "Send feedback" button to the Book Club Organiser. She also emailed five book club organisers who signed up through her wait list.
-
-              Three replied:
-              - *"Love the idea but I couldn't figure out how to add a second book."*
-              - *"The voting feature is great. Can you add deadlines?"*
-              - *"We finally stopped arguing in the group chat about what to read next."*
-
-              Her Posthog data confirmed the first complaint: most visitors created a book club but never added a second book suggestion. The "add a book" flow was confusing.
-
-              She fixed it with one prompt to Lovable. Usage jumped the following week.
-
-              The third reply? That became her first testimonial. She asked permission and added it to her landing page: *"We finally stopped arguing in the group chat about what to read next."*
-          subtitle: Three emails, one fix, and a testimonial
         - type: reflection
-          title: Plan your feedback approach
+          title: Where would you place your feedback form?
           content:
-            description: How will you collect feedback from your first users? Think about what feedback feature you'll add to your product, and draft the short email you'll send to your first sign-ups.
-            placeholder: |-
-              Feedback feature: I'll add...
-
-              My feedback email draft:
-              Hi [name], I saw you signed up for...
-            subDescription: "You don't need many replies to find useful patterns. Even three responses can reveal what needs fixing."
+            description: Think about your product's user flow. At which point would it be most useful to ask your users for feedback? Why that moment?
+            placeholder: "I'd place the feedback form at... because at that point the user has..."
+            subDescription: "Think about what you're most uncertain about in your product. That's where feedback will be the most valuable."
         - type: challenge-end
           title: "You're learning from real users! \U0001F4AC"
           content:
-            nextModule: "**Next challenge:** Now that you know what people value, it's time to figure out what they'd pay for."
+            nextModule: "**Next challenge:** You've heard what your users value. But how much would they pay for it? And how do you pick a number that feels right? Let's find out."
             description: You know how to collect feedback, combine it with analytics, and earn real testimonials.
             subDescription: "Add a feedback feature to your product. Reach out to at least three people who have used it. Listen for patterns, not individual opinions. And if someone says something positive, ask to use it."
 

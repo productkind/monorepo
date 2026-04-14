@@ -22,6 +22,7 @@ description: Use this checklist when generating micro-course content from an out
 - **Don't open with overwhelming text blocks.** The learner's first reading experience after the comics sets their expectations for the whole course. If the first text step is long, split it into two shorter steps. Short, focused steps feel approachable. A wall of text feels like homework.
 - **Show where reusable tools will come back.** When a challenge teaches a formula, template, or technique that the learner will reuse in later challenges, add a step listing where it will show up. This motivates the learner to take it seriously and connects the dots across the course. Don't leave the learner wondering "why does this matter?"
 - **Verify tool-specific advice against official documentation.** When a course teaches how to use a specific tool (e.g., Posthog, Stripe, Google Workspace), check the tool's actual documentation before writing setup instructions, configuration steps, or terminology. Use the tool's own names for settings, buttons, and concepts. Don't generate setup instructions from general knowledge.
+- **Fact-check before stating best practices.** If you're about to write something as a principle, best practice, or rule (in text steps, quiz explanations, or subDescriptions), and you're not confident it's grounded in real domain knowledge, look it up using WebSearch or WebFetch before including it. Don't state uncertain opinions as facts. Don't silently skip it either. Verify first, then write.
 
 ---
 
