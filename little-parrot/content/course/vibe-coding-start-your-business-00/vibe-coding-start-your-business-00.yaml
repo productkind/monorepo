@@ -527,7 +527,7 @@ course:
               - Custom events have clear names and stay consistent when you redesign
               - You need custom events before Posthog will start recording sessions
             correctAnswer: 2
-            explanation: Autocapture labels actions generically ("clicked button with text Continue") and the labels change if you redesign. Custom events like "book-club-created" are clear, specific, and stay consistent over time.
+            explanation: Autocapture labels actions generically ("clicked button with text Continue") and the labels change if you redesign. Custom events like "book-club-created" are clear, specific, and stay consistent over time. So you will know what action happened without having to interpret generic labels.
         - type: text
           title: The prompt to add Posthog to your app
           content:
@@ -549,9 +549,9 @@ course:
 
               ```
 
-              **Where to find your project token:** Sign up at posthog.com (free), create a project, and you'll find your project token in the project settings.
+              **Where to find your project token:** Sign up at [posthog.com](https://posthog.com/) (free), create a project, and you'll find your project token in the project settings.
 
-              **Replace the example events** with the actions that matter most in your product. Use the "object verb" naming format to keep things consistent.
+              **Replace the example events** with the actions that you want to track. Use the "object-verb" naming format to keep things consistent.
           subtitle: Copy, adapt, and paste into your AI app builder
         - type: text
           title: How to verify it works
@@ -561,12 +561,10 @@ course:
 
               1. Open your app in a browser
               2. Click around: visit a few pages, click some buttons, submit a form
-              3. Go to your Posthog dashboard (app.posthog.com)
-              4. Look for your session in the **Activity** or **Events** tab
+              3. Go to your [Posthog dashboard](http://app.posthog.com/)
+              4. Look for your events in the **Activity** menu
 
-              If debug mode is enabled (as the prompt requests), you'll also see events logged in your browser's developer console. Don't worry if you're not sure how to open that. The important check is: **does your session appear in the Posthog dashboard?**
-
-              If nothing shows up, the most common causes are:
+              **If nothing shows up**, the most common causes are:
               - The project token is wrong or missing
               - Posthog was only initialised on one page, not all of them
               - An ad blocker in your browser is blocking Posthog
@@ -577,9 +575,9 @@ course:
           title: Session replay
           content:
             body: |-
-              Once Posthog is running, open the **Replay** section in your dashboard. Here you can watch recordings of real visitor sessions.
+              Once Posthog is running, open the **Session replay** menu. Here you can watch recordings of real visitor sessions.
 
-              You'll see exactly what your visitors saw: which pages they opened, where they clicked, where they scrolled, where they paused, and where they left. It's like looking over someone's shoulder as they use your product.
+              **You'll see exactly what your visitors saw:** which pages they opened, where they clicked, where they scrolled, where they paused, and where they left. It's like looking over someone's shoulder as they use your product.
 
               This is one of the most powerful tools for improving your product. You'll spot things that analytics numbers alone can't show:
               - A button that people hover over but never click (confusing label?)
@@ -587,18 +585,19 @@ course:
               - A form that people start filling in but abandon halfway (too long or unclear?)
 
               You don't need to watch every session. Start by watching a few each week, especially sessions where someone signed up or where someone left quickly. The patterns will stand out.
+            imageUrl: /courses/vibe-coding-start-your-business-00/posthog-session-replay.png
           subtitle: Watch how real people use your product
         - type: quiz-question
           title: "Quiz: Session replay"
           content:
-            question: What can session replay help you spot that analytics numbers alone cannot?
+            question: "Your Posthog data shows that 90% of visitors leave your sign-up page without completing the form. What should you do next?"
             options:
-              - How many visitors you had last week
-              - Which country your visitors come from
-              - A button that people hover over but never click, or a form they abandon halfway
-              - How fast your pages load
-            correctAnswer: 2
-            explanation: Session replay shows you the qualitative side of user behaviour. You can see hesitation, confusion, and frustration that numbers alone can't reveal.
+              - Shorten the form by removing fields to make it quicker to complete
+              - Drive more traffic to the form by promoting your product in more communities
+              - Assume the form is broken and rebuild it completely
+              - Watch a few session replays of that page to see where people get stuck
+            correctAnswer: 3
+            explanation: "The analytics tell you *where* people drop off (the sign-up page), but not *why*. Before changing anything, watch a few session replays to see what's actually happening. Maybe people get stuck on a specific field, or they scroll past the submit button without seeing it. The replay shows you the problem so you fix the right thing."
         - type: text
           title: What to look at each week
           content:
@@ -615,23 +614,6 @@ course:
 
               Don't get lost in dashboards. These four checks are enough for now.
           subtitle: Four things, once a week
-        - type: text
-          title: Dalmie sets up Posthog
-          content:
-            body: |-
-              Dalmie signed up for Posthog (free plan), got her project token, and adapted the prompt to ask Lovable to add tracking to the Book Club Organiser.
-
-              She set up three custom events:
-              - **"book-club-created"** when someone creates a new book club
-              - **"book-suggestion-added"** when someone adds a book
-              - **"vote-cast"** when someone votes on a book
-
-              She also enabled session replay so she could watch how people navigate the app.
-
-              After setup, she opened the app in an incognito window and clicked around. She checked the Posthog dashboard: her session appeared, all three custom events fired correctly, and she could see her own session replay.
-
-              She's now ready to see what real visitors do.
-          subtitle: Three custom events, session replay, one test visit
         - type: reflection
           title: Plan your Posthog setup
           content:
@@ -640,17 +622,16 @@ course:
 
               Think about the actions that tell you whether someone is getting value from your product.
             placeholder: |-
-              The three most important actions in my product are:
-              1. "object-verb" — when someone...
-              2. "object-verb" — when someone...
-              3. "object-verb" — when someone...
+              1. book-club-created
+              2. book-suggestion-added
+              3. vote-cast
             subDescription: "These events will tell you whether people are using the core of your product, or getting stuck before they reach it."
         - type: challenge-end
           title: "You're ready to see everything! \U0001F4CA"
           content:
-            nextModule: "**Next challenge:** Everything is in place. A clear value proposition, a professional domain, email capture, and analytics. Time to open the doors and let people in."
+            nextModule: "**Next challenge:** The preparation is done. Now it's time for the exciting part – getting real people to your product and watching what happens."
             description: You've set up analytics and session replay so every visitor teaches you something.
-            subDescription: "You now have a clear value proposition (Challenge 1), a professional domain (Challenge 2), email capture (Challenge 3), and analytics tracking (this challenge). Nothing will be wasted when traffic arrives."
+            subDescription: "You now have Posthog tracking every page visit, every click, and every custom event you defined. Session replay lets you watch exactly how people experience your product. Check your dashboard once a week and let the data guide your decisions."
 
     - title: Get Your First Visitors
       isFree: false
