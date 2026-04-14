@@ -512,10 +512,10 @@ course:
 
               Why bother when autocapture already tracks clicks? Two reasons:
 
-              1. **Clarity:** autocapture labels a button click as "clicked button". A custom event called "book-club-created" tells you exactly what happened in your product.
+              1. **Clarity:** autocapture labels a button click as "clicked button with text Continue". A custom event called "book-club-created" tells you exactly what happened in your product.
               2. **Reliability:** if you change your design (rename a button, move a form), autocapture labels change too. Custom event names stay consistent.
 
-              Posthog recommends naming custom events in **[object] [verb]** format: "book-club-created", "book-suggestion-added", "vote-cast". This keeps your events readable as the list grows.
+              Name custom events in **kebab-case** (all lowercase, words separated by hyphens) using an **[object]-[verb]** format: "book-club-created", "book-suggestion-added", "vote-cast". This keeps your events readable and consistent as the list grows.
           subtitle: Name the actions that you want to see
         - type: quiz-question
           title: "Quiz: Autocapture vs custom events"
@@ -523,11 +523,11 @@ course:
             question: Why should you set up custom events when Posthog already autocaptures clicks?
             options:
               - Autocapture doesn't work on mobile devices
-              - Custom events have clearer names and stay consistent even when you change your design
-              - Custom events are faster than autocapture
+              - Custom events load faster than autocapture
+              - Custom events have clear names and stay consistent when you redesign
               - You need custom events before Posthog will start recording sessions
-            correctAnswer: 1
-            explanation: Autocapture labels actions generically ("clicked button") and the labels change if you redesign. Custom events like "book club created" are clear, specific, and stay consistent over time.
+            correctAnswer: 2
+            explanation: Autocapture labels actions generically ("clicked button with text Continue") and the labels change if you redesign. Custom events like "book-club-created" are clear, specific, and stay consistent over time.
         - type: text
           title: The prompt to add Posthog to your app
           content:
@@ -544,7 +544,7 @@ course:
               *4. Track these custom events using posthog.capture() with these exact names:*
               *- "signup-form-submitted" when someone submits the sign-up form*
               *- "feedback-button-clicked" when someone clicks the feedback button*
-              *- [add your own events here, using "object verb" naming]*
+              *- [add your own events here, using kebab-case "object-verb" naming]*
               *5. Make sure Posthog initialises on every page, not only the homepage.*
 
               ```
@@ -622,9 +622,9 @@ course:
               Dalmie signed up for Posthog (free plan), got her project token, and adapted the prompt to ask Lovable to add tracking to the Book Club Organiser.
 
               She set up three custom events:
-              - **"book club created"** when someone creates a new book club
-              - **"book suggestion added"** when someone adds a book
-              - **"vote cast"** when someone votes on a book
+              - **"book-club-created"** when someone creates a new book club
+              - **"book-suggestion-added"** when someone adds a book
+              - **"vote-cast"** when someone votes on a book
 
               She also enabled session replay so she could watch how people navigate the app.
 
@@ -636,14 +636,14 @@ course:
           title: Plan your Posthog setup
           content:
             description: |-
-              What are the three most important actions a visitor can take in your product? These will become your custom events. Use the "object verb" naming format.
+              What are the three most important actions a visitor can take in your product? These will become your custom events. Use kebab-case naming (e.g., "book-club-created").
 
               Think about the actions that tell you whether someone is getting value from your product.
             placeholder: |-
               The three most important actions in my product are:
-              1. "[object] [verb]" — when someone...
-              2. "[object] [verb]" — when someone...
-              3. "[object] [verb]" — when someone...
+              1. "object-verb" — when someone...
+              2. "object-verb" — when someone...
+              3. "object-verb" — when someone...
             subDescription: "These events will tell you whether people are using the core of your product, or getting stuck before they reach it."
         - type: challenge-end
           title: "You're ready to see everything! \U0001F4CA"
