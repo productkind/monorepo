@@ -860,109 +860,153 @@ course:
             body: |-
               Pricing is the part where many first-time founders freeze. It feels like a huge, irreversible decision.
 
-              But you're not guessing. You have **real data** from Posthog showing which features people use most. You have **real feedback** from users telling you what they value. This makes pricing much less scary, because you're basing it on evidence, not hope.
+              But pricing is just like everything else in product development: **you experiment with it.** You pick a starting point, see how people respond, and adjust. Your first price is a hypothesis, not a commitment. You'll change it as you learn more about your users and what they're willing to pay.
 
-              The pricing model you choose now isn't permanent. You can change it later. What matters is picking something reasonable and moving forward.
+              The good news? You're not guessing from scratch. From your early test users, you have **real data** from Posthog showing which features they use most, and **real feedback** telling you what they value. That's more than most people have when they set their first price.
           subtitle: You have the data. Now use it.
         - type: text
-          title: "Three pricing models for a first product"
+          title: "How will you charge?"
           content:
             body: |-
-              **Free:** Everyone can use everything. You make money later (or not at all). Good for building an audience fast. Risky if you never find a way to charge.
+              **Subscription** (monthly or yearly recurring payment). Users pay for continued access. This gives you predictable, recurring revenue, but you need to keep delivering value so people don't cancel. Best for products people use regularly.
 
-              **Freemium:** A free version with limits, and a paid version with more. Good for products where the free version gives real value but power users want more. This is the most common model for early-stage products.
-
-              **Paid only:** Everyone pays from day one. Good if your product saves people significant time or money. Harder to get initial adoption because there's no free way to try it.
-
-              For most first products, **freemium** is the safest starting point. It lets people try before they buy, and the free tier acts as marketing.
-          subtitle: Free, freemium, or paid
-        - type: quiz-question
-          title: "Quiz: Pricing models"
+              **One-time payment.** Users pay once and get access forever. Simpler for the user, and appeals to people who dislike ongoing commitments. But you don't get recurring revenue, so you need a steady stream of new customers. Best for tools people use occasionally or for a specific purpose.
+          subtitle: "First decision: Subscription or one-time payment"
+        - type: text
+          title: "How will people try before they pay?"
           content:
-            question: Why is freemium often the best starting model for a first product?
+            body: |-
+              **Free trial**\
+              Full product for a limited time. Then they pay or lose access.\
+              ✅ Surfaces serious buyers quickly\
+              ⚠️ People who aren't ready to pay yet disappear\
+              *Example: Adobe offers a 7-day free trial for its apps.*
+
+              **Free tier (freemium)**\
+              Free version with limits, forever. Upgrade whenever.\
+              ✅ Attracts a large user base\
+              ⚠️ Low conversion rates, many non-paying users to support\
+              *Example: Canva offers a generous free version, with paid plans for premium features.*
+
+              **Reverse trial**\
+              Full product for a limited time. Then they drop to a free tier.\
+              ✅ Users experience the full product and stick around even if they don't convert\
+              ⚠️ More complex to set up than a simple trial\
+              *Example: Dropbox lets new users try the full Pro version before dropping them to a free plan.*
+
+              **No free option**\
+              Everyone pays from the start.\
+              ✅ Every user is a paying user\
+              ⚠️ Harder to get initial adoption. Rare for early-stage products
+
+              Many bootstrapped founders have moved away from permanent free tiers toward trials or reverse trials, because they convert better and are easier to sustain.
+          subtitle: "Second decision: How you let people experience your product before paying"
+        - type: quiz-question
+          title: "Quiz: How to charge"
+          content:
+            question: "You built a tool that helps freelancers track their invoices. They use it every week to log new invoices and check which clients have paid. Subscription or one-time payment?"
             options:
-              - Because free products always make more money in the long run
-              - Because it lets people experience value before paying, and the free tier acts as marketing
-              - Because investors prefer freemium businesses
-              - Because it's easier to build than a paid product
-            correctAnswer: 1
-            explanation: Freemium lets people try your product risk-free. The free tier acts as marketing because happy free users tell others. And people who experience real value are more likely to upgrade.
+              - Subscription, because users get ongoing value from regular use
+              - One-time payment, because freelancers prefer paying once
+              - Either would work equally well
+              - Neither, it should be free
+            correctAnswer: 0
+            explanation: "A subscription makes sense when your product has ongoing costs to maintain (servers, data storage, updates) and users get value from it repeatedly. A one-time payment fits better when there are minimal ongoing costs on your side and the user gets what they need in one go, like a website template or an ebook. The key question is: does your product cost you money to run every month? If yes, a subscription helps cover those ongoing costs."
+        - type: text
+          title: "Choose your price point"
+          content:
+            body: |-
+              **A common mistake:** pricing too low because it feels safer. But consider the maths how many paying users you need to reach $1,000/month:
+
+              - At $5/month, you need 200
+              - At $25/month, you need 40
+              - At $50/month, you need 20
+
+              Lower prices aren't always easier to sell.
+          subtitle: How much will you charge?
+        - type: text
+          title: "Three things to look at when picking your starting price"
+          content:
+            body: |-
+              **1. What do competitors charge?** Search for products that solve a similar problem and see their pricing. This tells you what your audience is used to paying. You don't need to match it, but you should know the range.
+
+              **2. What value does your product deliver?** Price based on the value your users get, not on what it cost you to build. If your product saves someone 5 hours a week, that's worth more than $5/month.
+
+              **3. What did your test users tell you?** Look at your user feedback. Which features do people value most? That's what they'd pay for.
+
+              Start with 2-3 tiers to keep things simple. More tiers create more confusion. And remember: your first price is a hypothesis. You'll adjust it as you learn.
+          subtitle: "Third decision: How much you charge"
         - type: text
           title: Pricing psychology basics
           content:
             body: |-
-              A few psychological principles that help you pick a price:
+              A few **psychological principles** that help you design your pricing page:
 
-              **Anchoring:** People judge a price relative to the first number they see. If you show a $15/month plan next to a $5/month plan, the $5 feels like a bargain. If you only show the $5 plan, people have nothing to compare it to.
+              **Anchoring:** A higher-priced option makes a lower-priced option feel more reasonable by comparison. If you show a $15/month Pro plan next to a $9/month Starter plan, the $9 feels like a sensible entry point. If you only show the $9 plan on its own, people have nothing to compare it to and might still hesitate.
 
               **Decoy pricing:** Offer three tiers where the middle one is the best value. People tend to avoid the cheapest (feels too basic) and the most expensive (feels excessive) and pick the middle.
 
-              **Round numbers feel like estimates. Specific numbers feel researched.** $5/month feels like you picked a round number. $4.99/month feels like you calculated it. Neither is wrong, but be intentional about which signal you're sending.
-
-              **Start lower than you think.** You can always raise prices later. It's much harder to lower them. Your first users are taking a risk on an unproven product, so give them a price that feels easy to say yes to.
+              **Annual discount:** Offer a cheaper annual plan next to the monthly price. If your product costs $10/month, offer the annual plan at $96/year ($8/month). The monthly price makes the annual deal look like a saving, and you get a full year of commitment upfront.
           subtitle: How people make decisions about money
-        - type: quiz-question
-          title: "Quiz: Anchoring"
+        - type: text
+          title: More pricing psychology
           content:
-            question: What is anchoring in pricing psychology?
+            body: |-
+              Two more principles worth knowing:
+
+              **Social proof:** Label one of your plans as "Most popular." People are drawn to what others choose, especially when they're unsure. Making the recommended plan visually stand out on your pricing page nudges undecided visitors toward it.
+
+              **Loss aversion:** People feel the pain of losing something about twice as strongly as the pleasure of gaining it. This is why free trials and reverse trials convert well: once someone has used a feature for 14 days, losing it feels painful. You can also use this by offering a money-back guarantee ("Try it for 30 days, full refund if it's not for you"), which removes the fear of loss from the buying decision.
+          subtitle: Social proof and loss aversion
+        - type: quiz-question
+          title: "Quiz: Pricing psychology in practice"
+          content:
+            question: "Your pricing page shows one plan at $12/month. Visitors view the page but few sign up. Which change is most likely to increase conversions?"
             options:
-              - Setting your price to match competitors
-              - Making people judge a price relative to the first number they see
-              - Offering a free trial before charging
-              - Pricing your product based on how much it cost to build
-            correctAnswer: 1
-            explanation: Anchoring means people judge a price based on comparison. Showing a higher-priced plan alongside a lower-priced plan makes the lower one feel like a better deal.
+              - Add a $22/month Pro plan next to it, and label the $12 plan "Most popular"
+              - Lower the price to $8/month
+              - Remove the price and let people request a quote
+              - Add a 50% discount banner at the top of the page
+            correctAnswer: 0
+            explanation: "This combines two techniques: anchoring (the $22 plan makes $12 feel reasonable by comparison) and social proof (the 'Most popular' label nudges undecided visitors). Lowering the price might work but loses you revenue. Removing the price adds friction. A permanent discount banner undermines trust."
         - type: text
           title: Let your data inform your pricing
           content:
             body: |-
               Look at your Posthog data and feedback together:
 
-              - **Which features do people use most?** These are the features worth paying for. Put them in the paid tier.
-              - **Where do people drop off?** If many people leave before reaching the valuable features, your free tier might need to include more so people experience the value.
-              - **What did users say they wanted?** Requested features can become premium additions.
+              - **Which features do people use most?** These are the features worth paying for. If you're using a *freemium model*, these belong in the paid tier. If you're using a *trial model*, these are what make people want to stay.
+              - **Where do people drop off?** This tells you where people aren't finding enough value. Think about what you can do to help them get to the valuable parts of your product sooner.
+              - **What did users say they wanted?** Requested features can become premium additions or reasons to upgrade. But dig deeper: understand the underlying need behind a feature request rather than building exactly what someone asked for. A user asking for "email notifications" might really need "a way to not forget about their book club meeting." The need might have a simpler solution.
 
-              The goal is to make the free version useful enough that people experience the value, and the paid version compelling enough that power users upgrade.
+              **The goal** is to give people enough value that they understand what your product can do for them, and make the paid experience compelling enough that they want more.
           subtitle: Which features are worth paying for?
         - type: text
-          title: "Dalmie's pricing decision"
+          title: "How Dalmie thought through her pricing"
           content:
             body: |-
-              Dalmie looked at her Posthog data and feedback. The voting feature and reading deadlines were what people used most. The "add book suggestions" feature was the entry point.
+              Here's how Dalmie worked through the two decisions:
 
-              She chose a **freemium model:**
-              - **Free:** Book clubs with up to 3 members. Includes book suggestions and basic voting.
-              - **$5/month:** Unlimited members, reading deadlines, reading stats, and priority support.
+              **How to charge?** Subscription. Book clubs use the app every month to pick their next read, so there's ongoing value.
 
-              Why $5? Her target users (casual book club organisers) aren't paying for expensive software. $5 feels easy to say yes to, and she can always increase it later when she has more features and more proof of value.
+              **How to let people try?** Reverse trial. She wants new users to experience the full voting feature and reading deadlines before deciding. After 14 days, they drop to a free tier with basic features.
 
-              She chose the $5 price point deliberately, not $4.99. Her audience values simplicity and honesty over corporate pricing tricks.
-          subtitle: Free for small clubs, $5/month for everything
-        - type: free-text-exercise
-          title: Write your pricing model
+              **How much?** She asked Sarah what similar tools cost. Most were free or very cheap. She looked at her Posthog data: the voting feature and reading deadlines were what people valued most. She set her paid plan at **$5/month**, because her audience (casual book club organisers) won't pay much for a tool like this. She picked $5 deliberately, not $4.99. Her audience values simplicity and honesty over corporate pricing tricks. She can always increase it later as she adds more features.
+
+              Notice that she didn't guess. She used her data, talked to her target user, and checked what competitors charge. That's the process you can follow too.
+          subtitle: The thinking process you can follow
+        - type: reflection
+          title: How are you thinking about pricing now?
           content:
-            description: |-
-              Based on what you've learned from your analytics and user feedback, write down your pricing model:
-
-              1. **Which model?** Free, freemium, or paid?
-              2. **If freemium:** What's in the free tier? What's in the paid tier? What's the price?
-              3. **Why this price?** Connect it to what you've learned about your users.
-            placeholder: |-
-              Pricing model:
-
-              Free tier includes:
-
-              Paid tier ($X/month) includes:
-
-              Why this price:
-            systemPrompt: 'You are a business mentor helping a learner choose a pricing model for their first product. They should explain their model, what is free vs paid, the price, and why they chose it. Provide friendly, concise feedback (max 5 bullet points) in British English, avoid using em dashes. Check that the pricing connects to user data or feedback (not arbitrary). If the price seems too high for a first product, gently suggest starting lower. If the free tier gives away too much, flag it. End with encouragement.'
-            checkerPrompt: 'Check if the user has described a pricing model, explained what is free vs paid, chosen a price, and connected it to what they know about their users. This is their pricing model:'
+            description: What's your current thinking about how you'd price your product?
+            placeholder: "I'm thinking about..."
+            subDescription: "Pricing is an experiment. Whatever you're thinking now is a good starting point, not a final answer."
         - type: challenge-end
           title: "You've got a pricing model! \U0001F4B0"
           content:
-            nextModule: "**Next challenge:** The final step. Let's know your numbers, set up payments, and build a business that lasts."
-            description: You've chosen a pricing model based on real data, not guesswork.
-            subDescription: "Your pricing isn't set in stone. Start with what feels right based on your data and feedback, then adjust as you learn more. The important thing is that you have a model and a number."
+            nextModule: "**Next challenge:** You have a pricing model. But how many paying users do you actually need to cover your costs? The answer might surprise you. Let's find out."
+            description: You can choose between subscription and one-time payment, pick the right trial model for your product, and use psychology to design a pricing page that converts.
+            subDescription: "You've learned anchoring, decoy pricing, annual discounts, social proof, and loss aversion. These techniques work whether you're charging $5 or $50. Apply them when you build your pricing page."
 
     - title: Build a Sustainable Business
       isFree: false

@@ -66,6 +66,16 @@ description: Use this checklist when generating micro-course content from an out
 
 **Copy-paste prompts must be in markdown code blocks.** When the course includes a prompt the learner can copy and paste into an AI app builder or other tool, wrap it in a markdown code block so it's clearly distinguished from the surrounding text and easy to copy.
 
+**Categories must be on the same level.** When a step presents options or models for the learner to choose between, check that they're the same type of thing. If they're not, split them into separate decisions. For example, "subscription vs one-time payment" is one decision (how you charge), "free trial vs freemium" is a different decision (how people try). Don't mix them into one list.
+
+**Split steps with more than 3 items.** When a step introduces more than 3 concepts, techniques, or options, split it into two consecutive steps. Long lists lose the learner's attention.
+
+**Dense information should be scannable.** Avoid tables (they break on mobile) and long paragraphs with multiple concepts. Use stacked formats: bold name, one-line description, key details on separate lines. Design for vertical reading on a phone screen.
+
+**Don't assume which option the learner will choose.** When teaching decision frameworks with multiple paths (e.g., pricing models, trial types), keep the guidance flexible so it applies regardless of which path the learner takes. Don't write follow-up steps that only make sense for one option.
+
+**Anchor models and categories with real products.** When introducing models, categories, or abstract concepts, include a well-known product as an example so the learner can picture it. Only include examples you've verified are accurate. If you can't find a verified example, leave it out rather than guessing.
+
 ---
 
 ## Tone and Expectations
