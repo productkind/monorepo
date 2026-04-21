@@ -40,7 +40,7 @@ description: Use this checklist when generating micro-course content from an out
 
 **Challenge-end steps have distinct roles.** The `nextModule` field should excite and build anticipation for what's coming next. The `subDescription` should reflect on the value the learner got from this specific challenge, not recap the whole course so far. Don't repeat the same information in both fields.
 
-**Final reflection is about the journey, not the last task.** Ask "What surprised you? What do you want to build next?" not "Did you complete the steps?" Send learners forward with momentum.
+**The final exercise should be one focused, forward-looking action.** End the course with a single question that converts learning into momentum, like "What's the one thing you'll do this week?" Don't end with a multi-part summary or a heavy exercise. The learner should leave with intent to act, not a to-do list.
 
 ---
 
@@ -75,6 +75,8 @@ description: Use this checklist when generating micro-course content from an out
 **Don't assume which option the learner will choose.** When teaching decision frameworks with multiple paths (e.g., pricing models, trial types), keep the guidance flexible so it applies regardless of which path the learner takes. Don't write follow-up steps that only make sense for one option.
 
 **Anchor models and categories with real products.** When introducing models, categories, or abstract concepts, include a well-known product as an example so the learner can picture it. Only include examples you've verified are accurate. If you can't find a verified example, leave it out rather than guessing.
+
+**Heavy calculations and multi-step procedures belong in toolkit items, not exercises.** If an exercise requires a calculator, a spreadsheet, or multiple steps of arithmetic, make it a toolkit item (e.g., a Google Sheet template) instead. The course should teach the concept and show an example. The learner applies it at their own pace using the toolkit.
 
 ---
 
@@ -135,6 +137,8 @@ Micro-course content should follow these principles to ensure it's engaging, eff
 **The pattern to follow:** Text, text, quiz (judge a scenario), text, text, quiz (evaluate someone's work), exercise (apply to your own). The learner never reads more than 2-3 text steps before doing something.
 
 **Important:** Don't ask the learner to apply concepts to their own product after every text step. That requires high mental effort and becomes exhausting. Save "apply to yours" for the end of the challenge. Mid-challenge interactions should ask the learner to evaluate given examples, not generate their own.
+
+**Quiz answers must not be stated in the preceding step.** If the answer to a quiz question appears word-for-word in the text step before it, the quiz is testing short-term memory, not understanding. Rewrite it as a scenario where the learner has to apply the concept to a new situation.
 
 **Acceptable practice formats:**
 - Scenario-based quiz (judgement, not recall)

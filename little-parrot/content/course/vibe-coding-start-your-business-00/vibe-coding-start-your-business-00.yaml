@@ -27,8 +27,8 @@ course:
             imageUrl: /comics/vibe-coding-start-your-business-00/panel-00.png
             altText: |-
               Dalmie, a dalmatian dog wearing a red shirt, sits at a desk looking at the Book Club
-              Organiser app on a laptop screen. A friend sits next to Dalmie and says, "This app is
-              great! You should charge for it." Dalmie looks surprised and says, "Wait... could this
+              Organiser app on a laptop screen. A friend sits next to Dalmie and says, "This Book Club Organiser app is
+              great, Dalmie! You should charge for it." Dalmie looks surprised and says, "Wait... could this
               actually become a business?"
         - type: comic
           content:
@@ -43,8 +43,8 @@ course:
             altText: |-
               Little Parrot, the brightly coloured bird, appears next to Dalmie at the whiteboard.
               Little Parrot starts rearranging the sticky notes into a clear sequence and says,
-              "One step at a time! First, let's find the right words to describe what you've built.
-              Then we'll set up everything you need before your first visitor arrives."
+              "One step at a time, Dalmie! First, let's find the right words to describe what you've built.
+              Then we'll set up everything you need to get users."
         - type: text
           title: What you'll walk away with
           content:
@@ -68,7 +68,7 @@ course:
           title: What you don't need (yet)
           content:
             body: |-
-              You've built a digital product. It works. People around you have used it and found it helpful. Now you're wondering: could this become a real business?
+              You've built a digital product. It works. People around you have used it and found it helpful. Now you're wondering: **could this become a real business?**
 
               Here's where most people get stuck. They think they need to sort out a hundred things before they can start:
 
@@ -116,9 +116,9 @@ course:
               This isn't an exercise for its own sake. Your value proposition will come back throughout this course and beyond:
 
               - **Your landing page** heading and subheading
+              - **Your Google Business Profile** (Challenge 2) description
               - **Directory submissions** (Challenge 5) when you list your product on websites like BetaList or Product Hunt, where people go to discover new products
               - **Community posts** (Challenge 5) when you share your product in online groups
-              - **Your Google Business Profile** (Challenge 2) description
               - **Emails to early users** (Challenge 6) when you introduce yourself and ask for feedback
               - **Your social media bio** when you talk about what you're building
 
@@ -158,10 +158,10 @@ course:
             body: |-
               Here's how to test your value proposition:
 
-              1. Write three versions using the formula.
+              1. Write **three versions** using the formula.
               2. Find five people **who match your target audience** and tell them what your product does, one-on-one. Use a different version each time.
               3. After each conversation, write down their **exact reaction**. Did they ask a follow-up question? Did they change the subject? Did their eyes light up?
-              4. The version that made someone ask "How does it work?" or "Can I try it?" is your winner.
+              4. The version that made someone ask "How does it work?" or "Can I try it?" is your **winner**.
 
               **Why your target audience?** A polite nod from your mum doesn't tell you much. You need reactions from people who actually have the problem your product solves. If you built an app for book club organisers, test your value proposition on people who run book clubs, not on friends who've never been in one.
 
@@ -172,14 +172,14 @@ course:
         - type: quiz-question
           title: "Quiz: Testing your value proposition"
           content:
-            question: What's the best sign that your value proposition is working?
+            question: "You tested your value proposition on four people from your target audience. Person A said 'Cool idea!' Person B asked 'Can I try it?' Person C said 'Sounds interesting, good luck.' Person D asked 'How does it handle [specific situation]?' Which reactions suggest your value proposition is working?"
             options:
-              - The person says "that sounds interesting"
-              - The person nods politely, then changes the subject
-              - The person asks a follow-up question like "how does it work?"
-              - The person says "good luck with that"
-            correctAnswer: 2
-            explanation: A follow-up question means the person is engaged and wants to know more. Polite nods and generic encouragement often mean the message wasn't compelling.
+              - A and C, because they were positive and encouraging
+              - B and D, because they engaged with specific follow-up questions
+              - All four, because nobody said anything negative
+              - Only B, because they're the only one ready to use it
+            correctAnswer: 1
+            explanation: "Follow-up questions are the signal. Person B wants to try it, Person D is already thinking about their own use case. Persons A and C were polite but didn't engage further. Positive words without curiosity usually mean the message didn't land deeply enough to spark action."
         - type: free-text-exercise
           title: Write three versions of your value proposition
           content:
@@ -200,7 +200,7 @@ course:
         - type: challenge-end
           title: "You've found your words! \U0001F4AC"
           content:
-            nextModule: "**Next challenge:** Now that you can describe your product's value, let's give it a proper home online."
+            nextModule: "**Next challenge:** You have the words. Now let's build everything your product needs before its first visitor arrives: a professional domain, email capture, analytics, and your first real traffic. Seven more challenges, each one bringing you closer to your first paying user."
             description: You now have a clear value proposition that makes people lean in.
             subDescription: "Keep this sentence close. It will come in handy every time you explain what you do to someone new, whether at a dinner party, in a community, or in a casual conversation. You never know when the person you're talking to is your next user."
 
@@ -268,21 +268,21 @@ course:
             body: |-
               Once you have a domain, set up a professional email address. Sending emails from **hello@yourproduct.com** instead of **yourname12@gmail.com** makes a noticeable difference in how people perceive your product.
 
-              **Google Workspace** lets you create email addresses on your own domain. It costs around $6-7/month, which is worth it when you start emailing customers, responding to feedback, or reaching out to communities.
+              **Google Workspace** lets you create email addresses on your own domain. It costs around $7/month, which is worth it when you start emailing customers, responding to feedback, or reaching out to communities.
 
               The technical setup (connecting your domain to Google Workspace, configuring email settings) can feel intimidating. We've included a **step-by-step setup guide in the toolkit** for this course that walks you through every click.
           subtitle: Trust starts in the inbox
         - type: quiz-question
-          title: "Quiz: Professional email"
+          title: "Quiz: Choosing your email address"
           content:
-            question: Why does sending emails from hello@yourproduct.com matter?
+            question: "You just bought the domain mealplanner.com for your meal planning product. Which email address would you set up for communicating with users?"
             options:
-              - It's technically required for sending bulk emails
-              - It makes your emails load faster
-              - It signals professionalism and builds trust with customers
-              - It prevents your emails from going to spam
-            correctAnswer: 2
-            explanation: A professional email on your own domain signals that your product is serious. It builds trust when you're reaching out to potential users, responding to feedback, or sending updates.
+              - support@mealplanner.com
+              - meal-planner-app@gmail.com
+              - hello@mealplanner.com
+              - info@mealplanner.com
+            correctAnswer: [0, 2, 3]
+            explanation: "Any email on your own domain works. hello@, support@, and info@ are all common and professional choices for different purposes. The Gmail address is the only one to avoid, because it signals that you haven't invested in your product's identity. As your business grows, you might use different addresses for different purposes: hello@ for general enquiries, support@ for help requests."
         - type: text
           title: Register on Google Business Profile
           content:
@@ -299,15 +299,15 @@ course:
             body: |-
               Dalmie searched for domains and found two options:
 
-              - **bookclub.app** at $14/year
-              - **bookcluborganiser.com** at $12/year
+              - **bookclub.app** at $20/year
+              - **bookcluborganiser.com** at $24/year
 
               She went with the **.com** because her audience (book club organisers) isn't particularly technical, and .com feels more familiar to them. She set up **hello@bookcluborganiser.com** through Google Workspace and registered her Google Business Profile.
 
-              **Total cost: under $25.**
+              **Total cost: under $10/month**
 
               She could have spent days agonising over the perfect name. Instead, she picked something clear and moved on. The domain can always be changed later if needed, but momentum can't.
-          subtitle: Under $25 for a professional presence
+          subtitle: Under $10/month for a professional presence
         - type: reflection
           title: Brainstorm your domain name
           content:
@@ -351,23 +351,23 @@ course:
 
               You can start with a **Google Form** embedded on your site. You don't need a backend, a database, or an email marketing tool at the beginning. You need one thing: a way for someone to leave their email address.
 
-              Add a clear call to action: "Join the wait list", "Get early access", or "Be the first to know when we launch." Keep it visible. Don't hide it at the bottom of the page.
+              Add a clear **call to action:** "Join the wait list", "Get early access", or "Be the first to know when we launch." Keep it visible. Don't hide it at the bottom of the page.
 
               Don't wait until your product is "ready" to start collecting emails. The earlier you start, the more people you'll have to reach out to when you launch.
           subtitle: The foundation you need
         - type: quiz-question
           title: "Quiz: Email capture"
           content:
-            question: Why should you set up email capture before driving traffic to your product?
+            question: "Your sign-up form says 'Subscribe to our newsletter.' You're getting very few sign-ups. What's most likely the problem?"
             options:
-              - Because visitors who leave without giving their email are lost opportunities you can't reach again
-              - Because search engines rank sites with forms higher in search results
-              - Because email forms make your site look more professional 
-              - Because you need at least 100 emails before you can launch
-            correctAnswer: 0
-            explanation: Every visitor who leaves without a way to stay in touch is someone you can't reach again. Setting up capture before traffic means you don't lose your earliest visitors.
+              - The form needs more fields so you learn about your visitors
+              - The form should be hidden until the visitor has browsed for a while
+              - You need to offer a discount to get people to sign up
+              - The call to action is vague and doesn't give a reason to sign up
+            correctAnswer: 3
+            explanation: "People need a clear reason to give you their email. 'Subscribe to our newsletter' is vague and doesn't promise any value. A specific call to action like 'Get early access' or 'Join the wait list for [specific benefit]' tells people what they'll get in return. More fields, delays, or discounts won't fix an unclear reason to sign up."
         - type: text
-          title: Give people a reason to sign up
+          title: Give people a stronger reason to sign up
           content:
             body: |-
               A **lead magnet** is something valuable you give away for free in exchange for someone's email address. It makes your email capture more compelling. The principle is simple: **add value in public, sell in private.**
@@ -419,7 +419,7 @@ course:
             body: |-
               Dalmie didn't start by asking "what PDF should I make?" She asked her friend Sarah, a book club organiser: **"What do you struggle with most when running your book club?"**
 
-              Sarah said the hardest part was getting good conversations going. People would show up and not know what to say beyond "I liked it." So Dalmie created a short guide: **"How to Craft Open-Ended Questions for an Engaging Book Club Discussion."** It took about an hour.
+              Sarah said the hardest part was getting good conversations going. People would show up and not know what to say beyond "I liked it." So Dalmie created a short guide: **"How to Craft Open-Ended Questions for an Engaging Book Club Discussion."**
 
               That's the shortcut to a good lead magnet: ask your target audience what they struggle with, then package the answer.
           subtitle: Ask your target audience, then package the answer
@@ -468,16 +468,16 @@ course:
               Set up tracking now, so that when traffic arrives, you see **everything that helps you make decisions**.
           subtitle: Why this comes before driving traffic
         - type: quiz-question
-          title: "Quiz: Why set up analytics now?"
+          title: "Quiz: Order of setup"
           content:
-            question: Why is it important to set up analytics before driving traffic?
+            question: "You're about to share your product in an online community for the first time. You have a domain and email capture ready, but you haven't set up analytics yet. What do you do?"
             options:
-              - Analytics tools take several weeks to start working
-              - You need analytics data to create a Stripe account
-              - Search engines require analytics to index your site
-              - Every visitor you miss is data you can never recover
-            correctAnswer: 3
-            explanation: Every visitor teaches you something about how people experience your product. If you set up analytics after they've already visited, that data is gone. You can't go back and see what they did. Set up tracking before the traffic arrives so you don't lose a single visit.
+              - Post now and set up analytics later this week
+              - Wait until you have at least 50 sign-ups before adding analytics
+              - Set up analytics first, verify it works, then post
+              - Analytics aren't important until you have paying users
+            correctAnswer: 2
+            explanation: "Once you post, visitors start arriving. If analytics isn't set up yet, you won't know which pages they visited, where they got stuck, or which features they tried. That data is gone forever. It takes less than an hour to set up, so it's worth doing before you send anyone to your product."
         - type: text
           title: What is Posthog?
           content:
@@ -513,21 +513,21 @@ course:
               Why bother when autocapture already tracks clicks? Two reasons:
 
               1. **Clarity:** autocapture labels a button click as "clicked button with text Continue". A custom event called "book-club-created" tells you exactly what happened in your product.
-              2. **Reliability:** if you change your design (rename a button, move a form), autocapture labels change too. Custom event names stay consistent.
+              2. **Reliability:** if you change your design (rename a button, restructure a form), autocapture labels change too. Custom event names stay consistent.
 
               Name custom events in **kebab-case** (all lowercase, words separated by hyphens) using an **[object]-[verb]** format: "book-club-created", "book-suggestion-added", "vote-cast". This keeps your events readable and consistent as the list grows.
           subtitle: Name the actions that you want to see
         - type: quiz-question
           title: "Quiz: Autocapture vs custom events"
           content:
-            question: Why should you set up custom events when Posthog already autocaptures clicks?
+            question: "You check your Posthog dashboard and see 'clicked button with text Submit' happened 45 times last week. But your product has three different submit buttons (sign-up, feedback, and contact form). You can't tell which one was clicked. How do you prevent this problem going forward?"
             options:
-              - Autocapture doesn't work on mobile devices
-              - Custom events load faster than autocapture
-              - Custom events have clear names and stay consistent when you redesign
-              - You need custom events before Posthog will start recording sessions
+              - Filter by page URL to separate the clicks
+              - Rename all three buttons so each has unique text
+              - Set up custom events with specific names for each action
+              - Check the timestamps and match them with session replays
             correctAnswer: 2
-            explanation: Autocapture labels actions generically ("clicked button with text Continue") and the labels change if you redesign. Custom events like "book-club-created" are clear, specific, and stay consistent over time. So you will know what action happened without having to interpret generic labels.
+            explanation: "Custom events solve this going forward. If you set up 'signup-form-submitted', 'feedback-submitted', and 'contact-form-submitted' as separate custom events, each action will be clearly labelled from now on. The past data is already recorded generically and can't be relabelled, which is why it's worth setting up custom events early."
         - type: text
           title: The prompt to add Posthog to your app
           content:
@@ -579,7 +579,7 @@ course:
 
               **You'll see exactly what your visitors saw:** which pages they opened, where they clicked, where they scrolled, where they paused, and where they left. It's like looking over someone's shoulder as they use your product.
 
-              This is one of the most powerful tools for improving your product. You'll spot things that analytics numbers alone can't show:
+              This is one of the most powerful tools for improving your product. You'll **spot things** that analytics numbers alone can't show:
               - A button that people hover over but never click (confusing label?)
               - A page where people scroll up and down repeatedly (looking for something they can't find?)
               - A form that people start filling in but abandon halfway (too long or unclear?)
@@ -588,16 +588,16 @@ course:
             imageUrl: /courses/vibe-coding-start-your-business-00/posthog-session-replay.png
           subtitle: Watch how real people use your product
         - type: quiz-question
-          title: "Quiz: Session replay"
+          title: "Quiz: What would you do?"
           content:
-            question: "Your Posthog data shows that 90% of visitors leave your sign-up page without completing the form. What should you do next?"
+            question: "Dalmie's analytics show that users create a book club but rarely add their first book suggestion. She's not sure why. What's the most useful next step?"
             options:
-              - Shorten the form by removing fields to make it quicker to complete
-              - Drive more traffic to the form by promoting your product in more communities
-              - Assume the form is broken and rebuild it completely
-              - Watch a few session replays of that page to see where people get stuck
-            correctAnswer: 3
-            explanation: "The analytics tell you *where* people drop off (the sign-up page), but not *why*. Before changing anything, watch a few session replays to see what's actually happening. Maybe people get stuck on a specific field, or they scroll past the submit button without seeing it. The replay shows you the problem so you fix the right thing."
+              - Watch session replays of users who created a club to see what they did next
+              - Add a pop-up tutorial explaining how to add a book step by step
+              - Send users an email reminding them to add a book
+              - Simplify the 'add a book' screen by removing fields that might confuse users
+            correctAnswer: 0
+            explanation: "Before fixing anything, Dalmie needs to understand what's happening. Maybe users can't find the 'add a book' button. Maybe they start adding one but get confused by the form. Maybe they get distracted by something else on the page. Session replays show the actual behaviour, so she solves the real problem instead of guessing."
         - type: text
           title: What to look at each week
           content:
@@ -696,7 +696,7 @@ course:
           title: Sharing in communities without being spammy
           content:
             body: |-
-              Online communities (forums, Facebook groups, Reddit, Discord servers) can be a great source of early visitors. But nobody likes the person who joins a group and immediately drops a link.
+              Online communities (forums, Facebook groups, Reddit, Discord servers, Slack communities) can be a great source of early visitors. But nobody likes the person who joins a group and immediately drops a link.
 
               **The approach:** be helpful first, and be transparent about what you've built. Don't hide that it's a product. People respect honesty. What they don't respect is someone who only shows up to promote.
 
@@ -709,7 +709,7 @@ course:
 
               *"I noticed a lot of people here struggle with [specific problem]. I built a product that helps with this: [one sentence about what it does]. It has a free tier / free trial if you want to try it. Happy to answer any questions."*
 
-              Notice what's happening: you're naming a real problem the community cares about, being transparent that it's your product, and not pushing anyone. You're inviting, not advertising.
+              **Notice what's happening:** you're naming a real problem the community cares about, being transparent that it's your product, and not pushing anyone. You're inviting, not advertising.
           subtitle: Lead with the problem, not the link
         - type: text
           title: One-on-one conversations still matter
@@ -775,10 +775,14 @@ course:
               You can prompt your AI app builder to add this:
 
               ```
-              Add a small "Send feedback" button in the bottom-right corner. When clicked, it opens a simple form with a text area with the placeholder text "Tell us what you think" and a submit button. When submitted, save the feedback to the database.
+              Add a small "Send feedback" button in the bottom-right corner of the /book-suggestions page. When clicked, it opens a simple form with a text area with the placeholder text "Tell us what you think" and a submit button. When submitted, save the feedback to the database.
               ```
 
+              **Note:** Replace `/book-suggestions` with the page in your product where you want the feedback button to appear.
+
               Every piece of feedback is a gift. Someone took time to tell you what's working or what's broken.
+
+              Want to learn how to view the feedback saved in your database? Our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) course covers databases and how to work with your data.
           subtitle: Make it easy for visitors to talk to you
         - type: text
           title: How to ask for feedback directly
@@ -793,7 +797,7 @@ course:
               
               I'm [your name], the creator of [product]. I saw you signed up recently and I'd love to hear how it went. Two quick questions:
 
-              1. What were you hoping it would help you achieve?
+              1. What were you hoping [product] would help you achieve?
               2. What was confusing or unclear?
 
               I really appreciate any feedback you have.
@@ -810,12 +814,12 @@ course:
           content:
             question: "You email three users who signed up last week. Two of them reply: 'I created an account but couldn't figure out what to do next.' You look at your Posthog data that shows 70% of new users leave within 30 seconds of signing up. What are the two best next steps?"
             options:
+              - Add a feedback form to your product so future users can share what's confusing
               - Send more traffic to the sign-up page to get more data
-              - Add a feedback form to your product so future users can tell you what's confusing
-              - Redesign the entire onboarding flow from scratch
-              - Reply to the two users with a follow-up question or invite them for a short call
-            correctAnswer: [1, 3]
-            explanation: "These two users just told you something valuable. Reply to them and dig deeper: what were they hoping to do? A short call can reveal more than ten emails. And adding a feedback form means you'll hear from future users without having to email each one. Sending more traffic won't help if new users get stuck. Redesigning everything before understanding the problem risks fixing the wrong thing."
+              - Redesign the entire onboarding flow based on what you know so far
+              - Reply to the two users and ask what they were hoping to do
+            correctAnswer: [0, 3]
+            explanation: "These two users just told you something valuable. Reply to them and dig deeper: what were they hoping to do? You can ask them for a short call to understand more. And adding a feedback form means you'll hear from future users without having to email each one. Sending more traffic won't help if new users get stuck. Redesigning everything before understanding the problem risks fixing the wrong thing."
         - type: text
           title: Collecting real testimonials
           content:
@@ -828,9 +832,7 @@ course:
               That's great to hear! We're building out a testimonials section on our website and would love to feature what you wrote. I can use just your first name, if you prefer.
               ```
 
-              Most people say yes. One honest sentence from a real user is worth more than ten polished quotes you wrote yourself.
-
-              **Do not generate fake testimonials with AI.** It's tempting, but it undermines trust the moment anyone suspects they're not real. And people can usually tell. Start with one real testimonial, then grow from there.
+              Most people say yes. **Do not generate fake testimonials with AI.** It's tempting, but it undermines trust the moment anyone suspects they're not real. And people can usually tell. Start with one real testimonial, then grow from there.
           subtitle: One real sentence beats ten fake ones
         - type: reflection
           title: Where would you place your feedback form?
@@ -911,7 +913,7 @@ course:
               - Either would work equally well
               - Neither, it should be free
             correctAnswer: 0
-            explanation: "A subscription makes sense when your product has ongoing costs to maintain (servers, data storage, updates) and users get value from it repeatedly. A one-time payment fits better when there are minimal ongoing costs on your side and the user gets what they need in one go, like a website template or an ebook. The key question is: does your product cost you money to run every month? If yes, a subscription helps cover those ongoing costs."
+            explanation: "A subscription makes sense when your product has ongoing costs to maintain (servers, data storage, domain) and users get value from it repeatedly. A one-time payment fits better when there are minimal ongoing costs on your side and the user gets what they need in one go, like a website template or an ebook. The key question is: does your product cost you money to run every month? If yes, a subscription helps cover those ongoing costs."
         - type: text
           title: "Choose your price point"
           content:
@@ -923,9 +925,9 @@ course:
               - At $50/month, you need 20
 
               Lower prices aren't always easier to sell.
-          subtitle: How much will you charge?
+          subtitle: "Third decision: How much you charge"
         - type: text
-          title: "Three things to look at when picking your starting price"
+          title: "Picking your starting price"
           content:
             body: |-
               **1. What do competitors charge?** Search for products that solve a similar problem and see their pricing. This tells you what your audience is used to paying. You don't need to match it, but you should know the range.
@@ -935,7 +937,7 @@ course:
               **3. What did your test users tell you?** Look at your user feedback. Which features do people value most? That's what they'd pay for.
 
               Start with 2-3 tiers to keep things simple. More tiers create more confusion. And remember: your first price is a hypothesis. You'll adjust it as you learn.
-          subtitle: "Third decision: How much you charge"
+          subtitle: "Three things to look at"
         - type: text
           title: Pricing psychology basics
           content:
@@ -977,7 +979,7 @@ course:
 
               - **Which features do people use most?** These are the features worth paying for. If you're using a *freemium model*, these belong in the paid tier. If you're using a *trial model*, these are what make people want to stay.
               - **Where do people drop off?** This tells you where people aren't finding enough value. Think about what you can do to help them get to the valuable parts of your product sooner.
-              - **What did users say they wanted?** Requested features can become premium additions or reasons to upgrade. But dig deeper: understand the underlying need behind a feature request rather than building exactly what someone asked for. A user asking for "email notifications" might really need "a way to not forget about their book club meeting." The need might have a simpler solution.
+              - **What did users say they wanted?** Requested features can become premium additions or reasons to upgrade. But *dig deeper:* understand the underlying need behind a feature request rather than building exactly what someone asked for. A user asking for "email notifications" might really need "a way to not forget about their book club meeting." The need might have a simpler solution.
 
               **The goal** is to give people enough value that they understand what your product can do for them, and make the paid experience compelling enough that they want more.
           subtitle: Which features are worth paying for?
@@ -1027,7 +1029,7 @@ course:
 
               You're building a **bootstrapped business**: a product that earns its own money, without investors, without debt, and without the pressure to grow at someone else's pace. The goal is **profitability**, not headcount. **Freedom**, not funding rounds.
 
-              Most bootstrapped products that reach sustainable income do so within 12 to 18 months of launching a paid version. That's a realistic timeline. Not weeks, not years. Months of consistent, focused work.
+              Most small digital products reach profitability (covering their costs) within the first year. But profitability and liveable income are different things. Covering $20/month in hosting costs is profitable. Replacing a salary takes longer. Be patient with yourself, and focus on steady growth rather than overnight success.
 
               This challenge is about knowing your numbers and setting up the basics so your business can sustain itself.
           subtitle: You're not building the next unicorn. You're building something that lasts.
@@ -1043,9 +1045,9 @@ course:
 
               **Fixed costs** are what you pay every month regardless of how many users you have: your domain, Google Workspace, any tools you subscribe to. These stay the same whether you have 1 user or 1,000.
 
-              **Variable costs** are what increases with each paying user: Stripe's transaction fee (typically around 2.9% + a fixed amount per transaction) is the main one at this stage.
+              **Variable costs** are what increases with each paying user: Stripe's transaction fee is the main one at this stage.
 
-              **Price per user** is what you charge per month (from Challenge 7).
+              **Price per user** is what you charge per month.
 
               Your break-even point tells you: **how many paying users do I need each month to stop losing money?** Everything above that number is profit.
           subtitle: The one number that tells you if your business is viable
@@ -1053,94 +1055,119 @@ course:
           title: "Dalmie's break-even calculation"
           content:
             body: |-
-              Dalmie's monthly fixed costs:
-              - Domain: ~$1/month ($12/year)
+              Dalmie's *monthly fixed costs*:
+              - Domain: $2/month ($24/year)
               - Google Workspace: $7/month
-              - Posthog: $0 (free tier)
-              - **Total fixed costs: $8/month**
+              - AI app builder with hosting: $25/month
+              - **Total fixed costs: $34/month**
 
               Her price: **$5/month** per paying book club.
 
-              Her variable cost per user: Stripe takes about 2.9% + $0.30 per transaction. On a $5 payment, that's roughly **$0.45 per user per month**.
+              Her *variable cost per user*: Stripe takes about 2.9% + $0.30 per transaction. On a $5 payment, that's roughly **$0.45 per user per month**.
 
-              **Break-even = $8 / ($5.00 - $0.45) = $8 / $4.55 ≈ 2 paying users**
+              **Break-even = $34 / ($5.00 - $0.45) = $34 / $4.55 ≈ 8 paying users**
 
-              Dalmie only needs **2 paying book clubs** to cover her costs. Everything after that is profit.
+              Dalmie needs **8 paying book clubs** to cover her costs. Everything after that is profit.
 
-              This changes how she thinks about growth. She doesn't need hundreds of users to have a viable business. She needs two. That feels achievable.
-          subtitle: Two paying users to break even
+              Eight users means she's no longer paying out of pocket to run her product. It's not a salary yet, but it's the first milestone. Everything after eight is profit she can reinvest or save.
+          subtitle: Eight paying users to start making money
         - type: quiz-question
           title: "Quiz: Break-even point"
           content:
-            question: "Your fixed costs are $15/month. You charge $8/month. Stripe takes about $0.53 per transaction. Roughly how many paying users do you need to break even?"
+            question: "You calculated that you need 12 paying users to break even, but after three months you only have 5. What's the most useful next step?"
             options:
-              - 1 user
-              - 2 users
-              - 5 users
-              - 15 users
-            correctAnswer: 1
-            explanation: "Break-even = $15 / ($8.00 - $0.53) = $15 / $7.47 ≈ 2 users. You need about 2 paying users to cover your fixed costs each month."
+              - Shut down the product since it's clearly not working
+              - Lower your price to attract more sign-ups faster
+              - Add more features so the product is worth the price
+              - Talk to your paying users and check your data to understand what's working
+            correctAnswer: 3
+            explanation: "Being below break-even after three months is normal, not a reason to panic or make drastic changes. Your existing users and your data are your best guides. Talk to the people who are paying and find out what made them convert. That insight is more valuable than guessing at a lower price or more features."
         - type: text
           title: Metrics that matter vs metrics that feel good
           content:
             body: |-
-              When you start getting data, it's tempting to check numbers that make you feel good: page views, sign-ups, social media followers. These are **vanity metrics**. They look impressive but don't tell you if your business is healthy.
+              When you start getting data, it's tempting to focus on numbers that feel good: page views, sign-ups, social media followers. These numbers aren't useless, but **they only matter if you know how they connect to revenue.**
 
-              A simple test: **if improving this number directly increases your revenue or reduces your costs, it's a real metric. If it only makes you feel good, it's vanity.**
+              *For example, total sign-ups are an important top-of-funnel metric. They're the pool you convert paying users from. But if you celebrate 500 sign-ups without knowing how many converted to paying users, the number is misleading.*
 
-              **Vanity metrics** (don't obsess over these):
-              - Total sign-ups (if most never come back)
-              - Page views (traffic without conversion is noise)
-              - Social media followers (followers don't pay bills)
+              **The question to ask about any metric: what happens next?**
+              - Sign-ups → how many become active users? → how many convert to paying?
+              - Page views → how many sign up? → how many stay?
+              - Social media followers → how many visit your product? → how many convert?
 
-              **Metrics that matter** (check these regularly):
-              - **Paying users:** how many people are actually paying you?
-              - **Churn:** how many paying users cancel each month? If you're losing users as fast as you're gaining them, growth is an illusion.
-              - **Break-even gap:** are you above or below your break-even point?
-              - **Retention:** do users come back after the first week? If they don't, your product isn't delivering enough value to keep them.
-          subtitle: "The test: does this number pay the bills?"
-        - type: quiz-question
-          title: "Quiz: Vanity vs real metrics"
+              **If you can't trace a metric to revenue, it's not helping you make decisions.**
+          subtitle: "The question to ask: what happens next?"
+        - type: text
+          title: Metrics to check regularly
           content:
-            question: Which of these is a vanity metric?
+            body: |-
+              **Paying users:** how many people are actually paying you?
+
+              **Conversion rate:** what percentage of sign-ups become paying users?
+
+              **Churn:** how many paying users cancel each month? If you're losing users as fast as you're gaining them, growth is an illusion.
+
+              **Break-even gap:** are you above or below your break-even point?
+
+              You don't need a dashboard with dozens of charts. These four numbers tell you whether your business is healthy.
+          subtitle: Four numbers that tell you the truth
+        - type: text
+          title: How do you know if your numbers are good?
+          content:
+            body: |-
+              Knowing your conversion rates is useful, but only if you have something to compare them to. A 2% visitor-to-signup rate might be great in one industry and poor in another.
+
+              **How to find benchmarks for your product:**
+
+              1. **Search for your industry and business model.** If you're building software people pay to access online, that's called **SaaS** (Software as a Service). Try searches like *"SaaS free trial conversion rate benchmarks"* or *"landing page conversion rate for [your type of product]."* Look for recent data from sources like industry reports or founder communities.
+              2. **Compare with similar products, not averages.** A global average across all industries won't help you. Look for benchmarks from products similar to yours in size, audience, and pricing.
+              3. **Track your own trend over time.** Even without external benchmarks, your own numbers from month to month tell you if things are improving or getting worse. That trend is more useful than a snapshot.
+
+              Don't spend hours researching benchmarks. A quick search gives you a rough sense of where you stand, and your own trend over time tells you the rest.
+          subtitle: Benchmarks help you read your own numbers
+        - type: quiz-question
+          title: "Quiz: Reading your funnel"
+          content:
+            question: "In the last three months, 3,000 unique visitors came to your site, 154 signed up, and 3 became paying users. You looked up benchmarks and found that a typical visitor-to-signup rate is 8-12% and a typical signup-to-paid rate is 1-3%. Your signup-to-paid rate looks healthy, but your visitor-to-signup rate is low. What are the two most likely reasons for the low signup rate?"
             options:
-              - Number of paying users
-              - Monthly churn rate
-              - Total sign-ups (including those who never came back)
-              - Whether you're above or below your break-even point
-            correctAnswer: 2
-            explanation: "Total sign-ups look impressive but don't tell you if your business is healthy. If most sign-ups never return, the number is misleading. Paying users, churn, and break-even directly connect to your business viability."
+              - The price is too high for most visitors
+              - Most visitors aren't your target audience
+              - The landing page doesn't make the value clear
+              - You need more features before people will pay
+            correctAnswer: [1, 2]
+            explanation: "The signup-to-paid rate (3 out of 154 = 1.9%) is within the 1-3% benchmark. People who try your product do convert at a normal rate. But the visitor-to-signup rate (154 out of 3,000 = 5.1%) is below the 8-12% benchmark. Too many visitors leave without signing up. Two likely causes: your landing page doesn't communicate the value clearly, or you're getting traffic from communities where your target audience isn't present. Revisit your value proposition and where you're sharing your product."
         - type: text
           title: Keep your money separate from day one
           content:
             body: |-
-              Open a **separate bank account** for your product's income. This is one of the simplest things you can do, and it makes everything easier: tracking how your business is doing, preparing for taxes, and understanding your cash flow.
+              As a sole trader, you're not legally required to have a business bank account. You can use your personal account. But **opening a separate account for your product's money is one of the simplest things you can do** to make your life easier.
 
-              Two free options that work well:
+              Why it's worth it:
+              - **Simpler bookkeeping.** Every transaction in the account is business-related. No scrolling through personal purchases to find what's deductible.
+              - **Easier tax preparation.** Your accountant (or you) can see all income and expenses in one place. Fewer mistakes, less stress at tax time.
+              - **Clearer picture of your business.** You can see at a glance how much your product is earning and spending each month.
 
-              **Wise** (wise.com) — Great for receiving payments in multiple currencies with low fees. Especially useful if your customers are international.
+              Good options for sole traders include [**Wise**](https://wise.com/invite/irhc/kingam35) and [**Revolut**](https://revolut.com/referral/?referral-code=kingaga4i&geo-redirect), both of which let you open an account without a registered company. Check which one fits your situation better.
 
-              **Revolut** (revolut.com) — A free business account that's easy to set up. Good for keeping your business finances separate from your personal ones.
-
-              Both are free to open. You don't need a registered company to use them (personal accounts work fine at this stage).
-
-              Cash flow problems are one of the main reasons small businesses fail. Keeping your business money separate means you always know exactly how much your product is earning and spending. Your accountant will thank you later.
+              Cash flow problems are one of the main reasons small businesses fail. Keeping your business money separate means you always know where you stand.
           subtitle: A separate account changes how you see your business
         - type: text
           title: Set up Stripe
           content:
             body: |-
-              **Stripe** is a payment processing service that handles accepting credit card payments online.
+              [**Stripe**](https://stripe.com/) is a payment processing service that handles accepting credit card payments online.
 
               When a customer pays through Stripe, the money goes to your Stripe account. You then transfer it to your separate business bank account.
 
-              To set up Stripe, you'll need:
+              **To set up Stripe,** you'll need:
               - An email address
               - Your personal details (name, address, date of birth)
               - A bank account to receive payouts
               - Depending on your location, a tax identification number
 
-              Integrating Stripe into your product is a topic on its own. For now, the goal is to **create your Stripe account** so it's ready when you need it.
+              The goal for now is to **create your Stripe account** so it's ready when you need it.
+
+              **Bonus:** once you've signed up, check **Settings > Perks** in your Stripe dashboard. Stripe partners with other tools to offer discounts for startups, including Posthog, which you set up in Challenge 4.
           subtitle: Get your payment account ready
         - type: text
           title: Legal basics (keep it simple)
@@ -1162,72 +1189,22 @@ course:
               **Toolkit:** The [Accountant Call Preparation Template](https://littleparrot.app/nest/toolkit/TODO) has a list of questions to bring to your first accountant call, covering legal structure, taxes, deductible expenses, and record-keeping. Fill in your details before the call so you make the most of the time.
           subtitle: Don't register a company until you need one
         - type: quiz-question
-          title: "Quiz: When to register a company"
+          title: "Quiz: Legal structure"
           content:
-            question: When should you register a company for your product?
+            question: "You operate as a sole trader. Your product has 8 paying users and earns about $40/month in revenue. A friend tells you that you should register a company before accepting any more payments. What do you do?"
             options:
-              - Before you start building the product
-              - As soon as you have the idea
-              - When you have solid revenue or a specific deal requires it
-              - After your first visitor
-            correctAnswer: 2
-            explanation: Company registration costs money and creates ongoing obligations. Until you have revenue that justifies those costs, operating as a sole trader is simpler and cheaper.
-        - type: text
-          title: "Dalmie's sustainable plan"
-          content:
-            body: |-
-              Dalmie opened a Wise account for the Book Club Organiser's finances. She signed up for Stripe and connected it to the Wise account.
-
-              She didn't register a company. She booked a one-hour call with an accountant to understand her tax obligations and registered as a sole trader.
-
-              She keeps her day job and dedicates five hours a week to growing the Book Club Organiser. Her break-even point is 2 paying book clubs. Her goal for the first three months: reach 10 paying users. That's $45.50/month in profit after Stripe fees. Not life-changing, but it proves the model works.
-
-              She tracks three numbers each month: paying users, churn, and whether she's above break-even. She ignores how many people visited her landing page. She focuses on how many people are paying and staying.
-
-              One step at a time.
-          subtitle: Five hours a week, three numbers to track
-        - type: free-text-exercise
-          title: Calculate your break-even point
-          content:
-            description: |-
-              Calculate your break-even point using your own numbers:
-
-              1. **Fixed costs:** List your monthly fixed costs (domain, email, tools). Add them up.
-              2. **Price per user:** What do you charge per month? (from Challenge 7)
-              3. **Variable cost per user:** Stripe takes roughly 2.9% + $0.30 per transaction. Calculate what that is for your price.
-              4. **Break-even:** Fixed costs / (Price - Variable cost) = how many paying users?
-            placeholder: |-
-              My monthly fixed costs:
-              -
-              -
-              Total: $
-
-              Price per user: $/month
-              Variable cost per user (Stripe fee): ~$
-              Contribution per user: $
-
-              Break-even = $ / $ = approximately __ paying users
-            systemPrompt: 'You are a business mentor helping a learner calculate their break-even point. They should list their fixed costs, their price per user, their variable cost (Stripe fees), and calculate how many paying users they need. Provide friendly, concise feedback (max 5 bullet points) in British English, avoid using em dashes. Check the maths. If they forgot common fixed costs (domain, email), mention them. If the break-even number seems surprisingly high, suggest they review their pricing or costs. Remind them that this is the minimum, not the goal. End with encouragement.'
-            checkerPrompt: 'Check if the user has listed fixed costs, a price per user, a variable cost per user, and calculated a break-even number. Verify the arithmetic is roughly correct. This is their calculation:'
+              - Register a company now, before anything goes wrong
+              - Keep operating as a sole trader for now
+              - Stop accepting payments until you've registered
+              - Hire a lawyer to figure out the best structure right away
+            correctAnswer: 1
+            explanation: "At $40/month, the cost of registering and maintaining a company (registration fees, annual filings, accountant fees) would likely eat most of your revenue. Operating as a sole trader is simpler and cheaper at this stage. Revisit the decision when your revenue is high enough to justify those costs, or when a specific deal requires it. When in doubt, ask your accountant."
         - type: reflection
-          title: Your sustainable business plan
+          title: What's the one thing you'll do this week?
           content:
-            description: |-
-              Based on everything you've learned across the eight challenges, write down:
-
-              1. **Your break-even point** (how many paying users you need)
-              2. **The three metrics you'll track each month** (no vanity metrics)
-              3. **One thing you'll do this week** to move closer to your first paying user
-            placeholder: |-
-              Break-even: I need __ paying users to cover my costs.
-
-              Three metrics I'll track:
-              1.
-              2.
-              3.
-
-              This week I will:
-            subDescription: "You don't need a business plan. You need three numbers and one next step."
+            description: You've covered a lot of ground across eight challenges. What's the single most important thing you'll do this week to move your product forward?
+            placeholder: "This week I will..."
+            subDescription: "Not next month. Not five things. One thing, this week. That's how businesses get built."
         - type: course-end
           title: "You're in business! \U0001F389"
           content:
@@ -1250,4 +1227,4 @@ course:
 
               Products are never done. But you now have the foundation, the numbers, and the mindset to grow this into something real.
 
-              Good luck, and happy building!
+              Good luck, and happy building! 🤗
