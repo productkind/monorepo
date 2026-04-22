@@ -283,6 +283,25 @@ This step catches misaligned or unreliable techniques before they're baked into 
 
 ---
 
+## Self-Review Before Presenting
+
+After generating the full course, do a self-review pass before presenting it. Check each rule in this skill file against the output:
+
+- [ ] Are quizzes distributed throughout each challenge, not clumped at the end?
+- [ ] Does every quiz test judgement or application, not recall of the preceding step?
+- [ ] Are all quiz answer options similar in length (correct answer not visually obvious)?
+- [ ] Is every text step short enough to read without scrolling? If it has 3+ concepts, is it split?
+- [ ] Does the first step after comics introduce the course outcomes, not jump into teaching?
+- [ ] Does the learner's biggest fear get addressed before the first teaching step?
+- [ ] Are all URLs verified against course-links.md and toolkit-links.md?
+- [ ] Are toolkit references linked and woven in naturally?
+- [ ] Does every exercise focus on one thing, not bundle multiple tasks?
+- [ ] Do Dalmie's examples demonstrate the thought process?
+- [ ] Does each challenge-end have a distinct nextModule (exciting) and subDescription (reflects on this challenge)?
+- [ ] Is the final exercise one focused, forward-looking action?
+
+This pass catches the most common issues that survive initial generation.
+
 ## Output Format for Generated Micro-course
 
 When generating a micro-course, structure it as the examples. Make sure to use diverse step types in each challenge.
@@ -293,6 +312,7 @@ When generating a micro-course, structure it as the examples. Make sure to use d
 - `../../../little-parrot/content/course/vibe-coding-tech-00/vibe-coding-tech-00.yaml`
 - `../../../little-parrot/content/course/lovable-intro-00/lovable-intro-00.yaml`
 - `../../../little-parrot/content/course/vibe-coding-debugging-00/vibe-coding-debugging-00.yaml`
+- `../../../little-parrot/content/course/vibe-coding-start-your-business-00/vibe-coding-start-your-business-00.yaml`
 
 ### Save Micro-course
 Save the generated micro-course to this folder: `../../../little-parrot/content/course`
