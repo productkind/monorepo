@@ -54,19 +54,15 @@ Compare the current version to the last bookmarked version. What files changed? 
 
 ### Strategy 3: Explain before fixing
 
-**When to use it:** You've tried several different fixes, but none of them work or they introduce new problems. You need to make Lovable understand the root cause before trying again.
+**When to use it:** You've tried several different fixes, but none of them work or they introduce new problems. You need Lovable to investigate the root cause before trying again.
 
 **Steps:**
 1. Switch to **Plan mode**.
 2. Prompt:
 ```
-I've been trying to fix [describe the bug] but my previous attempts haven't worked. Explain:
-- What is causing this bug?
-- Why did my previous fix attempts fail?
-- What would be the correct approach to fix it?
+We've been going back and forth on this bug. Before making any more changes, explain what might be the root cause of [explain bug]. I want to understand before we proceed.
 ```
-3. Read the explanation. It often reveals that the real problem is somewhere different from where you've been looking.
-4. Once you understand the cause, leave Plan mode and prompt the fix based on what you learned.
+3. Review Lovable's proposed plan. If it makes sense, click **Implement the plan** to apply the fix. If something sounds off or unclear, ask follow-up questions before proceeding.
 
 ---
 
@@ -93,13 +89,11 @@ Let's fix only [the specific part]. Ignore [the other parts] for now. Get [the s
 
 **Steps:**
 1. Revert to the version before the feature existed (your last bookmark).
-2. Write a clear, specific prompt for the feature from scratch, incorporating everything you've learned about what went wrong.
+2. Write a clear, specific prompt for the feature from scratch, incorporating everything you've learned about what went wrong. The first version of the feature should be simple and focused on the core action your user will do in your product. Then build on it in a next prompt.
 3. Prompt:
 ```
 I want to add [feature]. Here's exactly what it should do:
-- [Specific behaviour 1]
-- [Specific behaviour 2]
-- [Specific behaviour 3]
+[Specific behaviour but with a simple implementation, no extra details or optimizations yet].
 ```
 4. Test thoroughly before moving on.
 
