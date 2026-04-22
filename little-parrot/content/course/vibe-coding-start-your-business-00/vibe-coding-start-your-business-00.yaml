@@ -202,7 +202,7 @@ course:
           content:
             nextModule: "**Next challenge:** You have the words. Now let's build everything your product needs before its first visitor arrives: a professional domain, email capture, analytics, and your first real traffic. Seven more challenges, each one bringing you closer to your first paying user."
             description: You now have a clear value proposition that makes people lean in.
-            subDescription: "Keep this sentence close. It will come in handy every time you explain what you do to someone new, whether at a dinner party, in a community, or in a casual conversation. You never know when the person you're talking to is your next user. **Toolkit:** The [Value Proposition Formula](https://littleparrot.app/nest/toolkit/800d1e61-6372-41be-9892-f41b99be7acc) has the formula, Dalmie's examples, and a list of everywhere you'll use it."
+            subDescription: "Keep this sentence close. It will come in handy every time you explain what you do to someone new, whether at a dinner party, in a community, or in a casual conversation. You never know when the person you're talking to is your next user. You can find the [Value Proposition Formula](https://littleparrot.app/nest/toolkit/800d1e61-6372-41be-9892-f41b99be7acc) in the Toolkit."
 
     - title: Choose Your Domain
       isFree: false
@@ -728,7 +728,7 @@ course:
           content:
             nextModule: "**Next challenge:** Now that people are using your product, it's time to listen to what they have to say and build social proof."
             description: You know where to list your product, how to write a strong submission, and how to show up in communities without being spammy.
-            subDescription: "You've practised the hardest part: talking about your product honestly and helpfully. Use the Startup Directory List in the Toolkit to find directories that fit your product, and post in one community this week."
+            subDescription: "You've practised the hardest part: talking about your product honestly and helpfully. Use the [Startup Directory List](https://littleparrot.app/nest/toolkit/c2b8b87a-3815-4267-8cb4-227b05397fd6) in the Toolkit to find directories that fit your product, and post in one community this week."
 
     - title: Listen to Your First Users
       isFree: false
@@ -997,7 +997,7 @@ course:
           content:
             nextModule: "**Next challenge:** You have a pricing model. But how many paying users do you actually need to cover your costs? The answer might surprise you. Let's find out."
             description: You can choose between subscription and one-time payment, pick the right trial model for your product, and use psychology to design a pricing page that converts.
-            subDescription: "You've learned anchoring, decoy pricing, annual discounts, social proof, and loss aversion. These techniques work whether you're charging $5 or $50. **Toolkit:** The [Pricing Psychology Cheat Sheet](https://littleparrot.app/nest/toolkit/bedc9e49-e338-4537-a856-b18a2a888a6d) has all five techniques with examples and a pricing page checklist."
+            subDescription: "You've learned anchoring, decoy pricing, annual discounts, social proof, and loss aversion. These techniques work whether you're charging $5 or $50. The [Pricing Psychology Cheat Sheet](https://littleparrot.app/nest/toolkit/bedc9e49-e338-4537-a856-b18a2a888a6d) has all five techniques with examples and a pricing page checklist."
 
     - title: Build a Sustainable Business
       isFree: false
@@ -1040,7 +1040,7 @@ course:
 
               Your break-even point tells you: **how many paying users do I need each month to stop losing money?** Everything above that number is profit.
 
-              **Toolkit:** The [Business Numbers Template](https://littleparrot.app/nest/toolkit/764681e3-3475-41e6-99a4-47fff726ba1e) is a Google Sheet with two tabs: one to calculate your break-even point, and one to track your monthly cashflow.
+              **Toolkit:** The [Business Numbers Template](https://littleparrot.app/nest/toolkit/764681e3-3475-41e6-99a4-47fff726ba1e) has a Google Sheet with two tabs: one to calculate your break-even point, and one to track your monthly cashflow.
           subtitle: The one number that tells you if your business is viable
         - type: text
           title: "Dalmie's break-even calculation"
