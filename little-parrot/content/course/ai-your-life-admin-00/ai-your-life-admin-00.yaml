@@ -1,0 +1,839 @@
+course:
+  id: c8f3a7d2-4b9e-4f1a-a8c5-7d9e3f6b2c01
+  note: "This course uses iPhone features that need iPhone 15 Pro/Pro Max or an iPhone 16 or newer, iOS 26+, Apple Intelligence turned on, and the ChatGPT extension connected. Prerequisites are covered in Challenge 1 before any building starts."
+  cover: /courses/ai-your-life-admin-00/cover.gif
+  title: 'AI Your Life Admin for New Mums'
+  learningOutcomes:
+    - Build three working iPhone shortcuts that turn your voice into Calendar events, Reminders, and timestamped notes, hands-free
+    - Write AI prompts that give you output consistent enough for your phone to parse and route automatically
+    - Set up your shortcuts to trigger the way you need them, with Hey Siri, the Action Button, or a daily schedule
+    - Keep a timestamped baby care log that you can hand your paediatrician as a PDF
+    - Use ChatGPT or Claude to turn weeks of log entries into feeding and sleep pattern insights
+  challenges:
+    - title: Your First AI Shortcut - The Baby Log
+      isFree: true
+      skills:
+        - iPhone Shortcuts
+        - Voice Dictation
+        - AI Prompting
+      description: You'll build a working voice-to-log shortcut in under 10 minutes. Say what just happened with the baby, and your phone writes a timestamped entry to a running note you can later share with your paediatrician.
+      completionTime: '15:00'
+      steps:
+        - type: comic
+          content:
+            imageUrl: /comics/ai-your-life-admin-00/panel-00.png
+            altText: |-
+              A new mum called Maya stands in a cluttered kitchen holding a small baby in one arm.
+              A pot is boiling on the stove. Her phone sits on the counter next to an open packet
+              of nappies. Thought bubbles float above her head with question marks: "Rash? Pram
+              delivery? Nursery tour Tuesday or Wednesday?"
+        - type: comic
+          content:
+            imageUrl: /comics/ai-your-life-admin-00/panel-01.png
+            altText: |-
+              Close up on Maya looking tired, one hand on her forehead, the baby fussing in her
+              other arm. A thought bubble above her: "My brain is a leaky sieve. I can't hold
+              it all in my head anymore."
+        - type: comic
+          content:
+            imageUrl: /comics/ai-your-life-admin-00/panel-02.png
+            altText: |-
+              Maya glances at her phone on the counter. A small light bulb appears above her
+              head. She says, "Wait. What if my phone just caught everything I think of? Hands
+              free, while I'm holding the baby?"
+        - type: comic
+          content:
+            imageUrl: /comics/ai-your-life-admin-00/panel-03.png
+            altText: |-
+              A brightly coloured bird (called Little Parrot) appears next to Maya. Little Parrot
+              smiles and says, "It can. With three short AI shortcuts on your iPhone, your phone
+              will hold what you used to have to remember. Let me show you the first one."
+        - type: overview
+          title: What you'll walk away with
+          content:
+            description: |-
+              By the end of this micro-course, you'll go from "my brain is a leaky sieve" to "my phone catches what I used to have to remember."
+
+              You'll build three short AI shortcuts that work hands-free, while you're holding the baby, feeding, or rocking them to sleep. Then you'll turn weeks of baby log entries into pattern insights you can share with your paediatrician.
+            outline:
+              - title: "Your First AI Shortcut: The Baby Log"
+                duration: "15 min"
+                badge: free
+              - title: "The 60-Second Brain Dump"
+                duration: "15 min"
+              - title: "The Morning Briefing"
+                duration: "10 min"
+              - title: "Turn Your Baby Log Into Paediatrician-Ready Insights"
+                duration: "10 min"
+            totalDuration: "50 min"
+        - type: text
+          title: "You're not too un-techy for this"
+          content:
+            body: |-
+              A worry that stops a lot of new mums before they start: **"I don't have the headspace to learn something new right now."**
+
+              Here's what you actually need to do in this course: **talk to your phone**. That's it. No typing at 3am. No reading documentation. No learning to code.
+
+              You'll set each shortcut up once, in about 10 minutes, while the baby naps. After that, using it is one sentence: "Hey Siri, Baby Log."
+
+              If it helps, think of this as the lowest-friction way to hand your mental load to your phone. It's **an anti-system system**. No tags, no folders, no daily review. Voice in, sorted out.
+          subtitle: The anti-system system
+        - type: text
+          title: Before you start, check your phone
+          content:
+            body: |-
+              This course uses a feature called **Apple Intelligence** that connects your iPhone to ChatGPT. Not every iPhone supports it. Take 60 seconds now to check:
+
+              - **Hardware:** iPhone 15 Pro, iPhone 15 Pro Max, or any iPhone 16 or newer
+              - **Software:** iOS 26 or later
+              - **Apple Intelligence:** on (Settings → Apple Intelligence & Siri)
+              - **ChatGPT extension:** connected (Settings → Apple Intelligence & Siri → ChatGPT → Set Up)
+
+              The ChatGPT connection is free and doesn't need an account. Your phone sends each request anonymously unless you sign in.
+
+              If you don't have the right iPhone, the shortcuts in this course won't run. Most other things in the course (the prompts, the trigger choices, the paediatrician log) still work if you adapt them to another voice assistant.
+          subtitle: A two-minute setup check
+        - type: text
+          title: "Challenge 1: Let's start with the Baby Log"
+          content:
+            body: |-
+              Of the three shortcuts in this course, the **Baby Log** is the simplest to build. Seven actions, about 10 minutes.
+
+              It's also the one with the biggest immediate payoff. From the very first time you use it, you're building a timestamped record you can hand to your paediatrician as a PDF. **No backlog. Every use adds value.**
+
+              By the end of this challenge, you'll be able to pull your phone out mid-feed, say *"Hey Siri, Baby Log. Fed 120 millilitres at 2, nappy at 2:30, fussy after the feed, napped 3 to 4:15,"* and have a clean entry appear in your Baby Log note.
+          subtitle: Small shortcut, big payoff
+        - type: text
+          title: The pattern you'll use three times in this course
+          content:
+            body: |-
+              Every shortcut you build in this course follows the same four-step skeleton:
+
+              1. **Dictate Text** - your phone captures what you say
+              2. **Text** - a prompt you wrote, filled in with what you said and what time it is
+              3. **Use Model** - ChatGPT turns your voice note into structured output
+              4. **Append to Note** (or create a Calendar event, or speak the output out loud)
+
+              Once you've built the Baby Log, you've learned the pattern. The other two shortcuts add one new skill each on top of it.
+          subtitle: Dictate → AI → Write somewhere
+        - type: text
+          title: "First, make the destination"
+          content:
+            body: |-
+              Open the Notes app and create a new note. Name it exactly **Baby Log**.
+
+              That's it. Just an empty note with that name. Your shortcut will append every entry to this note, so over time it builds up into a full, timestamped history.
+
+              Name matters: your shortcut will look for a note with this exact name. If you call it "baby log" or "Baby Logs," it won't find it.
+          subtitle: Create the "Baby Log" note in Notes
+        - type: text
+          title: "Build the shortcut: first three actions"
+          content:
+            body: |-
+              Open **Shortcuts → + (new shortcut)** and add these three actions, in order:
+
+              **1. Dictate Text**
+              Tap the action, then under options set *Stop Listening* to **After Short Pause**. This lets you speak in natural sentences without the shortcut cutting you off.
+
+              **2. Date**
+              Add the *Date* action. By default it gives you the current date and time. Leave it.
+
+              **3. Format Date**
+              Tap *Format* and set it to **Custom**, then type `yyyy-MM-dd HH:mm` in the format field.
+
+              These three give your shortcut two things: what you said, and what time you said it.
+          subtitle: Dictate, Date, Format Date
+        - type: text
+          title: "Action 4: the prompt that makes this work"
+          content:
+            body: |-
+              Add a **Text** action. This is where you tell ChatGPT what you want it to do with your voice note.
+
+              Paste this in, and use the variable picker (the small button that appears above the keyboard) to insert **Formatted Date** where it says `[Formatted Date]`, and **Dictated Text** where it says `[Dictated Text]`:
+
+              ```
+              You are a baby care log parser for a new mum.
+
+              Current date and time: [Formatted Date]
+
+              Here is a voice log entry: [Dictated Text]
+
+              Parse this into a structured, scannable log entry. For each activity, extract:
+              - Time (use the current date/time as reference if no specific time mentioned)
+              - Type: one of Feed / Sleep / Nappy / Mood / Milestone / Medicine / Other
+              - Details: amounts, durations, observations
+
+              Format as:
+
+              ## [Date in "Day, DD Mon YYYY" format]
+
+              **[Time]** 🍼/😴/🧷/😊/⭐/💊 [Type]: [Details]
+
+              (Use the emoji that matches the type. One line per activity. Keep it brief.)
+
+              If the entry mentions a concern or something unusual, add a line at the bottom:
+              ⚠️ Note: [the concern, flagged for paediatrician review]
+              ```
+
+              **Don't worry about memorising this prompt.** Set it up once, and you'll reuse it every time the shortcut runs.
+          subtitle: Tell ChatGPT exactly what you want
+        - type: text
+          title: What makes this prompt reliable
+          content:
+            body: |-
+              Notice three things about the prompt:
+
+              - **It gives ChatGPT the current time.** Without that, the AI doesn't know what "now" means when you say "fed her an hour ago."
+              - **It specifies the exact output format.** When the output is predictable, your shortcut can append it cleanly without any extra parsing.
+              - **It has a rule for what to do when info is missing.** "If no specific time mentioned, use the current date/time as reference." No guessing, no awkward empty fields.
+
+              You'll reuse this prompt anatomy (role + current time + input + strict format + defaults) in the next two shortcuts.
+          subtitle: Role, time, input, format, defaults
+        - type: quiz-question
+          title: "Quiz: Evaluate a prompt"
+          content:
+            question: |-
+              A friend shows you her first draft of a baby log prompt: "ChatGPT, please log what I just said in a nice format." Why is this likely to give inconsistent results?
+            options:
+              - It's too short to give ChatGPT the context it needs to log anything
+              - It leaves the format open, so each run will come back shaped differently
+              - ChatGPT rejects prompts that start with the word "please" instead of a role
+              - Shortcuts requires every AI prompt to contain a numbered list of rules
+            correctAnswer: 1
+            explanation: |-
+              A prompt like "a nice format" leaves the format up to ChatGPT, so you'll get a different shape each time. For a shortcut that appends to a note, the shape needs to be the same every run. That's why the prompt you just pasted specifies exact headings, emoji, and a one-line-per-activity rule.
+        - type: text
+          title: "Actions 5-7: hand it off and save it"
+          content:
+            body: |-
+              Three more actions, and you're done:
+
+              **5. Use Model**
+              - *Model:* Extension Model (ChatGPT)
+              - *Prompt:* tap the field and select the Text variable from step 4
+              - *Follow Up:* Off
+              - *Output:* Text
+
+              **6. Append to Note**
+              - *Note:* Baby Log
+              - *Body:* the Use Model output from step 5
+
+              **7. Speak Text**
+              - *Text:* "Baby log updated."
+              - This is the audio confirmation so you know the shortcut ran while your hands are full.
+
+              Tap **Done** at the top to save. Rename the shortcut to **Baby Log** if it isn't already.
+          subtitle: Use Model, Append, Speak
+        - type: text
+          title: Wire it to your voice
+          content:
+            body: |-
+              Because you named the shortcut **Baby Log**, Siri already recognises it. Try it:
+
+              1. Say "Hey Siri, Baby Log."
+              2. When Siri starts listening, say something like: *"Fed 120 millilitres at 2, nappy at 2:30, she was a bit fussy after the feed, napped 3 to 4:15."*
+              3. Wait about 5 seconds. Your phone will say "Baby log updated."
+              4. Open your **Baby Log** note in Notes and check what it wrote.
+
+              The first time you run it, you may also be asked to allow the shortcut to access Notes. Tap **Always Allow**.
+          subtitle: "Hey Siri, Baby Log"
+        - type: text
+          title: What a clean entry looks like
+          content:
+            body: |-
+              After your test run, you should see something like this appended to your Baby Log note:
+
+              ```markdown
+              ## Wednesday, 22 Apr 2026
+
+              **14:00** 🍼 Feed: 120ml
+              **14:30** 🧷 Nappy: Normal
+              **14:45** 😊 Mood: Fussy after feed
+              **15:00** 😴 Sleep: Napped 15:00-16:15 (1h 15min)
+              ```
+
+              If you dictated something unusual (say, "the rash on her cheek isn't getting better"), you'll also see a line like:
+
+              ```markdown
+              ⚠️ Note: Rash on left cheek not improving, flagged for paediatrician review.
+              ```
+
+              That's it. Voice in, timestamped entry out. Every use adds another row to a document you can share with your doctor later.
+          subtitle: The output you'll see in your note
+        - type: quiz-question
+          title: "Quiz: What happens when the time's missing?"
+          content:
+            question: |-
+              It's 15:30 and you say "Hey Siri, Baby Log. She had a 60ml bottle and then a nappy change." You didn't say a time. What will the entry look like?
+            options:
+              - ChatGPT will refuse to log it because no specific time was given
+              - The shortcut will stop the run and ask you to repeat the dictation
+              - The entry will use 15:30, because the prompt defaults to the current time
+              - The entry will say "Unknown time" in place of an actual timestamp
+            correctAnswer: 2
+            explanation: |-
+              The prompt you pasted includes an explicit rule: "use the current date/time as reference if no specific time mentioned." This is why giving ChatGPT a default instruction in your prompt matters. Without that rule, ChatGPT would guess, and the entries would be inconsistent. Defaults remove friction. You don't have to think about saying a time every single log.
+        - type: free-text-exercise
+          title: "Your turn: Log one real thing"
+          content:
+            description: |-
+              You've built it. Now use it once, for real.
+
+              The next time you do anything baby-related (feed, nappy, nap), say "Hey Siri, Baby Log" and dictate what just happened. Then open your Baby Log note and see what it captured.
+
+              Come back here and paste the entry your shortcut created. Or if something went wrong, describe what happened.
+            placeholder: |-
+              What I dictated:
+
+              What the shortcut wrote in my note:
+
+              What I noticed:
+            subDescription: "One real run teaches you more than ten reads. This is also how you'll spot small tweaks to make the prompt fit your life."
+            systemPrompt: |-
+              You are a warm, supportive mentor helping a new mum who has just built her first iPhone shortcut.
+              Acknowledge what she shared. If she pasted a log entry, comment on something specific in it (the structure, the emoji, the timestamp). If something went wrong, reassure her that first runs often need a small tweak and ask what she saw.
+              Keep your response short, warm, and encouraging. Avoid em dashes. Avoid the word "genuinely." Use British English. Don't lecture. Two to three short sentences is plenty.
+        - type: challenge-end
+          title: "You've built your first AI shortcut 🎙️"
+          content:
+            nextModule: "**Next challenge:** You're about to scale this same pattern to the harder problem. Everything spinning in your head at once, sorted by ChatGPT and filed into Calendar, Reminders, and Notes automatically. Same skeleton, one new skill: structured output you can parse."
+            description: You know the Dictate → AI → Write pattern. Every other shortcut in this course builds on it.
+            subDescription: |-
+              Your Baby Log note already has its first entry. Every run from now adds another row. By the end of this course you'll have weeks of data that turns into real patterns.
+
+    - title: The 60-Second Brain Dump
+      isFree: false
+      skills:
+        - Structured AI Output
+        - Shortcuts Parsing
+        - Conditional Routing
+      description: You'll build a shortcut that takes a 60-second voice dump and files each item into the right app. Events land in Calendar, tasks in Reminders, everything else in a Notes catch-all. No tap-through, no sorting.
+      completionTime: '15:00'
+      steps:
+        - type: text
+          title: "Challenge 2: Empty your head in 60 seconds"
+          content:
+            body: |-
+              You're no longer a beginner. You know how Dictate → AI → Append works.
+
+              This challenge scales that pattern to the mess in your head. Everything you're holding at once: the pram delivery on Thursday, the nursery tour next Tuesday, the call to the health visitor about the rash, the thing you meant to ask Tom about the night feeds.
+
+              You'll say all of it. ChatGPT will sort it. Your shortcut will route each item to the right app.
+
+              **Calendar events go to Calendar. Tasks go to Reminders. Everything else goes to a Brain Dump note.** You never sort anything yourself.
+          subtitle: Voice in, three apps out
+        - type: text
+          title: "The new skill: strict output format"
+          content:
+            body: |-
+              The Baby Log ends with one thing (append to a note). The Brain Dump ends with three different things, depending on what you said.
+
+              For that to work, ChatGPT has to send back output that your shortcut can split apart reliably. The trick: **ask ChatGPT to use separators your shortcut can search for.**
+
+              You'll see three separators in the Brain Dump prompt:
+
+              - `===CALENDAR===`
+              - `===REMINDERS===`
+              - `===NOTES===`
+
+              These don't mean anything to ChatGPT. They're just strings that are highly unlikely to appear in normal speech, so your shortcut can use them to split the response into three clean chunks.
+          subtitle: Why separators matter
+        - type: text
+          title: The Brain Dump prompt
+          content:
+            body: |-
+              Here's the prompt. Paste it into your Text action the same way you did in Challenge 1, inserting the **Formatted Date** and **Dictated Text** variables where marked:
+
+              ```
+              You are a personal assistant. I did a voice brain dump.
+
+              Current date/time: [Formatted Date]
+
+              What I said: [Dictated Text]
+
+              Sort every item into exactly one category. Return ONLY this structure, nothing else:
+
+              ===CALENDAR===
+              TITLE | YYYY-MM-DD | HH:MM | DURATION_MINUTES
+              (One event per line. Calculate relative dates like "next Thursday" from the current date. Default time 09:00, default duration 30.)
+
+              ===REMINDERS===
+              TASK | YYYY-MM-DD
+              (One task per line. Default due date is today. "This week" = coming Friday.)
+
+              ===NOTES===
+              (Everything else: ideas, things to discuss with partner, things to remember. One per line, plain text.)
+
+              If a category has no items, write NONE on a single line.
+              ```
+          subtitle: Structured, predictable, parseable
+        - type: text
+          title: What a typical response looks like
+          content:
+            body: |-
+              If Maya says: *"Pram delivery Thursday at 10. Nursery tour next Tuesday. Remind me to call the health visitor about the rash. Talk to Tom about splitting the nights."*
+
+              ChatGPT will return something like this:
+
+              ```
+              ===CALENDAR===
+              Pram delivery | 2026-04-23 | 10:00 | 30
+              Nursery tour | 2026-04-28 | 09:00 | 30
+
+              ===REMINDERS===
+              Call health visitor about rash | 2026-04-22
+
+              ===NOTES===
+              Talk to Tom about splitting the nights
+              ```
+
+              Your shortcut will split this response on each separator, peel out the three blocks, and route each one to the right app. **You don't do any sorting. ChatGPT does it.**
+          subtitle: Separators, rows, then routing
+        - type: quiz-question
+          title: "Quiz: What the separators enable"
+          content:
+            question: |-
+              You run your Brain Dump with only one item: "Remind me to pick up nappies." ChatGPT's reply starts with `===CALENDAR===\nNONE`. Why does the prompt ask ChatGPT to write `NONE` when a category is empty?
+            options:
+              - So your shortcut can tell an empty category apart from a malformed line
+              - Because Shortcuts requires every category to have at least one data line
+              - Because omitting NONE would use more ChatGPT credits each time it runs
+              - Because ChatGPT otherwise writes placeholder text that breaks the parser
+            correctAnswer: 0
+            explanation: |-
+              The `NONE` keyword is a sentinel. Your shortcut checks each block: if it contains `NONE`, skip the routing loop for that category. Without a sentinel, an empty Calendar block might still trigger a loop that creates a nonsense event. Defaults and sentinels together make the shortcut predictable.
+        - type: text
+          title: The routing pattern in Shortcuts
+          content:
+            body: |-
+              The build for the Brain Dump is longer than the Baby Log (around 40 actions), but the logic is simple. For each of the three categories:
+
+              1. **Split** the AI response on the category separator
+              2. **Check** if the block contains `NONE`. If it does, skip this block entirely.
+              3. **Loop** through each line in the block, **Split** each line on ` | `, and **create** the right thing (Calendar event, Reminder, or Note entry)
+
+              You're using the same Shortcuts actions you already know (Split Text, Get Item from List, Set Variable), plus two new ones: **If / End If** for the skip-if-empty check, and **Repeat with Each** for the per-item loop.
+          subtitle: Split, check, loop, create
+        - type: text
+          title: Building it step by step
+          content:
+            body: |-
+              Walking through all 40 actions here would turn this challenge into a click-by-click. Since you already know the core pattern, the full step-by-step walkthrough lives in the **Brain Dump Build Guide** in your Toolkit (coming soon). It has every action, every setting, every variable name.
+
+              For now, focus on the three concepts you need to understand:
+
+              - **Split Text** turns a long string into a list (one item per line, or one item per separator)
+              - **If / End If** skips a block if it's empty
+              - **Repeat with Each** runs the same actions once per item in a list
+
+              If you've used spreadsheets, this is the same thinking: a table becomes a list of rows, and you do something to each row.
+          subtitle: Concepts first, clicks in the Toolkit
+        - type: text
+          title: Why this shortcut deserves your Action Button
+          content:
+            body: |-
+              The Brain Dump is the one you'll reach for most. Three times a day. In the middle of a feed, in the middle of a nappy change, at 3am when something pops into your head.
+
+              For a shortcut you use that often, **the Action Button is the right home.** One press, no words needed, no waiting for Siri to listen.
+
+              **How to set it up:**
+              1. Settings → Action Button
+              2. Scroll to **Shortcut**
+              3. Tap **Choose a Shortcut** and select **Brain Dump**
+              4. In the **Shortcuts** app, open your Brain Dump shortcut, tap the info icon (ⓘ), and **turn off "Ask Before Running."** The first week you'll want it on so you can catch any issues. After that, turn it off so the button is truly one-tap.
+
+              Hold the Action Button on the side of your phone, speak, and it runs.
+          subtitle: One press instead of one sentence
+        - type: quiz-question
+          title: "Quiz: Trigger fit"
+          content:
+            question: |-
+              Your baby just dropped something she wasn't supposed to eat and you need both hands to deal with it. You remember you were supposed to call the midwife today. Which trigger option best fits this moment?
+            options:
+              - Say "Hey Siri, Brain Dump" while you handle the baby with both hands
+              - Hold the Action Button and tap the Brain Dump icon to confirm it
+              - Wait until the situation is over, then open Reminders and type it
+              - Open the Notes app and dictate the reminder into a blank note
+            correctAnswer: 0
+            explanation: |-
+              When both hands are occupied, Hey Siri is the only option that works without touching the phone. The Action Button needs a hand on the side of the device. That's the trade-off you make when you pick a trigger: Action Button is faster when you can press it, Hey Siri is your fallback when you can't. Match the trigger to the physical situation.
+        - type: text
+          title: Your first real run
+          content:
+            body: |-
+              Before you move on, do a real Brain Dump. Not a test run. An actual clearing of whatever's in your head right now.
+
+              Hold the Action Button and say everything for about 60 seconds. Don't organise it. Don't filter. Say the appointments, say the things to pick up, say the thing you want to remember to tell your partner, say the random shower thought.
+
+              When it finishes, check three apps:
+
+              1. **Calendar** (today and the coming week): the events should be there
+              2. **Reminders**: the tasks should be there with due dates
+              3. **Notes → Brain Dump**: everything else should be timestamped and appended
+
+              First run will have rough edges. That's normal. You'll iterate on the prompt wording (e.g., "default time 09:00") once you see what ChatGPT does with your phrasing.
+          subtitle: An actual clearing, not a test
+        - type: free-text-exercise
+          title: "Your turn: what got routed where?"
+          content:
+            description: |-
+              Do your first real Brain Dump. Then tell me what happened.
+
+              - What did you say?
+              - What landed in Calendar?
+              - What landed in Reminders?
+              - What landed in Notes?
+              - Did anything go to the wrong place? If so, which phrase caused it?
+            placeholder: |-
+              What I said:
+
+              What landed where:
+
+              One thing that went to the wrong place:
+            subDescription: "Miscategorised items are useful. They tell you exactly which word in the prompt to tweak."
+            systemPrompt: |-
+              You are a warm, supportive mentor helping a new mum who has just run her first Brain Dump.
+              If she shared an item that landed in the wrong place, suggest one specific, small prompt tweak she could try (for example, "add a line saying 'things I want to remember to tell a person are REMINDERS, not NOTES'"). Don't rewrite the whole prompt for her. Help her spot the pattern.
+              If everything worked, celebrate what specifically worked. Keep it short. Avoid em dashes. Avoid the word "genuinely." Use British English.
+        - type: challenge-end
+          title: "Your head is emptier than it was 60 seconds ago 🧠"
+          content:
+            nextModule: "**Next challenge:** So far, both shortcuts run when you trigger them. The Morning Briefing is different. You'll set it once, and every morning your phone reads you the day while you feed the baby. Same skeleton, one new skill: automation."
+            description: You scaled the pattern. ChatGPT now sorts your mental load, and three apps fill up without you.
+            subDescription: |-
+              Strict formats, sentinels like `NONE`, and separators are the three tricks that turn free-form AI output into shortcut-parseable data. You'll see the same pattern the next time you want ChatGPT to produce anything structured.
+
+    - title: The Morning Briefing
+      isFree: false
+      skills:
+        - Pulling Data In
+        - Spoken AI Output
+        - Time of Day Automation
+      description: You'll build a shortcut that reads you today's calendar, reminders, weather, and a kind greeting, automatically, at a time you choose. Hands-free audio while you feed the baby or get dressed.
+      completionTime: '12:00'
+      steps:
+        - type: text
+          title: "Challenge 3: Same pattern, now it runs itself"
+          content:
+            body: |-
+              The Baby Log runs when you speak to it. The Brain Dump runs when you press a button. The **Morning Briefing is different**. You set it once, and every morning at 7am (or whenever you say), your phone reads you the day.
+
+              Three new skills on top of the pattern you already know:
+
+              1. **Pulling data in** (weather, today's calendar, today's reminders)
+              2. **Asking ChatGPT for spoken output** (a different tone, no bullets, no emoji)
+              3. **Automation** (scheduling it for a time of day)
+
+              By the end, you won't check three apps before breakfast. Your phone will tell you what's coming while you're feeding the baby.
+          subtitle: Set once, plays itself every morning
+        - type: text
+          title: Pull the right data in first
+          content:
+            body: |-
+              The Morning Briefing starts with three data-fetching actions. Add them before your Text step:
+
+              **1. Get Current Weather**
+              - *Location:* Current Location
+
+              **2. Find Calendar Events**
+              - *Start Date:* Start of Today
+              - *End Date:* End of Today
+              - *Sort by:* Start Date
+
+              **3. Find Reminders**
+              - *Filter:* Is Not Completed
+              - *Due Date:* Is Today
+              - *Sort by:* Due Date
+
+              The first time you run it, your phone will ask permission for Weather, Calendar, and Reminders. Tap **Always Allow** for each.
+          subtitle: Weather, events, reminders
+        - type: text
+          title: The spoken-output prompt
+          content:
+            body: |-
+              Now add a **Text** action with this prompt. Use the variable picker to insert the Weather, Calendar Events, and Reminders values you just pulled in:
+
+              ```
+              Create a short, warm, spoken morning briefing for a new mum. Keep it under 60 seconds when read aloud. Use a friendly, encouraging tone.
+
+              Here is today's information:
+
+              WEATHER:
+              [Weather Condition], [Temperature]°, feels like [Feels Like]°
+
+              CALENDAR EVENTS TODAY:
+              [Calendar Events]
+
+              REMINDERS DUE TODAY:
+              [Reminders]
+
+              Structure the briefing as:
+              1. A short, kind greeting (acknowledge that mornings with a baby are hard)
+              2. Weather summary in one sentence (include what to dress baby in if going out)
+              3. Calendar overview: what's happening and when
+              4. Top 3 reminders to focus on
+              5. End with one encouraging sentence
+
+              Do not use emoji. Do not use bullet points. Write it as natural spoken language.
+              ```
+
+              **Notice what's new:** we're telling ChatGPT *how to sound*, not what format to produce. That's because the output goes to Speak Text, not to a note.
+          subtitle: Prompting for natural speech
+        - type: quiz-question
+          title: "Quiz: Designed to be heard"
+          content:
+            question: |-
+              Three lines in this prompt matter specifically because the output gets spoken aloud, not written down. Which of the following is one of them?
+            options:
+              - "Keep it under 60 seconds when read aloud"
+              - "Use a friendly, encouraging tone"
+              - "Do not use emoji. Do not use bullet points. Write it as natural spoken language"
+              - All of the above
+            correctAnswer: 3
+            explanation: |-
+              All three shape how the output sounds. Length (so it fits in a feed window), tone (so it's kind instead of clinical), and format rules (emoji and bullets don't translate to audio - they become awkward noises or silences). When the destination is speech, every line of the prompt should serve the ear.
+        - type: text
+          title: "Finish the shortcut: Use Model + Speak Text"
+          content:
+            body: |-
+              Two more actions, same as before:
+
+              **Use Model**
+              - *Model:* Extension Model (ChatGPT)
+              - *Prompt:* the Text from the previous step
+              - *Follow Up:* Off
+              - *Output:* Text
+
+              **Speak Text**
+              - *Text:* Use Model output
+              - *Rate:* slightly slower than default (you can nudge this to your taste)
+              - *Wait Until Finished:* On
+
+              Rename the shortcut to **Morning Briefing** and save. Try it manually first: "Hey Siri, Morning Briefing."
+          subtitle: Two more familiar actions
+        - type: text
+          title: Now set it to run itself
+          content:
+            body: |-
+              Automation lives in a different tab:
+
+              1. Open **Shortcuts**
+              2. Tap the **Automation** tab at the bottom
+              3. Tap **+** in the top right, then choose **Time of Day**
+              4. Set your time (7:00am or whenever you usually wake up)
+              5. *Repeat:* Daily
+              6. Tap **Next**, then choose **Morning Briefing** as the shortcut to run
+              7. Turn **Run Immediately** on (this is the magic switch that means no "Tap to run" prompt at 7am)
+
+              From tomorrow morning, your phone will play the briefing without you opening anything.
+          subtitle: Automation → Time of Day → Daily
+        - type: text
+          title: "Start manual, go automatic when ready"
+          content:
+            body: |-
+              A gentle rule: **keep "Ask Before Running" on for the first week** of any automation.
+
+              Why: automations that trigger unannounced can surprise you (and your baby) when you're not expecting them. A briefing that plays at 7am is lovely on a Wednesday. At 7am on the rare morning you got back to sleep, it's not.
+
+              Use the first week to check the briefing is actually useful in your real mornings. If the tone is off, tweak the prompt. If the timing is wrong, change it. Once it fits your life, **turn "Ask Before Running" off** and let it play on its own.
+          subtitle: The first-week rule
+        - type: quiz-question
+          title: "Quiz: The briefing sounds robotic"
+          content:
+            question: |-
+              On your first run, the spoken briefing comes out as "Good morning. Weather today is 11 degrees. Calendar events include nursery tour at 10. Reminders include call health visitor." It's accurate but robotic. Which line of your prompt would you change first?
+            options:
+              - The line that sets temperature
+              - The line that says "Use a friendly, encouraging tone"
+              - The line that limits it to 60 seconds
+              - The line that pulls in Calendar Events
+            correctAnswer: 1
+            explanation: |-
+              A robotic tone is a tone problem, not a length or data problem. The tone line is under-specified. Try rewriting it to something more concrete: "Sound like a kind friend checking in, not a news reader. Contractions are fine. Use 'you' directly." Specific tone instructions beat adjectives like "friendly."
+        - type: free-text-exercise
+          title: "Your turn: manual run first"
+          content:
+            description: |-
+              Before you set the automation, trigger your Morning Briefing manually: "Hey Siri, Morning Briefing."
+
+              Listen to the whole thing. Then come back and tell me:
+
+              - Did it feel useful, or did it feel like noise?
+              - Is there a line you'd want it to say (like "don't forget the coat if you're going out")?
+              - Is there a line you'd want it to drop?
+            placeholder: |-
+              What worked:
+
+              What felt off:
+
+              One thing I'd change:
+            subDescription: "The goal isn't a perfect briefing on day one. It's a briefing that fits your mornings after a week of tuning."
+            systemPrompt: |-
+              You are a warm, supportive mentor helping a new mum who has just heard her first Morning Briefing.
+              If she liked it, affirm what specifically worked. If she wants to tweak it, suggest one concrete change to a specific line of the prompt (e.g., "add a line to the Structure section that says 'include one thing to pack for the baby if the temperature is below 10 degrees'"). Avoid em dashes. Avoid the word "genuinely." Use British English. Keep it warm and short.
+        - type: challenge-end
+          title: "Tomorrow morning runs itself 🌅"
+          content:
+            nextModule: "**Final challenge:** You've been logging. Your Baby Log is filling up. Now you'll use the data you've been collecting. You'll turn weeks of short entries into feed and sleep pattern insights, and you'll learn how to hand it to your paediatrician in a format they can actually use."
+            description: Your third shortcut is done, and it doesn't need you to trigger it.
+            subDescription: |-
+              You've used a shortcut to pull data in, asked AI to produce natural speech, and scheduled it to run itself. The same automation trigger works for anything on a schedule. Think about what else in your life wants to be said to you at a specific time.
+
+    - title: Turn Your Baby Log Into Paediatrician-Ready Insights
+      isFree: false
+      skills:
+        - Pattern Analysis Prompt
+        - PDF Export from Notes
+        - Paediatrician Prep
+      description: You'll turn weeks of short log entries into readable patterns by asking ChatGPT or Claude to analyse your Baby Log. Then you'll export the log as a PDF you can hand your paediatrician at your next visit.
+      completionTime: '10:00'
+      steps:
+        - type: text
+          title: "Challenge 4: From log to insight"
+          content:
+            body: |-
+              You've been logging for a few weeks. Your Baby Log note is filling up with rows. Individually, each row is small. Together, they're a dataset.
+
+              This last challenge turns that dataset into two things a paediatrician actually uses:
+
+              1. **Patterns:** things you can't see from one entry but you can see from two weeks. Feed intervals, longest nightly stretch, wake windows, anything that correlates with fussiness.
+              2. **A shareable document:** a clean PDF of your Baby Log you can hand over or email ahead of the appointment.
+
+              No new shortcut this time. Just a very good prompt and a built-in export.
+          subtitle: Weeks of rows become patterns
+        - type: text
+          title: Why patterns beat individual entries
+          content:
+            body: |-
+              When you're in the middle of a tough week, individual entries feel like noise. "She napped badly again. She fed a lot. She was fussy."
+
+              Patterns are different. Patterns say: "Nights get worse when total daytime feeds drop below 600ml." Or: "The 4am wake-up started five days after you dropped the 10pm dream feed."
+
+              **That's the kind of observation a paediatrician can act on**, and it's the kind you can't notice from memory because too much is happening at once.
+
+              The good news: the data is already there. You've been logging it. The only new step is asking ChatGPT or Claude to look at it.
+          subtitle: The pattern you can't see from the inside
+        - type: text
+          title: The analysis prompt
+          content:
+            body: |-
+              Open ChatGPT or Claude in a browser or the app. Paste your entire **Baby Log** note in, then add this prompt below it:
+
+              ```
+              Analyse this baby log like a data analyst. Look for:
+              1. Average feed amounts and frequency, any trends
+              2. Sleep patterns: total daytime naps, longest stretch at night, wake windows
+              3. Correlations between daytime feeding and nighttime sleep
+              4. Any patterns around fussiness
+              5. Anything a paediatrician might find noteworthy
+
+              Present findings in plain language, not medical jargon.
+              ```
+
+              The prompt does three things worth noticing:
+
+              - **"Like a data analyst"** sets the role
+              - **Numbered, specific questions** stop the AI from producing a vague summary
+              - **"Plain language, not medical jargon"** keeps the output readable when you're running on 4 hours of sleep
+
+              If you want to reuse this prompt, save it in your Notes app next to the Baby Log, or keep the **Prompt Library** in your Toolkit (coming soon) bookmarked.
+          subtitle: Role, questions, tone
+        - type: quiz-question
+          title: "Quiz: Which finding flags a paediatrician concern?"
+          content:
+            question: |-
+              Your friend runs the analysis and shares four things the AI found. Which one deserves a mention to the paediatrician at the next visit?
+            options:
+              - Average feed size has held steady around 120ml across the last two weeks
+              - The longest nightly stretch has grown from 3 to 5 hours over two weeks
+              - Fussiness correlates with the two days when total daytime feeds were under 500ml
+              - None of these are worth mentioning
+            correctAnswer: 2
+            explanation: |-
+              A correlation between low daytime intake and fussiness is a pattern a paediatrician can work with. The other two are reassuring trends. The point of the analysis isn't to find problems where there are none. It's to surface observations worth a conversation, which you'd struggle to spot from memory alone.
+        - type: text
+          title: Export your log as a PDF
+          content:
+            body: |-
+              For the appointment itself, a PDF is easier to share than a long note:
+
+              1. Open your **Baby Log** note in the Notes app
+              2. Tap the **⋯** (more) icon in the top right
+              3. Tap **Share**, then scroll to **Create PDF**
+              4. The PDF opens in a preview. Tap the share icon and email it to your paediatrician, or save it to Files to have it ready on your phone
+
+              If your log has weeks of entries, the PDF will be long. That's fine. Most paediatricians would rather see too much than too little.
+          subtitle: Share → Create PDF
+        - type: text
+          title: How to use this at the appointment
+          content:
+            body: |-
+              Two tactics, depending on the paediatrician:
+
+              **Email the PDF ahead.** Some paediatricians will skim it before you arrive. This works well when the appointment is short and you want them arriving with questions already in mind.
+
+              **Bring it on your phone.** Open the Baby Log note directly. Have the ChatGPT pattern analysis in a second tab. When they ask "how's feeding going," show the numbers instead of trying to remember.
+
+              **One warning:** a paediatrician might take 5 minutes to read through weeks of data. Offer the one-paragraph pattern summary first. Only hand over the full log if they want more context. You know your time is short. Theirs is even shorter.
+          subtitle: Ahead of time vs on the day
+        - type: prompting-exercise
+          title: "Your turn: run the analysis"
+          content:
+            description: |-
+              If you've been logging for at least a week, your Baby Log has enough rows to look for patterns. Copy the whole note, paste it into ChatGPT or Claude, and paste the analysis prompt below it.
+
+              Come back here and paste one thing the analysis surfaced that you hadn't already noticed yourself.
+
+              If you haven't logged long enough yet, that's fine. Skip to the reflection and come back in two weeks.
+            placeholder: |-
+              One pattern the analysis found:
+
+              Whether it matches my own sense of what's happening:
+
+              Whether it's worth mentioning at the next paediatrician visit:
+            subDescription: "The first time you run this, you'll find at least one pattern you didn't see. That's the point."
+            workImmediately: false
+            systemPrompt: |-
+              You are a warm, supportive mentor helping a new mum who has just seen her first AI pattern analysis of her baby log.
+              Reflect specifically on what she surfaced. If it's a real pattern, help her think about whether it's worth mentioning to the paediatrician (without medical advice). If it's noise, help her name that too. Keep your response short, warm, specific.
+              Avoid em dashes. Avoid the word "genuinely." Use British English. Never give medical advice or interpret specific health conditions. If she shares something concerning, gently suggest she mentions it to her paediatrician.
+        - type: reflection
+          title: "What's the one thing you'll automate next?"
+          content:
+            description: |-
+              You now have three working shortcuts and the knowledge to build more. Same pattern every time: dictate, prompt, write somewhere.
+
+              What's one more thing you want your phone to hold for you, so you don't have to?
+            placeholder: |-
+              The one thing I want to automate next is...
+            subDescription: "Three shortcuts became three in a week. Four could be four by next week. Same skeleton every time."
+        - type: course-end
+          title: "Your phone holds what your brain used to 🎉"
+          content:
+            description: "Here's what you can do now that you couldn't three challenges ago:"
+            subDescription: |-
+              ✓ **Log your baby care hands-free** with Hey Siri and a 7-action shortcut that writes to a timestamped note
+
+              ✓ **Empty your mental load** in 60 seconds with the Action Button, and watch events, tasks, and notes land in the right apps automatically
+
+              ✓ **Hear your day read to you** every morning through a Time of Day automation that pulls in weather, events, and reminders
+
+              ✓ **Write AI prompts that hold up** by giving ChatGPT a role, the current time, a strict output format, and defaults for missing info
+
+              ✓ **Turn weeks of data into patterns** with a single analysis prompt you can reuse every month
+
+              ✓ **Share a paediatrician-ready PDF** without trying to remember from memory
+
+              **The pattern is reusable.** Anywhere you currently think "I keep forgetting to X," you can probably build a shortcut for it. Start small, keep the prompt strict, and give it a trigger you'll actually use.
+            nextModule: |-
+              **Want to go deeper:**
+
+              - Sharpen the prompts inside your shortcuts with our [Write Better with AI: Prompting Foundations for Product Managers](https://littleparrot.app/550e8400-e29b-41d4-a716-446655440000/course-overview) micro-course. The role + input + format structure you've been using has a lot more you can do with it.
+
+              - Want to extend these shortcuts with travel time, contact birthdays, or a motivational quote? A **Shortcut Extensions Toolkit** is coming soon to your Toolkit with one-liner add-ons you can paste in.
+
+              Good luck, and happy voice-logging! 🎙️
+  titleSplit:
+    - 'AI Your Life Admin'
+    - 'for New Mums'
+  description: Go from "my brain is a leaky sieve" to "my phone holds what I used to have to remember." In 50 minutes of active build time, you'll set up three iPhone shortcuts that turn your voice into Calendar events, Reminders, and a baby log that's paediatrician-ready. All hands-free. All using free tools. No API keys, no subscriptions, no prior tech background needed.
