@@ -28,7 +28,7 @@ Ask yourself these questions in order. Use the first strategy that fits.
 **When to use it:** The feature was working, then a recent change broke it and attempts to fix it are making things worse.
 
 **Steps:**
-1. Look at the responses below the chat. Each one has a revert option underneath.
+1. Look at the responses in the chat. Each one has a revert option underneath.
 2. Find the last response where the feature was still working.
 3. Click **Revert** to go back to that point.
 4. Try a different, more specific prompt this time.
@@ -42,25 +42,25 @@ Ask yourself these questions in order. Use the first strategy that fits.
 **When to use it:** The feature worked at your last bookmark, but something broke it and you're not sure which change caused the problem.
 
 **Steps:**
-1. Switch to **Plan mode** (the Plan button at the bottom of the screen).
+1. Switch from Build mode to **Plan mode** (in the chat, at the bottom of the screen).
 2. Prompt:
 ```
 Compare the current version to the last bookmarked version. What files changed? List the differences and highlight anything that could cause [describe the bug].
 ```
-3. Read the comparison. The change that introduced the bug is usually obvious once you see it side by side.
-4. Ask Lovable to revert only the specific change that caused the problem.
+3. Read the comparison, you might spot the change that introduced the bug.
+4. Ask Lovable to investigate that change and find what broke the feature.
 
 ---
 
 ### Strategy 3: Explain before fixing
 
-**When to use it:** You've tried several different fixes, but none of them work or they introduce new problems. You need to understand the root cause before trying again.
+**When to use it:** You've tried several different fixes, but none of them work or they introduce new problems. You need to make Lovable understand the root cause before trying again.
 
 **Steps:**
 1. Switch to **Plan mode**.
 2. Prompt:
 ```
-Don't change any code yet. I've been trying to fix [describe the bug] but my previous attempts haven't worked. Explain:
+I've been trying to fix [describe the bug] but my previous attempts haven't worked. Explain:
 - What is causing this bug?
 - Why did my previous fix attempts fail?
 - What would be the correct approach to fix it?
@@ -92,7 +92,7 @@ Let's fix only [the specific part]. Ignore [the other parts] for now. Get [the s
 **When to use it:** The code has become so patched and layered with fixes that every change creates a new problem. It's faster to start the feature fresh than to untangle it.
 
 **Steps:**
-1. Revert to the version before the feature existed (your last clean bookmark).
+1. Revert to the version before the feature existed (your last bookmark).
 2. Write a clear, specific prompt for the feature from scratch, incorporating everything you've learned about what went wrong.
 3. Prompt:
 ```
