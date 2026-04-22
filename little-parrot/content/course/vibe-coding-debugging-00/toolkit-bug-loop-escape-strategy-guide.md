@@ -92,12 +92,12 @@ Let's fix only [the specific part]. Ignore [the other parts] for now. Get [the s
 2. Write a clear, specific prompt for the feature from scratch, incorporating everything you've learned about what went wrong. The first version of the feature should be simple and focused on the core action your user will do in your product. Then build on it in a next prompt.
 3. Prompt:
 ```
-I want to add [feature]. Here's exactly what it should do:
-[Specific behaviour but with a simple implementation, no extra details or optimizations yet].
+I want to add new functionality. Here's exactly what it should do:
+[Describe the simplest possible first version of the feature, no extra details yet].
 ```
 4. Test thoroughly before moving on.
 
-**Why this works:** Rebuilding with Lovable is fast. A clean implementation based on what you now know is often more reliable than layers of patches on top of a broken foundation.
+**Why this works:** Rebuilding with Lovable is fast. A clean rebuild based on what you now know is often more reliable than layers of patches on top of a broken foundation.
 
 ---
 
