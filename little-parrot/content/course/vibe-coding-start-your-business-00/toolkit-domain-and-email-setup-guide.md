@@ -123,9 +123,11 @@ v=DMARC1; p=none; rua=mailto:dmarc-reports@yourdomain.com; ruf=mailto:dmarc-fore
    - **MX records:** Go to [MX Lookup](https://mxtoolbox.com/MXLookup.aspx), enter your domain, and check that all five Google mail servers appear
    - **SPF record:** Go to [SPF Check](https://mxtoolbox.com/spf.aspx), enter your domain, and check that it shows your Google SPF record without errors
    - **DKIM record:** Go to [DKIM Check](https://mxtoolbox.com/dkim.aspx), enter your domain and the selector `google` (formatted as `yourdomain.com:google`), and check that it finds your DKIM key
+   - **DMARC record:** Go to [DMARC Check](https://mxtoolbox.com/dmarc.aspx), enter your domain, and check that it finds your DMARC record without errors (it's not a problem if you see any warnings)
 
 ### Troubleshooting
 
 - **Email not arriving?** MX records can take up to 48 hours to propagate. Wait and try again.
 - **Email going to spam?** Check that SPF and DKIM are set up correctly using MX Toolbox.
 - **Can't find DNS settings?** Search for "[your registrar name] DNS settings" for specific instructions.
+- **Sending emails from your product?** When you start sending transactional emails from your product (e.g., welcome emails, password resets) using a service like MailTrap or Resend, you'll need to update your SPF record to include that service. You'll also need to set up DKIM for the new service. Check your email provider's documentation for the exact values.
