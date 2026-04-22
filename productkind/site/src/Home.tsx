@@ -1,7 +1,7 @@
 import './Home.css'
 import { useState } from 'react'
 import { Instagram, Linkedin } from 'lucide-react'
-import {Typography} from './Typography'
+import { Typography } from './Typography'
 
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -18,7 +18,7 @@ const Home = () => {
     <header className="site-header" data-menu-open={isMenuOpen}>
       <nav className="site-navigation">
         <a href="#hero" className="navigation-logo">
-            <img src="assets/logo-invert.svg" width="48" alt="productkind logo"/>
+          <img src="assets/logo-invert.svg" width="48" alt="productkind logo" />
         </a>
         <span className="menu-items">
           <a href="#hero" className="navigation-link" onClick={closeMenu}>
@@ -49,7 +49,7 @@ const Home = () => {
     </header>
     <section id="hero" className="bento hero">
       <div className="box left hero-logo">
-        <img className="hero-logo-image" src="assets/logo.svg" width="200" alt="productkind logo"/>
+        <img className="hero-logo-image" src="assets/logo.svg" width="200" alt="productkind logo" />
       </div>
       <div className="box box-highlight hero-tagline">
         <Typography component="h1" variant="h1" className="tagline main-title">
@@ -74,7 +74,7 @@ const Home = () => {
         </Typography>
       </div>
       <div className="box top our-product-image">
-        <img className="our-product-logo" src="assets/logo-little-parrot.svg" width="200" alt="Little Parrot logo"/>
+        <img className="our-product-logo" src="assets/logo-little-parrot.svg" width="200" alt="Little Parrot logo" />
       </div>
       <div className="box with-link our-product-description">
         <div>
@@ -216,7 +216,7 @@ const Home = () => {
         </Typography>
       </div>
       <div className="box kim about-image about-kinga-image">
-        <img className="image-kinga" src="assets/photo-kinga.webp" width="400" alt="Photo of the productkind team"/>
+        <img className="image-kinga" src="assets/photo-kinga.webp" width="400" alt="Photo of the productkind team" />
       </div>
       <div className="box tim about-kinga-description">
         <Typography component="h4" variant="h3">
@@ -240,7 +240,7 @@ const Home = () => {
         </Typography>
       </div>
       <div className="box tim about-image about-tamas-image">
-        <img className="image-kinga" src="assets/photo-tamas.webp" width="400" alt="Photo of the productkind team"/>
+        <img className="image-kinga" src="assets/photo-tamas.webp" width="400" alt="Photo of the productkind team" />
       </div>
     </section>
     <section id="newsletter" className="bento newsletter">
@@ -250,7 +250,7 @@ const Home = () => {
         </Typography>
       </div>
       <div className="box top newsletter-image">
-        <img className="newsletter-logo" src="assets/logo-thoughts.svg" width="600" alt="Thoughts by productkind logo"/>
+        <img className="newsletter-logo" src="assets/logo-thoughts.svg" width="600" alt="Thoughts by productkind logo" />
       </div>
       <div className="box with-link left newsletter-description">
         <div>
@@ -281,7 +281,7 @@ const Home = () => {
         </Typography>
       </div>
       <div className="box right seminars-image">
-        <img className="seminars-logo" src="assets/logo-seminars.svg" width="300" alt="Seminars by productkind logo"/>
+        <img className="seminars-logo" src="assets/logo-seminars.svg" width="300" alt="Seminars by productkind logo" />
       </div>
       <div className="box with-link left seminars-description">
         <div>
@@ -380,15 +380,23 @@ const Home = () => {
     </section>
     <footer className="site-footer">
       <a href="#" className="footer-logo">
-        <img src="assets/logo-invert.svg" width="48" alt="productkind logo"/>
+        <img src="assets/logo-invert.svg" width="48" alt="productkind logo" />
       </a>
       <a className="footer-link" href="mailto:hello@productkind.com">hello@productkind.com</a>
       <div className="footer-social">
         <a className="footer-link" href="https://www.instagram.com/by_productkind/" target="_blank" rel="noopener noreferrer"><Instagram /></a>
         <a className="footer-link" href="https://www.linkedin.com/company/productkind" target="_blank" rel="noopener noreferrer"><Linkedin /></a>
       </div>
+      <div className="sponsors">
+        <Typography component="p" variant="body">
+          Partner of
+        </Typography>
+        <Typography component="p" variant="body">
+          <a href="https://https://elevenlabs.io/startup-grants"><img className="sponsor-elevenlabs" src="https://eleven-public-cdn.elevenlabs.io/payloadcms/cy7rxce8uki-IIElevenLabsGrants%201.webp" alt="ElevenLabs" /></a>
+        </Typography>
+      </div>
       <Typography component="p" variant="body">
-        © 2025 productkind. All rights reserved.
+        © 2026 productkind. All rights reserved.
       </Typography>
     </footer>
   </main>
