@@ -41,7 +41,7 @@ Use these links when referencing toolkit items in course content.
 | PostHog Analytics Setup Guide | `https://littleparrot.app/nest/toolkit/db3ed06f-0594-41b3-8f9f-82051865627c` |
 | Startup Directory List | `https://littleparrot.app/nest/toolkit/c2b8b87a-3815-4267-8cb4-227b05397fd6` |
 | Pricing Psychology Cheat Sheet | `https://littleparrot.app/nest/toolkit/bedc9e49-e338-4537-a856-b18a2a888a6d` |
-| Business Numbers Template | `https://littleparrot.app/nest/toolkit/764681e3-3475-41e6-99a4-47fff726ba1e` |
+| Break-Even and Cashflow Tracker | `https://littleparrot.app/nest/toolkit/764681e3-3475-41e6-99a4-47fff726ba1e` |
 | Accountant Call Preparation Template | `https://littleparrot.app/nest/toolkit/1a82d9a5-9987-4f61-aa29-99574b40836a` |
 
 ## Notes

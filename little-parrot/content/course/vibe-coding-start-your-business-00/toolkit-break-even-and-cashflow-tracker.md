@@ -1,11 +1,11 @@
 ---
 challenge: "8 - Build a Sustainable Business"
 ---
-## Business Numbers Template
+## Break-Even and Cashflow Tracker
 
-A Google Sheet template with two tabs to help you know your numbers from day one. Copy it to your own Google Drive and fill it in as you go.
+A Google Sheet to calculate how many paying users you need to cover your costs, and track your income and expenses month by month. Make a copy to your own Google Drive and fill it in with your own numbers.
 
-**[Open the template](TODO: add Google Sheet link)**
+**[Open the template in Google Sheets](https://docs.google.com/spreadsheets/d/1RL8-5gxSnJ2s14AUUBmXHqWToGnw0PMiAHxExu_kAFw/edit?usp=sharing)**
 
 ### Tab 1: Break-Even Calculator
 
@@ -15,9 +15,8 @@ Use this tab to calculate how many paying users you need to cover your monthly c
 
 - Your monthly fixed costs (domain, Google Workspace, AI app builder, any other tools)
 - Your price per user per month
-- Your Stripe fee per transaction (roughly 2.9% + $0.30)
 
-The sheet calculates your break-even point automatically.
+The sheet calculates your Stripe fee, revenue per user after fees, and break-even point automatically.
 
 **What this number means:**
 
@@ -29,24 +28,23 @@ The sheet calculates your break-even point automatically.
 
 ### Tab 2: Monthly Cashflow
 
-Use this tab to track every cent that comes in and goes out of your business. Update it regularly (weekly is ideal, monthly at minimum).
+Use this tab to track every payment that comes in and goes out of your business. Update it regularly (weekly is ideal, monthly at minimum).
 
-**Columns:**
+**What to fill in:**
 
-| Date | Description | Income | Expense | Balance |
-|------|-------------|--------|---------|---------|
-| 1 Apr | Stripe payout (3 users) | $13.65 | | $13.65 |
-| 1 Apr | Google Workspace | | $7.00 | $6.65 |
-| 5 Apr | Domain renewal (annual) | | $24.00 | -$17.35 |
-| 1 May | Stripe payout (5 users) | $22.75 | | $5.40 |
-| 1 May | Google Workspace | | $7.00 | -$1.60 |
-| 1 May | AI app builder | | $25.00 | -$26.60 |
+For each transaction, log the date, description, and whether it's income or an expense. The sheet tracks:
+
+- **Running balance** so you always know where you stand
+- **Current number of users** so you can see growth
+- **Break-even gap** showing how many more users you need (pulled from Tab 1)
+- **Monthly average** net income so you can spot trends
+- **Runway** showing how long your current balance lasts at the current burn rate
 
 **Why this matters:**
 
 - Your accountant will need these records at tax time
 - You can see at a glance whether your business is trending up or down
-- You'll spot months where expenses spike before they become a problem
+- The break-even gap connects your cashflow to your goal from Tab 1
 - It takes 5 minutes a week and saves hours of stress later
 
 **Tips:**
@@ -54,3 +52,4 @@ Use this tab to track every cent that comes in and goes out of your business. Up
 - Log every transaction, even small ones. They add up.
 - Note the Stripe payout amount after fees, not the gross amount. That's what actually hits your account.
 - If you use a separate bank account (as we recommend), you can cross-check this sheet against your bank statement each month.
+- Update the current users count when it changes so the break-even gap stays accurate.

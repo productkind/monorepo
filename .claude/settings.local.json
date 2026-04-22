@@ -99,7 +99,9 @@
       "WebFetch(domain:startupstash.com)",
       "WebFetch(domain:nocodefounders.com)",
       "WebFetch(domain:saaspa.ge)",
-      "WebFetch(domain:producthunt.com)"
+      "WebFetch(domain:producthunt.com)",
+      "WebFetch(domain:docs.google.com)",
+      "WebFetch(domain:doc-04-1s-sheets.googleusercontent.com)"
     ],
     "deny": [],
     "ask": []

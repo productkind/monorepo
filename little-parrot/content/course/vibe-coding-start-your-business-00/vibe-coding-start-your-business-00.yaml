@@ -1040,7 +1040,7 @@ course:
 
               Your break-even point tells you: **how many paying users do I need each month to stop losing money?** Everything above that number is profit.
 
-              **Toolkit:** The [Business Numbers Template](https://littleparrot.app/nest/toolkit/764681e3-3475-41e6-99a4-47fff726ba1e) has a Google Sheet with two tabs: one to calculate your break-even point, and one to track your monthly cashflow.
+              The [Break-Even and Cashflow Tracker](https://littleparrot.app/nest/toolkit/764681e3-3475-41e6-99a4-47fff726ba1e) in the Toolkit includes a Google Sheet with two tabs: one to calculate your break-even point, and one to track your monthly cashflow.
           subtitle: The one number that tells you if your business is viable
         - type: text
           title: "Dalmie's break-even calculation"
