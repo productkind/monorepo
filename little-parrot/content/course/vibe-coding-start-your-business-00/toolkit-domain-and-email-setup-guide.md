@@ -24,6 +24,8 @@ A step-by-step guide for purchasing your domain, setting up Google Workspace, an
 
 **To add aliases after setup:** In [Google Workspace Admin](https://admin.google.com/), go to **Directory > Users**, click your name, then **User information > Alternative email addresses**. Add hello@, support@, or any other alias you need. Emails sent to any alias will arrive in your main inbox.
 
+**To send from an alias:** When composing an email in Gmail, click the **From** field and select which address to send from (e.g., hello@yourproduct.com instead of sarah@yourproduct.com). If you don't see the option, it can take up to 24 hours for a new alias to appear in Gmail.
+
 ### Step 3: Connect your domain to Google Workspace
 
 Google Workspace will ask you to verify that you own your domain. It does this by giving you a **TXT record** (a small piece of text) that you add to your domain's settings. This proves to Google that the domain is yours.
@@ -67,13 +69,13 @@ Google Workspace MX records look like this:
 6. Set **Priority** to `1`
 7. Leave TTL as the default and click **Save**
 8. Repeat steps 3-7 for the remaining four mail servers from the table above, using the matching priority values
-9. Verify your MX records are active by going to [MX Toolbox](https://mxtoolbox.com/), entering your domain, and checking that all five Google servers show up
+9. Verify your MX records are set up correctly: in [Google Workspace Admin](https://admin.google.com/), go to **Apps > Google Workspace > Gmail > Setup** to see if Google lists your MX records
 
 **Using a different registrar?** The process is similar: find your DNS settings, and add the five Google records from the table above. Search for "[your registrar name] add MX records" for specific instructions.
 
-### Step 5: Set up SPF and DKIM
+### Step 5: Set up SPF, DKIM and DMARC
 
-These settings help ensure your emails don't end up in spam folders. Both require adding TXT records to your domain's DNS settings (the same way you did in Step 3).
+These settings help ensure your emails don't end up in spam folders. All require adding TXT records to your domain's DNS settings (the same way you did in Step 3).
 
 **SPF (Sender Policy Framework)** tells email services that Google is allowed to send emails on behalf of your domain.
 
@@ -97,6 +99,21 @@ These settings help ensure your emails don't end up in spam folders. Both requir
 10. Go back to Google Workspace Admin and click **Start authentication**
 
 It can take up to 48 hours for SPF and DKIM to start working.
+
+**DMARC (Domain-based Message Authentication, Reporting and Conformance)** tells email providers what to do if an email fails SPF or DKIM checks. It also sends you reports so you can monitor your email deliverability.
+
+Set up DMARC **after** SPF and DKIM have been active for at least 48 hours.
+
+1. Go to your domain registrar's DNS settings and add a new **TXT** record
+2. In the **Name** field, enter `_dmarc`
+3. In the **Value** field, paste the following (replace `yourdomain.com` with your actual domain):
+
+```
+v=DMARC1; p=none; rua=mailto:dmarc-reports@yourdomain.com; ruf=mailto:dmarc-forensic@yourdomain.com; fo=1; adkim=r; aspf=r; pct=100; sp=reject
+```
+
+
+**Note:** After setting up DMARC, you'll start receiving automated report emails. These are machine-generated and you don't need to do anything with them. Feel free to set up a Gmail filter to archive them automatically.
 
 ### Step 6: Verify everything works
 

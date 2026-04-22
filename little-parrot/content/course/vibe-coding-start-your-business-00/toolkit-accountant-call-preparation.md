@@ -17,6 +17,7 @@ Write these down so you can share them with the accountant at the start of the c
 - **Monthly costs:** [e.g., "$8/month for domain and email"]
 - **Day job:** [Do you have one? Are you employed or freelancing?]
 - **Have you earned any income from this product yet?** [Yes/No, and roughly how much]
+- **Do you have any other income streams?** [e.g., contract work, full-time job, flat rental]
 
 ### Questions to ask
 
