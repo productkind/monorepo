@@ -25,6 +25,7 @@ These appear in the Network tab of your browser DevTools. They tell you whether 
 | 403 | Forbidden | The user is logged in but doesn't have permission. | Row Level Security (RLS) policies are blocking the request. This is the most common 403 cause in Lovable apps. |
 | 404 | Not Found | The app is trying to reach something that doesn't exist. | A backend function was renamed or deleted, or the URL path is wrong. |
 | 409 | Conflict | The request conflicts with existing data. | Trying to create a duplicate record where only one is allowed (e.g., voting twice). |
+| 429 | Too Many Requests | The app is sending too many requests in a short time. | A loop in the frontend code is making repeated requests, or an external API is rate-limiting you. |
 
 #### Server errors (something crashed on the backend)
 
@@ -45,8 +46,6 @@ These appear in the Console tab of your browser DevTools. They come from the fro
 | `ReferenceError: X is not defined` | A variable or function name is misspelt or was never created. | "I'm getting 'X is not defined' on the [page]. The variable or function might be misspelt or missing." |
 | `SyntaxError: Unexpected token` | The code has a formatting mistake (missing bracket, extra comma). | Copy the full error including the file name and line number and share it with Lovable. |
 | `Failed to fetch` | A network request failed entirely (no response at all). | "A request is failing with 'Failed to fetch'. Check if the backend function exists and the URL is correct." |
-| `CORS error` / `Access-Control-Allow-Origin` | The browser is blocking a request to an external service for security reasons. | "I'm getting a CORS error when trying to reach [service]. The backend might need to proxy this request instead of calling it from the frontend." |
-| `ResizeObserver loop completed with undelivered notifications` | A layout is recalculating in a loop. | Usually harmless. Only worth investigating if the page is visibly flickering or slowing down. |
 
 ### How to use this cheat sheet
 

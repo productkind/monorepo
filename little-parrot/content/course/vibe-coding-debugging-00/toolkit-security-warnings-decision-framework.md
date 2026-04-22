@@ -83,3 +83,4 @@ This checks passwords against billions of known breached passwords and blocks an
 - [ ] **Run the security scan one final time** to confirm everything is resolved.
 - [ ] **Bookmark the secure version** so you have a safe point if future changes reintroduce issues.
 - [ ] **Re-check security after adding new features** that involve user data, authentication, or database tables. New features can introduce new findings.
+- [ ] **Security issues can rise even if you don't change code.** For example, if a new vulnerability is discovered in a library you use, it could trigger a new finding. Regularly check the Security panel to stay on top of any new issues.

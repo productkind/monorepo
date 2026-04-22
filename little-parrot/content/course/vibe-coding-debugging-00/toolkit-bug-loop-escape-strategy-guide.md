@@ -17,9 +17,9 @@ Ask yourself these questions in order. Use the first strategy that fits.
 |---|---|
 | Did the feature work before a recent change? | **1. Revert** |
 | Did it work at your last bookmark but you're not sure what broke it? | **2. Compare versions** |
-| Have you been trying different fixes but none of them stick? | **3. Explain before fixing** |
+| Have you been trying different fixes but none of them worked? | **3. Explain before fixing** |
 | Does the fix work for one part but break another? | **4. Isolate the problem** |
-| Has the code become so tangled that every fix creates a new bug? | **5. Rewrite the feature** |
+| Has the feature become so tangled that every fix creates a new bug? | **5. Rewrite the feature** |
 
 ---
 
@@ -100,8 +100,6 @@ I want to add [feature]. Here's exactly what it should do:
 - [Specific behaviour 1]
 - [Specific behaviour 2]
 - [Specific behaviour 3]
-
-Build this from scratch. Don't reuse any code from previous attempts.
 ```
 4. Test thoroughly before moving on.
 

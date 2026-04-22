@@ -16,29 +16,11 @@ A step-by-step investigation flow to follow every time something goes wrong in y
 - [ ] **Look at the Console tab** in DevTools. Are there any red error messages?
 - [ ] **Copy the full error message**, including the stack trace (the lines underneath that show file names and line numbers). Lovable needs the whole thing, not just the first line.
 
-**What to look for:**
-| What you see | What it usually means |
-|---|---|
-| `TypeError: Cannot read properties of undefined` | The code is trying to use something that doesn't exist yet |
-| `ReferenceError: X is not defined` | A variable or function name is misspelt or missing |
-| `SyntaxError` | Something is written incorrectly in the code |
-| `CORS error` | The app is being blocked from talking to an external service |
-
 ### Step 3: Check the Network tab for failed requests
 
 - [ ] **Switch to the Network tab** in DevTools and reproduce the bug again.
 - [ ] **Look for red entries** or status codes that aren't 200.
 - [ ] **Note the status code and the request name** (e.g., "POST /rest/v1/votes returned 401").
-
-**Quick status code reference:**
-| Code | Meaning |
-|---|---|
-| 200 | Success (not the problem) |
-| 400 | Bad request (the app sent something wrong) |
-| 401 | Not authenticated (login issue) |
-| 403 | Not authorised (permission issue, often RLS) |
-| 404 | Not found (wrong URL or missing resource) |
-| 500 | Server error (something crashed on the backend) |
 
 ### Step 4: Check Lovable Cloud logs
 
@@ -57,8 +39,15 @@ A step-by-step investigation flow to follow every time something goes wrong in y
 If nothing above revealed the problem, ask Lovable to add temporary logging so you can see what the code is doing step by step.
 
 **Copy this prompt and fill in the blanks:**
-```
-Add console logs to the [feature name] process to show:
+
+```markdown
+There is a bug in the [feature name] feature, but I can't find any clues in the Console, Network
+tab, Cloud logs, or database.
+
+The bug happens when I [describe the steps to reproduce the bug].
+[Describe what you expected to happen, and what actually happened instead.]
+
+Add logging to the [feature name] process to show:
 - What data is being sent
 - What response is received
 - Any errors that occur
