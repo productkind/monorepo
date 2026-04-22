@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>What we built in April</title>
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <![endif]-->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+    * { margin: 0; padding: 0; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #08080a;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    .email-wrapper {
+      width: 100%;
+      background-color: #f5f5f5;
+      padding: 32px 16px;
+    }
+
+    .email-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border: 2px solid #08080a;
+      box-shadow: 4px 4px 2px rgba(8, 8, 9, 0.25);
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(90deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020);
+      padding: 32px 40px;
+      text-align: center;
+      border-bottom: 2px solid #08080a;
+    }
+
+    .header img {
+      max-width: 220px;
+      height: auto;
+    }
+
+    .header-subtitle {
+      font-family: 'Space Mono', monospace;
+      font-size: 13px;
+      color: hsl(245, 3%, 48%);
+      margin-top: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    /* Content */
+    .content {
+      padding: 40px;
+    }
+
+    .greeting {
+      font-size: 17px;
+      margin-bottom: 16px;
+    }
+
+    .body-text {
+      font-size: 15px;
+      color: hsl(245, 3%, 28%);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    /* Section */
+    .section {
+      margin-bottom: 32px;
+    }
+
+    .section-header {
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #08080a;
+    }
+
+    h2 {
+      font-family: 'Space Mono', monospace;
+      font-size: 18px;
+      font-weight: 700;
+      color: #08080a;
+      margin: 0;
+    }
+
+    .section p, .section li {
+      font-size: 15px;
+      color: hsl(245, 3%, 28%);
+      line-height: 1.7;
+    }
+
+    .section p {
+      margin-bottom: 12px;
+    }
+
+    /* Feature cards */
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .feature-list li {
+      padding: 12px 16px;
+      margin-bottom: 8px;
+      background-color: #ffffff;
+      border: 2px solid #08080a;
+      box-shadow: 2px 2px 1px rgba(8, 8, 9, 0.15);
+    }
+
+    .feature-list li strong {
+      color: #08080a;
+      display: block;
+      margin-bottom: 2px;
+      font-size: 15px;
+    }
+
+    .feature-list li span {
+      font-size: 14px;
+      color: hsl(245, 3%, 38%);
+    }
+
+    .feature-list li .thanks {
+      display: block;
+      font-size: 13px;
+      color: hsl(245, 3%, 48%);
+      margin-top: 6px;
+      font-style: italic;
+    }
+
+    /* Highlight box */
+    .highlight-box {
+      background: linear-gradient(90deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020);
+      border: 2px solid #08080a;
+      box-shadow: 4px 4px 2px rgba(8, 8, 9, 0.25);
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+
+    .highlight-box h2 {
+      margin-bottom: 12px;
+    }
+
+    .highlight-box p {
+      font-size: 15px;
+      color: hsl(245, 3%, 28%);
+      margin-bottom: 12px;
+    }
+
+    .highlight-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* CTA button */
+    .cta-button {
+      display: inline-block;
+      background: linear-gradient(90deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70);
+      color: #08080a;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 14px 32px;
+      border: 2px solid #08080a;
+      box-shadow: 4px 4px 2px rgba(8, 8, 9, 0.25);
+    }
+
+    .cta-wrapper {
+      text-align: center;
+      margin: 28px 0 8px;
+    }
+
+    /* Sign-off */
+    .cta-section {
+      text-align: center;
+      padding: 32px 40px;
+      border-top: 2px solid #08080a;
+      background: linear-gradient(90deg, #ffb65b10, #fdd82510, #fbfb0010, #8efd2310, #00ed7010);
+    }
+
+    .cta-section p {
+      font-size: 15px;
+      color: hsl(245, 3%, 38%);
+      margin-bottom: 16px;
+    }
+
+    .cta-section .signoff {
+      font-family: 'Space Mono', monospace;
+      font-weight: 700;
+      font-size: 16px;
+      color: #08080a;
+      margin-top: 20px;
+    }
+
+    .cta-section .brand {
+      font-size: 13px;
+      color: hsl(245, 3%, 48%);
+      margin-top: 4px;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 24px 40px;
+      text-align: center;
+      font-size: 12px;
+      color: hsl(245, 3%, 58%);
+      line-height: 1.8;
+    }
+
+    .footer a {
+      color: hsl(245, 3%, 48%);
+      text-decoration: underline;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid hsl(245, 5%, 89%);
+      margin: 0;
+    }
+
+    /* Mobile */
+    @media only screen and (max-width: 620px) {
+      .content { padding: 24px 20px; }
+      .header { padding: 24px 20px; }
+      .cta-section { padding: 24px 20px; }
+      .footer { padding: 20px; }
+      h2 { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="email-wrapper">
+    <div class="email-container">
+
+      <!-- Header -->
+      <div class="header">
+        <a href="https://littleparrot.app/?ref=apr-update-email" style="text-decoration: none;"><img src="https://littleparrot.app/logo-little-parrot.svg" alt="Little Parrot" /></a>
+        <div class="header-subtitle">APRIL 2026 UPDATE</div>
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+
+        <p class="greeting">Hi {{first_name}},</p>
+
+        <p class="body-text">Here's what we've been building during April. It's been a busy month: a brand new course, more Toolkit content, a smoother experience, and our first community partnership.</p>
+
+        <!-- New course -->
+        <div class="highlight-box">
+          <h2>New course: Start Your Business</h2>
+          <p>Our newest course is live. "Start Your Business: From Vibe Coded Product to Paying Customers" walks you through turning your app into a real business, from finding your first customers to getting paid. It comes with its own <a href="https://littleparrot.app/nest/toolkit?course=Build+Your+Business%3A+From+Vibe+Coded+Product+to+Paying+Customers&ref=apr-update-email&auth=login" style="color: #08080a; font-weight: 700; text-decoration: underline;">Toolkit with 7 items</a> to help you put everything into practice.</p>
+          <p style="text-align: center; margin-top: 8px; margin-bottom: 0;">
+            <a href="https://littleparrot.app/b7455f5a-166c-4614-a4ca-be83369ff7f1/course-overview?ref=apr-update-email" class="cta-button" style="color: #08080a">Explore the course</a>
+          </p>
+        </div>
+
+        <!-- Toolkit -->
+        <div class="section">
+          <div class="section-header">
+            <h2>More Toolkit content</h2>
+          </div>
+          <p>The Toolkit keeps growing:</p>
+          <ul class="feature-list">
+            <li>
+              <strong><a href="https://littleparrot.app/nest/toolkit?course=Launch+And+Grow+Your+Lovable+App&ref=apr-update-email&auth=login" style="color: #08080a; text-decoration: underline;">5 new tools for Launch and Grow Your Lovable App</a></strong>
+              <span>Checklists, templates, and guides to help you take your app from built to live.</span>
+            </li>
+            <li>
+              <strong><a href="https://littleparrot.app/nest/toolkit/17e472a2-d2f4-4c99-8b1f-1a0b540df31a?ref=apr-update-email&auth=login" style="color: #08080a; text-decoration: underline;">Markdown Guide for Structured Prompts</a></strong>
+              <span>Learn how to format your prompts so your AI app builder understands them better.</span>
+            </li>
+            <li>
+              <strong><a href="https://littleparrot.app/nest/toolkit/bcc544b5-26aa-498a-bc46-ff75f76e3a19?ref=apr-update-email&auth=login" style="color: #08080a; text-decoration: underline;">Visual Component Guide</a></strong>
+              <span>See what each UI component looks like, what it's called, and when to use it. Helps you communicate more effectively with your AI app builder.</span>
+            </li>
+          </ul>
+          <p><a href="https://littleparrot.app/nest/toolkit/?ref=apr-update-email&auth=login" style="color: #08080a; font-weight: 700; text-decoration: underline;">Browse the full Toolkit</a></p>
+        </div>
+
+        <!-- Smoother experience -->
+        <div class="section">
+          <div class="section-header">
+            <h2>A smoother experience</h2>
+          </div>
+          <p>We fixed and improved several things that were getting in the way of your learning.</p>
+          <ul class="feature-list">
+            <li>
+              <strong>Better onboarding</strong>
+              <span>If you leave the onboarding partway through, you'll pick up right where you left off when you come back.</span>
+            </li>
+            <li>
+              <strong>Email links take you to the right place</strong>
+              <span>If you click a link in one of our emails while logged out, you'll now arrive at the log-in screen instead of the sign-up page.</span>
+            </li>
+            <li>
+              <strong>AI-powered exercises are back</strong>
+              <span>Our AI credits ran out, which broke exercises where the AI assistant gives feedback or you get to practise prompting. We've topped them up and everything is working again.</span>
+              <span class="thanks">Thanks to Corina for flagging this 🙏</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Better emails -->
+        <div class="section">
+          <div class="section-header">
+            <h2>Better emails from us</h2>
+          </div>
+          <p>We redesigned all our emails. You'll now receive clear confirmations when you subscribe, cancel, or when your subscription renews. No more guessing what happened with your account.</p>
+        </div>
+
+        <!-- Community -->
+        <div class="section">
+          <div class="section-header">
+            <h2>Community highlight: AI Coding Summit</h2>
+          </div>
+          <p>We partnered with GitNation and raffled 3 free tickets to the <a href="https://aicodingsummit.com/?ref=littleparrot.app" style="color: #08080a; font-weight: 700; text-decoration: underline;">AI Coding Summit</a> in London among our paid subscribers. Congratulations to Fanni, Sade, and Corina! This was our first community giveaway, and it won't be the last.</p>
+        </div>
+
+      </div>
+
+      <!-- Sign-off -->
+      <div class="cta-section">
+        <p>Thank you for being part of Little Parrot. We're building this for you, and your feedback shapes what we work on next. 💛</p>
+        <div class="signoff">Kinga, Tamas &amp; Little Parrot</div>
+        <div class="brand">Little Parrot by productkind</div>
+      </div>
+
+      <!-- Footer -->
+      <hr class="divider">
+      <div class="footer">
+        <p style="margin-bottom: 12px;">
+          <a href="https://www.linkedin.com/company/productkind/" style="text-decoration: none; margin: 0 8px;">
+            <img src="https://littleparrot.app/icon-linkedin.png" width="24" height="24" alt="LinkedIn" style="vertical-align: middle; border: 0;" />
+          </a>
+          <a href="https://www.instagram.com/by_productkind/" style="text-decoration: none; margin: 0 8px;">
+            <img src="https://littleparrot.app/icon-instagram.png" width="24" height="24" alt="Instagram" style="vertical-align: middle; border: 0;" />
+          </a>
+        </p>
+        <p>You're receiving this because you have an account on Little Parrot.<br>
+        <a href="https://littleparrot.app/?ref=apr-update-email">littleparrot.app</a><br><br>
+        <a href="__unsubscribe_url__">unsubscribe</a></p>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
