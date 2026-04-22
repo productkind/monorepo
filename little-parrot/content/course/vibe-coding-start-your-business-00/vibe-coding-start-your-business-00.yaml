@@ -2,7 +2,7 @@ course:
   id: b7455f5a-166c-4614-a4ca-be83369ff7f1
   note: ''
   cover: /courses/vibe-coding-start-your-business-00/cover.gif
-  title: 'Build a Business: From Vibe Coded Product to Paying Users'
+  title: 'Build Your Business: From Vibe Coded Product to Paying Customers'
   learningOutcomes:
     - Craft a clear value proposition that makes people say "I need that"
     - Choose a domain and set up a professional online presence on a small budget
@@ -202,7 +202,7 @@ course:
           content:
             nextModule: "**Next challenge:** You have the words. Now let's build everything your product needs before its first visitor arrives: a professional domain, email capture, analytics, and your first real traffic. Seven more challenges, each one bringing you closer to your first paying user."
             description: You now have a clear value proposition that makes people lean in.
-            subDescription: "Keep this sentence close. It will come in handy every time you explain what you do to someone new, whether at a dinner party, in a community, or in a casual conversation. You never know when the person you're talking to is your next user."
+            subDescription: "Keep this sentence close. It will come in handy every time you explain what you do to someone new, whether at a dinner party, in a community, or in a casual conversation. You never know when the person you're talking to is your next user. **Toolkit:** The [Value Proposition Formula](https://littleparrot.app/nest/toolkit/800d1e61-6372-41be-9892-f41b99be7acc) has the formula, Dalmie's examples, and a list of everywhere you'll use it."
 
     - title: Choose Your Domain
       isFree: false
@@ -270,7 +270,7 @@ course:
 
               **Google Workspace** lets you create email addresses on your own domain. It costs around $7/month, which is worth it when you start emailing customers, responding to feedback, or reaching out to communities.
 
-              The technical setup (connecting your domain to Google Workspace, configuring email settings) can feel intimidating. We've included a **step-by-step setup guide in the toolkit** for this course that walks you through every click.
+              The technical setup (connecting your domain to Google Workspace, configuring email settings) can feel intimidating. We've included the [Domain and Email Setup Guide](https://littleparrot.app/nest/toolkit/1e786fc7-42d8-4713-a094-f0de2315e168) in the Toolkit that walks you through every click.
           subtitle: Trust starts in the inbox
         - type: quiz-question
           title: "Quiz: Choosing your email address"
@@ -322,7 +322,7 @@ course:
           content:
             nextModule: "**Next challenge:** Before you send anyone to your new domain, let's make sure you can capture every visitor."
             description: You've chosen a domain and set up a professional presence.
-            subDescription: "Your domain, email, and Google Business Profile are the foundation of your online presence. With these in place, everything you share from now on looks professional. Check the toolkit for the technical setup guide if you haven't configured your email yet."
+            subDescription: "Your domain, email, and Google Business Profile are the foundation of your online presence. With these in place, everything you share from now on looks professional. Use the [Domain and Email Setup Guide](https://littleparrot.app/nest/toolkit/1e786fc7-42d8-4713-a094-f0de2315e168) in the Toolkit if you haven't configured your email yet."
 
     - title: Build Your Audience Before You Launch
       isFree: false
@@ -452,9 +452,9 @@ course:
       isFree: false
       skills:
         - Analytics
-        - Posthog
+        - PostHog
         - Data-Informed Decisions
-      description: Install Posthog so you can learn from every visitor from day one.
+      description: Install PostHog so you can learn from every visitor from day one.
       completionTime: '12:00'
       steps:
         - type: text
@@ -479,22 +479,22 @@ course:
             correctAnswer: 2
             explanation: "Once you post, visitors start arriving. If analytics isn't set up yet, you won't know which pages they visited, where they got stuck, or which features they tried. That data is gone forever. It takes less than an hour to set up, so it's worth doing before you send anyone to your product."
         - type: text
-          title: What is Posthog?
+          title: What is PostHog?
           content:
             body: |-
-              **[Posthog](https://posthog.com)** is an analytics tool that shows you what visitors do inside your app. It goes beyond counting page views: you can see which pages people visit, which buttons they click, where they get stuck, and where they leave.
+              **[PostHog](https://posthog.com)** is an analytics tool that shows you what visitors do inside your app. It goes beyond counting page views: you can see which pages people visit, which buttons they click, where they get stuck, and where they leave.
 
               It's free for up to 1 million events per month, which is more than enough for a product that's getting started.
 
-              Posthog also has a **session replay** feature that records how people navigate through your product. You can watch a real visitor's session like a video: see where they clicked, where they hesitated, and where they gave up. This is incredibly useful for spotting confusing parts of your product that you'd never notice yourself.
+              PostHog also has a **session replay** feature that records how people navigate through your product. You can watch a real visitor's session like a video: see where they clicked, where they hesitated, and where they gave up. This is incredibly useful for spotting confusing parts of your product that you'd never notice yourself.
           subtitle: Your window into user behaviour
         - type: text
-          title: What Posthog tracks automatically
+          title: What PostHog tracks automatically
           content:
             body: |-
-              Here's good news: once Posthog is installed, it automatically tracks a lot of useful things without any extra setup. This is called **autocapture**.
+              Here's good news: once PostHog is installed, it automatically tracks a lot of useful things without any extra setup. This is called **autocapture**.
 
-              Out of the box, Posthog records:
+              Out of the box, PostHog records:
               - **Pageviews:** which pages people open
               - **Page leaves:** when they leave a page
               - **Clicks:** which buttons and links they interact with
@@ -520,7 +520,7 @@ course:
         - type: quiz-question
           title: "Quiz: Autocapture vs custom events"
           content:
-            question: "You check your Posthog dashboard and see 'clicked button with text Submit' happened 45 times last week. But your product has three different submit buttons (sign-up, feedback, and contact form). You can't tell which one was clicked. How do you prevent this problem going forward?"
+            question: "You check your PostHog dashboard and see 'clicked button with text Submit' happened 45 times last week. But your product has three different submit buttons (sign-up, feedback, and contact form). You can't tell which one was clicked. How do you prevent this problem going forward?"
             options:
               - Filter by page URL to separate the clicks
               - Rename all three buttons so each has unique text
@@ -529,45 +529,30 @@ course:
             correctAnswer: 2
             explanation: "Custom events solve this going forward. If you set up 'signup-form-submitted', 'feedback-submitted', and 'contact-form-submitted' as separate custom events, each action will be clearly labelled from now on. The past data is already recorded generically and can't be relabelled, which is why it's worth setting up custom events early."
         - type: text
-          title: The prompt to add Posthog to your app
+          title: The prompt to add PostHog to your app
           content:
             body: |-
-              You'll use your AI app builder to add Posthog. Here's a concrete prompt you can copy and adapt:
+              You'll use your AI app builder to add PostHog. We've prepared two ready-to-use prompts in the Toolkit that you can copy and paste directly into your AI app builder.
 
-              ```
+              Before you use them, you'll need your **project token**. Sign up at [posthog.com](https://posthog.com/) (free), create a project, and you'll find your project token in the project settings. It starts with `phc_`.
 
-              *Add Posthog analytics to my app using the posthog-js library. Here's what I need:*
-
-              *1. Install the posthog-js package*
-              *2. Initialise Posthog on app startup so it runs on every page. Use my project token: [YOUR_KEY_HERE] and the host: https://us.i.posthog.com (or https://eu.i.posthog.com if you're in Europe). Enable debug mode during development so I can verify events are firing.*
-              *3. Enable session replay so I can watch how users navigate my app.*
-              *4. Track these custom events using posthog.capture() with these exact names:*
-              *- "signup-form-submitted" when someone submits the sign-up form*
-              *- "feedback-button-clicked" when someone clicks the feedback button*
-              *- [add your own events here, using kebab-case "object-verb" naming]*
-              *5. Make sure Posthog initialises on every page, not only the homepage.*
-
-              ```
-
-              **Where to find your project token:** Sign up at [posthog.com](https://posthog.com/) (free), create a project, and you'll find your project token in the project settings.
-
-              **Replace the example events** with the actions that you want to track. Use the "object-verb" naming format to keep things consistent.
+              **Toolkit:** The [PostHog Analytics Setup Guide](https://littleparrot.app/nest/toolkit/db3ed06f-0594-41b3-8f9f-82051865627c) has the full prompts with placeholders to fill in, plus instructions for verifying it works.
           subtitle: Copy, adapt, and paste into your AI app builder
         - type: text
           title: How to verify it works
           content:
             body: |-
-              After your AI app builder has added Posthog, you need to check that it's actually working. Here's how:
+              After your AI app builder has added PostHog, you need to check that it's actually working. Here's how:
 
               1. Open your app in a browser
               2. Click around: visit a few pages, click some buttons, submit a form
-              3. Go to your [Posthog dashboard](http://app.posthog.com/)
+              3. Go to your [PostHog dashboard](http://app.posthog.com/)
               4. Look for your events in the **Activity** menu
 
               **If nothing shows up**, the most common causes are:
               - The project token is wrong or missing
-              - Posthog was only initialised on one page, not all of them
-              - An ad blocker in your browser is blocking Posthog
+              - PostHog was only initialised on one page, not all of them
+              - An ad blocker in your browser is blocking PostHog
 
               Try in an incognito/private browser window with ad blockers disabled.
           subtitle: Check the dashboard, not the code
@@ -575,7 +560,7 @@ course:
           title: Session replay
           content:
             body: |-
-              Once Posthog is running, open the **Session replay** menu. Here you can watch recordings of real visitor sessions.
+              Once PostHog is running, open the **Session replay** menu. Here you can watch recordings of real visitor sessions.
 
               **You'll see exactly what your visitors saw:** which pages they opened, where they clicked, where they scrolled, where they paused, and where they left. It's like looking over someone's shoulder as they use your product.
 
@@ -602,7 +587,7 @@ course:
           title: What to look at each week
           content:
             body: |-
-              Once Posthog is running and you have some visitors, you don't need to analyse everything. At this stage, you're answering **one question:**
+              Once PostHog is running and you have some visitors, you don't need to analyse everything. At this stage, you're answering **one question:**
 
               **"Are people using the thing I built, and which parts?"**
 
@@ -615,7 +600,7 @@ course:
               Don't get lost in dashboards. These four checks are enough for now.
           subtitle: Four things, once a week
         - type: reflection
-          title: Plan your Posthog setup
+          title: Plan your PostHog setup
           content:
             description: |-
               What are the three most important actions a visitor can take in your product? These will become your custom events. Use kebab-case naming (e.g., "book-club-created").
@@ -631,7 +616,7 @@ course:
           content:
             nextModule: "**Next challenge:** The preparation is done. Now it's time for the exciting part – getting real people to your product and watching what happens."
             description: You've set up analytics and session replay so every visitor teaches you something.
-            subDescription: "You now have Posthog tracking every page visit, every click, and every custom event you defined. Session replay lets you watch exactly how people experience your product. Check your dashboard once a week and let the data guide your decisions."
+            subDescription: "You now have PostHog tracking every page visit, every click, and every custom event you defined. Session replay lets you watch exactly how people experience your product. Check your dashboard once a week and let the data guide your decisions."
 
     - title: Get Your First Visitors
       isFree: false
@@ -665,7 +650,7 @@ course:
 
               **[Product Hunt](https://producthunt.com)** – a larger platform where new products are "launched" and voted on by the community. More competitive, but a well-timed launch can bring a significant spike of visitors. Save this for when you feel confident about your product.
 
-              **Startup directories** – there are dozens of smaller directories that list new products. We've put together a [Startup Directory List](https://littleparrot.app/nest/toolkit/TODO) in the Toolkit with links to directories you can submit to.
+              **Startup directories** – there are dozens of smaller directories that list new products. We've put together a [Startup Directory List](https://littleparrot.app/nest/toolkit/c2b8b87a-3815-4267-8cb4-227b05397fd6) in the Toolkit with links to directories you can submit to.
 
               You don't need to be on all of them. Pick a few that fit your product and your audience.
           subtitle: Directories where people discover new products
@@ -758,7 +743,7 @@ course:
           title: Traffic is a conversation, not a number
           content:
             body: |-
-              You have visitors. Your Posthog dashboard shows real sessions, real pageviews, and real events. Your wait list has email addresses from people you've never met.
+              You have visitors. Your PostHog dashboard shows real sessions, real pageviews, and real events. Your wait list has email addresses from people you've never met.
 
               But numbers alone don't tell you **why**. Why did someone sign up? Why did someone leave after 30 seconds? Why did someone create an account but never come back?
 
@@ -812,7 +797,7 @@ course:
         - type: quiz-question
           title: "Quiz: Using feedback to improve"
           content:
-            question: "You email three users who signed up last week. Two of them reply: 'I created an account but couldn't figure out what to do next.' You look at your Posthog data that shows 70% of new users leave within 30 seconds of signing up. What are the two best next steps?"
+            question: "You email three users who signed up last week. Two of them reply: 'I created an account but couldn't figure out what to do next.' You look at your PostHog data that shows 70% of new users leave within 30 seconds of signing up. What are the two best next steps?"
             options:
               - Add a feedback form to your product so future users can share what's confusing
               - Send more traffic to the sign-up page to get more data
@@ -864,7 +849,7 @@ course:
 
               But pricing is just like everything else in product development: **you experiment with it.** You pick a starting point, see how people respond, and adjust. Your first price is a hypothesis, not a commitment. You'll change it as you learn more about your users and what they're willing to pay.
 
-              The good news? You're not guessing from scratch. From your early test users, you have **real data** from Posthog showing which features they use most, and **real feedback** telling you what they value. That's more than most people have when they set their first price.
+              The good news? You're not guessing from scratch. From your early test users, you have **real data** from PostHog showing which features they use most, and **real feedback** telling you what they value. That's more than most people have when they set their first price.
           subtitle: You have the data. Now use it.
         - type: text
           title: "How will you charge?"
@@ -946,36 +931,40 @@ course:
 
               **Anchoring:** A higher-priced option makes a lower-priced option feel more reasonable by comparison. If you show a $15/month Pro plan next to a $9/month Starter plan, the $9 feels like a sensible entry point. If you only show the $9 plan on its own, people have nothing to compare it to and might still hesitate.
 
-              **Decoy pricing:** Offer three tiers where the middle one is the best value. People tend to avoid the cheapest (feels too basic) and the most expensive (feels excessive) and pick the middle.
-
-              **Annual discount:** Offer a cheaper annual plan next to the monthly price. If your product costs $10/month, offer the annual plan at $96/year ($8/month). The monthly price makes the annual deal look like a saving, and you get a full year of commitment upfront.
+              **Decoy pricing:** Add an option you don't expect anyone to buy, because its job is to make another option look better. For example: Basic at $9, Premium at $14 (with fewer features than Pro), and Pro at $15. Nobody picks Premium, but next to it, Pro looks like an obvious deal for just $1 more. The decoy shifts what people are willing to pay by changing what they compare against.
           subtitle: How people make decisions about money
         - type: text
           title: More pricing psychology
           content:
             body: |-
-              Two more principles worth knowing:
+              One more principle that's especially powerful for digital products:
 
-              **Social proof:** Label one of your plans as "Most popular." People are drawn to what others choose, especially when they're unsure. Making the recommended plan visually stand out on your pricing page nudges undecided visitors toward it.
+              **Endowment effect:** People value something more once they feel it's theirs. This happens even when the ownership is temporary or just perceived.
 
-              **Loss aversion:** People feel the pain of losing something about twice as strongly as the pleasure of gaining it. This is why free trials and reverse trials convert well: once someone has used a feature for 14 days, losing it feels painful. You can also use this by offering a money-back guarantee ("Try it for 30 days, full refund if it's not for you"), which removes the fear of loss from the buying decision.
-          subtitle: Social proof and loss aversion
+              For digital products, you can use this in three ways:
+
+              **Free trials.** Once someone has used your product for a week, it feels like *theirs*. Their data is in it, their settings are configured, their workflow depends on it. Asking them to give that up is much harder than asking them to pay.
+
+              **Customisation.** Let users personalise their experience early: choose a theme, set up their profile, name their workspace. The more they make it their own, the harder it is to walk away.
+
+              **Bundling.** Show your paid plan as a package they already have, not features they're missing. "Your plan includes: unlimited projects, priority support, and advanced analytics" feels like something they'd lose, rather than something they need to buy.
+          subtitle: The endowment effect
         - type: quiz-question
           title: "Quiz: Pricing psychology in practice"
           content:
-            question: "Your pricing page shows one plan at $12/month. Visitors view the page but few sign up. Which change is most likely to increase conversions?"
+            question: "Most of your trial users sign up, poke around for a few minutes, and never come back. Very few convert to paid. Which changes would most likely improve conversions?"
             options:
-              - Add a $22/month Pro plan next to it, and label the $12 plan "Most popular"
-              - Lower the price to $8/month
-              - Remove the price and let people request a quote
-              - Add a 50% discount banner at the top of the page
-            correctAnswer: 0
-            explanation: "This combines two techniques: anchoring (the $22 plan makes $12 feel reasonable by comparison) and social proof (the 'Most popular' label nudges undecided visitors). Lowering the price might work but loses you revenue. Removing the price adds friction. A permanent discount banner undermines trust."
+              - Add a third pricing tier as a decoy to make the main plan look better
+              - Shorten the trial so users engage more intensely in less time
+              - Guide new users to personalise their setup and import their data
+              - Lower the price so it feels less risky
+            correctAnswer: [1, 2]
+            explanation: "The core problem is that users never develop a sense of ownership. Both correct options address this. Shortening the trial creates urgency that pushes users to engage sooner rather than putting it off. Guiding them to personalise and import their data creates investment, so walking away feels like a loss. A decoy helps with pricing page decisions, but it won't fix users who never engage. Lowering the price doesn't help if people aren't using the product."
         - type: text
           title: Let your data inform your pricing
           content:
             body: |-
-              Look at your Posthog data and feedback together:
+              Look at your PostHog data and feedback together:
 
               - **Which features do people use most?** These are the features worth paying for. If you're using a *freemium model*, these belong in the paid tier. If you're using a *trial model*, these are what make people want to stay.
               - **Where do people drop off?** This tells you where people aren't finding enough value. Think about what you can do to help them get to the valuable parts of your product sooner.
@@ -993,7 +982,7 @@ course:
 
               **How to let people try?** Reverse trial. She wants new users to experience the full voting feature and reading deadlines before deciding. After 14 days, they drop to a free tier with basic features.
 
-              **How much?** She asked Sarah what similar tools cost. Most were free or very cheap. She looked at her Posthog data: the voting feature and reading deadlines were what people valued most. She set her paid plan at **$5/month**, because her audience (casual book club organisers) won't pay much for a tool like this. She picked $5 deliberately, not $4.99. Her audience values simplicity and honesty over corporate pricing tricks. She can always increase it later as she adds more features.
+              **How much?** She asked Sarah what similar tools cost. Most were free or very cheap. She looked at her PostHog data: the voting feature and reading deadlines were what people valued most. She set her paid plan at **$5/month**, because her audience (casual book club organisers) won't pay much for a tool like this. She picked $5 deliberately, not $4.99. Her audience values simplicity and honesty over corporate pricing tricks. She can always increase it later as she adds more features.
 
               Notice that she didn't guess. She used her data, talked to her target user, and checked what competitors charge. That's the process you can follow too.
           subtitle: The thinking process you can follow
@@ -1008,7 +997,7 @@ course:
           content:
             nextModule: "**Next challenge:** You have a pricing model. But how many paying users do you actually need to cover your costs? The answer might surprise you. Let's find out."
             description: You can choose between subscription and one-time payment, pick the right trial model for your product, and use psychology to design a pricing page that converts.
-            subDescription: "You've learned anchoring, decoy pricing, annual discounts, social proof, and loss aversion. These techniques work whether you're charging $5 or $50. Apply them when you build your pricing page."
+            subDescription: "You've learned anchoring, decoy pricing, annual discounts, social proof, and loss aversion. These techniques work whether you're charging $5 or $50. **Toolkit:** The [Pricing Psychology Cheat Sheet](https://littleparrot.app/nest/toolkit/bedc9e49-e338-4537-a856-b18a2a888a6d) has all five techniques with examples and a pricing page checklist."
 
     - title: Build a Sustainable Business
       isFree: false
@@ -1050,6 +1039,8 @@ course:
               **Price per user** is what you charge per month.
 
               Your break-even point tells you: **how many paying users do I need each month to stop losing money?** Everything above that number is profit.
+
+              **Toolkit:** The [Business Numbers Template](https://littleparrot.app/nest/toolkit/764681e3-3475-41e6-99a4-47fff726ba1e) is a Google Sheet with two tabs: one to calculate your break-even point, and one to track your monthly cashflow.
           subtitle: The one number that tells you if your business is viable
         - type: text
           title: "Dalmie's break-even calculation"
@@ -1167,7 +1158,7 @@ course:
 
               The goal for now is to **create your Stripe account** so it's ready when you need it.
 
-              **Bonus:** once you've signed up, check **Settings > Perks** in your Stripe dashboard. Stripe partners with other tools to offer discounts for startups, including Posthog, which you set up in Challenge 4.
+              **Bonus:** once you've signed up, check **Settings > Perks** in your Stripe dashboard. Stripe partners with other tools to offer discounts for startups, including PostHog, which you set up in Challenge 4.
           subtitle: Get your payment account ready
         - type: text
           title: Legal basics (keep it simple)
@@ -1186,7 +1177,7 @@ course:
 
               An accountant can tell you exactly what structure makes sense for your situation and location. A one-hour consultation is a small investment that can save you from expensive mistakes.
 
-              **Toolkit:** The [Accountant Call Preparation Template](https://littleparrot.app/nest/toolkit/TODO) has a list of questions to bring to your first accountant call, covering legal structure, taxes, deductible expenses, and record-keeping. Fill in your details before the call so you make the most of the time.
+              **Toolkit:** The [Accountant Call Preparation Template](https://littleparrot.app/nest/toolkit/1a82d9a5-9987-4f61-aa29-99574b40836a) has a list of questions to bring to your first accountant call, covering legal structure, taxes, deductible expenses, and record-keeping. Fill in your details before the call so you make the most of the time.
           subtitle: Don't register a company until you need one
         - type: quiz-question
           title: "Quiz: Legal structure"
@@ -1228,3 +1219,7 @@ course:
               Products are never done. But you now have the foundation, the numbers, and the mindset to grow this into something real.
 
               Good luck, and happy building! 🤗
+  titleSplit:
+    - 'Build Your Business:'
+    - From Vibe Coded Product to Paying Customers
+  description: You built a product. This course helps you turn it into a business with paying customers.

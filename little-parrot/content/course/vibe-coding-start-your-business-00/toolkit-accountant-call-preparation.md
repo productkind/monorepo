@@ -3,15 +3,16 @@ challenge: "8 - Build a Sustainable Business"
 ---
 ## Accountant Call Preparation Template
 
-Use this template to prepare for your first conversation with an accountant. Fill in your details before the call so you can make the most of the time, and bring the questions below so you walk away with clear answers, not more confusion.
+Use this template to prepare for your first conversation with an accountant. Fill in your details before the call so you can make the most of the time, and bring the questions below so you walk away with clear answers.
 
 ### Your details (fill in before the call)
 
 Write these down so you can share them with the accountant at the start of the conversation. It helps them give you specific advice instead of generic answers.
 
-- **Country / region:** [Where you live and where your customers are]
+- **Your country / region:** [Where you live]
 - **What you built:** [Brief description of your digital product]
 - **Current stage:** [e.g., "I have 5 paying users" or "I haven't launched yet but I'm about to"]
+- **Target customers:** [Where your customers are located, e.g., US, EU, Southeast Asia]
 - **Expected monthly revenue:** [Your best estimate, even if it's small, e.g., "$50/month"]
 - **Monthly costs:** [e.g., "$8/month for domain and email"]
 - **Day job:** [Do you have one? Are you employed or freelancing?]
@@ -22,8 +23,8 @@ Write these down so you can share them with the accountant at the start of the c
 #### Getting started legally
 
 - What's the simplest way to operate legally in my country? Do I need to register anything, or can I start earning without registration?
-- At what point should I register a company? Is there an income threshold that triggers this?
 - What's the difference between operating as a sole trader and setting up a company? What are the costs of each?
+- At what point should I register a company? Is there an income threshold that triggers this?
 - Are there any registrations or notifications I need to make before I start accepting payments?
 
 #### Tax obligations
@@ -39,6 +40,7 @@ Write these down so you can share them with the accountant at the start of the c
 
 - What business expenses can I deduct? (Domain, hosting, software tools, internet, home office?)
 - Do I need receipts for everything? How should I store them?
+- What needs to be on the receipts to get them accepted (e.g., my tax number)?
 - Can I deduct expenses I paid before I officially started the business?
 
 #### Record-keeping
@@ -56,7 +58,7 @@ Write these down so you can share them with the accountant at the start of the c
 
 ### During the call
 
-Take notes next to each question. Write down the specific answers for your country and situation. The accountant's answers will replace the generic advice in the course with advice that's tailored to you.
+Take notes next to each question. Write down the specific answers for your country and situation. The accountant will give you tailored advice to your specific situation.
 
 ### After the call
 

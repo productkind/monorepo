@@ -58,7 +58,11 @@ Each toolkit item belongs to a specific challenge. Choose the challenge where th
 
 **Interactive examples must match their descriptions.** If the description says "switching between grid view and list view" but the code shows bold/italic/underline toggles, one of them needs to change. Always check for this mismatch.
 
-**Fact-check any claims about external tools or processes.** If you describe how Google Search Console, Stripe, or any third-party service works, verify the steps are accurate. Don't guess at UI locations or workflows.
+**Fact-check any claims about external tools or processes.** If you describe how Google Search Console, Stripe, or any third-party service works, verify the steps are accurate. Don't guess at UI locations or workflows. Toolkit items are reference material learners follow step by step, so incorrect instructions are worse here than anywhere else. Use WebSearch or WebFetch to verify before writing.
+
+**Categorise lists based on the learner's situation, not the content's nature.** When a toolkit item contains a list of options (e.g., directories, tools, resources), organise by the learner's stage or context ("For early-stage and bootstrapped products") rather than by what the content is ("AI directories", "Launch platforms"). The learner's situation should drive the structure, with the most relevant category first.
+
+**Combine related toolkit items that serve the same moment.** If two toolkit items would be opened at the same time (e.g., a break-even calculator and a cashflow tracker both serve "I'm looking at my business numbers"), combine them into one item with multiple sections or tabs. Fewer, more complete toolkit items are better than many fragmented ones.
 
 ### Avoiding duplication
 
@@ -78,11 +82,9 @@ After creating toolkit items, add references to them at the appropriate points i
 - **Mid-challenge text steps** work when the toolkit item is directly relevant to what the learner is about to do (e.g., linking to a checklist right before they click Publish).
 - **Course-end subDescription** works for toolkit items that span the full course (e.g., a vocabulary cheat sheet).
 
-Use this format in the YAML:
+**Every toolkit mention must be a clickable link.** Don't write "check the toolkit for the setup guide" without linking to the specific item. The learner shouldn't have to go find it.
 
-```
-**Toolkit:** The [Toolkit Item Name](URL) has [brief description of what it contains and how it helps].
-```
+**Weave toolkit references into the text naturally.** Don't use a "**Toolkit:**" label. Instead, write it as part of the sentence: "The [Domain and Email Setup Guide](URL) in the Toolkit walks you through every click." This reads better and doesn't break the flow of the content.
 
 ### File naming convention
 

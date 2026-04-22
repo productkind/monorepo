@@ -1,6 +1,6 @@
-# Course Outline: Build a Business
+# Course Outline: Build Your Business
 
-**Full title:** Build a Business: From Vibe Coded Product to Paying Users
+**Full title:** Build Your Business: From Vibe Coded Product to Paying Customers
 
 ## Overview
 
@@ -50,16 +50,16 @@ Set up the net before you start fishing. Prepare to capture every visitor before
 - Exercise: Add an email capture form (wait list or sign-up) to your product's landing page. Then create a simple lead magnet that your target audience would find useful and offer it as a reason to sign up.
 
 ### 4. Set Up Analytics Before Your First Visitors Arrive
-Install Posthog so you can learn from every visitor from day one.
+Install PostHog so you can learn from every visitor from day one.
 
 - Why this comes before driving traffic: if you set up analytics after you've already sent people to your product, you've lost data from your first visitors. Those are the most valuable ones to learn from. Set up tracking now so that when traffic arrives, you see everything.
-- What is Posthog? A free analytics tool that shows you what visitors do inside your app
+- What is PostHog? A free analytics tool that shows you what visitors do inside your app
 - Key concepts explained simply: sessions (one visit), pageviews (each page someone opens), custom events (specific actions like clicking a button or submitting a form)
-- How to prompt your AI app builder to add Posthog correctly. Common mistakes: the tracking code gets added but doesn't fire, or events are named inconsistently. Include a prompt template that avoids these issues.
-- Prompt template for adding Posthog: walk the learner through what to include in their prompt (where to place the script, how to name events clearly, how to verify it works)
+- How to prompt your AI app builder to add PostHog correctly. Common mistakes: the tracking code gets added but doesn't fire, or events are named inconsistently. Include a prompt template that avoids these issues.
+- Prompt template for adding PostHog: walk the learner through what to include in their prompt (where to place the script, how to name events clearly, how to verify it works)
 - What to track: which pages get visited, where people drop off, which features get used
-- Example: Dalmie adds Posthog to the Book Club Organiser using the prompt template. She verifies it's working by visiting her own app and checking that the session appears in the Posthog dashboard. She's now ready to see what real visitors do.
-- Exercise: Add Posthog to your product using the prompt template. Verify it works by visiting your own app and confirming the session shows up in your dashboard.
+- Example: Dalmie adds PostHog to the Book Club Organiser using the prompt template. She verifies it's working by visiting her own app and checking that the session appears in the PostHog dashboard. She's now ready to see what real visitors do.
+- Exercise: Add PostHog to your product using the prompt template. Verify it works by visiting your own app and confirming the session shows up in your dashboard.
 
 ### 5. Get Your First Visitors
 Everything is in place. Now drive real people to your product.
@@ -70,7 +70,7 @@ Everything is in place. Now drive real people to your product.
 - How to share your product in online communities without being spammy: lead with the problem you solve, not a link. Contribute to the community first. Share your product when it's relevant to a conversation, not as a cold announcement. Include a template for a community post that feels helpful rather than promotional.
 - Why talking to people one-on-one is still your best marketing at this stage
 - Mention the "Launch and Grow Your Lovable App" course for deeper publishing and growth strategies
-- Example: Dalmie writes a community post in a book lovers' forum: "We run a monthly book club and used to lose track of suggestions in WhatsApp. I built a free tool to collect and vote on book picks. Would love feedback from other book club organisers." She gets 20 visitors in the first week. Her BetaList listing uses her value proposition from Challenge 1 and a screenshot of the voting feature. Her wait list captures 12 email addresses, and Posthog shows her exactly which pages people visit and where they drop off.
+- Example: Dalmie writes a community post in a book lovers' forum: "We run a monthly book club and used to lose track of suggestions in WhatsApp. I built a free tool to collect and vote on book picks. Would love feedback from other book club organisers." She gets 20 visitors in the first week. Her BetaList listing uses her value proposition from Challenge 1 and a screenshot of the voting feature. Her wait list captures 12 email addresses, and PostHog shows her exactly which pages people visit and where they drop off.
 - Exercise: Write a directory submission and a community post for your product using the templates. Submit to at least one directory and share in one community where your users spend time.
 
 ### 6. Listen to Your First Users
@@ -78,9 +78,9 @@ Turn early visitors into a conversation that improves your product.
 
 - Add a feedback or "report a bug" feature into your product so visitors can tell you what's broken or confusing. This turns one-way traffic into a conversation.
 - How to ask for feedback: a short message or email is enough. "What did you use it for? What was confusing?" Ask after someone has used your product at least once or twice, not on their first visit.
-- Combine what users tell you with what Posthog shows you: feedback tells you why something is confusing, analytics tells you where people get stuck. Together, they give you the full picture.
+- Combine what users tell you with what PostHog shows you: feedback tells you why something is confusing, analytics tells you where people get stuck. Together, they give you the full picture.
 - Collecting testimonials: if someone shares something positive, ask if you can use it on your landing page. Don't generate fake testimonials with AI. One honest sentence from a real person is worth more than ten polished fake ones.
-- Example: Dalmie adds a small "Send feedback" button to the Book Club Organiser. She also emails five book club organisers who signed up through her wait list. Three reply with bug reports and suggestions. Her Posthog data confirms what they're saying: most visitors create a book club but never add a second book suggestion. She realises the "add a book" flow is confusing and fixes it with one prompt. One user writes: "We finally stopped arguing in the group chat about what to read next." Dalmie adds this to her landing page with permission.
+- Example: Dalmie adds a small "Send feedback" button to the Book Club Organiser. She also emails five book club organisers who signed up through her wait list. Three reply with bug reports and suggestions. Her PostHog data confirms what they're saying: most visitors create a book club but never add a second book suggestion. She realises the "add a book" flow is confusing and fixes it with one prompt. One user writes: "We finally stopped arguing in the group chat about what to read next." Dalmie adds this to her landing page with permission.
 - Exercise: Add a feedback feature to your product. Reach out to three people who have used it and ask what worked and what was confusing. If anyone shares something positive, ask to use it as a testimonial.
 
 ### 7. Decide What to Charge
@@ -88,8 +88,8 @@ Choose a pricing model that fits your product and your audience.
 
 - Pricing strategies for a first product: free vs freemium vs paid
 - Pricing psychology basics (decoy, anchoring, bundle pricing, etc.): how to pick a number that feels right
-- How to use what you learned from Posthog and user feedback to inform your pricing: which features do people use most? That's what they'd pay for.
-- Example: Dalmie looks at her Posthog data and feedback. The voting feature and reading deadlines are what people use most. She chooses a freemium model: free for book clubs with up to 3 members, $5/month for unlimited members and features like reading stats.
+- How to use what you learned from PostHog and user feedback to inform your pricing: which features do people use most? That's what they'd pay for.
+- Example: Dalmie looks at her PostHog data and feedback. The voting feature and reading deadlines are what people use most. She chooses a freemium model: free for book clubs with up to 3 members, $5/month for unlimited members and features like reading stats.
 - Exercise: Write down your pricing model and the reasoning behind it. Connect it to what you've learned from your analytics and user feedback.
 
 ### 8. Get Ready to Accept Payment
@@ -138,7 +138,7 @@ Each challenge builds on the previous one. Dalmie's Book Club Organiser serves a
 - Value proposition and message testing
 - Domain selection and professional email
 - Audience building (email capture, wait lists, lead magnets)
-- Product analytics with Posthog
+- Product analytics with PostHog
 - Product distribution and traffic generation (directories, community posts)
 - Collecting user feedback and real testimonials
 - Pricing strategy and psychology (free vs freemium vs paid, anchoring, decoy pricing)

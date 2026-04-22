@@ -32,6 +32,18 @@ Use these links when referencing toolkit items in course content.
 | User Feedback Question Bank | `https://littleparrot.app/nest/toolkit/ab78ba0e-37bb-4c6c-b21b-a7466df4b19d` |
 | Production-Ready Launch Checklist | `https://littleparrot.app/nest/toolkit/5066c12c-66ad-4844-a768-1bdae81c86ec` |
 
+## Build Your Business: From Vibe Coded Product to Paying Customers (`vibe-coding-start-your-business-00`)
+
+| Toolkit Item | URL |
+|-------------|-----|
+| Value Proposition Formula | `https://littleparrot.app/nest/toolkit/800d1e61-6372-41be-9892-f41b99be7acc` |
+| Domain and Email Setup Guide | `https://littleparrot.app/nest/toolkit/1e786fc7-42d8-4713-a094-f0de2315e168` |
+| PostHog Analytics Setup Guide | `https://littleparrot.app/nest/toolkit/db3ed06f-0594-41b3-8f9f-82051865627c` |
+| Startup Directory List | `https://littleparrot.app/nest/toolkit/c2b8b87a-3815-4267-8cb4-227b05397fd6` |
+| Pricing Psychology Cheat Sheet | `https://littleparrot.app/nest/toolkit/bedc9e49-e338-4537-a856-b18a2a888a6d` |
+| Business Numbers Template | `https://littleparrot.app/nest/toolkit/764681e3-3475-41e6-99a4-47fff726ba1e` |
+| Accountant Call Preparation Template | `https://littleparrot.app/nest/toolkit/1a82d9a5-9987-4f61-aa29-99574b40836a` |
+
 ## Notes
 
 - URL pattern: `https://littleparrot.app/nest/toolkit/{toolkit-id}`

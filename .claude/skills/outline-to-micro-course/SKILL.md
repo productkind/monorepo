@@ -21,7 +21,7 @@ description: Use this checklist when generating micro-course content from an out
 - **Address the learner's biggest fear first.** Before teaching anything, identify the misconception or fear that's stopping the learner from starting and address it head-on. ("You don't need to know how to code", "You don't need a company or investors", "You don't need to be creative.") Clear the blocker, then teach. This should be the first text step after the comics.
 - **Don't open with overwhelming text blocks.** The learner's first reading experience after the comics sets their expectations for the whole course. If the first text step is long, split it into two shorter steps. Short, focused steps feel approachable. A wall of text feels like homework.
 - **Show where reusable tools will come back.** When a challenge teaches a formula, template, or technique that the learner will reuse in later challenges, add a step listing where it will show up. This motivates the learner to take it seriously and connects the dots across the course. Don't leave the learner wondering "why does this matter?"
-- **Verify tool-specific advice against official documentation.** When a course teaches how to use a specific tool (e.g., Posthog, Stripe, Google Workspace), check the tool's actual documentation before writing setup instructions, configuration steps, or terminology. Use the tool's own names for settings, buttons, and concepts. Don't generate setup instructions from general knowledge.
+- **Verify tool-specific advice against official documentation.** When a course teaches how to use a specific tool (e.g., PostHog, Stripe, Google Workspace), check the tool's actual documentation before writing setup instructions, configuration steps, or terminology. Use the tool's own names for settings, buttons, and concepts. Don't generate setup instructions from general knowledge.
 - **Fact-check before stating best practices.** If you're about to write something as a principle, best practice, or rule (in text steps, quiz explanations, or subDescriptions), and you're not confident it's grounded in real domain knowledge, look it up using WebSearch or WebFetch before including it. Don't state uncertain opinions as facts. Don't silently skip it either. Verify first, then write.
 
 ---
@@ -65,6 +65,10 @@ description: Use this checklist when generating micro-course content from an out
 **SystemPrompts for free-text exercises must avoid em dashes.** Consistent with the productkind tone guidelines.
 
 **Copy-paste prompts must be in markdown code blocks.** When the course includes a prompt the learner can copy and paste into an AI app builder or other tool, wrap it in a markdown code block so it's clearly distinguished from the surrounding text and easy to copy.
+
+**Every toolkit mention must be a clickable link.** Don't write "check the toolkit for the setup guide" without linking to the specific item. The learner shouldn't have to go find it.
+
+**Weave toolkit references into the text naturally.** Make sure that it reads well and doesn't break the flow of the content.
 
 **Categories must be on the same level.** When a step presents options or models for the learner to choose between, check that they're the same type of thing. If they're not, split them into separate decisions. For example, "subscription vs one-time payment" is one decision (how you charge), "free trial vs freemium" is a different decision (how people try). Don't mix them into one list.
 
