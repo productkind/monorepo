@@ -22,7 +22,7 @@ Each finding in Lovable's Security panel has a severity label. Here's what they 
 | Severity | What it means | What to do |
 |---|---|---|
 | **Error** (red) | A critical security issue. Data could be exposed or the app could be exploited. | Fix before publishing, regardless of app type. |
-| **Warning** (orange) | An important concern that may or may not apply to your situation. | Fix for public apps. Review for team tools. Note for personal tools. |
+| **Warning** (orange) | An important concern that may or may not apply to your situation. | Fix for public apps. For personal or team tools, review the details and decide if it's relevant to your context. |
 | **Info** (white) | A general recommendation or best practice. | Good to address over time, but not urgent for any app type. |
 
 ### Step 3: Fix what you can automatically
@@ -54,17 +54,6 @@ Read Lovable's explanation and decide whether to apply the fix based on your app
 **What it means:** Your database tables don't have rules controlling who can see or change each row. Without RLS, anyone who finds your Supabase project URL and public key (both are visible in your app's code) could read or modify all data directly, bypassing your app entirely.
 
 **Why it matters:** Even if your app's interface only shows users their own data, the database itself is wide open. Someone could access every user's email, preferences, and history.
-
-**How to fix:**
-1. Open the RLS finding in the Security panel.
-2. Use the inline chat or click "Try to fix all."
-3. Lovable will add policies that restrict each user to their own data.
-4. Run the security scan again to confirm.
-
-**Prompt if you need to fix it manually:**
-```
-Add Row Level Security policies to all database tables. Each user should only be able to read and modify their own data. Don't change the user experience.
-```
 
 #### Leaked password protection disabled
 
