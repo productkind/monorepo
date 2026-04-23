@@ -33,7 +33,7 @@ I was on the [page name/URL] and I [action, e.g., "clicked the Vote button on a 
 ## Clues found
 
 - Console: [Paste any error messages, or "No errors in Console"]
-- Network tab: [e.g., "POST /rest/v1/votes returned 401" or "All requests returned 200"]
+- Network tab: [e.g., "POST votes returned 401" or "All requests returned 200"]
 - Cloud logs: [e.g., "Function log shows 'user_id is null'" or "No errors in logs"]
 - Database: [e.g., "No new row appeared in the votes table" or "Row exists but vote_count is still 0"]
 
@@ -84,5 +84,5 @@ Don't change the book listing layout, the navigation, or the user profile page. 
 - **Describe the state of the app before you did anything.** This helps Lovable understand the context and reproduce the bug.
 - **Be specific about location.** "The Vote button on the /books page next to each book title" is much better than "the button doesn't work."
 - **Include the status code** if you found one in the Network tab. It tells Lovable exactly where to look.
-- **Always add guardrails.** The "What NOT to touch" section prevents Lovable from making unrelated changes that could introduce new bugs.
+- **Always add guardrails.** The "What NOT to touch" section prevents Lovable from making unrelated changes that could introduce new problems.
 - **Copy the full error message.** If you found an error in the Console, paste the whole thing including the stack trace. The file names and line numbers in the stack trace point Lovable straight to the problem.
