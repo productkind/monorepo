@@ -7,9 +7,10 @@ A step-by-step investigation flow to follow every time something goes wrong in y
 
 ### Step 1: Reproduce the bug
 
-- [ ] **Open browser DevTools first** (F12 on Windows, Cmd+Option+I on Mac), then trigger the bug again while watching for errors.
+- [ ] **Open browser DevTools first** (F12 on Windows, Cmd+Option+I on Mac), then trigger the bug again while watching for errors. This is important because some errors only appear in the Console when they happen, and if you open DevTools after the fact, you might miss them.
 - [ ] **Note exactly what you did** when the bug appeared: which page, which button, what data you entered.
 - [ ] **Try it a second time.** Does it happen every time, or only sometimes? This matters for the fix.
+- [ ] **Try with different background conditions.** For example, if you were logged in as a user, try logging out and reproducing the bug.
 
 ### Step 2: Check the Console for frontend errors
 
@@ -19,20 +20,20 @@ A step-by-step investigation flow to follow every time something goes wrong in y
 ### Step 3: Check the Network tab for failed requests
 
 - [ ] **Switch to the Network tab** in DevTools and reproduce the bug again.
-- [ ] **Look for red entries** or status codes that aren't 200.
-- [ ] **Note the status code and the request name** (e.g., "POST /rest/v1/votes returned 401").
+- [ ] **Look for red entries** or status codes that aren't 200 or 201.
+- [ ] **Note the status code and the request name** (e.g., "POST votes?select... returned 401").
 
 ### Step 4: Check Lovable Cloud logs
 
 - [ ] **Open the Cloud tab** in Lovable, then go to Logs and select Function logs from the dropdown.
 - [ ] **Look for error messages or unexpected values** around the time you triggered the bug.
-- [ ] **Copy anything that looks relevant**, especially lines with "error", "failed", or unexpected data.
+- [ ] **Copy anything that looks relevant**, especially lines with "error" or "failed".
 
 ### Step 5: Check the database directly
 
 - [ ] **Open the Cloud tab**, then go to the Database section and click the relevant table.
 - [ ] **Check if the data you expected is there.** For example, if you submitted a form, is there a new row? If you deleted something, is the row gone?
-- [ ] **Check if the data looks correct.** Are any columns empty that shouldn't be? Does a foreign key point to the right record?
+- [ ] **Check if the data looks correct.** Are any columns empty that shouldn't be? Does the foreign keys point to the right record?
 
 ### Step 6: Still no clues? Add logging
 
@@ -50,12 +51,15 @@ The bug happens when I [describe the steps to reproduce the bug].
 Add logging to the [feature name] process to show:
 - What data is being sent
 - What response is received
-- Any errors that occur
+- Any errors or edgecases that could occur
 
-Then I'll reproduce the bug and check the Console for the new log messages.
+Then I'll reproduce the bug to provide you with the new log messages to help find the issue.
 ```
 
 After reproducing the bug, check the Console for the new log messages and share what you find with Lovable.
+In many cases, even without pasting the messages Lovable can read the logs directly and find the issue after you ask it to add logging.
+It is possible that you will need to repeat this process a few times, asking Lovable to add more
+logging in different places until you find the clue that leads to the fix.
 
 ### What to do with your clues
 
