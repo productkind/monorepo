@@ -3,7 +3,7 @@ challenge: "1 - Craft a Problem Statement"
 ---
 ## Problem Statement Template
 
-A fill-in-the-blank template for defining the core problem your product solves. Come back to this whenever you start a new product idea or feel lost in features.
+A fill-in-the-blank template for defining the core problem your product solves. Come back to this whenever you start a new product idea or feel lost while planning features.
 
 ### The template
 
