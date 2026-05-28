@@ -1,6 +1,6 @@
 course:
   id: 5e86e580-264c-442c-8cc4-be5645f13e87
-  note: ""
+  note: "*This course is **free until 23 June 2026** (the end of SheBuilds on Lovable Season 03) to support more women building with AI.*"
   cover: /courses/lovable-intro-00/cover.gif
   title: 'Build Your First App with Lovable'
   learningOutcomes:
@@ -256,7 +256,7 @@ course:
             subDescription: You described what you wanted, and Lovable built it. This is just the beginning. For every app you build from now, you can use the structured prompt formula to get better results faster.
 
     - title: Iterate and Improve
-      isFree: false
+      isFree: true
       skills:
         - Iterative Building
         - Improvement Prompts
@@ -369,7 +369,7 @@ course:
             subDescription: Small prompts, test often, and don't be afraid to start over. This approach keeps you in control and makes your app better with each iteration.
 
     - title: Save Data with Lovable Cloud
-      isFree: false
+      isFree: true
       skills:
         - Lovable Cloud
         - Backend Basics
@@ -524,7 +524,7 @@ course:
 
               **Toolkit:** The [Prompts for Common Features](https://littleparrot.app/nest/toolkit/43475578-0f46-41a8-8375-0c8a153a1882) has ready-to-use prompts for authentication, voting, search, delete, and more. Copy and paste them when you're adding features to your app.
     - title: Make Quick Changes with the Tools Lovable Provides
-      isFree: false
+      isFree: true
       skills:
         - Preview
         - Visual Edits
@@ -641,7 +641,7 @@ course:
             subDescription: Preview, visual edits, themes, and attaching images. You can now refine your app visually, try different styles, and show Lovable exactly what you want.
 
     - title: Experiment and Undo Mistakes Safely
-      isFree: false
+      isFree: true
       skills:
         - Version Bookmarking
         - Reverting Changes
@@ -727,7 +727,7 @@ course:
             subDescription: Bookmark stable versions, revert when needed. Now you can try bold experiments knowing you can always go back.
 
     - title: Plan, Test, and Connect Services
-      isFree: false
+      isFree: true
       skills:
         - Plan Mode
         - Project Knowledge
@@ -754,9 +754,9 @@ course:
 
               **Plan mode** in Lovable is a way to think, explore, and map out your ideas before any code is changed or written. It’s like having a helpful partner who talks through your problem, compares options, investigates bugs, and helps you choose the best approach before you build anything. 
               
-              You can use it to ask questions, debug issues, and get a clear plan. When you’re happy with the plan, you can switch to Agent mode (unselect *Plan*) to build it.
+              You can use it to ask questions, debug issues, and get a clear plan. When you’re happy with the plan, you can switch back to **Build** mode from the same menu to build it.
 
-              Click **Plan** below the input field to discuss with Lovable without writing any code.
+              To enter Plan mode, click the **Build** button below the input field and select **Plan** from the dropdown.
 
               *Each Plan mode prompt uses 1 credit regardless the complexity of the question.*
             imageUrl: /courses/lovable-intro-00/plan-mode.webp
@@ -868,7 +868,7 @@ course:
               **Toolkit:** Use the [Project Knowledge Starter Template](https://littleparrot.app/nest/toolkit/55ce36be-cab9-4e46-a154-65606bca12ee) to set up your project's Knowledge panel with a ready-made structure for your target user, design system, tone of voice, and technical decisions.
 
     - title: Publish and Share Your App
-      isFree: false
+      isFree: true
       skills:
         - Publishing
         - Favicon
