@@ -417,18 +417,18 @@ course:
               You only need to do this once. From now on, new features you add will automatically use the backend.
           subtitle: One prompt to set it up
         - type: text
-          title: Approving database changes
+          title: Database changes
           content:
             body: |-
-              When Lovable needs to change how your data is stored, it will ask for your permission first. You'll see a **Modify database** message showing exactly what Lovable plans to do, like creating a new table for book suggestions or adding a column for votes.
+              As you build, Lovable will create and update your database to match what your app needs. For example, it might add a table for book suggestions or a new column for votes.
 
-              **This is normal and expected.** Lovable is being careful with your data. Simply review what it wants to do and click to **allow** the changes.
+              By default, Lovable **auto-approves these changes** so you can keep building without interruption. This is normal and expected. You can always see what's happened in the chat as it happens.
 
-              You don't need to understand every detail. The key thing is that Lovable won't modify your database without checking with you first. This keeps you in control of what's happening with your app's data.
+              If you'd like more control, you can switch to **manual approval**. Click the **+** button under the chat input, then go to **Connectors → Manage connectors → Cloud → Manage permissions**. With manual approval on, Lovable shows a **Modify database** message before each change, and you decide whether to allow it.
 
               *If you're curious about what databases are and how they work, our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) micro-course explains these concepts in friendly terms.*
             imageUrl: /courses/lovable-intro-00/modify-database-popup.webp
-          subtitle: Lovable asks before changing your data
+          subtitle: How Lovable handles your data
         - type: text
           title: What if something goes wrong?
           content:
@@ -517,7 +517,7 @@ course:
         - type: challenge-end
           title: "Your app saves data! ☁️"
           content:
-            nextModule: "**Next:** Let's explore the tools Lovable provides so you can make changes more effectively. You'll learn how to preview your app on different devices, make targeted changes, and use design themes to refine the look and feel."
+            nextModule: "**Next:** Let's explore the tools Lovable provides so you can make changes more effectively. You'll learn how to preview your app on different devices, make targeted changes, and attach images for inspiration to show Lovable exactly what you want."
             description: You've connected your app to Lovable Cloud.
             subDescription: |-
               Now your app can store data, run logic, and remember things even when users close the browser.
@@ -528,9 +528,9 @@ course:
       skills:
         - Preview
         - Visual Edits
-        - Design Themes
+        - Image References
       description: |-
-        You'll learn how to make changes more effectively: preview your app on different devices, make visual edits, and use design themes to refine the look and feel of your app.
+        You'll learn how to make changes more effectively: preview your app on different devices, make visual edits, and attach images for inspiration to show Lovable exactly what you want.
       completionTime: '7:00'
       steps:
         - type: text
@@ -575,20 +575,6 @@ course:
               It's perfect for small, targeted refinements.
             imageUrl: /courses/lovable-intro-00/visual-edits.webp
           subtitle: Point and click changes
-        - type: text
-          title: Design Themes
-          content:
-            body: |-
-              Want to change the overall look of your app? Click the **Design** menu in the top bar.
-
-              From here **you can**:
-              - Change your app's colour palette
-              - Update typography (fonts and text styles)
-              - Experiment with different visual themes
-
-              It's a quick way to try different styles before committing to a design direction. You can always change it later.
-            imageUrl: /courses/lovable-intro-00/design-themes.webp
-          subtitle: Change colours and typography
         - type: text
           title: Attach images for inspiration
           content:
@@ -638,7 +624,7 @@ course:
           content:
             nextModule: "**Next challenge:** Things will break as you build. Let's make sure you're never afraid to experiment. You'll learn how to bookmark stable versions and revert changes so you exactly know what to do when things go wrong."
             description: You can now use Lovable's interface confidently.
-            subDescription: Preview, visual edits, themes, and attaching images. You can now refine your app visually, try different styles, and show Lovable exactly what you want.
+            subDescription: Preview, visual edits, and attaching images for inspiration. You can now refine your app visually, and show Lovable exactly what you want.
 
     - title: Experiment and Undo Mistakes Safely
       isFree: true
@@ -889,34 +875,38 @@ course:
           title: Before you publish
           content:
             body: |-
-              Take a few minutes to set up:
-              - **Favicon:** The small icon that appears in browser tabs. Upload something simple, like your logo.
-              - **Title and Description:** These appear when someone shares your link. Make them clear and inviting.
-              - **Share Image:** The image that shows when your app is shared on social media.
+              Take a few minutes to polish the details that make your app feel like a real product:
 
-              All these details can be reffered to as **meta tags** in web development.
+              - **Favicon:** The small icon that appears in browser tabs. Upload something simple, like your logo or a clear initial. You can create one for free with tools like [realfavicongenerator.net](https://realfavicongenerator.net/).
+              - **Title and description:** The name and short summary that appear in browser tabs and when someone shares your link. Make them clear and inviting.
+              - **Share image:** The image that shows in social media previews when someone shares your app. A 1200x630 pixel image works best.
 
-              These small details can be accessed by 
-              1. clicking the **Publish** button and 
-              2. opening the **Website info** section. 
-              
-              They will make your app feel more polished and professional.
+              The favicon, title, description, and share image together are called **meta tags**.
+
+              **To set them up:**
+              1. Click the **Publish** button in the top-right corner of Lovable
+              2. Follow the guided flow until you reach the **Website info** step
+              3. In the **Icon & title** section, upload your favicon and add your title and description
+              4. Add your share image in the same section
+
+              You can come back and update any of these later through **Edit settings** in the Publish panel.
             imageUrl: /courses/lovable-intro-00/publish-your-app-menu.webp
           subtitle: Polish the details
         - type: text
           title: Choose your URL
           content:
             body: |-
-              By default, Lovable gives your app a URL (e.g. book-club-picks.lovable.app). That works, but it might not be what you want.
+              By default, Lovable gives your app a URL like `book-club-picks.lovable.app`. That works, but you can customise it to make it shorter and easier to remember.
 
-              You can set a **Published URL** to make your link easier to remember:
-              1. Click the **Publish** button
-              2. In the **Published URL** field, enter something short and descriptive
-              3. Save your changes
+              **To change your URL:**
+              1. Click the **Publish** button in the top-right corner
+              2. In the **Your website URL** section, click the pencil icon
+              3. Enter something short and descriptive (e.g., `bookcluborganiser.lovable.app`)
+              4. Save by clicking the checkmark icon
 
-              A clean URL makes your app feel more professional and is easier for people to remember and type.
+              A clean URL makes your app feel more professional, and easier for people to remember and type.
 
-              **Note:** Your URL will end with `.lovable.app`. If you want a custom domain (like `book-club.com`) you'll need to buy it separately and set it in Lovable.
+              **Note:** Your URL will end with `.lovable.app`. If you want a custom domain (like `bookcluborganiser.com`) you'll need a paid Lovable plan, and you'll need to buy the domain separately before connecting it in Lovable.
             imageUrl: /courses/lovable-intro-00/published-url.webp
           subtitle: Make it memorable
         - type: text

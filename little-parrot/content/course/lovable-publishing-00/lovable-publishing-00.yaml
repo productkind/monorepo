@@ -133,7 +133,7 @@ course:
             body: |-
               You can **customise this subdomain** to make it cleaner and more recognisable:
               1. Click the **Publish** button in the top-right corner
-              2. If you *haven't published yet*, you'll see the **Website address**, click the pencil icon to change your subdomain. If you've *already published*, click **Edit settings**, then click the pencil icon in the **URL** section
+              2. If you *haven't published yet*, you'll see the **Your website URL** section, click the pencil icon to change your subdomain. If you've *already published*, click **Edit settings**, then click the **URL** section
               3. **Change the subdomain** to something short and descriptive (e.g., `bookcluborganiser.lovable.app`)
               4. Save your changes by **clicking the checkmark icon**
 
@@ -271,6 +271,8 @@ course:
               - **Ownership:** You control the address, even if you move to a different platform later
 
               A custom domain is not required to launch. But if you're serious about growing your product, it's one of the most impactful steps you can take.
+
+              **Note:** Connecting a custom domain in Lovable requires a paid plan. You'll also need to buy the domain separately from a registrar (more on that in the next step).
           subtitle: More than a vanity URL
         - type: text
           title: How to check if a domain is available
