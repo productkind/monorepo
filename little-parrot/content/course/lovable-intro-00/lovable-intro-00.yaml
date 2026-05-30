@@ -878,20 +878,28 @@ course:
               Take a few minutes to polish the details that make your app feel like a real product:
 
               - **Favicon:** The small icon that appears in browser tabs. Upload something simple, like your logo or a clear initial. You can create one for free with tools like [realfavicongenerator.net](https://realfavicongenerator.net/).
-              - **Title and description:** The name and short summary that appear in browser tabs and when someone shares your link. Make them clear and inviting.
-              - **Share image:** The image that shows in social media previews when someone shares your app. A 1200x630 pixel image works best.
+              - **Title:** The name that appears in browser tabs and link previews. Keep it clear and recognisable.
+              - **Description:** A short summary that appears under the title in link previews. Make it inviting.
+              - **Social image:** The image that shows in social media previews when someone shares your app. A 1200x630 pixel image works best.
 
-              The favicon, title, description, and share image together are called **meta tags**.
-
-              **To set them up:**
-              1. Click the **Publish** button in the top-right corner of Lovable
-              2. Follow the guided flow until you reach the **Website info** step
-              3. In the **Icon & title** section, upload your favicon and add your title and description
-              4. Add your share image in the same section
-
-              You can come back and update any of these later through **Edit settings** in the Publish panel.
-            imageUrl: /courses/lovable-intro-00/publish-your-app-menu.webp
+              The favicon, title, description, and social image together are called **meta tags**.
+            imageUrl: /courses/lovable-intro-00/social-media-preview.webp
           subtitle: Polish the details
+        - type: text
+          title: Set up your meta tags
+          content:
+            body: |-
+              Once you have your favicon, title, description, and social image ready, here's how to add them in Lovable:
+
+              1. Click the **Publish** button in the top-right corner of Lovable
+              2. Follow the guided flow until you reach the **Add info to help people find your site** step
+              3. In the **Icon & title** section, upload your favicon and add your title
+              4. Add your **Description** in the next field
+              5. Upload your **Social image**, or click **Generate** to have Lovable create one for you
+
+              You can come back and update any of these later through **Edit settings** in the Publish panel. Don't worry about getting everything perfect on the first try.
+            imageUrl: /courses/lovable-intro-00/publish-your-app-menu.webp
+          subtitle: Where to add them in Lovable
         - type: text
           title: Choose your URL
           content:

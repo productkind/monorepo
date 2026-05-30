@@ -157,14 +157,14 @@ course:
             body: |-
               If you **haven't published** yet:
               1. Click the **Publish** button in the top-right corner
-              2. Follow the steps until you reach the one called **Website info**
-              2. In the **Icon & title** section, click the favicon area (a Lovable logo appears there by default) and upload your generated file
+              2. Follow the steps until you reach the one called **Add info to help people find your site**
+              3. In the **Icon & title** section, click the favicon area and upload your generated file
 
               If you've **already published**:
               1. Click the **Publish** button in the top-right corner
               2. Click the **Edit settings** button
-              2. In the **Website info** section, click the pencil icon
-              3. In the **Icon & title** section, click the favicon area and upload your generated file
+              3. In the **Add info to help people find your site** section, click the pencil icon
+              4. In the **Icon & title** section, click the favicon area and upload your generated file
 
               You can **change your favicon at any time**, so don't worry about getting it perfect on the first try. Once you set your custom favicon, publish your app and it will show up in the browser tab when users visit your app.
             imageUrl: /courses/lovable-publishing-00/upload-favicon.webp
@@ -179,9 +179,9 @@ course:
               - **Description:** A short summary that appears below the title
               - **Social image:** The image that shows in social media previews
 
-              You can set all of these in the **Website info** section of the Publish panel (the same place you uploaded your favicon).
+              You can set all of these in the **Add info to help people find your site** section of the Publish panel (the same place you uploaded your favicon).
 
-              Make your title clear (e.g., "Book Club Organiser") and your description inviting (e.g., "The easiest way to pick your book club's next read"). For the share image, use a 1200x630 pixel image for best results on social media. You can create one for free with tools like [Canva](https://www.canva.com/).
+              Make your title clear (e.g., "Book Club Organiser") and your description inviting (e.g., "The easiest way to pick your book club's next read"). For the social image, use a 1200x630 pixel image for best results on social media. You can create one for free with tools like [Canva](https://www.canva.com/), or click **Generate** in Lovable to have it create one for you.
 
               When someone shares your link, these details are the **first impression**.
             imageUrl: /courses/lovable-publishing-00/set-meta-tags.webp
@@ -960,7 +960,7 @@ course:
               **Before publishing:**
               - ☐ Switch to production API keys
               - ☐ Create and upload a favicon
-              - ☐ Set meta tags (title, description, share image)
+              - ☐ Set meta tags (title, description, social image)
               - ☐ Check your app on mobile and desktop (use the device toggle in Lovable's preview, and test on your own phone after publishing)
 
               **Professional touches:**
