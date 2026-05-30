@@ -122,9 +122,9 @@ course:
           title: Your app's first address
           content:
             body: |-
-              When you publish your app, Lovable gives it a **subdomain URL** like `book-club-picks.lovable.app`. This is the first address your app will have on the internet, and it's completely free.
+              When you publish your app, Lovable gives it a **subdomain URL** like `book-club-pick.lovable.app`. This is the first address your app will have on the internet, and it's completely free.
 
-              A **subdomain** is the part before the main domain name. In `book-club-picks.lovable.app`, `book-club-picks` is the subdomain and `lovable.app` is Lovable's domain. Think of it like an apartment number in a building: `lovable.app` is the building, and your subdomain is your own front door within it.
+              A **subdomain** is the part before the main domain name. In `book-club-pick.lovable.app`, `book-club-pick` is the subdomain and `lovable.app` is Lovable's domain. Think of it like an apartment number in a building: `lovable.app` is the building, and your subdomain is your own front door within it.
           imageUrl: /courses/lovable-publishing-00/lovable-subdomain.webp
           subtitle: Your free Lovable subdomain
         - type: text
