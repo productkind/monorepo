@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>What we built in May</title>
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <![endif]-->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+    * { margin: 0; padding: 0; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      color: #08080a;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    .email-wrapper {
+      width: 100%;
+      background-color: #f5f5f5;
+      padding: 32px 16px;
+    }
+
+    .email-container {
+      max-width: 640px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border: 2px solid #08080a;
+      box-shadow: 4px 4px 2px rgba(8, 8, 9, 0.25);
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(90deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020);
+      padding: 36px 40px;
+      text-align: center;
+      border-bottom: 2px solid #08080a;
+    }
+
+    .header img {
+      max-width: 220px;
+      height: auto;
+    }
+
+    .header-subtitle {
+      font-family: 'Space Mono', monospace;
+      font-size: 14px;
+      color: hsl(245, 3%, 48%);
+      margin-top: 14px;
+      letter-spacing: 1px;
+    }
+
+    /* Content */
+    .content {
+      padding: 48px 40px 24px;
+    }
+
+    .greeting {
+      font-size: 17px;
+      margin-bottom: 12px;
+      color: hsl(245, 3%, 22%);
+    }
+
+    .intro {
+      font-size: 17px;
+      color: hsl(245, 3%, 28%);
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    /* Section */
+    .section {
+      margin-bottom: 44px;
+    }
+
+    h2 {
+      font-family: 'Space Mono', monospace;
+      font-size: 24px;
+      font-weight: 700;
+      color: #08080a;
+      margin: 0 0 16px;
+      line-height: 1.3;
+    }
+
+    h2 .num {
+      display: inline-block;
+      background: linear-gradient(90deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70);
+      border: 2px solid #08080a;
+      padding: 2px 10px;
+      margin-right: 10px;
+      font-size: 18px;
+      vertical-align: 3px;
+    }
+
+    .section p {
+      font-size: 17px;
+      color: hsl(245, 3%, 22%);
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+
+    .section p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Highlight image */
+    .feature-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 2px solid #08080a;
+      box-shadow: 4px 4px 2px rgba(8, 8, 9, 0.25);
+      margin-bottom: 20px;
+    }
+
+    /* Pill list (Lovable, Toolkit categories) */
+    .pill-list {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0 0;
+    }
+
+    .pill-list li {
+      padding: 14px 18px;
+      margin-bottom: 10px;
+      background-color: #ffffff;
+      border: 2px solid #08080a;
+      box-shadow: 3px 3px 1px rgba(8, 8, 9, 0.18);
+    }
+
+    .pill-list li strong {
+      color: #08080a;
+      font-size: 17px;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .pill-list li span {
+      font-size: 15px;
+      color: hsl(245, 3%, 38%);
+    }
+
+    /* CTA button */
+    .cta-button {
+      display: inline-block;
+      background: linear-gradient(90deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70);
+      color: #08080a;
+      font-family: 'Inter', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 15px 34px;
+      border: 2px solid #08080a;
+      box-shadow: 4px 4px 2px rgba(8, 8, 9, 0.25);
+    }
+
+    .cta-wrapper {
+      text-align: center;
+      margin: 24px 0 0;
+    }
+
+    /* Free-course callout */
+    .share-box {
+      background: linear-gradient(90deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020);
+      border: 2px solid #08080a;
+      box-shadow: 4px 4px 2px rgba(8, 8, 9, 0.25);
+      padding: 24px;
+      margin-top: 20px;
+    }
+
+    .share-box p {
+      font-size: 17px;
+      color: hsl(245, 3%, 22%);
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+
+    .share-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Sign-off */
+    .cta-section {
+      text-align: center;
+      padding: 36px 40px;
+      border-top: 2px solid #08080a;
+      background: linear-gradient(90deg, #ffb65b10, #fdd82510, #fbfb0010, #8efd2310, #00ed7010);
+    }
+
+    .cta-section p {
+      font-size: 16px;
+      color: hsl(245, 3%, 32%);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .cta-section .signoff {
+      font-family: 'Space Mono', monospace;
+      font-weight: 700;
+      font-size: 17px;
+      color: #08080a;
+      margin-top: 20px;
+    }
+
+    .cta-section .brand {
+      font-size: 13px;
+      color: hsl(245, 3%, 48%);
+      margin-top: 4px;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 24px 40px;
+      text-align: center;
+      font-size: 12px;
+      color: hsl(245, 3%, 58%);
+      line-height: 1.8;
+    }
+
+    .footer a {
+      color: hsl(245, 3%, 48%);
+      text-decoration: underline;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid hsl(245, 5%, 89%);
+      margin: 0;
+    }
+
+    a.text-link {
+      color: #08080a;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    /* Mobile */
+    @media only screen and (max-width: 620px) {
+      body { font-size: 16px; }
+      .content { padding: 32px 22px 16px; }
+      .header { padding: 28px 22px; }
+      .cta-section { padding: 28px 22px; }
+      .footer { padding: 20px; }
+      h2 { font-size: 21px; }
+      h2 .num { font-size: 16px; padding: 1px 8px; }
+      .intro { font-size: 16px; margin-bottom: 32px; }
+      .section { margin-bottom: 36px; }
+      .section p { font-size: 16px; }
+      .pill-list li strong { font-size: 16px; }
+      .share-box p { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="email-wrapper">
+    <div class="email-container">
+
+      <!-- Header -->
+      <div class="header">
+        <a href="https://littleparrot.app/?ref=may-update-email" style="text-decoration: none;"><img src="https://littleparrot.app/logo-little-parrot.svg" alt="Little Parrot" /></a>
+        <div class="header-subtitle">MAY 2026 UPDATE</div>
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+
+        <p class="greeting">Hi {{first_name}},</p>
+        <p class="intro">Here's what we shipped in May: one bigger feature, fresher Lovable courses, a clearer Toolkit, and a community moment worth jumping into.</p>
+
+        <!-- 1. My Notes -->
+        <div class="section">
+          <h2><span class="num">01</span> A private library, growing with you</h2>
+          <img class="feature-image" src="https://littleparrot.app/newsletter/my-notes.gif" alt="Screenshot of the My Notes page showing a problem statement, the learner's saved answer, and the AI response below it" />
+          <p>As you go through a course, your reflections, exercise inputs, and prompts you write will be saved in your Nest under <strong>My Notes</strong> automatically. They will be ready to revisit, copy, and reuse anytime.</p>
+          <div class="cta-wrapper">
+            <a href="https://littleparrot.app/nest/my-learning/?ref=may-update-email&auth=login" class="cta-button" style="color: #08080a">Open My Learning</a>
+          </div>
+        </div>
+
+        <!-- 2. Lovable courses refreshed -->
+        <div class="section">
+          <h2><span class="num">02</span> Lovable courses, refreshed</h2>
+          <p>Lovable changed a fair bit recently. Both courses now match what you'll actually see on screen, with new screenshots and updated steps.</p>
+          <ul class="pill-list">
+            <li>
+              <strong><a href="https://littleparrot.app/5e86e580-264c-442c-8cc4-be5645f13e87/course-overview?ref=may-update-email" class="text-link">Build Your First App With Lovable</a></strong>
+            </li>
+            <li>
+              <strong><a href="https://littleparrot.app/ff736c4f-8ccc-41b6-96c6-68806804c5d8/course-overview?ref=may-update-email" class="text-link">Launch and Grow Your Lovable App</a></strong>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 3. Toolkit categories -->
+        <div class="section">
+          <h2><span class="num">03</span> A clearer Toolkit</h2>
+          <p>We rethought our Toolkit categories to make them clearer. Every item now carries one of these five labels, so you know how to use it before you open it:</p>
+          <ul class="pill-list">
+            <li><strong>Template</strong><span>Fill in with your own details.</span></li>
+            <li><strong>Guide</strong><span>Follow the steps to set something up.</span></li>
+            <li><strong>Prompt library</strong><span>Paste into your AI app builder.</span></li>
+            <li><strong>Checklist</strong><span>Work through before or during a task.</span></li>
+            <li><strong>Cheat sheet</strong><span>Look up when you need it.</span></li>
+          </ul>
+          <p style="margin-top: 18px;"><a href="https://littleparrot.app/nest/toolkit/?ref=may-update-email&auth=login" class="text-link">Browse the full Toolkit →</a></p>
+        </div>
+
+        <!-- 4. SheBuilds + share -->
+        <div class="section">
+          <h2><span class="num">04</span> SheBuilds by Lovable is back</h2>
+          <p>SheBuilds is a 48-hour buildathon. You get free Lovable credits to build your idea, alongside hundreds of other women building theirs. The top prize is one-to-one mentorship with <strong>Elena Verna</strong>, Head of Growth at Lovable.</p>
+          <p>Apply, especially if hackathons have felt like they're for someone else. SheBuilds was made so more women are the ones building with AI.</p>
+          <p><a href="https://shebuilds.lovable.app/?ref=littleparrot.app" class="text-link">Apply for SheBuilds →</a></p>
+
+          <div class="share-box">
+            <p><strong>Build Your First App With Lovable is free until 23 June.</strong></p>
+            <p>No application or SheBuilds spot needed. Pass the link on to anyone curious about building. Many of you found Little Parrot through this exact course, and we'd love to support more women the same way.</p>
+            <p><a href="https://littleparrot.app/5e86e580-264c-442c-8cc4-be5645f13e87/course-overview?ref=may-update-email-share" class="text-link">Share the free course →</a></p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Sign-off -->
+      <div class="cta-section">
+        <p>Thank you for being part of Little Parrot. You all keep us going, and to those of you who subscribe, you keep us building. 💛</p>
+        <div class="signoff">Kinga, Tamas &amp; Little Parrot</div>
+        <div class="brand">Little Parrot by productkind</div>
+      </div>
+
+      <!-- Footer -->
+      <hr class="divider">
+      <div class="footer">
+        <p style="margin-bottom: 12px;">
+          <a href="https://www.linkedin.com/company/productkind/" style="text-decoration: none; margin: 0 8px;">
+            <img src="https://littleparrot.app/icon-linkedin.png" width="24" height="24" alt="LinkedIn" style="vertical-align: middle; border: 0;" />
+          </a>
+          <a href="https://www.instagram.com/by_productkind/" style="text-decoration: none; margin: 0 8px;">
+            <img src="https://littleparrot.app/icon-instagram.png" width="24" height="24" alt="Instagram" style="vertical-align: middle; border: 0;" />
+          </a>
+        </p>
+        <p>You're receiving this because you have an account on Little Parrot.<br>
+        <a href="https://littleparrot.app/?ref=may-update-email">littleparrot.app</a><br><br>
+        <a href="__unsubscribe_url__">unsubscribe</a></p>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
