@@ -15,7 +15,7 @@ https://littleparrot.app/5e86e580-264c-442c-8cc4-be5645f13e87/course-overview?re
 
 Thank you Whitney Menarcheck and Elena Verna for making room for more of us to build.
 
-Who do you know who'd build something brilliant in 48 hours, if no one made her doubt she belonged? I hope she hears about it.
+Who do you know who'd build something brilliant in 48 hours, if no one made her doubt she belonged? Make sure she hears about it.
 
 ---
 
