@@ -42,7 +42,7 @@ leverage, synergy, move the needle, circle back, land on, why it matters
 actually, genuinely
 
 ### Empty fillers
-but here’s the catch, to cut through the chaos, that moment stuck with me, cutting through the noise, that actually lands, that sticks
+but here’s the catch, to cut through the chaos, that moment stuck with me, cutting through the noise, that actually lands, that sticks, which makes a real difference, makes a real difference
 
 ### Pseudo punchlines
 Here's the thing, Bottom line:, No fluff, This one's for you, Why this matters, What moved me, This matters because, that matters

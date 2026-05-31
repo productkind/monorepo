@@ -14,6 +14,7 @@ Non-technical women learning AI-assisted development.
 - Structure: Hook → insight → implication
 - One idea per post
 - No hashtags
+- Put all links in the post body. Don't put links in the author's first comment, LinkedIn penalises the post's reach when the author comments with links.
 - Whitespace between paragraphs for scannability
 - The opening sentence promises concrete professional benefit
 - End with a question or implication, not a summary

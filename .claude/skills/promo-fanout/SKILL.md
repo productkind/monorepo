@@ -72,6 +72,12 @@ primary growth channel, so share-asks are the point, not decoration.
 - One sentence of Little Parrot context is enough for a new audience.
 - Frame around the learner's win and the deadline, not "look at us". This is what
   makes the promotion feel generous rather than boastful.
+- **In a community Kinga belongs to (the Geek Girls email, WhatsApp, Circle, the
+  SheBuilds Discord), write as a member, not a brand.** Open by grounding it in her
+  own experience ("I took part last year and really valued it"), then share the news
+  plainly. No marketing hooks or vague softeners like "a quick one I thought you'd
+  appreciate" or "I think a few of you will be glad to hear this", they read as a
+  mass mailshot, not a personal note.
 - Sign off ("Kinga, Tamas & Little Parrot 💛") only where the channel expects it
   (Discord, email). Social posts and community messages don't sign off.
 
@@ -85,9 +91,13 @@ primary growth channel, so share-asks are the point, not decoration.
 - **Slack communities:** one shared draft, short and value-first. The user posts it
   into whichever channels allow a link, so no per-community variants.
 - **Geek Girls email:** plain text, no HTML template. Subject line plus a short, warm
-  body written like a personal note. You send it by hand to the list.
+  body written like a personal note from a member, opening from Kinga's own
+  experience (see the member-channel rule above). You send it by hand to the list.
 - **WhatsApp:** one shared draft, one short message, no markdown headers, one clean
   inline link. Sharing is welcome when it serves the members, so lead with their win.
+  Conversational but in complete sentences, not clipped texting fragments. Short does
+  not mean dropping the subject ("Did SheBuilds last year" reads hasty; "I took part
+  in SheBuilds last year" reads like a person).
 - **Reddit:** one shared draft, strictest channel. Genuine value first, offer as a
   footnote, no marketing tone. Removable and ban-risky otherwise. When in doubt,
   draft a helpful comment, not an ad. You pick the subreddits.

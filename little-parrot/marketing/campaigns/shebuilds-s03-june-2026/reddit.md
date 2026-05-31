@@ -12,7 +12,7 @@ links in posts.
 
 I spent a long time assuming building apps was for people with a computer science background. What changed it for me was doing it inside a supportive, time-boxed event rather than alone at home.
 
-Lovable runs SheBuilds, a 48-hour buildathon for women, with free credits so cost isn't a barrier. Season 03 is this June. Hundreds of women build at the same time, which makes a real difference if these spaces have felt intimidating before.
+Lovable runs SheBuilds, a 48-hour buildathon for women, with free credits so cost isn't a barrier. Season 03 is this June, and applications are open here: https://shebuilds.lovable.app/ Hundreds of women build at the same time, so you're not the only one figuring it out as you go.
 
 A few honest notes if you're considering it:
 

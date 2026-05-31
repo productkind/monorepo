@@ -14,4 +14,6 @@ If building with AI has felt like someone else's territory, our Build Your First
 
 https://littleparrot.app/5e86e580-264c-442c-8cc4-be5645f13e87/course-overview?ref=substack
 
+You can apply for SheBuilds here: https://shebuilds.lovable.app/?ref=littleparrot.app
+
 Worth passing to a friend who keeps saying "I'm not technical".
