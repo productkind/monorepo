@@ -9,9 +9,7 @@ We started Little Parrot because only about one in five people building with AI 
 
 It's a 48-hour buildathon by Lovable, made for women, and season 03 is back this June. You get free Lovable credits, hundreds of women building alongside you, and a top prize of one-to-one mentorship with Elena Verna, Head of Growth at Lovable.
 
-Many of the women we work with thought hackathons weren't for them, until they tried one.
-
-You can apply here:
+Many of the women we work with thought hackathons weren't for them, until they tried one. Apply here:
 https://shebuilds.lovable.app/?ref=littleparrot.app
 
 And if you'd like a no-pressure first step, our Build Your First App With Lovable course is free until 23 June, no application needed:
