@@ -208,7 +208,7 @@
        x="64.975311"
        y="126.61281"
        id="text1"
-       transform="translate(-7.8294256,-9.21516)"
+       transform="translate(-3.8294256,4.78484)"
        inkscape:label="main-text"><tspan
          x="64.975311"
          y="126.61281"
@@ -229,4 +229,11 @@
          y="485.90291"
          id="tspan9"><tspan
            style="font-weight:bold;font-family:Inter;-inkscape-font-specification:'Inter Bold'"
-           id="tspan8">belonged?</tspan></tspan></text></g></svg>
+           id="tspan8">belonged?</tspan></tspan></text><g
+       id="g1"><rect
+         style="opacity:0.984509;fill:none;stroke:#000000;stroke-width:24;stroke-dasharray:none;paint-order:stroke fill markers"
+         id="rect1"
+         width="1056"
+         height="1326"
+         x="12"
+         y="12" /></g></g></svg>
