@@ -7,7 +7,7 @@ Asset: attach linkedin-tbip-shebuilds.svg (exported to PNG)
 
 We started Little Parrot because only about one in five people building with AI today are women. SheBuilds is one of the reasons that number is starting to move.
 
-It's a 48-hour buildathon by Lovable, made for women, and season 03 is back this June. You get free Lovable credits, hundreds of women building alongside you, and a top prize of one-to-one mentorship with Elena Verna, Head of Growth at Lovable.
+It's a 48-hour buildathon by Lovable, made for women, and season 03 is back this June. You get free Lovable credits, hundreds of women building alongside you, and the top prize is one-to-one mentorship with Elena Verna, Head of Growth at Lovable.
 
 Many of the women we work with thought hackathons weren't for them, until they tried one. Apply here:
 https://shebuilds.lovable.app/?ref=littleparrot.app

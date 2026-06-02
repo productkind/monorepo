@@ -45,6 +45,21 @@ message doesn't read as promotional.
   - Posts to the publication: https://productkind.substack.com/
 - **Assets:** optional image
 
+## Instagram (productkind company account)
+
+- **Type:** visual-first public social
+- **Account:** https://www.instagram.com/by_productkind/
+- **Audience:** broad; women interested in building, founders, the productkind community.
+- **Format:** the visual is the post (the mission image or the parrot carousel both
+  work). "We" voice (company account), warm. Caption: short hook, a little context,
+  then the call to action. Links are NOT clickable in captions, so the CTA is "link
+  in bio" (or a Story with a link sticker). A few relevant hashtags are fine here,
+  unlike LinkedIn.
+- **Self-promo rules:** own account, promotion expected; keep it warm and mission-led.
+- **Ref param:** `instagram` (put it on the bio link or the Story link sticker; caption
+  links aren't clickable, so they can't carry a tag inline).
+- **Assets:** reuse the mission visual or the parrot carousel.
+
 ## Discord (Little Parrot community)
 
 - **Type:** our own community

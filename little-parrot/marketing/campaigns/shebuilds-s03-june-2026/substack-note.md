@@ -2,18 +2,21 @@
 
 Post from: https://substack.com/@kingamagyar
 
+Deliberate choices (don't "fix" these): @mentions are kept (Elena and Whitney are on
+Substack, so they tag and notify); no ref tag on the course link so it reads less
+promotional; 💜 heart instead of the usual 💛 so it doesn't look like a copy-paste of
+the other channels.
+
 ---
 
-In the early 1980s, women were entering computer science faster than men. Then home computers were marketed mainly to boys, and that progress quietly reversed.
+The top prize at this year's SheBuilds is one-to-one mentorship with @Elena Verna, Head of Growth at Lovable.
 
-I think about that now, because we're at a similar fork. AI app builders mean anyone can turn an idea into working software with plain-language prompts. Yet only about one in five people building this way are women.
+SheBuilds is a 48-hour buildathon by Lovable, made for women, and season 03 is back this June. You get free Lovable credits and hundreds of other women building alongside you.
 
-SheBuilds is one of the efforts pushing the other way. It's a 48-hour buildathon by Lovable, made for women, and season 03 runs this June. Free credits, hundreds of women building at once, and one-to-one mentorship with Elena Verna as the top prize.
+I've been part of it since the very first season, first as a participant, later helping other women through it, and it's the event I recommend most to anyone who wants to build with AI but isn't sure these spaces are for them. You can apply here until 3 June: https://shebuilds.lovable.app/?ref=littleparrot.app
 
-If building with AI has felt like someone else's territory, our Build Your First App With Lovable course is free until 23 June as a gentle way in:
+And if you'd like to get comfortable with Lovable first, we made our Little Parrot by productkind course, Build Your First App With Lovable, free until 23 June, no application needed: https://littleparrot.app/5e86e580-264c-442c-8cc4-be5645f13e87/course-overview
 
-https://littleparrot.app/5e86e580-264c-442c-8cc4-be5645f13e87/course-overview?ref=substack
+Thank you @Whitney Menarcheck and @Elena Verna for making room for more of us to build. 💜
 
-You can apply for SheBuilds here: https://shebuilds.lovable.app/?ref=littleparrot.app
-
-Worth passing to a friend who keeps saying "I'm not technical".
+Who do you know who'd build something brilliant in 48 hours, if no one made her doubt she belonged? Make sure she hears about this.

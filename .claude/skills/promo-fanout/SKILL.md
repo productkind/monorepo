@@ -42,7 +42,7 @@ primary growth channel, so share-asks are the point, not decoration.
    - **Slack, WhatsApp, Reddit:** one shared draft each (`slack.md`, `whatsapp.md`,
      `reddit.md`).
    - **Discord:** `discord.md`. **Geek Girls email:** `ggpt-email.md`.
-     **Circle:** `pwit.md`.
+     **Circle:** `pwit.md`. **Instagram:** `instagram.md`.
 6. **Only if** the campaign has a genuine within-platform sequence (e.g. two
    LinkedIn posts to space days apart, or a Substack Note then a full post), write
    `little-parrot/marketing/campaigns/<slug>/posting-plan.md` describing that
@@ -66,6 +66,10 @@ primary growth channel, so share-asks are the point, not decoration.
 ## Shared copy rules (non-negotiable)
 
 - **No em dashes. British English.** This is a hard rule for all Little Parrot copy.
+- **Frame around using AI to your advantage, never around software development.** The
+  goal is women building their own idea or business with AI, not becoming developers
+  or engineers. Avoid the coding/CS-history angle and "no code needed" type taglines.
+  "With AI, you can build it yourself" lands the empowerment without the dev framing.
 - Don't include pricing in promotional posts. The landing page does that work.
 - Describe experiences, not features ("you get", "you can").
 - Thank partners by name.
@@ -80,12 +84,19 @@ primary growth channel, so share-asks are the point, not decoration.
   mass mailshot, not a personal note.
 - Sign off ("Kinga, Tamas & Little Parrot 💛") only where the channel expects it
   (Discord, email). Social posts and community messages don't sign off.
+- **When the same message goes to several channels, vary small surface details** (a
+  different emoji/heart colour, a reworded line) so reposts don't read as an obvious
+  copy-paste. Dropping the ref tag is also a deliberate lever to make a post feel
+  less promotional (e.g. WhatsApp, Reddit, and a Substack Note where wanted).
 
 ## Channel-specific reminders
 
 - **LinkedIn:** 90 to 200 words, no hashtags, end on a reframe or question. Two
   drafts: personal (Kinga, first person) and company (productkind, "we").
 - **Substack:** Notes are reflective; a full post is long-form. Less salesy, more thinking.
+- **Instagram:** company account, "we" voice, warm. The visual carries the post;
+  the caption is a short hook plus context. Links aren't clickable in captions, so end
+  on "link in bio" (or note a Story link sticker). A few relevant hashtags are fine.
 - **Discord:** emoji section headers, 👉 links, warm sign-off. Match the existing
   `*-discord-announcement.md` files.
 - **Slack communities:** one shared draft, short and value-first. The user posts it

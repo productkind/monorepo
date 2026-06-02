@@ -41,11 +41,13 @@ leverage, synergy, move the needle, circle back, land on, why it matters
 ### Weak intensifiers
 actually, genuinely
 
+Cut "actually" as a filler, e.g. "what you actually want" → "what you want", "they can actually use" → "they can use".
+
 ### Empty fillers
 but here’s the catch, to cut through the chaos, that moment stuck with me, cutting through the noise, that actually lands, that sticks, which makes a real difference, makes a real difference
 
 ### Pseudo punchlines
-Here's the thing, Bottom line:, No fluff, This one's for you, Why this matters, What moved me, This matters because, that matters
+Here's the thing, Bottom line:, No fluff, This one's for you, Why this matters, What moved me, This matters because, that matters, it matters most, matters most for
 
 ### Rhetorical formulas
 "Not X, but Y", "It's not... it's...", "X isn't... it's...", "In this piece"
