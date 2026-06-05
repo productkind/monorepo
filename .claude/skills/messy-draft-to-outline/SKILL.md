@@ -20,7 +20,7 @@ description: Use this checklist when generating an outline for a micro-course fr
 
 **Start with a relatable problem, not a lesson.** Use comics or a story to show someone's frustration before any teaching begins. Learners should feel "that's me" before they learn anything.
 
-**Transformation hook in the first video/intro.** Frame the course as identity change: "From X to Y." Not "You'll learn A, B, C" but "You'll become someone who..." Example: "From 'I can't build apps' to 'I just published my first one.'"
+**Transformation hook in the first video/intro.** Frame the course as identity change, not a topic list. Not "You'll learn A, B, C" but "You'll become someone who...". Make the benefit concrete: name what the learner will actually be able to do by the end. Example: "By the end, you'll have published your first app, even if you've never written a line of code."
 
 **One running example throughout.** Use Dalmie (a dalmatian dog character) building the Book Club Organiser app as the running persona and project across all challenges, consistent with other Little Parrot courses. Don't switch examples mid-course. Consistency makes abstract concepts tangible and helps learners follow along.
 

@@ -35,6 +35,9 @@ game-changing, mind-blowing
 ### Drama words
 hack, chaos, crisis, fluff, hype
 
+### Editorialising adverbs
+"quietly" as a signifier (e.g. "it can quietly rewrite", "quietly changed"). State the action plainly: "it can rewrite a paragraph you never mentioned".
+
 ### Business jargon
 leverage, synergy, move the needle, circle back, land on, why it matters
 
@@ -51,6 +54,8 @@ Here's the thing, Bottom line:, No fluff, This one's for you, Why this matters, 
 
 ### Rhetorical formulas
 "Not X, but Y", "It's not... it's...", "X isn't... it's...", "In this piece"
+
+Two-beat setup-payoff: a short concession sentence followed by a clipped reversal, e.g. "That sounds small. It isn't.", "Sounds simple. It's not.", "Easy, right? Wrong." State the point directly instead.
 
 ### Formatting
 - No em dashes (—)

@@ -15,7 +15,7 @@ Apply this style when creating educational content, courses, tutorials, or expla
 
 **Curious and exploratory** — Frame learning as discovery, not instruction. Invite questions and reflection.
 
-**Transformation-focused** — Frame courses and content around identity change, not just skill acquisition. "From 'I can't do X' to 'I just did X'" is more powerful than "Learn how to do X."
+**Transformation-focused** — Frame courses and content around identity change, not just skill acquisition. "You'll publish your first app, even if you've never coded" is more powerful than "Learn how to build apps."
 
 ---
 
@@ -125,6 +125,10 @@ Invite self-assessment:
 
 **Avoid AI buzzwords** – "why it matters", "that matters", "here's the thing", "this one's for you", "Not X, but Y", "It's not... it's...", "X isn't... it's...", "made a real difference", "genuinely" are off-limits.
 
+**Avoid "quietly" as a signifier** – Don't editorialise with "quietly" (e.g. "quietly rewrites", "quietly changed"). State the action plainly.
+
+**Avoid the two-beat setup-payoff** – Don't pair a short concession with a clipped reversal (e.g. "That sounds small. It isn't.", "Sounds simple. It's not.", "Easy, right? Wrong."). State the point directly.
+
 ## Content Structure Template
 
 ```markdown
@@ -184,5 +188,5 @@ Good luck, and happy [doing the thing]! 🚀
 | "It's easy to fix bugs" | "Bugs are a normal part of building. Here's how to approach them." |
 | "Obviously you'll need a backend" | "Your app needs a backend to save data. Here's why..." |
 | "Great job!" | "You've just built your first feature. That's the hardest part done." |
-| "Learn to build apps" | "Go from 'I can't build apps' to 'I just published my first one'" |
+| "Learn to build apps" | "Publish your first app, even if you've never written code" |
 | "This will teach you X" | "By the end, you'll be able to X" |

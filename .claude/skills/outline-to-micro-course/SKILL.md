@@ -32,7 +32,7 @@ description: Use this checklist when generating micro-course content from an out
 
 **Introduce the course after the comics.** Add a brief step after the comics that tells the learner what they'll walk away with. List the concrete outcomes, not the topics. Jumping straight from comics into teaching feels too abrupt. The learner needs a moment to understand what they're signing up for before the first lesson starts.
 
-**Transformation hook in the first video/intro.** Frame the course as identity change: "From X to Y." Not "You'll learn A, B, C" but "You'll become someone who..." Example: "From 'I can't build apps' to 'I just published my first one.'"
+**Transformation hook in the first video/intro.** Frame the course as identity change, not a topic list. Not "You'll learn A, B, C" but "You'll become someone who...". Make the benefit concrete: name what the learner will actually be able to do by the end. Example: "By the end, you'll have published your first app, even if you've never written a line of code."
 
 **One running example throughout.** Use Dalmie (a dalmatian dog character) building the Book Club Organiser app as the running persona and project across all challenges, consistent with other Little Parrot courses. Don't switch examples mid-course. Consistency makes abstract concepts tangible and helps learners follow along. **Keep Dalmie's backstory consistent:** Dalmie built the app for her friend Sarah, who is the book club organiser. Sarah is the domain expert. When Dalmie needs domain knowledge (e.g., what book club organisers struggle with), she asks Sarah rather than knowing it herself.
 
@@ -260,7 +260,7 @@ Before finalising any **challenge**, confirm:
 Before finalising **the full course**, confirm:
 
 - [ ] Starts with a relatable problem (comics/story) before teaching
-- [ ] First video/intro frames transformation as identity change ("From X to Y")
+- [ ] First video/intro frames transformation as identity change (concrete benefit, not a topic list)
 - [ ] One consistent running example throughout all challenges
 - [ ] Challenge openers excite and preview transformation
 - [ ] Final reflection asks about the full journey and what's next
