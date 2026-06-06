@@ -16,30 +16,29 @@ course:
             imageUrl: /comics/vibe-coding-github-00/panel-00.png
             altText: |-
               A dalmatian dog (called Dalmie) wearing a red shirt sits at a desk with a laptop,
-              looking pleased. Dalmie says, "Just need to fix one tiny typo in the app I built
-              for Sarah's book club."
+              holding a small list. Dalmie says, "Just a few little fixes for Sarah's book club
+              app: a typo, a colour, a new photo."
         - type: comic
           content:
             imageUrl: /comics/vibe-coding-github-00/panel-01.png
             altText: |-
-              Dalmie looks at the laptop, which shows a spinning loading circle labelled "Visual
-              Edits". A small credit counter in the corner is ticking down. Dalmie frowns and
-              says, "The visual editor has been loading for ages... and asking the AI to fix it
-              costs credits again."
+              Dalmie types a request to the AI on the laptop. A credit counter in the corner of
+              the screen ticks down a little with each one. Dalmie says, "Each tiny change means
+              asking the AI... and there go a few more credits."
         - type: comic
           content:
             imageUrl: /comics/vibe-coding-github-00/panel-02.png
             altText: |-
-              Dalmie slumps at the desk with spirals in its eyes, looking deflated. A speech
-              bubble reads, "And last time the visual editor saved over a change I'd already
-              made. There has to be a more reliable way."
+              Dalmie looks at the laptop where the credit counter is now very low, and puts a paw
+              to its head. A speech bubble reads, "All that on tiny tweaks. There must be a way to
+              make small changes without spending credits."
         - type: comic
           content:
             imageUrl: /comics/vibe-coding-github-00/panel-03.png
             altText: |-
               A brightly coloured bird (called Little Parrot) lands on the desk beside Dalmie,
-              smiling warmly. The bird says, "There is. Your app's code already lives on GitHub.
-              I'll show you how to edit it there: no credits, no surprises."
+              smiling warmly. The bird says, "There is! Your app's code already lives on GitHub.
+              You can edit it there yourself, for free."
         - type: text
           title: What you'll walk away with
           content:
