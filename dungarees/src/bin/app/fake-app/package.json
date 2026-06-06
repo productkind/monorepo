@@ -1,5 +1,5 @@
 {
-  "name": "@dungarees/bin",
+  "name": "@dungarees/cli-bin-fake-app",
   "engines": {
     "node": ">=25.0.0"
   },
@@ -8,13 +8,6 @@
   },
   "type": "module",
   "dependencies": {
-    "@dungarees/core": "*",
-    "@dungarees/fs": "*",
-    "@dungarees/sub-process": "*",
-    "@dungarees/transpile": "*",
-    "@dungarees/cli": "*",
-    "yargs": "^18.0.0",
-    "zod": "^3.25.76"
   },
   "devDependencies": {
     "typescript": "^5.9.3",

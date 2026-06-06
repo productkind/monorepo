@@ -1,0 +1,18 @@
+{
+  "name": "@dungarees/bin-cli-yargs-base-app",
+  "engines": {
+    "node": ">=25.0.0"
+  },
+  "scripts": {
+    "type-check": "tsc --noEmit"
+  },
+  "type": "module",
+  "dependencies": {
+    "@dungarees/bin-publish-lib-domain": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "author": "info@productkind.com",
+  "license": "MIT"
+}

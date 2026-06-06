@@ -12,6 +12,7 @@ import type { FileSystem } from '@dungarees/fs/service.ts'
 import type { SubProcessService } from '@dungarees/sub-process/type.ts'
 import { createTranspilerService } from '@dungarees/transpile/service.ts'
 
+import path from 'node:path'
 import { concat, defer, forkJoin, map, mergeMap } from 'rxjs'
 
 export type PublishLib = {
@@ -88,7 +89,27 @@ export const createPublishLibService = ({ fileSystem, subProcess }: PublishLibAr
 
   const publishMultiLib: PublishLib['publishMultiLib'] = ({ dir, registry }) => {
     const sourceDir = `${dir}/src`
-    const packageDirs$ = fileSystem.readDir(sourceDir)
+    const packageDirs$ = fileSystem.glob(`${sourceDir}/**/package.json`).pipe(
+      map((packageJsonPaths) =>
+        packageJsonPaths.map((jsonPath) => {
+          const b = path.relative(sourceDir, jsonPath)
+          const a = b.replace('/package.json', '')
+          console.log(
+            b,
+            'Found package.json at:',
+            jsonPath,
+            'mapped to package dir:',
+            a,
+            'src',
+            sourceDir,
+          )
+          return a
+        }),
+      ),
+    )
+    fileSystem
+      .readDir(sourceDir)
+      .subscribe((content) => console.log('Content of source dir:', content))
     const readVersion$ = fileSystem.readFile(`${dir}/config/version.json`, 'utf-8').pipe(
       map((content) => {
         const parsed = JSON.parse(content)

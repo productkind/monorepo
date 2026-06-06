@@ -1,5 +1,6 @@
-import { type InternalServices } from '../internal-services/type.ts'
-import { publishLibYargsModule } from '../publish-lib/yargs-module.ts'
+import { type InternalServices } from './internal-services.ts'
+
+import { publishLibYargsModule } from '@dungarees/bin-publish-lib-cli-yargs/yargs-module.ts'
 
 import yargs from 'yargs'
 

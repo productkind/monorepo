@@ -1,9 +1,9 @@
-import type { DungareesBinExternalServices } from '../external-services/index.ts'
+import type { DungareesBinExternalServices } from './external-services.ts'
 
 import {
   createPublishLibService,
   type PublishLib,
-} from '@dungarees/bin/service/publish-lib/service.ts'
+} from '@dungarees/bin-publish-lib-domain/behavior.ts'
 
 export type DungareesBinInternalServices = {
   publishLib: PublishLib

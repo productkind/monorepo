@@ -1,0 +1,26 @@
+{
+  "name": "@dungarees/cli-bin",
+  "engines": {
+    "node": ">=25.0.0"
+  },
+  "scripts": {
+    "type-check": "tsc --noEmit"
+  },
+  "type": "module",
+  "dependencies": {
+    "yargs": "^18.0.0",
+    "@dungarees/fs": "*",
+    "@dungarees/sub-process": "*",
+    "@dungarees/bin-cli-yargs-base-app": "*",
+    "@dungarees/bin-publish-lib-cli-yargs": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vitest": "^3.0.2"
+  },
+  "bin": {
+    "dungarees": "./dungarees.ts"
+  },
+  "author": "info@productkind.com",
+  "license": "MIT"
+}

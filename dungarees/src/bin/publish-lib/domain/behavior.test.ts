@@ -1,4 +1,4 @@
-import { createPublishLibService } from './service.ts'
+import { createPublishLibService } from './behavior.ts'
 
 import { createFakeFileSystem } from '@dungarees/fs/fake.ts'
 import { collectValuesFrom } from '@dungarees/rxjs/util.ts'
@@ -168,12 +168,12 @@ test('publish a multi-lib folder', async () => {
     '/multi-lib/src/lib-1/file-1.ts': srcFile1,
     '/multi-lib/src/lib-1/file-2.ts': srcFile2,
     '/multi-lib/src/lib-1/run.ts': srcFile3,
-    '/multi-lib/src/lib-2/package.json': JSON.stringify({
+    '/multi-lib/src/sub/lib-2/package.json': JSON.stringify({
       name: '@org/lib-2',
       type: 'module',
     }),
 
-    '/multi-lib/src/lib-2/utils.ts': srcFile4,
+    '/multi-lib/src/sub/lib-2/utils.ts': srcFile4,
   })
   const { subProcess, executedCommands } = createFakeSubProcessService([
     {

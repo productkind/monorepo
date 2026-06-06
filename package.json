@@ -21,10 +21,11 @@
   "homepage": "https://github.com/productkind/monorepo#readme",
   "license": "SEE LICENSE IN LICENSE.md",
   "dependencies": {
-    "@dungarees/bin": "*"
+    "@dungarees/cli-bin": "*"
   },
   "workspaces": [
     "dungarees/src/*",
+    "dungarees/src/bin/**/",
     "dungarees/e2e/",
     "productkind/scripts/",
     "seminars/scripts/",

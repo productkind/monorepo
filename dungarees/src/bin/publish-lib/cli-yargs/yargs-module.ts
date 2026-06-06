@@ -1,9 +1,12 @@
-import {printStido} from '@dungarees/cli/utils.ts'
-import { type DungareesBinInternalServices } from '../internal-services/type.ts'
-
+import type { PublishLib } from '@dungarees/bin-publish-lib-domain/behavior.ts'
 import { type CommandModule } from '@dungarees/cli/type.ts'
+import { printStido } from '@dungarees/cli/utils.ts'
 
-export const publishLibYargsModule = ({ publishLib }: DungareesBinInternalServices): CommandModule<PublishLibArgs> => {
+export const publishLibYargsModule = ({
+  publishLib,
+}: {
+  publishLib: PublishLib
+}): CommandModule<PublishLibArgs> => {
   return {
     command: 'publish-multi-lib [lib-path]',
     describe: 'Publish a library',
@@ -24,7 +27,6 @@ export const publishLibYargsModule = ({ publishLib }: DungareesBinInternalServic
   }
 }
 
-
 type PublishLibArgs = {
-  libPath: string,
+  libPath: string
 }

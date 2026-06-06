@@ -13,7 +13,7 @@ Given('the Dungarees Binary is published', async function (world) {
 When('the user installs the Dungarees Binary', async function (world) {
   const nodeCommandLine = world.get('nodeCommandLine')
   await nodeCommandLine.execWithAssertions(
-    'npm install -g @dungarees/bin --registry http://npmregistry:4873',
+    'npm install -g @dungarees/cli-bin --registry http://npmregistry:4873',
   )
 })
 
