@@ -6,7 +6,7 @@ course:
   learningOutcomes:
     - Edit your app's copy and small visual details on GitHub without spending Lovable credits
     - Find the exact file behind anything you see in your app using the browser Inspect tool
-    - Read a diff and a commit history so your code stops feeling like a black box
+    - Read a diff and a commit history so you understand how changes are made and tracked
     - Understand commits, branches, and how GitHub and Lovable stay in sync
     - Decide when to edit on GitHub and when to prompt Lovable
   challenges:
@@ -43,9 +43,11 @@ course:
           title: What you'll walk away with
           content:
             body: |-
-              By the end of this course, you'll be someone who can open your app's code, change what you want, and save it, all without spending a Lovable credit or waiting on a slow editor.
+              By the end of this course, you'll be someone who can open your app's code, change what you want, and save it, **all without spending a Lovable credit**.
 
-              You'll be able to fix copy, swap an image, tidy up a small detail, and understand what your app is actually made of. The code stops being a mystery, and that makes you better at guiding your AI tools too.
+              You'll be able to **fix copy, swap an image, and tidy up small details**. Along the way you'll get a clear sense of how your app's files are organised and how changes are made and tracked. You won't be learning to read code, but it will all feel far less mysterious.
+
+              It's also a first step towards working confidently with **AI agents** like Claude Code, Cursor, or Codex. To use those, you'll access your repo on your own computer and manage version control yourself. The confidence you build here, with commits, history, and finding your way around your repo, is exactly that groundwork.
           subtitle: A quick look at where we're heading
         - type: text
           title: You won't be writing code
@@ -53,7 +55,7 @@ course:
             body: |-
               Let's clear up the big worry first: you do **not** need to learn to code, and you won't be writing any from scratch.
 
-              You'll make small, careful edits to text and details that are already there, the same way you'd fix a typo in a document. And if anything looks off, every change can be undone. Nothing you do here can break your app for good.
+              You'll make small, careful edits to text and details that are already there, the same way you'd fix a typo in a document. And if anything looks off, **every change can be undone**. Nothing you do here can break your app for good.
           subtitle: The fear that stops most people
         - type: text
           title: What GitHub is, and why edit there
@@ -61,7 +63,7 @@ course:
             body: |-
               **GitHub** is the place your app's code lives. When you build with Lovable, every change you make is saved to a connected GitHub repository (think of it as the folder that holds your whole app). GitHub also keeps a full history of those changes, so nothing is ever lost.
 
-              Why edit there instead of asking Lovable? Two reasons. First, a change you make yourself costs **no credits**, while prompting the AI to make it does. Second, it's reliable: you change exactly what you mean to, and nothing else.
+              Why edit there instead of asking Lovable? Two reasons. First, a change you make yourself costs **no credits**, while prompting the AI to make it does. Second, it's **reliable**: you change exactly what you mean to, and nothing else.
           subtitle: Your app's code has a home
         - type: text
           title: You've done version control before
@@ -71,7 +73,7 @@ course:
 
               Google Docs and Microsoft Office keep a history of your document, so you can look back at earlier versions and restore them. GitHub does the same for your app's code. The one real difference is that with GitHub you give each change a short name, so you can see what changed at a glance without reading any code.
 
-              Plenty of people use version control for documents, not only code. Some even write whole books this way. And because the history lives online, it's safe and reachable from anywhere. It's also why a developer can never claim the dog ate their homework. 😉
+              Plenty of people use version control for **documents, not only code**. Some even write whole books this way. And because the history lives online, it's safe and reachable from anywhere. It's also why a developer can never claim the dog ate their homework. 😉
           subtitle: A familiar idea with a new name
         - type: text
           title: But isn't that what Visual Edits is for?
@@ -79,7 +81,7 @@ course:
             body: |-
               Good question. Lovable's **Visual Edits** lets you click an element and change text or colours on the page, and it's free to use. For quick tweaks, it's lovely.
 
-              It can also be unreliable, though. Sometimes it takes a while to load, and sometimes it acts on an older version of your code, which can save over a change you already made. For copy and colour changes you want to stick, editing on GitHub is the more dependable option. That's the skill you're learning here.
+              It can also be unreliable, though. Sometimes it takes a while to load, and sometimes it acts on an older version of your code, which can **save over a change you already made**. For copy and colour changes you want to stick, **editing on GitHub is the more dependable option**. That's the skill you're learning here.
           subtitle: When the in-app editor lets you down
         - type: quiz-question
           title: 'Quiz: The reliable choice'
@@ -109,7 +111,7 @@ course:
           title: Find the text you want to change
           content:
             body: |-
-              Open your repository on GitHub. To find a piece of copy, use the search box at the top of the repo and type a few words exactly as they appear in your app, for example *Suggest a book*.
+              Open your repository on GitHub. To find a piece of copy, use the **search box** at the top of the repo and type a few words exactly as they appear in your app, for example *Suggest a book*.
 
               GitHub shows you the file that contains those words. Click it to open the file, then find your line of text inside it.
           subtitle: Search is the quickest way in
@@ -158,9 +160,9 @@ course:
           title: How your change reaches your app
           content:
             body: |-
-              Once you commit, your change syncs into your Lovable project automatically, usually within seconds.
+              Once you commit, your change syncs into your Lovable project automatically, **usually within seconds**.
 
-              One thing to be clear about: this updates the code in your project, not the live app your visitors see. To update the published version, you still press **Publish** in Lovable, exactly as you do now. So the full path is: edit on GitHub, commit, it syncs into Lovable, then publish.
+              One thing to be clear about: this updates the code in your project, **not the live app your visitors see**. To update the published version, you still press **Publish** in Lovable, exactly as you do now. So the full path is: **edit on GitHub → commit → it syncs into Lovable → publish**.
           subtitle: Commit, sync, then publish
         - type: quiz-question
           title: 'Quiz: Where did it go?'
@@ -213,7 +215,7 @@ course:
             body: |-
               You've already made a real edit on GitHub. That's further than most people ever get.
 
-              In this challenge you'll add a detective skill: finding the exact file behind anything you see in your app, even when there's no text to search for. Once you have this, nothing in your app is hidden from you.
+              In this challenge you'll add a **detective skill**: finding the exact file behind anything you see in your app, even when there's no text to search for. Once you have this, **nothing in your app is hidden from you**.
           subtitle: Time for a detective trick
         - type: text
           title: When search isn't enough
@@ -221,7 +223,7 @@ course:
             body: |-
               Search is perfect for copy. But what about a button with only an icon, an image, or a block of layout with no words in it? There's nothing to type into the search box.
 
-              Luckily, Lovable leaves a clue on every element of your app. You just need to know where to look.
+              Luckily, Lovable leaves **a clue on every element** of your app. You just need to know where to look.
           subtitle: Some things have no words to find
         - type: text
           title: Meet the Inspect tool
@@ -259,9 +261,9 @@ course:
           title: Open that file on GitHub
           content:
             body: |-
-              Now you have a file path and a line number. Go to your repository on GitHub, and either search for the file name or click through the folders to open it.
+              Now you have a **file path** and a **line number**. Go to your repository on GitHub, and either search for the file name or click through the folders to open it.
 
-              Inside the file, scroll to the line number you found. You're now looking at the exact code behind the element you clicked, ready to edit it the same way you edited copy in Challenge 1.
+              Inside the file, scroll to the line number you found. You're now looking at the **exact code behind the element you clicked**, ready to edit it the same way you edited copy in Challenge 1.
           subtitle: From clue to the exact spot
         - type: text
           title: Dalmie tries it
@@ -305,9 +307,9 @@ course:
           title: Let's read the whole map
           content:
             body: |-
-              You can find and edit single files now. In this challenge you'll zoom out and understand the whole repository: how it's laid out, what its history tells you, and a few words that demystify the rest.
+              You can find and edit single files now. In this challenge you'll zoom out and understand the **whole repository**: how it's laid out, what its history tells you, and a few words that demystify the rest.
 
-              The payoff is confidence. When you can name the part you mean, you can guide your AI tools far more precisely too.
+              The payoff is confidence. When you can **name the part you mean**, you can guide your AI tools far more precisely too.
           subtitle: From single files to the big picture
         - type: text
           title: What a repository is
@@ -315,7 +317,7 @@ course:
             body: |-
               A **repository** (or "repo") is the full folder that holds your app's code on GitHub. Everything your app is made of lives inside it.
 
-              Open it and you'll see folders and files. You'll meet the same ones again and again: a folder for your pages, one for your components (the reusable pieces like buttons and cards), and files that handle styling. You don't need to memorise them, just enough to find your way around.
+              Open it and you'll see folders and files. You'll meet the same ones again and again: a folder for your **pages**, one for your **components** (the reusable pieces like buttons and cards), and files that handle **styling**. You don't need to memorise them, just enough to find your way around.
           subtitle: The folder that holds your whole app
           imageUrl: /courses/vibe-coding-github-00/repo-structure.png
         - type: text
@@ -332,7 +334,7 @@ course:
             body: |-
               Every saved change is recorded in the **commit history**: what changed, who changed it, and when. This includes the commits Lovable made as it built your app, sitting right alongside the ones you make.
 
-              Open any commit and you'll see its diff, the same red and green view you met in Challenge 1. Reading the history is like flipping back through the story of how your app came to be.
+              Open any commit and you'll see its **diff**, the same red and green view you met in Challenge 1. Reading the history is like flipping back through the story of how your app came to be.
           subtitle: The story of your app, change by change
           imageUrl: /courses/vibe-coding-github-00/commit-history.gif
         - type: quiz-question
@@ -408,15 +410,15 @@ course:
           title: Now for how it looks
           content:
             body: |-
-              Copy was the warm-up. In this challenge you'll use the same find-and-edit workflow for small visual changes: swapping an image, removing something you don't want, and changing a colour without making a mess.
+              Copy was the warm-up. In this challenge you'll use the same find-and-edit workflow for **small visual changes**: swapping an image, removing something you don't want, and changing a colour without making a mess.
 
-              These are exactly the changes Visual Edits is meant for, and exactly the ones it can fumble. Doing them on GitHub keeps them reliable.
+              These are exactly the changes Visual Edits is meant for, and exactly the ones it can fumble. Doing them on GitHub **keeps them reliable**.
           subtitle: Small visual wins, done reliably
         - type: text
           title: What counts as a safe small change
           content:
             body: |-
-              Keep your GitHub edits small and visual. Good candidates:
+              Keep your GitHub edits **small and visual**. Good candidates:
 
               - Swapping an image for one of your own
               - Removing an element you don't want
@@ -497,7 +499,7 @@ course:
             body: |-
               Look how far you've come. You can edit copy, find any element, read your repo, and make visual changes, all on GitHub, all without spending a credit.
 
-              Now you have two ways to change your app: editing on GitHub, and prompting Lovable. This final challenge gives you a simple rule for choosing well, and a steady habit to keep everything in sync.
+              Now you have **two ways to change your app**: editing on GitHub, and prompting Lovable. This final challenge gives you a simple rule for choosing well, and a steady habit to keep everything in sync.
           subtitle: The last piece is knowing which to use
         - type: text
           title: The decision in one line
@@ -513,9 +515,9 @@ course:
           title: Why this split works
           content:
             body: |-
-              Editing on GitHub is precise: you change one known thing and nothing else. That's perfect for tweaks, and it doesn't cost credits or risk the AI rewriting more than you asked.
+              Editing on GitHub is **precise**: you change one known thing and nothing else. That's perfect for tweaks, and it doesn't cost credits or risk the AI rewriting more than you asked.
 
-              Building something genuinely new is where the AI earns its keep. Trying to hand-build a whole feature on GitHub would be slow and frustrating, the wrong tool for the job. Spend your credits where they create the most value.
+              Building something genuinely new is **where the AI earns its keep**. Trying to hand-build a whole feature on GitHub would be slow and frustrating, the wrong tool for the job. Spend your credits where they create the most value.
           subtitle: Right tool, right job
         - type: quiz-question
           title: 'Quiz: Which tool?'
@@ -535,7 +537,7 @@ course:
           title: Keep GitHub and Lovable in sync
           content:
             body: |-
-              Changes flow both ways between GitHub and Lovable, and the sync takes a few seconds, not an instant. So after you commit, give it a moment before assuming something went wrong.
+              Changes flow **both ways** between GitHub and Lovable, and the sync takes **a few seconds**, not an instant. So after you commit, give it a moment before assuming something went wrong.
 
               And remember the final step: syncing updates your project, but your visitors only see changes after you press **Publish** in Lovable.
           subtitle: A few seconds, then publish
@@ -562,7 +564,7 @@ course:
           content:
             description: Look at everything you can do.
             nextModule: "**Your next step:** Make that one change this week. Then notice how often you reach for a quick GitHub edit instead of spending a credit. Each one builds your confidence and your understanding of your own app."
-            subDescription: "✓ **You edit without spending credits:** Copy, images, colours, removing elements. Reliable, and free.\n\n✓ **You can find anything:** The Inspect trick points you to the exact file behind anything you see.\n\n✓ **You read your own code:** Repositories, commits, diffs, branches, history. The black box is open.\n\n✓ **You know which tool to use:** GitHub for small and specific, Lovable for new and big.\n\n✓ **You keep things in sync:** Edit, commit, let it sync, then publish.\n\nThe deeper win is confidence. Your app's code is no longer a mystery, which makes you better at guiding every AI tool you'll use from here.\n\n**Reusable tools from this course:** the Credit-Free Edit Checklist, the Inspect Trick Cheat Sheet, the GitHub Glossary for Vibe Coders, and the GitHub vs Lovable Decision Checklist. Keep them close while you build.\n\nWant to go deeper into understanding your code and your product? These pair well:\n\n- [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview)\n- [Build a Valuable Product: How to Break Down Your Idea for Vibe Coding](https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview)\n- [Fix Bugs with Confidence: Debugging Your Lovable App](https://littleparrot.app/aaab45b7-209a-4578-a515-3e55687f0c53/course-overview)"
+            subDescription: "✓ **You edit without spending credits:** Copy, images, colours, removing elements. Reliable, and free.\n\n✓ **You can find anything:** The Inspect trick points you to the exact file behind anything you see.\n\n✓ **You can read your repo:** Repositories, commits, diffs, branches, history. You know how your app is organised and how changes are tracked.\n\n✓ **You know which tool to use:** GitHub for small and specific, Lovable for new and big.\n\n✓ **You keep things in sync:** Edit, commit, let it sync, then publish.\n\nThe deeper win is confidence. Your repo feels far less mysterious, which makes you better at guiding every AI tool you'll use from here.\n\n**Reusable tools from this course:** the Credit-Free Edit Checklist, the Inspect Trick Cheat Sheet, the GitHub Glossary for Vibe Coders, and the GitHub vs Lovable Decision Checklist. Keep them close while you build.\n\nWant to go deeper into how your app works and your product? These pair well:\n\n- [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview)\n- [Build a Valuable Product: How to Break Down Your Idea for Vibe Coding](https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview)\n- [Fix Bugs with Confidence: Debugging Your Lovable App](https://littleparrot.app/aaab45b7-209a-4578-a515-3e55687f0c53/course-overview)"
       title: Your Sustainable Workflow
       isFree: false
       skills:
@@ -574,4 +576,4 @@ course:
   titleSplit:
     - Save Lovable Credits
     - with GitHub
-  description: Learn to edit your app's code directly on GitHub, so you can fix copy, swap images, and tidy up your app without spending Lovable credits or fighting a slow in-app editor. You'll come away able to find any part of your code, change it reliably, and understand what your app is made of.
+  description: Learn to edit your app's code directly on GitHub, so you can fix copy, swap images, and tidy up your app without spending Lovable credits or fighting a slow in-app editor. You'll come away able to find any part of your app, change it reliably, and understand how your files are organised and how changes are tracked.

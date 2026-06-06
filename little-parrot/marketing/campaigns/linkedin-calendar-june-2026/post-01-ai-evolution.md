@@ -1,17 +1,14 @@
 # Post 01 — Wed 3 Jun
 
-**Angle:** How my way of working with AI evolved: chat → projects → Claude Code.
-**Transferable tip:** The upgrade that matters is moving from copy-paste to a tool that edits your real files and shows you every change.
-**Check:** The "tidied a line two paragraphs away" moment is illustrative. Swap in a real instance if you have a truer one — the authenticity guide wants the specific to be real.
+**Angle:** How we use AI to make our courses, and how the way we do it evolved (ChatGPT → projects → Claude Code).
+**Key point:** The content and expertise are ours; AI helps put it into course format faster. Being able to see every change is what keeps us in control of our own words.
 
 ---
 
-Two years ago my whole workflow with AI was copy and paste. I'd ask ChatGPT or Claude something, then paste the answer into my real document by hand. I was carrying everything across one paste at a time.
+We use AI to help make our Little Parrot courses. To be clear about what that means: the content, what to teach and how, comes from what Tamas and I have learned over years of building products. AI helps us turn that into a proper course format, which would take the two of us a very long time to do by hand.
 
-Then I moved to projects inside those tools, so I didn't have to re-explain my context each time. Better, but I was still copying the output over by hand, and I still couldn't see what had changed between one version and the next.
+The way we do that has changed a lot. When I started, I worked in ChatGPT. I'd write the content myself, ask it to help shape a section, then copy the result back into my document. It worked, but it was slow, and I kept running into the same problem: when I asked it to change one small thing, it gave me back the whole section rewritten. Sometimes it had reworded a sentence I was happy with, or dropped a point I wanted to keep, and I didn't always notice.
 
-Now I use an AI agent, Claude Code, which works directly in my files. What I keep noticing is the visibility. I see every edit as a before and after, the way developers review code, so nothing changes without me seeing it.
+Now I use Claude Code, an AI agent that edits my files directly. The useful part for me is that I can see every change it makes, the way developers review edits to code, with the old and new version side by side. If I ask it to tighten one paragraph, I can check that it changed only that paragraph, and that our ideas are still intact.
 
-The first time it edited one of our course files, I watched it tidy a line two paragraphs away from the part I'd asked about. Small, harmless, and I'd asked for none of it. With a chat assistant I'd have pasted the whole document back in and never spotted the difference.
-
-I'm still working out where my line is. Some things I let it change freely, others I read edit by edit. I'm not going back to copying answers across by hand though.
+If you write something important with AI, one thing that helps is to work in small changes and check what changed before you accept it, instead of letting it hand back a whole rewritten version each time. It keeps you in control of your own words.
