@@ -14,6 +14,7 @@ description: Use this checklist when generating micro-course content from an out
 - The first challenge must hook the learner with a specific, reusable tool they can apply immediately: a formula, a template, a checklist, or a practical technique. The learner decides based on the first challenge whether to subscribe, so they need to walk away with concrete value, not just motivation or mindset. Avoid hooks that rely on unrealistic scenarios (e.g., "strangers start asking for your product"). Most learners have to work hard for attention, so the hook should equip them to do that work.
 - The learner should encounter a practical and hands-on step in the micro-course as soon as possible. Build their mindset during the micro-course, connecting it to practical experiences, not in a separate challenge focusing only on the mindset. Mindset points (like "you don't need investors") work best as supporting content after the learner has already engaged with a practical exercise.
 - Include in the micro-course description the transformation the learner will realise by the end. Include what the learner will be able to do after completing the micro-course.
+- **Don't oversell the transformation.** Describe only what the course actually teaches. If it doesn't teach the learner to read code, don't claim "the code stops being a mystery"; name the real outcome instead (e.g., "you'll understand how your files are organised and how changes are tracked"). Check the description, the learning outcomes, and the course-end recap for claims the content doesn't deliver, and soften them consistently.
 - When creating quiz steps, vary which answer is the correct one (not always the second one).
 - **Reusable artifact per challenge:** Every challenge should give the learner something they can reuse outside the course: a formula, a template, a checklist, a prompt template, or a script. If a challenge only explains a concept without a reusable artifact, it's incomplete.
 - **Realistic examples:** Assume the learner has zero traction, zero audience, and no business experience. Every example must be achievable by someone starting from nothing. Don't show outcomes that require luck or organic demand (e.g., "40 sign-ups in two weeks" or "strangers start asking for your product"). Show outcomes that result from specific actions the learner took.
@@ -23,12 +24,16 @@ description: Use this checklist when generating micro-course content from an out
 - **Show where reusable tools will come back.** When a challenge teaches a formula, template, or technique that the learner will reuse in later challenges, add a step listing where it will show up. This motivates the learner to take it seriously and connects the dots across the course. Don't leave the learner wondering "why does this matter?"
 - **Verify tool-specific advice against official documentation.** When a course teaches how to use a specific tool (e.g., PostHog, Stripe, Google Workspace), check the tool's actual documentation before writing setup instructions, configuration steps, or terminology. Use the tool's own names for settings, buttons, and concepts. Don't generate setup instructions from general knowledge.
 - **Fact-check before stating best practices.** If you're about to write something as a principle, best practice, or rule (in text steps, quiz explanations, or subDescriptions), and you're not confident it's grounded in real domain knowledge, look it up using WebSearch or WebFetch before including it. Don't state uncertain opinions as facts. Don't silently skip it either. Verify first, then write.
+- **Verify the course's core premise, not just individual claims.** Before building, confirm the premise the whole course rests on actually holds against the tool's documentation. A free or built-in feature can undercut it (e.g., "edit on GitHub to save credits" weakens once you confirm the tool's visual editor is already free). If the premise is shaky, reframe it early (e.g., shift the angle from "save credits" to "more reliable") rather than teaching something misleading. Surface this to the user before generating the full course.
+- **Don't teach unsound or risky workflows.** If a useful technique needs tooling that's out of scope for the course (e.g., the command line), don't teach a fragile workaround that could break the learner's work. Defer it to a future course and explain why, rather than shipping something that looks easy but isn't safe.
 
 ---
 
 ## Narrative Structure
 
 **Start with a relatable problem, not a lesson.** Use comics or a story to show someone's frustration before any teaching begins. Learners should feel "that's me" before they learn anything. The comics should set up the **full course arc** (the spark, the overwhelm, the guide offering a path), not only introduce the first challenge's topic.
+
+**Don't disparage the tool the learner relies on.** The problem in the comics and intro should come from the learner's pain (cost, time, friction, overwhelm), not from bashing a feature of a product they use and pay for. Show the frustration without making the tool the villain. Any honest limitation of a specific feature is better placed later, as a calm, factual aside in a text step, not as the opening complaint.
 
 **Introduce the course after the comics.** Add a brief step after the comics that tells the learner what they'll walk away with. List the concrete outcomes, not the topics. Jumping straight from comics into teaching feels too abrupt. The learner needs a moment to understand what they're signing up for before the first lesson starts.
 
@@ -54,6 +59,10 @@ description: Use this checklist when generating micro-course content from an out
 
 **Define unfamiliar terms inline.** If a concept is mentioned before its dedicated challenge (e.g., "directory submissions" in Challenge 1 that are taught in Challenge 5), add a brief inline explanation so the learner isn't confused. Don't assume they'll know what it means because it's covered later.
 
+**Introduce a reassuring analogy after the concept it explains, not before.** If you compare a new idea to something familiar (e.g., version control to a document's edit history in Google Docs), make sure the learner already knows what the new idea is. An analogy that arrives before the concept reads as coming out of nowhere, and the learner won't see why you're mentioning it.
+
+**Examples must model best practice.** A worked example should never demonstrate an anti-pattern in passing, because learners copy what they see. If you show a UI change, change the shared style once rather than recolouring each element; if you show a workflow, show the safe version. The "how Dalmie did it" example is teaching the method, not just the result.
+
 **Specify who in exercises that involve other people.** If an exercise asks the learner to talk to people, test something on others, or collect feedback, specify who those people should be (e.g., "people who match your target audience", not "five people"). Without this, learners default to friends and family who may not give useful reactions.
 
 **Quiz explanations should teach, not just confirm.** Use the explanation text after a quiz answer as a teaching moment. Introduce a principle, reframe the concept, or add nuance that wasn't in the text steps. "Correct, B is the right answer" wastes a learning opportunity. "Features don't equal value. A list of features tells people what the product has, but not what they can achieve with it" teaches something new.
@@ -68,6 +77,8 @@ description: Use this checklist when generating micro-course content from an out
 
 **Every toolkit mention must be a clickable link.** Don't write "check the toolkit for the setup guide" without linking to the specific item. The learner shouldn't have to go find it.
 
+**When a referenced toolkit item doesn't exist yet, don't invent a URL.** This resolves the tension with the rule above: link the item if it already exists in `toolkit-links.md`, otherwise either inline the needed content into the course steps or reference the item by name without a link. Flag the missing items to the user so they can be created later. Never fabricate a placeholder toolkit URL.
+
 **Weave toolkit references into the text naturally.** Make sure that it reads well and doesn't break the flow of the content.
 
 **Categories must be on the same level.** When a step presents options or models for the learner to choose between, check that they're the same type of thing. If they're not, split them into separate decisions. For example, "subscription vs one-time payment" is one decision (how you charge), "free trial vs freemium" is a different decision (how people try). Don't mix them into one list.
@@ -75,6 +86,8 @@ description: Use this checklist when generating micro-course content from an out
 **Split steps with more than 3 items.** When a step introduces more than 3 concepts, techniques, or options, split it into two consecutive steps. Long lists lose the learner's attention.
 
 **Dense information should be scannable.** Avoid tables (they break on mobile) and long paragraphs with multiple concepts. Use stacked formats: bold name, one-line description, key details on separate lines. Design for vertical reading on a phone screen.
+
+**Style every text step for scanning.** Use **bold** for the key concept or benefit in each paragraph, and *italics* for UI labels, button names, and short examples. Bold technical terms on first use. Don't leave flat paragraphs with no emphasis, and don't over-bold either: one or two emphases per paragraph, so a learner skimming the bold still gets the gist. Quiz options stay unstyled (formatting shouldn't hint at the answer).
 
 **Don't assume which option the learner will choose.** When teaching decision frameworks with multiple paths (e.g., pricing models, trial types), keep the guidance flexible so it applies regardless of which path the learner takes. Don't write follow-up steps that only make sense for one option.
 
@@ -291,6 +304,9 @@ After generating the full course, do a self-review pass before presenting it. Ch
 - [ ] Does every quiz test judgement or application, not recall of the preceding step?
 - [ ] Are all quiz answer options similar in length (correct answer not visually obvious)?
 - [ ] Is every text step short enough to read without scrolling? If it has 3+ concepts, is it split?
+- [ ] Is every text step styled for scanning (bold key concept, italic UI labels/examples), without over-bolding?
+- [ ] Do the comics set up the problem from the learner's pain, without bashing the tool?
+- [ ] Do the description, learning outcomes, and course-end recap avoid claiming skills the course doesn't actually teach?
 - [ ] Does the first step after comics introduce the course outcomes, not jump into teaching?
 - [ ] Does the learner's biggest fear get addressed before the first teaching step?
 - [ ] Are all URLs verified against course-links.md and toolkit-links.md?
