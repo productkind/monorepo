@@ -1,0 +1,578 @@
+course:
+  id: 0c2b1b82-d451-4499-b152-c58d8f58ff2b
+  cover: /courses/vibe-coding-github-00/cover.gif
+  title: Save Lovable Credits with GitHub
+  note: 'This course uses only the GitHub website in your browser. No command line, no extra tools to install. You will need a Lovable project connected to GitHub to follow along.'
+  learningOutcomes:
+    - Edit your app's copy and small visual details on GitHub without spending Lovable credits
+    - Find the exact file behind anything you see in your app using the browser Inspect tool
+    - Read a diff and a commit history so your code stops feeling like a black box
+    - Understand commits, branches, and how GitHub and Lovable stay in sync
+    - Decide when to edit on GitHub and when to prompt Lovable
+  challenges:
+    - steps:
+        - type: comic
+          content:
+            imageUrl: /comics/vibe-coding-github-00/panel-00.png
+            altText: |-
+              A dalmatian dog (called Dalmie) wearing a red shirt sits at a desk with a laptop,
+              looking pleased. Dalmie says, "Just need to fix one tiny typo in the app I built
+              for Sarah's book club."
+        - type: comic
+          content:
+            imageUrl: /comics/vibe-coding-github-00/panel-01.png
+            altText: |-
+              Dalmie looks at the laptop, which shows a spinning loading circle labelled "Visual
+              Edits". A small credit counter in the corner is ticking down. Dalmie frowns and
+              says, "The visual editor has been loading for ages... and asking the AI to fix it
+              costs credits again."
+        - type: comic
+          content:
+            imageUrl: /comics/vibe-coding-github-00/panel-02.png
+            altText: |-
+              Dalmie slumps at the desk with spirals in its eyes, looking deflated. A speech
+              bubble reads, "And last time the visual editor saved over a change I'd already
+              made. There has to be a more reliable way."
+        - type: comic
+          content:
+            imageUrl: /comics/vibe-coding-github-00/panel-03.png
+            altText: |-
+              A brightly coloured bird (called Little Parrot) lands on the desk beside Dalmie,
+              smiling warmly. The bird says, "There is. Your app's code already lives on GitHub.
+              I'll show you how to edit it there: no credits, no surprises."
+        - type: text
+          title: What you'll walk away with
+          content:
+            body: |-
+              By the end of this course, you'll be someone who can open your app's code, change what you want, and save it, all without spending a Lovable credit or waiting on a slow editor.
+
+              You'll be able to fix copy, swap an image, tidy up a small detail, and understand what your app is actually made of. The code stops being a mystery, and that makes you better at guiding your AI tools too.
+          subtitle: A quick look at where we're heading
+        - type: text
+          title: You won't be writing code
+          content:
+            body: |-
+              Let's clear up the big worry first: you do **not** need to learn to code, and you won't be writing any from scratch.
+
+              You'll make small, careful edits to text and details that are already there, the same way you'd fix a typo in a document. And if anything looks off, every change can be undone. Nothing you do here can break your app for good.
+          subtitle: The fear that stops most people
+        - type: text
+          title: You've done version control before
+          content:
+            body: |-
+              Here's something reassuring: you've already used version control, even if no one called it that.
+
+              Google Docs and Microsoft Office keep a history of your document, so you can look back at earlier versions and restore them. GitHub does the same for your app's code. The one real difference is that with GitHub you give each change a short name, so you can see what changed at a glance without reading any code.
+
+              Plenty of people use version control for documents, not only code. Some even write whole books this way. And because the history lives online, it's safe and reachable from anywhere. It's also why a developer can never claim the dog ate their homework. 😉
+          subtitle: A familiar idea with a new name
+        - type: text
+          title: What GitHub is, and why edit there
+          content:
+            body: |-
+              **GitHub** is the place your app's code lives. When you build with Lovable, every change you make is saved to a connected GitHub repository (think of it as the folder that holds your whole app).
+
+              Why edit there instead of asking Lovable? Two reasons. First, a change you make yourself costs **no credits**, while prompting the AI to make it does. Second, it's reliable: you change exactly what you mean to, and nothing else.
+          subtitle: Your app's code has a home
+        - type: text
+          title: But isn't that what Visual Edits is for?
+          content:
+            body: |-
+              Good question. Lovable's **Visual Edits** lets you click an element and change text or colours on the page, and it's free to use. For quick tweaks, it's lovely.
+
+              It can also be unreliable, though. Sometimes it takes a while to load, and sometimes it acts on an older version of your code, which can save over a change you already made. For copy and colour changes you want to stick, editing on GitHub is the more dependable option. That's the skill you're learning here.
+          subtitle: When the in-app editor lets you down
+        - type: quiz-question
+          title: 'Quiz: The reliable choice'
+          content:
+            question: Dalmie needs to fix a typo in a button label. Visual Edits has been loading for two minutes, and last week it saved over one of her changes. What's the most dependable way to fix the typo?
+            options:
+              - Edit the text directly on GitHub and save it
+              - Wait for Visual Edits to finish loading and try again
+              - Ask Lovable in the chat to fix the typo
+              - Rebuild the button from scratch
+            explanation: |-
+              Editing on GitHub is the dependable choice here. Visual Edits can be slow and can act on an out-of-date version of your code, and prompting the AI would spend credits on a one-word fix.
+
+              Going straight to the source means you change exactly what you mean to, for free.
+            correctAnswer: 0
+        - type: text
+          title: First, connect GitHub to Lovable
+          content:
+            body: |-
+              Before you can edit on GitHub, your Lovable project needs to be connected to it. You only do this once.
+
+              In Lovable, open **Project settings → Git → GitHub** (or use the **+** menu in the chat), click to connect, and authorise the Lovable GitHub app. Lovable then creates a repository for your project and keeps it in sync.
+
+              The full screen-by-screen steps live in the **GitHub Setup Guide** (a companion to this course). Once you're connected, come back here.
+          subtitle: A one-time setup
+        - type: text
+          title: Find the text you want to change
+          content:
+            body: |-
+              Open your repository on GitHub. To find a piece of copy, use the search box at the top of the repo and type a few words exactly as they appear in your app, for example *Suggest a book*.
+
+              GitHub shows you the file that contains those words. Click it to open the file, then find your line of text inside it.
+          subtitle: Search is the quickest way in
+          imageUrl: /courses/vibe-coding-github-00/github-search.gif
+        - type: text
+          title: Edit it right in the browser
+          content:
+            body: |-
+              With the file open, click the **pencil icon** (Edit this file) in the top right. Now you can change the text exactly like you would in any text box.
+
+              Change only the words you came to change. Leave the code around them as it is. You're a careful editor here, not a rewriter.
+          subtitle: GitHub has a built-in editor
+          imageUrl: /courses/vibe-coding-github-00/github-edit.gif
+        - type: text
+          title: Check the diff before you save
+          content:
+            body: |-
+              When you go to save, GitHub shows you a **diff**: the old version and the new version side by side. Removed text appears in red, added text in green.
+
+              Reading the diff takes a few seconds and is how you confirm you changed what you meant, and nothing else. Keep each change **small**: one thing at a time. A small change is easy to read, easy to describe, and if it ever causes a problem, easy to find and undo on its own.
+          subtitle: A quick habit that saves headaches
+          imageUrl: /courses/vibe-coding-github-00/github-diff.png
+        - type: text
+          title: Save your change with a commit
+          content:
+            body: |-
+              Saving a change on GitHub is called **committing** it. GitHub asks for a short note describing what you changed. That note is the **commit message**.
+
+              A good commit message is short and says what changed, not how. *Fix typo on book suggestion button* is great. *Update* or *changes* won't help you later. A simple trick: finish the sentence "This change will..."
+          subtitle: A commit is just a saved change with a name
+        - type: quiz-question
+          title: 'Quiz: A clear commit message'
+          content:
+            question: Dalmie just shortened the welcome heading on her home page. Which commit message will help her most when she reads her history in a month's time?
+            options:
+              - stuff
+              - Update
+              - Made some changes to the site today
+              - Shorten the welcome heading on the home page
+            explanation: |-
+              The clear winner names exactly what changed in a few words. "Update", "stuff", and "made some changes" all leave you guessing later.
+
+              A good test: could you tell what this commit did without opening it? If not, the message needs to be more specific.
+            correctAnswer: 3
+        - type: text
+          title: How your change reaches your app
+          content:
+            body: |-
+              Once you commit, your change syncs into your Lovable project automatically, usually within seconds.
+
+              One thing to be clear about: this updates the code in your project, not the live app your visitors see. To update the published version, you still press **Publish** in Lovable, exactly as you do now. So the full path is: edit on GitHub, commit, it syncs into Lovable, then publish.
+          subtitle: Commit, sync, then publish
+        - type: quiz-question
+          title: 'Quiz: Where did it go?'
+          content:
+            question: Dalmie edits a heading on GitHub and commits it. A minute later she sees the new heading inside her Lovable project, but the live app her friends use still shows the old one. What's going on?
+            options:
+              - The commit failed and she needs to redo it
+              - GitHub and Lovable are no longer connected
+              - She hasn't pressed Publish in Lovable yet
+              - The change will show on the live app in a few days
+            explanation: |-
+              Committing updates your project's code and syncs it into Lovable, but the live app only changes when you press Publish.
+
+              This is a useful mental model: editing and publishing are two separate steps. You can make several edits, then publish once when you're happy.
+            correctAnswer: 2
+        - type: free-text-exercise
+          title: Make your first credit-free edit
+          content:
+            description: |-
+              Now it's your turn. Open your repository, find one piece of copy you'd like to fix, and edit it on GitHub.
+
+              Before you commit, write the commit message here. Describe the change in a short, clear line, as if finishing the sentence "This change will..."
+
+              Don't worry about getting it perfect. You can always edit again.
+            placeholder: e.g. Fix typo in the welcome message on the home page
+            systemPrompt: 'You are a friendly GitHub mentor for a non-technical app builder. The learner will paste a commit message for a small copy edit they made on GitHub. Give warm, concise feedback in British English (max 5 short bullet points) on whether the message is clear, specific, and describes a single small change. If it is vague (like "update" or "changes"), suggest a clearer version. If it bundles several changes, gently encourage one change per commit. Do not use em dashes. End with a short encouraging note.'
+            checkerPrompt: 'Check whether this commit message clearly describes a single, specific change in a few words. Flag it only if it is vague (e.g. "update", "changes", "fixes") or describes several unrelated changes at once. This is the commit message:'
+        - type: challenge-end
+          title: "You just edited your app without spending a credit! \U0001F389"
+          content:
+            description: You found your code, changed it, and saved it with a clear commit.
+            nextModule: '**Next challenge:** Searching works when you know the words on the page. But what about a button, an icon, or an image with no text? Next you''ll learn a detective trick that points you straight to the right file, every time.'
+            subDescription: |-
+              This is the core skill the whole course builds on. Editing on GitHub is reliable, costs nothing, and changes exactly what you mean to.
+
+              **Reusable tool:** The **Credit-Free Edit Checklist** captures these steps (search, edit, check the diff, commit, publish) so you can follow them any time without thinking.
+      title: Make Your First Edit Without Spending a Credit
+      isFree: true
+      skills:
+        - GitHub
+        - Version Control
+        - Commits
+        - Vibe Coding
+      description: Edit your app's copy directly on GitHub, so you save credits and avoid the unreliable in-app editor.
+      completionTime: 10:00
+    - steps:
+        - type: text
+          title: You're no longer a beginner
+          content:
+            body: |-
+              You've already made a real edit on GitHub. That's further than most people ever get.
+
+              In this challenge you'll add a detective skill: finding the exact file behind anything you see in your app, even when there's no text to search for. Once you have this, nothing in your app is hidden from you.
+          subtitle: Time for a detective trick
+        - type: text
+          title: When search isn't enough
+          content:
+            body: |-
+              Search is perfect for copy. But what about a button with only an icon, an image, or a block of layout with no words in it? There's nothing to type into the search box.
+
+              Luckily, Lovable leaves a clue on every element of your app. You just need to know where to look.
+          subtitle: Some things have no words to find
+        - type: text
+          title: Meet the Inspect tool
+          content:
+            body: |-
+              Every web browser has a built-in tool called **Inspect** that lets you peek at the building blocks of any page. You don't need to understand what you see. You only need one clue from it.
+
+              To open it, right-click the element you care about in your live app (for example the *Suggest a book* button) and choose **Inspect** from the menu.
+          subtitle: A tool that's already in your browser
+          imageUrl: /courses/vibe-coding-github-00/inspect-open.gif
+        - type: text
+          title: Read the clue Lovable left
+          content:
+            body: |-
+              A panel opens showing the page's code, with your element highlighted. Look for an attribute called **`data-lov-id`**. Lovable adds this to elements to map them back to your source code.
+
+              Its value looks something like `src/components/SuggestButton.tsx:24:6`. That tells you two things: the **file** (`src/components/SuggestButton.tsx`) and the **line number** (`24`) where that element lives.
+          subtitle: data-lov-id points the way
+          imageUrl: /courses/vibe-coding-github-00/data-lov-id.png
+        - type: quiz-question
+          title: 'Quiz: Spot the right tool'
+          content:
+            question: Dalmie wants to change a heart-shaped favourite icon. It has no text label, so typing words into GitHub's search finds nothing. What should she reach for?
+            options:
+              - Keep trying different words in the search box
+              - Use the browser's Inspect tool to read the element's data-lov-id
+              - Delete the icon and ask Lovable to rebuild it
+              - Give up and use Visual Edits instead
+            explanation: |-
+              When there's no text to search for, Inspect is the way in. The data-lov-id tells her exactly which file and line to open.
+
+              This works for anything you can see: icons, images, spacing, buttons. If it's on the screen, it has a clue.
+            correctAnswer: 1
+        - type: text
+          title: Open that file on GitHub
+          content:
+            body: |-
+              Now you have a file path and a line number. Go to your repository on GitHub, and either search for the file name or click through the folders to open it.
+
+              Inside the file, scroll to the line number you found. You're now looking at the exact code behind the element you clicked, ready to edit it the same way you edited copy in Challenge 1.
+          subtitle: From clue to the exact spot
+        - type: text
+          title: Dalmie tries it
+          content:
+            body: |-
+              The welcome image at the top of the Book Club Organiser is still a generic placeholder, and there's no text to search for.
+
+              So Dalmie right-clicks the image, chooses Inspect, and reads its `data-lov-id`: `src/components/Hero.tsx:12:4`. Now she knows precisely which file holds that image, and where. She doesn't change it yet, she's found it. That's the win for this challenge.
+          subtitle: Finding the placeholder image
+        - type: free-text-exercise
+          title: Track down a hidden element
+          content:
+            description: |-
+              Pick something in your app that has no obvious text: an icon, an image, or a section of layout.
+
+              Right-click it, choose Inspect, and find its `data-lov-id`. Paste the file path and line number you found here.
+
+              If you can't find data-lov-id on the exact element, click a slightly larger area around it and look again.
+            placeholder: e.g. src/components/Hero.tsx, line 12
+            systemPrompt: 'You are a friendly GitHub mentor for a non-technical app builder. The learner will paste a file path and line number they found using the browser Inspect tool and the data-lov-id attribute. Confirm warmly that finding the file path is the goal, in British English (max 4 short bullet points). If they pasted something that does not look like a file path, gently explain what a data-lov-id value looks like (a file path ending in .tsx, .ts, or .jsx, followed by a line number) and suggest they inspect a slightly larger element. Do not use em dashes. End with encouragement.'
+            checkerPrompt: 'Check whether the learner pasted something that resembles a source file path (for example ending in .tsx, .ts, .jsx, or .js), ideally with a line number. Flag it only if it clearly is not a file path at all. This is their answer:'
+        - type: challenge-end
+          title: "Nothing in your app is hidden from you now \U0001F50D"
+          content:
+            description: You can find the exact file behind anything you can see on screen.
+            nextModule: "**Next challenge:** You've been opening files one at a time. Next you'll step back and read your whole repository like a map: how it's organised, what your commit history shows, and what a branch actually is."
+            subDescription: |-
+              This trick removes the "but I don't know where it is" blocker for good. Copy, icons, images, layout: if you can see it, you can find it.
+
+              **Reusable tool:** The **Inspect Trick Cheat Sheet** shows the right-click steps and a labelled screenshot of where data-lov-id appears, for when you need a reminder.
+      title: Find the Code Behind Anything You See
+      isFree: false
+      skills:
+        - Browser Inspect
+        - Source Files
+        - Navigation
+      description: Use the browser Inspect tool to find the exact file behind any element, even when there's no text to search for.
+      completionTime: 8:00
+    - steps:
+        - type: text
+          title: Let's read the whole map
+          content:
+            body: |-
+              You can find and edit single files now. In this challenge you'll zoom out and understand the whole repository: how it's laid out, what its history tells you, and a few words that demystify the rest.
+
+              The payoff is confidence. When you can name the part you mean, you can guide your AI tools far more precisely too.
+          subtitle: From single files to the big picture
+        - type: text
+          title: What a repository is
+          content:
+            body: |-
+              A **repository** (or "repo") is the full folder that holds your app's code on GitHub. Everything your app is made of lives inside it.
+
+              Open it and you'll see folders and files. You'll meet the same ones again and again: a folder for your pages, one for your components (the reusable pieces like buttons and cards), and files that handle styling. You don't need to memorise them, just enough to find your way around.
+          subtitle: The folder that holds your whole app
+          imageUrl: /courses/vibe-coding-github-00/repo-structure.png
+        - type: text
+          title: Is your repo private?
+          content:
+            body: |-
+              Your repo may be **private** (only you can see it) or **public** (anyone with the link can). It's worth checking which yours is, in your repository's settings on GitHub, and setting it to private if you'd rather keep it to yourself.
+
+              If your repo is private and you want to show your code to someone, a friend or someone helping you, you invite them as a **collaborator** in the repository settings. They can't reach it otherwise.
+          subtitle: Check it, and know how to share it
+        - type: text
+          title: Your commit history
+          content:
+            body: |-
+              Every saved change is recorded in the **commit history**: what changed, who changed it, and when. This includes the commits Lovable made as it built your app, sitting right alongside the ones you make.
+
+              Open any commit and you'll see its diff, the same red and green view you met in Challenge 1. Reading the history is like flipping back through the story of how your app came to be.
+          subtitle: The story of your app, change by change
+          imageUrl: /courses/vibe-coding-github-00/commit-history.gif
+        - type: quiz-question
+          title: 'Quiz: Sharing your code'
+          content:
+            question: Dalmie's repo is private. She wants Sarah to take a look at the code while they sort out a tricky section together. What does she need to do?
+            options:
+              - Make the whole repo public so anyone can see it
+              - Email Sarah a screenshot of the code
+              - Invite Sarah as a collaborator on the repository
+              - Nothing, Sarah can already see it because it's Dalmie's app
+            explanation: |-
+              A private repo is visible only to you until you invite someone as a collaborator. That keeps your code yours while still letting you share it deliberately.
+
+              Making it public would work too, but then anyone with the link could see it, which usually isn't what you want.
+            correctAnswer: 2
+        - type: text
+          title: What a branch is
+          content:
+            body: |-
+              A **branch** is a separate line of work on your code. You and Lovable both work on the same default branch, usually called `main`.
+
+              Because you're both on `main`, when you commit a change it lands there and shows up right away in the GitHub view before syncing to Lovable. You won't need to create branches in this course. It's enough to recognise the word when you see it.
+          subtitle: Good to know the term
+        - type: text
+          title: Git vs GitHub
+          content:
+            body: |-
+              These two get mixed up, so here's the difference in a breath. **Git** is the system that tracks changes to code. **GitHub** is the website that stores your code and shows it to you in a friendly way.
+
+              You only ever touch GitHub in this course. Git is the engine humming away underneath, the same way you use a website without thinking about the server behind it.
+          subtitle: One is the engine, one is the website
+        - type: quiz-question
+          title: 'Quiz: Which one is that?'
+          content:
+            question: Dalmie says, "I just click around on the website where my code is stored to look at my files." Which one is she describing?
+            options:
+              - GitHub
+              - Git
+              - A branch
+              - A commit
+            explanation: |-
+              The website you click around in is GitHub. Git is the change-tracking system humming underneath, which you never have to touch directly in this course.
+
+              A handy way to remember it: GitHub is the place you visit, Git is the engine behind it.
+            correctAnswer: 1
+        - type: reflection
+          title: Explore your own history
+          content:
+            description: Open your repository's commit history and scroll to the very first commits, the ones Lovable made when it built your app. Click one open to see its diff. What surprised you about how your app was put together?
+            placeholder: Type your answer here...
+            subDescription: Reading your own history is one of the fastest ways to make the code feel like yours. The more familiar it looks, the less intimidating editing becomes.
+        - type: challenge-end
+          title: "Your repository isn't a black box any more \U0001F5FA️"
+          content:
+            description: You can read your repo's structure, its history, and you know how to share it safely.
+            nextModule: "**Next challenge:** You've changed copy. Now you'll apply the same reliable workflow to how your app looks: swapping an image, removing something you don't want, and changing a colour the right way."
+            subDescription: |-
+              Knowing your way around the repo makes every future edit faster, and it makes your AI prompts sharper because you can name exactly what you mean.
+
+              **Reusable tool:** The **GitHub Glossary for Vibe Coders** keeps short, friendly definitions of repository, commit, diff, branch, and Git vs GitHub in one place.
+      title: Read Your Repository Like a Map
+      isFree: false
+      skills:
+        - Repositories
+        - Commit History
+        - Branches
+        - Repo Privacy
+      description: Understand how your app is organised on GitHub, so nothing about your code feels hidden.
+      completionTime: 9:00
+    - steps:
+        - type: text
+          title: Now for how it looks
+          content:
+            body: |-
+              Copy was the warm-up. In this challenge you'll use the same find-and-edit workflow for small visual changes: swapping an image, removing something you don't want, and changing a colour without making a mess.
+
+              These are exactly the changes Visual Edits is meant for, and exactly the ones it can fumble. Doing them on GitHub keeps them reliable.
+          subtitle: Small visual wins, done reliably
+        - type: text
+          title: What counts as a safe small change
+          content:
+            body: |-
+              Keep your GitHub edits small and visual. Good candidates:
+
+              - Swapping an image for one of your own
+              - Removing an element you don't want
+              - A small spacing tweak
+              - A colour change made in the right place
+
+              Bigger structural work (a whole new feature, a new page) is still better done by prompting Lovable. We'll draw that line clearly in the next challenge.
+          subtitle: Stay small here
+        - type: text
+          title: Change shared styles, not one element at a time
+          content:
+            body: |-
+              Here's a principle worth holding on to: when you want a look to apply everywhere, change it in **one shared place**, not on each element separately.
+
+              If you want a different button colour, change your **primary button colour** where it's defined for the whole app, rather than recolouring buttons one by one. Editing them individually is how an app slowly drifts out of step with itself, some buttons one shade, some another.
+          subtitle: The consistency principle
+        - type: quiz-question
+          title: 'Quiz: Keeping it consistent'
+          content:
+            question: Dalmie decides every primary button in the app should be teal instead of blue. There are nine of them across different pages. What's the best approach?
+            options:
+              - Find and recolour each of the nine buttons one by one
+              - Make a new teal button and delete the old ones
+              - Ask Sarah which buttons she uses most and only change those
+              - Change the primary button colour in the one shared place it's defined
+            explanation: |-
+              Shared styles are defined once and used everywhere. Changing that single definition updates all nine buttons at once and keeps them identical.
+
+              Recolouring them individually is slow and almost guarantees that one gets missed and ends up the odd one out.
+            correctAnswer: 3
+        - type: text
+          title: Dalmie makes two changes
+          content:
+            body: |-
+              Remember the placeholder image Dalmie found in Challenge 2, in `src/components/Hero.tsx`? Now she actually swaps it. She opens that file on GitHub, updates the image it points to, checks the diff, and commits with the message *Replace placeholder hero image with book club photo*.
+
+              Then she removes a testimonials section Lovable added that she never asked for. She finds it with the Inspect trick, deletes that block of code, checks the diff to be sure she only removed that section, and commits again.
+          subtitle: Swap an image, remove a section
+        - type: text
+          title: Check it landed, then publish
+          content:
+            body: |-
+              After committing, Dalmie waits a few seconds for the change to sync, then looks at her Lovable project to confirm the image changed and the section is gone.
+
+              Only once she's happy does she press **Publish** so her friends see the update. Edit, check, then publish: the same rhythm every time.
+          subtitle: The same reliable rhythm
+        - type: free-text-exercise
+          title: Plan one small visual change
+          content:
+            description: |-
+              Think of one small visual change your app needs: an image to swap, a section to remove, or a colour to adjust.
+
+              Describe what you'll change and how you'll find it (search or the Inspect trick). If it's a colour you want everywhere, note that you'll change it in the shared place, not on each element.
+            placeholder: e.g. Swap the placeholder logo in the header for my own. I'll find it with Inspect since it has no text.
+            systemPrompt: 'You are a friendly GitHub mentor for a non-technical app builder. The learner describes one small visual change they plan to make on GitHub. Give warm, concise feedback in British English (max 5 short bullet points). Confirm the change is small and visual (image swap, removing an element, spacing, or colour). If they describe a big structural change (a whole new feature or page), gently suggest that is better done by prompting Lovable. If it is a colour meant to apply everywhere, remind them to change it in the shared definition rather than element by element. Do not use em dashes. End with encouragement.'
+            checkerPrompt: 'Check whether the change the learner describes is a small visual edit (image swap, removing an element, spacing tweak, or colour change). Flag it only if it is clearly a large structural change like building a whole new feature or page. This is their plan:'
+        - type: challenge-end
+          title: "You can shape how your app looks now, reliably \U0001F3A8"
+          content:
+            description: You've applied the GitHub workflow to images, sections, and colours.
+            nextModule: "**Next challenge:** You now have two ways to change your app: editing on GitHub and prompting Lovable. The last challenge gives you a simple rule for choosing the right one every time."
+            subDescription: |-
+              Visual changes are where Visual Edits stumbles most, so doing them on GitHub is where reliability pays off the most.
+
+              **Reusable tool:** Keep your **Safe Small Changes** list nearby (swap an image, remove an element, adjust spacing, change a shared colour) so you always know what's safe to do here.
+      title: Make a Small UI Change
+      isFree: false
+      skills:
+        - UI Changes
+        - Design Consistency
+        - Images
+      description: Apply the GitHub workflow to images, sections, and colours, the visual tweaks Visual Edits handles least reliably.
+      completionTime: 9:00
+    - steps:
+        - type: text
+          title: You've got two tools now
+          content:
+            body: |-
+              Look how far you've come. You can edit copy, find any element, read your repo, and make visual changes, all on GitHub, all without spending a credit.
+
+              Now you have two ways to change your app: editing on GitHub, and prompting Lovable. This final challenge gives you a simple rule for choosing well, and a steady habit to keep everything in sync.
+          subtitle: The last piece is knowing which to use
+        - type: text
+          title: The decision in one line
+          content:
+            body: |-
+              Here's the rule of thumb:
+
+              **Edit on GitHub** for small, specific changes you can point to: copy, an image, a colour, removing an element. Reliable and free.
+
+              **Prompt Lovable** for new features and bigger structural work: a new page, a booking system, anything that needs new logic built. That's what the AI is brilliant at, and what's worth spending credits on.
+          subtitle: Small and specific vs new and big
+        - type: text
+          title: Why this split works
+          content:
+            body: |-
+              Editing on GitHub is precise: you change one known thing and nothing else. That's perfect for tweaks, and it doesn't cost credits or risk the AI rewriting more than you asked.
+
+              Building something genuinely new is where the AI earns its keep. Trying to hand-build a whole feature on GitHub would be slow and frustrating, the wrong tool for the job. Spend your credits where they create the most value.
+          subtitle: Right tool, right job
+        - type: quiz-question
+          title: 'Quiz: Which tool?'
+          content:
+            question: Over one afternoon Dalmie wants to do four things. Which one should she prompt Lovable for, rather than edit on GitHub?
+            options:
+              - Fix a typo in the page footer
+              - Add a brand-new "members can RSVP to meetings" feature
+              - Change the heading colour to match the new logo
+              - Remove a duplicate paragraph on the about page
+            explanation: |-
+              An RSVP feature is new functionality: new screens, new data, new logic. That's exactly what the AI is built for, and worth the credits.
+
+              The other three are small, specific changes you can point to, which makes them ideal for a quick, free, reliable edit on GitHub.
+            correctAnswer: 1
+        - type: text
+          title: Keep GitHub and Lovable in sync
+          content:
+            body: |-
+              Changes flow both ways between GitHub and Lovable, and the sync takes a few seconds, not an instant. So after you commit, give it a moment before assuming something went wrong.
+
+              And remember the final step: syncing updates your project, but your visitors only see changes after you press **Publish** in Lovable.
+          subtitle: A few seconds, then publish
+        - type: text
+          title: One small habit to keep
+          content:
+            body: |-
+              The single habit that keeps all of this calm: **make one change at a time, and check it landed before the next one.**
+
+              One small commit, a quick look to confirm it synced, then onward. It's the same reason small commits are easy to undo: when something does go sideways, you'll know exactly which change to look at.
+          subtitle: Small steps, checked as you go
+        - type: free-text-exercise
+          title: Your one change this week
+          content:
+            description: |-
+              Let's turn this into momentum. What's the one change you'll make on GitHub this week instead of prompting Lovable?
+
+              Name the change, and whether you'll find it by searching or with the Inspect trick.
+            placeholder: e.g. This week I'll swap the placeholder profile image, found with Inspect, and commit it.
+            systemPrompt: 'You are a warm, encouraging GitHub mentor for a non-technical app builder finishing a short course. The learner names one change they will make on GitHub this week. Respond in British English (max 4 short bullet points): affirm that it is a good fit for a GitHub edit if it is small and specific, or gently suggest prompting Lovable instead if it is a big new feature. Confirm their plan to find it by search or Inspect. Do not use em dashes. End with a genuine, specific note of encouragement about what they have learned.'
+            checkerPrompt: 'Check whether the learner has named a specific, small change suited to editing on GitHub (copy, image, colour, removing an element). If it is a large new feature, note gently that prompting Lovable may suit it better. This is their plan:'
+        - type: course-end
+          title: "You can edit your own app with confidence now \U0001F38A"
+          content:
+            description: Look at everything you can do.
+            nextModule: "**Your next step:** Make that one change this week. Then notice how often you reach for a quick GitHub edit instead of spending a credit. Each one builds your confidence and your understanding of your own app."
+            subDescription: "✓ **You edit without spending credits:** Copy, images, colours, removing elements. Reliable, and free.\n\n✓ **You can find anything:** The Inspect trick points you to the exact file behind anything you see.\n\n✓ **You read your own code:** Repositories, commits, diffs, branches, history. The black box is open.\n\n✓ **You know which tool to use:** GitHub for small and specific, Lovable for new and big.\n\n✓ **You keep things in sync:** Edit, commit, let it sync, then publish.\n\nThe deeper win is confidence. Your app's code is no longer a mystery, which makes you better at guiding every AI tool you'll use from here.\n\n**Reusable tools from this course:** the Credit-Free Edit Checklist, the Inspect Trick Cheat Sheet, the GitHub Glossary for Vibe Coders, and the GitHub vs Lovable Decision Checklist. Keep them close while you build.\n\nWant to go deeper into understanding your code and your product? These pair well:\n\n- [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview)\n- [Build a Valuable Product: How to Break Down Your Idea for Vibe Coding](https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview)\n- [Fix Bugs with Confidence: Debugging Your Lovable App](https://littleparrot.app/aaab45b7-209a-4578-a515-3e55687f0c53/course-overview)"
+      title: Your Sustainable Workflow
+      isFree: false
+      skills:
+        - Decision Making
+        - Syncing
+        - Workflow
+      description: Know when to edit on GitHub and when to prompt Lovable, and keep the two reliably in sync.
+      completionTime: 8:00
+  titleSplit:
+    - Save Lovable Credits
+    - with GitHub
+  description: Learn to edit your app's code directly on GitHub, so you can fix copy, swap images, and tidy up your app without spending Lovable credits or fighting a slow in-app editor. You'll come away able to find any part of your code, change it reliably, and understand what your app is made of.
