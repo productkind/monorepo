@@ -16,7 +16,7 @@ course:
             imageUrl: /comics/vibe-coding-github-00/panel-00.png
             altText: |-
               A dalmatian dog (called Dalmie) wearing a red shirt sits at a desk with a laptop,
-              holding a small list. Dalmie says, "Just a few little fixes for Sarah's book club
+              holding a small list. Dalmie says, "Just a few little fixes for the Book Club Organiser
               app: a typo, a colour, a new photo."
         - type: comic
           content:
@@ -56,23 +56,23 @@ course:
               You'll make small, careful edits to text and details that are already there, the same way you'd fix a typo in a document. And if anything looks off, every change can be undone. Nothing you do here can break your app for good.
           subtitle: The fear that stops most people
         - type: text
+          title: What GitHub is, and why edit there
+          content:
+            body: |-
+              **GitHub** is the place your app's code lives. When you build with Lovable, every change you make is saved to a connected GitHub repository (think of it as the folder that holds your whole app). GitHub also keeps a full history of those changes, so nothing is ever lost.
+
+              Why edit there instead of asking Lovable? Two reasons. First, a change you make yourself costs **no credits**, while prompting the AI to make it does. Second, it's reliable: you change exactly what you mean to, and nothing else.
+          subtitle: Your app's code has a home
+        - type: text
           title: You've done version control before
           content:
             body: |-
-              Here's something reassuring: you've already used version control, even if no one called it that.
+              That history of changes has a name: **version control**. And here's something reassuring: you've already used it, even if no one called it that.
 
               Google Docs and Microsoft Office keep a history of your document, so you can look back at earlier versions and restore them. GitHub does the same for your app's code. The one real difference is that with GitHub you give each change a short name, so you can see what changed at a glance without reading any code.
 
               Plenty of people use version control for documents, not only code. Some even write whole books this way. And because the history lives online, it's safe and reachable from anywhere. It's also why a developer can never claim the dog ate their homework. 😉
           subtitle: A familiar idea with a new name
-        - type: text
-          title: What GitHub is, and why edit there
-          content:
-            body: |-
-              **GitHub** is the place your app's code lives. When you build with Lovable, every change you make is saved to a connected GitHub repository (think of it as the folder that holds your whole app).
-
-              Why edit there instead of asking Lovable? Two reasons. First, a change you make yourself costs **no credits**, while prompting the AI to make it does. Second, it's reliable: you change exactly what you mean to, and nothing else.
-          subtitle: Your app's code has a home
         - type: text
           title: But isn't that what Visual Edits is for?
           content:
