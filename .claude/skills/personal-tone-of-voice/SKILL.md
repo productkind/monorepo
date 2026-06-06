@@ -41,6 +41,9 @@ hack, chaos, crisis, fluff, hype
 ### Business jargon
 leverage, synergy, move the needle, circle back, land on, why it matters
 
+### Announcing clarity
+plain language, plain English (e.g. "in plain English", "in one plain paragraph"). Don't announce that you're being clear. Just be clear.
+
 ### Weak intensifiers
 actually, genuinely
 

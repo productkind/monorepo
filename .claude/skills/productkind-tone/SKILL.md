@@ -129,6 +129,8 @@ Invite self-assessment:
 
 **Avoid the two-beat setup-payoff** – Don't pair a short concession with a clipped reversal (e.g. "That sounds small. It isn't.", "Sounds simple. It's not.", "Easy, right? Wrong."). State the point directly.
 
+**Avoid "plain language" and "plain English"** – Don't announce that you're being clear (e.g. "in plain English", "in one plain paragraph"). Just be clear.
+
 ## Content Structure Template
 
 ```markdown

@@ -20,13 +20,16 @@ Dalmie, a dalmatian building her Book Club Organiser app, runs through every cha
 The hook: a repeatable workflow the learner can use the same day. The reusable technique is GitHub's file search plus the web editor to find a piece of text and change it directly, instead of asking Lovable (which costs a credit and sometimes rewrites more than you wanted).
 
 - Relatable problem: Dalmie spots a typo on her Book Club Organiser. She asks Lovable to fix it, it costs a credit, and it also changes two other things she liked. (Show the frustration first.)
-- What GitHub is, in one plain paragraph: the place your app's code lives.
+- What GitHub is, in a sentence or two: the place your app's code lives.
 - Why editing there saves credits: a change you make yourself costs nothing.
 - Prerequisite, handled before the challenge: connect your GitHub account to your Lovable project (link to the **GitHub Setup Guide** toolkit item for the screen-by-screen steps, so the challenge itself stays focused on the skill).
 - The workflow: use GitHub search to find your text, open the file in GitHub's online editor, change the text, and save the change.
 - What a commit is, introduced lightly: saving a change on GitHub is called "committing" it, and you give it a short note so you remember what you did.
+- A reassuring reminder: you have already used version control, even if no one called it that. Google Docs and Microsoft Office keep a version history of your documents, so you can look back at earlier versions and restore them. Git does the same for your app's code. The one real difference is that with Git you give each change a name (that is what the commit message is for), so you can see at a glance what changed without reading any code. Version control is not only for code: plenty of people use it for documents, and some even write whole books this way. And because your history lives online, not only on your laptop, it is safe and reachable from anywhere. It is also why a developer can never claim the dog ate their homework. 😉
+- Keep each commit small: one change per commit. A small commit is easy to spot in the history and easy to describe in its message. The real payoff comes later: if a change turns out to cause a bug, a small commit makes it easy to find which one, and easy to undo on its own without disturbing your other work. A commit that bundles five unrelated changes is hard to read and hard to unpick.
 - What a good commit message looks like: short, and says what changed, not how. Give an example so the learner is not stuck staring at the box. Good: "Fix typo on book suggestion button." Less helpful: "update" or "changes." A simple rule to remember it: finish the sentence "This change will..."
-- How the change reaches Lovable: it appears automatically, and it takes about a minute to show up.
+- How to read a diff: before you save, GitHub shows you exactly what changed, the old line and the new line together. Removed text shows in red, added text in green. Checking the diff is how you confirm you changed what you meant, and nothing else, before you commit.
+- How the change reaches Lovable: it appears in your Lovable project automatically, and it takes about a minute to show up. One thing to be clear about: this updates the code in your project, not your live app. To update the published version your visitors see, you still press Publish in Lovable as usual. So the full chain is: edit on GitHub, commit, it syncs into Lovable, then publish.
 - Caveat worth knowing: Lovable's "Visual edits" can also change copy, but it does not always work reliably, which is part of why editing on GitHub is a dependable backup.
 - **Exercise:** Fix one piece of copy in your own app by editing it on GitHub and committing the change. Switch to Lovable and watch it appear.
 
@@ -47,8 +50,10 @@ Search works when you know the words on the page. This challenge gives the learn
 Now that the learner has opened a few files, this challenge gives them the map. The payoff is confidence and better AI prompting: when you can name the part you mean, you can direct your AI tools precisely.
 
 - What a repository is: the full folder of your app's code on GitHub.
+- Your repo is private: only you can see it. If you want to show your code to someone else, a friend or someone helping you, you have to invite them to the repository first. Nobody can reach it otherwise, so there is no need to worry about strangers finding it.
 - The structure: folders and files, and the common ones you will see again and again (where pages, components, and styling tend to live).
-- The commit history: every saved change, who made it, and when. This includes the commits Lovable made as it built your app, sitting right alongside your own, so you can see the whole story of the app being built up over time.
+- The commit history: every saved change, who made it, and when. This includes the commits Lovable made as it built your app, sitting right alongside your own, so you can see the whole story of the app being built up over time. Open any commit to see its diff, the same red and green view you met in Challenge 1.
+- What a branch is: a separate line of work on your code. You and Lovable both work on the same default branch, called `main`, so when you commit a change it lands there and shows up right away in the GitHub UI before flowing to Lovable. You will not need to create branches in this course; it is enough to recognise the word when you see it.
 - Git vs GitHub, demystified: Git is the system that tracks changes; GitHub is the website that stores your code and shows it to you. You only ever touch GitHub in this course.
 - Why this helps your prompts: pointing your AI tool at "the suggestions list component" beats "the thing with the books."
 - **Exercise:** Explore your repository's folders and read your own commit history, including the commit you made in Challenge 1.
@@ -102,7 +107,7 @@ Pure setup and quick-reference material is offloaded here so challenges stay foc
 - **GitHub Setup Guide:** Create a GitHub account and connect it to your Lovable project (screen-by-screen). Referenced as the prerequisite for Challenge 1.
 - **The Inspect Trick Cheat Sheet:** How to read `data-lov-id` to find a file and line number, with a screenshot.
 - **GitHub vs Lovable Decision Checklist:** When to edit on GitHub versus when to prompt Lovable. Referenced in Challenge 5.
-- **GitHub Glossary for Vibe Coders:** Non-technical definitions of repository, commit, file, Git vs GitHub.
+- **GitHub Glossary for Vibe Coders:** Non-technical definitions of repository, commit, diff, branch, file, Git vs GitHub.
 
 ---
 
@@ -110,7 +115,10 @@ Pure setup and quick-reference material is offloaded here so challenges stay foc
 
 - Editing app copy directly on GitHub to save credits
 - Finding the exact file behind any element with the browser Inspect tool
+- Reading a diff to confirm what changed before saving
+- Committing in small, single-change steps that are easy to find and undo
 - Reading a repository's structure and commit history
+- Understanding branches, repo privacy, and how to invite someone to a private repo
 - Making small UI changes on GitHub
 - Choosing between editing on GitHub and prompting Lovable
 - Keeping GitHub and Lovable in sync
