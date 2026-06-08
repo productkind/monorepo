@@ -5,7 +5,7 @@ course:
   note: 'This course uses only the GitHub website in your browser. No command line, no extra tools to install. You will need a Lovable project connected to GitHub to follow along.'
   learningOutcomes:
     - Edit your app's copy and small visual details on GitHub without spending Lovable credits
-    - Find the exact file behind anything you see in your app using the browser Inspect tool
+    - Find the file behind any image or icon by searching for the text next to it
     - Read a diff and a commit history so you understand how changes are made and tracked
     - Understand commits, branches, and how GitHub and Lovable stay in sync
     - Decide when to edit on GitHub and when to prompt Lovable
@@ -243,89 +243,80 @@ course:
             body: |-
               You've already made a real edit on GitHub. That's further than most people ever get.
 
-              In this challenge you'll add a **detective skill**: using the browser Inspect tool to find the exact file behind any element, even when there's no text to search for. Once you have this, **nothing in your app is hidden from you**.
+              In this challenge you'll add a **detective skill**: finding the file behind an image or icon, the kind of thing with no text of its own to search for. Once you have it, **nothing in your app is hidden from you**.
           subtitle: Time for a detective trick
         - type: text
-          title: When search isn't enough
+          title: What about things with no words?
           content:
             body: |-
-              Search is perfect for copy. But what about a button with only an icon, an image, or a block of layout with no words in it? There's nothing to type into the search box.
+              Search is perfect for copy. But what about your **logo**, a **photo**, or an **icon**? There's nothing to type into the search box, they have no words of their own.
 
-              Luckily, Lovable leaves **a clue on every element** of your app. You just need to know where to look.
-          subtitle: Some things have no words to find
+              The clever move: don't search for the thing itself. Search for its **neighbours**.
+          subtitle: Some things have no text to find
         - type: text
-          title: Meet the Inspect tool
+          title: Search for its neighbours
           content:
             body: |-
-              Every web browser has a built-in tool called **Inspect** that lets you peek at the building blocks of any page. You don't need to understand what you see. You only need one clue from it.
+              On a screen, an image or icon almost always sits next to some text: a heading above it, a caption below, a label on the same row.
 
-              To open it, right-click the element you care about in your live app (for example the *Suggest a book* button) and choose **Inspect** from the menu.
-            imageUrl: /courses/vibe-coding-github-00/inspect-open.gif
-          subtitle: A tool that's already in your browser
+              So find a bit of that nearby text, and search for it just like you did in Challenge 1 (in github.dev, the **Search** icon or **Ctrl/Cmd + Shift + F**). The file that text lives in is the same file your image or icon lives in.
+            imageUrl: /courses/vibe-coding-github-00/neighbour-search.gif
+          subtitle: The neighbour trick
         - type: text
-          title: Read the clue Lovable left
+          title: Find it in the file
           content:
             body: |-
-              A panel opens showing the page's code, with your element highlighted. Look for an attribute called **`data-lov-id`**. Lovable adds this to elements to map them back to your source code.
+              Open the file from your search result. Your image or icon is usually just a few lines away from the text you searched for.
 
-              Its value looks something like `src/components/SuggestButton.tsx:24:6`. That tells you two things: the **file** (`src/components/SuggestButton.tsx`) and the **line number** (`24`) where that element lives.
-            imageUrl: /courses/vibe-coding-github-00/data-lov-id.png
-          subtitle: data-lov-id points the way
+              You don't need to read the code. For an image, look for a line with `<img` and a file name in it. For an icon, look for a short, recognisable word nearby (often the icon's name). That's the spot you'll edit.
+          subtitle: It's right next to the text
         - type: quiz-question
-          title: 'Quiz: Spot the right tool'
+          title: 'Quiz: Finding a logo'
           content:
-            question: Dalmie wants to change a heart-shaped favourite icon. It has no text label, so typing words into GitHub's search finds nothing. What should she reach for?
+            question: Dalmie wants to swap her app's logo for a new one. The logo is an image with no text of its own. What's her most reliable way to find the file it's in?
             options:
-              - Keep trying different words in the search box
-              - Use the browser's Inspect tool to read the element's data-lov-id
-              - Delete the icon and ask Lovable to rebuild it
-              - Give up and use Visual Edits instead
+              - Search GitHub for the word "logo" and hope it turns up
+              - Find a bit of text right next to the logo and search for that
+              - Open every file until she spots the logo
+              - Delete the logo and ask Lovable to add a new one
             explanation: |-
-              When there's no text to search for, Inspect is the way in. The data-lov-id tells her exactly which file and line to open.
+              The logo has no text of its own, but its neighbours do. Searching for a heading or link right beside it lands her in the same file, with the logo a few lines away.
 
-              This works for anything you can see: icons, images, spacing, buttons. If it's on the screen, it has a clue.
+              Searching "logo" might work if the code happens to use that word, but the neighbour trick is the dependable bet, and it costs no credits.
             correctAnswer: 1
-        - type: text
-          title: Open that file on GitHub
-          content:
-            body: |-
-              Now you have a **file path** and a **line number**. Go to your repository on GitHub, and either search for the file name or click through the folders to open it.
-
-              Inside the file, scroll to the line number you found. You're now looking at the **exact code behind the element you clicked**, ready to edit it the same way you edited copy in Challenge 1.
-          subtitle: From clue to the exact spot
         - type: text
           title: Dalmie tries it
           content:
             body: |-
-              The welcome image at the top of the Book Club Organiser is still a generic placeholder, and there's no text to search for.
+              The welcome image at the top of the Book Club Organiser is still a generic placeholder, and it has no text of its own.
 
-              So Dalmie right-clicks the image, chooses Inspect, and reads its `data-lov-id`: `src/components/Hero.tsx:12:4`. Now she knows precisely which file holds that image, and where. She doesn't change it yet, she's found it. That's the win for this challenge.
+              But right below it sits the welcome heading, *"Your book club, all in one place."* Dalmie searches github.dev for that line, opens the file it's in (it's called `Hero.tsx`), and there's the placeholder image just a few lines above. She's found it. She won't swap it yet, that's coming in a later challenge, but now she knows exactly where it lives.
           subtitle: Finding the placeholder image
         - type: free-text-exercise
-          title: Track down a hidden element
+          title: Track down an image or icon
           content:
             description: |-
-              Pick something in your app that has no obvious text: an icon, an image, or a section of layout.
+              Pick an image or icon in your app that has no text of its own: your logo, a photo, an icon.
 
-              Right-click it, choose Inspect, and find its `data-lov-id`. Paste the file path and line number you found here.
+              Find a bit of visible text right next to it (a heading, a caption, a label, a nearby button). Search for that text in github.dev, open the file it's in, and look for your image or icon nearby.
 
-              If you can't find data-lov-id on the exact element, click a slightly larger area around it and look again.
-            placeholder: e.g. src/components/Hero.tsx, line 12
-            systemPrompt: 'You are a friendly GitHub mentor for a non-technical app builder. The learner will paste a file path and line number they found using the browser Inspect tool and the data-lov-id attribute. Confirm warmly that finding the file path is the goal, in British English (max 4 short bullet points). If they pasted something that does not look like a file path, gently explain what a data-lov-id value looks like (a file path ending in .tsx, .ts, or .jsx, followed by a line number) and suggest they inspect a slightly larger element. Do not use em dashes. End with encouragement.'
-            checkerPrompt: 'Check whether the learner pasted something that resembles a source file path (for example ending in .tsx, .ts, .jsx, or .js), ideally with a line number. Flag it only if it clearly is not a file path at all. This is their answer:'
+              Paste the name of the file you found it in here.
+            placeholder: e.g. Hero.tsx
+            systemPrompt: 'You are a friendly GitHub mentor for a non-technical app builder. The learner has used the "neighbour trick" (searching for text next to an image or icon) to find the file that element lives in, and will paste that file name. Confirm warmly that finding the file is the goal, in British English (max 4 short bullet points). If they pasted something that does not look like a file (for example just a phrase), gently remind them to search for nearby text, open the file in the results, and paste its name (often ending in .tsx). Do not use em dashes. End with encouragement.'
+            checkerPrompt: 'Check whether the learner pasted something that resembles a source file name or path (for example ending in .tsx, .ts, .jsx, or .js). Flag it only if it clearly is not a file at all. This is their answer:'
         - type: challenge-end
           title: "Nothing in your app is hidden from you now \U0001F50D"
           content:
-            description: You can find the exact file behind anything you can see on screen.
+            description: You can find the file behind any image or icon, even with no text to search for.
             nextModule: "**Next challenge:** You've been opening files one at a time. Next you'll step back and read your whole repository like a map: how it's organised, what your commit history shows, and what a branch actually is."
             subDescription: |-
-              This trick removes the "but I don't know where it is" blocker for good. Copy, icons, images, layout: if you can see it, you can find it.
+              This removes the "but I don't know where it is" blocker for good. If you can see it, you can find its neighbours, and its file.
 
-              **Reusable tool:** The **Inspect Trick Cheat Sheet** shows the right-click steps and a labelled screenshot of where data-lov-id appears, for when you need a reminder.
+              **Reusable tool:** the **Neighbour Trick** (search for the text nearest the element, open that file, look a few lines away) is yours for whenever you're hunting down an image or icon.
       title: Find the Code Behind Anything You See
       isFree: false
       skills:
-        - Browser Inspect
+        - Searching Code
         - Source Files
         - Navigation
       description: "Learn a detective skill: find the exact file behind anything you see in your app, even when there's no text to search for."
@@ -483,7 +474,7 @@ course:
             body: |-
               Remember the placeholder image Dalmie found in Challenge 2, in `src/components/Hero.tsx`? Now she actually swaps it. She opens that file on GitHub, updates the image it points to, checks the diff, and commits with the message *Replace placeholder hero image with book club photo*.
 
-              Then she removes a testimonials section Lovable added that she never asked for. She finds it with the Inspect trick, deletes that block of code, checks the diff to be sure she only removed that section, and commits again.
+              Then she removes a testimonials section Lovable added that she never asked for. She finds it by searching for a line of text from that section, deletes that block of code, checks the diff to be sure she only removed that section, and commits again.
           subtitle: Swap an image, remove a section
         - type: text
           title: Check it landed, then publish
@@ -499,8 +490,8 @@ course:
             description: |-
               Think of one small visual change your app needs: an image to swap, a section to remove, or a colour to adjust.
 
-              Describe what you'll change and how you'll find it (search or the Inspect trick). If it's a colour you want everywhere, note that you'll change it in the shared place, not on each element.
-            placeholder: e.g. Swap the placeholder logo in the header for my own. I'll find it with Inspect since it has no text.
+              Describe what you'll change and how you'll find it (by searching for it, or for the text next to it). If it's a colour you want everywhere, note that you'll change it in the shared place, not on each element.
+            placeholder: e.g. Swap the placeholder logo in the header for my own. It has no text, so I'll search for the heading next to it.
             systemPrompt: 'You are a friendly GitHub mentor for a non-technical app builder. The learner describes one small visual change they plan to make on GitHub. Give warm, concise feedback in British English (max 5 short bullet points). Confirm the change is small and visual (image swap, removing an element, spacing, or colour). If they describe a big structural change (a whole new feature or page), gently suggest that is better done by prompting Lovable. If it is a colour meant to apply everywhere, remind them to change it in the shared definition rather than element by element. Do not use em dashes. End with encouragement.'
             checkerPrompt: 'Check whether the change the learner describes is a small visual edit (image swap, removing an element, spacing tweak, or colour change). Flag it only if it is clearly a large structural change like building a whole new feature or page. This is their plan:'
         - type: challenge-end
@@ -583,16 +574,16 @@ course:
             description: |-
               Let's turn this into momentum. What's the one change you'll make on GitHub this week instead of prompting Lovable?
 
-              Name the change, and whether you'll find it by searching or with the Inspect trick.
-            placeholder: e.g. This week I'll swap the placeholder profile image, found with Inspect, and commit it.
-            systemPrompt: 'You are a warm, encouraging GitHub mentor for a non-technical app builder finishing a short course. The learner names one change they will make on GitHub this week. Respond in British English (max 4 short bullet points): affirm that it is a good fit for a GitHub edit if it is small and specific, or gently suggest prompting Lovable instead if it is a big new feature. Confirm their plan to find it by search or Inspect. Do not use em dashes. End with a genuine, specific note of encouragement about what they have learned.'
+              Name the change, and whether you'll find it by searching for it, or by searching for the text next to it.
+            placeholder: e.g. This week I'll swap the placeholder profile image. I'll find it by searching for the heading next to it, then commit.
+            systemPrompt: 'You are a warm, encouraging GitHub mentor for a non-technical app builder finishing a short course. The learner names one change they will make on GitHub this week. Respond in British English (max 4 short bullet points): affirm that it is a good fit for a GitHub edit if it is small and specific, or gently suggest prompting Lovable instead if it is a big new feature. Confirm their plan to find it by searching for it, or for the text next to it. Do not use em dashes. End with a genuine, specific note of encouragement about what they have learned.'
             checkerPrompt: 'Check whether the learner has named a specific, small change suited to editing on GitHub (copy, image, colour, removing an element). If it is a large new feature, note gently that prompting Lovable may suit it better. This is their plan:'
         - type: course-end
           title: "You can edit your own app with confidence now \U0001F38A"
           content:
             description: Look at everything you can do.
             nextModule: "**Your next step:** Make that one change this week. Then notice how often you reach for a quick GitHub edit instead of spending a credit. Each one builds your confidence and your understanding of your own app."
-            subDescription: "✓ **You edit without spending credits:** Copy, images, colours, removing elements. Reliable, and free.\n\n✓ **You can find anything:** The Inspect trick points you to the exact file behind anything you see.\n\n✓ **You can read your repo:** Repositories, commits, diffs, branches, history. You know how your app is organised and how changes are tracked.\n\n✓ **You know which tool to use:** GitHub for small and specific, Lovable for new and big.\n\n✓ **You keep things in sync:** Edit, commit, let it sync, then publish.\n\nThe deeper win is confidence. Your repo feels far less mysterious, which makes you better at guiding every AI tool you'll use from here.\n\n**Reusable tools from this course:** the Credit-Free Edit Checklist, the Inspect Trick Cheat Sheet, the GitHub Glossary for Vibe Coders, and the GitHub vs Lovable Decision Checklist. Keep them close while you build.\n\nWant to go deeper into how your app works and your product? These pair well:\n\n- [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview)\n- [Build a Valuable Product: How to Break Down Your Idea for Vibe Coding](https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview)\n- [Fix Bugs with Confidence: Debugging Your Lovable App](https://littleparrot.app/aaab45b7-209a-4578-a515-3e55687f0c53/course-overview)"
+            subDescription: "✓ **You edit without spending credits:** Copy, images, colours, removing elements. Reliable, and free.\n\n✓ **You can find anything:** The neighbour trick points you to the file behind any image or icon, even with no text to search for.\n\n✓ **You can read your repo:** Repositories, commits, diffs, branches, history. You know how your app is organised and how changes are tracked.\n\n✓ **You know which tool to use:** GitHub for small and specific, Lovable for new and big.\n\n✓ **You keep things in sync:** Edit, commit, let it sync, then publish.\n\nThe deeper win is confidence. Your repo feels far less mysterious, which makes you better at guiding every AI tool you'll use from here.\n\n**Reusable tools from this course:** the Credit-Free Edit Checklist, the Neighbour Trick, the GitHub Glossary for Vibe Coders, and the GitHub vs Lovable Decision Checklist. Keep them close while you build.\n\nWant to go deeper into how your app works and your product? These pair well:\n\n- [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview)\n- [Build a Valuable Product: How to Break Down Your Idea for Vibe Coding](https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview)\n- [Fix Bugs with Confidence: Debugging Your Lovable App](https://littleparrot.app/aaab45b7-209a-4578-a515-3e55687f0c53/course-overview)"
       title: Your Sustainable Workflow
       isFree: false
       skills:
