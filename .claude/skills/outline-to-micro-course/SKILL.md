@@ -303,6 +303,7 @@ After generating the full course, do a self-review pass before presenting it. Ch
 - [ ] Are quizzes distributed throughout each challenge, not clumped at the end?
 - [ ] Does every quiz test judgement or application, not recall of the preceding step?
 - [ ] Are all quiz answer options similar in length (correct answer not visually obvious)?
+- [ ] Does each quiz's `correctAnswer` index still point to the right option? (Re-verify after any option reordering: reordering options without updating the index silently marks the wrong answer.)
 - [ ] Is every text step short enough to read without scrolling? If it has 3+ concepts, is it split?
 - [ ] Is every text step styled for scanning (bold key concept, italic UI labels/examples), without over-bolding?
 - [ ] Do the comics set up the problem from the learner's pain, without bashing the tool?
