@@ -10,6 +10,8 @@ import { mtest } from '@dungarees/core/marbles-vitest.ts'
 import { createGetTransformSetContextInspector } from '@dungarees/rxjs/fake.ts'
 import { createGetTransformSetContext } from '@dungarees/rxjs/util.ts'
 
+import { of } from 'rxjs'
+
 mtest('create build start message', ({ expect }) => {
   const startMessage$ = getBuildStartMessage({
     srcDir: './src',
@@ -45,12 +47,13 @@ mtest('transformPackageJson with version from file', ({ expect }) => {
     content: JSON.stringify({ name: 'test-lib', version: '1.0.0' }),
   })
 
-  const transformPackageJson$ = transformPackageJson(transformer, {
-    srcDir: '/src',
-    outDir: '/out',
-    version: undefined,
-    transpiledFiles: [],
-  })
+  const transformPackageJson$ = of([]).pipe(
+    transformPackageJson(transformer, {
+      srcDir: '/src',
+      outDir: '/out',
+      version: undefined,
+    }),
+  )
   expect(transformPackageJson$).toBeObservableValueAndClose(
     stdout('Package.json written to /out/package.json with version: 1.0.0'),
   )
@@ -68,23 +71,24 @@ mtest('transformPackageJson with exports', ({ expect }) => {
     content: JSON.stringify({ name: 'test-lib', version: '1.0.0' }),
   })
 
-  const transformPackageJson$ = transformPackageJson(transformer, {
-    srcDir: '/src',
-    outDir: '/out',
-    version: undefined,
-    transpiledFiles: [
-      {
-        input: '/src/index.ts',
-        output: '/out/index.js',
-        type: '/out/index.d.ts',
-      },
-      {
-        input: '/src/dir/file.ts',
-        output: '/out/dir/file.js',
-        type: '/out/dir/file.d.ts',
-      },
-    ],
-  })
+  const transformPackageJson$ = of([
+    {
+      input: '/src/index.ts',
+      output: '/out/index.js',
+      type: '/out/index.d.ts',
+    },
+    {
+      input: '/src/dir/file.ts',
+      output: '/out/dir/file.js',
+      type: '/out/dir/file.d.ts',
+    },
+  ]).pipe(
+    transformPackageJson(transformer, {
+      srcDir: '/src',
+      outDir: '/out',
+      version: undefined,
+    }),
+  )
   expect(transformPackageJson$).toBeObservableValueAndClose(
     stdout('Package.json written to /out/package.json with version: 1.0.0'),
   )
@@ -119,12 +123,13 @@ mtest('transformPackageJson with version override', ({ expect }) => {
     content: JSON.stringify({ name: 'test-lib', version: '1.0.0' }),
   })
 
-  const transformPackageJson$ = transformPackageJson(transformer, {
-    srcDir: '/src',
-    outDir: '/out',
-    version: '2.0.0',
-    transpiledFiles: [],
-  })
+  const transformPackageJson$ = of([]).pipe(
+    transformPackageJson(transformer, {
+      srcDir: '/src',
+      outDir: '/out',
+      version: '2.0.0',
+    }),
+  )
   expect(transformPackageJson$).toBeObservableValueAndClose(
     stdout('Package.json written to /out/package.json with version: 2.0.0'),
   )
@@ -138,12 +143,13 @@ mtest('transformPackageJson without version in file or parameter', ({ expect }) 
     content: JSON.stringify({ name: 'test-lib' }),
   })
 
-  const transformPackageJson$ = transformPackageJson(transformer, {
-    srcDir: '/src',
-    outDir: '/out',
-    version: undefined,
-    transpiledFiles: [],
-  })
+  const transformPackageJson$ = of([]).pipe(
+    transformPackageJson(transformer, {
+      srcDir: '/src',
+      outDir: '/out',
+      version: undefined,
+    }),
+  )
   expect(transformPackageJson$).toBeObservableValueAndError(
     stderr('File transform failed: Version is required in package.json or as an argument'),
     new Error('File transform failed'),
@@ -159,12 +165,13 @@ mtest('transformPackageJson without version in file', ({ expect }) => {
     content: JSON.stringify({ name: 'test-lib' }),
   })
 
-  const transformPackageJson$ = transformPackageJson(transformer, {
-    srcDir: '/src',
-    outDir: '/out',
-    version: '2.0.0',
-    transpiledFiles: [],
-  })
+  const transformPackageJson$ = of([]).pipe(
+    transformPackageJson(transformer, {
+      srcDir: '/src',
+      outDir: '/out',
+      version: '2.0.0',
+    }),
+  )
   expect(transformPackageJson$).toBeObservableValueAndClose(
     stdout('Package.json written to /out/package.json with version: 2.0.0'),
   )
@@ -186,12 +193,13 @@ mtest('transformPackageJson change bin paths', ({ expect }) => {
     }),
   })
 
-  const transformPackageJson$ = transformPackageJson(transformer, {
-    srcDir: '/src',
-    outDir: '/out',
-    version: '1.0.0',
-    transpiledFiles: [],
-  })
+  const transformPackageJson$ = of([]).pipe(
+    transformPackageJson(transformer, {
+      srcDir: '/src',
+      outDir: '/out',
+      version: '1.0.0',
+    }),
+  )
   expect(transformPackageJson$).toBeObservableValueAndClose(
     stdout('Package.json written to /out/package.json with version: 1.0.0'),
   )
@@ -215,12 +223,13 @@ mtest('transformPackageJson with write error', ({ expect, coldStepAndClose, cold
 
   const transformer = createGetTransformSetContext<string, string, string>(readFile, writeFile)
 
-  const transformPackageJson$ = transformPackageJson(transformer, {
-    srcDir: '/src',
-    outDir: '/out',
-    version: undefined,
-    transpiledFiles: [],
-  })
+  const transformPackageJson$ = of([]).pipe(
+    transformPackageJson(transformer, {
+      srcDir: '/src',
+      outDir: '/out',
+      version: undefined,
+    }),
+  )
   expect(transformPackageJson$).toBeObservableStepAndError(
     stderr('File transform failed: Write failed'),
     new Error('File transform failed'),
@@ -235,12 +244,13 @@ mtest('transformPackageJson with invalid JSON', ({ expect, coldStepAndClose }) =
 
   const transformer = createGetTransformSetContext<string, string, string>(readFile, writeFile)
 
-  const transformPackageJson$ = transformPackageJson(transformer, {
-    srcDir: '/src',
-    outDir: '/out',
-    version: undefined,
-    transpiledFiles: [],
-  })
+  const transformPackageJson$ = of([]).pipe(
+    transformPackageJson(transformer, {
+      srcDir: '/src',
+      outDir: '/out',
+      version: undefined,
+    }),
+  )
   expect(transformPackageJson$).toBeObservableStepAndError(
     stderr(
       'File transform failed: Invalid source package.json: Unexpected token \'i\', "invalid json content" is not valid JSON',

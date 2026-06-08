@@ -12,7 +12,7 @@ import type { TranspileDirOutput } from '@dungarees/transpile/service.ts'
 
 import path from 'node:path'
 import { type Observable, of, type OperatorFunction, pipe } from 'rxjs'
-import { map } from 'rxjs/operators'
+import { map, mergeMap } from 'rxjs/operators'
 import { z } from 'zod'
 
 type BaseBuildArgs = {
@@ -46,22 +46,17 @@ export const createOutDir = (
 
 export const transformPackageJson = (
   fileTransform: GetTransformSetContext<string, string, string>,
-  {
-    srcDir,
-    outDir,
-    version,
-    transpiledFiles,
-  }: BaseBuildArgs & {
-    transpiledFiles: TranspileDirOutput[]
-  },
-): Observable<StdioMessage> =>
-  fileTransform(
-    parsePackageJson(),
-    setPackageJsonVersion(version),
-    setExports({ srcDir, outDir, transpiledFiles }),
-    setBin(),
-    stringifyPackageJson(),
-  ).pipe(handleTransformEnd(outDir))
+  { srcDir, outDir, version }: BaseBuildArgs,
+): OperatorFunction<TranspileDirOutput[], StdioMessage> =>
+  mergeMap((transpiledFiles) =>
+    fileTransform(
+      parsePackageJson(),
+      setPackageJsonVersion(version),
+      setExports({ srcDir, outDir, transpiledFiles }),
+      setBin(),
+      stringifyPackageJson(),
+    ).pipe(handleTransformEnd(outDir)),
+  )
 
 type ExportMap = Record<
   string,

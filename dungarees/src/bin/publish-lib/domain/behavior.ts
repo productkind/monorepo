@@ -55,11 +55,7 @@ export const createPublishLibService = ({ fileSystem, subProcess }: PublishLibAr
         input: srcDir,
         output: outDir,
       })
-      .pipe(
-        mergeMap((transpiledFiles) =>
-          transformPackageJson(transformer, { srcDir, outDir, version, transpiledFiles }),
-        ),
-      )
+      .pipe(transformPackageJson(transformer, { srcDir, outDir, version }))
     return {
       stdio$: concat(startMessage$, createOutDir$, transpile$),
     }
