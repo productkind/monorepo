@@ -7,7 +7,6 @@ import { configure as _configure, type MarblesFunction } from 'rxjs-marbles/marb
 import type { ExpectHelpers, TestObservableLike } from 'rxjs-marbles/types.js'
 import { describe, expect, test } from 'vitest'
 
-
 export type CasesFunction = {
   <T extends UnnamedCase>(
     name: string,
@@ -98,8 +97,8 @@ class ExtendedExpect<T> extends Expect<T> {
     this.toBeObservable(marble, MARBLES_BOOLEAN as unknown as Record<string, T>)
   }
 
-  toBeObservableValue(value: T): void;
-  toBeObservableValue(marble: string, value: T): void;
+  toBeObservableValue(value: T): void
+  toBeObservableValue(marble: string, value: T): void
   toBeObservableValue(...args: any[]): void {
     const value = args.length === 1 ? args[0] : args[1]
     const marble = args.length === 1 ? 'v' : args[0]
@@ -124,9 +123,9 @@ class ExtendedExpect<T> extends Expect<T> {
     this.toBeObservable(marble, { v: value })
   }
 
-  toBeObservableStepAndClose(value: T, steps = 1): void {
+  toBeObservableStepAndClose(value: T, steps = 1): Promise<void> {
     const marble = `-`.repeat(steps) + '(v|)'
-    this.toBeObservable(marble, { v: value })
+    return this.toBeObservable(marble, { v: value })
   }
 
   toBeObservableError(error: any, steps = 1): void {
@@ -217,11 +216,16 @@ export const MARBLES_BOOLEAN = {
 }
 
 export const mtest = (name: string, runner: Runner): void => {
-  test(name, coreMarbles((m) => runner(m)))
+  test(
+    name,
+    coreMarbles((m) => runner(m)),
+  )
 }
 
-mtest.each = <T>(cases: T[]): (name: string, runner: Runner) => void => {
+mtest.each = <T>(cases: T[]): ((name: string, runner: Runner) => void) => {
   return (name: string, runner: Runner): void =>
-    test.each(cases)(name, coreMarbles((m, ...args) => runner(m, ...args)))
+    test.each(cases)(
+      name,
+      coreMarbles((m, ...args) => runner(m, ...args)),
+    )
 }
-

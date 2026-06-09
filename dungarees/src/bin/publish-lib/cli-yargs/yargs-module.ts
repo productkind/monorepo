@@ -1,11 +1,11 @@
-import type { PublishLib } from '@dungarees/bin-publish-lib-domain/behavior.ts'
+import type { PublishLibBehaviour } from '@dungarees/bin-publish-lib-domain/behavior.ts'
 import { type CommandModule } from '@dungarees/cli/type.ts'
 import { printStido } from '@dungarees/cli/utils.ts'
 
 export const publishLibYargsModule = ({
   publishLib,
 }: {
-  publishLib: PublishLib
+  publishLib: PublishLibBehaviour
 }): CommandModule<PublishLibArgs> => {
   return {
     command: 'publish-multi-lib [lib-path]',

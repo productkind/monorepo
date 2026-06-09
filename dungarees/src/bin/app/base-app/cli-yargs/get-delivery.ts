@@ -1,4 +1,4 @@
-import type { InternalServices } from '../internal-services/index.ts'
+import type { DungareesBinBehaviors } from './behaviors.ts'
 import { createYargsApp } from './yargs-app.ts'
 import { type YargsApp } from './yargs-app.ts'
 
@@ -7,9 +7,9 @@ export type YargsDelivery = {
 }
 
 export const getDelivery = ({
-  internalServices,
+  behaviors,
 }: {
-  internalServices: InternalServices
+  behaviors: DungareesBinBehaviors
 }): YargsDelivery => ({
-  yargsApp: createYargsApp(internalServices),
+  yargsApp: createYargsApp(behaviors),
 })

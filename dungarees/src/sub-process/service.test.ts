@@ -107,6 +107,7 @@ mtest('subProcessService $executedCommands', ({ expect }) => {
     '1': {
       command: 'ls',
       args: [],
+      options: {},
     },
   })
 })
@@ -125,7 +126,7 @@ test('subProcessService.runAsync', async () => {
   expect(stdout).toBe('file.ts')
   expect(stderror).toBe('')
   expect(exitCode).toBe(1)
-  expect(executedCommands).toEqual([{ command: 'ls', args: [] }])
+  expect(executedCommands).toEqual([{ command: 'ls', args: [], options: {} }])
 })
 
 test('subProcessService integration', async () => {
@@ -138,7 +139,8 @@ test('subProcessService integration', async () => {
 
 test('subProcessService integration on error no command', async () => {
   const subProcessService = createSubProcessService(spawn)
-  const observableFn = async () => await firstValueFrom(subProcessService.run('non-existent-command').output$)
+  const observableFn = async () =>
+    await firstValueFrom(subProcessService.run('non-existent-command').output$)
   await expect(observableFn()).rejects.toThrow()
   const asyncFs = async () => await subProcessService.runAsync('non-existent-command')
   await expect(asyncFs()).rejects.toThrow()
@@ -146,8 +148,10 @@ test('subProcessService integration on error no command', async () => {
 
 test('subProcessService integration on error no cwd dir', async () => {
   const subProcessService = createSubProcessService(spawn)
-  const observableFn = async () => await firstValueFrom(subProcessService.run('ls', [], { cwd: '/non-existent-dir' }).output$)
+  const observableFn = async () =>
+    await firstValueFrom(subProcessService.run('ls', [], { cwd: '/non-existent-dir' }).output$)
   await expect(observableFn()).rejects.toThrow()
-  const asyncFs = async () => await subProcessService.runAsync('ls', [], { cwd: '/non-existent-dir' })
+  const asyncFs = async () =>
+    await subProcessService.runAsync('ls', [], { cwd: '/non-existent-dir' })
   await expect(asyncFs()).rejects.toThrow()
 })

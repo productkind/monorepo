@@ -1,10 +1,16 @@
-import { type TypedArray, type StaticFn } from '@dungarees/core/type-util.ts'
-import { boolFromThrow, boolFromThrowAsync, mapConst, mapConstKeysToEntries, mapObjectFromKeys, objectFromConstEntries, unPrototypeProperties } from '@dungarees/core/util.ts'
+import { type TypedArray } from '@dungarees/core/type-util.ts'
+import {
+  boolFromThrow,
+  boolFromThrowAsync,
+  mapObjectFromKeys,
+  unPrototypeProperties,
+} from '@dungarees/core/util.ts'
 import { asyncFunctionToObservable, type UnsafeService } from '@dungarees/rxjs/util.ts'
+
 import { glob as libGlob, globSync as libGlobSync } from 'glob'
 import { constants, type Stats } from 'node:fs'
-import { type Observable, of } from 'rxjs'
 import { join } from 'node:path'
+import { type Observable } from 'rxjs'
 
 export type FilePermissions = {
   read: boolean
@@ -26,7 +32,7 @@ export type FileStats = {
 
 export type AccessMode = 'readable' | 'writable' | 'executable' | 'visible'
 
-export type FileSystem = {
+export type FileSystemService = {
   readFileSync: (path: string, encoding: BufferEncoding) => string
   readFileAsync: (path: string, encoding: BufferEncoding) => Promise<string>
   readFile: (path: string, encoding: BufferEncoding) => Observable<string>
@@ -48,7 +54,7 @@ export type FileSystem = {
   globSync: (path: string) => string[]
   globAsync: (path: string) => Promise<string[]>
   glob: (path: string) => Observable<string[]>
-getStatSync: (path: string) => FileStats
+  getStatSync: (path: string) => FileStats
   getStatAsync: (path: string) => Promise<FileStats>
   getStat: (path: string) => Observable<FileStats>
   chmodSync: (path: string, mode: number) => void
@@ -87,13 +93,11 @@ type UsedPromisesMethods =
   | 'chown'
   | 'access'
 
-export type NodeFs =
-  Pick<typeof import('fs'), UsedFsMethods>
-  & {
-    promises: Pick<(typeof import('fs'))['promises'], UsedPromisesMethods>
-  }
+export type NodeFs = Pick<typeof import('fs'), UsedFsMethods> & {
+  promises: Pick<(typeof import('fs'))['promises'], UsedPromisesMethods>
+}
 
-export const createFileSystem = (fs: NodeFs): UnsafeService<FileSystem> => {
+export const createFileSystem = (fs: NodeFs): UnsafeService<FileSystemService> => {
   const fsForGlob = {
     ...unPrototypeProperties(fs, [
       'lstatSync',
@@ -118,36 +122,36 @@ export const createFileSystem = (fs: NodeFs): UnsafeService<FileSystem> => {
 
   const pathToString = (path: string) => path.toString()
 
-  const readFileSync: FileSystem['readFileSync'] = (path, encoding) =>
+  const readFileSync: FileSystemService['readFileSync'] = (path, encoding) =>
     fs.readFileSync(path, encoding).toString()
 
-  const writeFileSync: FileSystem['writeFileSync'] = (path, data) => fs.writeFileSync(path, data)
+  const writeFileSync: FileSystemService['writeFileSync'] = (path, data) =>
+    fs.writeFileSync(path, data)
 
-  const readDirSync: FileSystem['readDirSync'] = (path) =>
+  const readDirSync: FileSystemService['readDirSync'] = (path) =>
     fs.readdirSync(path).map(pathToString)
 
   const readDirDeepSync = (path: string): string[] => {
     const entries = fs.readdirSync(path, { recursive: true, withFileTypes: true })
     return entries
-      .filter(entry => entry.isFile())
-      .map(entry => join(entry.parentPath, entry.name))
+      .filter((entry) => entry.isFile())
+      .map((entry) => join(entry.parentPath, entry.name))
   }
 
-
-  const mkdirSync: FileSystem['mkdirSync'] = (path) => {
+  const mkdirSync: FileSystemService['mkdirSync'] = (path) => {
     fs.mkdirSync(path, { recursive: true })
   }
 
-  const readFileAsync: FileSystem['readFileAsync'] = async (path, encoding) => {
+  const readFileAsync: FileSystemService['readFileAsync'] = async (path, encoding) => {
     const content = await fs.promises.readFile(path, encoding)
     return content.toString()
   }
 
-  const writeFileAsync: FileSystem['writeFileAsync'] = async (path, data) => {
+  const writeFileAsync: FileSystemService['writeFileAsync'] = async (path, data) => {
     await fs.promises.writeFile(path, data)
   }
 
-  const readDirAsync: FileSystem['readDirAsync'] = async (path) => {
+  const readDirAsync: FileSystemService['readDirAsync'] = async (path) => {
     const files = await fs.promises.readdir(path)
     return files.map(pathToString)
   }
@@ -155,29 +159,31 @@ export const createFileSystem = (fs: NodeFs): UnsafeService<FileSystem> => {
   const readDirDeepAsync = async (path: string): Promise<string[]> => {
     const entries = await fs.promises.readdir(path, { recursive: true, withFileTypes: true })
     return entries
-      .filter(entry => entry.isFile())
-      .map(entry => join(entry.parentPath, entry.name))
+      .filter((entry) => entry.isFile())
+      .map((entry) => join(entry.parentPath, entry.name))
   }
 
-  const mkdirAsync: FileSystem['mkdirAsync'] = async (path) => {
+  const mkdirAsync: FileSystemService['mkdirAsync'] = async (path) => {
     await fs.promises.mkdir(path, { recursive: true })
   }
 
-  const readBulkAsync: FileSystem['readBulkAsync'] = async (paths) => {
-    return Object.fromEntries(await Promise.all(
-      paths.map(async (filePath) => {
-        const content = await fs.promises.readFile(filePath, 'utf8')
-        return [filePath, content]
-      })
-    ))
+  const readBulkAsync: FileSystemService['readBulkAsync'] = async (paths) => {
+    return Object.fromEntries(
+      await Promise.all(
+        paths.map(async (filePath) => {
+          const content = await fs.promises.readFile(filePath, 'utf8')
+          return [filePath, content]
+        }),
+      ),
+    )
   }
 
-  const readBulkSync: FileSystem['readBulkSync'] = (paths) => {
+  const readBulkSync: FileSystemService['readBulkSync'] = (paths) => {
     return Object.fromEntries(
       paths.map((filePath) => {
         const content = fs.readFileSync(filePath, 'utf8')
         return [filePath, content]
-      })
+      }),
     )
   }
 
@@ -187,12 +193,11 @@ export const createFileSystem = (fs: NodeFs): UnsafeService<FileSystem> => {
   const permissionValues = [4, 2, 1] as const
 
   const statToFileStats = (stat: Stats): FileStats => {
-    const permissions =
-      mapObjectFromKeys(permissionGroupNames, (_, index) =>
-        mapObjectFromKeys(permissionNames, (_, permissionIndex) =>
-          Boolean(stat.mode & groupSelectors[index] * permissionValues[permissionIndex])
-        )
-      )
+    const permissions = mapObjectFromKeys(permissionGroupNames, (_, index) =>
+      mapObjectFromKeys(permissionNames, (_, permissionIndex) =>
+        Boolean(stat.mode & (groupSelectors[index] * permissionValues[permissionIndex])),
+      ),
+    )
 
     return {
       isDirectory: stat.isDirectory(),
@@ -203,29 +208,29 @@ export const createFileSystem = (fs: NodeFs): UnsafeService<FileSystem> => {
     }
   }
 
-  const getStatSync: FileSystem['getStatSync'] = (path) => {
+  const getStatSync: FileSystemService['getStatSync'] = (path) => {
     const stat = fs.lstatSync(path)
     return statToFileStats(stat)
   }
 
-  const getStatAsync: FileSystem['getStatAsync'] = async (path) => {
+  const getStatAsync: FileSystemService['getStatAsync'] = async (path) => {
     const stat = await fs.promises.lstat(path)
     return statToFileStats(stat)
   }
 
-  const chmodSync: FileSystem['chmodSync'] = (path, mode) => {
+  const chmodSync: FileSystemService['chmodSync'] = (path, mode) => {
     fs.chmodSync(path, mode)
   }
 
-  const chmodAsync: FileSystem['chmodAsync'] = async (path, mode) => {
+  const chmodAsync: FileSystemService['chmodAsync'] = async (path, mode) => {
     await fs.promises.chmod(path, mode)
   }
 
-  const chownSync: FileSystem['chownSync'] = (path, uid, gid) => {
+  const chownSync: FileSystemService['chownSync'] = (path, uid, gid) => {
     fs.chownSync(path, uid, gid)
   }
 
-  const chownAsync: FileSystem['chownAsync'] = async (path, uid, gid) => {
+  const chownAsync: FileSystemService['chownAsync'] = async (path, uid, gid) => {
     await fs.promises.chown(path, uid, gid)
   }
 
@@ -239,10 +244,10 @@ export const createFileSystem = (fs: NodeFs): UnsafeService<FileSystem> => {
   const modesToFlag = (modes: AccessMode[]): number =>
     modes.reduce((flag, mode) => flag | accessModeToConstant[mode], 0)
 
-  const accessSync: FileSystem['accessSync'] = (path, modes) =>
+  const accessSync: FileSystemService['accessSync'] = (path, modes) =>
     boolFromThrow(() => fs.accessSync(path, modesToFlag(modes)))
 
-  const accessAsync: FileSystem['accessAsync'] = (path, modes) =>
+  const accessAsync: FileSystemService['accessAsync'] = (path, modes) =>
     boolFromThrowAsync(() => fs.promises.access(path, modesToFlag(modes)))
 
   return {
@@ -267,7 +272,7 @@ export const createFileSystem = (fs: NodeFs): UnsafeService<FileSystem> => {
     globAsync: (path) => glob(path),
     globSync: (path) => globSync(path),
     glob: asyncFunctionToObservable(glob),
-getStatSync,
+    getStatSync,
     getStatAsync,
     getStat: asyncFunctionToObservable(getStatAsync),
     chmodSync,

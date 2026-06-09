@@ -122,6 +122,9 @@ test('publish single lib', async () => {
   expect(executedCommands).toContainEqual({
     command: 'npm',
     args: ['publish', '--access', 'public'],
+    options: {
+      cwd: '/dist',
+    },
   })
 })
 
@@ -215,5 +218,8 @@ test('publish a multi-lib folder', async () => {
   expect(executedCommands).toContainEqual({
     command: 'npm',
     args: ['publish', '--access', 'public'],
+    options: {
+      cwd: '/multi-lib/dist/lib-1',
+    },
   })
 })

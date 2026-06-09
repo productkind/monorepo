@@ -11,6 +11,7 @@ import { createGetTransformSetContextInspector } from '@dungarees/rxjs/fake.ts'
 import { createGetTransformSetContext } from '@dungarees/rxjs/util.ts'
 
 import { of } from 'rxjs'
+import { expect } from 'vitest'
 
 mtest('create build start message', ({ expect }) => {
   const startMessage$ = getBuildStartMessage({
@@ -260,20 +261,30 @@ mtest('transformPackageJson with invalid JSON', ({ expect, coldStepAndClose }) =
 })
 
 mtest('publishLib with successful exit code', ({ expect, coldStepAndClose }) => {
-  const publish$ = publishLib(coldStepAndClose({ exitCode: 0, stderror: undefined }))
+  const publish$ = publishLib(() => coldStepAndClose({ exitCode: 0, stderror: undefined }))
   expect(publish$).toBeObservableStepAndClose(stdout('Published successfully'))
 })
 
 mtest('publishLib with failed exit code', ({ expect, coldStepAndClose }) => {
-  const publish$ = publishLib(coldStepAndClose({ exitCode: 1, stderror: 'Some error' }))
+  const publish$ = publishLib(() => coldStepAndClose({ exitCode: 1, stderror: 'Some error' }))
   expect(publish$).toBeObservableStepAndClose(
     stderr('Publish failed with exit code 1, and error: Some error'),
   )
 })
 
+mtest('publishLib defers executing the command', ({ expect: mexpect, coldStepAndClose }) => {
+  let commandExecuted = false
+  const publish$ = publishLib(() => {
+    commandExecuted = true
+    return coldStepAndClose({ exitCode: 0, stderror: undefined })
+  })
+  expect(commandExecuted).toBe(false)
+  mexpect(publish$).toBeObservableStepAndClose(stdout('Published successfully'))
+})
+
 mtest('publishLib with error', ({ expect, coldError }) => {
   const input$ = coldError(new Error('Network timeout'))
-  const publish$ = publishLib(input$)
+  const publish$ = publishLib(() => input$)
   expect(publish$).toBeObservableStepAndError(
     stderr('Error publishing library: Network timeout'),
     new Error('Could not publish library'),

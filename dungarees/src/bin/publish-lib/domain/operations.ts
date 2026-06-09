@@ -11,7 +11,7 @@ import {
 import type { TranspileDirOutput } from '@dungarees/transpile/service.ts'
 
 import path from 'node:path'
-import { type Observable, of, type OperatorFunction, pipe } from 'rxjs'
+import { defer, type Observable, of, type OperatorFunction, pipe } from 'rxjs'
 import { map, mergeMap } from 'rxjs/operators'
 import { z } from 'zod'
 
@@ -171,9 +171,9 @@ const handleTransformEnd = (
   )
 
 export const publishLib = (
-  publish$: Observable<{ exitCode: number | undefined; stderror: string | undefined }>,
+  publishFactory: () => Observable<{ exitCode: number | undefined; stderror: string | undefined }>,
 ): Observable<StdioMessage> =>
-  publish$.pipe(
+  defer(publishFactory).pipe(
     map(({ exitCode, stderror }) =>
       exitCode === 0
         ? stdout(`Published successfully`)

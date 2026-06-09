@@ -1,4 +1,4 @@
-import { createFileSystem, type FileSystem, type NodeFs } from './service.ts'
+import { createFileSystem, type FileSystemService, type NodeFs } from './service.ts'
 
 import { getObservableMethodsFromSync, getUnsafeMethodNames } from '@dungarees/rxjs/util.ts'
 
@@ -12,7 +12,7 @@ type FakeVolume = {
 
 type FakeFs = NodeFs & FakeVolume
 
-type FakeFileSystem = FileSystem & FakeVolume
+type FakeFileSystem = FileSystemService & FakeVolume
 
 export const createFakeNodeFs = (files?: Record<string, string>): FakeFs =>
   (files !== undefined ? Volume.fromJSON(files) : new Volume()) as unknown as FakeFs

@@ -3,7 +3,7 @@ import { type Spawn, SubProcessService } from './type.ts'
 
 import { assertDefined } from '@dungarees/core/util.ts'
 
-import { type ChildProcess } from 'node:child_process'
+import { type ChildProcess, type SpawnOptions } from 'node:child_process'
 import { type Observable, Subject, timer } from 'rxjs'
 
 export const createFakeSpawn = (config: FakeSpawnConfig): FakeSpawn => {
@@ -13,7 +13,7 @@ export const createFakeSpawn = (config: FakeSpawnConfig): FakeSpawn => {
     config.map(({ command, args, ...rest }) => [serializeCommand(command, args), rest]),
   )
 
-  const fakeSpawn: Spawn = (command, args) => {
+  const fakeSpawn: Spawn = (command, args, options) => {
     const serializedCommand = serializeCommand(command, args)
     const { stdout, stderror, exitCode, delay } = assertDefined(
       commands.get(serializedCommand),
@@ -29,8 +29,8 @@ export const createFakeSpawn = (config: FakeSpawnConfig): FakeSpawn => {
       if (stderror !== undefined) {
         stderrCallback?.(Buffer.from(stderror))
       }
-      $executedCommands.next({ command, args })
-      executedCommands.push({ command, args })
+      $executedCommands.next({ command, args, options })
+      executedCommands.push({ command, args, options })
       doneCallback?.(exitCode)
     })
 
@@ -94,6 +94,7 @@ export type FakeCommandConfig = {
 export type ExecutedCommand = {
   command: string
   args: string[]
+  options?: SpawnOptions
 }
 
 export type FakeSpawn = {

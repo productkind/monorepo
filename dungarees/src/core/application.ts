@@ -26,8 +26,8 @@ export const createApplication = <
 ): Application<ApplicationTypeConfigWithDefaults<CONFIG>> => {
   type AppArgs = CreateApplicationArgs<ApplicationTypeConfigWithDefaults<CONFIG>>
   const DEFAULTS = {
-    getExternalServices: () => ({}),
-    getInternalServices: () => ({}),
+    getServices: () => ({}),
+    getBehaviors: () => ({}),
     preMain: () => {},
     getDelivery: () => ({}),
     main: () => {},
@@ -105,8 +105,8 @@ export const createApplication = <
         toPatternLists(firstArgsWithDefaults),
       )
       const {
-        getExternalServices,
-        getInternalServices,
+        getServices,
+        getBehaviors,
         preMain,
         getDelivery,
         main,
@@ -120,20 +120,20 @@ export const createApplication = <
       }
       try {
         topLevelErrorHandling(onError)
-        const externalServices = getExternalServices(runIdentity)
-        const internalServices = getInternalServices(externalServices, runIdentity)
-        preMain(internalServices, runIdentity)
-        const exportState = (): CONFIG['exportState'] => exportStateOriginal(internalServices)
-        const delivery = getDelivery({ internalServices, exportState }, runIdentity)
-        const output = main({ delivery, internalServices }, runIdentity)
+        const services = getServices(runIdentity)
+        const behaviors = getBehaviors(services, runIdentity)
+        preMain(behaviors, runIdentity)
+        const exportState = (): CONFIG['exportState'] => exportStateOriginal(behaviors)
+        const delivery = getDelivery({ behaviors, exportState }, runIdentity)
+        const output = main({ delivery, behaviors }, runIdentity)
         return {
-          externalServices,
-          internalServices,
+          services,
+          behaviors,
           delivery,
           output,
           exportState,
           importState: (newState) => {
-            importState(internalServices, newState)
+            importState(behaviors, newState)
           },
         }
       } catch (e) {
@@ -151,8 +151,8 @@ export const createApplication = <
 }
 
 export type SingleApplicationArgs<CONFIG extends Partial<ApplicationTypeConfig>> = {
-  getExternalServices: GetExternalServices<CONFIG>
-  getInternalServices: GetInternalServices<CONFIG>
+  getServices: GetServices<CONFIG>
+  getBehaviors: GetBehaviors<CONFIG>
   preMain: PreMain<CONFIG>
   getDelivery: GetDelivery<CONFIG>
   main: Main<CONFIG>
@@ -170,8 +170,8 @@ export type CreateApplicationArgs<CONFIG extends Partial<ApplicationTypeConfig>>
 }
 
 export type ApplicationTypeConfig = {
-  externalServices: Record<string, any>
-  internalServices: Record<string, any>
+  services: Record<string, any>
+  behaviors: Record<string, any>
   delivery: Record<string, any>
   output: any
   identity: any
@@ -179,38 +179,38 @@ export type ApplicationTypeConfig = {
 }
 
 type DefaultApplicationTypeConfig = {
-  externalServices: Record<string, never>
-  internalServices: Record<string, never>
+  services: Record<string, never>
+  behaviors: Record<string, never>
   delivery: Record<string, never>
   output: undefined
   identity: undefined
   exportState: undefined
 }
 
-type GetExternalServices<CONFIG extends Partial<ApplicationTypeConfig>> = (
+type GetServices<CONFIG extends Partial<ApplicationTypeConfig>> = (
   identity: CONFIG['identity'],
-) => CONFIG['externalServices']
+) => CONFIG['services']
 
-type GetInternalServices<CONFIG extends Partial<ApplicationTypeConfig>> = (
-  externalServices: CONFIG['externalServices'],
+type GetBehaviors<CONFIG extends Partial<ApplicationTypeConfig>> = (
+  services: CONFIG['services'],
   identity: CONFIG['identity'],
-) => CONFIG['internalServices']
+) => CONFIG['behaviors']
 
 type PreMain<CONFIG extends Partial<ApplicationTypeConfig>> = (
-  internalServices: CONFIG['internalServices'],
+  behaviors: CONFIG['behaviors'],
   identity: CONFIG['identity'],
 ) => void
 
 type GetDelivery<CONFIG extends Partial<ApplicationTypeConfig>> = (
   injected: {
-    internalServices: CONFIG['internalServices']
+    behaviors: CONFIG['behaviors']
     exportState: () => CONFIG['exportState']
   },
   identity: CONFIG['identity'],
 ) => CONFIG['delivery']
 
 type Main<CONFIG extends Partial<ApplicationTypeConfig>> = (
-  injected: { internalServices: CONFIG['internalServices']; delivery: CONFIG['delivery'] },
+  injected: { behaviors: CONFIG['behaviors']; delivery: CONFIG['delivery'] },
   identity: CONFIG['identity'],
 ) => CONFIG['output']
 
@@ -219,11 +219,11 @@ type OnError = (error: unknown) => void
 type TopLevelErrorHandling = (onError: (error: unknown) => void) => void
 
 type ExportState<CONFIG extends Partial<ApplicationTypeConfig>> = (
-  internalServices: CONFIG['internalServices'],
+  behaviors: CONFIG['behaviors'],
 ) => CONFIG['exportState']
 
 type ImportState<CONFIG extends Partial<ApplicationTypeConfig>> = (
-  internalServices: CONFIG['internalServices'],
+  behaviors: CONFIG['behaviors'],
   newState: CONFIG['exportState'],
 ) => void
 
@@ -245,8 +245,8 @@ type ArgPatternList<
 > = { [KEY in keyof ARGS]: OptionalPatternToList<ARGS[KEY]> }
 
 export type ApplicationRunReturn<CONFIG extends Partial<ApplicationTypeConfig>> = {
-  externalServices: CONFIG['externalServices']
-  internalServices: CONFIG['internalServices']
+  services: CONFIG['services']
+  behaviors: CONFIG['behaviors']
   delivery: CONFIG['delivery']
   output: CONFIG['output']
   importState: (newState: CONFIG['exportState']) => void

@@ -13,9 +13,9 @@ import type { SubProcessService } from '@dungarees/sub-process/type.ts'
 import { createTranspilerService } from '@dungarees/transpile/service.ts'
 
 import path from 'node:path'
-import { concat, defer, forkJoin, map, mergeMap } from 'rxjs'
+import { concat, forkJoin, map, mergeMap } from 'rxjs'
 
-export type PublishLib = {
+export type PublishLibBehaviour = {
   build: (args: {
     srcDir: string
     outDir: string
@@ -38,11 +38,14 @@ export type PublishLibArgs = {
   subProcess: SubProcessService
 }
 
-export const createPublishLibService = ({ fileSystem, subProcess }: PublishLibArgs): PublishLib => {
+export const createPublishLibService = ({
+  fileSystem,
+  subProcess,
+}: PublishLibArgs): PublishLibBehaviour => {
   const fileOperations = createFileOperations(fileSystem)
   const transpileService = createTranspilerService(fileSystem)
 
-  const build: PublishLib['build'] = ({ srcDir, outDir, version }) => {
+  const build: PublishLibBehaviour['build'] = ({ srcDir, outDir, version }) => {
     const originalPackageJsonPath = `${srcDir}/package.json`
     const startMessage$ = getBuildStartMessage({ srcDir, outDir, version })
     const transformer = fileOperations.transformFileContext<string>({
@@ -61,21 +64,20 @@ export const createPublishLibService = ({ fileSystem, subProcess }: PublishLibAr
     }
   }
 
-  const publishSingleLib: PublishLib['publishSingleLib'] = ({
+  const publishSingleLib: PublishLibBehaviour['publishSingleLib'] = ({
     srcDir,
     outDir,
     version,
     registry,
   }) => {
     const { stdio$ } = build({ srcDir, outDir, version })
-    const publish$ = defer(() =>
-      publishLib(
+    const publish$ = publishLib(
+      () =>
         subProcess.run(
           'npm',
           ['publish', '--access', 'public', ...(registry ? ['--registry', registry] : [])],
           { cwd: outDir },
         ).output$,
-      ),
     )
 
     return {
@@ -83,26 +85,17 @@ export const createPublishLibService = ({ fileSystem, subProcess }: PublishLibAr
     }
   }
 
-  const publishMultiLib: PublishLib['publishMultiLib'] = ({ dir, registry }) => {
+  const publishMultiLib: PublishLibBehaviour['publishMultiLib'] = ({ dir, registry }) => {
     const sourceDir = `${dir}/src`
-    const packageDirs$ = fileSystem.glob(`${sourceDir}/**/package.json`).pipe(
-      map((packageJsonPaths) =>
-        packageJsonPaths.map((jsonPath) => {
-          const b = path.relative(sourceDir, jsonPath)
-          const a = b.replace('/package.json', '')
-          console.log(
-            b,
-            'Found package.json at:',
-            jsonPath,
-            'mapped to package dir:',
-            a,
-            'src',
-            sourceDir,
-          )
-          return a
-        }),
-      ),
-    )
+    const packageDirs$ = fileSystem
+      .glob(`${sourceDir}/**/package.json`)
+      .pipe(
+        map((packageJsonPaths) =>
+          packageJsonPaths.map((jsonPath) =>
+            path.relative(sourceDir, jsonPath).replace('/package.json', ''),
+          ),
+        ),
+      )
     fileSystem
       .readDir(sourceDir)
       .subscribe((content) => console.log('Content of source dir:', content))

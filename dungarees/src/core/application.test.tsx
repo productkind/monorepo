@@ -5,38 +5,38 @@ import { expect, test } from 'vitest'
 
 test('empty application', () => {
   const app = createApplication()
-  const { externalServices, internalServices } = app.run()
-  assert<Equals<typeof externalServices, Record<string, never>>>()
-  assert<Equals<typeof internalServices, Record<string, never>>>()
-  expect(externalServices).toEqual({})
-  expect(internalServices).toEqual({})
+  const { services, behaviors } = app.run()
+  assert<Equals<typeof services, Record<string, never>>>()
+  assert<Equals<typeof behaviors, Record<string, never>>>()
+  expect(services).toEqual({})
+  expect(behaviors).toEqual({})
 
   const app2 = createApplication({})
-  const { externalServices: services2 } = app2.run()
+  const { services: services2 } = app2.run()
   assert<Equals<typeof services2, Record<string, never>>>()
   expect(services2).toEqual({})
 })
 
-test('Get external services', () => {
+test('Get services', () => {
   const myService = 'my-service'
   type Services = { myService: 'my-service' }
   const app = createApplication<{
-    externalServices: Services
+    services: Services
   }>({
-    getExternalServices: () => ({ myService }),
+    getServices: () => ({ myService }),
   })
-  const { externalServices } = app.run()
-  assert<Equals<typeof externalServices, Services>>()
-  expect(externalServices.myService).toBe('my-service')
+  const { services } = app.run()
+  assert<Equals<typeof services, Services>>()
+  expect(services.myService).toBe('my-service')
 })
 
-test('Get external services by static identity', () => {
+test('Get services by static identity', () => {
   type Services = { myService: string }
   const app = createApplication<{
-    externalServices: Services
+    services: Services
     identity: { type: 'type-1' | 'type-2' }
   }>({
-    getExternalServices: [
+    getServices: [
       {
         pattern: { type: 'type-1' },
         value: () => ({ myService: 'my-service-1' }),
@@ -47,25 +47,25 @@ test('Get external services by static identity', () => {
       },
     ],
   })
-  const { externalServices: services1 } = app.run({ type: 'type-1' })
+  const { services: services1 } = app.run({ type: 'type-1' })
   assert<Equals<typeof services1, Services>>()
   expect(services1.myService).toBe('my-service-1')
-  const { externalServices: services2 } = app.run({ type: 'type-2' })
+  const { services: services2 } = app.run({ type: 'type-2' })
   assert<Equals<typeof services2, Services>>()
   expect(services2.myService).toBe('my-service-2')
   // @ts-expect-error type-3 is not a key
   expect(() => app.run({ type: 'type-3' })).toThrow(
-    'No matching identity for "getExternalServices"',
+    'No matching identity for "getServices"',
   )
 })
 
-test('Get external services by static partial identity', () => {
+test('Get services by static partial identity', () => {
   type Services = { myService: string }
   const app = createApplication<{
-    externalServices: Services
+    services: Services
     identity: { type: 'type-1' | 'type-2'; data: number }
   }>({
-    getExternalServices: [
+    getServices: [
       {
         patternPartial: { type: 'type-1' },
         value: () => ({ myService: 'my-service-1' }),
@@ -76,27 +76,27 @@ test('Get external services by static partial identity', () => {
       },
     ],
   })
-  const { externalServices: services1 } = app.run({ type: 'type-1', data: 1 })
+  const { services: services1 } = app.run({ type: 'type-1', data: 1 })
   assert<Equals<typeof services1, Services>>()
   expect(services1.myService).toBe('my-service-1')
-  const { externalServices: services2 } = app.run({ type: 'type-2', data: 2 })
+  const { services: services2 } = app.run({ type: 'type-2', data: 2 })
   assert<Equals<typeof services2, Services>>()
   expect(services2.myService).toBe('my-service-2')
   // @ts-expect-error type-3 is not a key
   expect(() => app.run({ type: 'type-3' })).toThrow('No matching identity')
 })
 
-test('Register additional external services after creation', () => {
+test('Register additional services after creation', () => {
   type Services = { myService: string }
   const baseApp = createApplication<{
-    externalServices: Services
+    services: Services
     identity: { type: 'type-1' | 'type-2' | 'type-3'; data: number }
   }>({
-    getExternalServices: () => ({ myService: 'my-service-default' }),
+    getServices: () => ({ myService: 'my-service-default' }),
   })
   const app = createApplication(
     {
-      getExternalServices: [
+      getServices: [
         {
           patternPartial: { type: 'type-1' },
           value: () => ({ myService: 'my-service-1' }),
@@ -109,26 +109,26 @@ test('Register additional external services after creation', () => {
     },
     () => baseApp,
   )
-  const { externalServices: services1 } = app.run({ type: 'type-1', data: 1 })
+  const { services: services1 } = app.run({ type: 'type-1', data: 1 })
   assert<Equals<typeof services1, Services>>()
   expect(services1.myService).toBe('my-service-1')
-  const { externalServices: services2 } = app.run({ type: 'type-2', data: 2 })
+  const { services: services2 } = app.run({ type: 'type-2', data: 2 })
   assert<Equals<typeof services2, Services>>()
   expect(services2.myService).toBe('my-service-2')
-  const { externalServices: services3 } = app.run({ type: 'type-3', data: 3 })
+  const { services: services3 } = app.run({ type: 'type-3', data: 3 })
   assert<Equals<typeof services3, Services>>()
   expect(services3.myService).toBe('my-service-default')
 })
 
-test('The getExternalServices function should receive the run identity', () => {
+test('The getServices function should receive the run identity', () => {
   const myService = 'my-service'
   type Services = { myService: 'my-service' }
   let identity
   const app = createApplication<{
-    externalServices: Services
+    services: Services
     identity: string
   }>({
-    getExternalServices: (identityExternalService) => {
+    getServices: (identityExternalService) => {
       identity = identityExternalService
       return { myService }
     },
@@ -137,38 +137,38 @@ test('The getExternalServices function should receive the run identity', () => {
   expect(identity).toBe('identity')
 })
 
-test('Get internal services', () => {
+test('Get behaviors', () => {
   const myExternalService = 'my-service'
-  type ExternalServices = { myExternalService: 'my-service' }
-  type InternalServices = { myService: 'my-service' }
+  type Services = { myExternalService: 'my-service' }
+  type Behaviors = { myService: 'my-service' }
   const app = createApplication<{
-    externalServices: ExternalServices
-    internalServices: InternalServices
+    services: Services
+    behaviors: Behaviors
   }>({
-    getExternalServices: () => {
+    getServices: () => {
       return { myExternalService }
     },
-    getInternalServices: ({ myExternalService }) => {
+    getBehaviors: ({ myExternalService }) => {
       return {
         myService: myExternalService,
       }
     },
   })
-  const { internalServices } = app.run()
-  expect(internalServices.myService).toBe('my-service')
+  const { behaviors } = app.run()
+  expect(behaviors.myService).toBe('my-service')
 })
 
-test('Register additional internal services after creation', () => {
+test('Register additional behaviors after creation', () => {
   type Services = { myService: string }
   const baseApp = createApplication<{
-    internalServices: Services
+    behaviors: Services
     identity: { type: 'type-1' | 'type-2' | 'type-3'; data: number }
   }>({
-    getInternalServices: () => ({ myService: 'my-service-default' }),
+    getBehaviors: () => ({ myService: 'my-service-default' }),
   })
   const app = createApplication(
     {
-      getInternalServices: [
+      getBehaviors: [
         {
           patternPartial: { type: 'type-1' },
           value: () => ({ myService: 'my-service-1' }),
@@ -181,13 +181,13 @@ test('Register additional internal services after creation', () => {
     },
     () => baseApp,
   )
-  const { internalServices: services1 } = app.run({ type: 'type-1', data: 1 })
+  const { behaviors: services1 } = app.run({ type: 'type-1', data: 1 })
   assert<Equals<typeof services1, Services>>()
   expect(services1.myService).toBe('my-service-1')
-  const { internalServices: services2 } = app.run({ type: 'type-2', data: 2 })
+  const { behaviors: services2 } = app.run({ type: 'type-2', data: 2 })
   assert<Equals<typeof services2, Services>>()
   expect(services2.myService).toBe('my-service-2')
-  const { internalServices: services3 } = app.run({ type: 'type-3', data: 3 })
+  const { behaviors: services3 } = app.run({ type: 'type-3', data: 3 })
   assert<Equals<typeof services3, Services>>()
   expect(services3.myService).toBe('my-service-default')
 })
@@ -222,15 +222,15 @@ test('Register additional main after creation', () => {
   expect(output3).toBe(3)
 })
 
-test('The getInternalServices function should receive the run identity', () => {
+test('The getBehaviors function should receive the run identity', () => {
   const myService = 'my-service'
   type Services = { myService: 'my-service' }
   let identity
   const app = createApplication<{
-    internalServices: Services
+    behaviors: Services
     identity: string
   }>({
-    getInternalServices: (_, identityExternalService) => {
+    getBehaviors: (_, identityExternalService) => {
       identity = identityExternalService
       return { myService }
     },
@@ -243,15 +243,15 @@ test('Pre-main can execute side-effects', () => {
   const myService = 'my-service'
   type Services = { myService: string }
   const app = createApplication<{
-    internalServices: Services
+    behaviors: Services
   }>({
-    getInternalServices: () => ({ myService }),
-    preMain: (internalServices) => {
-      internalServices.myService += '-side-effect'
+    getBehaviors: () => ({ myService }),
+    preMain: (behaviors) => {
+      behaviors.myService += '-side-effect'
     },
   })
-  const { internalServices } = app.run()
-  expect(internalServices.myService).toBe('my-service-side-effect')
+  const { behaviors } = app.run()
+  expect(behaviors.myService).toBe('my-service-side-effect')
 })
 
 test('The preMain function should receive the run identity', () => {
@@ -271,11 +271,11 @@ test('Get delivery', () => {
   const myService = 'my-service'
   type Services = { myService: 'my-service' }
   const app = createApplication<{
-    internalServices: Services
+    behaviors: Services
     delivery: { AppComponent: () => JSX.Element }
   }>({
-    getInternalServices: () => ({ myService }),
-    getDelivery: ({ internalServices: { myService } }) => ({
+    getBehaviors: () => ({ myService }),
+    getDelivery: ({ behaviors: { myService } }) => ({
       AppComponent: () => <span data-service={myService}></span>,
     }),
   })
@@ -302,15 +302,15 @@ test('main', () => {
   type Services = { myService: 'my-service' }
   const app = createApplication<{
     delivery: { AppComponent: () => JSX.Element }
-    internalServices: Services
+    behaviors: Services
     output: string
   }>({
-    getInternalServices: () => ({ myService }),
-    getDelivery: ({ internalServices: { myService } }) => ({
+    getBehaviors: () => ({ myService }),
+    getDelivery: ({ behaviors: { myService } }) => ({
       AppComponent: () => <span data-service={myService}></span>,
     }),
-    main: ({ internalServices, delivery }) =>
-      `${delivery.AppComponent().props['data-service']}-${internalServices.myService}`,
+    main: ({ behaviors, delivery }) =>
+      `${delivery.AppComponent().props['data-service']}-${behaviors.myService}`,
   })
   const { output } = app.run()
   expect(output).toEqual('my-service-my-service')
@@ -330,66 +330,66 @@ test('The main function should receive the run identity', () => {
   expect(identity).toBe('identity')
 })
 
-test('Redefine internal services', () => {
+test('Redefine behaviors', () => {
   const myService = 'my-service'
-  type Services = { myService: string }
+  type Behaviors = { myService: string }
   const app = createApplication<{
-    internalServices: Services
+    behaviors: Behaviors
   }>({
-    getInternalServices: () => ({ myService }),
+    getBehaviors: () => ({ myService }),
   })
-  const { internalServices } = app.run(undefined, {
-    getInternalServices: () => ({ myService: 'other-service' }),
+  const { behaviors } = app.run(undefined, {
+    getBehaviors: () => ({ myService: 'other-service' }),
   })
-  expect(internalServices.myService).toBe('other-service')
+  expect(behaviors.myService).toBe('other-service')
 })
 
-test('Redefine external services', () => {
+test('Redefine services', () => {
   const myService = 'my-service'
   type Services = { myService: string }
   const app = createApplication<{
-    externalServices: Services
+    services: Services
   }>({
-    getExternalServices: () => ({ myService }),
+    getServices: () => ({ myService }),
   })
-  const { externalServices } = app.run(undefined, {
-    getExternalServices: () => ({
+  const { services } = app.run(undefined, {
+    getServices: () => ({
       myService: 'my-service-2',
     }),
   })
-  expect(externalServices.myService).toBe('my-service-2')
+  expect(services.myService).toBe('my-service-2')
 })
 
 test('Redefine pre-main', () => {
   const myService = 'my-service'
   type Services = { myService: string }
   const app = createApplication<{
-    internalServices: Services
+    behaviors: Services
   }>({
-    getInternalServices: () => ({ myService }),
+    getBehaviors: () => ({ myService }),
   })
-  const { internalServices } = app.run(undefined, {
-    preMain: (internalServices) => {
-      internalServices.myService += '-side-effect'
+  const { behaviors } = app.run(undefined, {
+    preMain: (behaviors) => {
+      behaviors.myService += '-side-effect'
     },
   })
-  expect(internalServices.myService).toBe('my-service-side-effect')
+  expect(behaviors.myService).toBe('my-service-side-effect')
 })
 
 test('Redefine delivery', () => {
   const myService = 'my-service'
   type Services = { myService: 'my-service' }
   const app = createApplication<{
-    internalServices: Services
+    behaviors: Services
     delivery: { AppComponent: () => JSX.Element }
   }>({
-    getInternalServices: () => ({ myService }),
-    getDelivery: ({ internalServices: { myService } }) => ({
+    getBehaviors: () => ({ myService }),
+    getDelivery: ({ behaviors: { myService } }) => ({
       AppComponent: () => <span data-service={myService}></span>,
     }),
   })
   const { delivery } = app.run(undefined, {
-    getDelivery: ({ internalServices: { myService } }) => ({
+    getDelivery: ({ behaviors: { myService } }) => ({
       AppComponent: () => <span data-service={`${myService}-change`}></span>,
     }),
   })
@@ -400,19 +400,19 @@ test('Redefine main', () => {
   const myService = 'my-service'
   type Services = { myService: 'my-service' }
   const app = createApplication<{
-    internalServices: Services
+    behaviors: Services
     delivery: { AppComponent: () => JSX.Element }
   }>({
-    getInternalServices: () => ({ myService }),
-    getDelivery: ({ internalServices: { myService } }) => ({
+    getBehaviors: () => ({ myService }),
+    getDelivery: ({ behaviors: { myService } }) => ({
       AppComponent: () => <span data-service={myService}></span>,
     }),
-    main: ({ internalServices, delivery }) =>
-      `${delivery.AppComponent().props['data-service']}-${internalServices.myService}`,
+    main: ({ behaviors, delivery }) =>
+      `${delivery.AppComponent().props['data-service']}-${behaviors.myService}`,
   })
   const { output } = app.run(undefined, {
-    main: ({ internalServices, delivery }) =>
-      `${delivery.AppComponent().props['data-service']}-${internalServices.myService}-change`,
+    main: ({ behaviors, delivery }) =>
+      `${delivery.AppComponent().props['data-service']}-${behaviors.myService}-change`,
   })
   expect(output).toEqual('my-service-my-service-change')
 })
@@ -432,7 +432,7 @@ test('Error handling', () => {
 })
 
 test('Top level error handling', async () => {
-  const onError = (): void => {}
+  const onError = (): void => { }
   let cb
   const app = createApplication({
     onError,
@@ -449,10 +449,10 @@ test('export state hook in delivery', () => {
   const myService = 'my-service'
   type Services = { myService: string }
   const app = createApplication<{
-    internalServices: Services
+    behaviors: Services
     exportState: string
   }>({
-    getInternalServices: () => ({
+    getBehaviors: () => ({
       myService,
     }),
     getDelivery: ({ exportState }) => {
@@ -468,21 +468,21 @@ test('export state hook in delivery', () => {
   expect(exportState()).toEqual('my-service')
 })
 
-test('importState can update internal services', () => {
+test('importState can update behaviors', () => {
   const myService = { value: 'my-service' }
   type Services = { myService: { value: string } }
   const app = createApplication<{
-    internalServices: Services
+    behaviors: Services
     exportState: string
   }>({
-    getInternalServices: () => ({ myService }),
+    getBehaviors: () => ({ myService }),
     importState: ({ myService }, newState) => {
       myService.value += newState
     },
   })
-  const { internalServices, importState } = app.run()
+  const { behaviors, importState } = app.run()
   importState('-new-state')
-  expect(internalServices.myService.value).toBe('my-service-new-state')
+  expect(behaviors.myService.value).toBe('my-service-new-state')
 })
 
 test('Get pattern list', () => {
