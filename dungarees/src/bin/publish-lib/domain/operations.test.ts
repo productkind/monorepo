@@ -1,6 +1,8 @@
 import {
   createOutDir,
   getBuildStartMessage,
+  getPackageDirsWithVersion,
+  publishAllPackages,
   publishLib,
   transformPackageJson,
 } from './operations.ts'
@@ -8,10 +10,10 @@ import {
 import { stderr, stdout } from '@dungarees/cli/utils.ts'
 import { mtest } from '@dungarees/core/marbles-vitest.ts'
 import { createGetTransformSetContextInspector } from '@dungarees/rxjs/fake.ts'
-import { createGetTransformSetContext } from '@dungarees/rxjs/util.ts'
+import { collectValuesFrom, createGetTransformSetContext } from '@dungarees/rxjs/util.ts'
 
 import { of } from 'rxjs'
-import { expect } from 'vitest'
+import { expect, test } from 'vitest'
 
 mtest('create build start message', ({ expect }) => {
   const startMessage$ = getBuildStartMessage({
@@ -289,4 +291,85 @@ mtest('publishLib with error', ({ expect, coldError }) => {
     stderr('Error publishing library: Network timeout'),
     new Error('Could not publish library'),
   )
+})
+
+mtest('getPackageDirsWithVersion combines parsed package dirs and version', ({ expect }) => {
+  const combined$ = getPackageDirsWithVersion({
+    packageJsonPaths$: of(['/src/lib-1/package.json', '/src/sub/lib-2/package.json']),
+    versionContent$: of(JSON.stringify({ version: '1.2.3' })),
+    sourceDir: '/src',
+  })
+  expect(combined$).toBeObservableValueAndClose({
+    packageDirs: ['lib-1', 'sub/lib-2'],
+    version: '1.2.3',
+  })
+})
+
+mtest('getPackageDirsWithVersion with no package.json paths', ({ expect }) => {
+  const combined$ = getPackageDirsWithVersion({
+    packageJsonPaths$: of<string[]>([]),
+    versionContent$: of(JSON.stringify({ version: '1.0.0' })),
+    sourceDir: '/src',
+  })
+  expect(combined$).toBeObservableValueAndClose({
+    packageDirs: [],
+    version: '1.0.0',
+  })
+})
+
+mtest('getPackageDirsWithVersion errors when version.json has no version field', ({ expect }) => {
+  const combined$ = getPackageDirsWithVersion({
+    packageJsonPaths$: of(['/src/lib-1/package.json']),
+    versionContent$: of(JSON.stringify({ name: 'my-app' })),
+    sourceDir: '/src',
+  })
+  expect(combined$).toBeObservableError(new Error('Version is required in version.json'), 0)
+})
+
+mtest('getPackageDirsWithVersion errors when version is not a string', ({ expect }) => {
+  const combined$ = getPackageDirsWithVersion({
+    packageJsonPaths$: of(['/src/lib-1/package.json']),
+    versionContent$: of(JSON.stringify({ version: 42 })),
+    sourceDir: '/src',
+  })
+  expect(combined$).toBeObservableError(new Error('Version is required in version.json'), 0)
+})
+
+mtest('getPackageDirsWithVersion errors when version.json is not valid JSON', ({ expect }) => {
+  const combined$ = getPackageDirsWithVersion({
+    packageJsonPaths$: of(['/src/lib-1/package.json']),
+    versionContent$: of('not json'),
+    sourceDir: '/src',
+  })
+  expect(combined$).toBeObservableError(
+    new Error('Invalid version.json: Unexpected token \'o\', "not json" is not valid JSON'),
+    0,
+  )
+})
+
+mtest(
+  'publishAllPackages emits success message after all packages publish',
+  ({ expect, coldStepAndClose }) => {
+    const publishPackage = ({ packageDir }: { packageDir: string; version: string }) =>
+      coldStepAndClose(stdout(`Published ${packageDir}`))
+    const publishAll$ = of({ packageDirs: ['lib-1', 'lib-2'], version: '1.0.0' }).pipe(
+      publishAllPackages(publishPackage),
+    )
+    expect(publishAll$).toBeObservableStepAndClose(stdout('All packages published successfully'))
+  },
+)
+
+test('publishAllPackages passes packageDir and version to each publish call', async () => {
+  const publishedArgs: Array<{ packageDir: string; version: string }> = []
+  const publishAll$ = of({ packageDirs: ['lib-1', 'lib-2'], version: '2.5.0' }).pipe(
+    publishAllPackages((args) => {
+      publishedArgs.push(args)
+      return of(stdout(`Published ${args.packageDir}`))
+    }),
+  )
+  await collectValuesFrom(publishAll$)
+  expect(publishedArgs).toEqual([
+    { packageDir: 'lib-1', version: '2.5.0' },
+    { packageDir: 'lib-2', version: '2.5.0' },
+  ])
 })

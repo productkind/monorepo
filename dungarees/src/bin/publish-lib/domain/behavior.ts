@@ -1,19 +1,19 @@
 import {
   createOutDir,
   getBuildStartMessage,
+  getPackageDirsWithVersion,
+  publishAllPackages,
   publishLib,
   transformPackageJson,
 } from './operations.ts'
 
 import type { CliCommandsService } from '@dungarees/cli-command/service.ts'
 import type { StdioMessageFeatureOutput } from '@dungarees/cli/type.ts'
-import { stdout } from '@dungarees/cli/utils.ts'
 import { createFileOperations } from '@dungarees/fs/file-operations.ts'
 import type { FileSystemService } from '@dungarees/fs/service.ts'
 import { createTranspilerService } from '@dungarees/transpile/service.ts'
 
-import path from 'node:path'
-import { concat, forkJoin, map, mergeMap } from 'rxjs'
+import { concat } from 'rxjs'
 
 export type PublishLibBehaviour = {
   build: (args: {
@@ -48,7 +48,7 @@ export const createPublishLibService = ({
   const build: PublishLibBehaviour['build'] = ({ srcDir, outDir, version }) => {
     const originalPackageJsonPath = `${srcDir}/package.json`
     const startMessage$ = getBuildStartMessage({ srcDir, outDir, version })
-    const transformer = fileOperations.transformFileContext<string>({
+    const packageJsonTransform = fileOperations.transformFileContext<string>({
       input: originalPackageJsonPath,
       output: `${outDir}/package.json`,
     })
@@ -58,7 +58,7 @@ export const createPublishLibService = ({
         input: srcDir,
         output: outDir,
       })
-      .pipe(transformPackageJson(transformer, { srcDir, outDir, version }))
+      .pipe(transformPackageJson(packageJsonTransform, { srcDir, outDir, version }))
     return {
       stdio$: concat(startMessage$, createOutDir$, transpile$),
     }
@@ -70,53 +70,29 @@ export const createPublishLibService = ({
     version,
     registry,
   }) => {
-    const { stdio$ } = build({ srcDir, outDir, version })
+    const build$ = build({ srcDir, outDir, version }).stdio$
     const publish$ = publishLib(() => npm.publish({ cwd: outDir, registry }).output$)
-
     return {
-      stdio$: concat(stdio$, publish$),
+      stdio$: concat(build$, publish$),
     }
   }
 
   const publishMultiLib: PublishLibBehaviour['publishMultiLib'] = ({ dir, registry }) => {
     const sourceDir = `${dir}/src`
-    const packageDirs$ = fileSystem
-      .glob(`${sourceDir}/**/package.json`)
-      .pipe(
-        map((packageJsonPaths) =>
-          packageJsonPaths.map((jsonPath) =>
-            path.relative(sourceDir, jsonPath).replace('/package.json', ''),
-          ),
-        ),
-      )
-    fileSystem
-      .readDir(sourceDir)
-      .subscribe((content) => console.log('Content of source dir:', content))
-    const readVersion$ = fileSystem.readFile(`${dir}/config/version.json`, 'utf-8').pipe(
-      map((content) => {
-        const parsed = JSON.parse(content)
-        console.log('Parsed version.json:', parsed)
-        return parsed.version as string
-      }),
+    const publishAll$ = getPackageDirsWithVersion({
+      packageJsonPaths$: fileSystem.glob(`${sourceDir}/**/package.json`),
+      versionContent$: fileSystem.readFile(`${dir}/config/version.json`, 'utf-8'),
+      sourceDir,
+    }).pipe(
+      publishAllPackages(({ packageDir, version }) =>
+        publishSingleLib({
+          srcDir: `${sourceDir}/${packageDir}`,
+          outDir: `${dir}/dist/${packageDir}`,
+          version,
+          registry,
+        }).stdio$,
+      ),
     )
-
-    const packageDirsWithVersion$ = forkJoin([packageDirs$, readVersion$]).pipe(
-      map(([packageDirs, version]) => ({ packageDirs, version })),
-    )
-    const publishAll$ = packageDirsWithVersion$.pipe(
-      mergeMap(({ packageDirs, version }) => {
-        const publishObservables = packageDirs.map((packageDir) => {
-          const srcDir = `${sourceDir}/${packageDir}`
-          const outDir = `${dir}/dist/${packageDir}`
-          const { stdio$ } = publishSingleLib({ srcDir, outDir, version, registry })
-          return stdio$
-        })
-        return forkJoin(publishObservables).pipe(
-          map(() => stdout('All packages published successfully')),
-        )
-      }),
-    )
-
     return {
       stdio$: publishAll$,
     }

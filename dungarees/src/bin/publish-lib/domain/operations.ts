@@ -11,7 +11,7 @@ import {
 import type { TranspileDirOutput } from '@dungarees/transpile/service.ts'
 
 import path from 'node:path'
-import { defer, type Observable, of, type OperatorFunction, pipe } from 'rxjs'
+import { defer, forkJoin, type Observable, of, type OperatorFunction, pipe } from 'rxjs'
 import { map, mergeMap } from 'rxjs/operators'
 import { z } from 'zod'
 
@@ -182,5 +182,48 @@ export const publishLib = (
     catchValueAndRethrow(
       (cause) => stderr(`Error publishing library: ${cause.message}`),
       (cause) => new Error('Could not publish library', { cause }),
+    ),
+  )
+
+const getPackageDirs = (sourceDir: string): OperatorFunction<string[], string[]> =>
+  map((packageJsonPaths) =>
+    packageJsonPaths.map((jsonPath) =>
+      path.relative(sourceDir, jsonPath).replace('/package.json', ''),
+    ),
+  )
+
+const parseVersion = (): OperatorFunction<string, string> =>
+  pipe(
+    map((content) => JSON.parse(content)),
+    catchAndRethrow(
+      (error) => new Error(`Invalid version.json: ${error.message}`, { cause: error }),
+    ),
+    assertSchemaMap(
+      z.object({ version: z.string().min(1) }),
+      'Version is required in version.json',
+    ),
+    map(({ version }) => version),
+  )
+
+export const getPackageDirsWithVersion = ({
+  packageJsonPaths$,
+  versionContent$,
+  sourceDir,
+}: {
+  packageJsonPaths$: Observable<string[]>
+  versionContent$: Observable<string>
+  sourceDir: string
+}): Observable<{ packageDirs: string[]; version: string }> =>
+  forkJoin({
+    packageDirs: packageJsonPaths$.pipe(getPackageDirs(sourceDir)),
+    version: versionContent$.pipe(parseVersion()),
+  })
+
+export const publishAllPackages = (
+  publishPackage: (args: { packageDir: string; version: string }) => Observable<StdioMessage>,
+): OperatorFunction<{ packageDirs: string[]; version: string }, StdioMessage> =>
+  mergeMap(({ packageDirs, version }) =>
+    forkJoin(packageDirs.map((packageDir) => publishPackage({ packageDir, version }))).pipe(
+      map(() => stdout('All packages published successfully')),
     ),
   )
