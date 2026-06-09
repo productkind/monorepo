@@ -11,6 +11,7 @@
     "yargs": "^18.0.0",
     "@dungarees/fs": "*",
     "@dungarees/sub-process": "*",
+    "@dungarees/cli-command": "*",
     "@dungarees/bin-cli-yargs-base-app": "*",
     "@dungarees/bin-publish-lib-cli-yargs": "*"
   },

@@ -5,11 +5,11 @@ import {
   transformPackageJson,
 } from './operations.ts'
 
+import type { CliCommandsService } from '@dungarees/cli-command/service.ts'
 import type { StdioMessageFeatureOutput } from '@dungarees/cli/type.ts'
 import { stdout } from '@dungarees/cli/utils.ts'
 import { createFileOperations } from '@dungarees/fs/file-operations.ts'
-import type { FileSystem } from '@dungarees/fs/service.ts'
-import type { SubProcessService } from '@dungarees/sub-process/type.ts'
+import type { FileSystemService } from '@dungarees/fs/service.ts'
 import { createTranspilerService } from '@dungarees/transpile/service.ts'
 
 import path from 'node:path'
@@ -34,13 +34,13 @@ export type PublishLibBehaviour = {
 }
 
 export type PublishLibArgs = {
-  fileSystem: FileSystem
-  subProcess: SubProcessService
+  fileSystem: FileSystemService
+  cliCommands: CliCommandsService
 }
 
 export const createPublishLibService = ({
   fileSystem,
-  subProcess,
+  cliCommands: { npm },
 }: PublishLibArgs): PublishLibBehaviour => {
   const fileOperations = createFileOperations(fileSystem)
   const transpileService = createTranspilerService(fileSystem)
@@ -71,14 +71,7 @@ export const createPublishLibService = ({
     registry,
   }) => {
     const { stdio$ } = build({ srcDir, outDir, version })
-    const publish$ = publishLib(
-      () =>
-        subProcess.run(
-          'npm',
-          ['publish', '--access', 'public', ...(registry ? ['--registry', registry] : [])],
-          { cwd: outDir },
-        ).output$,
-    )
+    const publish$ = publishLib(() => npm.publish({ cwd: outDir, registry }).output$)
 
     return {
       stdio$: concat(stdio$, publish$),
