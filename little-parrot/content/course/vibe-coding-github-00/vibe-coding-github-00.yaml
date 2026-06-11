@@ -30,7 +30,7 @@ course:
             imageUrl: /comics/vibe-coding-github-00/panel-02.png
             altText: |-
               A brightly coloured bird (called Little Parrot) lands on the desk beside Dalmie,
-              smiling warmly. The bird says, "There is! Let's set up your own little workshop,
+              smiling warmly. The bird says, "There is! Let's set up your own workspace,
               right on your computer, Dalmie."
         - type: comic
           content:
@@ -42,7 +42,7 @@ course:
           title: What you're about to set up
           content:
             body: |-
-              In this course you'll build a small **workshop on your own computer**, the same kind of setup people use to build real software. With it, you can change your app as much as you like **without spending a single Lovable credit**.
+              In this course you'll build a **workspace on your own computer**, the same kind of setup people use to build real software. With it, you can change your app as much as you like **without spending a single Lovable credit**.
 
               You'll be able to:
               - **fix copy** and **swap icons** yourself
@@ -65,7 +65,7 @@ course:
             body: |-
               [**GitHub**](https://github.com/) is the place where **your app's code is stored**. When you build with Lovable, every change is saved to a connected GitHub repository (think of it as the folder that holds all the code for your app). GitHub also keeps a full history of every change, so nothing is ever lost.
 
-              The credit-saving idea is simple: a change **you** make outside of Lovable and save costs **no credits**, while asking Lovable to make it does. Once your workshop is set up, most small changes become free.
+              The credit-saving idea is simple: a change **you** make outside of Lovable and save costs **no credits**, while asking Lovable to make it does. Once your workspace is set up, most small changes become free.
             imageUrl: /courses/vibe-coding-github-00/octocat.gif
           subtitle: Your app's code has a home
         - type: text
@@ -118,7 +118,7 @@ course:
           title: "Your app is connected and you're ready to build! \U0001F517"
           content:
             description: Your app's code now lives on GitHub, with every change tracked and nothing ever lost.
-            nextModule: "**Next challenge:** Time to build your workshop! You'll set up VS Code, the editor that builders and AI agents work in every day, plus the two tools that make your app run on your computer. All free, and once it's set up you'll find yourself using it in all sorts of ways, well beyond this one app."
+            nextModule: "**Next challenge:** Time to build your workspace! You'll set up VS Code, the editor that builders and AI agents work in every day, plus the two tools that make your app run on your computer. All free, and once it's set up you'll find yourself using it in all sorts of ways, well beyond this one app."
             subDescription: |-
               This was the foundation, and you've laid it well: you know where your app's code lives, why editing it yourself costs nothing, and what an AI agent will soon be able to do right there in your files. Everything from here builds on that.
 
@@ -133,16 +133,16 @@ course:
       completionTime: 9:00
     - steps:
         - type: text
-          title: Let's build your workshop
+          title: Let's build your workspace
           content:
             body: |-
-              Time to set up your computer with three free tools. Don't worry about understanding them deeply, you just need them installed and ready.
+              Time to set up your computer with three free tools. Don't worry about understanding them deeply yet, you just need them installed and ready.
 
               - **VS Code**, the editor you'll write changes in
               - **Node.js**, which understands your code, and lets your app run on your computer
               - **Git**, the version-control engine that talks to GitHub
 
-              The **Local Setup Guide** that comes with this course has every step with screenshots, for both Mac and Windows. Here, we'll cover what each tool is for so it isn't a mystery.
+              And remember, you're not doing this alone. If you get stuck at any step, ask in our **Discord community**, we're there and happy to help. You can join through the link in [My Learning](https://littleparrot.app/nest/my-learning).
           subtitle: Three free tools, one workspace
         - type: text
           title: VS Code, your editor
@@ -150,10 +150,12 @@ course:
             body: |-
               [**VS Code**](https://code.visualstudio.com/) (Visual Studio Code) is a free code editor made by Microsoft. It's where you'll open your app's files and make changes, and where you can also give instructions to your AI agent, Copilot.
 
-              Download it from [**code.visualstudio.com**](https://code.visualstudio.com/). 
-              
-              - On **Mac**, open the download and drag **Visual Studio Code** into your **Applications** folder. 
+              Download it from [**code.visualstudio.com**](https://code.visualstudio.com/).
+
+              - On **Mac**, open the download and drag **Visual Studio Code** into your **Applications** folder.
               - On **Windows**, run the installer and click through it.
+
+              When you open VS Code for the first time, it asks you to **sign in**. Choose **Sign in with GitHub**. Do it now and it's done for good: your commits and your AI agent in the later challenges will just work, and you can focus on the fun part.
             imageUrl: /courses/vibe-coding-github-00/vscode.webp
           subtitle: Where you'll make your changes
         - type: text
@@ -215,7 +217,7 @@ course:
             imageUrl: /courses/vibe-coding-github-00/terminal-check.webp
           subtitle: A quick confidence check
         - type: challenge-end
-          title: "Your workshop is built! \U0001F6E0️"
+          title: "Your workspace is built! \U0001F6E0️"
           content:
             description: VS Code, Node.js, and Git are installed and ready.
             nextModule: "**Next challenge:** The big moment, you'll bring your app onto your computer and watch it run. Seeing your own app come to life locally is truly a thrill."
@@ -223,7 +225,7 @@ course:
               That's the hardest setup behind you, and you only ever do it once. Everything from here is the fun part: actually changing your app.
 
               **Reusable tool:** the **Local Setup Guide** has the full install steps and the version-check commands, for when you set up a new computer.
-      title: Set Up Your Workshop
+      title: Set Up Your Workspace
       isFree: false
       skills:
         - VS Code
@@ -237,7 +239,7 @@ course:
           title: Bring your app to life locally
           content:
             body: |-
-              Here's the moment your workshop pays off: you'll copy your app onto your computer and run it, so you can see every change instantly.
+              Here's the moment your workspace pays off: you'll copy your app onto your computer and run it, so you can see every change instantly.
 
               The plan has three parts: find your place in the terminal, fetch your app's link from GitHub, then bring your app to your computer with a few short commands.
           subtitle: From GitHub to your computer
@@ -386,7 +388,7 @@ course:
             body: |-
               Your app is running on your computer. Let's change something and watch it update, for free, in seconds.
 
-              We'll start where you started in Lovable: a piece of **website copy**.
+              We'll start with changing a piece of **website copy**.
           subtitle: Edit, and see it instantly
         - type: text
           title: Open your project in VS Code
@@ -395,7 +397,8 @@ course:
               Open **VS Code**, choose **File → Open Folder**, and pick the folder Git created when you cloned your app. You'll see all your app's files listed down the left side.
 
               It can look busy at first. You don't need to understand it all, you only ever touch the small part you came for.
-          subtitle: Your whole app, in one window
+            imageUrl: /courses/vibe-coding-github-00/vscode-open-folder.gif
+          subtitle: Your app's code, in an editor
         - type: text
           title: Find the words you want to change
           content:
@@ -551,7 +554,7 @@ course:
           title: Turn on Copilot Free
           content:
             body: |-
-              In VS Code, click the **Copilot icon** near the top, then choose **Sign up for Copilot Free**. Sign in with your GitHub account (the same one your app lives on), and you're ready.
+              In VS Code, click the **Copilot icon** near the top, then choose **Sign up for Copilot Free**. Since you signed in with your GitHub account back when you set up VS Code, this takes seconds, and you're ready.
 
               The free plan gives you a generous monthly allowance, plenty for the kind of small changes you'll make here.
             imageUrl: /courses/vibe-coding-github-00/copilot-signin.webp
@@ -618,7 +621,7 @@ course:
           title: Look what you can do now
           content:
             body: |-
-              You've built a workshop, run your app locally, changed copy and icons, and put an AI agent to work, all without spending credits. That's a real shift in what you can do alone.
+              You've built a workspace, run your app locally, changed copy and icons, and put an AI agent to work, all without spending credits. That's a real shift in what you can do alone.
 
               The last piece is knowing **which tool to reach for**, so you always pick the easy path.
           subtitle: One simple rule to finish
@@ -673,11 +676,11 @@ course:
             systemPrompt: 'You are a warm, encouraging mentor for a curious non-technical app builder finishing this course. The learner names one change they will make in VS Code this week. Respond in British English (max 4 short bullet points): affirm it suits a hand edit or Copilot if it is small or well defined, or gently suggest Lovable if it is a big new feature or an image upload. End with a genuine, specific note of encouragement about how far they have come. Do not use em dashes.'
             checkerPrompt: 'Check whether the learner names a specific change suited to editing in VS Code or with Copilot. If it is a big new feature or an image upload, note gently that Lovable may suit it better. This is their plan:'
         - type: course-end
-          title: "You're a builder with your own workshop now \U0001F38A"
+          title: "You're a builder with your own workspace now \U0001F38A"
           content:
             description: Look at everything you can do.
             nextModule: "**Your next step:** Make that one change this week. Then notice how often you reach for VS Code or Copilot instead of spending a credit. Each time, you're building real confidence with your own app."
-            subDescription: "✓ **You have a real workshop:** VS Code, Node.js, and Git, set up once and yours for good.\n\n✓ **You run your app locally:** clone, install, `npm run dev`, and see every change live.\n\n✓ **You edit for free:** copy and icons changed by hand, committed and pushed to GitHub and Lovable.\n\n✓ **You have an AI agent:** Copilot Free for the bigger changes, with you reviewing its work.\n\n✓ **You know which tool to use:** VS Code and Copilot for small and specific, Lovable for big and new, and images.\n\nThe deeper win is confidence. You're no longer waiting on credits for every little thing, and you've learned the real setup that builders and AI agents use.\n\n**Reusable tools from this course:** the GitHub Setup Guide, the Local Setup Guide, the Run-It-Locally Cheat Sheet, the Credit-Free Edit Checklist, and the Copilot Starter Prompts. Keep them close while you build.\n\nWant to go further? These pair well:\n\n- [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview)\n- [Build a Valuable Product: How to Break Down Your Idea for Vibe Coding](https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview)\n- [Fix Bugs with Confidence: Debugging Your Lovable App](https://littleparrot.app/aaab45b7-209a-4578-a515-3e55687f0c53/course-overview)"
+            subDescription: "✓ **You have a real workspace:** VS Code, Node.js, and Git, set up once and yours for good.\n\n✓ **You run your app locally:** clone, install, `npm run dev`, and see every change live.\n\n✓ **You edit for free:** copy and icons changed by hand, committed and pushed to GitHub and Lovable.\n\n✓ **You have an AI agent:** Copilot Free for the bigger changes, with you reviewing its work.\n\n✓ **You know which tool to use:** VS Code and Copilot for small and specific, Lovable for big and new, and images.\n\nThe deeper win is confidence. You're no longer waiting on credits for every little thing, and you've learned the real setup that builders and AI agents use.\n\n**Reusable tools from this course:** the GitHub Setup Guide, the Local Setup Guide, the Run-It-Locally Cheat Sheet, the Credit-Free Edit Checklist, and the Copilot Starter Prompts. Keep them close while you build.\n\nWant to go further? These pair well:\n\n- [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview)\n- [Build a Valuable Product: How to Break Down Your Idea for Vibe Coding](https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview)\n- [Fix Bugs with Confidence: Debugging Your Lovable App](https://littleparrot.app/aaab45b7-209a-4578-a515-3e55687f0c53/course-overview)"
       title: Your Workflow
       isFree: false
       skills:

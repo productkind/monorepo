@@ -4,7 +4,7 @@
 
 ## Overview
 
-This micro-course teaches non-technical builders who use Lovable to set up a small coding workshop on their own computer (VS Code, Node.js, Git), run their app locally, and make changes themselves instead of spending Lovable credits on every tweak.
+This micro-course teaches non-technical builders who use Lovable to set up a small coding workspace on their own computer (VS Code, Node.js, Git), run their app locally, and make changes themselves instead of spending Lovable credits on every tweak.
 
 By the end, the learner can run their Lovable app on their own computer, change copy and icons by hand, make bigger changes by describing them to GitHub Copilot, and commit it all back to GitHub (which syncs to Lovable). The deeper win is confidence and capability: they're learning the real setup that builders and AI agents use, not just saving credits.
 
@@ -30,7 +30,7 @@ The credit-saving focus is unchanged. The method moved from the GitHub web edito
 ### Challenge 1: Why Edit on Your Own Computer (free)
 **See how editing yourself saves credits, and connect your app to GitHub.**
 
-- Comics: Dalmie's credits draining on tiny fixes; Little Parrot offers a workshop on her own computer (excited, not fearful).
+- Comics: Dalmie's credits draining on tiny fixes; Little Parrot offers a workspace on her own computer (excited, not fearful).
 - What you'll set up and walk away with (concrete, jargon-free, exciting).
 - The credit-saving idea: a change you make and save costs no credits; asking Lovable's AI does.
 - What GitHub is and why your code lives there; version control as a familiar idea (Google Docs/Office history; some people write whole books this way).
@@ -38,7 +38,7 @@ The credit-saving focus is unchanged. The method moved from the GitHub web edito
 - Quiz: where the credit savings actually come from.
 - Reflection: what small thing will you change first?
 
-### Challenge 2: Set Up Your Workshop
+### Challenge 2: Set Up Your Workspace
 **Install the three free tools you need to edit and run your app locally.**
 
 - VS Code (the editor), Node.js (runs your app, gives npm), Git (the version-control engine that talks to GitHub).
@@ -100,7 +100,7 @@ The credit-saving focus is unchanged. The method moved from the GitHub web edito
 The course follows a widening sense of capability:
 
 1. **Why + connect:** Editing yourself is free; link your app to GitHub.
-2. **Set up:** Build the workshop (VS Code, Node, Git).
+2. **Set up:** Build the workspace (VS Code, Node, Git).
 3. **Run it:** Your own app, live on your computer.
 4. **First win:** Change copy for free, see it instantly.
 5. **Go further:** Icons are just code you can rename.
