@@ -2,10 +2,10 @@ course:
   id: 0c2b1b82-d451-4499-b152-c58d8f58ff2b
   cover: /courses/vibe-coding-github-00/cover.gif
   title: 'Save Lovable Credits: Edit Your App in VS Code'
-  note: 'This course sets up a small builder''s workspace on your computer (VS Code, Node.js, and Git) and uses your Lovable project connected to GitHub. The click-by-click install steps for Mac and Windows live in the companion Setup Guide.'
+  note: 'This course sets up a builder''s workspace on your computer (VS Code, Node.js, and Git) and uses your Lovable project connected to GitHub. The click-by-click install steps for Mac and Windows live in the companion Setup Guide.'
   learningOutcomes:
     - Make small changes to your app yourself, without spending Lovable credits
-    - Set up a workspace on your own computer, a one-time setup that's yours for every app you build
+    - Set up a workspace on your own computer that works for every app, and any document, you'll build with AI
     - Run your app on your own computer and watch every change appear the moment you make it
     - Make bigger changes by describing them to GitHub Copilot, then reviewing its work
     - 'Pick the cheapest, easiest route for any change: yourself, your AI agent, or Lovable'
@@ -139,7 +139,7 @@ course:
               Time to set up your computer with three free tools. Don't worry about understanding them deeply, you just need them installed and ready.
 
               - **VS Code**, the editor you'll write changes in
-              - **Node.js**, which lets your app run on your computer
+              - **Node.js**, which understands your code, and lets your app run on your computer
               - **Git**, the version-control engine that talks to GitHub
 
               The **Local Setup Guide** that comes with this course has every step with screenshots, for both Mac and Windows. Here, we'll cover what each tool is for so it isn't a mystery.
@@ -148,40 +148,60 @@ course:
           title: VS Code, your editor
           content:
             body: |-
-              **VS Code** (Visual Studio Code) is a free code editor made by Microsoft. It's where you'll open your app's files and make changes, and later, where your AI agent will live too.
+              [**VS Code**](https://code.visualstudio.com/) (Visual Studio Code) is a free code editor made by Microsoft. It's where you'll open your app's files and make changes, and where you can also give instructions to your AI agent, Copilot.
 
-              Download it from **code.visualstudio.com**. On a **Mac**, open the download and drag **Visual Studio Code** into your **Applications** folder. On **Windows**, run the installer and click through it.
+              Download it from [**code.visualstudio.com**](https://code.visualstudio.com/). 
+              
+              - On **Mac**, open the download and drag **Visual Studio Code** into your **Applications** folder. 
+              - On **Windows**, run the installer and click through it.
             imageUrl: /courses/vibe-coding-github-00/vscode.webp
           subtitle: Where you'll make your changes
         - type: text
           title: Node.js, so your app can run
           content:
             body: |-
-              **Node.js** is what lets your app actually run on your computer, the same way it runs for your visitors. It comes with **npm**, a helper that fetches the building blocks your app needs.
+              **Node.js** is what lets your app run on your computer, the same way it runs for your website visitors. It comes with **npm**, a helper that fetches the building blocks your app needs.
 
-              Download the **LTS** version from **nodejs.org** (LTS means the stable, recommended one) and run the installer on Mac or Windows. That's it, you won't open Node.js directly, it just needs to be there.
+              Download it from [**nodejs.org**](https://nodejs.org/), run the installer, and click through the steps. That's it, you won't open Node.js directly, it just needs to be there.
+            imageUrl: /courses/vibe-coding-github-00/nodejs.gif
           subtitle: The engine that runs your app
+        - type: text
+          title: Meet the terminal
+          content:
+            body: |-
+              Before the last tool, let's meet the place you'll install it from: the **terminal**, a program where you talk to your computer by typing. You type an instruction, press Enter, and the computer does it and replies in text. No buttons, no menus, just a conversation.
+
+              It looks bare at first, but it's the tool builders and AI agents use all day, and you'll be comfortable in it sooner than you think. It's also where you can automate the repetitive jobs you do on your computer. Everything you do on your machine, it's possible to do from the terminal, and that's what makes it so powerful.
+
+              On a **Mac**, open it by pressing **Cmd + Space**, typing *Terminal*, and pressing Enter. On **Windows**, you'll get a terminal called **Git Bash** in a moment, as part of the next install.
+            imageUrl: /courses/vibe-coding-github-00/terminal.webp
+          subtitle: A conversation with your computer
         - type: text
           title: Git, the version-control engine
           content:
             body: |-
-              **Git** is the engine behind the version control you met in Challenge 1. It's what saves your changes and sends them to GitHub.
+              **Git** is the engine behind the version control. It's what saves your changes and sends them to GitHub.
 
-              Download it from **git-scm.com**. On **Windows**, the installer also includes **Git Bash**, a friendly terminal window you'll use to run your app, so accept it when the installer offers it. On a **Mac**, you'll be prompted to install Git's command line tools the first time you need them, just say yes.
+              On a **Mac**, you install it from the terminal you just opened. It's a two-step job:
+
+              1. Install [**Homebrew**](https://brew.sh/), a free helper that installs builder's tools for you: copy its one-line install command from [brew.sh](https://brew.sh/), paste it into the Terminal, and press Enter.
+              2. When it finishes, type `brew install git`, press Enter, and Git is on your computer.
+
+              On **Windows**, download the installer from [**git-scm.com**](https://git-scm.com/) and run it. It also includes **Git Bash**, the friendly terminal window you'll use to run your app, it's selected in the installer so you can just go through the steps.
           subtitle: What talks to GitHub
         - type: quiz-question
-          title: 'Quiz: Which tool does what?'
+          title: 'Quiz: Your first command'
           content:
-            question: Dalmie wants her app to actually run on her laptop so she can see it. Which of the three tools makes that possible?
+            question: Open your terminal (Terminal on Mac, Git Bash on Windows), type ls, and press Enter. Look closely at what appeared. What do you think ls just did?
             options:
-              - Node.js
-              - VS Code
-              - Git
-              - GitHub
+              - Listed the files and folders inside the folder you're standing in
+              - Listed every file stored anywhere on your computer
+              - Showed the apps that are open right now
+              - Showed your most recently opened documents
             explanation: |-
-              Node.js is the engine that runs your app on your computer. VS Code is where you edit, and Git sends your saved changes to GitHub.
+              `ls` is short for list: it shows what's inside the folder your terminal is standing in. Spot the familiar names, Desktop, Documents, Downloads? That's because a fresh terminal starts in your home folder.
 
-              You don't need to memorise this. Once they're installed, they mostly work away in the background without you thinking about them.
+              Its sibling `pwd` tells you where you're standing. With those two, you can find your way around your computer without opening a single window.
             correctAnswer: 0
         - type: text
           title: Check it all worked
@@ -189,24 +209,16 @@ course:
             body: |-
               Let's make sure the tools are ready. Open your terminal: on a **Mac**, open the **Terminal** app; on **Windows**, open **Git Bash**.
 
-              Type `node -v` and press Enter, then `git -v` and press Enter. If each shows a version number (like `v20.11.0`), you're all set. If one says "command not found", that tool needs reinstalling, the **Local Setup Guide** covers what to do.
+              Type `node -v` and press Enter, then `git -v` and press Enter. If each shows a version number (like `v23.11.0`), you're all set. If one says `command not found`, that tool needs reinstalling, the **Local Setup Guide** covers what to do.
+
+              Once you've got each version number that means you're ready for the next challenge.
             imageUrl: /courses/vibe-coding-github-00/terminal-check.webp
           subtitle: A quick confidence check
-        - type: free-text-exercise
-          title: Confirm your setup
-          content:
-            description: |-
-              Open your terminal (Terminal on Mac, Git Bash on Windows), type `node -v`, and press Enter.
-
-              Paste what it shows here. A version number means Node.js is installed and you're ready for the next challenge.
-            placeholder: e.g. v20.11.0
-            systemPrompt: 'You are a warm, encouraging mentor helping a curious non-technical person set up a coding workspace. The learner will paste the output of running "node -v" in their terminal. If it looks like a version number (for example v20.11.0 or 18.17.1), congratulate them warmly in British English (max 3 short bullet points) and tell them Node.js is ready. If it says something like "command not found" or does not look like a version, reassure them this is common, and suggest reinstalling Node.js from nodejs.org using the Local Setup Guide. Do not use em dashes. End on an encouraging note.'
-            checkerPrompt: 'Check whether the learner pasted something that looks like a version number (digits separated by dots, optionally starting with v). Flag it only if it clearly is not a version number (for example an error message). This is their answer:'
         - type: challenge-end
           title: "Your workshop is built! \U0001F6E0️"
           content:
             description: VS Code, Node.js, and Git are installed and ready.
-            nextModule: "**Next challenge:** The big moment, you'll bring your app onto your computer and watch it run. Seeing your own app come to life locally is genuinely a thrill."
+            nextModule: "**Next challenge:** The big moment, you'll bring your app onto your computer and watch it run. Seeing your own app come to life locally is truly a thrill."
             subDescription: |-
               That's the hardest setup behind you, and you only ever do it once. Everything from here is the fun part: actually changing your app.
 
@@ -227,28 +239,60 @@ course:
             body: |-
               Here's the moment your workshop pays off: you'll copy your app onto your computer and run it, so you can see every change instantly.
 
-              It's three short commands. Type each one, press Enter, and watch what happens.
-          subtitle: From GitHub to your screen
+              The plan has three parts: find your place in the terminal, fetch your app's link from GitHub, then bring your app to your computer with a few short commands.
+          subtitle: From GitHub to your computer
+        - type: text
+          title: Where are you standing?
+          content:
+            body: |-
+              Start by opening your terminal (**Terminal** on Mac, **Git Bash** on Windows). Your terminal is always standing in a folder, and commands that work with files, like the ones you're about to run, act right where you're standing. So it's worth a quick glance to check where that is. 
+              
+              Look at the text the terminal prints every time it's ready for your next command, ending where your cursor blinks. That text is called the **prompt** (it's prompting you to type), and tucked inside it is your current location.
+
+              - In **Git Bash** on Windows, the prompt takes two lines. The first line ends with your location, for example `dalmie@LAPTOP MINGW64 ~`, and you type on the line below, next to the `$`.
+              - On a **Mac**, the prompt is a single line. Your location sits just before the `%` sign, for example `dalmie@Mac ~ %`, and you type right after it.
+
+              That `~` symbol is shorthand for your **home folder**, the one that holds your Desktop, Documents, and Downloads. A freshly opened terminal always starts there, and that's exactly where your app's new home will go in a moment. 
+              
+              (Whenever you want the full address spelled out, type `pwd` and press Enter, the command you met in the last challenge.)
+            imageUrl: /courses/vibe-coding-github-00/terminal-prompt.webp
+          subtitle: Your terminal always tells you
         - type: text
           title: Get your app's link
           content:
             body: |-
-              First you need your repository's link. On **GitHub**, open your project, click the green **Code** button, and copy the **HTTPS** web address (it ends in `.git`).
+              Next, your app's link. On **GitHub**, open your project, click the green **Code** button, and copy the **HTTPS** web address (it ends in `.git`).
 
-              That link tells your computer exactly which app to fetch.
+              That link tells your computer exactly which app to fetch. With your place found and your link copied, you have everything you need.
             imageUrl: /courses/vibe-coding-github-00/github-clone-url.webp
           subtitle: Copy it from GitHub
         - type: text
           title: Copy it onto your computer
           content:
             body: |-
-              Open your terminal (**Terminal** on Mac, **Git Bash** on Windows). Type `git clone` then paste your link, like this:
+              Back in your terminal, make a tidy home for your app. Type this command, then press Enter:
+
+              ```
+              mkdir Projects
+              ```
+              `mkdir` makes a folder called *Projects*.
+
+              Then step inside it by typing this and pressing Enter:
+
+              ```
+              cd Projects
+              ```
+
+              `cd Projects` steps into your new folder. 
+              
+              Now type `git clone` and paste your link from GitHub, like this:
 
               ```
               git clone https://github.com/yourname/your-app.git
               ```
 
-              Press Enter. Git downloads your whole app into a new folder. Then step into that folder with `cd your-app` (use your app's folder name).
+              Press Enter. Git downloads your whole app into a new folder inside *Projects*. Then step into that folder with `cd your-app` (use your app's folder name).
+            imageUrl: /courses/vibe-coding-github-00/terminal-clone.gif
           subtitle: This is called "cloning"
         - type: text
           title: Install the building blocks
@@ -257,8 +301,10 @@ course:
               Your app relies on lots of ready-made pieces. Fetch them all with one command:
 
               ```
-              npm install
+              npm install --no-save
               ```
+
+              The `--no-save` part matters: it tells npm to fetch everything **without editing your app's ingredient list** (a file called `package-lock.json` that Lovable manages). If that file changes, Lovable can get confused, so we leave it exactly as Lovable wrote it.
 
               This can take a minute or two the first time, you'll see lots of text scroll past, which is completely normal. When it settles, the pieces are in place.
           subtitle: One command, then a short wait
@@ -266,50 +312,65 @@ course:
           title: Start it up
           content:
             body: |-
-              Now run:
+              So far, your app is a folder of files sitting on your computer. To use it, those files need to be **run**: brought to life so the app responds when you click around.
+
+              Normally, Lovable's computers (servers) do the running, and your visitors reach the app over the internet. Now your own computer will run a **private copy**, just for you. Type this in your terminal and press Enter:
 
               ```
               npm run dev
               ```
 
-              You'll see a local web address appear, usually `http://localhost:5173`. Hold **Cmd** (Mac) or **Ctrl** (Windows) and click it, or paste it into your browser. **Your app is now running on your own computer.** 🎉
+              You'll see a local web address appear, usually `http://localhost:5173`. Hold **Cmd** (Mac) or **Ctrl** (Windows) and click it, or paste it into your browser. **Your app is now running on your own computer.** 🎉 
+              
+              The address gives it away: **localhost** literally means "this computer". Only you can see this copy. It's your sandbox stage, where you can try anything, while the published app your visitors use stays untouched.
 
-              Leave this terminal window open while you work. It's running your app the whole time, and it will refresh the moment you change something.
+              Leave this terminal window open while you work. It's running your app the whole time, and it will refresh the moment you save your change in VS Code.
             imageUrl: /courses/vibe-coding-github-00/npm-run-dev.gif
           subtitle: Your app, live on your computer
+        - type: text
+          title: If you see an error instead
+          content:
+            body: |-
+              Sometimes the app doesn't start, and the terminal prints an error. Take a breath: **the error is the terminal trying to help**, it names exactly what's missing.
+
+              The one you're most likely to meet: `The following dependencies are imported but could not be resolved` It appears when you've been building in Lovable, which added new building blocks your computer doesn't have yet. Run the install once more to add the missing dependencies:
+
+              ```
+              npm install --no-save
+              ```
+              
+              Then start your app again:
+
+              ```
+              npm run dev
+              ```
+
+              For any other error, ask **GitHub Copilot**, the AI agent you'll set up in VS Code later in this course. It reads the error and your files right where they are, and can even install what's missing for you. No copy-pasting into a chat assistant and ferrying answers back: that's the power of an AI agent with access to your files.
+            imageUrl: /courses/vibe-coding-github-00/npm-missing-deps.webp
+          subtitle: Things break sometimes (and that's okay)
         - type: quiz-question
-          title: 'Quiz: What did npm run dev do?'
+          title: 'Quiz: Who can see it?'
           content:
-            question: Dalmie runs `npm run dev` and a `localhost` address appears. What has actually happened?
+            question: Dalmie's app is running at `http://localhost:5173` on her laptop. She excitedly texts the address to Sarah, who opens it on her own laptop at home. What will Sarah see?
             options:
-              - Her app has been published online for the whole world to see
-              - Her latest changes have just been sent over to Lovable
-              - Her app has been removed from GitHub entirely
-              - Her app is now running on her own computer, just for her
+              - Dalmie's app, since the address is the same everywhere
+              - Dalmie's app, but a little slower because it travels further
+              - Nothing of Dalmie's, because localhost points to Sarah's own computer
+              - The published version of Dalmie's app
             explanation: |-
-              `npm run dev` starts your app on your own computer. That `localhost` address only works for you, right here, it's your private workspace.
+              `localhost` means "this computer" for whoever types it, so on Sarah's laptop it points at Sarah's own computer, where nothing is running. Dalmie's local copy is hers alone.
 
-              Publishing to the world and syncing to Lovable are separate steps you'll meet later. For now, this is your safe place to experiment.
-            correctAnswer: 3
-        - type: free-text-exercise
-          title: Get your app running
-          content:
-            description: |-
-              Work through the three commands: `git clone` your repository, `npm install`, then `npm run dev`.
-
-              When your app opens in the browser, paste the local address you see here (or just tell us it worked).
-            placeholder: e.g. http://localhost:5173
-            systemPrompt: 'You are a warm, encouraging mentor for a curious non-technical person running their app locally for the first time. The learner will paste the local address their app opened at, or say it worked. If it looks like a localhost address (for example http://localhost:5173) or they confirm success, celebrate this milestone warmly in British English (max 3 short bullet points), it is a big deal. If they describe an error, reassure them it is normal, and suggest checking they ran npm install before npm run dev, or seeing the Local Setup Guide. Do not use em dashes. End with genuine encouragement.'
-            checkerPrompt: 'Check whether the learner pasted a localhost address (for example http://localhost:5173 or localhost:3000) or clearly confirmed their app is running. Flag it only if they describe a clear failure or error. This is their answer:'
+              That's the beauty of it: a completely private sandbox stage. When Dalmie wants Sarah to see her changes, she'll push them to GitHub and press Publish in Lovable, which is exactly what's coming up.
+            correctAnswer: 2
         - type: challenge-end
           title: "Your app is running on your computer! \U0001F389"
           content:
             description: You cloned your app, installed its pieces, and started it locally.
-            nextModule: "**Next challenge:** Now the part you've been waiting for, making a real change. You'll edit a piece of copy and watch it update on your screen instantly, then save it back to Lovable."
+            nextModule: "**Next challenge:** Now the part you've been waiting for, making a real change. You'll edit a piece of copy in your app's code and watch it update on your screen instantly, then save it back to Lovable."
             subDescription: |-
               This is a real milestone. Most people never see their own app running on their computer, and you just did it.
 
-              **Reusable tool:** the **Run-It-Locally Cheat Sheet** lists the three commands (`git clone`, `npm install`, `npm run dev`) so you never have to remember them.
+              **Reusable tool:** the **Run-It-Locally Cheat Sheet** lists the three commands (`git clone`, `npm install --no-save`, `npm run dev`) so you never have to remember them.
       title: Run Your App on Your Computer
       isFree: false
       skills:
@@ -628,4 +689,4 @@ course:
   titleSplit:
     - Save Lovable Credits
     - Edit Your App in VS Code
-  description: Set up a small builder's workshop on your own computer, then change your Lovable app's copy and icons, and bigger things with an AI agent, all without spending Lovable credits. You'll run your app locally, edit with confidence, and learn the real setup that builders and AI agents use.
+  description: Set up a builder's workspace on your own computer, then change your Lovable app's copy and icons, and bigger things with an AI agent, all without spending Lovable credits. You'll run your app locally, edit with confidence, and learn the real setup that builders and AI agents use.

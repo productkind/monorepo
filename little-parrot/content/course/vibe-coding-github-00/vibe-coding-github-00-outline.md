@@ -52,7 +52,7 @@ The credit-saving focus is unchanged. The method moved from the GitHub web edito
 **Clone your app, install its pieces, and run it locally.**
 
 - Copy the repo's HTTPS link from GitHub.
-- Three commands in the terminal (Mac) / Git Bash (Windows): `git clone`, `npm install`, `npm run dev`.
+- Three commands in the terminal (Mac) / Git Bash (Windows): `git clone`, `npm install --no-save`, `npm run dev`.
 - Open `localhost` and see the app running, the milestone moment; leave the dev server running for live reload.
 - Quiz: what `npm run dev` actually did (it runs locally, only for you).
 - Exercise: get the app running, paste the local address.
@@ -117,7 +117,7 @@ Setup-heavy and quick-reference material is offloaded here so challenges stay fo
 
 - **GitHub Setup Guide:** connect a Lovable project to GitHub, screen-by-screen.
 - **Local Setup Guide:** install VS Code, Node.js, and Git for Mac and Windows (incl. Git Bash), with the version-check commands.
-- **Run-It-Locally Cheat Sheet:** the three commands (`git clone`, `npm install`, `npm run dev`).
+- **Run-It-Locally Cheat Sheet:** the three commands (`git clone`, `npm install --no-save`, `npm run dev`).
 - **Credit-Free Edit Checklist:** the editing loop (find, edit, save, commit, push, publish).
 - **Copilot Starter Prompts:** ready-made request shapes for common changes.
 - **Edit-Locally vs Prompt-Lovable Decision Checklist:** when to use VS Code, Copilot, or Lovable (and that images go through Lovable).
