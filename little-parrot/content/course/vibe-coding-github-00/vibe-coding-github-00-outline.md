@@ -18,7 +18,7 @@ Dalmie, a dalmatian who built the Book Club Organiser app for her friend Sarah's
 
 The original plan taught editing on the GitHub website (github.dev) and finding elements via the `data-lov-id` attribute. Two Lovable changes made that unworkable, so the course was rescoped:
 
-- **Newer Lovable apps no longer include `data-lov-id`**, so the Inspect-the-element trick is gone. Finding the file behind an icon now uses the "neighbour trick" (search for nearby text).
+- **Newer Lovable apps no longer include `data-lov-id`**, so file paths can no longer be read from Inspect. Icons are still found via Inspect though: the icon's name shows in its `<svg>` class (e.g. `lucide-heart`), which the learner then searches in VS Code.
 - **Images are now hosted centrally by Lovable**, not in the app's public folder, so images must be **uploaded in Lovable**, not swapped in code. Image-editing is therefore out of scope; the course teaches copy, icons, and Copilot-assisted code changes instead.
 
 The credit-saving focus is unchanged. The method moved from the GitHub web editor to a local VS Code setup, which is more reliable and doubles as a real on-ramp to AI agents like Claude Code, Cursor, and Copilot.
@@ -71,7 +71,7 @@ The credit-saving focus is unchanged. The method moved from the GitHub web edito
 **Swap an icon by renaming it in code, no image upload, no credits.**
 
 - Icons are code (Lovable apps use the Lucide set, e.g. `<Heart />`), not pictures.
-- Find it with the neighbour trick (search for nearby text), swap the name using lucide.dev, save, see it change.
+- Find it by right-clicking the icon in the browser and choosing Inspect (the name shows as `lucide-...` in the Elements tab), search that name in VS Code, rename it in both the `import` line and the spot where it's shown (per lucide.dev), save, see it change.
 - Quiz: the reliable way to change an icon.
 - Exercise: swap an icon in their own app.
 

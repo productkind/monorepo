@@ -528,62 +528,90 @@ course:
               Here's something surprising: most icons in your app are tiny pieces of code from an icon set (Lovable apps usually use one called **Lucide**).
 
               That's good news. It means you can swap an icon by changing its name in the code, in two places, as you'll see.
+            imageUrl: /courses/vibe-coding-github-00/bird-icon.webp
           subtitle: A small, satisfying change
         - type: text
-          title: Find the icon in your code
+          title: Find the icon's name
           content:
             body: |-
-              An icon usually shows up in the code as its name in angle brackets, like `<Heart />` for a heart or `<Trash />` for a bin.
+              An icon shows up in the code by its name. The quickest way to find an icon's name is to check it in the browser.
 
-              To find it, use the **neighbour trick**: search for a bit of text right next to the icon (a button label or heading nearby), open that file, and the icon's name will be close by. Icons sit right alongside the words they belong to.
+              In the browser tab where your app is running, **right-click the icon** and choose **Inspect**. A side panel opens on the **Elements** tab, showing the page's building blocks. (In Safari, first turn on developer features under Settings → Advanced.)
 
-              You'll actually spot the icon's name **twice** in the file: once at the very top, in an `import` line (the file's list of which icons it borrows from the set), and once at the spot where it's shown.
-          subtitle: Search for its neighbour
+              To pinpoint the icon exactly, click the **selection tool** in the panel's top left corner (a small arrow in a square), then **hover over the icon** on your page. A little label appears right over it, reading something like `svg.lucide.lucide-book-open`, and there's your icon's name: **book-open**. Click the icon and the Elements tab jumps to its line too, if you fancy a closer look.
+
+            imageUrl: /courses/vibe-coding-github-00/inspect-icon.gif
+          subtitle: Check it in the browser
         - type: text
-          title: Swap it for another
+          title: Track it down in your code
           content:
             body: |-
-              Browse the icon set at **lucide.dev** to find one you like, every icon there shows its name. Then change the name in **both places** in the file:
+              Now that you know the icon's name, search for it in VS Code (**Ctrl/Cmd + Shift + F**). 
+              
+              *One twist:* in the code the name is written in **upper camel case**, each word capitalised and the dashes removed, so `book-open` becomes `BookOpen`.
 
-              1. In the `import` line at the top: `import { Heart } from "lucide-react"` becomes `import { Star } from "lucide-react"`.
-              2. At the spot where it's shown: `<Heart />` becomes `<Star />`.
+              You'll spot it at least **twice** in the file: once at the very top, in an `import` line (the file's list of which icons it borrows from the set), and once at each spot where it's used. And if your app uses the same icon in *several places*, it'll turn up even more times, sometimes across several files. The file names in the search results help you which one belongs to the part of the app you're changing.
+            imageUrl: /courses/vibe-coding-github-00/icon-in-code.webp
+          subtitle: From book-open to BookOpen
+        - type: text
+          title: Pick a new icon
+          content:
+            body: |-
+              Browse [**lucide.dev**](https://lucide.dev/icons/) to find an icon you like, there are well over a thousand, and you can just search for an item like "book" or "calendar".
 
-              Save, and your app updates instantly in the browser. If you change one place but forget the other, your app shows an error naming the icon, that's your cue to fix the other spot. And check the spelling and capitalisation against lucide.dev, the names have to match exactly.
+              The site shows every icon's name in its dashed form, like `book-marked`. To get the version your code needs, click the icon and choose **"See it in action"**: the code sample under the **React** tab shows the **upper camel case** name, `BookMarked`, ready to copy straight into your file.
+            imageUrl: /courses/vibe-coding-github-00/lucide-find-icon.gif
+          subtitle: lucide.dev is your icon menu
+        - type: text
+          title: Add it into your code
+          content:
+            body: |-
+              Start at the **top of the file**, with the `import` line. It's the file's list of every icon it uses, so your new icon needs to join it. Add it alongside the existing one, separated with a comma and space: `import { BookOpen, BookMarked } from "lucide-react";`.
+
+              Then scroll down to the **usage spots**, the actual icons on screen, and change only the one you mean. In Dalmie's Book Club Organiser, `BookOpen` is used twice on the home page; to swap just one of them, change that `<BookOpen />` to `<BookMarked />` and leave the other as it is.
+
+              One tidy-up at the end: if no spot uses the old icon any more, remove its name from the `import` line too.
+
+              Save, and your app updates instantly in the browser. If you ever see an error naming an icon, that icon is missing from the `import` line, add it there and you're back in business.
             imageUrl: /courses/vibe-coding-github-00/lucide-swap.gif
-          subtitle: Change one word, see it change
+          subtitle: Swap only the one you mean
         - type: quiz-question
           title: 'Quiz: Changing an icon'
           content:
-            question: Dalmie wants to change the little heart icon next to each book to a star. What's the most reliable way to do it in VS Code?
+            question: Dalmie wants to change the heart icon to a star on the book vote button. What's her best move?
             options:
-              - Upload a star image and hope it replaces the heart
-              - Find the heart in the code (it's near the book title) and change its name to the star's name
-              - Ask Lovable's AI to redesign every book card
-              - Delete the heart and leave a gap
+              - Search every file for "heart" in VS Code and replace each match she finds
+              - Inspect the heart in the browser for its name, then rename that spot in the code
+              - Edit the icon right in the browser's Elements tab, where she can already see it
+              - Ask Lovable to swap the icon for her, it's only a credit or two
             explanation: |-
-              An icon is code, so you change its name, from the heart's name to the star's name (you'll find both on lucide.dev), in both places it appears: the `import` line at the top and the spot where it's shown. Searching for nearby text, like the book title, lands you right next to it.
+              Inspect gives her the icon's name, and finding that one usage in the code and renaming it (with the `import` line also updated) changes it for real, for free.
 
-              No credits, and it updates the moment you save.
+              The others are tempting for a reason, and each has a catch. Replace-all on "heart" can change matches she never meant, like other heart icons or even words in her copy. Edits in the Elements tab vanish the moment the page reloads, the browser displays the app but doesn't store it. And Lovable would do it happily, for credits she doesn't need to spend.
             correctAnswer: 1
-        - type: free-text-exercise
-          title: Swap an icon
+        - type: quiz-question
+          title: 'Quiz: Get the star to Sarah'
           content:
-            description: |-
-              Find an icon in your app you'd like to change. Use the neighbour trick to locate it in VS Code, then swap its name for another from lucide.dev and save.
+            question: Dalmie's new star icon looks great at `localhost:8080`. But when Sarah opens the live app, she still sees the heart. What does Dalmie still need to do?
+            options:
+              - Nothing, the change will reach the live app by itself in a little while
+              - Just press Publish in Lovable, it takes whatever is saved on her computer
+              - Run `npm run dev` once more so the change properly registers
+              - Commit and push her change, then press Publish in Lovable
+            explanation: |-
+              Her swap so far lives only on her computer, the private sandbox stage. To get it to Sarah and other users, it need to travel the full path: commit and push sends it to GitHub, which syncs it into her Lovable project, and Publish puts it in the live app.
 
-              Tell us which icon you changed, and what you changed it to.
-            placeholder: e.g. Changed the heart on each book to a bookmark
-            systemPrompt: 'You are a friendly mentor for a curious non-technical app builder. The learner describes an icon swap they made in VS Code using the Lucide icon set. Respond warmly in British English (max 4 short bullet points): affirm the swap, remind them the name must change in both places (the import line at the top of the file and the spot where the icon is shown), and that if the app shows an error or the icon does not appear, the name is probably missed in one place or misspelled, they can check it on lucide.dev. Celebrate that icons are just code they can change for free. Do not use em dashes. End encouragingly.'
-            checkerPrompt: 'Check whether the learner describes swapping one icon for another. Flag it only if they describe something clearly unrelated to changing an icon. This is their answer:'
+              Publish alone wouldn't do it: Lovable can only publish what code change has reached it, and a change that was never pushed is still sitting on Dalmie's laptop.
+            correctAnswer: 3
         - type: challenge-end
           title: "Icons hold no mystery for you now ⭐"
           content:
             description: You found an icon in your code and swapped it.
-            nextModule: "**Next challenge:** You've made changes by hand. Now you'll get some help, GitHub Copilot, a free AI agent living right inside VS Code, for the changes that are trickier to do alone."
+            nextModule: "**Next challenge:** You've made changes by hand. Now you'll get some help, GitHub Copilot, an AI agent with a free tier living right inside VS Code, for the changes that are trickier to do alone."
             subDescription: |-
               Knowing that icons are just code is a small superpower. Names like `<Star />` and `<Bell />` aren't scary, they're switches you can flip.
 
-              **Reusable tool:** keep **lucide.dev** bookmarked, it's your menu of every icon name you can use.
+              Keep **lucide.dev** bookmarked, it's your menu of every icon name you can use.
       title: Change an Icon
       isFree: false
       skills:
@@ -597,9 +625,10 @@ course:
           title: Meet your AI agent
           content:
             body: |-
-              Some changes are bigger than a word or two, and that's where an AI agent shines. **GitHub Copilot** is an AI agent that lives right inside VS Code. You describe what you want in normal language, and it writes the change for you to review.
+              Some changes are bigger than a word or two, and that's where an AI agent shines. **GitHub Copilot** is an AI agent that lives right inside VS Code. You describe what you want, and it writes the change for you to review.
 
               The best part: there's a **free plan**, no payment needed, and it doesn't touch your Lovable credits.
+            imageUrl: /courses/vibe-coding-github-00/github-copilot.webp
           subtitle: A free AI agent inside VS Code
         - type: text
           title: Turn on Copilot Free
@@ -614,15 +643,15 @@ course:
           title: Ask it for a change
           content:
             body: |-
-              Open **Copilot Chat** (the chat panel in VS Code) and describe what you want in plain, specific language. The more precise you are, the better the result.
+              Open **Copilot Chat** (the chat panel in VS Code) and describe what you want in specific language. The more precise you are, the better the result.
 
               For example: *"On the book list, add a small label that shows how many books are in the club's list."* Copilot will suggest the changes and show you what it wants to edit.
-          subtitle: Describe it, don't code it
+          subtitle: Describe it clearly
         - type: text
           title: Review before you accept
           content:
             body: |-
-              This part matters: **don't accept blindly**. Copilot shows you a diff of what it wants to change, red for removed, green for added. Read it, then watch your app in the browser to check it does what you hoped.
+              This part is important: **don't accept blindly**. Copilot shows you a diff of what it wants to change, red for removed, green for added. Read it, then watch your app in the browser to check it does what you hoped.
 
               If it's not right, you can undo it (Cmd/Ctrl + Z) or ask Copilot to try again differently. You're the one in charge, Copilot is the helper.
           subtitle: You're in charge, it's the helper
@@ -665,7 +694,7 @@ course:
         - GitHub Copilot
         - AI Assistance
         - Reviewing Changes
-      description: Set up GitHub Copilot Free in VS Code, describe a change, and review its work before keeping it.
+      description: Set up GitHub Copilot for free in VS Code, describe a change, and review its work before keeping it.
       completionTime: 11:00
     - steps:
         - type: text
