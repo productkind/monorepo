@@ -63,6 +63,8 @@ description: Use this checklist when generating micro-course content from an out
 
 **Examples must model best practice.** A worked example should never demonstrate an anti-pattern in passing, because learners copy what they see. If you show a UI change, change the shared style once rather than recolouring each element; if you show a workflow, show the safe version. The "how Dalmie did it" example is teaching the method, not just the result.
 
+**Trace every hands-on procedure end-to-end before teaching it.** When a step teaches a procedure (edit this, swap that, run these commands), execute or trace it on a real project before writing the instructions, and ask: "If the learner does exactly this and nothing else, does it work?" Code edits often need companion changes the obvious step hides (e.g. swapping a Lucide icon's name also requires updating the file's `import` line; a missed companion change strands the learner with an error). If no real repo is available to verify against, flag the step to the user as untested rather than presenting it as complete.
+
 **Specify who in exercises that involve other people.** If an exercise asks the learner to talk to people, test something on others, or collect feedback, specify who those people should be (e.g., "people who match your target audience", not "five people"). Without this, learners default to friends and family who may not give useful reactions.
 
 **Quiz explanations should teach, not just confirm.** Use the explanation text after a quiz answer as a teaching moment. Introduce a principle, reframe the concept, or add nuance that wasn't in the text steps. "Correct, B is the right answer" wastes a learning opportunity. "Features don't equal value. A list of features tells people what the product has, but not what they can achieve with it" teaches something new.
@@ -304,6 +306,7 @@ After generating the full course, do a self-review pass before presenting it. Ch
 - [ ] Does every quiz test judgement or application, not recall of the preceding step?
 - [ ] Are all quiz answer options similar in length (correct answer not visually obvious)?
 - [ ] Does each quiz's `correctAnswer` index still point to the right option? (Re-verify after any option reordering: reordering options without updating the index silently marks the wrong answer.)
+- [ ] Has every hands-on procedure been traced end-to-end on a real project (would it work if the learner did exactly what's written and nothing else)?
 - [ ] Is every text step short enough to read without scrolling? If it has 3+ concepts, is it split?
 - [ ] Is every text step styled for scanning (bold key concept, italic UI labels/examples), without over-bolding?
 - [ ] Do the comics set up the problem from the learner's pain, without bashing the tool?

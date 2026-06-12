@@ -272,12 +272,12 @@ course:
           title: Copy it onto your computer
           content:
             body: |-
-              Back in your terminal, make a tidy home for your app. Type this command, then press Enter:
+              From your terminal, make a tidy home for your app. Type this command, then press Enter:
 
               ```
               mkdir Projects
               ```
-              `mkdir` makes a folder called *Projects*.
+              `mkdir` makes a folder called *Projects*. (The name and the place are entirely up to you, we use a *Projects* folder in the home folder because it's easy to find, and it gives your future apps a home too.)
 
               Then step inside it by typing this and pressing Enter:
 
@@ -306,10 +306,26 @@ course:
               npm install --no-save
               ```
 
-              The `--no-save` part matters: it tells npm to fetch everything **without editing your app's ingredient list** (a file called `package-lock.json` that Lovable manages). If that file changes, Lovable can get confused, so we leave it exactly as Lovable wrote it.
+              The `--no-save` part is important: it tells npm to fetch everything **without editing your app's ingredient list** (a file called `package-lock.json` that Lovable manages). If that file changes, Lovable can get confused, so we leave it exactly as Lovable wrote it.
 
-              This can take a minute or two the first time, you'll see lots of text scroll past, which is completely normal. When it settles, the pieces are in place.
+              This can take a minute or two the first time, you'll see lots of text scroll past, which is completely normal. A few lines starting with `npm warn` are perfectly fine too: warnings are just notes, not problems. When it settles, the pieces are in place.
+            imageUrl: /courses/vibe-coding-github-00/npm-install-windows.webp
           subtitle: One command, then a short wait
+        - type: text
+          title: If the install complains
+          content:
+            body: |-
+              Sometimes the install stops with `Could not resolve dependency`, a long report that ends with `Fix the upstream dependency conflict`. Don't worry, it's common and quick to fix: it means the app's own ingredient list has gone a little out of date.
+
+              The fix happens in Lovable, send it the prompt:
+
+              ```
+              Check if all my dependencies are up-to-date. If not, update them.
+              ```
+
+              Let it finish. Then fetch the freshened codebase of your app onto your computer by typing `git pull` in your terminal, while standing in your app's folder (e.g., book-club-pick), and run the install once more.
+            imageUrl: /courses/vibe-coding-github-00/npm-install-fix-dep.gif
+          subtitle: One prompt in Lovable fixes it
         - type: text
           title: Start it up
           content:
@@ -322,12 +338,14 @@ course:
               npm run dev
               ```
 
-              You'll see a local web address appear, usually `http://localhost:5173`. Hold **Cmd** (Mac) or **Ctrl** (Windows) and click it, or paste it into your browser. **Your app is now running on your own computer.** 🎉 
+              You'll see a local web address appear, usually `http://localhost:8080`. Paste it into your browser. 
+              
+              **Your app is now running on your own computer.** 🎉 
               
               The address gives it away: **localhost** literally means "this computer". Only you can see this copy. It's your sandbox stage, where you can try anything, while the published app your visitors use stays untouched.
 
               Leave this terminal window open while you work. It's running your app the whole time, and it will refresh the moment you save your change in VS Code.
-            imageUrl: /courses/vibe-coding-github-00/npm-run-dev.gif
+            imageUrl: /courses/vibe-coding-github-00/npm-run-dev-windows.webp
           subtitle: Your app, live on your computer
         - type: text
           title: If you see an error instead
@@ -335,12 +353,14 @@ course:
             body: |-
               Sometimes the app doesn't start, and the terminal prints an error. Take a breath: **the error is the terminal trying to help**, it names exactly what's missing.
 
-              The one you're most likely to meet: `The following dependencies are imported but could not be resolved` It appears when you've been building in Lovable, which added new building blocks your computer doesn't have yet. Run the install once more to add the missing dependencies:
+              The one you're most likely to meet: `The following dependencies are imported but could not be resolved` 
+              
+              It appears when you've been building in Lovable, which added new building blocks your computer doesn't have yet. Run the install once more to add the missing dependencies:
 
               ```
               npm install --no-save
               ```
-              
+
               Then start your app again:
 
               ```
@@ -353,7 +373,7 @@ course:
         - type: quiz-question
           title: 'Quiz: Who can see it?'
           content:
-            question: Dalmie's app is running at `http://localhost:5173` on her laptop. She excitedly texts the address to Sarah, who opens it on her own laptop at home. What will Sarah see?
+            question: Dalmie's app is running at `http://localhost:8080` on her laptop. She excitedly texts the address to Sarah, who opens it on her own laptop at home. What will Sarah see?
             options:
               - Dalmie's app, since the address is the same everywhere
               - Dalmie's app, but a little slower because it travels further
@@ -406,23 +426,33 @@ course:
               Click the **Search** icon in the left sidebar (the magnifying glass), or press **Ctrl/Cmd + Shift + F**. This searches every file at once.
 
               Type the words exactly as they appear in your app, for example `Suggest a book`. The results are grouped by file. Click a result to jump straight to that line.
+
+              Two things that *make the open file easier to read:*
+              
+              1. The **numbers down the left edge** are **line numbers**: every line of a file has one, like verse numbers in a poem, so any spot can be pointed to exactly (an error or your AI agent will say things like "line 24"). 
+              2. If some lines stretch off the screen, turn on **Word Wrap** (in the **View** menu, or press **Alt + Z** / **Option + Z**): long lines fold to fit your window, so nothing hides off to the right.
             imageUrl: /courses/vibe-coding-github-00/vscode-search.gif
           subtitle: Search across all your files
         - type: text
           title: Change it and watch it update
           content:
             body: |-
-              Edit the words right there, just like any text box. Then save with **Cmd + S** (Mac) or **Ctrl + S** (Windows).
+              Edit the words right there, just like any document. Then save with **Cmd + S** (Mac) or **Ctrl + S** (Windows).
 
-              Now glance at your app in the browser. It updates **on its own, instantly**. That's the live preview from `npm run dev` doing its job. No credits, no waiting.
+              Now glance at your app on `localhost` in the browser. It updates **on its own, instantly**. That's the live preview from `npm run dev` doing its job. No credits, no waiting.
+            imageUrl: /courses/vibe-coding-github-00/vscode-update.gif
           subtitle: This is the magic moment
         - type: text
-          title: Save your change with a commit
+          title: Send your change to GitHub and Lovable
           content:
             body: |-
-              Your change is on your computer, but not yet on GitHub. To send it, open the **Source Control** panel in VS Code (the branch-like icon on the left, or **Ctrl/Cmd + Shift + G**).
+              Your change is on your computer, but not yet on GitHub, and Lovable. To send it, open the **Source Control** panel in VS Code (the branch-like icon on the left, or **Ctrl + Shift + G**). Your edited file is listed there, under **Changes**.
 
-              Type a short note describing your change (the **commit message**), click the tick to **Commit**, then **Sync** (or push) to send it to GitHub. A good message is short and specific, like *Fix typo on the book suggestion button*.
+              Before sending anything, take a quick look at what you changed: click the file name and a **diff** opens. A diff shows the old version and the new side by side, removed text in red, added text in green. It's how you confirm you changed exactly what you meant.
+
+              Happy with it? Type a short note describing your change (the **commit message**), click the **Commit** button, then **Sync** (or push) to send it to GitHub. 
+              
+              A good commit message is short and specific, like `Fix typo on the book suggestion button`. A simple trick if you're not sure what to write: finish the sentence *"This change will..."*
             imageUrl: /courses/vibe-coding-github-00/vscode-commit.gif
           subtitle: Commit, then push to GitHub
         - type: text
@@ -432,36 +462,52 @@ course:
               Once it's on GitHub, your change syncs back into your Lovable project automatically, usually within seconds.
 
               One thing to remember: this updates your project, **not the live app your visitors see**. To update that, press **Publish** in Lovable, as you always have. So the full path is: **edit in VS Code → commit → push → it syncs into Lovable → publish**.
+            imageUrl: /courses/vibe-coding-github-00/lovable-commit.webp
           subtitle: Commit, sync, then publish
+        - type: text
+          title: The four words of Git
+          content:
+            body: |-
+              You've just used a handful of Git words. Here's what each one means, think of posting a parcel:
+
+              **Stage** is packing the box: choosing which changed files go into your next save. (In VS Code, the **+** next to a file stages it; if you commit without staging, VS Code offers to include all your changes.)
+
+              **Commit** is sealing the box and labelling it: saving the staged changes with your short message. It becomes one entry in your app's history.
+
+              **Push** is sending the parcel: your commits travel up to GitHub. Now they are safe online and flowing on into Lovable.
+
+              **Pull** is receiving a parcel: fetching the latest changes down from GitHub, like the ones Lovable made since you last looked. VS Code's **Sync** button does both at once, it pulls and pushes.
+          subtitle: Stage, commit, push, pull
         - type: quiz-question
           title: 'Quiz: It is not live yet'
           content:
-            question: Dalmie edits copy in VS Code, commits, and pushes. It shows up in her Lovable project, but her friends still see the old text on the live app. Why?
+            question: Dalmie edits her website copy in VS Code, commits, and pushes. It shows up in her Lovable project, but her friends still see the old text on the live app. Why?
             options:
               - The push failed and she needs to redo it
               - VS Code and GitHub are not connected
               - She hasn't pressed Publish in Lovable yet
               - Local changes never reach the live app
             explanation: |-
-              Pushing updates your code and syncs it into Lovable, but the live app only changes when you press Publish.
+              Pushing updates the code in your repository and syncs it into Lovable, but the live app only changes when you press Publish. Publishing (also called deploying) takes the current code, packages it into the running app, and puts that fresh version on Lovable's servers, so it's what your visitors get when they open your app's address.
 
               Editing and publishing are two separate steps, on purpose. You can make several changes, then publish once when you're happy with them all.
             correctAnswer: 2
         - type: free-text-exercise
-          title: Make your first free edit
+          title: Write your next commit message
           content:
             description: |-
-              In VS Code, find one piece of copy you'd like to fix, change it, and save. Watch it update in your browser.
+              Think of the next copy change you want to make in your app, maybe a heading that could be warmer, or a button label that could be clearer.
 
-              Then write the commit message you'd use, in a short, clear line. Paste it here.
+              Write the commit message you'd use for it, in a short, clear line. Remember the trick: finish the sentence *"This change will..."*
+            subDescription: Once you submit, you'll get instant AI feedback on your commit message, so you'll know it's clear before you use it.
             placeholder: e.g. Shorten the welcome heading on the home page
-            systemPrompt: 'You are a friendly mentor for a curious non-technical app builder. The learner pastes a commit message for a small copy edit they made in VS Code. Give warm, concise feedback in British English (max 4 short bullet points) on whether it is short, clear, and describes a single change. If it is vague (like "update" or "changes"), suggest a clearer version. Celebrate that they edited their app for free. Do not use em dashes. End encouragingly.'
+            systemPrompt: 'You are a friendly mentor for a curious non-technical app builder. The learner pastes a commit message for the next copy change they plan to make in VS Code. Give warm, concise feedback in British English (max 4 short bullet points) on whether it is short, clear, and describes a single change. If it is vague (like "update" or "changes"), suggest a clearer version. Celebrate that they can now make these changes for free. Do not use em dashes. End encouragingly. Reply in a markdown format.'
             checkerPrompt: 'Check whether the commit message clearly describes a single, specific change in a few words. Flag it only if it is vague (e.g. "update", "changes") or bundles several unrelated changes. This is the commit message:'
         - type: challenge-end
           title: "You changed your app for free! \U0001F4AB"
           content:
             description: You edited copy in VS Code, saw it update live, and pushed it to GitHub and Lovable.
-            nextModule: "**Next challenge:** Copy was the warm-up. Next you'll change an **icon**, which works a little differently because an icon is code, not a picture."
+            nextModule: "**Next challenge:** Copy was the warm-up. Next you'll change an **icon**, which works a little differently because an icon is code."
             subDescription: |-
               That's the whole loop, and you'll use it for everything: find, edit, save, commit, push. The credit counter didn't budge.
 
@@ -476,12 +522,12 @@ course:
       completionTime: 11:00
     - steps:
         - type: text
-          title: Icons are code, not pictures
+          title: Icons are code
           content:
             body: |-
-              Here's something surprising: most icons in your app aren't images at all. They're tiny pieces of code from an icon set (Lovable apps usually use one called **Lucide**).
+              Here's something surprising: most icons in your app are tiny pieces of code from an icon set (Lovable apps usually use one called **Lucide**).
 
-              That's good news. It means you can swap an icon by changing a single word, no image uploads needed.
+              That's good news. It means you can swap an icon by changing its name in the code, in two places, as you'll see.
           subtitle: A small, satisfying change
         - type: text
           title: Find the icon in your code
@@ -490,14 +536,19 @@ course:
               An icon usually shows up in the code as its name in angle brackets, like `<Heart />` for a heart or `<Trash />` for a bin.
 
               To find it, use the **neighbour trick**: search for a bit of text right next to the icon (a button label or heading nearby), open that file, and the icon's name will be close by. Icons sit right alongside the words they belong to.
+
+              You'll actually spot the icon's name **twice** in the file: once at the very top, in an `import` line (the file's list of which icons it borrows from the set), and once at the spot where it's shown.
           subtitle: Search for its neighbour
         - type: text
           title: Swap it for another
           content:
             body: |-
-              Browse the icon set at **lucide.dev** to find one you like, every icon there shows its name. Then change the name in your code, for example from `<Heart />` to `<Star />`, and save.
+              Browse the icon set at **lucide.dev** to find one you like, every icon there shows its name. Then change the name in **both places** in the file:
 
-              Your app updates instantly in the browser. If the name is slightly off, the icon simply won't appear, so check your spelling and capitalisation against lucide.dev.
+              1. In the `import` line at the top: `import { Heart } from "lucide-react"` becomes `import { Star } from "lucide-react"`.
+              2. At the spot where it's shown: `<Heart />` becomes `<Star />`.
+
+              Save, and your app updates instantly in the browser. If you change one place but forget the other, your app shows an error naming the icon, that's your cue to fix the other spot. And check the spelling and capitalisation against lucide.dev, the names have to match exactly.
             imageUrl: /courses/vibe-coding-github-00/lucide-swap.gif
           subtitle: Change one word, see it change
         - type: quiz-question
@@ -510,9 +561,9 @@ course:
               - Ask Lovable's AI to redesign every book card
               - Delete the heart and leave a gap
             explanation: |-
-              An icon is code, so you change its name, from the heart's name to the star's name (you'll find both on lucide.dev). Searching for nearby text, like the book title, lands you right next to it.
+              An icon is code, so you change its name, from the heart's name to the star's name (you'll find both on lucide.dev), in both places it appears: the `import` line at the top and the spot where it's shown. Searching for nearby text, like the book title, lands you right next to it.
 
-              No image upload, no credits, and it updates the moment you save.
+              No credits, and it updates the moment you save.
             correctAnswer: 1
         - type: free-text-exercise
           title: Swap an icon
@@ -522,12 +573,12 @@ course:
 
               Tell us which icon you changed, and what you changed it to.
             placeholder: e.g. Changed the heart on each book to a bookmark
-            systemPrompt: 'You are a friendly mentor for a curious non-technical app builder. The learner describes an icon swap they made in VS Code using the Lucide icon set. Respond warmly in British English (max 4 short bullet points): affirm the swap, and gently remind them that if an icon does not appear, the name is probably misspelled or wrongly capitalised and they can check it on lucide.dev. Celebrate that icons are just code they can change for free. Do not use em dashes. End encouragingly.'
+            systemPrompt: 'You are a friendly mentor for a curious non-technical app builder. The learner describes an icon swap they made in VS Code using the Lucide icon set. Respond warmly in British English (max 4 short bullet points): affirm the swap, remind them the name must change in both places (the import line at the top of the file and the spot where the icon is shown), and that if the app shows an error or the icon does not appear, the name is probably missed in one place or misspelled, they can check it on lucide.dev. Celebrate that icons are just code they can change for free. Do not use em dashes. End encouragingly.'
             checkerPrompt: 'Check whether the learner describes swapping one icon for another. Flag it only if they describe something clearly unrelated to changing an icon. This is their answer:'
         - type: challenge-end
           title: "Icons hold no mystery for you now ⭐"
           content:
-            description: You found an icon in your code and swapped it, no image upload needed.
+            description: You found an icon in your code and swapped it.
             nextModule: "**Next challenge:** You've made changes by hand. Now you'll get some help, GitHub Copilot, a free AI agent living right inside VS Code, for the changes that are trickier to do alone."
             subDescription: |-
               Knowing that icons are just code is a small superpower. Names like `<Star />` and `<Bell />` aren't scary, they're switches you can flip.
@@ -539,7 +590,7 @@ course:
         - Icons
         - Editing Code
         - Components
-      description: Swap an icon by changing its name in the code, no image upload and no credits.
+      description: Swap an icon by changing its name in the code, without spending credits.
       completionTime: 9:00
     - steps:
         - type: text
