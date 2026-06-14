@@ -527,10 +527,10 @@ course:
       isFree: true
       skills:
         - Preview
-        - Visual Edits
+        - Preview Toolbar
         - Image References
       description: |-
-        You'll learn how to make changes more effectively: preview your app on different devices, make visual edits, and attach images for inspiration to show Lovable exactly what you want.
+        You'll learn how to make changes more effectively: preview your app on different devices, use the preview toolbar to make targeted edits, and attach images for inspiration to show Lovable exactly what you want.
       completionTime: '7:00'
       steps:
         - type: text
@@ -563,17 +563,17 @@ course:
             imageUrl: /courses/lovable-intro-00/code-view.webp
           subtitle: For the curious
         - type: text
-          title: Visual Edits
+          title: The preview toolbar
           content:
             body: |-
-              This is one of the most useful features for targeted tweaks. Click **Visual edits** below your "Ask Lovable..." input field to enter visual edit mode. Now you can:
-              - Click on any text to change it
-              - Adjust colours by clicking on elements
-              - Tweak spacing and sizing
-              - Prompt Lovable to make changes on selected elements
+              This is one of the most useful features for targeted tweaks. The **preview toolbar** sits at the bottom of your app preview and lets you point at what you want to change instead of describing it in a prompt. It gives you a few modes:
+              - **Select elements:** Click one or more parts of your app, then describe the change you want
+              - **Edit text inline:** Fix a typo or change wording directly on the page, no prompt needed
+              - **Draw annotation:** Sketch on the preview to show a layout change that's hard to put into words
+              - **Add a comment:** Pin a note to an element for yourself or a teammate
 
               It's perfect for small, targeted refinements.
-            imageUrl: /courses/lovable-intro-00/visual-edits.webp
+            imageUrl: /courses/lovable-intro-00/preview-toolbar.webp
           subtitle: Point and click changes
         - type: text
           title: Attach images for inspiration
@@ -590,16 +590,16 @@ course:
             imageUrl: /courses/lovable-intro-00/attach-image.webp
           subtitle: Show rather than tell
         - type: quiz-question
-          title: 'Quiz: Visual edits'
+          title: 'Quiz: The preview toolbar'
           content:
-            question: What's the best use for visual edits?
+            question: What's the best use for the preview toolbar?
             options:
               - Making targeted changes
               - Adding complex new features
               - Debugging backend problems
               - Writing prompts faster
             correctAnswer: 0
-            explanation: Visual edits are perfect for targeted refinements like fixing typos, adjusting colours, or tweaking spacing. They let you point and click on elements to make quick changes without writing long prompts.
+            explanation: The preview toolbar is perfect for targeted refinements like fixing typos, adjusting wording, or pointing at an element to change it. You point and click on what you want to change instead of writing long prompts.
         - type: quiz-question
           title: 'Quiz: Preview mode'
           content:
@@ -624,7 +624,7 @@ course:
           content:
             nextModule: "**Next challenge:** Things will break as you build. Let's make sure you're never afraid to experiment. You'll learn how to bookmark stable versions and revert changes so you exactly know what to do when things go wrong."
             description: You can now use Lovable's interface confidently.
-            subDescription: Preview, visual edits, and attaching images for inspiration. You can now refine your app visually, and show Lovable exactly what you want.
+            subDescription: Preview, the preview toolbar, and attaching images for inspiration. You can now refine your app visually, and show Lovable exactly what you want.
 
     - title: Experiment and Undo Mistakes Safely
       isFree: true
@@ -831,7 +831,7 @@ course:
             options:
               - Directly in your prompts so Lovable can use them
               - In a text file in your app
-              - In the dedicated Visual edits panel
+              - In the dedicated preview toolbar
               - In the dedicated Add Secret panel
             correctAnswer: 3
             explanation: Never put API keys in your prompts. Use Lovable's dedicated "Add Secret" panel to store them safely. This keeps your keys secure.
@@ -992,7 +992,7 @@ course:
 
               ✓ **Build in small steps**, testing each feature before adding the next
 
-              ✓ **Use Lovable's interface** confidently: preview, visual edits, bookmarks, reverting, plan mode, project knowledge, adding API keys
+              ✓ **Use Lovable's interface** confidently: preview, the preview toolbar, bookmarks, reverting, plan mode, project knowledge, adding API keys
 
               ✓ **Handle security warnings** calmly, knowing they're normal and fixable
 

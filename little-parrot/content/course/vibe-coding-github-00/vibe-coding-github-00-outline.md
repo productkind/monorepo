@@ -76,13 +76,15 @@ The credit-saving focus is unchanged. The method moved from the GitHub web edito
 - Exercise: swap an icon in their own app.
 
 ### Challenge 6: Make a Bigger Change with Copilot
-**Set up Copilot Free, describe a change, and review its work.**
+**Put Copilot to work on your app, review its changes, and recover confidently when something goes wrong.**
 
-- GitHub Copilot Free in VS Code (no payment, signs in with GitHub; doesn't use Lovable credits).
-- Describe the change in plain, specific language in Copilot Chat.
-- Review before accepting: read the diff, check the app in the browser, undo or re-ask if needed.
-- Quiz: the wise thing to do before keeping a Copilot change.
-- Exercise: write a clear Copilot request.
+- Copilot Free in VS Code: sign-up via the Copilot icon (GitHub login from Challenge 2), open Chat with Ctrl+Alt+I / Ctrl+Cmd+I; the free plan includes ~50 chat requests plus completions monthly, so requests should count.
+- The three chat modes: Ask (explains, changes nothing), Edit (focused edits), Agent (whole tasks across files). Quiz: which mode for understanding a file.
+- Dalmie's worked example: a what-where-example request ("add a line showing how many books are on the list").
+- Review flow: changed-files list in the chat, per-file diff, Keep/Undo, check the app at localhost.
+- Troubleshooting empowerment: paste errors back into the chat (the agent fixes its own mistakes), follow-up requests for tweaks, and the Source Control escape hatch (nothing is committed until you commit; Discard restores). Quiz: best first move on an error overlay.
+- Close the loop: commit, push, publish; one request, one commit.
+- Exercise: run a real agent request and report back (AI feedback on the request's specificity and next moves).
 
 ### Challenge 7: Your Workflow
 **Know when to edit in VS Code, when to ask Copilot, and when to prompt Lovable.**

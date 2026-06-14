@@ -625,77 +625,135 @@ course:
           title: Meet your AI agent
           content:
             body: |-
-              Some changes are bigger than a word or two, and that's where an AI agent shines. **GitHub Copilot** is an AI agent that lives right inside VS Code. You describe what you want, and it writes the change for you to review.
+              Some changes are bigger than a word or two, and that's where an AI agent shines. **GitHub Copilot** is an AI agent that lives right inside VS Code. You describe what you want, it opens your files and makes the change, and you review every line before keeping it.
 
-              The best part: there's a **free plan**, no payment needed, and it doesn't touch your Lovable credits.
+              This is the moment from Challenge 1 arriving for real: an AI working directly in your files, no copy-pasting. And there's a **free plan**, no payment needed, and it doesn't touch your Lovable credits.
             imageUrl: /courses/vibe-coding-github-00/github-copilot.webp
           subtitle: A free AI agent inside VS Code
         - type: text
-          title: Turn on Copilot Free
+          title: Turn it on and open the chat
           content:
             body: |-
-              In VS Code, click the **Copilot icon** near the top, then choose **Sign up for Copilot Free**. Since you signed in with your GitHub account back when you set up VS Code, this takes seconds, and you're ready.
+              In VS Code, click the **Copilot icon** near the top and follow the sign-up for **Copilot Free**. Since you signed in with your GitHub account back when you set up VS Code, this takes seconds.
 
-              The free plan gives you a generous monthly allowance, plenty for the kind of small changes you'll make here.
+              Then open the **Chat panel**: press **Ctrl + Alt + I** (Windows) or **Ctrl + Cmd + I** (Mac). A chat opens beside your code, that's where you and your agent will talk.
+
+              One thing to know about the free plan: it includes about **50 chat requests a month** (plus thousands of inline code completions). That's plenty when each request is a clear one, and you're about to learn how to make them count.
             imageUrl: /courses/vibe-coding-github-00/copilot-signin.webp
           subtitle: No payment, just your GitHub login
         - type: text
-          title: Ask it for a change
+          title: Pick the right mode
           content:
             body: |-
-              Open **Copilot Chat** (the chat panel in VS Code) and describe what you want in specific language. The more precise you are, the better the result.
+              At the bottom of the chat there's a small **mode picker** with three options, and choosing the right one is half the skill:
 
-              For example: *"On the book list, add a small label that shows how many books are in the club's list."* Copilot will suggest the changes and show you what it wants to edit.
-          subtitle: Describe it clearly
-        - type: text
-          title: Review before you accept
-          content:
-            body: |-
-              This part is important: **don't accept blindly**. Copilot shows you a diff of what it wants to change, red for removed, green for added. Read it, then watch your app in the browser to check it does what you hoped.
+              - **Ask** answers questions and explains things, without changing any files. It's your built-in tutor: "what does this file do?"
+              - **Edit** makes focused changes to the files you choose.
+              - **Agent** takes a whole task: it finds the right files itself, makes the changes, and even fixes its own errors along the way.
 
-              If it's not right, you can undo it (Cmd/Ctrl + Z) or ask Copilot to try again differently. You're the one in charge, Copilot is the helper.
-          subtitle: You're in charge, it's the helper
+              For the kind of change in this challenge, pick **Agent** and let it do the legwork.
+            imageUrl: /courses/vibe-coding-github-00/copilot-modes.webp
+          subtitle: Ask, Edit, or Agent
         - type: quiz-question
-          title: 'Quiz: Working with Copilot'
+          title: 'Quiz: Which mode?'
           content:
-            question: Copilot suggests a change to Dalmie's app. What's the wise thing to do before keeping it?
+            question: Before changing anything, Dalmie wants to understand what one mysterious file in her app actually does. Which mode fits that moment?
             options:
-              - Accept it straight away, AI is always right
-              - Delete the file and start over
-              - Publish to the live app immediately to test it there
-              - Read the diff and check the app still works before keeping it
+              - Ask, it explains things without touching any files
+              - Edit, it goes through the file and tidies it up for her
+              - Agent, it works out which files matter and gets going
+              - Any of them, the modes only change how fast the answer comes
             explanation: |-
-              Always review the diff and check your app in the browser first. Copilot is brilliant but not perfect, and a quick look catches anything off before it goes anywhere.
+              Ask is the reading mode: it answers and explains, and is guaranteed to change nothing. That makes it perfect for understanding your app, and for satisfying curiosity cheaply.
 
-              This habit, review then keep, is exactly how you'll work with bigger AI agents too.
+              Edit and Agent are the doing modes. A handy habit: Ask first when you're unsure, then switch to Agent once you know what you want done.
+            correctAnswer: 0
+        - type: text
+          title: Dalmie's request
+          content:
+            body: |-
+              Sarah mentioned she'd love to see at a glance how many books the club has suggested. That's a perfect agent task: small, clear, but fiddly to do by hand. Dalmie switches the chat to **Agent** and writes:
+
+              ```
+              On the home page, under the main heading, add a small line that shows how many books are on the list, for example "5 books suggested so far".
+              ```
+
+              Notice the recipe: **what** to add, **where** it goes, and an **example** of the result. With about 50 requests a month, one well-aimed ask beats three vague ones.
+          subtitle: What, where, and an example
+        - type: text
+          title: Watch it work, then review
+          content:
+            body: |-
+              Copilot gets to work: you'll see it read files, think, and make edits. When it finishes, the chat lists **every file it changed**.
+
+              Click a file and a **diff** opens, the red and green view you know. Use **Keep** to accept or **Undo** to reject, file by file or all at once. And glance at your app in the browser: the change is already showing at your localhost address, so you can judge it live before deciding.
+
+              The rule stays the same as ever: **don't keep what you haven't read.** You're in charge, the agent is the helper.
+            imageUrl: /courses/vibe-coding-github-00/copilot-review.webp
+          subtitle: Keep or undo, file by file
+        - type: text
+          title: When it's not right, you're covered
+          content:
+            body: |-
+              Three situations you'll meet, and the easy way out of each:
+
+              **The app shows an error.** Copy the error text into the chat and send it. Copilot reads your files, finds its own mistake, and fixes it. This is the agent advantage: no ferrying code back and forth.
+
+              **It works, but it's not what you pictured.** Say so in a follow-up: "make the text smaller", "move it below the list". Or click **Undo** and send a sharper request.
+
+              **You want out entirely.** Nothing is committed until you commit. The **Source Control** panel lists every file the agent touched, and **Discard Changes** returns any file to exactly how it was. You can experiment without fear.
+          subtitle: Errors, tweaks, and the escape hatch
+        - type: quiz-question
+          title: 'Quiz: The error overlay'
+          content:
+            question: Copilot's change is in, but the browser now shows a red error message instead of Dalmie's app. What's her best first move?
+            options:
+              - Undo all the changes and drop the idea for now
+              - Commit and push anyway, the error will sort itself out once it syncs to Lovable
+              - Close VS Code, reopen it, and run the install command again
+              - Copy the error into the chat and ask Copilot to fix it
+            explanation: |-
+              The agent can read the error and her files together, so it usually finds and fixes its own mistake in one go. That's the cheapest fix available, and it's how builders work with agents every day.
+
+              Undo is a fine plan B if she'd rather rewind. Pushing a broken change forward, though, just moves the problem closer to her visitors.
             correctAnswer: 3
+        - type: text
+          title: Make it stick
+          content:
+            body: |-
+              Happy with the change? Then it travels the path you know: **commit** with a clear message (*Add suggestion counter to home page*), **push**, and press **Publish** in Lovable when you want visitors to see it.
+
+              One request, one commit. That keeps your history readable, and any change easy to undo on its own.
+          subtitle: Commit, push, publish
         - type: free-text-exercise
-          title: Plan a Copilot request
+          title: Run your first agent request
           content:
             description: |-
-              Think of one change that's a bit too fiddly to do by hand. Write the request you'd give Copilot, as clearly and specifically as you can.
+              Your turn. Think of one change to your app that's too fiddly by hand. Write a request with the recipe (what, where, an example), switch the chat to **Agent**, and send it. Review the diff, check your app, keep or undo.
 
-              Remember: name what you want and where it should go.
-            placeholder: e.g. On the home page, add a friendly empty state that says "No books suggested yet" when the list is empty
-            systemPrompt: 'You are a friendly mentor for a curious non-technical app builder learning to use GitHub Copilot. The learner writes a request they would give Copilot. Respond warmly in British English (max 5 short bullet points): if the request is specific (names what and where), affirm it; if it is vague, suggest how to make it more precise (what should change, where it appears, what it should say or do). Remind them to review Copilot''s diff and check the app before keeping it. Do not use em dashes. End encouragingly.'
-            checkerPrompt: 'Check whether the request names a reasonably specific change (what to change and where). Flag it only if it is extremely vague (for example "make it better"). This is their request:'
+              Then paste the request you used here, and add a line about how it went.
+            subDescription: You'll get instant AI feedback on your request, plus a tip for your next move if something didn't go to plan.
+            placeholder: 'e.g. I asked: "On the home page, add a friendly note saying No books suggested yet when the list is empty." Worked after one follow-up.'
+            systemPrompt: 'You are a friendly mentor for a curious non-technical app builder who just ran their first GitHub Copilot agent request in VS Code. The learner pastes the request they sent and a line about the outcome. Respond warmly in British English (max 5 short bullet points). Judge the request against the recipe: does it name what to change, where it appears, and give an example of the result? Praise what is specific and suggest one concrete improvement if it is vague. If they report an error, remind them to paste the error text into the chat so Copilot can fix its own mistake. If the result was not what they pictured, suggest a follow-up instruction or Undo plus a sharper request. If it went well, remind them of the path: commit, push, publish. Do not use em dashes. End with specific encouragement.'
+            checkerPrompt: 'Check whether the learner pasted a reasonably specific agent request (names what to change and where). Flag it only if the request is extremely vague (for example "make it better") or unrelated to changing their app. This is their answer:'
         - type: challenge-end
           title: "You've got an AI agent now \U0001F916"
           content:
-            description: You set up Copilot Free and know how to ask for a change and review it.
+            description: You ran a real agent request, reviewed its work, and stayed in charge the whole way.
             nextModule: "**Next challenge:** The last piece, a simple rule for when to edit on your computer, when to ask Copilot, and when to go back to Lovable."
             subDescription: |-
-              Describe, review, keep. That's the rhythm of working with AI well, and it's the same rhythm you'll use with any AI agent from here.
+              Describe, review, keep, and when something breaks, hand the error straight back to the agent. With that loop and the Source Control escape hatch, there's no situation you can't work your way out of.
 
-              **Reusable tool:** the **Copilot Starter Prompts** give you a few ready-made request shapes for common changes.
+              **Reusable tool:** the **Copilot Starter Prompts** give you ready-made request shapes for common changes, each following the what-where-example recipe.
       title: Make a Bigger Change with Copilot
       isFree: false
       skills:
         - GitHub Copilot
-        - AI Assistance
+        - AI Agents
         - Reviewing Changes
-      description: Set up GitHub Copilot for free in VS Code, describe a change, and review its work before keeping it.
-      completionTime: 11:00
+        - Troubleshooting
+      description: Put GitHub Copilot to work on your app, review its changes, and recover confidently when something goes wrong.
+      completionTime: 13:00
     - steps:
         - type: text
           title: Look what you can do now

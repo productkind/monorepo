@@ -203,12 +203,13 @@ There's a tab that shows the actual code Lovable is generating. You don't need t
 
 Think of it like the engine of a car. You don't need to be a mechanic to drive, but knowing where the engine is doesn't hurt.
 
-### Visual edits
+### The preview toolbar
 
-This is one of the most useful features for quick tweaks. Click the paintbrush icon to enter visual edit mode. Now you can:
-- Click on any text to change it
-- Adjust colours by clicking on elements
-- Tweak spacing and sizing
+This is one of the most useful features for quick tweaks. The preview toolbar sits at the bottom of your app preview and lets you point at what you want to change. It gives you a few modes:
+- Select elements: click a part of your app, then describe the change
+- Edit text inline: fix a typo or change wording directly on the page
+- Draw annotation: sketch on the preview to show a layout change
+- Add a comment: pin a note to an element
 
 It's perfect for small refinements without writing another prompt.
 
@@ -222,7 +223,7 @@ Lovable offers pre-built themes that can change the overall look of your app wit
 
 ### Now it's your turn
 
-**INPUT:** Open your app in Lovable and make three changes using the visual edit tool. Maybe fix a typo, adjust a colour, or change the spacing on a button. Get comfortable clicking around.
+**INPUT:** Open your app in Lovable and make three changes using the preview toolbar. Maybe fix a typo, adjust some wording, or select an element and describe a change. Get comfortable clicking around.
 
 ---
 
@@ -349,7 +350,7 @@ Congratulations on publishing your first app! 🎉
 You've come a long way. Let's recap what you can now do:
 
 - **Write structured prompts** that get you closer to what you want on the first try
-- **Use Lovable's interface** confidently: preview, visual edits, bookmarks, reverts
+- **Use Lovable's interface** confidently: preview, the preview toolbar, bookmarks, reverts
 - **Handle security warnings** calmly, knowing they're normal and fixable
 - **Publish your app** and share it with others
 - **Know when to start over** vs when to iterate
