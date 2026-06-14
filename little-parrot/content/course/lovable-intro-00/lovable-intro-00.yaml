@@ -567,12 +567,12 @@ course:
           content:
             body: |-
               This is one of the most useful features for targeted tweaks. The **preview toolbar** sits at the bottom of your app preview and lets you point at what you want to change instead of describing it in a prompt. It gives you a few modes:
-              - **Select elements:** Click one or more parts of your app, then describe the change you want
-              - **Edit text inline:** Fix a typo or change wording directly on the page, no prompt needed
+              - **Select elements:** Click a part of your app, then describe the change you want. To select more than one element, hold Command (Mac) or Control (Windows) while you click
+              - **Edit text inline:** Fix a typo or change wording directly on the page, no prompt needed and it costs no credits
               - **Draw annotation:** Sketch on the preview to show a layout change that's hard to put into words
               - **Add a comment:** Pin a note to an element for yourself or a teammate
 
-              It's perfect for small, targeted refinements.
+              These are perfect for small, targeted refinements.
             imageUrl: /courses/lovable-intro-00/preview-toolbar.webp
           subtitle: Point and click changes
         - type: text
