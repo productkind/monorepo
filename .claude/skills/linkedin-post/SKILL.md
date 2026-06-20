@@ -3,6 +3,8 @@ name: linkedin-post
 description: Apply this structure to LinkedIn posts or Substack Notes.
 ---
 
+> Voice and tone come from the **personal-tone-of-voice** skill and `little-parrot/marketing/campaigns/how-to-be-authentic-on-linkedin.md`. This skill covers the channel mechanics and post structure that sit on top of that voice. Where the two appear to conflict, the grounded voice wins: posts should read like a real, kind person, never like marketing.
+
 ## Audience
 
 Non-technical women learning AI-assisted development.
@@ -16,8 +18,8 @@ Non-technical women learning AI-assisted development.
 - No hashtags
 - Put all links in the post body. Don't put links in the author's first comment, LinkedIn penalises the post's reach when the author comments with links.
 - Whitespace between paragraphs for scannability
-- The opening sentence promises concrete professional benefit
-- End with a question or implication, not a summary
+- The opening grounds the reader in a real moment, not a promise of value
+- End with one concrete thing to try, or a genuine reflective question tied to the substance. Not a summary, not comment-bait
 - Value density: concentrated insights outperform verbose posts
 
 ### Substack Notes
@@ -27,56 +29,51 @@ Non-technical women learning AI-assisted development.
 
 ## Openings
 
+Open on a real, specific moment: something that happened, a frustration, an honest admission, or a precise observation. Curiosity comes from the concrete detail, never from a withheld secret or a promise of value.
+
 **Do:**
-- Strong opening lines that promise immediate value
 - Start with a specific moment, frustration, or observation
-- Reframe a common belief
+- Reframe a common belief, stated plainly
 - Name a practical distinction people miss
 
 **Don't:**
 - Grand claims about industries or "the future"
+- Curiosity-gap or data-tease hooks ("I discovered why 87% of X fails...", "...generated $157K in 30 days")
 - Rhetorical questions as hooks
 - Abstract definitions before context
+- Promising "value" or "a secret" before delivering it
 
-### Examples of Hooks
+### Examples of openings that work
 
-#### Good: Curiosity Gap
+#### Good: A real event
+
+> I spent this week at two product conferences, mtpcon in London and Productized in Lisbon.
+
+**Why it works:** Grounds the reader in something that actually happened before any claim. The reader trusts a person, not a pitch.
+
+---
+
+#### Good: An honest admission
+
+> I keep thinking about one number from this week's conferences.
+
+**Why it works:** Specific and personal. The pull is the real detail to come, not a manufactured mystery.
+
+---
+
+#### Good: A precise observation
+
+> The same idea came up in three talks this week, from speakers who'd never coordinated.
+
+**Why it works:** A concrete pattern the writer noticed; the insight follows in the next line instead of being teased.
+
+---
+
+#### Bad: Hype / curiosity gap
 
 > I discovered why 87% of LinkedIn outreach fails. The reason surprised even me.
 
-**Why it works:** It promises specific, valuable information while creating mystery. The reader’s brain compels them to continue.
-
----
-
-#### Good: Pattern Interrupt
-
-> Forget everything you know about LinkedIn algorithms. It’s simpler than experts claim.
-
-**Why it works:** It challenges conventional wisdom and signals a fresh perspective that contradicts what most people believe.
-
----
-
-#### Good: Data-backed
-
-> Three LinkedIn message templates that generated $157K in 30 days.
-
-**Why it works:** The specificity of both metrics signals rigorous, measurable results, not vague claims.
-
----
-
-#### Good: Social Proof
-
-> My client’s LinkedIn post reached 1.2 million views last week using this structure.
-
-**Why it works:** Extreme results create curiosity about the METHOD, readers think "If they did it, I can too."
-
----
-
-#### Bad: Hyperbolic
-
-> The LinkedIn secret nobody talks about
-
-**Why it fails:** Hyperbolic opener. Overpromising without delivering and too vague.
+**Why it fails:** Withholds the point to manufacture suspense. Reads as marketing, not a person sharing something true.
 
 ---
 
@@ -84,7 +81,7 @@ Non-technical women learning AI-assisted development.
 
 > LinkedIn is important
 
-**Why it fails:** Vague language.
+**Why it fails:** Vague language, no specific moment.
 
 ---
 
@@ -92,7 +89,7 @@ Non-technical women learning AI-assisted development.
 
 > If you’re still doing this, you’re making a huge mistake
 
-**Why it fails:** Negative, condescending tone.
+**Why it fails:** Negative, talks down to the reader.
 
 ---
 
@@ -120,9 +117,10 @@ Non-technical women learning AI-assisted development.
 
 Before publishing, verify:
 
-1. Does the opening give a usable insight within the first two sentences?
-2. Is there a specific example, tool, or scenario?
-3. Does the ending advance thinking rather than summarise?
+1. Does the opening start on a real, specific moment, not a teaser or a promise of value?
+2. Is there a specific example, named source, tool, or scenario?
+3. Does the ending give one concrete thing to try, rather than summarise or bait comments?
 4. Would I trust this if someone else wrote it?
 5. Am I describing experiences or listing features?
 6. Is any information repeated across paragraphs?
+7. Have I run it against the personal-tone-of-voice banned-language list (no em dashes, no hype, no "not X but Y")?

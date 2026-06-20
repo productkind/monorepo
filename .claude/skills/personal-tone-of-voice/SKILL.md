@@ -63,7 +63,7 @@ hack, chaos, crisis, fluff, hype
 "quietly" as a signifier (e.g. "it can quietly rewrite", "quietly changed"). State the action plainly: "it can rewrite a paragraph you never mentioned".
 
 ### Business jargon
-leverage, synergy, move the needle, circle back, land on, why it matters
+leverage, synergy, move the needle, circle back, land on, land / landed (figurative, e.g. "it landed differently for me", "how you land a message", "it didn't land"), why it matters
 
 ### Announcing clarity
 plain language, plain English (e.g. "in plain English", "in one plain paragraph"). Don't announce that you're being clear. Just be clear.
@@ -74,7 +74,7 @@ actually, genuinely
 Cut "actually" as a filler, e.g. "what you actually want" → "what you want", "they can actually use" → "they can use".
 
 ### Empty fillers
-but here’s the catch, to cut through the chaos, that moment stuck with me, cutting through the noise, that actually lands, that sticks, which makes a real difference, makes a real difference
+but here’s the catch, to cut through the chaos, that moment stuck with me, this stuck with me, it stuck with me, cutting through the noise, that actually lands, that sticks, which makes a real difference, makes a real difference
 
 ### Pseudo punchlines
 Here's the thing, Bottom line:, No fluff, This one's for you, Why this matters, What moved me, This matters because, that matters, it matters most, matters most for
