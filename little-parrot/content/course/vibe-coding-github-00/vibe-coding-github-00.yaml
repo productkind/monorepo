@@ -846,9 +846,10 @@ course:
           title: Keeping everything in sync
           content:
             body: |-
-              A couple of habits keep things smooth. When you sit back down to work, start your app again with `npm run dev`, then **pull** in VS Code to grab anything that changed in Lovable since last time. This pull is the big one, it keeps your copy in step so your work and Lovable's never clash. Then when you're done, **commit and push** in VS Code, and **Publish** in Lovable when you want your website visitors to see it.
+              A couple of habits keep things smooth. When you sit back down to work, start your app again with `npm run dev` to see it in your browser (at `localhost:8080`), then **pull** in VS Code to grab anything that changed in Lovable since last time. This pull is the big one, it keeps your copy in step so your work and Lovable's never clash. Then when you're done with your change, **commit and push** in VS Code, and **Publish** in Lovable when you want your website visitors to see it.
 
-              And if a change ever goes wrong, you can roll back: in Lovable's **chat**, scroll to the version from just before your change and click its **revert** option.
+              And **if a change ever goes wrong**, you can roll back: in Lovable's **chat**, scroll to the version from just before your change and click its **revert** option.
+            imageUrl: /courses/vibe-coding-github-00/lovable-revert.gif
           subtitle: Pull, push, publish, and revert if needed
         - type: quiz-question
           title: 'Quiz: Which tool?'
