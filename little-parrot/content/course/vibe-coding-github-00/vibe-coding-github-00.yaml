@@ -2,7 +2,7 @@ course:
   id: 0c2b1b82-d451-4499-b152-c58d8f58ff2b
   cover: /courses/vibe-coding-github-00/cover.gif
   title: 'Save Lovable Credits: Edit Your App in VS Code'
-  note: 'This course sets up a builder''s workspace on your computer (VS Code, Node.js, and Git) and uses your Lovable project connected to GitHub. The click-by-click install steps for Mac and Windows live in the companion Setup Guide.'
+  note: ''
   learningOutcomes:
     - Make small changes to your app yourself, without spending Lovable credits
     - Set up a workspace on your own computer that works for every app, and any document, you'll build with AI
@@ -385,7 +385,7 @@ course:
               2. Run the installer and click through it. Then close and reopen your terminal.
 
               Start your app again with `npm run dev` and you're away. (On a Mac you'll never see this, the runtime is built in.)
-            imageUrl: /courses/vibe-coding-github-00/npm-missing-deps.webp
+            imageUrl: /courses/vibe-coding-github-00/microsoft-doc.webp
           subtitle: A small, free piece from Microsoft
         - type: text
           title: For any other error
