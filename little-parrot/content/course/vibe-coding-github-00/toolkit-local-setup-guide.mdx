@@ -1,0 +1,91 @@
+---
+challenge: "2 - Set Up Your Workspace"
+---
+## Local Setup Guide
+
+The click-by-click install steps for the three free tools that let you edit and run your app on your own computer: **VS Code**, **Node.js**, and **Git**. Both Mac and Windows are covered. You set this up once, and it's yours for every app and document you work on from here on.
+
+Work through it top to bottom. Where a step differs by computer, follow the **Mac** or **Windows** line that's yours.
+
+### 1. VS Code, your editor
+
+This is where you'll open your app's files and make changes.
+
+1. Go to [code.visualstudio.com](https://code.visualstudio.com/) and download VS Code.
+   - **Mac:** open the downloaded file and drag **Visual Studio Code** into your **Applications** folder, then open it.
+   - **Windows:** run the installer and click through it, keeping the boxes ticked as they come (the defaults are right).
+2. The first time you open VS Code, it asks you to **sign in**. Choose **Sign in with GitHub** and complete it now. This powers your saving and your AI agent in later challenges, so it's worth doing straight away.
+
+![Visual Studio Code, the free code editor](/courses/vibe-coding-github-00/vscode.webp)
+
+### 2. Node.js, so your app can run
+
+Node.js lets your app run on your computer, and it brings **npm**, which fetches the building blocks your app needs.
+
+1. Go to [nodejs.org](https://nodejs.org/) and download the version marked **LTS** (the stable one).
+2. Run the installer and click through the steps. You won't ever open Node.js directly, it just needs to be there.
+
+![The Node.js download page showing the LTS version](/courses/vibe-coding-github-00/nodejs.gif)
+
+### 3. Meet your terminal
+
+The terminal is where you'll type a few short commands.
+
+- **Mac:** open the **Terminal** app (press **Cmd + Space**, type *Terminal*, press Enter).
+- **Windows:** you'll use a terminal called **Git Bash**, which arrives with Git in the next step.
+
+![A terminal window, where you type commands to your computer](/courses/vibe-coding-github-00/terminal.webp)
+
+### 4. Git, the version-control engine
+
+Git saves your changes and sends them to GitHub.
+
+**On a Mac**, install it from the Terminal in three steps:
+
+1. Install **Homebrew**, a free helper that installs builder's tools. Copy its one-line command from [brew.sh](https://brew.sh/), paste it into Terminal, and press Enter.
+
+![Copy the Homebrew installation command](/courses/vibe-coding-github-00/install-homebrew.webp)
+
+2. When it finishes, type `brew install git` and press Enter.
+3. Type `brew install --cask git-credential-manager` and press Enter. This is the helper that lets you sign into GitHub through a simple browser window the first time you fetch your app.
+
+Two things may surprise you during the Homebrew step, and both are normal:
+
+- It asks for your **Mac password** (the one you log in with). Type it and press Enter. The letters won't appear as you type, that's the terminal keeping it private.
+- A box may pop up asking to install Apple's **command line developer tools**. Click **Install** and let it finish. It's a free part of macOS that Homebrew builds on.
+
+**On Windows**, download the installer from [git-scm.com](https://git-scm.com/) and run it. Accept the defaults as you click through. The installer includes two things you want, both selected by default, so leave them ticked:
+
+- **Git Bash**, the terminal window you'll use to run your app.
+- **Git Credential Manager**, the helper that gives you the GitHub sign-in window.
+
+### 5. Check it all worked
+
+Open your terminal (**Terminal** on Mac, **Git Bash** on Windows) and type these two, pressing Enter after each:
+
+```
+node -v
+```
+```
+git -v
+```
+
+If each shows a version number (like `v23.11.0`), every tool is installed and you're ready.
+
+![A terminal showing a node version number and a git version number](/courses/vibe-coding-github-00/terminal-check.webp)
+
+### ⚠️ If something says "command not found"
+
+This means a tool didn't install, or the terminal hasn't noticed it yet.
+
+1. **Close the terminal and open a fresh one**, then try the check again. A new terminal picks up tools you just installed.
+2. If it still complains, reinstall the tool it named:
+   - **Mac:** make sure the Homebrew step finished, then run `brew install git` again.
+   - **Windows:** reopen **Git Bash**, and if needed run the git-scm.com installer once more.
+3. Still stuck? Ask in our **Discord community** (the link is in [My Learning](https://littleparrot.app/nest/my-learning)). Setup snags are common and quick to sort together.
+
+### ⚠️ Windows only: one extra piece for running your app
+
+When you later start your app and it won't run, and the error mentions a missing `.dll` or **Visual C++**, install the free **Microsoft Visual C++ Redistributable (x64)** from Microsoft's official download page: [Latest supported Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-supported-redistributable-version), then reopen your Git Bash. Many Windows computers already have it. Macs have this built in, so there's nothing to do.
+
+![The Microsoft Visual C++ Redistributable download page, where you get the x64 version](/courses/vibe-coding-github-00/install-cpp-windows.webp)

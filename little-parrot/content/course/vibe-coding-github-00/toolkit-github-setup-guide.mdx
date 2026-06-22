@@ -1,0 +1,61 @@
+---
+challenge: "1 - Why Edit on Your Own Computer"
+---
+## GitHub Setup Guide
+
+Connect your Lovable project to GitHub once, so every change, whether you make it in Lovable or on your own computer, is saved and kept in sync. You do this a single time per app, and these are the screen-by-screen steps.
+
+### Before you start: a free GitHub account
+
+GitHub is free. If you already have a GitHub account, skip ahead. If not:
+
+1. Go to [github.com](https://github.com/) and click **Sign up**.
+2. Use an email address you'll keep, and pick a username (it can be anything, it doesn't have to be your real name).
+3. Keep the *"Sign up for Copilot Free for coding assistance on the web, in the IDE, and in the CLI."* box checked, you will use this AI agent.
+4. Confirm your email when GitHub sends you a code.
+
+### Connect your project to GitHub
+
+In the Lovable editor, open the connection screen in either of these ways:
+
+- Click your **project name** (top left) → **Settings** → **Git** → **GitHub**, or
+- Click the **+** menu in the chat and choose the **GitHub** option.
+
+![Lovable's Project settings open at the Git and GitHub tab, with the Connect button](/courses/vibe-coding-github-00/connect-github.webp)
+
+Then:
+
+1. Click **Connect** (you may see it as **Connect to GitHub**).
+2. A GitHub window opens asking you to **authorise the Lovable GitHub App**. Sign into GitHub if it asks, and click **Authorize**.
+3. Choose where the repository should live. Your **personal account** is perfectly fine to start with.
+4. Lovable creates the repository and begins syncing. That's it.
+
+### What Lovable just did
+
+- It created a **repository** in your GitHub account: the folder that holds all your app's code, with a full history of every change.
+- The repository is **private by default**, so only you can see it. That's exactly what you want.
+- From now on, sync runs **both ways** on your main branch: changes you make in Lovable flow up to GitHub, and changes you push from your computer (later in the course) flow back into Lovable, usually within seconds.
+
+One thing to keep clear: **syncing is not the same as publishing.** Syncing keeps your code in step between GitHub and Lovable. Pressing **Publish** in Lovable is what updates the live app your visitors see.
+
+### See your repository on GitHub
+
+Take a look at what Lovable created. You can reach it straight from GitHub any time, no need to go back through Lovable:
+
+1. Go to [github.com](https://github.com/) and sign in.
+2. Click your **profile picture** in the top-right corner, then **Repositories**.
+3. Open the repository Lovable created for your project (it carries your project's name).
+
+Have a look around: this is your app's code, the same files Lovable works with. You'll see the **list of files**, and just above it a **Commits** link (with a number next to it). That's the **history of every change**, each saved with a short message, click it to read through them. Just browsing and reading changes nothing, so explore freely.
+
+When you later bring this code onto your own computer, you'll need the repository's **link**. It lives behind the green **Code** button, as the **HTTPS** address (it ends in `.git`). No need to copy it now, just good to know that's where it is.
+
+![A GitHub repository page with the green Code button open and the HTTPS address shown](/courses/vibe-coding-github-00/github-clone-url.webp)
+
+### One rule that keeps sync working
+
+After connecting, **don't rename, move, or delete the repository on GitHub.** Any of those breaks the link between Lovable and GitHub, and your changes will stop flowing across. If it ever does break, come back to **Project settings → Git → GitHub** and reconnect.
+
+### If you get stuck
+
+Setting up the connection should only take a minute or two. If something looks different or won't connect, ask in our **Discord community** (the link is in [My Learning](https://littleparrot.app/nest/my-learning)). We're happy to help.
