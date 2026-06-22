@@ -44,6 +44,13 @@ Use these links when referencing toolkit items in course content.
 | Break-Even and Cashflow Tracker | `https://littleparrot.app/nest/toolkit/764681e3-3475-41e6-99a4-47fff726ba1e` |
 | Accountant Call Preparation Template | `https://littleparrot.app/nest/toolkit/1a82d9a5-9987-4f61-aa29-99574b40836a` |
 
+## Save Lovable Credits: Edit Your App in VS Code (`vibe-coding-github-00`)
+
+| Toolkit Item | URL |
+|-------------|-----|
+| GitHub Setup Guide | `https://littleparrot.app/nest/toolkit/5fcda78e-1847-47fc-bff8-b02beececa14` |
+| Local Setup Guide | `https://littleparrot.app/nest/toolkit/928f6d38-4da5-44a5-b856-4f0479c24beb` |
+
 ## Notes
 
 - URL pattern: `https://littleparrot.app/nest/toolkit/{toolkit-id}`
