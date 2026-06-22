@@ -19,7 +19,7 @@ Dalmie, a dalmatian who built the Book Club Organiser app for her friend Sarah's
 The original plan taught editing on the GitHub website (github.dev) and finding elements via the `data-lov-id` attribute. Two Lovable changes made that unworkable, so the course was rescoped:
 
 - **Newer Lovable apps no longer include `data-lov-id`**, so file paths can no longer be read from Inspect. Icons are still found via Inspect though: the icon's name shows in its `<svg>` class (e.g. `lucide-heart`), which the learner then searches in VS Code.
-- **Images are now hosted centrally by Lovable**, not in the app's public folder, so images must be **uploaded in Lovable**, not swapped in code. Image-editing is therefore out of scope; the course teaches copy, icons, and Copilot-assisted code changes instead.
+- Image-editing is left out of scope to keep the course focused; it teaches copy, icons, and Copilot-assisted code changes instead. (Images can be added locally via a `public` folder, so this is a focus choice, not a limitation.)
 
 The credit-saving focus is unchanged. The method moved from the GitHub web editor to a local VS Code setup, which is more reliable and doubles as a real on-ramp to AI agents like Claude Code, Cursor, and Copilot.
 
@@ -90,7 +90,7 @@ The credit-saving focus is unchanged. The method moved from the GitHub web edito
 **Know when to edit in VS Code, when to ask Copilot, and when to prompt Lovable.**
 
 - Decision rule: VS Code for small, specific changes; Copilot for fiddly-but-defined changes; Lovable for big new features.
-- The exception: **images upload in Lovable** (centrally hosted now).
+- The dividing line: what people **see** (copy, icons, colours, layout) is yours to change locally; **backend** work (data, logins, emails, payments, managed by Lovable Cloud) belongs in Lovable.
 - Staying in sync: pull before editing, push when done, Publish to go live; revert via Lovable's chat if a change goes wrong.
 - Quiz: which job belongs back in Lovable.
 - Final exercise: one change you'll make in VS Code this week.
@@ -122,7 +122,7 @@ Setup-heavy and quick-reference material is offloaded here so challenges stay fo
 - **Run-It-Locally Cheat Sheet:** the three commands (`git clone`, `npm install --no-save`, `npm run dev`).
 - **Credit-Free Edit Checklist:** the editing loop (find, edit, save, commit, push, publish).
 - **Copilot Starter Prompts:** ready-made request shapes for common changes.
-- **Edit-Locally vs Prompt-Lovable Decision Checklist:** when to use VS Code, Copilot, or Lovable (and that images go through Lovable).
+- **Edit-Locally vs Prompt-Lovable Decision Checklist:** when to use VS Code, Copilot, or Lovable (frontend locally, backend in Lovable).
 
 ---
 

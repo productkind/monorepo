@@ -17,7 +17,7 @@ course:
             altText: |-
               A dalmatian dog (called Dalmie) wearing a red shirt sits at a desk with a laptop,
               holding a small list. A credit counter on the screen is ticking down. Dalmie says,
-              "A few more little fixes for the Book Club Organiser... and there go my credits again."
+              "A few more fixes for my Book Club Organiser app... and there go my credits again."
         - type: comic
           content:
             imageUrl: /comics/vibe-coding-github-00/panel-01.png
@@ -111,7 +111,7 @@ course:
 
               An **AI agent on your computer** skips all of that. It opens your files and **makes the changes directly**, in your app's code or in any document you keep in your workspace. And with version control, **you see exactly what it changed**, line by line, and keep only what you like.
 
-              **Think ahead:** what would you hand to an AI agent first? A fiddly change in your app, or a document you keep reworking?
+              **Think ahead:** what would you hand to an AI agent first? A change to your app, or a document you keep reworking?
             placeholder: Type your answer here...
             subDescription: Whatever you wrote down, the workspace you're about to set up is exactly where that becomes possible. Keep it in mind as you go.
         - type: challenge-end
@@ -256,7 +256,7 @@ course:
 
               That `~` symbol is shorthand for your **home folder**, the one that holds your Desktop, Documents, and Downloads. A freshly opened terminal always starts there, and that's exactly where your app's new home will go in a moment. 
               
-              (Whenever you want the full address spelled out, type `pwd` and press Enter, the command you met in the last challenge.)
+              (Whenever you want the full address spelled out, type `pwd` and press Enter, it prints the folder you're currently in.)
             imageUrl: /courses/vibe-coding-github-00/terminal-prompt.webp
           subtitle: Your terminal always tells you
         - type: text
@@ -419,6 +419,17 @@ course:
               It can look busy at first. You don't need to understand it all, you only ever touch the small part you came for.
             imageUrl: /courses/vibe-coding-github-00/vscode-open-folder.gif
           subtitle: Your app's code, in an editor
+        - type: text
+          title: Always start by pulling the latest
+          content:
+            body: |-
+              One habit to begin every editing session with: **pull**. It fetches the newest version of your app from GitHub, including anything that changed in Lovable since you last worked locally. Starting from the latest keeps your copy up-to-date and saves you from clashes when you go to save.
+
+              To pull in VS Code, open the **Source Control** panel (the branch icon on the left, or **Ctrl + Shift + G**), click the **...** menu next to **Changes** on the top, and choose **Pull**.
+
+              Right now there's nothing new, you only just cloned, so it'll simply say you're up to date. But make pulling your opening move every single time you sit down to edit.
+            imageUrl: /courses/vibe-coding-github-00/vscode-pull.webp
+          subtitle: Your opening move, every time
         - type: text
           title: Find the words you want to change
           content:
@@ -607,7 +618,7 @@ course:
           title: "Icons hold no mystery for you now ⭐"
           content:
             description: You found an icon in your code and swapped it.
-            nextModule: "**Next challenge:** You've made changes by hand. Now you'll get some help, GitHub Copilot, an AI agent with a free tier living right inside VS Code, for the changes that are trickier to do alone."
+            nextModule: "**Next challenge:** You've made changes by hand. Now you'll get some help, GitHub Copilot, an AI agent with a free tier living right inside VS Code, for the changes that need actual code written."
             subDescription: |-
               Knowing that icons are just code is a small superpower. Names like `<Star />` and `<Bell />` aren't scary, they're switches you can flip.
 
@@ -625,60 +636,70 @@ course:
           title: Meet your AI agent
           content:
             body: |-
-              Some changes are bigger than a word or two, and that's where an AI agent shines. **GitHub Copilot** is an AI agent that lives right inside VS Code. You describe what you want, it opens your files and makes the change, and you review every line before keeping it.
+              Some changes are bigger than a word or two, and that's where an AI agent shines. **GitHub Copilot** is an AI agent that lives right inside VS Code. You describe what you want, it opens your files and makes the change, then you can review it.
 
-              This is the moment from Challenge 1 arriving for real: an AI working directly in your files, no copy-pasting. And there's a **free plan**, no payment needed, and it doesn't touch your Lovable credits.
+              This way the AI is working directly in your files, no copy-pasting. And there's a **free plan**, no payment needed, and it doesn't touch your Lovable credits.
             imageUrl: /courses/vibe-coding-github-00/github-copilot.webp
           subtitle: A free AI agent inside VS Code
         - type: text
-          title: Turn it on and open the chat
+          title: Sign in and open the chat
           content:
             body: |-
-              In VS Code, click the **Copilot icon** near the top and follow the sign-up for **Copilot Free**. Since you signed in with your GitHub account back when you set up VS Code, this takes seconds.
+              Since you've already signed in with your GitHub account, you have access to Copilot, the AI agent. To chat with it, open the **Chat panel**:
 
-              Then open the **Chat panel**: press **Ctrl + Alt + I** (Windows) or **Ctrl + Cmd + I** (Mac). A chat opens beside your code, that's where you and your agent will talk.
+              - on the top right in the VS Code window, click the sidebar icon, or
+
+              - press **Ctrl + Alt + i** (Windows) or **Ctrl + Cmd + i** (Mac). 
+              
+              A chat opens beside your code, that's where you and your agent will talk.
 
               One thing to know about the free plan: it includes about **50 chat requests a month** (plus thousands of inline code completions). That's plenty when each request is a clear one, and you're about to learn how to make them count.
-            imageUrl: /courses/vibe-coding-github-00/copilot-signin.webp
+            imageUrl: /courses/vibe-coding-github-00/copilot-open.gif
           subtitle: No payment, just your GitHub login
         - type: text
           title: Pick the right mode
           content:
             body: |-
-              At the bottom of the chat there's a small **mode picker** with three options, and choosing the right one is half the skill:
+              At the bottom of the chat there's a small **mode picker**, and choosing the right one is half the skill. Three to know:
 
-              - **Ask** answers questions and explains things, without changing any files. It's your built-in tutor: "what does this file do?"
-              - **Edit** makes focused changes to the files you choose.
-              - **Agent** takes a whole task: it finds the right files itself, makes the changes, and even fixes its own errors along the way.
+              - **Ask** answers questions and explains, without changing any files. It's your built-in tutor: *"What happens when a member votes for a book? Can they vote more than once?"*
+              - **Plan** is for a bigger or fuzzier change: it asks you a few clarifying questions, then writes up a plan you can read and adjust. Nothing changes until you approve it.
+              - **Agent** takes a clear task and runs with it: it finds the right files, makes the changes, fixes its own slips along the way, and shows you everything to review.
 
-              For the kind of change in this challenge, pick **Agent** and let it do the legwork.
-            imageUrl: /courses/vibe-coding-github-00/copilot-modes.webp
-          subtitle: Ask, Edit, or Agent
+              The change in this challenge is small and clear, so pick **Agent**. (Keep **Plan** in mind for the day you want something bigger, like identifying the rootcause of an annoying bug.)
+            imageUrl: /courses/vibe-coding-github-00/copilot-modes.gif
+          subtitle: Ask, Plan, or Agent
         - type: quiz-question
           title: 'Quiz: Which mode?'
           content:
-            question: Before changing anything, Dalmie wants to understand what one mysterious file in her app actually does. Which mode fits that moment?
+            question: Dalmie wonders whether a member can edit a book suggestion after they've added it. She just wants to find out, she's not ready to change anything yet. Which mode fits that moment?
             options:
-              - Ask, it explains things without touching any files
-              - Edit, it goes through the file and tidies it up for her
-              - Agent, it works out which files matter and gets going
-              - Any of them, the modes only change how fast the answer comes
+              - Ask, it explains things without changing any files
+              - Plan, it writes a step-by-step plan for changing the file
+              - Agent, it digs into the files and starts making changes
+              - Any of them, the mode only changes how the reply is worded
             explanation: |-
-              Ask is the reading mode: it answers and explains, and is guaranteed to change nothing. That makes it perfect for understanding your app, and for satisfying curiosity cheaply.
+              Ask is the reading mode: it answers and explains, and is guaranteed to change nothing, ideal when you just want to understand. Plan is careful too, but its job is to map out a change you're about to make, not to explain code for its own sake. Agent is the doing mode.
 
-              Edit and Agent are the doing modes. A handy habit: Ask first when you're unsure, then switch to Agent once you know what you want done.
+              A handy habit: Ask to understand, Plan for a big or fuzzy change, Agent to get a clear one done.
             correctAnswer: 0
         - type: text
           title: Dalmie's request
           content:
             body: |-
-              Sarah mentioned she'd love to see at a glance how many books the club has suggested. That's a perfect agent task: small, clear, but fiddly to do by hand. Dalmie switches the chat to **Agent** and writes:
+              Sarah mentioned she'd love to see at a glance how many books the club has suggested. That's a perfect agent task: small and clear, but it needs a bit of new code written, not just a word swapped, and writing code is exactly what the agent is for.
+
+              First, the usual habit: Dalmie **pulls** the latest version of her code before she starts. An agent can touch several files at once, so she wants it building on what's current.
+
+              Then she switches the Copilot chat to **Agent** and writes:
 
               ```
-              On the home page, under the main heading, add a small line that shows how many books are on the list, for example "5 books suggested so far".
+              On the home page, under the "On the shelf" heading, add a small line that shows how many books are on the list, for example "5 books suggested so far".
               ```
 
               Notice the recipe: **what** to add, **where** it goes, and an **example** of the result. With about 50 requests a month, one well-aimed ask beats three vague ones.
+
+              It's the same mental model as prompting Lovable, so everything you've learned there carries over. For a deeper dive, our [Build Your First App with Lovable](https://littleparrot.app/5e86e580-264c-442c-8cc4-be5645f13e87/course-overview) course covers crafting prompts in detail, and its [toolkit](https://littleparrot.app/nest/toolkit?course=Build+Your+First+App+With+Lovable) has ready-made prompt templates you can lean on here too.
           subtitle: What, where, and an example
         - type: text
           title: Watch it work, then review
@@ -688,8 +709,8 @@ course:
 
               Click a file and a **diff** opens, the red and green view you know. Use **Keep** to accept or **Undo** to reject, file by file or all at once. And glance at your app in the browser: the change is already showing at your localhost address, so you can judge it live before deciding.
 
-              The rule stays the same as ever: **don't keep what you haven't read.** You're in charge, the agent is the helper.
-            imageUrl: /courses/vibe-coding-github-00/copilot-review.webp
+              The rule stays the same as ever: **don't keep what you haven't tested.** You're in charge, the agent is the helper.
+            imageUrl: /courses/vibe-coding-github-00/copilot-review.gif
           subtitle: Keep or undo, file by file
         - type: text
           title: When it's not right, you're covered
@@ -702,6 +723,7 @@ course:
               **It works, but it's not what you pictured.** Say so in a follow-up: "make the text smaller", "move it below the list". Or click **Undo** and send a sharper request.
 
               **You want out entirely.** Nothing is committed until you commit. The **Source Control** panel lists every file the agent touched, and **Discard Changes** returns any file to exactly how it was. You can experiment without fear.
+            imageUrl: /courses/vibe-coding-github-00/copilot-discard-change.gif
           subtitle: Errors, tweaks, and the escape hatch
         - type: quiz-question
           title: 'Quiz: The error overlay'
@@ -715,36 +737,40 @@ course:
             explanation: |-
               The agent can read the error and her files together, so it usually finds and fixes its own mistake in one go. That's the cheapest fix available, and it's how builders work with agents every day.
 
-              Undo is a fine plan B if she'd rather rewind. Pushing a broken change forward, though, just moves the problem closer to her visitors.
+              Undo is a fine plan B if she'd rather rewind. Pushing a broken change forward, though, just moves the problem closer to her app's users.
             correctAnswer: 3
         - type: text
           title: Make it stick
           content:
             body: |-
-              Happy with the change? Then it travels the path you know: **commit** with a clear message (*Add suggestion counter to home page*), **push**, and press **Publish** in Lovable when you want visitors to see it.
+              Happy with the change? Then move it along the path you know:
 
-              One request, one commit. That keeps your history readable, and any change easy to undo on its own.
+              1. **Commit** it with a clear message, like `Add suggestion counter to home page`.
+              2. **Push** to send it to GitHub.
+              3. Pop into **Lovable** and check the change has arrived in your project (it take a couple of seconds to sync). Once you can see it there, press **Publish** to put it live for your users.
+
+              Commiting each change keeps your history readable, and you can undo any change easily on its own.
           subtitle: Commit, push, publish
         - type: free-text-exercise
-          title: Run your first agent request
+          title: Anything still unclear? Ask here
           content:
             description: |-
-              Your turn. Think of one change to your app that's too fiddly by hand. Write a request with the recipe (what, where, an example), switch the chat to **Agent**, and send it. Review the diff, check your app, keep or undo.
+              This challenge covered a lot, so let's make sure none of it is left fuzzy. If anything is still unclear, about the modes, reviewing changes, recovering from errors, or anything earlier in the course, ask it right here, and you'll get an answer.
 
-              Then paste the request you used here, and add a line about how it went.
-            subDescription: You'll get instant AI feedback on your request, plus a tip for your next move if something didn't go to plan.
-            placeholder: 'e.g. I asked: "On the home page, add a friendly note saying No books suggested yet when the list is empty." Worked after one follow-up.'
-            systemPrompt: 'You are a friendly mentor for a curious non-technical app builder who just ran their first GitHub Copilot agent request in VS Code. The learner pastes the request they sent and a line about the outcome. Respond warmly in British English (max 5 short bullet points). Judge the request against the recipe: does it name what to change, where it appears, and give an example of the result? Praise what is specific and suggest one concrete improvement if it is vague. If they report an error, remind them to paste the error text into the chat so Copilot can fix its own mistake. If the result was not what they pictured, suggest a follow-up instruction or Undo plus a sharper request. If it went well, remind them of the path: commit, push, publish. Do not use em dashes. End with specific encouragement.'
-            checkerPrompt: 'Check whether the learner pasted a reasonably specific agent request (names what to change and where). Flag it only if the request is extremely vague (for example "make it better") or unrelated to changing their app. This is their answer:'
+              No question is too small. Getting unstuck is exactly how confidence grows.
+            subDescription: Type your question and you'll get a clear answer right back.
+            placeholder: e.g. How do I know whether to use Ask or Agent for what I want to do?
+            systemPrompt: 'You are a warm, knowledgeable mentor for a curious non-technical app builder taking a course on editing their Lovable app on their own computer with VS Code, GitHub, and GitHub Copilot. The learner asks a question about anything from the course: VS Code, the terminal, Git and GitHub, pull, commit, push and publish, Copilot''s Ask, Plan, and Agent modes, reviewing changes, recovering from errors, or the local setup. Answer it clearly and warmly in British English, in plain language for someone non-technical, in at most a few short sentences or bullets. If it falls outside the course, gently point them to where they could find out (they can ask Kinga and Tamas in the Discord community). Reassure them it was a good question to ask. Do not use em dashes. End on an encouraging note, and encourage them to ask in our Discord community if anything is unclear. Reply in a markdown format.'
+            checkerPrompt: 'The learner is asking a question or sharing something they are unsure about. Accept any genuine question or comment. Only flag clearly empty or nonsense input. This is their message:'
         - type: challenge-end
           title: "You've got an AI agent now \U0001F916"
           content:
-            description: You ran a real agent request, reviewed its work, and stayed in charge the whole way.
+            description: You've met your AI agent, and you know how to ask it for a change, review what it does, and recover when something breaks.
             nextModule: "**Next challenge:** The last piece, a simple rule for when to edit on your computer, when to ask Copilot, and when to go back to Lovable."
             subDescription: |-
               Describe, review, keep, and when something breaks, hand the error straight back to the agent. With that loop and the Source Control escape hatch, there's no situation you can't work your way out of.
 
-              **Reusable tool:** the **Copilot Starter Prompts** give you ready-made request shapes for common changes, each following the what-where-example recipe.
+              **Reusable tool:** the **Copilot Starter Prompts** give you a set of example requests for common changes, each written with the what-where-example recipe, ready to adapt to your own app.
       title: Make a Bigger Change with Copilot
       isFree: false
       skills:
@@ -767,25 +793,21 @@ course:
           title: The rule of thumb
           content:
             body: |-
-              **Edit in VS Code** for small, specific changes you can point to: copy, an icon, a colour, a tidy-up. Free and instant.
+              It comes down to one question: does the change touch what people **see**, or what happens **behind the scenes**?
 
-              **Ask Copilot** when a change is fiddly to do by hand but still well defined. Free, and you review its work.
+              **What people see**, the words, icons, colours, and layout, is yours to change for free on your computer:
+              - **By hand in VS Code** for small things you can change directly: a word, an icon's name, a colour.
+              - **With Copilot** when it needs actual code written, not just a word swapped. You describe it, and the agent writes the code for you.
 
-              **Prompt Lovable** for big, new things: a whole new feature or page, or anything you'd struggle to describe to Copilot. That's worth the credits.
-          subtitle: VS Code, Copilot, or Lovable
-        - type: text
-          title: One thing that still belongs in Lovable
-          content:
-            body: |-
-              **Uploading images** is the exception. Lovable now stores your images centrally, so the reliable way to add or swap a photo is to **upload it in Lovable**, not in your code.
+              **Behind the scenes**, the part that saves data, handles logins, sends emails, or takes payments, lives in the **backend that Lovable manages for you** (it's called **Lovable Cloud**). Your local copy talks to that backend but can't safely change it, so those changes belong **in Lovable**. Brand-new features usually need backend work, which is why they belong there too.
 
-              Everything else, the words, the icons, the small fixes, is yours to do for free in VS Code.
-          subtitle: Images go through Lovable
+              **Not sure which side a change falls on?** Ask Lovable itself. In its **Plan mode** (one credit, and it changes nothing), describe what you want and ask whether it would touch the backend. The answer tells you straight away: if it does, build it in Lovable; if it doesn't, you can make it yourself with Copilot, for free.
+          subtitle: What people see, or behind the scenes?
         - type: text
           title: Keeping everything in sync
           content:
             body: |-
-              Two habits keep things smooth. Before you start editing, **pull** in VS Code to grab anything Lovable changed since last time. When you're done, **commit and push**, then **Publish** in Lovable when you want visitors to see it.
+              Two habits keep things smooth. First, before you start editing, **pull** in VS Code to grab anything that changed in Lovable since last time. This is the big one, it keeps your copy in step so your work and Lovable's never clash. Then when you're done, **commit and push**, and **Publish** in Lovable when you want your website visitors to see it.
 
               And if a change ever goes wrong, you can roll back: in Lovable's **chat**, scroll to the version from just before your change and click its **revert** option.
           subtitle: Pull, push, publish, and revert if needed
@@ -799,7 +821,7 @@ course:
               - Add a whole new "members can RSVP to events" feature
               - Add a short "no books yet" message to an empty list
             explanation: |-
-              A whole new feature, with new screens and logic, is exactly what Lovable's AI is built for, and worth the credits. The typo and the icon are quick hand edits; the empty-list message is a tidy Copilot job.
+              An RSVP feature has to remember who's coming, that's backend work, and brand-new features like this are exactly what Lovable is built for. The typo and the icon are quick hand edits, and the empty-list message is a tidy Copilot job, all things people see.
 
               Right tool, right job: that's how you keep both your credits and your time.
             correctAnswer: 2
@@ -811,14 +833,14 @@ course:
 
               Name the change, and whether you'll do it by hand or with Copilot.
             placeholder: e.g. This week I'll fix the wording on my sign-up button by hand, and ask Copilot to add an empty-list message
-            systemPrompt: 'You are a warm, encouraging mentor for a curious non-technical app builder finishing this course. The learner names one change they will make in VS Code this week. Respond in British English (max 4 short bullet points): affirm it suits a hand edit or Copilot if it is small or well defined, or gently suggest Lovable if it is a big new feature or an image upload. End with a genuine, specific note of encouragement about how far they have come. Do not use em dashes.'
-            checkerPrompt: 'Check whether the learner names a specific change suited to editing in VS Code or with Copilot. If it is a big new feature or an image upload, note gently that Lovable may suit it better. This is their plan:'
+            systemPrompt: 'You are a warm, encouraging mentor for a curious non-technical app builder finishing this course. The learner names one change they will make in VS Code this week. Respond in British English (max 4 short bullet points): affirm it suits a hand edit or Copilot if it is something people see (copy, an icon, a colour, layout) and small or well defined, or gently suggest Lovable if it is backend work (saving data, logins, emails, payments) or a big new feature. End with a genuine, specific note of encouragement about how far they have come. Do not use em dashes.'
+            checkerPrompt: 'Check whether the learner names a specific change suited to editing in VS Code or with Copilot (something people see). If it is backend work or a big new feature, note gently that Lovable may suit it better. This is their plan:'
         - type: course-end
           title: "You're a builder with your own workspace now \U0001F38A"
           content:
             description: Look at everything you can do.
             nextModule: "**Your next step:** Make that one change this week. Then notice how often you reach for VS Code or Copilot instead of spending a credit. Each time, you're building real confidence with your own app."
-            subDescription: "✓ **You have a real workspace:** VS Code, Node.js, and Git, set up once and yours for good.\n\n✓ **You run your app locally:** clone, install, `npm run dev`, and see every change live.\n\n✓ **You edit for free:** copy and icons changed by hand, committed and pushed to GitHub and Lovable.\n\n✓ **You have an AI agent:** Copilot Free for the bigger changes, with you reviewing its work.\n\n✓ **You know which tool to use:** VS Code and Copilot for small and specific, Lovable for big and new, and images.\n\nThe deeper win is confidence. You're no longer waiting on credits for every little thing, and you've learned the real setup that builders and AI agents use.\n\n**Reusable tools from this course:** the GitHub Setup Guide, the Local Setup Guide, the Run-It-Locally Cheat Sheet, the Credit-Free Edit Checklist, and the Copilot Starter Prompts. Keep them close while you build.\n\nWant to go further? These pair well:\n\n- [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview)\n- [Build a Valuable Product: How to Break Down Your Idea for Vibe Coding](https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview)\n- [Fix Bugs with Confidence: Debugging Your Lovable App](https://littleparrot.app/aaab45b7-209a-4578-a515-3e55687f0c53/course-overview)"
+            subDescription: "✓ **You have a real workspace:** VS Code, Node.js, and Git, set up once and yours for good.\n\n✓ **You run your app locally:** clone, install, `npm run dev`, and see every change live.\n\n✓ **You edit for free:** copy and icons changed by hand, committed and pushed to GitHub and Lovable.\n\n✓ **You have an AI agent:** Copilot Free for changes that need code written, with you reviewing its work.\n\n✓ **You know which tool to use:** VS Code and Copilot for what people see, Lovable for the backend and big new features.\n\nThe deeper win is confidence. You're no longer waiting on credits for every little thing, and you've learned the real setup that builders and AI agents use.\n\n**Reusable tools:** all the guides, cheat sheets, and prompts from this course are waiting in the **Toolkit**. Keep them close while you build.\n\nWant to go further? These courses pair well:\n\n- [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview)\n- [Build a Valuable Product: How to Break Down Your Idea for Vibe Coding](https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview)\n- [Fix Bugs with Confidence: Debugging Your Lovable App](https://littleparrot.app/aaab45b7-209a-4578-a515-3e55687f0c53/course-overview)"
       title: Your Workflow
       isFree: false
       skills:
