@@ -9,7 +9,7 @@
    id="svg1"
    inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
    sodipodi:docname="panel-02.svg"
-   inkscape:export-filename="/Users/eggdice/Projects/little-parrot-awakens/public/comics/vibe-coding-debugging-00/panel-01.png"
+   inkscape:export-filename="/Users/eggdice/Projects/little-parrot-awakens/public/comics/vibe-coding-github-00/panel-02.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -28,8 +28,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
      inkscape:zoom="0.49209919"
-     inkscape:cx="324.12165"
-     inkscape:cy="859.5828"
+     inkscape:cx="486.6905"
+     inkscape:cy="656.37174"
      inkscape:window-width="1728"
      inkscape:window-height="1057"
      inkscape:window-x="0"
@@ -149,23 +149,30 @@
        transform="matrix(3.1749999,0,0,3.1749999,-1406.1539,-663.07335)">
       <path
          style="fill:none;fill-opacity:1;stroke:#080809;stroke-width:0.5;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-         d="M 508.74353,262.1478 C 508.63076,250.5969 482.57991,236.6902 482.6521,228.61888"
+         d="m 508.74353,262.1478 c -0.11277,-11.5509 -22.43808,-18.6839 -22.36589,-26.75522"
          id="path13-1-9-2-1-7-8-0-7-8"
          sodipodi:nodetypes="cc"
          inkscape:label="text-anchor" />
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9333px;font-family:'Nanum Pen';-inkscape-font-specification:'Nanum Pen';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;inline-size:257.447;display:inline;fill:#080809;fill-opacity:1;stroke:none;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-         x="73.947327"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9333px;font-family:'Nanum Pen';-inkscape-font-specification:'Nanum Pen';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;white-space:pre;inline-size:190.777;display:inline;fill:#080809;fill-opacity:1;stroke:none;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         x="202.45418"
          y="156.49693"
          id="text5"
-         transform="matrix(0.31496064,0,0,0.31496064,425.03119,169.77454)"><tspan
-           x="73.947327"
+         transform="matrix(0.31496064,0,0,0.31496064,424.07272,169.77454)"><tspan
+           x="202.45418"
            y="156.49693"
-           id="tspan1">There is! Let's set up your own workspace, </tspan><tspan
-           x="73.947327"
+           id="tspan1">There is! Let's set up your own<tspan
+   y="156.49693"
+   id="tspan2"> </tspan></tspan><tspan
+           x="202.45418"
            y="177.66356"
-           id="tspan2">right on your computer, Dalmie.</tspan></text>
+           id="tspan3">workspace, right on your<tspan
+   y="177.66356"
+   id="tspan4"> </tspan></tspan><tspan
+           x="202.45418"
+           y="198.83019"
+           id="tspan5">computer, Dalmie.</tspan></text>
     </g>
     <g
        inkscape:label="dalmie-normal"

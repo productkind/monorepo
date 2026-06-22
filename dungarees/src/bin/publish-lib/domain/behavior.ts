@@ -9,11 +9,21 @@ import {
 
 import type { CliCommandsService } from '@dungarees/cli-command/service.ts'
 import type { StdioMessageFeatureOutput } from '@dungarees/cli/type.ts'
+import type { DomainEvent } from '@dungarees/core/event.ts'
 import { createFileOperations } from '@dungarees/fs/file-operations.ts'
 import type { FileSystemService } from '@dungarees/fs/service.ts'
 import { createTranspilerService } from '@dungarees/transpile/service.ts'
 
 import { concat } from 'rxjs'
+
+type BuildEvets =
+  | DomainEvent<'build-start', { srcDir: string; outDir: string; version: string | undefined }>
+  | DomainEvent<'dist-dir-created', { outDir: string }>
+  | DomainEvent<'dist-dir-failed', { outDir: string; cause: Error }>
+  | DomainEvent<'transpile-complete', { outDir: string }>
+  | DomainEvent<'transpile-failed', { cause: Error }>
+  | DomainEvent<'package-json-transformed', { path: string }>
+  | DomainEvent<'package-json-transform-failed', { path: string; cause: Error }>
 
 export type PublishLibBehaviour = {
   build: (args: {
@@ -84,13 +94,14 @@ export const createPublishLibService = ({
       versionContent$: fileSystem.readFile(`${dir}/config/version.json`, 'utf-8'),
       sourceDir,
     }).pipe(
-      publishAllPackages(({ packageDir, version }) =>
-        publishSingleLib({
-          srcDir: `${sourceDir}/${packageDir}`,
-          outDir: `${dir}/dist/${packageDir}`,
-          version,
-          registry,
-        }).stdio$,
+      publishAllPackages(
+        ({ packageDir, version }) =>
+          publishSingleLib({
+            srcDir: `${sourceDir}/${packageDir}`,
+            outDir: `${dir}/dist/${packageDir}`,
+            version,
+            registry,
+          }).stdio$,
       ),
     )
     return {

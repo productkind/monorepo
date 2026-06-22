@@ -24,15 +24,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="0.891619"
-     inkscape:cx="805.27669"
-     inkscape:cy="635.92184"
+     inkscape:zoom="0.37351396"
+     inkscape:cx="804.52148"
+     inkscape:cy="2760.2717"
      inkscape:window-width="1728"
      inkscape:window-height="1057"
      inkscape:window-x="0"
      inkscape:window-y="32"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g2"
      showguides="true"
      showgrid="false">
     <sodipodi:guide
@@ -801,20 +801,20 @@
        id="g2"
        inkscape:label="computer-big">
       <rect
-         style="fill:none;fill-opacity:1;stroke:#370188;stroke-width:0.969865;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.969865;stroke-dasharray:none;stroke-opacity:1"
          id="rect45"
          width="82.030136"
          height="51.280132"
          x="4.1515994"
          y="187.82692" />
       <path
-         style="fill:none;fill-opacity:1;stroke:#370188;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
          d="M 4.0178988,239.22709 29.014525,263.76911 H 111.82183 L 86.123435,238.97355"
          id="path45"
          sodipodi:nodetypes="cccc"
          clip-path="url(#clipPath51)" />
       <rect
-         style="fill:none;fill-opacity:1;stroke:#370188;stroke-width:0.859237;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.859237;stroke-dasharray:none;stroke-opacity:1"
          id="rect46"
          width="7.1407633"
          height="2.80743"
@@ -823,71 +823,71 @@
          ry="1.5"
          rx="1.5" />
       <rect
-         style="fill:none;fill-opacity:1;stroke:#370188;stroke-width:1.03147;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.03147;stroke-dasharray:none;stroke-opacity:1"
          id="rect47"
          width="78.968529"
          height="43.968525"
          x="5.6824141"
          y="193.69106" />
       <path
-         style="fill:#370188;fill-opacity:1;stroke:#370188;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
          d="m 9.6221563,240.99802 12.1788927,11.72185 h 75.20803 L 84.904202,241.07203 Z"
          id="path49"
          sodipodi:nodetypes="ccccc"
          clip-path="url(#clipPath50)" />
       <path
-         style="fill:none;fill-opacity:1;stroke:#370188;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
          d="M 79.601638,261.04767 73.43156,254.87759 H 50.122371 l 6.158743,6.15874 z"
          id="path50" />
       <text
          xml:space="preserve"
          transform="matrix(0.08333333,0,0,0.08333333,-4.6364493,-5.7241593)"
          id="text53"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect53);display:inline;fill:none;fill-opacity:1;stroke:#370188;stroke-width:12;stroke-dasharray:none;stroke-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect53);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:12;stroke-dasharray:none;stroke-opacity:1"
          x="-26.306301"
          y="0"><tspan
            x="143.04102"
            y="2463.6286"
-           id="tspan14"><tspan
-             style="font-size:64px;fill:#370188;stroke:none"
-             id="tspan12">CHIRA</tspan><tspan
-             style="font-weight:900;-inkscape-font-specification:'Montserrat Heavy';fill:#370188;stroke:none"
-             id="tspan13">
+           id="tspan3"><tspan
+             style="font-size:64px"
+             id="tspan1">CHIRA</tspan><tspan
+             style="font-weight:900;-inkscape-font-specification:'Montserrat Heavy'"
+             id="tspan2">
 </tspan></tspan><tspan
            x="143.04102"
            y="2528.9231"
-           id="tspan16"><tspan
-             style="font-weight:900;-inkscape-font-specification:'Montserrat Heavy';fill:#370188;stroke:none"
-             id="tspan15">
+           id="tspan5"><tspan
+             style="font-weight:900;-inkscape-font-specification:'Montserrat Heavy'"
+             id="tspan4">
 </tspan></tspan></text>
       <text
          xml:space="preserve"
          transform="matrix(0.08333333,0,0,0.08333333,-0.78769126,-0.40525617)"
          id="text57"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect57);display:inline;fill:#370188;fill-opacity:1;stroke:none;stroke-width:12;stroke-dasharray:none;stroke-opacity:1"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect57);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:12;stroke-dasharray:none;stroke-opacity:1"><tspan
            x="112.28516"
            y="2487.2747"
-           id="tspan17">ANML-20455 - As Giraffe, I want t...
+           id="tspan6">ANML-20455 - As Giraffe, I want t...
 </tspan><tspan
            x="112.28516"
            y="2547.2747"
-           id="tspan18">ANML-20456 - As Giraffe, I want t...
+           id="tspan7">ANML-20456 - As Giraffe, I want t...
 </tspan><tspan
            x="112.28516"
            y="2607.2747"
-           id="tspan19">ANML-20457 - As Giraffe, I want t...
+           id="tspan8">ANML-20457 - As Giraffe, I want t...
 </tspan><tspan
            x="112.28516"
            y="2667.2747"
-           id="tspan20">ANML-20458 - As Giraffe, I want t...
+           id="tspan9">ANML-20458 - As Giraffe, I want t...
 </tspan><tspan
            x="112.28516"
            y="2727.2747"
-           id="tspan21">ANML-20459 - As Giraffe, I want t...
+           id="tspan10">ANML-20459 - As Giraffe, I want t...
 </tspan><tspan
            x="112.28516"
            y="2787.2747"
-           id="tspan22">ANML-20460 - As Giraffe, I want t...</tspan></text>
+           id="tspan11">ANML-20460 - As Giraffe, I want t...</tspan></text>
     </g>
     <text
        xml:space="preserve"

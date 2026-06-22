@@ -9,7 +9,7 @@
    id="svg1"
    inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
    sodipodi:docname="panel-03.svg"
-   inkscape:export-filename="/Users/eggdice/Projects/little-parrot-awakens/public/comics/lovable-intro-00/panel-03.png"
+   inkscape:export-filename="/Users/eggdice/Projects/little-parrot-awakens/public/comics/vibe-coding-github-00/panel-03.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -27,9 +27,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="0.39051472"
-     inkscape:cx="323.93145"
-     inkscape:cy="693.95592"
+     inkscape:zoom="0.55547538"
+     inkscape:cx="452.76534"
+     inkscape:cy="711.10262"
      inkscape:window-width="1728"
      inkscape:window-height="1057"
      inkscape:window-x="0"
@@ -422,14 +422,18 @@
        x="-17.829039"
        y="156.49693"
        id="text17-6-5-0-9-6"
-       transform="translate(160.45646,-104.60541)"
+       transform="translate(161.01247,-104.60541)"
        inkscape:label="text-1"><tspan
          x="-17.829039"
          y="156.49693"
-         id="tspan1">My own setup? Now that sounds fun.</tspan></text>
+         id="tspan2">My own setup?
+</tspan><tspan
+         x="-17.829039"
+         y="180.30944"
+         id="tspan3">Now that sounds fun.</tspan></text>
     <path
        style="fill:none;fill-opacity:1;stroke:#080809;stroke-width:1.5875;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-       d="M 122.05816,159.61577 C 116.23435,133.24696 136.51259,86.715917 135.6219,60.411952"
+       d="m 122.05816,159.61577 c -5.82381,-26.36881 21.12289,-48.13128 20.2322,-74.435244"
        id="path13-1-9-2-1-7-8-0-7-8"
        sodipodi:nodetypes="cc"
        inkscape:label="text-anchor" />
