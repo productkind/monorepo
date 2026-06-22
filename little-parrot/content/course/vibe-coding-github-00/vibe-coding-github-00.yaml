@@ -381,10 +381,11 @@ course:
 
               The tool that runs your app, **Vite**, relies on Microsoft's **Visual C++ runtime**. Many Windows computers already have it. If yours doesn't, you'll add it in about two minutes:
 
-              1. Download the **Microsoft Visual C++ Redistributable (x64)** from the official link: [aka.ms/vc14/vc_redist.x64.exe](https://aka.ms/vc14/vc_redist.x64.exe).
-              2. Run the installer and click through it. (If it's already on your computer, it'll simply tell you so, no harm done.) Then close and reopen your terminal.
+              1. Open Microsoft's official download page: [Latest supported Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-supported-redistributable-version). Under **Latest supported redistributable version**, download the **X64** version (the right one for almost every Windows computer).
+              2. Run the installer and click through it. Then close and reopen your terminal.
 
               Start your app again with `npm run dev` and you're away. (On a Mac you'll never see this, the runtime is built in.)
+            imageUrl: /courses/vibe-coding-github-00/npm-missing-deps.webp
           subtitle: A small, free piece from Microsoft
         - type: text
           title: For any other error
