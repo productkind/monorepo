@@ -42,7 +42,7 @@ The credit-saving focus is unchanged. The method moved from the GitHub web edito
 **Install the three free tools you need to edit and run your app locally.**
 
 - VS Code (the editor), Node.js (runs your app, gives npm), Git (the version-control engine that talks to GitHub).
-- Mac and Windows covered; on Windows, the Git installer includes **Git Bash**.
+- Mac and Windows covered; on Windows, the Git installer includes **Git Bash** and Git Credential Manager; on Mac, also `brew install --cask git-credential-manager` so the first clone offers a browser GitHub sign-in.
 - Confidence check: `node -v` and `git -v` in the terminal.
 - Quiz: which tool does what.
 - Exercise: confirm the install by pasting `node -v` output.
@@ -53,6 +53,7 @@ The credit-saving focus is unchanged. The method moved from the GitHub web edito
 
 - Copy the repo's HTTPS link from GitHub.
 - Three commands in the terminal (Mac) / Git Bash (Windows): `git clone`, `npm install --no-save`, `npm run dev`.
+- First clone triggers a one-time GitHub sign-in (browser window via Git Credential Manager); Lovable repos are private by default.
 - Open `localhost` and see the app running, the milestone moment; leave the dev server running for live reload.
 - Quiz: what `npm run dev` actually did (it runs locally, only for you).
 - Exercise: get the app running, paste the local address.
@@ -118,7 +119,7 @@ Each challenge follows Dalmie and the Book Club Organiser, and ends with the lea
 Setup-heavy and quick-reference material is offloaded here so challenges stay focused on skills and decisions (referenced by name in the course; create as separate toolkit items):
 
 - **GitHub Setup Guide:** connect a Lovable project to GitHub, screen-by-screen.
-- **Local Setup Guide:** install VS Code, Node.js, and Git for Mac and Windows (incl. Git Bash), with the version-check commands.
+- **Local Setup Guide:** install VS Code, Node.js, and Git for Mac and Windows (incl. Git Bash, and Git Credential Manager on Mac for the browser GitHub sign-in), with the version-check commands.
 - **Run-It-Locally Cheat Sheet:** the three commands (`git clone`, `npm install --no-save`, `npm run dev`).
 - **Credit-Free Edit Checklist:** the editing loop (find, edit, save, commit, push, publish).
 - **Copilot Starter Prompts:** ready-made request shapes for common changes.

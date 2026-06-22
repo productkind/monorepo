@@ -184,10 +184,13 @@ course:
             body: |-
               **Git** is the engine behind the version control. It's what saves your changes and sends them to GitHub.
 
-              On a **Mac**, you install it from the terminal you just opened. It's a two-step job:
+              On a **Mac**, you install it from the terminal you just opened. It's a three-step job:
 
               1. Install [**Homebrew**](https://brew.sh/), a free helper that installs builder's tools for you: copy its one-line install command from [brew.sh](https://brew.sh/), paste it into the Terminal, and press Enter.
               2. When it finishes, type `brew install git`, press Enter, and Git is on your computer.
+              3. Finally, type `brew install --cask git-credential-manager`, press Enter. This is the helper that lets you sign into GitHub through a simple browser window the first time you fetch your app (on Windows it comes bundled with Git). It saves you wrestling with passwords and tokens later on.
+
+              Two things may surprise you while Homebrew installs, and both are completely normal. It asks for your **Mac password** (the one you log in with): type it and press Enter, and don't worry that the letters don't appear as you type, that's the terminal keeping it private. A box may also pop up asking to install Apple's **command line developer tools**, just click **Install** and let it finish. They're a free part of macOS that Homebrew builds on.
 
               On **Windows**, download the installer from [**git-scm.com**](https://git-scm.com/) and run it. It also includes **Git Bash**, the friendly terminal window you'll use to run your app, it's selected in the installer so you can just go through the steps.
           subtitle: What talks to GitHub
@@ -293,7 +296,9 @@ course:
               git clone https://github.com/yourname/your-app.git
               ```
 
-              Press Enter. Git downloads your whole app into a new folder inside *Projects*. Then step into that folder with `cd your-app` (use your app's folder name).
+              Press Enter. The very first time, GitHub needs to check it's really you: a **sign-in window opens in your browser**, click to **authorise**, and Git remembers you from then on, so you only do this once. (It's the same GitHub account you connected Lovable to.)
+
+              Git then downloads your whole app into a new folder inside *Projects*. Step into that folder with `cd your-app` (use your app's folder name).
             imageUrl: /courses/vibe-coding-github-00/terminal-clone.gif
           subtitle: This is called "cloning"
         - type: text
@@ -366,10 +371,42 @@ course:
               ```
               npm run dev
               ```
-
-              For any other error, ask **GitHub Copilot**, the AI agent you'll set up in VS Code later in this course. It reads the error and your files right where they are, and can even install what's missing for you. No copy-pasting into a chat assistant and ferrying answers back: that's the power of an AI agent with access to your files.
             imageUrl: /courses/vibe-coding-github-00/npm-missing-deps.webp
           subtitle: Things break sometimes (and that's okay)
+        - type: text
+          title: Windows only, the runtime Vite needs
+          content:
+            body: |-
+              One more, and it's **Windows only**. If your app won't start and the error mentions a **missing `.dll`** (often `VCRUNTIME140.dll`) or **Visual C++**, you're just missing a small, free piece from Microsoft.
+
+              The tool that runs your app, **Vite**, relies on Microsoft's **Visual C++ runtime**. Many Windows computers already have it. If yours doesn't, you'll add it in about two minutes:
+
+              1. Download the **Microsoft Visual C++ Redistributable (x64)** from the official link: [aka.ms/vc14/vc_redist.x64.exe](https://aka.ms/vc14/vc_redist.x64.exe).
+              2. Run the installer and click through it. (If it's already on your computer, it'll simply tell you so, no harm done.) Then close and reopen your terminal.
+
+              Start your app again with `npm run dev` and you're away. (On a Mac you'll never see this, the runtime is built in.)
+          subtitle: A small, free piece from Microsoft
+        - type: text
+          title: For any other error
+          content:
+            body: |-
+              Errors will pop up now and then, that's normal, and you won't need to memorise a fix for each one.
+
+              For anything beyond the two before, on any computer, you'll soon have the perfect helper: **GitHub Copilot**, the AI agent you'll set up in VS Code later in this course. It reads the error and your files right where they are, and can even install what's missing for you. No copy-pasting into a chat assistant and ferrying answers back, that's the power of an AI agent with access to your files.
+          subtitle: An AI agent will soon have your back
+        - type: text
+          title: Stopping, and picking up again
+          content:
+            body: |-
+              Your app keeps running for as long as that terminal window stays open. When you're done for now, you can **stop it**: click the terminal, then press **Ctrl + C** (on a Mac too, not Cmd). Or simply close the window.
+
+              Next time you want to work on your app, there's no cloning or installing again, those were one-time jobs. You bring it back to life in two steps:
+
+              1. Open your terminal and step into your app's folder, for example `cd Projects/book-club-pick` (use your own folder name).
+              2. Type `npm run dev`, press Enter, and open `localhost:8080` in your browser again.
+
+              That's your whole start-up from now on. (If you'd been building in Lovable since last time and the app complains that something's missing, run `npm install --no-save` once more first, then `npm run dev`.)
+          subtitle: Your app, on your own schedule
         - type: quiz-question
           title: 'Quiz: Who can see it?'
           content:
@@ -400,7 +437,7 @@ course:
         - Terminal
         - Running Locally
       description: Clone your app, install its pieces, and run it on your own computer with three commands.
-      completionTime: 12:00
+      completionTime: 14:00
     - steps:
         - type: text
           title: Now for the fun part
@@ -450,7 +487,7 @@ course:
             body: |-
               Edit the words right there, just like any document. Then save with **Cmd + S** (Mac) or **Ctrl + S** (Windows).
 
-              Now glance at your app on `localhost` in the browser. It updates **on its own, instantly**. That's the live preview from `npm run dev` doing its job. No credits, no waiting.
+              Now glance at your app on `localhost` in the browser. It updates **on its own, instantly**. That's the live preview from `npm run dev` doing its job.
             imageUrl: /courses/vibe-coding-github-00/vscode-update.gif
           subtitle: This is the magic moment
         - type: text
@@ -459,9 +496,11 @@ course:
             body: |-
               Your change is on your computer, but not yet on GitHub, and Lovable. To send it, open the **Source Control** panel in VS Code (the branch-like icon on the left, or **Ctrl + Shift + G**). Your edited file is listed there, under **Changes**.
 
+              You might also see a file you never opened, like `routeTree.gen.ts`. Your app rewrites that one automatically as it runs, so it's nothing you did, and you can simply leave it out of your save.
+
               Before sending anything, take a quick look at what you changed: click the file name and a **diff** opens. A diff shows the old version and the new side by side, removed text in red, added text in green. It's how you confirm you changed exactly what you meant.
 
-              Happy with it? Type a short note describing your change (the **commit message**), click the **Commit** button, then **Sync** (or push) to send it to GitHub. 
+              Happy with it? Hover your file and click the **+** beside it to pick it for this save, type a short note describing your change (the **commit message**), click the **Commit** button, then **Sync** (or push) to send it to GitHub.
               
               A good commit message is short and specific, like `Fix typo on the book suggestion button`. A simple trick if you're not sure what to write: finish the sentence *"This change will..."*
             imageUrl: /courses/vibe-coding-github-00/vscode-commit.gif
@@ -481,7 +520,7 @@ course:
             body: |-
               You've just used a handful of Git words. Here's what each one means, think of posting a parcel:
 
-              **Stage** is packing the box: choosing which changed files go into your next save. (In VS Code, the **+** next to a file stages it; if you commit without staging, VS Code offers to include all your changes.)
+              **Stage** is packing the box: choosing which changed files go into your next save. In VS Code, the **+** beside a file stages it. Staging just the file you changed is how you keep an auto-generated one like `routeTree.gen.ts`, which your app rewrites on its own, out of the save.
 
               **Commit** is sealing the box and labelling it: saving the staged changes with your short message. It becomes one entry in your app's history.
 
@@ -561,7 +600,7 @@ course:
               
               *One twist:* in the code the name is written in **upper camel case**, each word capitalised and the dashes removed, so `book-open` becomes `BookOpen`.
 
-              You'll spot it at least **twice** in the file: once at the very top, in an `import` line (the file's list of which icons it borrows from the set), and once at each spot where it's used. And if your app uses the same icon in *several places*, it'll turn up even more times, sometimes across several files. The file names in the search results help you which one belongs to the part of the app you're changing.
+              You'll spot it at least **twice** in the file: once at the very top, in an `import` line (the file's list of which icons it borrows from the set), and once at each spot where it's used. And if your app uses the same icon in *several places*, it'll turn up even more times, sometimes across several files. The file names in the search results help you tell which one belongs to the part of the app you're changing.
             imageUrl: /courses/vibe-coding-github-00/icon-in-code.webp
           subtitle: From book-open to BookOpen
         - type: text
@@ -610,7 +649,7 @@ course:
               - Run `npm run dev` once more so the change properly registers
               - Commit and push her change, then press Publish in Lovable
             explanation: |-
-              Her swap so far lives only on her computer, the private sandbox stage. To get it to Sarah and other users, it need to travel the full path: commit and push sends it to GitHub, which syncs it into her Lovable project, and Publish puts it in the live app.
+              Her swap so far lives only on her computer, the private sandbox stage. To get it to Sarah and other users, it needs to travel the full path: commit and push sends it to GitHub, which syncs it into her Lovable project, and Publish puts it in the live app.
 
               Publish alone wouldn't do it: Lovable can only publish what code change has reached it, and a change that was never pushed is still sitting on Dalmie's laptop.
             correctAnswer: 3
@@ -666,7 +705,7 @@ course:
               - **Plan** is for a bigger or fuzzier change: it asks you a few clarifying questions, then writes up a plan you can read and adjust. Nothing changes until you approve it.
               - **Agent** takes a clear task and runs with it: it finds the right files, makes the changes, fixes its own slips along the way, and shows you everything to review.
 
-              The change in this challenge is small and clear, so pick **Agent**. (Keep **Plan** in mind for the day you want something bigger, like identifying the rootcause of an annoying bug.)
+              The change in this challenge is small and clear, so pick **Agent**. (Keep **Plan** in mind for the day you want something bigger, like identifying the root cause of an annoying bug.)
             imageUrl: /courses/vibe-coding-github-00/copilot-modes.gif
           subtitle: Ask, Plan, or Agent
         - type: quiz-question
@@ -747,9 +786,9 @@ course:
 
               1. **Commit** it with a clear message, like `Add suggestion counter to home page`.
               2. **Push** to send it to GitHub.
-              3. Pop into **Lovable** and check the change has arrived in your project (it take a couple of seconds to sync). Once you can see it there, press **Publish** to put it live for your users.
+              3. Pop into **Lovable** and check the change has arrived in your project (it takes a couple of seconds to sync). Once you can see it there, press **Publish** to put it live for your users.
 
-              Commiting each change keeps your history readable, and you can undo any change easily on its own.
+              Committing each change keeps your history readable, and you can undo any change easily on its own.
           subtitle: Commit, push, publish
         - type: free-text-exercise
           title: Anything still unclear? Ask here
@@ -807,7 +846,7 @@ course:
           title: Keeping everything in sync
           content:
             body: |-
-              Two habits keep things smooth. First, before you start editing, **pull** in VS Code to grab anything that changed in Lovable since last time. This is the big one, it keeps your copy in step so your work and Lovable's never clash. Then when you're done, **commit and push**, and **Publish** in Lovable when you want your website visitors to see it.
+              A couple of habits keep things smooth. When you sit back down to work, start your app again with `npm run dev`, then **pull** in VS Code to grab anything that changed in Lovable since last time. This pull is the big one, it keeps your copy in step so your work and Lovable's never clash. Then when you're done, **commit and push** in VS Code, and **Publish** in Lovable when you want your website visitors to see it.
 
               And if a change ever goes wrong, you can roll back: in Lovable's **chat**, scroll to the version from just before your change and click its **revert** option.
           subtitle: Pull, push, publish, and revert if needed
