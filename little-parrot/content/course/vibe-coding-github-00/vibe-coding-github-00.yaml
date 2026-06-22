@@ -385,7 +385,7 @@ course:
               2. Run the installer and click through it. Then close and reopen your terminal.
 
               Start your app again with `npm run dev` and you're away. (On a Mac you'll never see this, the runtime is built in.)
-            imageUrl: /courses/vibe-coding-github-00/microsoft-doc.webp
+            imageUrl: /courses/vibe-coding-github-00/install-cpp-windows.webp
           subtitle: A small, free piece from Microsoft
         - type: text
           title: For any other error
