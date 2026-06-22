@@ -8,9 +8,9 @@ Suggested order: lead with Post 1 as the anchor, then space the rest over 2–3 
 
 ## Post 1 — The hype-vs-practical gap (anchor post)
 
-I spent this week at two product conferences, mtpcon in London and Productized in Lisbon. Almost every talk had a moment where the speaker showed how AI had made them faster: more pull requests, more products shipped, weeks of work done in an afternoon.
+I spent last week at two product conferences, mtpcon in London and Productized in Lisbon. Almost every talk had a moment where the speaker showed how AI had made them faster: more pull requests, more products shipped, weeks of work done in an afternoon.
 
-Not one of them showed how. There was no demo I could take home and try on Monday.
+Not one of them showed how. There were no practical steps I could take home and try on Monday.
 
 Then I'd turn to the person sitting next to me and hear the opposite story. Their company had told them to "use AI", but given no guidance on what for. So using AI had become another task on the list. Use it for something, anything, just to be seen using it.
 
