@@ -60,6 +60,12 @@ Each toolkit item belongs to a specific challenge. Choose the challenge where th
 
 **Code examples must be realistic.** If showing a Select dropdown, use real options like book genres or categories, not "Apple, Banana, Cherry." If showing a dialog, show a real form the learner would build, not "This is a test dialog."
 
+**Explain every entry, never just list it.** A toolkit is opened after the course, as a reference, so a bare list teaches nothing. Put an informative one-line explanation beside every command (what it does), every prompt (when to reach for it), and every step (why it's useful). A cheat sheet of terminal commands with no notes, or a prompt library that just dumps prompts, is useless to a learner who can't yet read them on sight. (See "Run Your App on Your Computer", which explains `mkdir`, `cd`, `git clone`, and `npm`; and "Asking Copilot for Changes", which gives each prompt a "when to use" lead-in.)
+
+**Model specificity in example prompts.** In a prompt library, write each prompt the way a strong prompt should be written, because specific, technical prompts get far better results when vibe coding, and the examples teach by imitation. Go beyond *what* + *where* + *example* to name the **look** (size, colour, spacing, and which existing style to match), the **behaviour** (what it does and when), and the **edge cases** (empty list, single item, long text). Use real design and product vocabulary: empty state, primary action, secondary text, hover state, subtitle, component. A vague example teaches a vague habit.
+
+**Use screenshots only where they aid understanding, and only real ones.** For step-by-step guides, a screenshot at the decisive moment helps; for command or prompt references, the words usually carry it. When you do use an image, use the `.mdx` format and embed it by its real served path, reuse the course's existing screenshots at the same `/courses/<course-id>/...` paths where they fit. Never invent a placeholder image URL that would render broken; if no asset exists, keep the step text-only or note the exact shot to capture.
+
 **Interactive examples must match their descriptions.** If the description says "switching between grid view and list view" but the code shows bold/italic/underline toggles, one of them needs to change. Always check for this mismatch.
 
 **Fact-check any claims about external tools or processes.** If you describe how Google Search Console, Stripe, or any third-party service works, verify the steps are accurate. Don't guess at UI locations or workflows. Toolkit items are reference material learners follow step by step, so incorrect instructions are worse here than anywhere else. Use WebSearch or WebFetch to verify before writing.
@@ -150,11 +156,15 @@ If you're [doing X] for the first time, start with the [Simpler Toolkit Item](UR
 ### Checklist before finalising a toolkit item
 
 - [ ] The learner can use it without re-reading the course
+- [ ] Every command, prompt, and step has a plain note on what it does or when to use it (no bare lists)
+- [ ] Example prompts model good prompting: specific, with real design/product vocabulary and the look, behaviour, and edge cases
 - [ ] All examples are realistic (no placeholder content)
 - [ ] Descriptions and "When to use it" lines don't repeat the same information
 - [ ] Code examples match their descriptions
 - [ ] No duplication with other toolkit items or course content
 - [ ] External tool instructions are accurate and current
+- [ ] The name says what it helps the learner do, not its type, and the `type` field is set in the frontmatter
+- [ ] Any images use real served asset paths (no broken placeholders)
 - [ ] It's assigned to the right challenge
 - [ ] The file name follows the `toolkit-[kebab-case-name].md` convention
 - [ ] The course YAML references it at the appropriate step
