@@ -66,7 +66,7 @@ course:
               [**GitHub**](https://github.com/) is the place where **your app's code is stored**. When you build with Lovable, every change is saved to a connected GitHub repository (think of it as the folder that holds all the code for your app). GitHub also keeps a full history of every change, so nothing is ever lost.
 
               The credit-saving idea is simple: a change **you** make outside of Lovable and save costs **no credits**, while asking Lovable to make it does. Once your workspace is set up, most small changes become free.
-            imageUrl: /courses/vibe-coding-github-00/octocat.gif
+            imageUrl: /courses/vibe-coding-github-00/octocat.webp
           subtitle: Your app's code has a home
         - type: text
           title: You've done version control before
@@ -165,7 +165,7 @@ course:
               **Node.js** is what lets your app run on your computer, the same way it runs for your website visitors. It comes with **npm**, a helper that fetches the building blocks your app needs.
 
               Download it from [**nodejs.org**](https://nodejs.org/), run the installer, and click through the steps. That's it, you won't open Node.js directly, it just needs to be there.
-            imageUrl: /courses/vibe-coding-github-00/nodejs.gif
+            imageUrl: /courses/vibe-coding-github-00/nodejs.webp
           subtitle: The engine that runs your app
         - type: text
           title: Meet the terminal
@@ -323,7 +323,7 @@ course:
               Press Enter. The very first time, GitHub needs to check it's really you: a **sign-in window opens in your browser**, click to **authorise**, and Git remembers you from then on, so you only do this once. (It's the same GitHub account you connected Lovable to.)
 
               Git then downloads your whole app into a new folder inside *Projects*. Step into that folder with `cd your-app` (use your app's folder name).
-            imageUrl: /courses/vibe-coding-github-00/terminal-clone.gif
+            imageUrl: /courses/vibe-coding-github-00/terminal-clone.webp
           subtitle: This is called "cloning"
         - type: text
           title: Install the building blocks
@@ -353,7 +353,7 @@ course:
               ```
 
               Let it finish. Then fetch the freshened codebase of your app onto your computer by typing `git pull` in your terminal, while standing in your app's folder (e.g., book-club-pick), and run the install once more.
-            imageUrl: /courses/vibe-coding-github-00/npm-install-fix-dep.gif
+            imageUrl: /courses/vibe-coding-github-00/npm-install-fix-dep.webp
           subtitle: One prompt in Lovable fixes it
         - type: text
           title: Start it up
@@ -479,7 +479,7 @@ course:
               Open **VS Code**, choose **File → Open Folder**, and pick the folder Git created when you cloned your app. You'll see all your app's files listed down the left side.
 
               It can look busy at first. You don't need to understand it all, you only ever touch the small part you came for.
-            imageUrl: /courses/vibe-coding-github-00/vscode-open-folder.gif
+            imageUrl: /courses/vibe-coding-github-00/vscode-open-folder.webp
           subtitle: Your app's code, in an editor
         - type: text
           title: Always start by pulling the latest
@@ -504,7 +504,7 @@ course:
               
               1. The **numbers down the left edge** are **line numbers**: every line of a file has one, like verse numbers in a poem, so any spot can be pointed to exactly (an error or your AI agent will say things like "line 24"). 
               2. If some lines stretch off the screen, turn on **Word Wrap** (in the **View** menu, or press **Alt + Z** / **Option + Z**): long lines fold to fit your window, so nothing hides off to the right.
-            imageUrl: /courses/vibe-coding-github-00/vscode-search.gif
+            imageUrl: /courses/vibe-coding-github-00/vscode-search.webp
           subtitle: Search across all your files
         - type: text
           title: Change it and watch it update
@@ -513,7 +513,7 @@ course:
               Edit the words right there, just like any document. Then save with **Cmd + S** (Mac) or **Ctrl + S** (Windows).
 
               Now glance at your app on `localhost` in the browser. It updates **on its own, instantly**. That's the live preview from `npm run dev` doing its job.
-            imageUrl: /courses/vibe-coding-github-00/vscode-update.gif
+            imageUrl: /courses/vibe-coding-github-00/vscode-update.webp
           subtitle: This is the magic moment
         - type: text
           title: Review your change before sending
@@ -524,7 +524,7 @@ course:
               You might also see a file you never opened, like `routeTree.gen.ts`. Your app rewrites that one automatically as it runs, so it's nothing you did, and you can simply leave it out of your save.
 
               Before sending anything, take a quick look at what you changed: click the file name and a **diff** opens. A diff shows the old version and the new side by side, removed text in red, added text in green. It's how you confirm you changed exactly what you meant.
-            imageUrl: /courses/vibe-coding-github-00/github-diff.gif
+            imageUrl: /courses/vibe-coding-github-00/github-diff.webp
           subtitle: Open Source Control and read the diff
         - type: text
           title: Commit and push your change
@@ -533,7 +533,7 @@ course:
               Happy with it? Hover your file and click the **+** beside it to pick it for this save, type a short note describing your change (the **commit message**), click the **Commit** button, then **Sync** (or push) to send it to GitHub.
 
               A good commit message is short and specific, like `Fix typo on the book suggestion button`. A simple trick if you're not sure what to write: finish the sentence *"This change will..."*
-            imageUrl: /courses/vibe-coding-github-00/vscode-commit.gif
+            imageUrl: /courses/vibe-coding-github-00/vscode-commit.webp
           subtitle: Commit, then push to GitHub
         - type: text
           title: How it reaches your live app
@@ -620,7 +620,7 @@ course:
 
               To pinpoint the icon exactly, click the **selection tool** in the panel's top left corner (a small arrow in a square), then **hover over the icon** on your page. A little label appears right over it, reading something like `svg.lucide.lucide-book-open`, and there's your icon's name: **book-open**. Click the icon and the Elements tab jumps to its line too, if you fancy a closer look.
 
-            imageUrl: /courses/vibe-coding-github-00/inspect-icon.gif
+            imageUrl: /courses/vibe-coding-github-00/inspect-icon.webp
           subtitle: Check it in the browser
         - type: text
           title: Track it down in your code
@@ -640,7 +640,7 @@ course:
               Browse [**lucide.dev**](https://lucide.dev/icons/) to find an icon you like, there are well over a thousand, and you can just search for an item like "book" or "calendar".
 
               The site shows every icon's name in its dashed form, like `book-marked`. To get the version your code needs, click the icon and choose **"See it in action"**: the code sample under the **React** tab shows the **upper camel case** name, `BookMarked`, ready to copy straight into your file.
-            imageUrl: /courses/vibe-coding-github-00/lucide-find-icon.gif
+            imageUrl: /courses/vibe-coding-github-00/lucide-find-icon.webp
           subtitle: lucide.dev is your icon menu
         - type: text
           title: Add it into your code
@@ -653,7 +653,7 @@ course:
               One tidy-up at the end: if no spot uses the old icon any more, remove its name from the `import` line too.
 
               Save, and your app updates instantly in the browser. If you ever see an error naming an icon, that icon is missing from the `import` line, add it there and you're back in business.
-            imageUrl: /courses/vibe-coding-github-00/lucide-swap.gif
+            imageUrl: /courses/vibe-coding-github-00/lucide-swap.webp
           subtitle: Swap only the one you mean
         - type: quiz-question
           title: 'Quiz: Changing an icon'
@@ -723,7 +723,7 @@ course:
               A chat opens beside your code, that's where you and your agent will talk.
 
               One thing to know about the free plan: it includes about **50 chat requests a month** (plus thousands of inline code completions). That's plenty when each request is a clear one, and you're about to learn how to make them count.
-            imageUrl: /courses/vibe-coding-github-00/copilot-open.gif
+            imageUrl: /courses/vibe-coding-github-00/copilot-open.webp
           subtitle: No payment, just your GitHub login
         - type: text
           title: Pick the right mode
@@ -736,7 +736,7 @@ course:
               - **Agent** takes a clear task and runs with it: it finds the right files, makes the changes, fixes its own slips along the way, and shows you everything to review.
 
               The change in this challenge is small and clear, so pick **Agent**. (Keep **Plan** in mind for the day you want something bigger, like identifying the root cause of an annoying bug.)
-            imageUrl: /courses/vibe-coding-github-00/copilot-modes.gif
+            imageUrl: /courses/vibe-coding-github-00/copilot-modes.webp
           subtitle: Ask, Plan, or Agent
         - type: quiz-question
           title: 'Quiz: Which mode?'
@@ -779,7 +779,7 @@ course:
               Click a file and a **diff** opens, the red and green view you know. Use **Keep** to accept or **Undo** to reject, file by file or all at once. And glance at your app in the browser: the change is already showing at your localhost address, so you can judge it live before deciding.
 
               The rule stays the same as ever: **don't keep what you haven't tested.** You're in charge, the agent is the helper.
-            imageUrl: /courses/vibe-coding-github-00/copilot-review.gif
+            imageUrl: /courses/vibe-coding-github-00/copilot-review.webp
           subtitle: Keep or undo, file by file
         - type: text
           title: When it's not right, you're covered
@@ -792,7 +792,7 @@ course:
               **It works, but it's not what you pictured.** Say so in a follow-up: "make the text smaller", "move it below the list". Or click **Undo** and send a sharper request.
 
               **You want out entirely.** Nothing is committed until you commit. The **Source Control** panel lists every file the agent touched, and **Discard Changes** returns any file to exactly how it was. You can experiment without fear.
-            imageUrl: /courses/vibe-coding-github-00/copilot-discard-change.gif
+            imageUrl: /courses/vibe-coding-github-00/copilot-discard-change.webp
           subtitle: Errors, tweaks, and the escape hatch
         - type: quiz-question
           title: 'Quiz: The error overlay'
@@ -884,7 +884,7 @@ course:
               A couple of habits keep things smooth. When you sit back down to work, start your app again with `npm run dev` to see it in your browser (at `localhost:8080`), then **pull** in VS Code to grab anything that changed in Lovable since last time. This pull is the big one, it keeps your copy in step so your work and Lovable's never clash. Then when you're done with your change, **commit and push** in VS Code, and **Publish** in Lovable when you want your website visitors to see it.
 
               And **if a change ever goes wrong**, you can roll back: in Lovable's **chat**, scroll to the version from just before your change and click its **revert** option.
-            imageUrl: /courses/vibe-coding-github-00/lovable-revert.gif
+            imageUrl: /courses/vibe-coding-github-00/lovable-revert.webp
           subtitle: Pull, push, publish, and revert if needed
         - type: quiz-question
           title: 'Quiz: Which tool?'
