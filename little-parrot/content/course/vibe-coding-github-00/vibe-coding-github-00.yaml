@@ -100,7 +100,7 @@ course:
 
               In Lovable, open **Project settings → Git → GitHub** (or use the **+** menu in the chat), click to connect, and authorise the Lovable GitHub app. Lovable then creates a repository for your project and keeps it in sync.
 
-              The steps are in the [**GitHub Setup Guide**](https://littleparrot.app/nest/toolkit/5fcda78e-1847-47fc-bff8-b02beececa14) that comes with this course. Once you're connected, come back here.
+              The steps are in [**Connect Your App to GitHub**](https://littleparrot.app/nest/toolkit/5fcda78e-1847-47fc-bff8-b02beececa14), the guide that comes with this course. Once you're connected, come back here.
             imageUrl: /courses/vibe-coding-github-00/connect-github.webp
           subtitle: A one-time connection
         - type: reflection
@@ -122,7 +122,7 @@ course:
             subDescription: |-
               This was the foundation, and you've laid it well: you know where your app's code lives, why editing it yourself costs nothing, and what an AI agent will soon be able to do right there in your files. Everything from here builds on that.
 
-              **Reusable tool:** the [**GitHub Setup Guide**](https://littleparrot.app/nest/toolkit/5fcda78e-1847-47fc-bff8-b02beececa14) has the full connection steps, in case you need to redo it for another app.
+              **Reusable tool:** [**Connect Your App to GitHub**](https://littleparrot.app/nest/toolkit/5fcda78e-1847-47fc-bff8-b02beececa14) has the full connection steps, in case you need to redo it for another app.
       title: Why Edit on Your Own Computer
       isFree: true
       skills:
@@ -234,7 +234,7 @@ course:
             body: |-
               Let's make sure the tools are ready. Open your terminal: on a **Mac**, open the **Terminal** app; on **Windows**, open **Git Bash**.
 
-              Type `node -v` and press Enter, then `git -v` and press Enter. If each shows a version number (like `v23.11.0`), you're all set. If one says `command not found`, that tool needs reinstalling, the [**Local Setup Guide**](https://littleparrot.app/nest/toolkit/928f6d38-4da5-44a5-b856-4f0479c24beb) covers what to do.
+              Type `node -v` and press Enter, then `git -v` and press Enter. If each shows a version number (like `v23.11.0`), you're all set. If one says `command not found`, that tool needs reinstalling, [**Builder's Workspace Setup**](https://littleparrot.app/nest/toolkit/928f6d38-4da5-44a5-b856-4f0479c24beb) covers what to do.
 
               Once you've got each version number that means you're ready for the next challenge.
             imageUrl: /courses/vibe-coding-github-00/terminal-check.webp
@@ -247,7 +247,7 @@ course:
             subDescription: |-
               That's the hardest setup behind you, and you only ever do it once. Everything from here is the fun part: actually changing your app.
 
-              **Reusable tool:** the [**Local Setup Guide**](https://littleparrot.app/nest/toolkit/928f6d38-4da5-44a5-b856-4f0479c24beb) has the full install steps and the version-check commands, for when you set up a new computer.
+              **Reusable tool:** [**Builder's Workspace Setup**](https://littleparrot.app/nest/toolkit/928f6d38-4da5-44a5-b856-4f0479c24beb) has the full install steps and the version-check commands, for when you set up a new computer.
       title: Set Up Your Workspace
       isFree: false
       skills:
@@ -454,7 +454,7 @@ course:
             subDescription: |-
               This is a real milestone. Most people never see their own app running on their computer, and you just did it.
 
-              **Reusable tool:** the **Run-It-Locally Cheat Sheet** lists the three commands (`git clone`, `npm install --no-save`, `npm run dev`) so you never have to remember them.
+              **Reusable tool:** **Run Your App on Your Computer** lists the three commands (`git clone`, `npm install --no-save`, `npm run dev`) so you never have to remember them.
       title: Run Your App on Your Computer
       isFree: false
       skills:
@@ -591,7 +591,7 @@ course:
             subDescription: |-
               That's the whole loop, and you'll use it for everything: find, edit, save, commit, push. The credit counter didn't budge.
 
-              **Reusable tool:** the **Credit-Free Edit Checklist** captures the loop (find, edit, save, commit, push, publish) so it becomes second nature.
+              **Reusable tool:** **The Credit-Free Edit Loop** lays out every step (find, edit, save, commit, push, publish) so it becomes second nature.
       title: Change Your Website Copy
       isFree: false
       skills:
@@ -839,7 +839,7 @@ course:
             subDescription: |-
               Describe, review, keep, and when something breaks, hand the error straight back to the agent. With that loop and the Source Control escape hatch, there's no situation you can't work your way out of.
 
-              **Reusable tool:** the **Copilot Starter Prompts** give you a set of example requests for common changes, each written with the what-where-example recipe, ready to adapt to your own app.
+              **Reusable tool:** **Asking Copilot for Changes** gives you a set of example requests for common changes, each written with the what-where-example recipe, ready to adapt to your own app.
       title: Make a Bigger Change with Copilot
       isFree: false
       skills:
@@ -870,6 +870,7 @@ course:
 
               **Behind the scenes**, the part that saves data, handles logins, sends emails, or takes payments, lives in the **backend that Lovable manages for you** (it's called **Lovable Cloud**). Your local copy talks to that backend but can't safely change it, so those changes belong **in Lovable**. Brand-new features usually need backend work, which is why they belong there too.
 
+              Want this on a single page? **Which Tool for Which Change** in the Toolkit captures the whole rule, ready to glance at whenever you're deciding.
           subtitle: What people see, or behind the scenes?
         - type: text
           title: Not sure which side it's on? Ask Lovable

@@ -34,7 +34,7 @@ The credit-saving focus is unchanged. The method moved from the GitHub web edito
 - What you'll set up and walk away with (concrete, jargon-free, exciting).
 - The credit-saving idea: a change you make and save costs no credits; asking Lovable's AI does.
 - What GitHub is and why your code lives there; version control as a familiar idea (Google Docs/Office history; some people write whole books this way).
-- Connect Lovable to GitHub (one-time; screen-by-screen in the **GitHub Setup Guide**).
+- Connect Lovable to GitHub (one-time; screen-by-screen in **Connect Your App to GitHub**).
 - Quiz: where the credit savings actually come from.
 - Reflection: what small thing will you change first?
 
@@ -46,7 +46,7 @@ The credit-saving focus is unchanged. The method moved from the GitHub web edito
 - Confidence check: `node -v` and `git -v` in the terminal.
 - Quiz: which tool does what.
 - Exercise: confirm the install by pasting `node -v` output.
-- Full click-by-click lives in the **Local Setup Guide**.
+- Full click-by-click lives in **Builder's Workspace Setup**.
 
 ### Challenge 3: Run Your App on Your Computer
 **Clone your app, install its pieces, and run it locally.**
@@ -118,12 +118,12 @@ Each challenge follows Dalmie and the Book Club Organiser, and ends with the lea
 
 Setup-heavy and quick-reference material is offloaded here so challenges stay focused on skills and decisions (referenced by name in the course; create as separate toolkit items):
 
-- **GitHub Setup Guide:** connect a Lovable project to GitHub, screen-by-screen.
-- **Local Setup Guide:** install VS Code, Node.js, and Git for Mac and Windows (incl. Git Bash, and Git Credential Manager on Mac for the browser GitHub sign-in), with the version-check commands.
-- **Run-It-Locally Cheat Sheet:** the three commands (`git clone`, `npm install --no-save`, `npm run dev`).
-- **Credit-Free Edit Checklist:** the editing loop (find, edit, save, commit, push, publish).
-- **Copilot Starter Prompts:** ready-made request shapes for common changes.
-- **Edit-Locally vs Prompt-Lovable Decision Checklist:** when to use VS Code, Copilot, or Lovable (frontend locally, backend in Lovable).
+- **Connect Your App to GitHub** (Guide): connect a Lovable project to GitHub, screen-by-screen.
+- **Builder's Workspace Setup** (Guide): install VS Code, Node.js, and Git for Mac and Windows (incl. Git Bash, and Git Credential Manager on Mac for the browser GitHub sign-in), with the version-check commands.
+- **Run Your App on Your Computer** (Cheat sheet): the three commands (`git clone`, `npm install --no-save`, `npm run dev`).
+- **The Credit-Free Edit Loop** (Checklist): the editing loop (find, edit, save, commit, push, publish).
+- **Asking Copilot for Changes** (Prompt library): ready-made requests for common changes.
+- **Which Tool for Which Change** (Cheat sheet): when to use VS Code, Copilot, or Lovable (frontend locally, backend in Lovable).
 
 ---
 
