@@ -243,7 +243,7 @@ course:
           title: "Your workspace is built! \U0001F6E0️"
           content:
             description: VS Code, Node.js, and Git are installed and ready.
-            nextModule: "**Next challenge:** The big moment, you'll bring your app onto your computer and watch it run. Seeing your own app come to life locally is truly a thrill."
+            nextModule: "**Next challenge:** The big moment, you'll bring your app's code onto your computer and watch it run. Seeing your own app come to life on your screen is truly a thrill."
             subDescription: |-
               That's the hardest setup behind you, and you only ever do it once. Everything from here is the fun part: actually changing your app.
 
@@ -262,9 +262,9 @@ course:
           title: Bring your app to life locally
           content:
             body: |-
-              Here's the moment your workspace pays off: you'll copy your app onto your computer and run it, so you can see every change instantly.
+              Here's the moment your workspace pays off: you'll copy your app's code onto your computer and run it, so you can see every change instantly.
 
-              The plan has three parts: find your place in the terminal, fetch your app's link from GitHub, then bring your app to your computer with a few short commands.
+              The plan has three parts: find your place in the terminal, fetch your app's link from GitHub, then bring your app's code to your computer with a few short commands.
           subtitle: From GitHub to your computer
         - type: text
           title: Where are you standing?
@@ -296,7 +296,7 @@ course:
             imageUrl: /courses/vibe-coding-github-00/github-clone-url.webp
           subtitle: Copy it from GitHub
         - type: text
-          title: Copy it onto your computer
+          title: Copy the code onto your computer
           content:
             body: |-
               From your terminal, make a tidy home for your app. Type this command, then press Enter:
@@ -322,7 +322,7 @@ course:
 
               Press Enter. The very first time, GitHub needs to check it's really you: a **sign-in window opens in your browser**, click to **authorise**, and Git remembers you from then on, so you only do this once. (It's the same GitHub account you connected Lovable to.)
 
-              Git then downloads your whole app into a new folder inside *Projects*. Step into that folder with `cd your-app` (use your app's folder name).
+              Git then downloads your whole app's code into a new folder inside *Projects*. Step into that folder with `cd your-app` (use your app's folder name).
             imageUrl: /courses/vibe-coding-github-00/terminal-clone.webp
           subtitle: This is called "cloning"
         - type: text
@@ -352,14 +352,14 @@ course:
               Check if all my dependencies are up-to-date. If not, update them.
               ```
 
-              Let it finish. Then fetch the freshened codebase of your app onto your computer by typing `git pull` in your terminal, while standing in your app's folder (e.g., book-club-pick), and run the install once more.
+              Let it finish. Then fetch the freshened code of your app onto your computer by typing `git pull` in your terminal, while standing in your app's folder (e.g., book-club-pick), and run the install once more.
             imageUrl: /courses/vibe-coding-github-00/npm-install-fix-dep.webp
           subtitle: One prompt in Lovable fixes it
         - type: text
           title: Start it up
           content:
             body: |-
-              So far, your app is a folder of files sitting on your computer. To use it, those files need to be **run**: brought to life so the app responds when you click around.
+              So far, your app's code is a folder of files sitting on your computer. To use it, those files need to be **run**: brought to life so the app responds when you click around.
 
               Normally, Lovable's computers (servers) do the running, and your visitors reach the app over the internet. Now your own computer will run a **private copy**, just for you. Type this in your terminal and press Enter:
 
@@ -461,7 +461,7 @@ course:
         - Cloning
         - Terminal
         - Running Locally
-      description: Clone your app, install its pieces, and run it on your own computer with three commands.
+      description: Clone your app's code, install its pieces, and run it on your own computer with three commands.
       completionTime: 14:00
     - steps:
         - type: text
