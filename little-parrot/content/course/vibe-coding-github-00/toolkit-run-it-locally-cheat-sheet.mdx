@@ -14,6 +14,8 @@ Run everything from your terminal: **Terminal** on Mac, **Git Bash** on Windows.
 
 Do these once. They set the app up on your computer.
 
+![The git clone command downloading the app in the terminal](/courses/vibe-coding-github-00/terminal-clone.webp)
+
 **1. Make a folder to keep the code of your apps in**
 ```
 mkdir Projects
@@ -32,15 +34,20 @@ git clone <your repository link>
 ```
 `git clone` downloads the code of your whole app into a new folder. Replace `<your repository link>` with the **HTTPS** address from GitHub's green **Code** button (it ends in `.git`). The first time, a **GitHub sign-in** opens in your browser; sign in once and Git remembers you.
 
-![The git clone command downloading the app in the terminal](/courses/vibe-coding-github-00/terminal-clone.webp)
+**4. See if the folder with your app's code is created**
+```
+ls
+```
+`ls` lists the contents (all files and folders) of your current folder. You should see your app's folder listed.
 
-**4. Step into your app's new folder**
+
+**5. Step into your app's folder**
 ```
 cd <your-app-folder>
 ```
 The same `cd` as before, now moving into the folder `git clone` just created (it has your app's name).
 
-**5. Fetch the building blocks your app needs**
+**6. Fetch the building blocks your app needs**
 ```
 npm install --no-save
 ```
@@ -48,17 +55,17 @@ npm install --no-save
 
 ![npm install fetching the building blocks in the terminal](/courses/vibe-coding-github-00/npm-install-windows.webp)
 
-**6. Start your app**
+**7. Start your app**
 ```
 npm run dev
 ```
-This runs your app on your own computer. When it's ready, the terminal prints a **local web address**. It's usually `http://localhost:8080`, but check the one your terminal shows, as it can differ. Open that address in your browser. `localhost` means "this computer", so this copy is yours alone. Leave the terminal open while you work; it keeps the app running.
+This runs your app on your own computer. When it's ready, the terminal prints a **local web address**. It's usually `http://localhost:8080`, but check the one your terminal shows, as it can differ. Open that address in your browser. `localhost` means "this computer", so only you can see this copy. Leave the terminal open while you work; it keeps the app running.
 
 ![npm run dev running, with the local web address to open](/courses/vibe-coding-github-00/npm-run-dev-windows.webp)
 
-### Next time: picking the app back up
+### Next time: picking up working on the app
 
-No cloning or installing again, those were one-time jobs. To carry on working:
+No cloning or installing again, those were one-time jobs. Your app's code is already on your computer. To carry on working:
 
 **1. Step back into your app's folder**
 ```
@@ -66,19 +73,22 @@ cd Projects/<your-app-folder>
 ```
 This jumps straight into your app's folder from your home folder.
 
-**2. Start it again**
+**2. Start up your app again**
 ```
 npm run dev
 ```
-Open the local web address your terminal prints (again, usually `http://localhost:8080`, but read the one it shows you). Before you edit, **pull** the latest first (in VS Code, **Source Control → ... → Pull**, or `git pull` in the terminal) so you start from the newest version and avoid clashes.
+Open the local web address your terminal prints (again, usually `http://localhost:8080`, but read the one it shows you). Before you edit, **pull** the latest version of your codebase from GitHub first (in VS Code, **Source Control → ... → Pull**, or `git pull` in the terminal) so you start from the newest version and avoid clashes.
+
+![pulling code changes in VS Code](/courses/vibe-coding-github-00/vscode-pull.webp)
 
 ### Stopping the app
 
-Click the terminal and press **Ctrl + C** (on a Mac too, not Cmd). That stops the running app. You can also just close the window.
+Click the terminal and press **Ctrl + C** (on a Mac too, not Cmd). That stops the running app in your browser. You can also just close the window.
 
-### When a command shows an error
+### ⚠️ When a command shows an error
 
-**`Could not resolve dependency` / `Fix the upstream dependency conflict`**
+#### ⚠ Could not resolve dependency / Fix the upstream dependency conflict
+
 The app's ingredient list is out of date. In **Lovable**, send this prompt:
 ```
 Check if all my dependencies are up-to-date. If not, update them.
@@ -87,21 +97,25 @@ Then run `git pull` (this fetches the freshened code from GitHub) and `npm insta
 
 ![Updating dependencies in Lovable, then pulling and reinstalling](/courses/vibe-coding-github-00/npm-install-fix-dep.webp)
 
-**`The following dependencies are imported but could not be resolved`**
-Lovable added new building blocks since your last install. Fetch them and restart:
+#### ⚠ The following dependencies are imported but could not be resolved
+
+Lovable added new building blocks since your last install. Fetch them with:
 ```
 npm install --no-save
 ```
+
+Then restart your app in your browser with:
 ```
 npm run dev
 ```
 
 ![The missing-dependencies error in the terminal](/courses/vibe-coding-github-00/npm-missing-deps.webp)
 
-**Windows: a missing `.dll` or `Visual C++` error**
+#### ⚠  Windows: a missing `.dll` or `Visual C++` error
+
 Your app needs Microsoft's free Visual C++ runtime. Install the **Microsoft Visual C++ Redistributable (x64)** from [Microsoft's download page](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-supported-redistributable-version), then reopen your terminal and run `npm run dev` again.
 
 ![The Microsoft Visual C++ Redistributable download page](/courses/vibe-coding-github-00/install-cpp-windows.webp)
 
-**`command not found`**
+#### ⚠ Command not found
 The terminal can't find a tool yet. Close the terminal and open a fresh one (it picks up newly installed tools). If it persists, reinstall the tool it named.
