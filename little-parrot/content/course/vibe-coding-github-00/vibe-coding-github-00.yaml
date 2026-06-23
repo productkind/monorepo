@@ -7,6 +7,7 @@ course:
     - Make small changes to your app yourself, without spending Lovable credits
     - Set up a workspace on your own computer that works for every app, and any document, you'll build with AI
     - Run your app on your own computer and watch every change appear the moment you make it
+    - Save your changes to GitHub and publish them to your live app, with a version history you can roll back any time
     - Make bigger changes by describing them to GitHub Copilot, then reviewing its work
     - 'Pick the cheapest, easiest route for any change: yourself, your AI agent, or Lovable'
   challenges:
@@ -928,4 +929,4 @@ course:
   titleSplit:
     - Save Lovable Credits
     - Edit Your App in VS Code
-  description: Set up a builder's workspace on your own computer, then change your Lovable app's copy and icons, and bigger things with an AI agent, all without spending Lovable credits. You'll run your app locally, edit with confidence, and learn the real setup that builders and AI agents use.
+  description: Set up a builder's workspace on your own computer, then change your Lovable app's copy and icons, and bigger things with an AI agent, all without spending Lovable credits. You'll run your app on your own computer, save your changes back to your live app, and learn the real setup that builders and AI agents use.
