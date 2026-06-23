@@ -66,27 +66,29 @@ I've spent years explaining the how of my work and wondering why it left people 
 
 The most useful thing I heard this week came from someone who isn't in product at all. Brian Cox, the physicist, was asked about AI in education.
 
-He said using AI to learn is fine. The risk is using it to answer questions you should be sitting with, so you never internalise anything. The goal is to deepen your own understanding rather than to collect the answer. He uses AI as a patient tutor, one with no ego and no impatience, to explore an idea from several angles until he understands it himself.
+He said using AI to learn is fine. The risk is using it to answer questions you should be sitting with, so you never internalise anything. The goal is to deepen your own understanding rather than to collect the answer. He suggested to use AI as a patient tutor, one with no ego and no impatience, to explore an idea from several angles until you understands it yourself.
 
 He also said being corrected is how you make progress. He once got corrected on live BBC radio by another physicist. They went to dinner afterwards and became friends.
 
-I notice I sometimes reach for AI to get past a problem rather than to understand it. The two feel similar in the moment and produce very different people over a year.
+When you work in product you get corrected all the time. You ship a feature that nobody uses. You assume your users will understand a new flow in your app, only to realise during a usability test that they are completely lost. You celebrate that you solved your user's problem, but then you learn that they didn't have that exact problem to start with.
 
-So this is what I'm trying: when I ask AI to explain something, I ask it to show me how it got there, then I put it in my own words before moving on. If I can't, I didn't understand it yet.
+So I'm trying to adopt a learning mindset where I don't feel like a loser every time the outcome is different than what I anticipated. After all, this is how we make progress.
 
 ---
 
-## Post 6 — Christian Idiodi: when did you last have a great day at work?
+## Post 6 — Christian Idiodi: when did you last have a great day at work? – POSTED
 
-Christian Idiodi closed his mtpcon talk with a simple question: when was the last time you had a great day at work?
+Christian Idiodi closed his #mtpcon London talk with a question: when was the last time you had a great day at work?
 
-He meant the kind of day you'd happily relive. For most product people, he said, that memory is a release that delighted someone, or a problem you cracked together that changed how things worked. It's the last time you felt like a creator, rather than someone managing a backlog. That, he said, is where the discipline is heading: you become "the conductor of capability, not the author of backlogs".
+He meant the kind of day you'd happily relive. For most product people that memory might be a release that delighted a user, or a problem you cracked as a team that resulted in a better solution. 
 
-It meant something different to me, because I've already answered that question by leaving. A while ago I left a corporate role to build something of my own, just the two of us. Part of the reason was that the great days had become rare, buried under process and meetings about meetings.
+It might be the last time you felt like a creator, rather than someone managing a backlog. Christian said that is where the product management discipline is heading: you become "the conductor of capability, not the author of backlogs".
+
+It meant something different to me, because I've already answered that question by leaving. A while ago I left a corporate role to build something of my own, in a two-person setup. Part of the reason was that the great days had become rare, buried under process and meetings about requirements.
 
 I don't think you have to quit to get those days back. But the question works as a diagnostic. Whatever day you pictured, look at what made it good: you were probably making something, or solving a real problem alongside other people. That is the part of your week worth protecting, and it hints at what to hand off or drop. If you can't remember a great day at all, that is worth taking seriously too.
 
-When was yours?
+When was the last time you had a great day at work?
 
 ---
 
