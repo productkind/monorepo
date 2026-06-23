@@ -1,7 +1,7 @@
 course:
   id: 0c2b1b82-d451-4499-b152-c58d8f58ff2b
   cover: /courses/vibe-coding-github-00/cover.gif
-  title: 'Save Lovable Credits: Edit Your App in VS Code'
+  title: 'Save Lovable Credits: Edit Your App Like a Developer'
   note: ''
   learningOutcomes:
     - Make small changes to your app yourself, without spending Lovable credits
@@ -928,5 +928,5 @@ course:
       completionTime: 9:00
   titleSplit:
     - Save Lovable Credits
-    - Edit Your App in VS Code
-  description: Set up a builder's workspace on your own computer, then change your Lovable app's copy and icons, and bigger things with an AI agent, all without spending Lovable credits. You'll run your app on your own computer, save your changes back to your live app, and learn the real setup that builders and AI agents use.
+    - Edit Your App Like a Developer
+  description: Set up a builder's workspace on your own computer, then make change to your Lovable app like a developer would, and use an AI agent for bigger things, all without spending Lovable credits. You'll run your app on your own computer, send your changes back to your live app, and learn the real setup that builders and AI agents use.
