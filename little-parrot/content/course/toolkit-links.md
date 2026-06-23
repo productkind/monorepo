@@ -50,6 +50,10 @@ Use these links when referencing toolkit items in course content.
 |-------------|-----|
 | Connect Your App to GitHub | `https://littleparrot.app/nest/toolkit/5fcda78e-1847-47fc-bff8-b02beececa14` |
 | Builder's Workspace Setup | `https://littleparrot.app/nest/toolkit/928f6d38-4da5-44a5-b856-4f0479c24beb` |
+| Run Your App on Your Computer | `https://littleparrot.app/nest/toolkit/6cdb24bd-b8c1-4d3b-8154-bbfd703da608` |
+| The Credit-Free Edit Loop | `https://littleparrot.app/nest/toolkit/38d10b44-0e16-4460-8f59-ba8e74f7ffb7` |
+| Asking Copilot for Changes | `https://littleparrot.app/nest/toolkit/343b4217-d4bc-4163-bc50-020d8e2ad772` |
+| Which Tool for Which Change | `https://littleparrot.app/nest/toolkit/8ce77728-a3c5-4c45-af70-b621f35a7bd0` |
 
 ## Notes
 

@@ -454,7 +454,7 @@ course:
             subDescription: |-
               This is a real milestone. Most people never see their own app running on their computer, and you just did it.
 
-              **Reusable tool:** **Run Your App on Your Computer** lists the three commands (`git clone`, `npm install --no-save`, `npm run dev`) so you never have to remember them.
+              **Reusable tool:** [**Run Your App on Your Computer**](https://littleparrot.app/nest/toolkit/6cdb24bd-b8c1-4d3b-8154-bbfd703da608) lists the three commands (`git clone`, `npm install --no-save`, `npm run dev`) so you never have to remember them.
       title: Run Your App on Your Computer
       isFree: false
       skills:
@@ -591,7 +591,7 @@ course:
             subDescription: |-
               That's the whole loop, and you'll use it for everything: find, edit, save, commit, push. The credit counter didn't budge.
 
-              **Reusable tool:** **The Credit-Free Edit Loop** lays out every step (find, edit, save, commit, push, publish) so it becomes second nature.
+              **Reusable tool:** [**The Credit-Free Edit Loop**](https://littleparrot.app/nest/toolkit/38d10b44-0e16-4460-8f59-ba8e74f7ffb7) lays out every step (find, edit, save, commit, push, publish) so it becomes second nature.
       title: Change Your Website Copy
       isFree: false
       skills:
@@ -839,7 +839,7 @@ course:
             subDescription: |-
               Describe, review, keep, and when something breaks, hand the error straight back to the agent. With that loop and the Source Control escape hatch, there's no situation you can't work your way out of.
 
-              **Reusable tool:** **Asking Copilot for Changes** gives you a set of example requests for common changes, each written with the what-where-example recipe, ready to adapt to your own app.
+              **Reusable tool:** [**Asking Copilot for Changes**](https://littleparrot.app/nest/toolkit/343b4217-d4bc-4163-bc50-020d8e2ad772) gives you a set of example requests for common changes, each written with the what-where-example recipe, ready to adapt to your own app.
       title: Make a Bigger Change with Copilot
       isFree: false
       skills:
@@ -870,7 +870,7 @@ course:
 
               **Behind the scenes**, the part that saves data, handles logins, sends emails, or takes payments, lives in the **backend that Lovable manages for you** (it's called **Lovable Cloud**). Your local copy talks to that backend but can't safely change it, so those changes belong **in Lovable**. Brand-new features usually need backend work, which is why they belong there too.
 
-              Want this on a single page? **Which Tool for Which Change** in the Toolkit captures the whole rule, ready to glance at whenever you're deciding.
+              Want this on a single page? [**Which Tool for Which Change**](https://littleparrot.app/nest/toolkit/8ce77728-a3c5-4c45-af70-b621f35a7bd0) in the Toolkit captures the whole rule, ready to glance at whenever you're deciding.
           subtitle: What people see, or behind the scenes?
         - type: text
           title: Not sure which side it's on? Ask Lovable

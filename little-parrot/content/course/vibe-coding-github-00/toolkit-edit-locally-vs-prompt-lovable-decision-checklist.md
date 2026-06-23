@@ -4,7 +4,7 @@ type: "Cheat sheet"
 ---
 ## Which Tool for Which Change
 
-This whole course's workflow on one page: how to pick the cheapest, easiest route for any change, and keep everything in sync. Glance at it whenever you're about to make a change and aren't sure where it belongs.
+This whole course's workflow on one page: how to pick the cheapest, easiest route for any change you want to make in your app, and keep everything in sync. Glance at it whenever you're about to make a change and aren't sure where it belongs.
 
 ### Start with one question
 **Does the change touch what people *see*, or what happens *behind the scenes*?**
