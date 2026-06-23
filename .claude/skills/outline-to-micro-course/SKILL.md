@@ -308,6 +308,7 @@ After generating the full course, do a self-review pass before presenting it. Ch
 - [ ] Does each quiz's `correctAnswer` index still point to the right option? (Re-verify after any option reordering: reordering options without updating the index silently marks the wrong answer.)
 - [ ] Has every hands-on procedure been traced end-to-end on a real project (would it work if the learner did exactly what's written and nothing else)?
 - [ ] Is every text step short enough to read without scrolling? If it has 3+ concepts, is it split?
+- [ ] Where a step was shortened, was it done by splitting it into two or cutting genuine fluff, never by compressing away the explanations that tell the learner what is happening and why? (The reassuring "what's going on here" detail is the value, not filler.)
 - [ ] Is every text step styled for scanning (bold key concept, italic UI labels/examples), without over-bolding?
 - [ ] Do the comics set up the problem from the learner's pain, without bashing the tool?
 - [ ] Do the description, learning outcomes, and course-end recap avoid claiming skills the course doesn't actually teach?

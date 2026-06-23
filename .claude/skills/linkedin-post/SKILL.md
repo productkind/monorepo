@@ -9,6 +9,16 @@ description: Apply this structure to LinkedIn posts or Substack Notes.
 
 Non-technical women learning AI-assisted development.
 
+## Every Post Must Earn Its Read
+
+A post that only reports an observation or recounts an event gives the reader no reason to have read it. Before drafting, name the one thing the reader walks away with. It can be any of these, but it must be at least one:
+
+- a reframe or mental model they can reuse (e.g. "a result you watch is not a method you can repeat")
+- a technique or habit they can copy (e.g. "put a value number next to every output number")
+- a genuine reassurance grounded in a reason (e.g. "if it leaves you feeling behind, the missing piece is the how, not you") — emotional value counts, as long as the reader understands *why*
+
+If the draft only states something true and stops, it is not finished. Reporting what a speaker said is the setup, not the payoff. The payoff is what the reader now understands differently or can do.
+
 ## Channel Guidelines
 
 ### LinkedIn Posts
@@ -117,10 +127,11 @@ Open on a real, specific moment: something that happened, a frustration, an hone
 
 Before publishing, verify:
 
-1. Does the opening start on a real, specific moment, not a teaser or a promise of value?
-2. Is there a specific example, named source, tool, or scenario?
-3. Does the ending give one concrete thing to try, rather than summarise or bait comments?
-4. Would I trust this if someone else wrote it?
-5. Am I describing experiences or listing features?
-6. Is any information repeated across paragraphs?
-7. Have I run it against the personal-tone-of-voice banned-language list (no em dashes, no hype, no "not X but Y")?
+1. Can I name the one thing the reader walks away with (a reframe, a technique, or a reasoned reassurance)? If it only reports an observation, it is not finished.
+2. Does the opening start on a real, specific moment, not a teaser or a promise of value?
+3. Is there a specific example, named source, tool, or scenario?
+4. Does the ending give one concrete thing to try, rather than summarise or bait comments?
+5. Would I trust this if someone else wrote it?
+6. Am I describing experiences or listing features?
+7. Is any information repeated across paragraphs?
+8. Have I run it against the personal-tone-of-voice banned-language list (no em dashes, no hype, no "not X but Y")?
