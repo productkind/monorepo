@@ -19,15 +19,19 @@ A good toolkit item is something the learner opens *while they're working*, not 
 
 ### Types of toolkit items
 
-| Type | When to create it | Example |
-|------|-------------------|---------|
-| **Template** | When the course teaches a structure or formula the learner will reuse | First Prompt Template, Project Knowledge Starter Template |
-| **Checklist** | When the course covers a multi-step process the learner will repeat | Pre-Publish Checklist, Production-Ready Launch Checklist |
-| **Prompt Library** | When the course teaches prompting patterns with copy-paste prompts | Prompts for Common Features, Legal Pages Prompt Library |
-| **Setup Guide** | When the course walks through configuring a tool step by step | Meta Tags and Favicon Setup Guide |
-| **Reference / Cheat Sheet** | When the course introduces vocabulary or concepts the learner will look up later | Software Vocabulary Cheat Sheet, Visual Component Guide |
-| **Question Bank / Script** | When the course teaches how to gather information from users | First User Feedback Script, User Feedback Question Bank |
-| **Interactive / Hands-on** | When the learner benefits from trying, exploring, or interacting with something directly inside the toolkit item | Visual Component Guide (interactive shadcn components the learner can click and explore) |
+The database tags each toolkit item with a **type**, set in the frontmatter (see File structure below). There are five, told apart by how the learner uses them:
+
+| Type | How the learner uses it | When to create it | Example |
+|------|-------------------------|-------------------|---------|
+| **Template** | Fill in with their own details | The course teaches a structure or formula the learner reuses | First Prompt Template, Problem Statement Template |
+| **Guide** | Follow the steps to set something up | The course walks through configuring a tool step by step | Builder's Workspace Setup, Connect Your App to GitHub |
+| **Prompt library** | Paste into their AI app builder | The course teaches prompting patterns with copy-paste prompts | Asking Copilot for Changes, Prompts for Common Features |
+| **Checklist** | Work through before or during a task | The course covers a multi-step process the learner repeats | The Credit-Free Edit Loop, Pre-Publish Checklist |
+| **Cheat sheet** | Look up when they need it | The course introduces commands, vocabulary, or decisions the learner looks up later | Run Your App on Your Computer, Software Vocabulary Cheat Sheet |
+
+**Name the item for what it helps the learner do, not its type.** The type is a separate field, so the name doesn't need to repeat it: "Builder's Workspace Setup" beats "Local Setup Guide", and "Run Your App on Your Computer" beats "Run-It-Locally Cheat Sheet".
+
+(An **interactive** item, built with live components, is a format choice rather than a type, use `.mdx` and see Interactive toolkit items below. It still carries one of the five types above.)
 
 ### How to identify toolkit items from a course
 
@@ -38,7 +42,7 @@ Read through the full course and look for:
 3. **Prompts shown in the course** that the learner will want to copy later. Group related ones into a prompt library.
 4. **Vocabulary or concepts** introduced across multiple challenges. Collect them into a cheat sheet.
 5. **Advice on talking to users or gathering feedback.** Structure this into scripts or question banks.
-6. **Step-by-step tool configurations** (setting up analytics, connecting a domain). These become setup guides.
+6. **Step-by-step tool configurations** (setting up analytics, connecting a domain). These become guides.
 
 ### Assigning toolkit items to challenges
 
@@ -127,6 +131,7 @@ Each toolkit item starts with the challenge it belongs to, and a heading:
 ```markdown
 ---
 challenge: "[Challenge Number] - [Challenge Title]"
+type: "[Template | Guide | Prompt library | Checklist | Cheat sheet]"
 ---
 ## [Toolkit Item Name]
 

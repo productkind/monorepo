@@ -48,8 +48,8 @@ Use these links when referencing toolkit items in course content.
 
 | Toolkit Item | URL |
 |-------------|-----|
-| GitHub Setup Guide | `https://littleparrot.app/nest/toolkit/5fcda78e-1847-47fc-bff8-b02beececa14` |
-| Local Setup Guide | `https://littleparrot.app/nest/toolkit/928f6d38-4da5-44a5-b856-4f0479c24beb` |
+| Connect Your App to GitHub | `https://littleparrot.app/nest/toolkit/5fcda78e-1847-47fc-bff8-b02beececa14` |
+| Builder's Workspace Setup | `https://littleparrot.app/nest/toolkit/928f6d38-4da5-44a5-b856-4f0479c24beb` |
 
 ## Notes
 
