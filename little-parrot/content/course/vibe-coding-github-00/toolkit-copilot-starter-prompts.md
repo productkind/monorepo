@@ -4,7 +4,7 @@ type: "Prompt library"
 ---
 ## Asking Copilot for Changes
 
-Ready-to-adapt requests for GitHub Copilot, grouped by the moment you'd reach for them. Each one is written to model a good prompt, and comes with a short note on when to use it. Send them in **Agent** mode (or **Ask** mode for the understanding ones), and swap in your own app's details.
+Ready-to-adapt prompts for GitHub Copilot, grouped by the moment you'd reach for them. Each one is written to model a good prompt, and comes with a short note on when to use it. Send them in **Agent** mode (or **Ask** mode for the understanding ones), and swap in your own app's details.
 
 The examples use Dalmie's Book Club Organiser; change the headings, labels, and wording to match your own app.
 
@@ -16,7 +16,7 @@ The more specific you are, the closer Copilot's first attempt. Beyond what and w
 - **the behaviour:** what it should do, and when ("update automatically as books are added")
 - **the edge cases:** the empty list, a single item, a very long title
 
-With about 50 requests a month on the free plan, one detailed ask beats three vague ones.
+With about 50 requests a month on the Copilot free plan, you'll be able to change a lot.
 
 ### Adding something to a page
 
