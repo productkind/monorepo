@@ -8,15 +8,15 @@ Suggested order: lead with Post 1 as the anchor, then space the rest over 2–3 
 
 ## Post 1 — The hype-vs-practical gap (anchor post)
 
-I spent last week at two product conferences, mtpcon in London and Productized in Lisbon. Almost every talk had a moment where the speaker showed how AI had made them faster: more pull requests, more products shipped, weeks of work done in an afternoon.
+I spent last week at two product conferences, mtpcon in London and Productized in Lisbon. Many talks had a part where the speaker showed how AI had made them faster: more pull requests, more products shipped, weeks of work done in an afternoon.
 
 Not one of them showed how. There were no practical steps I could take home and try on Monday.
 
-Then I'd turn to the person sitting next to me and hear the opposite story. Their company had told them to "use AI", but given no guidance on what for. So using AI had become another task on the list. Use it for something, anything, just to be seen using it.
+During the breaks I chatted with many people, and I repeatedly heard the opposite story. Their company had told them to "use AI", but given no guidance on what for. So using AI had become another task on the list. Use it for something, anything, just to be seen using it.
 
-That gap is the whole problem. A productivity win you can't reproduce is a highlight reel. And telling a team to "use AI" with no worked example is pressure dressed up as direction.
+That gap is the whole problem, and it points to something useful: a result you watch is not a method you can repeat. When someone shows what AI helped them produce but never how, there is nothing in it to learn yet. Telling a team to "use AI" with no worked example is pressure dressed up as direction. And if that leaves you feeling behind, it helps to remember why: you have been shown results to admire, but never how they were reached. The missing piece is the method, not your ability.
 
-If you lead a team and you want them using AI, show them one real thing you did with it this week. The prompt, the steps, the bit that went wrong. One concrete example does more than any mandate.
+If you lead a team and you want them using AI, show them one real thing you did with it this week. The prompt, the steps, the skill that didn't quite produce the result you aimed for. One concrete example does more than any mandate.
 
 ---
 
@@ -30,7 +30,7 @@ Rich Mironov put it more bluntly in his talk: code only becomes product when som
 
 It's an easy trap, because output is satisfying to count and value is slow to measure. I've fallen into it myself, mistaking a busy roadmap for a useful one.
 
-So before celebrating how much faster your team ships, it's worth asking the harder question: of everything we shipped last quarter, what did people use, and what did we build that no one touched?
+So before celebrating how much faster your team ships, put a value number next to every output number you are proud of. If you are about to cheer ten features shipped, first ask how many of your last ten are used every week. It is a harder number to find, and a more honest one.
 
 ---
 
@@ -84,7 +84,7 @@ He meant the kind of day you'd happily relive. For most product people, he said,
 
 It meant something different to me, because I've already answered that question by leaving. A while ago I left a corporate role to build something of my own, just the two of us. Part of the reason was that the great days had become rare, buried under process and meetings about meetings.
 
-I don't think you have to quit to get those days back. But the question is worth sitting with honestly. If you can't remember your last great day at work, that's information worth taking seriously. It's telling you something about where your time is going.
+I don't think you have to quit to get those days back. But the question works as a diagnostic. Whatever day you pictured, look at what made it good: you were probably making something, or solving a real problem alongside other people. That is the part of your week worth protecting, and it hints at what to hand off or drop. If you can't remember a great day at all, that is worth taking seriously too.
 
 When was yours?
 

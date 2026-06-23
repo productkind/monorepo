@@ -182,18 +182,38 @@ course:
           title: Git, the version-control engine
           content:
             body: |-
-              **Git** is the engine behind the version control. It's what saves your changes and sends them to GitHub.
+              **Git** is the engine behind version control. It's what saves your changes and sends them to GitHub.
 
-              On a **Mac**, you install it from the terminal you just opened. It's a three-step job:
+              Installing it works a little differently on Mac and Windows, so the next two steps split by computer. Follow the one for your machine, and skip the other.
+          subtitle: What talks to GitHub
+        - type: text
+          title: Install Git on a Mac
+          content:
+            body: |-
+              *Mac only, Windows users can skip to the next step.*
+
+              On a **Mac**, you install Git from the terminal you just opened, in three steps:
 
               1. Install [**Homebrew**](https://brew.sh/), a free helper that installs builder's tools for you: copy its one-line install command from [brew.sh](https://brew.sh/), paste it into the Terminal, and press Enter.
               2. When it finishes, type `brew install git`, press Enter, and Git is on your computer.
-              3. Finally, type `brew install --cask git-credential-manager`, press Enter. This is the helper that lets you sign into GitHub through a simple browser window the first time you fetch your app (on Windows it comes bundled with Git). It saves you wrestling with passwords and tokens later on.
+              3. Finally, type `brew install --cask git-credential-manager`, press Enter. This is the helper that lets you sign into GitHub through a simple browser window the first time you fetch your app. It saves you wrestling with passwords and tokens later on.
 
               Two things may surprise you while Homebrew installs, and both are completely normal. It asks for your **Mac password** (the one you log in with): type it and press Enter, and don't worry that the letters don't appear as you type, that's the terminal keeping it private. A box may also pop up asking to install Apple's **command line developer tools**, just click **Install** and let it finish. They're a free part of macOS that Homebrew builds on.
+            imageUrl: /courses/vibe-coding-github-00/install-homebrew.webp
+          subtitle: Homebrew, Git, and the sign-in helper
+        - type: text
+          title: Install Git on Windows
+          content:
+            body: |-
+              *Windows only, Mac users can skip ahead.*
 
-              On **Windows**, download the installer from [**git-scm.com**](https://git-scm.com/) and run it. It also includes **Git Bash**, the friendly terminal window you'll use to run your app, it's selected in the installer so you can just go through the steps.
-          subtitle: What talks to GitHub
+              On **Windows**, download the installer from [**git-scm.com**](https://git-scm.com/) and run it, clicking through and accepting the defaults. It includes two things you'll use, both selected for you:
+
+              - **Git Bash**, the friendly terminal window you'll use to run your app.
+              - **Git Credential Manager**, which lets you sign into GitHub through a simple browser window the first time you fetch your app, instead of wrestling with passwords and tokens.
+
+              Because both are ticked by default, you can just go through the steps.
+          subtitle: One installer, with Git Bash included
         - type: quiz-question
           title: 'Quiz: Your first command'
           content:
@@ -256,12 +276,16 @@ course:
 
               - In **Git Bash** on Windows, the prompt takes two lines. The first line ends with your location, for example `dalmie@LAPTOP MINGW64 ~`, and you type on the line below, next to the `$`.
               - On a **Mac**, the prompt is a single line. Your location sits just before the `%` sign, for example `dalmie@Mac ~ %`, and you type right after it.
-
-              That `~` symbol is shorthand for your **home folder**, the one that holds your Desktop, Documents, and Downloads. A freshly opened terminal always starts there, and that's exactly where your app's new home will go in a moment. 
-              
-              (Whenever you want the full address spelled out, type `pwd` and press Enter, it prints the folder you're currently in.)
             imageUrl: /courses/vibe-coding-github-00/terminal-prompt.webp
           subtitle: Your terminal always tells you
+        - type: text
+          title: And right now, you're home
+          content:
+            body: |-
+              See that `~` in both prompts above? It's shorthand for your **home folder**, the one that holds your Desktop, Documents, and Downloads. A freshly opened terminal always starts there, and that's exactly where your app's new home will go in a moment.
+
+              (Whenever you want the full address spelled out, type `pwd` and press Enter, it prints the folder you're currently in.)
+          subtitle: The ~ is your home folder
         - type: text
           title: Get your app's link
           content:
@@ -492,7 +516,7 @@ course:
             imageUrl: /courses/vibe-coding-github-00/vscode-update.gif
           subtitle: This is the magic moment
         - type: text
-          title: Send your change to GitHub and Lovable
+          title: Review your change before sending
           content:
             body: |-
               Your change is on your computer, but not yet on GitHub, and Lovable. To send it, open the **Source Control** panel in VS Code (the branch-like icon on the left, or **Ctrl + Shift + G**). Your edited file is listed there, under **Changes**.
@@ -500,9 +524,14 @@ course:
               You might also see a file you never opened, like `routeTree.gen.ts`. Your app rewrites that one automatically as it runs, so it's nothing you did, and you can simply leave it out of your save.
 
               Before sending anything, take a quick look at what you changed: click the file name and a **diff** opens. A diff shows the old version and the new side by side, removed text in red, added text in green. It's how you confirm you changed exactly what you meant.
-
+            imageUrl: /courses/vibe-coding-github-00/github-diff.gif
+          subtitle: Open Source Control and read the diff
+        - type: text
+          title: Commit and push your change
+          content:
+            body: |-
               Happy with it? Hover your file and click the **+** beside it to pick it for this save, type a short note describing your change (the **commit message**), click the **Commit** button, then **Sync** (or push) to send it to GitHub.
-              
+
               A good commit message is short and specific, like `Fix typo on the book suggestion button`. A simple trick if you're not sure what to write: finish the sentence *"This change will..."*
             imageUrl: /courses/vibe-coding-github-00/vscode-commit.gif
           subtitle: Commit, then push to GitHub
@@ -841,8 +870,13 @@ course:
 
               **Behind the scenes**, the part that saves data, handles logins, sends emails, or takes payments, lives in the **backend that Lovable manages for you** (it's called **Lovable Cloud**). Your local copy talks to that backend but can't safely change it, so those changes belong **in Lovable**. Brand-new features usually need backend work, which is why they belong there too.
 
-              **Not sure which side a change falls on?** Ask Lovable itself. In its **Plan mode** (one credit, and it changes nothing), describe what you want and ask whether it would touch the backend. The answer tells you straight away: if it does, build it in Lovable; if it doesn't, you can make it yourself with Copilot, for free.
           subtitle: What people see, or behind the scenes?
+        - type: text
+          title: Not sure which side it's on? Ask Lovable
+          content:
+            body: |-
+              When you can't tell whether a change touches the backend, ask Lovable itself. In its **Plan mode** (one credit, and it changes nothing), describe what you want and ask whether it would touch the backend. The answer tells you straight away: if it does, build it in Lovable; if it doesn't, you can make it yourself with Copilot, for free.
+          subtitle: Plan mode answers, for one credit
         - type: text
           title: Keeping everything in sync
           content:
