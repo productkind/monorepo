@@ -12,10 +12,20 @@ Run these once, from your terminal (**Terminal** on Mac, **Git Bash** on Windows
 
 ```
 mkdir Projects
+```
+```
 cd Projects
+```
+```
 git clone <your repository link>
+```
+```
 cd <your-app-folder>
+```
+```
 npm install --no-save
+```
+```
 npm run dev
 ```
 
@@ -31,6 +41,8 @@ No cloning or installing again. From your terminal:
 
 ```
 cd Projects/<your-app-folder>
+```
+```
 npm run dev
 ```
 
@@ -53,6 +65,8 @@ Then run `git pull`, and `npm install --no-save` once more.
 Lovable added new building blocks since your last install. Run:
 ```
 npm install --no-save
+```
+```
 npm run dev
 ```
 
