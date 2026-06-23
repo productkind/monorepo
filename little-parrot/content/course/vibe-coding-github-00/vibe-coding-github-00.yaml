@@ -5,7 +5,7 @@ course:
   note: ''
   learningOutcomes:
     - Make small changes to your app yourself, without spending Lovable credits
-    - Set up a workspace on your own computer that works for every app, and any document, you'll build with AI
+    - Set up a workspace on your own computer that works for every app, and any document, you'll work on with AI
     - Run your app on your own computer and watch every change appear the moment you make it
     - Save your changes to GitHub and publish them to your live app, with a version history you can roll back any time
     - Make bigger changes by describing them to GitHub Copilot, then reviewing its work
