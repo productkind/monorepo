@@ -145,7 +145,7 @@ course:
 
               You don't need to memorise this. Just copy the formula and fill in the brackets with your own content. The formatting helps Lovable see the structure of your request clearly.
 
-              Use the [Markdown Guide](https://littleparrot.app/nest/toolkit/17e472a2-d2f4-4c99-8b1f-1a0b540df31a) in your Toolkit if you want to learn more about how to format your prompts effectively.
+              Use [Structure Your Prompts with Markdown](https://littleparrot.app/nest/toolkit/17e472a2-d2f4-4c99-8b1f-1a0b540df31a) in your Toolkit if you want to learn more about how to format your prompts effectively.
           subtitle: A quick guide to markdown
         - type: text
           title: Start small, then grow

@@ -63,6 +63,7 @@ This runs your app on your own computer. When it's ready, the terminal prints a 
 
 ![npm run dev running, with the local web address to open](/courses/vibe-coding-github-00/npm-run-dev-windows.webp)
 
+
 ### Next time: picking up working on the app
 
 No cloning or installing again, those were one-time jobs. Your app's code is already on your computer. To carry on working:
@@ -73,17 +74,23 @@ cd Projects/<your-app-folder>
 ```
 This jumps straight into your app's folder from your home folder.
 
-**2. Start up your app again**
-```
-npm run dev
-```
-Open the local web address your terminal prints (again, usually `http://localhost:8080`, but read the one it shows you). Before you edit, **pull** the latest version of your codebase from GitHub first (in VS Code, **Source Control → ... → Pull**, or `git pull` in the terminal) so you start from the newest version and avoid clashes.
+**2. Pull the latest version of your code**
+
+In VS Code, open the **Source Control** panel, click the **...** menu, and choose **Pull** (or type `git pull` in the terminal). This brings down anything that changed in GitHub or Lovable since you last worked. Make it your habit every single time you sit down, it's the one step that keeps your work and Lovable's from clashing.
 
 ![pulling code changes in VS Code](/courses/vibe-coding-github-00/vscode-pull.webp)
 
+**3. Start up your app again**
+```
+npm run dev
+```
+Open the local web address in your browser thatyour terminal prints (again, usually `http://localhost:8080`, but read the one it shows you).
+
+
 ### Stopping the app
 
-Click the terminal and press **Ctrl + C** (on a Mac too, not Cmd). That stops the running app in your browser. You can also just close the window.
+Click the terminal and press **Ctrl + C** (on a Mac too, not Cmd). That stops the running app in your browser. You can also just close the terminal window.
+
 
 ### ⚠️ When a command shows an error
 
