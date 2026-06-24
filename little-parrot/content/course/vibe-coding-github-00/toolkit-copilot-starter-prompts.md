@@ -74,7 +74,9 @@ Which file and component render the home page, and which lines hold the "What sh
 **When it's close but not quite, refine in a follow-up rather than starting over:**
 
 ```
-That's close. Two tweaks: make the count line one size smaller and use the same muted grey as the card subtitles, and move it to sit below the list instead of above it.
+That's close. Two tweaks: 
+1. make the count line one size smaller and use the same muted grey as the card subtitles, 
+2. move the count line to sit below the list instead of above it.
 ```
 
 ### When something breaks
@@ -88,6 +90,6 @@ After your last change, the app shows this error in the browser instead of the h
 ### Keep in mind
 
 - Copilot changes **what people see**. Anything that saves data, handles logins, sends emails, or takes payments lives in the backend Lovable manages, so build those **in Lovable**.
-- Review every change in the diff and check it at localhost before you keep it. Nothing is committed until you commit.
+- Review every change in the diff and check it at localhost before you keep it. Nothing syncs back to Lovable until you commit.
 
 New to writing prompts? The [Build Your First App with Lovable](https://littleparrot.app/5e86e580-264c-442c-8cc4-be5645f13e87/course-overview) course and its [toolkit](https://littleparrot.app/nest/toolkit?course=Build+Your+First+App+With+Lovable) cover crafting prompts in detail, and the same skills apply here.
