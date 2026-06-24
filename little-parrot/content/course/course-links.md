@@ -13,6 +13,7 @@ Use these links when cross-referencing courses in course content.
 | Basics of Software for Vibe Coding | `vibe-coding-tech-00` | `https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview` |
 | Write Better with AI: Prompting Foundations for Product Managers | `write-better-with-ai-00` | `https://littleparrot.app/550e8400-e29b-41d4-a716-446655440000/course-overview` |
 | Build Your Business: From Vibe Coded Product to Paying Customers | `vibe-coding-start-your-business-00` | `https://littleparrot.app/b7455f5a-166c-4614-a4ca-be83369ff7f1/course-overview` |
+| Save Lovable Credits: Edit Your App Like a Developer | `vibe-coding-github-00` | `https://littleparrot.app/7171137b-9461-425f-8737-ad3400d56fd8/course-overview` |
 
 ## Notes
 

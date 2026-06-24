@@ -8,7 +8,7 @@ The full loop for making a change on your computer and getting it live, without 
 
 ### Before you start
 - [ ] **Pull** the latest version of our app's code in VS Code (**Source Control → ... → Pull**), so you build on the newest version and avoid clashes when you save.
-- [ ] To run your app from your Terminal (Mac) or GitBash (Windows), type `npm run dev`, then open the **local web address** in your browser it prints (e.g., http://localhost:8080).
+- [ ] To run your app from your Terminal (Mac) or Git Bash (Windows), type `npm run dev`, then open the **local web address** it prints in your browser (e.g., http://localhost:8080).
     - **You encountered an error?** Check the [**Run Your App on Your Computer**](https://littleparrot.app/nest/toolkit/6cdb24bd-b8c1-4d3b-8154-bbfd703da608) for possible fixes.
 
 ### Make the change in VS Code
