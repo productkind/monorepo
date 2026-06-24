@@ -1,6 +1,6 @@
 course:
   id: 5e86e580-264c-442c-8cc4-be5645f13e87
-  note: "*This course is **free until 23 June 2026** (the end of SheBuilds on Lovable Season 03) to support more women building with AI.*"
+  note: ""
   cover: /courses/lovable-intro-00/cover.gif
   title: 'Build Your First App with Lovable'
   learningOutcomes:
@@ -256,7 +256,7 @@ course:
             subDescription: You described what you wanted, and Lovable built it. This is just the beginning. For every app you build from now, you can use the structured prompt formula to get better results faster.
 
     - title: Iterate and Improve
-      isFree: true
+      isFree: false
       skills:
         - Iterative Building
         - Improvement Prompts
@@ -369,7 +369,7 @@ course:
             subDescription: Small prompts, test often, and don't be afraid to start over. This approach keeps you in control and makes your app better with each iteration.
 
     - title: Save Data with Lovable Cloud
-      isFree: true
+      isFree: false
       skills:
         - Lovable Cloud
         - Backend Basics
@@ -524,7 +524,7 @@ course:
 
               **Toolkit:** The [Prompts for Common Features](https://littleparrot.app/nest/toolkit/43475578-0f46-41a8-8375-0c8a153a1882) has ready-to-use prompts for authentication, voting, search, delete, and more. Copy and paste them when you're adding features to your app.
     - title: Make Quick Changes with the Tools Lovable Provides
-      isFree: true
+      isFree: false
       skills:
         - Preview
         - Preview Toolbar
@@ -627,7 +627,7 @@ course:
             subDescription: Preview, the preview toolbar, and attaching images for inspiration. You can now refine your app visually, and show Lovable exactly what you want.
 
     - title: Experiment and Undo Mistakes Safely
-      isFree: true
+      isFree: false
       skills:
         - Version Bookmarking
         - Reverting Changes
@@ -713,7 +713,7 @@ course:
             subDescription: Bookmark stable versions, revert when needed. Now you can try bold experiments knowing you can always go back.
 
     - title: Plan, Test, and Connect Services
-      isFree: true
+      isFree: false
       skills:
         - Plan Mode
         - Project Knowledge
@@ -854,7 +854,7 @@ course:
               **Toolkit:** Use the [Project Knowledge Starter Template](https://littleparrot.app/nest/toolkit/55ce36be-cab9-4e46-a154-65606bca12ee) to set up your project's Knowledge panel with a ready-made structure for your target user, design system, tone of voice, and technical decisions.
 
     - title: Publish and Share Your App
-      isFree: true
+      isFree: false
       skills:
         - Publishing
         - Favicon
