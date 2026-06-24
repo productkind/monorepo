@@ -7,7 +7,7 @@ Use these links when referencing toolkit items in course content.
 | Toolkit Item | URL |
 |-------------|-----|
 | First Prompt Template | `https://littleparrot.app/nest/toolkit/17e40eb9-e190-40ed-b3d3-44300f2e2b08` |
-| Markdown Guide for Structured Prompts | `https://littleparrot.app/nest/toolkit/17e472a2-d2f4-4c99-8b1f-1a0b540df31a` |
+| Structure Your Prompts with Markdown | `https://littleparrot.app/nest/toolkit/17e472a2-d2f4-4c99-8b1f-1a0b540df31a` |
 | Prompts for Common Features | `https://littleparrot.app/nest/toolkit/43475578-0f46-41a8-8375-0c8a153a1882` |
 | Project Knowledge Starter Template | `https://littleparrot.app/nest/toolkit/55ce36be-cab9-4e46-a154-65606bca12ee` |
 | Pre-Publish Checklist | `https://littleparrot.app/nest/toolkit/321f3b1f-bc1b-412b-943a-e507a22bb46f` |
@@ -44,7 +44,7 @@ Use these links when referencing toolkit items in course content.
 | Break-Even and Cashflow Tracker | `https://littleparrot.app/nest/toolkit/764681e3-3475-41e6-99a4-47fff726ba1e` |
 | Accountant Call Preparation Template | `https://littleparrot.app/nest/toolkit/1a82d9a5-9987-4f61-aa29-99574b40836a` |
 
-## Save Lovable Credits: Edit Your App in VS Code (`vibe-coding-github-00`)
+## Save Lovable Credits: Edit Your App Like a Developer (`vibe-coding-github-00`)
 
 | Toolkit Item | URL |
 |-------------|-----|
@@ -54,6 +54,7 @@ Use these links when referencing toolkit items in course content.
 | The Credit-Free Edit Loop | `https://littleparrot.app/nest/toolkit/38d10b44-0e16-4460-8f59-ba8e74f7ffb7` |
 | Asking Copilot for Changes | `https://littleparrot.app/nest/toolkit/343b4217-d4bc-4163-bc50-020d8e2ad772` |
 | Which Tool for Which Change | `https://littleparrot.app/nest/toolkit/8ce77728-a3c5-4c45-af70-b621f35a7bd0` |
+| Builder's Workspace Glossary | `https://littleparrot.app/nest/toolkit/63cdb31b-16b3-4fdc-b53d-cb73e886cea0` |
 
 ## Notes
 

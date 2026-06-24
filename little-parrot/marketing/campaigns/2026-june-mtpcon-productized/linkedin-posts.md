@@ -62,17 +62,17 @@ I've spent years explaining the how of my work and wondering why it left people 
 
 ---
 
-## Post 5 — Use AI to understand, not to skip understanding
+## Post 5 — A learning mindset, from a physicist
 
-The most useful thing I heard this week came from someone who isn't in product at all. Brian Cox, the physicist, was asked about AI in education.
+One of the most useful ideas I heard at last week's product conferences came from someone who isn't in product at all. Brian Cox, the physicist, was talking at #mtpcon about how we learn.
 
-He said using AI to learn is fine. The risk is using it to answer questions you should be sitting with, so you never internalise anything. The goal is to deepen your own understanding rather than to collect the answer. He suggested to use AI as a patient tutor, one with no ego and no impatience, to explore an idea from several angles until you understands it yourself.
+He said something that reframed learning for me: if you think you're right about everything, there's no possibility of progress. Progress is reaching a deeper understanding than you had before, and you can't get there while you're certain you're already right.
 
-He also said being corrected is how you make progress. He once got corrected on live BBC radio by another physicist. They went to dinner afterwards and became friends.
+So the goal is to deepen your own understanding, rather than to score well or win the argument. Take an explanation, he said, then go to AI and other sources and work at it until you have internalised it and found your own way to understand it. Used like that, AI helps you understand instead of handing you an answer you never sit with. He is relaxed about being corrected, too: a physicist once corrected him on live radio, and they ended up friends over dinner.
 
-When you work in product you get corrected all the time. You ship a feature that nobody uses. You assume your users will understand a new flow in your app, only to realise during a usability test that they are completely lost. You celebrate that you solved your user's problem, but then you learn that they didn't have that exact problem to start with.
+In product, you get corrected all the time. You ship a feature nobody uses. You assume people will understand a new flow, then you realise during a usability test that they are completely lost. You celebrate solving a problem, then learn your users never had that exact problem.
 
-So I'm trying to adopt a learning mindset where I don't feel like a loser every time the outcome is different than what I anticipated. After all, this is how we make progress.
+So I'm trying to hold a learning mindset, where a result that surprises me counts as information rather than a verdict on me. I don't always manage it. But being wrong and then understanding why is how progress happens, in physics and in product.
 
 ---
 
