@@ -82,6 +82,8 @@ Here's the thing, Bottom line:, No fluff, This one's for you, Why this matters, 
 ### Rhetorical formulas
 "Not X, but Y", "It's not... it's...", "X isn't... it's...", "In this piece"
 
+This counts even when the negation and the assertion are split into two sentences by a full stop, e.g. "The honest barrier isn't the editing. It's the setup." or "The hard part isn't the code. It's the fear." State the point directly: "The hard part is the setup."
+
 Two-beat setup-payoff: a short concession sentence followed by a clipped reversal, e.g. "That sounds small. It isn't.", "Sounds simple. It's not.", "Easy, right? Wrong." State the point directly instead.
 
 ### Formatting

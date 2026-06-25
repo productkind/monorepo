@@ -5,6 +5,19 @@ description: Apply this structure to LinkedIn posts or Substack Notes.
 
 > Voice and tone come from the **personal-tone-of-voice** skill and `little-parrot/marketing/campaigns/how-to-be-authentic-on-linkedin.md`. This skill covers the channel mechanics and post structure that sit on top of that voice. Where the two appear to conflict, the grounded voice wins: posts should read like a real, kind person, never like marketing.
 
+## Evaluation Loop (run this every time)
+
+A drafted post is never returned to the user until an independent critic has gated it. Self-review misses what fresh eyes catch, so the writer and the judge must be different.
+
+1. **Draft** the post following this skill, the personal-tone-of-voice skill, and the authentic doc.
+2. **Critique.** Spawn the `linkedin-critic` agent (Agent tool) and pass it the full draft text, saying whether it is a LinkedIn post or a Substack Note. Do not show the draft to the user yet.
+3. **Read the verdict:**
+   - **PASS** → show the user the final post, with a short note on what the critic checked.
+   - **NEEDS REVISION** → apply the critic's revision brief, then re-run the critic on the new draft. Repeat, up to **3 rounds**.
+4. **After 3 rounds**, if issues remain, show the best draft and name the unresolved items honestly. Never hide them or quietly ship around them.
+
+What the user sees: the **final post plus a short summary** of what the critic flagged and how it was resolved — not every round, unless they ask to see the drafts.
+
 ## Audience
 
 Non-technical women learning AI-assisted development.
