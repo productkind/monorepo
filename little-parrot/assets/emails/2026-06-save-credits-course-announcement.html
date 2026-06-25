@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Edit your app like a developer</title>
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <![endif]-->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+    * { margin: 0; padding: 0; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      color: #08080a;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    .email-wrapper {
+      width: 100%;
+      background-color: #f5f5f5;
+      padding: 32px 16px;
+    }
+
+    .email-container {
+      max-width: 640px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border: 2px solid #08080a;
+      box-shadow: 4px 4px 2px rgba(8, 8, 9, 0.25);
+    }
+
+    /* Header */
+    .header {
+      background-color: #fdd82520;
+      background: linear-gradient(90deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020);
+      padding: 36px 40px;
+      text-align: center;
+      border-bottom: 2px solid #08080a;
+    }
+
+    .header img {
+      max-width: 220px;
+      height: auto;
+    }
+
+    .header-subtitle {
+      font-family: 'Space Mono', monospace;
+      font-size: 14px;
+      color: hsl(245, 3%, 48%);
+      margin-top: 14px;
+      letter-spacing: 1px;
+    }
+
+    /* Content */
+    .content {
+      padding: 48px 40px 24px;
+    }
+
+    .greeting {
+      font-size: 17px;
+      margin-bottom: 12px;
+      color: hsl(245, 3%, 22%);
+    }
+
+    .intro {
+      font-size: 17px;
+      color: hsl(245, 3%, 28%);
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    /* Section */
+    .section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-family: 'Space Mono', monospace;
+      font-size: 24px;
+      font-weight: 700;
+      color: #08080a;
+      margin: 0 0 16px;
+      line-height: 1.3;
+    }
+
+    h2 .num {
+      display: inline-block;
+      background-color: #fdd825;
+      background: linear-gradient(90deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70);
+      border: 2px solid #08080a;
+      padding: 2px 10px;
+      margin-right: 10px;
+      font-size: 18px;
+      vertical-align: 3px;
+    }
+
+    .section p {
+      font-size: 17px;
+      color: hsl(245, 3%, 22%);
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+
+    .section p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Feature image */
+    .feature-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 2px solid #08080a;
+      box-shadow: 4px 4px 2px rgba(8, 8, 9, 0.25);
+      margin-bottom: 32px;
+    }
+
+    /* CTA button */
+    .cta-button {
+      display: inline-block;
+      background-color: #fdd825;
+      background: linear-gradient(90deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70);
+      color: #08080a;
+      font-family: 'Inter', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 15px 34px;
+      border: 2px solid #08080a;
+      box-shadow: 4px 4px 2px rgba(8, 8, 9, 0.25);
+    }
+
+    .cta-wrapper {
+      text-align: center;
+      margin: 8px 0 0;
+    }
+
+    .other-builders {
+      font-size: 14px;
+      color: hsl(245, 3%, 38%);
+      text-align: center;
+      margin-top: 24px;
+      line-height: 1.6;
+    }
+
+    /* Sign-off */
+    .cta-section {
+      text-align: center;
+      padding: 36px 40px;
+      border-top: 2px solid #08080a;
+      background-color: #fdd82510;
+      background: linear-gradient(90deg, #ffb65b10, #fdd82510, #fbfb0010, #8efd2310, #00ed7010);
+    }
+
+    .cta-section p {
+      font-size: 16px;
+      color: hsl(245, 3%, 32%);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .cta-section .signoff {
+      font-family: 'Space Mono', monospace;
+      font-weight: 700;
+      font-size: 17px;
+      color: #08080a;
+      margin-top: 20px;
+    }
+
+    .cta-section .brand {
+      font-size: 13px;
+      color: hsl(245, 3%, 48%);
+      margin-top: 4px;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 24px 40px;
+      text-align: center;
+      font-size: 12px;
+      color: hsl(245, 3%, 58%);
+      line-height: 1.8;
+    }
+
+    .footer a {
+      color: hsl(245, 3%, 48%);
+      text-decoration: underline;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid hsl(245, 5%, 89%);
+      margin: 0;
+    }
+
+    a.text-link {
+      color: #08080a;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    /* Mobile */
+    @media only screen and (max-width: 620px) {
+      body { font-size: 16px; }
+      .content { padding: 32px 22px 16px; }
+      .header { padding: 28px 22px; }
+      .cta-section { padding: 28px 22px; }
+      .footer { padding: 20px; }
+      h2 { font-size: 21px; }
+      h2 .num { font-size: 16px; padding: 1px 8px; }
+      .intro { font-size: 16px; margin-bottom: 28px; }
+      .section { margin-bottom: 34px; }
+      .section p { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div style="display: none; max-height: 0; overflow: hidden; mso-hide: all; font-size: 1px; line-height: 1px; color: #f5f5f5;">
+    Stop watching credits drain on tiny fixes. Make the small changes yourself.
+  </div>
+  <div class="email-wrapper">
+    <div class="email-container">
+
+      <!-- Header -->
+      <div class="header">
+        <a href="https://littleparrot.app/?ref=save-credits-email" style="text-decoration: none;"><img src="https://littleparrot.app/logo-little-parrot.svg" alt="Little Parrot" /></a>
+        <div class="header-subtitle">NEW COURSE &middot; LEVEL UP</div>
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+
+        <p class="greeting">Hi {{first_name}},</p>
+        <p class="intro" style="margin-bottom: 10px;">You might have built your first app. Now it's time to <strong>level up. 🔥</strong></p>
+        <p class="intro"><a href="https://littleparrot.app/7171137b-9461-425f-8737-ad3400d56fd8/course-overview?ref=save-credits-email" class="text-link">Save Lovable Credits: Edit Your App Like a Developer</a> is a friendly, step-by-step course that guides you to work like a developer: making your own changes, on your own computer, and saving your Lovable credits for the changes that really need them.</p>
+
+        <div class="cta-wrapper" style="margin: 16px 0 40px;">
+          <a href="https://littleparrot.app/7171137b-9461-425f-8737-ad3400d56fd8/course-overview?ref=save-credits-email" class="cta-button" style="color: #08080a">Level up ⏫</a>
+        </div>
+
+        <!-- 1 -->
+        <div class="section">
+          <h2><span class="num">🛠️</span> Set up your builder's workspace</h2>
+          <p>In a few steps, you'll have the same free tools developers use running on your own computer. And this isn't a one-off for this app. It's the workspace <strong>you'll use for every app and every document</strong> you work on with AI from here on.</p>
+        </div>
+
+        <!-- 2 -->
+        <div class="section">
+          <h2><span class="num">💸</span> Stop spending credits on small fixes</h2>
+          <p>A quick typo fix or an icon swap <strong>shouldn't cost you a thing</strong>. Once you can make those changes yourself, you'll know exactly when to do it by hand and when Lovable is worth the credits, so your credits go to the work that really needs them.</p>
+        </div>
+
+        <!-- 3 -->
+        <div class="section">
+          <h2><span class="num">🤖</span> Hand the bigger changes to Copilot</h2>
+          <p>Got a bigger change in mind? You'll describe it to <strong>GitHub Copilot</strong>, watch it do the work for free, and look it over before saving it back to GitHub and Lovable. Every version is saved along the way, so you can roll back any time without worrying about breaking your app.</p>
+        </div>
+
+        <!-- Feature image -->
+        <!-- TODO: confirm the hosted URL for the course cover before sending (swap if the asset lives elsewhere). -->
+        <a href="https://littleparrot.app/7171137b-9461-425f-8737-ad3400d56fd8/course-overview?ref=save-credits-email" style="text-decoration: none;">
+          <img class="feature-image" src="https://littleparrot.app/courses/vibe-coding-github-00/lucide-swap.webp" alt="Steps from the course Save Lovable Credits: Edit Your App Like a Developer" />
+        </a>
+
+        <p class="other-builders">Built around Lovable, but it works just as well if you build with Replit, v0, or Bolt. They all connect to GitHub.</p>
+
+      </div>
+
+      <!-- Sign-off -->
+      <div class="cta-section">
+        <p>Have fun with it, and tell us how you'll use your new developer powers! 💛</p>
+        <div class="signoff">Kinga, Tamas &amp; Little Parrot</div>
+        <div class="brand">Little Parrot by productkind</div>
+      </div>
+
+      <!-- Footer -->
+      <hr class="divider">
+      <div class="footer">
+        <p style="margin-bottom: 12px;">
+          <a href="https://www.linkedin.com/company/productkind/" style="text-decoration: none; margin: 0 8px;">
+            <img src="https://littleparrot.app/icon-linkedin.png" width="24" height="24" alt="LinkedIn" style="vertical-align: middle; border: 0;" />
+          </a>
+          <a href="https://www.instagram.com/by_productkind/" style="text-decoration: none; margin: 0 8px;">
+            <img src="https://littleparrot.app/icon-instagram.png" width="24" height="24" alt="Instagram" style="vertical-align: middle; border: 0;" />
+          </a>
+        </p>
+        <p>You're receiving this because you started Build Your First App With Lovable on Little Parrot.<br>
+        <a href="https://littleparrot.app/?ref=save-credits-email">littleparrot.app</a><br><br>
+        <a href="__unsubscribe_url__">unsubscribe</a></p>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
