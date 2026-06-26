@@ -46,9 +46,9 @@ course:
               In this course you'll build a **workspace on your own computer**, the same kind of setup developers use to build software. With it, you can change your app as much as you like **without spending a single Lovable credit**.
 
               You'll be able to:
+              - save your work to **GitHub**, which you can access from anywhere, and it syncs back into Lovable
               - **fix copy** and **swap icons** yourself
-              - make **bigger changes** by describing them to an **AI agent**
-              - save your work to GitHub, which flows straight back into Lovable
+              - make **bigger changes** by describing them to an free **AI agent**
 
               No more watching credits drain on tiny tweaks.
           subtitle: A quick look at where we're heading
@@ -1002,6 +1002,6 @@ course:
       description: Know when to edit in VS Code, when to ask Copilot, and when to prompt Lovable, and keep everything in sync.
       completionTime: 9:00
   titleSplit:
-    - Save Lovable Credits
+    - 'Save Lovable Credits:'
     - Edit Your App Like a Developer
   description: Set up a builder's workspace on your own computer, then make changes to your app like a developer would, and use an AI agent for bigger things, all without spending Lovable credits. You'll run your app on your own computer, send your changes back to your live app, and learn the real setup that builders and AI agents use.
