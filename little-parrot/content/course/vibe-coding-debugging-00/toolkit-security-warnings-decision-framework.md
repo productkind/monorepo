@@ -33,7 +33,7 @@ Each finding in Lovable's Security panel has a severity label. Here's what they 
 
 ### Step 4: Ask for guidance on remaining issues
 
-For findings that weren't resolved automatically, use the **inline chat in the Security view** (this is free and doesn't cost credits).
+For findings that weren't resolved automatically, ask Lovable about the finding in chat. This works like any chat message and uses credits; running the scans and **Try to fix all** are the free actions.
 
 **Copy this prompt and fill in the blanks:**
 ```

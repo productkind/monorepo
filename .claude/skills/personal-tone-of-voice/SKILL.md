@@ -88,7 +88,7 @@ Two-beat setup-payoff: a short concession sentence followed by a clipped reversa
 
 ### Formatting
 - No em dashes (—)
-- No hashtags
+- No hashtags, except on Instagram. Instagram is the one channel where hashtags help reach, so Instagram posts include a focused, curated set (~10-12) of relevant tags placed below the caption fold. Everywhere else (LinkedIn, Substack), no hashtags.
 - No decorative punctuation
 
 ---
