@@ -42,6 +42,7 @@ For each Tier 1 hit: quote the offending step and give the fix.
 
 - **Single concept per challenge:** the outcome states in one sentence with no "and" joining two skills.
 - **Effort gradient:** low-effort judgement quiz early → evaluate someone else's example mid → apply to the learner's own product at the end. Mid-challenge interactions should evaluate given examples, not demand the learner apply to their own every time.
+- **Quizzes don't need the running persona.** A learner-centred "you" scenario ("You're stuck in a fix-break loop, what do you do?") counts as judgement-based and is preferred; don't require the course's persona (e.g. Dalmie) to appear in quizzes, and don't flag a quiz for using "you" framing instead. Persona scenarios that evaluate a given example are also fine; both beat recall.
 - **No more than 2–3 text steps in a row** before something interactive.
 - **Step length:** no text step is a wall of text. A step with 3+ concepts/options/items should be split into two. The first text step after the comics is short, not a slab.
 - **Shortening was done right:** by splitting or cutting genuine fluff, never by compressing away the reassuring "what's happening and why" explanation that is the actual value.
