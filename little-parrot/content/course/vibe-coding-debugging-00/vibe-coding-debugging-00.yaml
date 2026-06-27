@@ -37,7 +37,7 @@ course:
           content:
             imageUrl: /comics/vibe-coding-debugging-00/panel-02.png
             altText: |-
-              The dog looks frustrated, with spirals in its eyes, staring at the laptop. The dog says,
+              The dog looks frustrated, with spirals in her eyes, staring at the laptop. The dog says,
               “I’ve checked it and it doesn’t work…” and then, “It still doesn’t work…” The robot
               responds apologetically, saying, “You’re absolutely right, I apologise. It’s fixed now!”
         - type: comic
@@ -47,6 +47,16 @@ course:
               The dog and robot are back at the desk, joined by a brightly coloured bird (called Little
               Parrot). Little Parrot says cheerfully, "Let's put our detective hats on and figure out
               together what's happening here!" The mood shifts towards collaborative problem-solving.
+        - type: text
+          title: "You don't need to be technical to fix bugs"
+          content:
+            body: |-
+              The most important thing before we start: **you don't need to be technical to fix bugs.** A bug isn't a sign you did something wrong, or that you're not cut out for building. Even developers run into them every day.
+
+              What makes the difference is knowing what to do when something breaks. By the end of this course you'll be able to **spot what kind of bug you're facing**, **investigate it** the way developers do, and **guide Lovable to fix it** without getting stuck in frustrating loops.
+
+              That's a real, practical skill, and it's the one we'll build together.
+          subtitle: What you'll walk away with
         - type: text
           title: Before we start
           content:
@@ -73,29 +83,29 @@ course:
             vimeoId: 1164637862
             youtubeId: 'yzuCURVjvD4'
             transcript: |-
-              If you’ve ever built something in Lovable and thought, "Why isn't this working?",
+              If you’ve ever built something in Lovable and thought, *"Why isn't this working?",*
               you’re already debugging.
               
               Debugging isn’t a sign that you’ve failed, or that you’re not technical enough. It’s
-              simply the process of understanding why your app isn't doing what you expected, and
-              then fixing it.
+              simply the process of **understanding** why your app isn't doing what you expected, and
+              then **fixing it**.
 
               Here’s something that might surprise you: even experienced developers spend a massive
-              part of their day fixing things that don't work. Bugs happen to everyone. The
+              part of their day fixing things that don't work. **Bugs happen to everyone.** The
               difference between someone who feels stuck and someone who moves forward isn't being
               "more technical." It’s knowing what to do when things go wrong.
 
-              That’s exactly what you’ll learn here: how to debug with confidence.
+              That’s exactly what you’ll learn here: **how to debug with confidence.**
 
-              In this micro-course, you’ll learn to identify different types of bugs, spot their
-              root causes, and investigate properly before jumping into fixes. You’ll pick up the
+              In this micro-course, you’ll learn to **identify** different types of bugs, spot their
+              **root causes**, and **investigate** properly before jumping into fixes. You’ll pick up the
               same habits professional developers use:
-                - How to prevent bugs in the first place.
-                - How to investigate issues step by step.
-                - And how to use Lovable’s debugging tools properly, instead of guessing or getting
+                - How to **prevent** bugs in the first place.
+                - How to **investigate** issues step by step.
+                - And how to **use** Lovable’s debugging tools properly, instead of guessing or getting
                   stuck in "fix-break" loops.
 
-              By the end, you’ll have a practical toolkit for troubleshooting. When something
+              By the end, you’ll have a **practical toolkit for troubleshooting**. When something
               breaks, you’ll know where to look, what questions to ask, and exactly how to move
               forward.
 
@@ -166,6 +176,28 @@ course:
               If it doesn't show the button, you can always prompt Lovable directly: `"There's a build error: [paste error message]. Fix it."`
             imageUrl: /courses/vibe-coding-debugging-00/build-error.webp
           subtitle: The easiest bugs to fix
+        - type: quiz-question
+          title: "Quiz: Build errors"
+          content:
+            question: You open your app's preview and it won't load at all, just a red error message fills the screen. What type of bug is this?
+            options:
+              - A visual glitch, where something looks slightly off
+              - A launch blocker, where the app can't start
+              - A freeze, where one feature stops responding mid-use
+              - A security warning that appears before publishing
+            correctAnswer: 1
+            explanation: This is a launch blocker (a build or compile-time error), which stops the app loading entirely. The upside is that it usually comes with a clear message, so sharing it with Lovable or clicking Try to Fix often resolves it fast.
+        - type: quiz-question
+          title: "Quiz: Fixing build errors"
+          content:
+            question: A red build error appears and your app won't start. What's the most effective first move?
+            options:
+              - Copy the error message and give it to Lovable, or click Try to Fix
+              - Refresh the page a few times and hope it clears
+              - Start rebuilding the whole feature from scratch
+              - Leave it, since the app might still work for users
+            correctAnswer: 0
+            explanation: Build errors come with clear messages that AI reads well, so sharing the exact error (or using Try to Fix) is the fastest route. That's why launch blockers, despite looking scary, are often the easiest bugs to fix.
         - type: text
           title: Freezes and misbehaviours
           content:
@@ -189,6 +221,17 @@ course:
 
               These are the **most common bugs** you'll run into, so we'll dedicate an entire challenge to investigating and fixing them. You'll learn what handy tools developers use to investigate them to feel much more confident after.
           subtitle: Detective work ahead
+        - type: quiz-question
+          title: "Quiz: Freezes and misbehaviours"
+          content:
+            question: Which of the following is an example of a freeze or misbehaviour?
+            options:
+              - The app fails to start and shows an error message
+              - The layout is slightly off
+              - A button does nothing when clicked
+              - A missing image in the header
+            correctAnswer: 2
+            explanation: Freezes and misbehaviours happen at runtime. The app starts, but specific features do not behave as expected.
         - type: text
           title: Visual glitches
           content:
@@ -207,6 +250,17 @@ course:
               what is wrong.
             imageUrl: /courses/vibe-coding-debugging-00/attach.png
           subtitle: Screenshots are your best friend
+        - type: quiz-question
+          title: "Quiz: Visual glitches"
+          content:
+            question: What is a helpful way to debug visual glitches in Lovable?
+            options:
+              - Ignore them if the app works
+              - Restart the app repeatedly
+              - Prompt Lovable without any extra information
+              - Attach screenshots to your prompt
+            correctAnswer: 3
+            explanation: Visual issues are easier to diagnose when you show Lovable exactly what looks wrong. Screenshots provide important context that text alone may miss.
         - type: text
           title: Security vulnerabilities
           content:
@@ -226,50 +280,6 @@ course:
 
               We'll dedicate an **entire challenge** in this course to understanding and handling security warnings. By the end, you'll know **exactly what to do** when they pop up.
           subtitle: Lovable has your back
-        - type: quiz-question
-          title: "Quiz: Build errors"
-          content:
-            question: What is a build or compile-time error?
-            options:
-              - A visual issue that looks unpolished
-              - A feature that behaves inconsistently
-              - A bug that prevents the app from starting at all
-              - A minor performance slowdown
-            correctAnswer: 2
-            explanation: These errors stop the app from loading entirely. They usually come with clear error messages in Lovable.
-        - type: quiz-question
-          title: "Quiz: Fixing build errors"
-          content:
-            question: Why are build errors often the easiest bugs to fix?
-            options:
-              - They usually include clear error messages that AI can interpret well
-              - They do not affect users
-              - They fix themselves after a refresh
-              - They only happen once
-            correctAnswer: 0
-            explanation: Build errors typically provide explicit messages about what went wrong. This makes them well suited for AI-assisted fixes, such as Lovable’s 'Try to Fix' feature.
-        - type: quiz-question
-          title: "Quiz: Freezes and misbehaviours"
-          content:
-            question: Which of the following is an example of a freeze or misbehaviour?
-            options:
-              - The app fails to start and shows an error message
-              - The layout is slightly off
-              - A button does nothing when clicked
-              - A missing image in the header
-            correctAnswer: 2
-            explanation: Freezes and misbehaviours happen at runtime. The app starts, but specific features do not behave as expected.
-        - type: quiz-question
-          title: "Quiz: Visual glitches"
-          content:
-            question: What is a helpful way to debug visual glitches in Lovable?
-            options:
-              - Ignore them if the app works
-              - Restart the app repeatedly
-              - Prompt Lovable without any extra information
-              - Attach screenshots to your prompt
-            correctAnswer: 3
-            explanation: Visual issues are easier to diagnose when you show Lovable exactly what looks wrong. Screenshots provide important context that text alone may miss.
         - type: reflection
           title: "Reflection: Your project"
           content:
@@ -281,7 +291,7 @@ course:
           content:
             nextModule: "**Next challenge:** Prevention is better than cure! Learn powerful habits that dramatically reduce how often you encounter bugs."
             description: You understand what bugs are and how to approach them.
-            subDescription: "Remember: diagnose before you fix. Understanding the different types of bugs helps you guide Lovable in fixing them more effectively. Great job on completing the first challenge!"
+            subDescription: "Remember: diagnose before you fix. Understanding the different types of bugs helps you guide Lovable in fixing them more effectively. That mindset is the foundation everything else in this course builds on."
     - title: Preventing Bugs Before They Happen
       isFree: false
       skills:
@@ -306,7 +316,7 @@ course:
             body: |-
               One of the most common causes of bugs is **asking for too much at once**. When you give Lovable a huge, complex prompt, many things can go wrong, and it's hard to know which part caused the problem.
 
-              So when Dalmie is building the Book Club Organiser app for her friend's book club and wants to add voting functionality, she breaks it down into **small, manageable pieces**.
+              So when Dalmie is building the Book Club Organiser app for her friend Sarah's book club and wants to add voting functionality, she breaks it down into **small, manageable pieces**.
 
               **Instead of this:**
               *"Add voting functionality with a vote button that increases the count, shows who voted, prevents double voting, sends notifications, and displays a leaderboard."*
@@ -355,7 +365,7 @@ course:
               **After every working feature:**
               Click the bookmark option to mark that version as stable.
 
-              **Why this matters:**
+              **What this gives you:**
               If a bug appears later, you have a known good state to return to. You can compare what changed between the working version and the broken one.
 
               **Pro tip:** If you use bookmarks and something in your app breaks, you can prompt Lovable:
@@ -457,7 +467,7 @@ course:
           title: Meet Dalmie's challenge
           content:
             body: |-
-              Dalmie is **buildin** her **Book Club Organiser app in Lovable**. Yesterday, everything was working beautifully, members could suggest books for the book club.
+              Dalmie is **building** her **Book Club Organiser app in Lovable**. Yesterday, everything was working beautifully, members could suggest books for the book club.
 
               Today, she added a feature to be able to **vote on each book**. But now when she clicks the Vote button... **nothing happens**. No error message appears. The vote count doesn't change. The button looks normal.
             imageUrl: /comics/vibe-coding-debugging-00/panel-04.png
@@ -472,7 +482,7 @@ course:
 
               **New mindset:** *"Something's not working yet. Let me understand what's happening before I try to fix it."*
 
-              The key insight: **diagnose before fixing**. Spending time investigating (rather than immediately attempting fixes) actually **gets you to a solution faster**.
+              The key insight: **diagnose before fixing**. Spending time investigating, rather than immediately attempting fixes, **gets you to a solution faster**.
           subtitle: Diagnose before you fix
         - type: quiz-question
           title: "Quiz: The debugging mindset"
@@ -504,7 +514,7 @@ course:
 
               **Frontend bugs** affect what users see:
               - The screen is blank or unresponsive
-              - Text shows "undefined" or "NaN" instead of data
+              - Text shows "undefined" or "NaN" (short for 'not a number') instead of data
               - Layout looks broken
               - Colours or styles are wrong
 
@@ -619,8 +629,8 @@ course:
               In the **DevTools**, there is also a **Network tab**. This shows **every request your app makes to the backend**.
 
               Each row is a request. In the **Status** column, look for:
-              - **200** – Success, request worked
-              - **400, 401, 403, 404, or 500** – Failed, something went wrong
+              - **200**: Success, request worked
+              - **400, 401, 403, 404, or 500**: Failed, something went wrong
 
               **Clicking a failed request** shows details about **what went wrong**. This is especially useful for cases where nothing appears in the Console.
 
@@ -631,22 +641,22 @@ course:
           title: HTTP status codes
           content:
             body: |-
-              The frontend talks to the backend using **HTTP requests**. Each request gets a response with a **status code indicating success or failure**.
+              The frontend talks to the backend using **HTTP requests** (HTTP is the language browsers and servers use to talk to each other). Each request gets a response with a **status code indicating success or failure**.
               Those numbers on requests (200, 401, etc.) are the **status codes**. 
               
               Here are the important ones:
 
-              **200** — **Success!** Everything worked.
+              **200**: **Success!** Everything worked.
 
-              **400** — **Bad request.** The data sent was wrong or missing something.
+              **400**: **Bad request.** The data sent was wrong or missing something.
 
-              **401** — **Not authenticated.** The user needs to log in.
+              **401**: **Not authenticated.** The user needs to log in.
 
-              **403** — **Forbidden.** User is logged in but doesn't have permission.
+              **403**: **Forbidden.** User is logged in but doesn't have permission.
 
-              **404** — **Not found.** The thing requested doesn't exist.
+              **404**: **Not found.** The thing requested doesn't exist.
 
-              **500** — **Server error.** Something crashed on the backend.
+              **500**: **Server error.** Something crashed on the backend.
 
               The first digit tells you the **category** of the response: 
               - **2xx = success**, 
@@ -777,7 +787,7 @@ course:
               - Lovable Cloud Logs
               - The Database
               - Click on Plan mode
-              - "Just prompt Lovable: 'It doesn't work.'"
+              - "Prompt Lovable: 'It doesn't work.'"
             question: Dalmie's Vote button does nothing when clicked, and there's no error in the Console or the Network Tab. Where should she look next?
             explanation: The next step is to check Lovable Cloud logs. Backend function errors often appear there when nothing shows up in the browser Console or Network tab.
             correctAnswer: 0
@@ -785,13 +795,13 @@ course:
           title: "Quiz: Stack traces"
           content:
             options:
-              - The entire error message including the stack trace
-              - Only the file names
-              - Only the line numbers
-              - Just the button that caused the error
-            question: What should you copy and share with Lovable when you see an error in the Console?
-            explanation: Sharing the full error message, including the stack trace, gives Lovable the most useful context to diagnose and fix the issue quickly.
-            correctAnswer: 0
+              - Copy only the first line, since it names the type of error
+              - Copy the whole error, including the lines showing where it happened
+              - Retype the error in your own words to keep the message short
+              - Send a screenshot of the page instead of the error text
+            question: You see a long red error in the Console, several lines of it, and you're tempted to copy just the first line to keep your message short. What should you share with Lovable?
+            explanation: Share the whole error, including the lines below the first one (the stack trace). Those lines show the path the code took to reach the problem, which is exactly the context Lovable needs to fix it quickly.
+            correctAnswer: 1
         - type: quiz-question
           title: "Quiz: When there is no error"
           content:
@@ -821,7 +831,7 @@ course:
         - Plan Mode
         - Preview Toolbar
         - Try to Fix
-      description: Master Lovable’s built-in tools to debug your projects. You’ll understand what each one is useful for and how to use them to fix issues faster and keep moving forward.
+      description: Use Lovable’s built-in tools confidently to debug your projects. You’ll understand what each one is useful for and how to use them to fix issues faster and keep moving forward.
       completionTime: '15:00'
       steps:
         - type: text
@@ -830,9 +840,9 @@ course:
             body: |-
               Lovable gives you three distinct **debugging tools**. Using the right one for a specific situation makes bugfixing more effective:
 
-              - **Plan mode** – For investigating problems and understanding what's wrong.
-              - **Preview toolbar** – For fixing how things look (colours, text, spacing).
-              - **'Try to Fix' button** – For quick automated repairs when errors appear.
+              - **Plan mode**: for investigating problems and understanding what's wrong.
+              - **Preview toolbar**: for fixing how things look (colours, text, spacing).
+              - **'Try to Fix' button**: for quick automated repairs when errors appear.
 
               Let's explore each one in depth so you know exactly **when to reach for which tool**.
           subtitle: Three tools for three situations
@@ -855,7 +865,6 @@ course:
 
               - **Search through your files** to find relevant code
               - **Inspect logs** to see what happened
-              - **Query your database** to check if data exists
               - **Reason through multi-step problems** and explain them
 
               When you describe an issue, Plan mode creates a step-by-step **investigation plan**. Once you're satisfied with the analysis, switch to **Build mode** and ask Lovable to implement the plan.
@@ -910,7 +919,7 @@ course:
               For appearance fixes, your best friend is the **preview toolbar**. It sits at the bottom, in your app preview and lets you point at what you want to change instead of describing it in a prompt. Two of its modes are perfect for this:
 
               - **Select elements:** Click a part of your app, then describe the change you want. To select more than one element, hold Command (Mac) or Control (Windows) while you click.
-              - **Edit text inline:** Fix a typo or change wording directly on the page, no prompt needed and it costs no credits.
+              - **Edit text inline:** Fix a typo or change wording directly on the page, no prompt needed. Inline text edits are free for up to 100 a day, then they use credits.
 
               **Best for:**
               - Changing colours, fonts, sizes
@@ -923,15 +932,15 @@ course:
           title: "Preview toolbar: Static vs dynamic"
           content:
             body: |-
-              **Good to know:** Editing text inline in the **preview toolbar** only works on **static elements**.
+              **Good to know:** how inline editing behaves depends on the kind of text you click.
 
-              - **Static elements** stay the same for everyone: a logo, a heading that says "Welcome", a button labelled "Submit", a paragraph describing your team.
+              - **Static elements** stay the same for everyone: a logo, a heading that says "Welcome", a button labelled "Submit", a paragraph describing your team. These are ideal for inline editing.
               - **Dynamic elements** change based on data or user state: a list of books from the database, a user's name after login, a vote count that updates.
 
-              **How to tell:** In the **preview toolbar**, open **Edit text inline** and click a piece of text. If you can't edit it, it's dynamic.
+              You *can* edit a dynamic element inline, but watch out: Lovable will **hardcode** what you type. That means it replaces the live, data-driven value with a fixed one that no longer updates, so a book title pulled from your database would always show the text you typed, even after the data changes.
 
-              For **dynamic elements**, you have to **prompt Lovable** to change the text.
-          subtitle: Know the limitation
+              For **dynamic elements**, it's usually better to **prompt Lovable** to change how the text is generated, instead of overwriting it inline.
+          subtitle: Edit dynamic text with care
         - type: text
           title: "Try to Fix: Automated repair"
           content:
@@ -957,15 +966,15 @@ course:
             explanation: Plan mode is useful for investigation. It lets Lovable search files, inspect logs, reason through problems, and explain what is happening without modifying your code until you approve a fix.
             correctAnswer: 1
         - type: quiz-question
-          title: "Quiz: Preview toolbar limitation"
+          title: "Quiz: Editing dynamic text inline"
           content:
             options:
-              - The element is too small to click
-              - The element is static
-              - The element is dynamic
-              - The element is inside a button
-            question: Using Edit text inline in the preview toolbar, Dalmie clicks on the book titles but can't edit them. Why?
-            explanation: Book titles that come from the database are dynamic elements, they change based on data. Editing text inline only works on static elements like fixed headings or labels.
+              - The change syncs back and updates the database automatically
+              - Nothing happens, because dynamic text can't be edited inline
+              - Lovable hardcodes the new text, so that title stops updating from the data
+              - The entire list of books gets deleted
+            question: You use Edit text inline to change a book title that's pulled from your database. What happens?
+            explanation: Inline editing now lets you change dynamic text, but Lovable hardcodes what you type, replacing the live value with a fixed one. For data-driven content like book titles, it's usually better to prompt Lovable to change how the text is generated.
             correctAnswer: 2
         - type: quiz-question
           title: "Quiz: Try to Fix"
@@ -1011,7 +1020,7 @@ course:
             body: |-
               **The most frustrating experience:** you try to fix something, but your fix breaks something else. So you fix that, which breaks the first thing again...
 
-              You're stuck in a **bug loop** – each fix attempt makes the codebase more tangled, and you feel like you're going backwards.
+              You're stuck in a **bug loop**, where each fix attempt makes the codebase more tangled, and you feel like you're going backwards.
 
               This challenge teaches you **specific strategies to escape this frustrating loop**, and when to cut your losses and revert to a previous version.
             imageUrl: /courses/vibe-coding-debugging-00/loop.gif
@@ -1104,18 +1113,18 @@ course:
 
               Then, prompt Lovable to **build the feature again**, but with a different approach or simpler design.
 
-              Because building features with AI builders has become so fast, **rewriting can be quicker than untangling**. It can literally cost fewer credits to start fresh than to spend ages debugging.
+              Because building features with AI builders has become so fast, **rewriting can be quicker than untangling**. It can cost fewer credits to start fresh than to spend ages debugging.
         - type: quiz-question
           title: "Quiz: The three-attempt rule"
           content:
             options:
-              - Keep trying the same fix until it works
-              - Ask Lovable to apply bigger fixes
-              - Ignore the bug for now
-              - Stop and change your approach
-            question: According to the three-attempt rule, what should you do after three failed fix attempts?
-            explanation: After three attempts, continuing to try fix the issue usually makes things worse. The rule exists to stop bug loops and encourage investigation, rethinking, or reverting instead of piling on more fixes.
-            correctAnswer: 3
+              - Ask Lovable to try the same fix a fourth time
+              - Stop, and either investigate in Plan mode or revert to a working version
+              - Delete the feature and build something else instead
+              - Keep the broken version and hope nobody notices
+            question: You've asked Lovable to fix the same bug three times, and each fix breaks something else. What should you do now?
+            explanation: This is the three-attempt rule in action. After three failed tries, more fixes usually pile new problems onto broken code. The move is to stop and change approach, investigating the root cause in Plan mode or reverting to the last version that worked.
+            correctAnswer: 1
         - type: quiz-question
           title: "Quiz: Using the revert button"
           content:
@@ -1136,7 +1145,7 @@ course:
               - Start a new project to rewrite the entire app
               - Ignore broken features and ship anyway, nobody will notice
             question: You're stuck in a fix-break loop and no longer understand what's wrong. Which strategy should you try first?
-            explanation: Asking for explanation in Plan mode before fixing forces a step back and avoids making more changes to the code. It helps uncover flawed assumptions, tangled bugs, or simpler solutions before more changes are made. If every fix attempt has failed, you can alsways revert to a previous working version.
+            explanation: Asking for explanation in Plan mode before fixing forces a step back and avoids making more changes to the code. It helps uncover flawed assumptions, tangled bugs, or simpler solutions before more changes are made. If every fix attempt has failed, you can always revert to a previous working version.
             correctAnswer: 0
         - type: reflection
           title: "Reflection: Your escape plan"
@@ -1147,7 +1156,7 @@ course:
         - type: challenge-end
           title: You can escape bug loops! 🪽
           content:
-            nextModule: "**Next challenge:** Let's master the art of communicating with Lovable to get bugs fixed effectively."
+            nextModule: "**Next challenge:** Let's learn to communicate clearly with Lovable so bugs get fixed faster."
             description: You have strategies for when things get stuck.
             subDescription: Revert, compare, explain before fixing, isolate, and know when to start fresh. These escape routes will save you hours of frustration. Sometimes going back is the fastest way forward!
     - title: How to Guide Lovable to Fix Bugs
@@ -1157,7 +1166,7 @@ course:
         - Guardrails
         - Specificity
         - Adding Logs
-      description: Master the art of communicating with Lovable to get bugs fixed effectively.
+      description: Communicate clearly with Lovable so bugs get fixed faster.
       completionTime: '14:00'
       steps:
         - type: text
@@ -1317,20 +1326,20 @@ course:
           content:
             options:
               - '"On /books, clicking the Vote button returns a 401 error. Expected: count increases. Actual: nothing happens. Investigate the root cause. Do not modify other components."'
-              - '"Fix the bug please."'
-              - "\"Something's broken with voting I think.\""
-              - '"The app is not working as expected."'
+              - '"The voting is broken somewhere in the app. Can you look through everything and make it all work properly again?"'
+              - '"Something is wrong with the votes, I think. It worked yesterday but not today, and I am not sure why."'
+              - '"The app is not working as expected and I cannot tell why. Please fix whatever is causing the problem."'
             question: Which debugging prompt would get the fastest, most accurate fix?
-            explanation: Specific location + expected behaviour + actual behaviour + clues found + guardrails = effective debugging prompt. The more specific information you provide, the faster Lovable can find and fix the issue without breaking other things.
+            explanation: Specific location + expected behaviour + actual behaviour + clues found + guardrails = effective debugging prompt. The other three are similar in length but vague, so Lovable has to guess where to look. The more specific information you provide, the faster Lovable can fix the issue without breaking other things.
             correctAnswer: 0
         - type: quiz-question
           title: "Quiz: The debugging prompt formula"
           content:
             options:
-              - Only what is broken
-              - What you clicked and what error appeared
-              - Specific location, expected behaviour, actual behaviour, and clues found
-              - A long description of the entire app, and what else you plan to build
+              - A short note saying that something in the app is broken
+              - What you clicked, plus the error message that appeared on screen
+              - The location, what you expected, what actually happened, and the clues you found
+              - A long description of the whole app and the features you plan to build next
             question: Which elements make up an effective debugging prompt?
             explanation: The most effective prompts clearly state what you did exactly where in your app, what you expected, what actually happened, and any clues you found. This structure dramatically improves fix quality.
             correctAnswer: 2
@@ -1375,7 +1384,7 @@ course:
 
               But when she clicks **Publish**, Lovable shows her a list of **security issues**. Some are marked as **errors**, others as **warnings**, and a few as **informational tips**.
 
-              Her first reaction? Panic. 
+              Her first reaction is to worry. 
               
               *"Is my app broken? Did I do something wrong?"*
 
@@ -1465,7 +1474,7 @@ course:
           title: "The big question: Does it matter for MY app?"
           content:
             body: |-
-              Here's something most security guides won't tell you: **not every security warning matters equally for every app**.
+              **Not every security warning matters equally for every app.**
 
               The **severity** of a security issue depends on **what your app does and who uses it**:
 
@@ -1490,7 +1499,7 @@ course:
           title: "RLS: The hidden danger"
           content:
             body: |-
-              Here's the tricky part: **your app might look completely fine.** When Dalmie uses her Book Club Organiser, she only sees her own data. Everything works as expected. **So what's the problem?**
+              **Your app might look completely fine, but the database can still be wide open.** When Dalmie uses her Book Club Organiser, she only sees her own data. Everything works as expected. **So what's the problem?**
 
               Behind the scenes, your app's database has a **public address** and a **public key** (called the `anon` key) that are embedded in your app's code. These are visible to anyone.
 
@@ -1545,7 +1554,7 @@ course:
               2. Select **Users**
               3. Open **Auth Settings**
               4. Click **Email** among the "Sign in methods"
-              5. Enable the **Password HIBP Check** toggle. 
+              5. Enable the **Password HIBP Check** toggle (HIBP refers to a public database of leaked passwords). 
               
               This checks passwords against a database of billions of known compromised passwords. If a user tries to sign up with one of these, they'll be prompted to choose a different password.
             imageUrl: /courses/vibe-coding-debugging-00/password-hibp-check.webp
@@ -1562,7 +1571,7 @@ course:
               Explain what this security finding means and suggest how to fix it. Don't make changes to the user experience.
               ```
 
-              Referencing the warning first means you understand the risk before any code changes happen, and you stay in control of what gets touched.
+              Referencing the warning first means you understand the risk before any code changes happen, and you stay in control of what gets touched. Asking about a finding in chat works like any chat message, so it uses credits. Running the scans and the **Try to fix all** button are the free actions.
             imageUrl: /courses/vibe-coding-debugging-00/reference-in-chat.webp
           subtitle: Reference the warning and ask Lovable
         - type: text
@@ -1619,7 +1628,7 @@ course:
             placeholder: The next thing I'd like to learn is...
             subDescription: Every new skill builds on the last. You've come a long way!
         - type: course-end
-          title: Congratulations! You're a Debugging Pro! 🎉
+          title: You can debug with confidence now! 🎉
           content:
             nextModule: "**Your next step:** Return to your project with fresh confidence. When your next bug appears (and it will!), you'll know exactly what to do. Investigate first, find clues, communicate clearly with Lovable, and handle security warnings like a pro. You've got this! 🤗"
             description: Look at everything you've learned!
@@ -1638,7 +1647,7 @@ course:
 
               ✓ **Security awareness:** Understanding RLS, authentication settings, and handling security errors and warnings. Knowing what to prioritise based on your app's context.
 
-              **Remember:** Every professional developer debugs constantly and takes security seriously. You now have the same toolkit they use. The bugs will come, but so will the fixes. Happy building! 💪
+              **Remember:** Every professional developer debugs constantly and takes security seriously. You now have a practical toolkit for finding and fixing bugs. The bugs will come, but so will the fixes. Happy building! 💪
   titleSplit:
     - "Fix Bugs with Confidence:"
     - Debugging Your Lovable App
