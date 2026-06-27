@@ -29,6 +29,16 @@ description: Use this checklist when generating an outline for a micro-course fr
 
 **One running example throughout.** Use Dalmie (a dalmatian dog character) building the Book Club Organiser app as the running persona and project across all challenges, consistent with other Little Parrot courses. Don't switch examples mid-course. Consistency makes abstract concepts tangible and helps learners follow along.
 
+## Verification Handoff (required section in every outline)
+
+The outline is consumed by the `course-tool-researcher` agent before the course is generated, so it must carry forward what needs checking instead of leaving the writer to rediscover it. End every outline with a **Verification handoff** section that lists, per challenge:
+
+- **Tools taught**: every tool the challenge uses, and the specific task the learner performs with it (e.g. "Lovable: connect the project to GitHub", not just "Lovable").
+- **Claims to verify**: any prerequisite, cost/credits claim, UI step, or "best practice" the challenge will state that depends on the tool working a certain way today.
+- **Premise risk**: if the challenge (or the course) rests on a tool-dependent premise, name it here so it gets confirmed before generation.
+
+Keep it factual and scoped: this is a checklist for the researcher, not prose. If a challenge teaches no tool and makes no tool-dependent claim, write "None" for it.
+
 ## Output Format for Generated Outline
 
 When generating a structured draft, structure it as the examples.

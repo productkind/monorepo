@@ -2,7 +2,7 @@ course:
   id: 7171137b-9461-425f-8737-ad3400d56fd8
   cover: /courses/vibe-coding-github-00/cover.gif
   title: 'Save Lovable Credits: Edit Your App Like a Developer'
-  note: "This course uses **Lovable** as its running example, but you can follow along just as well if you build with another AI app builder like **Replit**, **v0**, or **Bolt**. They all connect to GitHub, so setting up the workspace, editing, running, and saving you'll learn apply either way."
+  note: "This course uses **Lovable** as its running example, but you can follow along just as well if you build with another AI app builder like **Replit**, **v0**, or **Bolt**. They all connect to GitHub, so the setup, editing, running, and saving you learn here apply either way."
   learningOutcomes:
     - Make small changes to your app yourself, without spending Lovable credits
     - Set up a workspace on your own computer that works for every app, and any document, you'll work on with AI
@@ -48,7 +48,7 @@ course:
               You'll be able to:
               - save your work to **GitHub**, which you can access from anywhere, and it syncs back into Lovable
               - **fix copy** and **swap icons** yourself
-              - make **bigger changes** by describing them to an free **AI agent**
+              - make **bigger changes** by describing them to a free **AI agent**
 
               No more watching credits drain on tiny tweaks.
           subtitle: A quick look at where we're heading
@@ -174,7 +174,7 @@ course:
           title: Meet the terminal
           content:
             body: |-
-              Before the last tool, let's meet the place you'll install it from: the **terminal**, a program where you talk to your computer by typing. You type an instruction, press Enter, and the computer does it and replies in text. No buttons, no menus, just a conversation.
+              Before the last tool, let's meet the place you'll install it from: the **terminal**, a program where you talk to your computer by typing. You type an instruction, press Enter, and the computer does it and replies in text. It works through typing instead of buttons and menus.
 
               It looks bare at first, but it's the tool developers use all day, and you'll be comfortable in it sooner than you think. It's also where you can automate the repetitive jobs you do on your computer. Everything you do on your machine, it's possible to do from the terminal, and that's what makes it so powerful.
 
@@ -284,7 +284,7 @@ course:
       completionTime: 12:00
     - steps:
         - type: text
-          title: Bring your app to life locally
+          title: Bring your app to life on your computer
           content:
             body: |-
               Here's the moment your workspace pays off: you'll copy your app's code onto your computer and run it, so you can see every change instantly.
@@ -596,7 +596,7 @@ course:
           title: Commit and push your change
           content:
             body: |-
-              Happy with it? Hover your file and click the **+** beside it to **stage** it (pick it for this save), type a short note describing your change (the **commit message**) in the input filed under **Changes**, click the **Commit** button, then **Sync** (or push) to send it to GitHub.
+              Happy with it? Hover your file and click the **+** beside it to **stage** it (pick it for this save), type a short note describing your change (the **commit message**) in the input field under **Changes**, click the **Commit** button, then **Sync** (or push) to send it to GitHub.
 
               A good commit message is short and specific, like `Fix typo on the book suggestion button`. A simple trick if you're not sure what to write: finish the sentence *"This change will..."*
             imageUrl: /courses/vibe-coding-github-00/vscode-commit.webp
@@ -752,7 +752,7 @@ course:
               Publish alone wouldn't do it: Lovable can only publish what code change has reached it, and a change that was never pushed is still sitting on Dalmie's laptop.
             correctAnswer: 3
         - type: challenge-end
-          title: "Icons hold no mystery for you now ⭐"
+          title: "You swapped your first icon ⭐"
           content:
             description: You found an icon in your code and swapped it.
             nextModule: "**Next challenge:** You've made changes by hand. Now you'll get some help, GitHub Copilot, an AI agent with a free tier living right inside VS Code, for the changes that need more complex code written."
@@ -782,7 +782,7 @@ course:
           title: Sign in and open the chat
           content:
             body: |-
-              Since you've already signed in with your GitHub account, you have access to Copilot, the AI agent. To chat with it, open the **Chat panel**:
+              Since you've already signed in with your GitHub account, you have access to Copilot, the AI agent. If VS Code asks you to set up or turn on AI features, click the **Copilot icon** (bottom right), choose the set-up option, and sign in with GitHub. To chat with it, open the **Chat panel**:
 
               - on the top right in the VS Code window, click the sidebar icon, or
 

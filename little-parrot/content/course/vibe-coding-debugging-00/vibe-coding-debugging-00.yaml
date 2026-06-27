@@ -685,7 +685,7 @@ course:
               *(As a reminder, backend functions are pieces of code that run on the server to handle tasks like saving data, sending emails, or processing payments.)*
 
               **How to access the backend logs:**
-              1. In Lovable, click the **`+` button** next to Preview
+              1. In Lovable, click the **More button** next to Preview
               2. Select the **Cloud** tab
               3. Click **Logs**
               4. Select **Function logs** from the dropdown
@@ -819,7 +819,7 @@ course:
       isFree: false
       skills:
         - Plan Mode
-        - Visual Edits
+        - Preview Toolbar
         - Try to Fix
       description: Master Lovable’s built-in tools to debug your projects. You’ll understand what each one is useful for and how to use them to fix issues faster and keep moving forward.
       completionTime: '15:00'
@@ -831,7 +831,7 @@ course:
               Lovable gives you three distinct **debugging tools**. Using the right one for a specific situation makes bugfixing more effective:
 
               - **Plan mode** – For investigating problems and understanding what's wrong.
-              - **Visual edits** – For fixing how things look (colours, text, spacing).
+              - **Preview toolbar** – For fixing how things look (colours, text, spacing).
               - **'Try to Fix' button** – For quick automated repairs when errors appear.
 
               Let's explore each one in depth so you know exactly **when to reach for which tool**.
@@ -840,12 +840,12 @@ course:
           title: "Plan mode: Your debugging partner"
           content:
             body: |-
-              **Plan mode** or **Plan** transforms Lovable from a code generator into an **investigative partner**. This is your most powerful debugging tool.
+              **Plan mode** transforms Lovable from a code generator into an **investigative partner**. This is your most powerful debugging tool.
 
-              **How to access it:** Look at the bottom of your screen where you type prompts. You'll see a button that says **Plan**. Click it to highlight **Plan in blue**.
+              **How to access it:** Look at the **bottom of your screen** where you type prompts. You'll find a switch between two modes: *Build* and *Plan*. Select **Plan** to enter Plan mode.
 
-              **The key difference:** In **Plan mode**, Lovable **investigates without changing your code** until you explicitly approve or click the **Plan** button again to switch back to **Agent mode** that **writes code**. This makes it safe for investigation, you won't accidentally make things worse while exploring.
-            imageUrl: /courses/vibe-coding-debugging-00/chat-mode-location.png
+              **The key difference:** In **Plan mode**, Lovable **investigates without changing your code**. When you're ready to apply a fix, switch back to **Build mode** (Lovable's default mode that **writes code**). This makes Plan mode safe for investigation, you won't accidentally make things worse while exploring.
+            imageUrl: /courses/vibe-coding-debugging-00/plan-mode.webp
           subtitle: Investigation mode
         - type: text
           title: What Plan mode can do
@@ -858,7 +858,7 @@ course:
               - **Query your database** to check if data exists
               - **Reason through multi-step problems** and explain them
 
-              When you describe an issue, Plan mode creates a step-by-step **investigation plan**. Once you're satisfied with the analysis, an **"Implement the plan"** button appears; clicking it switches to **Agent mode** and applies the fix.
+              When you describe an issue, Plan mode creates a step-by-step **investigation plan**. Once you're satisfied with the analysis, switch to **Build mode** and ask Lovable to implement the plan.
 
               This **"investigate first, fix second"** approach embodies the debugging mindset!
           subtitle: Superpowers for investigation
@@ -892,8 +892,8 @@ course:
             body: |-
               Open **your Lovable project** and try **Plan mode** right now (it will cost one credit):
 
-              1. Click the **Plan** button at the bottom of your screen
-              2. Type: 
+              1. Switch to **Plan** mode using the mode switch at the bottom of your screen
+              2. Type:
               ```
               Explain the architecture of this project to a non-technical person. What are the main components?
               ```
@@ -901,39 +901,34 @@ course:
 
               Notice how it explores without changing anything. That's the beauty of Plan mode: safe investigation.
 
-              When you're done, click **Plan** again to switch back to Agent mode.
+              When you're done, switch back to **Build mode** to continue writing code.
           subtitle: Try it in your own project
         - type: text
-          title: "Visual edits: Point and click"
+          title: "Preview toolbar: Point and click"
           content:
             body: |-
-              **Visual edits** let you click directly on elements in your app preview and change their appearance instantly.
+              For appearance fixes, your best friend is the **preview toolbar**. It sits at the bottom, in your app preview and lets you point at what you want to change instead of describing it in a prompt. Two of its modes are perfect for this:
 
-              **How to access it:**
-              1. Look at the **bottom of your screen** where you type prompts
-              2. Click the **Visual edits** button
-              3. Click on any **element** in your app you want to change
-              4. **Type your prompt** into the text box that appears
+              - **Select elements:** Click a part of your app, then describe the change you want. To select more than one element, hold Command (Mac) or Control (Windows) while you click.
+              - **Edit text inline:** Fix a typo or change wording directly on the page, no prompt needed and it costs no credits.
 
               **Best for:**
               - Changing colours, fonts, sizes
               - Fixing text content
               - Adjusting spacing and layout
               - Quick appearance tweaks
-
-              **Bonus:** To change the text, you just need to click on the paragraph you want to edit in **Visual edits** mode and type the new text. It will cost no credits!
-            imageUrl: /courses/vibe-coding-debugging-00/visual-edit.webp
+            imageUrl: /courses/vibe-coding-debugging-00/preview-toolbar.webp
           subtitle: For appearance issues
         - type: text
-          title: "Visual edits: Static vs dynamic"
+          title: "Preview toolbar: Static vs dynamic"
           content:
             body: |-
-              **Good to know:** Clicking on the text and manually changing it in Visual edits only works on **static elements**.
+              **Good to know:** Editing text inline in the **preview toolbar** only works on **static elements**.
 
               - **Static elements** stay the same for everyone: a logo, a heading that says "Welcome", a button labelled "Submit", a paragraph describing your team.
               - **Dynamic elements** change based on data or user state: a list of books from the database, a user's name after login, a vote count that updates.
 
-              **How to tell:** Click on an element in **Visual edits** mode. If you can't edit the text, it's dynamic.
+              **How to tell:** In the **preview toolbar**, open **Edit text inline** and click a piece of text. If you can't edit it, it's dynamic.
 
               For **dynamic elements**, you have to **prompt Lovable** to change the text.
           subtitle: Know the limitation
@@ -962,15 +957,15 @@ course:
             explanation: Plan mode is useful for investigation. It lets Lovable search files, inspect logs, reason through problems, and explain what is happening without modifying your code until you approve a fix.
             correctAnswer: 1
         - type: quiz-question
-          title: "Quiz: Visual edits limitation"
+          title: "Quiz: Preview toolbar limitation"
           content:
             options:
               - The element is too small to click
               - The element is static
               - The element is dynamic
               - The element is inside a button
-            question: In Visual edits mode, Dalmie clicks on the book titles but can't edit them. Why?
-            explanation: Book titles that come from the database are dynamic elements, they change based on data. Changing the text manually in Visual edits mode only works on static elements like fixed headings or labels.
+            question: Using Edit text inline in the preview toolbar, Dalmie clicks on the book titles but can't edit them. Why?
+            explanation: Book titles that come from the database are dynamic elements, they change based on data. Editing text inline only works on static elements like fixed headings or labels.
             correctAnswer: 2
         - type: quiz-question
           title: "Quiz: Try to Fix"
@@ -993,10 +988,10 @@ course:
           title: You know your debugging toolkit! 🧰
           content:
             nextModule: "**Next challenge:** Sometimes fixing one bug creates another. Learn strategies to escape frustrating bug loops."
-            description: You've learned when to use Plan mode, Visual edits, and Try to Fix.
+            description: You've learned when to use Plan mode, the preview toolbar, and Try to Fix.
             subDescription: |-
               - **Plan mode** for investigation and logic bugs, 
-              - **Visual edits** for appearance changes, 
+              - **Preview toolbar** for appearance changes,
               - **Try to Fix** for clear errors (but only three times!). 
 
               The right tool makes debugging much faster.
@@ -1137,7 +1132,7 @@ course:
           content:
             options:
               - Ask Lovable in Plan mode to investigate the root cause of a broken feature before changing anything
-              - Keep telling Lovable in Agent mode in a harsher tone to fix the issue until it listens and the error disappears
+              - Keep telling Lovable in Build mode in a harsher tone to fix the issue until it listens and the error disappears
               - Start a new project to rewrite the entire app
               - Ignore broken features and ship anyway, nobody will notice
             question: You're stuck in a fix-break loop and no longer understand what's wrong. Which strategy should you try first?
@@ -1391,61 +1386,63 @@ course:
           title: Lovable's security auditor
           content:
             body: |-
-              Lovable has a **built-in security auditor** that checks your app for potential risks. You'll find the results in the **Security** menu.
+              Lovable has a **built-in security auditor** that checks your app for potential risks. You'll find the results in the **Security view**.
 
-              It uses **four automated scanners**, each looking at a different part of your app. Let's walk through what each one does so you know what to expect.
+              It runs two kinds of scan: a **Basic scan** (automatic every time you publish, a quick check of your settings and building blocks) and a **Deep scan** (a more thorough review of your code that you can run on demand).
+
+              Together, these scans look at a few different parts of your app. Let's walk through them so you know what to expect.
             imageUrl: /courses/vibe-coding-debugging-00/find-security-panel.webp
-          subtitle: Four scanners working for you
+          subtitle: Two scans, working for you
         - type: text
-          title: "Pause and try this: Open the Security panel"
+          title: "Pause and try this: Open the Security view"
           content:
             body: |-
-              Before we look at each scanner, take a moment to **see it for yourself**.
+              Before we look at what the auditor checks, take a moment to **see it for yourself**.
 
               1. **Open** your project in Lovable
-              2. Click on the **Security** menu
+              2. Open the **Security view**
               3. **Run** a scan and see what findings come up
 
               Don't worry about fixing anything yet. Just look at the list and notice the **severity labels** (Error, Warning, Info). We'll walk through what each one means in the next steps.
             imageUrl: /courses/vibe-coding-debugging-00/open-security-panel.webp
           subtitle: See it for yourself
         - type: text
-          title: "Scanner 1: Database security check"
+          title: "The scan checks: Your database setup"
           content:
             body: |-
-              The first scanner looks at your **database setup** as a whole. It reviews how your tables are structured and whether the overall security configuration is solid.
+              One thing the auditor looks at is your **database setup** as a whole. It reviews how your tables are structured and whether the overall security configuration is solid.
 
               Think of it as checking that the building itself is sturdy: are the walls solid, the foundation secure, and the general structure safe?
           subtitle: Is your database set up safely?
         - type: text
-          title: "Scanner 2: RLS analysis"
+          title: "The scan checks: Access rules (RLS)"
           content:
             body: |-
-              The second scanner zooms in on **Row Level Security** (RLS) policies. We'll cover RLS in detail soon, but in short: RLS controls who can see and change the data in your database tables.
+              The auditor also zooms in on **Row Level Security** (RLS) policies. We'll cover RLS in detail soon, but in short: RLS controls who can see and change the data in your database tables.
 
-              While the first scanner checks the building as a whole, this one checks whether each room has a lock on the door. 
-              
+              If checking your database setup is like checking the building as a whole, this is like checking whether each room has a lock on the door.
+
               It reviews the access rules on each table and flags any that are missing protection.
           subtitle: Are the right people accessing the right data?
         - type: text
-          title: "Scanner 3: Code security review"
+          title: "The scan checks: Your code"
           content:
             body: |-
-              The third scanner reads through your **application code** and looks for common security mistakes. For example:
+              The **deep scan** reads through your **application code** and looks for common security mistakes. For example:
 
               - Are there any secret keys or passwords accidentally left in the code?
               - Could someone inject harmful content through a form or input field?
               - Are there places where user data isn't handled safely?
 
-              You don't need to understand the technical details of these issues. If this scanner finds something, Lovable will explain what's wrong and often offer to fix it for you.
+              You don't need to understand the technical details of these issues. If the scan finds something, Lovable will explain what's wrong and often offer to fix it for you.
           subtitle: Does your code have security gaps?
         - type: text
-          title: "Scanner 4: Dependency audit"
+          title: "The scan checks: Your building blocks"
           content:
             body: |-
               Your app is built with many small building blocks created by other developers. These are called **dependencies** (think of them like ingredients in a recipe).
 
-              Sometimes a **security flaw** is discovered in one of these building blocks. The fourth scanner checks whether any of your app's dependencies have **known vulnerabilities**, meaning security issues that have already been identified and reported.
+              Sometimes a **security flaw** is discovered in one of these building blocks. The security auditor checks whether any of your app's dependencies have **known vulnerabilities**, meaning security issues that have already been identified and reported.
 
               If it finds one, Lovable can usually **update the affected dependency** to a safer version.
 
@@ -1509,7 +1506,7 @@ course:
 
               The good news: Lovable can fix most RLS issues for you.
 
-              **Step 1:** In the security findings, open the RLS warning and ask Lovable to `Add Row Level Security policies` in the **inline chat** within the Security view **or** click the **Try to fix all** button to tackle all the identified issues.
+              **Step 1:** In the security findings, open the RLS warning and ask Lovable to `Add Row Level Security policies`, **or** click the **Try to fix all** button to tackle all the identified issues at once.
 
               **Step 2:** Lovable will **add policies** that typically restrict each user to only see and modify their own data.
 
@@ -1557,19 +1554,17 @@ course:
           title: When a warning feels too technical
           content:
             body: |-
-              If a warning feels too technical or unfamiliar, you can always prompt Lovable using the **inline chat within the Security view** to ask for guidance for **free**:
+              If a warning feels too technical or unfamiliar, you don't have to figure it out alone. Open the finding and click **Reference in chat**. This pulls that specific warning into the chat, so Lovable knows exactly which issue you mean.
+
+              From there you can **ask questions about it or give Lovable more context**. For example:
 
               ```
-              Explain what this means and suggest how to fix it. Don't make changes to the user experience.
+              Explain what this security finding means and suggest how to fix it. Don't make changes to the user experience.
               ```
 
-              This way, Lovable investigates without costing you credits. 
-              
-              **Note:** If you ask the same question in the main chat, it will cost credits. 
-              
-              So the **Security view's inline chat** is a great place to get free explanations and guidance on security issues.
-            imageUrl: /courses/vibe-coding-debugging-00/zero-credits-used.webp
-          subtitle: Let Lovable explain it for free
+              Referencing the warning first means you understand the risk before any code changes happen, and you stay in control of what gets touched.
+            imageUrl: /courses/vibe-coding-debugging-00/reference-in-chat.webp
+          subtitle: Reference the warning and ask Lovable
         - type: text
           title: Your security decision framework
           content:
@@ -1578,7 +1573,7 @@ course:
 
               **Step 1: Let Lovable try first.** Click the **Try to fix all** button to let Lovable attempt automatic fixes. You could do this up to 3 times. Sometimes new security issues appear in subsequent rounds.
 
-              **Step 2: Ask for guidance on what's left.** If any issues remain after 3 rounds, go through them one by one. Click on the top issue and **give Lovable some context in the issue's inline chat**:
+              **Step 2: Ask for guidance on what's left.** If any issues remain after 3 rounds, go through them one by one. Open the top issue and **ask Lovable about it, giving it some context**:
               - **Who** uses your app? (just you, your team, or the public)
               - **What** is your app about?
               - **What type** of app is it? (a prototype, a hobby project, or a production app)
@@ -1588,7 +1583,6 @@ course:
               **Step 3: Decide.** Based on Lovable's advice, choose whether to fix or ignore each remaining issue. There's no single right answer here. **It depends on your app and your users.**
 
               **That's it!** No need to memorise long checklists. This three-step approach works for any security finding you'll encounter.
-            imageUrl: /courses/vibe-coding-debugging-00/inline-chat-in-security-view.webp
           subtitle: A simple process for any security finding
         - type: reflection
           title: "Reflection: Your app's security context"
@@ -1610,7 +1604,7 @@ course:
         - type: quiz-question
           title: "Quiz: Asking for guidance"
           content:
-            question: After clicking "Try to fix all" three times, 2 warnings remain. What context should you share with Lovable in the inline chat?
+            question: After clicking "Try to fix all" three times, 2 warnings remain. What context should you share with Lovable?
             options:
               - Your Lovable password and API keys for connected services
               - Screenshots of every page in your app
@@ -1636,7 +1630,7 @@ course:
 
               ✓ **Investigation techniques:** Browser Console, Network tab, Lovable Cloud logs, and database checking.
 
-              ✓ **Lovable's toolkit:** Plan mode for investigation, Visual edits for appearance, and Try to Fix for clear errors.
+              ✓ **Lovable's toolkit:** Plan mode for investigation, the preview toolbar for appearance, and Try to Fix for clear errors.
 
               ✓ **Escape strategies:** Revert, compare versions, explain before fixing, isolate problems, and know when to start fresh.
 
