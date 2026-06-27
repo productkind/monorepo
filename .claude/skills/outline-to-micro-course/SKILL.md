@@ -82,6 +82,8 @@ What the user sees: the **final course plus a short summary** of what the critic
 
 **Define unfamiliar terms inline.** If a concept is mentioned before its dedicated challenge (e.g., "directory submissions" in Challenge 1 that are taught in Challenge 5), add a brief inline explanation so the learner isn't confused. Don't assume they'll know what it means because it's covered later.
 
+**Teach real terms, don't dumb them down.** When a technical term is the right word (e.g. *static* / *dynamic*, *commit*, *localhost*, *hardcode*), teach it with a short plain-language definition on first use rather than swapping it for a softer paraphrase. The audience is non-technical but capable, and building real builder vocabulary is part of the value. Defining the term inline is the goal, not avoiding it.
+
 **Introduce a reassuring analogy after the concept it explains, not before.** If you compare a new idea to something familiar (e.g., version control to a document's edit history in Google Docs), make sure the learner already knows what the new idea is. An analogy that arrives before the concept reads as coming out of nowhere, and the learner won't see why you're mentioning it.
 
 **Examples must model best practice.** A worked example should never demonstrate an anti-pattern in passing, because learners copy what they see. If you show a UI change, change the shared style once rather than recolouring each element; if you show a workflow, show the safe version. The "how Dalmie did it" example is teaching the method, not just the result.
@@ -196,6 +198,7 @@ Micro-course content should follow these principles to ensure it's engaging, eff
 **Quiz answer formatting:**
 - Keep all options similar in length. If the correct answer is noticeably longer than the others, the learner picks it without thinking.
 - Prefer scenario-based questions ("Your data shows 70% drop-off. What should you do next?") over recognition questions ("What can X help you spot?"). Scenarios force the learner to think through a real decision.
+- **Quizzes don't need the running persona.** A learner-centred "you" scenario ("You're stuck in a fix-break loop, what do you do?") is preferred and puts the learner in the driver's seat. Don't force the course's persona (e.g. Dalmie) into every quiz; keep the persona for the running example and text steps, and reserve "apply to your own product" for the end-of-challenge high-effort step.
 
 **Fail indicators:**
 - All interactive steps are grouped at the end of the challenge

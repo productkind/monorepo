@@ -115,6 +115,10 @@ Invite self-assessment:
 
 **Explain jargon when introduced** – "MVP (Minimum Viable Product)" on first use, then "MVP" thereafter.
 
+**Distinguish AI tool types** – Say "chat assistant" for ChatGPT and Claude.ai (you copy the answer out) and "AI agent" for Claude Code and Codex (it acts in your files and shows the changes). Avoid "chat AI" and "agentic". On first mention, pair the label with a plain description.
+
+**Frame value as building your idea with AI, not becoming a developer** – Lead with the learner's idea or business outcome. "Like a developer" as a borrowed workflow is fine and can add excitement, but positioning a developer or engineer career or identity as the goal is not. Avoid "no code needed".
+
 **Prefer active voice** – "You'll learn" not "This will teach you"
 
 **Keep sentences accessible** – Short to medium length. One idea per sentence for complex concepts.
@@ -123,7 +127,7 @@ Invite self-assessment:
 
 **Refrain from using em dashes (—)** – Avoid using em dashes for more natural language.
 
-**Avoid AI buzzwords** – "why it matters", "that matters", "here's the thing", "this one's for you", "Not X, but Y", "It's not... it's...", "X isn't... it's...", "made a real difference", "genuinely" are off-limits.
+**Avoid AI buzzwords** – "why it matters", "that matters", "here's the thing", "this one's for you", "Not X, but Y", "from X to Y" (e.g. "go from 'I can't' to 'I just did'"), "It's not... it's...", "X isn't... it's...", "made a real difference", "genuinely" are off-limits.
 
 **Avoid "quietly" as a signifier** – Don't editorialise with "quietly" (e.g. "quietly rewrites", "quietly changed"). State the action plainly.
 
