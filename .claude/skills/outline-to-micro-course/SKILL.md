@@ -3,6 +3,29 @@ name: outline-to-micro-course
 description: Use this checklist when generating micro-course content from an outline. Every course must meet these criteria before being considered complete.
 ---
 
+## Generation Loop (run this every time)
+
+A drafted micro-course is never returned to the user until it has been through tool research up front and an independent critic gate at the end. One agent writing hundreds of lines of YAML cannot also reliably hold every rule in this skill, and self-review misses what fresh eyes catch. So facts are gathered before generation, and the writer and the judges are different agents.
+
+1. **Research the tools first.** Before writing any content, spawn the `course-tool-researcher` agent (Agent tool) and give it the outline (or its path) and the course folder. It reads the outline's **Verification handoff** list, checks every tool the course teaches against current documentation, and writes `<course-folder>/<course-name>-tool-facts.md`. Wait for it. If it flags the course's core premise as at risk, surface that to the user and agree a reframe **before** generating, do not generate the undercut version.
+
+2. **Generate** the full course using this skill's checklist **and the facts sheet as ground truth** for every tool step (exact labels, prerequisites, step order, costs). Still run "Verify Techniques Before Generating" and the self-review pass below, the critics are a second net, not a replacement.
+
+3. **Critique with fresh eyes.** Spawn all three critic agents in parallel (one message, three Agent tool calls), do not show the draft to the user yet:
+   - `course-pedagogy-critic`: pass the course file and the outline.
+   - `course-language-critic`: pass the course file.
+   - `course-tool-accuracy-critic`: pass the course file and the facts sheet path.
+
+4. **Read every verdict.**
+   - **All three PASS** → show the user the final course, with a short note on what each critic checked.
+   - **Any NEEDS REVISION** → apply every revision brief (and add any confirmed facts the tool-accuracy critic surfaced to the facts sheet), then re-run the critics that failed on the new draft. Repeat, up to **3 rounds**.
+
+5. **After 3 rounds**, if issues remain, show the best draft and name the unresolved items honestly, including anything from a critic's "To verify" list. Never hide them or ship around them.
+
+What the user sees: the **final course plus a short summary** of what the critics flagged and how it was resolved, and any facts they still need to verify, not every round, unless they ask to see the drafts.
+
+---
+
 ## Micro-course structure
 - Each micro-course is made up of challenges.
 - Each challenge is made up of steps.

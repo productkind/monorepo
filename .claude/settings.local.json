@@ -102,7 +102,21 @@
       "WebFetch(domain:producthunt.com)",
       "WebFetch(domain:docs.google.com)",
       "WebFetch(domain:doc-04-1s-sheets.googleusercontent.com)",
-      "WebFetch(domain:productkind.substack.com)"
+      "WebFetch(domain:productkind.substack.com)",
+      "WebFetch(domain:www.nngroup.com)",
+      "WebFetch(domain:www.litmus.com)",
+      "WebFetch(domain:campaigncleaner.com)",
+      "WebFetch(domain:www.gov.uk)",
+      "WebFetch(domain:www.searchenginejournal.com)",
+      "WebFetch(domain:baymard.com)",
+      "WebFetch(domain:www.campaignmonitor.com)",
+      "WebFetch(domain:m3.material.io)",
+      "WebFetch(domain:guidance.publishing.service.gov.uk)",
+      "WebFetch(domain:readabilityguidelines.co.uk)",
+      "WebFetch(domain:www.w3.org)",
+      "WebFetch(domain:www.emailonacid.com)",
+      "WebFetch(domain:www.wordstream.com)",
+      "WebFetch(domain:code.visualstudio.com)"
     ],
     "deny": [],
     "ask": []
