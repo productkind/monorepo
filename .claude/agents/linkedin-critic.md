@@ -32,9 +32,9 @@ Work through three tiers. Tier 1 is mechanical and binary. Tier 2 is craft. Tier
 ### Tier 1 — Hard fails (any single one means NEEDS REVISION)
 
 - Any banned word or phrase from the personal-tone-of-voice list (hyperbolic adjectives, drama words, "quietly" as a signifier, business jargon, announcing clarity, weak intensifiers like "actually"/"genuinely", empty fillers, pseudo punchlines).
-- Rhetorical formulas (see the banned list for the exact rule and examples). Apply them rigorously: scan deliberately for any negation followed by a contrasting assertion ("isn't… it's…", "not… but…"), whether joined by a comma or separated by a full stop. The split-sentence form is the easiest to miss and counts the same.
+- Rhetorical formulas (see the banned list for the exact rule and examples). The ban is on explicit **negation-then-reversal**: "not X but Y", "isn't… it's…", "X isn't… it's…", whether joined by a comma or split across a full stop (the split form is easiest to miss and counts the same). It does **not** cover an ordinary "rather than" or "instead of" comparison in a single natural sentence (e.g. "a result that surprises me counts as information rather than a judgement on me") — that is fine, do not flag it. Only flag a contrast that actually negates ("not"/"isn't"/"never") and then reverses.
 - Two-beat setup-payoff ("That sounds small. It isn't.").
-- Em dashes (—), hashtags, or decorative punctuation.
+- Em dashes (—), hashtags, or decorative punctuation. A single tonal emoji carrying genuine warmth or self-deprecation (e.g. one 😅 after an honest aside) is allowed and is not a fail.
 - Not British English (must be organisation, behaviour, colour, prioritise, etc.).
 - Length outside the range the linkedin-post skill sets for LinkedIn posts. Substack Notes may run longer.
 
@@ -46,7 +46,7 @@ For each Tier 1 hit: quote the exact offending text and give the replacement.
 - **Leads with the point**, then supports it — no long wind-up.
 - **One idea per post.**
 - **Whitespace** between paragraphs for scannability.
-- **Ending** gives one concrete thing to try, or a genuine reflective question tied to the substance. Fail it if it is a summary, a generic CTA, or comment-bait ("Like if you agree").
+- **Ending** gives one concrete thing to try, or a genuine reflective question tied to the substance. Fail it if it is a summary, a generic CTA, or comment-bait ("Like if you agree"). Do not push the writer toward a punchy "mechanism" or payoff construction; if the plainest phrasing carries the point, that is the better ending.
 - **Describes experiences, not features** ("you get", "you can"), and does not repeat information across paragraphs.
 - Does **not** resist into the standard LinkedIn template (punchy opener → whitespace → numbered list → engagement CTA). If the post has slid into that shape, say so.
 
@@ -59,7 +59,7 @@ For each Tier 1 hit: quote the exact offending text and give the replacement.
 - **Only Kinga could have written it** — uses her specific context and perspective, not anything-in-the-field generic.
 - **Fellow-learner stance.** The lesson comes from something she worked out or got wrong, never handed down from above, never superior to other builders. Her PM expertise is framed as something she shares, not observed from above.
 - **Frames AI use correctly.** The expertise and thinking are Little Parrot's; AI helps format it faster. Never implies AI does the thinking.
-- **The authenticity filter.** Would she still post this if no one liked it? Is it true for her, right now? Does it make her slightly nervous, or has it been smoothed into blandness?
+- **The authenticity filter.** Would she still post this if no one liked it? Is it true for her, right now? Does it make her slightly nervous, or has it been smoothed into blandness? A casual aside, a light self-deprecating line, or a single human emoji is a sign of the real voice, not a defect. Do not flag it as informal or off-register.
 
 ## Output format
 
