@@ -66,13 +66,13 @@ I've spent years explaining the how of my work and wondering why it left people 
 
 One of the most useful ideas I heard at last week's product conferences came from someone who isn't in product at all. Brian Cox, the physicist, was talking at #mtpcon about how we learn.
 
-He said something that reframed learning for me: if you think you're right about everything, there's no possibility of progress. Progress is reaching a deeper understanding than you had before, and you can't get there while you're certain you're already right.
+He said that if you think you're right about everything, there's no possibility of progress. Progress is reaching a deeper understanding than you had before, and you can't get there unless you stay open to new information.
 
-So the goal is to deepen your own understanding, rather than to score well or win the argument. Take an explanation, he said, then go to AI and other sources and work at it until you have internalised it and found your own way to understand it. Used like that, AI helps you understand instead of handing you an answer you never sit with. He is relaxed about being corrected, too: a physicist once corrected him on live radio, and they ended up friends over dinner.
+I think about that a lot, because the work I do corrects me all the time. I've shipped features no one used. I've sat in usability tests sure a flow was obvious, then watched the user get completely lost. I've celebrated solving a problem, only to learn our users never had that exact pain point.
 
-In product, you get corrected all the time. You ship a feature nobody uses. You assume people will understand a new flow, then you realise during a usability test that they are completely lost. You celebrate solving a problem, then learn your users never had that exact problem.
+So I'm trying to hold a learning mindset, where a result that surprises me counts as information rather than a judgement on me. Well, it's not that easy. 😅
 
-So I'm trying to hold a learning mindset, where a result that surprises me counts as information rather than a verdict on me. I don't always manage it. But being wrong and then understanding why is how progress happens, in physics and in product.
+The habit that helps: at the end of every week we reflect on our work. We discuss what worked, what to improve, and what we learned. It's a simple retro, but holding ourselves to it every week helps us identify the next experiment to run.
 
 ---
 
