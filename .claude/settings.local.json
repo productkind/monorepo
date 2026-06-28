@@ -116,7 +116,21 @@
       "WebFetch(domain:www.w3.org)",
       "WebFetch(domain:www.emailonacid.com)",
       "WebFetch(domain:www.wordstream.com)",
-      "WebFetch(domain:code.visualstudio.com)"
+      "WebFetch(domain:code.visualstudio.com)",
+      "WebFetch(domain:www.macrumors.com)",
+      "WebFetch(domain:appleinsider.com)",
+      "WebFetch(domain:help.openai.com)",
+      "WebFetch(domain:andrewford.co.nz)",
+      "WebFetch(domain:matthewcassinelli.com)",
+      "WebFetch(domain:support.apple.com)",
+      "WebFetch(domain:community.openai.com)",
+      "WebFetch(domain:www.cultofmac.com)",
+      "WebFetch(domain:brandur.org)",
+      "WebFetch(domain:www.macstories.net)",
+      "WebFetch(domain:www.imore.com)",
+      "WebFetch(domain:www.yahoo.com)",
+      "WebFetch(domain:tech.yahoo.com)",
+      "WebFetch(domain:gadgets.beebom.com)"
     ],
     "deny": [],
     "ask": []

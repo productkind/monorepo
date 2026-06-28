@@ -9,7 +9,7 @@ A drafted micro-course is never returned to the user until it has been through t
 
 1. **Research the tools first.** Before writing any content, spawn the `course-tool-researcher` agent (Agent tool) and give it the outline (or its path) and the course folder. It reads the outline's **Verification handoff** list, checks every tool the course teaches against current documentation, and writes `<course-folder>/<course-name>-tool-facts.md`. Wait for it. If it flags the course's core premise as at risk, surface that to the user and agree a reframe **before** generating, do not generate the undercut version.
 
-2. **Generate** the full course using this skill's checklist **and the facts sheet as ground truth** for every tool step (exact labels, prerequisites, step order, costs). Still run "Verify Techniques Before Generating" and the self-review pass below, the critics are a second net, not a replacement.
+2. **Generate** the full course using this skill's checklist **and the facts sheet as ground truth** for every tool step (exact labels, prerequisites, step order, costs). Still run "Verify Techniques Before Generating" and the self-review pass below, the critics are a second net, not a replacement. **Validate that the YAML parses (first item of the self-review) before spawning the critics** — they review content, not syntax, so a non-parsing file will sail past them and reach the user broken.
 
 3. **Critique with fresh eyes.** Spawn all three critic agents in parallel (one message, three Agent tool calls), do not show the draft to the user yet:
    - `course-pedagogy-critic`: pass the course file and the outline.
@@ -328,6 +328,7 @@ This step catches misaligned or unreliable techniques before they're baked into 
 
 After generating the full course, do a self-review pass before presenting it. Check each rule in this skill file against the output:
 
+- [ ] **Does the YAML parse?** Validate the file before anything else: run `python3 -c "import yaml; yaml.safe_load(open('<path>'))"` (or any YAML parser) and confirm it loads with no error. A file that doesn't parse is broken no matter how good the content is, and the critics read content, not syntax, so this gate is yours. The most common break is a **single-line value containing a colon-and-space** (e.g. `explanation: The prompt keys off one thing for events: a date or time.`), which YAML reads as a nested mapping and rejects with "mapping values are not allowed here". Fix by wrapping the whole value in double quotes (`explanation: "...for events: a date or time."`), or convert it to a `|-` block scalar. Note: colons inside `|-` block scalars (step bodies, transcripts, prompt code blocks, log timestamps like `13:10`) are always safe and need no escaping; the rule applies only to single-line plain scalars such as `title`, `subtitle`, `description`, `question`, `explanation`, `nextModule`, `subDescription`, and list items. Re-run the parser after fixing until it loads clean.
 - [ ] Are quizzes distributed throughout each challenge, not clumped at the end?
 - [ ] Does every quiz test judgement or application, not recall of the preceding step?
 - [ ] Are all quiz answer options similar in length (correct answer not visually obvious)?
