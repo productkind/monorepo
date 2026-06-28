@@ -94,6 +94,8 @@ When was the last time you had a great day at work?
 
 ## Post 7 — April Dunford: half your deals are lost to "no decision"
 
+Angle: if you're building a business, it's important to have a point of view on the future.
+
 April Dunford's talk at mtpcon gave me one of the most interesting statistics I heard all week: roughly half of B2B deals now end in no decision. The buyer doesn't choose a competitor, they choose no one at all.
 
 Her explanation: in a market where every product says "AI-powered", buyers are scared and confused, and everything looks the same. When you can't tell the options apart, the safest move is to do nothing.
