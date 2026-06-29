@@ -116,6 +116,8 @@ What the user sees: the **final course plus a short summary** of what the critic
 
 **Style every text step for scanning.** Use **bold** for the key concept or benefit in each paragraph, and *italics* for UI labels, button names, and short examples. Bold technical terms on first use. Don't leave flat paragraphs with no emphasis, and don't over-bold either: one or two emphases per paragraph, so a learner skimming the bold still gets the gist. Quiz options stay unstyled (formatting shouldn't hint at the answer).
 
+**Style video transcripts the same way.** A video step's `transcript` is not just a backup caption: learners can choose to read it instead of watching, so it must carry markdown emphasis on its key points exactly like a text step. **Bold** the main beat of each paragraph (and *italics* for UI labels), one or two emphases per paragraph, so a learner reading rather than watching gets the same beats at a glance. A flat, unformatted transcript is a fail.
+
 **Don't assume which option the learner will choose.** When teaching decision frameworks with multiple paths (e.g., pricing models, trial types), keep the guidance flexible so it applies regardless of which path the learner takes. Don't write follow-up steps that only make sense for one option.
 
 **Anchor models and categories with real products.** When introducing models, categories, or abstract concepts, include a well-known product as an example so the learner can picture it. Only include examples you've verified are accurate. If you can't find a verified example, leave it out rather than guessing.
@@ -337,6 +339,7 @@ After generating the full course, do a self-review pass before presenting it. Ch
 - [ ] Is every text step short enough to read without scrolling? If it has 3+ concepts, is it split?
 - [ ] Where a step was shortened, was it done by splitting it into two or cutting genuine fluff, never by compressing away the explanations that tell the learner what is happening and why? (The reassuring "what's going on here" detail is the value, not filler.)
 - [ ] Is every text step styled for scanning (bold key concept, italic UI labels/examples), without over-bolding?
+- [ ] Does every video `transcript` carry markdown emphasis on its key points (so a learner can read instead of watch), not sit as a flat unformatted block?
 - [ ] Do the comics set up the problem from the learner's pain, without bashing the tool?
 - [ ] Do the description, learning outcomes, and course-end recap avoid claiming skills the course doesn't actually teach?
 - [ ] Does the first step after comics introduce the course outcomes, not jump into teaching?
