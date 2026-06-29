@@ -42,7 +42,7 @@ Body design can't save an email no one opens. Three things drive the open, none 
 - **Stop body text leaking into the preview** by following the preheader with a hidden spacer (e.g. a run of `&nbsp;&zwnj;`).
 
 ### Sender name
-- **Keep it stable and recognisable.** "Little Parrot" for system / transactional mail, "Kinga at Little Parrot" for warm relationship and marketing sends. Never `noreply@` or `info@`.
+- **Keep it stable and recognisable.** "Little Parrot". Never `noreply@` or `info@`.
 
 ### A note on measuring opens
 Apple Mail Privacy Protection loads the tracking pixel on delivery whether or not the email is read, so raw open rate is inflated (often by 15 to 35%) and is no longer a trustworthy absolute number. Treat open rate as a rough same-list trend only, and judge whether an email actually worked by **clicks and course progress**. Don't over-engineer subject lines chasing an inflated metric.
@@ -51,7 +51,10 @@ Apple Mail Privacy Protection loads the tracking pixel on delivery whether or no
 
 ### Email Client Compatibility
 - **Never use flexbox** (`display: flex`). Email clients (Gmail, Outlook) don't support it. Use `<table>` layouts instead for side-by-side content.
+- **Any element with `width: 100%` and horizontal padding must also have `box-sizing: border-box`.** The reset (`* { margin: 0; padding: 0; }`) doesn't set box-sizing, so it defaults to `content-box`, where `width: 100%` plus padding renders *wider* than the viewport and causes horizontal scroll in the browser. This bites the full-width page wrapper in particular (`.email-wrapper { width: 100%; padding: 32px 16px; box-sizing: border-box; }`).
 - **Inline styles on table cells**. Don't rely on CSS classes for table-based layouts since some clients strip `<style>` blocks.
+- **Give `<a>` links an explicit (inline) `font-size`.** Gmail does not pass an *inherited* font-size down to link elements, so a link that relies on its parent's size renders correctly in the browser but shrinks in Gmail. Set the size on the anchor itself (e.g. `style="font-size: 16px;"`), don't lean on inheritance from a `<style>` rule. (Paragraph text is fine because it's sized by a rule that targets it directly.)
+- **Every `<img>` needs explicit `width` and `height` attributes**, even with responsive `width: 100%; height: auto` CSS. The Gmail iOS app measures the email's total height once, before remote images load; an image with no declared dimensions reserves zero height until it downloads, then pushes everything below it (often the footer and unsubscribe link) past the locked-in height, where it gets clipped — with no "[Message clipped]" notice. Set the attributes to the image's real pixel ratio (the CSS still scales it). As a belt-and-braces measure, end the email with a small bottom-buffer spacer (e.g. `<div style="height: 32px; line-height: 32px; font-size: 1px;">&nbsp;</div>`) so any residual shift from webfonts/logo never eats the unsubscribe link.
 - **Self-hosted images only**. Don't reference third-party icon services. Social icons are hosted at `https://littleparrot.app/icon-linkedin.png` and `https://littleparrot.app/icon-instagram.png`.
 - **CSS gradients need a solid fallback.** Outlook (Word engine) ignores `linear-gradient`. Wherever a gradient carries meaning (e.g. an accent bar that would otherwise vanish), set a solid `background-color` *first*, then the gradient, so it degrades to a visible colour: `background-color: #fdd825; background: linear-gradient(180deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70);`
 
@@ -77,10 +80,11 @@ Every email follows this structure:
 Set a clear `<title>` that mirrors the subject line (e.g. "Your certificate is ready") — it shows as the browser/preview title.
 
 ### URL Conventions
-- Add `?ref=<email-name>-email` to all littleparrot.app links for tracking
+- Add `?utm_source=<email-name>` to all littleparrot.app links for tracking. We track on `utm_source` because PostHog picks it up directly (it's easier to track than a custom `ref` param).
+- **The monthly update email always uses `utm_source=monthly-email`.** (Don't date it per month; the same constant value lets the monthly series be tracked as one source over time.)
 - Add `&auth=login` to links that require authentication (Nest pages, Toolkit, courses)
 - Add `&force_auth=true` for personal pages that must re-authenticate the recipient (e.g. a personal certificate page)
-- Use descriptive ref values: `reg-welcome-email`, `sub-cancelled-email`, `ai-summit-raffle-email`. Give a distinct ref to each send of a related pair so they're separable in analytics (e.g. `certificate-email` vs `certificates-email`)
+- Use descriptive `utm_source` values for other emails: `reg-welcome`, `sub-cancelled`, `ai-summit-raffle`. Give a distinct value to each send of a related pair so they're separable in analytics (e.g. `certificate` vs `certificates`)
 
 ### Brand Styling (design tokens)
 The brand is a hard-edged "sticker" look: black outlines, drop shadows, and a rainbow gradient.
@@ -94,13 +98,14 @@ Keep one reading size, one step up for headers, one step down for fine print. Do
 
 | Element | Size |
 |---|---|
-| Greeting + body + highlight box + sign-off | 16px |
-| Section headers (`h2`) | 18px |
+| Greeting + body + section paragraphs + highlight box + CTA button label | 17px |
+| Sign-off | 16px |
+| Section headers (`h2`) | 18px (section-heavy digests like the monthly update go larger, ~22px, for skimmable anchors) |
 | Fine-print notes (e.g. "you can find it later…") | 14px |
 | Footer | 12px |
 
 Readability rules on top of the scale:
-- **Body never below 14px, and 16px on mobile** (bump via media query). Use `rem` so it respects the reader's font settings.
+- **Primary reading text is 17px**, and it carries to mobile too — don't shrink it on small screens. 16px is a floor, not a target: it reads small in Inter (a smallish x-height) and pinches an audience that may not have young eyes. Never below 14px anywhere.
 - **Line-height ~1.5** on body, left-aligned (never justified, which creates uneven gaps that hurt readability).
 - **Contrast (WCAG AA):** body text at least 4.5:1 against its background; large text (≥18px, or ≥14px bold) and button fills / borders at least 3:1. The muted body grey passes; re-check it whenever text sits on a gradient tint.
 - **Text over the rainbow gradient or a tint** must clear contrast against both the lightest and darkest point it covers. Put live text on a solid panel and keep the gradient as a decorative frame; don't run body text straight over it.
@@ -159,8 +164,9 @@ When relevant, always link to:
 ## Tone and Copy
 
 ### Voice
-- Warm and direct, like a message from a friend who runs a small company
-- British English throughout (organise, colour, behaviour)
+- **Follow the brand voice defined in `productkind-tone`** (warm, kind, grounded, plain-spoken) rather than re-deriving it here — this section only adds what's email-specific.
+- **Open on a real, specific moment, not an abstract value statement.** "We kept hearing you were running out of Lovable credits too quickly" beats "Everything we shipped this month helps you build with confidence." Start from something true you observed or heard.
+- British English throughout (organise, colour, behaviour); never use em dashes (—).
 - Sign off as "Kinga, Tamas & Little Parrot" with a 💛
 
 ### Do
@@ -187,6 +193,11 @@ When relevant, always link to:
 - **Sentences ~20 words or fewer, one idea each.** Active voice. Cut a first draft by about half.
 - **Define a technical term in plain words on first use, in the same sentence** ("an AI agent, a tool that can take actions for you like Claude Code"). Prefer the plain word where one exists. Follow the house terminology: "chat assistant" (ChatGPT, Claude.ai) vs "AI agent" (Claude Code, Codex), and avoid "agentic".
 - **Concrete over vague:** "takes about 10 minutes" beats "quick".
+
+### Make every word earn its keep
+- **After drafting, delete any sentence that could go without losing meaning or warmth.** Usual culprits: throat-clearing openers, sentences that restate the header, and abstract value statements ("adds real value", "build with confidence"). If you can't point to the concrete thing a sentence gives the reader, cut it.
+- **Name the concrete payoff, not the abstraction** — money saved, time, visibility, a named skill. "A typo fix shouldn't cost you credits" beats "spend your credits where they count."
+- **Section headers name a concrete benefit or the real problem solved, never a vague principle.** "Stop wasting credits on small fixes" beats "Spend your credits where they count." Front-load the specific noun.
 
 ### Conversion Emails
 - "No pressure" tone. Encouraging, not pushy.
