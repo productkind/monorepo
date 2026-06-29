@@ -18,7 +18,7 @@ course:
         - AI Prompting
         - Voice Capture
       description: Build a shortcut that turns a minute of talking into a clear, sorted list of your events, to-dos and notes.
-      completionTime: '10:00'
+      completionTime: '8:00'
       steps:
         - type: comic
           content:
@@ -49,29 +49,6 @@ course:
               A brightly coloured bird (called Little Parrot) flutters in cheerfully beside Dalmie.
               Little Parrot says, "What if you could just say it out loud, and your phone sorted it all
               for you?" Dalmie looks up, hopeful for the first time.
-        - type: text
-          title: What you'll walk away with
-          subtitle: Two shortcuts, built by you
-          content:
-            body: |-
-              Your brain is holding too much. The dentist, the nappies, the thing the health visitor said, the message you still owe your mum. It all lives in your head, and your hands are usually full.
-
-              In this short course you'll build **two voice shortcuts** on your iPhone:
-
-              - **A Brain Dump** that takes a minute of talking and sorts it into your **events**, **to-dos** and **notes**.
-              - **A Baby Log** that turns "she fed for twenty minutes and went down grumpy" into one tidy line, stamped with the time, you can scroll back through.
-
-              You talk. The phone sorts. That's the whole idea.
-        - type: text
-          title: "You don't need to be techy, and there's nothing to buy"
-          subtitle: Clearing the worry first
-          content:
-            body: |-
-              **Building a shortcut is more approachable than it sounds.** You'll tap a few things together in an app that's already on your phone, like stacking building blocks. No code, nothing to download, and **no subscription**.
-
-              The smoothest version uses a feature called **Apple Intelligence**, which is built into the iPhone 15 Pro and 15 Pro Max, every iPhone 16, the iPhone 17 line, and iPhone Air. If your iPhone is older, you can still do everything in this course using the free **ChatGPT app**, with a few extra taps. We'll point out where the paths differ.
-
-              Either way, this runs on a **free ChatGPT account**, and you don't even need an account to get started.
         - type: video
           title: Hand the mental load to your phone
           content:
@@ -79,33 +56,37 @@ course:
             vimeoId: ''
             youtubeId: ''
             transcript: |-
-              If you're a new mum, you already know the feeling. There's a running list in your head that never switches off, and it gets longer at the worst possible times. At 3am, mid-feed, with both hands full.
+              If you're a new mum, you already know the feeling. There's a **running list in your head that never switches off**. You've got more things to do, but way less time. And most of the time, both of your hands are full.
 
-              Your phone can hold that list for you. It lives in a shortcut you build once and then forget about, rather than a fiddly app you have to set up and tend to.
+              **Your phone can hold, and sort that list for you.** It lives in a shortcut you build once and then forget about, rather than a fiddly system you have to set up and tend to.
 
-              In this course you'll build two of them. The first lets you talk for a minute about everything on your mind, and your phone uses AI to sort it into your events, your to-dos and your notes. The second lets you say what your baby just did, and saves it as one tidy line in a running log.
+              In this course you'll build **two** of them. The first lets you **talk** about everything on your mind, and your phone uses AI to sort it into your events, your to-dos and your notes. The second lets you **log the things you keep track of**, how much your baby fed, the nappies, the naps, their weight, and saves each as one tidy line in a running record.
 
-              You won't become a developer. You'll become someone who offloads the mental load by voice, in the seconds you actually have. By the end, both shortcuts will be on your phone, and you'll have used them at least once.
-
-              Let's build the first one.
+              You'll become someone who **offloads the mental load by voice**, in the seconds you actually have. Let's build the first one.
         - type: text
-          title: One dump, three buckets
-          subtitle: How the Brain Dump works
+          title: What you'll need
+          subtitle: Not much, honestly
           content:
             body: |-
-              The Brain Dump does three things in a row:
+              Good news first: there's **nothing to buy and nothing to download**. You build everything in the **Shortcuts** app that's already on your iPhone, by tapping a few blocks together.
 
-              1. **You talk.** The shortcut listens and writes down everything you say.
-              2. **ChatGPT sorts it.** It reads your jumble and splits it into three clear buckets: anything with a **date or time** (events), things you **need to do** (to-dos), and **everything else** (notes).
-              3. **You see the sorted result** on screen, ready to act on.
-
-              The clever part is taking the tangle in your head and handing it back to you **already sorted**, so acting on it is the easy bit.
+              The smoothest version uses **Apple Intelligence** (available on iPhone 15 Pro and 15 Pro Max, every iPhone 16, the iPhone 17 line, and iPhone Air). On an older iPhone you can do everything with the free **ChatGPT app** instead, with a little more tapping. We'll point out where the two differ.
         - type: text
-          title: The Sort-and-Route prompt
-          subtitle: Your first reusable tool
+          title: "Switch ChatGPT on (once)"
+          subtitle: A one-time setup
           content:
             body: |-
-              The AI only sorts well if you tell it how. This is the **prompt**, the instruction you'll paste into your shortcut. It's yours to keep and tweak. Copy it now:
+              First, let your iPhone talk to ChatGPT. You only do this once.
+
+              **On a recent iPhone (Apple Intelligence):** open *Settings*, tap *Apple Intelligence & Siri*, and under *Extensions* tap *ChatGPT*, then *Set Up*. Tap *Enable ChatGPT* to use it without an account, or *Use ChatGPT with an Account* if you'd like your questions saved to a **free** ChatGPT history. (This needs Apple Intelligence and ChatGPT to be available in your country and language.)
+
+              **On an older iPhone:** install the free **ChatGPT** app from the App Store and sign in once. Your shortcut will use the app's *Ask ChatGPT* step instead of *Use Model*. The idea is the same, though older iPhones can need a little more tapping to pass the answer along.
+        - type: text
+          title: Your Sort-and-Route prompt
+          subtitle: The one tool you'll reuse
+          content:
+            body: |-
+              Here's the heart of it. You give ChatGPT one instruction that tells it how to sort whatever you say into three buckets: **events** (anything with a date or time), **to-dos**, and **notes** (everything else). This is your **prompt**, and it's yours to keep and reword. Copy it now:
 
               ```
               You are my life admin assistant. I'm a busy parent and I'm
@@ -122,90 +103,55 @@ course:
               Here is what I said:
               ```
 
-              In a moment, your shortcut will drop **what you dictated** in right after that last line. You don't have to write a word of it yourself.
-        - type: quiz-question
-          title: "Quiz: Talking to your phone"
-          content:
-            question: You start your brain dump, then pause for a good 15 seconds to think halfway through. What's most likely to happen?
-            options:
-              - Your phone keeps listening patiently until you tap stop
-              - The dictation may decide you've finished and stop early, missing the rest
-              - ChatGPT fills the silence with ideas of its own
-              - The shortcut deletes everything you said before the pause
-            correctAnswer: 1
-            explanation: "Dictation listens for natural pauses to decide you're done, so a long silence can end it early. The fix is freeing: keep talking in a steady ramble, even if it's messy. The AI is good at sorting a jumble, so you don't need to be tidy or pause to get it right."
+              Your shortcut will drop **what you said** in right after that last line. You don't type a word.
         - type: text
-          title: "How Dalmie's dump gets sorted"
-          subtitle: A worked example
+          title: "Build it: talk, then ask"
+          subtitle: The first two blocks
+          content:
+            body: |-
+              Open the **Shortcuts** app and tap the *+* to start a new shortcut. Add two actions, one after the other:
+
+              1. Search for *Dictate Text* and add it. This is the bit that listens to you.
+              2. Search for *Use Model* and add it, then tap the model and choose *ChatGPT*. (On an older iPhone, add the *Ask ChatGPT* action instead.)
+
+              In the *Use Model* box, **paste your prompt**, then tap to insert the *Dictated Text* variable (the little blue chip) right after the last line. That's how your words flow into the prompt.
+        - type: text
+          title: "Build it: show the result, then name it"
+          subtitle: The last block
+          content:
+            body: |-
+              Add one more action: search for *Show Result* and add it at the end. Tap inside it and insert the *Response* variable from *Use Model*. This puts your three sorted lists on screen.
+
+              Now tap the name at the top and rename it something easy to say, like **Brain Dump**. That becomes its Siri phrase, so later you can say *"Hey Siri, Brain Dump"* without opening anything. Tap *Done*. That's your first shortcut built. 💫
+        - type: text
+          title: "Here's what Dalmie gets back"
+          subtitle: A quick look before you try
           content:
             body: |-
               Dalmie taps her shortcut and rambles for a minute:
 
               *"Right, we're out of nappies and wipes, the health visitor is coming Tuesday at 11, I keep meaning to book the 6-week check, oh and text Mum back, and we need more of that barrier cream."*
 
-              Her phone sends that to the AI with the Sort-and-Route prompt, and back comes:
+              A second later, back comes:
 
               - **Events:** Health visitor, Tuesday 11am
               - **To-dos:** Book the 6-week check; text Mum back
-              - **Notes:** Buy nappies, wipes, barrier cream
+              - **Notes:** Nappies, wipes, barrier cream
 
-              Notice she didn't sort anything in her head. She said it the way it fell out, and the AI did the tidying.
-        - type: quiz-question
-          title: "Quiz: Which bucket?"
-          content:
-            question: 'In her dump, Dalmie says "the health visitor is coming Tuesday at 11." A good sort puts this in Events. Why there, and not in To-dos?'
-            options:
-              - Because it involves another person
-              - Because it's the most urgent thing she said
-              - Because it has a day and a time attached to it
-              - Because it can't be done from home
-            correctAnswer: 2
-            explanation: "The prompt keys off one thing for events: a date or time. Anything with a day or time attached becomes an event; an open task with no fixed time stays a to-do. Knowing this is how you'll tweak the prompt later if something lands in the wrong bucket."
-        - type: text
-          title: "Switch ChatGPT on (once)"
-          subtitle: A one-time setup
-          content:
-            body: |-
-              Before you build, let your iPhone talk to ChatGPT. You only do this once.
-
-              **On a recent iPhone (Apple Intelligence):** open *Settings*, tap *Apple Intelligence & Siri*, and under *Extensions* tap *ChatGPT*, then *Set Up*. Tap *Enable ChatGPT* to use it without an account, or *Use ChatGPT with an Account* if you'd like your questions saved to a **free** ChatGPT history. There's nothing to install. (This needs Apple Intelligence and ChatGPT to be available in your country and language.)
-
-              **On an older iPhone:** install the free **ChatGPT** app from the App Store and sign in once. Your shortcut will use the app's *Ask ChatGPT* step instead of *Use Model*. The idea is the same, though older iPhones can need a little more tapping to pass the answer along.
-        - type: text
-          title: "Build it: talk, then ask"
-          subtitle: The first two blocks
-          content:
-            body: |-
-              Open the **Shortcuts** app and tap the *+* to start a new shortcut. Now add two actions, one after the other:
-
-              1. Search for *Dictate Text* and add it. This is the bit that listens to you.
-              2. Search for *Use Model* and add it. Tap the model and choose *ChatGPT*. (On an older iPhone, add the *Ask ChatGPT* action from the ChatGPT app instead.)
-
-              In the *Use Model* box, **paste the Sort-and-Route prompt** from earlier. Then, right after the last line, tap to insert the *Dictated Text* variable (it appears as a little blue chip). That's how what you said flows into the prompt.
-        - type: text
-          title: "Build it: see your result, then name it"
-          subtitle: The last block
-          content:
-            body: |-
-              Add one more action: search for *Show Result* and add it at the end. Tap inside it and insert the *Response* variable from *Use Model* (the blue chip). This shows you the AI's three sorted lists on screen.
-
-              Now tap the shortcut's name at the top and rename it something easy to say, like **Brain Dump**. That name becomes its Siri phrase, so later you can say *"Hey Siri, Brain Dump"* without opening anything.
-
-              Tap *Done*. You've built your first shortcut. 💫
-        - type: input
+              She didn't sort a thing in her head. She said it the way it fell out, and the AI tidied it.
+        - type: reflection
           title: Run your first brain dump
           content:
             description: |-
-              Tap your new Brain Dump shortcut to run it. When it starts listening, talk for up to a minute about everything on your mind right now, in any order. Don't tidy it up. When you stop, watch it come back sorted into events, to-dos and notes.
-
-              How did it sort? Note anything you'd tweak in the prompt next time.
+              Your turn. Tap your Brain Dump shortcut and, when it starts listening, talk for up to a minute about everything on your mind right now, in any order. Don't tidy it up, a messy ramble is fine. When you stop, watch it come back sorted.
             placeholder: When I ran it, it sorted my dump into...
+            subDescription: However it came out, you've just offloaded a minute of mental clutter by voice. That's the whole skill.
         - type: challenge-end
           title: "You built a shortcut that sorts for you! 🎉"
           content:
-            nextModule: "**Next challenge:** You'll reuse this exact pattern (talk, ask AI, save) to build a Baby Log: say what your baby just did, and it lands as one tidy, timestamped line in a running note you can scroll back through or show your doctor."
+            nextModule: "**Next challenge:** You'll reuse this same pattern (talk, ask AI, save) to build a Baby Log: record what you keep track of, the feeds and amounts, nappies, naps and weights, and each lands as one tidy, timestamped line in a running note you can scroll back through or show your doctor."
             description: You took a tangle of thoughts and handed it back to yourself, sorted.
-            subDescription: The real prize is the prompt. You can change those three buckets, add your own, or reword it any time. The same talk-then-ask pattern is about to power your second shortcut, faster this time.
+            subDescription: The real prize is the prompt. You can change those three buckets or reword it any time. The same talk-then-ask pattern powers your next shortcut, faster this time.
     - title: The Baby Log
       isFree: false
       skills:
@@ -213,14 +159,14 @@ course:
         - AI Prompting
         - Apple Notes
       description: Build a second shortcut that turns a few spoken words into one tidy, timestamped entry in a running note.
-      completionTime: '8:00'
+      completionTime: '7:00'
       steps:
         - type: text
           title: You already know the pattern
           subtitle: Challenge 2
           content:
             body: |-
-              You're not a beginner any more. You've built a shortcut, written a prompt, and run it. This next one uses the **same three moves**: talk, ask AI, then do something with the answer.
+              You're not a beginner any more. This one uses the **same three moves**: talk, ask AI, then do something with the answer.
 
               The only new trick is the last move. Instead of showing the result on screen, this shortcut **saves** it, with the time, to one running note. Build it once and you'll have a record that grows on its own.
         - type: text
@@ -230,9 +176,9 @@ course:
             body: |-
               The early weeks are a blur of feeds, naps and nappies, and your memory is doing enough already. A log helps in three ways:
 
-              - **It catches what foggy days lose.** You'll never wonder "when did she last feed?" again.
-              - **It shows patterns.** Scroll back and the rhythm of your baby's day appears on its own.
-              - **It speaks for you at appointments.** A tidy record is something concrete to show your doctor or health visitor, instead of trying to remember on the spot.
+              - **It catches what foggy days lose.** How much she fed, when she last slept, how today compares to yesterday.
+              - **It shows how she's developing.** Feeds, weights and naps stacked up over days make the trend easy to see, instead of lost to memory.
+              - **It speaks for you at appointments.** A tidy record of amounts, weights and timings is something concrete to show your doctor or health visitor.
 
               And because it's voice, you can log a feed **while you're still feeding**, hands full.
         - type: text
@@ -252,26 +198,15 @@ course:
               Here is what happened:
               ```
 
-              Your dictated words will drop in after that last line, exactly like the first shortcut.
-        - type: quiz-question
-          title: "Quiz: A log worth keeping"
-          content:
-            question: You want a log you could actually show your baby's doctor. Which kind of entry is more useful?
-            options:
-              - "A short, consistent line with the time, the feed amount and the mood"
-              - A warm paragraph describing how the morning felt and what you were worried about
-              - A separate voice memo saved in another app each time
-              - A photo of the cot taken after every feed
-            correctAnswer: 0
-            explanation: Doctors read patterns, not prose. Short, consistent lines with concrete facts (time, amount, mood) let the rhythm and any changes jump out. That consistency is exactly what the Baby Log prompt is built to give you, every single time.
+              Your words drop in after that last line, exactly like the first shortcut.
         - type: text
           title: "Build it: make the note first"
           subtitle: The one easy-to-miss step
           content:
             body: |-
-              This is the step people skip, so we'll do it first. Open the **Notes** app and create one new note. Title its first line **Baby Log**. Leave it open or closed, it doesn't matter, it just needs to **exist**. Your shortcut is going to find this note and add to it, and it can't add to a note that isn't there yet.
+              This is the step people skip, so do it first. Open the **Notes** app and create one new note. Make its first line **Baby Log**. It just needs to **exist**, because your shortcut is going to find this note and add to it, and it can't add to a note that isn't there yet.
 
-              Now open **Shortcuts**, tap *+* for a new shortcut, and add your first two familiar blocks: *Dictate Text*, then *Use Model* set to *ChatGPT* (or *Ask ChatGPT* on an older iPhone). Paste the Baby Log prompt, and insert the *Dictated Text* chip after the last line.
+              Now open **Shortcuts**, start a new shortcut, and add your two familiar blocks: *Dictate Text*, then *Use Model* set to *ChatGPT* (or *Ask ChatGPT* on an older iPhone). Paste the Baby Log prompt and insert the *Dictated Text* chip after the last line.
         - type: text
           title: "Build it: stamp the time and save"
           subtitle: The new blocks
@@ -280,41 +215,29 @@ course:
               Now the new part. Add these actions in order:
 
               1. *Current Date*, then *Format Date* right after it. Tap *Format Date* and pick a short style, like *Short*, so each line starts with the time.
-              2. *Find Notes*. Set its filter so the *Name* contains **Baby Log**. This finds the note you made.
-              3. *Append to Note*. For the note, insert the *Notes* result from *Find Notes*. For the text, insert your *Format Date* result and then the *Response* from *Use Model*.
+              2. *Find Notes*, and set its filter so the *Name* contains **Baby Log**. This finds the note you made.
+              3. *Append to Note*. For the note, insert the result from *Find Notes*. For the text, insert your *Format Date* result and then the *Response* from *Use Model*.
 
               *Append to Note* adds to the **bottom** of the note, so entries stack up in order. Rename the shortcut **Baby Log** and tap *Done*.
         - type: text
           title: "How Dalmie's log builds up"
-          subtitle: A worked example
+          subtitle: A quick look
           content:
             body: |-
-              Across an afternoon, Dalmie taps Baby Log three times and says what just happened. Each time, one tidy line stacks onto the note:
+              Across an afternoon, Dalmie taps Baby Log a few times and says each feed, weight or nap as it happens. Each time, one tidy line stacks onto the note:
 
-              - *13:10, Fed 20 mins, left side, settled well*
-              - *15:30, Nappy change, wet only*
+              - *09:30, Weighed 4.6 kg*
+              - *13:10, Fed 90 ml, settled well*
               - *16:45, Nap 40 mins, woke grumpy*
 
-              She didn't format anything. She said *"she fed about twenty minutes on the left and went down fine"* and the prompt did the rest. A week of this and her note tells the whole story at a glance.
-        - type: quiz-question
-          title: "Quiz: Nothing got saved"
-          content:
-            question: You build the Baby Log, but the very first time you run it, nothing appears in your note. What's the most likely reason?
-            options:
-              - ChatGPT didn't understand your recording this time
-              - The note it's trying to add to doesn't exist yet, so there's nothing to find
-              - Your iPhone needs to be plugged in to save notes
-              - You need to say the word "save" at the end
-            correctAnswer: 1
-            explanation: This is the most common slip. The shortcut uses Find Notes to locate your "Baby Log" note, and if you haven't created that note by hand first, it finds nothing to add to. Make the note once, and every run after that stacks on.
-        - type: input
+              She didn't format anything. She said *"she's just had about ninety mls and gone down fine"* and the prompt did the rest.
+        - type: reflection
           title: Log your afternoon
           content:
             description: |-
-              Over the next few hours, run your Baby Log shortcut two or three times. Each time, say what just happened in a normal voice, however it comes out. Then open your Baby Log note and scroll back over the entries.
-
-              Did they save as tidy, consistent lines? That's your running record, started.
+              Over the next few hours, run your Baby Log shortcut two or three times. Each time, say what you'd want to remember, a feed and how much, a nappy, a nap, the latest weight, in a normal voice, however it comes out. Then open your Baby Log note and scroll back over the entries.
             placeholder: My first few log entries looked like...
+            subDescription: A few lines today, a clear picture by next week. That's your running record, started.
         - type: challenge-end
           title: "Your log writes itself now! 📝"
           content:
@@ -328,49 +251,36 @@ course:
         - iPhone Accessibility
         - Dictation
       description: Set up hands-free ways to fire your shortcuts by voice, touch or button, in whatever language you speak.
-      completionTime: '6:00'
+      completionTime: '5:00'
       steps:
         - type: text
           title: The last bit of friction
           subtitle: Challenge 3
           content:
             body: |-
-              You've built both shortcuts. But if running one means unlocking your phone, finding the app and tapping around, you won't reach for it in the moments that matter, when the baby's on you and your hands are gone.
+              You've built both shortcuts. But if running one means unlocking your phone, finding the app and tapping around, you won't reach for it when it matters, when the baby's on you and your hands are gone.
 
-              This short challenge removes that friction. By the end, you'll be able to fire either shortcut **without looking**.
+              These last few steps fix that. By the end, you'll be able to fire either shortcut **without looking**.
         - type: text
           title: Put them where your thumb is
           subtitle: Home Screen and Lock Screen
           content:
             body: |-
-              The quickest win is getting your shortcuts out of the Shortcuts app and somewhere closer:
+              Get your shortcuts out of the Shortcuts app and somewhere closer:
 
               - **Home Screen:** open the shortcut's details, tap the *Share* icon, and choose *Add to Home Screen*. Now it's an icon you tap like any app.
-              - **Lock Screen:** you can add a shortcut as a *control* on your Lock Screen, so it's there before you even unlock. The exact steps moved around in recent iPhone updates, so look under *Customise* on your Lock Screen for where to add controls.
-
-              One tap, no hunting.
+              - **Lock Screen:** you can add a shortcut as a *control* so it's there before you even unlock. The exact steps moved around in recent updates, so look under *Customise* on your Lock Screen for where to add controls.
         - type: text
           title: Run them without even looking
           subtitle: Back Tap and the Action Button
           content:
             body: |-
-              Two more ways, both hands-free once set:
+              Two hands-free ways, once they're set:
 
               - **Back Tap:** go to *Settings* → *Accessibility* → *Touch* → *Back Tap*. Choose *Double Tap* or *Triple Tap* and pick your shortcut. Now tapping the **back of your phone** runs it. This works on most iPhones.
-              - **The Action Button:** if your iPhone has the small button above the volume keys (iPhone 15 Pro and 15 Pro Max, every iPhone 16, the iPhone 17 line, and iPhone Air have it; older ones don't), set it in *Settings* → *Action Button* to run your shortcut with one press.
+              - **The Action Button:** if your iPhone has the small button above the volume keys (iPhone 15 Pro and 15 Pro Max, every iPhone 16, the iPhone 17 line, and iPhone Air have it), set it in *Settings* → *Action Button* to run your shortcut with one press.
 
-              Pick whichever suits the phone in your hand.
-        - type: quiz-question
-          title: "Quiz: Hands full"
-          content:
-            question: You're feeding your baby, both hands busy, and you want to log a feed without putting anything down. Which trigger fits best?
-            options:
-              - Opening the Shortcuts app and tapping the shortcut
-              - Finding the icon on your Home Screen and tapping it
-              - Saying "Hey Siri, Baby Log" out loud
-              - Typing the entry straight into the Notes app
-            correctAnswer: 2
-            explanation: Voice (and Back Tap) come into their own exactly when your hands are gone. That's the whole reason you built these hands-free. The fancy triggers aren't decoration, they're what makes you actually use the shortcut in the moment.
+              Pick whichever suits the phone in your hand. When your hands are full mid-feed, *"Hey Siri, Baby Log"* or a tap on the back is the one that saves you.
         - type: text
           title: Talk in your own language
           subtitle: It isn't English-only
@@ -384,9 +294,9 @@ course:
           subtitle: A quick pointer
           content:
             body: |-
-              Some things on your mind aren't one to-do, they're a whole project: *"sort out childcare"*, *"plan the christening"*. Your Brain Dump will catch these and park them in your to-dos, which is exactly right.
+              Some things on your mind aren't one to-do, they're a whole project: *"sort out childcare"*, *"plan the christening"*. Your Brain Dump will park these in your to-dos, which is exactly right.
 
-              When you're ready to actually tackle one, that's a job for a normal chat with ChatGPT: open the app and ask it to break the task into small steps. That's a different skill from these shortcuts, so we'll leave it there as a pointer rather than a lesson.
+              When you're ready to actually tackle one, open the ChatGPT app and ask it to break the task into small steps. That's a different skill from these shortcuts, so we'll leave it as a pointer.
         - type: reflection
           title: "Reflection: Your one thing"
           content:
@@ -401,7 +311,7 @@ course:
             subDescription: |-
               ✓ **The Brain Dump:** talk for a minute and get your events, to-dos and notes sorted for you.
 
-              ✓ **The Baby Log:** say what just happened and save it as a tidy, timestamped line in a running note.
+              ✓ **The Baby Log:** record feeds and amounts, nappies, naps and weights as tidy, timestamped lines you can look back over or show your doctor.
 
               ✓ **Your two prompts:** reusable, and yours to reword for anything else you want sorted or logged.
 
@@ -413,4 +323,4 @@ course:
   titleSplit:
     - "AI Your Life Admin:"
     - Two Voice Shortcuts for New Mums
-  description: Build two voice shortcuts on your iPhone that take the mental load off your hands. Talk for a minute and AI sorts it into your events, to-dos and notes. Say what your baby just did and it lands as a tidy, timestamped entry. Everything runs on tools already on your phone, with a free account and no typing.
+  description: Build two voice shortcuts on your iPhone that take the mental load off your hands. Talk for a minute and AI sorts it into your events, to-dos and notes. Record how much your baby fed, their nappies, naps and weight, and each lands as a tidy, timestamped entry. Everything runs on tools already on your phone, with a free account and no typing.

@@ -99,14 +99,6 @@ export interface FreeTextExerciseStep extends BaseStep {
   };
 }
 
-export interface InputStep extends BaseStep {
-  type: "input";
-  content: {
-    description: string;
-    placeholder?: string;
-  };
-}
-
 export interface OnboardingStep extends BaseStep {
   type: "onboarding";
   content: {
