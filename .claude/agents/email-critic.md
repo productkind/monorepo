@@ -56,7 +56,7 @@ Technical (these break rendering or tracking):
 - **More than one primary CTA button.** Competing gradient buttons break the one-CTA rule — parallel actions must be cards, a secondary action must be an inline text link.
 - **Missing footer essentials**: LinkedIn + Instagram icons, the "you're receiving this because…" context line, the littleparrot.app link, and the unsubscribe link (`__unsubscribe_url__`).
 - **Merge fields not in `{{snake_case}}`**, or an unsubscribe link that is not `__unsubscribe_url__`.
-- **littleparrot.app links missing `?ref=<email-name>-email`**, or auth-required links missing `&auth=login`.
+- **littleparrot.app links missing `?utm_source=<email-name>`** (the monthly update always uses `utm_source=monthly-email`), or auth-required links missing `&auth=login`.
 - **Meaningful text baked into an image** (anything but the logo / wordmark) — it fails screen readers, mobile scaling, and images-off.
 - **An `<img>` with no `alt` attribute** (decorative images need `alt=""`, not a missing attribute).
 - **Non-descriptive link text** ("click here", "read more", "learn more" as the linked words).
