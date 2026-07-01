@@ -76,7 +76,7 @@ actually, genuinely
 Cut "actually" as a filler, e.g. "what you actually want" → "what you want", "they can actually use" → "they can use".
 
 ### Empty fillers
-but here’s the catch, to cut through the chaos, that moment stuck with me, this stuck with me, it stuck with me, that stayed with me, this stayed with me, it stayed with me, cutting through the noise, that actually lands, that sticks, which makes a real difference, makes a real difference
+but here’s the catch, to cut through the chaos, that moment stuck with me, this stuck with me, it stuck with me, that stayed with me, this stayed with me, it stayed with me, cutting through the noise, that actually lands, that sticks, which makes a real difference, makes a real difference, I keep coming back to, one idea I keep coming back to, it clicked, the book/it finally clicked, something clicked
 
 ### Pseudo punchlines
 Here's the thing, Bottom line:, No fluff, This one's for you, Why this matters, What moved me, This matters because, that matters, it matters most, matters most for

@@ -1,7 +1,7 @@
 course:
   id: 05900334-0998-4a98-be6d-946653c9b82d
   note: |-
-    This course is for iPhone. The smoothest version uses Apple Intelligence (iPhone 15 Pro and 15 Pro Max, any iPhone 16, the iPhone 17 line, or iPhone Air). On an older iPhone you can still follow along with the free ChatGPT app, with a little more tapping. Everything runs on a free account, with no subscription needed.
+    This course needs an iPhone with Apple Intelligence (iPhone 15 Pro and 15 Pro Max, any iPhone 16, the iPhone 17 line, or iPhone Air). Everything runs free, with no subscription and nothing to install.
   cover: /courses/ai-your-life-admin-00/cover.gif
   title: "AI Your Life Admin: Two Voice Shortcuts for New Mums"
   learningOutcomes:
@@ -70,23 +70,21 @@ course:
             body: |-
               Good news first: there's **nothing to buy and nothing to download**. You build everything in the **Shortcuts** app that's already on your iPhone, by tapping a few blocks together.
 
-              The smoothest version uses **Apple Intelligence** (available on iPhone 15 Pro and 15 Pro Max, every iPhone 16, the iPhone 17 line, and iPhone Air). On an older iPhone you can do everything with the free **ChatGPT app** instead, with a little more tapping. We'll point out where the two differ.
+              This uses **Apple Intelligence**, Apple's built-in AI, so you'll need an **iPhone 15 Pro or 15 Pro Max, any iPhone 16, an iPhone 17, or iPhone Air**. It's free, with no subscription.
         - type: text
           title: "Switch ChatGPT on (once)"
           subtitle: A one-time setup
           content:
             body: |-
-              First, let your iPhone talk to ChatGPT. You only do this once.
+              First, let your iPhone talk to ChatGPT, the AI that reads what you say and writes the answer back. You only do this once. Open *Settings*, tap *Apple Intelligence & Siri*, and under *Extensions* tap *ChatGPT*, then *Set Up*. Tap *Enable ChatGPT* to use it without an account, or *Use ChatGPT with an Account* if you'd like your questions saved to a **free** ChatGPT history.
 
-              **On a recent iPhone (Apple Intelligence):** open *Settings*, tap *Apple Intelligence & Siri*, and under *Extensions* tap *ChatGPT*, then *Set Up*. Tap *Enable ChatGPT* to use it without an account, or *Use ChatGPT with an Account* if you'd like your questions saved to a **free** ChatGPT history. (This needs Apple Intelligence and ChatGPT to be available in your country and language.)
-
-              **On an older iPhone:** install the free **ChatGPT** app from the App Store and sign in once. Your shortcut will use the app's *Ask ChatGPT* step instead of *Use Model*. The idea is the same, though older iPhones can need a little more tapping to pass the answer along.
+              That's the setup done. (This needs Apple Intelligence and ChatGPT to be available in your country and language.)
         - type: text
           title: Your Sort-and-Route prompt
           subtitle: The one tool you'll reuse
           content:
             body: |-
-              Here's the heart of it. You give ChatGPT one instruction that tells it how to sort whatever you say into three buckets: **events** (anything with a date or time), **to-dos**, and **notes** (everything else). This is your **prompt**, and it's yours to keep and reword. Copy it now:
+              Here's the heart of it. You give ChatGPT one instruction, called a **prompt**, that tells it how to sort whatever you say into three buckets: **events** (anything with a date or time), **to-dos**, and **notes** (everything else). It's yours to keep and reword. Copy it now:
 
               ```
               You are my life admin assistant. I'm a busy parent and I'm
@@ -112,7 +110,7 @@ course:
               Open the **Shortcuts** app and tap the *+* to start a new shortcut. Add two actions, one after the other:
 
               1. Search for *Dictate Text* and add it. This is the bit that listens to you.
-              2. Search for *Use Model* and add it, then tap the model and choose *ChatGPT*. (On an older iPhone, add the *Ask ChatGPT* action instead.)
+              2. Search for *Use Model* and add it, then tap the model and choose *ChatGPT*.
 
               In the *Use Model* box, **paste your prompt**, then tap to insert the *Dictated Text* variable (the little blue chip) right after the last line. That's how your words flow into the prompt.
         - type: text
@@ -204,9 +202,9 @@ course:
           subtitle: The one easy-to-miss step
           content:
             body: |-
-              This is the step people skip, so do it first. Open the **Notes** app and create one new note. Make its first line **Baby Log**. It just needs to **exist**, because your shortcut is going to find this note and add to it, and it can't add to a note that isn't there yet.
+              This is the step people skip, so do it first. Open the **Notes** app and create one new note. Make its first line **Baby Log**. It only needs to **exist**, because your shortcut is going to find this note and add to it, and it can't add to a note that isn't there yet.
 
-              Now open **Shortcuts**, start a new shortcut, and add your two familiar blocks: *Dictate Text*, then *Use Model* set to *ChatGPT* (or *Ask ChatGPT* on an older iPhone). Paste the Baby Log prompt and insert the *Dictated Text* chip after the last line.
+              Now open **Shortcuts**, start a new shortcut, and add your two familiar blocks: *Dictate Text*, then *Use Model* set to *ChatGPT*. Paste the Baby Log prompt and insert the *Dictated Text* chip after the last line.
         - type: text
           title: "Build it: stamp the time and save"
           subtitle: The new blocks
@@ -283,7 +281,7 @@ course:
               Pick whichever suits the phone in your hand. When your hands are full mid-feed, *"Hey Siri, Baby Log"* or a tap on the back is the one that saves you.
         - type: text
           title: Talk in your own language
-          subtitle: It isn't English-only
+          subtitle: Use the language you think in
           content:
             body: |-
               Both shortcuts work in **whatever language you speak**, because the AI reads the words you said. If German is easier when you're tired, dictate in German and ask the prompt to reply in German too.
@@ -319,7 +317,7 @@ course:
 
               ✓ **Any language:** dictate however it comes out, tired and messy is fine.
 
-              **Remember:** you didn't become a developer. You became someone who offloads the mental load by voice, in the seconds you actually have. Now go and forget something on purpose, your phone's got it. 💪
+              **Remember:** you now offload the mental load by voice, in the seconds you actually have. Now go and forget something on purpose. Your phone's got it. 💪
   titleSplit:
     - "AI Your Life Admin:"
     - Two Voice Shortcuts for New Mums
