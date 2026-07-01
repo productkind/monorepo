@@ -8,7 +8,7 @@ Suggested order: lead with Post 1 as the anchor, then space the rest over 2–3 
 
 ## Post 1 — The hype-vs-practical gap (anchor post)
 
-I spent last week at two product conferences, mtpcon in London and Productized in Lisbon. Many talks had a part where the speaker showed how AI had made them faster: more pull requests, more products shipped, weeks of work done in an afternoon.
+I spent last week at two product conferences, mtpcon in London and Productized in Lisbon. Many talks had a part where the speaker showed how AI had made their team faster: more pull requests, more products shipped, weeks of work done in an afternoon.
 
 Not one of them showed how. There were no practical steps I could take home and try on Monday.
 
@@ -62,7 +62,7 @@ I've spent years explaining the how of my work and wondering why it left people 
 
 ---
 
-## Post 5 — A learning mindset, from a physicist
+## Post 5 — A learning mindset, from a physicist – POSTED
 
 One of the most useful ideas I heard at last week's product conferences came from someone who isn't in product at all. Brian Cox, the physicist, was talking at #mtpcon about how we learn.
 
@@ -105,3 +105,17 @@ Her fix is a clear point of view on the future: a real position on where your ma
 I took this personally, because I run a small product company now, and it's tempting to describe what we do in the same language everyone else uses. Sounding like the category feels safe, but it's the quickest way to vanish into it.
 
 So this is the question I'm taking home: if a customer put our product next to three others and they all sounded the same, why would they pick us? And could I answer that in one sentence?
+
+----
+
+I became familiar with April Dunford's work when my old boss gave me her positioning book as a farewell present when I left his team. (Thanks Daniel!)
+
+This month I got to see April speak at mtpcon in London, and she mentioned an interesting statistics:
+
+Roughly half of B2B deals end in no decision. Everything looks the same, picking feels risky, so they choose nothing.
+
+Even though we are building a B2C product, I think it's just as true for us. The women in business (founders, freelancers, product folks) we want to reach with Little Parrot are overwhelmed. Millions of things compete for their attention, and learning something new demands more of their time.
+
+April's antidote for the undecision was a clear point of view on the future. An uncertain buyer, she said, is really asking, "Tell me what the future of this looks like."
+
+

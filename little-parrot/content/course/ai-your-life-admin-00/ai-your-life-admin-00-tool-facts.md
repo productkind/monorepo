@@ -7,6 +7,8 @@ Audience: new mums, non-technical, following steps literally on their own iPhone
 
 ## Premise check
 
+**SCOPE DECISION (2026-06-30): the course targets Apple Intelligence iPhones ONLY.** The older-iPhone ChatGPT-app (*Ask ChatGPT*) fallback has been dropped entirely to lower the learner's mental load, since Apple Intelligence is already a stated prerequisite. Path B below is retained for reference but is no longer taught. The course requires an iPhone 15 Pro / 15 Pro Max, any iPhone 16, the iPhone 17 line, or iPhone Air.
+
 **Verdict: GO, with one framing decision the writer must make up front.**
 
 The course's load-bearing premise is: _"It all runs on a free ChatGPT account and tools already on your iPhone, no subscription needed."_ That premise **holds**. A free ChatGPT account (or even no account) can drive ChatGPT from inside Shortcuts, and the answer can be passed into Calendar, Reminders and Notes. Apple and OpenAI both document this. Confirmed today:
