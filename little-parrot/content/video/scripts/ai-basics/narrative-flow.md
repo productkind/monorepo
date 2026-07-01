@@ -1,0 +1,64 @@
+# AI basics narrative flow
+
+- What is AI?
+  - Chat GPT
+  - Is it new?
+    - It is arround for quite a while since the 50's
+  - It changed a lot what we call AI
+  - Now what we call AI is LLM
+    - What is a Model
+  - How did we get here
+    - There have been many approches
+      - Statistics on text
+      - Compute results based on rules
+      - Artificial neuron
+      - Artificial neuron network
+  - Now
+    - The mixture of the artificial network of neurons and text prediction
+  - Why now
+    - Deep learning
+    - Transofrmer BERT
+    - First commercial
+    - Now everyone is trying to build the best models
+- How is a model made
+  - Machine learning
+  - Training
+    - Try it with the google tool
+  - Recepie
+- Why datacenters and chips
+- Why NVIDIA gets rich
+- How does a model calculates the output
+  - prediction
+  - autocomplete
+  - token
+- Sizes of models
+  - Wieghts and biases
+- Closed and open models
+- Compute needs training running
+- Interesting trend of local models, and how it gets cheaper
+- Because of the autocomplete
+  - It does not have memory
+  - send the previous conversation
+- Context window
+- Context rot
+  - Context engineering
+- System prompt
+- Prompt engineering
+  - Prompting methods
+  - dont expect too much
+  - Checking looping
+- Tool use
+- The different modes of LLMs
+- What is an agent
+  - Wrokflow ws agent
+  - example of agents
+- You don't repeat yourself
+  - projects
+  - Skills
+- Costs
+  - Why is hard to say
+  - Getting cheaper but not
+  - local vs non local
+
+
+
