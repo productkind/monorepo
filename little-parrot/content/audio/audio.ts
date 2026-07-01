@@ -1,4 +1,4 @@
-import * as fs from 'fs';
+import * as fs from 'fs'
 
 // If you are using an older Node.js version that doesn't have global fetch,
 // you might need to install 'node-fetch' and uncomment the line below:
@@ -8,9 +8,9 @@ import * as fs from 'fs';
  * Interface for the alignment data received from ElevenLabs API.
  */
 interface Alignment {
-  char_start_times_ms: number[];
-  chars_durations_ms: number[];
-  chars: string[];
+  char_start_times_ms: number[]
+  chars_durations_ms: number[]
+  chars: string[]
 }
 
 /**
@@ -29,10 +29,10 @@ async function generateSpeech(
   modelId: string,
   apiKey: string,
   outputPath: string,
-  jsonOutputPath?: string
+  jsonOutputPath?: string,
 ): Promise<Alignment | void> {
   // Changed the URL to request timestamps
-  const url = `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}/with-timestamps`;
+  const url = `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}/with-timestamps`
 
   try {
     const response = await fetch(url, {
@@ -46,60 +46,59 @@ async function generateSpeech(
         model_id: modelId,
         voice_settings: {
           stability: 0.5,
-          similarity_boost: 0.75
+          similarity_boost: 0.75,
         },
-        output_format: 'wav_44100' // Request WAV format directly at 44.1 kHz sample rate
-      })
-    });
+        output_format: 'wav_44100', // Request WAV format directly at 44.1 kHz sample rate
+      }),
+    })
 
     if (!response.ok) {
-      const errorText = await response.text();
-      throw new Error(`ElevenLabs API error: ${response.status} ${response.statusText} - ${errorText}`);
+      const errorText = await response.text()
+      throw new Error(
+        `ElevenLabs API error: ${response.status} ${response.statusText} - ${errorText}`,
+      )
     }
 
     // The response is now JSON, containing audio_base64 and alignment
-    const responseData = await response.json();
-    const audioBase64 = responseData.audio_base64;
-    const alignment: Alignment = responseData.alignment;
+    const responseData = await response.json()
+    const audioBase64 = responseData.audio_base64
+    const alignment: Alignment = responseData.alignment
 
     if (!audioBase64) {
-      throw new Error('No audio_base64 found in the response.');
+      throw new Error('No audio_base64 found in the response.')
     }
 
     // Decode the base64 audio data
-    const buffer = Buffer.from(audioBase64, 'base64');
+    const buffer = Buffer.from(audioBase64, 'base64')
 
     // Write the buffer to the specified output path
-    fs.writeFileSync(outputPath, buffer);
-    console.log(`Speech generated and saved to ${outputPath}`);
-    console.log('Timestamp (Alignment) Data:');
-    console.log(JSON.stringify(alignment, null, 2));
+    fs.writeFileSync(outputPath, buffer)
+    console.log(`Speech generated and saved to ${outputPath}`)
+    console.log('Timestamp (Alignment) Data:')
+    console.log(JSON.stringify(alignment, null, 2))
     // Optionally save the alignment data to a JSON file
     if (jsonOutputPath) {
-      fs.writeFileSync(jsonOutputPath, JSON.stringify(alignment, null, 2));
-      console.log(`Alignment data saved to ${jsonOutputPath}`);
+      fs.writeFileSync(jsonOutputPath, JSON.stringify(alignment, null, 2))
+      console.log(`Alignment data saved to ${jsonOutputPath}`)
     }
 
-
-    return alignment;
-
+    return alignment
   } catch (error) {
-    console.error('Error generating speech:', error);
+    console.error('Error generating speech:', error)
   }
 }
 
-const ELEVENLABS_API_KEY = 'sk_91544f2e0c841dcc7f863f643795881543dcd0f56baddfce';
-const DEFAULT = 'iP95p4xoKVk53GoZ742B'; // The voice ID you provided
-const ARIA = '9BWtsMINqrJLrRacOk9x'; // Aria
-const LILY = 'pFZP5JQG7iQjIQuC4Bku'; // Lily
-const SARAH = 'EXAVITQu4vr4xnSDxMaL'; // Sarah
-const ELIZABETH = 'AXdMgz6evoL7OPd7eU12'; // Elizabeth
-const BETH = '8N2ng9i2uiUWqstgmWlH'; // Beth
-const VOICE_ID = ELIZABETH; // Change to the desired voice ID
+const ELEVENLABS_API_KEY = 'sk_91544f2e0c841dcc7f863f643795881543dcd0f56baddfce'
+const DEFAULT = 'iP95p4xoKVk53GoZ742B' // The voice ID you provided
+const ARIA = '9BWtsMINqrJLrRacOk9x' // Aria
+const LILY = 'pFZP5JQG7iQjIQuC4Bku' // Lily
+const SARAH = 'EXAVITQu4vr4xnSDxMaL' // Sarah
+const ELIZABETH = 'AXdMgz6evoL7OPd7eU12' // Elizabeth
+const BETH = '8N2ng9i2uiUWqstgmWlH' // Beth
+const VOICE_ID = ELIZABETH // Change to the desired voice ID
 const video1 = `
 In simple terms, Artificial Intelligence is the capability of a machine to perform tasks that would normally require human intelligence. This includes things like learning from data, understanding language, recognising patterns, and making decisions. Many problems are too complex for traditional, rule-based programming. AI gives us new ways to tackle these challenges: it can help us automate repetitive tasks, personalise user experiences, and make better predictions. Today, when we use tools like ChatGPT or Gemini, we often call them Artificial Intelligence. Technically, they’re a specific kind of AI known as Large Language Models, or LLMs. So, what exactly is an LLM? To answer that, let’s start with the basics: an AI model. An AI model is simply a program that’s trained on data to do a particular job, for example, classifying images, spotting trends, or generating text. A model always takes an input and produces an output. The input and output can be text, images, audio, or other forms of data. A Large Language Model is a type of AI model that’s specialised in human language. It’s trained on vast amounts of text to learn the structure and patterns of how we write and speak. This allows it to generate text, summarise information, answer questions, and even help you brainstorm ideas.
 `
-
 
 const video2 = `
 Set the tone and style how the AI is expected to phrase its replies.
@@ -231,29 +230,48 @@ Ready to launch?
 Let's go!
 `
 
-const TEXT_TO_GENERATE = videoLovablePublish1;
-const MODEL_ID = 'eleven_multilingual_v2'; //'eleven_v3_turbo'; // The v3 model as requested
-const videoName = 'video-lovable-publish-1-elizabeth';
-const OUTPUT_FILE_NAME = `generated_speech-${videoName}.wav`; // e.g.,
-const ALIGNMENT_JSON_FILE_NAME = `alignment-${videoName}.json`;
+const videoSocialMedia1 = `
+You are not falling behind on AI. The panic is being sold to you.
+Since ChatGPT entered our everyday lives, we’ve been bombarded with the message that we’ll be left behind if we don’t constantly keep up with every new AI tool, model, and workflow.
+
+As with any message, it is worth asking what motivation sits behind it.
+
+Much of this urgency comes from private, venture-backed AI companies that need enough users to meet the immense growth expectations of their investors. If you are afraid you will lose your job, or become a Discman in a Spotify world, you are more likely to start paying for their services sooner.
+
+In reality, AI can improve how you work. It can even make work more fun and exciting. But that does not mean you need to rush.
+
+It is completely fine to take your time and get started with these technologies at your own pace.
+If you'd like to learn more about AI calmly, follow along.
+`
+
+const TEXT_TO_GENERATE = videoSocialMedia1
+const MODEL_ID = 'eleven_multilingual_v2' //'eleven_v3_turbo'; // The v3 model as requested
+const videoName = 'social-00-elizabeth'
+const OUTPUT_FILE_NAME = `generated_speech-${videoName}.wav` // e.g.,
+const ALIGNMENT_JSON_FILE_NAME = `alignment-${videoName}.json`
 const OUTPUT_FILE_PATH = OUTPUT_FILE_NAME // Saves in the same directory as the script
 
-
 // Call the function to generate speech and handle the returned alignment data
-generateSpeech(TEXT_TO_GENERATE, VOICE_ID, MODEL_ID, ELEVENLABS_API_KEY, OUTPUT_FILE_PATH, ALIGNMENT_JSON_FILE_NAME)
-  .then(alignment => {
+generateSpeech(
+  TEXT_TO_GENERATE,
+  VOICE_ID,
+  MODEL_ID,
+  ELEVENLABS_API_KEY,
+  OUTPUT_FILE_PATH,
+  ALIGNMENT_JSON_FILE_NAME,
+)
+  .then((alignment) => {
     if (alignment) {
-      console.log('Successfully retrieved speech and timestamp data.');
+      console.log('Successfully retrieved speech and timestamp data.')
       // You can now use the 'alignment' object for video synchronization
       // For example, you could iterate through alignment.chars and alignment.char_start_times_ms
       // to display text on screen at the correct time.
     } else {
-      console.log('Speech generation completed, but no alignment data was returned or an error occurred.');
+      console.log(
+        'Speech generation completed, but no alignment data was returned or an error occurred.',
+      )
     }
   })
-  .catch(error => {
-    console.error('Unhandled promise rejection:', error);
-  });
-
-
-
+  .catch((error) => {
+    console.error('Unhandled promise rejection:', error)
+  })
