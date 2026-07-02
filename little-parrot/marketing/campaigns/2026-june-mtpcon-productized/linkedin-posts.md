@@ -92,30 +92,18 @@ When was the last time you had a great day at work?
 
 ---
 
-## Post 7 — April Dunford: half your deals are lost to "no decision"
+## Post 7 — April Dunford: half your deals are lost to "no decision" - POSTED
 
-Angle: if you're building a business, it's important to have a point of view on the future.
+I became familiar with April Dunford's work when my former boss gave me her positioning book as a farewell present when I left his team. (Thanks Daniel!)
 
-April Dunford's talk at mtpcon gave me one of the most interesting statistics I heard all week: roughly half of B2B deals now end in no decision. The buyer doesn't choose a competitor, they choose no one at all.
+I finally got to see April speak at #mtpcon in London, and she mentioned an interesting statistic:
 
-Her explanation: in a market where every product says "AI-powered", buyers are scared and confused, and everything looks the same. When you can't tell the options apart, the safest move is to do nothing.
+Roughly half of B2B deals end in no decision. Everything looks the same, picking feels risky, so the customer chooses nothing.
 
-Her fix is a clear point of view on the future: a real position on where your market is heading, the kind that explains why your roadmap looks the way it does. She pointed to companies making different bets, Anthropic, OpenAI, Replit and Salesforce, each one aimed at a different future. A buyer can choose between those. They can't choose between five products that describe themselves in identical words.
+Even though we are building a B2C product, I think it's just as true for us. The women in business (founders, freelancers, product folks) we want to reach with LittleParrot.app are overwhelmed. Millions of things compete for their attention, and learning something new demands more of their time.
 
-I took this personally, because I run a small product company now, and it's tempting to describe what we do in the same language everyone else uses. Sounding like the category feels safe, but it's the quickest way to vanish into it.
+April's antidote for the indecision was a clear point of view on the future of your market. An uncertain buyer, she said, is really asking, "Tell me what the future of this looks like."
 
-So this is the question I'm taking home: if a customer put our product next to three others and they all sounded the same, why would they pick us? And could I answer that in one sentence?
+So this is ours: We don't think the goal of learning to use AI is to generate more output, or to outrun the urgency the tech industry manufactures. At productkind, we see a future where AI and technology let people automate the work they don't enjoy, so they can spend more time on what they find valuable.
 
-----
-
-I became familiar with April Dunford's work when my old boss gave me her positioning book as a farewell present when I left his team. (Thanks Daniel!)
-
-This month I got to see April speak at mtpcon in London, and she mentioned an interesting statistics:
-
-Roughly half of B2B deals end in no decision. Everything looks the same, picking feels risky, so they choose nothing.
-
-Even though we are building a B2C product, I think it's just as true for us. The women in business (founders, freelancers, product folks) we want to reach with Little Parrot are overwhelmed. Millions of things compete for their attention, and learning something new demands more of their time.
-
-April's antidote for the undecision was a clear point of view on the future. An uncertain buyer, she said, is really asking, "Tell me what the future of this looks like."
-
-
+We'd love for you to be motivated to gain new skills by the possibilities AI can enable for you, rather than by a fear of falling behind. Learning can feel calm and unhurried, and that's the experience we're building with LittleParrot.app.
