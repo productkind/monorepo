@@ -5,7 +5,7 @@ course:
   cover: /courses/ai-your-life-admin-00/cover.gif
   title: "AI Your Life Admin: Two Voice Shortcuts for New Mums"
   learningOutcomes:
-    - Build an iPhone Shortcut that turns a minute of talking into a sorted list of your events, to-dos and notes
+    - Build an iPhone Shortcut that files a minute of talking for you, with events in your Calendar, to-dos in Reminders and the rest in a note
     - Write a copy-paste prompt that tells ChatGPT how to sort or format what you say
     - Build a second shortcut that saves tidy entries, each stamped with the time, to one running note
     - Trigger your shortcuts hands-free by voice, a tap on the back of your phone, or the Action Button
@@ -17,8 +17,8 @@ course:
         - iPhone Shortcuts
         - AI Prompting
         - Voice Capture
-      description: Build a shortcut that turns a minute of talking into a clear, sorted list of your events, to-dos and notes.
-      completionTime: '8:00'
+      description: Build a shortcut that takes a minute of talking and files it for you, with events in your Calendar, to-dos in Reminders and the rest in a note.
+      completionTime: '10:00'
       steps:
         - type: comic
           content:
@@ -47,8 +47,8 @@ course:
             imageUrl: /comics/ai-your-life-admin-00/panel-03.png
             altText: |-
               A brightly coloured bird (called Little Parrot) flutters in cheerfully beside Dalmie.
-              Little Parrot says, "What if you could just say it out loud, and your phone sorted it all
-              for you?" Dalmie looks up, hopeful for the first time.
+              Little Parrot says, "What if you could say it out loud, and your phone put every piece
+              where it belongs?" Dalmie looks up, hopeful for the first time.
         - type: video
           title: Hand the mental load to your phone
           content:
@@ -58,17 +58,17 @@ course:
             transcript: |-
               If you're a new mum, you already know the feeling. There's a **running list in your head that never switches off**. You've got more things to do, but way less time. And most of the time, both of your hands are full.
 
-              **Your phone can hold, and sort that list for you.** It lives in a shortcut you build once and then forget about, rather than a fiddly system you have to set up and tend to.
+              **Your phone can take that list off you and file it where it belongs.** It lives in a shortcut you build once and then forget about, rather than a fiddly system you have to set up and tend to.
 
-              In this course you'll build **two** of them. The first lets you **talk** about everything on your mind, and your phone uses AI to sort it into your events, your to-dos and your notes. The second lets you **log the things you keep track of**, how much your baby fed, the nappies, the naps, their weight, and saves each as one tidy line in a running record.
+              In this course you'll build **two** of them. The first lets you **talk** about everything on your mind, and your phone uses AI to file it for you: events into your Calendar, to-dos into Reminders, and the rest into a note. The second lets you **log the things you keep track of**, how much your baby fed, the nappies, the naps, their weight, and saves each as one tidy line in a running record.
 
-              You'll become someone who **offloads the mental load by voice**, in the seconds you actually have. Let's build the first one.
+              You'll become someone who **offloads the mental load by voice**, in the seconds you have. Let's build the first one.
         - type: text
           title: What you'll need
           subtitle: Not much, honestly
           content:
             body: |-
-              Good news first: there's **nothing to buy and nothing to download**. You build everything in the **Shortcuts** app that's already on your iPhone, by tapping a few blocks together.
+              Good news first: there's **nothing to buy and nothing to download**. You build everything in the **Shortcuts** app that's already on your iPhone, by tapping a few blocks together. You don't need to be techy: if you can send a voice note, you can build this.
 
               This uses **Apple Intelligence**, Apple's built-in AI, so you'll need an **iPhone 15 Pro or 15 Pro Max, any iPhone 16, an iPhone 17, or iPhone Air**. It's free, with no subscription.
         - type: text
@@ -80,28 +80,32 @@ course:
 
               That's the setup done. (This needs Apple Intelligence and ChatGPT to be available in your country and language.)
         - type: text
-          title: Your Sort-and-Route prompt
+          title: Your Sort-and-File prompt
           subtitle: The one tool you'll reuse
           content:
             body: |-
-              Here's the heart of it. You give ChatGPT one instruction, called a **prompt**, that tells it how to sort whatever you say into three buckets: **events** (anything with a date or time), **to-dos**, and **notes** (everything else). It's yours to keep and reword. Copy it now:
+              Here's the heart of it. You give ChatGPT one instruction, called a **prompt**, that tells it how to sort whatever you say into three lists: **to-dos**, **events** (anything with a date or time), and **notes** (everything else). Your shortcut then files each list where it belongs: to-dos into your **Reminders**, events into your **Calendar**, and notes into a **note**.
+
+              The prompt asks for the answer as a **dictionary**, which means an answer with labelled parts, so your shortcut can grab each list by its name. It's yours to keep and reword. Copy it now:
 
               ```
               You are my life admin assistant. I'm a busy parent and I'm
               about to say everything on my mind in one go, in no order.
-              Read it and sort it into three short lists:
+              Sort it into a dictionary with exactly these three keys:
 
-              EVENTS - anything with a date or time
-              TO-DOS - things I need to do, with no fixed time
-              NOTES - everything else (shopping, ideas, reminders)
+              todos - a list of things I need to do, with no fixed time
+              events - a list of anything with a date or time. Write
+              each one as "Title, YYYY-MM-DD HH:mm", working out real
+              dates from today's date below
+              notes - everything else (shopping, ideas, reminders)
 
-              Keep each item short. If I mentioned a day or time, keep it.
-              Don't add anything I didn't say. Reply with just the lists.
+              Keep each item short. Don't add anything I didn't say.
 
+              Today's date:
               Here is what I said:
               ```
 
-              Your shortcut will drop **what you said** in right after that last line. You don't type a word.
+              Your shortcut will drop **today's date** and **what you said** in under those last two lines. You don't type a word. (The date is there so the AI can turn "Tuesday at 11" into a real calendar date.)
         - type: text
           title: "Build it: talk, then ask"
           subtitle: The first two blocks
@@ -109,16 +113,47 @@ course:
             body: |-
               Open the **Shortcuts** app and tap the *+* to start a new shortcut. Add two actions, one after the other:
 
-              1. Search for *Dictate Text* and add it. This is the bit that listens to you.
-              2. Search for *Use Model* and add it, then tap the model and choose *ChatGPT*.
+              1. Search for *Dictate Text* and add it. This is the bit that listens to you. Tap the arrow on the action to open its settings: pick your *Language*, and set *Stop Listening* to *After Pause*, so it stops when you finish talking.
+              2. Search for *Use Model* and add it, then tap the model and choose *ChatGPT*. Tap *Output* and change it from *Automatic* to *Dictionary*, so the answer comes back as those three named lists.
 
-              In the *Use Model* box, **paste your prompt**, then tap to insert the *Dictated Text* variable (the little blue chip) right after the last line. That's how your words flow into the prompt.
+              In the *Use Model* box, **paste your prompt**. Then tap to insert the *Current Date* variable (a little blue chip) after "Today's date:", and the *Dictated Text* variable after the last line. That's how today's date and your words flow into the prompt.
         - type: text
-          title: "Build it: show the result, then name it"
-          subtitle: The last block
+          title: "Build it: file your to-dos"
+          subtitle: Your first loop
           content:
             body: |-
-              Add one more action: search for *Show Result* and add it at the end. Tap inside it and insert the *Response* variable from *Use Model*. This puts your three sorted lists on screen.
+              Now teach it to file. Add these actions in order:
+
+              1. *Get Dictionary Value*, and type **todos** as the key, spelt exactly like in your prompt. This picks the to-dos list out of the AI's answer.
+              2. *Repeat with Each*. This runs whatever sits inside it once per to-do, so five to-dos become five reminders.
+              3. Search for *Add New Reminder* and add it **inside** the repeat block, between *Repeat with Each* and *End Repeat*. Tap its text field and insert the *Repeat Item* variable, the one to-do it's on.
+
+              That's the loop built, with *Repeat with Each* doing the work. Every to-do you say now lands in your **Reminders** app, one reminder each.
+        - type: text
+          title: "Build it: put events on your calendar"
+          subtitle: The same loop again
+          content:
+            body: |-
+              Events use the same loop, plus one helper that reads the date:
+
+              1. *Get Dictionary Value* again, with **events** as the key. One catch: it will try to grab from the repeat you built, so tap the blue variable in it and choose *Response*, the AI's answer, instead.
+              2. *Repeat with Each*, to handle every event you mentioned.
+              3. Inside the repeat, add *Get Dates from Input* and insert the *Repeat Item* variable as its input. It reads the date and time out of the event line.
+              4. Still inside, add *Add New Event*. For the title, insert *Repeat Item*; for the start date, insert the date from *Get Dates from Input*.
+
+              If an event ever lands at an odd time, tap it in Calendar and nudge it. Still miles faster than typing it all in.
+        - type: text
+          title: "Build it: save the notes, then name it"
+          subtitle: The easy landing
+          content:
+            body: |-
+              The last list is the easiest, plus a glance so you can trust it:
+
+              1. *Get Dictionary Value* one more time, with **notes** as the key, and again point its blue variable at *Response*.
+              2. *Create Note*, and insert that value as the note's text. Each brain dump becomes one fresh note holding your odds and ends.
+              3. *Show Content*, right at the end, with the *Response* variable in it. After each dump this flashes up everything the AI filed, so you can glance and catch anything odd.
+
+              One honest note: once in a while the AI's answer comes back in the wrong shape and nothing gets filed. Run it again and it sorts itself out.
 
               Now tap the name at the top and rename it something easy to say, like **Brain Dump**. That becomes its Siri phrase, so later you can say *"Hey Siri, Brain Dump"* without opening anything. Tap *Done*. That's your first shortcut built. 💫
         - type: text
@@ -130,26 +165,30 @@ course:
 
               *"Right, we're out of nappies and wipes, the health visitor is coming Tuesday at 11, I keep meaning to book the 6-week check, oh and text Mum back, and we need more of that barrier cream."*
 
-              A second later, back comes:
+              A few seconds later, her phone has done the filing:
 
-              - **Events:** Health visitor, Tuesday 11am
-              - **To-dos:** Book the 6-week check; text Mum back
-              - **Notes:** Nappies, wipes, barrier cream
+              - **Calendar:** Health visitor, Tuesday at 11:00
+              - **Reminders:** Book the 6-week check; Text Mum back
+              - **Notes:** a fresh note with nappies, wipes, barrier cream
 
-              She didn't sort a thing in her head. She said it the way it fell out, and the AI tidied it.
-        - type: reflection
-          title: Run your first brain dump
+              She didn't sort a thing, and she didn't open a single app. She said it the way it fell out, and her phone put every piece where it belongs.
+        - type: free-text-exercise
+          title: Run it, then ask anything
           content:
             description: |-
-              Your turn. Tap your Brain Dump shortcut and, when it starts listening, talk for up to a minute about everything on your mind right now, in any order. Don't tidy it up, a messy ramble is fine. When you stop, watch it come back sorted.
-            placeholder: When I ran it, it sorted my dump into...
-            subDescription: However it came out, you've just offloaded a minute of mental clutter by voice. That's the whole skill.
+              Your turn. Tap your Brain Dump shortcut and, when it starts listening, talk about everything on your mind right now, in any order. A messy ramble is fine, keep going until you're done, because it stops listening when you pause. Then check your Calendar, Reminders and Notes.
+
+              If something didn't land where it should, or a step didn't make sense, ask here and you'll get an answer.
+            subDescription: No question is too small. And if it all worked, tell us how your first brain dump went.
+            placeholder: e.g. My to-dos didn't show up in Reminders...
+            systemPrompt: 'You are a warm, knowledgeable mentor for a new mum taking a course where she builds an iPhone Shortcut called Brain Dump. The shortcut is: Dictate Text (with Language set and Stop Listening set to After Pause), then Use Model set to ChatGPT with Output changed from Automatic to Dictionary, using a prompt that asks for exactly three keys (todos, events, notes) and has the Current Date and Dictated Text variables inserted at the end; then Get Dictionary Value for todos into Repeat with Each with Add New Reminder inside (title is Repeat Item); then Get Dictionary Value for events (pointed at Response, not the repeat results) into Repeat with Each with Get Dates from Input and Add New Event inside; then Get Dictionary Value for notes (again pointed at Response) into Create Note; then Show Content showing Response. She may report something not working or ask about any step. Common causes to check for: the ChatGPT extension not set up in Settings under Apple Intelligence & Siri; Output left on Automatic instead of Dictionary; a key spelt differently in the prompt and the Get Dictionary Value block (they must match exactly: todos, events, notes); a Get Dictionary Value block grabbing the repeat results instead of the Response variable; dictation stopping early because of a long pause (keep talking, or set Stop Listening to On Tap); the wrong dictation language; the AI occasionally returning an answer that is not a proper dictionary, so the lists come back empty and nothing files (running it again usually fixes it); an event at an odd time (say the day and time clearly, and nudge it in Calendar if needed). Answer clearly and warmly in British English, in clear, everyday words for someone non-technical, in at most a few short sentences or bullets. If it falls outside the course, gently point her to Kinga and Tamas in the Discord community. Do not use em dashes. End on an encouraging note. Reply in a markdown format.'
+            checkerPrompt: 'The learner is asking a question or sharing how their build went. Accept any genuine question, problem description, or comment. Only flag clearly empty or nonsense input. This is their message:'
         - type: challenge-end
-          title: "You built a shortcut that sorts for you! 🎉"
+          title: "Your phone files it for you now! 🎉"
           content:
             nextModule: "**Next challenge:** You'll reuse this same pattern (talk, ask AI, save) to build a Baby Log: record what you keep track of, the feeds and amounts, nappies, naps and weights, and each lands as one tidy, timestamped line in a running note you can scroll back through or show your doctor."
-            description: You took a tangle of thoughts and handed it back to yourself, sorted.
-            subDescription: The real prize is the prompt. You can change those three buckets or reword it any time. The same talk-then-ask pattern powers your next shortcut, faster this time.
+            description: You took a tangle of thoughts and your phone put every piece where it belongs.
+            subDescription: The real prize is the prompt. You can change those three lists or reword it any time. The same talk-then-ask pattern powers your next shortcut, faster this time.
     - title: The Baby Log
       isFree: false
       skills:
@@ -164,9 +203,9 @@ course:
           subtitle: Challenge 2
           content:
             body: |-
-              You're not a beginner any more. This one uses the **same three moves**: talk, ask AI, then do something with the answer.
+              You're not a beginner any more. This one uses the **same three moves**: talk, ask AI, then file the answer.
 
-              The only new trick is the last move. Instead of showing the result on screen, this shortcut **saves** it, with the time, to one running note. Build it once and you'll have a record that grows on its own.
+              And it's a lighter build than your first. Instead of three lists going three ways, this shortcut turns what you say into **one tidy line** and saves it, with the time, to one running note. Build it once and you'll have a record that grows on its own.
         - type: text
           title: Why a log earns its place
           subtitle: What it's for
@@ -204,7 +243,7 @@ course:
             body: |-
               This is the step people skip, so do it first. Open the **Notes** app and create one new note. Make its first line **Baby Log**. It only needs to **exist**, because your shortcut is going to find this note and add to it, and it can't add to a note that isn't there yet.
 
-              Now open **Shortcuts**, start a new shortcut, and add your two familiar blocks: *Dictate Text*, then *Use Model* set to *ChatGPT*. Paste the Baby Log prompt and insert the *Dictated Text* chip after the last line.
+              Now open **Shortcuts**, start a new shortcut, and add your two familiar blocks: *Dictate Text*, then *Use Model* set to *ChatGPT*. Set the *Language* and *Stop Listening* on *Dictate Text* like last time. And this time leave *Output* on *Automatic*, because you want one plain line back, not three lists. Paste the Baby Log prompt and insert the *Dictated Text* chip after the last line.
         - type: text
           title: "Build it: stamp the time and save"
           subtitle: The new blocks
@@ -212,7 +251,7 @@ course:
             body: |-
               Now the new part. Add these actions in order:
 
-              1. *Current Date*, then *Format Date* right after it. Tap *Format Date* and pick a short style, like *Short*, so each line starts with the time.
+              1. *Current Date*, then *Format Date* right after it. Tap *Format Date*, set *Date Format* to *None* and *Time Format* to *Short*, so each line starts with only the time.
               2. *Find Notes*, and set its filter so the *Name* contains **Baby Log**. This finds the note you made.
               3. *Append to Note*. For the note, insert the result from *Find Notes*. For the text, insert your *Format Date* result and then the *Response* from *Use Model*.
 
@@ -229,13 +268,17 @@ course:
               - *16:45, Nap 40 mins, woke grumpy*
 
               She didn't format anything. She said *"she's just had about ninety mls and gone down fine"* and the prompt did the rest.
-        - type: reflection
-          title: Log your afternoon
+        - type: free-text-exercise
+          title: Log your afternoon, then ask anything
           content:
             description: |-
               Over the next few hours, run your Baby Log shortcut two or three times. Each time, say what you'd want to remember, a feed and how much, a nappy, a nap, the latest weight, in a normal voice, however it comes out. Then open your Baby Log note and scroll back over the entries.
-            placeholder: My first few log entries looked like...
-            subDescription: A few lines today, a clear picture by next week. That's your running record, started.
+
+              If an entry didn't land in the note, or anything about this build is unclear, ask here and you'll get an answer.
+            subDescription: A few lines today, a clear picture by next week. And no question is too small.
+            placeholder: e.g. My entries aren't showing up in the note...
+            systemPrompt: 'You are a warm, knowledgeable mentor for a new mum taking a course where she builds an iPhone Shortcut called Baby Log. The shortcut is: Dictate Text (Language set, Stop Listening set to After Pause), then Use Model set to ChatGPT with Output left on Automatic, using a prompt that turns what she says into one short log line, with the Dictated Text variable inserted at the end; then Current Date followed by Format Date set to a short style; then Find Notes filtered so the Name contains Baby Log; then Append to Note, appending the Format Date result and the Response from Use Model to the found note. She made a note in the Notes app whose first line is Baby Log before building. She may report something not working or ask about any step. Common causes to check for: the Baby Log note never created, so Find Notes finds nothing; the note title not matching the Find Notes filter exactly; Append to Note pointed at the wrong note or missing the found-note variable; the appended text missing the Format Date or Response variable; dictation cutting off on a pause (keep talking, or set Stop Listening to After Short Pause for quick one-liners); the ChatGPT extension not set up in Settings under Apple Intelligence & Siri. Answer clearly and warmly in British English, in clear, everyday words for someone non-technical, in at most a few short sentences or bullets. If it falls outside the course, gently point her to Kinga and Tamas in the Discord community. Do not use em dashes. End on an encouraging note. Reply in a markdown format.'
+            checkerPrompt: 'The learner is asking a question or sharing how their logging went. Accept any genuine question, problem description, or comment. Only flag clearly empty or nonsense input. This is their message:'
         - type: challenge-end
           title: "Your log writes itself now! 📝"
           content:
@@ -294,20 +337,25 @@ course:
             body: |-
               Some things on your mind aren't one to-do, they're a whole project: *"sort out childcare"*, *"plan the christening"*. Your Brain Dump will park these in your to-dos, which is exactly right.
 
-              When you're ready to actually tackle one, open the ChatGPT app and ask it to break the task into small steps. That's a different skill from these shortcuts, so we'll leave it as a pointer.
-        - type: reflection
-          title: "Reflection: Your one thing"
+              When you're ready to tackle one, open a chat assistant, like the free ChatGPT app from the App Store, and ask it to break the task into small steps. That's a different skill from these shortcuts, so we'll leave it as a pointer.
+        - type: free-text-exercise
+          title: Anything not working? Ask here
           content:
-            description: What's the one thing weighing on you right now that you could hand to a shortcut this week, a brain dump to clear your head, or a baby log to stop holding it all in memory?
-            placeholder: This week I'll...
-            subDescription: Pick one. The habit starts with a single press, in a spare ten seconds.
+            description: |-
+              You've built two shortcuts and wired up the triggers. Before you go, let's make sure nothing's left wobbly. If anything didn't work, or anything from the course is still unclear, the shortcuts, the prompts, the triggers, ask it here and you'll get an answer.
+
+              No question is too small.
+            subDescription: Type your question and you'll get a clear answer right back.
+            placeholder: e.g. Back Tap isn't running my shortcut...
+            systemPrompt: 'You are a warm, knowledgeable mentor for a new mum finishing a course where she built two iPhone Shortcuts. Brain Dump: Dictate Text (Language set, Stop Listening on After Pause), Use Model set to ChatGPT with Output on Dictionary and a prompt with three keys (todos, events, notes) plus the Current Date and Dictated Text variables; Get Dictionary Value for todos into Repeat with Each with Add New Reminder inside; Get Dictionary Value for events (pointed at Response) into Repeat with Each with Get Dates from Input and Add New Event inside; Get Dictionary Value for notes (pointed at Response) into Create Note; Show Content at the end. Baby Log: Dictate Text, Use Model on ChatGPT with Output on Automatic and a one-tidy-line prompt, Current Date with Format Date, Find Notes filtered to a note named Baby Log, Append to Note. The course also covered triggers: Add to Home Screen from the share menu, a Lock Screen control under Customise, Back Tap under Settings then Accessibility then Touch, the Action Button under Settings (iPhone 15 Pro and Pro Max, the 16 and 17 families, and iPhone Air only), Hey Siri plus the shortcut name, and dictating in other languages by adding a keyboard and holding the microphone. She may ask about anything from the course or report something not working. Answer clearly and warmly in British English, in clear, everyday words for someone non-technical, in at most a few short sentences or bullets. If it falls outside the course, gently point her to Kinga and Tamas in the Discord community. Do not use em dashes. End on an encouraging note. Reply in a markdown format.'
+            checkerPrompt: 'The learner is asking a question or sharing something they are unsure about. Accept any genuine question or comment. Only flag clearly empty or nonsense input. This is their message:'
         - type: course-end
           title: You've handed the mental load to your phone! 🎉
           content:
             nextModule: "**Where to go next:** If you enjoyed shaping those prompts and want to get more out of talking to AI in general, our [Write Better with AI](https://littleparrot.app/550e8400-e29b-41d4-a716-446655440000/course-overview) course goes deeper on prompting. For now though, the win is on your phone, go and use it. 🤗"
             description: Look at what you can do now.
             subDescription: |-
-              ✓ **The Brain Dump:** talk for a minute and get your events, to-dos and notes sorted for you.
+              ✓ **The Brain Dump:** talk for a minute and it's filed for you, events in your Calendar, to-dos in Reminders, the rest in a note.
 
               ✓ **The Baby Log:** record feeds and amounts, nappies, naps and weights as tidy, timestamped lines you can look back over or show your doctor.
 
@@ -317,8 +365,8 @@ course:
 
               ✓ **Any language:** dictate however it comes out, tired and messy is fine.
 
-              **Remember:** you now offload the mental load by voice, in the seconds you actually have. Now go and forget something on purpose. Your phone's got it. 💪
+              **Remember:** you now offload the mental load by voice, in the seconds you have. Now go and forget something on purpose. Your phone's got it. 💪
   titleSplit:
     - "AI Your Life Admin:"
     - Two Voice Shortcuts for New Mums
-  description: Build two voice shortcuts on your iPhone that take the mental load off your hands. Talk for a minute and AI sorts it into your events, to-dos and notes. Record how much your baby fed, their nappies, naps and weight, and each lands as a tidy, timestamped entry. Everything runs on tools already on your phone, with a free account and no typing.
+  description: Build two voice shortcuts on your iPhone that take the mental load off your hands. Talk for a minute and AI files it for you, with events in your Calendar, to-dos in Reminders and the rest in a note. Record how much your baby fed, their nappies, naps and weight, and each lands as a tidy, timestamped entry. Everything runs on tools already on your phone, with no account needed and no typing once it's built.
