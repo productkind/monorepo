@@ -115,7 +115,7 @@ export const SocialVideo000: React.FC<z.infer<typeof LessonVideoPropsSchema>> = 
       <Sequence from={titleDuration + 1637}>
         <RemotionRiveCanvas src={staticFile('parrot-follow-00.riv')} />
       </Sequence>
-      <Sequence from={titleDuration + 1000}>
+      <Sequence from={titleDuration + 700}>
         <RemotionRiveCanvas src={staticFile('parrot-peek-00.riv')} />
       </Sequence>
       <AbsoluteFill className="border-16 border-[#000000] z-10">
