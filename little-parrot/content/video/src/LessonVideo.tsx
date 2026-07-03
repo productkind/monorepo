@@ -46,6 +46,88 @@ export const LessonVideoPropsSchema = z.object({
   allDuration: z.number().default(100),
 })
 
+const DEBUG = false
+
+export const SocialVideo000: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({ captions, titleDuration }) => {
+  return (
+    <AbsoluteFill className={BG_CLASS}>
+      <Series>
+        <Series.Sequence durationInFrames={66}>
+          <FullScreenImage src={staticFile('social-000/section-00-running-fail.gif')} fit="contain" offset={-100} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={70}>
+          <FullScreenImage src={staticFile('social-000/section-01-panic.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={196}>
+          <FullScreenImage src={staticFile('social-000/section-02-chatgpt.gif')} fit="contain" offset={-150} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={48}>
+          <FullScreenImage src={staticFile('social-000/section-03-follow.gif')} fit="contain" offset={-100} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={101}>
+          <FullScreenImage src={staticFile('social-000/section-04-puppies.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={150}>
+          <FullScreenImage src={staticFile('social-000/section-05-what.gif')} fit="contain" offset={-150} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={167}>
+          <FullScreenImage src={staticFile('social-000/section-06-greed.gif')} fit="contain" offset={-150} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={95}>
+          <FullScreenImage src={staticFile('social-000/section-07-ads.gif')} fit="contain" offset={-150} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={108}>
+          <FullScreenImage src={staticFile('social-000/section-08-fired.gif')} fit="contain" offset={-150} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={50}>
+          <FullScreenImage src={staticFile('social-000/section-09-diskman.gif')} fit="contain" offset={-100} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={92}>
+          <FullScreenImage src={staticFile('social-000/section-10-pay.gif')} fit="contain" offset={-150} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={108}>
+          <FullScreenImage src={staticFile('social-000/section-11-work.gif')} fit="contain" offset={-250} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={96}>
+          <FullScreenImage src={staticFile('social-000/section-12-excited.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={63}>
+          <FullScreenImage src={staticFile('social-000/section-13-no-rush.gif')} fit="contain" offset={-250} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={87 + 15}>
+          <FullScreenImage src={staticFile('social-000/section-14-walk-slow.gif')} fit="contain" offset={-200} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={79 + 13}>
+          <FullScreenImage src={staticFile('social-000/section-15-computer.gif')} fit="contain" offset={-100} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={77}>
+          <FullScreenImage src={staticFile('social-000/section-16-come.gif')} fit="contain" offset={-260} />
+        </Series.Sequence>
+      </Series>
+      <Sequence from={titleDuration}>
+        <Captions captions={captions} />
+      </Sequence>
+      <Sequence from={titleDuration}>
+        <Audio src={staticFile('social-000/speech.wav')} />
+        <Audio src={staticFile('soundtrack.wav')} volume={0.1} />
+        <RemotionRiveCanvas src={staticFile('parrot-greet-00.riv')} />
+      </Sequence>
+      <Sequence from={titleDuration + 1637}>
+        <RemotionRiveCanvas src={staticFile('parrot-follow-00.riv')} />
+      </Sequence>
+      <Sequence from={titleDuration + 1000}>
+        <RemotionRiveCanvas src={staticFile('parrot-peek-00.riv')} />
+      </Sequence>
+      <AbsoluteFill className="border-16 border-[#000000] z-10">
+      </AbsoluteFill>
+      {DEBUG ? <DebugSafeZone /> : null
+      }
+    </AbsoluteFill>
+  )
+}
+
+
+
 export const LessonVideoLovablePublish01: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({ captions, titleDuration }) => {
   return (
     <AbsoluteFill className={BG_CLASS}>
@@ -929,6 +1011,15 @@ export const LessonVideo: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({ 
   );
 };
 
+const DebugSafeZone: React.FC = () => {
+  return (
+    <AbsoluteFill>
+      <div className="bg-[rgba(255,0,0,0.5)] w-full h-[250px] text-9xl">250</div>
+      <div className="bg-[rgba(255,0,0,0.5)] w-full h-[420px] mt-[1250px] text-9xl">420</div>
+    </AbsoluteFill>
+  )
+}
+
 const Captions: React.FC<{ captions: Captions }> = ({ captions }) => {
   const frame = useCurrentFrame()
   const sentences = getCaptionSentences(captions, 26)
@@ -938,20 +1029,22 @@ const Captions: React.FC<{ captions: Captions }> = ({ captions }) => {
     <AbsoluteFill style={{
       fontFamily: montserratFontFamily,
     }}>
-      <div className="flex flex-col items-center justify-end h-full w-full">
-        <div className="font-bold text-8xl text-center w-full p-10 min-h-1/8">
-          {sentence?.words.map((word, index) => {
-            const isCurrentWord = word.start <= frame && word.end >= frame
-            return (
-              <span key={index} className="inline-block m-4 line-height-1" style={{
-                backgroundColor: isCurrentWord ? CURRENT_TEXT_COLOR : '#fff',
-                color: BLACK,
-                height: '112px',
-              }}>
-                {word.text}
-              </span>
-            )
-          })}
+      <div className="mt-[250px] mb-[420px] w-full h-full">
+        <div className="flex flex-col items-center justify-end h-full w-full px-8">
+          <div className="font-bold text-8xl text-center w-full min-h-1/8">
+            {sentence?.words.map((word, index) => {
+              const isCurrentWord = word.start <= frame && word.end >= frame
+              return (
+                <span key={index} className="inline-block m-4 line-height-1" style={{
+                  backgroundColor: isCurrentWord ? CURRENT_TEXT_COLOR : '#fff',
+                  color: BLACK,
+                  height: '112px',
+                }}>
+                  {word.text}
+                </span>
+              )
+            })}
+          </div>
         </div>
       </div>
     </AbsoluteFill>
@@ -1128,8 +1221,9 @@ const TypingText: React.FC<{ children: string, delay?: number }> = ({ children, 
   </>
 }
 
-const FullScreenImage: React.FC<{ src: string, offset?: number, fit?: 'cover' | 'contain', color?: string, scale?: number }> = ({
+const FullScreenImage: React.FC<{ src: string, zoom?: number, offset?: number, fit?: 'cover' | 'contain', color?: string, scale?: number }> = ({
   src,
+  zoom = 0,
   offset = 0,
   fit = 'cover',
   color = DARK_PURPLE,
@@ -1143,20 +1237,20 @@ const FullScreenImage: React.FC<{ src: string, offset?: number, fit?: 'cover' | 
           isGif ?
             <Gif
               src={src}
-              width={1080 + Math.abs(offset) * 2}
+              width={1080 + Math.abs(zoom) * 2}
               height={1920}
               fit={fit}
               style={{
-                translate: `${offset}px 0`,
+                translate: `${zoom}px ${offset}px`,
                 scale: String(scale),
               }}
             />
             :
             <Img
               src={src}
-              width={1080 + Math.abs(offset) * 2}
+              width={1080 + Math.abs(zoom) * 2}
               style={{
-                translate: `${offset}px 0`,
+                translate: `${zoom}px ${offset}px`,
                 objectFit: fit,
                 height: 1920,
               }}
