@@ -8,6 +8,12 @@ Suggested order: lead with Post 1 as the anchor, then space the rest over 2–3 
 
 ## Post 1 — The hype-vs-practical gap (anchor post)
 
+Have you noticed the discrepancy between what people present on stage or social media, and what people tell you when you talk to them one-on-one?
+
+During July, I chatted with so many product people at different events, and a repeatedly heard the same story. Their company had told them to "use AI", but given no guidance on what for. So using AI had become another task on the list. Use it for something, anything, just to be seen using it.
+
+
+
 I spent last week at two product conferences, mtpcon in London and Productized in Lisbon. Many talks had a part where the speaker showed how AI had made their team faster: more pull requests, more products shipped, weeks of work done in an afternoon.
 
 Not one of them showed how. There were no practical steps I could take home and try on Monday.
@@ -21,6 +27,8 @@ If you lead a team and you want them using AI, show them one real thing you did 
 ---
 
 ## Post 2 — Output is not value
+
+Let's not mistake output for value.
 
 I keep thinking about one number from this week's conferences. John Moriarty from Intercom shared that his team had tripled the pull requests each person produces, and shipped nine major launches in two months. The room was impressed. So was I, at first.
 
