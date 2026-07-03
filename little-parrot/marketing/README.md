@@ -18,6 +18,9 @@ hitting publish.
 - **`brief-template.md`** — the 5-minute brief you fill in per campaign.
 - **`campaigns/<slug>/`** — one folder per campaign. Holds the filled `brief.md`,
   the generated per-channel drafts, and a `posting-plan.md` checklist.
+- **`content-strategy/`** — the strategy layer above campaigns: the audience
+  brief, Kinga's belief interview, and the content strategy that monthly
+  calendars and idea-testing run on. See its README for the workflow.
 
 ## Workflow
 

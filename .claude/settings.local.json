@@ -131,7 +131,8 @@
       "WebFetch(domain:www.yahoo.com)",
       "WebFetch(domain:tech.yahoo.com)",
       "WebFetch(domain:gadgets.beebom.com)",
-      "WebFetch(domain:9to5mac.com)"
+      "WebFetch(domain:9to5mac.com)",
+      "WebFetch(domain:tech.eu)"
     ],
     "deny": [],
     "ask": []
