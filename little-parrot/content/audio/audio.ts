@@ -47,6 +47,7 @@ async function generateSpeech(
         voice_settings: {
           stability: 0.5,
           similarity_boost: 0.75,
+          speed: 1.1,
         },
         output_format: 'wav_44100', // Request WAV format directly at 44.1 kHz sample rate
       }),
@@ -95,7 +96,9 @@ const LILY = 'pFZP5JQG7iQjIQuC4Bku' // Lily
 const SARAH = 'EXAVITQu4vr4xnSDxMaL' // Sarah
 const ELIZABETH = 'AXdMgz6evoL7OPd7eU12' // Elizabeth
 const BETH = '8N2ng9i2uiUWqstgmWlH' // Beth
-const VOICE_ID = ELIZABETH // Change to the desired voice ID
+const LANA = 'roYauZ4bOLAKvVZTPLre'
+const CHLOE = 'lhgliD0TncfFOY1Nc93M' // Chloe
+const VOICE_ID = CHLOE // Change to the desired voice ID
 const video1 = `
 In simple terms, Artificial Intelligence is the capability of a machine to perform tasks that would normally require human intelligence. This includes things like learning from data, understanding language, recognising patterns, and making decisions. Many problems are too complex for traditional, rule-based programming. AI gives us new ways to tackle these challenges: it can help us automate repetitive tasks, personalise user experiences, and make better predictions. Today, when we use tools like ChatGPT or Gemini, we often call them Artificial Intelligence. Technically, they’re a specific kind of AI known as Large Language Models, or LLMs. So, what exactly is an LLM? To answer that, let’s start with the basics: an AI model. An AI model is simply a program that’s trained on data to do a particular job, for example, classifying images, spotting trends, or generating text. A model always takes an input and produces an output. The input and output can be text, images, audio, or other forms of data. A Large Language Model is a type of AI model that’s specialised in human language. It’s trained on vast amounts of text to learn the structure and patterns of how we write and speak. This allows it to generate text, summarise information, answer questions, and even help you brainstorm ideas.
 `
@@ -245,8 +248,8 @@ If you'd like to learn more about AI calmly, follow along.
 `
 
 const TEXT_TO_GENERATE = videoSocialMedia1
-const MODEL_ID = 'eleven_multilingual_v2' //'eleven_v3_turbo'; // The v3 model as requested
-const videoName = 'social-00-elizabeth'
+const MODEL_ID = 'eleven_v3' //'eleven_multilingual_v2' // // The v3 model as requested
+const videoName = 'social-00-chloe'
 const OUTPUT_FILE_NAME = `generated_speech-${videoName}.wav` // e.g.,
 const ALIGNMENT_JSON_FILE_NAME = `alignment-${videoName}.json`
 const OUTPUT_FILE_PATH = OUTPUT_FILE_NAME // Saves in the same directory as the script
