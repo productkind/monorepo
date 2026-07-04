@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="840"
+   height="600"
+   viewBox="0 0 222.25 158.75"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   sodipodi:docname="lovable.svg"
+   inkscape:export-filename="consistency.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="0.35532897"
+     inkscape:cx="77.393071"
+     inkscape:cy="354.60098"
+     inkscape:window-width="1728"
+     inkscape:window-height="1057"
+     inkscape:window-x="2560"
+     inkscape:window-y="355"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     inkscape:export-bgcolor="#ffffffff" />
+  <defs
+     id="defs1">
+    <rect
+       x="223.41458"
+       y="115.23489"
+       width="65.848509"
+       height="26.652968"
+       id="rect2" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6"
+       id="linearGradient3"
+       x1="858.01971"
+       y1="628.94928"
+       x2="828.27228"
+       y2="558.86871"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-1.0648601,0.1194432,0.1194432,1.0648601,924.22957,-669.5713)" />
+    <linearGradient
+       id="linearGradient6"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#26fd46;stop-opacity:1;"
+         offset="0"
+         id="stop4" />
+      <stop
+         style="stop-color:#8efd23;stop-opacity:1;"
+         offset="0.14"
+         id="stop1" />
+      <stop
+         style="stop-color:#c4fd23;stop-opacity:1;"
+         offset="0.28"
+         id="stop2" />
+      <stop
+         style="stop-color:#eafd24;stop-opacity:1;"
+         offset="0.43000001"
+         id="stop3" />
+      <stop
+         style="stop-color:#fdf024;stop-opacity:1;"
+         offset="0.56999999"
+         id="stop6" />
+      <stop
+         style="stop-color:#fdd825;stop-opacity:1;"
+         offset="0.70999998"
+         id="stop7" />
+      <stop
+         style="stop-color:#fdc425;stop-opacity:1;"
+         offset="0.86000001"
+         id="stop8" />
+      <stop
+         style="stop-color:#fdb226;stop-opacity:1;"
+         offset="1"
+         id="stop5" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text2"
+       style="font-weight:bold;font-size:24px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect2);display:inline;fill:#370188;fill-opacity:1;stroke:none;stroke-width:12;stroke-dasharray:none;stroke-opacity:1" />
+    <g
+       id="g5"
+       transform="translate(2.465538,2.9587303)">
+      <path
+         id="path5"
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:9.28171;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:label="LaptopOutline"
+         d="M 180.61037,33.806665 97.450893,66.188524 V 93.743187 L 45.122721,112.01755 95.927939,132.93666 C 124.14971,121.92984 152.38193,110.94881 180.61037,99.958806 Z"
+         sodipodi:nodetypes="ccccccc" />
+      <path
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#230156;stroke-width:3.09383;stroke-dasharray:none;stroke-opacity:1"
+         d="M 95.927837,132.93674 45.122689,112.01747 154.70865,73.747238 C 135.20839,93.349055 130.62461,120.01217 95.927837,132.93674 Z"
+         id="path17-0-2-4-7"
+         sodipodi:nodetypes="cccc"
+         inkscape:label="LaptopBase" />
+      <path
+         style="display:inline;fill:#230156;fill-opacity:1;stroke:#230156;stroke-width:1.94211;stroke-dasharray:none;stroke-opacity:1"
+         d="M 108.05316,128.63959 70.643434,112.92613 172.14723,77.140852 Z"
+         id="path17-3-4-2-3-5"
+         sodipodi:nodetypes="cccc"
+         inkscape:label="LaptopKeyboard" />
+      <path
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:9.28166;stroke-dasharray:none;stroke-opacity:1"
+         d="m 122.71314,41.697942 9.50987,-4.288954 -9.15673,-7.309718 c -0.14011,-6.574055 -3.38042,-11.73919 -11.62911,-10.368155 -3.21454,0.534298 -7.5914,4.093021 -7.93937,11.349962 -0.35133,7.327107 1.2976,25.992588 -8.769272,35.094866 -10.994327,9.940886 -23.901215,21.66341 -32.011293,23.012445 14.708383,13.767202 47.202845,19.515252 60.220195,11.430822 11.0264,-6.847954 3.80968,-42.329665 -0.22429,-58.921268 -2.60706,1.091347 -5.32712,2.249003 -8.12159,2.290774 2.79466,-0.04247 5.51372,-1.19798 8.12159,-2.290774 z"
+         id="path1"
+         sodipodi:nodetypes="cccssscsccc"
+         inkscape:label="ParrotOutline" />
+      <path
+         style="display:inline;fill:url(#linearGradient3);stroke:#230156;stroke-width:3.09382;stroke-dasharray:none;stroke-opacity:1"
+         d="m 122.71314,41.697942 9.50987,-4.288954 -9.15673,-7.309718 c -0.14011,-6.574055 -3.38042,-11.73919 -11.62911,-10.368155 -3.21454,0.534298 -7.5914,4.093021 -7.93937,11.349962 -0.35133,7.327107 1.2976,25.992588 -8.769272,35.094866 -10.994327,9.940886 -23.901215,21.66341 -32.011293,23.012445 14.708383,13.767202 47.202845,19.515252 60.220195,11.430822 11.0264,-6.847954 3.80968,-42.329665 -0.22429,-58.921268 -2.60706,1.091347 -5.32712,2.249003 -8.12159,2.290774 2.79466,-0.04247 5.51372,-1.19798 8.12159,-2.290774 z"
+         id="path2-5-52-8"
+         sodipodi:nodetypes="cccssscsccc"
+         inkscape:label="ParrotBody" />
+      <circle
+         style="display:inline;fill:#230156;fill-opacity:1;stroke:none;stroke-width:2.83511;stroke-dasharray:none;stroke-opacity:1"
+         id="path18-0-5-0"
+         cx="-111.8711"
+         cy="41.462944"
+         r="2.4697411"
+         inkscape:label="ParrotEyes"
+         transform="matrix(-0.99376792,0.11146893,0.11146893,0.99376792,0,0)" />
+      <g
+         id="g2-5"
+         inkscape:label="LaptopTop"
+         transform="matrix(-0.13720784,0,0,0.13720784,182.39394,21.838225)"
+         style="display:inline">
+        <path
+           style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#230156;stroke-width:22.5485;stroke-dasharray:none;stroke-opacity:1"
+           d="M 12.9997,569.3592 V 87.2282 l 606.0833,236.006 -3e-4,482.13 z"
+           id="path16-1-1-0-2"
+           sodipodi:nodetypes="ccccc"
+           inkscape:label="LaptopLid" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.2507px;font-family:'Monaspace Neon';-inkscape-font-specification:'Monaspace Neon';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;inline-size:140.957;display:inline;fill:#230156;fill-opacity:1;stroke:none;stroke-width:0.524481;stroke-dasharray:none;stroke-opacity:1"
+           x="17.849133"
+           y="118.99422"
+           id="text18-6-2-9"
+           transform="matrix(-4.7742302,0,0,4.7742323,614.58111,-153.77943)"
+           inkscape:label="LittleParrotText"><tspan
+             x="17.849133"
+             y="118.99422"
+             id="tspan2"><tspan
+               style="font-weight:bold;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold'"
+               id="tspan1">Little
+</tspan></tspan><tspan
+             x="17.849133"
+             y="149.94428"
+             id="tspan4"><tspan
+               style="font-weight:bold;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold'"
+               id="tspan3">Parrot</tspan></tspan></text>
+        <ellipse
+           style="display:none;fill:#230156;fill-opacity:1;stroke:none;stroke-width:6"
+           id="path1-4"
+           cx="513.46521"
+           cy="188.19118"
+           rx="60"
+           ry="48"
+           transform="rotate(34.56757)"
+           inkscape:label="LaptopLogo" />
+      </g>
+    </g>
+  </g>
+</svg>
