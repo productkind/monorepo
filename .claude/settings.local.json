@@ -155,7 +155,8 @@
       "WebFetch(domain:creatoreconomy.so)",
       "WebFetch(domain:www.reddit.com)",
       "WebFetch(domain:www.productledalliance.com)",
-      "WebFetch(domain:www.hrdive.com)"
+      "WebFetch(domain:www.hrdive.com)",
+      "WebFetch(domain:www.linkedin.com)"
     ],
     "deny": [],
     "ask": []
