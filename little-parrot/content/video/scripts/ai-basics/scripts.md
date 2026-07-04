@@ -131,6 +131,17 @@ What do you need to excell with AI tools and solve your problems today
 
 ##
 
-Why is there the AI hype
+Why is there the AI hype (the hypergrowth that changed VC mindset)
+
+##
+
+it it counterproducrtive to chase the best models it is better to work on your processes
 
 
+
+## CATCH phrases
+
+- If a slower, calmer way into AI sounds good, follow along.
+- If you want to learn AI at your own pace, with no rush, follow along.
+- Learning AI doesn't have to feel like a race. If that suits you, follow along.
+- If you'd like to get comfortable with AI, one small step at a time, follow along.
