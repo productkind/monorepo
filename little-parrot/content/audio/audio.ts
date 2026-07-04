@@ -247,9 +247,23 @@ It is completely fine to take your time and get started with these technologies 
 If you'd like to learn more about AI calmly, follow along.
 `
 
-const TEXT_TO_GENERATE = videoSocialMedia1
+const videoSocialMedia2 = `
+Learning the newest AI tool the week it launches usually means learning it twice.
+
+If you have not tried Claude Code yet, or any of the other AI tools trending on LinkedIn, that is completely fine.
+
+We, at productkind, saw the same posts about 10x productivity last yrar. We felt the FOMO too. Still, we waited half a year before really trying Claude Code.
+
+When AI tools are this new, they change constantly. The workflow you learn in the spring can be gone by autumn. Rushing to use a brand new tool often means learning it twice.
+
+When you do sit down with it, you will find it can improve how you work, but it's not a magic wand you wave to become Wonder Woman.
+
+If you have not touched it yet, you are not behind. Waiting a little often means less mental load. Learn AI at your own pace, without the tech industry rushing you.
+`
+
+const TEXT_TO_GENERATE = videoSocialMedia2
 const MODEL_ID = 'eleven_v3' //'eleven_multilingual_v2' // // The v3 model as requested
-const videoName = 'social-00-chloe'
+const videoName = 'social-001-chloe'
 const OUTPUT_FILE_NAME = `generated_speech-${videoName}.wav` // e.g.,
 const ALIGNMENT_JSON_FILE_NAME = `alignment-${videoName}.json`
 const OUTPUT_FILE_PATH = OUTPUT_FILE_NAME // Saves in the same directory as the script
