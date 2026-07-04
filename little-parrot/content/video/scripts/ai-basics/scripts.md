@@ -23,9 +23,24 @@ If you'd like to learn more about AI calmly, follow along.
 
 ## 1 
 
-In October 2025, the skills feature in Claude Code came out, and we at productkind saw all the LinkedIn posts about how it would change everything. Some people claimed they had become 10x more productive.
+In May 2025, Claude Code came out, and we at productkind saw all the LinkedIn posts about how it would change everything. Some people claimed they had become 10x more productive.
 
-To be honest, we felt the FOMO too. But we did not start properly experimenting with them for quite a while.
+To be honest, we felt the FOMO too. But we did not start properly experimenting with it for half a year.
+
+When we finally did, we realised it can improve how we work. It is exciting. But it is not a magic wand you wave to suddenly become Wonder Woman.
+
+With careful experimentation, though, you can become more productive.
+
+It is also completely okay not to chase every trend. So give yourself permission not to read every AI update on LinkedIn every day.
+
+If you would like to learn AI calmly, at your own pace, follow along.
+
+
+
+
+In May 2025, Claude Code came out, and we at productkind saw all the LinkedIn posts about how it would change everything. Some people claimed they had become 10x more productive.
+
+To be honest, we felt the FOMO too. But we did not start properly experimenting with them for half a year.
 
 When we finally did, we realised that it can change how we work. They are exciting. But it is not a magic wand you wave to suddenly become Wonder Woman.
 
@@ -45,7 +60,8 @@ products to convice investors to found their businesses. Many of these new tools
 irrelevant after a couple of months, for example the GPT marketplace was the big news and now it's
 nothing. It is totally fine to learn to use the products that prove to be usefull after time, like
 it worth to have that ageless [clothing item] instead of buying that [other clothing item].
-[Catch phrase]
+
+##
 Tech get obsolate soon
 
 ##
@@ -113,5 +129,8 @@ What do you need to excell with AI tools and solve your problems today
  - skills
  - tools
 
+##
+
+Why is there the AI hype
 
 
