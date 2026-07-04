@@ -9,7 +9,7 @@
    id="svg1"
    inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
    sodipodi:docname="logo-thoughts-by-productkind-linear.svg"
-   inkscape:export-filename="logo-thoughts-by-productkind-linear.png"
+   inkscape:export-filename="../../dist/substack-wordmark-1344x256.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -36,7 +36,8 @@
      inkscape:window-y="32"
      inkscape:window-maximized="0"
      inkscape:current-layer="g46-5-1-7"
-     showguides="true" />
+     showguides="true"
+     inkscape:export-bgcolor="#ffffffff" />
   <defs
      id="defs1">
     <rect
@@ -239,9 +240,9 @@
              inkscape:label="LittleParrotText"><tspan
                x="17.849133"
                y="118.99422"
-               id="tspan2"><tspan
+               id="tspan6"><tspan
                  style="font-weight:bold;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold'"
-                 id="tspan1">Thoughts</tspan></tspan></text>
+                 id="tspan5">Thoughts</tspan></tspan></text>
           <text
              xml:space="preserve"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.2507px;line-height:0.8;font-family:'Monaspace Neon';-inkscape-font-specification:'Monaspace Neon';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;inline-size:211.711;display:inline;fill:#0b0b0d;fill-opacity:1;stroke:none;stroke-width:0.524481;stroke-dasharray:none;stroke-opacity:1"
@@ -252,9 +253,9 @@
              inkscape:label="LittleParrotText"><tspan
                x="17.849133"
                y="118.99422"
-               id="tspan4"><tspan
+               id="tspan8"><tspan
                  style="font-weight:bold;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold'"
-                 id="tspan3">by productkind</tspan></tspan></text>
+                 id="tspan7">by productkind</tspan></tspan></text>
           <g
              id="g46-5-1-7-1"
              transform="translate(-12706.06,6358.7356)">

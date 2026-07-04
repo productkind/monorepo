@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'dungarees/config/version.json'
+      - 'dungarees/**'
 
 permissions:
   contents: read
