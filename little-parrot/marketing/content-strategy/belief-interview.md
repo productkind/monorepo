@@ -1,11 +1,9 @@
 # Belief interview
 
-> **Status: DRAFT, needs Kinga's edit.** These answers are assembled from things
-> Kinga has already published or written (conference posts, the productkind
-> ethos, the tone-of-voice rules), so they are evidence-based guesses at her
-> beliefs, not her own words. Correct anything that reads wrong, cut anything
-> that is Claude's inference rather than a held belief, and add what's missing.
-> The content strategy is only as good as this file.
+> **Status: confirmed by Kinga, 2026-07-04.** These answers were assembled from
+> things Kinga has already published or written (conference posts, the
+> productkind ethos, the tone-of-voice rules) and Kinga confirmed they are
+> correct. Re-open when positioning shifts.
 
 The five questions come from Tayla Burrell's belief-interview prompt. They exist
 to surface positioning: the point of view that makes our content ours.
