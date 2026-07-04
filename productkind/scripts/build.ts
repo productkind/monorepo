@@ -1,13 +1,20 @@
-import { $ } from 'zx'
 import platformsRaw from '../config/platforms.json' with { type: 'json' }
-import { z } from 'zod'
-import path from 'node:path'
-import { rasterizeSvg, type SvgToRasterize } from '@dungarees/zx/image.ts'
-import { type FaviconSettings, IconTransformationType, type MasterIcon, generateFaviconFiles } from '@realfavicongenerator/generate-favicon';
-import { getNodeImageAdapter, loadAndConvertToSvg } from "@realfavicongenerator/image-adapter-node";
-import fs from 'node:fs'
+
 import { createFileSystem } from '@dungarees/fs/service.ts'
-import { fileURLToPath } from "node:url";
+import { rasterizeSvg, type SvgToRasterize } from '@dungarees/zx/image.ts'
+
+import {
+  type FaviconSettings,
+  generateFaviconFiles,
+  IconTransformationType,
+  type MasterIcon,
+} from '@realfavicongenerator/generate-favicon'
+import { getNodeImageAdapter, loadAndConvertToSvg } from '@realfavicongenerator/image-adapter-node'
+import fs from 'node:fs'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+import { z } from 'zod'
+import { $ } from 'zx'
 
 const fsService = createFileSystem(fs)
 
@@ -40,9 +47,9 @@ const PlatformSchema = z.array(
       z.object({
         type: AssetTypeSchema,
         size: z.tuple([z.number(), z.number()]).or(z.number()),
-      })
+      }),
     ),
-  })
+  }),
 )
 
 const platforms = PlatformSchema.parse(platformsRaw)
@@ -56,73 +63,135 @@ const ASSETS_DIR = 'assets'
 const SOURCE_DIR = 'src'
 const OUTPUT_DIR = 'dist'
 const baseDir = path.dirname(fileURLToPath(import.meta.url))
-const absoluteBaseDir = path.resolve(baseDir, PRODUCT_BASE_DIR);
+const absoluteBaseDir = path.resolve(baseDir, PRODUCT_BASE_DIR)
 
 const logo: string = path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-400-base.svg')
 
-const PRODUCTKIND_LOGO_PLATFORMS = ['youtube', 'linkedin', 'github'] as const;
+const PRODUCTKIND_LOGO_PLATFORMS = ['youtube', 'linkedin', 'github'] as const
 
 const asset_to_input_image: Partial<Record<`${PlatformName}-${AssetType}`, string>> = {
-  ...(fromEntriesConst(PRODUCTKIND_LOGO_PLATFORMS.map((p) => [`${p}-profile` as const, logo]))),
-  'substack-wordmark': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-thoughts-by-productkind-linear.svg'),
-  'substack-email-banner': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-thoughts-by-productkind-gradient-background.svg'),
-  'substack-cover': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-thoughts-by-productkind-gradient-background-square.svg'),
-  'substack-profile': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-lets-build-digital-products.svg'),
-  'instagram-profile': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-kim-and-tim-by-productkind.svg'),
-  'meetup-cover': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-seminars-by-productkind-gradient.svg'),
+  ...fromEntriesConst(PRODUCTKIND_LOGO_PLATFORMS.map((p) => [`${p}-profile` as const, logo])),
+  'substack-wordmark': path.join(
+    absoluteBaseDir,
+    ASSETS_DIR,
+    SOURCE_DIR,
+    'logo',
+    'logo-thoughts-by-productkind-linear.svg',
+  ),
+  'substack-email-banner': path.join(
+    absoluteBaseDir,
+    ASSETS_DIR,
+    SOURCE_DIR,
+    'logo',
+    'logo-thoughts-by-productkind-gradient-background.svg',
+  ),
+  'substack-cover': path.join(
+    absoluteBaseDir,
+    ASSETS_DIR,
+    SOURCE_DIR,
+    'logo',
+    'logo-thoughts-by-productkind-gradient-background-square.svg',
+  ),
+  'substack-profile': path.join(
+    absoluteBaseDir,
+    ASSETS_DIR,
+    SOURCE_DIR,
+    'logo',
+    'logo-lets-build-digital-products.svg',
+  ),
+  'instagram-profile': path.join(
+    absoluteBaseDir,
+    ASSETS_DIR,
+    SOURCE_DIR,
+    'logo',
+    'logo-little-parrot-circle.svg',
+  ),
+  'meetup-cover': path.join(
+    absoluteBaseDir,
+    ASSETS_DIR,
+    SOURCE_DIR,
+    'logo',
+    'logo-seminars-by-productkind-gradient.svg',
+  ),
   'website-logo': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo.svg'),
-  'website-logo-inverted': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-inverted.svg'),
-  'website-logo-vertical': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-vertical.svg'),
-  'website-logo-vertical-inverted': path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-vertical-inverted.svg'),
+  'website-logo-inverted': path.join(
+    absoluteBaseDir,
+    ASSETS_DIR,
+    SOURCE_DIR,
+    'logo',
+    'logo-inverted.svg',
+  ),
+  'website-logo-vertical': path.join(
+    absoluteBaseDir,
+    ASSETS_DIR,
+    SOURCE_DIR,
+    'logo',
+    'logo-vertical.svg',
+  ),
+  'website-logo-vertical-inverted': path.join(
+    absoluteBaseDir,
+    ASSETS_DIR,
+    SOURCE_DIR,
+    'logo',
+    'logo-vertical-inverted.svg',
+  ),
+  'youtube-cover': path.join(
+    absoluteBaseDir,
+    ASSETS_DIR,
+    SOURCE_DIR,
+    'logo',
+    'logo-productkind-cover.svg',
+  ),
 }
 
-const images: SvgToRasterize[] = platforms.flatMap((platform) =>
-  platform.profileImages.map((profileImage) => {
-    const isSingleDimension = typeof profileImage.size === 'number'
-    const size = isSingleDimension ? String(profileImage.size) : `${profileImage.size[0]}x${profileImage.size[1]}`
-    const outputFileName = `${platform.platform}-${profileImage.type}-${size}.png`
-    const outputFilePath = path.join(absoluteBaseDir, ASSETS_DIR, OUTPUT_DIR, outputFileName)
-    const inputFilePath = asset_to_input_image[`${platform.platform}-${profileImage.type}` as const]
-    return {
-      inputFilePath,
-      outputFilePath,
-      size: profileImage.size,
-    }
-  })
-)
+const images: SvgToRasterize[] = platforms
+  .flatMap((platform) =>
+    platform.profileImages.map((profileImage) => {
+      const isSingleDimension = typeof profileImage.size === 'number'
+      const size = isSingleDimension
+        ? String(profileImage.size)
+        : `${profileImage.size[0]}x${profileImage.size[1]}`
+      const outputFileName = `${platform.platform}-${profileImage.type}-${size}.png`
+      const outputFilePath = path.join(absoluteBaseDir, ASSETS_DIR, OUTPUT_DIR, outputFileName)
+      const inputFilePath =
+        asset_to_input_image[`${platform.platform}-${profileImage.type}` as const]
+      return {
+        inputFilePath,
+        outputFilePath,
+        size: profileImage.size,
+      }
+    }),
+  )
   .filter(filterDefinedByKey('inputFilePath'))
 
 // Ensure the output directory exists
 await $`mkdir -p ${path.join(absoluteBaseDir, ASSETS_DIR, OUTPUT_DIR)}`
 
 for (const image of images) {
-  console.log(`Exporting ${image.outputFilePath}...`);
-  await rasterizeSvg(image);
+  console.log(`Exporting ${image.outputFilePath}...`)
+  await rasterizeSvg(image)
 }
 
-
-function fromEntriesConst<
-  const T extends readonly (readonly [PropertyKey, unknown])[]
->(entries: T): {
-    [K in T[number]as K[0]]: K[1];
-  } {
-  return Object.fromEntries(entries) as any;
+function fromEntriesConst<const T extends readonly (readonly [PropertyKey, unknown])[]>(
+  entries: T,
+): {
+  [K in T[number] as K[0]]: K[1]
+} {
+  return Object.fromEntries(entries) as any
 }
 
-function filterDefinedByKey<
-  K extends string,
-  T extends Record<K, any>
->(
-  key: K
+function filterDefinedByKey<K extends string, T extends Record<K, any>>(
+  key: K,
 ): (item: T) => item is T & { [P in K]-?: Exclude<T[P], undefined> } {
-  return (item): item is T & { [P in K]-?: Exclude<T[P], undefined> } =>
-    item[key] !== undefined;
+  return (item): item is T & { [P in K]-?: Exclude<T[P], undefined> } => item[key] !== undefined
 }
 
-const imageAdapter = await getNodeImageAdapter();
+const imageAdapter = await getNodeImageAdapter()
 
 const masterIcon: MasterIcon = {
-  icon: await loadAndConvertToSvg(path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-no-text.svg')),
+  icon: await loadAndConvertToSvg(
+    path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'logo', 'logo-no-text.svg'),
+  ),
 }
 
 const faviconSettings: FaviconSettings = {
@@ -130,47 +199,53 @@ const faviconSettings: FaviconSettings = {
     desktop: {
       regularIconTransformation: {
         type: IconTransformationType.Background,
-        backgroundColor: "#ffffff",
+        backgroundColor: '#ffffff',
         backgroundRadius: 0,
         imageScale: 1,
         brightness: 1,
       },
-      darkIconType: "none",
+      darkIconType: 'none',
     },
     touch: {
       transformation: {
         type: IconTransformationType.Background,
-        backgroundColor: "#ffffff",
+        backgroundColor: '#ffffff',
         backgroundRadius: 0,
         imageScale: 1,
         brightness: 1,
       },
-      appTitle: "productkind"
+      appTitle: 'productkind',
     },
     webAppManifest: {
       transformation: {
         type: IconTransformationType.Background,
-        backgroundColor: "#ffffff",
+        backgroundColor: '#ffffff',
         backgroundRadius: 0,
         imageScale: 1,
         brightness: 1,
       },
-      backgroundColor: "#ffffff",
-      themeColor: "#ffffff",
-      name: "productkind",
-      shortName: "productkind"
-    }
+      backgroundColor: '#ffffff',
+      themeColor: '#ffffff',
+      name: 'productkind',
+      shortName: 'productkind',
+    },
   },
-  path: "/",
-};
+  path: '/',
+}
 
 await $`mkdir -p ${path.join(absoluteBaseDir, ASSETS_DIR, OUTPUT_DIR, 'favicon-productkind')}`
 
 // Generate files
-const files = await generateFaviconFiles(masterIcon, faviconSettings, imageAdapter);
+const files = await generateFaviconFiles(masterIcon, faviconSettings, imageAdapter)
 // Do something with the files: store them, etc.
 Object.entries(files).forEach(([name, content]) => {
-  const outputFilePath = path.join(absoluteBaseDir, ASSETS_DIR, OUTPUT_DIR, 'favicon-productkind', name)
+  const outputFilePath = path.join(
+    absoluteBaseDir,
+    ASSETS_DIR,
+    OUTPUT_DIR,
+    'favicon-productkind',
+    name,
+  )
   console.log(`Writing ${outputFilePath}`)
   fsService.writeFileSync(outputFilePath, content)
 })
