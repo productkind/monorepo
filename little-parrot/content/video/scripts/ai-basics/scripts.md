@@ -138,6 +138,9 @@ Why is there the AI hype (the hypergrowth that changed VC mindset)
 it it counterproducrtive to chase the best models it is better to work on your processes
 
 
+##
+
+Sam altman electricity statement vs opensource
 
 ## CATCH phrases
 
