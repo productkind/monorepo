@@ -1,9 +1,9 @@
 # Content strategy
 
-> **Status: DRAFT.** Derived from `audience-research.md` and the *drafted*
-> `belief-interview.md`. Once Kinga confirms or corrects the belief answers,
-> rework this file in a strategy session: question what reads wrong, ask Claude
-> to defend its choices, edit until it's a strategy worth running for a year.
+> **Status: active since 2026-07-04.** Derived from `audience-research.md` and
+> the belief interview Kinga confirmed on 2026-07-04. Review quarterly, and
+> keep challenging it: question what reads wrong, ask Claude to defend its
+> choices, edit freely.
 
 ## Positioning and point of view
 
