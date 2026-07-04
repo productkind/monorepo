@@ -8,7 +8,7 @@ description: Email that founding subscribers receive.
 
 #### I'm writing this one personally, because you've gone above and beyond.
 
-Becoming a founding subscriber is the most generous way to support Thoughts by productkind, and I want you to know it makes a real difference. This newsletter is written by one person (me, Kinga), and support like yours buys the unhurried thinking, writing and rewriting that every article needs. Thank you.
+Becoming a founding subscriber is the most generous way to support Thoughts by productkind. This newsletter is written by one person (me, Kinga), and support like yours buys the unhurried thinking, writing and rewriting that every article needs. Thank you.
 
 [Optional: one sentence on what founding support funds this year, e.g. a specific series, research, or keeping the articles free for everyone]
 
