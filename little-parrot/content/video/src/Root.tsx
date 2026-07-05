@@ -402,19 +402,19 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{
           captions: [],
           titleDuration: 0,
-          endDuration: 0,
+          endDuration: 3,
           allDuration: 100,
         }}
         calculateMetadata={async ({ props }) => {
           const titleDuration = 0
-          const endDuration = 0
+          const endDuration = 3
           const response = await fetch(staticFile('social-001/text.json'))
           const captions = await response.json()
           console.log(captions)
           const duration = Math.ceil(captions.at(-1).end * FRAME_RATE) + titleDuration + endDuration
 
           return {
-            durationInFrames: duration + 0,
+            durationInFrames: duration + 3,
             props: {
               ...props,
               captions: transformCaptionsToFrames(captions),
