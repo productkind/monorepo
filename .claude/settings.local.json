@@ -156,7 +156,9 @@
       "WebFetch(domain:www.reddit.com)",
       "WebFetch(domain:www.productledalliance.com)",
       "WebFetch(domain:www.hrdive.com)",
-      "WebFetch(domain:www.linkedin.com)"
+      "WebFetch(domain:www.linkedin.com)",
+      "WebFetch(domain:pubstacksuccess.substack.com)",
+      "WebFetch(domain:www.substackwritersatwork.com)"
     ],
     "deny": [],
     "ask": []
