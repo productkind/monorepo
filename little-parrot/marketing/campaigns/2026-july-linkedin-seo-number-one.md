@@ -17,7 +17,7 @@ I'm not an SEO expert. We set some of these things up when we launched LittlePar
 
 3. Introduce your brand in Google's own format. A small block of structured data (search for "Organization schema") goes into the same <head> section, listing your name, logo, and social profiles. It helps Google treat your brand as one thing rather than scattered pages.
 
-4. Give every page its own title and description. Duplicates confuse Google about which page to show. We have one small file, SEO.tsx, that every page uses with its own text. The same idea applies on the page itself: each page should have exactly one main heading (an h1 in the code) saying what the page is about, with smaller headings nested under it. Ask your agent to set up both and check every page.
+4. Give every page its own title, description, and main heading. The title and description tell Google what each page is about, and duplicates confuse it about which page to show; we have one small file, SEO.tsx, that every page uses with its own text. The main heading (an h1 in the code) does the same job on the visible page, so each page needs exactly one. Ask your agent to check all three on every page.
 
 5. Make sure Google can read your content. Many AI-built apps, including Lovable's, show an empty loading screen before the content appears, and Google may only ever see that. Lovable has improved this for newer projects, but older ones, like ours, still work this way. Our fix is a script that runs at build time and saves every page as finished HTML, so the full text is there from the first moment. Ask your agent to prerender your pages the same way.
 
@@ -27,7 +27,7 @@ I'm not an SEO expert. We set some of these things up when we launched LittlePar
 
 8. Keep pages fast on phones. Google measures loading speed, so defer heavy things like videos until after the text has appeared.
 
-If you've built an app with Lovable or a similar tool, start with number 2 today: search for your product name and look at the two lines Google shows. If they read like a template wrote them, index.html is where to fix it.
+If you've built an app with Lovable or a similar tool, start with number 2 today: search for your product name and look at the two lines Google shows. If they read like a template, ask your agent to rewrite the title and description in the <head> of your HTML.
 
 ---
 
