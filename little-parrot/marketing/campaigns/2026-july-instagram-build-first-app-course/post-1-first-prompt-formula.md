@@ -38,13 +38,22 @@ later prompts.
 
 Your first prompt sets the direction for everything Lovable builds after it, and the good news is there's a structure for it. ✨
 
-Instead of one vague sentence, describe your idea in sections: what the app is, what the user does step by step, how it should look and feel, and who it's for. Lovable reads the structure and builds something much closer to what you imagined.
+Instead of one vague sentence, describe your idea in sections: 
 
-The rule that surprises most people: leave things out. Pick the one core feature your app needs and describe that well. Voting, logins, reminders can each get their own prompt later, and each feature will come out better.
+ - what the app is, 
+ - what the user does step by step, 
+ - how it should look and feel, and 
+ - who it's for. 
+
+Lovable reads the structure and builds something much closer to what you imagined.
+
+The rule that surprises most people: leave things out. A lot of advice says to start with a full PRD (a product requirements document), but that's too much information in one go, and the features won't work the way you expect. 
+
+Pick the one core feature your app needs and describe that well. Voting, logins, reminders can each get their own prompt later, and each feature will come out better.
 
 In the free first challenge of our Build Your First App with Lovable course on LittleParrot.app, you use this template to build a real working app.
 
-What would you build by vibe coding? Tell us below. 👇
+What would you build by vibe coding? Tell us below. 👇🏼
 
 .
 .

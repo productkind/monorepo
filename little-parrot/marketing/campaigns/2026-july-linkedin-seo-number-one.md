@@ -9,13 +9,13 @@
 
 If you google "little parrot" right now, our site is the first result. Above the actual parrots.
 
-I'm not an SEO expert. We set some of these things up when we launched littleparrot.app, and some over time. None of them needed an agency. Here are all eight, with the exact files, so you can point your AI agent at them:
+I'm not an SEO expert. We set some of these things up when we launched LittleParrot.app, and some over time. None of them needed an agency. Here are all eight, with the exact files, so you can point your AI agent at them:
 
 1. Pick a name you can own, and one address. Google needs to connect your name to one specific brand, not a whole category. Choose a distinctive name, buy the matching domain, and make every link point at that one address (no mixing www and non-www versions).
 
-2. Write a descriptive page title and description. These are the two lines Google shows in search results, and they live in a file called index.html. Tools like Lovable fill them with placeholder text, so ask your agent to open index.html and replace them with your brand name and what you offer.
+2. Write a descriptive page title and description. These are the two lines Google shows in search results, you can find them in the <head> of your html. Tools like Lovable fill them with placeholder text, so ask your agent to replace them with your brand name and what you offer.
 
-3. Introduce your brand in Google's own format. A small block of structured data (search for "Organization schema") goes into the same index.html, listing your name, logo, and social profiles. It helps Google treat your brand as one thing rather than scattered pages.
+3. Introduce your brand in Google's own format. A small block of structured data (search for "Organization schema") goes into the same <head> section, listing your name, logo, and social profiles. It helps Google treat your brand as one thing rather than scattered pages.
 
 4. Give every page its own title and description. Duplicates confuse Google about which page to show. We have one small file, SEO.tsx, that every page uses with its own text. The same idea applies on the page itself: each page should have exactly one main heading (an h1 in the code) saying what the page is about, with smaller headings nested under it. Ask your agent to set up both and check every page.
 
