@@ -1,0 +1,12 @@
+script: |-
+  Some newer chat assistants have a "reasoning" or "thinking" mode. Here is what that means.
+
+  A regular chat assistant answers you as it generates. Token by token, straight from your prompt to your reply.
+
+  A reasoning model does something extra. Before it writes the reply you see, it writes a hidden scratchpad, working through the problem step by step. That scratchpad is thrown away. What you see is the final answer, with the reasoning already done.
+
+  This helps with tasks that need multiple steps: harder maths, planning, tricky logic, code that has to work. It hurts everywhere else, because you pay more per query and wait longer for the answer.
+
+  The rule of thumb: if the question has a definite right answer that would need careful thinking, a reasoning model is worth it. If the question is open-ended or fast, a regular chat assistant is fine.
+
+  More like this coming up. Follow along.

@@ -1,0 +1,12 @@
+script: |-
+  The AI world is split into two big groups: closed models and open-weight models.
+
+  Closed models like GPT-5, Claude, or Gemini live behind their companies' walls. You can talk to them through an app or an API, but you cannot download the model. The weights, those trillions of numbers we talked about earlier, are private.
+
+  Open-weight models are the opposite. Meta's Llama, Mistral, DeepSeek, and Qwen are all open weight. Anyone can download the model, run it on their own hardware, and use it without asking permission or paying per query.
+
+  Open weight and open source are different things. With open weight, you get to use the finished model. You do not get the training data or the code that built it.
+
+  Open-weight models are often less capable than the frontier closed ones, but they are catching up. For privacy, cost, or research, they are hard to beat.
+
+  More like this coming up. Follow along.

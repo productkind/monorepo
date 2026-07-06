@@ -1,0 +1,12 @@
+script: |-
+  Chat assistants have one voice, and it sounds confident.
+
+  Whether the answer is exactly right, half right, or completely made up, the sentence structure is the same: measured, articulate, sure of itself. The tone gives you no signal about accuracy.
+
+  The reason is that confidence in a language model is stylistic. When it says "Yes, that is correct" or "The best approach is", those words came from training probabilities. The model was never asked to verify anything before saying them.
+
+  It cannot tell you which parts of its answer it is unsure about, because it does not have a mechanism for checking what it is sure about in the first place.
+
+  Practical rule: when the answer matters, verify the source. Confidence tells you nothing about accuracy.
+
+  More like this coming up. Follow along.

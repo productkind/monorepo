@@ -1,0 +1,12 @@
+script: |-
+  There are two very different kinds of AI tool, and they are often talked about like they are the same thing.
+
+  A chat assistant is like ChatGPT, Claude, or Gemini. You type. It gives you text. You copy the text out and use it. The AI never touches your files, your apps, or your world. You are the one who acts on its output.
+
+  An AI agent is like Claude Code, Codex, or Cursor. You ask it to do something, and it does it. It reads and edits your files, runs commands, changes things. It acts on your world directly.
+
+  The trust required is very different. A chat assistant can be wrong and the worst outcome is a bad paragraph. An agent can be wrong and the worst outcome is a broken project.
+
+  So when someone says they use AI at work, ask which kind. The answer changes everything.
+
+  More like this coming up. Follow along.

@@ -1,0 +1,12 @@
+script: |-
+  When you send a message to a chat assistant, it does not see your words the way you do. It sees tokens.
+
+  A token is a small chunk of text. Sometimes it is a whole word. Sometimes it is a piece of one. Common words like "hello" are usually a single token. Longer or less common words like "hippopotamus" get split into two or three.
+
+  Punctuation and spaces get their own tokens too.
+
+  Why chop things up like this? Because the model works with numbers, not letters. Every possible token has its own number in the model's vocabulary. Splitting text into tokens is how it turns what you wrote into something it can do maths on.
+
+  If you have ever seen chat assistants priced "per million tokens", this is what they mean. It is not the same as words. Roughly, a hundred tokens is about seventy-five words in English.
+
+  More on how the model uses these tokens in the next video.

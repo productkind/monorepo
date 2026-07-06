@@ -1,0 +1,12 @@
+script: |-
+  When you type a message into a chat assistant, your prompt is not sent to the model on its own.
+
+  The app also sends a second, hidden message called the system prompt. This one is written by the model's creators. It sets the ground rules for how the AI should behave: how polite to be, what topics to swerve around, what tone to hit.
+
+  The model then takes both messages, yours and the hidden one, and chops them into tokens. A token can be as short as one letter or as long as a whole word.
+
+  From there, the model predicts what token should come next. Then the one after that. Then the one after that.
+
+  By stringing these predictions together, one token at a time, it builds you a full reply. There is no bigger plan. It is guessing what should come next, then guessing again.
+
+  Why the same prompt can give different answers, and why the AI forgets things. More on both in the next video.

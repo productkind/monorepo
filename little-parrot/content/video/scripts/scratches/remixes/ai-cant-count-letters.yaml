@@ -1,0 +1,10 @@
+script: |-
+  Ask a chat assistant how many r's are in the word "strawberry". Depending on the model, you have a decent chance of getting the wrong answer.
+
+  The reason is tokenisation. Language models do not see individual letters. They see tokens, chunks of text that are usually a whole word or a piece of a word. "Strawberry" arrives at the model already split into two or three chunks, and the individual letters inside those chunks are invisible.
+
+  When you ask it to count r's, the model does what it always does: it predicts the most likely answer, based on the shape of the question. Sometimes that prediction is right. Often it is not, because the model has no way of looking inside the word.
+
+  This is why counting, spelling and letter-manipulation tasks are surprisingly hard for language models. A calculator that has never seen numerals would have the same problem.
+
+  More like this coming up. Follow along.

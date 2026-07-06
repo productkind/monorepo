@@ -1,0 +1,10 @@
+script: |-
+  Every time you send a message to a chat assistant, a few things happen in a data centre somewhere. A GPU wakes up, runs your prompt through billions of numbers, and produces a reply. This uses electricity. It generates heat. The heat is dealt with by cooling systems, which use water and more electricity.
+
+  One query is a small amount, on its own. The problem is scale. Chat assistants get billions of queries a day. Training the underlying model uses far more, up front. And image generation uses roughly ten times as much per output as a text reply.
+
+  If you care, some things help. Use smaller models when you can. Avoid image generation for casual use. Do not treat the chat assistant like a search engine for questions that a search engine would answer faster and cheaper.
+
+  Awareness of what your habits add up to is worth having.
+
+  More like this coming up. Follow along.

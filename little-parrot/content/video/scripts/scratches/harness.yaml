@@ -1,0 +1,10 @@
+script: |-
+  When you use ChatGPT or Claude, you are not using a language model directly. You are using a harness.
+
+  A harness is the whole system built around a language model to turn it into a useful product. It includes the model, but also: the app that receives your message, the hidden system prompt, the code that decides which model to route your query to, the tools the model can call (like a calculator or a web search), and the memory that resends your conversation each time.
+
+  The raw language model, on its own, is a text-completing engine. Not very useful yet. The harness is what makes it feel like an assistant. It is where the personality, the safety rules, the tool use, and the interface all live.
+
+  Two chat assistants can use the same underlying model but feel totally different, because their harnesses are different. That is where a lot of the product design work happens.
+
+  More like this coming up. Follow along.

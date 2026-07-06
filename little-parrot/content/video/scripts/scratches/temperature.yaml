@@ -1,0 +1,14 @@
+script: |-
+  If you have poked around in AI settings, you may have seen a slider called temperature. Here is what it does.
+
+  When a language model picks the next token, it does not always pick the single most likely one. It samples from the top few. Temperature controls how wildly it samples.
+
+  Low temperature, close to zero, means the model almost always picks the top choice. The output becomes predictable, sober, sometimes a bit dull.
+
+  High temperature, close to one, means the model reaches further down the list. The output becomes more varied, surprising, and sometimes off the rails.
+
+  For factual work like summarising a document, low temperature is safer. For brainstorming or creative writing, higher temperature can help.
+
+  Most chat assistants hide this slider, and pick a middle value for you. If you find it, now you know what it is doing.
+
+  More like this coming up. Follow along.
