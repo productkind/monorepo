@@ -19,7 +19,7 @@ per slide so each is screenshot-clean.
 | 3 | Terminal-style card, command in monospace | "1️⃣ git clone [your repo's HTTPS link] · Copy the link from the green Code button on GitHub. This downloads your app's code." |
 | 4 | Terminal-style card | "2️⃣ npm install --no-save · Fetches the building blocks your app needs. Run it once, inside your app's folder." |
 | 5 | Terminal-style card, browser window showing an app at localhost:8080 | "3️⃣ npm run dev · Your app appears at localhost:8080, running just for you. Edit, save, and watch it update instantly." |
-| 6 (CTA) | Brand text card | "Every change you make here costs no credits. Save this for your next session. 🔖 Full course: link in bio, first challenge free." |
+| 6 (CTA) | Brand text card | "Every change you make here costs no credits. Save this for your next session. 🔖 Full course: Save Lovable Credits: Edit Your App Like a Developer, on LittleParrot.app. First challenge free." |
 
 **Alt text (for the post):** A cheat sheet carousel showing the three terminal
 commands that run a Lovable app on your own computer: git clone, npm install,
@@ -33,7 +33,7 @@ And it's three commands. That's the whole thing.
 
 Once it's running, every edit you make is free: change the copy, save, and watch the browser update instantly. No prompting, no waiting, no credits.
 
-You'll need VS Code, Node.js, and Git installed first (all free), and your app connected to GitHub. Our course covers every click of that setup, and the first challenge is free. Link in bio.
+You'll need VS Code, Node.js, and Git installed first (all free), and your app connected to GitHub. Our course, Save Lovable Credits: Edit Your App Like a Developer, covers every click of that setup. You'll find it on LittleParrot.app, and the first challenge is free.
 
 Save this post for your next building session. 🔖
 

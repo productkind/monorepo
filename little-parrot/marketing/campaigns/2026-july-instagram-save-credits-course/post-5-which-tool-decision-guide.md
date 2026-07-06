@@ -19,7 +19,7 @@ green, Lovable purple), ending on a bonus tip.
 | 3 | Green card, robot icon | "What people see, but it needs real code written? Describe it to GitHub Copilot (free tier). Review its changes, keep or undo, file by file. Still free." |
 | 4 | Purple card, heart icon | "Behind the scenes? That's Lovable's job. Saving data, logins, emails, payments, and brand-new features. Worth the credits." |
 | 5 (bonus tip) | Lightbulb card | "Not sure which side it's on? Ask Lovable in Plan mode: 'Would this change touch the backend?' One credit, changes nothing, tells you the cheapest route." |
-| 6 (CTA) | Brand card | "Right tool, right job: that's how you keep your credits AND your time. Save this guide 🔖 Full course: link in bio, first challenge free." |
+| 6 (CTA) | Brand card | "Right tool, right job: that's how you keep your credits AND your time. Save this guide 🔖 Full course: Save Lovable Credits: Edit Your App Like a Developer, on LittleParrot.app. First challenge free." |
 
 **Alt text (for the post):** A decision-guide carousel for Lovable builders:
 changes people can see are free to make yourself in VS Code or with GitHub
@@ -38,7 +38,7 @@ The rule from our new course fits in one question: does the change touch what pe
 
 And when you genuinely can't tell, there's a one-credit trick on slide 5.
 
-This is the judgement our learners tell us they're missing, and it's very learnable. The full course sets up your workspace and walks you through every route, first challenge free. Link in bio.
+This is the judgement our learners tell us they're missing, and it's very learnable. The full course, Save Lovable Credits: Edit Your App Like a Developer, sets up your workspace and walks you through every route. It's on LittleParrot.app, and the first challenge is free.
 
 Save this for your next building session. 🔖
 

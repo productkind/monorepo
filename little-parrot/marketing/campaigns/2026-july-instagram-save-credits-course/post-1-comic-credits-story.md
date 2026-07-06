@@ -18,7 +18,7 @@ panel-03), exported as PNG. Slide 5 is a simple brand-colour text card.
 | 2 | panel-01: Dalmie thinking, counter nearly empty | (in panel) "There must be a way to make these small changes for free." |
 | 3 | panel-02: Little Parrot lands on the desk | (in panel) "There is! Let's set up your own workspace, right on your computer, Dalmie." |
 | 4 | panel-03: Dalmie leaning in, excited, code editor glowing | (in panel) "My own setup? Now that sounds fun." |
-| 5 | Brand text card, Little Parrot purple, course cover thumbnail optional | "New course: Save Lovable Credits, Edit Your App Like a Developer. First challenge free. Link in bio 🟪" |
+| 5 | Brand text card, Little Parrot purple, course cover thumbnail optional | "New course: Save Lovable Credits: Edit Your App Like a Developer. Find it on LittleParrot.app. First challenge free 🟪" |
 
 **Alt text (for the post):** A four-panel comic. Dalmie the dalmatian watches
 her Lovable credits drain on small fixes, wonders if there's a free way, and
@@ -37,7 +37,7 @@ Our new course shows you how, step by step:
 💻 run your app on your own computer and change copy and icons yourself
 🤖 hand the bigger jobs to GitHub Copilot's free tier, and review its work
 
-The first challenge is free. Link in bio.
+The course is Save Lovable Credits: Edit Your App Like a Developer, on LittleParrot.app, and the first challenge is free.
 
 Which small fix has cost you the most credits so far? Tell us below, we're collecting them. 👇
 

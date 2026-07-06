@@ -20,7 +20,7 @@ icon changing to a star as the running example.
 | 3 | Screenshot: VS Code search panel, `Heart` results | "2️⃣ Search the name in VS Code (Cmd/Ctrl + Shift + F). One twist: in code it's written as Heart, capitalised, dashes removed." |
 | 4 | Screenshot: lucide.dev icon grid | "3️⃣ Pick your new icon at lucide.dev, there are over a thousand. Click it to grab the code-ready name, like Star." |
 | 5 | Code snippet card: the import line and `<Heart />` → `<Star />` | "4️⃣ Rename it in two places: add Star to the import line at the top, then change <Heart /> to <Star /> where it's shown. Save." |
-| 6 (CTA) | Brand card, star icon shining in a mock app | "It updates in your browser instantly. 0 credits spent. Save this for your next swap 🔖 Full course: link in bio, first challenge free." |
+| 6 (CTA) | Brand card, star icon shining in a mock app | "It updates in your browser instantly. 0 credits spent. Save this for your next swap 🔖 Full course: Save Lovable Credits: Edit Your App Like a Developer, on LittleParrot.app. First challenge free." |
 
 **Alt text (for the post):** A step-by-step tutorial carousel showing how to
 swap an icon in a Lovable app for free: find its name with the browser's
@@ -35,7 +35,7 @@ No image editing, no uploading, no prompting Lovable and hoping. Four steps in t
 
 It's a tiny change, but it teaches you something bigger: your app's code is readable, and names like these are switches you can flip. That feeling is what the whole course builds on.
 
-Want the full walkthrough, plus copy edits and an AI agent for the bigger jobs? Link in bio, the first challenge is free.
+Want the full walkthrough, plus copy edits and an AI agent for the bigger jobs? The course is Save Lovable Credits: Edit Your App Like a Developer, on LittleParrot.app, and the first challenge is free.
 
 What's the first icon you'd swap? 👇
 

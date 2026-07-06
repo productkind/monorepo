@@ -1,6 +1,6 @@
-# Instagram: Save Lovable Credits course (5 posts)
+# Instagram: Save Lovable Credits course (6 posts)
 
-Five Instagram posts built from the **Save Lovable Credits: Edit Your App Like
+Six Instagram posts built from the **Save Lovable Credits: Edit Your App Like
 a Developer** course (`vibe-coding-github-00`), shaped by
 `marketing/content-strategy/audience-research.md` and the content strategy.
 
@@ -21,10 +21,15 @@ a Developer** course (`vibe-coding-github-00`), shaped by
 ## Posting notes
 
 - Account: Little Parrot Instagram. Cadence 1 to 2 per week, so this set
-  covers roughly three weeks. Suggested order: 1 (story) → 2 (cheat sheet) →
-  4 (prompt recipe) → 3 (icon trick) → 5 (decision guide).
-- Links aren't clickable in captions, so every CTA is "link in bio".
-  Set the bio link to:
+  covers three to four weeks. Suggested order: 1 (story) → 6 (GitHub setup) →
+  2 (cheat sheet) → 4 (prompt recipe) → 3 (icon trick) → 5 (decision guide).
+  Post 6 sits early because GitHub setup is the course's free first challenge
+  and the broadest-appeal hook (documents, not only apps).
+- CTAs name the full course title (Save Lovable Credits: Edit Your App Like a
+  Developer) and LittleParrot.app, because the Instagram bio holds only 5 links
+  and we have 8+ courses, so "link in bio" can't carry every course. The UTM
+  URL below remains for wherever the course link is actually placed (a bio
+  slot, stories, comment replies):
   `https://littleparrot.app/7171137b-9461-425f-8737-ad3400d56fd8/course-overview?utm_source=instagram&utm_medium=social&utm_campaign=save-credits`
   (add `&utm_content=post-1` etc. per post if you want per-post tracking).
 - The first challenge of the course is free; the CTAs say so, since free-course
@@ -40,3 +45,4 @@ a Developer** course (`vibe-coding-github-00`), shaped by
 3. [post-3-icon-swap-tutorial.md](post-3-icon-swap-tutorial.md) - swap an icon for free
 4. [post-4-what-where-example-recipe.md](post-4-what-where-example-recipe.md) - the AI agent request recipe, before/after
 5. [post-5-which-tool-decision-guide.md](post-5-which-tool-decision-guide.md) - which tool for which change
+6. [post-6-github-setup.md](post-6-github-setup.md) - set up GitHub, your documents get a home too
