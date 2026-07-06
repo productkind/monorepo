@@ -1,4 +1,4 @@
-# Post 2: The release update people actually read
+# Post 2: The release update people read
 
 **Pillar:** the method, shown.
 **Research trace:** a weekly PM task made concrete; the vague-vs-specific
@@ -7,6 +7,15 @@ teaching line that transfers to every AI tool the audience uses, including
 app builders. Draws on the course's Challenge 2.
 
 ## Format
+
+**Spec key for the designer:** In the slide table, any text introduced as
+"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
+markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
+the learner types into a tool. Render it verbatim in monospace inside a
+prompt-input mockup (a chat input field with a cursor and send arrow), so
+it reads as typed text rather than decoration; markdown symbols are part of
+the typed text, never styled labels. Everything else in "Text on slide" is
+display copy in the brand style.
 
 **Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Channel-mockup style: a
 #releases channel window, the generic update greyed and skimmed past, the
@@ -42,4 +51,4 @@ Save the checklist for your next ship day. 🔖
 .
 .
 .
-#promptingtips #aiatwork #productmanagement #womenintech #productupdates
+#promptingtips #aiatwork #productmanagement #womenintech #productupdates #productmanager #aiskills #learnwithai #techforwomen #worksmarter #careertips

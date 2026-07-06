@@ -9,13 +9,22 @@ contrast. Repackages the MVP Decision Checklist toolkit item.
 
 ## Format
 
+**Spec key for the designer:** In the slide table, any text introduced as
+"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
+markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
+the learner types into a tool. Render it verbatim in monospace inside a
+prompt-input mockup (a chat input field with a cursor and send arrow), so
+it reads as typed text rather than decoration; markdown symbols are part of
+the typed text, never styled labels. Everything else in "Text on slide" is
+display copy in the brand style.
+
 **Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Checklist style: big
 tick boxes, one test per slide, the MVP vs too-much comparison as a
 two-column slide.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
-| 1 (cover) | A large circle drawn around a small cluster of sticky notes | "MVP stands for minimum viable product: the smallest version that solves the problem. Here's how to check yours is actually minimum. 👇" |
+| 1 (cover) | A large circle drawn around a small cluster of sticky notes | "MVP stands for minimum viable product: the smallest version that solves the problem. Five checks tell you whether yours is small enough. 👇" |
 | 2 | One sentence on a card, a paragraph crossed out | "The one-sentence test: 'A web app where book club members suggest books and vote on which to read next.' If your MVP needs a paragraph, it's too big." |
 | 3 | An arrow from a feature back to the problem statement | "Trace every feature back to your problem statement. If it doesn't help solve the problem you defined, it's not MVP; save it for later. And check your persona: would Sarah find this version useful without the extras?" |
 | 4 | A calendar with one week circled | "The reality check: could you build and test this within a week? And could you show it to a real user this week? If you keep thinking 'I need to add one more thing first', that's the sign you're over-scoping." |
@@ -30,7 +39,7 @@ complete, and compare an MVP column with a too-much column.
 
 ## Caption (exact)
 
-MVP is one of those terms that gets used to mean everything, so here's the version product managers actually work with: the minimum viable product, the smallest version of your idea that solves the real problem end to end. 🎯
+MVP is one of those terms that gets used to mean everything, so this is the version product managers work with: the minimum viable product, the smallest version of your idea that solves the real problem end to end. 🎯
 
 The checks in the carousel catch the two ways it goes wrong. Too big: you can't describe it in a sentence, you can't test it within a week, and "one more thing first" keeps moving the finish line. Too hollow: your user starts the journey and hits a dead end, like suggesting a book and never seeing whether it won.
 
@@ -43,4 +52,4 @@ Save this for scoping day. 🔖
 .
 .
 .
-#vibecoding #buildwithai #womenwhobuild #productmanagement #mvp
+#vibecoding #buildwithai #womenwhobuild #productmanagement #mvp #womenintech #techforwomen #productthinking #appbuilding #startupideas #learnwithai #buildinpublic

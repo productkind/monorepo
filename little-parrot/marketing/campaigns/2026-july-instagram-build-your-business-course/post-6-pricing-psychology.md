@@ -10,6 +10,15 @@ toolkit item.
 
 ## Format
 
+**Spec key for the designer:** In the slide table, any text introduced as
+"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
+markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
+the learner types into a tool. Render it verbatim in monospace inside a
+prompt-input mockup (a chat input field with a cursor and send arrow), so
+it reads as typed text rather than decoration; markdown symbols are part of
+the typed text, never styled labels. Everything else in "Text on slide" is
+display copy in the brand style.
+
 **Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Pricing-page style:
 mock pricing tiers that rearrange across the slides to demonstrate each
 effect, one concept per slide with the real term named.
@@ -44,4 +53,4 @@ Save this for pricing day. 🔖
 .
 .
 .
-#vibecoding #buildwithai #womenwhobuild #womeninbusiness #pricing
+#vibecoding #buildwithai #womenwhobuild #womeninbusiness #pricing #womenintech #buildinpublic #femalefounder #solopreneur #smallbusinesstips #startupjourney

@@ -9,6 +9,15 @@ course's Challenge 3.
 
 ## Format
 
+**Spec key for the designer:** In the slide table, any text introduced as
+"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
+markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
+the learner types into a tool. Render it verbatim in monospace inside a
+prompt-input mockup (a chat input field with a cursor and send arrow), so
+it reads as typed text rather than decoration; markdown symbols are part of
+the typed text, never styled labels. Everything else in "Text on slide" is
+display copy in the brand style.
+
 **Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Parody-then-fix style:
 the AI-guru post rendered in full cringe on slide 2 (rockets, hashtag
 pile), then the calm rebuild, tone blocks in monospace.
@@ -18,7 +27,7 @@ pile), then the calm rebuild, tone blocks in monospace.
 | 1 (cover) | A rocket emoji bursting out of a LinkedIn card | "🚀 Thrilled to announce this game-changing journey... If your AI drafts sound like that, the fix is three lines long. 👇" |
 | 2 | The full parody post card, hashtags stacked | "Ask a chat assistant for 'a LinkedIn post' and you get its best LinkedIn-guru impression: dramatic one-liners, '10x productivity gains', a hashtag pile. It imitates the loudest posts it has seen, because you let it choose the voice." |
 | 3 | A monospace tone block | "Take the voice back with a tone block: 'Friendly, understated, sincere. Plain wording, no exaggeration. 5 to 6 sentences. Avoid buzzwords like game-changer and 10x, and avoid emoji pileups.'" |
-| 4 | A context block being added beneath it | "Then stop it inventing: add context about what actually happened. What you learned or built, one specific detail, why it mattered to you. The model can only be concrete with facts you provide." |
+| 4 | A context block being added beneath it | "Then stop it inventing: add context about what happened. What you learned or built, one specific detail, why it was worth your time. The model can only be concrete with facts you provide." |
 | 5 | The three parts stacked as a recipe card | "That's the three-part prompt: 1️⃣ the request 2️⃣ tone and style 3️⃣ context and background. It's the structure behind every technique in this series." |
 | 6 | A past post being pasted in as a sample | "The shortcut to 'sounds like me': paste one or two of your past posts as a style sample. The model mirrors patterns, so give it yours instead of LinkedIn's." |
 | 7 (CTA) | Brand card, a calm post with real engagement | "Visibility shouldn't require a voice that isn't yours. Full course: Write Better with AI: Prompting Foundations for Product Managers, on LittleParrot.app. First challenge free 🟪 Save the tone block 🔖" |
@@ -43,4 +52,4 @@ Save the tone block for your next post. 🔖
 .
 .
 .
-#promptingtips #aiatwork #womenintech #linkedintips #personalbrand
+#promptingtips #aiatwork #womenintech #linkedintips #personalbrand #careertips #aiskills #learnwithai #techforwomen #buildinpublic #worksmarter

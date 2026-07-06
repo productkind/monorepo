@@ -10,6 +10,15 @@ and Email Setup Guide toolkit items.
 
 ## Format
 
+**Spec key for the designer:** In the slide table, any text introduced as
+"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
+markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
+the learner types into a tool. Render it verbatim in monospace inside a
+prompt-input mockup (a chat input field with a cursor and send arrow), so
+it reads as typed text rather than decoration; markdown symbols are part of
+the typed text, never styled labels. Everything else in "Text on slide" is
+display copy in the brand style.
+
 **Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Fishing-net style (the
 course's own metaphor): a net being knotted piece by piece across the
 slides, one setup step per slide, small cost tags on each.
@@ -21,7 +30,7 @@ slides, one setup step per slide, small cost tags on each.
 | 3 | An address bar and an email envelope | "2️⃣ A domain and a professional email. Short, easy to spell, no hyphens; and hello@yourdomain.com earns trust that a personal address can't. Cost: under $25, and the only spending on this list." |
 | 4 | A simple form on a landing page, a small PDF gift | "3️⃣ Email capture, before you have anything to announce. A wait-list form is enough (even an embedded Google Form). Add a lead magnet as the reason to sign up: Dalmie's was a free Book Club Starter Kit PDF. Cost: an afternoon." |
 | 5 | A dashboard lighting up with one visit | "4️⃣ Analytics, before the first visitor rather than after. Your earliest visitors are the most valuable to learn from; miss them and that data never comes back. PostHog is free, and our course includes the exact setup prompt. Cost: nothing." |
-| 6 | The finished net, visitors landing softly | "Now send traffic. Every visitor lands on a real domain, can leave an email, and teaches you something in the analytics. Nothing is wasted, and that's the point of the order." |
+| 6 | The finished net, visitors landing softly | "Now send traffic. Every visitor arrives at a real domain, can leave an email, and teaches you something in the analytics. Nothing is wasted, and that's the point of the order." |
 | 7 (CTA) | Brand card | "Prepare, then act: the whole first half of Build Your Business: From Vibe Coded Product to Paying Customers, on LittleParrot.app. First challenge free 🟪 Save this checklist 🔖" |
 
 **Alt text (for the post):** A preparation-checklist carousel for before
@@ -44,4 +53,4 @@ Save this for the week before you launch. 🔖
 .
 .
 .
-#vibecoding #buildwithai #womenwhobuild #womeninbusiness #shebuilds
+#vibecoding #buildwithai #womenwhobuild #womeninbusiness #shebuilds #womenintech #buildinpublic #learnwithai #aitools #startupjourney #marketing

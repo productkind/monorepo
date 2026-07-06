@@ -10,13 +10,22 @@ toolkit item.
 
 ## Format
 
+**Spec key for the designer:** In the slide table, any text introduced as
+"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
+markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
+the learner types into a tool. Render it verbatim in monospace inside a
+prompt-input mockup (a chat input field with a cursor and send arrow), so
+it reads as typed text rather than decoration; markdown symbols are part of
+the typed text, never styled labels. Everything else in "Text on slide" is
+display copy in the brand style.
+
 **Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Triage-guide style:
 calm colours (no alarm-red backgrounds), the severity labels shown as neat
 tags, one step per slide.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
-| 1 (cover) | A Security panel with findings, viewed over a cup of tea | "Lovable's Security panel flagged some findings. Before you panic: developers see these all the time. Here's how to triage. 👇" |
+| 1 (cover) | A Security panel with findings, viewed over a cup of tea | "Lovable's Security panel flagged some findings. Before you panic: developers see these all the time. How to triage them, step by step. 👇" |
 | 2 | Three app-type cards | "First, your context. A personal tool used by you alone, a team tool, and a public app don't carry the same urgency. Public app? Fix errors and warnings before publishing. Personal tool? Fix errors, note warnings for later." |
 | 3 | Three severity tags: red, orange, white | "Read the labels: ERROR (red) means data could be exposed; fix before publishing, whatever your app is. WARNING (orange) may or may not apply to your situation; fix for public apps, review for the rest. INFO (white): good practice, no rush." |
 | 4 | The Try to fix all button | "Then let Lovable do the first pass: click 'Try to fix all', run the scan again, and repeat up to three times. Scans and auto-fixes are free actions; they cost no credits." |
@@ -45,4 +54,4 @@ Save this for publish week. 🔖
 .
 .
 .
-#vibecoding #buildwithai #womenwhobuild #lovable #appsecurity
+#vibecoding #buildwithai #womenwhobuild #lovable #appsecurity #debugging #womenintech #buildinpublic #aitools #learnwithai #techforwomen #vibecodingtips

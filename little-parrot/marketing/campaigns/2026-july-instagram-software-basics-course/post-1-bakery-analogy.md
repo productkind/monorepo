@@ -10,6 +10,15 @@ item.
 
 ## Format
 
+**Spec key for the designer:** In the slide table, any text introduced as
+"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
+markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
+the learner types into a tool. Render it verbatim in monospace inside a
+prompt-input mockup (a chat input field with a cursor and send arrow), so
+it reads as typed text rather than decoration; markdown symbols are part of
+the typed text, never styled labels. Everything else in "Text on slide" is
+display copy in the brand style.
+
 **Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Illustrated-analogy
 style: a warm bakery cutaway drawing that highlights a different room per
 slide, the technical term and the bakery part paired on each.
@@ -31,11 +40,11 @@ building, and APIs as the phone line between bakeries.
 
 ## Caption (exact)
 
-"Frontend", "backend", "database": the words appear in every tutorial, every Lovable reply, every conversation with a developer. One picture makes them stick: your app is a bakery. 🥐
+"Frontend", "backend", "database": the words appear in every tutorial, every Lovable reply, every conversation with a developer. One picture explains all three: your app is a bakery. 🥐
 
 The counter is your frontend, everything customers see and touch. The kitchen is your backend, where the real work happens out of sight. The storage room is your database, where everything is kept and remembered. The building is a server, and cloud computing means renting one instead of owning it.
 
-The payoff arrives the next time something goes wrong. "The button looks weird" is a counter problem. "My data disappeared" is a storage room problem. Telling your AI builder which room to look in gets you a faster, cheaper fix.
+The analogy helps most the next time something goes wrong. "The button looks weird" is a counter problem. "My data disappeared" is a storage room problem. Telling your AI builder which room to look in gets you a faster, cheaper fix.
 
 This mental model is the free first challenge of our Basics of Software for Vibe Coding course, on LittleParrot.app.
 
@@ -44,4 +53,4 @@ Save the analogy for your next prompt. 🔖
 .
 .
 .
-#vibecoding #buildwithai #womenwhobuild #techliteracy #shebuilds
+#vibecoding #buildwithai #womenwhobuild #techliteracy #shebuilds #womenintech #techforwomen #learnwithai #techbasics #appbuilding #codingforbeginners

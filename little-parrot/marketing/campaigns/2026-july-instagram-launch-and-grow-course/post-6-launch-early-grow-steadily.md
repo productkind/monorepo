@@ -10,13 +10,22 @@ final challenge and the Production-Ready Launch Checklist toolkit item.
 
 ## Format
 
+**Spec key for the designer:** In the slide table, any text introduced as
+"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
+markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
+the learner types into a tool. Render it verbatim in monospace inside a
+prompt-input mockup (a chat input field with a cursor and send arrow), so
+it reads as typed text rather than decoration; markdown symbols are part of
+the typed text, never styled labels. Everything else in "Text on slide" is
+display copy in the brand style.
+
 **Carousel, 6 slides, 1080 x 1350 (4:5 portrait).** Essay-card style: fewer
 visuals, more breathing room, calm colours. One idea per slide, set like
 pull quotes.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
-| 1 (cover) | A small boat leaving a harbour, calm water | "Your app doesn't need to be finished to launch. Here's the calmer way to grow it. 👇" |
+| 1 (cover) | A small boat leaving a harbour, calm water | "Your app doesn't need to be finished to launch. There's a calmer way to grow it. 👇" |
 | 2 | A simple landing page sketch | "Buffer, now a multi-million-dollar product, launched as a landing page with no product behind it. People clicked, signed up, and proved the demand. Then the founders built it. Launching is how you learn, and you can start smaller than you think." |
 | 3 | A circular loop diagram: build → measure → learn | "The rhythm that replaces the big-bang launch: build a small thing, watch how it's used, learn, repeat. Developers call it agile. For a solo builder it means one loop at a time rather than a roadmap carved in stone." |
 | 4 | A calendar with one tick per week | "Dalmie's version: she launched her Book Club Organiser to three book clubs, kept a simple list of feedback, and shipped one improvement each week. One. That pace compounds faster than bursts and burnout." |
@@ -42,4 +51,4 @@ What would your one improvement be this week? 👇
 .
 .
 .
-#vibecoding #buildwithai #womenwhobuild #lovable #shebuilds
+#vibecoding #buildwithai #womenwhobuild #lovable #shebuilds #womenintech #buildinpublic #aitools #femalefounder #learnwithai #launchday #startupjourney

@@ -10,6 +10,15 @@ Software Vocabulary Cheat Sheet.
 
 ## Format
 
+**Spec key for the designer:** In the slide table, any text introduced as
+"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
+markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
+the learner types into a tool. Render it verbatim in monospace inside a
+prompt-input mockup (a chat input field with a cursor and send arrow), so
+it reads as typed text rather than decoration; markdown symbols are part of
+the typed text, never styled labels. Everything else in "Text on slide" is
+display copy in the brand style.
+
 **Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Backstage-tour style:
 behind-the-curtain illustrations, each term staged as a scene, the two auth
 words shown as two different doors.
@@ -35,7 +44,7 @@ The backend is where the words get most intimidating and where knowing them pays
 
 Four terms cover most conversations. An API is how your app talks to other services (Stripe for payments, Resend for email). An API key is the secret that proves the call is yours, and it belongs in the secrets panel, never in a prompt. Authentication asks who someone is; authorisation asks what they're allowed to do, and a well-built app answers both.
 
-The example on slide 6 shows what fluency buys: one sentence that tells your builder exactly who may vote and who may close the voting. That precision is the difference between the app you meant and a week of corrections.
+The example on slide 6 shows what fluency buys: one sentence that tells your builder exactly who may vote and who may close the voting. Being that precise gets you the app you meant, rather than a week of corrections.
 
 The full cheat sheet comes with our Basics of Software for Vibe Coding course, on LittleParrot.app, and the first challenge is free.
 
@@ -44,4 +53,4 @@ Save this for your next feature. 🔖
 .
 .
 .
-#vibecoding #buildwithai #womenwhobuild #techliteracy #shebuilds
+#vibecoding #buildwithai #womenwhobuild #techliteracy #shebuilds #api #womenintech #techforwomen #learnwithai #appbuilding #digitalskills

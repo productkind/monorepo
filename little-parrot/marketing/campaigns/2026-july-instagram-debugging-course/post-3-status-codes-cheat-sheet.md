@@ -10,13 +10,22 @@ Status Codes and Error Messages Cheat Sheet toolkit item.
 
 ## Format
 
+**Spec key for the designer:** In the slide table, any text introduced as
+"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
+markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
+the learner types into a tool. Render it verbatim in monospace inside a
+prompt-input mockup (a chat input field with a cursor and send arrow), so
+it reads as typed text rather than decoration; markdown symbols are part of
+the typed text, never styled labels. Everything else in "Text on slide" is
+display copy in the brand style.
+
 **Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Cheat-sheet style: each
 code drawn huge like a type specimen, name and meaning beneath, the common
 Lovable cause in a highlighted footnote.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
-| 1 (cover) | A Network tab row with a red 403 | "That number next to the failed request? It's telling you what went wrong. The codes you'll actually meet. 👇" |
+| 1 (cover) | A Network tab row with a red 403 | "That number next to the failed request? It's telling you what went wrong. The codes you'll meet. 👇" |
 | 2 | Giant 200 / 201 in green | "200 OK and 201 Created: the request worked. If the bug is still there, the problem lives somewhere else, and that's a useful clue too." |
 | 3 | Giant 400 / 401 | "400 Bad Request: the app sent missing or wrongly formatted data (an empty required field, text where a number belongs). 401 Unauthorised: the user isn't logged in, or the session expired. Logging out and back in often clears it." |
 | 4 | Giant 403, a small padlock | "403 Forbidden: logged in, but no permission. In Lovable apps this is almost always Row Level Security (RLS): the database rules that control who can see or change each row. Ask Lovable to check the RLS policies for that table." |
@@ -44,4 +53,4 @@ Save this next to your DevTools. 🔖
 .
 .
 .
-#vibecoding #buildwithai #womenwhobuild #lovable #debugging
+#vibecoding #buildwithai #womenwhobuild #lovable #debugging #womenintech #aitools #learnwithai #techforwomen #vibecodingtips #codingtips #techsupport

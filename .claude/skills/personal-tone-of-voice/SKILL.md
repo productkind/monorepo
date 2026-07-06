@@ -81,6 +81,8 @@ but here’s the catch, to cut through the chaos, that moment stuck with me, thi
 ### Pseudo punchlines
 Here's the thing, Bottom line:, No fluff, This one's for you, Why this matters, What moved me, This matters because, that matters, it matters most, matters most for
 
+Also banned: "matters"/"matter" as an importance claim in any form (e.g. "your first prompt matters more than any prompt after it", "tone matters", "faces matter more than artistry"). It's overused in AI-generated content. Say what the thing does or changes instead: "your first prompt sets the direction for everything built after it".
+
 ### Rhetorical formulas
 "Not X, but Y", "It's not... it's...", "X isn't... it's...", "In this piece"
 

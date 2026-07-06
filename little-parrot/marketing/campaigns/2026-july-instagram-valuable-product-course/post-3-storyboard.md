@@ -10,13 +10,22 @@ sofa). Repackages the Storyboard Template toolkit item.
 
 ## Format
 
+**Spec key for the designer:** In the slide table, any text introduced as
+"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
+markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
+the learner types into a tool. Render it verbatim in monospace inside a
+prompt-input mockup (a chat input field with a cursor and send arrow), so
+it reads as typed text rather than decoration; markdown symbols are part of
+the typed text, never styled labels. Everything else in "Text on slide" is
+display copy in the brand style.
+
 **Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Sketchbook style:
 hand-drawn panel frames, deliberately simple stick-figure illustrations (the
 roughness is the message), captions beneath each panel.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
-| 1 (cover) | Three rough sketch panels on a sketchbook page | "You can plan your whole app with stick figures. Product teams storyboard ideas before building; here's the three-step version. 👇" |
+| 1 (cover) | Three rough sketch panels on a sketchbook page | "You can plan your whole app with stick figures. Product teams storyboard ideas before building; this is the three-step version. 👇" |
 | 2 | Panel 1: stick-figure Sarah drowning in chat bubbles at a kitchen table | "First, draw the struggle: your user in the moment the problem hits. Sarah at the kitchen table, scrolling endless WhatsApp messages for a book title someone suggested last week." |
 | 3 | Panel 2: stick-figure Sarah on a sofa, book and glass of wine, smiling | "Next, skip to the happy ending: life after the problem is gone. Sarah on the sofa with her book and a glass of wine, coordination done. Draw the end before the middle." |
 | 4 | Two anchored points with a dotted line between them | "Why ends first? Because once you know where she starts and where she finishes, the steps in between become clearer. You're connecting two points you understand instead of inventing features from thin air." |
@@ -34,7 +43,7 @@ There's a planning tool that needs no software, no technical words, and no drawi
 
 The order is the clever part. You draw the struggle first (Sarah at the kitchen table, digging through WhatsApp for a lost book suggestion), then jump straight to the happy ending (Sarah on the sofa, book in hand, admin done). Only then do you sketch the middle. Connecting two moments you understand is far easier than inventing an app from a blank page, and the middle panels you draw are, feature by feature, what your product needs to do.
 
-Faces matter more than artistry here: a frown in panel one and a smile in the last panel tell the whole story.
+A frown in panel one and a smile in the last panel do more than any drawing skill, so put the effort into the faces rather than the scenery.
 
 The full template comes with our course, Build a Valuable Product: How to Break Down Your Idea for Vibe Coding, on LittleParrot.app. The first challenge is free.
 
@@ -43,4 +52,4 @@ Save this for your next idea. 🔖
 .
 .
 .
-#vibecoding #buildwithai #womenwhobuild #productmanagement #shebuilds
+#vibecoding #buildwithai #womenwhobuild #productmanagement #shebuilds #womenintech #techforwomen #productthinking #appbuilding #startupideas #learnwithai #storyboarding

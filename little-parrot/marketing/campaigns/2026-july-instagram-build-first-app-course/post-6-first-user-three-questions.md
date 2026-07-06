@@ -10,6 +10,15 @@ Feedback Script toolkit item.
 
 ## Format
 
+**Spec key for the designer:** In the slide table, any text introduced as
+"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
+markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
+the learner types into a tool. Render it verbatim in monospace inside a
+prompt-input mockup (a chat input field with a cursor and send arrow), so
+it reads as typed text rather than decoration; markdown symbols are part of
+the typed text, never styled labels. Everything else in "Text on slide" is
+display copy in the brand style.
+
 **Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Conversation style: chat
 bubbles between the builder and her first user, one question per slide with a
 short "what it tells you" note beneath.
@@ -33,7 +42,7 @@ answers into a focused Lovable prompt.
 
 The scariest part of building your first app usually happens after you publish: showing it to a real person. Here's a script that makes it easier for both of you. 💬
 
-Pick someone who actually has the problem your app solves, and tell them honest feedback is the gift. Then ask the three questions in the carousel. They're designed to get past "it's nice!" and into what they tried, what confused them, and what one change would help most.
+Pick someone who has the problem your app solves, and tell them honest feedback is the gift. Then ask the three questions in the carousel. They're designed to get past "it's nice!" and into what they tried, what confused them, and what one change would help most.
 
 The hardest part is question two: listening without defending. You built it, so you can't see it the way a newcomer does, and that's precisely what makes their answer valuable.
 
@@ -44,4 +53,4 @@ Who will you show your app first? 👇
 .
 .
 .
-#vibecoding #buildwithai #womenwhobuild #lovable #shebuilds
+#vibecoding #buildwithai #womenwhobuild #lovable #shebuilds #womenintech #buildinpublic #femalefounder #firstapp #sideproject #userfeedback

@@ -1,4 +1,4 @@
-# Post 5: What an LLM actually does
+# Post 5: What an LLM really does
 
 **Pillar:** the calm view, taught.
 **Research trace:** teaches the real terms (LLM, token, hallucination) with
@@ -9,6 +9,15 @@ tips into judgement. Draws on the course's LLM-literacy thread across
 Challenges 2-4.
 
 ## Format
+
+**Spec key for the designer:** In the slide table, any text introduced as
+"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
+markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
+the learner types into a tool. Render it verbatim in monospace inside a
+prompt-input mockup (a chat input field with a cursor and send arrow), so
+it reads as typed text rather than decoration; markdown symbols are part of
+the typed text, never styled labels. Everything else in "Text on slide" is
+display copy in the brand style.
 
 **Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Diagram style: clean
 schematic illustrations (a text stream splitting into tokens, a ranked
@@ -21,7 +30,7 @@ list of next-word candidates), one concept per slide.
 | 3 | A sentence splitting into small tiles | "It reads and writes in TOKENS: small units of text, a word, part of a word, or punctuation. It predicts the next token, then the next, until a full reply exists. Prediction, rather than thinking." |
 | 4 | A confident speech bubble with one wrong detail circled | "When the likely-sounding answer is wrong, that's a HALLUCINATION, delivered with full confidence. No deception involved: the model generates what looks plausible. Verify the facts you'll act on or repeat." |
 | 5 | Two slightly different answers to the same question | "Why the same question gets different answers: the model samples among top candidates rather than always picking one. So re-asking is variation, and asking it to verify itself is more prediction. Real verification lives outside the chat." |
-| 6 | Dials feeding into the prediction stream | "And this is why prompting techniques work: patterns in, patterns out. Naming the tone, audience, and length, and supplying context, steers which patterns it draws from. That's the whole craft: aiming the prediction." |
+| 6 | Dials feeding into the prediction stream | "And this is why prompting techniques work: patterns in, patterns out. Naming the tone, audience, and length, and supplying context, steers which patterns it draws from: you're aiming the prediction." |
 | 7 (CTA) | Brand card | "LLM, token, hallucination: three terms that upgrade you at every AI conversation. Full course: Write Better with AI: Prompting Foundations for Product Managers, on LittleParrot.app. First challenge free 🟪 Save this 🔖" |
 
 **Alt text (for the post):** An explainer carousel on how LLMs work: a
@@ -40,9 +49,9 @@ None of this makes the tool less useful. Knowing the mechanism means you use it 
 
 The full foundations, with practice, are in Write Better with AI: Prompting Foundations for Product Managers, on LittleParrot.app. The first challenge is free.
 
-Save this for the next "how does this thing actually work?" conversation. 🔖
+Save this for the next "how does this thing work?" conversation. 🔖
 
 .
 .
 .
-#promptingtips #aiatwork #womenintech #ailiteracy #llm
+#promptingtips #aiatwork #womenintech #ailiteracy #llm #aiskills #learnwithai #techforwomen #worksmarter #careertips #productmanager

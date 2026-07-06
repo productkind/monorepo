@@ -9,6 +9,15 @@ Repackages the "Where Is the Problem?" Troubleshooting Guide toolkit item.
 
 ## Format
 
+**Spec key for the designer:** In the slide table, any text introduced as
+"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
+markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
+the learner types into a tool. Render it verbatim in monospace inside a
+prompt-input mockup (a chat input field with a cursor and send arrow), so
+it reads as typed text rather than decoration; markdown symbols are part of
+the typed text, never styled labels. Everything else in "Text on slide" is
+display copy in the brand style.
+
 **Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Symptom-map style: each
 slide pairs a symptom (drawn as a small app mockup with the fault visible)
 with the layer it points to and the prompt to send, using the bakery room
@@ -22,7 +31,7 @@ icons from post 1 as location markers.
 | 4 | An empty list where items should be, kitchen+storage icons | "Data isn't SHOWING (empty list, content vanished)? Backend or database. Say: 'I added items earlier but the list is empty. Check if the data is saved correctly and if the query is fetching it.'" |
 | 5 | A form submitting, then a refresh losing everything, storage icon | "Data isn't SAVING (fine until you refresh)? Database, or Lovable Cloud isn't connected yet. Say: 'After refreshing, the items I added are gone. Check the database connection and the save function.'" |
 | 6 | An unsent envelope and a card machine, a key icon | "An EXTERNAL service fails (emails not sending, payments not processing)? That's the API or its key. Say: 'The email feature isn't working. Check if the API key is configured correctly and the backend function calls the service properly.'" |
-| 7 (CTA) | Brand card, the map complete | "Symptom → layer → prompt: that's the whole method, and it makes every fix conversation shorter. Full guide: Basics of Software for Vibe Coding, on LittleParrot.app. First challenge free 🟪 Save this for the next hiccup 🔖" |
+| 7 (CTA) | Brand card, the map complete | "Match the symptom to its layer, then prompt: every fix conversation gets shorter. Full guide: Basics of Software for Vibe Coding, on LittleParrot.app. First challenge free 🟪 Save this for the next hiccup 🔖" |
 
 **Alt text (for the post):** A troubleshooting-map carousel matching app
 symptoms to layers: visual issues point to frontend styling, dead clicks to
@@ -45,4 +54,4 @@ Save this for the next hiccup. 🔖
 .
 .
 .
-#vibecoding #buildwithai #womenwhobuild #techliteracy #debugging
+#vibecoding #buildwithai #womenwhobuild #techliteracy #debugging #womenintech #techforwomen #learnwithai #techbasics #appbuilding #codingforbeginners

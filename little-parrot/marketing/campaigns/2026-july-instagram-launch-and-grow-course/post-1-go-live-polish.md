@@ -9,6 +9,15 @@ of this. Repackages the Meta Tags and Favicon Setup Guide toolkit item.
 
 ## Format
 
+**Spec key for the designer:** In the slide table, any text introduced as
+"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
+markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
+the learner types into a tool. Render it verbatim in monospace inside a
+prompt-input mockup (a chat input field with a cursor and send arrow), so
+it reads as typed text rather than decoration; markdown symbols are part of
+the typed text, never styled labels. Everything else in "Text on slide" is
+display copy in the brand style.
+
 **Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Setup-guide style: each
 slide shows a mockup of where the detail appears (browser tab, link preview,
 address bar) so the payoff is visible, with the exact Lovable path beneath.
@@ -43,4 +52,4 @@ Save this for publish day. 🔖
 .
 .
 .
-#vibecoding #buildwithai #womenwhobuild #lovable #shebuilds
+#vibecoding #buildwithai #womenwhobuild #lovable #shebuilds #womenintech #buildinpublic #aitools #femalefounder #learnwithai #techforwomen #websitetips

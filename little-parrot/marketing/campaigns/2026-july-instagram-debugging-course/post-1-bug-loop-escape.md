@@ -9,6 +9,15 @@ Repackages the Bug Loop Escape Strategy Guide toolkit item.
 
 ## Format
 
+**Spec key for the designer:** In the slide table, any text introduced as
+"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
+markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
+the learner types into a tool. Render it verbatim in monospace inside a
+prompt-input mockup (a chat input field with a cursor and send arrow), so
+it reads as typed text rather than decoration; markdown symbols are part of
+the typed text, never styled labels. Everything else in "Text on slide" is
+display copy in the brand style.
+
 **Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Escape-route style: a
 loop motif on the cover that opens into a path across the slides, one
 strategy per slide, prompts in monospace, strategy names big.
@@ -32,7 +41,7 @@ rewrite the feature from a bookmark.
 
 Our learners call it the fix-and-break cycle: the app breaks, the AI says it's fixed, something else breaks, and your credits drain while you go in circles. It's the most common frustration we hear, and it has an exit. 🧭
 
-The rule to learn first: after three failed fixes, stop prompting. A fourth retry of the same request rarely lands. What works is switching strategy: revert to the last working response, ask for the root cause in Plan mode before allowing any changes, isolate one piece at a time, or rebuild the feature clean from your last bookmark.
+The rule to learn first: after three failed fixes, stop prompting. A fourth retry of the same request rarely helps. What works is switching strategy: revert to the last working response, ask for the root cause in Plan mode before allowing any changes, isolate one piece at a time, or rebuild the feature clean from your last bookmark.
 
 Each strategy has a moment it fits, and the carousel shows you which is which.
 
@@ -43,4 +52,4 @@ Save this for your next loop. 🔖
 .
 .
 .
-#vibecoding #buildwithai #womenwhobuild #lovable #debugging
+#vibecoding #buildwithai #womenwhobuild #lovable #debugging #womenintech #buildinpublic #aitools #learnwithai #techforwomen #vibecodingtips #codingtips

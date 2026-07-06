@@ -9,6 +9,15 @@ angle. Repackages the Project Knowledge Starter Template toolkit item.
 
 ## Format
 
+**Spec key for the designer:** In the slide table, any text introduced as
+"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
+markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
+the learner types into a tool. Render it verbatim in monospace inside a
+prompt-input mockup (a chat input field with a cursor and send arrow), so
+it reads as typed text rather than decoration; markdown symbols are part of
+the typed text, never styled labels. Everything else in "Text on slide" is
+display copy in the brand style.
+
 **Carousel, 6 slides, 1080 x 1350 (4:5 portrait).** Explainer style: a
 notebook motif (the app's "memory"), one section of the Knowledge doc per
 slide, monospace snippets for the examples.
@@ -42,4 +51,4 @@ What would your first Knowledge rule be? 👇
 .
 .
 .
-#vibecoding #buildwithai #womenwhobuild #lovable #shebuilds
+#vibecoding #buildwithai #womenwhobuild #lovable #shebuilds #womenintech #aitools #aiforbeginners #learnwithai #appbuilding #vibecodingtips

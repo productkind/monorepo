@@ -7,6 +7,15 @@ r/lovable; comics frame the learner's pain, not the tool; reuses made assets
 
 ## Format
 
+**Spec key for the designer:** In the slide table, any text introduced as
+"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
+markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
+the learner types into a tool. Render it verbatim in monospace inside a
+prompt-input mockup (a chat input field with a cursor and send arrow), so
+it reads as typed text rather than decoration; markdown symbols are part of
+the typed text, never styled labels. Everything else in "Text on slide" is
+display copy in the brand style.
+
 **Carousel, 5 slides, 1080 x 1080 (square, to match the panel art).**
 Slides 1 to 4 are the existing comic panels from
 `little-parrot/content/images/comics/vibe-coding-github-00/` (panel-00 to
@@ -27,7 +36,7 @@ excited to start. A final card announces the course.
 
 ## Caption (exact)
 
-Sound familiar? A typo here, an icon there, and the credit counter keeps ticking down. 😮‍💨
+A typo here, an icon there, and the credit counter keeps ticking down again. Sound familiar? 😮‍💨
 
 Small fixes are the ones that hurt, because they feel like they should be free. And they can be: a change you make yourself, on your own computer, costs no credits at all.
 
@@ -44,4 +53,4 @@ Which small fix has cost you the most credits so far? Tell us below, we're colle
 .
 .
 .
-#vibecoding #buildwithai #womenwhobuild #lovable #shebuilds
+#vibecoding #buildwithai #womenwhobuild #lovable #shebuilds #womenintech #buildinpublic #aitools #learnwithai #aiforbeginners #techforwomen #appbuilding

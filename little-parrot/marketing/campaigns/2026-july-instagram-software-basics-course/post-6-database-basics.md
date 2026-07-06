@@ -10,6 +10,15 @@ Cheat Sheet.
 
 ## Format
 
+**Spec key for the designer:** In the slide table, any text introduced as
+"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
+markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
+the learner types into a tool. Render it verbatim in monospace inside a
+prompt-input mockup (a chat input field with a cursor and send arrow), so
+it reads as typed text rather than decoration; markdown symbols are part of
+the typed text, never styled labels. Everything else in "Text on slide" is
+display copy in the brand style.
+
 **Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Spreadsheet style: a
 friendly spreadsheet that gains labels slide by slide, SQL verbs as four
 big stamps, a gentle warning slide with no alarm-red.
@@ -18,11 +27,11 @@ big stamps, a gentle warning slide with no alarm-red.
 | --- | --- | --- |
 | 1 (cover) | A spreadsheet morphing into a database cylinder | "Your app's memory is a set of spreadsheets. You already understand more of this than you think. 👇" |
 | 2 | A labelled sheet: headers and one highlighted row | "A TABLE is a spreadsheet. COLUMNS are its headers (name, email, created_at). A ROW is one record: one user, one order, one book suggestion." |
-| 3 | Two sheets connected by a drawn line | "Tables connect through keys. The PRIMARY KEY is each row's unique id. A FOREIGN KEY is a column pointing at another table's id: the user_id in the orders table is what makes an order belong to a user." |
+| 3 | Two sheets connected by a drawn line | "Tables connect through keys. The PRIMARY KEY is each row's unique id. A FOREIGN KEY is a column pointing at another table's id: the user_id in the orders table connects each order to its user." |
 | 4 | Four stamps: SELECT, INSERT, UPDATE, DELETE | "SQL is the language databases speak, and four verbs carry most of it: SELECT gets data, INSERT adds, UPDATE changes, DELETE removes. Your job is recognising them when your builder shows you its plan, never writing them." |
-| 5 | A keyboard with no Ctrl+Z key, a calm face | "The rule that keeps your data safe: database changes have NO undo. Before approving any SQL your builder proposes (especially UPDATE or DELETE), read which table and which rows it touches. Backups exist, and not needing them is better." |
-| 6 | Rows with little shields, one user seeing only hers | "RLS (Row Level Security): the rules deciding which rows each user can see or change. It's what keeps one member's data private from another, and it's the security finding you'll meet most often. Always worth enabling." |
-| 7 (CTA) | Brand card | "Tables, keys, four verbs, one no-undo rule, and RLS: that's working database literacy. Full cheat sheet: Basics of Software for Vibe Coding, on LittleParrot.app. First challenge free 🟪 Save this 🔖" |
+| 5 | A keyboard with no Ctrl+Z key, a calm face | "One rule to remember: database changes have NO undo. Before approving any SQL your builder proposes (especially UPDATE or DELETE), read which table and which rows it touches. Backups exist, and not needing them is better." |
+| 6 | Rows with little shields, one user seeing only hers | "RLS (Row Level Security): the rules deciding which rows each user can see or change. It keeps one member's data private from another, and it's the security finding you'll meet most often. Always worth enabling." |
+| 7 (CTA) | Brand card | "Tables, keys, four verbs, one no-undo rule, and RLS will cover most of your database conversations. Full cheat sheet: Basics of Software for Vibe Coding, on LittleParrot.app. First challenge free 🟪 Save this 🔖" |
 
 **Alt text (for the post):** A database-literacy carousel: tables as
 spreadsheets with columns and rows, primary and foreign keys connecting
@@ -44,4 +53,4 @@ Save this before your next database change. 🔖
 .
 .
 .
-#vibecoding #buildwithai #womenwhobuild #techliteracy #shebuilds
+#vibecoding #buildwithai #womenwhobuild #techliteracy #shebuilds #database #womenintech #techforwomen #learnwithai #digitalskills #codingforbeginners
