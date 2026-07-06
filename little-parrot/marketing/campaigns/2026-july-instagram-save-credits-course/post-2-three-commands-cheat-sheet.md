@@ -8,6 +8,15 @@ saveable content.
 
 ## Format
 
+**Spec key for the designer:** In the slide table, any text introduced as
+"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
+markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
+the learner types into a tool. Render it verbatim in monospace inside a
+prompt-input mockup (a chat input field with a cursor and send arrow), so
+it reads as typed text rather than decoration; markdown symbols are part of
+the typed text, never styled labels. Everything else in "Text on slide" is
+display copy in the brand style.
+
 **Carousel, 6 slides, 1080 x 1350 (4:5 portrait).** Cheat-sheet style: dark
 editor-inspired background, large monospace type for the commands, one command
 per slide so each is screenshot-clean.
@@ -29,7 +38,7 @@ npm run dev, ending at localhost:8080.
 
 The moment your own app appears at localhost:8080, running on your own computer, is a proper milestone. Ulrike, one of our learners, put it best: "Feels like magic :D"
 
-And it's three commands. That's the whole thing.
+And it takes three commands.
 
 Once it's running, every edit you make is free: change the copy, save, and watch the browser update instantly. No prompting, no waiting, no credits.
 
@@ -40,4 +49,4 @@ Save this post for your next building session. 🔖
 .
 .
 .
-#vibecoding #buildwithai #womenwhobuild #lovable #githubcopilot
+#vibecoding #buildwithai #womenwhobuild #lovable #githubcopilot #womenintech #buildinpublic #aitools #learnwithai #aiforbeginners #techforwomen #vscode

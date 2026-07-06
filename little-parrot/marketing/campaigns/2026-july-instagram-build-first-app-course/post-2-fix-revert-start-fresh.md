@@ -10,6 +10,15 @@ confidence-by-design.
 
 ## Format
 
+**Spec key for the designer:** In the slide table, any text introduced as
+"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
+markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
+the learner types into a tool. Render it verbatim in monospace inside a
+prompt-input mockup (a chat input field with a cursor and send arrow), so
+it reads as typed text rather than decoration; markdown symbols are part of
+the typed text, never styled labels. Everything else in "Text on slide" is
+display copy in the brand style.
+
 **Carousel, 6 slides, 1080 x 1350 (4:5 portrait).** Decision-guide style:
 calm colours, one route per slide, a small signpost motif. Colour-code the
 three routes (fix, revert, start fresh) like the earlier which-tool guide.
@@ -21,7 +30,7 @@ three routes (fix, revert, start fresh) like the earlier which-tool guide.
 | 3 | Route 1 card, spanner icon | "FIX, when it's a small issue you can describe. Tell Lovable exactly what went wrong and what you expected instead. Specific beats 'it's broken'." |
 | 4 | Route 2 card, rewind icon | "REVERT, when the change created a tangle you can't untangle. Open the version history and restore your bookmarked version. Every version is saved automatically, so nothing is ever lost." |
 | 5 | Route 3 card, fresh page icon | "START FRESH, when the whole approach came out wrong. Your prompt is the valuable thing, not the output. A clearer prompt gives you a cleaner result, and it's usually faster than fixing." |
-| 6 (CTA) | Brand card | "Breaking things is part of building. Knowing your way back is the skill. Save this for your next experiment 🔖 Full course: Build Your First App with Lovable, on LittleParrot.app. First challenge free." |
+| 6 (CTA) | Brand card | "Breaking things is part of building, and now you know your three ways back. Save this for your next experiment 🔖 Full course: Build Your First App with Lovable, on LittleParrot.app. First challenge free." |
 
 **Alt text (for the post):** A decision-guide carousel for when a Lovable app
 breaks: bookmark your version before risky changes, fix small describable
@@ -43,4 +52,4 @@ Our Build Your First App with Lovable course on LittleParrot.app walks you throu
 .
 .
 .
-#vibecoding #buildwithai #womenwhobuild #lovable #shebuilds
+#vibecoding #buildwithai #womenwhobuild #lovable #shebuilds #womenintech #buildinpublic #aiforbeginners #learnwithai #appbuilding #vibecodingtips

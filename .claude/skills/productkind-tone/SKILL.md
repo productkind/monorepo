@@ -129,6 +129,8 @@ Invite self-assessment:
 
 **Avoid AI buzzwords** – "why it matters", "that matters", "here's the thing", "this one's for you", "Not X, but Y", "from X to Y" (e.g. "go from 'I can't' to 'I just did'"), "It's not... it's...", "X isn't... it's...", "made a real difference", "genuinely" are off-limits.
 
+**Avoid "matters"/"matter" as an importance claim, in any form** – Not only the phrases above: "your first prompt matters more than any prompt after it", "tone matters", "faces matter more than artistry" are all banned. It's overused in AI-generated content and asserts importance without saying anything. Say what the thing does or changes instead: "your first prompt sets the direction for everything built after it".
+
 **Avoid "quietly" as a signifier** – Don't editorialise with "quietly" (e.g. "quietly rewrites", "quietly changed"). State the action plainly.
 
 **Avoid the two-beat setup-payoff** – Don't pair a short concession with a clipped reversal (e.g. "That sounds small. It isn't.", "Sounds simple. It's not.", "Easy, right? Wrong."). State the point directly.

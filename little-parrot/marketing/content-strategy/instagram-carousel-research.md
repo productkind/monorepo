@@ -82,6 +82,12 @@
       paragraph (target 8-10 slides)
 - [ ] Every slide still valuable if seen in isolation
 - [ ] Prompt/code slides in monospace, complete enough to screenshot
+- [ ] Prompt snippets rendered as typed text inside a prompt-input mockup
+      (chat input field, cursor, send arrow), verbatim including markdown
+      symbols (##, -, backticks); the symbols are part of the typed text,
+      never decorative labels or styled pills. Display copy stays outside
+      the mockup in the brand style, so a reader can always tell "what I
+      type" from "what the slide tells me"
 - [ ] Soft CTA mid-deck (e.g. "save this for later" on the densest slide)
 - [ ] Final slide: full course title + "on LittleParrot.app" + first
       challenge free + save ask

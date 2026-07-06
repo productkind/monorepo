@@ -10,6 +10,15 @@ Bank toolkit item.
 
 ## Format
 
+**Spec key for the designer:** In the slide table, any text introduced as
+"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
+markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
+the learner types into a tool. Render it verbatim in monospace inside a
+prompt-input mockup (a chat input field with a cursor and send arrow), so
+it reads as typed text rather than decoration; markdown symbols are part of
+the typed text, never styled labels. Everything else in "Text on slide" is
+display copy in the brand style.
+
 **Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Swap-card style: each
 slide shows the polite-but-useless question crossed out and the better
 question beneath it, chat-bubble visual language.
@@ -33,7 +42,7 @@ app disappeared, and look for patterns across three to five conversations.
 
 Once your app is live, your users know things about it that you can't see, because you built it. The trouble is that most people answer "What do you think?" with "It's nice!" to be kind. 💬
 
-The questions in the carousel are designed to get past kindness. They ask about real moments instead of opinions, walkthroughs instead of yes/no, and memories instead of hypotheticals. Our favourite is the last one: "If this app disappeared tomorrow, what would you miss most?" The answer tells you what your product is actually for, in words you can reuse on your homepage.
+The questions in the carousel are designed to get past kindness. They ask about real moments instead of opinions, walkthroughs instead of yes/no, and memories instead of hypotheticals. Our favourite is the last one: "If this app disappeared tomorrow, what would you miss most?" The answer tells you what your product is for, in words you can reuse on your homepage.
 
 And the rule that stops you overreacting to any single conversation: act on what three out of five people say, note what one person says.
 
@@ -44,4 +53,4 @@ Save this for your next user conversation. 🔖
 .
 .
 .
-#vibecoding #buildwithai #womenwhobuild #lovable #userresearch
+#vibecoding #buildwithai #womenwhobuild #lovable #userresearch #womenintech #buildinpublic #aitools #femalefounder #learnwithai #techforwomen #appbuilding

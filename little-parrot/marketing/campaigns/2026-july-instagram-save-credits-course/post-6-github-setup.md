@@ -11,6 +11,15 @@ magnet directly).
 
 ## Format
 
+**Spec key for the designer:** In the slide table, any text introduced as
+"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
+markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
+the learner types into a tool. Render it verbatim in monospace inside a
+prompt-input mockup (a chat input field with a cursor and send arrow), so
+it reads as typed text rather than decoration; markdown symbols are part of
+the typed text, never styled labels. Everything else in "Text on slide" is
+display copy in the brand style.
+
 **Carousel, 6 slides, 1080 x 1350 (4:5 portrait).** Explainer style: the
 Octocat-adjacent brand illustration on the cover, then one benefit per slide,
 calm and concrete. A folder/repository visual motif carries through the
@@ -50,4 +59,4 @@ What would you keep in your GitHub, besides your app? 👇
 .
 .
 .
-#vibecoding #buildwithai #womenwhobuild #github #versioncontrol
+#vibecoding #buildwithai #womenwhobuild #github #versioncontrol #womenintech #buildinpublic #aitools #learnwithai #aiforbeginners #techforwomen #githubcopilot

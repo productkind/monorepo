@@ -9,6 +9,15 @@ Repackages the Value Proposition Formula toolkit item.
 
 ## Format
 
+**Spec key for the designer:** In the slide table, any text introduced as
+"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
+markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
+the learner types into a tool. Render it verbatim in monospace inside a
+prompt-input mockup (a chat input field with a cursor and send arrow), so
+it reads as typed text rather than decoration; markdown symbols are part of
+the typed text, never styled labels. Everything else in "Text on slide" is
+display copy in the brand style.
+
 **Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Reaction-test style:
 each version of the sentence shown as a speech bubble with the listener's
 reaction drawn next to it (flat face → curious face → leaning in).
@@ -30,7 +39,7 @@ plus a five-person test.
 
 ## Caption (exact)
 
-There's a moment when someone asks what you're building, and the answer decides whether the conversation continues. "I built a book club app" is true, and it lands with a polite nod. 💬
+Someone asks what you're building, and your answer decides whether the conversation continues. "I built a book club app" is true, and it gets a polite nod. 💬
 
 The formula in the carousel fixes the sentence: what it is, who it's for, what it helps them achieve, and the pain it removes. That last part does the most work. "Without endless WhatsApp debates" made people lean in and ask how it works, because they'd lived that exact mess.
 
@@ -43,4 +52,4 @@ Save the formula, you'll reuse the sentence everywhere. 🔖
 .
 .
 .
-#vibecoding #buildwithai #womenwhobuild #womeninbusiness #shebuilds
+#vibecoding #buildwithai #womenwhobuild #womeninbusiness #shebuilds #womenintech #buildinpublic #femalefounder #learnwithai #startupjourney #firstcustomer

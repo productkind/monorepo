@@ -9,6 +9,15 @@ toolkit item.
 
 ## Format
 
+**Spec key for the designer:** In the slide table, any text introduced as
+"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
+markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
+the learner types into a tool. Render it verbatim in monospace inside a
+prompt-input mockup (a chat input field with a cursor and send arrow), so
+it reads as typed text rather than decoration; markdown symbols are part of
+the typed text, never styled labels. Everything else in "Text on slide" is
+display copy in the brand style.
+
 **Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Decision-guide style: a
 calm, official-but-friendly look (think stamped documents drawn kindly), one
 situation or prompt per slide, prompts in monospace.
@@ -20,7 +29,7 @@ situation or prompt per slide, prompts in monospace.
 | 3 | Termly-style questionnaire mockup | "Generating them: Termly (termly.io) builds your documents from a questionnaire, free for one document. Or ask a chat assistant, starting with: 'You are an expert lawyer. What information do you need from me to write a Privacy Policy and Terms of Use for my [product]?'" |
 | 4 | Footer mockup with three subtle links | "Adding them, prompt Lovable: 'Add a footer to all pages with links to Privacy Policy, Terms of Use, and Contact. Use a subtle design that doesn't distract from the main content. Open the links in a new tab.'" |
 | 5 | Cookie banner mockup at the bottom of a phone screen | "The cookie banner, if you need one: 'Add a GDPR compliant cookie consent banner... with an Accept button, a Customise cookies feature, tracking cookies disabled until consent, and the choice remembered.'" |
-| 6 | A heart between a user and the app | "The point of all this: legal pages tell a stranger 'someone responsible built this'. That feeling is what makes a visitor comfortable signing up." |
+| 6 | A heart between a user and the app | "The point of all this: legal pages tell a stranger 'someone responsible built this', and that makes signing up feel safe." |
 | 7 (CTA) | Brand card | "The full prompt library is in the Launch and Grow Your Lovable App toolkit, on LittleParrot.app. First challenge free 🟪 Save this for when strangers start arriving 🔖" |
 
 **Alt text (for the post):** A decision-guide carousel about legal pages for
@@ -43,4 +52,4 @@ Save this for when strangers start arriving. 🔖
 .
 .
 .
-#vibecoding #buildwithai #womenwhobuild #lovable #shebuilds
+#vibecoding #buildwithai #womenwhobuild #lovable #shebuilds #womenintech #buildinpublic #aitools #femalefounder #learnwithai #techforwomen #appbuilding

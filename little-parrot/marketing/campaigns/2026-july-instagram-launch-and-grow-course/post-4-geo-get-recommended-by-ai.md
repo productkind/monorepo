@@ -10,13 +10,22 @@ Discoverability Quick-Start Checklist toolkit item.
 
 ## Format
 
+**Spec key for the designer:** In the slide table, any text introduced as
+"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
+markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
+the learner types into a tool. Render it verbatim in monospace inside a
+prompt-input mockup (a chat input field with a cursor and send arrow), so
+it reads as typed text rather than decoration; markdown symbols are part of
+the typed text, never styled labels. Everything else in "Text on slide" is
+display copy in the brand style.
+
 **Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Explainer style: a chat
 assistant conversation motif (a user asking for a recommendation, the
 assistant answering), before/after cards, prompts in monospace.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
-| 1 (cover) | A chat bubble: "What's a good app for organising a book club?" and an assistant reply mentioning an app | "People ask chat assistants for recommendations now. Here's how your app becomes the answer. 👇" |
+| 1 (cover) | A chat bubble: "What's a good app for organising a book club?" and an assistant reply mentioning an app | "People ask chat assistants for recommendations now. How to make your app one of the answers. 👇" |
 | 2 | Two small definition cards | "Two new terms, one idea. GEO (Generative Engine Optimisation): getting chat assistants like ChatGPT, Claude.ai, and Gemini to recommend your product. AEO (Answer Engine Optimisation): getting cited in AI answer boxes at the top of search results." |
 | 3 | Before/after copy cards, grey vs purple | "Say what your product does, concretely. ❌ 'Our platform helps with organisation.' ✅ 'Book Club Organiser helps book club members suggest books, vote on favourites, and track what they're reading.' AI tools need details to recommend you." |
 | 4 | An FAQ section mockup, answer highlighted right under the question | "Add an FAQ that leads with the answer: the question as a heading, a 1-2 sentence direct answer immediately below, detail after. AI answer boxes pull from content shaped exactly like this." |
@@ -45,4 +54,4 @@ Save this one for a free afternoon. 🔖
 .
 .
 .
-#vibecoding #buildwithai #womenwhobuild #lovable #geo
+#vibecoding #buildwithai #womenwhobuild #lovable #geo #seo #womenintech #buildinpublic #aitools #femalefounder #learnwithai #techforwomen

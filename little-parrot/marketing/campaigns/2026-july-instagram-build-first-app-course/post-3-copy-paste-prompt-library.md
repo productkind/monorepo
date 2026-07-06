@@ -9,6 +9,15 @@ Features toolkit item.
 
 ## Format
 
+**Spec key for the designer:** In the slide table, any text introduced as
+"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
+markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
+the learner types into a tool. Render it verbatim in monospace inside a
+prompt-input mockup (a chat input field with a cursor and send arrow), so
+it reads as typed text rather than decoration; markdown symbols are part of
+the typed text, never styled labels. Everything else in "Text on slide" is
+display copy in the brand style.
+
 **Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Prompt-library style:
 each slide is one chat-bubble card with the prompt in monospace, a one-line
 "when to use it" above it. Brackets shown in a highlight colour so it's
@@ -44,4 +53,4 @@ Which feature is your app missing right now? 👇
 .
 .
 .
-#vibecoding #buildwithai #womenwhobuild #lovable #promptrecipe
+#vibecoding #buildwithai #womenwhobuild #lovable #promptrecipe #womenintech #aitools #aiforbeginners #learnwithai #appbuilding #vibecodingtips #prompttips

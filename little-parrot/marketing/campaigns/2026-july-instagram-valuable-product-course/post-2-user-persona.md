@@ -9,17 +9,26 @@ the User Persona Template toolkit item.
 
 ## Format
 
+**Spec key for the designer:** In the slide table, any text introduced as
+"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
+markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
+the learner types into a tool. Render it verbatim in monospace inside a
+prompt-input mockup (a chat input field with a cursor and send arrow), so
+it reads as typed text rather than decoration; markdown symbols are part of
+the typed text, never styled labels. Everything else in "Text on slide" is
+display copy in the brand style.
+
 **Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Profile-card style: a
 persona card that fills in section by section, Sarah as the worked example,
 her quotes in speech bubbles.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
-| 1 (cover) | An empty profile card with a question mark | "Your app needs one specific person to be for. Here's the template product managers use to create her. 👇" |
+| 1 (cover) | An empty profile card with a question mark | "Your app needs one specific person to be for. This is the template product managers use to create her. 👇" |
 | 2 | The card's header filling in | "Start with a name and a situation: 'Sarah, the overwhelmed book club organiser.' Then About: who she is, her comfort with technology, the constraints that shape how she'd use your product." |
 | 3 | Three speech bubbles on the card | "Write her frustrations as quotes: 'I can't find the book suggestion in the chat history.' 'Half the group doesn't vote because they miss the message.' Quotes put you behind her eyes; descriptions keep you outside." |
 | 4 | The goals section, one number circled | "Make her goals measurable: 'Spend maximum 10 minutes per month on book club admin.' 'Never lose a good book suggestion again.' Specific goals give you something to test the finished app against." |
-| 5 | The card being consulted beside a feature list | "Then she starts working for you. Choosing features: 'Would Sarah actually use this, or is it nice to have?' Writing prompts: 'What would Sarah expect to see on this screen?'" |
+| 5 | The card being consulted beside a feature list | "Then she starts working for you. Choosing features: 'Would Sarah use this, or is it nice to have?' Writing prompts: 'What would Sarah expect to see on this screen?'" |
 | 6 | The card beside a confusing screen mockup | "And when something feels off: 'If I showed this to Sarah, would she understand what to do?' One imagined person answers questions that 'my users' never can." |
 | 7 (CTA) | Brand card, the completed persona card | "The full template is in Build a Valuable Product: How to Break Down Your Idea for Vibe Coding, on LittleParrot.app. First challenge free 🟪 Save this 🔖" |
 
@@ -45,4 +54,4 @@ Who's your Sarah? Tell us about her. 👇
 .
 .
 .
-#vibecoding #buildwithai #womenwhobuild #productmanagement #shebuilds
+#vibecoding #buildwithai #womenwhobuild #productmanagement #shebuilds #womenintech #techforwomen #productthinking #appbuilding #userresearch #learnwithai #femalefounder

@@ -9,20 +9,25 @@ lead magnet. Repackages the First Prompt Template toolkit item.
 
 ## Format
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Recipe-card style: a
-document-shaped frame on each slide, section headings in monospace, one
-section of the prompt per slide. Dalmie's Book Club Organiser as the running
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Recipe-card style, with
+one recurring device: **the prompt window**, a chat-input mockup (rounded
+input field, small "Your prompt" label, text cursor, send arrow) that holds
+everything the learner would literally type into Lovable. Prompt-window
+content is always monospace and rendered verbatim, including the markdown
+symbols (##, -, 1.), because the symbols ARE the typed text; they are never
+decoration or styled labels. Display copy (the teaching line) sits outside
+the window in the brand style. Dalmie's Book Club Organiser is the running
 example throughout.
 
-| Slide | Visual | Text on slide |
-| --- | --- | --- |
-| 1 (cover) | Big type over a document outline | "Your first Lovable prompt: the structure that gets you close on the first try." |
-| 2 | Split card: grey bubble vs structured document | "'Make me an app for my book club' gets you something generic. Vague prompts get vague results. Structure is the difference. 👇" |
-| 3 | Document card, sections highlighted | "## Product overview: what the app is and the problem it solves, in 1 to 2 sentences. ## User flow: what the user does, step by step, as a numbered list." |
-| 4 | Colour swatches (cream, brown, coral) and font names | "## Design system: your colours and fonts. Not sure yet? Describe the mood instead: 'cosy, bookish, friendly'. Lovable will interpret it." |
-| 5 | A persona card with a name | "## Target user: give her a name. 'Sarah, a book club organiser who wants to spend less time on admin and more time reading with friends.'" |
-| 6 | A list with most items crossed out, one circled | "The golden rule: describe ONE core feature, and leave the rest out. Dalmie's first prompt skipped voting, deadlines, and tracking. Those came later, one prompt at a time." |
-| 7 (CTA) | Brand card | "The full copy-paste template is in the Build Your First App with Lovable course toolkit, on LittleParrot.app. First challenge free 🟪 Save this for your first prompt. 🔖" |
+| Slide | Visual | Display copy (brand style) | Prompt window content (verbatim, monospace) |
+| --- | --- | --- | --- |
+| 1 (cover) | Big type; a prompt window peeks in from the bottom edge, markdown faintly visible | "Your first Lovable prompt: the structure that gets you close on the first try." | (none) |
+| 2 | Two prompt windows: a small grey one, a taller structured one with section headings visible | "'Make me an app for my book club' gets you something generic. Vague prompts get vague results. A structured prompt gets you much closer. 👉🏼" | Grey window: `Make me an app for my book club` |
+| 3 | Prompt window, first two sections typed; beneath the window a small footnote | "Start with two sections: what the app is, then what the user does, step by step." Footnote: "Written in markdown, the simple formatting Lovable reads." | `## Product overview`<br>`A simple app where book club members suggest books for the group to read next.`<br><br>`## User flow`<br>`1. User opens the app and sees the list`<br>`2. User adds a book with a short note` |
+| 4 | Prompt window beside colour swatches (cream, brown, coral) | "Then how it should look. Not sure about colours and fonts yet? Describe the mood instead; Lovable will interpret it." | `## Design system`<br>`- Colours: warm cream, coral accents`<br>`- Style: cosy, bookish, friendly` |
+| 5 | Prompt window beside a small persona sketch | "And who it's for. Describe your user clearly, and the app comes back shaped around her." | `## Target user`<br>`Sarah, a book club organiser who wants to spend less time on admin and more time reading with friends.` |
+| 6 | A feature list with most items crossed out, one circled (no prompt window) | "The golden rule: describe ONE core feature, and leave the rest out. The first prompt skipped voting, deadlines, and tracking. Those come later, one prompt at a time." | (none) |
+| 7 (CTA) | Brand card | "The full copy-paste template is in the Build Your First App with Lovable course toolkit, on LittleParrot.app. First challenge free 💛 Save this for your first prompt. 🔖" | (none) |
 
 **Alt text (for the post):** A recipe carousel showing the structure of a
 good first Lovable prompt: product overview, user flow, design system, and
@@ -31,17 +36,17 @@ later prompts.
 
 ## Caption (exact)
 
-Your first prompt to Lovable matters more than any prompt after it, and the good news is there's a structure for it. ✨
+Your first prompt sets the direction for everything Lovable builds after it, and the good news is there's a structure for it. ✨
 
 Instead of one vague sentence, describe your idea in sections: what the app is, what the user does step by step, how it should look and feel, and who it's for. Lovable reads the structure and builds something much closer to what you imagined.
 
-The rule that surprises most people: leave things out. Pick the one core feature your app needs and describe that well. Voting, logins, reminders can each get their own prompt later, and they'll come out better for it.
+The rule that surprises most people: leave things out. Pick the one core feature your app needs and describe that well. Voting, logins, reminders can each get their own prompt later, and each feature will come out better.
 
 In the free first challenge of our Build Your First App with Lovable course on LittleParrot.app, you use this template to build a real working app.
 
-What's the idea you'd build first? Tell us below. 👇
+What would you build by vibe coding? Tell us below. 👇
 
 .
 .
 .
-#vibecoding #buildwithai #womenwhobuild #lovable #shebuilds
+#vibecoding #buildwithai #womenwhobuild #lovable #shebuilds #womenintech #aiforbeginners #learnwithai #firstapp #appbuilding #vibecodingtips #prompttips

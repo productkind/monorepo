@@ -10,6 +10,15 @@ Vocabulary Cheat Sheet.
 
 ## Format
 
+**Spec key for the designer:** In the slide table, any text introduced as
+"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
+markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
+the learner types into a tool. Render it verbatim in monospace inside a
+prompt-input mockup (a chat input field with a cursor and send arrow), so
+it reads as typed text rather than decoration; markdown symbols are part of
+the typed text, never styled labels. Everything else in "Text on slide" is
+display copy in the brand style.
+
 **Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Layered-page style: the
 same small page mockup shown three times, gaining structure, then style,
 then behaviour, one language per slide.
@@ -21,7 +30,7 @@ then behaviour, one language per slide.
 | 3 | The same page gaining colour, fonts, spacing | "CSS is the style: colours, fonts, spacing, layout. Same skeleton, entirely different mood. When designers talk about a 'look', this is the layer they mean." |
 | 4 | The same page with a button mid-click, content loading | "JavaScript is the behaviour: what happens when you click, type, or submit. Menus opening, forms saving, data loading. Anything that moves or reacts is this layer." |
 | 5 | Three symptom cards sorted into three bins | "The sorting trick: 'the text is wrong' is HTML. 'The text is ugly' is CSS. 'The button does nothing' is JavaScript. Name the layer in your prompt and the fix comes back faster." |
-| 6 | A screen reader icon and a search magnifier over tidy structure | "One term worth knowing extra: SEMANTIC HTML, using the right element for the right job (a heading marked as a heading, a button as a button). It's what makes your app readable to screen readers and search engines." |
+| 6 | A screen reader icon and a search magnifier over tidy structure | "One term worth knowing extra: SEMANTIC HTML, using the right element for the right job (a heading marked as a heading, a button as a button). It makes your app readable to screen readers and search engines." |
 | 7 (CTA) | Brand card | "You'll never write these languages; you'll direct them, and recognising them is enough. Full cheat sheet: Basics of Software for Vibe Coding, on LittleParrot.app. First challenge free 🟪 Save this 🔖" |
 
 **Alt text (for the post):** An explainer carousel on the three frontend
@@ -33,7 +42,7 @@ accessibility and search.
 
 HTML, CSS, and JavaScript sound like three reasons to close the tab, and they describe something you already understand: what's on the page, how it looks, and what it does. 🎨
 
-Your AI builder writes all three for you. The reason to know them is precision. "The text is wrong" is an HTML matter. "The text is ugly" is CSS. "The button does nothing" is JavaScript. Sort the symptom into the right layer, mention it in your prompt, and you've saved a round of guessing.
+Your AI builder writes all three for you. The reason to know them is precision. "The text is wrong" points at HTML. "The text is ugly" is CSS. "The button does nothing" is JavaScript. Sort the symptom into the right layer, mention it in your prompt, and you've saved a round of guessing.
 
 This is the spirit of the whole course: recognise, don't memorise. The goal is reading the situation and saying what you mean; writing code never comes into it.
 
@@ -44,4 +53,4 @@ Save this for your next fix request. 🔖
 .
 .
 .
-#vibecoding #buildwithai #womenwhobuild #techliteracy #shebuilds
+#vibecoding #buildwithai #womenwhobuild #techliteracy #shebuilds #html #womenintech #techforwomen #learnwithai #codingforbeginners #digitalskills
