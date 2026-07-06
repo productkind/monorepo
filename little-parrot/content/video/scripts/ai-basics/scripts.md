@@ -54,12 +54,13 @@ If you would like to learn AI calmly, at your own pace, follow along.
 
 ##
 
-Every week a new AI tool or feature is coming out, and it feels if you don't keep up you will lose 
-all the great opportunities. But it is a propaganda by companies to fuel the hype around their
-products to convice investors to found their businesses. Many of these new tools are features are
-irrelevant after a couple of months, for example the GPT marketplace was the big news and now it's
-nothing. It is totally fine to learn to use the products that prove to be usefull after time, like
-it worth to have that ageless [clothing item] instead of buying that [other clothing item].
+Remember the GPT Store? For about a week it was the biggest news in AI. Now you barely hear about it.
+
+  Every single week there is a new AI tool or feature, and it feels like if you don't keep up, you will miss every good opportunity. But a lot of that pressure is manufactured. Companies fuel the excitement around their products to keep investors funding them. And plenty of these tools quietly disappear a few months later.
+
+  It's completely fine to wait and learn the ones that prove useful over time. Think of it like investing in a good pair of jeans that lasts for years, instead of the fast-fashion trend piece that looks dated by next season.
+
+  Learning AI does not have to feel like a race. If that suits you, follow along.
 
 ##
 Tech get obsolate soon
@@ -98,13 +99,45 @@ replicating patterns it was shown from huge pile of data during its creation. Th
 called Machine learning.
 [Catch phrase simple language]
 
+#######
+
+What is an AI model exactly?
+It is just a good bunch of numbers that are used to calculate the output based on the input.
+These numbers are called the weights or parameters of the model. The creation of the model is 
+called training. During training the model is shown a huge pile of data one by one, the model
+calculates an output based on the input and the weigths. In the training process the output is
+compared to the expected output and the numbers are adjusted to get closer to the expected output.
+When the model is ready then it calculates the output based on the input and the weights, and it
+is not learning anymore.
+
 ##
+
+What data is used to train the model?
+To train an LLM you need a huge pile of data, and the more the better. The data is called corpus,
+and it can be anything that is in text format, like books, articles, websites, code, etc. The more
+diverse the corpus is the better the model will be at generalizing and giving good answers to a wide
+range of questions. The corpus is cleaned and preprocessed before it is used for training, to
+remove any irrelevant or low-quality data, and to make sure the data is in a format that the model
+can understand.
+
+##
+
+
+
+##
+
+if AI is here from the 50's how did it take so long to get here?
+the inventions that were needed
+
+##
+
+Repurpose the pizza one
+
+##
+
+Deep learning 2012
 
 Corpus
-
-##
-
-Training
 
 ##
 
