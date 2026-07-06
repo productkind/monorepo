@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WB-1 — The status nudge that sounds right (carousel)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  html, body { margin: 0; padding: 0; }
+  body.single { overflow: hidden; }
+  body.single #strip { padding: 0 !important; gap: 0 !important; background: none !important; min-height: 0 !important; }
+  body.single section { display: none; }
+  body.single section.current { display: block; }
+  @media print {
+    #strip { padding: 0 !important; gap: 0 !important; background: none !important; min-height: 0 !important; display: block !important; }
+    section { page-break-after: always; break-after: page; }
+    @page { size: 1080px 1350px; margin: 0; }
+  }
+  /* Shared design system (from the Instagram carousel template) */
+  section.slide { flex: none; width: 1080px; height: 1350px; position: relative; overflow: hidden;
+    background: linear-gradient(120deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020), #ffffff; box-sizing: border-box; }
+  .card { position: absolute; top: 100px; left: 100px; width: 880px; height: 1150px; box-sizing: border-box;
+    background: #ffffff; border: 12px solid rgb(8,8,9); box-shadow: 12px 12px 0 rgba(8,8,9,0.25); display: flex; flex-direction: column; }
+  .gradbar { flex: none; height: 24px; background: linear-gradient(120deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70); }
+  .inner { flex: 1; display: flex; flex-direction: column; justify-content: space-between; row-gap: 32px; padding: 56px 72px 64px; box-sizing: border-box; }
+  .header { display: flex; justify-content: space-between; align-items: center;
+    font-family: 'Space Mono', monospace; font-weight: 700; letter-spacing: 0.06em; color: #080809; }
+  .header .handle { font-size: 32px; } .header .page { font-size: 24px; }
+  .copy { margin: 0; font-size: 36px; line-height: 1.45; color: #080809; text-wrap: pretty; font-family: 'Inter', sans-serif; }
+  .hl { background: linear-gradient(120deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70); padding: 0 0.12em;
+    box-decoration-break: clone; -webkit-box-decoration-break: clone; font-weight: 700; }
+  .promptlabel { font-family: 'Space Mono', monospace; font-weight: 700; font-size: 20px; letter-spacing: 0.08em; color: #4a4a50; }
+  .promptwin { background: #ffffff; border: 4px solid rgb(8,8,9); border-radius: 28px; box-shadow: 12px 12px 0 rgba(8,8,9,0.25); position: relative; }
+  .promptwin pre { margin: 0; font-family: 'Space Mono', monospace; white-space: pre-wrap; color: #080809; }
+  .send { position: absolute; right: 28px; bottom: 24px; width: 56px; height: 56px; border-radius: 50%;
+    background: #080809; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 28px; }
+  .cursor { display: inline-block; width: 4px; height: 1.1em; background: #080809; vertical-align: text-bottom; }
+  /* Slack-style message mockup */
+  .slack { background: #ffffff; border: 4px solid rgb(8,8,9); box-shadow: 8px 8px 0 rgba(8,8,9,0.25); padding: 28px 34px;
+    display: flex; gap: 20px; font-family: 'Inter', sans-serif; }
+  .slack .avatar { flex: none; width: 56px; height: 56px; border: 4px solid rgb(8,8,9); display: flex; align-items: center;
+    justify-content: center; font-family: 'Space Mono', monospace; font-weight: 700; font-size: 28px; color: #080809; box-sizing: border-box; }
+  .slack .msghead { font-weight: 700; font-size: 24px; color: #080809; }
+  .slack .msghead .time { font-weight: 400; font-size: 19px; color: #9a9aa3; margin-left: 10px; }
+  .slack .msgbody { font-size: 23px; line-height: 1.5; color: #080809; margin-top: 6px; }
+</style>
+</head>
+<body>
+<div id="strip" style="min-height:100vh; background:#c9c9cf; display:flex; gap:64px; padding:64px; overflow-x:auto; align-items:flex-start; box-sizing:border-box; font-family:'Inter',sans-serif;">
+
+  <!-- SLIDE 1 — COVER -->
+  <section class="slide" data-screen-label="01 Cover">
+    <div class="card" style="overflow:hidden;">
+      <div class="gradbar"></div>
+      <div class="inner" style="justify-content:flex-start; position:relative;">
+        <div class="header"><span class="handle">LITTLEPARROT.APP</span><span class="page">01 / 07</span></div>
+        <h1 style="margin:80px 0 0; font-family:'Space Mono',monospace; font-weight:700; font-size:58px; line-height:1.45; color:#080809; text-align:center; text-wrap:pretty;">You need an update from the devs, <span class="hl">without sounding like you're hovering</span>.</h1>
+        <div style="margin-top:48px; text-align:center; font-family:'Space Mono',monospace; font-weight:700; font-size:26px; letter-spacing:0.08em; color:#080809;">A PROMPTING TECHNIQUE FOR EXACTLY THIS. SWIPE →</div>
+        <div style="position:absolute; right:64px; bottom:270px; font-size:76px;">😬</div>
+        <!-- The unsent, re-drafted Slack message hovering at the bottom edge -->
+        <div style="position:absolute; left:96px; right:96px; bottom:-56px; display:flex; flex-direction:column; gap:14px;">
+          <span class="promptlabel" style="font-size:22px;">UNSENT DRAFT, TAKE 4</span>
+          <div class="promptwin" style="border-radius:32px; padding:36px 44px 60px;">
+            <pre style="font-size:26px; line-height:1.6;">Hey, sorry to chase, but I was wondering if maybe<span style="text-decoration:line-through; color:#9a9aa3;"> the checkout fix is</span>
+Hi! Quick one, no rush at all, unless<span class="cursor"></span></pre>
+            <span class="send" style="background:#9a9aa3;">↑</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 2 — THE BARE PROMPT AND THE MEMO -->
+  <section class="slide" data-screen-label="02 Bare prompt memo">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner">
+        <div class="header"><span class="handle">LITTLEPARROT.APP</span><span class="page">02 / 07</span></div>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <span class="promptlabel">YOUR PROMPT</span>
+          <div class="promptwin" style="background:#e8e8ea; padding:26px 36px 30px; border-radius:24px; box-shadow:none;">
+            <pre style="font-size:24px; line-height:1.5; color:#4a4a50;">Write a Slack message asking the devs if the checkout issue is fixed.</pre>
+            <span class="send" style="width:48px; height:48px; font-size:24px; right:22px; bottom:20px; background:#9a9aa3;">↑</span>
+          </div>
+        </div>
+        <div class="slack">
+          <div class="avatar" style="background:#c9b7f0;">AI</div>
+          <div>
+            <div class="msghead">you <span class="time">9:41</span></div>
+            <div class="msgbody">Hey team! 👋<br>
+            Quick question about the checkout page performance issue we've been tracking. Has the slow loading problem been resolved?<br>
+            Specifically:<br>
+            • Are the recent optimisations addressing the page load time?<br>
+            • Have we seen any improvements in our performance metrics?<br>
+            • If it's not fixed, what's the current status and expected timeline?<br>
+            Would appreciate an update when you have a moment. Thanks!</div>
+          </div>
+        </div>
+        <p class="copy" style="font-size:33px;">The bare prompt gets you a four-paragraph <span class="hl">memo</span> with bullet points and a deadline request. Would you send that? Neither would we.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 3 — THE TONE BLOCK -->
+  <section class="slide" data-screen-label="03 Tone block">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner">
+        <div class="header"><span class="handle">LITTLEPARROT.APP</span><span class="page">03 / 07</span></div>
+        <p class="copy">Add a <span class="hl">second part</span> to the prompt: how it should sound, and how long it should be.</p>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <span class="promptlabel">YOUR PROMPT</span>
+          <div class="promptwin" style="padding:36px 44px 84px;">
+            <pre style="font-size:24px; line-height:1.6; color:#9a9aa3;">Write a Slack message to the development team asking about the status of the checkout page slow loading issue.</pre>
+            <pre style="font-size:24px; line-height:1.6; margin-top:26px;"><b>Tone:</b> friendly, warm, collaborative, confident.
+<b>Style:</b> 1 to 2 sentences, conversational Slack style, direct ask for current status or ETA, end with a brief thanks.<span class="cursor"></span></pre>
+            <span class="send">↑</span>
+          </div>
+        </div>
+        <p class="copy" style="font-size:26px; color:#4a4a50;">Part one says what you need. Part two decides how it lands in the channel.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 4 — THE WARM RESULT -->
+  <section class="slide" data-screen-label="04 Warm result">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner">
+        <div class="header"><span class="handle">LITTLEPARROT.APP</span><span class="page">04 / 07</span></div>
+        <div style="display:flex; flex-direction:column; gap:28px;">
+          <div class="slack">
+            <div class="avatar" style="background:#ffb65b;">K</div>
+            <div>
+              <div class="msghead">you <span class="time">9:43</span></div>
+              <div class="msgbody" style="font-size:26px;">Hey team! 👋 Checking in on the checkout page fix: is there a status or rough ETA? Thanks so much!</div>
+              <div style="margin-top:14px; display:inline-flex; gap:8px; border:3px solid rgb(8,8,9); padding:6px 14px; font-size:20px; background:#f5f5f6;">👍 2</div>
+            </div>
+          </div>
+          <div class="slack" style="width:78%; align-self:flex-end;">
+            <div class="avatar" style="background:#8efd23;">D</div>
+            <div>
+              <div class="msghead">dev team <span class="time">9:47</span></div>
+              <div class="msgbody" style="font-size:24px;">Deploying the fix this afternoon! 🎉</div>
+            </div>
+          </div>
+        </div>
+        <p class="copy">Now the output is two sentences you'd happily send: a friendly check-in, a clear ask, a thank you. <span class="hl">Same request, different instructions</span>, entirely different message.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 5 — THE FOUR LEVERS -->
+  <section class="slide" data-screen-label="05 Four levers">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner">
+        <div class="header"><span class="handle">LITTLEPARROT.APP</span><span class="page">05 / 07</span></div>
+        <p class="copy">The <span class="hl">four levers</span>, for any message where tone could go wrong:</p>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:32px;">
+          <div style="border:4px solid rgb(8,8,9); box-shadow:8px 8px 0 rgba(8,8,9,0.25); padding:32px; background:#ffffff;">
+            <div style="width:64px; height:64px; border-radius:50%; border:4px solid rgb(8,8,9); position:relative; margin-bottom:20px; background:linear-gradient(120deg,#ffb65b,#fdd825);"><span style="position:absolute; left:50%; top:4px; width:4px; height:22px; background:#080809; transform:rotate(40deg); transform-origin:bottom;"></span></div>
+            <div style="font-family:'Space Mono',monospace; font-weight:700; font-size:30px; color:#080809;">TONE</div>
+            <div style="font-size:24px; line-height:1.45; color:#4a4a50; margin-top:8px;">State it explicitly: formal or casual, peer or mentor.</div>
+          </div>
+          <div style="border:4px solid rgb(8,8,9); box-shadow:8px 8px 0 rgba(8,8,9,0.25); padding:32px; background:#ffffff;">
+            <div style="width:64px; height:64px; border-radius:50%; border:4px solid rgb(8,8,9); position:relative; margin-bottom:20px; background:linear-gradient(120deg,#fdd825,#fbfb00);"><span style="position:absolute; left:50%; top:4px; width:4px; height:22px; background:#080809; transform:rotate(-30deg); transform-origin:bottom;"></span></div>
+            <div style="font-family:'Space Mono',monospace; font-weight:700; font-size:30px; color:#080809;">AUDIENCE</div>
+            <div style="font-size:24px; line-height:1.45; color:#4a4a50; margin-top:8px;">Name who it's for; depth and jargon follow.</div>
+          </div>
+          <div style="border:4px solid rgb(8,8,9); box-shadow:8px 8px 0 rgba(8,8,9,0.25); padding:32px; background:#ffffff;">
+            <div style="width:64px; height:64px; border-radius:50%; border:4px solid rgb(8,8,9); position:relative; margin-bottom:20px; background:linear-gradient(120deg,#fbfb00,#8efd23);"><span style="position:absolute; left:50%; top:4px; width:4px; height:22px; background:#080809; transform:rotate(15deg); transform-origin:bottom;"></span></div>
+            <div style="font-family:'Space Mono',monospace; font-weight:700; font-size:30px; color:#080809;">SAMPLE</div>
+            <div style="font-size:24px; line-height:1.45; color:#4a4a50; margin-top:8px;">Show a sample of your writing to mirror.</div>
+          </div>
+          <div style="border:4px solid rgb(8,8,9); box-shadow:8px 8px 0 rgba(8,8,9,0.25); padding:32px; background:#ffffff;">
+            <div style="width:64px; height:64px; border-radius:50%; border:4px solid rgb(8,8,9); position:relative; margin-bottom:20px; background:linear-gradient(120deg,#8efd23,#00ed70);"><span style="position:absolute; left:50%; top:4px; width:4px; height:22px; background:#080809; transform:rotate(60deg); transform-origin:bottom;"></span></div>
+            <div style="font-family:'Space Mono',monospace; font-weight:700; font-size:30px; color:#080809;">LENGTH</div>
+            <div style="font-size:24px; line-height:1.45; color:#4a4a50; margin-top:8px;">Specify it: "2 sentences", "3 paragraphs", "≤200 words".</div>
+          </div>
+        </div>
+        <p class="copy" style="font-size:26px; color:#4a4a50;">They work in every chat assistant: ChatGPT, Claude.ai, Gemini.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 6 — CAN AND CAN'T -->
+  <section class="slide" data-screen-label="06 Can and cant">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner">
+        <div class="header"><span class="handle">LITTLEPARROT.APP</span><span class="page">06 / 07</span></div>
+        <p class="copy">What tone and style <span class="hl">can do</span>, and what they can't:</p>
+        <div style="display:flex; flex-direction:column; gap:36px;">
+          <div style="border:4px solid rgb(8,8,9); box-shadow:8px 8px 0 rgba(8,8,9,0.25); padding:36px 44px; background:#ffffff; display:flex; gap:28px; align-items:flex-start;">
+            <span style="font-family:'Space Mono',monospace; font-weight:700; font-size:44px; color:#080809; background:linear-gradient(120deg,#8efd23,#00ed70); padding:0 14px; border:4px solid #080809;">✓</span>
+            <div style="font-size:28px; line-height:1.5; color:#080809;">Make the output <b>sound like you</b>.<br>Keep your messages <b>consistent</b>.</div>
+          </div>
+          <div style="border:4px solid rgb(8,8,9); box-shadow:8px 8px 0 rgba(8,8,9,0.25); padding:36px 44px; background:#ffffff; display:flex; gap:28px; align-items:flex-start;">
+            <span style="font-family:'Space Mono',monospace; font-weight:700; font-size:44px; color:#080809; background:#e8e8ea; padding:0 14px; border:4px solid #080809;">✗</span>
+            <div style="font-size:28px; line-height:1.5; color:#080809;">Reduce <b>factual errors</b>. A message can sound exactly like you and still be wrong.</div>
+          </div>
+        </div>
+        <p class="copy" style="font-size:26px; color:#4a4a50;">Checking the facts is a separate skill (and a separate post).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 7 — CTA -->
+  <section class="slide" data-screen-label="07 CTA">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner">
+        <div class="header"><span class="handle">LITTLEPARROT.APP</span><span class="page">07 / 07</span></div>
+        <div style="display:flex; flex-direction:column; gap:40px; align-items:center; text-align:center;">
+          <p class="copy" style="font-size:34px;">Status nudges, reminders, feedback asks: they all yield to this technique. Practise it in the free first challenge of <span class="hl">Write Better with AI: Prompting Foundations for Product Managers</span>.</p>
+          <span style="font-family:'Space Mono',monospace; font-weight:700; font-size:34px; letter-spacing:0.06em; border:4px solid rgb(8,8,9); box-shadow:12px 12px 0 rgba(8,8,9,0.25); padding:20px 36px; color:#080809; background:#ffffff;">LITTLEPARROT.APP</span>
+          <p style="margin:0; font-family:'Space Mono',monospace; font-weight:700; font-size:32px; color:#080809;">First challenge free 💛</p>
+        </div>
+        <img src="uploads/parrot-with-computer.png" alt="Little Parrot mascot at a laptop" style="width:220px; align-self:center;">
+        <p style="margin:0; text-align:center; font-size:32px; line-height:1.45; color:#4a4a50;">Save this for the next message you keep redrafting. 🔖</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+<script>
+  const params = new URLSearchParams(location.search);
+  const n = parseInt(params.get('slide'), 10);
+  if (n >= 1 && n <= 7) {
+    document.body.classList.add('single');
+    document.querySelectorAll('#strip > section')[n - 1].classList.add('current');
+  }
+</script>
+</body>
+</html>
