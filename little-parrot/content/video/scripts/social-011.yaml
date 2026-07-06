@@ -1,0 +1,10 @@
+script: |-
+  Training a language model needs data. A lot of data.
+
+  The pile of text used to train a model is called a corpus. It can be almost anything written down: books, articles, websites, code, forum posts, Wikipedia, product reviews, film scripts. The more variety, the better the model gets at handling questions across different topics.
+
+  Before any of it is fed to the model, the corpus has to be cleaned. Duplicates get removed. Very low-quality text gets thrown out. Anything that would confuse or mislead the model gets pulled aside.
+
+  So somewhere at Anthropic or OpenAI, someone's job is to hoover up a huge chunk of the internet, wash it, and pour it into the training pipeline. One of the least glamorous, most consequential jobs in AI.
+
+  If you would like more of these explainers, follow along.

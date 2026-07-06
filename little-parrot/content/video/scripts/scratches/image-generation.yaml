@@ -1,0 +1,14 @@
+script: |-
+  Image generators do not work anything like language models.
+
+  A language model builds text one token at a time, left to right. An image generator does something completely different. It starts with pure noise. Static. A picture of nothing.
+
+  Then it removes the noise. Bit by bit, over many steps, it takes that static and denoises it into a picture, guided by your prompt.
+
+  The technical name for this is diffusion. The model was trained on millions of images paired with descriptions, and it learned what turning noise into "a cat wearing a hat" should look like at each step of the denoising.
+
+  The whole thing feels unrelated to how language works, and that is because it is. Different mechanism, different training data, different family of models. Same "AI" label on the outside.
+
+  When you switch from chatting with an assistant to generating an image, you are switching to something completely different underneath.
+
+  More like this coming up. Follow along.

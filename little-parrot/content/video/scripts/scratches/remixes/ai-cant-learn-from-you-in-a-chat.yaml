@@ -1,0 +1,12 @@
+script: |-
+  When you correct a chat assistant and it says "you're right, I apologise", the exchange feels like teaching. The mechanism is different.
+
+  The model you are chatting with was trained months or years ago. Its billions of numbers, its weights and biases, are frozen. Your correction is not adjusting any of them.
+
+  What is happening instead: the model reads your correction, treats it as more context, and predicts what a helpful assistant would say next. Usually an apology, followed by a better answer.
+
+  The better answer comes from the correction giving the model more context to work with in that specific reply. No learning was involved.
+
+  Next time you send a similar prompt in a new conversation, the model will be just as wrong as before. Nothing you said made it into the training. If you want a model to learn, you have to be the one training it, and that is a very different job from chatting.
+
+  More like this coming up. Follow along.

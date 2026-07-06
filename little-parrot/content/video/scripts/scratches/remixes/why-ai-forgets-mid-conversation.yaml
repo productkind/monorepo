@@ -1,0 +1,12 @@
+script: |-
+  You are ten messages into a conversation with a chat assistant. You laid out clear instructions early. Now it is drifting, and the earlier rules seem to have slipped its mind.
+
+  Here is why. Chat assistants have no long-term memory. Every time you send a message, the app resends the whole conversation back to the model. So in theory, the model is seeing your instructions each time.
+
+  In practice, the model pays much closer attention to the most recent messages than to older ones. Roughly, it focuses on the last five to seven thousand tokens most sharply, and older content becomes fuzzier the further back it sits.
+
+  This is why long conversations drift. The older instructions are still there, but at a distance the model pays less attention to.
+
+  If it matters, restate your key rules every so often. It looks a bit odd, but it works.
+
+  More like this coming up. Follow along.

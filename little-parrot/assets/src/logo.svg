@@ -27,9 +27,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="0.43431895"
-     inkscape:cx="299.3192"
-     inkscape:cy="596.33594"
+     inkscape:zoom="0.42982458"
+     inkscape:cx="478.10202"
+     inkscape:cy="318.73468"
      inkscape:window-width="1728"
      inkscape:window-height="1057"
      inkscape:window-x="0"
@@ -59,16 +59,6 @@
          offset="1"
          id="stop15" />
     </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient220-8"
-       id="linearGradient3"
-       x1="818.05231"
-       y1="551.61877"
-       x2="857.86835"
-       y2="631.22894"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(-7.5076549,0.84211843,0.84211843,7.5076549,6208.6438,-3424.455)" />
     <linearGradient
        id="linearGradient6-1">
       <stop
@@ -113,6 +103,26 @@
          offset="0.94954127"
          id="stop219-7" />
     </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient220-8"
+       id="linearGradient65"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(4.2146894,0.47275317,-0.47275317,4.2146894,-3230.8393,-1502.4409)"
+       x1="825.8642"
+       y1="559.99164"
+       x2="862.62091"
+       y2="627.89258" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient220-8"
+       id="linearGradient66"
+       gradientUnits="userSpaceOnUse"
+       x1="-8.5435457"
+       y1="1247.0193"
+       x2="109.02718"
+       y2="1549.4371"
+       gradientTransform="matrix(1.0204608,0,0,1.0204608,-3.9723197,-24.938437)" />
   </defs>
   <g
      inkscape:label="Layer 1"
@@ -151,20 +161,59 @@
            sodipodi:nodetypes="cccc"
            inkscape:label="LaptopKeyboard" />
       </g>
-      <path
-         style="display:inline;fill:url(#linearGradient3);stroke:#0b0b0d;stroke-width:21.8126;stroke-dasharray:none;stroke-opacity:1"
-         d="m 557.65863,1590.2545 67.04804,-30.2387 -64.55834,-51.5362 c -0.9878,-46.3495 -23.83319,-82.7656 -81.9895,-73.0993 -22.6637,3.767 -53.52215,28.8573 -55.97545,80.0214 -2.47702,51.6588 9.14854,183.2573 -61.82659,247.4317 -77.51405,70.0869 -168.51235,152.735 -225.69138,162.2462 103.6995,97.0638 332.79741,137.5897 424.57451,80.5915 77.74019,-48.2806 26.85962,-298.4397 -1.58129,-415.4166 -18.38076,7.6944 -37.55821,15.8563 -57.26025,16.1508 19.70343,-0.2994 38.87374,-8.4462 57.26025,-16.1508 z"
-         id="path2-5-52-8"
-         sodipodi:nodetypes="cccssscsccc"
-         inkscape:label="ParrotBody" />
-      <circle
-         style="display:inline;fill:#0b0b0d;fill-opacity:1;stroke:none;stroke-width:19.9886;stroke-dasharray:none;stroke-opacity:1"
-         id="path18-0-5-0"
-         cx="-338.64096"
-         cy="1546.241"
-         r="17.412582"
-         inkscape:label="ParrotEyes"
-         transform="matrix(-0.99376792,0.11146893,0.11146893,0.99376792,0,0)" />
+      <g
+         id="g65"
+         transform="matrix(-1.7813261,0,0,1.7813261,451.46222,-747.2075)"
+         inkscape:label="little-parrot-normal-right">
+        <g
+           id="g60"
+           inkscape:label="leg-back"
+           transform="matrix(-1.0204608,0,0,1.0204608,387.36784,-478.55913)">
+          <path
+             style="fill:#080809;fill-opacity:1;stroke:#080809;stroke-width:12;stroke-linecap:butt;stroke-dasharray:none;stroke-opacity:1"
+             d="m 414.95621,1983.1441 v 72.282"
+             id="path59"
+             inkscape:label="leg" />
+          <path
+             style="fill:#080809;fill-opacity:1;stroke:#080809;stroke-width:12;stroke-linecap:butt;stroke-dasharray:none;stroke-opacity:1"
+             d="m 388.32601,2049.7196 25.6141,-6.8633 27.016,7.239"
+             id="path60"
+             inkscape:label="feet" />
+        </g>
+        <path
+           style="display:inline;fill:url(#linearGradient65);stroke:#080809;stroke-width:12.2455;stroke-dasharray:none;stroke-opacity:1"
+           d="m -58.457619,1312.7448 -37.639799,-16.9756 36.242126,-28.9317 c 0.554538,-26.0199 13.379598,-46.4634 46.027722,-41.0369 12.7230719,2.1149 30.046558,16.2001 31.423802,44.9229 1.390572,29.0005 -5.135857,102.878 34.708568,138.9047 43.515267,39.3456 94.6004,85.7432 126.69989,91.0825 -58.21541,54.4904 -186.8276778,77.2409 -238.350017,45.243 -43.642223,-27.1041 -15.078605,-167.5398 0.887708,-233.2089 10.318696,4.3195 21.08464,8.9015 32.145078,9.0668 -11.061214,-0.168 -21.823157,-4.7416 -32.145078,-9.0668 z"
+           id="path61"
+           sodipodi:nodetypes="cccssscsccc"
+           inkscape:label="body" />
+        <circle
+           style="display:inline;fill:#080809;fill-opacity:1;stroke:none;stroke-width:11.2213;stroke-dasharray:none;stroke-opacity:1"
+           id="circle61"
+           cx="109.72567"
+           cy="1257.0382"
+           r="9.7751818"
+           inkscape:label="eye"
+           transform="rotate(6.3999999)" />
+        <path
+           style="opacity:0.984509;fill:url(#linearGradient66);fill-opacity:1;stroke:#000000;stroke-width:12.2455;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+           d="m 179.83666,1482.9272 c -126.223907,33.4165 -179.92430226,-6.2261 -194.111962,-56.9216 -11.49844,-41.0866 14.75094327,-76.7121 47.051474,-46.1017 z"
+           id="path62"
+           inkscape:label="wing"
+           sodipodi:nodetypes="cscc" />
+        <g
+           id="g64"
+           inkscape:label="leg-front"
+           transform="matrix(-1.0204608,0,0,1.0204608,387.36784,-478.55913)">
+          <path
+             style="fill:#080809;fill-opacity:1;stroke:#080809;stroke-width:12;stroke-linecap:butt;stroke-dasharray:none;stroke-opacity:1"
+             d="m 355.8219,1985.6347 v 72.282"
+             id="path63" />
+          <path
+             style="fill:#080809;fill-opacity:1;stroke:#080809;stroke-width:12;stroke-linecap:butt;stroke-dasharray:none;stroke-opacity:1"
+             d="m 329.1917,2052.2102 25.6141,-6.8633 27.016,7.239"
+             id="path64" />
+        </g>
+      </g>
       <g
          id="g2-5"
          inkscape:label="LaptopTop"
@@ -178,7 +227,7 @@
            inkscape:label="LaptopLid" />
         <text
            xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.2507px;font-family:'Monaspace Neon';-inkscape-font-specification:'Monaspace Neon';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;inline-size:140.957;display:inline;fill:#0b0b0d;fill-opacity:1;stroke:none;stroke-width:0.524481;stroke-dasharray:none;stroke-opacity:1"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.2507px;font-family:'Monaspace Neon';-inkscape-font-specification:'Monaspace Neon';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;inline-size:140.957;display:none;fill:#0b0b0d;fill-opacity:1;stroke:none;stroke-width:0.524481;stroke-dasharray:none;stroke-opacity:1"
            x="17.849133"
            y="118.99422"
            id="text18-6-2-9"
@@ -186,17 +235,17 @@
            inkscape:label="LittleParrotText"><tspan
              x="17.849133"
              y="118.99422"
-             id="tspan6"><tspan
+             id="tspan2"><tspan
                style="font-weight:bold;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold'"
-               id="tspan5">Little
+               id="tspan1">Little
 </tspan></tspan><tspan
              x="17.849133"
              y="149.94428"
-             id="tspan8"><tspan
+             id="tspan4"><tspan
                style="font-weight:bold;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold'"
-               id="tspan7">Parrot</tspan></tspan></text>
+               id="tspan3">Parrot</tspan></tspan></text>
         <ellipse
-           style="display:none;fill:#230156;fill-opacity:1;stroke:none;stroke-width:6"
+           style="display:inline;fill:#0b0b0d;fill-opacity:1;stroke:none;stroke-width:6"
            id="path1-4"
            cx="513.46521"
            cy="188.19118"

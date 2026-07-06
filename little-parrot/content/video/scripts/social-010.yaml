@@ -1,0 +1,10 @@
+script: |-
+  Most chat assistants come with a hidden set of instructions called a system prompt. It is written by the model's creators, and it sits above your messages, telling the model how to behave with you.
+
+  Anthropic, the company behind Claude, publishes theirs. You can read the current one on docs.anthropic.com.
+
+  It is thousands of words long, and full of small, surprisingly human notes. Claude is told not to start replies with things like "great question" or "what a fascinating idea", because it comes across as sycophantic. It is told to be direct rather than hedging. It is told to admit when it does not know something, rather than making things up.
+
+  Reading it feels a bit like reading a job brief for the AI.
+
+  If you want to know why your chat assistant behaves the way it does, its system prompt is a good place to start.

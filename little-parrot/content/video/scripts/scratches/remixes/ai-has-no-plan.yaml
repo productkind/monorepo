@@ -1,0 +1,12 @@
+script: |-
+  Here is something that surprises people about how chat assistants write. They do not plan the answer before writing it. They generate one token at a time, in order, without knowing at the start of a sentence how the sentence will end.
+
+  Which raises a fair question. If there is no plan, why does the output look so structured?
+
+  Because the structure was in the training data. Millions of blog posts, essays and reports were written with introductions, main points, and summaries. The model has learnt what shape a "well-structured response" tends to take, and produces text that fits the shape. But it is doing this token by token, following the local pull of what should come next.
+
+  The finished answer looks planned because most human writing looks planned. The model imitates the surface, without the underlying deliberation.
+
+  If that mechanism sounds insufficient, that is a fair reaction. What language models produce is what happens when you scale that up enough.
+
+  More like this coming up. Follow along.

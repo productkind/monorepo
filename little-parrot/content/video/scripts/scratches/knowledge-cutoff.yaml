@@ -1,0 +1,10 @@
+script: |-
+  Ask a chat assistant what happened yesterday. It will confidently tell you something plausible, and probably wrong.
+
+  Language models are trained on data up to a specific date, called the knowledge cutoff. Everything after that date is invisible to the model. If a model was trained on data up to March 2025, and you ask about a June 2025 news event, it does not know. But it will not say so.
+
+  Instead, the model does what it always does. It generates the most likely-sounding continuation. That continuation might mash together older events, invent a plausible-sounding update, or hallucinate a whole story that never happened.
+
+  Some newer chat assistants can search the web to fill this gap. If yours can, use it for anything time-sensitive. If it cannot, keep the cutoff date in mind. Ask the model what its knowledge cutoff is before asking about current events. It usually knows.
+
+  More like this coming up. Follow along.

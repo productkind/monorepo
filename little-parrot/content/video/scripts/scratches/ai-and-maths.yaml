@@ -1,0 +1,12 @@
+script: |-
+  Ask a chat assistant to multiply 4573 by 289. You will get an answer that sounds right. Depending on your luck, it might even be right.
+
+  But most of the time, it is not.
+
+  Here is why. A language model does not calculate. It predicts what text should come next. When you ask for 4573 times 289, it does not multiply. It looks at billions of maths problems from its training data and guesses which digits usually appear in the answer to something roughly this shape.
+
+  That works for small numbers, because the answer probably showed up in its training data. For anything unusual, it falls apart.
+
+  The good news is that modern chat assistants can now hand the maths off to a real calculator behind the scenes. Look for a tool icon or "code interpreter" mode. When you turn that on, the assistant does what it should have done all along, which is not the maths.
+
+  More like this coming up. Follow along.

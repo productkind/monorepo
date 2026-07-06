@@ -1,0 +1,12 @@
+script: |-
+  The term "neural network" makes it sound like AI is a digital brain. It is not, and the name has caused a lot of confusion.
+
+  Neural networks were named in the 1940s and 50s, when researchers were loosely inspired by how neurons fire in the human brain. The maths borrowed the shape of the analogy: input signals, weighted connections, a threshold to fire, an output.
+
+  That is roughly where the resemblance stops. Real neurons are living cells with wildly complicated behaviour. An artificial neuron is a few multiplications and one addition, run billions of times.
+
+  Modern language models have layers of these artificial neurons, sometimes called "deep" because there are so many layers. The word "deep" comes from the number of stacked layers, nothing more.
+
+  If the name "neural network" makes you picture something with the depth and subtlety of a mind, it is worth swapping the mental image. What is under the hood is a very, very large maths problem.
+
+  More like this coming up. Follow along.

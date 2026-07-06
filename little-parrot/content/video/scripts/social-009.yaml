@@ -1,0 +1,12 @@
+script: |-
+  Two things that surprise people about chat assistants.
+
+  First, they do not remember your past conversations. Each time you send a message, the app resends the entire chat history back to the model. That bundle of history, plus any files you have attached, is called the context.
+
+  The model pays closest attention to the most recent chunk of that context, roughly five to seven thousand tokens. Anything older gradually slips off the edge, which is why long conversations can feel like the AI is forgetting.
+
+  Second, the same prompt can give you different answers. When the model predicts the next token, it does not always pick the single most likely word. It samples from the top few options. A bit of randomness is why hitting regenerate can produce a different reply.
+
+  So the model is not remembering you, and it is not being consistent either. It is doing maths, with a small amount of dice-rolling on top.
+
+  If you would like more explainers on how AI works, follow along.

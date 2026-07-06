@@ -1,0 +1,16 @@
+script: |-
+  When we say a language model was trained on the internet, that is roughly true. The mix inside is worth knowing.
+
+  The bulk is scraped web text: blogs, articles, forums, product pages, whatever a crawler found. That is where the model gets its everyday knowledge.
+
+  A large chunk is books. Fiction, non-fiction, textbooks. This is where the model picks up longer-form structure, characters, world knowledge, and history.
+
+  Code is included on purpose. Even models used mainly for chat are trained on huge amounts of GitHub-style code. Learning code seems to make models better at reasoning through logic.
+
+  A smaller portion is curated: encyclopedias, question-and-answer datasets, and human-written examples of good responses.
+
+  Notably absent from most corpora: paywalled news, most social media, and copyrighted materials companies were pushed to remove.
+
+  The mix shapes the model. Which is why every model has its own quirks.
+
+  More like this coming up. Follow along.

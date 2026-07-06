@@ -1,0 +1,10 @@
+script: |-
+  Every so often, a chat assistant will invent a fake court case, a fictional book title, or a quote no human has ever said. The industry calls this hallucination.
+
+  Here is why it happens. A language model is trained to always continue plausibly. Given a question, it produces the most likely next words. It has no mechanism for saying "I don't have that information", so it generates something that sounds like the right shape of answer instead.
+
+  Sometimes that answer is right. Sometimes it is confidently wrong.
+
+  The fix is on your side. If it matters, check the citation, the number, the date. Treat every answer as a first draft.
+
+  More like this coming up. Follow along.

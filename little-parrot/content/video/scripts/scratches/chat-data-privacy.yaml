@@ -1,0 +1,12 @@
+script: |-
+  People often ask us what happens to the things they type into a chat assistant. Reasonable question. Here is the short version.
+
+  When you send a message, it travels to the company's servers, gets stored, and is processed by the model. So far, the same as any web service you use.
+
+  What is different is what happens next. Some companies use consumer chats to train future models. Others do not. And the answer varies by which tier you are on. Free accounts often opt you in. Paid consumer accounts sometimes do. Enterprise accounts almost never do.
+
+  The model itself does not learn from what you type in the moment. That would require retraining, which happens in big offline batches, not during your conversation.
+
+  If any of this matters to you, read the specific data policy for whichever chat assistant you use. And if you type in sensitive information, opt out of training in the settings.
+
+  More like this coming up. Follow along.
