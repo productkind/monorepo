@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Post 1 — The first prompt formula (carousel)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  html, body { margin: 0; padding: 0; }
+  body.single { overflow: hidden; }
+  body.single #strip { padding: 0 !important; gap: 0 !important; background: none !important; min-height: 0 !important; }
+  body.single section { display: none; }
+  body.single section.current { display: block; }
+  @media print {
+    #strip { padding: 0 !important; gap: 0 !important; background: none !important; min-height: 0 !important; display: block !important; }
+    section { page-break-after: always; break-after: page; }
+    @page { size: 1080px 1350px; margin: 0; }
+  }
+</style>
+</head>
+<body>
+<div id="strip" style="min-height:100vh; background:#c9c9cf; display:flex; gap:64px; padding:64px; overflow-x:auto; align-items:flex-start; box-sizing:border-box; font-family:'Inter',sans-serif;">
+
+  <!-- SLIDE 1 — COVER -->
+  <section data-screen-label="01 Cover" style="flex:none; width:1080px; height:1350px; position:relative; overflow:hidden; background:linear-gradient(120deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020), #ffffff; box-sizing:border-box;">
+    <div style="position:absolute; top:100px; left:100px; width:880px; height:1150px; box-sizing:border-box; background:#ffffff; border:12px solid rgb(8,8,9); box-shadow:12px 12px 0 rgba(8,8,9,0.25); display:flex; flex-direction:column; overflow:hidden;">
+      <div style="flex:none; height:24px; background:linear-gradient(120deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70);"></div>
+      <div style="flex:1; display:flex; flex-direction:column; padding:56px 72px 0; box-sizing:border-box; position:relative;">
+        <div style="display:flex; justify-content:space-between; align-items:center; font-family:'Space Mono',monospace; font-weight:700; letter-spacing:0.06em; color:#080809;">
+          <span style="font-size:32px;">LITTLEPARROT.APP</span><span style="font-size:24px;">01 / 07</span>
+        </div>
+        <h1 style="margin:90px 0 0; font-family:'Space Mono',monospace; font-weight:700; font-size:64px; line-height:1.45; color:#080809; text-align:center; text-wrap:pretty;">Your first<br><span style="background:linear-gradient(120deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70); padding:0 0.12em; box-decoration-break:clone; -webkit-box-decoration-break:clone;">Lovable prompt</span>:<br>the structure that gets you close on the first try.</h1>
+        <div style="margin-top:56px; text-align:center; font-family:'Space Mono',monospace; font-weight:700; font-size:28px; letter-spacing:0.08em; color:#080809;">SWIPE →</div>
+        <img src="uploads/little-parrot-wave.png" alt="Little Parrot mascot waving" style="position:absolute; right:0; bottom:0; width:330px;">
+        <!-- Prompt window peeking in from the bottom edge -->
+        <div style="position:absolute; left:96px; right:96px; bottom:-120px; display:flex; flex-direction:column; gap:14px;">
+          <span style="font-family:'Space Mono',monospace; font-weight:700; font-size:22px; letter-spacing:0.08em; color:#4a4a50;">YOUR PROMPT</span>
+          <div style="background:#ffffff; border:4px solid rgb(8,8,9); border-radius:32px; box-shadow:12px 12px 0 rgba(8,8,9,0.25); padding:36px 44px; position:relative;">
+            <pre style="margin:0; font-family:'Space Mono',monospace; font-size:26px; line-height:1.6; white-space:pre-wrap; color:rgba(8,8,9,0.35);">## Product overview
+## User flow
+## Design system</pre>
+            <span style="position:absolute; right:36px; bottom:28px; width:64px; height:64px; border-radius:50%; background:#080809; color:#ffffff; display:flex; align-items:center; justify-content:center; font-size:32px;">↑</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 2 — VAGUE VS STRUCTURED -->
+  <section data-screen-label="02 Vague vs structured" style="flex:none; width:1080px; height:1350px; position:relative; overflow:hidden; background:linear-gradient(120deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020), #ffffff; box-sizing:border-box;">
+    <div style="position:absolute; top:100px; left:100px; width:880px; height:1150px; box-sizing:border-box; background:#ffffff; border:12px solid rgb(8,8,9); box-shadow:12px 12px 0 rgba(8,8,9,0.25); display:flex; flex-direction:column;">
+      <div style="flex:none; height:24px; background:linear-gradient(120deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70);"></div>
+      <div style="flex:1; display:flex; flex-direction:column; justify-content:space-between; padding:56px 72px 64px; box-sizing:border-box;">
+        <div style="display:flex; justify-content:space-between; align-items:center; font-family:'Space Mono',monospace; font-weight:700; letter-spacing:0.06em; color:#080809;">
+          <span style="font-size:32px;">LITTLEPARROT.APP</span><span style="font-size:24px;">02 / 07</span>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:36px;">
+          <div style="align-self:flex-start; width:440px; background:#e8e8ea; border:4px solid rgb(8,8,9); border-radius:28px; padding:28px 36px; position:relative;">
+            <pre style="margin:0; font-family:'Space Mono',monospace; font-size:24px; line-height:1.5; white-space:pre-wrap; color:#4a4a50;">Make me an app for my book club</pre>
+            <span style="position:absolute; right:24px; bottom:22px; width:48px; height:48px; border-radius:50%; background:#9a9aa3; color:#ffffff; display:flex; align-items:center; justify-content:center; font-size:26px;">↑</span>
+          </div>
+          <div style="align-self:center; font-family:'Space Mono',monospace; font-weight:700; font-size:34px; color:#080809;">vs</div>
+          <div style="align-self:flex-end; width:480px; display:flex; flex-direction:column; gap:12px;">
+            <span style="font-family:'Space Mono',monospace; font-weight:700; font-size:20px; letter-spacing:0.08em; color:#4a4a50;">YOUR PROMPT</span>
+            <div style="background:#ffffff; border:4px solid rgb(8,8,9); border-radius:28px; box-shadow:12px 12px 0 rgba(8,8,9,0.25); padding:32px 40px; position:relative;">
+              <pre style="margin:0; font-family:'Space Mono',monospace; font-weight:700; font-size:24px; line-height:1.9; white-space:pre-wrap; color:#080809;">## Product overview
+## User flow
+## Design system
+## Target user</pre>
+              <span style="position:absolute; right:28px; bottom:26px; width:56px; height:56px; border-radius:50%; background:#080809; color:#ffffff; display:flex; align-items:center; justify-content:center; font-size:28px;">↑</span>
+            </div>
+          </div>
+        </div>
+        <p style="margin:0; font-size:36px; line-height:1.45; color:#080809; text-wrap:pretty;">“Make me an app for my book club” gets you something generic. Vague prompts get vague results. A <span style="background:linear-gradient(120deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70); padding:0 0.12em; box-decoration-break:clone; -webkit-box-decoration-break:clone; font-weight:700;">structured prompt</span> gets you much closer. 👉🏼</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 3 — FIRST TWO SECTIONS -->
+  <section data-screen-label="03 Overview and flow" style="flex:none; width:1080px; height:1350px; position:relative; overflow:hidden; background:linear-gradient(120deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020), #ffffff; box-sizing:border-box;">
+    <div style="position:absolute; top:100px; left:100px; width:880px; height:1150px; box-sizing:border-box; background:#ffffff; border:12px solid rgb(8,8,9); box-shadow:12px 12px 0 rgba(8,8,9,0.25); display:flex; flex-direction:column;">
+      <div style="flex:none; height:24px; background:linear-gradient(120deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70);"></div>
+      <div style="flex:1; display:flex; flex-direction:column; justify-content:space-between; padding:56px 72px 64px; box-sizing:border-box;">
+        <div style="display:flex; justify-content:space-between; align-items:center; font-family:'Space Mono',monospace; font-weight:700; letter-spacing:0.06em; color:#080809;">
+          <span style="font-size:32px;">LITTLEPARROT.APP</span><span style="font-size:24px;">03 / 07</span>
+        </div>
+        <p style="margin:0; font-size:36px; line-height:1.45; color:#080809; text-wrap:pretty;">Start with two sections: <span style="background:linear-gradient(120deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70); padding:0 0.12em; box-decoration-break:clone; -webkit-box-decoration-break:clone; font-weight:700;">what the app is</span>, then what the user does, step by step.</p>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <span style="font-family:'Space Mono',monospace; font-weight:700; font-size:20px; letter-spacing:0.08em; color:#4a4a50;">YOUR PROMPT</span>
+          <div style="background:#ffffff; border:4px solid rgb(8,8,9); border-radius:28px; box-shadow:12px 12px 0 rgba(8,8,9,0.25); padding:36px 44px 88px; position:relative;">
+            <pre style="margin:0; font-family:'Space Mono',monospace; font-size:25px; line-height:1.6; white-space:pre-wrap; color:#080809;">## Product overview
+A simple app where book club members suggest books for the group to read next.
+
+## User flow
+1. User opens the app and sees the list
+2. User adds a book with a short note<span style="display:inline-block; width:4px; height:1.1em; background:#080809; vertical-align:text-bottom;"></span></pre>
+            <span style="position:absolute; right:32px; bottom:28px; width:56px; height:56px; border-radius:50%; background:#080809; color:#ffffff; display:flex; align-items:center; justify-content:center; font-size:28px;">↑</span>
+          </div>
+        </div>
+        <p style="margin:0; font-size:26px; line-height:1.45; color:#4a4a50; text-wrap:pretty;">Written in markdown, the simple formatting Lovable reads.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 4 — DESIGN SYSTEM -->
+  <section data-screen-label="04 Design system" style="flex:none; width:1080px; height:1350px; position:relative; overflow:hidden; background:linear-gradient(120deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020), #ffffff; box-sizing:border-box;">
+    <div style="position:absolute; top:100px; left:100px; width:880px; height:1150px; box-sizing:border-box; background:#ffffff; border:12px solid rgb(8,8,9); box-shadow:12px 12px 0 rgba(8,8,9,0.25); display:flex; flex-direction:column;">
+      <div style="flex:none; height:24px; background:linear-gradient(120deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70);"></div>
+      <div style="flex:1; display:flex; flex-direction:column; justify-content:space-between; padding:56px 72px 64px; box-sizing:border-box;">
+        <div style="display:flex; justify-content:space-between; align-items:center; font-family:'Space Mono',monospace; font-weight:700; letter-spacing:0.06em; color:#080809;">
+          <span style="font-size:32px;">LITTLEPARROT.APP</span><span style="font-size:24px;">04 / 07</span>
+        </div>
+        <p style="margin:0; font-size:36px; line-height:1.45; color:#080809; text-wrap:pretty;">Then <span style="background:linear-gradient(120deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70); padding:0 0.12em; box-decoration-break:clone; -webkit-box-decoration-break:clone; font-weight:700;">how it should look</span>. Not sure about colours and fonts yet? Describe the mood instead; Lovable will interpret it.</p>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <span style="font-family:'Space Mono',monospace; font-weight:700; font-size:20px; letter-spacing:0.08em; color:#4a4a50;">YOUR PROMPT</span>
+          <div style="background:#ffffff; border:4px solid rgb(8,8,9); border-radius:28px; box-shadow:12px 12px 0 rgba(8,8,9,0.25); padding:36px 44px 80px; position:relative;">
+            <pre style="margin:0; font-family:'Space Mono',monospace; font-size:25px; line-height:1.6; white-space:pre-wrap; color:#080809;">## Design system
+- Colours: warm cream, coral accents
+- Style: cosy, bookish, friendly<span style="display:inline-block; width:4px; height:1.1em; background:#080809; vertical-align:text-bottom;"></span></pre>
+            <span style="position:absolute; right:32px; bottom:28px; width:56px; height:56px; border-radius:50%; background:#080809; color:#ffffff; display:flex; align-items:center; justify-content:center; font-size:28px;">↑</span>
+          </div>
+        </div>
+        <div style="display:flex; gap:28px; justify-content:center;">
+          <div style="display:flex; flex-direction:column; gap:12px; align-items:center;">
+            <span style="width:150px; height:150px; background:#f5eee1; border:4px solid rgb(8,8,9); box-shadow:8px 8px 0 rgba(8,8,9,0.25);"></span>
+            <span style="font-family:'Space Mono',monospace; font-size:24px; color:#080809;">cream</span>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:12px; align-items:center;">
+            <span style="width:150px; height:150px; background:#6b4a33; border:4px solid rgb(8,8,9); box-shadow:8px 8px 0 rgba(8,8,9,0.25);"></span>
+            <span style="font-family:'Space Mono',monospace; font-size:24px; color:#080809;">brown</span>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:12px; align-items:center;">
+            <span style="width:150px; height:150px; background:#ff7261; border:4px solid rgb(8,8,9); box-shadow:8px 8px 0 rgba(8,8,9,0.25);"></span>
+            <span style="font-family:'Space Mono',monospace; font-size:24px; color:#080809;">coral</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 5 — TARGET USER -->
+  <section data-screen-label="05 Target user" style="flex:none; width:1080px; height:1350px; position:relative; overflow:hidden; background:linear-gradient(120deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020), #ffffff; box-sizing:border-box;">
+    <div style="position:absolute; top:100px; left:100px; width:880px; height:1150px; box-sizing:border-box; background:#ffffff; border:12px solid rgb(8,8,9); box-shadow:12px 12px 0 rgba(8,8,9,0.25); display:flex; flex-direction:column;">
+      <div style="flex:none; height:24px; background:linear-gradient(120deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70);"></div>
+      <div style="flex:1; display:flex; flex-direction:column; justify-content:space-between; padding:56px 72px 64px; box-sizing:border-box;">
+        <div style="display:flex; justify-content:space-between; align-items:center; font-family:'Space Mono',monospace; font-weight:700; letter-spacing:0.06em; color:#080809;">
+          <span style="font-size:32px;">LITTLEPARROT.APP</span><span style="font-size:24px;">05 / 07</span>
+        </div>
+        <p style="margin:0; font-size:36px; line-height:1.45; color:#080809; text-wrap:pretty;">And who it's for. <span style="background:linear-gradient(120deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70); padding:0 0.12em; box-decoration-break:clone; -webkit-box-decoration-break:clone; font-weight:700;">Describe your user clearly</span>, and the app comes back shaped around her.</p>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <span style="font-family:'Space Mono',monospace; font-weight:700; font-size:20px; letter-spacing:0.08em; color:#4a4a50;">YOUR PROMPT</span>
+          <div style="background:#ffffff; border:4px solid rgb(8,8,9); border-radius:28px; box-shadow:12px 12px 0 rgba(8,8,9,0.25); padding:36px 44px 80px; position:relative;">
+            <pre style="margin:0; font-family:'Space Mono',monospace; font-size:25px; line-height:1.6; white-space:pre-wrap; color:#080809;">## Target user
+Sarah, a book club organiser who wants to spend less time on admin and more time reading with friends.<span style="display:inline-block; width:4px; height:1.1em; background:#080809; vertical-align:text-bottom;"></span></pre>
+            <span style="position:absolute; right:32px; bottom:28px; width:56px; height:56px; border-radius:50%; background:#080809; color:#ffffff; display:flex; align-items:center; justify-content:center; font-size:28px;">↑</span>
+          </div>
+        </div>
+        <div style="align-self:center; display:flex; align-items:center; gap:24px; border:4px solid rgb(8,8,9); box-shadow:8px 8px 0 rgba(8,8,9,0.25); padding:28px 40px; background:#ffffff;">
+          <span style="width:72px; height:72px; background:#ff7261; border:4px solid rgb(8,8,9); display:flex; align-items:center; justify-content:center; font-family:'Space Mono',monospace; font-weight:700; font-size:34px; color:#080809;">S</span>
+          <div style="display:flex; flex-direction:column; gap:4px;">
+            <span style="font-family:'Space Mono',monospace; font-weight:700; font-size:28px; color:#080809;">Sarah</span>
+            <span style="font-size:24px; color:#4a4a50;">book club organiser</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 6 — GOLDEN RULE -->
+  <section data-screen-label="06 Golden rule" style="flex:none; width:1080px; height:1350px; position:relative; overflow:hidden; background:linear-gradient(120deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020), #ffffff; box-sizing:border-box;">
+    <div style="position:absolute; top:100px; left:100px; width:880px; height:1150px; box-sizing:border-box; background:#ffffff; border:12px solid rgb(8,8,9); box-shadow:12px 12px 0 rgba(8,8,9,0.25); display:flex; flex-direction:column;">
+      <div style="flex:none; height:24px; background:linear-gradient(120deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70);"></div>
+      <div style="flex:1; display:flex; flex-direction:column; justify-content:space-between; padding:56px 72px 64px; box-sizing:border-box;">
+        <div style="display:flex; justify-content:space-between; align-items:center; font-family:'Space Mono',monospace; font-weight:700; letter-spacing:0.06em; color:#080809;">
+          <span style="font-size:32px;">LITTLEPARROT.APP</span><span style="font-size:24px;">06 / 07</span>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:40px;">
+          <h2 style="margin:0; font-family:'Space Mono',monospace; font-weight:700; font-size:44px; line-height:1.5; color:#080809;">The golden rule: describe <span style="background:linear-gradient(120deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70); padding:0 0.12em;">ONE core feature</span>, and leave the rest out.</h2>
+          <div style="border:4px solid rgb(8,8,9); box-shadow:12px 12px 0 rgba(8,8,9,0.25); padding:40px 48px; display:flex; flex-direction:column; gap:22px; font-family:'Space Mono',monospace; font-size:28px; color:#080809; background:#ffffff;">
+            <span style="text-decoration:line-through; color:#9a9aa3;">voting on the next book</span>
+            <span style="text-decoration:line-through; color:#9a9aa3;">reading deadlines</span>
+            <span style="text-decoration:line-through; color:#9a9aa3;">progress tracking</span>
+            <span style="align-self:flex-start; border:4px solid #080809; padding:10px 20px; font-weight:700; background:linear-gradient(120deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70);">one shared reading list</span>
+          </div>
+        </div>
+        <p style="margin:0; font-size:32px; line-height:1.45; color:#4a4a50; text-wrap:pretty;">The first prompt skipped voting, deadlines, and tracking. Those come later, one prompt at a time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 7 — CTA -->
+  <section data-screen-label="07 CTA" style="flex:none; width:1080px; height:1350px; position:relative; overflow:hidden; background:linear-gradient(120deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020), #ffffff; box-sizing:border-box;">
+    <div style="position:absolute; top:100px; left:100px; width:880px; height:1150px; box-sizing:border-box; background:#ffffff; border:12px solid rgb(8,8,9); box-shadow:12px 12px 0 rgba(8,8,9,0.25); display:flex; flex-direction:column;">
+      <div style="flex:none; height:24px; background:linear-gradient(120deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70);"></div>
+      <div style="flex:1; display:flex; flex-direction:column; justify-content:space-between; padding:56px 72px 64px; box-sizing:border-box;">
+        <div style="display:flex; justify-content:space-between; align-items:center; font-family:'Space Mono',monospace; font-weight:700; letter-spacing:0.06em; color:#080809;">
+          <span style="font-size:32px;">LITTLEPARROT.APP</span><span style="font-size:24px;">07 / 07</span>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:48px; align-items:center; text-align:center;">
+          <p style="margin:0; font-size:38px; line-height:1.45; color:#080809; text-wrap:pretty;">The full copy-paste template is in the <span style="background:linear-gradient(120deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70); padding:0 0.12em; box-decoration-break:clone; -webkit-box-decoration-break:clone; font-weight:700;">Build Your First App with Lovable</span> course toolkit.</p>
+          <span style="font-family:'Space Mono',monospace; font-weight:700; font-size:34px; letter-spacing:0.06em; border:4px solid rgb(8,8,9); box-shadow:12px 12px 0 rgba(8,8,9,0.25); padding:20px 36px; color:#080809; background:#ffffff;">LITTLEPARROT.APP</span>
+          <p style="margin:0; font-family:'Space Mono',monospace; font-weight:700; font-size:32px; color:#080809;">First challenge free 💛</p>
+        </div>
+        <img src="uploads/parrot-with-computer.png" alt="Little Parrot mascot at a laptop" style="width:240px; align-self:center;">
+        <p style="margin:0; text-align:center; font-size:32px; line-height:1.45; color:#4a4a50;">Save this for your first prompt. 🔖</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+<script>
+  // ?slide=N isolates one slide at exactly 1080x1350 for PNG export.
+  const params = new URLSearchParams(location.search);
+  const n = parseInt(params.get('slide'), 10);
+  if (n >= 1 && n <= 7) {
+    document.body.classList.add('single');
+    document.querySelectorAll('#strip > section')[n - 1].classList.add('current');
+  }
+</script>
+</body>
+</html>
