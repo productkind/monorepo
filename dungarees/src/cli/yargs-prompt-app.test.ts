@@ -5,17 +5,17 @@ import { collectValuesFrom } from '@dungarees/rxjs/util.ts'
 import { lastValueFrom, of } from 'rxjs'
 import { expect, test } from 'vitest'
 
-test('yargs-propmt-app', async ({}) => {
+test('yargs-propmt-app exits with 0 by default', async () => {
   const app = createYargsPromptApp({
     name: 'test-app',
     route: (yargs) => yargs,
   })
-  const message$ = await app.present([])
+  const message$ = app.present([])
 
   expect(await collectValuesFrom(message$)).toEqual([{ type: 'exit', code: 0 }])
 })
-/*
-mtest('yargs-propmt-app', ({ expect }) => {
+
+test('yargs-propmt-app can register an input', async () => {
   const app = createYargsPromptApp({
     name: 'test-app',
     route: (yargs, io) => {
@@ -31,10 +31,34 @@ mtest('yargs-propmt-app', ({ expect }) => {
     },
   })
   const message$ = app.present([])
-  expect(message$).toBeObservable('(eo)|', {
-    e: { type: 'exit', code: 0 },
-    o: { type: 'stdout', message: 'Hello, World!', level: 'info' },
+  expect(await collectValuesFrom(message$)).toEqual([
+    { type: 'stdout', message: 'Hello, World!', level: 'info' },
+    { type: 'exit', code: 0 },
+  ])
+})
+
+test('yargs-propmt-app can register multiple inputs', async () => {
+  const app = createYargsPromptApp({
+    name: 'test-app',
+    route: (yargs, io) => {
+      io.registerEvents(of({ type: 'greet', payload: 'Hello, World!' }))
+      io.registerEvents(of({ type: 'greet', payload: 'Hello, World! Again.' }))
+      return yargs
+    },
+    presenter: {
+      greet: (payload) => ({
+        message: payload,
+        type: 'stdout',
+        level: 'info',
+      }),
+    },
   })
+  const message$ = app.present([])
+  expect(await collectValuesFrom(message$)).toEqual([
+    { type: 'stdout', message: 'Hello, World!', level: 'info' },
+    { type: 'stdout', message: 'Hello, World! Again.', level: 'info' },
+    { type: 'exit', code: 0 },
+  ])
 })
 
 /*

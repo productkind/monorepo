@@ -1,24 +1,24 @@
 script: |-
-  Humans have been chasing intelligent machines for centuries, with varying degrees of honesty. In 1770, a Hungarian inventor toured Europe with the Mechanical Turk, a chess-playing cabinet that beat Napoleon and Benjamin Franklin. He forgot to mention the chess master folded inside, doing all the actual chess.
+  Remember the GPT Store? For about a week it was the biggest news in AI. Now you barely hear about it.
 
-  Today's most common attempt looks very different. It is the Large Language Model.
+  Every single week there is a new AI tool or feature, and it feels like if you don't keep up, you will miss every good opportunity. But a lot of that pressure is manufactured. Companies fuel the excitement around their products to keep investors funding them. And plenty of these tools quietly disappear a few months later.
 
-  To understand LLMs, start with what a model is. A model is a mathematical mechanism that learns from data. Traditional software follows rules that a person wrote. A model is created differently. Making one involves showing it enormous piles of examples until it finds patterns in them. Once the model is finished, it uses those patterns to answer new questions.
+  It's completely fine to wait and learn the ones that prove useful over time. Think of it like investing in a good pair of jeans that lasts for years, instead of the fast-fashion trend piece that looks dated by next season.
 
-  The process of teaching a model those patterns is called machine learning.
-
-  If you would like to keep learning how AI works, calmly, follow along.
+  Learning AI does not have to feel like a race. If that suits you, follow along.
 caption: |-
-  For centuries, humans have been building things they hoped would think for them. In 1770 a Hungarian inventor toured Europe with the Mechanical Turk, a chess-playing cabinet that beat Napoleon and Benjamin Franklin. It later turned out there was a chess master smuggled into the box.
+  For about a week in early 2024, the GPT Store was the biggest news in AI. Custom GPTs everywhere on LinkedIn, courses selling out on how to build one, panels about the creator economy it would unlock. Now, barely a mention.
 
-  Today's version is more honest. Nothing hidden inside. But the women in our Little Parrot community keep telling us the same thing: nobody has ever explained what a language model is. Only what to type into one.
+  We felt some of that pull at the time too.
 
-  Here is the shape of it. A traditional program follows rules that a person wrote. A model is different. Making one involves showing it enormous piles of examples until it finds patterns in them. Only then, once the model is finished, can it use those patterns to answer new questions. That process of showing it examples is called machine learning.
+  Many of the women who join our Little Parrot courses tell us they feel pressure to try every new AI tool the moment it drops. Skip a week and they worry they have missed something important.
 
-  You do not need the maths to use AI well. But knowing that a model has two phases, one for finding patterns and one for using them, changes how the whole thing reads.
-title: "You do not need the maths to use AI well"
+  Think of it like clothes. Some AI tools are the good pair of jeans that lasts for years. Others are the fast-fashion piece that looks dated by next season. You can wait to see which one a new tool turns out to be.
+
+  So if there is an AI tool everyone is posting about right now and you have not touched it, you have not missed anything. You are letting the noise settle so you can spend your time on what turns out to last.
+title: "You have not missed anything"
 hastags:
-  instagram: ["#womenintech", "#learnai", "#llm", "#howaiworks", "#aiexplained"]
-  tiktok: ["#womenintech", "#womenempowerment", "#llm", "#howaiworks", "#aiexplained"]
+  instagram: ["#womenintech", "#womenbusinessowners", "#aihype", "#aioverwhelm", "#feelbetter"]
+  tiktok: ["#womenintech", "#womenempowerment", "#aihype", "#aioverwhelmed", "#feelbetter"]
 discord: |-
-  Ever used ChatGPT without knowing what happens under the hood? Short video explaining what a language model is, no maths required. Bonus: a very cramped chess master in a wooden cabinet.
+  Remember the GPT Store? For about a week everyone was building custom GPTs. Now, barely a mention. Short video on the AI tools that fade and the ones that stick, and why you do not have to try every trending one.
