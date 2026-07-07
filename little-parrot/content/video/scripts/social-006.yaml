@@ -1,14 +1,12 @@
 script: |-
-  Inside every language model is a very large pile of numbers. GPT-4 has around a trillion of them.
+  When you send a message to a chat assistant, it does not see your words the way you do. It sees tokens.
 
-  These numbers are called weights, or parameters. The model is essentially a giant calculator that runs your input through all of them and produces an output.
+  A token is a small chunk of text. Sometimes it is a whole word. Sometimes it is a piece of one. Common words like "hello" are usually a single token. Longer or less common words like "hippopotamus" get split into two or three.
 
-  The interesting bit is how someone convinced a trillion numbers to seem clever together. That process is called training.
+  Punctuation and spaces get their own tokens too.
 
-  During training, the model is shown examples one by one. It uses its numbers to make a guess. That guess gets compared to the expected answer, and the numbers get nudged so the next guess lands closer to right.
+  Why chop things up like this? Because the model works with numbers, not letters. Every possible token has its own number in the model's vocabulary. Splitting text into tokens is how it turns what you wrote into something it can do maths on.
 
-  Repeat until it works.
+  If you have ever seen chat assistants priced "per million tokens", this is what they mean. It is not the same as words. Roughly, a hundred tokens is about seventy-five words in English.
 
-  Eventually, the model starts to seem clever. Then training stops and the numbers freeze. From that day on, no matter how many times you correct it in the chat, the model will not remember. It does not learn anymore. It has left school and refuses to re-enrol.
-
-  More on how this changes what you can expect from AI in the next video.
+  More on how the model uses these tokens in the next video.

@@ -1,10 +1,12 @@
 script: |-
-  Training a language model needs data. A lot of data.
+  Language models borrow their basic idea from the brain. Emphasis on "basic".
 
-  The pile of text used to train a model is called a corpus. It can be almost anything written down: books, articles, websites, code, forum posts, Wikipedia, product reviews, film scripts. The more variety, the better the model gets at handling questions across different topics.
+  Your brain does its thinking with neurons. Each is a cell with a long tail that connects to others. It receives signals from the neurons before it, and it decides whether to fire a signal onwards.
 
-  Before any of it is fed to the model, the corpus has to be cleaned. Duplicates get removed. Very low-quality text gets thrown out. Anything that would confuse or mislead the model gets pulled aside.
+  An artificial neuron in an LLM works in a similar way, only with maths instead of biology. It takes the numbers coming in. It multiplies each by its own weight. It adds them all up. If the total is above a threshold, called a bias, it sends a signal onwards. If not, it stays silent.
 
-  So somewhere at Anthropic or OpenAI, someone's job is to hoover up a huge chunk of the internet, wash it, and pour it into the training pipeline. One of the least glamorous, most consequential jobs in AI.
+  That is one neuron. A language model has billions of them, stacked in layers, all passing signals along.
 
-  If you would like more of these explainers, follow along.
+  The weights and biases are the model's parameters. They are what training adjusts. The more neurons you have, the more subtle the patterns the model can pick up.
+
+  More like this coming up. Follow along.

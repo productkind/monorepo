@@ -1,22 +1,24 @@
 script: |-
-  Ask most people what AI is, and they picture a chat assistant like ChatGPT, Claude or Gemini. But that is a very recent association. The idea is far older than these tools.
+  Humans have been chasing intelligent machines for centuries, with varying degrees of honesty. In 1770, a Hungarian inventor toured Europe with the Mechanical Turk, a chess-playing cabinet that beat Napoleon and Benjamin Franklin. He forgot to mention the chess master folded inside, doing all the actual chess.
 
-  The first systems that we called AI go back to the 1950s. Back then, people tried all sorts of ways to build machines that seemed intelligent. Some programs reproduced patterns in text. Others followed strict sets of rules. Some even loosely copied how the human brain works.
+  Today's most common attempt looks very different. It is the Large Language Model.
 
-  The AI inside today's chat assistants is called an LLM. Short for Large Language Model. It blends two of those older ideas: the brain-inspired one and the text-pattern one.
+  To understand LLMs, start with what a model is. A model is a mathematical mechanism that learns from data. Traditional software follows rules that a person wrote. A model is created differently. Making one involves showing it enormous piles of examples until it finds patterns in them. Once the model is finished, it uses those patterns to answer new questions.
 
-  More on understanding LLMs in the next video.
+  The process of teaching a model those patterns is called machine learning.
+
+  If you would like to keep learning how AI works, calmly, follow along.
 caption: |-
-  Women in our Little Parrot community keep telling us they feel late to AI. We know the feeling. It is worth knowing where it comes from.
+  For centuries, humans have been building things they hoped would think for them. In 1770 a Hungarian inventor toured Europe with the Mechanical Turk, a chess-playing cabinet that beat Napoleon and Benjamin Franklin. It later turned out there was a chess master smuggled into the box.
 
-  AI as a field is over seventy years old. The chat-assistant version, ChatGPT and Claude and Gemini, is about three. Long before Silicon Valley, engineers were building machines that reproduced patterns in text, followed logical rules, or loosely mimicked how a brain works.
+  Today's version is more honest. Nothing hidden inside. But the women in our Little Parrot community keep telling us the same thing: nobody has ever explained what a language model is. Only what to type into one.
 
-  Today's chat assistants are the current chapter, not the whole field. LLMs, short for Large Language Models, blend two of those older ideas: the brain-inspired approach and the text-pattern approach.
+  Here is the shape of it. A traditional program follows rules that a person wrote. A model is different. Making one involves showing it enormous piles of examples until it finds patterns in them. Only then, once the model is finished, can it use those patterns to answer new questions. That process of showing it examples is called machine learning.
 
-  Next time you read that AI "arrived in 2022", notice which decade the writer starts counting from. That is usually where the pressure to catch up comes from.
-title: "You are not late to AI"
+  You do not need the maths to use AI well. But knowing that a model has two phases, one for finding patterns and one for using them, changes how the whole thing reads.
+title: "You do not need the maths to use AI well"
 hastags:
-  instagram: ["#womenintech", "#learnai", "#aihistory", "#aioverwhelm", "#aiexplained"]
-  tiktok: ["#womenintech", "#womenempowerment", "#learnai", "#aihistory", "#aiexplained"]
+  instagram: ["#womenintech", "#learnai", "#llm", "#howaiworks", "#aiexplained"]
+  tiktok: ["#womenintech", "#womenempowerment", "#llm", "#howaiworks", "#aiexplained"]
 discord: |-
-  If AI feels like something you are late to, this might help. Short video on why AI is 70 years old, not 3, and how today's chat assistants fit into that longer history.
+  Ever used ChatGPT without knowing what happens under the hood? Short video explaining what a language model is, no maths required. Bonus: a very cramped chess master in a wooden cabinet.

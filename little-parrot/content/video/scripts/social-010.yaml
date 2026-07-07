@@ -1,10 +1,10 @@
 script: |-
-  Most chat assistants come with a hidden set of instructions called a system prompt. It is written by the model's creators, and it sits above your messages, telling the model how to behave with you.
+  Training a language model needs data. A lot of data.
 
-  Anthropic, the company behind Claude, publishes theirs. You can read the current one on docs.anthropic.com.
+  The pile of text used to train a model is called a corpus. It can be almost anything written down: books, articles, websites, code, forum posts, Wikipedia, product reviews, film scripts. The more variety, the better the model gets at handling questions across different topics.
 
-  It is thousands of words long, and full of small, surprisingly human notes. Claude is told not to start replies with things like "great question" or "what a fascinating idea", because it comes across as sycophantic. It is told to be direct rather than hedging. It is told to admit when it does not know something, rather than making things up.
+  Before any of it is fed to the model, the corpus has to be cleaned. Duplicates get removed. Very low-quality text gets thrown out. Anything that would confuse or mislead the model gets pulled aside.
 
-  Reading it feels a bit like reading a job brief for the AI.
+  So somewhere at Anthropic or OpenAI, someone's job is to hoover up a huge chunk of the internet, wash it, and pour it into the training pipeline. One of the least glamorous, most consequential jobs in AI.
 
-  If you want to know why your chat assistant behaves the way it does, its system prompt is a good place to start.
+  If you would like more of these explainers, follow along.
