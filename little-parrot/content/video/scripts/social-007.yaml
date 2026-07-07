@@ -1,12 +1,12 @@
 script: |-
-  When you send a message to a chat assistant, it does not see your words the way you do. It sees tokens.
+  When you type a message into a chat assistant, your prompt is not sent to the model on its own.
 
-  A token is a small chunk of text. Sometimes it is a whole word. Sometimes it is a piece of one. Common words like "hello" are usually a single token. Longer or less common words like "hippopotamus" get split into two or three.
+  The app also sends a second, hidden message called the system prompt. This one is written by the model's creators. It sets the ground rules for how the AI should behave: how polite to be, what topics to swerve around, what tone to hit.
 
-  Punctuation and spaces get their own tokens too.
+  The model then takes both messages, yours and the hidden one, and chops them into tokens. A token can be as short as one letter or as long as a whole word.
 
-  Why chop things up like this? Because the model works with numbers, not letters. Every possible token has its own number in the model's vocabulary. Splitting text into tokens is how it turns what you wrote into something it can do maths on.
+  From there, the model predicts what token should come next. Then the one after that. Then the one after that.
 
-  If you have ever seen chat assistants priced "per million tokens", this is what they mean. It is not the same as words. Roughly, a hundred tokens is about seventy-five words in English.
+  By stringing these predictions together, one token at a time, it builds you a full reply. There is no bigger plan. It is guessing what should come next, then guessing again.
 
-  More on how the model uses these tokens in the next video.
+  Why the same prompt can give different answers, and why the AI forgets things. More on both in the next video.
