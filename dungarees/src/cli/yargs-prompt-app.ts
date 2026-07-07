@@ -4,15 +4,17 @@ import {
   buffer,
   concatAll,
   connectable,
+  endWith,
   firstValueFrom,
+  from,
   map,
   Observable,
-  of,
   ReplaySubject,
   share,
   skip,
   Subject,
   take,
+  takeUntil,
   zip,
 } from 'rxjs'
 import yargs from 'yargs'
@@ -32,12 +34,17 @@ type Terminal = {
 
 type CliIo<EVENTS extends DomainEvent> = {
   registerEvents: (message$: Observable<EVENTS>) => void
-  select: (options: CliSelectOptions) => Observable<string>
+  select?: (options: CliSelectOptions) => Observable<string>
+}
+
+type Presenter<EVENTS extends DomainEvent> = {
+  [TYPE in EVENTS['type']]: (payload: Extract<EVENTS, { type: TYPE }>['payload']) => CliMessage
 }
 
 type YargsPromptAppOptions<EVENTS extends DomainEvent> = {
   name: string
   route: (yargs: YargsApp, io: CliIo<EVENTS>) => YargsApp
+  presenter?: Presenter<EVENTS>
 }
 
 export type StdioMessage = StdioOutputMessage | StdioErrorMessage
@@ -73,16 +80,27 @@ export type ExitMessage = {
 
 export type CliMessage = StdioMessage | ExitMessage
 
-export const createYargsPromptApp = ({ route }: YargsPromptAppOptions): YargsPromptApp => ({
-  present: async (argv) => {
-    const streams$ = new Subject<Observable<CliMessage>>()
-    const io: CliIo = {
-      sendToOut: (message$) => {
-        streams$.next(message$)
-        return of(undefined as void)
+export const createYargsPromptApp = <EVENTS extends DomainEvent = DomainEvent>({
+  route,
+  presenter,
+}: YargsPromptAppOptions<EVENTS>): YargsPromptApp => ({
+  present: (argv) => {
+    const registeredOuts$ = new ReplaySubject<Observable<CliMessage>>(Infinity)
+    const io: CliIo<EVENTS> = {
+      registerEvents: (events$) => {
+        registeredOuts$.next(
+          // `event.type` widens to `string` on the generic EVENTS, so it can't index the
+          // literal-keyed presenter map; the cast restores the precise key (and payload) type.
+          events$.pipe(map((event) => presenter![event.type as EVENTS['type']](event.payload))),
+        )
       },
     }
-    return of({ type: 'exit', code: 0 })
+    const parsed$ = from(route(yargs(), io).parseAsync(argv))
+    return registeredOuts$.pipe(
+      concatAll(),
+      takeUntil(parsed$),
+      endWith({ type: 'exit', code: 0 } as CliMessage),
+    )
   },
 })
 
