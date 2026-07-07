@@ -233,7 +233,7 @@ Ready to launch?
 Let's go!
 `
 
-const videoSocialMedia1 = `
+const videoSocialMedia000 = `
 You are not falling behind on AI. The panic is being sold to you.
 Since ChatGPT entered our everyday lives, we’ve been bombarded with the message that we’ll be left behind if we don’t constantly keep up with every new AI tool, model, and workflow.
 
@@ -247,7 +247,7 @@ It is completely fine to take your time and get started with these technologies 
 If you'd like to learn more about AI calmly, follow along.
 `
 
-const videoSocialMedia2 = `
+const videoSocialMedia001 = `
 Learning the newest AI tool the week it launches usually means learning it twice.
 
 If you have not tried Claude Code yet, or any of the other AI tools trending on LinkedIn, that is completely fine.
@@ -261,9 +261,19 @@ When you do sit down with it, you will find it can improve how you work, but it'
 If you have not touched it yet, you are not behind. Waiting a little often means less mental load. Learn AI at your own pace, without the tech industry rushing you.
 `
 
-const TEXT_TO_GENERATE = videoSocialMedia2
+const videoSocialMedia002 = `
+Ask most people what AI is, and they picture a chat assistant like ChatGPT, Claude or Gemini. But that is a very recent association. The idea is far older than these tools.
+
+The first systems that we called AI go back to the 1950s. Back then, people tried all sorts of ways to build machines that seemed intelligent. Some programs reproduced patterns in text. Others followed strict sets of rules. Some even loosely copied how the human brain works.
+
+The AI inside today's chat assistants is called an LLM. Short for Large Language Model. It blends two of those older ideas: the brain-inspired one and the text-pattern one.
+
+More on understanding LLMs in the next video.
+`
+
+const TEXT_TO_GENERATE = videoSocialMedia002
 const MODEL_ID = 'eleven_v3' //'eleven_multilingual_v2' // // The v3 model as requested
-const videoName = 'social-001-chloe'
+const videoName = 'social-002-chloe'
 const OUTPUT_FILE_NAME = `generated_speech-${videoName}.wav` // e.g.,
 const ALIGNMENT_JSON_FILE_NAME = `alignment-${videoName}.json`
 const OUTPUT_FILE_PATH = OUTPUT_FILE_NAME // Saves in the same directory as the script
