@@ -89,8 +89,11 @@ export const createYargsPromptApp = <EVENTS extends DomainEvent = DomainEvent>({
     const io: CliIo<EVENTS> = {
       registerEvents: (events$) => {
         registeredOuts$.next(
-          // `event.type` widens to `string` on the generic EVENTS, so it can't index the
-          // literal-keyed presenter map; the cast restores the precise key (and payload) type.
+          // Inside the generic the concrete type argument for `EVENTS` isn't known, so TS
+          // types `event.type` from the constraint's apparent type instead — and the
+          // constraint `DomainEvent`'s `type` field is declared as `string`, discarding the
+          // caller's literal. The cast recovers it. Droppable if TS ever resolves property
+          // access against the instantiated type argument rather than the constraint.
           events$.pipe(map((event) => presenter![event.type as EVENTS['type']](event.payload))),
         )
       },
