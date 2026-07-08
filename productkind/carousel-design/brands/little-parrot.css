@@ -1,0 +1,27 @@
+/* Little Parrot brand tokens for the carousel design system.
+   Link this file from a carousel to render it in the Little Parrot brand.
+
+   Non-CSS brand facts (set these in the HTML):
+   - Header handle text:  LittleParrot.app
+   - Mascots:             ../assets/little-parrot/ (parrot-with-computer.png,
+                          little-parrot-wave.png, parrot.svg)
+   - Accent stops for partial gradients (window dots, dial cards, charts):
+     #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --grad: linear-gradient(120deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70);
+  --grad-wash: linear-gradient(120deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020), #ffffff;
+
+  --font-display: 'Space Mono', monospace;   /* headlines, header row, kickers, labels, badges */
+  --font-copy: 'Inter', sans-serif;          /* body copy on slides */
+  --font-plain: 'Inter', sans-serif;         /* supporting/secondary text */
+  --font-mono: 'Space Mono', monospace;      /* prompt windows, chart labels */
+
+  --weight-headline: 700;                    /* Space Mono only has 400 and 700 */
+  --weight-copy: 400;
+
+  --ink: #080809;
+  --ink-secondary: #4a4a50;
+}

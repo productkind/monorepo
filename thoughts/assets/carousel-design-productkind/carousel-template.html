@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>productkind article carousel — template</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&family=Space+Mono:wght@400;700&display=swap">
+<style>
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  html, body { margin: 0; padding: 0; }
+  body.single { overflow: hidden; }
+  body.single #strip { padding: 0 !important; gap: 0 !important; background: none !important; min-height: 0 !important; }
+  body.single section { display: none; }
+  body.single section.current { display: block; }
+  body:not(.crop) .cropguide { display: none; }
+  @media print {
+    #strip { padding: 0 !important; gap: 0 !important; background: none !important; min-height: 0 !important; display: block !important; }
+    section { page-break-after: always; break-after: page; }
+    @page { size: 1080px 1350px; margin: 0; }
+  }
+
+  /* productkind carousel design system (imported from Claude Design:
+     "Carousel - productkind.dc.html") */
+  section.slide { flex: none; width: 1080px; height: 1350px; position: relative; overflow: hidden;
+    background: linear-gradient(120deg, #ffb28820, #ffafa220, #ffacb820, #ffa8d120, #ff9ff720, #deb2ff20, #c5bdff20, #b1c5ff20, #9accff20, #77d4ff20, #00dffa20, #00e4db20, #00e8b620), #ffffff;
+    box-sizing: border-box; }
+  .card { position: absolute; top: 100px; left: 100px; width: 880px; height: 1150px; box-sizing: border-box;
+    background: #ffffff; border: 12px solid rgb(8,8,9); box-shadow: 12px 12px 0 rgba(8,8,9,0.25); display: flex; flex-direction: column; }
+  .gradbar { flex: none; height: 24px;
+    background: linear-gradient(120deg, #ffb288, #ffafa2, #ffacb8, #ffa8d1, #ff9ff7, #deb2ff, #c5bdff, #b1c5ff, #9accff, #77d4ff, #00dffa, #00e4db, #00e8b6); }
+  .inner { flex: 1; display: flex; flex-direction: column; justify-content: space-between; padding: 56px 72px 64px; box-sizing: border-box; }
+  .header { display: flex; justify-content: space-between; align-items: center;
+    font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.06em; color: #080809; }
+  .header .handle { font-size: 32px; } .header .page { font-size: 24px; }
+  .copy { margin: 0; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 34px; line-height: 1.45; color: #080809; text-wrap: pretty; }
+  .hl { background: linear-gradient(120deg, #ffb288, #ffafa2, #ffacb8, #ffa8d1, #ff9ff7, #deb2ff, #c5bdff, #b1c5ff, #9accff, #77d4ff, #00dffa, #00e4db, #00e8b6);
+    padding: 0 0.12em; box-decoration-break: clone; -webkit-box-decoration-break: clone; font-weight: 700; }
+  /* Framed content box (photos, charts, quote cards) */
+  .frame { border: 4px solid rgb(8,8,9); box-shadow: 12px 12px 0 rgba(8,8,9,0.25); background: #ffffff; position: relative; overflow: hidden; box-sizing: border-box; }
+  /* Muted variant of the quote card */
+  .frame.muted { background: #e8e8ea; }
+  .frame.muted p, .muted-copy { color: #4a4a50; }
+  /* Inverse (black) statement card */
+  .inverse { background: #080809; padding: 34px 40px; }
+  .inverse p { margin: 0; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 38px; line-height: 1.3; color: #ffffff; text-wrap: pretty; }
+  .inverse .hl-text { background: linear-gradient(120deg, #ffb288, #ffafa2, #ffacb8, #ffa8d1, #ff9ff7, #deb2ff, #c5bdff, #b1c5ff, #9accff, #77d4ff, #00dffa, #00e4db, #00e8b6);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  /* Placeholder for a photo drop (replace the div with an <img>) */
+  .imgslot { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+    background: repeating-linear-gradient(45deg, #f4f4f6, #f4f4f6 24px, #ececef 24px, #ececef 48px); }
+  .imgslot span { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 24px; color: #4a4a50;
+    text-align: center; max-width: 70%; }
+  .imgslot img, img.photo { width: 100%; height: 100%; object-fit: cover; display: block; }
+  /* 1080x1080 centre-square crop guide (?crop=1 to show) */
+  .cropguide { position: absolute; left: 0; top: 135px; width: 1080px; height: 1080px;
+    border-top: 2px dashed rgba(8,8,9,0.5); border-bottom: 2px dashed rgba(8,8,9,0.5); pointer-events: none; box-sizing: border-box; }
+</style>
+</head>
+<body>
+<div id="strip" style="min-height:100vh; background:#c9c9cf; display:flex; gap:64px; padding:64px; overflow-x:auto; align-items:flex-start; box-sizing:border-box; font-family:'Inter',sans-serif;">
+
+  <!-- SLIDE 1 — COVER -->
+  <section class="slide" data-screen-label="01 Cover">
+    <div class="card" style="overflow:hidden;">
+      <div class="gradbar"></div>
+      <div class="inner" style="position:relative;">
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">01 / 08</span></div>
+        <div style="flex:1; display:flex; flex-direction:column; justify-content:center; max-width:500px;">
+          <h1 style="margin:0; font-family:'Montserrat',sans-serif; font-weight:800; font-size:52px; line-height:1.3; color:#080809; text-wrap:pretty; width:578px;">I left my full-time job at the end of 2024, after 10 years in tech. This is what <span class="hl">running my own business</span> has been like since.</h1>
+          <div style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:24px; letter-spacing:0.08em; color:#4a4a50; max-width:480px;">FROM EMPLOYEE TO RUNNING A BUSINESS.</div>
+          <div style="margin-top:28px; font-family:'Montserrat',sans-serif; font-weight:700; font-size:24px; letter-spacing:0.08em; color:#080809;">SWIPE →</div>
+        </div>
+        <img src="assets/carousel-kim.png" alt="productkind mascot" style="position:absolute; width:158px; height:auto; left:698px; top:544px;">
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+  <!-- SLIDE 2 — PAIRED QUOTE CARDS (loved vs tiring) -->
+  <section class="slide" data-screen-label="02 Why I left">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner">
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">02 / 08</span></div>
+        <div style="display:flex; flex-direction:column; gap:32px;">
+          <div class="frame">
+            <div style="height:12px; background:linear-gradient(120deg, #ffb288, #ffafa2, #ffacb8, #ffa8d1, #ff9ff7, #deb2ff, #c5bdff, #b1c5ff, #9accff, #77d4ff, #00dffa, #00e4db, #00e8b6);"></div>
+            <p style="margin:0; padding:36px 40px; font-size:34px; line-height:1.45; color:#080809; text-wrap:pretty;"><span style="font-family:'Montserrat',sans-serif; font-weight:700;">I love product management</span>. It's such an exciting mix of business, technology, design and psychology.</p>
+          </div>
+          <div class="frame muted" style="padding:36px 40px;">
+            <p style="margin:0; font-size:34px; line-height:1.45; text-wrap:pretty;">But I was tired of the corporate politics, and of building products executives wanted while the people using them had different ideas.</p>
+          </div>
+        </div>
+        <p class="copy" style="font-size:36px;">Call me idealistic, but I wanted a <span class="hl">positive impact</span> beyond shareholder revenue.</p>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+  <!-- SLIDE 3 — FULL-WIDTH PHOTO + COPY -->
+  <section class="slide" data-screen-label="03 Freedom">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner">
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">03 / 08</span></div>
+        <div class="frame" style="width:100%; height:540px;">
+          <img class="photo" src="assets/singapore-botanical-art-gallery.png" alt="Working from a veranda at the Singapore botanic gardens">
+        </div>
+        <p class="copy" style="font-size:36px;">I started with an executive coaching programme. Did I enjoy coaching people? Yes, the nice ones. 😅 I also knew I wanted the <span class="hl">freedom</span> to work from anywhere.</p>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+  <!-- SLIDE 4 — LAPTOP MOCKUP + COPY -->
+  <section class="slide" data-screen-label="04 Vibe coding">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner">
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">04 / 08</span></div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:0;">
+          <div class="frame" style="width:560px; height:360px;">
+            <div style="height:34px; background:#080809; display:flex; align-items:center; gap:10px; padding:0 16px;">
+              <span style="width:14px; height:14px; background:#ffb288; border-radius:50%;"></span>
+              <span style="width:14px; height:14px; background:#ff9ff7; border-radius:50%;"></span>
+              <span style="width:14px; height:14px; background:#00e8b6; border-radius:50%;"></span>
+            </div>
+            <div style="position:absolute; top:34px; left:0; right:0; bottom:0;">
+              <img class="photo" src="assets/little-parrot-landing.png" alt="Little Parrot landing page">
+            </div>
+          </div>
+          <div style="width:680px; height:22px; background:#080809;"></div>
+          <div style="width:740px; height:16px; background:#080809; clip-path:polygon(2% 0, 98% 0, 100% 100%, 0 100%);"></div>
+        </div>
+        <p class="copy">Then I discovered <span class="hl">vibe coding</span>: building software with AI tools, without having to know how to code. I started building products, even though I don't know TypeScript. It was such an empowering feeling that I gave talks and ran workshops about it, and started building Little Parrot, a microlearning app.</p>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+  <!-- SLIDE 5 — COPY + PHOTO + BLACK STATEMENT CARD -->
+  <section class="slide" data-screen-label="05 SheBuilds">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner" style="justify-content:flex-start; gap:44px;">
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">05 / 08</span></div>
+        <p class="copy" style="font-size:32px;">In the autumn I joined <span class="hl">SheBuilds on Lovable</span>, a 48-hour hackathon for women. There I saw a sea of professional women with ideas they wanted to build.</p>
+        <div class="frame" style="height:360px; aspect-ratio:1200/819; align-self:center; flex:none;">
+          <img class="photo" src="assets/Lovable-SheBuilds-Intro-pic.png" alt="The SheBuilds on Lovable hackathon — a room full of women at laptops" style="object-fit:contain;">
+        </div>
+        <div class="inverse" style="margin-top:auto;">
+          <p>But most vibe coding content is made by <span class="hl-text">tech bros, for tech bros.</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+  <!-- SLIDE 6 — CHART + COPY -->
+  <section class="slide" data-screen-label="06 It happened before">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner">
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">06 / 08</span></div>
+        <div class="frame" style="padding:36px 40px; overflow:visible;">
+          <svg viewBox="0 0 660 360" width="100%" style="display:block;">
+            <defs>
+              <linearGradient id="chartLine" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#ffb288"></stop>
+                <stop offset="20%" stop-color="#ffacb8"></stop>
+                <stop offset="45%" stop-color="#ff9ff7"></stop>
+                <stop offset="70%" stop-color="#9accff"></stop>
+                <stop offset="100%" stop-color="#00e8b6"></stop>
+              </linearGradient>
+            </defs>
+            <line x1="40" y1="320" x2="640" y2="320" stroke="#080809" stroke-width="3"></line>
+            <line x1="40" y1="40" x2="40" y2="320" stroke="#080809" stroke-width="3"></line>
+            <polyline points="40,270 130,240 220,180 300,90 340,66 430,120 520,180 620,215" fill="none" stroke="url(#chartLine)" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"></polyline>
+            <circle cx="340" cy="66" r="12" fill="#080809"></circle>
+            <text x="340" y="44" text-anchor="middle" font-family="'Space Mono',monospace" font-weight="700" font-size="30" fill="#080809">37%</text>
+            <text x="340" y="352" text-anchor="middle" font-family="'Space Mono',monospace" font-weight="700" font-size="24" fill="#4a4a50">1984</text>
+            <text x="40" y="352" text-anchor="middle" font-family="'Space Mono',monospace" font-weight="700" font-size="24" fill="#4a4a50">1963</text>
+          </svg>
+        </div>
+        <p class="copy" style="font-size:32px;">This has happened before. The term 'software engineer' was coined by a woman, <span class="hl">Margaret Hamilton</span>, in 1963. By 1984, women earned 37% of computer science degrees in the US. Then personal computers were marketed almost exclusively to boys and men, and the numbers began to drop.</p>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+  <!-- SLIDE 7 — BIG STAT ON GRADIENT -->
+  <section class="slide" data-screen-label="07 Big stat">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner">
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">07 / 08</span></div>
+        <div style="align-self:center; border:4px solid rgb(8,8,9); box-shadow:16px 16px 0 rgba(8,8,9,0.25); padding:48px 72px; background:linear-gradient(120deg, #ffb288, #ffafa2, #ffacb8, #ffa8d1, #ff9ff7, #deb2ff, #c5bdff, #b1c5ff, #9accff, #77d4ff, #00dffa, #00e4db, #00e8b6);">
+          <span style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:220px; line-height:1; color:#080809;">14%</span>
+        </div>
+        <p class="copy">Now a new technology is here: generative AI. Yet only 14% of Lovable's users are women, and you can only benefit from AI by using it. So we've refocused our two-person company, productkind, on one mission: <span class="hl">closing the gender gap in AI adoption</span>.</p>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+  <!-- SLIDE 8 — CTA -->
+  <section class="slide" data-screen-label="08 CTA">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner">
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">08 / 08</span></div>
+        <p class="copy" style="font-size:36px;">Nobody has ten years of experience in vibe coding yet. <span class="hl">We're all starting from the same line.</span> I'll be sharing what I try, what works, and what definitely doesn't in my newsletter, Thoughts by productkind.</p>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:32px;">
+          <img src="assets/logo-thoughts-by-productkind-icon.png" alt="Thoughts by productkind logo" style="width:180px; height:180px; border:4px solid rgb(8,8,9); box-shadow:12px 12px 0 rgba(8,8,9,0.25);">
+          <span style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:32px; letter-spacing:0.06em; border:4px solid rgb(8,8,9); box-shadow:12px 12px 0 rgba(8,8,9,0.25); padding:20px 36px; color:#080809; background:#ffffff;">PRODUCTKIND.SUBSTACK.COM</span>
+          <p style="margin:0; font-family:'Montserrat',sans-serif; font-weight:700; font-size:30px; color:#080809;">Full article on our Substack 💛</p>
+        </div>
+        <p style="margin:0; text-align:center; font-size:30px; line-height:1.45; color:#4a4a50;">Know someone rethinking their path? Send them this</p>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+</div>
+<script>
+  const params = new URLSearchParams(location.search);
+  const n = parseInt(params.get('slide'), 10);
+  const slides = document.querySelectorAll('#strip > section');
+  if (n >= 1 && n <= slides.length) {
+    document.body.classList.add('single');
+    slides[n - 1].classList.add('current');
+  }
+  if (params.get('crop') === '1') document.body.classList.add('crop');
+</script>
+</body>
+</html>
