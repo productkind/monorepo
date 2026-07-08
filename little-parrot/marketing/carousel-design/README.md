@@ -1,5 +1,9 @@
 # Carousel design
 
+> **Superseded:** new carousels use the shared, brand-parameterised system
+> in `productkind/carousel-design/` (the `/carousel` skill runs the whole
+> workflow). This folder keeps the existing posts as-is.
+
 Implemented Instagram carousel designs, one folder per post, exported as
 PNG slides and a PDF. The content specs live with their campaigns in
 `../campaigns/2026-july-instagram-*/post-*.md`; this folder holds the
@@ -18,19 +22,34 @@ carousel-design/
 
 ## Workflow for a new carousel
 
-1. Design it in the Claude Design project ("Instagram carousel template"),
-   starting from an existing carousel file there.
-2. Copy an existing folder here (e.g. `build-first-app-post-1/`) as the
-   base, replace the slide sections in `carousel.html` with the new
-   design's, and drop any image uploads into `uploads/`.
-   Caution: image files from the Claude Design project need to be
-   downloaded via the browser; fetching binaries through the API corrupts
-   them.
-3. Run `./export.sh` inside the folder. PNGs and the PDF appear in
-   `export/`.
-4. Check every slide against the design-pass checklist in
-   `../content-strategy/instagram-carousel-research.md` (cover ≤ ~12 words,
-   prompt snippets verbatim in the prompt window, banned-list pass).
+The campaign spec md is the single source of truth for every word on every
+slide. The steps (Claude does 1, 3, 4; Kinga does 2 and 5):
+
+1. **Expand the spec to full fidelity.** Before designing, upgrade the
+   post's slide table in `../campaigns/.../post-N-*.md` so it carries ALL
+   on-slide text verbatim: display copy, prompt/mockup content, labels,
+   footnotes, card text. Run the banned-list pass on it. (See
+   `write-better-post-1`'s spec for the format.)
+2. **Approve the messaging in the md.** Edits happen in the md, never
+   directly in the design.
+3. **Implement.** Copy an existing folder here as the base and build
+   `carousel.html` from the spec, using only text that exists in the md.
+   Parody content (deliberately bad example messages) gets
+   `data-parody="true"` and a "(parody; banned-list exempt)" note in the
+   spec. Images from the Claude Design project must be downloaded via the
+   browser; fetching binaries through the API corrupts them.
+4. **Check, then export.** From this folder:
+   `./check.py <folder> <spec-md>` verifies that every visible text unit in
+   the HTML exists in the md (coverage) and scans for banned words
+   (parody-exempt). It must pass before running `./export.sh`, which
+   produces the PNGs and PDF in `export/`.
+5. **Visual QA only.** Because copy is locked to the approved md, reviewing
+   the exported slides is about layout, spacing, and visuals. Copy tweaks
+   go back to step 2 (edit the md, ask for a regenerate).
+
+Design-quality bar for step 3: the checklist in
+`../content-strategy/instagram-carousel-research.md` (cover ≤ ~12 words,
+one idea per slide, prompt snippets verbatim in the prompt window).
 
 ## Conventions
 
