@@ -1,0 +1,28 @@
+/* productkind (Thoughts by productkind) brand tokens for the carousel
+   design system. Link this file from a carousel to render it in the
+   productkind brand.
+
+   Non-CSS brand facts (set these in the HTML):
+   - Header handle text:  productkind.substack.com
+   - Mascot and logo:     ../assets/productkind/ (carousel-kim.png,
+                          logo-thoughts-by-productkind-icon.png)
+   - Accent stops for partial gradients (window dots, dial cards, charts):
+     #ffb288, #ffacb8, #ff9ff7, #9accff, #00e8b6
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --grad: linear-gradient(120deg, #ffb288, #ffafa2, #ffacb8, #ffa8d1, #ff9ff7, #deb2ff, #c5bdff, #b1c5ff, #9accff, #77d4ff, #00dffa, #00e4db, #00e8b6);
+  --grad-wash: linear-gradient(120deg, #ffb28820, #ffafa220, #ffacb820, #ffa8d120, #ff9ff720, #deb2ff20, #c5bdff20, #b1c5ff20, #9accff20, #77d4ff20, #00dffa20, #00e4db20, #00e8b620), #ffffff;
+
+  --font-display: 'Montserrat', sans-serif;  /* headlines, header row, kickers, labels, badges */
+  --font-copy: 'Montserrat', sans-serif;     /* body copy on slides */
+  --font-plain: 'Inter', sans-serif;         /* supporting/secondary text */
+  --font-mono: 'Space Mono', monospace;      /* prompt windows, chart labels */
+
+  --weight-headline: 800;
+  --weight-copy: 600;
+
+  --ink: #080809;
+  --ink-secondary: #4a4a50;
+}
