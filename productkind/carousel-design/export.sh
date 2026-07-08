@@ -4,7 +4,7 @@
 # Usage: ./export.sh <post-folder-or-carousel.html> [output-name] [output-dir]
 #   ./export.sh my-post-1                       (uses my-post-1/carousel.html)
 #   ./export.sh my-post-1/carousel.html my-post
-#   ./export.sh base-template.html base-template export/productkind
+#   ./export.sh templates/little-parrot.html lp-preview /tmp/lp-preview
 # Defaults: output-name = the folder name the HTML sits in;
 #           output-dir  = export/ next to the HTML.
 set -euo pipefail
