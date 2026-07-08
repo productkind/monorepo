@@ -49,7 +49,7 @@ Where the spec lives:
 - Little Parrot campaign post: the campaign md in
   `little-parrot/marketing/campaigns/<campaign>/post-N-*.md` (existing
   format examples there; follow them).
-- productkind article: `productkind/carousel-design/<post-slug>/spec.md`.
+- productkind article: `productkind/carousel-design/posts/<post-slug>/spec.md`.
 
 Voice: use the relevant tone skills (personal-tone-of-voice /
 productkind-tone; little-parrot-ai-skill-gap for Little Parrot context).
@@ -69,18 +69,18 @@ this stays true after approval too.
 
 ## Step 3 — Implement (Claude)
 
-1. Create `productkind/carousel-design/<post-slug>/` with `uploads/` for
-   any post-specific images.
-2. Build `carousel.html` from `base-template.html`: copy it, point the
-   stylesheet link at `../brands/<brand>.css`, set the handle text (the
-   brand css header comment gives it), fix asset paths (`../assets/...`),
-   keep/adapt only the slide layouts you need, and fill them using ONLY
-   text from the spec.
+1. Create `productkind/carousel-design/posts/<post-slug>/` with `uploads/`
+   for any post-specific images.
+2. Build `carousel.html` by copying `templates/<brand>.html` (the brand
+   css link and handle come with it), fix the relative paths for the
+   deeper folder (`../brands/`, `../assets/` → `../../brands/`,
+   `../../assets/`), keep/adapt only the slide layouts you need, and fill
+   them using ONLY text from the spec.
 3. Recurring devices: prompt window for typed text (markdown symbols are
    typed text, never decoration), Slack mockup for message results, frames
    for photos/charts/quotes, `.hl` for one key phrase per slide.
 4. Mark parody elements `data-parody="true"`.
-5. Mascots: brand assets in `../assets/<brand>/`; end the carousel with
+5. Mascots: brand assets in `../../assets/<brand>/`; end the carousel with
    the brand CTA slide (mascot/logo, URL badge, offer line, share-ask).
 
 ## Step 4 — Check and export (Claude)
@@ -88,8 +88,8 @@ this stays true after approval too.
 From `productkind/carousel-design/`:
 
 ```
-./check.py <post-slug> <path-to-spec-md>   # must pass (coverage + banned words)
-./export.sh <post-slug>                    # PNGs + PDF into <post-slug>/export/
+./check.py posts/<post-slug> <path-to-spec-md>  # must pass (coverage + banned words)
+./export.sh posts/<post-slug>                   # PNGs + PDF into posts/<post-slug>/export/
 ```
 
 Never export before `check.py` passes. If coverage fails because copy

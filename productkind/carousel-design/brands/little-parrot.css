@@ -3,8 +3,8 @@
 
    Non-CSS brand facts (set these in the HTML):
    - Header handle text:  LittleParrot.app
-   - Mascots:             ../assets/little-parrot/ (parrot-with-computer.png,
-                          little-parrot-wave.png, parrot.svg)
+   - Mascots:             assets/little-parrot/ (parrot-with-computer.png,
+                          little-parrot-wave.png)
    - Accent stops for partial gradients (window dots, dial cards, charts):
      #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70
 */

@@ -11,43 +11,47 @@ TikTok), used by both brands. The design language is identical; the brand
 The end-to-end workflow (spec → approval → design → check → export) is the
 `/carousel` skill in `.claude/skills/carousel/`.
 
-Predecessors (kept as-is, superseded by this folder):
-`little-parrot/marketing/carousel-design/` and
-`thoughts/assets/carousel-design-productkind/`.
+The two predecessor folders (`little-parrot/marketing/carousel-design/`,
+`thoughts/assets/carousel-design-productkind/`) were migrated into this one
+in July 2026: their post folders moved here unchanged, and
+`claude-design-source/` keeps the original Claude Design file the design
+system was imported from.
 
 ## Folder structure
 
 ```
 carousel-design/
-  base-template.html    the design system + 9 example slides (open in a browser)
-  base-template-little-parrot.html
-                        the same slides Little Parrot-branded (keep in sync)
-  export/               example exports of both templates (productkind/, little-parrot/)
+  templates/
+    productkind.html    the design system + 9 example slides, productkind-branded
+    little-parrot.html  the same slides Little Parrot-branded (keep the two in sync)
   brands/
     little-parrot.css   Little Parrot tokens (gradient, fonts, handle note)
     productkind.css     productkind tokens
   assets/
-    little-parrot/      mascots (parrot-with-computer, little-parrot-wave, parrot.svg)
+    little-parrot/      mascots (parrot-with-computer, little-parrot-wave)
     productkind/        Kim mascot, Thoughts logo
+  claude-design-source/ the original .dc.html from Claude Design, for reference
   check.py              spec coverage + banned-word gate (run before export)
   export.sh             PNG slides + PDF export (needs Google Chrome)
-  <post-slug>/          one folder per carousel post
-    spec.md             the approved spec (or a pointer to the campaign md)
-    carousel.html       the implemented design
-    uploads/            post-specific images (screenshots, photos)
-    export/             output: slide-01.png ... (1080x1350) + the PDF
+  posts/
+    <post-slug>/        one folder per carousel post
+      spec.md           the approved spec (or a pointer to the campaign md)
+      carousel.html     the implemented design
+      uploads/          post-specific images (screenshots, photos)
+      export/           output: slide-01.png ... (1080x1350) + the PDF
 ```
 
 ## How branding works
 
-`base-template.html` holds the whole design system; every brand-specific
-value is a CSS variable (`--grad`, `--grad-wash`, `--font-display`,
-`--font-copy`, `--font-plain`, `--font-mono`, `--weight-headline`,
-`--weight-copy`, `--ink`, `--ink-secondary`). A carousel picks its brand
-with one stylesheet link:
+The templates in `templates/` hold the whole design system; every
+brand-specific value is a CSS variable (`--grad`, `--grad-wash`,
+`--font-display`, `--font-copy`, `--font-plain`, `--font-mono`,
+`--weight-headline`, `--weight-copy`, `--ink`, `--ink-secondary`). The two
+templates are the same slides; a carousel picks its brand with one
+stylesheet link:
 
 ```html
-<link rel="stylesheet" href="../brands/little-parrot.css">
+<link rel="stylesheet" href="../../brands/little-parrot.css">
 ```
 
 Two things the CSS can't switch, set in the HTML (each brand file documents
@@ -57,8 +61,10 @@ its values in a header comment):
 - **mascot/logo** image paths, and accent colour stops for partial
   gradients (window dots, dial cards, chart lines)
 
-From a post folder, paths are `../brands/...` and `../assets/...`;
-post-specific images go in the post's own `uploads/`.
+From a post folder, paths are `../../brands/...` and `../../assets/...`
+(one level deeper than the templates' `../brands/...`); post-specific
+images go in the post's own `uploads/`. To see what the design system
+looks like in a brand, open `templates/<brand>.html` in a browser.
 
 ## Workflow for a new carousel (spec-first, both brands)
 
@@ -71,23 +77,24 @@ through all of it.
    card text; plus alt text and the caption. Run the banned-list pass.
    Little Parrot campaign posts live in
    `little-parrot/marketing/campaigns/<campaign>/post-N-*.md`; productkind
-   article carousels use `<post-slug>/spec.md` here. (Format example:
+   article carousels use `posts/<post-slug>/spec.md` here. (Format example:
    the write-better campaign's post specs.)
 2. **Approve the messaging in the md.** Edits happen in the md, never
    directly in the design.
-3. **Implement.** Create `<post-slug>/carousel.html` from
-   `base-template.html`: link the right brand css, set the handle, keep
-   only the slides you need, and use only text that exists in the md.
+3. **Implement.** Create `posts/<post-slug>/carousel.html` by copying
+   `templates/<brand>.html` (brand and handle come with it; fix the
+   relative `../` paths to `../../`), keep only the slides you need, and
+   use only text that exists in the md.
    Parody content (deliberately bad example messages) gets
    `data-parody="true"` and a "(parody; banned-list exempt)" note in the
    spec. Images from Claude Design projects must be downloaded via the
    browser; fetching binaries through the API corrupts them.
 4. **Check, then export.** From this folder:
-   `./check.py <post-folder> <spec-md>` verifies that every visible text
-   unit in the HTML exists in the md (coverage) and scans for banned words
-   (parody-exempt). It must pass before running
-   `./export.sh <post-folder>`, which produces the PNGs and PDF in
-   `<post-folder>/export/`.
+   `./check.py posts/<post-slug> <spec-md>` verifies that every visible
+   text unit in the HTML exists in the md (coverage) and scans for banned
+   words (parody-exempt). It must pass before running
+   `./export.sh posts/<post-slug>`, which produces the PNGs and PDF in
+   `posts/<post-slug>/export/`.
 5. **Visual QA only.** Because copy is locked to the approved md, reviewing
    the exported slides is about layout, spacing, and visuals. Copy tweaks
    go back to step 2 (edit the md, ask for a regenerate).

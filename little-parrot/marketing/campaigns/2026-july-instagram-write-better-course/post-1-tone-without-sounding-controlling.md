@@ -25,7 +25,7 @@ output short and warm, the tone block in monospace.
 
 **Full-fidelity rule:** every word that appears on a slide is in this table,
 verbatim. The implemented carousel may not add copy; `check.py` in
-`marketing/carousel-design/` enforces it.
+`productkind/carousel-design/` enforces it.
 
 | Slide | Visual | Display copy (verbatim) | Prompt window / mockup content (verbatim) |
 | --- | --- | --- | --- |

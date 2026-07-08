@@ -24,7 +24,7 @@ text inside the central safe area.
 
 **Full-fidelity rule:** every word that appears on a slide is in this table,
 verbatim. The implemented carousel may not add copy; `check.py` in
-`little-parrot/marketing/carousel-design/` enforces it.
+`productkind/carousel-design/` enforces it.
 
 | Slide | Visual | Text on slide (verbatim) |
 | --- | --- | --- |
