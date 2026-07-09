@@ -1,12 +1,14 @@
 script: |-
-  When you type a message into a chat assistant, your prompt is not sent to the model on its own.
+  Chat assistants build their replies one token at a time.
 
-  The app also sends a second, hidden message called the system prompt. This one is written by the model's creators. It sets the ground rules for how the AI should behave: how polite to be, what topics to swerve around, what tone to hit.
+  Once your message has been chopped into tokens, the model looks at everything so far and asks a single question: what token should come next?
 
-  The model then takes both messages, yours and the hidden one, and chops them into tokens. A token can be as short as one letter or as long as a whole word.
+  It ranks all the possible next tokens by probability, picks from the top few, and writes it. Then it looks at what it has just written, and asks the same question again. And again.
 
-  From there, the model predicts what token should come next. Then the one after that. Then the one after that.
+  By stringing these predictions together, one token at a time, it builds you a full reply.
 
-  By stringing these predictions together, one token at a time, it builds you a full reply. There is no bigger plan. It is guessing what should come next, then guessing again.
+  There is no bigger plan. The model does not decide the sentence before starting it, or the paragraph before starting it. It is guessing what should come next, then guessing again.
 
-  Why the same prompt can give different answers, and why the AI forgets things. More on both in the next video.
+  The finished answer often looks planned. That is because the model was trained on planned writing. What comes out imitates the surface.
+
+  More on what else the model sees when it does this in the next video.
