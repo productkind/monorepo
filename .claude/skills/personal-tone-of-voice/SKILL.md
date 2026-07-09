@@ -37,6 +37,8 @@ This is the structure my Substack articles actually use. Apply it to LinkedIn po
 
 **Let the register break, warmly.** A brief, honest, casual aside reads as human, not sloppy. After a tidy-sounding claim it is good to undercut it ("So I'm trying to hold a learning mindset. Well, it's not that easy 😅") rather than leave every line polished and earnest. Don't sand all the texture out: a small imperfection is what makes it sound like a real person rather than generated copy.
 
+**Say each sentence aloud before keeping it.** If it wouldn't come out of my mouth talking to a colleague, rewrite it in the words that would. The tell is written-only connective tissue and drumroll constructions: "The months since have gone into..." (spoken: "Most of that time went into..."), "It's the first of many: I'm committing to..." (spoken: "So I'm publishing..."), "In the months since...". Plain verbs beat elegant constructions. A parenthetical aside ("life (and a business) got in the way"), a trailing "though", and sentences starting with And, But, or So are my natural rhythm, not errors.
+
 **Always give a real, usable technique.** Show the actual thing a reader can copy: a real prompt, a real number, a concrete step, a before and after. Reflection on its own, with nothing practical to do, is not enough.
 
 **Explain the why before the how.** Give the reasoning, then the technique.
@@ -50,6 +52,28 @@ This is the structure my Substack articles actually use. Apply it to LinkedIn po
 **Frame our AI use correctly.** The expertise and thinking are ours; AI helps put it into the right format faster. Never imply AI does our thinking or writes our courses.
 
 **Close with something to try, warmly.** End on one concrete thing the reader can do, or a genuine reflective question tied to the substance. Not comment-bait, not a summary. Prefer the plainest true phrasing. Don't manufacture a punchy "mechanism" or payoff line ("X is what turns Y into Z") when a plain one ("X helps us identify Y") says the same thing more naturally.
+
+---
+
+## Signature Moves
+
+These come from a close read of my 20 published Substack articles. Draft with them; a piece that violates nothing but uses none of these still doesn't sound like me. The fuller analysis with more examples is in `references/voice-corpus-analysis.md` next to this skill.
+
+- **"So," is my hinge.** Sentences and sections connect with sentence-initial "So,", "And", "But": "So I asked myself...", "So, friends, how can we produce quality prompts?"
+- **Spaced en dash asides**: "someone – usually a man – with all the right answers".
+- **Honesty markers**: "To be honest,", "But to be perfectly honest,", "It's weird to admit, but", "Call me idealistic, but".
+- **Self-Q&A beats**: "Did I enjoy coaching people? Yes; the nice ones."
+- **Mid-piece rhetorical questions as pivots**: "What happened?", "So how do you do all this?" These are a core transition device for me. (As opening hooks they stay banned.)
+- **Reconstructed dialogue.** Real scenes with quoted lines and a recurring cast: "Annie, why did you score it 3?", "the Workshop Guy", "I said out loud, to no one but my sofa".
+- **Reassurance and fellow-feeling**: "It's totally okay to handle it once several users mention it", "I've been there."
+- **Self-labelling confessions**: "I'm the type of person who loves to prepare for things", "I'm impatient".
+- **Hedged intensifiers**: "quite a bit", "pretty well", "really", "actually".
+- **Warm exclamation marks**: "Let's dive in!", "Happy building!" Warmth is carried by punctuation and asides, not emoji.
+- **Closing invitations**: "I'm curious, have you ever...?", "please do leave a comment" – a modest wish plus a genuine question.
+- **Scare quotes for borrowed words**: a "spaceship", "just", "revenue streams".
+- **Narrative time markers**: "By the summer... In the autumn..."
+- **Texture stays.** Comma splices and the odd non-native turn of phrase are part of the voice; don't polish them out.
+- **Emoji: almost never.** Zero emoji across all 20 articles. On LinkedIn, at most one tonal emoji, and only when it carries real warmth; it is never the default warmth device.
 
 ---
 
@@ -70,13 +94,15 @@ leverage, synergy, move the needle, circle back, land on, land / landed (figurat
 ### Announcing clarity
 plain language, plain English (e.g. "in plain English", "in one plain paragraph"). Don't announce that you're being clear. Just be clear.
 
-### Phrasal verbs
+### Phrases I don't use
 write up / wrote up / write it up (e.g. "thinking I never wrote up", "I wrote the story up"). Use "write about", "wrote about", or "wrote down" instead.
 
-### Weak intensifiers
-actually, genuinely
+wrestling with (e.g. "what you're wrestling with as you build"). Use "struggling with" instead.
 
-Cut "actually" as a filler, e.g. "what you actually want" → "what you want", "they can actually use" → "they can use".
+### Weak intensifiers
+genuinely
+
+"actually" is NOT banned: it is one of my natural hedges ("it was actually harder than I thought", "Vibe coding is actually a great way to learn"). Use it the way I do, as an honest concession, not sprinkled into every paragraph as filler.
 
 ### Empty fillers
 but here’s the catch, to cut through the chaos, that moment stuck with me, this stuck with me, it stuck with me, that stayed with me, this stayed with me, it stayed with me, cutting through the noise, that actually lands, that sticks, which makes a real difference, makes a real difference, I keep coming back to, one idea I keep coming back to, it clicked, the book/it finally clicked, something clicked
@@ -96,7 +122,7 @@ This counts even when the negation and the assertion are split into two sentence
 Two-beat setup-payoff: a short concession sentence followed by a clipped reversal, e.g. "That sounds small. It isn't.", "Sounds simple. It's not.", "Easy, right? Wrong." State the point directly instead.
 
 ### Formatting
-- No em dashes (—)
+- No em dashes (—). For asides, use my natural marker instead: the spaced en dash, e.g. "someone – usually a man – with all the right answers"
 - No hashtags, except on Instagram. Instagram is the one channel where hashtags help reach, so Instagram posts include a focused, curated set (~10-12) of relevant tags placed below the caption fold. Everywhere else (LinkedIn, Substack), no hashtags.
 - No decorative punctuation (decorative dashes, bullets, symbol strings)
 - A single, tonal emoji is fine on LinkedIn and Substack when it carries real warmth or self-deprecation (e.g. one 😅 after an honest aside). Not strings of emoji, and not as decoration.
