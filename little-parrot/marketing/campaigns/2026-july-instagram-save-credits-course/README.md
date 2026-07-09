@@ -2,7 +2,7 @@
 
 Six Instagram posts built from the **Save Lovable Credits: Edit Your App Like
 a Developer** course (`vibe-coding-github-00`), shaped by
-`marketing/content-strategy/audience-research.md` and the content strategy.
+`productkind/marketing/strategy/audience-research.md` and the content strategy.
 
 ## Why these five (research trace)
 

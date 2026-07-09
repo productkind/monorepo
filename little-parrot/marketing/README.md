@@ -13,20 +13,24 @@ hitting publish.
 
 ## Files
 
-- **`channels.md`** — the registry of where you post and the rules for each place.
-  Maintained once, reused every campaign. Keep it current.
-- **`brief-template.md`** — the 5-minute brief you fill in per campaign.
+- **`productkind/marketing/channels/README.md`** — the registry of where you post
+  and the rules for each place. Maintained once, reused every campaign. Keep it
+  current.
+- **`productkind/marketing/strategy/brief-template.md`** — the 5-minute brief you
+  fill in per campaign.
 - **`campaigns/<slug>/`** — one folder per campaign. Holds the filled `brief.md`,
   the generated per-channel drafts, and a `posting-plan.md` checklist.
-- **`content-strategy/`** — the strategy layer above campaigns: the audience
-  brief, Kinga's belief interview, and the content strategy that monthly
+- **`productkind/marketing/strategy/`** — the strategy layer above campaigns: the
+  audience brief, Kinga's belief interview, and the content strategy that monthly
   calendars and idea-testing run on. See its README for the workflow.
 
 ## Workflow
 
-1. **Once:** finish filling the `TO FILL` fields in `channels.md` (community rules,
-   handles, timing). This is the only setup, and it pays off every campaign.
-2. **Per campaign:** copy `brief-template.md` to `campaigns/<slug>/brief.md` and fill it in.
+1. **Once:** finish filling the `TO FILL` fields in the channel registry
+   (`productkind/marketing/channels/README.md`): community rules, handles, timing.
+   This is the only setup, and it pays off every campaign.
+2. **Per campaign:** copy `productkind/marketing/strategy/brief-template.md` to
+   `campaigns/<slug>/brief.md` and fill it in.
 3. Run the **promo-fanout** skill (tell Claude the campaign slug, or just say
    "fan out the <slug> campaign").
 4. It writes one draft per target channel into `campaigns/<slug>/`. Each draft's

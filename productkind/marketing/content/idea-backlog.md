@@ -2,7 +2,7 @@
 
 Ideas traced to the audience research and the confirmed beliefs. Pull from here
 when building monthly calendars; add walk-ideas after testing them against
-`content-strategy.md`. Started 2026-07-04.
+`../strategy/content-strategy.md`. Started 2026-07-04.
 
 Pillar key: [M] the method shown, [W] women build real things,
 [MM] the messy middle, [C] the calm view.

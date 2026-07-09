@@ -4,8 +4,8 @@ Fill this in once per campaign (5 minutes), then run the promo-fanout skill.
 Everything below feeds the drafts, so the more specific you are, the less you edit
 afterwards. Leave a field blank if it doesn't apply.
 
-Copy this file into `campaigns/<slug>/brief.md` and fill it in there, or just fill
-it in and tell Claude which campaign slug to use.
+Copy this file into the campaign's folder as `brief.md` and fill it in there, or
+just fill it in and tell Claude which campaign slug to use.
 
 ---
 

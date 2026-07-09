@@ -100,7 +100,7 @@ through all of it.
    go back to step 2 (edit the md, ask for a regenerate).
 
 Design-quality bar for step 3: the checklist in
-`little-parrot/marketing/content-strategy/instagram-carousel-research.md`
+`productkind/marketing/channels/instagram/carousel-research.md`
 (cover ≤ ~12 words, one idea per slide, prompt snippets verbatim in the
 prompt window).
 
