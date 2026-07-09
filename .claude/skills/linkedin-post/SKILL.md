@@ -3,7 +3,7 @@ name: linkedin-post
 description: Apply this structure to LinkedIn posts or Substack Notes.
 ---
 
-> Voice and tone come from the **personal-tone-of-voice** skill and `little-parrot/marketing/campaigns/how-to-be-authentic-on-linkedin.md`. This skill covers the channel mechanics and post structure that sit on top of that voice. Where the two appear to conflict, the grounded voice wins: posts should read like a real, kind person, never like marketing.
+> Voice and tone come from the **personal-tone-of-voice** skill and `productkind/marketing/strategy/how-to-be-authentic-on-linkedin.md`. This skill covers the channel mechanics and post structure that sit on top of that voice. Where the two appear to conflict, the grounded voice wins: posts should read like a real, kind person, never like marketing.
 
 ## Evaluation Loop (run this every time)
 

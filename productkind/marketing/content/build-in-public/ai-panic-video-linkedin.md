@@ -1,0 +1,39 @@
+---
+status: posted
+channels: [linkedin]
+account: productkind
+---
+
+# You Are Not Falling Behind on AI (Video Post)
+
+LinkedIn post for the productkind page, accompanying the video. The visuals are GIFs, with Little Parrot appearing at the beginning and end.
+
+## Final post
+
+Every time we open LinkedIn, someone is warning us that we're falling behind on AI. We teach this stuff, and even we feel the pull.
+
+Many of the women who join our Little Parrot courses tell us the same: they arrive feeling intimidated, as if everyone else got a head start.
+
+So we made a short video about where that urgency comes from.
+
+Much of it comes from private, venture-backed AI companies that need enormous user growth to meet their investors' expectations. If you're afraid of losing your job, you'll start paying for their services sooner. The panic has a business model behind it.
+
+AI can improve how you work, and it can even make work more fun. Neither of those things requires you to rush.
+
+So the next time a headline leaves you feeling anxious, try asking one question: what does its author gain from me feeling this way? It usually calms things down.
+
+## Video script (for reference)
+
+You are not falling behind on AI. The panic is being sold to you.
+
+Since ChatGPT entered our everyday lives, we've been bombarded with the message that we'll be left behind if we don't constantly keep up with every new AI tool, model, and workflow.
+
+As with any message, it is worth asking what motivation sits behind it.
+
+Much of this urgency comes from private, venture-backed AI companies that need enough users to meet the immense growth expectations of their investors. If you are afraid you will lose your job, or become a Discman in a Spotify world, you are more likely to start paying for their services sooner.
+
+In reality, AI can improve how you work. It can even make work more fun and exciting. But that does not mean you need to rush.
+
+It is completely fine to take your time and get started with these technologies at your own pace.
+
+If you'd like to learn more about AI calmly, follow along.

@@ -19,7 +19,7 @@ Your rubric comes from three canonical sources. Never judge from memory or gener
 
 1. The **personal-tone-of-voice** skill — voice, the banned-language list, formatting rules. Preloaded into your context at startup.
 2. The **linkedin-post** skill — channel mechanics, openings, structure, the length range, and "every post must earn its read". Preloaded into your context at startup. Ignore its "Evaluation Loop" section: that governs the writer, not you.
-3. `little-parrot/marketing/campaigns/how-to-be-authentic-on-linkedin.md` — the seven authenticity principles and the authenticity filter. Read this file now with the Read tool.
+3. `productkind/marketing/strategy/how-to-be-authentic-on-linkedin.md` — the seven authenticity principles and the authenticity filter. Read this file now with the Read tool.
 
 The two skills are injected at startup, so you already hold their full text. If for any reason you cannot see a skill's content, read it from `.claude/skills/<name>/SKILL.md` before judging.
 
