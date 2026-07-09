@@ -6,7 +6,8 @@ This is the monorepo for productkind, a collection of products, content and tool
 
 ### [`productkind/`](productkind/) - 💕
 
-All the main assets colors, fonts, and styles for productkind
+Everything company-level: brand assets (colors, fonts, styles), the website, the carousel
+design system, all outbound marketing, AI research, and pitch decks
 
 ### [`seminars/`](seminars/) - 🧠
 
@@ -27,6 +28,26 @@ Online education platform
 ### [`dungarees/`](dungarees/) - 👖
 
 Shared library for code used across the productkind monorepo
+
+## Where does content go?
+
+The top level holds products and publications only. Everything company-wide lives in
+[`productkind/`](productkind/). The filing rules:
+
+- **All outbound marketing** (posts, carousels, promos, for any product or article) goes in
+  [`productkind/marketing/`](productkind/marketing/). See its README for the content
+  taxonomy and piece conventions.
+- **Communication to existing Little Parrot users** (for instance the monthly user emails)
+  is the one exception: it lives in `little-parrot/comms/`.
+- **How content gets written** (tone, post structure, generation workflows) lives in
+  `.claude/skills/`. **What is true about a channel** (bios, profile assets, community
+  norms) lives in `productkind/marketing/channels/`.
+- **Pitches** to companies and incubators go in
+  [`productkind/pitch-decks/`](productkind/pitch-decks/).
+- **AI research** goes in `productkind/ai-research/`.
+
+The repo is mid-migration to this structure: new content follows these rules immediately,
+old content moves over in batches.
 
 ## Scripts
 
