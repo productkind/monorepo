@@ -5,6 +5,6 @@ script: |-
 
   Before any of it is fed to the model, the corpus has to be cleaned. Duplicates get removed. Low-quality text gets thrown out. Anything that would confuse or mislead the model gets pulled aside.
 
-  So somewhere at Anthropic or OpenAI, someone's job is to hoover up a huge chunk of the internet, wash it, and pour it into the training pipeline. One of the least glamorous, most consequential jobs in AI.
+  Anthropic and OpenAI rarely gather all this data themselves. They buy most of it. A whole industry of data brokers hoovers up huge chunks of the internet, cleans it, packages it, and sells the finished corpus to whoever is training a model. One of the least visible, most consequential industries in AI.
 
-  If you would like more of these explainers, follow along.
+  If you would like to learn more, follow along.

@@ -5,10 +5,10 @@ script: |-
 
   Claude is told to avoid the words "genuinely", "honestly", and "actually".
 
-  It is told never to use bullet points when declining a task, because "the additional care helps soften the blow".
+  It's told never to use bullet points when declining a task, because "the additional care helps soften the blow".
 
-  It is told to check whether an image is really attached before responding, because "the person may have forgotten to upload it".
+  It's told to check whether an image is really attached before responding, because "the person may have forgotten to upload it".
 
   Reading it feels a bit like reading a job brief for the AI, written by someone who has paid attention to a lot of chats.
 
-  If you want to know why your chat assistant behaves the way it does, its system prompt is a good place to start.
+  If you want to know why your chat assistant behaves the way it does, its system prompt is a good place to start. Follow us for more interesting and fun insights on AI.

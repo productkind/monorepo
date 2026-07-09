@@ -9,6 +9,6 @@ script: |-
 
   There is no bigger plan. The model does not decide the sentence before starting it, or the paragraph before starting it. It is guessing what should come next, then guessing again.
 
-  The finished answer often looks planned. That is because the model was trained on planned writing. What comes out imitates the surface.
+  The finished answer often looks planned. That is because the model was trained on planned writing.
 
-  More on what else the model sees when it does this in the next video.
+  More in the next video on what else the model sees when it does this. Follow us, so you won't miss it.
