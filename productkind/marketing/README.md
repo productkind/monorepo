@@ -14,11 +14,12 @@ emails), which lives in `little-parrot/comms/`.
   - `articles/` - promos sourced from Thoughts articles. One folder per article.
   - `build-in-public/` - founder-journey posts about building productkind and Little Parrot.
   - `idea-backlog.md` - seeds for future content batches.
-- `channels/` - evergreen facts per account: bio copy, profile assets, community norms
-  (posting rules, contacts). Not tone or process, which live in `.claude/skills/`. Create a
-  channel folder the first time there is a real file for it, not before.
-- `strategy/` - content strategy, audience research, the campaign brief template,
-  and writing guidance docs (e.g. the LinkedIn authenticity filter).
+- `channels/` - everything specific to one channel: bio copy, profile assets, community
+  norms (posting rules, contacts), platform research, and channel-specific writing
+  guidance (e.g. `linkedin/how-to-be-authentic.md`). Cross-channel tone and generation
+  workflows live in `.claude/skills/`. Create a channel folder the first time there is a
+  real file for it, not before.
+- `strategy/` - content strategy, audience research, and the campaign brief template.
 - `calendar.md` - the single time view: planned and posted content across all of `content/`.
 - `fanout.md` - how one campaign brief becomes channel-ready drafts via the
   promo-fanout skill.
