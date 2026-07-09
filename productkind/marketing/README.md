@@ -19,7 +19,7 @@ emails), which lives in `little-parrot/comms/`.
   guidance (e.g. `linkedin/how-to-be-authentic.md`). Cross-channel tone and generation
   workflows live in `.claude/skills/`. Create a channel folder the first time there is a
   real file for it, not before.
-- `strategy/` - content strategy, audience research, and the campaign brief template.
+- `strategy/` - cross-channel planning docs, currently the campaign brief template.
 - `calendar.md` - the single time view: planned and posted content across all of `content/`.
 - `fanout.md` - how one campaign brief becomes channel-ready drafts via the
   promo-fanout skill.

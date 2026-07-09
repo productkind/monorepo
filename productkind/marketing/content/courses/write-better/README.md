@@ -2,7 +2,7 @@
 
 Six Instagram carousels built from the **Write Better with AI: Prompting
 Foundations for Product Managers** course (`write-better-with-ai-00`),
-shaped by `productkind/marketing/strategy/audience-research.md` and the content
+shaped by our audience research and the content
 strategy.
 
 ## Why these six (research trace)

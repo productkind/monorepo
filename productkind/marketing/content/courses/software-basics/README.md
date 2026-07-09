@@ -2,7 +2,7 @@
 
 Six Instagram carousels built from the **Basics of Software for Vibe Coding**
 course (`vibe-coding-tech-00`) and its toolkits, shaped by
-`productkind/marketing/strategy/audience-research.md` and the content strategy.
+our audience research and the content strategy.
 
 ## Why these six (research trace)
 
