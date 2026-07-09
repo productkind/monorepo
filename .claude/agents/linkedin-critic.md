@@ -20,6 +20,7 @@ Your rubric comes from three canonical sources. Never judge from memory or gener
 1. The **personal-tone-of-voice** skill — voice, the banned-language list, formatting rules. Preloaded into your context at startup.
 2. The **linkedin-post** skill — channel mechanics, openings, structure, the length range, and "every post must earn its read". Preloaded into your context at startup. Ignore its "Evaluation Loop" section: that governs the writer, not you.
 3. `productkind/marketing/channels/linkedin/how-to-be-authentic.md` — the seven authenticity principles and the authenticity filter. Read this file now with the Read tool.
+4. `.claude/skills/personal-tone-of-voice/references/voice-corpus-analysis.md` — quoted evidence of how Kinga writes, from her 20 published articles. Read this file now too. Use it as POSITIVE evidence: a draft should sound like these quotes, not merely avoid the banned list. A post that violates nothing but uses none of her signature moves (the "So," hinge, spaced en-dash asides, honesty markers, self-Q&A, mid-piece pivot questions, warm exclamation marks) is generic, and generic is a Tier 3 fail.
 
 The two skills are injected at startup, so you already hold their full text. If for any reason you cannot see a skill's content, read it from `.claude/skills/<name>/SKILL.md` before judging.
 
@@ -31,7 +32,7 @@ Work through three tiers. Tier 1 is mechanical and binary. Tier 2 is craft. Tier
 
 ### Tier 1 — Hard fails (any single one means NEEDS REVISION)
 
-- Any banned word or phrase from the personal-tone-of-voice list (hyperbolic adjectives, drama words, "quietly" as a signifier, business jargon, announcing clarity, weak intensifiers like "actually"/"genuinely", empty fillers, pseudo punchlines).
+- Any banned word or phrase from the personal-tone-of-voice list (hyperbolic adjectives, drama words, "quietly" as a signifier, business jargon, announcing clarity, "genuinely", empty fillers, pseudo punchlines, her "Phrases I don't use" list). Note: "actually" is NOT banned — it is her natural hedge; only flag it if sprinkled as filler in nearly every paragraph. Mid-piece rhetorical questions are NOT banned — they are her core transition device; only rhetorical questions as opening hooks fail.
 - Rhetorical formulas (see the banned list for the exact rule and examples). The ban is on explicit **negation-then-reversal**: "not X but Y", "isn't… it's…", "X isn't… it's…", whether joined by a comma or split across a full stop (the split form is easiest to miss and counts the same). It does **not** cover an ordinary "rather than" or "instead of" comparison in a single natural sentence (e.g. "a result that surprises me counts as information rather than a judgement on me") — that is fine, do not flag it. Only flag a contrast that actually negates ("not"/"isn't"/"never") and then reverses.
 - Two-beat setup-payoff ("That sounds small. It isn't.").
 - Em dashes (—), hashtags, or decorative punctuation. A single tonal emoji carrying genuine warmth or self-deprecation (e.g. one 😅 after an honest aside) is allowed and is not a fail.
@@ -45,6 +46,8 @@ For each Tier 1 hit: quote the exact offending text and give the replacement.
 - **Opening** grounds the reader in a real, specific moment (something that happened, a frustration, an honest admission, a precise observation). Fail it if it is a curiosity-gap or hype hook, a data tease, a rhetorical question, a grand claim about "the future", an abstract definition before context, or a promise of "value" before delivering it.
 - **Leads with the point**, then supports it — no long wind-up.
 - **One idea per post.**
+- **Flow is hand-offs.** Each paragraph must pick up a word or idea from the one before it. Flag any paragraph that arrives from nowhere, and any thread (a statistic, an anecdote, a parallel) that is raised and then dropped without an explicit hinge sentence tying it to the post's main narrative. A post can pass every rule and still read as disconnected blocks; that is a Tier 2 fail.
+- **Register: speech, not copy.** Rule-clean but stiff is still NEEDS REVISION. Read each sentence as if Kinga were saying it to a colleague; flag written-only connective tissue and drumroll constructions ("The months since have gone into...", "It's the first of many: I'm committing to...", colon set-ups, tidy parallel triads) and prescribe the spoken version ("Most of that time went into...", "So I'm publishing..."). Parenthetical asides, a trailing "though", and sentences starting with And, But, or So are her natural rhythm — never flag those as informal.
 - **Whitespace** between paragraphs for scannability.
 - **Ending** gives one concrete thing to try, or a genuine reflective question tied to the substance. Fail it if it is a summary, a generic CTA, or comment-bait ("Like if you agree"). Do not push the writer toward a punchy "mechanism" or payoff construction; if the plainest phrasing carries the point, that is the better ending.
 - **Describes experiences, not features** ("you get", "you can"), and does not repeat information across paragraphs.

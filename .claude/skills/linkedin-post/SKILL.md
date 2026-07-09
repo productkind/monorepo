@@ -5,6 +5,13 @@ description: Apply this structure to LinkedIn posts or Substack Notes.
 
 > Voice and tone come from the **personal-tone-of-voice** skill and `productkind/marketing/channels/linkedin/how-to-be-authentic.md`. This skill covers the channel mechanics and post structure that sit on top of that voice. Where the two appear to conflict, the grounded voice wins: posts should read like a real, kind person, never like marketing.
 
+## Start From Kinga's Words
+
+The most natural-sounding source material is Kinga's own rough wording, so collect it before composing anything. A draft grown from her sentences comes out sounding like her; a draft composed from scratch and decorated with her facts comes out sounding generated.
+
+- If she has supplied rough notes or dictated wording, build the draft from those sentences: keep every fact and her distinctive lines verbatim (e.g. "I'm not a content machine"), smooth the rough connective tissue, and never paste the notes in unedited.
+- If she hasn't, ask for her rough take before drafting: what she wants to say in her own words, plus any numbers, names, sources, or backstory she wants in. Don't invent the narrative from the linked article alone.
+
 ## Evaluation Loop (run this every time)
 
 A drafted post is never returned to the user until an independent critic has gated it. Self-review misses what fresh eyes catch, so the writer and the judge must be different.
@@ -119,6 +126,9 @@ Open on a real, specific moment: something that happened, a frustration, an hone
 ## Structure
 
 - Lead with the point, then support it
+- Mid-post questions are Kinga's natural pivots ("What happened?", "So how do you do all this?") and are encouraged; as opening hooks they stay banned
+- Flow is hand-offs: each paragraph picks up a word or idea from the one before it ("a lot of thinking I never wrote about" → "Part of that thinking was about..."). A paragraph that arrives from nowhere breaks the read.
+- A side observation (a statistic, a historical parallel) must be welded to the post's main thread with an explicit hinge sentence ("That gap is a big part of why I want to write again"), or moved to its own post. Never drop a thread without paying it off.
 - Use whitespace generously
 - Bullet points when they reduce cognitive load
 - Headings as signposts, not marketing hooks
@@ -148,3 +158,5 @@ Before publishing, verify:
 6. Am I describing experiences or listing features?
 7. Is any information repeated across paragraphs?
 8. Have I run it against the personal-tone-of-voice banned-language list (no em dashes, no hype, no "not X but Y")?
+9. Does each paragraph pick up a word or idea from the paragraph before it, with no dropped threads?
+10. Said aloud to a colleague, would every sentence survive? Rule-clean but stiff is not done.
