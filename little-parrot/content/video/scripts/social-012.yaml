@@ -3,7 +3,7 @@ script: |-
 
   Your brain does its thinking with neurons. Each is a cell with a long tail that connects to others. It receives signals from the neurons before it, and it decides whether to fire a signal onwards.
 
-  An artificial neuron in an LLM works in a similar way, only with maths instead of biology. It takes the numbers coming in. It multiplies each by its own weight. It adds them all up. If the total is above a threshold, called a bias, it sends a signal onwards. If not, it stays silent.
+  An artificial neuron in an LLM works in a similar way, only with maths instead of biology. It takes the numbers coming in. It multiplies each by its own weight. It adds them all up. If the total is bigger then a certain other number, called a bias, it sends a signal onwards. If not, it stays silent.
 
   That is one neuron. A language model has billions of them, stacked in layers, all passing signals along.
 

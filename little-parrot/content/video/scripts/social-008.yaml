@@ -5,8 +5,6 @@ script: |-
 
   The system prompt is written by the model's creators. It sets the ground rules for how the AI should behave: how polite to be, what topics to swerve around, what tone to hit, what to refuse, when to add a disclaimer.
 
-  The model treats this hidden message the same way it treats yours. It reads both, tokens them, and generates a reply that fits everything it has been given.
+  The model treats this hidden message the same way it treats yours. It reads both, tokens them, and generates a reply that fits everything it has been given. 
 
-  Which means a chat assistant's personality lives in a text file. It gets written, edited, and updated by the model's team. Change the prompt, and the personality changes.
-
-  Your prompt and the system prompt are not the only things the model sees. There is also your past conversation. More on that in the next video.
+  Your prompt and the system prompt are not the only things the model sees. More on that in the next video. Follow for more.

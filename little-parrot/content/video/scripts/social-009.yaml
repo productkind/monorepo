@@ -8,5 +8,5 @@ script: |-
   Second, the same prompt can give you different answers. When the model predicts the next token, it does not always pick the single most likely word. It samples from the top few options. A bit of randomness is why hitting regenerate can produce a different reply.
 
   So the model is not remembering you, and it is not being consistent either. It is doing maths, with a small amount of dice-rolling on top.
-
-  If you would like more explainers on how AI works, follow along.
+  
+  How AI assistants handle the context is getting more nuanced every day. If you want to learn more about it, follow along.
