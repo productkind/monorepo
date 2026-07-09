@@ -39,9 +39,10 @@ The top level holds products and publications only. Everything company-wide live
   taxonomy and piece conventions.
 - **Communication to existing Little Parrot users** (for instance the monthly user emails)
   is the one exception: it lives in `little-parrot/comms/`.
-- **How content gets written** (tone, post structure, generation workflows) lives in
-  `.claude/skills/`. **What is true about a channel** (bios, profile assets, community
-  norms) lives in `productkind/marketing/channels/`.
+- **How content gets written** (cross-channel tone, post structure, generation
+  workflows) lives in `.claude/skills/`. **Everything specific to one channel** (bios,
+  profile assets, community norms, platform research, channel-specific writing
+  guidance) lives in `productkind/marketing/channels/`.
 - **Pitches** to companies and incubators go in
   [`productkind/pitch-decks/`](productkind/pitch-decks/).
 - **AI research** goes in `productkind/ai-research/`.

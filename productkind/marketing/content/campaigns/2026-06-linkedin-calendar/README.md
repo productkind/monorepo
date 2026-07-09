@@ -7,7 +7,7 @@ The spine of the month is the evolution of how I work with AI: from copying answ
 **Cadence:** 3x/week (Mon / Wed / Fri), 13 posts, Wed 3 Jun → Wed 1 Jul.
 **Format:** 90–200 words, personal tone-of-voice. British English, no hashtags, no em dashes. Links (if any) in the post body, never the first comment.
 
-**Authenticity filter (governs every post):** see [`productkind/marketing/strategy/how-to-be-authentic-on-linkedin.md`](../../../strategy/how-to-be-authentic-on-linkedin.md). In practice:
+**Authenticity filter (governs every post):** see [`productkind/marketing/channels/linkedin/how-to-be-authentic.md`](../../../channels/linkedin/how-to-be-authentic.md). In practice:
 - Start from a genuine, specific moment (a real person, number, or thing that happened), not a post idea worked backwards.
 - Write like a note to a trusted colleague, then edit for clarity, not polish.
 - Resist the standard template (punchy opener → whitespace → numbered list → engagement CTA). Let a thought be a paragraph.
