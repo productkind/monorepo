@@ -70,6 +70,9 @@ leverage, synergy, move the needle, circle back, land on, land / landed (figurat
 ### Announcing clarity
 plain language, plain English (e.g. "in plain English", "in one plain paragraph"). Don't announce that you're being clear. Just be clear.
 
+### Phrasal verbs
+write up / wrote up / write it up (e.g. "thinking I never wrote up", "I wrote the story up"). Use "write about", "wrote about", or "wrote down" instead.
+
 ### Weak intensifiers
 actually, genuinely
 
