@@ -2,7 +2,7 @@
 
 Six Instagram carousels built from the **Fix Bugs with Confidence: Debugging
 Your Lovable App** course (`vibe-coding-debugging-00`) and its toolkits,
-shaped by `productkind/marketing/strategy/audience-research.md` and the content
+shaped by our audience research and the content
 strategy.
 
 ## Why these six (research trace)

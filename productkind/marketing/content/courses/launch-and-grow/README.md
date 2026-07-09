@@ -2,7 +2,7 @@
 
 Six Instagram carousels built from the **Launch and Grow Your Lovable App**
 course (`lovable-publishing-00`) and its toolkits, shaped by
-`productkind/marketing/strategy/audience-research.md` and the content strategy.
+our audience research and the content strategy.
 
 ## Why these six (research trace)
 
