@@ -15,14 +15,14 @@ primary growth channel, so share-asks are the point, not decoration.
 1. **The brief.** Either `little-parrot/marketing/campaigns/<slug>/brief.md`, or
    details the user gives directly. If the brief is missing fields, ask only for the
    ones you genuinely need (offer, link, ask, deadline). Don't interrogate.
-2. **The channel registry:** `little-parrot/marketing/channels.md`. Read it every
+2. **The channel registry:** `productkind/marketing/channels/README.md`. Read it every
    run. It defines which channels exist, their format and self-promo rules, and each
    channel's `ref` param. Only generate for channels listed as active and, if the
    brief names target channels, only those.
 
 ## Process
 
-1. Read the brief and `channels.md`.
+1. Read the brief and the channel registry.
 2. Confirm the target channel list (brief's "Channels to target", else all active
    channels). If a targeted channel still has critical `TO FILL` rules (especially
    Slack/Reddit/WhatsApp posting rules), flag it and draft conservatively

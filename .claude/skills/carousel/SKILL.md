@@ -57,7 +57,7 @@ Do a deliberate phrase-by-phrase banned-list pass on the draft before
 showing it. British English, no em dashes.
 
 Design-quality bar (from
-`little-parrot/marketing/content-strategy/instagram-carousel-research.md`):
+`productkind/marketing/channels/instagram/carousel-research.md`):
 cover ≤ ~12 words, one idea per slide, a concrete payoff by slide 2-3,
 CTA with a share-ask.
 

@@ -2,7 +2,7 @@
 
 Six Instagram carousels built from the **Build Your Business: From Vibe Coded
 Product to Paying Customers** course (`vibe-coding-start-your-business-00`)
-and its toolkits, shaped by `marketing/content-strategy/audience-research.md`
+and its toolkits, shaped by `productkind/marketing/strategy/audience-research.md`
 and the content strategy.
 
 ## Why these six (research trace)

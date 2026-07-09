@@ -36,8 +36,8 @@ is ours, AI helps with format and speed.
 Ask Claude Code:
 
 > Build next month's content calendar. Read
-> `little-parrot/marketing/content-strategy/` (all three files) and
-> `channels.md`, pick a monthly throughline that serves one strategy pillar,
+> `productkind/marketing/strategy/` (all three files) and the channel registry
+> (`productkind/marketing/channels/README.md`), pick a monthly throughline that serves one strategy pillar,
 > and propose a schedule at our sustainable cadence. Every post idea must trace
 > to a pillar and start from something real (a user quote, a number, a thing
 > that happened to us). Write it as a campaign folder like
