@@ -65,7 +65,7 @@ function processCharacterData(data) {
   return words
 }
 
-const videoName = 'social-002-chloe'
+const videoName = 'social-003-chloe'
 
 // --- Main execution block ---
 async function main() {

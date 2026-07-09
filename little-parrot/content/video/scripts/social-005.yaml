@@ -1,14 +1,16 @@
 script: |-
-  Inside every language model is a very large pile of numbers. GPT-4 has around a trillion of them.
+  An AI model is really just a huge pile of numbers. GPT-5 has around a few trillion of them.
 
-  These numbers are called weights, or parameters. The model is essentially a giant calculator that runs your input through all of them and produces an output.
+  These numbers are called weights. When you send a question, the model uses all of them to work out an answer.
 
-  The interesting bit is how someone convinced a trillion numbers to seem clever together. That process is called training.
+  How do the weights know what a good answer looks like? The model went through training.
 
-  During training, the model is shown examples one by one. It uses its numbers to make a guess. That guess gets compared to the expected answer, and the numbers get nudged so the next guess lands closer to right.
+  Training works like this. The model is shown one example at a time. It makes a guess. Its guess is compared to the correct answer. If the guess is off, all the weights get nudged a tiny bit, so the next guess gets closer.
 
-  Repeat until it works.
+  Repeat billions of times.
 
-  Eventually, the model starts to seem clever. Then training stops and the numbers freeze. From that day on, no matter how many times you correct it in the chat, the model will not remember. It does not learn anymore. It has left school and refuses to re-enrol.
+  Eventually, the guesses start coming up right. Then training stops, and the weights freeze. That's when AI companies release the model.
+
+  From that moment on, the model does not learn anything new. Even if you correct it in a chat, the weights stay the same. It is done with school.
 
   More on how this changes what you can expect from AI in the next video.

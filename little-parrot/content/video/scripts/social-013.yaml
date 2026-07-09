@@ -1,12 +1,12 @@
 script: |-
-  Science-fiction AI does not talk like ChatGPT. HAL, Skynet, C-3PO, the ship's computer on the Enterprise. They are precise, literal, occasionally menacing. Never rambly.
+  Ever noticed how a chat assistant will apologise the second you correct it, and only then give you the right answer? The mechanism is simpler than it looks.
 
-  Today's chat assistants are the opposite. They will happily invent a fake court case, misremember a date, or apologise five times for something you did not ask about. Creative slop, essentially.
+  A language model is essentially a glorified autocomplete. It predicts the next word based on what came before. When you type "you are wrong, the actual answer is..." the model looks at everything so far and asks: what would a human typically say next?
 
-  The reason is that those sci-fi books were written in the sixties and seventies, when everyone assumed AI would be built by giving a machine an enormous set of rules to follow. Rule-based reasoning. Cold, careful, exact.
+  The most likely continuation, based on the entire internet, is a polite apology followed by a corrected answer. So that is what you get.
 
-  That is not how it went. The AI that broke through was the pattern-matching kind. A model that has read most of the internet and is guessing what word should come next. Warm, verbose, and occasionally making things up.
+  The model does not know it was wrong. It does not remember being wrong. It is just predicting what a helpful person would say after being corrected. And a helpful person usually starts with "You're right, I apologise..."
 
-  If your idea of AI still comes from those books, no wonder the real thing feels strange. It was built from a different assumption.
+  Once you see this, chat assistants stop feeling like they are learning from you. They are just very good at predicting what humans say next.
 
   More like this coming up. Follow along.

@@ -271,9 +271,21 @@ The AI inside today's chat assistants is called an LLM. Short for Large Language
 More on understanding LLMs in the next video.
 `
 
-const TEXT_TO_GENERATE = videoSocialMedia002
+const videoSocialMedia003 = `
+Humans have been chasing intelligent machines for centuries, with varying degrees of honesty. In 1770, a Hungarian inventor toured Europe with the Mechanical Turk, a chess-playing cabinet that beat Napoleon and Benjamin Franklin. He forgot to mention the chess master folded inside, doing all the actual chess.
+
+Today's most common attempt looks very different. It's the Large Language Model.
+
+To understand LLMs, start with what a model is. A model is a mathematical mechanism that learns from data. Traditional software follows rules that a person wrote. A model is created differently. Making one involves showing it enormous piles of examples until it finds patterns in them. Once the model is finished, it uses those patterns to answer new questions.
+
+The process of teaching a model those patterns is called machine learning.
+
+If you would like to keep learning how AI works, calmly, follow along.
+`
+
+const TEXT_TO_GENERATE = videoSocialMedia003
 const MODEL_ID = 'eleven_v3' //'eleven_multilingual_v2' // // The v3 model as requested
-const videoName = 'social-002-chloe'
+const videoName = 'social-003-chloe'
 const OUTPUT_FILE_NAME = `generated_speech-${videoName}.wav` // e.g.,
 const ALIGNMENT_JSON_FILE_NAME = `alignment-${videoName}.json`
 const OUTPUT_FILE_PATH = OUTPUT_FILE_NAME // Saves in the same directory as the script

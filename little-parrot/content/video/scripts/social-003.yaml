@@ -1,7 +1,7 @@
 script: |-
   Humans have been chasing intelligent machines for centuries, with varying degrees of honesty. In 1770, a Hungarian inventor toured Europe with the Mechanical Turk, a chess-playing cabinet that beat Napoleon and Benjamin Franklin. He forgot to mention the chess master folded inside, doing all the actual chess.
 
-  Today's most common attempt looks very different. It is the Large Language Model.
+  Today's most common attempt looks very different. It's the Large Language Model.
 
   To understand LLMs, start with what a model is. A model is a mathematical mechanism that learns from data. Traditional software follows rules that a person wrote. A model is created differently. Making one involves showing it enormous piles of examples until it finds patterns in them. Once the model is finished, it uses those patterns to answer new questions.
 

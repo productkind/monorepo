@@ -1,12 +1,12 @@
 script: |-
-  Two things that surprise people about chat assistants.
+  When you send a message to a chat assistant, your prompt is not the only thing the model sees.
 
-  First, they do not remember your past conversations. Each time you send a message, the app resends the entire chat history back to the model. That bundle of history, plus any files you have attached, is called the context.
+  The app also adds a hidden message called the system prompt. It sits before your message, and you never see it.
 
-  The model pays closest attention to the most recent chunk of that context, roughly five to seven thousand tokens. Anything older gradually slips off the edge, which is why long conversations can feel like the AI is forgetting.
+  The system prompt is written by the model's creators. It sets the ground rules for how the AI should behave: how polite to be, what topics to swerve around, what tone to hit, what to refuse, when to add a disclaimer.
 
-  Second, the same prompt can give you different answers. When the model predicts the next token, it does not always pick the single most likely word. It samples from the top few options. A bit of randomness is why hitting regenerate can produce a different reply.
+  The model treats this hidden message the same way it treats yours. It reads both, tokens them, and generates a reply that fits everything it has been given.
 
-  So the model is not remembering you, and it is not being consistent either. It is doing maths, with a small amount of dice-rolling on top.
+  Which means a chat assistant's personality lives in a text file. It gets written, edited, and updated by the model's team. Change the prompt, and the personality changes.
 
-  If you would like more explainers on how AI works, follow along.
+  Your prompt and the system prompt are not the only things the model sees. There is also your past conversation. More on that in the next video.
