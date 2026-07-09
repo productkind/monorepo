@@ -41,7 +41,7 @@ Ask Claude Code:
 > and propose a schedule at our sustainable cadence. Every post idea must trace
 > to a pillar and start from something real (a user quote, a number, a thing
 > that happened to us). Write it as a campaign folder like
-> `campaigns/2026-june-linkedin-calendar/`.
+> `productkind/marketing/content/campaigns/2026-06-linkedin-calendar/`.
 
 The June 2026 calendar is the model: one throughline, one transferable tip per
 post, the authenticity filter applied to every idea.

@@ -12,7 +12,7 @@ primary growth channel, so share-asks are the point, not decoration.
 
 ## Inputs
 
-1. **The brief.** Either `little-parrot/marketing/campaigns/<slug>/brief.md`, or
+1. **The brief.** Either `productkind/marketing/content/campaigns/<slug>/brief.md`, or
    details the user gives directly. If the brief is missing fields, ask only for the
    ones you genuinely need (offer, link, ask, deadline). Don't interrogate.
 2. **The channel registry:** `productkind/marketing/channels/README.md`. Read it every
@@ -34,7 +34,7 @@ primary growth channel, so share-asks are the point, not decoration.
 4. Append the channel's `ref` tag to every link. If the channel's ref param is
    `none` (e.g. WhatsApp, Reddit), use the plain link with no tag, so the message
    doesn't read as promotional.
-5. Write each draft to `little-parrot/marketing/campaigns/<slug>/<channel>.md`:
+5. Write each draft to `productkind/marketing/content/campaigns/<slug>/<channel>.md`:
    - **LinkedIn:** two drafts, `linkedin-personal.md` (Kinga, founder voice, first
      person) and `linkedin-company.md` (productkind page, "we" voice).
    - **Substack:** `substack-note.md` (short, from the profile). Add
@@ -45,7 +45,7 @@ primary growth channel, so share-asks are the point, not decoration.
      **Circle:** `pwit.md`. **Instagram:** `instagram.md`.
 6. **Only if** the campaign has a genuine within-platform sequence (e.g. two
    LinkedIn posts to space days apart, or a Substack Note then a full post), write
-   `little-parrot/marketing/campaigns/<slug>/posting-plan.md` describing that
+   `productkind/marketing/content/campaigns/<slug>/posting-plan.md` describing that
    sequence: what to post first, what follows, and the gap between. Do not write a
    flat cross-channel inventory; where to post, the asset, ref tag and per-channel
    cautions belong in each draft's own header, not here. If every channel is a single

@@ -75,16 +75,18 @@ through all of it.
 1. **Draft the spec at full fidelity.** A slide table carrying ALL on-slide
    text verbatim: display copy, prompt/mockup content, labels, footnotes,
    card text; plus alt text and the caption. Run the banned-list pass.
-   Little Parrot campaign posts live in
-   `little-parrot/marketing/campaigns/<campaign>/post-N-*.md`; productkind
-   article carousels use `posts/<post-slug>/spec.md` here. (Format example:
-   the write-better campaign's post specs.)
+   Course post specs live in
+   `productkind/marketing/content/courses/<course>/post-N-*.md`; other
+   pieces use `spec.md` inside their piece folder under
+   `productkind/marketing/content/`. (Format example: the write-better
+   course's post specs.)
 2. **Approve the messaging in the md.** Edits happen in the md, never
    directly in the design.
-3. **Implement.** Create `posts/<post-slug>/carousel.html` by copying
-   `templates/<brand>.html` (brand and handle come with it; fix the
-   relative `../` paths to `../../`), keep only the slides you need, and
-   use only text that exists in the md.
+3. **Implement.** Create the piece folder next to its spec (under
+   `productkind/marketing/content/`), copy `templates/<brand>.html` in as
+   `carousel.html` and make it self-contained (inline the brand css, copy
+   needed assets into the piece's `uploads/`), keep only the slides you
+   need, and use only text that exists in the md.
    Parody content (deliberately bad example messages) gets
    `data-parody="true"` and a "(parody; banned-list exempt)" note in the
    spec. Images from Claude Design projects must be downloaded via the

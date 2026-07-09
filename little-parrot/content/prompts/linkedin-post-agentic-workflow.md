@@ -35,7 +35,7 @@ The loop is built into the `linkedin-post` skill (its "Evaluation Loop" section)
 ### Skills (`.claude/skills/`)
 - **`personal-tone-of-voice`**: the voice. Banned-language list, British English, the "real moment not a hook" opening, "give a usable technique", "frame our AI use correctly", and the formatting rules (no em dashes, no hashtags except Instagram). The single source of truth for words.
 - **`linkedin-post`**: channel mechanics and structure. Length range, openings, "every post must earn its read", and the **Evaluation Loop** section that drives this whole process. Also applies to Substack Notes.
-- **`little-parrot/marketing/campaigns/how-to-be-authentic-on-linkedin.md`**: the seven authenticity principles and the filter ("would I still post it if no one liked it?"). Not a skill, a campaign doc the critic reads at runtime.
+- **`productkind/marketing/strategy/how-to-be-authentic-on-linkedin.md`**: the seven authenticity principles and the filter ("would I still post it if no one liked it?"). Not a skill, a strategy doc the critic reads at runtime.
 
 ### Agent (`.claude/agents/`)
 - **`linkedin-critic`** (read-only). Has **fresh eyes** (it did not write the draft) and a **single job**: judge a draft against the guidelines and return a verdict a writer can act on. It does not rewrite the post. Its rubric is the two skills above (preloaded into its context via the `skills:` frontmatter field) plus the authenticity doc (read at runtime). It judges in three tiers:
