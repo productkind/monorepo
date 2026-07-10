@@ -1,5 +1,5 @@
 ---
-status: ready
+status: posted
 channels: [linkedin]
 account: tim
 posted: 2026-07-10
@@ -17,7 +17,7 @@ PRDs were never a good idea. Before AI, a PRD was one more way to avoid the conv
 Whenever someone handed me a PRD, the next thing I did was ask for a call to have the real conversation. Most of the time, what we worked out together looked quite different from the original document.
 
 
-With vibecoding, the problem gets worse. If you are vibecoding, you will probably ask an AI assistant to write the PRD for you. The AI will likely produce a document full of context that is irrelevant, or even contradictory, to the tool you are about to feed it into. Because they are vibecoders, they trust the AI's output since it seems smart. I do the same with topics where I am not the expert. I have seen people hand tech stack decisions to Lovable without realizing that the stack they described isn't possible in Lovable.
+With vibecoding, the problem gets worse. If you are vibecoding, you will probably ask an AI assistant to write the PRD for you. The AI will likely produce a document full of context that is irrelevant, or even contradictory, to the tool you are about to feed it into. Because they are vibecoders, they trust the AI's output since it seems smart. Which is understandable, I do the same with topics where I am not the expert. I have seen people hand tech stack decisions to Lovable without realizing that the stack they described isn't possible in Lovable.
 
 
 App builder tools usually do not ask questions or seek shared understanding. They try to build whatever you prompted and fill the gaps as best they can. You end up with an output full of features that have nothing to do with what you had in mind.
