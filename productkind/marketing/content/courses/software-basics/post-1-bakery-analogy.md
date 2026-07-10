@@ -37,7 +37,7 @@ slide, the technical term and the bakery part paired on each.
 | 4 | The storage room highlighted | "DATABASE = the storage room. Where your app remembers things: profiles, orders, posts, all organised and findable." |
 | 5 | The building itself, a rent sign | "SERVER = the building it all happens in: a powerful computer running your backend and database. And you don't buy one: CLOUD COMPUTING means renting space in someone else's, which Lovable handles for you." |
 | 6 | A phone line between two bakeries, a key beside it | "API = the phone line between bakeries: how apps talk to each other (your app calls Stripe to take a payment). API KEY = the access code on that line. It's a secret, and it never goes in a prompt." |
-| 7 (CTA) | Brand card, the whole bakery labelled | "Now you can point: 'the problem is in the kitchen, not the counter.' Precise prompts start here. This is the free first challenge of Basics of Software for Vibe Coding, on LittleParrot.app 🟪 Save the analogy 🔖" |
+| 7 (CTA) | Brand card, the whole bakery labelled | "Now you can point: 'the problem is in the kitchen, not the counter.' Precise prompts start here. This is the free first challenge of Basics of Software for Vibe Coding, on LittleParrot.app 💛 Save the analogy 🔖" |
 
 **Alt text (for the post):** An illustrated analogy carousel mapping app
 architecture to a bakery: frontend as the counter, backend as the kitchen,
