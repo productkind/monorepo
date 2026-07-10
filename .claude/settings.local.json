@@ -158,7 +158,18 @@
       "WebFetch(domain:www.hrdive.com)",
       "WebFetch(domain:www.linkedin.com)",
       "WebFetch(domain:pubstacksuccess.substack.com)",
-      "WebFetch(domain:www.substackwritersatwork.com)"
+      "WebFetch(domain:www.substackwritersatwork.com)",
+      "WebFetch(domain:buffer.com)",
+      "WebFetch(domain:www.tiktok.com)",
+      "WebFetch(domain:newsroom.tiktok.com)",
+      "WebFetch(domain:creators.instagram.com)",
+      "WebFetch(domain:about.instagram.com)",
+      "WebFetch(domain:www.creatorsjet.com)",
+      "WebFetch(domain:www.socialinsider.io)",
+      "WebFetch(domain:www.socialmediaexaminer.com)",
+      "WebFetch(domain:stan.store)",
+      "WebFetch(domain:www.socialync.io)",
+      "WebFetch(domain:metricool.com)"
     ],
     "deny": [],
     "ask": []
