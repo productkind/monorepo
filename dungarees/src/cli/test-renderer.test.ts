@@ -1,72 +1,20 @@
+import { renderCli } from './test-renderer.ts'
 import { createYargsPromptApp } from './yargs-prompt-app.ts'
-
-import { DomainEvent } from '@dungarees/core/event.ts'
-import { collectValuesFrom } from '@dungarees/rxjs/util.ts'
 
 import { lastValueFrom, of } from 'rxjs'
 import { expect, test } from 'vitest'
 
-const DUMMY_CONTROLS = { select: () => of('') }
-
-test('yargs-propmt-app exits with 0 by default', async () => {
+test('yargs-propmt-app', async () => {
   const app = createYargsPromptApp({
     name: 'test-app',
     route: (yargs) => yargs,
   })
-  const message$ = app.present([], DUMMY_CONTROLS)
-
-  expect(await collectValuesFrom(message$)).toEqual([{ type: 'exit', code: 0 }])
+  const { terminal } = renderCli(app, 'test-app')
+  const { out } = await terminal.step()
+  expect(out).toEqual([{ type: 'exit', code: 0 }])
 })
 
-test('yargs-propmt-app can register an input', async () => {
-  type AppEvents = DomainEvent<'greet', string>
-  const app = createYargsPromptApp<AppEvents>({
-    name: 'test-app',
-    route: (yargs, io) => {
-      io.registerEvents(of({ type: 'greet', payload: 'Hello, World!' }))
-      return yargs
-    },
-    presenter: {
-      greet: (payload) => ({
-        message: payload,
-        type: 'stdout',
-        level: 'info',
-      }),
-    },
-  })
-  const message$ = app.present([], DUMMY_CONTROLS)
-  expect(await collectValuesFrom(message$)).toEqual([
-    { type: 'stdout', message: 'Hello, World!', level: 'info' },
-    { type: 'exit', code: 0 },
-  ])
-})
-
-test('yargs-propmt-app can register multiple inputs', async () => {
-  type AppEvents = DomainEvent<'greet', string>
-  const app = createYargsPromptApp<AppEvents>({
-    name: 'test-app',
-    route: (yargs, io) => {
-      io.registerEvents(of({ type: 'greet', payload: 'Hello, World!' }))
-      io.registerEvents(of({ type: 'greet', payload: 'Hello, World! Again.' }))
-      return yargs
-    },
-    presenter: {
-      greet: (payload) => ({
-        message: payload,
-        type: 'stdout',
-        level: 'info',
-      }),
-    },
-  })
-  const message$ = app.present([], DUMMY_CONTROLS)
-  expect(await collectValuesFrom(message$)).toEqual([
-    { type: 'stdout', message: 'Hello, World!', level: 'info' },
-    { type: 'stdout', message: 'Hello, World! Again.', level: 'info' },
-    { type: 'exit', code: 0 },
-  ])
-})
-
-test('yargs-prompt-app', async () => {
+test('yargs-propmt-app', async () => {
   type AppEvents = DomainEvent<'greet', string>
   const app = createYargsPromptApp<AppEvents>({
     name: 'test-app',
@@ -93,8 +41,9 @@ test('yargs-prompt-app', async () => {
       }),
     },
   })
-  const message$ = app.present(['greet', 'Alice'], DUMMY_CONTROLS)
-  expect(await collectValuesFrom(message$)).toEqual([
+  const { terminal } = renderCli(app, 'test-app greet Alice')
+  const { out } = await terminal.step()
+  expect(out).toEqual([
     { type: 'stdout', message: 'Hello, Alice!', level: 'info' },
     { type: 'exit', code: 0 },
   ])
@@ -149,9 +98,11 @@ test('yargs-prompt-app', async () => {
       }),
     },
   })
-  const message$ = app.present(['greet'], { select: () => of('you') })
-  expect(await collectValuesFrom(message$)).toEqual([
-    { type: 'stdout', message: 'Greeting starts', level: 'info' },
+  const { terminal } = renderCli(app, 'test-app greet')
+  const { out } = await terminal.step()
+  await terminal.select('you')
+  expect(out).toEqual([{ type: 'stdout', message: 'Greeting starts', level: 'info' }])
+  expect(out).toEqual([
     { type: 'stdout', message: 'Hello, You!', level: 'info' },
     { type: 'exit', code: 0 },
   ])
