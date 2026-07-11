@@ -1,22 +1,26 @@
 import { createYargsPromptApp } from './yargs-prompt-app.ts'
 
+import { DomainEvent } from '@dungarees/core/event.ts'
 import { collectValuesFrom } from '@dungarees/rxjs/util.ts'
 
 import { lastValueFrom, of } from 'rxjs'
 import { expect, test } from 'vitest'
+
+const DUMMY_CONTROLS = { select: () => of('') }
 
 test('yargs-propmt-app exits with 0 by default', async () => {
   const app = createYargsPromptApp({
     name: 'test-app',
     route: (yargs) => yargs,
   })
-  const message$ = app.present([])
+  const message$ = app.present([], DUMMY_CONTROLS)
 
   expect(await collectValuesFrom(message$)).toEqual([{ type: 'exit', code: 0 }])
 })
 
 test('yargs-propmt-app can register an input', async () => {
-  const app = createYargsPromptApp({
+  type AppEvents = DomainEvent<'greet', string>
+  const app = createYargsPromptApp<AppEvents>({
     name: 'test-app',
     route: (yargs, io) => {
       io.registerEvents(of({ type: 'greet', payload: 'Hello, World!' }))
@@ -30,7 +34,7 @@ test('yargs-propmt-app can register an input', async () => {
       }),
     },
   })
-  const message$ = app.present([])
+  const message$ = app.present([], DUMMY_CONTROLS)
   expect(await collectValuesFrom(message$)).toEqual([
     { type: 'stdout', message: 'Hello, World!', level: 'info' },
     { type: 'exit', code: 0 },
@@ -38,7 +42,8 @@ test('yargs-propmt-app can register an input', async () => {
 })
 
 test('yargs-propmt-app can register multiple inputs', async () => {
-  const app = createYargsPromptApp({
+  type AppEvents = DomainEvent<'greet', string>
+  const app = createYargsPromptApp<AppEvents>({
     name: 'test-app',
     route: (yargs, io) => {
       io.registerEvents(of({ type: 'greet', payload: 'Hello, World!' }))
@@ -53,7 +58,7 @@ test('yargs-propmt-app can register multiple inputs', async () => {
       }),
     },
   })
-  const message$ = app.present([])
+  const message$ = app.present([], DUMMY_CONTROLS)
   expect(await collectValuesFrom(message$)).toEqual([
     { type: 'stdout', message: 'Hello, World!', level: 'info' },
     { type: 'stdout', message: 'Hello, World! Again.', level: 'info' },
@@ -61,35 +66,9 @@ test('yargs-propmt-app can register multiple inputs', async () => {
   ])
 })
 
-/*
-test('yargs-propmt-app', async () => {
-  const app = createYargsPromptApp({
-    name: 'test-app',
-    route: (yargs) => yargs,
-  })
-  const { terminal } = await app.render('test-app')
-  const { out } = await terminal.step()
-  expect(out).toEqual([{ type: 'exit', code: 0 }])
-})
-
-test('yargs-propmt-app', async () => {
-  const app = createYargsPromptApp({
-    name: 'test-app',
-    route: (yargs, io) => {
-      io.sendToOut(of({ type: 'stdout', message: 'Hello, Alice!', level: 'info' }))
-      return yargs
-    },
-  })
-  const { terminal } = await app.render('test-app')
-  const { out } = await terminal.step()
-  expect(out).toEqual([
-    { type: 'stdout', message: 'Hello, Alice!', level: 'info' },
-    { type: 'exit', code: 0 },
-  ])
-})
-
 test('yargs-prompt-app', async () => {
-  const app = createYargsPromptApp({
+  type AppEvents = DomainEvent<'greet', string>
+  const app = createYargsPromptApp<AppEvents>({
     name: 'test-app',
     route: (yargs, io) =>
       yargs.command(
@@ -103,30 +82,35 @@ test('yargs-prompt-app', async () => {
           })
         },
         async (argv) => {
-          await io.sendToOut(of({ type: 'stdout', message: `Hello, ${argv.name}!`, level: 'info' }))
+          io.registerEvents(of({ type: 'greet', payload: `Hello, ${argv.name}!` }))
         },
       ),
+    presenter: {
+      greet: (payload) => ({
+        message: payload,
+        type: 'stdout',
+        level: 'info',
+      }),
+    },
   })
-  const { terminal } = await app.render('test-app greet Alice')
-  const { out } = await terminal.step()
-  expect(out).toEqual([
+  const message$ = app.present(['greet', 'Alice'], DUMMY_CONTROLS)
+  expect(await collectValuesFrom(message$)).toEqual([
     { type: 'stdout', message: 'Hello, Alice!', level: 'info' },
     { type: 'exit', code: 0 },
   ])
 })
 
 test('yargs-prompt-app', async () => {
-  const app = createYargsPromptApp({
+  type AppEvents = DomainEvent<'greet', string> | DomainEvent<'start', undefined>
+  const app = createYargsPromptApp<AppEvents>({
     name: 'test-app',
     route: (yargs, io) =>
       yargs.command(
         'greet',
         'Greet someone',
-        (yargs) => {},
-        async (argv) => {
-          await lastValueFrom(
-            io.sendToOut(of({ type: 'stdout', message: `Greeting Starts`, level: 'info' })),
-          )
+        () => {},
+        async () => {
+          io.registerEvents(of({ type: 'start', payload: undefined }))
           const name = await lastValueFrom(
             io.select({
               message: 'Select who to greet',
@@ -144,26 +128,31 @@ test('yargs-prompt-app', async () => {
               ],
             }),
           )
-          await lastValueFrom(
-            io.sendToOut(
-              of({
-                type: 'stdout',
-                message: `Hello, ${name === 'you' ? 'You' : 'Me'}!`,
-                level: 'info',
-              }),
-            ),
+          io.registerEvents(
+            of({
+              type: 'greet',
+              payload: `Hello, ${name === 'you' ? 'You' : 'Me'}!`,
+            }),
           )
         },
       ),
+    presenter: {
+      start: () => ({
+        message: 'Greeting starts',
+        type: 'stdout',
+        level: 'info',
+      }),
+      greet: (payload) => ({
+        message: payload,
+        type: 'stdout',
+        level: 'info',
+      }),
+    },
   })
-  const { terminal } = await app.render('test-app greet Alice')
-  const { out } = await terminal.step()
-  expect(out).toEqual([{ type: 'stdout', message: 'Greeting Starts', level: 'info' }])
-  await terminal.select('you')
-  const { out: out2 } = await terminal.step()
-  expect(out2).toEqual([
+  const message$ = app.present(['greet'], { select: () => of('you') })
+  expect(await collectValuesFrom(message$)).toEqual([
+    { type: 'stdout', message: 'Greeting starts', level: 'info' },
     { type: 'stdout', message: 'Hello, You!', level: 'info' },
     { type: 'exit', code: 0 },
   ])
 })
-*/

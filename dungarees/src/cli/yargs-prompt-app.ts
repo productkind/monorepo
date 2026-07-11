@@ -1,41 +1,21 @@
 import type { DomainEvent } from '@dungarees/core/event.ts'
 
-import {
-  buffer,
-  concatAll,
-  connectable,
-  endWith,
-  firstValueFrom,
-  from,
-  map,
-  Observable,
-  ReplaySubject,
-  share,
-  skip,
-  Subject,
-  take,
-  takeUntil,
-  zip,
-} from 'rxjs'
+import { concatAll, endWith, from, map, Observable, ReplaySubject, takeUntil } from 'rxjs'
 import yargs from 'yargs'
 
 type YargsApp = typeof yargs
 
-type YargsPromptApp = {
-  present: (argv: string[]) => Observable<CliMessage>
+export type CliControls = {
+  select: (options: CliSelectOptions) => Observable<string>
 }
 
-type Terminal = {
-  step: () => Promise<{
-    out: CliMessage[]
-  }>
-  select: (option: string) => Promise<void>
+export type YargsPromptApp = {
+  present: (argv: string[], controls: CliControls) => Observable<CliMessage>
 }
 
 type CliIo<EVENTS extends DomainEvent> = {
   registerEvents: (message$: Observable<EVENTS>) => void
-  select?: (options: CliSelectOptions) => Observable<string>
-}
+} & CliControls
 
 type Presenter<EVENTS extends DomainEvent> = {
   [TYPE in EVENTS['type']]: (payload: Extract<EVENTS, { type: TYPE }>['payload']) => CliMessage
@@ -84,7 +64,7 @@ export const createYargsPromptApp = <EVENTS extends DomainEvent = DomainEvent>({
   route,
   presenter,
 }: YargsPromptAppOptions<EVENTS>): YargsPromptApp => ({
-  present: (argv) => {
+  present: (argv, controls) => {
     const registeredOuts$ = new ReplaySubject<Observable<CliMessage>>(Infinity)
     const io: CliIo<EVENTS> = {
       registerEvents: (events$) => {
@@ -94,9 +74,10 @@ export const createYargsPromptApp = <EVENTS extends DomainEvent = DomainEvent>({
           // constraint `DomainEvent`'s `type` field is declared as `string`, discarding the
           // caller's literal. The cast recovers it. Droppable if TS ever resolves property
           // access against the instantiated type argument rather than the constraint.
-          events$.pipe(map((event) => presenter![event.type as EVENTS['type']](event.payload))),
+          events$.pipe(map((event) => presenter[event.type as EVENTS['type']](event.payload))),
         )
       },
+      ...controls,
     }
     const parsed$ = from(route(yargs(), io).parseAsync(argv))
     return registeredOuts$.pipe(
