@@ -1,0 +1,812 @@
+[
+  {
+    "text": "Ever",
+    "start": 0,
+    "end": 0.16
+  },
+  {
+    "text": "noticed",
+    "start": 0.22,
+    "end": 0.64
+  },
+  {
+    "text": "how",
+    "start": 0.68,
+    "end": 0.8
+  },
+  {
+    "text": "a",
+    "start": 0.84,
+    "end": 0.88
+  },
+  {
+    "text": "chat",
+    "start": 0.944,
+    "end": 1.2
+  },
+  {
+    "text": "assistant",
+    "start": 1.248,
+    "end": 1.68
+  },
+  {
+    "text": "will",
+    "start": 1.696,
+    "end": 1.76
+  },
+  {
+    "text": "apologise",
+    "start": 1.84,
+    "end": 2.56
+  },
+  {
+    "text": "the",
+    "start": 2.6,
+    "end": 2.72
+  },
+  {
+    "text": "second",
+    "start": 2.777,
+    "end": 3.12
+  },
+  {
+    "text": "you",
+    "start": 3.14,
+    "end": 3.2
+  },
+  {
+    "text": "correct",
+    "start": 3.26,
+    "end": 3.68
+  },
+  {
+    "text": "it.",
+    "start": 3.76,
+    "end": 4.08
+  },
+  {
+    "text": "The",
+    "start": 4.3,
+    "end": 4.96
+  },
+  {
+    "text": "mechanism",
+    "start": 5.016,
+    "end": 5.52
+  },
+  {
+    "text": "is",
+    "start": 5.573,
+    "end": 5.68
+  },
+  {
+    "text": "simpler",
+    "start": 5.73,
+    "end": 6.08
+  },
+  {
+    "text": "than",
+    "start": 6.096,
+    "end": 6.16
+  },
+  {
+    "text": "it",
+    "start": 6.213,
+    "end": 6.32
+  },
+  {
+    "text": "looks.",
+    "start": 6.4,
+    "end": 6.88
+  },
+  {
+    "text": "A",
+    "start": 7.54,
+    "end": 7.76
+  },
+  {
+    "text": "language",
+    "start": 7.813,
+    "end": 8.24
+  },
+  {
+    "text": "model",
+    "start": 8.293,
+    "end": 8.56
+  },
+  {
+    "text": "is",
+    "start": 8.613,
+    "end": 8.72
+  },
+  {
+    "text": "essentially",
+    "start": 8.76,
+    "end": 9.2
+  },
+  {
+    "text": "a",
+    "start": 9.28,
+    "end": 9.36
+  },
+  {
+    "text": "glorified",
+    "start": 9.424,
+    "end": 10.08
+  },
+  {
+    "text": "autocomplete.",
+    "start": 10.148,
+    "end": 11.04
+  },
+  {
+    "text": "It",
+    "start": 11.253,
+    "end": 11.68
+  },
+  {
+    "text": "predicts",
+    "start": 11.724,
+    "end": 12.08
+  },
+  {
+    "text": "the",
+    "start": 12.12,
+    "end": 12.24
+  },
+  {
+    "text": "next",
+    "start": 12.288,
+    "end": 12.48
+  },
+  {
+    "text": "word",
+    "start": 12.544,
+    "end": 12.8
+  },
+  {
+    "text": "based",
+    "start": 12.853,
+    "end": 13.12
+  },
+  {
+    "text": "on",
+    "start": 13.173,
+    "end": 13.28
+  },
+  {
+    "text": "what",
+    "start": 13.312,
+    "end": 13.44
+  },
+  {
+    "text": "came",
+    "start": 13.472,
+    "end": 13.6
+  },
+  {
+    "text": "before.",
+    "start": 13.68,
+    "end": 14.24
+  },
+  {
+    "text": "When",
+    "start": 14.416,
+    "end": 15.12
+  },
+  {
+    "text": "you",
+    "start": 15.16,
+    "end": 15.28
+  },
+  {
+    "text": "type",
+    "start": 15.36,
+    "end": 15.68
+  },
+  {
+    "text": "\"you",
+    "start": 16,
+    "end": 16.4
+  },
+  {
+    "text": "are",
+    "start": 16.44,
+    "end": 16.56
+  },
+  {
+    "text": "wrong,",
+    "start": 16.613,
+    "end": 16.96
+  },
+  {
+    "text": "the",
+    "start": 16.98,
+    "end": 17.04
+  },
+  {
+    "text": "actual",
+    "start": 17.097,
+    "end": 17.44
+  },
+  {
+    "text": "answer",
+    "start": 17.509,
+    "end": 17.92
+  },
+  {
+    "text": "is...\"",
+    "start": 18.053,
+    "end": 19.12
+  },
+  {
+    "text": "the",
+    "start": 19.14,
+    "end": 19.2
+  },
+  {
+    "text": "model",
+    "start": 19.253,
+    "end": 19.52
+  },
+  {
+    "text": "looks",
+    "start": 19.56,
+    "end": 19.76
+  },
+  {
+    "text": "at",
+    "start": 19.787,
+    "end": 19.84
+  },
+  {
+    "text": "everything",
+    "start": 19.876,
+    "end": 20.24
+  },
+  {
+    "text": "so",
+    "start": 20.32,
+    "end": 20.48
+  },
+  {
+    "text": "far",
+    "start": 20.56,
+    "end": 20.8
+  },
+  {
+    "text": "and",
+    "start": 20.84,
+    "end": 20.96
+  },
+  {
+    "text": "asks:",
+    "start": 21.056,
+    "end": 21.52
+  },
+  {
+    "text": "what",
+    "start": 21.68,
+    "end": 22.32
+  },
+  {
+    "text": "would",
+    "start": 22.347,
+    "end": 22.48
+  },
+  {
+    "text": "a",
+    "start": 22.52,
+    "end": 22.56
+  },
+  {
+    "text": "human",
+    "start": 22.627,
+    "end": 22.96
+  },
+  {
+    "text": "typically",
+    "start": 23.008,
+    "end": 23.44
+  },
+  {
+    "text": "say",
+    "start": 23.5,
+    "end": 23.68
+  },
+  {
+    "text": "next?",
+    "start": 23.776,
+    "end": 24.24
+  },
+  {
+    "text": "The",
+    "start": 24.56,
+    "end": 25.28
+  },
+  {
+    "text": "most",
+    "start": 25.328,
+    "end": 25.52
+  },
+  {
+    "text": "likely",
+    "start": 25.566,
+    "end": 25.84
+  },
+  {
+    "text": "continuation,",
+    "start": 25.914,
+    "end": 26.88
+  },
+  {
+    "text": "based",
+    "start": 26.92,
+    "end": 27.12
+  },
+  {
+    "text": "on",
+    "start": 27.173,
+    "end": 27.28
+  },
+  {
+    "text": "the",
+    "start": 27.3,
+    "end": 27.36
+  },
+  {
+    "text": "entire",
+    "start": 27.429,
+    "end": 27.84
+  },
+  {
+    "text": "internet,",
+    "start": 27.902,
+    "end": 28.8
+  },
+  {
+    "text": "is",
+    "start": 28.853,
+    "end": 28.96
+  },
+  {
+    "text": "a",
+    "start": 29.06,
+    "end": 29.16
+  },
+  {
+    "text": "polite",
+    "start": 29.189,
+    "end": 29.36
+  },
+  {
+    "text": "apology",
+    "start": 29.43,
+    "end": 29.92
+  },
+  {
+    "text": "followed",
+    "start": 29.973,
+    "end": 30.4
+  },
+  {
+    "text": "by",
+    "start": 30.453,
+    "end": 30.56
+  },
+  {
+    "text": "a",
+    "start": 30.6,
+    "end": 30.64
+  },
+  {
+    "text": "corrected",
+    "start": 30.68,
+    "end": 31.04
+  },
+  {
+    "text": "answer.",
+    "start": 31.109,
+    "end": 31.6
+  },
+  {
+    "text": "So",
+    "start": 31.893,
+    "end": 32.48
+  },
+  {
+    "text": "that",
+    "start": 32.512,
+    "end": 32.64
+  },
+  {
+    "text": "is",
+    "start": 32.693,
+    "end": 32.8
+  },
+  {
+    "text": "what",
+    "start": 32.832,
+    "end": 32.96
+  },
+  {
+    "text": "you",
+    "start": 33,
+    "end": 33.12
+  },
+  {
+    "text": "get.",
+    "start": 33.2,
+    "end": 33.52
+  },
+  {
+    "text": "The",
+    "start": 33.78,
+    "end": 34.32
+  },
+  {
+    "text": "model",
+    "start": 34.387,
+    "end": 34.72
+  },
+  {
+    "text": "does",
+    "start": 34.752,
+    "end": 34.88
+  },
+  {
+    "text": "not",
+    "start": 34.94,
+    "end": 35.12
+  },
+  {
+    "text": "know",
+    "start": 35.152,
+    "end": 35.28
+  },
+  {
+    "text": "it",
+    "start": 35.333,
+    "end": 35.44
+  },
+  {
+    "text": "was",
+    "start": 35.48,
+    "end": 35.6
+  },
+  {
+    "text": "wrong.",
+    "start": 35.667,
+    "end": 36.08
+  },
+  {
+    "text": "It",
+    "start": 36.24,
+    "end": 36.56
+  },
+  {
+    "text": "does",
+    "start": 36.592,
+    "end": 36.72
+  },
+  {
+    "text": "not",
+    "start": 36.76,
+    "end": 36.88
+  },
+  {
+    "text": "remember",
+    "start": 36.924,
+    "end": 37.28
+  },
+  {
+    "text": "being",
+    "start": 37.333,
+    "end": 37.6
+  },
+  {
+    "text": "wrong.",
+    "start": 37.653,
+    "end": 38.08
+  },
+  {
+    "text": "It",
+    "start": 38.267,
+    "end": 38.64
+  },
+  {
+    "text": "is",
+    "start": 38.693,
+    "end": 38.8
+  },
+  {
+    "text": "just",
+    "start": 38.832,
+    "end": 38.96
+  },
+  {
+    "text": "predicting",
+    "start": 39.011,
+    "end": 39.52
+  },
+  {
+    "text": "what",
+    "start": 39.536,
+    "end": 39.6
+  },
+  {
+    "text": "a",
+    "start": 39.64,
+    "end": 39.68
+  },
+  {
+    "text": "helpful",
+    "start": 39.74,
+    "end": 40.16
+  },
+  {
+    "text": "person",
+    "start": 40.217,
+    "end": 40.56
+  },
+  {
+    "text": "would",
+    "start": 40.587,
+    "end": 40.72
+  },
+  {
+    "text": "say",
+    "start": 40.8,
+    "end": 41.04
+  },
+  {
+    "text": "after",
+    "start": 41.093,
+    "end": 41.36
+  },
+  {
+    "text": "being",
+    "start": 41.387,
+    "end": 41.52
+  },
+  {
+    "text": "corrected.",
+    "start": 41.592,
+    "end": 42.32
+  },
+  {
+    "text": "And",
+    "start": 42.48,
+    "end": 42.96
+  },
+  {
+    "text": "a",
+    "start": 43,
+    "end": 43.04
+  },
+  {
+    "text": "helpful",
+    "start": 43.09,
+    "end": 43.44
+  },
+  {
+    "text": "person",
+    "start": 43.497,
+    "end": 43.84
+  },
+  {
+    "text": "usually",
+    "start": 43.89,
+    "end": 44.24
+  },
+  {
+    "text": "starts",
+    "start": 44.297,
+    "end": 44.64
+  },
+  {
+    "text": "with",
+    "start": 44.72,
+    "end": 45.04
+  },
+  {
+    "text": "\"You're",
+    "start": 45.4,
+    "end": 45.92
+  },
+  {
+    "text": "right,",
+    "start": 45.973,
+    "end": 46.32
+  },
+  {
+    "text": "I",
+    "start": 46.4,
+    "end": 46.48
+  },
+  {
+    "text": "apologise...\"",
+    "start": 46.552,
+    "end": 47.36
+  },
+  {
+    "text": "Once",
+    "start": 48.08,
+    "end": 48.56
+  },
+  {
+    "text": "you",
+    "start": 48.6,
+    "end": 48.72
+  },
+  {
+    "text": "see",
+    "start": 48.78,
+    "end": 48.96
+  },
+  {
+    "text": "this,",
+    "start": 49.008,
+    "end": 49.68
+  },
+  {
+    "text": "chat",
+    "start": 49.728,
+    "end": 49.92
+  },
+  {
+    "text": "assistants",
+    "start": 49.971,
+    "end": 50.48
+  },
+  {
+    "text": "stop",
+    "start": 50.528,
+    "end": 50.72
+  },
+  {
+    "text": "feeling",
+    "start": 50.76,
+    "end": 51.04
+  },
+  {
+    "text": "like",
+    "start": 51.072,
+    "end": 51.2
+  },
+  {
+    "text": "they",
+    "start": 51.232,
+    "end": 51.36
+  },
+  {
+    "text": "are",
+    "start": 51.4,
+    "end": 51.52
+  },
+  {
+    "text": "learning",
+    "start": 51.556,
+    "end": 51.84
+  },
+  {
+    "text": "from",
+    "start": 51.888,
+    "end": 52.08
+  },
+  {
+    "text": "you.",
+    "start": 52.14,
+    "end": 52.48
+  },
+  {
+    "text": "They",
+    "start": 52.608,
+    "end": 53.12
+  },
+  {
+    "text": "are",
+    "start": 53.16,
+    "end": 53.28
+  },
+  {
+    "text": "just",
+    "start": 53.312,
+    "end": 53.44
+  },
+  {
+    "text": "very",
+    "start": 53.488,
+    "end": 53.68
+  },
+  {
+    "text": "good",
+    "start": 53.712,
+    "end": 53.84
+  },
+  {
+    "text": "at",
+    "start": 53.867,
+    "end": 53.92
+  },
+  {
+    "text": "predicting",
+    "start": 53.964,
+    "end": 54.4
+  },
+  {
+    "text": "what",
+    "start": 54.432,
+    "end": 54.56
+  },
+  {
+    "text": "humans",
+    "start": 54.629,
+    "end": 55.04
+  },
+  {
+    "text": "say",
+    "start": 55.08,
+    "end": 55.2
+  },
+  {
+    "text": "next.",
+    "start": 55.312,
+    "end": 55.84
+  },
+  {
+    "text": "If",
+    "start": 56.24,
+    "end": 56.88
+  },
+  {
+    "text": "you'd",
+    "start": 56.9,
+    "end": 57.04
+  },
+  {
+    "text": "like",
+    "start": 57.072,
+    "end": 57.2
+  },
+  {
+    "text": "to",
+    "start": 57.227,
+    "end": 57.28
+  },
+  {
+    "text": "learn",
+    "start": 57.32,
+    "end": 57.52
+  },
+  {
+    "text": "more",
+    "start": 57.552,
+    "end": 57.68
+  },
+  {
+    "text": "about",
+    "start": 57.733,
+    "end": 58
+  },
+  {
+    "text": "AI",
+    "start": 58.107,
+    "end": 58.32
+  },
+  {
+    "text": "calmly,",
+    "start": 58.411,
+    "end": 59.2
+  },
+  {
+    "text": "follow",
+    "start": 59.234,
+    "end": 59.44
+  },
+  {
+    "text": "along.",
+    "start": 59.507,
+    "end": 60
+  }
+]

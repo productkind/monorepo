@@ -1,0 +1,752 @@
+[
+  {
+    "text": "Training",
+    "start": 0,
+    "end": 0.32
+  },
+  {
+    "text": "a",
+    "start": 0.36,
+    "end": 0.4
+  },
+  {
+    "text": "language",
+    "start": 0.444,
+    "end": 0.8
+  },
+  {
+    "text": "model",
+    "start": 0.853,
+    "end": 1.12
+  },
+  {
+    "text": "needs",
+    "start": 1.173,
+    "end": 1.44
+  },
+  {
+    "text": "data.",
+    "start": 1.52,
+    "end": 1.92
+  },
+  {
+    "text": "A",
+    "start": 2.2,
+    "end": 2.48
+  },
+  {
+    "text": "lot",
+    "start": 2.56,
+    "end": 2.8
+  },
+  {
+    "text": "of",
+    "start": 2.827,
+    "end": 2.88
+  },
+  {
+    "text": "data.",
+    "start": 2.976,
+    "end": 3.44
+  },
+  {
+    "text": "The",
+    "start": 3.7,
+    "end": 4.24
+  },
+  {
+    "text": "pile",
+    "start": 4.304,
+    "end": 4.56
+  },
+  {
+    "text": "of",
+    "start": 4.587,
+    "end": 4.64
+  },
+  {
+    "text": "text",
+    "start": 4.72,
+    "end": 5.04
+  },
+  {
+    "text": "used",
+    "start": 5.088,
+    "end": 5.28
+  },
+  {
+    "text": "to",
+    "start": 5.307,
+    "end": 5.36
+  },
+  {
+    "text": "train",
+    "start": 5.4,
+    "end": 5.6
+  },
+  {
+    "text": "a",
+    "start": 5.64,
+    "end": 5.68
+  },
+  {
+    "text": "model",
+    "start": 5.733,
+    "end": 6
+  },
+  {
+    "text": "is",
+    "start": 6.053,
+    "end": 6.16
+  },
+  {
+    "text": "called",
+    "start": 6.194,
+    "end": 6.4
+  },
+  {
+    "text": "a",
+    "start": 6.44,
+    "end": 6.48
+  },
+  {
+    "text": "corpus.",
+    "start": 6.571,
+    "end": 7.28
+  },
+  {
+    "text": "It",
+    "start": 7.44,
+    "end": 7.76
+  },
+  {
+    "text": "can",
+    "start": 7.8,
+    "end": 7.92
+  },
+  {
+    "text": "be",
+    "start": 7.947,
+    "end": 8
+  },
+  {
+    "text": "almost",
+    "start": 8.046,
+    "end": 8.32
+  },
+  {
+    "text": "anything",
+    "start": 8.364,
+    "end": 8.72
+  },
+  {
+    "text": "written",
+    "start": 8.75,
+    "end": 8.96
+  },
+  {
+    "text": "down:",
+    "start": 9.04,
+    "end": 9.84
+  },
+  {
+    "text": "books,",
+    "start": 9.907,
+    "end": 10.32
+  },
+  {
+    "text": "articles,",
+    "start": 10.391,
+    "end": 11.04
+  },
+  {
+    "text": "websites,",
+    "start": 11.12,
+    "end": 11.84
+  },
+  {
+    "text": "code,",
+    "start": 11.936,
+    "end": 12.4
+  },
+  {
+    "text": "forum",
+    "start": 12.467,
+    "end": 12.8
+  },
+  {
+    "text": "posts,",
+    "start": 12.893,
+    "end": 13.76
+  },
+  {
+    "text": "Wikipedia,",
+    "start": 13.8,
+    "end": 14.4
+  },
+  {
+    "text": "product",
+    "start": 14.46,
+    "end": 14.88
+  },
+  {
+    "text": "reviews,",
+    "start": 14.96,
+    "end": 15.68
+  },
+  {
+    "text": "film",
+    "start": 15.712,
+    "end": 15.84
+  },
+  {
+    "text": "scripts.",
+    "start": 15.92,
+    "end": 16.56
+  },
+  {
+    "text": "The",
+    "start": 16.78,
+    "end": 17.44
+  },
+  {
+    "text": "more",
+    "start": 17.488,
+    "end": 17.68
+  },
+  {
+    "text": "variety,",
+    "start": 17.77,
+    "end": 18.72
+  },
+  {
+    "text": "the",
+    "start": 18.74,
+    "end": 18.8
+  },
+  {
+    "text": "better",
+    "start": 18.834,
+    "end": 19.04
+  },
+  {
+    "text": "the",
+    "start": 19.06,
+    "end": 19.12
+  },
+  {
+    "text": "model",
+    "start": 19.173,
+    "end": 19.44
+  },
+  {
+    "text": "gets",
+    "start": 19.488,
+    "end": 19.68
+  },
+  {
+    "text": "at",
+    "start": 19.733,
+    "end": 19.84
+  },
+  {
+    "text": "handling",
+    "start": 19.884,
+    "end": 20.24
+  },
+  {
+    "text": "questions",
+    "start": 20.288,
+    "end": 20.72
+  },
+  {
+    "text": "across",
+    "start": 20.766,
+    "end": 21.04
+  },
+  {
+    "text": "different",
+    "start": 21.072,
+    "end": 21.36
+  },
+  {
+    "text": "topics.",
+    "start": 21.451,
+    "end": 22.08
+  },
+  {
+    "text": "Before",
+    "start": 22.32,
+    "end": 23.28
+  },
+  {
+    "text": "any",
+    "start": 23.34,
+    "end": 23.52
+  },
+  {
+    "text": "of",
+    "start": 23.547,
+    "end": 23.6
+  },
+  {
+    "text": "it",
+    "start": 23.653,
+    "end": 23.76
+  },
+  {
+    "text": "is",
+    "start": 23.787,
+    "end": 23.84
+  },
+  {
+    "text": "fed",
+    "start": 23.9,
+    "end": 24.08
+  },
+  {
+    "text": "to",
+    "start": 24.107,
+    "end": 24.16
+  },
+  {
+    "text": "the",
+    "start": 24.18,
+    "end": 24.24
+  },
+  {
+    "text": "model,",
+    "start": 24.307,
+    "end": 25.12
+  },
+  {
+    "text": "the",
+    "start": 25.14,
+    "end": 25.2
+  },
+  {
+    "text": "corpus",
+    "start": 25.269,
+    "end": 25.68
+  },
+  {
+    "text": "has",
+    "start": 25.72,
+    "end": 25.84
+  },
+  {
+    "text": "to",
+    "start": 25.867,
+    "end": 25.92
+  },
+  {
+    "text": "be",
+    "start": 25.947,
+    "end": 26
+  },
+  {
+    "text": "cleaned.",
+    "start": 26.07,
+    "end": 26.72
+  },
+  {
+    "text": "Duplicates",
+    "start": 27.04,
+    "end": 27.84
+  },
+  {
+    "text": "get",
+    "start": 27.88,
+    "end": 28
+  },
+  {
+    "text": "removed.",
+    "start": 28.08,
+    "end": 28.72
+  },
+  {
+    "text": "Low-quality",
+    "start": 28.9,
+    "end": 29.84
+  },
+  {
+    "text": "text",
+    "start": 29.92,
+    "end": 30.24
+  },
+  {
+    "text": "gets",
+    "start": 30.288,
+    "end": 30.48
+  },
+  {
+    "text": "thrown",
+    "start": 30.526,
+    "end": 30.8
+  },
+  {
+    "text": "out.",
+    "start": 30.88,
+    "end": 31.28
+  },
+  {
+    "text": "Anything",
+    "start": 31.378,
+    "end": 32.16
+  },
+  {
+    "text": "that",
+    "start": 32.192,
+    "end": 32.32
+  },
+  {
+    "text": "would",
+    "start": 32.333,
+    "end": 32.4
+  },
+  {
+    "text": "confuse",
+    "start": 32.48,
+    "end": 33.04
+  },
+  {
+    "text": "or",
+    "start": 33.067,
+    "end": 33.12
+  },
+  {
+    "text": "mislead",
+    "start": 33.18,
+    "end": 33.6
+  },
+  {
+    "text": "the",
+    "start": 33.62,
+    "end": 33.68
+  },
+  {
+    "text": "model",
+    "start": 33.733,
+    "end": 34
+  },
+  {
+    "text": "gets",
+    "start": 34.048,
+    "end": 34.24
+  },
+  {
+    "text": "pulled",
+    "start": 34.274,
+    "end": 34.48
+  },
+  {
+    "text": "aside.",
+    "start": 34.56,
+    "end": 35.04
+  },
+  {
+    "text": "Anthropic",
+    "start": 35.312,
+    "end": 36.48
+  },
+  {
+    "text": "and",
+    "start": 36.52,
+    "end": 36.64
+  },
+  {
+    "text": "OpenAI",
+    "start": 36.72,
+    "end": 37.36
+  },
+  {
+    "text": "rarely",
+    "start": 37.429,
+    "end": 37.84
+  },
+  {
+    "text": "gather",
+    "start": 37.886,
+    "end": 38.16
+  },
+  {
+    "text": "all",
+    "start": 38.2,
+    "end": 38.32
+  },
+  {
+    "text": "this",
+    "start": 38.352,
+    "end": 38.48
+  },
+  {
+    "text": "data",
+    "start": 38.544,
+    "end": 38.8
+  },
+  {
+    "text": "themselves.",
+    "start": 38.865,
+    "end": 39.6
+  },
+  {
+    "text": "They",
+    "start": 39.696,
+    "end": 40.08
+  },
+  {
+    "text": "buy",
+    "start": 40.14,
+    "end": 40.32
+  },
+  {
+    "text": "most",
+    "start": 40.384,
+    "end": 40.64
+  },
+  {
+    "text": "of",
+    "start": 40.667,
+    "end": 40.72
+  },
+  {
+    "text": "it.",
+    "start": 40.827,
+    "end": 41.44
+  },
+  {
+    "text": "A",
+    "start": 41.64,
+    "end": 41.84
+  },
+  {
+    "text": "whole",
+    "start": 41.893,
+    "end": 42.16
+  },
+  {
+    "text": "industry",
+    "start": 42.222,
+    "end": 42.72
+  },
+  {
+    "text": "of",
+    "start": 42.747,
+    "end": 42.8
+  },
+  {
+    "text": "data",
+    "start": 42.864,
+    "end": 43.12
+  },
+  {
+    "text": "brokers",
+    "start": 43.18,
+    "end": 43.6
+  },
+  {
+    "text": "hoovers",
+    "start": 43.653,
+    "end": 44
+  },
+  {
+    "text": "up",
+    "start": 44.053,
+    "end": 44.16
+  },
+  {
+    "text": "huge",
+    "start": 44.256,
+    "end": 44.64
+  },
+  {
+    "text": "chunks",
+    "start": 44.697,
+    "end": 45.04
+  },
+  {
+    "text": "of",
+    "start": 45.067,
+    "end": 45.12
+  },
+  {
+    "text": "the",
+    "start": 45.14,
+    "end": 45.2
+  },
+  {
+    "text": "internet,",
+    "start": 45.253,
+    "end": 46.16
+  },
+  {
+    "text": "cleans",
+    "start": 46.217,
+    "end": 46.56
+  },
+  {
+    "text": "it,",
+    "start": 46.64,
+    "end": 47.04
+  },
+  {
+    "text": "packages",
+    "start": 47.093,
+    "end": 47.52
+  },
+  {
+    "text": "it,",
+    "start": 47.573,
+    "end": 48.16
+  },
+  {
+    "text": "and",
+    "start": 48.18,
+    "end": 48.24
+  },
+  {
+    "text": "sells",
+    "start": 48.307,
+    "end": 48.64
+  },
+  {
+    "text": "the",
+    "start": 48.66,
+    "end": 48.72
+  },
+  {
+    "text": "finished",
+    "start": 48.764,
+    "end": 49.12
+  },
+  {
+    "text": "corpus",
+    "start": 49.189,
+    "end": 49.6
+  },
+  {
+    "text": "to",
+    "start": 49.627,
+    "end": 49.68
+  },
+  {
+    "text": "whoever",
+    "start": 49.73,
+    "end": 50.08
+  },
+  {
+    "text": "is",
+    "start": 50.133,
+    "end": 50.24
+  },
+  {
+    "text": "training",
+    "start": 50.276,
+    "end": 50.56
+  },
+  {
+    "text": "a",
+    "start": 50.6,
+    "end": 50.64
+  },
+  {
+    "text": "model.",
+    "start": 50.707,
+    "end": 51.12
+  },
+  {
+    "text": "One",
+    "start": 51.4,
+    "end": 52.24
+  },
+  {
+    "text": "of",
+    "start": 52.267,
+    "end": 52.32
+  },
+  {
+    "text": "the",
+    "start": 52.36,
+    "end": 52.48
+  },
+  {
+    "text": "least",
+    "start": 52.52,
+    "end": 52.72
+  },
+  {
+    "text": "visible,",
+    "start": 52.77,
+    "end": 53.28
+  },
+  {
+    "text": "most",
+    "start": 53.328,
+    "end": 53.52
+  },
+  {
+    "text": "consequential",
+    "start": 53.571,
+    "end": 54.24
+  },
+  {
+    "text": "industries",
+    "start": 54.291,
+    "end": 54.8
+  },
+  {
+    "text": "in",
+    "start": 54.853,
+    "end": 54.96
+  },
+  {
+    "text": "AI.",
+    "start": 55.12,
+    "end": 55.52
+  },
+  {
+    "text": "If",
+    "start": 55.867,
+    "end": 56.4
+  },
+  {
+    "text": "you",
+    "start": 56.42,
+    "end": 56.48
+  },
+  {
+    "text": "would",
+    "start": 56.507,
+    "end": 56.64
+  },
+  {
+    "text": "like",
+    "start": 56.672,
+    "end": 56.8
+  },
+  {
+    "text": "to",
+    "start": 56.827,
+    "end": 56.88
+  },
+  {
+    "text": "learn",
+    "start": 56.92,
+    "end": 57.12
+  },
+  {
+    "text": "more,",
+    "start": 57.184,
+    "end": 57.52
+  },
+  {
+    "text": "follow",
+    "start": 57.554,
+    "end": 57.76
+  },
+  {
+    "text": "along.",
+    "start": 57.827,
+    "end": 58.32
+  }
+]

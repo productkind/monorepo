@@ -1,0 +1,782 @@
+[
+  {
+    "text": "Most",
+    "start": 0,
+    "end": 0.16
+  },
+  {
+    "text": "chat",
+    "start": 0.208,
+    "end": 0.4
+  },
+  {
+    "text": "assistants",
+    "start": 0.444,
+    "end": 0.88
+  },
+  {
+    "text": "come",
+    "start": 0.928,
+    "end": 1.12
+  },
+  {
+    "text": "with",
+    "start": 1.152,
+    "end": 1.28
+  },
+  {
+    "text": "a",
+    "start": 1.32,
+    "end": 1.36
+  },
+  {
+    "text": "hidden",
+    "start": 1.394,
+    "end": 1.6
+  },
+  {
+    "text": "set",
+    "start": 1.66,
+    "end": 1.84
+  },
+  {
+    "text": "of",
+    "start": 1.867,
+    "end": 1.92
+  },
+  {
+    "text": "instructions",
+    "start": 1.969,
+    "end": 2.56
+  },
+  {
+    "text": "called",
+    "start": 2.606,
+    "end": 2.88
+  },
+  {
+    "text": "a",
+    "start": 2.96,
+    "end": 3.04
+  },
+  {
+    "text": "system",
+    "start": 3.097,
+    "end": 3.44
+  },
+  {
+    "text": "prompt.",
+    "start": 3.509,
+    "end": 4.08
+  },
+  {
+    "text": "Most",
+    "start": 4.24,
+    "end": 4.88
+  },
+  {
+    "text": "companies",
+    "start": 4.928,
+    "end": 5.36
+  },
+  {
+    "text": "keep",
+    "start": 5.392,
+    "end": 5.52
+  },
+  {
+    "text": "theirs",
+    "start": 5.554,
+    "end": 5.76
+  },
+  {
+    "text": "private.",
+    "start": 5.82,
+    "end": 6.32
+  },
+  {
+    "text": "Anthropic,",
+    "start": 6.496,
+    "end": 7.68
+  },
+  {
+    "text": "the",
+    "start": 7.7,
+    "end": 7.76
+  },
+  {
+    "text": "company",
+    "start": 7.81,
+    "end": 8.16
+  },
+  {
+    "text": "behind",
+    "start": 8.206,
+    "end": 8.48
+  },
+  {
+    "text": "Claude,",
+    "start": 8.537,
+    "end": 8.96
+  },
+  {
+    "text": "publishes",
+    "start": 9.008,
+    "end": 9.44
+  },
+  {
+    "text": "theirs.",
+    "start": 9.509,
+    "end": 10.16
+  },
+  {
+    "text": "You",
+    "start": 10.36,
+    "end": 10.72
+  },
+  {
+    "text": "can",
+    "start": 10.76,
+    "end": 10.88
+  },
+  {
+    "text": "read",
+    "start": 10.912,
+    "end": 11.04
+  },
+  {
+    "text": "the",
+    "start": 11.06,
+    "end": 11.12
+  },
+  {
+    "text": "current",
+    "start": 11.16,
+    "end": 11.44
+  },
+  {
+    "text": "one",
+    "start": 11.5,
+    "end": 11.68
+  },
+  {
+    "text": "on",
+    "start": 11.733,
+    "end": 11.84
+  },
+  {
+    "text": "docs.anthropic.com.",
+    "start": 11.92,
+    "end": 13.76
+  },
+  {
+    "text": "It",
+    "start": 14,
+    "end": 14.48
+  },
+  {
+    "text": "is",
+    "start": 14.533,
+    "end": 14.64
+  },
+  {
+    "text": "thousands",
+    "start": 14.696,
+    "end": 15.2
+  },
+  {
+    "text": "of",
+    "start": 15.227,
+    "end": 15.28
+  },
+  {
+    "text": "words",
+    "start": 15.333,
+    "end": 15.6
+  },
+  {
+    "text": "long,",
+    "start": 15.68,
+    "end": 16.32
+  },
+  {
+    "text": "and",
+    "start": 16.36,
+    "end": 16.48
+  },
+  {
+    "text": "full",
+    "start": 16.512,
+    "end": 16.64
+  },
+  {
+    "text": "of",
+    "start": 16.667,
+    "end": 16.72
+  },
+  {
+    "text": "small,",
+    "start": 16.787,
+    "end": 17.28
+  },
+  {
+    "text": "surprisingly",
+    "start": 17.329,
+    "end": 17.92
+  },
+  {
+    "text": "human",
+    "start": 18,
+    "end": 18.4
+  },
+  {
+    "text": "notes.",
+    "start": 18.493,
+    "end": 19
+  },
+  {
+    "text": "Claude",
+    "start": 19.2,
+    "end": 20.16
+  },
+  {
+    "text": "is",
+    "start": 20.187,
+    "end": 20.24
+  },
+  {
+    "text": "told",
+    "start": 20.304,
+    "end": 20.56
+  },
+  {
+    "text": "to",
+    "start": 20.587,
+    "end": 20.64
+  },
+  {
+    "text": "avoid",
+    "start": 20.707,
+    "end": 21.04
+  },
+  {
+    "text": "the",
+    "start": 21.06,
+    "end": 21.12
+  },
+  {
+    "text": "words",
+    "start": 21.2,
+    "end": 21.6
+  },
+  {
+    "text": "\"genuinely\",",
+    "start": 21.8,
+    "end": 22.8
+  },
+  {
+    "text": "\"honestly\",",
+    "start": 23,
+    "end": 23.84
+  },
+  {
+    "text": "and",
+    "start": 23.96,
+    "end": 24.32
+  },
+  {
+    "text": "\"actually\".",
+    "start": 24.4,
+    "end": 25.12
+  },
+  {
+    "text": "It's",
+    "start": 25.44,
+    "end": 26.08
+  },
+  {
+    "text": "told",
+    "start": 26.112,
+    "end": 26.24
+  },
+  {
+    "text": "never",
+    "start": 26.293,
+    "end": 26.56
+  },
+  {
+    "text": "to",
+    "start": 26.587,
+    "end": 26.64
+  },
+  {
+    "text": "use",
+    "start": 26.7,
+    "end": 26.88
+  },
+  {
+    "text": "bullet",
+    "start": 26.914,
+    "end": 27.12
+  },
+  {
+    "text": "points",
+    "start": 27.177,
+    "end": 27.52
+  },
+  {
+    "text": "when",
+    "start": 27.552,
+    "end": 27.68
+  },
+  {
+    "text": "declining",
+    "start": 27.72,
+    "end": 28.08
+  },
+  {
+    "text": "a",
+    "start": 28.12,
+    "end": 28.16
+  },
+  {
+    "text": "task,",
+    "start": 28.272,
+    "end": 28.8
+  },
+  {
+    "text": "because",
+    "start": 28.89,
+    "end": 29.52
+  },
+  {
+    "text": "\"the",
+    "start": 29.72,
+    "end": 30
+  },
+  {
+    "text": "additional",
+    "start": 30.044,
+    "end": 30.48
+  },
+  {
+    "text": "care",
+    "start": 30.56,
+    "end": 30.88
+  },
+  {
+    "text": "helps",
+    "start": 30.933,
+    "end": 31.2
+  },
+  {
+    "text": "soften",
+    "start": 31.257,
+    "end": 31.6
+  },
+  {
+    "text": "the",
+    "start": 31.62,
+    "end": 31.68
+  },
+  {
+    "text": "blow\".",
+    "start": 31.76,
+    "end": 32.16
+  },
+  {
+    "text": "It's",
+    "start": 32.533,
+    "end": 33.2
+  },
+  {
+    "text": "told",
+    "start": 33.248,
+    "end": 33.44
+  },
+  {
+    "text": "to",
+    "start": 33.467,
+    "end": 33.52
+  },
+  {
+    "text": "check",
+    "start": 33.573,
+    "end": 33.84
+  },
+  {
+    "text": "whether",
+    "start": 33.86,
+    "end": 34
+  },
+  {
+    "text": "an",
+    "start": 34.053,
+    "end": 34.16
+  },
+  {
+    "text": "image",
+    "start": 34.213,
+    "end": 34.48
+  },
+  {
+    "text": "is",
+    "start": 34.533,
+    "end": 34.64
+  },
+  {
+    "text": "really",
+    "start": 34.674,
+    "end": 34.88
+  },
+  {
+    "text": "attached",
+    "start": 34.942,
+    "end": 35.44
+  },
+  {
+    "text": "before",
+    "start": 35.474,
+    "end": 35.68
+  },
+  {
+    "text": "responding,",
+    "start": 35.738,
+    "end": 36.72
+  },
+  {
+    "text": "because",
+    "start": 36.78,
+    "end": 37.2
+  },
+  {
+    "text": "\"the",
+    "start": 37.4,
+    "end": 37.8
+  },
+  {
+    "text": "person",
+    "start": 37.829,
+    "end": 38
+  },
+  {
+    "text": "may",
+    "start": 38.04,
+    "end": 38.16
+  },
+  {
+    "text": "have",
+    "start": 38.192,
+    "end": 38.32
+  },
+  {
+    "text": "forgotten",
+    "start": 38.36,
+    "end": 38.72
+  },
+  {
+    "text": "to",
+    "start": 38.773,
+    "end": 38.88
+  },
+  {
+    "text": "upload",
+    "start": 38.937,
+    "end": 39.28
+  },
+  {
+    "text": "it\".",
+    "start": 39.36,
+    "end": 39.6
+  },
+  {
+    "text": "Reading",
+    "start": 39.85,
+    "end": 41.04
+  },
+  {
+    "text": "it",
+    "start": 41.067,
+    "end": 41.12
+  },
+  {
+    "text": "feels",
+    "start": 41.173,
+    "end": 41.44
+  },
+  {
+    "text": "a",
+    "start": 41.48,
+    "end": 41.52
+  },
+  {
+    "text": "bit",
+    "start": 41.56,
+    "end": 41.68
+  },
+  {
+    "text": "like",
+    "start": 41.712,
+    "end": 41.84
+  },
+  {
+    "text": "reading",
+    "start": 41.88,
+    "end": 42.16
+  },
+  {
+    "text": "a",
+    "start": 42.2,
+    "end": 42.24
+  },
+  {
+    "text": "job",
+    "start": 42.3,
+    "end": 42.48
+  },
+  {
+    "text": "brief",
+    "start": 42.533,
+    "end": 42.8
+  },
+  {
+    "text": "for",
+    "start": 42.84,
+    "end": 42.96
+  },
+  {
+    "text": "the",
+    "start": 42.98,
+    "end": 43.04
+  },
+  {
+    "text": "AI,",
+    "start": 43.227,
+    "end": 44
+  },
+  {
+    "text": "written",
+    "start": 44.03,
+    "end": 44.24
+  },
+  {
+    "text": "by",
+    "start": 44.293,
+    "end": 44.4
+  },
+  {
+    "text": "someone",
+    "start": 44.44,
+    "end": 44.72
+  },
+  {
+    "text": "who",
+    "start": 44.74,
+    "end": 44.8
+  },
+  {
+    "text": "has",
+    "start": 44.84,
+    "end": 44.96
+  },
+  {
+    "text": "paid",
+    "start": 44.992,
+    "end": 45.12
+  },
+  {
+    "text": "attention",
+    "start": 45.168,
+    "end": 45.6
+  },
+  {
+    "text": "to",
+    "start": 45.653,
+    "end": 45.76
+  },
+  {
+    "text": "a",
+    "start": 45.82,
+    "end": 45.88
+  },
+  {
+    "text": "lot",
+    "start": 45.91,
+    "end": 46
+  },
+  {
+    "text": "of",
+    "start": 46.027,
+    "end": 46.08
+  },
+  {
+    "text": "chats.",
+    "start": 46.173,
+    "end": 46.68
+  },
+  {
+    "text": "If",
+    "start": 47.013,
+    "end": 47.6
+  },
+  {
+    "text": "you",
+    "start": 47.62,
+    "end": 47.68
+  },
+  {
+    "text": "want",
+    "start": 47.712,
+    "end": 47.84
+  },
+  {
+    "text": "to",
+    "start": 47.893,
+    "end": 48
+  },
+  {
+    "text": "know",
+    "start": 48.032,
+    "end": 48.16
+  },
+  {
+    "text": "why",
+    "start": 48.22,
+    "end": 48.4
+  },
+  {
+    "text": "your",
+    "start": 48.416,
+    "end": 48.48
+  },
+  {
+    "text": "chat",
+    "start": 48.544,
+    "end": 48.8
+  },
+  {
+    "text": "assistant",
+    "start": 48.84,
+    "end": 49.2
+  },
+  {
+    "text": "behaves",
+    "start": 49.25,
+    "end": 49.6
+  },
+  {
+    "text": "the",
+    "start": 49.62,
+    "end": 49.68
+  },
+  {
+    "text": "way",
+    "start": 49.72,
+    "end": 49.84
+  },
+  {
+    "text": "it",
+    "start": 49.893,
+    "end": 50
+  },
+  {
+    "text": "does,",
+    "start": 50.064,
+    "end": 50.88
+  },
+  {
+    "text": "its",
+    "start": 50.94,
+    "end": 51.12
+  },
+  {
+    "text": "system",
+    "start": 51.177,
+    "end": 51.52
+  },
+  {
+    "text": "prompt",
+    "start": 51.577,
+    "end": 51.92
+  },
+  {
+    "text": "is",
+    "start": 51.947,
+    "end": 52
+  },
+  {
+    "text": "a",
+    "start": 52.04,
+    "end": 52.08
+  },
+  {
+    "text": "good",
+    "start": 52.112,
+    "end": 52.24
+  },
+  {
+    "text": "place",
+    "start": 52.293,
+    "end": 52.56
+  },
+  {
+    "text": "to",
+    "start": 52.587,
+    "end": 52.64
+  },
+  {
+    "text": "start.",
+    "start": 52.72,
+    "end": 53.2
+  },
+  {
+    "text": "Follow",
+    "start": 53.349,
+    "end": 54.24
+  },
+  {
+    "text": "us",
+    "start": 54.293,
+    "end": 54.4
+  },
+  {
+    "text": "for",
+    "start": 54.42,
+    "end": 54.48
+  },
+  {
+    "text": "more",
+    "start": 54.528,
+    "end": 54.72
+  },
+  {
+    "text": "interesting",
+    "start": 54.767,
+    "end": 55.28
+  },
+  {
+    "text": "and",
+    "start": 55.32,
+    "end": 55.44
+  },
+  {
+    "text": "fun",
+    "start": 55.5,
+    "end": 55.68
+  },
+  {
+    "text": "insights",
+    "start": 55.742,
+    "end": 56.24
+  },
+  {
+    "text": "on",
+    "start": 56.293,
+    "end": 56.4
+  },
+  {
+    "text": "AI.",
+    "start": 56.533,
+    "end": 56.96
+  }
+]
