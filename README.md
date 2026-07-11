@@ -4,7 +4,7 @@ This is the monorepo for productkind, a collection of products, content and tool
 
 ## Top level directories
 
-### [`productkind/`](productkind/) - 💕
+### [`productkind/`](productkind/) - 🌏
 
 Everything company-level: brand assets (colors, fonts, styles), the website, the carousel
 design system, all outbound marketing, AI research, and pitch decks
@@ -13,11 +13,11 @@ design system, all outbound marketing, AI research, and pitch decks
 
 All the assets and content for the Seminars by productkind events
 
-### [`kim-and-tim/`](kim-and-tim/) - 🦦
+### [`kim-and-tim/`](kim-and-tim/) - 🦔
 
 All the assets and content for the Kim and Tim comics
 
-### [`thoughts/`](thoughts/) - ✍
+### [`thoughts/`](thoughts/) - 🦦
 
 All the assets and content for the Thoughts by productkind Substack
 
