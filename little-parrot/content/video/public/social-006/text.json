@@ -1,0 +1,842 @@
+[
+  {
+    "text": "When",
+    "start": 0,
+    "end": 0.08
+  },
+  {
+    "text": "you",
+    "start": 0.12,
+    "end": 0.24
+  },
+  {
+    "text": "send",
+    "start": 0.288,
+    "end": 0.48
+  },
+  {
+    "text": "a",
+    "start": 0.52,
+    "end": 0.56
+  },
+  {
+    "text": "message",
+    "start": 0.61,
+    "end": 0.96
+  },
+  {
+    "text": "to",
+    "start": 0.987,
+    "end": 1.04
+  },
+  {
+    "text": "a",
+    "start": 1.12,
+    "end": 1.2
+  },
+  {
+    "text": "chat",
+    "start": 1.248,
+    "end": 1.44
+  },
+  {
+    "text": "assistant,",
+    "start": 1.496,
+    "end": 2.4
+  },
+  {
+    "text": "it",
+    "start": 2.453,
+    "end": 2.56
+  },
+  {
+    "text": "does",
+    "start": 2.592,
+    "end": 2.72
+  },
+  {
+    "text": "not",
+    "start": 2.76,
+    "end": 2.88
+  },
+  {
+    "text": "see",
+    "start": 2.96,
+    "end": 3.2
+  },
+  {
+    "text": "your",
+    "start": 3.232,
+    "end": 3.36
+  },
+  {
+    "text": "words",
+    "start": 3.44,
+    "end": 3.84
+  },
+  {
+    "text": "the",
+    "start": 3.86,
+    "end": 3.92
+  },
+  {
+    "text": "way",
+    "start": 3.96,
+    "end": 4.08
+  },
+  {
+    "text": "you",
+    "start": 4.14,
+    "end": 4.32
+  },
+  {
+    "text": "do.",
+    "start": 4.427,
+    "end": 4.8
+  },
+  {
+    "text": "It",
+    "start": 4.987,
+    "end": 5.36
+  },
+  {
+    "text": "sees",
+    "start": 5.456,
+    "end": 5.84
+  },
+  {
+    "text": "tokens.",
+    "start": 5.989,
+    "end": 6.92
+  },
+  {
+    "text": "A",
+    "start": 7.36,
+    "end": 7.76
+  },
+  {
+    "text": "token",
+    "start": 7.84,
+    "end": 8.24
+  },
+  {
+    "text": "is",
+    "start": 8.293,
+    "end": 8.4
+  },
+  {
+    "text": "a",
+    "start": 8.44,
+    "end": 8.48
+  },
+  {
+    "text": "small",
+    "start": 8.533,
+    "end": 8.8
+  },
+  {
+    "text": "chunk",
+    "start": 8.853,
+    "end": 9.12
+  },
+  {
+    "text": "of",
+    "start": 9.173,
+    "end": 9.28
+  },
+  {
+    "text": "text.",
+    "start": 9.376,
+    "end": 9.84
+  },
+  {
+    "text": "Sometimes",
+    "start": 9.944,
+    "end": 10.88
+  },
+  {
+    "text": "it",
+    "start": 10.907,
+    "end": 10.96
+  },
+  {
+    "text": "is",
+    "start": 11.013,
+    "end": 11.12
+  },
+  {
+    "text": "a",
+    "start": 11.16,
+    "end": 11.2
+  },
+  {
+    "text": "whole",
+    "start": 11.24,
+    "end": 11.44
+  },
+  {
+    "text": "word.",
+    "start": 11.536,
+    "end": 12
+  },
+  {
+    "text": "Sometimes",
+    "start": 12.096,
+    "end": 12.96
+  },
+  {
+    "text": "it",
+    "start": 12.987,
+    "end": 13.04
+  },
+  {
+    "text": "is",
+    "start": 13.093,
+    "end": 13.2
+  },
+  {
+    "text": "a",
+    "start": 13.24,
+    "end": 13.28
+  },
+  {
+    "text": "piece",
+    "start": 13.32,
+    "end": 13.52
+  },
+  {
+    "text": "of",
+    "start": 13.547,
+    "end": 13.6
+  },
+  {
+    "text": "one.",
+    "start": 13.68,
+    "end": 14
+  },
+  {
+    "text": "Common",
+    "start": 14.126,
+    "end": 14.88
+  },
+  {
+    "text": "words",
+    "start": 14.947,
+    "end": 15.28
+  },
+  {
+    "text": "like",
+    "start": 15.328,
+    "end": 15.52
+  },
+  {
+    "text": "\"hello\"",
+    "start": 15.6,
+    "end": 16.16
+  },
+  {
+    "text": "are",
+    "start": 16.26,
+    "end": 16.56
+  },
+  {
+    "text": "usually",
+    "start": 16.6,
+    "end": 16.88
+  },
+  {
+    "text": "a",
+    "start": 16.92,
+    "end": 16.96
+  },
+  {
+    "text": "single",
+    "start": 17.006,
+    "end": 17.28
+  },
+  {
+    "text": "token.",
+    "start": 17.373,
+    "end": 17.92
+  },
+  {
+    "text": "Longer",
+    "start": 18.08,
+    "end": 19.04
+  },
+  {
+    "text": "or",
+    "start": 19.093,
+    "end": 19.2
+  },
+  {
+    "text": "less",
+    "start": 19.264,
+    "end": 19.52
+  },
+  {
+    "text": "common",
+    "start": 19.566,
+    "end": 19.84
+  },
+  {
+    "text": "words",
+    "start": 19.907,
+    "end": 20.24
+  },
+  {
+    "text": "like",
+    "start": 20.288,
+    "end": 20.48
+  },
+  {
+    "text": "\"hippopotamus\"",
+    "start": 20.52,
+    "end": 21.6
+  },
+  {
+    "text": "get",
+    "start": 21.66,
+    "end": 21.84
+  },
+  {
+    "text": "split",
+    "start": 21.88,
+    "end": 22.08
+  },
+  {
+    "text": "into",
+    "start": 22.128,
+    "end": 22.32
+  },
+  {
+    "text": "two",
+    "start": 22.36,
+    "end": 22.48
+  },
+  {
+    "text": "or",
+    "start": 22.56,
+    "end": 22.72
+  },
+  {
+    "text": "three.",
+    "start": 22.787,
+    "end": 23.121
+  },
+  {
+    "text": "Punctuation",
+    "start": 23.64,
+    "end": 24.8
+  },
+  {
+    "text": "and",
+    "start": 24.84,
+    "end": 24.96
+  },
+  {
+    "text": "spaces",
+    "start": 25.029,
+    "end": 25.44
+  },
+  {
+    "text": "get",
+    "start": 25.48,
+    "end": 25.6
+  },
+  {
+    "text": "their",
+    "start": 25.627,
+    "end": 25.76
+  },
+  {
+    "text": "own",
+    "start": 25.8,
+    "end": 25.92
+  },
+  {
+    "text": "tokens",
+    "start": 26,
+    "end": 26.48
+  },
+  {
+    "text": "too.",
+    "start": 26.58,
+    "end": 26.96
+  },
+  {
+    "text": "Why",
+    "start": 27.28,
+    "end": 28
+  },
+  {
+    "text": "chop",
+    "start": 28.064,
+    "end": 28.32
+  },
+  {
+    "text": "things",
+    "start": 28.354,
+    "end": 28.56
+  },
+  {
+    "text": "up",
+    "start": 28.613,
+    "end": 28.72
+  },
+  {
+    "text": "like",
+    "start": 28.768,
+    "end": 28.96
+  },
+  {
+    "text": "this?",
+    "start": 29.04,
+    "end": 29.84
+  },
+  {
+    "text": "Because",
+    "start": 29.9,
+    "end": 30.32
+  },
+  {
+    "text": "the",
+    "start": 30.34,
+    "end": 30.4
+  },
+  {
+    "text": "model",
+    "start": 30.453,
+    "end": 30.72
+  },
+  {
+    "text": "works",
+    "start": 30.773,
+    "end": 31.04
+  },
+  {
+    "text": "with",
+    "start": 31.072,
+    "end": 31.2
+  },
+  {
+    "text": "numbers,",
+    "start": 31.28,
+    "end": 32
+  },
+  {
+    "text": "not",
+    "start": 32.04,
+    "end": 32.16
+  },
+  {
+    "text": "letters.",
+    "start": 32.23,
+    "end": 32.88
+  },
+  {
+    "text": "Every",
+    "start": 33.027,
+    "end": 33.76
+  },
+  {
+    "text": "possible",
+    "start": 33.813,
+    "end": 34.24
+  },
+  {
+    "text": "token",
+    "start": 34.307,
+    "end": 34.64
+  },
+  {
+    "text": "has",
+    "start": 34.7,
+    "end": 34.88
+  },
+  {
+    "text": "its",
+    "start": 34.92,
+    "end": 35.04
+  },
+  {
+    "text": "own",
+    "start": 35.08,
+    "end": 35.2
+  },
+  {
+    "text": "number",
+    "start": 35.257,
+    "end": 35.6
+  },
+  {
+    "text": "in",
+    "start": 35.627,
+    "end": 35.68
+  },
+  {
+    "text": "the",
+    "start": 35.7,
+    "end": 35.76
+  },
+  {
+    "text": "model's",
+    "start": 35.813,
+    "end": 36.16
+  },
+  {
+    "text": "vocabulary.",
+    "start": 36.233,
+    "end": 37.12
+  },
+  {
+    "text": "Splitting",
+    "start": 37.28,
+    "end": 38.24
+  },
+  {
+    "text": "text",
+    "start": 38.32,
+    "end": 38.64
+  },
+  {
+    "text": "into",
+    "start": 38.672,
+    "end": 38.8
+  },
+  {
+    "text": "tokens",
+    "start": 38.88,
+    "end": 39.36
+  },
+  {
+    "text": "is",
+    "start": 39.387,
+    "end": 39.44
+  },
+  {
+    "text": "how",
+    "start": 39.48,
+    "end": 39.6
+  },
+  {
+    "text": "it",
+    "start": 39.627,
+    "end": 39.68
+  },
+  {
+    "text": "turns",
+    "start": 39.747,
+    "end": 40.08
+  },
+  {
+    "text": "what",
+    "start": 40.112,
+    "end": 40.24
+  },
+  {
+    "text": "you",
+    "start": 40.28,
+    "end": 40.4
+  },
+  {
+    "text": "wrote",
+    "start": 40.507,
+    "end": 41.04
+  },
+  {
+    "text": "into",
+    "start": 41.104,
+    "end": 41.36
+  },
+  {
+    "text": "something",
+    "start": 41.392,
+    "end": 41.68
+  },
+  {
+    "text": "it",
+    "start": 41.733,
+    "end": 41.84
+  },
+  {
+    "text": "can",
+    "start": 41.88,
+    "end": 42
+  },
+  {
+    "text": "do",
+    "start": 42.027,
+    "end": 42.08
+  },
+  {
+    "text": "maths",
+    "start": 42.16,
+    "end": 42.56
+  },
+  {
+    "text": "on.",
+    "start": 42.64,
+    "end": 42.88
+  },
+  {
+    "text": "If",
+    "start": 43.227,
+    "end": 43.92
+  },
+  {
+    "text": "you",
+    "start": 43.94,
+    "end": 44
+  },
+  {
+    "text": "have",
+    "start": 44.032,
+    "end": 44.16
+  },
+  {
+    "text": "ever",
+    "start": 44.192,
+    "end": 44.32
+  },
+  {
+    "text": "seen",
+    "start": 44.384,
+    "end": 44.64
+  },
+  {
+    "text": "chat",
+    "start": 44.704,
+    "end": 44.96
+  },
+  {
+    "text": "assistants",
+    "start": 45.011,
+    "end": 45.52
+  },
+  {
+    "text": "priced",
+    "start": 45.6,
+    "end": 46.08
+  },
+  {
+    "text": "\"per",
+    "start": 46.16,
+    "end": 46.4
+  },
+  {
+    "text": "million",
+    "start": 46.46,
+    "end": 46.88
+  },
+  {
+    "text": "tokens\",",
+    "start": 46.983,
+    "end": 48.08
+  },
+  {
+    "text": "this",
+    "start": 48.112,
+    "end": 48.24
+  },
+  {
+    "text": "is",
+    "start": 48.267,
+    "end": 48.32
+  },
+  {
+    "text": "what",
+    "start": 48.352,
+    "end": 48.48
+  },
+  {
+    "text": "they",
+    "start": 48.512,
+    "end": 48.64
+  },
+  {
+    "text": "mean.",
+    "start": 48.72,
+    "end": 49.12
+  },
+  {
+    "text": "It",
+    "start": 49.36,
+    "end": 49.84
+  },
+  {
+    "text": "is",
+    "start": 49.893,
+    "end": 50
+  },
+  {
+    "text": "not",
+    "start": 50.04,
+    "end": 50.16
+  },
+  {
+    "text": "the",
+    "start": 50.18,
+    "end": 50.24
+  },
+  {
+    "text": "same",
+    "start": 50.288,
+    "end": 50.48
+  },
+  {
+    "text": "as",
+    "start": 50.533,
+    "end": 50.64
+  },
+  {
+    "text": "words.",
+    "start": 50.747,
+    "end": 51.28
+  },
+  {
+    "text": "Roughly,",
+    "start": 51.427,
+    "end": 52.48
+  },
+  {
+    "text": "a",
+    "start": 52.56,
+    "end": 52.64
+  },
+  {
+    "text": "hundred",
+    "start": 52.67,
+    "end": 52.88
+  },
+  {
+    "text": "tokens",
+    "start": 52.983,
+    "end": 53.6
+  },
+  {
+    "text": "is",
+    "start": 53.627,
+    "end": 53.68
+  },
+  {
+    "text": "about",
+    "start": 53.72,
+    "end": 53.92
+  },
+  {
+    "text": "seventy-five",
+    "start": 53.97,
+    "end": 54.64
+  },
+  {
+    "text": "words",
+    "start": 54.693,
+    "end": 54.96
+  },
+  {
+    "text": "in",
+    "start": 54.987,
+    "end": 55.04
+  },
+  {
+    "text": "English.",
+    "start": 55.11,
+    "end": 55.64
+  },
+  {
+    "text": "More",
+    "start": 55.84,
+    "end": 56.48
+  },
+  {
+    "text": "on",
+    "start": 56.533,
+    "end": 56.64
+  },
+  {
+    "text": "how",
+    "start": 56.68,
+    "end": 56.8
+  },
+  {
+    "text": "the",
+    "start": 56.84,
+    "end": 56.96
+  },
+  {
+    "text": "model",
+    "start": 57.013,
+    "end": 57.28
+  },
+  {
+    "text": "uses",
+    "start": 57.36,
+    "end": 57.68
+  },
+  {
+    "text": "these",
+    "start": 57.707,
+    "end": 57.84
+  },
+  {
+    "text": "tokens",
+    "start": 57.909,
+    "end": 58.32
+  },
+  {
+    "text": "in",
+    "start": 58.347,
+    "end": 58.4
+  },
+  {
+    "text": "the",
+    "start": 58.42,
+    "end": 58.48
+  },
+  {
+    "text": "next",
+    "start": 58.528,
+    "end": 58.72
+  },
+  {
+    "text": "video.",
+    "start": 58.8,
+    "end": 59.28
+  },
+  {
+    "text": "Follow",
+    "start": 59.406,
+    "end": 60.16
+  },
+  {
+    "text": "us,",
+    "start": 60.24,
+    "end": 60.48
+  },
+  {
+    "text": "so",
+    "start": 60.507,
+    "end": 60.56
+  },
+  {
+    "text": "you",
+    "start": 60.6,
+    "end": 60.72
+  },
+  {
+    "text": "won't",
+    "start": 60.74,
+    "end": 60.88
+  },
+  {
+    "text": "miss",
+    "start": 60.928,
+    "end": 61.12
+  },
+  {
+    "text": "it.",
+    "start": 61.2,
+    "end": 61.52
+  }
+]

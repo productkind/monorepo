@@ -1,0 +1,677 @@
+[
+  {
+    "text": "Remember",
+    "start": 0,
+    "end": 0.4
+  },
+  {
+    "text": "the",
+    "start": 0.42,
+    "end": 0.48
+  },
+  {
+    "text": "GPT",
+    "start": 0.6,
+    "end": 1.04
+  },
+  {
+    "text": "Store?",
+    "start": 1.107,
+    "end": 1.88
+  },
+  {
+    "text": "For",
+    "start": 1.99,
+    "end": 2.32
+  },
+  {
+    "text": "about",
+    "start": 2.373,
+    "end": 2.64
+  },
+  {
+    "text": "a",
+    "start": 2.68,
+    "end": 2.72
+  },
+  {
+    "text": "week",
+    "start": 2.784,
+    "end": 3.04
+  },
+  {
+    "text": "it",
+    "start": 3.067,
+    "end": 3.12
+  },
+  {
+    "text": "was",
+    "start": 3.16,
+    "end": 3.28
+  },
+  {
+    "text": "the",
+    "start": 3.3,
+    "end": 3.36
+  },
+  {
+    "text": "biggest",
+    "start": 3.4,
+    "end": 3.68
+  },
+  {
+    "text": "news",
+    "start": 3.744,
+    "end": 4
+  },
+  {
+    "text": "in",
+    "start": 4.053,
+    "end": 4.16
+  },
+  {
+    "text": "AI.",
+    "start": 4.347,
+    "end": 4.8
+  },
+  {
+    "text": "Now",
+    "start": 5,
+    "end": 5.6
+  },
+  {
+    "text": "you",
+    "start": 5.62,
+    "end": 5.68
+  },
+  {
+    "text": "barely",
+    "start": 5.726,
+    "end": 6
+  },
+  {
+    "text": "hear",
+    "start": 6.048,
+    "end": 6.24
+  },
+  {
+    "text": "about",
+    "start": 6.293,
+    "end": 6.56
+  },
+  {
+    "text": "it.",
+    "start": 6.64,
+    "end": 6.88
+  },
+  {
+    "text": "Every",
+    "start": 7.147,
+    "end": 8.08
+  },
+  {
+    "text": "single",
+    "start": 8.126,
+    "end": 8.4
+  },
+  {
+    "text": "week",
+    "start": 8.464,
+    "end": 8.72
+  },
+  {
+    "text": "there",
+    "start": 8.747,
+    "end": 8.88
+  },
+  {
+    "text": "is",
+    "start": 8.907,
+    "end": 8.96
+  },
+  {
+    "text": "a",
+    "start": 9,
+    "end": 9.04
+  },
+  {
+    "text": "new",
+    "start": 9.12,
+    "end": 9.36
+  },
+  {
+    "text": "AI",
+    "start": 9.52,
+    "end": 9.84
+  },
+  {
+    "text": "tool",
+    "start": 9.92,
+    "end": 10.24
+  },
+  {
+    "text": "or",
+    "start": 10.293,
+    "end": 10.4
+  },
+  {
+    "text": "feature,",
+    "start": 10.46,
+    "end": 11.04
+  },
+  {
+    "text": "and",
+    "start": 11.16,
+    "end": 11.52
+  },
+  {
+    "text": "it",
+    "start": 11.547,
+    "end": 11.6
+  },
+  {
+    "text": "feels",
+    "start": 11.653,
+    "end": 11.92
+  },
+  {
+    "text": "like",
+    "start": 11.952,
+    "end": 12.08
+  },
+  {
+    "text": "if",
+    "start": 12.133,
+    "end": 12.24
+  },
+  {
+    "text": "you",
+    "start": 12.26,
+    "end": 12.32
+  },
+  {
+    "text": "don't",
+    "start": 12.36,
+    "end": 12.56
+  },
+  {
+    "text": "keep",
+    "start": 12.608,
+    "end": 12.8
+  },
+  {
+    "text": "up,",
+    "start": 12.933,
+    "end": 13.24
+  },
+  {
+    "text": "you",
+    "start": 13.25,
+    "end": 13.28
+  },
+  {
+    "text": "will",
+    "start": 13.312,
+    "end": 13.44
+  },
+  {
+    "text": "miss",
+    "start": 13.504,
+    "end": 13.76
+  },
+  {
+    "text": "every",
+    "start": 13.827,
+    "end": 14.16
+  },
+  {
+    "text": "good",
+    "start": 14.208,
+    "end": 14.4
+  },
+  {
+    "text": "opportunity.",
+    "start": 14.46,
+    "end": 15.28
+  },
+  {
+    "text": "But",
+    "start": 15.52,
+    "end": 16.24
+  },
+  {
+    "text": "a",
+    "start": 16.32,
+    "end": 16.4
+  },
+  {
+    "text": "lot",
+    "start": 16.44,
+    "end": 16.56
+  },
+  {
+    "text": "of",
+    "start": 16.613,
+    "end": 16.72
+  },
+  {
+    "text": "that",
+    "start": 16.752,
+    "end": 16.88
+  },
+  {
+    "text": "pressure",
+    "start": 16.916,
+    "end": 17.2
+  },
+  {
+    "text": "is",
+    "start": 17.253,
+    "end": 17.36
+  },
+  {
+    "text": "manufactured.",
+    "start": 17.422,
+    "end": 18.32
+  },
+  {
+    "text": "Companies",
+    "start": 18.44,
+    "end": 19.52
+  },
+  {
+    "text": "fuel",
+    "start": 19.584,
+    "end": 19.84
+  },
+  {
+    "text": "the",
+    "start": 19.88,
+    "end": 20
+  },
+  {
+    "text": "excitement",
+    "start": 20.058,
+    "end": 20.64
+  },
+  {
+    "text": "around",
+    "start": 20.674,
+    "end": 20.88
+  },
+  {
+    "text": "their",
+    "start": 20.907,
+    "end": 21.04
+  },
+  {
+    "text": "products",
+    "start": 21.093,
+    "end": 21.52
+  },
+  {
+    "text": "to",
+    "start": 21.547,
+    "end": 21.6
+  },
+  {
+    "text": "keep",
+    "start": 21.632,
+    "end": 21.76
+  },
+  {
+    "text": "investors",
+    "start": 21.816,
+    "end": 22.32
+  },
+  {
+    "text": "funding",
+    "start": 22.37,
+    "end": 22.72
+  },
+  {
+    "text": "them.",
+    "start": 22.768,
+    "end": 23.12
+  },
+  {
+    "text": "And",
+    "start": 23.26,
+    "end": 23.68
+  },
+  {
+    "text": "plenty",
+    "start": 23.726,
+    "end": 24
+  },
+  {
+    "text": "of",
+    "start": 24.053,
+    "end": 24.16
+  },
+  {
+    "text": "these",
+    "start": 24.2,
+    "end": 24.4
+  },
+  {
+    "text": "tools",
+    "start": 24.467,
+    "end": 24.8
+  },
+  {
+    "text": "quietly",
+    "start": 24.86,
+    "end": 25.28
+  },
+  {
+    "text": "disappear",
+    "start": 25.328,
+    "end": 25.76
+  },
+  {
+    "text": "a",
+    "start": 25.8,
+    "end": 25.84
+  },
+  {
+    "text": "few",
+    "start": 25.88,
+    "end": 26
+  },
+  {
+    "text": "months",
+    "start": 26.046,
+    "end": 26.32
+  },
+  {
+    "text": "later.",
+    "start": 26.4,
+    "end": 27.12
+  },
+  {
+    "text": "It's",
+    "start": 27.547,
+    "end": 27.84
+  },
+  {
+    "text": "completely",
+    "start": 27.876,
+    "end": 28.24
+  },
+  {
+    "text": "fine",
+    "start": 28.304,
+    "end": 28.56
+  },
+  {
+    "text": "to",
+    "start": 28.587,
+    "end": 28.64
+  },
+  {
+    "text": "wait",
+    "start": 28.72,
+    "end": 29.04
+  },
+  {
+    "text": "and",
+    "start": 29.08,
+    "end": 29.2
+  },
+  {
+    "text": "learn",
+    "start": 29.24,
+    "end": 29.44
+  },
+  {
+    "text": "the",
+    "start": 29.46,
+    "end": 29.52
+  },
+  {
+    "text": "ones",
+    "start": 29.568,
+    "end": 29.76
+  },
+  {
+    "text": "that",
+    "start": 29.792,
+    "end": 29.92
+  },
+  {
+    "text": "prove",
+    "start": 29.96,
+    "end": 30.16
+  },
+  {
+    "text": "useful",
+    "start": 30.217,
+    "end": 30.56
+  },
+  {
+    "text": "over",
+    "start": 30.608,
+    "end": 30.8
+  },
+  {
+    "text": "time.",
+    "start": 30.896,
+    "end": 31.36
+  },
+  {
+    "text": "Think",
+    "start": 31.52,
+    "end": 32.32
+  },
+  {
+    "text": "of",
+    "start": 32.347,
+    "end": 32.4
+  },
+  {
+    "text": "it",
+    "start": 32.427,
+    "end": 32.48
+  },
+  {
+    "text": "like",
+    "start": 32.528,
+    "end": 32.72
+  },
+  {
+    "text": "investing",
+    "start": 32.768,
+    "end": 33.2
+  },
+  {
+    "text": "in",
+    "start": 33.227,
+    "end": 33.28
+  },
+  {
+    "text": "a",
+    "start": 33.32,
+    "end": 33.36
+  },
+  {
+    "text": "good",
+    "start": 33.408,
+    "end": 33.6
+  },
+  {
+    "text": "pair",
+    "start": 33.648,
+    "end": 33.84
+  },
+  {
+    "text": "of",
+    "start": 33.867,
+    "end": 33.92
+  },
+  {
+    "text": "jeans",
+    "start": 34,
+    "end": 34.4
+  },
+  {
+    "text": "that",
+    "start": 34.432,
+    "end": 34.56
+  },
+  {
+    "text": "lasts",
+    "start": 34.64,
+    "end": 35.04
+  },
+  {
+    "text": "for",
+    "start": 35.08,
+    "end": 35.2
+  },
+  {
+    "text": "years,",
+    "start": 35.28,
+    "end": 35.84
+  },
+  {
+    "text": "instead",
+    "start": 35.91,
+    "end": 36.4
+  },
+  {
+    "text": "of",
+    "start": 36.427,
+    "end": 36.48
+  },
+  {
+    "text": "the",
+    "start": 36.52,
+    "end": 36.64
+  },
+  {
+    "text": "fast-fashion",
+    "start": 36.704,
+    "end": 37.36
+  },
+  {
+    "text": "trend",
+    "start": 37.413,
+    "end": 37.68
+  },
+  {
+    "text": "piece",
+    "start": 37.733,
+    "end": 38
+  },
+  {
+    "text": "that",
+    "start": 38.032,
+    "end": 38.16
+  },
+  {
+    "text": "looks",
+    "start": 38.2,
+    "end": 38.4
+  },
+  {
+    "text": "dated",
+    "start": 38.467,
+    "end": 38.8
+  },
+  {
+    "text": "by",
+    "start": 38.853,
+    "end": 38.96
+  },
+  {
+    "text": "next",
+    "start": 39.008,
+    "end": 39.2
+  },
+  {
+    "text": "season.",
+    "start": 39.28,
+    "end": 40.213
+  },
+  {
+    "text": "Learning",
+    "start": 40.717,
+    "end": 41.12
+  },
+  {
+    "text": "AI",
+    "start": 41.253,
+    "end": 41.52
+  },
+  {
+    "text": "does",
+    "start": 41.552,
+    "end": 41.68
+  },
+  {
+    "text": "not",
+    "start": 41.72,
+    "end": 41.84
+  },
+  {
+    "text": "have",
+    "start": 41.872,
+    "end": 42
+  },
+  {
+    "text": "to",
+    "start": 42.053,
+    "end": 42.16
+  },
+  {
+    "text": "feel",
+    "start": 42.208,
+    "end": 42.4
+  },
+  {
+    "text": "like",
+    "start": 42.432,
+    "end": 42.56
+  },
+  {
+    "text": "a",
+    "start": 42.6,
+    "end": 42.64
+  },
+  {
+    "text": "race.",
+    "start": 42.736,
+    "end": 43.2
+  },
+  {
+    "text": "If",
+    "start": 43.44,
+    "end": 43.92
+  },
+  {
+    "text": "that",
+    "start": 43.968,
+    "end": 44.16
+  },
+  {
+    "text": "suits",
+    "start": 44.213,
+    "end": 44.48
+  },
+  {
+    "text": "you,",
+    "start": 44.54,
+    "end": 44.96
+  },
+  {
+    "text": "follow",
+    "start": 44.994,
+    "end": 45.2
+  },
+  {
+    "text": "along.",
+    "start": 45.28,
+    "end": 45.76
+  }
+]

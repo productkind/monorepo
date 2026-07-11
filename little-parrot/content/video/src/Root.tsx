@@ -1,7 +1,7 @@
 import './index.css';
 
 import { Composition, staticFile } from "remotion";
-import { LessonVideo, LessonVideoPropsSchema, Captions, LessonVideo2, LessonVideo3, LessonVideo4, LessonVideo5, LessonVideo6, LessonVideo7, LessonVideoLanding, LessonVideoDebugging01, LessonVideoLovableBasics01, LessonVideoLovablePublish01, SocialVideo000, SocialVideo001, SocialVideo002, SocialVideo003 } from "./LessonVideo";
+import { LessonVideo, LessonVideoPropsSchema, Captions, LessonVideo2, LessonVideo3, LessonVideo4, LessonVideo5, LessonVideo6, LessonVideo7, LessonVideoLanding, LessonVideoDebugging01, LessonVideoLovableBasics01, LessonVideoLovablePublish01, SocialVideo000, SocialVideo001, SocialVideo002, SocialVideo003, SocialVideo004 } from "./LessonVideo";
 import { FRAME_HEIGHT, FRAME_RATE, FRAME_WIDTH } from './config';
 
 export const RemotionRoot: React.FC = () => {
@@ -489,6 +489,38 @@ export const RemotionRoot: React.FC = () => {
         }}
       />
 
+      <Composition
+        id="social-004"
+        component={SocialVideo004}
+        durationInFrames={FRAME_RATE}
+        fps={FRAME_RATE}
+        width={FRAME_WIDTH}
+        height={FRAME_HEIGHT}
+        schema={LessonVideoPropsSchema}
+        defaultProps={{
+          captions: [],
+          titleDuration: 0,
+          endDuration: 3,
+          allDuration: 100,
+        }}
+        calculateMetadata={async ({ props }) => {
+          const titleDuration = 0
+          const endDuration = 3
+          const response = await fetch(staticFile('social-004/text.json'))
+          const captions = await response.json()
+          console.log(captions)
+          const duration = Math.ceil(captions.at(-1).end * FRAME_RATE) + titleDuration + endDuration
+
+          return {
+            durationInFrames: duration + 3,
+            props: {
+              ...props,
+              captions: transformCaptionsToFrames(captions),
+              allDuration: duration,
+            }
+          }
+        }}
+      />
 
 
 

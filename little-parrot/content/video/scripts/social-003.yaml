@@ -16,7 +16,7 @@ caption: |-
   Here is the shape of it. A traditional program follows rules that a person wrote. A model is different. Making one involves showing it enormous piles of examples until it finds patterns in them. Only then, once the model is finished, can it use those patterns to answer new questions. That process of showing it examples is called machine learning.
 
   You do not need the maths to use AI well. But knowing that a model has two phases, one for finding patterns and one for using them, changes how the whole thing reads.
-title: "You do not need the maths to use AI well"
+title: "What a language model actually is"
 hastags:
   instagram: ["#womenintech", "#learnai", "#llm", "#howaiworks", "#aiexplained"]
   tiktok: ["#womenintech", "#womenempowerment", "#llm", "#howaiworks", "#aiexplained"]

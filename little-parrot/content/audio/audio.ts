@@ -283,9 +283,149 @@ The process of teaching a model those patterns is called machine learning.
 If you would like to keep learning how AI works, calmly, follow along.
 `
 
-const TEXT_TO_GENERATE = videoSocialMedia003
+const videoSocialMedia004 = `
+Remember the GPT Store? For about a week it was the biggest news in AI. Now you barely hear about it.
+
+Every single week there is a new AI tool or feature, and it feels like if you don't keep up, you will miss every good opportunity. But a lot of that pressure is manufactured. Companies fuel the excitement around their products to keep investors funding them. And plenty of these tools quietly disappear a few months later.
+
+It's completely fine to wait and learn the ones that prove useful over time. Think of it like investing in a good pair of jeans that lasts for years, instead of the fast-fashion trend piece that looks dated by next season.
+
+Learning AI does not have to feel like a race. If that suits you, follow along.
+`
+
+const videoSocialMedia005 = `
+An AI model is really just a huge pile of numbers. GPT-5 has around a few trillion of them.
+
+These numbers are called weights. When you send a question, the model uses all of them to work out an answer.
+
+How do the weights know what a good answer looks like? The model went through training.
+
+Training works like this. The model is shown one example at a time. It makes a guess. Its guess is compared to the correct answer. If the guess is off, all the weights get nudged a tiny bit, so the next guess gets closer.
+
+Repeat billions of times.
+
+Eventually, the guesses start coming up right. Then training stops, and the weights freeze. That's when AI companies release the model.
+
+From that moment on, the model does not learn anything new. Even if you correct it in a chat, the weights stay the same. It is done with school.
+
+More on how this changes what you can expect from AI in the next video.
+`
+
+const videoSocialMedia006 = `
+When you send a message to a chat assistant, it does not see your words the way you do. It sees tokens.
+
+A token is a small chunk of text. Sometimes it is a whole word. Sometimes it is a piece of one. Common words like "hello" are usually a single token. Longer or less common words like "hippopotamus" get split into two or three.
+
+Punctuation and spaces get their own tokens too.
+
+Why chop things up like this? Because the model works with numbers, not letters. Every possible token has its own number in the model's vocabulary. Splitting text into tokens is how it turns what you wrote into something it can do maths on.
+
+If you have ever seen chat assistants priced "per million tokens", this is what they mean. It is not the same as words. Roughly, a hundred tokens is about seventy-five words in English.
+
+More on how the model uses these tokens in the next video. Follow us, so you won't miss it.
+`
+
+const videoSocialMedia007 = `
+Chat assistants build their replies one token at a time.
+
+Once your message has been chopped into tokens, the model looks at everything so far and asks a single question: what token should come next?
+
+It ranks all the possible next tokens by probability, picks from the top few, and writes it. Then it looks at what it has just written, and asks the same question again. And again.
+
+By stringing these predictions together, one token at a time, it builds you a full reply.
+
+There is no bigger plan. The model does not decide the sentence before starting it, or the paragraph before starting it. It is guessing what should come next, then guessing again.
+
+The finished answer often looks planned. That is because the model was trained on planned writing.
+
+More in the next video on what else the model sees when it does this. Follow us, so you won't miss it.
+`
+
+const videoSocialMedia008 = `
+When you send a message to a chat assistant, your prompt is not the only thing the model sees.
+
+The app also adds a hidden message called the system prompt. It sits before your message, and you never see it.
+
+The system prompt is written by the model's creators. It sets the ground rules for how the AI should behave: how polite to be, what topics to swerve around, what tone to hit, what to refuse, when to add a disclaimer.
+
+The model treats this hidden message the same way it treats yours. It reads both, tokens them, and generates a reply that fits everything it has been given. 
+
+Your prompt and the system prompt are not the only things the model sees. More on that in the next video. Follow for more.
+`
+
+const videoSocialMedia009 = `
+Two things that surprise people about chat assistants.
+
+First, they do not remember your past conversations. Each time you send a message, the app resends the entire chat history back to the model. That bundle of history, plus any files you have attached, is called the context.
+
+The model pays closest attention to the most recent chunk of that context, roughly five to seven thousand tokens. Anything older gradually slips off the edge, which is why long conversations can feel like the AI is forgetting.
+
+Second, the same prompt can give you different answers. When the model predicts the next token, it does not always pick the single most likely word. It samples from the top few options. A bit of randomness is why hitting regenerate can produce a different reply.
+
+So the model is not remembering you, and it is not being consistent either. It is doing maths, with a small amount of dice-rolling on top.
+
+How AI assistants handle the context is getting more nuanced every day. If you want to learn more about it, follow along.
+`
+
+const videoSocialMedia010 = `
+Most chat assistants come with a hidden set of instructions called a system prompt. Most companies keep theirs private. Anthropic, the company behind Claude, publishes theirs.
+
+You can read the current one on docs.anthropic.com. It is thousands of words long, and full of small, surprisingly human notes.
+
+Claude is told to avoid the words "genuinely", "honestly", and "actually".
+
+It's told never to use bullet points when declining a task, because "the additional care helps soften the blow".
+
+It's told to check whether an image is really attached before responding, because "the person may have forgotten to upload it".
+
+Reading it feels a bit like reading a job brief for the AI, written by someone who has paid attention to a lot of chats.
+
+If you want to know why your chat assistant behaves the way it does, its system prompt is a good place to start. Follow us for more interesting and fun insights on AI.
+`
+
+const videoSocialMedia011 = `
+Training a language model needs data. A lot of data.
+
+The pile of text used to train a model is called a corpus. It can be almost anything written down: books, articles, websites, code, forum posts, Wikipedia, product reviews, film scripts. The more variety, the better the model gets at handling questions across different topics.
+
+Before any of it is fed to the model, the corpus has to be cleaned. Duplicates get removed. Low-quality text gets thrown out. Anything that would confuse or mislead the model gets pulled aside.
+
+Anthropic and OpenAI rarely gather all this data themselves. They buy most of it. A whole industry of data brokers hoovers up huge chunks of the internet, cleans it, packages it, and sells the finished corpus to whoever is training a model. One of the least visible, most consequential industries in AI.
+
+If you would like to learn more, follow along.
+`
+
+const videoSocialMedia012 = `
+Language models borrow their basic idea from the brain. Emphasis on "basic".
+
+Your brain does its thinking with neurons. Each is a cell with a long tail that connects to others. It receives signals from the neurons before it, and it decides whether to fire a signal onwards.
+
+An artificial neuron in an LLM works in a similar way, only with maths instead of biology. It takes the numbers coming in. It multiplies each by its own weight. It adds them all up. If the total is bigger then a certain other number, called a bias, it sends a signal onwards. If not, it stays silent.
+
+That is one neuron. A language model has billions of them, stacked in layers, all passing signals along.
+
+The weights and biases are the model's parameters. They are what training adjusts. The more neurons you have, the more subtle the patterns the model can pick up.
+
+More like this coming up. Follow along.
+`
+
+const videoSocialMedia013 = `
+Ever noticed how a chat assistant will apologise the second you correct it. The mechanism is simpler than it looks.
+
+A language model is essentially a glorified autocomplete. It predicts the next word based on what came before. When you type "you are wrong, the actual answer is..." the model looks at everything so far and asks: what would a human typically say next?
+
+The most likely continuation, based on the entire internet, is a polite apology followed by a corrected answer. So that is what you get.
+
+The model does not know it was wrong. It does not remember being wrong. It is just predicting what a helpful person would say after being corrected. And a helpful person usually starts with "You're right, I apologise..."
+
+Once you see this, chat assistants stop feeling like they are learning from you. They are just very good at predicting what humans say next.
+
+If you'd like to learn more about AI calmly, follow along.
+`
+
+const TEXT_TO_GENERATE = videoSocialMedia013
 const MODEL_ID = 'eleven_v3' //'eleven_multilingual_v2' // // The v3 model as requested
-const videoName = 'social-003-chloe'
+const videoName = 'social-013-chloe'
 const OUTPUT_FILE_NAME = `generated_speech-${videoName}.wav` // e.g.,
 const ALIGNMENT_JSON_FILE_NAME = `alignment-${videoName}.json`
 const OUTPUT_FILE_PATH = OUTPUT_FILE_NAME // Saves in the same directory as the script
