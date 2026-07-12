@@ -48,6 +48,79 @@ export const LessonVideoPropsSchema = z.object({
 
 const DEBUG = true
 
+export const SocialVideo008: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({ captions, titleDuration }) => {
+  return (
+    <AbsoluteFill className={BG_CLASS}>
+      <Series>
+        <Series.Sequence durationInFrames={91}>
+          <FullScreenImage src={staticFile('social-008/section-00-type.gif')} fit="contain" offset={-100} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={65}>
+          <FullScreenImage src={staticFile('social-008/section-01-see.gif')} fit="contain" offset={-150} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={124}>
+          <FullScreenImage src={staticFile('social-008/section-02-hidden.gif')} fit="contain" offset={-150} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={99}>
+          <FullScreenImage src={staticFile('social-008/section-03-hidden.gif')} fit="contain" offset={-100} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={91}>
+          <FullScreenImage src={staticFile('social-008/section-04-scientist.gif')} fit="contain" offset={-120} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={103}>
+          <FullScreenImage src={staticFile('social-008/section-05-rules.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={40}>
+          <FullScreenImage src={staticFile('social-008/section-06-polite.gif')} fit="contain" offset={-100} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={60}>
+          <FullScreenImage src={staticFile('social-008/section-07-swerve.gif')} fit="contain" offset={-150} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={36}>
+          <FullScreenImage src={staticFile('social-008/section-08-tone.gif')} fit="contain" offset={-150} color="#ffffff" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={34}>
+          <FullScreenImage src={staticFile('social-008/section-09-disagree.gif')} fit="contain" offset={-260} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={48}>
+          <FullScreenImage src={staticFile('social-008/section-10-disclaimer.gif')} fit="contain" offset={-150} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={123}>
+          <FullScreenImage src={staticFile('social-008/section-11-equal.gif')} fit="contain" offset={-150} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={164}>
+          <FullScreenImage src={staticFile('social-008/section-12-factory.gif')} fit="contain" offset={-100} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={141}>
+          <FullScreenImage src={staticFile('social-008/section-13-see.gif')} fit="contain" offset={0} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={141}>
+          <FullScreenImage src={staticFile('social-008/section-14-more.gif')} fit="contain" offset={-100} />
+        </Series.Sequence>
+      </Series>
+      <Sequence from={titleDuration}>
+        <Captions captions={captions} />
+      </Sequence>
+      <Sequence from={titleDuration}>
+        <Audio src={staticFile('social-008/speech.wav')} />
+        <Audio src={staticFile('soundtrack.wav')} volume={0.1} />
+        <RemotionRiveCanvas src={staticFile('parrot-greet-00.riv')} />
+      </Sequence>
+      <Sequence from={titleDuration + 1260}>
+        <RemotionRiveCanvas src={staticFile('parrot-follow-00.riv')} />
+      </Sequence>
+      <Sequence from={titleDuration + 500}>
+        <RemotionRiveCanvas src={staticFile('parrot-peek-00.riv')} />
+      </Sequence>
+      <AbsoluteFill className="border-16 border-[#000000] z-10">
+      </AbsoluteFill>
+      {DEBUG ? <DebugSafeZone /> : null
+      }
+    </AbsoluteFill>
+  )
+}
+
+
 export const SocialVideo007: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({ captions, titleDuration }) => {
   return (
     <AbsoluteFill className={BG_CLASS}>
