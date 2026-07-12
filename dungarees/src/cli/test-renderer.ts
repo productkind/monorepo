@@ -1,8 +1,6 @@
-import type { CliMessage, YargsPromptApp } from './yargs-prompt-app.ts'
+import type { CliControls, CliMessage, YargsPromptApp } from './yargs-prompt-app.ts'
 
-import { collectValuesFrom } from '@dungarees/rxjs/util.ts'
-
-import { ReplaySubject } from 'rxjs'
+import { firstValueFrom, merge, ReplaySubject, Subject } from 'rxjs'
 
 type Terminal = {
   step: () => Promise<{
@@ -12,17 +10,40 @@ type Terminal = {
 }
 
 export const renderCli = (app: YargsPromptApp, command: string): { terminal: Terminal } => {
-  const select$ = new ReplaySubject<string>()
-  const controls = {
-    select: () => select$,
+  const out: CliMessage[] = []
+  let pending: Subject<string> | null = null
+
+  // `ReplaySubject(1)` so a signal fired before `step()`/`select()` subscribe (the app can
+  // run synchronously inside `present`) is still delivered to a late subscriber.
+  const yielded$ = new ReplaySubject<void>(1)
+  const done$ = new ReplaySubject<void>(1)
+
+  const controls: CliControls = {
+    select: () => {
+      pending = new Subject<string>()
+      yielded$.next()
+      return pending.asObservable()
+    },
   }
-  const message$ = app.present(command.split(' ').slice(1), controls)
+
+  app.present(command.split(' ').slice(1), controls).subscribe({
+    next: (message) => out.push(message),
+    complete: () => done$.next(),
+  })
+
   return {
     terminal: {
-      step: async () => ({ out: await collectValuesFrom(message$) }),
+      // Resolve once the app either asks for input or finishes, so a run blocked on a
+      // selection can still be inspected before the answer is given. `out` is the live
+      // buffer, so it keeps filling as the run continues after a selection.
+      step: async () => {
+        await firstValueFrom(merge(yielded$, done$))
+        return { out }
+      },
       select: async (option) => {
-        select$.next(option)
-        select$.complete()
+        pending!.next(option)
+        pending!.complete()
+        await firstValueFrom(done$)
       },
     },
   }

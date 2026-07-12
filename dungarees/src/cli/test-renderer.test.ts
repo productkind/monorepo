@@ -49,7 +49,10 @@ test('yargs-propmt-app', async () => {
   ])
 })
 
-test('yargs-prompt-app', async () => {
+test.each([
+  { choice: 'you', greeting: 'Hello, You!' },
+  { choice: 'me', greeting: 'Hello, Me!' },
+])('yargs-prompt-app greets $choice', async ({ choice, greeting }) => {
   type AppEvents = DomainEvent<'greet', string> | DomainEvent<'start', undefined>
   const app = createYargsPromptApp<AppEvents>({
     name: 'test-app',
@@ -100,10 +103,10 @@ test('yargs-prompt-app', async () => {
   })
   const { terminal } = renderCli(app, 'test-app greet')
   const { out } = await terminal.step()
-  await terminal.select('you')
-  expect(out).toEqual([{ type: 'stdout', message: 'Greeting starts', level: 'info' }])
+  await terminal.select(choice)
   expect(out).toEqual([
-    { type: 'stdout', message: 'Hello, You!', level: 'info' },
+    { type: 'stdout', message: 'Greeting starts', level: 'info' },
+    { type: 'stdout', message: greeting, level: 'info' },
     { type: 'exit', code: 0 },
   ])
 })
