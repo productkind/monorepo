@@ -7,81 +7,90 @@ account: kinga
 # Carousel: What we learned from building digital products
 
 **Source article:** `thoughts/assets/articles/021-what-we-learned-from-building-digital-products-lessons-and-pivots.md`
+**Narrative source:** the approved LinkedIn post (below, used verbatim as the LinkedIn caption). The carousel follows its arc.
 **Channels:** Kinga's personal LinkedIn, Instagram, TikTok
 **Date:** July 2026 (companion to the "employee to running a business" carousel)
 
-**Goal:** tease the honest year-in-review and send readers to the article
-for the lessons and the how. It is a candid retrospective, not a thesis: the
-article draws no single moral, so this carousel doesn't invent one either.
+**Story arc (from the LinkedIn post):** the tiny Instagram result (hook) →
+I wrote about it anyway (honesty) → what helped most was working out what
+each flop was telling me (the thread) → two flops and what they taught
+(Instagram, a conference) → so every flop pointed me somewhere better
+(synthesis) → including the pivot to women who can't code yet (payoff) →
+read the full story, and what project do your doubts talk you out of? (CTA).
+The thread is Kinga's own: the flops each taught a lesson and pointed
+somewhere better. It is stated in the post, not invented.
 
-**Story arc (grounded in the article):** first full year in business, tried
-lots of things (intro) → a couple of honest flops with real numbers
-(Instagram, no daily plan) → but some things worked → the one she almost
-didn't start, the newsletter, and the doubt she pushed through (the article's
-most quotable beat) → she's sharing it all so you can do better (the
-article's stated purpose) → read the full story. The thread is candour, not
-an added pattern.
+**Pronouns:** kept as the post/article use them. The Instagram account is
+"we" (a two-person activity); writing, the lessons, and the building are
+"I"/"me"; the pivot is nominalised ("the pivot"), so pronoun-free.
 
-**Teaser rule:** each slide names a moment but withholds the how (why
-carousels don't reach non-followers, how she plans the week now, being clear
-on your audience, avoiding the break-fix loop). Those stay in the article.
+**Teaser rule:** the carousel reveals the flop-to-lesson mechanism (that is
+the engaging part of the post), but leaves the deeper pivot story and the
+rest of the year for the article.
 
 ## Format
 
-**Carousel, 8 slides, 1080 x 1350 (4:5 portrait).** Brand: productkind,
+**Carousel, 9 slides, 1080 x 1350 (4:5 portrait).** Brand: productkind,
 `productkind.substack.com` handle, Kim mascot on the cover, Thoughts logo on
 the CTA. One short line of copy per slide, lots of whitespace. Devices: big
-stat card (slide 3, "33"), one quote card (slide 6), the brand CTA (slide 8);
-the rest are clean single-line slides.
+stat card (slide 2, "33"), the brand CTA (slide 9); the rest are clean
+single-line slides.
 
 **Export note:** the same 1080 x 1350 export works on all three channels.
 TikTok photo mode pads the sides; keep text inside the central safe area.
 
 **Full-fidelity rule:** every word that appears on a slide is in this table,
 verbatim; `check.py` enforces that the HTML adds nothing beyond it. The copy
-here is written fresh in Kinga's voice, not lifted from the article, and
-every claim is traceable to it.
+here is written fresh in Kinga's voice, follows the post's narrative, and
+every claim is traceable to the post/article. Pronouns match the source.
 
 | Slide | Visual | Text on slide (verbatim) |
 | --- | --- | --- |
-| 1 (cover) | Brand cover with Kim mascot; calm, personal | Headline: "A year building my first product. Here's what worked, and what didn't." (.hl on "what worked, and what didn't") · Kicker: "AN HONEST YEAR IN REVIEW." · new line: "SWIPE →" |
-| 2 | Clean single-line slide (setup) | Copy: "It was my first full year in business, so I tried a bit of everything." (.hl on "tried a bit of everything") |
-| 3 | Big-number stat card: "33" | Stat: "33" · Label: "FOLLOWERS IN 19 WEEKS" · Copy: "Plenty of it flopped. Nineteen weeks of posting on Instagram got us 33 followers." (.hl on "flopped") |
-| 4 | Clean single-line slide (second honest flop) | Copy: "And taking each day as it came, with no plan, slowly wore me out." (.hl on "wore me out") |
-| 5 | Clean single-line slide (the turn) | Copy: "But it wasn't all flops. A few things really worked." (.hl on "really worked") |
-| 6 | One quote card + a line | Quote card: "Who do you think you are?" · Copy: "That was my brain, about this newsletter. I started it anyway, and readers tell me it helped." (.hl on "I started it anyway") |
-| 7 | Clean single-line slide (the article's purpose) | Copy: "I'm sharing all of it, the wins and the flops, so you can skip a few of my mistakes." (.hl on "skip a few of my mistakes") |
-| 8 (CTA) | Brand card: Thoughts by productkind logo, warm | Copy: "The full story is in my newsletter, with a lot more of both." (.hl on "a lot more of both") · Badge: "PRODUCTKIND.SUBSTACK.COM" · "Thoughts by productkind 💛" · "Building something of your own? Send this to a friend who is too." |
+| 1 (cover) | Brand cover with Kim mascot; calm, personal | Headline: "A year building digital products. A lot flopped, and each flop taught me something." (.hl on "each flop taught me something") · Kicker: "AN HONEST YEAR IN REVIEW." · new line: "SWIPE →" |
+| 2 | Big-number stat card: "33" | Stat: "33" · Label: "FOLLOWERS IN 19 WEEKS" · Copy: "We posted on Instagram 76 times, and got to 33 followers." |
+| 3 | Clean single-line slide (honesty) | Copy: "That's a tiny number. I wrote about it anyway." (.hl on "wrote about it anyway") |
+| 4 | Clean single-line slide (the thread) | Copy: "What helped most was working out what each flop was telling me." (.hl on "what each flop was telling me") |
+| 5 | Clean single-line slide (lesson one) | Copy: "The Instagram one taught me carousels don't get shown to non-followers, so they're a poor way to get discovered." (.hl on "don't get shown to non-followers") |
+| 6 | Clean single-line slide (lesson two) | Copy: "A conference full of the wrong crowd taught me to work out who I'm building for before I turn up." (.hl on "before I turn up") |
+| 7 | Clean single-line slide (synthesis) | Copy: "So every one of those flops pointed me somewhere better." (.hl on "somewhere better") |
+| 8 | Clean single-line slide (the payoff) | Copy: "Including the pivot: helping women who can't code yet build their own products." (.hl on "women who can't code yet") |
+| 9 (CTA) | Brand card: Thoughts by productkind logo, warm | Copy: "The pivot, and the flops that led to it, are what the article is about." (.hl on "the flops that led to it") · Badge: "PRODUCTKIND.SUBSTACK.COM" · "Thoughts by productkind 💛" · "What is a project your own doubts keep talking you out of?" |
 
-**Alt text (for the post):** A personal, honest year-in-review carousel about
-building a first digital product: trying lots of things in the first year,
-flops like nineteen weeks on Instagram for 33 followers and working with no
-plan, and the newsletter the author almost never started but is proudest of.
-It shares the year candidly and points readers to the full article.
+**Alt text (for the post):** An honest year-in-review carousel: posting 76
+times on Instagram over 19 weeks for 33 followers, writing about it anyway,
+and working out what each flop was telling us. Instagram taught that
+carousels don't reach non-followers; a wrong-audience conference taught to
+know who you're building for first. Every flop pointed somewhere better,
+including the pivot to helping women who can't code yet build their own
+products. It points readers to the full article.
 
 ## LinkedIn caption (exact)
 
-Last year was my first full year in business, so I tried a bit of everything while building my first product, Little Parrot.
+We posted 76 times on Instagram over 19 weeks. We started at 0 followers and got to 33.
 
-Plenty of it flopped. Nineteen weeks of posting on Instagram got us 33 followers. Taking each day as it came, with no plan, slowly wore me out.
+That's a tiny number, and I wrote about it anyway, along with everything else from my first full year building digital products in my company.
 
-But it wasn't all flops. A few things really worked, starting with the one I almost didn't start: this newsletter. My brain spent months asking "who do you think you are?" I started it anyway, and readers tell me it helped.
+To be honest, some of it really didn't work. Those comics took hours to make and never reached anyone new on Instagram. What helped most was working out what each flop was telling me. The Instagram one taught me that carousels don't get shown to non-followers, so they're a poor way to get discovered. A conference full of the wrong audience taught me to work out who I'm building for before I turn up, not after.
 
-I'm sharing all of it, the wins and the flops, so you can skip a few of my mistakes. The full story is in my newsletter, Thoughts by productkind (link in the comments).
+So every one of those experiments pointed me somewhere better, including the pivot to helping women who can't code yet build their own products.
 
-If you're building something of your own, I'd love to know which part you'd want to hear more about.
+That pivot, and the flops that led to it, is what the article is about. If there's a project your own doubts keep talking you out of, I'd love to know what it is in the comments.
+
+[article link]
 
 ## Instagram caption (exact)
 
-Last year was my first full year in business, so I tried a bit of everything while building Little Parrot.
+We posted 76 times on Instagram over 19 weeks. We started at 0 followers and got to 33.
 
-Plenty of it flopped (nineteen weeks on Instagram, 33 followers 😅). Working with no plan slowly wore me out too. But some things really worked, starting with the one I almost didn't start: this newsletter.
+That's a tiny number, and I wrote about it anyway, along with everything else from my first full year building digital products.
 
-I'm sharing all of it, the wins and the flops, so you can skip a few of my mistakes.
+Some of it really didn't work. What helped most was working out what each flop was telling me. The Instagram one taught me that carousels don't reach non-followers. A conference full of the wrong crowd taught me to work out who I'm building for before I turn up.
 
-The full story is in my newsletter, link in bio. 💛
+Every one of those flops pointed me somewhere better, including the pivot to helping women who can't code yet build their own products.
 
-Subscribe to learn with us about building digital products. 🎓
+That pivot, and the flops that led to it, is what the article is about, link in bio. 💛
+
+Subscribe to build digital products with us. 🎓
 .
 .
 .
@@ -89,12 +98,12 @@ Subscribe to learn with us about building digital products. 🎓
 
 ## TikTok caption (exact)
 
-My first full year in business: what worked, and what didn't, while building my own product 😅 The full story is in my newsletter, link in bio. 💛
+We posted on Instagram for 19 weeks and got to 33 followers. I wrote about it anyway. Every flop taught me something, including the pivot to helping women who can't code yet build their own products. Full story in my newsletter, link in bio. 💛
 
 *(House style keeps hashtags to Instagram; if you want discovery tags on TikTok, reuse two or three from the Instagram set, e.g. #buildinpublic #vibecoding #womenwhobuild.)*
 
 ## Posting notes
 
-- LinkedIn: post the carousel as a PDF document post; put the Substack link in the first comment, as the caption promises.
+- LinkedIn: post the carousel as a PDF document post; put the Substack link in the first comment (the caption's "[article link]").
 - Instagram: update the link in bio to the article before posting.
 - TikTok: photo mode carousel; same slide exports.
