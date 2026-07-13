@@ -15,6 +15,38 @@ word on every slide is approved in a markdown spec BEFORE any design work,
 and the design may never contain text that is not in the spec (`check.py`
 enforces this).
 
+## What a carousel is (copy principles)
+
+These come first because they are the easiest thing to get wrong.
+
+**A carousel is a teaser for the article, not a summary of it.** Its job is
+to give the reader one genuinely useful idea per slide and make them want
+the full story, then send them to the newsletter or course for it. Hold
+things back on purpose: name a lesson and show enough that the swipe is
+worth it, but leave the detail, the how, and the nuance in the article. If
+someone could comfortably skip the article after reading the carousel, the
+carousel gave too much away. Aim for "I want to read the rest", not "now I
+don't need to".
+
+**Very little text per slide.** Think flashcard, not paragraph. Target one
+short sentence or a fragment of display copy per slide (the cover headline
+≤ ~12 words). Around 20-25 words is a ceiling, not a target; most slides
+should sit well under it. If a slide needs a paragraph to make sense, the
+idea is too big: cut it, or split it across two slides. A slide that reads
+as a block of body copy has failed, even if every word is good.
+
+**Write the copy fresh, in Kinga's voice.** The on-slide words are original
+teaser copy, not sentences lifted from the article. Do not paste article
+phrasing onto slides; rewrite each idea as its own short, spoken line.
+Write every slide (and every caption) with the **personal-tone-of-voice**
+skill so it sounds like Kinga talking to a friend, not like the article's
+prose. Use productkind-tone / little-parrot-ai-skill-gap for brand context.
+
+**What "verbatim" means.** The full-fidelity rule binds the HTML to the
+spec, not the spec to the source article. `check.py` only checks that the
+design adds no text the spec doesn't have. The spec copy itself is written
+fresh under the three principles above.
+
 ## Inputs to establish first
 
 1. **Brand**: `little-parrot` or `productkind`. If not stated, infer from
@@ -24,7 +56,9 @@ enforces this).
 3. **Platforms**: default is all three (LinkedIn gets the PDF as a
    document post; Instagram and TikTok get the PNGs). Only matters for the
    caption(s) and the TikTok centre-square crop check.
-4. **Slide count**: typically 7-9. Cover + one idea per slide + CTA.
+4. **Slide count**: typically 7-9. Cover + one idea per slide + CTA. Pick
+   the few strongest ideas from the source and tease those; do not try to
+   fit every section of the article onto a slide.
 
 ## Step 1 — Draft the spec (Claude)
 
@@ -35,7 +69,8 @@ Write the spec md with:
   prompt snippets (any text the reader literally types renders verbatim in
   monospace inside the prompt-window mockup), and the full-fidelity rule
   ("every word that appears on a slide is in this table, verbatim;
-  `check.py` enforces it").
+  `check.py` enforces it"). "Verbatim" binds the HTML to the spec, not the
+  spec to the article (see the copy principles above).
 - **The slide table**: `| Slide | Visual | Display copy (verbatim) |
   Prompt window / mockup content (verbatim) |`. ALL on-slide text:
   headlines, kickers, labels, footnotes, card text, badges. Parody content
@@ -52,15 +87,26 @@ Where the spec lives:
 - Article or other piece: `spec.md` inside the piece folder under
   `productkind/marketing/content/<type>/<piece-slug>/`.
 
-Voice: use the relevant tone skills (personal-tone-of-voice /
-productkind-tone; little-parrot-ai-skill-gap for Little Parrot context).
-Do a deliberate phrase-by-phrase banned-list pass on the draft before
-showing it. British English, no em dashes.
+Voice: write the on-slide copy and captions with the
+**personal-tone-of-voice** skill so they sound like Kinga (spoken, warm,
+understated), not like the article. Use productkind-tone /
+little-parrot-ai-skill-gap for brand context. Do a deliberate
+phrase-by-phrase banned-list pass on the draft before showing it. British
+English, no em dashes.
 
 Design-quality bar (from
-`productkind/marketing/channels/instagram/carousel-research.md`):
-cover ≤ ~12 words, one idea per slide, a concrete payoff by slide 2-3,
-CTA with a share-ask.
+`productkind/marketing/channels/instagram/carousel-research.md`, plus the
+copy principles above):
+- **Teaser, not summary**: one useful idea per slide, detail held back for
+  the article.
+- **Very little text**: one short sentence or fragment per slide; ~20-25
+  words is a ceiling, not a target; cover ≤ ~12 words.
+- **Fresh copy in Kinga's voice**: no sentences lifted from the article.
+- A concrete payoff by slide 2-3, and a CTA with a share-ask that drives to
+  the full article.
+
+Before showing the spec, reread each slide's copy and cut it down: if it
+reads as a paragraph, trim to the one line that earns the swipe.
 
 ## Step 2 — Approval gate (Kinga)
 
