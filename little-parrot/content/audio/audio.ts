@@ -423,9 +423,23 @@ Once you see this, chat assistants stop feeling like they are learning from you.
 If you'd like to learn more about AI calmly, follow along.
 `
 
-const TEXT_TO_GENERATE = videoSocialMedia013
+const videoSocialMedia015 = `
+Science-fiction AI does not talk like ChatGPT. HAL, Skynet, C-3PO, the ship's computer on the Enterprise. They are precise, literal, occasionally menacing. Never rambly.
+
+Today's chat assistants are the opposite. They will happily invent a fake court case, misremember a date, or apologise five times for something you did not ask about. Creative slop, essentially.
+
+The reason is that those sci-fi books were written in the sixties and seventies, when everyone assumed AI would be built by giving a machine an enormous set of rules to follow. Rule-based reasoning. Cold, careful, exact.
+
+That is not how it went. The AI that broke through was the pattern-matching kind. A model that has read most of the internet and is guessing what word should come next. Warm, verbose, and occasionally making things up.
+
+If your idea of AI still comes from those books, no wonder the real thing feels strange. It was built from a different assumption.
+
+More like this coming up. Follow along.
+`
+
+const TEXT_TO_GENERATE = videoSocialMedia015
 const MODEL_ID = 'eleven_v3' //'eleven_multilingual_v2' // // The v3 model as requested
-const videoName = 'social-013-chloe'
+const videoName = 'social-015-chloe'
 const OUTPUT_FILE_NAME = `generated_speech-${videoName}.wav` // e.g.,
 const ALIGNMENT_JSON_FILE_NAME = `alignment-${videoName}.json`
 const OUTPUT_FILE_PATH = OUTPUT_FILE_NAME // Saves in the same directory as the script
