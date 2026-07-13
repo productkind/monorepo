@@ -35,13 +35,26 @@ opens a question or tension, a turn, a payoff, then the invitation. Each
 slide should follow from the one before and set up the next, using natural
 connective tissue in Kinga's voice ("So,", "But,", "Like this:", "A year
 in,"). For a personal retrospective the arc is usually: honest situation →
-what went wrong → the turn → what actually worked → what it taught me →
-invitation. Find the single thread that links the chosen moments (a theme,
-a realisation) rather than listing them side by side.
+what went wrong → the turn → what worked → invitation.
+
+**Ground the story in the source; never invent the thread.** The narrative,
+and any pattern, moral, or realisation a slide states, must be one the
+author actually makes. Do not manufacture a tidy thesis to make the slides
+cohere, e.g. summing up a set of separate lessons as "the safe things
+failed, the brave things worked" when the article never says that. That is
+fabrication, even when it sounds good. Many strong pieces are honest
+retrospectives with no single thesis; then the throughline is the candid
+telling itself, the sequence and the honesty, not an added moral. Coherence
+comes from ordering the real moments well and from voice, not from inventing
+a lesson. If a true thread would be modest and a false one would be neat,
+use the modest true one. If you can't find the connecting idea in the
+source, don't add one.
 
 Test before finalising: read only the display copy, slide 1 to N, as one
-passage. It should hold together as a story. If any two slides could swap
-places without the reader noticing, the arc is too flat, tighten it.
+passage. It should hold together as a story, and every claim in it should
+be traceable to the source. If any two slides could swap places without the
+reader noticing, the arc is too flat, tighten it, but only with material
+that is actually there.
 
 **Very little text per slide.** Think flashcard, not paragraph. Target one
 short sentence or a fragment of display copy per slide (the cover headline
@@ -56,6 +69,12 @@ phrasing onto slides; rewrite each idea as its own short, spoken line.
 Write every slide (and every caption) with the **personal-tone-of-voice**
 skill so it sounds like Kinga talking to a friend, not like the article's
 prose. Use productkind-tone / little-parrot-ai-skill-gap for brand context.
+
+**Keep the pronoun the source uses.** If the article says "we" about
+something (a productkind or two-person activity, e.g. the Instagram
+account), keep it "we"; if it says "I", keep "I". Don't switch between them
+for flow or to sound more personal. The same moment should carry the same
+pronoun it has in the article.
 
 **What "verbatim" means.** The full-fidelity rule binds the HTML to the
 spec, not the spec to the source article. `check.py` only checks that the

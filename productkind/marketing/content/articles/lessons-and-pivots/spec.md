@@ -10,76 +10,74 @@ account: kinga
 **Channels:** Kinga's personal LinkedIn, Instagram, TikTok
 **Date:** July 2026 (companion to the "employee to running a business" carousel)
 
-**Goal:** tease the honest year-in-review as one connected story, not a list
-of tips. Give the reader a real narrative to swipe through and send them to
-the article for the lessons and the how.
+**Goal:** tease the honest year-in-review and send readers to the article
+for the lessons and the how. It is a candid retrospective, not a thesis: the
+article draws no single moral, so this carousel doesn't invent one either.
 
-**Story arc:** went solo and tried everything (setup) → some of it flopped,
-here's proof (tension) → what the flops had in common (the thread) → so the
-wins surprised me (the turn) → the newsletter I almost didn't start (payoff)
-→ the pattern I see now (lesson) → we're all still learning (humility) →
-read the full story (invitation). The single thread: the safe, busy things
-went nowhere; the brave, honest ones moved things forward.
+**Story arc (grounded in the article):** first full year in business, tried
+lots of things (intro) → a couple of honest flops with real numbers
+(Instagram, no daily plan) → but some things worked → the one she almost
+didn't start, the newsletter, and the doubt she pushed through (the article's
+most quotable beat) → she's sharing it all so you can do better (the
+article's stated purpose) → read the full story. The thread is candour, not
+an added pattern.
 
-**Teaser rule:** each slide advances the story but withholds the how. The
-tactics (planning the week, choosing the right rooms, avoiding the break-fix
-loop) stay in the article.
+**Teaser rule:** each slide names a moment but withholds the how (why
+carousels don't reach non-followers, how she plans the week now, being clear
+on your audience, avoiding the break-fix loop). Those stay in the article.
 
 ## Format
 
-**Carousel, 9 slides, 1080 x 1350 (4:5 portrait).** Brand: productkind,
+**Carousel, 8 slides, 1080 x 1350 (4:5 portrait).** Brand: productkind,
 `productkind.substack.com` handle, Kim mascot on the cover, Thoughts logo on
 the CTA. One short line of copy per slide, lots of whitespace. Devices: big
-stat card (slide 3, "33"), a muted frame card for the hard-truth line
-(slide 4), one quote card (slide 6), a large white statement (slide 7), a
-black statement card (slide 8), the brand CTA (slide 9); the rest are clean
-single-line slides.
+stat card (slide 3, "33"), one quote card (slide 6), the brand CTA (slide 8);
+the rest are clean single-line slides.
 
 **Export note:** the same 1080 x 1350 export works on all three channels.
 TikTok photo mode pads the sides; keep text inside the central safe area.
 
 **Full-fidelity rule:** every word that appears on a slide is in this table,
 verbatim; `check.py` enforces that the HTML adds nothing beyond it. The copy
-here is written fresh in Kinga's voice, not lifted from the article.
+here is written fresh in Kinga's voice, not lifted from the article, and
+every claim is traceable to it.
 
 | Slide | Visual | Text on slide (verbatim) |
 | --- | --- | --- |
-| 1 (cover) | Brand cover with Kim mascot; calm, personal | Headline: "A year building my own product. Here's what worked, and what didn't." (.hl on "what worked, and what didn't") · Kicker: "AN HONEST YEAR IN REVIEW." · new line: "SWIPE →" |
-| 2 | Clean single-line slide (setup) | Copy: "When I went solo, I decided to figure it out as I went, and try a bit of everything." (.hl on "figure it out as I went") |
-| 3 | Big-number stat card: "33" | Stat: "33" · Label: "FOLLOWERS IN 19 WEEKS" · Copy: "Some of it flopped. Like the four months I spent posting on Instagram." (.hl on "flopped") |
-| 4 | Muted frame card (the hard truth) | Copy: "The things that flopped had one thing in common. They were safe, and a bit hollow." (.hl on "safe, and a bit hollow") |
-| 5 | Clean single-line slide (the turn) | Copy: "So the things that worked took me by surprise. They were the ones that scared me." (.hl on "the ones that scared me") |
-| 6 | One quote card + a line | Quote card: "Who do you think you are?" · Copy: "That was my brain, about starting this newsletter. I did it anyway." (.hl on "I did it anyway") |
-| 7 | Large white statement | Statement: "A year in, the pattern is clear. The brave, honest things move you forward. The busy ones just keep you busy." (.hl on "just keep you busy") |
-| 8 | Black statement card | Statement: "Nobody has years of experience at this yet. We're all learning as we build." (.hl-text on "learning as we build") |
-| 9 (CTA) | Brand card: Thoughts by productkind logo, warm | Copy: "The full story, the wins and the flops, is in my newsletter." (.hl on "the wins and the flops") · Badge: "PRODUCTKIND.SUBSTACK.COM" · "Thoughts by productkind 💛" · "Building something of your own? Send this to a friend who is too." |
+| 1 (cover) | Brand cover with Kim mascot; calm, personal | Headline: "A year building my first product. Here's what worked, and what didn't." (.hl on "what worked, and what didn't") · Kicker: "AN HONEST YEAR IN REVIEW." · new line: "SWIPE →" |
+| 2 | Clean single-line slide (setup) | Copy: "It was my first full year in business, so I tried a bit of everything." (.hl on "tried a bit of everything") |
+| 3 | Big-number stat card: "33" | Stat: "33" · Label: "FOLLOWERS IN 19 WEEKS" · Copy: "Plenty of it flopped. Nineteen weeks of posting on Instagram got us 33 followers." (.hl on "flopped") |
+| 4 | Clean single-line slide (second honest flop) | Copy: "And taking each day as it came, with no plan, slowly wore me out." (.hl on "wore me out") |
+| 5 | Clean single-line slide (the turn) | Copy: "But it wasn't all flops. A few things really worked." (.hl on "really worked") |
+| 6 | One quote card + a line | Quote card: "Who do you think you are?" · Copy: "That was my brain, about this newsletter. I started it anyway, and readers tell me it helped." (.hl on "I started it anyway") |
+| 7 | Clean single-line slide (the article's purpose) | Copy: "I'm sharing all of it, the wins and the flops, so you can skip a few of my mistakes." (.hl on "skip a few of my mistakes") |
+| 8 (CTA) | Brand card: Thoughts by productkind logo, warm | Copy: "The full story is in my newsletter, with a lot more of both." (.hl on "a lot more of both") · Badge: "PRODUCTKIND.SUBSTACK.COM" · "Thoughts by productkind 💛" · "Building something of your own? Send this to a friend who is too." |
 
-**Alt text (for the post):** A personal, honest year-in-review carousel told
-as one story: going solo and trying everything, the things that flopped
-(like four months on Instagram for 33 followers), noticing the flops were
-all safe and hollow, the braver things that worked (like a newsletter almost
-never started), and the pattern it revealed. It points readers to the full
-article in the newsletter.
+**Alt text (for the post):** A personal, honest year-in-review carousel about
+building a first digital product: trying lots of things in the first year,
+flops like nineteen weeks on Instagram for 33 followers and working with no
+plan, and the newsletter the author almost never started but is proudest of.
+It shares the year candidly and points readers to the full article.
 
 ## LinkedIn caption (exact)
 
-Last year I built my first digital product, Little Parrot, and decided to figure it out as I went.
+Last year was my first full year in business, so I tried a bit of everything while building my first product, Little Parrot.
 
-Some of it flopped. Four months posting on Instagram got us to 33 followers. Looking back, the things that went nowhere had something in common: they were safe, and a bit hollow.
+Plenty of it flopped. Nineteen weeks of posting on Instagram got us 33 followers. Taking each day as it came, with no plan, slowly wore me out.
 
-The things that worked were the ones that scared me. Like this newsletter, which my brain spent months telling me not to start.
+But it wasn't all flops. A few things really worked, starting with the one I almost didn't start: this newsletter. My brain spent months asking "who do you think you are?" I started it anyway, and readers tell me it helped.
 
-A year in, the pattern is clear: the brave, honest things move you forward. The busy ones just keep you busy.
+I'm sharing all of it, the wins and the flops, so you can skip a few of my mistakes. The full story is in my newsletter, Thoughts by productkind (link in the comments).
 
-The full story, the wins and the flops, is in my newsletter, Thoughts by productkind (link in the comments). If you're building something of your own, I'd love to know which part you'd want to hear more about.
+If you're building something of your own, I'd love to know which part you'd want to hear more about.
 
 ## Instagram caption (exact)
 
-Last year I built my first digital product, Little Parrot, and decided to figure it out as I went.
+Last year was my first full year in business, so I tried a bit of everything while building Little Parrot.
 
-Some of it flopped (four months on Instagram, 33 followers 😅). The things that went nowhere were all safe and a bit hollow. The things that worked were the ones that scared me, like this newsletter.
+Plenty of it flopped (nineteen weeks on Instagram, 33 followers 😅). Working with no plan slowly wore me out too. But some things really worked, starting with the one I almost didn't start: this newsletter.
 
-A year in, the pattern is clear: the brave, honest things move you forward. The busy ones just keep you busy.
+I'm sharing all of it, the wins and the flops, so you can skip a few of my mistakes.
 
 The full story is in my newsletter, link in bio. 💛
 
@@ -91,7 +89,7 @@ Subscribe to learn with us about building digital products. 🎓
 
 ## TikTok caption (exact)
 
-A year building my own product. The safe, busy things flopped. The scary ones worked 😅 The full story is in my newsletter, link in bio. 💛
+My first full year in business: what worked, and what didn't, while building my own product 😅 The full story is in my newsletter, link in bio. 💛
 
 *(House style keeps hashtags to Instagram; if you want discovery tags on TikTok, reuse two or three from the Instagram set, e.g. #buildinpublic #vibecoding #womenwhobuild.)*
 
