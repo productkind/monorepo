@@ -28,6 +28,21 @@ someone could comfortably skip the article after reading the carousel, the
 carousel gave too much away. Aim for "I want to read the rest", not "now I
 don't need to".
 
+**Tell one connected story, not a list of moments.** The slides are a
+sequence the reader swipes through, so they should read like a small
+narrative, not a set of interchangeable cards. Give it an arc: a setup that
+opens a question or tension, a turn, a payoff, then the invitation. Each
+slide should follow from the one before and set up the next, using natural
+connective tissue in Kinga's voice ("So,", "But,", "Like this:", "A year
+in,"). For a personal retrospective the arc is usually: honest situation →
+what went wrong → the turn → what actually worked → what it taught me →
+invitation. Find the single thread that links the chosen moments (a theme,
+a realisation) rather than listing them side by side.
+
+Test before finalising: read only the display copy, slide 1 to N, as one
+passage. It should hold together as a story. If any two slides could swap
+places without the reader noticing, the arc is too flat, tighten it.
+
 **Very little text per slide.** Think flashcard, not paragraph. Target one
 short sentence or a fragment of display copy per slide (the cover headline
 ≤ ~12 words). Around 20-25 words is a ceiling, not a target; most slides
@@ -97,6 +112,8 @@ English, no em dashes.
 Design-quality bar (from
 `productkind/marketing/channels/instagram/carousel-research.md`, plus the
 copy principles above):
+- **One connected story**: the display copy reads as a single narrative arc
+  from slide 1 to the CTA, not a list of moments.
 - **Teaser, not summary**: one useful idea per slide, detail held back for
   the article.
 - **Very little text**: one short sentence or fragment per slide; ~20-25
