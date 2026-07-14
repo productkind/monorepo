@@ -33,8 +33,8 @@ verbatim. The implemented carousel may not add copy; `check.py` in
 
 | Slide | Visual | Text on slide (verbatim) |
 | --- | --- | --- |
-| 1 (cover) | Brand cover with Kim mascot; calm, honest. Big numbers do the work | Kicker: "MY FIRST FULL YEAR BUILDING DIGITAL PRODUCTS." Headline: "We posted 76 times on Instagram, and went from 0 followers to 33." new line: "SWIPE →" |
-| 2 | Simple centred copy card, personal | "That's a tiny number. I wrote about it anyway, along with everything else I tried this year." |
+| 1 (cover) | Brand cover with Kim mascot; calm, honest. Big numbers do the work | Kicker: "MY FIRST FULL YEAR OF RUNNING MY BUSINESS." Runner: "LESSONS AND PIVOTS", new line: "SWIPE →" |
+| 2 | Simple centred copy card, personal | Headline: "We posted 76 times on Instagram, and went from 0 followers to 33." Body: "That's a tiny number. I wrote about it anyway, along with everything else I tried this year." |
 | 3 | Copy + black statement card | "Some of it really didn't work. The comics took hours to make." Black card: "And never reached anyone new on Instagram." |
 | 4 | Big centred statement, the hinge of the story | "What helped most was working out what each flop was telling me." |
 | 5 | Instagram carousel mockup in a frame + copy | "We learned Instagram carousels don't get shown to non-followers. A poor way to get discovered there." |
