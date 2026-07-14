@@ -40,7 +40,7 @@ verbatim. The implemented carousel may not add copy; `check.py` in
 | 5 | Instagram carousel mockup in a frame + copy | "We learned Instagram carousels don't get shown to non-followers. A poor way to get discovered there." |
 | 6 | Photo/illustration frame of a talk + copy | "A conference full of the wrong audience taught me to work out who I'm building for before I turn up, not after." |
 | 7 | Warm gradient statement card, the payoff | "So every experiment pointed somewhere better. Including the pivot: helping women who can't code yet build their own products." |
-| 8 (CTA) | Brand card: Thoughts by productkind logo/Kim, URL badge, offer line, share-ask | "The pivot, and the flops that led to it, is what the full article is about." Badge: "PRODUCTKIND.SUBSTACK.COM" · "Full article on our Substack 💛" · "Got a project your doubts keep talking you out of? Tell me in the comments." |
+| 8 (CTA) | Brand card: Thoughts by productkind logo/Kim, URL badge, offer line, share-ask | "The pivot, and the flops that led to it, is what the full article is about." Badge: "PRODUCTKIND.SUBSTACK.COM" · "Full article on our Substack 💜" · "Got a project your doubts keep talking you out of? Tell me in the comments." |
 
 **Alt text (for the post):** A personal carousel about a first full year
 building digital products: 76 Instagram posts that reached 33 followers,
