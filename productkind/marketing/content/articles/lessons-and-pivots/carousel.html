@@ -49,7 +49,7 @@
   .headline { margin: 0; font-family: var(--font-display); font-weight: var(--weight-headline); color: var(--ink); text-wrap: pretty; }
   .copy { margin: 0; font-family: var(--font-copy); font-weight: var(--weight-copy); font-size: 34px; line-height: 1.45; color: var(--ink); text-wrap: pretty; }
   .kicker { font-family: var(--font-display); font-weight: 700; letter-spacing: 0.08em; color: var(--ink); }
-  .hl { background: var(--grad); padding: 0 0.12em; box-decoration-break: clone; -webkit-box-decoration-break: clone; font-weight: 700; }
+  .hl { background: var(--grad); padding: 0 0.12em; box-decoration-break: clone; -webkit-box-decoration-break: clone; font-weight: inherit; }
 
   .frame { border: 4px solid var(--ink); box-shadow: 12px 12px 0 rgba(8,8,9,0.25); background: #ffffff; position: relative; overflow: hidden; box-sizing: border-box; }
   .frame.muted { background: #e8e8ea; }
@@ -132,9 +132,9 @@
   <section class="slide" data-screen-label="05 Instagram lesson">
     <div class="card">
       <div class="gradbar"></div>
-      <div class="inner" style="justify-content:flex-start; gap:56px;">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">05 / 08</span></div>
-        <div style="align-self:center; position:relative; width:520px; height:420px; margin-top:12px;">
+      <div class="inner" style="justify-content:center; gap:56px;">
+        <div class="header" style="position:absolute; top:56px; left:72px; right:72px;"><span class="handle">productkind.substack.com</span><span class="page">05 / 08</span></div>
+        <div style="align-self:center; position:relative; width:520px; height:420px;">
           <!-- stacked carousel cards (graphic only, no text) -->
           <div class="frame" style="position:absolute; left:48px; top:36px; width:420px; height:360px; background:#e8e8ea;"></div>
           <div class="frame" style="position:absolute; left:24px; top:18px; width:420px; height:360px; background:#f4f4f6;"></div>
@@ -163,9 +163,9 @@
   <section class="slide" data-screen-label="06 Conference lesson">
     <div class="card">
       <div class="gradbar"></div>
-      <div class="inner" style="justify-content:flex-start; gap:56px;">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">06 / 08</span></div>
-        <div class="frame muted" style="align-self:center; width:520px; height:360px; margin-top:12px; overflow:visible;">
+      <div class="inner" style="justify-content:center; gap:56px;">
+        <div class="header" style="position:absolute; top:56px; left:72px; right:72px;"><span class="handle">productkind.substack.com</span><span class="page">06 / 08</span></div>
+        <div class="frame muted" style="align-self:center; width:520px; height:360px; overflow:visible;">
           <svg viewBox="0 0 520 360" width="100%" height="100%" style="display:block;">
             <!-- speaker on a small stage, facing a mismatched audience -->
             <line x1="40" y1="300" x2="480" y2="300" stroke="#080809" stroke-width="3"></line>
@@ -222,7 +222,7 @@
         <div style="display:flex; flex-direction:column; align-items:center; gap:32px;">
           <img src="assets/logo-thoughts-by-productkind-icon.png" alt="Thoughts by productkind logo" style="width:180px; height:180px; border:4px solid var(--ink); box-shadow:12px 12px 0 rgba(8,8,9,0.25);">
           <span class="badge" style="font-size:32px;">PRODUCTKIND.SUBSTACK.COM</span>
-          <p style="margin:0; font-family:var(--font-display); font-weight:700; font-size:30px; color:var(--ink);">Full article on our Substack 💛</p>
+          <p style="margin:0; font-family:var(--font-display); font-weight:700; font-size:30px; color:var(--ink);">Full article on our Substack 💜</p>
         </div>
         <p style="margin:0; text-align:center; font-family:var(--font-plain); font-size:29px; line-height:1.45; color:var(--ink-secondary);">Got a project your doubts keep talking you out of? Tell me in the comments.</p>
       </div>
