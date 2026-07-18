@@ -81,6 +81,53 @@ spec, not the spec to the source article. `check.py` only checks that the
 design adds no text the spec doesn't have. The spec copy itself is written
 fresh under the three principles above.
 
+## Caption rules (Instagram + TikTok)
+
+From `productkind/marketing/channels/platform-playbook-2026.md` (researched
+July 2026; re-verify the mechanics if it is much later than that). Captions
+are drafted in the spec (Step 1) and follow the same voice and banned-list
+rules as the slides.
+
+**Both platforms**
+
+- **The first line is the hook AND the search phrase.** Captions are
+  keyword-indexed: Instagram in-app search plus Google (public professional
+  accounts, since July 2025), TikTok search. Open with the phrase a learner
+  would actually type ("how to build an app without coding"), written as a
+  natural spoken line in Kinga's voice, never tag-speak or keyword stuffing.
+- **Hashtags: 3-5, all niche and specific, placed last.** Both platforms
+  cap captions at 5 hashtags. No generic tags (#instagood, #fyp); tags
+  describe topic + audience + format (e.g. #nocode #womenintech
+  #learntobuild). Hashtags don't drive reach; they only categorise.
+- **CTA: payoff-anchored, never engagement bait.** Meta demotes
+  comment/tag/like-bait from all recommendation surfaces: no "comment YES",
+  no "tag a friend", no giveaway mechanics. Save-asks and share-asks are
+  safe and are exactly what distribution rewards (saves and sends drive
+  Explore and Reels reach), so "save this for when you build yours" or a
+  send-to-a-friend nudge does double duty with our share-ask acquisition.
+  Follow-asks name the payoff: "follow for [specific promise]", not a bare
+  "follow for more".
+
+**Instagram**
+
+- The caption truncates at ~125 characters ("... more"), and that opening
+  doubles as the Google snippet. Hook + search phrase must land inside it.
+- For educational carousels, a longer keyword-rich caption (150-300 words)
+  is an SEO asset: expand the tease in natural sentences (still holding the
+  detail back for the article), then CTA + share-ask, then hashtags.
+
+**TikTok**
+
+- Only ~80-100 characters show before "more"; keep the whole caption
+  roughly 150-300 characters: hook line, one line of context, CTA,
+  hashtags (1 broad community tag + 2-3 niche).
+- A genuine question in the caption invites comments (correlates with ~26%
+  more in Metricool's 2026 study); use one when it is natural, never as
+  bait.
+- "Follow for more [topic] tips" is fine on TikTok (its Creator Academy
+  encourages follow CTAs). Links go in the bio or a pinned comment, not
+  the caption.
+
 ## Inputs to establish first
 
 1. **Brand**: `little-parrot` or `productkind`. If not stated, infer from
@@ -111,8 +158,9 @@ Write the spec md with:
   (deliberately bad example messages) is marked "(parody; banned-list
   exempt)".
 - **Alt text** for the post.
-- **Caption(s)** for the target platforms (Instagram caption with
-  hashtags; LinkedIn caption if requested).
+- **Caption(s)** for the target platforms, written to the caption rules
+  above (Instagram and TikTok each get their own caption; LinkedIn caption
+  if requested).
 
 Where the spec lives:
 - Course post: the post md in
