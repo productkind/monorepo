@@ -1,6 +1,6 @@
 ---
 status: drafted
-channels: [instagram, tiktok, linkedin]
+channels: [instagram, tiktok, linkedin, threads, youtube-shorts]
 account: little-parrot
 ---
 
@@ -81,3 +81,29 @@ It earns its keep the first time something breaks. "The button looks weird" is a
 The full tour (servers, cloud computing, APIs) is in the carousel. And this mental model is the free first challenge of Basics of Software for Vibe Coding, on LittleParrot.app.
 
 So if a friend building with Lovable is still guessing at these words, send it their way. It might save them an afternoon.
+
+### Threads (posted from the productkind profile)
+
+**Caption** (~140 characters):
+
+What do frontend, backend and database actually mean? Your app is a bakery: counter, kitchen, storage room. Which room does your bug live in?
+
+**Topic tag** (typed in the composer, exactly one): vibe coding
+
+**Founder reply chain** (posted within the first hour):
+
+Kinga (reply to the post): The bakery starts paying off when something breaks. "The button looks weird" is a counter problem; "my data disappeared" is a storage room problem. Telling your AI builder which room to look in saves a lot of guessing (and credits).
+
+Thomas (reply to Kinga): And the building itself is a server: the computer the kitchen and the storage room run on. Renting one instead of buying it is cloud computing; Lovable handles that bit for you. The whole tour is the free first challenge of Basics of Software for Vibe Coding, on littleparrot.app.
+
+### YouTube Shorts
+
+**Title** (38 characters): Frontend, backend, database explained
+
+**Description**:
+
+Your app is a bakery. The counter is the frontend (what users see), the kitchen is the backend (the work out of sight), the storage room is the database (what your app remembers). Knowing the rooms means you can point your AI builder at the right one when something breaks. Subscribe for a new vibe coding basics short every week. #vibecoding #techbasics #Shorts
+
+**Pinned comment**:
+
+The full tour (servers, cloud computing, APIs) is the free first challenge of Basics of Software for Vibe Coding: https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview?utm_source=youtube&utm_medium=social&utm_campaign=software-basics&utm_content=post-1
