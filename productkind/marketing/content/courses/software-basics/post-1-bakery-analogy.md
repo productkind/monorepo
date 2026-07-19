@@ -58,17 +58,17 @@ The counter is your frontend: everything customers see and touch. The kitchen is
 
 The analogy helps most when something goes wrong. "The button looks weird" is a counter problem. "My data disappeared" is a storage room problem. Telling your AI builder which room to look in gets you a faster, cheaper fix.
 
-There's more to the tour (APIs are the phone line between bakeries, and the key to that line stays secret), and it's all in the free first challenge of Basics of Software for Vibe Coding, on LittleParrot.app.
+There's more to the tour (APIs are the phone line between bakeries, and the key to that line stays secret), and it's all in the free first challenge of Basics of Software for Vibe Coding, our course for women building their first app with AI, on LittleParrot.app.
 
 Save the analogy for your next prompt. 🔖
 .
 .
 .
-#vibecoding #techbasics #womenwhobuild #codingforbeginners #buildwithai
+#womenintech #womenwhobuild #techforwomen #vibecoding #techbasics
 
 ### TikTok
 
-What do frontend, backend and database actually mean? Your app is a bakery: counter, kitchen, storage room. Which of these words confused you first? The full tour is our free first challenge, link in bio. #learnontiktok #vibecoding #techbasics #womenwhobuild
+What do frontend, backend and database actually mean? Your app is a bakery: counter, kitchen, storage room. Which of these words confused you first? The full tour is our free challenge for women building with AI, link in bio. #womenintech #womenwhobuild #techforwomen #vibecoding
 
 ### LinkedIn
 
@@ -88,21 +88,21 @@ So if a friend building with Lovable is still guessing at these words, send it t
 
 What do frontend, backend and database actually mean? Your app is a bakery: counter, kitchen, storage room. Which room does your bug live in?
 
-**Topic tag** (typed in the composer, exactly one): vibe coding
+**Topic tag** (typed in the composer, exactly one): women in tech
 
 **Founder reply chain** (posted within the first hour):
 
 Kinga (reply to the post): The bakery starts paying off when something breaks. "The button looks weird" is a counter problem; "my data disappeared" is a storage room problem. Telling your AI builder which room to look in saves a lot of guessing (and credits).
 
-Thomas (reply to Kinga): And the building itself is a server: the computer the kitchen and the storage room run on. Renting one instead of buying it is cloud computing; Lovable handles that bit for you. The whole tour is the free first challenge of Basics of Software for Vibe Coding, on littleparrot.app.
+Thomas (reply to Kinga): And the building itself is a server: the computer the kitchen and the storage room run on. Renting one instead of buying it is cloud computing; Lovable handles that bit for you. The whole tour is the free first challenge of Basics of Software for Vibe Coding, our course for women building with AI, on littleparrot.app.
 
 ### YouTube Shorts
 
-**Title** (38 characters): Frontend, backend, database explained
+**Title** (39 characters): Frontend & backend, explained for women
 
 **Description**:
 
-Your app is a bakery. The counter is the frontend (what users see), the kitchen is the backend (the work out of sight), the storage room is the database (what your app remembers). Knowing the rooms means you can point your AI builder at the right one when something breaks. Subscribe for a new vibe coding basics short every week. #vibecoding #techbasics #Shorts
+Your app is a bakery. The counter is the frontend (what users see), the kitchen is the backend (the work out of sight), the storage room is the database (what your app remembers). Knowing the rooms means you can point your AI builder at the right one when something breaks. We teach vibe coding to women building their first app without a tech background. Subscribe for a new vibe coding basics short every week. #womenintech #womenwhobuild #Shorts
 
 **Pinned comment**:
 
