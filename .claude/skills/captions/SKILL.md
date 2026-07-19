@@ -1,15 +1,15 @@
 ---
 name: captions
-description: Write well-performing captions for a single piece of non-carousel content (educational videos, B-roll, photos, announcements) posted from the productkind or Little Parrot brand account, for TikTok, Instagram, Threads, and LinkedIn, plus two founder comments (Kinga and Thomas) for Instagram, Threads, and LinkedIn. Triggers include "write a caption", "captions for this video/B-roll", "post copy for TikTok/Instagram/Threads/LinkedIn", or any caption task that is not a carousel (carousels have their own skill).
+description: Write well-performing captions for a single piece of non-carousel content (educational videos, B-roll, photos, announcements) posted from the productkind or Little Parrot brand account, for TikTok, Instagram, Threads, LinkedIn, and YouTube Shorts, plus two founder comments (Kinga and Thomas) for Instagram, Threads, and LinkedIn. Triggers include "write a caption", "captions for this video/B-roll", "post copy for TikTok/Instagram/Threads/LinkedIn/YouTube Shorts", or any caption task that is not a carousel (carousels have their own skill).
 ---
 
 # Captions workflow
 
 Turn one piece of content (an educational video, a B-roll clip, a photo, an
 announcement) into ready-to-paste captions for TikTok, Instagram, Threads,
-and LinkedIn, posted from the brand account, plus two founder comments per
-platform (Instagram, Threads, LinkedIn) that Kinga and Thomas post to start
-real conversation under it.
+LinkedIn, and YouTube Shorts (video content only), posted from the brand
+account, plus two founder comments per platform (Instagram, Threads,
+LinkedIn) that Kinga and Thomas post to start real conversation under it.
 
 The platform mechanics below come from
 `productkind/marketing/channels/platform-playbook-2026.md` (researched July
@@ -25,7 +25,8 @@ trusting them.
    the clip doesn't show, and never oversell what a course or article
    delivers.
 3. **Platforms**: default is all four (TikTok, Instagram, Threads,
-   LinkedIn). Drop any that don't fit the piece.
+   LinkedIn), plus YouTube Shorts when the piece is a video. Drop any that
+   don't fit the piece.
 4. **Destination**: where the post drives (a course, an article, the
    newsletter, nothing). This shapes the CTA and where the link lives.
 
@@ -46,9 +47,9 @@ trusting them.
 - **The first line is the hook AND the search phrase.** Captions are
   keyword-indexed (Instagram in-app search plus Google for public
   professional accounts; TikTok search; every word on Threads is
-  searchable). Open with the phrase a learner would actually type ("how to
-  build an app without coding"), written as a natural spoken line, never
-  tag-speak or keyword stuffing.
+  searchable; the YouTube Shorts title). Open with the phrase a learner
+  would actually type ("how to build an app without coding"), written as a
+  natural spoken line, never tag-speak or keyword stuffing.
 - **CTA: payoff-anchored, never engagement bait.** Meta demotes
   comment/tag/like-bait from recommendations and LinkedIn won't promote
   posts that ask for reactions: no "comment YES", no "tag a friend", no
@@ -94,6 +95,24 @@ trusting them.
 - Reply depth is the strongest signal here: end on a genuine question that
   invites replies, and design the founder comments as a conversation (see
   below).
+
+**YouTube Shorts** (video content only; no founder comments, we run one
+channel there)
+
+- **The title is the hook**: 20-40 characters, search phrase first (the
+  limit is 100, but short keyword-first titles perform best on trending
+  Shorts).
+- **Description: 150-500 focused characters** in natural sentences that
+  extend what the video actually shows; the 5,000-character limit is not a
+  target.
+- 2-3 hashtags in the description, niche plus optionally #Shorts; stuffing
+  makes YouTube ignore all of them.
+- Subscribe asks are openly allowed and encouraged, payoff-named:
+  "Subscribe for a new [topic] short every week" or "Subscribe, part 2
+  drops tomorrow". They belong verbally in the video's final seconds; echo
+  in the description if natural.
+- Links go in a pinned comment, not the description; if the post drives
+  somewhere, draft the pinned comment too.
 
 **LinkedIn** (from the productkind page)
 
@@ -145,13 +164,14 @@ Write one `captions.md` into the piece's folder under
 `productkind/marketing/README.md` if the piece doesn't have one). Structure:
 
 - Header: brand, source material, destination link.
-- One section per platform: the caption ready to paste, alt text
-  (Instagram/LinkedIn), hashtags/topic tag included in place, plus the
-  pinned comment (TikTok, if any) and the two founder comments labelled
-  **Kinga** and **Thomas**.
+- One section per platform: the caption ready to paste (for YouTube Shorts,
+  title + description), alt text (Instagram/LinkedIn), hashtags/topic tag
+  included in place, plus the pinned comment (TikTok and YouTube Shorts, if
+  any) and the two founder comments labelled **Kinga** and **Thomas**.
 - A short posting checklist at the end: founder comments go up within the
   first hour; reply to every real commenter in that window too (it is the
-  cheapest measured engagement lift on every platform); TikTok link goes in
-  the pinned comment; Threads topic tag is typed in the composer.
+  cheapest measured engagement lift on every platform); TikTok and YouTube
+  Shorts links go in the pinned comment; Threads topic tag is typed in the
+  composer.
 
 Show the draft to Kinga for approval before anything is posted.
