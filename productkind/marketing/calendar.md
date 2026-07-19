@@ -8,6 +8,10 @@ their own master schedule: [content/courses/posting-sequence.md](content/courses
 
 | Date | Piece | Channels | Account | Status |
 | ---- | ----- | -------- | ------- | ------ |
+| 2026-07-21 | B-roll: business ideas for women 2026 – how to find what to do | instagram, tiktok, youtube, linkedin Kinga | productkind | planned |
+| 2026-07-21 | Substack article carousel: Building is cheap(er), but distribution is still expensive | instagram, tiktok, youtube, linkedin Kinga | productkind | planned |
+| 2026-07-20 | social-006 | instagram, tiktok, youtube, linkedin productkind | productkind | planned |
+| --- | --- | --- | --- | --- |
 | 2026-07-19 | SB-1 the bakery analogy course carousel | instagram, tiktok, youtube, linkedin productkind | productkind | todo |
 | 2026-07-18 | B-roll of second Substack article (funky) | instagram, tiktok | productkind | posted |
 | 2026-07-17 | Fourth explainer video | instagram, tiktok, youtube, linkedin productkind | productkind | posted |

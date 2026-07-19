@@ -1,6 +1,6 @@
 ---
 status: drafted
-channels: [instagram]
+channels: [instagram, tiktok, linkedin]
 account: little-parrot
 ---
 
@@ -22,41 +22,62 @@ markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
 the learner types into a tool. Render it verbatim in monospace inside a
 prompt-input mockup (a chat input field with a cursor and send arrow), so
 it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
+the typed text, never styled labels. Everything else in "Display copy" is
 display copy in the brand style.
 
 **Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Illustrated-analogy
 style: a warm bakery cutaway drawing that highlights a different room per
 slide, the technical term and the bakery part paired on each.
 
-| Slide | Visual | Text on slide |
-| --- | --- | --- |
-| 1 (cover) | A cosy bakery cutaway: counter, kitchen, storage room | "Frontend, backend, database. Three words that make sense the moment you picture a bakery. 👇" |
-| 2 | The counter highlighted | "FRONTEND = the counter. Everything your users see and touch: buttons, forms, images. It runs on their device, and it's also called the client." |
-| 3 | The kitchen highlighted | "BACKEND = the kitchen. The work customers never see: saving data, sending emails, processing payments. It runs on a server." |
-| 4 | The storage room highlighted | "DATABASE = the storage room. Where your app remembers things: profiles, orders, posts, all organised and findable." |
-| 5 | The building itself, a rent sign | "SERVER = the building it all happens in: a powerful computer running your backend and database. And you don't buy one: CLOUD COMPUTING means renting space in someone else's, which Lovable handles for you." |
-| 6 | A phone line between two bakeries, a key beside it | "API = the phone line between bakeries: how apps talk to each other (your app calls Stripe to take a payment). API KEY = the access code on that line. It's a secret, and it never goes in a prompt." |
-| 7 (CTA) | Brand card, the whole bakery labelled | "Now you can point: 'the problem is in the kitchen, not the counter.' Precise prompts start here. This is the free first challenge of Basics of Software for Vibe Coding, on LittleParrot.app 💛 Save the analogy 🔖" |
+**Full-fidelity rule:** every word that appears on a slide is in this table,
+verbatim. The implemented carousel may not add copy; `check.py` in
+`productkind/carousel-design/` enforces it.
+
+| Slide | Visual | Display copy (verbatim) | Prompt window / mockup content (verbatim) |
+| --- | --- | --- | --- |
+| 1 (cover) | A cosy bakery cutaway: counter, kitchen, storage room | "Frontend, backend, database: it's all one bakery. 🥐" Kicker: "KNOW WHERE TO POINT YOUR AI BUILDER · SWIPE →" | (none) |
+| 2 | The counter highlighted | "The counter is your FRONTEND: everything users see and touch. Buttons, forms, colours. It runs on their device." Footnote: "Also called the client." | (none) |
+| 3 | The kitchen highlighted | "The kitchen is your BACKEND: the work customers never see. Saving data, sending emails, taking payments." | (none) |
+| 4 | The storage room highlighted | "The storage room is your DATABASE: where your app remembers. Profiles, orders, posts, all organised and findable." | (none) |
+| 5 | The building itself, a rent sign | "The building is a SERVER: the computer your backend and database run on." Footnote: "You rent rather than buy. That's CLOUD COMPUTING, and Lovable handles it for you." | (none) |
+| 6 | A phone line between two bakeries, a key beside it | "The phone line to the bakery next door is an API: how your app talks to other apps, like Stripe." Footnote: "The API KEY is the access code. Keep it secret: it never goes in a prompt." | (none) |
+| 7 (CTA) | Brand card: the whole bakery labelled, mascot, prompt window | "Next time something breaks, you can point at the room." Then: "This is the free first challenge of Basics of Software for Vibe Coding." Badge: "LITTLEPARROT.APP" · "First challenge free 💛" · "Save the analogy for your next prompt 🔖" | Label: "YOUR NEXT PROMPT" · Prompt: `The problem is in the backend, not the frontend.` |
 
 **Alt text (for the post):** An illustrated analogy carousel mapping app
 architecture to a bakery: frontend as the counter, backend as the kitchen,
 database as the storage room, servers and cloud computing as the rented
 building, and APIs as the phone line between bakeries.
 
-## Caption (exact)
+## Captions (exact)
 
-"Frontend", "backend", "database": the words appear in every tutorial, every Lovable reply, every conversation with a developer. One picture explains all three: your app is a bakery. 🥐
+### Instagram
 
-The counter is your frontend, everything customers see and touch. The kitchen is your backend, where the real work happens out of sight. The storage room is your database, where everything is kept and remembered. The building is a server, and cloud computing means renting one instead of owning it.
+What do frontend, backend and database actually mean? Picture a bakery. 🥐
 
-The analogy helps most the next time something goes wrong. "The button looks weird" is a counter problem. "My data disappeared" is a storage room problem. Telling your AI builder which room to look in gets you a faster, cheaper fix.
+The counter is your frontend: everything customers see and touch. The kitchen is your backend, where the real work happens out of sight. The storage room is your database, where everything is kept and remembered. The building is a server, and cloud computing means renting one rather than owning it.
 
-This mental model is the free first challenge of our Basics of Software for Vibe Coding course, on LittleParrot.app.
+The analogy helps most when something goes wrong. "The button looks weird" is a counter problem. "My data disappeared" is a storage room problem. Telling your AI builder which room to look in gets you a faster, cheaper fix.
+
+There's more to the tour (APIs are the phone line between bakeries, and the key to that line stays secret), and it's all in the free first challenge of Basics of Software for Vibe Coding, on LittleParrot.app.
 
 Save the analogy for your next prompt. 🔖
+.
+.
+.
+#vibecoding #techbasics #womenwhobuild #codingforbeginners #buildwithai
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #techliteracy #shebuilds #womenintech #techforwomen #learnwithai #techbasics #appbuilding #codingforbeginners
+### TikTok
+
+What do frontend, backend and database actually mean? Your app is a bakery: counter, kitchen, storage room. Which of these words confused you first? The full tour is our free first challenge, link in bio. #learnontiktok #vibecoding #techbasics #womenwhobuild
+
+### LinkedIn
+
+Many of our learners have told us the same thing: they want to understand how the software they're building is actually put together. So we made a course for it, and its first picture is a bakery.
+
+The counter is the frontend, everything users see and touch. The kitchen is the backend, where the work happens out of sight. The storage room is the database, where your app remembers things.
+
+It earns its keep the first time something breaks. "The button looks weird" is a counter problem. "My data disappeared" is a storage room problem. Telling your AI builder which room to look in gets you a faster, cheaper fix.
+
+The full tour (servers, cloud computing, APIs) is in the carousel. And this mental model is the free first challenge of Basics of Software for Vibe Coding, on LittleParrot.app.
+
+So if a friend building with Lovable is still guessing at these words, send it their way. It might save them an afternoon.

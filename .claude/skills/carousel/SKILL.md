@@ -1,6 +1,6 @@
 ---
 name: carousel
-description: Create a social media carousel (LinkedIn, Instagram, TikTok) end to end, either Little Parrot or productkind branded, using the shared design system in productkind/carousel-design/. Drafts the per-slide copy spec, waits for approval, implements the design, runs the copy/banned-word check, and exports PNGs + PDF. Triggers include "create a carousel", "carousel for this article/course/post", "design slides for Instagram/LinkedIn/TikTok", or any carousel task.
+description: Create a social media carousel (LinkedIn, Instagram, TikTok, Threads, YouTube Shorts) end to end, either Little Parrot or productkind branded, using the shared design system in productkind/carousel-design/. Drafts the per-slide copy spec, waits for approval, implements the design, runs the copy/banned-word check, and exports PNGs + PDF. Triggers include "create a carousel", "carousel for this article/course/post", "design slides for Instagram/LinkedIn/TikTok/Threads/YouTube Shorts", or any carousel task.
 ---
 
 # Carousel workflow
@@ -81,32 +81,33 @@ spec, not the spec to the source article. `check.py` only checks that the
 design adds no text the spec doesn't have. The spec copy itself is written
 fresh under the three principles above.
 
-## Caption rules (Instagram + TikTok)
+## Caption rules (Instagram, TikTok, Threads, YouTube Shorts)
 
 From `productkind/marketing/channels/platform-playbook-2026.md` (researched
 July 2026; re-verify the mechanics if it is much later than that). Captions
 are drafted in the spec (Step 1) and follow the same voice and banned-list
 rules as the slides.
 
-**Both platforms**
+**All platforms**
 
 - **The first line is the hook AND the search phrase.** Captions are
   keyword-indexed: Instagram in-app search plus Google (public professional
-  accounts, since July 2025), TikTok search. Open with the phrase a learner
-  would actually type ("how to build an app without coding"), written as a
-  natural spoken line in Kinga's voice, never tag-speak or keyword stuffing.
-- **Hashtags: 3-5, all niche and specific, placed last.** Both platforms
-  cap captions at 5 hashtags. No generic tags (#instagood, #fyp); tags
-  describe topic + audience + format (e.g. #nocode #womenintech
-  #learntobuild). Hashtags don't drive reach; they only categorise.
+  accounts, since July 2025), TikTok search, every word on Threads, and the
+  YouTube Shorts title. Open with the phrase a learner would actually type
+  ("how to build an app without coding"), written as a natural spoken line
+  in Kinga's voice, never tag-speak or keyword stuffing.
+- **Hashtags are categorisation, not reach.** Niche and specific only, never
+  generic (#instagood, #fyp), always placed last; tags describe topic +
+  audience + format (e.g. #nocode #womenintech #learntobuild). Counts vary
+  per platform (below).
 - **CTA: payoff-anchored, never engagement bait.** Meta demotes
-  comment/tag/like-bait from all recommendation surfaces: no "comment YES",
-  no "tag a friend", no giveaway mechanics. Save-asks and share-asks are
-  safe and are exactly what distribution rewards (saves and sends drive
-  Explore and Reels reach), so "save this for when you build yours" or a
-  send-to-a-friend nudge does double duty with our share-ask acquisition.
-  Follow-asks name the payoff: "follow for [specific promise]", not a bare
-  "follow for more".
+  comment/tag/like-bait from all recommendation surfaces (Threads inherits
+  this): no "comment YES", no "tag a friend", no giveaway mechanics.
+  Save-asks and share-asks are safe and are exactly what distribution
+  rewards (saves and sends drive Explore and Reels reach), so "save this
+  for when you build yours" or a send-to-a-friend nudge does double duty
+  with our share-ask acquisition. Follow-asks name the payoff: "follow for
+  [specific promise]", not a bare "follow for more".
 
 **Instagram**
 
@@ -128,15 +129,45 @@ rules as the slides.
   encourages follow CTAs). Links go in the bio or a pinned comment, not
   the caption.
 
+**Threads** (posted from the productkind profile, whichever brand the
+carousel is)
+
+- Under ~200 characters, conversational; the 500-character limit is not a
+  target. No fold, but the first line decides the scroll-stop.
+- Exactly one topic tag (hard limit), a specific multi-word phrase typed in
+  the composer, not a # pile.
+- Reply depth is the strongest ranking signal on Threads: end on a genuine
+  question that invites replies, never as bait. Draft a founder reply chain
+  with the caption (Kinga comments, Thomas replies to Kinga, or the other
+  way round), posted within the first hour; each reply adds something the
+  caption doesn't, in personal-tone-of-voice, never fake praise.
+
+**YouTube Shorts** (the slides run as a video slideshow; this workflow
+supplies the title and description)
+
+- **The title is the hook**: 20-40 characters, search phrase first (the
+  limit is 100, but short keyword-first titles perform best on trending
+  Shorts).
+- **Description: 150-500 focused characters** in natural sentences,
+  expanding the tease while holding the detail back for the article.
+- 2-3 hashtags in the description, niche plus optionally #Shorts; stuffing
+  makes YouTube ignore all of them.
+- Subscribe asks are openly allowed and encouraged: "Subscribe for a new
+  [topic] short every week" or "Subscribe, part 2 drops tomorrow" (name the
+  payoff). Links go in a pinned comment, not the description; if the post
+  drives somewhere, draft the pinned comment too.
+
 ## Inputs to establish first
 
 1. **Brand**: `little-parrot` or `productkind`. If not stated, infer from
    the source material (Little Parrot course/campaign → little-parrot;
    Thoughts by productkind article → productkind) and confirm in one line.
 2. **Source material**: the article, course, campaign post md, or topic.
-3. **Platforms**: default is all three (LinkedIn gets the PDF as a
-   document post; Instagram and TikTok get the PNGs). Only matters for the
-   caption(s) and the TikTok centre-square crop check.
+3. **Platforms**: default is LinkedIn (the PDF as a document post),
+   Instagram and TikTok (the PNGs), Threads (the PNGs, from the productkind
+   profile), and YouTube Shorts (the slides as a video slideshow) when
+   asked. Only matters for the caption(s) and the TikTok centre-square
+   crop check.
 4. **Slide count**: typically 7-9. Cover + one idea per slide + CTA. Pick
    the few strongest ideas from the source and tease those; do not try to
    fit every section of the article onto a slide.
@@ -159,8 +190,9 @@ Write the spec md with:
   exempt)".
 - **Alt text** for the post.
 - **Caption(s)** for the target platforms, written to the caption rules
-  above (Instagram and TikTok each get their own caption; LinkedIn caption
-  if requested).
+  above (Instagram, TikTok, and Threads each get their own caption, plus
+  the Threads founder reply chain; YouTube Shorts gets a title +
+  description + any pinned comment; LinkedIn caption if requested).
 
 Where the spec lives:
 - Course post: the post md in
