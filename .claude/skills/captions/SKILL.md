@@ -50,6 +50,12 @@ trusting them.
   searchable; the YouTube Shorts title). Open with the phrase a learner
   would actually type ("how to build an app without coding"), written as a
   natural spoken line, never tag-speak or keyword stuffing.
+- **Name the audience in the keywords, not only the hashtags.** Search
+  phrases and caption keywords are audience signals too, so work a
+  women-specific phrase into the hook or caption body where it reads
+  naturally ("AI tools for women starting a business", "for women who want
+  to build their idea"). One natural mention does the categorisation work;
+  don't force it into every line or let it break the spoken voice.
 - **CTA: payoff-anchored, never engagement bait.** Meta demotes
   comment/tag/like-bait from recommendations and LinkedIn won't promote
   posts that ask for reactions: no "comment YES", no "tag a friend", no
@@ -59,7 +65,11 @@ trusting them.
   our share-ask acquisition. Follow-asks name the payoff ("follow for
   [specific promise]"), never a bare "follow for more".
 - **Hashtags are categorisation, not reach.** Niche and specific only,
-  never generic (#instagood, #fyp), always placed last.
+  never generic (#instagood, #fyp), always placed last. **Most tags in
+  every set are women-specific** (e.g. #womenintech #womenwhobuild
+  #womenfounders #techforwomen): hashtags tell the algorithm who the
+  content is for, and our audience is women. Topic/format tags (#nocode
+  #learntobuild) fill the remaining one or two slots.
 
 ## Per-platform rules
 
@@ -67,7 +77,8 @@ trusting them.
 
 - 150-300 characters total; only the first ~80-100 show before "more", so
   hook + keyword go there.
-- 3-5 hashtags: 1 broad community tag + 2-3 niche.
+- 3-5 hashtags: 1 broad women-in-tech community tag + 2-3 niche, most of
+  them women-specific.
 - A genuine question in the caption invites comments; use one when it is
   natural, never as bait.
 - "Follow for more [topic] tips" and "part 2 tomorrow" CTAs are fine here
@@ -81,7 +92,8 @@ trusting them.
   first 55 characters.
 - For educational content a keyword-rich caption of roughly 100-200 words
   is an SEO asset: expand the idea in natural sentences, then CTA +
-  share-ask, then 3-5 niche hashtags (hard cap 5).
+  share-ask, then 3-5 niche hashtags (hard cap 5), most of them
+  women-specific.
 - Reels distribution runs on sends and full watch-through, so a
   send-to-a-friend or save nudge fits naturally.
 - Include **alt text** for the visual.
@@ -101,12 +113,17 @@ channel there)
 
 - **The title is the hook**: 20-40 characters, search phrase first (the
   limit is 100, but short keyword-first titles perform best on trending
-  Shorts).
+  Shorts). Include a women-specific keyword in the title whenever it fits
+  ("AI for women...", "women building...").
 - **Description: 150-500 focused characters** in natural sentences that
   extend what the video actually shows; the 5,000-character limit is not a
   target.
-- 2-3 hashtags in the description, niche plus optionally #Shorts; stuffing
-  makes YouTube ignore all of them.
+- 2-3 hashtags in the description, women-specific first (e.g. #womenintech
+  #womenwhobuild), optionally #Shorts; stuffing makes YouTube ignore all of
+  them. This matters most on Shorts: its pull system currently shows our
+  videos to a mostly male audience, and women-specific hashtags, title
+  keywords, and spoken phrases (e.g. "for women who...") are how we tell it
+  who the videos are for.
 - Subscribe asks are openly allowed and encouraged, payoff-named:
   "Subscribe for a new [topic] short every week" or "Subscribe, part 2
   drops tomorrow". They belong verbally in the video's final seconds; echo
