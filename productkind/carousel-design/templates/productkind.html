@@ -36,6 +36,12 @@
     background: #ffffff; border: 12px solid var(--ink); box-shadow: 12px 12px 0 rgba(8,8,9,0.25); display: flex; flex-direction: column; }
   .gradbar { flex: none; height: 24px; background: var(--grad); }
   .inner { flex: 1; display: flex; flex-direction: column; justify-content: space-between; padding: 56px 72px 64px; box-sizing: border-box; }
+  /* Vertically centre a slide's body while the header stays at the top:
+     keep .header as the first child of .inner, then wrap the rest in
+     <div class="slidebody">…</div>. Use this instead of the space-between
+     default whenever a slide has no bottom-anchored element, so content
+     sits centred rather than pushed to the top with a gap below. */
+  .slidebody { flex: 1; display: flex; flex-direction: column; justify-content: center; }
 
   /* Header row: handle left, page count right */
   .header { display: flex; justify-content: space-between; align-items: center;
@@ -50,8 +56,11 @@
      vertically centred. */
   .copy { margin: 0; font-family: var(--font-copy); font-weight: var(--weight-copy); font-size: 34px; line-height: 1.45; color: var(--ink); text-wrap: pretty; }
   .kicker { font-family: var(--font-display); font-weight: 700; letter-spacing: 0.08em; color: var(--ink); }
+  /* The gradient wash is the emphasis; the highlight keeps its paragraph's
+     own font family and weight (no forced bold), so a headline highlight
+     stays headline-weight and a body highlight stays body-weight. */
   .hl { background: var(--grad); background-position: 0 50%; background-size: 100% 90%; background-repeat: no-repeat;
-    padding: 0 0.12em; box-decoration-break: clone; -webkit-box-decoration-break: clone; font-weight: 700; }
+    padding: 0 0.12em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
 
   /* Framed content box (photos, charts, quote cards, mockups) */
   .frame { border: 4px solid var(--ink); box-shadow: 12px 12px 0 rgba(8,8,9,0.25); background: #ffffff; position: relative; overflow: hidden; box-sizing: border-box; }
@@ -86,6 +95,26 @@
   .slack .msghead .time { font-weight: 400; font-size: 19px; color: #9a9aa3; margin-left: 10px; }
   .slack .msgbody { font-size: 23px; line-height: 1.5; color: var(--ink); margin-top: 6px; }
 
+  /* Instagram post mockup: a visual-only stand-in for a carousel post
+     (avatar, image area, "multiple slides" glyph, carousel dots, caption
+     bars). Holds no text, so it never needs spec coverage. Mark the active
+     carousel dot with class "on". */
+  .igpost { border: 4px solid var(--ink); box-shadow: 12px 12px 0 rgba(8,8,9,0.25); background: #ffffff; box-sizing: border-box; }
+  .igpost .ighead { display: flex; align-items: center; gap: 16px; padding: 18px 20px; }
+  .igpost .igavatar { flex: none; width: 48px; height: 48px; border-radius: 50%; border: 3px solid var(--ink); background: var(--grad); box-sizing: border-box; }
+  .igpost .igbar { height: 13px; border-radius: 7px; background: var(--ink); }
+  .igpost .igbar.sub { height: 11px; background: #c9c9cf; margin-top: 8px; }
+  .igpost .igimage { position: relative; height: 320px; border-top: 3px solid var(--ink); border-bottom: 3px solid var(--ink); background: var(--grad-wash); }
+  .igpost .igstack { position: absolute; top: 20px; right: 20px; width: 34px; height: 34px; }
+  .igpost .igstack span { position: absolute; width: 26px; height: 26px; border: 3px solid var(--ink); background: #ffffff; box-sizing: border-box; }
+  .igpost .igstack span:first-child { top: 0; right: 0; }
+  .igpost .igstack span:last-child { bottom: 0; left: 0; }
+  .igpost .igdots { position: absolute; bottom: 20px; left: 0; right: 0; display: flex; justify-content: center; gap: 12px; }
+  .igpost .igdots span { width: 12px; height: 12px; border-radius: 50%; background: #ffffff; border: 2px solid var(--ink); box-sizing: border-box; }
+  .igpost .igdots span.on { background: var(--ink); }
+  .igpost .igcaption { display: flex; flex-direction: column; gap: 10px; padding: 18px 20px; }
+  .igpost .igcaption span { display: block; height: 12px; border-radius: 6px; background: #e8e8ea; }
+
   /* Placeholder for a photo drop (replace the div with an <img>) */
   .imgslot { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
     background: repeating-linear-gradient(45deg, #f4f4f6, #f4f4f6 24px, #ececef 24px, #ececef 48px); }
@@ -102,18 +131,18 @@
 <body>
 <div id="strip" style="min-height:100vh; background:#c9c9cf; display:flex; gap:64px; padding:64px; overflow-x:auto; align-items:flex-start; box-sizing:border-box; font-family:var(--font-plain);">
 
-  <!-- The 9 slides below are layout examples (the productkind "employee to
-       running a business" article, plus one chat-mockup device slide):
-       cover, paired quote cards, full-width photo, laptop mockup,
-       photo + black statement card, chart, big stat, prompt window + Slack
-       mockup, CTA. Copy a slide, replace its content from the spec md. -->
+  <!-- The 10 slides below are layout examples (the productkind "employee to
+       running a business" article, plus device slides): cover, paired quote
+       cards, full-width photo, laptop mockup, photo + black statement card,
+       chart, big stat, prompt window + Slack mockup, CTA, Instagram post
+       mockup. Copy a slide, replace its content from the spec md. -->
 
   <!-- SLIDE 1 — COVER: headline with one .hl phrase, kicker, SWIPE →, mascot -->
   <section class="slide" data-screen-label="01 Cover">
     <div class="card" style="overflow:hidden;">
       <div class="gradbar"></div>
       <div class="inner" style="position:relative;">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">01 / 09</span></div>
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">01 / 10</span></div>
         <div style="flex:1; display:flex; flex-direction:column; justify-content:center; max-width:500px;">
           <h1 class="headline" style="font-size:52px; width:578px;">I left my full-time job at the end of 2024, after 10 years in tech. This is what <span class="hl">running my own business</span> has been like since.</h1>
           <div class="kicker" style="font-size:24px; color:var(--ink-secondary); max-width:480px;">FROM EMPLOYEE TO RUNNING A BUSINESS.</div>
@@ -130,7 +159,7 @@
     <div class="card">
       <div class="gradbar"></div>
       <div class="inner">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">02 / 09</span></div>
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">02 / 10</span></div>
         <div style="display:flex; flex-direction:column; gap:32px;">
           <div class="frame">
             <div style="height:12px; background:var(--grad);"></div>
@@ -151,7 +180,7 @@
     <div class="card">
       <div class="gradbar"></div>
       <div class="inner">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">03 / 09</span></div>
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">03 / 10</span></div>
         <div class="frame" style="width:100%; height:540px;">
           <div class="imgslot"><span>Full-width photo (drop an &lt;img class="photo"&gt; here)</span></div>
         </div>
@@ -166,7 +195,7 @@
     <div class="card">
       <div class="gradbar"></div>
       <div class="inner">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">04 / 09</span></div>
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">04 / 10</span></div>
         <div style="display:flex; flex-direction:column; align-items:center; gap:0;">
           <div class="frame" style="width:560px; height:360px;">
             <div style="height:34px; background:var(--ink); display:flex; align-items:center; gap:10px; padding:0 16px;">
@@ -192,7 +221,7 @@
     <div class="card">
       <div class="gradbar"></div>
       <div class="inner" style="justify-content:flex-start; gap:44px;">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">05 / 09</span></div>
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">05 / 10</span></div>
         <p class="copy" style="font-size:32px;">In the autumn I joined <span class="hl">SheBuilds on Lovable</span>, a 48-hour hackathon for women. There I saw a sea of professional women with ideas they wanted to build.</p>
         <div class="frame" style="height:360px; aspect-ratio:1200/819; align-self:center; flex:none;">
           <div class="imgslot"><span>Photo (drop an &lt;img class="photo"&gt; here)</span></div>
@@ -210,7 +239,7 @@
     <div class="card">
       <div class="gradbar"></div>
       <div class="inner">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">06 / 09</span></div>
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">06 / 10</span></div>
         <div class="frame" style="padding:36px 40px; overflow:visible;">
           <svg viewBox="0 0 660 360" width="100%" style="display:block;">
             <defs>
@@ -242,7 +271,7 @@
     <div class="card">
       <div class="gradbar"></div>
       <div class="inner">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">07 / 09</span></div>
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">07 / 10</span></div>
         <div style="align-self:center; border:4px solid var(--ink); box-shadow:16px 16px 0 rgba(8,8,9,0.25); padding:48px 72px; background:var(--grad);">
           <span style="font-family:var(--font-display); font-weight:700; font-size:220px; line-height:1; color:var(--ink);">14%</span>
         </div>
@@ -257,7 +286,7 @@
     <div class="card">
       <div class="gradbar"></div>
       <div class="inner">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">08 / 09</span></div>
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">08 / 10</span></div>
         <div style="display:flex; flex-direction:column; gap:12px;">
           <span class="promptlabel">YOUR PROMPT</span>
           <div class="promptwin" style="padding:36px 44px 84px;">
@@ -283,7 +312,7 @@
     <div class="card">
       <div class="gradbar"></div>
       <div class="inner">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">09 / 09</span></div>
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">09 / 10</span></div>
         <p class="copy" style="font-size:36px;">Nobody has ten years of experience in vibe coding yet. <span class="hl">We're all starting from the same line.</span> I'll be sharing what I try, what works, and what definitely doesn't in my newsletter, Thoughts by productkind.</p>
         <div style="display:flex; flex-direction:column; align-items:center; gap:32px;">
           <img src="../assets/productkind/logo-thoughts-by-productkind-icon.png" alt="Thoughts by productkind logo" style="width:180px; height:180px; border:4px solid var(--ink); box-shadow:12px 12px 0 rgba(8,8,9,0.25);">
@@ -291,6 +320,38 @@
           <p style="margin:0; font-family:var(--font-display); font-weight:700; font-size:30px; color:var(--ink);">Full article on our Substack 💛</p>
         </div>
         <p style="margin:0; text-align:center; font-family:var(--font-plain); font-size:30px; line-height:1.45; color:var(--ink-secondary);">Know someone rethinking their path? Send them this</p>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+  <!-- SLIDE 10 — INSTAGRAM POST MOCKUP (visual-only carousel post device;
+       uses the .slidebody helper to centre the body) -->
+  <section class="slide" data-screen-label="10 Instagram mockup">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner">
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">10 / 10</span></div>
+        <div class="slidebody" style="gap:44px;">
+          <p class="copy" style="text-align:center;">The Instagram post mockup is a text-free stand-in for a carousel post.</p>
+          <div class="igpost" style="width:400px; align-self:center;">
+            <div class="ighead">
+              <div class="igavatar"></div>
+              <div>
+                <div class="igbar" style="width:150px;"></div>
+                <div class="igbar sub" style="width:96px;"></div>
+              </div>
+            </div>
+            <div class="igimage">
+              <div class="igstack"><span></span><span></span></div>
+              <div class="igdots"><span class="on"></span><span></span><span></span></div>
+            </div>
+            <div class="igcaption">
+              <span style="width:100%;"></span>
+              <span style="width:60%;"></span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="cropguide"></div>

@@ -222,7 +222,15 @@
       "WebFetch(domain:www.leadershipstorybank.com)",
       "WebFetch(domain:www.thesecondbrain.io)",
       "WebFetch(domain:magicpost.in)",
-      "WebFetch(domain:marketing4ecommerce.net)"
+      "WebFetch(domain:marketing4ecommerce.net)",
+      "WebFetch(domain:www.ncbi.nlm.nih.gov)",
+      "WebFetch(domain:learnnovators.com)",
+      "WebFetch(domain:www.structural-learning.com)",
+      "WebFetch(domain:pmc.ncbi.nlm.nih.gov)",
+      "WebFetch(domain:europepmc.org)",
+      "WebFetch(domain:learnexperts.ai)",
+      "WebFetch(domain:www.sciencedirect.com)",
+      "WebFetch(domain:files.eric.ed.gov)"
     ],
     "deny": [],
     "ask": []
