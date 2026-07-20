@@ -101,7 +101,10 @@ checklist.
    profile), and YouTube Shorts (the slides as a video slideshow) when
    asked. Within this skill it only matters for the TikTok centre-square
    crop check; pass the platform list on to the **captions** skill
-   afterwards.
+   afterwards. Expectations: Instagram is the carousel's home turf and the
+   platform to judge performance by; LinkedIn rewards tight decks people
+   finish; TikTok and Threads are low-cost cross-posts, so never optimise
+   for them (see `productkind/marketing/channels/instagram/carousel-research.md`).
 4. **Slide count**: typically 7-9. Cover + one idea per slide + CTA. Pick
    the few strongest ideas from the source and tease those; do not try to
    fit every section of the article onto a slide.
