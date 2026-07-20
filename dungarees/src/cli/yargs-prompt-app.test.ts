@@ -12,6 +12,7 @@ test('yargs-propmt-app exits with 0 by default', async () => {
   const app = createYargsPromptApp({
     name: 'test-app',
     route: (yargs) => yargs,
+    presenter: {},
   })
   const message$ = app.present([], DUMMY_CONTROLS)
 

@@ -3,7 +3,7 @@ import type { DomainEvent } from '@dungarees/core/event.ts'
 import { concatAll, endWith, from, map, Observable, ReplaySubject, takeUntil } from 'rxjs'
 import yargs from 'yargs'
 
-type YargsApp = typeof yargs
+type YargsApp = ReturnType<typeof yargs>
 
 export type CliControls = {
   select: (options: CliSelectOptions) => Observable<string>
@@ -24,7 +24,7 @@ type Presenter<EVENTS extends DomainEvent> = {
 type YargsPromptAppOptions<EVENTS extends DomainEvent> = {
   name: string
   route: (yargs: YargsApp, io: CliIo<EVENTS>) => YargsApp
-  presenter?: Presenter<EVENTS>
+  presenter: Presenter<EVENTS>
 }
 
 export type StdioMessage = StdioOutputMessage | StdioErrorMessage

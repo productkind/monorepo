@@ -15,3 +15,19 @@ script: |-
 
 
   KL approved
+caption: |-
+  When you send a message to a chat assistant, it does not read your words the way you do. It reads tokens.
+
+  A token is a small chunk of text. Sometimes it is a whole word, sometimes a piece of one. Common words like "hello" tend to be a single token. Longer or rarer words like "hippopotamus" get split into two or three. Punctuation and spaces get their own tokens too.
+
+  Why chop text up like this? Because the model works with numbers, not letters. Every token has its own number in the model's vocabulary, and splitting your message into tokens is how it turns what you wrote into something it can do maths on.
+
+  This is also what those "per million tokens" prices mean when you see chat assistants charged that way. Tokens are not the same as words. As a rough guide, a hundred tokens is about seventy-five words in English.
+
+  Once you picture your message as tokens rather than sentences, a lot of how AI behaves starts to make more sense.
+title: "What a token actually is"
+hastags:
+  instagram: ["#womenintech", "#learnai", "#tokens", "#howaiworks", "#aiexplained"]
+  tiktok: ["#womenintech", "#womenempowerment", "#tokens", "#howaiworks", "#aiexplained"]
+discord: |-
+  Ever seen AI pricing listed "per million tokens" and wondered what a token even is? Short video on how a chat assistant chops your message into chunks, and why a hundred tokens is only about seventy-five words.
