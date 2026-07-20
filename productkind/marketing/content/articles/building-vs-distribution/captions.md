@@ -14,7 +14,7 @@ posting.
 
 Posting formats: LinkedIn takes the PDF as a document post (from the
 productkind page); Instagram and TikTok take the PNGs; Threads takes the PNGs
-from the productkind profile.
+from Kinga's personal profile.
 
 ---
 
@@ -86,19 +86,19 @@ Building a product is cheaper than ever. Distribution still isn't. Here's what b
 
 ---
 
-## Threads (PNGs, from the productkind profile)
+## Threads (PNGs, from Kinga's personal account)
 
-Building a product is cheap(er) now. Getting the right people to find it isn't. Building Little Parrot, that part turned out to be about 75% of the job. Where does your audience actually hang out?
+I keep hearing building software is cheap now. Building Little Parrot taught me that's the easy 25%, finding the people who need it is the expensive bit. Where does your audience actually hang out?
 
 **Topic tag (type in the composer):** building in public
 
-**Founder comments as a chain (post within the first hour):**
+**Amplification as a chain (post within the first hour):**
 
-**Kinga** (comment on the post): The LinkedIn lesson was the one that stung. I hate the "look what I made" feeling of posting there – but it's the channel that actually brings people in for us.
+**Thomas** (reply to Kinga's post): The bit that made it concrete for us: PostHog shows LinkedIn out-referring every other channel we've tried. Distribution really is the 75%.
 
-**Thomas** (reply to Kinga): And the annoying part is we can measure it – PostHog shows LinkedIn out-referring every other channel we've tried. Hard to argue with the numbers.
+**Kinga** (reply to Thomas): Yeah – and the channel that works best for us is the one I find hardest to post on. Still showing up anyway.
 
-**Kinga (quote post, from her personal account):** The surprising bit from building Little Parrot: the channel that works best for us is the one I find hardest to post on. Still showing up anyway.
+**productkind (quote post, from the brand account):** Kinga wrote about something we keep running into building Little Parrot: building is the cheap part, getting the right people to find it is the expensive one. The full breakdown is in this week's Thoughts by productkind.
 
 ---
 
@@ -114,7 +114,8 @@ Building a product is cheap(er) now. Getting the right people to find it isn't. 
       Post both founder comments within the first hour.
 - [ ] TikTok: post the link in the pinned comment (no bio link yet); post from
       the creator-type account so trending sounds stay available.
-- [ ] Threads: type the "building in public" topic tag in the composer; post
-      the Kinga/Thomas comment chain within the first hour; Kinga quote-posts
-      the productkind Threads post from her personal account once it's live.
+- [ ] Threads: post from Kinga's personal account; type the "building in
+      public" topic tag in the composer; post Thomas's reply and Kinga's
+      reply within the first hour; the productkind account quote-posts
+      Kinga's Threads post once it's live.
 - [ ] Reply to every real commenter in the first hour on every platform.
