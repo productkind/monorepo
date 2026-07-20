@@ -79,7 +79,7 @@ the anchor freely, the sequence holds.
 ## Course CTAs and the bio
 
 Decision (2026-07-06, see
-`productkind/marketing/channels/instagram/carousel-research.md`): every post's final
+`productkind/ai-research/carousel-research.md`): every post's final
 slide and caption name the **full course title** and say it's on
 **LittleParrot.app**. The bio holds only 5 links, so posts never depend on
 "link in bio", and the schedule needs no bio updates on posting days.
