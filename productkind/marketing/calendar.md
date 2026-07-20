@@ -35,7 +35,7 @@ Statuses: todo, created, scheduled, posted
 | 2026-07-23 | WB-2 context: release update | instagram, tiktok, youtube, linkedin productkind, threads productkind | todo |
 | 2026-07-22 | B-roll: business ideas for women 2026 – how to find what to do | instagram, tiktok, youtube, threads productkind | todo |
 | 2026-07-21 | Substack article carousel: Building is cheap(er), but distribution is still expensive | instagram, tiktok, youtube, linkedin Kinga, threads Kinga | todo |
-| 2026-07-20 | social-006 | instagram, tiktok, youtube, linkedin productkind, threads productkind | created |
+| 2026-07-20 | social-006 | instagram, tiktok, youtube, linkedin productkind, threads productkind | posted |
 | --- | --- | --- | --- |
 | 2026-07-19 | SB-1 the bakery analogy course carousel | instagram, tiktok, threads productkind | posted |
 | 2026-07-18 | B-roll of second Substack article (funky) | instagram, tiktok | posted |
