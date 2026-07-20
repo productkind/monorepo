@@ -87,13 +87,13 @@ So if a friend building with Lovable is still guessing at these words, send it t
 
 **Caption** (~140 characters):
 
-What do frontend, backend and database actually mean? Your app is a bakery: counter, kitchen, storage room. Which room does your bug live in?
+What do frontend, backend and database actually mean? Imagine that your app is a bakery: counter, kitchen, storage room. Which of these words confused you first?
 
 **Topic tag** (typed in the composer, exactly one): women in tech
 
 **Founder reply chain** (posted within the first hour):
 
-Kinga (reply to the post): The bakery starts paying off when something breaks. "The button looks weird" is a counter problem; "my data disappeared" is a storage room problem. Working out which room your bug lives in saves a lot of guessing (and credits).
+Kinga (reply to the post): This mental model starts paying off when something breaks. Knowing the rooms helps you understand what happened, and ask your AI builder better questions. This saves you a lot of guessing (and credits).
 
 Thomas (reply to Kinga): And the building itself is a server: the computer the kitchen and the storage room run on. Renting one instead of buying it is cloud computing; Lovable handles that bit for you. The whole tour is part of the free first challenge of Basics of Software for Vibe Coding, our course for women building with AI, on littleparrot.app.
 
