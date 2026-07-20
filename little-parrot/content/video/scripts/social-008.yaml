@@ -8,3 +8,19 @@ script: |-
   The model treats this hidden message the same way it treats yours. It reads both, tokens them, and generates a reply that fits everything it has been given. 
 
   Your prompt and the system prompt are not the only things the model sees. More on that in the next video. Follow for more.
+caption: |-
+  When you send a message to a chat assistant, your prompt is not the only thing the model reads.
+
+  The app also slots in a hidden message called the system prompt. It sits in front of your words, and you never see it.
+
+  The system prompt is written by the people who built the model. It sets the ground rules for how the AI should behave: how polite to be, which topics to steer around, what tone to hit, what to refuse, when to add a disclaimer.
+
+  The model treats this hidden message exactly the way it treats yours. It reads both, turns them into tokens, and writes a reply that fits everything it has been handed. It has no way of telling the creators' instructions apart from your own request.
+
+  So when a chat assistant feels oddly cautious, or always answers in a certain style, that is often the system prompt at work, shaping the reply before you have typed a word.
+title: "The hidden message before your prompt"
+hastags:
+  instagram: ["#womenintech", "#learnai", "#systemprompt", "#howaiworks", "#aiexplained"]
+  tiktok: ["#womenintech", "#womenempowerment", "#systemprompt", "#howaiworks", "#aiexplained"]
+discord: |-
+  There is a hidden message sitting in front of every prompt you send, written by the people who built the AI. Short video on the system prompt and how it shapes replies before you type a word.

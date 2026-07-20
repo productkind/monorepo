@@ -12,3 +12,21 @@ script: |-
   The finished answer often looks planned. That is because the model was trained on planned writing.
 
   More in the next video on what else the model sees when it does this. Follow us, so you won't miss it.
+caption: |-
+  Chat assistants build their replies one token at a time.
+
+  Once your message has been split into tokens, the model looks at everything so far and asks one question: what token should come next? It ranks the possible options by probability, picks from the top few, and writes one. Then it looks at what it has just written and asks the same question again. And again.
+
+  String those predictions together and you get a full reply.
+
+  There is no bigger plan behind it. The model does not decide the sentence before it starts, or the paragraph before it starts. It guesses the next token, then guesses again.
+
+  The finished answer often looks carefully planned. That is because the model was trained on writing that was planned. It has picked up the shape of thought-through prose without doing the thinking first.
+
+  Once you know a reply is built one guess at a time, it gets easier to see where AI is strong and where it needs a second pair of eyes.
+title: "How AI writes a sentence"
+hastags:
+  instagram: ["#womenintech", "#learnai", "#howaiworks", "#llm", "#aiexplained"]
+  tiktok: ["#womenintech", "#womenempowerment", "#howaiworks", "#llm", "#aiexplained"]
+discord: |-
+  Your chat assistant writes one token at a time, guessing what comes next, with no plan for the whole sentence. Short video on why the finished answer still looks so neatly planned.

@@ -12,3 +12,19 @@ script: |-
   Reading it feels a bit like reading a job brief for the AI, written by someone who has paid attention to a lot of chats.
 
   If you want to know why your chat assistant behaves the way it does, its system prompt is a good place to start. Follow us for more interesting and fun insights on AI.
+caption: |-
+  Most chat assistants come with a hidden set of instructions called a system prompt, and most companies keep theirs private. Anthropic, the company behind Claude, publishes its one in full.
+
+  You can read the current version on docs.anthropic.com. It runs to thousands of words and is full of small, surprisingly human notes.
+
+  Claude is told to avoid the words "genuinely", "honestly" and "actually". It is told never to use bullet points when it turns down a task, because "the additional care helps soften the blow". It is told to check whether an image is really attached before responding, because "the person may have forgotten to upload it".
+
+  Reading it feels a little like reading a job brief for the AI, written by someone who has paid close attention to a great many chats.
+
+  If you have ever wondered why your chat assistant behaves the way it does, its system prompt is a good place to start. And with Claude, you can read the whole thing yourself.
+title: "The AI rulebook you can actually read"
+hastags:
+  instagram: ["#womenintech", "#learnai", "#claude", "#systemprompt", "#aiexplained"]
+  tiktok: ["#womenintech", "#womenempowerment", "#claude", "#systemprompt", "#aiexplained"]
+discord: |-
+  Most companies hide the instructions behind their AI. Anthropic publishes Claude's, and it is thousands of words of surprisingly human notes. Short video on the rulebook you can actually read at docs.anthropic.com.

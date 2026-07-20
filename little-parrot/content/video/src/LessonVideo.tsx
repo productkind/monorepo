@@ -46,7 +46,7 @@ export const LessonVideoPropsSchema = z.object({
   allDuration: z.number().default(100),
 })
 
-const DEBUG = true
+const DEBUG = false
 
 export const SocialVideo015: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({ captions, titleDuration }) => {
   return (

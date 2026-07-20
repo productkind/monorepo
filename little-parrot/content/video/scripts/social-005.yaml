@@ -14,3 +14,19 @@ script: |-
   From that moment on, the model does not learn anything new. Even if you correct it in a chat, the weights stay the same. It is done with school.
 
   More on how this changes what you can expect from AI in the next video.
+caption: |-
+  An AI model is, underneath everything, a huge pile of numbers. GPT-5 has a few trillion of them. They are called weights, and every time you ask a question, the model runs all of them to work out an answer.
+
+  So how do a few trillion numbers know what a good answer looks like? Training.
+
+  The women in our Little Parrot community often ask us whether they are teaching the AI when they chat with it. The honest answer is no. Training happens before you ever open the app. The model is shown one example at a time, makes a guess, and gets compared to the correct answer. If the guess is off, all the weights get nudged a tiny bit so the next one lands closer. Repeat that billions of times and the guesses start coming out right.
+
+  Then training stops and the weights freeze. That frozen version is what gets released. From that moment the model does not learn anything new. You can correct it in a chat and the weights stay exactly the same.
+
+  It is done with school. Knowing that changes what you can reasonably expect from it.
+title: "Why AI does not learn from your chats"
+hastags:
+  instagram: ["#womenintech", "#learnai", "#howaiworks", "#aiweights", "#aiexplained"]
+  tiktok: ["#womenintech", "#womenempowerment", "#howaiworks", "#aitraining", "#aiexplained"]
+discord: |-
+  Ever wondered if you are teaching the AI when you correct it in a chat? Short video on what a model actually is (a giant pile of numbers), how training works, and why the model stopped learning the day it was released.
