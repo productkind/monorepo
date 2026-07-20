@@ -113,6 +113,19 @@ prompt window).
 - The **prompt window** (chat-input mockup, monospace, cursor, send arrow)
   is the recurring device for anything the reader literally types.
   Markdown symbols (##, -, 1.) inside it are typed text, never decoration.
+- The **`.hl` gradient highlight** carries emphasis through its colour wash
+  alone; it keeps the font family and weight of the paragraph it sits in
+  (no forced bold), so a headline highlight reads headline-weight and a body
+  highlight reads body-weight.
+- The **`.igpost` Instagram post mockup** is a text-free stand-in for a
+  carousel post (avatar, image area, "multiple slides" glyph, carousel dots,
+  caption bars). It holds no text, so it never needs spec coverage; the
+  avatar and image wash pick up the brand gradient automatically. See the
+  last example slide in each template for the markup.
+- To **vertically centre a slide's body**, keep `.header` as the first child
+  of `.inner` and wrap the rest in `<div class="slidebody">`. Use this
+  whenever a slide has no bottom-anchored element, instead of leaving the
+  `.inner` `space-between` default (which pushes content up with a gap below).
 - `carousel.html?slide=N` isolates one slide (that's how export.sh takes
   the screenshots); `?crop=1` shows the 1080x1080 centre-square guides
   (keep anything essential inside them for TikTok/square crops).

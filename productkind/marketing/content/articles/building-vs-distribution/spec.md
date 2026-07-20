@@ -14,12 +14,12 @@ account: kinga
 **Story arc:** the claim everyone's heard, building is cheap now, with the
 honest counter that distribution still isn't (slide 1), building is only a
 quarter of the job (2), what the rest of the job is (3), where we honestly
-are with Little Parrot (4), how we're testing without paid ads (5), the
-Instagram lesson, with a wink at the medium (6), the LinkedIn surprise from
-EU-INC (7), the turn: AI's real superpower is faster learning (8), the
-invitation, teasing the two experiments the slides hold back (9). A
-fellow-learner build-in-public piece; the throughline is the article's own
-argument, no added moral.
+are with Little Parrot and how we're testing without paid ads (4), the
+Instagram lesson, with a wink at the medium (5), the LinkedIn surprise from
+EU-INC (6), a beat that turns the question on the reader (7), the turn: AI's
+real superpower is faster learning (8), the invitation, teasing the two
+experiments the slides hold back (9). A fellow-learner build-in-public
+piece; the throughline is the article's own argument, no added moral.
 
 ## Format
 
@@ -43,14 +43,14 @@ table, verbatim. The implemented carousel may not add copy; `check.py` in
 | Slide | Visual | Display copy (verbatim) | Prompt window / mockup content (verbatim) |
 | --- | --- | --- | --- |
 | 1 (cover) | Brand cover with Kim mascot; calm, editorial | Kicker: "NOTES FROM BUILDING LITTLE PARROT". Headline: "Building is cheaper now, but distribution is still expensive." Runner: "SWIPE →" | – |
-| 2 | Big-number treatment: oversized "25%" doing the visual work | Big number: "25%". Headline: "Building the product is about 25% of the job." | – |
-| 3 | Numbered list card, four rows | Lead: "The other 75%:". Card rows: "01 A problem worth solving", "02 Distribution", "03 Behaviour change", "04 Revenue". | – |
-| 4 | Simple centred copy card, honest | "With Little Parrot, we valudated the problem and our solution to address it. Distribution is the bit we haven't figured out yet." | – |
-| 5 | Copy + black statement card | "We skipped paid ads." Black card: "First we want to know which organic channels work for us." | – |
-| 6 | Instagram carousel mockup in a frame + copy | "Instagram taught us carousels barely reach people who don't follow you." Aside: "Yes, I see the irony." | – |
-| 7 | Copy + statement card, the surprise | "A 10-person team rallied Europe's best-known startup founders behind one petition. Their channel? LinkedIn." Body: "Ours too. And I still find posting hard." | – |
-| 8 | Warm gradient statement card, the payoff | "So, the real superpower of AI is speeding up learning. Build less, learn faster, find your people." | – |
-| 9 (CTA) | Brand card: Thoughts logo/Kim mascot, URL badge, offer line, share-ask | "Conferences and communities are in the full article, with what each experiment taught us." Badge: "PRODUCTKIND.SUBSTACK.COM" · "Full article on our Substack 💜" · "Know someone building something no one's found yet? Send them this." | – |
+| 2 | Big-number treatment: oversized "25%" doing the visual work | Headline: "Building the product is about", then big number: "25%", under it "of the job." | – |
+| 3 | Numbered list card, four rows | Lead: "The other 75%:". Card rows: "01 A problem worth solving", "02 Distribution", "03 Driving behaviour change", "04 Revenue". | – |
+| 4 | Copy + black statement card, honest | "With Little Parrot, we've validated the problem and our solution for it. Distribution is the bit we haven't cracked yet." Black card: "So, no paid ads yet. First we're finding which organic channels work for us." | – |
+| 5 | Instagram carousel mockup in a frame + copy | "Instagram taught us carousels barely reach people who don't follow you." Aside: "Yes, I see the irony." | – |
+| 6 | Copy + statement card, the surprise | "A 10-person team rallied Europe's best-known startup founders behind one petition. Their channel? LinkedIn." Body: "Ours too. And I still find posting hard." | – |
+| 7 | Large question card, turned on the reader | "So, where does your audience actually hang out?" Aside: "We're still figuring ours out." | – |
+| 8 | Warm gradient statement card, the payoff | "The real superpower of AI is speeding up learning. Build less, learn faster, find your people." | – |
+| 9 (CTA) | Brand card: Thoughts logo, URL badge, offer line, share-ask | "What each experiment taught us is in the article." Badge: "PRODUCTKIND.SUBSTACK.COM" · "Full article on Substack 💜" · "Know someone building a product that hasn't got traction yet? Send them this." | – |
 
 **Alt text (for the post):** A carousel about why building software got
 cheaper but distribution is still the expensive part: building is about
@@ -68,6 +68,9 @@ conference and community experiments too.
 
 - Captions are written after the carousel is final, with the captions
   skill (`captions.md` in this folder).
-- Slide 2-3 source: the article's "25% of the job" list. Slide 6:
-  "Instagram" experiment section. Slide 7: "LinkedIn" section (EU-INC).
-  Slide 8: "Accelerate learning, not delivery speed" closing.
+- Slide 2-3 source: the article's "25% of the job" list. Slide 4:
+  "we've validated... the bit we haven't figured out yet" + "intentionally
+  avoided paid marketing". Slide 5: "Instagram" experiment section. Slide 6:
+  "LinkedIn" section (EU-INC). Slide 7: the article's "finding your people"
+  thread, turned into a reader beat. Slide 8: "Accelerate learning, not
+  delivery speed" closing.
