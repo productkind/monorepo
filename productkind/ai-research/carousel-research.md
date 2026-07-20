@@ -7,6 +7,11 @@
 > refuted-claims section. Reference this when designing or reviewing carousel
 > campaigns. Refresh the findings roughly every 6 months or when Instagram
 > announces ranking changes.
+>
+> Companion doc: `carousel-content-design-research.md` covers how to turn a
+> course or article into a slide sequence that teaches (extraction,
+> synthesis, sequencing from learning science). This doc covers platform
+> and engagement mechanics.
 
 ## What the 2026 evidence says
 
