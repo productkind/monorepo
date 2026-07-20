@@ -7,16 +7,18 @@ script: |-
 
   More on understanding LLMs in the next video.
 caption: |-
-  People in our Little Parrot community keep telling us they feel late to AI. We know the feeling. It usually comes from thinking AI is much younger than it is.
+  Women in our Little Parrot community keep telling us they feel late to AI. We know the feeling. It usually comes from thinking AI is much younger than it is.
 
   AI as a field is over seventy years old. The chat-assistant version, ChatGPT and Claude and Gemini, is about three. Long before Silicon Valley, engineers were building machines that reproduced patterns in text, followed logical rules, or loosely mimicked how a brain works.
 
   Today's chat assistants are the current chapter, not the whole field. LLMs, short for Large Language Models, blend two of those older ideas: the brain-inspired approach and the text-pattern approach.
 
   You are one chapter into a seventy-year-old story. So is everyone else.
+
+  Follow along, we are telling that seventy-year story one short video at a time, no maths required.
 title: "You are not late to AI"
 hastags:
-  instagram: ["#womenintech", "#learnai", "#aihistory", "#aioverwhelm", "#aiexplained"]
-  tiktok: ["#womenintech", "#womenempowerment", "#learnai", "#aihistory", "#aiexplained"]
+  instagram: ["#womenintech", "#womenwhobuild", "#womenlearningai", "#aihistory", "#aiexplained"]
+  tiktok: ["#womenintech", "#womenempowerment", "#womenlearningai", "#aihistory", "#aiexplained"]
 discord: |-
   If AI feels like something you are late to, this might help. Short video on why AI is 70 years old, not 3, and how today's chat assistants fit into that longer history.

@@ -10,11 +10,6 @@ script: |-
   If you have ever seen chat assistants priced "per million tokens", this is what they mean. It is not the same as words. Roughly, a hundred tokens is about seventy-five words in English.
 
   More on how the model uses these tokens in the next video. Follow us, so you won't miss it.
-
-
-
-
-  KL approved
 caption: |-
   When you send a message to a chat assistant, it does not read your words the way you do. It reads tokens.
 
@@ -24,10 +19,12 @@ caption: |-
 
   This is also what those "per million tokens" prices mean when you see chat assistants charged that way. Tokens are not the same as words. As a rough guide, a hundred tokens is about seventy-five words in English.
 
-  Once you picture your message as tokens rather than sentences, a lot of how AI behaves starts to make more sense.
+  Tokens are one of the first things we unpack with the women in our Little Parrot courses, because once you picture your message this way rather than as sentences, a lot of how AI behaves starts to make more sense.
+
+  Follow along, we are explaining how AI really works one short video at a time, and save this for the next time it comes up.
 title: "What a token actually is"
 hastags:
-  instagram: ["#womenintech", "#learnai", "#tokens", "#howaiworks", "#aiexplained"]
-  tiktok: ["#womenintech", "#womenempowerment", "#tokens", "#howaiworks", "#aiexplained"]
+  instagram: ["#womenintech", "#womenwhobuild", "#womenlearningai", "#tokens", "#howaiworks"]
+  tiktok: ["#womenintech", "#womenempowerment", "#womenlearningai", "#tokens", "#howaiworks"]
 discord: |-
   Ever seen AI pricing listed "per million tokens" and wondered what a token even is? Short video on how a chat assistant chops your message into chunks, and why a hundred tokens is only about seventy-five words.
