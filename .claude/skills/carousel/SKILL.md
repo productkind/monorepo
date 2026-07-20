@@ -1,6 +1,6 @@
 ---
 name: carousel
-description: Create a social media carousel (LinkedIn, Instagram, TikTok, Threads, YouTube Shorts) end to end, either Little Parrot or productkind branded, using the shared design system in productkind/carousel-design/. Drafts the per-slide copy spec, waits for approval, implements the design, runs the copy/banned-word check, and exports PNGs + PDF. Triggers include "create a carousel", "carousel for this article/course/post", "design slides for Instagram/LinkedIn/TikTok/Threads/YouTube Shorts", or any carousel task.
+description: Create a social media carousel (LinkedIn, Instagram, TikTok, Threads, YouTube Shorts) end to end, either Little Parrot or productkind branded, using the shared design system in productkind/carousel-design/. Drafts the per-slide copy spec, waits for approval, implements the design, runs the copy/banned-word check, and exports PNGs + PDF. Channel captions are NOT part of this skill; once the carousel is final, the captions skill writes them. Triggers include "create a carousel", "carousel for this article/course/post", "design slides for Instagram/LinkedIn/TikTok/Threads/YouTube Shorts", or any carousel task.
 ---
 
 # Carousel workflow
@@ -66,9 +66,9 @@ as a block of body copy has failed, even if every word is good.
 **Write the copy fresh, in Kinga's voice.** The on-slide words are original
 teaser copy, not sentences lifted from the article. Do not paste article
 phrasing onto slides; rewrite each idea as its own short, spoken line.
-Write every slide (and every caption) with the **personal-tone-of-voice**
-skill so it sounds like Kinga talking to a friend, not like the article's
-prose. Use productkind-tone / little-parrot-ai-skill-gap for brand context.
+Write every slide with the **personal-tone-of-voice** skill so it sounds
+like Kinga talking to a friend, not like the article's prose. Use
+productkind-tone / little-parrot-ai-skill-gap for brand context.
 
 **Keep the pronoun the source uses.** If the article says "we" about
 something (a productkind or two-person activity, e.g. the Instagram
@@ -81,95 +81,14 @@ spec, not the spec to the source article. `check.py` only checks that the
 design adds no text the spec doesn't have. The spec copy itself is written
 fresh under the three principles above.
 
-## Caption rules (Instagram, TikTok, Threads, YouTube Shorts)
+## Captions live in the captions skill
 
-From `productkind/marketing/channels/platform-playbook-2026.md` (researched
-July 2026; re-verify the mechanics if it is much later than that). Captions
-are drafted in the spec (Step 1) and follow the same voice and banned-list
-rules as the slides.
-
-**All platforms**
-
-- **The first line is the hook AND the search phrase.** Captions are
-  keyword-indexed: Instagram in-app search plus Google (public professional
-  accounts, since July 2025), TikTok search, every word on Threads, and the
-  YouTube Shorts title. Open with the phrase a learner would actually type
-  ("how to build an app without coding"), written as a natural spoken line
-  in Kinga's voice, never tag-speak or keyword stuffing.
-- **Name the audience in the keywords, not only the hashtags.** Search
-  phrases and caption keywords are audience signals too, so work a
-  women-specific phrase into the hook or caption body where it reads
-  naturally ("AI tools for women starting a business", "for women who want
-  to build their idea"). One natural mention does the categorisation work;
-  don't force it into every line or let it break the spoken voice.
-- **Hashtags are categorisation, not reach.** Niche and specific only, never
-  generic (#instagood, #fyp), always placed last. **Most tags in every set
-  are women-specific** (e.g. #womenintech #womenwhobuild #womenfounders
-  #techforwomen): hashtags tell the algorithm who the content is for, and
-  our audience is women. Topic/format tags (#nocode #learntobuild) fill the
-  remaining one or two slots. Counts vary per platform (below).
-- **CTA: payoff-anchored, never engagement bait.** Meta demotes
-  comment/tag/like-bait from all recommendation surfaces (Threads inherits
-  this): no "comment YES", no "tag a friend", no giveaway mechanics.
-  Save-asks and share-asks are safe and are exactly what distribution
-  rewards (saves and sends drive Explore and Reels reach), so "save this
-  for when you build yours" or a send-to-a-friend nudge does double duty
-  with our share-ask acquisition. Follow-asks name the payoff: "follow for
-  [specific promise]", not a bare "follow for more".
-
-**Instagram**
-
-- The caption truncates at ~125 characters ("... more"), and that opening
-  doubles as the Google snippet. Hook + search phrase must land inside it.
-- For educational carousels, a longer keyword-rich caption (150-300 words)
-  is an SEO asset: expand the tease in natural sentences (still holding the
-  detail back for the article), then CTA + share-ask, then hashtags.
-
-**TikTok**
-
-- Only ~80-100 characters show before "more"; keep the whole caption
-  roughly 150-300 characters: hook line, one line of context, CTA,
-  hashtags (1 broad women-in-tech community tag + 2-3 niche, most of them
-  women-specific).
-- A genuine question in the caption invites comments (correlates with ~26%
-  more in Metricool's 2026 study); use one when it is natural, never as
-  bait.
-- "Follow for more [topic] tips" is fine on TikTok (its Creator Academy
-  encourages follow CTAs). Links go in the bio or a pinned comment, not
-  the caption.
-
-**Threads** (posted from the productkind profile, whichever brand the
-carousel is)
-
-- Under ~200 characters, conversational; the 500-character limit is not a
-  target. No fold, but the first line decides the scroll-stop.
-- Exactly one topic tag (hard limit), a specific multi-word phrase typed in
-  the composer, not a # pile.
-- Reply depth is the strongest ranking signal on Threads: end on a genuine
-  question that invites replies, never as bait. Draft a founder reply chain
-  with the caption (Kinga comments, Thomas replies to Kinga, or the other
-  way round), posted within the first hour; each reply adds something the
-  caption doesn't, in personal-tone-of-voice, never fake praise.
-
-**YouTube Shorts** (the slides run as a video slideshow; this workflow
-supplies the title and description)
-
-- **The title is the hook**: 20-40 characters, search phrase first (the
-  limit is 100, but short keyword-first titles perform best on trending
-  Shorts). Include a women-specific keyword in the title whenever it fits
-  ("AI for women...", "women building...").
-- **Description: 150-500 focused characters** in natural sentences,
-  expanding the tease while holding the detail back for the article.
-- 2-3 hashtags in the description, women-specific first (e.g. #womenintech
-  #womenwhobuild), optionally #Shorts; stuffing makes YouTube ignore all of
-  them. This matters most on Shorts: its pull system currently shows our
-  videos to a mostly male audience, and women-specific hashtags, title
-  keywords, and spoken phrases (e.g. "for women who...") are how we tell it
-  who the videos are for.
-- Subscribe asks are openly allowed and encouraged: "Subscribe for a new
-  [topic] short every week" or "Subscribe, part 2 drops tomorrow" (name the
-  payoff). Links go in a pinned comment, not the description; if the post
-  drives somewhere, draft the pinned comment too.
+This skill produces the carousel itself: the approved spec, the designed
+slides, and the exports. It does not write channel captions. Once the
+carousel is final (after Step 5), run the **captions** skill on the piece:
+it writes one `captions.md` for all target platforms into the piece
+folder, with the per-platform rules, founder comments, and posting
+checklist.
 
 ## Inputs to establish first
 
@@ -180,8 +99,9 @@ supplies the title and description)
 3. **Platforms**: default is LinkedIn (the PDF as a document post),
    Instagram and TikTok (the PNGs), Threads (the PNGs, from the productkind
    profile), and YouTube Shorts (the slides as a video slideshow) when
-   asked. Only matters for the caption(s) and the TikTok centre-square
-   crop check.
+   asked. Within this skill it only matters for the TikTok centre-square
+   crop check; pass the platform list on to the **captions** skill
+   afterwards.
 4. **Slide count**: typically 7-9. Cover + one idea per slide + CTA. Pick
    the few strongest ideas from the source and tease those; do not try to
    fit every section of the article onto a slide.
@@ -203,10 +123,9 @@ Write the spec md with:
   (deliberately bad example messages) is marked "(parody; banned-list
   exempt)".
 - **Alt text** for the post.
-- **Caption(s)** for the target platforms, written to the caption rules
-  above (Instagram, TikTok, and Threads each get their own caption, plus
-  the Threads founder reply chain; YouTube Shorts gets a title +
-  description + any pinned comment; LinkedIn caption if requested).
+
+No captions in the spec: channel captions are written after the carousel
+is final, with the **captions** skill.
 
 Where the spec lives:
 - Course post: the post md in
@@ -215,8 +134,8 @@ Where the spec lives:
 - Article or other piece: `spec.md` inside the piece folder under
   `productkind/marketing/content/<type>/<piece-slug>/`.
 
-Voice: write the on-slide copy and captions with the
-**personal-tone-of-voice** skill so they sound like Kinga (spoken, warm,
+Voice: write the on-slide copy with the
+**personal-tone-of-voice** skill so it sounds like Kinga (spoken, warm,
 understated), not like the article. Use productkind-tone /
 little-parrot-ai-skill-gap for brand context. Do a deliberate
 phrase-by-phrase banned-list pass on the draft before showing it. British
@@ -287,3 +206,10 @@ spacing consistent, text sizes balanced, one `.hl` per key phrase, and
 shows the guides). Fix layout in the HTML and re-export; copy fixes go
 back to the md and re-approval. Then hand the exports to Kinga for final
 review.
+
+## Step 6 — Captions (captions skill)
+
+Once Kinga signs off the exports, run the **captions** skill on the piece
+folder to write `captions.md` for all target platforms. The captions
+follow the carousel's teaser principle: expand the tease in the reader's
+search language, hold the detail back for the article.
