@@ -35,18 +35,19 @@ verbatim. The implemented carousel may not add copy; `check.py` in
 
 | Slide | Visual | Display copy (verbatim) | Prompt window / mockup content (verbatim) |
 | --- | --- | --- | --- |
-| 1 (cover) | A cosy bakery cutaway: counter, kitchen, storage room | "Frontend, backend, database: it's all one bakery. 🥐" Kicker: "KNOW WHERE TO POINT YOUR AI BUILDER · SWIPE →" | (none) |
+| 1 (cover) | A cosy bakery cutaway: counter, kitchen, storage room | "What do frontend, backend and database actually mean?" Tease line above the illustration: "Picture a bakery. 🥐" Kicker: "KNOW WHERE TO POINT YOUR AI BUILDER · SWIPE →" | (none) |
 | 2 | The counter highlighted | "The counter is your FRONTEND: everything users see and touch. Buttons, forms, colours. It runs on their device." Footnote: "Also called the client." | (none) |
 | 3 | The kitchen highlighted | "The kitchen is your BACKEND: the work customers never see. Saving data, sending emails, taking payments." | (none) |
 | 4 | The storage room highlighted | "The storage room is your DATABASE: where your app remembers. Profiles, orders, posts, all organised and findable." | (none) |
 | 5 | The building itself, a rent sign | "The building is a SERVER: the computer your backend and database run on." Footnote: "You rent rather than buy. That's CLOUD COMPUTING, and Lovable handles it for you." | (none) |
-| 6 | A phone line between two bakeries, a key beside it | "The phone line to the bakery next door is an API: how your app talks to other apps, like Stripe." Footnote: "The API KEY is the access code. Keep it secret: it never goes in a prompt." | (none) |
-| 7 (CTA) | Brand card: the whole bakery labelled, mascot, prompt window | "Next time something breaks, you can point at the room." Then: "This is the free first challenge of Basics of Software for Vibe Coding." Badge: "LITTLEPARROT.APP" · "First challenge free 💛" · "Save the analogy for your next prompt 🔖" | Label: "YOUR NEXT PROMPT" · Prompt: `The problem is in the backend, not the frontend.` |
+| 6 | A phone line between a bakery and a mill, a key beside it | "The phone line to the mill who supplies the flour is an API: how your app talks to other apps, like Stripe." Footnote: "The API KEY is the access code. Keep it secret: it never goes in a prompt." | (none) |
+| 7 (CTA) | Brand card: the whole bakery labelled, mascot, prompt window | "Next time something breaks, you'll understand better what happened." Then: "This is part of the free first challenge of Basics of Software for Vibe Coding." Badge: "LittleParrot.app" · "First challenge free 💛" · "Follow for more vibe coding explained for women building with AI 🏃🏽‍♀️" | (none) |
 
 **Alt text (for the post):** An illustrated analogy carousel mapping app
 architecture to a bakery: frontend as the counter, backend as the kitchen,
 database as the storage room, servers and cloud computing as the rented
-building, and APIs as the phone line between bakeries.
+building, and APIs as the phone line between the bakery and the mill that
+supplies its flour.
 
 ## Captions (exact)
 
@@ -56,11 +57,11 @@ What do frontend, backend and database actually mean? Picture a bakery. 🥐
 
 The counter is your frontend: everything customers see and touch. The kitchen is your backend, where the real work happens out of sight. The storage room is your database, where everything is kept and remembered. The building is a server, and cloud computing means renting one rather than owning it.
 
-The analogy helps most when something goes wrong. "The button looks weird" is a counter problem. "My data disappeared" is a storage room problem. Telling your AI builder which room to look in gets you a faster, cheaper fix.
+The analogy helps most when something goes wrong. "The button looks weird" is a counter problem. "My data disappeared" is a storage room problem. Knowing the rooms helps you understand what happened, and ask your AI builder better questions.
 
-There's more to the tour (APIs are the phone line between bakeries, and the key to that line stays secret), and it's all in the free first challenge of Basics of Software for Vibe Coding, our course for women building their first app with AI, on LittleParrot.app.
+There's more to the tour (APIs are the phone line to the mill who supplies the flour, and the key to that line stays secret), and it's all in the free first challenge of Basics of Software for Vibe Coding, our course for women building their first app with AI, on LittleParrot.app.
 
-Save the analogy for your next prompt. 🔖
+Follow us for more vibe coding explained for women building with AI.
 .
 .
 .
@@ -68,7 +69,7 @@ Save the analogy for your next prompt. 🔖
 
 ### TikTok
 
-What do frontend, backend and database actually mean? Your app is a bakery: counter, kitchen, storage room. Which of these words confused you first? The full tour is our free challenge for women building with AI, link in bio. #womenintech #womenwhobuild #techforwomen #vibecoding
+What do frontend, backend and database actually mean? Your app is a bakery: counter, kitchen, storage room. Which of these words confused you first? Follow us for more vibe coding explained for women building with AI. #womenintech #womenwhobuild #techforwomen #vibecoding
 
 ### LinkedIn
 
@@ -76,7 +77,7 @@ Many of our learners have told us the same thing: they want to understand how th
 
 The counter is the frontend, everything users see and touch. The kitchen is the backend, where the work happens out of sight. The storage room is the database, where your app remembers things.
 
-It earns its keep the first time something breaks. "The button looks weird" is a counter problem. "My data disappeared" is a storage room problem. Telling your AI builder which room to look in gets you a faster, cheaper fix.
+It earns its keep the first time something breaks. "The button looks weird" is a counter problem. "My data disappeared" is a storage room problem. Knowing the rooms helps you understand what happened, and ask your AI builder better questions.
 
 The full tour (servers, cloud computing, APIs) is in the carousel. And this mental model is the free first challenge of Basics of Software for Vibe Coding, on LittleParrot.app.
 
@@ -92,7 +93,7 @@ What do frontend, backend and database actually mean? Your app is a bakery: coun
 
 **Founder reply chain** (posted within the first hour):
 
-Kinga (reply to the post): The bakery starts paying off when something breaks. "The button looks weird" is a counter problem; "my data disappeared" is a storage room problem. Telling your AI builder which room to look in saves a lot of guessing (and credits).
+Kinga (reply to the post): The bakery starts paying off when something breaks. "The button looks weird" is a counter problem; "my data disappeared" is a storage room problem. Working out which room your bug lives in saves a lot of guessing (and credits).
 
 Thomas (reply to Kinga): And the building itself is a server: the computer the kitchen and the storage room run on. Renting one instead of buying it is cloud computing; Lovable handles that bit for you. The whole tour is the free first challenge of Basics of Software for Vibe Coding, our course for women building with AI, on littleparrot.app.
 
@@ -102,7 +103,7 @@ Thomas (reply to Kinga): And the building itself is a server: the computer the k
 
 **Description**:
 
-Your app is a bakery. The counter is the frontend (what users see), the kitchen is the backend (the work out of sight), the storage room is the database (what your app remembers). Knowing the rooms means you can point your AI builder at the right one when something breaks. We teach vibe coding to women building their first app without a tech background. Subscribe for a new vibe coding basics short every week. #womenintech #womenwhobuild #Shorts
+Your app is a bakery. The counter is the frontend (what users see), the kitchen is the backend (the work out of sight), the storage room is the database (what your app remembers). Knowing the rooms helps you understand what happened when something breaks, and ask your AI builder better questions. We teach vibe coding to women building their first app without a tech background. Subscribe for a new vibe coding basics short every week. #womenintech #womenwhobuild #Shorts
 
 **Pinned comment**:
 

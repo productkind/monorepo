@@ -47,7 +47,7 @@ our audience research and the content strategy.
 
 ## Posts
 
-1. [post-1-bakery-analogy.md](post-1-bakery-analogy.md) - every app is a bakery
+1. [post-1-bakery-analogy/spec.md](post-1-bakery-analogy/spec.md) - every app is a bakery
 2. [post-2-component-names.md](post-2-component-names.md) - that pop-up has a name
 3. [post-3-where-is-the-problem.md](post-3-where-is-the-problem.md) - which part of your app misbehaves
 4. [post-4-three-languages.md](post-4-three-languages.md) - HTML, CSS, JavaScript in plain terms
