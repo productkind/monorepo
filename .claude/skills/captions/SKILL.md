@@ -1,15 +1,17 @@
 ---
 name: captions
-description: Write well-performing captions for a single piece of non-carousel content (educational videos, B-roll, photos, announcements) posted from the productkind or Little Parrot brand account, for TikTok, Instagram, Threads, LinkedIn, and YouTube Shorts, plus two founder comments (Kinga and Thomas) for Instagram, Threads, and LinkedIn. Triggers include "write a caption", "captions for this video/B-roll", "post copy for TikTok/Instagram/Threads/LinkedIn/YouTube Shorts", or any caption task that is not a carousel (carousels have their own skill).
+description: Write well-performing captions for a single piece of content (educational videos, B-roll, photos, announcements, finished carousels) posted from the productkind or Little Parrot brand account, for TikTok, Instagram, Threads, LinkedIn, and YouTube Shorts, plus two founder comments (Kinga and Thomas) for Instagram, Threads, and LinkedIn. Triggers include "write a caption", "captions for this video/B-roll/carousel", "post copy for TikTok/Instagram/Threads/LinkedIn/YouTube Shorts", or any caption task. For carousels, the carousel skill produces the slides; this skill writes the captions once the carousel is final.
 ---
 
 # Captions workflow
 
 Turn one piece of content (an educational video, a B-roll clip, a photo, an
-announcement) into ready-to-paste captions for TikTok, Instagram, Threads,
-LinkedIn, and YouTube Shorts (video content only), posted from the brand
+announcement, a finished carousel) into ready-to-paste captions for TikTok,
+Instagram, Threads, LinkedIn, and YouTube Shorts, posted from the brand
 account, plus two founder comments per platform (Instagram, Threads,
 LinkedIn) that Kinga and Thomas post to start real conversation under it.
+YouTube Shorts applies to video content only, which includes carousels run
+as a video slideshow.
 
 The platform mechanics below come from
 `productkind/marketing/channels/platform-playbook-2026.md` (researched July
@@ -29,6 +31,33 @@ trusting them.
    don't fit the piece.
 4. **Destination**: where the post drives (a course, an article, the
    newsletter, nothing). This shapes the CTA and where the link lives.
+
+## Carousel posts
+
+When the content is a carousel from the **carousel** skill, the piece
+folder already exists with the approved `spec.md` and the exports; read
+the spec (and the source article/course) before writing.
+
+- **Captions follow the carousel's teaser principle**: expand the tease in
+  natural sentences, in the reader's search language, but hold the detail,
+  the how, and the nuance back for the article or course the post drives
+  to.
+- **Covering the slides' ground again is good; pasting slide copy is not.**
+  On Instagram the caption is the searchable surface (in-app search plus
+  Google), and the playbook calls longer keyword-rich carousel captions an
+  SEO asset, so re-telling the carousel's ideas in natural, searchable
+  sentences is the play. But slide copy is short display fragments;
+  rewrite the ideas as spoken sentences someone would search, don't paste
+  the fragments.
+- Posting formats: LinkedIn gets the PDF as a document post; Instagram and
+  TikTok get the PNGs; Threads gets the PNGs, posted from the productkind
+  profile whichever brand the carousel is; YouTube Shorts (when asked) runs
+  the slides as a video slideshow, so the carousel gets a title +
+  description like any Short.
+- On Instagram, an educational carousel supports a longer keyword-rich
+  caption (150-300 words) as an SEO asset.
+- Alt text is already in the spec; carry it into `captions.md` (adjusted if
+  the export changed anything) rather than writing it fresh.
 
 ## Voice and checks (all platforms)
 
