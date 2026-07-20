@@ -1,6 +1,6 @@
 ---
 name: captions
-description: Write well-performing captions for a single piece of content (educational videos, B-roll, photos, announcements, finished carousels) posted from the productkind or Little Parrot brand account, for TikTok, Instagram, Threads, LinkedIn, and YouTube Shorts, plus two founder comments (Kinga and Thomas) for Instagram, Threads, and LinkedIn. Triggers include "write a caption", "captions for this video/B-roll/carousel", "post copy for TikTok/Instagram/Threads/LinkedIn/YouTube Shorts", or any caption task. For carousels, the carousel skill produces the slides; this skill writes the captions once the carousel is final.
+description: Write well-performing captions for a single piece of content (educational videos, B-roll, photos, announcements, finished carousels) posted from the productkind or Little Parrot brand account, for TikTok, Instagram, Threads, LinkedIn, and YouTube Shorts, plus two founder comments (Kinga and Thomas) for Instagram, Threads, and LinkedIn, and a Threads quote post from Kinga's personal account. Triggers include "write a caption", "captions for this video/B-roll/carousel", "post copy for TikTok/Instagram/Threads/LinkedIn/YouTube Shorts", or any caption task. For carousels, the carousel skill produces the slides; this skill writes the captions once the carousel is final.
 ---
 
 # Captions workflow
@@ -9,7 +9,8 @@ Turn one piece of content (an educational video, a B-roll clip, a photo, an
 announcement, a finished carousel) into ready-to-paste captions for TikTok,
 Instagram, Threads, LinkedIn, and YouTube Shorts, posted from the brand
 account, plus two founder comments per platform (Instagram, Threads,
-LinkedIn) that Kinga and Thomas post to start real conversation under it.
+LinkedIn) that Kinga and Thomas post to start real conversation under it,
+and on Threads a quote post Kinga posts from her personal account.
 YouTube Shorts applies to video content only, which includes carousels run
 as a video slideshow.
 
@@ -106,6 +107,9 @@ the spec (and the source article/course) before writing.
 
 - 150-300 characters total; only the first ~80-100 show before "more", so
   hook + keyword go there.
+- TikTok search indexes voiceovers and on-screen text as well as captions,
+  so pick the search phrase that is actually spoken or shown in the video
+  and put that same phrase in the caption.
 - 3-5 hashtags: 1 broad women-in-tech community tag + 2-3 niche, most of
   them women-specific.
 - A genuine question in the caption invites comments; use one when it is
@@ -125,6 +129,14 @@ the spec (and the source article/course) before writing.
   women-specific.
 - Reels distribution runs on sends and full watch-through, so a
   send-to-a-friend or save nudge fits naturally.
+- **Publish as a Collab post with Kinga's personal account** (invited via
+  "Tag people > Invite collaborator" on the brand's upload): one post
+  appears natively on both profiles with pooled likes and comments, so one
+  caption serves both. Write it so it reads naturally from either profile.
+  Never upload the same content separately on the second account: since
+  April 2026 Instagram suppresses duplicates, with no exemption for
+  accounts you own; it is Collab or a material re-edit (new hook, new
+  voiceover), nothing in between.
 - Include **alt text** for the visual.
 
 **Threads**
@@ -136,6 +148,11 @@ the spec (and the source article/course) before writing.
 - Reply depth is the strongest signal here: end on a genuine question that
   invites replies, and design the founder comments as a conversation (see
   below).
+- Threads has no Collab mechanic, so the founder amplification move is a
+  **quote post**: Kinga posts from her personal account with the brand post
+  embedded and her own commentary above it (see below). A bare repost adds
+  nothing; the quote post is an original post that reaches her followers
+  and can start its own reply thread.
 
 **YouTube Shorts** (video content only; no founder comments, we run one
 channel there)
@@ -198,6 +215,12 @@ Rules:
 - **On Threads, write them as a chain**: Kinga comments on the post,
   Thomas replies to Kinga (or the other way round), because back-and-forth
   reply depth is what Threads rewards.
+- **On Threads, also draft Kinga's quote post**: one or two sentences in
+  her voice that she posts from her personal account with the brand post
+  embedded. Same rules as the comments: it adds something the caption
+  doesn't (a behind-the-scenes detail, a lesson, a genuine question), never
+  praise for our own post. It is a separate deliverable from her comment in
+  the chain; the two must not repeat each other.
 - **On LinkedIn**, 1-3 substantive sentences each; if the link lives in
   Kinga's comment, her comment carries the link plus one real sentence, not
   the link alone.
@@ -213,11 +236,14 @@ Write one `captions.md` into the piece's folder under
 - One section per platform: the caption ready to paste (for YouTube Shorts,
   title + description), alt text (Instagram/LinkedIn), hashtags/topic tag
   included in place, plus the pinned comment (TikTok and YouTube Shorts, if
-  any) and the two founder comments labelled **Kinga** and **Thomas**.
+  any), the two founder comments labelled **Kinga** and **Thomas**, and on
+  Threads Kinga's quote post labelled **Kinga (quote post)**.
 - A short posting checklist at the end: founder comments go up within the
   first hour; reply to every real commenter in that window too (it is the
   cheapest measured engagement lift on every platform); TikTok and YouTube
   Shorts links go in the pinned comment; Threads topic tag is typed in the
-  composer.
+  composer; Kinga quote-posts the brand's Threads post from her personal
+  account once it is live; on Instagram, invite Kinga as collaborator
+  before publishing (never re-upload the same post on her account).
 
 Show the draft to Kinga for approval before anything is posted.
