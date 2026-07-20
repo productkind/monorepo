@@ -18,9 +18,13 @@ caption: |-
   The model treats this hidden message exactly the way it treats yours. It reads both, turns them into tokens, and writes a reply that fits everything it has been handed. It has no way of telling the creators' instructions apart from your own request.
 
   So when a chat assistant feels oddly cautious, or always answers in a certain style, that is often the system prompt at work, shaping the reply before you have typed a word.
+
+  We explain this early with the women in our Little Parrot courses, because it takes a lot of the mystery out of why AI behaves the way it does.
+
+  Follow along for more on what is really going on inside AI, and save this for the next time a chat assistant surprises you.
 title: "The hidden message before your prompt"
 hastags:
-  instagram: ["#womenintech", "#learnai", "#systemprompt", "#howaiworks", "#aiexplained"]
-  tiktok: ["#womenintech", "#womenempowerment", "#systemprompt", "#howaiworks", "#aiexplained"]
+  instagram: ["#womenintech", "#womenwhobuild", "#womenlearningai", "#systemprompt", "#howaiworks"]
+  tiktok: ["#womenintech", "#womenempowerment", "#womenlearningai", "#systemprompt", "#howaiworks"]
 discord: |-
   There is a hidden message sitting in front of every prompt you send, written by the people who built the AI. Short video on the system prompt and how it shapes replies before you type a word.

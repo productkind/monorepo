@@ -16,9 +16,11 @@ caption: |-
   Here is the shape of it. A traditional program follows rules that a person wrote. A model is different. Making one involves showing it enormous piles of examples until it finds patterns in them. Only then, once the model is finished, can it use those patterns to answer new questions. That process of showing it examples is called machine learning.
 
   You do not need the maths to use AI well. But knowing that a model has two phases, one for finding patterns and one for using them, changes how the whole thing reads.
+
+  Follow along if you want the shape of AI explained without the maths, and save this for the next time someone mentions models like it is obvious.
 title: "What a language model actually is"
 hastags:
-  instagram: ["#womenintech", "#learnai", "#llm", "#howaiworks", "#aiexplained"]
-  tiktok: ["#womenintech", "#womenempowerment", "#llm", "#howaiworks", "#aiexplained"]
+  instagram: ["#womenintech", "#womenwhobuild", "#womenlearningai", "#llm", "#howaiworks"]
+  tiktok: ["#womenintech", "#womenempowerment", "#womenlearningai", "#llm", "#howaiworks"]
 discord: |-
   Ever used ChatGPT without knowing what happens under the hood? Short video explaining what a language model is, no maths required. Bonus: a very cramped chess master in a wooden cabinet.

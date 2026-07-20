@@ -24,9 +24,11 @@ caption: |-
   Then training stops and the weights freeze. That frozen version is what gets released. From that moment the model does not learn anything new. You can correct it in a chat and the weights stay exactly the same.
 
   It is done with school. Knowing that changes what you can reasonably expect from it.
+
+  Follow along if you want to understand what AI can and cannot do, and save this for the next time it repeats a mistake.
 title: "Why AI does not learn from your chats"
 hastags:
-  instagram: ["#womenintech", "#learnai", "#howaiworks", "#aiweights", "#aiexplained"]
-  tiktok: ["#womenintech", "#womenempowerment", "#howaiworks", "#aitraining", "#aiexplained"]
+  instagram: ["#womenintech", "#womenwhobuild", "#womenlearningai", "#howaiworks", "#aiweights"]
+  tiktok: ["#womenintech", "#womenempowerment", "#womenlearningai", "#howaiworks", "#aitraining"]
 discord: |-
   Ever wondered if you are teaching the AI when you correct it in a chat? Short video on what a model actually is (a giant pile of numbers), how training works, and why the model stopped learning the day it was released.

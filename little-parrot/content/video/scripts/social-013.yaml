@@ -11,7 +11,7 @@ script: |-
 
   More like this coming up. Follow along.
 caption: |-
-  Have you noticed how a chat assistant will apologise the second you correct it, and only then give you the right answer? Members of our Little Parrot community ask us about this all the time. The reason is simpler than it looks.
+  Have you noticed how a chat assistant will apologise the second you correct it, and only then give you the right answer? The women in our Little Parrot community ask us about this all the time. The reason is simpler than it looks.
 
   A language model is essentially a very capable autocomplete. It predicts the next word based on what came before. So when you type "you are wrong, the actual answer is...", the model looks at everything so far and asks what a human would typically say next.
 
@@ -20,9 +20,11 @@ caption: |-
   The model does not know it was wrong. It does not remember being wrong. It is predicting what a helpful person would say after being corrected, and a helpful person usually opens with "You're right, I apologise".
 
   Once you see this, chat assistants stop feeling like they are learning from you in the moment. They are simply very good at predicting what people say next.
+
+  Follow along for more on how AI really works, and save this for the next time a chat assistant says sorry.
 title: "Why AI apologises the moment you correct it"
 hastags:
-  instagram: ["#womenintech", "#learnai", "#chatgpt", "#howaiworks", "#aiexplained"]
-  tiktok: ["#womenintech", "#womenempowerment", "#chatgpt", "#howaiworks", "#aiexplained"]
+  instagram: ["#womenintech", "#womenwhobuild", "#womenlearningai", "#chatgpt", "#howaiworks"]
+  tiktok: ["#womenintech", "#womenempowerment", "#womenlearningai", "#chatgpt", "#howaiworks"]
 discord: |-
   Correct a chat assistant and it apologises instantly, then fixes its answer. Short video on why that apology is autocomplete predicting what a helpful person would say next, not the AI realising its mistake.

@@ -3,7 +3,7 @@ script: |-
 
   Your brain does its thinking with neurons. Each is a cell with a long tail that connects to others. It receives signals from the neurons before it, and it decides whether to fire a signal onwards.
 
-  An artificial neuron in an LLM works in a similar way, only with maths instead of biology. It takes the numbers coming in. It multiplies each by its own weight. It adds them all up. If the total is bigger then a certain other number, called a bias, it sends a signal onwards. If not, it stays silent.
+  An artificial neuron in an LLM works in a similar way, only with maths instead of biology. It takes the numbers coming in. It multiplies each by its own weight. It adds them all up. If the total is bigger than a certain other number, called a bias, it sends a signal onwards. If not, it stays silent.
 
   That is one neuron. A language model has billions of them, stacked in layers, all passing signals along.
 
@@ -22,9 +22,13 @@ caption: |-
   The weights and biases are the model's parameters, and they are what training adjusts. The more neurons a model has, the more subtle the patterns it can pick up.
 
   None of this asks you to do the maths yourself. But knowing the shape of a single neuron makes the phrase "billions of parameters" mean something real.
+
+  It is the kind of thing we walk through with the women in our Little Parrot courses, no maths required.
+
+  Follow along for more of these, no maths needed, and save this for the next time you hear a model described by its number of parameters.
 title: "How an artificial neuron works"
 hastags:
-  instagram: ["#womenintech", "#learnai", "#neuralnetworks", "#howaiworks", "#aiexplained"]
-  tiktok: ["#womenintech", "#womenempowerment", "#neuralnetworks", "#howaiworks", "#aiexplained"]
+  instagram: ["#womenintech", "#womenwhobuild", "#womenlearningai", "#neuralnetworks", "#howaiworks"]
+  tiktok: ["#womenintech", "#womenempowerment", "#womenlearningai", "#neuralnetworks", "#howaiworks"]
 discord: |-
   Language models borrow one idea from the brain: the neuron. Short video on how an artificial neuron adds up numbers, decides whether to fire, and why "billions of parameters" starts to mean something once you have seen one.
