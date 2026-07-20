@@ -44,10 +44,18 @@
   .header .handle { font-size: 32px; } .header .page { font-size: 24px; }
 
   /* Voiced text */
-  .headline { margin: 0; font-family: var(--font-display); font-weight: var(--weight-headline); color: var(--ink); text-wrap: pretty; }
+  .headline { margin: 0; font-family: var(--font-display); font-weight: var(--weight-headline); line-height: 1.45; color: var(--ink); text-wrap: pretty; }
   .copy { margin: 0; font-family: var(--font-copy); font-weight: var(--weight-copy); font-size: 34px; line-height: 1.45; color: var(--ink); text-wrap: pretty; }
   .kicker { font-family: var(--font-display); font-weight: 700; letter-spacing: 0.08em; color: var(--ink); }
-  .hl { background: var(--grad); padding: 0 0.12em; box-decoration-break: clone; -webkit-box-decoration-break: clone; font-weight: 700; }
+  /* Little Parrot carousels centre their display text; mockup/chat content
+     (prompt windows, Slack cards, quote cards) stays left-aligned. */
+  .headline, .copy, .kicker { text-align: center; }
+  /* Keep line-height ≥ 1.45 on any block whose .hl wraps across lines, so
+     the strips of adjacent lines don't cover each other. The background-size
+     trick below also trims the strip to 90% of the line's glyph box,
+     vertically centred. */
+  .hl { background: var(--grad); background-position: 0 50%; background-size: 100% 90%; background-repeat: no-repeat;
+    padding: 0 0.12em; box-decoration-break: clone; -webkit-box-decoration-break: clone; font-weight: 700; }
 
   /* Framed content box (photos, charts, quote cards, mockups) */
   .frame { border: 4px solid var(--ink); box-shadow: 12px 12px 0 rgba(8,8,9,0.25); background: #ffffff; position: relative; overflow: hidden; box-sizing: border-box; }
@@ -111,7 +119,7 @@
       <div class="inner" style="position:relative;">
         <div class="header"><span class="handle">LittleParrot.app</span><span class="page">01 / 09</span></div>
         <div style="flex:1; display:flex; flex-direction:column; justify-content:center; max-width:500px;">
-          <h1 class="headline" style="font-size:52px; line-height:1.3; width:578px;">I left my full-time job at the end of 2024, after 10 years in tech. This is what <span class="hl">running my own business</span> has been like since.</h1>
+          <h1 class="headline" style="font-size:52px; width:578px;">I left my full-time job at the end of 2024, after 10 years in tech. This is what <span class="hl">running my own business</span> has been like since.</h1>
           <div class="kicker" style="font-size:24px; color:var(--ink-secondary); max-width:480px;">FROM EMPLOYEE TO RUNNING A BUSINESS.</div>
           <div class="kicker" style="margin-top:28px; font-size:24px;">SWIPE →</div>
         </div>

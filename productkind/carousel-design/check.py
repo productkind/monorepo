@@ -45,7 +45,9 @@ BANNED = [
     (re.compile(r"\bmatter(s|ed)?\b", re.I), '"matters" as importance claim'),
     (re.compile(r"\bland(s|ed)?\b(?! page)", re.I), 'figurative "lands"'),
     (re.compile(r"\blanding\b(?! page)", re.I), 'figurative "landing"'),
-    (re.compile(r"\bactually\b", re.I), 'filler "actually"'),
+    # "actually" is explicitly NOT banned (personal-tone-of-voice: it is one
+    # of Kinga's natural hedges); whether a use is filler is for the human
+    # pass on the md, so it is not grepped here.
     (re.compile(r"\bgenuinely\b", re.I), '"genuinely"'),
     (re.compile(r"\bquietly\b", re.I), '"quietly"'),
     (re.compile(r"here's the thing", re.I), "pseudo punchline"),

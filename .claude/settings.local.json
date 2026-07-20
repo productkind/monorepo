@@ -204,7 +204,9 @@
       "WebFetch(domain:blacktwist.app)",
       "WebFetch(domain:www.webfx.com)",
       "WebFetch(domain:techcrunch.com)",
-      "WebFetch(domain:www.facebook.com)"
+      "WebFetch(domain:www.facebook.com)",
+      "Bash(./check.py ../marketing/content/courses/software-basics/post-1-bakery-analogy ../marketing/content/courses/software-basics/post-1-bakery-analogy/spec.md)",
+      "Bash(./export.sh ../marketing/content/courses/software-basics/post-1-bakery-analogy)"
     ],
     "deny": [],
     "ask": []
