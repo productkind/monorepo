@@ -51,8 +51,8 @@ strategy.
 
 ## Posts
 
-1. [post-1-tone-without-sounding-controlling.md](post-1-tone-without-sounding-controlling.md) - the status nudge that sounds right
-2. [post-2-context-product-update.md](post-2-context-product-update.md) - the release update people read
+1. [post-1-tone-without-sounding-controlling/spec.md](post-1-tone-without-sounding-controlling/spec.md) - the status nudge that sounds right
+2. [post-2-context-product-update/spec.md](post-2-context-product-update/spec.md) - the release update people read
 3. [post-3-linkedin-without-buzzwords.md](post-3-linkedin-without-buzzwords.md) - LinkedIn posts that sound like you
 4. [post-4-what-is-redis-moment.md](post-4-what-is-redis-moment.md) - the stand-up nod-along prompt
 5. [post-5-advanced-autocomplete.md](post-5-advanced-autocomplete.md) - what an LLM really does
