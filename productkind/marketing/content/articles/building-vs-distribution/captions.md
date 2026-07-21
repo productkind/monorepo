@@ -1,6 +1,6 @@
 ---
 status: draft
-channels: [linkedin, instagram, tiktok, threads]
+channels: [linkedin, instagram, tiktok, threads, youtube]
 ---
 
 # Captions: Building is cheaper, but distribution is still expensive
@@ -102,6 +102,20 @@ I keep hearing building software is cheap now. Building Little Parrot taught me 
 
 ---
 
+## YouTube Shorts (carousel slides run as a video slideshow)
+
+**Title:** Building your app is the easier 25%
+
+**Description:**
+
+When we started LittleParrot.app, our app that teaches women to build their ideas with AI, we thought building was the main job. It turns out to be about 25%. The other 75% is a problem worth solving, distribution, driving the behaviour change to get people using it, and revenue. We've validated the problem and the solution we're building; distribution is the bit we haven't cracked yet, so we're testing organic channels before paying for ads. Subscribe for what we learn building a business as a two-person team.
+
+#womenintech #womenwhobuild #distribution
+
+**Pinned comment:** The full story is on our newsletter, Thoughts by productkind (productkind.substack.com) – it covers the Instagram, LinkedIn, conference and community experiments too.
+
+---
+
 ## Posting checklist
 
 - [ ] Swap `[article link]` for the live Substack post URL.
@@ -118,4 +132,6 @@ I keep hearing building software is cheap now. Building Little Parrot taught me 
       public" topic tag in the composer; post Thomas's reply and Kinga's
       reply within the first hour; the productkind account quote-posts
       Kinga's Threads post once it's live.
+- [ ] YouTube Shorts: put the link in the pinned comment (no description
+      link); the spoken subscribe ask lives in the video's final seconds.
 - [ ] Reply to every real commenter in the first hour on every platform.
