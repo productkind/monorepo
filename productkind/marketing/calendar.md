@@ -31,9 +31,9 @@ Statuses: todo, created, scheduled, posted
 | --- | --- | --- | --- |
 | 2026-07-26 | SB-2 component names | instagram, tiktok, youtube, linkedin productkind, threads productkind | todo |
 | 2026-07-25 | B-roll: Substack article | instagram, tiktok, youtube, linkedin productkind, threads productkind | todo |
-| 2026-07-24 | social-007 | instagram✅, tiktok✅, youtube✅, linkedin productkind✅, threads productkind✅  | scheduled |
-| 2026-07-23 | WB-2 context: release update | instagram, tiktok, youtube, linkedin productkind, threads productkind | created |
-| 2026-07-22 | B-roll: business ideas for women 2026 – how to find what to do | instagram✅, tiktok, youtube, linkedin prodcutkind✅, threads productkind✅ | created |
+| 2026-07-24 | social-007 | instagram, tiktok, youtube, linkedin productkind, threads productkind  | scheduled |
+| 2026-07-23 | WB-2 context: release update | instagram✅, tiktok, youtube, linkedin productkind, threads productkind | created |
+| 2026-07-22 | B-roll: business ideas for women 2026 – how to find what to do | instagram✅, tiktok📆(in draft, needs posting), youtube✅, linkedin prodcutkind✅, threads productkind✅ | scheduled |
 | 2026-07-21 | Substack article carousel: Building is cheap(er), but distribution is still expensive | instagram, tiktok, youtube, linkedin Kinga, threads Kinga | posted |
 | 2026-07-20 | social-006 | instagram, tiktok, youtube, linkedin productkind, threads productkind | posted |
 | --- | --- | --- | --- |
