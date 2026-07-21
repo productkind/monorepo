@@ -22,22 +22,26 @@ markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
 the learner types into a tool. Render it verbatim in monospace inside a
 prompt-input mockup (a chat input field with a cursor and send arrow), so
 it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+the typed text, never styled labels. Everything else in the "Display copy"
+column is display copy in the brand style.
 
 **Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Specimen style: each
 slide draws the component large and labelled, with a ready prompt in
 monospace beneath.
 
-| Slide | Visual | Text on slide |
-| --- | --- | --- |
-| 1 (cover) | Five components floating with name tags | "That pop-up has a name. So does the sliding menu and the box with the picture in it. Knowing the names gets you the design you pictured. 👇" |
-| 2 | Three buttons drawn: filled, outline, plain text | "BUTTONS come in ranks. Primary: the colourful main action. Secondary: outlined, less prominent. Tertiary: plain text. Prompt: 'Add a primary Save button below the form, with a secondary Cancel next to it.'" |
-| 3 | A card with image, title, text, button | "CARD: a box that groups related content (image, title, description, button). Prompt: 'Show each recipe as a card with a title, image, and a View button. Add a subtle shadow.'" |
-| 4 | A modal dimming the page behind it | "MODAL: the pop-up that appears over everything else. Prompt: 'When the user clicks Delete, show a confirmation modal with Cancel (secondary) and Delete (primary, red).'" |
-| 5 | An input, a textarea, a dropdown | "INPUT FIELD: one line of typing. TEXTAREA: several lines. DROPDOWN: a click reveals the options. Prompt: 'Add a dropdown to select the category: Work, Personal, or Ideas.'" |
-| 6 | A nav bar collapsing into a hamburger icon | "NAVIGATION BAR: the links that move people around, up top or down the side. Prompt: 'Add a top nav bar with Home, About, and Contact. Highlight the active page. Collapse into a hamburger menu on mobile.'" |
-| 7 (CTA) | Brand card, all components assembled into a page | "'Add a card component for each item' gets you what you pictured; 'make it look nicer' starts a guessing game. Full prompt library: Basics of Software for Vibe Coding, on LittleParrot.app. First challenge free 🟪 Save this 🔖" |
+**Full-fidelity rule:** every word that appears on a slide is in this table,
+verbatim. The implemented carousel may not add copy; `check.py` in
+`productkind/carousel-design/` enforces it.
+
+| Slide | Visual | Display copy (verbatim) | Prompt window / mockup content (verbatim) |
+| --- | --- | --- | --- |
+| 1 (cover) | Five components floating with name tags | "That pop-up has a name. So does the sliding menu, and the box with the picture in it." Kicker: "NAME THE PART, GET THE DESIGN YOU PICTURED · SWIPE →" | (none) |
+| 2 | Three buttons drawn: filled, outline, plain text | "BUTTONS come in ranks. Primary: the colourful main action. Secondary: outlined, less prominent. Tertiary: plain text." | Add a primary Save button below the form, with a secondary Cancel next to it. |
+| 3 | A card with image, title, text, button | "CARD: a box that groups related content (image, title, description, button)." | Show each recipe as a card with a title, image, and a View button. Add a subtle shadow. |
+| 4 | A modal dimming the page behind it | "MODAL: the pop-up that appears over everything else." | When the user clicks Delete, show a confirmation modal with Cancel (secondary) and Delete (primary, red). |
+| 5 | An input, a textarea, a dropdown | "INPUT FIELD: one line of typing. TEXTAREA: several lines. DROPDOWN: a click reveals the options." | Add a dropdown to select the category: Work, Personal, or Ideas. |
+| 6 | A nav bar collapsing into a hamburger icon | "NAVIGATION BAR: the links that move people around, up top or down the side." | Add a top nav bar with Home, About, and Contact. Highlight the active page. Collapse into a hamburger menu on mobile. |
+| 7 (CTA) | Brand card, all components assembled into a page | "'Add a card for each item' gets you what you pictured. 'Make it look nicer' starts a guessing game." Then: "The full prompt library is in Basics of Software for Vibe Coding." Badge: "LittleParrot.app" · "First challenge free 💛" · "Save this for your next design session 🔖" | (none) |
 
 **Alt text (for the post):** A component-vocabulary carousel: primary,
 secondary, and tertiary buttons, cards, modals, input fields, textareas,
