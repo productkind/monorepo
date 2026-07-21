@@ -1,0 +1,36 @@
+#!/usr/bin/env zsh
+# Trim frames from the start of a GIF. Depends on: ffmpeg.
+
+gifcrop() {
+    local -A opts
+    zparseopts -E -D -A opts f:
+    [[ -z "$1" ]] && echo "Usage: gifcrop <file> [out] [-f frames]  (frames to trim from start @30fps; out defaults to in-place)" && return 1
+
+    local input="$1"
+    local output="${2:-$1}"
+    [[ -d "$output" ]] && output="${output%/}/$(basename "$1")"
+
+    local frames="${opts[-f]:-30}"
+    local start=$(( frames / 30.0 ))
+
+    # ffmpeg can't read and write the same file, so use a temp when overwriting in place
+    local final_output="$output"
+    local tmp_out=""
+    if [[ "$output" == "$input" ]]; then
+        tmp_out=$(mktemp -t gifcrop.XXXXXX.gif)
+        trap "rm -f '$tmp_out'" EXIT INT TERM
+        output="$tmp_out"
+    fi
+
+    echo "✂️  Cropping first ${frames} frames (${start}s @30fps)..."
+    ffmpeg -v warning -ss "$start" -i "$input" \
+        -filter_complex "[0:v]split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" \
+        -y "$output"
+
+    if [[ $? -eq 0 ]]; then
+        [[ -n "$tmp_out" ]] && mv -f "$tmp_out" "$final_output"
+        echo "✅ Done: $final_output ($(du -h "$final_output" | cut -f1))"
+    fi
+}
+
+gifcrop "$@"

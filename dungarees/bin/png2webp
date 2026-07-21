@@ -1,0 +1,31 @@
+#!/usr/bin/env zsh
+# Convert a static PNG to WebP. Depends on: imagemagick.
+
+png2webp() {
+    local -A opts
+    zparseopts -E -D -A opts s: q:
+    [[ -z "$1" ]] && echo "Usage: png2webp <file> [out] [-s size] [-q quality]" && return 1
+
+    local input="$1"
+    local output="${2:-${1%.*}.webp}"
+    [[ -d "$output" ]] && output="${output%/}/$(basename "${1%.*}.webp")"
+
+    local size="${opts[-s]:-1080}"
+    local quality="${opts[-q]:-40}"
+
+    echo "🖼️  Static PNG -> WebP [${size}px, Q:${quality}]..."
+
+    # -strip: Removes metadata (ICC profiles, EXIF) to save space
+    # -define webp:lossless=false: Ensures the quality flag is respected
+    magick "$input" \
+        -strip \
+        -resize "${size}x${size}>" \
+        -quality "$quality" \
+        -define webp:lossless=false \
+        -define webp:method=6 \
+        "$output"
+
+    [[ $? -eq 0 ]] && echo "✅ Done: $output ($(du -h "$output" | cut -f1))"
+}
+
+png2webp "$@"

@@ -1,0 +1,28 @@
+#!/usr/bin/env zsh
+# Convert a GIF to an optimized (animated) WebP. Depends on: imagemagick.
+
+gif2webp() {
+    local -A opts
+    zparseopts -E -D -A opts s: q: f:
+    [[ -z "$1" ]] && echo "Usage: gif2webp <file> [out] [-s size] [-q quality] [-f fps]" && return 1
+
+    local input="$1"
+    local output="${2:-${1%.*}.webp}"
+    [[ -d "$output" ]] && output="${output%/}/$(basename "${1%.*}.webp")"
+
+    local size="${opts[-s]:-1080}"
+    local quality="${opts[-q]:-40}"
+    local fps="${opts[-f]}"
+
+    local fps_cmd=()
+    # For GIFs, we use -resample to change FPS effectively
+    [[ -n "$fps" ]] && fps_cmd=(-resample "$fps")
+
+    echo "🎨 GIF -> WebP [${size}px, Q:${quality}${fps:+, ${fps}fps}]..."
+    magick "$input" -coalesce "${fps_cmd[@]}" -resize "${size}x${size}>" \
+           -quality "$quality" -define webp:method=6 -layers optimize "$output"
+
+    [[ $? -eq 0 ]] && echo "✅ Done: $output ($(du -h "$output" | cut -f1))"
+}
+
+gif2webp "$@"
