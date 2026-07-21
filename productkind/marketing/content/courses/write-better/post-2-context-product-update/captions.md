@@ -47,7 +47,11 @@ Made for women building products with AI. Save this for your next ship day 🔖,
 
 ## Threads (from the productkind profile)
 
-You shipped the feature, now the announcement, and it comes out "We're excited to announce...". Give the AI real context before you ask, more than the feature name, and people reply. What update of yours flopped?
+"We're excited to announce..." is what AI gives you when it only knows the feature name.
+
+Before you ask for the update, hand it six things: what it does in one line, who it's for, the problem it solves, proof it works, when it's live, and how to try it.
+
+Same prompt, real facts, and people reply. Which of the six do you always forget?
 
 **Topic tag (type in composer, not as #):** AI product updates
 
@@ -61,14 +65,22 @@ You shipped the feature, now the announcement, and it comes out "We're excited t
 
 ## YouTube Shorts
 
-**Title:** Write a Product Update with AI
+**Title:** How to write a product update with AI people actually read
 
 **Description:**
-The difference between a product update people read and one they skip is the context you give, more than the writing. Before you ask AI for the announcement, hand it the facts: what the feature does, why it exists, the proof it works, when it's live, and who it's for. Same prompt, real facts, and it comes back concrete. Made for women building products with AI. Subscribe for a new prompting short every week.
+Most product updates written with AI open with "We're excited to announce...", because that's all you get when the AI only knows the feature name. Give it these six things instead:
+1. What the feature does, in one line
+2. Who it's for
+3. The problem it solves
+4. Proof it works (a real beta number or a customer quote)
+5. When it's available
+6. How to try it
+
+Same prompt, real facts, and it opens with the value instead of the cliché. Screenshot the six and keep them by your next launch. Made for women building products with AI. Subscribe for a new prompting short every week.
 
 #womenwhobuild #womenintech #Shorts
 
-**Pinned comment (holds the link):** Practise it on a real scenario in the free first challenge of Write Better with AI: `…course-overview?utm_source=youtube&utm_medium=social&utm_campaign=write-better&utm_content=post-2`
+**Pinned comment (holds the link):** Practise it on a real scenario in the free first challenge of Write Better with AI: https://littleparrot.app/550e8400-e29b-41d4-a716-446655440000/course-overview?utm_source=youtube-wb2
 
 ---
 
@@ -95,7 +107,7 @@ We teach it on a realistic scenario in the first challenge of our course Write B
 
 Save this for your next launch.
 
-**Kinga (founder comment, carries the link):** Kinga here. The item people skip is "proof it works", and it's the one that does the most, one real beta number beats three adjectives. The free first challenge walks through the whole thing on a real scenario: `…course-overview?utm_source=linkedin&utm_medium=social&utm_campaign=write-better&utm_content=post-2`
+**Kinga (founder comment, carries the link):** People often underestimate the power of giving more context to AI and sharing details on what a good output looks like. The course gives you actionable techniques to get better results right away: https://littleparrot.app/550e8400-e29b-41d4-a716-446655440000/course-overviewcourse-overview?utm_source=linkedin-k
 
 **Thomas (founder comment):** Thomas here. "Who it's for" is the one I'd underline. Tell the assistant the update is for your users, small teams and founders, and it drops the corporate register on its own, no editing pass. And if you have a doc, the vision note or the beta feedback, attach it so it stops guessing.
 
