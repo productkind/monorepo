@@ -1,0 +1,23 @@
+#!/usr/bin/env zsh
+# Convert a video to WebP via an intermediate GIF. Depends on: ffmpeg, imagemagick (mov2gif, gif2webp on PATH).
+
+mov2webp() {
+    local -A opts
+    zparseopts -E -D -A opts s: q: f:
+    [[ -z "$1" ]] && echo "Usage: mov2webp <file> [out] [-s size] [-q quality] [-f fps]" && return 1
+
+    local input="$1"
+    local output="$2"
+    local size="${opts[-s]:-1080}"
+    local quality="${opts[-q]:-40}"
+    local fps="${opts[-f]:-12}"
+
+    local tmp_gif=$(mktemp -t intermediate.XXXXXX.gif)
+    trap "rm -f '$tmp_gif'" EXIT INT TERM
+
+    # Chain with specific parameters
+    mov2gif "$input" "$tmp_gif" -s "$size" -f "$fps" && \
+    gif2webp "$tmp_gif" "$output" -s "$size" -q "$quality"
+}
+
+mov2webp "$@"

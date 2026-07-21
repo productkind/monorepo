@@ -1,0 +1,24 @@
+#!/usr/bin/env zsh
+# Convert a video (e.g. MOV/MP4) to an optimized GIF. Depends on: ffmpeg.
+
+mov2gif() {
+    local -A opts
+    zparseopts -E -D -A opts s: f:
+    [[ -z "$1" ]] && echo "Usage: mov2gif <file> [out] [-s size] [-f fps]" && return 1
+
+    local input="$1"
+    local output="${2:-${1%.*}.gif}"
+    [[ -d "$output" ]] && output="${output%/}/$(basename "${1%.*}.gif")"
+
+    local size="${opts[-s]:-1080}"
+    local fps="${opts[-f]:-12}"
+
+    echo "🎞️  MOV -> GIF [${size}px, ${fps}fps]..."
+    ffmpeg -v warning -i "$input" \
+        -vf "fps=${fps},scale=${size}:${size}:force_original_aspect_ratio=decrease:flags=lanczos,split[s0][s1];[s0]palettegen=max_colors=128[p];[s1][p]paletteuse" \
+        -y "$output"
+
+    [[ $? -eq 0 ]] && echo "✅ Done: $output ($(du -h "$output" | cut -f1))"
+}
+
+mov2gif "$@"

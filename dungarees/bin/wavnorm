@@ -1,0 +1,17 @@
+#!/usr/bin/env zsh
+# Loudness-normalize a WAV file. Depends on: ffmpeg, sox.
+
+wavnorm() {
+    [[ -z "$1" ]] && echo "Usage: wavnorm <file> [out]  (out defaults to normalized.wav)" && return 1
+
+    local input="$1"
+    local output="${2:-normalized.wav}"
+    [[ -d "$output" ]] && output="${output%/}/$(basename "$1")"
+
+    echo "🔊 Normalizing WAV..."
+    ffmpeg -v warning -i "$input" -af "loudnorm=I=-16:TP=-1.5:LRA=11" -f wav - | sox -t wav - "$output" norm -0.3
+
+    [[ $? -eq 0 ]] && echo "✅ Done: $output ($(du -h "$output" | cut -f1))"
+}
+
+wavnorm "$@"
