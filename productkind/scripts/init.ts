@@ -6,16 +6,38 @@ if (process.platform === 'darwin') {
     console.error('Homebrew is not installed. Please install Homebrew first: https://brew.sh')
     process.exit(1)
   }
-  await $`brew install --cask font-montserrat`
-  await $`brew install --cask font-josefin-slab`
-  await $`brew install --cask font-nanum-pen-script`
-  await $`brew install --cask font-vt323`
-  await $`brew install inkscape`
+  // Only install what's missing, so init stays re-runnable without swallowing
+  // real errors. Two things count as "already there": brew already tracks it,
+  // or (for casks) an untracked artifact — e.g. a font already on disk — is
+  // present, which makes brew refuse. Any other failure still aborts init.
+  const brewInstall = async (name: string, cask = false) => {
+    const listArgs = cask ? ['list', '--cask', name] : ['list', '--formula', name]
+    const installed = (await $`brew ${listArgs}`.quiet().nothrow()).exitCode === 0
+    if (installed) {
+      console.log(`✔︎ ${name} already installed`)
+      return
+    }
+    const result = cask
+      ? await $`brew install --cask ${name}`.nothrow()
+      : await $`brew install ${name}`.nothrow()
+    if (result.exitCode === 0) return
+    if (/already/i.test(result.stderr + result.stdout)) {
+      console.log(`✔︎ ${name} already present (not brew-managed)`)
+      return
+    }
+    throw new Error(`Failed to install ${name}:\n${result.stderr}`)
+  }
+
+  await brewInstall('font-montserrat', true)
+  await brewInstall('font-josefin-slab', true)
+  await brewInstall('font-nanum-pen-script', true)
+  await brewInstall('font-vt323', true)
+  await brewInstall('inkscape')
 
   // Dependencies for the media scripts in dungarees/bin
-  await $`brew install imagemagick`
-  await $`brew install ffmpeg`
-  await $`brew install sox`
+  await brewInstall('imagemagick')
+  await brewInstall('ffmpeg')
+  await brewInstall('sox')
 
   // Add dungarees/bin to the zsh PATH (idempotent)
   const scriptDir = path.dirname(fileURLToPath(import.meta.url))
