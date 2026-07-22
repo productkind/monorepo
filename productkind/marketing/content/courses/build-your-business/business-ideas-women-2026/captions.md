@@ -18,7 +18,7 @@ What's the smallest version of that you could build?
 Go build that.
 Follow for more on building your idea.
 
-#womenwhobuild #womenintech #femalefounders #businessideas2026
+#womenwhobuild #womenintech #businesswoman #businessideasforwomen
 
 *(No pinned comment: nothing to link to.)*
 
