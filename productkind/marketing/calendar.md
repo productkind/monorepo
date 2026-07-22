@@ -27,7 +27,7 @@ Statuses: todo, created, scheduled, posted
 | 2026-07-30 | WB-3 LinkedIn without buzzwords | instagram, tiktok, youtube, linkedin productkind, threads productkind | todo |
 | 2026-07-29 | B-roll | instagram, tiktok, youtube, linkedin productkind, threads productkind | todo |
 | 2026-07-28 | Substack article carousel: | instagram, tiktok, youtube, linkedin Kinga, threads Kinga | todo |
-| 2026-07-27 | social-008 | instagram, tiktok, youtube, linkedin productkind, threads productkind  | created |
+| 2026-07-27 | social-008 | instagram, tiktok, youtube, linkedin productkind, threads productkind  | scheduled |
 | --- | --- | --- | --- |
 | 2026-07-26 | SB-2 component names | instagram, tiktok, youtube, linkedin productkind, threads productkind | todo |
 | 2026-07-25 | B-roll: Substack article | instagram✅, tiktok, youtube, linkedin productkind, threads productkind | todo |
