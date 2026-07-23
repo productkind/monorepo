@@ -105,6 +105,12 @@ the spec (and the source article/course) before writing.
 
 **TikTok** (no founder comments; we run one account there)
 
+- **Carousels post as TikTok photo mode, which has a Title field separate
+  from the caption**: give it a short, scroll-stopping title that names the
+  topic and its search term (a payoff or pain hook, not a cute line), e.g.
+  "Why your vibe coded app doesn't look how you pictured 👀", and include it
+  as a **Title** line in the deliverable. Video posts have no separate title
+  field; there the caption's first line is the hook.
 - 150-300 characters total; only the first ~80-100 show before "more", so
   hook + keyword go there.
 - TikTok search indexes voiceovers and on-screen text as well as captions,
@@ -164,9 +170,11 @@ channel there)
 - **Description: 150-500 focused characters** in natural sentences that
   extend what the video actually shows; the 5,000-character limit is not a
   target.
-- 2-3 hashtags in the description, women-specific first (e.g. #womenintech
-  #womenwhobuild), optionally #Shorts; stuffing makes YouTube ignore all of
-  them. This matters most on Shorts: its pull system currently shows our
+- 2-3 hashtags, women-specific first (e.g. #womenintech #womenwhobuild)
+  plus one topic tag; place them right after the title in the deliverable
+  (the first hashtags render above the video title on the Short), and
+  stuffing makes YouTube ignore all of them. Skip #Shorts: YouTube detects
+  Shorts by format (vertical, short length), so the tag adds nothing. This matters most on Shorts: its pull system currently shows our
   videos to a mostly male audience, and women-specific hashtags, title
   keywords, and spoken phrases (e.g. "for women who...") are how we tell it
   who the videos are for.

@@ -99,6 +99,12 @@ write up / wrote up / write it up (e.g. "thinking I never wrote up", "I wrote th
 
 wrestling with (e.g. "what you're wrestling with as you build"). Use "struggling with" instead.
 
+### Artificial writerly phrasing
+Constructions no one would say aloud; they read as writerly copy rather than a person talking. Say each line the way you'd say it to a colleague, plain verbs and plain subjects. Recurring tells below (offender → plain version); add new ones as single lines rather than new paragraphs.
+- ownership metaphors for abstract things: "once the names are yours", "make the vocabulary your own", "the skills are now yours" → "once you use these names", "once you know them"
+- abstract placeholder noun ("the piece", "the thing", "the part") + a "handed / given / gifted" metaphor: "the words people are rarely handed", "the thing they were never given" → "most people were never taught the words"
+- an elevated verb where a plain one fits: "the words you'll reach for most" → "the words you'll use most"
+
 ### Weak intensifiers
 genuinely
 
