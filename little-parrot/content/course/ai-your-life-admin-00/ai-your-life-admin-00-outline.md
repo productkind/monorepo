@@ -6,7 +6,7 @@
 
 This is a short, hands-on micro-course for new mums who have less time, more to remember, and no patience for fiddly setup. In three short challenges, the learner builds two voice-triggered iPhone Shortcuts that hand the sorting to AI:
 
-1. **The 60-Second Brain Dump** — talk for a minute about everything on your mind, and AI sorts each thing into the right place: events into your Calendar, to-dos into Reminders, and the rest into Notes.
+1. **The 60-Second Brain Dump** — talk for a minute about everything on your mind, and AI sorts each thing into the right place: to-dos into Reminders (with any day or time kept in the wording), and the rest into Notes.
 2. **The Baby Log** — say what just happened (a feed, a nap, a nappy, a milestone) and AI turns it into a tidy, timestamped entry in one running note you can scroll back through or show your baby's doctor.
 
 Everything runs on tools already on the iPhone: the Shortcuts app and the free ChatGPT app. No subscription, no new accounts beyond a free ChatGPT login, and no typing. The learner talks; the phone sorts.
@@ -20,7 +20,9 @@ The course is deliberately small. The learner walks away having actually built b
 ## Structure
 
 ### 1. The 60-Second Brain Dump
-**Build a shortcut that sorts a minute of talking into your calendar, reminders and notes.**
+**Build a shortcut that sorts a minute of talking into your reminders and notes.**
+
+> **Scope update (2026-07-22):** Calendar routing was dropped from Challenge 1. Auto-creating dated Calendar events from spoken phrasing was too brittle for a first-timer (it depends on speech, ChatGPT's rephrasing, and date coercion all surviving). The Brain Dump now files into two places only, Reminders and Notes; anything with a day or time stays a plain reminder with the timing in its wording ("Health visitor Tuesday at 11"), so no date parsing is needed. This also removed the `Current Date` variable from the build. The sections below that still mention Calendar (Verification Handoff, Cross-check) are kept as the pre-generation record.
 
 This is the hook: by the end of the first challenge the learner has a working shortcut they can trigger by voice.
 
@@ -33,7 +35,7 @@ This is the hook: by the end of the first challenge the learner has a working sh
 - Build the shortcut step by step:
   - Dictate text (the brain dump)
   - Ask ChatGPT to sort it, using a supplied **sorting prompt** (the reusable tool, copy-paste, then tweak)
-  - Route the result: events to Calendar, to-dos to Reminders, everything else to Notes
+  - Route the result: to-dos to Reminders (day/time kept in the wording), everything else to Notes
 - The sorting prompt is the takeaway tool: it tells the AI how to categorise and how to format its answer so the shortcut can act on it
 - Trigger it: run it by name with Siri ("Hey Siri, Brain Dump")
 - Worked example: Dalmie's morning brain dump ("dentist Thursday, we're out of nappies, book the 6-week check, text Mum back") and where each piece ends up
@@ -86,7 +88,7 @@ Each challenge ends with the learner having actually run the thing, not just und
 - Building a simple iPhone Shortcut from scratch
 - Connecting a shortcut to the free ChatGPT app
 - Writing/adapting a prompt that returns output a shortcut can act on (sorting, formatting)
-- Routing AI output into Calendar, Reminders and Notes
+- Routing AI output into Reminders and Notes
 - Triggering shortcuts hands-free by voice, Home/Lock Screen, Back Tap, Action Button
 - Dictating in any language
 
