@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>That pop-up has a name — software-basics post 2 (Little Parrot)</title>
+<style>
+/* Little Parrot brand tokens (inlined from brands/little-parrot.css) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --grad: linear-gradient(120deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70);
+  --grad-wash: linear-gradient(120deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020), #ffffff;
+
+  --font-display: 'Space Mono', monospace;
+  --font-copy: 'Inter', sans-serif;
+  --font-plain: 'Inter', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  --weight-headline: 700;
+  --weight-copy: 400;
+
+  --ink: #080809;
+  --ink-secondary: #4a4a50;
+}
+</style>
+<style>
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  html, body { margin: 0; padding: 0; }
+  body.single { overflow: hidden; }
+  body.single #strip { padding: 0 !important; gap: 0 !important; background: none !important; min-height: 0 !important; }
+  body.single section { display: none; }
+  body.single section.current { display: block; }
+  body:not(.crop) .cropguide { display: none; }
+  @media print {
+    #strip { padding: 0 !important; gap: 0 !important; background: none !important; min-height: 0 !important; display: block !important; }
+    section { page-break-after: always; break-after: page; }
+    @page { size: 1080px 1350px; margin: 0; }
+  }
+
+  /* Shared carousel design system */
+  section.slide { flex: none; width: 1080px; height: 1350px; position: relative; overflow: hidden;
+    background: var(--grad-wash); box-sizing: border-box; }
+  .card { position: absolute; top: 100px; left: 100px; width: 880px; height: 1150px; box-sizing: border-box;
+    background: #ffffff; border: 12px solid var(--ink); box-shadow: 12px 12px 0 rgba(8,8,9,0.25); display: flex; flex-direction: column; }
+  .gradbar { flex: none; height: 24px; background: var(--grad); }
+  .inner { flex: 1; display: flex; flex-direction: column; justify-content: space-between; padding: 56px 72px 64px; box-sizing: border-box; }
+  .slidebody { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+
+  .header { display: flex; justify-content: space-between; align-items: center;
+    font-family: var(--font-display); font-weight: 700; letter-spacing: 0.06em; color: var(--ink); }
+  .header .handle { font-size: 32px; } .header .page { font-size: 24px; }
+
+  .headline { margin: 0; font-family: var(--font-display); font-weight: var(--weight-headline); line-height: 1.45; color: var(--ink); text-wrap: pretty; }
+  .copy { margin: 0; font-family: var(--font-copy); font-weight: var(--weight-copy); font-size: 34px; line-height: 1.45; color: var(--ink); text-wrap: pretty; }
+  .kicker { font-family: var(--font-display); font-weight: 700; letter-spacing: 0.08em; color: var(--ink); }
+  .hl { background: var(--grad); background-position: 0 50%; background-size: 100% 90%; background-repeat: no-repeat;
+    padding: 0 0.12em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+
+  /* This carousel centres its display text; drawn specimens and prompt
+     windows manage their own alignment. */
+  .headline, .copy, .kicker { text-align: center; }
+
+  /* Prompt window: the chat-input mockup for anything the reader types. */
+  .promptwrap { align-self: stretch; display: flex; flex-direction: column; gap: 12px; }
+  .promptlabel { font-family: var(--font-mono); font-weight: 700; font-size: 20px; letter-spacing: 0.08em; color: var(--ink-secondary); }
+  .promptwin { background: #ffffff; border: 4px solid var(--ink); border-radius: 28px; box-shadow: 12px 12px 0 rgba(8,8,9,0.25); position: relative; }
+  .promptwin pre { margin: 0; font-family: var(--font-mono); white-space: pre-wrap; color: var(--ink); }
+  .send { position: absolute; right: 28px; bottom: 24px; width: 56px; height: 56px; border-radius: 50%;
+    background: var(--ink); color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 28px; }
+  .cursor { display: inline-block; width: 4px; height: 1.1em; background: var(--ink); vertical-align: text-bottom; }
+
+  .badge { font-family: var(--font-display); font-weight: 700; letter-spacing: 0.06em; border: 4px solid var(--ink);
+    box-shadow: 12px 12px 0 rgba(8,8,9,0.25); padding: 20px 36px; color: var(--ink); background: #ffffff; }
+
+  .cropguide { position: absolute; left: 0; top: 135px; width: 1080px; height: 1080px;
+    border-top: 2px dashed rgba(8,8,9,0.5); border-bottom: 2px dashed rgba(8,8,9,0.5); pointer-events: none; box-sizing: border-box; }
+
+  /* ===== Component specimens (this carousel draws the real UI parts) ===== */
+  .stage { align-self: center; width: 100%; max-width: 660px; box-sizing: border-box;
+    background: var(--grad-wash); border: 4px solid var(--ink); box-shadow: 12px 12px 0 rgba(8,8,9,0.25);
+    padding: 44px 40px; display: flex; flex-direction: column; align-items: center; gap: 30px; }
+
+  /* Buttons */
+  .btn { font-family: var(--font-copy); font-weight: 700; font-size: 28px; padding: 18px 46px;
+    border: 4px solid var(--ink); background: #ffffff; color: var(--ink); box-sizing: border-box; white-space: nowrap; }
+  .btn.primary { background: var(--grad); box-shadow: 8px 8px 0 rgba(8,8,9,0.25); }
+  .btn.tertiary { border-color: transparent; text-decoration: underline; text-underline-offset: 7px; }
+  .btn.danger { background: #ff4d4d; color: #ffffff; box-shadow: 8px 8px 0 rgba(8,8,9,0.25); }
+  .btn.sm { font-size: 24px; padding: 12px 30px; }
+
+  /* Generic wireframe text bars (carry no words, need no spec coverage) */
+  .bar { height: 16px; border-radius: 8px; background: var(--ink); }
+  .bar.soft { background: #c9c9cf; }
+
+  /* Card */
+  .uicard { width: 330px; background: #ffffff; border: 4px solid var(--ink); box-shadow: 10px 10px 0 rgba(8,8,9,0.25); }
+  .uicard .pic { height: 150px; background: var(--grad); border-bottom: 4px solid var(--ink); }
+  .uicard .cbody { padding: 26px 26px 30px; display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+
+  /* Modal over a dimmed page */
+  .pagemock { position: relative; width: 100%; max-width: 520px; background: #ffffff; border: 4px solid var(--ink);
+    box-shadow: 10px 10px 0 rgba(8,8,9,0.25); padding: 30px; display: flex; flex-direction: column; gap: 20px; overflow: hidden; }
+  .pagemock .dim { position: absolute; inset: 0; background: rgba(8,8,9,0.55); }
+  .modal { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 380px;
+    background: #ffffff; border: 4px solid var(--ink); box-shadow: 12px 12px 0 rgba(8,8,9,0.4);
+    padding: 30px; display: flex; flex-direction: column; gap: 22px; box-sizing: border-box; }
+  .modal .mrow { display: flex; gap: 16px; justify-content: flex-end; }
+
+  /* Form fields */
+  .fieldrow { display: flex; align-items: center; gap: 30px; }
+  .field { width: 200px; box-sizing: border-box; background: #ffffff; border: 4px solid var(--ink); border-radius: 12px; }
+  .field.line { height: 60px; display: flex; align-items: center; padding: 0 18px; }
+  .field.area { height: 130px; display: flex; flex-direction: column; gap: 12px; padding: 18px; }
+  .field.select { height: 60px; display: flex; align-items: center; justify-content: space-between; padding: 0 18px;
+    font-family: var(--font-mono); font-weight: 700; font-size: 26px; color: var(--ink); }
+  .menu { width: 200px; box-sizing: border-box; border: 4px solid var(--ink); background: #ffffff; box-shadow: 8px 8px 0 rgba(8,8,9,0.25); }
+  .menu .opt { padding: 13px 18px; font-family: var(--font-copy); font-weight: 600; font-size: 24px; color: var(--ink); border-bottom: 2px solid #e8e8ea; }
+  .menu .opt:last-child { border-bottom: none; }
+  .menu .opt.on { background: var(--grad); }
+  .fielddef { margin: 0; font-family: var(--font-copy); font-size: 24px; line-height: 1.4; color: var(--ink); text-align: center; text-wrap: pretty; }
+  .fielddef b { font-family: var(--font-display); font-weight: 700; }
+
+  /* Navigation bar */
+  .navbar { width: 100%; max-width: 600px; box-sizing: border-box; height: 80px; background: #ffffff; border: 4px solid var(--ink);
+    box-shadow: 10px 10px 0 rgba(8,8,9,0.25); display: flex; align-items: center; gap: 20px; padding: 0 26px; }
+  .navbar .branddot { flex: none; width: 40px; height: 40px; border: 4px solid var(--ink); background: var(--grad); box-sizing: border-box; }
+  .navbar .links { margin-left: auto; display: flex; gap: 28px; align-items: center;
+    font-family: var(--font-copy); font-weight: 700; font-size: 26px; color: var(--ink); }
+  .navrow { display: flex; align-items: center; gap: 24px; justify-content: center; width: 100%; }
+  .navbar.mobile { max-width: 250px; }
+  .burger { margin-left: auto; display: flex; flex-direction: column; gap: 7px; }
+  .burger span { display: block; width: 42px; height: 6px; border-radius: 3px; background: var(--ink); }
+  .arrow { font-family: var(--font-display); font-weight: 700; font-size: 40px; color: var(--ink); }
+
+  /* Cover: floating component chips with name tags */
+  .chips { align-self: center; display: flex; justify-content: center; gap: 22px; flex-wrap: wrap; }
+  .chip { display: flex; flex-direction: column; align-items: center; gap: 14px; width: 120px; }
+  .chip .glyph { width: 104px; height: 104px; border: 4px solid var(--ink); background: #ffffff; box-shadow: 8px 8px 0 rgba(8,8,9,0.25);
+    box-sizing: border-box; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .chip .tag { font-family: var(--font-mono); font-weight: 700; font-size: 19px; letter-spacing: 0.04em; color: var(--ink); text-align: center; }
+</style>
+</head>
+<body>
+<div id="strip" style="min-height:100vh; background:#c9c9cf; display:flex; gap:64px; padding:64px; overflow-x:auto; align-items:flex-start; box-sizing:border-box; font-family:var(--font-plain);">
+
+  <!-- SLIDE 1 — COVER: five component chips with name tags, headline, kicker -->
+  <section class="slide" data-screen-label="01 Cover">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner">
+        <div class="header"><span class="handle">LittleParrot.app</span><span class="page">01 / 07</span></div>
+        <div style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:56px;">
+          <h1 class="headline" style="font-size:42px;">Each part of your app has a name. Learn them, and <span class="hl">vibe coding gets you the design</span> you pictured</h1>
+          <div class="chips" style="display:grid; grid-template-columns:repeat(3, 130px); gap:36px 30px; justify-content:center;">
+            <div class="chip">
+              <div class="glyph"><span style="display:block; width:70px; height:34px; border-radius:17px; background:var(--grad); border:4px solid var(--ink); box-sizing:border-box;"></span></div>
+              <div class="tag">BUTTON</div>
+            </div>
+            <div class="chip">
+              <div class="glyph" style="padding:0; align-items:stretch; flex-direction:column;">
+                <span style="height:30px; background:var(--grad); border-bottom:4px solid var(--ink);"></span>
+                <span style="flex:1; display:flex; flex-direction:column; gap:7px; padding:12px;">
+                  <span class="bar" style="width:70%; height:9px;"></span>
+                  <span class="bar soft" style="width:90%; height:9px;"></span>
+                </span>
+              </div>
+              <div class="tag">CARD</div>
+            </div>
+            <div class="chip">
+              <div class="glyph" style="background:#c9c9cf;">
+                <span style="width:60px; height:52px; background:#fff; border:4px solid var(--ink); box-sizing:border-box;"></span>
+              </div>
+              <div class="tag">MODAL</div>
+            </div>
+            <div class="chip">
+              <div class="glyph"><span style="width:76px; height:38px; background:#fff; border:4px solid var(--ink); border-radius:9px; box-sizing:border-box; display:flex; align-items:center; padding-left:12px;"><span class="cursor"></span></span></div>
+              <div class="tag">INPUT FIELD</div>
+            </div>
+            <div class="chip">
+              <div class="glyph"><span style="width:72px; height:56px; background:#fff; border:4px solid var(--ink); border-radius:9px; box-sizing:border-box; display:flex; flex-direction:column; gap:7px; padding:12px;"><span class="bar soft" style="height:6px; width:100%;"></span><span class="bar soft" style="height:6px; width:100%;"></span><span class="bar soft" style="height:6px; width:55%;"></span></span></div>
+              <div class="tag">TEXTAREA</div>
+            </div>
+            <div class="chip">
+              <div class="glyph"><span style="width:76px; height:38px; background:#fff; border:4px solid var(--ink); border-radius:9px; box-sizing:border-box; display:flex; align-items:center; justify-content:flex-end; padding-right:12px; font-family:var(--font-display); font-weight:700; font-size:24px;">▾</span></div>
+              <div class="tag">DROPDOWN</div>
+            </div>
+          </div>
+        </div>
+        <div class="kicker" style="font-size:24px;">6 COMPONENTS, EACH WITH A READY PROMPT · SWIPE →</div>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+  <!-- SLIDE 2 — BUTTONS: three ranks drawn, prompt beneath -->
+  <section class="slide" data-screen-label="02 Buttons">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner">
+        <div class="header"><span class="handle">LittleParrot.app</span><span class="page">02 / 07</span></div>
+        <div class="slidebody" style="gap:34px;">
+          <h2 class="headline" style="font-size:46px;"><span class="hl">BUTTONS</span> come in ranks</h2>
+          <div class="stage" style="flex-direction:row; flex-wrap:wrap; justify-content:center; gap:26px;">
+            <div class="btn primary">Primary</div>
+            <div class="btn">Secondary</div>
+            <div class="btn tertiary">Tertiary</div>
+          </div>
+          <p class="copy" style="font-size:28px;">Primary: the colourful main action. Secondary: outlined, less prominent. Tertiary: just a link.</p>
+          <div class="promptwrap">
+            <span class="promptlabel">YOUR PROMPT</span>
+            <div class="promptwin" style="padding:32px 40px 80px;">
+              <pre style="font-size:24px; line-height:1.6;">Add a primary Save button below the form, with a secondary Cancel next to it.<span class="cursor"></span></pre>
+              <span class="send">↑</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+  <!-- SLIDE 3 — CARD: a real card drawn, prompt beneath -->
+  <section class="slide" data-screen-label="03 Card">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner">
+        <div class="header"><span class="handle">LittleParrot.app</span><span class="page">03 / 07</span></div>
+        <div class="slidebody" style="gap:34px;">
+          <h2 class="headline" style="font-size:38px;"><span class="hl">CARD:</span> a box that groups related content (image, title, description, button)</h2>
+          <div class="stage" style="padding:34px 40px;">
+            <div class="uicard" style="width:250px;">
+              <div class="pic" style="height:116px;"></div>
+              <div class="cbody" style="padding:20px 20px 24px; gap:13px;">
+                <span class="bar" style="width:70%; height:14px;"></span>
+                <span class="bar soft" style="width:100%; height:10px;"></span>
+                <span class="bar soft" style="width:85%; height:10px;"></span>
+                <div class="btn primary sm" style="margin-top:6px; font-size:20px; padding:10px 24px;">View</div>
+              </div>
+            </div>
+          </div>
+          <div class="promptwrap">
+            <span class="promptlabel">YOUR PROMPT</span>
+            <div class="promptwin" style="padding:32px 40px 80px;">
+              <pre style="font-size:24px; line-height:1.6;">Show each recipe as a card with a title, image, and a View button. Add a subtle shadow.<span class="cursor"></span></pre>
+              <span class="send">↑</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+  <!-- SLIDE 4 — MODAL: a modal over a dimmed page, prompt beneath -->
+  <section class="slide" data-screen-label="04 Modal">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner">
+        <div class="header"><span class="handle">LittleParrot.app</span><span class="page">04 / 07</span></div>
+        <div class="slidebody" style="gap:34px;">
+          <h2 class="headline" style="font-size:44px;"><span class="hl">MODAL:</span> the pop-up that appears over everything else</h2>
+          <div class="stage">
+            <div class="pagemock">
+              <span class="bar soft" style="width:55%;"></span>
+              <span class="bar soft" style="width:100%; height:12px;"></span>
+              <span class="bar soft" style="width:90%; height:12px;"></span>
+              <span class="bar soft" style="width:96%; height:12px;"></span>
+              <div class="dim"></div>
+              <div class="modal">
+                <span class="bar" style="width:60%;"></span>
+                <span class="bar soft" style="width:100%; height:12px;"></span>
+                <span class="bar soft" style="width:80%; height:12px;"></span>
+                <div class="mrow">
+                  <div class="btn sm">Cancel</div>
+                  <div class="btn danger sm">Delete</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="promptwrap">
+            <span class="promptlabel">YOUR PROMPT</span>
+            <div class="promptwin" style="padding:32px 40px 80px;">
+              <pre style="font-size:24px; line-height:1.6;">When the user clicks Delete, show a confirmation modal with Cancel (secondary) and Delete (primary, red).<span class="cursor"></span></pre>
+              <span class="send">↑</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+  <!-- SLIDE 5 — FORM FIELDS: input, textarea, dropdown side by side -->
+  <section class="slide" data-screen-label="05 Form fields">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner">
+        <div class="header"><span class="handle">LittleParrot.app</span><span class="page">05 / 07</span></div>
+        <div class="slidebody" style="gap:40px;">
+          <div style="display:flex; flex-direction:column; gap:30px; align-self:center; width:100%; max-width:640px;">
+            <div class="fieldrow">
+              <div class="field line" style="width:250px; flex:none;"><span class="cursor"></span></div>
+              <p class="fielddef" style="text-align:left; flex:1; margin:0;"><b>INPUT FIELD:</b> one line of typing</p>
+            </div>
+            <div class="fieldrow">
+              <div class="field area" style="width:250px; flex:none;">
+                <span class="bar soft" style="width:100%; height:10px;"></span>
+                <span class="bar soft" style="width:100%; height:10px;"></span>
+                <span class="bar soft" style="width:60%; height:10px;"></span>
+              </div>
+              <p class="fielddef" style="text-align:left; flex:1; margin:0;"><b>TEXTAREA:</b> several lines</p>
+            </div>
+            <div class="fieldrow" style="align-items:flex-start;">
+              <div style="width:250px; flex:none;">
+                <div class="field select" style="width:250px;"><span class="bar soft" style="width:100px; height:12px;"></span><span>▾</span></div>
+                <div class="menu" style="width:250px; margin-top:-4px;">
+                  <div class="opt on">Work</div>
+                  <div class="opt">Personal</div>
+                  <div class="opt">Ideas</div>
+                </div>
+              </div>
+              <p class="fielddef" style="text-align:left; flex:1; margin:0; padding-top:14px;"><b>DROPDOWN:</b> a click reveals the options</p>
+            </div>
+          </div>
+          <div class="promptwrap">
+            <span class="promptlabel">YOUR PROMPT</span>
+            <div class="promptwin" style="padding:32px 40px 80px;">
+              <pre style="font-size:24px; line-height:1.6;">Add a dropdown to select the category: Work, Personal, or Ideas.<span class="cursor"></span></pre>
+              <span class="send">↑</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+  <!-- SLIDE 6 — NAVIGATION BAR: desktop bar collapsing into a hamburger -->
+  <section class="slide" data-screen-label="06 Navigation bar">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner">
+        <div class="header"><span class="handle">LittleParrot.app</span><span class="page">06 / 07</span></div>
+        <div class="slidebody" style="gap:36px;">
+          <h2 class="headline" style="font-size:42px;"><span class="hl">NAVIGATION BAR:</span> the links that move people around your website</h2>
+          <div class="stage" style="gap:30px;">
+            <div class="navbar">
+              <span class="branddot"></span>
+              <span class="links"><span class="hl">Home</span><span>About</span><span>Contact</span></span>
+            </div>
+            <div class="navrow">
+              <span class="arrow">→</span>
+              <div class="navbar mobile">
+                <span class="branddot"></span>
+                <span class="burger"><span></span><span></span><span></span></span>
+              </div>
+            </div>
+          </div>
+          <div class="promptwrap">
+            <span class="promptlabel">YOUR PROMPT</span>
+            <div class="promptwin" style="padding:32px 40px 80px;">
+              <pre style="font-size:23px; line-height:1.6;">Add a top nav bar with Home, About, and Contact. Highlight the active page. Collapse into a hamburger menu on mobile.<span class="cursor"></span></pre>
+              <span class="send">↑</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+  <!-- SLIDE 7 — CTA: good vs vague prompt contrast, mascot, badge, save-ask -->
+  <section class="slide" data-screen-label="07 CTA">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner">
+        <div class="header"><span class="handle">LittleParrot.app</span><span class="page">07 / 07</span></div>
+        <h2 class="headline" style="font-size:44px;">Referring to each component by name <span class="hl">gets you what you pictured</span></h2>
+        <p class="copy" style="font-size:32px;">The full prompt library is in Basics of Software for Vibe Coding.</p>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:28px;">
+          <img src="uploads/parrot-with-computer.png" alt="Little Parrot mascot at a laptop" style="width:200px; height:auto;">
+          <span class="badge" style="font-size:32px;">LittleParrot.app</span>
+          <p style="margin:0; font-family:var(--font-display); font-weight:700; font-size:30px; color:var(--ink);">First challenge free 💛</p>
+        </div>
+        <p style="margin:0; text-align:center; font-family:var(--font-plain); font-size:29px; line-height:1.45; color:var(--ink-secondary);">Save this for your next vibe coding session 🔖</p>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+</div>
+<script>
+  const params = new URLSearchParams(location.search);
+  const n = parseInt(params.get('slide'), 10);
+  const slides = document.querySelectorAll('#strip > section');
+  if (n >= 1 && n <= slides.length) {
+    document.body.classList.add('single');
+    slides[n - 1].classList.add('current');
+  }
+  if (params.get('crop') === '1') document.body.classList.add('crop');
+</script>
+</body>
+</html>
