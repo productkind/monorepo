@@ -72,6 +72,34 @@ the spec (and the source article/course) before writing.
 - Ground every claim in the source material; if the video shows a rough
   first attempt, the caption says so.
 
+## Evaluation loop (run this every time, before showing the user)
+
+The draft is never returned to the user until an independent critic has
+gated it. Self-review misses what fresh eyes catch, so the writer and the
+judge must be different.
+
+1. **Draft** every deliverable following this skill and
+   personal-tone-of-voice: all platform captions, the pinned comments, both
+   founder comments per platform, and Kinga's Threads quote post.
+2. **Critique.** Spawn the `caption-critic` agent (Agent tool) and pass it
+   the full drafted `captions.md` (or the drafted text), the brand, and one
+   line on what the content actually shows. It judges language and voice
+   (does every caption and comment sound like us, banned words, British
+   English) and lightly confirms the structural rules this skill sets. Do
+   not show the draft to the user yet.
+3. **Read the verdict:**
+   - **PASS** → show the user the final captions, with a short note on what
+     the critic checked.
+   - **NEEDS REVISION** → apply the critic's revision brief, then re-run the
+     critic on the new draft. Repeat, up to **3 rounds**.
+4. **After 3 rounds**, if issues remain, show the best draft and name the
+   unresolved items honestly. Never hide them or ship around them.
+
+The critic focuses on language; this skill remains the source of truth for
+structure (hook-first openings, CTA type, hashtags). What the user sees is
+the **final captions plus a short summary** of what the critic flagged and
+how it was resolved, not every round, unless they ask to see the drafts.
+
 ## Caption rules shared by all platforms
 
 - **The first line is the hook AND the search phrase.** Captions are
