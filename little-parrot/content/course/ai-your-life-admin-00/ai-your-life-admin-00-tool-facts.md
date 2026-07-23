@@ -94,6 +94,13 @@ Correction note (2026-06-28): an earlier draft of this sheet implied the app was
 - **Gotchas:** *Append to Note* needs an existing note to target; have the learner create the "Baby Log" note once by hand first, otherwise *Find Notes* returns nothing. Pinning to "one specific note" is done by the *Find Notes* name filter, not a setting on *Append to Note*. *Current Date* is a built-in variable; tapping it lets you pick Short/Medium/Long or *Custom* formats (Custom uses Unicode UTS #35 patterns, e.g. text in single quotes for literals). Keep the learner on a preset format (Short/Medium) rather than custom patterns.
 - **Source:** MacStories "Shortcuts ... new Apple Notes actions" (Find Note + Append to Note via Magic Variable); Apple Support "Handling timestamps using Format Date" and "Custom date formats". Checked 2026-06-28.
 
+### Task: Put a list (e.g. the notes bucket) into one note with line breaks
+- **Confirmed on device 2026-07-22:** when a *list* Magic Variable (such as the `notes` list from *Get Dictionary Value*) is dropped straight into *Create Note*'s text field, Shortcuts concatenates the items with **no separator**, so they run together ("...nappies and wipesWe need more of..."). To get one item per line, insert a **Combine Text** action between *Get Dictionary Value* and *Create Note*, with *Combine* set to **New Lines**, then feed its *Combined Text* output into *Create Note*.
+- **Exact labels:** *Combine Text* (action), *Combine* with options *New Lines* / *Spaces* / *Custom*, output variable *Combined Text*.
+- **Cost/credits:** Free.
+- **Gotchas:** the run-together behaviour is easy to miss until you actually run the shortcut with a multi-item list. Reminders don't need this because *Repeat with Each* + *Add New Reminder* files one item at a time.
+- **Source:** Matthew Cassinelli, "Combine Text" action (https://matthewcassinelli.com/actions/combine-text/); Automators forum "What does Combine Text do?" (https://talk.automators.fm/t/what-does-combine-text-do/2591). Checked 2026-07-22.
+
 ### Task: Run a named shortcut by voice with Siri
 - **Steps (as of 2026-06-28):** Name the shortcut something easy to say (e.g. "Brain Dump"), then say "Hey Siri, Brain Dump" (or "Siri, Brain Dump"). The shortcut's name is its Siri phrase by default.
 - **Cost/credits:** Free.
@@ -133,6 +140,14 @@ Correction note (2026-06-28): an earlier draft of this sheet implied the app was
 ### Fact: Current iOS version for "go to Settings" wording
 - **As of 2026-06-28:** Current is **iOS 26.5** (iPhone 11 through 16e) and **iOS 26.5.1** (iPhone 17 line / iPhone Air). iOS 26 introduced the "Liquid Glass" redesign. Use "iOS 26" in any version-specific wording; iOS 27 is expected in autumn 2026.
 - **Source:** Apple Support "About iOS 26 Updates"; Wikipedia iOS 26 / version history. Checked 2026-06-28.
+
+### Fact: Magic Variable auto-fill (why some Get Dictionary Value blocks need no wiring and others do)
+- **As of 2026-07-22:** when you add an action, Shortcuts auto-populates its primary input with the **immediately preceding action's output** (a Magic Variable). So a *Get Dictionary Value* placed directly after *Use Model* reads the *Use Model* *Response* with no manual step, but a *Get Dictionary Value* added later (after other actions sit between it and *Use Model*) auto-fills from the wrong preceding action and must be pointed at *Response* by hand. This underpins the split Brain Dump build (Challenge 1's notes *Get Dictionary Value* needs no wiring; Challenge 2's todos one, appended at the bottom, must be re-pointed at *Response*).
+- **Source:** Apple Support "Use variables in Shortcuts on iPhone or iPad" (https://support.apple.com/guide/shortcuts/use-variables-apdd02c2780c/ios) documents Magic Variables; the exact "defaults to the previous action" nuance is best confirmed on device. Checked 2026-07-22.
+
+### Fact: checking which iPhone model you have
+- **As of 2026-07-22:** *Settings → General → About* shows a field labelled **Model Name** (the marketing name, e.g. "iPhone 15 Pro"). Present on iOS 12.2 and later, so it is on iOS 26. This is what Challenge 1's "What you'll need" step relies on when it tells the learner how to check her model.
+- **Source:** Apple Support "Find the model number of your iPhone" (https://support.apple.com/en-us/106343); Digital Citizen "What iPhone do I have?" (https://www.digitalcitizen.life/iphone-model/). Checked 2026-07-22.
 
 ### Task: Share the Baby Log note with a doctor
 - **Facts:** A Notes note can be shared via the standard *Share* sheet (send as text, or share the note). This is straightforward, so the "show your doctor / health visitor" claim holds. Exact current share-sheet wording for "send a copy" vs "collaborate" not pinned from vendor docs; the capability is not in doubt.
