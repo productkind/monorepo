@@ -1,17 +1,9 @@
----
-title: "🦦 Building is cheap(er), but distribution is still expensive"
-subtitle: "Why the cost of building software is not the full story to building a successful product"
-author: Kinga Magyar
-publication: Thoughts by productkind
-date_to_be_published: 2026-07-21 07:32
-status: Scheduled
----
-
 # 🦦 Building is cheap(er), but distribution is still expensive
 
 > Why the cost of building software is not the full story to building a successful product
 
-**By Kinga Magyar**
+**Date:** July 21, 2026
+**Author:** Kinga Magyar
 
 ---
 
