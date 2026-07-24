@@ -2,7 +2,7 @@
 
 *Looking back at last year, I'm sharing what worked and what most certainly didn't, so you can do even better.*
 
-**Date:** Scheduled for July 14, 2026 (currently a draft)
+**Date:** July 14, 2026
 **Author:** Kinga Magyar
 
 ---
