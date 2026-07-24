@@ -55,8 +55,7 @@ For each Tier 1 hit: quote the exact offending text and give the replacement.
 
 ### Tier 3 — Authenticity and value (the most important tier)
 
-- **Earns its read.** State in one sentence the single thing the reader walks away with: a reusable reframe, a copyable technique, or a reasoned reassurance. If you cannot name it — if the post only reports an observation or recounts an event and stops — it fails. Reporting what someone said is the setup, not the payoff.
-- **A real, usable technique is present**: a real prompt, a real number, a concrete step, or a genuine before/after. Reflection alone is not enough.
+- **Earns its read.** State in one sentence the single thing the reader is left with: a reusable reframe, a copyable technique, a reasoned reassurance, or an honest reflection/opinion Kinga stands behind paired with a real question that invites the reader to think. If you cannot name any of these, and the post only states a bare fact or recounts an event and stops, it fails. A copyable technique is NOT required. Do not fail a reflective or opinion post for lacking a how-to; honesty plus a genuine question is a valid payoff on its own.
 - **The why comes before the how.**
 - **Specific, not general.** A named person, a precise moment, a real number — not "I've learned so much on this journey".
 - **Only Kinga could have written it** — uses her specific context and perspective, not anything-in-the-field generic.

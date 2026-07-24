@@ -39,7 +39,7 @@ This is the structure my Substack articles actually use. Apply it to LinkedIn po
 
 **Say each sentence aloud before keeping it.** If it wouldn't come out of my mouth talking to a colleague, rewrite it in the words that would. The tell is written-only connective tissue and drumroll constructions: "The months since have gone into..." (spoken: "Most of that time went into..."), "It's the first of many: I'm committing to..." (spoken: "So I'm publishing..."), "In the months since...". Plain verbs beat elegant constructions. A parenthetical aside ("life (and a business) got in the way"), a trailing "though", and sentences starting with And, But, or So are my natural rhythm, not errors.
 
-**Always give a real, usable technique.** Show the actual thing a reader can copy: a real prompt, a real number, a concrete step, a before and after. Reflection on its own, with nothing practical to do, is not enough.
+**Give something real to hold, which is often a usable technique but not always.** When the piece is teaching, show the actual thing a reader can copy: a real prompt, a real number, a concrete step, a before and after. When the piece is a reflection or an opinion, an honest admission plus a genuine question the reader can sit with is enough on its own. Don't bolt a how-to onto a reflective piece to make it "count". What isn't enough is a bare fact with nothing to think or feel about.
 
 **Explain the why before the how.** Give the reasoning, then the technique.
 

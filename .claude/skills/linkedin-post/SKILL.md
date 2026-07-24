@@ -31,13 +31,14 @@ Non-technical women learning AI-assisted development.
 
 ## Every Post Must Earn Its Read
 
-A post that only reports an observation or recounts an event gives the reader no reason to have read it. Before drafting, name the one thing the reader walks away with. It can be any of these, but it must be at least one:
+A post that only reports an observation or recounts an event gives the reader no reason to have read it. The post needs one thing the reader is left with. That can be any of these, and it does not have to be a copyable technique:
 
 - a reframe or mental model they can reuse (e.g. "a result you watch is not a method you can repeat")
 - a technique or habit they can copy (e.g. "put a value number next to every output number")
 - a genuine reassurance grounded in a reason (e.g. "if it leaves you feeling behind, the missing piece is the how, not you") — emotional value counts, as long as the reader understands *why*
+- an honest reflection or an opinion Kinga is willing to stand behind, paired with a real question that invites the reader to think (e.g. admitting she can no longer remember how she'd write a sentence without AI, then asking what they'd do)
 
-If the draft only states something true and stops, it is not finished. Reporting what a speaker said is the setup, not the payoff. The payoff is what the reader now understands differently or can do.
+Don't force a how-to onto a reflective post to make it "earn" its read. A personal post earns it through honesty and a genuine question just as much as a teaching post earns it through a technique. Kinga often finds her point while writing, so don't demand the payoff be named before drafting; require only that the finished post leaves the reader with one of the above rather than stopping at a bare fact.
 
 ## Channel Guidelines
 
@@ -150,7 +151,7 @@ Open on a real, specific moment: something that happened, a frustration, an hone
 
 Before publishing, verify:
 
-1. Can I name the one thing the reader walks away with (a reframe, a technique, or a reasoned reassurance)? If it only reports an observation, it is not finished.
+1. Is the reader left with one thing (a reframe, a technique, a reasoned reassurance, or an honest reflection/opinion paired with a real question)? A copyable technique is not required; a bare fact with nothing to think or feel about is not finished.
 2. Does the opening start on a real, specific moment, not a teaser or a promise of value?
 3. Is there a specific example, named source, tool, or scenario?
 4. Does the ending give one concrete thing to try, rather than summarise or bait comments?
