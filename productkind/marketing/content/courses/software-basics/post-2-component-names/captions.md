@@ -25,7 +25,7 @@ Every part of your app has a name, and your AI builder knows them all 🧩 Learn
 
 Every part of your app has a name, and your AI builder knows them all 🧩
 
-The gap is on our side: when we can't name the pop-up, we describe around it, and the AI guesses. So the design comes back not quite like the one in your head. Learning the words is how you get the best result.
+The gap is on our side: when we can't name the pop-up, we describe around it, and the AI guesses. So the design comes back not quite like the one in our head. Learning the words is how you get the best result.
 
 The six components you'll use most while vibe coding are:
 • buttons, with their ranks (primary, secondary, tertiary)
