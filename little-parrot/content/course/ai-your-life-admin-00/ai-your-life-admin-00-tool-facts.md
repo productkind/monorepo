@@ -238,3 +238,23 @@ Full action sequence, exact labels:
 - **The *Stop Listening* default value.** "*After Pause*" is the effective default per user reports, not a vendor doc, and *On Tap* has a reported bug. **What to do:** verify on device; keep a reassurance line either way.
 - **Whether the current iOS 26.5 device shows *Add New Reminder* or the newer *Create Reminder*.** Docs describing *Create Reminder* date from the iOS 18 beta; the current-device label is unconfirmed. **What to do:** verify on device before writing literal field names; both work for this build.
 - **Exact *Add New Event* start-date behaviour with a variable on iOS 26.5** (does the fixed `YYYY-MM-DD HH:mm` string coerce cleanly, or is *Get Dates from Input* required?). **What to do:** test on a real device; if it is fragile, switch events to dated reminders per task 2b.
+
+---
+
+## Addendum: category-router build (confirmed 2026-07-27)
+
+The course pivoted to a **category-router** design (sort a brain dump into fixed-category checklist notes in a shared folder, using Private Cloud Compute), most of it field-tested on Kinga's device. New facts this build relies on, confirmed against live docs 2026-07-27:
+
+- **Append Checklist Item** (iOS 26 Shortcuts / Notes action): takes a target note plus a text input, and turns **each line** of that text into a separate tickable checklist item. This is what each category block routes into (replacing the old Create Note / Append to Note). Sources: Matthew Cassinelli, iOS 26 Notes checklist actions (https://matthewcassinelli.com/ios-26-public-beta-shortcuts-actions-apple-intelligence-messages-notes-checklists/); MacNative "List of Notes Actions for iOS Shortcuts" (https://macnative.com/list-of-notes-actions-for-ios-shortcuts/).
+- **Apple Notes FOLDER sharing:** in Folders view, long-press the folder and tap **Share Folder**. A folder can only be shared as a **live collaboration**, there is **no Send Copy** option for folders (Send Copy vs Collaborate only appears when sharing a single note). Invite via Messages or Mail. Source: Apple Support "Share notes and collaborate on iPhone" (https://support.apple.com/en-gb/guide/iphone/iphe4d04f674/ios). **Verify the exact menu label on device** (docs say "Share Folder").
+- **WhatsApp formatting:** bold uses **single** asterisks `*like this*` (not double), and manual line breaks are preserved. This is why the WhatsApp message is assembled by hand in a Text action, not by the model. Source: Cooby WhatsApp formatting guide (https://www.cooby.co/en/post/whatsapp-text-formatting).
+- **WhatsApp Shortcuts action:** labelled **Send Message**, contributed by the WhatsApp app; may need to be found via the **Apps** tab rather than search. WhatsApp must be installed; the first send may ask to confirm. **Verify the exact label on device** (Kinga referred to it as "Send message via WhatsApp"). Source: RoutineHub blog (https://blog.routinehub.co/how-to-schedule-whatsapp-messages-with-shortcuts-and-automation-on-ios/).
+- **Shortcuts If condition "has any value"** is a real condition for testing non-empty text; used to guard the shortcut so an empty (accidental) run does nothing. Source: Matthew Cassinelli "If" action (https://matthewcassinelli.com/actions/if-conditional/).
+- **Form-induced hallucination on empty input:** with Output = Dictionary (a required structured form) and an empty dictation, the model invents plausible items to fill the categories rather than returning nothing. This is why the If "has any value" guard is essential, not optional. Source: "PhantomFill" (https://arxiv.org/html/2607.20492).
+
+### Action Button model list, re-confirmed 2026-07-27
+- The Action Button is on iPhone 15 Pro / 15 Pro Max, every iPhone 16 (incl. 16e), the whole iPhone 17 line (**incl. iPhone 17e**, released March 2026), and iPhone Air. The course wording "the iPhone 17 line" correctly covers the 17e. Sources: Apple "Models with an Action button" (https://support.apple.com/guide/iphone/aside/iph44c8b4227/26/ios/26); Apple Newsroom iPhone 17e (https://www.apple.com/newsroom/2026/03/apple-introduces-iphone-17e/). Back Tap location (Settings > Accessibility > Touch > Back Tap > Double/Triple Tap > Shortcuts section) also re-confirmed current on iOS 26.
+
+### Still to verify on device (2026-07-27)
+- The **Share Folder** label and that no Send Copy/Collaborate choice appears for a folder.
+- The exact **WhatsApp Send Message** action label and whether it is reachable via search or only the Apps tab.
