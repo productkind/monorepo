@@ -37,13 +37,22 @@ relevant following faster than our current channels, and cross the 1,000
   immediately but lose trending sounds). For an audience-building test, reach
   matters more than the link in the first weeks, and we will not clear 1,000
   followers for a while regardless.
-- **Angle:** how Kinga uses AI to run a two-person team and business, plus
-  building digital products. Founder building-in-public, not the "How I use AI
-  for [life thing]" lifestyle wedge.
+- **Angle:** Kinga building in public as a founder, helping women build what
+  felt impossible before AI. That possibility is the headline promise. The
+  recurring supporting themes are taking on the fear around AI, and using AI
+  (including automations) to take the work you don't enjoy off your plate.
+  Broader than vibe coding: whole apps and everyday automations, even for women
+  who have never written a line of code. Running a two-person team and business
+  is the backdrop, not the whole subject. (This replaces the earlier "How I use
+  AI for [life thing]" lifestyle wedge, though see the tradeoff below.)
 - **Format:** Kinga on camera to open and close, screen recording in the middle,
   real hiccups left in. The imperfection is the differentiator against polished
   demo content.
 - **Cadence:** 15 posts over roughly 5 weeks, 3x per week.
+- **Distribution:** TikTok only for this experiment. No Instagram Reels
+  cross-post during the run, so the test isolates TikTok cleanly and Kinga's
+  effort stays on one platform. Cross-posting to Reels is an option once the
+  channel is proven.
 
 ## The angle tradeoff, eyes open
 
@@ -52,9 +61,12 @@ it reaches.
 
 - **Given up:** the lifestyle wedge was the format our research validated as the
   widest top-of-funnel for this audience, including women who would never search
-  anything about building software. The business angle reaches fewer casual
-  scrollers and risks skewing toward a founder/indie-hacker crowd rather than
-  the ICP.
+  anything about building software. A pure build-in-public angle would reach
+  fewer casual scrollers and risk skewing toward a founder/indie-hacker crowd
+  rather than the ICP. The fear reframe and the automation/reclaim-time framing
+  narrow that gap: both speak to everyday workers who feel behind on AI, not
+  only to aspiring app-builders, so this recovers some of the broad appeal the
+  lifestyle wedge had.
 - **Gained:** it is sharper for the "women with a business idea" half of the
   ICP, it is the empty lane our research named (the "teaching the system is the
   system" model), and it is what Kinga can make authentically three times a
@@ -103,23 +115,30 @@ There is no clickable bio link until 1,000 followers, so for this run:
 
 ## Operating model and cost control
 
-- **Record once, publish twice:** each video goes to TikTok and to Instagram
-  Reels (as a Collab between Kinga and the productkind/Little Parrot account,
-  never a duplicate re-upload). Screen recordings over produced video.
+- **TikTok only, this run:** videos are posted to TikTok and nowhere else during
+  the experiment. This isolates the test (no Instagram variable confounding the
+  read) and keeps Kinga's effort on one platform. The cost is that we forgo the
+  free Reels distribution a cross-post would have given us, a deliberate trade
+  for a clean signal. Screen recordings over produced video. Cross-posting to
+  Instagram Reels (as a Collab, never a duplicate upload) is an option once the
+  channel is proven.
 - **Protect LinkedIn:** LinkedIn stays our primary organic channel at its
   current cadence, untouched, so we can tell whether TikTok added reach or just
   moved Kinga's time around. For a two-person team the founder should not be
-  everywhere; TikTok is layered onto the Reels we make anyway, not a third front.
-- **Export hygiene:** clean 1080x1920 exports, no TikTok/CapCut watermarks on
-  the Reels cross-post.
+  everywhere; TikTok is the one new front this run, and posting there only keeps
+  it that way.
+- **Export hygiene:** clean 1080x1920 exports, no CapCut watermarks (keeps the
+  video clean for a Reels cross-post later).
 - **Search metadata:** say the search phrase out loud in the video and put it in
   the caption; 3-5 hashtags max (1 broad + 2-3 niche).
 
 ## Content seeds
 
 **Repurpose first.** Most of the first batch should come from existing articles
-and LinkedIn/build-in-public posts, not invention. Strongest candidates, by
-bucket:
+and LinkedIn/build-in-public posts, not invention. The headline promise is
+helping women build what felt impossible before AI; the recurring supporting
+themes are taking on the fear around AI, and using AI (including automations) to
+take the work you don't enjoy off your plate. Strongest candidates, by bucket:
 
 How a two-person company runs on AI (c):
 - `../../content/campaigns/2026-06-linkedin-calendar/` — a 13-post calendar
@@ -163,8 +182,8 @@ this brief stays here as the channel plan.
 
 ## Risks
 
-- Time drain pulling Kinga off LinkedIn. Mitigated by the record-once model and
-  the untouched LinkedIn cadence.
+- Time drain pulling Kinga off LinkedIn. Mitigated by keeping TikTok the only
+  new front this run and holding the LinkedIn cadence untouched.
 - Angle reaches builders, not the ICP. Mitigated by the bridge in every video
   and the lifestyle-wedge fallback.
 - No funnel until 1,000 followers. Accepted; this run is about audience and
