@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WB-3 — LinkedIn posts that sound like you (carousel)</title>
+<style>
+  /* Little Parrot brand tokens (inlined from carousel-design/brands/little-parrot.css
+     so this folder is self-contained). Fonts need a network connection. */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+  :root {
+    --grad: linear-gradient(120deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70);
+    --grad-wash: linear-gradient(120deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020), #ffffff;
+
+    --font-display: 'Space Mono', monospace;
+    --font-copy: 'Inter', sans-serif;
+    --font-plain: 'Inter', sans-serif;
+    --font-mono: 'Space Mono', monospace;
+
+    --weight-headline: 700;
+    --weight-copy: 400;
+
+    --ink: #080809;
+    --ink-secondary: #4a4a50;
+  }
+
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  html, body { margin: 0; padding: 0; }
+  body.single { overflow: hidden; }
+  body.single #strip { padding: 0 !important; gap: 0 !important; background: none !important; min-height: 0 !important; }
+  body.single section { display: none; }
+  body.single section.current { display: block; }
+  body:not(.crop) .cropguide { display: none; }
+  @media print {
+    #strip { padding: 0 !important; gap: 0 !important; background: none !important; min-height: 0 !important; display: block !important; }
+    section { page-break-after: always; break-after: page; }
+    @page { size: 1080px 1350px; margin: 0; }
+  }
+
+  /* Shared carousel design system */
+  section.slide { flex: none; width: 1080px; height: 1350px; position: relative; overflow: hidden;
+    background: var(--grad-wash); box-sizing: border-box; }
+  .card { position: absolute; top: 100px; left: 100px; width: 880px; height: 1150px; box-sizing: border-box;
+    background: #ffffff; border: 12px solid var(--ink); box-shadow: 12px 12px 0 rgba(8,8,9,0.25); display: flex; flex-direction: column; }
+  .gradbar { flex: none; height: 24px; background: var(--grad); }
+  .inner { flex: 1; display: flex; flex-direction: column; justify-content: space-between; padding: 56px 72px 64px; box-sizing: border-box; }
+  .slidebody { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+
+  .header { display: flex; justify-content: space-between; align-items: center;
+    font-family: var(--font-display); font-weight: 700; letter-spacing: 0.06em; color: var(--ink); }
+  .header .handle { font-size: 32px; } .header .page { font-size: 24px; }
+
+  .headline { margin: 0; font-family: var(--font-display); font-weight: var(--weight-headline); line-height: 1.45; color: var(--ink); text-wrap: pretty; }
+  .copy { margin: 0; font-family: var(--font-copy); font-weight: var(--weight-copy); font-size: 34px; line-height: 1.45; color: var(--ink); text-wrap: pretty; }
+  .kicker { font-family: var(--font-display); font-weight: 700; letter-spacing: 0.08em; color: var(--ink); }
+  .headline, .copy, .kicker { text-align: center; }
+  /* The gradient wash carries the emphasis; the highlight keeps its
+     paragraph's own font family and weight (no forced bold). */
+  .hl { background: var(--grad); background-position: 0 50%; background-size: 100% 90%; background-repeat: no-repeat;
+    padding: 0 0.12em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  .foot { margin: 0; text-align: center; font-family: var(--font-plain); font-size: 26px; line-height: 1.45; color: var(--ink-secondary); text-wrap: pretty; }
+
+  .frame { border: 4px solid var(--ink); box-shadow: 12px 12px 0 rgba(8,8,9,0.25); background: #ffffff; position: relative; overflow: hidden; box-sizing: border-box; }
+
+  .badge { font-family: var(--font-display); font-weight: 700; letter-spacing: 0.06em; border: 4px solid var(--ink);
+    box-shadow: 12px 12px 0 rgba(8,8,9,0.25); padding: 20px 36px; color: var(--ink); background: #ffffff; }
+
+  /* Prompt window: the chat-input mockup for anything the reader types. */
+  .promptlabel { font-family: var(--font-mono); font-weight: 700; font-size: 20px; letter-spacing: 0.08em; color: var(--ink-secondary); }
+  .promptwin { background: #ffffff; border: 4px solid var(--ink); border-radius: 28px; box-shadow: 12px 12px 0 rgba(8,8,9,0.25); position: relative; }
+  .promptwin pre { margin: 0; font-family: var(--font-mono); white-space: pre-wrap; color: var(--ink); }
+  .send { position: absolute; right: 28px; bottom: 24px; width: 56px; height: 56px; border-radius: 50%;
+    background: var(--ink); color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 28px; }
+  .cursor { display: inline-block; width: 4px; height: 1.1em; background: var(--ink); vertical-align: text-bottom; }
+
+  /* Post-card mockup (a LinkedIn post and a comment under it) */
+  .slack { background: #ffffff; border: 4px solid var(--ink); box-shadow: 8px 8px 0 rgba(8,8,9,0.25); padding: 26px 32px;
+    display: flex; gap: 20px; font-family: var(--font-plain); box-sizing: border-box; }
+  .slack .avatar { flex: none; width: 56px; height: 56px; border: 4px solid var(--ink); display: flex; align-items: center;
+    justify-content: center; font-family: var(--font-mono); font-weight: 700; font-size: 28px; color: var(--ink); box-sizing: border-box; }
+  .slack .msghead { font-weight: 700; font-size: 24px; color: var(--ink); }
+  .slack .msghead .time { font-weight: 400; font-size: 19px; color: #9a9aa3; margin-left: 10px; }
+  .slack .msgbody { font-size: 23px; line-height: 1.5; color: var(--ink); margin-top: 6px; }
+  .reactions { margin-top: 14px; display: inline-flex; gap: 10px; }
+  .reactions span { display: inline-flex; gap: 8px; border: 3px solid var(--ink); padding: 6px 14px; font-size: 20px; background: #f5f5f6; }
+
+  /* Numbered recipe cards (slide 5) */
+  .recipe { display: flex; align-items: stretch; border: 4px solid var(--ink); box-shadow: 8px 8px 0 rgba(8,8,9,0.25); background: #ffffff; }
+  .recipe .num { flex: none; width: 92px; background: var(--grad); border-right: 4px solid var(--ink);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-weight: 700; font-size: 52px; color: var(--ink); }
+  .recipe .body { padding: 24px 30px; }
+  .recipe .rlabel { font-family: var(--font-display); font-weight: 700; font-size: 25px; letter-spacing: 0.06em; color: var(--ink); }
+  .recipe .rtext { font-family: var(--font-plain); font-size: 28px; line-height: 1.4; color: var(--ink); margin-top: 8px; }
+
+  /* 1080x1080 centre-square crop guide (?crop=1 to show) */
+  .cropguide { position: absolute; left: 0; top: 135px; width: 1080px; height: 1080px;
+    border-top: 2px dashed rgba(8,8,9,0.5); border-bottom: 2px dashed rgba(8,8,9,0.5); pointer-events: none; box-sizing: border-box; }
+</style>
+</head>
+<body>
+<div id="strip" style="min-height:100vh; background:#c9c9cf; display:flex; gap:64px; padding:64px; overflow-x:auto; align-items:flex-start; box-sizing:border-box; font-family:var(--font-plain);">
+
+  <!-- SLIDE 1 — COVER -->
+  <section class="slide" data-screen-label="01 Cover">
+    <div class="card" style="overflow:hidden;">
+      <div class="gradbar"></div>
+      <div class="inner" style="justify-content:flex-start; position:relative;">
+        <div class="header"><span class="handle">LittleParrot.app</span><span class="page">01 / 07</span></div>
+        <h1 class="headline" style="margin:152px 0 0; font-size:56px;">Posting about your own work, without <span class="hl">sounding like a LinkedIn guru</span>.</h1>
+        <div class="kicker" style="margin-top:52px; font-size:26px;">A PROMPTING TECHNIQUE FOR EXACTLY THIS. SWIPE →</div>
+        <img src="uploads/little-parrot-wave.png" alt="Little Parrot mascot waving" style="position:absolute; right:-26px; bottom:116px; width:224px;">
+        <!-- the guru post being drafted, at the bottom edge -->
+        <div style="position:absolute; left:0; right:0; bottom:-52px;">
+          <div class="promptwin" style="border-radius:32px; padding:34px 44px 62px; background:#e8e8ea; box-shadow:none;">
+            <pre data-parody="true" style="font-size:26px; line-height:1.6; color:#4a4a50;">🚀 Exciting news! I've just completed an incredible journey<span class="cursor"></span></pre>
+            <span class="send" style="background:#9a9aa3;">↑</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+  <!-- SLIDE 2 — THE BARE PROMPT AND THE GURU POST -->
+  <section class="slide" data-screen-label="02 Guru post">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner" style="row-gap:26px;">
+        <div class="header"><span class="handle">LittleParrot.app</span><span class="page">02 / 07</span></div>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <span class="promptlabel">YOUR PROMPT</span>
+          <div class="promptwin" style="background:#e8e8ea; padding:26px 36px 30px; border-radius:24px; box-shadow:none;">
+            <pre style="font-size:23px; line-height:1.5; color:#4a4a50;">Write a short LinkedIn post announcing that I've just finished a practical micro-course on AI prompting.</pre>
+            <span class="send" style="width:48px; height:48px; font-size:24px; right:22px; bottom:20px; background:#9a9aa3;">↑</span>
+          </div>
+        </div>
+        <div class="slack" style="background:#f0f0f2; opacity:0.78;">
+          <div class="avatar" style="background:#c9b7f0;">AI</div>
+          <div>
+            <div class="msghead">you <span class="time">9:41</span></div>
+            <div class="msgbody" data-parody="true" style="font-size:23px; color:#4a4a50;">🚀 Exciting news! I've just completed an incredible journey learning prompting techniques! 💡 Key takeaways that completely transformed my approach: mastering the art of strategic prompting, unlocking AI's full potential, driving 10x productivity gains. The future is here, and I'm thrilled to be part of this transformation! #AITransformation #PromptEngineering #Innovation #FutureOfWork</div>
+          </div>
+        </div>
+        <div>
+          <p class="copy" style="font-size:33px;">Ask a chat assistant for 'a LinkedIn post' and you get <span class="hl">its best guru impression</span>. Would you post that? Neither would we.</p>
+          <p class="foot" style="margin-top:20px;">It imitates the loudest posts it has read, because you never told it whose voice to use.</p>
+        </div>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+  <!-- SLIDE 3 — PART TWO: THE TONE BLOCK -->
+  <section class="slide" data-screen-label="03 Tone block">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner" style="row-gap:18px;">
+        <div class="header"><span class="handle">LittleParrot.app</span><span class="page">03 / 07</span></div>
+        <p class="copy" style="font-size:30px;">So, <span class="hl">name your voice</span>. Part two of the prompt says how it should sound.</p>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <span class="promptlabel">YOUR PROMPT</span>
+          <div class="promptwin" style="padding:24px 38px 56px;">
+            <pre style="font-size:19px; line-height:1.5; color:#9a9aa3;">Write a short LinkedIn post announcing that I've just finished a practical micro-course on AI prompting.</pre>
+            <pre data-parody="true" style="font-size:19px; line-height:1.6; margin-top:18px;">Tone and style:
+- Friendly, approachable, understated, sincere
+- Simple wording, no exaggeration
+- 5 to 6 sentences, no emoji pileups
+- Avoid LinkedIn buzzwords like "game-changer" or "10x productivity"<span class="cursor"></span></pre>
+            <span class="send" style="width:44px; height:44px; font-size:22px; right:22px; bottom:16px;">↑</span>
+          </div>
+        </div>
+        <div class="slack" style="padding:22px 30px;">
+          <div class="avatar" style="width:48px; height:48px; font-size:24px; background:linear-gradient(120deg,#ffb65b,#fdd825);"></div>
+          <div>
+            <div class="msghead">you <span class="time">10:04</span></div>
+            <div class="msgbody" style="font-size:20px;">I recently completed a short micro-course on AI prompting, and I found it really useful. I learned a lot about getting better results from AI tools, and I'm looking forward to putting it into practice. Highly recommend it if you're curious!</div>
+            <div class="reactions" style="margin-top:12px;"><span style="font-size:18px;">👍 2</span></div>
+          </div>
+        </div>
+        <p class="foot" style="font-size:24px;">Now it sounds like a person, and still says almost nothing about what you did.</p>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+  <!-- SLIDE 4 — PART THREE: THE CONTEXT BLOCK -->
+  <section class="slide" data-screen-label="04 Context block">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner" style="row-gap:20px;">
+        <div class="header"><span class="handle">LittleParrot.app</span><span class="page">04 / 07</span></div>
+        <p class="copy" style="font-size:31px;">So <span class="hl">hand over the facts</span>: what you did, one detail only you know, why it was worth your time.</p>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <span class="promptlabel">YOUR PROMPT</span>
+          <div class="promptwin" style="padding:22px 36px 42px;">
+            <pre style="font-size:18px; line-height:1.5; color:#9a9aa3;">Tone and style: friendly, understated, sincere. Simple wording, 5 to 6 sentences.</pre>
+            <pre style="font-size:18px; line-height:1.55; margin-top:16px;">Context and background:
+- A 10-minute micro-course on prompting for work messages: Slack, product updates, LinkedIn posts
+- Main thing I learned: prompting is specific techniques you can practise, not magic
+- Since then I add a tone block to every draft, which saved me three rewrites this week<span class="cursor"></span></pre>
+            <span class="send" style="width:40px; height:40px; font-size:20px; right:20px; bottom:14px;">↑</span>
+          </div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <div class="slack" style="padding:20px 28px;">
+            <div class="avatar" style="width:48px; height:48px; font-size:24px; background:linear-gradient(120deg,#8efd23,#00ed70);"></div>
+            <div>
+              <div class="msghead" style="font-size:22px;">you <span class="time">10:26</span></div>
+              <div class="msgbody" style="font-size:19px;">I spent 10 minutes on a prompting micro-course this week, and it has already saved me three rewrites of the same Slack message. The change was two lines about tone, added before the request. Turns out prompting is a set of techniques you can practise, rather than a knack you either have or you don't.</div>
+              <div class="reactions" style="margin-top:12px;"><span style="font-size:18px;">👍 24</span><span style="font-size:18px;">💜 9</span><span style="font-size:18px;">🙌 6</span></div>
+            </div>
+          </div>
+          <div class="slack" style="width:76%; align-self:flex-end; padding:16px 24px;">
+            <div class="avatar" style="width:44px; height:44px; background:#c9b7f0;"></div>
+            <div>
+              <div class="msghead"><span class="time">10:31</span></div>
+              <div class="msgbody" style="font-size:19px;">Okay, send me the link please 🙌</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+  <!-- SLIDE 5 — THE THREE-PART PROMPT -->
+  <section class="slide" data-screen-label="05 Three parts">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner">
+        <div class="header"><span class="handle">LittleParrot.app</span><span class="page">05 / 07</span></div>
+        <div class="slidebody" style="gap:40px;">
+          <p class="copy" style="font-size:36px;"><span class="hl">Three parts</span>, in this order:</p>
+          <div style="display:flex; flex-direction:column; gap:30px;">
+            <div class="recipe">
+              <div class="num">1</div>
+              <div class="body">
+                <div class="rlabel">THE REQUEST</div>
+                <div class="rtext">What you want written.</div>
+              </div>
+            </div>
+            <div class="recipe">
+              <div class="num">2</div>
+              <div class="body">
+                <div class="rlabel">TONE AND STYLE</div>
+                <div class="rtext">How it should sound, and how long.</div>
+              </div>
+            </div>
+            <div class="recipe">
+              <div class="num">3</div>
+              <div class="body">
+                <div class="rlabel">CONTEXT AND BACKGROUND</div>
+                <div class="rtext">The facts it can't guess.</div>
+              </div>
+            </div>
+          </div>
+          <p class="foot">The same three parts work on a Slack message, a product update, a release email.</p>
+        </div>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+  <!-- SLIDE 6 — THE STYLE SAMPLE -->
+  <section class="slide" data-screen-label="06 Style sample">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner">
+        <div class="header"><span class="handle">LittleParrot.app</span><span class="page">06 / 07</span></div>
+        <div class="slidebody" style="gap:34px;">
+          <p class="copy" style="font-size:33px;">The shortcut to 'sounds like me': paste <span class="hl">one of your own past posts</span> in as a style sample.</p>
+          <!-- one of your own posts, text-free, being pasted into the prompt window -->
+          <div class="slack" style="width:74%; align-self:center; padding:22px 28px;">
+            <div class="avatar" style="background:linear-gradient(120deg,#ffb65b,#fdd825);"></div>
+            <div style="flex:1;">
+              <div style="height:16px; width:58%; background:#c9c9cf; margin:8px 0 14px; border-radius:4px;"></div>
+              <div style="height:16px; width:94%; background:#e8e8ea; border-radius:4px; margin-bottom:10px;"></div>
+              <div style="height:16px; width:80%; background:#e8e8ea; border-radius:4px;"></div>
+            </div>
+          </div>
+          <div style="text-align:center; font-family:var(--font-display); font-weight:700; font-size:40px; color:var(--ink);">↓</div>
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <span class="promptlabel">YOUR PROMPT</span>
+            <div class="promptwin" style="padding:30px 42px 76px;">
+              <pre style="font-size:23px; line-height:1.6;">Here is a post I wrote myself. Match this voice:
+<span style="color:#9a9aa3;">[paste your post]</span><span class="cursor"></span></pre>
+              <span class="send">↑</span>
+            </div>
+          </div>
+          <p class="foot">A chat assistant mirrors patterns, so give it yours. Go and find the post you were happiest with, that's your sample.</p>
+        </div>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+  <!-- SLIDE 7 — CTA -->
+  <section class="slide" data-screen-label="07 CTA">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner">
+        <div class="header"><span class="handle">LittleParrot.app</span><span class="page">07 / 07</span></div>
+        <p class="copy" style="font-size:33px;">Being visible in your industry shouldn't need a voice that isn't yours. Rebuild your own post in Challenge 3 of <span class="hl">Write Better with AI: Prompting Foundations for Product Managers</span>.</p>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:30px;">
+          <img src="uploads/parrot-with-computer.png" alt="Little Parrot mascot at a laptop" style="width:210px; height:auto;">
+          <span class="badge" style="font-size:32px;">LittleParrot.app</span>
+          <p style="margin:0; font-family:var(--font-display); font-weight:700; font-size:30px; color:var(--ink);">First challenge free 💛</p>
+        </div>
+        <p class="foot" style="font-size:30px;">Save the tone block for your next post 🔖</p>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+</div>
+<script>
+  const params = new URLSearchParams(location.search);
+  const n = parseInt(params.get('slide'), 10);
+  const slides = document.querySelectorAll('#strip > section');
+  if (n >= 1 && n <= slides.length) {
+    document.body.classList.add('single');
+    slides[n - 1].classList.add('current');
+  }
+  if (params.get('crop') === '1') document.body.classList.add('crop');
+</script>
+</body>
+</html>
