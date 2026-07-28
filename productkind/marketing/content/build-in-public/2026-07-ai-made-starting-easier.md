@@ -1,6 +1,6 @@
 ---
-status: drafted
-channels: [instagram, tiktok, youtube, linkedin productkind, threads productkind]
+status: posted
+channels: [instagram, tiktok, youtube, linkedin productkind, threads Kinga]
 account: productkind
 ---
 
