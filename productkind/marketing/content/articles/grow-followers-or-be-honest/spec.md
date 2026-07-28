@@ -49,7 +49,7 @@ table, verbatim. The implemented carousel may not add copy; `check.py` in
 | Slide | Visual | Display copy (verbatim) | Prompt window / mockup content (verbatim) |
 | --- | --- | --- | --- |
 | 1 (cover) | Brand cover with Kim mascot; calm, editorial | Kicker: "WRITTEN ON A FRUSTRATED AFTERNOON". Headline: "Would you rather grow your follower count, or be honest?" Runner: "SWIPE →" | – |
-| 2 | Two contrast cards, path A and path B | Lead: "I'm torn between two ways to post online." Card A label: "Path one". Card A: "Show only the good bits. Make everything look aspirational." Card B label: "Path two". Card B: "Show everything I tried that didn't work, without silverlining." | – |
+| 2 | Two contrast cards, path A and path B | Lead: "I'm torn between two ways to post online." Card A label: "Path one". Card A: "Show only the good bits. Make everything look aspirational." Card B label: "Path two". Card B: "Show everything I tried that didn't work, without a silver lining." | – |
 | 3 | Copy, honest admission | "On paper I might look successful, but a lot of the time I don't feel it." | – |
 | 4 | Copy, large question + highlight statement | Lead: "Why is it so hard to be happy with what we already have?" Highlight: "It's the constant comparison." | – |
 | 5 | Statement card, source named | "On Lenny's podcast, a billionaire said there's always someone with a bigger yacht. That's why so many of them are miserable." Aside: "It never stops, at any level." | – |

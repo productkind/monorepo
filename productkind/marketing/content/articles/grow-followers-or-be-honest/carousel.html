@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Would you rather grow your follower count or be honest? — carousel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&family=Space+Mono:wght@400;700&display=swap">
+<style>
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  html, body { margin: 0; padding: 0; }
+  body.single { overflow: hidden; }
+  body.single #strip { padding: 0 !important; gap: 0 !important; background: none !important; min-height: 0 !important; }
+  body.single section { display: none; }
+  body.single section.current { display: block; }
+  body:not(.crop) .cropguide { display: none; }
+  @media print {
+    #strip { padding: 0 !important; gap: 0 !important; background: none !important; min-height: 0 !important; display: block !important; }
+    section { page-break-after: always; break-after: page; }
+    @page { size: 1080px 1350px; margin: 0; }
+  }
+
+  /* productkind brand tokens (inlined from brands/productkind.css) */
+  :root {
+    --grad: linear-gradient(120deg, #ffb288, #ffafa2, #ffacb8, #ffa8d1, #ff9ff7, #deb2ff, #c5bdff, #b1c5ff, #9accff, #77d4ff, #00dffa, #00e4db, #00e8b6);
+    --grad-wash: linear-gradient(120deg, #ffb28820, #ffafa220, #ffacb820, #ffa8d120, #ff9ff720, #deb2ff20, #c5bdff20, #b1c5ff20, #9accff20, #77d4ff20, #00dffa20, #00e4db20, #00e8b620), #ffffff;
+    --font-display: 'Montserrat', sans-serif;
+    --font-copy: 'Montserrat', sans-serif;
+    --font-plain: 'Inter', sans-serif;
+    --font-mono: 'Space Mono', monospace;
+    --weight-headline: 800;
+    --weight-copy: 600;
+    --ink: #080809;
+    --ink-secondary: #4a4a50;
+  }
+
+  /* Shared carousel design system (from templates/productkind.html) */
+  section.slide { flex: none; width: 1080px; height: 1350px; position: relative; overflow: hidden;
+    background: var(--grad-wash); box-sizing: border-box; }
+  .card { position: absolute; top: 100px; left: 100px; width: 880px; height: 1150px; box-sizing: border-box;
+    background: #ffffff; border: 12px solid var(--ink); box-shadow: 12px 12px 0 rgba(8,8,9,0.25); display: flex; flex-direction: column; }
+  .gradbar { flex: none; height: 24px; background: var(--grad); }
+  .inner { flex: 1; display: flex; flex-direction: column; justify-content: space-between; padding: 56px 72px 64px; box-sizing: border-box; }
+  .slidebody { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+  .header { display: flex; justify-content: space-between; align-items: center;
+    font-family: var(--font-display); font-weight: 700; letter-spacing: 0.06em; color: var(--ink); }
+  .header .handle { font-size: 32px; } .header .page { font-size: 24px; }
+  .headline { margin: 0; font-family: var(--font-display); font-weight: var(--weight-headline); line-height: 1.45; color: var(--ink); text-wrap: pretty; }
+  .copy { margin: 0; font-family: var(--font-copy); font-weight: var(--weight-copy); font-size: 34px; line-height: 1.45; color: var(--ink); text-wrap: pretty; }
+  .kicker { font-family: var(--font-display); font-weight: 700; letter-spacing: 0.08em; color: var(--ink); }
+  .hl { background: var(--grad); background-position: 0 50%; background-size: 100% 90%; background-repeat: no-repeat;
+    padding: 0 0.12em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  .frame { border: 4px solid var(--ink); box-shadow: 12px 12px 0 rgba(8,8,9,0.25); background: #ffffff; position: relative; overflow: hidden; box-sizing: border-box; }
+  .frame.muted { background: #e8e8ea; }
+  .frame.muted p, .muted-copy { color: var(--ink-secondary); }
+  .inverse { background: var(--ink); padding: 34px 40px; }
+  .inverse p { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: 38px; line-height: 1.3; color: #ffffff; text-wrap: pretty; }
+  .inverse .hl-text { background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .badge { font-family: var(--font-display); font-weight: 700; letter-spacing: 0.06em; border: 4px solid var(--ink);
+    box-shadow: 12px 12px 0 rgba(8,8,9,0.25); padding: 20px 36px; color: var(--ink); background: #ffffff; }
+  .cropguide { position: absolute; left: 0; top: 135px; width: 1080px; height: 1080px;
+    border-top: 2px dashed rgba(8,8,9,0.5); border-bottom: 2px dashed rgba(8,8,9,0.5); pointer-events: none; box-sizing: border-box; }
+</style>
+</head>
+<body>
+<div id="strip" style="min-height:100vh; background:#c9c9cf; display:flex; gap:64px; padding:64px; overflow-x:auto; align-items:flex-start; box-sizing:border-box; font-family:var(--font-plain);">
+
+  <!-- SLIDE 1 — COVER -->
+  <section class="slide" data-screen-label="01 Cover">
+    <div class="card" style="overflow:hidden;">
+      <div class="gradbar"></div>
+      <div class="inner" style="position:relative;">
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">01 / 09</span></div>
+        <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
+          <h1 class="headline" style="font-size:58px; width:600px;">Would you rather grow your follower count, or <span class="hl">be honest</span>?</h1>
+          <div class="kicker" style="margin-top:28px; font-size:24px; color:var(--ink-secondary);">WRITTEN ON A FRUSTRATED AFTERNOON</div>
+          <div class="kicker" style="margin-top:24px; font-size:24px; color:var(--ink);">SWIPE →</div>
+        </div>
+        <img src="uploads/carousel-kim.png" alt="productkind mascot" style="position:absolute; width:158px; height:auto; left:698px; top:544px;">
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+  <!-- SLIDE 2 — TWO CONTRAST CARDS -->
+  <section class="slide" data-screen-label="02 Two paths">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner">
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">02 / 09</span></div>
+        <div class="slidebody" style="gap:40px;">
+          <p class="copy" style="font-size:38px;">I'm torn between two ways to post online.</p>
+          <div style="display:flex; flex-direction:column; gap:32px;">
+            <div class="frame">
+              <div style="height:12px; background:var(--grad);"></div>
+              <div style="padding:30px 38px;">
+                <div class="kicker" style="font-size:22px; color:var(--ink-secondary); margin-bottom:14px;">Path one</div>
+                <p style="margin:0; font-family:var(--font-display); font-weight:700; font-size:36px; line-height:1.4; color:var(--ink); text-wrap:pretty;">Show only the good bits. Make everything look aspirational.</p>
+              </div>
+            </div>
+            <div class="frame">
+              <div style="height:12px; background:var(--grad);"></div>
+              <div style="padding:30px 38px;">
+                <div class="kicker" style="font-size:22px; color:var(--ink-secondary); margin-bottom:14px;">Path two</div>
+                <p style="margin:0; font-family:var(--font-display); font-weight:700; font-size:36px; line-height:1.4; color:var(--ink); text-wrap:pretty;">Show everything I tried that didn't work, without a silver lining.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+  <!-- SLIDE 3 — HONEST ADMISSION -->
+  <section class="slide" data-screen-label="03 On paper">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner">
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">03 / 09</span></div>
+        <div class="slidebody">
+          <p class="headline" style="font-size:52px;">On paper I might look successful, but a lot of the time I <span class="hl">don't feel it</span>.</p>
+        </div>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+  <!-- SLIDE 4 — THE QUESTION + HIGHLIGHT STATEMENT -->
+  <section class="slide" data-screen-label="04 Comparison">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner">
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">04 / 09</span></div>
+        <div class="slidebody" style="gap:48px;">
+          <p class="copy" style="font-size:44px;">Why is it so hard to be happy with what we already have?</p>
+          <p class="headline" style="font-size:56px;"><span class="hl">It's the constant comparison.</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+  <!-- SLIDE 5 — SOURCE NAMED, STATEMENT CARD -->
+  <section class="slide" data-screen-label="05 Bigger yacht">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner" style="justify-content:center; gap:44px;">
+        <div class="header" style="position:absolute; top:56px; left:72px; right:72px;"><span class="handle">productkind.substack.com</span><span class="page">05 / 09</span></div>
+        <div class="inverse">
+          <p style="font-size:36px;">On Lenny's podcast, a billionaire said there's always someone with a <span class="hl-text">bigger yacht</span>. That's why so many of them are miserable.</p>
+        </div>
+        <p class="copy" style="font-size:32px; color:var(--ink-secondary); text-align:left;">It never stops, at any level.</p>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+  <!-- SLIDE 6 — THE TURN -->
+  <section class="slide" data-screen-label="06 The walk">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner">
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">06 / 09</span></div>
+        <div class="slidebody">
+          <p class="copy" style="font-size:40px;">So I closed the apps and went for a walk. And I asked myself something I'd forgotten to ask: <span class="hl">why am I doing all of this?</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+  <!-- SLIDE 7 — THE REALISATION -->
+  <section class="slide" data-screen-label="07 Realisation">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner" style="justify-content:center; gap:48px;">
+        <div class="header" style="position:absolute; top:56px; left:72px; right:72px;"><span class="handle">productkind.substack.com</span><span class="page">07 / 09</span></div>
+        <p class="headline" style="font-size:48px;">To help women <span class="hl">benefit more from technology</span>.</p>
+        <div style="align-self:stretch; border:4px solid var(--ink); box-shadow:14px 14px 0 rgba(8,8,9,0.25); padding:44px 52px; background:var(--grad);">
+          <p style="margin:0; font-family:var(--font-display); font-weight:800; font-size:42px; line-height:1.35; color:var(--ink); text-wrap:pretty;">And an honest picture of building a business helps more than the shiny façade.</p>
+        </div>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+  <!-- SLIDE 8 — QUESTION TURNED ON THE READER -->
+  <section class="slide" data-screen-label="08 Over to you">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner">
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">08 / 09</span></div>
+        <div class="slidebody">
+          <p class="copy" style="font-size:36px;">So I'm curious. What do you like reading more: advice from people who have huge follower counts and have figured it out, or <span class="hl">honest accounts of what didn't work</span> and the unsuccessful bits?</p>
+        </div>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+  <!-- SLIDE 9 — CTA -->
+  <section class="slide" data-screen-label="09 CTA">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner">
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">09 / 09</span></div>
+        <p class="copy" style="font-size:38px;">I worked through all of this in real time in the article.</p>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:30px;">
+          <img src="uploads/logo-thoughts-by-productkind-icon.png" alt="Thoughts by productkind logo" style="width:172px; height:172px; border:4px solid var(--ink); box-shadow:12px 12px 0 rgba(8,8,9,0.25);">
+          <span class="badge" style="font-size:32px;">productkind.substack.com</span>
+          <p style="margin:0; font-family:var(--font-display); font-weight:700; font-size:30px; color:var(--ink);">Full article on Substack 💜</p>
+        </div>
+        <p style="margin:0; text-align:center; font-family:var(--font-plain); font-size:29px; line-height:1.45; color:var(--ink-secondary);">Know someone tired of the highlight reel? Send them this.</p>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+</div>
+<script>
+  const params = new URLSearchParams(location.search);
+  const n = parseInt(params.get('slide'), 10);
+  const slides = document.querySelectorAll('#strip > section');
+  if (n >= 1 && n <= slides.length) {
+    document.body.classList.add('single');
+    slides[n - 1].classList.add('current');
+  }
+  if (params.get('crop') === '1') document.body.classList.add('crop');
+</script>
+</body>
+</html>
