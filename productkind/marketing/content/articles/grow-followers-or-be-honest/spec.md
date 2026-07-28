@@ -49,13 +49,13 @@ table, verbatim. The implemented carousel may not add copy; `check.py` in
 | Slide | Visual | Display copy (verbatim) | Prompt window / mockup content (verbatim) |
 | --- | --- | --- | --- |
 | 1 (cover) | Brand cover with Kim mascot; calm, editorial | Kicker: "WRITTEN ON A FRUSTRATED AFTERNOON". Headline: "Would you rather grow your follower count, or be honest?" Runner: "SWIPE →" | – |
-| 2 | Two contrast cards, path A and path B | Lead: "I'm torn between two ways to post online." Card A label: "Path one". Card A: "Show the good bits. Make everything look aspirational." Card B label: "Path two". Card B: "Show my small follower count, and everything I tried that didn't work." | – |
-| 3 | Copy, honest admission + grounded aside | "On paper I might look successful, but a lot of the time I don't feel it." Aside: "Even if I wrote this article from a lovely bookshop-café in Estonia." | – |
+| 2 | Two contrast cards, path A and path B | Lead: "I'm torn between two ways to post online." Card A label: "Path one". Card A: "Show only the good bits. Make everything look aspirational." Card B label: "Path two". Card B: "Show everything I tried that didn't work, without silverlining." | – |
+| 3 | Copy, honest admission | "On paper I might look successful, but a lot of the time I don't feel it." | – |
 | 4 | Copy, large question + highlight statement | Lead: "Why is it so hard to be happy with what we already have?" Highlight: "It's the constant comparison." | – |
 | 5 | Statement card, source named | "On Lenny's podcast, a billionaire said there's always someone with a bigger yacht. That's why so many of them are miserable." Aside: "It never stops, at any level." | – |
 | 6 | Copy, the turn | "So I closed the apps and went for a walk. And I asked myself something I'd forgotten to ask: why am I doing all of this?" | – |
 | 7 | Warm gradient statement card, the realisation | "To help women benefit more from technology. And an honest picture of building a business helps more than the shiny façade." | – |
-| 8 | Large question card, turned on the reader | "So I'm curious. What do you like reading more: advice from people who've figured it out, or honest accounts of what didn't work?" | – |
+| 8 | Large question card, turned on the reader | "So I'm curious. What do you like reading more: advice from people who have huge follower counts and have figured it out, or honest accounts of what didn't work and the unsuccessful bits?" | – |
 | 9 (CTA) | Brand card: Thoughts logo, URL badge, offer line, share-ask | "I worked through all of this in real time in the article." Badge: "productkind.substack.com" · "Full article on Substack 💜" · "Know someone tired of the highlight reel? Send them this." | – |
 
 **Alt text (for the post):** A personal carousel about the pull between
