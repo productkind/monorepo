@@ -7,7 +7,7 @@
 
 *Hi, it's Kinga. 👋🏼 This article was born on a frustrated afternoon, working from a coffee shop. It's not much about product management, but about the often frustrating process of trying to reach your target audience.*
 
-*I debated whether to publish these real-time thoughts. Then I decided I don't have to be polished all the time. And I tried not to overthink it.*
+*I debated whether to publish these raw thoughts. Then I decided I don't have to be polished all the time. And I tried not to overthink it.*
 
 *Let me know what you think about it. More constructive product management articles are coming over the next few weeks.*
 
@@ -27,7 +27,7 @@ At the same time, everywhere I look, I see the "5 things that will solve all you
 
 On paper, I might seem successful, but often I don't feel like it.
 
-The definition of "success" I use here is "you are a loaded business person who has figured out how to comfortably live off their skills."
+The definition of "success" I use here is "you are a business person who has figured out how to comfortably live off their skills."
 
 Of course, there is more to success than that. But I can still feel unimpressed with myself, even if I'm writing these lines from a cool Estonian bookshop-café, without being monitored by a manager.
 
@@ -50,7 +50,7 @@ So, the question is then, "How can I do that better?" I think presenting an hone
 
 I know that I rebel against the hype and guru positioning, and I don't want to put more anxiety into the world. So, maybe it can help someone to know that I do doubt sometimes if we are going to achieve a bigger positive impact.
 
-I'm curious, what do you enjoy reading more: people's advice who have figured out how to live from their passion, or honest accounts of not succeeding?
+I'm curious, what do you enjoy reading more: people's advice who have figured out how to live off their passion, or honest accounts of not succeeding?
 
 Also, let me know if reading this article was valuable for you in any way where I worked through some stuff in real time. Or if you'd rather stick to articles on fully formed ideas and practical techniques.
 
