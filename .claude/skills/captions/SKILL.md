@@ -282,4 +282,13 @@ Write one `captions.md` into the piece's folder under
   account once it is live; on Instagram, invite Kinga as collaborator
   before publishing (never re-upload the same post on her account).
 
+**Never hard-wrap anything that gets pasted into a platform.** Every caption,
+description, alt text, pinned comment, founder comment and quote post is copied
+straight out of this file into the composer, so a line break in the file becomes
+a line break in the live post. Write each paragraph as **one single line**,
+however long it runs, and use a blank line only where the caption itself should
+break into a new paragraph. Same for a hashtag set and the Threads topic tag:
+one line each, never split across two. Wrapping is fine in the surrounding notes,
+the treatment and the checklist, because nobody pastes those anywhere.
+
 Show the draft to Kinga for approval before anything is posted.
