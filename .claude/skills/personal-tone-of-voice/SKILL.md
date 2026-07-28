@@ -92,7 +92,9 @@ hack, chaos, crisis, fluff, hype
 leverage, synergy, move the needle, circle back, land on, land / landed (figurative, e.g. "it landed differently for me", "how you land a message", "it didn't land"), why it matters
 
 ### Announcing clarity
-plain language, plain English (e.g. "in plain English", "in one plain paragraph"). Don't announce that you're being clear. Just be clear.
+plain language, plain English, plain wording (e.g. "in plain English", "in one plain paragraph"). Don't announce that you're being clear. Just be clear.
+
+More broadly: don't use "plain" to describe writing style at all, including inside example prompts and tone blocks. Say "simple wording".
 
 ### Phrases I don't use
 write up / wrote up / write it up (e.g. "thinking I never wrote up", "I wrote the story up"). Use "write about", "wrote about", or "wrote down" instead.

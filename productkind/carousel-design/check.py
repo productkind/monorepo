@@ -57,7 +57,7 @@ BANNED = [
     (re.compile(r"\bchaos\b", re.I), "drama word"),
     (re.compile(r"\bhype\b", re.I), "drama word"),
     (re.compile(r"\bno fluff\b", re.I), "drama word"),
-    (re.compile(r"plain english|plain language", re.I), "announcing clarity"),
+    (re.compile(r"plain english|plain language|plain wording", re.I), "announcing clarity"),
     (re.compile(r"\bmakes? a real difference\b", re.I), "empty filler"),
 ]
 
