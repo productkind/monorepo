@@ -13,10 +13,10 @@ Hi [organiser name],
 
 We'd like to propose a hands-on workshop for PROW 2026. Here's the short version, and I'm happy to send more detail or talk it through.
 
-**Describe, Run, Save, Share: A Builder's Workflow for People Who Don't Write Code**
-Learn GitHub Copilot, the terminal, Git and GitHub as one loop, and publish your own portfolio site before the session ends.
+**A Builder's Workflow for People Who Don't Write Code: Terminal, Copilot, Git, GitHub**
+Four tools, one loop: describe a change, run it, save it, share it. You'll publish your own portfolio site before the session ends.
 
-The session is built around the loop every builder repeats. You describe a change and GitHub Copilot makes it. You run it from the terminal to see what happened. You save it with Git, so you can come back to this exact version. You share it on GitHub, where it's backed up and other people can see it. Four tools, one job each, and you go round the loop many times in four hours.
+The session is built around the loop every builder repeats. You describe a change and GitHub Copilot makes it. You run it on your own computer from the terminal, so you can see what happened before anything is public. You save it with Git, so you can come back to this exact version. You share it on GitHub, where it's backed up and other people can see it. Four tools, one job each, and you go round the loop many times in four hours.
 
 What you go round it on is a personal portfolio site, and everyone publishes theirs to a live web address before the end. Underneath all four tools sits one idea: your work is a set of files in a folder. Once people can see that, the four stop being four separate things to learn.
 
@@ -29,6 +29,7 @@ Anyone who doesn't write code yet and wants to use AI with more confidence. Prod
 - Direct GitHub Copilot to build and change that site, so you can get a real result from an AI agent by describing what you want
 - Review what Copilot changed before you keep it, so you can judge an AI agent's work rather than hope it got things right
 - Find your way around a project from the terminal, so you can see where your work lives and run the commands your tools expect
+- Preview your site on your own computer at a localhost address, which only you can see, so you can try things out and fix mistakes before anything goes live
 - Save every change with Git, so you can read your own history and go back to any earlier version
 - Store and share your work on GitHub, so it's safe off your laptop and other people can see it or work on it with you
 - Run the whole loop on a document of your own, so your specs, notes and copy get the same history and backup as code
@@ -43,7 +44,7 @@ It also travels well beyond building. We run our own company this way: our cours
 
 - Your work is files: what each of the four tools does, and where they meet (15 min)
 - Find your way around: VS Code, your first repository, and moving through a project in the terminal (45 min)
-- Describe: build your site with GitHub Copilot, and review what it produces (45 min)
+- Describe and run: build your site with GitHub Copilot, preview it on your own computer, and review what it changed (45 min)
 - Break (15 min)
 - Save: commit your changes with Git, and read your own history (40 min)
 - Share: push to GitHub, then publish your site on a GitHub Pages address (40 min)
@@ -76,7 +77,7 @@ The four tools are four steps of one loop, repeated every time anything changes:
 | Step | Tool | Its one job |
 | --- | --- | --- |
 | Describe | GitHub Copilot | You say what you want, it makes the change |
-| Run | The terminal | You see what happened |
+| Run | The terminal | You start the site on your own computer and see what happened, before anything is public |
 | Save | Git | You keep a version you can return to |
 | Share | GitHub | It's backed up, published, visible to others |
 
@@ -86,11 +87,13 @@ Two things this thread earns the pitch. The loop is what transfers to documents,
 
 ## Title alternatives
 
-Recommended is the one in the pitch. Three swaps if the emphasis should sit differently:
+Recommended is the one in the pitch. It opens on the audience rather than a slogan, and the four tool names give a reviewer instant specificity about what's in the room. Leading with the terminal signals real skills rather than a tool demo, and the order matches the teaching order in the agenda. What it gives up is the loop, which the subtitle carries instead.
 
-- **Version Control for People Who Don't Write Code** — punchier and easier to scan in a programme listing, but it over-weights Git and GitHub now that all four tools carry equal weight.
-- **The Four Tools Behind Every Project, for People Who Don't Write Code** — balanced and plain-spoken, though it hides the loop, which is the more interesting idea.
-- **Version Control and GitHub Copilot for People Who Don't Write Code** — the most searchable version, but long, and naming an AI tool in the title makes the session blend into the rest of the programme.
+Three swaps if the emphasis should sit differently:
+
+- **Describe, Run, Save, Share: A Builder's Workflow for People Who Don't Write Code** — puts the loop in the title, so the four tools read as one connected thing, but a reviewer has to reach the subtitle to learn which tools are involved.
+- **Version Control for People Who Don't Write Code** — punchiest and easiest to scan, but it over-weights Git and GitHub now that all four tools carry equal weight.
+- **The Four Tools Behind Every Project, for People Who Don't Write Code** — plain-spoken and balanced, though it names neither the tools nor the loop, so it's the least informative of the four.
 
 ## Notes on the draft
 
@@ -114,6 +117,8 @@ Recommended is the one in the pitch. Three swaps if the emphasis should sit diff
 - PROW is a general product conference, so the gender gap mission sits in the bio as context. If we'd rather foreground it, that paragraph moves up into the pitch itself.
 
 **Content accuracy**
+- "Localhost" is named but defined inline, as "a localhost address, which only you can see". It's the real term people will meet in every tool afterwards, so it's worth teaching rather than paraphrasing away, and the preview is the step that makes publishing feel safe.
+- Still to decide before we build the session: whether the portfolio site is straight HTML and CSS or a framework build. Straight HTML previews through VS Code's Live Preview with no Node.js install, which takes a large risk out of the four hours and shortens the pre-session email. A framework build needs Node.js on every laptop, which is the single most likely thing to eat the morning. Our existing course takes the Node route because Lovable apps are React, but a from-scratch portfolio site doesn't need it.
 - Markdown and text files only for the documents block. Git gives a readable history for text. Word files, PDFs and Figma files are binary, so you get versions but no readable diff. Worth being equally precise in the room when someone asks about their PRD in Word.
 - Fork dropped from the Git list. Forking copies someone else's repository, which isn't part of building your own site. Clone, commit, push and pull are the loop that earns its place. Fork comes back naturally in the 2-hour template version.
 - "Hosted on GitHub" means GitHub Pages, free on public repositories.
