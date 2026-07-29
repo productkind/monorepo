@@ -7,47 +7,49 @@ Status: drafted, not sent.
 
 ---
 
-**Subject:** Workshop proposal for PROW 2026: version control for people who don't write code
+**Subject:** Workshop proposal for PROW 2026: a builder's workflow for people who don't write code
 
 Hi [organiser name],
 
 We'd like to propose a hands-on workshop for PROW 2026. Here's the short version, and I'm happy to send more detail or talk it through.
 
-**Version Control for People Who Don't Write Code**
-Build your portfolio site with GitHub Copilot, publish it live before the session ends, then use the same workflow on your own documents.
+**Describe, Run, Save, Share: A Builder's Workflow for People Who Don't Write Code**
+Learn GitHub Copilot, the terminal, Git and GitHub as one loop, and publish your own portfolio site before the session ends.
 
-Everyone leaves the room with a personal portfolio site live on a web address they can share. They build it with GitHub Copilot, the AI agent that works inside the VS Code editor, and they publish it using the tools underneath: the terminal, Git and GitHub. Nobody needs to write code.
+The session is built around the loop every builder repeats. You describe a change and GitHub Copilot makes it. You run it from the terminal to see what happened. You save it with Git, so you can come back to this exact version. You share it on GitHub, where it's backed up and other people can see it. Four tools, one job each, and you go round the loop many times in four hours.
+
+What you go round it on is a personal portfolio site, and everyone publishes theirs to a live web address before the end. Underneath all four tools sits one idea: your work is a set of files in a folder. Once people can see that, the four stop being four separate things to learn.
 
 **Who it's for**
-Anyone who doesn't write code yet and wants to use AI with more confidence. Product managers, marketers, designers, managers and business analysts all work alongside a repository at some point, and this is the session where they get to work inside one themselves. No prior experience with Copilot, Git, GitHub or the terminal needed, and nothing gets skipped over as obvious.
+Anyone who doesn't write code yet and wants to use AI with more confidence. Product managers, marketers, designers, managers and business analysts all work alongside a repository at some point, and this is the session where they get to work inside one themselves. No prior experience with Copilot, the terminal, Git or GitHub needed, and nothing gets skipped over as obvious.
 
 **What you'll be able to do by the end**
 
 - Publish a personal portfolio site to a live web address, so you have something to share on your CV or LinkedIn profile the same day
-- Build and change that site by directing GitHub Copilot, so you can get a real result from an AI agent by describing what you want
-- Review Copilot's diff before you keep it, so you can judge an AI's work rather than hope it got things right
-- Set up VS Code, Git and GitHub on your own laptop, so you can keep building after the conference rather than only in the room
-- Save your work with commit, push and pull, so you can return to any earlier version of anything you write
-- Find your way around a project in the terminal, so you can run the commands your tools and AI agents expect
-- Put one of your own documents under version control, so your specs, notes and copy get the same readable history as code
+- Direct GitHub Copilot to build and change that site, so you can get a real result from an AI agent by describing what you want
+- Review what Copilot changed before you keep it, so you can judge an AI agent's work rather than hope it got things right
+- Find your way around a project from the terminal, so you can see where your work lives and run the commands your tools expect
+- Save every change with Git, so you can read your own history and go back to any earlier version
+- Store and share your work on GitHub, so it's safe off your laptop and other people can see it or work on it with you
+- Run the whole loop on a document of your own, so your specs, notes and copy get the same history and backup as code
 
-**Where the skills go after the session**
+**Where the loop goes after the session**
 
-They change how it feels to work with AI. Once every change is committed, you can let Copilot make a bigger edit and still undo it, and you can read exactly what it changed before you keep it. Reviewing an AI agent's work is a skill of its own, and it gets much easier once you can read a diff. The same habit carries over to any other agent, Claude Code and Cursor included.
+It changes how it feels to work with AI. Once every change is saved, you can let Copilot make a bigger edit and still undo it, and you can read exactly what it changed before you keep it. Reviewing an AI agent's work is a skill of its own, and it gets much easier once you can read a diff. Swap Copilot for Claude Code or Cursor and the other three steps are unchanged, so the workflow outlives whichever agent people use next.
 
-They also travel well beyond building. We run our own company this way: our courses, articles and marketing copy all live in a Git repository, so every change has a history we can read, edits get reviewed before they go live, and nothing sits in a folder of files called final-v2, final-v3, final-FINAL. Any spec, requirements document or piece of copy written as a Markdown file can work the same way, and that's where the last part of the session goes.
+It also travels well beyond building. We run our own company this way: our courses, articles and marketing copy all live in a Git repository, so every change has a history we can read, edits get reviewed before they go live, and nothing sits in a folder of files called final-v2, final-v3, final-FINAL. Any spec, requirements document or piece of copy written as a Markdown file can go round the same loop, which is what the last part of the session covers.
 
 **Shape of the session (4 hours)**
 
-- Decide what's worth versioning, and see what GitHub does with a history of changes (20 min)
-- Set up your workspace: GitHub account, first repository, VS Code, GitHub Copilot, first commands in the terminal (40 min)
-- Build your site with Copilot: describe what you want, then review what it produces (60 min)
+- Your work is files: what each of the four tools does, and where they meet (15 min)
+- Find your way around: VS Code, your first repository, and moving through a project in the terminal (45 min)
+- Describe: build your site with GitHub Copilot, and review what it produces (45 min)
 - Break (15 min)
-- Save your work properly: commit, push, pull, and read your own history (45 min)
-- Publish it: your site live on a GitHub Pages address (25 min)
-- Version something of your own: bring a document into a repository and track its changes (30 min)
+- Save: commit your changes with Git, and read your own history (40 min)
+- Share: push to GitHub, then publish your site on a GitHub Pages address (40 min)
+- Run the whole loop on a document of your own (35 min)
 
-In a 2-hour slot we'd start people from a template and spend the time on the version control workflow and publishing, which keeps the transferable part intact. Happy to fit whichever slot works for the programme.
+The site keeps growing across the middle blocks rather than being finished in one, so the loop gets practised on real work each time. In a 2-hour slot we'd start people from a template and run the loop once end to end, which keeps the transferable part intact. Happy to fit whichever slot works for the programme.
 
 **Practical details**
 
@@ -67,39 +69,52 @@ Kinga
 
 ---
 
+## The connecting thread
+
+The four tools are four steps of one loop, repeated every time anything changes:
+
+| Step | Tool | Its one job |
+| --- | --- | --- |
+| Describe | GitHub Copilot | You say what you want, it makes the change |
+| Run | The terminal | You see what happened |
+| Save | Git | You keep a version you can return to |
+| Share | GitHub | It's backed up, published, visible to others |
+
+Underneath all four: your work is a set of files in a folder. Copilot changes the files, the terminal is how you move among them, Git records what changed, GitHub is where they live.
+
+Two things this thread earns the pitch. The loop is what transfers to documents, since a Markdown spec goes round exactly the same four steps. And it's why the skills outlive the tool: replace Copilot with Claude Code and three of the four steps don't move.
+
 ## Title alternatives
 
 Recommended is the one in the pitch. Three swaps if the emphasis should sit differently:
 
-- **Version Control and GitHub Copilot for People Who Don't Write Code** — puts the AI agent in the title, which is the most searchable version, but it's long and it tilts the session back towards sounding like every other AI workshop on the pile.
-- **Git and GitHub for People Who Don't Write Code** — names the tools instead of the concept, so it's more recognisable in a programme listing, but "Git" means nothing to someone who hasn't met it yet.
-- **Publish Your Own Site, Then Version Everything Else** — leads with the doing, warmest of the three, but loses the audience signal the title is meant to carry.
+- **Version Control for People Who Don't Write Code** — punchier and easier to scan in a programme listing, but it over-weights Git and GitHub now that all four tools carry equal weight.
+- **The Four Tools Behind Every Project, for People Who Don't Write Code** — balanced and plain-spoken, though it hides the loop, which is the more interesting idea.
+- **Version Control and GitHub Copilot for People Who Don't Write Code** — the most searchable version, but long, and naming an AI tool in the title makes the session blend into the rest of the programme.
 
 ## Notes on the draft
 
-**GitHub Copilot**
-- Named in the subtitle, the opening, the audience line, the outcomes and the agenda. The opening glosses it as "the AI agent that works inside the VS Code editor", since organisers on the review panel may know the name without knowing what it does.
-- Building with Copilot and reviewing Copilot's diff are now two separate outcomes. They're different skills, and the reviewing one is the harder and more transferable of the two.
-- Kept out of the title by default, since a title with an AI tool in it is what makes a session blend into the rest of the programme. It's the first alternative above if we'd rather have the search term.
-- The closing line about Claude Code and Cursor says the habit outlives the tool, which protects the session from ageing badly if the audience has moved on to a different agent by October.
+**Balance across the four tools**
+- The agenda gives one block per step of the loop: terminal 45, Copilot 45, Git 40, GitHub 40. Copilot no longer has the largest slot.
+- The outcomes list one per tool, plus the site, plus the transfer to documents. Copilot keeps two bullets, since directing it and reviewing its work are separate skills, and the reviewing one is the harder half.
+- The final block runs all four steps end to end on the participant's own document, so the loop is integrated rather than taught as four separate lessons.
+- "Your work is files" opens the session as a 15-minute map, so people meet the connecting idea before the first tool.
 
 **Cost**
-- "Every tool in the session is free" is now the first practical detail. GitHub, VS Code and GitHub Pages are free outright; Copilot has a free tier with a monthly cap of roughly 50 chat requests plus completions. Enough for one session, but participants should sign in to Copilot before they arrive, which is why the pre-session email now covers sign-ups as well as installs.
+- GitHub, VS Code and GitHub Pages are free outright. Copilot has a free tier with a monthly cap of roughly 50 chat requests plus completions, which is enough for one session, so participants should sign in before they arrive. That's why the pre-session email covers sign-ups as well as installs.
 
 **Outcome focus**
-- Every takeaway follows action, benefit, deliverable, with higher-order verbs (publish, build, direct, review, judge, decide) rather than "learn about" or "understand".
+- Every takeaway follows action, benefit, deliverable, with higher-order verbs (publish, direct, review, judge, save, run) rather than "learn about" or "understand".
 - The bullets are written in "you" so organisers can lift them straight into the programme listing without rewriting.
 - The session blocks are named by what participants produce in them, not by the topic covered.
 
 **Framing**
 - "Non-technical" appears nowhere in the pitch, including the facilitator bio. It's the label that makes people feel small, and it would sit oddly under a title built to be welcoming.
-- "Developer" stays out of the title for the same reason, but stays in the body where organisers need to know these are real skills rather than a simplified version of them.
 - "Doesn't write code yet" keeps the door open, which is the whole point of the audience line.
 - PROW is a general product conference, so the gender gap mission sits in the bio as context. If we'd rather foreground it, that paragraph moves up into the pitch itself.
 
 **Content accuracy**
-- Documents block is 30 minutes of real work, not a closing remark. Participants create a Markdown file, commit it, edit it, and read the diff.
-- Markdown and text files only. Git gives a readable history for text. Word files, PDFs and Figma files are binary, so you get versions but no readable diff. Worth being equally precise in the room when someone asks about their PRD in Word.
+- Markdown and text files only for the documents block. Git gives a readable history for text. Word files, PDFs and Figma files are binary, so you get versions but no readable diff. Worth being equally precise in the room when someone asks about their PRD in Word.
 - Fork dropped from the Git list. Forking copies someone else's repository, which isn't part of building your own site. Clone, commit, push and pull are the loop that earns its place. Fork comes back naturally in the 2-hour template version.
 - "Hosted on GitHub" means GitHub Pages, free on public repositories.
 - The 4 hours only works if installs happen beforehand. Without the pre-workshop instructions, VS Code and Git downloads alone can eat an hour on conference wifi.
