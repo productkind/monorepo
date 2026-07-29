@@ -14,33 +14,33 @@ Hi [organiser name],
 We'd like to propose a hands-on workshop for PROW 2026. Here's the short version, and I'm happy to send more detail or talk it through.
 
 **A Builder's Workflow for People Who Don't Write Code: Terminal, Copilot, Git, GitHub**
-Four tools, one loop: describe a change, run it, save it, share it. You'll publish your own portfolio site before the session ends.
+You'll publish your own portfolio site before the session ends.
 
-The session is built around the loop every builder repeats. You describe a change and GitHub Copilot makes it. You run it on your own computer from the terminal, so you can see what happened before anything is public. You save it with Git, so you can come back to this exact version. You share it on GitHub, where it's backed up and other people can see it. Four tools, one job each, and you go round the loop many times in four hours.
+The session is built around the loop every builder repeats. You describe a change and GitHub Copilot makes it. You run it on your own computer from the terminal, so you can see what happened before anything is public. You save it with Git, so you can come back to this exact version. You share it on GitHub, where it's backed up and your colleagues can access it.
 
-What you go round it on is a personal portfolio site, and everyone publishes theirs to a live web address before the end. Underneath all four tools sits one idea: your work is a set of files in a folder. Once people can see that, the four stop being four separate things to learn.
+You practice this loop on a personal portfolio site, and everyone publishes theirs to a live web address before the end. Underneath all four tools sits one idea: you can easily instruct AI agents, most of the time it's just working with a set of files.
 
 **Who it's for**
-Anyone who doesn't write code yet and wants to use AI with more confidence. Product managers, marketers, designers, managers and business analysts all work alongside a repository at some point, and this is the session where they get to work inside one themselves. No prior experience with Copilot, the terminal, Git or GitHub needed, and nothing gets skipped over as obvious.
+Anyone who doesn't write code yet and wants to use AI with more confidence. Product managers, marketers, designers, managers and business analysts all work alongside a repository at some point, and this is the session where they get to work inside one themselves. No prior experience with Copilot, the terminal, Git or GitHub needed.
 
 **What you'll be able to do by the end**
 
 - Publish a personal portfolio site to a live web address, so you have something to share on your CV or LinkedIn profile the same day
-- Direct GitHub Copilot to build and change that site, so you can get a real result from an AI agent by describing what you want
+- Direct GitHub Copilot to build and change that site, so you can build software with an AI agent by describing what you want
 - Review what Copilot changed before you keep it, so you can judge an AI agent's work rather than hope it got things right
-- Find your way around a project from the terminal, so you can see where your work lives and run the commands your tools expect
+- Find your way around a project from the terminal, so you can see where your work lives and run basic commands
 - Preview your site on your own computer at a localhost address, which only you can see, so you can try things out and fix mistakes before anything goes live
-- Save every change with Git, so you can read your own history and go back to any earlier version
-- Store and share your work on GitHub, so it's safe off your laptop and other people can see it or work on it with you
+- Save every change with Git, so you can read your own history and go back to any earlier version if needed
+- Store and share your work on GitHub, so it's safe in the cloud and other people can see it or work on it with you
 - Run the whole loop on a document of your own, so your specs, notes and copy get the same history and backup as code
 
-**Where the loop goes after the session**
+**What you can do with the loop after the session**
 
 It changes how it feels to work with AI. Once every change is saved, you can let Copilot make a bigger edit and still undo it, and you can read exactly what it changed before you keep it. Reviewing an AI agent's work is a skill of its own, and it gets much easier once you can read a diff. Swap Copilot for Claude Code or Cursor and the other three steps are unchanged, so the workflow outlives whichever agent people use next.
 
 It also travels well beyond building. We run our own company this way: our courses, articles and marketing copy all live in a Git repository, so every change has a history we can read, edits get reviewed before they go live, and nothing sits in a folder of files called final-v2, final-v3, final-FINAL. Any spec, requirements document or piece of copy written as a Markdown file can go round the same loop, which is what the last part of the session covers.
 
-**Shape of the session (4 hours)**
+**Structure of the session (4 hours)**
 
 - Your work is files: what each of the four tools does, and where they meet (15 min)
 - Find your way around: VS Code, your first repository, and moving through a project in the terminal (45 min)
@@ -55,7 +55,7 @@ The site keeps growing across the middle blocks rather than being finished in on
 **Practical details**
 
 - Every tool in the session is free: GitHub, VS Code, Copilot's free tier, and GitHub Pages hosting
-- Up to 30 participants, with both of us on the floor to help
+- Both of us on the floor to help participants
 - Participants bring a laptop, and we send install and sign-up instructions a week ahead so the session goes on building rather than downloads
 - We need wifi, power at the tables, and a projector
 
