@@ -15,36 +15,36 @@ We'd love to run a hands-on workshop at PROW this year. Here's the short version
 
 **A Builder's Workflow for People Who Don't Write Code: Terminal, Copilot, Git, GitHub**
 
-Copy-pasting between ChatGPT and your own files is where most of us started when it comes to using AI. If that's where you are, this is the workshop where you take the next step: getting hands-on practice with an AI agent that edits the files on your own computer, where you can see every line it changed.
+Most of us started using AI by copy-pasting between ChatGPT and our own files. If that's where you are, this is the workshop where you take the next step: getting hands-on practice with an AI agent that edits the files on your own computer, where you can see every line it changed.
 
-You'll use one loop with four tools:
+You'll build a personal portfolio site and publish it to a live web address before the session ends, so you leave with something you can share on LinkedIn. You build it with one loop, using four tools:
 
 1. You describe a change and GitHub Copilot makes it.
-2. You run it on your own computer from the terminal, so you can see what happened before anything is public.
-3. You save it with Git, so you can come back to this exact version if needed.
-4. You share it on GitHub, where it's backed up and your collaborators can see it.
+2. You start the site on your own computer from the terminal, so you can see the change before anything is public.
+3. You save the change with Git, so you can come back to this exact version later.
+4. You back up your work to GitHub, so you can access it from anywhere, and your collaborators can see it.
 
-You practise the loop on a personal portfolio site and publish it to a live web address before the session ends, so you leave with something you can share on LinkedIn. The website is the practice ground though. What you'll reuse is the workflow: directing an AI agent to build a product, and to write and edit a document confidently with version control.
+The site is the practice ground though. What you'll reuse is the loop: directing an AI agent through the files on your own computer, whether you're building a product or writing a document. And because every version is saved, you can undo any change, so you can try things you'd otherwise be too nervous to try.
 
 **Who it's for**
-Anyone who doesn't write code yet and wants to use AI with more confidence. Product managers, designers, marketers, business analysts and team leads all work alongside a repository at some point, and this is the session where they get to work inside one themselves. No prior experience with Copilot, the terminal, Git or GitHub needed, we will explain each step.
+Anyone who doesn't write code yet and wants to use AI with more confidence. Product managers, designers, marketers, business analysts and team leads all end up working alongside a repository at some point and this is the session where they get to work inside one themselves. No prior experience with Copilot, the terminal, Git or GitHub needed, we explain every step as we go.
 
 **What you'll be able to do by the end**
 
-- Direct GitHub Copilot to work directly on your files, so you can stop copy-pasting from an AI chat assistant
+- Direct GitHub Copilot to work on your files, so you can stop copy-pasting out of an AI chat assistant
 - Review what Copilot changed before you keep it, so you can judge an AI agent's work rather than hope it got things right
-- Find your way around a project from the terminal, so you can see where your work lives and run basic commands
+- Find your way around the terminal, so you can follow any setup guide you're given
 - Preview your site on your own computer at a localhost address, which only you can see, so you can try things out and fix mistakes before anything goes live
-- Save every change with Git, so you can read your own history and go back to any earlier version if needed
-- Store and share your work on GitHub, so it's safe in the cloud and other people can see it or work on it with you
+- Save every change with Git, so you can read your version history and undo anything
+- Store and share your work on GitHub, so it's safe in the cloud and you can collaborate with others
 - Publish a personal portfolio site to a live web address, so you go home with proof the workflow works and something to share on your LinkedIn profile
-- Run the whole loop on a document of your own, so your specs, notes and copy get the same history and backup as code
+- Run the whole loop on a document, so your specs, notes and copy get the same history and backup as code
 
 **What you can do with the loop after the session**
 
-It takes the mystery out of working with an AI agent. Once every change is version controlled, you can let Copilot make a bigger edit and still undo it, and you can read exactly what it changed before you keep it. Reviewing an AI agent's work is a skill of its own, and it gets much easier once you can read a diff. Swap Copilot for Claude Code or Cursor, and the other three steps are unchanged, so the workflow outlives whichever agent you use next.
+Learning this loop takes the mystery out of working with an AI agent. You can even swap Copilot for Claude Code or Cursor, so the workflow still works with whichever agent you use next.
 
-You can use it well beyond building. And no more files called final-v2, final-v3, final-FINAL. Any spec, requirements document or piece of copy written as a Markdown file can go round the same loop, which is what the last part of the session covers.
+And it's useful well beyond building. You can use this workflow on any spec, requirements document or piece of copy written as a Markdown file, so no more files called final-v2, final-v3, final-FINAL.
 
 **Structure of the session (4 hours)**
 
@@ -56,18 +56,17 @@ You can use it well beyond building. And no more files called final-v2, final-v3
 - Share: push to GitHub, then publish your site on a GitHub Pages address (40 min)
 - Run the whole loop on a document of your own (35 min)
 
-We can also run this in 2 hours by starting people from a template and trimming the build time, so we can fit whichever slot works for the programme.
-
 **Practical details**
 
-- Every tool in the session is free: GitHub, VS Code, Copilot's free tier, and GitHub Pages for hosting
-- The two of us would facilitate together, so there'd always be someone free to help participants
-- Participants would bring a laptop, and we'd send install and sign-up instructions a week ahead so the session focuses on building rather than downloading
+- Every tool in the session is free: GitHub, VS Code, Copilot's free tier, and GitHub Pages for the hosting
+- The two of us would facilitate together, so there'd always be someone free when a participant gets stuck
+- Participants would bring a laptop, and we'd send install and sign-up instructions a week ahead so the session goes on building rather than downloading
 - We'd need wifi, power at the tables and a projector
+- We'd allocate 4 hours for the workshop, but can also run this in 2 hours by starting people from a template and shortening the build time if needed.
 
 **Who we are**
 
-Kinga Magyar is the founder of productkind, a two-person company building educational products that teach practical tech skills and a product mindset. Tamas Kokeny is productkind's technical partner and educator. Together we run Little Parrot, a microlearning platform for building with AI, with a mission to close the gender gap in AI adoption.
+Kinga Magyar is the founder of productkind, a two-person company building educational products that teach practical tech skills and a product mindset. Tamas Kokeny is productkind's technical partner and educator. Together we run Little Parrot, a microlearning platform for building with AI, and our mission is to close the gender gap in AI adoption.
 
 Would this fit your programme? Very happy to adjust the length or the focus.
 
