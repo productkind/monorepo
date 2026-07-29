@@ -20,31 +20,25 @@ Most of us started using AI by copy-pasting between ChatGPT and our own files. I
 You'll build a personal portfolio site and publish it to a live web address before the session ends, so you leave with something you can share on LinkedIn. You build it with one loop, using four tools:
 
 1. You describe a change and GitHub Copilot makes it.
-2. You start the site on your own computer from the terminal, so you can see the change before anything is public.
-3. You save the change with Git, so you can come back to this exact version later.
+2. You start the site on your own computer from the terminal, so you can review it before it becomes public.
+3. You track the changes with Git, so you can experiment freely.
 4. You back up your work to GitHub, so you can access it from anywhere, and your collaborators can see it.
 
-The site is the practice ground though. What you'll reuse is the loop: directing an AI agent through the files on your own computer, whether you're building a product or writing a document. And because every version is saved, you can undo any change, so you can try things you'd otherwise be too nervous to try.
+The site is the practice ground though. Learning these technical skills takes the mystery out of working with an AI agent. They used to be taught only to developers, and now you also get to use them. So you can build things that felt impossible before AI.
 
-**Who it's for**
+**Target audience**
 Anyone who doesn't write code yet and wants to use AI with more confidence. Product managers, designers, marketers, business analysts and team leads all end up working alongside a repository at some point and this is the session where they get to work inside one themselves. No prior experience with Copilot, the terminal, Git or GitHub needed, we explain every step as we go.
 
 **What you'll be able to do by the end**
 
-- Direct GitHub Copilot to work on your files, so you can stop copy-pasting out of an AI chat assistant
+- Direct GitHub Copilot (or any AI agent) to work on your files, so you can stop copy-pasting out of an AI chat assistant
 - Review what Copilot changed before you keep it, so you can judge an AI agent's work rather than hope it got things right
 - Find your way around the terminal, so you can follow any setup guide you're given
 - Preview your site on your own computer at a localhost address, which only you can see, so you can try things out and fix mistakes before anything goes live
 - Save every change with Git, so you can read your version history and undo anything
 - Store and share your work on GitHub, so it's safe in the cloud and you can collaborate with others
 - Publish a personal portfolio site to a live web address, so you go home with proof the workflow works and something to share on your LinkedIn profile
-- Run the whole loop on a document, so your specs, notes and copy get the same history and backup as code
-
-**What you can do with the loop after the session**
-
-Learning this loop takes the mystery out of working with an AI agent. You can even swap Copilot for Claude Code or Cursor, so the workflow still works with whichever agent you use next.
-
-And it's useful well beyond building. You can use this workflow on any spec, requirements document or piece of copy written as a Markdown file, so no more files called final-v2, final-v3, final-FINAL.
+- Apply the whole loop to a document, so your specs, notes and copy get the same history and backup as code, no more files called final-v2, final-v3, final-FINAL
 
 **Structure of the session (4 hours)**
 
@@ -58,10 +52,10 @@ And it's useful well beyond building. You can use this workflow on any spec, req
 
 **Practical details**
 
-- Every tool in the session is free: GitHub, VS Code, Copilot's free tier, and GitHub Pages for the hosting
-- The two of us would facilitate together, so there'd always be someone free when a participant gets stuck
-- Participants would bring a laptop, and we'd send install and sign-up instructions a week ahead so the session goes on building rather than downloading
-- We'd need wifi, power at the tables and a projector
+- Every tool in the session is free: GitHub, VS Code, Copilot's free tier, and GitHub Pages for the hosting.
+- Facilitators: Kinga Magyar and Tamas Kokeny. The two of us would facilitate together, so there'd always be someone free when a participant gets stuck.
+- Participants would bring a laptop, and we'd send install and sign-up instructions a week ahead so the session goes on building rather than downloading.
+- We'd need wifi, power at the tables and a projector.
 - We'd allocate 4 hours for the workshop, but can also run this in 2 hours by starting people from a template and shortening the build time if needed.
 
 **Who we are**
