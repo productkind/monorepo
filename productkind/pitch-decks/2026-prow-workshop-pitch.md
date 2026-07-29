@@ -11,44 +11,44 @@ Status: drafted, not sent.
 
 Hi [organiser name],
 
-We'd like to propose a hands-on workshop for PROW 2026. Here's the short version, and I'm happy to send more detail or talk it through.
+We'd love to run a hands-on workshop at PROW this year. Here's the short version, and I'm happy to send more detail or talk it through.
 
 **A Builder's Workflow for People Who Don't Write Code: Terminal, Copilot, Git, GitHub**
 
-If your AI use so far has been a chat assistant and a lot of copy-pasting, this is the session where the AI agent works directly on the files on your own computer instead, with you deciding what it keeps. That's a way of working that wasn't open to people who don't write code a couple of years ago.
+Copy-pasting between ChatGPT and your own files is where most of us started when it comes to using AI. If that's where you are, this is the workshop where you take the next step: getting hands-on practice with an AI agent that edits the files on your own computer, where you can see every line it changed.
 
-You learn it as one loop with four tools:
+You'll use one loop with four tools:
 
 1. You describe a change and GitHub Copilot makes it.
 2. You run it on your own computer from the terminal, so you can see what happened before anything is public.
 3. You save it with Git, so you can come back to this exact version if needed.
 4. You share it on GitHub, where it's backed up and your collaborators can see it.
 
-You practise the loop on a personal portfolio site and publish it to a live web address before the end, so you go home with proof the workflow works and something to share. The lasting part is the workflow itself: by the end you can sit down at your own computer, direct an AI agent through a real project, and know exactly what it changed.
+You practise the loop on a personal portfolio site and publish it to a live web address before the session ends, so you leave with something you can share on LinkedIn. The website is the practice ground though. What you'll reuse is the workflow: directing an AI agent to build a product, and to write and edit a document confidently with version control.
 
 **Who it's for**
-Anyone who doesn't write code yet and wants to use AI with more confidence. Product managers, marketers, designers, managers and business analysts all work alongside a repository at some point, and this is the session where they get to work inside one themselves. No prior experience with Copilot, the terminal, Git or GitHub needed.
+Anyone who doesn't write code yet and wants to use AI with more confidence. Product managers, designers, marketers, business analysts and team leads all work alongside a repository at some point, and this is the session where they get to work inside one themselves. No prior experience with Copilot, the terminal, Git or GitHub needed, we will explain each step.
 
 **What you'll be able to do by the end**
 
-- Direct GitHub Copilot to change a real project on your own computer, so you can work with an AI agent on your own files instead of copy-pasting into a chat assistant
+- Direct GitHub Copilot to work directly on your files, so you can stop copy-pasting from an AI chat assistant
 - Review what Copilot changed before you keep it, so you can judge an AI agent's work rather than hope it got things right
 - Find your way around a project from the terminal, so you can see where your work lives and run basic commands
 - Preview your site on your own computer at a localhost address, which only you can see, so you can try things out and fix mistakes before anything goes live
 - Save every change with Git, so you can read your own history and go back to any earlier version if needed
 - Store and share your work on GitHub, so it's safe in the cloud and other people can see it or work on it with you
-- Publish a personal portfolio site to a live web address, so you go home with proof the workflow works and something to share on your CV or LinkedIn profile
+- Publish a personal portfolio site to a live web address, so you go home with proof the workflow works and something to share on your LinkedIn profile
 - Run the whole loop on a document of your own, so your specs, notes and copy get the same history and backup as code
 
 **What you can do with the loop after the session**
 
-It takes the mystery out of working with an AI agent. Once every change is version controlled, you can let Copilot make a bigger edit and still undo it, and you can read exactly what it changed before you keep it. Reviewing an AI agent's work is a skill of its own, and it gets much easier once you can read a diff. Swap Copilot for Claude Code or Cursor and the other three steps are unchanged, so the workflow outlives whichever agent you use next.
+It takes the mystery out of working with an AI agent. Once every change is version controlled, you can let Copilot make a bigger edit and still undo it, and you can read exactly what it changed before you keep it. Reviewing an AI agent's work is a skill of its own, and it gets much easier once you can read a diff. Swap Copilot for Claude Code or Cursor, and the other three steps are unchanged, so the workflow outlives whichever agent you use next.
 
-You can use it well beyond building. You will no longer have a folder of files called final-v2, final-v3, final-FINAL. Any spec, requirements document or piece of copy written as a Markdown file can go round the same loop, which is what the last part of the session covers.
+You can use it well beyond building. And no more files called final-v2, final-v3, final-FINAL. Any spec, requirements document or piece of copy written as a Markdown file can go round the same loop, which is what the last part of the session covers.
 
 **Structure of the session (4 hours)**
 
-- What each of the four tools does, and where they meet (15 min)
+- Meet the four tools: what each one does, and how they connect (15 min)
 - Find your way around: VS Code, your first repository, and moving through a project in the terminal (45 min)
 - Describe and run: build your site with GitHub Copilot, preview it on your own computer, and review what it changed (45 min)
 - Break (15 min)
@@ -56,14 +56,14 @@ You can use it well beyond building. You will no longer have a folder of files c
 - Share: push to GitHub, then publish your site on a GitHub Pages address (40 min)
 - Run the whole loop on a document of your own (35 min)
 
-We can also run this in 2 hours by starting people from a template and trimming the build time, so happy to adjust to whichever slot works for the programme.
+We can also run this in 2 hours by starting people from a template and trimming the build time, so we can fit whichever slot works for the programme.
 
 **Practical details**
 
 - Every tool in the session is free: GitHub, VS Code, Copilot's free tier, and GitHub Pages for hosting
-- Both of us are needed on the floor to help participants
-- Participants bring a laptop, and we send install and sign-up instructions a week ahead so the session goes on building rather than downloads
-- We need wifi, power at the tables, and a projector
+- The two of us would facilitate together, so there'd always be someone free to help participants
+- Participants would bring a laptop, and we'd send install and sign-up instructions a week ahead so the session focuses on building rather than downloading
+- We'd need wifi, power at the tables and a projector
 
 **Who we are**
 
@@ -89,7 +89,7 @@ The four tools are four steps of one loop, repeated every time anything changes:
 
 Underneath all four: your work is a set of files in a folder. Copilot changes the files, the terminal is how you move among them, Git records what changed, GitHub is where they live.
 
-The portfolio site is the practice ground, not the point. It's there because the loop needs something real to run on, and because a published address is proof the workflow works. What participants keep is the ability to direct an AI agent through files on their own computer, which is why the site sits seventh in the outcomes list rather than first.
+The portfolio site is the practice ground. It's there because the loop needs something real to run on, and because a published address is proof the workflow works. What participants keep is the ability to direct an AI agent through files on their own computer, which is why the site sits seventh in the outcomes list rather than first.
 
 Two things this thread earns the pitch. The loop is what transfers to documents, since a Markdown spec goes round exactly the same four steps. And it's why the skills outlive the tool: replace Copilot with Claude Code and three of the four steps don't move.
 
@@ -99,9 +99,9 @@ Recommended is the one in the pitch. It opens on the audience rather than a slog
 
 Three swaps if the emphasis should sit differently:
 
-- **Describe, Run, Save, Share: A Builder's Workflow for People Who Don't Write Code** — puts the loop in the title, so the four tools read as one connected thing, but a reviewer has to reach the subtitle to learn which tools are involved.
-- **Version Control for People Who Don't Write Code** — punchiest and easiest to scan, but it over-weights Git and GitHub now that all four tools carry equal weight.
-- **The Four Tools Behind Every Project, for People Who Don't Write Code** — plain-spoken and balanced, though it names neither the tools nor the loop, so it's the least informative of the four.
+- **Describe, Run, Save, Share: A Builder's Workflow for People Who Don't Write Code** – puts the loop in the title, so the four tools read as one connected thing, but a reviewer has to reach the subtitle to learn which tools are involved.
+- **Version Control for People Who Don't Write Code** – punchiest and easiest to scan, but it over-weights Git and GitHub now that all four tools carry equal weight.
+- **The Four Tools Behind Every Project, for People Who Don't Write Code** – straightforward and balanced, though it names neither the tools nor the loop, so it's the least informative of the four.
 
 ## Notes on the draft
 
