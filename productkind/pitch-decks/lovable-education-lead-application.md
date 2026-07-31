@@ -99,7 +99,7 @@ At a SheBuilds event in Singapore on IWD, an ambassador taught from our course c
 
 I've been around Lovable since the early days. Lovable Shipped, where I finished at #40. SheBuilds S01 as a participant, then S02 as a volunteer, answering questions on Discord and giving builders two of our courses for free so they could build their products with more confidence.
 
-I keep recommending Lovable because of what I've seen it do for women. A lot of them arrive convinced that building software isn't for them, and then they start a business with it, or build an extra income stream on the side.
+I keep recommending Lovable because of what I've seen it does for women. A lot of them arrive convinced that building software isn't for them, and then they start a business with it, or build an extra income stream on the side.
 
 What would make this a fantastic experience for me is working closer with your team, and using that to reach more women who can now build things that were out of reach for them before AI.
 
@@ -144,7 +144,7 @@ Audience: People who can't code yet, have built something with Lovable already, 
 The level-up is four things:
 1. They'll structure a prompt in markdown, so no important detail gets lost inside a paragraph.
 2. They'll know the names for the parts of their own app, and can communicate more effectively what they want to build or change.
-3. They'll understand what Lovable says back, including what it decided for them.
+3. They'll understand what Lovable replies, including what it decided for them.
 4. They'll describe a bug precisely enough for Lovable to fix it on the first try, rather than writing "It still doesn't work" five more times.
 
 We'd finish by writing one prompt each for whatever they want to build next, using the techniques from the session.
