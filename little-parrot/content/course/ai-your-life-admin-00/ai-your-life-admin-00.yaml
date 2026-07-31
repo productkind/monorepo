@@ -1,7 +1,7 @@
 course:
   id: 05900334-0998-4a98-be6d-946653c9b82d
   note: |-
-    This course needs an iPhone with Apple Intelligence (iPhone 15 Pro and 15 Pro Max, any iPhone 16, the iPhone 17 line, or iPhone Air). Everything runs free, with no subscription and nothing to install.
+    This course needs an iPhone with Apple Intelligence (iPhone 15 Pro or 15 Pro Max, any iPhone 16 or newer, or an iPhone Air). Everything runs free, with no subscription and nothing to install.
   cover: /courses/ai-your-life-admin-00/cover.gif
   title: "AI Your Life Admin: Two Voice Shortcuts for New Mums"
   learningOutcomes:
@@ -58,11 +58,35 @@ course:
             transcript: |-
               If you're a new mum, you already know the feeling. There's a **running list in your head that never switches off**. You've got more things to do, but way less time. And most of the time, both of your hands are full.
 
-              **Your phone can take that list off you and file it where it belongs.** It lives in a shortcut you build once and then forget about, rather than a fiddly system you have to set up and tend to.
+              **Your phone can take that list off you and file it where it belongs.** It lives in a shortcut you build once, rather than a fiddly system you have to tend to.
 
-              In this course you'll build **two** of them. The first lets you **talk** about everything on your mind, and your phone uses AI to sort it into tidy checklists you can **share with your partner**, so the mental load is out of your head and where someone else can help carry it. The second lets you **log the things you keep track of**, how much your baby fed, the nappies, the naps, their weight, and saves each as one tidy line in a running record.
+              In this course you'll build **two** shortcuts. The first lets you **talk** about everything on your mind, and your phone uses AI to sort it into tidy checklists you can **share with your partner**, so the mental load is out of your head and where someone else can help carry it. The second lets you **log the things you need to keep track of**: how much your baby fed, the nappies, the naps, their weight, and saves each as a line with date and time in a running record.
 
               You'll become someone who **offloads the mental load by voice**, in the seconds you have. Let's build the first one.
+        - type: text
+          title: "See what you'll build"
+          subtitle: The finished thing, first
+          content:
+            body: |-
+              Before you build it, here's your **Brain Dump** in action. Dalmie taps hers and rambles for a minute:
+
+              *"Right, we're out of nappies and wipes, the health visitor is coming Tuesday at 11, I keep meaning to book the 6-week check, and we need more of that barrier cream."*
+
+              A few seconds later, it's sorted into her category notes, each item a tickable checklist line:
+
+              **Logistics**
+              - book the six-week check
+
+              **Food & Household**
+              - nappies
+              - wipes
+              - barrier cream
+
+              **Misc**
+              - health visitor coming Tuesday at 11
+
+              She didn't sort a thing, and she didn't open a single app. That's what you'll build next. And you'll set up sharing it with your partner automatically, so **you won't have to carry the mental load alone**.
+            imageUrl: /courses/ai-your-life-admin-00/sorted-result.webp
         - type: text
           title: What you'll need
           subtitle: Not much, honestly
@@ -70,9 +94,10 @@ course:
             body: |-
               Good news first: there's **nothing to buy and nothing to download**. You build everything in the **Shortcuts** app that's already on your iPhone, by tapping a few blocks together. You don't need to be techy: you follow along one step at a time, and each step tells you exactly what to tap.
 
-              This uses **Apple Intelligence**, Apple's built-in AI, so you'll need an **iPhone 15 Pro or 15 Pro Max, any iPhone 16, an iPhone 17, or iPhone Air**. It's free, with no subscription.
+              This uses **Apple Intelligence**, Apple's built-in AI, so you'll need an **iPhone 15 Pro or 15 Pro Max, any iPhone 16 or newer, or an iPhone Air**. It's free, with no subscription.
 
               *Not sure which iPhone you have?* Open **Settings**, tap **General**, then **About**, and look at **Model Name** near the top.
+            imageUrl: /courses/ai-your-life-admin-00/shortcut-logo.webp
         - type: text
           title: "Turn on Apple Intelligence"
           subtitle: A one-time setup
@@ -82,48 +107,32 @@ course:
 
               1. Open **Settings**
               2. Tap **Apple Intelligence & Siri**
-              3. Turn on **Apple Intelligence** and let it finish downloading (it can take a little while the first time)
+              3. Turn on **Apple Intelligence**
 
               That's the setup done. (Apple Intelligence needs to be available in your country and language.)
-        - type: text
-          title: Your sorting prompt
-          subtitle: The prompt you'll reuse
-          content:
-            body: |-
-              You give the AI one instruction, called a **prompt**, that sorts whatever you say into **categories**. Each category is its own running note, so everything you dump lands in the right place instead of one long pile.
-
-              You'll start with three: **Logistics**, **Food & Household**, and **Misc** (a catch-all for anything that doesn't fit). You can rename these or add your own later. Copy the prompt now:
-
-              ```
-              Sort what I say into a dictionary with exactly these keys: Logistics, Food & Household, Misc. Each value is a short list of the items that fit. Put anything that doesn't fit under Misc. Don't add anything I didn't say.
-
-              Here is what I said:
-              ```
-
-              Your shortcut will drop **what you said** in under that last line. You don't type a word.
+            imageUrl: /courses/ai-your-life-admin-00/turn-on-apple-intelligence.webp
         - type: text
           title: "Build it: make your category notes"
-          subtitle: One note per category
+          subtitle: Make them, and share the folder
           content:
             body: |-
-              Your shortcut sorts into categories, so each category needs its own note to land in. Make them first:
+              Your shortcut sorts what you say into categories, and each one needs its own note to land in. You'll start with three: **Logistics**, **Food & Household**, and **Misc** (a catch-all for anything that doesn't fit). Make them now:
 
-              1. Open the **Notes** app and make a new folder called **Mental Load** (you'll share this whole folder with your partner later).
-              2. Inside it, make one note per category, each note's first line matching a category **exactly**: **Logistics**, **Food & Household**, and **Misc**.
+              1. Open the **Notes** app and make a new folder called **Mental Load**.
+              2. Inside it, make one note per category, with each note's first line the category name, exactly as written: **Logistics**, **Food & Household**, and **Misc**. Your shortcut looks for these names, and you'll use the same three in your prompt in a moment, so keep them consistent.
+              3. If your partner has an iPhone, **share the folder now**, so it's done: long-press the **Mental Load** folder, tap **Share Folder**, and invite them by **Messages** or **Mail**. From then on, everything your Brain Dump sorts shows up on their phone too, no extra step.
 
-              The names have to match your prompt letter for letter, so the shortcut can find each note.
-            imageUrl: /courses/ai-your-life-admin-00/build-make-notes.webp
+              If your partner is on Android, no problem: skip the sharing for now, and in a later challenge you'll set up a way to send them the list instead.
+            imageUrl: /courses/ai-your-life-admin-00/make-folder-and-notes.webp
         - type: text
           title: "Build it: catch what you say"
-          subtitle: The block that listens
+          subtitle: The block that captures your words
           content:
             body: |-
               Open the **Shortcuts** app and tap the **+** to start a new shortcut. Now add your first action:
 
-              1. Search for **Dictate Text** and add it. This is the bit that listens to you.
-              2. Tap the blue arrow on the action to open its settings: pick your **Language**, and set **Stop Listening** to **On Tap**, so it keeps listening through your pauses and waits until you tap Done.
-
-              If it ever stops before you're done, just keep talking, or run it again.
+              1. Search for **Dictate Text** and add it. This is the bit that transcribes what you say.
+              2. Tap the blue arrow on the action to open its settings: pick your **Language**, and set **Stop Listening** to **On Tap**, so it keeps listening through your pauses and waits until you tap the **stop** button (⏹️).
             imageUrl: /courses/ai-your-life-admin-00/build-dictate-text.webp
         - type: text
           title: "Build it: hand it to Apple's model"
@@ -135,8 +144,26 @@ course:
               1. Search for **Use Model** and add it. Tap the model and choose **Private Cloud Compute**.
               2. Tap the blue arrow to open its settings, and set the **Output** to **Dictionary**, so the answer comes back as your labelled categories.
 
-              **Why this one and not ChatGPT?** Private Cloud Compute is Apple's own AI, already built into your phone. There's nothing to set up and no account to make. It keeps your brain dump private, instead of sending it to another company. And it hands your shortcut a clean, sorted answer nearly every time. It runs on Apple's servers, so you'll need to be online.
+              **Why this one and not ChatGPT?** 
+              
+              *Private Cloud Compute* is Apple's own AI, already built into your phone. There's nothing to set up and no account to make. It keeps your brain dump private, instead of sending it to another company. And it hands your shortcut a clean, sorted answer nearly every time. It runs on Apple's servers, so you'll need to be online.
             imageUrl: /courses/ai-your-life-admin-00/build-use-model.webp
+        - type: text
+          title: "Build it: copy your prompt"
+          subtitle: Your instruction to the AI
+          content:
+            body: |-
+              Now for the instruction that does the sorting, called a **prompt**. It tells the AI to sort whatever you say into the **same three categories as your notes**: Logistics, Food & Household, and Misc. You can reword it or add your own categories later, as long as your notes use the same names. Copy it now:
+
+              ```
+              Sort what I say into a dictionary with exactly these keys: Logistics, Food & Household, Misc.
+
+              Each value is a short list of the items that fit. Put anything that doesn't fit under Misc. Don't add anything I didn't say.
+
+              Here is what I said:
+              ```
+
+              Your shortcut will drop **what you said** in under that last line. You don't type a word.
         - type: text
           title: "Build it: paste your prompt in"
           subtitle: Where your words go
@@ -145,34 +172,41 @@ course:
               Now give **Use Model** your prompt. When you added it, its text box already picked up a blue **Dictated Text** chip. That chip is a **variable**, a placeholder the shortcut fills in with your words each time you run it. You want your prompt to come first, so:
 
               1. Delete the **Dictated Text** chip to clear the box.
-              2. **Paste the prompt** you copied earlier.
+              2. **Paste the prompt** you copied earlier. (Lost it off your clipboard? Grab it again from the [prompt toolkit](TOOLKIT_LINK_PLACEHOLDER).)
               3. Tap to add the **Dictated Text** variable back at the very end, after the last line.
 
               You don't type your words yourself; that chip is how they flow into the prompt.
             imageUrl: /courses/ai-your-life-admin-00/build-paste-prompt.webp
         - type: text
           title: "Build it: route your first category"
-          subtitle: Four actions, one category
+          subtitle: Five actions, one category
           content:
             body: |-
-              Now send one category to its note. Add these **four actions in order**, all for **Logistics**:
+              Now send one category to its note. Add these **five actions in order**, all for **Logistics**:
 
               1. **Get Dictionary Value**: type **Logistics** as the key, and make sure it reads from the **Response** (the AI's answer).
-              2. **Combine Text**: set it to combine with **New Lines**, so each item sits on its own line.
-              3. **Find Notes**: set the filter so **Name** contains **Logistics**.
-              4. **Append Checklist Item**: for the note, insert the **Find Notes** result; for the text, insert the **Combined Text**. Each line becomes a tickable checklist item.
+              2. **Combine Text**: it takes the **Dictionary Value** from the block above; set it to combine with **New Lines**, so each item sits on its own line.
+              3. **If**: set it to **Combined Text** → **has any value**. This skips the category when you said nothing for it. Without it, the next action would have nothing to add and would stop to ask you to type a name. Delete the **Otherwise** line; you don't need it.
+              4. **Find Notes** (inside the If): set the filter so **Name** contains **Logistics**.
+              5. **Append Checklist Item** (inside the If): on screen this reads *Append checklist item [Name] to [Note]*. Put your **Combined Text** in as the name, and the **Find Notes** result in as the **Note**. Each line becomes its own tickable checklist item.
             imageUrl: /courses/ai-your-life-admin-00/build-route-category.webp
         - type: text
           title: "Build it: do the same for the others"
           subtitle: Repeat the block
           content:
             body: |-
-              That four-action block is the whole pattern. Now repeat it for each of your other categories, changing the names as you go:
+              That five-action block, **Get Dictionary Value → Combine Text → If → Find Notes → Append Checklist Item**, is the whole pattern. Build the same five again for each of your other categories.
 
-              - A block for **Food & Household** (key **Food & Household**, note **Food & Household**).
-              - A block for **Misc** (key **Misc**, note **Misc**).
+              The only thing that changes each time is the **category name**, and it appears in just two of the actions:
 
-              One tip: as you add each block, check its **Append Checklist Item** points at *that block's own* **Find Notes** and **Combined Text**, not the one above. With near-identical blocks, the shortcut likes to grab the wrong one.
+              - the **Get Dictionary Value** key
+              - the **Find Notes** name filter
+
+              The rest (Combine Text, the If, and Append Checklist Item) stay exactly the same, since they only point at the blocks right above them.
+
+              So add one more full block for **Food & Household** (its key and its note filter both **Food & Household**), then one more for **Misc** (both **Misc**).
+
+              *One tip:* the blocks look near-identical, so it's easy for a block's **If** or **Append Checklist Item** to read the block above by mistake. To check one, tap its blue **Combined Text** or **Find Notes** chip, then tap **Reveal Action** in the menu that slides up. Shortcuts jumps to the action that chip comes from. Make sure that's the one in the *same* block. If it points at an earlier block, tap the chip, remove it, then insert the right one. (Building each block fully before you start the next helps too, since a new action usually wires to the one just above it.)
             imageUrl: /courses/ai-your-life-admin-00/build-repeat-categories.webp
         - type: text
           title: "Build it: skip the empty taps"
@@ -183,6 +217,7 @@ course:
 
               1. Right after **Dictate Text**, add an **If** action, and set it to **Dictated Text** → **has any value**.
               2. Drag the **End If** to the very bottom, so every other action sits **inside** the If.
+              3. The **If** also adds an **Otherwise** line. You don't need it, so delete it, since nothing needs to happen when you've said nothing.
 
               Now if you didn't say anything, nothing runs. Tap it by mistake, say nothing, and nothing happens.
             imageUrl: /courses/ai-your-life-admin-00/build-if-guard.webp
@@ -191,41 +226,32 @@ course:
           subtitle: The finish
           content:
             body: |-
-              One last touch. Tap the name at the top and rename it something easy to say, like **Brain Dump**. That becomes its Siri phrase, so later you can say *"Hey Siri, Brain Dump"* without opening anything. Tap **Done**.
+              One last touch. Tap the name at the top and rename it something easy to say, like **Brain Dump**. That becomes its **Siri phrase**, the words you'll use to run it in a moment. Tap **Done**.
 
-              One honest note: once in a while the answer comes back in the wrong shape, or you see a brief error, and nothing gets sorted. Do the dictation again and it sorts itself out. That's your first shortcut built. 💫
+              *One honest note:* once in a while the answer comes back in the wrong shape, or you see a brief error, and nothing gets sorted. Do the dictation again and it sorts itself out. That's your first shortcut built. 💫
             imageUrl: /courses/ai-your-life-admin-00/build-finish.webp
         - type: text
-          title: "Here's what Dalmie gets back"
-          subtitle: A quick look before you try
+          title: "How to run it"
+          subtitle: One tap away
           content:
             body: |-
-              Dalmie taps her shortcut and rambles for a minute:
+              For a proper brain dump, you want it to keep listening while you pause and think, and to stop only when *you* say so. You get that when you **tap** the shortcut to run it: it opens a panel with a **stop** button (⏹️) and waits for you. So put it one tap away:
 
-              *"Right, we're out of nappies and wipes, the health visitor is coming Tuesday at 11, I keep meaning to book the 6-week check, and we need more of that barrier cream."*
+              1. Open the shortcut's details, tap the **Share** icon, and choose **Add to Home Screen**. Now it's an icon you tap like any app.
+              2. Tap that icon to start. Talk, pause and think all you like, then tap the **stop** button (⏹️) when you're finished.
 
-              A few seconds later, it's sorted into her category notes, each item a tickable checklist line:
-
-              **Logistics**
-              - Health visitor, Tuesday at 11
-              - Book the 6-week check
-
-              **Food & Household**
-              - Nappies
-              - Wipes
-              - Barrier cream
-
-              She didn't sort a thing, and she didn't open a single app. She said it the way it fell out, and each piece is now something she, or her partner, can tick off.
+              You can also just open the **Shortcuts** app and tap **Brain Dump**. (Saying *"Hey Siri, Brain Dump"* works too, but Siri stops as soon as you pause, so for a rambly dump with thinking time, tapping is better. Later, Challenge 4 adds a tap on the back of your phone.)
+            imageUrl: /courses/ai-your-life-admin-00/run-the-shortcut.webp
         - type: free-text-exercise
           title: Run it, then ask anything
           content:
             description: |-
-              Your turn. Tap your Brain Dump shortcut and, when it starts listening, talk about everything on your mind right now, in any order. A messy ramble is fine, take your time, it keeps listening until you tap Done. Then open your **Mental Load** folder and see everything sorted into tickable checklists.
+              Your turn. Tap your Brain Dump to start it (from your Home Screen, or in the Shortcuts app), and when it starts listening, talk about everything on your mind right now, in any order. A messy ramble is fine, take your time, it keeps listening until you tap the stop button (⏹️). Then open your **Mental Load** folder and see everything sorted into tickable checklists.
 
               If something landed in the wrong note, or a step didn't make sense, ask here and you'll get an answer.
             subDescription: No question is too small. And if it worked, tell us how your first brain dump went.
             placeholder: e.g. My items landed in the wrong note...
-            systemPrompt: 'You are a warm, knowledgeable mentor for a new mum taking a course. In this first challenge she builds an iPhone Shortcut called Brain Dump that sorts a minute of talking into category notes, each an Apple Notes checklist. First she makes a Mental Load folder with one note per category, each note first line matching a category exactly: Logistics, Food & Household, Misc. The shortcut is: Dictate Text (Language set, Stop Listening on On Tap so it waits until she taps Done), then Use Model set to Private Cloud Compute with Output set to Dictionary, using a prompt that sorts what she says into a dictionary with keys Logistics, Food & Household, Misc (Misc catches anything that does not fit), with the Dictated Text variable at the end; then, for each category, a block of four actions: Get Dictionary Value (that key, reading from the Response), Combine Text (New Lines), Find Notes (Name contains that category), Append Checklist Item (note is the Find Notes result, text is the Combined Text). Everything after Dictate Text is wrapped in an If that checks Dictated Text has any value, so an accidental tap with no speech does nothing. She runs it by tapping the shortcut. She may report something not working or ask about any step. Common causes to check for: a category note not made, or its name not matching the prompt key exactly, so Find Notes finds nothing; Apple Intelligence not turned on in Settings under Apple Intelligence & Siri; the Output not set to Dictionary; an Append Checklist Item pointing at the wrong block''s Find Notes or Combined Text (with near-identical blocks it is easy to grab the one above); items landing in the wrong category (a sorting call by the model, tweak the prompt or move the item by hand); the model occasionally returning the wrong shape or a brief error, so nothing sorts (doing the dictation again usually fixes it); dictation not catching everything (make sure Stop Listening is On Tap and she taps Done); a random, invented list appearing, which happens when the shortcut runs on an empty dictation and the forced Dictionary output makes the model fill the categories with made-up items (the If wrapper prevents this, so check it is in place and wraps every action). Answer clearly and warmly in British English, in clear, everyday words for someone non-technical, in at most a few short sentences or bullets. If it falls outside the course, gently point her to Kinga and Tamas in the Discord community. Do not use em dashes. End on an encouraging note. Reply in a markdown format.'
+            systemPrompt: 'You are a warm, knowledgeable mentor for a new mum taking a course. In this first challenge she builds an iPhone Shortcut called Brain Dump that sorts a minute of talking into category notes, each an Apple Notes checklist. First she makes a Mental Load folder with one note per category, each note first line matching a category exactly: Logistics, Food & Household, Misc. The shortcut is: Dictate Text (Language set, Stop Listening on On Tap so it waits until she taps the stop button (the square)), then Use Model set to Private Cloud Compute with Output set to Dictionary, using a prompt that sorts what she says into a dictionary with keys Logistics, Food & Household, Misc (Misc catches anything that does not fit), with the Dictated Text variable at the end; then, for each category, a block of five actions: Get Dictionary Value (that key, reading from the Response), Combine Text (New Lines), an If that checks the Combined Text has any value, and inside that If a Find Notes (Name contains that category) and an Append Checklist Item (note is the Find Notes result, text is the Combined Text). Everything after Dictate Text is wrapped in an If that checks Dictated Text has any value, so an accidental tap with no speech does nothing. She runs it by tapping the shortcut. She may report something not working or ask about any step. Common causes to check for: a category note not made, or its name not matching the prompt key exactly, so Find Notes finds nothing; Apple Intelligence not turned on in Settings under Apple Intelligence & Siri; the Output not set to Dictionary; an Append Checklist Item pointing at the wrong block''s Find Notes or Combined Text (with near-identical blocks it is easy to grab the one above); a category that came back empty making Append Checklist Item stop and pop up What checklist item name? (that category''s If, Combined Text has any value, is missing, or the Find Notes and Append are not inside it); items landing in the wrong category (a sorting call by the model, tweak the prompt or move the item by hand); the model occasionally returning the wrong shape or a brief error, so nothing sorts (doing the dictation again usually fixes it); dictation not catching everything (make sure Stop Listening is On Tap and she taps the stop button (the square)); a random, invented list appearing, which happens when the shortcut runs on an empty dictation and the forced Dictionary output makes the model fill the categories with made-up items (the If wrapper prevents this, so check it is in place and wraps every action). Answer clearly and warmly in British English, in clear, everyday words for someone non-technical, in at most a few short sentences or bullets. If it falls outside the course, gently point her to Kinga and Tamas in the Discord community. Do not use em dashes. End on an encouraging note. Reply in a markdown format.'
             checkerPrompt: 'The learner is asking a question or sharing how their build went. Accept any genuine question, problem description, or comment. Only flag clearly empty or nonsense input. This is their message:'
         - type: challenge-end
           title: "Your voice sorts itself now! 🎉"
@@ -455,7 +481,7 @@ course:
               Two hands-free ways, once they're set:
 
               - **Back Tap:** go to *Settings* → *Accessibility* → *Touch* → *Back Tap*. Choose *Double Tap* or *Triple Tap* and pick your shortcut. Now tapping the **back of your phone** runs it. This works on most iPhones.
-              - **The Action Button:** if your iPhone has the small button above the volume keys (iPhone 15 Pro and 15 Pro Max, every iPhone 16, the iPhone 17 line, and iPhone Air have it), set it in *Settings* → *Action Button* to run your shortcut with one press.
+              - **The Action Button:** if your iPhone has the small button above the volume keys (iPhone 15 Pro and 15 Pro Max, any iPhone 16 or newer, and iPhone Air have it), set it in *Settings* → *Action Button* to run your shortcut with one press.
 
               Pick whichever suits the phone in your hand. When your hands are full mid-feed, *"Hey Siri, Baby Log"* or a tap on the back is the one that saves you.
         - type: text
@@ -483,7 +509,7 @@ course:
               No question is too small.
             subDescription: Type your question and you'll get a clear answer right back.
             placeholder: e.g. Back Tap isn't running my shortcut...
-            systemPrompt: 'You are a warm, knowledgeable mentor for a new mum finishing a course where she built two iPhone Shortcuts. Brain Dump: Dictate Text (Language set, Stop Listening on On Tap), Use Model set to Private Cloud Compute with Output on Dictionary and a prompt that sorts what she says into categories (Logistics, Food & Household, Misc), plus the Dictated Text variable; then per category a block of Get Dictionary Value, Combine Text (New Lines), Find Notes, Append Checklist Item, into notes inside a Mental Load folder. She then shares that Mental Load folder with her partner via Notes Collaborate, or, for an Android partner, sends the result via WhatsApp using a Text action that lays out the categories followed by a Send message via WhatsApp action. The whole shortcut body sits inside an If that checks the Dictated Text has any value, so an empty tap does nothing. Baby Log: Dictate Text, Use Model on Private Cloud Compute or ChatGPT (her choice, most likely Private Cloud Compute) with Output on Automatic and a one-tidy-line prompt, Current Date with Format Date, Find Notes filtered to a note named Baby Log, Append to Note. The course also covered triggers: Add to Home Screen from the share menu, a Lock Screen control under Customise, Back Tap under Settings then Accessibility then Touch, the Action Button under Settings (iPhone 15 Pro and Pro Max, the 16 and 17 families, and iPhone Air only), Hey Siri plus the shortcut name, and dictating in other languages by adding a keyboard and holding the microphone. She may ask about anything from the course or report something not working. Answer clearly and warmly in British English, in clear, everyday words for someone non-technical, in at most a few short sentences or bullets. If it falls outside the course, gently point her to Kinga and Tamas in the Discord community. Do not use em dashes. End on an encouraging note. Reply in a markdown format.'
+            systemPrompt: 'You are a warm, knowledgeable mentor for a new mum finishing a course where she built two iPhone Shortcuts. Brain Dump: Dictate Text (Language set, Stop Listening on On Tap), Use Model set to Private Cloud Compute with Output on Dictionary and a prompt that sorts what she says into categories (Logistics, Food & Household, Misc), plus the Dictated Text variable; then per category a block of Get Dictionary Value, Combine Text (New Lines), Find Notes, Append Checklist Item, into notes inside a Mental Load folder. She then shares that Mental Load folder with her partner via Notes Collaborate, or, for an Android partner, sends the result via WhatsApp using a Text action that lays out the categories followed by a Send message via WhatsApp action. The whole shortcut body sits inside an If that checks the Dictated Text has any value, so an empty tap does nothing. Baby Log: Dictate Text, Use Model on Private Cloud Compute or ChatGPT (her choice, most likely Private Cloud Compute) with Output on Automatic and a one-tidy-line prompt, Current Date with Format Date, Find Notes filtered to a note named Baby Log, Append to Note. The course also covered triggers: Add to Home Screen from the share menu, a Lock Screen control under Customise, Back Tap under Settings then Accessibility then Touch, the Action Button under Settings (iPhone 15 Pro and Pro Max, any iPhone 16 or newer, and iPhone Air only), Hey Siri plus the shortcut name, and dictating in other languages by adding a keyboard and holding the microphone. She may ask about anything from the course or report something not working. Answer clearly and warmly in British English, in clear, everyday words for someone non-technical, in at most a few short sentences or bullets. If it falls outside the course, gently point her to Kinga and Tamas in the Discord community. Do not use em dashes. End on an encouraging note. Reply in a markdown format.'
             checkerPrompt: 'The learner is asking a question or sharing something they are unsure about. Accept any genuine question or comment. Only flag clearly empty or nonsense input. This is their message:'
         - type: course-end
           title: You've handed the mental load to your phone! 🎉
