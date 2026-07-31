@@ -95,19 +95,31 @@ Happy building!
 ### Why do you want to represent Lovable in your community? What would make this a fantastic experience for you?
 0/1000
 
-I've been part of the Lovable community from the start. First, going through Lovable Shipped, and ending at #40. Then SheBuilds S01 as a participant, then SheBuilds S02 as a volunteer, supporting builders on Discord, and also offering them two of our courses for free to help them build their product with Lovable. Then at an in-person event in Singapore at IWD where the Lovable ambassador used our course content word-for-word without us knowing her, because she found it more useful than the material she had access to. We also gave our "Build your first app with Lovable" course for free for two weeks before IWD to encourage more women to take advantage of the free Lovable day.
+At a SheBuilds event in Singapore on IWD, an ambassador taught from our course content, word for word. We'd never met her. She just found it more useful than the material she was provided. We only realised it at the event. It's a strange compliment, but that's one of the things that made me apply.
 
-And throughout all this, I shared and promoted Lovable, because it democratises software development. I’ve seen how it can empower women to start their businesses or build that extra income stream.
+I've been around Lovable since the early days. Lovable Shipped, where I finished at #40. SheBuilds S01 as a participant, then S02 as a volunteer, answering questions on Discord and giving builders two of our courses for free so they could build their products with more confidence.
+
+I keep recommending Lovable because of what I've seen it do for women. A lot of them arrive convinced that building software isn't for them, and then they start a business with it, or build an extra income stream on the side.
+
+What would make this a fantastic experience for me is working closer with your team, and using that to reach more women who can now build things that were out of reach for them before AI.
+
+*(997 characters.)*
 
 ### Tell us about a community, group, or audience you've built or grown. What was your role, and what did it become?
 0/1000
 
-I'm organising ProductTank Lisbon, we put on events every couple of months. ProductTank is a global community of product builders.
+I organise ProductTank Lisbon, the local chapter of a global community for product people. My role is finding speakers, asking companies to host us or sponsor the evening, MCing on the night, and sometimes carrying heavy objects and organising chairs in a room. Whatever the event needs.
+
+I joined a year ago. The chapter had run three events the year before and none at all that year, because the organisers were tired and life had got in the way for all of them. So I picked it up. We've run six events since, and the last one was a session building with Lovable. We have 2,799 members now.
+
+The other community I'm growing is our own, around Little Parrot. We're trying to make it an encouraging and kind space, where a woman can ask the questions she thinks are too basic while she's building with AI, and nobody makes her feel small for it. Watching that happen is the part I like most.
+
+*(889 characters, so there's room for about 110 more. Two things that would use it well if you have the numbers: how many people came to the Lovable session, and what they built there.)*
 
 ## Educator questions
 
 ### Which subject do you teach?
-product management, AI, how to build digital products
+Building with AI (mostly Lovable), product management, and technical literacy
 
 ### What format(s) do you primarily teach in?
 
@@ -120,9 +132,25 @@ product management, AI, how to build digital products
 
 ### Share 1-2 links to teaching content you're proud of.
 https://littleparrot.app/5e86e580-264c-442c-8cc4-be5645f13e87/course-overview
-https://productkind.substack.com/p/how-to-share-bad-news
 https://www.youtube.com/watch?v=vx-oh5flc_g&list=PLeR-9OrCdBQA&index=5
 
 ### Pitch us one session you'd run for the Lovable community. Title, audience, and what someone will be able to do afterward that they couldn't before.
 0/1000
 
+Title: Technical literacy for vibe coders: get Lovable to build what you meant
+
+Audience: People who can't code yet, have built something with Lovable already, and now want to level up. I'd focus mostly on women, though it works for anyone.
+
+The level-up is four things:
+1. They'll structure a prompt in markdown, so no important detail gets lost inside a paragraph.
+2. They'll know the names for the parts of their own app, and can communicate more effectively what they want to build or change.
+3. They'll understand what Lovable says back, including what it decided for them.
+4. They'll describe a bug precisely enough for Lovable to fix it on the first try, rather than writing "It still doesn't work" five more times.
+
+We'd finish by writing one prompt each for whatever they want to build next, using the techniques from the session.
+
+The payoff for Lovable is fewer people giving up because they think the problem is them. And I'd run a recurring clinic for people who get stuck.
+
+*(986 characters.)*
+
+**If you'd rather lead with the clinic:** the pitch would need to promise a transferable routine, not just help, because the question asks what someone can do afterwards that they couldn't before. Something like "watch three real apps get unstuck, leave with the routine for diagnosing your own". Say the word and I'll write that version.
