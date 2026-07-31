@@ -17,7 +17,74 @@ So, I've seen how Lovable evolved over the past 1.5 years.
 
 ### Record and link to a 1-2 minute video where you explain how Lovable works to someone who hasn't used it before. Please make sure the video is viewable by our team.
 
-This is what your first prompt should look like for Lovable.
+**Structure:** debunk the long PRD, give the starter prompt, explain the four parts of an app (frontend, backend, database, cloud), show that Lovable handles all four.
+
+**Final script, as recorded** (1:50 total, transcribed from the burned-in subtitles of `Lovable-ambassador-application-clean.mp4`)
+
+**[0:00, on camera]**
+You don't need to write a long PRD to start building with Lovable. Let me show you what you do need.
+
+**[0:06, on camera]**
+Over 600 women have taken our course on building their first app with Lovable. And not one of them started with writing a product requirements document.
+
+**[0:16, on camera, cutting to the prompt on screen]**
+What Lovable needs from you is just some structure, and it fits into five categories.
+
+**[0:22, screen: the prompt in Lovable]**
+So in Lovable, simply describe what it is that you want to build. That's your product overview.
+
+**[0:28]**
+Then in the user flow section, write down the first flow that your user will take in the product, and resist the urge to cram too much into this.
+
+**[0:37]**
+Platform requirements, mine are always mobile-first and accessible.
+
+**[0:42]**
+Then your design system. So colours, fonts, and style you are going after.
+
+**[0:48]**
+And finally, your target user. So who are you building this for?
+
+**[0:53, pressing send]**
+You click go and wait for the magic happen.
+
+**[0:56, screen: the finished build, clicking through the app]**
+Once the build finished, you can just easily click around and test if everything works the way you intended to.
+
+**[1:03, on camera]**
+So, what did Lovable do there? Most apps have four parts, and knowing them makes it a little bit easier to build what you want.
+
+**[1:10]**
+The front-end is what you see and click.
+
+**[1:14]**
+Then we have the back-end. That's basically where a lot of the logic lives.
+
+**[1:18]**
+We have a database that looks like an Excel table.
+
+**[1:21]**
+And then this whole thing lives in the cloud. That is basically a computer somewhere.
+
+**[1:27, screen: the Published panel and the URL]**
+Lovable does all four. And when you click publish, your product will appear on the internet. And you get its web address. You can share your product with anyone.
+
+**[1:36, on camera]**
+So, a short description is enough to get started.
+
+**[1:39]**
+Let me know your one question in the comments that holds you back from building with Lovable.
+
+**[1:44]**
+And you can find the builder's template down in the description.
+
+**[1:49]**
+Happy building!
+
+**Transcription notes**
+- Three spots where the spoken wording came out slightly off, in case you re-record or want them fixed in the caption file: "wait for the magic happen" at 0:53 (missing "to"), "Once the build finished" at 0:56, and "works the way you intended to" at 1:02.
+- The burned-in captions spell it "colors" at 0:44. Everything else reads as British English.
+- The published URL shown on screen is book-club-organiser.lovable.app.
 
 ### Why do you want to represent Lovable in your community? What would make this a fantastic experience for you?
 0/1000
