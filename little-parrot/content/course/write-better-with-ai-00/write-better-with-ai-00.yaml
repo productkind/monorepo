@@ -153,7 +153,7 @@ course:
         - AI
         - Slack
         - Tone and Style
-      description: Communicate with your team by prompting AI to help you draft a Slack message in the right tone, and style.
+      description: Communicate with your team by prompting AI to help you draft a Slack message in the right tone and style.
       completionTime: 8:00
     - steps:
         - type: text
@@ -194,7 +194,7 @@ course:
 
               We're excited to announce the launch of our new Saved Dashboard View feature! This update allows users to save their preferred dashboard configurations for easy access later.
 
-              With this feature, you can now customize your dashboard and save multiple views based on your needs. No more reconfiguring your dashboard every time you log in!
+              With this feature, you can now customise your dashboard and save multiple views based on your needs. No more reconfiguring your dashboard every time you log in!
 
               The feature is now live for all users. We hope this improves your workflow and makes data analysis more efficient.
 
@@ -261,7 +261,7 @@ course:
           content:
             body: |-
               - Answer questions
-              - Summarize content
+              - Summarise content
               - Generate text
               - Translate languages
               - Write code
@@ -327,7 +327,7 @@ course:
               - "True"
               - "False"
             question: A Large Language Model understands text in the same way a human does.
-            explanation: An LLM predicts the next word or token in a sequence based on patterns it learned from huge amounts of text. It doesn't truly "understand" language like a person. It simply generates statistically likely text.
+            explanation: An LLM predicts the next word or token in a sequence based on patterns it learned from huge amounts of text. It doesn't truly "understand" language like a person. It generates statistically likely text.
             correctAnswer: 1
         - type: quiz-question
           title: Why is it large?
@@ -389,7 +389,7 @@ course:
         - Context and Background
         - LLM
         - Tokens
-      description: Turn your Jira tickets into clear, and concise product updates stakeholders feel excited about.
+      description: Turn your Jira tickets into clear, concise product updates stakeholders feel excited about.
       completionTime: 12:30
     - steps:
         - type: text
@@ -585,7 +585,7 @@ course:
             body: |-
               You were in stand-up and "Redis" kept coming up. Everyone nodded along; you smiled, but inside you were thinking, *"What is Redis, and why do we use it in our product?"*
 
-              In this challenge, you'll **learn practical prompts** to get AI to **explain terms** like Redis in plain English, show where they fit in your product, so you can **communicate** with the developers **confidently**.
+              In this challenge, you'll **learn practical prompts** to get AI to **explain terms** like Redis without the jargon, show where they fit in your product, so you can **communicate** with the developers **confidently**.
           subtitle: ""
         - type: free-text-exercise
           title: Prompting strategy
@@ -596,13 +596,13 @@ course:
               What key details would you include so the answer is clear and useful for you as a PM?
 
               **Think about:**
-              - The level of explanation you need (plain English vs. technical)
+              - The level of explanation you need (non-technical vs. technical)
               - The context (how it's used in your product)
               - The purpose (e.g. so you can talk about it in stand-up)
 
               Write down the details you'd add to the prompt. When you're done, hit *Check* to get AI feedback on how to structure a stronger prompt.
             placeholder: Type your answer here...
-            systemPrompt: 'You are a mentor guiding a product manager learning how to prompt AI effectively.  The learner has been asked: *"Imagine you''re writing a prompt asking AI to explain what Redis is and why it''s relevant for your product. What key details would you include so the answer is clear and useful for you as a PM?" *Your job is to give short, supportive feedback on their answer.  **Instructions:**- Always use a friendly, clear, understated tone.  - Keep feedback to 2-3 sentences.  - Write in **British English**.  - If their answer is vague (e.g. "explain Redis"), tell them to add:    - the level of explanation they want (plain English vs. technical)    - the context (how it''s used in their product)    - the purpose (why they need the explanation, e.g. for a stand-up).  - If they include one or two of those, praise them, then suggest what''s missing.  - If they include all three (clarity + context + purpose), praise them and confirm it''s a strong prompt.  **Output style:**- Supportive and conversational (e.g. "Good start…" / "Nice — asking for plain English makes a big difference…").  - No jargon, no overexplaining.  - End with encouragement (e.g. "That''s how you get answers you can actually use.").'
+            systemPrompt: 'You are a mentor guiding a product manager learning how to prompt AI effectively.  The learner has been asked: *"Imagine you''re writing a prompt asking AI to explain what Redis is and why it''s relevant for your product. What key details would you include so the answer is clear and useful for you as a PM?" *Your job is to give short, supportive feedback on their answer.  **Instructions:**- Always use a friendly, clear, understated tone.  - Keep feedback to 2-3 sentences.  - Write in **British English**.  - Never use em dashes.- If their answer is vague (e.g. "explain Redis"), tell them to add:    - the level of explanation they want (non-technical vs. technical)  - the context (how it''s used in their product)    - the purpose (why they need the explanation, e.g. for a stand-up).  - If they include one or two of those, praise them, then suggest what''s missing.  - If they include all three (clarity + context + purpose), praise them and confirm it''s a strong prompt.  **Output style:**- Supportive and conversational (e.g. "Good start…" / "Nice, asking for a non-technical explanation makes a big difference…").  - No jargon, no overexplaining.  - End with encouragement (e.g. "That''s how you get answers you can actually use.").'
             checkerPrompt: ""
           subtitle: ""
         - type: prompting-exercise
@@ -613,7 +613,7 @@ course:
               - id: base1
                 content: Explain what Redis is to a product manager.
               - id: base2
-                content: Describe Redis simply, without technical jargon.
+                content: Describe Redis in everyday terms, without technical jargon.
               - id: context1
                 content: Explain how Redis is commonly used in software products.
               - id: context2
@@ -727,25 +727,25 @@ course:
         - type: reflection
           title: Your key takeaways
           content:
-            description: Take a minute and think trough what you learned in this micro-course about prompting, AI, and LLMs.
+            description: Take a minute and think through what you learned in this micro-course about prompting, AI, and LLMs.
             placeholder: Type your answer here...
             subDescription: It's a cognitive science trick, called retrieval practice, that helps you to retain the knowledge you learned.
           subtitle: ""
         - type: course-end
           title: "Congratulations! You've completed the micro-course! \U0001F38A"
           content:
-            nextModule: Keep practicing these techniques, and watch how AI becomes your most valuable productivity partner!
-            description: You've mastered essential AI prompting techniques that will transform how you work.
+            nextModule: Keep practising these techniques on your real work, and they'll start to feel automatic.
+            description: You've learned the prompting techniques that make AI useful for everyday work writing.
             subDescription: |-
               **What you can now do:**
 
               ✓ **Write better team messages**: Draft Slack updates that capture the right tone without sounding controlling
 
-              ✓ **Create clear product updates**: Transform Jira tickets into stakeholder updates people understand and feel excited about
+              ✓ **Create clear product updates**: Turn Jira tickets into stakeholder updates people understand and feel excited about
 
               ✓ **Post authentically on LinkedIn**: Craft posts that sound like you, not a generic AI guru with buzzwords
 
-              ✓ **Learn technical concepts faster**: Get AI to explain complex terms in plain English so you can participate confidently in technical discussions
+              ✓ **Learn technical concepts faster**: Get AI to explain complex terms without the jargon so you can participate confidently in technical discussions
 
               **Your new toolkit:**
               * Setting tone and style to match your voice
@@ -769,9 +769,9 @@ course:
         - Prompting Strategy
         - LLM
         - Training
-      description: Learn practical prompts to get AI to explain technical terms in plain English, customised to your needs.
+      description: Learn practical prompts to get AI to explain technical terms without the jargon, customised to your needs.
       completionTime: 8:00
   titleSplit:
     - 'Write Better with AI:'
     - Prompting Foundations for Product Managers
-  description: Master practical prompting techniques to write faster and communicate more effectively at work. From team messages to stakeholder updates to LinkedIn posts, craft content that sounds like you, not like a robot.
+  description: Learn practical prompting techniques to write faster and communicate more effectively at work. Whether it's a team message, a stakeholder update, or a LinkedIn post, craft content that sounds like you, not like a robot.
