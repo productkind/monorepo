@@ -4,19 +4,19 @@ type: "Checklist"
 ---
 ## Check an AI Draft Before You Send It
 
-A two-minute pass over anything AI wrote for you, before it goes into Slack, an inbox, or a deck. Reach for it whenever your name is on the message and someone might act on what's in it.
+A quick pass over anything AI wrote for you, before it goes into Slack, an inbox, or a deck. Reach for it whenever your name is on the message and someone might act on what's in it.
 
 ### Why the check exists
 
-An LLM predicts the next piece of text based on patterns, so it produces what looks likely rather than what's true. When something is missing, it fills the gap with something plausible. That's called hallucination, and it comes with how the technology works, so no wording will switch it off. The good news is that hallucinations in PM writing are predictable, so you know where to look.
+A large language model (LLM), the technology behind chat assistants like ChatGPT and Claude.ai, predicts the next piece of text based on patterns, so it produces what looks likely rather than what's true. When something is missing, it fills the gap with something plausible. That's called hallucination, and it comes with how the technology works, so no wording will switch it off. The good news is that hallucinations in product management writing are predictable, so you know where to look.
 
-### The two-minute pass
+### The pass
 
 Run this over every draft, however low the stakes.
 
-- [ ] **Every number.** Percentages, load times, user counts, revenue, dates. If you didn't type it into the prompt, it isn't real.
-- [ ] **Every name.** People, teams, features, customers, tools. Check spelling and check the person actually did the thing you're crediting them for.
-- [ ] **Every cause-and-effect claim.** "Because of the new caching layer", "which is why churn dropped". The AI has no idea what caused what unless you told it.
+- [ ] **Every number.** Percentages, load times, user counts, revenue, dates. If you didn't give it that number, treat it as unverified until you've checked it.
+- [ ] **Every name.** People, teams, features, customers, tools. Check spelling, and check that the person did the thing you're crediting them for.
+- [ ] **Every cause-and-effect claim.** "Because of the new onboarding flow", "which is why churn dropped". The AI has no idea what caused what unless you told it.
 - [ ] **Every promise.** "Available next week", "rolling out to all customers", "we'll follow up on Friday". You're the one who has to keep these.
 - [ ] **Anything you can't back up.** If someone replied "where does that figure come from?", could you answer?
 - [ ] **The voice.** Read it aloud. Would you say this sentence to this person? Cut anything you wouldn't.
@@ -39,7 +39,7 @@ These are the spots worth reading twice, because they're where a draft goes wron
 
 ### Make the check faster
 
-Ask the draft to mark its own guesses. It won't catch everything, but it surfaces the obvious gaps in seconds.
+Ask the chat assistant to mark its own guesses in the draft. It won't catch everything, but it shows you the obvious gaps in seconds.
 
 ```
 Before I send this, go through the draft and list every factual claim in it: numbers, dates, names, and any cause-and-effect statement. For each one, say whether it came from the context I gave you, or whether you filled it in yourself. Do not rewrite the draft.
@@ -55,9 +55,9 @@ Read this as a sceptical reader who wasn't in any of the meetings. List the ques
 
 ### One thing that doesn't work
 
-Asking "are you sure?" or "is this accurate?" isn't verification. The model will answer that question the same way it wrote the draft, by predicting a likely response. Sometimes it backs down on a claim that was correct, sometimes it defends one it invented. Ask the same question twice and you can get two different answers.
+Asking "are you sure?" or "is this accurate?" isn't verification. The chat assistant will answer that question the same way it wrote the draft, by predicting a likely response. Sometimes it backs down on a claim that was correct, sometimes it defends one it invented. Ask the same question twice and you can get two different answers.
 
-Verification means you checking against the source: the Jira ticket, the dashboard, the person who actually knows.
+Verification means checking it yourself against the source: the Jira ticket, the dashboard, the person who knows the answer.
 
 ### Higher stakes, extra checks
 
@@ -77,4 +77,4 @@ If a draft goes out with an invented detail, note what it invented and add a lin
 Use only the facts I've given you above. If something is missing, leave a [GAP: ...] marker instead of filling it in.
 ```
 
-That marker turns a silent invention into a visible to-do, which is much easier to catch.
+That marker leaves a visible to-do where an invented detail would have gone, so you catch it before you send.

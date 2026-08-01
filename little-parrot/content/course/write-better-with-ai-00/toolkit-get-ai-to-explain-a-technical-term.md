@@ -4,7 +4,7 @@ type: "Prompt library"
 ---
 ## Get AI to Explain a Technical Term
 
-Prompts for the moment a word comes up in stand-up, everyone nods, and you don't want to be the one who stops the meeting. Open this afterwards and you'll understand the term, know where it sits in your product, and have a good question ready for next time.
+Prompts for the moment a word comes up in stand-up, everyone nods, and you don't want to be the one who stops the meeting. Open this afterwards and you'll understand the term, have a working idea of where it might fit in your product, and have a good question ready for next time.
 
 ### The three things every learning prompt needs
 
@@ -12,7 +12,7 @@ A prompt like "explain Redis" gets you a textbook paragraph you'll forget by lun
 
 1. **The level you want.** Otherwise you get either a Wikipedia definition or a sentence written for a nine-year-old. Say who you are and what you already know.
 2. **The context.** Where the term showed up, and what your product does. A term means something different in a payments product than in a video product.
-3. **The purpose.** What you need it for changes the whole answer. Understanding it well enough to nod along is a different explanation from understanding it well enough to make a trade-off decision.
+3. **The purpose.** What you need it for changes the whole answer. Nodding along in a meeting needs a different explanation from weighing up a trade-off decision.
 
 ### The starter template
 
@@ -30,7 +30,7 @@ Then tell me:
 I need this because [it came up in stand-up and I want to follow the conversation next time it does]. Keep it under 300 words and don't use analogies involving cars or restaurants.
 ```
 
-That last line is optional but effective. Overworked analogies are a default habit, and banning them usually gets you a more concrete answer.
+That last line is optional but effective. Chat assistants reach for the same few analogies by default, and ruling them out usually gets you a more concrete answer.
 
 ### When you need to know how it fits your product
 
@@ -39,14 +39,14 @@ Reach for this when the general explanation makes sense but you still can't pict
 ```
 [Redis is an in-memory data store used for caching and fast lookups.] I understand that much.
 
-Our product is [a dashboard where customers run reports over their own sales data. Reports can take several seconds to generate. We're on Postgres.]
+Our product is [a dashboard where customers run reports over their own sales data. Reports can take several seconds to generate. We're on Postgres (our database).]
 
 Walk me through three concrete places a team like ours would plausibly use Redis, what would get faster, and what could go wrong in each case. Be specific about the trade-off rather than listing benefits.
 
 Then tell me which of the three is most likely to be the one my engineers are talking about, and why.
 ```
 
-The answer is informed speculation about a product it has never seen, so treat it as a set of hypotheses to check with your team rather than the truth about your codebase.
+The answer is informed speculation about a product it has never seen, so treat it as a set of hypotheses to check with your team rather than the truth about how your product is built.
 
 ### When you have to make a decision
 
@@ -82,9 +82,9 @@ Give me five questions I could ask that would:
 For each question, tell me in one line what a concerning answer would sound like.
 ```
 
-### When you need to check you've actually understood
+### When you want to check your understanding
 
-Reach for this at the end. Explaining something back is the fastest way to find the hole in your understanding.
+Reach for this at the end. Explaining something back is a reliable way to find the gaps in your understanding.
 
 ```
 Here's my understanding of [Redis] in my own words:
@@ -110,7 +110,7 @@ Don't use the words [Redis, cache, or in-memory]. Explain it in terms of what th
 
 ### When you're stuck in a technical document
 
-Reach for this when you've been handed an RFC or a design doc and you're three paragraphs in.
+Reach for this when you've been handed a design document or an RFC (request for comments, an engineer's written proposal for how something should be built) and you're three paragraphs in.
 
 ```
 I'm reading a technical design document from my engineering team and I'm stuck. Here's the section:
@@ -118,7 +118,7 @@ I'm reading a technical design document from my engineering team and I'm stuck. 
 [paste the section]
 
 Tell me:
-- What this section is actually proposing, in three sentences
+- What this section is proposing, in three sentences
 - Which terms in it I need to understand to follow the rest of the document
 - What decision, if any, is being made here that I should have an opinion on
 - Anything in it that would affect users, dates, or cost
@@ -128,7 +128,7 @@ Don't explain terms I probably already know as a PM, like API or database.
 
 ### What to be careful about
 
-The model knows the general shape of these technologies well. It knows nothing about your product. Everything it says about *your* architecture is a guess based on what similar products usually do.
+A chat assistant like ChatGPT or Claude.ai, where you copy the answer out, knows these technologies in general terms. It knows nothing about your product. Everything it says about *your* architecture is a guess based on what similar products usually do.
 
 So use it to arrive at the conversation prepared, and treat what it tells you about your own system as questions to confirm. "Am I right that we're caching report results rather than raw data?" is a much better line in a review than a confident statement that turns out to be wrong.
 

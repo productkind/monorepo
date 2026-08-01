@@ -4,11 +4,11 @@ type: "Cheat sheet"
 ---
 ## Tone and Style Word Bank
 
-The vocabulary to describe how you want something to sound, so you don't have to invent the words while you're already under pressure. Open it when a draft is technically fine but doesn't sound like you, or when you know the message is delicate and you want to get the register right first time.
+The vocabulary to describe how you want something to sound, so you don't have to invent the words while you're already under pressure. Open it when a draft is technically fine but doesn't sound like you, or when you know the message is delicate and you want the level of formality right before you send anything.
 
 ### Where the words go
 
-Add a tone and style block underneath your request. Two or three tone words and one or two style rules are enough.
+Add a tone and style block underneath your request in your chat assistant (ChatGPT or Claude.ai, where you type a request and copy the answer out). Two or three tone words and one or two style rules are enough.
 
 ```
 Tone: warm, collaborative, confident, not blaming.
@@ -19,7 +19,7 @@ Length: under 40 words.
 
 ### Tone words, by the situation you're in
 
-Pick two or three. Combining a warm word with a firm word usually lands better than either on its own.
+Pick two or three. Combining a warm word with a firm word usually works better than either on its own.
 
 | The situation | Tone words to use | What they stop the AI doing |
 |---|---|---|
@@ -58,9 +58,9 @@ Do not use: "excited to announce", "I hope this finds you well", "game-changer",
 
 Keep that line in a note somewhere and paste it into any prompt where the output has your name on it.
 
-### The strongest move: show it your own writing
+### Show it your own writing
 
-Describing your voice gets you close. Showing it gets you closer. Before your request, paste two or three things you've actually written.
+Showing the AI what you sound like works better than describing it. Before your request, paste two or three things you've written.
 
 ```
 Here are three Slack messages I sent to my team last month. Match my voice: how long my sentences are, how formal I am, whether I use emoji, how I open and how I close.
@@ -76,11 +76,13 @@ This works for LinkedIn posts, release notes, and stakeholder emails too. Keep a
 
 ### Naming a reference style
 
-If you don't have your own samples to hand, point at something the model has read a lot of.
+If you don't have your own samples to hand, point at something the AI has read a lot of.
 
-- "Write it the way Lenny's Newsletter explains a product concept: concrete, one idea per paragraph, no hype."
+- "Write it the way Lenny's Newsletter explains a product concept: concrete, one idea per paragraph, no exaggeration."
 - "Structure it like a Basecamp Shape Up pitch: the problem first, then the appetite, then the solution."
 - "Write it like a Stripe changelog entry: what changed, who it affects, what to do about it."
+
+A Shape Up "appetite" is how much time the work is worth spending. A changelog is the running note a product publishes each time something changes.
 
 Use this as a starting point rather than the whole instruction, since a reference style gives you the shape but not your voice.
 
@@ -96,4 +98,4 @@ Use this as a starting point rather than the whole instruction, since a referenc
 | Blaming the team by accident | "Tone: not blaming. Ask about status, never about why it isn't done." |
 | Vague where you needed specifics | Add the specifics yourself. Tone and style can't fix missing information, so give it the numbers, names, and dates. |
 
-That last row is the one people miss most often. If the draft is thin rather than badly pitched, the fix is context, not tone. The [Build a Prompt in Three Parts](TOOLKIT_LINK_PLACEHOLDER) template covers what to add.
+That last row is the one people miss most often. If the draft is thin rather than badly pitched, add the missing information instead of adjusting the tone words. The [Build a Prompt in Three Parts](TOOLKIT_LINK_PLACEHOLDER) template covers what to add.

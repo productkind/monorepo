@@ -28,9 +28,9 @@ Context and background:
 
 ### What each part is doing
 
-**Task** points the model at a shape it already knows. "A Slack message" and "a one-page memo for the exec team" produce different structures before you've said anything else, so name the format and the destination in the first line.
+**Task** points the chat assistant (ChatGPT or Claude.ai, where you type a request and copy the answer out) at a shape it already knows. "A Slack message" and "a one-page memo for the exec team" produce different structures before you've said anything else, so name the format and the destination in the first line.
 
-**Tone and style** controls how it sounds. Without it you get the default register: long, upbeat, and slightly American. This is where you stop the draft sounding like a stranger wrote it. The [Tone and Style Word Bank](TOOLKIT_LINK_PLACEHOLDER) has the vocabulary if you're stuck for words.
+**Tone and style** controls how it sounds. Without it you get the default voice: long, upbeat, and slightly American. This is where you stop the draft sounding like a stranger wrote it. The [Tone and Style Word Bank](TOOLKIT_LINK_PLACEHOLDER) has the vocabulary if you're stuck for words.
 
 **Context and background** controls whether the content is true and useful. The model knows nothing about your product, your customers, or last Tuesday's decision. Everything it doesn't get from you, it invents.
 
@@ -55,7 +55,7 @@ Work through this when the draft comes back vague. Vagueness is nearly always mi
 
 **The hard facts**
 - Numbers, dates, names, ticket titles, quotes from real users
-- Constraints: what's not agreed, what's not shippable, what's under embargo
+- Constraints: what's not agreed, what's not ready to ship, what's under embargo (not to be shared outside the company until an agreed date)
 
 **The boundaries**
 - What to leave out, and why
@@ -90,16 +90,16 @@ Task:
 Draft a LinkedIn post for my personal profile about finishing a short course on AI prompting.
 
 Tone and style:
-- Tone: genuine, understated, conversational
-- Style: two or three short paragraphs, first person, no bullet list, no hashtag block. End with a question I'd actually ask.
+- Tone: honest, understated, conversational
+- Style: two or three short paragraphs, first person, no bullet list, no hashtag block. End with a real question, one I'd ask a colleague.
 - Length: under 150 words
 - Do not use: "excited to share", "game-changer", "10x", "unlock", rocket emoji, em dashes, the "not just X, but Y" pattern
 
 Context and background:
 - What this is about: a Little Parrot micro-course on prompting for product managers.
-- Who it's for: my network, mostly PMs and designers, many of whom already use AI daily and are sceptical of AI hype.
+- Who it's for: my network, mostly product managers and designers, many of whom already use AI daily and are sceptical of overblown AI claims.
 - Why now: I'd been getting generic output and assumed the tool was the problem. It was my prompts.
-- Key details: the techniques were setting tone and style, giving context and background, and understanding that an LLM predicts text rather than understanding it. The one that changed my output most was banning specific phrases.
+- Key details: the techniques were setting tone and style, giving context and background, and understanding that a large language model (LLM) predicts text rather than understanding it. The one that changed my output most was banning specific phrases.
 - What to leave out: don't imply I'm now an expert, and don't claim any productivity numbers.
 ```
 
@@ -107,7 +107,7 @@ Context and background:
 
 If the context lives in a document, attach it instead of summarising it. Most chat assistants accept file uploads and pasted text.
 
-Worth attaching: the Jira export for the release, your user interview notes, last quarter's update so the format matches, three of your own past posts so the voice matches, the PRD, the customer email you're replying to.
+Worth attaching: the Jira export for the release, your user interview notes, last quarter's update so the format matches, three of your own past posts so the voice matches, the PRD (product requirements document), the customer email you're replying to.
 
 When you attach something, say what to do with it. "Here is the Jira export. Use it for the feature list and the ticket titles. Ignore the estimates and the assignees."
 
@@ -123,4 +123,4 @@ Close. Three changes: cut the opening line and start with what changed for the u
 The facts are right but the voice isn't mine. Rewrite it in shorter sentences, drop every adjective that praises the work, and stop the sentence pattern where you set something up and then reverse it.
 ```
 
-If two or three follow-ups don't get you there, go back and edit the original prompt instead. A conversation that's drifted is harder to steer than a fresh, better-specified start.
+If two or three follow-ups don't get you there, go back and edit the original prompt instead. A conversation that has drifted is harder to steer than a new prompt with better details in it.
