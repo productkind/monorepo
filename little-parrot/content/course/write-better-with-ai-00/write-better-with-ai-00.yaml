@@ -688,9 +688,20 @@ course:
               conversation history again each time you send a new message. This history, along with
               any files you’ve attached, is bundled into the latest prompt and called the context.
 
-              The model pays most attention to the most recent few thousand tokens, roughly five to
-              seven thousand. This is why, in long conversations, it can seem like the AI forgets
-              earlier details.
+              There’s a limit to how much context a model can hold at once, called the context
+              window. Today’s models hold a lot, often a million tokens or more, which is hundreds
+              of pages of text.
+
+              But they don’t read all of it with equal care. Attention is strongest at the
+              beginning and at the end, and weakest in the middle. Some apps also summarise the
+              earlier part of a long conversation once it nears the limit, so older detail is
+              gone rather than skimmed.
+
+              Either way, a long conversation can start to feel like the AI has forgotten
+              something you said halfway through. Restating the key details in your latest
+              message brings them back to the end, where the model reads most closely. And if
+              it has already gone off track, starting a fresh chat with a short summary tends to
+              work better than trying to steer it back.
         - type: quiz-question
           title: Same question, different answer
           content:
