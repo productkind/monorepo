@@ -663,45 +663,15 @@ course:
         - type: video
           title: "How LLMs are trained: \U0001F355 metaphor"
           content:
-            vimeoId: 1164638275
-            videoRemotionId: lesson-write-better-with-ai-00-video-03
+            vimeoId: 1164638227
+            videoRemotionId: lesson-write-better-with-ai-00-video-02
             youtubeId: "OYPhqMhI-98"
             transcript: |-
-              When you type a message into an AI chat, your prompt isn’t processed on its own.
-              Behind the scenes, the system adds another piece: a hidden system prompt.
-              This is written by the model’s creators and sets the ground rules for how the AI
-              should behave with you.
+              AI models evolve like **pizza recipes**. The first pizzas were simple flatbreads. Over time, people tweak the recipe: cook, taste, adjust, repeat.
               
-              The model then takes both the system prompt and your prompt, breaks them down into
-              tokens, and starts predicting what comes next.
-
-              A token can be as short as a single letter or as long as a word. At each step, the
-              model ranks possible next tokens by likelihood, chooses from the top candidates,
-              and then repeats the process. By stringing these predictions together, one token at a
-              time, it produces a full reply. Because it samples from the top options rather than
-              always picking the single most likely one, the same prompt can lead to slightly
-              different answers.
-
-              But what about memory?
-
-              The model doesn’t actually remember past interactions. Instead, the app feeds it the
-              conversation history again each time you send a new message. This history, along with
-              any files you’ve attached, is bundled into the latest prompt and called the context.
-
-              There’s a limit to how much context a model can hold at once, called the context
-              window. Today’s models hold a lot, often a million tokens or more, which is hundreds
-              of pages of text.
-
-              But they don’t read all of it with equal care. Attention is strongest at the
-              beginning and at the end, and weakest in the middle. Some apps also summarise the
-              earlier part of a long conversation once it nears the limit, so older detail is
-              gone rather than skimmed.
-
-              Either way, a long conversation can start to feel like the AI has forgotten
-              something you said halfway through. Restating the key details in your latest
-              message brings them back to the end, where the model reads most closely. And if
-              it has already gone off track, starting a fresh chat with a short summary tends to
-              work better than trying to steer it back.
+              **Training a model** works the same way. An algorithm runs the model millions of times, checks the output, adjusts the parameters if the output is incorrect, then runs it again until it improves.
+              
+              When you **chat with AI**, you are **not training it**. You are using the final recipe. Billions of fixed parameters work together to serve your answer in seconds. No half-hour wait like a pizza delivery.
         - type: quiz-question
           title: Same question, different answer
           content:
