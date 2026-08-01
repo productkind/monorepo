@@ -11,8 +11,8 @@ account: little-parrot
 script makes it survivable (confidence-by-design); "that's the app's fault,
 not yours" models the judgement-free register we're known for;
 observation-before-interpretation is real PM craft shared plainly; testing
-before polishing protects credits and weeks. Repackages the User Test
-Script and Question Bank toolkit item.
+before polishing protects credits and weeks. Repackages the Run Your
+First User Test toolkit item.
 
 ## Format
 

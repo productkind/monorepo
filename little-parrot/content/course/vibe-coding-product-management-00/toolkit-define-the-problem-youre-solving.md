@@ -1,9 +1,10 @@
 ---
 challenge: "1 - Craft a Problem Statement"
+type: "Template"
 ---
-## Problem Statement Template
+## Define the Problem You're Solving
 
-A fill-in-the-blank template for defining the core problem your product solves. Come back to this whenever you start a new product idea or feel lost while planning features.
+A fill-in-the-blank template for describing the problem your product solves, written in your user's own words. Open it when you start a new product idea, or when you're deep in a list of features and no longer sure what you're building towards.
 
 ### The template
 
@@ -42,10 +43,10 @@ Before moving on, run your problem statement through these questions:
 - [ ] **Does it name a specific person or role?** "People who like books" is too broad. "Book club organisers" is specific.
 - [ ] **Is the outcome something the user wants to achieve, not a feature?** "I am trying to use a voting tool" describes a solution. "I am trying to efficiently select the next book" describes an outcome.
 - [ ] **Is the barrier real and specific?** "It's hard" doesn't help you build. "Messages are scattered across WhatsApp" tells you exactly what to fix.
-- [ ] **Does the root cause explain why the barrier exists?** The "because" should go one level deeper than the "but." If they sound the same, dig further.
+- [ ] **Does the root cause explain why the barrier exists?** The "because" should go one level deeper than the "but". If they sound the same, dig further.
 - [ ] **Does it avoid mentioning your solution?** The problem statement is about understanding the problem, not pitching your product. Save the solution for later.
 
-### Good vs. not-so-good examples
+### Good vs not-so-good examples
 
 | Part | Not so good | Better |
 |---|---|---|
@@ -55,4 +56,4 @@ Before moving on, run your problem statement through these questions:
 | **Because...** | There's no good tool | Messages are scattered across WhatsApp and the important stuff gets buried |
 | **Which makes me feel...** | Bad | Frustrated and exhausted |
 
-The "not so good" column is vague and could describe almost anyone. The "better" column gives you a clear picture of who you're building for and what's actually going wrong.
+The "not so good" column is vague and could describe almost anyone. The "better" column gives you a clear picture of who you're building for and what is going wrong for them.

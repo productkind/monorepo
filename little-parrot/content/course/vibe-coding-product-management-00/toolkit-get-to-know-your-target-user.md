@@ -1,9 +1,10 @@
 ---
 challenge: "2 - Define Your Target User"
+type: "Template"
 ---
-## User Persona Template
+## Get to Know Your Target User
 
-A reusable template for creating a user persona. Fill it in for each product idea to keep your target user front and centre when making decisions.
+A template for building a persona: a short profile of the one person you're building for, covering their situation, their frustrations, and what they want. Fill it in for each new product idea, and open it again whenever you're deciding whether a feature is worth building.
 
 ### The template
 
@@ -49,12 +50,12 @@ Goals:
 - Never lose a good book suggestion again
 ```
 
-### Prompts to help you fill each section
+### Questions to help you fill each section
 
-If you're stuck on a section, try answering these questions:
+If you're stuck on a section, try answering these:
 
 **Name and title:**
-What one phrase would describe this person's situation? Think "[Name], the [adjective] [role]" (e.g., "Sarah, the overwhelmed book club organiser" or "Marco, the time-pressed freelance designer").
+What one phrase would describe this person's situation? Think "[Name], the [adjective] [role]" (e.g. "Sarah, the overwhelmed book club organiser" or "Marco, the time-pressed freelance designer").
 
 **About:**
 - What's their day-to-day context related to your product?
@@ -71,12 +72,12 @@ Writing frustrations as quotes ("I can't find...") instead of descriptions ("The
 **Goals:**
 - If your product worked perfectly, what would change in their life?
 - What would they be able to stop doing?
-- What would they brag about to a friend?
+- What would they tell a friend about?
 
 ### How to use your persona
 
 Once you've created your persona, use it as a decision-making tool throughout your project:
 
-- **When choosing features:** "Would Sarah actually use this, or is it just nice to have?"
-- **When writing prompts for Lovable:** "What would Sarah expect to see on this screen?"
+- **When choosing features:** "Would Sarah use this, or is it only nice to have?"
+- **When writing prompts for Lovable, the AI app builder:** "What would Sarah expect to see on this screen?"
 - **When something feels off:** "If I showed this to Sarah, would she understand what to do?"

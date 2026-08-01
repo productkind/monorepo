@@ -11,7 +11,7 @@ account: little-parrot
 "would she actually use this?", the judgement skill our confidence-by-design
 angle centres; frustrations written as quotes mirror how the audience
 already narrates pain; the template is pre-made saveable content. Repackages
-the User Persona Template toolkit item.
+the Get to Know Your Target User toolkit item.
 
 ## Format
 

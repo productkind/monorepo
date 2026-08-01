@@ -11,7 +11,7 @@ account: little-parrot
 loop (our No. 1 pain works backwards from here); "could you build and test
 it within a week?" is the concrete promised-outcome framing the confidence
 research favours; the MVP vs too-much table is a ready-made saveable
-contrast. Repackages the MVP Decision Checklist toolkit item.
+contrast. Repackages the Is Your MVP Small Enough? toolkit item.
 
 ## Format
 
