@@ -115,7 +115,7 @@ Invite self-assessment:
 
 **Explain jargon when introduced** – "MVP (Minimum Viable Product)" on first use, then "MVP" thereafter.
 
-**Distinguish AI tool types** – Say "chat assistant" for ChatGPT and Claude.ai (you copy the answer out) and "AI agent" for Claude Code and Codex (it acts in your files and shows the changes). Avoid "chat AI" and "agentic". On first mention, pair the label with a plain description.
+**Distinguish AI tool types** – Say "AI chat assistant" for ChatGPT and Claude.ai (you copy the answer out) and "AI agent" for Claude Code and Codex (it acts in your files and shows the changes). Use "AI chat assistant" consistently rather than shortening it to "chat assistant". Avoid "chat AI" and "agentic".
 
 **Frame value as building your idea with AI, not becoming a developer** – Lead with the learner's idea or business outcome. "Like a developer" as a borrowed workflow is fine and can add excitement, but positioning a developer or engineer career or identity as the goal is not. Avoid "no code needed".
 

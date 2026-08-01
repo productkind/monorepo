@@ -8,7 +8,7 @@ The vocabulary to describe how you want something to sound, so you don't have to
 
 ### Where the words go
 
-Add a tone and style block underneath your request in your chat assistant (ChatGPT or Claude.ai, where you type a request and copy the answer out). Two or three tone words and one or two style rules are enough.
+Add a tone and style block underneath your request in your AI chat assistant (ChatGPT, Claude.ai, or similar). Two or three tone words and one or two style rules are enough.
 
 ```
 Tone: warm, collaborative, confident, not blaming.

@@ -4,7 +4,7 @@ type: "Prompt library"
 ---
 ## Prompts for the Writing You Do Every Week
 
-Ready-made prompts for the recurring writing jobs in a product manager's week, grouped by the moment you'd reach for them. Each one is already filled in with tone, style, and context, so you swap the details in brackets and paste the prompt into your chat assistant (ChatGPT or Claude.ai, where you copy the answer back out).
+Ready-made prompts for the recurring writing jobs in a product manager's week, grouped by the moment you'd reach for them. Each one is already filled in with tone, style, and context, so you swap the details in brackets and paste the prompt into your AI chat assistant (ChatGPT, Claude.ai, or similar).
 
 Every prompt here follows the structure in [Build a Prompt in Three Parts](TOOLKIT_LINK_PLACEHOLDER). Read them as worked examples as well as things to copy.
 
