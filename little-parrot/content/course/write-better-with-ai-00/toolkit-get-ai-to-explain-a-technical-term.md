@@ -4,11 +4,11 @@ type: "Prompt library"
 ---
 ## Get AI to Explain a Technical Term
 
-Prompts for the moment a word comes up in stand-up, everyone nods, and you don't want to be the one who stops the meeting. Open this afterwards and you'll understand the term, have a working idea of where it might fit in your product, and have a good question ready for next time.
+Prompts for when a word comes up in stand-up, everyone nods, and you don't want to be the one who stops the meeting to ask for a definition. Open this afterwards and you'll understand the term, have a working idea of where it might fit in your product, and have a good question ready for next time.
 
 ### The three things every learning prompt needs
 
-A prompt like "explain Redis" gets you a textbook paragraph you'll forget by lunchtime. Add these three and you get something you can use.
+A prompt like "explain Redis" gets you a textbook paragraph you'll forget by lunchtime. Add these three pointers to your prompt and you'll get something you can easily understand.
 
 1. **The level you want.** Otherwise you get either a Wikipedia definition or a sentence written for a nine-year-old. Say who you are and what you already know.
 2. **The context.** Where the term showed up, and what your product does. A term means something different in a payments product than in a video product.
@@ -23,7 +23,7 @@ Explain [Redis] to me. Skip the history and skip anything I'd only need if I wer
 
 Then tell me:
 - What problem it solves, using an example from [an analytics product like ours]
-- Where it typically sits in a product's architecture
+- Where it typically appears in a product's architecture
 - What it costs teams to use it: money, complexity, or maintenance
 - One thing that goes wrong with it in practice
 
@@ -89,7 +89,7 @@ Reach for this at the end. Explaining something back is a reliable way to find t
 ```
 Here's my understanding of [Redis] in my own words:
 
-[write your explanation here, two or three sentences]
+[write your explanation here]
 
 Tell me what's accurate, what's imprecise, and what's wrong. Be specific about which word or phrase is the problem. Don't be encouraging about it. Then give me a corrected version of my explanation, keeping my wording where it was right.
 ```
@@ -108,6 +108,8 @@ Write two versions:
 Don't use the words [Redis, cache, or in-memory]. Explain it in terms of what the customer experiences.
 ```
 
+*Note:* This prompt only works once the AI has context about your product, you just need help with the phrasing or storytelling.
+
 ### When you're stuck in a technical document
 
 Reach for this when you've been handed a design document or an RFC (request for comments, an engineer's written proposal for how something should be built) and you're three paragraphs in.
@@ -119,7 +121,6 @@ I'm reading a technical design document from my engineering team and I'm stuck. 
 
 Tell me:
 - What this section is proposing, in three sentences
-- Which terms in it I need to understand to follow the rest of the document
 - What decision, if any, is being made here that I should have an opinion on
 - Anything in it that would affect users, dates, or cost
 

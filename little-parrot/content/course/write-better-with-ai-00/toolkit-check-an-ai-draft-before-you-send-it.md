@@ -4,15 +4,15 @@ type: "Checklist"
 ---
 ## Check an AI Draft Before You Send It
 
-A quick pass over anything AI wrote for you, before it goes into Slack, an inbox, or a deck. Reach for it whenever your name is on the message and someone might act on what's in it.
+A quick checklist to verify what AI wrote for you, before it goes into Slack, an inbox, or a deck. Reach for it whenever your name is on the message and someone might act on what's in it.
 
 ### Why the check exists
 
-A large language model (LLM), the technology behind AI chat assistants like ChatGPT and Claude.ai, predicts the next piece of text based on patterns, so it produces what looks likely rather than what's true. When something is missing, it fills the gap with something plausible. That's called hallucination, and it comes with how the technology works, so no wording will switch it off. The good news is that hallucinations in product management writing are predictable, so you know where to look.
+A large language model (LLM), the technology behind AI chat assistants like ChatGPT and Claude.ai, predicts the next piece of text based on patterns, so it produces what looks likely rather than what's true. When something is missing from the context, it fills the gap with something plausible. That's called hallucination, and it comes with how the technology works, so no wording will switch it off. The good news is that hallucinations in product management writing are predictable, so you know what to look for.
 
-### The pass
+### What to look for
 
-Run this over every draft, however low the stakes.
+Verify these in every draft AI creates for you.
 
 - [ ] **Every number.** Percentages, load times, user counts, revenue, dates. If you didn't give it that number, treat it as unverified until you've checked it.
 - [ ] **Every name.** People, teams, features, customers, tools. Check spelling, and check that the person did the thing you're crediting them for.
@@ -25,14 +25,14 @@ Run this over every draft, however low the stakes.
 
 ### Where AI invents things in PM writing
 
-These are the spots worth reading twice, because they're where a draft goes wrong most often.
+These are the parts worth reading twice, because they're where a draft goes wrong most often.
 
 | What it invents | What it looks like |
 |---|---|
 | **Metrics** | "Reduces setup time by 40%", when you only said beta testers liked it |
 | **Customer quotes** | A convincing testimonial from nobody |
 | **Timelines** | "Shipping in Q3", when you gave it no date at all |
-| **Feature names** | Renaming "Saved Dashboard Views" to "Dashboard Presets" halfway through |
+| **Feature names** | Renaming "Saved Dashboard Views" to "Dashboard Presets" |
 | **Technical detail** | Explaining how your caching works, from patterns it saw elsewhere |
 | **Scope** | Turning "released to all users" into "rolling out gradually over the next month" |
 | **Links and docs** | Confident URLs to pages that don't exist |
@@ -58,23 +58,3 @@ Read this as a sceptical reader who wasn't in any of the meetings. List the ques
 Asking "are you sure?" or "is this accurate?" isn't verification. The AI chat assistant will answer that question the same way it wrote the draft, by predicting a likely response. Sometimes it backs down on a claim that was correct, sometimes it defends one it invented. Ask the same question twice and you can get two different answers.
 
 Verification means checking it yourself against the source: the Jira ticket, the dashboard, the person who knows the answer.
-
-### Higher stakes, extra checks
-
-Before it goes to execs, the whole company, a customer, or anywhere public:
-
-- [ ] Check it against the source document, not your memory of the source document.
-- [ ] Confirm anything about another team's work with that team first.
-- [ ] Check that nothing confidential slipped in: customer names, revenue figures, unannounced dates, internal codenames.
-- [ ] Ask yourself whether the claim you're most pleased with is the one you're least sure of.
-- [ ] Sit on it for ten minutes, then read it once more.
-
-### Keep your own record
-
-If a draft goes out with an invented detail, note what it invented and add a line to your prompts that prevents it. Something like:
-
-```
-Use only the facts I've given you above. If something is missing, leave a [GAP: ...] marker instead of filling it in.
-```
-
-That marker leaves a visible to-do where an invented detail would have gone, so you catch it before you send.

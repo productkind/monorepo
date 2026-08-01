@@ -9,34 +9,34 @@ The structure behind every prompt in this course: the request, the tone and styl
 ### The template
 
 ```
-Task:
-[What you want, in one sentence. Name the format and where it will be published.]
+## Task:
+[What you want, in one sentence.]
 
-Tone and style:
+## Tone and style:
 - Tone: [two or three words]
 - Style: [format, sentence shape, opening, ending]
 - Length: [words, sentences, or paragraphs]
 - Do not use: [the phrases and habits you want banned]
 
-Context and background:
+## Context and background:
 - What this is about: [the thing itself, in a couple of sentences]
 - Who it's for: [the audience, and what they already know]
 - Why now: [what happened, what problem it solves, why anyone should care]
 - Key details: [numbers, dates, names, decisions, constraints]
-- What to leave out: [anything confidential, uncertain, or off-message]
+- What to leave out: [anything uncertain, or off-message]
 ```
 
 ### What each part is doing
 
-**Task** points the AI chat assistant (ChatGPT, Claude.ai, or similar) at a shape it already knows. "A Slack message" and "a one-page memo for the exec team" produce different structures before you've said anything else, so name the format and the destination in the first line.
+**Task** names the action and the kind of thing you want back, and nothing more. "Write a Slack update about the dashboard release" is enough. Naming the kind of thing points the AI chat assistant (ChatGPT, Claude.ai, or similar) at a shape it already knows, because a Slack update and an exec memo are built differently before you've said anything else.
 
-**Tone and style** controls how it sounds. Without it you get the default voice: long, upbeat, and slightly American. This is where you stop the draft sounding like a stranger wrote it. The [Tone and Style Word Bank](TOOLKIT_LINK_PLACEHOLDER) has the vocabulary if you're stuck for words.
+**Tone and style** controls how it sounds. Without it you get the default voice: long, upbeat, and very American. This is where you avoid sounding like a stranger wrote your draft. The [Tone and Style Word Bank](TOOLKIT_LINK_PLACEHOLDER) has the vocabulary if you're stuck for words.
 
 **Context and background** controls whether the content is true and useful. The model knows nothing about your product, your customers, or last Tuesday's decision. Everything it doesn't get from you, it invents.
 
 ### What context to include
 
-Work through this when the draft comes back vague. Vagueness is nearly always missing context rather than a badly phrased request.
+Work through this when the draft comes back vague. Vagueness is nearly always missing context.
 
 **About the thing itself**
 - What it is, described the way you'd describe it to a new joiner
@@ -51,10 +51,10 @@ Work through this when the draft comes back vague. Vagueness is nearly always mi
 **About the situation**
 - What problem this solves, and who asked for it
 - What's already been said publicly or internally
-- Any history that shapes how this lands (a previous slip, a heated debate, a promise made)
+- Any history that influences how this will be received (a previous slip, a heated debate, a promise made)
 
 **The hard facts**
-- Numbers, dates, names, ticket titles, quotes from real users
+- Numbers, dates, names, issue titles, quotes from real users
 - Constraints: what's not agreed, what's not ready to ship, what's under embargo (not to be shared outside the company until an agreed date)
 
 **The boundaries**
@@ -64,18 +64,18 @@ Work through this when the draft comes back vague. Vagueness is nearly always mi
 ### Worked example: a release update
 
 ```
-Task:
-Write a short Slack update for our company-wide #releases channel about a new feature.
+## Task:
+Write a Slack update about a new feature.
 
-Tone and style:
+## Tone and style:
 - Tone: clear, grounded, credit-giving
 - Style: one short paragraph, then at most three bullets. Open with what changed for the user.
 - Length: under 120 words
 - Do not use: "excited to announce", "game-changer", em dashes, emoji beyond one at the start
 
-Context and background:
+## Context and background:
 - What this is about: "Saved Dashboard Views" lets users save their favourite dashboard filters and reopen them in one click.
-- Who it's for: the whole company, mostly non-technical. Sales and support will get questions about it.
+- Who it's for: the whole company, posted in our #releases channel. Mostly non-technical. Sales and support will get questions about it.
 - Why now: it was our top customer request for two quarters. People were rebuilding the same filter set every session.
 - Key details: released to 100% of users this morning. Beta testers reported saving several minutes per session. Built by Team Thunderbird.
 - What to leave out: the beta feedback numbers are not verified, so don't quote a specific time saving.
@@ -86,20 +86,20 @@ Notice the last line. Naming what to leave out is as useful as naming what to in
 ### Worked example: a LinkedIn post
 
 ```
-Task:
-Draft a LinkedIn post for my personal profile about finishing a short course on AI prompting.
+## Task:
+Draft a LinkedIn post about finishing a short course on AI prompting.
 
-Tone and style:
+## Tone and style:
 - Tone: honest, understated, conversational
 - Style: two or three short paragraphs, first person, no bullet list, no hashtag block. End with a real question, one I'd ask a colleague.
 - Length: under 150 words
 - Do not use: "excited to share", "game-changer", "10x", "unlock", rocket emoji, em dashes, the "not just X, but Y" pattern
 
-Context and background:
+## Context and background:
 - What this is about: a Little Parrot micro-course on prompting for product managers.
-- Who it's for: my network, mostly product managers and designers, many of whom already use AI daily and are sceptical of overblown AI claims.
+- Who it's for: my network, posted from my personal profile. Mostly product managers and designers, many of whom already use AI daily and are sceptical of overblown AI claims.
 - Why now: I'd been getting generic output and assumed the tool was the problem. It was my prompts.
-- Key details: the techniques were setting tone and style, giving context and background, and understanding that a large language model (LLM) predicts text rather than understanding it. The one that changed my output most was banning specific phrases.
+- Key details: the techniques were setting tone and style, giving context and background, and understanding that a large language model (LLM) predicts text rather than understanding it. Banning specific phrases was the one technique that changed my output the most.
 - What to leave out: don't imply I'm now an expert, and don't claim any productivity numbers.
 ```
 
@@ -116,7 +116,7 @@ When you attach something, say what to do with it. "Here is the Jira export. Use
 Refine in a follow-up rather than starting again. The model still has your context, so a short correction is usually enough.
 
 ```
-Close. Three changes: cut the opening line and start with what changed for the user, drop the third bullet entirely, and make the whole thing about 30 words shorter.
+Close. Three changes: cut the opening line and start with what's the benefit for the user, drop the third bullet entirely, and make the whole thing about 30 words shorter.
 ```
 
 ```
