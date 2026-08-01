@@ -22,7 +22,7 @@ Statuses: todo, created, scheduled, posted
 | 2026-08-03 | social-010 | instagram, tiktok, youtube, linkedin productkind, threads productkind  | scheduled |
 | --- | --- | --- | --- |
 | 2026-08-02 | SB-3 where is the problem | instagram, tiktok, youtube, linkedin productkind, threads productkind | todo |
-| 2026-08-01 | Lovable application video about starting building | instagram, tiktok, youtube, linkedin productkind, threads productkind | created |
+| 2026-08-01 | Lovable application video about starting building | tiktok, youtube | posted |
 | 2026-07-31 | social-009 | instagram, tiktok, youtube, linkedin productkind, threads productkind  | posted |
 | 2026-07-30 | WB-3 LinkedIn without buzzwords | instagram, tiktok, youtube, linkedin productkind, threads Kinga | posted |
 | 2026-07-29 | B-roll: AI made starting easier | instagram, tiktok, youtube, linkedin productkind, threads Kinga | posted |
