@@ -58,27 +58,14 @@ Use these links when referencing toolkit items in course content.
 
 ## Write Better with AI: Prompting Foundations for Product Managers (`write-better-with-ai-00`)
 
-> **Not yet uploaded.** Replace each `TODO` below with the real toolkit id once the items are in the database, then search and replace `TOOLKIT_LINK_PLACEHOLDER` across the course folder (14 occurrences, listed under the table).
-
 | Toolkit Item | URL |
 |-------------|-----|
 | Tone and Style Word Bank | `https://littleparrot.app/nest/toolkit/a7ce6e37-719e-45e3-98a1-d054a35ec827` |
-| What to Check In an AI Draft Before You Send It | `https://littleparrot.app/nest/toolkit/c96761e7-2166-4f46-8216-799d0b7f6f67` |
+| What to Check in an AI Draft Before You Send It | `https://littleparrot.app/nest/toolkit/c96761e7-2166-4f46-8216-799d0b7f6f67` |
 | Build a Prompt in Three Parts | `https://littleparrot.app/nest/toolkit/ecaaeb78-0bc1-402d-8d7a-c214997e91c8` |
 | Prompts for the Writing PMs Do Every Week | `https://littleparrot.app/nest/toolkit/0d2963e3-9d47-4249-b235-bfac109fb9e6` |
 | Get AI to Explain a Technical Term | `https://littleparrot.app/nest/toolkit/2dfc2ae3-1b9b-4bad-b59b-10bb88b78d18` |
 | How AI Works | `https://littleparrot.app/nest/toolkit/9a4596f0-38ca-4e2b-a7cf-0ae57dba3dc2` |
-
-Where the placeholders sit, and which item each one should point to:
-
-| File | Count | Links to |
-|------|-------|----------|
-| `write-better-with-ai-00.yaml` | 6 | Tone and Style Word Bank (challenge 1 end), Check an AI Draft (challenge 2 end), Build a Prompt in Three Parts + Prompts for the Writing PMs Do Every Week (challenge 3 end, both on one line), Get AI to Explain a Technical Term + How AI Works (course end) |
-| `toolkit-how-ai-works-cheat-sheet.md` | 3 | Tone and Style Word Bank, Build a Prompt in Three Parts, Check an AI Draft |
-| `toolkit-prompts-for-the-writing-pms-do-every-week.md` | 2 | Build a Prompt in Three Parts, Check an AI Draft |
-| `toolkit-build-a-prompt-in-three-parts.md` | 1 | Tone and Style Word Bank |
-| `toolkit-tone-and-style-word-bank.md` | 1 | Build a Prompt in Three Parts |
-| `toolkit-get-ai-to-explain-a-technical-term.md` | 1 | Check an AI Draft |
 
 ## Notes
 

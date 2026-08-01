@@ -6,7 +6,7 @@ type: "Prompt library"
 
 A collection of ready-made prompts for the recurring writing jobs in a product manager's week, grouped by the time you'd reach for them. Each one is already filled in with tone, style, and context, so you swap the details in brackets and paste the prompt into your AI chat assistant (ChatGPT, Claude.ai, or similar).
 
-Every prompt here follows the structure in [Build a Prompt in Three Parts](TOOLKIT_LINK_PLACEHOLDER). Read them as worked examples as well as things to copy.
+Every prompt here follows the structure in [Build a Prompt in Three Parts](https://littleparrot.app/nest/toolkit/ecaaeb78-0bc1-402d-8d7a-c214997e91c8). Read them as worked examples as well as things to copy.
 
 ### Asking for a status without sounding like you're chasing
 
@@ -161,4 +161,4 @@ Rules:
 
 ### Before you send any of these
 
-Every prompt here produces a first draft, not a finished message. Run it through [Check an AI Draft Before You Send It](TOOLKIT_LINK_PLACEHOLDER) first, especially the numbers and the names.
+Every prompt here produces a first draft, not a finished message. Run it through [What to Check in an AI Draft Before You Send It](https://littleparrot.app/nest/toolkit/c96761e7-2166-4f46-8216-799d0b7f6f67) first, especially the numbers and the names.

@@ -30,7 +30,7 @@ The structure behind every prompt in this course: the request, the tone and styl
 
 **Task** names the action and the kind of thing you want back, and nothing more. "Write a Slack update about the dashboard release" is enough. Naming the kind of thing points the AI chat assistant (ChatGPT, Claude.ai, or similar) at a shape it already knows, because a Slack update and an exec memo are built differently before you've said anything else.
 
-**Tone and style** controls how it sounds. Without it you get the default voice: long, upbeat, and very American. This is where you avoid sounding like a stranger wrote your draft. The [Tone and Style Word Bank](TOOLKIT_LINK_PLACEHOLDER) has the vocabulary if you're stuck for words.
+**Tone and style** controls how it sounds. Without it you get the default voice: long, upbeat, and very American. This is where you avoid sounding like a stranger wrote your draft. The [Tone and Style Word Bank](https://littleparrot.app/nest/toolkit/a7ce6e37-719e-45e3-98a1-d054a35ec827) has the vocabulary if you're stuck for words.
 
 **Context and background** controls whether the content is true and useful. The model knows nothing about your product, your customers, or last Tuesday's decision. Everything it doesn't get from you, it invents.
 

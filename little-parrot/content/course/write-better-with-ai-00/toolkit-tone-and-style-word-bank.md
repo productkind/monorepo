@@ -109,4 +109,4 @@ Use this as a starting point rather than the whole instruction, since a referenc
 | Blaming the team by accident | "Tone: not blaming. Ask about status, never about why it isn't done." |
 | Vague where you needed specifics | Add the specifics yourself. Tone and style can't fix missing information, so give it the numbers, names, and dates. |
 
-That last row is the one people miss most often. If the draft is thin rather than badly pitched, add the missing information instead of adjusting the tone words. The [Build a Prompt in Three Parts](TOOLKIT_LINK_PLACEHOLDER) template covers what to add.
+That last row is the one people miss most often. If the draft is thin rather than badly pitched, add the missing information instead of adjusting the tone words. The [Build a Prompt in Three Parts](https://littleparrot.app/nest/toolkit/ecaaeb78-0bc1-402d-8d7a-c214997e91c8) template covers what to add.
