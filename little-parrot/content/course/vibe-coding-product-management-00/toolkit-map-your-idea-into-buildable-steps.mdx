@@ -4,7 +4,9 @@ type: "Cheat sheet"
 ---
 ## Map Your Idea into Buildable Steps
 
-A quick reference for user story mapping: the three layers, the wording that works at each one, and the mistakes that are easy to make. Keep it open while you're moving sticky notes around.
+User story mapping breaks a whole product idea into small, buildable pieces, laid out in the order your user moves through them. Seeing your whole product in one place is what makes it possible to choose what to build first, and to spot the gaps before you start prompting.
+
+Below are the three layers, the wording that works at each one, and the mistakes that are easy to make. Keep this open while you're moving sticky notes around.
 
 ### The three layers
 
@@ -12,30 +14,45 @@ A user story map has three layers. Start at the top and work your way down.
 
 | Layer | What it is | Question to ask | Example (Book Club Organiser) |
 |---|---|---|---|
-| **Activities** | The big things your user does to reach their goal. These sit across the top of your map. | "What are the main things my user wants to accomplish?" | Access the app, Set up book club, Choose next book |
-| **Steps** | The actions your user takes within each activity. These sit under each activity in left-to-right order. | "How does my user do this activity, step by step?" | Create account, Sign in (under "Access the app") |
+| **Activities** | The big things your user does to reach their goal. These sit across the top of your map. | "What are the main things my user wants to accomplish?" | Access Book Club Organiser, Set up book club, Choose next book |
+| **Steps** | The actions your user takes within each activity. These sit under each activity in left-to-right order. | "How does my user do this activity, step by step?" | Discover service, Create account, Sign in (under "Access Book Club Organiser") |
 | **Details** | The specific things that happen at each step. These are the small, buildable pieces. | "What exactly happens here? What does the user see, click, or enter?" | Enter email and password, Use Google login (under "Create account") |
 
 ### How it looks
 
-![The Book Club Organiser story map: activities across the top, the steps for each activity underneath, and the buildable details listed below each step](/courses/vibe-coding-product-management-00/book-club-organiser-details.png)
+![The Book Club Organiser story map on a wall of sticky notes: three blue activity notes across the top (Access Book Club Organiser, Set up book club, Choose next book), a row of yellow step notes under each one, and a column of pink detail notes under every step](/courses/vibe-coding-product-management-00/book-club-organiser-details.png)
 
-Reading the Book Club Organiser map from the top down:
+Here is everything on that map, written out. Each activity carries a line in the user's own voice, its steps run left to right, and the details sit underneath each step.
 
-- **Activity:** Access the app
-  - **Step:** Create account
-    - **Details:** Enter email and password, Use Google login, Verify email address, Set display name
-  - **Step:** Sign in
-- **Activity:** Set up book club
-  - **Step:** Create club profile
-    - **Details:** Enter club name, Add club description, Set reading pace
-  - **Step:** Invite members
-- **Activity:** Choose next book
-  - **Step:** Suggest books
-    - **Details:** Add title and author, Add cover image, Add a recommendation note
-  - **Step:** Browse suggestions
-  - **Step:** Vote on books
-  - **Step:** Announce winner
+**Access Book Club Organiser**: "I want to access the book club tool"
+
+| Step | Details |
+|---|---|
+| Discover service | Land on homepage, Understand value proposition, See example clubs, View pricing |
+| Create account | Enter email and password, Use Google login, Verify email address, Set username/display name, Add profile photo |
+| Sign in | Enter credentials, Remember me option, Forgot password flow, Two-factor auth, Session management |
+
+**Set up book club**: "I want to create a space for our book club"
+
+| Step | Details |
+|---|---|
+| Create club profile | Enter club name, Add club description, Set reading pace, Choose club type |
+| Invite members | Generate shareable link, Send email invitations, See who has joined, Set member limit |
+| Establish rules | Set how books are chosen, Define meeting schedule, Add club guidelines, Set voting duration |
+
+**Choose next book**: "I want us to pick our next read together"
+
+| Step | Details |
+|---|---|
+| Suggest books | Add title and author, Include book cover, Add suggestion reason, Include genre/category, Add Goodreads link |
+| Browse suggestions | View as cards/list, See who suggested, Filter by genre, Search suggestions, Mark already read |
+| Discuss options | Comment on suggestions, Ask questions, Add pros/cons, Share reviews, Flag inappropriate |
+| Vote on books | Cast vote, See vote counts, Change before deadline, Privacy settings, Auto-close voting |
+| Announce winner | Display winner, Notify members, Archive other suggestions, Move to Currently Reading, Set start date |
+
+Three activities already produce around sixty details, and this map isn't finished: a complete Book Club Organiser map would carry on with Read together, Discuss book, and Manage book club history. That is normal, and it's the reason the next step is choosing a small slice of it rather than building everything.
+
+You also don't need to map every detail before you decide what to build first. The map is a tool to help you identify what is essential to the core user flow, and what can wait. You can add details later, as you build and test.
 
 ### Writing good user stories at each layer
 
@@ -62,4 +79,4 @@ Reading the Book Club Organiser map from the top down:
 
 ### After mapping
 
-Once your map is complete, you'll use it to carve out your MVP (Minimum Viable Product): the smallest version of your product that's still useful to a real person. Draw a horizontal line across the map: everything above the line is your MVP, everything below is for later.
+Once your map is complete, you'll use it to carve out your MVP (Minimum Viable Product): the smallest version of your product that's still useful for your target user. It's usually **one core user flow** in your product. Draw a horizontal line across the map: everything above the line is your MVP, everything below is for later.
