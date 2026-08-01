@@ -6,7 +6,7 @@ type: "Cheat sheet"
 
 The vocabulary to describe how you want something to sound, so you don't have to invent the words while you're already under pressure. Open it when a draft is technically fine but doesn't sound like you, or when you know the message is delicate and you want the level of formality right before you send anything.
 
-### Where the words go
+### Where the instructions go
 
 Add a tone and style block underneath your request in your AI chat assistant (ChatGPT, Claude.ai, or similar). Two or three tone words and one or two style rules are enough.
 
@@ -19,7 +19,7 @@ Length: under 40 words.
 
 ### Tone words, by the situation you're in
 
-Pick two or three. Combining a warm word with a firm word usually works better than either on its own.
+Tone influences how your message will feel. Pick two or three descriptiors, depending on your situation.
 
 | The situation | Tone words to use | What they stop the AI doing |
 |---|---|---|
@@ -30,12 +30,12 @@ Pick two or three. Combining a warm word with a firm word usually works better t
 | Celebrating your team's work | warm, specific, generous, understated | Generic praise that names nobody |
 | Explaining a decision people won't like | transparent, empathetic, final | Sounding uncertain about a decision that's already made |
 | Asking an engineer to explain something | curious, concrete, no false expertise | Lecturing you, or assuming you know more than you do |
-| Posting on LinkedIn as yourself | genuine, understated, conversational, specific | The thought-leader voice with the rocket emoji |
+| Posting on LinkedIn as yourself | honest, understated, conversational, specific | The thought-leader voice with the rocket emoji |
 | Writing to a customer after an incident | apologetic without grovelling, factual, clear on next steps | Corporate non-apologies ("we regret any inconvenience") |
 
 ### Style rules, by what you're controlling
 
-Tone is how it feels. Style is the shape it comes out in. These are the levers worth naming.
+Style influences how your message will look like.
 
 | What you're controlling | Write this in your prompt |
 |---|---|
@@ -50,39 +50,50 @@ Tone is how it feels. Style is the shape it comes out in. These are the levers w
 
 ### Banning the tells
 
-AI writing has a handful of habits that make a draft recognisable as AI writing. Naming them stops them.
+AI writing has a handful of habits that make a draft recognisable as AI writing. Naming the exact phrases or structures helps the LLM to avoid them.
 
 ```
-Do not use: "excited to announce", "I hope this finds you well", "game-changer", "10x", "unlock", "leverage", "delve", "in today's fast-paced world", em dashes, or the "not just X, but Y" sentence pattern.
-```
+Do not use these words and phrases:
+"cut through the noise", "no fluff", "here's the thing", "why it matters", "this matters because", "made a real difference", "hype".
 
-Keep that line in a note somewhere and paste it into any prompt where the output has your name on it.
+Do not use these patterns:
+- Em dashes. Use a comma, a colon, or a full stop instead.
+- "Not just X, but Y" and "It's not X, it's Y".
+- "From X to Y" transformation phrasing ("from scattered notes to a shipped feature").
+- "Quietly" as a signifier ("quietly changed how the team works").
+- "Actually" and "genuinely" as filler intensifiers.
+```
 
 ### Show it your own writing
 
-Showing the AI what you sound like works better than describing it. Before your request, paste two or three things you've written.
+Showing the AI what you sound like works better than describing it. After your request, paste two or three things you've written.
 
 ```
+## Your task
+Write [instructions what to write]
+
+## Examples
 Here are three Slack messages I sent to my team last month. Match my voice: how long my sentences are, how formal I am, whether I use emoji, how I open and how I close.
 
+### Example one
 [paste message 1]
-[paste message 2]
-[paste message 3]
 
-Now write ...
+### Example two
+[paste message 2]
+
+### Example three
+[paste message 3]
 ```
 
-This works for LinkedIn posts, release notes, and stakeholder emails too. Keep a note with three good examples of each and reuse it.
+This works for LinkedIn posts, release notes, and stakeholder emails too.
 
 ### Naming a reference style
 
 If you don't have your own samples to hand, point at something the AI has read a lot of.
 
 - "Write it the way Lenny's Newsletter explains a product concept: concrete, one idea per paragraph, no exaggeration."
-- "Structure it like a Basecamp Shape Up pitch: the problem first, then the appetite, then the solution."
+- "Structure it like a Basecamp Shape Up pitch: the problem first, then the time budget, then the solution."
 - "Write it like a Stripe changelog entry: what changed, who it affects, what to do about it."
-
-A Shape Up "appetite" is how much time the work is worth spending. A changelog is the running note a product publishes each time something changes.
 
 Use this as a starting point rather than the whole instruction, since a reference style gives you the shape but not your voice.
 

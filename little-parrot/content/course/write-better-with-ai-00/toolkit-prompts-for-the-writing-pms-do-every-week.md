@@ -2,15 +2,15 @@
 challenge: "3 - Craft impactful LinkedIn posts that sound like you"
 type: "Prompt library"
 ---
-## Prompts for the Writing You Do Every Week
+## Prompts for the Writing PMs Do Every Week
 
-Ready-made prompts for the recurring writing jobs in a product manager's week, grouped by the moment you'd reach for them. Each one is already filled in with tone, style, and context, so you swap the details in brackets and paste the prompt into your AI chat assistant (ChatGPT, Claude.ai, or similar).
+A collection of ready-made prompts for the recurring writing jobs in a product manager's week, grouped by the time you'd reach for them. Each one is already filled in with tone, style, and context, so you swap the details in brackets and paste the prompt into your AI chat assistant (ChatGPT, Claude.ai, or similar).
 
 Every prompt here follows the structure in [Build a Prompt in Three Parts](TOOLKIT_LINK_PLACEHOLDER). Read them as worked examples as well as things to copy.
 
-### Chasing a fix without sounding like you're chasing
+### Asking for a status without sounding like you're chasing
 
-Reach for this when you reported something a while ago, you need an answer today, and you don't want to spend your credibility on it.
+Reach for this when you reported something to your devs a while ago, you need an answer today, and you don't want to sound like you're rushing them.
 
 ```
 Write a Slack message to the developers working on [the checkout page slow load issue].
@@ -19,7 +19,7 @@ Tone: warm, collaborative, confident, not blaming. Ask about status, never about
 Style: 1-2 sentences, conversational Slack style, one direct ask for a current status or ETA, end with a brief thanks.
 Length: under 40 words. No emoji, no bullet points.
 
-Context: I raised this [three weeks ago] and haven't heard back. [Checkout takes 12 seconds to load and people are abandoning carts.] I need an ETA today because [I'm reporting to the leadership team on Thursday]. I know the team is stretched across [the migration], so I don't want this to read as pressure.
+Context: I raised this [two weeks ago] and haven't heard back. [Checkout takes 12 seconds to load and people are abandoning carts.] I need an ETA today because [I'm reporting to the leadership team on Thursday]. I know the team is stretched across [the migration], so I don't want this to read as pressure.
 ```
 
 ### Announcing a release to the whole company
@@ -46,7 +46,7 @@ Context:
 Reach for this at the end of a sprint or a release, when the raw material is 40 ticket titles and nobody outside the team will read them.
 
 ```
-Below is an export of the Jira tickets that went into [the March release]. Group them into at most four themes, and write one sentence per theme describing what changed from the user's point of view. Ignore the estimates, assignees, and internal refactoring tickets (tidying up the code without changing what a user sees) unless they changed something a user can see.
+Below is an export of the Jira tickets that went into [the March release]. Group them into at most four themes, and write one sentence per theme describing what changed from the user's point of view. Ignore the estimates, assignees, and internal refactoring tickets unless they changed something a user can see.
 
 Tone: factual and specific.
 Style: a heading per theme, one sentence each. No adjectives praising the work.
@@ -58,11 +58,11 @@ If a ticket title is too cryptic to interpret, list it separately under "Need yo
 [paste or attach the Jira export]
 ```
 
-The line about cryptic ticket titles is the useful bit. It stops the AI guessing at what a ticket means and hands you a short list of questions for your engineers instead.
+The line about cryptic ticket titles is the useful bit. It stops the AI guessing at what a ticket means and hands you a short list of questions instead.
 
-### Telling stakeholders something has slipped
+### Telling stakeholders a deadline won't be met
 
-Reach for this when the date is moving and you want to say so once, clearly, rather than three times, vaguely.
+Reach for this when a deadline cannot be met and you want to be clear and transparent about what happened.
 
 ```
 Write an email to [the leadership team] telling them that [the payments migration] has moved from [12 June] to [10 July].
@@ -81,7 +81,7 @@ Context:
 
 ### A one-pager for the exec team
 
-Reach for this when you need the exec team to decide something, and you have one page to get it.
+Reach for this when you need the exec team to decide something, and you have one page to get their attention.
 
 ```
 Write a one-page memo for [our senior leadership team] proposing [that we build a self-serve onboarding flow].
@@ -103,7 +103,7 @@ Use only the figures I've given you. If you need a number I haven't supplied, wr
 
 ### Saying no to a feature request
 
-Reach for this when the answer is no and you want the relationship intact afterwards.
+Reach for this when the answer is no and you want to preserve the relationship.
 
 ```
 Write a reply to [a sales colleague] who has asked for [a custom CSV export format for one enterprise prospect]. The answer is no for now.
@@ -114,7 +114,7 @@ Length: under 120 words. Do not say "unfortunately" or "at this time".
 
 Context:
 - Why no: [it's a one-customer format and we'd own it forever; the roadmap this quarter is committed to the payments migration]
-- What we can do: [the existing export plus a saved spreadsheet template, which we could put together this week]
+- What we can do: [the existing export plus a saved spreadsheet template, which we could put together next week]
 - What I want to learn: [what the prospect does with the file once they've got it]
 ```
 
@@ -142,7 +142,7 @@ Here are three posts I've written before. Match my voice: sentence length, how f
 
 ### Turning meeting notes into decisions and actions
 
-Reach for this straight after a meeting, while you still remember what the shorthand meant.
+Reach for this straight after a meeting, so you can share the structured output with your stakeholders.
 
 ```
 Below are my raw notes from [today's roadmap review]. Turn them into a summary with three sections: Decisions made, Actions with owners and dates, and Open questions.
