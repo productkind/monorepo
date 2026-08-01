@@ -4,7 +4,7 @@ type: "Prompt library"
 ---
 ## Prompts for the Writing You Do Every Week
 
-Ready-made prompts for the recurring writing jobs in a PM's week, grouped by the moment you'd reach for them. Each one is already filled in with tone, style, and context, so you swap the details in brackets and send.
+Ready-made prompts for the recurring writing jobs in a product manager's week, grouped by the moment you'd reach for them. Each one is already filled in with tone, style, and context, so you swap the details in brackets and paste the prompt into your chat assistant (ChatGPT or Claude.ai, where you copy the answer back out).
 
 Every prompt here follows the structure in [Build a Prompt in Three Parts](TOOLKIT_LINK_PLACEHOLDER). Read them as worked examples as well as things to copy.
 
@@ -46,7 +46,7 @@ Context:
 Reach for this at the end of a sprint or a release, when the raw material is 40 ticket titles and nobody outside the team will read them.
 
 ```
-Below is an export of the Jira tickets that went into [the March release]. Group them into at most four themes, and write one sentence per theme describing what changed from the user's point of view. Ignore the estimates, assignees, and internal refactoring tickets unless they changed something a user can see.
+Below is an export of the Jira tickets that went into [the March release]. Group them into at most four themes, and write one sentence per theme describing what changed from the user's point of view. Ignore the estimates, assignees, and internal refactoring tickets (tidying up the code without changing what a user sees) unless they changed something a user can see.
 
 Tone: factual and specific.
 Style: a heading per theme, one sentence each. No adjectives praising the work.
@@ -58,7 +58,7 @@ If a ticket title is too cryptic to interpret, list it separately under "Need yo
 [paste or attach the Jira export]
 ```
 
-That last paragraph is the useful bit. It turns invented interpretations into a short list of questions for your engineers.
+The line about cryptic ticket titles is the useful bit. It stops the AI guessing at what a ticket means and hands you a short list of questions for your engineers instead.
 
 ### Telling stakeholders something has slipped
 
@@ -72,7 +72,7 @@ Style: the new date in the first sentence. Then the reason in two sentences. The
 Length: under 150 words.
 
 Context:
-- Why it slipped: [the third-party provider's sandbox was down for nine days, which blocked all integration testing]
+- Why it slipped: [the third-party provider's sandbox, their test copy of the system, was down for nine days, which blocked all integration testing]
 - What we did about it: [we moved the team onto the reporting work in the meantime, so nothing else slipped]
 - What it means for them: [the Q3 revenue forecast is unaffected; the customer pilot moves by four weeks]
 - What happens next: [I'll confirm the new date is holding at the 24 June checkpoint]
@@ -81,7 +81,7 @@ Context:
 
 ### A one-pager for the exec team
 
-Reach for this when you need a decision, not a discussion.
+Reach for this when you need the exec team to decide something, and you have one page to get it.
 
 ```
 Write a one-page memo for [our senior leadership team] proposing [that we build a self-serve onboarding flow].
@@ -115,7 +115,7 @@ Length: under 120 words. Do not say "unfortunately" or "at this time".
 Context:
 - Why no: [it's a one-customer format and we'd own it forever; the roadmap this quarter is committed to the payments migration]
 - What we can do: [the existing export plus a saved spreadsheet template, which we could put together this week]
-- What I want to learn: [what the prospect actually does with the file once they've got it]
+- What I want to learn: [what the prospect does with the file once they've got it]
 ```
 
 ### A LinkedIn post that sounds like you
@@ -126,14 +126,14 @@ Reach for this when you've done something worth sharing and every draft you writ
 Draft a LinkedIn post for my personal profile about [finishing a short course on AI prompting].
 
 Tone: genuine, understated, conversational. Someone telling colleagues about a useful discovery, not announcing an achievement.
-Style: two or three short paragraphs, first person, no bullet list, no hashtag block. Open with a specific moment rather than a general statement. End with a question I'd actually ask.
+Style: two or three short paragraphs, first person, no bullet list, no hashtag block. Open with a specific moment rather than a general statement. End with a real question, one I'd ask a colleague.
 Length: under 150 words. Do not use "excited to share", "game-changer", "10x", "unlock", rocket emoji, em dashes, or the "not just X, but Y" pattern.
 
 Context:
-- What happened: [I'd been getting generic output from AI and assumed the tool was the problem. It was my prompts.]
-- What I learned: [setting tone and style, giving context and background, and that an LLM predicts text rather than understanding it]
+- What happened: [my AI output was generic until I started setting tone and style and giving proper context in the prompt]
+- What I learned: [setting tone and style, giving context and background, and that a large language model (LLM) predicts likely text rather than understanding it]
 - The bit that changed my output most: [banning specific phrases]
-- Who reads this: [PMs and designers, many already sceptical of AI hype]
+- Who reads this: [product managers and designers, many of them already sceptical about AI claims]
 - Leave out: [any claim that I'm now an expert, and any productivity numbers]
 
 Here are three posts I've written before. Match my voice: sentence length, how formal I am, how I open and close.
