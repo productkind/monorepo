@@ -1,7 +1,7 @@
 ---
 status: drafted
 channels: [youtube-shorts, tiktok]
-account: little-parrot, kinga
+account: little-parrot
 ---
 
 # Video: your first Lovable prompt, no PRD
@@ -29,7 +29,7 @@ A lot of advice says to write a product requirements document (PRD) for your fir
 
 Here is the builder's template, the five-part starter prompt you can copy straight into Lovable: https://littleparrot.app/nest/toolkit/17e40eb9-e190-40ed-b3d3-44300f2e2b08 It's free, you just need an account, which takes a minute. The first challenge of the course is free too, if you want to build the whole thing with me: https://littleparrot.app/5e86e580-264c-442c-8cc4-be5645f13e87/course-overview And I meant the question in the video. What is the one question holding you back from building with Lovable? Tell me and I'll answer.
 
-## TikTok (Kinga's personal account)
+## TikTok (productkind account)
 
 **Caption** (291 characters; the first ~90 show before "more", so the PRD line has to land there)
 
@@ -45,7 +45,7 @@ Follow for more Lovable walkthroughs for women building their first app!
 
 **Pinned comment**
 
-The five-part template is here, free with a quick sign-up: https://littleparrot.app/nest/toolkit/17e40eb9-e190-40ed-b3d3-44300f2e2b08 The first challenge of the course is free too, if you want to build the whole thing with me: https://littleparrot.app/5e86e580-264c-442c-8cc4-be5645f13e87/course-overview And I meant the question in the video. Tell me yours and I'll answer.
+@littleparrot.app: The five-part template is here, free with a quick sign-up: https://littleparrot.app/nest/toolkit/17e40eb9-e190-40ed-b3d3-44300f2e2b08 The first challenge of the course is free too, if you want to build the whole thing with us: https://littleparrot.app/5e86e580-264c-442c-8cc4-be5645f13e87/course-overview And I meant the question in the video. Tell me your one question that’s holding you back from building and I'll answer.
 
 ### Title alternatives
 
