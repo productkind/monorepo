@@ -33,11 +33,15 @@ Here is the builder's template, the five-part starter prompt you can copy straig
 
 **Caption** (291 characters; the first ~90 show before "more", so the PRD line has to land there)
 
-You don't need a PRD to start building with Lovable. Five short headings do the job, and I go through each one. Over 600 women took our course and none of them wrote one first. What's the one question holding you back? Follow for more Lovable walkthroughs for women building their first app!
+You don't need a PRD to start building with Lovable. Structure your prompt in five short categories. Over 600 women took our course and none of them wrote one first. Find the free builders template in the comments.
 
+What's the one question holding you back? 
+
+Follow for more Lovable walkthroughs for women building their first app!
+ 
 **Hashtags** (paste at the end of the caption)
 
-#womenintech #womenwhobuild #shebuilds #lovable #vibecoding
+#womeninbusiness #womenwhobuild #shebuilds #lovable #vibecoding
 
 **Pinned comment**
 
