@@ -67,6 +67,18 @@ Use these links when referencing toolkit items in course content.
 | Get AI to Explain a Technical Term | `https://littleparrot.app/nest/toolkit/2dfc2ae3-1b9b-4bad-b59b-10bb88b78d18` |
 | How AI Works | `https://littleparrot.app/nest/toolkit/9a4596f0-38ca-4e2b-a7cf-0ae57dba3dc2` |
 
+## Build a Valuable Product: How to Break Down Your Idea for Vibe Coding (`vibe-coding-product-management-00`)
+
+| Toolkit Item | URL |
+|-------------|-----|
+| Define the Problem You're Solving | `https://littleparrot.app/nest/toolkit/601eef13-40b0-45bf-bb1b-cda233787916` |
+| Get to Know Your Target User | `https://littleparrot.app/nest/toolkit/6ca8bf34-03ce-4960-9e84-0b457e1672de` |
+| Sketch Your User's Journey | `https://littleparrot.app/nest/toolkit/a4b7037f-8402-4269-8a3f-266584b7d5c8` |
+| Map Your Idea into Buildable Steps | `https://littleparrot.app/nest/toolkit/b7527aae-eb40-4198-9694-3c71472cdf8b` |
+| Is Your MVP Small Enough? | `https://littleparrot.app/nest/toolkit/c211299a-3e23-4168-a7fc-4386f0f65c90` |
+| Turn Your MVP into a Build Prompt | `https://littleparrot.app/nest/toolkit/40d6e37a-654a-4ac4-81e1-0609c19c5998` |
+| Run Your First User Test | `https://littleparrot.app/nest/toolkit/cea79e4c-8401-4d8a-a35a-f8fcaa5bb17a` |
+
 ## Notes
 
 - URL pattern: `https://littleparrot.app/nest/toolkit/{toolkit-id}`

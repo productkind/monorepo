@@ -4,7 +4,7 @@ type: "Template"
 ---
 ## Get to Know Your Target User
 
-A template for building a persona: a short profile of the one person you're building for, covering their situation, their frustrations, and what they want. Fill it in for each new product idea, and open it again whenever you're deciding whether a feature is worth building.
+A template for building a persona: a short profile of the person you're building for, covering their situation, their frustrations, and what they want. Fill it in for each new product idea, and open it again whenever you're deciding whether a feature is worth building.
 
 ### The template
 
@@ -67,17 +67,17 @@ What one phrase would describe this person's situation? Think "[Name], the [adje
 - What takes them way too long right now?
 - What workaround are they currently using, and why does it fall short?
 
-Writing frustrations as quotes ("I can't find...") instead of descriptions ("The user can't find...") helps you see the world through their eyes.
+Writing frustrations as quotes ("I can't find...") instead of descriptions ("The user can't find...") helps you see the world through their eyes and empathise with them.
 
 **Goals:**
-- If your product worked perfectly, what would change in their life?
-- What would they be able to stop doing?
-- What would they tell a friend about?
+- What do they want to achieve?
+- What change do they want to see in their life?
+- What do they want to stop doing?
 
 ### How to use your persona
 
-Once you've created your persona, use it as a decision-making tool throughout your project:
+Once you've created your persona, use it as a decision-making tool throughout building your product:
 
-- **When choosing features:** "Would Sarah use this, or is it only nice to have?"
+- **When choosing features:** "Would it solve a real pain point for Sarah, or is it only nice to have?"
 - **When writing prompts for Lovable, the AI app builder:** "What would Sarah expect to see on this screen?"
 - **When something feels off:** "If I showed this to Sarah, would she understand what to do?"

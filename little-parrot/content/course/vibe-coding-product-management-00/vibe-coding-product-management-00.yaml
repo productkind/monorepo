@@ -125,7 +125,7 @@ course:
             subDescription: |-
               Every successful product begins with understanding a real user need, pain point or desire. Whenever you feel lost in features, come back to this problem statement. It's your north star!
 
-              [Define the Problem You're Solving](TOOLKIT_LINK_PLACEHOLDER) in the Toolkit has the blank template, a worked example, and a self-check to run your statement through before you build on it.
+              [Define the Problem You're Solving](https://littleparrot.app/nest/toolkit/601eef13-40b0-45bf-bb1b-cda233787916) in the Toolkit has the blank template, a worked example, and a self-check to run your statement through before you build on it.
       title: Craft a Problem Statement
       isFree: true
       skills:
@@ -211,7 +211,7 @@ course:
             subDescription: |-
               Keeping a specific user in mind (like Sarah) will guide your choices. It's like designing for one person, which makes it far more likely your product will really resonate.
 
-              [Get to Know Your Target User](TOOLKIT_LINK_PLACEHOLDER) in the Toolkit has the template, questions to unstick you on any section, and the three decisions your persona helps you make later.
+              [Get to Know Your Target User](https://littleparrot.app/nest/toolkit/6ca8bf34-03ce-4960-9e84-0b457e1672de) in the Toolkit has the template, questions to unstick you on any section, and the three decisions your persona helps you make later.
       title: Define Your Target User
       isFree: false
       skills:
@@ -302,7 +302,7 @@ course:
             subDescription: |-
               This storyboard is your compass. Whenever you're in doubt, remember how your solution makes your user's life better. Now, let's break this story into actual steps and features.
 
-              [Sketch Your User's Journey](TOOLKIT_LINK_PLACEHOLDER) in the Toolkit keeps the three panels, the sketching tips, and Sarah's finished storyboard to hand for your next idea.
+              [Sketch Your User's Journey](https://littleparrot.app/nest/toolkit/a4b7037f-8402-4269-8a3f-266584b7d5c8) in the Toolkit keeps the three panels, the sketching tips, and Sarah's finished storyboard to hand for your next idea.
       title: 'Storyboard: From Struggle to Solution'
       isFree: false
       skills:
@@ -503,7 +503,7 @@ course:
             subDescription: |-
               Now you can see your entire product at a glance. It's normal if it feels like a lot! The good news: you don't need to build all of it at once.
 
-              [Map Your Idea into Buildable Steps](TOOLKIT_LINK_PLACEHOLDER) in the Toolkit is your quick reference for the three layers, the wording that works at each one, and the mistakes worth avoiding.
+              [Map Your Idea into Buildable Steps](https://littleparrot.app/nest/toolkit/b7527aae-eb40-4198-9694-3c71472cdf8b) in the Toolkit is your quick reference for the three layers, the wording that works at each one, and the mistakes worth avoiding.
       title: Break Down Your Idea Into Buildable Steps
       isFree: false
       skills:
@@ -638,7 +638,7 @@ course:
             subDescription: |-
               Great job resisting the urge to do everything at once. A clear MVP means you can move faster and learn from real users sooner.
 
-              Before you start building, run your scope through [Is Your MVP Small Enough?](TOOLKIT_LINK_PLACEHOLDER) in the Toolkit. It checks whether you've kept enough to be useful and cut enough to stay focused.
+              Before you start building, run your scope through [Is Your MVP Small Enough?](https://littleparrot.app/nest/toolkit/c211299a-3e23-4168-a7fc-4386f0f65c90) in the Toolkit. It checks whether you've kept enough to be useful and cut enough to stay focused.
       title: 'Decide What to Build First: Define Your MVP'
       isFree: false
       skills:
@@ -748,7 +748,7 @@ course:
             subDescription: |-
               It's like giving the AI a blueprint of your product. With a solid prompt in hand, you're one step away from actually building something. Finally, let's prepare to build and gather feedback!
 
-              [Turn Your MVP into a Build Prompt](TOOLKIT_LINK_PLACEHOLDER) in the Toolkit has the full template, Sarah's finished prompt, and an example of the follow-up prompts you'll write once the first version exists.
+              [Turn Your MVP into a Build Prompt](https://littleparrot.app/nest/toolkit/40d6e37a-654a-4ac4-81e1-0609c19c5998) in the Toolkit has the full template, Sarah's finished prompt, and an example of the follow-up prompts you'll write once the first version exists.
       title: Create a Prompt to Build Your MVP with AI
       isFree: false
       skills:
@@ -811,7 +811,7 @@ course:
             description: |-
               Think of one way you'll get feedback: Who can you show your prototype or MVP to, and what will you ask them or observe? Write down a quick plan below.
 
-              [Run Your First User Test](TOOLKIT_LINK_PLACEHOLDER) in the Toolkit has a 15-minute script you can follow word for word, the three questions to ask afterwards, and how to turn what you notice into your next prompt.
+              [Run Your First User Test](https://littleparrot.app/nest/toolkit/cea79e4c-8401-4d8a-a35a-f8fcaa5bb17a) in the Toolkit has a 15-minute script you can follow word for word, the three questions to ask afterwards, and how to turn what you notice into your next prompt.
             placeholder: e.g. "I will invite my friend (who is my target user persona) to use the app for her next book club meeting. I'll watch how she adds suggestions and votes, and interview her afterwards about what was easy or hard. If something frustrates her or if she still falls back to WhatsApp, that's a sign I need to improve that part."
             subDescription: By planning this out, you commit to actually getting real-world input. This is where your product becomes truly valuable, when it's in the hands of users and making their lives better. Testing early and often is the key to building something people love (and it saves you from building the wrong thing).
         - type: course-end
