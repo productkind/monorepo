@@ -4,7 +4,7 @@ type: "Cheat sheet"
 ---
 ## How AI Works
 
-The terms from this course in one place, with what each one changes about the way you prompt. Look something up here when you hit the word in a meeting, or when the AI does something odd and you want to know whether it's just behaving as expected.
+The terms from the "Write Better with AI" course in one place, with what each one changes about the way you prompt. Look something up here when you hit the word in a meeting, or when the AI does something odd and you want to know whether it's just behaving as expected.
 
 ### The vocabulary
 
