@@ -12,7 +12,7 @@ technical skill, no drawing skill), which is confidence-by-design; the
 ends-first method gives a concrete, repeatable technique rather than
 results-without-method; the struggle and happy-ending panels mirror the
 audience's own narrative arc (chaos at the kitchen table, calm on the
-sofa). Repackages the Storyboard Template toolkit item.
+sofa). Repackages the Sketch Your User's Journey toolkit item.
 
 ## Format
 

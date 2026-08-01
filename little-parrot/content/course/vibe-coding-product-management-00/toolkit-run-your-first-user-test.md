@@ -1,18 +1,19 @@
 ---
 challenge: "7 - Get Feedback on What You've Built"
+type: "Guide"
 ---
-## User Test Script and Question Bank
+## Run Your First User Test
 
-A step-by-step script for running your first 15-minute user test. Use this the moment you have something to show, even if it's rough. The goal is to learn, not to impress.
+A step-by-step script for a 15-minute user test, plus the questions to ask when you have more time. Open it the moment you have something to show, even if it's rough. You're there to find out what confuses people, and a rough version does that fine.
 
 ### Before the test: set up
 
-**Who to invite:** Someone who matches your persona, or at least someone who has the problem your product solves. One person is enough for a first test.
+**Who to invite:** Someone who matches your persona, the profile of your target user you wrote in challenge 2, or at least someone who has the problem your product solves. One person is enough for a first test.
 
 **What to prepare:**
-- [ ] Your app is open and ready to use (deployed or running on your screen)
+- [ ] Your app is open and ready to use (published online, or open on your own screen)
 - [ ] You know what you want to learn (pick 1-2 things you're unsure about)
-- [ ] You have a way to take notes (pen and paper works best so you can keep your eyes on the person, not a screen)
+- [ ] You have a way to take notes (pen and paper works best, so you can keep your eyes on the person rather than a screen)
 
 ### The script
 
@@ -26,7 +27,7 @@ This puts the person at ease and gives them permission to be critical.
 
 #### The task (5 minutes)
 
-Give them the app and a simple task that matches your core user flow. Don't explain how the app works. Just describe the goal.
+Give them the app and a simple task that matches your core user flow. Don't explain how the app works. Describe the goal and let them find their own way there.
 
 > "Imagine you're [describe their situation]. Try to [the main thing your user would do]."
 
@@ -46,7 +47,7 @@ After they've finished (or got stuck), ask these three questions:
 This reveals whether the app's purpose is clear and whether they could complete the task. If they describe something different from what you intended, your app may not be communicating its purpose well.
 
 **2. "What frustrated you or confused you?"**
-This surfaces usability problems and bugs. Don't defend your choices. Just write down what they say. If they say "nothing," ask: "Was there any moment where you paused or weren't sure what to do next?"
+This surfaces usability problems and bugs. Don't defend your choices. Write down what they say, word for word where you can. If they say "nothing", ask: "Was there any moment where you paused or weren't sure what to do next?"
 
 **3. "What would make this more useful for you?"**
 This tells you what to build next. Listen for things that align with features already on your story map. If they suggest something you hadn't thought of, that's even more valuable.
@@ -55,7 +56,7 @@ This tells you what to build next. Listen for things that align with features al
 
 > "This was really helpful, thank you. Would you be open to trying it again once I've made some improvements?"
 
-Early testers who stay involved become your most valuable users. They've watched your product grow and they'll champion it to others.
+Testers who stay involved will see how your product changes over time, and some may go on to recommend it to people they know.
 
 ### After the test: turn observations into prompts
 
@@ -63,8 +64,8 @@ Take your notes and sort them into three categories:
 
 | What you observed | What it means | What to do |
 |---|---|---|
-| **They couldn't find something** | The design needs to make it more visible | Prompt Lovable to make the element more prominent or reposition it |
-| **They expected something that doesn't exist** | A feature may be missing from your MVP | Check your story map. Is this a detail you cut that should come back? |
+| **They couldn't find something** | The design needs to make it more visible | Prompt Lovable, the AI app builder, to make the button or link more prominent or move it |
+| **They expected something that doesn't exist** | A feature may be missing from your MVP (Minimum Viable Product, the first small version you built) | Check your story map. Is this a detail you cut that should come back? |
 | **They completed the task but it felt slow or awkward** | The flow needs simplifying | Prompt Lovable to reduce the number of steps or clarify the interface |
 | **They liked something** | Keep it. Don't redesign what works. | Note it so you don't accidentally change it later |
 
@@ -74,7 +75,13 @@ Observation: "She scrolled up and down three times looking for the 'Add book' ac
 
 Prompt for Lovable:
 ```
-The "Add Book" button on the /books page is hard to find. Move it to the top of the page, above the book list. Make it a large, clearly labelled button with the text "Suggest a Book".
+The "Add Book" button on the /books page is hard to find.
+
+Look: move it to the top of the page, above the book list, and make it a full-width primary button with the label "Suggest a book". Match the button style already used on the voting page.
+
+Behaviour: it opens the existing suggestion form. Keep it visible as the page scrolls on mobile.
+
+Edge cases: if the list is empty, this should be the only action on the page. If a club has more than 20 suggestions, the button should stay pinned at the top rather than scrolling away.
 ```
 
 ### Question bank for deeper conversations

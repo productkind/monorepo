@@ -11,8 +11,8 @@ account: little-parrot
 comprehension miss across courses, and story mapping is the framework that
 teaches it; the map is what makes one-feature-at-a-time prompting possible
 (the credit-saving habit); teaches the real PM term (user story mapping)
-with a plain structure. Repackages the User Story Mapping Cheat Sheet
-toolkit item.
+with a plain structure. Repackages the Map Your Idea into Buildable
+Steps toolkit item.
 
 ## Format
 

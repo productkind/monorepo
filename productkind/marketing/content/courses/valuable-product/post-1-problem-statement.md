@@ -11,7 +11,7 @@ account: little-parrot
 template turns an idea into build decisions; fill-in-the-blank templates are
 top saveable content; problem-first thinking is the PM judgement that
 prevents weeks of aimless prompting (direct credit ROI); points at the free
-first challenge. Repackages the Problem Statement Template toolkit item.
+first challenge. Repackages the Define the Problem You're Solving toolkit item.
 
 ## Format
 

@@ -1,9 +1,10 @@
 ---
 challenge: "4 - Break Down Your Idea Into Buildable Steps"
+type: "Cheat sheet"
 ---
-## User Story Mapping Cheat Sheet
+## Map Your Idea into Buildable Steps
 
-A quick-reference guide for breaking your idea into a structured map of everything your product needs to do. Keep this open while you're mapping out your sticky notes.
+A quick reference for user story mapping: the three layers, the wording that works at each one, and the mistakes that are easy to make. Keep it open while you're moving sticky notes around.
 
 ### The three layers
 
@@ -17,18 +18,24 @@ A user story map has three layers. Start at the top and work your way down.
 
 ### How it looks
 
-```
-Activities:    [Access the app]     [Set up book club]     [Choose next book]
-                    |                      |                      |
-Steps:         Create account        Create club profile     Suggest books
-               Sign in               Invite members          Browse suggestions
-                                     Establish rules         Vote on books
-                    |                                        Announce winner
-Details:       Enter email               |                      |
-               Use Google login      Enter club name         Add title and author
-               Verify email          Add description         Add cover image
-               Set display name      Set reading pace        Add recommendation note
-```
+![The Book Club Organiser story map: activities across the top, the steps for each activity underneath, and the buildable details listed below each step](/courses/vibe-coding-product-management-00/book-club-organiser-details.png)
+
+Reading the Book Club Organiser map from the top down:
+
+- **Activity:** Access the app
+  - **Step:** Create account
+    - **Details:** Enter email and password, Use Google login, Verify email address, Set display name
+  - **Step:** Sign in
+- **Activity:** Set up book club
+  - **Step:** Create club profile
+    - **Details:** Enter club name, Add club description, Set reading pace
+  - **Step:** Invite members
+- **Activity:** Choose next book
+  - **Step:** Suggest books
+    - **Details:** Add title and author, Add cover image, Add a recommendation note
+  - **Step:** Browse suggestions
+  - **Step:** Vote on books
+  - **Step:** Announce winner
 
 ### Writing good user stories at each layer
 
@@ -42,17 +49,17 @@ Details:       Enter email               |                      |
 
 **Details** start with an action word:
 - "Enter club name", "Add title and author", "Cast vote" (good: specific and buildable)
-- "Club name field" (not as good: describes a UI element, not what the user does)
+- "Club name field" (not as good: describes a piece of the user interface (UI), something on the screen like a box or a button, rather than what the user does)
 
 ### Common mistakes to avoid
 
 | Mistake | How to fix it |
 |---|---|
-| **Too few activities** (trying to fit everything under one or two) | If an activity feels huge, it probably contains multiple activities. Split it. |
-| **Steps that are actually details** (too specific for the second layer) | If a step mentions a specific UI element ("click the dropdown"), it's a detail. Move it down. |
+| **Too few activities** (trying to fit everything under one or two) | If an activity feels huge, it probably contains several activities. Split it. |
+| **Steps that belong in the details layer** (too specific for the second layer) | If a step mentions a specific UI element ("click the dropdown"), it's a detail. Move it down. |
 | **Missing the user's perspective** | Every item should describe what the user does, not what the system does. "Send confirmation email" becomes "Receive confirmation email." |
 | **Jumping to details before mapping activities and steps** | Work top-down. Get the full journey mapped at the activity level first, then add steps, then details. |
 
 ### After mapping
 
-Once your map is complete, you'll use it to carve out your MVP. Draw a horizontal line across the map: everything above the line is your MVP, everything below is for later.
+Once your map is complete, you'll use it to carve out your MVP (Minimum Viable Product): the smallest version of your product that's still useful to a real person. Draw a horizontal line across the map: everything above the line is your MVP, everything below is for later.
