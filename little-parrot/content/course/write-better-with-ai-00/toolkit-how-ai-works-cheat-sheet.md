@@ -43,6 +43,6 @@ That's the whole trade. It brings the structure and the fluency. You bring the f
 
 ### Where to go from here
 
-- The [Tone and Style Word Bank](TOOLKIT_LINK_PLACEHOLDER) for controlling how the output sounds
-- [Build a Prompt in Three Parts](TOOLKIT_LINK_PLACEHOLDER) for giving it the context it's missing
-- [Check an AI Draft Before You Send It](TOOLKIT_LINK_PLACEHOLDER) for catching what it invented
+- The [Tone and Style Word Bank](https://littleparrot.app/nest/toolkit/a7ce6e37-719e-45e3-98a1-d054a35ec827) for controlling how the output sounds
+- [Build a Prompt in Three Parts](https://littleparrot.app/nest/toolkit/ecaaeb78-0bc1-402d-8d7a-c214997e91c8) for giving it the context it's missing
+- [What to Check in an AI Draft Before You Send It](https://littleparrot.app/nest/toolkit/c96761e7-2166-4f46-8216-799d0b7f6f67) for catching what it invented

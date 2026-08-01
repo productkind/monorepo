@@ -133,4 +133,4 @@ An AI chat assistant like ChatGPT or Claude.ai knows these technologies in gener
 
 So use it to arrive at the conversation prepared, and treat what it tells you about your own system as questions to confirm. "Am I right that we're caching report results rather than raw data?" is a much better line in a review than a confident statement that turns out to be wrong.
 
-And check the specifics before you repeat them. [Check an AI Draft Before You Send It](TOOLKIT_LINK_PLACEHOLDER) covers the habit.
+And check the specifics before you repeat them. [What to Check in an AI Draft Before You Send It](https://littleparrot.app/nest/toolkit/c96761e7-2166-4f46-8216-799d0b7f6f67) covers the habit.
