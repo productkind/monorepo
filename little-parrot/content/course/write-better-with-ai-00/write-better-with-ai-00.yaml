@@ -143,6 +143,8 @@ course:
 
               You may already be doing some of them without noticing. Here, you're learning to use them with intention, so they become tools you can apply in your day-to-day work.
 
+              Stuck for the right word to describe how you want something to sound? The [Tone and Style Word Bank](TOOLKIT_LINK_PLACEHOLDER) in the Toolkit has tone words grouped by situation, style rules for length and format, and the phrases worth banning outright.
+
               Before moving on, think about a time when AI gave you an answer that felt off-track or irrelevant. Chances are, it was missing context.
       title: Prompt AI to communicate confidently in high pressure situations
       isFree: true
@@ -375,6 +377,8 @@ course:
 
               And sometimes they make things up. That's **hallucination**, and knowing this helps you pause, verify facts, and avoid passing on incorrect information.
 
+              [Check an AI Draft Before You Send It](TOOLKIT_LINK_PLACEHOLDER) in the Toolkit turns that into a two-minute pass over the numbers, names, and claims AI is most likely to invent.
+
               With these foundations, you're no longer just "trying prompts," you understand how the system works, and how to **guide it with intention**.
       title: Write clear internal product updates with less effort
       isFree: false
@@ -561,7 +565,10 @@ course:
           content:
             nextModule: '**Next challenge:** we''ll dive into how you can use AI for quickly learning new concepts that you can customise to your level. Let''s jump in!'
             description: See how much more natural it feels when the AI writes in your voice, and how adding context makes the output clearer and more useful?
-            subDescription: You've now shaped AI output for both quick team messages and public posts, two very different contexts. That's a big step in making AI work for you.
+            subDescription: |-
+              You've now shaped AI output for both quick team messages and public posts, two very different contexts. That's a big step in making AI work for you.
+
+              All three parts of a strong prompt are now in your hands. [Build a Prompt in Three Parts](TOOLKIT_LINK_PLACEHOLDER) in the Toolkit is the template to fill in, and [Prompts for the Writing You Do Every Week](TOOLKIT_LINK_PLACEHOLDER) has ready-made versions for release updates, exec one-pagers, slipped deadlines, and LinkedIn posts.
       title: Craft impactful LinkedIn posts that sound like you
       isFree: false
       skills:
@@ -734,6 +741,12 @@ course:
               * Adding context for relevant, useful outputs
               * Understanding how LLMs work (they predict, not think)
               * Recognising when AI might hallucinate
+
+              **Keep these close while you work:**
+
+              Next time a term you don't know comes up in stand-up, [Get AI to Explain a Technical Term](TOOLKIT_LINK_PLACEHOLDER) has the prompts to understand it, work out where it sits in your product, and walk into the next conversation with a good question ready.
+
+              And when you want to look something up, [How AI Actually Works](TOOLKIT_LINK_PLACEHOLDER) collects every term from this course with a note on what each one changes about the way you prompt.
 
               These skills will save you time and help you communicate more effectively every day.
       title: Learn more efficiently by using AI
