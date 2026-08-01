@@ -295,7 +295,10 @@
       "WebFetch(domain:aevent.com)",
       "WebFetch(domain:empoweredmastery.com)",
       "WebFetch(domain:www.acceleroi.com)",
-      "WebFetch(domain:macnative.com)"
+      "WebFetch(domain:macnative.com)",
+      "WebFetch(domain:developers.buffer.com)",
+      "WebFetch(domain:support.buffer.com)",
+      "WebFetch(domain:prow.ro)"
     ],
     "deny": [],
     "ask": []
