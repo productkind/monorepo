@@ -2,7 +2,7 @@
 challenge: "2 - Write clear internal product updates with less effort"
 type: "Checklist"
 ---
-## Check an AI Draft Before You Send It
+## What to Check in an AI Draft Before You Send It
 
 A quick checklist to verify what AI wrote for you, before it goes into Slack, an inbox, or a deck. Reach for it whenever your name is on the message and someone might act on what's in it.
 
