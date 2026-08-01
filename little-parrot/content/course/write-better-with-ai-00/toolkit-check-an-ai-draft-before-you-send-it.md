@@ -8,7 +8,7 @@ A quick pass over anything AI wrote for you, before it goes into Slack, an inbox
 
 ### Why the check exists
 
-A large language model (LLM), the technology behind chat assistants like ChatGPT and Claude.ai, predicts the next piece of text based on patterns, so it produces what looks likely rather than what's true. When something is missing, it fills the gap with something plausible. That's called hallucination, and it comes with how the technology works, so no wording will switch it off. The good news is that hallucinations in product management writing are predictable, so you know where to look.
+A large language model (LLM), the technology behind AI chat assistants like ChatGPT and Claude.ai, predicts the next piece of text based on patterns, so it produces what looks likely rather than what's true. When something is missing, it fills the gap with something plausible. That's called hallucination, and it comes with how the technology works, so no wording will switch it off. The good news is that hallucinations in product management writing are predictable, so you know where to look.
 
 ### The pass
 
@@ -39,7 +39,7 @@ These are the spots worth reading twice, because they're where a draft goes wron
 
 ### Make the check faster
 
-Ask the chat assistant to mark its own guesses in the draft. It won't catch everything, but it shows you the obvious gaps in seconds.
+Ask the AI chat assistant to mark its own guesses in the draft. It won't catch everything, but it shows you the obvious gaps in seconds.
 
 ```
 Before I send this, go through the draft and list every factual claim in it: numbers, dates, names, and any cause-and-effect statement. For each one, say whether it came from the context I gave you, or whether you filled it in yourself. Do not rewrite the draft.
@@ -55,7 +55,7 @@ Read this as a sceptical reader who wasn't in any of the meetings. List the ques
 
 ### One thing that doesn't work
 
-Asking "are you sure?" or "is this accurate?" isn't verification. The chat assistant will answer that question the same way it wrote the draft, by predicting a likely response. Sometimes it backs down on a claim that was correct, sometimes it defends one it invented. Ask the same question twice and you can get two different answers.
+Asking "are you sure?" or "is this accurate?" isn't verification. The AI chat assistant will answer that question the same way it wrote the draft, by predicting a likely response. Sometimes it backs down on a claim that was correct, sometimes it defends one it invented. Ask the same question twice and you can get two different answers.
 
 Verification means checking it yourself against the source: the Jira ticket, the dashboard, the person who knows the answer.
 

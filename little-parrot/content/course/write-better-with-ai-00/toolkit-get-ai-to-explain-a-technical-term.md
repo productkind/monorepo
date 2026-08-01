@@ -30,7 +30,7 @@ Then tell me:
 I need this because [it came up in stand-up and I want to follow the conversation next time it does]. Keep it under 300 words and don't use analogies involving cars or restaurants.
 ```
 
-That last line is optional but effective. Chat assistants reach for the same few analogies by default, and ruling them out usually gets you a more concrete answer.
+That last line is optional but effective. AI chat assistants reach for the same few analogies by default, and ruling them out usually gets you a more concrete answer.
 
 ### When you need to know how it fits your product
 
@@ -128,7 +128,7 @@ Don't explain terms I probably already know as a PM, like API or database.
 
 ### What to be careful about
 
-A chat assistant like ChatGPT or Claude.ai, where you copy the answer out, knows these technologies in general terms. It knows nothing about your product. Everything it says about *your* architecture is a guess based on what similar products usually do.
+An AI chat assistant like ChatGPT or Claude.ai knows these technologies in general terms. It knows nothing about your product. Everything it says about *your* architecture is a guess based on what similar products usually do.
 
 So use it to arrive at the conversation prepared, and treat what it tells you about your own system as questions to confirm. "Am I right that we're caching report results rather than raw data?" is a much better line in a review than a confident statement that turns out to be wrong.
 

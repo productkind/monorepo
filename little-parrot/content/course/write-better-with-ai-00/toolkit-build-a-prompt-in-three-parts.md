@@ -28,7 +28,7 @@ Context and background:
 
 ### What each part is doing
 
-**Task** points the chat assistant (ChatGPT or Claude.ai, where you type a request and copy the answer out) at a shape it already knows. "A Slack message" and "a one-page memo for the exec team" produce different structures before you've said anything else, so name the format and the destination in the first line.
+**Task** points the AI chat assistant (ChatGPT, Claude.ai, or similar) at a shape it already knows. "A Slack message" and "a one-page memo for the exec team" produce different structures before you've said anything else, so name the format and the destination in the first line.
 
 **Tone and style** controls how it sounds. Without it you get the default voice: long, upbeat, and slightly American. This is where you stop the draft sounding like a stranger wrote it. The [Tone and Style Word Bank](TOOLKIT_LINK_PLACEHOLDER) has the vocabulary if you're stuck for words.
 
@@ -105,7 +105,7 @@ Context and background:
 
 ### Attach rather than retype
 
-If the context lives in a document, attach it instead of summarising it. Most chat assistants accept file uploads and pasted text.
+If the context lives in a document, attach it instead of summarising it. Most AI chat assistants accept file uploads and pasted text.
 
 Worth attaching: the Jira export for the release, your user interview notes, last quarter's update so the format matches, three of your own past posts so the voice matches, the PRD (product requirements document), the customer email you're replying to.
 
