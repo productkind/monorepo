@@ -19,7 +19,7 @@ Length: under 40 words.
 
 ### Tone words, by the situation you're in
 
-Tone influences how your message will feel. Pick two or three descriptiors, depending on your situation.
+Tone influences how your message will feel. Pick two or three descriptors, depending on your situation.
 
 | The situation | Tone words to use | What they stop the AI doing |
 |---|---|---|
@@ -35,7 +35,7 @@ Tone influences how your message will feel. Pick two or three descriptiors, depe
 
 ### Style rules, by what you're controlling
 
-Style influences how your message will look like.
+Style influences how your message will look.
 
 | What you're controlling | Write this in your prompt |
 |---|---|
