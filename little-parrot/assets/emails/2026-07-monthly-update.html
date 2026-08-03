@@ -275,7 +275,9 @@
     /* Mobile */
     @media only screen and (max-width: 620px) {
       body { font-size: 16px; }
-      .content { padding: 32px 22px 16px; }
+      /* Trim horizontal chrome on phones: 8px keeps room for the 4px drop shadow so the sticker edge still reads */
+      .email-wrapper { padding: 20px 8px; }
+      .content { padding: 32px 18px 16px; }
       .header { padding: 28px 22px; }
       .cta-section { padding: 28px 22px; }
       .footer { padding: 20px; }
@@ -292,7 +294,7 @@
 </head>
 <body>
   <div style="display: none; max-height: 0; overflow: hidden; mso-hide: all; font-size: 1px; line-height: 1px; color: #f5f5f5;">
-    13 templates and checklists to reuse, plus short videos explaining AI words
+    13 templates and checklists to reuse, plus short videos explaining AI terms
     &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
   </div>
   <div class="email-wrapper">
@@ -300,7 +302,7 @@
 
       <!-- Header -->
       <div class="header">
-        <a href="https://littleparrot.app/?utm_source=monthly-email" style="text-decoration: none;"><img src="https://littleparrot.app/logo-little-parrot.png" width="220" height="70" alt="Little Parrot" style="max-width: 220px; height: auto; border: 0;" /></a>
+        <a href="https://littleparrot.app/?utm_source=monthly-email" style="text-decoration: none;"><img src="https://littleparrot.app/logo-little-parrot-email.png" width="220" height="63" alt="Little Parrot" style="max-width: 220px; height: auto; border: 0;" /></a>
         <h1 class="header-subtitle" style="font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 400; text-transform: uppercase; letter-spacing: 1px; color: hsl(245, 3%, 38%); margin-top: 14px;">July 2026 update</h1>
       </div>
 
@@ -308,22 +310,22 @@
       <div class="content">
 
         <p class="greeting">Hi {{first_name}},</p>
-        <p class="intro">Write Better with AI and Build a Valuable Product now have toolkits. That is 13 more templates, checklists and prompts, ready to use.</p>
+        <p class="intro">Write Better with AI and Build a Valuable Product now have <a href="https://littleparrot.app/nest/toolkit/?utm_source=monthly-email&auth=login" class="text-link" style="font-size: 17px;">toolkits</a>. That is 13 more templates, checklists and prompts, ready to use.</p>
 
         <!-- 1. New toolkits -->
         <div class="section">
-          <h2><span class="num">01</span> What's inside the two new toolkits</h2>
+          <h2><span class="num">01</span> What the two new toolkits help you do</h2>
           <ul class="pill-list">
             <li>
               <strong>Write Better with AI: Prompting Foundations for Product Managers</strong>
-              <span>Build a Prompt in Three Parts, a Tone and Style Word Bank, and prompts for the writing you do every week.</span>
+              <span>Ask for an urgent fix without sounding demanding, give stakeholders bad news clearly and early, and get a first draft that already sounds like you.</span>
             </li>
             <li>
               <strong>Build a Valuable Product: How to Break Down Your Idea for Vibe Coding</strong>
-              <span>Define the Problem You're Solving, Sketch Your User's Journey, and Turn Your MVP into a Build Prompt (your MVP is the smallest version of your product you can put in front of someone).</span>
+              <span>Identify if your product solves a real user problem, decide the smallest first version worth building, and turn it into a prompt you can paste straight into Lovable.</span>
             </li>
           </ul>
-          <p style="margin-top: 14px;">Open one in the Toolkit, put your own project next to it, and work through it.</p>
+          <p style="margin-top: 14px;">Start with whichever one you need first.</p>
           <div class="cta-wrapper">
             <a href="https://littleparrot.app/nest/toolkit/?utm_source=monthly-email&auth=login" class="cta-button" style="color: #08080a; font-size: 17px; font-weight: 700; background-color: #fdd825; border: 2px solid #08080a; padding: 15px 34px; display: inline-block; text-decoration: none;">Open the Toolkit</a>
           </div>
@@ -332,27 +334,31 @@
         <!-- 2. Course accuracy -->
         <div class="section">
           <h2><span class="num">02</span> Write Better with AI, reviewed and corrected</h2>
-          <p>AI models change quickly, so we read the whole course again. We fixed an out-of-date explanation of how models handle context, simplified the wording, and pointed a video at the right clip.</p>
+          <p>AI models change quickly, so we brought the course up to date with the latest information.</p>
           <p><a href="https://littleparrot.app/550e8400-e29b-41d4-a716-446655440000/course-overview?utm_source=monthly-email" class="text-link" style="font-size: 17px;">Open Write Better with AI →</a></p>
         </div>
 
         <!-- 3. Social + Substack -->
         <div class="section">
-          <h2><span class="num">03</span> AI words explained, in under a minute</h2>
-          <p>We started making short videos about the words behind the tools you use. What is an LLM, the large language model behind ChatGPT? What is a token, the chunk of text an AI reads? Short answers to the vocabulary nobody sat you down and taught. Watch them on <a href="https://www.youtube.com/@productkind/shorts" class="text-link" style="font-size: 17px;">YouTube</a>, <a href="https://www.instagram.com/by_productkind/" class="text-link" style="font-size: 17px;">Instagram</a> or <a href="https://www.tiktok.com/@littleparrot.app" class="text-link" style="font-size: 17px;">TikTok</a>. Sending one to a friend who is curious about AI is the easiest way to introduce her to us.</p>
+          <h2><span class="num">03</span> AI terms explained, in under a minute</h2>
+          <p>We started making short videos to explain the terminology behind the tools you use. What is an LLM, the large language model behind ChatGPT? What is a token, the unit your AI usage is measured in? Watch them on <a href="https://www.youtube.com/@productkind/shorts" class="text-link" style="font-size: 17px;">YouTube</a>, <a href="https://www.instagram.com/by_productkind/" class="text-link" style="font-size: 17px;">Instagram</a> or <a href="https://www.tiktok.com/@littleparrot.app" class="text-link" style="font-size: 17px;">TikTok</a>. Send one to a friend who has been wondering what these terms mean.</p>
           <p>For the longer version of what we are learning while building Little Parrot, our articles live on <a href="https://productkind.substack.com/?utm_source=monthly-email" class="text-link" style="font-size: 17px;">Thoughts by productkind</a>.</p>
+          <div style="text-align: center; margin: 20px 0;">
+            <img src="https://littleparrot.app/newsletter/videos-thumbs-up.gif" width="220" height="220" alt="A dog watching a video on a phone and giving it a thumbs up" style="width: 220px; max-width: 100%; height: auto; display: inline-block; border: 0;" />
+          </div>
         </div>
 
         <!-- Free-plan callout -->
         <div class="share-box">
           <h2>On the free plan?</h2>
-          <p>If the free challenges have been useful, a subscription gives you everything you need to keep growing:</p>
+          <p>Spend a little to stop draining your credits. Every time you ask Lovable to change something, it spends credits. The course that puts a stop to that, <a href="https://littleparrot.app/7171137b-9461-425f-8737-ad3400d56fd8/course-overview?utm_source=monthly-email" class="text-link" style="font-size: 17px;">Save Lovable Credits: Edit Your App Like a Developer</a>, is behind a subscription. We know how that sounds, but ultimately, it'll save you money.</p>
           <ul>
-            <li><strong>🎓 Every course:</strong> practical and built to fit around a busy day.</li>
-            <li><strong>🧰 The Toolkit:</strong> prompt libraries, checklists and guides to use as you acquire new skills.</li>
-            <li><strong>👋🏼 Direct access to us:</strong> so you can bring your questions to Kinga (Lead Product Manager) and Tamas (Principal Software Engineer) in our Discord community.</li>
+            <li><strong>🛠️ Set up your workspace:</strong> get the tools developers use.</li>
+            <li><strong>🖥️ See each change as you make it:</strong> run your app on your own computer.</li>
+            <li><strong>🤖 Pass bigger tasks to GitHub Copilot:</strong> a free AI agent that edits your files for you.</li>
+            <li><strong>🫱🏽‍🫲🏿 Works with other builders:</strong> Replit, v0 and Bolt all connect to GitHub too, so the same steps apply.</li>
           </ul>
-          <p><a href="https://littleparrot.app/pricing/?utm_source=monthly-email" class="text-link" style="font-size: 17px;">See what's included →</a></p>
+          <p>You can start the course for free, and <a href="https://littleparrot.app/pricing/?utm_source=monthly-email" class="text-link" style="font-size: 17px;">a subscription</a> opens the rest of it, along with every other course and the Toolkit.</p>
         </div>
 
       </div>
