@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en-GB" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <title>New toolkits for two more courses</title>
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <![endif]-->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+    * { margin: 0; padding: 0; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #08080a;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    .email-wrapper {
+      width: 100%;
+      box-sizing: border-box;
+      background-color: #f5f5f5;
+      padding: 32px 16px;
+    }
+
+    .email-container {
+      max-width: 640px;
+      margin: 0 auto;
+      background-color: #fffffe;
+      border: 2px solid #08080a;
+      box-shadow: 4px 4px 2px rgba(8, 8, 9, 0.25);
+    }
+
+    /* Header */
+    .header {
+      background-color: #fdd82520;
+      background: linear-gradient(90deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020);
+      padding: 36px 40px;
+      text-align: center;
+      border-bottom: 2px solid #08080a;
+    }
+
+    .header img {
+      max-width: 220px;
+      height: auto;
+    }
+
+    .header-subtitle {
+      font-family: 'Space Mono', monospace;
+      font-size: 14px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: hsl(245, 3%, 38%);
+      margin-top: 14px;
+      letter-spacing: 1px;
+    }
+
+    /* Content */
+    .content {
+      padding: 48px 40px 24px;
+    }
+
+    .greeting {
+      font-size: 17px;
+      margin-bottom: 12px;
+      color: hsl(245, 3%, 22%);
+    }
+
+    .intro {
+      font-size: 17px;
+      color: hsl(245, 3%, 22%);
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    /* Section */
+    .section {
+      margin-bottom: 44px;
+    }
+
+    h2 {
+      font-family: 'Space Mono', monospace;
+      font-size: 22px;
+      font-weight: 700;
+      color: #08080a;
+      margin: 0 0 16px;
+      line-height: 1.3;
+    }
+
+    h2 .num {
+      display: inline-block;
+      background-color: #fdd825;
+      background: linear-gradient(90deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70);
+      border: 2px solid #08080a;
+      padding: 1px 9px;
+      margin-right: 10px;
+      font-size: 14px;
+      vertical-align: 2px;
+    }
+
+    .section p {
+      font-size: 17px;
+      color: hsl(245, 3%, 22%);
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+
+    .section p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Pill list (courses, value list) */
+    .pill-list {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0 0;
+    }
+
+    .pill-list li {
+      padding: 14px 18px;
+      margin-bottom: 10px;
+      background-color: #fffffe;
+      border: 2px solid #08080a;
+      box-shadow: 3px 3px 1px rgba(8, 8, 9, 0.18);
+    }
+
+    .pill-list li strong {
+      color: #08080a;
+      font-size: 17px;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .pill-list li span {
+      font-size: 17px;
+      color: hsl(245, 3%, 28%);
+    }
+
+    /* CTA button */
+    .cta-button {
+      display: inline-block;
+      background-color: #fdd825;
+      background: linear-gradient(90deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70);
+      color: #08080a;
+      font-family: 'Inter', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 15px 34px;
+      border: 2px solid #08080a;
+      box-shadow: 4px 4px 2px rgba(8, 8, 9, 0.25);
+    }
+
+    .cta-wrapper {
+      text-align: center;
+      margin: 24px 0 0;
+    }
+
+    /* Free-plan callout */
+    .share-box {
+      background-color: #fdd82520;
+      background: linear-gradient(90deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020);
+      border: 2px solid #08080a;
+      box-shadow: 4px 4px 2px rgba(8, 8, 9, 0.25);
+      padding: 24px;
+      margin-top: 20px;
+    }
+
+    .share-box h2 {
+      font-size: 18px;
+      margin-bottom: 14px;
+    }
+
+    .share-box p {
+      font-size: 17px;
+      color: hsl(245, 3%, 22%);
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+
+    .share-box ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 14px;
+    }
+
+    .share-box ul li {
+      font-size: 17px;
+      color: hsl(245, 3%, 22%);
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+
+    .share-box ul li strong {
+      color: #08080a;
+    }
+
+    .share-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Sign-off */
+    .cta-section {
+      text-align: center;
+      padding: 36px 40px;
+      border-top: 2px solid #08080a;
+      background-color: #fdd82510;
+      background: linear-gradient(90deg, #ffb65b10, #fdd82510, #fbfb0010, #8efd2310, #00ed7010);
+    }
+
+    .cta-section p {
+      font-size: 16px;
+      color: hsl(245, 3%, 32%);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .cta-section .signoff {
+      font-family: 'Space Mono', monospace;
+      font-weight: 700;
+      font-size: 16px;
+      color: #08080a;
+      margin-top: 20px;
+    }
+
+    .cta-section .brand {
+      font-size: 12px;
+      color: hsl(245, 3%, 40%);
+      margin-top: 4px;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 24px 40px;
+      text-align: center;
+      font-size: 12px;
+      color: hsl(245, 3%, 45%);
+      line-height: 1.8;
+    }
+
+    .footer a {
+      color: hsl(245, 3%, 40%);
+      text-decoration: underline;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid hsl(245, 5%, 89%);
+      margin: 0;
+    }
+
+    a.text-link {
+      color: #08080a;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    /* Mobile */
+    @media only screen and (max-width: 620px) {
+      body { font-size: 16px; }
+      .content { padding: 32px 22px 16px; }
+      .header { padding: 28px 22px; }
+      .cta-section { padding: 28px 22px; }
+      .footer { padding: 20px; }
+      .intro { margin-bottom: 32px; }
+      .section { margin-bottom: 36px; }
+      .cta-button {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 15px 20px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div style="display: none; max-height: 0; overflow: hidden; mso-hide: all; font-size: 1px; line-height: 1px; color: #f5f5f5;">
+    13 templates and checklists to reuse, plus short videos explaining AI words
+    &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+  </div>
+  <div class="email-wrapper">
+    <div class="email-container">
+
+      <!-- Header -->
+      <div class="header">
+        <a href="https://littleparrot.app/?utm_source=monthly-email" style="text-decoration: none;"><img src="https://littleparrot.app/logo-little-parrot.png" width="220" height="70" alt="Little Parrot" style="max-width: 220px; height: auto; border: 0;" /></a>
+        <h1 class="header-subtitle" style="font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 400; text-transform: uppercase; letter-spacing: 1px; color: hsl(245, 3%, 38%); margin-top: 14px;">July 2026 update</h1>
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+
+        <p class="greeting">Hi {{first_name}},</p>
+        <p class="intro">Write Better with AI and Build a Valuable Product now have toolkits. That is 13 more templates, checklists and prompts, ready to use.</p>
+
+        <!-- 1. New toolkits -->
+        <div class="section">
+          <h2><span class="num">01</span> What's inside the two new toolkits</h2>
+          <ul class="pill-list">
+            <li>
+              <strong>Write Better with AI: Prompting Foundations for Product Managers</strong>
+              <span>Build a Prompt in Three Parts, a Tone and Style Word Bank, and prompts for the writing you do every week.</span>
+            </li>
+            <li>
+              <strong>Build a Valuable Product: How to Break Down Your Idea for Vibe Coding</strong>
+              <span>Define the Problem You're Solving, Sketch Your User's Journey, and Turn Your MVP into a Build Prompt (your MVP is the smallest version of your product you can put in front of someone).</span>
+            </li>
+          </ul>
+          <p style="margin-top: 14px;">Open one in the Toolkit, put your own project next to it, and work through it.</p>
+          <div class="cta-wrapper">
+            <a href="https://littleparrot.app/nest/toolkit/?utm_source=monthly-email&auth=login" class="cta-button" style="color: #08080a; font-size: 17px; font-weight: 700; background-color: #fdd825; border: 2px solid #08080a; padding: 15px 34px; display: inline-block; text-decoration: none;">Open the Toolkit</a>
+          </div>
+        </div>
+
+        <!-- 2. Course accuracy -->
+        <div class="section">
+          <h2><span class="num">02</span> Write Better with AI, reviewed and corrected</h2>
+          <p>AI models change quickly, so we read the whole course again. We fixed an out-of-date explanation of how models handle context, simplified the wording, and pointed a video at the right clip.</p>
+          <p><a href="https://littleparrot.app/550e8400-e29b-41d4-a716-446655440000/course-overview?utm_source=monthly-email" class="text-link" style="font-size: 17px;">Open Write Better with AI →</a></p>
+        </div>
+
+        <!-- 3. Social + Substack -->
+        <div class="section">
+          <h2><span class="num">03</span> AI words explained, in under a minute</h2>
+          <p>We started making short videos about the words behind the tools you use. What is an LLM, the large language model behind ChatGPT? What is a token, the chunk of text an AI reads? Short answers to the vocabulary nobody sat you down and taught. Watch them on <a href="https://www.youtube.com/@productkind/shorts" class="text-link" style="font-size: 17px;">YouTube</a>, <a href="https://www.instagram.com/by_productkind/" class="text-link" style="font-size: 17px;">Instagram</a> or <a href="https://www.tiktok.com/@littleparrot.app" class="text-link" style="font-size: 17px;">TikTok</a>. Sending one to a friend who is curious about AI is the easiest way to introduce her to us.</p>
+          <p>For the longer version of what we are learning while building Little Parrot, our articles live on <a href="https://productkind.substack.com/?utm_source=monthly-email" class="text-link" style="font-size: 17px;">Thoughts by productkind</a>.</p>
+        </div>
+
+        <!-- Free-plan callout -->
+        <div class="share-box">
+          <h2>On the free plan?</h2>
+          <p>If the free challenges have been useful, a subscription gives you everything you need to keep growing:</p>
+          <ul>
+            <li><strong>🎓 Every course:</strong> practical and built to fit around a busy day.</li>
+            <li><strong>🧰 The Toolkit:</strong> prompt libraries, checklists and guides to use as you acquire new skills.</li>
+            <li><strong>👋🏼 Direct access to us:</strong> so you can bring your questions to Kinga (Lead Product Manager) and Tamas (Principal Software Engineer) in our Discord community.</li>
+          </ul>
+          <p><a href="https://littleparrot.app/pricing/?utm_source=monthly-email" class="text-link" style="font-size: 17px;">See what's included →</a></p>
+        </div>
+
+      </div>
+
+      <!-- Sign-off -->
+      <div class="cta-section">
+        <p>Thank you for being part of Little Parrot, and an extra thank you to our subscribers, who make a month like this one possible. 💛</p>
+        <div class="signoff">Kinga, Tamas &amp; Little Parrot</div>
+        <div class="brand">Little Parrot by productkind</div>
+      </div>
+
+      <!-- Footer -->
+      <hr class="divider">
+      <div class="footer">
+        <!-- Icon row as a presentational table: cell padding is the one horizontal spacing Outlook honours -->
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin: 0 auto 12px;">
+          <tr>
+            <td style="padding: 0 6px;">
+              <a href="https://www.linkedin.com/company/productkind/" style="text-decoration: none; font-size: 12px;">
+                <img src="https://littleparrot.app/icon-linkedin.png" width="24" height="24" alt="LinkedIn" style="vertical-align: middle; border: 0;" />
+              </a>
+            </td>
+            <td style="padding: 0 6px;">
+              <a href="https://www.instagram.com/by_productkind/" style="text-decoration: none; font-size: 12px;">
+                <img src="https://littleparrot.app/icon-instagram.png" width="24" height="24" alt="Instagram" style="vertical-align: middle; border: 0;" />
+              </a>
+            </td>
+            <td style="padding: 0 6px;">
+              <a href="https://www.tiktok.com/@littleparrot.app" style="text-decoration: none; font-size: 12px;">
+                <img src="https://littleparrot.app/icon-tiktok.png" width="24" height="24" alt="TikTok" style="vertical-align: middle; border: 0;" />
+              </a>
+            </td>
+            <td style="padding: 0 6px;">
+              <a href="https://www.youtube.com/@productkind" style="text-decoration: none; font-size: 12px;">
+                <img src="https://littleparrot.app/icon-youtube.png" width="24" height="24" alt="YouTube" style="vertical-align: middle; border: 0;" />
+              </a>
+            </td>
+          </tr>
+        </table>
+        <p>You're receiving this because you have an account on Little Parrot.<br>
+        <a href="https://littleparrot.app/?utm_source=monthly-email" style="font-size: 12px;">littleparrot.app</a><br><br>
+        <a href="__unsubscribe_url__" style="font-size: 12px;">unsubscribe</a></p>
+      </div>
+
+      <!-- Bottom buffer: protects the footer/unsubscribe from any residual height shift in the Gmail iOS app -->
+      <div style="height: 32px; line-height: 32px; font-size: 1px;">&nbsp;</div>
+
+    </div>
+  </div>
+</body>
+</html>
