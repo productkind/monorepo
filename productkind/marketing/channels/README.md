@@ -66,9 +66,11 @@ message doesn't read as promotional.
 - **Audience:** existing learners, mostly paid. Warm.
 - **Format:** Markdown with emoji section headers, short sections, one link per
   section with a 👉 prefix. Sign off "Kinga, Tamas & Little Parrot 💛". (Match the
-  monthly announcements in `little-parrot/assets/emails/*-discord-announcement.md`.)
+  monthly announcements in `little-parrot/assets/discord/`, named `YYYY-MM-monthly-update.md`.
+  One-off posts are `YYYY-MM-DD-<topic>.md`.)
 - **Self-promo rules:** our space, links welcome.
-- **Ref param:** `discord` (share-asks use `discord-share`)
+- **Tracking param:** `?utm_source=discord` (share-asks use `discord-share`). PostHog picks
+  `utm_source` up directly, so use it rather than a custom `ref` param.
 - **Posting from:** Little Parrot Discord
 - **Assets:** attach GIFs/PNGs inline where referenced
 
