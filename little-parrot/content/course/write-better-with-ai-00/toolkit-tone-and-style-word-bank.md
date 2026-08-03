@@ -23,7 +23,7 @@ Tone influences how your message will feel. Pick two or three descriptors, depen
 
 | The situation | Tone words to use | What they stop the AI doing |
 |---|---|---|
-| Ask for an urgent fix without escalating | collaborative, warm, confident, not blaming | Sounding like a formal escalation |
+| Asking for an urgent fix without escalating | collaborative, warm, confident, not blaming | Sounding like a formal escalation |
 | Telling stakeholders something has slipped | direct, calm, accountable, no hedging | Burying the news in three paragraphs of caveats |
 | Pushing back on a feature request | respectful, firm, curious, solution-focused | Either caving or sounding defensive |
 | Announcing a release company-wide | clear, grounded, specific, credit-giving | Reading like marketing copy |
