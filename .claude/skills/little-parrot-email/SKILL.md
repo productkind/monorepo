@@ -55,7 +55,7 @@ Apple Mail Privacy Protection loads the tracking pixel on delivery whether or no
 - **Inline styles on table cells**. Don't rely on CSS classes for table-based layouts since some clients strip `<style>` blocks.
 - **Give `<a>` links an explicit (inline) `font-size`.** Gmail does not pass an *inherited* font-size down to link elements, so a link that relies on its parent's size renders correctly in the browser but shrinks in Gmail. Set the size on the anchor itself (e.g. `style="font-size: 16px;"`), don't lean on inheritance from a `<style>` rule. (Paragraph text is fine because it's sized by a rule that targets it directly.)
 - **Every `<img>` needs explicit `width` and `height` attributes**, even with responsive `width: 100%; height: auto` CSS. The Gmail iOS app measures the email's total height once, before remote images load; an image with no declared dimensions reserves zero height until it downloads, then pushes everything below it (often the footer and unsubscribe link) past the locked-in height, where it gets clipped — with no "[Message clipped]" notice. Set the attributes to the image's real pixel ratio (the CSS still scales it). As a belt-and-braces measure, end the email with a small bottom-buffer spacer (e.g. `<div style="height: 32px; line-height: 32px; font-size: 1px;">&nbsp;</div>`) so any residual shift from webfonts/logo never eats the unsubscribe link.
-- **Self-hosted images only**. Don't reference third-party icon services. Social icons are hosted at `https://littleparrot.app/icon-linkedin.png` and `https://littleparrot.app/icon-instagram.png`.
+- **Self-hosted images only**. Don't reference third-party icon services. Social icons are hosted at `https://littleparrot.app/icon-{linkedin,instagram,tiktok,youtube}.png` (see **Footer Social Icons** below).
 - **CSS gradients need a solid fallback.** Outlook (Word engine) ignores `linear-gradient`. Wherever a gradient carries meaning (e.g. an accent bar that would otherwise vanish), set a solid `background-color` *first*, then the gradient, so it degrades to a visible colour: `background-color: #fdd825; background: linear-gradient(180deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70);`
 
 ### Accessibility & Dark Mode
@@ -75,7 +75,7 @@ Every email follows this structure:
 1. **Header**: Logo (linked to littleparrot.app) with optional subtitle in Space Mono
 2. **Content**: Greeting, body, optional highlight box, optional CTA
 3. **Sign-off**: Centred text with sign-off from "Kinga, Tamas & Little Parrot" / "Little Parrot by productkind"
-4. **Footer**: Social icons (LinkedIn + Instagram), context line ("You're receiving this because..."), littleparrot.app link, unsubscribe link
+4. **Footer**: Social icons (LinkedIn, Instagram, TikTok, YouTube), context line ("You're receiving this because..."), littleparrot.app link, unsubscribe link
 
 Set a clear `<title>` that mirrors the subject line (e.g. "Your certificate is ready") — it shows as the browser/preview title.
 
@@ -116,17 +116,51 @@ Readability rules on top of the scale:
 - For content that repeats per recipient (e.g. one card per completed course), **confirm the email tool's loop syntax before using it** (Liquid `{% for %}` vs Handlebars/Mustache `{{#each}}`). If the syntax is unknown or the audience is small, build one reusable block and duplicate it manually, wrapped in `<!-- start/end -->` comments with numbered fields (`{{course_name_2}}`, `{{certificate_id_2}}`).
 
 ### Footer Social Icons
-Always include LinkedIn and Instagram icons in the footer:
+Include all four channels, in the same order as the website footer (`little-parrot-awakens/src/components/Footer.tsx`): **LinkedIn, Instagram, TikTok, YouTube**. Keep the email and the website in step; if a channel is added or dropped on the site, change it here too.
+
+Build the row as a presentational `<table>`, not inline anchors with horizontal margins. Outlook's Word engine drops `margin` on inline elements, which collapses four icons into a single smudge; cell padding is the one horizontal spacing it honours. Every anchor also needs an inline `font-size`, because with images blocked the `alt` text renders inside the anchor and Gmail won't inherit the footer's 12px.
+
 ```html
-<p style="margin-bottom: 12px;">
-  <a href="https://www.linkedin.com/company/productkind/" style="text-decoration: none; margin: 0 8px;">
-    <img src="https://littleparrot.app/icon-linkedin.png" width="24" height="24" alt="LinkedIn" style="vertical-align: middle; border: 0;" />
-  </a>
-  <a href="https://www.instagram.com/by_productkind/" style="text-decoration: none; margin: 0 8px;">
-    <img src="https://littleparrot.app/icon-instagram.png" width="24" height="24" alt="Instagram" style="vertical-align: middle; border: 0;" />
-  </a>
-</p>
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin: 0 auto 12px;">
+  <tr>
+    <td style="padding: 0 6px;">
+      <a href="https://www.linkedin.com/company/productkind/" style="text-decoration: none; font-size: 12px;">
+        <img src="https://littleparrot.app/icon-linkedin.png" width="24" height="24" alt="LinkedIn" style="vertical-align: middle; border: 0;" />
+      </a>
+    </td>
+    <td style="padding: 0 6px;">
+      <a href="https://www.instagram.com/by_productkind/" style="text-decoration: none; font-size: 12px;">
+        <img src="https://littleparrot.app/icon-instagram.png" width="24" height="24" alt="Instagram" style="vertical-align: middle; border: 0;" />
+      </a>
+    </td>
+    <td style="padding: 0 6px;">
+      <a href="https://www.tiktok.com/@littleparrot.app" style="text-decoration: none; font-size: 12px;">
+        <img src="https://littleparrot.app/icon-tiktok.png" width="24" height="24" alt="TikTok" style="vertical-align: middle; border: 0;" />
+      </a>
+    </td>
+    <td style="padding: 0 6px;">
+      <a href="https://www.youtube.com/@productkind" style="text-decoration: none; font-size: 12px;">
+        <img src="https://littleparrot.app/icon-youtube.png" width="24" height="24" alt="YouTube" style="vertical-align: middle; border: 0;" />
+      </a>
+    </td>
+  </tr>
+</table>
 ```
+
+The icon PNGs are 48x48 (2x for a 24px display), greyscale + alpha, **`#767676` stroke** on a white matte, and live in `little-parrot-awakens/public/`, which serves `littleparrot.app/icon-*.png`. They are drawn from the same SVG paths as the website's icon components. **Adding a channel means adding its PNG there and deploying the site before the email sends**, or the icon 404s in every inbox.
+
+`#767676` on the near-white footer measures 4.50:1, clearing the 3:1 WCAG asks for meaningful graphics. It replaced `#999999` (2.82:1, failing) in August 2026. Keep all four the same colour: they read as one set, and the same four files are used by every transactional email template in `little-parrot-awakens/supabase/functions/`, so a change to one file lands everywhere at once.
+
+To recolour without disturbing the artwork, keep the existing alpha channel and replace only the grey. Every opaque pixel is a single flat grey and all anti-aliasing lives in alpha, so this is lossless:
+
+```bash
+magick icon-linkedin.png -alpha extract -depth 8 alpha.png
+magick -size 48x48 xc:"#767676" alpha.png -alpha off -compose CopyOpacity -composite \
+       -background white -alpha background \
+       -colorspace Gray -define png:color-type=4 -strip icon-linkedin.png
+```
+
+Verify with `magick compare -metric RMSE` on the alpha channel before and after; it must be 0. Re-rendering from SVG instead introduces a few per cent of anti-aliasing drift.
 
 ## Design Rules
 
