@@ -13,15 +13,15 @@ Statuses: todo, created, scheduled, posted
 
 | Date | Piece | Channels | Status |
 | ---- | ----- | -------- | ------ |
-| 2026-08-09 | DB-1 bug loop escape | instagram, tiktok, youtube, linkedin productkind, threads productkind | todo |
+| 2026-08-09 | WB-4 the Redis moment | instagram, tiktok, youtube, linkedin productkind, threads productkind | todo |
 | 2026-08-08 | B-roll | instagram, tiktok, youtube, linkedin productkind, threads productkind | todo |
 | 2026-08-07 | social-011 | instagram, tiktok, youtube, linkedin productkind, threads productkind  | scheduled |
-| 2026-08-06 | WB-4 the Redis moment | instagram, tiktok, youtube, linkedin productkind, threads productkind | todo |
+| 2026-08-06 | SB-3 where is the problem | instagram, tiktok, youtube, linkedin productkind, threads productkind | todo |
 | 2026-08-05 | B-roll | instagram, tiktok, youtube, linkedin productkind, threads productkind | todo |
-| 2026-08-04 | Substack article carousel: | instagram, tiktok, youtube, linkedin Kinga, threads Kinga | todo |
-| 2026-08-03 | social-010 | instagram, tiktok, youtube, linkedin productkind, threads productkind  | scheduled |
+| 2026-08-04 | none |  |  |
+| 2026-08-03 | social-010 | instagram, tiktok, youtube, linkedin productkind, threads productkind  | posted |
 | --- | --- | --- | --- |
-| 2026-08-02 | SB-3 where is the problem | instagram, tiktok, youtube, linkedin productkind, threads productkind | todo |
+| 2026-08-02 | none |  |  |
 | 2026-08-01 | Lovable application video about starting building | tiktok, youtube | posted |
 | 2026-07-31 | social-009 | instagram, tiktok, youtube, linkedin productkind, threads productkind  | posted |
 | 2026-07-30 | WB-3 LinkedIn without buzzwords | instagram, tiktok, youtube, linkedin productkind, threads Kinga | posted |
