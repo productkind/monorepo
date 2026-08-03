@@ -302,5 +302,9 @@
     ],
     "deny": [],
     "ask": []
+  },
+  "enabledPlugins": {
+    "frontend-design@claude-plugins-official": false,
+    "searchfit-seo@claude-plugins-official": false
   }
 }
