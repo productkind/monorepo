@@ -58,7 +58,7 @@ course:
             transcript: |-
               If you're a new mum, you already know the feeling. There's a **running list in your head that never switches off**. You've got more things to do, but way less time. And most of the time, both of your hands are full.
 
-              **Your phone can take that list off you and file it where it belongs.** It lives in a shortcut you build once, rather than a fiddly system you have to tend to.
+              **Your phone can take that list off you and sort each piece into your notes, where it belongs.** It does that with a **shortcut you build once**, rather than a fiddly system you have to keep tending to.
 
               In this course you'll build **two** shortcuts. The first lets you **talk** about everything on your mind, and your phone uses AI to sort it into tidy checklists you can **share with your partner**, so the mental load is out of your head and where someone else can help carry it. The second lets you **log the things you need to keep track of**: how much your baby fed, the nappies, the naps, their weight, and saves each as a line with date and time in a running record.
 
@@ -85,7 +85,7 @@ course:
               **Misc**
               - health visitor coming Tuesday at 11
 
-              She didn't sort a thing, and she didn't open a single app. That's what you'll build next, tapping a few blocks together, with no techy know-how needed. And you'll set up sharing it with your partner automatically, so **you won't have to carry the mental load alone**.
+              She didn't sort a thing, and she didn't open a single app. That's what you'll build next, no coding required, and you'll set up sharing it with your partner automatically, so **you won't have to carry the mental load alone**.
             imageUrl: /courses/ai-your-life-admin-00/sorted-result.webp
         - type: text
           title: What you'll need
@@ -109,21 +109,31 @@ course:
               2. Tap **Apple Intelligence & Siri**
               3. Turn on **Apple Intelligence**
 
-              That's the setup done. (Apple Intelligence needs to be available in your country and language.)
+              *(Apple Intelligence needs to be available in your country and language.)*
             imageUrl: /courses/ai-your-life-admin-00/turn-on-apple-intelligence.webp
         - type: text
           title: "Build it: make your category notes"
-          subtitle: Make them, and share the folder
+          subtitle: One folder, three notes
           content:
             body: |-
               Your shortcut sorts what you say into categories, and each one needs its own note to land in. You'll start with three: **Logistics**, **Food & Household**, and **Misc** (a catch-all for anything that doesn't fit). Make them now:
 
               1. Open the **Notes** app and make a new folder called **Mental Load**.
-              2. Inside it, make one note per category, with each note's first line the category name, exactly as written: **Logistics**, **Food & Household**, and **Misc**. Your shortcut looks for these names, and you'll use the same three in your prompt in a moment, so keep them consistent.
-              3. If your partner has an iPhone, **share the folder now**, so it's done: long-press the **Mental Load** folder, tap **Share Folder**, and invite them by **Messages** or **Mail**. From then on, everything your Brain Dump sorts shows up on their phone too, no extra step.
+              2. Inside it, make one note per category, with each note's first line the category name, exactly as written: **Logistics**, **Food & Household**, and **Misc**.
+
+              Your shortcut looks for these names, and you'll use the same three in your prompt in a moment, so keep them consistent.
+            imageUrl: /courses/ai-your-life-admin-00/make-folder-and-notes.webp
+        - type: text
+          title: "Build it: share the folder"
+          subtitle: So your partner sees it too
+          content:
+            body: |-
+              This is what makes the mental load a *shared* one: your partner sees the same lists, and can tick things off.
+
+              If your partner has an iPhone, **share the folder now**, so it's done: long-press the **Mental Load** folder, tap **Share Folder**, and invite them by **Messages** or **Mail**. From then on, everything your Brain Dump sorts shows up on their phone too, no extra step.
 
               If your partner is on Android, no problem: skip the sharing for now, and in a later challenge you'll set up a way to send them the list instead.
-            imageUrl: /courses/ai-your-life-admin-00/make-folder-and-notes.webp
+            imageUrl: /courses/ai-your-life-admin-00/share-folder.webp
         - type: text
           title: "Build it: catch what you say"
           subtitle: The block that captures your words
@@ -393,15 +403,25 @@ course:
 
               This time you drop **two** things into the prompt when you build it: the **time** goes after "*now is:*", and **what you said** goes after that last line. The next steps show you where.
         - type: text
-          title: "Build it: make the note and turn on ChatGPT"
-          subtitle: Two bits of setup first
+          title: "Build it: make the note first"
+          subtitle: The one easy-to-miss step
           content:
             body: |-
-              Before the shortcut, two quick bits of setup.
+              This is the step people skip, so do it first. Open the **Notes** app and create one new note with **Baby Log** as its first line.
 
-              **Make the note.** This is the step people skip, so do it first. Open the **Notes** app and create one new note with **Baby Log** as its first line. It only needs to **exist**, because your shortcut will find this note and add to it, and it can't add to a note that isn't there yet.
+              It only needs to **exist**, because your shortcut will find this note and add to it, and it can't add to a note that isn't there yet.
+            imageUrl: /courses/ai-your-life-admin-00/make-baby-log-note.webp
+        - type: text
+          title: "Build it: turn on ChatGPT"
+          subtitle: A one-time setup
+          content:
+            body: |-
+              For the Baby Log we'll use **ChatGPT**, because it's better than Apple's own model at laying out neat, categorised lines. It's built into your phone, there's nothing to download, and you don't need an account.
 
-              **Turn on ChatGPT.** For the Baby Log we'll use **ChatGPT**, because it's better than Apple's own model at laying out neat, categorised lines. It's built into your phone, there's nothing to download, and you don't need an account. Go to *Settings → Apple Intelligence & Siri → Extensions → ChatGPT*, tap *Set Up*, then tap *Enable ChatGPT*. (If you'd like it to keep a history you can look back on, choose *Use ChatGPT with an Account* and sign in instead. Either works here.)
+              1. Go to *Settings → Apple Intelligence & Siri → Extensions → ChatGPT*.
+              2. Tap *Set Up*, then tap *Enable ChatGPT*.
+
+              If you'd like it to keep a history you can look back on, choose *Use ChatGPT with an Account* and sign in instead. Either works here.
         - type: text
           title: "Build it: talk, stamp the time, then sort"
           subtitle: The thinking part
@@ -501,8 +521,12 @@ course:
               - **Back Tap:** go to *Settings* → *Accessibility* → *Touch* → *Back Tap*. Choose *Double Tap* or *Triple Tap* and pick your shortcut. Now a **firm** tap on the **back of your phone** runs it, even from the lock screen. Works on most iPhones.
               - **The Action Button:** if your iPhone has the small button above the volume keys (iPhone 15 Pro and 15 Pro Max, any iPhone 16 or newer, and iPhone Air have it), set it in *Settings* → *Action Button* to run your shortcut with one press, even from the lock screen.
               - **Hey Siri:** say *"Hey Siri, Baby Log"* (or any shortcut's name) and Siri runs it by name, nothing to set up.
-
-              **Two things about the dictation itself, whatever starts it:**
+        - type: text
+          title: Two things about the dictation
+          subtitle: Whatever starts it
+          content:
+            body: |-
+              However you launch a shortcut, two things decide whether your dictation lands cleanly:
 
               - **Keep the screen on.** If it dims or goes black mid-sentence, it cuts your dictation off. Give it a tap to keep it awake if you're taking your time, and don't set the phone down until it's finished.
               - **Mind the stop setting.** Your **Baby Log** ends on a short pause, so a breath finishes it, which is perfect for a quick log. Your **Brain Dump** waits for your tap instead, so it keeps listening through your pauses; end it with the **stop** button (⏹️) when you're done.
