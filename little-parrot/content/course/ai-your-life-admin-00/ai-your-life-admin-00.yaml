@@ -70,20 +70,22 @@ course:
             body: |-
               Before you build it, here's your **Brain Dump** in action. Dalmie taps hers and rambles for a minute:
 
-              *"Right, we're out of nappies and wipes, the health visitor is coming Tuesday at 11, I keep meaning to book the 6-week check, and we need more of that barrier cream."*
+              *"Right, we're out of nappies, wipes and barrier cream, I keep meaning to book the six-week check, the health visitor's coming Tuesday at eleven, and the car really needs a wash. Oh, and we need to buy bananas!"*
 
               A few seconds later, it's sorted into her category notes, each item a tickable checklist line:
 
               **Logistics**
-              - book the six-week check
-
+              - [ ] Book six week check
+              - [ ] Health visitor Tuesday at 11
+              
               **Food & Household**
-              - nappies
-              - wipes
-              - barrier cream
+              - [ ] Buy bananas
+              - [ ] Out of nappies
+              - [ ] Out of wipes
+              - [ ] Out of barrier cream
 
               **Misc**
-              - health visitor coming Tuesday at 11
+              - [ ] Car really needs a wash
 
               She didn't sort a thing, and she didn't open a single app. That's what you'll build next, no coding required, and you'll set up sharing it with your partner automatically, so **you won't have to carry the mental load alone**.
             imageUrl: /courses/ai-your-life-admin-00/sorted-result.webp
@@ -116,7 +118,7 @@ course:
           subtitle: One folder, three notes
           content:
             body: |-
-              Your shortcut sorts what you say into categories, and each one needs its own note to land in. You'll start with three: **Logistics**, **Food & Household**, and **Misc** (a catch-all for anything that doesn't fit). Make them now:
+              Your shortcut sorts what you say into categories, and each one needs its own note to land in. You'll start with three: **Logistics**, **Food & Household**, and **Misc** (a catch-all for anything that doesn't fit). Create them now:
 
               1. Open the **Notes** app and make a new folder called **Mental Load**.
               2. Inside it, make one note per category, with each note's first line the category name, exactly as written: **Logistics**, **Food & Household**, and **Misc**.
@@ -132,7 +134,7 @@ course:
 
               If your partner has an iPhone, **share the folder now**, so it's done: long-press the **Mental Load** folder, tap **Share Folder**, and invite them by **Messages** or **Mail**. From then on, everything your Brain Dump sorts shows up on their phone too, no extra step.
 
-              If your partner is on Android, no problem: skip the sharing for now, and in a later challenge you'll set up a way to send them the list instead.
+              If your partner is on **Android**, no problem: skip the sharing for now, and in a later challenge you'll set up a way to send them the list instead.
             imageUrl: /courses/ai-your-life-admin-00/share-folder.webp
         - type: text
           title: "Build it: catch what you say"
@@ -151,7 +153,7 @@ course:
             body: |-
               Under *Dictate Text*, add the block that does the sorting:
 
-              1. Search for **Use Model** and add it. Tap the model and choose **Private Cloud Compute**.
+              1. Search for **Use Model** and add it. Tap the model and choose **Cloud (Private Cloud Compute)**.
               2. Tap the blue arrow to open its settings, and set the **Output** to **Dictionary**, so the answer comes back as your labelled categories.
 
               **Why this one and not ChatGPT?** 
@@ -163,12 +165,16 @@ course:
           subtitle: Your instruction to the AI
           content:
             body: |-
-              Now for the instruction that does the sorting, called a **prompt**. It tells the AI to sort whatever you say into the **same three categories as your notes**: Logistics, Food & Household, and Misc. You can reword it or add your own categories later, as long as your notes use the same names. Copy it now:
+              Next comes the **prompt**: the instruction you give the AI. This one tells it to sort whatever you say into the **same three categories as your notes**: Logistics, Food & Household, and Misc. You can reword it or add your own categories later, as long as your notes use the same names. Copy it now:
 
               ```
               Sort what I say into a dictionary with exactly these keys: Logistics, Food & Household, Misc.
 
-              Each value is a short list of the items that fit. Put anything that doesn't fit under Misc. Don't add anything I didn't say.
+              - Food & Household: anything to buy, get, or restock, including food, drink, and household supplies.
+              - Logistics: appointments, bookings, and calls to make (not shopping).
+              - Misc: anything that doesn't fit the other two.
+
+              Each value is a list, one item per entry. Trim filler words, but keep the details that make each item make sense on its own later: what it is, why, and any time or day. Don't add anything I didn't say.
 
               Here is what I said:
               ```
@@ -215,6 +221,8 @@ course:
               One thing to watch: when you add **Get Dictionary Value** in these new blocks, it tends to read from the block just above it, not the AI's answer. Re-point it to the **Response** each time, exactly as you did in the first block. The rest (Combine Text, the If, and Append Checklist Item) can stay as they are, since they point at the actions right above them.
 
               So add one more full block for **Food & Household** (its key and its note filter both **Food & Household**), then one more for **Misc** (both **Misc**).
+
+              **Don't leave the If behind.** When you rebuild a block, it's easy to add the four actions you can see and forget the **If (Combined Text has any value)** that wraps the **Find Notes** and **Append Checklist Item**. Every block needs its own. If you miss it, a category that didn't have any items will stop and ask you to type an item name.
             imageUrl: /courses/ai-your-life-admin-00/build-repeat-categories.webp
         - type: text
           title: "Build it: check each block reads the right place"
