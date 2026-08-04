@@ -244,12 +244,12 @@ course:
           subtitle: One tap away
           content:
             body: |-
-              For a proper brain dump, you want it to keep listening while you pause and think, and to stop only when *you* say so. You get that when you **tap** the shortcut to run it: it opens a panel with a **stop** button (⏹️) and waits for you. So put it one tap away:
+              For a proper brain dump, you want it to keep listening while you pause and think, and to stop only when *you* say so. That's why you set *Stop Listening* to **On Tap** earlier: it opens a panel with a **stop** button (⏹️) and keeps listening until you tap it. Put it one tap away:
 
               1. Open the shortcut's details, tap the **Share** icon, and choose **Add to Home Screen**. Now it's an icon you tap like any app.
               2. Tap that icon to start. Talk, pause and think all you like, then tap the **stop** button (⏹️) when you're finished.
 
-              You can also open the **Shortcuts** app and tap **Brain Dump**. (Saying *"Hey Siri, Brain Dump"* works too, but Siri stops as soon as you pause, so for a rambly dump with thinking time, tapping is better. Later, Challenge 4 adds a tap on the back of your phone.)
+              You can also start it from the **Shortcuts** app, or by saying *"Hey Siri, Brain Dump"*. Whatever starts it, one thing to know for a long dump: keep the screen on while you talk, because if it dims or goes black mid-dictation, it cuts you off before you can tap **stop**. Challenge 4 adds a tap on the back of your phone.
             imageUrl: /courses/ai-your-life-admin-00/run-the-shortcut.webp
         - type: free-text-exercise
           title: Run it, then ask anything
@@ -290,7 +290,7 @@ course:
           subtitle: For a partner who's not on iPhone
           content:
             body: |-
-              Live folder sharing is Apple-to-Apple only, so if your partner is on Android, send them the lists as a message instead. Almost any app works here: **WhatsApp**, **Telegram**, **WeChat**, or even **email**. We'll show it with WhatsApp, and the steps are the same whichever you use. You lay the message out yourself, so it comes through tidy:
+              Live folder sharing is Apple-to-Apple only, so if your partner is on Android, send them the lists as a message instead. We'll show it with **WhatsApp**; almost any messaging app works the same way (more on that next). You lay the message out yourself, so it comes through tidy:
 
               1. In your **Brain Dump** shortcut, scroll to the bottom. Add a **Text** action **after your Misc block's End If**, just above the very last **End If** at the foot of the shortcut, so it sits inside the outer guard but outside every category's own If. Type a bold heading for each category (single asterisks make it bold in WhatsApp), then drop that category's **Combined Text** underneath:
 
@@ -306,11 +306,15 @@ course:
               ```
 
               2. Add WhatsApp's **Send Message** action after it (on some phones it reads *Send Message via WhatsApp*; if a search doesn't find it, look under the **Apps** tab and scroll to WhatsApp). Put **only** that **Text** result in the message. WhatsApp needs to be installed, and it may ask you to confirm the first time it sends.
-
-              Using a different app? Look for its own send action instead (for email it's **Send Email**), and point that at the same **Text** result. One thing to note: WhatsApp and Telegram read single asterisks as bold, but email and some apps don't, so the `*Logistics*` bits may just show the asterisks there. The list still comes through clearly.
-
-              One more thing: don't ask the AI to format this. Apple's model is a reliable sorter but a poor typesetter, so you type the bold and line breaks yourself and they come through every time.
             imageUrl: /courses/ai-your-life-admin-00/build-whatsapp-text.webp
+        - type: text
+          title: "Other apps, and why you lay it out yourself"
+          subtitle: A couple of notes
+          content:
+            body: |-
+              **Prefer a different app?** Telegram, WeChat, even email all work. Look for that app's own send action instead of WhatsApp's (for email it's **Send Email**), and point it at the same **Text** result. One thing to note: WhatsApp and Telegram show single asterisks as **bold**, but email and some apps don't, so there the `*Logistics*` headings may show the asterisks as-is. The list still comes through clearly.
+
+              **Why lay it out by hand?** Because Apple's model is a reliable sorter but a poor typesetter. Ask it to format the message and the bold and line breaks come out hit-and-miss. Type the layout yourself in the Text action and it lands right every time.
         - type: text
           title: "How it helps Dalmie"
           subtitle: A quick look
@@ -323,7 +327,7 @@ course:
           title: Check it reaches them, then ask anything
           content:
             description: |-
-              Do a quick brain dump, then check it actually reached your partner. If they're on an iPhone, make sure they've accepted the folder invite, then look for a new item appearing on their side. If they're on another phone, check the WhatsApp message came through.
+              Do a quick brain dump, then check it reached your partner. If they're on an iPhone, make sure they've accepted the folder invite, then look for a new item appearing on their side. If they're on another phone, check the WhatsApp message came through.
 
               If it didn't reach them, or a step wasn't clear, ask here and you'll get an answer.
             subDescription: No question is too small. And if it worked, tell us how it felt to hand something off.
@@ -352,7 +356,7 @@ course:
             body: |-
               You're not a beginner any more. This one uses the **same three moves**: talk, ask AI, then file the answer.
 
-              And it's a lighter build than your first. Instead of sorting into several category notes, this shortcut turns what you say into **one tidy line** and saves it, with the time, to one running note. Build it once and you'll have a record that grows on its own.
+              And it's a lighter build than your first. Instead of sorting into several category notes, this shortcut turns what you say into **tidy, timestamped lines** and saves them to one running note. Build it once and you'll have a record that grows on its own.
         - type: text
           title: Why a log earns its place
           subtitle: What it's for
@@ -370,64 +374,80 @@ course:
           subtitle: Your second reusable tool
           content:
             body: |-
-              Same idea as before: the AI needs telling how to format what you say. Copy this prompt:
+              Same idea as before: the AI needs telling how to format what you say. This one does a bit more, splitting what you say into separate activities and stamping each with the time. Copy this prompt:
 
               ```
-              Turn what I say into one short, tidy log line about my baby.
-              Keep the real details I gave (feeds, amounts, nappies, naps,
-              mood, weight, milestones) and drop the filler. Use the same
-              plain style every time. Don't invent anything. Reply with
-              just the one line, no extra words.
+              You are a baby care log parser. Turn the voice entry below into clean, scannable log lines.
 
-              Here is what happened:
+              The date and time now is:
+
+              Rules:
+              - Make one line per activity I mention.
+              - Start each line with "- ", then the date and time above, then the category in bold, then the details. Like: - 04/08/2026, 13:00 **Feed**: 90 ml, settled well
+              - Use whichever of these categories fit: Feed, Nappy, Nap, Mood, Weight, Milestone. Use Note if none fit.
+              - Keep the real details I gave and drop the filler. Don't invent anything.
+              - Reply with just the lines, nothing else.
+
+              Here is what I said:
               ```
 
-              Your words drop in after that last line, exactly like the first shortcut.
+              This time you drop **two** things into the prompt when you build it: the **time** goes after "*now is:*", and **what you said** goes after that last line. The next steps show you where.
         - type: text
-          title: "Build it: make the note first"
-          subtitle: The one easy-to-miss step
+          title: "Build it: make the note and turn on ChatGPT"
+          subtitle: Two bits of setup first
           content:
             body: |-
-              This is the step people skip, so do it first. Open the **Notes** app and create one new note. Make its first line **Baby Log**. It only needs to **exist**, because your shortcut is going to find this note and add to it, and it can't add to a note that isn't there yet.
+              Before the shortcut, two quick bits of setup.
 
-              Now open **Shortcuts**, start a new shortcut, and add your two familiar blocks: *Dictate Text*, then *Use Model* set to **Private Cloud Compute**, like your Brain Dump. On *Dictate Text*, set your *Language* and set *Stop Listening* to **After Short Pause**, since a log entry is short and you want it to end on its own without a tap. Leave *Use Model*'s *Output* on *Automatic*, because you want one plain line back, not sorted lists. Paste the Baby Log prompt and insert the *Dictated Text* chip after the last line.
+              **Make the note.** This is the step people skip, so do it first. Open the **Notes** app and create one new note with **Baby Log** as its first line. It only needs to **exist**, because your shortcut will find this note and add to it, and it can't add to a note that isn't there yet.
+
+              **Turn on ChatGPT.** For the Baby Log we'll use **ChatGPT**, because it's better than Apple's own model at laying out neat, categorised lines. It's built into your phone, there's nothing to download, and you don't need an account. Go to *Settings → Apple Intelligence & Siri → Extensions → ChatGPT*, tap *Set Up*, then tap *Enable ChatGPT*. (If you'd like it to keep a history you can look back on, choose *Use ChatGPT with an Account* and sign in instead. Either works here.)
         - type: text
-          title: "Build it: stamp the time and save"
-          subtitle: The new blocks
+          title: "Build it: talk, stamp the time, then sort"
+          subtitle: The thinking part
           content:
             body: |-
-              Now the new part. Add these actions in order:
+              Open **Shortcuts**, start a new shortcut, and add these blocks in order:
 
-              1. *Current Date*, then *Format Date* right after it. Tap *Format Date*, set *Date Format* to *None* and *Time Format* to *Short*, so each line starts with only the time (in your phone's usual format, 24-hour or am/pm).
-              2. *Find Notes*, and set its filter so the *Name* contains **Baby Log**. This finds the note you made.
-              3. *Append to Note*. For the note, insert the result from *Find Notes*. For the text, insert your *Format Date* result and then the *Response* from *Use Model*.
+              1. **Dictate Text.** Tap the blue arrow to open its settings, set your *Language*, and set *Stop Listening* to **After Short Pause**, since a log entry is short and can end on its own without a tap.
+              2. **Current Date**, then **Format Date** right after it. Tap the blue arrow on *Format Date* and set both *Date Format* and *Time Format* to **Short**, so you get today's date and the time.
+              3. **Use Model.** Tap the model and choose **ChatGPT** (leave its *Output* on *Automatic*). Paste your Baby Log prompt in. Then place the **Formatted Date** chip right after "*now is:*", and add the **Dictated Text** chip at the very end, after "*Here is what I said:*".
 
-              *Append to Note* adds to the **bottom** of the note, so entries stack up in order. Rename the shortcut **Baby Log** and tap *Done*.
+              That's the thinking part built: it hears you, knows the time, and turns what you said into tidy lines.
+            imageUrl: /courses/ai-your-life-admin-00/build-babylog-model.webp
         - type: text
-          title: "Prefer ChatGPT? An optional swap"
-          subtitle: If you'd like a history
+          title: "Build it: save each line to your note"
+          subtitle: The last two blocks
           content:
             body: |-
-              You built this on **Private Cloud Compute**, the same private, no-setup model as your Brain Dump. That's all you need here.
+              Two last blocks send it to your note:
 
-              **ChatGPT** is another option worth knowing about. If you connect it, it can keep a **history** of everything you log, which some people like to look back on. To try it, open the *Use Model* block and pick *ChatGPT*, then set it up once:
+              1. **Find Notes.** Set its filter so the *Name* contains **Baby Log**. This finds the note you made.
+              2. **Append to Note.** For the note, insert the **Find Notes** result. For the text, insert the **Response** from *Use Model*.
 
-              1. Go to *Settings → Apple Intelligence & Siri → Extensions → ChatGPT* and tap *Set Up*.
-              2. Tap *Enable ChatGPT* to use it without an account, or *Use ChatGPT with an Account* to sign in and keep that history.
+              *Append to Note* adds to the **bottom** of the note, so your lines stack up in order, newest last. Rename the shortcut **Baby Log** and tap *Done*.
+        - type: text
+          title: "Want it fully private? Use Apple's model"
+          subtitle: An optional swap
+          content:
+            body: |-
+              You built this on **ChatGPT** because it lays out neat, categorised lines. If you'd rather keep everything on your phone and share nothing with another company, you can swap in **Private Cloud Compute**, Apple's own model, the same one your Brain Dump uses.
 
-              Neither is better here. Both give you one tidy line, so this is just so you've seen what's possible.
+              Open the *Use Model* block and pick *Private Cloud Compute* instead of ChatGPT. It's private and needs no setup. The trade-off is that it's a weaker typesetter, so the lines can come out less tidy. If you go this way, keep your prompt simple and check the first few entries land the way you want.
+
+              Try both and keep whichever suits you.
         - type: text
           title: "How Dalmie's log builds up"
           subtitle: A quick look
           content:
             body: |-
-              Across an afternoon, Dalmie taps Baby Log a few times and says each feed, weight or nap as it happens. Each time, one tidy line stacks onto the note:
+              Across an afternoon, Dalmie taps Baby Log a few times and says each feed, nappy or nap as it happens. Each time, tidy lines stack onto the note:
 
-              - *09:30, Weighed 4.6 kg*
-              - *13:10, Fed 90 ml, settled well*
-              - *16:45, Nap 40 mins, woke grumpy*
+              - 04/08/2026, 09:30 **Feed**: 120 ml, settled well
+              - 04/08/2026, 13:10 **Nappy**: wet, then a short nap
+              - 04/08/2026, 16:45 **Weight**: 4.6 kg
 
-              She didn't format anything. She said *"she's just had about ninety mls and gone down fine"* and the prompt did the rest.
+              She didn't format a thing. She said *"she's had about one-twenty and gone down fine"* and the prompt turned it into that first line, time and all.
         - type: free-text-exercise
           title: Log your afternoon, then ask anything
           content:
@@ -437,13 +457,13 @@ course:
               If an entry didn't land in the note, or anything about this build is unclear, ask here and you'll get an answer.
             subDescription: A few lines today, a clear picture by next week. And no question is too small.
             placeholder: e.g. My entries aren't showing up in the note...
-            systemPrompt: 'You are a warm, knowledgeable mentor for a new mum taking a course where she builds an iPhone Shortcut called Baby Log. The shortcut is: Dictate Text (Language set, Stop Listening set to After Short Pause), then Use Model (Private Cloud Compute by default, or ChatGPT if she chose it) with Output left on Automatic, using a prompt that turns what she says into one short log line, with the Dictated Text variable inserted at the end; then Current Date followed by Format Date set to a short style; then Find Notes filtered so the Name contains Baby Log; then Append to Note, appending the Format Date result and the Response from Use Model to the found note. She made a note in the Notes app whose first line is Baby Log before building. She may report something not working or ask about any step. Common causes to check for: the Baby Log note never created, so Find Notes finds nothing; the note title not matching the Find Notes filter exactly; Append to Note pointed at the wrong note or missing the found-note variable; the appended text missing the Format Date or Response variable; dictation ending too soon or too late (After Short Pause suits short log entries; On Tap if she prefers to tap when she''s done); if she chose ChatGPT, the ChatGPT extension not connected in Settings under Apple Intelligence & Siri (Private Cloud Compute needs no setup). Answer clearly and warmly in British English, in clear, everyday words for someone non-technical, in at most a few short sentences or bullets. If it falls outside the course, gently point her to Kinga and Tamas in the Discord community. Do not use em dashes. End on an encouraging note. Reply in a markdown format.'
+            systemPrompt: 'You are a warm, knowledgeable mentor for a new mum taking a course where she builds an iPhone Shortcut called Baby Log. The shortcut is: Dictate Text (Language set, Stop Listening set to After Short Pause), then Current Date, then Format Date (Date Format Short and Time Format Short), then Use Model set to ChatGPT with Output on Automatic, using a baby-care-log-parser prompt that turns the voice entry into one line per activity, each line starting with "- ", then the inserted Formatted Date and time, then the category in bold (Feed, Nappy, Nap, Mood, Weight, Milestone, or Note), then the details. In the prompt, the Formatted Date chip is placed after "the date and time now is:" and the Dictated Text chip is at the very end. Then Find Notes filtered so the Name contains Baby Log, then Append to Note appending the Use Model Response to the found note. Before building, she made a note in the Notes app whose first line is Baby Log, and turned on the ChatGPT extension (Settings, then Apple Intelligence & Siri, then Extensions, then ChatGPT, Set Up, then Enable ChatGPT with no account, or Use ChatGPT with an Account to keep a history). ChatGPT is the recommended model here because it lays out neat categorised lines; Private Cloud Compute is offered as a fully private but weaker-formatting alternative. She may report something not working or ask about any step. Common causes to check for: the Baby Log note never created, so Find Notes finds nothing; the note title not matching the Find Notes filter exactly; Append to Note pointed at the wrong note or missing the Response variable; the Formatted Date chip not placed in the prompt, so lines have no time; the Dictated Text chip missing, so the model has nothing to read; the ChatGPT extension not set up; dictation ending too soon or too late (After Short Pause suits short entries; On Tap if she prefers to tap when she''s done); if she swapped to Private Cloud Compute, lines may come out less tidy since it formats less reliably. Answer clearly and warmly in British English, in clear, everyday words for someone non-technical, in at most a few short sentences or bullets. If it falls outside the course, gently point her to Kinga and Tamas in the Discord community. Do not use em dashes. End on an encouraging note. Reply in a markdown format.'
             checkerPrompt: 'The learner is asking a question or sharing how their logging went. Accept any genuine question, problem description, or comment. Only flag clearly empty or nonsense input. This is their message:'
         - type: challenge-end
           title: "Your log writes itself now! 📝"
           content:
             nextModule: "**Next challenge:** Two shortcuts is great, but opening an app to run them defeats the point when your hands are full. Last up: triggers that fire your shortcuts by voice, a tap on the back of your phone, or a single button, in any language you speak."
-            description: You built a record that grows by itself, one spoken line at a time.
+            description: You built a record that grows by itself, a spoken moment at a time.
             subDescription: "You reused the talk-then-ask pattern and added one new move: saving with a timestamp. That same Find Notes and Append trick works for any running list you want, not only the baby."
     - title: Make It Effortless
       isFree: true
@@ -470,18 +490,22 @@ course:
               Get your shortcuts out of the Shortcuts app and somewhere closer:
 
               - **Home Screen:** open the shortcut's details, tap the *Share* icon, and choose *Add to Home Screen*. Now it's an icon you tap like any app.
-              - **Lock Screen:** you can add a shortcut as a *control*, one of the small buttons you can place on your Lock Screen, so it's there before you even unlock. The exact steps moved around in recent updates, so look under *Customise* on your Lock Screen for where to add controls.
+              - **Lock Screen:** you can add a shortcut as a *control*, one of the small buttons on your Lock Screen, so it's there before you unlock. Touch and hold the Lock Screen, tap *Customise*, then *Lock Screen*, tap a *+* control slot, choose the *Shortcuts* control and pick your shortcut, and tap *Done*. (Apple shuffles this around between updates, so if a label differs, look for *Customise* and then controls.)
         - type: text
           title: Run them without even looking
-          subtitle: Back Tap and the Action Button
+          subtitle: Back Tap, Action Button, or Siri
           content:
             body: |-
-              Two hands-free ways, once they're set:
+              A few hands-free ways, once they're set:
 
-              - **Back Tap:** go to *Settings* → *Accessibility* → *Touch* → *Back Tap*. Choose *Double Tap* or *Triple Tap* and pick your shortcut. Now tapping the **back of your phone** runs it. This works on most iPhones.
-              - **The Action Button:** if your iPhone has the small button above the volume keys (iPhone 15 Pro and 15 Pro Max, any iPhone 16 or newer, and iPhone Air have it), set it in *Settings* → *Action Button* to run your shortcut with one press.
+              - **Back Tap:** go to *Settings* → *Accessibility* → *Touch* → *Back Tap*. Choose *Double Tap* or *Triple Tap* and pick your shortcut. Now a **firm** tap on the **back of your phone** runs it, even from the lock screen. Works on most iPhones.
+              - **The Action Button:** if your iPhone has the small button above the volume keys (iPhone 15 Pro and 15 Pro Max, any iPhone 16 or newer, and iPhone Air have it), set it in *Settings* → *Action Button* to run your shortcut with one press, even from the lock screen.
+              - **Hey Siri:** say *"Hey Siri, Baby Log"* (or any shortcut's name) and Siri runs it by name, nothing to set up.
 
-              Pick whichever suits the phone in your hand. When your hands are full mid-feed, *"Hey Siri, Baby Log"* or a tap on the back is the one that saves you.
+              **Two things about the dictation itself, whatever starts it:**
+
+              - **Keep the screen on.** If it dims or goes black mid-sentence, it cuts your dictation off. Give it a tap to keep it awake if you're taking your time, and don't set the phone down until it's finished.
+              - **Mind the stop setting.** Your **Baby Log** ends on a short pause, so a breath finishes it, which is perfect for a quick log. Your **Brain Dump** waits for your tap instead, so it keeps listening through your pauses; end it with the **stop** button (⏹️) when you're done.
         - type: text
           title: Talk in your own language
           subtitle: Use the language you think in
@@ -497,17 +521,17 @@ course:
             body: |-
               Some things on your mind are whole projects: *"sort out childcare"*, *"plan the christening"*. Your Brain Dump will file these into a category note (likely Logistics or Misc), which is exactly right.
 
-              When you're ready to tackle one, open a chat assistant (an app you type or talk to and read the answer back), like the free ChatGPT app from the App Store, and ask it to break the task into small steps. That's a different skill from these shortcuts, so we'll leave it as a pointer.
+              When you're ready to tackle one, open an **AI chat assistant**, like ChatGPT or Claude, and prompt it to ask you questions to break the task into small steps. You can do this by talking to it, and it will transcribe your words into text. That's a different skill from these shortcuts, so we'll leave it as a pointer.
         - type: free-text-exercise
           title: Anything not working? Ask here
           content:
             description: |-
-              You've built two shortcuts and wired up the triggers. Two things before you go. First, picture the one moment tomorrow you'll reach for a shortcut instead of holding it all in your head, a feed, a 3am thought, the school run. That's the habit starting. Second, if anything didn't work or is still unclear, the shortcuts, the prompts, the triggers, ask it here and you'll get an answer.
+              You've built two shortcuts and wired up the triggers. One thing before you go: picture the **one moment tomorrow** you'll reach for a shortcut instead of holding it all in your head, a feed, a 3am thought, the school run. Tell us which one. That's the habit starting.
 
-              No question is too small.
-            subDescription: Type your question and you'll get a clear answer right back.
-            placeholder: e.g. Back Tap isn't running my shortcut...
-            systemPrompt: 'You are a warm, knowledgeable mentor for a new mum finishing a course where she built two iPhone Shortcuts. Brain Dump: Dictate Text (Language set, Stop Listening on On Tap), Use Model set to Private Cloud Compute with Output on Dictionary and a prompt that sorts what she says into categories (Logistics, Food & Household, Misc), plus the Dictated Text variable; then per category a block of Get Dictionary Value, Combine Text (New Lines), Find Notes, Append Checklist Item, into notes inside a Mental Load folder. She then shares that Mental Load folder with her partner via Notes Collaborate, or, for an Android partner, sends the result via WhatsApp using a Text action that lays out the categories followed by a Send message via WhatsApp action. The whole shortcut body sits inside an If that checks the Dictated Text has any value, so an empty tap does nothing. Baby Log: Dictate Text, Use Model on Private Cloud Compute or ChatGPT (her choice, most likely Private Cloud Compute) with Output on Automatic and a one-tidy-line prompt, Current Date with Format Date, Find Notes filtered to a note named Baby Log, Append to Note. The course also covered triggers: Add to Home Screen from the share menu, a Lock Screen control under Customise, Back Tap under Settings then Accessibility then Touch, the Action Button under Settings (iPhone 15 Pro and Pro Max, any iPhone 16 or newer, and iPhone Air only), Hey Siri plus the shortcut name, and dictating in other languages by adding a keyboard and holding the microphone. She may ask about anything from the course or report something not working. Answer clearly and warmly in British English, in clear, everyday words for someone non-technical, in at most a few short sentences or bullets. If it falls outside the course, gently point her to Kinga and Tamas in the Discord community. Do not use em dashes. End on an encouraging note. Reply in a markdown format.'
+              (And if anything still isn't working, the shortcuts, the prompts, the triggers, ask that here too. No question is too small.)
+            subDescription: Name your moment, and ask anything that's still unclear.
+            placeholder: e.g. Tomorrow's 3am feed, I'll dump my head instead of lying there awake...
+            systemPrompt: 'You are a warm, knowledgeable mentor for a new mum finishing a course where she built two iPhone Shortcuts. Brain Dump: Dictate Text (Language set, Stop Listening on On Tap), Use Model set to Private Cloud Compute with Output on Dictionary and a prompt that sorts what she says into categories (Logistics, Food & Household, Misc), plus the Dictated Text variable; then per category a block of Get Dictionary Value, Combine Text (New Lines), Find Notes, Append Checklist Item, into notes inside a Mental Load folder. She then shares that Mental Load folder with her partner via Notes Collaborate, or, for an Android partner, sends the result via WhatsApp using a Text action that lays out the categories followed by a Send message via WhatsApp action. The whole shortcut body sits inside an If that checks the Dictated Text has any value, so an empty tap does nothing. Baby Log: Dictate Text, then Current Date and Format Date (Short date and time), then Use Model on ChatGPT (recommended for neat categorised lines, with Private Cloud Compute as a private but weaker-formatting fallback) using a parser prompt that outputs one timestamped, categorised line per activity with the Formatted Date fed in as the reference time, then Find Notes filtered to a note named Baby Log, then Append to Note. The course also covered triggers: Add to Home Screen from the share menu, a Lock Screen control under Customise, Back Tap under Settings then Accessibility then Touch, the Action Button under Settings (iPhone 15 Pro and Pro Max, any iPhone 16 or newer, and iPhone Air only), Hey Siri plus the shortcut name, and dictating in other languages by adding a keyboard and holding the microphone. She may ask about anything from the course or report something not working. Answer clearly and warmly in British English, in clear, everyday words for someone non-technical, in at most a few short sentences or bullets. If it falls outside the course, gently point her to Kinga and Tamas in the Discord community. Do not use em dashes. End on an encouraging note. Reply in a markdown format.'
             checkerPrompt: 'The learner is asking a question or sharing something they are unsure about. Accept any genuine question or comment. Only flag clearly empty or nonsense input. This is their message:'
         - type: course-end
           title: You've handed the mental load to your phone! 🎉

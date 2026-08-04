@@ -9,7 +9,7 @@ This is a short, hands-on micro-course for new mums who have less time, more to 
 1. **The 60-Second Brain Dump** — talk for a minute about everything on your mind, and Apple's on-device AI sorts it into category checklists (Logistics, Food & Household, Misc), each its own note in a shared "Mental Load" folder.
 2. **The Baby Log** — say what just happened (a feed, a nap, a nappy, a milestone) and AI turns it into a tidy, timestamped entry in one running note you can scroll back through or show your baby's doctor.
 
-Everything runs on tools already on the iPhone: the Shortcuts app and **Apple Intelligence's Private Cloud Compute** model (free, no account, private). ChatGPT appears only as an optional alternative in the Baby Log. No subscription, no typing. The learner talks; the phone sorts.
+Everything runs on tools already on the iPhone: the Shortcuts app and **Apple Intelligence's Private Cloud Compute** model (free, no account, private) for the Brain Dump. The Baby Log leads with the built-in **ChatGPT** extension (free, no download, and no account needed to enable), because it lays out neat, categorised log lines more reliably than PCC, which stays available as a fully private fallback. No subscription, no typing. The learner talks; the phone sorts.
 
 The narrative follows Dalmie, a new-mum dalmatian whose brain is full and whose hands are even fuller. The course opens on her pain (things slipping through the cracks, mental load that never switches off), gives her a way to offload it by voice, and, crucially, a way to make that invisible load visible and shareable with her partner.
 
@@ -57,10 +57,11 @@ Faster than the earlier challenges because the learner already knows the buildin
 
 - Why a log helps: foggy-brain days, spotting patterns, and having something concrete to show the doctor or health visitor without having to use your hands when you're feeding or measuring your baby
 - Build the second shortcut:
-  - Dictate what just happened
-  - Use Model with a supplied **logging prompt** to turn it into one tidy line. Model is the learner's choice: **Private Cloud Compute** like before, or **ChatGPT** if they want to connect an account and keep a history (explained as an option, not required)
-  - Current Date → Format Date, then Find Notes + **Append to Note** into one running "Baby Log" note
-- The logging prompt is the takeaway tool: it turns messy speech ("she woke up grumpy, weighed 4.5 kg, ate 60 ml") into a clean, consistent entry
+  - Make the running "Baby Log" note first, and turn on the **ChatGPT** extension (free, no download, no account needed to enable)
+  - Dictate what just happened, then **Current Date → Format Date** (short date + time) *before* the model, so the time can be fed into the prompt as a reference
+  - Use Model set to **ChatGPT** (device-validated as the recommended model here: it lays out neat, categorised lines, which Private Cloud Compute formats less reliably; PCC offered as a fully private fallback) with a supplied **parser prompt** that splits the ramble into one line per activity, each stamped with the date+time and a bold category (Feed, Nappy, Nap, Mood, Weight, Milestone, Note)
+  - Find Notes + **Append to Note** (the model's Response) into the one running "Baby Log" note; entries stack newest-last, each line self-dated
+- The parser prompt is the takeaway tool: it turns messy speech ("she woke up grumpy, weighed 4.5 kg, ate 60 ml") into clean, categorised, timestamped lines
 - Trigger it by voice the same way
 - Worked example: a day of Dalmie's log entries building up into something readable
 - Exercise: log two or three things across an afternoon and scroll back over them
