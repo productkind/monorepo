@@ -85,7 +85,7 @@ course:
               **Misc**
               - health visitor coming Tuesday at 11
 
-              She didn't sort a thing, and she didn't open a single app. That's what you'll build next. And you'll set up sharing it with your partner automatically, so **you won't have to carry the mental load alone**.
+              She didn't sort a thing, and she didn't open a single app. That's what you'll build next, tapping a few blocks together, with no techy know-how needed. And you'll set up sharing it with your partner automatically, so **you won't have to carry the mental load alone**.
             imageUrl: /courses/ai-your-life-admin-00/sorted-result.webp
         - type: text
           title: What you'll need
@@ -202,12 +202,21 @@ course:
               - the **Get Dictionary Value** key
               - the **Find Notes** name filter
 
-              The rest (Combine Text, the If, and Append Checklist Item) stay exactly the same, since they only point at the blocks right above them.
+              One thing to watch: when you add **Get Dictionary Value** in these new blocks, it tends to read from the block just above it, not the AI's answer. Re-point it to the **Response** each time, exactly as you did in the first block. The rest (Combine Text, the If, and Append Checklist Item) can stay as they are, since they point at the actions right above them.
 
               So add one more full block for **Food & Household** (its key and its note filter both **Food & Household**), then one more for **Misc** (both **Misc**).
-
-              *One tip:* the blocks look near-identical, so it's easy for a block's **If** or **Append Checklist Item** to read the block above by mistake. To check one, tap its blue **Combined Text** or **Find Notes** chip, then tap **Reveal Action** in the menu that slides up. Shortcuts jumps to the action that chip comes from. Make sure that's the one in the *same* block. If it points at an earlier block, tap the chip, remove it, then insert the right one. (Building each block fully before you start the next helps too, since a new action usually wires to the one just above it.)
             imageUrl: /courses/ai-your-life-admin-00/build-repeat-categories.webp
+        - type: text
+          title: "Build it: check each block reads the right place"
+          subtitle: A quick wiring check
+          content:
+            body: |-
+              The blocks look near-identical, so it's easy for one block's **If** or **Append Checklist Item** to read the block above by mistake. Worth a quick check.
+
+              Tap a block's blue **Combined Text** or **Find Notes** chip, then tap **Reveal Action** in the menu that slides up. Shortcuts jumps to the action that chip comes from. Make sure it's the one in the *same* block. If it points at an earlier block, tap the chip, remove it, then add the right one.
+
+              (Building each block fully before you start the next helps too, since a new action usually wires to the one just above it.)
+            imageUrl: /courses/ai-your-life-admin-00/build-check-wiring.webp
         - type: text
           title: "Build it: skip the empty taps"
           subtitle: So a stray tap does nothing
@@ -240,7 +249,7 @@ course:
               1. Open the shortcut's details, tap the **Share** icon, and choose **Add to Home Screen**. Now it's an icon you tap like any app.
               2. Tap that icon to start. Talk, pause and think all you like, then tap the **stop** button (⏹️) when you're finished.
 
-              You can also just open the **Shortcuts** app and tap **Brain Dump**. (Saying *"Hey Siri, Brain Dump"* works too, but Siri stops as soon as you pause, so for a rambly dump with thinking time, tapping is better. Later, Challenge 4 adds a tap on the back of your phone.)
+              You can also open the **Shortcuts** app and tap **Brain Dump**. (Saying *"Hey Siri, Brain Dump"* works too, but Siri stops as soon as you pause, so for a rambly dump with thinking time, tapping is better. Later, Challenge 4 adds a tap on the back of your phone.)
             imageUrl: /courses/ai-your-life-admin-00/run-the-shortcut.webp
         - type: free-text-exercise
           title: Run it, then ask anything
@@ -256,17 +265,17 @@ course:
         - type: challenge-end
           title: "Your voice sorts itself now! 🎉"
           content:
-            nextModule: "**Next challenge:** Right now these lists live in your Notes, where only you can see them. Next you'll share the whole folder with your partner, so the mental load is out in the open and things can be handed off."
+            nextModule: "**Next challenge:** You'll make sure these lists reach your partner, whatever phone they carry, so the mental load is out in the open and things can be picked up, not yours alone to hold."
             description: You talked for a minute and your phone sorted it into checklists for you.
             subDescription: The real prize is the prompt. You can reword it any time.
     - title: Share the Load
       isFree: true
       skills:
         - Apple Notes
-        - Collaboration
+        - WhatsApp
         - iPhone Shortcuts
-      description: Share your Mental Load folder with your partner, so the mental load is visible and things can be handed off.
-      completionTime: '05:00'
+      description: Make sure your partner can see your Mental Load lists, whatever phone they're on, so the load is shared and not yours alone.
+      completionTime: '04:00'
       steps:
         - type: text
           title: Out of your head, into the open
@@ -275,28 +284,15 @@ course:
             body: |-
               The hardest part of the mental load is that it's invisible. It sits in your head, so you're the only one who can see it, and you can't hand off what no one else can see.
 
-              Your Brain Dump already turns it into real, sorted lists. This challenge does one thing: it puts those lists where your partner can see them, so what you're carrying becomes something they can pick up, and nothing here asks more of you.
+              Your Brain Dump already turns it into real, sorted lists. If your partner has an iPhone, you shared the **Mental Load** folder in the last challenge. This short challenge makes sure that sharing is really live for them, and adds a way to reach a partner on **any other phone** too, so whatever they carry, they can see what you're holding.
         - type: text
-          title: "Share your folder"
-          subtitle: If your partner has an iPhone
+          title: "Send it as a message instead"
+          subtitle: For a partner who's not on iPhone
           content:
             body: |-
-              Share the whole **Mental Load** folder, so your partner sees every category and every new item, live:
+              Live folder sharing is Apple-to-Apple only, so if your partner is on Android, send them the lists as a message instead. Almost any app works here: **WhatsApp**, **Telegram**, **WeChat**, or even **email**. We'll show it with WhatsApp, and the steps are the same whichever you use. You lay the message out yourself, so it comes through tidy:
 
-              1. Open the **Notes** app and go to your **Folders** view.
-              2. Long-press the **Mental Load** folder and tap **Share Folder**. A folder can only be shared as a live collaboration, so there's no *Send Copy* to worry about.
-              3. Pick **Messages** or **Mail**, and send the invite to your partner.
-
-              Once they accept, every brain dump you add shows up on their phone too. They can tick things off and take things on, and you both see it update live.
-            imageUrl: /courses/ai-your-life-admin-00/share-collaborate.webp
-        - type: text
-          title: "No iPhone? Send it instead"
-          subtitle: If your partner is on Android
-          content:
-            body: |-
-              Live folder sharing is Apple-to-Apple only, so if your partner is on Android, send them the lists via WhatsApp instead. You lay the message out yourself, so it comes through tidy:
-
-              1. In your **Brain Dump** shortcut, **inside the If** and just above **End If**, add a **Text** action. Type a bold heading for each category (single asterisks make it bold in WhatsApp), then drop that category's **Combined Text** underneath:
+              1. In your **Brain Dump** shortcut, scroll to the bottom. Add a **Text** action **after your Misc block's End If**, just above the very last **End If** at the foot of the shortcut, so it sits inside the outer guard but outside every category's own If. Type a bold heading for each category (single asterisks make it bold in WhatsApp), then drop that category's **Combined Text** underneath:
 
               ```
               *Logistics*
@@ -311,26 +307,28 @@ course:
 
               2. Add WhatsApp's **Send Message** action after it (on some phones it reads *Send Message via WhatsApp*; if a search doesn't find it, look under the **Apps** tab and scroll to WhatsApp). Put **only** that **Text** result in the message. WhatsApp needs to be installed, and it may ask you to confirm the first time it sends.
 
-              One thing worth knowing: don't ask the AI to format this. Apple's model is a reliable sorter but a poor typesetter, so you type the bold and line breaks yourself and they come through every time.
+              Using a different app? Look for its own send action instead (for email it's **Send Email**), and point that at the same **Text** result. One thing to note: WhatsApp and Telegram read single asterisks as bold, but email and some apps don't, so the `*Logistics*` bits may just show the asterisks there. The list still comes through clearly.
+
+              One more thing: don't ask the AI to format this. Apple's model is a reliable sorter but a poor typesetter, so you type the bold and line breaks yourself and they come through every time.
             imageUrl: /courses/ai-your-life-admin-00/build-whatsapp-text.webp
         - type: text
           title: "How it helps Dalmie"
           subtitle: A quick look
           content:
             body: |-
-              Dalmie does her brain dump on the sofa while feeding. It lands in the shared folder, and her partner, out at the shops, opens **Food & Household**, sees three new things, and picks them up on the way home. She didn't chase him, didn't write a list, didn't remember to ask.
+              Dalmie does her brain dump on the sofa while feeding. The list reaches her partner, out at the shops, however his phone gets it. He sees three new things under **Food & Household** and picks them up on the way home. She didn't chase him, didn't write a list, didn't remember to ask.
 
               It's out of her head now, and into a list they can both see and pick up from.
         - type: free-text-exercise
-          title: Share it, then ask anything
+          title: Check it reaches them, then ask anything
           content:
             description: |-
-              Share your Mental Load folder with your partner, whichever way suits their phone. Then do a quick brain dump and check it reaches them.
+              Do a quick brain dump, then check it actually reached your partner. If they're on an iPhone, make sure they've accepted the folder invite, then look for a new item appearing on their side. If they're on another phone, check the WhatsApp message came through.
 
-              If sharing didn't work, or a step wasn't clear, ask here and you'll get an answer.
+              If it didn't reach them, or a step wasn't clear, ask here and you'll get an answer.
             subDescription: No question is too small. And if it worked, tell us how it felt to hand something off.
-            placeholder: e.g. My partner didn't get the invite...
-            systemPrompt: 'You are a warm, knowledgeable mentor for a new mum taking a course. She has built an iPhone Shortcut called Brain Dump that sorts a minute of talking into category notes (Logistics, Food & Household, Misc) inside a folder called Mental Load, each an Apple Notes checklist. In this challenge she shares that folder with her partner so the mental load is visible and can be handed off. Two ways are taught: (1) if the partner has an iPhone or iPad, open the Notes app, long-press the Mental Load folder, tap Share Folder (a folder is always shared as a live collaboration, so there is no Send Copy option for folders), and invite them by Messages or Mail, after which both see live updates; (2) if the partner is on Android (collaboration is Apple-to-Apple only), send via WhatsApp: inside the If, add a Text action that lays out each category as a bold heading (single asterisks for WhatsApp bold) with that category''s Combined Text underneath, then a Send message via WhatsApp action containing only that Text result. The layout is typed by hand, not asked of the model, because Private Cloud Compute sorts reliably but formats poorly. The framing is that the load is hers to offload, not a shared inbox she adds more to. She may report something not working or ask about any step. Common causes to check for: looking for a Send Copy or Collaborate choice on the folder (there is none, a folder is always shared as a live collaboration via Share Folder); the partner not accepting the invite yet, or not signed in to iCloud with Notes turned on (needed for collaboration); collaboration working Apple-to-Apple only, so an Android partner needs the WhatsApp route; WhatsApp not installed, or the first send asking to confirm. Answer clearly and warmly in British English, in clear, everyday words for someone non-technical, in at most a few short sentences or bullets. If it falls outside the course, gently point her to Kinga and Tamas in the Discord community. Do not use em dashes. End on an encouraging note. Reply in a markdown format.'
+            placeholder: e.g. My partner didn't get the message...
+            systemPrompt: 'You are a warm, knowledgeable mentor for a new mum taking a course. She has built an iPhone Shortcut called Brain Dump that sorts a minute of talking into category notes (Logistics, Food & Household, Misc) inside a folder called Mental Load, each an Apple Notes checklist. In the previous challenge, if her partner has an iPhone she already shared the Mental Load folder (long-press the folder, Share Folder, invite by Messages or Mail; a folder is always a live collaboration, so there is no Send Copy option), and those lists are already on the partner''s phone and update live. This challenge is for a partner who is not on an iPhone: she adds a WhatsApp send to the Brain Dump shortcut. Inside the If, she adds a Text action that lays out each category as a bold heading (single asterisks for WhatsApp bold) with that category''s Combined Text underneath, then a Send Message action (contributed by WhatsApp, sometimes shown as Send Message via WhatsApp, and found under the Apps tab if a search does not show it) containing only that Text result. WhatsApp is shown as the example, but the same works with other messaging apps such as Telegram or WeChat, or email via a Send Email action; note that single-asterisk bold only renders in WhatsApp and Telegram, so in email or some apps the asterisks may show as plain characters (the list still reads clearly). The layout is typed by hand, not asked of the model, because Private Cloud Compute sorts reliably but formats poorly. The framing is that the load is hers to offload, not a shared inbox she adds more to. She may report something not working or ask about any step. Common causes to check for: for the folder share, the partner not accepting the invite yet, or not signed in to iCloud with Notes turned on; for the WhatsApp send, WhatsApp not installed, the Send Message action sitting under the Apps tab rather than in search, the message pointing at the wrong Text or carrying extra variables (it should hold only the assembled Text), or the first send asking to confirm; an empty category showing just a bold heading with nothing under it in the message, which is harmless. Answer clearly and warmly in British English, in clear, everyday words for someone non-technical, in at most a few short sentences or bullets. If it falls outside the course, gently point her to Kinga and Tamas in the Discord community. Do not use em dashes. End on an encouraging note. Reply in a markdown format.'
             checkerPrompt: 'The learner is asking a question or sharing how it went. Accept any genuine question, problem description, or comment. Only flag clearly empty or nonsense input. This is their message:'
         - type: challenge-end
           title: "The load is out in the open now! 🎉"
