@@ -269,6 +269,27 @@ The iPhone folder-share moved into Challenge 1's "make your category notes" step
 - **Get Dictionary Value re-pointing (from Magic Variable auto-fill, line 144):** in the 2nd and 3rd category blocks, *Get Dictionary Value* auto-fills its input from the action just above it, not the *Use Model* Response, so it must be re-pointed to **Response** by hand each time. Challenge 1's "do the same for the others" step now says this explicitly.
 - **Other messaging apps for Challenge 2:** the WhatsApp send is the shown example, but any app with a Shortcuts send action works (Telegram, WeChat, or email via **Send Email**), pointed at the same assembled Text. Single-asterisk bold renders in WhatsApp and Telegram; in email and some apps the asterisks show as plain characters (list still readable). Per-app send-action labels not individually verified on device.
 
+### Baby Log design, device-validated (Kinga's screenshot, 2026-08-04)
+
+Kinga field-tested the Baby Log on her iPhone and the course now matches what she built:
+
+- **Model: ChatGPT via the Use Model action (recommended for the Baby Log).** Picking *ChatGPT* as the model in *Use Model* produces neat, categorised, **bold-labelled** lines that render as a tidy bulleted list in Apple Notes (confirmed in her output). Private Cloud Compute is a weaker typesetter for this, so it is offered as a fully private fallback, not the default. This is the reverse of the Brain Dump, which uses PCC.
+- **Action order:** Dictate Text -> Current Date -> **Format Date (Date Format Short, Time Format Short)** -> Use Model (ChatGPT) -> Find Notes -> Append to Note. The Format Date sits **before** the model and is inserted into the prompt as the reference date/time, so the model can stamp each activity line. This supersedes the earlier design that appended Format Date + Response at the end (which produced run-together values with no separator).
+- **Prompt:** a "baby care log parser" that outputs one line per activity, each line `- <date>, <time> **Category**: details`, categories Feed/Nappy/Nap/Mood/Weight/Milestone/Note. Two chips inserted: Formatted Date after "the date and time now is:" and Dictated Text at the end.
+- **Append to Note** appends the model **Response** only (the model already produced the full formatted, timestamped lines). Each run stacks below the last; entries appear on their own lines (confirmed in her note).
+- **Date handling decision:** her first test put the date as a repeating **header** (04/08/2026 before every run). Kinga chose "date on each line" instead, so the prompt stamps the full date+time on each activity line and there is no standalone date header.
+- **ChatGPT extension enable (no account needed):** *Settings > Apple Intelligence & Siri > Extensions > ChatGPT > Set Up > Enable ChatGPT* (or *Use ChatGPT with an Account* to keep a history). Built into iOS, nothing to download.
+
+### Trigger reliability, device-tested (Kinga, 2026-08-04)
+
+Kinga tested the Challenge 4 triggers with the Brain Dump on her iPhone. The real failure mode for these dictation shortcuts is the **screen dimming / going black mid-dictation**, which cuts the message; the triggers themselves are fine as long as the screen stays on.
+
+- **Back Tap:** works, **even from the lock screen**, provided the screen is on (not black). Needs a **firm** tap.
+- **Action Button:** works, including from the lock screen.
+- **Hey Siri:** launches a shortcut by name with nothing to set up; a fine launcher for either shortcut.
+- **Correction (Kinga, 2026-08-04):** the pause-cutoff is NOT a Hey Siri behaviour. It is the **Stop Listening = On Pause / After Short Pause** setting, and it happens **regardless of how the dictation is started** (icon tap, Back Tap, Action Button, or Hey Siri). A shortcut set to stop on a pause ends the instant you take a breath (does not need a long pause). This is fine for the short **Baby Log** (After Short Pause; ends on its own) and is exactly why the **Brain Dump** uses **On Tap** instead, so it keeps listening through pauses and you end it with the stop button.
+- **Two launch-independent failure modes for dictation, both reflected in the course:** (1) **screen dimming / going black** mid-dictation cuts the run, so keep the screen awake; (2) a **stop-on-pause** dictation ends on a breath, so use On Tap for anything needing thinking time. Neither is caused by the launch method.
+
 ### Still to verify on device (2026-08-04)
 - The **Share Folder** and **WhatsApp Send Message** labels remain open from 2026-07-27 above (docs-confirmed, on-device labels still to be ticked off).
 - The **Append Checklist Item** field label: the course says it reads *Append checklist item [Name] to [Note]*; the literal word *Name* for the text field is not doc-confirmed. Confirm on device.
