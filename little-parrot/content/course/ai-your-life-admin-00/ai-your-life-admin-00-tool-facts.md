@@ -258,3 +258,18 @@ The course pivoted to a **category-router** design (sort a brain dump into fixed
 ### Still to verify on device (2026-07-27)
 - The **Share Folder** label and that no Send Copy/Collaborate choice appears for a folder.
 - The exact **WhatsApp Send Message** action label and whether it is reachable via search or only the Apps tab.
+
+## Addendum: Challenge 2 reshape + confirmations (2026-08-04)
+
+The iPhone folder-share moved into Challenge 1's "make your category notes" step, so Challenge 2 now recaps that and centres on sending the lists to a partner who is not on an iPhone. Facts this relies on:
+
+- **Blue arrow to open an action's settings (confirmed on device by Kinga, 2026-08-04):** on the *Dictate Text* and *Use Model* actions, there is a **blue arrow** you tap to open the action's settings (Language / Stop Listening for Dictate Text; Output for Use Model). The accuracy critic could not confirm this from docs and suspected a "Show More" expander; Kinga confirmed the blue arrow is what actually appears. Course wording "tap the blue arrow" is correct.
+- **Reveal Action (confirmed against live docs, 2026-08-04):** tapping a variable token opens the variable editor, which has a **Reveal Action** option that jumps to the action that produced the variable. This backs Challenge 1's "check each block reads the right place" step. Source: Apple Support "Adjust variables in Shortcuts on iPhone or iPad" (https://support.apple.com/guide/shortcuts/adjust-variables-apda36b9018b/ios), checked 2026-08-04.
+- **Apple Intelligence top-level enable (confirmed against live docs, 2026-08-04):** *Settings > Apple Intelligence & Siri >* turn on **Apple Intelligence**. This is the enable that Challenge 1's "Turn on Apple Intelligence" step relies on (distinct from the Extensions > ChatGPT sub-path already documented above). Source: Apple Support "Use Apple Intelligence on your iPhone" (https://support.apple.com/guide/iphone/intro-to-apple-intelligence-iphc28624b81/ios), checked 2026-08-04.
+- **Get Dictionary Value re-pointing (from Magic Variable auto-fill, line 144):** in the 2nd and 3rd category blocks, *Get Dictionary Value* auto-fills its input from the action just above it, not the *Use Model* Response, so it must be re-pointed to **Response** by hand each time. Challenge 1's "do the same for the others" step now says this explicitly.
+- **Other messaging apps for Challenge 2:** the WhatsApp send is the shown example, but any app with a Shortcuts send action works (Telegram, WeChat, or email via **Send Email**), pointed at the same assembled Text. Single-asterisk bold renders in WhatsApp and Telegram; in email and some apps the asterisks show as plain characters (list still readable). Per-app send-action labels not individually verified on device.
+
+### Still to verify on device (2026-08-04)
+- The **Share Folder** and **WhatsApp Send Message** labels remain open from 2026-07-27 above (docs-confirmed, on-device labels still to be ticked off).
+- The **Append Checklist Item** field label: the course says it reads *Append checklist item [Name] to [Note]*; the literal word *Name* for the text field is not doc-confirmed. Confirm on device.
+- The exact **Send Message via WhatsApp** vs **Send Message** wording (Kinga has used both phrasings).

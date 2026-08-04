@@ -42,13 +42,13 @@ The hook: by the end, the learner has a working shortcut and a set of category n
 ### 2. Share the Load
 **Make the invisible mental load visible, and hand it off to your partner.**
 
-The heart of the course: a list only you can see can't be handed off. This challenge puts the lists where a partner can see and pick them up, framed as offloading, never a shared inbox the mum has to feed.
+The heart of the course: a list only you can see can't be handed off. This challenge makes sure the lists reach a partner on any phone, framed as offloading, never a shared inbox the mum has to feed. The iPhone folder-share itself now happens back in Challenge 1 (in the make-your-category-notes step), so this challenge recaps that and adds the route for a partner who is not on an iPhone.
 
 - The reason: the mental load is invisible and lands on one person; making it a shared, visible list is what lets a partner take real things off her plate
-- Share the **Mental Load folder** via **Share Folder → Collaborate** (Apple to Apple); both see live updates and can tick items off
-- For an Android partner: send the lists via **WhatsApp**, using a hand-built **Text** action (bold headings with asterisks + line breaks, assembled by the shortcut, not the model) then a **Send Message** action
+- Recap: if the partner has an iPhone, the **Mental Load folder** was already shared in Challenge 1 (**Share Folder**, a live collaboration), so those lists are already on their phone
+- For a partner not on an iPhone: send the lists via **WhatsApp**, using a hand-built **Text** action (bold headings with asterisks + line breaks, assembled by the shortcut, not the model) then a **Send Message** action
 - Worked example: Dalmie dumps on the sofa; her partner picks up the shopping without being chased
-- Exercise: share the folder and check a brain dump reaches the partner
+- Exercise: do a brain dump and check it reaches the partner (shared folder, or the WhatsApp message)
 
 ### 3. The Baby Log
 **Reuse the same pattern to keep a running, timestamped record of your baby's day.**
@@ -107,7 +107,7 @@ Each challenge ends with the learner having actually run the thing, not just und
 
 ## Timing
 
-Total estimated time: ~25 minutes across four short challenges (Brain Dump ~6, Share the Load ~5, Baby Log ~7, Make It Effortless ~5), plus the opening comics and video. Short by design; the learner builds and uses the shortcuts as they go.
+Total estimated time: ~24 minutes across four short challenges (Brain Dump ~6, Share the Load ~4, Baby Log ~7, Make It Effortless ~5), plus the opening comics and video. Short by design; the learner builds and uses the shortcuts as they go.
 
 ---
 
