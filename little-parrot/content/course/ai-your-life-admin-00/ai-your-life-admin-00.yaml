@@ -201,96 +201,125 @@ course:
           subtitle: Five actions, one category
           content:
             body: |-
+              *Deep breath, this is a chunky step, but you've got this!* Build these five actions once, though, and the other two categories are just the same again.
+
               Now send one category to its note. Add these **five actions in order**, all for **Logistics**:
 
               1. **Get Dictionary Value**: type **Logistics** as the key, and make sure it reads from the **Response** (the AI's answer).
               2. **Combine Text**: it takes the **Dictionary Value** from the block above; set it to combine with **New Lines**, so each item sits on its own line.
               3. **Find Notes**: add two filters so it finds only the right note, **Name** contains **Logistics** *and* **Folder** is **Mental Load**. The Folder filter keeps it from grabbing another note called Logistics you might have elsewhere.
               4. **Append Checklist Item**: on screen this reads *Append checklist item [Name] to [Note]*. Put your **Combined Text** in as the name, and the **Find Notes** result in as the **Note**. Each line becomes its own tickable checklist item.
-              5. **If**: add this one **last**, once the other four are in place. It drops in as three lines, **If / Otherwise / End If**. Wrap it around your two Notes actions: drag the **If** line up so it sits just above **Find Notes**, delete the **Otherwise** line, then drag **End If** down so it sits just below **Append Checklist Item**. Now tap the **If** and set its condition to **Combined Text** → **has any value**. This skips a category when you said nothing that belongs to it.
+              5. **If**: add this one **last**, once the other four are in place. It drops in as three lines, **If / Otherwise / End If**. Wrap it around your two Notes actions: drag the **If** line up so it sits just above **Find Notes**, delete the **Otherwise** line, then drag **End If** down so it sits just below **Append Checklist Item**. Now set the **If**'s condition to **Combined Text**, then tap **is** (already on the action) and change it to **has any value**. This skips a category when you said nothing that belongs to it.
 
               *Why last? If you add the If before the **Find Notes** exists, Shortcuts turns Find Notes into **Filter Notes**, and it stops working.*
             imageUrl: /courses/ai-your-life-admin-00/build-route-category.webp
+        - type: text
+          title: "Build it: test it to make sure it works"
+          subtitle: Easier to check one block than three
+          content:
+            body: |-
+              Before you build the other two blocks, give this one a run. A mistake is far easier to spot in one block than in three.
+
+              1. Tap the **▶️ play button** at the bottom of the editor.
+              2. Say one or two **Logistics** things, like *"call the dentist, book a yoga class"*, then tap the **stop** button (⏹️).
+              3. Open your **Logistics** note. Your items should be there as checklist lines.
+
+              If they're there, the whole chain works, so you can move to the next step with confidence. If the note stayed empty, check the block still says **Find Notes** (not **Filter Notes**), and that **Get Dictionary Value** reads from **Response**.
+            imageUrl: /courses/ai-your-life-admin-00/build-test-first-block.webp
         - type: text
           title: "Build it: do the same for the others"
           subtitle: Repeat the block
           content:
             body: |-
-              That block, **Get Dictionary Value → Combine Text → Find Notes → Append Checklist Item**, wrapped in an **If (Combined Text has any value)**, is the whole pattern. Build the same five again for each of your other categories, adding the **If last** each time, just as you did before.
+              That block, **Get Dictionary Value → Combine Text → Find Notes → Append Checklist Item**, wrapped in an **If** (*Combined Text has any value*), is the whole pattern. Build it again for your other two categories, where the only thing that changes is the **category name**.
 
-              The only thing that changes each time is the **category name**, and it appears in just two of the actions:
+              Here's the **Food & Household** block, action by action:
 
-              - the **Get Dictionary Value** key
-              - the **Find Notes** *Name* filter (its **Folder** filter stays **Mental Load** in every block)
+              1. **Get Dictionary Value**: Get **Value** for **Food & Household** in **Response**.
+              2. **Combine Text**: Combine **Dictionary Value** with **New Lines**.
+              3. **Find Notes**: add two filters, **Name** contains **Food & Household** *and* **Folder** is **Mental Load**.
+              4. **Append Checklist Item**: **Combined Text** to **Note** (the **Find Notes** result).
+              5. **If**: add it **last**, wrap it around the **Find Note where All of the following are true** and **Append Checklist Item**, set its condition to **Combined Text** → **has any value**, and delete the **Otherwise** line.
 
-              One thing to watch: when you add **Get Dictionary Value** in these new blocks, it tends to read from the block just above it, not the AI's answer. Re-point it to the **Response** each time, exactly as you did in the first block. The rest (Combine Text, the If, and Append Checklist Item) can stay as they are, since they point at the actions right above them.
-
-              So add one more full block for **Food & Household** (its key and its note filter both **Food & Household**), then one more for **Misc** (both **Misc**).
-
-              **Don't leave the If behind.** When you rebuild a block, it's easy to add the four actions you can see and forget the **If (Combined Text has any value)** that wraps the **Find Notes** and **Append Checklist Item**. Add it **last** each time, just like the first block, and give every block its own. If you miss it, a category that didn't have any items will stop and ask you to type an item name.
+              Then do the same for **Misc** (its key and its Name filter both **Misc**). Now your shortcut has three blocks, one per category, each the same five actions.
             imageUrl: /courses/ai-your-life-admin-00/build-repeat-categories.webp
         - type: text
-          title: "Build it: check each block reads the right place"
-          subtitle: A quick wiring check
+          title: "Build it: if Find Notes turns into Filter Notes"
+          subtitle: A quick fix
           content:
             body: |-
-              The blocks look near-identical, so it's easy for one block's **If** or **Append Checklist Item** to read the block above by mistake. Worth a quick check.
+              As you move actions around, Shortcuts sometimes flips a block's **Find Notes** into **Filter Notes**. Filter Notes has nothing to search, so nothing lands in that category's note. If you spot **Filter Notes** where **Find Notes** should be, correct it right like this:
 
-              Tap a block's blue **Combined Text** or **Find Notes** chip, then tap **Reveal Action** in the menu that slides up. Shortcuts jumps to the action that chip comes from. Make sure it's the one in the *same* block. If it points at an earlier block, tap the chip, remove it, then add the right one.
+              1. Drag the **Filter Notes** action **up, above the If**. It turns straight back into **Find Notes**.
+              2. Drag the **If** back up so it sits **above** your **Find Notes** again.
+              3. Move **Append Checklist Item** **below Find Notes**, then drag **End If** **below Append Checklist Item**, so the **If** wraps both again.
 
-              (Building each block fully before you start the next helps too, since a new action usually wires to the one just above it.)
-            imageUrl: /courses/ai-your-life-admin-00/build-check-wiring.webp
+              The block is back to **If → Find Notes → Append Checklist Item → End If**, and saving as it should.
+            imageUrl: /courses/ai-your-life-admin-00/build-fix-filter-notes.webp
         - type: text
-          title: "Build it: skip the empty taps"
-          subtitle: So a stray tap does nothing
+          title: "Build it: skip the accidental taps"
+          subtitle: So nothing gets saved when you say nothing
           content:
             body: |-
-              One safety net before you finish. If you tap the shortcut by accident and don't say anything, the AI will **invent a random list** to fill the categories (it can't leave them empty). Stop that by wrapping every action in one check:
+              One safety net before you finish. If you tap the shortcut by accident and don't say anything, the AI will **invent a random list** to fill the categories (it can't leave them empty). Avoid that by wrapping every action in one check:
 
-              1. Right after **Dictate Text**, add an **If** action, and set it to **Dictated Text** → **has any value**.
-              2. Drag the **End If** to the very bottom, so every other action sits **inside** the If.
-              3. The **If** also adds an **Otherwise** line. You don't need it, so delete it, since nothing needs to happen when you've said nothing.
+              1. Add an **If** action. It comes with an **Otherwise** and an **End If**; delete the **Otherwise** line, since nothing needs to happen when you've said nothing.
+              2. Drag the **If** up, so it sits right under **Dictate Text**, and set it to **Dictated Text** → **has any value**.
+              3. Drag the **End If** down to the very bottom, so every other action ends up **inside** the If.
 
-              Now if you didn't say anything, nothing runs. Tap it by mistake, say nothing, and nothing happens.
+              *If the End If won't stay at the bottom* and keeps springing back above your last block: add a new action at the very end (a **Combine Text** will do), drag the **End If** to just above it, then delete that extra action. That leaves the End If sitting right at the bottom.
+
+              Now if you tap the shortcut by mistake and don't say anything, nothing gets saved into your notes.
             imageUrl: /courses/ai-your-life-admin-00/build-if-guard.webp
         - type: text
           title: "Build it: name it"
           subtitle: The finish
           content:
             body: |-
-              One last touch. Tap the name at the top and rename it something easy to say, like **Brain Dump**. That becomes its **Siri phrase**, the words you'll use to run it in a moment. Tap **Done**.
+              One last touch. Tap the name at the top and rename it something easy to say, like **Brain Dump**. That becomes its **Siri phrase**, the words you'll use to run it in a moment. Tap the **tick** (✓) on the keyboard to save the name.
 
-              *One honest note:* once in a while the answer comes back in the wrong shape, or you see a brief error, and nothing gets sorted. Do the dictation again and it sorts itself out. That's your first shortcut built. 💫
+              That's your first shortcut built. 💫
             imageUrl: /courses/ai-your-life-admin-00/build-finish.webp
         - type: text
           title: "How to run it"
           subtitle: One tap away
           content:
             body: |-
-              For a proper brain dump, you want it to keep listening while you pause and think, and to stop only when *you* say so. That's why you set *Stop Listening* to **On Tap** earlier: it opens a panel with a **stop** button (⏹️) and keeps listening until you tap it. Put it one tap away:
+              For a proper brain dump, you want it to keep listening while you pause and think, and to stop only when *you* say so. That's why you set *Stop Listening* to **On Tap** earlier in the **Dictate Text** action: it opens a panel with a **stop** button (⏹️) and keeps listening until you tap it. 
+              
+              Put your Brain Dump shortcut one tap away:
 
-              1. Open the shortcut's details, tap the **Share** icon, and choose **Add to Home Screen**. Now it's an icon you tap like any app.
+              1. While editing your shortcut, tap the **Share** icon at the **bottom** of the screen and choose **Add to Home Screen**. You can give it a **colour** and a **symbol** to make it easy to spot, then tap **Add**. Now it's an icon you tap like any app. 
               2. Tap that icon to start. Talk, pause and think all you like, then tap the **stop** button (⏹️) when you're finished.
 
-              You can also start it from the **Shortcuts** app, or by saying *"Hey Siri, Brain Dump"*. Whatever starts it, one thing to know for a long dump: keep the screen on while you talk, because if it dims or goes black mid-dictation, it cuts you off before you can tap **stop**. Challenge 4 adds a tap on the back of your phone.
+              You can also start it from the **Shortcuts** app, or by saying *"Hey Siri, Brain Dump"*. Whatever starts it, one thing to know for a long dump: keep the screen on while you talk, because if it dims and goes black mid-dictation, it won't save your thoughts. Challenge 4 adds other ways to start your dictation.
             imageUrl: /courses/ai-your-life-admin-00/run-the-shortcut.webp
         - type: free-text-exercise
           title: Run it, then ask anything
           content:
             description: |-
-              Your turn. Tap your Brain Dump to start it (from your Home Screen, or in the Shortcuts app), and when it starts listening, talk about everything on your mind right now, in any order. A messy ramble is fine, take your time, it keeps listening until you tap the stop button (⏹️). Then open your **Mental Load** folder and see everything sorted into tickable checklists.
+              Your turn. Tap your Brain Dump to start it (from your Home Screen, or in the Shortcuts app), and when it starts listening, talk about everything on your mind right now, in any order. A messy ramble is fine, take your time, it keeps listening until you tap the stop button (⏹️). 
+              
+              Then open your **Mental Load** folder and see everything sorted into tickable checklists.
 
-              If something landed in the wrong note, or a step didn't make sense, ask here and you'll get an answer.
+              If something is not working as you've expected, or doesn't make sense, ask here and you'll get an answer.
             subDescription: No question is too small. And if it worked, tell us how your first brain dump went.
-            placeholder: e.g. My items landed in the wrong note...
+            placeholder: e.g. I got the following error...
             systemPrompt: 'You are a warm, knowledgeable mentor for a new mum taking a course. In this first challenge she builds an iPhone Shortcut called Brain Dump that sorts a minute of talking into category notes, each an Apple Notes checklist. First she makes a Mental Load folder with one note per category, each note first line matching a category exactly: Logistics, Food & Household, Misc. The shortcut is: Dictate Text (Language set, Stop Listening on On Tap so it waits until she taps the stop button (the square)), then Use Model set to Private Cloud Compute with Output set to Dictionary, using a prompt that sorts what she says into a dictionary with keys Logistics, Food & Household, Misc (Misc catches anything that does not fit), with the Dictated Text variable at the end; then, for each category, a block of five actions: Get Dictionary Value (that key, reading from the Response), Combine Text (New Lines), an If that checks the Combined Text has any value, and inside that If a Find Notes (filtered to Name contains that category and Folder is Mental Load, matching all filters) and an Append Checklist Item (note is the Find Notes result, text is the Combined Text). Everything after Dictate Text is wrapped in an If that checks Dictated Text has any value, so an accidental tap with no speech does nothing. She runs it by tapping the shortcut. She may report something not working or ask about any step. Common causes to check for: a category note not made, or its name not matching the prompt key exactly, so Find Notes finds nothing; a block''s Find Notes showing as Filter Notes and finding nothing, which happens when the If was added before the Find Notes and Append existed, so rebuild the block with Find Notes and Append first and add the If last, then wrap it around them by dragging the If above Find Notes and the End If below Append Checklist Item; Apple Intelligence not turned on in Settings under Apple Intelligence & Siri; the Output not set to Dictionary; an Append Checklist Item pointing at the wrong block''s Find Notes or Combined Text (with near-identical blocks it is easy to grab the one above); a category that came back empty making Append Checklist Item stop and pop up What checklist item name? (that category''s If, Combined Text has any value, is missing, or the Find Notes and Append are not inside it); items landing in the wrong category (a sorting call by the model, tweak the prompt or move the item by hand); the model occasionally returning the wrong shape or a brief error, so nothing sorts (doing the dictation again usually fixes it); dictation not catching everything (make sure Stop Listening is On Tap and she taps the stop button (the square)); a random, invented list appearing, which happens when the shortcut runs on an empty dictation and the forced Dictionary output makes the model fill the categories with made-up items (the If wrapper prevents this, so check it is in place and wraps every action). Answer clearly and warmly in British English, in clear, everyday words for someone non-technical, in at most a few short sentences or bullets. If it falls outside the course, gently point her to Kinga and Tamas in the Discord community. Do not use em dashes. End on an encouraging note. Reply in a markdown format.'
             checkerPrompt: 'The learner is asking a question or sharing how their build went. Accept any genuine question, problem description, or comment. Only flag clearly empty or nonsense input. This is their message:'
         - type: challenge-end
-          title: "Your voice sorts itself now! 🎉"
+          title: "You built your Brain Dump! 🎉"
           content:
-            nextModule: "**Next challenge:** You'll make sure these lists reach your partner, whatever phone they carry, so the mental load is out in the open and things can be picked up, not yours alone to hold."
-            description: You talked for a minute and your phone sorted it into checklists for you.
-            subDescription: The real prize is the prompt. You can reword it any time.
+            nextModule: "**Next challenge:** You'll make sure these lists reach your partner, whatever phone they carry, so the mental load is not yours alone to carry, you can hand things off."
+            description: You built a working iPhone shortcut from scratch, one that automatically turns a brain dump into three categorised lists of what you're carrying.
+            subDescription: |-
+              Here's what you can do now:
+
+              ✓ Offload what's on your mind in a few seconds, and let your phone do the sorting.
+
+              ✓ Reshape the prompt any time: rename the categories or add your own to fit your life.
+
+              ✓ Reuse the same pattern for anything else you want sorted.
     - title: Share the Load
       isFree: true
       skills:
@@ -302,12 +331,14 @@ course:
       steps:
         - type: text
           title: Out of your head, into the open
-          subtitle: Challenge 2
+          subtitle: Share the load
           content:
             body: |-
               The hardest part of the mental load is that it's invisible. It sits in your head, so you're the only one who can see it, and you can't hand off what no one else can see.
 
-              Your Brain Dump already turns it into real, sorted lists. If your partner has an iPhone, you shared the **Mental Load** folder in the last challenge. This short challenge makes sure that sharing is really live for them, and adds a way to reach a partner on **any other phone** too, so whatever they carry, they can see what you're holding.
+              Your Brain Dump already turns it into real, sorted lists. If your partner has an iPhone, you shared the **Mental Load** folder in the last challenge.
+              
+              This short challenge makes sure that sharing is really live for them, and adds a way to reach a partner on **any other phone** too, so whatever they carry, they can see what you're holding.
         - type: text
           title: "Send it as a message instead"
           subtitle: For a partner who's not on iPhone
@@ -458,7 +489,7 @@ course:
               1. **Find Notes.** Set its filter so the *Name* contains **Baby Log**. This finds the note you made.
               2. **Append to Note.** For the note, insert the **Find Notes** result. For the text, insert the **Response** from *Use Model*.
 
-              *Append to Note* adds to the **bottom** of the note, so your lines stack up in order, newest last. Rename the shortcut **Baby Log** and tap *Done*.
+              *Append to Note* adds to the **bottom** of the note, so your lines stack up in order, newest last. Rename the shortcut **Baby Log** and tap the **tick** (✓) on the keyboard.
         - type: text
           title: "Want it fully private? Use Apple's model"
           subtitle: An optional swap
