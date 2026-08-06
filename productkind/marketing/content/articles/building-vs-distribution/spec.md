@@ -1,7 +1,7 @@
 ---
-status: draft
+status: posted
 channels: [linkedin, instagram, tiktok, threads]
-account: kinga
+account: kinga, productkind
 ---
 
 # Carousel: Building is cheaper, but distribution is still expensive

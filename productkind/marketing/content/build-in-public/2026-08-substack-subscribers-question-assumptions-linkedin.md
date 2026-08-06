@@ -1,5 +1,6 @@
 ---
 status: posted
+posted: 2026-08-07
 channels: [linkedin]
 account: kinga
 ---

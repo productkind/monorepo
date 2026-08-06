@@ -1,5 +1,5 @@
 ---
-status: drafted
+status: posted
 channels: [instagram, tiktok, youtube, linkedin productkind]
 account: little-parrot
 ---

@@ -1,6 +1,5 @@
 ---
-status: ready
-posted:
+status: posted
 channels: [linkedin]
 account: kinga
 ---

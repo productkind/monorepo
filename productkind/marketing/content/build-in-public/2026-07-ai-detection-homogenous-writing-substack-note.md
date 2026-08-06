@@ -1,5 +1,5 @@
 ---
-status: draft
+status: posted
 channels: [substack-note]
 account: kinga
 ---

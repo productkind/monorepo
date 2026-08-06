@@ -1,7 +1,7 @@
 ---
-status: draft
+status: posted
 channels: [linkedin, instagram, tiktok, threads]
-account: kinga
+account: kinga, productkind
 ---
 
 # Carousel: Would you rather grow your follower count or be honest?
