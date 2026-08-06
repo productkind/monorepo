@@ -1,7 +1,7 @@
 ---
-status: draft
+status: posted
 channels: [linkedin, instagram, tiktok]
-account: kinga
+account: kinga, productkind
 ---
 
 # Carousel: What a year of flops taught me

@@ -1,12 +1,11 @@
 ---
 status: posted
 channels: [linkedin]
-account: tim
+account: tamas
 posted: 2026-07-10
 ---
 
 I wish PRDs were dead, even though I dislike the "X is dead" trope on LinkedIn.
-
 
 When I watch people advise others on how to vibecode something, it almost always starts with a PRD. That is some of the worst advice you can give.
 

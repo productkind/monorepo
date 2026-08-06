@@ -1,5 +1,5 @@
 ---
-status: posted
+status: draft
 channels: [linkedin]
 account: kinga
 ---

@@ -1,10 +1,10 @@
 ---
-status: posted
+status: draft
 channels: [linkedin]
 account: kinga
 ---
 
-# Post 01 — Wed 3 Jun
+# Post 01
 
 **Angle:** How we use AI to make our courses, and how the way we do it evolved (ChatGPT → projects → Claude Code).
 **Key point:** The content and expertise are ours; AI helps put it into course format faster. Being able to see every change is what keeps us in control of our own words.

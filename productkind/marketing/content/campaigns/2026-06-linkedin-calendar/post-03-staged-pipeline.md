@@ -1,10 +1,10 @@
 ---
-status: posted
+status: draft
 channels: [linkedin]
 account: kinga
 ---
 
-# Post 03 — Mon 8 Jun
+# Post 03
 
 **Angle:** Don't ask AI for the whole course at once; work in stages with a checkpoint between each.
 **Key point:** The staged process, with a real checklist example, is the usable technique. The thinking and notes are ours.

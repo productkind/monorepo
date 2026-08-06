@@ -1,5 +1,5 @@
 ---
-status: ready
+status: posted
 channels: [instagram]
 account: little-parrot
 ---
