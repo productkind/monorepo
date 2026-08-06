@@ -13,11 +13,11 @@ Statuses: todo, created, scheduled, posted
 
 | Date | Piece | Channels | Status |
 | ---- | ----- | -------- | ------ |
-| 2026-08-09 | WB-4 the Redis moment | instagram, tiktok, youtube, linkedin productkind, threads productkind | todo |
+| 2026-08-09 | SB-3 where is the problem | instagram, tiktok, youtube, linkedin productkind, threads productkind | todo |
 | 2026-08-08 | B-roll | instagram, tiktok, youtube, linkedin productkind, threads productkind | todo |
 | 2026-08-07 | social-011 | instagram, tiktok, youtube, linkedin productkind, threads productkind  | scheduled |
-| 2026-08-06 | SB-3 where is the problem | instagram, tiktok, youtube, linkedin productkind, threads productkind | todo |
-| 2026-08-05 | B-roll | instagram, tiktok, youtube, linkedin productkind, threads productkind | todo |
+| 2026-08-06 | none |  |  |
+| 2026-08-05 | none |  |  |
 | 2026-08-04 | none |  |  |
 | 2026-08-03 | social-010 | instagram, tiktok, youtube, linkedin productkind, threads productkind  | posted |
 | --- | --- | --- | --- |
