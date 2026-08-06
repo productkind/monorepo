@@ -43,7 +43,7 @@ Don't force a how-to onto a reflective post to make it "earn" its read. A person
 ## Channel Guidelines
 
 ### LinkedIn Posts
-- Length: 90–200 words optimal
+- Length: 90–200 words is the sweet spot, as a guideline rather than a ceiling; going slightly over is fine, and cutting lines that carry the voice just to hit the number is not
 - Structure: Hook → insight → implication
 - One idea per post
 - No hashtags
