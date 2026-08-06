@@ -17,7 +17,7 @@ course:
         - iPhone Shortcuts
         - AI Prompting
         - Voice Capture
-      description: Build a shortcut that takes a minute of talking and sorts it into tidy category checklists you can tick off.
+      description: Build a shortcut that takes a minute of talking and sorts it into organised category checklists you can tick off.
       completionTime: '06:00'
       steps:
         - type: comic
@@ -334,19 +334,28 @@ course:
           subtitle: Share the load
           content:
             body: |-
-              The hardest part of the mental load is that it's invisible. It sits in your head, so you're the only one who can see it, and you can't hand off what no one else can see.
+              The hardest part of the mental load is that it's **invisible**. It sits in your head, so you're the only one who can see it, and you can't hand off what no one else can see.
 
               Your Brain Dump already turns it into real, sorted lists. If your partner has an iPhone, you shared the **Mental Load** folder in the last challenge.
               
-              This short challenge makes sure that sharing is really live for them, and adds a way to reach a partner on **any other phone** too, so whatever they carry, they can see what you're holding.
+              This short challenge adds a way to reach a partner on **any other phone** too. Whatever phone they carry, they'll get every new item you add automatically, without you having to manually forward anything.
         - type: text
-          title: "Send it as a message instead"
-          subtitle: For a partner who's not on iPhone
+          title: "Lay out the message"
+          subtitle: Structure what you'll send
           content:
             body: |-
-              Live folder sharing is Apple-to-Apple only, so if your partner is on Android, send them the lists as a message instead. We'll show it with **WhatsApp**; almost any messaging app works the same way (more on that next). You lay the message out yourself, so it comes through tidy:
+              To reach a partner on any phone, send them the lists as a message. We'll show it with **WhatsApp**; almost any messaging app works the same way (more on that next).
+              
+              You structure the message once in the Shortcut, so it's clear and well organised when sent:
 
-              1. In your **Brain Dump** shortcut, scroll to the bottom. Add a **Text** action **after your Misc block's End If**, just above the very last **End If** at the foot of the shortcut, so it sits inside the outer guard but outside every category's own If. Type a bold heading for each category (single asterisks make it bold in WhatsApp), then drop that category's **Combined Text** underneath:
+              1. In your **Brain Dump** shortcut, scroll to the bottom.
+              2. Add a **Text** action **after** your **Misc** block's **End If**, and just above the very last **End If**, so it sits inside the outer guard but outside every category's own If.
+              3. Build the message inside that **Text** action one category at a time. Start with **Logistics**, then **Food & Household** and **Misc**: 
+                - type the **bold heading** (single asterisks make it bold in WhatsApp), e.g. ***Logistics***, 
+                - start a new line (hit enter), 
+                - tap **Select Variable**, 
+                - scroll up to *that category's* **Combined Text** (to identify the right one, you'll see the "Get Value for [category]" action above it),
+                - tap the blue **Combined Text**. The blocks look alike, so check you're picking the one from the matching category. It should end up like this:
 
               ```
               *Logistics*
@@ -358,17 +367,27 @@ course:
               *Misc*
               [your Misc Combined Text]
               ```
-
-              2. Add WhatsApp's **Send Message** action after it (on some phones it reads *Send Message via WhatsApp*; if a search doesn't find it, look under the **Apps** tab and scroll to WhatsApp). Put **only** that **Text** result in the message. WhatsApp needs to be installed, and it may ask you to confirm the first time it sends.
             imageUrl: /courses/ai-your-life-admin-00/build-whatsapp-text.webp
         - type: text
-          title: "Other apps, and why you lay it out yourself"
-          subtitle: A couple of notes
+          title: "Add the action that sends it"
+          subtitle: Sent automatically to any phone
           content:
             body: |-
-              **Prefer a different app?** Telegram, WeChat, even email all work. Look for that app's own send action instead of WhatsApp's (for email it's **Send Email**), and point it at the same **Text** result. One thing to note: WhatsApp and Telegram show single asterisks as **bold**, but email and some apps don't, so there the `*Logistics*` headings may show the asterisks as-is. The list still comes through clearly.
+              With your message structured, add the action that sends it:
 
-              **Why lay it out by hand?** Because Apple's model is a reliable sorter but a poor typesetter. Ask it to format the message and the bold and line breaks come out hit-and-miss. Type the layout yourself in the Text action and it lands right every time.
+              1. Add WhatsApp's **Send Message** action right after the **Text** action, and before the final **End If**.
+              2. Put **only** that **Text** variable in the Message, then tap **Recipients** to set who it goes to.
+
+              If a **To** field doesn't appear when you tap **Recipients** (you get something else instead), delete the **Send Message** action and add it again, it usually comes back right.
+            imageUrl: /courses/ai-your-life-admin-00/build-whatsapp-send.webp
+        - type: text
+          title: "Other messaging apps"
+          subtitle: Choose whichever you use the most
+          content:
+            body: |-
+              **Prefer a different app?** Telegram, WeChat, even email all work. Look for that app's own send action instead of WhatsApp's (for email it's **Send Email**), and add the same **Text** variable as the Message.
+              
+              *One thing to note:* WhatsApp and Telegram show single asterisks as **bold**, but email and some apps don't, so there the `*Logistics*` headings may show the asterisks as-is. The list still goes through well-structured.
         - type: text
           title: "How it helps Dalmie"
           subtitle: A quick look
@@ -378,29 +397,29 @@ course:
 
               It's out of her head now, and into a list they can both see and pick up from.
         - type: free-text-exercise
-          title: Check it reaches them, then ask anything
+          title: Check if it was sent, then ask anything
           content:
             description: |-
-              Do a quick brain dump, then check it reached your partner. If they're on an iPhone, make sure they've accepted the folder invite, then look for a new item appearing on their side. If they're on another phone, check the WhatsApp message came through.
+              Do a quick brain dump, then check it was sent to your partner. If you used WhatsApp to send the list, check if it appears in your WhatsApp conversation.
 
-              If it didn't reach them, or a step wasn't clear, ask here and you'll get an answer.
+              If the message doesn't show up, or a step wasn't clear, ask here and you'll get an answer.
             subDescription: No question is too small. And if it worked, tell us how it felt to hand something off.
-            placeholder: e.g. My partner didn't get the message...
+            placeholder: e.g. I cannot see the message in WhatsApp...
             systemPrompt: 'You are a warm, knowledgeable mentor for a new mum taking a course. She has built an iPhone Shortcut called Brain Dump that sorts a minute of talking into category notes (Logistics, Food & Household, Misc) inside a folder called Mental Load, each an Apple Notes checklist. In the previous challenge, if her partner has an iPhone she already shared the Mental Load folder (long-press the folder, Share Folder, invite by Messages or Mail; a folder is always a live collaboration, so there is no Send Copy option), and those lists are already on the partner''s phone and update live. This challenge is for a partner who is not on an iPhone: she adds a WhatsApp send to the Brain Dump shortcut. Inside the If, she adds a Text action that lays out each category as a bold heading (single asterisks for WhatsApp bold) with that category''s Combined Text underneath, then a Send Message action (contributed by WhatsApp, sometimes shown as Send Message via WhatsApp, and found under the Apps tab if a search does not show it) containing only that Text result. WhatsApp is shown as the example, but the same works with other messaging apps such as Telegram or WeChat, or email via a Send Email action; note that single-asterisk bold only renders in WhatsApp and Telegram, so in email or some apps the asterisks may show as plain characters (the list still reads clearly). The layout is typed by hand, not asked of the model, because Private Cloud Compute sorts reliably but formats poorly. The framing is that the load is hers to offload, not a shared inbox she adds more to. She may report something not working or ask about any step. Common causes to check for: for the folder share, the partner not accepting the invite yet, or not signed in to iCloud with Notes turned on; for the WhatsApp send, WhatsApp not installed, the Send Message action sitting under the Apps tab rather than in search, the message pointing at the wrong Text or carrying extra variables (it should hold only the assembled Text), or the first send asking to confirm; an empty category showing just a bold heading with nothing under it in the message, which is harmless. Answer clearly and warmly in British English, in clear, everyday words for someone non-technical, in at most a few short sentences or bullets. If it falls outside the course, gently point her to Kinga and Tamas in the Discord community. Do not use em dashes. End on an encouraging note. Reply in a markdown format.'
             checkerPrompt: 'The learner is asking a question or sharing how it went. Accept any genuine question, problem description, or comment. Only flag clearly empty or nonsense input. This is their message:'
         - type: challenge-end
-          title: "The load is out in the open now! 🎉"
+          title: "You shared the mental load! 👏🏼"
           content:
-            nextModule: "**Next challenge:** You'll reuse this same pattern (talk, ask AI, save) to build a Baby Log: record what you keep track of, the feeds and amounts, nappies, naps and weights, and each lands as one tidy, timestamped line in a running note you can scroll back through or show your doctor."
-            description: You made the invisible visible, and put it where it can be shared.
-            subDescription: The mental load was never yours alone to carry. Now it's a list your partner can see and pick up from.
+            nextModule: "**Next challenge:** You'll reuse this same pattern (talk, ask AI, save) to build a Baby Log: record what you keep track of, the feeds and amounts, nappies, naps and weights, and each is recorded as one organised, timestamped line in a running note you can scroll back through or show your doctor."
+            description: You made the invisible visible, it's no longer only yours to carry.
+            subDescription: You were never supposed to carry all this burden alone. Now it's a list your partner can see and act on.
     - title: The Baby Log
       isFree: true
       skills:
         - iPhone Shortcuts
         - AI Prompting
         - Apple Notes
-      description: Build a second shortcut that turns a few spoken words into one tidy, timestamped entry in a running note.
+      description: Build a second shortcut that turns a few spoken words into neat, timestamped entries in a running note.
       completionTime: '07:00'
       steps:
         - type: text
@@ -410,7 +429,7 @@ course:
             body: |-
               You're not a beginner any more. This one uses the **same three moves**: talk, ask AI, then file the answer.
 
-              And it's a lighter build than your first. Instead of sorting into several category notes, this shortcut turns what you say into **tidy, timestamped lines** and saves them to one running note. Build it once and you'll have a record that grows on its own.
+              And it's a lighter build than your first. Instead of sorting into several category notes, this shortcut turns what you say into **neat, timestamped lines** and saves them to one running note. Build it once and you'll have a record that grows on its own.
         - type: text
           title: Why a log earns its place
           subtitle: What it's for
