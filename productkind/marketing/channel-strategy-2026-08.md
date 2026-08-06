@@ -10,7 +10,7 @@
 
 Effort and results are inverted. Roughly 80+ short videos a month across TikTok, Instagram and YouTube Shorts produced almost no measurable site traffic (TikTok ~11 visitors, Instagram ~36 visitors in a full year). Meanwhile Kinga's personal LinkedIn, recently paused, is the single biggest attributable driver of Little Parrot visitors, and one partner email to Geek Girls outperformed a year of Instagram threefold.
 
-**Focus on: Kinga's personal LinkedIn, community/partner emails, and building an owned email list, with SEO as the compounding bet. Demote short-form video to cheap repurposing and keep TikTok only as a testing lab.**
+**Focus on: Kinga's personal LinkedIn, community/partner emails, and activating the 800-person Little Parrot mailing list, with SEO as the compounding bet. Demote short-form video to cheap repurposing and keep TikTok only as a testing lab.**
 
 ---
 
@@ -97,11 +97,17 @@ TikTok's audience swung from 57% male / 86% Hungary on early posts to 79% female
 - **Systematise the Geek Girls play:** one warm, member-first email per month through a community partner's list (PWIT, WiP, MTP, Slack communities, and new communities we join). One email a month at Geek Girls conversion would roughly double attributable annual traffic on its own.
 - **Repeat the AI Summit event playbook once a quarter:** presence + raffle/incentive + follow-up email sequence.
 
-### Third: build the owned email list as the conversion asset
+### Third: activate the 800-person Little Parrot mailing list
 
-- Warm email readers browse at 4.2 pages/visit, nearly organic-search quality, but the list is tiny (125 free Substack subscribers).
-- Put email capture in front of Little Parrot free-course users.
-- Make the newsletter the default catch for LinkedIn traffic that isn't ready to register.
+The owned list already exists: ~800 registered Little Parrot users (6x the Substack list), currently receiving only the monthly update email. Warm email readers browse at 4.2 pages/visit, nearly organic-search quality, and each monthly update already brings back 10 to 30 people. The gap is frequency and content type, not capture.
+
+- **Shift from company-centred to learner-centred content.** The monthly update answers "what's new with Little Parrot"; the new emails answer "what can I do this week". The proven social pillars are portable: practical how-to (Lovable/prompting tips, templates) wins clicks and saves; reassurance wins reach. One short, useful idea per send, drawn from existing course and social content, so production cost stays near zero.
+- **Add one practical email between monthly updates** (roughly fortnightly overall). One tip or template, one CTA back to a course. Keep the monthly update as is.
+- **Segment into three groups:** active free users get momentum-framed nudges toward paid ("keep going"); paid users get the share-ask (they are the acquisition engine); dormant users get the single best piece of content as reactivation.
+- **Put a forward/share ask in every practical email.** 800 warm people forwarding useful emails is the share loop running through our best-converting medium.
+- **Tag every send** (`?ref=` per campaign) and watch click-to-site per send and free-to-paid conversions in the following weeks. Two or three sends will show whether the practical format beats the update format.
+- **Sustainability rule:** fortnightly held for six months beats weekly for six weeks.
+- Secondary: make the Substack newsletter the default catch for LinkedIn traffic that isn't ready to register for Little Parrot.
 
 ### Fourth: SEO as the compounding bet (small, steady effort)
 
@@ -134,7 +140,7 @@ TikTok's audience swung from 57% male / 86% Hungary on early posts to 79% female
 
 - [ ] LinkedIn back to 3 posts/week; visitors from LinkedIn up 50%.
 - [ ] Three partner emails sent (one per month).
-- [ ] Email capture live on Little Parrot.
+- [ ] Practical email cadence live to the Little Parrot list (one between each monthly update), with the list segmented into active free / paid / dormant.
 - [ ] UTM standard adopted on all shared links; Facebook traffic source identified.
 - [ ] TikTok/Instagram effort at repurpose-only; YouTube Shorts stopped.
 - [ ] First SEO pages live targeting the TikTok buyer-intent queries.
