@@ -11,7 +11,7 @@ account: kinga
 
 ---
 
-In January, I switched on paid subscriptions in my productkind.substack.com newsletter, because I'd heard it everywhere: enable paid from day one, and the Substack algorithm promotes your articles more.
+In January, I switched on paid subscriptions in my productkind.substack.com newsletter, because I'd heard it everywhere: enable paid from day one, so the Substack algorithm promotes your articles more.
 
 I'd been writing on Substack since last summer, and I'd intentionally kept paid subscriptions off. I didn't want my readers to feel pressured to pay me.
 
@@ -21,8 +21,8 @@ Over the next months, new subscribers started to trickle in, even though I wasn'
 
 Then yesterday, I actually looked into how my subscribers arrived at productkind.substack.com before they hit subscribe.
 
-I was surprised. By far the single biggest source of my new subscribers this year, 44% of them, was LittleParrot.app, our product. It was my own doing! I'd added a subscribe box to the site the same day I switched on paid subscriptions, and I never questioned the coincidence.
+I was surprised. By far the single biggest source of my new subscribers this year, 44% of them, was LittleParrot.app, our product. It was my own doing! I'd added a subscribe box to the site the same day I switched on paid subscriptions.
 
-So this is a reminder to question your assumptions, even the comfortable ones. Treat them as hypotheses and look for data that might prove you wrong. It's much cheaper than believing a false conclusion for months, like I did.
+So this is a reminder to question your assumptions. Treat them as hypotheses and look for data that might prove you wrong. If I hadn't checked, I'd still be crediting the Substack algorithm while our own site was creating this impact.
 
 I'm curious, has your data ever contradicted something you were sure about?
