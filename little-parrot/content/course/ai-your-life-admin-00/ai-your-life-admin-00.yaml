@@ -340,6 +340,14 @@ course:
               
               This short challenge adds a way to reach a partner on **any other phone** too. Whatever phone they carry, they'll get every new item you add automatically, without you having to manually forward anything.
         - type: text
+          title: "How it helps Dalmie"
+          subtitle: A quick look
+          content:
+            body: |-
+              Dalmie does her brain dump on the sofa while feeding her baby. Her partner receives a message with the new items on the list. He sees three new things under **Food & Household** and picks them up on the way home. She didn't have to tell him, or write a list, and didn't have to remember to ask.
+
+              It's out of her head now, and into a list they can both see and tick things off.
+        - type: text
           title: "Lay out the message"
           subtitle: Structure what you'll send
           content:
@@ -388,14 +396,6 @@ course:
               **Prefer a different app?** Telegram, WeChat, even email all work. Look for that app's own send action instead of WhatsApp's (for email it's **Send Email**), and add the same **Text** variable as the Message.
               
               *One thing to note:* WhatsApp and Telegram show single asterisks as **bold**, but email and some apps don't, so there the `*Logistics*` headings may show the asterisks as-is. The list still goes through well-structured.
-        - type: text
-          title: "How it helps Dalmie"
-          subtitle: A quick look
-          content:
-            body: |-
-              Dalmie does her brain dump on the sofa while feeding. The list reaches her partner, out at the shops, however his phone gets it. He sees three new things under **Food & Household** and picks them up on the way home. She didn't chase him, didn't write a list, didn't remember to ask.
-
-              It's out of her head now, and into a list they can both see and pick up from.
         - type: free-text-exercise
           title: Check if it was sent, then ask anything
           content:
