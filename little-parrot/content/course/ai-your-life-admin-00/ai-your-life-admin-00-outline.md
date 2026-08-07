@@ -6,7 +6,7 @@
 
 This is a short, hands-on micro-course for new mums who have less time, more to remember, and no patience for fiddly setup. In four short challenges, the learner builds two voice-triggered iPhone Shortcuts that hand the sorting to AI, then shares the load with a partner:
 
-1. **The 60-Second Brain Dump** — talk for a minute about everything on your mind, and Apple's on-device AI sorts it into category checklists (Logistics, Food & Household, Misc), each its own note in a shared "Mental Load" folder.
+1. **The Brain Dump** — talk about everything on your mind, and Apple's on-device AI sorts it into category checklists (Logistics, Food & Household, Misc), each its own note in a shared "Mental Load" folder.
 2. **The Baby Log** — say what just happened (a feed, a nap, a nappy, a milestone) and AI turns it into a tidy, timestamped entry in one running note you can scroll back through or show your baby's doctor.
 
 Everything runs on tools already on the iPhone: the Shortcuts app and **Apple Intelligence's Private Cloud Compute** model (free, no account, private) for the Brain Dump. The Baby Log leads with the built-in **ChatGPT** extension (free, no download, and no account needed to enable), because it lays out neat, categorised log lines more reliably than PCC, which stays available as a fully private fallback. No subscription, no typing. The learner talks; the phone sorts.
@@ -21,8 +21,8 @@ The course is deliberately small. The learner walks away having actually built b
 
 > **Scope update (2026-07-27):** This course was substantially reworked during on-device testing, and the sections from here down to "Cross-check" reflect the shipped design. In summary: the Brain Dump now uses Apple's **Private Cloud Compute** model (not the ChatGPT app) with a **Dictionary** output to sort speech into **fixed category checklist notes** (Logistics, Food & Household, Misc) inside a shared **Mental Load folder**, via per-category *Get Dictionary Value → Combine Text → Find Notes → Append Checklist Item*, wrapped in an *If (Dictated Text has any value)* guard so an empty tap does nothing (otherwise the forced Dictionary output makes the model invent a phantom list). Calendar and Reminders routing were both dropped (date parsing too brittle; undated reminders added little). A new **Challenge 2, "Share the Load,"** was added, and the course's real point is now making the invisible mental load **visible and shareable with a partner**. The **Cross-check** and **Verification Handoff** sections further below are the original pre-generation record, left as history; they describe the old ChatGPT-app / Calendar-Reminders design and no longer match the course.
 
-### 1. The 60-Second Brain Dump
-**Build a shortcut that sorts a minute of talking into shared category checklists.**
+### 1. The Brain Dump
+**Build a shortcut that sorts a spoken brain dump into shared category checklists.**
 
 The hook: by the end, the learner has a working shortcut and a set of category notes filling with tickable checklist items.
 
@@ -85,7 +85,7 @@ A short closing challenge that removes the last bits of friction and sends the l
 ## Narrative Arc
 
 1. **The pain:** a full brain and full hands; things slip through the cracks
-2. **The offload:** talk for a minute, let AI sort it into checklists (Brain Dump)
+2. **The offload:** talk, let AI sort it into checklists (Brain Dump)
 3. **Shared:** make the invisible load visible and hand it to a partner (Share the Load)
 4. **The pattern reused:** the same move, applied to the baby's day (Baby Log)
 5. **Effortless:** one-handed triggers, any language, and where to go next
