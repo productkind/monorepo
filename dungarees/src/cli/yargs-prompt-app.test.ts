@@ -157,3 +157,47 @@ test('yargs-prompt-app', async () => {
     { type: 'exit', code: 0 },
   ])
 })
+
+test('yargs-prompt-app', async () => {
+  type AppEvents = DomainEvent<'error', number>
+  const app = createYargsPromptApp<AppEvents>({
+    name: 'test-app',
+    route: (yargs, io) => {
+      io.registerEvents(of({ type: 'error', payload: 2 }))
+      return yargs
+    },
+    presenter: {
+      error: (payload) => ({
+        code: payload,
+        type: 'exit',
+      }),
+    },
+  })
+  const message$ = app.present([], DUMMY_CONTROLS)
+  expect(await collectValuesFrom(message$)).toEqual([{ type: 'exit', code: 2 }])
+})
+
+test('yargs-prompt-app', async () => {
+  type AppEvents = DomainEvent<'error', number> | DomainEvent<'greet', string>
+  const app = createYargsPromptApp<AppEvents>({
+    name: 'test-app',
+    route: (yargs, io) => {
+      io.registerEvents(of({ type: 'error', payload: 2 }))
+      io.registerEvents(of({ type: 'greet', payload: 'Hello, World!' }))
+      return yargs
+    },
+    presenter: {
+      error: (payload) => ({
+        code: payload,
+        type: 'exit',
+      }),
+      greet: () => ({
+        message: 'Hello',
+        type: 'stdout',
+        level: 'info',
+      }),
+    },
+  })
+  const message$ = app.present([], DUMMY_CONTROLS)
+  expect(await collectValuesFrom(message$)).toEqual([{ type: 'exit', code: 2 }])
+})
