@@ -1,7 +1,6 @@
 # Claude Community Ambassador Application
 
 Applicant: Kinga Magyar
-Working draft. We add each question and answer as we go.
 
 ---
 
