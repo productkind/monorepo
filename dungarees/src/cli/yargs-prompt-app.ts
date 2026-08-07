@@ -1,6 +1,18 @@
 import type { DomainEvent } from '@dungarees/core/event.ts'
 
-import { concatAll, endWith, from, map, Observable, ReplaySubject, takeUntil } from 'rxjs'
+import {
+  catchError,
+  concatAll,
+  endWith,
+  from,
+  map,
+  Observable,
+  of,
+  ReplaySubject,
+  switchMap,
+  takeUntil,
+  throwError,
+} from 'rxjs'
 import yargs from 'yargs'
 
 type YargsApp = ReturnType<typeof yargs>
@@ -60,6 +72,17 @@ export type ExitMessage = {
 
 export type CliMessage = StdioMessage | ExitMessage
 
+export class ExitError extends Error {
+  type: string
+  exitCode: number
+
+  constructor(message: string, exitCode: number) {
+    super(message)
+    this.type = this.constructor.name
+    this.exitCode = exitCode
+  }
+}
+
 export const createYargsPromptApp = <EVENTS extends DomainEvent = DomainEvent>({
   route,
   presenter,
@@ -83,78 +106,11 @@ export const createYargsPromptApp = <EVENTS extends DomainEvent = DomainEvent>({
     return registeredOuts$.pipe(
       concatAll(),
       takeUntil(parsed$),
-      endWith({ type: 'exit', code: 0 } as CliMessage),
+      endWith({ type: 'exit' as const, code: 0 }),
+      switchMap((event) =>
+        event.type === 'exit' ? throwError(() => new ExitError('Exit', event.code)) : of(event),
+      ),
+      catchError((error) => of({ type: 'exit' as const, code: error.exitCode })),
     )
   },
 })
-
-/*
-
- render: async (input) => {
-    const streams$ = new Subject<Observable<CliMessage>>()
-    const yields$ = new Subject<'select' | 'exit'>()
-    const sharedYields$ = yields$.pipe(share())
-
-    const stepOutputs$ = connectable(
-      zip(streams$.pipe(concatAll(), buffer(sharedYields$)), sharedYields$).pipe(
-        map(([messages, event]) => ({
-          out: event === 'exit' ? [...messages, { type: 'exit', code: 0 } as CliMessage] : messages,
-        })),
-      ),
-      {
-        connector: () => new ReplaySubject<{ out: CliMessage[] }>(Infinity),
-        resetOnDisconnect: false,
-      },
-    )
-    stepOutputs$.connect()
-
-    let pendingSelect: { options: CliSelectOptions; result$: Subject<string> } | null = null
-
-    const io: CliIo = {
-      sendToOut: (message$) => {
-        streams$.next(message$)
-        return of(undefined as void)
-      },
-      select: (options) => {
-        const result$ = new Subject<string>()
-        pendingSelect = { options, result$ }
-        yields$.next('select')
-        return result$.asObservable()
-      },
-    }
-
-    route(yargs(), io)
-      .parseAsync(input.split(' ').slice(1))
-      .then(() => {
-        yields$.next('exit')
-        streams$.complete()
-        yields$.complete()
-      })
-
-    let stepIndex = 0
-
-    return {
-      terminal: {
-        step: async () => {
-          const result = await firstValueFrom(stepOutputs$.pipe(skip(stepIndex), take(1)))
-          stepIndex++
-          return result
-        },
-        select: async (option) => {
-          const request = pendingSelect
-          if (!request) throw new Error('no pending select prompt')
-          const choice = request.options.choices.find(
-            (c) => c.name === option || c.value === option,
-          )
-          if (!choice) throw new Error(`option "${option}" not found`)
-          pendingSelect = null
-          request.result$.next(choice.value)
-          request.result$.complete()
-        },
-      },
-    }
-  },
-
-
-
-  */
