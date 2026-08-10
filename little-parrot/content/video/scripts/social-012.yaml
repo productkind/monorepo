@@ -11,6 +11,8 @@ script: |-
 
   More like this coming up. Follow along.
 caption: |-
+  You have heard AI described as having "billions of parameters". But what is a single one of them, really?
+
   Language models borrow their basic idea from the brain. Emphasis on basic.
 
   Your brain does its thinking with neurons. Each one is a cell with a long tail that connects to others. It takes in signals from the neurons before it and decides whether to fire a signal onward.
