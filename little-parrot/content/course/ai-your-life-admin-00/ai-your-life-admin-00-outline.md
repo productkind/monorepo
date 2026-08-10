@@ -1,6 +1,6 @@
-# Course Outline: AI Your Life Admin
+# Course Outline: Hand off the mental load
 
-**Full title:** AI Your Life Admin: Two Voice Shortcuts for New Mums
+**Full title:** Hand off the mental load: use AI to turn a brain dump into a list
 
 ## Overview
 

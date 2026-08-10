@@ -3,7 +3,7 @@ course:
   note: |-
     This course needs an iPhone with Apple Intelligence (iPhone 15 Pro or 15 Pro Max, any iPhone 16 or newer, or an iPhone Air). Everything runs free, with no subscription and nothing to install.
   cover: /courses/ai-your-life-admin-00/cover.gif
-  title: "AI Your Life Admin: Two Voice Shortcuts for New Mums"
+  title: "Hand off the mental load: use AI to turn a brain dump into a list"
   learningOutcomes:
     - Build an iPhone Shortcut that sorts a spoken brain dump into shared category checklists you and your partner can tick off
     - Write a copy-paste prompt that tells the AI how to sort or format what you say
@@ -330,6 +330,7 @@ course:
               Dalmie does her brain dump on the sofa while feeding her baby. Her partner receives a message with the new items on the list. He sees three new things under **Food & Household** and picks them up on the way home. She didn't have to tell him, or write a list, and didn't have to remember to ask.
 
               It's out of her head now, and into a list they can both see and tick things off.
+            imageUrl: /courses/ai-your-life-admin-00/whatsapp-message.webp
         - type: text
           title: "Lay out the message"
           subtitle: Structure what you'll send
@@ -467,6 +468,7 @@ course:
               3. You see that **Use ChatGPT** is now toggled on. You're ready to go.
 
               If you'd like to have your dictations also show up among your ChatGPT chats, choose *Use ChatGPT with an Account* and sign in instead. Either works here.
+            imageUrl: /courses/ai-your-life-admin-00/turn-on-chatgpt.webp
         - type: text
           title: The Baby Log prompt
           subtitle: Tell the AI how to log it
@@ -634,6 +636,6 @@ course:
 
               **Remember:** you now offload the mental load by voice, in the seconds you have. Now go and forget something on purpose. Your phone's got it. 💪
   titleSplit:
-    - "AI Your Life Admin:"
-    - Two Voice Shortcuts for New Mums
+    - "Hand off the mental load:"
+    - use AI to turn a brain dump into a list
   description: Build two voice shortcuts on your iPhone that take the mental load off your hands. Talk, and AI sorts it into tidy checklists, in a folder you share with your partner, so what you're carrying is visible and easy to hand off. Record how much your baby fed, their nappies, naps and weight, and each lands as a tidy, timestamped entry. Everything runs on tools already on your phone, with no account needed and no typing once it's built.
