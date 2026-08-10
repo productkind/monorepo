@@ -207,10 +207,10 @@ course:
 
               Now send one category to its note. Add these **four actions in order**, all for **Logistics**:
 
-              1. **Get Dictionary Value**: type **Logistics** as the key, and make sure it reads from the **Response** (the AI's answer).
+              1. **Get Dictionary Value**: type **Logistics** as the **Key**, and set the **Dictionary** field to the **Response** (the AI's answer).
               2. **Combine Text**: it takes the **Dictionary Value** from the block above; set it to combine with **New Lines**, so each item sits on its own line.
-              3. **Append Checklist Item**: put your **Combined Text** in as the checklist item, and for the note, tap the note field and pick your **Logistics** note directly. Each line becomes its own tickable checklist item.
-              4. **If**: wrap it around your **Append Checklist Item**, so an empty category is skipped. Add an **If** (it drops in as **If / Otherwise / End If**), delete the **Otherwise** line, then drag the **If** just above **Append Checklist Item** and the **End If** just below it. Set the **If**'s condition to **Combined Text**, then tap **is** (already on the action) and change it to **has any value**. This skips a category when you said nothing that belongs to it.
+              3. **If**: set its condition to **Combined Text**, then tap **is** (already on the action) and change it to **has any value**. Delete the **Otherwise** line. This skips a category when you said nothing that belongs to it.
+              4. **Append Checklist Item** (drag it **inside** the If): put your **Combined Text** in as the **Name**, and shortly tap the **Note** field and pick your **Logistics** note directly. Each line becomes its own tickable checklist item.
             imageUrl: /courses/ai-your-life-admin-00/build-route-category.webp
         - type: text
           title: "Build it: test it to make sure it works"
@@ -230,14 +230,14 @@ course:
           subtitle: Repeat the block
           content:
             body: |-
-              That block, **Get Dictionary Value → Combine Text → Append Checklist Item**, wrapped in an **If** (*Combined Text has any value*), is the whole pattern. Build it again for your other two categories, where the only thing that changes is the **category name**.
+              That block, **Get Dictionary Value → Combine Text → If (Combined Text has any value) → Append Checklist Item**, is the whole pattern. Build it again for your other two categories, where the only thing that changes is the **category name**.
 
               Here's the **Food & Household** block, action by action:
 
               1. **Get Dictionary Value**: Get **Value** for **Food & Household** in **Response**.
               2. **Combine Text**: Combine **Dictionary Value** with **New Lines**.
-              3. **Append Checklist Item**: **Combined Text** as the item, and pick your **Food & Household** note.
-              4. **If**: wrap it around the **Append Checklist Item**, set its condition to **Combined Text** → **has any value**, and delete the **Otherwise** line.
+              3. **If**: condition **Combined Text** → **has any value**, and delete the **Otherwise** line.
+              4. **Append Checklist Item** (drag inside the *If*): **Combined Text** as the *Name*, and pick your **Food & Household** note.
 
               Then do the same for **Misc** (its key and its note both **Misc**). Now your shortcut has three blocks, one per category, each the same four actions.
             imageUrl: /courses/ai-your-life-admin-00/build-repeat-categories.webp
@@ -270,14 +270,12 @@ course:
           subtitle: One tap away
           content:
             body: |-
-              For a proper brain dump, you want it to keep listening while you pause and think, and to stop only when *you* say so. That's why you set *Stop Listening* to **On Tap** earlier in the **Dictate Text** action: it opens a panel with a **stop** button (⏹️) and keeps listening until you tap it. 
-              
               Put your Brain Dump shortcut one tap away:
 
               1. While editing your shortcut, tap the **Share** icon at the **bottom** of the screen and choose **Add to Home Screen**. You can give it a **colour** and a **symbol** to make it easy to spot, then tap **Add**. Now it's an icon you tap like any app. 
               2. Tap that icon to start. Talk, pause and think all you like, then tap the **stop** button (⏹️) when you're finished.
 
-              You can also start it from the **Shortcuts** app, or by saying *"Hey Siri, Brain Dump"*. Whatever starts it, one thing to know for a long dump: keep the screen on while you talk, because if it dims and goes black mid-dictation, it won't save your thoughts. Challenge 4 adds other ways to start your dictation.
+              *One thing to know for a long dump:* keep the screen on while you talk, because if it dims and goes black mid-dictation, it won't save your thoughts. Challenge 4 adds other ways to start your dictation.
             imageUrl: /courses/ai-your-life-admin-00/run-the-shortcut.webp
         - type: free-text-exercise
           title: Run it, then ask anything
