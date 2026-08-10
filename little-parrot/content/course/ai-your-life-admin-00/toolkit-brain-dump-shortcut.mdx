@@ -1,0 +1,105 @@
+---
+challenge: "1 - The Brain Dump"
+type: "Guide"
+---
+## Build the Brain Dump Shortcut
+
+Every step to build the Brain Dump from scratch, in order, so you can follow along or rebuild it later without hunting back through the course. It sorts a spoken brain dump into three shared checklist notes: Logistics, Food & Household, and Misc.
+
+### 1. Turn on Apple Intelligence (once)
+
+Open **Settings → Apple Intelligence & Siri** and turn on **Apple Intelligence**. It's free, with no account, and it's what does the sorting. (It needs to be available in your country and language.)
+
+![Turning on Apple Intelligence in Settings](/courses/ai-your-life-admin-00/turn-on-apple-intelligence.webp)
+
+### 2. Make one folder and three notes
+
+Open the **Notes** app and make a folder called **Mental Load**. Inside it, make one note per category, with each note's first line exactly: **Logistics**, **Food & Household**, and **Misc**. You'll pick these notes as you build, so keep the names consistent.
+
+![The Mental Load folder with three category notes](/courses/ai-your-life-admin-00/make-folder-and-notes.webp)
+
+### 3. Copy the sorting prompt
+
+This is the instruction you'll give the AI. Copy it now; you'll paste it in later.
+
+```
+Sort what I say into a dictionary with exactly these keys: Logistics, Food & Household, Misc.
+
+- Food & Household: anything to buy, get, or restock, including food, drink, and household supplies.
+- Logistics: appointments, bookings, and calls to make (not shopping).
+- Misc: anything that doesn't fit the other two.
+
+Each value is a list, one item per entry. Trim filler words, but keep the details that make each item make sense on its own later: what it is, why, and any time or day. Don't add anything I didn't say.
+
+Here is what I said:
+```
+
+You can reword the category definitions or add your own categories later, as long as your notes use the same names.
+
+### 4. Dictate Text
+
+Open **Shortcuts**, tap **+** to start a new shortcut, and add **Dictate Text**. Tap the blue arrow to open its settings, set your **Language**, and set **Stop Listening** to **On Tap** so it keeps listening through your pauses until you tap the stop button (⏹️).
+
+![Adding the Dictate Text action](/courses/ai-your-life-admin-00/build-dictate-text.webp)
+
+### 5. Use Model
+
+Add **Use Model**. Tap the model and choose **Cloud (Private Cloud Compute)**. Tap the blue arrow and set the **Output** to **Dictionary**, so the answer comes back as your labelled categories.
+
+![Setting Use Model to Cloud and Output to Dictionary](/courses/ai-your-life-admin-00/build-use-model.webp)
+
+### 6. Paste the prompt
+
+In the **Use Model** prompt box, delete the **Dictated Text** chip that's already there, paste your sorting prompt, then tap to add the **Dictated Text** chip back at the very end, after "Here is what I said:".
+
+![Pasting the prompt with the Dictated Text chip at the end](/courses/ai-your-life-admin-00/build-paste-prompt.webp)
+
+### 7. Route the first category (Logistics)
+
+Add these four actions in order, all for **Logistics**:
+
+1. **Get Dictionary Value**: type **Logistics** as the **Key**, and set the **Dictionary** field to the **Response**.
+2. **Combine Text**: it takes the **Dictionary Value** above; set it to combine with **New Lines**, so each item sits on its own line.
+3. **If**: set its condition to **Combined Text**, then tap **is** and change it to **has any value**. Delete the **Otherwise** line. This skips a category when you said nothing for it.
+4. **Append Checklist Item** (drag it in between the **If** and **End If**): put your **Combined Text** in as the **Name**, and tap the **Note** field to pick your **Logistics** note directly. Each line becomes its own tickable item.
+
+![The five-action Logistics block](/courses/ai-your-life-admin-00/build-route-category.webp)
+
+### 8. Test it before you copy it
+
+Tap the **▶️ play button** at the bottom, say one or two Logistics things (like *"call the dentist, book a yoga class"*), then tap the stop button. Open your **Logistics** note; the items should be there as checklist lines. If the note stayed empty, check the **Append Checklist Item** points at your **Logistics** note and that **Get Dictionary Value** reads from **Response**.
+
+![Testing the first block](/courses/ai-your-life-admin-00/build-test-first-block.webp)
+
+### 9. Do the same for Food & Household, then Misc
+
+Build the same block again for each remaining category. Only the **category name** changes.
+
+**Food & Household:**
+1. **Get Dictionary Value**: **Value** for **Food & Household** in **Response**.
+2. **Combine Text**: **Dictionary Value** with **New Lines**.
+3. **If**: **Combined Text** → **has any value**; delete **Otherwise**.
+4. **Append Checklist Item** (between the **If** and **End If**): **Combined Text** as the **Name**, pick your **Food & Household** note.
+
+**Misc:** exactly the same, with **Misc** as the key and the **Misc** note. You now have three blocks, one per category.
+
+![Repeating the block for the other categories](/courses/ai-your-life-admin-00/build-repeat-categories.webp)
+
+### 10. Skip the accidental taps
+
+Wrap everything after **Dictate Text** in one guard so an empty tap does nothing (without it, the AI invents a random list to fill the categories):
+
+1. Add an **If**, delete its **Otherwise** line, and set it to **Dictated Text** → **has any value**.
+2. Drag the **If** up so it sits right under **Dictate Text**, and drag the **End If** to the very bottom, so every other action is inside it.
+
+*If the End If won't stay at the bottom* and springs back above your last block, add any action at the very end (a **Combine Text** will do), drag the **End If** just above it, then delete that extra action.
+
+![Wrapping the shortcut in the outer If guard](/courses/ai-your-life-admin-00/build-if-guard.webp)
+
+### 11. Name it and run it
+
+Tap the name at the top, rename it **Brain Dump**, and tap the **tick** (✓) on the keyboard. To run it, add it to your Home Screen (open the shortcut's **Share** icon → **Add to Home Screen**), then tap the icon, talk, and tap the stop button when you're done. Keep the screen on while you talk, if it dims mid-dictation, it cuts you off.
+
+![Naming the shortcut](/courses/ai-your-life-admin-00/build-finish.webp)
+
+That's the whole build. If a step misbehaves, the Troubleshooting your shortcuts toolkit item covers the common ones.

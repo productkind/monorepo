@@ -1,0 +1,41 @@
+---
+challenge: "1 - The Brain Dump"
+type: "Guide"
+---
+## Brain Dump into a single list
+
+A stripped-back version of the Brain Dump for when you don't want three categories, just one running checklist. You talk, and everything you said lands as tidy, tickable lines in a single note. It's the same idea as the full build, with the sorting taken out, so it's quicker to make.
+
+### 1. Make one note
+
+Open **Notes** and make a note with **Brain Dump** as its first line. That's the note everything will land in.
+
+### 2. Add Dictate Text
+
+Open **Shortcuts**, tap **+**, and add **Dictate Text**. Tap the blue arrow, set your **Language**, and set **Stop Listening** to **On Tap** so it keeps listening through your pauses.
+
+![Adding the Dictate Text action](/courses/ai-your-life-admin-00/build-dictate-text.webp)
+
+### 3. Add Use Model
+
+Add **Use Model**, tap the model and choose **Cloud (Private Cloud Compute)**, and set the **Output** to **Text** (you want plain lines back, not sorted categories). Paste this prompt, then add the **Dictated Text** chip at the very end:
+
+```
+Turn what I say into a tidy checklist, one item per line. Keep the real details I gave and drop the filler. Don't add anything I didn't say.
+
+Here is what I said:
+```
+
+### 4. Add Append Checklist Item
+
+Add **Append Checklist Item**. Put the **Response** from Use Model in as the item (each line becomes its own tickable line), and tap the **Note** field to pick your **Brain Dump** note.
+
+### 5. Skip the accidental taps
+
+Wrap the lot so an empty tap does nothing. Add an **If**, delete its **Otherwise**, set it to **Dictated Text** → **has any value**, then drag the **If** up under **Dictate Text** and the **End If** to the very bottom, so Use Model and Append sit inside it.
+
+### 6. Name it and run it
+
+Rename it **Brain Dump** and tap the **tick** (✓) on the keyboard. Add it to your Home Screen, tap it, talk, and tap the stop button when you're done. Everything you said turns up as one tidy checklist.
+
+**Want to sort into Logistics, Food & Household and Misc instead?** That's the full build, which uses a Dictionary output and one block per category. It's the version taught in the course.
