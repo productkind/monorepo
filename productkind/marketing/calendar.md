@@ -13,9 +13,25 @@ Statuses: todo, created, scheduled, posted
 
 | Date | Piece | Channels | Status |
 | ---- | ----- | -------- | ------ |
+| 2026-08-23 | none |  |  |
+| 2026-08-22 | none |  |  |
+| 2026-08-21 | social-015 | instagram, tiktok, youtube, linkedin productkind, threads productkind | created |
+| 2026-08-20 | none |  |  |
+| 2026-08-19 | none |  |  |
+| 2026-08-18 | none |  |  |
+| 2026-08-17 | social-014 | instagram, tiktok, youtube, linkedin productkind, threads productkind | created |
+| --- | --- | --- | --- |
+| 2026-08-16 | none |  |  |
+| 2026-08-15 | none |  |  |
+| 2026-08-14 | social-013 | instagram, tiktok, youtube, linkedin productkind, threads productkind | created |
+| 2026-08-13 | none |  |  |
+| 2026-08-12 | none |  |  |
+| 2026-08-11 | social-012 | instagram, tiktok, youtube, linkedin productkind, threads productkind | created |
+| 2026-08-10 | none |  |  |
+| --- | --- | --- | --- |
 | 2026-08-09 | none |  |  |
 | 2026-08-08 | none |  |  |
-| 2026-08-07 | social-011 | instagram, tiktok, youtube, linkedin productkind, threads productkind  | scheduled |
+| 2026-08-07 | social-011 | instagram, tiktok, youtube, linkedin productkind, threads productkind  | posted |
 | 2026-08-06 | none |  |  |
 | 2026-08-05 | none |  |  |
 | 2026-08-04 | none |  |  |
