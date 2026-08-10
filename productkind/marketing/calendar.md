@@ -19,7 +19,7 @@ Statuses: todo, created, scheduled, posted
 | 2026-08-20 | none |  |  |
 | 2026-08-19 | none |  |  |
 | 2026-08-18 | none |  |  |
-| 2026-08-17 | social-014 | instagram, tiktok, youtube, linkedin productkind, threads productkind | created |
+| 2026-08-17 | social-014 | instagram, tiktok, youtube, linkedin productkind, threads productkind | scheduled |
 | --- | --- | --- | --- |
 | 2026-08-16 | none |  |  |
 | 2026-08-15 | none |  |  |
