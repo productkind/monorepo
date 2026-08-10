@@ -94,7 +94,7 @@ course:
           subtitle: Not much, honestly
           content:
             body: |-
-              Good news first: there's **nothing to buy and nothing to download**. You build everything in the **Shortcuts** app that's already on your iPhone, by tapping a few blocks together. You don't need to be techy: you follow along one step at a time, and each step tells you exactly what to tap.
+              There's **nothing to buy and nothing to download**. You build everything in the **Shortcuts** app that's already on your iPhone, by tapping a few blocks together. You don't need to be techy: you follow along one step at a time, and each step tells you exactly what to tap.
 
               This uses **Apple Intelligence**, Apple's built-in AI, so you'll need an **iPhone 15 Pro or 15 Pro Max, any iPhone 16 or newer, or an iPhone Air**. It's free, with no subscription.
 
@@ -210,7 +210,7 @@ course:
               1. **Get Dictionary Value**: type **Logistics** as the **Key**, and set the **Dictionary** field to the **Response** (the AI's answer).
               2. **Combine Text**: it takes the **Dictionary Value** from the block above; set it to combine with **New Lines**, so each item sits on its own line.
               3. **If**: set its condition to **Combined Text**, then tap **is** (already on the action) and change it to **has any value**. Delete the **Otherwise** line. This skips a category when you said nothing that belongs to it.
-              4. **Append Checklist Item** (drag it **inside** the If): put your **Combined Text** in as the **Name**, and shortly tap the **Note** field and pick your **Logistics** note directly. Each line becomes its own tickable checklist item.
+              4. **Append Checklist Item** (drag it in between the **If** and **End If**): put your **Combined Text** in as the **Name**, and tap the **Note** field and pick your **Logistics** note directly. Each line becomes its own tickable checklist item.
             imageUrl: /courses/ai-your-life-admin-00/build-route-category.webp
         - type: text
           title: "Build it: test it to make sure it works"
@@ -237,7 +237,7 @@ course:
               1. **Get Dictionary Value**: Get **Value** for **Food & Household** in **Response**.
               2. **Combine Text**: Combine **Dictionary Value** with **New Lines**.
               3. **If**: condition **Combined Text** → **has any value**, and delete the **Otherwise** line.
-              4. **Append Checklist Item** (drag inside the *If*): **Combined Text** as the *Name*, and pick your **Food & Household** note.
+              4. **Append Checklist Item** (drag it in between the **If** and **End If**): **Combined Text** as the *Name*, and pick your **Food & Household** note.
 
               Then do the same for **Misc** (its key and its note both **Misc**). Now your shortcut has three blocks, one per category, each the same four actions.
             imageUrl: /courses/ai-your-life-admin-00/build-repeat-categories.webp
@@ -394,8 +394,13 @@ course:
           title: "You shared the mental load! 👏🏼"
           content:
             nextModule: "**Next challenge:** You'll reuse this same pattern (talk, ask AI, save) to build a Baby Log: record what you keep track of, the feeds and amounts, nappies, naps and weights, and each is recorded as one organised, timestamped line in a running note you can scroll back through or show your doctor."
-            description: You made the invisible visible, it's no longer only yours to carry.
-            subDescription: You were never supposed to carry all this burden alone. Now it's a list your partner can see and act on.
+            description: The mental load isn't only yours to hold now, your partner can see it and pick things up, whatever phone they carry.
+            subDescription: |-
+              Here's what you can do now:
+
+              ✓ Reach your partner on any phone: the shared folder on iPhone, or an automatic message on any other.
+
+              ✓ Every brain dump gets to them on its own, without you having to forward anything.
     - title: The Baby Log
       isFree: true
       skills:
@@ -455,7 +460,7 @@ course:
           subtitle: A one-time setup
           content:
             body: |-
-              For the Baby Log we'll use **ChatGPT**, because it's more consistent than Apple's own model at laying out neat, categorised lines. It's built into your phone, there's nothing to download, and you don't need an account, just switch it on:
+              For the Baby Log we'll use **ChatGPT**, because it's more consistent than Apple's own model at laying out neat, categorised lines. It's built into your phone, there's nothing to download, and you don't need an account. Switch it on:
 
               1. Go to **Settings → Apple Intelligence & Siri → Extensions → ChatGPT**.
               2. Tap **Set Up**, tap **Next**, then tap **Enable ChatGPT**.
@@ -496,7 +501,7 @@ course:
 
               1. **Dictate Text.** Tap the blue arrow to open its settings, set your *Language*, and set *Stop Listening* to **After Pause**, since a log entry is short and can end on its own without a tap.
               2. **Date**. Its variable is already set to **Current Date**, which is what you want.
-              3. **Format Date**. Tap the blue arrow on *Format Date* and set both *Date Format* and *Time Format* to **Short**, so you get today's date and the time is an easy-to-read format.
+              3. **Format Date**. Tap the blue arrow on *Format Date* and set both *Date Format* and *Time Format* to **Short**, so you get today's date and the time in an easy-to-read format.
               4. **Use Model.** Tap the model and choose **ChatGPT** (leave its *Output* on *Automatic*). Delete the *Formatted Date* chip that appears in the text box.
               5. Paste your Baby Log prompt into the *Use Model* block's text box. Then place the **Dictated Text** chip at the very end, after "*Here is what I said:*", and add the **Formatted Date** chip right after "*The date and time now is:*".
 
@@ -510,11 +515,11 @@ course:
               One last block sends it to your note. Add **Append to Note** in the Shortcut:
 
               - For the **Text**, insert the **Response** from *Use Model*.
-              - For the **Note**, shortly tap the note field and pick your **Baby Log** note.
+              - For the **Note**, shortlytap the *Note* field and pick your **Baby Log** note.
 
               *Append to Note* adds to the **bottom** of the note, so your sessions stack up in order, newest last. Rename the shortcut **Baby Log** and tap the **tick** (✓) on the keyboard.
 
-              You can also add your shortcut to your **Home Screen**. Just tap the **Share** icon at the bottom of the editor, choose **Add to Home Screen**, pick a colour and symbol, then tap **Add**. Now it's an icon you tap like any app.
+              You can also add your shortcut to your **Home Screen**: tap the **Share** icon at the bottom of the editor, choose **Add to Home Screen**, pick a colour and symbol, then tap **Add**. Now it's an icon you tap like any app.
             imageUrl: /courses/ai-your-life-admin-00/build-babylog-append.webp
         - type: free-text-exercise
           title: Try it now, then ask anything
@@ -527,7 +532,7 @@ course:
               If something went wrong, or anything about this build is unclear, ask here and you'll get an answer.
             subDescription: Even one entry starts a record you can scroll back through. Ask about anything that's unclear.
             placeholder: e.g. My entry isn't showing up in the note...
-            systemPrompt: 'You are a warm, knowledgeable mentor for a new mum taking a course where she builds an iPhone Shortcut called Baby Log. The shortcut is: Dictate Text (Language set, Stop Listening set to After Short Pause), then Current Date, then Format Date (Date Format Short and Time Format Short), then Use Model set to ChatGPT with Output on Automatic, using a baby-care-log-parser prompt that outputs a bold date-and-time heading (the date, a pipe, then the time, from the inserted Formatted Date) followed by one line per activity in the form "- **Category**: details" (categories Feed, Nappy, Nap, Mood, Weight, Milestone, or Note). Each run of the shortcut appends one such timestamped session. In the prompt, the Formatted Date chip is placed after "the date and time now is:" and the Dictated Text chip is at the very end. Then Append to Note, with the Baby Log note picked directly in the note field (no Find Notes needed), appending the Use Model Response. Before building, she made a note in the Notes app whose first line is Baby Log, and turned on the ChatGPT extension (Settings, then Apple Intelligence & Siri, then Extensions, then ChatGPT, Set Up, then Enable ChatGPT with no account, or Use ChatGPT with an Account to keep a history). ChatGPT is the model used here because it lays out neat categorised lines; the course does not cover swapping it, but if she asks about keeping things private, Private Cloud Compute is a fully private alternative she could pick in the Use Model block, though it formats less reliably. She may report something not working or ask about any step. Common causes to check for: the Baby Log note never created, so there is nothing to append to; the wrong note picked in Append to Note, or its note field left empty; Append to Note missing the Response variable; the Formatted Date chip not placed in the prompt, so lines have no time; the Dictated Text chip missing, so the model has nothing to read; the ChatGPT extension not set up; dictation ending too soon or too late (After Short Pause suits short entries; On Tap if she prefers to tap when she''s done); if she swapped to Private Cloud Compute, lines may come out less tidy since it formats less reliably. Answer clearly and warmly in British English, in clear, everyday words for someone non-technical, in at most a few short sentences or bullets. If it falls outside the course, gently point her to Kinga and Tamas in the Discord community. Do not use em dashes. End on an encouraging note. Reply in a markdown format.'
+            systemPrompt: 'You are a warm, knowledgeable mentor for a new mum taking a course where she builds an iPhone Shortcut called Baby Log. The shortcut is: Dictate Text (Language set, Stop Listening set to After Pause), then Current Date, then Format Date (Date Format Short and Time Format Short), then Use Model set to ChatGPT with Output on Automatic, using a baby-care-log-parser prompt that outputs a bold date-and-time heading (the date, a pipe, then the time, from the inserted Formatted Date) followed by one line per activity in the form "- **Category**: details" (categories Feed, Nappy, Nap, Mood, Weight, Milestone, or Note). Each run of the shortcut appends one such timestamped session. In the prompt, the Formatted Date chip is placed after "the date and time now is:" and the Dictated Text chip is at the very end. Then Append to Note, with the Baby Log note picked directly in the note field (no Find Notes needed), appending the Use Model Response. Before building, she made a note in the Notes app whose first line is Baby Log, and turned on the ChatGPT extension (Settings, then Apple Intelligence & Siri, then Extensions, then ChatGPT, Set Up, then Enable ChatGPT with no account, or Use ChatGPT with an Account to keep a history). ChatGPT is the model used here because it lays out neat categorised lines; the course does not cover swapping it, but if she asks about keeping things private, Private Cloud Compute is a fully private alternative she could pick in the Use Model block, though it formats less reliably. She may report something not working or ask about any step. Common causes to check for: the Baby Log note never created, so there is nothing to append to; the wrong note picked in Append to Note, or its note field left empty; Append to Note missing the Response variable; the Formatted Date chip not placed in the prompt, so lines have no time; the Dictated Text chip missing, so the model has nothing to read; the ChatGPT extension not set up; dictation ending too soon or too late (After Pause suits short entries; On Tap if she prefers to tap when she''s done); if she swapped to Private Cloud Compute, lines may come out less tidy since it formats less reliably. Answer clearly and warmly in British English, in clear, everyday words for someone non-technical, in at most a few short sentences or bullets. If it falls outside the course, gently point her to Kinga and Tamas in the Discord community. Do not use em dashes. End on an encouraging note. Reply in a markdown format.'
             checkerPrompt: 'The learner is asking a question or sharing how their logging went. Accept any genuine question, problem description, or comment. Only flag clearly empty or nonsense input. This is their message:'
         - type: challenge-end
           title: "You built your Baby Log! 📝"
@@ -582,7 +587,7 @@ course:
 
               - **Back Tap:** go to *Settings* → *Accessibility* → *Touch* → *Back Tap*. Choose *Double Tap* or *Triple Tap* and scroll down to pick your shortcut. Now a **firm** tap on the **back of your phone** runs it.
               - **The Action Button:** your iPhone has the small button above the volume keys, set it in *Settings* → *Action Button* to run your shortcut with one long press.
-              - **Hey Siri:** Siri needs to be on first, so in *Settings* → *Apple Intelligence & Siri*, turn on **Talk to Siri** (or **Listen for "Hey Siri"**). Then just say *"Hey Siri, Baby Log"* (or any shortcut's name) and Siri runs it by name.
+              - **Hey Siri:** Siri needs to be on first, so in *Settings* → *Apple Intelligence & Siri*, turn on **Talk to Siri** (or **Listen for "Hey Siri"**). Then say *"Hey Siri, Baby Log"* (or any shortcut's name) and Siri runs it by name.
         - type: text
           title: Two things about the dictation
           subtitle: Whatever starts it
@@ -591,7 +596,7 @@ course:
               However you launch a shortcut, two things decide whether your dictation reaches your note:
 
               - **Keep the screen on.** If it dims or goes black mid-sentence, it cuts your dictation off. Give it a tap to keep it awake if you're taking your time, and don't set the phone down until it's finished.
-              - **Mind the stop setting.** Your **Baby Log** ends on a short pause, so a breath finishes it, which is perfect for a quick log. Your **Brain Dump** waits for your tap instead, so it keeps listening through your pauses; end it with the **stop** button (⏹️) when you're done.
+              - **Mind the stop setting.** Your **Baby Log** ends on a pause, so a breath finishes it, which is perfect for a quick log. Your **Brain Dump** waits for your tap instead, so it keeps listening through your pauses; end it with the **stop** button (⏹️) when you're done.
         - type: text
           title: When something's too big for a dump
           subtitle: A quick pointer
