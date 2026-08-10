@@ -13,8 +13,8 @@ Statuses: todo, created, scheduled, posted
 
 | Date | Piece | Channels | Status |
 | ---- | ----- | -------- | ------ |
-| 2026-08-09 | SB-3 where is the problem | instagram, tiktok, youtube, linkedin productkind, threads productkind | todo |
-| 2026-08-08 | B-roll | instagram, tiktok, youtube, linkedin productkind, threads productkind | todo |
+| 2026-08-09 | none |  |  |
+| 2026-08-08 | none |  |  |
 | 2026-08-07 | social-011 | instagram, tiktok, youtube, linkedin productkind, threads productkind  | scheduled |
 | 2026-08-06 | none |  |  |
 | 2026-08-05 | none |  |  |
