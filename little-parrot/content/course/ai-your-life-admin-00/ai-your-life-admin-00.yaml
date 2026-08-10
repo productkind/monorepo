@@ -124,6 +124,8 @@ course:
               2. Inside it, make one note per category, with each note's first line the category name, exactly as written: **Logistics**, **Food & Household**, and **Misc**.
 
               You'll use these same three names as your categories in the prompt in a moment, and pick each note as you build, so keep them consistent.
+
+              *Would one list be enough for you?* If you'd rather everything land in a single note than be sorted into three, the [Brain Dump into a single list](TOOLKIT_ONE_NOTE_PLACEHOLDER) guide in the Toolkit is a quicker build.
             imageUrl: /courses/ai-your-life-admin-00/make-folder-and-notes.webp
         - type: text
           title: "Build it: share the folder"
@@ -303,6 +305,8 @@ course:
               ✓ Reshape the prompt any time: rename the categories or add your own to fit your life.
 
               ✓ Reuse the same pattern for anything else you want sorted.
+
+              Want every step in one place to rebuild it later? The [Build the Brain Dump Shortcut](TOOLKIT_BRAIN_DUMP_PLACEHOLDER) guide has the lot, and [Troubleshooting your shortcuts](TOOLKIT_TROUBLESHOOTING_PLACEHOLDER) covers anything that misbehaves.
     - title: Share the Load
       isFree: true
       skills:
@@ -549,6 +553,8 @@ course:
               ✓ Scroll back through the whole record any time, or show it to your doctor or health visitor.
 
               ✓ Reuse the talk, ask AI, save pattern, with a prompt you can reshape, for any running log you want.
+
+              Want to rebuild it or check a step? The [Build the Baby Log Shortcut](TOOLKIT_BABY_LOG_PLACEHOLDER) guide walks through every block with screenshots.
     - title: Make It Effortless
       isFree: true
       skills:

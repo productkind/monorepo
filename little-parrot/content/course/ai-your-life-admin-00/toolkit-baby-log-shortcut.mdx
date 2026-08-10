@@ -1,0 +1,73 @@
+---
+challenge: "3 - The Baby Log"
+type: "Guide"
+---
+## Build the Baby Log Shortcut
+
+Every step to build the Baby Log, in order. You talk, and it saves a timestamped, categorised session to one running note you can scroll back through or show your doctor.
+
+### 1. Make the note first
+
+Open **Notes** and make one note with **Baby Log** as its first line. It only needs to exist; your shortcut will add to it.
+
+![Making the Baby Log note](/courses/ai-your-life-admin-00/make-baby-log-note.webp)
+
+### 2. Turn on ChatGPT
+
+The Baby Log uses **ChatGPT**, because it lays out neat, categorised lines more consistently than Apple's own model. It's built into your phone, with nothing to download and no account needed.
+
+1. Go to **Settings → Apple Intelligence & Siri → Extensions → ChatGPT**.
+2. Tap **Set Up**, tap **Next**, then tap **Enable ChatGPT**.
+
+(If you'd like your dictations to show up among your ChatGPT chats, choose **Use ChatGPT with an Account** and sign in instead. Either works.)
+
+![Turning on the ChatGPT extension](/courses/ai-your-life-admin-00/turn-on-chatgpt.webp)
+
+### 3. Copy the logging prompt
+
+This tells the AI to split what you say into activities and stamp the session with the time. Copy it now:
+
+```
+You are a baby care log parser. Turn the voice entry below into clean, scannable log lines.
+
+The date and time now is:
+
+Rules:
+- Begin with the date and time above on its own line, in bold, with a | between the date and the time, like: **07/08/2026 | 13:36**
+- Under it, add one line per activity I mention, formatted as: - **Category**: details.
+- Use whichever of these categories fit: Feed, Nappy, Nap, Mood, Weight, Milestone. Use Note if none fit.
+- Keep the real details I gave and drop the filler. Don't invent anything.
+- If I didn't mention anything worth logging, reply with nothing.
+- Reply with just the heading and the lines, nothing else.
+
+Here is what I said:
+```
+
+### 4. Talk, stamp the time, then sort
+
+Open **Shortcuts**, tap **+**, and add these blocks in order:
+
+1. **Dictate Text.** Tap the blue arrow, set your **Language**, and set **Stop Listening** to **After Pause**, since a log entry is short and can end on its own.
+2. **Current Date**, then **Format Date** right after it. Tap the blue arrow on Format Date and set both **Date Format** and **Time Format** to **Short**, so you get today's date and the time in an easy-to-read format.
+3. **Use Model.** Tap the model and choose **ChatGPT** (leave the Output on **Automatic**). Paste your logging prompt, then place the **Formatted Date** chip right after "the date and time now is:", and add the **Dictated Text** chip at the very end.
+
+![Building the dictate, date and model blocks](/courses/ai-your-life-admin-00/build-babylog-model.webp)
+
+### 5. Save each session to your note
+
+Add **Append to Note**. Tap the note field and pick your **Baby Log** note, and put the **Response** from Use Model in as the text. It adds to the bottom, so sessions stack up newest last.
+
+![Adding the Append to Note action](/courses/ai-your-life-admin-00/build-babylog-append.webp)
+
+### 6. Name it and run it
+
+Rename it **Baby Log** and tap the **tick** (✓) on the keyboard. Run it whenever something happens, say the feed and how much, a nappy, a nap, and each tap adds a timestamped session like:
+
+```
+**07/08/2026 | 13:36**
+- **Feed**: 200 mL
+- **Mood**: a bit fussy after eating
+- **Nap**: went down to sleep
+```
+
+Prefer to keep everything on your phone and share nothing with another company? Swap **ChatGPT** for **Cloud (Private Cloud Compute)** in the Use Model block. It's fully private, though it lays the lines out less tidily.
