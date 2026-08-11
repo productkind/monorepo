@@ -125,7 +125,7 @@ course:
 
               You'll use these same three names as your categories in the prompt in a moment, and pick each note as you build, so keep them consistent.
 
-              *Would one list be enough for you?* If you'd rather everything land in a single note than be sorted into three, the [Brain Dump into a single list](TOOLKIT_ONE_NOTE_PLACEHOLDER) guide in the Toolkit is a quicker build.
+              *Would one list be enough for you?* If you'd rather everything land in a single note than be sorted into three, the [Brain Dump into a Single List](TOOLKIT_ONE_NOTE_PLACEHOLDER) guide in the Toolkit is a quicker build.
             imageUrl: /courses/ai-your-life-admin-00/make-folder-and-notes.webp
         - type: text
           title: "Build it: share the folder"
@@ -306,7 +306,7 @@ course:
 
               ✓ Reuse the same pattern for anything else you want sorted.
 
-              Want every step in one place to rebuild it later? The [Build the Brain Dump Shortcut](TOOLKIT_BRAIN_DUMP_PLACEHOLDER) guide has the lot, and [Troubleshooting your shortcuts](TOOLKIT_TROUBLESHOOTING_PLACEHOLDER) covers anything that misbehaves.
+              Want every step in one place to rebuild it later? The [Build the Brain Dump Shortcut](TOOLKIT_BRAIN_DUMP_PLACEHOLDER) guide has the lot, and [Troubleshooting Your Shortcuts](TOOLKIT_TROUBLESHOOTING_PLACEHOLDER) covers anything that misbehaves.
     - title: Share the Load
       isFree: true
       skills:

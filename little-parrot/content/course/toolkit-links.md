@@ -85,9 +85,9 @@ Not yet published, so URLs are pending. Each item's placeholder token (used in t
 
 | Toolkit Item | Placeholder in YAML | URL |
 |-------------|--------------------|-----|
-| Build the Brain Dump Shortcut | `TOOLKIT_BRAIN_DUMP_PLACEHOLDER` | _pending_ |
-| Troubleshooting your shortcuts | `TOOLKIT_TROUBLESHOOTING_PLACEHOLDER` | _pending_ |
-| Brain Dump into a single list | `TOOLKIT_ONE_NOTE_PLACEHOLDER` | _pending_ |
+| Build the Brain Dump Shortcut | `TOOLKIT_BRAIN_DUMP_PLACEHOLDER` | `https://littleparrot.app/nest/toolkit/6cb7e7a7-af39-4fe7-b985-6a3fc5f6bbd5` |
+| Troubleshooting Your Shortcuts | `TOOLKIT_TROUBLESHOOTING_PLACEHOLDER` | _pending_ |
+| Brain Dump into a Single List | `TOOLKIT_ONE_NOTE_PLACEHOLDER` | _pending_ |
 | Build the Baby Log Shortcut | `TOOLKIT_BABY_LOG_PLACEHOLDER` | _pending_ |
 
 ## Notes
