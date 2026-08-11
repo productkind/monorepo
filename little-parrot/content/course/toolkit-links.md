@@ -79,6 +79,17 @@ Use these links when referencing toolkit items in course content.
 | Turn Your MVP into a Build Prompt | `https://littleparrot.app/nest/toolkit/40d6e37a-654a-4ac4-81e1-0609c19c5998` |
 | Run Your First User Test | `https://littleparrot.app/nest/toolkit/cea79e4c-8401-4d8a-a35a-f8fcaa5bb17a` |
 
+## Hand off the mental load: use AI to turn a brain dump into a list (`ai-your-life-admin-00`)
+
+Not yet published, so URLs are pending. Each item's placeholder token (used in the course YAML) is listed so you can find-and-replace once the real URLs exist.
+
+| Toolkit Item | Placeholder in YAML | URL |
+|-------------|--------------------|-----|
+| Build the Brain Dump Shortcut | `TOOLKIT_BRAIN_DUMP_PLACEHOLDER` | _pending_ |
+| Troubleshooting your shortcuts | `TOOLKIT_TROUBLESHOOTING_PLACEHOLDER` | _pending_ |
+| Brain Dump into a single list | `TOOLKIT_ONE_NOTE_PLACEHOLDER` | _pending_ |
+| Build the Baby Log Shortcut | `TOOLKIT_BABY_LOG_PLACEHOLDER` | _pending_ |
+
 ## Notes
 
 - URL pattern: `https://littleparrot.app/nest/toolkit/{toolkit-id}`

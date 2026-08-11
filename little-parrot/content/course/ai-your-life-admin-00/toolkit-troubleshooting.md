@@ -4,7 +4,7 @@ type: "Cheat sheet"
 ---
 ## Troubleshooting your shortcuts
 
-The snags that come up most when building and running these shortcuts, with the fix for each. Find your symptom, and jump to it.
+This gets your Shortcuts working again when something misbehaves. It's a fix-it lookup for the two iPhone Shortcuts in this course: the **Brain Dump** (you talk, and AI sorts it into checklist notes) and the **Baby Log** (you talk, and AI saves timestamped lines to one note). Find your symptom below, and jump to the fix.
 
 ### While building the Brain Dump
 

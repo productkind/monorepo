@@ -1,9 +1,9 @@
 course:
   id: 05900334-0998-4a98-be6d-946653c9b82d
   note: |-
-    This course needs an iPhone with Apple Intelligence (iPhone 15 Pro or 15 Pro Max, any iPhone 16 or newer, or an iPhone Air). Everything runs free, with no subscription and nothing to install.
+    *This course needs an iPhone with Apple Intelligence (iPhone 15 Pro or 15 Pro Max, any iPhone 16 or newer, or an iPhone Air). Everything runs free, with no subscription and nothing to install.*
   cover: /courses/ai-your-life-admin-00/cover.gif
-  title: "Hand off the mental load: use AI to turn a brain dump into a list"
+  title: "Hand Off the Mental Load: Use AI to Turn a Brain Dump Into a List"
   learningOutcomes:
     - Build an iPhone Shortcut that sorts a spoken brain dump into shared category checklists you and your partner can tick off
     - Write a copy-paste prompt that tells the AI how to sort or format what you say
@@ -195,7 +195,7 @@ course:
               Now give **Use Model** your prompt. When you added it, its text box already picked up a blue **Dictated Text** chip. That chip is a **variable**, a placeholder the shortcut fills in with your words each time you run it. You want your prompt to come first, so:
 
               1. Delete the **Dictated Text** chip to clear the box.
-              2. **Paste the prompt** you copied earlier. (Lost it off your clipboard? Grab it again from the [prompt toolkit](TOOLKIT_LINK_PLACEHOLDER).)
+              2. **Paste the prompt** you copied earlier. (Lost it off your clipboard? Grab it again from the [Build the Brain Dump Shortcut](TOOLKIT_BRAIN_DUMP_PLACEHOLDER) guide.)
               3. Tap to add the **Dictated Text** variable back at the very end, after the last line.
 
               You don't type your words yourself; that chip is how they flow into the prompt.
@@ -642,6 +642,6 @@ course:
 
               **Remember:** you now offload the mental load by voice, in the seconds you have. Now go and forget something on purpose. Your phone's got it. 💪
   titleSplit:
-    - "Hand off the mental load:"
-    - use AI to turn a brain dump into a list
-  description: Build two voice shortcuts on your iPhone that take the mental load off your hands. Talk, and AI sorts it into tidy checklists, in a folder you share with your partner, so what you're carrying is visible and easy to hand off. Record how much your baby fed, their nappies, naps and weight, and each lands as a tidy, timestamped entry. Everything runs on tools already on your phone, with no account needed and no typing once it's built.
+    - "Hand Off the Mental Load:"
+    - Use AI to Turn a Brain Dump Into a List
+  description: Build two voice shortcuts on your iPhone that take the mental load off your hands. Talk, and AI sorts it into organised checklists, in a folder you share with your partner, so what you're carrying is visible and easy to hand off. Record how much your baby fed, their nappies, naps and weight, and each lands as a tidy, timestamped entry. Everything runs on tools already on your phone, with no account needed and no typing once it's built.
