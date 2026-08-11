@@ -81,14 +81,12 @@ Use these links when referencing toolkit items in course content.
 
 ## Hand off the mental load: use AI to turn a brain dump into a list (`ai-your-life-admin-00`)
 
-Not yet published, so URLs are pending. Each item's placeholder token (used in the course YAML) is listed so you can find-and-replace once the real URLs exist.
-
-| Toolkit Item | Placeholder in YAML | URL |
-|-------------|--------------------|-----|
-| Build the Brain Dump Shortcut | `TOOLKIT_BRAIN_DUMP_PLACEHOLDER` | `https://littleparrot.app/nest/toolkit/6cb7e7a7-af39-4fe7-b985-6a3fc5f6bbd5` |
-| Troubleshooting Your Shortcuts | `TOOLKIT_TROUBLESHOOTING_PLACEHOLDER` | `https://littleparrot.app/nest/toolkit/f969c32b-5325-49a5-91c5-454f5641c1f9` |
-| Brain Dump into a Single List | `TOOLKIT_ONE_NOTE_PLACEHOLDER` | `https://littleparrot.app/nest/toolkit/62797a30-4043-4875-96e0-d8efa631a455` |
-| Build the Baby Log Shortcut | `TOOLKIT_BABY_LOG_PLACEHOLDER` | `https://littleparrot.app/nest/toolkit/d959a2f5-39c5-4867-84d9-58de57ba075e` |
+| Toolkit Item | URL |
+|-------------|-----|
+| Build the Brain Dump Shortcut | `https://littleparrot.app/nest/toolkit/6cb7e7a7-af39-4fe7-b985-6a3fc5f6bbd5` |
+| Troubleshooting Your Shortcuts | `https://littleparrot.app/nest/toolkit/f969c32b-5325-49a5-91c5-454f5641c1f9` |
+| Brain Dump into a Single List | `https://littleparrot.app/nest/toolkit/62797a30-4043-4875-96e0-d8efa631a455` |
+| Build the Baby Log Shortcut | `https://littleparrot.app/nest/toolkit/d959a2f5-39c5-4867-84d9-58de57ba075e` |
 
 ## Notes
 
