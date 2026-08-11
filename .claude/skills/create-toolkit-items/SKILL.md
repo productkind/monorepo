@@ -66,6 +66,8 @@ Each toolkit item belongs to a specific challenge. Choose the challenge where th
 
 **Give the exact text, not a description of it.** When a step means adding or changing wording (a prompt line, a field value, a setting), show the literal text in a copy-paste code block rather than describing it. "Add this line: `keep the details that make each item make sense on its own`" beats "make sure your prompt says to keep the details."
 
+**Use full sentences, and full names on first mention.** The first time an app, action, or feature appears, name it in full: "Open the **Notes** app", not "Open **Notes**"; "add the **Dictate Text** action", not "add **Dictate Text**". Once the learner has met the term, the shorthand is fine ("back in Notes", "the Dictate Text block"). This keeps a first-timer oriented without labouring every later reference.
+
 **Descriptions and "When to use it" should not repeat each other.** The description says what the thing is. "When to use it" says when the learner would reach for it. If they overlap, merge them or rewrite so each adds new information.
 
 **Code examples must be realistic.** If showing a Select dropdown, use real options like book genres or categories, not "Apple, Banana, Cherry." If showing a dialog, show a real form the learner would build, not "This is a test dialog."
