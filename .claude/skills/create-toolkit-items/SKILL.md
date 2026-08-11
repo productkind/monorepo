@@ -31,6 +31,8 @@ The database tags each toolkit item with a **type**, set in the frontmatter (see
 
 **Name the item for what it helps the learner do, not its type.** The type is a separate field, so the name doesn't need to repeat it: "Builder's Workspace Setup" beats "Local Setup Guide", and "Run Your App on Your Computer" beats "Run-It-Locally Cheat Sheet".
 
+**Capitalise every toolkit title in title case.** Every significant word starts with a capital letter; keep short joining words (a, an, the, and, or, of, to, in, on, for, with, into) lowercase unless they are the first word. So "Troubleshooting Your Shortcuts" and "Brain Dump into a Single List", not "Troubleshooting your shortcuts" or "Brain Dump into a single list". This matches the rest of the toolkit library (for example "Turn Your MVP into a Build Prompt" and "What to Check in an AI Draft Before You Send It"). The title in the `## heading` and the name recorded elsewhere (course links, `toolkit-links.md`) must match exactly.
+
 (An **interactive** item, built with live components, is a format choice rather than a type, use `.mdx` and see Interactive toolkit items below. It still carries one of the five types above.)
 
 ### How to identify toolkit items from a course
@@ -164,6 +166,7 @@ If you're [doing X] for the first time, start with the [Simpler Toolkit Item](UR
 - [ ] No duplication with other toolkit items or course content
 - [ ] External tool instructions are accurate and current
 - [ ] The name says what it helps the learner do, not its type, and the `type` field is set in the frontmatter
+- [ ] The title is in title case (every significant word capitalised), matching any references to it in the course and `toolkit-links.md`
 - [ ] Any images use real served asset paths (no broken placeholders)
 - [ ] It's assigned to the right challenge
 - [ ] The file name follows the `toolkit-[kebab-case-name].md` convention
