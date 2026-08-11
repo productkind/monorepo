@@ -14,7 +14,7 @@ A good toolkit item is something the learner opens *while they're working*, not 
 - **Be immediately usable.** The learner should be able to copy, paste, or tick off items without needing to re-read the course first.
 - **Solve a real moment.** Each item should map to a specific situation: "I'm about to publish", "I need to add a feature", "I'm talking to a user for the first time."
 - **Use realistic examples.** Never use placeholder content like "lorem ipsum", "Feature 1", or "Select a fruit." Use examples the learner would actually encounter in a product (book genres, city names, real confirmation messages).
-- **Be self-contained.** The learner shouldn't need to read the full course to use the toolkit item. Include enough context that it works on its own.
+- **Be self-contained, and assume no course context.** A learner may open it straight from the Toolkit menu without having taken the course. Include enough context that it works on its own: name the tool, the input, and the output so the opening makes sense cold. (See "Open with the payoff" under Writing principles.)
 - **Be concise.** Respect the learner's time. Lead with the actionable content, not lengthy explanations.
 
 ### Types of toolkit items
@@ -57,6 +57,14 @@ Each toolkit item belongs to a specific challenge. Choose the challenge where th
 ### Writing principles
 
 **Follow the productkind tone.** Warm, encouraging, mentor-like. British English. No em dashes. No AI buzzwords.
+
+**Open with the payoff, and make it work cold.** The first sentence says what the learner *gets*, not what the item is or which challenge it belongs to: "The Brain Dump is an iPhone Shortcut that turns your mental load into organised lists" beats "Every step to build the Brain Dump, in order." Then, in the same opening, name the tool, the input (you talk), and the output (sorted checklist notes), so someone who found the item cold in the Toolkit menu understands it before any how-to.
+
+**Name prerequisites up front.** If the item needs a particular device, OS version, plan tier, or tool installed, say so in one short line right after the opening, so nobody follows a guide their setup can't run.
+
+**Write for a first-timer: name exact actions and where settings live.** Assume the learner may be meeting the tool for the first time. Never use vague internal groupings ("the category block", "the second block"); name the actual actions or buttons ("Get Dictionary Value, Combine Text, Append Checklist Item") and how to reach a setting ("open the Dictate Text action, tap the blue arrow"). When a fix involves ordering or nesting, say which exact action goes where.
+
+**Give the exact text, not a description of it.** When a step means adding or changing wording (a prompt line, a field value, a setting), show the literal text in a copy-paste code block rather than describing it. "Add this line: `keep the details that make each item make sense on its own`" beats "make sure your prompt says to keep the details."
 
 **Descriptions and "When to use it" should not repeat each other.** The description says what the thing is. "When to use it" says when the learner would reach for it. If they overlap, merge them or rewrite so each adds new information.
 
@@ -126,11 +134,22 @@ Some toolkit items are more useful when the learner can interact with them direc
 - When seeing or trying the thing is more valuable than reading a description of it (e.g., seeing what a Button or Dialog looks like by clicking on it)
 - When the learner needs to practise a skill in a safe environment before applying it to their own product
 - When a static reference would be incomplete without the interactive element
+- When a troubleshooting or lookup item would otherwise be a wall of text, an `Accordion` lets the learner scan the entries and expand only the one they need (see "Troubleshooting and lookup items" below)
 
 **How interactive items work:**
 - Use `.mdx` file extension instead of `.md`
 - The available components depend on what's registered in the app's MDX component registry
 - The interactive elements should directly support the learning goals of the toolkit item (e.g., a visual component guide with live examples of each component)
+
+### Troubleshooting and lookup items
+
+Troubleshooting sheets, "when do I use X" references, and other lookup items are read differently from guides: the learner arrives with a symptom and needs to find the matching fix fast. Two rules keep them usable:
+
+**Lead every entry with the observable symptom, never the cause.** The heading (or accordion trigger) describes what the learner *sees or experiences*, so they can recognise their situation at a glance. "A category comes out empty even though you spoke items for it" beats "Get Dictionary Value is reading the wrong thing", which names an internal cause the learner has no way to connect to. Put the cause and the fix in the body: plain-language why first, then the concrete steps.
+
+**Group entries by the area the learner recognises, not by an internal phase.** File each entry under the feature or moment it belongs to (the shortcut, sharing, triggers), and make sure it sits where the symptom actually occurs. Splitting by build-time vs run-time tends to miscategorise, because most "building" symptoms only surface when the learner runs the thing.
+
+**Prefer an `Accordion` when the entries would stack into a wall of text.** Make the item `.mdx`, group the entries under section headings, and give each an `AccordionItem` (symptom as the `AccordionTrigger`, fix as the `AccordionContent`). Authoring notes that avoid broken MDX: leave a blank line above and below the markdown inside `AccordionContent`, keep that content unindented (four-space indents become code blocks), and confirm the file compiles before finishing (the platform compiles MDX with `@mdx-js/mdx` plus `remark-gfm`).
 
 ### File structure
 
@@ -158,7 +177,11 @@ If you're [doing X] for the first time, start with the [Simpler Toolkit Item](UR
 ### Checklist before finalising a toolkit item
 
 - [ ] The learner can use it without re-reading the course
+- [ ] The opening sentence says what the learner gets, and the intro makes sense to someone who opens it cold from the Toolkit menu
+- [ ] Any prerequisites (device, OS, plan, tools) are named up front
+- [ ] Steps name the exact actions and where each setting lives (no vague groupings), and give literal copy-paste text wherever wording changes
 - [ ] Every command, prompt, and step has a plain note on what it does or when to use it (no bare lists)
+- [ ] For troubleshooting/lookup items: each entry's heading is the observable symptom, entries are grouped by area, and any interactive `.mdx` compiles cleanly
 - [ ] Example prompts model good prompting: specific, with real design/product vocabulary and the look, behaviour, and edge cases
 - [ ] All examples are realistic (no placeholder content)
 - [ ] Descriptions and "When to use it" lines don't repeat the same information
