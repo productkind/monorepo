@@ -46,7 +46,7 @@ Open the **Shortcuts** app, tap **+** to start a new shortcut, and add the **Dic
 
 ### 5. Use Model
 
-Add **Use Model**. Tap the model and choose **Cloud (Private Cloud Compute)**. Tap the blue arrow and set the **Output** to **Dictionary**, so the answer comes back as your labelled categories.
+Add the **Use Model** action. Tap the model and choose **Cloud (Private Cloud Compute)**. Tap the blue arrow and set the **Output** to **Dictionary**, so the answer comes back as your labelled categories.
 
 ![Setting Use Model to Cloud and Output to Dictionary](/courses/ai-your-life-admin-00/build-use-model.webp)
 
@@ -78,12 +78,12 @@ Tap the **▶️ play button** at the bottom, say one or two Logistics things (l
 Build the same block again for each remaining category. Only the **category name** changes.
 
 **Food & Household:**
-1. **Get Dictionary Value**: **Value** for **Food & Household** in **Response**.
-2. **Combine Text**: **Dictionary Value** with **New Lines**.
-3. **If**: **Combined Text** → **has any value**; delete **Otherwise**.
-4. **Append Checklist Item** (between the **If** and **End If**): **Combined Text** as the **Name**, pick your **Food & Household** note.
+1. **Get Dictionary Value**: type **Food & Household** as the **Key**, and set the **Dictionary** field to the **Response**.
+2. **Combine Text**: the **Dictionary Value** above, combined with **New Lines**.
+3. **If**: **Combined Text** → **has any value**, then delete the **Otherwise** line.
+4. **Append Checklist Item** (between the **If** and **End If**): **Combined Text** as the **Name**, and pick your **Food & Household** note.
 
-**Misc:** exactly the same, with **Misc** as the key and the **Misc** note. You now have three blocks, one per category.
+**Misc:** exactly the same, with **Misc** as the **Key** and your **Misc** note. You now have three blocks, one per category.
 
 ![Repeating the block for the other categories](/courses/ai-your-life-admin-00/build-repeat-categories.webp)
 
@@ -100,7 +100,7 @@ Wrap everything after **Dictate Text** in one guard so an empty tap does nothing
 
 ### 11. Name it
 
-Tap the name at the top, rename it **Brain Dump**, and tap the **tick** (✓) on the keyboard.
+Tap the name at the top of the screen, select **Rename**, type **Brain Dump**, and tap the **tick** (✓) on the keyboard.
 
 ![Naming the shortcut](/courses/ai-your-life-admin-00/build-finish.webp)
 
