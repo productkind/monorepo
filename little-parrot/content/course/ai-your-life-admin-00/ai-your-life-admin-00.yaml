@@ -125,7 +125,7 @@ course:
 
               You'll use these same three names as your categories in the prompt in a moment, and pick each note as you build, so keep them consistent.
 
-              *Would one list be enough for you?* If you'd rather everything land in a single note than be sorted into three, the [Brain Dump into a Single List](TOOLKIT_ONE_NOTE_PLACEHOLDER) guide in the Toolkit is a quicker build.
+              *Would one list be enough for you?* If you'd rather everything land in a single note than be sorted into three, the [Brain Dump into a Single List](https://littleparrot.app/nest/toolkit/62797a30-4043-4875-96e0-d8efa631a455) guide in the Toolkit is a quicker build.
             imageUrl: /courses/ai-your-life-admin-00/make-folder-and-notes.webp
         - type: text
           title: "Build it: share the folder"
@@ -195,7 +195,7 @@ course:
               Now give **Use Model** your prompt. When you added it, its text box already picked up a blue **Dictated Text** chip. That chip is a **variable**, a placeholder the shortcut fills in with your words each time you run it. You want your prompt to come first, so:
 
               1. Delete the **Dictated Text** chip to clear the box.
-              2. **Paste the prompt** you copied earlier. (Lost it off your clipboard? Grab it again from the [Build the Brain Dump Shortcut](TOOLKIT_BRAIN_DUMP_PLACEHOLDER) guide.)
+              2. **Paste the prompt** you copied earlier. (Lost it off your clipboard? Grab it again from the [Build the Brain Dump Shortcut](https://littleparrot.app/nest/toolkit/6cb7e7a7-af39-4fe7-b985-6a3fc5f6bbd5) guide.)
               3. Tap to add the **Dictated Text** variable back at the very end, after the last line.
 
               You don't type your words yourself; that chip is how they flow into the prompt.
@@ -306,7 +306,7 @@ course:
 
               ✓ Reuse the same pattern for anything else you want sorted.
 
-              Want every step in one place to rebuild it later? The [Build the Brain Dump Shortcut](TOOLKIT_BRAIN_DUMP_PLACEHOLDER) guide has the lot, and [Troubleshooting Your Shortcuts](TOOLKIT_TROUBLESHOOTING_PLACEHOLDER) covers anything that misbehaves.
+              Want every step in one place to rebuild it later? The [Build the Brain Dump Shortcut](https://littleparrot.app/nest/toolkit/6cb7e7a7-af39-4fe7-b985-6a3fc5f6bbd5) guide has the lot, and [Troubleshooting Your Shortcuts](https://littleparrot.app/nest/toolkit/f969c32b-5325-49a5-91c5-454f5641c1f9) covers anything that misbehaves.
     - title: Share the Load
       isFree: true
       skills:
@@ -554,7 +554,7 @@ course:
 
               ✓ Reuse the talk, ask AI, save pattern, with a prompt you can reshape, for any running log you want.
 
-              Want to rebuild it or check a step? The [Build the Baby Log Shortcut](TOOLKIT_BABY_LOG_PLACEHOLDER) guide walks through every block with screenshots.
+              Want to rebuild it or check a step? The [Build the Baby Log Shortcut](https://littleparrot.app/nest/toolkit/d959a2f5-39c5-4867-84d9-58de57ba075e) guide walks through every block with screenshots.
     - title: Make It Effortless
       isFree: true
       skills:
