@@ -6,15 +6,15 @@ type: "Guide"
 
 Brain Dump into a Single List is an iPhone Shortcut that turns your mental load into one tidy checklist. You tap it, talk through everything on your mind, and your phone uses Apple's built-in AI to turn it into tickable lines in a single note. It's the simple cousin of the full Brain Dump, which sorts what you say into three separate category notes. This one keeps everything in one list, so it's quicker to make.
 
-You'll need an iPhone that runs Apple Intelligence: an **iPhone 15 Pro or 15 Pro Max, any iPhone 16 or newer, or an iPhone Air**. Everything else is built in, with nothing to buy or download.
+*You'll need an iPhone that runs Apple Intelligence: an **iPhone 15 Pro or 15 Pro Max, any iPhone 16 or newer, or an iPhone Air**. Everything else is built in, with nothing to buy or download.*
 
 ### 1. Make one note
 
-Open **Notes** and make a note with **Brain Dump** as its first line. That's the note everything will land in.
+Open the **Notes** app and make a note with **Brain Dump** as its first line. That's the note everything will land in.
 
 ### 2. Add Dictate Text
 
-Open **Shortcuts**, tap **+**, and add **Dictate Text**. Tap the blue arrow, set your **Language**, and set **Stop Listening** to **On Tap** so it keeps listening through your pauses.
+Open the **Shortcuts** app, tap **+**, and add the **Dictate Text** action. Tap the blue arrow, set your **Language**, and set **Stop Listening** to **On Tap** so it keeps listening through your pauses.
 
 ![Adding the Dictate Text action](/courses/ai-your-life-admin-00/build-dictate-text.webp)
 
@@ -34,10 +34,22 @@ Add **Append Checklist Item**. Put the **Response** from Use Model in as the ite
 
 ### 5. Skip the accidental taps
 
-Wrap the lot so an empty tap does nothing. Add an **If**, delete its **Otherwise**, set it to **Dictated Text** → **has any value**, then drag the **If** up under **Dictate Text** and the **End If** to the very bottom, so Use Model and Append sit inside it.
+Wrap the actions so an empty tap doesn't create a made-up list. Add an **If**, delete its **Otherwise** section, set it to **Dictated Text** → **has any value**, then drag the **If** up under **Dictate Text** and the **End If** to the very bottom, so Use Model and Append Checklist Item sit inside it.
 
-### 6. Name it and run it
+### 6. Name it
 
-Rename it **Brain Dump** and tap the **tick** (✓) on the keyboard. Add it to your Home Screen, tap it, talk, and tap the stop button when you're done. Everything you said turns up as one tidy checklist.
+Rename it **Brain Dump** and tap the **tick** (✓) on the keyboard.
 
-**Want to sort into Logistics, Food & Household and Misc instead?** That's the full build, which uses a Dictionary output and one block per category. It's the version taught in the course.
+### 7. Add it to your Home Screen and run it
+
+So you can tap it like an app, add it to your Home Screen:
+
+1. While editing the shortcut, tap the **Share** icon at the **bottom** of the screen.
+2. Choose **Add to Home Screen**.
+3. Give it a **colour** and a **symbol** so it's easy to spot, then tap **Add**.
+
+Now tap the **Brain Dump** icon on your Home Screen to run it, talk through everything on your mind, then tap the stop button (⏹️) when you're done. Everything you said turns up as one tidy checklist.
+
+![Running your shortcut from the Home Screen](/courses/ai-your-life-admin-00/run-the-shortcut.webp)
+
+**Want to sort into Logistics, Food & Household and Misc instead?** That's the full shortcut in the Build the Brain Dump Shortcut toolkit. It's the version taught in the course.
