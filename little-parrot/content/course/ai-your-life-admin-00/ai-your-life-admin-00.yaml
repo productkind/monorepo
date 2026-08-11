@@ -1,15 +1,15 @@
 course:
   id: 05900334-0998-4a98-be6d-946653c9b82d
   note: |-
-    *This course needs an iPhone with Apple Intelligence (iPhone 15 Pro or 15 Pro Max, any iPhone 16 or newer, or an iPhone Air). Everything runs free, with no subscription and nothing to install.*
+    *This course needs an iPhone with Apple Intelligence (iPhone 15 Pro or 15 Pro Max, any iPhone 16 or newer). Everything runs free, with no subscription and nothing to install.*
   cover: /courses/ai-your-life-admin-00/cover.gif
-  title: "Hand Off the Mental Load: Use AI to Turn a Brain Dump Into a List"
+  title: "Hand Off the Mental Load: Use AI to Turn a Brain Dump into a List"
   learningOutcomes:
-    - Build an iPhone Shortcut that sorts a spoken brain dump into shared category checklists you and your partner can tick off
-    - Write a copy-paste prompt that tells the AI how to sort or format what you say
-    - Build a second shortcut that saves tidy entries, each stamped with the time, to one running note
-    - Trigger your shortcuts hands-free by voice, a tap on the back of your phone, or the Action Button
-    - Use both shortcuts in whatever language you speak
+    - Build a voice shortcut that sorts everything on your mind into category checklists your partner can see and tick off, whatever phone they carry
+    - Adapt a ready-made prompt so the AI sorts and formats what you say your way, in whatever language you speak
+    - Build a second shortcut that logs a feed, nappy, nap or weight as a timestamped line in one running note
+    - Trigger either shortcut hands-free, by voice, a tap on the back of your phone, or the Action Button
+    - Reuse the same pattern, talk, let AI sort it, save it, for the next job you'd like your phone to take off you
   challenges:
     - title: The Brain Dump
       isFree: true
@@ -56,7 +56,7 @@ course:
             vimeoId: ''
             youtubeId: ''
             transcript: |-
-              If you're a new mum, you already know the feeling. There's a **running list in your head that never switches off**. You've got more things to do, but way less time. And most of the time, both of your hands are full.
+              If you're a mum, you already know the feeling. There's a **running list in your head that never switches off**. You've got more things to do, but way less time. And most of the time, both of your hands are full.
 
               **Your phone can take that list off you and sort each piece into your notes, where it belongs.** It does that with a **shortcut you build once**, rather than a fiddly system you have to keep tending to.
 
@@ -643,5 +643,5 @@ course:
               **Remember:** you now offload the mental load by voice, in the seconds you have. Now go and forget something on purpose. Your phone's got it. 💪
   titleSplit:
     - "Hand Off the Mental Load:"
-    - Use AI to Turn a Brain Dump Into a List
-  description: Build two voice shortcuts on your iPhone that take the mental load off your hands. Talk, and AI sorts it into organised checklists, in a folder you share with your partner, so what you're carrying is visible and easy to hand off. Record how much your baby fed, their nappies, naps and weight, and each lands as a tidy, timestamped entry. Everything runs on tools already on your phone, with no account needed and no typing once it's built.
+    - Use AI to Turn a Brain Dump into a List
+  description: "Talk, and let AI turn what's in your head into an organised list on your phone. We built this for mums, for the days when both your hands are full and your memory is doing enough already. In about 20 minutes you'll build two voice shortcuts: one sorts a spoken ramble into category checklists in a folder your partner can see and tick off, the other turns a few words about a feed, nappy or nap into a timestamped line in one running note. You'll leave with both shortcuts working, and two prompts you can reword for anything else you want sorted. It all runs on AI that's already on your iPhone, so there's nothing to pay for, no account to make, and no typing once it's built."
