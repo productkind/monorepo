@@ -1,0 +1,211 @@
+---
+challenge: "1 - The Brain Dump"
+type: "Cheat sheet"
+---
+## Troubleshooting Your Shortcuts
+
+This gets your Shortcuts working again when something misbehaves. It's a fix-it lookup for the two iPhone Shortcuts in this course: the **Brain Dump** (you talk, and AI sorts it into checklist notes) and the **Baby Log** (you talk, and AI saves timestamped lines to one note). Find your symptom below, tap it, and read the fix.
+
+### The Brain Dump
+
+<Accordion type="single" collapsible>
+
+<AccordionItem value="invented-list">
+<AccordionTrigger>You tapped it, said nothing, and it invented a random list</AccordionTrigger>
+<AccordionContent>
+
+With the output forced into a dictionary, the model fills empty categories with made-up items. The fix is the outer **If (Dictated Text has any value)** that wraps everything after **Dictate Text**, so an empty tap does nothing. Check it's there and wraps every action.
+
+</AccordionContent>
+</AccordionItem>
+
+<AccordionItem value="empty-category-stall">
+<AccordionTrigger>A category pops up "What checklist item name?" and the shortcut stops</AccordionTrigger>
+<AccordionContent>
+
+That category came back empty, and its **Append Checklist Item** ran with nothing to add. Each category block needs its own **If (Combined Text has any value)** wrapped around the **Append Checklist Item** (drag the Append in between the **If** and **End If**). With the guard in place, an empty category is skipped instead.
+
+</AccordionContent>
+</AccordionItem>
+
+<AccordionItem value="nothing-sorted">
+<AccordionTrigger>Nothing sorted, or you saw a brief error</AccordionTrigger>
+<AccordionContent>
+
+Now and then the model returns the wrong shape or hiccups. Run it again, it almost always sorts cleanly the second time.
+
+</AccordionContent>
+</AccordionItem>
+
+<AccordionItem value="dictation-cut-off">
+<AccordionTrigger>The dictation cut off before you finished</AccordionTrigger>
+<AccordionContent>
+
+Two causes: the screen dimmed mid-dictation (keep it awake, give it a tap if it starts to dim), or **Stop Listening** is set to stop on a pause. For a rambly dump, set **Stop Listening** to **On Tap** so it waits for your tap.
+
+</AccordionContent>
+</AccordionItem>
+
+<AccordionItem value="wrong-category">
+<AccordionTrigger>Items land in the wrong category</AccordionTrigger>
+<AccordionContent>
+
+For example "buy raspberries" ends up in Logistics. That's the model's sorting judgement, and a leading verb like "buy" can pull an item the wrong way. Tighten the category definitions in your prompt: list **Food & Household first** and let it own "buy, get, or restock", and add "(not shopping)" to Logistics. Or just move the odd item by hand in Notes.
+
+</AccordionContent>
+</AccordionItem>
+
+<AccordionItem value="stripped-meaning">
+<AccordionTrigger>An item comes back stripped of its meaning</AccordionTrigger>
+<AccordionContent>
+
+For example "call my partner" loses "about dinner tonight". The prompt is over-trimming. Make sure your prompt says to keep the details that make each item stand on its own: what it is, why, and any time or day.
+
+</AccordionContent>
+</AccordionItem>
+
+<AccordionItem value="one-line">
+<AccordionTrigger>All the items run together on one line in the note</AccordionTrigger>
+<AccordionContent>
+
+Your **Combine Text** action needs to be set to **New Lines** (not Spaces), so each item sits on its own line and becomes its own checklist item.
+
+</AccordionContent>
+</AccordionItem>
+
+<AccordionItem value="get-dictionary-source">
+<AccordionTrigger>Get Dictionary Value is reading the wrong thing</AccordionTrigger>
+<AccordionContent>
+
+On the 2nd and 3rd blocks, **Get Dictionary Value** tends to auto-fill its **Dictionary** field from the action just above it, not the AI's answer. Tap it and set it back to **Response** each time.
+
+</AccordionContent>
+</AccordionItem>
+
+</Accordion>
+
+### Sharing with your partner
+
+<Accordion type="single" collapsible>
+
+<AccordionItem value="folder-not-visible">
+<AccordionTrigger>Your partner can't see the shared folder</AccordionTrigger>
+<AccordionContent>
+
+Check they've accepted the folder invite, and that they're signed in to iCloud with Notes turned on. Folder sharing is Apple-to-Apple only, so if they're on Android, use the WhatsApp/message route instead.
+
+</AccordionContent>
+</AccordionItem>
+
+<AccordionItem value="no-to-field">
+<AccordionTrigger>Tapping Recipients on the Send Message action doesn't show a "To" field</AccordionTrigger>
+<AccordionContent>
+
+Delete the **Send Message** action and add it again; it usually comes back correctly.
+
+</AccordionContent>
+</AccordionItem>
+
+<AccordionItem value="asterisks">
+<AccordionTrigger>The category headings show asterisks instead of bold in the message</AccordionTrigger>
+<AccordionContent>
+
+Single-asterisk bold only renders in **WhatsApp and Telegram**. In email and some apps the `*Logistics*` shows as plain characters. The list still comes through clearly.
+
+</AccordionContent>
+</AccordionItem>
+
+<AccordionItem value="empty-heading">
+<AccordionTrigger>A category heading appears with nothing under it</AccordionTrigger>
+<AccordionContent>
+
+That category was empty this time. It's harmless, just a bare heading.
+
+</AccordionContent>
+</AccordionItem>
+
+<AccordionItem value="messy-formatting">
+<AccordionTrigger>The message came out messy when you asked the AI to format it</AccordionTrigger>
+<AccordionContent>
+
+Don't ask the model to format the WhatsApp message. Type the bold headings and line breaks yourself in the **Text** action; Private Cloud Compute sorts reliably but formats poorly.
+
+</AccordionContent>
+</AccordionItem>
+
+</Accordion>
+
+### The Baby Log
+
+<Accordion type="single" collapsible>
+
+<AccordionItem value="nothing-appends">
+<AccordionTrigger>Nothing appends to the Baby Log note</AccordionTrigger>
+<AccordionContent>
+
+Check the note exists (first line **Baby Log**), that your **Append to Note** has the **Baby Log** note picked in its note field, and that the text is the **Response** from Use Model.
+
+</AccordionContent>
+</AccordionItem>
+
+<AccordionItem value="no-date">
+<AccordionTrigger>The lines have no date or time</AccordionTrigger>
+<AccordionContent>
+
+The **Formatted Date** chip isn't in the prompt. Place it right after "the date and time now is:".
+
+</AccordionContent>
+</AccordionItem>
+
+<AccordionItem value="no-chatgpt">
+<AccordionTrigger>ChatGPT isn't available in the model picker</AccordionTrigger>
+<AccordionContent>
+
+Turn on the extension: **Settings → Apple Intelligence & Siri → Extensions → ChatGPT → Set Up → Next → Enable ChatGPT**.
+
+</AccordionContent>
+</AccordionItem>
+
+<AccordionItem value="babylog-cut-off">
+<AccordionTrigger>The entry stops before you finish talking</AccordionTrigger>
+<AccordionContent>
+
+The Baby Log uses **Stop Listening → After Pause**, which ends on a breath, that suits a short log line. If you want longer, switch that action to **On Tap** and tap to finish.
+
+</AccordionContent>
+</AccordionItem>
+
+</Accordion>
+
+### Hands-free triggers
+
+<Accordion type="single" collapsible>
+
+<AccordionItem value="siri-cuts-off">
+<AccordionTrigger>"Hey Siri, Brain Dump" cuts you off when you pause to think</AccordionTrigger>
+<AccordionContent>
+
+Siri ends the dictation the moment you take a breath. For the pause-heavy Brain Dump, start it by tapping the Home Screen icon, Back Tap, or the Action Button instead. Hey Siri suits the short Baby Log.
+
+</AccordionContent>
+</AccordionItem>
+
+<AccordionItem value="siri-nothing">
+<AccordionTrigger>"Hey Siri" does nothing</AccordionTrigger>
+<AccordionContent>
+
+Siri needs to be on: **Settings → Apple Intelligence & Siri**, turn on **Talk to Siri** (or **Listen for "Hey Siri"**).
+
+</AccordionContent>
+</AccordionItem>
+
+<AccordionItem value="back-tap">
+<AccordionTrigger>Back Tap doesn't fire the shortcut</AccordionTrigger>
+<AccordionContent>
+
+Tap the back of the phone **firmly**, and make sure the screen is on (not black) first. It works even from the lock screen once set in **Settings → Accessibility → Touch → Back Tap**.
+
+</AccordionContent>
+</AccordionItem>
+
+</Accordion>
