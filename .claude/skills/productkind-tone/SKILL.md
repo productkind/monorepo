@@ -9,15 +9,13 @@ Apply this style when creating educational content, courses, tutorials, or expla
 
 ## Core Voice Principles
 
-**Warm and encouraging** — Write as a supportive mentor, not a lecturer. Use phrases like "Now it's your turn", "Don't worry about getting it perfect", "You've got this!" Celebrate progress genuinely, not performatively.
+**Warm and encouraging.** Write as a supportive mentor, not a lecturer. Use phrases like "Now it's your turn", "Don't worry about getting it perfect", "You've got this!" Celebrate progress genuinely, not performatively.
 
-**Authentic over polished** — Avoid marketing buzzwords and corporate speak. Be direct and human. Say "this is hard" when something is hard. Acknowledge struggle openly.
+**Authentic over polished.** Avoid marketing buzzwords and corporate speak. Be direct and human. Say "this is hard" when something is hard. Acknowledge struggle openly.
 
-**Curious and exploratory** — Frame learning as discovery, not instruction. Invite questions and reflection.
+**Curious and exploratory.** Frame learning as discovery, not instruction. Invite questions and reflection.
 
-**Transformation-focused** — Frame courses and content around identity change, not just skill acquisition. "You'll publish your first app, even if you've never coded" is more powerful than "Learn how to build apps."
-
----
+**Transformation-focused.** Frame courses and content around identity change, not just skill acquisition. "You'll publish your first app, even if you've never coded" is more powerful than "Learn how to build apps."
 
 ## The Mentor Voice
 
@@ -119,23 +117,23 @@ Invite self-assessment:
 
 **Frame value as building your idea with AI, not becoming a developer** – Lead with the learner's idea or business outcome. "Like a developer" as a borrowed workflow is fine and can add excitement, but positioning a developer or engineer career or identity as the goal is not. Avoid "no code needed".
 
-**Prefer active voice** – "You'll learn" not "This will teach you"
+**Prefer active voice.** "You'll learn" not "This will teach you"
 
-**Keep sentences accessible** – Short to medium length. One idea per sentence for complex concepts.
+**Keep sentences accessible.** Short to medium length. One idea per sentence for complex concepts.
 
-**Use concrete over abstract** – "scattered across WhatsApp and email" not "fragmented communication channels"
+**Use concrete over abstract.** "scattered across WhatsApp and email" not "fragmented communication channels"
 
-**Refrain from using em dashes (—)** – Avoid using em dashes for more natural language.
+**Refrain from using em dashes (—).** Avoid using em dashes for more natural language.
 
-**Avoid AI buzzwords** – "why it matters", "that matters", "here's the thing", "this one's for you", "Not X, but Y", "from X to Y" (e.g. "go from 'I can't' to 'I just did'"), "It's not... it's...", "X isn't... it's...", "made a real difference", "genuinely" are off-limits.
+**Avoid AI buzzwords.** "Why it matters", "that matters", "here's the thing", "this one's for you", "Not X, but Y", "from X to Y" (e.g. "go from 'I can't' to 'I just did'"), "It's not... it's...", "X isn't... it's...", "made a real difference", "genuinely" are off-limits.
 
-**Avoid "matters"/"matter" as an importance claim, in any form** – Not only the phrases above: "your first prompt matters more than any prompt after it", "tone matters", "faces matter more than artistry" are all banned. It's overused in AI-generated content and asserts importance without saying anything. Say what the thing does or changes instead: "your first prompt sets the direction for everything built after it".
+**Avoid "matters"/"matter" as an importance claim, in any form.** Not only the phrases above: "your first prompt matters more than any prompt after it", "tone matters", "faces matter more than artistry" are all banned. It's overused in AI-generated content and asserts importance without saying anything. Say what the thing does or changes instead: "your first prompt sets the direction for everything built after it".
 
-**Avoid "quietly" as a signifier** – Don't editorialise with "quietly" (e.g. "quietly rewrites", "quietly changed"). State the action plainly.
+**Avoid "quietly" as a signifier.** Don't editorialise with "quietly" (e.g. "quietly rewrites", "quietly changed"). State the action plainly.
 
-**Avoid the two-beat setup-payoff** – Don't pair a short concession with a clipped reversal (e.g. "That sounds small. It isn't.", "Sounds simple. It's not.", "Easy, right? Wrong."). State the point directly.
+**Avoid the two-beat setup-payoff.** Don't pair a short concession with a clipped reversal (e.g. "That sounds small. It isn't.", "Sounds simple. It's not.", "Easy, right? Wrong."). State the point directly.
 
-**Avoid "plain language" and "plain English"** – Don't announce that you're being clear (e.g. "in plain English", "in one plain paragraph"). Just be clear.
+**Avoid "plain language" and "plain English".** Don't announce that you're being clear (e.g. "in plain English", "in one plain paragraph"). Just be clear.
 
 ## Content Structure Template
 
@@ -183,10 +181,10 @@ Good luck, and happy [doing the thing]! 🚀
 - ❌ Excessive emoji use (more than 1-2 per section)
 - ❌ Condescending simplification ("It's easy!" or "Simply do X" when it's not)
 - ❌ "Obviously" or "of course" (implies they should already know)
-- ❌ "Just" before instructions ("Just click the button") — minimises the learning
-- ❌ Hiding difficulty — pretending everything is straightforward when it isn't
+- ❌ "Just" before instructions ("Just click the button") minimises the learning
+- ❌ Hiding difficulty, pretending everything is straightforward when it isn't
 - ❌ Generic encouragement ("Amazing!" "Great job!") without specifics
-- ❌ Lecturing tone — talking at the learner rather than guiding them
+- ❌ Lecturing tone; talking at the learner rather than guiding them
 
 ## Good vs Bad Examples
 
