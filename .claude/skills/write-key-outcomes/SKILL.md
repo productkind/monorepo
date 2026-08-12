@@ -68,7 +68,9 @@ hack, chaos, crisis, fluff, hype
 leverage, synergy, move the needle, circle back, land on, why it matters
 
 #### Weak intensifiers
-actually, genuinely
+"genuinely" as an empty intensifier. Test: delete the word. If the sentence keeps its meaning, it was filler. Not banned where it contrasts with fake or performative ("celebrate progress genuinely, not performatively").
+
+"actually" is NOT banned: it is a natural hedge ("it was actually harder than I thought"). Flag it only when it is sprinkled as filler in nearly every line.
 
 #### Empty fillers
 but here’s the catch, to cut through the chaos, that moment stuck with me, cutting through the noise, that actually lands, that sticks

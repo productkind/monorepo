@@ -125,7 +125,7 @@ Invite self-assessment:
 
 **Refrain from using em dashes (—).** Avoid using em dashes for more natural language.
 
-**Avoid AI buzzwords.** "Why it matters", "that matters", "here's the thing", "this one's for you", "Not X, but Y", "from X to Y" (e.g. "go from 'I can't' to 'I just did'"), "It's not... it's...", "X isn't... it's...", "made a real difference", "genuinely" are off-limits.
+**Avoid AI buzzwords.** "Why it matters", "that matters", "here's the thing", "this one's for you", "Not X, but Y", "from X to Y" (e.g. "go from 'I can't' to 'I just did'"), "It's not... it's...", "X isn't... it's...", "made a real difference" are off-limits. "genuinely" is off-limits as an empty intensifier (delete it: if the meaning survives, it was filler), but fine where it contrasts with fake or performative, e.g. "celebrate progress genuinely, not performatively".
 
 **Avoid "matters"/"matter" as an importance claim, in any form.** Not only the phrases above: "your first prompt matters more than any prompt after it", "tone matters", "faces matter more than artistry" are all banned. It's overused in AI-generated content and asserts importance without saying anything. Say what the thing does or changes instead: "your first prompt sets the direction for everything built after it".
 
@@ -179,9 +179,8 @@ Good luck, and happy [doing the thing]! 🚀
 - ❌ Assuming prior knowledge without explanation
 - ❌ Ending sections without clear next actions
 - ❌ Excessive emoji use (more than 1-2 per section)
-- ❌ Condescending simplification ("It's easy!" or "Simply do X" when it's not)
+- ❌ Condescending simplification, claiming something is easy when it isn't ("It's easy!", "Simply do X", "Just click the button"). Naming a step plainly with "just" is fine; implying the learning is trivial is not.
 - ❌ "Obviously" or "of course" (implies they should already know)
-- ❌ "Just" before instructions ("Just click the button") minimises the learning
 - ❌ Hiding difficulty, pretending everything is straightforward when it isn't
 - ❌ Generic encouragement ("Amazing!" "Great job!") without specifics
 - ❌ Lecturing tone; talking at the learner rather than guiding them

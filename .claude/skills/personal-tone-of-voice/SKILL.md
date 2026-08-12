@@ -108,7 +108,7 @@ Constructions no one would say aloud; they read as writerly copy rather than a p
 - an elevated verb where a plain one fits: "the words you'll reach for most" → "the words you'll use most"
 
 ### Weak intensifiers
-genuinely
+"genuinely" as an empty intensifier. Test: delete the word. If the sentence keeps its meaning, it was filler ("genuinely useful" → "useful"). Not banned where it contrasts with fake or performative, e.g. "celebrate progress genuinely, not performatively".
 
 "actually" is NOT banned: it is one of my natural hedges ("it was actually harder than I thought", "Vibe coding is actually a great way to learn"). Use it the way I do, as an honest concession, not sprinkled into every paragraph as filler.
 

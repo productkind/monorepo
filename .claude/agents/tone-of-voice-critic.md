@@ -58,7 +58,8 @@ Apply the personal-tone-of-voice banned list in full, and list **every** instanc
 - **Rhetorical formulas:** "not X but Y", "It's not… it's…", "X isn't… it's…", including the split-across-a-full-stop form. And the two-beat setup-payoff: "That sounds small. It isn't."
 - **"from X to Y" transformation phrasing** ("from scattered idea to shipped product").
 - **Announcing clarity:** "in plain English", "in plain language", "plain wording". Do not use "plain" to describe writing style at all; say "simple wording".
-- **"quietly" as a signifier**, **"genuinely"**, **"obviously" / "of course"**.
+- **"quietly" as a signifier**, **"obviously" / "of course"**.
+- **"genuinely" as an empty intensifier.** Delete the word: if the sentence keeps its meaning, it was filler and is a hit. Not a fault where it contrasts with fake or performative ("celebrate progress genuinely, not performatively").
 - **"write up" / "wrote up"** (use "write about" or "wrote down"), **"wrestling with"** (use "struggling with").
 - **Business jargon and figurative "land / landed"**: leverage, synergy, move the needle, circle back, land on, "it didn't land", "why it matters".
 - **Drama and hyperbole:** hack, chaos, crisis, fluff, hype, game-changing, mind-blowing.

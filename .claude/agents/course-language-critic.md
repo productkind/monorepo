@@ -33,7 +33,8 @@ Scan the entire course (every text step, quiz question, option, explanation, des
 - **Two-beat setup-payoff** ("That sounds small. It isn't.", "Sounds simple. It's not.", "Easy, right? Wrong."), state the point directly.
 - **"Not X, but Y" / "It's not… it's…" / "X isn't… it's…"** rhetorical formulas.
 - **Announcing clarity** ("in plain English", "in plain language", "in one plain paragraph"), just be clear.
-- **AI/marketing buzzwords:** "why it matters", "that matters", "here's the thing", "bottom line", "this one's for you", "no fluff", "made a real difference", "genuinely", "actually" (as a weak intensifier), "leverage", "synergy", "move the needle", "circle back", "cut through the noise", "this matters because".
+- **AI/marketing buzzwords:** "why it matters", "that matters", "here's the thing", "bottom line", "this one's for you", "no fluff", "made a real difference", "actually" (as a weak intensifier only), "leverage", "synergy", "move the needle", "circle back", "cut through the noise", "this matters because".
+- **"genuinely" as an empty intensifier.** Delete the word: if the sentence keeps its meaning, it was filler and is a hit. Not a fault where it contrasts with fake or performative ("celebrate progress genuinely, not performatively").
 - **Drama words:** "hack", "chaos", "crisis", "fluff", "hype".
 - **Performative or generic encouragement:** "Amazing!", "Great job!" with no specifics, or excessive exclamation marks / forced enthusiasm.
 
