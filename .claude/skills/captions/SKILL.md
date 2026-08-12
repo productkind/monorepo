@@ -65,7 +65,7 @@ the spec (and the source article/course) before writing.
 - Write with **personal-tone-of-voice** so every caption and comment sounds
   like a person talking to a friend, not marketing copy. Use
   **productkind-tone** / **little-parrot-ai-skill-gap** for brand context.
-- British English, no em dashes.
+- Apply the **language-rules** skill in full, and invoke it if it is not already loaded. It is the single source for banned words and phrases, British English, em dashes and punctuation, AI dressing, and how we frame AI.
 - Do a deliberate phrase-by-phrase banned-list pass (the banned words and
   phrases live in personal-tone-of-voice) on every caption AND every
   founder comment before showing the draft.

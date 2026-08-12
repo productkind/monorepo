@@ -4,6 +4,7 @@ description: "Use this agent to evaluate a drafted Little Parrot HTML email agai
 tools: Read
 model: opus
 skills:
+  - language-rules
   - little-parrot-email
   - productkind-tone
 color: orange
@@ -39,8 +40,7 @@ Inbox presentation (judge if the subject / preheader were provided):
 - **Preheader** not set, over ~90 characters, a repeat of the subject line, or leaking "view in browser" / unsubscribe / alt text into the preview.
 
 Copy:
-- **Em dashes (—).** Not British English, banned across all Little Parrot copy. Quote every one.
-- **Not British English** (must be organise, behaviour, colour, prioritise, etc.).
+- Any banned word or phrase from **language-rules**, preloaded at startup: the exact-match phrases in section 2, the judgement rules in section 3, and the mechanics in section 1. Read its **Not faults** section before flagging: "actually" as her honest hedge, an ordinary "rather than" comparison, the spaced en dash, and a single tonal emoji carrying warmth or self-deprecation are all correct; strings of emoji as decoration are not.
 - **Patronising language** ("That took courage", "Amazing!", "Great job!").
 - **Doubt-triggering purchase language** ("big commitment", "big investment").
 - **Deflating openings** ("Even if you don't win").

@@ -56,33 +56,10 @@ Each of the examples below exemplify the common themes and structures we see in 
 - **Welcoming and Encouraging:** The tone should make learners feel empowered and excited to learn, while normalising the challenges of learning something new.
 - **Clear and Concise:** Every sentence should have a purpose, and the overall message should be easy to grasp quickly.
 - **Outcome-Focused:** The language should consistently highlight the transformation and benefits for the learner, rather than just describing the content.
-- **British English:** Use British English spelling and grammar conventions.
-- **Use exaggeration-free language**: Avoid overpromising or using hyperbolic language.
 
-### Avoid these hyperbolic and jargon-heavy words and phrases that can undermine the credibility of our content and make it less accessible to learners:
+### Language
 
-#### Drama words
-hack, chaos, crisis, fluff, hype
-
-#### Business jargon
-leverage, synergy, move the needle, circle back, land on, why it matters
-
-#### Weak intensifiers
-"genuinely" as an empty intensifier. Test: delete the word. If the sentence keeps its meaning, it was filler. Not banned where it contrasts with fake or performative ("celebrate progress genuinely, not performatively").
-
-"actually" is NOT banned: it is a natural hedge ("it was actually harder than I thought"). Flag it only when it is sprinkled as filler in nearly every line.
-
-#### Empty fillers
-but here’s the catch, to cut through the chaos, that moment stuck with me, cutting through the noise, that actually lands, that sticks
-
-#### Pseudo punchlines
-Here's the thing, Bottom line:, No fluff, This one's for you, Why this matters, What moved me, This matters because, that matters
-
-#### Rhetorical formulas
-"Not X, but Y", "It's not... it's...", "X isn't... it's...", "In this piece"
-
-#### Formatting
-- No em dashes (—)
+The banned list and the shared language rules live in the **language-rules** skill, which applies to every word we publish. **Apply it in full, and invoke it if it is not already loaded.** It covers British English, the exact-match banned phrases, the rules that need judgement, em dashes and punctuation, AI dressing, concrete over abstract, active voice, inline definitions, tool terminology, and the positions our copy always takes.
 
 ## Output Format for content
 A markdown file with the following structure:

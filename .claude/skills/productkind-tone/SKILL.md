@@ -107,33 +107,15 @@ Invite self-assessment:
 
 ## Language Guidelines
 
-**Use British English throughout** – Follow British English grammar and punctiation (e.g. organise, colour).
+The banned list and the shared language rules live in the **language-rules** skill, which applies to every word we publish. **Apply it in full, and invoke it if it is not already loaded.** It covers British English, the exact-match banned phrases, the rules that need judgement, em dashes and punctuation, AI dressing, concrete over abstract, active voice, inline definitions, tool terminology, and the positions our copy always takes.
 
-**Use direct address** – "You" and "your" extensively. Write to the person, not about them.
+What is specific to teaching:
 
-**Explain jargon when introduced** – "MVP (Minimum Viable Product)" on first use, then "MVP" thereafter.
+**Use direct address.** "You" and "your" extensively. Write to the person, not about them.
 
-**Distinguish AI tool types** – Say "AI chat assistant" for ChatGPT and Claude.ai (you copy the answer out) and "AI agent" for Claude Code and Codex (it acts in your files and shows the changes). Use "AI chat assistant" consistently rather than shortening it to "chat assistant". Avoid "chat AI" and "agentic".
+**Pitch every sentence at a non-technical beginner.** She is often busy and easily intimidated by technical content, so every sentence has to make sense without a dictionary or a search. Assume nothing is too basic to explain, and spell out acronyms on first use.
 
-**Frame value as building your idea with AI, not becoming a developer** – Lead with the learner's idea or business outcome. "Like a developer" as a borrowed workflow is fine and can add excitement, but positioning a developer or engineer career or identity as the goal is not. Avoid "no code needed".
-
-**Prefer active voice.** "You'll learn" not "This will teach you"
-
-**Keep sentences accessible.** Short to medium length. One idea per sentence for complex concepts.
-
-**Use concrete over abstract.** "scattered across WhatsApp and email" not "fragmented communication channels"
-
-**Refrain from using em dashes (—).** Avoid using em dashes for more natural language.
-
-**Avoid AI buzzwords.** "Why it matters", "that matters", "here's the thing", "this one's for you", "Not X, but Y", "from X to Y" (e.g. "go from 'I can't' to 'I just did'"), "It's not... it's...", "X isn't... it's...", "made a real difference" are off-limits. "genuinely" is off-limits as an empty intensifier (delete it: if the meaning survives, it was filler), but fine where it contrasts with fake or performative, e.g. "celebrate progress genuinely, not performatively".
-
-**Avoid "matters"/"matter" as an importance claim, in any form.** Not only the phrases above: "your first prompt matters more than any prompt after it", "tone matters", "faces matter more than artistry" are all banned. It's overused in AI-generated content and asserts importance without saying anything. Say what the thing does or changes instead: "your first prompt sets the direction for everything built after it".
-
-**Avoid "quietly" as a signifier.** Don't editorialise with "quietly" (e.g. "quietly rewrites", "quietly changed"). State the action plainly.
-
-**Avoid the two-beat setup-payoff.** Don't pair a short concession with a clipped reversal (e.g. "That sounds small. It isn't.", "Sounds simple. It's not.", "Easy, right? Wrong."). State the point directly.
-
-**Avoid "plain language" and "plain English".** Don't announce that you're being clear (e.g. "in plain English", "in one plain paragraph"). Just be clear.
+**Analogies arrive after the concept they explain**, never before.
 
 ## Content Structure Template
 

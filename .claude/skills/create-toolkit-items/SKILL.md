@@ -56,7 +56,7 @@ Each toolkit item belongs to a specific challenge. Choose the challenge where th
 
 ### Writing principles
 
-**Follow the productkind tone.** Warm, encouraging, mentor-like. British English. No em dashes. No AI buzzwords.
+**Follow the productkind tone.** Warm, encouraging, mentor-like. Apply the **language-rules** skill in full, and invoke it if it is not already loaded. It is the single source for banned words and phrases, British English, em dashes and punctuation, AI dressing, and how we frame AI.
 
 **Open with the payoff, and make it work cold.** The first sentence says what the learner *gets*, not what the item is or which challenge it belongs to: "The Brain Dump is an iPhone Shortcut that turns your mental load into organised lists" beats "Every step to build the Brain Dump, in order." Then, in the same opening, name the tool, the input (you talk), and the output (sorted checklist notes), so someone who found the item cold in the Toolkit menu understands it before any how-to.
 

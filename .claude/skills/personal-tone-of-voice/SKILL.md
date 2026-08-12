@@ -1,6 +1,6 @@
 ---
 name: personal-tone-of-voice
-description: Apply this personal tone of voice when writing LinkedIn posts, Substack Notes.
+description: Kinga's first-person writing voice: her signature moves, honesty markers, how she opens and closes a piece, and the register for writing as herself. Use for LinkedIn posts, Substack articles and Notes, and founder comments. The banned words and shared language rules are in the language-rules skill, which applies to all copy.
 ---
 
 ## Audience
@@ -10,12 +10,6 @@ Assume intelligent adults who are time-poor, skeptical of hype, and allergic to 
 ## Core Principle
 
 Clarity through care. Writing exists to reduce confusion and enable action, not to signal intelligence or status. Make complex ideas feel navigable and actionable.
-
-## Language
-
-Use British English throughout (organisation, behaviour, colour, prioritise).
-
----
 
 ## Voice
 
@@ -73,67 +67,19 @@ These come from a close read of my 20 published Substack articles. Draft with th
 - **Scare quotes for borrowed words**: a "spaceship", "just", "revenue streams".
 - **Narrative time markers**: "By the summer... In the autumn..."
 - **Texture stays.** Comma splices and the odd non-native turn of phrase are part of the voice; don't polish them out.
-- **Emoji: almost never.** Zero emoji across all 20 articles. On LinkedIn, at most one tonal emoji, and only when it carries real warmth; it is never the default warmth device.
+- **Emoji: almost never in my own writing.** Zero emoji across all 20 published articles. In a Substack piece, a LinkedIn post or a founder comment, at most one tonal emoji, and only where it carries real warmth or self-deprecation (e.g. one 😅 after an honest aside); it is never the default warmth device. This is my register, not a rule for brand deliverables: captions, courses and emails follow language-rules and their own format skill.
 
 ---
 
 ## Banned Language
 
-### Hyperbolic adjectives
-game-changing, mind-blowing
+The banned list and the shared language rules live in the **language-rules** skill, which applies to every word we publish. **Apply it in full, and invoke it if it is not already loaded.** It covers British English, the exact-match banned phrases, the rules that need judgement, em dashes and punctuation, AI dressing, concrete over abstract, active voice, inline definitions, tool terminology, and the positions our copy always takes.
 
-### Drama words
-hack, chaos, crisis, fluff, hype
+Only the rules specific to my first-person writing live here:
 
-### Editorialising adverbs
-"quietly" as a signifier (e.g. "it can quietly rewrite", "quietly changed"). State the action plainly: "it can rewrite a paragraph you never mentioned".
-
-### Business jargon
-leverage, synergy, move the needle, circle back, land on, land / landed (figurative, e.g. "it landed differently for me", "how you land a message", "it didn't land"), why it matters
-
-### Announcing clarity
-plain language, plain English, plain wording (e.g. "in plain English", "in one plain paragraph"). Don't announce that you're being clear. Just be clear.
-
-More broadly: don't use "plain" to describe writing style at all, including inside example prompts and tone blocks. Say "simple wording".
-
-### Phrases I don't use
-write up / wrote up / write it up (e.g. "thinking I never wrote up", "I wrote the story up"). Use "write about", "wrote about", or "wrote down" instead.
-
-wrestling with (e.g. "what you're wrestling with as you build"). Use "struggling with" instead.
-
-### Artificial writerly phrasing
-Constructions no one would say aloud; they read as writerly copy rather than a person talking. Say each line the way you'd say it to a colleague, plain verbs and plain subjects. Recurring tells below (offender → plain version); add new ones as single lines rather than new paragraphs.
-- ownership metaphors for abstract things: "once the names are yours", "make the vocabulary your own", "the skills are now yours" → "once you use these names", "once you know them"
-- abstract placeholder noun ("the piece", "the thing", "the part") + a "handed / given / gifted" metaphor: "the words people are rarely handed", "the thing they were never given" → "most people were never taught the words"
-- an elevated verb where a plain one fits: "the words you'll reach for most" → "the words you'll use most"
-
-### Weak intensifiers
-"genuinely" as an empty intensifier. Test: delete the word. If the sentence keeps its meaning, it was filler ("genuinely useful" → "useful"). Not banned where it contrasts with fake or performative, e.g. "celebrate progress genuinely, not performatively".
-
-"actually" is NOT banned: it is one of my natural hedges ("it was actually harder than I thought", "Vibe coding is actually a great way to learn"). Use it the way I do, as an honest concession, not sprinkled into every paragraph as filler.
-
-### Empty fillers
-but here’s the catch, to cut through the chaos, that moment stuck with me, this stuck with me, it stuck with me, that stayed with me, this stayed with me, it stayed with me, cutting through the noise, that actually lands, that sticks, which makes a real difference, makes a real difference, I keep coming back to, one idea I keep coming back to, it clicked, the book/it finally clicked, something clicked
-
-### Pseudo punchlines
-Here's the thing, Bottom line:, No fluff, This one's for you, Why this matters, What moved me, This matters because, that matters, it matters most, matters most for
-
-Also banned: "matters"/"matter" as an importance claim in any form (e.g. "your first prompt matters more than any prompt after it", "tone matters", "faces matter more than artistry"). It's overused in AI-generated content. Say what the thing does or changes instead: "your first prompt sets the direction for everything built after it".
-
-### Rhetorical formulas
-"Not X, but Y", "It's not... it's...", "X isn't... it's...", "In this piece"
-
-This counts even when the negation and the assertion are split into two sentences by a full stop, e.g. "The honest barrier isn't the editing. It's the setup." or "The hard part isn't the code. It's the fear." State the point directly: "The hard part is the setup."
-
-**Not banned:** an ordinary "rather than" or "instead of" comparison in a single natural sentence, e.g. "a result that surprises me counts as information rather than a judgement on me". That is plain comparison, not a rhetorical reversal. The ban targets explicit negation-then-reversal ("not X but Y", "isn't… it's…") and the two-beat drama below. Don't flatten a natural "rather than" sentence into something blander just to satisfy the rule.
-
-Two-beat setup-payoff: a short concession sentence followed by a clipped reversal, e.g. "That sounds small. It isn't.", "Sounds simple. It's not.", "Easy, right? Wrong." State the point directly instead.
-
-### Formatting
-- No em dashes (—). For asides, use my natural marker instead: the spaced en dash, e.g. "someone – usually a man – with all the right answers"
-- No hashtags, except on Instagram. Instagram is the one channel where hashtags help reach, so Instagram posts include a focused, curated set (~10-12) of relevant tags placed below the caption fold. Everywhere else (LinkedIn, Substack), no hashtags.
-- No decorative punctuation (decorative dashes, bullets, symbol strings)
-- A single, tonal emoji is fine on LinkedIn and Substack when it carries real warmth or self-deprecation (e.g. one 😅 after an honest aside). Not strings of emoji, and not as decoration.
+- **No hashtags** on LinkedIn or Substack.
+- **The spaced en dash is my aside marker**: "someone – usually a man – with all the right answers".
+- **"actually" is one of my natural hedges** ("it was actually harder than I thought"). Use it the way I do, as an honest concession.
 
 ---
 
