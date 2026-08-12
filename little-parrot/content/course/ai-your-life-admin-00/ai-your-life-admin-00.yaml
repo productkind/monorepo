@@ -374,7 +374,7 @@ course:
               1. Add WhatsApp's **Send Message** action right after the **Text** action, and before the final **End If**.
               2. Put **only** that **Text** variable in the Message, then tap **Recipients** to set who it goes to.
 
-              If a **To** field doesn't appear when you tap **Recipients** (you get something else instead), delete the **Send Message** action and add it again, it usually comes back right.
+              If a **To** field doesn't appear when you tap **Recipients** (you get variables instead), delete the **Send Message** action and add it again, it usually comes back right.
             imageUrl: /courses/ai-your-life-admin-00/build-whatsapp-send.webp
         - type: text
           title: "Other messaging apps"
@@ -406,6 +406,8 @@ course:
               ✓ Reach your partner on any phone: the shared folder on iPhone, or an automatic message on any other.
 
               ✓ Every brain dump gets to them on its own, without you having to forward anything.
+
+              Want the sending steps in one place? The [Send Your List to Your Partner](https://littleparrot.app/nest/toolkit/69103a0a-1e68-4db2-ad24-4ff619f10d52) guide walks through the message and the send action with screenshots.
     - title: The Baby Log
       isFree: true
       skills:

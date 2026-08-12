@@ -84,6 +84,7 @@ Use these links when referencing toolkit items in course content.
 | Toolkit Item | URL |
 |-------------|-----|
 | Build the Brain Dump Shortcut | `https://littleparrot.app/nest/toolkit/6cb7e7a7-af39-4fe7-b985-6a3fc5f6bbd5` |
+| Send Your List to Your Partner | `https://littleparrot.app/nest/toolkit/69103a0a-1e68-4db2-ad24-4ff619f10d52` |
 | Troubleshooting Your Shortcuts | `https://littleparrot.app/nest/toolkit/f969c32b-5325-49a5-91c5-454f5641c1f9` |
 | Brain Dump into a Single List | `https://littleparrot.app/nest/toolkit/62797a30-4043-4875-96e0-d8efa631a455` |
 | Build the Baby Log Shortcut | `https://littleparrot.app/nest/toolkit/d959a2f5-39c5-4867-84d9-58de57ba075e` |
