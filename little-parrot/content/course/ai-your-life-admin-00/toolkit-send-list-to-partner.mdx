@@ -1,0 +1,63 @@
+---
+challenge: "2 - Share the Load"
+type: "Guide"
+---
+## Send Your List to Your Partner
+
+This adds one more step to your Brain Dump: after it sorts what you said, it messages the lists straight to your partner via WhatsApp or another messaging app. So **the mental load** isn't just out of your head, it's **shared with someone who can help carry it**. Each time you run the shortcut, the new items are sent to them, with nothing to forward by hand.
+
+Here's how such a message looks when it arrives on your partner's phone:
+
+![The sorted list arriving as a WhatsApp message](/courses/ai-your-life-admin-00/whatsapp-message.webp)
+
+You'll need the **Brain Dump** shortcut already built (the [Build the Brain Dump Shortcut](https://littleparrot.app/nest/toolkit/6cb7e7a7-af39-4fe7-b985-6a3fc5f6bbd5) guide has every step), and, for this route, **WhatsApp** installed on your phone. Another messaging app works too (see the last step).
+
+### If your partner has an iPhone, you're already set
+
+Open the **Notes** app, press and hold your **Mental Load** folder, and tap **Share Folder** to invite them. A shared folder updates live on both phones, so they see every item you add with no messaging needed. If you want to nudge your partner by **sending them the new items on your list** via a message, follow the steps below.
+
+### 1. Lay out the message
+
+You build the message once, inside the shortcut, so it arrives clear and organised every time.
+
+1. Open the **Shortcuts** app.
+2. Tap the three dots (**...**) on your **Brain Dump** shortcut to open it in edit mode, then scroll to the bottom.
+3. Add a **Text** action **after** your **Misc** block's **End If**, and just above the very last **End If**, so it sits inside the outer guard but outside every category's own If.
+4. Build the message inside that **Text** action one category at a time, starting with **Logistics**, then **Food & Household**, then **Misc**:
+   - Type the **bold heading** (single asterisks make it bold in WhatsApp), for example `*Logistics*`.
+   - Start a new line (hit enter).
+   - Tap **Select Variable**, scroll up to *that category's* **Combined Text** (to pick the right one, check the **Get Value for [category]** action just above it), and tap the blue **Combined Text**. The blocks look alike, so make sure it's from the matching category.
+
+It should end up like this:
+
+```
+*Logistics*
+[your Logistics Combined Text]
+
+*Food & Household*
+[your Food & Household Combined Text]
+
+*Misc*
+[your Misc Combined Text]
+```
+
+![Laying out the message in a Text action](/courses/ai-your-life-admin-00/build-whatsapp-text.webp)
+
+### 2. Add the action that sends it
+
+1. Add WhatsApp's **Send Message** action right after the **Text** action, and before the final **End If**.
+2. Put **only** that **Text** variable in the **Message**, then tap **Recipients** to choose who it goes to.
+
+Tap **Recipients** with a quick tap, not a press and hold. If a **To** field doesn't appear when you tap it (you get variables instead), delete the **Send Message** action and add it again, it usually comes back right.
+
+![Adding WhatsApp's Send Message action](/courses/ai-your-life-admin-00/build-whatsapp-send.webp)
+
+### 3. Prefer a different app?
+
+Telegram, WeChat, even email all work. Look for that app's own send action instead of WhatsApp's (for email it's **Send Email**), and add the same **Text** variable as the Message.
+
+*One thing to note:* WhatsApp and Telegram show single asterisks as **bold**, but email and some apps don't, so there the `*Logistics*` headings may show the asterisks as-is. The list still goes through clearly and well organised.
+
+### Test it
+
+Run your **Brain Dump**, say a couple of things, and check the message is sent in your WhatsApp conversation with your partner. If it doesn't, the [Troubleshooting Your Shortcuts](https://littleparrot.app/nest/toolkit/f969c32b-5325-49a5-91c5-454f5641c1f9) guide covers the common sharing snags.
