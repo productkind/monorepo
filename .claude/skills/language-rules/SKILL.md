@@ -75,7 +75,7 @@ Here's the thing, Bottom line, No fluff, This one's for you, Why this matters, W
 
 The largest category, and the one a keyword scan will not find: wording that sounds meaningful but states nothing concrete. Vague nouns, figurative verbs, withheld subjects, unfinished thoughts, arranged symmetry, throat-clearing openers, empty payoff lines.
 
-The rubric is a corpus of real corrections, in `.claude/skills/personal-tone-of-voice/references/ai-dressing-corrections.md`. Read it when judging or revising a draft, not from memory. It applies to all of our copy, not only personal posts.
+The rubric is a corpus of real corrections, in [references/ai-dressing-corrections.md](references/ai-dressing-corrections.md) next to this file (full path: `.claude/skills/language-rules/references/ai-dressing-corrections.md`). Read it when judging or revising a draft, not from memory. It applies to all of our copy, not only personal posts.
 
 The rule to carry from it: **precision, not concision.** Corrections are often longer than the line they replace. Never fix a vague line by deleting the concrete information; when a vague line was carrying the payoff, name the payoff.
 
