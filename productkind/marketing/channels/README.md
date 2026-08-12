@@ -8,9 +8,7 @@ community's posting rules, add or update its block here once. Fields marked
 `TO FILL` are things only you know. The more accurate this is, the less editing
 you do on each draft.
 
-**Ref params:** most channels add a `?ref=` tag to links so you can see in analytics
-which channel drove a click. Some (WhatsApp, Reddit) use `none`, a plain link, so the
-message doesn't read as promotional.
+**Utm params:** most channels add a `?utm_source=` parameter to links so you can see in analytics which channel drove a click. Some (WhatsApp, Reddit) use `none`, a plain link, so the message doesn't read as promotional.
 
 ---
 
@@ -24,7 +22,7 @@ message doesn't read as promotional.
   `linkedin-post` skill.)
 - **Self-promo rules:** fine to post, but lead with the insight or the person's win,
   not the product. One sentence of Little Parrot context is enough.
-- **Ref param:** `linkedin`
+- **Utm param:** `linkedin`
 - **Posting from:** both, with different angles:
   - Personal profile (Kinga): https://www.linkedin.com/in/kinga-magyar/ - founder voice, first person.
   - Company page (productkind): https://www.linkedin.com/company/productkind/ - "we" voice.
@@ -39,7 +37,7 @@ message doesn't read as promotional.
   Substack Notes section.)
 - **Self-promo rules:** your own channel, so promotion is expected, but keep it
   generous and thinking-led.
-- **Ref param:** `substack`
+- **Utm param:** `substack`
 - **Posting from:**
   - Notes from the profile: https://substack.com/@kingamagyar
   - Posts to the publication: https://productkind.substack.com/
@@ -56,7 +54,7 @@ message doesn't read as promotional.
   in bio" (or a Story with a link sticker). A few relevant hashtags are fine here,
   unlike LinkedIn.
 - **Self-promo rules:** own account, promotion expected; keep it warm and mission-led.
-- **Ref param:** `instagram` (put it on the bio link or the Story link sticker; caption
+- **Utm param:** `instagram` (put it on the bio link or the Story link sticker; caption
   links aren't clickable, so they can't carry a tag inline).
 - **Assets:** reuse the mission visual or the parrot carousel.
 
@@ -69,8 +67,7 @@ message doesn't read as promotional.
   monthly announcements in `little-parrot/assets/discord/`, named `YYYY-MM-monthly-update.md`.
   One-off posts are `YYYY-MM-DD-<topic>.md`.)
 - **Self-promo rules:** our space, links welcome.
-- **Tracking param:** `?utm_source=discord` (share-asks use `discord-share`). PostHog picks
-  `utm_source` up directly, so use it rather than a custom `ref` param.
+- **Utm param:** `discord`
 - **Posting from:** Little Parrot Discord
 - **Assets:** attach GIFs/PNGs inline where referenced
 
@@ -83,7 +80,7 @@ you post the same message into the right channel in each community yourself.
 - **Format:** short, value-first. Slack rewards a clear first line; details below.
   One clean link.
 - **Self-promo rules:** post only where links are welcome (you decide per community).
-- **Ref param:** `slack`
+- **Utm param:** `slack`
 
 ## Geek Girls email list
 
@@ -93,7 +90,7 @@ you post the same message into the right channel in each community yourself.
   line plus a short, warm body, written like a personal note. One clean link.
 - **Self-promo rules:** you send it yourself to the list, so promotion is fine, but
   keep it warm and member-first.
-- **Ref param:** `ggpt-email`
+- **Utm param:** `ggpt-email`
 
 ## WhatsApp groups
 
@@ -104,7 +101,7 @@ One shared draft for all WhatsApp groups. You post it into whichever groups it s
   so one clean link. A single message, ideally under 60 words.
 - **Self-promo rules:** sharing is welcome as long as it serves the group members'
   interest, so lead with what they get, not the offer.
-- **Ref param:** none (use the plain link so the message doesn't read as promotional).
+- **Utm param:** none (use the plain link so the message doesn't read as promotional).
 
 ## Reddit
 
@@ -118,7 +115,7 @@ One shared draft. You choose the subreddits and post where it fits the rules.
 - **Format:** a helpful post or comment first; the offer is secondary. No marketing tone.
 - **Self-promo rules:** lead with genuine value, mention the free offer as a footnote,
   and check the subreddit's rules before posting.
-- **Ref param:** none (use the plain link so the message doesn't read as promotional).
+- **Utm param:** none (use the plain link so the message doesn't read as promotional).
 
 ## Portuguese Women in Tech (Circle community)
 
@@ -127,7 +124,7 @@ One shared draft. You choose the subreddits and post where it fits the rules.
 - **Format:** community post. Can be a touch longer than Slack; still community-first
   and generous. You choose the space/topic to post in.
 - **Self-promo rules:** keep it member-first; share because it helps them.
-- **Ref param:** `pwit`
+- **Utm param:** `pwit`
 
 ---
 
