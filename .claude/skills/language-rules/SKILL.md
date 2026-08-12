@@ -25,8 +25,8 @@ When a correction applies to **both** a Substack article and a course step, it b
 - **British English throughout.** organise, behaviour, colour, prioritise, recognise, apologise. British punctuation too.
 - **No em dashes (—).** For an aside, use the spaced en dash: "someone – usually a man – with all the right answers". Otherwise a comma, a colon, parentheses, or two sentences.
 - **No decorative punctuation.** No decorative dashes, symbol strings or bullet glyphs used for ornament.
-- **Emoji carry feeling or they do not appear.** An emoji is fine when it carries an emotion or makes a point warmer. It is never decoration, and never a string. Per-format limits are set by the voice skills.
-- **Hashtags on Instagram only.** A curated set of roughly 10 to 12, below the caption fold. Nowhere else.
+- **Emoji make a point warmer or carry an emotion.** That is the test, and it includes functional signposting where it genuinely helps the reader (a 🔖 on a save-ask, a ✅ on a finished step). What is wrong is littering: strings of emoji, one on every line, or emoji standing in for words that should be written. Per-format limits are set by the voice and format skills.
+- **Hashtags are a channel decision, never a language one.** Never on LinkedIn or Substack. Where they are used (TikTok, Instagram, YouTube Shorts), the count and placement are set by the captions and carousel skills, and only their wording is judged here: niche and specific, not tag-speak.
 
 ## 2. Banned phrases (exact match)
 

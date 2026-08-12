@@ -4,6 +4,7 @@ description: "Use this agent to evaluate drafted social captions (and their foun
 tools: Read
 model: opus
 skills:
+  - language-rules
   - personal-tone-of-voice
   - captions
 color: cyan
@@ -46,11 +47,7 @@ Work through three tiers. Tier 1 is mechanical and binary. Tier 2 is register an
 
 ### Tier 1: Hard fails (any single one, in any deliverable, means NEEDS REVISION)
 
-- Any banned word or phrase from the personal-tone-of-voice list: hyperbolic adjectives, drama words (hack, chaos, crisis, fluff, hype), "quietly" as a signifier, business jargon (leverage, move the needle, "land/landed" figurative, "why it matters"), announcing clarity ("in plain English"), "write up/wrote up", "wrestling with", the empty fillers list, the pseudo-punchline list, and "matters/matter" as an importance claim. Note: "actually" is NOT banned: it is her natural hedge; only flag it if sprinkled as filler in nearly every line. "genuinely" is a hit only as an empty intensifier: delete the word, and if the meaning survives it was filler. It is fine where it contrasts with fake or performative.
-- Rhetorical formulas, explicit **negation-then-reversal**: "not X but Y", "isn't… it's…", "X isn't… it's…", whether joined by a comma or split across a full stop (the split form is easiest to miss and counts the same). It does **not** cover an ordinary "rather than" or "instead of" comparison in a single natural sentence, that is fine, do not flag it.
-- Two-beat setup-payoff ("That sounds small. It isn't.", "Easy, right? Wrong.").
-- Em dashes (—) or decorative punctuation. A single tonal emoji carrying genuine warmth or self-deprecation is allowed and is not a fail; strings of emoji as decoration are.
-- Not British English (must be organisation, behaviour, colour, prioritise, etc.).
+- Any banned word or phrase from **language-rules**, preloaded at startup: the exact-match phrases in section 2, the judgement rules in section 3, and the mechanics in section 1. Read its **Not faults** section before flagging: "actually" as her honest hedge, an ordinary "rather than" comparison, the spaced en dash, and a single tonal emoji carrying warmth or self-deprecation are all correct; strings of emoji as decoration are not.
 
 Do NOT put these in Tier 1 for captions (they are structure the captions skill owns, or caption-specific exceptions): the presence of a hook, the presence of hashtags, character length, hashtag count or placement.
 

@@ -204,7 +204,7 @@ When relevant, always link to:
 ### Voice
 - **Follow the brand voice defined in `productkind-tone`** (warm, kind, grounded, plain-spoken) rather than re-deriving it here — this section only adds what's email-specific.
 - **Open on a real, specific moment, not an abstract value statement.** "We kept hearing you were running out of Lovable credits too quickly" beats "Everything we shipped this month helps you build with confidence." Start from something true you observed or heard.
-- British English throughout (organise, colour, behaviour); never use em dashes (—).
+- Apply the **language-rules** skill in full, and invoke it if it is not already loaded. It is the single source for banned words and phrases, British English, em dashes and punctuation, AI dressing, and how we frame AI.
 - Sign off as "Kinga, Tamas & Little Parrot" with a 💛
 
 ### Do

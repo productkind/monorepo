@@ -65,7 +65,7 @@ primary growth channel, so share-asks are the point, not decoration.
 
 ## Shared copy rules (non-negotiable)
 
-- **No em dashes. British English.** This is a hard rule for all Little Parrot copy.
+- Apply the **language-rules** skill in full, and invoke it if it is not already loaded. It is the single source for banned words and phrases, British English, em dashes and punctuation, AI dressing, and how we frame AI.
 - **Frame around using AI to your advantage, never around software development.** The
   goal is women building their own idea or business with AI, not becoming developers
   or engineers. Avoid the coding/CS-history angle and "no code needed" type taglines.
@@ -121,5 +121,5 @@ Before finishing, check each draft:
 1. Would the user only need to lightly edit, not rewrite?
 2. Does it lead with the reader's benefit and the deadline?
 3. Correct `utm` tag on every link?
-4. No em dashes, British English, no pricing?
+4. Checked against the language-rules banned list, and no pricing?
 5. Does it respect that channel's self-promo rules?

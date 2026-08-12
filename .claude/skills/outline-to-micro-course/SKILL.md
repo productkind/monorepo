@@ -98,7 +98,7 @@ What the user sees: the **final course plus a short summary** of what the critic
 
 **Exercises should focus on one thing.** Don't bundle multiple tasks into a single exercise. "Plan your email capture + design your lead magnet + check it against three criteria" is three exercises pretending to be one. One clear question or task per exercise. If you need the learner to do multiple things, use separate steps.
 
-**SystemPrompts for free-text exercises must avoid em dashes.** Consistent with the productkind tone guidelines.
+**SystemPrompts for free-text exercises must avoid em dashes.** Every field of the course is subject to the language-rules banned list, systemPrompts included.
 
 **Copy-paste prompts must be in markdown code blocks.** When the course includes a prompt the learner can copy and paste into an AI app builder or other tool, wrap it in a markdown code block so it's clearly distinguished from the surrounding text and easy to copy.
 

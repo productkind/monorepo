@@ -183,9 +183,11 @@ Where the spec lives:
 Voice: write the on-slide copy with the
 **personal-tone-of-voice** skill so it sounds like Kinga (spoken, warm,
 understated), not like the article. Use productkind-tone /
-little-parrot-ai-skill-gap for brand context. Do a deliberate
-phrase-by-phrase banned-list pass on the draft before showing it. British
-English, no em dashes.
+little-parrot-ai-skill-gap for brand context. Apply the **language-rules**
+skill in full, and invoke it if it is not already loaded: it is the single
+source for banned words and phrases, British English, em dashes and
+punctuation, AI dressing, and how we frame AI. Do a deliberate
+phrase-by-phrase pass against it before showing the draft.
 
 Design-quality bar (from
 `productkind/ai-research/carousel-research.md` and

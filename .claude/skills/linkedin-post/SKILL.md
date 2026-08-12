@@ -158,6 +158,6 @@ Before publishing, verify:
 5. Would I trust this if someone else wrote it?
 6. Am I describing experiences or listing features?
 7. Is any information repeated across paragraphs?
-8. Have I run it against the personal-tone-of-voice banned-language list (no em dashes, no hype, no "not X but Y")?
+8. Have I run it against the language-rules banned list (no em dashes, no hype, no "not X but Y")?
 9. Does each paragraph pick up a word or idea from the paragraph before it, with no dropped threads?
 10. Said aloud to a colleague, would every sentence survive? Rule-clean but stiff is not done.
