@@ -17,7 +17,7 @@ primary growth channel, so share-asks are the point, not decoration.
    ones you genuinely need (offer, link, ask, deadline). Don't interrogate.
 2. **The channel registry:** `productkind/marketing/channels/README.md`. Read it every
    run. It defines which channels exist, their format and self-promo rules, and each
-   channel's `ref` param. Only generate for channels listed as active and, if the
+   channel's `utm` param. Only generate for channels listed as active and, if the
    brief names target channels, only those.
 
 ## Process
@@ -31,7 +31,7 @@ primary growth channel, so share-asks are the point, not decoration.
    - that channel's format and length from the registry,
    - the relevant existing skills (see below),
    - the shared copy rules (below).
-4. Append the channel's `ref` tag to every link. If the channel's ref param is
+4. Append the channel's `utm` tag to every link. If the channel's utm param is
    `none` (e.g. WhatsApp, Reddit), use the plain link with no tag, so the message
    doesn't read as promotional.
 5. Write each draft to `productkind/marketing/content/campaigns/<slug>/<channel>.md`:
@@ -47,7 +47,7 @@ primary growth channel, so share-asks are the point, not decoration.
    LinkedIn posts to space days apart, or a Substack Note then a full post), write
    `productkind/marketing/content/campaigns/<slug>/posting-plan.md` describing that
    sequence: what to post first, what follows, and the gap between. Do not write a
-   flat cross-channel inventory; where to post, the asset, ref tag and per-channel
+   flat cross-channel inventory; where to post, the asset, utm tag and per-channel
    cautions belong in each draft's own header, not here. If every channel is a single
    standalone post, skip this file. If a shared TODO spans drafts (e.g. a date to
    confirm and add to several), note it here too, or in the affected draft headers.
@@ -86,7 +86,7 @@ primary growth channel, so share-asks are the point, not decoration.
   (Discord, email). Social posts and community messages don't sign off.
 - **When the same message goes to several channels, vary small surface details** (a
   different emoji/heart colour, a reworded line) so reposts don't read as an obvious
-  copy-paste. Dropping the ref tag is also a deliberate lever to make a post feel
+  copy-paste. Dropping the utm tag is also a deliberate lever to make a post feel
   less promotional (e.g. WhatsApp, Reddit, and a Substack Note where wanted).
 
 ## Channel-specific reminders
@@ -120,6 +120,6 @@ primary growth channel, so share-asks are the point, not decoration.
 Before finishing, check each draft:
 1. Would the user only need to lightly edit, not rewrite?
 2. Does it lead with the reader's benefit and the deadline?
-3. Correct `ref` tag on every link, or a plain link where the channel's ref is `none`?
+3. Correct `utm` tag on every link?
 4. No em dashes, British English, no pricing?
 5. Does it respect that channel's self-promo rules?
