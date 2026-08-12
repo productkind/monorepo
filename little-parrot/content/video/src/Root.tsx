@@ -1,7 +1,7 @@
 import './index.css';
 
 import { Composition, staticFile } from "remotion";
-import { LessonVideo, LessonVideoPropsSchema, Captions, LessonVideo2, LessonVideo3, LessonVideo4, LessonVideo5, LessonVideo6, LessonVideo7, LessonVideoLanding, LessonVideoDebugging01, LessonVideoLovableBasics01, LessonVideoLovablePublish01, SocialVideo000, SocialVideo001, SocialVideo002, SocialVideo003, SocialVideo004, SocialVideo005, SocialVideo006, SocialVideo007, SocialVideo008, SocialVideo009, SocialVideo010, SocialVideo011, SocialVideo012, SocialVideo013, SocialVideo014, SocialVideo015 } from "./LessonVideo";
+import { LessonVideo, LessonVideoPropsSchema, Captions, LessonVideo2, LessonVideo3, LessonVideo4, LessonVideo5, LessonVideo6, LessonVideo7, LessonVideoLanding, LessonVideoDebugging01, LessonVideoLovableBasics01, LessonVideoLovablePublish01, SocialVideo000, SocialVideo001, SocialVideo002, SocialVideo003, SocialVideo004, SocialVideo005, SocialVideo006, SocialVideo007, SocialVideo008, SocialVideo009, SocialVideo010, SocialVideo011, SocialVideo012, SocialVideo013, SocialVideo014, SocialVideo015, LessonVideoAiAdmin00 } from "./LessonVideo";
 import { FRAME_HEIGHT, FRAME_RATE, FRAME_WIDTH } from './config';
 
 export const RemotionRoot: React.FC = () => {
@@ -878,6 +878,38 @@ export const RemotionRoot: React.FC = () => {
 
           return {
             durationInFrames: duration + 3,
+            props: {
+              ...props,
+              captions: transformCaptionsToFrames(captions),
+              allDuration: duration,
+            }
+          }
+        }}
+      />
+
+      <Composition
+        id="lesson-ai-admin-00-video-00"
+        component={LessonVideoAiAdmin00}
+        durationInFrames={FRAME_RATE}
+        fps={FRAME_RATE}
+        width={FRAME_WIDTH}
+        height={FRAME_HEIGHT}
+        schema={LessonVideoPropsSchema}
+        defaultProps={{
+          captions: [],
+          titleDuration: 60,
+          endDuration: 10,
+          allDuration: 100,
+        }}
+        calculateMetadata={async ({ props }) => {
+          const titleDuration = 60
+          const endDuration = 10
+          const response = await fetch(staticFile('video-ai-admin-00/text.json'))
+          const captions = await response.json()
+          const duration = Math.ceil(captions.at(-1).end * FRAME_RATE) + titleDuration + endDuration
+
+          return {
+            durationInFrames: duration,
             props: {
               ...props,
               captions: transformCaptionsToFrames(captions),

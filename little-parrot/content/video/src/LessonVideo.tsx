@@ -48,6 +48,88 @@ export const LessonVideoPropsSchema = z.object({
 
 const DEBUG = false
 
+
+export const LessonVideoAiAdmin00: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({ captions, titleDuration }) => {
+  return (
+    <AbsoluteFill className={BG_CLASS}>
+      <Series>
+        <Series.Sequence durationInFrames={titleDuration}>
+          <FullScreenText>
+            <TypingText delay={0}>Micro-course</TypingText>
+            <br />
+            <TypingText delay={20}>Overview</TypingText>
+          </FullScreenText>
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={82}>
+          <FullScreenImage src={staticFile('video-ai-admin-00/section-00-mom.gif')} fit="contain" offset={-200} color="#fef2e7" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={213}>
+          <FullScreenImage src={staticFile('video-ai-admin-00/section-01-list.gif')} fit="contain" offset={-200} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={95}>
+          <FullScreenImage src={staticFile('video-ai-admin-00/section-02-hands-full.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={195}>
+          <FullScreenImage src={staticFile('video-ai-admin-00/section-03-sort.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={96}>
+          <FullScreenImage src={staticFile('video-ai-admin-00/section-04-build.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={96}>
+          <FullScreenImage src={staticFile('video-ai-admin-00/section-05-fiddly.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={103}>
+          <FullScreenImage src={staticFile('video-ai-admin-00/section-06-course.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={110}>
+          <FullScreenImage src={staticFile('video-ai-admin-00/section-07-talk.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={159}>
+          <FullScreenImage src={staticFile('video-ai-admin-00/section-08-tidy.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={77}>
+          <FullScreenImage src={staticFile('video-ai-admin-00/section-09-mental-load.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={71}>
+          <FullScreenImage src={staticFile('video-ai-admin-00/section-10-carry.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={130}>
+          <FullScreenImage src={staticFile('video-ai-admin-00/section-11-notes.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={48}>
+          <FullScreenImage src={staticFile('video-ai-admin-00/section-12-baby-eat.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={33}>
+          <FullScreenImage src={staticFile('video-ai-admin-00/section-13-nappies.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={23}>
+          <FullScreenImage src={staticFile('video-ai-admin-00/section-14-naps.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={48}>
+          <FullScreenImage src={staticFile('video-ai-admin-00/section-15-weight.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={121}>
+          <FullScreenImage src={staticFile('video-ai-admin-00/section-16-filing.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={175}>
+          <FullScreenImage src={staticFile('video-ai-admin-00/section-17-talk.gif')} fit="contain" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={120}>
+          <FullScreenImage src={staticFile('video-ai-admin-00/section-18-build.gif')} fit="contain" />
+        </Series.Sequence>
+      </Series>
+      <Sequence from={titleDuration}>
+        <Captions captions={captions} />
+      </Sequence>
+      <Sequence from={titleDuration}>
+        <Audio src={staticFile('video-ai-admin-00/speech.wav')} />
+      </Sequence>
+    </AbsoluteFill>
+  )
+}
+
+
+
 export const SocialVideo015: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({ captions, titleDuration }) => {
   return (
     <AbsoluteFill className={BG_CLASS}>
