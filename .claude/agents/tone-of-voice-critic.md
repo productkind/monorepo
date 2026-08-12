@@ -63,7 +63,7 @@ Apply the personal-tone-of-voice banned list in full, and list **every** instanc
 - **Business jargon and figurative "land / landed"**: leverage, synergy, move the needle, circle back, land on, "it didn't land", "why it matters".
 - **Drama and hyperbole:** hack, chaos, crisis, fluff, hype, game-changing, mind-blowing.
 - **Ownership and handed metaphors for abstract things**: "once the names are yours", "the words people are rarely handed".
-- **Decorative punctuation**, emoji strings, forced enthusiasm ("Amazing!", "You've got this!").
+- **Decorative punctuation**, emoji strings, forced enthusiasm ("Amazing!").
 
 ### Tier 2: AI dressing, the heart of your job
 

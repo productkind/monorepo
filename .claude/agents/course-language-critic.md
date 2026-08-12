@@ -35,7 +35,7 @@ Scan the entire course (every text step, quiz question, option, explanation, des
 - **Announcing clarity** ("in plain English", "in plain language", "in one plain paragraph"), just be clear.
 - **AI/marketing buzzwords:** "why it matters", "that matters", "here's the thing", "bottom line", "this one's for you", "no fluff", "made a real difference", "genuinely", "actually" (as a weak intensifier), "leverage", "synergy", "move the needle", "circle back", "cut through the noise", "this matters because".
 - **Drama words:** "hack", "chaos", "crisis", "fluff", "hype".
-- **Performative or generic encouragement:** "Amazing!", "Great job!", "You've got this!" with no specifics, or excessive exclamation marks / forced enthusiasm.
+- **Performative or generic encouragement:** "Amazing!", "Great job!" with no specifics, or excessive exclamation marks / forced enthusiasm.
 
 For each Tier 1 hit: quote the exact text, give the location, and give the replacement.
 
