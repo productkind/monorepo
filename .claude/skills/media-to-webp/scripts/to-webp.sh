@@ -1,10 +1,12 @@
 #!/bin/bash
 # to-webp.sh — convert media to a resized webp (animated or static).
 #
-# Usage: to-webp.sh <input> [-o out.webp] [-w width] [-f fps] [-q quality]
+# Usage: to-webp.sh <input> [-o out.webp] [-w width] [-f fps] [-q quality] [-s speed]
 #   -w  target width in px (height auto, aspect kept; never upscales). Default 480.
 #   -f  frames per second for animated output. Default 10.
 #   -q  webp quality 0-100. Default 60 for animated, 80 for static.
+#   -s  playback speed-up factor for animated output, e.g. 4.7 makes a 113s clip ~24s.
+#       Default 1 (real time). Use it to condense long real-time screen recordings.
 #   -o  output path. Default: <input basename>.webp in the current directory.
 #
 # Sources by extension:
@@ -13,17 +15,25 @@
 #   png jpg jpeg tif tiff bmp  -> static webp (magick)
 #   heic heif                  -> static webp (magick, or heif-convert fallback)
 set -euo pipefail
-WIDTH=480; FPS=10; Q=""; OUT=""; IN=""
+WIDTH=480; FPS=10; Q=""; OUT=""; IN=""; SPEED=1
 while [ $# -gt 0 ]; do
   case "$1" in
     -o|--out) OUT="$2"; shift 2;;
     -w|--width) WIDTH="$2"; shift 2;;
     -f|--fps) FPS="$2"; shift 2;;
     -q|--quality) Q="$2"; shift 2;;
+    -s|--speed) SPEED="$2"; shift 2;;
     -h|--help) grep '^# ' "$0" | sed 's/^# //'; exit 0;;
     *) IN="$1"; shift;;
   esac
 done
+
+# Build the animated-video filter chain (optional speed-up, then fps + resize).
+vfilter() {
+  local vf="fps=${FPS},scale=${WIDTH}:-1:flags=lanczos"
+  [ "$SPEED" != "1" ] && vf="setpts=PTS/${SPEED},${vf}"
+  printf '%s' "$vf"
+}
 [ -n "$IN" ] && [ -f "$IN" ] || { echo "error: input file required"; exit 1; }
 command -v ffmpeg >/dev/null || { echo "error: ffmpeg not found"; exit 1; }
 command -v magick >/dev/null || { echo "error: ImageMagick (magick) not found"; exit 1; }
@@ -37,7 +47,7 @@ case "$ext" in
   mov|mp4|m4v|webm|avi|gif)
     q="${Q:-60}"
     ffmpeg -y -loglevel error -i "$IN" -an \
-      -vf "fps=${FPS},scale=${WIDTH}:-1:flags=lanczos" \
+      -vf "$(vfilter)" \
       -c:v libwebp -loop 0 -lossless 0 -quality "$q" -compression_level 6 "$OUT"
     ;;
   webp)
@@ -48,7 +58,7 @@ case "$ext" in
       if [ -n "$od" ] && [ "$od" -gt 0 ]; then srcfps=$(awk "BEGIN{printf \"%.4f\",100/$od}"); else srcfps=12; fi
       magick "$IN" -coalesce "$tmp/f-%05d.png"
       ffmpeg -y -loglevel error -framerate "$srcfps" -i "$tmp/f-%05d.png" \
-        -vf "fps=${FPS},scale=${WIDTH}:-1:flags=lanczos" \
+        -vf "$(vfilter)" \
         -c:v libwebp -loop 0 -lossless 0 -quality "$q" -compression_level 6 "$OUT"
     else
       q="${Q:-80}"
