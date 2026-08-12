@@ -1,6 +1,6 @@
 ---
 name: personal-tone-of-voice
-description: Kinga's first-person writing voice: her signature moves, honesty markers, how she opens and closes a piece, and the register for writing as herself. Use for LinkedIn posts, Substack articles and Notes, and founder comments. The banned words and shared language rules are in the language-rules skill, which applies to all copy.
+description: "Kinga's first-person writing voice: her signature moves, honesty markers, how she opens and closes a piece, and the register for writing as herself. Use for LinkedIn posts, Substack articles and Notes, and founder comments. The banned words and shared language rules are in the language-rules skill, which applies to all copy."
 ---
 
 ## Audience

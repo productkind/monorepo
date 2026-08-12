@@ -2,6 +2,21 @@
 
 Paired examples of AI-generated wording and the wording Kinga replaced it with. Every pair is a real correction made to real copy, so this file is evidence, not theory.
 
+## Contents: the ten failure modes
+
+1. Vague noun where the concrete one exists
+2. Figurative verb where the literal one exists
+3. Displaced or withheld subject
+4. Delayed reveal of the key term
+5. Trailing implication, the unfinished thought
+6. Writerly performance and arranged symmetry
+7. Telegraphic compression instead of a verb
+8. Atmospheric time nouns
+9. Softened or euphemistic situations
+10. Empty filler and vague payoff lines
+
+Read the whole file, not a preview: the modes most often missed are at the end.
+
 It applies to **all** productkind and Little Parrot copy, not only personal posts: social captions, carousel text, course steps and descriptions, toolkit items, emails, community messages, LinkedIn and Substack.
 
 Two things to read out of the pairs before using them:

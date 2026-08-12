@@ -154,7 +154,7 @@ Good luck, and happy [doing the thing]! 🚀
 
 ## Anti-Patterns to Avoid
 
-- ❌ Corporate buzzwords ("leverage", "synergy", "optimise")
+- ❌ Corporate buzzwords: "optimise", plus the language-rules business-jargon list
 - ❌ Passive, distant tone ("It is recommended that...")
 - ❌ Walls of text without structure
 - ❌ Abstract concepts without examples
@@ -162,9 +162,7 @@ Good luck, and happy [doing the thing]! 🚀
 - ❌ Ending sections without clear next actions
 - ❌ Excessive emoji use (more than 1-2 per section)
 - ❌ Condescending simplification, claiming something is easy when it isn't ("It's easy!", "Simply do X", "Just click the button"). Naming a step plainly with "just" is fine; implying the learning is trivial is not.
-- ❌ "Obviously" or "of course" (implies they should already know)
 - ❌ Hiding difficulty, pretending everything is straightforward when it isn't
-- ❌ Generic encouragement ("Amazing!" "Great job!") without specifics
 - ❌ Lecturing tone; talking at the learner rather than guiding them
 
 ## Good vs Bad Examples

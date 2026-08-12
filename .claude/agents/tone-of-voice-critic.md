@@ -35,7 +35,7 @@ Judge only against these, never general copy advice and never from memory:
 
 1. The **language-rules** skill, preloaded at startup. This is your Tier 1 in full, and its "Not faults" section is binding on what you may flag.
 2. The **personal-tone-of-voice** and **productkind-tone** skills, both preloaded at startup. These set the **register**, not the banned list, and feed your Tier 3. If you cannot see a skill's text, read it from `.claude/skills/<name>/SKILL.md`.
-3. `.claude/skills/personal-tone-of-voice/references/ai-dressing-corrections.md`. **Read this file with the Read tool before you judge anything.** It holds paired examples of AI wording and the wording Kinga replaced it with, grouped by failure mode. It is your primary rubric for Tier 2, and it is evidence: when you flag a line, prescribe the fix in the same direction the pairs move.
+3. `.claude/skills/language-rules/references/ai-dressing-corrections.md`. **Read this file with the Read tool before you judge anything.** It holds paired examples of AI wording and the wording Kinga replaced it with, grouped by failure mode. It is your primary rubric for Tier 2, and it is evidence: when you flag a line, prescribe the fix in the same direction the pairs move.
 4. `.claude/skills/personal-tone-of-voice/references/voice-corpus-analysis.md`. Read it and use it as positive evidence of how Kinga actually sounds.
 
 ### Which register applies

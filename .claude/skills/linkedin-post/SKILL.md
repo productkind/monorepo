@@ -21,7 +21,7 @@ A drafted post is never returned to the user until an independent critic has gat
 3. **Read the verdict:**
    - **PASS** → show the user the final post, with a short note on what the critic checked.
    - **NEEDS REVISION** → apply the critic's revision brief, then re-run the critic on the new draft. Repeat, up to **3 rounds**.
-4. **After 3 rounds**, if issues remain, show the best draft and name the unresolved items honestly. Never hide them or quietly ship around them.
+4. **After 3 rounds**, if issues remain, show the best draft and name the unresolved items honestly. Never hide them or ship around them without saying so.
 
 What the user sees: the **final post plus a short summary** of what the critic flagged and how it was resolved — not every round, unless they ask to see the drafts.
 
