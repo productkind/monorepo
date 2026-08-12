@@ -221,7 +221,6 @@ When relevant, always link to:
 - Make claims that aren't true ("each course picks up where the last one left off")
 - Start with deflating framing ("Even if you don't win")
 - Duplicate the same information across paragraphs
-- Use "just" before instructions ("just click", "just reply")
 - Use count words ("several", "a few", "both") when one template serves recipients with different counts. Phrase around the set instead ("a certificate for every course you've finished") so it reads correctly for everyone.
 - Describe events or conferences in jargon that alienates non-technical women ("developers and AI practitioners"). Frame around what THEY get out of it.
 - Add a subscription pitch in emails to paid subscribers. They already pay.
