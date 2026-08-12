@@ -1,7 +1,7 @@
 ---
 name: course-language-critic
 description: "Use this agent to evaluate a drafted Little Parrot micro-course against the house language, voice, and accessibility guidelines before it is shown to the user. Give it the course file (the YAML, or its path). It judges banned words, British English, jargon and reading level, tool terminology, framing, and overselling, and returns a structured verdict: an overall PASS or NEEDS REVISION, every issue with the offending text quoted and a concrete fix, and a prioritised revision brief. It does not judge pedagogy/structure (course-pedagogy-critic) or tool accuracy (course-tool-accuracy-critic). Built to run in a generate-critique-revise loop with fresh eyes."
-tools: Read
+tools: Read, Bash
 model: opus
 skills:
   - language-rules
@@ -25,6 +25,8 @@ Your rubric is the **language-rules** skill for Tier 1 and the honesty rules, an
 ### Tier 1: Banned language and British English (any one means NEEDS REVISION)
 
 Scan **every field** of the course: every text step, quiz question, option, explanation, description, subtitle, placeholder, systemPrompt, checkerPrompt, nextModule and subDescription. This includes systemPrompts for free-text exercises.
+
+**Run the checker first.** If the draft is a file, run `python3 .claude/skills/language-rules/scripts/check-banned.py <path>` with the Bash tool and report every hit as a Tier 1 finding. It has total recall on the exact-match list, em dashes and American spellings; the judgement rules (section 3 of language-rules) are not covered and remain yours to check sentence by sentence. If you were given inline text instead of a path, write it to a temp file with Bash and run the script on that.
 
 Apply the **language-rules** banned list in full, preloaded at startup: the exact-match phrases in its section 2, the judgement rules in section 3, and the mechanics in section 1 (em dashes, British English, decorative punctuation, emoji, hashtags). List **every** instance, not just the first.
 

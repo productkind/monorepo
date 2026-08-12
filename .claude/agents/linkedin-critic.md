@@ -1,7 +1,7 @@
 ---
 name: linkedin-critic
 description: "Use this agent to evaluate a drafted LinkedIn post or Substack Note against Little Parrot's guidelines before it is shown to the user. Give it the full draft text (and say whether it is a LinkedIn post or a Substack Note). It reads the voice, structure, and authenticity guidelines and returns a structured verdict: an overall PASS or NEEDS REVISION, every issue with the offending text quoted and a concrete fix, and a prioritised revision brief. Built to be called in a generate-critique-revise loop: the writer drafts, this agent judges with fresh eyes, the writer revises, repeat.\\n\\nExamples:\\n\\n<example>\\nContext: The main agent has drafted a LinkedIn post and wants it gated before showing the user.\\nassistant: \"I'll run the draft through the linkedin-critic agent before showing it to you.\"\\n<Task tool call to linkedin-critic with the full draft text>\\n</example>"
-tools: Read
+tools: Read, Bash
 model: opus
 skills:
   - language-rules
@@ -33,6 +33,7 @@ Work through three tiers. Tier 1 is mechanical and binary. Tier 2 is craft. Tier
 
 ### Tier 1: Hard fails (any single one means NEEDS REVISION)
 
+- **Run the checker first.** If the draft is a file, run `python3 .claude/skills/language-rules/scripts/check-banned.py <path>` with the Bash tool and report every hit as a Tier 1 finding; it has total recall on the exact-match list, em dashes and American spellings, while the judgement rules stay yours. Given inline text, write it to a temp file with Bash and run the script on that.
 - Any banned word or phrase from **language-rules**, preloaded at startup: the exact-match phrases in section 2, the judgement rules in section 3, and the mechanics in section 1. Read its **Not faults** section before flagging: "actually" as her honest hedge, an ordinary "rather than" comparison, the spaced en dash, and a single tonal emoji carrying warmth or self-deprecation are all correct; strings of emoji as decoration are not.
 - **No hashtags at all** on LinkedIn or Substack.
 - Mid-piece rhetorical questions are NOT banned: they are her core transition device. Only rhetorical questions used as the opening hook fail.

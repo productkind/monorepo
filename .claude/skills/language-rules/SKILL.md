@@ -32,6 +32,8 @@ When a correction applies to **both** a Substack article and a course step, it b
 
 Every phrase below is banned outright, in any format. This section is the closed list, so keep it parseable: comma-separated phrases under each heading, no commentary. Rules needing judgement go in section 3.
 
+`scripts/check-banned.py <file...>` checks any draft against this list, em dashes and American spellings mechanically, parsing the list from this file at run time. Adding a phrase here is the only step needed for the script to catch it. Run it on any draft that exists as a file before shipping.
+
 ### Hyperbolic adjectives
 game-changing, mind-blowing
 
