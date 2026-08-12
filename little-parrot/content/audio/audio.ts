@@ -98,7 +98,8 @@ const ELIZABETH = 'AXdMgz6evoL7OPd7eU12' // Elizabeth
 const BETH = '8N2ng9i2uiUWqstgmWlH' // Beth
 const LANA = 'roYauZ4bOLAKvVZTPLre'
 const CHLOE = 'lhgliD0TncfFOY1Nc93M' // Chloe
-const VOICE_ID = CHLOE // Change to the desired voice ID
+// const VOICE_ID = CHLOE
+const VOICE_ID = ELIZABETH
 const video1 = `
 In simple terms, Artificial Intelligence is the capability of a machine to perform tasks that would normally require human intelligence. This includes things like learning from data, understanding language, recognising patterns, and making decisions. Many problems are too complex for traditional, rule-based programming. AI gives us new ways to tackle these challenges: it can help us automate repetitive tasks, personalise user experiences, and make better predictions. Today, when we use tools like ChatGPT or Gemini, we often call them Artificial Intelligence. Technically, they’re a specific kind of AI known as Large Language Models, or LLMs. So, what exactly is an LLM? To answer that, let’s start with the basics: an AI model. An AI model is simply a program that’s trained on data to do a particular job, for example, classifying images, spotting trends, or generating text. A model always takes an input and produces an output. The input and output can be text, images, audio, or other forms of data. A Large Language Model is a type of AI model that’s specialised in human language. It’s trained on vast amounts of text to learn the structure and patterns of how we write and speak. This allows it to generate text, summarise information, answer questions, and even help you brainstorm ideas.
 `
@@ -437,9 +438,19 @@ If your idea of AI still comes from those books, no wonder the real thing feels 
 More like this coming up. Follow along.
 `
 
-const TEXT_TO_GENERATE = videoSocialMedia015
+const videoAiYourLifeAdmin00 = `
+If you're a mum, you already know the feeling. There's a running list in your head that never switches off. You've got more things to do, but way less time. And most of the time, both of your hands are full.
+
+Your phone can take that list off you and sort each piece into your notes, where it belongs. It does that with a shortcut you build once, rather than a fiddly system you have to keep tending to.
+
+In this course you'll build two shortcuts. The first lets you talk about everything on your mind, and your phone uses AI to sort it into tidy checklists you can share with your partner, so the mental load is out of your head and where someone else can help carry it. The second lets you log the things you need to keep track of: how much your baby fed, the nappies, the naps, their weight, and saves each as a line with date and time in a running record.
+
+You'll become someone who offloads the mental load by voice, in the seconds you have. Let's build the first one.
+`
+
+const TEXT_TO_GENERATE = videoAiYourLifeAdmin00
 const MODEL_ID = 'eleven_v3' //'eleven_multilingual_v2' // // The v3 model as requested
-const videoName = 'social-015-chloe'
+const videoName = 'ai_your_life_admin_00'
 const OUTPUT_FILE_NAME = `generated_speech-${videoName}.wav` // e.g.,
 const ALIGNMENT_JSON_FILE_NAME = `alignment-${videoName}.json`
 const OUTPUT_FILE_PATH = OUTPUT_FILE_NAME // Saves in the same directory as the script
