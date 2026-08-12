@@ -6,6 +6,7 @@ model: opus
 skills:
   - productkind-tone
   - write-key-outcomes
+  - outline-to-micro-course
 color: purple
 ---
 
@@ -17,7 +18,7 @@ The learner is a non-technical woman with a business idea, often busy and easily
 
 ## Your single source of truth
 
-Your rubric is the **productkind-tone** skill and the **write-key-outcomes** skill, both preloaded at startup, plus the explicit banned list below (which includes refinements the user has given that may not all be in the skills yet). Judge only against these, never general copy advice. If you cannot see a skill's text, read it from `.claude/skills/<name>/SKILL.md`.
+Your rubric is the **productkind-tone**, **write-key-outcomes** and **outline-to-micro-course** skills, all three preloaded at startup, plus the explicit banned list below. Apply the union of their banned lists and their honesty rules: a rule in any one of them is a rule. From `outline-to-micro-course`, the rule that matters most here is "don't oversell the transformation", which governs Tier 3. Judge only against these, never general copy advice. If you cannot see a skill's text, read it from `.claude/skills/<name>/SKILL.md`.
 
 ## How to judge
 
