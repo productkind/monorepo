@@ -7,7 +7,7 @@ It applies to **all** productkind and Little Parrot copy, not only personal post
 Two things to read out of the pairs before using them:
 
 1. **The failure is almost never a banned word.** Each AI line is grammatical, on-brand and passes a keyword check. It fails because it gestures at a meaning instead of stating one.
-2. **The correction is often longer than the original.** AI compresses into knowing shorthand; Kinga expands into a plain statement. Precision is the goal, not concision. A fix that shortens a line by removing the concrete information is worse than the original.
+2. **The correction is often longer than the original.** AI compresses into knowing shorthand; Kinga expands into a understandable statement. Precision is the goal, not concision. A fix that shortens a line by removing the concrete information is worse than the original.
 
 ## How to use this file
 
@@ -51,12 +51,16 @@ Note the second half of the third pair: "something you can use" became "somethin
 
 ## 3. Displaced or withheld subject
 
-**Test:** is the person or thing doing the action the grammatical subject, at the front of the sentence? Cleft constructions ("The one that… was…") and abstract possessives hold the subject back for effect.
+**Test:** is the person or thing the sentence is about the grammatical subject, at the front? Cleft constructions ("The one that… was…"), abstract possessives, and front-loaded lists that end on the topic all hold the subject back for effect.
 
 - AI: *so the mental load isn't yours alone to carry.*
   Kinga: *so you won't have to carry the mental load alone.*
 - AI: *The one that changed my output most was banning specific phrases.*
   Kinga: *Banning specific phrases was the one technique that changed my output the most.*
+- AI: *Inverted adverb pairs, tidy triads and mirrored clauses are the tell.*
+  Kinga: *The tells are inverted adverb pairs, tidy triads and mirrored clauses.*
+
+The last pair inverts a list sentence: the topic, "the tells", was sitting at the end as the predicate. Kinga names the topic first and lets the list follow. She also made it plural, because there are three of them.
 
 ## 4. Delayed reveal of the key term
 
@@ -76,7 +80,7 @@ Note the second half of the third pair: "something you can use" became "somethin
 
 ## 6. Writerly performance and arranged symmetry
 
-**Test:** would this come out of your mouth talking to a colleague, or is it arranged for the page? Inverted adverb pairs, tidy triads and mirrored clauses are the tell.
+**Test:** would this come out of your mouth talking to a colleague, or is it arranged for the page? The tells are inverted adverb pairs, tidy triads and mirrored clauses.
 
 - AI: *Reach for this when the date is moving and you want to say so once, clearly, rather than three times, vaguely.*
   Kinga: *Reach for this when a deadline cannot be met and you want to be clear and transparent about what happened.*
