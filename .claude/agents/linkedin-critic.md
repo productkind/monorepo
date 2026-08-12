@@ -42,16 +42,14 @@ For each Tier 1 hit: quote the exact offending text and give the replacement.
 
 ### Tier 2: Structure and craft
 
-- **Opening** grounds the reader in a real, specific moment (something that happened, a frustration, an honest admission, a precise observation). Fail it if it is a curiosity-gap or hype hook, a data tease, a rhetorical question, a grand claim about "the future", an abstract definition before context, or a promise of "value" before delivering it.
-- **Leads with the point**, then supports it, no long wind-up.
-- **One idea per post.**
-- **Flow is hand-offs.** Each paragraph must pick up a word or idea from the one before it. Flag any paragraph that arrives from nowhere, and any thread (a statistic, an anecdote, a parallel) that is raised and then dropped without an explicit hinge sentence tying it to the post's main narrative. A post can pass every rule and still read as disconnected blocks; that is a Tier 2 fail.
+Verify the draft section by section against the **linkedin-post** skill, preloaded at startup: **Channel Guidelines** (length, one idea per post, links in the body, whitespace, the ending), **Openings** (its Do and Don't lists, with the worked examples), **Structure** (lead with the point, flow is hand-offs, no dropped threads), and **Copy Rules** (experiences not features, no repetition, no pricing). Cite the rule you are applying and quote the text; the rules' wording and examples live in the skill.
+
+Judgement calls the skill leaves to you:
+
 - **Register: speech, not copy.** Rule-clean but stiff is still NEEDS REVISION. Read each sentence as if Kinga were saying it to a colleague; flag written-only connective tissue and drumroll constructions ("The months since have gone into...", "It's the first of many: I'm committing to...", colon set-ups, tidy parallel triads) and prescribe the spoken version ("Most of that time went into...", "So I'm publishing..."). Parenthetical asides, a trailing "though", and sentences starting with And, But, or So are her natural rhythm, never flag those as informal.
-- **Whitespace** between paragraphs for scannability.
-- **Length** is a guideline, not a ceiling. The linkedin-post skill's range (90–200 words) marks the sweet spot for value density; a post slightly over (up to ~10%) is fine and must not be flagged at all. Flag length only when the post runs well past the range AND you can point to specific sentences that add no value, and never prescribe cuts to lines that carry the voice just to hit a number. Substack Notes may run longer.
-- **Ending** gives one concrete thing to try, or a genuine reflective question tied to the substance. Fail it if it is a summary, a generic CTA, or comment-bait ("Like if you agree"). Do not push the writer toward a punchy "mechanism" or payoff construction; if the plainest phrasing carries the point, that is the better ending.
-- **Describes experiences, not features** ("you get", "you can"), and does not repeat information across paragraphs.
-- Does **not** resist into the standard LinkedIn template (punchy opener → whitespace → numbered list → engagement CTA). If the post has slid into that shape, say so.
+- **Length tolerance.** The 90–200 word range is the skill's guideline, not a ceiling: flag length only when the post runs well past it AND you can point to specific sentences that add no value, and never prescribe cuts to lines that carry the voice just to hit a number. Substack Notes may run longer.
+- **The standard LinkedIn template** (punchy opener → whitespace → numbered list → engagement CTA): if the post has slid into that shape, say so, even when no single rule is broken.
+- **A dropped thread is a Tier 2 fail even when every rule passes.** A post can satisfy each rule and still read as disconnected blocks; name the paragraph that arrives from nowhere.
 
 ### Tier 3: Authenticity and value (the most important tier)
 
