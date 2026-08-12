@@ -5,9 +5,9 @@ course:
   cover: /courses/ai-your-life-admin-00/cover.gif
   title: "Hand Off the Mental Load: Use AI to Turn a Brain Dump into a List"
   learningOutcomes:
-    - Build a voice shortcut that sorts everything on your mind into category checklists your partner can see and tick off, whatever phone they carry
-    - Adapt a ready-made prompt so the AI sorts and formats what you say your way, in whatever language you speak
-    - Build a second shortcut that logs a feed, nappy, nap or weight as a timestamped line in one running note
+    - Build a voice shortcut that sorts everything on your mind into categorised checklists your partner can see and tick off
+    - Adapt a ready-made prompt so the AI sorts and formats what you say your way
+    - Build a second shortcut that logs your baby's feed, nappy, nap or weight as a timestamped line in one running note
     - Trigger either shortcut hands-free, by voice, a tap on the back of your phone, or the Action Button
     - Reuse the same pattern, talk, let AI sort it, save it, for the next job you'd like your phone to take off you
   challenges:
@@ -523,7 +523,7 @@ course:
               One last block sends it to your note. Add **Append to Note** in the Shortcut:
 
               - For the **Text**, insert the **Response** from *Use Model*.
-              - For the **Note**, shortlytap the *Note* field and pick your **Baby Log** note.
+              - For the **Note**, shortly tap the *Note* field and pick your **Baby Log** note.
 
               *Append to Note* adds to the **bottom** of the note, so your sessions stack up in order, newest last. Rename the shortcut **Baby Log** and tap the **tick** (✓) on the keyboard.
 
@@ -597,7 +597,7 @@ course:
 
               - **Back Tap:** go to *Settings* → *Accessibility* → *Touch* → *Back Tap*. Choose *Double Tap* or *Triple Tap* and scroll down to pick your shortcut. Now a **firm** tap on the **back of your phone** runs it.
               - **The Action Button:** your iPhone has the small button above the volume keys, set it in *Settings* → *Action Button* to run your shortcut with one long press.
-              - **Hey Siri:** Siri needs to be on first, so in *Settings* → *Apple Intelligence & Siri*, turn on **Talk to Siri** (or **Listen for "Hey Siri"**). Then say *"Hey Siri, Baby Log"* (or any shortcut's name) and Siri runs it by name.
+              - **Hey Siri:** Siri needs to be on first, so in *Settings* → *Apple Intelligence & Siri*, tap **Talk & Type to Siri**, then choose **Hey Siri** and follow the voice setup. Then say *"Hey Siri, Baby Log"* (or any shortcut's name) and Siri runs it by name.
         - type: text
           title: Two things about the dictation
           subtitle: Whatever starts it
@@ -621,8 +621,8 @@ course:
             description: |-
               You built these two shortcuts around downloading your mental load, but the pattern, talk, let AI sort or log it, then save, works for almost anything.
 
-              So tell me: what's one job in your life you'd love your phone to take off you next? And is there anything you wish these shortcuts could also do? I'll help you figure it out.
-            subDescription: Whatever you're picturing, share it and I'll suggest a way to set it up.
+              So tell us: what's one job in your life you'd love your phone to take off you next? And is there anything you wish these shortcuts could also do? We'll help you figure it out.
+            subDescription: Whatever you're picturing, share it and we'll suggest a way to set it up.
             placeholder: e.g. I'd love one for my work to-do list, and I wish it could add reminders...
             systemPrompt: 'You are a warm, knowledgeable mentor for a new mum who has just finished a course where she built two iPhone Shortcuts: a Brain Dump (she talks, Apple''s Private Cloud Compute sorts it into category checklist notes, Logistics, Food & Household, Misc, in a shared Mental Load folder) and a Baby Log (she talks, ChatGPT turns it into timestamped, categorised lines in one running note). Both follow the same pattern: talk, let AI sort or format it, then save it to Notes. This closing exercise invites her to name one job in her life she''d love her phone to take off her next, and anything she wishes the shortcuts could also do. Your job is to help her shape that, concretely and specifically to what she said, not with generic praise. If her idea fits the Brain Dump, tell her which categories to change in the prompt (for example a work brain dump with keys like Emails, Calls, Admin, or a meal-planning one). If it fits the Baby Log, suggest duplicating that shortcut and rewording the prompt for the new log (a feeding-and-symptom log, a gratitude log, a toddler milestones log). If what she wants is beyond these shortcuts, such as setting reminders or calendar events (the course deliberately left those out because they were too fiddly to be reliable), say so kindly and point her to an AI chat assistant like the free ChatGPT app for the bigger planning jobs. If she only shares a wish or a comment rather than a use case, acknowledge it warmly and offer the nearest workaround you honestly can, without overpromising. Thank her briefly, since what she shares helps shape future courses. Answer clearly and warmly in British English, in clear, everyday words for someone non-technical, in at most a few short sentences or bullets. Do not use em dashes. End on an encouraging note. Reply in a markdown format.'
             checkerPrompt: 'The learner is describing what she''d like to use this for, a wish, or a comment. Accept any genuine response. Only flag clearly empty or nonsense input. This is their message:'
@@ -632,7 +632,7 @@ course:
             nextModule: "**Where to go next:** You just used AI to structure your mental load. If you've got an idea for building something else with AI, you can do it without any coding. Our [Build Your First App with Lovable](https://littleparrot.app/5e86e580-264c-442c-8cc4-be5645f13e87/course-overview) course walks you through how to turn your idea into a working website. For now though, the win is on your phone, go and use it. 🤗"
             description: Look at what you can do now.
             subDescription: |-
-              ✓ **The Brain Dump:** talk, and it's sorted into category checklists, in a folder you share with your partner so the load is visible.
+              ✓ **The Brain Dump:** talk, and it's sorted into categorised checklists, in a folder you share with your partner so the load is visible.
 
               ✓ **The Baby Log:** record feeds and amounts, nappies, naps and weights as tidy, timestamped lines you can look back over or show your doctor.
 
@@ -646,4 +646,4 @@ course:
   titleSplit:
     - "Hand Off the Mental Load:"
     - Use AI to Turn a Brain Dump into a List
-  description: "Talk, and let AI turn what's in your head into an organised list on your phone. We built this for mums, for the days when your hands are full, your brain has 27 tabs open, and you really don't need one more thing to remember.In about 20 minutes you'll build two voice shortcuts: one sorts a spoken ramble into category checklists in a folder your partner can see and tick off, the other turns a few words about a feed, nappy or nap into a timestamped line in one running note. You'll leave with both shortcuts working, and two prompts you can reword for anything else you want sorted. It all runs on AI that's already on your iPhone, so there's nothing to pay for, no account to make, and no typing once it's built."
+  description: "Talk, and let AI turn the running list in your head into an organised list on your phone. Made for mums, for the days when your hands are full and your brain is keeping track of far too much. In about 20 minutes you'll build two voice shortcuts: one sorts a spoken brain dump into checklists your partner can tick off, the other logs your baby's feed, nappy or nap as a timestamped line. It all uses tools already on your iPhone, with nothing new to subscribe to."
