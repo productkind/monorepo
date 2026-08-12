@@ -37,52 +37,25 @@ Work through three tiers. Tier 1 is mechanical and binary. Tier 2 is structure, 
 ### Tier 1: Hard fails (any single one means NEEDS REVISION)
 
 Inbox presentation (judge if the subject / preheader were provided):
-- **Subject line** over ~50 characters, or with the point not in the first ~30 (mobile truncation), or a curiosity-gap / clickbait tease, or a spam trigger (ALL CAPS, `!!!`/`$$$`, "FREE", "act now", "guaranteed"), or more than one emoji / any all-emoji line.
-- **Preheader** not set, over ~90 characters, a repeat of the subject line, or leaking "view in browser" / unsubscribe / alt text into the preview.
+- **Every rule in the skill's "Inbox Presentation" section**: subject line, preheader, and sender name. The character limits, spam triggers and preheader mechanics live there; cite the one you are applying and quote the offending text.
 
 Copy:
 - **Run the checker first.** If the draft is a file, run `python3 .claude/skills/language-rules/scripts/check-banned.py <path>` with the Bash tool and report every hit as a Tier 1 finding; it has total recall on the exact-match list, em dashes and American spellings, while the judgement rules stay yours. Given inline text, write it to a temp file with Bash and run the script on that.
 - Any banned word or phrase from **language-rules**, preloaded at startup: the exact-match phrases in section 2, the judgement rules in section 3, and the mechanics in section 1. Read its **Not faults** section before flagging: "actually" as her honest hedge, an ordinary "rather than" comparison, the spaced en dash, and a single tonal emoji carrying warmth or self-deprecation are all correct; strings of emoji as decoration are not.
-- **Patronising language** ("That took courage", "Amazing!", "Great job!").
-- **Doubt-triggering purchase language** ("big commitment", "big investment").
-- **Deflating openings** ("Even if you don't win").
-- **Count words** ("several", "a few", "both") where one template serves recipients with different counts. Phrase around the set instead.
-- **A subscription pitch in an email to paid subscribers.** If the email's audience already pays, any subscribe/upgrade ask is a hard fail.
-- **Claims that aren't true** of the product (e.g. "each course picks up where the last one left off"). Flag any factual claim the copy depends on that you cannot confirm, marking it to verify.
+- **Every item in the skill's "Don't" list** (under Tone and Copy). Quote each hit. For a factual claim the copy depends on that you cannot confirm, flag it under "To verify" rather than guessing it is wrong.
 
-Technical (these break rendering or tracking):
-- **`display: flex`** anywhere. Email clients strip it: must be `<table>` layout.
-- **Third-party / hotlinked images** for icons. Social icons must be the self-hosted `https://littleparrot.app/icon-linkedin.png` and `https://littleparrot.app/icon-instagram.png`.
-- **A gradient that carries meaning with no solid `background-color` fallback before it** (Outlook ignores `linear-gradient`).
-- **More than one primary CTA button.** Competing gradient buttons break the one-CTA rule: parallel actions must be cards, a secondary action must be an inline text link.
-- **Missing footer essentials**: LinkedIn + Instagram icons, the "you're receiving this because…" context line, the littleparrot.app link, and the unsubscribe link (`__unsubscribe_url__`).
-- **Merge fields not in `{{snake_case}}`**, or an unsubscribe link that is not `__unsubscribe_url__`.
-- **littleparrot.app links missing `?utm_source=<email-name>`** (the monthly update always uses `utm_source=monthly-email`), or auth-required links missing `&auth=login`.
-- **Meaningful text baked into an image** (anything but the logo / wordmark), it fails screen readers, mobile scaling, and images-off.
-- **An `<img>` with no `alt` attribute** (decorative images need `alt=""`, not a missing attribute).
-- **Non-descriptive link text** ("click here", "read more", "learn more" as the linked words).
+Technical (anything that breaks rendering, tracking, or the unsubscribe path):
+- **Any violation of the skill's "Technical Requirements"** (Email Client Compatibility, Accessibility & Dark Mode, Standard Structure, URL Conventions, Personalisation & Repeating Content, Footer Social Icons) severe enough to break the email in a major client, break tracking, or lose the unsubscribe link. The severity classes: stripped layout CSS, a meaning-carrying gradient without its solid fallback, more than one primary CTA, missing footer essentials, malformed merge fields, links missing their tracking or auth parameters, meaningful text baked into an image, missing alt attributes, non-descriptive link text. The exact requirements (properties, URLs, parameter names) live in the skill; cite the one you are applying.
 
 For each Tier 1 hit: quote the exact offending text or markup and give the replacement.
 
 ### Tier 2: Structure, design, and rendering
 
-- **Standard structure present and in order**: header (logo linked to littleparrot.app) → content (greeting, body, optional highlight box, optional CTA) → sign-off ("Kinga, Tamas & Little Parrot" with 💛) → footer. A `<title>` is set and mirrors the subject line.
-- **Type scale holds**: 16px for greeting/body/highlight/sign-off (the greeting does not get its own size), 18px section headers, 14px fine print, 12px footer.
-- **Fonts**: Inter for body, Space Mono for `h2` headers, sign-off, and any header subtitle.
-- **One highlight box maximum.** Two stacked gradient-background boxes is a fail.
-- **Parallel actions are cards, not repeated buttons** (2px black border + drop shadow + left rainbow accent bar, whole text block one link).
-- **Feature image is linked** to the same destination as the primary CTA.
-- **Deadlines are inline bold text**, not styled like buttons or code blocks.
-- **Brand styling**: 2px solid `#08080a` borders with the `4px 4px 2px rgba(8,8,9,0.25)` drop shadow on container, highlight box, CTA, feature images, and cards; correct gradient stops; full saturation for CTAs/accent bars and low-opacity tint for header/highlight/sign-off backgrounds.
-- **Value lists are scannable**: bold label for skimming, plain one-sentence description, items separated to increase perceived value.
-- **Table cells use inline styles** rather than relying on `<style>`-block classes.
-- **Skimmable in nine seconds**: leads with the point (inverted pyramid), primary message and CTA in the first screenful, front-loaded headers/links/bullets (no "Introducing…"), short single-idea paragraphs, descriptive subheads, bold under ~30%, one idea per email (~50 to 125 words of body for a standard send).
-- **CTA tap target** at least ~44px tall, full-width on mobile, built as a bulletproof HTML/CSS button (not a sliced image), with clear space around it. CTA copy is a 2 to 4 word action that says what happens.
-- **Body type**: at least 14px (16px on mobile), line-height ~1.5, left-aligned (never justified).
-- **Contrast (WCAG AA)**: body text ≥ 4.5:1, large text and button fills/borders ≥ 3:1; text over the rainbow gradient or a tint clears contrast against both its lightest and darkest point. Flag low-contrast combinations to verify with a checker.
-- **Accessibility scaffolding**: one logical heading order, layout `<table role="presentation">`, `lang="en-GB"` and `color-scheme` meta present, meaning never carried by colour alone.
-- **Dark mode**: large white backgrounds use `#fffffe` (not pure `#ffffff`), and dark logos/stickers have a solid or light-padded background so they don't vanish on inversion.
-- **HTML likely over ~102KB** (Gmail clipping risk): flag if the email is image-heavy or very long.
+Check the draft section by section against the skill's **Standard Structure**, **Type Scale**, **Brand Styling**, **Design Rules** (built to be skimmed in nine seconds, visual hierarchy, scannable value lists, key links) and **Accessibility & Dark Mode**. A divergence that would still render intact is Tier 2. Cite the skill rule you are applying and quote the markup; every pixel value, ratio and hex code lives in the skill, so never judge those from memory.
+
+Two of the skill's checks are easy to skim past, so run them deliberately:
+- **Contrast** against both the lightest and darkest point of any gradient or tint (the AA ratios are in Accessibility & Dark Mode); flag low-contrast pairs to verify with a checker.
+- **Gmail clipping size** when the email is image-heavy or very long (the threshold is in Email Client Compatibility).
 
 ### Tier 3: Correctness, honesty, and audience fit (the most important tier)
 
@@ -93,7 +66,7 @@ For each Tier 1 hit: quote the exact offending text or markup and give the repla
 - **Warm, direct, friend-who-runs-a-small-company voice**, never patronising, never hype. For new or lapsed users, the mission ("close the gender gap in AI") appears when introducing Little Parrot; the community is framed as direct access to Kinga (Lead Product Manager) and Tamas (Principal Software Engineer).
 - **Audience fit.** Non-technical women with business ideas, often busy and easily intimidated by technical content. No jargon that alienates them ("developers and AI practitioners"): frame events and features around what they get out of it. The email should leave them feeling welcomed, capable, and supported.
 - **Conversion emails** stay "no pressure": concrete value over abstract benefit, deadlines stated plainly, mechanics clear, subscription mention as natural context rather than a push. Cancellation/end emails keep the door open without guilt-tripping.
-- **Merge fields and per-recipient links resolve correctly for everyone**, including recipients at the edges of the set (zero, one, many). Repeating content uses a confirmed loop syntax or a manually duplicated, numbered block.
+- **Merge fields and repeating content** follow the skill's Personalisation & Repeating Content section, and resolve for recipients at the edges of the set (zero, one, many).
 
 ## Output format
 

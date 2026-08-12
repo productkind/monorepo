@@ -117,6 +117,7 @@ Readability rules on top of the scale:
 
 ### Personalisation & Repeating Content
 - Merge fields use `{{snake_case}}` (`{{first_name}}`, `{{course_name}}`, `{{certificate_id}}`); the unsubscribe link is `__unsubscribe_url__`.
+- **Merge fields and per-recipient links must resolve correctly for everyone**, including recipients at the edges of the set: zero items, one item, many items.
 - For content that repeats per recipient (e.g. one card per completed course), **confirm the email tool's loop syntax before using it** (Liquid `{% for %}` vs Handlebars/Mustache `{{#each}}`). If the syntax is unknown or the audience is small, build one reusable block and duplicate it manually, wrapped in `<!-- start/end -->` comments with numbered fields (`{{course_name_2}}`, `{{certificate_id_2}}`).
 
 ### Footer Social Icons
