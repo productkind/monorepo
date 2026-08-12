@@ -27,7 +27,6 @@ Scan the entire course (every text step, quiz question, option, explanation, des
 
 - **Em dashes (—).** Banned everywhere, not British English. Quote every one. Fix with a comma, colon, parentheses, or a restructure. This includes systemPrompts for free-text exercises.
 - **Not British English** (must be organise, behaviour, colour, prioritise, recognise, etc.). Quote each Americanism.
-- **"just" or "simply" before an instruction** ("just click", "simply add"), minimises the learning.
 - **"obviously" / "of course"**: implies the learner should already know.
 - **"quietly" as a signifier** ("quietly rewrites", "quietly changed"), state the action plainly.
 - **"from X to Y" transformation phrasing** ("go from 'I can't' to 'I just did'", "from scattered idea to shipped product"), reads as marketing buzz. Describe the experience directly instead.

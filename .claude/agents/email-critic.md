@@ -42,7 +42,6 @@ Copy:
 - **Em dashes (—).** Not British English, banned across all Little Parrot copy. Quote every one.
 - **Not British English** (must be organise, behaviour, colour, prioritise, etc.).
 - **Patronising language** ("That took courage", "Amazing!", "Great job!").
-- **"just" before an instruction** ("just click", "just reply").
 - **Doubt-triggering purchase language** ("big commitment", "big investment").
 - **Deflating openings** ("Even if you don't win").
 - **Count words** ("several", "a few", "both") where one template serves recipients with different counts — phrase around the set instead.
