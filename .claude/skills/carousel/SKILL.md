@@ -213,6 +213,20 @@ Before showing the spec, run this quick gate and fix anything that fails:
   is the last idea clearly ahead of the first? If two slides could swap
   without the reader noticing, tighten the order.
 
+Then gate the language with fresh eyes, still before showing the spec:
+
+1. Spawn the `tone-of-voice-critic` agent (Agent tool) and pass it the
+   spec (or its path) and one line on what it is (e.g. "a carousel spec:
+   the display copy for 8 slides teasing <piece>"). Tell it that content
+   marked "(parody; banned-list exempt)" is deliberately bad example copy
+   and exempt from the banned list. It judges words only: banned language,
+   British English, and AI dressing; structure, slide design, and the copy
+   principles stay with this skill.
+2. **PASS** → show the spec for approval. **NEEDS REVISION** → apply the
+   critic's revision brief and re-run it on the new spec, up to **3
+   rounds**; after that, show the best spec and name the unresolved items
+   honestly. Never hide them or ship around them.
+
 ## Step 2 — Approval gate (Kinga)
 
 STOP and show the spec. Do not start the design until the messaging is
