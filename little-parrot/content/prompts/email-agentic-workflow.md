@@ -22,7 +22,7 @@ This session we also closed a real gap. The skill said plenty about the body but
 
 ```
 you ask for an email
-  → [skill] little-parrot-email (+ productkind-tone, little-parrot-ai-skill-gap)   the main agent drafts
+  → [skill] little-parrot-email (+ productkind-tone, productkind/little-parrot-context.md)   the main agent drafts
   → [agent] email-critic                                                          judges with fresh eyes, returns a verdict
   → revise on the critic's brief, re-run, ≤3 rounds
   → you receive an email that already passed, plus a short note on what was caught
@@ -42,7 +42,7 @@ The loop is built into the `little-parrot-email` skill (its "Evaluation Loop" se
   - **Type Scale**: the brand sizes plus readability rules (new): mobile floor, line-height, WCAG contrast including text over gradients.
   - **Tone and Copy**: the voice, the do/don't list, and a **Plain language** subsection (new: reading age ~9, short sentences, define a term inline on first use, house terminology).
   - **Before Sending**: fact and link checks, plus new checks for subject/preheader, contrast and dark mode, and the 102KB clip limit.
-- **`productkind-tone`** and **`little-parrot-ai-skill-gap`**: applied alongside for the educational voice and the company context.
+- **`productkind-tone`**: applied alongside for the educational voice; `productkind/little-parrot-context.md` (a plain file, formerly the little-parrot-ai-skill-gap skill) is read for the company context.
 
 ### Agent (`.claude/agents/`)
 - **`email-critic`** (read-only). Has **fresh eyes** (it did not write the draft) and a **single job**: judge a drafted email against the guidelines and return a verdict a writer can act on. It does not rewrite the email. Its rubric is the `little-parrot-email` and `productkind-tone` skills (preloaded into its context via the `skills:` frontmatter field), and it reads a recent email from `little-parrot/assets/emails/` at runtime to check the current structure. It judges both the copy and the markup, because in email a layout bug ships as badly as a tone slip. Three tiers:

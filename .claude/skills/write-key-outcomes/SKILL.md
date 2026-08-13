@@ -1,6 +1,6 @@
 ---
 name: write-key-outcomes
-description: Use this checklist when writing any course related content to have outcome-oriented descriptions that are clear, engaging, and aligned with our educational philosophy.
+description: Write outcome-oriented key outcomes and course descriptions that are clear, engaging, honest about what the course teaches, and aligned with our educational philosophy. Use when writing course descriptions, key outcomes, learning outcomes, or outcome bullets for any course-related content. Triggers include "write the key outcomes", "course description", or "learning outcomes".
 ---
 
 ## Writing Key Outcomes

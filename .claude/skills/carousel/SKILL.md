@@ -105,7 +105,8 @@ teaser copy, not sentences lifted from the article. Do not paste article
 phrasing onto slides; rewrite each idea as its own short, spoken line.
 Write every slide with the **personal-tone-of-voice** skill so it sounds
 like Kinga talking to a friend, not like the article's prose. Use
-productkind-tone / little-parrot-ai-skill-gap for brand context.
+productkind-tone for brand voice, and read
+`productkind/little-parrot-context.md` for brand context when needed.
 
 **Keep the pronoun the source uses.** If the article says "we" about
 something (a productkind or two-person activity, e.g. the Instagram
@@ -181,8 +182,9 @@ Where the spec lives:
 
 Voice: write the on-slide copy with the
 **personal-tone-of-voice** skill so it sounds like Kinga (spoken, warm,
-understated), not like the article. Use productkind-tone /
-little-parrot-ai-skill-gap for brand context. Apply the **language-rules**
+understated), not like the article. Use productkind-tone for brand voice,
+and read `productkind/little-parrot-context.md` for brand context when
+needed. Apply the **language-rules**
 skill in full, and invoke it if it is not already loaded: it is the single
 source for banned words and phrases, British English, em dashes and
 punctuation, AI dressing, and how we frame AI. Do a deliberate

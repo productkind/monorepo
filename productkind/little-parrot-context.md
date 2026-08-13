@@ -1,8 +1,3 @@
----
-name: little-parrot-ai-skill-gap
-description: Apply this knowledge when Little Parrot is mentioned. This skill encompasses the background and contex of Little Parrot.
----
-
 # Little Parrot – Background & Context
 
 ## What is Little Parrot

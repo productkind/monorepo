@@ -1,6 +1,6 @@
 ---
 name: messy-draft-to-outline
-description: Use this checklist when generating an outline for a micro-course from a messy draft. Every outline must meet these criteria before being considered complete.
+description: Turn a messy draft or rough notes into a structured Little Parrot micro-course outline, ending with the verification handoff list that course-tool-researcher works from. Use when creating a course outline, structuring rough course notes, or starting a new micro-course. Triggers include "create an outline", "turn this draft into a course outline", or any course-outline task.
 ---
 
 ## Important Aspects to Follow

@@ -59,7 +59,7 @@ primary growth channel, so share-asks are the point, not decoration.
 - **`linkedin-post`** for LinkedIn posts and Substack Notes (hook, structure, openings).
 - **`personal-tone-of-voice`** for anything written in the founder's voice (LinkedIn,
   Substack, WhatsApp, Reddit).
-- **`little-parrot-ai-skill-gap`** for framing and mission context.
+- `productkind/little-parrot-context.md` (read with the Read tool) for framing and mission context.
 - **`little-parrot-email`** when a channel is an HTML email send.
 - **`productkind-tone`** as the fallback warmth/clarity baseline.
 

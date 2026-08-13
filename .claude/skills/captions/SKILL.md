@@ -63,7 +63,8 @@ the spec (and the source article/course) before writing.
 - Write captions with **productkind-tone** so every caption sounds like a
   person talking to a friend, not marketing copy. Founder comments follow
   **personal-tone-of-voice**: they go out under Kinga's and Thomas's own
-  names. Use **little-parrot-ai-skill-gap** for brand context.
+  names. For brand and mission context, read
+  `productkind/little-parrot-context.md` when needed.
 - Apply the **language-rules** skill in full, and invoke it if it is not already loaded. It is the single source for banned words and phrases, British English, em dashes and punctuation, AI dressing, and how we frame AI.
 - Do a deliberate phrase-by-phrase banned-list pass on every caption AND
   every founder comment before showing the draft.
