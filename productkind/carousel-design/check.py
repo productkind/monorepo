@@ -11,16 +11,25 @@ drift from it:
    furniture (handle, page numbers, avatars, timestamps) is allowlisted.
 2. BANNED   - no banned words/phrases in on-slide text. Elements marked
    data-parody="true" (deliberate parody content, noted as exempt in the
-   spec) are skipped. The banned list here is the greppable subset of the
-   personal-tone-of-voice skill; the full list still needs the human pass
-   on the md itself.
+   spec) are skipped. The closed banned list, em dashes and American
+   spellings are checked by delegating the non-parody text to
+   .claude/skills/language-rules/scripts/check-banned.py, which parses the
+   list from language-rules/SKILL.md at run time, so this script never
+   holds its own copy. A few judgement-rule heuristics tuned for short
+   slide copy are additionally grepped here; the full judgement pass stays
+   with the tone-of-voice-critic on the md itself.
 
 Exit code 0 = both checks pass.
 """
 import re
+import subprocess
 import sys
+import tempfile
 import unicodedata
 from html.parser import HTMLParser
+from pathlib import Path
+
+CHECK_BANNED = Path(__file__).resolve().parents[2] / ".claude/skills/language-rules/scripts/check-banned.py"
 
 # --- what counts as a checkable text unit -----------------------------------
 UNIT_TAGS = {"h1", "h2", "h3", "p", "pre", "li"}
@@ -40,25 +49,19 @@ ALLOW_PATTERNS = [
     re.compile(r"^[^\w\s]{1,3}\s?\d*$"),     # emoji chips / reactions (👍 2)
 ]
 
-BANNED = [
-    (re.compile(r"—"), "em dash"),
+# Judgement-rule heuristics (language-rules section 3) grepped conservatively
+# because slide copy is short; the closed list itself is NOT duplicated here,
+# it is checked by delegating to check-banned.py (see banned_scan below).
+HEURISTICS = [
     (re.compile(r"\bmatter(s|ed)?\b", re.I), '"matters" as importance claim'),
     (re.compile(r"\bland(s|ed)?\b(?! page)", re.I), 'figurative "lands"'),
     (re.compile(r"\blanding\b(?! page)", re.I), 'figurative "landing"'),
-    # "actually" is explicitly NOT banned (personal-tone-of-voice: it is one
-    # of Kinga's natural hedges); whether a use is filler is for the human
-    # pass on the md, so it is not grepped here.
+    # "actually" is explicitly NOT banned (language-rules Not faults: an
+    # honest hedge); whether a use is filler is for the critic pass on the
+    # md, so it is not grepped here.
     (re.compile(r"\bgenuinely\b", re.I), '"genuinely"'),
     (re.compile(r"\bquietly\b", re.I), '"quietly"'),
-    (re.compile(r"here's the thing", re.I), "pseudo punchline"),
     (re.compile(r"that's the whole", re.I), "manufactured payoff"),
-    (re.compile(r"game.chang", re.I), "hyperbole"),
-    (re.compile(r"\bhack\b", re.I), "drama word"),
-    (re.compile(r"\bchaos\b", re.I), "drama word"),
-    (re.compile(r"\bhype\b", re.I), "drama word"),
-    (re.compile(r"\bno fluff\b", re.I), "drama word"),
-    (re.compile(r"plain english|plain language|plain wording", re.I), "announcing clarity"),
-    (re.compile(r"\bmakes? a real difference\b", re.I), "empty filler"),
 ]
 
 
@@ -70,6 +73,44 @@ def norm(s: str) -> str:
     s = re.sub(r"<br\s*/?>", " ", s, flags=re.I)  # literal <br> in spec tables
     s = s.replace('"', "").replace("'", "")  # quote styles vary; compare without
     return re.sub(r"\s+", " ", s).strip()
+
+
+def norm_scan(s: str) -> str:
+    """Like norm() but keeps quotes/apostrophes: the banned scan must see
+    "here's the thing" with its apostrophe intact, or it can never match."""
+    s = unicodedata.normalize("NFC", s)
+    s = s.replace("’", "'").replace("‘", "'")
+    s = s.replace("“", '"').replace("”", '"')
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def banned_scan(units):
+    """Delegate the closed list, em dashes and American spellings to
+    check-banned.py (single source: parsed from language-rules at run time).
+    units: list of (scan_text, unit_index). Returns failure strings."""
+    if not CHECK_BANNED.is_file():
+        sys.exit(f"error: cannot find {CHECK_BANNED}; the banned-word check "
+                 "delegates to it, so the carousel cannot be checked without it.")
+    with tempfile.NamedTemporaryFile("w", suffix=".txt", delete=False, encoding="utf-8") as tf:
+        tf.write("\n".join(t for t, _ in units) + "\n")
+        tmp = tf.name
+    res = subprocess.run([sys.executable, str(CHECK_BANNED), tmp],
+                         capture_output=True, text=True)
+    Path(tmp).unlink(missing_ok=True)
+    if res.returncode == 0:
+        return []
+    if res.returncode != 1:
+        sys.exit(f"error: check-banned.py failed unexpectedly:\n{res.stderr or res.stdout}")
+    failures = []
+    for line in res.stdout.splitlines():
+        m = re.match(rf"^{re.escape(tmp)}:(\d+)\s+\[([^\]]+)\]\s+(.*)$", line)
+        if m:
+            idx = int(m.group(1)) - 1
+            src = units[idx][0] if 0 <= idx < len(units) else "?"
+            failures.append(f"BANNED ({m.group(2)}): {m.group(3)}  [in unit: {src[:90]!r}]")
+        elif line.strip().startswith("fix:"):
+            failures.append(f"    {line.strip()}")
+    return failures
 
 
 class Node:
@@ -146,7 +187,7 @@ def collect_units(node, units):
     if is_unit:
         t = norm(node.text())
         if t:
-            units.append((t, node))
+            units.append((t, norm_scan(node.text()), node))
         return  # don't descend into a unit; its text is captured whole
     for c in node.children:
         if not isinstance(c, str):
@@ -170,16 +211,20 @@ def main():
     collect_units(tb.root, units)
 
     failures = []
-    for t, node in units:
+    scannable = []
+    for t, ts, node in units:
         if allowed(t):
             continue
         if t not in spec_text:
             failures.append(f"NOT IN SPEC: {t[:110]!r}")
         if not node.has_ancestor_attr("data-parody"):
-            for rx, label in BANNED:
-                m = rx.search(t)
+            scannable.append((ts, node))
+            for rx, label in HEURISTICS:
+                m = rx.search(ts)
                 if m:
-                    failures.append(f"BANNED ({label}): ...{t[max(0,m.start()-30):m.end()+30]!r}...")
+                    failures.append(f"HEURISTIC ({label}): ...{ts[max(0,m.start()-30):m.end()+30]!r}...")
+
+    failures += banned_scan(scannable)
 
     print(f"checked {len(units)} text units against {spec}")
     if failures:
