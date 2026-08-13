@@ -1,0 +1,297 @@
+# Course design rubric
+
+The shared course-design rules for Little Parrot micro-courses. Two readers use this file: the writer applies it in full while outlining (messy-draft-to-outline) and drafting (outline-to-micro-course), and course-pedagogy-critic judges the drafted course against it. It is self-contained: no onward references.
+
+## Contents
+
+- Important Aspects to Follow
+- Narrative Structure
+- Teaching Approach
+- Tone and Expectations
+- Checklist for Micro-course Content
+  - 1. Single-Concept Focus
+  - 2. Immediate Applicability
+  - 3. Built-In Practice
+  - 4. Completion Time
+  - 5. Jargon-Free Language
+  - 6. Clear Progression
+  - 7. Welcoming Tone
+- Summary Checklist
+
+---
+
+## Important Aspects to Follow
+- You don't have to follow the exact structure of the course outline given. It's important that you craft the micro-course in a way that engages learners and help them efficiently acquire new skills.
+- The first challenge must hook the learner with a specific, reusable tool they can apply immediately: a formula, a template, a checklist, or a practical technique. The learner decides based on the first challenge whether to subscribe, so they need to walk away with concrete value, not just motivation or mindset. Avoid hooks that rely on unrealistic scenarios (e.g., "strangers start asking for your product"). Most learners have to work hard for attention, so the hook should equip them to do that work.
+- The learner should encounter a practical and hands-on step in the micro-course as soon as possible. Build their mindset during the micro-course, connecting it to practical experiences, not in a separate challenge focusing only on the mindset. Mindset points (like "you don't need investors") work best as supporting content after the learner has already engaged with a practical exercise.
+- Include in the micro-course description the transformation the learner will realise by the end. Include what the learner will be able to do after completing the micro-course.
+- **Don't oversell the transformation.** Describe only what the course actually teaches. If it doesn't teach the learner to read code, don't claim "the code stops being a mystery"; name the real outcome instead (e.g., "you'll understand how your files are organised and how changes are tracked"). Check the description, the learning outcomes, and the course-end recap for claims the content doesn't deliver, and soften them consistently.
+- When creating quiz steps, vary which answer is the correct one (not always the second one).
+- **Reusable artifact per challenge:** Every challenge should give the learner something they can reuse outside the course: a formula, a template, a checklist, a prompt template, or a script. If a challenge only explains a concept without a reusable artifact, it's incomplete.
+- **Realistic examples:** Assume the learner has zero traction, zero audience, and no business experience. Every example must be achievable by someone starting from nothing. Don't show outcomes that require luck or organic demand (e.g., "40 sign-ups in two weeks" or "strangers start asking for your product"). Show outcomes that result from specific actions the learner took.
+- **Address the learner's biggest fear first.** Before teaching anything, identify the misconception or fear that's stopping the learner from starting and address it head-on. ("You don't need to know how to code", "You don't need a company or investors", "You don't need to be creative.") Clear the blocker, then teach. This should be the first text step after the comics.
+- **Don't open with overwhelming text blocks.** The learner's first reading experience after the comics sets their expectations for the whole course. If the first text step is long, split it into two shorter steps. Short, focused steps feel approachable. A wall of text feels like homework.
+- **Show where reusable tools will come back.** When a challenge teaches a formula, template, or technique that the learner will reuse in later challenges, add a step listing where it will show up. This motivates the learner to take it seriously and connects the dots across the course. Don't leave the learner wondering "why does this matter?"
+- **Don't teach unsound or risky workflows.** If a useful technique needs tooling that's out of scope for the course (e.g., the command line), don't teach a fragile workaround that could break the learner's work. Defer it to a future course and explain why, rather than shipping something that looks easy but isn't safe.
+
+---
+
+## Narrative Structure
+
+**Start with a relatable problem, not a lesson.** Use comics or a story to show someone's frustration before any teaching begins. Learners should feel "that's me" before they learn anything. The comics should set up the **full course arc** (the spark, the overwhelm, the guide offering a path), not only introduce the first challenge's topic.
+
+**Don't disparage the tool the learner relies on.** The problem in the comics and intro should come from the learner's pain (cost, time, friction, overwhelm), not from bashing a feature of a product they use and pay for. Show the frustration without making the tool the villain. Any honest limitation of a specific feature is better placed later, as a calm, factual aside in a text step, not as the opening complaint.
+
+**Introduce the course after the comics.** Add a brief step after the comics that tells the learner what they'll walk away with. List the concrete outcomes, not the topics. Jumping straight from comics into teaching feels too abrupt. The learner needs a moment to understand what they're signing up for before the first lesson starts.
+
+**Transformation hook in the first video/intro.** Frame the course as identity change, not a topic list. Not "You'll learn A, B, C" but "You'll become someone who...". Make the benefit concrete: name what the learner will actually be able to do by the end. Example: "By the end, you'll have published your first app, even if you've never written a line of code."
+
+**One running example throughout.** Use Dalmie (a dalmatian dog character) building the Book Club Organiser app as the running persona and project across all challenges, consistent with other Little Parrot courses. Don't switch examples mid-course. Consistency makes abstract concepts tangible and helps learners follow along. **Keep Dalmie's backstory consistent:** Dalmie built the app for her friend Sarah, who is the book club organiser. Sarah is the domain expert. When Dalmie needs domain knowledge (e.g., what book club organisers struggle with), she asks Sarah rather than knowing it herself.
+
+**Challenge openers set emotional tone.** The first step of each challenge should excite and preview the transformation, not just list what's coming. Acknowledge progress ("You're no longer a beginner") and build anticipation for what they'll be able to do.
+
+**Challenge-end steps have distinct roles.** The `nextModule` field should excite and build anticipation for what's coming next. The `subDescription` should reflect on the value the learner got from this specific challenge, not recap the whole course so far. Don't repeat the same information in both fields.
+
+**The final exercise should be one focused, forward-looking action.** End the course with a single question that converts learning into momentum, like "What's the one thing you'll do this week?" Don't end with a multi-part summary or a heavy exercise. The learner should leave with intent to act, not a to-do list.
+
+---
+
+## Teaching Approach
+
+**Teach prerequisites thinking.** Before introducing a feature, model the question: "What does this feature need to work properly?" This is a meta-skill learners should internalise. Example: "Before adding voting, we need authentication so the app knows who's voting."
+
+**Specific test cases after features.** After teaching how to build something, include explicit verification steps. Not "test your feature" but specific actions: "1. Try voting without logging in. 2. Log in and vote. 3. Try voting again on the same book." This builds testing habits.
+
+**Cross-reference at the moment of relevance.** Link to other courses when the learner might want to go deeper, not in a list at the end. Example: "Curious about databases? Our Basics of Software course explains this in friendly terms."
+
+**Define unfamiliar terms inline.** If a concept is mentioned before its dedicated challenge (e.g., "directory submissions" in Challenge 1 that are taught in Challenge 5), add a brief inline explanation so the learner isn't confused. Don't assume they'll know what it means because it's covered later.
+
+**Teach real terms, don't dumb them down.** When a technical term is the right word (e.g. *static* / *dynamic*, *commit*, *localhost*, *hardcode*), teach it with a short plain-language definition on first use rather than swapping it for a softer paraphrase. The audience is non-technical but capable, and building real builder vocabulary is part of the value. Defining the term inline is the goal, not avoiding it.
+
+**Introduce a reassuring analogy after the concept it explains, not before.** If you compare a new idea to something familiar (e.g., version control to a document's edit history in Google Docs), make sure the learner already knows what the new idea is. An analogy that arrives before the concept reads as coming out of nowhere, and the learner won't see why you're mentioning it.
+
+**Examples must model best practice.** A worked example should never demonstrate an anti-pattern in passing, because learners copy what they see. If you show a UI change, change the shared style once rather than recolouring each element; if you show a workflow, show the safe version. The "how Dalmie did it" example is teaching the method, not just the result.
+
+**Trace every hands-on procedure end-to-end before teaching it.** When a step teaches a procedure (edit this, swap that, run these commands), execute or trace it on a real project before writing the instructions, and ask: "If the learner does exactly this and nothing else, does it work?" Code edits often need companion changes the obvious step hides (e.g. swapping a Lucide icon's name also requires updating the file's `import` line; a missed companion change strands the learner with an error). If no real repo is available to verify against, flag the step to the user as untested rather than presenting it as complete.
+
+**Specify who in exercises that involve other people.** If an exercise asks the learner to talk to people, test something on others, or collect feedback, specify who those people should be (e.g., "people who match your target audience", not "five people"). Without this, learners default to friends and family who may not give useful reactions.
+
+**Quiz explanations should teach, not just confirm.** Use the explanation text after a quiz answer as a teaching moment. Introduce a principle, reframe the concept, or add nuance that wasn't in the text steps. "Correct, B is the right answer" wastes a learning opportunity. "Features don't equal value. A list of features tells people what the product has, but not what they can achieve with it" teaches something new.
+
+**Examples should model the thinking process, not just the output.** When showing Dalmie's example, focus on *how* she arrived at her decision, not just what she decided. The learner benefits more from seeing a replicable thought process ("she asked Sarah what she struggles with most") than from seeing the finished result ("she made a PDF"). Show the question that led to the answer.
+
+**Exercises should focus on one thing.** Don't bundle multiple tasks into a single exercise. "Plan your email capture + design your lead magnet + check it against three criteria" is three exercises pretending to be one. One clear question or task per exercise. If you need the learner to do multiple things, use separate steps.
+
+**SystemPrompts for free-text exercises must avoid em dashes.** Every field of the course is subject to the language-rules banned list, systemPrompts included.
+
+**Copy-paste prompts must be in markdown code blocks.** When the course includes a prompt the learner can copy and paste into an AI app builder or other tool, wrap it in a markdown code block so it's clearly distinguished from the surrounding text and easy to copy.
+
+**Every toolkit mention must be a clickable link.** Don't write "check the toolkit for the setup guide" without linking to the specific item. The learner shouldn't have to go find it.
+
+**When a referenced toolkit item doesn't exist yet, don't invent a URL.** This resolves the tension with the rule above: link the item if it already exists in `toolkit-links.md`, otherwise either inline the needed content into the course steps or reference the item by name without a link. Flag the missing items to the user so they can be created later. Never fabricate a placeholder toolkit URL.
+
+**Weave toolkit references into the text naturally.** Make sure that it reads well and doesn't break the flow of the content.
+
+**Categories must be on the same level.** When a step presents options or models for the learner to choose between, check that they're the same type of thing. If they're not, split them into separate decisions. For example, "subscription vs one-time payment" is one decision (how you charge), "free trial vs freemium" is a different decision (how people try). Don't mix them into one list.
+
+**Split steps with more than 3 items.** When a step introduces more than 3 concepts, techniques, or options, split it into two consecutive steps. Long lists lose the learner's attention.
+
+**Dense information should be scannable.** Avoid tables (they break on mobile) and long paragraphs with multiple concepts. Use stacked formats: bold name, one-line description, key details on separate lines. Design for vertical reading on a phone screen.
+
+**Style every text step for scanning.** Use **bold** for the key concept or benefit in each paragraph, and *italics* for UI labels, button names, and short examples. Bold technical terms on first use. Don't leave flat paragraphs with no emphasis, and don't over-bold either: one or two emphases per paragraph, so a learner skimming the bold still gets the gist. Quiz options stay unstyled (formatting shouldn't hint at the answer).
+
+**Style video transcripts the same way.** A video step's `transcript` is not just a backup caption: learners can choose to read it instead of watching, so it must carry markdown emphasis on its key points exactly like a text step. **Bold** the main beat of each paragraph (and *italics* for UI labels), one or two emphases per paragraph, so a learner reading rather than watching gets the same beats at a glance. A flat, unformatted transcript is a fail.
+
+**Don't assume which option the learner will choose.** When teaching decision frameworks with multiple paths (e.g., pricing models, trial types), keep the guidance flexible so it applies regardless of which path the learner takes. Don't write follow-up steps that only make sense for one option.
+
+**Anchor models and categories with real products.** When introducing models, categories, or abstract concepts, include a well-known product as an example so the learner can picture it. Only include examples you've verified are accurate. If you can't find a verified example, leave it out rather than guessing.
+
+**Heavy calculations and multi-step procedures belong in toolkit items, not exercises.** If an exercise requires a calculator, a spreadsheet, or multiple steps of arithmetic, make it a toolkit item (e.g., a Google Sheet template) instead. The course should teach the concept and show an example. The learner applies it at their own pace using the toolkit.
+
+---
+
+## Tone and Expectations
+
+**Name the difficulty explicitly.** Use step titles like "Things will break (and that's okay)." Don't hide struggle; normalise it. Learners trust content that acknowledges reality.
+
+**Reframe universal principles for the specific context.** Generic wisdom needs contextual translation. Example: The 80/20 rule became "the 80/20 of vibe coding" with specific meaning: generating is fast, perfecting takes time.
+
+**Model what you teach.** If the course teaches "build incrementally," the course itself should build incrementally. The running example should start simple and grow, mirroring the learner's journey. Don't dump all features in the first prompt example.
+
+
+## Checklist for Micro-course Content
+Micro-course content should follow these principles to ensure it's engaging, effective, and aligned with our educational philosophy. Use this checklist as a guide when creating or reviewing micro-course content.
+
+### 1. Single-Concept Focus
+
+**Requirement:** Each challenge teaches exactly one action-oriented concept, skill, or problem.
+
+**Check:** Can the challenge's outcome be stated in one sentence using this format?
+> "After this challenge, you will be able to [specific action]."
+
+**Fail indicators:**
+- The outcome sentence contains "and" connecting two different skills
+- You need more than one sentence to explain what the learner will be able to do
+
+---
+
+### 2. Immediate Applicability
+
+**Requirement:** The learner can apply what they learned within 5 minutes of finishing.
+
+**Check:** Does the challenge end with a clear, concrete action the learner can take right now?
+
+**The action must be:**
+- Specific (not "try using prompts" but "write a prompt asking for a signup form with email validation")
+- Achievable without additional research or setup
+- Completable in under 15 minutes
+
+**Fail indicators:**
+- The challenge ends with conceptual understanding only
+- The suggested action is vague ("experiment with this technique")
+- The exercise offers a choice between tactics where one depends on the other (e.g., "choose a wait list or lead magnet" when a lead magnet requires email capture). If tactics have prerequisites, make the sequence explicit rather than presenting them as alternatives.
+
+---
+
+### 3. Built-In Practice
+
+**Requirement:** The challenge includes multiple moments where the learner does something, not just watches or reads. Interactive steps should be distributed throughout the challenge, not clumped at the end.
+
+**Effort gradient within a challenge:** Structure interactions so effort increases gradually:
+- **Low effort (after 1-2 text steps):** Scenario-based quiz where the learner makes a judgement call on a given example. Not recall ("What is X?") but evaluation ("Is this a good X? Why?").
+- **Medium effort (mid-challenge):** Evaluate someone else's work using the criteria just taught. "Your friend made a 30-page PDF about the history of meal planning. Is this a good lead magnet for her meal planning app?" The learner applies criteria to a given situation, not their own.
+- **High effort (end of challenge):** Apply what they've learned to their own product. By this point, they've practised the judgement on easier examples, so applying it to their own situation feels like a natural next step rather than a cold start.
+
+**The pattern to avoid:** Read, read, read, read, quiz, quiz, exercise. This makes the learner passive for too long and then overwhelmed at the end.
+
+**The pattern to follow:** Text, text, quiz (judge a scenario), text, text, quiz (evaluate someone's work), exercise (apply to your own). The learner never reads more than 2-3 text steps before doing something.
+
+**Important:** Don't ask the learner to apply concepts to their own product after every text step. That requires high mental effort and becomes exhausting. Save "apply to yours" for the end of the challenge. Mid-challenge interactions should ask the learner to evaluate given examples, not generate their own.
+
+**Quiz answers must not be stated in the preceding step.** If the answer to a quiz question appears word-for-word in the text step before it, the quiz is testing short-term memory, not understanding. Rewrite it as a scenario where the learner has to apply the concept to a new situation.
+
+**Acceptable practice formats:**
+- Scenario-based quiz (judgement, not recall)
+- Evaluate a given example against criteria just taught
+- Reflection question that requires writing a response
+- Free-text exercise applying concepts to the learner's own product
+
+**Practice must:**
+- Be distributed throughout the challenge, not grouped at the end
+- Take under 3 minutes to complete
+- Directly reinforce the concept taught in the preceding text steps
+
+**Quiz answer formatting:**
+- Keep all options similar in length. If the correct answer is noticeably longer than the others, the learner picks it without thinking.
+- Prefer scenario-based questions ("Your data shows 70% drop-off. What should you do next?") over recognition questions ("What can X help you spot?"). Scenarios force the learner to think through a real decision.
+- **Quizzes don't need the running persona.** A learner-centred "you" scenario ("You're stuck in a fix-break loop, what do you do?") is preferred and puts the learner in the driver's seat. Don't force the course's persona (e.g. Dalmie) into every quiz; keep the persona for the running example and text steps, and reserve "apply to your own product" for the end-of-challenge high-effort step.
+
+**Fail indicators:**
+- All interactive steps are grouped at the end of the challenge
+- Quiz questions test recall of definitions instead of judgement or application
+- The correct quiz answer is visually obvious because it's the longest option
+- The learner reads more than 3 text steps in a row without doing something
+- Every interactive step asks the learner to apply to their own product (too much high-effort)
+
+---
+
+### 4. Completion Time
+
+**Requirement:** One challenge (content + practice) is completable in one sitting.
+
+**Target duration:** 5-10 minutes  
+**Maximum duration:** 15 minutes  
+
+**Estimation guide:**
+- Video content: actual runtime
+- Text content: ~200 words per minute reading speed
+
+**Fail indicators:**
+- Content exceeds 10 minutes of video or 1,500 words of text
+- Practice requires more than 10 minutes
+
+---
+
+### 5. Jargon-Free Language
+
+**Requirement:** A learner with no technical background can understand every sentence.
+
+**Rules:**
+- Every technical term is either explained on first use OR avoided entirely
+- Explanations use plain language inline, e.g., "**kebab-case** (all lowercase, words separated by hyphens)". Don't assume any term is too basic to explain for this audience.
+- Explanations use analogies to familiar, everyday concepts
+- Acronyms are spelled out and explained on first use
+
+**Check:** Read each sentence and ask: "Would my non-technical friend understand this without stopping to Google anything?"
+
+**Fail indicators:**
+- Technical terms appear without explanation
+- Explanations assume prior technical knowledge
+- Sentences require re-reading to understand
+
+---
+
+### 6. Clear Progression
+
+**Requirement:** This challenge fits logically in the course sequence.
+
+**Check:**
+- Does this challenge assume only knowledge taught in previous challenges?
+- Does this challenge prepare the learner for what comes next?
+- Is there a clear reason this challenge comes at this point in the sequence?
+- If the course has a "go live" moment (e.g., driving traffic, launching publicly), are all setup challenges (analytics, email capture, feedback mechanisms) placed before it? Data lost before tracking is set up can't be recovered. Explain the *why* behind the ordering in the content so the learner builds this mindset.
+
+**Fail indicators:**
+- Challenge references concepts not yet introduced
+- Challenge repeats content from earlier challenges without building on it
+- A setup step (analytics, email capture) comes after the moment it's needed
+
+---
+
+### 7. Welcoming Tone
+
+**Requirement:** The content makes learners feel empowered and capable, not intimidated.
+
+**Tone markers to include:**
+- Acknowledgment that this might feel new or unfamiliar
+- Normalisation of mistakes ("Don't worry about getting it perfect on the first try")
+- Encouragement that is specific, not generic ("You just wrote your first prompt! That's the hardest part done.")
+- Mentor-like, kind tone that makes learning enjoyable, ocassionally making jokes to lighten the mood
+
+**Tone markers to avoid:**
+- "Simply" or "just" before instructions (implies it should be easy)
+- "Obviously" or "of course" (implies the learner should already know)
+- Excessive exclamation marks or forced enthusiasm
+
+**Fail indicators:**
+- Instructions assume confidence the learner may not have
+- Mistakes are not normalised
+- Encouragement feels performative rather than genuine
+- Making fun of the learner
+
+---
+
+## Summary Checklist
+
+Before finalising any **challenge**, confirm:
+
+- [ ] Single outcome, one sentence, no "and"
+- [ ] Ends with specific, realistic action learner can take in 5 minutes (no hidden prerequisites)
+- [ ] Includes practice that takes under 3 minutes
+- [ ] Total completion time under 15 minutes (ideally under 10)
+- [ ] No unexplained jargon
+- [ ] Only assumes knowledge from previous challenges
+- [ ] Setup challenges (analytics, email capture) come before the moment they're needed
+- [ ] Tone is welcoming and normalises struggle
+
+Before finalising **the full course**, confirm:
+
+- [ ] Starts with a relatable problem (comics/story) before teaching
+- [ ] First video/intro frames transformation as identity change (concrete benefit, not a topic list)
+- [ ] One consistent running example throughout all challenges
+- [ ] Challenge openers excite and preview transformation
+- [ ] Final reflection asks about the full journey and what's next
+- [ ] Features include specific test cases for verification
+- [ ] Cross-references to other courses appear at relevant moments
+- [ ] Difficulty is named explicitly, not hidden
+- [ ] The course models the behaviour it teaches (e.g., builds incrementally)

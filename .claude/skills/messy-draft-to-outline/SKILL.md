@@ -3,31 +3,17 @@ name: messy-draft-to-outline
 description: Turn a messy draft or rough notes into a structured Little Parrot micro-course outline, ending with the verification handoff list that course-tool-researcher works from. Use when creating a course outline, structuring rough course notes, or starting a new micro-course. Triggers include "create an outline", "turn this draft into a course outline", or any course-outline task.
 ---
 
-## Important Aspects to Follow
+## The course-design rubric applies from the outline stage
+
+Read `.claude/skills/outline-to-micro-course/references/course-design-rubric.md` with the Read tool before outlining, and apply it in full. The first-challenge hook, the narrative arc (relatable problem first, no tool-bashing, transformation hook), the running example (Dalmie building the Book Club Organiser), honest outcomes, realistic examples, dependency ordering, and the go-live setup rule all get locked in at the outline stage, and the rubric is their single source of truth.
+
+## Outline-stage rules
+
 - You don't have to follow the exact structure of the messy draft given. It's important that you craft the outline in a way that engages learners and help them efficiently acquire new skills.
-- The first challenge must hook the learner with a specific, reusable tool they can apply immediately: a formula, a template, a checklist, or a practical technique. The learner decides based on the first challenge whether to subscribe, so they need to walk away with concrete value, not just motivation or mindset. Avoid hooks that rely on unrealistic scenarios (e.g., "strangers start asking for your product"). Most learners have to work hard for attention, so the hook should equip them to do that work.
-- The learner should encounter a practical and hands-on step in the micro-course as soon as possible. Build their mindset during the micro-course, connecting it to practical experiences, not in a separate challenge focusing only on the mindset. Mindset points (like "you don't need investors") work best as supporting content after the learner has already engaged with a practical exercise.
-- Include in the description the transformation the learner will realise by the end. Include what the learner will be able to do after completing the micro-course.
-- **Don't oversell the transformation.** Promise only what the course will actually teach. If it won't teach the learner to read code, don't frame it as "demystifying the code" or "the code stops being a mystery"; name the real outcome (e.g., understanding how files are organised and how changes are tracked). Overpromising in the outline carries straight through into the course copy.
 - **Verify the course's core premise against the tool's documentation before finalising the outline.** The outline is where the premise gets locked in, so check it holds. A free or built-in feature can undercut the angle (e.g., "edit on GitHub to save credits" weakens once you confirm the tool's visual editor is already free). If it's shaky, reframe the angle now (e.g., from "save credits" to "more reliable") and flag it to the user.
 - After drafting the outline, cross-check every bullet point in the messy draft against the outline. Flag any topics from the draft that were dropped and explain why (out of scope, covered in another course, etc.). Don't silently omit content.
 - **Scope check after first draft:** Review whether the course is trying to cover too much. If a challenge is purely technical setup (e.g., configuring DNS, step-by-step tool installation), it likely belongs in a toolkit item rather than a challenge. Challenges should teach decisions and skills, not walk through configuration screens. Prefer shorter challenges over fewer long ones, so the learner feels progress as they complete each one.
-- **Dependency ordering:** Check that each challenge only assumes things the learner has done in previous challenges. If a challenge requires users, it must come after a challenge that gets users. If it requires traffic, it must come after a challenge that drives traffic. Read the challenges in order and ask: "Does the learner have what they need to do this right now?"
-- **Prepare before the switch flips:** When a course has a "go live" moment (e.g., driving traffic, launching publicly), everything that captures or measures that moment must be set up in earlier challenges. Analytics, email capture, feedback mechanisms: all need to be in place before the first visitor arrives, or the learner loses data they can't get back. Explain *why* this ordering matters in the challenge content so the learner builds this mindset.
-- **Exercises must be realistic:** Check that each exercise is something the learner can actually do at that point in the course. If an exercise offers a choice between two tactics, make sure both are achievable with what the learner has set up so far. If one tactic depends on another (e.g., a lead magnet requires email capture), the exercise should make that sequence explicit, not present them as alternatives.
-- **Realistic examples:** Assume the learner has zero traction, zero audience, and no business experience. Every example must be achievable by someone starting from nothing. Don't show outcomes that require luck or organic demand (e.g., "40 sign-ups in two weeks" or "strangers start asking for your product"). Show outcomes that result from specific actions the learner took.
-- **Examples must model best practice, and be true to life.** The example baked into a challenge should demonstrate the right way to do something, never an anti-pattern in passing (e.g., change a shared style once rather than recolouring each element). Prefer scenarios that match how the tool is really used (e.g., deleting a section the AI added that the learner doesn't want, rather than a contrived one).
 - **Correct URLs:** Check `../../../little-parrot/content/course/course-links.md` for course URLs and `../../../little-parrot/content/course/toolkit-links.md` for toolkit URLs before generating any cross-references. Never invent placeholder URLs.
-
-## Narrative Structure
-
-**Start with a relatable problem, not a lesson.** Use comics or a story to show someone's frustration before any teaching begins. Learners should feel "that's me" before they learn anything.
-
-**Don't disparage the tool the learner relies on.** Frame the opening problem around the learner's pain (cost, time, friction, overwhelm), not around bashing a feature of a product they use and pay for. An honest limitation of a feature belongs later, as a calm factual aside, not as the opening complaint.
-
-**Transformation hook in the first video/intro.** Frame the course as identity change, not a topic list. Not "You'll learn A, B, C" but "You'll become someone who...". Make the benefit concrete: name what the learner will actually be able to do by the end. Example: "By the end, you'll have published your first app, even if you've never written a line of code."
-
-**One running example throughout.** Use Dalmie (a dalmatian dog character) building the Book Club Organiser app as the running persona and project across all challenges, consistent with other Little Parrot courses. Don't switch examples mid-course. Consistency makes abstract concepts tangible and helps learners follow along.
 
 ## Verification Handoff (required section in every outline)
 
@@ -45,9 +31,11 @@ When generating a structured draft, structure it as the examples.
 
 ### Example Outlines
 
+Newest first. Only the first example carries the required **Verification handoff** section (the older ones predate it), so model that section on the first example.
+
+- `../../../little-parrot/content/course/ai-your-life-admin-00/ai-your-life-admin-00-outline.md`
+- `../../../little-parrot/content/course/vibe-coding-github-00/vibe-coding-github-00-outline.md`
 - `../../../little-parrot/content/course/lovable-intro-00/lovable-intro-00-outline.md`
-- `../../../little-parrot/content/course/vibe-coding-product-management-00/vibe-coding-product-management-00-outline.md`
-- `../../../little-parrot/content/course/vibe-coding-tech-00/vibe-coding-tech-00-outline.md`
 
 ### Save Outline
 Save the generated outline to this folder: `../../../little-parrot/content/course`
