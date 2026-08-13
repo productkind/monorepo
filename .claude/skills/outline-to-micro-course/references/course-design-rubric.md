@@ -90,7 +90,7 @@ The shared course-design rules for Little Parrot micro-courses. Two readers use 
 
 **When a referenced toolkit item doesn't exist yet, don't invent a URL.** This resolves the tension with the rule above: link the item if it already exists in `toolkit-links.md`, otherwise either inline the needed content into the course steps or reference the item by name without a link. Flag the missing items to the user so they can be created later. Never fabricate a placeholder toolkit URL.
 
-**Weave toolkit references into the text naturally.** Make sure that it reads well and doesn't break the flow of the content.
+**Weave toolkit references into the text naturally.** Don't use a "**Toolkit:**" label. Instead, write it as part of the sentence: "The [Domain and Email Setup Guide](URL) in the Toolkit walks you through every click." This reads better and doesn't break the flow of the content.
 
 **Categories must be on the same level.** When a step presents options or models for the learner to choose between, check that they're the same type of thing. If they're not, split them into separate decisions. For example, "subscription vs one-time payment" is one decision (how you charge), "free trial vs freemium" is a different decision (how people try). Don't mix them into one list.
 

@@ -42,7 +42,7 @@ Inbox presentation (judge if the subject / preheader were provided):
 
 Copy:
 - **Run the checker first.** If the draft is a file, run `python3 .claude/skills/language-rules/scripts/check-banned.py <path>` with the Bash tool and report every hit as a Tier 1 finding; it has total recall on the exact-match list, em dashes and American spellings, while the judgement rules stay yours. Given inline text, write it to a temp file with Bash and run the script on that.
-- Any banned word or phrase from **language-rules**, preloaded at startup: the exact-match phrases in section 2, the judgement rules in section 3, and the mechanics in section 1. Read its **Not faults** section before flagging: "actually" as her honest hedge, an ordinary "rather than" comparison, the spaced en dash, and a single tonal emoji carrying warmth or self-deprecation are all correct; strings of emoji as decoration are not.
+- Any banned word or phrase from **language-rules**, preloaded at startup: the exact-match phrases in section 2, the judgement rules in section 3, and the mechanics in section 1. Read its **Not faults** section before flagging anything; it is binding, and flagging one of its items is a worse error than missing a hit.
 - **Every item in the skill's "Don't" list** (under Tone and Copy). Quote each hit. For a factual claim the copy depends on that you cannot confirm, flag it under "To verify" rather than guessing it is wrong.
 
 Technical (anything that breaks rendering, tracking, or the unsubscribe path):
@@ -60,15 +60,15 @@ Two of the skill's checks are easy to skim past, so run them deliberately:
 
 ### Tier 3: Correctness, honesty, and audience fit (the most important tier)
 
-- **Leads with user value, not with Little Parrot.** The first thing the reader meets is what they get.
+Verify the copy section by section against the preloaded little-parrot-email skill: **Tone and Copy** (Voice, Plain language, Make every word earn its keep, Conversion Emails), **Design Rules** (leads with user value: the first thing the reader meets is what they get), and **Audience Context**, with **productkind-tone** as the register underneath. The audience persona, voice markers, mission framing, and conversion rules live in those sections; cite the rule you are applying and quote the text, never restate the rules from memory.
+
+Judgement calls the skills leave to you:
+
 - **Every action is logically consistent.** The verb matches what the button does (e.g. "Add to LinkedIn Profile" is a silent credential, so a "tag us / we'd love to cheer you on" ask belongs with sharing a post, not with adding a credential). Button labels match the live UI exactly.
 - **No duplicated information** across paragraphs.
-- **Simple language.** Written for a **smart professional with no technical background who uses technology every day**. Ordinary professional vocabulary is fine and needs no help: do **not** flag a word for being long, formal or "advanced", and do not propose a simpler synonym for its own sake. Sentences mostly short with one idea each and active voice, because the email is skimmed, so a longer sentence that reads better is not a defect. Concrete beats vague ("about 10 minutes", not "quick").
+- **Vocabulary calibration.** Ordinary professional vocabulary is fine and needs no help: do **not** flag a word for being long, formal or "advanced", and do not propose a simpler synonym for its own sake. A longer sentence that reads better is not a defect.
 - **No AI dressing.** Check every sentence against the ten failure modes in the corrections corpus (source 4): wording that sounds meaningful but states nothing concrete (vague nouns, figurative verbs, withheld subjects, empty payoff lines). Prescribe fixes in the direction the corpus pairs move: precision, not concision; never cut the concrete information to fix a vague line.
-- **Warm, direct, friend-who-runs-a-small-company voice**, never patronising, never hype. For new or lapsed users, the mission ("close the gender gap in AI") appears when introducing Little Parrot; the community is framed as direct access to Kinga (Lead Product Manager) and Tamas (Principal Software Engineer).
-- **Audience fit.** Non-technical women with business ideas, often busy and easily intimidated by technical content. No jargon that alienates them ("developers and AI practitioners"): frame events and features around what they get out of it. The email should leave them feeling welcomed, capable, and supported.
-- **Conversion emails** stay "no pressure": concrete value over abstract benefit, deadlines stated plainly, mechanics clear, subscription mention as natural context rather than a push. Cancellation/end emails keep the door open without guilt-tripping.
-- **Merge fields and repeating content** follow the skill's Personalisation & Repeating Content section, and resolve for recipients at the edges of the set (zero, one, many).
+- **Merge fields and repeating content** resolve for recipients at the edges of the set (zero, one, many), per the skill's Personalisation & Repeating Content section.
 
 ## Output format
 

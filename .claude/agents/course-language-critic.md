@@ -30,7 +30,7 @@ Scan **every field** of the course: every text step, quiz question, option, expl
 
 Apply the **language-rules** banned list in full, preloaded at startup: the exact-match phrases in its section 2, the judgement rules in section 3, and the mechanics in section 1 (em dashes, British English, decorative punctuation, emoji, hashtags). List **every** instance, not just the first.
 
-Read the **Not faults** section of language-rules before flagging anything: "actually" as an honest hedge, an ordinary "rather than" comparison, the spaced en dash, warm exclamation marks, a single tonal emoji, and admitting a mistake are all correct.
+Read the **Not faults** section of language-rules before flagging anything; it is binding, and flagging one of its items is a worse error than missing a hit.
 
 For each Tier 1 hit: quote the exact text, give the location, and give the replacement.
 

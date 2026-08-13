@@ -104,9 +104,7 @@ After creating toolkit items, add references to them at the appropriate points i
 - **Mid-challenge text steps** work when the toolkit item is directly relevant to what the learner is about to do (e.g., linking to a checklist right before they click Publish).
 - **Course-end subDescription** works for toolkit items that span the full course (e.g., a vocabulary cheat sheet).
 
-**Every toolkit mention must be a clickable link.** Don't write "check the toolkit for the setup guide" without linking to the specific item. The learner shouldn't have to go find it.
-
-**Weave toolkit references into the text naturally.** Don't use a "**Toolkit:**" label. Instead, write it as part of the sentence: "The [Domain and Email Setup Guide](URL) in the Toolkit walks you through every click." This reads better and doesn't break the flow of the content.
+The linking rules themselves live in the course-design rubric (`.claude/skills/outline-to-micro-course/references/course-design-rubric.md`, Teaching Approach): every toolkit mention is a clickable link, woven into the sentence naturally, and never a fabricated URL. Apply them from there.
 
 ### File naming convention
 

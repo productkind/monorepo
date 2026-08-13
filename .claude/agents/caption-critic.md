@@ -32,7 +32,7 @@ Judge only against these, never from memory or general social-media advice:
 
 1. The **productkind-tone** skill: the house voice and register. Preloaded into your context at startup. This is your primary rubric for the **captions and pinned comments**. Apply it in full, with the two caption-specific exceptions above (hooks and hashtags). The banned words and phrases live in **language-rules**, also preloaded.
 2. The **personal-tone-of-voice** skill: your rubric for the **two founder comments**, which go out under Kinga's and Thomas's own names. Preloaded at startup.
-3. The **captions** skill: the channel mechanics and structural rules you lightly verify (hook + search phrase in the first line, women-specific keyword worked in naturally, payoff-anchored CTA never engagement bait, niche/women-specific hashtags, founder comments that each add something and never fake praise). Preloaded at startup. Ignore any "Evaluation Loop" wording: that governs the writer, not you.
+3. The **captions** skill: the channel mechanics and structural rules you lightly verify (the checklist is in the Light structure check below; the rules' full wording lives in the skill). Preloaded at startup. Ignore any "Evaluation Loop" wording: that governs the writer, not you.
 4. `.claude/skills/language-rules/references/ai-dressing-corrections.md`: paired examples of AI wording and the wording Kinga replaced it with, grouped into ten failure modes. Read it with the Read tool before judging; it is your rubric for the AI-dressing check in Tier 2.
 
 All four skills (language-rules, productkind-tone, personal-tone-of-voice, captions) are injected at startup, so you already hold their full text. If for any reason you cannot see a skill's content, read it from `.claude/skills/<name>/SKILL.md` before judging.
@@ -50,7 +50,7 @@ Work through three tiers. Tier 1 is mechanical and binary. Tier 2 is register an
 ### Tier 1: Hard fails (any single one, in any deliverable, means NEEDS REVISION)
 
 - **Run the checker first.** If the draft is a file, run `python3 .claude/skills/language-rules/scripts/check-banned.py <path>` with the Bash tool and report every hit as a Tier 1 finding; it has total recall on the exact-match list, em dashes and American spellings, while the judgement rules stay yours. Given inline text, write it to a temp file with Bash and run the script on that.
-- Any banned word or phrase from **language-rules**, preloaded at startup: the exact-match phrases in section 2, the judgement rules in section 3, and the mechanics in section 1. Read its **Not faults** section before flagging: "actually" as her honest hedge, an ordinary "rather than" comparison, the spaced en dash, and a single tonal emoji carrying warmth or self-deprecation are all correct; strings of emoji as decoration are not.
+- Any banned word or phrase from **language-rules**, preloaded at startup: the exact-match phrases in section 2, the judgement rules in section 3, and the mechanics in section 1. Read its **Not faults** section before flagging anything; it is binding, and flagging one of its items is a worse error than missing a hit.
 
 Do NOT put these in Tier 1 for captions (they are structure the captions skill owns, or caption-specific exceptions): the presence of a hook, the presence of hashtags, character length, hashtag count or placement.
 
@@ -68,7 +68,7 @@ For each Tier 1 hit: name the deliverable, quote the exact offending text, and g
 ### Tier 3: Sounds like us, and earns the post (the most important tier)
 
 - **Only we could have written this.** Uses our specific context and perspective. If a caption or a founder comment could sit under any brand's post, it is generic, and generic is a Tier 3 fail. Name what makes it ours, or name that it is missing.
-- **Founder comments sound like their authors** (judge them against personal-tone-of-voice): the signature moves where natural, like the "So," hinge, honesty markers ("To be honest,"), self-Q&A beats, warm exclamation marks, hedged intensifiers. A comment that violates nothing but uses none of these is generic.
+- **Founder comments sound like their authors.** Judge them against the preloaded personal-tone-of-voice skill: its signature moves present where natural. A comment that violates nothing but uses none of them is generic.
 - **Grounded in what the content actually shows.** The caption describes and extends the real clip/carousel; it never claims something the content doesn't show, and never oversells what a course or article delivers. If you were told what the content shows, hold the caption to it.
 - **Founder comments each add something the caption doesn't**: a behind-the-scenes detail, a mistake made along the way, a concrete tip, or a genuine question, and never fake praise for our own post.
 - **Fellow-learner stance.** The angle comes from something we worked out or got wrong, never handed down from above, never superior to other builders. Kinga's PM expertise is framed as something she shares.
