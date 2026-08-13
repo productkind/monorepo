@@ -65,7 +65,7 @@ primary growth channel, so share-asks are the point, not decoration.
 
 ## Shared copy rules (non-negotiable)
 
-- Apply the **language-rules** skill in full, and invoke it if it is not already loaded. It is the single source for banned words and phrases, British English, em dashes and punctuation, AI dressing, and how we frame AI.
+- Apply the **language-rules** skill in full, and invoke it if it is not already loaded. It is the single source for the banned list and all shared language rules.
 - **Frame around using AI to your advantage, never around software development.** The
   goal is women building their own idea or business with AI, not becoming developers
   or engineers. Avoid the coding/CS-history angle and "no code needed" type taglines.

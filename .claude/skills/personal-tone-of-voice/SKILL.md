@@ -73,7 +73,7 @@ These come from a close read of my 20 published Substack articles. Draft with th
 
 ## Banned Language
 
-The banned list and the shared language rules live in the **language-rules** skill, which applies to every word we publish. **Apply it in full, and invoke it if it is not already loaded.** It covers British English, the exact-match banned phrases, the rules that need judgement, em dashes and punctuation, AI dressing, concrete over abstract, active voice, inline definitions, tool terminology, and the positions our copy always takes.
+The banned list and the shared language rules live in the **language-rules** skill, which applies to every word we publish. **Apply it in full, and invoke it if it is not already loaded.**
 
 Only the rules specific to my first-person writing live here:
 

@@ -1,6 +1,6 @@
 ---
 name: productkind-tone
-description: Apply productkind's educational writing style for micro-courses, tutorials, and learning content. Use when creating educational materials, course content, challenge plans, tutorials, explanatory guides, or any content that teaches concepts to non-technical audiences. Triggers include requests for "microlearning content", "course material", "tutorial", "educational content", "challenge", or requests to write in a "warm", "encouraging", "accessible", or "beginner-friendly" tone.
+description: Apply productkind's educational writing style for micro-courses, tutorials, and learning content. Use when creating educational materials, course content, challenge plans, tutorials, explanatory guides, or any content that teaches concepts to non-technical audiences. Triggers include requests for "microlearning content", "course material", "tutorial", "educational content", "challenge", or requests to write in a "warm", "encouraging", "accessible", or "beginner-friendly" tone. The banned words and shared language rules are in the language-rules skill, which applies to all copy.
 ---
 
 # ProductKind Educational Tone & Style
@@ -107,7 +107,7 @@ Invite self-assessment:
 
 ## Language Guidelines
 
-The banned list and the shared language rules live in the **language-rules** skill, which applies to every word we publish. **Apply it in full, and invoke it if it is not already loaded.** It covers British English, the exact-match banned phrases, the rules that need judgement, em dashes and punctuation, AI dressing, concrete over abstract, active voice, inline definitions, tool terminology, and the positions our copy always takes.
+The banned list and the shared language rules live in the **language-rules** skill, which applies to every word we publish. **Apply it in full, and invoke it if it is not already loaded.**
 
 What is specific to teaching:
 
