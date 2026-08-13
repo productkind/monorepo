@@ -194,3 +194,16 @@ If you're [doing X] for the first time, start with the [Simpler Toolkit Item](UR
 - [ ] It's assigned to the right challenge
 - [ ] The file name follows the `toolkit-[kebab-case-name].md` convention
 - [ ] The course YAML references it at the appropriate step
+
+## Evaluation loop (run this every time, before showing the user)
+
+A drafted toolkit item is never returned to the user until an independent critic has gated its language. Self-review misses what fresh eyes catch, so the writer and the judge must be different.
+
+1. **Draft** the toolkit item(s) following this skill, productkind-tone, and language-rules, and run the finalising checklist above.
+2. **Critique.** Spawn the `tone-of-voice-critic` agent (Agent tool) and pass it the drafted item's path (or the text) and one line on what it is (e.g. "a toolkit item: an iPhone Shortcut setup guide"). Several short items can go in one critic call; say which is which. It judges words only: banned language, British English, and AI dressing. Do not show the draft to the user yet.
+3. **Read the verdict:**
+   - **PASS** → show the user the final item, with a short note on what the critic checked.
+   - **NEEDS REVISION** → apply the critic's revision brief, then re-run the critic on the new draft. Repeat, up to **3 rounds**.
+4. **After 3 rounds**, if issues remain, show the best draft and name the unresolved items honestly. Never hide them or ship around them.
+
+The critic judges language only; this skill owns structure, format, and the checklist above.
