@@ -1,6 +1,6 @@
 ---
 name: course-pedagogy-critic
-description: "Use this agent to evaluate a drafted Little Parrot micro-course against the house pedagogy and structure guidelines before it is shown to the user. Give it the course file (the YAML, or its path) and the outline it was built from. It judges structure, step design, the practice/effort gradient, quiz quality, dependency ordering, and outcome framing, and returns a structured verdict: an overall PASS or NEEDS REVISION, every issue with the offending step quoted and a concrete fix, and a prioritised revision brief. It does not judge tool accuracy (that is course-tool-accuracy-critic) or banned-word/voice issues (that is course-language-critic). Built to run in a generate-critique-revise loop with fresh eyes."
+description: "Use this agent to evaluate a drafted Little Parrot micro-course against the house pedagogy and structure guidelines before it is shown to the user. Give it the course file (the YAML, or its path) and the outline it was built from. It judges structure, step design, the practice/effort gradient, quiz quality, dependency ordering, and outcome framing, and returns PASS or NEEDS REVISION with every issue quoted, a concrete fix, and a prioritised revision brief. It does not judge tool accuracy (course-tool-accuracy-critic) or voice (course-language-critic)."
 tools: Read
 model: opus
 skills:
