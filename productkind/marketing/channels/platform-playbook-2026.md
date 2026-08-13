@@ -1,9 +1,10 @@
 # Social platform playbook (researched July 2026)
 
-Actionable answers to five questions across Instagram, TikTok, YouTube Shorts, Threads,
-and LinkedIn: hashtags, follow CTAs, caption length, algorithm signals, and personal vs
+Actionable answers to five questions across Instagram, TikTok, YouTube Shorts, and
+LinkedIn: hashtags, follow CTAs, caption length, algorithm signals, and personal vs
 brand accounts. Built from a verified deep-research pass (109 search/verification agents,
-claims adversarially checked against primary sources). Confidence labels are honest:
+claims adversarially checked against primary sources). The original research also
+covered Threads; we stopped posting there in August 2026, so its sections were removed. Confidence labels are honest:
 "official" means the platform said it; "data" means a large-n study; "consensus" means
 credible practitioners agree but nobody measured it.
 
@@ -23,7 +24,6 @@ metadata. Keywords in the caption and on-screen text are the real discoverabilit
 | Instagram | 3-5, hard-capped at 5 since Dec 2025 | All niche/specific, zero generic (#instagood is wasted) | Official: Mosseri has said repeatedly they do not drive reach |
 | TikTok | 3-5, description capped at 5 since Aug 2025 | 1 broad community tag + 2-3 niche | Official: still a categorisation input, weighted well below watch behaviour |
 | YouTube Shorts | 2-3 in the description | Niche + optionally #Shorts | Consensus; stuffing makes YouTube ignore all of them |
-| Threads | 1 topic tag (hard limit) | One specific multi-word topic, typed in the composer | Official: single-tag limit is deliberate anti-spam design |
 | LinkedIn | 0-3, or none | Topically precise only; 6+ measurably hurts | Data: AuthoredUp found no reach impact over 8 months; LinkedIn removed hashtag following in 2024 |
 
 What replaced hashtags:
@@ -45,7 +45,7 @@ Instagram posts found posts with hashtags got 32% fewer views on average.
 Two rules govern everything:
 
 1. **Never bait engagement on Meta platforms or LinkedIn.** Instagram's Recommendation
-   Guidelines (which Threads inherits) demote "clickbait, engagement bait, or contest
+   Guidelines demote "clickbait, engagement bait, or contest
    promotion" from all recommendation surfaces. The policy names votes, shares, comments,
    tags, and likes. "Comment YES if you agree" and "tag a friend who..." are policy
    violations; a follow ask is not explicitly named, but keep it payoff-anchored to be
@@ -62,7 +62,6 @@ placed after the value has been delivered, never as the hook.
 | Instagram Reels | "Follow for daily [topic] tips" / "New [topic] breakdown every Tuesday, follow along" / soft alternative: "Save this for when you build yours" | Verbal + on-screen text in the last 2-3 seconds; echo as the caption's last line |
 | TikTok | "Follow me for more [niche] tips" / "Follow so you don't miss part 2, it's up tomorrow" | Verbal + gesture at the end for clips under 15s; around the 10s mark for longer storytelling; hard links in a pinned comment |
 | YouTube Shorts | "Subscribe for a new [topic] short every week" / "Subscribe, part 2 drops tomorrow" | Verbal in the final seconds; links in pinned comment |
-| Threads | "I write about [topic] here most days, follow along if that's your thing" / better still: end on a genuine question (replies are the ranking currency) | Final line, or as the first reply to your own post |
 | LinkedIn | "I share [topic] lessons like this every week, follow if that's useful for your work" | Last line after a substantive post, or in your own first comment. Never "like for part 2" or reaction polls |
 
 The "part 2 tomorrow" anticipation CTA is the strongest follow driver by practitioner
@@ -80,7 +79,6 @@ Hard truncation points are facts; "optimal length" figures are correlational.
 | Instagram Reels | 2,200 chars | ~55-60 chars in the Reels tab | Hook + keyword in the first 60 characters |
 | TikTok | 4,000 chars | ~80-100 chars | 150-300 chars for most posts; longer only when doing deliberate search work. A question in the caption correlates with ~26% more comments (Metricool, n=2.3M) |
 | YouTube Shorts | Title 100, description 5,000 | Title is the hook | Title 20-40 chars, keyword first (trending-Shorts data); description 150-500 focused chars |
-| Threads | 500 chars | No fold; first line decides the scroll-stop | Under ~200 chars, conversational (opinion-tier; no length study exists) |
 | LinkedIn | 3,000 chars | ~140 (mobile) to ~210 (desktop) chars | 800-2,500 chars of substance. AuthoredUp (372K posts, late 2025 to early 2026): 1,301-2,500 chars earned +27% engagement vs short posts. LinkedIn is the one platform where longer wins |
 
 Universal rule: the first line is the only text most people ever see, and on Instagram it
@@ -116,14 +114,6 @@ is now also the Google snippet. Spend disproportionate effort there.
   (A circulating claim that satisfaction surveys outrank watch time was refuted; do not
   repeat it.)
 
-**Threads** (blog-tier, consistent but unofficial)
-- Engagement velocity (early engagement beats the same total spread out) and reply depth
-  (real back-and-forth conversation) are reported as the strongest signals, above likes
-  and reposts. Posts that start conversations beat posts that broadcast.
-- Inherits Instagram's engagement-bait demotion; Mosseri ran a bait crackdown from
-  Oct 2024. The old link penalty reportedly reversed in 2025 (single source, low
-  confidence).
-
 **LinkedIn** (mixed official + large-n data)
 - Dwell time is a confirmed ranking input (LinkedIn engineering blog, including a "Long
   Dwell" classifier). Comments matter far more than likes (multiplier disputed, 2x-15x
@@ -143,8 +133,8 @@ is now also the Google snippet. Spend disproportionate effort there.
 
 ## 5. Personal accounts vs productkind/Little Parrot accounts
 
-**Account type is not an algorithmic ranking factor on Instagram, TikTok, YouTube, or
-Threads.** The measured personal-account advantage is a content-style effect (faces,
+**Account type is not an algorithmic ranking factor on Instagram, TikTok, or
+YouTube.** The measured personal-account advantage is a content-style effect (faces,
 stories, opinions outperform logo content) plus the fact that people follow and engage
 with people. LinkedIn is the exception: distribution structurally favours personal
 profiles.
@@ -170,9 +160,6 @@ Per platform:
   own accounts as spam, with escalating penalties. Also: Business accounts are locked
   out of trending sounds (Commercial Music Library only), so keep the posting account a
   personal/creator account even if it carries the brand name.
-- **Threads: brand quotes founder, founder quotes brand.** No collab mechanic; the
-  quote post (with added commentary) fits the conversation-driven algorithm far better
-  than a bare repost.
 - **YouTube: a Collaborations feature (up to 5 channels on one video/Short, shared
   audiences and counts) has been rolling out since late 2025.** Worth using if both a
   personal and a brand channel ever exist; until then, one channel is plenty.
@@ -191,10 +178,10 @@ Per platform:
 1. Produce each asset once. On Instagram publish as a Collab (both accounts served, no
    duplicate risk). On TikTok publish once from the primary account.
 2. Founder amplification costs minutes: a substantive comment on each brand post within
-   the first hour (LinkedIn especially), a quote post on Threads.
+   the first hour (LinkedIn especially).
 3. Reply to comments everywhere. It is the cheapest measurable engagement lift on every
    platform (Buffer 2026, 52M posts) and doubles as the early-conversation trigger
-   LinkedIn and Threads reward.
+   LinkedIn rewards.
 4. ~15 minutes a day commenting on 5-10 posts in the niche from the founder account
    builds presence without producing anything.
 5. Consistency beats volume: weeks with zero posts underperform the account's own
