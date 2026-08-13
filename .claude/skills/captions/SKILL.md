@@ -174,21 +174,24 @@ how it was resolved, not every round, unless they ask to see the drafts.
 **YouTube Shorts** (video content only; no founder comments, we run one
 channel there)
 
-- **The title is the hook**: 20-40 characters, search phrase first (the
-  limit is 100, but short keyword-first titles perform best on trending
-  Shorts). Include a women-specific keyword in the title whenever it fits
-  ("AI for women...", "women building...").
-- **Description: 150-500 focused characters** in natural sentences that
-  extend what the video actually shows; the 5,000-character limit is not a
-  target.
+- **The title is the hook**: 20-40 characters, search phrase first (short
+  keyword-first titles perform best on trending Shorts). Include a
+  women-specific keyword in the title whenever it fits ("AI for women...",
+  "women building...").
 - 2-3 hashtags, women-specific first (e.g. #womenintech #womenwhobuild)
-  plus one topic tag; place them right after the title in the deliverable
-  (the first hashtags render above the video title on the Short), and
-  stuffing makes YouTube ignore all of them. Skip #Shorts: YouTube detects
-  Shorts by format (vertical, short length), so the tag adds nothing. This matters most on Shorts: its pull system currently shows our
+  plus one topic tag, placed **right after the title on the same line**:
+  hashtags live in the title field on a Short, so the deliverable is one
+  title-plus-hashtags line that pastes into the title field in one go.
+  **Title plus hashtags together must fit YouTube's 100-character title
+  limit.** Stuffing makes YouTube ignore all of them. Skip #Shorts: YouTube
+  detects Shorts by format (vertical, short length), so the tag adds
+  nothing. This matters most on Shorts: its pull system currently shows our
   videos to a mostly male audience, and women-specific hashtags, title
   keywords, and spoken phrases (e.g. "for women who...") are how we tell it
   who the videos are for.
+- **Description: 150-500 focused characters** in natural sentences that
+  extend what the video actually shows; the 5,000-character limit is not a
+  target.
 - Subscribe asks are openly allowed and encouraged, payoff-named:
   "Subscribe for a new [topic] short every week" or "Subscribe, part 2
   drops tomorrow". They belong verbally in the video's final seconds; echo
@@ -241,9 +244,10 @@ Write one `captions.md` into the piece's folder under
 
 - Header: brand, source material, destination link.
 - One section per platform: the caption ready to paste (for YouTube Shorts,
-  title + description), alt text (Instagram/LinkedIn), hashtags included in
-  place, plus the pinned comment (TikTok and YouTube Shorts, if any), and
-  the two founder comments labelled **Kinga** and **Thomas**.
+  one title-plus-hashtags line for the title field, then the description),
+  alt text (Instagram/LinkedIn), hashtags included in place, plus the
+  pinned comment (TikTok and YouTube Shorts, if any), and the two founder
+  comments labelled **Kinga** and **Thomas**.
 - A short posting checklist at the end: founder comments go up within the
   first hour; reply to every real commenter in that window too (it is the
   cheapest measured engagement lift on every platform); TikTok and YouTube
