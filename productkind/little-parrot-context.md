@@ -33,28 +33,6 @@ And this all happens in a kind, welcoming space where curiosity is encouraged, m
 - Little Parrot is productkind's first digital product, and additional products are anticipated. 
 - Kinga also writes a Substack newsletter for product builders.
 
-## Design system
-* Follow the major design principles when designing the UI: hierarchy, proximity, contrast, and balance.
-* Brand colours:
-    * Orange: `hsl(33 100% 68%)`
-    * Green: `hsl(148 100% 47%)`
-    * Gradient for highlight: `linear-gradient(120deg, #eb9600,#f1c000,#fbfb00,#aeff37,#00ed70)`
-    * Gradient for background: `linear-gradient(90deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020)`
-    * Background light theme color: `hsl(0 0% 100%)`
-    * Foreground light theme color: `hsl(245 7% 3%)`
-    * Background dark theme color: `hsl(262.9, 100%, 13.3%)` (dark purple)
-    * Foreground dark theme color: `hsl(0 0% 100%)`
-    * Muted font: `hsl(245 3% 48%)` (lighter gray)
-* The default text font is: Google font "Inter"
-* The main heading, monospace and highlight font is: Google font "Space Mono"
-* Neobrutalist isometric design
-    * Border radius is strictly 0 to have sharp edges
-    * Borders are 2 pixels wide and not muted (border-2)
-    * Strong box shadows with minimal blur and sizeable offset for an isometric style: `0.25rem 0.25rem 0.125rem rgba(8 8 9 / 0.25)`
-* The design should always be edgy but welcoming and playful, using big spaces
-
----
-
 ## Business Model
 Monthly subscription for 24 EUR per month. Little Parrot also offers the Open Wings Scholarship to fund lifetime subscriptions for underrepresented groups in tech.
 
