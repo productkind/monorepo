@@ -101,5 +101,5 @@ Only the rules specific to my first-person writing live here:
 Before publishing, verify:
 
 1. Have I cut all banned words and phrases?
-2. Have I respected the formatting guide?
+2. Have I respected the formatting and punctuation rules in language-rules?
 3. Would I trust this if someone else wrote it?

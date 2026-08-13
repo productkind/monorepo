@@ -98,7 +98,8 @@ primary growth channel, so share-asks are the point, not decoration.
   the caption is a short hook plus context. Links aren't clickable in captions, so end
   on "link in bio" (or note a Story link sticker). A few relevant hashtags are fine.
 - **Discord:** emoji section headers, 👉 links, warm sign-off. Match the existing
-  `*-discord-announcement.md` files.
+  `discord.md` drafts under `productkind/marketing/content/` (e.g.
+  `campaigns/2026-06-shebuilds-s03/discord.md`).
 - **Slack communities:** one shared draft, short and value-first. The user posts it
   into whichever channels allow a link, so no per-community variants.
 - **Geek Girls email:** plain text, no HTML template. Subject line plus a short, warm
