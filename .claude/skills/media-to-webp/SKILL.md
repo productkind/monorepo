@@ -14,9 +14,7 @@ Reach for this when:
 
 ### Where finished assets live
 
-The platform serves course/comic assets from the **separate** `little-parrot-awakens` repo, not the monorepo:
-`little-parrot-awakens/public/courses/<course-id>/*.webp` and `.../public/comics/<course-id>/*`.
-The monorepo only holds the course YAML (which references those paths). Convert/frost, then copy the result into that public folder (and keep the raw source somewhere outside the repo). Filenames referenced by the YAML must stay the same.
+The platform serves course/comic assets from the **separate** `little-parrot-awakens` repo, not the monorepo: `little-parrot-awakens/public/courses/<course-id>/*.webp` and `.../public/comics/<course-id>/*`. The monorepo only holds the course YAML (which references those paths). Convert/frost, then copy the result into that public folder (and keep the raw source somewhere outside the repo). Filenames referenced by the YAML must stay the same.
 
 ### The three scripts
 
