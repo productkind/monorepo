@@ -109,7 +109,7 @@ Keep one reading size, one step up for headers, one step down for fine print. Do
 | Footer | 12px |
 
 Readability rules on top of the scale:
-- **Primary reading text is 17px**, and it carries to mobile too — don't shrink it on small screens. 16px is a floor, not a target: it reads small in Inter (a smallish x-height) and pinches an audience that may not have young eyes. Never below 14px anywhere.
+- **Primary reading text is 17px**, and it carries to mobile too — don't shrink it on small screens. 16px is a floor, not a target: it reads small in Inter (a smallish x-height) and pinches an audience that may not have young eyes. Never below 14px for anything the reader is meant to read; the 12px footer is the one exception, fine print only.
 - **Line-height ~1.5** on body, left-aligned (never justified, which creates uneven gaps that hurt readability).
 - **Contrast (WCAG AA):** body text at least 4.5:1 against its background; large text (≥18px, or ≥14px bold) and button fills / borders at least 3:1. The muted body grey passes; re-check it whenever text sits on a gradient tint.
 - **Text over the rainbow gradient or a tint** must clear contrast against both the lightest and darkest point it covers. Put live text on a solid panel and keep the gradient as a decorative frame; don't run body text straight over it.

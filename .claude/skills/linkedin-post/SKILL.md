@@ -47,7 +47,7 @@ Don't force a how-to onto a reflective post to make it "earn" its read. A person
 - Structure: Hook → insight → implication
 - One idea per post
 - No hashtags
-- Put all links in the post body. Don't put links in the author's first comment, LinkedIn penalises the post's reach when the author comments with links.
+- If the post drives to a link, put it in the post body. Don't put links in the author's first comment, LinkedIn penalises the post's reach when the author comments with links.
 - Whitespace between paragraphs for scannability
 - The opening grounds the reader in a real moment, not a promise of value
 - End with one concrete thing to try, or a genuine reflective question tied to the substance. Not a summary, not comment-bait

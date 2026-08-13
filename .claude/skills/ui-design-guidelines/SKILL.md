@@ -1,6 +1,6 @@
 ---
 name: ui-design-guidelines
-description: Apply these guidelines to make generated UI and email templates have taste, be user-friendly, and look good. Use when designing or reviewing email templates, web components, pages, or any visual interface. Triggers include "design a UI", "build a component", "make this look better", "design an email template", or any task that produces or critiques visual layout.
+description: Apply these guidelines to make generated UI have taste, be user-friendly, and look good. Use when designing or reviewing web components, pages, or any visual interface. Triggers include "design a UI", "build a component", "make this look better", or any task that produces or critiques visual layout. Not for emails, the little-parrot-email skill owns email rules.
 ---
 
 # UI Design Guidelines
