@@ -186,8 +186,7 @@ understated), not like the article. Use productkind-tone for brand voice,
 and read `productkind/little-parrot-context.md` for brand context when
 needed. Apply the **language-rules**
 skill in full, and invoke it if it is not already loaded: it is the single
-source for banned words and phrases, British English, em dashes and
-punctuation, AI dressing, and how we frame AI. Do a deliberate
+source for the banned list and all shared language rules. Do a deliberate
 phrase-by-phrase pass against it before showing the draft.
 
 Design-quality bar: the copy principles above are the bar (they distil

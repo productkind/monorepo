@@ -65,7 +65,7 @@ the spec (and the source article/course) before writing.
   **personal-tone-of-voice**: they go out under Kinga's and Thomas's own
   names. For brand and mission context, read
   `productkind/little-parrot-context.md` when needed.
-- Apply the **language-rules** skill in full, and invoke it if it is not already loaded. It is the single source for banned words and phrases, British English, em dashes and punctuation, AI dressing, and how we frame AI.
+- Apply the **language-rules** skill in full, and invoke it if it is not already loaded. It is the single source for the banned list and all shared language rules.
 - Do a deliberate phrase-by-phrase banned-list pass on every caption AND
   every founder comment before showing the draft.
 - Ground every claim in the source material; if the video shows a rough
