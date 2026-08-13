@@ -63,7 +63,7 @@ Read the draft **sentence by sentence, in order.** AI dressing is a sentence-lev
 
 Apply the **language-rules** banned list in full, preloaded at startup: the exact-match phrases in its section 2, the judgement rules in section 3, and the mechanics in section 1 (em dashes, British English, decorative punctuation, emoji, hashtags). List **every** instance, not just the first.
 
-Read the **Not faults** section of language-rules before flagging anything: "actually" as an honest hedge, an ordinary "rather than" comparison, the spaced en dash, warm exclamation marks, a single tonal emoji, and admitting a mistake are all correct.
+Read the **Not faults** section of language-rules before flagging anything; it is binding (see "Not faults" below).
 
 ### Tier 2: AI dressing, the heart of your job
 
@@ -93,14 +93,9 @@ When a sentence trips more than one mode, report it once under the mode that exp
 
 ## Not faults: do not flag these
 
-Flagging any of these is a worse error than missing a Tier 2 hit, because it sands out the voice:
+The **Not faults** section of the preloaded language-rules skill is binding on what you may flag: flagging any of its items is a worse error than missing a Tier 2 hit, because it sands out the voice. Its full list lives in the skill; apply it from there, not from memory. On top of that list, also never flag:
 
-- Sentences starting with **So, And, But**; the "So," hinge; comma splices; parenthetical asides; a trailing "though"; the odd non-native turn of phrase. This is her rhythm, not a defect.
-- **"actually"** and other hedged intensifiers ("quite a bit", "pretty well", "really") used as honest concessions. Only flag "actually" if it appears as filler in nearly every line.
-- An ordinary **"rather than" / "instead of"** comparison in a single natural sentence.
-- The **spaced en dash (–)** for asides, warm exclamation marks ("Happy building!"), one tonal emoji carrying real warmth or self-deprecation, honesty markers ("To be honest,"), self-Q&A beats, mid-piece pivot questions.
-- A **real technical term** used as the right word (static, dynamic, commit, prompt) when it is defined inline. The fix for a bare term is always an inline definition, never a dumbed-down paraphrase.
-- **Repetition of a plain word**, or a longer sentence, when the alternative is losing a specific. Plainness is the target.
+- Honesty markers ("To be honest,"), self-Q&A beats, and mid-piece pivot questions: signature moves, not filler.
 - Anything that is a **format or structure** choice, per the scope above.
 
 ## Output format

@@ -190,30 +190,15 @@ source for banned words and phrases, British English, em dashes and
 punctuation, AI dressing, and how we frame AI. Do a deliberate
 phrase-by-phrase pass against it before showing the draft.
 
-Design-quality bar (from
+Design-quality bar: the copy principles above are the bar (they distil
 `productkind/ai-research/carousel-research.md` and
-`productkind/ai-research/carousel-content-design-research.md`, plus the
-copy principles above):
-- **Built around the one takeaway**: every slide serves it; the order is
-  the reader's, not the article's, leading with the payoff idea.
-- **One connected story**: the display copy reads as a single narrative arc
-  from slide 1 to the CTA, not a list of moments.
-- **Teaser, not summary**: one useful idea per slide, detail held back for
-  the article.
-- **Shown, not just stated**: each abstract point has a concrete example
-  beside it (a real message, a before/after, the actual moment).
-- **One change per slide, in a repeating rhythm**: each slide moves a
-  single step from the last; idea slides share a recognisable shape.
-- **A do-this-or-decide beat** before the CTA: a question, a "which is
-  you?", or a small step the reader could take today.
-- **Very little text**: one short sentence or fragment per slide; ~20-25
-  words is a ceiling, not a target; cover ≤ ~12 words.
-- **Fresh copy in Kinga's voice**: no sentences lifted from the article.
+`productkind/ai-research/carousel-content-design-research.md`). Two rules
+that only appear at the design stage:
 - **Visuals that explain, never decorate**: every image carries part of
   the idea (a diagram, the prompt window, a before/after); a picture that
   is only pretty adds nothing and can distract.
-- A concrete payoff by slide 2-3, and a CTA with a share-ask that drives to
-  the full article.
+- **A concrete payoff by slide 2-3**, and a CTA with a share-ask that
+  drives to the full article.
 
 Before showing the spec, run this quick gate and fix anything that fails:
 - Reread each slide's copy and cut it down: if it reads as a paragraph,
