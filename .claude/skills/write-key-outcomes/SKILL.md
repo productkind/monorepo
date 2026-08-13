@@ -10,7 +10,7 @@ When writing course descriptions, challenge titles, descriptions or any content 
 
 ### Well-written key outcomes are:
 
-- Action-oriented: the action requires a higher-order skill like analysing, evaluating, creating, building, or shipping. Instead of using passive verbs like "learn/understand", you'll use a higher-order skill from Bloom’s Taxonomy 
+- Action-oriented: the action requires a higher-order skill like analysing, evaluating, creating, building, or shipping. Instead of using passive verbs like "learn/understand", you'll use a higher-order skill from Bloom’s Taxonomy
 
 - High ROI: the learning objective leads to a result/deliverable that benefits the student.
 
