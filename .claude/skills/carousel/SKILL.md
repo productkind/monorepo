@@ -43,7 +43,7 @@ sequence the reader swipes through, so they should read like a small
 narrative, not a set of interchangeable cards. Give it an arc: a setup that
 opens a question or tension, a turn, a payoff, then the invitation. Each
 slide should follow from the one before and set up the next, using natural
-connective tissue in Kinga's voice ("So,", "But,", "Like this:", "A year
+spoken connective tissue ("So,", "But,", "Like this:", "A year
 in,"). For a personal retrospective the arc is usually: honest situation →
 what went wrong → the turn → what worked → invitation.
 
@@ -97,16 +97,14 @@ is weaker than one that also asks. Somewhere before the CTA, put a beat that
 asks the reader to take part rather than only watch: a question they answer
 in their head, a "which of these is you?", a tiny step they could take
 today. It makes the idea stick and it makes the piece feel practical rather
-than a highlight reel. Keep it light and in Kinga's voice, never a quiz for
+than a highlight reel. Keep it light and warm, never a quiz for
 its own sake.
 
-**Write the copy fresh, in Kinga's voice.** The on-slide words are original
+**Write the copy fresh, in the brand voice.** The on-slide words are original
 teaser copy, not sentences lifted from the article. Do not paste article
 phrasing onto slides; rewrite each idea as its own short, spoken line.
-Write every slide with the **personal-tone-of-voice** skill so it sounds
-like Kinga talking to a friend, not like the article's prose. Use
-productkind-tone for brand voice, and read
-`productkind/little-parrot-context.md` for brand context when needed.
+Write every slide with the **productkind-tone** skill so it sounds like a
+warm, honest person talking to a friend, not like the article's prose.
 
 **Keep the pronoun the source uses.** If the article says "we" about
 something (a productkind or two-person activity, e.g. the Instagram
@@ -181,9 +179,9 @@ Where the spec lives:
   `productkind/marketing/content/<type>/<piece-slug>/`.
 
 Voice: write the on-slide copy with the
-**personal-tone-of-voice** skill so it sounds like Kinga (spoken, warm,
-understated), not like the article. Use productkind-tone for brand voice,
-and read `productkind/little-parrot-context.md` for brand context when
+**productkind-tone** skill (spoken, warm, understated, never marketing
+polish), not like the article's prose. Read
+`productkind/little-parrot-context.md` for brand context when
 needed. Apply the **language-rules**
 skill in full, and invoke it if it is not already loaded: it is the single
 source for the banned list and all shared language rules. Do a deliberate
