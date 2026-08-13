@@ -5,7 +5,7 @@
 #   -w  target width in px (height auto, aspect kept; never upscales). Default 480.
 #   -f  frames per second for animated output. Default 10.
 #   -q  webp quality 0-100. Default 60 for animated, 80 for static.
-#   -s  playback speed-up factor for animated output, e.g. 4.7 makes a 113s clip ~24s.
+#   -s  playback speed-up factor for animated output, e.g. 2 halves a clip's runtime. Keep it gentle enough for the learner to follow.
 #       Default 1 (real time). Use it to condense long real-time screen recordings.
 #   -o  output path. Default: <input basename>.webp in the current directory.
 #

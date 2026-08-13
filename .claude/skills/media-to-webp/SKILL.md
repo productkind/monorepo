@@ -24,13 +24,13 @@ Run them from this skill's base directory (paths below are relative to it).
 
 **1. `scripts/to-webp.sh` — convert + resize.** Detects the source type by extension and does the right thing.
 ```
-scripts/to-webp.sh <input> [-o out.webp] [-w width] [-f fps] [-q quality]
+scripts/to-webp.sh <input> [-o out.webp] [-w width] [-f fps] [-q quality] [-s speed]
 ```
 - `mov mp4 m4v webm avi gif` → animated webp (ffmpeg + libwebp)
 - animated `webp` → re-encoded smaller animated webp (used to shrink what's already shipped)
 - `png jpg jpeg tif tiff bmp` → static webp
 - `heic heif` → static webp (falls back to `heif-convert` if ImageMagick lacks the delegate)
-- `-w` width in px, aspect kept, never upscales (default 480). `-f` fps for animated (default 10). `-q` quality (default 60 animated / 80 static). `-o` output (default `<name>.webp` in the cwd).
+- `-w` width in px, aspect kept, never upscales (default 480). `-f` fps for animated (default 10). `-q` quality (default 60 animated / 80 static). `-o` output (default `<name>.webp` in the cwd). `-s` playback speed-up factor for animated output (e.g. `-s 2` halves a clip's runtime; default 1, no speed-up), for long real-time recordings. Keep it gentle: the learner still has to follow what happens on screen.
 
 **2. `scripts/inspect.sh` — find sensitive content and read coordinates.** Use before frosting.
 ```
@@ -97,8 +97,9 @@ scripts/inspect.sh build-dictate-text.webp --strip 8,16,24 # contacts visible 10
 scripts/inspect.sh build-dictate-text.webp --frame 14      # read rect off the grid
 scripts/frost.sh build-dictate-text.webp build-dictate-text.webp "10:20:0:560:480:150"
 
-# Copy into the served folder (separate repo)
-cp build-dictate-text.webp ../../little-parrot-awakens/public/courses/<course-id>/
+# Copy into the served folder (the little-parrot-awakens repo sits NEXT TO
+# the monorepo, so from this skill's base dir it is four levels up)
+cp build-dictate-text.webp ../../../../little-parrot-awakens/public/courses/<course-id>/
 ```
 
 ### Prerequisites
