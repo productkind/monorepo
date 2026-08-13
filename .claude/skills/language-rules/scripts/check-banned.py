@@ -55,18 +55,41 @@ AMERICANISMS = [
     (r"offense\w*", "offence"),
     (r"fulfill\w*", "fulfil"),
     (r"gray\w*", "grey"),
-    (r"dialog\b", "dialogue"),
-    (r"catalog\b", "catalogue"),
+    (r"dialog(?:s|ed|ing)?\b", "dialogue"),  # no "ue": "dialogue(s)" is the British form and must not match
+    (r"catalog(?:s|ed|ing)?\b", "catalogue"),
 ]
 
 # A match immediately touching one of these characters is markup, not prose
 # (CSS properties, HTML attributes/tags, snake_case identifiers, URLs).
+# AFTER holds only characters that are markup-specific in that position
+# (`color:`, `class=`, `color-scheme`, `snake_case`). Prose punctuation
+# (`)`, `;`, closing quotes) must NOT be here: "my favorite color)" and
+# "Her behavior;" are prose, and markup such as ="color" or 'Inter' is
+# already suppressed by its LEADING delimiter via SUPPRESS_BEFORE.
 SUPPRESS_BEFORE = set('-<"\'=/_.#&')
-SUPPRESS_AFTER = set(':=-"\'_;)')
+SUPPRESS_AFTER = set(':=-_')
 
 
 def norm(s: str) -> str:
     return s.replace("’", "'").replace("‘", "'")
+
+
+# CSS never carries reader-facing copy, so it is masked out of the scan
+# wholesale: property VALUES ("text-align: center;") have no leading markup
+# delimiter and would otherwise read as prose. Other attribute values
+# (alt="...", title="...") DO carry copy and stay scanned.
+CSS_REGIONS = [
+    re.compile(r"<style\b[^>]*>.*?</style>", re.IGNORECASE | re.DOTALL),
+    re.compile(r"""style\s*=\s*("[^"]*"|'[^']*')""", re.IGNORECASE),
+]
+
+
+def mask_css(flat: str) -> str:
+    """Blank CSS regions with spaces of equal length, so offsets into the
+    original text stay aligned."""
+    for rx in CSS_REGIONS:
+        flat = rx.sub(lambda m: " " * (m.end() - m.start()), flat)
+    return flat
 
 
 def load_phrases() -> list:
@@ -106,8 +129,9 @@ def excerpt(flat: str, start: int, end: int) -> str:
 def check_file(path: pathlib.Path, phrase_pats: list) -> list:
     original = path.read_text(encoding="utf-8")
     # Flatten newlines to spaces; offsets stay aligned with the original,
-    # and phrases wrapped across lines still match.
-    flat = norm(original).replace("\n", " ")
+    # and phrases wrapped across lines still match. Then mask CSS so its
+    # property values are never scanned as prose.
+    flat = mask_css(norm(original).replace("\n", " "))
     hits = []
 
     for m in re.finditer("—", flat):  # em dash
