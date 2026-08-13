@@ -18,7 +18,7 @@ The learner is a non-technical woman with a business idea, often busy and easily
 
 ## Your single source of truth
 
-Your rubric is the **language-rules** skill for Tier 1 and the honesty rules, and the **productkind-tone** and **write-key-outcomes** skills for the teaching register and outcome shape. All three are preloaded at startup. The "don't oversell" rule in language-rules section 6 governs Tier 3. Judge only against these, never general copy advice. If you cannot see a skill's text, read it from `.claude/skills/<name>/SKILL.md`.
+Your rubric is the **language-rules** skill for Tier 1 and the honesty rules, and the **productkind-tone** and **write-key-outcomes** skills for the teaching register and outcome shape. All three are preloaded at startup. The "don't oversell" rule in language-rules section 6 governs Tier 3. Also read `.claude/skills/language-rules/references/ai-dressing-corrections.md` with the Read tool before judging: paired examples of AI wording and the wording Kinga replaced it with, grouped into ten failure modes; it is your rubric for the AI-dressing check in Tier 2. Judge only against these, never general copy advice. If you cannot see a skill's text, read it from `.claude/skills/<name>/SKILL.md`.
 
 ## How to judge
 
@@ -42,6 +42,7 @@ For each Tier 1 hit: quote the exact text, give the location, and give the repla
 - **Tool terminology:** "AI chat assistant" for ChatGPT / Claude.ai (you copy the answer out); "AI agent" for Claude Code / Codex (it acts in your files and shows the changes). Use "AI chat assistant" consistently and flag the bare "chat assistant" as an incomplete label. Flag "chat AI" and "agentic" (jargon for this audience). Do not ask for a plain-description gloss alongside the label.
 - **Straightforward, accessible sentences:** mostly short, one idea each, active voice, concrete over abstract ("scattered across WhatsApp and email", not "fragmented communication channels"). Flag sentences that need re-reading.
 - **Analogies arrive after the concept they explain**, not before.
+- **No AI dressing.** Check every sentence against the ten failure modes in the corrections corpus: wording that sounds meaningful but states nothing concrete (vague nouns, figurative verbs, withheld subjects, empty payoff lines). Prescribe fixes in the direction the corpus pairs move: precision, not concision; never cut the concrete information to fix a vague line.
 
 ### Tier 3: Framing, honesty, and warmth
 

@@ -23,6 +23,7 @@ Your rubric comes from these canonical sources. Never judge from memory or gener
 1. The **language-rules** skill: the banned list and shared language rules for all copy. This is the language half of your Tier 1.
 2. The **little-parrot-email** skill: technical requirements, standard structure, brand styling, type scale, design rules, tone and copy, and the before-sending checklist.
 3. The **productkind-tone** skill: the educational writing voice that sits under the email copy.
+4. `.claude/skills/language-rules/references/ai-dressing-corrections.md`: paired examples of AI wording and the wording Kinga replaced it with, grouped into ten failure modes. Read it with the Read tool before judging; it is your rubric for the AI-dressing check in Tier 3.
 
 All three skills are injected at startup, so you already hold their full text. If for any reason you cannot see a skill's content, read it from `.claude/skills/<name>/SKILL.md` before judging.
 
@@ -63,6 +64,7 @@ Two of the skill's checks are easy to skim past, so run them deliberately:
 - **Every action is logically consistent.** The verb matches what the button does (e.g. "Add to LinkedIn Profile" is a silent credential, so a "tag us / we'd love to cheer you on" ask belongs with sharing a post, not with adding a credential). Button labels match the live UI exactly.
 - **No duplicated information** across paragraphs.
 - **Simple language.** Written for a **smart professional with no technical background who uses technology every day**. Ordinary professional vocabulary is fine and needs no help: do **not** flag a word for being long, formal or "advanced", and do not propose a simpler synonym for its own sake. Sentences mostly short with one idea each and active voice, because the email is skimmed, so a longer sentence that reads better is not a defect. Concrete beats vague ("about 10 minutes", not "quick").
+- **No AI dressing.** Check every sentence against the ten failure modes in the corrections corpus (source 4): wording that sounds meaningful but states nothing concrete (vague nouns, figurative verbs, withheld subjects, empty payoff lines). Prescribe fixes in the direction the corpus pairs move: precision, not concision; never cut the concrete information to fix a vague line.
 - **Warm, direct, friend-who-runs-a-small-company voice**, never patronising, never hype. For new or lapsed users, the mission ("close the gender gap in AI") appears when introducing Little Parrot; the community is framed as direct access to Kinga (Lead Product Manager) and Tamas (Principal Software Engineer).
 - **Audience fit.** Non-technical women with business ideas, often busy and easily intimidated by technical content. No jargon that alienates them ("developers and AI practitioners"): frame events and features around what they get out of it. The email should leave them feeling welcomed, capable, and supported.
 - **Conversion emails** stay "no pressure": concrete value over abstract benefit, deadlines stated plainly, mechanics clear, subscription mention as natural context rather than a push. Cancellation/end emails keep the door open without guilt-tripping.
