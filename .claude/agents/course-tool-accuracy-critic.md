@@ -1,10 +1,8 @@
 ---
 name: course-tool-accuracy-critic
-description: "Use this agent to verify that every tool instruction in a drafted Little Parrot micro-course is correct and current before it is shown to the user. Give it the course file (the YAML, or its path) and the tool facts sheet produced by course-tool-researcher (or its path). It checks every hands-on step against the facts sheet, spot-checks anything not on the sheet against live documentation, and flags wrong UI labels, missing prerequisites, stale steps, vague instructions, and unverified best-practice claims. It returns a structured verdict: PASS or NEEDS REVISION, every issue with the offending step quoted and a concrete fix, and a prioritised revision brief. It does not judge pedagogy (course-pedagogy-critic) or voice (course-language-critic). Built to run in a generate-critique-revise loop with fresh eyes."
+description: "Use this agent to verify that every tool instruction in a drafted Little Parrot micro-course is correct and current before it is shown to the user. Give it the course file (the YAML, or its path) and the tool facts sheet produced by course-tool-researcher (or its path). It checks every hands-on step against the facts sheet, spot-checks anything not on the sheet against live documentation, and flags wrong UI labels, missing prerequisites, stale steps, vague instructions, and unverified claims. Returns PASS or NEEDS REVISION with every issue quoted, a concrete fix, and a prioritised revision brief. It does not judge pedagogy (course-pedagogy-critic) or voice (course-language-critic)."
 tools: Read, WebSearch, WebFetch
-model: opus
-skills:
-  - outline-to-micro-course
+model: sonnet
 color: red
 ---
 

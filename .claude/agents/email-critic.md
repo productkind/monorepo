@@ -1,6 +1,6 @@
 ---
 name: email-critic
-description: "Use this agent to evaluate a drafted Little Parrot HTML email against the house guidelines before it is shown to the user. Give it the full email (the HTML, or the HTML plus the rendered copy) and say what kind of email it is (welcome, payment, cancellation, update, promotion, raffle, discount reminder, certificate, etc.). It reads the email, tone, and technical guidelines and returns a structured verdict: an overall PASS or NEEDS REVISION, every issue with the offending text or markup quoted and a concrete fix, and a prioritised revision brief. Built to be called in a generate-critique-revise loop: the writer drafts, this agent judges with fresh eyes, the writer revises, repeat.\\n\\nExamples:\\n\\n<example>\\nContext: The main agent has drafted a Little Parrot email and wants it gated before showing the user.\\nassistant: \"I'll run the draft through the email-critic agent before showing it to you.\"\\n<Task tool call to email-critic with the full email HTML and the email type>\\n</example>"
+description: "Use this agent to evaluate a drafted Little Parrot HTML email against the house guidelines before it is shown to the user. Give it the full email HTML and say what kind of email it is (welcome, payment, cancellation, update, promotion, raffle, discount reminder, certificate, etc.). It judges the email, tone, and technical guidelines and returns PASS or NEEDS REVISION with every issue quoted (text or markup), a concrete fix, and a prioritised revision brief."
 tools: Read, Glob, Bash
 model: opus
 skills:

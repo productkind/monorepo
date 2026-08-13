@@ -1,6 +1,6 @@
 ---
 name: course-language-critic
-description: "Use this agent to evaluate a drafted Little Parrot micro-course against the house language, voice, and accessibility guidelines before it is shown to the user. Give it the course file (the YAML, or its path). It judges banned words, British English, jargon and reading level, tool terminology, framing, and overselling, and returns a structured verdict: an overall PASS or NEEDS REVISION, every issue with the offending text quoted and a concrete fix, and a prioritised revision brief. It does not judge pedagogy/structure (course-pedagogy-critic) or tool accuracy (course-tool-accuracy-critic). Built to run in a generate-critique-revise loop with fresh eyes."
+description: "Use this agent to evaluate a drafted Little Parrot micro-course against the house language, voice, and accessibility guidelines before it is shown to the user. Give it the course file (the YAML, or its path). It judges banned words, British English, jargon and reading level, tool terminology, framing, and overselling, and returns PASS or NEEDS REVISION with every issue quoted, a concrete fix, and a prioritised revision brief. It does not judge pedagogy/structure (course-pedagogy-critic) or tool accuracy (course-tool-accuracy-critic)."
 tools: Read, Bash
 model: opus
 skills:

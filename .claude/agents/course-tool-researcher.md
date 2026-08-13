@@ -1,10 +1,8 @@
 ---
 name: course-tool-researcher
-description: "Use this agent BEFORE generating a Little Parrot micro-course, once the outline exists. Give it the outline (or its path) and the course folder. It reads the outline's 'Verification handoff' list, researches every tool the course teaches against current official documentation, and writes a verified facts sheet to the course folder: prerequisites, exact UI labels, the real step sequence for each task taught, costs/plan tiers, and gotchas, each with a source link and the date checked. This sheet becomes a required input to generation, so correct tool steps get baked into the first draft instead of being caught in review. It does not write course content; it gathers and records facts."
+description: "Use this agent BEFORE generating a Little Parrot micro-course, once the outline exists. Give it the outline (or its path) and the course folder. It reads the outline's 'Verification handoff' list, researches every tool the course teaches against current official documentation, and writes a verified facts sheet to the course folder: prerequisites, exact UI labels, the real step sequence for each task taught, costs/plan tiers, and gotchas, each with a source link and the date checked. It does not write course content; it gathers and records facts."
 tools: Read, Write, WebSearch, WebFetch, Bash
-model: opus
-skills:
-  - outline-to-micro-course
+model: haiku
 color: blue
 ---
 
