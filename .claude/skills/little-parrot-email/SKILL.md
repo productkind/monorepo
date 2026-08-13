@@ -5,7 +5,7 @@ description: Apply this skill when creating HTML emails for Little Parrot. Use w
 
 # Little Parrot Email Creation
 
-Apply this skill when creating HTML emails for Little Parrot. Use alongside `/productkind-tone` and `/little-parrot-ai-skill-gap` for full context.
+Apply this skill when creating HTML emails for Little Parrot. Use alongside `/productkind-tone`, and read `productkind/little-parrot-context.md` for brand and mission context when needed.
 
 ## Evaluation Loop (run this every time)
 

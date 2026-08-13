@@ -1,6 +1,6 @@
 ---
 name: outline-to-micro-course
-description: Use this checklist when generating micro-course content from an outline. Every course must meet these criteria before being considered complete.
+description: Generate a complete Little Parrot micro-course from an approved outline, orchestrating the whole pipeline, spawning course-tool-researcher for a verified tool facts sheet, generating the course YAML against it, then running the pedagogy, language, and tool-accuracy critics in a bounded revision loop until the course passes. Use when generating micro-course content from an outline. Triggers include "generate the course", "build the course from this outline", or any outline-to-course task.
 ---
 
 ## Generation Loop (run this every time)

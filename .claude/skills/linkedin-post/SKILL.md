@@ -1,6 +1,6 @@
 ---
 name: linkedin-post
-description: Apply this structure to LinkedIn posts or Substack Notes.
+description: Write LinkedIn posts and Substack Notes in Kinga's voice, covering channel guidelines, openings, structure, endings, copy rules, and the linkedin-critic evaluation loop that gates every draft before the user sees it. Use when drafting or reviewing a LinkedIn post or Substack Note. Triggers include "write a LinkedIn post", "draft a Substack Note", "post about this on LinkedIn", or any LinkedIn or Substack Note task.
 ---
 
 > Voice and tone come from the **personal-tone-of-voice** skill and `productkind/marketing/channels/linkedin/how-to-be-authentic.md`. This skill covers the channel mechanics and post structure that sit on top of that voice. Where the two appear to conflict, the grounded voice wins: posts should read like a real, kind person, never like marketing.
