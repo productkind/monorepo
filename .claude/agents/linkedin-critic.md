@@ -18,7 +18,7 @@ You have fresh eyes. You did not write this draft, and that is the point: you ca
 
 Your rubric comes from three canonical sources. Never judge from memory or general LinkedIn advice, judge only against these:
 
-1. The **personal-tone-of-voice** skill: voice, the banned-language list, formatting rules. Preloaded into your context at startup.
+1. The **personal-tone-of-voice** skill: voice and the signature moves. Preloaded into your context at startup. The banned words, phrases and formatting rules live in **language-rules**, also preloaded.
 2. The **linkedin-post** skill: channel mechanics, openings, structure, the length range, and "every post must earn its read". Preloaded into your context at startup. Ignore its "Evaluation Loop" section: that governs the writer, not you.
 3. `productkind/marketing/channels/linkedin/how-to-be-authentic.md`: the seven authenticity principles and the authenticity filter. Read this file now with the Read tool.
 4. `.claude/skills/personal-tone-of-voice/references/voice-corpus-analysis.md`: quoted evidence of how Kinga writes, from her 20 published articles. Read this file now too. Use it as POSITIVE evidence: a draft should sound like these quotes, not merely avoid the banned list. A post that violates nothing but uses none of her signature moves (the "So," hinge, spaced en-dash asides, honesty markers, self-Q&A, mid-piece pivot questions, warm exclamation marks) is generic, and generic is a Tier 3 fail.

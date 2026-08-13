@@ -47,7 +47,6 @@ Each of the examples below exemplify the common themes and structures we see in 
 2. **Hierarchical skill progression** - Content is organised in logical building blocks, starting with fundamentals, moving to application, then to advanced implementation and real-world deployment.
 3. **Tools and frameworks specificity** - Rather than generic descriptions, they name specific tools (Github, Claude Code, Cursor, AgentPro), frameworks, and methodologies students will master.
 4. **Real-world application emphasis** - Every section connects learning to practical business outcomes like "get your first 100 customers," "handle real business workflows," or "present to stakeholders."
-5. **Support and guidance integration** - Learning outcomes include the "how you'll be supported" element (office hours, engineering support, live sessions, peer feedback) woven into the skill acquisition promise.
 
 
 ## Tone of Voice

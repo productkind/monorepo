@@ -1,16 +1,15 @@
 ---
 name: captions
-description: Write well-performing captions for a single piece of content (educational videos, B-roll, photos, announcements, finished carousels) posted from the productkind or Little Parrot brand account, for TikTok, Instagram, Threads, LinkedIn, and YouTube Shorts, plus two founder comments (Kinga and Thomas) for Instagram, Threads, and LinkedIn, and a Threads quote post from Kinga's personal account. Triggers include "write a caption", "captions for this video/B-roll/carousel", "post copy for TikTok/Instagram/Threads/LinkedIn/YouTube Shorts", or any caption task. For carousels, the carousel skill produces the slides; this skill writes the captions once the carousel is final.
+description: Write well-performing captions for a single piece of content (educational videos, B-roll, photos, announcements, finished carousels) posted from the productkind or Little Parrot brand account, for TikTok, Instagram, LinkedIn, and YouTube Shorts, plus two founder comments (Kinga and Thomas) for Instagram and LinkedIn. Triggers include "write a caption", "captions for this video/B-roll/carousel", "post copy for TikTok/Instagram/LinkedIn/YouTube Shorts", or any caption task. For carousels, the carousel skill produces the slides; this skill writes the captions once the carousel is final.
 ---
 
 # Captions workflow
 
 Turn one piece of content (an educational video, a B-roll clip, a photo, an
 announcement, a finished carousel) into ready-to-paste captions for TikTok,
-Instagram, Threads, LinkedIn, and YouTube Shorts, posted from the brand
-account, plus two founder comments per platform (Instagram, Threads,
-LinkedIn) that Kinga and Thomas post to start real conversation under it,
-and on Threads a quote post Kinga posts from her personal account.
+Instagram, LinkedIn, and YouTube Shorts, posted from the brand account,
+plus two founder comments per platform (Instagram, LinkedIn) that Kinga
+and Thomas post to start real conversation under it.
 YouTube Shorts applies to video content only, which includes carousels run
 as a video slideshow.
 
@@ -27,9 +26,9 @@ trusting them.
    Captions describe and extend what is really there; never claim something
    the clip doesn't show, and never oversell what a course or article
    delivers.
-3. **Platforms**: default is all four (TikTok, Instagram, Threads,
-   LinkedIn), plus YouTube Shorts when the piece is a video. Drop any that
-   don't fit the piece.
+3. **Platforms**: default is all three (TikTok, Instagram, LinkedIn),
+   plus YouTube Shorts when the piece is a video. Drop any that don't fit
+   the piece.
 4. **Destination**: where the post drives (a course, an article, the
    newsletter, nothing). This shapes the CTA and where the link lives.
 
@@ -51,10 +50,9 @@ the spec (and the source article/course) before writing.
   rewrite the ideas as spoken sentences someone would search, don't paste
   the fragments.
 - Posting formats: LinkedIn gets the PDF as a document post; Instagram and
-  TikTok get the PNGs; Threads gets the PNGs, posted from the productkind
-  profile whichever brand the carousel is; YouTube Shorts (when asked) runs
-  the slides as a video slideshow, so the carousel gets a title +
-  description like any Short.
+  TikTok get the PNGs; YouTube Shorts (when asked) runs the slides as a
+  video slideshow, so the carousel gets a title + description like any
+  Short.
 - On Instagram, an educational carousel supports a longer keyword-rich
   caption (150-300 words) as an SEO asset.
 - Alt text is already in the spec; carry it into `captions.md` (adjusted if
@@ -62,13 +60,13 @@ the spec (and the source article/course) before writing.
 
 ## Voice and checks (all platforms)
 
-- Write with **personal-tone-of-voice** so every caption and comment sounds
-  like a person talking to a friend, not marketing copy. Use
-  **productkind-tone** / **little-parrot-ai-skill-gap** for brand context.
+- Write captions with **productkind-tone** so every caption sounds like a
+  person talking to a friend, not marketing copy. Founder comments follow
+  **personal-tone-of-voice**: they go out under Kinga's and Thomas's own
+  names. Use **little-parrot-ai-skill-gap** for brand context.
 - Apply the **language-rules** skill in full, and invoke it if it is not already loaded. It is the single source for banned words and phrases, British English, em dashes and punctuation, AI dressing, and how we frame AI.
-- Do a deliberate phrase-by-phrase banned-list pass (the banned words and
-  phrases live in personal-tone-of-voice) on every caption AND every
-  founder comment before showing the draft.
+- Do a deliberate phrase-by-phrase banned-list pass on every caption AND
+  every founder comment before showing the draft.
 - Ground every claim in the source material; if the video shows a rough
   first attempt, the caption says so.
 
@@ -78,9 +76,9 @@ The draft is never returned to the user until an independent critic has
 gated it. Self-review misses what fresh eyes catch, so the writer and the
 judge must be different.
 
-1. **Draft** every deliverable following this skill and
-   personal-tone-of-voice: all platform captions, the pinned comments, both
-   founder comments per platform, and Kinga's Threads quote post.
+1. **Draft** every deliverable following this skill: all platform captions
+   and pinned comments with productkind-tone, both founder comments per
+   platform with personal-tone-of-voice.
 2. **Critique.** Spawn the `caption-critic` agent (Agent tool) and pass it
    the full drafted `captions.md` (or the drafted text), the brand, and one
    line on what the content actually shows. It judges language and voice
@@ -104,8 +102,8 @@ how it was resolved, not every round, unless they ask to see the drafts.
 
 - **The first line is the hook AND the search phrase.** Captions are
   keyword-indexed (Instagram in-app search plus Google for public
-  professional accounts; TikTok search; every word on Threads is
-  searchable; the YouTube Shorts title). Open with the phrase a learner
+  professional accounts; TikTok search; the YouTube Shorts title). Open
+  with the phrase a learner
   would actually type ("how to build an app without coding"), written as a
   natural spoken line, never tag-speak or keyword stuffing.
 - **Name the audience in the keywords, not only the hashtags.** Search
@@ -173,21 +171,6 @@ how it was resolved, not every round, unless they ask to see the drafts.
   voiceover), nothing in between.
 - Include **alt text** for the visual.
 
-**Threads**
-
-- Under ~200 characters, conversational; the 500-character limit is not a
-  target. No fold, but the first line decides the scroll-stop.
-- Exactly one topic tag (hard limit), a specific multi-word phrase typed in
-  the composer, not a # pile.
-- Reply depth is the strongest signal here: end on a genuine question that
-  invites replies, and design the founder comments as a conversation (see
-  below).
-- Threads has no Collab mechanic, so the founder amplification move is a
-  **quote post**: Kinga posts from her personal account with the brand post
-  embedded and her own commentary above it (see below). A bare repost adds
-  nothing; the quote post is an original post that reaches her followers
-  and can start its own reply thread.
-
 **YouTube Shorts** (video content only; no founder comments, we run one
 channel there)
 
@@ -224,15 +207,14 @@ channel there)
   keep. Evergreen holds; LinkedIn resurfaces relevant posts for weeks.
 - Page reach is structurally weak (~2% of followers), which is exactly why
   the founder comments below are not optional here.
-- If the post drives to a link, put it in Kinga's first comment rather
-  than the post body, and say so in the post ("link in the comments").
+- If the post drives to a link, put it in the post body.
 
-## Founder comments (Instagram, Threads, LinkedIn)
+## Founder comments (Instagram and LinkedIn)
 
 Two comments per post, one from Kinga and one from Thomas, drafted with the
 captions and posted **within the first hour**. Early distinct commenters
 are the amplification trigger on LinkedIn, and early engagement velocity
-drives Instagram and Threads distribution.
+drives Instagram distribution.
 
 Rules:
 
@@ -245,21 +227,10 @@ Rules:
   and downweights the post, and readers can smell it. Kinga and Thomas are
   transparently the makers; they write as the makers ("we cut this section
   three times before it made sense"), not as fans.
-- **Both comments follow personal-tone-of-voice.** Give Thomas's comment
-  the practical or technical angle so the two don't read as the same
-  person twice.
-- **On Threads, write them as a chain**: Kinga comments on the post,
-  Thomas replies to Kinga (or the other way round), because back-and-forth
-  reply depth is what Threads rewards.
-- **On Threads, also draft Kinga's quote post**: one or two sentences in
-  her voice that she posts from her personal account with the brand post
-  embedded. Same rules as the comments: it adds something the caption
-  doesn't (a behind-the-scenes detail, a lesson, a genuine question), never
-  praise for our own post. It is a separate deliverable from her comment in
-  the chain; the two must not repeat each other.
-- **On LinkedIn**, 1-3 substantive sentences each; if the link lives in
-  Kinga's comment, her comment carries the link plus one real sentence, not
-  the link alone.
+- **Both comments follow personal-tone-of-voice**: they go out under
+  Kinga's and Thomas's own names. Give Thomas's comment the practical or
+  technical angle so the two don't read as the same person twice.
+- **On LinkedIn**, 1-3 substantive sentences each.
 - Comments go through the same banned-list pass as captions.
 
 ## Output
@@ -270,24 +241,22 @@ Write one `captions.md` into the piece's folder under
 
 - Header: brand, source material, destination link.
 - One section per platform: the caption ready to paste (for YouTube Shorts,
-  title + description), alt text (Instagram/LinkedIn), hashtags/topic tag
-  included in place, plus the pinned comment (TikTok and YouTube Shorts, if
-  any), the two founder comments labelled **Kinga** and **Thomas**, and on
-  Threads Kinga's quote post labelled **Kinga (quote post)**.
+  title + description), alt text (Instagram/LinkedIn), hashtags included in
+  place, plus the pinned comment (TikTok and YouTube Shorts, if any), and
+  the two founder comments labelled **Kinga** and **Thomas**.
 - A short posting checklist at the end: founder comments go up within the
   first hour; reply to every real commenter in that window too (it is the
   cheapest measured engagement lift on every platform); TikTok and YouTube
-  Shorts links go in the pinned comment; Threads topic tag is typed in the
-  composer; Kinga quote-posts the brand's Threads post from her personal
-  account once it is live; on Instagram, invite Kinga as collaborator
-  before publishing (never re-upload the same post on her account).
+  Shorts links go in the pinned comment; on Instagram, invite Kinga as
+  collaborator before publishing (never re-upload the same post on her
+  account).
 
 **Never hard-wrap anything that gets pasted into a platform.** Every caption,
-description, alt text, pinned comment, founder comment and quote post is copied
+description, alt text, pinned comment and founder comment is copied
 straight out of this file into the composer, so a line break in the file becomes
 a line break in the live post. Write each paragraph as **one single line**,
 however long it runs, and use a blank line only where the caption itself should
-break into a new paragraph. Same for a hashtag set and the Threads topic tag:
+break into a new paragraph. Same for a hashtag set:
 one line each, never split across two. Wrapping is fine in the surrounding notes,
 the treatment and the checklist, because nobody pastes those anywhere.
 

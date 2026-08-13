@@ -57,7 +57,7 @@ Challenge 2: [Next building block]
 
 ### Concrete Running Examples
 
-Use a single, relatable persona throughout (like "Sarah, the book club organiser"). Reference them consistently to make abstract concepts tangible.
+Use one concrete running example throughout a piece and reference it consistently to make abstract concepts tangible.
 
 ### Template/Fill-in-the-Blank Approach
 

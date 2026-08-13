@@ -1,6 +1,6 @@
 ---
 name: carousel
-description: Create a social media carousel (LinkedIn, Instagram, TikTok, Threads, YouTube Shorts) end to end, either Little Parrot or productkind branded, using the shared design system in productkind/carousel-design/. Drafts the per-slide copy spec, waits for approval, implements the design, runs the copy/banned-word check, and exports PNGs + PDF. Channel captions are NOT part of this skill; once the carousel is final, the captions skill writes them. Triggers include "create a carousel", "carousel for this article/course/post", "design slides for Instagram/LinkedIn/TikTok/Threads/YouTube Shorts", or any carousel task.
+description: Create a social media carousel (LinkedIn, Instagram, TikTok, YouTube Shorts) end to end, either Little Parrot or productkind branded, using the shared design system in productkind/carousel-design/. Drafts the per-slide copy spec, waits for approval, implements the design, runs the copy/banned-word check, and exports PNGs + PDF. Channel captions are NOT part of this skill; once the carousel is final, the captions skill writes them. Triggers include "create a carousel", "carousel for this article/course/post", "design slides for Instagram/LinkedIn/TikTok/YouTube Shorts", or any carousel task.
 ---
 
 # Carousel workflow
@@ -134,14 +134,13 @@ checklist.
    Thoughts by productkind article → productkind) and confirm in one line.
 2. **Source material**: the article, course, campaign post md, or topic.
 3. **Platforms**: default is LinkedIn (the PDF as a document post),
-   Instagram and TikTok (the PNGs), Threads (the PNGs, from the productkind
-   profile), and YouTube Shorts (the slides as a video slideshow) when
-   asked. Within this skill it only matters for the TikTok centre-square
-   crop check; pass the platform list on to the **captions** skill
-   afterwards. Expectations: Instagram is the carousel's home turf and the
-   platform to judge performance by; LinkedIn rewards tight decks people
-   finish; TikTok and Threads are low-cost cross-posts, so never optimise
-   for them (see `productkind/ai-research/carousel-research.md`).
+   Instagram and TikTok (the PNGs), and YouTube Shorts (the slides as a
+   video slideshow) when asked. Within this skill it only matters for the
+   TikTok centre-square crop check; pass the platform list on to the
+   **captions** skill afterwards. Expectations: Instagram is the carousel's
+   home turf and the platform to judge performance by; LinkedIn rewards
+   tight decks people finish; TikTok is a low-cost cross-post, so never
+   optimise for it (see `productkind/ai-research/carousel-research.md`).
 4. **Slide count**: typically 7-9. Cover + one idea per slide + CTA. Pick
    the few strongest ideas from the source and tease those; do not try to
    fit every section of the article onto a slide.
