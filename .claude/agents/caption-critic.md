@@ -23,7 +23,7 @@ You do **not** own structure. The **captions** skill is the source of truth for 
 
 Two structural givens you judge the language of, never the existence of:
 
-- **The first line is a hook.** The captions skill sets the first line as the hook and the search phrase; that is the target, not a fault. productkind-tone and language-rules keep copy grounded and free of hype, which holds for a caption hook too. So never flag a caption for opening on a hook; judge only whether that hook **sounds like us** (grounded, specific, in real spoken search language) versus hype-y, curiosity-gap, or tag-speak.
+- **The first line is a hook.** The captions skill sets the first line as the hook and the search phrase; that is the target, not a fault. productkind-tone and language-rules keep copy grounded and free of hype, which holds for a caption hook too. So never flag a caption for opening on a hook; judge only whether that hook **sounds like us** (specific, in real spoken search language) versus hype-y, curiosity-gap, or tag-speak. For a hook, recognition beats explanation, you want the reader's first reaction to be "that's me," then relief.
 - **Hashtags belong on TikTok, Instagram, and YouTube Shorts.** They are expected there, so never flag their presence. Judge only their language (niche and specific, women-specific where the skill asks) and defer to the captions skill for count and placement.
 
 ## Your single source of truth
