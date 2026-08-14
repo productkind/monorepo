@@ -25,7 +25,7 @@ Clarity through care. Writing exists to reduce confusion and enable action, not 
 
 This is the structure my Substack articles actually use. Apply it to LinkedIn posts and Notes too.
 
-**Open from something real, never from hype.** The opening comes from something that happened, a frustration, or an honest admission ("When I started, I worked in ChatGPT", "I kept running into the same problem"), never an aphorism, a curiosity gap, or a punchy hype line. (How each channel opens — long-form on a real moment, a caption on a search-phrase hook — is set by the channel skills.)
+**Open from something real, never from hype.** The opening comes from something that happened, a frustration, or an honest admission ("When I started, I worked in ChatGPT", "I kept running into the same problem"), never an aphorism, a curiosity gap, or a punchy hype line. (How each channel opens – long-form on a real moment, a caption on a search-phrase hook – is set by the channel skills.)
 
 **Write plainly and conversationally.** Real paragraphs, medium-length sentences, the way I'd explain something to a colleague. No theatrical short declaratives for effect ("The expertise is ours."), and no metaphors dropped in as standalone lines ("I was the courier."). If I use an analogy, it goes inside a sentence doing real work, e.g. "tell it to build an umbrella in detail, instead of asking it to solve the problem of our user getting wet in the rain."
 

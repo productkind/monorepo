@@ -36,21 +36,24 @@ For each Tier 1 hit: quote the exact text, give the location, and give the repla
 
 ### Tier 2: Jargon, reading level, and terminology
 
-- **No unexplained jargon.** Every technical term is either avoided or defined in plain words inline on first use, e.g. "**kebab-case** (all lowercase, words separated by hyphens)". Assume nothing is "too basic to explain". Acronyms spelled out on first use.
-- **Teaching a real term is good, not a jargon problem.** When a technical term is the right word (e.g. *static* / *dynamic*, *commit*, *hardcode*), flag only a *missing inline definition*, never the term itself. Do not suggest replacing a real term with a dumbed-down paraphrase; the fix is always to define it inline, because building real vocabulary is part of the course's value.
-- **"local" / "locally":** avoid in titles and any copy where the term arrives cold (prefer "on your computer"). It is acceptable in body copy **only if this course explicitly teaches/defines the term** (e.g. via a glossary entry). If the course never defines it, flag every cold use. `localhost` is fine when taught as "this computer".
-- **Tool terminology:** "AI chat assistant" for ChatGPT / Claude.ai (you copy the answer out); "AI agent" for Claude Code / Codex (it acts in your files and shows the changes). Use "AI chat assistant" consistently and flag the bare "chat assistant" as an incomplete label. Flag "chat AI" and "agentic" (jargon for this audience). Do not ask for a plain-description gloss alongside the label.
-- **Straightforward, accessible sentences:** mostly short, one idea each, active voice, concrete over abstract ("scattered across WhatsApp and email", not "fragmented communication channels"). Flag sentences that need re-reading.
-- **Analogies arrive after the concept they explain**, not before.
+Verify every step against the preloaded skills and cite the rule you are applying: **language-rules section 5 (Clarity and concreteness)** in full, the **tool-terminology rule in its section 6**, and **productkind-tone's Language Guidelines** section. The rules' full wording and examples live in those skills; apply them from there, never from memory.
+
+Course-specific calibration the skills leave to you:
+
+- **Teaching a real term is good, not a jargon problem.** When a technical term is the right word (e.g. *static* / *dynamic*, *commit*, *hardcode*), flag only a *missing inline definition*, never the term itself; building real vocabulary is part of the course's value.
+- **"local" / "locally" is acceptable in body copy only if this course explicitly teaches/defines the term** (e.g. via a glossary entry); if it never defines it, flag every cold use. `localhost` is fine when taught as "this computer".
+- **Do not ask for a plain-description gloss alongside a tool label.**
+- **Flag any sentence that needs re-reading.**
 - **No AI dressing.** Check every sentence against the ten failure modes in the corrections corpus: wording that sounds meaningful but states nothing concrete (vague nouns, figurative verbs, withheld subjects, empty payoff lines). Prescribe fixes in the direction the corpus pairs move: precision, not concision; never cut the concrete information to fix a vague line.
 
 ### Tier 3: Framing, honesty, and warmth
 
-- **Frame the value as using AI to build her own idea/business**, never as becoming a developer/engineer or "learning to code" as the goal. "Like a developer" as a borrowed *workflow* is fine; a developer *career/identity* as the destination is not. Avoid "no code needed" and the women-used-to-code angle.
-- **No overselling.** The description, learning outcomes, challenge-end recaps, and course-end recap promise only what the content teaches. Flag sweeping comprehension claims the course doesn't deliver ("the code stops being a mystery", "understand what your app is made of" when it doesn't teach reading code). Prefer concrete, modest outcomes.
-- **Outcome-shaped language** (per write-key-outcomes): action verb + benefit + tangible deliverable, higher-order verbs (build, ship, evaluate, create), not "learn/understand X".
-- **Warm mentor voice, never patronising, never hype.** Names difficulty honestly ("Things will break, and that's okay"), normalises mistakes, celebrates specifically ("you wrote your first prompt", not "Amazing!"). Never makes fun of the learner. Never lectures.
-- **Exaggeration-free.** No hyperbole or overpromising.
+Verify against the preloaded skills and cite the rule you are applying: **language-rules section 6 (Positions our copy always takes)** in full, **write-key-outcomes** for the outcome shape, and **productkind-tone's Core Voice Principles, The Mentor Voice, and Anti-Patterns to Avoid** sections. The rules' full wording lives in those skills.
+
+Course-specific calibration:
+
+- **Hunt for sweeping comprehension claims** in the description, learning outcomes, challenge-end recaps, and course-end recap ("the code stops being a mystery", "understand what your app is made of" when the course doesn't teach reading code), and soften them consistently to concrete, modest outcomes.
+- **"Like a developer" as a borrowed *workflow* is fine; a developer *career/identity* as the destination is not.** Avoid "no code needed" and the women-used-to-code angle.
 
 ## Output format
 

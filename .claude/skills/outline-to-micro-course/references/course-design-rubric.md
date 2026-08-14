@@ -1,6 +1,6 @@
 # Course design rubric
 
-The shared course-design rules for Little Parrot micro-courses. Two readers use this file: the writer applies it in full while outlining (messy-draft-to-outline) and drafting (outline-to-micro-course), and course-pedagogy-critic judges the drafted course against it. It is self-contained: no onward references.
+The shared course-design rules for Little Parrot micro-courses. Two readers use this file: the writer applies it in full while outlining (messy-draft-to-outline) and drafting (outline-to-micro-course), and course-pedagogy-critic judges the drafted course against it. It is the single source of truth for these rules; apply them from here, never from copies.
 
 ## Contents
 
@@ -256,7 +256,7 @@ Micro-course content should follow these principles to ensure it's engaging, eff
 - Acknowledgment that this might feel new or unfamiliar
 - Normalisation of mistakes ("Don't worry about getting it perfect on the first try")
 - Encouragement that is specific, not generic ("You just wrote your first prompt! That's the hardest part done.")
-- Mentor-like, kind tone that makes learning enjoyable, ocassionally making jokes to lighten the mood
+- Mentor-like, kind tone that makes learning enjoyable, occasionally making jokes to lighten the mood
 
 **Tone markers to avoid:**
 - "Simply" or "just" before instructions (implies it should be easy)

@@ -22,7 +22,7 @@ It applies to **all** productkind and Little Parrot copy, not only personal post
 Two things to read out of the pairs before using them:
 
 1. **The failure is almost never a banned word.** Each AI line is grammatical, on-brand and passes a keyword check. It fails because it gestures at a meaning instead of stating one.
-2. **The correction is often longer than the original.** AI compresses into knowing shorthand; Kinga expands into a understandable statement. Precision is the goal, not concision. A fix that shortens a line by removing the concrete information is worse than the original.
+2. **The correction is often longer than the original.** AI compresses into knowing shorthand; Kinga expands into an understandable statement. Precision is the goal, not concision. A fix that shortens a line by removing the concrete information is worse than the original.
 
 ## How to use this file
 

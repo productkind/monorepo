@@ -190,7 +190,7 @@ People scan emails, they don't read them: average view time is about 9 seconds, 
 ### Scannable Value Lists
 - When listing what the user gets, use lists with clear value propositions
 - Separate items to increase perceived value (e.g. "All courses" and "Toolkits" as separate lines, not "All courses and toolkits")
-- Bold label for skimming, plain description for detail
+- Bold label for skimming, straightforward description for detail
 - Keep descriptions to one sentence
 
 ### Key Links to Include
@@ -203,7 +203,7 @@ When relevant, always link to:
 ## Tone and Copy
 
 ### Voice
-- **Follow the brand voice defined in `productkind-tone`** (warm, kind, grounded, plain-spoken) rather than re-deriving it here — this section only adds what's email-specific.
+- **Follow the brand voice defined in `productkind-tone`** rather than re-deriving it here — this section only adds what's email-specific.
 - **Open on a real, specific moment, not an abstract value statement.** "We kept hearing you were running out of Lovable credits too quickly" beats "Everything we shipped this month helps you build with confidence." Start from something true you observed or heard.
 - Apply the **language-rules** skill in full, and invoke it if it is not already loaded. It is the single source for the banned list and all shared language rules.
 - Sign off as "Kinga, Tamas & Little Parrot" with a 💛
@@ -226,9 +226,9 @@ When relevant, always link to:
 - Describe events or conferences in jargon that alienates non-technical women ("developers and AI practitioners"). Frame around what THEY get out of it.
 - Add a subscription pitch in emails to paid subscribers. They already pay.
 
-### Plain language
+### Straightforward language
 - **Write for a smart professional with no technical background who uses technology every day.** She reads and writes for a living, so ordinary professional vocabulary can be used. What she lacks is exposure to technical concepts, not reading ability. So spend the effort explaining *those* rather than shortening every word.
-- **Define a technical term in plain words on first use, in the same sentence** ("an AI agent, a tool that can take actions for you like Claude Code"). This is the load-bearing rule, and it does properly what over-simplifying only attempted. **Teach the real term rather than a dumbed-down paraphrase**: "an LLM, the large language model behind ChatGPT" beats swapping in something vaguer. Follow the house terminology: "AI chat assistant" (ChatGPT, Claude.ai) vs "AI agent" (Claude Code, Codex).
+- **Define a technical term clearly on first use, in the same sentence** ("an AI agent, a tool that can take actions for you like Claude Code"). This is the load-bearing rule, and it does properly what over-simplifying only attempted. **Teach the real term rather than a dumbed-down paraphrase**: "an LLM, the large language model behind ChatGPT" beats swapping in something vaguer. Follow the house terminology: "AI chat assistant" (ChatGPT, Claude.ai) vs "AI agent" (Claude Code, Codex).
 - **Short sentences, mostly one idea each, and active voice, because the email gets about nine seconds** (see *Built to be skimmed*). This is a scanning rule, not a comprehension one, so a longer sentence is fine where it genuinely reads better. Cut a first draft by about half.
 - **Concrete over vague:** "takes about 10 minutes" beats "quick".
 

@@ -123,6 +123,8 @@ def line_of(text: str, offset: int) -> int:
 
 
 def excerpt(flat: str, start: int, end: int) -> str:
+    # 25 chars of context each side: enough to recognise the sentence,
+    # short enough that a hit stays on one report line.
     return flat[max(0, start - 25):end + 25].strip()
 
 
