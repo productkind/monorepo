@@ -63,7 +63,6 @@ Here's the thing, Bottom line, No fluff, This one's for you, Why this matters, W
 - **"from X to Y" transformation phrasing**: "from scattered idea to shipped product", "go from 'I can't' to 'I just did'". Describe the experience directly.
 - **"write up" / "wrote up" / "write it up".** Use "write about", "wrote about" or "wrote down".
 - **"wrestling with".** Use "struggling with".
-- **"obviously" / "of course".** Implies the reader should already know it.
 - **Do not use "plain" to describe writing style at all**, including inside example prompts and tone blocks. Say "simple wording".
 - **Artificial writerly phrasing**, constructions no one would say aloud. Say the line the way you would say it to a colleague, plain verbs and plain subjects:
   - ownership metaphors for abstract things: "once the names are yours", "make the vocabulary your own", "the skills are now yours" becomes "once you use these names", "once you know them"
@@ -105,9 +104,9 @@ The rule to carry from it: **precision, not concision.** Corrections are often l
 Flagging any of these sands the voice out, which is worse than missing a hit:
 
 - **"actually"** and other hedged intensifiers ("quite a bit", "pretty well", "really") used as honest concessions. Only a problem when sprinkled as filler in nearly every line.
-- An ordinary **"rather than" / "instead of"** comparison in a single natural sentence: "a result that surprises me counts as information rather than a judgement on me". That is plain comparison, not a rhetorical reversal. Do not flatten it to satisfy the rule above.
+- An ordinary **"rather than" / "instead of"** comparison in a single natural sentence: "a result that surprises me counts as information rather than a judgement on me". That is clear comparison, not a rhetorical reversal. Do not flatten it to satisfy the rule above.
 - The **spaced en dash (–)** for asides, **warm exclamation marks** ("Happy building!"), and a **single tonal emoji** carrying real warmth or self-deprecation.
 - Sentences starting with **So, And, But**; comma splices; parenthetical asides; a trailing "though"; the odd non-native turn of phrase. This is the rhythm, not a defect.
 - A **real technical term** used as the right word (static, dynamic, commit, prompt) where it is defined inline.
-- **Repetition of a plain word**, or a longer sentence, where the alternative loses a specific. Plainness is the target.
+- **Repetition of a straightforward word**, or a longer sentence, where the alternative loses a specific. Clearness is the target.
 - **Admitting a mistake**, naming difficulty, or saying "this is hard" when something is hard.
