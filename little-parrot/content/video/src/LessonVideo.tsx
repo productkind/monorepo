@@ -48,6 +48,109 @@ export const LessonVideoPropsSchema = z.object({
 
 const DEBUG = false
 
+export const SocialVideo016: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({ captions, titleDuration }) => {
+  return (
+    <AbsoluteFill className={BG_CLASS}>
+      <Series>
+        <Series.Sequence durationInFrames={130}>
+          <FullScreenImage src={staticFile('social-016/section-00-overwhelmed.gif')} fit="contain" offset={-200} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={104}>
+          <FullScreenImage src={staticFile('social-016/section-01-win.gif')} fit="contain" offset={-150} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={103}>
+          <FullScreenImage src={staticFile('social-016/section-02-research.gif')} fit="contain" offset={-150} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={75}>
+          <FullScreenImage src={staticFile('social-016/section-03-lots.gif')} fit="contain" offset={-100} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={93}>
+          <FullScreenImage src={staticFile('social-016/section-04-choose.gif')} fit="contain" offset={-220} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={99}>
+          <FullScreenImage src={staticFile('social-016/section-05-computer.gif')} fit="contain" offset={-150} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={165}>
+          <FullScreenImage src={staticFile('social-016/section-06-three.gif')} fit="contain" offset={-100} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={97}>
+          <FullScreenImage src={staticFile('social-016/section-07-clone.gif')} fit="contain" offset={-150} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={70}>
+          <FullScreenImage src={staticFile('social-016/section-08-spectrum.gif')} fit="contain" offset={-150} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={50}>
+          <FullScreenImage src={staticFile('social-016/section-09-buttons.gif')} fit="contain" offset={-150} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={49}>
+          <FullScreenImage src={staticFile('social-016/section-10-easy.gif')} fit="contain" offset={-150} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={154}>
+          <FullScreenImage src={staticFile('social-016/section-11-technology.gif')} fit="contain" offset={-150} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={163}>
+          <FullScreenImage src={staticFile('social-016/section-12-industry.gif')} fit="contain" offset={-150} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={33}>
+          <FullScreenImage src={staticFile('social-016/section-13-lovable.gif')} fit="contain" offset={-350} color="#ffffff" />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={32}>
+          <FullScreenImage src={staticFile('social-016/section-14-code.gif')} fit="contain" offset={-120} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={87}>
+          <FullScreenImage src={staticFile('social-016/section-15-leadmagnet.gif')} fit="contain" offset={-150} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={60}>
+          <FullScreenImage src={staticFile('social-016/section-16-computer-cool.gif')} fit="contain" offset={-200} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={70}>
+          <FullScreenImage src={staticFile('social-016/section-17-server.gif')} fit="contain" offset={-150} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={73}>
+          <FullScreenImage src={staticFile('social-016/section-18-kitten.gif')} fit="contain" offset={-150} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={92}>
+          <FullScreenImage src={staticFile('social-016/section-19-magnet.gif')} fit="contain" offset={-150} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={104}>
+          <FullScreenImage src={staticFile('social-016/section-20-type.gif')} fit="contain" offset={0} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={135}>
+          <FullScreenImage src={staticFile('social-016/section-21-prompt.png')} fit="contain" offset={-150} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={184}>
+          <FullScreenImage src={staticFile('social-016/section-22-repeat.gif')} fit="contain" offset={-150} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={52}>
+          <FullScreenImage src={staticFile('social-016/section-23-start.gif')} fit="contain" offset={-150} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={184}>
+          <FullScreenImage src={staticFile('social-016/section-24-evolve.gif')} fit="contain" offset={-150} />
+        </Series.Sequence>
+      </Series>
+      <Sequence from={titleDuration}>
+        <Captions captions={captions} />
+      </Sequence>
+      <Sequence from={titleDuration}>
+        <Audio src={staticFile('social-016/speech.wav')} />
+        <Audio src={staticFile('soundtrack.wav')} volume={0.1} />
+        <RemotionRiveCanvas src={staticFile('parrot-greet-00.riv')} />
+      </Sequence>
+      <Sequence from={titleDuration + 3000}>
+        <RemotionRiveCanvas src={staticFile('parrot-follow-00.riv')} />
+      </Sequence>
+      <Sequence from={titleDuration + 500}>
+        <RemotionRiveCanvas src={staticFile('parrot-peek-00.riv')} />
+      </Sequence>
+      <AbsoluteFill className="border-16 border-[#000000] z-10">
+      </AbsoluteFill>
+      {DEBUG ? <DebugSafeZone /> : null
+      }
+    </AbsoluteFill>
+  )
+}
+
+
 
 export const LessonVideoAiAdmin00: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({ captions, titleDuration }) => {
   return (
