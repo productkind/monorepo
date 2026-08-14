@@ -35,12 +35,3 @@ hitting publish.
    real sequence (e.g. two LinkedIn posts spaced days apart), it also writes a short
    `posting-plan.md` for that sequence. Otherwise there's no plan file to read.
 5. Edit, then post. Reuse the ref tags to see which channels actually drive signups.
-
-## Why this makes self-promotion less painful
-
-- **No blank page.** You react to a draft instead of generating one.
-- **No per-channel rework.** Tone, length, link tags and community rules are applied for you.
-- **No decisions in the moment.** The recipe is fixed, so you're not re-litigating
-  "how do I word this for Slack" each time.
-- **The message is generous by design.** Every draft leads with the learner's win
-  and the deadline, which is the version of promotion that doesn't feel like bragging.
