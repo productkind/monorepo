@@ -98,8 +98,8 @@ const ELIZABETH = 'AXdMgz6evoL7OPd7eU12' // Elizabeth
 const BETH = '8N2ng9i2uiUWqstgmWlH' // Beth
 const LANA = 'roYauZ4bOLAKvVZTPLre'
 const CHLOE = 'lhgliD0TncfFOY1Nc93M' // Chloe
-// const VOICE_ID = CHLOE
-const VOICE_ID = ELIZABETH
+const VOICE_ID = CHLOE
+// const VOICE_ID = ELIZABETH
 const video1 = `
 In simple terms, Artificial Intelligence is the capability of a machine to perform tasks that would normally require human intelligence. This includes things like learning from data, understanding language, recognising patterns, and making decisions. Many problems are too complex for traditional, rule-based programming. AI gives us new ways to tackle these challenges: it can help us automate repetitive tasks, personalise user experiences, and make better predictions. Today, when we use tools like ChatGPT or Gemini, we often call them Artificial Intelligence. Technically, they’re a specific kind of AI known as Large Language Models, or LLMs. So, what exactly is an LLM? To answer that, let’s start with the basics: an AI model. An AI model is simply a program that’s trained on data to do a particular job, for example, classifying images, spotting trends, or generating text. A model always takes an input and produces an output. The input and output can be text, images, audio, or other forms of data. A Large Language Model is a type of AI model that’s specialised in human language. It’s trained on vast amounts of text to learn the structure and patterns of how we write and speak. This allows it to generate text, summarise information, answer questions, and even help you brainstorm ideas.
 `
@@ -448,9 +448,23 @@ In this course you'll build two shortcuts. The first lets you talk about everyth
 You'll become someone who offloads the mental load by voice, in the seconds you have. Let's build the first one.
 `
 
-const TEXT_TO_GENERATE = videoAiYourLifeAdmin00
+const videoSocialMedia016 = `
+It doesn’t have to be overwhelming to create an interactive lead magnet with AI and win bigger consulting clients as a freelancer.
+
+If you start researching how to build a website using AI, you’ll come across a gazillion tools. In this video, we’ll show you how to choose between them, and at the end, we’ll show you how to write your first prompt.
+    
+The three most popular AI coding tools are Claude Code, Cursor, and Lovable. Many of the other tools follow similar approaches.
+    
+These tools sit on a spectrum, with customisability at one end and ease of use at the other. Claude Code and Cursor can handle almost any technology with the right setup, but they don’t provide all the infrastructure you need to share the lead magnet as a website with others. Lovable not only writes the code, but also shows you what your lead magnet looks like, helps you deliver it to your customers, and takes care of the technical details. It’s a great choice for early-stage products and, you guessed it, for lead magnets.
+    
+To get started, describe how your lead magnet should work using this prompt template, and Lovable can build the first version in minutes. Check the result, give it feedback, and then add new functionality step by step.
+    
+Of course, this is just the beginning. Follow along to level up your consulting game with AI!
+`
+
+const TEXT_TO_GENERATE = videoSocialMedia016
 const MODEL_ID = 'eleven_v3' //'eleven_multilingual_v2' // // The v3 model as requested
-const videoName = 'ai_your_life_admin_00'
+const videoName = 'video-social-016-chloe'
 const OUTPUT_FILE_NAME = `generated_speech-${videoName}.wav` // e.g.,
 const ALIGNMENT_JSON_FILE_NAME = `alignment-${videoName}.json`
 const OUTPUT_FILE_PATH = OUTPUT_FILE_NAME // Saves in the same directory as the script
