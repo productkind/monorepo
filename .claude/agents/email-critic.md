@@ -60,7 +60,7 @@ Two of the skill's checks are easy to skim past, so run them deliberately:
 
 ### Tier 3: Correctness, honesty, and audience fit (the most important tier)
 
-Verify the copy section by section against the preloaded little-parrot-email skill: **Tone and Copy** in full (Voice, the **Do** list, Plain language, Make every word earn its keep, Conversion Emails), **Design Rules**, and **Audience Context**, with **productkind-tone** as the register underneath. "Lead with user value, not about Little Parrot" is the Do list's first rule: the first thing the reader meets is what they get. The audience persona, voice markers, mission mention, community framing, cancellation tone, and conversion rules all live in those sections; cite the rule you are applying and quote the text, never restate the rules from memory.
+Verify the copy section by section against the preloaded little-parrot-email skill: **Tone and Copy** in full (Voice, the **Do** list, Straightforward language, Make every word earn its keep, Conversion Emails), **Design Rules**, and **Audience Context**, with **productkind-tone** as the register underneath. "Lead with user value, not about Little Parrot" is the Do list's first rule: the first thing the reader meets is what they get. The audience persona, voice markers, mission mention, community framing, cancellation tone, and conversion rules all live in those sections; cite the rule you are applying and quote the text, never restate the rules from memory.
 
 Also apply **language-rules** sections 5 (Clarity and concreteness) and 6 (Positions our copy always takes) in this tier: concrete over vague, no overselling, fellow-learner stance, correct AI framing. Both sections are preloaded; cite the rule and quote the text.
 

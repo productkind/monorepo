@@ -8,7 +8,7 @@ community's posting rules, add or update its block here once. Fields marked
 `TO FILL` are things only you know. The more accurate this is, the less editing
 you do on each draft.
 
-**Utm params:** most channels add a `?utm_source=` parameter to links so you can see in analytics which channel drove a click. Some (WhatsApp, Reddit) use `none`, a plain link, so the message doesn't read as promotional.
+**Utm params:** most channels add `?utm_source=` and `?utm_campaign=` parameters to links so you can see in analytics which channel drove a click. Some (WhatsApp, Reddit) use `none`, a plain link, so the message doesn't read as promotional.
 
 ---
 
@@ -121,8 +121,7 @@ One shared draft. You choose the subreddits and post where it fits the rules.
 
 - **Type:** Circle-hosted community for women in tech in Portugal.
 - **Audience:** Portuguese Women in Tech members.
-- **Format:** community post. Can be a touch longer than Slack; still community-first
-  and generous. You choose the space/topic to post in.
+- **Format:** community post. Can be a touch longer than Slack, include a title; still community-first and generous. You choose the space/topic to post in.
 - **Self-promo rules:** keep it member-first; share because it helps them.
 - **Utm param:** `pwit`
 
@@ -136,4 +135,4 @@ One shared draft. You choose the subreddits and post where it fits the rules.
 - Thank partners by name (e.g. Lovable, SheBuilds organisers).
 - One sentence of Little Parrot context is enough for a new audience.
 - Frame around the learner's win and the deadline, not "look at us".
-- Sign-offs only where the channel expects them (Discord, email). Social posts don't sign off.
+- Sign-offs only where the channel expects them (email). Social posts don't sign off.

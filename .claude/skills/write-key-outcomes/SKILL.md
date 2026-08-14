@@ -6,7 +6,9 @@ description: Write outcome-oriented key outcomes and course descriptions that ar
 ## Writing Key Outcomes
 When writing course descriptions, challenge titles, descriptions or any content that describes what the learner will achieve, use the following format to ensure clarity and focus:
 
-> You'll be able to [action verb] so you can [achieve outcome]. You'll leave with [specific deliverable]" to combine action, benefit, and tangible results into a clear picture of transformation.
+> You'll be able to [action verb] so you can [achieve outcome]. You'll leave with [specific deliverable].
+
+This combines action, benefit, and tangible results into a clear picture of transformation.
 
 ### Well-written key outcomes are:
 
@@ -39,9 +41,9 @@ Bloom's Taxonomy is a classification of different outcomes and skills for design
 | Put in the chat | Share out | Solve | Structure | Reframe | Ship |
 | Select | Summarise | Teach | Synthesise | Test | Write |
 
-### Examples of key outcomes
+### What good key outcomes include
 
-Each of the examples below exemplify the common themes and structures we see in top-rated and top-selling courses. They include:
+The common themes and structures we see in top-rated and top-selling courses:
 
 1. **Concrete deliverables with timelines** - Each example leads with a specific, tangible outcome students will ship (e.g., "Ship your first real SaaS in 8 weeks," "Deploy Your First Production Agent in 7 Weeks") rather than vague learning objectives.
 2. **Hierarchical skill progression** - Content is organised in logical building blocks, starting with fundamentals, moving to application, then to advanced implementation and real-world deployment.
