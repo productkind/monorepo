@@ -1,5 +1,6 @@
 ---
-status: drafted
+status: posted
+posted: 2026-08-14
 channels: [linkedin]
 account: kinga
 ---
@@ -16,28 +17,40 @@ account: kinga
 
 Some AI influencers are doing the same thing as skincare companies: promising outcomes that aren't scientifically proven.
 
-Because I work a lot with AI, social media keeps recommending me AI influencer content. And because I'm an ageing woman, I also get the wrinkle-reversing, collagen-rebuilding skincare ads.
+Because I work a lot with AI, social media keeps recommending me AI influencer content. And because I’m an ageing woman, I also get the wrinkle-reversing, collagen-rebuilding skincare ads.
 
-In one of the AI influencer videos, a person was talking to Codex and spinning up AI agents to work on several tasks at once. Then she asked it to compare two ads she had made: "Do you feel it's clear? And then actually compare it against this one."
+In one of the AI influencer videos, a person was talking to Codex and giving it a series of fairly vague instructions: look at a presentation, look up a colour code, read a message. Then she asked it to compare two ads she had made: “Do you feel it’s clear? And then actually compare it against this one.”
 
-The AI advised her to combine elements of the two.
+The AI suggested combining elements of the two.
 
-All sounds wonderful that you don’t have to worry about which ad will perform better, because the AI tells you exactly that.
+It all looks wonderfully simple. Why worry about which ad is better when AI can tell you?
 
-Now, this person is obviously selling her course that promises you'll "run your own AI workforce", and you'll get "hours back every week". So she doesn't introduce any nuance in the video.
+The person in the video is, of course, selling a course promising that you can “run your own AI workforce” and get “hours back every week”, so unsurprisingly there isn’t much nuance.
 
-But it all feels like selling a magic potion that will improve your business decisions. Yes, AI helps me build LittleParrot.app and the tools behind it, which I couldn't have built on my own. But AI wasn't trained exclusively on high-quality content, so some of its advice comes from the bad stuff in there too.
+Yes, AI helps me build LittleParrot.app and tools I couldn’t have built on my own. It’s incredibly useful. But presenting AI judgement as if it can reliably tell you which marketing decision is better feels a bit like selling a magic potion.
 
-And claiming it can decide which of your ads will perform better is just misleading.
+Which brings me to face cream.
 
-It’s a bit like the face cream’s promise I keep seeing: "botox in a jar", ergo, magically making you look younger by erasing your wrinkles.
+I keep seeing one advertised as “botox in a jar”, basically promising to erase your wrinkles.
 
-I searched for the science behind this cream. The only study I could find was funded by the company that sells it: 35 women, 60 days, no control group using a placebo or another moisturiser, and the results were judged by looking at photos of the participants. Quite subjective, isn't it?
+So I looked for the evidence behind it. The only study I could find was funded by the company selling the cream, involved 35 women over 60 days, had no control group, and judged results from photographs. Quite subjective, isn't it?
 
-Reading the ingredients, the product was basically a rich moisturiser that may make skin look softer, brighter and temporarily plumper.
+The ingredients suggested, it was basically a rich moisturiser that may make your skin look softer, brighter and temporarily plumper.
 
-If you're a woman above 35 (or maybe these days above 8 years old), you have been sold this promise too. When I looked at scientific studies – okay, asked ChatGPT to do so –, the only things that help with the signs of aging are using broad-spectrum sunscreen (one that blocks both UVA and UVB) daily and topical retinoids. That's pretty much it.
+If you're a woman over 35 (or maybe these days over 8 years old), you’ve probably been sold this promise too.
 
-So next time you see someone spinning up 42 AI agents to run their company, just think about the cosmetic industry. Both exploit people's insecurities by telling you that you're becoming irrelevant. Either because you age or becuase everyone else has automated their company while you're still doing the work by hand.
+When I looked at the scientific research, okay, asked ChatGPT to do so, the list of things with solid evidence for reducing visible signs of skin ageing was surprisingly short. Broad-spectrum sunscreen applied daily and topical retinoids. That’s pretty much it.
 
-But don't let them make you feel inadequate, usually things are more nuanced than that. Ask the same question you would ask about the face cream: what's the evidence?
+So next time you see someone spinning up 42 AI agents to run their company, just think about the cosmetic industry.
+
+Both exploit our insecurities.
+
+With skincare, you’re getting older and need to fix it.
+
+With AI, apparently everyone else has automated their company while you're still doing the work by hand.
+
+Don’t let either make you feel inadequate.
+
+Things are usually more nuanced than the sales pitch suggests.
+
+Ask the same question you’d ask about the face cream: What’s the evidence?
