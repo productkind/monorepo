@@ -88,11 +88,11 @@ That version changes who has to raise things, not only how the list gets written
 
 You stop being the messenger. You no longer have to both notice a thing and ask for it, and having to ask for it is what usually causes the resentment.
 
-You build the shortcut in our free course [Hand Off the Mental Load](https://littleparrot.app/05900334-0998-4a98-be6d-946653c9b82d/course-overview?ref=seo-explain-mental-load), by tapping a few blocks together in the Shortcuts app that's already on your phone. One whole challenge covers setting it up for your partner, since a list only you can see doesn't help. If they're on an iPhone you share the folder, so the lists appear on their phone and they can tick things off from their end. If they're on Android you set up an automatic message instead.
+You build the shortcut in our course [Hand Off the Mental Load](https://littleparrot.app/05900334-0998-4a98-be6d-946653c9b82d/course-overview?ref=seo-explain-mental-load), by tapping a few blocks together in the Shortcuts app that's already on your phone. One whole challenge covers setting it up for your partner, since a list only you can see doesn't help. If they're on an iPhone you share the folder, so the lists appear on their phone and they can tick things off from their end. If they're on Android you set up an automatic message instead.
 
 Those two are worth doing together rather than choosing between them. A shared folder only helps if your partner remembers to open it, which is close to the problem you started with. This work already goes unnoticed, so it helps if the new items arrive on their phone instead of waiting for someone to think of looking.
 
-Building the Brain Dump shortcut takes less than 10 minutes. It needs an iPhone 15 Pro or newer, because it uses Apple Intelligence, Apple's built-in AI. The course and the shortcut are both free. We made it for mums, so the examples use nappies, feeds and health visitors, and you can reword the categories and prompts to fit your own household.
+Building the Brain Dump shortcut takes less than 10 minutes, and it's the first challenge, so you can build it for free. It needs an iPhone 15 Pro or newer, because it uses Apple Intelligence, Apple's built-in AI. Apple Intelligence costs nothing to use, and there is nothing to download. We made it for mums, so the examples use nappies, feeds and health visitors, and you can reword the categories and prompts to fit your own household.
 
 This applies to any tool, including ours. Making the work visible is useful, and it won't settle who should be doing what. A shared list shows both of you how much there is. You'll still have to agree between you how to split it.
 

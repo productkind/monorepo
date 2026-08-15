@@ -78,9 +78,9 @@ Here's what it looks like once the shortcut is set up. You realise the nursery f
 
 Whenever something is on your mind, you say it and your phone files it. There's no weekly session to keep up, so the system never turns into another job on your list, which is what usually makes these systems fall apart.
 
-You build it in our free course [Hand Off the Mental Load](https://littleparrot.app/05900334-0998-4a98-be6d-946653c9b82d/course-overview?ref=seo-what-is-mental-load), tapping a few blocks together in the Shortcuts app that's already on your phone. The Brain Dump itself, the shortcut that takes whatever you say out loud and files it onto the right list, takes less than 10 minutes to build. The rest of the course sets up sharing the lists with your partner, adds a second shortcut for anything you want a dated record of, and gives you ways to start either one without unlocking your phone.
+You build it in our course [Hand Off the Mental Load](https://littleparrot.app/05900334-0998-4a98-be6d-946653c9b82d/course-overview?ref=seo-what-is-mental-load), tapping a few blocks together in the Shortcuts app that's already on your phone. The Brain Dump itself, the shortcut that takes whatever you say out loud and files it onto the right list, takes less than 10 minutes to build, and it's the first challenge, so you can build it for free. The rest of the course sets up sharing the lists with your partner, adds a second shortcut for anything you want a dated record of, and gives you ways to start either one without unlocking your phone.
 
-It needs an iPhone 15 Pro or newer, because it uses Apple Intelligence, Apple's built-in AI. The course and the shortcut are both free. We made it for mums, so the examples use nappies, feeds and health visitors, and you can reword the categories and prompts to fit your own household.
+It needs an iPhone 15 Pro or newer, because it uses Apple Intelligence, Apple's built-in AI. Apple Intelligence costs nothing to use, and there is nothing to download. We made it for mums, so the examples use nappies, feeds and health visitors, and you can reword the categories and prompts to fit your own household.
 
 ---
 
