@@ -25,6 +25,54 @@ One hub, three spokes, all linking to the hub:
 | 2. Spoke | `what-is-the-mental-load` | what is mental load | mental load meaning, women mental load |
 | 3. Spoke | `explain-mental-load-to-your-partner` | how to explain mental load to husband | mental load in relationships |
 | 4. Spoke | `brain-dump-template` | brain dump template | adhd brain dump template, adhd brain dump template free |
+| 5. Spoke | `mental-load-women` | mental load women | mental load of motherhood, mental load working mothers |
+| 6. Spoke | `invisible-labor` | invisible labor | invisible labour, invisible work |
+
+Pages 5 and 6 were added on 15 August 2026 from Kinga's Semrush research. The
+first four were deliberately left untouched.
+
+## Semrush data, August 2026
+
+| Query | Volume/mo | KD | Notes |
+|---|---:|---:|---|
+| invisible labor | 1,300 | 29 | Its own page. **US spelling is the query**, so it stays in the slug, title and headings; prose is British English |
+| mental load women | 880 | 27 | Low competition and **no page owns it**. Own page rather than a section elsewhere |
+| adhd brain dump template | 720 | 24 | |
+| adhd brain dump | 590 | 12 | |
+| brain dump worksheet | 590 | 14 | |
+| cognitive labor | — | **50** | **Do not target.** Mention only, as the academic term |
+
+**The ADHD variants together outweigh the head term** (`brain dump template`),
+which is why the ADHD section on page 4 earns its own H2 rather than sitting as
+a subsection.
+
+## What the SERPs want
+
+- **`brain dump template`** is a printable/template SERP: Pinterest, Notion,
+  Asana, printable blogs. To rank, the page has to hand over a copyable artefact
+  above the fold, not discuss brain dumps. Keep the fenced blocks near the top.
+  **Copy-to-clipboard already works**: `src/components/ui/Markdown.tsx` renders
+  every `pre` with a `CopyButton`, so fenced blocks get a copy control with no
+  new work.
+- **`how to explain mental load to husband`** is a forum and personal-essay
+  SERP, Reddit at #1 and Mumsnet at #10. A structured, sourced page beats it
+  without much difficulty, which is why page 3 leads on headings and citations.
+- **`mental load women`** has no page owning it, so page 5 aims to be the
+  complete answer rather than competing on authority.
+
+## Keeping the mental-load pages apart
+
+Three pages now sit near each other, so each holds a distinct intent to avoid
+competing with itself:
+
+- `what-is-the-mental-load` answers **what it is**. Definition, origins, why it
+  is heavy.
+- `mental-load-women` answers **why it lands on women**. Daminger's split
+  between deciding and anticipating is the spine of it.
+- `invisible-labor` answers **what the wider category is**, and disentangles
+  invisible labour, mental load, cognitive labour and emotional labour.
+
+If any two start ranking for each other's query, merge rather than reword.
 
 Page 3 targets a query rising 73,450% over five years in GB. Page 4 targets
 queries that are rising fast off a very small base (mean 0.2 when sized against
