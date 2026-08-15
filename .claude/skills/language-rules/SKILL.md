@@ -83,6 +83,7 @@ The rule to carry from it: **precision, not concision.** Corrections are often l
 - **Concrete over abstract.** "scattered across WhatsApp and email", not "fragmented communication channels". A named tool, a real scenario, a real number.
 - **Active voice, and the actor at the front.** "You'll learn", not "This will teach you". Give a passive sentence its actor back.
 - **Direct address.** "You" and "your". Write to the person, not about them.
+- **Contractions, unless the full form is doing work.** "It's", "you'll", "don't", "can't", "there's". Without them the same sentence reads like a notice rather than a person: "It is invisible work, which is what makes it heavy" against "It's invisible work, which is what makes it heavy". Not a find-and-replace: the full form carries more weight where you want the emphasis ("I do not know"), and the legal pages stay formal. A draft that passes `check-banned.py` and still reads stiff is usually short of contractions, since nothing in the checker can see this.
 - **Every technical term gets an inline definition on first use**: "MVP (Minimum Viable Product)", "kebab-case (all lowercase, words separated by hyphens)". Teaching the real term is the goal, so never swap it for a dumbed-down paraphrase. The fix for a bare term is always a definition.
 - **"local" / "locally":** prefer "on your computer" in titles and anywhere the term arrives cold. Acceptable in body copy only where the piece defines it. `localhost` is fine when explained as "this computer".
 - **Explain the why before the how.** Give the reasoning, then the technique.
@@ -96,7 +97,9 @@ The rule to carry from it: **precision, not concision.** Corrections are often l
 - **No overselling.** Promise only what the thing actually delivers. No sweeping comprehension claims a course does not teach.
 - **Building your idea with AI, never becoming a developer.** Lead with the reader's idea or business outcome. "Like a developer" as a borrowed workflow is fine; a developer career or identity as the destination is not. Avoid "no code needed".
 - **Tool terminology.** "AI chat assistant" for ChatGPT and Claude.ai (you copy the answer out). "AI agent" for Claude Code and Codex (it acts in your files and shows the changes). Write "AI chat assistant" in full, never "chat assistant". Avoid "chat AI" and "agentic".
-- **No invented assumptions or strawmen.** Do not write "people think X" or "you might assume Y" unless we know they do. Start from what is true.
+- **No invented assumptions or strawmen.** Do not write "people think X" or "you might assume Y" unless we know they do. The same holds for what people *do*: "most people try this once and never again" is a claim about behaviour and needs a source or it goes. Start from what is true.
+- **Never invent facts about us.** Our backstory, motivation and experience are only ever what we have actually been told. "We made it for mums" is true. "The examples come from new-mum life, because that is where we built it" invents an experience Kinga has not had. This kind of line reads as warm, authentic detail, which is exactly what makes it dangerous, because a reader takes it as fact about the founders. Watch for clauses beginning "because that is where we...", "after we...", "when I was...", "having been...". Reassigning an unsourced claim to Kinga's first person is not a fix, it is a second fabrication on top of the first.
+- **Do not speak for a group's experience from outside it.** "A version that suits an ADHD brain" states what suits every reader with ADHD. Address the reader: "a version that works better if you have ADHD".
 - **Name the source when an idea is not ours** (a researcher, a podcast, a book).
 
 ## Not faults
