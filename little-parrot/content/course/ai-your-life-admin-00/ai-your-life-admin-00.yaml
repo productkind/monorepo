@@ -1,5 +1,5 @@
 course:
-  id: 05900334-0998-4a98-be6d-946653c9b82d
+  id: 55dfd25b-b9a5-4f04-860d-ef5c1d1e20b9
   note: |-
     *This course needs an iPhone with Apple Intelligence (iPhone 15 Pro or 15 Pro Max, any iPhone 16 or newer). Everything runs free, with no subscription and nothing to install.*
   cover: /courses/ai-your-life-admin-00/cover.gif
@@ -77,7 +77,7 @@ course:
               **Logistics**
               - [ ] Book six week check
               - [ ] Health visitor Tuesday at 11
-              
+
               **Food & Household**
               - [ ] Buy bananas
               - [ ] Out of nappies
@@ -87,7 +87,7 @@ course:
               **Misc**
               - [ ] Car really needs a wash
 
-              She didn't sort a thing, and she didn't open a single app. That's what you'll build next, no coding required, and you'll set up sharing it with your partner automatically, so **you won't have to carry the mental load alone**.
+              She didn't sort a thing, and she didn't type a word. That's what you'll build next, no coding required, and you'll set up sharing it with your partner automatically, so **you won't have to carry the mental load alone**.
             imageUrl: /courses/ai-your-life-admin-00/sorted-result.webp
         - type: text
           title: What you'll need
