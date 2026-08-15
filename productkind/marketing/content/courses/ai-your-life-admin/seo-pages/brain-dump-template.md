@@ -1,9 +1,10 @@
 ---
 slug: brain-dump-template
 title: "A Brain Dump Template, and a Way to Skip the Sorting"
-description: "A free brain dump template to copy, with a version that works better if you have ADHD, plus a way to fill it in by talking instead of writing."
+description: "A free brain dump template to copy, an ADHD brain dump template with three piles instead of five, and a way to fill either in by talking instead of writing."
 primary_query: brain dump template
 secondary_queries: [adhd brain dump template, adhd brain dump template free, brain dump worksheet, adhd brain dump]
+semrush: "The ADHD variants together outweigh the head term: adhd brain dump template 720/mo KD 24, adhd brain dump 590/mo KD 12, brain dump worksheet 590/mo KD 14. Printable/template SERP (Pinterest, Notion, Asana), so the copyable blocks stay high on the page."
 type: article
 status: drafted
 ref: seo-brain-dump-template
@@ -64,19 +65,51 @@ If a line gets no letter, it's a worry rather than a task, so move it to a separ
 
 Don't try to do the whole list today. Pick three from **Do** or **Schedule** and put them somewhere you'll see them tomorrow. The rest is written down, so you can stop holding it in your head.
 
-## A version that works better if you have ADHD
+## An ADHD brain dump template
 
-The standard template asks you to sit down at a desk, with ten spare minutes, feeling calm. When you most need a brain dump, that's rarely where you are.
+The standard template asks you to sit down at a desk, with ten spare minutes, feeling calm. When you most need a brain dump, you're rarely calm or sitting down.
 
-Three changes that tend to help:
+Three changes to try if you have ADHD:
 
-**Drop step 2 to three piles.** *Now*, *Someday*, *Not a task*. Five categories means making a decision on every line, and those decisions are the tiring part.
+**Drop step 2 to three piles.** *Now*, *Later*, *Not a task*. Five categories means making a decision on every line, and making those decisions can be more tiring than writing the list.
 
 **Write the trigger, not the task.** "Dentist" beats "Ring the dentist to book a check-up for both of us, ideally a Thursday". You're leaving a note for yourself, not writing instructions for a stranger.
 
 **Do it in bursts, not sessions.** A ten-minute weekly brain dump assumes you can hold everything for a week. Emptying four or five things at a time, whenever they come to mind, is more realistic and means you're holding less in your head.
 
-Paper can't really help with that last one, because the thought usually arrives while you're driving, in the shower, or holding the baby. You can build a [shortcut on your iPhone](https://littleparrot.app/05900334-0998-4a98-be6d-946653c9b82d/course-overview?ref=seo-brain-dump-template) that takes one or two items at a time when you say them out loud, and sorts them into your categories at the same time. You still have to look at the lists to act on them, and it won't catch a thought you never say out loud.
+Here's the three-pile version as one block. Copy it, keep it in a note on your phone, and start a new one whenever the old one fills up:
+
+```
+BRAIN DUMP
+
+Everything out. Trigger words are enough. Don't sort while you write.
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+
+Now mark each line with one letter:
+N  Now         today
+L  Later       real, but not today
+X  Not a task  a worry, not a job
+
+Pick three N lines and put them somewhere you'll see them:
+1.
+2.
+3.
+
+Anything marked X stays here. It's written down, so you can stop holding it in your head.
+```
+
+Most brain dump templates leave the X pile out, and that's why a brain dump can leave you feeling worse than when you started. A worry written next to eleven tasks reads as a twelfth task. Once you mark it X, you know it's a worry rather than a job, so you can stop trying to work out what to do about it.
+
+Paper can't really help with doing it in bursts, because the thought usually arrives while you're driving, in the shower, or holding the baby. You can build a [shortcut on your iPhone](https://littleparrot.app/05900334-0998-4a98-be6d-946653c9b82d/course-overview?ref=seo-brain-dump-template) that takes one or two items at a time when you say them out loud, and sorts them into your categories at the same time. You still have to look at the lists to act on them, and it won't catch a thought you never say out loud.
 
 ## Why paper brain dumps stop working
 
@@ -96,7 +129,7 @@ You talk, however it comes out, mid-ramble and out of order:
 
 A few seconds later the shortcut has sorted what you said into your categories, and every line is a task you can tick off. You didn't type anything, open anything, or decide which pile each item belonged in.
 
-You choose the categories: *Now / Someday / Not a task* works, so does *Work / Home / People*, so does the five-pile version above. You write them once into the prompt, the instruction you give the AI, and it sorts everything into those categories from then on. You never have to do step 2 yourself.
+You choose the categories: the *Now / Later / Not a task* set above works, so does *Work / Home / People*, so does the five-pile version. You write them once into the prompt, the instruction you give the AI, and it sorts everything into those categories from then on. You never have to do step 2 yourself.
 
 So you never have to book time for a brain dump. It takes the four seconds it needs to say one sentence, whenever something comes to mind: walking to the car, waiting for the kettle, or lying awake at half two with a thought you'd otherwise carry until morning. You say it, the shortcut files it in the right list, and you can stop holding it in your head.
 
