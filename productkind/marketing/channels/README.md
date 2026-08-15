@@ -130,7 +130,6 @@ One shared draft. You choose the subreddits and post where it fits the rules.
 ## Shared copy rules (apply to every channel)
 
 - No em dashes. British English throughout.
-- Don't include pricing in promotional posts. Let the landing page do that.
 - Describe experiences, not features ("you get", "you can").
 - Thank partners by name (e.g. Lovable, SheBuilds organisers).
 - One sentence of Little Parrot context is enough for a new audience.
