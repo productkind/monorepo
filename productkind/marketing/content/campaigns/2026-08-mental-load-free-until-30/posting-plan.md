@@ -21,7 +21,7 @@ there's still time to build something.
 ## Two things to do before anything goes out
 
 1. **Confirm what happens on 31 August in the product**, and that the first
-   challenge really does stay open. Every draft says so.
+   challenge really does stay free. Every draft says so.
 2. **Check the segments exist** in whatever sends the list email. If active
    free, paid and dormant can't be separated yet, send the active-free version
    to everyone and hold the paid share-ask until they can, since sending a

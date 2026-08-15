@@ -33,6 +33,6 @@ So we made a short course called **Hand Off the Mental Load**, and it teaches yo
 
 The first shortcut takes under 10 minutes to build.
 
-It's open to everyone until 30 August 💛 Link in bio.
+It's free for everyone until 30 August 💛 Link in bio.
 
 #mentalload #mumlife #newmum #maternityleave #iphoneshortcuts #appleintelligence #sharethementalload

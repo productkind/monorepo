@@ -17,7 +17,7 @@ Link: `https://littleparrot.app/05900334-0998-4a98-be6d-946653c9b82d/course-over
 
 ---
 
-**Subject:** A course for the mums here, open until 30 August
+**Subject:** A course for the mums here, free until 30 August
 
 ---
 
@@ -31,7 +31,7 @@ We've made a short course called Hand Off the Mental Load, and it teaches you to
 
 The first shortcut takes under 10 minutes to build. The full course is about 20 and adds a way to reach a partner on any phone, a timestamped log for anything you want a record of, and ways to start it without unlocking your phone.
 
-It's open to everyone until 30 August. After that the first part stays open.
+It's free for everyone until 30 August. After that the first challenge stays free.
 
 https://littleparrot.app/05900334-0998-4a98-be6d-946653c9b82d/course-overview?utm_source=ggpt-email&utm_campaign=mental-load-aug26
 
