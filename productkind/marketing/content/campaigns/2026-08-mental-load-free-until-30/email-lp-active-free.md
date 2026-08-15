@@ -14,7 +14,7 @@ Link: `https://littleparrot.app/05900334-0998-4a98-be6d-946653c9b82d/course-over
 
 ---
 
-**Subject:** The mental load course is open until 30 August
+**Subject:** The mental load course is free until 30 August
 
 **Preview text:** Say what's on your mind, and your phone sorts it into a list you can share.
 
@@ -22,7 +22,7 @@ Link: `https://littleparrot.app/05900334-0998-4a98-be6d-946653c9b82d/course-over
 
 Hi [First name],
 
-**Hand Off the Mental Load** is fully open until **30 August**, and it's the one we'd most like you to try while all four challenges are open.
+**Hand Off the Mental Load** is free until **30 August**, and it's the one we'd most like you to try while all four challenges are free.
 
 You build a shortcut on your iPhone that takes a spoken ramble, everything on your mind, out of order and half-finished, and sorts it into tidy checklists. Your partner sees the same lists on their phone and can tick things off.
 
@@ -32,7 +32,7 @@ The first shortcut takes under 10 minutes to build. The whole course is about 20
 
 **Build the Brain Dump shortcut →**
 
-After 30 August the first challenge stays open and the other three become part of the subscription, so you have until then to build every shortcut in the course.
+After 30 August the first challenge stays free and the other three become part of the subscription, so you have until then to build every shortcut in the course.
 
 You'll need an iPhone 15 Pro or newer, since it runs on Apple Intelligence, the free AI built into the phone.
 

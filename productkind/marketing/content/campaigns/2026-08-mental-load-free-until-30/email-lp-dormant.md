@@ -29,7 +29,7 @@ You build a shortcut on your iPhone. Then, whenever something's on your mind, in
 
 You don't type. You don't open an app.
 
-**It takes under 10 minutes to build.** That's the first challenge, and the whole course is open to everyone until **30 August**.
+**It takes under 10 minutes to build.** That's the first challenge, and the whole course is free for everyone until **30 August**.
 
 **Build the shortcut →**
 

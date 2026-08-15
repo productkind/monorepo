@@ -26,7 +26,7 @@ Hi [First name],
 
 You've already got access to everything, so we're asking you to pass this course on to someone who hasn't.
 
-**Hand Off the Mental Load** is fully open to everyone until **30 August**. It teaches you to build a shortcut that takes a spoken ramble, everything on your mind, and sorts it into checklists your partner can see and tick off. No typing, no app to open, and the first shortcut takes under 10 minutes.
+**Hand Off the Mental Load** is free for everyone until **30 August**. It teaches you to build a shortcut that takes a spoken ramble, everything on your mind, and sorts it into checklists your partner can see and tick off. No typing, no app to open, and the first shortcut takes under 10 minutes.
 
 We wrote it for mums.
 
