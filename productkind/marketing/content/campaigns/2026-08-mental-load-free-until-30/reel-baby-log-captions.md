@@ -104,7 +104,7 @@ In about 20 minutes, you build two voice shortcuts on your iPhone:
 The video shows Baby Log in action. No typing, no opening an app, no trying to remember later.
 
 We want it to reach as many mums as we can, so the whole course is free until 30 August:
-https://littleparrot.app/55dfd25b-b9a5-4f04-860d-ef5c1d1e20b9/course-overview?utm_source=linkedin&utm_medium=pk&utm_campaign=mental-load-aug26
+https://littleparrot.app/55dfd25b-b9a5-4f04-860d-ef5c1d1e20b9/course-overview?utm_source=linkedin&utm_medium=pk&utm_campaign=mental-load-aug26&utm_content=baby-log
 
 If your hands are usually full and your brain feels even fuller, this might help. 💛
 
