@@ -90,7 +90,7 @@ You notice things while you're holding a baby, driving, or standing in a queue. 
 
 Instead, say what you've just noticed out loud and let your phone put it on the list. You talk, however it comes out, and the shortcut sorts what you said onto the right list, where the person you live with can see it and tick it off. No typing, no app to open, and no weekly session to keep up with.
 
-That's the first step of our free course [Hand Off the Mental Load](https://littleparrot.app/05900334-0998-4a98-be6d-946653c9b82d/course-overview?ref=seo-what-is-mental-load). It takes under 10 minutes. You build it by tapping a few blocks together in Shortcuts, Apple's app for building small automations, which is already on your phone, and each step tells you exactly what to tap.
+That's the first step of our free course [Hand Off the Mental Load](https://littleparrot.app/55dfd25b-b9a5-4f04-860d-ef5c1d1e20b9/course-overview?ref=seo-what-is-mental-load). It takes under 10 minutes. You build it by tapping a few blocks together in Shortcuts, Apple's app for building small automations, which is already on your phone, and each step tells you exactly what to tap.
 
 You'll need an iPhone 15 Pro or newer, because it uses Apple Intelligence, Apple's built-in AI. Apple Intelligence costs nothing to use and there's nothing to download.
 

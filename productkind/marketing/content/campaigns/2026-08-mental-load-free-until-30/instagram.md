@@ -15,7 +15,7 @@ someone talking and the checklist filling itself in is the whole pitch and
 needs no edit.
 
 Bio link for the campaign:
-`https://littleparrot.app/05900334-0998-4a98-be6d-946653c9b82d/course-overview?utm_source=instagram&utm_campaign=mental-load-aug26`
+`https://littleparrot.app/55dfd25b-b9a5-4f04-860d-ef5c1d1e20b9/course-overview?utm_source=instagram&utm_campaign=mental-load-aug26`
 
 Add a Story with a link sticker on the same day and again on 29 August.
 

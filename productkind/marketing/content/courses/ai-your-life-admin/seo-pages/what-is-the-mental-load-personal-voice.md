@@ -63,7 +63,7 @@ Three approaches, all worth trying.
 
 We ended up building something for that last one. You say out loud whatever you've just noticed, and your phone sorts it onto the right list, where the person you live with can see it and tick it off. No typing, no app to open, nothing to keep updated.
 
-It's the first challenge of our course [Hand Off the Mental Load](https://littleparrot.app/05900334-0998-4a98-be6d-946653c9b82d/course-overview?ref=seo-what-is-mental-load), it takes under 10 minutes, and it's free. You build it by tapping a few blocks together in the Shortcuts app that's already on your phone. You'll need an iPhone 15 Pro or newer, because it runs on Apple Intelligence.
+It's the first challenge of our course [Hand Off the Mental Load](https://littleparrot.app/55dfd25b-b9a5-4f04-860d-ef5c1d1e20b9/course-overview?ref=seo-what-is-mental-load), it takes under 10 minutes, and it's free. You build it by tapping a few blocks together in the Shortcuts app that's already on your phone. You'll need an iPhone 15 Pro or newer, because it runs on Apple Intelligence.
 
 And one honest caveat, because I don't want to oversell our own course: a shared list won't settle who ought to be doing what. It makes the size of the mental load visible to both of you, which stops the argument being about whether it exists at all. Who actually takes on which job is still a conversation the two of you have to have.
 

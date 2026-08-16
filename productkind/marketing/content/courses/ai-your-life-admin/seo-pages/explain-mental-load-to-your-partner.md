@@ -72,7 +72,7 @@ A specific request gives them something they can actually do:
 
 Habits that took years to form don't change in one evening. Usually you have one good conversation, then a fortnight of change, and then things slowly go back to how they were.
 
-A shared list you can both see is what usually keeps the change going, because the work stays visible after the conversation ends. That's what the [Brain Dump shortcut](https://littleparrot.app/05900334-0998-4a98-be6d-946653c9b82d/course-overview?ref=seo-explain-mental-load) is for, and the next section covers how to set one up.
+A shared list you can both see is what usually keeps the change going, because the work stays visible after the conversation ends. That's what the [Brain Dump shortcut](https://littleparrot.app/55dfd25b-b9a5-4f04-860d-ef5c1d1e20b9/course-overview?ref=seo-explain-mental-load) is for, and the next section covers how to set one up.
 
 ## Make it visible permanently
 
@@ -88,7 +88,7 @@ That version changes who has to raise things, not only how the list gets written
 
 You stop being the messenger. You no longer have to both notice a thing and ask for it, and having to ask for it is what usually causes the resentment.
 
-You build the shortcut in our course [Hand Off the Mental Load](https://littleparrot.app/05900334-0998-4a98-be6d-946653c9b82d/course-overview?ref=seo-explain-mental-load), by tapping a few blocks together in the Shortcuts app that's already on your phone. One whole challenge covers setting it up for your partner, since a list only you can see doesn't help. If they're on an iPhone you share the folder, so the lists appear on their phone and they can tick things off from their end. If they're on Android you set up an automatic message instead.
+You build the shortcut in our course [Hand Off the Mental Load](https://littleparrot.app/55dfd25b-b9a5-4f04-860d-ef5c1d1e20b9/course-overview?ref=seo-explain-mental-load), by tapping a few blocks together in the Shortcuts app that's already on your phone. One whole challenge covers setting it up for your partner, since a list only you can see doesn't help. If they're on an iPhone you share the folder, so the lists appear on their phone and they can tick things off from their end. If they're on Android you set up an automatic message instead.
 
 Those two are worth doing together rather than choosing between them. A shared folder only helps if your partner remembers to open it, which is close to the problem you started with. This work already goes unnoticed, so it helps if the new items arrive on their phone instead of waiting for someone to think of looking.
 

@@ -13,7 +13,7 @@ status: drafted
 > come from your actual history with Geek Girls, and I'm not going to guess at
 > it. One true sentence about why you're part of this community is enough.
 
-Link: `https://littleparrot.app/05900334-0998-4a98-be6d-946653c9b82d/course-overview?utm_source=ggpt-email&utm_campaign=mental-load-aug26`
+Link: `https://littleparrot.app/55dfd25b-b9a5-4f04-860d-ef5c1d1e20b9/course-overview?utm_source=ggpt-email&utm_campaign=mental-load-aug26`
 
 ---
 
@@ -33,7 +33,7 @@ The first shortcut takes under 10 minutes to build. The full course is about 20 
 
 It's free for everyone until 30 August. After that the first challenge stays free.
 
-https://littleparrot.app/05900334-0998-4a98-be6d-946653c9b82d/course-overview?utm_source=ggpt-email&utm_campaign=mental-load-aug26
+https://littleparrot.app/55dfd25b-b9a5-4f04-860d-ef5c1d1e20b9/course-overview?utm_source=ggpt-email&utm_campaign=mental-load-aug26
 
 You'll need an iPhone 15 Pro or newer, because it runs on Apple Intelligence, which is the free AI built into the phone.
 

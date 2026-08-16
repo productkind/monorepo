@@ -79,7 +79,7 @@ Writing it down is itself invisible labour. A notebook only works if you have a 
 
 So you can say it out loud instead. You talk, however it comes out, and your phone sorts what you said into lists the people you live with can see and tick off. You don't have to type anything, open an app, or keep up a weekly session.
 
-You build that in our course [Hand Off the Mental Load](https://littleparrot.app/05900334-0998-4a98-be6d-946653c9b82d/course-overview?ref=seo-invisible-labor), by tapping a few blocks together in the Shortcuts app that's already on your phone. It takes under 10 minutes, and it's the first challenge, so you can build it for free.
+You build that in our course [Hand Off the Mental Load](https://littleparrot.app/55dfd25b-b9a5-4f04-860d-ef5c1d1e20b9/course-overview?ref=seo-invisible-labor), by tapping a few blocks together in the Shortcuts app that's already on your phone. It takes under 10 minutes, and it's the first challenge, so you can build it for free.
 
 It needs an iPhone 15 Pro or newer, because it uses Apple Intelligence, Apple's built-in AI, which costs nothing to use. We made the course for mums, so the examples use nappies, feeds and health visitors, and you can reword the categories and prompts to fit your own household.
 
