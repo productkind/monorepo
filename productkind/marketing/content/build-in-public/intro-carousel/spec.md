@@ -138,3 +138,16 @@ the export can be reviewed without them.
   instead, it's the more concrete line.
 - Slide 10's share-ask says "she". Happy to make it "them" if you'd rather keep
   it open to the non-binary folks the site also welcomes.
+
+
+| Slide| On-slide copy| Photo |
+| -----| ----- | ----- |
+| **1. Hook**| **Little Parrot helps women build what felt impossible before AI.**, kicker: **Meet the people behind Little Parrot** | NDC Cph |
+| **2. The old life** | I started my career in luxury fashion, moved into tech, and eventually became a Lead Product Manager. I loved building products. | La Perla SG |
+| **3. The tension** | I wanted my work to have a more positive impact, beyond increasing revenue for shareholders. So I left my full-time product role.| On stage at Geek Girls |
+| **4. The uncertain bit** | **I knew I wanted to help women. I had no idea what that would look like yet.** I tried coaching. I consulted. I experimented. | Presenting at Productized |
+| **5. The discovery** | I started Little Parrot in June 2025. At first, it was for product managers. Then I saw a much bigger opportunity: helping more women become builders with AI. | Little Parrot sticker |
+| **6. We become "we"** | **That’s where Little Parrot found its purpose.** Tamas joined as our technical partner and educator, and we started rebuilding it around a simple goal: help more women build with AI. | NDC Cph workshop |
+| **7. Signs we were onto something** | Then people we didn’t know started learning with us. 663 people registered for our free course we offered at International Women's Day. Then someone we didn’t know paid for one. Then another. And another. From South Korea, England, the US, Australia… | Wey Wey Web workshop |
+| **11. Where we are now** | **Little Parrot is still just the two of us.** We make short, practical, science-based courses for women with ideas who don’t yet see themselves as technical. / Today, we make hands-on courses for women who want to turn ideas into real products with AI. | ? |
+| **12. Invitation** | Maybe you have an idea too. **We want to help you get from “Could I build this?” to opening your laptop and trying.** | ? |
