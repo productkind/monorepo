@@ -7,18 +7,7 @@ status: drafted
 
 # Two reels: on-screen text
 
-Screen recording plus voiceover. The text below is what appears **on screen**,
-not the voiceover. Keep each line short enough to read in one glance, and place
-text in the top third so it never covers the Notes list or the Shortcuts blocks
-you're pointing at.
-
-The lines run on from each other like someone talking you through it, so read
-each reel's column top to bottom and it should sound like one person speaking.
-If a line feels stiff when you say it out loud, change it on the day.
-
-The demo is a build walkthrough, not Kinga's own life, so nothing on screen
-claims she's a mum. The voiceover can say "we made this for mums" and "here's
-what it does".
+Live recording, screen recording plus music. The text below is what appears **on screen**.
 
 ---
 
@@ -52,7 +41,7 @@ Roughly 40 seconds.
 
 ## Reel 2: The Baby Log
 
-Roughly 40 seconds.
+17 seconds.
 
 | What's on screen | Text on screen |
 |---|---|---|
@@ -60,7 +49,7 @@ Roughly 40 seconds.
 | Shortcut starts | What did your baby have for breakfast? |
 | Dictation | Say it to your phone |
 | Dictation continues | without typing anything |
-| Close up of screen with dictation | The AI on your phone sorts it into neat lines |
+| Close up of screen with dictation: *She woke up at 6, had a 180 mL bottle, ate oatmeal and banana for breakfast, played on the floor, she was in a good mood, had a wet nappy, and then took a one-hour nap.* | The AI on your phone sorts it into neat lines |
 | Baby Log note opening | Hand off the mental load |
 | Baby Log note on screen | Build the shortcut on |
 | Hand holding phone | LittleParrot.app + Little Parrot mascot |
