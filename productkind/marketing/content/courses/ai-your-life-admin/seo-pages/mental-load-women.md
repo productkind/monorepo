@@ -71,7 +71,7 @@ And because it's invisible, there's no credit attached to it, so it looks like a
 
 There's a way around the pen-and-notebook problem. You say out loud what you've just noticed, and your phone puts it onto the right list, where the person you live with can see it and tick it off. No typing, no app to open, and no system to update every week.
 
-You build it in our course [Hand Off the Mental Load](https://littleparrot.app/05900334-0998-4a98-be6d-946653c9b82d/course-overview?ref=seo-mental-load-women), by tapping a few blocks together in the Shortcuts app that's already on your phone. It takes under 10 minutes, and it's the first challenge, so you can build it for free.
+You build it in our course [Hand Off the Mental Load](https://littleparrot.app/55dfd25b-b9a5-4f04-860d-ef5c1d1e20b9/course-overview?ref=seo-mental-load-women), by tapping a few blocks together in the Shortcuts app that's already on your phone. It takes under 10 minutes, and it's the first challenge, so you can build it for free.
 
 It needs an iPhone 15 Pro or newer, because it uses Apple Intelligence, Apple's built-in AI, which costs nothing to use. We made it for mums, so the examples use nappies, feeds and health visitors, and you can reword the categories and prompts to fit your own household.
 

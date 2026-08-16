@@ -104,7 +104,7 @@ That's why paper mental load lists go out of date so quickly. A notebook needs y
 
 ## A list that keeps itself filled in
 
-The other way is to say it out loud when it occurs to you, and let your phone sort it into the right list. This is the shortcut you build in our course [Hand Off the Mental Load](https://littleparrot.app/05900334-0998-4a98-be6d-946653c9b82d/course-overview?ref=seo-mental-load-list). We call it the Brain Dump, and it works like this.
+The other way is to say it out loud when it occurs to you, and let your phone sort it into the right list. This is the shortcut you build in our course [Hand Off the Mental Load](https://littleparrot.app/55dfd25b-b9a5-4f04-860d-ef5c1d1e20b9/course-overview?ref=seo-mental-load-list). We call it the Brain Dump, and it works like this.
 
 You talk, however it comes out:
 
@@ -137,7 +137,7 @@ There's no right time to do it and no session to sit down for. Whenever somethin
 
 And you can stop holding something in your head on purpose, because you know it will still be on the list when you look.
 
-You build it in our course [Hand Off the Mental Load](https://littleparrot.app/05900334-0998-4a98-be6d-946653c9b82d/course-overview?ref=seo-mental-load-list), tapping a few blocks together in the Shortcuts app that's already on your phone. The Brain Dump itself takes less than 10 minutes, and it's the first challenge, so you can build it for free. The rest of the course sets up the sharing, adds a second shortcut to log your baby's feeds, nappies, and naps, or anything you want a dated record of, and gives you ways to start either one without unlocking your phone.
+You build it in our course [Hand Off the Mental Load](https://littleparrot.app/55dfd25b-b9a5-4f04-860d-ef5c1d1e20b9/course-overview?ref=seo-mental-load-list), tapping a few blocks together in the Shortcuts app that's already on your phone. The Brain Dump itself takes less than 10 minutes, and it's the first challenge, so you can build it for free. The rest of the course sets up the sharing, adds a second shortcut to log your baby's feeds, nappies, and naps, or anything you want a dated record of, and gives you ways to start either one without unlocking your phone.
 
 It uses Apple Intelligence, Apple's built-in AI, so it needs an iPhone 15 Pro or 15 Pro Max, any iPhone 16 or newer, or an iPhone Air. Apple Intelligence costs nothing to use, and there is nothing to download. We made it for mums, so the examples use nappies, feeds and health visitors, and you can reword the categories and prompts to fit your own household.
 

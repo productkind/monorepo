@@ -10,12 +10,12 @@ account: kinga + little-parrot
 ## The offer
 
 **Hand Off the Mental Load: Use AI to Turn a Brain Dump into a List**
-(`ai-your-life-admin-00`, course id `05900334-0998-4a98-be6d-946653c9b82d`)
+(`ai-your-life-admin-00`, course id `55dfd25b-b9a5-4f04-860d-ef5c1d1e20b9`)
 
 All four challenges are free until **30 August 2026**. After that the first
 challenge stays free and the rest sits behind the subscription.
 
-Link: `https://littleparrot.app/05900334-0998-4a98-be6d-946653c9b82d/course-overview`
+Link: `https://littleparrot.app/55dfd25b-b9a5-4f04-860d-ef5c1d1e20b9/course-overview`
 
 ## Who it's for
 

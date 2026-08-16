@@ -109,7 +109,7 @@ Anything marked X stays here. It's written down, so you can stop holding it in y
 
 Most brain dump templates leave the X pile out, and that's why a brain dump can leave you feeling worse than when you started. A worry written next to eleven tasks reads as a twelfth task. Once you mark it X, you know it's a worry rather than a job, so you can stop trying to work out what to do about it.
 
-Paper can't really help with doing it in bursts, because the thought usually arrives while you're driving, in the shower, or holding the baby. You can build a [shortcut on your iPhone](https://littleparrot.app/05900334-0998-4a98-be6d-946653c9b82d/course-overview?ref=seo-brain-dump-template) that takes one or two items at a time when you say them out loud, and sorts them into your categories at the same time. You still have to look at the lists to act on them, and it won't catch a thought you never say out loud.
+Paper can't really help with doing it in bursts, because the thought usually arrives while you're driving, in the shower, or holding the baby. You can build a [shortcut on your iPhone](https://littleparrot.app/55dfd25b-b9a5-4f04-860d-ef5c1d1e20b9/course-overview?ref=seo-brain-dump-template) that takes one or two items at a time when you say them out loud, and sorts them into your categories at the same time. You still have to look at the lists to act on them, and it won't catch a thought you never say out loud.
 
 ## Why paper brain dumps stop working
 
@@ -135,7 +135,7 @@ So you never have to book time for a brain dump. It takes the four seconds it ne
 
 Nothing piles up while you wait for your weekly ten minutes, because you're not waiting for them any more. And the ten-minute version at the top of this page becomes something you do when you feel like it, rather than the only way to make sure nothing is forgotten.
 
-You build the shortcut in our course [Hand Off the Mental Load](https://littleparrot.app/05900334-0998-4a98-be6d-946653c9b82d/course-overview?ref=seo-brain-dump-template), by tapping a few blocks together in the Shortcuts app that's already on your phone. Setting the Brain Dump shortcut up takes less than 10 minutes, and it's the first challenge, so you can build it for free. The rest of the course adds a way to send the list to your partner automatically, a second shortcut for logging your baby's activities with dates and times, and ways to start either shortcut without unlocking your phone.
+You build the shortcut in our course [Hand Off the Mental Load](https://littleparrot.app/55dfd25b-b9a5-4f04-860d-ef5c1d1e20b9/course-overview?ref=seo-brain-dump-template), by tapping a few blocks together in the Shortcuts app that's already on your phone. Setting the Brain Dump shortcut up takes less than 10 minutes, and it's the first challenge, so you can build it for free. The rest of the course adds a way to send the list to your partner automatically, a second shortcut for logging your baby's activities with dates and times, and ways to start either shortcut without unlocking your phone.
 
 It uses Apple Intelligence, Apple's built-in AI, so it needs an iPhone 15 Pro or 15 Pro Max, any iPhone 16 or newer, or an iPhone Air. Apple Intelligence costs nothing to use, and there is nothing to download. We made it for mums, so the examples use nappies, feeds and health visitors, and you can reword the categories and the prompts to fit your own life.
 

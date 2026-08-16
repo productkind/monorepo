@@ -66,7 +66,7 @@ None of this means anyone is acting in bad faith. But it won't change on its own
 
 **Hand over whole jobs, not tasks.** "Can you book the dentist" leaves you holding the noticing and the checking. "Dentists are yours" hands over all four parts.
 
-**Make it take no effort to get a thought out of your head.** Daminger's first stage, anticipating, happens wherever you are: feeding a baby, driving, halfway up the stairs. If getting a thought out requires finding a pen and a free hand, it stays in your head, and at three in the morning you carry it until you're up. Saying it out loud and letting your phone file it is one way round that, and you can [build a shortcut that does it](https://littleparrot.app/05900334-0998-4a98-be6d-946653c9b82d/course-overview?ref=seo-what-is-mental-load) in less than 10 minutes.
+**Make it take no effort to get a thought out of your head.** Daminger's first stage, anticipating, happens wherever you are: feeding a baby, driving, halfway up the stairs. If getting a thought out requires finding a pen and a free hand, it stays in your head, and at three in the morning you carry it until you're up. Saying it out loud and letting your phone file it is one way round that, and you can [build a shortcut that does it](https://littleparrot.app/55dfd25b-b9a5-4f04-860d-ef5c1d1e20b9/course-overview?ref=seo-what-is-mental-load) in less than 10 minutes.
 
 **Don't expect a system to settle a disagreement.** Making the work visible is useful, and it isn't the same as agreeing how to split it. You still have to sit down together and work out who takes which job.
 
@@ -78,7 +78,7 @@ Here's what it looks like once the shortcut is set up. You realise the nursery f
 
 Whenever something is on your mind, you say it and your phone files it. There's no weekly session to keep up, so the system never turns into another job on your list, which is what usually makes these systems fall apart.
 
-You build it in our course [Hand Off the Mental Load](https://littleparrot.app/05900334-0998-4a98-be6d-946653c9b82d/course-overview?ref=seo-what-is-mental-load), tapping a few blocks together in the Shortcuts app that's already on your phone. The Brain Dump itself, the shortcut that takes whatever you say out loud and files it onto the right list, takes less than 10 minutes to build, and it's the first challenge, so you can build it for free. The rest of the course sets up sharing the lists with your partner, adds a second shortcut for anything you want a dated record of, and gives you ways to start either one without unlocking your phone.
+You build it in our course [Hand Off the Mental Load](https://littleparrot.app/55dfd25b-b9a5-4f04-860d-ef5c1d1e20b9/course-overview?ref=seo-what-is-mental-load), tapping a few blocks together in the Shortcuts app that's already on your phone. The Brain Dump itself, the shortcut that takes whatever you say out loud and files it onto the right list, takes less than 10 minutes to build, and it's the first challenge, so you can build it for free. The rest of the course sets up sharing the lists with your partner, adds a second shortcut for anything you want a dated record of, and gives you ways to start either one without unlocking your phone.
 
 It needs an iPhone 15 Pro or newer, because it uses Apple Intelligence, Apple's built-in AI. Apple Intelligence costs nothing to use, and there is nothing to download. We made it for mums, so the examples use nappies, feeds and health visitors, and you can reword the categories and prompts to fit your own household.
 
