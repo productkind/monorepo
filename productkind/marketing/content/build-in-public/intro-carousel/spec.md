@@ -142,7 +142,7 @@ the export can be reviewed without them.
 
 | Slide| On-slide copy| Photo |
 | -----| ----- | ----- |
-| **1. Hook**| **Little Parrot helps women build what felt impossible before AI.**, kicker: **Meet the people behind Little Parrot** | NDC Cph |
+| **1. Hook**| **Little Parrot helps women build what felt impossible before AI.**, kicker: **Meet the two-person company** | NDC Cph |
 | **2. The old life** | I started my career in luxury fashion, moved into tech, and eventually became a Lead Product Manager. I loved building products. | La Perla SG |
 | **3. The tension** | I wanted my work to have a more positive impact, beyond increasing revenue for shareholders. So I left my full-time product role.| On stage at Geek Girls |
 | **4. The uncertain bit** | **I knew I wanted to help women. I had no idea what that would look like yet.** I tried coaching. I consulted. I experimented. | Presenting at Productized |
