@@ -17,9 +17,10 @@ Statuses: todo, created, scheduled, posted
 | 2026-08-22 | none |  |  |
 | 2026-08-21 | social-015 | instagram, tiktok, youtube, linkedin productkind | created |
 | 2026-08-20 | none |  |  |
-| 2026-08-19 | none |  |  |
-| 2026-08-18 | social-014 | instagram, tiktok, youtube, linkedin productkind | scheduled |
-| 2026-08-17 | The Baby Log reel | linkedin productkind | scheduled |
+| 2026-08-19 | social-014 | linkedin productkind | scheduled |
+| 2026-08-18 | Brain Dump reel | instagram, tiktok, youtube | scheduled |
+| 2026-08-17 | social-014 | instagram, tiktok, youtube | posted |
+| 2026-08-17 | The Baby Log reel | linkedin productkind | posted |
 | --- | --- | --- | --- |
 | 2026-08-16 | The Baby Log reel | instagram, tiktok, youtube | posted |
 | 2026-08-15 | none |  |  |
