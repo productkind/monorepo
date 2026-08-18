@@ -1,18 +1,13 @@
 ---
 status: drafted
-channels: [instagram, tiktok]
-account: productkind (Instagram), kinga (TikTok)
+channels: [instagram, tiktok, linkedin productkind]
+account: productkind
 ---
 
-# Carousel: Hi, we're Kinga and Tamas
+# Carousel: Introducing the people behind productkind
 
-**Type:** evergreen introduction, pinned to the top of the profile on Instagram
-and TikTok. Filed in `content/build-in-public/` next to `tiktok-intro/`, the
-video version of the same introduction.
-**Brand:** productkind (warm gradient, Montserrat, Kim mascot), with the Little
-Parrot logo on the product slide and LittleParrot.app on the CTA.
-**Channels:** Instagram (`by_productkind`, pinned), TikTok (Kinga's creator
-account, pinned). Both take the PNGs.
+**Type:** evergreen introduction, pinned to the top of the profile on Instagram and TikTok, as a featured post on LinkedIn.
+**Channels:** Instagram (`by_productkind`, pinned), TikTok (`littleparrot.app`, pinned). Both take the PNGs. LinkedIn productkind takes pdf.
 **Date:** August 2026
 
 **Sources:** productkind site copy (`productkind/site/src/Home.tsx`: what we do,
@@ -26,19 +21,9 @@ free).
 gender gap in AI adoption, and Little Parrot is the ten-minutes-at-a-time way
 the reader can start building with AI herself.
 
-**Story arc:** who we are, with our faces (1), the gap we exist because of, with
-the number (2), the reason we take it seriously, because it happened before (3),
-so the mission, stated once and plainly (4), who is actually behind it, both of
-us (5), where we've taught it in person (6), the turn, a workshop is one
-afternoon and most women can't spare one, so we built an app (7), what Little
-Parrot gives you (8), which of these two people is you (9), the invitation, with
-a share-ask (10).
+**Visually different on purpose:** this is the only photo-led carousel we post. Slides carry real photos of us teaching and working.
 
-**Visually different on purpose:** this is the only photo-led carousel we post.
-The cover is a full-bleed photo with the type on a black band, and three more
-slides carry real photos of us teaching and working. Everything else on the grid
-is copy and device-led, so the photos alone make the pinned post read as the
-"start here" card.
+## Format
 
 | Slide| On-slide copy| Photo |
 | -----| ----- | ----- |
