@@ -33,8 +33,8 @@ Non-technical women learning AI-assisted development.
 
 A post that only reports an observation or recounts an event gives the reader no reason to have read it. The post needs one thing the reader is left with. That can be any of these, and it does not have to be a copyable technique:
 
-- a reframe or mental model they can reuse (e.g. "a result you watch is not a method you can repeat")
-- a technique or habit they can copy (e.g. "put a value number next to every output number")
+- a reframe or mental model they can reuse (e.g. "I want women to understand that you can do deeply meaningful, important work, and make a lot of money.")
+- a technique or habit they can copy (e.g. "ask for a story in user interviews, instead of asking the user to hypothesize about their future behaviour")
 - a genuine reassurance grounded in a reason (e.g. "if it leaves you feeling behind, the missing piece is the how, not you") — emotional value counts, as long as the reader understands *why*
 - an honest reflection or an opinion Kinga is willing to stand behind, paired with a real question that invites the reader to think (e.g. admitting she can no longer remember how she'd write a sentence without AI, then asking what they'd do)
 
