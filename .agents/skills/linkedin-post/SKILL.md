@@ -9,19 +9,23 @@ description: Write LinkedIn posts and Substack Notes in Kinga's voice, covering 
 
 The most natural-sounding source material is Kinga's own rough wording, so collect it before composing anything. A draft grown from her sentences comes out sounding like her; a draft composed from scratch and decorated with her facts comes out sounding generated.
 
-- If she has supplied rough notes or dictated wording, build the draft from those sentences: keep every fact and her distinctive lines verbatim (e.g. "I'm not a content machine"), smooth the rough connective tissue, and never paste the notes in unedited.
-- If she hasn't, ask for her rough take before drafting: what she wants to say in her own words, plus any numbers, names, sources, or backstory she wants in. Don't invent the narrative from the linked article alone.
+- If she has supplied rough notes or dictated wording, mark the exact phrases that carry her opinion, emotion, firsthand detail or natural texture as **protected voice anchors** before drafting. Build the draft from her sentences, keep every fact and protected anchor verbatim (e.g. "I'm not a content machine"), smooth only the connective tissue, and never paste the notes in unedited.
+- Preserve emotion before polishing language. Do not replace a blunt, frustrated, hopeful or imperfect line with a neutral summary merely because the summary reads more smoothly.
+- When the notes describe what happened over time, preserve that firsthand chronology and cause-and-effect. Do not convert it into a retrospective lesson or add a tidy takeaway Kinga did not express.
+- Before drafting, ask for any uniquely personal evidence that would materially strengthen the post and cannot be found in the available resources, such as her reaction, a firsthand example, or learner feedback. If she does not have it, omit it; never invent it.
+- If she hasn't supplied rough notes, ask for her rough take before drafting: what she wants to say in her own words, plus any numbers, names, sources, or backstory she wants in. Don't invent the narrative from the linked article alone.
 
 ## Evaluation Loop (run this every time)
 
 A drafted post is never returned to the user until an independent critic has gated it. Self-review misses what fresh eyes catch, so the writer and the judge must be different.
 
 1. **Draft** the post following this skill, the personal-tone-of-voice skill, and the authentic doc.
-2. **Critique.** Spawn the `linkedin-critic` agent (Agent tool) and pass it the full draft text, saying whether it is a LinkedIn post or a Substack Note. Do not show the draft to the user yet.
+2. **Critique.** Spawn the `linkedin-critic` agent (Agent tool) and pass it the full draft text, saying whether it is a LinkedIn post or a Substack Note. Also pass Kinga's complete original notes and identify the protected voice anchors. If a campaign brief or factual resources exist and apply to the post, pass those too; do not assume every post has them. Do not show the draft to the user yet.
 3. **Read the verdict:**
    - **PASS** → show the user the final post, with a short note on what the critic checked.
    - **NEEDS REVISION** → apply the critic's revision brief, then re-run the critic on the new draft. Repeat, up to **3 rounds**.
-4. **After 3 rounds**, if issues remain, show the best draft and name the unresolved items honestly. Never hide them or ship around them without saying so.
+4. **Run a voice-regression check** after every critic revision and once more before showing the draft. Compare it with the complete original notes and restore any protected anchor, emotional line or firsthand sequence that was neutralised, abstracted into a lesson or polished out. Resolve a valid critic finding without sacrificing the source voice, then re-run the critic within the same three-round limit when needed.
+5. **After 3 rounds**, if issues remain, show the best draft and name the unresolved items honestly. Never hide them or ship around them without saying so.
 
 What the user sees: the **final post plus a short summary** of what the critic flagged and how it was resolved — not every round, unless they ask to see the drafts.
 
