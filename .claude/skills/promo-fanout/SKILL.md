@@ -23,7 +23,7 @@ Take one campaign brief and produce per-channel drafts, each shaped to its chann
 4. Append the channel's `utm` tag to every link. If the channel's utm param is `none` (e.g. WhatsApp, Reddit), use the plain link with no tag, so the message doesn't read as promotional.
 5. Write each draft to `productkind/marketing/content/campaigns/<slug>/<channel>.md`:
    - **LinkedIn:** two drafts, `linkedin-personal.md` (Kinga, founder voice, first person) and `linkedin-company.md` (productkind page, "we" voice).
-   - **Substack:** `substack-note.md` (short, from the profile). Add `substack-post.md` (long-form, to the publication) only if the brief warrants it.
+   - **Substack:** `substack-note.md` (short, from the profile).
    - **Slack, WhatsApp, Reddit:** one shared draft each (`slack.md`, `whatsapp.md`, `reddit.md`).
    - **Discord:** `discord.md`. **Geek Girls email:** `ggpt-email.md`. **Circle:** `pwit.md`. **Instagram:** `instagram.md`.
 6. **Only if** the campaign has a genuine within-platform sequence (e.g. two LinkedIn posts to space days apart, or a Substack Note then a full post), write `productkind/marketing/content/campaigns/<slug>/posting-plan.md` describing that sequence: what to post first, what follows, and the gap between. Do not write a flat cross-channel inventory; where to post, the asset, utm tag and per-channel cautions belong in each draft's own header, not here. If every channel is a single standalone post, skip this file. If a shared TODO spans drafts (e.g. a date to confirm and add to several), note it here too, or in the affected draft headers.
@@ -34,31 +34,29 @@ Take one campaign brief and produce per-channel drafts, each shaped to its chann
 - **`linkedin-post`** for LinkedIn posts and Substack Notes (hook, structure, openings).
 - **`personal-tone-of-voice`** for anything written in the founder's voice (LinkedIn, Substack, WhatsApp, Reddit).
 - `productkind/little-parrot-context.md` (read with the Read tool) for framing and mission context.
-- **`little-parrot-email`** when a channel is an HTML email send.
 - **`productkind-tone`** as the fallback warmth/clarity baseline.
 
 ## Shared copy rules (non-negotiable)
 
 - Apply the **language-rules** skill in full, and invoke it if it is not already loaded. It is the single source for the banned list and all shared language rules.
-- **Frame around using AI to your advantage, never around software development.** The goal is women building their own idea or business with AI, not becoming developers or engineers. Avoid the coding/CS-history angle and "no code needed" type taglines. "With AI, you can build it yourself" lands the empowerment without the dev framing.
-- Don't include pricing in promotional posts. The landing page does that work.
+- **Frame around using AI to your advantage, never around software development.** The goal is women building their own idea or business with AI, not becoming developers or engineers. Avoid the coding/CS-history angle. "With AI, you can build it yourself" lands the empowerment without the dev framing.
 - Describe experiences, not features ("you get", "you can").
 - Thank partners by name.
 - One sentence of Little Parrot context is enough for a new audience.
 - Frame around the learner's win and the deadline, not "look at us". This is what makes the promotion feel generous rather than boastful.
-- **In a community Kinga belongs to (the Geek Girls email, WhatsApp, Circle, the SheBuilds Discord), write as a member, not a brand.** Open by grounding it in her own experience ("I took part last year and really valued it"), then share the news plainly. No marketing hooks or vague softeners like "a quick one I thought you'd appreciate" or "I think a few of you will be glad to hear this", they read as a mass mailshot, not a personal note.
+- **In a community Kinga belongs to (the Geek Girls email, WhatsApp, Circle, the SheBuilds Discord), write as a member, not a brand.** Open by grounding it in her own experience (e.g. "I took part last year and really valued it"), then share the news plainly. No marketing hooks or vague softeners like "a quick one I thought you'd appreciate" or "I think a few of you will be glad to hear this", they read as a mass mailshot, not a personal note.
 - Sign off only where the channel expects it (email). Social posts and community messages don't sign off.
-- **When the same message goes to several channels, vary small surface details** (a different emoji/heart colour, a reworded line) so reposts don't read as an obvious copy-paste. Dropping the utm tag is also a deliberate lever to make a post feel less promotional (e.g. WhatsApp, Reddit, and a Substack Note where wanted).
+- **When the same message goes to several channels, vary small surface details** (a different emoji/heart colour, a reworded line) so reposts don't read as an obvious copy-paste. Dropping the utm tag is also a deliberate lever to make a post feel less promotional.
 
 ## Channel-specific reminders
 
 - **LinkedIn:** 90 to 200 words, no hashtags, end on a reframe or question. Two drafts: personal (Kinga, first person) and company (productkind, "we").
-- **Substack:** Notes are reflective; a full post is long-form. Less salesy, more thinking.
+- **Substack:** Notes are reflective, less salesy, more thinking.
 - **Instagram:** company account, "we" voice, warm. The visual carries the post; the caption is a short hook plus context. Links aren't clickable in captions, so end on "link in bio" (or note a Story link sticker). Use a few relevant hashtags.
-- **Discord:** emoji section headers, 👉 links, warm sign-off. Match the existing `discord.md` drafts under `productkind/marketing/content/` (e.g. `campaigns/2026-06-shebuilds-s03/discord.md`).
+- **Discord:** value-first, friendly, conversational, clear paragraphs.
 - **Slack communities:** one shared draft, short and value-first. The user posts it into whichever channels allow a link, so no per-community variants.
 - **Geek Girls email:** plain text, no HTML template. Subject line plus a short, warm body written like a personal note from a member, opening from Kinga's own experience (see the member-channel rule above). Kinga sends it by hand to the list.
-- **WhatsApp:** one shared draft, one short message, no markdown headers, one clean inline link. Sharing is welcome when it serves the members, so lead with their win. Conversational but in complete sentences, not clipped texting fragments. Short does not mean dropping the subject ("Did SheBuilds last year" reads hasty; "I took part in SheBuilds last year" reads like a person).
+- **WhatsApp:** one shared draft, one short message, no markdown headers. Sharing is welcome when it serves the members, so lead with their win. Conversational but in complete sentences, not clipped texting fragments. Short does not mean dropping the subject ("Did SheBuilds last year" reads hasty; "I took part in SheBuilds last year" reads like a person).
 - **Reddit:** one shared draft, strictest channel. Genuine value first, offer as a footnote, no marketing tone. Removable and ban-risky otherwise. When in doubt, draft a helpful comment, not an ad. You pick the subreddits.
 - **Circle (Portuguese Women in Tech):** can be a touch longer than Slack, include a title for the post; still community-first and generous.
 
@@ -68,8 +66,7 @@ Before finishing, check each draft:
 1. Would the user only need to lightly edit, not rewrite?
 2. Does it lead with the reader's benefit and the deadline?
 3. Correct `utm` tag on every link?
-4. Checked against the language-rules banned list, and no pricing?
-5. Does it respect that channel's self-promo rules?
+4. Checked against the language-rules banned list?
 
 ## Evaluation loop (run this every time, before showing the user)
 
@@ -78,7 +75,7 @@ The drafts are never returned to the user until an independent critic has gated 
 1. **Draft** every channel file following this skill and run the output quality bar above.
 2. **Critique.**
    - `linkedin-personal.md` and any Substack draft go to the `linkedin-critic` agent (Agent tool), one call per draft, saying which it is. These are written as Kinga, which is the rubric that critic judges by.
-   - Every other draft, including `linkedin-company.md` (the "we" voice would wrongly fail linkedin-critic's only-Kinga test), goes to the `tone-of-voice-critic` agent in ONE batched call: pass the file paths and one line per draft naming its channel and voice. If a channel produced an HTML email, that file goes to `email-critic` instead.
+   - Every other draft, including `linkedin-company.md` (the "we" voice would wrongly fail linkedin-critic's only-Kinga test), goes to the `tone-of-voice-critic` agent in ONE batched call: pass the file paths and one line per draft naming its channel and voice.
    - Do not show any draft to the user yet.
 3. **Read the verdicts.** All PASS → show the user the drafts, with a short note on what the critics checked. Any NEEDS REVISION → apply the revision brief to the named drafts, then re-run that critic on the revised drafts only. Repeat, up to **3 rounds**.
 4. **After 3 rounds**, if issues remain, show the best drafts and name the unresolved items honestly. Never hide them or ship around them.

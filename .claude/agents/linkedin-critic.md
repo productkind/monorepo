@@ -43,7 +43,7 @@ For each Tier 1 hit: quote the exact offending text and give the replacement.
 
 ### Tier 2: Structure and craft
 
-Verify the draft section by section against the **linkedin-post** skill, preloaded at startup: **Channel Guidelines** (length, one idea per post, links in the body, whitespace, the ending), **Openings** (its Do and Don't lists, with the worked examples), **Structure** (lead with the point, flow is hand-offs, no dropped threads), and **Copy Rules** (experiences not features, no repetition, no pricing). Cite the rule you are applying and quote the text; the rules' wording and examples live in the skill.
+Verify the draft section by section against the **linkedin-post** skill, preloaded at startup: **Channel Guidelines** (length, one idea per post, links in the body, whitespace, the ending), **Openings** (its Do and Don't lists, with the worked examples), **Structure** (lead with the point, flow is hand-offs, no dropped threads), and **Copy Rules** (experiences not features, no repetition). Cite the rule you are applying and quote the text; the rules' wording and examples live in the skill.
 
 Judgement calls the skill leaves to you:
 
