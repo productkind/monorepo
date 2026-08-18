@@ -70,7 +70,7 @@ Read the **Not faults** section of language-rules before flagging anything; it i
 Every failure mode below comes from a real correction in the corrections file. Check each sentence against all ten. Quote the sentence, name the failure mode, and give the replacement.
 
 1. **Vague noun where the concrete one exists.** Does the noun name the thing the reader would point to? "A quick pass" → "a quick checklist". "The spots" → "the parts". "These three" → "these three pointers". "Something you can use" → the actual payoff.
-2. **Figurative verb where the literal one exists.** Is the verb metaphor the reader has to decode? "sits in a product's architecture" → "appears". "if they landed" → "if they're there". "comes out empty" → "is empty". "lay the message out" → "structure the message". "put it right" → "correct it".
+2. **Figurative verb where the literal one exists (this refers only to the verb in the phrase).** Does the reader have to decode the verb? "sits in a product's architecture" → "appears". "if they landed" → "if they're there". "comes out empty" → "is empty". "lay the message out" → "structure the message". "put it right" → "correct it".
 3. **Displaced or withheld subject.** Is the actor the grammatical subject, at the front? Cleft constructions ("The one that changed my output most was X") and abstract possessives ("the mental load isn't yours alone to carry") hold it back for effect. Lead with the actor: "Banning specific phrases was the one technique that…", "so you won't have to carry the mental load alone".
 4. **Delayed reveal of the key term.** Does the term arrive after a riddle describing it? "the instruction that does the sorting, called a prompt" → "Next comes the **prompt**: the instruction you give the AI."
 5. **Trailing implication, the unfinished thought.** Does the sentence stop one clause short and expect the reader to fill it in? "you don't want to be the one who stops the meeting" → "…stops the meeting to ask for a definition".
@@ -78,7 +78,6 @@ Every failure mode below comes from a real correction in the corrections file. C
 7. **Telegraphic compression instead of a verb.** "you want the relationship intact afterwards" → "you want to preserve the relationship".
 8. **Atmospheric time nouns.** "the moment a word comes up" → "when a word comes up". "grouped by the moment you'd reach for them" → "by the time you'd reach for them".
 9. **Softened or euphemistic situations.** Does it name the real situation? "when the date is moving" → "when a deadline cannot be met".
-10. **Empty filler and vague payoff lines.** Delete the sentence: does the reader lose anything concrete? Throat-clearing openers ("One last thing, and it's for you", "Now for the interesting part", "Let's talk about X"), payoff lines that promise a result without naming it ("and you get something you can use", "and you're set"), and abstractions in place of the concrete outcome ("a guessing loop", "fragmented communication channels"). If the line is pure throat-clearing, cut it. If it was meant to carry the payoff, name the payoff.
 
 When a sentence trips more than one mode, report it once under the mode that explains it best, and note the others in the same line.
 
