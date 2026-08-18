@@ -1,0 +1,161 @@
+---
+name: linkedin-post
+description: Write LinkedIn posts and Substack Notes in Kinga's voice, covering channel guidelines, openings, structure, endings, copy rules, and the linkedin-critic evaluation loop that gates every draft before the user sees it. Use when drafting or reviewing a LinkedIn post or Substack Note. Triggers include "write a LinkedIn post", "draft a Substack Note", "post about this on LinkedIn", or any LinkedIn or Substack Note task.
+---
+
+> Voice and tone come from the **personal-tone-of-voice** skill and `productkind/marketing/channels/linkedin/how-to-be-authentic.md`. This skill covers the channel mechanics and post structure that sit on top of that voice. Where the two appear to conflict, the grounded voice wins: posts should read like a real, kind person, never like marketing.
+
+## Start From Kinga's Words
+
+The most natural-sounding source material is Kinga's own rough wording, so collect it before composing anything. A draft grown from her sentences comes out sounding like her; a draft composed from scratch and decorated with her facts comes out sounding generated.
+
+- If she has supplied rough notes or dictated wording, build the draft from those sentences: keep every fact and her distinctive lines verbatim (e.g. "I'm not a content machine"), smooth the rough connective tissue, and never paste the notes in unedited.
+- If she hasn't, ask for her rough take before drafting: what she wants to say in her own words, plus any numbers, names, sources, or backstory she wants in. Don't invent the narrative from the linked article alone.
+
+## Evaluation Loop (run this every time)
+
+A drafted post is never returned to the user until an independent critic has gated it. Self-review misses what fresh eyes catch, so the writer and the judge must be different.
+
+1. **Draft** the post following this skill, the personal-tone-of-voice skill, and the authentic doc.
+2. **Critique.** Spawn the `linkedin-critic` agent (Agent tool) and pass it the full draft text, saying whether it is a LinkedIn post or a Substack Note. Do not show the draft to the user yet.
+3. **Read the verdict:**
+   - **PASS** → show the user the final post, with a short note on what the critic checked.
+   - **NEEDS REVISION** → apply the critic's revision brief, then re-run the critic on the new draft. Repeat, up to **3 rounds**.
+4. **After 3 rounds**, if issues remain, show the best draft and name the unresolved items honestly. Never hide them or ship around them without saying so.
+
+What the user sees: the **final post plus a short summary** of what the critic flagged and how it was resolved — not every round, unless they ask to see the drafts.
+
+## Audience
+
+Non-technical women learning AI-assisted development.
+
+## Every Post Must Earn Its Read
+
+A post that only reports an observation or recounts an event gives the reader no reason to have read it. The post needs one thing the reader is left with. That can be any of these, and it does not have to be a copyable technique:
+
+- a reframe or mental model they can reuse (e.g. "a result you watch is not a method you can repeat")
+- a technique or habit they can copy (e.g. "put a value number next to every output number")
+- a genuine reassurance grounded in a reason (e.g. "if it leaves you feeling behind, the missing piece is the how, not you") — emotional value counts, as long as the reader understands *why*
+- an honest reflection or an opinion Kinga is willing to stand behind, paired with a real question that invites the reader to think (e.g. admitting she can no longer remember how she'd write a sentence without AI, then asking what they'd do)
+
+Don't force a how-to onto a reflective post to make it "earn" its read. A personal post earns it through honesty and a genuine question just as much as a teaching post earns it through a technique. Kinga often finds her point while writing, so don't demand the payoff be named before drafting; require only that the finished post leaves the reader with one of the above rather than stopping at a bare fact.
+
+## Channel Guidelines
+
+### LinkedIn Posts
+- Length: 90–200 words is the sweet spot, as a guideline rather than a ceiling; going slightly over is fine, and cutting lines that carry the voice just to hit the number is not
+- Structure: Hook → insight → implication
+- One idea per post
+- No hashtags
+- If the post drives to a link, put it in the post body. Don't put links in the author's first comment, LinkedIn penalises the post's reach when the author comments with links.
+- Whitespace between paragraphs for scannability
+- The opening grounds the reader in a real moment, not a promise of value
+- End with one concrete thing to try, or a genuine reflective question tied to the substance. Not a summary, not comment-bait
+- Value density: concentrated insights outperform verbose posts
+
+### Substack Notes
+- More reflective, longer-form thinking allowed
+- Can explore nuance and uncertainty
+- Still no jargon or hype
+
+## Openings
+
+Open on a real, specific moment: something that happened, a frustration, an honest admission, or a precise observation. Curiosity comes from the concrete detail, never from a withheld secret or a promise of value.
+
+**Do:**
+- Start with a specific moment, frustration, or observation
+- Reframe a common belief, stated plainly
+- Name a practical distinction people miss
+
+**Don't:**
+- Grand claims about industries or "the future"
+- Curiosity-gap or data-tease hooks ("I discovered why 87% of X fails...", "...generated $157K in 30 days")
+- Rhetorical questions as hooks
+- Abstract definitions before context
+- Promising "value" or "a secret" before delivering it
+
+### Examples of openings that work
+
+#### Good: A real event
+
+> I spent this week at two product conferences, mtpcon in London and Productized in Lisbon.
+
+**Why it works:** Grounds the reader in something that actually happened before any claim. The reader trusts a person, not a pitch.
+
+---
+
+#### Good: An honest admission
+
+> I keep thinking about one number from this week's conferences.
+
+**Why it works:** Specific and personal. The pull is the real detail to come, not a manufactured mystery.
+
+---
+
+#### Good: A precise observation
+
+> The same idea came up in three talks this week, from speakers who'd never coordinated.
+
+**Why it works:** A concrete pattern the writer noticed; the insight follows in the next line instead of being teased.
+
+---
+
+#### Bad: Hype / curiosity gap
+
+> I discovered why 87% of LinkedIn outreach fails. The reason surprised even me.
+
+**Why it fails:** Withholds the point to manufacture suspense. Reads as marketing, not a person sharing something true.
+
+---
+
+#### Bad: Vague
+
+> LinkedIn is important
+
+**Why it fails:** Vague language, no specific moment.
+
+---
+
+#### Bad: Condescending
+
+> If you’re still doing this, you’re making a huge mistake
+
+**Why it fails:** Negative, talks down to the reader.
+
+---
+
+## Structure
+
+- Lead with the point, then support it
+- Mid-post questions are Kinga's natural pivots ("What happened?", "So how do you do all this?") and are encouraged; as opening hooks they stay banned
+- Flow is hand-offs: each paragraph picks up a word or idea from the one before it ("a lot of thinking I never wrote about" → "Part of that thinking was about..."). A paragraph that arrives from nowhere breaks the read.
+- A side observation (a statistic, a historical parallel) must be welded to the post's main thread with an explicit hinge sentence ("That gap is a big part of why I want to write again"), or moved to its own post. Never drop a thread without paying it off.
+- Use whitespace generously
+- Bullet points when they reduce cognitive load
+- Headings as signposts, not marketing hooks
+- End with a practical reframe or behavioural guidance, not a summary
+
+---
+
+## Copy Rules
+
+- **Don't repeat information across paragraphs.** Say it once, say it well.
+- **When introducing Little Parrot to a new audience, one sentence of context is enough.** Don't over-explain.
+- **Thank partners by name.** It's human and builds relationships publicly.
+
+---
+
+## Self-Check
+
+Before publishing, verify:
+
+1. Is the reader left with one thing (a reframe, a technique, a reasoned reassurance, or an honest reflection/opinion paired with a real question)? A copyable technique is not required; a bare fact with nothing to think or feel about is not finished.
+2. Does the opening start on a real, specific moment, not a teaser or a promise of value?
+3. Is there a specific example, named source, tool, or scenario?
+4. Does the ending give one concrete thing to try, rather than summarise or bait comments?
+5. Would I trust this if someone else wrote it?
+6. Am I describing experiences or listing features?
+7. Is any information repeated across paragraphs?
+8. Have I run it against the language-rules banned list (no em dashes, no hype, no "not X but Y")?
+9. Does each paragraph pick up a word or idea from the paragraph before it, with no dropped threads?
+10. Said aloud to a colleague, would every sentence survive? Rule-clean but stiff is not done.
