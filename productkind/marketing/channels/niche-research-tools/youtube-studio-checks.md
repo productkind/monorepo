@@ -4,6 +4,19 @@ The one demand signal in `../steps-to-find-your-niche.md` that can't be scripted
 
 **Studio changed in July 2026.** The tab is now **Trends** (it used to be called Research), and Google says the rollout is gradual, so labels may differ from what's written here. Look for the concept rather than the exact wording.
 
+**Observed UI, 19 August 2026.** Checked directly in Studio while running the positioning terms. Four things in the sections below no longer exist, so read them as history and follow this block instead:
+
+- **There is no country filter.** Not on the Trends tab, not on the search results, not in Studio Settings. Step 4 below cannot be run. Record region as "not filterable" rather than leaving it blank, so a later reader doesn't assume it was skipped.
+- **A searched term has no interest rating of its own.** The very low to very high scale appears nowhere on the parent term's card. Volume ratings (Low / Medium / High volume) appear only on the related searches listed under "Top searches for this topic". Record those, one row per related search, and never invent a level for the parent term.
+- **Content gaps have no kind.** They show as a plain "· Content gap" label. There is no no-results / weak-results / outdated-results distinction, and nothing indicating Shorts against long-form.
+- **The Trends tab has two cards, not four:** "What people are looking for" and "New videos to inspire you". Breakout videos and Content gaps for Shorts are both gone.
+
+**The channel is productkind.** There is no separate Little Parrot channel, so every audience-scoped card describes the productkind YouTube audience. `../../channel-strategy-2026-08.md` documents that audience as 100% male, which is the inverse of Little Parrot's target. Anything audience-scoped is therefore misleading for a Little Parrot question, not just thin. **Before trusting any reading, check whether the term search is scoped to your viewers or to all of YouTube.** The old UI had a toggle for this. If no scope control or label can be found, record every number as scope-unknown and weight it accordingly.
+
+Revised recording table, replacing the one at the end of this doc:
+
+| Parent term | Related search | Volume | Content gap? | Notes |
+
 ---
 
 ## Read this before you start
