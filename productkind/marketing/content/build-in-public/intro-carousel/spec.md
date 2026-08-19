@@ -27,7 +27,7 @@ the reader can start building with AI herself.
 
 | Slide| On-slide copy| Photo |
 | -----| ----- | ----- |
-| **1.**| Little Parrot helps women build what felt impossible before AI | NDC Cph protrait of the team |
+| **1.** | Little Parrot teaches women to make software, tools and systems with AI, without a technical background. | NDC Cph protrait of the team |
 | **2.** | I’m Kinga. I started my career in luxury fashion. It was interesting, but the culture wasn’t for me. Then I moved countries and joined a tech company. | La Perla SG |
 | **3.** | Over 10 years in tech, I worked in different roles, did a developer bootcamp, and eventually became a Lead Product Manager. I love building products and bringing different perspectives together. | Capitaspring |
 | **4.** | I wanted my work to have a more positive impact, beyond increasing revenue for shareholders. So I left my full-time product role. | On stage at Geek Girls |
