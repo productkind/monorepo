@@ -1,0 +1,109 @@
+# Candidate 1: Lovable prototype to production
+lovable app launch checklist
+how to launch a lovable app
+make lovable app production ready
+lovable authentication not working
+debug lovable app
+lovable database error
+lovable cloud data disappeared
+lovable app running costs
+how much does a lovable app cost
+connect stripe to lovable
+connect email to lovable app
+lovable api key security
+make lovable app look professional
+lovable design prompts
+test lovable app before launch
+lovable custom domain setup
+lovable analytics setup
+lovable app legal pages
+lovable app seo
+get first users for lovable app
+
+# Candidate 2: Lovable to Claude Code
+lovable to claude code
+use claude code with lovable
+move lovable app to github
+connect lovable to github
+edit lovable app in claude code
+lovable github workflow
+run lovable app locally
+edit lovable app without credits
+lovable vs claude code
+when to move from lovable to claude code
+claude code for non coders
+claude code for beginners
+claude code existing project tutorial
+how to review claude code changes
+undo claude code changes
+claude code git workflow
+keep api keys out of github
+deploy lovable app from github
+lovable github sync problems
+claude code cost for app development
+
+# Candidate 3: Evidence-safe AI workflows for product managers
+ai user research synthesis
+summarize user interviews with ai
+ai interview analysis for product managers
+chatgpt user research prompts
+claude user research workflow
+ai qualitative research analysis
+how to avoid ai hallucinations in research
+trace ai insights to interview quotes
+analyze customer feedback with ai
+analyze support tickets with ai
+ai competitor analysis for product managers
+write product requirements with ai
+turn stakeholder request into requirements with ai
+ai user story generator
+ai acceptance criteria generator
+review ai generated prd
+ai stakeholder update template
+ai product discovery workflow
+ai prompts for product managers
+best ai workflows for product managers
+
+# Candidate 4: AI-built client assets for consultants
+interactive lead magnet with ai
+build interactive lead magnet
+ai lead magnet for consultants
+create assessment lead magnet
+build online assessment without coding
+create calculator lead magnet
+build calculator with lovable
+build quiz lead magnet with ai
+personalized lead magnet
+interactive lead magnet examples
+lead magnet for consultants
+consulting assessment template
+create client diagnostic tool
+build client portal with ai
+build client portal without coding
+connect lovable to email marketing
+lead magnet scoring system
+track lead magnet conversions
+use ai to qualify leads
+turn consulting framework into an app
+
+# Candidate 5: AI-assisted product validation for solo founders
+validate business idea with ai
+validate app idea with ai
+ai product validation
+chatgpt prompts to validate business idea
+claude product discovery workflow
+how to validate a product idea before building
+product validation checklist
+product validation template
+customer interview questions for startup idea
+find customer interview participants
+analyze customer interviews with ai
+how to avoid leading customer interviews
+test demand before building app
+smoke test landing page
+fake door test template
+test pricing before launch
+define mvp with ai
+ai mvp planning
+how to know if product idea is worth building
+turn customer research into product requirements
