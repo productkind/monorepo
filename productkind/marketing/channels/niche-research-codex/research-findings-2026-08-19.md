@@ -33,7 +33,30 @@ The five candidates in the workbook were checked against:
 - Current official documentation, free guides, courses, templates and commercial products.
 - Recent community discussions about the relevant problems.
 
-Google Trends was attempted repeatedly but rate-limited the research script. Keyword Planner requires a signed-in Google Ads export. No Search Console query export was present in the supplied files. These are recorded as evidence gaps rather than replaced with invented numbers.
+Google Trends initially rate-limited the research script, but a later five-year UK comparison completed successfully. Keyword Planner requires a signed-in Google Ads export. No Search Console query export was present in the supplied files. These are recorded as evidence gaps rather than replaced with invented numbers.
+
+## Google Trends findings
+
+A five-year UK Google Web Search comparison was run for `lovable`, `claude code`, `product validation`, `lead magnet` and `product management ai`. The full output and interpretation are in [google-trends-2026-08-19.md](google-trends-2026-08-19.md).
+
+| Term | Peak | Five-year mean | First-third average | Last-third average |
+|---|---:|---:|---:|---:|
+| lovable | 26 | 4.2 | 1.0 | 10.6 |
+| claude code | 100 | 10.7 | 0.0 | 32.0 |
+| product validation | 2 | 0.2 | 0.0 | 0.6 |
+| lead magnet | 2 | 0.3 | 0.1 | 0.5 |
+| product management ai | 5 | 0.5 | 0.0 | 1.4 |
+
+The result strengthens the timing case for Lovable and Claude Code: both show substantial recent growth, with Claude Code rising fastest. Lovable's related searches included GitHub and Supabase, which supports the ownership, integration and post-prototype problems found in learner feedback. Claude Code related searches were dominated by setup, GitHub, pricing, documentation and general learning.
+
+Candidate-specific retries added two important findings:
+
+- `Lovable app` rose from a first-third average of 0.0 to a last-third average of 28.1, but `Lovable production` reached only 0.2 in the last third. Among concrete tasks, `Lovable GitHub` reached 13.8, compared with 0.9 for `Lovable Stripe` and 0.1 for `Lovable authentication`.
+- `AI user research` rose from 0.0 to a last-third average of 21.9, compared with 0.8 for `AI for product managers`.
+
+These comparisons favour concrete task and workflow language. The post-prototype product should acquire users through GitHub, launch, payments, testing and other specific problems rather than expecting them to search for “Lovable production”. Candidate 3 should be tested as an AI user-research workflow, not as a general PM course.
+
+This does not settle the niche decision. The charts are relative, not absolute, and the fast-growing brands compressed the established problem categories close to zero. They support the **direction of interest**, while Keyword Planner is still required to establish market size. The successful detailed comparisons strengthen the planned Lovable/GitHub and AI-user-research tests but do not change the provisional scores.
 
 ## First-party evidence
 

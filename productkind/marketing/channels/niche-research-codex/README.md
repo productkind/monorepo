@@ -8,6 +8,7 @@ This folder contains the search-led niche research method and its Little Parrot 
 - [`little-parrot-niche-research.md`](little-parrot-niche-research.md): Little Parrot-specific research workbook, five candidate markets, product hypotheses, research sequence, scorecards and decision record.
 - [`little-parrot-seeds.txt`](little-parrot-seeds.txt): 100 starter search phrases, with 20 phrases for each candidate market, ready for the existing autocomplete, Keyword Planner, Trends and supply-audit workflow.
 - [`research-findings-2026-08-19.md`](research-findings-2026-08-19.md): completed first-party, autocomplete, supply and commercial research, provisional scores, recommendation and validation plan.
+- [`google-trends-2026-08-19.md`](google-trends-2026-08-19.md): Google Trends results, related-query evidence, interpretation and rate-limit record.
 
 ## Working rule
 

@@ -306,7 +306,7 @@ These are hypotheses, not scores.
 
 Do not rank the candidates until demand, supply and monetisation evidence has been collected.
 
-**Research run, 19 August 2026:** the first-party, autocomplete, video-supply and commercial-supply passes are complete. The evidence and recommendation are in [research-findings-2026-08-19.md](research-findings-2026-08-19.md). The scores below are provisional because Keyword Planner and Search Console volume evidence is still unavailable.
+**Research run, 19 August 2026:** the first-party, autocomplete, broad and candidate-specific Google Trends, video-supply and commercial-supply passes are complete. The evidence and recommendation are in [research-findings-2026-08-19.md](research-findings-2026-08-19.md), with the Trends output in [google-trends-2026-08-19.md](google-trends-2026-08-19.md). The scores below are provisional because Keyword Planner and Search Console volume evidence is still unavailable.
 
 ---
 
