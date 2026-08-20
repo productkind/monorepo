@@ -32,11 +32,11 @@ AI app builders mean you can describe what you want in ordinary words and get a 
 
 We've seen this pattern before: in the early 1980s women were entering computer science faster than men, then personal computers were marketed to boys and men, and that progress faded. Software is a form of power, and power should be shared.
 
-So we make Little Parrot: short, science-based, hands-on courses that teach women to build software, tools and systems with AI, ten minutes at a time, whether or not you think of yourself as technical.
+So we make Little Parrot: short, science-based, hands-on courses that teach women to build apps, tools and systems with AI, ten minutes at a time, whether or not you think of yourself as technical.
 
 They're built on what we know from our combined two decades in product development. We think the best way to learn is to make something, so our courses are designed to get you building from the start, not just reading about how something works.
 
-Swipe to see our story: luxury fashion in Singapore and Belgium, a developer bootcamp, ten years in tech, and the free course 663 people registered for this March.
+Swipe to see our story.
 
 Save this if you have an idea you keep not starting, and send it to a friend who says building isn't for her. The first challenge of every course is free at LittleParrot.app 🦜
 
