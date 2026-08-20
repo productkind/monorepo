@@ -15,9 +15,11 @@ Statuses: todo, created, scheduled, posted
 | ---- | ----- | -------- | ------ |
 | 2026-08-23 | none |  |  |
 | 2026-08-22 | none |  |  |
-| 2026-08-21 | social-015 | instagram, tiktok, youtube, linkedin productkind | created |
-| 2026-08-20 | social-014 | linkedin productkind | scheduled |
-| 2026-08-19 | intro carousel | instagram, tiktok, linkedin productkind | created |
+| 2026-08-21 | social-015 | instagram, tiktok, youtube, linkedin productkind | scheduled |
+| 2026-08-20 | social-014 | linkedin productkind | posted |
+| 2026-08-19 | Mental load course in iPhone slide | instagram, tiktok | posted |
+| 2026-08-19 | intro carousel | instagram, tiktok | posted |
+| 2026-08-19 | none |  |  |
 | 2026-08-18 | Brain Dump reel | instagram, tiktok, youtube, linkedin productkind | scheduled |
 | 2026-08-17 | social-014 | instagram, tiktok, youtube | posted |
 | 2026-08-17 | The Baby Log reel | linkedin productkind | posted |
