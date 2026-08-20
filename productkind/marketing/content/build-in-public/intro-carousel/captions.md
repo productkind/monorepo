@@ -26,13 +26,17 @@ slide copy word for word.
 
 Can you build an app with AI if you're not technical? Yes, and that's what we teach.
 
-This is the two of us behind it. We're productkind: Kinga and Tamas, a two-person company. Our mission is to close the gender gap in AI adoption.
+We're productkind: Kinga and Tamas, a two-person company. Our mission is to close the gender gap in AI adoption.
 
-AI app builders mean you can describe what you want in ordinary words and get a working app back, without writing the code yourself. Only about one in five people building this way are women. We've seen this pattern before: in the early 1980s women were entering computer science faster than men, then personal computers were marketed to boys and men, and that progress faded. Software is a form of power, and power should be shared.
+AI app builders mean you can describe what you want in ordinary words and get a working app back, without writing the code yourself. Only about one in five people building this way are women.
 
-So we make Little Parrot: short, science-based, hands-on courses that teach women to build software, tools and systems with AI, ten minutes at a time, whether or not you think of yourself as technical. They're built on what we know from our own work. We think the best way to learn is to make something, so every course has you building as you go rather than reading about it, and beginner questions are welcome throughout.
+We've seen this pattern before: in the early 1980s women were entering computer science faster than men, then personal computers were marketed to boys and men, and that progress faded. Software is a form of power, and power should be shared.
 
-Swipe to meet us properly: luxury fashion in Singapore and Belgium, a developer bootcamp, ten years in tech, and the free course 663 people registered for this March.
+So we make Little Parrot: short, science-based, hands-on courses that teach women to build software, tools and systems with AI, ten minutes at a time, whether or not you think of yourself as technical.
+
+They're built on what we know from our combined two decades in product development. We think the best way to learn is to make something, so our courses are designed to get you building from the start, not just reading about how something works.
+
+Swipe to see our story: luxury fashion in Singapore and Belgium, a developer bootcamp, ten years in tech, and the free course 663 people registered for this March.
 
 Save this if you have an idea you keep not starting, and send it to a friend who says building isn't for her. The first challenge of every course is free at LittleParrot.app 🦜
 
@@ -53,11 +57,11 @@ Save this if you have an idea you keep not starting, and send it to a friend who
 
 **Caption:**
 
-We're Kinga and Tamas, a two-person company, and closing that gap is the only thing we work on. We make short, hands-on courses where women build their idea with AI, ten minutes at a time, without a technical background. Swipe to meet us, follow to see what's working and what flops.
+We're Kinga and Tamas, a two-person company, and closing the gender gap in AI adoption is the only thing we work on. We make short, hands-on courses where women build their idea with AI, ten minutes at a time, without a technical background. Swipe to meet us, follow to see what's working and what flops.
 
 **Hashtags:** #womenwhobuild #womenintech #womenfounders #buildwithai
 
-**Pinned comment:** The first challenge of every course is free at littleparrot.app. We share what's working and what isn't here as we go.
+**Pinned comment:** The first challenge of every course is free at LittleParrot.app. We share what's working and what isn't here as we go.
 
 ---
 
@@ -77,7 +81,7 @@ So we make Little Parrot: short, science-based, hands-on courses that teach wome
 
 The slides are the longer version, with the photos.
 
-If you have an idea you keep not starting, the first challenge of every course is free: littleparrot.app
+If you have an idea you keep not starting, the first challenge of every course is free: LittleParrot.app
 
 **Alt text:** A ten-slide photo carousel introducing the two people behind productkind. Slide one, a portrait of Kinga and Tamas at a conference, says Little Parrot teaches women to build software, tools and systems with AI without a technical background. The next slides tell Kinga's story: starting her career in luxury fashion, moving countries and joining a tech company, over ten years in tech through a developer bootcamp to Lead Product Manager, leaving her full-time product role to do work with a more positive impact, trying coaching and consulting, then building Little Parrot and seeing the bigger opportunity of closing the gender gap in AI adoption. Tamas joins as technical partner and educator, 663 people register for the free International Women's Day course, and the first strangers pay for subscriptions from South Korea, England, the US and Australia. The last slide, a laptop in Finland, says that maybe you have an idea too, and that the best way to learn is to make something, so that's what you do in every course.
 
