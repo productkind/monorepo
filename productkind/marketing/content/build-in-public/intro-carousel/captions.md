@@ -38,7 +38,9 @@ They're built on what we know from our combined two decades in product developme
 
 Swipe to see our story.
 
-Save this if you have an idea you keep not starting, and send it to a friend who says building isn't for her. The first challenge of every course is free at LittleParrot.app 🦜
+Save this if you have an idea you keep not starting, and send it to a friend who says building isn't for her.
+
+The first challenge of every course is free at LittleParrot.app 🦜
 
 **Hashtags:** #womenwhobuild #womenintech #womenfounders #aiforwomen #buildinpublic
 
@@ -46,7 +48,7 @@ Save this if you have an idea you keep not starting, and send it to a friend who
 
 **Founder comments** (post within the first hour):
 
-- **Kinga:** Slide 4 took me the longest to write. "I left my full-time product role" reads tidy now, at the time I had no plan past wanting to help women, and it was eight months of coaching, consulting and experiments before Little Parrot existed. Anyone else in that in-between bit right now?
+- **Kinga:** It was quite hard to condense our experience into 10 slides. 😅 "I left my full-time product role" reads quite neat now, at the time I had no plans beyond wanting to work on something meaningful and help women. I spent eight months doing an executive coach training, coaching product managers, consulting and experimenting before Little Parrot existed. Is there anyone else in that in-between period right now?
 - **Tamas:** Building with AI looks like this in practice: you write what you want in ordinary words, the AI app builder makes it, and then you check what came back and describe what's wrong precisely enough to get it fixed. That second half is where the women in our workshops get stuck most often, so it's most of what our courses teach.
 
 ---
@@ -61,7 +63,7 @@ We're Kinga and Tamas, a two-person company, and closing the gender gap in AI ad
 
 **Hashtags:** #womenwhobuild #womenintech #womenfounders #buildwithai
 
-**Pinned comment:** The first challenge of every course is free at LittleParrot.app. We share what's working and what isn't here as we go.
+**Pinned comment:** The first challenge of every course is free at LittleParrot.app.
 
 ---
 
@@ -75,7 +77,9 @@ AI app builders changed who can make software. You describe what you want in ord
 
 We've seen this happen before. In 1984, women earned 37% of computer science degrees in the US. Then personal computers were marketed to boys and men, and that share dropped for decades. We'd rather not watch it happen twice, because software is a form of power and power should be shared.
 
-So we make Little Parrot: short, science-based, hands-on courses that teach women to build software, tools and systems with AI, ten minutes at a time. We think the best way to learn is to make something, so every course has you building as you go rather than reading about it. Kinga spent over ten years in tech, did a developer bootcamp and worked as a Lead Product Manager before leaving her full-time role to build this. Tamas is the technical partner and educator. The courses come from our own work, they're written for someone who has an idea and no technical background, and beginner questions are welcome.
+So we make Little Parrot: short, science-based, hands-on courses that teach women to build apps, tools and systems with AI, ten minutes at a time.
+
+We think the best way to learn is to make something, so every course has you building as you go rather than reading about it. Kinga spent over ten years in tech, did a developer bootcamp and worked as a Lead Product Manager before leaving her full-time role to build this. Tamas is the technical partner and educator, he's been mentoring women and girls in software development for the past 11 years. The courses come from our own work, they're written for someone who has an idea and no technical background, and beginner questions are welcome.
 
 663 people registered for the free course we offered around International Women's Day this year. Then someone we'd never met paid for a subscription. Then another. South Korea, England, the US, Australia.
 
