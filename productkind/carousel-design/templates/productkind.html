@@ -115,6 +115,60 @@
   .igpost .igcaption { display: flex; flex-direction: column; gap: 10px; padding: 18px 20px; }
   .igpost .igcaption span { display: block; height: 12px; border-radius: 6px; background: #e8e8ea; }
 
+  /* iPhone mockup: a device frame for app screenshots. Put an
+     <img class="photo"> (or an .imgslot placeholder) inside .phonescreen;
+     the metal rail, the black bezel, the dynamic island and the side
+     buttons are drawn in CSS. Scale the whole device with --phone-w on the
+     .phone element; every other measurement is derived from it.
+     A screenshot taken on an iPhone already carries its own status bar and
+     home indicator, so those two are opt-in: add .statusbar for a drawn
+     status bar (web screenshots, or images cropped above the clock) and
+     .homebar for the home indicator. Set --phone-ink to #ffffff when the
+     screenshot behind them is dark. */
+  .phone { --phone-w: 420px; --phone-ink: #08080f; position: relative; flex: none;
+    width: var(--phone-w); aspect-ratio: 393 / 852; box-sizing: border-box;
+    padding: calc(var(--phone-w) * 0.034);
+    border-radius: calc(var(--phone-w) * 0.142);
+    background: linear-gradient(148deg, #6e6e78 0%, #2c2c31 16%, #8b8b95 38%, #26262b 58%, #5b5b65 78%, #2f2f35 100%);
+    box-shadow: 0 24px 48px rgba(8,8,9,0.30), 0 6px 14px rgba(8,8,9,0.18); }
+  /* side buttons: left volume rocker, right power */
+  .phone::before, .phone::after { content: ''; position: absolute;
+    width: calc(var(--phone-w) * 0.011); border-radius: calc(var(--phone-w) * 0.006);
+    background: linear-gradient(180deg, #33333a, #74747e); }
+  .phone::before { left: calc(var(--phone-w) * -0.009); top: 24%; height: 13%; }
+  .phone::after { right: calc(var(--phone-w) * -0.009); top: 26%; height: 9%; }
+  .phone .phonescreen { position: relative; width: 100%; height: 100%; overflow: hidden;
+    background: #ffffff; border-radius: calc(var(--phone-w) * 0.108);
+    box-shadow: 0 0 0 calc(var(--phone-w) * 0.016) #0a0a0c; }
+  .phone .island { position: absolute; z-index: 3; top: calc(var(--phone-w) * 0.028); left: 50%;
+    transform: translateX(-50%); width: calc(var(--phone-w) * 0.31); height: calc(var(--phone-w) * 0.094);
+    border-radius: 999px; background: #08080a; }
+  .phone .statusbar { position: absolute; z-index: 2; top: 0; left: 0; right: 0;
+    height: calc(var(--phone-w) * 0.137); display: flex; align-items: center; justify-content: space-between;
+    padding: calc(var(--phone-w) * 0.022) calc(var(--phone-w) * 0.075) 0;
+    font-family: var(--font-plain); font-weight: 600; color: var(--phone-ink); box-sizing: border-box; }
+  .phone .statusbar .clock { font-size: calc(var(--phone-w) * 0.043); letter-spacing: 0.01em; }
+  .phone .statusbar .icons { display: flex; align-items: center; gap: calc(var(--phone-w) * 0.016); }
+  .phone .statusbar .signal { display: flex; align-items: flex-end; gap: calc(var(--phone-w) * 0.005); }
+  .phone .statusbar .signal span { width: calc(var(--phone-w) * 0.009); background: currentColor;
+    border-radius: calc(var(--phone-w) * 0.003); }
+  .phone .statusbar .signal span:nth-child(1) { height: calc(var(--phone-w) * 0.012); }
+  .phone .statusbar .signal span:nth-child(2) { height: calc(var(--phone-w) * 0.019); }
+  .phone .statusbar .signal span:nth-child(3) { height: calc(var(--phone-w) * 0.026); }
+  .phone .statusbar .signal span:nth-child(4) { height: calc(var(--phone-w) * 0.033); }
+  .phone .statusbar svg { display: block; width: calc(var(--phone-w) * 0.042); height: auto; fill: currentColor; }
+  .phone .statusbar .battery { position: relative; width: calc(var(--phone-w) * 0.062);
+    height: calc(var(--phone-w) * 0.031); border: calc(var(--phone-w) * 0.004) solid currentColor;
+    border-radius: calc(var(--phone-w) * 0.010); opacity: 0.95; box-sizing: border-box; }
+  .phone .statusbar .battery::before { content: ''; position: absolute; inset: calc(var(--phone-w) * 0.004);
+    right: 30%; background: currentColor; border-radius: calc(var(--phone-w) * 0.004); }
+  .phone .statusbar .battery::after { content: ''; position: absolute; left: 100%; top: 30%; bottom: 30%;
+    width: calc(var(--phone-w) * 0.006); background: currentColor; opacity: 0.5;
+    border-radius: 0 calc(var(--phone-w) * 0.004) calc(var(--phone-w) * 0.004) 0; }
+  .phone .homebar { position: absolute; z-index: 3; bottom: calc(var(--phone-w) * 0.020); left: 50%;
+    transform: translateX(-50%); width: 35%; height: calc(var(--phone-w) * 0.013);
+    border-radius: 999px; background: var(--phone-ink); opacity: 0.85; }
+
   /* Placeholder for a photo drop (replace the div with an <img>) */
   .imgslot { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
     background: repeating-linear-gradient(45deg, #f4f4f6, #f4f4f6 24px, #ececef 24px, #ececef 48px); }
@@ -142,7 +196,7 @@
     <div class="card" style="overflow:hidden;">
       <div class="gradbar"></div>
       <div class="inner" style="position:relative;">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">01 / 10</span></div>
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">01 / 11</span></div>
         <div style="flex:1; display:flex; flex-direction:column; justify-content:center; max-width:500px;">
           <h1 class="headline" style="font-size:52px; width:578px;">I left my full-time job at the end of 2024, after 10 years in tech. This is what <span class="hl">running my own business</span> has been like since.</h1>
           <div class="kicker" style="font-size:24px; color:var(--ink-secondary); max-width:480px;">FROM EMPLOYEE TO RUNNING A BUSINESS.</div>
@@ -159,7 +213,7 @@
     <div class="card">
       <div class="gradbar"></div>
       <div class="inner">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">02 / 10</span></div>
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">02 / 11</span></div>
         <div style="display:flex; flex-direction:column; gap:32px;">
           <div class="frame">
             <div style="height:12px; background:var(--grad);"></div>
@@ -180,7 +234,7 @@
     <div class="card">
       <div class="gradbar"></div>
       <div class="inner">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">03 / 10</span></div>
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">03 / 11</span></div>
         <div class="frame" style="width:100%; height:540px;">
           <div class="imgslot"><span>Full-width photo (drop an &lt;img class="photo"&gt; here)</span></div>
         </div>
@@ -195,7 +249,7 @@
     <div class="card">
       <div class="gradbar"></div>
       <div class="inner">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">04 / 10</span></div>
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">04 / 11</span></div>
         <div style="display:flex; flex-direction:column; align-items:center; gap:0;">
           <div class="frame" style="width:560px; height:360px;">
             <div style="height:34px; background:var(--ink); display:flex; align-items:center; gap:10px; padding:0 16px;">
@@ -221,7 +275,7 @@
     <div class="card">
       <div class="gradbar"></div>
       <div class="inner" style="justify-content:flex-start; gap:44px;">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">05 / 10</span></div>
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">05 / 11</span></div>
         <p class="copy" style="font-size:32px;">In the autumn I joined <span class="hl">SheBuilds on Lovable</span>, a 48-hour hackathon for women. There I saw a sea of professional women with ideas they wanted to build.</p>
         <div class="frame" style="height:360px; aspect-ratio:1200/819; align-self:center; flex:none;">
           <div class="imgslot"><span>Photo (drop an &lt;img class="photo"&gt; here)</span></div>
@@ -239,7 +293,7 @@
     <div class="card">
       <div class="gradbar"></div>
       <div class="inner">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">06 / 10</span></div>
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">06 / 11</span></div>
         <div class="frame" style="padding:36px 40px; overflow:visible;">
           <svg viewBox="0 0 660 360" width="100%" style="display:block;">
             <defs>
@@ -271,7 +325,7 @@
     <div class="card">
       <div class="gradbar"></div>
       <div class="inner">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">07 / 10</span></div>
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">07 / 11</span></div>
         <div style="align-self:center; border:4px solid var(--ink); box-shadow:16px 16px 0 rgba(8,8,9,0.25); padding:48px 72px; background:var(--grad);">
           <span style="font-family:var(--font-display); font-weight:700; font-size:220px; line-height:1; color:var(--ink);">14%</span>
         </div>
@@ -286,7 +340,7 @@
     <div class="card">
       <div class="gradbar"></div>
       <div class="inner">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">08 / 10</span></div>
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">08 / 11</span></div>
         <div style="display:flex; flex-direction:column; gap:12px;">
           <span class="promptlabel">YOUR PROMPT</span>
           <div class="promptwin" style="padding:36px 44px 84px;">
@@ -312,7 +366,7 @@
     <div class="card">
       <div class="gradbar"></div>
       <div class="inner">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">09 / 10</span></div>
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">09 / 11</span></div>
         <p class="copy" style="font-size:36px;">Nobody has ten years of experience in vibe coding yet. <span class="hl">We're all starting from the same line.</span> I'll be sharing what I try, what works, and what definitely doesn't in my newsletter, Thoughts by productkind.</p>
         <div style="display:flex; flex-direction:column; align-items:center; gap:32px;">
           <img src="../assets/productkind/logo-thoughts-by-productkind-icon.png" alt="Thoughts by productkind logo" style="width:180px; height:180px; border:4px solid var(--ink); box-shadow:12px 12px 0 rgba(8,8,9,0.25);">
@@ -331,7 +385,7 @@
     <div class="card">
       <div class="gradbar"></div>
       <div class="inner">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">10 / 10</span></div>
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">10 / 11</span></div>
         <div class="slidebody" style="gap:44px;">
           <p class="copy" style="text-align:center;">The Instagram post mockup is a text-free stand-in for a carousel post.</p>
           <div class="igpost" style="width:400px; align-self:center;">
@@ -351,6 +405,37 @@
               <span style="width:60%;"></span>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="cropguide"></div>
+  </section>
+
+  <!-- SLIDE 11 — IPHONE MOCKUP (app screenshots; the status bar and home
+       bar here are the opt-in drawn ones, an iPhone screenshot brings its
+       own) -->
+  <section class="slide" data-screen-label="11 iPhone mockup">
+    <div class="card">
+      <div class="gradbar"></div>
+      <div class="inner">
+        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">11 / 11</span></div>
+        <div class="slidebody" style="gap:52px; align-items:center;">
+          <div class="phone" style="--phone-w:330px;">
+            <div class="phonescreen">
+              <div class="imgslot"><span>App screenshot (drop an &lt;img class="photo"&gt; here)</span></div>
+              <div class="statusbar">
+                <span class="clock">9:41</span>
+                <span class="icons">
+                  <span class="signal"><span></span><span></span><span></span><span></span></span>
+                  <svg viewBox="0 0 16 12" aria-hidden="true"><path d="M8 11.2 6.1 9.1a2.7 2.7 0 0 1 3.8 0L8 11.2Zm0-4.1a4.9 4.9 0 0 0-3.5 1.4L3.1 7.1a7 7 0 0 1 9.8 0l-1.4 1.4A4.9 4.9 0 0 0 8 7.1Zm0-3.4a8.3 8.3 0 0 0-5.9 2.4L.7 4.7a10.3 10.3 0 0 1 14.6 0l-1.4 1.4A8.3 8.3 0 0 0 8 3.7Z"/></svg>
+                  <span class="battery"></span>
+                </span>
+              </div>
+              <div class="island"></div>
+              <div class="homebar"></div>
+            </div>
+          </div>
+          <p class="copy">The <span class="hl">iPhone mockup</span> puts a real app screenshot on a slide.</p>
         </div>
       </div>
     </div>
