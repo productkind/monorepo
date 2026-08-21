@@ -122,6 +122,15 @@ prompt window).
   caption bars). It holds no text, so it never needs spec coverage; the
   avatar and image wash pick up the brand gradient automatically. See the
   last example slide in each template for the markup.
+- The **`.phone` iPhone mockup** frames an app screenshot: metal rail, black
+  bezel, dynamic island and side buttons are all CSS, so there is no device
+  image to keep. Put an `<img class="photo">` inside `.phonescreen` and scale
+  the whole device with `--phone-w` (~330px fits a slide alongside a line or
+  two of copy). A screenshot taken on an iPhone already carries its own
+  status bar and home indicator, so the drawn `.statusbar` and `.homebar` are
+  opt-in, for web screenshots or images cropped above the clock; set
+  `--phone-ink: #ffffff` when the screen behind them is dark. See the last
+  example slide in each template.
 - To **vertically centre a slide's body**, keep `.header` as the first child
   of `.inner` and wrap the rest in `<div class="slidebody">`. Use this
   whenever a slide has no bottom-anchored element, instead of leaving the
