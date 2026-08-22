@@ -74,6 +74,42 @@ Two readings that are easy to get wrong:
   same run, `adhd brain dump template` showed +132,100% and had a mean of 0.2
   when sized against `mental load`. Check the mean before believing the rise.
 
+## `marketplace-supply-audit.py` (product-niche version of signals A and D)
+
+Not for content niches. This one finds product niches inside the Atlassian
+Marketplace, where the purchase happens in the marketplace rather than through
+search, so install counts replace search volume as the demand signal. The REST
+API is public and needs no key.
+
+```
+python3 marketplace-supply-audit.py pull            # cache the catalogue first
+python3 marketplace-supply-audit.py screen          # big installs, poor rating
+python3 marketplace-supply-audit.py vacancies       # abandoned Connect-era apps
+python3 marketplace-supply-audit.py slot "google chat"    # who owns one slot
+python3 marketplace-supply-audit.py reviews <appKey>      # what users say fails
+python3 marketplace-supply-audit.py pricing <appKey>      # per-user tiers
+```
+
+What to look for: a slot where one app holds thousands of installs at under 3.8
+stars and no rival clears 200 installs at 4.2 stars. That is measured demand
+with weak supply, which is the same shape as an old video from a small channel
+ranking top five.
+
+Three readings that are easy to get wrong:
+
+- **Installs are not active users.** An abandoned app keeps its install count.
+  Treat the number as an upper bound on live demand.
+- **Check pricing before believing demand.** The biggest installed bases are
+  usually free integrations a SaaS vendor built as a checkbox, which measures
+  demand at a price of zero. `pricing` returning nothing means the app is free.
+- **The API text search ranks on general relevance**, so it returns unrelated
+  apps as matches. `slot` filters to apps whose name or tagline contains the
+  whole token. An earlier version matched only the first word and reported empty
+  slots that were not empty. Keep that filter.
+
+Findings from the August 2026 run are in
+`../../ai-research/saas-niche-arbitration-2026-08-22.md`.
+
 ## What these do not cover
 
 YouTube Studio Trends (signal B) and Google Ads Keyword Planner both need a
