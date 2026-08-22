@@ -1,6 +1,7 @@
 # Women, AI and Building Things — Full Research
 ### Audience research: communities, verbatim pain points, needs, desires, questions and language
 
+**Created by:** Claude Cowork
 **Date:** 20 August 2026
 **Scope as agreed:** mixed audience (non-technical *and* technical women), tagged throughout · deep verbatim collection · markdown report
 

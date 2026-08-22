@@ -18,6 +18,7 @@ the date and the source links inside the file.
 
 | File | What it is |
 |---|---|
+| `niche-research-codex/` | Complete Little Parrot niche-research package: reusable method, five-candidate workbook, seed queries, search and Trends findings, scoring, positioning recommendation and SaaS opportunity synthesis |
 | `women-ai-building-research-2026-08.md` | Four-part community study of women building with AI. ~230 sourced verbatim quotes, six personas, competitive read. August 2026 |
 | `signal-b-studio-2026-08.md` | YouTube Studio Trends pull, ten positioning terms. Signal B of the niche method. 19 August 2026 |
 | `signal-b-content-gaps-2026-08.md` | The full content-gap inventory behind that pull: 64 cards, 44 distinct queries, grouped by usability |
