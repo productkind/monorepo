@@ -340,8 +340,8 @@ The file `little-parrot-seeds.txt` contains 100 starting phrases: 20 for each ca
 Run YouTube autocomplete for the UK and US:
 
 ```bash
-../niche-research-tools/youtube-autocomplete.sh little-parrot-seeds.txt gb
-../niche-research-tools/youtube-autocomplete.sh little-parrot-seeds.txt us
+../../marketing/channels/niche-research-tools/youtube-autocomplete.sh little-parrot-seeds.txt gb
+../../marketing/channels/niche-research-tools/youtube-autocomplete.sh little-parrot-seeds.txt us
 ```
 
 Save suggestions, not only suggestion counts. Add promising variants to the research sheet.
@@ -366,7 +366,7 @@ Tag each row with its candidate and outcome cluster. Calculate total volume per 
 Start with broad comparison terms as relative yardsticks:
 
 ```bash
-python3 ../niche-research-tools/google-trends.py --geo GB --time "today 5-y" "lovable app" "claude code" "ai for product managers" "interactive lead magnet" "validate business idea"
+python3 ../../marketing/channels/niche-research-tools/google-trends.py --geo GB --time "today 5-y" "lovable app" "claude code" "ai for product managers" "interactive lead magnet" "validate business idea"
 ```
 
 Then compare phrases within each candidate. Run both Web Search and YouTube Search where relevant.
@@ -380,7 +380,7 @@ Select the six strongest demand phrases from each candidate: 30 phrases total.
 Run the YouTube supply audit in small batches:
 
 ```bash
-python3 ../niche-research-tools/youtube-supply-audit.py "lovable authentication not working" "lovable app launch checklist" "lovable running costs"
+python3 ../../marketing/channels/niche-research-tools/youtube-supply-audit.py "lovable authentication not working" "lovable app launch checklist" "lovable running costs"
 ```
 
 Manually inspect the top ten Google and YouTube results. Automated result counts cannot judge whether a result is exact, current, understandable or complete.
