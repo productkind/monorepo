@@ -45,7 +45,11 @@ The top level holds products and publications only. Everything company-wide live
   guidance) lives in `productkind/marketing/channels/`.
 - **Pitches** to companies and incubators go in
   [`productkind/pitch-decks/`](productkind/pitch-decks/).
-- **AI research** goes in `productkind/ai-research/`.
+- **Research findings** go in [`productkind/ai-research/`](productkind/ai-research/):
+  audience, market and niche research, plus AI and content-performance research. The
+  evidence lives here; the decisions made from it live in `productkind/marketing/`, and
+  the methods and scripts that produced it live in
+  `productkind/marketing/channels/niche-research-tools/`.
 
 The repo is mid-migration to this structure: new content follows these rules immediately,
 old content moves over in batches.

@@ -1,8 +1,8 @@
 # Little Parrot positioning, August 2026
 
 **Question:** who exactly is Little Parrot for, how far beyond Lovable should the catalogue go, and where do paid users come from?
-**Method:** `channels/steps-to-find-your-niche.md`, signals A, C and D. B (YouTube Studio) and Keyword Planner still need your logged-in accounts.
-**Evidence:** 289 uniquely identified learners with recorded roles across `little-parrot/user-insights/`, the IWD and S02 funnel figures in `little-parrot-context.md`, `channel-strategy-2026-08.md`, plus a fresh Trends, autocomplete and supply run on 19 August 2026.
+**Method:** `channels/steps-to-find-your-niche.md`, signals A, B, C and D. Keyword Planner still needs a logged-in Google Ads session.
+**Evidence:** 289 uniquely identified learners with recorded roles across `little-parrot/user-insights/`, the IWD and S02 funnel figures in `little-parrot-context.md`, `channel-strategy-2026-08.md`, a Trends, autocomplete and supply run on 19 August 2026, and three research files in `productkind/ai-research/` (`signal-b-studio-2026-08.md`, `signal-b-content-gaps-2026-08.md`, `women-ai-building-research-2026-08.md`).
 **Written:** 19 August 2026. Review: November 2026.
 
 > Search queries and video titles are quoted verbatim as data. `check-banned.py` will flag some of them. Ignore those hits, they are what people type, not our sentences.
@@ -202,7 +202,7 @@ Run the list once. Record one row per related search: parent term, related searc
 
 ### Results, run 19 August 2026
 
-Full pull in `signal-b-studio-2026-08.md`. **Signal B confirms the recommendation and changes none of it.** One condition was met in part, one was not met, and one closed a question for good.
+Full pull in `productkind/ai-research/signal-b-studio-2026-08.md`. **Signal B confirms the recommendation and changes none of it.** One condition was met in part, one was not met, and one closed a question for good.
 
 **The scope worry was unfounded, so the data is usable.** The Trends cards returned a robotics podcast, a leadership search and an iPhone shortcut query, and a Chinese-language AWS video. None of that is a 9-subscriber channel's audience, and the related searches are clearly YouTube-wide. The 100% male productkind audience is not contaminating the term searches. Part 1, which genuinely is first-party, is a different story and is covered below.
 
@@ -220,7 +220,7 @@ The full gap inventory adds one thing the first pass missed. Of the 20 gaps unde
 
 ### The gap inventory, and its sharpest finding
 
-Full list in `signal-b-content-gaps-2026-08.md`: 64 gap cards across the ten terms, reducing to 44 distinct queries, sorted into on-topic, generic-AI and junk.
+Full list in `productkind/ai-research/signal-b-content-gaps-2026-08.md`: 64 gap cards across the ten terms, reducing to 44 distinct queries, sorted into on-topic, generic-AI and junk.
 
 **Where the gaps are is the inverse of where we fit.** The three terms that describe our actual teaching most precisely, `how to publish lovable app`, `lovable github` and `vibe coding for product managers`, return **zero** gaps, because that content already exists. The two broadest terms return 44 of the 64 cards, and nearly all of those are generic AI queries that arrive because Studio widens the topic. Read plainly: **the Lovable how-to space is saturated, and the openings sit outside our positioning.** That is a real constraint on candidate A as a content play, and it is exactly why section 4 puts the money on the offer rather than on publishing more how-to material.
 
@@ -311,3 +311,137 @@ It is closed as a position on three signals, so it gets no arm. But naming the f
 3. **Week 4.** Read checkout attempts first, clicks second, reach last. Decide.
 
 **Do not wait for statistical significance.** At this size it is unreachable, and treating it as the bar is how a small company talks itself out of acting on a real signal. The question is which arm produced more people trying to pay, and whether either produced enough to be worth building out.
+
+---
+
+# Part Two: answers against the audience research
+
+Added 22 August 2026, after `productkind/ai-research/women-ai-building-research-2026-08.md` landed: a four-part community study with roughly 230 sourced verbatim quotes, six personas, and a competitive read on the women-and-AI space. Where it agrees with sections 1 to 7 that is two independent methods converging, and it is called out. Where it corrects them, that is called out too.
+
+> Quotes below are reproduced verbatim from the research, including American spellings and words we do not use ourselves. `check-banned.py` will flag them. Those hits should be ignored, the same convention as the Signal B captures.
+
+## 8. Which niche has the highest willingness to pay
+
+**The woman who has already built something that half-works, has money and identity already sunk into it, and cannot get it launched.**
+
+That is candidate A from section 5, arrived at again from a completely different direction. Sections 1 to 7 got there from keyword volume, supply audits and our own funnel. The audience research gets there from what women say about money.
+
+### The direct willingness-to-pay evidence
+
+The research is unusually explicit about which persona spends. Of its six, exactly one carries a plain statement of payment behaviour, and it is Persona 1, the Burned-Out Escapee: *"She'll pay real money. She is not price-sensitive about tools; she is furious about wasted hours."* Persona 2, the Problem-Owner with No Cofounder, is called *"the most underserved and highest-intent segment in this research."*
+
+What those two share is not a job title. It is a **stake already placed**. Katherine Homuth reports *"about $140 on Claude credits this week, plus monthly subscriptions to Claude Max ($75/month) and Cursor Ultra ($200/month)."* That is roughly $800 a month from one non-technical founder. She is not deciding whether to spend. She is already spending, and she wants the spending to produce something.
+
+The sharpest commercial signal in the whole study is the "help me finish it" post, where a woman who has built an MVP goes looking for an engineer: *"I have an idea and an early prototype for an app I've been working for a while, built in Lovable, and I'm looking for a female Software Engineer who would be interested in helping bring it to life."* Hiring an engineer is an order of magnitude above a €24 subscription. The intent to pay is not in question at this stage. Only the thing to pay for is missing.
+
+### The finding that explains our two subscribers
+
+The research also identifies, unmistakably, the segment with the **lowest** willingness to pay, and it is the one our free courses are built to attract.
+
+Its Part Three finding, described as the biggest in that section: across 28 TikTok videos, *"is it free / how much / do I have to pay / how many credits"* appeared on nearly every one, and *"it was usually the first question asked, before any question about capability."* Money arrives as a gate on whether she starts at all, not as a decision she reaches later.
+
+> "is it free 🥲" · "Free to sign up isn't free" · "which of these apps are for free and which ones are not"
+
+Put that beside our own funnel. The IWD campaign brought 663 registrations to a free beginner course and converted 4. **We are spending our acquisition on the segment whose first question is whether anything costs money, and then asking it for €24 a month.** That is a cleaner explanation of the two subscribers than anything in section 3, and it is the same conclusion by a different route: the top of our funnel and the top of our willingness-to-pay curve are two different people.
+
+This does not mean the beginner courses are wrong. They are the share loop and the mission. It means **they are the audience, and the paid offer has to be aimed one stage later**, at the woman who has already got something half-built.
+
+### Who else pays, and who does not
+
+| Persona | Willingness to pay | Read |
+|---|---|---|
+| **Burned-Out Escapee** (persona 1) | **Highest.** Explicit in the research | Already spending on tools, furious about wasted hours, wants work to feel good again |
+| **Problem-Owner with No Cofounder** (persona 2) | **Highest.** Highest-intent segment named | One specific thing that must exist. Would hire if she could afford it |
+| Non-Technical Operator inside a company (persona 3) | Medium to high, but the **employer** is the buyer | Blocked by legitimacy, not capability. A different sale, and a B2B one |
+| Time-Poor Mother (persona 4) | Medium. Motivated by income, constrained by price | Not a separate market. A constraint that reshapes the format |
+| Career-Changer / Returner (persona 5) | **Low**, despite finishing at 1.5x the male rate | Most grateful, least able to pay, and the free competitor serves her well |
+| Technical Woman (persona 6) | Not our customer | A completely different product. Guardrails, not tutorials |
+
+Two constraints on all of it, straight from the research. **"They price in coffees"**: free tiers dominate, paid clusters at $29 to $97 a month, and Women Defining AI defends $10 a month as *"less than one coffee per month."* And **the main competitor is free**: Women Build AI runs 20+ workshops a month and 33 courses for 5,547 members at no cost. We are not competing with other paid courses. We are competing with free and abundant, which is precisely why an outcome with a deadline beats a library, as section 4 already argued.
+
+### The niche statement, sharpened
+
+Section 1 proposed a moment rather than a job title. The audience research supports that and lets us name the moment more precisely, because it is the moment money is already committed:
+
+> **We help a woman who has built something that half-works, and has already paid for the tools, get it safely in front of real people, when she has no developer, no budget for one, and about an hour a day.**
+
+The addition is "safely", and section 10 explains why it is the most valuable word in that sentence.
+
+---
+
+## 9. The ten pain points worth addressing
+
+Ranked by how well each is evidenced across **both** studies and how directly we can act. Each names the evidence and what it implies for us.
+
+**1. The post-build cliff, "I built it, now what."**
+Top-ranked future-learning request in our own insights (hosting, publishing, sharing, monetising) and confirmed in all four parts of the audience research, which calls post-build operations *"the clearest curriculum-shaped hole"* and notes it is *"answered only by scattered peer anecdote."* Our learners: *"I need to know how to share it, monetize it etc"*. Theirs: *"I vibe coded a web app...now what?"* Two independent studies, same number one. We already own `lovable-publishing-00` and `launch-and-grow`. **This is the paywall moment from section 4, now confirmed twice.**
+
+**2. She cannot judge what the AI built.**
+The second-loudest pattern in the audience research and the one with the highest stakes: *"The problem is I can't judge what it's doing."* · *"I don't know if my app is secure, if there is junk code, if there are any bugs."* · *"I ended up just clicking allow without reading."* · *"I won't use vibe-coded apps for client work because I don't know what I don't know."* Our own data has the same belief in a more dangerous form: *"It may hallucinate but mostly it is relaible."* The research's own conclusion is the strategic one: **teach evaluation, not generation.** Every competitor teaches how to make things. Almost nobody teaches how to check them. This is the single largest differentiation opportunity in either dataset.
+
+**3. Credit burn and cost opacity.**
+Confirmed three separate ways, which nothing else in this project is. Our insights: the number one friction, roughly 35 mentions. The audience research: money is the *first* question, before capability, plus *"My soul is evaporating with every token spent"* and *"$10-15 Anthropic invoice at 2am"*. Signal B: `lovable unlimited credits`, High volume, content gap. Also cheap to own, since nobody teaches it. **The credit-rebate pitch in section 4 is the most evidenced idea in this entire document.**
+
+**4. The infrastructure wall: terminal, GitHub, database, deploy.**
+Called *"the loudest and most actionable pattern in the entire corpus"*, and the phrasing is consistent: *"Almost nobody says 'I can't write code.' They say they hit a wall at the infrastructure around the code."* · *"Before I decided to sign up for Claude, I didn't even know what's Terminal."* · *"The only moment I felt like a five-year-old was right at the end, the GitHub and Vercel part."* Our own standout course win is the frontend/backend/database mental model, and `vibe-coding-github-00` already exists. We are closer to owning this than to owning anything else.
+
+**5. The ship gap: stuck in builder mode.**
+The research ranks this first by evidence in its own recommendations, from the most emotionally charged posts in a 5,367-post community: *"stuck in builder mode"*, *"Just one more feature"*, *"closing the gap between 'I can design and explain this perfectly' and 'I can actually ship it'."* The free competitor celebrates builds and never forces a launch. **A deadline is a product feature here, and it is one a course library structurally cannot offer.**
+
+**6. Legitimacy, and a competence penalty that is real.**
+47% of women feel intimidated by AI tools against 33% of men, and women are 32% more likely to fear being seen as cheating. The penalty is measured, not felt: in a randomised study of 1,026 engineers, AI users were rated 9% less competent, women 13%, and male non-AI-users rated female AI users **26% more harshly for identical code**. Our own learners say the same thing softly: *"I was very intimidated by vibe coding."* **One caution the research is emphatic about: do not build the message on deficit.** *"Resistance is not ignorance"* drew 4,000+ likes. Women get more out of AI when they use it (54% against 47% said it made launching easier) and complete courses at 1.5x the male rate. That is a competence story, not a catch-up story.
+
+**7. Time poverty, and losing the thread between sessions.**
+*"Between naps, bedtime, family life."* The research's design conclusion is that 20-minute interrupted sessions are the core constraint, not an accessibility nicety, and that anything needing an uninterrupted afternoon excludes most of the market. Our own data: *"Time is the issue as usual: I'm currently juggling job, learning, and a family with quite an active toddler."* **This one we already answer.** Microlearning cards are the right format and it is worth saying so out loud in the positioning, because it is a genuine structural advantage over cohort courses and workshop libraries.
+
+**8. Isolation, which volume does not fix.**
+Five independent sources use "lonely" or "no one I can talk to", and the research notes members of a 5,547-person community are improvising their own fix: *"Are you my Accountability Buddy?"*, local meetup requests, "10 for 10 app review". Its phrase is **"volume is not intimacy."** We should be honest that our format does not answer this and that we have chosen not to run live sessions. Small-cohort accountability is unmet demand, and if we ever add one non-course thing, this is the one the evidence supports.
+
+**9. She cannot tell which category her idea belongs to.**
+A sharper version of the vocabulary problem: *"is this an APP, or a website?"* · *"I thought application like an app you could sell in the App Store 😭"*. The research's read is that the deficit is *"not knowing which category her idea belongs to, and therefore which tool and which tutorial apply to her"*, and that this is why she cannot self-serve from the enormous free content available. Cheap to teach, and it sits naturally at the front of any course.
+
+**10. Pricing her own offer.**
+*"But what should I charge?"* Named as the loudest unanswered question among women who already build, repeatedly asked and never systematised. We already have a pricing-psychology cheat sheet in `vibe-coding-start-your-business-00`. This is a toolkit item that could stand alone.
+
+**Two vocabulary corrections worth applying immediately.** Use *make* for the first small thing and *build* for the ambition. And never use "software" or "digital product" in copy aimed at this audience: the research confirms decisively that "app", "tool" and "system" are her words.
+
+---
+
+## 10. The SaaS product the evidence supports
+
+**Answer first: an "is this safe to ship" checker for vibe-coded apps, written for someone who cannot read the code.**
+
+She points it at her Lovable project or repository. It returns a plain-language report on what is exposed, what is broken, what it will cost to run, and what to fix first, **and it hands her the exact prompt to paste back into Lovable or Claude Code to fix each thing.**
+
+### Why this one
+
+It sits on pain point 2, the second-loudest pattern in the audience research and the highest-stakes one, at the exact moment identified in section 8 as the highest willingness to pay. The woman with the most money already committed and the strongest reason to spend is stuck at precisely the question this answers.
+
+The demand language is unusually direct for a product this specific:
+
+> "The problem is I can't judge what it's doing." · "I don't know if my app is secure, if there is junk code, if there are any bugs that I will need to fix." · "I won't use vibe-coded apps for client work because I don't know what I don't know." · "I would never trust a vibe coded app with health data." · "Yes they're not supposed to be there... but I don't have any so I guess replit put them there as a proxy and I'm too scared to tell it to remove them in case it wrecks something."
+
+Four things make it the right shape for us specifically.
+
+- **The product is the explanation, not the scan.** Snyk and Semgrep already exist and are useless to this audience, because their output is written for engineers. Our entire competence is explaining a technical thing to a non-technical woman in words she already has. That is the defensible part, and it is the part a competitor cannot copy from the outside.
+- **It converts course content into product surface.** The debugging course, the security steps and the GitHub course are the report's content.
+- **It gates something she is already trying to do.** Client work and launch both stall on this question, which is why it carries real willingness to pay rather than coffee-money pricing.
+- **The market is not gender-limited even though the wedge is.** 82% of Lovable users are men and they have the identical problem, so the mission chooses the beachhead without capping the business.
+
+Cost belongs inside it rather than beside it. "What will this cost to run" is the first question this audience asks, and answering it in the same report is more useful than a separate spend tracker.
+
+### The alternatives, and why they lose
+
+| Candidate | Evidence | Why not |
+|---|---|---|
+| **Credit and cost controller** | Money is the first question. `lovable unlimited credits` gapped at High volume | A thin layer over vendor billing that vendors can close off, sold to buyers selected for cost aversion. Strong feature, weak business. Fold it into the checker |
+| **"Help me finish it" marketplace** | Called the sharpest commercial signal in the study. Highest absolute spend observed | Two-sided cold start and disintermediation, run by two people. Right demand, wrong shape for us |
+| **Launch and hosting layer** | Post-build operations, asked constantly on every platform | Mostly reselling commodity infrastructure that Vercel and Netlify already give away |
+
+### The honest caveat
+
+**Do not pivot yet.** With two paying subscribers the evidence says our offer is wrong, not that education is the wrong category, and moving to a harder business with an unvalidated offer repeats the mistake at higher cost.
+
+The checker can be sold as a service before it exists as software. Do the report by hand for ten people at a real price. That is a week of work, it produces revenue, it tells us whether the willingness to pay in section 8 is real at the moment of the ask, and every report done by hand is the specification for the software. It also slots directly into the candidate A arm in section 7 rather than competing with it.
+
+Two risks to hold. Lovable or Anthropic could build this, though Lovable has a conflict, since shipping it means conceding that its output needs checking. And it needs sustained engineering from a two-person company where one person is technical.
