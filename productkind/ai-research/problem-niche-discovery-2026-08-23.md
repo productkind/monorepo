@@ -151,7 +151,7 @@ are scored 1 to 5, revised where later evidence changed them.
 | # | Audience x problem | Evidence signal | Economic value, estimated | Current solution | WTP | Fit |
 |---|---|---|---|---:|---|:--:|
 | 1 | **Sole-practitioner interior designers running 3 to 8 concurrent projects** who struggle with the FF&E schedule, because every client change cascades through a spreadsheet by hand | Commercial rather than community: a large paid ecosystem of FF&E templates and guides, plus measured search demand at difficulty 0 to 7 with advertiser density near 1.0 | A specification error means a reorder, and the schedule is the document the client signs off | Excel and Google Sheets, bought templates, Programa $89/mo plus $39 a seat, Mydoma $49 to $99, Studio Designer $64 to $99, Houzz Pro, Fohlio | 5 | 4 |
-| 2 | **Independent marketing, social and creative service providers with 5 to 15 retained clients** who struggle with the monthly client-facing report, because per-client software pricing punishes exactly that client count | "monthly client reporting is one of the biggest time drains going"; "about an hour per client"; and a thread on being priced out of a $149/mo tool where a member replies "This is exactly why I built my own scheduler last year" | 5 to 15 hours a month at $60 to $110 an hour forgone, so roughly $400 to $1,500 | AgencyAnalytics $59 to $179/mo, DashThis $33 to $229/mo, Hootsuite $149/mo, screenshots into Canva or Google Slides | 4 | 5 |
+| 2 | **Independent marketing, social and creative service providers with 5 to 15 retained clients** who struggle with the monthly client-facing report, because per-client software pricing punishes exactly that client count | "monthly client reporting is one of the biggest time drains going"; "about an hour per client"; and a thread on being priced out of a $149/mo tool where a member replies "This is exactly why I built my own scheduler last year" | 5 to 15 hours a month at $60 to $110 an hour forgone, so roughly $400 to $1,500 | AgencyAnalytics $20 a client a month (vendor page, annual billing), DashThis $33 to $229/mo, Hootsuite $149/mo, screenshots into Canva or Google Slides | 4 | 5 |
 | 3 | **Women with 15 or more years in a non-technical profession whose AI-built app now carries someone else's data, money or trust** | The sister document's four-part study, plus a live poll comment at 44 likes listing app maintenance, backups, deployments and compliance as the training wanted | Professional reputation and the ability to bill for it | Vendor documentation, and nothing else. `vibe coding security` returns ten results written for security professionals | 5 | 5 |
 | 4 | **Women who have learned to build with AI and cannot land the first paid engagement** | 120 of 302 poll votes, plus about forty self-descriptions in eleven hours: *"many times I get a discovery call, but then don't get the client"* | The first $1,000, then a consulting income | Free community trainings, referral threads, and a competitor doing it well | 4 | 3 |
 | 5 | **Virtual assistants and online business managers serving 3 to 10 clients** who struggle to hold their rate, because clients now ask for automation work they cannot deliver | Automation named the biggest 2026 skill gap, fewer than 15% of applicants having hands-on Zapier, Make or GoHighLevel experience, against a reported 20 to 40% rate premium | A 20 to 40% rise on a $2,000 to $4,000 book, or $400 to $5,000 per workflow as a project | Udemy at $12 to $30, VA academies at $297 to $1,900, free n8n community edition, YouTube | 4 | 5 |
@@ -363,12 +363,13 @@ could not see the value of the retainer.
 
 **Cost of the status quo.** Assumption stated: one hour per client per month, which is the figure
 practitioners give, at a billable rate of $60 to $110, which is the 2026 experienced-freelance range.
-That is $300 to $1,650 a month of time against $33 to $179 of tooling. The larger cost is the one nobody
+That is $300 to $1,650 a month of time against $200 to $300 of tooling at ten clients. The larger cost is the one nobody
 prices, which is a retainer lost because the value was never legible.
 
 **Current solutions.** Manual screenshots into Canva or Google Slides. Hootsuite at $149 a month.
-AgencyAnalytics at $25 a client a month, or $59 on the freelancer plan and $179 on the agency plan.
-DashThis from $33 to $229. Native platform analytics.
+AgencyAnalytics at **$20 per client per month on annual billing**, one unified plan, verified on the
+vendor's own pricing page 23 August 2026. DashThis from $33 to $229, aggregator-sourced and unverified.
+Native platform analytics.
 
 **Evidence of pain.** *"Solo SMMs, how do you handle client reporting each month?"*, opened with
 *"monthly client reporting is one of the biggest time drains going"*. *"How do you repurpose content for
@@ -377,8 +378,10 @@ week is always repurposing."* *"Managing social media on a budget when tools lik
 $149/month"*. And in r/agency, *"Best Practices for Agency Billing - ANGST!"* from an owner of twenty-five
 years.
 
-**Evidence of spending.** Verified 2026 prices: AgencyAnalytics $59 to $179, DashThis $33 to $229,
-Hootsuite $149. Paid by individuals out of business income.
+**Evidence of spending.** AgencyAnalytics at $20 per client per month, verified on the vendor's pricing
+page. At ten clients that is $200 a month, and it rises with every client she wins, which is the whole
+argument. DashThis $33 to $229 and Hootsuite $149 are aggregator-sourced and unverified. Paid by
+individuals out of business income.
 
 **Evidence of personal WTP.** The buyer is the business. Average freelance social media manager income in
 the United States is about $69,600, interquartile range $55,000 to $88,700. She already buys software
@@ -425,7 +428,7 @@ This is also the audience most likely to reshare a free course link, which is Li
 acquisition mechanic.
 
 **Pricing hypothesis.** EUR 24 a month, anchored honestly as less than the cheapest reporting tool on the
-market and a fraction of AgencyAnalytics' freelancer plan. A one-off at EUR 79 to EUR 149 is also
+market and less than two clients' worth of AgencyAnalytics. A one-off at EUR 79 to EUR 149 is also
 plausible against Udemy's $12 to $30 floor.
 
 **Risks.** The cheap-alternative floor, which is the big one: if a $20 tool does 80% of it, the build
@@ -677,7 +680,7 @@ recommendation rests on commercial inference, and one hour inside a private grou
 ### Second: independent service providers, on the monthly client deliverable
 
 **Why would she personally pay?** Because the report is what the retainer is judged on, and the retainer is
-her income. She pays $33 to $179 a month for a tool that assembles numbers and will not write the meaning,
+her income. She pays $20 a client a month for a tool that assembles numbers and will not write the meaning,
 and still spends five to fifteen hours a month finishing the job by hand.
 
 **Why now.** Per-client pricing became the norm in this category in 2026, and AgencyAnalytics moved to $25
@@ -695,7 +698,7 @@ all eventually price you out once you need more than a few accounts."*
 weak results page, plus the audience most likely to reshare a free course link.
 
 **Strongest supporting evidence.** Independent threads across a year naming monthly client reporting as the
-largest time drain, a stated hour per client, verified prices in the $33 to $179 band, and a first-person
+largest time drain, a stated hour per client, AgencyAnalytics at $20 a client verified on the vendor's own page, and a first-person
 account of building a replacement.
 
 **Strongest threatening evidence.** `automate client reporting` returned zero, and three freelancer-tool
