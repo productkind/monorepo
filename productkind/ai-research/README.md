@@ -25,6 +25,7 @@ the date and the source links inside the file.
 | `education-wtp-research-2026-08-22.md` | Where willingness to pay sits in education. Kills CPD, certification prep and generic AI literacy on CPC evidence; company-paid AI training carries 4.5x the CPC of learner-paid at a third the difficulty. 22 August 2026 |
 | `broad-saas-niche-research-2026-08-22.md` | Prosumer-first SaaS niche pass across ten markets. Recommended a course-freshness monitor for independent software and AI educators. Superseded on demand grounds by the arbitration doc above. 22 August 2026 |
 | `women-ai-building-research-2026-08.md` | Four-part community study of women building with AI. ~230 sourced verbatim quotes, six personas, competitive read. August 2026 |
+| `high-value-problem-niche-2026-08-23.md` | Reads the four-part study as one thing: the five findings that survived every revision, the funnel, and why the demographic niche measured zero. Recommends a problem niche (an AI-built app that now carries real customer data or money) with the runner-up and the test that settles it. 23 August 2026 |
 | `signal-b-studio-2026-08.md` | YouTube Studio Trends pull, ten positioning terms. Signal B of the niche method. 19 August 2026 |
 | `signal-b-content-gaps-2026-08.md` | The full content-gap inventory behind that pull: 64 cards, 44 distinct queries, grouped by usability |
 | `research-pm-ai-use-cases.md` | AI use cases for product managers |
