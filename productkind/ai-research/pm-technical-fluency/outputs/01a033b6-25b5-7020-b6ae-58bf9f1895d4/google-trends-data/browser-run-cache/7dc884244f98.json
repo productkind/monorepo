@@ -1,0 +1,1376 @@
+{
+  "run_id": "7dc884244f98",
+  "run_kind": "exact",
+  "input_term": "what is an api",
+  "source_term": "what is an api",
+  "fallback_term": "",
+  "comparison_group": "",
+  "terms": [
+    "what is an api"
+  ],
+  "term_type": "Search term",
+  "geography": "UK",
+  "geo_code": "GB",
+  "date_range": "2024-08-01 to 2026-08-24",
+  "api_timeframe": "2024-08-01 2026-08-24",
+  "search_type": "Google Web Search",
+  "category_id": 0,
+  "category": "All categories",
+  "retrieval_date": "2026-08-24",
+  "data_status": "sufficient",
+  "headers": [
+    "x",
+    "y1"
+  ],
+  "series": [
+    {
+      "date": "2024-07-28",
+      "values": [
+        2
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-08-04",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-08-11",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-08-18",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-08-25",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-01",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-08",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-15",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-22",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-29",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-10-06",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-10-13",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-10-20",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-10-27",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-11-03",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-11-10",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-11-17",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-11-24",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-01",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-08",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-15",
+      "values": [
+        2
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-22",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-29",
+      "values": [
+        2
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-01-05",
+      "values": [
+        2
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-01-12",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-01-19",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-01-26",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-02-02",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-02-09",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-02-16",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-02-23",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-02",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-09",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-16",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-23",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-30",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-04-06",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-04-13",
+      "values": [
+        2
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-04-20",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-04-27",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-05-04",
+      "values": [
+        2
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-05-11",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-05-18",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-05-25",
+      "values": [
+        2
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-01",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-08",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-15",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-22",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-29",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-07-06",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-07-13",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-07-20",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-07-27",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-03",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-10",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-17",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-24",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-31",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-09-07",
+      "values": [
+        2
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-09-14",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-09-21",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-09-28",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-10-05",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-10-12",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-10-19",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-10-26",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-02",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-09",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-16",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-23",
+      "values": [
+        9
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-30",
+      "values": [
+        14
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-12-07",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-12-14",
+      "values": [
+        13
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-12-21",
+      "values": [
+        11
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-12-28",
+      "values": [
+        10
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-01-04",
+      "values": [
+        12
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-01-11",
+      "values": [
+        11
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-01-18",
+      "values": [
+        15
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-01-25",
+      "values": [
+        23
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-02-01",
+      "values": [
+        33
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-02-08",
+      "values": [
+        62
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-02-15",
+      "values": [
+        100
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-02-22",
+      "values": [
+        79
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-01",
+      "values": [
+        11
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-08",
+      "values": [
+        11
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-15",
+      "values": [
+        10
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-22",
+      "values": [
+        12
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-29",
+      "values": [
+        13
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-04-05",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-04-12",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-04-19",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-04-26",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-03",
+      "values": [
+        11
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-10",
+      "values": [
+        13
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-17",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-24",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-31",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-06-07",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-06-14",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-06-21",
+      "values": [
+        14
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-06-28",
+      "values": [
+        19
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-07-05",
+      "values": [
+        19
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-07-12",
+      "values": [
+        19
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-07-19",
+      "values": [
+        10
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-07-26",
+      "values": [
+        18
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-08-02",
+      "values": [
+        20
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-08-09",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-08-16",
+      "values": [
+        8
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-08-23",
+      "values": [
+        4
+      ],
+      "is_partial": true
+    }
+  ],
+  "nonzero_points": [
+    108
+  ],
+  "queries": [
+    {
+      "rank": 1,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=anthropic&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "anthropic"
+    },
+    {
+      "rank": 2,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=what+is+an+llc&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what is an llc"
+    },
+    {
+      "rank": 3,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=lidl+near+me&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "lidl near me"
+    },
+    {
+      "rank": 4,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=api+design+principles&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "api design principles"
+    },
+    {
+      "rank": 5,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=what+is+an+roi&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what is an roi"
+    },
+    {
+      "rank": 6,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=what+is+an+rss+feed&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what is an rss feed"
+    },
+    {
+      "rank": 7,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=what+is+an+mcp+server&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what is an mcp server"
+    },
+    {
+      "rank": 8,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=what+is+an+index+fund&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what is an index fund"
+    },
+    {
+      "rank": 9,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=what+is+an+ipo&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what is an ipo"
+    },
+    {
+      "rank": 10,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=what+is+an+escrow+account&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what is an escrow account"
+    },
+    {
+      "rank": 11,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=what+is+an+rss+reader&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what is an rss reader"
+    },
+    {
+      "rank": 12,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=what+is+an+nft+marketplace&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what is an nft marketplace"
+    },
+    {
+      "rank": 13,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+300%",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+an+api+key&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what is an api key"
+    },
+    {
+      "rank": 14,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+300%",
+      "breakout": "",
+      "href": "/trends/explore?q=api+key&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "api key"
+    },
+    {
+      "rank": 15,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+300%",
+      "breakout": "",
+      "href": "/trends/explore?q=wikipedia&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "wikipedia"
+    },
+    {
+      "rank": 16,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+200%",
+      "breakout": "",
+      "href": "/trends/explore?q=openai&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "openai"
+    },
+    {
+      "rank": 17,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+130%",
+      "breakout": "",
+      "href": "/trends/explore?q=walmart+near+me&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "walmart near me"
+    },
+    {
+      "rank": 18,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+70%",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+github&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what is github"
+    },
+    {
+      "rank": 1,
+      "type_top_or_rising": "top",
+      "value_or_growth": "100",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+an+api+key&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what is an api key"
+    },
+    {
+      "rank": 2,
+      "type_top_or_rising": "top",
+      "value_or_growth": "97",
+      "breakout": "",
+      "href": "/trends/explore?q=api+key&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "api key"
+    },
+    {
+      "rank": 3,
+      "type_top_or_rising": "top",
+      "value_or_growth": "11",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+an+open+api&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what is an open api"
+    },
+    {
+      "rank": 4,
+      "type_top_or_rising": "top",
+      "value_or_growth": "9",
+      "breakout": "",
+      "href": "/trends/explore?q=api+meaning&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "api meaning"
+    },
+    {
+      "rank": 5,
+      "type_top_or_rising": "top",
+      "value_or_growth": "9",
+      "breakout": "",
+      "href": "/trends/explore?q=what+does+an+api+do&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what does an api do"
+    },
+    {
+      "rank": 6,
+      "type_top_or_rising": "top",
+      "value_or_growth": "9",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+an+api+endpoint&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what is an api endpoint"
+    },
+    {
+      "rank": 7,
+      "type_top_or_rising": "top",
+      "value_or_growth": "8",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+an+endpoint&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what is an endpoint"
+    },
+    {
+      "rank": 8,
+      "type_top_or_rising": "top",
+      "value_or_growth": "8",
+      "breakout": "",
+      "href": "/trends/explore?q=openai&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "openai"
+    },
+    {
+      "rank": 9,
+      "type_top_or_rising": "top",
+      "value_or_growth": "7",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+rest+api&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what is rest api"
+    },
+    {
+      "rank": 10,
+      "type_top_or_rising": "top",
+      "value_or_growth": "7",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+an+api+call&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what is an api call"
+    },
+    {
+      "rank": 11,
+      "type_top_or_rising": "top",
+      "value_or_growth": "6",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+an+endpoint+in+api&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what is an endpoint in api"
+    },
+    {
+      "rank": 12,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+an+api+gateway&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what is an api gateway"
+    },
+    {
+      "rank": 13,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+an+api+in+software&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what is an api in software"
+    },
+    {
+      "rank": 14,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+an+api+request&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what is an api request"
+    },
+    {
+      "rank": 15,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+github&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what is github"
+    },
+    {
+      "rank": 16,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=github&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "github"
+    },
+    {
+      "rank": 17,
+      "type_top_or_rising": "top",
+      "value_or_growth": "4",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+an+api+error&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what is an api error"
+    },
+    {
+      "rank": 18,
+      "type_top_or_rising": "top",
+      "value_or_growth": "4",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+a+rest+api&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what is a rest api"
+    },
+    {
+      "rank": 19,
+      "type_top_or_rising": "top",
+      "value_or_growth": "4",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+an+api+token&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what is an api token"
+    },
+    {
+      "rank": 20,
+      "type_top_or_rising": "top",
+      "value_or_growth": "2",
+      "breakout": "",
+      "href": "/trends/explore?q=wikipedia&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "wikipedia"
+    },
+    {
+      "rank": 21,
+      "type_top_or_rising": "top",
+      "value_or_growth": "2",
+      "breakout": "",
+      "href": "/trends/explore?q=anthropic&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "anthropic"
+    },
+    {
+      "rank": 22,
+      "type_top_or_rising": "top",
+      "value_or_growth": "2",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+an+llc&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what is an llc"
+    },
+    {
+      "rank": 23,
+      "type_top_or_rising": "top",
+      "value_or_growth": "1",
+      "breakout": "",
+      "href": "/trends/explore?q=lidl+near+me&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "lidl near me"
+    },
+    {
+      "rank": 24,
+      "type_top_or_rising": "top",
+      "value_or_growth": "1",
+      "breakout": "",
+      "href": "/trends/explore?q=api+design+principles&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "api design principles"
+    },
+    {
+      "rank": 25,
+      "type_top_or_rising": "top",
+      "value_or_growth": "1",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+an+roi&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what is an roi"
+    }
+  ],
+  "topics": [
+    {
+      "rank": 1,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/015fr&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Brazil",
+      "topic_type": "Country in South America",
+      "topic_mid": "/m/015fr"
+    },
+    {
+      "rank": 2,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11kq5ghr35&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Claude",
+      "topic_type": "AI",
+      "topic_mid": "/g/11kq5ghr35"
+    },
+    {
+      "rank": 3,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11b77d6b6f&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "2021",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11b77d6b6f"
+    },
+    {
+      "rank": 4,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/01z215&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Saudi Arabia",
+      "topic_type": "Country in the Middle East",
+      "topic_mid": "/m/01z215"
+    },
+    {
+      "rank": 5,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+3,150%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0345h&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Germany",
+      "topic_type": "Country in Europe",
+      "topic_mid": "/m/0345h"
+    },
+    {
+      "rank": 6,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+900%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/015www&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Documentation",
+      "topic_type": "Topic",
+      "topic_mid": "/m/015www"
+    },
+    {
+      "rank": 7,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+750%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0600q&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "PDF",
+      "topic_type": "File format",
+      "topic_mid": "/m/0600q"
+    },
+    {
+      "rank": 8,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+350%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/05s_jbn&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "API key",
+      "topic_type": "Topic",
+      "topic_mid": "/m/05s_jbn"
+    },
+    {
+      "rank": 9,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+120%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0mkz&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Artificial intelligence",
+      "topic_type": "Professional field",
+      "topic_mid": "/m/0mkz"
+    },
+    {
+      "rank": 10,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+70%",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/120z18l3&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Company",
+      "topic_type": "Organization type",
+      "topic_mid": "/g/120z18l3"
+    },
+    {
+      "rank": 1,
+      "type_top_or_rising": "top",
+      "value_or_growth": "100",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0z5n&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "API",
+      "topic_type": "Type of software",
+      "topic_mid": "/m/0z5n"
+    },
+    {
+      "rank": 2,
+      "type_top_or_rising": "top",
+      "value_or_growth": "25",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/05s_jbn&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "API key",
+      "topic_type": "Topic",
+      "topic_mid": "/m/05s_jbn"
+    },
+    {
+      "rank": 3,
+      "type_top_or_rising": "top",
+      "value_or_growth": "6",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/026sq&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Data",
+      "topic_type": "Topic",
+      "topic_mid": "/m/026sq"
+    },
+    {
+      "rank": 4,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0mkz&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Artificial intelligence",
+      "topic_type": "Professional field",
+      "topic_mid": "/m/0mkz"
+    },
+    {
+      "rank": 5,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/120z18l3&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Company",
+      "topic_type": "Organization type",
+      "topic_mid": "/g/120z18l3"
+    },
+    {
+      "rank": 6,
+      "type_top_or_rising": "top",
+      "value_or_growth": "3",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/015www&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Documentation",
+      "topic_type": "Topic",
+      "topic_mid": "/m/015www"
+    },
+    {
+      "rank": 7,
+      "type_top_or_rising": "top",
+      "value_or_growth": "3",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0600q&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "PDF",
+      "topic_type": "File format",
+      "topic_mid": "/m/0600q"
+    },
+    {
+      "rank": 8,
+      "type_top_or_rising": "top",
+      "value_or_growth": "3",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/04_tv&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Management",
+      "topic_type": "Field of study",
+      "topic_mid": "/m/04_tv"
+    },
+    {
+      "rank": 9,
+      "type_top_or_rising": "top",
+      "value_or_growth": "3",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0345h&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Germany",
+      "topic_type": "Country in Europe",
+      "topic_mid": "/m/0345h"
+    },
+    {
+      "rank": 10,
+      "type_top_or_rising": "top",
+      "value_or_growth": "1",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/015fr&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Brazil",
+      "topic_type": "Country in South America",
+      "topic_mid": "/m/015fr"
+    },
+    {
+      "rank": 11,
+      "type_top_or_rising": "top",
+      "value_or_growth": "1",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/11kq5ghr35&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Claude",
+      "topic_type": "AI",
+      "topic_mid": "/g/11kq5ghr35"
+    },
+    {
+      "rank": 12,
+      "type_top_or_rising": "top",
+      "value_or_growth": "1",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/11b77d6b6f&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "2021",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11b77d6b6f"
+    },
+    {
+      "rank": 13,
+      "type_top_or_rising": "top",
+      "value_or_growth": "1",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/01z215&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Saudi Arabia",
+      "topic_type": "Country in the Middle East",
+      "topic_mid": "/m/01z215"
+    }
+  ],
+  "related_availability": {
+    "topics": true,
+    "queries": true
+  },
+  "source_url": "https://trends.google.com/trends/explore?date=2024-08-01%202026-08-24&geo=GB&q=what%20is%20an%20api&hl=en-GB"
+}

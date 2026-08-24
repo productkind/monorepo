@@ -1,0 +1,33 @@
+{
+  "run_id": "b665aec418f3",
+  "run_kind": "exact",
+  "input_term": "claude code for non technical people",
+  "source_term": "claude code for non technical people",
+  "fallback_term": "",
+  "comparison_group": "",
+  "terms": [
+    "claude code for non technical people"
+  ],
+  "term_type": "Search term",
+  "geography": "Worldwide",
+  "geo_code": "",
+  "date_range": "2024-08-01 to 2026-08-24",
+  "api_timeframe": "2024-08-01 2026-08-24",
+  "search_type": "Google Web Search",
+  "category_id": 0,
+  "category": "All categories",
+  "retrieval_date": "2026-08-24",
+  "data_status": "insufficient_no_series",
+  "headers": [],
+  "series": [],
+  "nonzero_points": [
+    0
+  ],
+  "queries": [],
+  "topics": [],
+  "related_availability": {
+    "topics": false,
+    "queries": false
+  },
+  "source_url": "https://trends.google.com/trends/explore?date=2024-08-01%202026-08-24&q=claude%20code%20for%20non%20technical%20people&hl=en-GB"
+}

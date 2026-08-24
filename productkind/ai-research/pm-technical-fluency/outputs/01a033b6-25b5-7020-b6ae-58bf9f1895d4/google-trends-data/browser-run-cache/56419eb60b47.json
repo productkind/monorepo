@@ -1,0 +1,2773 @@
+{
+  "run_id": "56419eb60b47",
+  "run_kind": "exact",
+  "input_term": "api integration",
+  "source_term": "api integration",
+  "fallback_term": "",
+  "comparison_group": "",
+  "terms": [
+    "api integration"
+  ],
+  "term_type": "Search term",
+  "geography": "Worldwide",
+  "geo_code": "",
+  "date_range": "2021-08-24 to 2026-08-24",
+  "api_timeframe": "2021-08-24 2026-08-24",
+  "search_type": "Google Web Search",
+  "category_id": 0,
+  "category": "All categories",
+  "retrieval_date": "2026-08-24",
+  "data_status": "sufficient",
+  "headers": [
+    "x",
+    "y1"
+  ],
+  "series": [
+    {
+      "date": "2021-08-22",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-08-29",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-09-05",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-09-12",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-09-19",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-09-26",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-10-03",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-10-10",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-10-17",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-10-24",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-10-31",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-11-07",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-11-14",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-11-21",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-11-28",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-12-05",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-12-12",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-12-19",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-12-26",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-01-02",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-01-09",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-01-16",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-01-23",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-01-30",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-02-06",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-02-13",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-02-20",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-02-27",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-03-06",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-03-13",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-03-20",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-03-27",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-04-03",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-04-10",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-04-17",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-04-24",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-05-01",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-05-08",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-05-15",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-05-22",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-05-29",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-06-05",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-06-12",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-06-19",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-06-26",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-07-03",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-07-10",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-07-17",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-07-24",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-07-31",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-08-07",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-08-14",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-08-21",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-08-28",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-09-04",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-09-11",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-09-18",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-09-25",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-10-02",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-10-09",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-10-16",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-10-23",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-10-30",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-11-06",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-11-13",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-11-20",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-11-27",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-12-04",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-12-11",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-12-18",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-12-25",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-01-01",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-01-08",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-01-15",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-01-22",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-01-29",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-02-05",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-02-12",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-02-19",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-02-26",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-03-05",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-03-12",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-03-19",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-03-26",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-04-02",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-04-09",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-04-16",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-04-23",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-04-30",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-05-07",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-05-14",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-05-21",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-05-28",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-06-04",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-06-11",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-06-18",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-06-25",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-07-02",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-07-09",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-07-16",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-07-23",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-07-30",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-08-06",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-08-13",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-08-20",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-08-27",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-09-03",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-09-10",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-09-17",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-09-24",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-10-01",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-10-08",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-10-15",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-10-22",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-10-29",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-11-05",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-11-12",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-11-19",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-11-26",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-12-03",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-12-10",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-12-17",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-12-24",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-12-31",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-01-07",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-01-14",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-01-21",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-01-28",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-02-04",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-02-11",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-02-18",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-02-25",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-03-03",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-03-10",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-03-17",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-03-24",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-03-31",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-04-07",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-04-14",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-04-21",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-04-28",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-05-05",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-05-12",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-05-19",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-05-26",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-06-02",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-06-09",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-06-16",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-06-23",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-06-30",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-07-07",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-07-14",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-07-21",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-07-28",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-08-04",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-08-11",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-08-18",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-08-25",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-01",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-08",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-15",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-22",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-29",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-10-06",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-10-13",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-10-20",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-10-27",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-11-03",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-11-10",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-11-17",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-11-24",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-01",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-08",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-15",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-22",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-29",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-01-05",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-01-12",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-01-19",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-01-26",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-02-02",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-02-09",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-02-16",
+      "values": [
+        8
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-02-23",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-02",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-09",
+      "values": [
+        8
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-16",
+      "values": [
+        8
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-23",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-30",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-04-06",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-04-13",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-04-20",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-04-27",
+      "values": [
+        8
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-05-04",
+      "values": [
+        8
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-05-11",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-05-18",
+      "values": [
+        8
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-05-25",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-01",
+      "values": [
+        12
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-08",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-15",
+      "values": [
+        16
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-22",
+      "values": [
+        16
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-29",
+      "values": [
+        14
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-07-06",
+      "values": [
+        14
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-07-13",
+      "values": [
+        15
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-07-20",
+      "values": [
+        14
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-07-27",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-03",
+      "values": [
+        42
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-10",
+      "values": [
+        80
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-17",
+      "values": [
+        60
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-24",
+      "values": [
+        50
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-31",
+      "values": [
+        43
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-09-07",
+      "values": [
+        43
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-09-14",
+      "values": [
+        39
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-09-21",
+      "values": [
+        42
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-09-28",
+      "values": [
+        42
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-10-05",
+      "values": [
+        40
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-10-12",
+      "values": [
+        42
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-10-19",
+      "values": [
+        36
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-10-26",
+      "values": [
+        34
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-02",
+      "values": [
+        41
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-09",
+      "values": [
+        39
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-16",
+      "values": [
+        42
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-23",
+      "values": [
+        43
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-30",
+      "values": [
+        45
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-12-07",
+      "values": [
+        37
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-12-14",
+      "values": [
+        47
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-12-21",
+      "values": [
+        30
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-12-28",
+      "values": [
+        28
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-01-04",
+      "values": [
+        34
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-01-11",
+      "values": [
+        42
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-01-18",
+      "values": [
+        47
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-01-25",
+      "values": [
+        49
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-02-01",
+      "values": [
+        51
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-02-08",
+      "values": [
+        53
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-02-15",
+      "values": [
+        56
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-02-22",
+      "values": [
+        60
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-01",
+      "values": [
+        60
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-08",
+      "values": [
+        54
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-15",
+      "values": [
+        58
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-22",
+      "values": [
+        54
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-29",
+      "values": [
+        63
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-04-05",
+      "values": [
+        62
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-04-12",
+      "values": [
+        53
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-04-19",
+      "values": [
+        56
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-04-26",
+      "values": [
+        61
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-03",
+      "values": [
+        73
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-10",
+      "values": [
+        81
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-17",
+      "values": [
+        64
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-24",
+      "values": [
+        81
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-31",
+      "values": [
+        80
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-06-07",
+      "values": [
+        80
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-06-14",
+      "values": [
+        100
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-06-21",
+      "values": [
+        73
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-06-28",
+      "values": [
+        60
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-07-05",
+      "values": [
+        56
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-07-12",
+      "values": [
+        31
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-07-19",
+      "values": [
+        35
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-07-26",
+      "values": [
+        30
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-08-02",
+      "values": [
+        22
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-08-09",
+      "values": [
+        15
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-08-16",
+      "values": [
+        11
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-08-23",
+      "values": [
+        8
+      ],
+      "is_partial": true
+    }
+  ],
+  "nonzero_points": [
+    262
+  ],
+  "queries": [
+    {
+      "rank": 1,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=openai+api&date=2021-08-24+2026-08-24",
+      "query": "openai api"
+    },
+    {
+      "rank": 2,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=chatgpt+api&date=2021-08-24+2026-08-24",
+      "query": "chatgpt api"
+    },
+    {
+      "rank": 3,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=chatgpt+api+integration&date=2021-08-24+2026-08-24",
+      "query": "chatgpt api integration"
+    },
+    {
+      "rank": 4,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=ai+news&date=2021-08-24+2026-08-24",
+      "query": "ai news"
+    },
+    {
+      "rank": 5,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=openai+news&date=2021-08-24+2026-08-24",
+      "query": "openai news"
+    },
+    {
+      "rank": 6,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=ai+news+today&date=2021-08-24+2026-08-24",
+      "query": "ai news today"
+    },
+    {
+      "rank": 7,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=openai+api+key&date=2021-08-24+2026-08-24",
+      "query": "openai api key"
+    },
+    {
+      "rank": 8,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=openai+news+today&date=2021-08-24+2026-08-24",
+      "query": "openai news today"
+    },
+    {
+      "rank": 9,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=health+news+today&date=2021-08-24+2026-08-24",
+      "query": "health news today"
+    },
+    {
+      "rank": 10,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=nvidia+news&date=2021-08-24+2026-08-24",
+      "query": "nvidia news"
+    },
+    {
+      "rank": 11,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=apple+news+today&date=2021-08-24+2026-08-24",
+      "query": "apple news today"
+    },
+    {
+      "rank": 12,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=anthropic+news&date=2021-08-24+2026-08-24",
+      "query": "anthropic news"
+    },
+    {
+      "rank": 13,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=chat+gpt+api+integration&date=2021-08-24+2026-08-24",
+      "query": "chat gpt api integration"
+    },
+    {
+      "rank": 14,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=n8n&date=2021-08-24+2026-08-24",
+      "query": "n8n"
+    },
+    {
+      "rank": 15,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=technology+news+today&date=2021-08-24+2026-08-24",
+      "query": "technology news today"
+    },
+    {
+      "rank": 16,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=gemini+api&date=2021-08-24+2026-08-24",
+      "query": "gemini api"
+    },
+    {
+      "rank": 17,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=lidl+near+me&date=2021-08-24+2026-08-24",
+      "query": "lidl near me"
+    },
+    {
+      "rank": 18,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=machine+learning+models&date=2021-08-24+2026-08-24",
+      "query": "machine learning models"
+    },
+    {
+      "rank": 19,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+4,700%",
+      "breakout": "",
+      "href": "/trends/explore?q=semiconductor+news+today&date=2021-08-24+2026-08-24",
+      "query": "semiconductor news today"
+    },
+    {
+      "rank": 20,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+4,550%",
+      "breakout": "",
+      "href": "/trends/explore?q=github+copilot+news&date=2021-08-24+2026-08-24",
+      "query": "github copilot news"
+    },
+    {
+      "rank": 21,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+4,150%",
+      "breakout": "",
+      "href": "/trends/explore?q=python+data+analysis&date=2021-08-24+2026-08-24",
+      "query": "python data analysis"
+    },
+    {
+      "rank": 22,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+4,100%",
+      "breakout": "",
+      "href": "/trends/explore?q=federal+reserve+news+today&date=2021-08-24+2026-08-24",
+      "query": "federal reserve news today"
+    },
+    {
+      "rank": 23,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+850%",
+      "breakout": "",
+      "href": "/trends/explore?q=api+integration+company&date=2021-08-24+2026-08-24",
+      "query": "api integration company"
+    },
+    {
+      "rank": 24,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+350%",
+      "breakout": "",
+      "href": "/trends/explore?q=bank+integration+api&date=2021-08-24+2026-08-24",
+      "query": "bank integration api"
+    },
+    {
+      "rank": 25,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+200%",
+      "breakout": "",
+      "href": "/trends/explore?q=api+and+integration&date=2021-08-24+2026-08-24",
+      "query": "api and integration"
+    },
+    {
+      "rank": 1,
+      "type_top_or_rising": "top",
+      "value_or_growth": "100",
+      "breakout": "",
+      "href": "/trends/explore?q=api+for+integration&date=2021-08-24+2026-08-24",
+      "query": "api for integration"
+    },
+    {
+      "rank": 2,
+      "type_top_or_rising": "top",
+      "value_or_growth": "97",
+      "breakout": "",
+      "href": "/trends/explore?q=api+and+integration&date=2021-08-24+2026-08-24",
+      "query": "api and integration"
+    },
+    {
+      "rank": 3,
+      "type_top_or_rising": "top",
+      "value_or_growth": "41",
+      "breakout": "",
+      "href": "/trends/explore?q=api+data+integration&date=2021-08-24+2026-08-24",
+      "query": "api data integration"
+    },
+    {
+      "rank": 4,
+      "type_top_or_rising": "top",
+      "value_or_growth": "37",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+api&date=2021-08-24+2026-08-24",
+      "query": "what is api"
+    },
+    {
+      "rank": 5,
+      "type_top_or_rising": "top",
+      "value_or_growth": "35",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+api+integration&date=2021-08-24+2026-08-24",
+      "query": "what is api integration"
+    },
+    {
+      "rank": 6,
+      "type_top_or_rising": "top",
+      "value_or_growth": "23",
+      "breakout": "",
+      "href": "/trends/explore?q=api+management&date=2021-08-24+2026-08-24",
+      "query": "api management"
+    },
+    {
+      "rank": 7,
+      "type_top_or_rising": "top",
+      "value_or_growth": "21",
+      "breakout": "",
+      "href": "/trends/explore?q=api+integration+services&date=2021-08-24+2026-08-24",
+      "query": "api integration services"
+    },
+    {
+      "rank": 8,
+      "type_top_or_rising": "top",
+      "value_or_growth": "21",
+      "breakout": "",
+      "href": "/trends/explore?q=api+integration+company&date=2021-08-24+2026-08-24",
+      "query": "api integration company"
+    },
+    {
+      "rank": 9,
+      "type_top_or_rising": "top",
+      "value_or_growth": "20",
+      "breakout": "",
+      "href": "/trends/explore?q=rest+api&date=2021-08-24+2026-08-24",
+      "query": "rest api"
+    },
+    {
+      "rank": 10,
+      "type_top_or_rising": "top",
+      "value_or_growth": "20",
+      "breakout": "",
+      "href": "/trends/explore?q=api+integration+service&date=2021-08-24+2026-08-24",
+      "query": "api integration service"
+    },
+    {
+      "rank": 11,
+      "type_top_or_rising": "top",
+      "value_or_growth": "20",
+      "breakout": "",
+      "href": "/trends/explore?q=rest+api+integration&date=2021-08-24+2026-08-24",
+      "query": "rest api integration"
+    },
+    {
+      "rank": 12,
+      "type_top_or_rising": "top",
+      "value_or_growth": "19",
+      "breakout": "",
+      "href": "/trends/explore?q=openai+api&date=2021-08-24+2026-08-24",
+      "query": "openai api"
+    },
+    {
+      "rank": 13,
+      "type_top_or_rising": "top",
+      "value_or_growth": "17",
+      "breakout": "",
+      "href": "/trends/explore?q=api+gateway&date=2021-08-24+2026-08-24",
+      "query": "api gateway"
+    },
+    {
+      "rank": 14,
+      "type_top_or_rising": "top",
+      "value_or_growth": "17",
+      "breakout": "",
+      "href": "/trends/explore?q=api+integration+software&date=2021-08-24+2026-08-24",
+      "query": "api integration software"
+    },
+    {
+      "rank": 15,
+      "type_top_or_rising": "top",
+      "value_or_growth": "17",
+      "breakout": "",
+      "href": "/trends/explore?q=open+api&date=2021-08-24+2026-08-24",
+      "query": "open api"
+    },
+    {
+      "rank": 16,
+      "type_top_or_rising": "top",
+      "value_or_growth": "16",
+      "breakout": "",
+      "href": "/trends/explore?q=github+api&date=2021-08-24+2026-08-24",
+      "query": "github api"
+    },
+    {
+      "rank": 17,
+      "type_top_or_rising": "top",
+      "value_or_growth": "16",
+      "breakout": "",
+      "href": "/trends/explore?q=api+gateway+integration&date=2021-08-24+2026-08-24",
+      "query": "api gateway integration"
+    },
+    {
+      "rank": 18,
+      "type_top_or_rising": "top",
+      "value_or_growth": "15",
+      "breakout": "",
+      "href": "/trends/explore?q=api+integration+platform&date=2021-08-24+2026-08-24",
+      "query": "api integration platform"
+    },
+    {
+      "rank": 19,
+      "type_top_or_rising": "top",
+      "value_or_growth": "14",
+      "breakout": "",
+      "href": "/trends/explore?q=bank+integration+api&date=2021-08-24+2026-08-24",
+      "query": "bank integration api"
+    },
+    {
+      "rank": 20,
+      "type_top_or_rising": "top",
+      "value_or_growth": "14",
+      "breakout": "",
+      "href": "/trends/explore?q=api+integration+meaning&date=2021-08-24+2026-08-24",
+      "query": "api integration meaning"
+    },
+    {
+      "rank": 21,
+      "type_top_or_rising": "top",
+      "value_or_growth": "13",
+      "breakout": "",
+      "href": "/trends/explore?q=whatsapp+integration+api&date=2021-08-24+2026-08-24",
+      "query": "whatsapp integration api"
+    },
+    {
+      "rank": 22,
+      "type_top_or_rising": "top",
+      "value_or_growth": "13",
+      "breakout": "",
+      "href": "/trends/explore?q=api+meaning&date=2021-08-24+2026-08-24",
+      "query": "api meaning"
+    },
+    {
+      "rank": 23,
+      "type_top_or_rising": "top",
+      "value_or_growth": "13",
+      "breakout": "",
+      "href": "/trends/explore?q=whatsapp+api&date=2021-08-24+2026-08-24",
+      "query": "whatsapp api"
+    },
+    {
+      "rank": 24,
+      "type_top_or_rising": "top",
+      "value_or_growth": "13",
+      "breakout": "",
+      "href": "/trends/explore?q=whatsapp+integration&date=2021-08-24+2026-08-24",
+      "query": "whatsapp integration"
+    },
+    {
+      "rank": 25,
+      "type_top_or_rising": "top",
+      "value_or_growth": "12",
+      "breakout": "",
+      "href": "/trends/explore?q=api+integration+tools&date=2021-08-24+2026-08-24",
+      "query": "api integration tools"
+    }
+  ],
+  "topics": [
+    {
+      "rank": 1,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11b77d6b6g&date=2021-08-24+2026-08-24",
+      "topic": "2026",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11b77d6b6g"
+    },
+    {
+      "rank": 2,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11b77dhw02&date=2021-08-24+2026-08-24",
+      "topic": "2024",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11b77dhw02"
+    },
+    {
+      "rank": 3,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11b77d3kyg&date=2021-08-24+2026-08-24",
+      "topic": "2025",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11b77d3kyg"
+    },
+    {
+      "rank": 4,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11b824z6qz&date=2021-08-24+2026-08-24",
+      "topic": "Microsoft",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11b824z6qz"
+    },
+    {
+      "rank": 5,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11bc6hq8w2&date=2021-08-24+2026-08-24",
+      "topic": "Apple",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11bc6hq8w2"
+    },
+    {
+      "rank": 6,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/121p6d90&date=2021-08-24+2026-08-24",
+      "topic": "Education",
+      "topic_type": "Professional field",
+      "topic_mid": "/g/121p6d90"
+    },
+    {
+      "rank": 7,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11bc5zy143&date=2021-08-24+2026-08-24",
+      "topic": "Reuters",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11bc5zy143"
+    },
+    {
+      "rank": 8,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11bc67tb5j&date=2021-08-24+2026-08-24",
+      "topic": "Salesforce",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11bc67tb5j"
+    },
+    {
+      "rank": 9,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11kq5ghr35&date=2021-08-24+2026-08-24",
+      "topic": "Claude",
+      "topic_type": "AI",
+      "topic_mid": "/g/11kq5ghr35"
+    },
+    {
+      "rank": 10,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/01fw9h&date=2021-08-24+2026-08-24",
+      "topic": "National Health Service",
+      "topic_type": "Government department",
+      "topic_mid": "/m/01fw9h"
+    },
+    {
+      "rank": 11,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/026p9_&date=2021-08-24+2026-08-24",
+      "topic": "Digital object identifier",
+      "topic_type": "Topic",
+      "topic_mid": "/m/026p9_"
+    },
+    {
+      "rank": 12,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11bxc656v6&date=2021-08-24+2026-08-24",
+      "topic": "OpenAI",
+      "topic_type": "Artificial intelligence company",
+      "topic_mid": "/g/11bxc656v6"
+    },
+    {
+      "rank": 13,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/05cw8&date=2021-08-24+2026-08-24",
+      "topic": "November",
+      "topic_type": "Month",
+      "topic_mid": "/m/05cw8"
+    },
+    {
+      "rank": 14,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/04wzr&date=2021-08-24+2026-08-24",
+      "topic": "March",
+      "topic_type": "Month",
+      "topic_mid": "/m/04wzr"
+    },
+    {
+      "rank": 15,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11gbfbpzht&date=2021-08-24+2026-08-24",
+      "topic": "Employment",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11gbfbpzht"
+    },
+    {
+      "rank": 16,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/05lf_&date=2021-08-24+2026-08-24",
+      "topic": "October",
+      "topic_type": "Month",
+      "topic_mid": "/m/05lf_"
+    },
+    {
+      "rank": 17,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/06qd3&date=2021-08-24+2026-08-24",
+      "topic": "South Korea",
+      "topic_type": "Country in East Asia",
+      "topic_mid": "/m/06qd3"
+    },
+    {
+      "rank": 18,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/02xx5&date=2021-08-24+2026-08-24",
+      "topic": "February",
+      "topic_type": "Month",
+      "topic_mid": "/m/02xx5"
+    },
+    {
+      "rank": 19,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/03_ly&date=2021-08-24+2026-08-24",
+      "topic": "January",
+      "topic_type": "Month",
+      "topic_mid": "/m/03_ly"
+    },
+    {
+      "rank": 20,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/0lkm&date=2021-08-24+2026-08-24",
+      "topic": "April",
+      "topic_type": "Month",
+      "topic_mid": "/m/0lkm"
+    },
+    {
+      "rank": 21,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/040fv&date=2021-08-24+2026-08-24",
+      "topic": "July",
+      "topic_type": "Month",
+      "topic_mid": "/m/040fv"
+    },
+    {
+      "rank": 22,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/06vkl&date=2021-08-24+2026-08-24",
+      "topic": "September",
+      "topic_type": "Month",
+      "topic_mid": "/m/06vkl"
+    },
+    {
+      "rank": 23,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/03shp&date=2021-08-24+2026-08-24",
+      "topic": "Iran",
+      "topic_type": "Country in the Middle East",
+      "topic_mid": "/m/03shp"
+    },
+    {
+      "rank": 24,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/0ps53&date=2021-08-24+2026-08-24",
+      "topic": "Reuters",
+      "topic_type": "News agency company",
+      "topic_mid": "/m/0ps53"
+    },
+    {
+      "rank": 25,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/040fb&date=2021-08-24+2026-08-24",
+      "topic": "June",
+      "topic_type": "Month",
+      "topic_mid": "/m/040fb"
+    },
+    {
+      "rank": 1,
+      "type_top_or_rising": "top",
+      "value_or_growth": "100",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0z5n&date=2021-08-24+2026-08-24",
+      "topic": "API",
+      "topic_type": "Type of software",
+      "topic_mid": "/m/0z5n"
+    },
+    {
+      "rank": 2,
+      "type_top_or_rising": "top",
+      "value_or_growth": "23",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/11b77d6b6g&date=2021-08-24+2026-08-24",
+      "topic": "2026",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11b77d6b6g"
+    },
+    {
+      "rank": 3,
+      "type_top_or_rising": "top",
+      "value_or_growth": "22",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/11b77d3kyg&date=2021-08-24+2026-08-24",
+      "topic": "2025",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11b77d3kyg"
+    },
+    {
+      "rank": 4,
+      "type_top_or_rising": "top",
+      "value_or_growth": "20",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0278khr&date=2021-08-24+2026-08-24",
+      "topic": "System integration",
+      "topic_type": "Topic",
+      "topic_mid": "/m/0278khr"
+    },
+    {
+      "rank": 5,
+      "type_top_or_rising": "top",
+      "value_or_growth": "12",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0mkz&date=2021-08-24+2026-08-24",
+      "topic": "Artificial intelligence",
+      "topic_type": "Professional field",
+      "topic_mid": "/m/0mkz"
+    },
+    {
+      "rank": 6,
+      "type_top_or_rising": "top",
+      "value_or_growth": "12",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/026sq&date=2021-08-24+2026-08-24",
+      "topic": "Data",
+      "topic_type": "Topic",
+      "topic_mid": "/m/026sq"
+    },
+    {
+      "rank": 7,
+      "type_top_or_rising": "top",
+      "value_or_growth": "12",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/015www&date=2021-08-24+2026-08-24",
+      "topic": "Documentation",
+      "topic_type": "Topic",
+      "topic_mid": "/m/015www"
+    },
+    {
+      "rank": 8,
+      "type_top_or_rising": "top",
+      "value_or_growth": "11",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/03_14&date=2021-08-24+2026-08-24",
+      "topic": "Integral",
+      "topic_type": "Topic",
+      "topic_mid": "/m/03_14"
+    },
+    {
+      "rank": 9,
+      "type_top_or_rising": "top",
+      "value_or_growth": "11",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/05jhg&date=2021-08-24+2026-08-24",
+      "topic": "News",
+      "topic_type": "Topic",
+      "topic_mid": "/m/05jhg"
+    },
+    {
+      "rank": 10,
+      "type_top_or_rising": "top",
+      "value_or_growth": "9",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/120z18l3&date=2021-08-24+2026-08-24",
+      "topic": "Company",
+      "topic_type": "Organization type",
+      "topic_mid": "/g/120z18l3"
+    },
+    {
+      "rank": 11,
+      "type_top_or_rising": "top",
+      "value_or_growth": "9",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/11b77dhw02&date=2021-08-24+2026-08-24",
+      "topic": "2024",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11b77dhw02"
+    },
+    {
+      "rank": 12,
+      "type_top_or_rising": "top",
+      "value_or_growth": "9",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/09c7w0&date=2021-08-24+2026-08-24",
+      "topic": "United States",
+      "topic_type": "Country in North America",
+      "topic_mid": "/m/09c7w0"
+    },
+    {
+      "rank": 13,
+      "type_top_or_rising": "top",
+      "value_or_growth": "8",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/02mz1d&date=2021-08-24+2026-08-24",
+      "topic": "Review",
+      "topic_type": "Topic",
+      "topic_mid": "/m/02mz1d"
+    },
+    {
+      "rank": 14,
+      "type_top_or_rising": "top",
+      "value_or_growth": "8",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0h94y36&date=2021-08-24+2026-08-24",
+      "topic": "Mobile app",
+      "topic_type": "Computer program",
+      "topic_mid": "/m/0h94y36"
+    },
+    {
+      "rank": 15,
+      "type_top_or_rising": "top",
+      "value_or_growth": "7",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0168hv&date=2021-08-24+2026-08-24",
+      "topic": "Cost",
+      "topic_type": "Topic",
+      "topic_mid": "/m/0168hv"
+    },
+    {
+      "rank": 16,
+      "type_top_or_rising": "top",
+      "value_or_growth": "7",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0600q&date=2021-08-24+2026-08-24",
+      "topic": "PDF",
+      "topic_type": "File format",
+      "topic_mid": "/m/0600q"
+    },
+    {
+      "rank": 17,
+      "type_top_or_rising": "top",
+      "value_or_growth": "7",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/03rk0&date=2021-08-24+2026-08-24",
+      "topic": "India",
+      "topic_type": "Country in South Asia",
+      "topic_mid": "/m/03rk0"
+    },
+    {
+      "rank": 18,
+      "type_top_or_rising": "top",
+      "value_or_growth": "7",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/04_tv&date=2021-08-24+2026-08-24",
+      "topic": "Management",
+      "topic_type": "Field of study",
+      "topic_mid": "/m/04_tv"
+    },
+    {
+      "rank": 19,
+      "type_top_or_rising": "top",
+      "value_or_growth": "6",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/01jwgf&date=2021-08-24+2026-08-24",
+      "topic": "Product",
+      "topic_type": "Business",
+      "topic_mid": "/m/01jwgf"
+    },
+    {
+      "rank": 20,
+      "type_top_or_rising": "top",
+      "value_or_growth": "6",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/121jnq1m&date=2021-08-24+2026-08-24",
+      "topic": "Business",
+      "topic_type": "Topic",
+      "topic_mid": "/g/121jnq1m"
+    },
+    {
+      "rank": 21,
+      "type_top_or_rising": "top",
+      "value_or_growth": "6",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/11bxc656v6&date=2021-08-24+2026-08-24",
+      "topic": "OpenAI",
+      "topic_type": "Artificial intelligence company",
+      "topic_mid": "/g/11bxc656v6"
+    },
+    {
+      "rank": 22,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/03nsxd&date=2021-08-24+2026-08-24",
+      "topic": "REST",
+      "topic_type": "Topic",
+      "topic_mid": "/m/03nsxd"
+    },
+    {
+      "rank": 23,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/07ssc&date=2021-08-24+2026-08-24",
+      "topic": "United Kingdom",
+      "topic_type": "Country in Europe",
+      "topic_mid": "/m/07ssc"
+    },
+    {
+      "rank": 24,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/09y4pm&date=2021-08-24+2026-08-24",
+      "topic": "Market",
+      "topic_type": "Economics",
+      "topic_mid": "/m/09y4pm"
+    },
+    {
+      "rank": 25,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/01jsvy&date=2021-08-24+2026-08-24",
+      "topic": "Pricing",
+      "topic_type": "Topic",
+      "topic_mid": "/m/01jsvy"
+    }
+  ],
+  "related_availability": {
+    "topics": true,
+    "queries": true
+  },
+  "source_url": "https://trends.google.com/trends/explore?date=2021-08-24%202026-08-24&q=api%20integration&hl=en-GB"
+}

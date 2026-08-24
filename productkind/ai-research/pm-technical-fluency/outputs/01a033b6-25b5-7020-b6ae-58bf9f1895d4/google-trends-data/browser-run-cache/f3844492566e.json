@@ -1,0 +1,1702 @@
+{
+  "run_id": "f3844492566e",
+  "run_kind": "exact",
+  "input_term": "what is an api",
+  "source_term": "what is an api",
+  "fallback_term": "",
+  "comparison_group": "",
+  "terms": [
+    "what is an api"
+  ],
+  "term_type": "Search term",
+  "geography": "US",
+  "geo_code": "US",
+  "date_range": "2024-08-01 to 2026-08-24",
+  "api_timeframe": "2024-08-01 2026-08-24",
+  "search_type": "Google Web Search",
+  "category_id": 0,
+  "category": "All categories",
+  "retrieval_date": "2026-08-24",
+  "data_status": "sufficient",
+  "headers": [
+    "x",
+    "y1"
+  ],
+  "series": [
+    {
+      "date": "2024-07-28",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-08-04",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-08-11",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-08-18",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-08-25",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-01",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-08",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-15",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-22",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-29",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-10-06",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-10-13",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-10-20",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-10-27",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-11-03",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-11-10",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-11-17",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-11-24",
+      "values": [
+        4
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-01",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-08",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-15",
+      "values": [
+        6
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-22",
+      "values": [
+        3
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-29",
+      "values": [
+        5
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-01-05",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-01-12",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-01-19",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-01-26",
+      "values": [
+        8
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-02-02",
+      "values": [
+        9
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-02-09",
+      "values": [
+        10
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-02-16",
+      "values": [
+        12
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-02-23",
+      "values": [
+        10
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-02",
+      "values": [
+        9
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-09",
+      "values": [
+        8
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-16",
+      "values": [
+        8
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-23",
+      "values": [
+        9
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-30",
+      "values": [
+        8
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-04-06",
+      "values": [
+        9
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-04-13",
+      "values": [
+        7
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-04-20",
+      "values": [
+        8
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-04-27",
+      "values": [
+        9
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-05-04",
+      "values": [
+        9
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-05-11",
+      "values": [
+        8
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-05-18",
+      "values": [
+        9
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-05-25",
+      "values": [
+        9
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-01",
+      "values": [
+        12
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-08",
+      "values": [
+        14
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-15",
+      "values": [
+        15
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-22",
+      "values": [
+        16
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-29",
+      "values": [
+        13
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-07-06",
+      "values": [
+        13
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-07-13",
+      "values": [
+        14
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-07-20",
+      "values": [
+        16
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-07-27",
+      "values": [
+        15
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-03",
+      "values": [
+        15
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-10",
+      "values": [
+        19
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-17",
+      "values": [
+        14
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-24",
+      "values": [
+        11
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-31",
+      "values": [
+        13
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-09-07",
+      "values": [
+        12
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-09-14",
+      "values": [
+        16
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-09-21",
+      "values": [
+        21
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-09-28",
+      "values": [
+        16
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-10-05",
+      "values": [
+        14
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-10-12",
+      "values": [
+        15
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-10-19",
+      "values": [
+        15
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-10-26",
+      "values": [
+        14
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-02",
+      "values": [
+        16
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-09",
+      "values": [
+        16
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-16",
+      "values": [
+        14
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-23",
+      "values": [
+        20
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-30",
+      "values": [
+        34
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-12-07",
+      "values": [
+        34
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-12-14",
+      "values": [
+        28
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-12-21",
+      "values": [
+        19
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-12-28",
+      "values": [
+        23
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-01-04",
+      "values": [
+        30
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-01-11",
+      "values": [
+        39
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-01-18",
+      "values": [
+        40
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-01-25",
+      "values": [
+        51
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-02-01",
+      "values": [
+        70
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-02-08",
+      "values": [
+        82
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-02-15",
+      "values": [
+        84
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-02-22",
+      "values": [
+        67
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-01",
+      "values": [
+        44
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-08",
+      "values": [
+        28
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-15",
+      "values": [
+        31
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-22",
+      "values": [
+        29
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-29",
+      "values": [
+        25
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-04-05",
+      "values": [
+        34
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-04-12",
+      "values": [
+        29
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-04-19",
+      "values": [
+        34
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-04-26",
+      "values": [
+        38
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-03",
+      "values": [
+        42
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-10",
+      "values": [
+        34
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-17",
+      "values": [
+        37
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-24",
+      "values": [
+        59
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-31",
+      "values": [
+        62
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-06-07",
+      "values": [
+        86
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-06-14",
+      "values": [
+        88
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-06-21",
+      "values": [
+        100
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-06-28",
+      "values": [
+        35
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-07-05",
+      "values": [
+        36
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-07-12",
+      "values": [
+        34
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-07-19",
+      "values": [
+        18
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-07-26",
+      "values": [
+        28
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-08-02",
+      "values": [
+        36
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-08-09",
+      "values": [
+        20
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-08-16",
+      "values": [
+        15
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-08-23",
+      "values": [
+        7
+      ],
+      "is_partial": true
+    }
+  ],
+  "nonzero_points": [
+    109
+  ],
+  "queries": [
+    {
+      "rank": 1,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=what+is+an+mcp&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what is an mcp"
+    },
+    {
+      "rank": 2,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=what+is+an+roi&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what is an roi"
+    },
+    {
+      "rank": 3,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=n8n&date=2024-08-01+2026-08-24&geo=US",
+      "query": "n8n"
+    },
+    {
+      "rank": 4,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=ollama&date=2024-08-01+2026-08-24&geo=US",
+      "query": "ollama"
+    },
+    {
+      "rank": 5,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=what+is+an+earnings+report&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what is an earnings report"
+    },
+    {
+      "rank": 6,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=what+is+an+mcp+server&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what is an mcp server"
+    },
+    {
+      "rank": 7,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=what+is+an+s+corp&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what is an s corp"
+    },
+    {
+      "rank": 8,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=what+is+an+escrow+account&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what is an escrow account"
+    },
+    {
+      "rank": 9,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=what+is+an+rss+reader&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what is an rss reader"
+    },
+    {
+      "rank": 10,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=openrouter&date=2024-08-01+2026-08-24&geo=US",
+      "query": "openrouter"
+    },
+    {
+      "rank": 11,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=ai+news+today&date=2024-08-01+2026-08-24&geo=US",
+      "query": "ai news today"
+    },
+    {
+      "rank": 12,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=what+is+a+captcha&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what is a captcha"
+    },
+    {
+      "rank": 13,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=what+is+a+smart+tv&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what is a smart tv"
+    },
+    {
+      "rank": 14,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=lidl+near+me&date=2024-08-01+2026-08-24&geo=US",
+      "query": "lidl near me"
+    },
+    {
+      "rank": 15,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=what+is+a+prime+number&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what is a prime number"
+    },
+    {
+      "rank": 16,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=claude+api&date=2024-08-01+2026-08-24&geo=US",
+      "query": "claude api"
+    },
+    {
+      "rank": 17,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=what+is+a+cap+rate&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what is a cap rate"
+    },
+    {
+      "rank": 18,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=what+is+a+security+deposit&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what is a security deposit"
+    },
+    {
+      "rank": 19,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=what+is+a+hybrid+car&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what is a hybrid car"
+    },
+    {
+      "rank": 20,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+4,650%",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+2fa&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what is 2fa"
+    },
+    {
+      "rank": 21,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+4,350%",
+      "breakout": "",
+      "href": "/trends/explore?q=database+optimization&date=2024-08-01+2026-08-24&geo=US",
+      "query": "database optimization"
+    },
+    {
+      "rank": 22,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+4,300%",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+a+pki&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what is a pki"
+    },
+    {
+      "rank": 23,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+4,150%",
+      "breakout": "",
+      "href": "/trends/explore?q=docker+containerization&date=2024-08-01+2026-08-24&geo=US",
+      "query": "docker containerization"
+    },
+    {
+      "rank": 24,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+4,050%",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+a+content+audit&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what is a content audit"
+    },
+    {
+      "rank": 25,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+250%",
+      "breakout": "",
+      "href": "/trends/explore?q=api+key&date=2024-08-01+2026-08-24&geo=US",
+      "query": "api key"
+    },
+    {
+      "rank": 1,
+      "type_top_or_rising": "top",
+      "value_or_growth": "100",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+an+api+key&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what is an api key"
+    },
+    {
+      "rank": 2,
+      "type_top_or_rising": "top",
+      "value_or_growth": "100",
+      "breakout": "",
+      "href": "/trends/explore?q=api+key&date=2024-08-01+2026-08-24&geo=US",
+      "query": "api key"
+    },
+    {
+      "rank": 3,
+      "type_top_or_rising": "top",
+      "value_or_growth": "65",
+      "breakout": "",
+      "href": "/trends/explore?q=what+are+api&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what are api"
+    },
+    {
+      "rank": 4,
+      "type_top_or_rising": "top",
+      "value_or_growth": "23",
+      "breakout": "",
+      "href": "/trends/explore?q=how+to+use+an+api&date=2024-08-01+2026-08-24&geo=US",
+      "query": "how to use an api"
+    },
+    {
+      "rank": 5,
+      "type_top_or_rising": "top",
+      "value_or_growth": "20",
+      "breakout": "",
+      "href": "/trends/explore?q=what+does+an+api+do&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what does an api do"
+    },
+    {
+      "rank": 6,
+      "type_top_or_rising": "top",
+      "value_or_growth": "18",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+an+open+api&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what is an open api"
+    },
+    {
+      "rank": 7,
+      "type_top_or_rising": "top",
+      "value_or_growth": "18",
+      "breakout": "",
+      "href": "/trends/explore?q=api+definition&date=2024-08-01+2026-08-24&geo=US",
+      "query": "api definition"
+    },
+    {
+      "rank": 8,
+      "type_top_or_rising": "top",
+      "value_or_growth": "17",
+      "breakout": "",
+      "href": "/trends/explore?q=api+meaning&date=2024-08-01+2026-08-24&geo=US",
+      "query": "api meaning"
+    },
+    {
+      "rank": 9,
+      "type_top_or_rising": "top",
+      "value_or_growth": "16",
+      "breakout": "",
+      "href": "/trends/explore?q=api+example&date=2024-08-01+2026-08-24&geo=US",
+      "query": "api example"
+    },
+    {
+      "rank": 10,
+      "type_top_or_rising": "top",
+      "value_or_growth": "15",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+an+endpoint&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what is an endpoint"
+    },
+    {
+      "rank": 11,
+      "type_top_or_rising": "top",
+      "value_or_growth": "14",
+      "breakout": "",
+      "href": "/trends/explore?q=openai+api&date=2024-08-01+2026-08-24&geo=US",
+      "query": "openai api"
+    },
+    {
+      "rank": 12,
+      "type_top_or_rising": "top",
+      "value_or_growth": "14",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+an+api+endpoint&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what is an api endpoint"
+    },
+    {
+      "rank": 13,
+      "type_top_or_rising": "top",
+      "value_or_growth": "12",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+an+api+call&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what is an api call"
+    },
+    {
+      "rank": 14,
+      "type_top_or_rising": "top",
+      "value_or_growth": "12",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+an+api+in+software&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what is an api in software"
+    },
+    {
+      "rank": 15,
+      "type_top_or_rising": "top",
+      "value_or_growth": "11",
+      "breakout": "",
+      "href": "/trends/explore?q=rest+api&date=2024-08-01+2026-08-24&geo=US",
+      "query": "rest api"
+    },
+    {
+      "rank": 16,
+      "type_top_or_rising": "top",
+      "value_or_growth": "11",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+rest+api&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what is rest api"
+    },
+    {
+      "rank": 17,
+      "type_top_or_rising": "top",
+      "value_or_growth": "9",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+an+api+error&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what is an api error"
+    },
+    {
+      "rank": 18,
+      "type_top_or_rising": "top",
+      "value_or_growth": "7",
+      "breakout": "",
+      "href": "/trends/explore?q=claude+api&date=2024-08-01+2026-08-24&geo=US",
+      "query": "claude api"
+    },
+    {
+      "rank": 19,
+      "type_top_or_rising": "top",
+      "value_or_growth": "4",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+an+mcp&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what is an mcp"
+    },
+    {
+      "rank": 20,
+      "type_top_or_rising": "top",
+      "value_or_growth": "2",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+an+roi&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what is an roi"
+    },
+    {
+      "rank": 21,
+      "type_top_or_rising": "top",
+      "value_or_growth": "2",
+      "breakout": "",
+      "href": "/trends/explore?q=n8n&date=2024-08-01+2026-08-24&geo=US",
+      "query": "n8n"
+    },
+    {
+      "rank": 22,
+      "type_top_or_rising": "top",
+      "value_or_growth": "2",
+      "breakout": "",
+      "href": "/trends/explore?q=ollama&date=2024-08-01+2026-08-24&geo=US",
+      "query": "ollama"
+    },
+    {
+      "rank": 23,
+      "type_top_or_rising": "top",
+      "value_or_growth": "2",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+an+earnings+report&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what is an earnings report"
+    },
+    {
+      "rank": 24,
+      "type_top_or_rising": "top",
+      "value_or_growth": "2",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+an+mcp+server&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what is an mcp server"
+    },
+    {
+      "rank": 25,
+      "type_top_or_rising": "top",
+      "value_or_growth": "1",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+an+s+corp&date=2024-08-01+2026-08-24&geo=US",
+      "query": "what is an s corp"
+    }
+  ],
+  "topics": [
+    {
+      "rank": 1,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11b77d6b6g&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "2026",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11b77d6b6g"
+    },
+    {
+      "rank": 2,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11b77d3kyg&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "2025",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11b77d3kyg"
+    },
+    {
+      "rank": 3,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/01fw9h&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "National Health Service",
+      "topic_type": "Government department",
+      "topic_mid": "/m/01fw9h"
+    },
+    {
+      "rank": 4,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/0ps53&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "Reuters",
+      "topic_type": "News agency company",
+      "topic_mid": "/m/0ps53"
+    },
+    {
+      "rank": 5,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11bc5zy143&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "Reuters",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11bc5zy143"
+    },
+    {
+      "rank": 6,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/028kb&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "December",
+      "topic_type": "Month",
+      "topic_mid": "/m/028kb"
+    },
+    {
+      "rank": 7,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11kq5ghr35&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "Claude",
+      "topic_type": "AI",
+      "topic_mid": "/g/11kq5ghr35"
+    },
+    {
+      "rank": 8,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/02xx5&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "February",
+      "topic_type": "Month",
+      "topic_mid": "/m/02xx5"
+    },
+    {
+      "rank": 9,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/03_ly&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "January",
+      "topic_type": "Month",
+      "topic_mid": "/m/03_ly"
+    },
+    {
+      "rank": 10,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/040fb&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "June",
+      "topic_type": "Month",
+      "topic_mid": "/m/040fb"
+    },
+    {
+      "rank": 11,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/015fr&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "Brazil",
+      "topic_type": "Country in South America",
+      "topic_mid": "/m/015fr"
+    },
+    {
+      "rank": 12,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+4,500%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/06vkl&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "September",
+      "topic_type": "Month",
+      "topic_mid": "/m/06vkl"
+    },
+    {
+      "rank": 13,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+3,450%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/04wzr&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "March",
+      "topic_type": "Month",
+      "topic_mid": "/m/04wzr"
+    },
+    {
+      "rank": 14,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+3,300%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/03rk0&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "India",
+      "topic_type": "Country in South Asia",
+      "topic_mid": "/m/03rk0"
+    },
+    {
+      "rank": 15,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+3,250%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0lkm&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "April",
+      "topic_type": "Month",
+      "topic_mid": "/m/0lkm"
+    },
+    {
+      "rank": 16,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+2,950%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/07ssc&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "United Kingdom",
+      "topic_type": "Country in Europe",
+      "topic_mid": "/m/07ssc"
+    },
+    {
+      "rank": 17,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+2,750%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0f8l9c&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "France",
+      "topic_type": "Country in Europe",
+      "topic_mid": "/m/0f8l9c"
+    },
+    {
+      "rank": 18,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+2,250%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0345h&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "Germany",
+      "topic_type": "Country in Europe",
+      "topic_mid": "/m/0345h"
+    },
+    {
+      "rank": 19,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+2,150%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0chghy&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "Australia",
+      "topic_type": "Country in Oceania",
+      "topic_mid": "/m/0chghy"
+    },
+    {
+      "rank": 20,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+1,150%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/02mz1d&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "Review",
+      "topic_type": "Topic",
+      "topic_mid": "/m/02mz1d"
+    },
+    {
+      "rank": 21,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+1,050%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0600q&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "PDF",
+      "topic_type": "File format",
+      "topic_mid": "/m/0600q"
+    },
+    {
+      "rank": 22,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+400%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/015www&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "Documentation",
+      "topic_type": "Topic",
+      "topic_mid": "/m/015www"
+    },
+    {
+      "rank": 23,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+350%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0mkz&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "Artificial intelligence",
+      "topic_type": "Professional field",
+      "topic_mid": "/m/0mkz"
+    },
+    {
+      "rank": 24,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+250%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/05s_jbn&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "API key",
+      "topic_type": "Topic",
+      "topic_mid": "/m/05s_jbn"
+    },
+    {
+      "rank": 25,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+250%",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/120z18l3&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "Company",
+      "topic_type": "Organization type",
+      "topic_mid": "/g/120z18l3"
+    },
+    {
+      "rank": 1,
+      "type_top_or_rising": "top",
+      "value_or_growth": "100",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0z5n&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "API",
+      "topic_type": "Type of software",
+      "topic_mid": "/m/0z5n"
+    },
+    {
+      "rank": 2,
+      "type_top_or_rising": "top",
+      "value_or_growth": "21",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/05s_jbn&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "API key",
+      "topic_type": "Topic",
+      "topic_mid": "/m/05s_jbn"
+    },
+    {
+      "rank": 3,
+      "type_top_or_rising": "top",
+      "value_or_growth": "17",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/11b77d6b6g&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "2026",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11b77d6b6g"
+    },
+    {
+      "rank": 4,
+      "type_top_or_rising": "top",
+      "value_or_growth": "17",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/11b77d3kyg&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "2025",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11b77d3kyg"
+    },
+    {
+      "rank": 5,
+      "type_top_or_rising": "top",
+      "value_or_growth": "11",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0mkz&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "Artificial intelligence",
+      "topic_type": "Professional field",
+      "topic_mid": "/m/0mkz"
+    },
+    {
+      "rank": 6,
+      "type_top_or_rising": "top",
+      "value_or_growth": "11",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/026sq&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "Data",
+      "topic_type": "Topic",
+      "topic_mid": "/m/026sq"
+    },
+    {
+      "rank": 7,
+      "type_top_or_rising": "top",
+      "value_or_growth": "11",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/120z18l3&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "Company",
+      "topic_type": "Organization type",
+      "topic_mid": "/g/120z18l3"
+    },
+    {
+      "rank": 8,
+      "type_top_or_rising": "top",
+      "value_or_growth": "6",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/02mz1d&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "Review",
+      "topic_type": "Topic",
+      "topic_mid": "/m/02mz1d"
+    },
+    {
+      "rank": 9,
+      "type_top_or_rising": "top",
+      "value_or_growth": "6",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/121jnq1m&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "Business",
+      "topic_type": "Topic",
+      "topic_mid": "/g/121jnq1m"
+    },
+    {
+      "rank": 10,
+      "type_top_or_rising": "top",
+      "value_or_growth": "6",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/015www&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "Documentation",
+      "topic_type": "Topic",
+      "topic_mid": "/m/015www"
+    },
+    {
+      "rank": 11,
+      "type_top_or_rising": "top",
+      "value_or_growth": "6",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/04_tv&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "Management",
+      "topic_type": "Field of study",
+      "topic_mid": "/m/04_tv"
+    },
+    {
+      "rank": 12,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0600q&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "PDF",
+      "topic_type": "File format",
+      "topic_mid": "/m/0600q"
+    },
+    {
+      "rank": 13,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/01mf0&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "Software",
+      "topic_type": "Software type",
+      "topic_mid": "/m/01mf0"
+    },
+    {
+      "rank": 14,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/085n4&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "Website",
+      "topic_type": "Topic",
+      "topic_mid": "/m/085n4"
+    },
+    {
+      "rank": 15,
+      "type_top_or_rising": "top",
+      "value_or_growth": "4",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/01jwgf&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "Product",
+      "topic_type": "Business",
+      "topic_mid": "/m/01jwgf"
+    },
+    {
+      "rank": 16,
+      "type_top_or_rising": "top",
+      "value_or_growth": "4",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/03rk0&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "India",
+      "topic_type": "Country in South Asia",
+      "topic_mid": "/m/03rk0"
+    },
+    {
+      "rank": 17,
+      "type_top_or_rising": "top",
+      "value_or_growth": "3",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/07ssc&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "United Kingdom",
+      "topic_type": "Country in Europe",
+      "topic_mid": "/m/07ssc"
+    },
+    {
+      "rank": 18,
+      "type_top_or_rising": "top",
+      "value_or_growth": "2",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/03_ly&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "January",
+      "topic_type": "Month",
+      "topic_mid": "/m/03_ly"
+    },
+    {
+      "rank": 19,
+      "type_top_or_rising": "top",
+      "value_or_growth": "2",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/015fr&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "Brazil",
+      "topic_type": "Country in South America",
+      "topic_mid": "/m/015fr"
+    },
+    {
+      "rank": 20,
+      "type_top_or_rising": "top",
+      "value_or_growth": "2",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/028kb&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "December",
+      "topic_type": "Month",
+      "topic_mid": "/m/028kb"
+    },
+    {
+      "rank": 21,
+      "type_top_or_rising": "top",
+      "value_or_growth": "2",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0345h&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "Germany",
+      "topic_type": "Country in Europe",
+      "topic_mid": "/m/0345h"
+    },
+    {
+      "rank": 22,
+      "type_top_or_rising": "top",
+      "value_or_growth": "2",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/04wzr&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "March",
+      "topic_type": "Month",
+      "topic_mid": "/m/04wzr"
+    },
+    {
+      "rank": 23,
+      "type_top_or_rising": "top",
+      "value_or_growth": "2",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/02xx5&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "February",
+      "topic_type": "Month",
+      "topic_mid": "/m/02xx5"
+    },
+    {
+      "rank": 24,
+      "type_top_or_rising": "top",
+      "value_or_growth": "2",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/040fb&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "June",
+      "topic_type": "Month",
+      "topic_mid": "/m/040fb"
+    },
+    {
+      "rank": 25,
+      "type_top_or_rising": "top",
+      "value_or_growth": "2",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/11kq5ghr35&date=2024-08-01+2026-08-24&geo=US",
+      "topic": "Claude",
+      "topic_type": "AI",
+      "topic_mid": "/g/11kq5ghr35"
+    }
+  ],
+  "related_availability": {
+    "topics": true,
+    "queries": true
+  },
+  "source_url": "https://trends.google.com/trends/explore?date=2024-08-01%202026-08-24&geo=US&q=what%20is%20an%20api&hl=en-GB"
+}

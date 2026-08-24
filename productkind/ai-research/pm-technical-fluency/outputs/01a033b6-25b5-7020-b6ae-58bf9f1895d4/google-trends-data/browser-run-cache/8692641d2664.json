@@ -1,0 +1,2641 @@
+{
+  "run_id": "8692641d2664",
+  "run_kind": "exact",
+  "input_term": "continuous deployment",
+  "source_term": "continuous deployment",
+  "fallback_term": "",
+  "comparison_group": "",
+  "terms": [
+    "continuous deployment"
+  ],
+  "term_type": "Search term",
+  "geography": "US",
+  "geo_code": "US",
+  "date_range": "2021-08-24 to 2026-08-24",
+  "api_timeframe": "2021-08-24 2026-08-24",
+  "search_type": "Google Web Search",
+  "category_id": 0,
+  "category": "All categories",
+  "retrieval_date": "2026-08-24",
+  "data_status": "sufficient",
+  "headers": [
+    "x",
+    "y1"
+  ],
+  "series": [
+    {
+      "date": "2021-08-22",
+      "values": [
+        21
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-08-29",
+      "values": [
+        24
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-09-05",
+      "values": [
+        16
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-09-12",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-09-19",
+      "values": [
+        22
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-09-26",
+      "values": [
+        20
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-10-03",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-10-10",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-10-17",
+      "values": [
+        19
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-10-24",
+      "values": [
+        26
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-10-31",
+      "values": [
+        15
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-11-07",
+      "values": [
+        23
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-11-14",
+      "values": [
+        23
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-11-21",
+      "values": [
+        21
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-11-28",
+      "values": [
+        30
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-12-05",
+      "values": [
+        12
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-12-12",
+      "values": [
+        19
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-12-19",
+      "values": [
+        15
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2021-12-26",
+      "values": [
+        13
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-01-02",
+      "values": [
+        19
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-01-09",
+      "values": [
+        20
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-01-16",
+      "values": [
+        18
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-01-23",
+      "values": [
+        23
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-01-30",
+      "values": [
+        22
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-02-06",
+      "values": [
+        27
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-02-13",
+      "values": [
+        21
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-02-20",
+      "values": [
+        13
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-02-27",
+      "values": [
+        30
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-03-06",
+      "values": [
+        27
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-03-13",
+      "values": [
+        24
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-03-20",
+      "values": [
+        18
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-03-27",
+      "values": [
+        26
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-04-03",
+      "values": [
+        20
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-04-10",
+      "values": [
+        21
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-04-17",
+      "values": [
+        24
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-04-24",
+      "values": [
+        15
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-05-01",
+      "values": [
+        26
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-05-08",
+      "values": [
+        26
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-05-15",
+      "values": [
+        23
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-05-22",
+      "values": [
+        23
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-05-29",
+      "values": [
+        18
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-06-05",
+      "values": [
+        22
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-06-12",
+      "values": [
+        34
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-06-19",
+      "values": [
+        24
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-06-26",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-07-03",
+      "values": [
+        21
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-07-10",
+      "values": [
+        27
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-07-17",
+      "values": [
+        25
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-07-24",
+      "values": [
+        20
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-07-31",
+      "values": [
+        31
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-08-07",
+      "values": [
+        22
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-08-14",
+      "values": [
+        25
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-08-21",
+      "values": [
+        14
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-08-28",
+      "values": [
+        28
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-09-04",
+      "values": [
+        24
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-09-11",
+      "values": [
+        14
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-09-18",
+      "values": [
+        20
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-09-25",
+      "values": [
+        22
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-10-02",
+      "values": [
+        23
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-10-09",
+      "values": [
+        27
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-10-16",
+      "values": [
+        20
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-10-23",
+      "values": [
+        24
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-10-30",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-11-06",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-11-13",
+      "values": [
+        20
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-11-20",
+      "values": [
+        20
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-11-27",
+      "values": [
+        24
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-12-04",
+      "values": [
+        27
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-12-11",
+      "values": [
+        18
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-12-18",
+      "values": [
+        16
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2022-12-25",
+      "values": [
+        18
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-01-01",
+      "values": [
+        25
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-01-08",
+      "values": [
+        21
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-01-15",
+      "values": [
+        16
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-01-22",
+      "values": [
+        26
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-01-29",
+      "values": [
+        21
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-02-05",
+      "values": [
+        26
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-02-12",
+      "values": [
+        20
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-02-19",
+      "values": [
+        14
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-02-26",
+      "values": [
+        28
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-03-05",
+      "values": [
+        19
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-03-12",
+      "values": [
+        22
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-03-19",
+      "values": [
+        26
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-03-26",
+      "values": [
+        20
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-04-02",
+      "values": [
+        18
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-04-09",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-04-16",
+      "values": [
+        16
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-04-23",
+      "values": [
+        20
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-04-30",
+      "values": [
+        15
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-05-07",
+      "values": [
+        22
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-05-14",
+      "values": [
+        24
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-05-21",
+      "values": [
+        10
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-05-28",
+      "values": [
+        18
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-06-04",
+      "values": [
+        13
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-06-11",
+      "values": [
+        15
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-06-18",
+      "values": [
+        12
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-06-25",
+      "values": [
+        15
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-07-02",
+      "values": [
+        15
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-07-09",
+      "values": [
+        21
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-07-16",
+      "values": [
+        10
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-07-23",
+      "values": [
+        23
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-07-30",
+      "values": [
+        20
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-08-06",
+      "values": [
+        20
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-08-13",
+      "values": [
+        30
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-08-20",
+      "values": [
+        15
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-08-27",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-09-03",
+      "values": [
+        23
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-09-10",
+      "values": [
+        22
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-09-17",
+      "values": [
+        18
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-09-24",
+      "values": [
+        23
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-10-01",
+      "values": [
+        18
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-10-08",
+      "values": [
+        21
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-10-15",
+      "values": [
+        21
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-10-22",
+      "values": [
+        21
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-10-29",
+      "values": [
+        15
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-11-05",
+      "values": [
+        13
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-11-12",
+      "values": [
+        10
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-11-19",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-11-26",
+      "values": [
+        15
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-12-03",
+      "values": [
+        18
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-12-10",
+      "values": [
+        24
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-12-17",
+      "values": [
+        19
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-12-24",
+      "values": [
+        19
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2023-12-31",
+      "values": [
+        10
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-01-07",
+      "values": [
+        21
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-01-14",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-01-21",
+      "values": [
+        23
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-01-28",
+      "values": [
+        14
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-02-04",
+      "values": [
+        20
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-02-11",
+      "values": [
+        25
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-02-18",
+      "values": [
+        10
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-02-25",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-03-03",
+      "values": [
+        10
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-03-10",
+      "values": [
+        23
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-03-17",
+      "values": [
+        15
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-03-24",
+      "values": [
+        21
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-03-31",
+      "values": [
+        15
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-04-07",
+      "values": [
+        12
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-04-14",
+      "values": [
+        18
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-04-21",
+      "values": [
+        19
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-04-28",
+      "values": [
+        21
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-05-05",
+      "values": [
+        29
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-05-12",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-05-19",
+      "values": [
+        25
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-05-26",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-06-02",
+      "values": [
+        18
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-06-09",
+      "values": [
+        22
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-06-16",
+      "values": [
+        13
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-06-23",
+      "values": [
+        16
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-06-30",
+      "values": [
+        19
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-07-07",
+      "values": [
+        20
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-07-14",
+      "values": [
+        22
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-07-21",
+      "values": [
+        20
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-07-28",
+      "values": [
+        11
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-08-04",
+      "values": [
+        27
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-08-11",
+      "values": [
+        14
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-08-18",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-08-25",
+      "values": [
+        12
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-01",
+      "values": [
+        15
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-08",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-15",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-22",
+      "values": [
+        19
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-29",
+      "values": [
+        14
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-10-06",
+      "values": [
+        22
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-10-13",
+      "values": [
+        12
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-10-20",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-10-27",
+      "values": [
+        28
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-11-03",
+      "values": [
+        14
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-11-10",
+      "values": [
+        16
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-11-17",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-11-24",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-01",
+      "values": [
+        10
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-08",
+      "values": [
+        23
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-15",
+      "values": [
+        11
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-22",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-29",
+      "values": [
+        11
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-01-05",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-01-12",
+      "values": [
+        23
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-01-19",
+      "values": [
+        21
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-01-26",
+      "values": [
+        21
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-02-02",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-02-09",
+      "values": [
+        22
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-02-16",
+      "values": [
+        26
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-02-23",
+      "values": [
+        20
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-02",
+      "values": [
+        20
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-09",
+      "values": [
+        28
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-16",
+      "values": [
+        31
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-23",
+      "values": [
+        16
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-30",
+      "values": [
+        21
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-04-06",
+      "values": [
+        29
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-04-13",
+      "values": [
+        20
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-04-20",
+      "values": [
+        31
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-04-27",
+      "values": [
+        27
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-05-04",
+      "values": [
+        48
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-05-11",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-05-18",
+      "values": [
+        25
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-05-25",
+      "values": [
+        18
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-01",
+      "values": [
+        31
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-08",
+      "values": [
+        64
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-15",
+      "values": [
+        37
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-22",
+      "values": [
+        45
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-29",
+      "values": [
+        47
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-07-06",
+      "values": [
+        42
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-07-13",
+      "values": [
+        60
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-07-20",
+      "values": [
+        55
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-07-27",
+      "values": [
+        46
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-03",
+      "values": [
+        49
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-10",
+      "values": [
+        48
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-17",
+      "values": [
+        51
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-24",
+      "values": [
+        47
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-31",
+      "values": [
+        39
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-09-07",
+      "values": [
+        31
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-09-14",
+      "values": [
+        60
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-09-21",
+      "values": [
+        73
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-09-28",
+      "values": [
+        74
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-10-05",
+      "values": [
+        44
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-10-12",
+      "values": [
+        47
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-10-19",
+      "values": [
+        35
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-10-26",
+      "values": [
+        44
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-02",
+      "values": [
+        48
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-09",
+      "values": [
+        50
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-16",
+      "values": [
+        42
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-23",
+      "values": [
+        35
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-30",
+      "values": [
+        30
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-12-07",
+      "values": [
+        25
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-12-14",
+      "values": [
+        31
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-12-21",
+      "values": [
+        30
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-12-28",
+      "values": [
+        34
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-01-04",
+      "values": [
+        29
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-01-11",
+      "values": [
+        35
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-01-18",
+      "values": [
+        45
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-01-25",
+      "values": [
+        54
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-02-01",
+      "values": [
+        73
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-02-08",
+      "values": [
+        59
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-02-15",
+      "values": [
+        62
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-02-22",
+      "values": [
+        82
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-01",
+      "values": [
+        70
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-08",
+      "values": [
+        78
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-15",
+      "values": [
+        79
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-22",
+      "values": [
+        87
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-29",
+      "values": [
+        56
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-04-05",
+      "values": [
+        71
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-04-12",
+      "values": [
+        64
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-04-19",
+      "values": [
+        67
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-04-26",
+      "values": [
+        68
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-03",
+      "values": [
+        77
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-10",
+      "values": [
+        69
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-17",
+      "values": [
+        83
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-24",
+      "values": [
+        90
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-31",
+      "values": [
+        88
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-06-07",
+      "values": [
+        100
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-06-14",
+      "values": [
+        93
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-06-21",
+      "values": [
+        85
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-06-28",
+      "values": [
+        64
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-07-05",
+      "values": [
+        70
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-07-12",
+      "values": [
+        57
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-07-19",
+      "values": [
+        28
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-07-26",
+      "values": [
+        32
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-08-02",
+      "values": [
+        28
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-08-09",
+      "values": [
+        29
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-08-16",
+      "values": [
+        22
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-08-23",
+      "values": [
+        12
+      ],
+      "is_partial": true
+    }
+  ],
+  "nonzero_points": [
+    255
+  ],
+  "queries": [
+    {
+      "rank": 1,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=ci/cd+meaning&date=2021-08-24+2026-08-24&geo=US",
+      "query": "ci/cd meaning"
+    },
+    {
+      "rank": 2,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=what+is+the+rationale+for+scrum+teams+implementing+short+sprints?&date=2021-08-24+2026-08-24&geo=US",
+      "query": "what is the rationale for scrum teams implementing short sprints?"
+    },
+    {
+      "rank": 3,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=which+agile+approach+helps+teams+improve+their+project+cycle+time+by+considering+team+capacity?&date=2021-08-24+2026-08-24&geo=US",
+      "query": "which agile approach helps teams improve their project cycle time by considering team capacity?"
+    },
+    {
+      "rank": 4,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+120%",
+      "breakout": "",
+      "href": "/trends/explore?q=tools+for+continuous+deployment&date=2021-08-24+2026-08-24&geo=US",
+      "query": "tools for continuous deployment"
+    },
+    {
+      "rank": 5,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+110%",
+      "breakout": "",
+      "href": "/trends/explore?q=ci/cd&date=2021-08-24+2026-08-24&geo=US",
+      "query": "ci/cd"
+    },
+    {
+      "rank": 6,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+90%",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+continuous+delivery&date=2021-08-24+2026-08-24&geo=US",
+      "query": "what is continuous delivery"
+    },
+    {
+      "rank": 7,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+80%",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+continuous+deployment&date=2021-08-24+2026-08-24&geo=US",
+      "query": "what is continuous deployment"
+    },
+    {
+      "rank": 8,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+70%",
+      "breakout": "",
+      "href": "/trends/explore?q=continuous+deployment+software&date=2021-08-24+2026-08-24&geo=US",
+      "query": "continuous deployment software"
+    },
+    {
+      "rank": 9,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+60%",
+      "breakout": "",
+      "href": "/trends/explore?q=github&date=2021-08-24+2026-08-24&geo=US",
+      "query": "github"
+    },
+    {
+      "rank": 10,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+50%",
+      "breakout": "",
+      "href": "/trends/explore?q=continuous+delivery+and+continuous+deployment&date=2021-08-24+2026-08-24&geo=US",
+      "query": "continuous delivery and continuous deployment"
+    },
+    {
+      "rank": 11,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+50%",
+      "breakout": "",
+      "href": "/trends/explore?q=continuous+development&date=2021-08-24+2026-08-24&geo=US",
+      "query": "continuous development"
+    },
+    {
+      "rank": 1,
+      "type_top_or_rising": "top",
+      "value_or_growth": "100",
+      "breakout": "",
+      "href": "/trends/explore?q=continuous+integration+continuous+deployment&date=2021-08-24+2026-08-24&geo=US",
+      "query": "continuous integration continuous deployment"
+    },
+    {
+      "rank": 2,
+      "type_top_or_rising": "top",
+      "value_or_growth": "100",
+      "breakout": "",
+      "href": "/trends/explore?q=continuous+integration&date=2021-08-24+2026-08-24&geo=US",
+      "query": "continuous integration"
+    },
+    {
+      "rank": 3,
+      "type_top_or_rising": "top",
+      "value_or_growth": "94",
+      "breakout": "",
+      "href": "/trends/explore?q=continuous+delivery&date=2021-08-24+2026-08-24&geo=US",
+      "query": "continuous delivery"
+    },
+    {
+      "rank": 4,
+      "type_top_or_rising": "top",
+      "value_or_growth": "72",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+continuous+deployment&date=2021-08-24+2026-08-24&geo=US",
+      "query": "what is continuous deployment"
+    },
+    {
+      "rank": 5,
+      "type_top_or_rising": "top",
+      "value_or_growth": "54",
+      "breakout": "",
+      "href": "/trends/explore?q=continuous+integration+and+deployment&date=2021-08-24+2026-08-24&geo=US",
+      "query": "continuous integration and deployment"
+    },
+    {
+      "rank": 6,
+      "type_top_or_rising": "top",
+      "value_or_growth": "54",
+      "breakout": "",
+      "href": "/trends/explore?q=continuous+integration+and+continuous+deployment&date=2021-08-24+2026-08-24&geo=US",
+      "query": "continuous integration and continuous deployment"
+    },
+    {
+      "rank": 7,
+      "type_top_or_rising": "top",
+      "value_or_growth": "45",
+      "breakout": "",
+      "href": "/trends/explore?q=continuous+deployment+vs+delivery&date=2021-08-24+2026-08-24&geo=US",
+      "query": "continuous deployment vs delivery"
+    },
+    {
+      "rank": 8,
+      "type_top_or_rising": "top",
+      "value_or_growth": "45",
+      "breakout": "",
+      "href": "/trends/explore?q=continuous+deployment+vs+continuous+delivery&date=2021-08-24+2026-08-24&geo=US",
+      "query": "continuous deployment vs continuous delivery"
+    },
+    {
+      "rank": 9,
+      "type_top_or_rising": "top",
+      "value_or_growth": "43",
+      "breakout": "",
+      "href": "/trends/explore?q=continuous+deployment+software&date=2021-08-24+2026-08-24&geo=US",
+      "query": "continuous deployment software"
+    },
+    {
+      "rank": 10,
+      "type_top_or_rising": "top",
+      "value_or_growth": "40",
+      "breakout": "",
+      "href": "/trends/explore?q=continuous+deployment+tools&date=2021-08-24+2026-08-24&geo=US",
+      "query": "continuous deployment tools"
+    },
+    {
+      "rank": 11,
+      "type_top_or_rising": "top",
+      "value_or_growth": "39",
+      "breakout": "",
+      "href": "/trends/explore?q=continuous+delivery+and+continuous+deployment&date=2021-08-24+2026-08-24&geo=US",
+      "query": "continuous delivery and continuous deployment"
+    },
+    {
+      "rank": 12,
+      "type_top_or_rising": "top",
+      "value_or_growth": "32",
+      "breakout": "",
+      "href": "/trends/explore?q=devops+continuous+deployment&date=2021-08-24+2026-08-24&geo=US",
+      "query": "devops continuous deployment"
+    },
+    {
+      "rank": 13,
+      "type_top_or_rising": "top",
+      "value_or_growth": "32",
+      "breakout": "",
+      "href": "/trends/explore?q=devops&date=2021-08-24+2026-08-24&geo=US",
+      "query": "devops"
+    },
+    {
+      "rank": 14,
+      "type_top_or_rising": "top",
+      "value_or_growth": "29",
+      "breakout": "",
+      "href": "/trends/explore?q=continuous+development&date=2021-08-24+2026-08-24&geo=US",
+      "query": "continuous development"
+    },
+    {
+      "rank": 15,
+      "type_top_or_rising": "top",
+      "value_or_growth": "28",
+      "breakout": "",
+      "href": "/trends/explore?q=github&date=2021-08-24+2026-08-24&geo=US",
+      "query": "github"
+    },
+    {
+      "rank": 16,
+      "type_top_or_rising": "top",
+      "value_or_growth": "27",
+      "breakout": "",
+      "href": "/trends/explore?q=continuous+deployment+pipeline&date=2021-08-24+2026-08-24&geo=US",
+      "query": "continuous deployment pipeline"
+    },
+    {
+      "rank": 17,
+      "type_top_or_rising": "top",
+      "value_or_growth": "22",
+      "breakout": "",
+      "href": "/trends/explore?q=azure+continuous+deployment&date=2021-08-24+2026-08-24&geo=US",
+      "query": "azure continuous deployment"
+    },
+    {
+      "rank": 18,
+      "type_top_or_rising": "top",
+      "value_or_growth": "22",
+      "breakout": "",
+      "href": "/trends/explore?q=continuous+integration+vs+continuous+deployment&date=2021-08-24+2026-08-24&geo=US",
+      "query": "continuous integration vs continuous deployment"
+    },
+    {
+      "rank": 19,
+      "type_top_or_rising": "top",
+      "value_or_growth": "21",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+continuous+delivery&date=2021-08-24+2026-08-24&geo=US",
+      "query": "what is continuous delivery"
+    },
+    {
+      "rank": 20,
+      "type_top_or_rising": "top",
+      "value_or_growth": "21",
+      "breakout": "",
+      "href": "/trends/explore?q=tools+for+continuous+deployment&date=2021-08-24+2026-08-24&geo=US",
+      "query": "tools for continuous deployment"
+    },
+    {
+      "rank": 21,
+      "type_top_or_rising": "top",
+      "value_or_growth": "21",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+continuous+integration&date=2021-08-24+2026-08-24&geo=US",
+      "query": "what is continuous integration"
+    },
+    {
+      "rank": 22,
+      "type_top_or_rising": "top",
+      "value_or_growth": "20",
+      "breakout": "",
+      "href": "/trends/explore?q=ci/cd&date=2021-08-24+2026-08-24&geo=US",
+      "query": "ci/cd"
+    },
+    {
+      "rank": 23,
+      "type_top_or_rising": "top",
+      "value_or_growth": "1",
+      "breakout": "",
+      "href": "/trends/explore?q=ci/cd+meaning&date=2021-08-24+2026-08-24&geo=US",
+      "query": "ci/cd meaning"
+    },
+    {
+      "rank": 24,
+      "type_top_or_rising": "top",
+      "value_or_growth": "<1",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+the+rationale+for+scrum+teams+implementing+short+sprints?&date=2021-08-24+2026-08-24&geo=US",
+      "query": "what is the rationale for scrum teams implementing short sprints?"
+    },
+    {
+      "rank": 25,
+      "type_top_or_rising": "top",
+      "value_or_growth": "<1",
+      "breakout": "",
+      "href": "/trends/explore?q=which+agile+approach+helps+teams+improve+their+project+cycle+time+by+considering+team+capacity?&date=2021-08-24+2026-08-24&geo=US",
+      "query": "which agile approach helps teams improve their project cycle time by considering team capacity?"
+    }
+  ],
+  "topics": [
+    {
+      "rank": 1,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11b77d3kyg&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "2025",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11b77d3kyg"
+    },
+    {
+      "rank": 2,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11spgy0dz3&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "succeeding",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11spgy0dz3"
+    },
+    {
+      "rank": 3,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11p129bq3t&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "important",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11p129bq3t"
+    },
+    {
+      "rank": 4,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11b824z6qz&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "Microsoft",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11b824z6qz"
+    },
+    {
+      "rank": 5,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/120vhg3f&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "Learning",
+      "topic_type": "Topic",
+      "topic_mid": "/g/120vhg3f"
+    },
+    {
+      "rank": 6,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11pyyblxqd&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "necessary",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11pyyblxqd"
+    },
+    {
+      "rank": 7,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/04wzr&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "March",
+      "topic_type": "Month",
+      "topic_mid": "/m/04wzr"
+    },
+    {
+      "rank": 8,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11rxkrzn6f&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "cut",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11rxkrzn6f"
+    },
+    {
+      "rank": 9,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/0qt178q&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "Microsoft",
+      "topic_type": "Topic",
+      "topic_mid": "/m/0qt178q"
+    },
+    {
+      "rank": 10,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11t76_qt5v&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "DevSecOps",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11t76_qt5v"
+    },
+    {
+      "rank": 11,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/06vkl&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "September",
+      "topic_type": "Month",
+      "topic_mid": "/m/06vkl"
+    },
+    {
+      "rank": 12,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/0ll3&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "August",
+      "topic_type": "Month",
+      "topic_mid": "/m/0ll3"
+    },
+    {
+      "rank": 13,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/015fr&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "Brazil",
+      "topic_type": "Country in South America",
+      "topic_mid": "/m/015fr"
+    },
+    {
+      "rank": 14,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/120z18l3&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "Company",
+      "topic_type": "Organization type",
+      "topic_mid": "/g/120z18l3"
+    },
+    {
+      "rank": 15,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/0mkz&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "Artificial intelligence",
+      "topic_type": "Professional field",
+      "topic_mid": "/m/0mkz"
+    },
+    {
+      "rank": 16,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11b77d6b6g&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "2026",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11b77d6b6g"
+    },
+    {
+      "rank": 17,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+1,550%",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/121jnq1m&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "Business",
+      "topic_type": "Topic",
+      "topic_mid": "/g/121jnq1m"
+    },
+    {
+      "rank": 18,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+500%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0bg2p&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "Security",
+      "topic_type": "Topic",
+      "topic_mid": "/m/0bg2p"
+    },
+    {
+      "rank": 19,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+300%",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/11gt__fphs&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "Continuous deployment",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11gt__fphs"
+    },
+    {
+      "rank": 20,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+300%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/01jwgf&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "Product",
+      "topic_type": "Business",
+      "topic_mid": "/m/01jwgf"
+    },
+    {
+      "rank": 21,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+250%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/026sq&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "Data",
+      "topic_type": "Topic",
+      "topic_mid": "/m/026sq"
+    },
+    {
+      "rank": 22,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+190%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/07b7r&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "Strategy",
+      "topic_type": "Topic",
+      "topic_mid": "/m/07b7r"
+    },
+    {
+      "rank": 23,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+180%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0ryppmg&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "GitHub",
+      "topic_type": "Company",
+      "topic_mid": "/m/0ryppmg"
+    },
+    {
+      "rank": 24,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+120%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0bj6r&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "System",
+      "topic_type": "Topic",
+      "topic_mid": "/m/0bj6r"
+    },
+    {
+      "rank": 1,
+      "type_top_or_rising": "top",
+      "value_or_growth": "100",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/05nk6s&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "Software deployment",
+      "topic_type": "Topic",
+      "topic_mid": "/m/05nk6s"
+    },
+    {
+      "rank": 2,
+      "type_top_or_rising": "top",
+      "value_or_growth": "80",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/11gt__fphs&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "Continuous deployment",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11gt__fphs"
+    },
+    {
+      "rank": 3,
+      "type_top_or_rising": "top",
+      "value_or_growth": "27",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/05vvqy&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "Continuous integration",
+      "topic_type": "Topic",
+      "topic_mid": "/m/05vvqy"
+    },
+    {
+      "rank": 4,
+      "type_top_or_rising": "top",
+      "value_or_growth": "21",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0hnb4gs&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "Continuous delivery",
+      "topic_type": "Topic",
+      "topic_mid": "/m/0hnb4gs"
+    },
+    {
+      "rank": 5,
+      "type_top_or_rising": "top",
+      "value_or_growth": "16",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0278khr&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "System integration",
+      "topic_type": "Topic",
+      "topic_mid": "/m/0278khr"
+    },
+    {
+      "rank": 6,
+      "type_top_or_rising": "top",
+      "value_or_growth": "12",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/11b77d3kyg&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "2025",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11b77d3kyg"
+    },
+    {
+      "rank": 7,
+      "type_top_or_rising": "top",
+      "value_or_growth": "12",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/120z18l3&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "Company",
+      "topic_type": "Organization type",
+      "topic_mid": "/g/120z18l3"
+    },
+    {
+      "rank": 8,
+      "type_top_or_rising": "top",
+      "value_or_growth": "11",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/11b77d6b6g&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "2026",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11b77d6b6g"
+    },
+    {
+      "rank": 9,
+      "type_top_or_rising": "top",
+      "value_or_growth": "10",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/01mf0&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "Software",
+      "topic_type": "Software type",
+      "topic_mid": "/m/01mf0"
+    },
+    {
+      "rank": 10,
+      "type_top_or_rising": "top",
+      "value_or_growth": "10",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0mkz&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "Artificial intelligence",
+      "topic_type": "Professional field",
+      "topic_mid": "/m/0mkz"
+    },
+    {
+      "rank": 11,
+      "type_top_or_rising": "top",
+      "value_or_growth": "9",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/04_tv&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "Management",
+      "topic_type": "Field of study",
+      "topic_mid": "/m/04_tv"
+    },
+    {
+      "rank": 12,
+      "type_top_or_rising": "top",
+      "value_or_growth": "9",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/026sq&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "Data",
+      "topic_type": "Topic",
+      "topic_mid": "/m/026sq"
+    },
+    {
+      "rank": 13,
+      "type_top_or_rising": "top",
+      "value_or_growth": "9",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0c3tq11&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "DevOps",
+      "topic_type": "Topic",
+      "topic_mid": "/m/0c3tq11"
+    },
+    {
+      "rank": 14,
+      "type_top_or_rising": "top",
+      "value_or_growth": "7",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/11c2p8c42b&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "CI/CD",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11c2p8c42b"
+    },
+    {
+      "rank": 15,
+      "type_top_or_rising": "top",
+      "value_or_growth": "7",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0ryppmg&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "GitHub",
+      "topic_type": "Company",
+      "topic_mid": "/m/0ryppmg"
+    },
+    {
+      "rank": 16,
+      "type_top_or_rising": "top",
+      "value_or_growth": "7",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0bj6r&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "System",
+      "topic_type": "Topic",
+      "topic_mid": "/m/0bj6r"
+    },
+    {
+      "rank": 17,
+      "type_top_or_rising": "top",
+      "value_or_growth": "7",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/121jnq1m&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "Business",
+      "topic_type": "Topic",
+      "topic_mid": "/g/121jnq1m"
+    },
+    {
+      "rank": 18,
+      "type_top_or_rising": "top",
+      "value_or_growth": "7",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/02bj4k&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "Application software",
+      "topic_type": "Software classification",
+      "topic_mid": "/m/02bj4k"
+    },
+    {
+      "rank": 19,
+      "type_top_or_rising": "top",
+      "value_or_growth": "6",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/07k1x&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "Tool",
+      "topic_type": "Topic",
+      "topic_mid": "/m/07k1x"
+    },
+    {
+      "rank": 20,
+      "type_top_or_rising": "top",
+      "value_or_growth": "6",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/02y_9m3&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "Cloud computing",
+      "topic_type": "Organization type",
+      "topic_mid": "/m/02y_9m3"
+    },
+    {
+      "rank": 21,
+      "type_top_or_rising": "top",
+      "value_or_growth": "6",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/01jwgf&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "Product",
+      "topic_type": "Business",
+      "topic_mid": "/m/01jwgf"
+    },
+    {
+      "rank": 22,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0bg2p&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "Security",
+      "topic_type": "Topic",
+      "topic_mid": "/m/0bg2p"
+    },
+    {
+      "rank": 23,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/076dn&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "Software Testing",
+      "topic_type": "Software",
+      "topic_mid": "/m/076dn"
+    },
+    {
+      "rank": 24,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/04y7lrx&date=2021-08-24+2026-08-24&geo=US",
+      "topic": "Microsoft Azure",
+      "topic_type": "Computer application",
+      "topic_mid": "/m/04y7lrx"
+    }
+  ],
+  "related_availability": {
+    "topics": true,
+    "queries": true
+  },
+  "source_url": "https://trends.google.com/trends/explore?date=2021-08-24%202026-08-24&geo=US&q=continuous%20deployment&hl=en-GB"
+}

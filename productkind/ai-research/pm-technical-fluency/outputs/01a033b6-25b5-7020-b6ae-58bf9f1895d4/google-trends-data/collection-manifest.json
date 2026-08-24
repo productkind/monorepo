@@ -1,0 +1,19 @@
+{
+  "retrieval_date": "2026-08-24",
+  "search_type": "Google Web Search",
+  "category_id": 0,
+  "category": "All categories",
+  "extraction_route": "Signed-in Google Trends rendered interface",
+  "run_counts": {
+    "exact": 150,
+    "comparison": 30,
+    "fallback": 22
+  },
+  "row_counts": {
+    "dataset_a": 27847,
+    "dataset_b": 2743,
+    "dataset_c": 4779,
+    "dataset_d": 14469,
+    "run_metadata": 202
+  }
+}

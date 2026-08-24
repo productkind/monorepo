@@ -1,0 +1,1498 @@
+{
+  "run_id": "b03b47f4f877",
+  "run_kind": "fallback",
+  "input_term": "frontend backend database",
+  "source_term": "frontend backend",
+  "fallback_term": "frontend backend",
+  "comparison_group": "",
+  "terms": [
+    "frontend backend"
+  ],
+  "term_type": "Search term",
+  "geography": "UK",
+  "geo_code": "GB",
+  "date_range": "2024-08-01 to 2026-08-24",
+  "api_timeframe": "2024-08-01 2026-08-24",
+  "search_type": "Google Web Search",
+  "category_id": 0,
+  "category": "All categories",
+  "retrieval_date": "2026-08-24",
+  "data_status": "sufficient",
+  "headers": [
+    "x",
+    "y1"
+  ],
+  "series": [
+    {
+      "date": "2024-07-28",
+      "values": [
+        35
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-08-04",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-08-11",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-08-18",
+      "values": [
+        41
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-08-25",
+      "values": [
+        32
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-01",
+      "values": [
+        61
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-08",
+      "values": [
+        48
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-15",
+      "values": [
+        38
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-22",
+      "values": [
+        34
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-29",
+      "values": [
+        37
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-10-06",
+      "values": [
+        54
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-10-13",
+      "values": [
+        57
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-10-20",
+      "values": [
+        49
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-10-27",
+      "values": [
+        37
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-11-03",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-11-10",
+      "values": [
+        48
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-11-17",
+      "values": [
+        64
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-11-24",
+      "values": [
+        35
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-01",
+      "values": [
+        52
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-08",
+      "values": [
+        50
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-15",
+      "values": [
+        37
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-22",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-29",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-01-05",
+      "values": [
+        45
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-01-12",
+      "values": [
+        51
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-01-19",
+      "values": [
+        40
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-01-26",
+      "values": [
+        52
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-02-02",
+      "values": [
+        47
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-02-09",
+      "values": [
+        63
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-02-16",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-02-23",
+      "values": [
+        46
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-02",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-09",
+      "values": [
+        65
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-16",
+      "values": [
+        59
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-23",
+      "values": [
+        50
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-30",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-04-06",
+      "values": [
+        47
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-04-13",
+      "values": [
+        54
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-04-20",
+      "values": [
+        36
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-04-27",
+      "values": [
+        37
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-05-04",
+      "values": [
+        59
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-05-11",
+      "values": [
+        42
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-05-18",
+      "values": [
+        38
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-05-25",
+      "values": [
+        39
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-01",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-08",
+      "values": [
+        62
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-15",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-22",
+      "values": [
+        34
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-29",
+      "values": [
+        55
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-07-06",
+      "values": [
+        49
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-07-13",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-07-20",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-07-27",
+      "values": [
+        43
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-03",
+      "values": [
+        47
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-10",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-17",
+      "values": [
+        42
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-24",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-31",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-09-07",
+      "values": [
+        43
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-09-14",
+      "values": [
+        41
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-09-21",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-09-28",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-10-05",
+      "values": [
+        49
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-10-12",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-10-19",
+      "values": [
+        33
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-10-26",
+      "values": [
+        43
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-02",
+      "values": [
+        43
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-09",
+      "values": [
+        50
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-16",
+      "values": [
+        58
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-23",
+      "values": [
+        63
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-30",
+      "values": [
+        67
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-12-07",
+      "values": [
+        49
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-12-14",
+      "values": [
+        69
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-12-21",
+      "values": [
+        69
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-12-28",
+      "values": [
+        40
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-01-04",
+      "values": [
+        100
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-01-11",
+      "values": [
+        63
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-01-18",
+      "values": [
+        54
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-01-25",
+      "values": [
+        92
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-02-01",
+      "values": [
+        48
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-02-08",
+      "values": [
+        90
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-02-15",
+      "values": [
+        69
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-02-22",
+      "values": [
+        30
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-01",
+      "values": [
+        48
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-08",
+      "values": [
+        85
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-15",
+      "values": [
+        97
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-22",
+      "values": [
+        84
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-29",
+      "values": [
+        88
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-04-05",
+      "values": [
+        57
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-04-12",
+      "values": [
+        72
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-04-19",
+      "values": [
+        79
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-04-26",
+      "values": [
+        83
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-03",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-10",
+      "values": [
+        81
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-17",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-24",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-31",
+      "values": [
+        46
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-06-07",
+      "values": [
+        44
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-06-14",
+      "values": [
+        62
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-06-21",
+      "values": [
+        91
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-06-28",
+      "values": [
+        94
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-07-05",
+      "values": [
+        87
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-07-12",
+      "values": [
+        54
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-07-19",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-07-26",
+      "values": [
+        49
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-08-02",
+      "values": [
+        52
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-08-09",
+      "values": [
+        28
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-08-16",
+      "values": [
+        37
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-08-23",
+      "values": [
+        8
+      ],
+      "is_partial": true
+    }
+  ],
+  "nonzero_points": [
+    87
+  ],
+  "queries": [
+    {
+      "rank": 1,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=wikipedia&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "wikipedia"
+    },
+    {
+      "rank": 2,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+250%",
+      "breakout": "",
+      "href": "/trends/explore?q=frontend+frameworks&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "frontend frameworks"
+    },
+    {
+      "rank": 3,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+100%",
+      "breakout": "",
+      "href": "/trends/explore?q=backend+for+frontend+pattern&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "backend for frontend pattern"
+    },
+    {
+      "rank": 4,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+90%",
+      "breakout": "",
+      "href": "/trends/explore?q=github&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "github"
+    },
+    {
+      "rank": 5,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+90%",
+      "breakout": "",
+      "href": "/trends/explore?q=node.js+backend&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "node.js backend"
+    },
+    {
+      "rank": 6,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+70%",
+      "breakout": "",
+      "href": "/trends/explore?q=backend+vs+frontend+development&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "backend vs frontend development"
+    },
+    {
+      "rank": 7,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+60%",
+      "breakout": "",
+      "href": "/trends/explore?q=is+next+js+frontend+or+backend&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "is next js frontend or backend"
+    },
+    {
+      "rank": 8,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+50%",
+      "breakout": "",
+      "href": "/trends/explore?q=node.js&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "node.js"
+    },
+    {
+      "rank": 9,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+40%",
+      "breakout": "",
+      "href": "/trends/explore?q=vite&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "vite"
+    },
+    {
+      "rank": 1,
+      "type_top_or_rising": "top",
+      "value_or_growth": "100",
+      "breakout": "",
+      "href": "/trends/explore?q=frontend+and+backend&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "frontend and backend"
+    },
+    {
+      "rank": 2,
+      "type_top_or_rising": "top",
+      "value_or_growth": "86",
+      "breakout": "",
+      "href": "/trends/explore?q=backend+for+frontend&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "backend for frontend"
+    },
+    {
+      "rank": 3,
+      "type_top_or_rising": "top",
+      "value_or_growth": "44",
+      "breakout": "",
+      "href": "/trends/explore?q=backend+vs+frontend&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "backend vs frontend"
+    },
+    {
+      "rank": 4,
+      "type_top_or_rising": "top",
+      "value_or_growth": "20",
+      "breakout": "",
+      "href": "/trends/explore?q=backend+development&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "backend development"
+    },
+    {
+      "rank": 5,
+      "type_top_or_rising": "top",
+      "value_or_growth": "18",
+      "breakout": "",
+      "href": "/trends/explore?q=frontend+developer&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "frontend developer"
+    },
+    {
+      "rank": 6,
+      "type_top_or_rising": "top",
+      "value_or_growth": "16",
+      "breakout": "",
+      "href": "/trends/explore?q=backend+developer&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "backend developer"
+    },
+    {
+      "rank": 7,
+      "type_top_or_rising": "top",
+      "value_or_growth": "13",
+      "breakout": "",
+      "href": "/trends/explore?q=github&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "github"
+    },
+    {
+      "rank": 8,
+      "type_top_or_rising": "top",
+      "value_or_growth": "12",
+      "breakout": "",
+      "href": "/trends/explore?q=javascript&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "javascript"
+    },
+    {
+      "rank": 9,
+      "type_top_or_rising": "top",
+      "value_or_growth": "10",
+      "breakout": "",
+      "href": "/trends/explore?q=frontend+frameworks&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "frontend frameworks"
+    },
+    {
+      "rank": 10,
+      "type_top_or_rising": "top",
+      "value_or_growth": "7",
+      "breakout": "",
+      "href": "/trends/explore?q=backend+for+frontend+pattern&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "backend for frontend pattern"
+    },
+    {
+      "rank": 11,
+      "type_top_or_rising": "top",
+      "value_or_growth": "7",
+      "breakout": "",
+      "href": "/trends/explore?q=node.js&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "node.js"
+    },
+    {
+      "rank": 12,
+      "type_top_or_rising": "top",
+      "value_or_growth": "7",
+      "breakout": "",
+      "href": "/trends/explore?q=node.js+backend&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "node.js backend"
+    },
+    {
+      "rank": 13,
+      "type_top_or_rising": "top",
+      "value_or_growth": "6",
+      "breakout": "",
+      "href": "/trends/explore?q=difference+between+frontend+and+backend&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "difference between frontend and backend"
+    },
+    {
+      "rank": 14,
+      "type_top_or_rising": "top",
+      "value_or_growth": "6",
+      "breakout": "",
+      "href": "/trends/explore?q=nextjs&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "nextjs"
+    },
+    {
+      "rank": 15,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=node+js&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "node js"
+    },
+    {
+      "rank": 16,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=backend+vs+frontend+development&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "backend vs frontend development"
+    },
+    {
+      "rank": 17,
+      "type_top_or_rising": "top",
+      "value_or_growth": "4",
+      "breakout": "",
+      "href": "/trends/explore?q=django&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "django"
+    },
+    {
+      "rank": 18,
+      "type_top_or_rising": "top",
+      "value_or_growth": "3",
+      "breakout": "",
+      "href": "/trends/explore?q=vite&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "vite"
+    },
+    {
+      "rank": 19,
+      "type_top_or_rising": "top",
+      "value_or_growth": "3",
+      "breakout": "",
+      "href": "/trends/explore?q=is+node+js+frontend+or+backend&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "is node js frontend or backend"
+    },
+    {
+      "rank": 20,
+      "type_top_or_rising": "top",
+      "value_or_growth": "3",
+      "breakout": "",
+      "href": "/trends/explore?q=is+typescript+frontend+or+backend&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "is typescript frontend or backend"
+    },
+    {
+      "rank": 21,
+      "type_top_or_rising": "top",
+      "value_or_growth": "2",
+      "breakout": "",
+      "href": "/trends/explore?q=is+next+js+frontend+or+backend&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "is next js frontend or backend"
+    },
+    {
+      "rank": 22,
+      "type_top_or_rising": "top",
+      "value_or_growth": "2",
+      "breakout": "",
+      "href": "/trends/explore?q=wikipedia&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "wikipedia"
+    },
+    {
+      "rank": 23,
+      "type_top_or_rising": "top",
+      "value_or_growth": "2",
+      "breakout": "",
+      "href": "/trends/explore?q=lidl+near+me&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "lidl near me"
+    }
+  ],
+  "topics": [
+    {
+      "rank": 1,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11b77d6b6g&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "2026",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11b77d6b6g"
+    },
+    {
+      "rank": 2,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/02j9z&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Europe",
+      "topic_type": "Continent",
+      "topic_mid": "/m/02j9z"
+    },
+    {
+      "rank": 3,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/0f8l9c&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "France",
+      "topic_type": "Country in Europe",
+      "topic_mid": "/m/0f8l9c"
+    },
+    {
+      "rank": 4,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/06bnz&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Russia",
+      "topic_type": "Country",
+      "topic_mid": "/m/06bnz"
+    },
+    {
+      "rank": 5,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/03_ly&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "January",
+      "topic_type": "Month",
+      "topic_mid": "/m/03_ly"
+    },
+    {
+      "rank": 6,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/040fb&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "June",
+      "topic_type": "Month",
+      "topic_mid": "/m/040fb"
+    },
+    {
+      "rank": 7,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11kq5ghr35&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Claude",
+      "topic_type": "AI",
+      "topic_mid": "/g/11kq5ghr35"
+    },
+    {
+      "rank": 8,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/020xwm&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Policy",
+      "topic_type": "Topic",
+      "topic_mid": "/m/020xwm"
+    },
+    {
+      "rank": 9,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/0g_fl&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Investment",
+      "topic_type": "Topic",
+      "topic_mid": "/m/0g_fl"
+    },
+    {
+      "rank": 10,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11bc5zy143&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Reuters",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11bc5zy143"
+    },
+    {
+      "rank": 11,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/0_6t_z8&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "European Union",
+      "topic_type": "Supranational political union",
+      "topic_mid": "/m/0_6t_z8"
+    },
+    {
+      "rank": 12,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+650%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0mkz&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Artificial intelligence",
+      "topic_type": "Professional field",
+      "topic_mid": "/m/0mkz"
+    },
+    {
+      "rank": 13,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+130%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/03nfmq&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Architecture",
+      "topic_type": "Field of study",
+      "topic_mid": "/m/03nfmq"
+    },
+    {
+      "rank": 14,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+100%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/02w88k&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Salary",
+      "topic_type": "Topic",
+      "topic_mid": "/m/02w88k"
+    },
+    {
+      "rank": 15,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+80%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/039w_d&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Software framework",
+      "topic_type": "Topic",
+      "topic_mid": "/m/039w_d"
+    },
+    {
+      "rank": 16,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+70%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0h94y36&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Mobile app",
+      "topic_type": "Computer program",
+      "topic_mid": "/m/0h94y36"
+    },
+    {
+      "rank": 17,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+70%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0ryppmg&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "GitHub",
+      "topic_type": "Company",
+      "topic_mid": "/m/0ryppmg"
+    },
+    {
+      "rank": 18,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+60%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/085n4&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Website",
+      "topic_type": "Topic",
+      "topic_mid": "/m/085n4"
+    },
+    {
+      "rank": 19,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+60%",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/11h4q9rcf3&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Next.js",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11h4q9rcf3"
+    },
+    {
+      "rank": 20,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+40%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/026sq&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Data",
+      "topic_type": "Topic",
+      "topic_mid": "/m/026sq"
+    },
+    {
+      "rank": 1,
+      "type_top_or_rising": "top",
+      "value_or_growth": "100",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/010gqt_p&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Front-end web development",
+      "topic_type": "Topic",
+      "topic_mid": "/m/010gqt_p"
+    },
+    {
+      "rank": 2,
+      "type_top_or_rising": "top",
+      "value_or_growth": "99",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/121n9r1p&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Back End Development",
+      "topic_type": "Topic",
+      "topic_mid": "/g/121n9r1p"
+    },
+    {
+      "rank": 3,
+      "type_top_or_rising": "top",
+      "value_or_growth": "20",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/11b77d6b6g&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "2026",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11b77d6b6g"
+    },
+    {
+      "rank": 4,
+      "type_top_or_rising": "top",
+      "value_or_growth": "17",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/02p97&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "JavaScript",
+      "topic_type": "Programming language",
+      "topic_mid": "/m/02p97"
+    },
+    {
+      "rank": 5,
+      "type_top_or_rising": "top",
+      "value_or_growth": "15",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/012l1vxv&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "React",
+      "topic_type": "Computer program",
+      "topic_mid": "/m/012l1vxv"
+    },
+    {
+      "rank": 6,
+      "type_top_or_rising": "top",
+      "value_or_growth": "12",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0z5n&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "API",
+      "topic_type": "Type of software",
+      "topic_mid": "/m/0z5n"
+    },
+    {
+      "rank": 7,
+      "type_top_or_rising": "top",
+      "value_or_growth": "10",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0h94y36&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Mobile app",
+      "topic_type": "Computer program",
+      "topic_mid": "/m/0h94y36"
+    },
+    {
+      "rank": 8,
+      "type_top_or_rising": "top",
+      "value_or_growth": "10",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/085n4&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Website",
+      "topic_type": "Topic",
+      "topic_mid": "/m/085n4"
+    },
+    {
+      "rank": 9,
+      "type_top_or_rising": "top",
+      "value_or_growth": "9",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/026sq&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Data",
+      "topic_type": "Topic",
+      "topic_mid": "/m/026sq"
+    },
+    {
+      "rank": 10,
+      "type_top_or_rising": "top",
+      "value_or_growth": "9",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0mkz&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Artificial intelligence",
+      "topic_type": "Professional field",
+      "topic_mid": "/m/0mkz"
+    },
+    {
+      "rank": 11,
+      "type_top_or_rising": "top",
+      "value_or_growth": "9",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/05z1_&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Python",
+      "topic_type": "Programming language",
+      "topic_mid": "/m/05z1_"
+    },
+    {
+      "rank": 12,
+      "type_top_or_rising": "top",
+      "value_or_growth": "8",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0bbxf89&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Node.js",
+      "topic_type": "Platform",
+      "topic_mid": "/m/0bbxf89"
+    },
+    {
+      "rank": 13,
+      "type_top_or_rising": "top",
+      "value_or_growth": "8",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0828v&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "World Wide Web",
+      "topic_type": "Topic",
+      "topic_mid": "/m/0828v"
+    },
+    {
+      "rank": 14,
+      "type_top_or_rising": "top",
+      "value_or_growth": "8",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/02bj4k&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Application software",
+      "topic_type": "Software classification",
+      "topic_mid": "/m/02bj4k"
+    },
+    {
+      "rank": 15,
+      "type_top_or_rising": "top",
+      "value_or_growth": "6",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0ryppmg&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "GitHub",
+      "topic_type": "Company",
+      "topic_mid": "/m/0ryppmg"
+    },
+    {
+      "rank": 16,
+      "type_top_or_rising": "top",
+      "value_or_growth": "6",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/039w_d&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Software framework",
+      "topic_type": "Topic",
+      "topic_mid": "/m/039w_d"
+    },
+    {
+      "rank": 17,
+      "type_top_or_rising": "top",
+      "value_or_growth": "6",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/018j6p&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Software Developer",
+      "topic_type": "Occupation",
+      "topic_mid": "/m/018j6p"
+    },
+    {
+      "rank": 18,
+      "type_top_or_rising": "top",
+      "value_or_growth": "6",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/11h4q9rcf3&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Next.js",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11h4q9rcf3"
+    },
+    {
+      "rank": 19,
+      "type_top_or_rising": "top",
+      "value_or_growth": "6",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/01mf0&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Software",
+      "topic_type": "Software type",
+      "topic_mid": "/m/01mf0"
+    },
+    {
+      "rank": 20,
+      "type_top_or_rising": "top",
+      "value_or_growth": "6",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/02bc6&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Database",
+      "topic_type": "Type of software",
+      "topic_mid": "/m/02bc6"
+    },
+    {
+      "rank": 21,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/03nfmq&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Architecture",
+      "topic_type": "Field of study",
+      "topic_mid": "/m/03nfmq"
+    },
+    {
+      "rank": 22,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/04g7d&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Language",
+      "topic_type": "Topic",
+      "topic_mid": "/m/04g7d"
+    },
+    {
+      "rank": 23,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0156dy&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Project",
+      "topic_type": "Topic",
+      "topic_mid": "/m/0156dy"
+    },
+    {
+      "rank": 24,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/120x72xh&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Server",
+      "topic_type": "Computing",
+      "topic_mid": "/g/120x72xh"
+    }
+  ],
+  "related_availability": {
+    "topics": true,
+    "queries": true
+  },
+  "source_url": "https://trends.google.com/trends/explore?date=2024-08-01%202026-08-24&geo=GB&q=frontend%20backend&hl=en-GB"
+}

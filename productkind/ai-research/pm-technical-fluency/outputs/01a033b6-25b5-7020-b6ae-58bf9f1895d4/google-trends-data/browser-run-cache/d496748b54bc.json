@@ -1,0 +1,33 @@
+{
+  "run_id": "d496748b54bc",
+  "run_kind": "exact",
+  "input_term": "what happens when you type a url in the browser",
+  "source_term": "what happens when you type a url in the browser",
+  "fallback_term": "",
+  "comparison_group": "",
+  "terms": [
+    "what happens when you type a url in the browser"
+  ],
+  "term_type": "Search term",
+  "geography": "US",
+  "geo_code": "US",
+  "date_range": "2024-08-01 to 2026-08-24",
+  "api_timeframe": "2024-08-01 2026-08-24",
+  "search_type": "Google Web Search",
+  "category_id": 0,
+  "category": "All categories",
+  "retrieval_date": "2026-08-24",
+  "data_status": "insufficient_no_series",
+  "headers": [],
+  "series": [],
+  "nonzero_points": [
+    0
+  ],
+  "queries": [],
+  "topics": [],
+  "related_availability": {
+    "topics": false,
+    "queries": false
+  },
+  "source_url": "https://trends.google.com/trends/explore?date=2024-08-01%202026-08-24&geo=US&q=what%20happens%20when%20you%20type%20a%20url%20in%20the%20browser&hl=en-GB"
+}

@@ -1,0 +1,1566 @@
+{
+  "run_id": "c58182070a00",
+  "run_kind": "fallback",
+  "input_term": "lovable for beginners",
+  "source_term": "Lovable AI",
+  "fallback_term": "Lovable AI",
+  "comparison_group": "",
+  "terms": [
+    "Lovable AI"
+  ],
+  "term_type": "Search term",
+  "geography": "UK",
+  "geo_code": "GB",
+  "date_range": "2024-08-01 to 2026-08-24",
+  "api_timeframe": "2024-08-01 2026-08-24",
+  "search_type": "Google Web Search",
+  "category_id": 0,
+  "category": "All categories",
+  "retrieval_date": "2026-08-24",
+  "data_status": "sufficient",
+  "headers": [
+    "x",
+    "y1"
+  ],
+  "series": [
+    {
+      "date": "2024-07-28",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-08-04",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-08-11",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-08-18",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-08-25",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-01",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-08",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-15",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-22",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-29",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-10-06",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-10-13",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-10-20",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-10-27",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-11-03",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-11-10",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-11-17",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-11-24",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-01",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-08",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-15",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-22",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-29",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-01-05",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-01-12",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-01-19",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-01-26",
+      "values": [
+        10
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-02-02",
+      "values": [
+        0
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-02-09",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-02-16",
+      "values": [
+        14
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-02-23",
+      "values": [
+        14
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-02",
+      "values": [
+        16
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-09",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-16",
+      "values": [
+        27
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-23",
+      "values": [
+        21
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-30",
+      "values": [
+        14
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-04-06",
+      "values": [
+        20
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-04-13",
+      "values": [
+        27
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-04-20",
+      "values": [
+        21
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-04-27",
+      "values": [
+        16
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-05-04",
+      "values": [
+        19
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-05-11",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-05-18",
+      "values": [
+        18
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-05-25",
+      "values": [
+        19
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-01",
+      "values": [
+        32
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-08",
+      "values": [
+        35
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-15",
+      "values": [
+        34
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-22",
+      "values": [
+        32
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-29",
+      "values": [
+        24
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-07-06",
+      "values": [
+        33
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-07-13",
+      "values": [
+        43
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-07-20",
+      "values": [
+        44
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-07-27",
+      "values": [
+        33
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-03",
+      "values": [
+        46
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-10",
+      "values": [
+        28
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-17",
+      "values": [
+        26
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-24",
+      "values": [
+        34
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-31",
+      "values": [
+        24
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-09-07",
+      "values": [
+        24
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-09-14",
+      "values": [
+        24
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-09-21",
+      "values": [
+        28
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-09-28",
+      "values": [
+        29
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-10-05",
+      "values": [
+        24
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-10-12",
+      "values": [
+        24
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-10-19",
+      "values": [
+        32
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-10-26",
+      "values": [
+        27
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-02",
+      "values": [
+        34
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-09",
+      "values": [
+        46
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-16",
+      "values": [
+        25
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-23",
+      "values": [
+        38
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-30",
+      "values": [
+        41
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-12-07",
+      "values": [
+        42
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-12-14",
+      "values": [
+        43
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-12-21",
+      "values": [
+        32
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-12-28",
+      "values": [
+        46
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-01-04",
+      "values": [
+        49
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-01-11",
+      "values": [
+        48
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-01-18",
+      "values": [
+        47
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-01-25",
+      "values": [
+        44
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-02-01",
+      "values": [
+        49
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-02-08",
+      "values": [
+        50
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-02-15",
+      "values": [
+        44
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-02-22",
+      "values": [
+        50
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-01",
+      "values": [
+        59
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-08",
+      "values": [
+        80
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-15",
+      "values": [
+        72
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-22",
+      "values": [
+        100
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-29",
+      "values": [
+        85
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-04-05",
+      "values": [
+        82
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-04-12",
+      "values": [
+        91
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-04-19",
+      "values": [
+        97
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-04-26",
+      "values": [
+        83
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-03",
+      "values": [
+        76
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-10",
+      "values": [
+        65
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-17",
+      "values": [
+        54
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-24",
+      "values": [
+        71
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-31",
+      "values": [
+        57
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-06-07",
+      "values": [
+        45
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-06-14",
+      "values": [
+        53
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-06-21",
+      "values": [
+        79
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-06-28",
+      "values": [
+        80
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-07-05",
+      "values": [
+        64
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-07-12",
+      "values": [
+        59
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-07-19",
+      "values": [
+        45
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-07-26",
+      "values": [
+        44
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-08-02",
+      "values": [
+        59
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-08-09",
+      "values": [
+        50
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-08-16",
+      "values": [
+        44
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-08-23",
+      "values": [
+        26
+      ],
+      "is_partial": true
+    }
+  ],
+  "nonzero_points": [
+    82
+  ],
+  "queries": [
+    {
+      "rank": 1,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=ai+app+builder&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "ai app builder"
+    },
+    {
+      "rank": 2,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=lovable+ai+app+builder&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "lovable ai app builder"
+    },
+    {
+      "rank": 3,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=what+is+lovable+ai&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what is lovable ai"
+    },
+    {
+      "rank": 4,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=lovable+pricing&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "lovable pricing"
+    },
+    {
+      "rank": 5,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=lovable+ai+pricing&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "lovable ai pricing"
+    },
+    {
+      "rank": 6,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=google+ai&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "google ai"
+    },
+    {
+      "rank": 7,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=bolt+ai&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "bolt ai"
+    },
+    {
+      "rank": 8,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=replit+ai&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "replit ai"
+    },
+    {
+      "rank": 9,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=claude&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "claude"
+    },
+    {
+      "rank": 10,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=github&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "github"
+    },
+    {
+      "rank": 11,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=cursor&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "cursor"
+    },
+    {
+      "rank": 12,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=cursor+ai&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "cursor ai"
+    },
+    {
+      "rank": 13,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=lovable+ai+tool&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "lovable ai tool"
+    },
+    {
+      "rank": 14,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=loveable+ai&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "loveable ai"
+    },
+    {
+      "rank": 15,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=loveable&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "loveable"
+    },
+    {
+      "rank": 16,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=ford&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "ford"
+    },
+    {
+      "rank": 17,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=lovable+support&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "lovable support"
+    },
+    {
+      "rank": 18,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=liz+earle&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "liz earle"
+    },
+    {
+      "rank": 19,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=lovable+dev&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "lovable dev"
+    },
+    {
+      "rank": 20,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=v0&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "v0"
+    },
+    {
+      "rank": 21,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=lovable.dev&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "lovable.dev"
+    },
+    {
+      "rank": 22,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=is+lovable+ai+free&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "is lovable ai free"
+    },
+    {
+      "rank": 23,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=figma&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "figma"
+    },
+    {
+      "rank": 1,
+      "type_top_or_rising": "top",
+      "value_or_growth": "100",
+      "breakout": "",
+      "href": "/trends/explore?q=lovable+app&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "lovable app"
+    },
+    {
+      "rank": 2,
+      "type_top_or_rising": "top",
+      "value_or_growth": "54",
+      "breakout": "",
+      "href": "/trends/explore?q=ai+app+builder&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "ai app builder"
+    },
+    {
+      "rank": 3,
+      "type_top_or_rising": "top",
+      "value_or_growth": "54",
+      "breakout": "",
+      "href": "/trends/explore?q=lovable+ai+app+builder&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "lovable ai app builder"
+    },
+    {
+      "rank": 4,
+      "type_top_or_rising": "top",
+      "value_or_growth": "48",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+lovable&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what is lovable"
+    },
+    {
+      "rank": 5,
+      "type_top_or_rising": "top",
+      "value_or_growth": "48",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+lovable+ai&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "what is lovable ai"
+    },
+    {
+      "rank": 6,
+      "type_top_or_rising": "top",
+      "value_or_growth": "32",
+      "breakout": "",
+      "href": "/trends/explore?q=lovable+pricing&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "lovable pricing"
+    },
+    {
+      "rank": 7,
+      "type_top_or_rising": "top",
+      "value_or_growth": "31",
+      "breakout": "",
+      "href": "/trends/explore?q=lovable+ai+pricing&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "lovable ai pricing"
+    },
+    {
+      "rank": 8,
+      "type_top_or_rising": "top",
+      "value_or_growth": "29",
+      "breakout": "",
+      "href": "/trends/explore?q=google+ai&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "google ai"
+    },
+    {
+      "rank": 9,
+      "type_top_or_rising": "top",
+      "value_or_growth": "28",
+      "breakout": "",
+      "href": "/trends/explore?q=ai+website+builder&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "ai website builder"
+    },
+    {
+      "rank": 10,
+      "type_top_or_rising": "top",
+      "value_or_growth": "28",
+      "breakout": "",
+      "href": "/trends/explore?q=lovable+website+builder&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "lovable website builder"
+    },
+    {
+      "rank": 11,
+      "type_top_or_rising": "top",
+      "value_or_growth": "26",
+      "breakout": "",
+      "href": "/trends/explore?q=bolt+ai&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "bolt ai"
+    },
+    {
+      "rank": 12,
+      "type_top_or_rising": "top",
+      "value_or_growth": "25",
+      "breakout": "",
+      "href": "/trends/explore?q=replit+ai&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "replit ai"
+    },
+    {
+      "rank": 13,
+      "type_top_or_rising": "top",
+      "value_or_growth": "25",
+      "breakout": "",
+      "href": "/trends/explore?q=replit&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "replit"
+    },
+    {
+      "rank": 14,
+      "type_top_or_rising": "top",
+      "value_or_growth": "25",
+      "breakout": "",
+      "href": "/trends/explore?q=claude&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "claude"
+    },
+    {
+      "rank": 15,
+      "type_top_or_rising": "top",
+      "value_or_growth": "25",
+      "breakout": "",
+      "href": "/trends/explore?q=bolt&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "bolt"
+    },
+    {
+      "rank": 16,
+      "type_top_or_rising": "top",
+      "value_or_growth": "24",
+      "breakout": "",
+      "href": "/trends/explore?q=claude+ai&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "claude ai"
+    },
+    {
+      "rank": 17,
+      "type_top_or_rising": "top",
+      "value_or_growth": "22",
+      "breakout": "",
+      "href": "/trends/explore?q=github&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "github"
+    },
+    {
+      "rank": 18,
+      "type_top_or_rising": "top",
+      "value_or_growth": "22",
+      "breakout": "",
+      "href": "/trends/explore?q=cursor&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "cursor"
+    },
+    {
+      "rank": 19,
+      "type_top_or_rising": "top",
+      "value_or_growth": "22",
+      "breakout": "",
+      "href": "/trends/explore?q=cursor+ai&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "cursor ai"
+    },
+    {
+      "rank": 20,
+      "type_top_or_rising": "top",
+      "value_or_growth": "21",
+      "breakout": "",
+      "href": "/trends/explore?q=lovable+ai+tool&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "lovable ai tool"
+    },
+    {
+      "rank": 21,
+      "type_top_or_rising": "top",
+      "value_or_growth": "20",
+      "breakout": "",
+      "href": "/trends/explore?q=loveable+ai&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "loveable ai"
+    },
+    {
+      "rank": 22,
+      "type_top_or_rising": "top",
+      "value_or_growth": "20",
+      "breakout": "",
+      "href": "/trends/explore?q=loveable&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "loveable"
+    },
+    {
+      "rank": 23,
+      "type_top_or_rising": "top",
+      "value_or_growth": "19",
+      "breakout": "",
+      "href": "/trends/explore?q=ford&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "ford"
+    },
+    {
+      "rank": 24,
+      "type_top_or_rising": "top",
+      "value_or_growth": "14",
+      "breakout": "",
+      "href": "/trends/explore?q=lovable+support&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "lovable support"
+    },
+    {
+      "rank": 25,
+      "type_top_or_rising": "top",
+      "value_or_growth": "13",
+      "breakout": "",
+      "href": "/trends/explore?q=liz+earle&date=2024-08-01+2026-08-24&geo=GB",
+      "query": "liz earle"
+    }
+  ],
+  "topics": [
+    {
+      "rank": 1,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11lmlv2_lg&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Lovable",
+      "topic_type": "Software company in Stockholm, Sweden",
+      "topic_mid": "/g/11lmlv2_lg"
+    },
+    {
+      "rank": 2,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/0h94y36&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Mobile app",
+      "topic_type": "Computer program",
+      "topic_mid": "/m/0h94y36"
+    },
+    {
+      "rank": 3,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11b77d6b6g&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "2026",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11b77d6b6g"
+    },
+    {
+      "rank": 4,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/085n4&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Website",
+      "topic_type": "Topic",
+      "topic_mid": "/m/085n4"
+    },
+    {
+      "rank": 5,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11x0hchbld&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Lovable Labs Incorporated",
+      "topic_type": "Software company",
+      "topic_mid": "/g/11x0hchbld"
+    },
+    {
+      "rank": 6,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/120z18l3&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Company",
+      "topic_type": "Organization type",
+      "topic_mid": "/g/120z18l3"
+    },
+    {
+      "rank": 7,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11fj7r9jjp&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Replit",
+      "topic_type": "Software program company",
+      "topic_mid": "/g/11fj7r9jjp"
+    },
+    {
+      "rank": 8,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11kq5ghr35&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Claude",
+      "topic_type": "AI",
+      "topic_mid": "/g/11kq5ghr35"
+    },
+    {
+      "rank": 9,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/0345h&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Germany",
+      "topic_type": "Country in Europe",
+      "topic_mid": "/m/0345h"
+    },
+    {
+      "rank": 10,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/0z5n&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "API",
+      "topic_type": "Type of software",
+      "topic_mid": "/m/0z5n"
+    },
+    {
+      "rank": 11,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/0ryppmg&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "GitHub",
+      "topic_type": "Company",
+      "topic_mid": "/m/0ryppmg"
+    },
+    {
+      "rank": 12,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/0lwkh&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Nike",
+      "topic_type": "Footwear company",
+      "topic_mid": "/m/0lwkh"
+    },
+    {
+      "rank": 13,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/0cnsqjb&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Nike",
+      "topic_type": "Topic",
+      "topic_mid": "/m/0cnsqjb"
+    },
+    {
+      "rank": 14,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/02k_k3t&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Ford",
+      "topic_type": "Automobile make",
+      "topic_mid": "/m/02k_k3t"
+    },
+    {
+      "rank": 15,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/015www&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Documentation",
+      "topic_type": "Topic",
+      "topic_mid": "/m/015www"
+    },
+    {
+      "rank": 16,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/01jwgf&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Product",
+      "topic_type": "Business",
+      "topic_mid": "/m/01jwgf"
+    },
+    {
+      "rank": 1,
+      "type_top_or_rising": "top",
+      "value_or_growth": "100",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0mkz&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Artificial intelligence",
+      "topic_type": "Professional field",
+      "topic_mid": "/m/0mkz"
+    },
+    {
+      "rank": 2,
+      "type_top_or_rising": "top",
+      "value_or_growth": "33",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/11lmlv2_lg&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Lovable",
+      "topic_type": "Software company in Stockholm, Sweden",
+      "topic_mid": "/g/11lmlv2_lg"
+    },
+    {
+      "rank": 3,
+      "type_top_or_rising": "top",
+      "value_or_growth": "26",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/11xvt224m5&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Lovable",
+      "topic_type": "Company",
+      "topic_mid": "/g/11xvt224m5"
+    },
+    {
+      "rank": 4,
+      "type_top_or_rising": "top",
+      "value_or_growth": "25",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/11yq63fsc1&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Lovable",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11yq63fsc1"
+    },
+    {
+      "rank": 5,
+      "type_top_or_rising": "top",
+      "value_or_growth": "19",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0h94y36&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Mobile app",
+      "topic_type": "Computer program",
+      "topic_mid": "/m/0h94y36"
+    },
+    {
+      "rank": 6,
+      "type_top_or_rising": "top",
+      "value_or_growth": "18",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/11b77d6b6g&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "2026",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11b77d6b6g"
+    },
+    {
+      "rank": 7,
+      "type_top_or_rising": "top",
+      "value_or_growth": "12",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/085n4&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Website",
+      "topic_type": "Topic",
+      "topic_mid": "/m/085n4"
+    },
+    {
+      "rank": 8,
+      "type_top_or_rising": "top",
+      "value_or_growth": "8",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/11x0hchbld&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Lovable Labs Incorporated",
+      "topic_type": "Software company",
+      "topic_mid": "/g/11x0hchbld"
+    },
+    {
+      "rank": 9,
+      "type_top_or_rising": "top",
+      "value_or_growth": "6",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/120z18l3&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Company",
+      "topic_type": "Organization type",
+      "topic_mid": "/g/120z18l3"
+    },
+    {
+      "rank": 10,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/01jsvy&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Pricing",
+      "topic_type": "Topic",
+      "topic_mid": "/m/01jsvy"
+    },
+    {
+      "rank": 11,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/11fj7r9jjp&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Replit",
+      "topic_type": "Software program company",
+      "topic_mid": "/g/11fj7r9jjp"
+    },
+    {
+      "rank": 12,
+      "type_top_or_rising": "top",
+      "value_or_growth": "4",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/026sq&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Data",
+      "topic_type": "Topic",
+      "topic_mid": "/m/026sq"
+    },
+    {
+      "rank": 13,
+      "type_top_or_rising": "top",
+      "value_or_growth": "4",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/06gx4j&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Website Builder",
+      "topic_type": "Topic",
+      "topic_mid": "/m/06gx4j"
+    },
+    {
+      "rank": 14,
+      "type_top_or_rising": "top",
+      "value_or_growth": "4",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/11kq5ghr35&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Claude",
+      "topic_type": "AI",
+      "topic_mid": "/g/11kq5ghr35"
+    },
+    {
+      "rank": 15,
+      "type_top_or_rising": "top",
+      "value_or_growth": "4",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0345h&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Germany",
+      "topic_type": "Country in Europe",
+      "topic_mid": "/m/0345h"
+    },
+    {
+      "rank": 16,
+      "type_top_or_rising": "top",
+      "value_or_growth": "4",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0z5n&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "API",
+      "topic_type": "Type of software",
+      "topic_mid": "/m/0z5n"
+    },
+    {
+      "rank": 17,
+      "type_top_or_rising": "top",
+      "value_or_growth": "4",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0ryppmg&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "GitHub",
+      "topic_type": "Company",
+      "topic_mid": "/m/0ryppmg"
+    },
+    {
+      "rank": 18,
+      "type_top_or_rising": "top",
+      "value_or_growth": "4",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0f8l9c&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "France",
+      "topic_type": "Country in Europe",
+      "topic_mid": "/m/0f8l9c"
+    },
+    {
+      "rank": 19,
+      "type_top_or_rising": "top",
+      "value_or_growth": "3",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0lwkh&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Nike",
+      "topic_type": "Footwear company",
+      "topic_mid": "/m/0lwkh"
+    },
+    {
+      "rank": 20,
+      "type_top_or_rising": "top",
+      "value_or_growth": "3",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0cnsqjb&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Nike",
+      "topic_type": "Topic",
+      "topic_mid": "/m/0cnsqjb"
+    },
+    {
+      "rank": 21,
+      "type_top_or_rising": "top",
+      "value_or_growth": "3",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/02k_k3t&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Ford",
+      "topic_type": "Automobile make",
+      "topic_mid": "/m/02k_k3t"
+    },
+    {
+      "rank": 22,
+      "type_top_or_rising": "top",
+      "value_or_growth": "3",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/015www&date=2024-08-01+2026-08-24&geo=GB",
+      "topic": "Documentation",
+      "topic_type": "Topic",
+      "topic_mid": "/m/015www"
+    }
+  ],
+  "related_availability": {
+    "topics": true,
+    "queries": true
+  },
+  "source_url": "https://trends.google.com/trends/explore?date=2024-08-01%202026-08-24&geo=GB&q=Lovable%20AI&hl=en-GB"
+}
