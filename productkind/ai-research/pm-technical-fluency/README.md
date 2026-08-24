@@ -14,6 +14,8 @@ understand or become able to do technically.
 | `pm-technical-fluency-search-demand-analysis-2026-08.md` | Clean, non-additive analysis of the supplied Semrush data by validated PM need, plus the Google Trends shortlist |
 | `pm-technical-fluency-google-trends-data-2026-08.md` | Google Trends collection index: markets, windows, run counts, dataset links and non-interpretive reading notes |
 | `pm-technical-fluency-opportunity-synthesis-2026-08.md` | Cross-source synthesis of the strongest PM needs, five problem-led opportunity territories, evidence caveats and questions for competitor and willingness-to-pay research |
+| `pm-technical-fluency-willingness-to-pay-2026-08.md` | Current competitor and willingness-to-pay evidence for the five validated transformations, including prices, payer evidence, traction, high-ticket examples and unresolved questions |
+| `pm-technical-fluency-offer-hypotheses-2026-08.md` | Four evidence-backed, whole-programme offer hypotheses framed around distinct buying moments, with territory roles, hands-on mechanisms, comparisons and direct-validation questions |
 | `outputs/01a033b6-25b5-7020-b6ae-58bf9f1895d4/pm-technical-fluency-search-demand-analysis.xlsx` | Auditable workbook with all 206 keywords, exclusions, intent families, need summary, SERP evidence and raw source tables |
 | `outputs/01a033b6-25b5-7020-b6ae-58bf9f1895d4/pm-technical-fluency-google-trends-data.xlsx` | Seven-sheet Google Trends workbook with Datasets A–D, run metadata and the data-quality log |
 | `outputs/01a033b6-25b5-7020-b6ae-58bf9f1895d4/google-trends-data/` | The four CSV datasets, run metadata, collection manifest, quality note and cached run-level evidence |
