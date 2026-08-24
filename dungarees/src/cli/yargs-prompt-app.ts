@@ -53,7 +53,7 @@ export type StdioMessage = StdioOutputMessage | StdioErrorMessage
 
 type SharedStdioMessage = {
   message: string
-  level?: 'info' | 'warn' | 'error'
+  level?: 'debug' | 'info' | 'warn' | 'error'
 }
 
 type CliSelectOptions = {
