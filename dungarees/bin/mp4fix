@@ -1,0 +1,40 @@
+#!/usr/bin/env zsh
+# Make an MP4 safe for Remotion: transcode HEVC->H.264, drop data/timecode tracks
+# and the edit list, normalize fps, add faststart. Keeps the original resolution.
+# Depends on: ffmpeg.
+
+mp4fix() {
+    local -A opts
+    local keep_audio=()
+    zparseopts -E -D -A opts f: q: -- a=keep_audio
+    [[ -z "$1" ]] && echo "Usage: mp4fix <file> [out] [-a keep audio] [-f fps=30] [-q crf=18]  (HEVC->H.264, drops data tracks, faststart; keeps resolution; out defaults to <name>-fixed.mp4)" && return 1
+
+    local input="$1"
+    local output="${2:-${1%.*}-fixed.mp4}"
+    [[ -d "$output" ]] && output="${output%/}/$(basename "${1%.*}-fixed.mp4")"
+
+    local fps="${opts[-f]:-30}"
+    local crf="${opts[-q]:-18}"
+
+    local audio_cmd=(-an)
+    local audio_label="no audio"
+    if [[ -n "$keep_audio" ]]; then
+        audio_cmd=(-map "0:a:0?" -c:a aac -b:a 192k)
+        audio_label="keep audio"
+    fi
+
+    echo "🎬 MP4 -> Remotion-safe [H.264, ${fps}fps, ${audio_label}]..."
+    ffmpeg -v warning -i "$input" \
+        -map 0:v:0 \
+        "${audio_cmd[@]}" \
+        -map_metadata -1 \
+        -map_chapters -1 \
+        -c:v libx264 -preset medium -crf "$crf" \
+        -pix_fmt yuv420p -r "$fps" \
+        -movflags +faststart \
+        -y "$output"
+
+    [[ $? -eq 0 ]] && echo "✅ Done: $output ($(du -h "$output" | cut -f1))"
+}
+
+mp4fix "$@"

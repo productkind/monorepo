@@ -48,6 +48,61 @@ export const LessonVideoPropsSchema = z.object({
 
 const DEBUG = false
 
+export const SocialVideo017: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({ captions, titleDuration }) => {
+  return (
+    <AbsoluteFill className={BG_CLASS}>
+      <Series>
+        <Series.Sequence durationInFrames={194}>
+          <Video src={staticFile('social-017/dump-full-flow.mp4')} muted trimBefore={100} style={{ position: 'absolute' }} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={117}>
+          <Video src={staticFile('social-017/dump-screen-full-flow.mp4')} muted trimBefore={450} style={{ position: 'absolute' }} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={79}>
+          <Video src={staticFile('social-017/dump-full-flow.mp4')} muted trimBefore={650} style={{ position: 'absolute' }} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={140}>
+          <Video src={staticFile('social-017/babylog-full-flow.mp4')} muted trimBefore={150} style={{ position: 'absolute' }} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={62}>
+          <Video src={staticFile('social-017/babylog-screen-full-flow.mp4')} muted trimBefore={400} style={{ position: 'absolute' }} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={79}>
+          <Video src={staticFile('social-017/babylog-full-flow.mp4')} muted trimBefore={700} style={{ position: 'absolute' }} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={84}>
+          <Video src={staticFile('social-017/course.mp4')} muted trimBefore={100} style={{ position: 'absolute' }} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={85}>
+          <Video src={staticFile('social-017/shortcut.mp4')} muted trimBefore={100} style={{ position: 'absolute' }} />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={185}>
+          <Video src={staticFile('social-017/free.mp4')} muted trimBefore={0} style={{ position: 'absolute' }} />
+        </Series.Sequence>
+      </Series>
+      <Sequence from={titleDuration}>
+        <Captions captions={captions} />
+      </Sequence>
+      <Sequence from={titleDuration}>
+        <Audio src={staticFile('social-017/speech.wav')} />
+        <Audio src={staticFile('soundtrack.wav')} volume={0.1} />
+        <RemotionRiveCanvas src={staticFile('parrot-greet-00.riv')} />
+      </Sequence>
+      <Sequence from={titleDuration + 3000}>
+        <RemotionRiveCanvas src={staticFile('parrot-follow-00.riv')} />
+      </Sequence>
+      <Sequence from={titleDuration + 500}>
+        <RemotionRiveCanvas src={staticFile('parrot-peek-00.riv')} />
+      </Sequence>
+      <AbsoluteFill className="border-16 border-[#000000] z-10">
+      </AbsoluteFill>
+      {DEBUG ? <DebugSafeZone /> : null
+      }
+    </AbsoluteFill>
+  )
+}
+
+
 export const SocialVideo016: React.FC<z.infer<typeof LessonVideoPropsSchema>> = ({ captions, titleDuration }) => {
   return (
     <AbsoluteFill className={BG_CLASS}>
