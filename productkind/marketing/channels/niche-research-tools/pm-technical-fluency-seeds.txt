@@ -1,0 +1,94 @@
+how does software work
+how does a web application work
+how do web applications work
+what happens when you enter a url
+software architecture explained
+application architecture explained
+web application architecture
+frontend backend database
+frontend vs backend
+client server architecture
+monolith vs microservices
+how do microservices work
+tech stack explained
+system design for beginners
+how does data flow through an application
+software components explained
+how does an api work
+how do apis work
+what is an api
+api explained
+api for beginners
+rest api explained
+api integration explained
+how does api integration work
+api request response explained
+api endpoint explained
+webhook explained
+webhooks vs api
+json explained
+http status codes explained
+api authentication explained
+how does software deployment work
+deployment explained
+software deployment for beginners
+how does cicd work
+cicd explained
+continuous integration explained
+continuous deployment explained
+code review explained
+pull request explained
+git branch explained
+github workflow explained
+build pipeline explained
+staging vs production
+development vs staging vs production
+feature flags explained
+rollback deployment explained
+what happens after code is committed
+what happens after a pull request is merged
+how does code get to production
+how to troubleshoot software problems
+how to debug a web application
+bug triage explained
+how to reproduce a bug
+how to read error logs
+application logs explained
+browser devtools for beginners
+network tab explained
+root cause analysis explained
+incident management explained
+production incident explained
+severity vs priority bug
+how to investigate an api error
+why api request fails
+technical feasibility explained
+how to assess technical feasibility
+software dependencies explained
+technical tradeoffs explained
+technical debt explained
+refactoring explained
+scalability explained
+software estimation explained
+why software estimates are hard
+prototype vs production
+mvp vs prototype
+buy vs build software
+build vs buy decision
+how to build an app with ai
+build app with ai no code
+ai coding tools for beginners
+vibe coding for beginners
+what is vibe coding
+how does vibe coding work
+claude code for beginners
+claude code non technical
+cursor for beginners
+lovable for beginners
+build mvp with ai
+prototype with ai
+ai app builder for beginners
+github for non coders
+deploy ai app
+vibe coded app production
+how to use ai to code without coding experience
