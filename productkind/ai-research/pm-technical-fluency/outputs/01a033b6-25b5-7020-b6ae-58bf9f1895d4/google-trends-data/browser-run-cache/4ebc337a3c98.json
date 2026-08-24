@@ -1,0 +1,33 @@
+{
+  "run_id": "4ebc337a3c98",
+  "run_kind": "exact",
+  "input_term": "vibe coding for beginners",
+  "source_term": "vibe coding for beginners",
+  "fallback_term": "",
+  "comparison_group": "",
+  "terms": [
+    "vibe coding for beginners"
+  ],
+  "term_type": "Search term",
+  "geography": "UK",
+  "geo_code": "GB",
+  "date_range": "2021-08-24 to 2026-08-24",
+  "api_timeframe": "2021-08-24 2026-08-24",
+  "search_type": "Google Web Search",
+  "category_id": 0,
+  "category": "All categories",
+  "retrieval_date": "2026-08-24",
+  "data_status": "insufficient_no_series",
+  "headers": [],
+  "series": [],
+  "nonzero_points": [
+    0
+  ],
+  "queries": [],
+  "topics": [],
+  "related_availability": {
+    "topics": false,
+    "queries": false
+  },
+  "source_url": "https://trends.google.com/trends/explore?date=2021-08-24%202026-08-24&geo=GB&q=vibe%20coding%20for%20beginners&hl=en-GB"
+}

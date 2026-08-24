@@ -1,0 +1,1602 @@
+{
+  "run_id": "10b70de33a3a",
+  "run_kind": "exact",
+  "input_term": "ci/cd",
+  "source_term": "ci/cd",
+  "fallback_term": "",
+  "comparison_group": "",
+  "terms": [
+    "ci/cd"
+  ],
+  "term_type": "Search term",
+  "geography": "Worldwide",
+  "geo_code": "",
+  "date_range": "2024-08-01 to 2026-08-24",
+  "api_timeframe": "2024-08-01 2026-08-24",
+  "search_type": "Google Web Search",
+  "category_id": 0,
+  "category": "All categories",
+  "retrieval_date": "2026-08-24",
+  "data_status": "sufficient",
+  "headers": [
+    "x",
+    "y1"
+  ],
+  "series": [
+    {
+      "date": "2024-07-28",
+      "values": [
+        16
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-08-04",
+      "values": [
+        16
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-08-11",
+      "values": [
+        14
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-08-18",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-08-25",
+      "values": [
+        15
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-01",
+      "values": [
+        15
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-08",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-15",
+      "values": [
+        16
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-22",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-09-29",
+      "values": [
+        16
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-10-06",
+      "values": [
+        16
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-10-13",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-10-20",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-10-27",
+      "values": [
+        14
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-11-03",
+      "values": [
+        15
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-11-10",
+      "values": [
+        15
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-11-17",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-11-24",
+      "values": [
+        15
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-01",
+      "values": [
+        16
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-08",
+      "values": [
+        15
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-15",
+      "values": [
+        14
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-22",
+      "values": [
+        9
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2024-12-29",
+      "values": [
+        9
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-01-05",
+      "values": [
+        16
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-01-12",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-01-19",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-01-26",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-02-02",
+      "values": [
+        18
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-02-09",
+      "values": [
+        18
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-02-16",
+      "values": [
+        19
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-02-23",
+      "values": [
+        19
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-02",
+      "values": [
+        18
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-09",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-16",
+      "values": [
+        19
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-23",
+      "values": [
+        18
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-03-30",
+      "values": [
+        18
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-04-06",
+      "values": [
+        18
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-04-13",
+      "values": [
+        16
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-04-20",
+      "values": [
+        18
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-04-27",
+      "values": [
+        15
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-05-04",
+      "values": [
+        18
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-05-11",
+      "values": [
+        18
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-05-18",
+      "values": [
+        19
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-05-25",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-01",
+      "values": [
+        22
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-08",
+      "values": [
+        24
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-15",
+      "values": [
+        26
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-22",
+      "values": [
+        23
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-06-29",
+      "values": [
+        22
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-07-06",
+      "values": [
+        21
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-07-13",
+      "values": [
+        24
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-07-20",
+      "values": [
+        23
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-07-27",
+      "values": [
+        25
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-03",
+      "values": [
+        29
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-10",
+      "values": [
+        33
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-17",
+      "values": [
+        35
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-24",
+      "values": [
+        30
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-08-31",
+      "values": [
+        30
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-09-07",
+      "values": [
+        30
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-09-14",
+      "values": [
+        33
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-09-21",
+      "values": [
+        37
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-09-28",
+      "values": [
+        35
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-10-05",
+      "values": [
+        33
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-10-12",
+      "values": [
+        34
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-10-19",
+      "values": [
+        30
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-10-26",
+      "values": [
+        33
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-02",
+      "values": [
+        35
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-09",
+      "values": [
+        34
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-16",
+      "values": [
+        34
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-23",
+      "values": [
+        33
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-11-30",
+      "values": [
+        38
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-12-07",
+      "values": [
+        32
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-12-14",
+      "values": [
+        32
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-12-21",
+      "values": [
+        19
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2025-12-28",
+      "values": [
+        17
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-01-04",
+      "values": [
+        25
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-01-11",
+      "values": [
+        30
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-01-18",
+      "values": [
+        34
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-01-25",
+      "values": [
+        35
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-02-01",
+      "values": [
+        33
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-02-08",
+      "values": [
+        35
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-02-15",
+      "values": [
+        37
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-02-22",
+      "values": [
+        37
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-01",
+      "values": [
+        40
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-08",
+      "values": [
+        38
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-15",
+      "values": [
+        42
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-22",
+      "values": [
+        40
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-03-29",
+      "values": [
+        46
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-04-05",
+      "values": [
+        93
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-04-12",
+      "values": [
+        38
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-04-19",
+      "values": [
+        50
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-04-26",
+      "values": [
+        53
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-03",
+      "values": [
+        56
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-10",
+      "values": [
+        96
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-17",
+      "values": [
+        42
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-24",
+      "values": [
+        100
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-05-31",
+      "values": [
+        53
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-06-07",
+      "values": [
+        77
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-06-14",
+      "values": [
+        74
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-06-21",
+      "values": [
+        85
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-06-28",
+      "values": [
+        40
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-07-05",
+      "values": [
+        62
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-07-12",
+      "values": [
+        30
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-07-19",
+      "values": [
+        76
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-07-26",
+      "values": [
+        30
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-08-02",
+      "values": [
+        34
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-08-09",
+      "values": [
+        25
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-08-16",
+      "values": [
+        49
+      ],
+      "is_partial": false
+    },
+    {
+      "date": "2026-08-23",
+      "values": [
+        15
+      ],
+      "is_partial": true
+    }
+  ],
+  "nonzero_points": [
+    109
+  ],
+  "queries": [
+    {
+      "rank": 1,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=walmart+near+me&date=2024-08-01+2026-08-24",
+      "query": "walmart near me"
+    },
+    {
+      "rank": 2,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=technology+news+today&date=2024-08-01+2026-08-24",
+      "query": "technology news today"
+    },
+    {
+      "rank": 3,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=ai+news+today&date=2024-08-01+2026-08-24",
+      "query": "ai news today"
+    },
+    {
+      "rank": 4,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+4,350%",
+      "breakout": "",
+      "href": "/trends/explore?q=lidl+near+me&date=2024-08-01+2026-08-24",
+      "query": "lidl near me"
+    },
+    {
+      "rank": 5,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+400%",
+      "breakout": "",
+      "href": "/trends/explore?q=ci/cd+best+practices&date=2024-08-01+2026-08-24",
+      "query": "ci/cd best practices"
+    },
+    {
+      "rank": 6,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+350%",
+      "breakout": "",
+      "href": "/trends/explore?q=ci/cd+practices&date=2024-08-01+2026-08-24",
+      "query": "ci/cd practices"
+    },
+    {
+      "rank": 7,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+350%",
+      "breakout": "",
+      "href": "/trends/explore?q=github+actions+ci/cd&date=2024-08-01+2026-08-24",
+      "query": "github actions ci/cd"
+    },
+    {
+      "rank": 8,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+350%",
+      "breakout": "",
+      "href": "/trends/explore?q=github+actions&date=2024-08-01+2026-08-24",
+      "query": "github actions"
+    },
+    {
+      "rank": 9,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+350%",
+      "breakout": "",
+      "href": "/trends/explore?q=ci/cd+platform&date=2024-08-01+2026-08-24",
+      "query": "ci/cd platform"
+    },
+    {
+      "rank": 10,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+300%",
+      "breakout": "",
+      "href": "/trends/explore?q=ci/cd+security&date=2024-08-01+2026-08-24",
+      "query": "ci/cd security"
+    },
+    {
+      "rank": 11,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+170%",
+      "breakout": "",
+      "href": "/trends/explore?q=ci/cd+automation&date=2024-08-01+2026-08-24",
+      "query": "ci/cd automation"
+    },
+    {
+      "rank": 12,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+90%",
+      "breakout": "",
+      "href": "/trends/explore?q=api&date=2024-08-01+2026-08-24",
+      "query": "api"
+    },
+    {
+      "rank": 13,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+80%",
+      "breakout": "",
+      "href": "/trends/explore?q=github&date=2024-08-01+2026-08-24",
+      "query": "github"
+    },
+    {
+      "rank": 14,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+80%",
+      "breakout": "",
+      "href": "/trends/explore?q=ci/cd+github&date=2024-08-01+2026-08-24",
+      "query": "ci/cd github"
+    },
+    {
+      "rank": 15,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+70%",
+      "breakout": "",
+      "href": "/trends/explore?q=ci/cd+tools&date=2024-08-01+2026-08-24",
+      "query": "ci/cd tools"
+    },
+    {
+      "rank": 1,
+      "type_top_or_rising": "top",
+      "value_or_growth": "100",
+      "breakout": "",
+      "href": "/trends/explore?q=pipeline+ci/cd&date=2024-08-01+2026-08-24",
+      "query": "pipeline ci/cd"
+    },
+    {
+      "rank": 2,
+      "type_top_or_rising": "top",
+      "value_or_growth": "95",
+      "breakout": "",
+      "href": "/trends/explore?q=ci/cd+gitlab&date=2024-08-01+2026-08-24",
+      "query": "ci/cd gitlab"
+    },
+    {
+      "rank": 3,
+      "type_top_or_rising": "top",
+      "value_or_growth": "94",
+      "breakout": "",
+      "href": "/trends/explore?q=gitlab&date=2024-08-01+2026-08-24",
+      "query": "gitlab"
+    },
+    {
+      "rank": 4,
+      "type_top_or_rising": "top",
+      "value_or_growth": "92",
+      "breakout": "",
+      "href": "/trends/explore?q=ci/cd+github&date=2024-08-01+2026-08-24",
+      "query": "ci/cd github"
+    },
+    {
+      "rank": 5,
+      "type_top_or_rising": "top",
+      "value_or_growth": "90",
+      "breakout": "",
+      "href": "/trends/explore?q=github&date=2024-08-01+2026-08-24",
+      "query": "github"
+    },
+    {
+      "rank": 6,
+      "type_top_or_rising": "top",
+      "value_or_growth": "71",
+      "breakout": "",
+      "href": "/trends/explore?q=what+is+ci/cd&date=2024-08-01+2026-08-24",
+      "query": "what is ci/cd"
+    },
+    {
+      "rank": 7,
+      "type_top_or_rising": "top",
+      "value_or_growth": "66",
+      "breakout": "",
+      "href": "/trends/explore?q=devops+ci/cd&date=2024-08-01+2026-08-24",
+      "query": "devops ci/cd"
+    },
+    {
+      "rank": 8,
+      "type_top_or_rising": "top",
+      "value_or_growth": "64",
+      "breakout": "",
+      "href": "/trends/explore?q=devops&date=2024-08-01+2026-08-24",
+      "query": "devops"
+    },
+    {
+      "rank": 9,
+      "type_top_or_rising": "top",
+      "value_or_growth": "56",
+      "breakout": "",
+      "href": "/trends/explore?q=github+actions+ci/cd&date=2024-08-01+2026-08-24",
+      "query": "github actions ci/cd"
+    },
+    {
+      "rank": 10,
+      "type_top_or_rising": "top",
+      "value_or_growth": "55",
+      "breakout": "",
+      "href": "/trends/explore?q=github+actions&date=2024-08-01+2026-08-24",
+      "query": "github actions"
+    },
+    {
+      "rank": 11,
+      "type_top_or_rising": "top",
+      "value_or_growth": "53",
+      "breakout": "",
+      "href": "/trends/explore?q=ci/cd+tools&date=2024-08-01+2026-08-24",
+      "query": "ci/cd tools"
+    },
+    {
+      "rank": 12,
+      "type_top_or_rising": "top",
+      "value_or_growth": "48",
+      "breakout": "",
+      "href": "/trends/explore?q=jenkins+ci/cd&date=2024-08-01+2026-08-24",
+      "query": "jenkins ci/cd"
+    },
+    {
+      "rank": 13,
+      "type_top_or_rising": "top",
+      "value_or_growth": "47",
+      "breakout": "",
+      "href": "/trends/explore?q=jenkins&date=2024-08-01+2026-08-24",
+      "query": "jenkins"
+    },
+    {
+      "rank": 14,
+      "type_top_or_rising": "top",
+      "value_or_growth": "40",
+      "breakout": "",
+      "href": "/trends/explore?q=ci/cd+security&date=2024-08-01+2026-08-24",
+      "query": "ci/cd security"
+    },
+    {
+      "rank": 15,
+      "type_top_or_rising": "top",
+      "value_or_growth": "32",
+      "breakout": "",
+      "href": "/trends/explore?q=azure+ci/cd&date=2024-08-01+2026-08-24",
+      "query": "azure ci/cd"
+    },
+    {
+      "rank": 16,
+      "type_top_or_rising": "top",
+      "value_or_growth": "32",
+      "breakout": "",
+      "href": "/trends/explore?q=azure&date=2024-08-01+2026-08-24",
+      "query": "azure"
+    },
+    {
+      "rank": 17,
+      "type_top_or_rising": "top",
+      "value_or_growth": "28",
+      "breakout": "",
+      "href": "/trends/explore?q=ci/cd+aws&date=2024-08-01+2026-08-24",
+      "query": "ci/cd aws"
+    },
+    {
+      "rank": 18,
+      "type_top_or_rising": "top",
+      "value_or_growth": "28",
+      "breakout": "",
+      "href": "/trends/explore?q=aws&date=2024-08-01+2026-08-24",
+      "query": "aws"
+    },
+    {
+      "rank": 19,
+      "type_top_or_rising": "top",
+      "value_or_growth": "28",
+      "breakout": "",
+      "href": "/trends/explore?q=ci/cd+practices&date=2024-08-01+2026-08-24",
+      "query": "ci/cd practices"
+    },
+    {
+      "rank": 20,
+      "type_top_or_rising": "top",
+      "value_or_growth": "27",
+      "breakout": "",
+      "href": "/trends/explore?q=api&date=2024-08-01+2026-08-24",
+      "query": "api"
+    },
+    {
+      "rank": 21,
+      "type_top_or_rising": "top",
+      "value_or_growth": "26",
+      "breakout": "",
+      "href": "/trends/explore?q=ci/cd+meaning&date=2024-08-01+2026-08-24",
+      "query": "ci/cd meaning"
+    },
+    {
+      "rank": 22,
+      "type_top_or_rising": "top",
+      "value_or_growth": "24",
+      "breakout": "",
+      "href": "/trends/explore?q=ci/cd+platform&date=2024-08-01+2026-08-24",
+      "query": "ci/cd platform"
+    },
+    {
+      "rank": 23,
+      "type_top_or_rising": "top",
+      "value_or_growth": "24",
+      "breakout": "",
+      "href": "/trends/explore?q=ci/cd+automation&date=2024-08-01+2026-08-24",
+      "query": "ci/cd automation"
+    },
+    {
+      "rank": 24,
+      "type_top_or_rising": "top",
+      "value_or_growth": "22",
+      "breakout": "",
+      "href": "/trends/explore?q=ci/cd+best+practices&date=2024-08-01+2026-08-24",
+      "query": "ci/cd best practices"
+    },
+    {
+      "rank": 25,
+      "type_top_or_rising": "top",
+      "value_or_growth": "22",
+      "breakout": "",
+      "href": "/trends/explore?q=ci&date=2024-08-01+2026-08-24",
+      "query": "ci"
+    }
+  ],
+  "topics": [
+    {
+      "rank": 1,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11b77d6b6g&date=2024-08-01+2026-08-24",
+      "topic": "2026",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11b77d6b6g"
+    },
+    {
+      "rank": 2,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/g/11bc5zy143&date=2024-08-01+2026-08-24",
+      "topic": "Reuters",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11bc5zy143"
+    },
+    {
+      "rank": 3,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/0ps53&date=2024-08-01+2026-08-24",
+      "topic": "Reuters",
+      "topic_type": "News agency company",
+      "topic_mid": "/m/0ps53"
+    },
+    {
+      "rank": 4,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/01s8jw&date=2024-08-01+2026-08-24",
+      "topic": "Press release",
+      "topic_type": "Topic",
+      "topic_mid": "/m/01s8jw"
+    },
+    {
+      "rank": 5,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/01fw9h&date=2024-08-01+2026-08-24",
+      "topic": "National Health Service",
+      "topic_type": "Government department",
+      "topic_mid": "/m/01fw9h"
+    },
+    {
+      "rank": 6,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/028kb&date=2024-08-01+2026-08-24",
+      "topic": "December",
+      "topic_type": "Month",
+      "topic_mid": "/m/028kb"
+    },
+    {
+      "rank": 7,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/040fb&date=2024-08-01+2026-08-24",
+      "topic": "June",
+      "topic_type": "Month",
+      "topic_mid": "/m/040fb"
+    },
+    {
+      "rank": 8,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/04wzr&date=2024-08-01+2026-08-24",
+      "topic": "March",
+      "topic_type": "Month",
+      "topic_mid": "/m/04wzr"
+    },
+    {
+      "rank": 9,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/040fv&date=2024-08-01+2026-08-24",
+      "topic": "July",
+      "topic_type": "Month",
+      "topic_mid": "/m/040fv"
+    },
+    {
+      "rank": 10,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/0lkm&date=2024-08-01+2026-08-24",
+      "topic": "April",
+      "topic_type": "Month",
+      "topic_mid": "/m/0lkm"
+    },
+    {
+      "rank": 11,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/037rzs&date=2024-08-01+2026-08-24",
+      "topic": "Headquarters",
+      "topic_type": "Topic",
+      "topic_mid": "/m/037rzs"
+    },
+    {
+      "rank": 12,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/03dd26&date=2024-08-01+2026-08-24",
+      "topic": "Funding",
+      "topic_type": "Film company role or service",
+      "topic_mid": "/m/03dd26"
+    },
+    {
+      "rank": 13,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "",
+      "breakout": "Breakout",
+      "href": "/trends/explore?q=/m/05cw8&date=2024-08-01+2026-08-24",
+      "topic": "November",
+      "topic_type": "Month",
+      "topic_mid": "/m/05cw8"
+    },
+    {
+      "rank": 14,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+4,750%",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/11b77d6b6f&date=2024-08-01+2026-08-24",
+      "topic": "2021",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11b77d6b6f"
+    },
+    {
+      "rank": 15,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+2,350%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/02mz1d&date=2024-08-01+2026-08-24",
+      "topic": "Review",
+      "topic_type": "Topic",
+      "topic_mid": "/m/02mz1d"
+    },
+    {
+      "rank": 16,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+1,150%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0mkz&date=2024-08-01+2026-08-24",
+      "topic": "Artificial intelligence",
+      "topic_type": "Professional field",
+      "topic_mid": "/m/0mkz"
+    },
+    {
+      "rank": 17,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+1,050%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/015www&date=2024-08-01+2026-08-24",
+      "topic": "Documentation",
+      "topic_type": "Topic",
+      "topic_mid": "/m/015www"
+    },
+    {
+      "rank": 18,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+1,000%",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/120z18l3&date=2024-08-01+2026-08-24",
+      "topic": "Company",
+      "topic_type": "Organization type",
+      "topic_mid": "/g/120z18l3"
+    },
+    {
+      "rank": 19,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+1,000%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/04115t2&date=2024-08-01+2026-08-24",
+      "topic": "Job",
+      "topic_type": "Topic",
+      "topic_mid": "/m/04115t2"
+    },
+    {
+      "rank": 20,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+1,000%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0168hv&date=2024-08-01+2026-08-24",
+      "topic": "Cost",
+      "topic_type": "Topic",
+      "topic_mid": "/m/0168hv"
+    },
+    {
+      "rank": 21,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+250%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0bg2p&date=2024-08-01+2026-08-24",
+      "topic": "Security",
+      "topic_type": "Topic",
+      "topic_mid": "/m/0bg2p"
+    },
+    {
+      "rank": 22,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+250%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/04_tv&date=2024-08-01+2026-08-24",
+      "topic": "Management",
+      "topic_type": "Field of study",
+      "topic_mid": "/m/04_tv"
+    },
+    {
+      "rank": 23,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+200%",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/11jh8km8zt&date=2024-08-01+2026-08-24",
+      "topic": "GitHub Actions",
+      "topic_type": "Software",
+      "topic_mid": "/g/11jh8km8zt"
+    },
+    {
+      "rank": 24,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+140%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/026sq&date=2024-08-01+2026-08-24",
+      "topic": "Data",
+      "topic_type": "Topic",
+      "topic_mid": "/m/026sq"
+    },
+    {
+      "rank": 25,
+      "type_top_or_rising": "rising",
+      "value_or_growth": "+120%",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/01mf0&date=2024-08-01+2026-08-24",
+      "topic": "Software",
+      "topic_type": "Software type",
+      "topic_mid": "/m/01mf0"
+    },
+    {
+      "rank": 1,
+      "type_top_or_rising": "top",
+      "value_or_growth": "100",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/11c2p8c42b&date=2024-08-01+2026-08-24",
+      "topic": "CI/CD",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11c2p8c42b"
+    },
+    {
+      "rank": 2,
+      "type_top_or_rising": "top",
+      "value_or_growth": "16",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/11b77d6b6g&date=2024-08-01+2026-08-24",
+      "topic": "2026",
+      "topic_type": "Topic",
+      "topic_mid": "/g/11b77d6b6g"
+    },
+    {
+      "rank": 3,
+      "type_top_or_rising": "top",
+      "value_or_growth": "15",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0125_4f0&date=2024-08-01+2026-08-24",
+      "topic": "GitLab",
+      "topic_type": "Software",
+      "topic_mid": "/m/0125_4f0"
+    },
+    {
+      "rank": 4,
+      "type_top_or_rising": "top",
+      "value_or_growth": "14",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0ryppmg&date=2024-08-01+2026-08-24",
+      "topic": "GitHub",
+      "topic_type": "Company",
+      "topic_mid": "/m/0ryppmg"
+    },
+    {
+      "rank": 5,
+      "type_top_or_rising": "top",
+      "value_or_growth": "10",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0c3tq11&date=2024-08-01+2026-08-24",
+      "topic": "DevOps",
+      "topic_type": "Topic",
+      "topic_mid": "/m/0c3tq11"
+    },
+    {
+      "rank": 6,
+      "type_top_or_rising": "top",
+      "value_or_growth": "9",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/11jh8km8zt&date=2024-08-01+2026-08-24",
+      "topic": "GitHub Actions",
+      "topic_type": "Software",
+      "topic_mid": "/g/11jh8km8zt"
+    },
+    {
+      "rank": 7,
+      "type_top_or_rising": "top",
+      "value_or_growth": "9",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0mkz&date=2024-08-01+2026-08-24",
+      "topic": "Artificial intelligence",
+      "topic_type": "Professional field",
+      "topic_mid": "/m/0mkz"
+    },
+    {
+      "rank": 8,
+      "type_top_or_rising": "top",
+      "value_or_growth": "8",
+      "breakout": "",
+      "href": "/trends/explore?q=/g/120z18l3&date=2024-08-01+2026-08-24",
+      "topic": "Company",
+      "topic_type": "Organization type",
+      "topic_mid": "/g/120z18l3"
+    },
+    {
+      "rank": 9,
+      "type_top_or_rising": "top",
+      "value_or_growth": "7",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0g9x0gr&date=2024-08-01+2026-08-24",
+      "topic": "Jenkins",
+      "topic_type": "Software",
+      "topic_mid": "/m/0g9x0gr"
+    },
+    {
+      "rank": 10,
+      "type_top_or_rising": "top",
+      "value_or_growth": "7",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/026sq&date=2024-08-01+2026-08-24",
+      "topic": "Data",
+      "topic_type": "Topic",
+      "topic_mid": "/m/026sq"
+    },
+    {
+      "rank": 11,
+      "type_top_or_rising": "top",
+      "value_or_growth": "6",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/01mf0&date=2024-08-01+2026-08-24",
+      "topic": "Software",
+      "topic_type": "Software type",
+      "topic_mid": "/m/01mf0"
+    },
+    {
+      "rank": 12,
+      "type_top_or_rising": "top",
+      "value_or_growth": "6",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0bg2p&date=2024-08-01+2026-08-24",
+      "topic": "Security",
+      "topic_type": "Topic",
+      "topic_mid": "/m/0bg2p"
+    },
+    {
+      "rank": 13,
+      "type_top_or_rising": "top",
+      "value_or_growth": "6",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/02y_9m3&date=2024-08-01+2026-08-24",
+      "topic": "Cloud computing",
+      "topic_type": "Organization type",
+      "topic_mid": "/m/02y_9m3"
+    },
+    {
+      "rank": 14,
+      "type_top_or_rising": "top",
+      "value_or_growth": "6",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/02mz1d&date=2024-08-01+2026-08-24",
+      "topic": "Review",
+      "topic_type": "Topic",
+      "topic_mid": "/m/02mz1d"
+    },
+    {
+      "rank": 15,
+      "type_top_or_rising": "top",
+      "value_or_growth": "6",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/04115t2&date=2024-08-01+2026-08-24",
+      "topic": "Job",
+      "topic_type": "Topic",
+      "topic_mid": "/m/04115t2"
+    },
+    {
+      "rank": 16,
+      "type_top_or_rising": "top",
+      "value_or_growth": "6",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/04_tv&date=2024-08-01+2026-08-24",
+      "topic": "Management",
+      "topic_type": "Field of study",
+      "topic_mid": "/m/04_tv"
+    },
+    {
+      "rank": 17,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/05nk6s&date=2024-08-01+2026-08-24",
+      "topic": "Software deployment",
+      "topic_type": "Topic",
+      "topic_mid": "/m/05nk6s"
+    },
+    {
+      "rank": 18,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/017cmr&date=2024-08-01+2026-08-24",
+      "topic": "Automation",
+      "topic_type": "Topic",
+      "topic_mid": "/m/017cmr"
+    },
+    {
+      "rank": 19,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/04y7lrx&date=2024-08-01+2026-08-24",
+      "topic": "Microsoft Azure",
+      "topic_type": "Computer application",
+      "topic_mid": "/m/04y7lrx"
+    },
+    {
+      "rank": 20,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/015www&date=2024-08-01+2026-08-24",
+      "topic": "Documentation",
+      "topic_type": "Topic",
+      "topic_mid": "/m/015www"
+    },
+    {
+      "rank": 21,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0168hv&date=2024-08-01+2026-08-24",
+      "topic": "Cost",
+      "topic_type": "Topic",
+      "topic_mid": "/m/0168hv"
+    },
+    {
+      "rank": 22,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/076dn&date=2024-08-01+2026-08-24",
+      "topic": "Software Testing",
+      "topic_type": "Software",
+      "topic_mid": "/m/076dn"
+    },
+    {
+      "rank": 23,
+      "type_top_or_rising": "top",
+      "value_or_growth": "5",
+      "breakout": "",
+      "href": "/trends/explore?q=/m/0z5n&date=2024-08-01+2026-08-24",
+      "topic": "API",
+      "topic_type": "Type of software",
+      "topic_mid": "/m/0z5n"
+    }
+  ],
+  "related_availability": {
+    "topics": true,
+    "queries": true
+  },
+  "source_url": "https://trends.google.com/trends/explore?date=2024-08-01%202026-08-24&q=ci%2Fcd&hl=en-GB"
+}

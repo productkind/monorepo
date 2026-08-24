@@ -109,6 +109,33 @@ Two readings that are easy to get wrong:
   same run, `adhd brain dump template` showed +132,100% and had a mean of 0.2
   when sized against `mental load`. Check the mean before believing the rise.
 
+## PM technical-fluency Trends collection
+
+`pm-technical-fluency-google-trends.py` is the dated job collector for the
+25-term PM technical-fluency matrix. It retains the full weekly series, related
+queries, related topics, run metadata, labelled fallbacks and same-request
+comparisons. Successful raw responses are cached so a rate-limited run can be
+resumed.
+
+```
+python3 -u pm-technical-fluency-google-trends.py \
+  --output-dir /absolute/path/to/google-trends-data
+```
+
+`pm-technical-fluency-google-trends-assemble.py` assembles the cached signed-in
+browser runs into Datasets A–D, run metadata, a manifest and the data-quality
+note. It refuses to proceed unless all 150 exact and 30 comparison runs exist.
+
+```
+python3 -u pm-technical-fluency-google-trends-assemble.py \
+  --data-dir /absolute/path/to/google-trends-data
+```
+
+`google-trends-download-watcher.py` is an optional browser-export helper. It
+moves only newly created `multiTimeline`, `relatedEntities` and
+`relatedQueries` CSV files when a matching request file exists in its control
+directory. It is not a general Downloads-folder watcher.
+
 ## `marketplace-supply-audit.py` (product-niche version of signals A and D)
 
 Not for content niches. This one finds product niches inside the Atlassian

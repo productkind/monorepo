@@ -1,0 +1,33 @@
+{
+  "run_id": "1a07c7b563a1",
+  "run_kind": "exact",
+  "input_term": "build mvp with ai",
+  "source_term": "build mvp with ai",
+  "fallback_term": "",
+  "comparison_group": "",
+  "terms": [
+    "build mvp with ai"
+  ],
+  "term_type": "Search term",
+  "geography": "UK",
+  "geo_code": "GB",
+  "date_range": "2024-08-01 to 2026-08-24",
+  "api_timeframe": "2024-08-01 2026-08-24",
+  "search_type": "Google Web Search",
+  "category_id": 0,
+  "category": "All categories",
+  "retrieval_date": "2026-08-24",
+  "data_status": "insufficient_no_series",
+  "headers": [],
+  "series": [],
+  "nonzero_points": [
+    0
+  ],
+  "queries": [],
+  "topics": [],
+  "related_availability": {
+    "topics": false,
+    "queries": false
+  },
+  "source_url": "https://trends.google.com/trends/explore?date=2024-08-01%202026-08-24&geo=GB&q=build%20mvp%20with%20ai&hl=en-GB"
+}
