@@ -48,7 +48,7 @@ python3 pm-search-observation-audit.py
 The script currently audits these fixed files:
 
 - `pm-technical-fluency-seeds.txt`
-- `../../../ai-research/pm-technical-fluency-observed-search-phrases-2026-08.md`
+- `../../../ai-research/pm-technical-fluency/pm-technical-fluency-observed-search-phrases-2026-08.md`
 
 A clean run ends with `Missing observations: 0`. Because autocomplete changes
 over time, a later missing observation does not prove the phrase was never

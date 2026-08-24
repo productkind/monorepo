@@ -9,7 +9,7 @@
 
 The six need families came from the [validated PM-needs research](./non-technical-pm-technical-needs-validation-2026-08.md). Discovery then used ordinary learner wording rather than requiring “product manager” in the query.
 
-- **94 discovery seeds** were passed through Google autocomplete (English, GB) and YouTube autocomplete (English, GB and US). The working seed set is [here](../marketing/channels/niche-research-tools/pm-technical-fluency-seeds.txt).
+- **94 discovery seeds** were passed through Google autocomplete (English, GB) and YouTube autocomplete (English, GB and US). The working seed set is [here](../../marketing/channels/niche-research-tools/pm-technical-fluency-seeds.txt).
 - **20 Google result pages** were inspected for top-result intent, People Also Ask and related searches. Google reported that results were not personalised; the browser location was Portugal.
 - The top 12 YouTube results were inspected for **13 representative queries** across the six need families.
 - Comments were inspected on five representative videos, including current non-technical and PM-specific explainers.
