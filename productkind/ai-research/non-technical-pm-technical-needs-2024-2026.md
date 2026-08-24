@@ -5,6 +5,14 @@
 **Researched:** 24 August 2026  
 **Purpose:** evidence and natural-language seeds for later Google, YouTube and Semrush research
 
+> **Validation update, 24 August 2026:** A second pass added 22 first-person
+> LinkedIn/community units, applied a four-part identity screen, separated people,
+> discussions and independent communities, and logged saturation. Sixteen units
+> passed all criteria. The addendum also records where the evidence remains
+> LinkedIn-heavy and provides an unfielded interview/survey instrument. See the
+> [validation addendum](./non-technical-pm-technical-needs-validation-2026-08.md)
+> and [validation pack](./pm-technical-fluency-interview-survey-pack-2026-08.md).
+
 ## Executive answer
 
 The dominant need is not to become a developer. It is to stop being unable to
@@ -43,6 +51,13 @@ maintenance, code quality and distracting PMs from their core job.
 [counterargument from a PM](https://www.linkedin.com/posts/payton-hatfield-12635051_at-a-local-product-meetup-shout-out-crema-activity-7406881386005127168-0XLs)
 
 ## Method and evidence standard
+
+The original method below should now be read with the stricter identity and
+source-independence audit in the
+[validation addendum](./non-technical-pm-technical-needs-validation-2026-08.md).
+The addendum does not turn the research into a representative prevalence study;
+it strengthens several need clusters while explicitly downgrading claims that
+remain dependent on Reddit or LinkedIn.
 
 The evidence ledger contains 27 dated units: 22 Reddit PM/community threads,
 three LinkedIn posts or comment discussions, one YouTube comment set and one
