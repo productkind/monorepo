@@ -462,9 +462,25 @@ To get started, describe how your lead magnet should work using this prompt temp
 Of course, this is just the beginning. Follow along to level up your consulting game with AI!
 `
 
-const TEXT_TO_GENERATE = videoSocialMedia016
+const videoSocialMedia017 = `
+If you're the one remembering what needs buying, booking, doing, and when the baby last ate, build this.
+
+Just say everything that's on your mind. It doesn't need to be organised.
+
+Your phone sorts it into neat checklists…
+
+And the same idea works for all those tiny things you need to keep track of with a baby.
+
+Feeds, naps, nappies, just say it, and your phone logs it.
+
+In our Hand Off the Mental Load course, you build both shortcuts yourself in about 20 minutes.
+
+The whole course is free until the 30th of August, link in comments to build your shortcuts.
+`
+
+const TEXT_TO_GENERATE = videoSocialMedia017
 const MODEL_ID = 'eleven_v3' //'eleven_multilingual_v2' // // The v3 model as requested
-const videoName = 'video-social-016-chloe'
+const videoName = 'video-social-017-chloe'
 const OUTPUT_FILE_NAME = `generated_speech-${videoName}.wav` // e.g.,
 const ALIGNMENT_JSON_FILE_NAME = `alignment-${videoName}.json`
 const OUTPUT_FILE_PATH = OUTPUT_FILE_NAME // Saves in the same directory as the script
