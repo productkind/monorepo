@@ -20,7 +20,7 @@ course ideas. They are the ingredients of one practical capability:
    problem safely.
 4. **Spot technical consequences before commitment** so the PM can make a
    defensible product trade-off.
-5. **Build to learn—and know where production starts** so the PM can test an
+5. **Build to learn and know where production starts** so the PM can test an
    assumption without mistaking a prototype for production software.
 
 Every hypothesis below includes all five. They differ only in the **major
@@ -32,7 +32,8 @@ change the buyer believes they are purchasing**:
 
 This follows the central research finding: “becoming more technical” means
 being able to understand, inspect, question, decide and prototype at the
-Product–Engineering boundary—not learning technologies for their own sake.
+Product–Engineering boundary, rather than learning technologies for their own
+sake.
 ([cross-evidence synthesis](./pm-technical-fluency-opportunity-synthesis-2026-08.md#1-executive-synthesis))
 
 ## The shared whole-course mechanism
@@ -65,11 +66,15 @@ which result leads the proposition.
 
 ## 1. Whole-course offer hypothesis table
 
+Each major transformation is written as a learner outcome: what the PM will be
+able to do, how that changes their work and the concrete evidence they will
+produce during the programme.
+
 | Hypothesis | Target buyer | Major transformation | What the buyer is purchasing | How all five territories combine | Evidence strength | Biggest uncertainty |
 |---|---|---|---|---|---|---|
-| **H1. Independent technical judgement** | Mid-level or senior PM accountable for consequential roadmap, scope and prioritisation decisions | **From accepting technical explanations and estimates they cannot assess → to forming and defending a technically grounded product judgement with engineering.** | The ability to decide more credibly before committing time, scope or organisational trust—not the ability to supply the engineering answer. | System tracing provides context; change-to-user reveals delivery implications; investigation supplies evidence; consequences become a trade-off; prototyping tests uncertainty before commitment. | **High PM-need confidence; strong WTP for the complete foundations bundle; weak direct search expression.** | Will buyers pay for “technical judgement” as the named outcome, or do they only recognise the same value when framed as confidence, career progression or named technical skills? |
-| **H2. Engineering trust and professional influence** | Non-technical PM who feels peripheral in technical conversations, is entering a more complex team or needs to operate at greater seniority | **From nodding, translating late and relying on engineers to simplify every discussion → to being a trusted product partner who can participate across system, delivery, incident and trade-off conversations.** | Greater credibility, influence and professional range: being useful in the room and trusted with more complex software product work. | Tracing enables accurate teach-back; delivery fluency makes stand-ups/releases legible; investigation creates useful incident participation; judgement connects technical choices to Product; building supplies first-hand experience and a shared artefact. | **Highest confidence in the underlying PM pain; strong established competitor WTP; crowded proposition.** | Can the complete applied transformation feel materially different from existing “technical foundations for PMs” courses and abundant free explanations? |
-| **H3. First-pass technical autonomy** | PM in a lean or fast-moving software team who waits on engineering for simple capability answers, issue investigation, prototypes and feasibility context | **From treating engineering as the first stop for every technical question → to independently completing a safe first pass and bringing evidence, options or an inspectable artefact to the team.** | Faster learning and less avoidable dependence: the ability to move a product question forward without crossing into engineering ownership. | Tracing locates the question; delivery fluency reveals current state; investigation narrows uncertainty; consequence analysis turns evidence into options; AI-assisted building makes an assumption testable. | **Strong qualitative independence evidence; strong WTP for the bundle and AI-building component; weak commercial proof for the complete autonomy framing.** | Will PMs and employers value the combined time saved enough to pay €400–€800, or see much of this as company-specific onboarding and engineering/QA work? |
+| **H1. Independent technical judgement** | Mid-level or senior PM accountable for consequential roadmap, scope and prioritisation decisions | **You'll be able to evaluate how a proposed product change will affect the system, delivery work and technical risk, so you can lead higher-stakes scope and trade-off decisions with engineering before the team commits. You'll leave with a technical product decision review containing a system map, dependency and risk analysis, supporting evidence and your recommendation.** | The ability to decide more credibly before committing time, scope or organisational trust, without supplying the engineering answer. | System tracing provides context; change-to-user reveals delivery implications; investigation supplies evidence; consequences become a trade-off; prototyping tests uncertainty before commitment. | **High PM-need confidence; strong WTP for the complete foundations bundle; weak direct search expression.** | Will buyers pay for “technical judgement” as the named outcome, or do they only recognise the same value when framed as confidence, career progression or named technical skills? |
+| **H2. Engineering trust and professional influence** | Non-technical PM who feels peripheral in technical conversations, is entering a more complex team or needs to operate at greater seniority | **You'll be able to explain how your product works, follow a change through release, investigate an issue and evaluate technical trade-offs, so you can contribute credibly in technical discussions and take on more complex product work. You'll leave with an end-to-end product case study containing a system walkthrough, release analysis, issue investigation, working prototype and final decision handover.** | Greater credibility, influence and professional range: being useful in the room and trusted with more complex software product work. | Tracing enables accurate teach-back; delivery fluency makes stand-ups/releases legible; investigation creates useful incident participation; judgement connects technical choices to Product; building supplies first-hand experience and a shared artefact. | **Highest confidence in the underlying PM pain; strong established competitor WTP; crowded proposition.** | Can the complete applied transformation feel materially different from existing “technical foundations for PMs” courses and abundant free explanations? |
+| **H3. First-pass technical autonomy** | PM in a lean or fast-moving software team who waits on engineering for simple capability answers, issue investigation, prototypes and feasibility context | **You'll be able to trace a technical question through a software product, inspect evidence, investigate problems and test a bounded idea with an AI-assisted prototype, so you can move product work forward and involve engineering with a clear, useful handover. You'll leave with a repeatable investigation pack containing a system map, issue evidence, product options, a working prototype and the questions engineering still needs to decide.** | Faster learning and less avoidable dependence: the ability to move a product question forward without crossing into engineering ownership. | Tracing locates the question; delivery fluency reveals current state; investigation narrows uncertainty; consequence analysis turns evidence into options; AI-assisted building makes an assumption testable. | **Strong qualitative independence evidence; strong WTP for the bundle and AI-building component; weak commercial proof for the complete autonomy framing.** | Will PMs and employers value the combined time saved enough to pay €400–€800, or see much of this as company-specific onboarding and engineering/QA work? |
 
 ## 2. Whole-course value proposition profiles
 
@@ -103,9 +108,11 @@ whether an estimate or explanation is plausible.
 
 #### Major transformation
 
-> **From accepting technical explanations and estimates they cannot assess →
-> to forming and defending a technically grounded product judgement with
-> engineering.**
+> **You'll be able to evaluate how a proposed product change will affect the
+> system, delivery work and technical risk, so you can lead higher-stakes scope
+> and trade-off decisions with engineering before the team commits. You'll
+> leave with a technical product decision review containing a system map,
+> dependency and risk analysis, supporting evidence and your recommendation.**
 
 #### Meaningful value being bought
 
@@ -133,7 +140,7 @@ means.”
 | Make the route from change to user legible | Reveals the review, testing, environment, release and rollback consequences hidden inside a commitment. |
 | Investigate before escalating | Teaches the learner to seek evidence rather than treating the first explanation or symptom as fact. |
 | Spot technical consequences before commitment | Converts the preceding understanding into the culminating product trade-off. |
-| Build to learn—and know where production starts | Lets the learner test a bounded uncertainty while seeing what a prototype cannot prove about production. |
+| Build to learn and know where production starts | Lets the learner test a bounded uncertainty while seeing what a prototype cannot prove about production. |
 
 None of the five is optional. Without system understanding, the judgement is
 ungrounded; without delivery and investigation, it lacks evidence; without a
@@ -152,9 +159,9 @@ software product:
 - prototype-to-production gap analysis; and
 - an options brief recommending what to commit, defer, test or change and why.
 
-The assessment is whether the learner can explain the evidence, ask the missing
-questions and make a bounded decision—not whether they chose an engineering
-design.
+The assessment checks whether the learner can explain the evidence, ask the
+missing questions and make a bounded decision. It does not assess whether they
+chose an engineering design.
 
 #### Boundaries
 
@@ -221,9 +228,12 @@ simpler terms”.
 
 #### Major transformation
 
-> **From nodding, translating late and relying on engineers to simplify every
-> discussion → to being a trusted product partner who can participate across
-> system, delivery, incident and trade-off conversations.**
+> **You'll be able to explain how your product works, follow a change through
+> release, investigate an issue and evaluate technical trade-offs, so you can
+> contribute credibly in technical discussions and take on more complex product
+> work. You'll leave with an end-to-end product case study containing a system
+> walkthrough, release analysis, issue investigation, working prototype and
+> final decision handover.**
 
 #### Meaningful value being bought
 
@@ -251,7 +261,7 @@ evidence and judgement rather than technical performance theatre.
 | Make the route from change to user legible | Makes stand-ups, refinement, PR/review, testing and release conversations comprehensible. |
 | Investigate before escalating | Gives the PM a useful role in debugging and incident conversations without taking over engineering work. |
 | Spot technical consequences before commitment | Turns comprehension into valuable participation in scope and roadmap decisions. |
-| Build to learn—and know where production starts | Supplies first-hand building experience, an artefact to discuss and humility about the engineering boundary. |
+| Build to learn and know where production starts | Supplies first-hand building experience, an artefact to discuss and humility about the engineering boundary. |
 
 All five are required because credibility based only on vocabulary is fragile.
 Trust comes from being able to follow the system, inspect evidence, experience
@@ -304,7 +314,7 @@ every buyer accepts a high price.
 
 **Inference.** A €400–€800 price is plausible if the proposition is an assessed
 workplace transformation with live practice, feedback and transfer into the
-learner's product—not another library of technical explanations.
+learner's product, rather than another library of technical explanations.
 
 #### Biggest uncertainty
 
@@ -348,9 +358,12 @@ capability and error question.
 
 #### Major transformation
 
-> **From treating engineering as the first stop for every technical question →
-> to independently completing a safe first pass and bringing evidence, options
-> or an inspectable artefact to the team.**
+> **You'll be able to trace a technical question through a software product,
+> inspect evidence, investigate problems and test a bounded idea with an
+> AI-assisted prototype, so you can move product work forward and involve
+> engineering with a clear, useful handover. You'll leave with a repeatable
+> investigation pack containing a system map, issue evidence, product options,
+> a working prototype and the questions engineering still needs to decide.**
 
 #### Meaningful value being bought
 
@@ -376,7 +389,7 @@ starting point”.
 | Make the route from change to user legible | Lets the PM find the current state of work and understand what remains before users receive it. |
 | Investigate before escalating | Provides the repeatable evidence-gathering method for issues and capability questions. |
 | Spot technical consequences before commitment | Prevents autonomy from becoming activity without judgement; the PM must turn evidence into bounded options. |
-| Build to learn—and know where production starts | Gives the PM a way to test ideas independently while teaching the stopping point and hand-over. |
+| Build to learn and know where production starts | Gives the PM a way to test ideas independently while teaching the stopping point and hand-over. |
 
 All five are required. Investigation without a system model becomes random
 tool use; prototyping without delivery and production knowledge creates unsafe
@@ -446,10 +459,10 @@ employer ROI also needs direct proof.
 
 ## 3. Comparison and tensions
 
-| Dimension | H1 — Independent technical judgement | H2 — Engineering trust and influence | H3 — First-pass technical autonomy |
+| Dimension | H1: Independent technical judgement | H2: Engineering trust and influence | H3: First-pass technical autonomy |
 |---|---|---|---|
 | **What meaningful change is being bought?** | Better consequential product decisions before commitment. | Greater credibility, influence and access to more complex technical conversations/work. | Faster movement from question to evidence without unnecessary engineering dependence. |
-| **Primary value type** | Professional capability and decision quality. | Career effectiveness, relationship capital and professional range. | Autonomy, speed and leverage. |
+| **Primary value type** | Professional capability and decision quality. | Career effectiveness, relationship capital and professional range. | Autonomy, speed and saved engineering time. |
 | **Strength of underlying PM pain** | **High.** Late complexity, feasibility and trade-off pain is strongly repeated. | **Highest.** Opaque engineering conversations and workflow confusion have the strongest strict validation. | **Moderate–high.** Independence recurs across system, support and prototype evidence, but the combined framing is inferred. |
 | **Willingness-to-pay evidence** | **Strong for programmes containing the whole bundle**, but not for judgement as the lead message. | **Strongest established competitor precedent**, with both individual and employer-funded purchasing. | **Strong for technical foundations and AI building; weak for issue investigation and the combined autonomy promise.** |
 | **Urgency** | High when a roadmap, technical-debt or high-stakes scope decision is imminent; less visible between decisions. | High during a new role/team transition, promotion or visible credibility gap; episodic but emotionally salient. | High in lean teams, during incidents and when engineering capacity blocks learning; potentially frequent and measurable. |
@@ -504,7 +517,7 @@ Customer conversations and paid proposition tests should resolve five issues:
 
 1. **Which whole-course transformation produces action?** Force prospective
    buyers to choose between judgement, engineering influence and first-pass
-   autonomy using a recent real work situation—not general preference.
+   autonomy using a recent real work situation, rather than general preference.
 2. **Which proposition earns payment at €400, €600 and €800?** Use an
    application, deposit or refundable reservation. Agreement that a proposition
    sounds valuable is not WTP evidence.
