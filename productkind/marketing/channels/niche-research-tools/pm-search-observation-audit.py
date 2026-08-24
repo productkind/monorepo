@@ -5,7 +5,12 @@ import urllib.request
 
 HERE = pathlib.Path(__file__).resolve().parent
 SEEDS = HERE / "pm-technical-fluency-seeds.txt"
-REPORT = HERE.parents[2] / "ai-research" / "pm-technical-fluency-observed-search-phrases-2026-08.md"
+REPORT = (
+    HERE.parents[2]
+    / "ai-research"
+    / "pm-technical-fluency"
+    / "pm-technical-fluency-observed-search-phrases-2026-08.md"
+)
 
 
 def suggestions(query, *, dataset=None, country="gb"):

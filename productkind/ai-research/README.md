@@ -19,6 +19,7 @@ the date and the source links inside the file.
 | File | What it is |
 |---|---|
 | `niche-research-codex/` | Complete Little Parrot niche-research package: reusable method, five-candidate workbook, seed queries, search and Trends findings, scoring, positioning recommendation and SaaS opportunity synthesis |
+| `pm-technical-fluency/` | Research package on the technical needs of non-technical, generalist software PMs: original study, validation addendum, interview/survey pack and observed Google/YouTube search phrases. August 2026 |
 | `saas-niche-arbitration-2026-08-22.md` | Settles the three competing niche recommendations using the first demand gate ever run on them. Rejects the course-freshness monitor and App Steward, downgrades the Jira admin wedge, recommends the Google Workspace to Jira bridge on measured install counts. 22 August 2026 |
 | `semrush-keyword-research-jira-2026-08.md` | Semrush volume, difficulty, CPC and competitive density for the three candidate niches, plus Keyword Magic clusters. The demand gate the earlier passes could not run. August 2026 |
 | `semrush-keyword-research-production-ready-2026-08.md` | Deep Semrush pull on the Lovable and vibe-coding niche: 242 keywords across 6 country databases, 11 clusters, SERP quality reads on an 18-keyword shortlist, per-cluster verdicts. August 2026 |
