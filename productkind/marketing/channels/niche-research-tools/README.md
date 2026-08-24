@@ -1,7 +1,16 @@
 # Niche research tools
 
-Two scripts that automate signals A and D of `../steps-to-find-your-niche.md`.
-Neither needs an account or an API key.
+Small command-line tools for collecting and auditing niche-research signals.
+None needs an account or an API key.
+
+## `google-autocomplete.sh`
+
+Queries Google's public autocomplete endpoint for every phrase in a file. It
+uses the same input and output format as `youtube-autocomplete.sh`:
+
+```
+zsh google-autocomplete.sh seeds.txt gb
+```
 
 ## `youtube-autocomplete.sh` (Signal A)
 
@@ -21,6 +30,32 @@ an audience you had not thought of.
 For alphabet expansion, generate `<phrase> a`, `<phrase> b` and so on into a
 file and run that. What YouTube volunteers on a letter you did not intend is
 usually the most useful thing in the run.
+
+## `pm-search-observation-audit.py`
+
+Re-runs the PM technical-fluency seed list against Google autocomplete (GB)
+and YouTube autocomplete (GB and US), then checks every autocomplete-labelled
+row in the research report against the live responses. It catches phrases that
+were attributed to the wrong interface or retained only because they had been
+entered manually as discovery queries.
+
+Run it from this directory:
+
+```
+python3 pm-search-observation-audit.py
+```
+
+The script currently audits these fixed files:
+
+- `pm-technical-fluency-seeds.txt`
+- `../../../ai-research/pm-technical-fluency-observed-search-phrases-2026-08.md`
+
+A clean run ends with `Missing observations: 0`. Because autocomplete changes
+over time, a later missing observation does not prove the phrase was never
+shown; investigate it against the dated research notes before changing the
+report. This script validates autocomplete attributions only. It does not
+recheck Google People Also Ask, related searches, result intent, YouTube result
+performance or comments.
 
 ## `youtube-supply-audit.py` (Signal D and step 4)
 
