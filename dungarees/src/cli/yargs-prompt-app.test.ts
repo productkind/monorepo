@@ -3,7 +3,7 @@ import { createYargsPromptApp } from './yargs-prompt-app.ts'
 import { DomainEvent } from '@dungarees/core/event.ts'
 import { collectValuesFrom } from '@dungarees/rxjs/util.ts'
 
-import { lastValueFrom, of } from 'rxjs'
+import { lastValueFrom, of, throwError } from 'rxjs'
 import { expect, test } from 'vitest'
 
 const DUMMY_CONTROLS = { select: () => of('') }
@@ -229,5 +229,37 @@ test('yargs-prompt-app', async () => {
   expect(await collectValuesFrom(message$)).toEqual([
     { type: 'stdout', message: 'Hello', level: 'info' },
     { type: 'exit', code: 0 },
+  ])
+})
+
+test('yargs-prompt-app surfaces a parse failure as stderr and exits with code 1', async () => {
+  const app = createYargsPromptApp({
+    name: 'test-app',
+    route: (yargs) => yargs.demandCommand(1, 'Need a command').strict(),
+    presenter: {},
+  })
+  const message$ = app.present([], DUMMY_CONTROLS)
+  expect(await collectValuesFrom(message$)).toEqual([
+    { type: 'stderr', message: 'Need a command', level: 'error' },
+    { type: 'exit', code: 1 },
+  ])
+})
+
+test('yargs-prompt-app surfaces an errored event stream as stderr and exits with code 1', async () => {
+  type AppEvents = DomainEvent<'greet', string>
+  const app = createYargsPromptApp<AppEvents>({
+    name: 'test-app',
+    route: (yargs, io) => {
+      io.registerEvents(throwError(() => new Error('boom')))
+      return yargs
+    },
+    presenter: {
+      greet: (payload) => ({ type: 'stdout', message: payload, level: 'info' }),
+    },
+  })
+  const message$ = app.present([], DUMMY_CONTROLS)
+  expect(await collectValuesFrom(message$)).toEqual([
+    { type: 'stderr', message: 'boom', level: 'error' },
+    { type: 'exit', code: 1 },
   ])
 })
