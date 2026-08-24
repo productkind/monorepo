@@ -3,6 +3,7 @@ import type { DomainEvent } from '@dungarees/core/event.ts'
 import {
   catchError,
   concatAll,
+  defer,
   endWith,
   from,
   map,
@@ -25,24 +26,24 @@ export type YargsPromptApp = {
   present: (argv: string[], controls: CliControls) => Observable<CliMessage>
 }
 
-type CliIo<EVENTS extends DomainEvent> = {
+export type CliIo<EVENTS extends DomainEvent> = {
   registerEvents: (message$: Observable<EVENTS>) => void
 } & CliControls
 
-type Presenter<EVENTS extends DomainEvent> = {
+export type Presenter<EVENTS extends DomainEvent> = {
   [TYPE in EVENTS['type']]: (payload: Extract<EVENTS, { type: TYPE }>['payload']) => CliMessage
 }
 
-type CommandModule = {
+export type CommandModule = {
   command: string
   describe: string
   builder: (yargs: YargsApp) => YargsApp
   handler: (argv: Record<string, unknown>) => Promise<void> | void
 }
 
-type CommandFactory<EVENTS extends DomainEvent> = (io: CliIo<EVENTS>) => CommandModule
+export type CommandFactory<EVENTS extends DomainEvent> = (io: CliIo<EVENTS>) => CommandModule
 
-type YargsPromptAppOptions<EVENTS extends DomainEvent> = {
+export type YargsPromptAppOptions<EVENTS extends DomainEvent> = {
   name: string
   commands?: CommandFactory<EVENTS>[]
   route: (yargs: YargsApp, io: CliIo<EVENTS>) => YargsApp
@@ -113,8 +114,16 @@ export const createYargsPromptApp = <EVENTS extends DomainEvent = DomainEvent>({
       },
       ...controls,
     }
-    const withCommands = commands.reduce((app, command) => app.command(command(io)), yargs())
-    const parsed$ = from(route(withCommands, io).parseAsync(argv))
+    // exitProcess(false) keeps yargs from killing the process on a parse failure so the
+    // failure rejects parseAsync and flows through this stream instead; fail(false) makes it
+    // throw the error rather than printing usage itself, so all output stays in the message
+    // stream and is owned by the renderer.
+    const base = yargs().exitProcess(false).fail(false)
+    const withCommands = commands.reduce((app, command) => app.command(command(io)), base)
+    const routed = route(withCommands, io)
+    // Deferred so a synchronous parse throw (yargs validates before awaiting under
+    // fail(false)) surfaces as an observable error rather than escaping present().
+    const parsed$ = defer(() => from(routed.parseAsync(argv)))
     return registeredOuts$.pipe(
       concatAll(),
       takeUntil(parsed$),
@@ -122,7 +131,14 @@ export const createYargsPromptApp = <EVENTS extends DomainEvent = DomainEvent>({
       switchMap((event) =>
         event.type === 'exit' ? throwError(() => new ExitError('Exit', event.code)) : of(event),
       ),
-      catchError((error) => of({ type: 'exit' as const, code: error.exitCode })),
+      catchError((error) =>
+        error instanceof ExitError
+          ? of({ type: 'exit' as const, code: error.exitCode })
+          : of<CliMessage>(
+              { type: 'stderr', message: error.message, level: 'error' },
+              { type: 'exit', code: 1 },
+            ),
+      ),
     )
   },
 })
