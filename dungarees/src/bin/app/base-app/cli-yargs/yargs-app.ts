@@ -4,7 +4,7 @@ import { publishLibYargsModule } from '@dungarees/bin-publish-lib-cli-yargs/yarg
 
 import yargs from 'yargs'
 
-export type YargsApp = yargs.Argv
+export type YargsApp = ReturnType<typeof yargs>
 
 export const createYargsApp = (services: DungareesBinBehaviors): YargsApp =>
   yargs()
