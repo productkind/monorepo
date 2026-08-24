@@ -33,8 +33,18 @@ type Presenter<EVENTS extends DomainEvent> = {
   [TYPE in EVENTS['type']]: (payload: Extract<EVENTS, { type: TYPE }>['payload']) => CliMessage
 }
 
+type CommandModule = {
+  command: string
+  describe: string
+  builder: (yargs: YargsApp) => YargsApp
+  handler: (argv: Record<string, unknown>) => Promise<void> | void
+}
+
+type CommandFactory<EVENTS extends DomainEvent> = (io: CliIo<EVENTS>) => CommandModule
+
 type YargsPromptAppOptions<EVENTS extends DomainEvent> = {
   name: string
+  commands?: CommandFactory<EVENTS>[]
   route: (yargs: YargsApp, io: CliIo<EVENTS>) => YargsApp
   presenter: Presenter<EVENTS>
 }
@@ -84,6 +94,7 @@ export class ExitError extends Error {
 }
 
 export const createYargsPromptApp = <EVENTS extends DomainEvent = DomainEvent>({
+  commands = [],
   route,
   presenter,
 }: YargsPromptAppOptions<EVENTS>): YargsPromptApp => ({
@@ -102,7 +113,8 @@ export const createYargsPromptApp = <EVENTS extends DomainEvent = DomainEvent>({
       },
       ...controls,
     }
-    const parsed$ = from(route(yargs(), io).parseAsync(argv))
+    const withCommands = commands.reduce((app, command) => app.command(command(io)), yargs())
+    const parsed$ = from(route(withCommands, io).parseAsync(argv))
     return registeredOuts$.pipe(
       concatAll(),
       takeUntil(parsed$),

@@ -201,3 +201,33 @@ test('yargs-prompt-app', async () => {
   const message$ = app.present([], DUMMY_CONTROLS)
   expect(await collectValuesFrom(message$)).toEqual([{ type: 'exit', code: 2 }])
 })
+
+test('yargs-prompt-app', async () => {
+  type AppEvents = DomainEvent<'greet', string>
+  const app = createYargsPromptApp<AppEvents>({
+    name: 'test-app',
+    commands: [
+      (io) => ({
+        command: 'greet',
+        describe: 'Greet someone',
+        builder: (yargs) => yargs,
+        handler: async () => {
+          io.registerEvents(of({ type: 'greet', payload: 'Hello, World!' }))
+        },
+      }),
+    ],
+    route: (yargs) => yargs,
+    presenter: {
+      greet: () => ({
+        message: 'Hello',
+        type: 'stdout',
+        level: 'info',
+      }),
+    },
+  })
+  const message$ = app.present(['greet'], DUMMY_CONTROLS)
+  expect(await collectValuesFrom(message$)).toEqual([
+    { type: 'stdout', message: 'Hello', level: 'info' },
+    { type: 'exit', code: 0 },
+  ])
+})
