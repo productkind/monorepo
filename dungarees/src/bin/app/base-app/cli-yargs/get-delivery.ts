@@ -1,9 +1,10 @@
 import type { DungareesBinBehaviors } from './behaviors.ts'
 import { createYargsApp } from './yargs-app.ts'
-import { type YargsApp } from './yargs-app.ts'
+
+import type { YargsPromptApp } from '@dungarees/cli/yargs-prompt-app.ts'
 
 export type YargsDelivery = {
-  yargsApp: YargsApp
+  app: YargsPromptApp
 }
 
 export const getDelivery = ({
@@ -11,5 +12,5 @@ export const getDelivery = ({
 }: {
   behaviors: DungareesBinBehaviors
 }): YargsDelivery => ({
-  yargsApp: createYargsApp(behaviors),
+  app: createYargsApp(behaviors),
 })

@@ -23,7 +23,7 @@ test('build without version input', async () => {
       srcDir: '/src',
       outDir: '/dist',
       version: undefined,
-    }).stdio$,
+    }).events$,
   )
   const publishedFiles = fileSystem.toJSON()
   expect(publishedFiles['/dist/index.js']).toBe('export const numberValue = 42;\n')
@@ -58,7 +58,7 @@ test('transpile files in subdirectories', async () => {
       srcDir: '/src',
       outDir: '/dist',
       version: undefined,
-    }).stdio$,
+    }).events$,
   )
   const publishedFiles = fileSystem.toJSON()
   expect(publishedFiles['/dist/index.js']).toBe('console.log("Hello, world!");\n')
@@ -107,7 +107,7 @@ test('publish single lib', async () => {
       outDir: '/dist',
       version: undefined,
       registry: undefined,
-    }).stdio$,
+    }).events$,
   )
   const publishedFiles = fileSystem.toJSON()
   expect(publishedFiles['/dist/index.js']).toBe('console.log("Single lib");\n')
@@ -196,7 +196,7 @@ test('publish a multi-lib folder', async () => {
     service.publishMultiLib({
       dir: '/multi-lib',
       registry: undefined,
-    }).stdio$,
+    }).events$,
   )
   const publishedFiles = fileSystem.toJSON()
   expect(JSON.parse(publishedFiles['/multi-lib/dist/lib-1/package.json'] ?? '')).toEqual({

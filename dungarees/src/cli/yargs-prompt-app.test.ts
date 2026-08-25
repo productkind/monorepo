@@ -3,7 +3,7 @@ import { createYargsPromptApp } from './yargs-prompt-app.ts'
 import { DomainEvent } from '@dungarees/core/event.ts'
 import { collectValuesFrom } from '@dungarees/rxjs/util.ts'
 
-import { lastValueFrom, of, throwError } from 'rxjs'
+import { delay, lastValueFrom, of, throwError } from 'rxjs'
 import { expect, test } from 'vitest'
 
 const DUMMY_CONTROLS = { select: () => of('') }
@@ -228,6 +228,30 @@ test('yargs-prompt-app', async () => {
   const message$ = app.present(['greet'], DUMMY_CONTROLS)
   expect(await collectValuesFrom(message$)).toEqual([
     { type: 'stdout', message: 'Hello', level: 'info' },
+    { type: 'exit', code: 0 },
+  ])
+})
+
+test('yargs-prompt-app waits for asynchronous registered events before exiting', async () => {
+  type AppEvents = DomainEvent<'greet', string>
+  const app = createYargsPromptApp<AppEvents>({
+    name: 'test-app',
+    route: (yargs, io) =>
+      yargs.command(
+        'greet',
+        'Greet someone',
+        () => {},
+        async () => {
+          io.registerEvents(of({ type: 'greet', payload: 'Hello, async!' }).pipe(delay(5)))
+        },
+      ),
+    presenter: {
+      greet: (payload) => ({ type: 'stdout', message: payload, level: 'info' }),
+    },
+  })
+  const message$ = app.present(['greet'], DUMMY_CONTROLS)
+  expect(await collectValuesFrom(message$)).toEqual([
+    { type: 'stdout', message: 'Hello, async!', level: 'info' },
     { type: 'exit', code: 0 },
   ])
 })
