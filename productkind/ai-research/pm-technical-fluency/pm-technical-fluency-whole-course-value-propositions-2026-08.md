@@ -8,6 +8,113 @@ competitor/willingness-to-pay research.
 **Status:** three whole-course hypotheses for direct validation, not a selected
 offer.
 
+## Executive answer
+
+The five territories support one substantial transformation: a non-technical
+PM becomes able to examine the technical evidence behind their product work,
+make a responsible product decision and involve engineering with clearer
+questions, options and artefacts.
+
+The same complete course can be communicated in three credible ways. Each
+route keeps all five territories and changes the professional result that leads
+the message.
+
+### 1. Make product decisions you can defend with technical evidence
+
+> **You'll be able to evaluate how a proposed product change will affect the
+> system, delivery work and technical risk, so you can lead higher-stakes scope
+> and trade-off decisions with engineering before the team commits. You'll
+> leave with a technical product decision review containing a system map,
+> dependency and risk analysis, supporting evidence and your recommendation.**
+
+This route sells **independent technical judgement**. It speaks to PMs who are
+already accountable for roadmap and scope decisions, but cannot yet assess the
+technical assumptions inside an estimate or proposed solution.
+
+### 2. Take on more technically complex product work
+
+> **You'll be able to explain how your product works, follow a change through
+> release, investigate an issue and evaluate technical trade-offs, so you can
+> contribute credibly in technical discussions and take on more complex product
+> work. You'll leave with an end-to-end product case study containing a system
+> walkthrough, release analysis, issue investigation, working prototype and
+> final decision handover.**
+
+This route sells **professional range and influence**. It speaks to PMs who
+feel peripheral when conversations become technical, are moving into a more
+complex team or need to demonstrate greater technical depth in their current
+career.
+
+### 3. Move technical questions forward without waiting for engineering to start
+
+> **You'll be able to trace a technical question through a software product,
+> inspect evidence, investigate problems and test a bounded idea with an
+> AI-assisted prototype, so you can move product work forward and involve
+> engineering with a clear, useful handover. You'll leave with a repeatable
+> investigation pack containing a system map, issue evidence, product options,
+> a working prototype and the questions engineering still needs to decide.**
+
+This route sells **first-pass autonomy**. It speaks to PMs in lean or
+fast-moving teams who repeatedly wait for engineering to answer capability
+questions, investigate issues or make an idea testable.
+
+### Is there credible evidence that PMs pay meaningful amounts for this?
+
+**Yes, comparable purchases at and above the proposed €400–€800 range are
+real and repeated. The evidence supports a commercial hypothesis for the
+complete course, not proof that this exact proposition will convert.**
+
+| Comparable paid product | Current price | Observed purchase evidence | Relevance to the complete course |
+|---|---:|---|---|
+| Skiplevel Technical Product Manager Certification | $1,250 | Provider reports 800+ PMs trained; 61% expense the programme; an 18-PM company pilot is documented | Covers system understanding, delivery workflow and technical judgement, with parts of investigation |
+| Tech for Product Technical Foundations | $799 | 133 Maven ratings, 250+ PM learners and documented growth across repeated paid cohorts | Strong match for system understanding, release workflow and trade-off decisions |
+| ProductDo Technical Skills for PMs | From €460 | Multiple independent course-naming reviews describe architecture, application programming interfaces (APIs), estimation and engineering-conversation outcomes | Strong match for the established technical-foundations bundle |
+| Tech for Product AI Prototyping for PMs | $1,450 listed | 220 Maven ratings and repeated-cohort evidence; current cohort availability is uncertain | Strong evidence that PMs pay for hands-on AI-assisted building and a visible artefact |
+| Vibe Coding Bootcamp | $799 | 227 Maven ratings across 35 cohorts; 1,600+ students reported by the provider | Strong adjacent evidence for non-technical professionals, but the audience is wider than PMs |
+| ProductDo Full-stack AI Prototyping for PMs | From €380 | Independent reviews name the course and describe building a backend, database and API integration | PM-specific evidence close to the lower edge of the proposed range |
+| HelloPM Technology for Product & Business Folks | $150 early / $250 list outside India | The provider is enrolling its 19th live cohort and publishes named PM testimonials | Important counterevidence: buyers also have a much cheaper live alternative |
+
+([full competitor and WTP evidence](./pm-technical-fluency-willingness-to-pay-2026-08.md#1-competitor-and-evidence-table))
+
+The purchases are strongest when several territories are sold together as
+technical foundations, and when AI-assisted building produces a working
+artefact. The market does not show that PMs pay separately for every
+ingredient. Investigation before escalation has no credible standalone WTP
+evidence, although it appears inside paid programmes and is supported by the
+qualitative PM research.
+
+Customers appear to pay for:
+
+- one coherent explanation of how the product and delivery process fit
+  together;
+- practice that connects architecture, APIs, testing, release and trade-offs
+  to a PM's work;
+- expert feedback when they apply the ideas;
+- a finished diagram, decision review, investigation or working prototype;
+- less avoidable dependence on engineering for the first step; and
+- employer outcomes such as faster onboarding, better questions and fewer
+  basic escalations.
+
+The payer evidence is mixed. Skiplevel's 61% expense rate is strong direct
+evidence that employer reimbursement supports high prices. Maven says nearly
+half of its learners are reimbursed, but that figure covers the whole platform.
+Most course pages do not reveal whether the learner paid personally or used an
+employer budget. The evidence for self-funded PM conversion at €400–€800 is
+therefore much weaker than the evidence that transactions occur.
+
+The three message routes also have different commercial evidence:
+
+| Message route | Evidence assessment |
+|---|---|
+| **Decisions you can defend** | Strong PM-need evidence and strong purchases of bundles containing feasibility, architecture and trade-off practice. The market has not tested this wording as the main purchase promise. |
+| **More technically complex product work** | Strongest direct PM pain and closest competitor precedent. The risk is that it sounds similar to existing technical-foundations programmes unless the end-to-end case study makes the result concrete. |
+| **Move technical questions forward** | Strong qualitative evidence for independence and strong payment for technical foundations and AI prototyping. No competitor proves payment for this exact combined autonomy promise. |
+
+The current evidence makes €400–€800 a defensible range to test for an applied
+programme with feedback and a substantial work product. It does not establish
+the final price, the self-funded conversion rate or which of the three messages
+will cause the target PM to buy.
+
 ## Framing correction
 
 The five territories are not separate offers, optional modules or competing
