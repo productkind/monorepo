@@ -1,6 +1,7 @@
+import type { PublishLibEvent } from './events.ts'
 import {
   createOutDir,
-  getBuildStartMessage,
+  getBuildStartEvent,
   getPackageDirsWithVersion,
   publishAllPackages,
   publishLib,
@@ -8,39 +9,32 @@ import {
 } from './operations.ts'
 
 import type { CliCommandsService } from '@dungarees/cli-command/service.ts'
-import type { StdioMessageFeatureOutput } from '@dungarees/cli/type.ts'
-import type { DomainEvent } from '@dungarees/core/event.ts'
 import { createFileOperations } from '@dungarees/fs/file-operations.ts'
 import type { FileSystemService } from '@dungarees/fs/service.ts'
 import { createTranspilerService } from '@dungarees/transpile/service.ts'
 
-import { concat } from 'rxjs'
+import { concat, type Observable } from 'rxjs'
 
-type BuildEvets =
-  | DomainEvent<'build-start', { srcDir: string; outDir: string; version: string | undefined }>
-  | DomainEvent<'dist-dir-created', { outDir: string }>
-  | DomainEvent<'dist-dir-failed', { outDir: string; cause: Error }>
-  | DomainEvent<'transpile-complete', { outDir: string }>
-  | DomainEvent<'transpile-failed', { cause: Error }>
-  | DomainEvent<'package-json-transformed', { path: string }>
-  | DomainEvent<'package-json-transform-failed', { path: string; cause: Error }>
+export type PublishLibFeatureOutput = {
+  events$: Observable<PublishLibEvent>
+}
 
 export type PublishLibBehaviour = {
   build: (args: {
     srcDir: string
     outDir: string
     version: string | undefined
-  }) => StdioMessageFeatureOutput
+  }) => PublishLibFeatureOutput
   publishSingleLib: (args: {
     srcDir: string
     outDir: string
     version: string | undefined
     registry: string | undefined
-  }) => StdioMessageFeatureOutput
+  }) => PublishLibFeatureOutput
   publishMultiLib: (args: {
     dir: string
     registry: string | undefined
-  }) => StdioMessageFeatureOutput
+  }) => PublishLibFeatureOutput
 }
 
 export type PublishLibArgs = {
@@ -57,7 +51,7 @@ export const createPublishLibService = ({
 
   const build: PublishLibBehaviour['build'] = ({ srcDir, outDir, version }) => {
     const originalPackageJsonPath = `${srcDir}/package.json`
-    const startMessage$ = getBuildStartMessage({ srcDir, outDir, version })
+    const startEvent$ = getBuildStartEvent({ srcDir, outDir, version })
     const packageJsonTransform = fileOperations.transformFileContext<string>({
       input: originalPackageJsonPath,
       output: `${outDir}/package.json`,
@@ -70,7 +64,7 @@ export const createPublishLibService = ({
       })
       .pipe(transformPackageJson(packageJsonTransform, { srcDir, outDir, version }))
     return {
-      stdio$: concat(startMessage$, createOutDir$, transpile$),
+      events$: concat(startEvent$, createOutDir$, transpile$),
     }
   }
 
@@ -80,10 +74,10 @@ export const createPublishLibService = ({
     version,
     registry,
   }) => {
-    const build$ = build({ srcDir, outDir, version }).stdio$
+    const build$ = build({ srcDir, outDir, version }).events$
     const publish$ = publishLib(() => npm.publish({ cwd: outDir, registry }).output$)
     return {
-      stdio$: concat(build$, publish$),
+      events$: concat(build$, publish$),
     }
   }
 
@@ -101,11 +95,11 @@ export const createPublishLibService = ({
             outDir: `${dir}/dist/${packageDir}`,
             version,
             registry,
-          }).stdio$,
+          }).events$,
       ),
     )
     return {
-      stdio$: publishAll$,
+      events$: publishAll$,
     }
   }
 

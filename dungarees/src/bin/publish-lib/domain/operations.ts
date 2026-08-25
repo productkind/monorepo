@@ -1,11 +1,18 @@
-import type { StdioMessage } from '@dungarees/cli/type.ts'
-import { stderr, stdout } from '@dungarees/cli/utils.ts'
+import {
+  allPublished,
+  buildStart,
+  outDirCreated,
+  packageJsonWritten,
+  type PublishLibEvent,
+  publishFailed,
+  publishSucceeded,
+} from './events.ts'
+
 import type { JsonObject } from '@dungarees/core/type-util.ts'
 import {
   assertSchemaMap,
   assertTypeByGuardMap,
   catchAndRethrow,
-  catchValueAndRethrow,
   type GetTransformSetContext,
 } from '@dungarees/rxjs/util.ts'
 import type { TranspileDirOutput } from '@dungarees/transpile/service.ts'
@@ -21,33 +28,28 @@ type BaseBuildArgs = {
   version: string | undefined
 }
 
-export const getBuildStartMessage = ({
+export const getBuildStartEvent = ({
   srcDir,
   outDir,
   version,
-}: BaseBuildArgs): Observable<StdioMessage> =>
-  of(
-    stdout(
-      `Building package from ${srcDir} to ${outDir} with version: ${version ?? 'original version'}`,
-    ),
-  )
+}: BaseBuildArgs): Observable<PublishLibEvent> => of(buildStart({ srcDir, outDir, version }))
 
 export const createOutDir = (
   createOutDir$: Observable<void>,
   outDir: string,
-): Observable<StdioMessage> =>
+): Observable<PublishLibEvent> =>
   createOutDir$.pipe(
-    map(() => stdout(`Output directory created: ${outDir}`)),
-    catchValueAndRethrow(
-      (cause) => stderr(`Error creating output directory (${outDir}): ${cause.message}`),
-      (cause) => new Error('Could not read directory', { cause }),
+    map(() => outDirCreated({ outDir })),
+    catchAndRethrow(
+      (cause) =>
+        new Error(`Error creating output directory (${outDir}): ${cause.message}`, { cause }),
     ),
   )
 
 export const transformPackageJson = (
   fileTransform: GetTransformSetContext<string, string, string>,
   { srcDir, outDir, version }: BaseBuildArgs,
-): OperatorFunction<TranspileDirOutput[], StdioMessage> =>
+): OperatorFunction<TranspileDirOutput[], PublishLibEvent> =>
   mergeMap((transpiledFiles) =>
     fileTransform(
       parsePackageJson(),
@@ -159,29 +161,23 @@ const stringifyPackageJson = (): OperatorFunction<
 
 const handleTransformEnd = (
   destinationPath: string,
-): OperatorFunction<{ context: string }, StdioMessage> =>
+): OperatorFunction<{ context: string }, PublishLibEvent> =>
   pipe(
-    map(({ context: version }) =>
-      stdout(`Package.json written to ${destinationPath}/package.json with version: ${version}`),
-    ),
-    catchValueAndRethrow(
-      (cause) => stderr(`File transform failed: ${cause.message}`),
-      (cause) => new Error('File transform failed', { cause }),
+    map(({ context: version }) => packageJsonWritten({ path: destinationPath, version })),
+    catchAndRethrow(
+      (cause) => new Error(`File transform failed: ${cause.message}`, { cause }),
     ),
   )
 
 export const publishLib = (
   publishFactory: () => Observable<{ exitCode: number | undefined; stderror: string | undefined }>,
-): Observable<StdioMessage> =>
+): Observable<PublishLibEvent> =>
   defer(publishFactory).pipe(
     map(({ exitCode, stderror }) =>
-      exitCode === 0
-        ? stdout(`Published successfully`)
-        : stderr(`Publish failed with exit code ${exitCode}, and error: ${stderror}`),
+      exitCode === 0 ? publishSucceeded() : publishFailed({ exitCode, stderror }),
     ),
-    catchValueAndRethrow(
-      (cause) => stderr(`Error publishing library: ${cause.message}`),
-      (cause) => new Error('Could not publish library', { cause }),
+    catchAndRethrow(
+      (cause) => new Error(`Error publishing library: ${cause.message}`, { cause }),
     ),
   )
 
@@ -220,10 +216,10 @@ export const getPackageDirsWithVersion = ({
   })
 
 export const publishAllPackages = (
-  publishPackage: (args: { packageDir: string; version: string }) => Observable<StdioMessage>,
-): OperatorFunction<{ packageDirs: string[]; version: string }, StdioMessage> =>
+  publishPackage: (args: { packageDir: string; version: string }) => Observable<PublishLibEvent>,
+): OperatorFunction<{ packageDirs: string[]; version: string }, PublishLibEvent> =>
   mergeMap(({ packageDirs, version }) =>
     forkJoin(packageDirs.map((packageDir) => publishPackage({ packageDir, version }))).pipe(
-      map(() => stdout('All packages published successfully')),
+      map(() => allPublished()),
     ),
   )

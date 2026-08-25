@@ -1,13 +1,10 @@
 import type { PublishLibBehaviour } from '@dungarees/bin-publish-lib-domain/behavior.ts'
-import { type CommandModule } from '@dungarees/cli/type.ts'
-import { printStido } from '@dungarees/cli/utils.ts'
+import type { PublishLibEvent } from '@dungarees/bin-publish-lib-domain/events.ts'
+import type { CommandFactory } from '@dungarees/cli/yargs-prompt-app.ts'
 
-export const publishLibYargsModule = ({
-  publishLib,
-}: {
-  publishLib: PublishLibBehaviour
-}): CommandModule<PublishLibArgs> => {
-  return {
+export const publishLibYargsModule =
+  ({ publishLib }: { publishLib: PublishLibBehaviour }): CommandFactory<PublishLibEvent> =>
+  (io) => ({
     command: 'publish-multi-lib [lib-path]',
     describe: 'Publish a library',
     builder: (yargs) =>
@@ -18,15 +15,11 @@ export const publishLibYargsModule = ({
         .option('registry', { type: 'string' })
         .default('lib-path', '.'),
     handler: async (args) => {
-      const { stdio$ } = publishLib.publishMultiLib({
-        dir: args.libPath!,
-        registry: String(args['registry']),
-      })
-      await printStido(stdio$)
+      io.registerEvents(
+        publishLib.publishMultiLib({
+          dir: String(args['libPath']),
+          registry: String(args['registry']),
+        }).events$,
+      )
     },
-  }
-}
-
-type PublishLibArgs = {
-  libPath: string
-}
+  })

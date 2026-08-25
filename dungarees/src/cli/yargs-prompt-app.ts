@@ -6,12 +6,14 @@ import {
   defer,
   endWith,
   from,
+  ignoreElements,
   map,
+  merge,
   Observable,
   of,
   ReplaySubject,
   switchMap,
-  takeUntil,
+  tap,
   throwError,
 } from 'rxjs'
 import yargs from 'yargs'
@@ -123,10 +125,14 @@ export const createYargsPromptApp = <EVENTS extends DomainEvent = DomainEvent>({
     const routed = route(withCommands, io)
     // Deferred so a synchronous parse throw (yargs validates before awaiting under
     // fail(false)) surfaces as an observable error rather than escaping present().
-    const parsed$ = defer(() => from(routed.parseAsync(argv)))
-    return registeredOuts$.pipe(
-      concatAll(),
-      takeUntil(parsed$),
+    // When parsing finishes, no more event streams will be registered, so complete the
+    // subject; concatAll then drains every registered stream to completion (including
+    // asynchronous ones) rather than being truncated the instant parsing resolves.
+    const parsed$ = defer(() => from(routed.parseAsync(argv))).pipe(
+      tap({ next: () => registeredOuts$.complete() }),
+      ignoreElements(),
+    )
+    return merge(registeredOuts$.pipe(concatAll()), parsed$).pipe(
       endWith({ type: 'exit' as const, code: 0 }),
       switchMap((event) =>
         event.type === 'exit' ? throwError(() => new ExitError('Exit', event.code)) : of(event),

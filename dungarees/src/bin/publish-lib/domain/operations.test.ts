@@ -1,13 +1,20 @@
 import {
+  allPublished,
+  buildStart,
+  outDirCreated,
+  packageJsonWritten,
+  publishFailed,
+  publishSucceeded,
+} from './events.ts'
+import {
   createOutDir,
-  getBuildStartMessage,
+  getBuildStartEvent,
   getPackageDirsWithVersion,
   publishAllPackages,
   publishLib,
   transformPackageJson,
 } from './operations.ts'
 
-import { stderr, stdout } from '@dungarees/cli/utils.ts'
 import { mtest } from '@dungarees/core/marbles-vitest.ts'
 import { createGetTransformSetContextInspector } from '@dungarees/rxjs/fake.ts'
 import { collectValuesFrom, createGetTransformSetContext } from '@dungarees/rxjs/util.ts'
@@ -15,29 +22,28 @@ import { collectValuesFrom, createGetTransformSetContext } from '@dungarees/rxjs
 import { of } from 'rxjs'
 import { expect, test } from 'vitest'
 
-mtest('create build start message', ({ expect }) => {
-  const startMessage$ = getBuildStartMessage({
+mtest('create build start event', ({ expect }) => {
+  const startEvent$ = getBuildStartEvent({
     srcDir: './src',
     outDir: './out',
     version: '1.0.0',
   })
-  expect(startMessage$).toBeObservableStepAndClose(
-    stdout('Building package from ./src to ./out with version: 1.0.0'),
+  expect(startEvent$).toBeObservableStepAndClose(
+    buildStart({ srcDir: './src', outDir: './out', version: '1.0.0' }),
     0,
   )
 })
 
 mtest('create output directory', ({ expect, coldStepAndClose }) => {
   const createOutDir$ = createOutDir(coldStepAndClose(undefined), '/out')
-  expect(createOutDir$).toBeObservableStepAndClose(stdout('Output directory created: /out'))
+  expect(createOutDir$).toBeObservableStepAndClose(outDirCreated({ outDir: '/out' }))
 })
 
 mtest('create output directory with error', ({ expect, coldError }) => {
   const input$ = coldError(new Error('Could not create directory'))
   const createOutDir$ = createOutDir(input$, '/out')
-  expect(createOutDir$).toBeObservableStepAndError(
-    stderr('Error creating output directory (/out): Could not create directory'),
-    new Error('Could not read directory'),
+  expect(createOutDir$).toBeObservableError(
+    new Error('Error creating output directory (/out): Could not create directory'),
   )
 })
 
@@ -58,7 +64,7 @@ mtest('transformPackageJson with version from file', ({ expect }) => {
     }),
   )
   expect(transformPackageJson$).toBeObservableValueAndClose(
-    stdout('Package.json written to /out/package.json with version: 1.0.0'),
+    packageJsonWritten({ path: '/out', version: '1.0.0' }),
   )
   expect(contentInspector$).toBeObservableValue(
     JSON.stringify({ name: 'test-lib', version: '1.0.0' }, null, 2),
@@ -93,7 +99,7 @@ mtest('transformPackageJson with exports', ({ expect }) => {
     }),
   )
   expect(transformPackageJson$).toBeObservableValueAndClose(
-    stdout('Package.json written to /out/package.json with version: 1.0.0'),
+    packageJsonWritten({ path: '/out', version: '1.0.0' }),
   )
   expect(contentInspector$).toBeObservableValue(
     JSON.stringify(
@@ -134,7 +140,7 @@ mtest('transformPackageJson with version override', ({ expect }) => {
     }),
   )
   expect(transformPackageJson$).toBeObservableValueAndClose(
-    stdout('Package.json written to /out/package.json with version: 2.0.0'),
+    packageJsonWritten({ path: '/out', version: '2.0.0' }),
   )
   expect(contentInspector$).toBeObservableValue(
     JSON.stringify({ name: 'test-lib', version: '2.0.0' }, null, 2),
@@ -153,9 +159,9 @@ mtest('transformPackageJson without version in file or parameter', ({ expect }) 
       version: undefined,
     }),
   )
-  expect(transformPackageJson$).toBeObservableValueAndError(
-    stderr('File transform failed: Version is required in package.json or as an argument'),
-    new Error('File transform failed'),
+  expect(transformPackageJson$).toBeObservableError(
+    new Error('File transform failed: Version is required in package.json or as an argument'),
+    0,
   )
 })
 
@@ -176,7 +182,7 @@ mtest('transformPackageJson without version in file', ({ expect }) => {
     }),
   )
   expect(transformPackageJson$).toBeObservableValueAndClose(
-    stdout('Package.json written to /out/package.json with version: 2.0.0'),
+    packageJsonWritten({ path: '/out', version: '2.0.0' }),
   )
   expect(contentInspector$).toBeObservableValue(
     JSON.stringify({ name: 'test-lib', version: '2.0.0' }, null, 2),
@@ -204,7 +210,7 @@ mtest('transformPackageJson change bin paths', ({ expect }) => {
     }),
   )
   expect(transformPackageJson$).toBeObservableValueAndClose(
-    stdout('Package.json written to /out/package.json with version: 1.0.0'),
+    packageJsonWritten({ path: '/out', version: '1.0.0' }),
   )
   expect(contentInspector$).toBeObservableValue(
     JSON.stringify(
@@ -233,9 +239,8 @@ mtest('transformPackageJson with write error', ({ expect, coldStepAndClose, cold
       version: undefined,
     }),
   )
-  expect(transformPackageJson$).toBeObservableStepAndError(
-    stderr('File transform failed: Write failed'),
-    new Error('File transform failed'),
+  expect(transformPackageJson$).toBeObservableError(
+    new Error('File transform failed: Write failed'),
     2,
   )
 })
@@ -254,23 +259,22 @@ mtest('transformPackageJson with invalid JSON', ({ expect, coldStepAndClose }) =
       version: undefined,
     }),
   )
-  expect(transformPackageJson$).toBeObservableStepAndError(
-    stderr(
+  expect(transformPackageJson$).toBeObservableError(
+    new Error(
       'File transform failed: Invalid source package.json: Unexpected token \'i\', "invalid json content" is not valid JSON',
     ),
-    new Error('File transform failed'),
   )
 })
 
 mtest('publishLib with successful exit code', ({ expect, coldStepAndClose }) => {
   const publish$ = publishLib(() => coldStepAndClose({ exitCode: 0, stderror: undefined }))
-  expect(publish$).toBeObservableStepAndClose(stdout('Published successfully'))
+  expect(publish$).toBeObservableStepAndClose(publishSucceeded())
 })
 
 mtest('publishLib with failed exit code', ({ expect, coldStepAndClose }) => {
   const publish$ = publishLib(() => coldStepAndClose({ exitCode: 1, stderror: 'Some error' }))
   expect(publish$).toBeObservableStepAndClose(
-    stderr('Publish failed with exit code 1, and error: Some error'),
+    publishFailed({ exitCode: 1, stderror: 'Some error' }),
   )
 })
 
@@ -281,16 +285,13 @@ mtest('publishLib defers executing the command', ({ expect: mexpect, coldStepAnd
     return coldStepAndClose({ exitCode: 0, stderror: undefined })
   })
   expect(commandExecuted).toBe(false)
-  mexpect(publish$).toBeObservableStepAndClose(stdout('Published successfully'))
+  mexpect(publish$).toBeObservableStepAndClose(publishSucceeded())
 })
 
 mtest('publishLib with error', ({ expect, coldError }) => {
   const input$ = coldError(new Error('Network timeout'))
   const publish$ = publishLib(() => input$)
-  expect(publish$).toBeObservableStepAndError(
-    stderr('Error publishing library: Network timeout'),
-    new Error('Could not publish library'),
-  )
+  expect(publish$).toBeObservableError(new Error('Error publishing library: Network timeout'))
 })
 
 mtest('getPackageDirsWithVersion combines parsed package dirs and version', ({ expect }) => {
@@ -348,14 +349,14 @@ mtest('getPackageDirsWithVersion errors when version.json is not valid JSON', ({
 })
 
 mtest(
-  'publishAllPackages emits success message after all packages publish',
+  'publishAllPackages emits all-published event after all packages publish',
   ({ expect, coldStepAndClose }) => {
     const publishPackage = ({ packageDir }: { packageDir: string; version: string }) =>
-      coldStepAndClose(stdout(`Published ${packageDir}`))
+      coldStepAndClose(publishSucceeded())
     const publishAll$ = of({ packageDirs: ['lib-1', 'lib-2'], version: '1.0.0' }).pipe(
       publishAllPackages(publishPackage),
     )
-    expect(publishAll$).toBeObservableStepAndClose(stdout('All packages published successfully'))
+    expect(publishAll$).toBeObservableStepAndClose(allPublished())
   },
 )
 
@@ -364,7 +365,7 @@ test('publishAllPackages passes packageDir and version to each publish call', as
   const publishAll$ = of({ packageDirs: ['lib-1', 'lib-2'], version: '2.5.0' }).pipe(
     publishAllPackages((args) => {
       publishedArgs.push(args)
-      return of(stdout(`Published ${args.packageDir}`))
+      return of(publishSucceeded())
     }),
   )
   await collectValuesFrom(publishAll$)

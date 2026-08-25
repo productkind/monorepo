@@ -1,15 +1,19 @@
 import { type DungareesBinBehaviors } from './behaviors.ts'
 
+import { publishLibPresenter } from '@dungarees/bin-publish-lib-cli-yargs/presenter.ts'
 import { publishLibYargsModule } from '@dungarees/bin-publish-lib-cli-yargs/yargs-module.ts'
+import type { PublishLibEvent } from '@dungarees/bin-publish-lib-domain/events.ts'
+import { createYargsPromptApp, type YargsPromptApp } from '@dungarees/cli/yargs-prompt-app.ts'
 
-import yargs from 'yargs'
-
-export type YargsApp = ReturnType<typeof yargs>
-
-export const createYargsApp = (services: DungareesBinBehaviors): YargsApp =>
-  yargs()
-    .scriptName('dungarees')
-    .command(publishLibYargsModule(services))
-    .demandCommand(1, 'You need at least one command before moving on')
-    .strict()
-    .version(false)
+export const createYargsApp = (behaviors: DungareesBinBehaviors): YargsPromptApp =>
+  createYargsPromptApp<PublishLibEvent>({
+    name: 'dungarees',
+    commands: [publishLibYargsModule({ publishLib: behaviors.publishLib })],
+    presenter: publishLibPresenter,
+    route: (yargs) =>
+      yargs
+        .scriptName('dungarees')
+        .demandCommand(1, 'You need at least one command before moving on')
+        .strict()
+        .version(false),
+  })
