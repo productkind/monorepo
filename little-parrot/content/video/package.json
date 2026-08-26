@@ -28,10 +28,15 @@
     "typescript": "5.8.2"
   },
   "scripts": {
-    "dev": "remotion studio",
+    "dev": "sh scripts/dev.sh",
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
-    "lint": "eslint src && tsc"
+    "lint": "eslint src && tsc && npm run narrate -- --check",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "narrate": "esbuild scripts/narrate.ts --bundle --platform=node --format=cjs --outfile=node_modules/.cache/narrate.cjs --log-level=warning && node --env-file-if-exists=../../../.env node_modules/.cache/narrate.cjs",
+    "migrate": "esbuild scripts/migrate-legacy-video.ts --bundle --platform=node --format=cjs --outfile=node_modules/.cache/migrate.cjs --log-level=warning && node node_modules/.cache/migrate.cjs",
+    "studio": "remotion studio"
   },
   "sideEffects": [
     "*.css"

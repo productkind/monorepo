@@ -1,0 +1,589 @@
+{
+  "hash": "23a9f10cb70067de",
+  "fps": 30,
+  "durationInFrames": 1010,
+  "words": [
+    {
+      "text": "If",
+      "start": 0,
+      "end": 3
+    },
+    {
+      "text": "you're",
+      "start": 3,
+      "end": 8
+    },
+    {
+      "text": "the",
+      "start": 9,
+      "end": 12
+    },
+    {
+      "text": "one",
+      "start": 14,
+      "end": 17
+    },
+    {
+      "text": "remembering",
+      "start": 19,
+      "end": 34
+    },
+    {
+      "text": "what",
+      "start": 35,
+      "end": 39
+    },
+    {
+      "text": "needs",
+      "start": 40,
+      "end": 48
+    },
+    {
+      "text": "buying,",
+      "start": 51,
+      "end": 70
+    },
+    {
+      "text": "booking,",
+      "start": 72,
+      "end": 87
+    },
+    {
+      "text": "doing,",
+      "start": 89,
+      "end": 101
+    },
+    {
+      "text": "and",
+      "start": 105,
+      "end": 116
+    },
+    {
+      "text": "when",
+      "start": 116,
+      "end": 118
+    },
+    {
+      "text": "the",
+      "start": 119,
+      "end": 120
+    },
+    {
+      "text": "baby",
+      "start": 123,
+      "end": 132
+    },
+    {
+      "text": "last",
+      "start": 134,
+      "end": 142
+    },
+    {
+      "text": "ate,",
+      "start": 145,
+      "end": 168
+    },
+    {
+      "text": "build",
+      "start": 170,
+      "end": 176
+    },
+    {
+      "text": "this.",
+      "start": 178,
+      "end": 189
+    },
+    {
+      "text": "Just",
+      "start": 194,
+      "end": 212
+    },
+    {
+      "text": "say",
+      "start": 213,
+      "end": 216
+    },
+    {
+      "text": "everything",
+      "start": 218,
+      "end": 228
+    },
+    {
+      "text": "that's",
+      "start": 229,
+      "end": 233
+    },
+    {
+      "text": "on",
+      "start": 234,
+      "end": 236
+    },
+    {
+      "text": "your",
+      "start": 237,
+      "end": 240
+    },
+    {
+      "text": "mind.",
+      "start": 243,
+      "end": 255
+    },
+    {
+      "text": "It",
+      "start": 259,
+      "end": 267
+    },
+    {
+      "text": "doesn't",
+      "start": 268,
+      "end": 274
+    },
+    {
+      "text": "need",
+      "start": 275,
+      "end": 279
+    },
+    {
+      "text": "to",
+      "start": 280,
+      "end": 281
+    },
+    {
+      "text": "be",
+      "start": 282,
+      "end": 284
+    },
+    {
+      "text": "organised.",
+      "start": 286,
+      "end": 305
+    },
+    {
+      "text": "Your",
+      "start": 311,
+      "end": 322
+    },
+    {
+      "text": "phone",
+      "start": 324,
+      "end": 332
+    },
+    {
+      "text": "sorts",
+      "start": 333,
+      "end": 341
+    },
+    {
+      "text": "it",
+      "start": 342,
+      "end": 344
+    },
+    {
+      "text": "into",
+      "start": 345,
+      "end": 351
+    },
+    {
+      "text": "neat",
+      "start": 352,
+      "end": 358
+    },
+    {
+      "text": "checklists…",
+      "start": 360,
+      "end": 384
+    },
+    {
+      "text": "And",
+      "start": 391,
+      "end": 404
+    },
+    {
+      "text": "the",
+      "start": 404,
+      "end": 406
+    },
+    {
+      "text": "same",
+      "start": 408,
+      "end": 413
+    },
+    {
+      "text": "idea",
+      "start": 415,
+      "end": 423
+    },
+    {
+      "text": "works",
+      "start": 425,
+      "end": 435
+    },
+    {
+      "text": "for",
+      "start": 435,
+      "end": 437
+    },
+    {
+      "text": "all",
+      "start": 439,
+      "end": 444
+    },
+    {
+      "text": "those",
+      "start": 446,
+      "end": 452
+    },
+    {
+      "text": "tiny",
+      "start": 454,
+      "end": 464
+    },
+    {
+      "text": "things",
+      "start": 465,
+      "end": 473
+    },
+    {
+      "text": "you",
+      "start": 474,
+      "end": 476
+    },
+    {
+      "text": "need",
+      "start": 477,
+      "end": 480
+    },
+    {
+      "text": "to",
+      "start": 481,
+      "end": 483
+    },
+    {
+      "text": "keep",
+      "start": 484,
+      "end": 488
+    },
+    {
+      "text": "track",
+      "start": 489,
+      "end": 497
+    },
+    {
+      "text": "of",
+      "start": 499,
+      "end": 502
+    },
+    {
+      "text": "with",
+      "start": 503,
+      "end": 504
+    },
+    {
+      "text": "a",
+      "start": 506,
+      "end": 507
+    },
+    {
+      "text": "baby.",
+      "start": 509,
+      "end": 521
+    },
+    {
+      "text": "Feeds,",
+      "start": 530,
+      "end": 555
+    },
+    {
+      "text": "naps,",
+      "start": 557,
+      "end": 572
+    },
+    {
+      "text": "nappies,",
+      "start": 573,
+      "end": 591
+    },
+    {
+      "text": "just",
+      "start": 594,
+      "end": 605
+    },
+    {
+      "text": "say",
+      "start": 606,
+      "end": 610
+    },
+    {
+      "text": "it,",
+      "start": 612,
+      "end": 627
+    },
+    {
+      "text": "and",
+      "start": 628,
+      "end": 632
+    },
+    {
+      "text": "your",
+      "start": 632,
+      "end": 634
+    },
+    {
+      "text": "phone",
+      "start": 635,
+      "end": 641
+    },
+    {
+      "text": "logs",
+      "start": 643,
+      "end": 651
+    },
+    {
+      "text": "it.",
+      "start": 653,
+      "end": 659
+    },
+    {
+      "text": "In",
+      "start": 671,
+      "end": 692
+    },
+    {
+      "text": "our",
+      "start": 693,
+      "end": 696
+    },
+    {
+      "text": "Hand",
+      "start": 698,
+      "end": 704
+    },
+    {
+      "text": "Off",
+      "start": 705,
+      "end": 708
+    },
+    {
+      "text": "the",
+      "start": 709,
+      "end": 711
+    },
+    {
+      "text": "Mental",
+      "start": 712,
+      "end": 720
+    },
+    {
+      "text": "Load",
+      "start": 722,
+      "end": 730
+    },
+    {
+      "text": "course,",
+      "start": 732,
+      "end": 754
+    },
+    {
+      "text": "you",
+      "start": 755,
+      "end": 756
+    },
+    {
+      "text": "build",
+      "start": 758,
+      "end": 764
+    },
+    {
+      "text": "both",
+      "start": 765,
+      "end": 771
+    },
+    {
+      "text": "shortcuts",
+      "start": 772,
+      "end": 785
+    },
+    {
+      "text": "yourself",
+      "start": 787,
+      "end": 797
+    },
+    {
+      "text": "in",
+      "start": 798,
+      "end": 800
+    },
+    {
+      "text": "about",
+      "start": 801,
+      "end": 807
+    },
+    {
+      "text": "20",
+      "start": 809,
+      "end": 819
+    },
+    {
+      "text": "minutes.",
+      "start": 821,
+      "end": 834
+    },
+    {
+      "text": "The",
+      "start": 840,
+      "end": 852
+    },
+    {
+      "text": "whole",
+      "start": 854,
+      "end": 860
+    },
+    {
+      "text": "course",
+      "start": 861,
+      "end": 872
+    },
+    {
+      "text": "is",
+      "start": 873,
+      "end": 874
+    },
+    {
+      "text": "free",
+      "start": 876,
+      "end": 884
+    },
+    {
+      "text": "until",
+      "start": 885,
+      "end": 891
+    },
+    {
+      "text": "the",
+      "start": 891,
+      "end": 893
+    },
+    {
+      "text": "30th",
+      "start": 896,
+      "end": 905
+    },
+    {
+      "text": "of",
+      "start": 906,
+      "end": 908
+    },
+    {
+      "text": "August,",
+      "start": 910,
+      "end": 936
+    },
+    {
+      "text": "link",
+      "start": 938,
+      "end": 944
+    },
+    {
+      "text": "in",
+      "start": 945,
+      "end": 948
+    },
+    {
+      "text": "comments",
+      "start": 950,
+      "end": 963
+    },
+    {
+      "text": "to",
+      "start": 964,
+      "end": 965
+    },
+    {
+      "text": "build",
+      "start": 966,
+      "end": 972
+    },
+    {
+      "text": "your",
+      "start": 973,
+      "end": 977
+    },
+    {
+      "text": "shortcuts.",
+      "start": 979,
+      "end": 1004
+    }
+  ],
+  "takes": [
+    {
+      "audio": "social-017/audio/4201e5b95efe0377.mp3",
+      "fromFrame": 0,
+      "durationInFrames": 1004
+    }
+  ],
+  "sections": [
+    {
+      "index": 0,
+      "fromFrame": 0,
+      "durationInFrames": 194,
+      "wordFrom": 0,
+      "wordTo": 18
+    },
+    {
+      "index": 1,
+      "fromFrame": 194,
+      "durationInFrames": 117,
+      "wordFrom": 18,
+      "wordTo": 31
+    },
+    {
+      "index": 2,
+      "fromFrame": 311,
+      "durationInFrames": 80,
+      "wordFrom": 31,
+      "wordTo": 38
+    },
+    {
+      "index": 3,
+      "fromFrame": 391,
+      "durationInFrames": 139,
+      "wordFrom": 38,
+      "wordTo": 57
+    },
+    {
+      "index": 4,
+      "fromFrame": 530,
+      "durationInFrames": 64,
+      "wordFrom": 57,
+      "wordTo": 60
+    },
+    {
+      "index": 5,
+      "fromFrame": 594,
+      "durationInFrames": 77,
+      "wordFrom": 60,
+      "wordTo": 68
+    },
+    {
+      "index": 6,
+      "fromFrame": 671,
+      "durationInFrames": 84,
+      "wordFrom": 68,
+      "wordTo": 76
+    },
+    {
+      "index": 7,
+      "fromFrame": 755,
+      "durationInFrames": 85,
+      "wordFrom": 76,
+      "wordTo": 85
+    },
+    {
+      "index": 8,
+      "fromFrame": 840,
+      "durationInFrames": 170,
+      "wordFrom": 85,
+      "wordTo": 102
+    }
+  ]
+}

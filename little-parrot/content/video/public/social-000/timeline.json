@@ -1,0 +1,955 @@
+{
+  "hash": "f60010caad489d00",
+  "fps": 30,
+  "durationInFrames": 1686,
+  "words": [
+    {
+      "text": "You",
+      "start": 0,
+      "end": 3
+    },
+    {
+      "text": "are",
+      "start": 3,
+      "end": 5
+    },
+    {
+      "text": "not",
+      "start": 7,
+      "end": 12
+    },
+    {
+      "text": "falling",
+      "start": 14,
+      "end": 22
+    },
+    {
+      "text": "behind",
+      "start": 24,
+      "end": 39
+    },
+    {
+      "text": "on",
+      "start": 41,
+      "end": 46
+    },
+    {
+      "text": "AI.",
+      "start": 51,
+      "end": 65
+    },
+    {
+      "text": "The",
+      "start": 69,
+      "end": 82
+    },
+    {
+      "text": "panic",
+      "start": 84,
+      "end": 96
+    },
+    {
+      "text": "is",
+      "start": 99,
+      "end": 104
+    },
+    {
+      "text": "being",
+      "start": 105,
+      "end": 108
+    },
+    {
+      "text": "sold",
+      "start": 110,
+      "end": 118
+    },
+    {
+      "text": "to",
+      "start": 119,
+      "end": 120
+    },
+    {
+      "text": "you.",
+      "start": 122,
+      "end": 130
+    },
+    {
+      "text": "Since",
+      "start": 136,
+      "end": 166
+    },
+    {
+      "text": "ChatGPT",
+      "start": 168,
+      "end": 195
+    },
+    {
+      "text": "entered",
+      "start": 196,
+      "end": 207
+    },
+    {
+      "text": "our",
+      "start": 207,
+      "end": 209
+    },
+    {
+      "text": "everyday",
+      "start": 211,
+      "end": 221
+    },
+    {
+      "text": "lives,",
+      "start": 224,
+      "end": 250
+    },
+    {
+      "text": "we’ve",
+      "start": 251,
+      "end": 255
+    },
+    {
+      "text": "been",
+      "start": 256,
+      "end": 260
+    },
+    {
+      "text": "bombarded",
+      "start": 262,
+      "end": 279
+    },
+    {
+      "text": "with",
+      "start": 280,
+      "end": 284
+    },
+    {
+      "text": "the",
+      "start": 284,
+      "end": 286
+    },
+    {
+      "text": "message",
+      "start": 288,
+      "end": 298
+    },
+    {
+      "text": "that",
+      "start": 299,
+      "end": 303
+    },
+    {
+      "text": "we’ll",
+      "start": 304,
+      "end": 308
+    },
+    {
+      "text": "be",
+      "start": 309,
+      "end": 312
+    },
+    {
+      "text": "left",
+      "start": 313,
+      "end": 317
+    },
+    {
+      "text": "behind",
+      "start": 319,
+      "end": 332
+    },
+    {
+      "text": "if",
+      "start": 333,
+      "end": 334
+    },
+    {
+      "text": "we",
+      "start": 336,
+      "end": 339
+    },
+    {
+      "text": "don’t",
+      "start": 339,
+      "end": 346
+    },
+    {
+      "text": "constantly",
+      "start": 347,
+      "end": 360
+    },
+    {
+      "text": "keep",
+      "start": 362,
+      "end": 370
+    },
+    {
+      "text": "up",
+      "start": 372,
+      "end": 375
+    },
+    {
+      "text": "with",
+      "start": 376,
+      "end": 380
+    },
+    {
+      "text": "every",
+      "start": 381,
+      "end": 387
+    },
+    {
+      "text": "new",
+      "start": 389,
+      "end": 396
+    },
+    {
+      "text": "AI",
+      "start": 400,
+      "end": 408
+    },
+    {
+      "text": "tool,",
+      "start": 411,
+      "end": 423
+    },
+    {
+      "text": "model,",
+      "start": 426,
+      "end": 447
+    },
+    {
+      "text": "and",
+      "start": 447,
+      "end": 449
+    },
+    {
+      "text": "workflow.",
+      "start": 451,
+      "end": 471
+    },
+    {
+      "text": "As",
+      "start": 484,
+      "end": 507
+    },
+    {
+      "text": "with",
+      "start": 508,
+      "end": 512
+    },
+    {
+      "text": "any",
+      "start": 513,
+      "end": 516
+    },
+    {
+      "text": "message,",
+      "start": 518,
+      "end": 533
+    },
+    {
+      "text": "it",
+      "start": 534,
+      "end": 536
+    },
+    {
+      "text": "is",
+      "start": 537,
+      "end": 540
+    },
+    {
+      "text": "worth",
+      "start": 542,
+      "end": 548
+    },
+    {
+      "text": "asking",
+      "start": 549,
+      "end": 560
+    },
+    {
+      "text": "what",
+      "start": 561,
+      "end": 564
+    },
+    {
+      "text": "motivation",
+      "start": 566,
+      "end": 584
+    },
+    {
+      "text": "sits",
+      "start": 586,
+      "end": 593
+    },
+    {
+      "text": "behind",
+      "start": 595,
+      "end": 605
+    },
+    {
+      "text": "it.",
+      "start": 608,
+      "end": 615
+    },
+    {
+      "text": "Much",
+      "start": 624,
+      "end": 651
+    },
+    {
+      "text": "of",
+      "start": 652,
+      "end": 653
+    },
+    {
+      "text": "this",
+      "start": 654,
+      "end": 658
+    },
+    {
+      "text": "urgency",
+      "start": 660,
+      "end": 672
+    },
+    {
+      "text": "comes",
+      "start": 674,
+      "end": 682
+    },
+    {
+      "text": "from",
+      "start": 683,
+      "end": 687
+    },
+    {
+      "text": "private,",
+      "start": 689,
+      "end": 706
+    },
+    {
+      "text": "venture-backed",
+      "start": 707,
+      "end": 728
+    },
+    {
+      "text": "AI",
+      "start": 731,
+      "end": 737
+    },
+    {
+      "text": "companies",
+      "start": 739,
+      "end": 759
+    },
+    {
+      "text": "that",
+      "start": 762,
+      "end": 773
+    },
+    {
+      "text": "need",
+      "start": 774,
+      "end": 778
+    },
+    {
+      "text": "enough",
+      "start": 779,
+      "end": 788
+    },
+    {
+      "text": "users",
+      "start": 790,
+      "end": 800
+    },
+    {
+      "text": "to",
+      "start": 801,
+      "end": 804
+    },
+    {
+      "text": "meet",
+      "start": 805,
+      "end": 809
+    },
+    {
+      "text": "the",
+      "start": 810,
+      "end": 814
+    },
+    {
+      "text": "immense",
+      "start": 816,
+      "end": 826
+    },
+    {
+      "text": "growth",
+      "start": 827,
+      "end": 836
+    },
+    {
+      "text": "expectations",
+      "start": 838,
+      "end": 860
+    },
+    {
+      "text": "of",
+      "start": 861,
+      "end": 862
+    },
+    {
+      "text": "their",
+      "start": 863,
+      "end": 869
+    },
+    {
+      "text": "investors.",
+      "start": 871,
+      "end": 893
+    },
+    {
+      "text": "If",
+      "start": 903,
+      "end": 922
+    },
+    {
+      "text": "you",
+      "start": 923,
+      "end": 924
+    },
+    {
+      "text": "are",
+      "start": 926,
+      "end": 929
+    },
+    {
+      "text": "afraid",
+      "start": 931,
+      "end": 939
+    },
+    {
+      "text": "you",
+      "start": 940,
+      "end": 944
+    },
+    {
+      "text": "will",
+      "start": 944,
+      "end": 946
+    },
+    {
+      "text": "lose",
+      "start": 948,
+      "end": 953
+    },
+    {
+      "text": "your",
+      "start": 954,
+      "end": 956
+    },
+    {
+      "text": "job,",
+      "start": 959,
+      "end": 982
+    },
+    {
+      "text": "or",
+      "start": 983,
+      "end": 984
+    },
+    {
+      "text": "become",
+      "start": 986,
+      "end": 992
+    },
+    {
+      "text": "a",
+      "start": 993,
+      "end": 994
+    },
+    {
+      "text": "Discman",
+      "start": 996,
+      "end": 1008
+    },
+    {
+      "text": "in",
+      "start": 1009,
+      "end": 1011
+    },
+    {
+      "text": "a",
+      "start": 1012,
+      "end": 1013
+    },
+    {
+      "text": "Spotify",
+      "start": 1015,
+      "end": 1030
+    },
+    {
+      "text": "world,",
+      "start": 1032,
+      "end": 1056
+    },
+    {
+      "text": "you",
+      "start": 1057,
+      "end": 1059
+    },
+    {
+      "text": "are",
+      "start": 1059,
+      "end": 1061
+    },
+    {
+      "text": "more",
+      "start": 1062,
+      "end": 1066
+    },
+    {
+      "text": "likely",
+      "start": 1068,
+      "end": 1078
+    },
+    {
+      "text": "to",
+      "start": 1080,
+      "end": 1083
+    },
+    {
+      "text": "start",
+      "start": 1084,
+      "end": 1090
+    },
+    {
+      "text": "paying",
+      "start": 1091,
+      "end": 1100
+    },
+    {
+      "text": "for",
+      "start": 1100,
+      "end": 1102
+    },
+    {
+      "text": "their",
+      "start": 1103,
+      "end": 1107
+    },
+    {
+      "text": "services",
+      "start": 1109,
+      "end": 1124
+    },
+    {
+      "text": "sooner.",
+      "start": 1126,
+      "end": 1140
+    },
+    {
+      "text": "In",
+      "start": 1158,
+      "end": 1167
+    },
+    {
+      "text": "reality,",
+      "start": 1169,
+      "end": 1198
+    },
+    {
+      "text": "AI",
+      "start": 1201,
+      "end": 1208
+    },
+    {
+      "text": "can",
+      "start": 1209,
+      "end": 1212
+    },
+    {
+      "text": "improve",
+      "start": 1214,
+      "end": 1224
+    },
+    {
+      "text": "how",
+      "start": 1226,
+      "end": 1229
+    },
+    {
+      "text": "you",
+      "start": 1230,
+      "end": 1234
+    },
+    {
+      "text": "work.",
+      "start": 1236,
+      "end": 1248
+    },
+    {
+      "text": "It",
+      "start": 1255,
+      "end": 1268
+    },
+    {
+      "text": "can",
+      "start": 1269,
+      "end": 1272
+    },
+    {
+      "text": "even",
+      "start": 1273,
+      "end": 1277
+    },
+    {
+      "text": "make",
+      "start": 1279,
+      "end": 1284
+    },
+    {
+      "text": "work",
+      "start": 1286,
+      "end": 1294
+    },
+    {
+      "text": "more",
+      "start": 1295,
+      "end": 1299
+    },
+    {
+      "text": "fun",
+      "start": 1302,
+      "end": 1311
+    },
+    {
+      "text": "and",
+      "start": 1312,
+      "end": 1316
+    },
+    {
+      "text": "exciting.",
+      "start": 1318,
+      "end": 1340
+    },
+    {
+      "text": "But",
+      "start": 1344,
+      "end": 1359
+    },
+    {
+      "text": "that",
+      "start": 1360,
+      "end": 1364
+    },
+    {
+      "text": "does",
+      "start": 1365,
+      "end": 1368
+    },
+    {
+      "text": "not",
+      "start": 1370,
+      "end": 1373
+    },
+    {
+      "text": "mean",
+      "start": 1375,
+      "end": 1380
+    },
+    {
+      "text": "you",
+      "start": 1381,
+      "end": 1383
+    },
+    {
+      "text": "need",
+      "start": 1384,
+      "end": 1388
+    },
+    {
+      "text": "to",
+      "start": 1389,
+      "end": 1392
+    },
+    {
+      "text": "rush.",
+      "start": 1395,
+      "end": 1408
+    },
+    {
+      "text": "It",
+      "start": 1416,
+      "end": 1431
+    },
+    {
+      "text": "is",
+      "start": 1432,
+      "end": 1436
+    },
+    {
+      "text": "completely",
+      "start": 1437,
+      "end": 1455
+    },
+    {
+      "text": "fine",
+      "start": 1457,
+      "end": 1464
+    },
+    {
+      "text": "to",
+      "start": 1466,
+      "end": 1469
+    },
+    {
+      "text": "take",
+      "start": 1470,
+      "end": 1474
+    },
+    {
+      "text": "your",
+      "start": 1476,
+      "end": 1481
+    },
+    {
+      "text": "time",
+      "start": 1483,
+      "end": 1491
+    },
+    {
+      "text": "and",
+      "start": 1492,
+      "end": 1496
+    },
+    {
+      "text": "get",
+      "start": 1497,
+      "end": 1500
+    },
+    {
+      "text": "started",
+      "start": 1502,
+      "end": 1512
+    },
+    {
+      "text": "with",
+      "start": 1513,
+      "end": 1517
+    },
+    {
+      "text": "these",
+      "start": 1518,
+      "end": 1524
+    },
+    {
+      "text": "technologies",
+      "start": 1526,
+      "end": 1544
+    },
+    {
+      "text": "at",
+      "start": 1545,
+      "end": 1546
+    },
+    {
+      "text": "your",
+      "start": 1547,
+      "end": 1551
+    },
+    {
+      "text": "own",
+      "start": 1553,
+      "end": 1558
+    },
+    {
+      "text": "pace.",
+      "start": 1560,
+      "end": 1575
+    },
+    {
+      "text": "If",
+      "start": 1583,
+      "end": 1599
+    },
+    {
+      "text": "you'd",
+      "start": 1599,
+      "end": 1604
+    },
+    {
+      "text": "like",
+      "start": 1605,
+      "end": 1608
+    },
+    {
+      "text": "to",
+      "start": 1609,
+      "end": 1611
+    },
+    {
+      "text": "learn",
+      "start": 1612,
+      "end": 1618
+    },
+    {
+      "text": "more",
+      "start": 1620,
+      "end": 1625
+    },
+    {
+      "text": "about",
+      "start": 1626,
+      "end": 1632
+    },
+    {
+      "text": "AI",
+      "start": 1636,
+      "end": 1642
+    },
+    {
+      "text": "calmly,",
+      "start": 1644,
+      "end": 1659
+    },
+    {
+      "text": "follow",
+      "start": 1660,
+      "end": 1666
+    },
+    {
+      "text": "along.",
+      "start": 1668,
+      "end": 1680
+    }
+  ],
+  "takes": [
+    {
+      "audio": "social-000/audio/6d06a8b731366a61.mp3",
+      "fromFrame": 0,
+      "durationInFrames": 1680
+    }
+  ],
+  "sections": [
+    {
+      "index": 0,
+      "fromFrame": 0,
+      "durationInFrames": 69,
+      "wordFrom": 0,
+      "wordTo": 7
+    },
+    {
+      "index": 1,
+      "fromFrame": 69,
+      "durationInFrames": 67,
+      "wordFrom": 7,
+      "wordTo": 14
+    },
+    {
+      "index": 2,
+      "fromFrame": 136,
+      "durationInFrames": 197,
+      "wordFrom": 14,
+      "wordTo": 31
+    },
+    {
+      "index": 3,
+      "fromFrame": 333,
+      "durationInFrames": 48,
+      "wordFrom": 31,
+      "wordTo": 38
+    },
+    {
+      "index": 4,
+      "fromFrame": 381,
+      "durationInFrames": 103,
+      "wordFrom": 38,
+      "wordTo": 45
+    },
+    {
+      "index": 5,
+      "fromFrame": 484,
+      "durationInFrames": 140,
+      "wordFrom": 45,
+      "wordTo": 58
+    },
+    {
+      "index": 6,
+      "fromFrame": 624,
+      "durationInFrames": 177,
+      "wordFrom": 58,
+      "wordTo": 72
+    },
+    {
+      "index": 7,
+      "fromFrame": 801,
+      "durationInFrames": 102,
+      "wordFrom": 72,
+      "wordTo": 81
+    },
+    {
+      "index": 8,
+      "fromFrame": 903,
+      "durationInFrames": 93,
+      "wordFrom": 81,
+      "wordTo": 93
+    },
+    {
+      "index": 9,
+      "fromFrame": 996,
+      "durationInFrames": 61,
+      "wordFrom": 93,
+      "wordTo": 98
+    },
+    {
+      "index": 10,
+      "fromFrame": 1057,
+      "durationInFrames": 101,
+      "wordFrom": 98,
+      "wordTo": 109
+    },
+    {
+      "index": 11,
+      "fromFrame": 1158,
+      "durationInFrames": 97,
+      "wordFrom": 109,
+      "wordTo": 117
+    },
+    {
+      "index": 12,
+      "fromFrame": 1255,
+      "durationInFrames": 89,
+      "wordFrom": 117,
+      "wordTo": 126
+    },
+    {
+      "index": 13,
+      "fromFrame": 1344,
+      "durationInFrames": 72,
+      "wordFrom": 126,
+      "wordTo": 135
+    },
+    {
+      "index": 14,
+      "fromFrame": 1416,
+      "durationInFrames": 97,
+      "wordFrom": 135,
+      "wordTo": 146
+    },
+    {
+      "index": 15,
+      "fromFrame": 1513,
+      "durationInFrames": 92,
+      "wordFrom": 146,
+      "wordTo": 155
+    },
+    {
+      "index": 16,
+      "fromFrame": 1605,
+      "durationInFrames": 81,
+      "wordFrom": 155,
+      "wordTo": 164
+    }
+  ]
+}
