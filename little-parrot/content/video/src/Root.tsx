@@ -1,8 +1,9 @@
 import './index.css';
 
 import { Composition, staticFile } from "remotion";
-import { LessonVideo, LessonVideoPropsSchema, Captions, LessonVideo2, LessonVideo3, LessonVideo4, LessonVideo5, LessonVideo6, LessonVideo7, LessonVideoLanding, LessonVideoDebugging01, LessonVideoLovableBasics01, LessonVideoLovablePublish01, SocialVideo000, SocialVideo001, SocialVideo002, SocialVideo003, SocialVideo004, SocialVideo005, SocialVideo006, SocialVideo007, SocialVideo008, SocialVideo009, SocialVideo010, SocialVideo011, SocialVideo012, SocialVideo013, SocialVideo014, SocialVideo015, LessonVideoAiAdmin00, SocialVideo016, SocialVideo017 } from "./LessonVideo";
+import { LessonVideo, LessonVideoPropsSchema, Captions, LessonVideo2, LessonVideo3, LessonVideo4, LessonVideo5, LessonVideo6, LessonVideo7, LessonVideoLanding, LessonVideoDebugging01, LessonVideoLovableBasics01, LessonVideoLovablePublish01, SocialVideo001, SocialVideo002, SocialVideo003, SocialVideo004, SocialVideo005, SocialVideo006, SocialVideo007, SocialVideo008, SocialVideo009, SocialVideo010, SocialVideo011, SocialVideo012, SocialVideo013, SocialVideo014, SocialVideo015, LessonVideoAiAdmin00 } from "./LessonVideo";
 import { FRAME_HEIGHT, FRAME_RATE, FRAME_WIDTH } from './config';
+import { NarratedCompositions } from './compositions';
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -358,38 +359,6 @@ export const RemotionRoot: React.FC = () => {
         }}
       />
 
-      <Composition
-        id="social-000"
-        component={SocialVideo000}
-        durationInFrames={FRAME_RATE}
-        fps={FRAME_RATE}
-        width={FRAME_WIDTH}
-        height={FRAME_HEIGHT}
-        schema={LessonVideoPropsSchema}
-        defaultProps={{
-          captions: [],
-          titleDuration: 0,
-          endDuration: 0,
-          allDuration: 100,
-        }}
-        calculateMetadata={async ({ props }) => {
-          const titleDuration = 0
-          const endDuration = 0
-          const response = await fetch(staticFile('social-000/text.json'))
-          const captions = await response.json()
-          console.log(captions)
-          const duration = Math.ceil(captions.at(-1).end * FRAME_RATE) + titleDuration + endDuration
-
-          return {
-            durationInFrames: duration + 0,
-            props: {
-              ...props,
-              captions: transformCaptionsToFrames(captions),
-              allDuration: duration,
-            }
-          }
-        }}
-      />
 
       <Composition
         id="social-001"
@@ -919,72 +888,9 @@ export const RemotionRoot: React.FC = () => {
         }}
       />
 
-      <Composition
-        id="social-016"
-        component={SocialVideo016}
-        durationInFrames={FRAME_RATE}
-        fps={FRAME_RATE}
-        width={FRAME_WIDTH}
-        height={FRAME_HEIGHT}
-        schema={LessonVideoPropsSchema}
-        defaultProps={{
-          captions: [],
-          titleDuration: 0,
-          endDuration: 3,
-          allDuration: 100,
-        }}
-        calculateMetadata={async ({ props }) => {
-          const titleDuration = 0
-          const endDuration = 3
-          const response = await fetch(staticFile('social-016/text.json'))
-          const captions = await response.json()
-          console.log(captions)
-          const duration = Math.ceil(captions.at(-1).end * FRAME_RATE) + titleDuration + endDuration
 
-          return {
-            durationInFrames: duration + 3,
-            props: {
-              ...props,
-              captions: transformCaptionsToFrames(captions),
-              allDuration: duration,
-            }
-          }
-        }}
-      />
 
-      <Composition
-        id="social-017"
-        component={SocialVideo017}
-        durationInFrames={FRAME_RATE}
-        fps={FRAME_RATE}
-        width={FRAME_WIDTH}
-        height={FRAME_HEIGHT}
-        schema={LessonVideoPropsSchema}
-        defaultProps={{
-          captions: [],
-          titleDuration: 0,
-          endDuration: 3,
-          allDuration: 100,
-        }}
-        calculateMetadata={async ({ props }) => {
-          const titleDuration = 0
-          const endDuration = 3
-          const response = await fetch(staticFile('social-017/text.json'))
-          const captions = await response.json()
-          console.log(captions)
-          const duration = Math.ceil(captions.at(-1).end * FRAME_RATE) + titleDuration + endDuration
-
-          return {
-            durationInFrames: duration + 3,
-            props: {
-              ...props,
-              captions: transformCaptionsToFrames(captions),
-              allDuration: duration,
-            }
-          }
-        }}
-      />
-
+      <NarratedCompositions />
     </>
   )
 }
