@@ -66,9 +66,13 @@ const render: {
 }
 ```
 
-## 4. No `as` casts — reach for a type-safe construction
+## 4. No unsafe type assertions — neither `as` casts nor `!` non-null assertions
 
-Avoid `as`. When indexing a handler map with a union key trips TypeScript's correlated-union limitation, route the call through a small generic helper where the key is a single type parameter, so the handler's parameter type checks cleanly.
+Both `as` and `!` silence the type checker instead of satisfying it. Reach for a type-safe construction, a narrowing guard, or a runtime check that also asserts the invariant.
+
+### 4a. `as` casts
+
+When indexing a handler map with a union key trips TypeScript's correlated-union limitation, route the call through a small generic helper where the key is a single type parameter, so the handler's parameter type checks cleanly.
 
 ```ts
 // Bad — silences the checker instead of satisfying it
@@ -82,6 +86,23 @@ const dispatch = <TYPE extends CliMessage['type']>(
 ): void => render[message.type](message)
 
 next: (message) => dispatch(message)
+```
+
+### 4b. `!` non-null assertions
+
+`x!` claims "trust me, not null" and crashes silently if you're wrong. Narrow with a real check — in a test that check also documents the invariant.
+
+```ts
+// Bad — asserts non-null, hides the failure mode
+const help = await configured!.getHelp()
+```
+
+```ts
+// Good — a guard that narrows and states the invariant
+if (configured === undefined) {
+  throw new Error('route should have been called during present()')
+}
+const help = await configured.getHelp()
 ```
 
 ## 5. Stub with objects as real as possible; assert the contract, not the implementation

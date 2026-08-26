@@ -97,6 +97,7 @@ export class ExitError extends Error {
 }
 
 export const createYargsPromptApp = <EVENTS extends DomainEvent = DomainEvent>({
+  name,
   commands = [],
   route,
   presenter,
@@ -120,7 +121,7 @@ export const createYargsPromptApp = <EVENTS extends DomainEvent = DomainEvent>({
     // failure rejects parseAsync and flows through this stream instead; fail(false) makes it
     // throw the error rather than printing usage itself, so all output stays in the message
     // stream and is owned by the renderer.
-    const base = yargs().exitProcess(false).fail(false)
+    const base = yargs().scriptName(name).exitProcess(false).fail(false)
     const withCommands = commands.reduce((app, command) => app.command(command(io)), base)
     const routed = route(withCommands, io)
     // Deferred so a synchronous parse throw (yargs validates before awaiting under

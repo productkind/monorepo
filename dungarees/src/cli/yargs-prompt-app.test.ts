@@ -256,6 +256,25 @@ test('yargs-prompt-app waits for asynchronous registered events before exiting',
   ])
 })
 
+test('yargs-prompt-app uses the configured name as the script name', async () => {
+  let configured: { getHelp: () => Promise<string> } | undefined
+  const app = createYargsPromptApp({
+    name: 'my-tool',
+    route: (yargs) => {
+      configured = yargs
+      return yargs.command('greet', 'Greet someone', () => {}, () => {}).demandCommand(1)
+    },
+    presenter: {},
+  })
+  app.present([], DUMMY_CONTROLS)
+
+  if (configured === undefined) {
+    throw new Error('route should have been called during present()')
+  }
+  const help = await configured.getHelp()
+  expect(help).toContain('my-tool')
+})
+
 test('yargs-prompt-app surfaces a parse failure as stderr and exits with code 1', async () => {
   const app = createYargsPromptApp({
     name: 'test-app',

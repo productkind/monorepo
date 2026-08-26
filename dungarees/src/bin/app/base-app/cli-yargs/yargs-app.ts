@@ -12,7 +12,6 @@ export const createYargsApp = (behaviors: DungareesBinBehaviors): YargsPromptApp
     presenter: publishLibPresenter,
     route: (yargs) =>
       yargs
-        .scriptName('dungarees')
         .demandCommand(1, 'You need at least one command before moving on')
         .strict()
         .version(false),
