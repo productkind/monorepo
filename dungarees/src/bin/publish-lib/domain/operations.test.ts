@@ -1,11 +1,4 @@
-import {
-  allPublished,
-  buildStart,
-  outDirCreated,
-  packageJsonWritten,
-  publishFailed,
-  publishSucceeded,
-} from './events.ts'
+import { eventCreators } from './events.ts'
 import {
   createOutDir,
   getBuildStartEvent,
@@ -29,14 +22,14 @@ mtest('create build start event', ({ expect }) => {
     version: '1.0.0',
   })
   expect(startEvent$).toBeObservableStepAndClose(
-    buildStart({ srcDir: './src', outDir: './out', version: '1.0.0' }),
+    eventCreators.buildStart({ srcDir: './src', outDir: './out', version: '1.0.0' }),
     0,
   )
 })
 
 mtest('create output directory', ({ expect, coldStepAndClose }) => {
   const createOutDir$ = createOutDir(coldStepAndClose(undefined), '/out')
-  expect(createOutDir$).toBeObservableStepAndClose(outDirCreated({ outDir: '/out' }))
+  expect(createOutDir$).toBeObservableStepAndClose(eventCreators.outDirCreated({ outDir: '/out' }))
 })
 
 mtest('create output directory with error', ({ expect, coldError }) => {
@@ -64,7 +57,7 @@ mtest('transformPackageJson with version from file', ({ expect }) => {
     }),
   )
   expect(transformPackageJson$).toBeObservableValueAndClose(
-    packageJsonWritten({ path: '/out', version: '1.0.0' }),
+    eventCreators.packageJsonWritten({ path: '/out', version: '1.0.0' }),
   )
   expect(contentInspector$).toBeObservableValue(
     JSON.stringify({ name: 'test-lib', version: '1.0.0' }, null, 2),
@@ -99,7 +92,7 @@ mtest('transformPackageJson with exports', ({ expect }) => {
     }),
   )
   expect(transformPackageJson$).toBeObservableValueAndClose(
-    packageJsonWritten({ path: '/out', version: '1.0.0' }),
+    eventCreators.packageJsonWritten({ path: '/out', version: '1.0.0' }),
   )
   expect(contentInspector$).toBeObservableValue(
     JSON.stringify(
@@ -140,7 +133,7 @@ mtest('transformPackageJson with version override', ({ expect }) => {
     }),
   )
   expect(transformPackageJson$).toBeObservableValueAndClose(
-    packageJsonWritten({ path: '/out', version: '2.0.0' }),
+    eventCreators.packageJsonWritten({ path: '/out', version: '2.0.0' }),
   )
   expect(contentInspector$).toBeObservableValue(
     JSON.stringify({ name: 'test-lib', version: '2.0.0' }, null, 2),
@@ -182,7 +175,7 @@ mtest('transformPackageJson without version in file', ({ expect }) => {
     }),
   )
   expect(transformPackageJson$).toBeObservableValueAndClose(
-    packageJsonWritten({ path: '/out', version: '2.0.0' }),
+    eventCreators.packageJsonWritten({ path: '/out', version: '2.0.0' }),
   )
   expect(contentInspector$).toBeObservableValue(
     JSON.stringify({ name: 'test-lib', version: '2.0.0' }, null, 2),
@@ -210,7 +203,7 @@ mtest('transformPackageJson change bin paths', ({ expect }) => {
     }),
   )
   expect(transformPackageJson$).toBeObservableValueAndClose(
-    packageJsonWritten({ path: '/out', version: '1.0.0' }),
+    eventCreators.packageJsonWritten({ path: '/out', version: '1.0.0' }),
   )
   expect(contentInspector$).toBeObservableValue(
     JSON.stringify(
@@ -268,13 +261,13 @@ mtest('transformPackageJson with invalid JSON', ({ expect, coldStepAndClose }) =
 
 mtest('publishLib with successful exit code', ({ expect, coldStepAndClose }) => {
   const publish$ = publishLib(() => coldStepAndClose({ exitCode: 0, stderror: undefined }))
-  expect(publish$).toBeObservableStepAndClose(publishSucceeded())
+  expect(publish$).toBeObservableStepAndClose(eventCreators.publishSucceeded())
 })
 
 mtest('publishLib with failed exit code', ({ expect, coldStepAndClose }) => {
   const publish$ = publishLib(() => coldStepAndClose({ exitCode: 1, stderror: 'Some error' }))
   expect(publish$).toBeObservableStepAndClose(
-    publishFailed({ exitCode: 1, stderror: 'Some error' }),
+    eventCreators.publishFailed({ exitCode: 1, stderror: 'Some error' }),
   )
 })
 
@@ -285,7 +278,7 @@ mtest('publishLib defers executing the command', ({ expect: mexpect, coldStepAnd
     return coldStepAndClose({ exitCode: 0, stderror: undefined })
   })
   expect(commandExecuted).toBe(false)
-  mexpect(publish$).toBeObservableStepAndClose(publishSucceeded())
+  mexpect(publish$).toBeObservableStepAndClose(eventCreators.publishSucceeded())
 })
 
 mtest('publishLib with error', ({ expect, coldError }) => {
@@ -352,11 +345,11 @@ mtest(
   'publishAllPackages emits all-published event after all packages publish',
   ({ expect, coldStepAndClose }) => {
     const publishPackage = ({ packageDir }: { packageDir: string; version: string }) =>
-      coldStepAndClose(publishSucceeded())
+      coldStepAndClose(eventCreators.publishSucceeded())
     const publishAll$ = of({ packageDirs: ['lib-1', 'lib-2'], version: '1.0.0' }).pipe(
       publishAllPackages(publishPackage),
     )
-    expect(publishAll$).toBeObservableStepAndClose(allPublished())
+    expect(publishAll$).toBeObservableStepAndClose(eventCreators.allPublished())
   },
 )
 
@@ -365,7 +358,7 @@ test('publishAllPackages passes packageDir and version to each publish call', as
   const publishAll$ = of({ packageDirs: ['lib-1', 'lib-2'], version: '2.5.0' }).pipe(
     publishAllPackages((args) => {
       publishedArgs.push(args)
-      return of(publishSucceeded())
+      return of(eventCreators.publishSucceeded())
     }),
   )
   await collectValuesFrom(publishAll$)

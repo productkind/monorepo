@@ -1,12 +1,4 @@
-import {
-  allPublished,
-  buildStart,
-  outDirCreated,
-  packageJsonWritten,
-  type PublishLibEvent,
-  publishFailed,
-  publishSucceeded,
-} from './events.ts'
+import { eventCreators, type PublishLibEvent } from './events.ts'
 
 import type { JsonObject } from '@dungarees/core/type-util.ts'
 import {
@@ -32,14 +24,15 @@ export const getBuildStartEvent = ({
   srcDir,
   outDir,
   version,
-}: BaseBuildArgs): Observable<PublishLibEvent> => of(buildStart({ srcDir, outDir, version }))
+}: BaseBuildArgs): Observable<PublishLibEvent> =>
+  of(eventCreators.buildStart({ srcDir, outDir, version }))
 
 export const createOutDir = (
   createOutDir$: Observable<void>,
   outDir: string,
 ): Observable<PublishLibEvent> =>
   createOutDir$.pipe(
-    map(() => outDirCreated({ outDir })),
+    map(() => eventCreators.outDirCreated({ outDir })),
     catchAndRethrow(
       (cause) =>
         new Error(`Error creating output directory (${outDir}): ${cause.message}`, { cause }),
@@ -163,10 +156,10 @@ const handleTransformEnd = (
   destinationPath: string,
 ): OperatorFunction<{ context: string }, PublishLibEvent> =>
   pipe(
-    map(({ context: version }) => packageJsonWritten({ path: destinationPath, version })),
-    catchAndRethrow(
-      (cause) => new Error(`File transform failed: ${cause.message}`, { cause }),
+    map(({ context: version }) =>
+      eventCreators.packageJsonWritten({ path: destinationPath, version }),
     ),
+    catchAndRethrow((cause) => new Error(`File transform failed: ${cause.message}`, { cause })),
   )
 
 export const publishLib = (
@@ -174,11 +167,11 @@ export const publishLib = (
 ): Observable<PublishLibEvent> =>
   defer(publishFactory).pipe(
     map(({ exitCode, stderror }) =>
-      exitCode === 0 ? publishSucceeded() : publishFailed({ exitCode, stderror }),
+      exitCode === 0
+        ? eventCreators.publishSucceeded()
+        : eventCreators.publishFailed({ exitCode, stderror }),
     ),
-    catchAndRethrow(
-      (cause) => new Error(`Error publishing library: ${cause.message}`, { cause }),
-    ),
+    catchAndRethrow((cause) => new Error(`Error publishing library: ${cause.message}`, { cause })),
   )
 
 const getPackageDirs = (sourceDir: string): OperatorFunction<string[], string[]> =>
@@ -220,6 +213,6 @@ export const publishAllPackages = (
 ): OperatorFunction<{ packageDirs: string[]; version: string }, PublishLibEvent> =>
   mergeMap(({ packageDirs, version }) =>
     forkJoin(packageDirs.map((packageDir) => publishPackage({ packageDir, version }))).pipe(
-      map(() => allPublished()),
+      map(() => eventCreators.allPublished()),
     ),
   )
