@@ -58,7 +58,10 @@ export const createSubProcessOperations = ({
     options,
   ) => {
     const { stdout$, stderror$ } = subProcessService.run(command, args, options)
-    const allOutput$ = merge(stdout$.pipe(map(stdout)), stderror$.pipe(map(stderr)))
+    const allOutput$ = merge(
+      stdout$.pipe(map((line) => stdout(line))),
+      stderror$.pipe(map((line) => stderr(line))),
+    )
     return allOutput$.pipe(
       toArray(),
       map((messages) => (messages.some(({ type }) => type === 'stderr') ? messages : [])),
