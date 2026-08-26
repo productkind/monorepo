@@ -89,7 +89,13 @@ async function generateSpeech(
   }
 }
 
-const ELEVENLABS_API_KEY = 'sk_91544f2e0c841dcc7f863f643795881543dcd0f56baddfce'
+const ELEVENLABS_API_KEY = process.env.ELEVENLABS_API_KEY
+
+if (!ELEVENLABS_API_KEY) {
+  throw new Error(
+    'ELEVENLABS_API_KEY is not set. Add it to .env at the repo root and run with: node --env-file=../../../.env',
+  )
+}
 const DEFAULT = 'iP95p4xoKVk53GoZ742B' // The voice ID you provided
 const ARIA = '9BWtsMINqrJLrRacOk9x' // Aria
 const LILY = 'pFZP5JQG7iQjIQuC4Bku' // Lily
