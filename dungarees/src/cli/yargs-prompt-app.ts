@@ -1,3 +1,5 @@
+import type { StdioMessage } from './type.ts'
+
 import type { DomainEvent } from '@dungarees/core/event.ts'
 
 import {
@@ -52,13 +54,6 @@ export type YargsPromptAppOptions<EVENTS extends DomainEvent> = {
   presenter: Presenter<EVENTS>
 }
 
-export type StdioMessage = StdioOutputMessage | StdioErrorMessage
-
-type SharedStdioMessage = {
-  message: string
-  level?: 'debug' | 'info' | 'warn' | 'error'
-}
-
 type CliSelectOptions = {
   message: string
   choices: CliSelectChoice[]
@@ -69,14 +64,6 @@ type CliSelectChoice = {
   value: string
   description?: string
 }
-
-export type StdioOutputMessage = {
-  type: 'stdout'
-} & SharedStdioMessage
-
-export type StdioErrorMessage = {
-  type: 'stderr'
-} & SharedStdioMessage
 
 export type ExitMessage = {
   type: 'exit'

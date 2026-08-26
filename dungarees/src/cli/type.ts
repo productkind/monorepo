@@ -1,13 +1,16 @@
-export type StdioMessage =
-  | StdioOutputMessage
-  | StdioErrorMessage
+export type LogLevel = 'debug' | 'info' | 'warn' | 'error'
+
+type SharedStdioMessage = {
+  message: string
+  level?: LogLevel
+}
 
 export type StdioOutputMessage = {
   type: 'stdout'
-  message: string
-}
+} & SharedStdioMessage
 
 export type StdioErrorMessage = {
   type: 'stderr'
-  message: string
-}
+} & SharedStdioMessage
+
+export type StdioMessage = StdioOutputMessage | StdioErrorMessage
