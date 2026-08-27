@@ -23,8 +23,6 @@ export const renderCli = <INTERACTORS extends keyof CliInteractors = never>(
 
   const settled$ = new ReplaySubject<void>()
 
-  // The test terminal implements every interactor; an app is presented with the subset it
-  // declared, so the full set is always assignable to the required controls.
   const controls: CliInteractors = {
     select: () => {
       const reply = new Subject<string>()

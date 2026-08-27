@@ -206,3 +206,27 @@ type LogLevel = keyof typeof NODE_LOG_LEVELS
 ```
 
 Keep a type intentionally wide only when the API is genuinely configurable (e.g. `level: string` because callers may supply their own `levels` map) — and say so at the point it matters.
+
+## 7. Comment the *why*, never the *what*
+
+The code already says what it does; a comment that restates it is noise that rots. Only add a comment where the reason isn't visible in the code — most often to justify a rule violation you had to make, or to explain the edge case that forced a non-obvious implementation. If you can't name a *why*, delete the comment.
+
+```ts
+// Bad — narrates what the next line plainly does
+// create a ReplaySubject that buffers every registered stream
+const registeredOuts$ = new ReplaySubject<Observable<CliMessage>>(Infinity)
+// map each event through the presenter
+events$.pipe(map((event) => presenter[event.type](event.payload)))
+```
+
+```ts
+// Good — explains why a rule-4 cast is unavoidable here (a why you can't read off the code)
+// A Proxy target cannot be statically typed as the generated shape, and no type-safe
+// construction of a dynamic keyed object exists.
+new Proxy({} as EventCreators<PAYLOADS>, { ... })
+
+// Good — explains the edge case that forced the non-simple implementation
+// Deferred so a synchronous parse throw (yargs validates before awaiting under fail(false))
+// surfaces as an observable error rather than escaping present().
+const parsed$ = defer(() => from(routed.parseAsync(argv)))
+```
