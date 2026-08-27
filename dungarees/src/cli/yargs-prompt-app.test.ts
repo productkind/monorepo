@@ -19,6 +19,16 @@ test('yargs-propmt-app exits with 0 by default', async () => {
   expect(await collectValuesFrom(message$)).toEqual([{ type: 'exit', code: 0 }])
 })
 
+test('yargs-prompt-app needs no controls when it declares no interactors', async () => {
+  const app = createYargsPromptApp({
+    name: 'test-app',
+    route: (yargs) => yargs,
+    presenter: {},
+  })
+
+  expect(await collectValuesFrom(app.present([], {}))).toEqual([{ type: 'exit', code: 0 }])
+})
+
 test('yargs-propmt-app can register an input', async () => {
   type AppEvents = DomainEvent<'greet', string>
   const app = createYargsPromptApp<AppEvents>({
@@ -103,7 +113,7 @@ test('yargs-prompt-app', async () => {
 
 test('yargs-prompt-app', async () => {
   type AppEvents = DomainEvent<'greet', string> | DomainEvent<'start', undefined>
-  const app = createYargsPromptApp<AppEvents>({
+  const app = createYargsPromptApp<AppEvents, 'select'>({
     name: 'test-app',
     route: (yargs, io) =>
       yargs.command(
@@ -262,7 +272,14 @@ test('yargs-prompt-app uses the configured name as the script name', async () =>
     name: 'my-tool',
     route: (yargs) => {
       configured = yargs
-      return yargs.command('greet', 'Greet someone', () => {}, () => {}).demandCommand(1)
+      return yargs
+        .command(
+          'greet',
+          'Greet someone',
+          () => {},
+          () => {},
+        )
+        .demandCommand(1)
     },
     presenter: {},
   })

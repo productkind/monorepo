@@ -1,4 +1,4 @@
-import type { CliControls, CliMessage, YargsPromptApp } from './yargs-prompt-app.ts'
+import type { CliInteractors, CliMessage, YargsPromptApp } from './yargs-prompt-app.ts'
 
 import { firstValueFrom, ReplaySubject, skip, Subject } from 'rxjs'
 
@@ -7,7 +7,10 @@ type Terminal = {
   select: (option: string) => Promise<void>
 }
 
-export const renderCli = (app: YargsPromptApp, command: string): { terminal: Terminal } => {
+export const renderCli = <INTERACTORS extends keyof CliInteractors = never>(
+  app: YargsPromptApp<INTERACTORS>,
+  command: string,
+): { terminal: Terminal } => {
   const state: {
     outputSincePreviousStep: CliMessage[]
     replyToCurrentPrompt: Subject<string> | null
@@ -20,7 +23,9 @@ export const renderCli = (app: YargsPromptApp, command: string): { terminal: Ter
 
   const settled$ = new ReplaySubject<void>()
 
-  const controls: CliControls = {
+  // The test terminal implements every interactor; an app is presented with the subset it
+  // declared, so the full set is always assignable to the required controls.
+  const controls: CliInteractors = {
     select: () => {
       const reply = new Subject<string>()
       state.replyToCurrentPrompt = reply
