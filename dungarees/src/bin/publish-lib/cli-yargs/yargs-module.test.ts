@@ -40,8 +40,10 @@ export const assertDefined = (input) => external(input)
 `
 
 const REGISTRY = 'https://registry.test'
+const PUBLISH_ARGS = ['publish', '--access', 'public']
+const PUBLISH_ARGS_WITH_REGISTRY = [...PUBLISH_ARGS, '--registry', REGISTRY]
 
-const createDungareesApp = () => {
+const createDungareesApp = ({ npmArgs }: { npmArgs: string[] }) => {
   const fileSystem = createFakeFileSystem({
     '/multi-lib/config/version.json': JSON.stringify({ version: '1.0.0', type: 'module' }),
     '/multi-lib/src/lib-1/package.json': JSON.stringify({
@@ -57,7 +59,7 @@ const createDungareesApp = () => {
   const { subProcess, executedCommands } = createFakeSubProcessService([
     {
       command: 'npm',
-      args: ['publish', '--access', 'public', '--registry', REGISTRY],
+      args: npmArgs,
       stdout: 'Published successfully',
       exitCode: 0,
     },
@@ -76,7 +78,7 @@ const createDungareesApp = () => {
 }
 
 test('publish-multi-lib publishes the folder and reports success, then exits 0', async () => {
-  const { app, executedCommands } = createDungareesApp()
+  const { app, executedCommands } = createDungareesApp({ npmArgs: PUBLISH_ARGS_WITH_REGISTRY })
 
   const { terminal } = renderCli(
     app,
@@ -90,7 +92,24 @@ test('publish-multi-lib publishes the folder and reports success, then exits 0',
   ])
   expect(executedCommands).toContainEqual({
     command: 'npm',
-    args: ['publish', '--access', 'public', '--registry', REGISTRY],
+    args: PUBLISH_ARGS_WITH_REGISTRY,
+    options: { cwd: '/multi-lib/dist/lib-1' },
+  })
+})
+
+test('publish-multi-lib omits the registry flag when none is given', async () => {
+  const { app, executedCommands } = createDungareesApp({ npmArgs: PUBLISH_ARGS })
+
+  const { terminal } = renderCli(app, 'dungarees publish-multi-lib /multi-lib')
+  const output = await terminal.step()
+
+  expect(output).toEqual([
+    { type: 'stdout', message: 'All packages published successfully', level: 'info' },
+    { type: 'exit', code: 0 },
+  ])
+  expect(executedCommands).toContainEqual({
+    command: 'npm',
+    args: PUBLISH_ARGS,
     options: { cwd: '/multi-lib/dist/lib-1' },
   })
 })
