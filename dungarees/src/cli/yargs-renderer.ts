@@ -12,7 +12,6 @@ type RendererProcess = {
 
 type LevelRanks = Record<string, number>
 
-// Node's console log levels, ordered least to most severe.
 const NODE_LOG_LEVELS = { debug: 0, info: 1, warn: 2, error: 3 } as const
 
 type RenderCliToStdioOptions<INTERACTORS extends keyof CliInteractors> = {

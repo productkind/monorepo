@@ -33,13 +33,10 @@ type CliSelectChoice = {
   description?: string
 }
 
-// Registry of every available user interactor. Add a new interactor here and any app can
-// opt into it; apps that don't declare it are unaffected.
 export type CliInteractors = {
   select: (options: CliSelectOptions) => Observable<string>
 }
 
-// The controls an app requires when presented: exactly the interactors it declared.
 export type CliControls<INTERACTORS extends keyof CliInteractors = never> = Pick<
   CliInteractors,
   INTERACTORS
@@ -97,9 +94,6 @@ export class ExitError extends Error {
   }
 }
 
-// The event union can't be inferred (only `registerEvents`/`presenter` pin it down), so it is
-// given explicitly; the interactor set is a second explicit type argument that defaults to
-// none, and it constrains `present`, `io`, and the command factories.
 export const createYargsPromptApp = <
   EVENTS extends DomainEvent = DomainEvent,
   INTERACTORS extends keyof CliInteractors = never,
