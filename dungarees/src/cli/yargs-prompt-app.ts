@@ -22,17 +22,36 @@ import yargs from 'yargs'
 
 type YargsApp = ReturnType<typeof yargs>
 
-export type CliControls = {
+type CliSelectOptions = {
+  message: string
+  choices: CliSelectChoice[]
+}
+
+type CliSelectChoice = {
+  name: string
+  value: string
+  description?: string
+}
+
+// Registry of every available user interactor. Add a new interactor here and any app can
+// opt into it; apps that don't declare it are unaffected.
+export type CliInteractors = {
   select: (options: CliSelectOptions) => Observable<string>
 }
 
-export type YargsPromptApp = {
-  present: (argv: string[], controls: CliControls) => Observable<CliMessage>
+// The controls an app requires when presented: exactly the interactors it declared.
+export type CliControls<INTERACTORS extends keyof CliInteractors = never> = Pick<
+  CliInteractors,
+  INTERACTORS
+>
+
+export type YargsPromptApp<INTERACTORS extends keyof CliInteractors = never> = {
+  present: (argv: string[], controls: CliControls<INTERACTORS>) => Observable<CliMessage>
 }
 
-export type CliIo<EVENTS extends DomainEvent> = {
+export type CliIo<EVENTS extends DomainEvent, INTERACTORS extends keyof CliInteractors = never> = {
   registerEvents: (message$: Observable<EVENTS>) => void
-} & CliControls
+} & CliControls<INTERACTORS>
 
 export type Presenter<EVENTS extends DomainEvent> = {
   [TYPE in EVENTS['type']]: (payload: Extract<EVENTS, { type: TYPE }>['payload']) => CliMessage
@@ -45,24 +64,19 @@ export type CommandModule = {
   handler: (argv: Record<string, unknown>) => Promise<void> | void
 }
 
-export type CommandFactory<EVENTS extends DomainEvent> = (io: CliIo<EVENTS>) => CommandModule
+export type CommandFactory<
+  EVENTS extends DomainEvent,
+  INTERACTORS extends keyof CliInteractors = never,
+> = (io: CliIo<EVENTS, INTERACTORS>) => CommandModule
 
-export type YargsPromptAppOptions<EVENTS extends DomainEvent> = {
+export type YargsPromptAppOptions<
+  EVENTS extends DomainEvent,
+  INTERACTORS extends keyof CliInteractors = never,
+> = {
   name: string
-  commands?: CommandFactory<EVENTS>[]
-  route: (yargs: YargsApp, io: CliIo<EVENTS>) => YargsApp
+  commands?: CommandFactory<EVENTS, INTERACTORS>[]
+  route: (yargs: YargsApp, io: CliIo<EVENTS, INTERACTORS>) => YargsApp
   presenter: Presenter<EVENTS>
-}
-
-type CliSelectOptions = {
-  message: string
-  choices: CliSelectChoice[]
-}
-
-type CliSelectChoice = {
-  name: string
-  value: string
-  description?: string
 }
 
 export type ExitMessage = {
@@ -83,15 +97,21 @@ export class ExitError extends Error {
   }
 }
 
-export const createYargsPromptApp = <EVENTS extends DomainEvent = DomainEvent>({
+// The event union can't be inferred (only `registerEvents`/`presenter` pin it down), so it is
+// given explicitly; the interactor set is a second explicit type argument that defaults to
+// none, and it constrains `present`, `io`, and the command factories.
+export const createYargsPromptApp = <
+  EVENTS extends DomainEvent = DomainEvent,
+  INTERACTORS extends keyof CliInteractors = never,
+>({
   name,
   commands = [],
   route,
   presenter,
-}: YargsPromptAppOptions<EVENTS>): YargsPromptApp => ({
+}: YargsPromptAppOptions<EVENTS, INTERACTORS>): YargsPromptApp<INTERACTORS> => ({
   present: (argv, controls) => {
     const registeredOuts$ = new ReplaySubject<Observable<CliMessage>>(Infinity)
-    const io: CliIo<EVENTS> = {
+    const io: CliIo<EVENTS, INTERACTORS> = {
       registerEvents: (events$) => {
         registeredOuts$.next(
           // Inside the generic the concrete type argument for `EVENTS` isn't known, so TS

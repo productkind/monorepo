@@ -1,4 +1,4 @@
-import type { CliControls, CliMessage, YargsPromptApp } from './yargs-prompt-app.ts'
+import type { CliControls, CliInteractors, CliMessage, YargsPromptApp } from './yargs-prompt-app.ts'
 
 import { EOL } from 'node:os'
 import type { Writable } from 'node:stream'
@@ -15,23 +15,23 @@ type LevelRanks = Record<string, number>
 // Node's console log levels, ordered least to most severe.
 const NODE_LOG_LEVELS = { debug: 0, info: 1, warn: 2, error: 3 } as const
 
-type RenderCliToStdioOptions = {
-  app: YargsPromptApp
+type RenderCliToStdioOptions<INTERACTORS extends keyof CliInteractors> = {
+  app: YargsPromptApp<INTERACTORS>
   argv: string[]
-  controls: CliControls
+  controls: CliControls<INTERACTORS>
   levels?: LevelRanks
   level?: string
   process?: RendererProcess
 }
 
-export const renderCliToStdio = ({
+export const renderCliToStdio = <INTERACTORS extends keyof CliInteractors = never>({
   app,
   argv,
   controls,
   levels = NODE_LOG_LEVELS,
   level,
   process = globalThis.process,
-}: RenderCliToStdioOptions): Promise<void> =>
+}: RenderCliToStdioOptions<INTERACTORS>): Promise<void> =>
   new Promise((resolve, reject) => {
     const lowest = Math.min(...Object.values(levels))
     const rankOf = (name: string | undefined): number => levels[name ?? 'info'] ?? lowest
@@ -56,9 +56,7 @@ export const renderCliToStdio = ({
 
     app
       .present(argv, controls)
-      .pipe(
-        filter((message) => message.type === 'exit' || rankOf(message.level) >= threshold),
-      )
+      .pipe(filter((message) => message.type === 'exit' || rankOf(message.level) >= threshold))
       .subscribe({
         next: (message) => dispatch(message),
         error: reject,

@@ -1,5 +1,5 @@
-import { renderCliToStdio } from './yargs-renderer.ts'
 import { createYargsPromptApp } from './yargs-prompt-app.ts'
+import { renderCliToStdio } from './yargs-renderer.ts'
 
 import { DomainEvent } from '@dungarees/core/event.ts'
 

@@ -141,6 +141,39 @@ const exit = (code: number) => { exitCodes.push(code) }
 expect(exitCodes).toEqual([0]) // the contract: we exit with 0
 ```
 
+### 5b. Fake the boundary, use the real code, drive the real entry point
+
+Following on from 5: don't mock your own collaborators, and don't call internals directly.
+Replace only the true I/O boundary (filesystem, subprocess, network, clock, randomness) with
+the dungarees' fakes; run everything else for real, through the entry point it ships behind.
+
+```ts
+// Bad — hand-mocked service + calling the handler directly (tests only the wiring)
+const behavior = { publishMultiLib: (a) => { calls.push(a); return { events$ } }, ... }
+const command = publishLibYargsModule({ publishLib: behavior })(io)
+await command.handler({ libPath: '/libs', registry: '...' })
+expect(registered).toEqual([events$])
+```
+
+```ts
+// Good — real service, fakes only for I/O, driven through the test renderer
+const publishLib = createPublishLibService({
+  fileSystem: createFakeFileSystem({ /* fixture */ }),
+  cliCommands: createCliCommands(createFakeSubProcessService([ /* npm publish */ ]).subProcess),
+})
+const app = createYargsPromptApp<PublishLibEvent>({
+  name,
+  commands: [publishLibYargsModule({ publishLib })],
+  presenter,
+  route,
+})
+const { terminal } = renderCli(app, 'dungarees publish-multi-lib /multi-lib --registry ...')
+expect(await terminal.step()).toEqual([
+  { type: 'stdout', message: 'All packages published successfully', level: 'info' },
+  { type: 'exit', code: 0 },
+])
+```
+
 ## 6. Prefer built-in/standard types; own the source of truth when there is none
 
 Reach for built-in and standard-library types before hand-rolling.

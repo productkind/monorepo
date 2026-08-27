@@ -57,7 +57,7 @@ test.each([
   { choice: 'me', greeting: 'Hello, Me!' },
 ])('yargs-prompt-app greets $choice', async ({ choice, greeting }) => {
   type AppEvents = DomainEvent<'greet', string> | DomainEvent<'start', undefined>
-  const app = createYargsPromptApp<AppEvents>({
+  const app = createYargsPromptApp<AppEvents, 'select'>({
     name: 'test-app',
     route: (yargs, io) =>
       yargs.command(
@@ -117,7 +117,7 @@ test.each([
 
 test('yargs-prompt-app greets multiple times', async () => {
   type AppEvents = DomainEvent<'greet', string> | DomainEvent<'start', undefined>
-  const app = createYargsPromptApp<AppEvents>({
+  const app = createYargsPromptApp<AppEvents, 'select'>({
     name: 'test-app',
     route: (yargs, io) =>
       yargs.command(
