@@ -230,3 +230,72 @@ new Proxy({} as EventCreators<PAYLOADS>, { ... })
 // surfaces as an observable error rather than escaping present().
 const parsed$ = defer(() => from(routed.parseAsync(argv)))
 ```
+
+## 8. Test complicated types at the type level
+
+When the point of a change *is* a type — inference from another argument, a generic that has to hold across a collection, erasure, or anything built from `Parameters`/`ReturnType`/`Extract`/a mapped or conditional type — a runtime test cannot see it. State the contract with `tsafe`'s `assert<Equals<…>>()`, and mark what must **not** compile with `@ts-expect-error`, in the same `.test.ts` file so `type-check` enforces it.
+
+Why: a green suite says nothing about a boundary whose whole value is static. `createCommand` exists so a handler cannot read an argument its builder never declared — delete the generic and every runtime test still passes.
+
+```ts
+// Bad — passes whether or not the handler is typed; the boundary is untested
+test('the command runs', async () => {
+  await collectValuesFrom(app.present(['greet', 'Alice'], controls))
+  expect(greeted).toEqual(['Alice'])
+})
+```
+
+```ts
+// Good — the contract stated as types, checked by tsc
+test('createCommand infers the handler arguments from what the builder declared', () => {
+  createCommand({
+    command: 'greet [who]',
+    describe: 'Greet someone',
+    builder: (yargs) =>
+      yargs
+        .positional('who', { type: 'string', default: 'World' })
+        .option('times', { type: 'number' }),
+    handler: (args) => {
+      assert<Equals<typeof args.who, string>>()
+      assert<Equals<typeof args.times, number | undefined>>()
+    },
+  })
+})
+```
+
+### 8a. Spell out the expected type, and show the assertion can fail
+
+Rule 1 applies to types. An assertion written after the implementation never had a chance to fail, so it may be asserting nothing — most often because both sides derive from the same expression. Spell the expected type out literally. If you cannot run the assertion red first, mutate the implementation until it goes red, then restore.
+
+```ts
+// Bad — both sides come from the same expression, so it holds no matter what the type becomes
+type Args = Parameters<typeof handler>[0]
+assert<Equals<Args, Parameters<typeof handler>[0]>>()
+```
+
+```ts
+// Good — the expected type is written out, so a change in inference breaks the build
+// (verified red by typing the handler as `(args: Record<string, unknown>)`:
+//  TS2344 Type 'false' does not satisfy the constraint 'true')
+assert<Equals<typeof args.times, number | undefined>>()
+```
+
+### 8b. Keep `@ts-expect-error` on the narrowest line, and check it reports unused
+
+The directive swallows *any* error on the line that follows, so a wrong claim passes silently and the comment lies. Put it on the one line the error must come from, and confirm it reports `TS2578: Unused '@ts-expect-error' directive` once you make the claim correct — that is the red step for a negative test.
+
+```ts
+// Bad — the directive covers the whole handler and the comment is false: the real error was
+// that annotating the parameter stopped ARGS being inferred at all, leaving the handler with
+// `ArgumentsCamelCase<unknown>`, which has no `times` of any type.
+// @ts-expect-error the builder declares `times` as a number, not a string
+handler: ({ times }: { times: string }) => { ... }
+```
+
+```ts
+// Good — one line, and the claim is exactly the error that occurs
+handler: ({ times }) => {
+  // @ts-expect-error the builder declares `times` as a number, so it is never a string
+  const wrong: string = times
+}
+```

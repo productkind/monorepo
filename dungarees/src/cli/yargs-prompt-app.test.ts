@@ -1,9 +1,10 @@
-import { createYargsPromptApp } from './yargs-prompt-app.ts'
+import { type CommandRegistrar, createCommand, createYargsPromptApp } from './yargs-prompt-app.ts'
 
 import { DomainEvent } from '@dungarees/core/event.ts'
 import { collectValuesFrom } from '@dungarees/rxjs/util.ts'
 
 import { delay, lastValueFrom, of, throwError } from 'rxjs'
+import { assert, type Equals } from 'tsafe'
 import { expect, test } from 'vitest'
 
 const DUMMY_CONTROLS = { select: () => of('') }
@@ -217,14 +218,15 @@ test('yargs-prompt-app', async () => {
   const app = createYargsPromptApp<AppEvents>({
     name: 'test-app',
     commands: [
-      (io) => ({
-        command: 'greet',
-        describe: 'Greet someone',
-        builder: (yargs) => yargs,
-        handler: async () => {
-          io.registerEvents(of({ type: 'greet', payload: 'Hello, World!' }))
-        },
-      }),
+      (io) =>
+        createCommand({
+          command: 'greet',
+          describe: 'Greet someone',
+          builder: (yargs) => yargs,
+          handler: async () => {
+            io.registerEvents(of({ type: 'greet', payload: 'Hello, World!' }))
+          },
+        }),
     ],
     route: (yargs) => yargs,
     presenter: {
@@ -322,4 +324,182 @@ test('yargs-prompt-app surfaces an errored event stream as stderr and exits with
     { type: 'stderr', message: 'boom', level: 'error' },
     { type: 'exit', code: 1 },
   ])
+})
+
+const createGreetApp = ({ command }: { command: CommandRegistrar }) =>
+  createYargsPromptApp<DomainEvent<'greet', string>>({
+    name: 'test-app',
+    commands: [() => command],
+    route: (yargs) => yargs.strict(),
+    presenter: {
+      greet: (payload) => ({ type: 'stdout', message: payload, level: 'info' }),
+    },
+  })
+
+test('a command hands its handler the arguments its builder declared', async () => {
+  const greeted: Array<{ who: string; times: number }> = []
+  const command = createCommand({
+    command: 'greet [who]',
+    describe: 'Greet someone',
+    builder: (yargs) =>
+      yargs
+        .positional('who', { type: 'string', default: 'World' })
+        .option('times', { type: 'number', default: 1 }),
+    handler: ({ who, times }) => {
+      greeted.push({ who, times })
+    },
+  })
+
+  await collectValuesFrom(createGreetApp({ command }).present(['greet'], DUMMY_CONTROLS))
+  await collectValuesFrom(
+    createGreetApp({ command }).present(['greet', 'Alice', '--times', '2'], DUMMY_CONTROLS),
+  )
+
+  expect(greeted).toEqual([
+    { who: 'World', times: 1 },
+    { who: 'Alice', times: 2 },
+  ])
+})
+
+test('an omitted option reaches the handler as undefined, not as a coerced string', async () => {
+  const registries: Array<string | undefined> = []
+  const command = createCommand({
+    command: 'greet',
+    describe: 'Greet someone',
+    builder: (yargs) => yargs.option('registry', { type: 'string' }),
+    handler: ({ registry }) => {
+      registries.push(registry)
+    },
+  })
+
+  await collectValuesFrom(createGreetApp({ command }).present(['greet'], DUMMY_CONTROLS))
+
+  expect(registries).toEqual([undefined])
+})
+
+test('an argument the builder demands is reported on stderr, exiting 1', async () => {
+  const command = createCommand({
+    command: 'greet',
+    describe: 'Greet someone',
+    builder: (yargs) => yargs.option('who', { type: 'string', demandOption: true }),
+    handler: () => {},
+  })
+
+  expect(
+    await collectValuesFrom(createGreetApp({ command }).present(['greet'], DUMMY_CONTROLS)),
+  ).toEqual([
+    { type: 'stderr', message: 'Missing required argument: who', level: 'error' },
+    { type: 'exit', code: 1 },
+  ])
+})
+
+test('commands whose arguments have different types live in one app', async () => {
+  const seen: string[] = []
+  const greet = createCommand({
+    command: 'greet [who]',
+    describe: 'Greet someone',
+    builder: (yargs) => yargs.positional('who', { type: 'string', default: 'World' }),
+    handler: ({ who }) => {
+      seen.push(who)
+    },
+  })
+  const count = createCommand({
+    command: 'count',
+    describe: 'Count something',
+    builder: (yargs) => yargs.option('times', { type: 'number', default: 3 }),
+    handler: ({ times }) => {
+      seen.push(String(times))
+    },
+  })
+  const app = createYargsPromptApp<DomainEvent<'greet', string>>({
+    name: 'test-app',
+    commands: [() => greet, () => count],
+    route: (yargs) => yargs.strict(),
+    presenter: {
+      greet: (payload) => ({ type: 'stdout', message: payload, level: 'info' }),
+    },
+  })
+
+  await collectValuesFrom(app.present(['greet', 'Alice'], DUMMY_CONTROLS))
+  await collectValuesFrom(app.present(['count', '--times', '7'], DUMMY_CONTROLS))
+
+  expect(seen).toEqual(['Alice', '7'])
+})
+
+test('createCommand infers the handler arguments from what the builder declared', () => {
+  createCommand({
+    command: 'greet [who]',
+    describe: 'Greet someone',
+    builder: (yargs) =>
+      yargs
+        .positional('who', { type: 'string', default: 'World' })
+        .option('times', { type: 'number' })
+        .option('loud', { type: 'boolean', demandOption: true }),
+    handler: (args) => {
+      assert<Equals<typeof args.who, string>>()
+      assert<Equals<typeof args.times, number | undefined>>()
+      assert<Equals<typeof args.loud, boolean>>()
+    },
+  })
+})
+
+test('createCommand erases the argument type from the value the app holds', () => {
+  const greet = createCommand({
+    command: 'greet [who]',
+    describe: 'Greet someone',
+    builder: (yargs) => yargs.positional('who', { type: 'string', default: 'World' }),
+    handler: () => {},
+  })
+  const count = createCommand({
+    command: 'count',
+    describe: 'Count something',
+    builder: (yargs) => yargs.option('times', { type: 'number', default: 3 }),
+    handler: () => {},
+  })
+
+  assert<Equals<typeof greet, CommandRegistrar>>()
+  assert<Equals<typeof count, CommandRegistrar>>()
+  // Differing argument types share one list, and registering a command hands back the same app
+  // type it was given — an argument type never accumulates into the chain.
+  const commands: CommandRegistrar[] = [greet, count]
+  assert<Equals<ReturnType<(typeof commands)[number]>, Parameters<CommandRegistrar>[0]>>()
+})
+
+test('a handler that contradicts its builder does not type-check', () => {
+  createCommand({
+    command: 'count',
+    describe: 'Count something',
+    builder: (yargs) => yargs.option('times', { type: 'number' }),
+    handler: ({ times }) => {
+      // @ts-expect-error the builder declares `times` as a number, so it is never a string
+      const wrong: string = times
+      expect(wrong).toBe(0)
+    },
+  })
+})
+
+test('annotating the handler parameter loses the inference, so leave it off', () => {
+  createCommand({
+    command: 'count',
+    describe: 'Count something',
+    builder: (yargs) => yargs.option('times', { type: 'number' }),
+    // @ts-expect-error an annotation here stops ARGS being inferred from the builder, leaving
+    // the handler with `ArgumentsCamelCase<unknown>` — which has no `times` at all.
+    handler: ({ times }: { times: number | undefined }) => {
+      expect(times).toBe(0)
+    },
+  })
+})
+
+test('an option the builder gives no default is optional to the handler', () => {
+  createCommand({
+    command: 'count',
+    describe: 'Count something',
+    builder: (yargs) => yargs.option('times', { type: 'number' }),
+    handler: ({ times }) => {
+      // @ts-expect-error `times` stays `number | undefined` until the builder defaults or demands it
+      const required: number = times
+      expect(required).toBe(0)
+    },
+  })
 })

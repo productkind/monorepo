@@ -18,7 +18,7 @@ import {
   tap,
   throwError,
 } from 'rxjs'
-import yargs from 'yargs'
+import yargs, { type ArgumentsCamelCase, type Argv } from 'yargs'
 
 type YargsApp = ReturnType<typeof yargs>
 
@@ -54,17 +54,19 @@ export type Presenter<EVENTS extends DomainEvent> = {
   [TYPE in EVENTS['type']]: (payload: Extract<EVENTS, { type: TYPE }>['payload']) => CliMessage
 }
 
-export type CommandModule = {
+export type CommandRegistrar = (yargs: YargsApp) => YargsApp
+
+export type CommandOptions<ARGS> = {
   command: string
   describe: string
-  builder: (yargs: YargsApp) => YargsApp
-  handler: (argv: Record<string, unknown>) => Promise<void> | void
+  builder: (yargs: YargsApp) => Argv<ARGS>
+  handler: (args: ArgumentsCamelCase<ARGS>) => Promise<void> | void
 }
 
 export type CommandFactory<
   EVENTS extends DomainEvent,
   INTERACTORS extends keyof CliInteractors = never,
-> = (io: CliIo<EVENTS, INTERACTORS>) => CommandModule
+> = (io: CliIo<EVENTS, INTERACTORS>) => CommandRegistrar
 
 export type YargsPromptAppOptions<
   EVENTS extends DomainEvent,
@@ -93,6 +95,18 @@ export class ExitError extends Error {
     this.exitCode = exitCode
   }
 }
+
+// yargs' four-argument `command()` infers the argument type from what `builder` returns and
+// checks `handler` against it, so declaring an argument in the builder is enough — no coercion
+// in the handler. Registering through that overload is also what lets one app hold commands
+// whose argument types differ: a command described as a plain object would collapse to a union
+// in the `commands` array, losing the correlation between its own builder and handler, and its
+// handler would have to fall back to untyped argv. Closing over the pair here keeps the
+// correlation and leaves nothing argument-shaped in the type the app holds.
+export const createCommand =
+  <ARGS>({ command, describe, builder, handler }: CommandOptions<ARGS>): CommandRegistrar =>
+  (app) =>
+    app.command(command, describe, builder, handler)
 
 export const createYargsPromptApp = <
   EVENTS extends DomainEvent = DomainEvent,
@@ -123,7 +137,7 @@ export const createYargsPromptApp = <
     // throw the error rather than printing usage itself, so all output stays in the message
     // stream and is owned by the renderer.
     const base = yargs().scriptName(name).exitProcess(false).fail(false)
-    const withCommands = commands.reduce((app, command) => app.command(command(io)), base)
+    const withCommands = commands.reduce((app, command) => command(io)(app), base)
     const routed = route(withCommands, io)
     // Deferred so a synchronous parse throw (yargs validates before awaiting under
     // fail(false)) surfaces as an observable error rather than escaping present().
