@@ -10,6 +10,7 @@ export type ApplicationConfig = {
   services: DungareesBinServices
   behaviors: DungareesBinBehaviors
   delivery: YargsDelivery
+  output: Promise<void>
   identity: {
     environment: 'prod' | 'test'
   }

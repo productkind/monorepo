@@ -1,5 +1,5 @@
 {
-  "name": "@dungarees/cli-bin-fake-app",
+  "name": "@dungarees/bin-cli-yargs-fake-app",
   "engines": {
     "node": ">=25.0.0"
   },
@@ -8,13 +8,15 @@
   },
   "type": "module",
   "dependencies": {
+    "@dungarees/bin-cli-yargs-base-app": "*",
+    "@dungarees/cli": "*",
+    "@dungarees/cli-command": "*",
+    "@dungarees/fs": "*",
+    "@dungarees/sub-process": "*"
   },
   "devDependencies": {
     "typescript": "^5.9.3",
     "vitest": "^3.0.2"
-  },
-  "bin": {
-    "dungarees": "./dungarees.ts"
   },
   "author": "info@productkind.com",
   "license": "MIT"
