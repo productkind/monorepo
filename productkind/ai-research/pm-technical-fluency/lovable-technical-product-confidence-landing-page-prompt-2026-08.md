@@ -622,7 +622,7 @@ Gmail iOS's measured height. Keep the HTML under 102 KB.
 The button URL must be:
 
 ```text
-https://littleparrot.app/technical-product-confidence/report/{reportToken}?utm_source=email&utm_medium=lm&utm_campaign=tech-pm&utm_content=technical-confidence-result
+https://littleparrot.app/guides/technical-product-manager/report/{reportToken}?utm_source=email&utm_medium=lm&utm_campaign=tech-pm&utm_content=technical-confidence-result
 ```
 
 Do not put an email address or answers in the URL.
