@@ -1,13 +1,5 @@
-import { publishLibPresenter } from './presenter.ts'
-import { publishLibYargsModule } from './yargs-module.ts'
-
-import { createPublishLibService } from '@dungarees/bin-publish-lib-domain/behavior.ts'
-import type { PublishLibEvent } from '@dungarees/bin-publish-lib-domain/events.ts'
-import { createCliCommands } from '@dungarees/cli-command/service.ts'
+import { createTestApp } from '@dungarees/bin-cli-yargs-fake-app/test-app.ts'
 import { renderCli } from '@dungarees/cli/test-renderer.ts'
-import { createYargsPromptApp } from '@dungarees/cli/yargs-prompt-app.ts'
-import { createFakeFileSystem } from '@dungarees/fs/fake.ts'
-import { createFakeSubProcessService } from '@dungarees/sub-process/fake.ts'
 
 import { expect, test } from 'vitest'
 
@@ -43,39 +35,31 @@ const REGISTRY = 'https://registry.test'
 const PUBLISH_ARGS = ['publish', '--access', 'public']
 const PUBLISH_ARGS_WITH_REGISTRY = [...PUBLISH_ARGS, '--registry', REGISTRY]
 
-const createDungareesApp = ({ npmArgs }: { npmArgs: string[] }) => {
-  const fileSystem = createFakeFileSystem({
-    '/multi-lib/config/version.json': JSON.stringify({ version: '1.0.0', type: 'module' }),
-    '/multi-lib/src/lib-1/package.json': JSON.stringify({
-      name: '@org/lib-1',
-      bin: { run: './run.ts' },
-    }),
-    '/multi-lib/src/lib-1/file-1.ts': srcFile1,
-    '/multi-lib/src/lib-1/file-2.ts': srcFile2,
-    '/multi-lib/src/lib-1/run.ts': srcFile3,
-    '/multi-lib/src/sub/lib-2/package.json': JSON.stringify({ name: '@org/lib-2', type: 'module' }),
-    '/multi-lib/src/sub/lib-2/utils.ts': srcFile4,
-  })
-  const { subProcess, executedCommands } = createFakeSubProcessService([
-    {
-      command: 'npm',
-      args: npmArgs,
-      stdout: 'Published successfully',
-      exitCode: 0,
-    },
-  ])
-  const cliCommands = createCliCommands(subProcess)
-  const publishLib = createPublishLibService({ fileSystem, cliCommands })
-
-  const app = createYargsPromptApp<PublishLibEvent>({
-    name: 'dungarees',
-    commands: [publishLibYargsModule({ publishLib })],
-    presenter: publishLibPresenter,
-    route: (yargs) => yargs,
-  })
-
-  return { app, fileSystem, executedCommands }
+const MULTI_LIB = {
+  '/multi-lib/config/version.json': JSON.stringify({ version: '1.0.0', type: 'module' }),
+  '/multi-lib/src/lib-1/package.json': JSON.stringify({
+    name: '@org/lib-1',
+    bin: { run: './run.ts' },
+  }),
+  '/multi-lib/src/lib-1/file-1.ts': srcFile1,
+  '/multi-lib/src/lib-1/file-2.ts': srcFile2,
+  '/multi-lib/src/lib-1/run.ts': srcFile3,
+  '/multi-lib/src/sub/lib-2/package.json': JSON.stringify({ name: '@org/lib-2', type: 'module' }),
+  '/multi-lib/src/sub/lib-2/utils.ts': srcFile4,
 }
+
+const createDungareesApp = ({ npmArgs }: { npmArgs: string[] }) =>
+  createTestApp({
+    files: MULTI_LIB,
+    commands: [
+      {
+        command: 'npm',
+        args: npmArgs,
+        stdout: 'Published successfully',
+        exitCode: 0,
+      },
+    ],
+  })
 
 test('publish-multi-lib publishes the folder and reports success, then exits 0', async () => {
   const { app, executedCommands } = createDungareesApp({ npmArgs: PUBLISH_ARGS_WITH_REGISTRY })
