@@ -5,31 +5,7 @@ Use this prompt in Lovable with the `little-parrot-awakens` repository connected
 ---
 
 Implement a production-ready experimental landing page and self-assessment in
-the existing Little Parrot application. Work in the current codebase; do not
-create a separate app or replace the current home page.
-
-## Start by inspecting the existing implementation
-
-Before changing code, inspect and follow the patterns already used in:
-
-- `src/App.tsx` for routing. Add every new route above the catch-all route.
-- `src/index.css`, `tailwind.config.ts` and existing public pages for the Little
-  Parrot visual system.
-- `src/pages/Certificate.tsx` and `src/lib/generateCertificatePdf.ts` for the
-  existing browser-side `jsPDF` download pattern.
-- `src/components/SEO.tsx` for metadata.
-- `src/integrations/supabase/client.ts` and
-  `src/integrations/supabase/types.ts` for database access and generated types.
-- the current Supabase migrations and the `get_certificate_display` RPC for the
-  public-by-private-token read pattern.
-- `supabase/functions/send-welcome-email/index.ts` for Mailtrap delivery and
-  Little Parrot email styling. Do not copy its authenticated-user requirement;
-  this assessment is public and does not require an account.
-
-Reuse the installed libraries and existing shadcn components. `jsPDF`,
-PostHog, React Router, React Query, Supabase and the required form controls are
-already present. Do not add another PDF library, drag-and-drop library, form
-builder or backend service.
+the existing Little Parrot application.
 
 ## Product objective
 
@@ -38,7 +14,7 @@ It has two jobs:
 
 1. Save which technical product areas they most want help with, so Little
    Parrot can use the evidence to shape a course.
-2. Give each visitor a useful PDF summary they can take into a development
+2. Give each visitor a useful PDF summary they can take into a personal development
    conversation with their manager.
 
 This is a confidence self-assessment, not a technical test. Do not present an
@@ -53,13 +29,11 @@ Use British English throughout.
 
 Add these routes:
 
-- `/technical-product-confidence`: public landing page and self-assessment.
-- `/technical-product-confidence/report/:reportToken`: private-link report
+- `guides/technical-product-manager`: public landing page and self-assessment.
+- `guides/technical-product-manager/report/:reportToken`: private-link report
   page, also public in the sense that no login is required.
 
-Do not add the experiment to the global navigation yet. The public landing
-page should be indexable and added to the sitemap. The tokenised report page
-must have `noindex, nofollow` metadata and must never appear in the sitemap.
+The public landing page should be indexable and added to the sitemap. The tokenised report page must have `noindex, nofollow` metadata and must never appear in the sitemap.
 Extend `SEO` with an optional `noIndex` prop rather than adding ad hoc Helmet
 markup to the report page.
 
@@ -76,15 +50,9 @@ template:
 - square, hard-edged cards with the existing `shadow-rect` treatment;
 - generous spacing and a readable content width;
 - no glassmorphism, floating blobs, decorative dashboards, fake charts or stock
-  imagery;
-- no animated entrances, drag-and-drop, swipe interactions or confetti.
+  imagery.
 
-Use the existing Little Parrot logo and existing `Navbar` and `Footer` where
-they support the page. The assessment itself should be visually calm: present
-one question group after another within the single-page form, with generous
-label spacing and no dense grid of controls. On desktop the content can be
-wider, but the response options should remain easy to scan vertically. On
-mobile, use a single column.
+The assessment itself should be visually calm: present one question group after another within the single-page form, with generous label spacing and no dense grid of controls. On desktop the content can be wider, but the response options should remain easy to scan vertically. On mobile, use a single column.
 
 All controls need visible keyboard focus, clear error text and a minimum
 44 × 44 px tap target. Use semantic `fieldset`, `legend`, native radio inputs
@@ -106,8 +74,7 @@ Heading:
 Body:
 
 > Reflect on the technical situations you face at work, choose the areas where
-> training would help most, and receive a PDF summary for your next development
-> conversation with your manager.
+> training would help most, and receive a PDF summary for your next personal development conversation with your manager.
 
 Primary button:
 
@@ -127,18 +94,17 @@ Heading:
 
 Introduction:
 
-> Product Managers in our research described the outcomes they wanted in these
-> words:
+> Product Managers in our research described the outcomes they wanted:
 
 Show these six short quotes without inventing testimonials or attributing them
 to named people:
 
-- “have more productive conversations”
-- “understand rough scope”
-- “ask better questions”
-- “spot complexity early”
-- “pull their own data”
-- “take on small pieces of work”
+- Engineering conversations: Follow an explanation, restate it accurately and connect it to a product decision
+- Scope and trade-offs: Form a rough view of dependencies, risk and complexity before commitment
+- Development and release: Follow a change through development, testing and release
+- Issue investigation: Reproduce and document a problem before involving engineering
+- Product data: Pull or verify a simple product answer and recognise when an analyst is needed
+- Bounded building: Create or change a small testable artefact within an agreed safety boundary
 
 ### Value section
 
@@ -166,8 +132,6 @@ Use four compact steps:
 
 ## Assessment interaction
 
-Assessment version: `tpc-mvp-1.0`.
-
 Start with this introduction:
 
 Heading:
@@ -178,7 +142,7 @@ Body:
 
 > Reflect on 12 topics you may encounter when working with software teams. At
 > the end, you will receive a summary you can use to discuss training and
-> development with your manager.
+> personal development with your manager.
 
 Support text:
 
@@ -189,8 +153,7 @@ Button:
 > Start the self-assessment
 
 After the visitor starts, show all six areas on one page. Each area is a
-separate `fieldset` with its outcome, two topic questions and an expandable
-`What these terms mean` definition under each topic. Keep the form state on
+separate `fieldset` with its outcome, two topic questions. Keep the form state on
 the client until the final submission. Do not save partial answers.
 
 Show live progress above the form using this pattern:
@@ -212,8 +175,6 @@ treating it as a completed answer in the UI.
 4. `3`: I can explain how this affects the product and use it in a decision.
 5. `null`: I do not encounter this in my current role.
 
-Do not use the phrase “I recognise it but need more context”.
-
 ### The six areas and 12 topics
 
 Keep this content in a typed data module so the form, report and PDF use one
@@ -234,33 +195,20 @@ Title:
 
 Statement:
 
-> I can explain where the frontend, backend, database and infrastructure appear
-> in one important product flow, and how a limit or failure in one part could
+> I can explain how my product works across frontend, backend, database and 
+> infrastructure, and how a limit or failure in one part could
 > affect users.
-
-Definition:
-
-> The frontend is what a user sees and interacts with. The backend processes
-> requests behind the interface. A database stores organised product data.
-> Infrastructure is the computing, storage, networking and hosting that keep
-> the product running.
 
 Topic `apis-services-integrations`
 
 Title:
 
-> Application programming interfaces, services and integrations
+> APIs, services and integrations
 
 Statement:
 
 > I can follow where a request or piece of data goes, which system handles each
 > step and where the flow could fail.
-
-Definition:
-
-> An application programming interface (API) lets software systems exchange
-> requests and responses. A service performs a defined job. An integration
-> connects two systems.
 
 #### 2. Scope and trade-offs
 
@@ -277,73 +225,47 @@ Title:
 
 Statement:
 
-> I can use dependencies, edge cases and failure paths to ask why a proposed
-> change may be wider than it first appears.
-
-Definition:
-
-> A dependency is something a change relies on. An edge case is a less common
-> condition. A failure path describes what happens when an action cannot finish
-> as intended.
+> I can map out dependencies, edge cases and failure paths to drive conversations 
+> with engineers about a proposed change, and have informed conversations with 
+> stakeholders.
 
 Topic `permissions-states-migration-performance`
 
 Title:
 
-> Permissions, product states, data migration and performance
+> Evaluate trade-offs: bugs, technical dept, new features
 
 Statement:
 
-> I can recognise when a screen change could also affect user permissions,
-> product rules, existing data or system performance.
-
-Definition:
-
-> Permissions control who can do what. A product state describes an item's
-> current condition. A data migration moves or changes existing data.
-> Performance describes how a system responds under expected use.
+> I can prioritise different types of product work: bugs against new fetaures
+> and refactoring to decrease technical dept.
 
 #### 3. Development, testing and release
 
 Outcome:
 
-> Follow a change through development, testing and release without reading the
-> code in detail.
+> Follow a change through development, testing and release.
 
-Topic `ticket-branch-pull-request-review`
-
-Title:
-
-> Ticket, branch, pull request and code review
-
-Statement:
-
-> I can follow the status of a planned change across a ticket, branch, pull
-> request and code review.
-
-Definition:
-
-> A ticket records the work. A branch keeps code changes separate. A pull
-> request asks the team to review and combine those changes. A code review
-> checks the proposed code.
-
-Topic `build-pipeline-environment-deployment-rollback`
+Topic `build-pipeline-environment-deployment`
 
 Title:
 
-> Build, pipeline, environment, deployment and rollback
+> Build, pipeline, environment, deployment
 
 Statement:
 
-> I can explain where a change is, which checks remain and how the team could
-> undo a harmful release.
+> I can explain where a change is, and which checks remain before it reaches our users.
 
-Definition:
+Topic `resolve-incidents-bugfix-rollback`
 
-> A build creates a version that can be tested or released. A continuous
-> integration pipeline automatically checks a software change. An environment
-> is a separate place where software runs. Deployment releases a change.
-> Rollback returns to an earlier version.
+Title:
+
+> Resolving production incidents
+
+Statement:
+
+> I understand the mechanism of a rollback, and a bug fix that a production
+> error might require.
 
 #### 4. Issue investigation
 
@@ -363,12 +285,6 @@ Statement:
 > I can document what happened, what should have happened and which users are
 > affected so an engineer can begin investigating.
 
-Definition:
-
-> Reproduction steps describe the actions that produce a problem. Expected
-> behaviour records what should happen. Severity describes the effect of a
-> problem. Reach describes which and how many users are affected.
-
 Topic `network-status-logs-root-cause`
 
 Title:
@@ -377,20 +293,14 @@ Title:
 
 Statement:
 
-> I can use an agreed network or log view to separate observed evidence from
-> the root cause that still needs engineering investigation.
-
-Definition:
-
-> A network request asks another system for an action or information. A status
-> code summarises the result. Logs record events in a system. Root cause is the
-> underlying reason a problem occurred.
+> I can document network or log entries when reproducing a bug to supply observed 
+> evidence for engineering to investigate the root cause of an issue.
 
 #### 5. Product data and experiments
 
 Outcome:
 
-> Pull or verify a simple product answer and explain its limits before using it
+> Pull or verify a product metric and explain its limits before using it
 > in a decision.
 
 Topic `metric-event-data-quality`
@@ -401,14 +311,8 @@ Title:
 
 Statement:
 
-> I can check what a product number includes, where it comes from and whether
+> I can check what a product metric includes, where it comes from and whether
 > the data is suitable for the decision.
-
-Definition:
-
-> A metric definition states how a measure is calculated. Event tracking
-> records selected user or system actions. Data quality describes whether the
-> data is accurate, complete and suitable for the question.
 
 Topic `query-segment-experiment-result`
 
@@ -418,21 +322,14 @@ Title:
 
 Statement:
 
-> I can review or create a simple data query, check the segment and explain what
-> an experiment result supports.
-
-Definition:
-
-> A query asks a database for selected information. A segment is a defined
-> group of users or records. An experiment result describes what happened in
-> the observed sample and includes uncertainty about how much the result could
-> vary.
+> I can create a simple data query, set the user segment and
+> explain what an experiment result means.
 
 #### 6. Bounded technical work
 
 Outcome:
 
-> Take on a small first pass in a test space and recognise when engineering
+> Take on a small technical task in a test space and recognise when engineering
 > review is required.
 
 Topic `repository-commit-branch`
@@ -443,33 +340,19 @@ Title:
 
 Statement:
 
-> I can make or inspect a reversible change in an agreed test space and explain
+> I can make a small, reversible change in an agreed test space and explain
 > what changed.
 
-Definition:
-
-> A repository stores a project's files and history. A commit records a set of
-> changes. A branch keeps changes separate until they are reviewed.
-
-Topic `access-dependencies-prototype-production`
+Topic `build-interactive-prototype`
 
 Title:
 
-> Access details, dependencies, prototype and production
+> Building and share an interactive prototype
 
 Statement:
 
-> I can recognise sensitive access details and dependencies, explain what a
-> prototype has tested and identify what needs specialist review before real
-> users depend on it.
-
-Definition:
-
-> An application programming interface key is a credential used to access a
-> service. An environment variable stores a configuration value outside the
-> source files. A dependency is a package or service the project relies on. A
-> prototype tests an idea. Production is the live version that real users rely
-> on.
+> I can build an interactive prototype with AI tools to communicate a new 
+> functionality, and understand how I can share it with users to run usability tests.
 
 ## Training priorities and email capture
 
@@ -499,20 +382,15 @@ Required field label:
 
 Separate, unticked checkbox:
 
-> I would like to hear about Little Parrot courses and research for Product
-> Managers.
+> I agree to receive email communications from Little Parrot
 
 Primary submit button:
 
 > Email my confidence summary
 
-Keep report delivery separate from marketing consent. A visitor must receive
-their requested report whether or not they tick the checkbox. For this MVP,
-save the consent value but do not add the address to another mailing system and
-do not trigger the registered-user welcome email.
+Keep the submit button active, but if the user didn't checked the checkbox and clicked the button, they will see an error message ("Please agree to receive commununications from Little Parrot) message and nothing gets triggered.
 
-Add a hidden honeypot field. Do not add a CAPTCHA or a rate-limiting dependency
-for this experiment.
+Do not trigger the registered-user welcome email.
 
 During submission, disable the button and announce the loading state. If the
 request fails before saving, retain all answers and show a retry action. If the
@@ -563,14 +441,6 @@ Do not calculate or display an overall score anywhere, despite the feature's
 “Technical Product Confidence” name.
 
 ## Private report page
-
-Load the report by an unguessable UUID token using a narrowly scoped Supabase
-`SECURITY DEFINER` RPC, modelled on `get_certificate_display`. The RPC must set
-a safe search path and return only the fields needed to render the report. It
-must not return the email address, consent value, UTM values or referrer. Do
-not permit anonymous clients to select from the assessment table directly.
-Revoke broad function access, then grant execute access only to the roles that
-need to load this public-by-private-link report.
 
 Use this report title:
 
@@ -631,16 +501,13 @@ Show these actions at both the top and bottom:
 - `Download my PDF summary`
 - `Return to Little Parrot`
 
-If the token is missing, invalid or not found, show a calm error page with a
+If the token is missing, invalid or not found, show a friendly error page with a
 link back to Little Parrot. Do not reveal whether any email address or record
 exists.
 
 ## PDF download
 
-Reuse the existing browser-side PDF approach. Create a dedicated helper such
-as `src/lib/generateTechnicalConfidencePdf.ts`, modelled on
-`generateCertificatePdf.ts`; do not modify the certificate generator and do
-not build an email attachment, server-side renderer, storage bucket or second
+Reuse the existing browser-side PDF approach. Do not modify the certificate generator and do not build an email attachment, server-side renderer, storage bucket or second
 download service.
 
 The PDF should be A4 portrait, readable when printed, and use the existing
@@ -651,14 +518,9 @@ Use sensible page breaks so a section heading is not stranded at the bottom of
 a page. Use the optional report name in the filename only after sanitising it;
 otherwise use `little-parrot-technical-product-confidence-summary.pdf`.
 
-Only access `window`, `document`, canvas or browser APIs inside the click-time
-PDF function so the app's SSR or prerender process does not fail.
-
 ## Transactional email
 
-Send one transactional result email through the existing Mailtrap API. Keep
-`MAILTRAP_API_KEY` and the Supabase service-role key inside the Edge Function;
-never expose either in client code.
+Send one transactional result email through the existing Mailtrap API.
 
 Sender:
 
@@ -667,7 +529,7 @@ Sender:
 
 Subject:
 
-> Your Technical Product Confidence Summary is ready
+> 🦜 Your Technical Product Confidence Summary is ready
 
 Preheader:
 
@@ -683,17 +545,15 @@ HTML `<title>`:
 
 Visible heading:
 
-> Your confidence summary is ready
+> Your Technical Product Confidence Summary is ready
 
 Render this as the email's single `<h1>`. Use real `<p>` elements for the body
 copy and preserve a logical heading order.
 
 Body copy:
 
-> Hello,
->
 > It includes the areas you selected for training, your confidence across all
-> six areas, and four questions for your next development conversation with
+> six areas, and four questions for your next personal development conversation with
 > your manager.
 
 Single primary button:
@@ -702,42 +562,37 @@ Single primary button:
 
 Supporting line below the button:
 
-> This private link opens a Little Parrot page where you can download your PDF.
+> This private link opens a page where you can download your PDF.
 
 Sign-off:
 
+> Let us know if you have a topic where you'd like hands-on learning.
+> Just reply to this email.
 > Kinga, Tamas & Little Parrot 💛
 
 Contextual footer:
 
 > You’re receiving this email because you completed the Technical Product
-> Confidence self-assessment on Little Parrot. This message delivers the result
-> you requested and doesn’t subscribe you to marketing emails.
+> Confidence self-assessment on Little Parrot.
 
-Include the standard unsubscribe footer link. Use `__unsubscribe_url__` only if
-the existing Mailtrap configuration resolves it to a working link for a public
-visitor without a Little Parrot account; never ship the placeholder literally.
-Otherwise use the application's working public unsubscribe mechanism. This
-result email does not itself add the recipient to marketing. If a visitor
-separately consented to marketing, the link must still let them prevent later
-marketing messages.
+Include the standard unsubscribe footer link. Use `__unsubscribe_url__`.
 
 Link the header logo to:
 
 ```text
-https://littleparrot.app/?utm_source=technical-confidence-result&utm_medium=email&utm_campaign=pm-confidence-experiment
+https://littleparrot.app/?utm_source=email&utm_medium=lm&utm_campaign=tech-pm&utm_content=technical-confidence-result
 ```
 
 Link the privacy-policy footer text to:
 
 ```text
-https://littleparrot.app/privacy-policy?utm_source=technical-confidence-result&utm_medium=email&utm_campaign=pm-confidence-experiment
+https://littleparrot.app/privacy-policy?utm_source=email&utm_medium=lm&utm_campaign=tech-pm&utm_content=technical-confidence-result
 ```
 
 Also include a footer text link labelled `littleparrot.app` pointing to:
 
 ```text
-https://littleparrot.app/?utm_source=technical-confidence-result&utm_medium=email&utm_campaign=pm-confidence-experiment
+https://littleparrot.app/?utm_source=email&utm_medium=lm&utm_campaign=tech-pm&utm_content=technical-confidence-result
 ```
 
 Include the existing LinkedIn, Instagram, TikTok and YouTube icons in that
@@ -767,95 +622,21 @@ Gmail iOS's measured height. Keep the HTML under 102 KB.
 The button URL must be:
 
 ```text
-https://littleparrot.app/technical-product-confidence/report/{reportToken}?utm_source=technical-confidence-result&utm_medium=email&utm_campaign=pm-confidence-experiment
+https://littleparrot.app/technical-product-confidence/report/{reportToken}?utm_source=email&utm_medium=lm&utm_campaign=tech-pm&utm_content=technical-confidence-result
 ```
 
 Do not put an email address or answers in the URL.
 
-## Database and server boundary
-
-Create one migration for a single assessment table. A suitable shape is:
-
-```text
-id uuid primary key default gen_random_uuid()
-client_submission_id uuid unique not null
-created_at timestamptz not null default now()
-assessment_version text not null default 'tpc-mvp-1.0'
-email_address text not null
-report_name text null
-course_marketing_consent boolean not null default false
-topic_responses jsonb not null
-area_averages jsonb not null
-area_levels jsonb not null
-training_priority_ids text[] not null
-report_token uuid unique not null default gen_random_uuid()
-utm_source text null
-utm_medium text null
-utm_campaign text null
-utm_content text null
-referrer text null
-email_sent_at timestamptz null
-```
-
-Use clear constraints where practical. Enable RLS. Do not add an anonymous
-insert or select policy; public submission goes through an Edge Function using
-the service role after validation. Only the narrowly scoped report RPC may read
-a result by token.
-
-Add a public Edge Function such as
-`submit-technical-confidence-assessment`, with JWT verification disabled in
-`supabase/config.toml`. It must:
-
-1. accept only `POST` and the required CORS preflight;
-2. enforce an allow-list of the production origin plus the existing local
-   development origins rather than returning `*` in production;
-3. reject a non-empty honeypot;
-4. validate a UUID `client_submission_id`;
-5. validate the email and cap normalised email length at 254 characters;
-6. cap the optional report name at 100 characters;
-7. accept exactly the 12 known topic IDs and require every value to be
-   `0`, `1`, `2`, `3` or `null`;
-8. require one or two unique, known priority IDs;
-9. cap each UTM value and referrer at 255 characters;
-10. calculate the six averages and levels on the server;
-11. save the row with the service-role client;
-12. build the private report URL and send the Mailtrap email;
-13. set `email_sent_at` only after Mailtrap succeeds;
-14. return a success state and never return the report token, answers or email
-    address to the browser.
-
-Make submission idempotent. Generate `client_submission_id` once in the browser
-for the current completed form and reuse it on retry. On a unique-key conflict,
-load that record server-side. If `email_sent_at` is null, retry the same email;
-if it is already set, return success without sending another. Never create two
-records for one visitor retry.
-
-Do not log email addresses, report tokens or raw responses. Error responses
-should be useful to the UI but should not expose Mailtrap or database details.
-
-Update the generated Supabase TypeScript types after applying the migration.
-Do not introduce new `as any` casts for this feature.
-
 ## Experiment data and analytics
 
 Capture the initial URL's `utm_source`, `utm_medium`, `utm_campaign` and
-`utm_content`, plus the referrer, and submit them with the completed assessment.
-Do not send the visitor's email, name, token or raw topic answers to PostHog.
-This includes automatic page properties and session replay: mask or exclude the
-form fields and prevent the tokenised report URL from being stored as a raw
-current URL or referrer. Do not solve this by removing the three explicit
-experiment events.
+`utm_content`, plus the referrer, and save them in the database to the assessment records.
 
-Capture only these three product events:
+Capture these three product events:
 
-- `confidence_assessment_started` with assessment version, source, campaign and
-  content;
-- `confidence_assessment_submitted` with assessment version, selected priority
-  IDs and calculated area levels;
-- `confidence_report_opened` with assessment version and selected priority IDs.
-
-Avoid per-question events. The saved database row is the research source for
-topic-level answers.
+- `confidence_assessment_started` with UTM tags as properties;
+- `confidence_assessment_submitted` with UTM tags as properties;
+- `confidence_report_opened` with UTM tags as properties.
 
 ## SEO metadata
 
