@@ -38,18 +38,15 @@ The MVP removes several parts of the earlier proposal.
 | Separate priority question before the assessment | Choose up to two training priorities after answering | One screen and premature prioritisation |
 | Dynamic practice tasks | Manager conversation summary and development outcomes | Task-generation rules and content maintenance |
 | Save every interaction | Save one completed submission | Partial-response storage and recovery logic |
-| Generated PDF attachment | Email a private, print-ready report with a **Print or save as PDF** button | Server-side PDF rendering, attachment storage and email-delivery failures |
+| Generated PDF attachment | Email a private link to a Little Parrot report page that uses the product's existing PDF-download capability | New PDF infrastructure, attachment storage and email-delivery failures |
 | Detailed event tracking | Three funnel events plus the saved assessment | Analytics instrumentation and reporting work |
 
-### PDF recommendation
+### PDF delivery
 
-The user still receives a report they can save as a PDF and share with their
-manager. The MVP email links to a print-ready web report. The report uses print
-styles so the browser's **Save as PDF** option produces a clean two-page file.
-
-An automatically attached PDF can be added later by rendering the same report
-template on the server. It should be added only if user research shows that the
-print-ready report is inconvenient.
+The email links to a private Little Parrot report page. The page loads the saved
+assessment and uses the product's existing PDF-download capability. The email
+does not need a generated attachment, and the feature does not need a second
+PDF implementation.
 
 ## 3. User journey
 
@@ -126,8 +123,18 @@ On successful submission:
 1. Save the completed assessment.
 2. Calculate the six area summaries.
 3. Create a private report URL.
-4. Show the report on screen.
-5. Email the visitor a link to the same report.
+4. Email the visitor a link to the report page.
+5. Show a confirmation page asking the visitor to check their inbox.
+
+**Confirmation heading**
+
+> Check your inbox for your confidence summary
+
+**Confirmation body**
+
+> We have sent a private link to **[masked email address]**. Open the email and
+> select **View my summary** to reach your Little Parrot report
+> page.
 
 ## 4. Response states
 
@@ -479,16 +486,12 @@ When the visitor selects one priority, adjust the paragraph to use the singular.
 
 Show two controls at the top and bottom of the report:
 
-- **Print or save as PDF**
+- **Download my PDF summary**
 - **Return to Little Parrot**
 
-Use print styles that:
-
-- hide navigation and buttons;
-- fit the report into two A4 pages where possible;
-- avoid splitting an area summary across pages;
-- use text labels as well as colour;
-- print cleanly in black and white.
+Reuse the product's existing PDF-download component or service. Generate the
+PDF content from the saved assessment record. Do not build a separate PDF
+pipeline for this feature.
 
 ## 9. Email delivery
 
@@ -497,20 +500,21 @@ attachment.
 
 **Subject**
 
-> Your Technical Product Confidence Summary
+> Your Technical Product Confidence Summary is ready
 
 **Core message**
 
-> Your summary is ready. It includes the two areas you selected for training,
-> your confidence across all six areas and a set of questions you can use in a
+> Your summary is ready. It includes the areas you selected for training, your
+> confidence across all six areas and a set of questions you can use in a
 > development conversation with your manager.
 
 **Button**
 
-> View my confidence summary
+> View my summary
 
-The report URL should use an unguessable token. Do not include assessment
-answers or an email address in the URL.
+The button opens a private Little Parrot page where the visitor can review the
+report heading and download the PDF. The report URL should use an unguessable
+token. Do not include assessment answers or an email address in the URL.
 
 ## 10. Data to save
 
@@ -564,8 +568,8 @@ to show the funnel between starting, submitting and opening the report.
 - Disable the submit button while the request is being processed.
 - If submission fails, preserve every answer on the page and show a retry
   button.
-- If email delivery fails after the assessment is saved, show the report on
-  screen and allow the email to be retried.
+- If email delivery fails after the assessment is saved, keep the visitor on
+  the confirmation step and allow the email to be retried.
 - Use a visible focus state and a minimum 44 × 44 px tap target.
 - Use semantic `<fieldset>`, `<legend>`, `<input type="radio">` and `<label>`
   elements.
@@ -579,7 +583,7 @@ The MVP needs:
    and saves one record.
 3. One report page that reads a saved assessment by its private token.
 4. One transactional email containing the report link.
-5. Print styles for the report page.
+5. An integration with the product's existing PDF-download capability.
 
 It does not need:
 
@@ -587,7 +591,7 @@ It does not need:
 - client-side scoring animations;
 - user accounts;
 - a content-management interface;
-- a PDF-generation service;
+- a second PDF-generation or download service;
 - background jobs for report generation;
 - separate assessment-response tables;
 - per-question analytics events;
@@ -604,8 +608,9 @@ The MVP is complete when:
 - the report shows six area levels and the exact topic answers;
 - the report includes infrastructure within the product-systems area;
 - the report gives the visitor manager-ready development language;
-- the visitor can print the report or save it as a PDF;
 - the visitor receives a private report link by email;
+- the report page uses the existing Little Parrot capability to download the
+  PDF summary;
 - marketing consent remains separate from report delivery;
 - Little Parrot can export the saved topic answers and training priorities for
   course research.
