@@ -8,11 +8,14 @@
   },
   "type": "module",
   "dependencies": {
-    "@dungarees/cli": "*",
+    "@dungarees/cli-command": "*",
+    "@dungarees/core": "*",
     "@dungarees/fs": "*",
+    "@dungarees/rxjs": "*",
     "@dungarees/sub-process": "*",
     "@dungarees/transpile": "*",
-    "@dungarees/rxjs": "*"
+    "rxjs": "^7.8.1",
+    "zod": "^3.25.76"
   },
   "devDependencies": {
     "typescript": "^5.9.3",
