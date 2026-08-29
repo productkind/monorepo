@@ -7,7 +7,7 @@
 - Output: html email template with Little Parrot style
 
 ## Prompt
-I want to create an email update to the Little Parrot users about what our small team has achieved in the last month. Our goal is to display to paid subscribers that we are constantly adding more value to the platform. You can find what we achieved this month by filtering the Github issues by is:issue state:closed closed:>2026-02-22 in the repo: https://github.com/productkind/monorepo.git    
+I want to create an email update to the Little Parrot users about what our small team has achieved in the last month. Our goal is to display to paid subscribers that we are constantly adding more value to the platform and engage registered users who are not paid. One email goes out to everyone. You can find what we achieved this month by filtering the Github issues by is:issue state:closed closed:>2026-02-22 in the repo: https://github.com/productkind/monorepo.git    
 /productkind-tone and read productkind/little-parrot-context.md for company context 
 
 ## Follow up prompt
