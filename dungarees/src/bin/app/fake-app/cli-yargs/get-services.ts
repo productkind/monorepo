@@ -1,5 +1,4 @@
 import type { DungareesBinServices } from '@dungarees/bin-cli-yargs-base-app/services.ts'
-import { createCliCommands } from '@dungarees/cli-command/service.ts'
 import { createFakeFileSystem } from '@dungarees/fs/fake.ts'
 import { createFakeSubProcessService, type FakeSpawnConfig } from '@dungarees/sub-process/fake.ts'
 import type { ExecutedCommand } from '@dungarees/sub-process/fake.ts'
@@ -21,7 +20,6 @@ export const createFakeServices = ({ files = {}, commands = [] }: FakeWorld = {}
     services: {
       fileSystem,
       subProcess,
-      cliCommands: createCliCommands(subProcess),
     },
     executedCommands,
   }

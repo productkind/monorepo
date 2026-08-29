@@ -9,14 +9,10 @@
   "type": "module",
   "dependencies": {
     "@dungarees/bin-publish-lib-domain": "*",
-    "@dungarees/cli": "*",
-    "rxjs": "^7.8.1"
+    "@dungarees/cli": "*"
   },
   "devDependencies": {
     "@dungarees/bin-cli-yargs-fake-app": "*",
-    "@dungarees/cli-command": "*",
-    "@dungarees/fs": "*",
-    "@dungarees/sub-process": "*",
     "typescript": "^5.9.3",
     "vitest": "^3.0.2"
   },
