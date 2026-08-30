@@ -1,5 +1,5 @@
 {
-  "name": "@dungarees/bin-cli-yargs-fake-app",
+  "name": "@dungarees/bin-fake-app-cli-yargs",
   "engines": {
     "node": ">=25.0.0"
   },
@@ -8,7 +8,7 @@
   },
   "type": "module",
   "dependencies": {
-    "@dungarees/bin-cli-yargs-base-app": "*",
+    "@dungarees/bin-base-app-cli-yargs": "*",
     "@dungarees/cli": "*",
     "@dungarees/core": "*",
     "@dungarees/fs": "*",

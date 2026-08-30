@@ -8,7 +8,7 @@
   },
   "type": "module",
   "dependencies": {
-    "@dungarees/bin-cli-yargs-base-app": "*",
+    "@dungarees/bin-base-app-cli-yargs": "*",
     "@dungarees/core": "*",
     "@dungarees/fs": "*",
     "@dungarees/sub-process": "*"

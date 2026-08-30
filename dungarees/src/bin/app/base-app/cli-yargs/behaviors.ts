@@ -1,5 +1,5 @@
-import type { PublishLibBehaviour } from '@dungarees/bin-publish-lib-domain/behavior.ts'
+import type { PublishLibBehavior } from '@dungarees/bin-publish-lib-domain/behavior.ts'
 
 export type DungareesBinBehaviors = {
-  publishLib: PublishLibBehaviour
+  publishLib: PublishLibBehavior
 }

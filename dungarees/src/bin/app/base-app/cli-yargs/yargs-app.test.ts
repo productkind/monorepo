@@ -1,4 +1,4 @@
-import { createTestApp } from '@dungarees/bin-cli-yargs-fake-app/test-app.ts'
+import { createTestApp } from '@dungarees/bin-fake-app-cli-yargs/test-app.ts'
 import { renderCli } from '@dungarees/cli/test-renderer.ts'
 
 import { expect, test } from 'vitest'

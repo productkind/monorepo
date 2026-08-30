@@ -1,4 +1,4 @@
-import type { DungareesBinServices } from '@dungarees/bin-cli-yargs-base-app/services.ts'
+import type { DungareesBinServices } from '@dungarees/bin-base-app-cli-yargs/services.ts'
 import { createFakeFileSystem } from '@dungarees/fs/fake.ts'
 import { createFakeSubProcessService, type FakeSpawnConfig } from '@dungarees/sub-process/fake.ts'
 import type { ExecutedCommand } from '@dungarees/sub-process/fake.ts'

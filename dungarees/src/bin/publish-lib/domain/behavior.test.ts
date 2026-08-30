@@ -1,4 +1,4 @@
-import { createPublishLibService } from './behavior.ts'
+import { createPublishLibBehavior } from './behavior.ts'
 
 import { createCliCommands } from '@dungarees/cli-command/service.ts'
 import { createFakeFileSystem } from '@dungarees/fs/fake.ts'
@@ -17,7 +17,7 @@ test('build without version input', async () => {
   })
   const { subProcess } = createFakeSubProcessService([])
   const cliCommands = createCliCommands(subProcess)
-  const service = createPublishLibService({ fileSystem, cliCommands })
+  const service = createPublishLibBehavior({ fileSystem, cliCommands })
   await collectValuesFrom(
     service.build({
       srcDir: '/src',
@@ -52,7 +52,7 @@ test('transpile files in subdirectories', async () => {
   })
   const { subProcess } = createFakeSubProcessService([])
   const cliCommands = createCliCommands(subProcess)
-  const service = createPublishLibService({ fileSystem, cliCommands })
+  const service = createPublishLibBehavior({ fileSystem, cliCommands })
   await collectValuesFrom(
     service.build({
       srcDir: '/src',
@@ -100,7 +100,7 @@ test('publish single lib', async () => {
     },
   ])
   const cliCommands = createCliCommands(subProcess)
-  const service = createPublishLibService({ fileSystem, cliCommands })
+  const service = createPublishLibBehavior({ fileSystem, cliCommands })
   await collectValuesFrom(
     service.publishSingleLib({
       srcDir: '/src',
@@ -191,7 +191,7 @@ test('publish a multi-lib folder', async () => {
     },
   ])
   const cliCommands = createCliCommands(subProcess)
-  const service = createPublishLibService({ fileSystem, cliCommands })
+  const service = createPublishLibBehavior({ fileSystem, cliCommands })
   await collectValuesFrom(
     service.publishMultiLib({
       dir: '/multi-lib',
