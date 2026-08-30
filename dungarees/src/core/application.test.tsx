@@ -1,19 +1,18 @@
 import { createApplication } from './application.ts'
 
-import { assert, type Equals } from 'tsafe'
-import { expect, test } from 'vitest'
+import { expect, expectTypeOf, test } from 'vitest'
 
 test('empty application', () => {
   const app = createApplication()
   const { services, behaviors } = app.run()
-  assert<Equals<typeof services, Record<string, never>>>()
-  assert<Equals<typeof behaviors, Record<string, never>>>()
+  expectTypeOf<typeof services>().toEqualTypeOf<Record<string, never>>()
+  expectTypeOf<typeof behaviors>().toEqualTypeOf<Record<string, never>>()
   expect(services).toEqual({})
   expect(behaviors).toEqual({})
 
   const app2 = createApplication({})
   const { services: services2 } = app2.run()
-  assert<Equals<typeof services2, Record<string, never>>>()
+  expectTypeOf<typeof services2>().toEqualTypeOf<Record<string, never>>()
   expect(services2).toEqual({})
 })
 
@@ -26,7 +25,7 @@ test('Get services', () => {
     getServices: () => ({ myService }),
   })
   const { services } = app.run()
-  assert<Equals<typeof services, Services>>()
+  expectTypeOf<typeof services>().toEqualTypeOf<Services>()
   expect(services.myService).toBe('my-service')
 })
 
@@ -48,10 +47,10 @@ test('Get services by static identity', () => {
     ],
   })
   const { services: services1 } = app.run({ type: 'type-1' })
-  assert<Equals<typeof services1, Services>>()
+  expectTypeOf<typeof services1>().toEqualTypeOf<Services>()
   expect(services1.myService).toBe('my-service-1')
   const { services: services2 } = app.run({ type: 'type-2' })
-  assert<Equals<typeof services2, Services>>()
+  expectTypeOf<typeof services2>().toEqualTypeOf<Services>()
   expect(services2.myService).toBe('my-service-2')
   // @ts-expect-error type-3 is not a key
   expect(() => app.run({ type: 'type-3' })).toThrow(
@@ -77,10 +76,10 @@ test('Get services by static partial identity', () => {
     ],
   })
   const { services: services1 } = app.run({ type: 'type-1', data: 1 })
-  assert<Equals<typeof services1, Services>>()
+  expectTypeOf<typeof services1>().toEqualTypeOf<Services>()
   expect(services1.myService).toBe('my-service-1')
   const { services: services2 } = app.run({ type: 'type-2', data: 2 })
-  assert<Equals<typeof services2, Services>>()
+  expectTypeOf<typeof services2>().toEqualTypeOf<Services>()
   expect(services2.myService).toBe('my-service-2')
   // @ts-expect-error type-3 is not a key
   expect(() => app.run({ type: 'type-3' })).toThrow('No matching identity')
@@ -110,13 +109,13 @@ test('Register additional services after creation', () => {
     () => baseApp,
   )
   const { services: services1 } = app.run({ type: 'type-1', data: 1 })
-  assert<Equals<typeof services1, Services>>()
+  expectTypeOf<typeof services1>().toEqualTypeOf<Services>()
   expect(services1.myService).toBe('my-service-1')
   const { services: services2 } = app.run({ type: 'type-2', data: 2 })
-  assert<Equals<typeof services2, Services>>()
+  expectTypeOf<typeof services2>().toEqualTypeOf<Services>()
   expect(services2.myService).toBe('my-service-2')
   const { services: services3 } = app.run({ type: 'type-3', data: 3 })
-  assert<Equals<typeof services3, Services>>()
+  expectTypeOf<typeof services3>().toEqualTypeOf<Services>()
   expect(services3.myService).toBe('my-service-default')
 })
 
@@ -182,13 +181,13 @@ test('Register additional behaviors after creation', () => {
     () => baseApp,
   )
   const { behaviors: services1 } = app.run({ type: 'type-1', data: 1 })
-  assert<Equals<typeof services1, Services>>()
+  expectTypeOf<typeof services1>().toEqualTypeOf<Services>()
   expect(services1.myService).toBe('my-service-1')
   const { behaviors: services2 } = app.run({ type: 'type-2', data: 2 })
-  assert<Equals<typeof services2, Services>>()
+  expectTypeOf<typeof services2>().toEqualTypeOf<Services>()
   expect(services2.myService).toBe('my-service-2')
   const { behaviors: services3 } = app.run({ type: 'type-3', data: 3 })
-  assert<Equals<typeof services3, Services>>()
+  expectTypeOf<typeof services3>().toEqualTypeOf<Services>()
   expect(services3.myService).toBe('my-service-default')
 })
 

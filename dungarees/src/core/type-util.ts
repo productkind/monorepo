@@ -149,6 +149,10 @@ export type Mutable<T> = { -readonly [K in keyof T]: T[K] }
 export type PartialBesides<OBJECT, KEYS extends keyof OBJECT> = Partial<Omit<OBJECT, KEYS>> &
   Pick<OBJECT, KEYS>
 
+// Collapses an intersection into the single object type it is equivalent to. Homomorphic, so
+// optional properties stay optional rather than becoming `| undefined`.
+export type FlattenIntersection<OBJECT> = { [KEY in keyof OBJECT]: OBJECT[KEY] }
+
 export type DeepPartial<T> = {
   [K in keyof T]?: T[K] extends object ? DeepPartial<T[K]> : T[K]
 }

@@ -17,15 +17,14 @@ import {
 } from './util.ts'
 
 import { lastValueFrom, type Observable, of, catchError, map, Subject } from 'rxjs'
-import { assert, type Equals } from 'tsafe'
-import { test, expect } from 'vitest'
+import { expect, expectTypeOf, test } from 'vitest'
 import { z } from 'zod'
 import { mtest } from '@dungarees/core/marbles-vitest.ts';
 
 test('collectValuesFrom', async () => {
   const input: Observable<number> = of(1, 2, 3, 4, 5)
   const values = await collectValuesFrom(input)
-  assert<Equals<typeof values, number[]>>()
+  expectTypeOf<typeof values>().toEqualTypeOf<number[]>()
   expect(values).toEqual([1, 2, 3, 4, 5])
 })
 
@@ -142,7 +141,7 @@ mtest('assertTypeByGuardMap with valid input', ({ expect }) => {
     ),
     map((obj) => {
       type Obj = typeof obj
-      assert<Equals<Obj, { name: string }>>()
+      expectTypeOf<Obj>().toEqualTypeOf<{ name: string }>()
       return obj
     }),
   )
@@ -169,7 +168,7 @@ mtest('assertSchemaMap with valid input', ({ expect }) => {
     ),
     map((obj) => {
       type Obj = typeof obj
-      assert<Equals<Obj, { name: string }>>()
+      expectTypeOf<Obj>().toEqualTypeOf<{ name: string }>()
       return obj
     }),
   )
@@ -219,7 +218,7 @@ mtest('getTransformSetContext providing context', ({ expect, coldStepAndClose })
 
 test('SyncFunctionToObservable<FUNC>', () => {
   type ObservableFunc = SyncFunctionToObservable<(a: 1, b: 2) => 3>
-  assert<Equals<ObservableFunc, (a: 1, b: 2) => Observable<3>>>()
+  expectTypeOf<ObservableFunc>().toEqualTypeOf<(a: 1, b: 2) => Observable<3>>()
 })
 
 mtest('getObservableMethodsFromSync', ({ expect }) => {
@@ -231,10 +230,10 @@ mtest('getObservableMethodsFromSync', ({ expect }) => {
   const observableMethods = getObservableMethodsFromSync(service, ['add', 'multiply'] as const)
   type ObservableService = typeof observableMethods
 
-  assert<Equals<ObservableService, {
+  expectTypeOf<ObservableService>().toEqualTypeOf<{
     add: (a: number, b: number) => Observable<number>,
     multiply: (a: number, b: number) => Observable<number>,
-  }>>()
+  }>()
 
   const add$ = observableMethods.add(2, 3)
   expect(add$).toBeObservable('(5|)', { '5': 5 })
@@ -262,9 +261,9 @@ mtest('getObservableMethodsFromSync delay', ({ expect }) => {
   const observableMethods = getObservableMethodsFromSync(service, ['add'] as const, 1)
   type ObservableService = typeof observableMethods
 
-  assert<Equals<ObservableService, {
+  expectTypeOf<ObservableService>().toEqualTypeOf<{
     add: (a: number, b: number) => Observable<number>,
-  }>>()
+  }>()
 
   const add$ = observableMethods.add(2, 3)
   expect(add$).toBeObservable('-(5|)', { '5': 5 })
@@ -277,5 +276,5 @@ test('getUnsafeMethodNames', () => {
   } as const
   const methodNames = getUnsafeMethodNames(service)
   expect(methodNames).toEqual(['unsafe'])
-  assert<Equals<typeof methodNames[0], 'unsafe'>>()
+  expectTypeOf<typeof methodNames[0]>().toEqualTypeOf<'unsafe'>()
 })
