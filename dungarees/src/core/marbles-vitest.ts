@@ -123,7 +123,7 @@ class ExtendedExpect<T> extends Expect<T> {
     this.toBeObservable(marble, { v: value })
   }
 
-  toBeObservableStepAndClose(value: T, steps = 1): Promise<void> {
+  toBeObservableStepAndClose(value: T, steps = 1): void {
     const marble = `-`.repeat(steps) + '(v|)'
     return this.toBeObservable(marble, { v: value })
   }

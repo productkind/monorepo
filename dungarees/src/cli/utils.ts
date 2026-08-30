@@ -11,3 +11,8 @@ export const stderr = (message: string, level: LogLevel = 'error'): StdioErrorMe
   message,
   level,
 })
+
+export const exit = (code: number): { type: 'exit'; code: number } => ({
+  type: 'exit',
+  code,
+})
