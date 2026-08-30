@@ -4,8 +4,7 @@ import { DomainEvent } from '@dungarees/core/event.ts'
 import { collectValuesFrom } from '@dungarees/rxjs/util.ts'
 
 import { delay, lastValueFrom, of, throwError } from 'rxjs'
-import { assert, type Equals } from 'tsafe'
-import { expect, test } from 'vitest'
+import { expect, expectTypeOf, test } from 'vitest'
 
 const DUMMY_CONTROLS = { select: () => of('') }
 
@@ -436,9 +435,9 @@ test('createCommand infers the handler arguments from what the builder declared'
         .option('times', { type: 'number' })
         .option('loud', { type: 'boolean', demandOption: true }),
     handler: (args) => {
-      assert<Equals<typeof args.who, string>>()
-      assert<Equals<typeof args.times, number | undefined>>()
-      assert<Equals<typeof args.loud, boolean>>()
+      expectTypeOf<typeof args.who>().toEqualTypeOf<string>()
+      expectTypeOf<typeof args.times>().toEqualTypeOf<number | undefined>()
+      expectTypeOf<typeof args.loud>().toEqualTypeOf<boolean>()
     },
   })
 })
@@ -457,12 +456,14 @@ test('createCommand erases the argument type from the value the app holds', () =
     handler: () => {},
   })
 
-  assert<Equals<typeof greet, CommandRegistrar>>()
-  assert<Equals<typeof count, CommandRegistrar>>()
+  expectTypeOf<typeof greet>().toEqualTypeOf<CommandRegistrar>()
+  expectTypeOf<typeof count>().toEqualTypeOf<CommandRegistrar>()
   // Differing argument types share one list, and registering a command hands back the same app
   // type it was given — an argument type never accumulates into the chain.
   const commands: CommandRegistrar[] = [greet, count]
-  assert<Equals<ReturnType<(typeof commands)[number]>, Parameters<CommandRegistrar>[0]>>()
+  expectTypeOf<ReturnType<(typeof commands)[number]>>().toEqualTypeOf<
+    Parameters<CommandRegistrar>[0]
+  >()
 })
 
 test('a handler that contradicts its builder does not type-check', () => {

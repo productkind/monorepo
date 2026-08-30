@@ -28,8 +28,7 @@ import {
 } from './util.ts'
 
 import { type Fn } from 'hotscript'
-import { assert, type Equals } from 'tsafe'
-import { expect, test } from 'vitest'
+import { expect, expectTypeOf, test } from 'vitest'
 
 test('makeObjectFromStringLiteral', () => {
   const obj = makeObjectFromStringLiteral('key' as const, 1)
@@ -38,19 +37,19 @@ test('makeObjectFromStringLiteral', () => {
 
 test('split is working in a typesafe way', () => {
   const splitted = split('a.a.a', '.')
-  assert<Equals<typeof splitted, readonly ['a', 'a', 'a']>>()
+  expectTypeOf<typeof splitted>().toEqualTypeOf<readonly ['a', 'a', 'a']>()
   expect(splitted).toEqual(['a', 'a', 'a'])
 })
 
 test('join is working in a typesafe way', () => {
   const joined = join<['a', 'a', 'a'], '.'>(['a', 'a', 'a'], '.')
-  assert<Equals<typeof joined, 'a.a.a'>>()
+  expectTypeOf<typeof joined>().toEqualTypeOf<'a.a.a'>()
   expect(joined).toBe('a.a.a')
 })
 
 test('capitalize', () => {
   const capitalized = capitalize('apple')
-  assert<Equals<typeof capitalized, 'Apple'>>()
+  expectTypeOf<typeof capitalized>().toEqualTypeOf<'Apple'>()
   expect(capitalized).toBe('Apple')
 })
 
@@ -69,7 +68,7 @@ test('kebabCase2camelCase', () => {
   const camelCase = 'firstSecondThird'
   const output = kebabCase2camelCase(kebabCase)
   expect(output).toBe(camelCase)
-  assert<Equals<typeof output, typeof camelCase>>()
+  expectTypeOf<typeof output>().toEqualTypeOf<typeof camelCase>()
 })
 
 test('camelCase2kebabCase', () => {
@@ -77,7 +76,7 @@ test('camelCase2kebabCase', () => {
   const camelCase = 'firstSecondThird'
   const output = camelCase2kebabCase(camelCase)
   expect(output).toBe(kebabCase)
-  assert<Equals<typeof output, typeof kebabCase>>()
+  expectTypeOf<typeof output>().toEqualTypeOf<typeof kebabCase>()
 })
 
 test('deepEqualPartial', () => {
@@ -97,7 +96,7 @@ test('deepEqualPartial', () => {
 test('findByPattern', () => {
   // eslint-disable-next-line
   const value1 = findByPattern([], '')
-  assert<Equals<typeof value1, undefined>>()
+  expectTypeOf<typeof value1>().toEqualTypeOf<undefined>()
   expect(value1).toBeUndefined()
 
   // @ts-expect-error itemToMatch has to follow the pattern type
@@ -105,10 +104,10 @@ test('findByPattern', () => {
 
   // @ts-expect-error itemToMatch type has to be a serializable type
   const _ = findByPattern<() => undefined>
-  assert(_)
+  expect(_).toBeDefined()
 
   const value2 = findByPattern([{ pattern: 'ab', value: 1 }], 'ab')
-  assert<Equals<typeof value2, 1 | undefined>>()
+  expectTypeOf<typeof value2>().toEqualTypeOf<1 | undefined>()
   expect(value2).toBe(1)
 
   const value3 = findByPattern([{ pattern: 'ab', value: 1 }], 'no-match')
@@ -162,20 +161,15 @@ test('findByPattern', () => {
 
 test('optionalPatternToList', () => {
   const list1 = optionalPatternToList(1)
-  assert<Equals<typeof list1, readonly [FindByDefault<1>]>>()
+  expectTypeOf<typeof list1>().toEqualTypeOf<readonly [FindByDefault<1>]>()
   expect(list1).toEqual([{ value: 1 }])
 
   const list2 = optionalPatternToList([{ value: 1 }])
-  assert<Equals<typeof list2, readonly [FindByDefault<1>]>>()
+  expectTypeOf<typeof list2>().toEqualTypeOf<readonly [FindByDefault<1>]>()
   expect(list2).toEqual([{ value: 1 }])
 
   type Optional1 = OptionalPatternList<1, string>
-  assert<
-    Equals<
-      Optional1,
-      1 | Array<FindByDefault<1> | FindByPattern<1, string> | FindByPartialPattern<1, string>>
-    >
-  >()
+  expectTypeOf<Optional1>().toEqualTypeOf<1 | Array<FindByDefault<1> | FindByPattern<1, string> | FindByPartialPattern<1, string>>>()
 })
 
 test('isDefined', () => {
@@ -243,7 +237,7 @@ test('unPrototypeProperties', () => {
   }
   const instance = new Test(1)
   const noPrototype = unPrototypeProperties(instance, ['method'])
-  assert<Equals<typeof noPrototype, { method: () => number }>>()
+  expectTypeOf<typeof noPrototype>().toEqualTypeOf<{ method: () => number }>()
   expect(noPrototype.method()).toBe(1)
   const method = noPrototype.method
   expect(method()).toBe(1)
@@ -264,7 +258,7 @@ interface AppendConstFn extends Fn {
 test('mapConst', () => {
   const input = ['a', 'b', 'c'] as const
   const output = mapConst(input)<AppendConstFn>((value) => `${value}-const`)
-  assert<Equals<typeof output, readonly ['a-const', 'b-const', 'c-const']>>()
+  expectTypeOf<typeof output>().toEqualTypeOf<readonly ['a-const', 'b-const', 'c-const']>()
   expect(output).toEqual(['a-const', 'b-const', 'c-const'])
 })
 
@@ -278,8 +272,8 @@ test('mapConst infers input type from array', () => {
   const input = ['a', 'b', 'c'] as const
   const output: number[] = []
   mapConst(input)<AppendConstFn>((value, index) => {
-    assert<Equals<typeof value, 'a' | 'b' | 'c'>>()
-    assert<Equals<typeof index, 0 | 1 | 2>>()
+    expectTypeOf<typeof value>().toEqualTypeOf<'a' | 'b' | 'c'>()
+    expectTypeOf<typeof index>().toEqualTypeOf<0 | 1 | 2>()
     output.push(index)
     return `${value}-const`
   })
@@ -290,12 +284,12 @@ test('mapConst non-curried infers input type from array', () => {
   const input = ['a', 'b', 'c'] as const
   const output: number[] = []
   const result = mapConst(input, (value, index) => {
-    assert<Equals<typeof value, 'a' | 'b' | 'c'>>()
-    assert<Equals<typeof index, 0 | 1 | 2>>()
+    expectTypeOf<typeof value>().toEqualTypeOf<'a' | 'b' | 'c'>()
+    expectTypeOf<typeof index>().toEqualTypeOf<0 | 1 | 2>()
     output.push(index)
     return 1 as const
   })
-  assert<Equals<typeof result, readonly [1, 1, 1]>>()
+  expectTypeOf<typeof result>().toEqualTypeOf<readonly [1, 1, 1]>()
   expect(result).toEqual([1, 1, 1])
   expect(output).toEqual([0, 1, 2])
 })
@@ -303,7 +297,7 @@ test('mapConst non-curried infers input type from array', () => {
 test('mapConstKeysToEntries infers input type from array', () => {
   const input = ['a', 'b', 'c'] as const
   const output = mapConstKeysToEntries(input)<AppendConstFn>((value) => `${value}-const`)
-  assert<Equals<typeof output, readonly [['a', 'a-const'], ['b', 'b-const'], ['c', 'c-const']]>>()
+  expectTypeOf<typeof output>().toEqualTypeOf<readonly [['a', 'a-const'], ['b', 'b-const'], ['c', 'c-const']]>()
   expect(output).toEqual([['a', 'a-const'], ['b', 'b-const'], ['c', 'c-const']])
 })
 
@@ -317,12 +311,12 @@ test('mapConstKeysToEntries infers input type from array', () => {
   const input = ['a', 'b', 'c'] as const
   const output: number[] = []
   const a = mapConstKeysToEntries(input, (value, index) => {
-    assert<Equals<typeof value, 'a' | 'b' | 'c'>>()
-    assert<Equals<typeof index, 0 | 1 | 2>>()
+    expectTypeOf<typeof value>().toEqualTypeOf<'a' | 'b' | 'c'>()
+    expectTypeOf<typeof index>().toEqualTypeOf<0 | 1 | 2>()
     output.push(index)
     return 1 as const
   })
-  assert<Equals<typeof a, readonly [['a', 1], ['b', 1], ['c', 1]]>>()
+  expectTypeOf<typeof a>().toEqualTypeOf<readonly [['a', 1], ['b', 1], ['c', 1]]>()
   expect(a).toEqual([['a', 1], ['b', 1], ['c', 1]])
   expect(output).toEqual([0, 1, 2])
 })
@@ -331,8 +325,8 @@ test('mapConstKeysToEntries infers input type from array', () => {
   const input = ['a', 'b', 'c'] as const
   const output: number[] = []
   mapConstKeysToEntries(input)<AppendConstFn>((value, index) => {
-    assert<Equals<typeof value, 'a' | 'b' | 'c'>>()
-    assert<Equals<typeof index, 0 | 1 | 2>>()
+    expectTypeOf<typeof value>().toEqualTypeOf<'a' | 'b' | 'c'>()
+    expectTypeOf<typeof index>().toEqualTypeOf<0 | 1 | 2>()
     output.push(index)
     return `${value}-const`
   })
@@ -347,29 +341,29 @@ test('objectFromConstEntries', () => {
     ['c', 3],
   ] as const
   const obj = objectFromConstEntries(entries)
-  assert<Equals<typeof obj, { a: 1; b: 2; c: 3 }>>()
+  expectTypeOf<typeof obj>().toEqualTypeOf<{ a: 1; b: 2; c: 3 }>()
   expect(obj).toEqual({ a: 1, b: 2, c: 3 })
 })
 
 test('mapObjectFromKeys', () => {
   const keys = ['a', 'b', 'c'] as const
   const obj = mapObjectFromKeys(keys)<AppendConstFn>((key, index) => {
-    assert<Equals<typeof key, 'a' | 'b' | 'c'>>()
-    assert<Equals<typeof index, 0 | 1 | 2>>()
+    expectTypeOf<typeof key>().toEqualTypeOf<'a' | 'b' | 'c'>()
+    expectTypeOf<typeof index>().toEqualTypeOf<0 | 1 | 2>()
     return `${key}-const`
   })
-  assert<Equals<typeof obj, { a: 'a-const'; b: 'b-const'; c: 'c-const' }>>()
+  expectTypeOf<typeof obj>().toEqualTypeOf<{ a: 'a-const'; b: 'b-const'; c: 'c-const' }>()
   expect(obj).toEqual({ a: 'a-const', b: 'b-const', c: 'c-const' })
 })
 
 test('mapObjectFromKeys non-curried infers input type from array', () => {
   const keys = ['a', 'b', 'c'] as const
   const obj = mapObjectFromKeys(keys, (key, index) => {
-    assert<Equals<typeof key, 'a' | 'b' | 'c'>>()
-    assert<Equals<typeof index, 0 | 1 | 2>>()
+    expectTypeOf<typeof key>().toEqualTypeOf<'a' | 'b' | 'c'>()
+    expectTypeOf<typeof index>().toEqualTypeOf<0 | 1 | 2>()
     return 1 as const
   })
-  assert<Equals<typeof obj, { a: 1; b: 1; c: 1 }>>()
+  expectTypeOf<typeof obj>().toEqualTypeOf<{ a: 1; b: 1; c: 1 }>()
   expect(obj).toEqual({ a: 1, b: 1, c: 1 })
 })
 

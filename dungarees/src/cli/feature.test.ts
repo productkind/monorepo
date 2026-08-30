@@ -5,8 +5,7 @@ import type { DomainEvent } from '@dungarees/core/event.ts'
 import { collectValuesFrom } from '@dungarees/rxjs/util.ts'
 
 import { of } from 'rxjs'
-import { assert, type Equals } from 'tsafe'
-import { expect, test } from 'vitest'
+import { expect, expectTypeOf, test } from 'vitest'
 
 type GreetEvent = DomainEvent<'greeted', { who: string }>
 type CountEvent = DomainEvent<'counted', { times: number }>
@@ -70,7 +69,7 @@ test('each combined feature keeps its own command and presenter', async () => {
 
 test('combining features unions their event types', () => {
   const combined = combineFeatures(greetFeature, countFeature)
-  assert<Equals<typeof combined, CliFeature<GreetEvent | CountEvent>>>()
+  expectTypeOf<typeof combined>().toEqualTypeOf<CliFeature<GreetEvent | CountEvent>>()
 })
 
 test('combining folds, so a third feature needs no new signature', () => {
@@ -81,7 +80,7 @@ test('combining folds, so a third feature needs no new signature', () => {
   }
   const combined = combineFeatures(combineFeatures(greetFeature, countFeature), logFeature)
 
-  assert<Equals<typeof combined, CliFeature<GreetEvent | CountEvent | LogEvent>>>()
+  expectTypeOf<typeof combined>().toEqualTypeOf<CliFeature<GreetEvent | CountEvent | LogEvent>>()
 })
 
 test('a feature whose presenter misses one of its own events does not type-check', () => {
