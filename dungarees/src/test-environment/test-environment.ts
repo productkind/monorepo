@@ -1,4 +1,4 @@
-import type { FilterRecord, GetKey, GetValue, RecordToEntries } from '../core/type.ts'
+import type { FilterRecord, GetKey, GetValue, RecordToEntries } from '@dungarees/core/type-util.ts'
 import type {
   DefaultConfig,
   GetContext,

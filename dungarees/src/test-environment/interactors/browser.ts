@@ -1,4 +1,4 @@
-import { type Interactor } from '@bobcats-coding/skid/test/type'
+import { type Interactor } from '@bobcats-coding/skid/test/type.js'
 
 import { chromium, firefox, webkit } from '@playwright/test'
 import type {

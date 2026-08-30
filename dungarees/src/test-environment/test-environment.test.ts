@@ -1,5 +1,5 @@
-import { createTestEnvironment } from './test-environment'
-import type { Interactor, Runner } from './type'
+import { createTestEnvironment } from './test-environment.ts'
+import type { Interactor, Runner } from './type.ts'
 
 import { of } from 'rxjs'
 import { expect, test } from 'vitest'

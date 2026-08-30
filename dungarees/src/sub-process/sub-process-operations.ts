@@ -2,7 +2,7 @@ import type { ProcessServiceOutput, RunOptions, SubProcessService } from './type
 
 import type { StdioMessage } from '@dungarees/cli/type.ts'
 import { stderr, stdout } from '@dungarees/cli/utils.ts'
-import type { FileSystem } from '@dungarees/fs/service.ts'
+import type { FileSystemService } from '@dungarees/fs/service.ts'
 import type { KeyValueStore } from '@dungarees/key-value-stores/service.ts'
 
 import { join } from 'node:path'
@@ -43,7 +43,7 @@ type ProcessOperations = {
 
 type CreateProcessOperationsOptions = {
   subProcessService: SubProcessService
-  fileSystem: FileSystem
+  fileSystem: FileSystemService
   environment: KeyValueStore<{ PATH: ZodString }>
 }
 
