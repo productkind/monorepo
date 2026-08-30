@@ -4,8 +4,8 @@ import type {
   GetValue,
   GetValueByKey,
   RecordToEntries,
-} from '../core/type.ts'
-import { assertDefined, assertTypeByGuard } from '../core/util.ts'
+} from '@dungarees/core/type-util.ts'
+import { assertDefined, assertTypeByGuard } from '@dungarees/core/util.ts'
 import { instantiateService } from './test-environment.ts'
 import type {
   ConfigEntry,

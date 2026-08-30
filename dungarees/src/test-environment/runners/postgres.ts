@@ -1,4 +1,4 @@
-import type { Runner } from '@bobcats-coding/skid/test/type'
+import type { Runner } from '@bobcats-coding/skid/test/type.js'
 
 import { PostgreSqlContainer, type StartedPostgreSqlContainer } from '@testcontainers/postgresql'
 import type { StartedNetwork } from 'testcontainers'

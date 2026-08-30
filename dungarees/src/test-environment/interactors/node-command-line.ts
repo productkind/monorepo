@@ -81,8 +81,8 @@ export const nodeCommandLineInteractor = ({
       // Unfortunately, testcontainers does not support reading stderr
       const redirectedCommand = `${command} 2>&1`
       const result = await container.exec(['sh', '-c', redirectedCommand], {
-        user: context?.user,
-        workingDir: context?.workingDir,
+        ...(context?.user === undefined ? {} : { user: context.user }),
+        ...(context?.workingDir === undefined ? {} : { workingDir: context.workingDir }),
         env: { ...environment, ...context?.environment },
       })
       reportEntry$.next({
