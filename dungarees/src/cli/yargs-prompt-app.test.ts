@@ -254,7 +254,7 @@ test('yargs-prompt-app waits for asynchronous registered events before exiting',
         'Greet someone',
         () => {},
         async () => {
-          io.registerEvents(of({ type: 'greet', payload: 'Hello, async!' }).pipe(delay(5)))
+          io.registerEvents(of({ type: 'greet' as const, payload: 'Hello, async!' }).pipe(delay(5)))
         },
       ),
     presenter: {

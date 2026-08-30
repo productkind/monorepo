@@ -1,4 +1,4 @@
-import { stderr, stdout } from './utils.ts'
+import { exit, stderr, stdout } from './utils.ts'
 
 import { expect, test } from 'vitest'
 
@@ -16,4 +16,8 @@ test('stderr defaults to the error level', () => {
 
 test('stderr accepts a level override', () => {
   expect(stderr('boom', 'warn')).toEqual({ type: 'stderr', message: 'boom', level: 'warn' })
+})
+
+test('exit returns an exit message', () => {
+  expect(exit(1)).toEqual({ type: 'exit', code: 1 })
 })

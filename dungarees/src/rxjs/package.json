@@ -9,7 +9,9 @@
   "type": "module",
   "dependencies": {
     "@dungarees/core": "*",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "tsafe": "^1.8.5",
+    "zod": "^3.25.76"
   },
   "devDependencies": {
     "typescript": "^5.9.3",

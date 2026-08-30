@@ -15,9 +15,7 @@ export const createCliCommands = (subProcess: SubProcessService): CliCommandsSer
         subProcess.run(
           'npm',
           ['publish', '--access', 'public', ...(registry ? ['--registry', registry] : [])],
-          {
-            cwd,
-          },
+          { ...(cwd === undefined ? {} : { cwd }) },
         ),
     },
   }

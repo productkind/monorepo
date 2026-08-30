@@ -1,4 +1,5 @@
 import type { StdioMessage } from './type.ts'
+import { exit, stderr } from './utils.ts'
 
 import type { DomainEvent } from '@dungarees/core/event.ts'
 
@@ -154,12 +155,7 @@ export const createYargsPromptApp = <
         event.type === 'exit' ? throwError(() => new ExitError('Exit', event.code)) : of(event),
       ),
       catchError((error) =>
-        error instanceof ExitError
-          ? of({ type: 'exit' as const, code: error.exitCode })
-          : of<CliMessage>(
-              { type: 'stderr', message: error.message, level: 'error' },
-              { type: 'exit', code: 1 },
-            ),
+        error instanceof ExitError ? of(exit(error.exitCode)) : of(stderr(error.message), exit(1)),
       ),
     )
   },

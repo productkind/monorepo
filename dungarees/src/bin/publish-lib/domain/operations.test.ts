@@ -344,8 +344,7 @@ mtest('getPackageDirsWithVersion errors when version.json is not valid JSON', ({
 mtest(
   'publishAllPackages emits all-published event after all packages publish',
   ({ expect, coldStepAndClose }) => {
-    const publishPackage = ({ packageDir }: { packageDir: string; version: string }) =>
-      coldStepAndClose(eventCreators.publishSucceeded())
+    const publishPackage = () => coldStepAndClose(eventCreators.publishSucceeded())
     const publishAll$ = of({ packageDirs: ['lib-1', 'lib-2'], version: '1.0.0' }).pipe(
       publishAllPackages(publishPackage),
     )

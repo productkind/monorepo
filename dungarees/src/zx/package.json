@@ -15,5 +15,8 @@
     "url": "https://github.com/productkind/monorepo/issues"
   },
   "license": "MIT",
-  "description": "A collection of useful utilities for zx scripts in the Dungarees ecosystem."
+  "description": "A collection of useful utilities for zx scripts in the Dungarees ecosystem.",
+  "dependencies": {
+    "zx": "^8.7.1"
+  }
 }
