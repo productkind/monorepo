@@ -19,7 +19,7 @@ export type PublishLibFeatureOutput = {
   events$: Observable<PublishLibEvent>
 }
 
-export type PublishLibBehaviour = {
+export type PublishLibBehavior = {
   build: (args: {
     srcDir: string
     outDir: string
@@ -37,19 +37,19 @@ export type PublishLibBehaviour = {
   }) => PublishLibFeatureOutput
 }
 
-export type PublishLibArgs = {
+export type CreatePublishLibBehaviorOptions = {
   fileSystem: FileSystemService
   cliCommands: CliCommandsService
 }
 
-export const createPublishLibService = ({
+export const createPublishLibBehavior = ({
   fileSystem,
   cliCommands: { npm },
-}: PublishLibArgs): PublishLibBehaviour => {
+}: CreatePublishLibBehaviorOptions): PublishLibBehavior => {
   const fileOperations = createFileOperations(fileSystem)
   const transpileService = createTranspilerService(fileSystem)
 
-  const build: PublishLibBehaviour['build'] = ({ srcDir, outDir, version }) => {
+  const build: PublishLibBehavior['build'] = ({ srcDir, outDir, version }) => {
     const originalPackageJsonPath = `${srcDir}/package.json`
     const startEvent$ = getBuildStartEvent({ srcDir, outDir, version })
     const packageJsonTransform = fileOperations.transformFileContext<string>({
@@ -68,7 +68,7 @@ export const createPublishLibService = ({
     }
   }
 
-  const publishSingleLib: PublishLibBehaviour['publishSingleLib'] = ({
+  const publishSingleLib: PublishLibBehavior['publishSingleLib'] = ({
     srcDir,
     outDir,
     version,
@@ -81,7 +81,7 @@ export const createPublishLibService = ({
     }
   }
 
-  const publishMultiLib: PublishLibBehaviour['publishMultiLib'] = ({ dir, registry }) => {
+  const publishMultiLib: PublishLibBehavior['publishMultiLib'] = ({ dir, registry }) => {
     const sourceDir = `${dir}/src`
     const publishAll$ = getPackageDirsWithVersion({
       packageJsonPaths$: fileSystem.glob(`${sourceDir}/**/package.json`),

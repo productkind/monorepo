@@ -157,7 +157,7 @@ expect(registered).toEqual([events$])
 
 ```ts
 // Good — real service, fakes only for I/O, driven through the test renderer
-const publishLib = createPublishLibService({
+const publishLib = createPublishLibBehavior({
   fileSystem: createFakeFileSystem({ /* fixture */ }),
   cliCommands: createCliCommands(createFakeSubProcessService([ /* npm publish */ ]).subProcess),
 })

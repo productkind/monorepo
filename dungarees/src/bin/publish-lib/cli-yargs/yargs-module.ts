@@ -1,9 +1,9 @@
-import type { PublishLibBehaviour } from '@dungarees/bin-publish-lib-domain/behavior.ts'
+import type { PublishLibBehavior } from '@dungarees/bin-publish-lib-domain/behavior.ts'
 import type { PublishLibEvent } from '@dungarees/bin-publish-lib-domain/events.ts'
 import { type CommandFactory, createCommand } from '@dungarees/cli/yargs-prompt-app.ts'
 
 export const publishLibYargsModule =
-  ({ publishLib }: { publishLib: PublishLibBehaviour }): CommandFactory<PublishLibEvent> =>
+  ({ publishLib }: { publishLib: PublishLibBehavior }): CommandFactory<PublishLibEvent> =>
   (io) =>
     createCommand({
       command: 'publish-multi-lib [lib-path]',

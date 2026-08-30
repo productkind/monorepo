@@ -1,4 +1,4 @@
-import type { DungareesBinServices } from '@dungarees/bin-cli-yargs-base-app/services.ts'
+import type { DungareesBinServices } from '@dungarees/bin-base-app-cli-yargs/services.ts'
 import { createFileSystem } from '@dungarees/fs/service.ts'
 import { createSubProcessService } from '@dungarees/sub-process/service.ts'
 

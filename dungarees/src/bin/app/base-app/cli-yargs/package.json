@@ -1,5 +1,5 @@
 {
-  "name": "@dungarees/bin-cli-yargs-base-app",
+  "name": "@dungarees/bin-base-app-cli-yargs",
   "engines": {
     "node": ">=25.0.0"
   },
@@ -17,7 +17,7 @@
     "@dungarees/sub-process": "*"
   },
   "devDependencies": {
-    "@dungarees/bin-cli-yargs-fake-app": "*",
+    "@dungarees/bin-fake-app-cli-yargs": "*",
     "typescript": "^5.9.3",
     "vitest": "^3.0.2"
   },
