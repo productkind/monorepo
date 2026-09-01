@@ -6,6 +6,7 @@ import type {
   RecordToEntries,
 } from '@dungarees/core/type-util.ts'
 import { assertDefined, assertTypeByGuard } from '@dungarees/core/util.ts'
+import { isInteractorName, isRunnerName } from './guards.ts'
 import { instantiateService } from './test-environment.ts'
 import type {
   ConfigEntry,
@@ -13,7 +14,6 @@ import type {
   GetInstance,
   GetInstanceEntry,
   InteractorConfig,
-  RunnerConfig,
   ServiceConfig,
   TestEnviornmentState,
 } from './type.ts'
@@ -57,14 +57,14 @@ export const createWorld = <SERVICES extends Record<string, ServiceConfig>>(
     )
     const instantiatedService = await instantiateService(service, ...arg)
     await instantiatedService.instance.start()
-    if (isInteractorConfig(service)) {
+    if (isInteractorName(state.serviceConfigs, name)) {
       const context: GetContext<GetInstance<GetValue<Interactors>>> = (
         await instantiatedService.instance.startContext()
       ).context
       register(name, context)
       state.interactors.set(name, instantiatedService)
     }
-    if (isRunnerConfig(service)) {
+    if (isRunnerName(state.serviceConfigs, name)) {
       state.runners.set(name, instantiatedService)
     }
     console.log(`${name}: Started in step`)
@@ -80,9 +80,3 @@ export const createWorld = <SERVICES extends Record<string, ServiceConfig>>(
     register,
   }
 }
-
-const isInteractorConfig = (service: ServiceConfig | undefined): service is InteractorConfig =>
-  service?.type === 'interactor'
-
-const isRunnerConfig = (service: ServiceConfig | undefined): service is RunnerConfig =>
-  service?.type === 'runner'

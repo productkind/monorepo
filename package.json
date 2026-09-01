@@ -9,8 +9,7 @@
     "build": "zx ./productkind/scripts/build.ts && zx ./seminars/scripts/build.ts && zx ./kim-and-tim/scripts/build.ts",
     "init": "zx ./productkind/scripts/init.ts",
     "publish:dungarees": "dungarees publish-multi-lib ./dungarees",
-    "type-check": "tsc --noEmit -p tsconfig.json",
-    "type-check:test-environment": "tsc --noEmit -p dungarees/src/test-environment/tsconfig.json"
+    "type-check": "tsc --noEmit -p tsconfig.json"
   },
   "repository": {
     "type": "git",
