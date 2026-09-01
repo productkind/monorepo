@@ -12,6 +12,7 @@ import type {
   ServiceConfig,
   TestEnviornmentState,
 } from './type.ts'
+import { isInteractorName, isRunnerName } from './guards.ts'
 import type { TestEnvironmentWorld } from './world.ts'
 import { createWorld } from './world.ts'
 
@@ -50,14 +51,16 @@ export const createTestEnvironment = <const SERVICES extends Record<string, Serv
 
   const state: TestEnviornmentState<SERVICES> = {
     serviceConfigs,
-    interactors: new Map<string, { instance: GetValue<Interactor> } & DefaultConfig>(),
-    runners: new Map<string, { instance: GetValue<Runner> } & DefaultConfig>(),
+    interactors: new Map<GetKey<Interactor>, { instance: GetValue<Interactor> } & DefaultConfig>(),
+    runners: new Map<GetKey<Runner>, { instance: GetValue<Runner> } & DefaultConfig>(),
   }
 
   const isBeforeAll = ({ hook }: DefaultConfig): boolean => hook === 'before-all'
   const isNotBeforeAll = ({ hook }: DefaultConfig): boolean => hook !== 'before-all'
   const isBefore = ({ hook }: DefaultConfig): boolean => hook === 'before'
-  const keyValueToObject = <T>([name, service]: [string, T]): T & { name: string } => ({
+  const keyValueToObject = <NAME extends string, T>([name, service]: [NAME, T]): T & {
+    name: NAME
+  } => ({
     name,
     ...service,
   })
@@ -67,21 +70,35 @@ export const createTestEnvironment = <const SERVICES extends Record<string, Serv
     transform: (list: T[]) => Array<Promise<R>>,
   ): Promise<R[]> => await Promise.all(transform([...iterable]))
 
-  const forEachBeforeAllService = async (
-    mapper: (runner: { name: GetKey<Interactor> } & RunnerInstance) => Promise<void>,
-  ): Promise<void> => {
-    await asyncTransform([...state.runners.entries(), ...state.interactors.entries()], (list) =>
-      list.map(keyValueToObject).filter(isBeforeAll).map(mapper),
-    )
+  // The two maps are keyed by different subsets of the service names, so iterating them
+  // separately keeps each key correlated with its own instance type; merging them first
+  // collapses both to a union and loses that.
+  const forEachService = async ({
+    hasHook,
+    mapper,
+  }: {
+    hasHook: (config: DefaultConfig) => boolean
+    mapper: (
+      service: { name: GetKey<Interactor> | GetKey<Runner> } & (InteractorInstance | RunnerInstance),
+    ) => Promise<void>
+  }): Promise<void> => {
+    await Promise.all([
+      ...[...state.runners.entries()].map(keyValueToObject).filter(hasHook).map(mapper),
+      ...[...state.interactors.entries()].map(keyValueToObject).filter(hasHook).map(mapper),
+    ])
   }
 
+  const forEachBeforeAllService = async (
+    mapper: (
+      service: { name: GetKey<Interactor> | GetKey<Runner> } & (InteractorInstance | RunnerInstance),
+    ) => Promise<void>,
+  ): Promise<void> => await forEachService({ hasHook: isBeforeAll, mapper })
+
   const forEachScenarioService = async (
-    mapper: (interactor: { name: GetKey<Interactor> } & InteractorInstance) => Promise<void>,
-  ): Promise<void> => {
-    await asyncTransform([...state.interactors.entries(), ...state.runners.entries()], (list) =>
-      list.map(keyValueToObject).filter(isNotBeforeAll).map(mapper),
-    )
-  }
+    mapper: (
+      service: { name: GetKey<Interactor> | GetKey<Runner> } & (InteractorInstance | RunnerInstance),
+    ) => Promise<void>,
+  ): Promise<void> => await forEachService({ hasHook: isNotBeforeAll, mapper })
 
   const forEachBeforeService = async (
     mapper: (interactor: InteractorInstance) => Promise<void>,
@@ -98,13 +115,16 @@ export const createTestEnvironment = <const SERVICES extends Record<string, Serv
       list.map(async ([name, interactor]) => await mapper({ name, ...interactor })),
     )
 
-  const addToInstances = {
-    interactor: (name: string, instance: InstanceWithConfig<InteractorConfig>) => {
+  const addToInstances = (
+    name: string,
+    instance: InstanceWithConfig<InteractorConfig> & InstanceWithConfig<RunnerConfig>,
+  ): void => {
+    if (isInteractorName(serviceConfigs, name)) {
       state.interactors.set(name, instance)
-    },
-    runner: (name: string, instance: InstanceWithConfig<RunnerConfig>) => {
+    }
+    if (isRunnerName(serviceConfigs, name)) {
       state.runners.set(name, instance)
-    },
+    }
   }
 
   const instantiateAll = async (
@@ -115,7 +135,7 @@ export const createTestEnvironment = <const SERVICES extends Record<string, Serv
         .filter(([_, config]) => filter(config))
         .map(async ([key, service]) => {
           const instance = await instantiateService(service)
-          addToInstances[service.type](key, instance)
+          addToInstances(key, instance)
         }),
     )
   }

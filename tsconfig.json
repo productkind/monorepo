@@ -1,0 +1,9 @@
+{
+  "extends": "./dungarees/src/core/tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "module": "NodeNext"
+  },
+  "include": ["dungarees/src/**/*.ts", "dungarees/src/**/*.tsx"],
+  "exclude": ["**/node_modules/**"]
+}
