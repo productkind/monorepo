@@ -157,3 +157,29 @@ def loop_seam(path):
             ['magick', 'compare', '-metric', 'RMSE', f'{tmp}/first.png', f'{tmp}/last.png', 'null:'],
             capture_output=True, text=True).stderr
     return float(out.split('(')[1].split(')')[0]) if '(' in out else None
+
+
+def motion(path, samples=6):
+    """How much the picture actually changes, 0 to 1: the largest RMSE between sampled frames.
+
+    Duration, frame count and a clean loop seam all say nothing about whether anything moves. A
+    still photo with a jittering overlay can carry 16 frames and three seconds and still read as a
+    frozen image on screen, which is the one defect none of the other checks can see.
+    """
+    import tempfile
+
+    with tempfile.TemporaryDirectory() as tmp:
+        subprocess.run(['magick', str(path), '-coalesce', f'{tmp}/f-%03d.png'], capture_output=True)
+        frames = sorted(pathlib.Path(tmp).glob('f-*.png'))
+        if len(frames) < 2:
+            return 0.0
+        step = max(1, len(frames) // samples)
+        picked = frames[::step]
+        worst = 0.0
+        for first, second in zip(picked, picked[1:]):
+            out = subprocess.run(
+                ['magick', 'compare', '-metric', 'RMSE', str(first), str(second), 'null:'],
+                capture_output=True, text=True).stderr
+            if '(' in out:
+                worst = max(worst, float(out.split('(')[1].split(')')[0]))
+        return worst

@@ -137,9 +137,11 @@ export default defineVideo({
       endsParagraph: true,
     },
     {
-      // giphy "comment bubble notification": https://giphy.com/gifs/BOXzeoYdps0THTW5Wm
+      // giphy "typing message phone": https://giphy.com/gifs/3ohhwDlKkjDll35yOQ
+      // Replaced a cat-with-speech-bubble gif that turned out to be a still photo: 16 frames of
+      // nothing but the bubble outline wobbling by a pixel.
       text: "The waitlist link is in the comments.",
-      visual: gif({ src: 'section-18-comment.gif', place: 'above-captions' }),
+      visual: gif({ src: 'section-18-phone.gif', playbackRate: 0.84, place: 'above-captions' }),
     },
     {
       // giphy "email envelope notification": https://giphy.com/gifs/2wWBH0vXsVUmKtRJOe
