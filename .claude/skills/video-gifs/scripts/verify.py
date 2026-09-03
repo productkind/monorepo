@@ -16,8 +16,8 @@ import subprocess
 import time
 import urllib.request
 
-from common import (assets_dir, candidates_dir, gif_seconds, loop_seam, slots, stack, strip,
-                    timeline, video_root)
+from common import (assets_dir, candidates_dir, gif_seconds, loop_seam, motion, slots, stack,
+                    strip, timeline, video_root)
 
 
 def chosen_visuals(video, root=None):
@@ -148,6 +148,9 @@ def main():
             note += ' (invisible)' if seam < 0.1 else (
                 f' (visible jump: slow to {seconds / slot:.2f})' if seconds / slot >= 0.6
                 else ' (visible jump, but slowing would be under the 0.6 floor)')
+        moves = motion(folder / name)
+        if moves < 0.02:
+            note += f'  ** motion {moves:.3f}: this is a still image, replace it **'
         print(f'  {index:02d} {name:32} {seconds:5.2f}s  slot {slot:5.2f}s  {note}')
 
 

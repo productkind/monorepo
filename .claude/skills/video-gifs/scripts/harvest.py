@@ -10,7 +10,10 @@ least fixing. Nothing is chosen here: read the montage and pick with pick.py.
 
 import argparse
 
-from common import candidates_dir, fetch, gif_seconds, search, slots, stack, strip
+# Below this much frame-to-frame change, a gif reads as a still image on screen.
+STILL = 0.02
+
+from common import candidates_dir, fetch, gif_seconds, motion, search, slots, stack, strip
 
 
 def harvest(video, section, terms, skip, limit, root=None, slot=None):
@@ -47,6 +50,12 @@ def harvest(video, section, terms, skip, limit, root=None, slot=None):
             seconds, frames = gif_seconds(path)
             if not seconds:
                 continue
+            # A still photo with a jittering overlay can carry 16 frames and read as frozen on
+            # screen. Giphy is full of them and no other measurement notices.
+            moves = motion(path)
+            if moves < STILL:
+                print(f'  dropped {gif_id}: effectively a still image (motion {moves:.3f})')
+                continue
             rows.append({
                 'id': gif_id,
                 'term': term,
@@ -55,6 +64,7 @@ def harvest(video, section, terms, skip, limit, root=None, slot=None):
                 'frames': frames,
                 'size': f'{width}x{height}',
                 'repeats': slot / seconds,
+                'motion': moves,
             })
 
     rows.sort(key=lambda row: abs(row['repeats'] - 1))
@@ -84,7 +94,7 @@ def main():
     for index, row in enumerate(shown):
         print(
             f'  {index} {row["id"]:20} {row["seconds"]:5.2f}s {row["repeats"]:4.1f}x '
-            f'{row["size"]:>9}  {row["term"][:26]:26} {row["title"]}'
+            f'{row["size"]:>9} m{row["motion"]:.2f}  {row["term"][:22]:22} {row["title"]}'
         )
 
     cache = candidates_dir(args.video)

@@ -99,6 +99,13 @@ women in product and women in tech."* In practice:
 
 ### Judging the montage
 
+**Check that something actually moves.** Giphy is full of still photos with a jittering overlay:
+`section-18-comment.gif` in video 2 carried 16 frames and 3.6 seconds, passed duration, dimension,
+text and loop-seam checks, and its entire animation was the speech bubble's outline wobbling by a
+pixel while the cat stayed pixel-identical. `harvest.py` now drops candidates whose frame-to-frame
+change is under 0.02 and prints the value (`m0.14`) for the rest; `verify.py` flags any chosen gif
+that falls under it. Both use `motion()` in `common.py`.
+
 Reject outright:
 - **Burned-in captions or subtitles.** Most of Giphy's meme stock has them. This kills more
   candidates than anything else.
