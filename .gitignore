@@ -136,3 +136,6 @@ dist
 dist
 reports
 
+# Pyhton
+__pycache__/
+*.py[cod]
