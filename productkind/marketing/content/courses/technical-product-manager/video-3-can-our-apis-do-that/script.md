@@ -4,29 +4,29 @@ channels: [linkedin, tiktok, instagram, youtube-shorts]
 account: little-parrot
 ---
 
-# The dreaded question
+# You said yes to a simple feature
 
-**Runs:** about 42 seconds. **Search phrase:** "how does an API work". **Need
-it comes from:** following data across APIs and integrations.
+**Runs:** about 45 seconds. **Search phrase:** "how does an API work". **Need
+it comes from:** following data across APIs and integrations, and judging a
+request before committing to it.
 
-**Treatment:** narration over a screen recording of a documentation page with
-one field highlighted.
+**Treatment:** narration over a screen recording of an integration's
+documentation, with one field found and one missing.
 
 | Beat | Narration | Visual | On-screen text |
 |---|---|---|---|
-| Hook (0-4s) | "Ever been asked the dreaded question? Can our systems already do this?" | Text card, the question arriving as a message | **"Can our systems already do this?"** |
-| The moment (4-10s) | "You don't know. So it goes to engineering, and the answer arrives after you've agreed the roadmap." | The message unanswered, then a roadmap with a slipped date | The answer comes back too late |
-| The shift (10-15s) | "You can answer most of it yourself, and it doesn't involve writing any code." | Documentation page opening | No code involved |
-| How (15-20s) | "Those tools publish a list of what data you can get. You read the names." | Screen recording: the field list, one name highlighted | A list of field names |
-| It's there (20-23s) | "Your stakeholder wants the customer's last payment date. There it is." | The date field highlighted | It's there |
-| Or it isn't (23-30s) | "Or it isn't, and you've found the hard part of the feature while you can still change the scope." | A missing field circled, then a scope line being edited | It isn't, and you found out in time |
-| The payoff (30-34s) | "Next month, same question, and you answer it in the meeting." | The same question, answered on the spot | You answer it in the room |
-| Comment prompt (34-36s) | "Who gets asked this in your team?" | The question card again | Who gets asked this? |
-| CTA (36-42s) | "We're building this for product managers who manage software without an engineering background. Link's in the comments." | Waitlist page | littleparrot.app/guides/technical-product-manager |
+| Hook (0-4s) | "A stakeholder asked for something simple. Just sync it with the CRM." | Screen recording: a one-line request in a ticket, then a date being agreed | **"It's just a small change"** |
+| The moment (4-11s) | "You said yes. Two weeks in, engineering tells you the integration doesn't carry that field, and nobody can add it." | The request, then the reply arriving, then a roadmap date slipping | The integration can't carry it |
+| What it costs (11-16s) | "You already promised the date. Now you're renegotiating a feature you should never have agreed to." | The stakeholder message, then the date being moved | Renegotiating your own yes |
+| The gap (16-22s) | "You couldn't have known. Nobody showed you how to check what your systems can already do." | A documentation page, unopened | Nobody showed you where to look |
+| What changes (22-32s) | "After the learning path, you'll be able to open the integrations you already pay for, see what data they can carry, and know whether the request is possible before you answer." | The field list, one name highlighted, then a missing one circled | It's there · it isn't · either way you know first |
+| The payoff (32-37s) | "So next time you say 'let me check', and then you check it yourself." | The same question, answered on the spot | "Let me check" · then you do |
+| Comment prompt (37-39s) | "What 'simple' request turned out hardest?" | The original one-line ticket again | What was yours? |
+| CTA (39-45s) | "That's the learning path we're building: technical product manager, without becoming an engineer. Link's in the comments." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
 
 **Cut cadence:** nothing holds on screen for more than three seconds. The
-Visual column lists every change in order, so a three-part visual is three
-cuts, and the longest beats are the ones carrying the most of them.
+Visual column lists every change in order, so a four-part visual is four cuts,
+and the longest beats are the ones carrying the most of them.
 
 **Channel swap:** on TikTok, Reels and Shorts, replace the last line with
 "Follow for more of these" and speak the URL, then pin it in a comment. The
@@ -34,10 +34,10 @@ comment prompt stays on every channel, because it's what earns replies.
 
 ## Production notes
 
-- **Screen recording needed:** the documentation for a service Little Parrot
-  actually uses, so the field names are real. No live request, no credentials
-  and no customer detail in frame.
-- **The hook is ours, not a quote.** Product managers asked this in the
-  research in more formal words; this is the version a viewer recognises.
-- **Don't define API in the narration.** The screen recording shows what it
-  does, and the definition belongs in the course.
+- **Screen recording needed:** documentation for a service Little Parrot
+  actually uses, so the field names are real. No live request, no credentials,
+  no customer detail in frame.
+- **This one is the aftermath of a yes.** Video 7 is the meeting where the yes
+  gets given, so keep this scene in the two weeks afterwards and let 7 own the
+  discussion itself.
+- **Don't define API in the narration.** The recording shows what it does.

@@ -1,12 +1,12 @@
 # Technical Product Manager: eight video scripts
 
-Eight 40-second videos for the technical product manager experiment, built from
+Eight 45-second videos for the technical product manager experiment, built from
 the research in `productkind/ai-research/pm-technical-fluency/`. Each one opens
-on a situation the viewer recognises from their own week, then shows what
-changes once they can handle it.
+on a situation the viewer has been in, shows what it cost them, and ends on
+what they'll be able to do once they've done the learning path.
 
 - **Brand:** Little Parrot. Narration and screen recording, nobody on camera.
-- **Lead channel:** LinkedIn native video. One 36 to 45 second cut works on
+- **Lead channel:** LinkedIn native video. One 41 to 46 second cut works on
   every channel, with a CTA swap for TikTok, Reels and Shorts.
 - **Destination:** the waitlist page,
   `https://littleparrot.app/guides/technical-product-manager`
@@ -14,58 +14,74 @@ changes once they can handle it.
 
 ## The shape of every script
 
-| Section | Job |
+| Beat | Job |
 |---|---|
 | Hook | The situation, stated so the viewer thinks "that's me" inside three seconds. Always about them, never a technical term. |
-| The moment | The specific version of that situation, so they know we've been in it. |
-| Why it costs them | What the situation actually costs. One beat, no more. |
-| The shift | The thing that changes it, named but not taught. |
-| The transformation | What their week looks like on the other side. |
-| The payoff | One line they'd repeat to a colleague. |
-| Comment prompt | One question about their own team, which is what earns replies. |
-| CTA | Who the learning path is for, and the link. |
+| The moment | The specific version of it, with the detail that makes it real. |
+| What it costs | The consequence they actually felt. One beat. |
+| The gap | Why they couldn't have handled it, said without blame. This is the beat that earns the next one. |
+| What changes | What they'll be able to do after the learning path. Concrete and in order, never a promise of confidence. |
+| The payoff | What that changes in the room. One line they'd repeat to a colleague. |
+| Comment prompt | One question about their own team. |
+| CTA | The learning path, named, and the link. |
 
-Five rules the set follows:
+Rules the set follows:
 
-- **No teaching sequences.** Terms get named on screen and shown in a
-  recording; the definitions belong in the course. Two earlier drafts of
-  scripts 4 and 7 explained six delivery stages and technical debt in the
-  video, and that is exactly where a viewer leaves.
-- **Nothing holds on screen for more than three seconds.** The Visual column
-  lists every change in order, so a three-part visual is three cuts. Each
-  script has a cut cadence note.
-- **No video names a step of the learning path.** The path is still being
-  built and the order may change, so the CTA describes who it's for and
-  nothing more.
-- **Every hook opens differently.** Eight videos that all start "have you
-  ever" read as a template by the third one, and the first two words are the
-  ones a muted viewer reads, so the specific situation goes first. Hook cards
-  are six words or fewer, because that's what can be read in a second and a
-  half.
-- **Every video ends on a question before the link.** Sends and comments are
-  what carry a post to non-followers on both platforms, and an institutional
-  sign-off earns neither.
+- **The narration is one argument, not eight sentences.** Each beat has to
+  follow from the one before it. The test: read the Narration column on its own
+  with the beat names hidden, and it should still read as one person talking.
+  An earlier draft failed this. It said "you don't know, so it goes to
+  engineering", then "you can answer most of it yourself", which contradicts
+  the situation the hook had just set up.
+- **The transformation is always after the learning path**, never something the
+  viewer can already do. That's what makes the CTA the end of the story rather
+  than an ask stapled to the end.
+- **The CTA names the thing.** "We're building this" left the viewer working
+  out what "this" was. Every CTA now says what it is: the learning path that
+  makes you a technical product manager without becoming an engineer, which is
+  also the waitlist page's own heading, so the click carries straight on.
+- **No teaching sequences.** Terms appear on screen and the recording shows
+  what they do; the definitions belong in the course.
+- **Nothing on screen holds for more than three seconds.** The Visual column
+  lists every change in order, so a four-part visual is four cuts.
+- **No video names a step of the learning path.** The path is still being built
+  and the order may change.
+- **Every hook opens differently.** Eight videos that all start "have you ever"
+  read as a template by the third one, and the first two words are the ones a
+  muted viewer reads. Hook cards are six words or fewer.
 
 ## The eight
 
-| # | Script | Hook | Need it comes from |
+| # | Script | The situation | What they'll be able to do |
 |---|---|---|---|
-| 1 | [Nodding along in stand-up](video-1-say-it-back/script.md) | "You've nodded along in a stand-up, hoping nobody asks you a follow-up question." | Taking part in technical conversations |
-| 2 | [You only know the screens](video-2-follow-one-click/script.md) | "So how does your product actually work?" You can demo every screen, and that's where it stops. | How the product fits together |
-| 3 | [The dreaded question](video-3-can-our-apis-do-that/script.md) | "Ever been asked the dreaded question? Can our systems already do this?" | APIs, integrations and data flow |
-| 4 | ["It's done." Two weeks later, still not live](video-4-where-is-the-change/script.md) | "'It's done.' Two weeks later, your stakeholder still can't see it." | The route from a change to users |
-| 5 | ["Any idea what this is?"](video-5-not-a-bug-report/script.md) | "You forward a customer's screenshot to engineering. Any idea what this is?" | Investigating before escalating |
-| 6 | [Waiting days for a number you need tomorrow](video-6-answer-the-number/script.md) | "You need a number for tomorrow's meeting. Analytics will have it next week." | Product data questions |
-| 7 | [You agreed the date. Then came the hard part](video-7-four-questions/script.md) | "Someone calls your feature a small change. You agree a date." | Technical consequences before commitment |
-| 8 | ["Can we just ship it?"](video-8-prototype-not-product/script.md) | "You built it with AI, showed it around, and somebody asked if we can just ship it." | Prototypes and where production starts |
+| 1 | [Nodding along in stand-up](video-1-say-it-back/script.md) | A word goes past in stand-up, you don't ask, and three weeks later the date is gone with it | Say a change back in their own words, ask what it does to the product, get an answer in the room |
+| 2 | [You only know the screens](video-2-follow-one-click/script.md) | Asked how their own product works, they can demo every screen and that's where it stops | Map their product's dependencies, owners, bottlenecks and what breaks when one piece goes |
+| 3 | [You said yes to a simple feature](video-3-can-our-apis-do-that/script.md) | Said yes to a "simple" request, then found out two weeks in that the integration can't carry it | Check what the integrations they already pay for can do, before answering |
+| 4 | [Done, and your users still don't have it](video-4-where-is-the-change/script.md) | Built, tested, and waiting behind another team's monthly release | Follow a change through review, testing, environments and every team it waits on, and say what's holding it |
+| 5 | [All you can send is their screenshot](video-5-not-a-bug-report/script.md) | A customer reports a bug and all they can forward is a screenshot | Reproduce it, read the error code, and find the failed request in the browser themselves |
+| 6 | [Needed tomorrow, ready next week](video-6-answer-the-number/script.md) | A one-line data question that analytics will answer next week | Write the query and check what the number includes |
+| 7 | [Nobody raised the hard part](video-7-four-questions/script.md) | The decision got made in a meeting they were in, and nobody surfaced the complexity | Run that discussion with the four questions that surface it before anyone commits |
+| 8 | ["When can we launch it?"](video-8-prototype-not-product/script.md) | A business stakeholder saw the AI prototype and asked when it ships | Name what production needs that the prototype skipped, and hand both over |
 
-**The hooks are ours, not quotes.** They're reformulated from the situations
-product managers described in the
+**The situations are ours, not quotes.** They're written from what product
+managers described in the
 [evidence ledger](../../../../ai-research/pm-technical-fluency/non-technical-pm-technical-needs-validation-2026-08.md#a-strictly-eligible-evidence-used-for-ranking)
 and the
 [needs research](../../../../ai-research/pm-technical-fluency/non-technical-pm-technical-needs-2024-2026.md#1-top-recurring-technical-needs),
-written the way a viewer would say them rather than the way a LinkedIn post
-did. No script names or quotes a real person.
+in the words a viewer would use. No script names or quotes a real person.
+
+**Videos 3 and 7 share a subject and split it deliberately.** Video 3 is the
+two weeks after a yes has been given. Video 7 is the meeting where it gets
+given. Keep them apart in the edit and post them a fortnight apart.
+
+## Pitched at software product managers, not beginners
+
+The audience already knows what a frontend, a backend and a database are. A
+video that explains those three loses them, and it also misses the actual gap
+the research found: infrastructure and the complexity an enterprise product
+carries. Environments, access, reliability, performance, integrations, data
+migrations, and the parts other teams own. Video 2 is built on that, and the
+others assume it.
 
 ## Choices made
 
@@ -96,8 +112,8 @@ did. No script names or quotes a real person.
 
 ## Posting notes
 
-- **Order:** 1, 5, 4, 7, 2, 8, 3, 6. Scripts 1, 5 and 4 have the most
-  recognisable situations, so they go first. Pin 1.
+- **Order:** 1, 5, 4, 8, 2, 7, 6, 3. The first three have the most
+  recognisable situations, and 3 and 7 are kept a fortnight apart. Pin 1.
 - **Cadence:** two a week over four weeks, so the experiment has a readable
   result before the next batch.
 - **LinkedIn:** the waitlist link goes in the first comment, not the post body.
@@ -115,6 +131,7 @@ did. No script names or quotes a real person.
 
 ## What the videos claim
 
-Each video shows one thing changing and the CTA says the path isn't open yet,
-which is true. Nothing here promises a viewer will read their team's code,
-judge an estimate alone, or move into an engineering role.
+Every "what changes" beat lists what the learning path teaches, and each one
+maps to something on the waitlist page. Nothing here promises a viewer will
+read their team's code, judge an estimate alone, or move into an engineering
+role.

@@ -4,28 +4,30 @@ channels: [linkedin, tiktok, instagram, youtube-shorts]
 account: little-parrot
 ---
 
-# "Any idea what this is?"
+# All you can send is their screenshot
 
-**Runs:** about 41 seconds. **Search phrase:** "how to write a bug report".
-**Need it comes from:** investigating an issue before escalating it.
+**Runs:** about 44 seconds. **Search phrase:** "how to write a bug report".
+**Need it comes from:** investigating and documenting an issue before
+escalating it.
 
-**Treatment:** narration over a screen recording of a support message and the
-report being typed.
+**Treatment:** narration over a screen recording of the bug being reproduced
+in the Little Parrot app, the browser's network panel, and the report being
+typed.
 
 | Beat | Narration | Visual | On-screen text |
 |---|---|---|---|
-| Hook (0-4s) | "You forward a customer's screenshot to engineering. Any idea what this is?" | Screen recording: the forward being sent, one screenshot attached | **"Any idea what this is?"** |
-| The moment (4-11s) | "It comes back as a question every time. Who was it? What were they doing? Does it always happen?" | Three questions arriving as three separate cuts | Three questions back, no answers |
-| Why it costs you (11-15s) | "So you ask the customer, you wait, and nobody has looked at it yet." | Timestamps ticking on an unanswered thread | Still nobody investigating |
-| The shift (15-22s) | "Five lines change that. What you did. What you expected. What happened. Who it affects. And what you've already ruled out." | The five lines typed one per cut, then held together | What I did · expected · happened · who · ruled out |
-| The transformation (22-28s) | "That last line is the one engineers notice, because it tells them where you've already looked." | The fifth line highlighted | The last line changes the reply |
-| The payoff (28-33s) | "Instead of passing the problem on, you hand over an investigation somebody can start on." | The finished report next to the original screenshot | An investigation, not a forward |
-| Comment prompt (33-36s) | "How often does a screenshot land in your inbox?" | The original screenshot again | How often does this happen to you? |
-| CTA (36-41s) | "We're building this for product managers who don't come from engineering. Link's in the comments." | Waitlist page | littleparrot.app/guides/technical-product-manager |
+| Hook (0-4s) | "A customer reports a bug. All you can send engineering is their screenshot." | Screen recording: the forward being sent, one screenshot attached | **"Any idea what this is?"** |
+| The moment (4-10s) | "It comes back as questions. Who was it? What did they do? What did the error say?" | Three questions arriving as three separate cuts | Three questions back, no answers |
+| What it costs (10-15s) | "So you ask the customer, wait two days, and nobody has started looking." | Timestamps ticking on an unanswered thread | Still nobody investigating |
+| The gap (15-19s) | "You could answer all of it yourself, if somebody showed you where to look." | A browser open on the product, nothing inspected yet | Nobody showed you where to look |
+| What changes (19-29s) | "After the learning path, you'll reproduce it on your own account, read the error code, and open the panel in your browser that shows which request to the server failed." | Reproducing the error, then the network panel with the failed request highlighted, one per cut | reproduce it · read the error · find the failed request |
+| The payoff (29-36s) | "Engineering gets the error, the request and what you've ruled out, so they start fixing instead of asking." | The finished report next to the original screenshot | They start fixing, not asking |
+| Comment prompt (36-39s) | "How long does a bug wait where you work?" | The unanswered thread again | How long at yours? |
+| CTA (39-44s) | "That's the learning path we're building: technical product manager, without becoming an engineer. Link's in the comments." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
 
 **Cut cadence:** nothing holds on screen for more than three seconds. The
-Visual column lists every change in order, so a three-part visual is three
-cuts, and the longest beats are the ones carrying the most of them.
+Visual column lists every change in order, so a four-part visual is four cuts,
+and the longest beats are the ones carrying the most of them.
 
 **Channel swap:** on TikTok, Reels and Shorts, replace the last line with
 "Follow for more of these" and speak the URL, then pin it in a comment. The
@@ -34,7 +36,9 @@ comment prompt stays on every channel, because it's what earns replies.
 ## Production notes
 
 - **Screen recording needed:** a reproducible problem in the Little Parrot app
-  or a test account. Rewrite the support message for the recording, and use no
-  real name, email or account.
-- **The five lines are the save-worthy frame**, which also makes this the
-  natural companion carousel for Instagram.
+  or a test account, plus the browser network panel showing the failed request
+  and its status code. Rewrite the support message for the recording, and use
+  no real name, email or account.
+- **The panel is described, never named.** "The panel in your browser that
+  shows what the page asked the server for" is what the viewer can follow; the
+  tool name and the status codes belong in the course.
