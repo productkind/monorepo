@@ -30,6 +30,9 @@ export default tseslint.config(
       ],
       // Replaces eslint-plugin-deprecation, which typescript-eslint v8 superseded.
       '@typescript-eslint/no-deprecated': 'error',
+      // No escape hatch in production code: an unused binding there is a defect, not a
+      // convention. Tests get one, see the override below.
+      '@typescript-eslint/no-unused-vars': 'error',
     },
   },
   {
@@ -38,6 +41,23 @@ export default tseslint.config(
     extends: [tseslint.configs.disableTypeChecked],
     rules: {
       '@typescript-eslint/explicit-function-return-type': 'off',
+    },
+  },
+  {
+    // A test may need a binding purely to host a `@ts-expect-error` or to satisfy a callback
+    // signature. It has to say so in its name; `_` is avoided because it also reads as
+    // "private". Allowed only here, so production code cannot use the same excuse.
+    files: ['**/*.test.ts', '**/*.test.tsx'],
+    rules: {
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^[Tt]estUnused_',
+          varsIgnorePattern: '^[Tt]estUnused_',
+          caughtErrorsIgnorePattern: '^[Tt]estUnused_',
+          destructuredArrayIgnorePattern: '^[Tt]estUnused_',
+        },
+      ],
     },
   },
   {

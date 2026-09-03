@@ -37,9 +37,9 @@ test('Split<PATH, DELIMITER>', () => {
   expectTypeOf<Split<'a', '.'>>().toEqualTypeOf<readonly ['a']>()
   expectTypeOf<Split<'', '.'>>().toEqualTypeOf<readonly ['']>()
   // @ts-expect-error it has to be a string
-  type error1 = Split<1, '.'>
+  type TestUnused_NonStringInput = Split<1, '.'>
   // @ts-expect-error it has to be a string
-  type error2 = Split<'', 1>
+  type TestUnused_NonStringDelimiter = Split<'', 1>
 })
 
 test('SplitObjectPath<PATH>', () => {
@@ -47,7 +47,7 @@ test('SplitObjectPath<PATH>', () => {
   expectTypeOf<SplitObjectPath<'a'>>().toEqualTypeOf<readonly ['a']>()
   expectTypeOf<SplitObjectPath<''>>().toEqualTypeOf<readonly ['']>()
   // @ts-expect-error it has to be a string
-  type error = SplitObjectPath<1>
+  type TestUnused_NonStringObjectPath = SplitObjectPath<1>
 })
 
 test('SplitFilePath<PATH>', () => {
@@ -55,29 +55,29 @@ test('SplitFilePath<PATH>', () => {
   expectTypeOf<SplitFilePath<'a'>>().toEqualTypeOf<readonly ['a']>()
   expectTypeOf<SplitFilePath<''>>().toEqualTypeOf<readonly ['']>()
   // @ts-expect-error it has to be a string
-  type error = SplitFilePath<1>
+  type TestUnused_NonStringFilePath = SplitFilePath<1>
 })
 
 test('StringLiteral<LITERAL>', () => {
   const literal: StringLiteral<'asd'> = 'asd'
-  expectTypeOf<typeof literal>().toEqualTypeOf<'asd'>()
+  expectTypeOf(literal).toEqualTypeOf<'asd'>()
   // Widened through an annotation rather than an `as` cast, so rule 4 still holds.
   const widened: string = 'asd'
   // @ts-expect-error it has to be a literal
   const nonLiteral: StringLiteral<'asd'> = widened
-  expectTypeOf<typeof nonLiteral>().toEqualTypeOf<'asd'>()
+  expectTypeOf(nonLiteral).toEqualTypeOf<'asd'>()
 })
 
 test('ObjectWithStringLiteralKey<KEY, VALUE>', () => {
   const obj: ObjectWithStringLiteralKey<'a', 1> = {
     a: 1,
   } as const
-  expectTypeOf<typeof obj>().toEqualTypeOf<{ a: 1 }>()
+  expectTypeOf(obj).toEqualTypeOf<{ a: 1 }>()
   // @ts-expect-error it has to be a literal
   const nonLiteral: ObjectWithStringLiteralKey<'a', 1> = {
     a: 1,
   } as unknown as Record<string, 1>
-  expectTypeOf<typeof nonLiteral>().toEqualTypeOf<{ a: 1 }>()
+  expectTypeOf(nonLiteral).toEqualTypeOf<{ a: 1 }>()
 })
 
 test('JsonType', () => {
@@ -99,10 +99,10 @@ test('JsonType', () => {
 
 test('TokenNonEmptyString<TOKEN>', () => {
   const token: TokenNonEmptyString<'a'> = 'a'
-  expectTypeOf<typeof token>().toEqualTypeOf<'a'>()
+  expectTypeOf(token).toEqualTypeOf<'a'>()
   // @ts-expect-error it cannot be empty
   const nonToken: TokenNonEmptyString<''> = ''
-  expectTypeOf<typeof nonToken>().toEqualTypeOf<never>()
+  expectTypeOf(nonToken).toEqualTypeOf<never>()
 })
 
 test('Guard<TYPE>', () => {
@@ -114,8 +114,8 @@ test('Guard<TYPE>', () => {
 })
 
 test('GetGuarded<GUARD>', () => {
-  const guard = (arg: unknown): arg is 1 => arg === 1
-  expectTypeOf<GetGuarded<typeof guard>>().toEqualTypeOf<1>()
+  const testUnused_guard = (arg: unknown): arg is 1 => arg === 1
+  expectTypeOf<GetGuarded<typeof testUnused_guard>>().toEqualTypeOf<1>()
 })
 
 test('EntryTuples', () => {
