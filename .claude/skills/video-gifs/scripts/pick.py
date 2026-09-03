@@ -41,12 +41,14 @@ def main():
     parser.add_argument('--video', required=True)
     parser.add_argument('--pick', action='append', required=True,
                         help='section=gifId:name, e.g. 10=w5xEwipLyIBMdINSvn:hand-up')
+    parser.add_argument('--slot', type=float, default=None,
+                        help='seconds on screen, when timeline.json does not exist yet')
     parser.add_argument('--root', default=None)
     args = parser.parse_args()
 
     folder = assets_dir(args.video, args.root)
     folder.mkdir(parents=True, exist_ok=True)
-    slot_of = slots(args.video, args.root)
+    slot_of = {} if args.slot else slots(args.video, args.root)
 
     for spec in args.pick:
         section, rest = spec.split('=', 1)
@@ -57,7 +59,7 @@ def main():
 
         seconds, frames = gif_seconds(target)
         width, height = gif_size(target)
-        slot = slot_of[index]
+        slot = args.slot if args.slot else slot_of[index]
         knob, why = advise(seconds, slot)
 
         print(f'\n{target.name}  {seconds:.2f}s {frames}f {width}x{height} '

@@ -13,8 +13,10 @@ import argparse
 from common import candidates_dir, fetch, gif_seconds, search, slots, stack, strip
 
 
-def harvest(video, section, terms, skip, limit, root=None):
-    slot = slots(video, root)[section]
+def harvest(video, section, terms, skip, limit, root=None, slot=None):
+    # An explicit slot lets a video be sourced before narrate has run, from a word-count estimate.
+    # Re-check the fits with verify.py once the real timeline exists.
+    slot = slot if slot else slots(video, root)[section]
     cache = candidates_dir(video)
     seen, rows = set(skip), []
 
@@ -67,11 +69,15 @@ def main():
     parser.add_argument('--skip', default='', help='comma-separated gif ids already rejected')
     parser.add_argument('--show', type=int, default=7, help='how many to montage')
     parser.add_argument('--limit', type=int, default=25, help='results per search term')
+    parser.add_argument('--slot', type=float, default=None,
+                        help='seconds on screen, when timeline.json does not exist yet')
     parser.add_argument('--root', default=None)
     args = parser.parse_args()
 
     skip = [value for value in args.skip.split(',') if value]
-    slot, rows = harvest(args.video, args.section, args.terms, skip, args.limit, args.root)
+    slot, rows = harvest(
+        args.video, args.section, args.terms, skip, args.limit, args.root, args.slot
+    )
     shown = rows[: args.show]
 
     print(f'section {args.section:02d}  slot {slot:.1f}s  {len(rows)} candidates after filtering')
