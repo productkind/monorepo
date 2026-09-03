@@ -50,12 +50,6 @@ def harvest(video, section, terms, skip, limit, root=None, slot=None):
             seconds, frames = gif_seconds(path)
             if not seconds:
                 continue
-            # A still photo with a jittering overlay can carry 16 frames and read as frozen on
-            # screen. Giphy is full of them and no other measurement notices.
-            moves = motion(path)
-            if moves < STILL:
-                print(f'  dropped {gif_id}: effectively a still image (motion {moves:.3f})')
-                continue
             rows.append({
                 'id': gif_id,
                 'term': term,
@@ -64,11 +58,30 @@ def harvest(video, section, terms, skip, limit, root=None, slot=None):
                 'frames': frames,
                 'size': f'{width}x{height}',
                 'repeats': slot / seconds,
-                'motion': moves,
             })
 
     rows.sort(key=lambda row: abs(row['repeats'] - 1))
     return slot, rows
+
+
+def keep_moving(rows, video, show):
+    """Take candidates off the sorted list until `show` of them actually move.
+
+    A still photo with a jittering overlay can carry 16 frames and three seconds and still read as
+    frozen on screen, and no other measurement notices. Measuring costs a full coalesce per gif, so
+    it happens here, on the few candidates that could be chosen, rather than on every search hit.
+    """
+    cache = candidates_dir(video)
+    kept = []
+    for row in rows:
+        if len(kept) == show:
+            break
+        row['motion'] = motion(cache / f'{row["id"]}.gif')
+        if row['motion'] < STILL:
+            print(f'  dropped {row["id"]}: a still image (motion {row["motion"]:.3f})')
+            continue
+        kept.append(row)
+    return kept
 
 
 def main():
@@ -88,9 +101,8 @@ def main():
     slot, rows = harvest(
         args.video, args.section, args.terms, skip, args.limit, args.root, args.slot
     )
-    shown = rows[: args.show]
-
     print(f'section {args.section:02d}  slot {slot:.1f}s  {len(rows)} candidates after filtering')
+    shown = keep_moving(rows, args.video, args.show)
     for index, row in enumerate(shown):
         print(
             f'  {index} {row["id"]:20} {row["seconds"]:5.2f}s {row["repeats"]:4.1f}x '

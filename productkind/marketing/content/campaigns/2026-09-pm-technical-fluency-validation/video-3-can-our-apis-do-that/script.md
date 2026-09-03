@@ -6,13 +6,6 @@ account: little-parrot
 
 # You said yes to a simple feature
 
-**Runs:** about 49 seconds. **Search phrase:** "how does an API work". **Need
-it comes from:** following data across APIs and integrations, and judging a
-request before committing to it.
-
-**Treatment:** narration over a screen recording of an integration's
-documentation, with one field found and one missing.
-
 A stakeholder asked for something simple. Just sync it with the CRM.
 
 You said yes. Two weeks in, engineering tells you the integration doesn't
@@ -36,24 +29,28 @@ learning path opens.
 
 What 'simple' request turned out hardest?
 
-**Cut cadence:** nothing holds on screen for more than three seconds. The
-Visual column lists every change in order, so a four-part visual is four cuts,
-and the longest beats are the ones carrying the most of them.
+## Channel swap
 
-**Channel swap:** the CTA line works as written on LinkedIn (first comment) and
-YouTube Shorts (pinned comment), where a link in a comment is clickable. On
-TikTok, pin the link too, and also speak and show the URL, because the account
-has no bio link until 1,000 followers. On Instagram Reels, speak and show the
-URL instead of saying "in the comments", because Instagram links aren't
-clickable in captions or comments and the bio holds five slots for more than
-eight destinations. The comment prompt is the last thing said on every channel.
+The CTA line works as written on LinkedIn (first comment) and YouTube Shorts
+(pinned comment), where a link in a comment is clickable. On TikTok, pin the
+link too, and also speak and show the URL, because the account has no bio link
+until 1,000 followers. On Instagram Reels, speak and show the URL instead of
+saying "in the comments", because Instagram links aren't clickable in captions
+or comments and the bio holds five slots for more than eight destinations. The
+comment prompt is the last thing said on every channel.
 
 ## Production notes
 
 - **Screen recording needed:** documentation for a service Little Parrot
   actually uses, so the field names are real. No live request, no credentials,
   no customer detail in frame.
+- **Payoff to protect:** the three moves in "What changes", in order: open the
+  documentation, see which fields it exposes, answer before committing.
+  Everything else can be trimmed for time, that can't.
 - **This one is the aftermath of a yes.** Video 7 is the meeting where the yes
   gets given, so keep this scene in the two weeks afterwards and let 7 own the
   discussion itself.
 - **Don't define API in the narration.** The recording shows what it does.
+- **The ask in the hook is ours, not a quote.** "Just sync it with the CRM" is
+  how a stakeholder phrases it, in the words a viewer would recognise, and
+  no real person is quoted anywhere in the set.
