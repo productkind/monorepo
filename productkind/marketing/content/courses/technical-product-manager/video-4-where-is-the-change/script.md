@@ -7,8 +7,8 @@ account: little-parrot
 # Done, and your users still don't have it
 
 **Runs:** about 44 seconds. **Search phrase:** "staging vs production". **Need
-it comes from:** understanding the route from a finished change to users, the
-need with the strongest evidence across communities.
+it comes from:** understanding the route from a finished change to users, one
+of only two needs with strict validation evidence in more than one community.
 
 **Treatment:** narration over a screen recording that follows one finished
 change as far as it can go, and stops.

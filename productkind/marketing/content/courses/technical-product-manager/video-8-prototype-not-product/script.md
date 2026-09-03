@@ -6,7 +6,7 @@ account: little-parrot
 
 # "When can we launch it?"
 
-**Runs:** about 44 seconds. **Search phrase:** "AI prototyping for product
+**Runs:** about 46 seconds. **Search phrase:** "AI prototyping for product
 managers". **Need it comes from:** building a bounded prototype and knowing
 what production needs that a prototype skips.
 
@@ -15,14 +15,14 @@ AI agent, then the production list written next to it.
 
 | Beat | Narration | Visual | On-screen text |
 |---|---|---|---|
-| Hook (0-6s) | "You built something with AI to test an idea. Your stakeholder saw it and asked when we launch." | Screen recording: a working prototype, then the message "when can we launch this?" | **"When can we launch it?"** |
-| The moment (6-10s) | "It works on your screen, so to them it looks finished." | The prototype being clicked through, smoothly | It works. On your screen. |
-| What it costs (10-14s) | "And you can't explain why it isn't, so you sound like you're stalling." | The reply box, empty, cursor blinking | You sound like you're stalling |
-| The gap (14-20s) | "What you built proves the idea. What it skips is everything a real product runs on." | The prototype, then the same screen with gaps marked | Proves the idea. Runs on nothing. |
-| The setup (20-25s) | "If you want to answer that stakeholder properly, we're building a learning path for it." | Little Parrot mark, then the learning path list appearing | A learning path for answering properly |
-| What changes (25-36s) | "By the end you'll be able to name it: whose data it holds, who's allowed in, what it does under real load, what breaks at 2am, and who maintains it after you." | Each item written onto the list next to the prototype, one per cut | whose data · who has access · under load · at 2am · who maintains it |
-| CTA (36-41s) | "The waitlist link is in the comments. Sign up and we'll let you know when it opens." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
-| Comment prompt (41-44s) | "Ever been asked to ship a prototype?" | The "when can we launch this?" message again | Have you been asked this? |
+| Hook (0-7s) | "You built something with AI to test an idea. Your stakeholder saw it and asked when we can launch it." | Screen recording: a working prototype, then the message "when can we launch this?" | **"When can we launch it?"** |
+| The moment (7-11s) | "It works on your screen, so to them it looks finished." | The prototype being clicked through, smoothly | Works on your screen only |
+| What it costs (11-15s) | "And you can't explain why it isn't, so you sound like you're stalling." | The reply box, empty, cursor blinking | You sound like you're stalling |
+| The gap (15-20s) | "Your prototype proves the idea works. None of what keeps a real product running is there." | The prototype, then the same screen with gaps marked | Proves the idea, nothing underneath it |
+| The setup (20-26s) | "If you want to answer that stakeholder with real reasons, we're building a learning path for it." | Little Parrot mark, then the learning path list appearing | A learning path for answering with real reasons |
+| What changes (26-38s) | "By the end you'll be able to name what your prototype skipped: whose data it holds, who's allowed in, what it does under real load, who gets woken at 2am, and who maintains it." | Each item written onto the list next to the prototype, one per cut | data · access · load · on-call · ownership |
+| CTA (38-43s) | "The waitlist link is in the comments. Sign up and we'll let you know when it opens." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
+| Comment prompt (43-46s) | "Ever been asked to ship a prototype?" | The "when can we launch this?" message again | Have you been asked this? |
 
 **Cut cadence:** nothing holds on screen for more than three seconds. The
 Visual column lists every change in order, so a four-part visual is four cuts,
