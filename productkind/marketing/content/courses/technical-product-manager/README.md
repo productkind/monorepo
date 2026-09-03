@@ -49,8 +49,12 @@ Rules the set follows:
   comments, sign up to hear when it opens. An earlier version opened with "it's
   not open yet" and closed with "nothing else", and both were saying something
   the ask already implies.
-- **No teaching sequences.** Terms appear on screen and the recording shows
-  what they do; the definitions belong in the course.
+- **No teaching sequences, and no definitions.** The audience are practising
+  software product managers, so the scripts name real things (network tab,
+  status code, staging, SQL, data migration) and never gloss them. This is a
+  deliberate exception to the inline-definition rule in the `language-rules`
+  skill, which exists for beginner-facing course copy. Anything that needs
+  explaining belongs in the course, not in 45 seconds.
 - **Nothing on screen holds for more than three seconds.** The Visual column
   lists every change in order, so a four-part visual is four cuts.
 - **No video names a step of the learning path.** The path is still being built

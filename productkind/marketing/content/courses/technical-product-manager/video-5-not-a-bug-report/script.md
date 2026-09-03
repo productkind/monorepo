@@ -6,7 +6,7 @@ account: little-parrot
 
 # All you can send is their screenshot
 
-**Runs:** about 44 seconds. **Search phrase:** "how to write a bug report".
+**Runs:** about 42 seconds. **Search phrase:** "how to write a bug report".
 **Need it comes from:** investigating and documenting an issue before
 escalating it.
 
@@ -21,9 +21,9 @@ typed.
 | What it costs (10-15s) | "So you ask the customer, wait two days, and nobody has started looking." | Timestamps ticking on an unanswered thread | Still nobody investigating |
 | The gap (15-19s) | "You could answer all of it yourself, if somebody showed you where to look." | A browser open on the product, nothing inspected yet | Nobody showed you where to look |
 | The setup (19-25s) | "If you want to be the one who investigates it first, we're building a learning path for it." | Little Parrot mark, then the learning path list appearing | A learning path for investigating it |
-| What changes (25-35s) | "By the end you'll reproduce it on your own account, read the error code, and open the panel in your browser that shows which request to the server failed." | Reproducing the error, then the network panel with the failed request highlighted, one per cut | reproduce it · read the error · find the failed request |
-| CTA (35-41s) | "The waitlist link is in the comments. Sign up and we'll let you know when it opens." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
-| Comment prompt (41-44s) | "How long does a bug wait where you work?" | The unanswered thread again | How long at yours? |
+| What changes (25-34s) | "By the end you'll reproduce it on your own account, read the status code, and find the failed request in the network tab yourself." | Reproducing the error, then the network tab with the failed request highlighted, one per cut | reproduce it · status code · failed request |
+| CTA (34-39s) | "The waitlist link is in the comments. Sign up and we'll let you know when it opens." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
+| Comment prompt (39-42s) | "How long does a bug wait where you work?" | The unanswered thread again | How long at yours? |
 
 **Cut cadence:** nothing holds on screen for more than three seconds. The
 Visual column lists every change in order, so a four-part visual is four cuts,
@@ -40,9 +40,9 @@ eight destinations. The comment prompt is the last thing said on every channel.
 ## Production notes
 
 - **Screen recording needed:** a reproducible problem in the Little Parrot app
-  or a test account, plus the browser network panel showing the failed request
-  and its status code. Rewrite the support message for the recording, and use
-  no real name, email or account.
-- **The panel is described, never named.** "The panel in your browser that
-  shows which request to the server failed" is what a viewer can follow; the
-  tool name and the status codes belong in the course.
+  or a test account, plus the network tab showing the failed request and its
+  status code. Rewrite the support message for the recording, and use no real
+  name, email or account.
+- **Name the real thing.** Network tab, status code. These are software
+  product managers, not beginners, and describing a tool they use every day
+  instead of naming it slows the video down and talks down to them.

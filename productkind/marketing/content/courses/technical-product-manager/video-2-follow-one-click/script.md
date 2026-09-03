@@ -15,14 +15,14 @@ Parrot app, then a system map drawn on screen.
 
 | Beat | Narration | Visual | On-screen text |
 |---|---|---|---|
-| Hook (0-6s) | "'So how does your product actually work?' You can demo every screen. That's where it stops." | Text card, then a product screen sliding in | **You know the screens** |
-| The moment (6-13s) | "Behind those screens is a service another team owns, three integrations, an environment you've never seen, and a migrated database." | Each part dropping onto a map behind the screen, one per cut | a service · integrations · environments · a migrated database |
-| What it costs (13-17s) | "So when the load test fails, you can't tell if that's your problem." | The map, then a failed load test result over it | Is that your problem? |
-| The gap (17-22s) | "Frontend and backend you know. It's everything around them that nobody draws for you." | Two boxes, then the rest of the map greyed out | Nobody draws you the rest |
-| The setup (22-28s) | "If you want to answer that question about your own product, that's what we're building a learning path for." | Little Parrot mark, then the learning path list appearing | A learning path for your product |
-| What changes (28-38s) | "By the end you'll have a map of your product: what it depends on, who owns each part, where it slows down, and what breaks when one goes." | The map filling in, one label per cut | depends on · owned by · slows down · breaks when |
-| CTA (38-43s) | "The waitlist link is in the comments. Sign up and we'll let you know when it opens." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
-| Comment prompt (43-47s) | "Which part of your product would you struggle to explain?" | The map with one box left blank | Which part would you struggle to explain? |
+| Hook (0-7s) | "'So how does your product work?' You can demo every screen, and that's as far as your answer goes." | Text card, then a product screen sliding in | **You know the screens** |
+| The moment (7-15s) | "Behind those screens is a service another team owns, three integrations, an environment you've never seen, and a database somebody migrated last year." | Each part dropping onto a map behind the screen, one per cut | a service · integrations · environments · a migrated database |
+| What it costs (15-19s) | "So when the load test fails, you can't tell if it's your problem." | The map, then a failed load test result over it | Is that your problem? |
+| The gap (19-24s) | "You know the frontend and the backend. Nobody draws you the infrastructure around them." | Two boxes, then the rest of the map greyed out | Nobody draws you the infrastructure |
+| The setup (24-30s) | "If you want to answer that about your own product, that's what we're building a learning path for." | Little Parrot mark, then the learning path list appearing | A learning path for your product |
+| What changes (30-39s) | "By the end you'll have a map of your product: what it depends on, who owns each part, where it slows down, and what breaks when one fails." | The map filling in, one label per cut | depends on · owned by · slows down · breaks when |
+| CTA (39-45s) | "The waitlist link is in the comments. Sign up and we'll let you know when it opens." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
+| Comment prompt (45-47s) | "Which part would you struggle to explain?" | The map with one box left blank | Which part would you struggle to explain? |
 
 **Cut cadence:** nothing holds on screen for more than three seconds. The
 Visual column lists every change in order, so a four-part visual is four cuts,
