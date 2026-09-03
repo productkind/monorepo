@@ -10,7 +10,7 @@ the viewer has been in, shows what it cost them, and ends on what they'll be
 able to do once they've done the learning path.
 
 - **Brand:** Little Parrot. Narration and screen recording, nobody on camera.
-- **Lead channel:** LinkedIn native video. One 42 to 47 second cut works on
+- **Lead channel:** LinkedIn native video. One 44 to 50 second cut works on
   every channel, with a CTA swap for TikTok, Reels and Shorts.
 - **Destination:** the waitlist page,
   `https://littleparrot.app/guides/technical-product-manager`
@@ -50,9 +50,11 @@ Rules the set follows:
   is what earns replies, and replies are what carry the post to people who
   don't follow us. So the order is the ask, then the question.
 - **The CTA is one ask, with no throat-clearing.** The waitlist link is in the
-  comments, sign up to hear when it opens. An earlier version opened with "it's
-  not open yet" and closed with "nothing else", and both were saying something
-  the ask already implies.
+  comments, sign up to hear when the learning path opens. It says "the learning
+  path" rather than "it", because by then the viewer has heard the phrase once
+  and a bare pronoun makes them work out what is opening. An earlier version
+  also opened with "it's not open yet" and closed with "nothing else", and both
+  were saying something the ask already implies.
 - **No teaching sequences, and no definitions.** The audience are practising
   software product managers, so the scripts name real things (network tab,
   status code, staging, SQL, data migration) and never gloss them. This is a
@@ -126,6 +128,10 @@ others assume it.
 - **Timings are derived, not guessed.** Every beat's range comes from its word
   count at 2.95 words per second, the measured pace of the existing narrated
   videos. Change the narration and the timings need recalculating.
+- **These eight files are the source of truth, edited in place.** They were
+  built from a generator script at first, and regenerating it after Kinga had
+  edited the files reverted about twenty of her changes. The generator is gone.
+  Edit the narration in the file and recalculate that file's timings.
 
 ## Posting notes
 

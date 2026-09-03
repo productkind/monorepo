@@ -28,7 +28,7 @@ Practising, generalist software Product Managers without a software-engineering 
 The eight video scripts and the rules behind them are in
 [videos.md](videos.md), one folder per video. They were written after this
 brief and they don't match the content design below: there are eight of them
-rather than 25, each is a single 42 to 47 second cut used on all four channels,
+rather than 25, each is a single 44 to 50 second cut used on all four channels,
 and none of them teaches a method. Kinga's direction was to raise a situation
 the viewer recognises and show the transformation instead, because the teaching
 sequences were where a viewer left. Treat the section below as the original

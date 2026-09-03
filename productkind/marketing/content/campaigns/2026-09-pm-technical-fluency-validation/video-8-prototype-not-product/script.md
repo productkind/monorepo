@@ -6,7 +6,7 @@ account: little-parrot
 
 # "When can we launch it?"
 
-**Runs:** about 46 seconds. **Search phrase:** "AI prototyping for product
+**Runs:** about 48 seconds. **Search phrase:** "AI prototyping for product
 managers". **Need it comes from:** building a bounded prototype and knowing
 what production needs that a prototype skips.
 
@@ -20,9 +20,9 @@ AI agent, then the production list written next to it.
 | What it costs (11-15s) | "And you can't explain why it isn't, so you sound like you're stalling." | The reply box, empty, cursor blinking | You sound like you're stalling |
 | The gap (15-20s) | "Your prototype proves the idea works. None of what keeps a real product running is there." | The prototype, then the same screen with gaps marked | Proves the idea, nothing underneath it |
 | The setup (20-26s) | "If you want to answer that stakeholder with real reasons, we're building a learning path for it." | Little Parrot mark, then the learning path list appearing | A learning path for answering with real reasons |
-| What changes (26-38s) | "By the end you'll be able to name what your prototype skipped: whose data it holds, who's allowed in, what it does under real load, who gets woken at 2am when something goes wrong, and who maintains it." | Each item written onto the list next to the prototype, one per cut | data · access · load · on-call · ownership |
-| CTA (38-43s) | "The waitlist link is in the comments. Sign up and we'll let you know when it opens." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
-| Comment prompt (43-46s) | "Ever been asked to ship a prototype?" | The "when can we launch this?" message again | Have you been asked this? |
+| What changes (26-39s) | "By the end you'll be able to name what your prototype skipped: whose data it holds, who's allowed in, what it does under real load, who gets woken at 2am when something goes wrong, and who maintains it." | Each item written onto the list next to the prototype, one per cut | data · access · load · on-call · ownership |
+| CTA (39-45s) | "The waitlist link is in the comments. Sign up and we'll let you know when the learning path opens." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
+| Comment prompt (45-48s) | "Ever been asked to ship a prototype?" | The "when can we launch this?" message again | Have you been asked this? |
 
 **Cut cadence:** nothing holds on screen for more than three seconds. The
 Visual column lists every change in order, so a four-part visual is four cuts,
