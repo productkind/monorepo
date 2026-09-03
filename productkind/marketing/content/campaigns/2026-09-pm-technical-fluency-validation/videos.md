@@ -1,12 +1,16 @@
-# Technical Product Manager: eight video scripts
+# Video scripts
 
-Eight 45-second videos for the technical product manager experiment, built from
-the research in `productkind/ai-research/pm-technical-fluency/`. Each one opens
-on a situation the viewer has been in, shows what it cost them, and ends on
-what they'll be able to do once they've done the learning path.
+The video half of the PM technical-fluency validation campaign. Objective,
+audience, success measures and attribution are in [brief.md](brief.md); this
+file covers the eight scripts and the rules they follow.
+
+Eight 45-second videos, built from the research in
+`productkind/ai-research/pm-technical-fluency/`. Each one opens on a situation
+the viewer has been in, shows what it cost them, and ends on what they'll be
+able to do once they've done the learning path.
 
 - **Brand:** Little Parrot. Narration and screen recording, nobody on camera.
-- **Lead channel:** LinkedIn native video. One 44 to 47 second cut works on
+- **Lead channel:** LinkedIn native video. One 42 to 47 second cut works on
   every channel, with a CTA swap for TikTok, Reels and Shorts.
 - **Destination:** the waitlist page,
   `https://littleparrot.app/guides/technical-product-manager`

@@ -23,7 +23,18 @@ Practising, generalist software Product Managers without a software-engineering 
 4. Spot technical consequences before commitment: expose dependencies, failure modes, reversibility and technical debt before recommending scope or a trade-off.
 5. Build to learn and know where production starts: create a bounded prototype with artificial intelligence (AI), test an assumption and hand it over with explicit security, quality and maintenance limits.
 
-## Content design
+## Video scripts
+
+The eight video scripts and the rules behind them are in
+[videos.md](videos.md), one folder per video. They were written after this
+brief and they don't match the content design below: there are eight of them
+rather than 25, each is a single 42 to 47 second cut used on all four channels,
+and none of them teaches a method. Kinga's direction was to raise a situation
+the viewer recognises and show the transformation instead, because the teaching
+sequences were where a viewer left. Treat the section below as the original
+plan and `videos.md` as what is being made.
+
+## Content design (original plan, superseded for video by videos.md)
 
 - Five short vertical videos per pain point, 25 posts in total.
 - One shared 35–60 second script for TikTok, Instagram Reels and YouTube Shorts.
@@ -33,9 +44,9 @@ Practising, generalist software Product Managers without a software-engineering 
 
 ## Destination and attribution
 
-Proposed landing page from the research: `https://littleparrot.app/courses/technical-skills-for-product-managers`
+**Destination for the video scripts:** `https://littleparrot.app/guides/technical-product-manager`, the "Become a Technical Product Manager Without Becoming an Engineer" waitlist page. It is built (`src/pages/TechnicalProductManagerWaitlist.tsx` in the app repo), it reads `utm_source`, `utm_medium`, `utm_campaign` and `utm_content` and saves them with the signup, and it shows the price under test straight after sign-up. All eight video scripts point here.
 
-**Pre-publish blocker, checked 27 August 2026:** the URL returns HTTP 200 but currently renders the generic Little Parrot homepage, not a Product Manager landing page with a dedicated email form. Keep the tracked links in the drafts, but do not publish until that route serves the intended page and preserves the UTM values with the sign-up. The live `/courses` page has a generic waitlist form, but using it would weaken the message-to-sign-up test because the page does not continue the Product Manager promise.
+**Superseded, kept for the record:** the research proposed `https://littleparrot.app/courses/technical-skills-for-product-managers`, and on 27 August 2026 that URL returned HTTP 200 while rendering the generic Little Parrot homepage. That blocker is resolved by the `/guides/technical-product-manager` page above rather than by fixing the old route. The two large caption files in this folder were drafted against the old URL and the 25-post plan, so re-check their links before anything goes out.
 
 Campaign: `pm-technical-fluency-validation-2026-08`
 
