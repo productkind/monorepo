@@ -8,6 +8,8 @@
   },
   "type": "module",
   "dependencies": {
+    "@dungarees/bin-audit-dependencies-cli-yargs": "*",
+    "@dungarees/bin-audit-dependencies-domain": "*",
     "@dungarees/bin-publish-lib-cli-yargs": "*",
     "@dungarees/bin-publish-lib-domain": "*",
     "@dungarees/cli": "*",

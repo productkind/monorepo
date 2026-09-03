@@ -30,14 +30,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Audit dependencies
-        run: npm run audit-dependencies
-
       - name: Type check
         run: npm run type-check
 
       - name: Test
         run: npx vitest run
+
+      # Runs through the installed binary, so it also proves the published CLI works.
+      - name: Audit dependencies
+        run: npm run audit-dependencies
 
       - name: Publish to npm
         run: npm run publish:dungarees
