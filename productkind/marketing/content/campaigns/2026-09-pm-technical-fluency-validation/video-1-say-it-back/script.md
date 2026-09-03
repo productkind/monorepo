@@ -6,42 +6,31 @@ account: little-parrot
 
 # Nodding along in stand-up
 
-**Runs:** about 48 seconds. **Search phrase:** "technical skills for product
-managers". **Need it comes from:** taking part in technical conversations and
-decisions, described by more product managers in our validation sample than
-any other need (8 of 16).
+You've nodded along in a stand-up, hoping nobody asks you a follow-up
+question.
 
-**Treatment:** narration over on-screen text and one screen recording of a
-meeting note. Nobody on camera.
+Someone says the migration is blocked by the platform team. You don't know
+what that means for your release.
 
-"You've nodded along in a stand-up, hoping nobody asks you a follow-up
-question."
+So you don't ask. Three weeks later, that blocker is why your release date
+moves.
 
-"Someone says the migration is blocked by the platform team. You don't know
-what that means for your release."
+Nobody taught you those words. Looking up a definition afterwards doesn't
+tell you what it means for your release.
 
-"So you don't ask. Three weeks later, that blocker is why your release date
-moves."
+If you'd rather be the one who asks these questions, we're building a
+learning path for exactly this.
 
-"Nobody taught you those words. Looking up a definition afterwards doesn't
-tell you what it means for your release."
+By the end you'll say a change back in your own words, ask what it does to
+your product, and understand the answer while you're in the meeting.
 
-"If you'd rather be the one who asks these questions, we're building a
-learning path for exactly this."
+The waitlist link is in the comments. Sign up and we'll let you know when the
+learning path opens.
 
-"By the end you'll say a change back in your own words, ask what it does to
-your product, and understand the answer while you're in the meeting."
+What technical word did you look up last?
 
-"The waitlist link is in the comments. Sign up and we'll let you know when the
-learning path opens."
-
-"What technical word did you look up last?"
-
-**Cut cadence:** nothing holds on screen for more than three seconds. The
-Visual column lists every change in order, so a four-part visual is four cuts,
-and the longest beats are the ones carrying the most of them.
-
-**Channel swap:** the CTA line works as written on LinkedIn (first comment) and
+## Channel swap
+the CTA line works as written on LinkedIn (first comment) and
 YouTube Shorts (pinned comment), where a link in a comment is clickable. On
 TikTok, pin the link too, and also speak and show the URL, because the account
 has no bio link until 1,000 followers. On Instagram Reels, speak and show the
