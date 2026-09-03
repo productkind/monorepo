@@ -1,4 +1,3 @@
-import { type JsonType } from './type-util.ts'
 import {
   assertDefined,
   findByPattern,
@@ -142,7 +141,7 @@ export const createApplication = <
       }
     },
     getArgs: () => {
-      return (otherApp !== undefined ? [...otherApp().getArgs(), appArgs] : [appArgs])
+      return otherApp !== undefined ? [...otherApp().getArgs(), appArgs] : [appArgs]
     },
   }
   return app

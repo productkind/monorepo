@@ -94,7 +94,6 @@ test('deepEqualPartial', () => {
 })
 
 test('findByPattern', () => {
-   
   const value1 = findByPattern([], '')
   expectTypeOf<typeof value1>().toEqualTypeOf<undefined>()
   expect(value1).toBeUndefined()
@@ -253,9 +252,11 @@ test('unPrototypeProperties', () => {
   unPrototypeProperties(clone, ['method3'])
 })
 
-type AppendConstFn = {
+// An interface, not a type: hotscript's `Fn` pattern reads `this['arg0']`, and a `this` type
+// exists only in an interface or a class.
+interface AppendConstFn extends Fn {
   return: `${this['arg0']}-const`
-} & Fn
+}
 
 test('mapConst', () => {
   const input = ['a', 'b', 'c'] as const

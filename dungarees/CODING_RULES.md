@@ -265,6 +265,34 @@ type LogLevel = keyof typeof NODE_LOG_LEVELS
 Keep a type intentionally wide only when the API is genuinely configurable (e.g. `level: string`
 because callers may supply their own `levels` map) — and say so at the point it matters.
 
+### 6a. Declare object shapes as `type`, not `interface`
+
+Prefer a type alias. This is a convention rather than a lint rule, because there is one case a
+linter cannot see: hotscript's `Fn` pattern reads `this['arg0']`, and a `this` type exists only in
+an interface or a class. Converting one of those to a type alias fails to compile, so
+`consistent-type-definitions` is deliberately off.
+
+```ts
+// Bad — an interface for a plain object shape
+export interface UrlConfig {
+  protocol: string
+  hostname: string
+}
+```
+
+```ts
+// Good — a type alias
+export type UrlConfig = {
+  protocol: string
+  hostname: string
+}
+
+// Good — an interface, because `this` has no meaning in a type alias
+interface AppendConstFn extends Fn {
+  return: `${this['arg0']}-const`
+}
+```
+
 ## 7. Comment the _why_, never the _what_
 
 The code already says what it does; a comment that restates it is noise that rots. Only add a

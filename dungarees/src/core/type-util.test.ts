@@ -61,8 +61,10 @@ test('SplitFilePath<PATH>', () => {
 test('StringLiteral<LITERAL>', () => {
   const literal: StringLiteral<'asd'> = 'asd'
   expectTypeOf<typeof literal>().toEqualTypeOf<'asd'>()
+  // Widened through an annotation rather than an `as` cast, so rule 4 still holds.
+  const widened: string = 'asd'
   // @ts-expect-error it has to be a literal
-  const nonLiteral: StringLiteral<'asd'> = 'asd'
+  const nonLiteral: StringLiteral<'asd'> = widened
   expectTypeOf<typeof nonLiteral>().toEqualTypeOf<'asd'>()
 })
 

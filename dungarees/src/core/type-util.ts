@@ -156,6 +156,6 @@ export type SyncFunctionToAsync<FUNC extends (...args: any[]) => any> = FUNC ext
   ? (...args: ARGS) => Promise<RETURN>
   : never
 
-export type StaticFn<RETURN> = {
+export interface StaticFn<RETURN> extends Fn {
   return: RETURN
-} & Fn
+}
