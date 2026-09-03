@@ -4,37 +4,40 @@ channels: [linkedin, tiktok, instagram, youtube-shorts]
 account: little-parrot
 ---
 
-# Can our APIs do that?
+# The dreaded question
 
-**Runs:** about 90 seconds. **Search phrase:** "how does an API work".
-**Learning path step:** 2, APIs, webhooks and integrations.
+**Runs:** about 42 seconds. **Search phrase:** "how does an API work". **Need
+it comes from:** following data across APIs and integrations.
 
-**Treatment:** narration over a screen recording of a real API response, shown
-as text rather than code.
+**Treatment:** narration over a screen recording of a documentation page with
+one field highlighted.
 
 | Beat | Narration | Visual | On-screen text |
 |---|---|---|---|
-| Hook (0-12s) | "'Do the APIs we already use support the thing we want to build?' A product manager asked that. It's the kind of question that goes to engineering and comes back after the roadmap is agreed." | Text card, then the same question sitting in a Slack-style message while a calendar moves on | **"Do the APIs we currently use support the functionality we want to build?"** |
-| What an API is (12-30s) | "An API is how one piece of software asks another for something, like our product asking the payment provider for a customer's invoices. Whether the ones you already pay for can do what your stakeholder wants is a fair question, and you can answer most of it yourself, without writing any code." | Screen recording: our product sending a request to the payment provider, the answer coming back | An API: one piece of software asking another for something |
-| What comes back (30-40s) | "So look at what comes back. The request says what you want, and the response is a list of fields. Those field names tell you what data you can get." | Screen recording: a request sent, the response appearing as a list of labelled fields | Request in, fields back |
-| The move (40-64s) | "Open the documentation for that service, find the response for the thing you care about, and read the field names. If your stakeholder wants to show the customer's last payment date, look for a date field. If it's there, the data exists, and the only question left for engineering is how to show it. If it isn't, you've found the hard part of the feature while you can still change the scope." | Documentation page, one field highlighted, then a missing field circled | Read the field names |
-| The judgement (64-82s) | "What you can't tell from the field names is how often you're allowed to ask, whether the data is current, and what happens when the other system is down. Those are the three questions to bring to engineering, and they get you a specific answer, which 'is this possible?' never does." | Three question cards | How often? How fresh? What if it's down? |
-| CTA (82-90s) | "Step two of our learning path is this question, answered against the APIs your own product uses. Not open yet, link's in the comments." | Waitlist page, step 2 in frame | littleparrot.app/guides/technical-product-manager |
+| Hook (0-4s) | "Ever been asked the dreaded question? Can our systems already do this?" | Text card, the question arriving as a message | **"Can our systems already do this?"** |
+| The moment (4-10s) | "You don't know. So it goes to engineering, and the answer arrives after you've agreed the roadmap." | The message unanswered, then a roadmap with a slipped date | The answer comes back too late |
+| The shift (10-15s) | "You can answer most of it yourself, and it doesn't involve writing any code." | Documentation page opening | No code involved |
+| How (15-20s) | "Those tools publish a list of what data you can get. You read the names." | Screen recording: the field list, one name highlighted | A list of field names |
+| It's there (20-23s) | "Your stakeholder wants the customer's last payment date. There it is." | The date field highlighted | It's there |
+| Or it isn't (23-30s) | "Or it isn't, and you've found the hard part of the feature while you can still change the scope." | A missing field circled, then a scope line being edited | It isn't, and you found out in time |
+| The payoff (30-34s) | "Next month, same question, and you answer it in the meeting." | The same question, answered on the spot | You answer it in the room |
+| Comment prompt (34-36s) | "Who gets asked this in your team?" | The question card again | Who gets asked this? |
+| CTA (36-42s) | "We're building this for product managers who manage software without an engineering background. Link's in the comments." | Waitlist page | littleparrot.app/guides/technical-product-manager |
 
-## Short cut for TikTok, Reels and Shorts (about 45 seconds)
+**Cut cadence:** nothing holds on screen for more than three seconds. The
+Visual column lists every change in order, so a three-part visual is three
+cuts, and the longest beats are the ones carrying the most of them.
 
-Keep the hook, "What an API is" and "The move". Drop "What comes back" and cut
-"The judgement" to the three questions on screen with no narration over them.
-Close with "Follow for more, one thing you can use in your next roadmap
-conversation."
+**Channel swap:** on TikTok, Reels and Shorts, replace the last line with
+"Follow for more of these" and speak the URL, then pin it in a comment. The
+comment prompt stays on every channel, because it's what earns replies.
 
 ## Production notes
 
-- **Screen recording needed:** one real API response. Use a service Little
-  Parrot actually uses so the fields are real. Blur or replace any key, token
-  or customer detail before it goes out, using the `media-to-webp` frosted
-  panel or an edit in the recording.
-- **Never show a live request with a working credential on screen**, even for a
-  second, and check the frame before and after the highlight.
-- **Payoff to protect in the edit:** "read the field names". The rest supports
-  it.
+- **Screen recording needed:** the documentation for a service Little Parrot
+  actually uses, so the field names are real. No live request, no credentials
+  and no customer detail in frame.
+- **The hook is ours, not a quote.** Product managers asked this in the
+  research in more formal words; this is the version a viewer recognises.
+- **Don't define API in the narration.** The screen recording shows what it
+  does, and the definition belongs in the course.

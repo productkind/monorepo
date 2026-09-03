@@ -4,37 +4,40 @@ channels: [linkedin, tiktok, instagram, youtube-shorts]
 account: little-parrot
 ---
 
-# Four questions before you commit
+# You agreed the date. Then came the hard part
 
-**Runs:** about 86 seconds. **Search phrase:** "what is technical debt".
-**Learning path step:** 6, technical debt, feasibility and build versus buy.
+**Runs:** about 39 seconds. **Search phrase:** "what is technical debt".
+**Need it comes from:** spotting technical consequences before committing to
+work.
 
-**Treatment:** narration over a screen recording of one feature request being
-taken apart, then the four questions on screen.
+**Treatment:** narration over a screen recording of one feature request, then
+four question cards.
 
 | Beat | Narration | Visual | On-screen text |
 |---|---|---|---|
-| Hook (0-6s) | "Someone calls a feature simple. You agree a date. Three weeks later engineering finds a data migration nobody costed." | Screen recording: a one-line feature request in a ticket | **"It's just a small change"** |
-| The situation (6-22s) | "We read two years of product manager discussions, and this came up again and again: product managers finding the hard part of a feature after they'd already promised it. The estimate was usually fine. Nobody had asked the questions that would have found the migration." | The ticket, then a roadmap with a slipped date | Found the hard part too late |
-| The four questions (22-47s) | "There are four, and you can ask all of them without knowing how any of it is built. What does this rely on that we don't control? What happens when this fails halfway through? Does this change who's allowed to see something, or data that already exists? And can we undo it? If you can undo it, you can say yes with less information. If you can't, you need to be sure before you commit." | Each question appearing as a card, the ticket behind them | What does it rely on? · What if it fails? · Does it change permissions or existing data? · Can we undo it? |
-| Why the third one earns its place (47-64s) | "The third question finds the work nobody costed. A new field on a form sounds like screen work, until somebody asks what happens to the two hundred thousand records that don't have it. That's a data migration, changing data that already exists, and it's usually why the deadline can't be met." | Screen recording: a form field, then a table of existing rows with an empty column | One new field, 200,000 existing rows |
-| Technical debt (64-78s) | "If the answer is 'we can do it faster the rough way', that's technical debt: a shortcut in the code that makes every later change slower. Sometimes it's the right call. It's only a bad one when nobody wrote it down." | A note being added to the ticket | Technical debt: a shortcut that slows every later change |
-| CTA (78-86s) | "Step six of our learning path is a technical decision review on your own product. Link's in the comments for when it opens." | Waitlist page, step 6 in frame | littleparrot.app/guides/technical-product-manager |
+| Hook (0-4s) | "Someone calls your feature a small change. You agree a date." | Screen recording: a one-line request in a ticket, then a date being agreed | **"It's just a small change"** |
+| The moment (4-7s) | "Three weeks later, engineering finds the data migration nobody mentioned." | The ticket, then a roadmap with a slipped date | The hard part arrived late |
+| Why it happens (7-12s) | "The estimate wasn't wrong. Nobody asked the four questions that would have found it." | Four empty cards appearing | Four questions nobody asked |
+| The shift (12-21s) | "What does this rely on that we don't control? What happens when it fails halfway? Does it touch permissions, or data that already exists? Can we undo it?" | Each question filling its card as it's spoken, four cuts, then all four held | What does it rely on? · What if it fails? · Permissions or existing data? · Can we undo it? |
+| The transformation (21-26s) | "You can ask all four without knowing how any of it is built." | The four cards together, the ticket behind them | No engineering background needed |
+| The payoff (26-31s) | "And you find the expensive part while it's still a conversation and not a missed deadline." | The date on the roadmap, held | Found while it's still a conversation |
+| Comment prompt (31-34s) | "What was your small change that wasn't?" | The ticket again | What was yours? |
+| CTA (34-39s) | "We're building this for product managers who don't come from engineering. Link's in the comments." | Waitlist page | littleparrot.app/guides/technical-product-manager |
 
-## Short cut for TikTok, Reels and Shorts (about 50 seconds)
+**Cut cadence:** nothing holds on screen for more than three seconds. The
+Visual column lists every change in order, so a three-part visual is three
+cuts, and the longest beats are the ones carrying the most of them.
 
-Keep the hook and the four questions, which is the save-worthy part, and hold
-all four on screen together at the end. Drop "The situation" and "Technical
-debt", and keep the 200,000 records example, because it's the one concrete
-thing that makes the third question make sense.
+**Channel swap:** on TikTok, Reels and Shorts, replace the last line with
+"Follow for more of these" and speak the URL, then pin it in a comment. The
+comment prompt stays on every channel, because it's what earns replies.
 
 ## Production notes
 
-- **Screen recording needed:** a ticket and a table with an empty column. Both
-  can be made in a Little Parrot test project.
-- **The four questions are the asset.** They should be readable in one frame,
-  which is also what makes this the natural companion carousel for Instagram.
-- **Don't claim the questions come from anywhere they don't.** They're drawn
-  from the scope and trade-off evidence in the
-  [needs research](../../../../../ai-research/pm-technical-fluency/non-technical-pm-technical-needs-2024-2026.md#2-pressure-test-feasibility-scope-dependencies-and-trade-offs-before-commitment),
-  and the video says "there are four" rather than attributing them to a source.
+- **The four questions are the asset.** They must be readable in one frame, and
+  that frame is the Instagram carousel and the LinkedIn thumbnail.
+- **No technical debt lecture.** The term is in the search phrase and the
+  course, and explaining it here is what made the earlier version of this
+  script lose people.
+- **Screen recording needed:** a ticket and a roadmap date, both makeable in a
+  Little Parrot test project.
