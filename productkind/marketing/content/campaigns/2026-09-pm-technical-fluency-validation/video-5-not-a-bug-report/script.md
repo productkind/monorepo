@@ -14,16 +14,25 @@ escalating it.
 in the Little Parrot app, the browser's network panel, and the report being
 typed.
 
-| Beat | Narration | Visual | On-screen text |
-|---|---|---|---|
-| Hook (0-4s) | "A customer reports a bug. All you can send engineering is their screenshot." | Screen recording: the forward being sent, one screenshot attached | **"Any idea what this is?"** |
-| The moment (4-10s) | "It comes back as questions. Who was it? What did they do? What did the error say?" | Three questions arriving as three separate cuts | Three questions back, no answers |
-| What it costs (10-15s) | "So you ask the customer, wait two days, and nobody has started looking." | Timestamps ticking on an unanswered thread | Still nobody investigating |
-| The gap (15-19s) | "You could answer all of it yourself, if somebody showed you where to look." | A browser open on the product, nothing inspected yet | Nobody showed you where to look |
-| The setup (19-25s) | "If you want to be the one who investigates it first, we're building a learning path for it." | Little Parrot mark, then the learning path list appearing | A learning path for investigating it |
-| What changes (25-34s) | "By the end you'll reproduce the bug on your own account, read the status code, and find the failed request in the network tab yourself." | Reproducing the error, then the network tab with the failed request highlighted, one per cut | reproduce it · status code · failed request |
-| CTA (34-40s) | "The waitlist link is in the comments. Sign up and we'll let you know when the learning path opens." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
-| Comment prompt (40-44s) | "How long does a bug wait before fixing where you work?" | The unanswered thread again | How long at yours? |
+"A customer reports a bug. All you can send engineering is their screenshot."
+
+"It comes back as questions. Who was it? What did they do? What did the error
+say?"
+
+"So you ask the customer, wait two days, and nobody has started looking."
+
+"You could answer all of it yourself, if somebody showed you where to look."
+
+"If you want to be the one who investigates it first, we're building a
+learning path for it."
+
+"By the end you'll reproduce the bug on your own account, read the status
+code, and find the failed request in the network tab yourself."
+
+"The waitlist link is in the comments. Sign up and we'll let you know when the
+learning path opens."
+
+"How long does a bug wait before fixing where you work?"
 
 **Cut cadence:** nothing holds on screen for more than three seconds. The
 Visual column lists every change in order, so a four-part visual is four cuts,

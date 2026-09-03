@@ -13,16 +13,27 @@ what production needs that a prototype skips.
 **Treatment:** narration over a screen recording of a prototype built with an
 AI agent, then the production list written next to it.
 
-| Beat | Narration | Visual | On-screen text |
-|---|---|---|---|
-| Hook (0-7s) | "You built something with AI to test an idea. Your stakeholder saw it and asked when we can launch it." | Screen recording: a working prototype, then the message "when can we launch this?" | **"When can we launch it?"** |
-| The moment (7-11s) | "It works on your laptop, so to them it looks finished." | The prototype being clicked through, smoothly | Works on your screen only |
-| What it costs (11-15s) | "And you can't explain why it isn't, so you sound like you're stalling." | The reply box, empty, cursor blinking | You sound like you're stalling |
-| The gap (15-20s) | "Your prototype proves the idea works. None of what keeps a real product running is there." | The prototype, then the same screen with gaps marked | Proves the idea, nothing underneath it |
-| The setup (20-26s) | "If you want to answer that stakeholder with real reasons, we're building a learning path for it." | Little Parrot mark, then the learning path list appearing | A learning path for answering with real reasons |
-| What changes (26-39s) | "By the end you'll be able to name what your prototype skipped: whose data it holds, who's allowed in, what it does under real load, who gets woken at 2am when something goes wrong, and who maintains it." | Each item written onto the list next to the prototype, one per cut | data · access · load · on-call · ownership |
-| CTA (39-45s) | "The waitlist link is in the comments. Sign up and we'll let you know when the learning path opens." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
-| Comment prompt (45-48s) | "Ever been asked to ship a prototype?" | The "when can we launch this?" message again | Have you been asked this? |
+"You built something with AI to test an idea. Your stakeholder saw it and
+asked when we can launch it."
+
+"It works on your laptop, so to them it looks finished."
+
+"And you can't explain why it isn't, so you sound like you're stalling."
+
+"Your prototype proves the idea works. None of what keeps a real product
+running is there."
+
+"If you want to answer that stakeholder with real reasons, we're building a
+learning path for it."
+
+"By the end you'll be able to name what your prototype skipped: whose data it
+holds, who's allowed in, what it does under real load, who gets woken at 2am
+when something goes wrong, and who maintains it."
+
+"The waitlist link is in the comments. Sign up and we'll let you know when the
+learning path opens."
+
+"Ever been asked to ship a prototype?"
 
 **Cut cadence:** nothing holds on screen for more than three seconds. The
 Visual column lists every change in order, so a four-part visual is four cuts,
