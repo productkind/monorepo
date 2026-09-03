@@ -13,16 +13,27 @@ the team commits.
 **Treatment:** narration over a screen recording of a planning discussion,
 then four question cards.
 
-| Beat | Narration | Visual | On-screen text |
-|---|---|---|---|
-| Hook (0-5s) | "The decision was made in a meeting you were in. Nobody raised the hard questions." | Text card, then a decision being written into a ticket | **Nobody raised the hard part** |
-| The moment (5-9s) | "The engineers assumed you'd already scoped it. You didn't know what to ask." | Two speech bubbles, one per cut, then silence | Everyone assumed somebody had scoped it |
-| What it costs (9-15s) | "Three weeks later the work turns out to be twice the size, and your roadmap moves." | A roadmap date slipping | Your roadmap moves |
-| The gap (15-19s) | "Running that discussion was your job, and nobody teaches you the questions." | Four empty cards appearing | Four questions nobody teaches you |
-| The setup (19-25s) | "If you want to be the one who raises them, we're building a learning path for it." | Little Parrot mark, then the learning path list appearing | A learning path for raising it early |
-| What changes (25-37s) | "By the end you'll be able to run that discussion. What does this change rely on that we don't control? What happens when a request fails halfway? Does it touch permissions, or data that already exists?" | Each question filling its card as it's spoken, four cuts, then all four held | What does it rely on? · What if it fails? · Permissions or existing data? · Can we undo it? |
-| CTA (37-43s) | "The waitlist link is in the comments. Sign up and we'll let you know when the learning path opens." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
-| Comment prompt (43-46s) | "Who raises the hard part on your team?" | The four cards again | Who raises it on your team? |
+"The decision was made in a meeting you were in. Nobody raised the hard
+questions."
+
+"The engineers assumed you'd already scoped it. You didn't know what to ask."
+
+"Three weeks later the work turns out to be twice the size, and your roadmap
+moves."
+
+"Running that discussion was your job, and nobody teaches you the questions."
+
+"If you want to be the one who raises them, we're building a learning path for
+it."
+
+"By the end you'll be able to run that discussion. What does this change rely
+on that we don't control? What happens when a request fails halfway? Does it
+touch permissions, or data that already exists?"
+
+"The waitlist link is in the comments. Sign up and we'll let you know when the
+learning path opens."
+
+"Who raises the hard part on your team?"
 
 **Cut cadence:** nothing holds on screen for more than three seconds. The
 Visual column lists every change in order, so a four-part visual is four cuts,
