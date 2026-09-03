@@ -1,0 +1,883 @@
+{
+  "hash": "40c4f803a65837e1",
+  "fps": 30,
+  "durationInFrames": 1535,
+  "words": [
+    {
+      "text": "A",
+      "start": 0,
+      "end": 3
+    },
+    {
+      "text": "stakeholder",
+      "start": 5,
+      "end": 22
+    },
+    {
+      "text": "asked",
+      "start": 24,
+      "end": 34
+    },
+    {
+      "text": "for",
+      "start": 35,
+      "end": 36
+    },
+    {
+      "text": "something",
+      "start": 38,
+      "end": 48
+    },
+    {
+      "text": "simple.",
+      "start": 51,
+      "end": 68
+    },
+    {
+      "text": "Just",
+      "start": 72,
+      "end": 89
+    },
+    {
+      "text": "sync",
+      "start": 90,
+      "end": 94
+    },
+    {
+      "text": "it",
+      "start": 96,
+      "end": 99
+    },
+    {
+      "text": "with",
+      "start": 99,
+      "end": 101
+    },
+    {
+      "text": "the",
+      "start": 102,
+      "end": 104
+    },
+    {
+      "text": "CRM.",
+      "start": 108,
+      "end": 125
+    },
+    {
+      "text": "You",
+      "start": 132,
+      "end": 147
+    },
+    {
+      "text": "said",
+      "start": 148,
+      "end": 154
+    },
+    {
+      "text": "yes.",
+      "start": 157,
+      "end": 168
+    },
+    {
+      "text": "Two",
+      "start": 173,
+      "end": 188
+    },
+    {
+      "text": "weeks",
+      "start": 189,
+      "end": 197
+    },
+    {
+      "text": "in,",
+      "start": 200,
+      "end": 207
+    },
+    {
+      "text": "engineering",
+      "start": 208,
+      "end": 221
+    },
+    {
+      "text": "tells",
+      "start": 223,
+      "end": 231
+    },
+    {
+      "text": "you",
+      "start": 231,
+      "end": 233
+    },
+    {
+      "text": "the",
+      "start": 234,
+      "end": 238
+    },
+    {
+      "text": "integration",
+      "start": 240,
+      "end": 257
+    },
+    {
+      "text": "doesn’t",
+      "start": 259,
+      "end": 269
+    },
+    {
+      "text": "have",
+      "start": 271,
+      "end": 276
+    },
+    {
+      "text": "that",
+      "start": 277,
+      "end": 281
+    },
+    {
+      "text": "field,",
+      "start": 284,
+      "end": 303
+    },
+    {
+      "text": "and",
+      "start": 303,
+      "end": 305
+    },
+    {
+      "text": "it’s",
+      "start": 306,
+      "end": 310
+    },
+    {
+      "text": "the",
+      "start": 311,
+      "end": 312
+    },
+    {
+      "text": "vendor’s",
+      "start": 314,
+      "end": 324
+    },
+    {
+      "text": "system.",
+      "start": 327,
+      "end": 342
+    },
+    {
+      "text": "You",
+      "start": 349,
+      "end": 365
+    },
+    {
+      "text": "already",
+      "start": 367,
+      "end": 377
+    },
+    {
+      "text": "promised",
+      "start": 379,
+      "end": 389
+    },
+    {
+      "text": "the",
+      "start": 390,
+      "end": 392
+    },
+    {
+      "text": "date.",
+      "start": 394,
+      "end": 406
+    },
+    {
+      "text": "Now",
+      "start": 413,
+      "end": 432
+    },
+    {
+      "text": "you’re",
+      "start": 434,
+      "end": 440
+    },
+    {
+      "text": "renegotiating",
+      "start": 441,
+      "end": 466
+    },
+    {
+      "text": "something",
+      "start": 467,
+      "end": 478
+    },
+    {
+      "text": "you’d",
+      "start": 479,
+      "end": 483
+    },
+    {
+      "text": "already",
+      "start": 484,
+      "end": 492
+    },
+    {
+      "text": "said",
+      "start": 494,
+      "end": 500
+    },
+    {
+      "text": "yes",
+      "start": 501,
+      "end": 507
+    },
+    {
+      "text": "to.",
+      "start": 510,
+      "end": 519
+    },
+    {
+      "text": "You",
+      "start": 525,
+      "end": 545
+    },
+    {
+      "text": "couldn’t",
+      "start": 546,
+      "end": 552
+    },
+    {
+      "text": "have",
+      "start": 553,
+      "end": 555
+    },
+    {
+      "text": "known.",
+      "start": 557,
+      "end": 572
+    },
+    {
+      "text": "Nobody",
+      "start": 576,
+      "end": 600
+    },
+    {
+      "text": "showed",
+      "start": 602,
+      "end": 608
+    },
+    {
+      "text": "you",
+      "start": 608,
+      "end": 610
+    },
+    {
+      "text": "how",
+      "start": 611,
+      "end": 615
+    },
+    {
+      "text": "to",
+      "start": 616,
+      "end": 620
+    },
+    {
+      "text": "check",
+      "start": 621,
+      "end": 629
+    },
+    {
+      "text": "what",
+      "start": 630,
+      "end": 634
+    },
+    {
+      "text": "the",
+      "start": 635,
+      "end": 636
+    },
+    {
+      "text": "connecting",
+      "start": 638,
+      "end": 651
+    },
+    {
+      "text": "system",
+      "start": 653,
+      "end": 663
+    },
+    {
+      "text": "can",
+      "start": 664,
+      "end": 668
+    },
+    {
+      "text": "do.",
+      "start": 672,
+      "end": 682
+    },
+    {
+      "text": "If",
+      "start": 684,
+      "end": 705
+    },
+    {
+      "text": "you",
+      "start": 716,
+      "end": 719
+    },
+    {
+      "text": "want",
+      "start": 720,
+      "end": 724
+    },
+    {
+      "text": "to",
+      "start": 725,
+      "end": 727
+    },
+    {
+      "text": "be",
+      "start": 728,
+      "end": 729
+    },
+    {
+      "text": "more",
+      "start": 730,
+      "end": 734
+    },
+    {
+      "text": "confident",
+      "start": 735,
+      "end": 754
+    },
+    {
+      "text": "about",
+      "start": 755,
+      "end": 759
+    },
+    {
+      "text": "the",
+      "start": 760,
+      "end": 764
+    },
+    {
+      "text": "complexity",
+      "start": 765,
+      "end": 783
+    },
+    {
+      "text": "of",
+      "start": 784,
+      "end": 785
+    },
+    {
+      "text": "a",
+      "start": 786,
+      "end": 788
+    },
+    {
+      "text": "new",
+      "start": 789,
+      "end": 795
+    },
+    {
+      "text": "feature",
+      "start": 796,
+      "end": 807
+    },
+    {
+      "text": "before",
+      "start": 808,
+      "end": 816
+    },
+    {
+      "text": "you",
+      "start": 818,
+      "end": 821
+    },
+    {
+      "text": "commit,",
+      "start": 823,
+      "end": 843
+    },
+    {
+      "text": "we’re",
+      "start": 848,
+      "end": 857
+    },
+    {
+      "text": "building",
+      "start": 858,
+      "end": 867
+    },
+    {
+      "text": "a",
+      "start": 868,
+      "end": 869
+    },
+    {
+      "text": "learning",
+      "start": 870,
+      "end": 879
+    },
+    {
+      "text": "path",
+      "start": 881,
+      "end": 889
+    },
+    {
+      "text": "for",
+      "start": 890,
+      "end": 896
+    },
+    {
+      "text": "it.",
+      "start": 898,
+      "end": 905
+    },
+    {
+      "text": "By",
+      "start": 915,
+      "end": 934
+    },
+    {
+      "text": "the",
+      "start": 935,
+      "end": 939
+    },
+    {
+      "text": "end",
+      "start": 942,
+      "end": 951
+    },
+    {
+      "text": "you’ll",
+      "start": 954,
+      "end": 965
+    },
+    {
+      "text": "be",
+      "start": 966,
+      "end": 968
+    },
+    {
+      "text": "able",
+      "start": 969,
+      "end": 975
+    },
+    {
+      "text": "to",
+      "start": 976,
+      "end": 977
+    },
+    {
+      "text": "open",
+      "start": 979,
+      "end": 987
+    },
+    {
+      "text": "the",
+      "start": 988,
+      "end": 989
+    },
+    {
+      "text": "documentation",
+      "start": 991,
+      "end": 1013
+    },
+    {
+      "text": "for",
+      "start": 1015,
+      "end": 1018
+    },
+    {
+      "text": "the",
+      "start": 1019,
+      "end": 1021
+    },
+    {
+      "text": "integrations",
+      "start": 1022,
+      "end": 1042
+    },
+    {
+      "text": "you",
+      "start": 1043,
+      "end": 1047
+    },
+    {
+      "text": "already",
+      "start": 1048,
+      "end": 1059
+    },
+    {
+      "text": "pay",
+      "start": 1060,
+      "end": 1064
+    },
+    {
+      "text": "for,",
+      "start": 1066,
+      "end": 1090
+    },
+    {
+      "text": "see",
+      "start": 1092,
+      "end": 1097
+    },
+    {
+      "text": "which",
+      "start": 1099,
+      "end": 1105
+    },
+    {
+      "text": "fields",
+      "start": 1106,
+      "end": 1117
+    },
+    {
+      "text": "they",
+      "start": 1117,
+      "end": 1121
+    },
+    {
+      "text": "actually",
+      "start": 1122,
+      "end": 1131
+    },
+    {
+      "text": "expose,",
+      "start": 1134,
+      "end": 1165
+    },
+    {
+      "text": "and",
+      "start": 1166,
+      "end": 1169
+    },
+    {
+      "text": "know",
+      "start": 1171,
+      "end": 1177
+    },
+    {
+      "text": "whether",
+      "start": 1178,
+      "end": 1186
+    },
+    {
+      "text": "the",
+      "start": 1187,
+      "end": 1189
+    },
+    {
+      "text": "request",
+      "start": 1190,
+      "end": 1203
+    },
+    {
+      "text": "is",
+      "start": 1204,
+      "end": 1205
+    },
+    {
+      "text": "possible",
+      "start": 1207,
+      "end": 1222
+    },
+    {
+      "text": "before",
+      "start": 1224,
+      "end": 1234
+    },
+    {
+      "text": "you",
+      "start": 1235,
+      "end": 1237
+    },
+    {
+      "text": "answer.",
+      "start": 1239,
+      "end": 1253
+    },
+    {
+      "text": "The",
+      "start": 1262,
+      "end": 1282
+    },
+    {
+      "text": "waitlist",
+      "start": 1284,
+      "end": 1299
+    },
+    {
+      "text": "link",
+      "start": 1300,
+      "end": 1306
+    },
+    {
+      "text": "is",
+      "start": 1307,
+      "end": 1309
+    },
+    {
+      "text": "in",
+      "start": 1310,
+      "end": 1313
+    },
+    {
+      "text": "the",
+      "start": 1314,
+      "end": 1316
+    },
+    {
+      "text": "comments.",
+      "start": 1318,
+      "end": 1335
+    },
+    {
+      "text": "Sign",
+      "start": 1339,
+      "end": 1354
+    },
+    {
+      "text": "up",
+      "start": 1357,
+      "end": 1361
+    },
+    {
+      "text": "and",
+      "start": 1362,
+      "end": 1364
+    },
+    {
+      "text": "we’ll",
+      "start": 1365,
+      "end": 1369
+    },
+    {
+      "text": "let",
+      "start": 1370,
+      "end": 1373
+    },
+    {
+      "text": "you",
+      "start": 1374,
+      "end": 1376
+    },
+    {
+      "text": "know",
+      "start": 1377,
+      "end": 1383
+    },
+    {
+      "text": "when",
+      "start": 1384,
+      "end": 1388
+    },
+    {
+      "text": "the",
+      "start": 1388,
+      "end": 1390
+    },
+    {
+      "text": "learning",
+      "start": 1391,
+      "end": 1400
+    },
+    {
+      "text": "path",
+      "start": 1402,
+      "end": 1409
+    },
+    {
+      "text": "opens.",
+      "start": 1412,
+      "end": 1426
+    },
+    {
+      "text": "What",
+      "start": 1435,
+      "end": 1460
+    },
+    {
+      "text": "‘simple’",
+      "start": 1461,
+      "end": 1480
+    },
+    {
+      "text": "request",
+      "start": 1481,
+      "end": 1489
+    },
+    {
+      "text": "turned",
+      "start": 1490,
+      "end": 1498
+    },
+    {
+      "text": "out",
+      "start": 1500,
+      "end": 1505
+    },
+    {
+      "text": "hardest?",
+      "start": 1508,
+      "end": 1529
+    }
+  ],
+  "takes": [
+    {
+      "audio": "pm-technical-fluency-validation-02/audio/29867b6260d4adb4.mp3",
+      "fromFrame": 0,
+      "durationInFrames": 1529
+    }
+  ],
+  "sections": [
+    {
+      "index": 0,
+      "fromFrame": 0,
+      "durationInFrames": 72,
+      "wordFrom": 0,
+      "wordTo": 6
+    },
+    {
+      "index": 1,
+      "fromFrame": 72,
+      "durationInFrames": 60,
+      "wordFrom": 6,
+      "wordTo": 12
+    },
+    {
+      "index": 2,
+      "fromFrame": 132,
+      "durationInFrames": 41,
+      "wordFrom": 12,
+      "wordTo": 15
+    },
+    {
+      "index": 3,
+      "fromFrame": 173,
+      "durationInFrames": 35,
+      "wordFrom": 15,
+      "wordTo": 18
+    },
+    {
+      "index": 4,
+      "fromFrame": 208,
+      "durationInFrames": 95,
+      "wordFrom": 18,
+      "wordTo": 27
+    },
+    {
+      "index": 5,
+      "fromFrame": 303,
+      "durationInFrames": 46,
+      "wordFrom": 27,
+      "wordTo": 32
+    },
+    {
+      "index": 6,
+      "fromFrame": 349,
+      "durationInFrames": 64,
+      "wordFrom": 32,
+      "wordTo": 37
+    },
+    {
+      "index": 7,
+      "fromFrame": 413,
+      "durationInFrames": 112,
+      "wordFrom": 37,
+      "wordTo": 46
+    },
+    {
+      "index": 8,
+      "fromFrame": 525,
+      "durationInFrames": 51,
+      "wordFrom": 46,
+      "wordTo": 50
+    },
+    {
+      "index": 9,
+      "fromFrame": 576,
+      "durationInFrames": 54,
+      "wordFrom": 50,
+      "wordTo": 56
+    },
+    {
+      "index": 10,
+      "fromFrame": 630,
+      "durationInFrames": 54,
+      "wordFrom": 56,
+      "wordTo": 62
+    },
+    {
+      "index": 11,
+      "fromFrame": 684,
+      "durationInFrames": 71,
+      "wordFrom": 62,
+      "wordTo": 69
+    },
+    {
+      "index": 12,
+      "fromFrame": 755,
+      "durationInFrames": 93,
+      "wordFrom": 69,
+      "wordTo": 79
+    },
+    {
+      "index": 13,
+      "fromFrame": 848,
+      "durationInFrames": 67,
+      "wordFrom": 79,
+      "wordTo": 86
+    },
+    {
+      "index": 14,
+      "fromFrame": 915,
+      "durationInFrames": 100,
+      "wordFrom": 86,
+      "wordTo": 96
+    },
+    {
+      "index": 15,
+      "fromFrame": 1015,
+      "durationInFrames": 77,
+      "wordFrom": 96,
+      "wordTo": 103
+    },
+    {
+      "index": 16,
+      "fromFrame": 1092,
+      "durationInFrames": 74,
+      "wordFrom": 103,
+      "wordTo": 109
+    },
+    {
+      "index": 17,
+      "fromFrame": 1166,
+      "durationInFrames": 96,
+      "wordFrom": 109,
+      "wordTo": 119
+    },
+    {
+      "index": 18,
+      "fromFrame": 1262,
+      "durationInFrames": 77,
+      "wordFrom": 119,
+      "wordTo": 126
+    },
+    {
+      "index": 19,
+      "fromFrame": 1339,
+      "durationInFrames": 96,
+      "wordFrom": 126,
+      "wordTo": 138
+    },
+    {
+      "index": 20,
+      "fromFrame": 1435,
+      "durationInFrames": 100,
+      "wordFrom": 138,
+      "wordTo": 144
+    }
+  ]
+}
