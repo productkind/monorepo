@@ -10,7 +10,7 @@
     "init": "zx ./productkind/scripts/init.ts",
     "publish:dungarees": "dungarees publish-multi-lib ./dungarees",
     "type-check": "tsc --noEmit -p tsconfig.json",
-    "audit-dependencies": "python3 dungarees/scripts/audit-dependencies.py"
+    "audit-dependencies": "dungarees audit-dependencies ./dungarees"
   },
   "repository": {
     "type": "git",

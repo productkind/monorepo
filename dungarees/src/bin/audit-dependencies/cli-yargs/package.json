@@ -1,5 +1,5 @@
 {
-  "name": "@dungarees/bin-base-app-cli-yargs",
+  "name": "@dungarees/bin-audit-dependencies-cli-yargs",
   "engines": {
     "node": ">=25.0.0"
   },
@@ -8,15 +8,8 @@
   },
   "type": "module",
   "dependencies": {
-    "@dungarees/bin-audit-dependencies-cli-yargs": "*",
     "@dungarees/bin-audit-dependencies-domain": "*",
-    "@dungarees/bin-publish-lib-cli-yargs": "*",
-    "@dungarees/bin-publish-lib-domain": "*",
-    "@dungarees/cli": "*",
-    "@dungarees/cli-command": "*",
-    "@dungarees/core": "*",
-    "@dungarees/fs": "*",
-    "@dungarees/sub-process": "*"
+    "@dungarees/cli": "*"
   },
   "devDependencies": {
     "@dungarees/bin-fake-app-cli-yargs": "*",
