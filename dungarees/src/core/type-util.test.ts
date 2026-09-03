@@ -62,7 +62,7 @@ test('StringLiteral<LITERAL>', () => {
   const literal: StringLiteral<'asd'> = 'asd'
   expectTypeOf<typeof literal>().toEqualTypeOf<'asd'>()
   // @ts-expect-error it has to be a literal
-  const nonLiteral: StringLiteral<'asd'> = 'asd' as string
+  const nonLiteral: StringLiteral<'asd'> = 'asd'
   expectTypeOf<typeof nonLiteral>().toEqualTypeOf<'asd'>()
 })
 
