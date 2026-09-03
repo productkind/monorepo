@@ -20,18 +20,18 @@ typed.
 | The moment (4-10s) | "It comes back as questions. Who was it? What did they do? What did the error say?" | Three questions arriving as three separate cuts | Three questions back, no answers |
 | What it costs (10-15s) | "So you ask the customer, wait two days, and nobody has started looking." | Timestamps ticking on an unanswered thread | Still nobody investigating |
 | The gap (15-19s) | "You could answer all of it yourself, if somebody showed you where to look." | A browser open on the product, nothing inspected yet | Nobody showed you where to look |
-| What changes (19-29s) | "After the learning path, you'll reproduce it on your own account, read the error code, and open the panel in your browser that shows which request to the server failed." | Reproducing the error, then the network panel with the failed request highlighted, one per cut | reproduce it · read the error · find the failed request |
-| The payoff (29-36s) | "Engineering gets the error, the request and what you've ruled out, so they start fixing instead of asking." | The finished report next to the original screenshot | They start fixing, not asking |
-| Comment prompt (36-39s) | "How long does a bug wait where you work?" | The unanswered thread again | How long at yours? |
-| CTA (39-44s) | "That's the learning path we're building: technical product manager, without becoming an engineer. Link's in the comments." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
+| The setup (19-25s) | "If you want to be the one who investigates it first, we're building a learning path for it." | Little Parrot mark, then the learning path list appearing | A learning path for investigating it |
+| What changes (25-35s) | "By the end you'll reproduce it on your own account, read the error code, and open the panel in your browser that shows which request to the server failed." | Reproducing the error, then the network panel with the failed request highlighted, one per cut | reproduce it · read the error · find the failed request |
+| CTA (35-41s) | "It's not open yet. Link's in the comments, and you'll get one email when it opens. Nothing else." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
+| Comment prompt (41-44s) | "How long does a bug wait where you work?" | The unanswered thread again | How long at yours? |
 
 **Cut cadence:** nothing holds on screen for more than three seconds. The
 Visual column lists every change in order, so a four-part visual is four cuts,
 and the longest beats are the ones carrying the most of them.
 
-**Channel swap:** on TikTok, Reels and Shorts, replace the last line with
-"Follow for more of these" and speak the URL, then pin it in a comment. The
-comment prompt stays on every channel, because it's what earns replies.
+**Channel swap:** on TikTok, Reels and Shorts, replace "link's in the comments"
+with the spoken URL, then pin it in a comment. The comment prompt is the last
+thing said on every channel.
 
 ## Production notes
 
@@ -40,5 +40,5 @@ comment prompt stays on every channel, because it's what earns replies.
   and its status code. Rewrite the support message for the recording, and use
   no real name, email or account.
 - **The panel is described, never named.** "The panel in your browser that
-  shows what the page asked the server for" is what the viewer can follow; the
+  shows which request to the server failed" is what a viewer can follow; the
   tool name and the status codes belong in the course.

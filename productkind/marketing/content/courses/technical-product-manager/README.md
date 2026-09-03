@@ -6,7 +6,7 @@ on a situation the viewer has been in, shows what it cost them, and ends on
 what they'll be able to do once they've done the learning path.
 
 - **Brand:** Little Parrot. Narration and screen recording, nobody on camera.
-- **Lead channel:** LinkedIn native video. One 41 to 46 second cut works on
+- **Lead channel:** LinkedIn native video. One 44 to 47 second cut works on
   every channel, with a CTA swap for TikTok, Reels and Shorts.
 - **Destination:** the waitlist page,
   `https://littleparrot.app/guides/technical-product-manager`
@@ -19,11 +19,11 @@ what they'll be able to do once they've done the learning path.
 | Hook | The situation, stated so the viewer thinks "that's me" inside three seconds. Always about them, never a technical term. |
 | The moment | The specific version of it, with the detail that makes it real. |
 | What it costs | The consequence they actually felt. One beat. |
-| The gap | Why they couldn't have handled it, said without blame. This is the beat that earns the next one. |
-| What changes | What they'll be able to do after the learning path. Concrete and in order, never a promise of confidence. |
-| The payoff | What that changes in the room. One line they'd repeat to a colleague. |
-| Comment prompt | One question about their own team. |
-| CTA | The learning path, named, and the link. |
+| The gap | Why they couldn't have handled it, said without blame. |
+| The setup | The learning path, introduced as the answer to what they just heard. Always "if you want to X, that's what we're building a learning path for", so it arrives as a reply to their situation. |
+| What changes | What they'll be able to do by the end of it. Concrete and in order, never a promise of confidence. |
+| CTA | The ask, and what signing up actually gets them. |
+| Comment prompt | A simple, friendly question, and the last thing said. |
 
 Rules the set follows:
 
@@ -36,10 +36,17 @@ Rules the set follows:
 - **The transformation is always after the learning path**, never something the
   viewer can already do. That's what makes the CTA the end of the story rather
   than an ask stapled to the end.
-- **The CTA names the thing.** "We're building this" left the viewer working
-  out what "this" was. Every CTA now says what it is: the learning path that
-  makes you a technical product manager without becoming an engineer, which is
-  also the waitlist page's own heading, so the click carries straight on.
+- **The learning path is introduced before it's used.** "After the learning
+  path, you'll be able to..." arrives from nowhere if nothing has mentioned a
+  learning path, and the viewer spends the payoff beat wondering what it is.
+  The setup beat now names it as the reply to the gap they just heard, and the
+  transformation follows on with "by the end you'll...".
+- **The CTA comes before the comment prompt.** Ending on the ask makes the
+  video finish on business; ending on a friendly question about their own team
+  is what earns replies, and replies are what carry the post to people who
+  don't follow us. So the order is the ask, then the question.
+- **The CTA says what signing up gets them.** One email when the path opens,
+  nothing else, which is the promise the waitlist page itself makes.
 - **No teaching sequences.** Terms appear on screen and the recording shows
   what they do; the definitions belong in the course.
 - **Nothing on screen holds for more than three seconds.** The Visual column
@@ -55,7 +62,7 @@ Rules the set follows:
 | # | Script | The situation | What they'll be able to do |
 |---|---|---|---|
 | 1 | [Nodding along in stand-up](video-1-say-it-back/script.md) | A word goes past in stand-up, you don't ask, and three weeks later the date is gone with it | Say a change back in their own words, ask what it does to the product, get an answer in the room |
-| 2 | [You only know the screens](video-2-follow-one-click/script.md) | Asked how their own product works, they can demo every screen and that's where it stops | Map their product's dependencies, owners, bottlenecks and what breaks when one piece goes |
+| 2 | [You only know the screens](video-2-follow-one-click/script.md) | Asked how their own product works, they can demo every screen, and behind those screens is a service another team owns, three integrations and an environment they've never seen | Map their product's dependencies, owners, bottlenecks and what breaks when one piece goes |
 | 3 | [You said yes to a simple feature](video-3-can-our-apis-do-that/script.md) | Said yes to a "simple" request, then found out two weeks in that the integration can't carry it | Check what the integrations they already pay for can do, before answering |
 | 4 | [Done, and your users still don't have it](video-4-where-is-the-change/script.md) | Built, tested, and waiting behind another team's monthly release | Follow a change through review, testing, environments and every team it waits on, and say what's holding it |
 | 5 | [All you can send is their screenshot](video-5-not-a-bug-report/script.md) | A customer reports a bug and all they can forward is a screenshot | Reproduce it, read the error code, and find the failed request in the browser themselves |

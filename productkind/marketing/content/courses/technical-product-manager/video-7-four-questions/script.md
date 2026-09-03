@@ -6,7 +6,7 @@ account: little-parrot
 
 # Nobody raised the hard part
 
-**Runs:** about 44 seconds. **Search phrase:** "what is technical debt".
+**Runs:** about 45 seconds. **Search phrase:** "what is technical debt".
 **Need it comes from:** surfacing complexity and technical consequences before
 the team commits.
 
@@ -19,18 +19,18 @@ then four question cards.
 | The moment (5-9s) | "The engineers assumed you'd already scoped it. You didn't know what to ask." | Two speech bubbles, one per cut, then silence | Everyone assumed somebody had |
 | What it costs (9-14s) | "Three weeks later the complexity surfaces, and it's your roadmap that moves." | A roadmap date slipping | Your roadmap moves |
 | The gap (14-17s) | "That discussion was yours to run. Nobody hands you the questions." | Four empty cards appearing | Four questions nobody hands you |
-| What changes (17-30s) | "After the learning path, you'll be able to run it. What does this rely on that we don't control? What happens when it fails halfway? Does it touch permissions, or data that already exists? Can we undo it?" | Each question filling its card as it's spoken, four cuts, then all four held | What does it rely on? · What if it fails? · Permissions or existing data? · Can we undo it? |
-| The payoff (30-36s) | "Ask those in the room and the complexity comes out before anybody commits to a date." | The four cards over the ticket, the date still blank | Complexity out before the commitment |
-| Comment prompt (36-39s) | "Who raises the hard part in your planning meetings?" | The four cards again | Who raises it on your team? |
-| CTA (39-44s) | "That's the learning path we're building: technical product manager, without becoming an engineer. Link's in the comments." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
+| The setup (17-23s) | "If you want to be the one who raises it, we're building a learning path for it." | Little Parrot mark, then the learning path list appearing | A learning path for raising it early |
+| What changes (23-36s) | "By the end you'll be able to run that discussion. What does this rely on that we don't control? What happens when it fails halfway? Does it touch permissions, or data that already exists? Can we undo it?" | Each question filling its card as it's spoken, four cuts, then all four held | What does it rely on? · What if it fails? · Permissions or existing data? · Can we undo it? |
+| CTA (36-42s) | "It's not open yet. Link's in the comments, and you'll get one email when it opens. Nothing else." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
+| Comment prompt (42-45s) | "Who raises the hard part in your planning meetings?" | The four cards again | Who raises it on your team? |
 
 **Cut cadence:** nothing holds on screen for more than three seconds. The
 Visual column lists every change in order, so a four-part visual is four cuts,
 and the longest beats are the ones carrying the most of them.
 
-**Channel swap:** on TikTok, Reels and Shorts, replace the last line with
-"Follow for more of these" and speak the URL, then pin it in a comment. The
-comment prompt stays on every channel, because it's what earns replies.
+**Channel swap:** on TikTok, Reels and Shorts, replace "link's in the comments"
+with the spoken URL, then pin it in a comment. The comment prompt is the last
+thing said on every channel.
 
 ## Production notes
 

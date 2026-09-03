@@ -18,19 +18,19 @@ change as far as it can go, and stops.
 | Hook (0-3s) | "Engineering says it's done. Your users still don't have it." | Text card, then a stakeholder message: "so where is it?" | **"It's done." Still not live.** |
 | The moment (3-10s) | "It's built, it's tested, and it's waiting behind another team's release. Nobody told you that team ships once a month." | The change moving along, then stopping at another team's gate | Waiting on another team |
 | What it costs (10-14s) | "You've been telling your stakeholder it's coming this week. For three weeks." | The same message sent three times, one per cut | "This week." Again. |
-| The gap (14-20s) | "Done meant finished in their part of the system. That isn't the same as live for your users." | Two labels on the same change: finished, and not live | Finished ≠ live |
-| What changes (20-30s) | "After the learning path, you'll be able to follow one change through review, testing, environments and every team it waits on, and say exactly what's holding it up." | The route drawn, each stage appearing per cut, the blocked one marked | review · testing · environments · other teams |
-| The payoff (30-36s) | "So you stop promising dates you have to walk back, and you know who to go and ask." | A date on a roadmap, held rather than moved | No more dates you walk back |
-| Comment prompt (36-39s) | "How many teams does your release wait on?" | The route again, with the other teams' gates on it | How many for yours? |
-| CTA (39-44s) | "That's the learning path we're building: technical product manager, without becoming an engineer. Link's in the comments." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
+| The gap (14-20s) | "Done meant finished in their part of the system. That isn't the same as live for your users." | Two labels on the same change: finished, and not live | Finished is not live |
+| The setup (20-26s) | "If you want to know where your feature actually is, we're building a learning path for it." | Little Parrot mark, then the learning path list appearing | A learning path for knowing where it is |
+| What changes (26-35s) | "By the end you'll be able to follow one change through review, testing, environments and every team it waits on, and say exactly what's holding it up." | The route drawn, each stage appearing per cut, the blocked one marked | review · testing · environments · other teams |
+| CTA (35-41s) | "It's not open yet. Link's in the comments, and you'll get one email when it opens. Nothing else." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
+| Comment prompt (41-44s) | "How many teams does your release wait on?" | The route again, with the other teams' gates on it | How many for yours? |
 
 **Cut cadence:** nothing holds on screen for more than three seconds. The
 Visual column lists every change in order, so a four-part visual is four cuts,
 and the longest beats are the ones carrying the most of them.
 
-**Channel swap:** on TikTok, Reels and Shorts, replace the last line with
-"Follow for more of these" and speak the URL, then pin it in a comment. The
-comment prompt stays on every channel, because it's what earns replies.
+**Channel swap:** on TikTok, Reels and Shorts, replace "link's in the comments"
+with the spoken URL, then pin it in a comment. The comment prompt is the last
+thing said on every channel.
 
 ## Production notes
 

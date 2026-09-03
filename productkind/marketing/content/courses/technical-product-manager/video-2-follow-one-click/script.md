@@ -16,21 +16,21 @@ Parrot app, then a system map drawn on screen.
 | Beat | Narration | Visual | On-screen text |
 |---|---|---|---|
 | Hook (0-6s) | "'So how does your product actually work?' You can demo every screen. That's where it stops." | Text card, then a product screen sliding in | **You know the screens** |
-| The moment (6-13s) | "Your product is a service another team owns, three integrations, an environment you've never seen, and a database somebody migrated last year." | Each part dropping onto a map, one per cut | a service · integrations · environments · a migrated database |
-| What it costs (13-18s) | "So when the load test fails, you can't tell whether that's your problem." | The map, then a failed load test result over it | Is that your problem? |
-| The gap (18-22s) | "Frontend and backend you know. It's everything around them that nobody draws for you." | Two boxes, then the rest of the map greyed out | Nobody draws you the rest |
-| What changes (22-33s) | "After the learning path, you'll have a map of your own product: what it depends on, who owns each part, where it slows down, and what breaks when one piece goes." | The map filling in, one label per cut | depends on · owned by · slows down · breaks when |
-| The payoff (33-38s) | "Then a new request stops being a mystery. You can see what it touches." | The map with three parts lighting up | You can see what it touches |
-| Comment prompt (38-41s) | "Which team owns the part your product depends on most?" | The map with one box unlabelled | Who owns yours? |
-| CTA (41-47s) | "That's the learning path we're building: technical product manager, without becoming an engineer. Link's in the comments." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
+| The moment (6-13s) | "Behind those screens is a service another team owns, three integrations, an environment you've never seen, and a migrated database." | Each part dropping onto a map behind the screen, one per cut | a service · integrations · environments · a migrated database |
+| What it costs (13-17s) | "So when the load test fails, you can't tell if that's your problem." | The map, then a failed load test result over it | Is that your problem? |
+| The gap (17-22s) | "Frontend and backend you know. It's everything around them that nobody draws for you." | Two boxes, then the rest of the map greyed out | Nobody draws you the rest |
+| The setup (22-28s) | "If you want to answer that question about your own product, that's what we're building a learning path for." | Little Parrot mark, then the learning path list appearing | A learning path for your product |
+| What changes (28-38s) | "By the end you'll have a map of your product: what it depends on, who owns each part, where it slows down, and what breaks when one goes." | The map filling in, one label per cut | depends on · owned by · slows down · breaks when |
+| CTA (38-44s) | "It's not open yet. Link's in the comments, and you'll get one email when it opens. Nothing else." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
+| Comment prompt (44-47s) | "Which part of your product would you struggle to explain?" | The map with one box left blank | Which part would you struggle to explain? |
 
 **Cut cadence:** nothing holds on screen for more than three seconds. The
 Visual column lists every change in order, so a four-part visual is four cuts,
 and the longest beats are the ones carrying the most of them.
 
-**Channel swap:** on TikTok, Reels and Shorts, replace the last line with
-"Follow for more of these" and speak the URL, then pin it in a comment. The
-comment prompt stays on every channel, because it's what earns replies.
+**Channel swap:** on TikTok, Reels and Shorts, replace "link's in the comments"
+with the spoken URL, then pin it in a comment. The comment prompt is the last
+thing said on every channel.
 
 ## Production notes
 
@@ -41,5 +41,9 @@ comment prompt stays on every channel, because it's what earns replies.
   frontend, backend and database, and a video that explains those three
   insults them. The subject here is what sits around and underneath:
   infrastructure, environments, integrations and the parts other teams own.
+- **The product depends on those systems, it isn't made of them.** An earlier
+  draft said "your product is a service another team owns", which isn't a
+  thing that can be true. "Behind those screens is" keeps it accurate and
+  keeps the screens as the thing the viewer already knows.
 - **Nothing is defined in the narration.** The words appear on screen and the
-  map shows what they do; the definitions belong in the course.
+  map shows what they do.
