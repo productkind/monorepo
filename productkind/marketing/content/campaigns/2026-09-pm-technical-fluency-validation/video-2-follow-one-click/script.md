@@ -6,7 +6,7 @@ account: little-parrot
 
 # You only know the screens
 
-**Runs:** about 47 seconds. **Search phrase:** "how does a web application
+**Runs:** about 50 seconds. **Search phrase:** "how does a web application
 work". **Need it comes from:** understanding how your product, its
 infrastructure and the systems around it fit together.
 
@@ -20,9 +20,9 @@ Parrot app, then a system map drawn on screen.
 | What it costs (15-19s) | "So when the load test fails, you can't tell if it's your problem." | The map, then a failed load test result over it | Is that your problem? |
 | The gap (19-24s) | "You know the frontend and the backend. Nobody explains you the infrastructure around them." | Two boxes, then the rest of the map greyed out | Nobody draws you the infrastructure |
 | The setup (24-30s) | "If you want to understand that about your own product, that's what we're building a learning path for." | Little Parrot mark, then the learning path list appearing | A learning path for your product |
-| What changes (30-39s) | "By the end you'll be able to map out your product: what it depends on, who owns each part, where it slows down, and what breaks when one fails." | The map filling in, one label per cut | depends on · owned by · slows down · breaks when |
-| CTA (39-45s) | "The waitlist link is in the comments. Sign up and we'll let you know when it opens." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
-| Comment prompt (45-47s) | "Which part of your product would you struggle to explain?" | The map with one box left blank | Which part would you struggle to explain? |
+| What changes (30-40s) | "By the end you'll be able to map out your product: what it depends on, who owns each part, where it slows down, and what breaks when one fails." | The map filling in, one label per cut | depends on · owned by · slows down · breaks when |
+| CTA (40-46s) | "The waitlist link is in the comments. Sign up and we'll let you know when the learning path opens." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
+| Comment prompt (46-50s) | "Which part of your product would you struggle to explain?" | The map with one box left blank | Which part would you struggle to explain? |
 
 **Cut cadence:** nothing holds on screen for more than three seconds. The
 Visual column lists every change in order, so a four-part visual is four cuts,

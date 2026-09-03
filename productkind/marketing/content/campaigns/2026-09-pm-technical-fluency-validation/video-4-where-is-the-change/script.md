@@ -6,7 +6,7 @@ account: little-parrot
 
 # Done, and your users still don't have it
 
-**Runs:** about 44 seconds. **Search phrase:** "staging vs production". **Need
+**Runs:** about 45 seconds. **Search phrase:** "staging vs production". **Need
 it comes from:** understanding the route from a finished change to users, one
 of only two needs with strict validation evidence in more than one community.
 
@@ -21,8 +21,8 @@ change as far as it can go, and stops.
 | The gap (14-20s) | "Done meant finished in your part of the system. That isn't the same as live for your users." | Two labels on the same change: finished, and not live | Finished is not live |
 | The setup (20-26s) | "If you want to know where your feature actually is, we're building a learning path for it." | Little Parrot mark, then the learning path list appearing | A learning path for knowing where it is |
 | What changes (26-35s) | "By the end you'll be able to follow one change through review, testing, environments and every team it waits on, and say exactly what's holding it up." | The route drawn, each stage appearing per cut, the blocked one marked | review · testing · environments · other teams |
-| CTA (35-41s) | "The waitlist link is in the comments. Sign up and we'll let you know when it opens." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
-| Comment prompt (41-44s) | "How often do you release new improvements for your users?" | The route again, with the other teams' gates on it | How many for yours? |
+| CTA (35-42s) | "The waitlist link is in the comments. Sign up and we'll let you know when the learning path opens." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
+| Comment prompt (42-45s) | "How often do you release new improvements for your users?" | The route again, with the other teams' gates on it | How many for yours? |
 
 **Cut cadence:** nothing holds on screen for more than three seconds. The
 Visual column lists every change in order, so a four-part visual is four cuts,
