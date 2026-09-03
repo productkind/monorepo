@@ -45,8 +45,10 @@ Rules the set follows:
   video finish on business; ending on a friendly question about their own team
   is what earns replies, and replies are what carry the post to people who
   don't follow us. So the order is the ask, then the question.
-- **The CTA says what signing up gets them.** One email when the path opens,
-  nothing else, which is the promise the waitlist page itself makes.
+- **The CTA is one ask, with no throat-clearing.** The waitlist link is in the
+  comments, sign up to hear when it opens. An earlier version opened with "it's
+  not open yet" and closed with "nothing else", and both were saying something
+  the ask already implies.
 - **No teaching sequences.** Terms appear on screen and the recording shows
   what they do; the definitions belong in the course.
 - **Nothing on screen holds for more than three seconds.** The Visual column
@@ -123,10 +125,19 @@ others assume it.
   recognisable situations, and 3 and 7 are kept a fortnight apart. Pin 1.
 - **Cadence:** two a week over four weeks, so the experiment has a readable
   result before the next batch.
-- **LinkedIn:** the waitlist link goes in the first comment, not the post body.
-- **TikTok:** no bio link on the account yet
-  ([channel note](../../../channels/tiktok/profile.md)), so the URL is spoken
-  and shown, and repeated in a pinned comment.
+- **Where the link goes, by channel.** LinkedIn: first comment, not the post
+  body. YouTube Shorts: pinned comment, which is what the
+  [playbook](../../../channels/platform-playbook-2026.md) says and what
+  `build-first-app/video-first-prompt-no-prd` did. TikTok: pinned comment, plus
+  the URL spoken and shown, because there's no bio link until 1,000 followers
+  ([channel note](../../../channels/tiktok/profile.md)). Instagram Reels: the
+  URL spoken and shown, because links aren't clickable in captions
+  ([channel register](../../../channels/README.md)) and the bio holds five
+  slots for more than eight destinations.
+- **Worth fixing before this set goes out:** the waitlist URL is long to say
+  out loud and longer to type from a phone. A short path that redirects to
+  `/guides/technical-product-manager` would make the two spoken-URL channels
+  workable, and it's a small change in the app repo.
 - **Captions are not in this folder.** Once a video is cut, the `captions`
   skill writes the per-channel captions into a `posts/` folder next to the
   script.

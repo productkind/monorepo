@@ -21,16 +21,20 @@ Parrot app, then a system map drawn on screen.
 | The gap (17-22s) | "Frontend and backend you know. It's everything around them that nobody draws for you." | Two boxes, then the rest of the map greyed out | Nobody draws you the rest |
 | The setup (22-28s) | "If you want to answer that question about your own product, that's what we're building a learning path for." | Little Parrot mark, then the learning path list appearing | A learning path for your product |
 | What changes (28-38s) | "By the end you'll have a map of your product: what it depends on, who owns each part, where it slows down, and what breaks when one goes." | The map filling in, one label per cut | depends on · owned by · slows down · breaks when |
-| CTA (38-44s) | "It's not open yet. Link's in the comments, and you'll get one email when it opens. Nothing else." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
-| Comment prompt (44-47s) | "Which part of your product would you struggle to explain?" | The map with one box left blank | Which part would you struggle to explain? |
+| CTA (38-43s) | "The waitlist link is in the comments. Sign up and we'll let you know when it opens." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
+| Comment prompt (43-47s) | "Which part of your product would you struggle to explain?" | The map with one box left blank | Which part would you struggle to explain? |
 
 **Cut cadence:** nothing holds on screen for more than three seconds. The
 Visual column lists every change in order, so a four-part visual is four cuts,
 and the longest beats are the ones carrying the most of them.
 
-**Channel swap:** on TikTok, Reels and Shorts, replace "link's in the comments"
-with the spoken URL, then pin it in a comment. The comment prompt is the last
-thing said on every channel.
+**Channel swap:** the CTA line works as written on LinkedIn (first comment) and
+YouTube Shorts (pinned comment), where a link in a comment is clickable. On
+TikTok, pin the link too, and also speak and show the URL, because the account
+has no bio link until 1,000 followers. On Instagram Reels, speak and show the
+URL instead of saying "in the comments", because Instagram links aren't
+clickable in captions or comments and the bio holds five slots for more than
+eight destinations. The comment prompt is the last thing said on every channel.
 
 ## Production notes
 

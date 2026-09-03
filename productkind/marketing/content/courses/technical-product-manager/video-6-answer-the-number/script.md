@@ -6,7 +6,7 @@ account: little-parrot
 
 # Needed tomorrow, ready next week
 
-**Runs:** about 44 seconds. **Search phrase:** "SQL for product managers".
+**Runs:** about 43 seconds. **Search phrase:** "SQL for product managers".
 **Need it comes from:** answering simple product data questions without
 waiting.
 
@@ -21,16 +21,20 @@ against a Little Parrot test database.
 | The gap (14-18s) | "The query is four lines. You've just never been shown which four." | Four blank lines in a query editor | Four lines you've never been shown |
 | The setup (18-22s) | "If you'd rather answer it yourself, that's what we're building a learning path for." | Little Parrot mark, then the learning path list appearing | A learning path for answering it yourself |
 | What changes (22-34s) | "By the end you'll write it yourself, and check what the number includes: test accounts, people who never confirmed their email, the ones who signed up twice. So you stop quoting numbers you can't defend." | Four lines typed one per cut, the number appearing, then two results side by side | write it · check what it counts · defend it |
-| CTA (34-40s) | "It's not open yet. Link's in the comments, and you'll get one email when it opens. Nothing else." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
-| Comment prompt (40-44s) | "How long does a simple number take where you work?" | The queue again | How long does yours take? |
+| CTA (34-40s) | "The waitlist link is in the comments. Sign up and we'll let you know when it opens." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
+| Comment prompt (40-43s) | "How long does a simple number take where you work?" | The queue again | How long does yours take? |
 
 **Cut cadence:** nothing holds on screen for more than three seconds. The
 Visual column lists every change in order, so a four-part visual is four cuts,
 and the longest beats are the ones carrying the most of them.
 
-**Channel swap:** on TikTok, Reels and Shorts, replace "link's in the comments"
-with the spoken URL, then pin it in a comment. The comment prompt is the last
-thing said on every channel.
+**Channel swap:** the CTA line works as written on LinkedIn (first comment) and
+YouTube Shorts (pinned comment), where a link in a comment is clickable. On
+TikTok, pin the link too, and also speak and show the URL, because the account
+has no bio link until 1,000 followers. On Instagram Reels, speak and show the
+URL instead of saying "in the comments", because Instagram links aren't
+clickable in captions or comments and the bio holds five slots for more than
+eight destinations. The comment prompt is the last thing said on every channel.
 
 ## Production notes
 
