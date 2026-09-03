@@ -1,5 +1,19 @@
+import { type AuditDependenciesEvent, eventCreators } from './events.ts'
+
+import { catchAndRethrow } from '@dungarees/rxjs/util.ts'
+
 import path from 'node:path'
-import { forkJoin, map, mergeMap, type Observable, of, type OperatorFunction } from 'rxjs'
+import {
+  concat,
+  forkJoin,
+  from,
+  map,
+  mergeMap,
+  type Observable,
+  of,
+  type OperatorFunction,
+  pipe,
+} from 'rxjs'
 import ts from 'typescript'
 import { z } from 'zod'
 
@@ -120,3 +134,61 @@ export const readFiles = (
           ),
         ),
   )
+
+// Declaring these without importing them is legitimate — tsc and vitest run as commands, and
+// react arrives through the react-jsx runtime.
+const PACKAGES_USED_WITHOUT_IMPORT = ['typescript', 'vitest', 'react']
+
+export const getAuditStartEvent = ({ dir }: { dir: string }): Observable<AuditDependenciesEvent> =>
+  of(eventCreators.auditStart({ dir }))
+
+const excludeNodeModules = (): OperatorFunction<string[], string[]> =>
+  map((paths) => paths.filter(isOutsideNodeModules))
+
+const readManifests = (
+  readFile: (filePath: string) => Observable<string>,
+): OperatorFunction<string[], PackageManifest[]> =>
+  pipe(
+    excludeNodeModules(),
+    readFiles(readFile),
+    map((files) =>
+      files.map(({ path: manifestPath, content }) => parseManifest({ manifestPath, content })),
+    ),
+    catchAndRethrow((cause) => new Error(`Invalid package.json: ${cause.message}`, { cause })),
+  )
+
+const readSources = (
+  readFile: (filePath: string) => Observable<string>,
+): OperatorFunction<string[], SourceFile[]> => pipe(excludeNodeModules(), readFiles(readFile))
+
+export const getManifestsAndSources = ({
+  manifestPaths$,
+  sourcePaths$,
+  readFile,
+}: {
+  manifestPaths$: Observable<string[]>
+  sourcePaths$: Observable<string[]>
+  readFile: (filePath: string) => Observable<string>
+}): Observable<{ manifests: PackageManifest[]; sources: SourceFile[] }> =>
+  forkJoin({
+    manifests: manifestPaths$.pipe(readManifests(readFile)),
+    sources: sourcePaths$.pipe(readSources(readFile)),
+  })
+
+export const reportFindings = ({
+  usedWithoutImport = PACKAGES_USED_WITHOUT_IMPORT,
+}: { usedWithoutImport?: string[] } = {}): OperatorFunction<
+  { manifests: PackageManifest[]; sources: SourceFile[] },
+  AuditDependenciesEvent
+> =>
+  mergeMap(({ manifests, sources }) => {
+    const findings = auditPackages({ manifests, sources, usedWithoutImport })
+    return concat(
+      from(findings.map((finding) => eventCreators.packageFindings(finding))),
+      of(
+        findings.length === 0
+          ? eventCreators.auditPassed({ packageCount: manifests.length })
+          : eventCreators.auditFailed({ packageCount: manifests.length }),
+      ),
+    )
+  })
