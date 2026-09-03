@@ -6,7 +6,7 @@ account: little-parrot
 
 # Needed tomorrow, ready next week
 
-**Runs:** about 41 seconds. **Search phrase:** "SQL for product managers".
+**Runs:** about 44 seconds. **Search phrase:** "SQL for product managers".
 **Need it comes from:** answering simple product data questions without
 waiting.
 
@@ -19,18 +19,18 @@ against a Little Parrot test database.
 | The moment (4-10s) | "And it's never a hard question. How many people finished onboarding last month. How many came back." | The two questions appearing as two tickets, one per cut | The questions are one line long |
 | What it costs (10-14s) | "You join the queue, and have the meeting without it." | A meeting slide with a blank where the number goes | Meeting happens anyway |
 | The gap (14-18s) | "The query is four lines. You've just never been shown which four." | Four blank lines in a query editor | Four lines you've never been shown |
-| What changes (18-28s) | "After the learning path, you'll be able to write it yourself, and check what the number includes: test accounts, people who never confirmed their email, the ones who signed up twice." | Four lines typed one per cut, the number appearing, then two results side by side | write it · then check what it counts |
-| The payoff (28-32s) | "So you stop waiting, and you stop quoting numbers you can't defend." | The number, now with a note on what it counts | A number you can defend |
-| Comment prompt (32-36s) | "How long does a simple number take where you work?" | The queue again | How long does yours take? |
-| CTA (36-41s) | "That's the learning path we're building: technical product manager, without becoming an engineer. Link's in the comments." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
+| The setup (18-22s) | "If you'd rather answer it yourself, that's what we're building a learning path for." | Little Parrot mark, then the learning path list appearing | A learning path for answering it yourself |
+| What changes (22-34s) | "By the end you'll write it yourself, and check what the number includes: test accounts, people who never confirmed their email, the ones who signed up twice. So you stop quoting numbers you can't defend." | Four lines typed one per cut, the number appearing, then two results side by side | write it · check what it counts · defend it |
+| CTA (34-40s) | "It's not open yet. Link's in the comments, and you'll get one email when it opens. Nothing else." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
+| Comment prompt (40-44s) | "How long does a simple number take where you work?" | The queue again | How long does yours take? |
 
 **Cut cadence:** nothing holds on screen for more than three seconds. The
 Visual column lists every change in order, so a four-part visual is four cuts,
 and the longest beats are the ones carrying the most of them.
 
-**Channel swap:** on TikTok, Reels and Shorts, replace the last line with
-"Follow for more of these" and speak the URL, then pin it in a comment. The
-comment prompt stays on every channel, because it's what earns replies.
+**Channel swap:** on TikTok, Reels and Shorts, replace "link's in the comments"
+with the spoken URL, then pin it in a comment. The comment prompt is the last
+thing said on every channel.
 
 ## Production notes
 
