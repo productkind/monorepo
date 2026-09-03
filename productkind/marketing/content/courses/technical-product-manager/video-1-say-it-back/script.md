@@ -4,40 +4,40 @@ channels: [linkedin, tiktok, instagram, youtube-shorts]
 account: little-parrot
 ---
 
-# Say it back before you agree
+# Nodding along in stand-up
 
-**Runs:** about 87 seconds. **Search phrase:** "technical skills for product
-managers". **Learning path step:** none, this is the umbrella need that appears
-in every source we researched.
+**Runs:** about 45 seconds. **Search phrase:** "technical skills for product
+managers". **Need it comes from:** taking part in technical conversations, the
+need that appeared in every kind of discussion we read.
 
-**Treatment:** narration over screen recording, nobody on camera. The whole
-video sits on one screen recording of a meeting-style transcript and a
-notebook, so it can be made without filming anything.
+**Treatment:** narration over on-screen text and one screen recording of a
+meeting note. Nobody on camera.
 
 | Beat | Narration | Visual | On-screen text |
 |---|---|---|---|
-| Hook (0-4s) | "Sometimes it does feel like I'm the least knowledgeable person in the room." | Black-on-white text card, Space Mono | **"Sometimes it does feel like I'm the least knowledgeable person in the room."** |
-| Where it's from (4-20s) | "A product manager wrote that about their own job. We read two years of product management discussions for this, and this need appeared in every kind of discussion we looked at: Reddit threads, LinkedIn comments, course reviews. Usually about the same meeting: a solution review, or refinement." | The quote card shrinks, three more short quote cards stack behind it | Product managers, in their own words |
-| The move (20-34s) | "So here's one thing to try in your next solution review. When an engineer explains a change, say it back to them in your own words before you agree to it. Then name the decision it changes for you." | Notebook page, the two lines being written | 1. Say it back. 2. Name the decision. |
-| The example (34-55s) | "It sounds like this. 'So if I've understood, the export runs after the nightly job, which means someone who signs up today won't see their data until tomorrow morning. Does that change what we say on the pricing page?' Two sentences. The first checks whether you followed it. The second turns it into a product question, which is your job in the room." | The spoken sentence typed out on screen, the second sentence highlighted | Say it back, then ask the product question |
-| Why it works (55-72s) | "The first time you do it, it can feel like admitting you didn't follow. You get the correction there and then, from the engineer who built it, instead of three weeks later. Correcting your restatement takes them a minute. Correcting a feature built on your misunderstanding takes weeks." | Two-panel still: a calendar in the meeting week, a calendar three weeks later | Correcting you now is cheaper for everyone |
-| CTA (72-87s) | "We're building a learning path for product managers who manage software and don't come from engineering. Seven steps, starting with tracing one real flow through your own product. It's not open yet. The link's in the comments if you want to know when it is." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
+| Hook (0-5s) | "You've nodded along in a stand-up, hoping nobody asks you a follow-up question." | Text card, hard cut on "nodded along" | **Nodding along in stand-up** |
+| The moment (5-11s) | "You know what your product does. Then someone says 'we'll just call the service', and you're lost." | Product screen, then the word "service" dropped over it | "we'll just call the service" |
+| What you do instead (11-15s) | "So you write the word down and look it up after the meeting." | A note being typed: service? | Look it up later. Again. |
+| The shift (15-20s) | "One sentence gets you out of that. Say the change back in your own words." | The first line appearing, typed | 1. Say it back |
+| The second half (20-23s) | "Then ask what it changes for the product." | The second line appearing under it | 2. Ask what it changes |
+| Why it works (23-29s) | "The engineer corrects you in ten seconds, instead of in June after you've promised the wrong thing." | Calendar this week, then June | Corrected in ten seconds, not in June |
+| The transformation (29-35s) | "A few weeks of that and you're the one asking the question everyone else was too polite to ask." | The same meeting, the question typed in full | You ask the question nobody else will |
+| Comment prompt (35-40s) | "What was the last word you had to look up after a meeting?" | The note from earlier, now a list of words | What did you look up last? |
+| CTA (40-45s) | "We're building this for product managers who don't come from engineering. Link's in the comments." | Waitlist page | littleparrot.app/guides/technical-product-manager |
 
-## Short cut for TikTok, Reels and Shorts (about 45 seconds)
+**Cut cadence:** nothing holds on screen for more than three seconds. The
+Visual column lists every change in order, so a three-part visual is three
+cuts, and the longest beats are the ones carrying the most of them.
 
-Keep the hook, the move and the example. Drop "Where it's from" to one line
-("A product manager wrote that. This need appeared in every kind of discussion
-we read.") and shorten "Why it works" to its middle sentence. Close
-on the follow-ask instead of the link: "Follow for more of these, one thing you
-can try in your next refinement meeting." Speak and show the URL on the last
-card, and repeat it in a pinned comment.
+**Channel swap:** on TikTok, Reels and Shorts, replace the last line with
+"Follow for more of these" and speak the URL, then pin it in a comment. The
+comment prompt stays on every channel, because it's what earns replies.
 
 ## Production notes
 
 - **Screen recording needed:** none of a real product. A typed meeting note and
   the waitlist page are enough.
-- **The quote is real and stays anonymous.** Source is V-series evidence in the
-  [needs research](../../../../../ai-research/pm-technical-fluency/non-technical-pm-technical-needs-2024-2026.md#1-form-a-correct-mental-model-of-how-the-product-works).
-  Don't name the person or link their post in the video or the caption.
-- **Payoff to protect in the edit:** the two-sentence example. If anything gets
-  cut for length, it isn't that.
+- **Payoff to protect:** the two lines in "The shift". Everything else can be
+  trimmed for time, that can't.
+- The hook is a reformulation of what product managers wrote about their own
+  stand-ups, not a quote, so it doesn't need quote marks or a source.

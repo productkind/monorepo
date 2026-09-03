@@ -4,41 +4,40 @@ channels: [linkedin, tiktok, instagram, youtube-shorts]
 account: little-parrot
 ---
 
-# Your prototype is not the product
+# "Can we just ship it?"
 
-**Runs:** about 84 seconds. **Search phrase:** "AI prototyping for product
-managers". **Learning path step:** 7, AI prototyping.
+**Runs:** about 44 seconds. **Search phrase:** "AI prototyping for product
+managers". **Need it comes from:** building a bounded prototype and knowing
+where production starts.
 
-**Treatment:** narration over a screen recording of a small prototype being
-built with an AI agent, then the handover list being written.
+**Treatment:** narration over a screen recording of a small prototype built
+with an AI agent, then the handover list being written next to it.
 
 | Beat | Narration | Visual | On-screen text |
 |---|---|---|---|
-| Hook (0-6s) | "'Prototyping is not production.' A product manager wrote that after building a working app with AI." | Text card | **"Prototyping ≠ Production"** |
-| What changed (6-25s) | "In the last two years this became real: a product manager who has never written code can build a working version of an idea in an afternoon, using an AI agent, a tool that writes and changes the files itself. You can put a working screen in front of five users instead of a twenty-page document." | Screen recording: a prompt typed into an AI agent, a working screen appearing | Build the idea, don't describe it |
-| The trap (25-41s) | "The trouble starts when it works. On your screen it looks finished, so someone asks whether we can just ship it. You've built enough to show the idea works, and skipped what a real product needs: other people's data, logins and permissions, and what happens when it breaks." | The prototype working, then a "can we just ship it?" message | You built enough to prove the idea works |
-| The handover list (41-65s) | "So build the prototype and write the list next to it. Whose data would this hold, and where does it go. What happens when two people use it at the same time. Who has access, and how is that checked. Who fixes it at 2am. Every one of those is a real engineering job, and if you list them yourself, engineering can see you know the prototype isn't a finished product." | Four lines being written next to the prototype | Whose data? · What if two people use it? · Who has access? · Who fixes it at 2am? |
-| The payoff (65-74s) | "Bring the prototype and the list together, and engineering can see what you've tested, what you skipped, and the decision you want them in on." | The prototype and the list side by side | Tested · skipped · the decision |
-| CTA (74-84s) | "Step seven of our learning path is building one of these and writing that list. It's the last step, and the path isn't open yet. Link's in the comments." | Waitlist page, step 7 in frame | littleparrot.app/guides/technical-product-manager |
+| Hook (0-6s) | "You built it with AI, showed it around, and somebody asked if we can just ship it." | Screen recording: a working prototype, then the message "can we just ship it?" | **"Can we just ship it?"** |
+| The moment (6-9s) | "It works on your screen, so it looks finished." | The prototype being clicked through, smoothly | It works. On your screen. |
+| The trap (9-17s) | "What you built proves the idea. What it skips is everything a real product needs: other people's data, logins, and what happens when it breaks." | Three things dropping in over the prototype, one per cut | data · logins · what happens when it breaks |
+| The shift (17-24s) | "So bring the list with the prototype. Whose data would this hold. Who has access. Who fixes it at 2am." | The list being written next to the prototype, one line per cut | Whose data? · Who has access? · Who fixes it at 2am? |
+| The transformation (24-30s) | "That's the version engineering can act on, because you named what you skipped before they had to." | The prototype and the list side by side | You named it first |
+| The payoff (30-36s) | "A tested idea and an honest handover is a much better thing to walk into that meeting with." | The two together, being sent | Tested idea · honest handover |
+| Comment prompt (36-39s) | "Has anyone asked you to ship a prototype?" | The "can we just ship it?" message again | Have you been asked this? |
+| CTA (39-44s) | "We're building this for product managers who don't come from engineering. Link's in the comments." | Waitlist page | littleparrot.app/guides/technical-product-manager |
 
-## Short cut for TikTok, Reels and Shorts (about 50 seconds)
+**Cut cadence:** nothing holds on screen for more than three seconds. The
+Visual column lists every change in order, so a three-part visual is three
+cuts, and the longest beats are the ones carrying the most of them.
 
-Keep the hook, "The trap" and "The handover list". Cut "What changed" to one
-line and drop "The payoff". Hold the four questions on screen together at the
-end.
+**Channel swap:** on TikTok, Reels and Shorts, replace the last line with
+"Follow for more of these" and speak the URL, then pin it in a comment. The
+comment prompt stays on every channel, because it's what earns replies.
 
 ## Production notes
 
 - **Screen recording needed:** one small prototype built with an AI agent,
-  something a product manager would actually want, for example a page that
-  takes a list of feature requests and groups them. Keep it under a minute of
-  recording, sped up.
-- **"Prototyping ≠ Production" stays as written**, including the symbol, since
-  it's a direct quote and it reads well as a card. Say it aloud as
-  "prototyping is not production".
-- **Don't say the prototype could be shipped with a bit more work.** The whole
-  point of the video is the boundary, and the learning path promises the same
-  boundary.
-- **Tool naming:** "AI agent" for Claude Code or Codex, defined on first use.
-  If the recording uses Lovable, describe it as what it is rather than calling
-  it an AI chat assistant.
+  something a product manager would want, for example a page that groups a list
+  of feature requests. Under a minute of recording, sped up.
+- **Don't say the prototype could be shipped with a bit more work.** The
+  boundary is the point of the video and the course promises the same boundary.
+- **Tool naming:** "AI agent" for Claude Code or Codex. If the recording uses
+  Lovable, describe what it does rather than calling it an AI chat assistant.
