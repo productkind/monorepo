@@ -14,25 +14,26 @@ from common import assets_dir, download_original, gif_seconds, gif_size, slots
 
 
 def advise(seconds, slot):
-    """The two knobs, from the gap. Anything longer than its slot simply gets cut, which is fine."""
+    """How to fit the gif to the slot.
+
+    The house preference is a slowdown, never a held last frame: `pause-after-finish` freezes the
+    picture and reads as a stall in the middle of a video where everything else keeps moving.
+    """
     if seconds >= slot:
-        return None, f'{seconds / slot:.0%} of the gif plays before the cut'
-    repeats = slot / seconds
-    if repeats < 1.15:
-        return (
-            "loopBehavior: 'pause-after-finish'",
-            f'repeats {repeats:.2f}x — hold the last frame if the motion is one-shot, '
-            'drop the knob if it loops cyclically',
+        return None, (
+            f'{seconds / slot:.0%} of the gif plays before the cut. If the motion has to finish '
+            f'(a drawing, a build, a reveal), speed it up with playbackRate: {seconds / slot:.2f}'
         )
     rate = round(seconds / slot, 2)
+    repeats = slot / seconds
     if rate >= 0.6:
         return (
             f'playbackRate: {rate}',
-            f'repeats {repeats:.2f}x — at {rate} speed it fills the slot in a single pass',
+            f'repeats {repeats:.2f}x at full speed; at {rate} it covers the beat in a single pass',
         )
     return None, (
         f'repeats {repeats:.1f}x and slowing it to {rate} would look like slow motion; '
-        'let it loop only if the motion is cyclic, otherwise pick another gif'
+        'let it loop if the motion is cyclic, otherwise pick another gif'
     )
 
 

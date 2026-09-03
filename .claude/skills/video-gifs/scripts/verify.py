@@ -16,15 +16,23 @@ import subprocess
 import time
 import urllib.request
 
-from common import assets_dir, candidates_dir, gif_seconds, slots, stack, strip, timeline, video_root
+from common import (assets_dir, candidates_dir, gif_seconds, loop_seam, slots, stack, strip,
+                    timeline, video_root)
 
 
-def chosen_gifs(video, root=None):
-    """The gifs the definition actually references, in section order."""
+def chosen_visuals(video, root=None):
+    """Each section's gif and its playbackRate, in section order, as the definition has them."""
     definition = video_root(root) / 'src' / 'videos' / f'{video}.ts'
     if not definition.exists():
         raise SystemExit(f'No definition at {definition}.')
-    return re.findall(r"src: '([^']+\.gif)'", definition.read_text())
+    found = re.findall(
+        r"src: '([^']+\.gif)',(?:\s*color: '[^']+',)?(?:\s*playbackRate: ([\d.]+),)?",
+        definition.read_text())
+    return [(name, float(rate) if rate else None) for name, rate in found]
+
+
+def chosen_gifs(video, root=None):
+    return [name for name, _ in chosen_visuals(video, root)]
 
 
 def check_frames(video, root=None):
@@ -117,14 +125,30 @@ def main():
         print('serving:')
         check_serve(args.video, args.root)
 
-    fits = slots(args.video, args.root)
     folder = assets_dir(args.video, args.root)
+    timeline_path = folder / 'timeline.json'
+    if not timeline_path.exists():
+        print(f'\nNo {timeline_path.name}: run narrate before the fits can be checked.')
+        return
+    fits = slots(args.video, args.root)
     print('\nfit per section:')
-    for index, name in enumerate(chosen_gifs(args.video, args.root)):
+    for index, (name, rate) in enumerate(chosen_visuals(args.video, args.root)):
         seconds = gif_seconds(folder / name)[0]
         slot = fits[index]
-        note = 'cut' if seconds >= slot else f'{slot / seconds:.2f}x'
-        print(f'  {index:02d} {name:32} {seconds:5.2f}s  slot {slot:4.1f}s  {note}')
+        covered = seconds / rate if rate else seconds
+        if rate:
+            note = f'rate {rate} covers {covered:.2f}s'
+            if abs(covered - slot) > 0.15:
+                note += f' — recompute: {seconds / slot:.2f}'
+        elif covered >= slot - 0.05:
+            note = f'plays {covered / slot:.0%}, cut at the beat'
+        else:
+            seam = loop_seam(folder / name)
+            note = f'loops {slot / covered:.2f}x, seam {seam:.2f}'
+            note += ' (invisible)' if seam < 0.1 else (
+                f' (visible jump: slow to {seconds / slot:.2f})' if seconds / slot >= 0.6
+                else ' (visible jump, but slowing would be under the 0.6 floor)')
+        print(f'  {index:02d} {name:32} {seconds:5.2f}s  slot {slot:5.2f}s  {note}')
 
 
 if __name__ == '__main__':

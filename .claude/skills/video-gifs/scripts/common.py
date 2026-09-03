@@ -139,3 +139,21 @@ def candidates_dir(video):
     base = pathlib.Path(os.environ.get('TMPDIR', '/tmp')) / 'gif-candidates' / video
     base.mkdir(parents=True, exist_ok=True)
     return base
+
+
+def loop_seam(path):
+    """RMSE between a gif's last frame and its first, 0 to 1.
+
+    Below about 0.1 the loop restarts invisibly, so letting the gif repeat inside a longer slot
+    costs nothing. Above that the restart is a visible jump and the gif wants slowing instead.
+    """
+    import tempfile
+
+    with tempfile.TemporaryDirectory() as tmp:
+        for index, name in ((0, 'first'), (-1, 'last')):
+            subprocess.run(['magick', f'{path}[{index}]', '-resize', '120x120!', f'{tmp}/{name}.png'],
+                           capture_output=True)
+        out = subprocess.run(
+            ['magick', 'compare', '-metric', 'RMSE', f'{tmp}/first.png', f'{tmp}/last.png', 'null:'],
+            capture_output=True, text=True).stderr
+    return float(out.split('(')[1].split(')')[0]) if '(' in out else None

@@ -54,13 +54,9 @@ export default defineVideo({
     },
     {
       // giphy "zip lips quiet": https://giphy.com/gifs/48hZD1upEM0w3tP0gW
-      // 1.84s of lips being sealed in a 1.9s slot: hold the sealed lips rather than re-zip them.
+      // 1.84s of lips being sealed, slowed to cover the 1.9s beat in one pass.
       text: "So you don’t ask.",
-      visual: gif({
-        src: 'section-04-quiet.gif',
-        loopBehavior: 'pause-after-finish',
-        place: 'above-captions',
-      }),
+      visual: gif({ src: 'section-04-quiet.gif', playbackRate: 0.97, place: 'above-captions' }),
     },
     {
       // giphy "time passing clock": https://giphy.com/gifs/xTiTnEeKtzw4zJyFsQ
@@ -71,23 +67,15 @@ export default defineVideo({
     },
     {
       // giphy "domino falling": https://giphy.com/gifs/lvMhtbcATyeEBc1gzd
-      // The knock-on effect, so the field must not spring back up before the cut.
+      // Slowed so the field is still toppling at the cut, rather than springing back up.
       text: "that blocker is why your release date moves.",
-      visual: gif({
-        src: 'section-06-dominoes.gif',
-        loopBehavior: 'pause-after-finish',
-        place: 'above-captions',
-      }),
+      visual: gif({ src: 'section-06-dominoes.gif', playbackRate: 0.99, place: 'above-captions' }),
       endsParagraph: true,
     },
     {
       // giphy "confused reading book": https://giphy.com/gifs/2lzFTmg15tNbxHFWEg
       text: "Nobody taught you those words.",
-      visual: gif({
-        src: 'section-07-book.gif',
-        loopBehavior: 'pause-after-finish',
-        place: 'above-captions',
-      }),
+      visual: gif({ src: 'section-07-book.gif', playbackRate: 0.97, place: 'above-captions' }),
     },
     {
       // giphy "typing search phone": https://giphy.com/gifs/XZMApO2tucBKWjtgvr
@@ -118,12 +106,12 @@ export default defineVideo({
       // A parrot saying it back, on the Little Parrot account, over the line about saying a
       // change back in your own words.
       text: "By the end you’ll say a change back in your own words,",
-      visual: gif({ src: 'section-12-parrot.gif', place: 'above-captions' }),
+      visual: gif({ src: 'section-12-parrot.gif', playbackRate: 0.93, place: 'above-captions' }),
     },
     {
       // giphy "asking question": https://giphy.com/gifs/Ie8ncfWOhpNeH9morB
       text: "ask what it does to your product,",
-      visual: gif({ src: 'section-13-question.gif', place: 'above-captions' }),
+      visual: gif({ src: 'section-13-question.gif', playbackRate: 0.88, place: 'above-captions' }),
     },
     {
       // giphy "aha moment idea": https://giphy.com/gifs/3aYnAs1OHimXSuZAUm
@@ -142,18 +130,18 @@ export default defineVideo({
       text: "Sign up and we’ll let you know when the learning path opens.",
       visual: gif({
         src: 'section-16-notification.gif',
-        loopBehavior: 'pause-after-finish',
+        playbackRate: 0.97,
         place: 'above-captions',
       }),
       endsParagraph: true,
     },
     {
       // giphy "question marks floating": https://giphy.com/gifs/ducsQFMyHcdiTeIcuD
-      // The question mark draws itself and then stays drawn, which is where the video ends.
+      // Slowed so the question mark is still being drawn as the video ends.
       text: "What technical word did you look up last?",
       visual: gif({
         src: 'section-17-question-mark.gif',
-        loopBehavior: 'pause-after-finish',
+        playbackRate: 0.92,
         place: 'above-captions',
       }),
     },

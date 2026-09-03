@@ -20,8 +20,12 @@ Reach for this when:
 
 - Definitions: `little-parrot/content/video/src/videos/<video-id>.ts`
 - Assets: `little-parrot/content/video/public/<video-id>/section-NN-keyword.gif`
-- Slots: `public/<video-id>/timeline.json`, written by narrate. If it is missing, run
-  `npm run narrate -- --allow-generate` from the video package first; nothing here can guess timing.
+- Slots: `public/<video-id>/timeline.json`, written by narrate. If it is missing, either run
+  `npm run narrate -- --allow-generate` from the video package first, or source against estimated
+  slots and pass `--slot <seconds>` to `harvest.py` and `pick.py`. Estimate a slot as the section's
+  word count divided by **3.03 words per second**, measured from video 1's real narration (139
+  words, 45.8s). That is close enough to choose gifs by, but the timing knobs have to be re-checked
+  with `verify.py` once the real timeline exists.
 
 Assets belong to the video that uses them. `assets` is per video, so never borrow another video's
 folder or symlink into it (see Gotchas).
@@ -122,13 +126,24 @@ gif restarting mid-beat**. Two knobs, both already plumbed through `gif()`:
 | Gif vs slot | What to do |
 |---|---|
 | gif ≥ slot | Nothing. It gets cut, which nobody notices. |
-| shorter, motion is cyclic (a loop, a bob, tumbling) | Nothing. The repeat is invisible. |
-| shorter, motion is one-shot (a zip, a topple, a drawing) | `loopBehavior: 'pause-after-finish'` — plays once, holds the last frame. |
-| shorter by more than ~15%, and slowing looks natural | `playbackRate: <gif seconds / slot seconds>` — one pass across the whole beat. |
+| longer, but the motion has to complete (a drawing, a build, a reveal) | `playbackRate: <gif seconds / slot seconds>`, above 1 here, so the whole motion lands inside the beat. |
+| shorter, motion is cyclic *and* the loop seam is invisible | Nothing. The repeat cannot be seen. Check it rather than assuming: `verify.py` prints each looping section's seam, and in practice most gifs that look cyclic still jump. |
+| shorter, motion is one-shot (a zip, a topple, a drawing) | `playbackRate: <gif seconds / slot seconds>` — one pass across the whole beat, still moving at the cut. |
 | shorter by more than ~40% | Don't slow it below ~0.6, that reads as slow motion. Loop it if cyclic, otherwise pick another gif. |
 
-`pick.py` prints the recommendation; the cyclic-or-one-shot call is yours, because no measurement
-tells you that. A one-shot ending on its last frame is often the better picture anyway — a
+**Never hold a frozen last frame.** `loopBehavior: 'pause-after-finish'` exists and looks like the
+obvious fix for a one-shot gif, but a still picture in the middle of a video where the captions and
+the parrot keep moving reads as a stall, as though the render broke. Slow the gif instead: the
+motion still resolves inside the beat, and the picture is alive at the cut. Both PM fluency videos
+were built with holds first and converted, so this is settled, not a preference to re-litigate.
+
+A gif's own duration is not the whole story: **measure the loop seam before trusting a loop.** Of
+the six sections left looping across the two PM fluency videos, all six had a visible seam, and the
+three whose rate stayed above the floor were slowed instead. `verify.py`'s fit table prints it.
+
+`pick.py` prints the recommendation for gifs shorter than their slot; the cyclic-or-one-shot call
+is yours, because no measurement tells you that, and so is the speed-up case, because only you know
+whether the motion has to finish. A one-shot ending on its last frame is often the better picture anyway — a
 question mark that finishes drawing itself is a good last frame for a video.
 
 Record provenance in the definition, above each visual:
