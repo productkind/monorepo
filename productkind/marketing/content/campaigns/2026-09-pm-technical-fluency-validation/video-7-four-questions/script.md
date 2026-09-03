@@ -13,27 +13,27 @@ the team commits.
 **Treatment:** narration over a screen recording of a planning discussion,
 then four question cards.
 
-"The decision was made in a meeting you were in. Nobody raised the hard
-questions."
+The decision was made in a meeting you were in. Nobody raised the hard
+questions.
 
-"The engineers assumed you'd already scoped it. You didn't know what to ask."
+The engineers assumed you'd already scoped it. You didn't know what to ask.
 
-"Three weeks later the work turns out to be twice the size, and your roadmap
-moves."
+Three weeks later the work turns out to be twice the size, and your roadmap
+moves.
 
-"Running that discussion was your job, and nobody teaches you the questions."
+Running that discussion was your job, and nobody teaches you the questions.
 
-"If you want to be the one who raises them, we're building a learning path for
-it."
+If you want to be the one who raises them, we're building a learning path for
+it.
 
-"By the end you'll be able to run that discussion. What does this change rely
+By the end you'll be able to run that discussion. What does this change rely
 on that we don't control? What happens when a request fails halfway? Does it
-touch permissions, or data that already exists?"
+touch permissions, or data that already exists?
 
-"The waitlist link is in the comments. Sign up and we'll let you know when the
-learning path opens."
+The waitlist link is in the comments. Sign up and we'll let you know when the
+learning path opens.
 
-"Who raises the hard part on your team?"
+Who raises the hard part on your team?
 
 **Cut cadence:** nothing holds on screen for more than three seconds. The
 Visual column lists every change in order, so a four-part visual is four cuts,
