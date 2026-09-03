@@ -21,16 +21,20 @@ then four question cards.
 | The gap (14-17s) | "That discussion was yours to run. Nobody hands you the questions." | Four empty cards appearing | Four questions nobody hands you |
 | The setup (17-23s) | "If you want to be the one who raises it, we're building a learning path for it." | Little Parrot mark, then the learning path list appearing | A learning path for raising it early |
 | What changes (23-36s) | "By the end you'll be able to run that discussion. What does this rely on that we don't control? What happens when it fails halfway? Does it touch permissions, or data that already exists? Can we undo it?" | Each question filling its card as it's spoken, four cuts, then all four held | What does it rely on? · What if it fails? · Permissions or existing data? · Can we undo it? |
-| CTA (36-42s) | "It's not open yet. Link's in the comments, and you'll get one email when it opens. Nothing else." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
+| CTA (36-42s) | "The waitlist link is in the comments. Sign up and we'll let you know when it opens." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
 | Comment prompt (42-45s) | "Who raises the hard part in your planning meetings?" | The four cards again | Who raises it on your team? |
 
 **Cut cadence:** nothing holds on screen for more than three seconds. The
 Visual column lists every change in order, so a four-part visual is four cuts,
 and the longest beats are the ones carrying the most of them.
 
-**Channel swap:** on TikTok, Reels and Shorts, replace "link's in the comments"
-with the spoken URL, then pin it in a comment. The comment prompt is the last
-thing said on every channel.
+**Channel swap:** the CTA line works as written on LinkedIn (first comment) and
+YouTube Shorts (pinned comment), where a link in a comment is clickable. On
+TikTok, pin the link too, and also speak and show the URL, because the account
+has no bio link until 1,000 followers. On Instagram Reels, speak and show the
+URL instead of saying "in the comments", because Instagram links aren't
+clickable in captions or comments and the bio holds five slots for more than
+eight destinations. The comment prompt is the last thing said on every channel.
 
 ## Production notes
 

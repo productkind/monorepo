@@ -22,16 +22,20 @@ typed.
 | The gap (15-19s) | "You could answer all of it yourself, if somebody showed you where to look." | A browser open on the product, nothing inspected yet | Nobody showed you where to look |
 | The setup (19-25s) | "If you want to be the one who investigates it first, we're building a learning path for it." | Little Parrot mark, then the learning path list appearing | A learning path for investigating it |
 | What changes (25-35s) | "By the end you'll reproduce it on your own account, read the error code, and open the panel in your browser that shows which request to the server failed." | Reproducing the error, then the network panel with the failed request highlighted, one per cut | reproduce it · read the error · find the failed request |
-| CTA (35-41s) | "It's not open yet. Link's in the comments, and you'll get one email when it opens. Nothing else." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
+| CTA (35-41s) | "The waitlist link is in the comments. Sign up and we'll let you know when it opens." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
 | Comment prompt (41-44s) | "How long does a bug wait where you work?" | The unanswered thread again | How long at yours? |
 
 **Cut cadence:** nothing holds on screen for more than three seconds. The
 Visual column lists every change in order, so a four-part visual is four cuts,
 and the longest beats are the ones carrying the most of them.
 
-**Channel swap:** on TikTok, Reels and Shorts, replace "link's in the comments"
-with the spoken URL, then pin it in a comment. The comment prompt is the last
-thing said on every channel.
+**Channel swap:** the CTA line works as written on LinkedIn (first comment) and
+YouTube Shorts (pinned comment), where a link in a comment is clickable. On
+TikTok, pin the link too, and also speak and show the URL, because the account
+has no bio link until 1,000 followers. On Instagram Reels, speak and show the
+URL instead of saying "in the comments", because Instagram links aren't
+clickable in captions or comments and the bio holds five slots for more than
+eight destinations. The comment prompt is the last thing said on every channel.
 
 ## Production notes
 
