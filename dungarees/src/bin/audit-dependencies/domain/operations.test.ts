@@ -1,11 +1,17 @@
 import {
   auditPackages,
   findOwnerDir,
+  getAuditStartEvent,
   getImportedPackages,
+  getManifestsAndSources,
   isOutsideNodeModules,
   parseManifest,
+  reportFindings,
 } from './operations.ts'
 
+import { collectValuesFrom } from '@dungarees/rxjs/util.ts'
+
+import { of } from 'rxjs'
 import { expect, test } from 'vitest'
 
 const FIXTURE_SOURCE = [
@@ -135,4 +141,82 @@ test('a package used without an import is still reported when imported undeclare
       usedWithoutImport: ['typescript'],
     }),
   ).toEqual([{ name: '@org/a', missing: ['typescript'], unused: [] }])
+})
+
+test('getAuditStartEvent announces the directory being audited', async () => {
+  expect(await collectValuesFrom(getAuditStartEvent({ dir: '/repo' }))).toEqual([
+    { type: 'audit-start', payload: { dir: '/repo' } },
+  ])
+})
+
+test('getManifestsAndSources drops node_modules from both globs', async () => {
+  const contents: Record<string, string> = {
+    '/src/a/package.json': JSON.stringify({ name: '@org/a' }),
+    '/src/a/node_modules/dep/package.json': JSON.stringify({ name: 'dep' }),
+    '/src/a/index.ts': 'export const a = 1',
+    '/src/a/node_modules/dep/index.ts': 'export const dep = 1',
+  }
+
+  expect(
+    await collectValuesFrom(
+      getManifestsAndSources({
+        manifestPaths$: of(['/src/a/package.json', '/src/a/node_modules/dep/package.json']),
+        sourcePaths$: of(['/src/a/index.ts', '/src/a/node_modules/dep/index.ts']),
+        readFile: (path) => of(contents[path] ?? ''),
+      }),
+    ),
+  ).toEqual([
+    {
+      manifests: [{ dir: '/src/a', name: '@org/a', declared: [] }],
+      sources: [{ path: '/src/a/index.ts', content: 'export const a = 1' }],
+    },
+  ])
+})
+
+test('getManifestsAndSources rejects an unparsable package.json', async () => {
+  await expect(
+    collectValuesFrom(
+      getManifestsAndSources({
+        manifestPaths$: of(['/src/a/package.json']),
+        sourcePaths$: of([]),
+        readFile: () => of('not json'),
+      }),
+    ),
+  ).rejects.toThrow('Invalid package.json')
+})
+
+test('reportFindings emits one event per package and passes when there are none', async () => {
+  expect(
+    await collectValuesFrom(
+      of({
+        manifests: [{ dir: '/src/a', name: '@org/a', declared: [] }],
+        sources: [],
+      }).pipe(reportFindings()),
+    ),
+  ).toEqual([{ type: 'audit-passed', payload: { packageCount: 1 } }])
+})
+
+test('reportFindings emits each finding then fails the audit', async () => {
+  expect(
+    await collectValuesFrom(
+      of({
+        manifests: [{ dir: '/src/a', name: '@org/a', declared: [] }],
+        sources: [{ path: '/src/a/index.ts', content: "import { of } from 'rxjs'" }],
+      }).pipe(reportFindings()),
+    ),
+  ).toEqual([
+    { type: 'package-findings', payload: { name: '@org/a', missing: ['rxjs'], unused: [] } },
+    { type: 'audit-failed', payload: { packageCount: 1 } },
+  ])
+})
+
+test('reportFindings treats its configured packages as declarable without import', async () => {
+  expect(
+    await collectValuesFrom(
+      of({
+        manifests: [{ dir: '/src/a', name: '@org/a', declared: ['typescript'] }],
+        sources: [],
+      }).pipe(reportFindings()),
+    ),
+  ).toEqual([{ type: 'audit-passed', payload: { packageCount: 1 } }])
 })

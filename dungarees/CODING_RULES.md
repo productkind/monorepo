@@ -207,6 +207,24 @@ expect(await terminal.step()).toEqual([
 ])
 ```
 
+### 5c. Hand back the real object; let the test drive it
+
+A shared test helper returns the thing under test, not a wrapper around how you exercise it. And an
+app-driven test belongs beside the code it covers — never inside the fake app, which exists to serve
+tests rather than to hold them.
+
+```ts
+// Bad — the helper owns the rendering, so every test inherits its choices
+const { run } = createTestApp({ files })
+const { terminal } = run('dungarees publish-multi-lib /multi-lib')
+```
+
+```ts
+// Good — the helper returns the app; the test renders it like any other
+const { app, executedCommands } = createTestApp({ files, commands })
+const { terminal } = renderCli(app, 'dungarees publish-multi-lib /multi-lib')
+```
+
 ## 6. Prefer built-in/standard types; own the source of truth when there is none
 
 Reach for built-in and standard-library types before hand-rolling.
@@ -274,13 +292,16 @@ new Proxy({} as EventCreators<PAYLOADS>, { ... })
 const parsed$ = defer(() => from(routed.parseAsync(argv)))
 ```
 
+The failure mode to watch for is a real _why_ padded with a second sentence describing the code
+beneath it. Write the reason, then stop.
+
 ## 8. Test complicated types at the type level
 
 When the point of a change _is_ a type — inference from another argument, a generic that has to hold
 across a collection, erasure, or anything built from `Parameters`/`ReturnType`/`Extract`/a mapped or
-conditional type — a runtime test cannot see it. State the contract with `tsafe`'s
-`assert<Equals<…>>()`, and mark what must **not** compile with `@ts-expect-error`, in the same
-`.test.ts` file so `type-check` enforces it.
+conditional type — a runtime test cannot see it. State the contract with vitest's
+`expectTypeOf(…).toEqualTypeOf<…>()`, and mark what must **not** compile with `@ts-expect-error`, in
+the same `.test.ts` file — both `npm run type-check` and vitest's typecheck mode enforce it.
 
 Why: a green suite says nothing about a boundary whose whole value is static. `createCommand` exists
 so a handler cannot read an argument its builder never declared — delete the generic and every
@@ -305,8 +326,8 @@ test('createCommand infers the handler arguments from what the builder declared'
         .positional('who', { type: 'string', default: 'World' })
         .option('times', { type: 'number' }),
     handler: (args) => {
-      assert<Equals<typeof args.who, string>>()
-      assert<Equals<typeof args.times, number | undefined>>()
+      expectTypeOf<typeof args.who>().toEqualTypeOf<string>()
+      expectTypeOf<typeof args.times>().toEqualTypeOf<number | undefined>()
     },
   })
 })
@@ -322,14 +343,14 @@ implementation until it goes red, then restore.
 ```ts
 // Bad — both sides come from the same expression, so it holds no matter what the type becomes
 type Args = Parameters<typeof handler>[0]
-assert<Equals<Args, Parameters<typeof handler>[0]>>()
+expectTypeOf<Args>().toEqualTypeOf<Parameters<typeof handler>[0]>()
 ```
 
 ```ts
 // Good — the expected type is written out, so a change in inference breaks the build
 // (verified red by typing the handler as `(args: Record<string, unknown>)`:
 //  TS2344 Type 'false' does not satisfy the constraint 'true')
-assert<Equals<typeof args.times, number | undefined>>()
+expectTypeOf<typeof args.times>().toEqualTypeOf<number | undefined>()
 ```
 
 ### 8b. Keep `@ts-expect-error` on the narrowest line, and check it reports unused
@@ -354,3 +375,112 @@ handler: ({ times }) => {
   const wrong: string = times
 }
 ```
+
+### 8c. Flatten an intersection before comparing it
+
+`expectTypeOf` compares an intersection by its parts, so `{ a?: string } & { b: number }` is not
+equal to the object it is equivalent to. Flatten it with `FlattenIntersection` rather than weakening
+the assertion to `toMatchTypeOf`.
+
+```ts
+// Bad — fails even though the two types are the same
+type OptionalA = PartialBesides<{ a: string; b: number }, 'b'>
+expectTypeOf<OptionalA>().toEqualTypeOf<{ a?: string; b: number }>()
+```
+
+```ts
+// Good — flattened first, and still a strict comparison
+expectTypeOf<FlattenIntersection<OptionalA>>().toEqualTypeOf<{ a?: string; b: number }>()
+```
+
+## 9. Keep a behaviour thin — operations own the logic
+
+A behaviour wires services to operations and composes the resulting event streams. It should reach
+for **`concat` and nothing else**. Conditional logic, event creation, and primitive rx operators
+(`map`, `mergeMap`, `from`, `of`, `forkJoin`) belong in operations, where they are testable without
+a filesystem or a subprocess.
+
+Why: operations are pure and can be tested in isolation; every operator left in a behaviour is logic
+reachable only through a service.
+
+```ts
+// Bad — the behaviour picks the outcome event, creates events, and pipes primitives
+const audit$ = forkJoin({ manifests: manifests$, sources: sources$ }).pipe(
+  mergeMap(({ manifests, sources }) => {
+    const findings = auditPackages({ manifests, sources })
+    return concat(
+      from(findings.map((finding) => eventCreators.packageFindings(finding))),
+      of(
+        findings.length === 0
+          ? eventCreators.auditPassed({ packageCount: manifests.length })
+          : eventCreators.auditFailed({ packageCount: manifests.length }),
+      ),
+    )
+  }),
+)
+```
+
+```ts
+// Good — services in, operations do the work, concat composes the streams
+const startEvent$ = getAuditStartEvent({ dir })
+const audit$ = getManifestsAndSources({
+  manifestPaths$: fileSystem.glob(`${sourceDir}/**/package.json`),
+  sourcePaths$: fileSystem.glob(`${sourceDir}/**/*.{ts,tsx}`),
+  readFile: (filePath) => fileSystem.readFile(filePath, 'utf-8'),
+}).pipe(reportFindings())
+return { events$: concat(startEvent$, audit$) }
+```
+
+Domain policy belongs in operations too. A list like "packages that may be declared without being
+imported" is a rule of the feature, not a wiring decision, so it is the operation's default rather
+than something the behaviour passes in.
+
+## 10. A service exposes the boundary unchanged
+
+A field named after a boundary value must **be** that value. Interpreting it — trimming, defaulting,
+reshaping — belongs where it is consumed, not in the service that supplies it.
+
+```ts
+// Bad — every later reader of services.process.argv inherits a silent truncation
+process: {
+  argv: process.argv.slice(2), stdout: process.stdout, /* ... */
+}
+```
+
+```ts
+// Good — the boundary as it is, with the CLI's convention applied at the point of use
+process: {
+  argv: process.argv, stdout: process.stdout, /* ... */
+}
+
+// in main:
+// argv is the real process.argv, so the node binary and the script path come first
+await renderCliToStdio({ argv: argv.slice(2), app: delivery.app, controls: {}, process })
+```
+
+It also keeps the fakes honest: with the slice hidden inside `getServices`, a test's fake `argv`
+means something different from production's, so a wrong slice in `main` would still pass.
+
+## 11. Make the library you already have do the job
+
+Before adding a mechanism, check whether something already in the design does it. A second layer
+that duplicates a library's job has to be kept in step with it forever.
+
+```ts
+// Bad — a zod schema re-validating arguments the yargs builder already declares and checks
+args: z.object({ libPath: z.string(), registry: z.string().optional() }),
+handler: (args) => { /* ... */ }
+```
+
+```ts
+// Good — the builder is the single declaration; yargs infers and validates from it
+builder: (yargs) =>
+  yargs
+    .positional('lib-path', { type: 'string', default: '.' })
+    .option('registry', { type: 'string' }),
+handler: ({ libPath, registry }) => { /* ... */ }
+```
+
+The same applies to parsing: use the real parser rather than a regex over source text.
+`ts.preProcessFile` knows an import from a string that merely contains one, which a regex cannot —
+and the difference was a wrong answer, not a stylistic preference.
