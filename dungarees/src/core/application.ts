@@ -53,7 +53,7 @@ export const createApplication = <
     key: KEY,
     runIdentity: CONFIG['identity'],
   ): GetValueFromPatternList<PATTERN_LISTS[KEY]> => {
-    const arg = findByPattern(patternLists[key], runIdentity as JsonType)
+    const arg = findByPattern(patternLists[key], runIdentity)
     return assertDefined(arg, `No matching identity for "${key}"`)
   }
 
@@ -142,9 +142,7 @@ export const createApplication = <
       }
     },
     getArgs: () => {
-      return (otherApp !== undefined ? [...otherApp().getArgs(), appArgs] : [appArgs]) as Array<
-        Partial<CreateApplicationArgs<ApplicationTypeConfigWithDefaults<CONFIG>>>
-      >
+      return (otherApp !== undefined ? [...otherApp().getArgs(), appArgs] : [appArgs])
     },
   }
   return app

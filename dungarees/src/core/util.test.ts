@@ -94,7 +94,7 @@ test('deepEqualPartial', () => {
 })
 
 test('findByPattern', () => {
-  // eslint-disable-next-line
+   
   const value1 = findByPattern([], '')
   expectTypeOf<typeof value1>().toEqualTypeOf<undefined>()
   expect(value1).toBeUndefined()
@@ -253,9 +253,9 @@ test('unPrototypeProperties', () => {
   unPrototypeProperties(clone, ['method3'])
 })
 
-interface AppendConstFn extends Fn {
+type AppendConstFn = {
   return: `${this['arg0']}-const`
-}
+} & Fn
 
 test('mapConst', () => {
   const input = ['a', 'b', 'c'] as const

@@ -57,7 +57,7 @@ export const createCucumberTestEnvironment = <SERVICES extends Record<string, Se
   Before(async function (this: TestEnvironmentWorld) {
     const entry$ = await testEnvironment.onBefore(this.testEnvironmentWorld)
     entry$.subscribe(({ entry, type }) => {
-      this.attach(entry as string, type as string)
+      this.attach(entry as string, type)
     })
   })
 
@@ -66,13 +66,13 @@ export const createCucumberTestEnvironment = <SERVICES extends Record<string, Se
       const testName = pickle.name.replace(/\W/g, '-')
       const entries = await testEnvironment.onFailure(this.testEnvironmentWorld, testName)
       for (const { entry, type } of entries) {
-        this.attach(entry as string, type as string)
+        this.attach(entry as string, type)
       }
     }
     this.attach(`Status: ${result?.status ?? ''}. Duration:${result?.duration?.seconds ?? ''}s`)
     const entry$ = await testEnvironment.onAfter(this.testEnvironmentWorld)
     entry$.subscribe(({ entry, type }) => {
-      this.attach(entry as string, type as string)
+      this.attach(entry as string, type)
     })
   })
 
