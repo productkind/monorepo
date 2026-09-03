@@ -47,7 +47,7 @@ The common themes and structures we see in top-rated and top-selling courses:
 
 1. **Concrete deliverables with timelines** - Each example leads with a specific, tangible outcome students will ship (e.g., "Ship your first real SaaS in 8 weeks," "Deploy Your First Production Agent in 7 Weeks") rather than vague learning objectives.
 2. **Hierarchical skill progression** - Content is organised in logical building blocks, starting with fundamentals, moving to application, then to advanced implementation and real-world deployment.
-3. **Tools and frameworks specificity** - Rather than generic descriptions, they name specific tools (Github, Codex, Cursor, AgentPro), frameworks, and methodologies students will master.
+3. **Tools and frameworks specificity** - Rather than generic descriptions, they name specific tools (Github, Claude Code, Cursor, AgentPro), frameworks, and methodologies students will master.
 4. **Real-world application emphasis** - Every section connects learning to practical business outcomes like "get your first 100 customers," "handle real business workflows," or "present to stakeholders."
 
 

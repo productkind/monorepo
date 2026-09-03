@@ -40,7 +40,7 @@ Verify every step against the preloaded skills and cite the rule you are applyin
 
 Course-specific calibration the skills leave to you:
 
-- **Teaching a real term is good, not a jargon problem.** When a technical term is the right word (e.g. *static* / *dynamic*, *commit*, *hardcode*), flag only a *missing inline definition*, never the term itself; building real vocabulary is part of the course's value.
+- **Teaching a real term is good, not a jargon problem.** When a technical term is the right word (e.g. *static* / *dynamic*, *commit*, *hardcode*), flag only a *missing inline definition on first use*, never the term itself; building real vocabulary is part of the course's value. A course never introduces a new term or phrase before it defines it, so check the first appearance, not every later one.
 - **"local" / "locally" is acceptable in body copy only if this course explicitly teaches/defines the term** (e.g. via a glossary entry); if it never defines it, flag every cold use. `localhost` is fine when taught as "this computer".
 - **Do not ask for a plain-description gloss alongside a tool label.**
 - **Flag any sentence that needs re-reading.**

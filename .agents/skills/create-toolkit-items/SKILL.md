@@ -104,7 +104,7 @@ After creating toolkit items, add references to them at the appropriate points i
 - **Mid-challenge text steps** work when the toolkit item is directly relevant to what the learner is about to do (e.g., linking to a checklist right before they click Publish).
 - **Course-end subDescription** works for toolkit items that span the full course (e.g., a vocabulary cheat sheet).
 
-The linking rules themselves live in the course-design rubric (`.Codex/skills/outline-to-micro-course/references/course-design-rubric.md`, Teaching Approach): every toolkit mention is a clickable link, woven into the sentence naturally, and never a fabricated URL. Apply them from there.
+The linking rules themselves live in the course-design rubric (`.agents/skills/outline-to-micro-course/references/course-design-rubric.md`, Teaching Approach): every toolkit mention is a clickable link, woven into the sentence naturally, and never a fabricated URL. Apply them from there.
 
 ### File naming convention
 
