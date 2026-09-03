@@ -17,13 +17,13 @@ meeting note. Nobody on camera.
 | Beat | Narration | Visual | On-screen text |
 |---|---|---|---|
 | Hook (0-5s) | "You've nodded along in a stand-up, hoping nobody asks you a follow-up question." | Text card, hard cut on "nodded along" | **Nodding along in stand-up** |
-| The moment (5-12s) | "Someone says the migration is blocked on the platform team. You don't know what that means for your release." | The sentence appearing word group by word group over a stand-up board | "blocked on the platform team" |
-| What it costs (12-16s) | "So you don't ask. Three weeks later, that blocker is why your date moves." | A note being typed, then a date disappearing from a roadmap | You don't ask. The date moves. |
-| The gap (16-22s) | "Nobody taught you those words. A definition afterwards doesn't tell you what it means for your release." | A list of half-looked-up words | A definition later doesn't tell you what it means |
-| The setup (22-28s) | "If you'd rather be the one who asks that, we're building a learning path for exactly this." | Little Parrot mark, then the learning path list appearing | A learning path for exactly this |
-| What changes (28-37s) | "By the end you'll say a change back in your own words, ask what it does to your product, and understand the answer while you're in the room." | The three lines appearing one per cut, then an answer arriving | Say it back · ask what it changes · understand it |
+| The moment (5-12s) | "Someone says the migration is blocked by the platform team. You don't know what that means for your release." | The sentence appearing word group by word group over a stand-up board | "blocked on the platform team" |
+| What it costs (12-16s) | "So you don't ask. Three weeks later, that blocker is why your release date moves." | A note being typed, then a date disappearing from a roadmap | You don't ask. The date moves. |
+| The gap (16-22s) | "Nobody taught you those words. Looking up a definition afterwards doesn't tell you what it means for your release." | A list of half-looked-up words | A definition later doesn't tell you what it means |
+| The setup (22-28s) | "If you'd rather be the one who asks these questions, we're building a learning path for exactly this." | Little Parrot mark, then the learning path list appearing | A learning path for exactly this |
+| What changes (28-37s) | "By the end you'll say a change back in your own words, ask what it does to your product, and understand the answer while you're in the meeting." | The three lines appearing one per cut, then an answer arriving | Say it back · ask what it changes · understand it |
 | CTA (37-43s) | "The waitlist link is in the comments. Sign up and we'll let you know when it opens." | Waitlist page, hero heading in frame | littleparrot.app/guides/technical-product-manager |
-| Comment prompt (43-45s) | "What word did you look up last?" | The list of words again | What did you look up last? |
+| Comment prompt (43-45s) | "What technical word did you look up last?" | The list of words again | What did you look up last? |
 
 **Cut cadence:** nothing holds on screen for more than three seconds. The
 Visual column lists every change in order, so a four-part visual is four cuts,
