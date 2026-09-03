@@ -1,3 +1,5 @@
+import { getErrorMessage } from '@dungarees/core/error.ts'
+
 import { chalk } from 'zx'
 
 export const printError = (message: string): void => {
@@ -5,7 +7,7 @@ export const printError = (message: string): void => {
 }
 
 export const printCatchedError = (error: unknown): void => {
-  printError(error instanceof Error ? error.message : String(error))
+  printError(getErrorMessage(error))
 }
 
 export const printWarning = (message: string): void => {

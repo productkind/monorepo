@@ -17,6 +17,7 @@
   "license": "MIT",
   "description": "A collection of useful utilities for zx scripts in the Dungarees ecosystem.",
   "dependencies": {
+    "@dungarees/core": "*",
     "zx": "^8.7.1"
   }
 }
