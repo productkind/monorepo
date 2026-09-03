@@ -42,4 +42,3 @@ export type Split<
 > = STRING extends `${infer S1}${CHARACTER}${infer S2}` ? [S1, S2] : never
 
 export type Url = string
-

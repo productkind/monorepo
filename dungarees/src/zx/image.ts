@@ -1,28 +1,32 @@
 import { $ } from 'zx'
 
 export type SvgToRasterize = {
-  inputFilePath: string,
-  outputFilePath: string,
-  size: [number, number] | number,
-  background?: string,
+  inputFilePath: string
+  outputFilePath: string
+  size: [number, number] | number
+  background?: string
 }
 
 export const rasterizeSvg = async ({
   inputFilePath,
   outputFilePath,
   size,
-  background
+  background,
 }: SvgToRasterize) => {
   const isSingleDimension = typeof size === 'number'
   const isBackgroundDefined = background !== undefined
   const baseArgs = [
-    '--export-type', 'png',
-    '--export-filename', outputFilePath,
+    '--export-type',
+    'png',
+    '--export-filename',
+    outputFilePath,
     ...(isBackgroundDefined ? ['--export-background', background] : []),
-    '--export-width', isSingleDimension ? size : size[0],
+    '--export-width',
+    isSingleDimension ? size : size[0],
     ...(isSingleDimension ? [] : ['--export-height', size[1]]),
-    '--export-dpi', '300',
-    inputFilePath
+    '--export-dpi',
+    '300',
+    inputFilePath,
   ]
 
   // check if file exists first

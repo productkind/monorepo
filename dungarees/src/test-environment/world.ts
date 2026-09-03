@@ -1,11 +1,3 @@
-import type {
-  FilterRecord,
-  GetKey,
-  GetValue,
-  GetValueByKey,
-  RecordToEntries,
-} from '@dungarees/core/type-util.ts'
-import { assertDefined, assertTypeByGuard } from '@dungarees/core/util.ts'
 import { isInteractorName, isRunnerName } from './guards.ts'
 import { instantiateService } from './test-environment.ts'
 import type {
@@ -17,6 +9,15 @@ import type {
   ServiceConfig,
   TestEnviornmentState,
 } from './type.ts'
+
+import type {
+  FilterRecord,
+  GetKey,
+  GetValue,
+  GetValueByKey,
+  RecordToEntries,
+} from '@dungarees/core/type-util.ts'
+import { assertDefined, assertTypeByGuard } from '@dungarees/core/util.ts'
 
 export type TestEnvironmentWorld<
   SERVICES extends Record<string, ServiceConfig>,

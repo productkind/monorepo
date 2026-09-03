@@ -1,6 +1,7 @@
-import { test, expect } from 'vitest'
 import { createFakeNodeProcess } from './fake.ts'
 import { createProcessService } from './service.ts'
+
+import { expect, test } from 'vitest'
 
 test('processService getUserId returns correct user ID', () => {
   const fakeProcess = createFakeNodeProcess({ userId: 1001 })
@@ -15,7 +16,7 @@ test('processService getUserId throws on unsupported platform', () => {
   const processService = createProcessService(fakeProcess)
 
   expect(() => processService.getUserId()).toThrow(
-    'getuid is not supported on this platform: win32'
+    'getuid is not supported on this platform: win32',
   )
 })
 
@@ -32,7 +33,7 @@ test('processService getGroups throws on unsupported platform', () => {
   const processService = createProcessService(fakeProcess)
 
   expect(() => processService.getGroups()).toThrow(
-    'getgroups is not supported on this platform: win32'
+    'getgroups is not supported on this platform: win32',
   )
 })
 
@@ -47,7 +48,5 @@ test('processService.isRoot throws on unsupported platform', () => {
   const fakeProcess = createFakeNodeProcess({ platform: 'win32' })
   const processService = createProcessService(fakeProcess)
 
-  expect(() => processService.isRoot()).toThrow(
-    'getuid is not supported on this platform: win32'
-  )
+  expect(() => processService.isRoot()).toThrow('getuid is not supported on this platform: win32')
 })

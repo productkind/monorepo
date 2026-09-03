@@ -1,4 +1,8 @@
-import type { ReadableRawKeyValueStore, TransformedStore, TransformKeyValueCallback } from './type.ts'
+import type {
+  ReadableRawKeyValueStore,
+  TransformedStore,
+  TransformKeyValueCallback,
+} from './type.ts'
 
 export const createTransformedStore = <T>(
   store: ReadableRawKeyValueStore,

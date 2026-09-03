@@ -1,10 +1,14 @@
 # Dungarees coding rules
 
-Conventions for this package, compiled from review feedback. They override default habits — follow them exactly. Every rule below has a bad and a good example; the difference between them is the rule.
+Conventions for this package, compiled from review feedback. They override default habits — follow
+them exactly. Every rule below has a bad and a good example; the difference between them is the
+rule.
 
 ## 1. Test-first (strict TDD)
 
-Change the test first and watch it go **red** before touching the implementation — including during refactors and redesigns, not only for new behaviour. Only then write the implementation that turns it green.
+Change the test first and watch it go **red** before touching the implementation — including during
+refactors and redesigns, not only for new behaviour. Only then write the implementation that turns
+it green.
 
 ```ts
 // Bad — implement first, then backfill a test that just re-states the code.
@@ -22,13 +26,17 @@ test('drops messages below the given level', async () => {
 // ...then implement the filter until it goes green.
 ```
 
-A pure refactor keeps existing tests green; if no test can express the change, that is the signal it is behaviour-preserving — still run the suite.
+A pure refactor keeps existing tests green; if no test can express the change, that is the signal it
+is behaviour-preserving — still run the suite.
 
 ## 2. One options object, not positional args
 
-Functions take a **single options object** holding all arguments, rather than several positional parameters — even the already-decided ones. When adding a parameter, convert the whole signature to an options object rather than appending another positional arg.
+Functions take a **single options object** holding all arguments, rather than several positional
+parameters — even the already-decided ones. When adding a parameter, convert the whole signature to
+an options object rather than appending another positional arg.
 
-Why: positional lists grow unwieldy and make call sites ambiguous, especially once optional/defaulted params (an injected `process`, a `level`) are involved.
+Why: positional lists grow unwieldy and make call sites ambiguous, especially once
+optional/defaulted params (an injected `process`, a `level`) are involved.
 
 ```ts
 // Bad
@@ -44,8 +52,10 @@ renderCliToStdio({ app, argv: [], controls, process }) // omit what you don't se
 
 ## 3. Dispatch with an object keyed by type, not switch/case
 
-Map the discriminant to a handler object. Type each handler to its narrowed variant with a mapped type.
+Map the discriminant to a handler object. Type each handler to its narrowed variant with a mapped
+type.
 
+<!-- prettier-ignore -->
 ```ts
 // Bad
 switch (message.type) {
@@ -60,19 +70,28 @@ switch (message.type) {
 const render: {
   [TYPE in CliMessage['type']]: (message: Extract<CliMessage, { type: TYPE }>) => void
 } = {
-  stdout: (message) => { process.stdout.write(`${message.message}${EOL}`) },
-  stderr: (message) => { process.stderr.write(`${message.message}${EOL}`) },
-  exit: (message) => { process.exit(message.code) },
+  stdout: (message) => {
+    process.stdout.write(`${message.message}${EOL}`)
+  },
+  stderr: (message) => {
+    process.stderr.write(`${message.message}${EOL}`)
+  },
+  exit: (message) => {
+    process.exit(message.code)
+  },
 }
 ```
 
 ## 4. No unsafe type assertions — neither `as` casts nor `!` non-null assertions
 
-Both `as` and `!` silence the type checker instead of satisfying it. Reach for a type-safe construction, a narrowing guard, or a runtime check that also asserts the invariant.
+Both `as` and `!` silence the type checker instead of satisfying it. Reach for a type-safe
+construction, a narrowing guard, or a runtime check that also asserts the invariant.
 
 ### 4a. `as` casts
 
-When indexing a handler map with a union key trips TypeScript's correlated-union limitation, route the call through a small generic helper where the key is a single type parameter, so the handler's parameter type checks cleanly.
+When indexing a handler map with a union key trips TypeScript's correlated-union limitation, route
+the call through a small generic helper where the key is a single type parameter, so the handler's
+parameter type checks cleanly.
 
 ```ts
 // Bad — silences the checker instead of satisfying it
@@ -90,7 +109,8 @@ next: (message) => dispatch(message)
 
 ### 4b. `!` non-null assertions
 
-`x!` claims "trust me, not null" and crashes silently if you're wrong. Narrow with a real check — in a test that check also documents the invariant.
+`x!` claims "trust me, not null" and crashes silently if you're wrong. Narrow with a real check — in
+a test that check also documents the invariant.
 
 ```ts
 // Bad — asserts non-null, hides the failure mode
@@ -107,7 +127,11 @@ const help = await configured.getHelp()
 
 ## 5. Stub with objects as real as possible; assert the contract, not the implementation
 
-This is **not** only about streams. Use the real collaborator — or the closest real thing — and only substitute when it becomes genuinely inconvenient (it hits the network, the clock, randomness, or terminates the process). Then assert on the **observable outcome** (what was produced), never on *how* the code called its collaborator. A test that mirrors the implementation's calls breaks on every refactor and proves nothing about the real contract.
+This is **not** only about streams. Use the real collaborator — or the closest real thing — and only
+substitute when it becomes genuinely inconvenient (it hits the network, the clock, randomness, or
+terminates the process). Then assert on the **observable outcome** (what was produced), never on
+_how_ the code called its collaborator. A test that mirrors the implementation's calls breaks on
+every refactor and proves nothing about the real contract.
 
 ```ts
 // Bad — a spy that records the calls the code makes.
@@ -126,7 +150,8 @@ await renderCliToStdio({ app, argv: [], controls, process: { stdout, stderr, exi
 expect(String(stdout.read() ?? '')).toBe(`Hello, World!${EOL}`)
 ```
 
-Same principle where a real object is inconvenient — substitute the smallest surface and still assert the outcome, not the call:
+Same principle where a real object is inconvenient — substitute the smallest surface and still
+assert the outcome, not the call:
 
 ```ts
 // Bad — asserts the call was made
@@ -137,15 +162,17 @@ expect(exit).toHaveBeenCalledWith(0)
 ```ts
 // Good — process.exit would kill the test runner, so capture the outcome and assert it
 const exitCodes: number[] = []
-const exit = (code: number) => { exitCodes.push(code) }
+const exit = (code: number) => {
+  exitCodes.push(code)
+}
 expect(exitCodes).toEqual([0]) // the contract: we exit with 0
 ```
 
 ### 5b. Fake the boundary, use the real code, drive the real entry point
 
-Following on from 5: don't mock your own collaborators, and don't call internals directly.
-Replace only the true I/O boundary (filesystem, subprocess, network, clock, randomness) with
-the dungarees' fakes; run everything else for real, through the entry point it ships behind.
+Following on from 5: don't mock your own collaborators, and don't call internals directly. Replace
+only the true I/O boundary (filesystem, subprocess, network, clock, randomness) with the dungarees'
+fakes; run everything else for real, through the entry point it ships behind.
 
 ```ts
 // Bad — hand-mocked service + calling the handler directly (tests only the wiring)
@@ -158,8 +185,14 @@ expect(registered).toEqual([events$])
 ```ts
 // Good — real service, fakes only for I/O, driven through the test renderer
 const publishLib = createPublishLibBehavior({
-  fileSystem: createFakeFileSystem({ /* fixture */ }),
-  cliCommands: createCliCommands(createFakeSubProcessService([ /* npm publish */ ]).subProcess),
+  fileSystem: createFakeFileSystem({
+    /* fixture */
+  }),
+  cliCommands: createCliCommands(
+    createFakeSubProcessService([
+      /* npm publish */
+    ]).subProcess,
+  ),
 })
 const app = createYargsPromptApp<PublishLibEvent>({
   name,
@@ -182,7 +215,10 @@ Reach for built-in and standard-library types before hand-rolling.
 // Bad — bespoke class that reimplements a standard stream
 class Collector extends Writable {
   chunks: string[] = []
-  _write(chunk, _enc, cb) { this.chunks.push(chunk.toString()); cb() }
+  _write(chunk, _enc, cb) {
+    this.chunks.push(chunk.toString())
+    cb()
+  }
 }
 ```
 
@@ -192,7 +228,10 @@ import { PassThrough } from 'node:stream'
 const stream = new PassThrough()
 ```
 
-Do **not** couple to a third-party library's type just because it has a fitting name (`vite`/`esbuild` `LogLevel`) — wrong package, different semantics. When nothing built-in exists (Node has no ranked log-level type), define one small const as the single source of truth and derive types from it.
+Do **not** couple to a third-party library's type just because it has a fitting name
+(`vite`/`esbuild` `LogLevel`) — wrong package, different semantics. When nothing built-in exists
+(Node has no ranked log-level type), define one small const as the single source of truth and derive
+types from it.
 
 ```ts
 // Bad — import a fitting-looking type from an unrelated package
@@ -205,11 +244,15 @@ const NODE_LOG_LEVELS = { debug: 0, info: 1, warn: 2, error: 3 } as const
 type LogLevel = keyof typeof NODE_LOG_LEVELS
 ```
 
-Keep a type intentionally wide only when the API is genuinely configurable (e.g. `level: string` because callers may supply their own `levels` map) — and say so at the point it matters.
+Keep a type intentionally wide only when the API is genuinely configurable (e.g. `level: string`
+because callers may supply their own `levels` map) — and say so at the point it matters.
 
-## 7. Comment the *why*, never the *what*
+## 7. Comment the _why_, never the _what_
 
-The code already says what it does; a comment that restates it is noise that rots. Only add a comment where the reason isn't visible in the code — most often to justify a rule violation you had to make, or to explain the edge case that forced a non-obvious implementation. If you can't name a *why*, delete the comment.
+The code already says what it does; a comment that restates it is noise that rots. Only add a
+comment where the reason isn't visible in the code — most often to justify a rule violation you had
+to make, or to explain the edge case that forced a non-obvious implementation. If you can't name a
+_why_, delete the comment.
 
 ```ts
 // Bad — narrates what the next line plainly does
@@ -233,9 +276,15 @@ const parsed$ = defer(() => from(routed.parseAsync(argv)))
 
 ## 8. Test complicated types at the type level
 
-When the point of a change *is* a type — inference from another argument, a generic that has to hold across a collection, erasure, or anything built from `Parameters`/`ReturnType`/`Extract`/a mapped or conditional type — a runtime test cannot see it. State the contract with `tsafe`'s `assert<Equals<…>>()`, and mark what must **not** compile with `@ts-expect-error`, in the same `.test.ts` file so `type-check` enforces it.
+When the point of a change _is_ a type — inference from another argument, a generic that has to hold
+across a collection, erasure, or anything built from `Parameters`/`ReturnType`/`Extract`/a mapped or
+conditional type — a runtime test cannot see it. State the contract with `tsafe`'s
+`assert<Equals<…>>()`, and mark what must **not** compile with `@ts-expect-error`, in the same
+`.test.ts` file so `type-check` enforces it.
 
-Why: a green suite says nothing about a boundary whose whole value is static. `createCommand` exists so a handler cannot read an argument its builder never declared — delete the generic and every runtime test still passes.
+Why: a green suite says nothing about a boundary whose whole value is static. `createCommand` exists
+so a handler cannot read an argument its builder never declared — delete the generic and every
+runtime test still passes.
 
 ```ts
 // Bad — passes whether or not the handler is typed; the boundary is untested
@@ -265,7 +314,10 @@ test('createCommand infers the handler arguments from what the builder declared'
 
 ### 8a. Spell out the expected type, and show the assertion can fail
 
-Rule 1 applies to types. An assertion written after the implementation never had a chance to fail, so it may be asserting nothing — most often because both sides derive from the same expression. Spell the expected type out literally. If you cannot run the assertion red first, mutate the implementation until it goes red, then restore.
+Rule 1 applies to types. An assertion written after the implementation never had a chance to fail,
+so it may be asserting nothing — most often because both sides derive from the same expression.
+Spell the expected type out literally. If you cannot run the assertion red first, mutate the
+implementation until it goes red, then restore.
 
 ```ts
 // Bad — both sides come from the same expression, so it holds no matter what the type becomes
@@ -282,7 +334,10 @@ assert<Equals<typeof args.times, number | undefined>>()
 
 ### 8b. Keep `@ts-expect-error` on the narrowest line, and check it reports unused
 
-The directive swallows *any* error on the line that follows, so a wrong claim passes silently and the comment lies. Put it on the one line the error must come from, and confirm it reports `TS2578: Unused '@ts-expect-error' directive` once you make the claim correct — that is the red step for a negative test.
+The directive swallows _any_ error on the line that follows, so a wrong claim passes silently and
+the comment lies. Put it on the one line the error must come from, and confirm it reports
+`TS2578: Unused '@ts-expect-error' directive` once you make the claim correct — that is the red step
+for a negative test.
 
 ```ts
 // Bad — the directive covers the whole handler and the comment is false: the real error was

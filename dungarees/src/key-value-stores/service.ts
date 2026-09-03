@@ -11,25 +11,21 @@ import { type ZodSchema } from 'zod'
 
 type Readable<SCHEMAS extends Schemas> = {
   readonly _schemas?: SCHEMAS
-  get: <KEY extends keyof SCHEMAS & string>(
-    key: KEY,
-  ) => GetSchemaType<SCHEMAS[KEY]>
+  get: <KEY extends keyof SCHEMAS & string>(key: KEY) => GetSchemaType<SCHEMAS[KEY]>
   validate: () => void
 }
 
 type Writable<SCHEMAS extends Schemas> = {
-  set: <KEY extends keyof SCHEMAS & string>(
-    key: KEY,
-    value: GetSchemaType<SCHEMAS[KEY]>,
-  ) => void
+  set: <KEY extends keyof SCHEMAS & string>(key: KEY, value: GetSchemaType<SCHEMAS[KEY]>) => void
 }
 
 export type KeyValueStore<
   SCHEMAS extends Schemas,
   RAW_STORE extends RawKeyValueStore = RawKeyValueStore,
-> = RAW_STORE extends WriteableRawKeyValueStore<any>
-  ? Readable<SCHEMAS> & Writable<SCHEMAS>
-  : Readable<SCHEMAS>
+> =
+  RAW_STORE extends WriteableRawKeyValueStore<any>
+    ? Readable<SCHEMAS> & Writable<SCHEMAS>
+    : Readable<SCHEMAS>
 
 export const createKeyValueStore = <SCHEMAS extends Schemas, RAW_STORE extends RawKeyValueStore>(
   rawStore: RAW_STORE,

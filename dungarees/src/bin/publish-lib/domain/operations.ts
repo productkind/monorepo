@@ -194,17 +194,48 @@ const parseVersion = (): OperatorFunction<string, string> =>
     map(({ version }) => version),
   )
 
+const PACKAGE_PRIVACY = z.object({ private: z.boolean().optional() })
+
+// npm refuses to publish a package marked private, so one in the tree would fail the whole run
+// rather than being skipped. Test-only packages use the flag to opt out.
+const excludePrivatePackages = (
+  readPackageJson: (path: string) => Observable<string>,
+): OperatorFunction<string[], string[]> =>
+  mergeMap((packageJsonPaths) =>
+    packageJsonPaths.length === 0
+      ? of<string[]>([])
+      : forkJoin(
+          packageJsonPaths.map((jsonPath) =>
+            readPackageJson(jsonPath).pipe(
+              map((content) => ({
+                jsonPath,
+                isPrivate: PACKAGE_PRIVACY.safeParse(JSON.parse(content)).data?.private === true,
+              })),
+            ),
+          ),
+        ).pipe(
+          map((packages) =>
+            packages.filter(({ isPrivate }) => !isPrivate).map(({ jsonPath }) => jsonPath),
+          ),
+        ),
+  )
+
 export const getPackageDirsWithVersion = ({
   packageJsonPaths$,
   versionContent$,
   sourceDir,
+  readPackageJson,
 }: {
   packageJsonPaths$: Observable<string[]>
   versionContent$: Observable<string>
   sourceDir: string
+  readPackageJson: (path: string) => Observable<string>
 }): Observable<{ packageDirs: string[]; version: string }> =>
   forkJoin({
-    packageDirs: packageJsonPaths$.pipe(getPackageDirs(sourceDir)),
+    packageDirs: packageJsonPaths$.pipe(
+      excludePrivatePackages(readPackageJson),
+      getPackageDirs(sourceDir),
+    ),
     version: versionContent$.pipe(parseVersion()),
   })
 

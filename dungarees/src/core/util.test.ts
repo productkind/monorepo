@@ -1,8 +1,8 @@
 import {
   assertDefined,
+  assertImpossible,
   assertPredicate,
   assertTypeByGuard,
-  assertImpossible,
   boolFromThrow,
   boolFromThrowAsync,
   camelCase2kebabCase,
@@ -17,14 +17,14 @@ import {
   kebabCase2camelCase,
   makeObjectFromStringLiteral,
   mapConst,
+  mapConstKeysToEntries,
+  mapObjectFromKeys,
+  objectFromConstEntries,
   type OptionalPatternList,
   optionalPatternToList,
   pluralize,
   split,
   unPrototypeProperties,
-  objectFromConstEntries,
-  mapConstKeysToEntries,
-  mapObjectFromKeys,
 } from './util.ts'
 
 import { type Fn } from 'hotscript'
@@ -169,7 +169,9 @@ test('optionalPatternToList', () => {
   expect(list2).toEqual([{ value: 1 }])
 
   type Optional1 = OptionalPatternList<1, string>
-  expectTypeOf<Optional1>().toEqualTypeOf<1 | Array<FindByDefault<1> | FindByPattern<1, string> | FindByPartialPattern<1, string>>>()
+  expectTypeOf<Optional1>().toEqualTypeOf<
+    1 | Array<FindByDefault<1> | FindByPattern<1, string> | FindByPartialPattern<1, string>>
+  >()
 })
 
 test('isDefined', () => {
@@ -252,7 +254,7 @@ test('unPrototypeProperties', () => {
 })
 
 interface AppendConstFn extends Fn {
-  'return': `${this['arg0']}-const`
+  return: `${this['arg0']}-const`
 }
 
 test('mapConst', () => {
@@ -297,8 +299,14 @@ test('mapConst non-curried infers input type from array', () => {
 test('mapConstKeysToEntries infers input type from array', () => {
   const input = ['a', 'b', 'c'] as const
   const output = mapConstKeysToEntries(input)<AppendConstFn>((value) => `${value}-const`)
-  expectTypeOf<typeof output>().toEqualTypeOf<readonly [['a', 'a-const'], ['b', 'b-const'], ['c', 'c-const']]>()
-  expect(output).toEqual([['a', 'a-const'], ['b', 'b-const'], ['c', 'c-const']])
+  expectTypeOf<typeof output>().toEqualTypeOf<
+    readonly [['a', 'a-const'], ['b', 'b-const'], ['c', 'c-const']]
+  >()
+  expect(output).toEqual([
+    ['a', 'a-const'],
+    ['b', 'b-const'],
+    ['c', 'c-const'],
+  ])
 })
 
 test('mapConstKeysToEntries expets a lambda with a correct return type', () => {
@@ -317,7 +325,11 @@ test('mapConstKeysToEntries infers input type from array', () => {
     return 1 as const
   })
   expectTypeOf<typeof a>().toEqualTypeOf<readonly [['a', 1], ['b', 1], ['c', 1]]>()
-  expect(a).toEqual([['a', 1], ['b', 1], ['c', 1]])
+  expect(a).toEqual([
+    ['a', 1],
+    ['b', 1],
+    ['c', 1],
+  ])
   expect(output).toEqual([0, 1, 2])
 })
 
@@ -332,7 +344,6 @@ test('mapConstKeysToEntries infers input type from array', () => {
   })
   expect(output).toEqual([0, 1, 2])
 })
-
 
 test('objectFromConstEntries', () => {
   const entries = [
@@ -372,7 +383,11 @@ test('boolFromThrow returns true when function does not throw', () => {
 })
 
 test('boolFromThrow returns false when function throws', () => {
-  expect(boolFromThrow(() => { throw new Error('fail') })).toBe(false)
+  expect(
+    boolFromThrow(() => {
+      throw new Error('fail')
+    }),
+  ).toBe(false)
 })
 
 test('boolFromThrowAsync returns true when async function does not throw', async () => {
@@ -380,5 +395,9 @@ test('boolFromThrowAsync returns true when async function does not throw', async
 })
 
 test('boolFromThrowAsync returns false when async function rejects', async () => {
-  await expect(boolFromThrowAsync(async () => { throw new Error('fail') })).resolves.toBe(false)
+  await expect(
+    boolFromThrowAsync(async () => {
+      throw new Error('fail')
+    }),
+  ).resolves.toBe(false)
 })

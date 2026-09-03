@@ -31,10 +31,7 @@ export type PublishLibBehavior = {
     version: string | undefined
     registry: string | undefined
   }) => PublishLibFeatureOutput
-  publishMultiLib: (args: {
-    dir: string
-    registry: string | undefined
-  }) => PublishLibFeatureOutput
+  publishMultiLib: (args: { dir: string; registry: string | undefined }) => PublishLibFeatureOutput
 }
 
 export type CreatePublishLibBehaviorOptions = {
@@ -87,6 +84,7 @@ export const createPublishLibBehavior = ({
       packageJsonPaths$: fileSystem.glob(`${sourceDir}/**/package.json`),
       versionContent$: fileSystem.readFile(`${dir}/config/version.json`, 'utf-8'),
       sourceDir,
+      readPackageJson: (path) => fileSystem.readFile(path, 'utf-8'),
     }).pipe(
       publishAllPackages(
         ({ packageDir, version }) =>

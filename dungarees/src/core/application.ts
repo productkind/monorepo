@@ -124,8 +124,8 @@ export const createApplication = <
         const behaviors = getBehaviors(services, runIdentity)
         preMain(behaviors, runIdentity)
         const exportState = (): CONFIG['exportState'] => exportStateOriginal(behaviors)
-        const delivery = getDelivery({ behaviors, exportState }, runIdentity)
-        const output = main({ delivery, behaviors }, runIdentity)
+        const delivery = getDelivery({ services, behaviors, exportState }, runIdentity)
+        const output = main({ services, delivery, behaviors }, runIdentity)
         return {
           services,
           behaviors,
@@ -203,6 +203,7 @@ type PreMain<CONFIG extends Partial<ApplicationTypeConfig>> = (
 
 type GetDelivery<CONFIG extends Partial<ApplicationTypeConfig>> = (
   injected: {
+    services: CONFIG['services']
     behaviors: CONFIG['behaviors']
     exportState: () => CONFIG['exportState']
   },
@@ -210,7 +211,11 @@ type GetDelivery<CONFIG extends Partial<ApplicationTypeConfig>> = (
 ) => CONFIG['delivery']
 
 type Main<CONFIG extends Partial<ApplicationTypeConfig>> = (
-  injected: { behaviors: CONFIG['behaviors']; delivery: CONFIG['delivery'] },
+  injected: {
+    services: CONFIG['services']
+    behaviors: CONFIG['behaviors']
+    delivery: CONFIG['delivery']
+  },
   identity: CONFIG['identity'],
 ) => CONFIG['output']
 

@@ -21,10 +21,10 @@ export const createProcessService = (nodeProcess: NodeJS.Process): ProcessServic
     },
     isRoot: () => {
       const uid = nodeProcess.getuid?.()
-      return assertDefined(
-        uid,
-        `getuid is not supported on this platform: ${nodeProcess.platform}`,
-      ) === 0
-    }
+      return (
+        assertDefined(uid, `getuid is not supported on this platform: ${nodeProcess.platform}`) ===
+        0
+      )
+    },
   }
 }

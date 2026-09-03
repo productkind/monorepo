@@ -1,10 +1,9 @@
-import { createFakeNodeFs, createFakeFileSystem } from './fake.ts'
+import { createFakeFileSystem, createFakeNodeFs } from './fake.ts'
 import { createFileSystem } from './service.ts'
 
-import * as fs from 'fs'
+import * as fs from 'node:fs'
 import { lastValueFrom } from 'rxjs'
 import { expect, test } from 'vitest'
-
 
 test('FileSystem should write and read file sync', () => {
   const fakeFs = createFakeNodeFs()
@@ -144,11 +143,9 @@ test('FileSystem readDirDeepSync', () => {
     '/dir/subdir/nested/file3.txt': 'content3',
   })
   const files = fakeFileSystem.readDirDeepSync('/dir')
-  expect(files.sort()).toEqual([
-    '/dir/file1.txt',
-    '/dir/subdir/file2.txt',
-    '/dir/subdir/nested/file3.txt',
-  ].sort())
+  expect(files.sort()).toEqual(
+    ['/dir/file1.txt', '/dir/subdir/file2.txt', '/dir/subdir/nested/file3.txt'].sort(),
+  )
 })
 
 test('FileSystem readDirDeepAsync', async () => {
@@ -158,11 +155,9 @@ test('FileSystem readDirDeepAsync', async () => {
     '/dir/subdir/nested/file3.txt': 'content3',
   })
   const files = await fakeFileSystem.readDirDeepAsync('/dir')
-  expect(files.sort()).toEqual([
-    '/dir/file1.txt',
-    '/dir/subdir/file2.txt',
-    '/dir/subdir/nested/file3.txt',
-  ].sort())
+  expect(files.sort()).toEqual(
+    ['/dir/file1.txt', '/dir/subdir/file2.txt', '/dir/subdir/nested/file3.txt'].sort(),
+  )
 })
 
 test('FileSystem readDirDeep', async () => {
@@ -172,11 +167,9 @@ test('FileSystem readDirDeep', async () => {
     '/dir/subdir/nested/file3.txt': 'content3',
   })
   const files = await lastValueFrom(fakeFileSystem.readDirDeep('/dir'))
-  expect(files.sort()).toEqual([
-    '/dir/file1.txt',
-    '/dir/subdir/file2.txt',
-    '/dir/subdir/nested/file3.txt',
-  ].sort())
+  expect(files.sort()).toEqual(
+    ['/dir/file1.txt', '/dir/subdir/file2.txt', '/dir/subdir/nested/file3.txt'].sort(),
+  )
 })
 
 test('FileSystem should have a readBulkAsync method', async () => {
@@ -266,8 +259,6 @@ test('FileSystem should read the file stats correctly with getStat observable', 
   })
 })
 
-
-
 test('FileSystem.accessSync returns true for executable file', () => {
   const fakeFs = createFakeNodeFs()
   fakeFs.writeFileSync('/exec.sh', '#!/bin/sh\necho hello')
@@ -335,7 +326,9 @@ test('FileSystem.access observable returns true for executable file', async () =
 test('FileSystem.access observable returns false for non-existent file', async () => {
   const fakeFs = createFakeNodeFs()
   const fileSystem = createFileSystem(fakeFs)
-  await expect(lastValueFrom(fileSystem.access('/does-not-exist', ['visible']))).resolves.toBe(false)
+  await expect(lastValueFrom(fileSystem.access('/does-not-exist', ['visible']))).resolves.toBe(
+    false,
+  )
 })
 
 test('FileSystem.chmod sets permissions based on mode', async () => {

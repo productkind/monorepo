@@ -1,12 +1,10 @@
-
 import { createCucumberTestEnvironment } from '@dungarees/test-environment/cucumber-test-environment.ts'
-
+import { networkInteractor } from '@dungarees/test-environment/interactors/network.ts'
 import { nodeCommandLineInteractor } from '@dungarees/test-environment/interactors/node-command-line.ts'
 import { npmRegistryRunner } from '@dungarees/test-environment/runners/npm-registry.ts'
-import { networkInteractor } from '@dungarees/test-environment/interactors/network.ts'
 
-import { type StartedNetwork } from 'testcontainers'
 import { resolve } from 'node:path'
+import { type StartedNetwork } from 'testcontainers'
 
 const useHostNodeModules = process.env.E2E_USE_HOST_NODE_MODULES === 'true'
 
@@ -33,48 +31,50 @@ const initializeNetwork = async (): Promise<StartedNetwork> => {
   return networkSingleton
 }
 
-export const { Given, When, Then } = createCucumberTestEnvironment({
-  nodeCommandLine: {
-    creator: async () => nodeCommandLineInteractor({
-      workingDir: '/opt/app',
-      network: await getNetworkSingleton(),
-    }),
-    type: 'interactor',
-    hook: 'before-all',
-  },
-  dungareesNpmRegistry: {
-    creator: async () =>
-      npmRegistryRunner({
-        port: 4873,
-        network: await getNetworkSingleton(),
-        alias: 'npmregistry',
-        localScopes: ['@dungarees'],
-      }),
-    type: 'runner',
-    hook: 'before-all',
-  },
-  dungareesNpmPublisher: {
-    creator: async () => {
-      const monorepoRoot = resolve(process.cwd(), '../..')
-      return nodeCommandLineInteractor({
-        ...(useHostNodeModules
-          ? { bindMount: monorepoRoot }
-          : { path: monorepoRoot }),
-        workingDir: '/opt/app',
-        network: await getNetworkSingleton(),
-        environment: {
-          NPM_CONFIG_REGISTRY: 'http://npmregistry:4873',
-          NPM_CONFIG_ALWAYS_AUTH: 'false',
-          NPM_CONFIG_USERNAME: 'test',
-          NPM_CONFIG_PASSWORD: 'test',
-          NPM_CONFIG_EMAIL: 'test@example.com',
-          NPM_CONFIG_AUTH_TYPE: 'legacy'
-        }
-      })
+export const { Given, When, Then } = createCucumberTestEnvironment(
+  {
+    nodeCommandLine: {
+      creator: async () =>
+        nodeCommandLineInteractor({
+          workingDir: '/opt/app',
+          network: await getNetworkSingleton(),
+        }),
+      type: 'interactor',
+      hook: 'before-all',
     },
-    type: 'interactor',
-    hook: 'before-all',
+    dungareesNpmRegistry: {
+      creator: async () =>
+        npmRegistryRunner({
+          port: 4873,
+          network: await getNetworkSingleton(),
+          alias: 'npmregistry',
+          localScopes: ['@dungarees'],
+        }),
+      type: 'runner',
+      hook: 'before-all',
+    },
+    dungareesNpmPublisher: {
+      creator: async () => {
+        const monorepoRoot = resolve(process.cwd(), '../..')
+        return nodeCommandLineInteractor({
+          ...(useHostNodeModules ? { bindMount: monorepoRoot } : { path: monorepoRoot }),
+          workingDir: '/opt/app',
+          network: await getNetworkSingleton(),
+          environment: {
+            NPM_CONFIG_REGISTRY: 'http://npmregistry:4873',
+            NPM_CONFIG_ALWAYS_AUTH: 'false',
+            NPM_CONFIG_USERNAME: 'test',
+            NPM_CONFIG_PASSWORD: 'test',
+            NPM_CONFIG_EMAIL: 'test@example.com',
+            NPM_CONFIG_AUTH_TYPE: 'legacy',
+          },
+        })
+      },
+      type: 'interactor',
+      hook: 'before-all',
+    },
   },
-}, {
-  timeout: 60 * 1000 * 1000,
-})
+  {
+    timeout: 60 * 1000 * 1000,
+  },
+)

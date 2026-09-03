@@ -292,6 +292,7 @@ mtest('getPackageDirsWithVersion combines parsed package dirs and version', ({ e
     packageJsonPaths$: of(['/src/lib-1/package.json', '/src/sub/lib-2/package.json']),
     versionContent$: of(JSON.stringify({ version: '1.2.3' })),
     sourceDir: '/src',
+    readPackageJson: () => of(JSON.stringify({ name: '@org/lib' })),
   })
   expect(combined$).toBeObservableValueAndClose({
     packageDirs: ['lib-1', 'sub/lib-2'],
@@ -304,6 +305,7 @@ mtest('getPackageDirsWithVersion with no package.json paths', ({ expect }) => {
     packageJsonPaths$: of<string[]>([]),
     versionContent$: of(JSON.stringify({ version: '1.0.0' })),
     sourceDir: '/src',
+    readPackageJson: () => of(JSON.stringify({ name: '@org/lib' })),
   })
   expect(combined$).toBeObservableValueAndClose({
     packageDirs: [],
@@ -316,6 +318,7 @@ mtest('getPackageDirsWithVersion errors when version.json has no version field',
     packageJsonPaths$: of(['/src/lib-1/package.json']),
     versionContent$: of(JSON.stringify({ name: 'my-app' })),
     sourceDir: '/src',
+    readPackageJson: () => of(JSON.stringify({ name: '@org/lib' })),
   })
   expect(combined$).toBeObservableError(new Error('Version is required in version.json'), 0)
 })
@@ -325,6 +328,7 @@ mtest('getPackageDirsWithVersion errors when version is not a string', ({ expect
     packageJsonPaths$: of(['/src/lib-1/package.json']),
     versionContent$: of(JSON.stringify({ version: 42 })),
     sourceDir: '/src',
+    readPackageJson: () => of(JSON.stringify({ name: '@org/lib' })),
   })
   expect(combined$).toBeObservableError(new Error('Version is required in version.json'), 0)
 })
@@ -334,6 +338,7 @@ mtest('getPackageDirsWithVersion errors when version.json is not valid JSON', ({
     packageJsonPaths$: of(['/src/lib-1/package.json']),
     versionContent$: of('not json'),
     sourceDir: '/src',
+    readPackageJson: () => of(JSON.stringify({ name: '@org/lib' })),
   })
   expect(combined$).toBeObservableError(
     new Error('Invalid version.json: Unexpected token \'o\', "not json" is not valid JSON'),
