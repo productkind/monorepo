@@ -1,5 +1,6 @@
 import { type AuditDependenciesEvent, eventCreators } from './events.ts'
 
+import { createCausedError } from '@dungarees/core/error.ts'
 import { catchAndRethrow } from '@dungarees/rxjs/util.ts'
 
 import path from 'node:path'
@@ -154,7 +155,9 @@ const readManifests = (
     map((files) =>
       files.map(({ path: manifestPath, content }) => parseManifest({ manifestPath, content })),
     ),
-    catchAndRethrow((cause) => new Error(`Invalid package.json: ${cause.message}`, { cause })),
+    catchAndRethrow((cause: unknown) =>
+      createCausedError({ message: 'Invalid package.json', cause }),
+    ),
   )
 
 const readSources = (
