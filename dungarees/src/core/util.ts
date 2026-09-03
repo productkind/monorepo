@@ -88,7 +88,6 @@ export const isDeepEqual = (a: any, b: any): boolean => {
   // for that reason we have to create new function for each invocation.
   const visited = new WeakMap()
 
-   
   const inner = (a: any, b: any): boolean => {
     // in case strict equality - there is nothing to check anymore.
     if (a === b) {
@@ -99,7 +98,7 @@ export const isDeepEqual = (a: any, b: any): boolean => {
     if (typeof a !== 'object' || typeof b !== 'object' || !a || !b) {
       // looks weird, but it is most efficient way to test NaN.
       // otherwise we have to involve Number.isNaN, which causes context switch and therefore is slower.
-       
+
       return a !== a && b !== b
     }
 

@@ -28,7 +28,6 @@ export default tseslint.config(
         'error',
         { assertionStyle: 'as', objectLiteralTypeAssertions: 'allow-as-parameter' },
       ],
-      '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
       // Replaces eslint-plugin-deprecation, which typescript-eslint v8 superseded.
       '@typescript-eslint/no-deprecated': 'error',
     },
