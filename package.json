@@ -10,7 +10,8 @@
     "init": "zx ./productkind/scripts/init.ts",
     "publish:dungarees": "dungarees publish-multi-lib ./dungarees",
     "type-check": "tsc --noEmit -p tsconfig.json",
-    "audit-dependencies": "dungarees audit-dependencies ./dungarees"
+    "audit-dependencies": "dungarees audit-dependencies ./dungarees",
+    "lint": "oxlint"
   },
   "repository": {
     "type": "git",
@@ -35,7 +36,14 @@
   ],
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
+    "eslint": "^9.39.5",
+    "eslint-config-love": "^155.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "oxlint": "^1.81.0",
+    "oxlint-tsgolint": "^7.0.2001",
     "prettier": "^3.8.1",
+    "typescript-eslint": "^8.69.0",
     "vitest": "^3.2.4"
   }
 }
