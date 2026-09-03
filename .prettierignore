@@ -1,2 +1,14 @@
 # Licence text must not be reflowed
 **/LICENSE.md
+
+# Tool settings, not project code
+**/.claude/**
+**/.agents/**
+
+# Not maintained to prettier standard — same scope as `lint` and `type-check`.
+# Format explicitly with `npx prettier --write <path>` if you work in one of these.
+productkind/
+little-parrot/
+thoughts/
+kim-and-tim/
+seminars/

@@ -4,22 +4,22 @@ about: A checklist to organise a seminar
 title: ''
 labels: ''
 assignees: ''
-
 ---
 
 # Content
+
 **Topic:**
 
 **Title:**
 
 **Description:**
 
-
-
 # What needs to be done
 
 ## Pre-event
+
 ### Offline
+
 - [ ] Find venue
 - [ ] Organise catering
 - [ ] Prepare jumpsuit & dungaree
@@ -27,11 +27,13 @@ assignees: ''
 - [ ] Pack HDMI converter
 
 ### Meetup.com
+
 - [ ] Create event title
 - [ ] Create event description
 - [ ] Create event cover
 
 ### Marketing
+
 - [ ] Share in 351 Slack channel
 - [ ] Share in Portuguese Women in Tech group
 - [ ] Share in Geek Girls email list
@@ -39,6 +41,7 @@ assignees: ''
 - [ ] Remind participants a few days before the event with a message
 
 ### Materials
+
 - [ ] Create feedback form
 - [ ] Create Miro board to share during event
 - [ ] Create slides
@@ -47,6 +50,7 @@ assignees: ''
 - [ ] Set up automation: if feedback form is completed, receive cheat sheet
 
 ## During event
+
 - [ ] Check participants in via Meetup organiser app
 - [ ] Setup catering
 - [ ] Take photos
@@ -55,5 +59,6 @@ assignees: ''
 - [ ] Share feedback form - tell the group if they complete it, they will receive a cheat sheet
 
 ## Post-event
+
 - [ ] Send thank you message to Meetup participants
 - [ ] Add participants' data to main DB to track retention

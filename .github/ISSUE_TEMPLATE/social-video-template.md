@@ -4,7 +4,6 @@ about: A checklist for each video created for our social media channels
 title: ''
 labels: 'marketing'
 assignees: ''
-
 ---
 
 ## Social Video
