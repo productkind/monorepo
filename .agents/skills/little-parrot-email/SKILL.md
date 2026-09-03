@@ -228,7 +228,7 @@ When relevant, always link to:
 
 ### Straightforward language
 - **Write for a smart professional with no technical background who uses technology every day.** She reads and writes for a living, so ordinary professional vocabulary can be used. What she lacks is exposure to technical concepts, not reading ability. So spend the effort explaining *those* rather than shortening every word.
-- **Define a technical term clearly on first use, in the same sentence** ("an AI agent, a tool that can take actions for you like Codex"). This is the load-bearing rule, and it does properly what over-simplifying only attempted. **Teach the real term rather than a dumbed-down paraphrase**: "an LLM, the large language model behind ChatGPT" beats swapping in something vaguer. Follow the house terminology: "AI chat assistant" (ChatGPT, Codex.ai) vs "AI agent" (Codex, Codex).
+- **Define a technical term clearly on first use, in the same sentence** ("an AI agent, a tool that can take actions for you like Claude Code"). This is the load-bearing rule, and it does properly what over-simplifying only attempted. **Teach the real term rather than a dumbed-down paraphrase**: "an LLM, the large language model behind ChatGPT" beats swapping in something vaguer. Follow the house terminology: "AI chat assistant" (ChatGPT, Claude.ai) vs "AI agent" (Claude Code, Codex).
 - **Short sentences, mostly one idea each, and active voice, because the email gets about nine seconds** (see *Built to be skimmed*). This is a scanning rule, not a comprehension one, so a longer sentence is fine where it genuinely reads better. Cut a first draft by about half.
 - **Concrete over vague:** "takes about 10 minutes" beats "quick".
 

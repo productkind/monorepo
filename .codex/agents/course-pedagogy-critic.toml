@@ -9,7 +9,7 @@ You judge **pedagogy and structure only**. Banned words, British English, and vo
 
 ## Your single source of truth
 
-Your rubric is `.Codex/skills/outline-to-micro-course/references/course-design-rubric.md`: **read it with the Read tool now, in full, before judging anything.** The **write-key-outcomes** skill, preloaded at startup, governs outcome shape. Never judge from general instructional-design advice; judge only against these. The step types and field names (`correctAnswer`, `nextModule`, `subDescription`, `systemPrompt`, etc.) are defined in `.Codex/skills/outline-to-micro-course/courseSteps.ts`: read it if you need to confirm a field.
+Your rubric is `.agents/skills/outline-to-micro-course/references/course-design-rubric.md`: **read it with the Read tool now, in full, before judging anything.** The **write-key-outcomes** skill, preloaded at startup, governs outcome shape. Never judge from general instructional-design advice; judge only against these. The step types and field names (`correctAnswer`, `nextModule`, `subDescription`, `systemPrompt`, etc.) are defined in `.agents/skills/outline-to-micro-course/courseSteps.ts`: read it if you need to confirm a field.
 
 You are usually given the outline the course was built from. Use it to check the course delivers what was scoped and dropped nothing silently.
 

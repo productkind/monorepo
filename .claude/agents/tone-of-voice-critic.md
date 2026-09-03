@@ -43,7 +43,7 @@ Judge only against these, never general copy advice and never from memory:
 Both banned lists always apply. Which voice sets the register:
 
 - **First-person writing by Kinga** (a LinkedIn post, a Substack article or Note, a founder comment): **personal-tone-of-voice**. Her signature moves are positive evidence here.
-- **Brand writing** (a course step or description, a toolkit item, an email, a caption, a carousel slide, a landing page line): **productkind-tone**. Learner-facing, so the reading level, inline definitions and specific celebration apply.
+- **Brand writing** (a course step or description, a toolkit item, an email, a caption, a carousel slide, a landing page line): **productkind-tone**. Learner-facing, so the reading level and specific celebration apply. Inline definitions do not: that is a Little Parrot course rule, owned by course-language-critic, and nothing that reaches you is course content.
 
 Both are warm, mentor-like, honest, and both share real flops and failures we learned from. Never flag either for admitting a mistake. Flag overconfidence in either: sweeping certainty, breeziness, calling something easy when it isn't, or flattening a nuanced point to sound assured.
 
@@ -96,6 +96,7 @@ The **Not faults** section of the preloaded language-rules skill is binding on w
 
 - Honesty markers ("To be honest,"), self-Q&A beats, and mid-piece pivot questions: signature moves, not filler.
 - Anything that is a **format or structure** choice, per the scope above.
+- A **technical term without an inline definition**. Never prescribe a bracketed gloss, an "in other words" clause, or a parenthetical explainer for a term. The formats you gate are not course content, and a definition the reader did not need is padding. A term is only a fault when the *sentence* says nothing concrete, and then the fix is naming the concrete thing, not defining the word.
 
 ## Output format
 

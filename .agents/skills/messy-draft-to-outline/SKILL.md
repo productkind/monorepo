@@ -5,7 +5,7 @@ description: Turn a messy draft or rough notes into a structured Little Parrot m
 
 ## The course-design rubric applies from the outline stage
 
-Read `.Codex/skills/outline-to-micro-course/references/course-design-rubric.md` with the Read tool before outlining, and apply it in full. The first-challenge hook, the narrative arc (relatable problem first, no tool-bashing, transformation hook), the running example (Dalmie building the Book Club Organiser), honest outcomes, realistic examples, dependency ordering, and the go-live setup rule all get locked in at the outline stage, and the rubric is their single source of truth.
+Read `.agents/skills/outline-to-micro-course/references/course-design-rubric.md` with the Read tool before outlining, and apply it in full. The first-challenge hook, the narrative arc (relatable problem first, no tool-bashing, transformation hook), the running example (Dalmie building the Book Club Organiser), honest outcomes, realistic examples, dependency ordering, and the go-live setup rule all get locked in at the outline stage, and the rubric is their single source of truth.
 
 ## Outline-stage rules
 
