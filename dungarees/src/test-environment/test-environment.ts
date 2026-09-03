@@ -1,4 +1,4 @@
-import type { FilterRecord, GetKey, GetValue, RecordToEntries } from '@dungarees/core/type-util.ts'
+import { isInteractorName, isRunnerName } from './guards.ts'
 import type {
   DefaultConfig,
   GetContext,
@@ -12,9 +12,10 @@ import type {
   ServiceConfig,
   TestEnviornmentState,
 } from './type.ts'
-import { isInteractorName, isRunnerName } from './guards.ts'
 import type { TestEnvironmentWorld } from './world.ts'
 import { createWorld } from './world.ts'
+
+import type { FilterRecord, GetKey, GetValue, RecordToEntries } from '@dungarees/core/type-util.ts'
 
 import type { Observable } from 'rxjs'
 import { map, merge, ReplaySubject } from 'rxjs'
@@ -79,7 +80,10 @@ export const createTestEnvironment = <const SERVICES extends Record<string, Serv
   }: {
     hasHook: (config: DefaultConfig) => boolean
     mapper: (
-      service: { name: GetKey<Interactor> | GetKey<Runner> } & (InteractorInstance | RunnerInstance),
+      service: { name: GetKey<Interactor> | GetKey<Runner> } & (
+        | InteractorInstance
+        | RunnerInstance
+      ),
     ) => Promise<void>
   }): Promise<void> => {
     await Promise.all([
@@ -90,13 +94,19 @@ export const createTestEnvironment = <const SERVICES extends Record<string, Serv
 
   const forEachBeforeAllService = async (
     mapper: (
-      service: { name: GetKey<Interactor> | GetKey<Runner> } & (InteractorInstance | RunnerInstance),
+      service: { name: GetKey<Interactor> | GetKey<Runner> } & (
+        | InteractorInstance
+        | RunnerInstance
+      ),
     ) => Promise<void>,
   ): Promise<void> => await forEachService({ hasHook: isBeforeAll, mapper })
 
   const forEachScenarioService = async (
     mapper: (
-      service: { name: GetKey<Interactor> | GetKey<Runner> } & (InteractorInstance | RunnerInstance),
+      service: { name: GetKey<Interactor> | GetKey<Runner> } & (
+        | InteractorInstance
+        | RunnerInstance
+      ),
     ) => Promise<void>,
   ): Promise<void> => await forEachService({ hasHook: isNotBeforeAll, mapper })
 

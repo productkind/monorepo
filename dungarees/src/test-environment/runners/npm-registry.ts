@@ -1,4 +1,5 @@
 import type { Runner } from '../type.ts'
+
 import type { StartedNetwork, StartedTestContainer } from 'testcontainers'
 import { GenericContainer, Wait } from 'testcontainers'
 
@@ -12,7 +13,7 @@ export type NpmRegistryRunnerConfig = {
 
 const generateVerdaccioConfig = (localScopes: string[]): string => {
   const localScopeRules = localScopes
-    .map(scope => `  '${scope}/*':\n    access: $all\n    publish: $authenticated`)
+    .map((scope) => `  '${scope}/*':\n    access: $all\n    publish: $authenticated`)
     .join('\n')
 
   return `storage: /verdaccio/storage/data
@@ -64,10 +65,12 @@ export const npmRegistryRunner = ({
     .withWaitStrategy(Wait.forListeningPorts().withStartupTimeout(300_000))
 
   if (localScopes !== undefined) {
-    container.withCopyContentToContainer([{
-      content: generateVerdaccioConfig(localScopes),
-      target: '/verdaccio/conf/config.yaml',
-    }])
+    container.withCopyContentToContainer([
+      {
+        content: generateVerdaccioConfig(localScopes),
+        target: '/verdaccio/conf/config.yaml',
+      },
+    ])
   }
 
   if (alias !== undefined) {
@@ -77,7 +80,6 @@ export const npmRegistryRunner = ({
   if (network !== undefined) {
     container.withNetwork(network)
   }
-
 
   return {
     start: async () => {

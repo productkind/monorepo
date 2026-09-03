@@ -93,8 +93,8 @@ type UsedPromisesMethods =
   | 'chown'
   | 'access'
 
-export type NodeFs = Pick<typeof import('fs'), UsedFsMethods> & {
-  promises: Pick<(typeof import('fs'))['promises'], UsedPromisesMethods>
+export type NodeFs = Pick<typeof import('node:fs'), UsedFsMethods> & {
+  promises: Pick<(typeof import('node:fs'))['promises'], UsedPromisesMethods>
 }
 
 export const createFileSystem = (fs: NodeFs): UnsafeService<FileSystemService> => {

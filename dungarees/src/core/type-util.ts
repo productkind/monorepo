@@ -1,4 +1,4 @@
-import type { Fn } from "hotscript";
+import type { Fn } from 'hotscript'
 
 export type StringLiteral<T> = T extends string ? (string extends T ? never : T) : never
 
@@ -6,14 +6,7 @@ export type ObjectWithStringLiteralKey<KEY, VALUE> = {
   [K in StringLiteral<KEY>]: VALUE
 }
 
-export type JsonType =
-  | number
-  | string
-  | boolean
-  | null
-  | undefined
-  | JsonType[]
-  | JsonObject
+export type JsonType = number | string | boolean | null | undefined | JsonType[] | JsonObject
 
 export type JsonObject = { [key: string]: JsonType }
 
@@ -28,7 +21,7 @@ export type TypedArray =
   | Float32Array
   | Float64Array
   | BigInt64Array
-  | BigUint64Array;
+  | BigUint64Array
 
 export type TokenNonEmptyString<TOKEN extends string | number> = TOKEN extends '' ? never : TOKEN
 
@@ -77,23 +70,23 @@ export type GetAllPaths<OBJECT, PATH extends string = ''> = PathsHelper<OBJECT, 
 
 type PathsHelper<OBJECT, PATH extends string, ACC extends string> =
   | {
-    [K in keyof OBJECT & string]: PATH extends ''
-    ? K | (OBJECT[K] extends Record<string, any> ? PathsHelper<OBJECT[K], K, K> : never)
-    :
-    | `${PATH}.${K}`
-    | (OBJECT[K] extends Record<string, any>
-      ? PathsHelper<OBJECT[K], `${PATH}.${K}`, `${PATH}.${K}` | ACC>
-      : never)
-  }[keyof OBJECT & string]
+      [K in keyof OBJECT & string]: PATH extends ''
+        ? K | (OBJECT[K] extends Record<string, any> ? PathsHelper<OBJECT[K], K, K> : never)
+        :
+            | `${PATH}.${K}`
+            | (OBJECT[K] extends Record<string, any>
+                ? PathsHelper<OBJECT[K], `${PATH}.${K}`, `${PATH}.${K}` | ACC>
+                : never)
+    }[keyof OBJECT & string]
   | ACC
 
 export type GetValueByPath<OBJECT, PATH extends string> = PATH extends keyof OBJECT
   ? OBJECT[PATH]
   : PATH extends `${infer K}.${infer Rest}`
-  ? K extends keyof OBJECT
-  ? GetValueByPath<OBJECT[K], Rest & string>
-  : never
-  : never
+    ? K extends keyof OBJECT
+      ? GetValueByPath<OBJECT[K], Rest & string>
+      : never
+    : never
 
 export type JoinArray<
   STRINGS extends readonly string[],
@@ -102,14 +95,14 @@ export type JoinArray<
 > = STRINGS extends []
   ? ''
   : STRINGS extends [infer L, ...infer R]
-  ? L extends string
-  ? R['length'] extends 0
-  ? `${ACC}${L & string}`
-  : R extends string[]
-  ? JoinArray<R, DELIMITER, `${ACC}${L}${DELIMITER}`>
-  : never
-  : ACC
-  : never
+    ? L extends string
+      ? R['length'] extends 0
+        ? `${ACC}${L & string}`
+        : R extends string[]
+          ? JoinArray<R, DELIMITER, `${ACC}${L}${DELIMITER}`>
+          : never
+      : ACC
+    : never
 
 type CamelCaseSegments<
   S extends string,
@@ -117,13 +110,13 @@ type CamelCaseSegments<
   AccumulatedSegments extends readonly string[] = readonly [],
 > = S extends `${infer First}${infer Rest}`
   ? First extends Uppercase<First>
-  ? CurrentSegment extends ''
-  ? CamelCaseSegments<Rest, First, AccumulatedSegments>
-  : CamelCaseSegments<Rest, First, readonly [...AccumulatedSegments, Lowercase<CurrentSegment>]>
-  : CamelCaseSegments<Rest, `${CurrentSegment}${First}`, AccumulatedSegments>
+    ? CurrentSegment extends ''
+      ? CamelCaseSegments<Rest, First, AccumulatedSegments>
+      : CamelCaseSegments<Rest, First, readonly [...AccumulatedSegments, Lowercase<CurrentSegment>]>
+    : CamelCaseSegments<Rest, `${CurrentSegment}${First}`, AccumulatedSegments>
   : CurrentSegment extends ''
-  ? AccumulatedSegments
-  : readonly [...AccumulatedSegments, Lowercase<CurrentSegment>]
+    ? AccumulatedSegments
+    : readonly [...AccumulatedSegments, Lowercase<CurrentSegment>]
 
 type CamelCaseArray<
   SEGMENTS extends readonly string[],
@@ -164,5 +157,5 @@ export type SyncFunctionToAsync<FUNC extends (...args: any[]) => any> = FUNC ext
   : never
 
 export interface StaticFn<RETURN> extends Fn {
-  'return': RETURN
+  return: RETURN
 }

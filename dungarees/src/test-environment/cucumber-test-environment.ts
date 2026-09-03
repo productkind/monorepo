@@ -1,8 +1,20 @@
-import type { TestEnvironmentWorld } from './world.ts'
-import type { ServiceConfig } from './type.ts'
 import { createTestEnvironment } from './test-environment.ts'
+import type { ServiceConfig } from './type.ts'
+import type { TestEnvironmentWorld } from './world.ts'
 
-import { setDefaultTimeout, setWorldConstructor, Status, World, After, AfterAll, Before, BeforeAll, Given as CucumberGiven, When as CucumberWhen, Then as CucumberThen } from '@cucumber/cucumber'
+import {
+  After,
+  AfterAll,
+  Before,
+  BeforeAll,
+  Given as CucumberGiven,
+  Then as CucumberThen,
+  When as CucumberWhen,
+  setDefaultTimeout,
+  setWorldConstructor,
+  Status,
+  World,
+} from '@cucumber/cucumber'
 import { type ITestCaseHookParameter } from '@cucumber/cucumber'
 
 type CucumberTestEnvironment<SERVICES extends Record<string, ServiceConfig>> = {
@@ -11,9 +23,12 @@ type CucumberTestEnvironment<SERVICES extends Record<string, ServiceConfig>> = {
   Then: (step: string, callback: (world: TestEnvironmentWorld<SERVICES>) => Promise<void>) => void
 }
 
-export const createCucumberTestEnvironment = <SERVICES extends Record<string, ServiceConfig>>(services: SERVICES, options: {
-  timeout?: number
-} = {}): CucumberTestEnvironment<SERVICES> => {
+export const createCucumberTestEnvironment = <SERVICES extends Record<string, ServiceConfig>>(
+  services: SERVICES,
+  options: {
+    timeout?: number
+  } = {},
+): CucumberTestEnvironment<SERVICES> => {
   setDefaultTimeout(options.timeout ?? 60 * 1000)
   const testEnvironment = createTestEnvironment(services)
 
@@ -69,15 +84,17 @@ export const createCucumberTestEnvironment = <SERVICES extends Record<string, Se
   })
 
   return {
-    Given: (step, callback) => CucumberGiven(step, async function (this: TestEnvironmentWorld) {
-      await callback(this.testEnvironmentWorld)
+    Given: (step, callback) =>
+      CucumberGiven(step, async function (this: TestEnvironmentWorld) {
+        await callback(this.testEnvironmentWorld)
       }),
-    When: (step, callback) => CucumberWhen(step, async function (this: TestEnvironmentWorld) {
-      await callback(this.testEnvironmentWorld)
-    }),
-    Then: (step, callback) => CucumberThen(step, async function (this: TestEnvironmentWorld) {
-      await callback(this.testEnvironmentWorld)
-    }),
+    When: (step, callback) =>
+      CucumberWhen(step, async function (this: TestEnvironmentWorld) {
+        await callback(this.testEnvironmentWorld)
+      }),
+    Then: (step, callback) =>
+      CucumberThen(step, async function (this: TestEnvironmentWorld) {
+        await callback(this.testEnvironmentWorld)
+      }),
   }
 }
-

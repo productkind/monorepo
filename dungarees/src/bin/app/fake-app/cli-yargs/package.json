@@ -1,5 +1,6 @@
 {
   "name": "@dungarees/bin-fake-app-cli-yargs",
+  "private": true,
   "engines": {
     "node": ">=25.0.0"
   },

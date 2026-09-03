@@ -8,8 +8,6 @@ export const getPackageVersionInWorkspace = async (workspaceName: string, path: 
   )['children']['Version'].trim()
 
 export const getPackageVersion = async () => {
-  const packageJson = JSON.parse(
-    (await $`npm pkg get version`.quiet()).stdout
-  )
+  const packageJson = JSON.parse((await $`npm pkg get version`.quiet()).stdout)
   return packageJson.replace(/"/g, '')
 }

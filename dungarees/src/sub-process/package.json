@@ -9,7 +9,6 @@
   "type": "module",
   "dependencies": {
     "@dungarees/core": "*",
-    "@dungarees/rxjs": "*",
     "@dungarees/cli": "*",
     "@dungarees/fs": "*",
     "@dungarees/key-value-stores": "*",

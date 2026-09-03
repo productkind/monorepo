@@ -11,7 +11,8 @@ import type {
   ToCamelCase,
   ToKebabCase,
 } from './type-util.ts'
-import type { Call, Fn, Pipe, Objects } from 'hotscript'
+
+import type { Call, Fn, Objects, Pipe } from 'hotscript'
 
 export const typeKey = Symbol('type')
 
@@ -83,134 +84,142 @@ export const camelCase2kebabCase = <const CAMEL_CASE extends string>(
 ): ToKebabCase<FromCamelCase<CAMEL_CASE>> => toKebabCase(fromCamelCase(camelCase))
 
 export const isDeepEqual = (a: any, b: any): boolean => {
-	// in order to support circular references we have to keep track of visited objects.
-	// for that reason we have to create new function for each invocation.
-	const visited = new WeakMap();
+  // in order to support circular references we have to keep track of visited objects.
+  // for that reason we have to create new function for each invocation.
+  const visited = new WeakMap()
 
-	// eslint-disable-next-line complexity
-	const inner = (a: any, b: any): boolean => {
-		// in case strict equality - there is nothing to check anymore.
-		if (a === b) {
-			return true;
-		}
+  // eslint-disable-next-line complexity
+  const inner = (a: any, b: any): boolean => {
+    // in case strict equality - there is nothing to check anymore.
+    if (a === b) {
+      return true
+    }
 
-		// in case any of values is not an object, there is nothing to do, except to check strict equality.
-		if (typeof a !== 'object' || typeof b !== 'object' || !a || !b) {
-			// looks weird, but it is most efficient way to test NaN.
-			// otherwise we have to involve Number.isNaN, which causes context switch and therefore is slower.
-			// eslint-disable-next-line no-self-compare
-			return a !== a && b !== b;
-		}
+    // in case any of values is not an object, there is nothing to do, except to check strict equality.
+    if (typeof a !== 'object' || typeof b !== 'object' || !a || !b) {
+      // looks weird, but it is most efficient way to test NaN.
+      // otherwise we have to involve Number.isNaN, which causes context switch and therefore is slower.
+      // eslint-disable-next-line no-self-compare
+      return a !== a && b !== b
+    }
 
-		// if constructors are different, objects are definitely not equal.
-		if (Object.getPrototypeOf(a) !== Object.getPrototypeOf(b)) {
-			return false;
-		}
+    // if constructors are different, objects are definitely not equal.
+    if (Object.getPrototypeOf(a) !== Object.getPrototypeOf(b)) {
+      return false
+    }
 
-		const {constructor} = a;
+    const { constructor } = a
 
-		if (constructor === Date) {
-			return a.getTime() === b.getTime();
-		}
+    if (constructor === Date) {
+      return a.getTime() === b.getTime()
+    }
 
-		if (constructor === RegExp) {
-			return a.source === b.source && a.flags === b.flags;
-		}
+    if (constructor === RegExp) {
+      return a.source === b.source && a.flags === b.flags
+    }
 
-		if (constructor === Set) {
-			if (a.size !== b.size) {
-				return false;
-			}
+    if (constructor === Set) {
+      if (a.size !== b.size) {
+        return false
+      }
 
-			for (const value of a) {
-				if (!b.has(value)) {
-					return false;
-				}
-			}
+      for (const value of a) {
+        if (!b.has(value)) {
+          return false
+        }
+      }
 
-			return true;
-		}
+      return true
+    }
 
-		if (constructor === ArrayBuffer) {
-			a = new DataView(a);
-			b = new DataView(b);
-		}
+    if (constructor === ArrayBuffer) {
+      a = new DataView(a)
+      b = new DataView(b)
+    }
 
-		if (constructor === DataView || ArrayBuffer.isView(a)) {
-			// this is a TypedArray.
-			if (constructor !== DataView) {
-				a = new DataView(a.buffer);
-				b = new DataView(b.buffer);
-			}
+    if (constructor === DataView || ArrayBuffer.isView(a)) {
+      // this is a TypedArray.
+      if (constructor !== DataView) {
+        a = new DataView(a.buffer)
+        b = new DataView(b.buffer)
+      }
 
-			if (a.byteLength !== b.byteLength) return false;
-			for (let i = a.byteLength; i-- !== 0; ) {
-				if (a.getUint8(i) !== b.getUint8(i)) {
-					return false;
-				}
-			}
+      if (a.byteLength !== b.byteLength) return false
+      for (let i = a.byteLength; i-- !== 0; ) {
+        if (a.getUint8(i) !== b.getUint8(i)) {
+          return false
+        }
+      }
 
-			return true;
-		}
+      return true
+    }
 
-		// Check circular references
-		if (visited.has(a) && visited.get(a) === b) {
-			return true;
-		}
+    // Check circular references
+    if (visited.has(a) && visited.get(a) === b) {
+      return true
+    }
 
-		visited.set(a, b);
+    visited.set(a, b)
 
-		if (constructor === Array) {
-			if (a.length !== b.length) {
-				return false;
-			}
+    if (constructor === Array) {
+      if (a.length !== b.length) {
+        return false
+      }
 
-			for (let i = a.length; i-- !== 0; ) {
-				if (!inner(a[i], b[i])) {
-					return false;
-				}
-			}
+      for (let i = a.length; i-- !== 0; ) {
+        if (!inner(a[i], b[i])) {
+          return false
+        }
+      }
 
-			return true;
-		}
+      return true
+    }
 
-		if (constructor === Map) {
-			if (a.size !== b.size) {
-				return false;
-			}
+    if (constructor === Map) {
+      if (a.size !== b.size) {
+        return false
+      }
 
-			for (const entry of a) {
-				if (!b.has(entry[0]) || !inner(entry[1], b.get(entry[0]))) {
-					return false;
-				}
-			}
+      for (const entry of a) {
+        if (!b.has(entry[0]) || !inner(entry[1], b.get(entry[0]))) {
+          return false
+        }
+      }
 
-			return true;
-		}
+      return true
+    }
 
-		// at this point, we've handled all possible data containers and we can compare objects as plain.
+    // at this point, we've handled all possible data containers and we can compare objects as plain.
 
-		if (a.valueOf !== Object.prototype.valueOf && typeof a.valueOf === 'function' && typeof b.valueOf === 'function') {
-			return a.valueOf() === b.valueOf();
-		}
+    if (
+      a.valueOf !== Object.prototype.valueOf &&
+      typeof a.valueOf === 'function' &&
+      typeof b.valueOf === 'function'
+    ) {
+      return a.valueOf() === b.valueOf()
+    }
 
-		if (a.toString !== Object.prototype.toString && typeof a.toString === 'function' && typeof b.toString === 'function') {
-			return a.toString() === b.toString();
-		}
+    if (
+      a.toString !== Object.prototype.toString &&
+      typeof a.toString === 'function' &&
+      typeof b.toString === 'function'
+    ) {
+      return a.toString() === b.toString()
+    }
 
-		const aKeys = Object.keys(a);
-		let key;
-		for (let l = aKeys.length; l-- !== 0; ) {
-			key = aKeys[l] as keyof typeof a;
-			if (!Object.hasOwn(b, key) || !inner(a[key], b[key])) {
-				return false;
-			}
-		}
+    const aKeys = Object.keys(a)
+    let key
+    for (let l = aKeys.length; l-- !== 0; ) {
+      key = aKeys[l] as keyof typeof a
+      if (!Object.hasOwn(b, key) || !inner(a[key], b[key])) {
+        return false
+      }
+    }
 
-		return Object.keys(b).length === aKeys.length;
-	};
+    return Object.keys(b).length === aKeys.length
+  }
 
-	return inner(a, b);
+  return inner(a, b)
 }
 
 export const deepEqualPartial = (actual: any, expected: any): boolean => {
@@ -353,11 +362,7 @@ type AssertPredicateArg<T> = {
   message: ErrorMessage<T>
 }
 
-export const assertPredicate = <T>({
-  value,
-  predicate,
-  message,
-}: AssertPredicateArg<T>): T => {
+export const assertPredicate = <T>({ value, predicate, message }: AssertPredicateArg<T>): T => {
   if (!predicate(value)) {
     throw new Error(getErrorMessage(message, value))
   }
@@ -379,9 +384,17 @@ type AssertTypeByGuardArg<T, V> = {
   message: ErrorMessage<V>
 }
 
-export const unPrototypeProperties = <const T extends Record<string, any>, const KEYS extends keyof T>(obj: T, keys: KEYS[]): Pick<T, KEYS> => {
+export const unPrototypeProperties = <
+  const T extends Record<string, any>,
+  const KEYS extends keyof T,
+>(
+  obj: T,
+  keys: KEYS[],
+): Pick<T, KEYS> => {
   const propertyEntries = keys.map((key) => {
-    const value = isFunction(obj[key]) ? (...args: Parameters<typeof obj[KEYS]>) => obj[key](...args) : obj[key]
+    const value = isFunction(obj[key])
+      ? (...args: Parameters<(typeof obj)[KEYS]>) => obj[key](...args)
+      : obj[key]
     return [key, value]
   })
   return Object.fromEntries(propertyEntries)
@@ -414,7 +427,10 @@ type MapConstResult<ARRAY extends readonly any[], F extends Fn> = {
 export function mapConst<const ARRAY extends readonly any[]>(
   array: ARRAY,
 ): <F extends Fn>(
-  transformer: (value: ARRAY[number], index: Pipe<ARRAY, [Objects.Keys]>) => MapConstResult<ARRAY, F>[number],
+  transformer: (
+    value: ARRAY[number],
+    index: Pipe<ARRAY, [Objects.Keys]>,
+  ) => MapConstResult<ARRAY, F>[number],
 ) => MapConstResult<ARRAY, F>
 
 export function mapConst<const ARRAY extends readonly any[], const R>(
@@ -428,11 +444,18 @@ export function mapConst<const ARRAY extends readonly any[], const R>(
 ) {
   return transformer === undefined
     ? <F extends Fn>(
-        t: (value: ARRAY[number], index: Pipe<ARRAY, [Objects.Keys]>) => MapConstResult<ARRAY, F>[number],
+        t: (
+          value: ARRAY[number],
+          index: Pipe<ARRAY, [Objects.Keys]>,
+        ) => MapConstResult<ARRAY, F>[number],
       ): MapConstResult<ARRAY, F> => {
-        return array.map((item, index) => t(item, index as Pipe<ARRAY, [Objects.Keys]>)) as MapConstResult<ARRAY, F>
+        return array.map((item, index) =>
+          t(item, index as Pipe<ARRAY, [Objects.Keys]>),
+        ) as MapConstResult<ARRAY, F>
       }
-    : array.map((item, index) => transformer(item, index as Pipe<ARRAY, [Objects.Keys]>)) as { readonly [K in keyof ARRAY]: R }
+    : (array.map((item, index) => transformer(item, index as Pipe<ARRAY, [Objects.Keys]>)) as {
+        readonly [K in keyof ARRAY]: R
+      })
 }
 
 type MapConstKeysToEntriesResult<ARRAY extends readonly any[], F extends Fn> = {
@@ -442,7 +465,10 @@ type MapConstKeysToEntriesResult<ARRAY extends readonly any[], F extends Fn> = {
 export function mapConstKeysToEntries<const ARRAY extends readonly any[]>(
   array: ARRAY,
 ): <F extends Fn>(
-  transformer: (value: ARRAY[number], index: Pipe<ARRAY, [Objects.Keys]>) => MapConstKeysToEntriesResult<ARRAY, F>[number][1],
+  transformer: (
+    value: ARRAY[number],
+    index: Pipe<ARRAY, [Objects.Keys]>,
+  ) => MapConstKeysToEntriesResult<ARRAY, F>[number][1],
 ) => MapConstKeysToEntriesResult<ARRAY, F>
 
 export function mapConstKeysToEntries<const ARRAY extends readonly any[], const R>(
@@ -454,14 +480,22 @@ export function mapConstKeysToEntries<const ARRAY extends readonly any[], const 
   array: ARRAY,
   transformer?: (value: ARRAY[number], index: Pipe<ARRAY, [Objects.Keys]>) => R,
 ) {
-  return transformer === undefined ?
-      <F extends Fn>(
-        t: (value: ARRAY[number], index: Pipe<ARRAY, [Objects.Keys]>) => MapConstKeysToEntriesResult<ARRAY, F>[number][1],
+  return transformer === undefined
+    ? <F extends Fn>(
+        t: (
+          value: ARRAY[number],
+          index: Pipe<ARRAY, [Objects.Keys]>,
+        ) => MapConstKeysToEntriesResult<ARRAY, F>[number][1],
       ): MapConstKeysToEntriesResult<ARRAY, F> => {
-        return array.map((item, index) => [item, t(item, index as Pipe<ARRAY, [Objects.Keys]>)]) as MapConstKeysToEntriesResult<ARRAY, F>
+        return array.map((item, index) => [
+          item,
+          t(item, index as Pipe<ARRAY, [Objects.Keys]>),
+        ]) as MapConstKeysToEntriesResult<ARRAY, F>
       }
-    :
-      array.map((item, index) => [item, transformer(item, index as Pipe<ARRAY, [Objects.Keys]>)]) as { readonly [K in keyof ARRAY]: [ARRAY[K], R] }
+    : (array.map((item, index) => [
+        item,
+        transformer(item, index as Pipe<ARRAY, [Objects.Keys]>),
+      ]) as { readonly [K in keyof ARRAY]: [ARRAY[K], R] })
 }
 
 export const objectFromConstEntries = <const ENTRIES extends readonly (readonly [string, any])[]>(

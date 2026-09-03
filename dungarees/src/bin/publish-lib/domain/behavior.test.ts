@@ -228,3 +228,34 @@ test('publish a multi-lib folder', async () => {
     },
   })
 })
+
+test('a package marked private is not published', async () => {
+  const fileSystem = createFakeFileSystem({
+    '/multi-lib/config/version.json': JSON.stringify({ version: '1.0.0' }),
+    '/multi-lib/src/lib-1/package.json': JSON.stringify({ name: '@org/lib-1' }),
+    '/multi-lib/src/lib-1/file-1.ts': 'export const a = 1\n',
+    '/multi-lib/src/fake-app/package.json': JSON.stringify({
+      name: '@org/fake-app',
+      private: true,
+    }),
+    '/multi-lib/src/fake-app/fake.ts': 'export const fake = 1\n',
+  })
+  const { subProcess, executedCommands } = createFakeSubProcessService([
+    {
+      command: 'npm',
+      args: ['publish', '--access', 'public'],
+      stdout: 'Published successfully',
+      exitCode: 0,
+    },
+  ])
+  const service = createPublishLibBehavior({
+    fileSystem,
+    cliCommands: createCliCommands(subProcess),
+  })
+
+  await collectValuesFrom(
+    service.publishMultiLib({ dir: '/multi-lib', registry: undefined }).events$,
+  )
+
+  expect(executedCommands.map(({ options }) => options?.cwd)).toEqual(['/multi-lib/dist/lib-1'])
+})

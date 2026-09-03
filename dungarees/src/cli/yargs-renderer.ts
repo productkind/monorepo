@@ -4,7 +4,7 @@ import { EOL } from 'node:os'
 import type { Writable } from 'node:stream'
 import { filter } from 'rxjs'
 
-type RendererProcess = {
+export type RendererProcess = {
   stdout: Pick<Writable, 'write'>
   stderr: Pick<Writable, 'write'>
   exit: (code: number) => void

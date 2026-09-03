@@ -53,9 +53,7 @@ test('Get services by static identity', () => {
   expectTypeOf<typeof services2>().toEqualTypeOf<Services>()
   expect(services2.myService).toBe('my-service-2')
   // @ts-expect-error type-3 is not a key
-  expect(() => app.run({ type: 'type-3' })).toThrow(
-    'No matching identity for "getServices"',
-  )
+  expect(() => app.run({ type: 'type-3' })).toThrow('No matching identity for "getServices"')
 })
 
 test('Get services by static partial identity', () => {
@@ -431,7 +429,7 @@ test('Error handling', () => {
 })
 
 test('Top level error handling', async () => {
-  const onError = (): void => { }
+  const onError = (): void => {}
   let cb
   const app = createApplication({
     onError,

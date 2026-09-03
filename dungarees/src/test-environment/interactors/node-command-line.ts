@@ -1,8 +1,9 @@
+import { NODE_CONTAINER_IMAGE } from '../constants.ts'
 import type { Interactor } from '../type.ts'
+
+import { ReplaySubject } from 'rxjs'
 import type { StartedNetwork, StartedTestContainer } from 'testcontainers'
 import { GenericContainer } from 'testcontainers'
-import { ReplaySubject } from 'rxjs'
-import { NODE_CONTAINER_IMAGE } from '../constants.ts'
 
 export type CommandResult = {
   output: string
@@ -87,7 +88,7 @@ export const nodeCommandLineInteractor = ({
       })
       reportEntry$.next({
         entry: `Command executed: ${command}\nExit code: ${result.exitCode}`,
-        type: 'text/plain'
+        type: 'text/plain',
       })
       return result
     }
@@ -99,10 +100,12 @@ export const nodeCommandLineInteractor = ({
         const result = await runCommand(command, context)
         if (result.exitCode !== 0) {
           console.error(result.output)
-          throw new Error(`Command failed: ${command}\nExit code: ${result.exitCode}\nOutput: ${result.output}`)
+          throw new Error(
+            `Command failed: ${command}\nExit code: ${result.exitCode}\nOutput: ${result.output}`,
+          )
         }
         return result
-      }
+      },
     }
   }
 
@@ -122,7 +125,7 @@ export const nodeCommandLineInteractor = ({
       }
       return {
         context: createContext(runningContainer),
-        reportEntry$: reportEntry$.asObservable()
+        reportEntry$: reportEntry$.asObservable(),
       }
     },
     stopContext: async () => {
@@ -130,7 +133,7 @@ export const nodeCommandLineInteractor = ({
     },
     onFailure: async (_context: NodeCommandLineContext, testName: string) => ({
       entry: `Node command line failed during test: ${testName}`,
-      type: 'text/plain'
-    })
+      type: 'text/plain',
+    }),
   }
-} 
+}

@@ -8,7 +8,7 @@ import {
   type GetTransformSetContext,
 } from '@dungarees/rxjs/util.ts'
 
-import path from 'path'
+import path from 'node:path'
 import { forkJoin, map, mergeMap, type Observable } from 'rxjs'
 
 type Options = {

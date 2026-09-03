@@ -8,4 +8,10 @@ import * as fs from 'node:fs'
 export const getServices = (): DungareesBinServices => ({
   fileSystem: createFileSystem(fs),
   subProcess: createSubProcessService(spawn),
+  process: {
+    argv: process.argv,
+    stdout: process.stdout,
+    stderr: process.stderr,
+    exit: (code) => process.exit(code),
+  },
 })

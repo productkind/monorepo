@@ -1,4 +1,3 @@
-
 type FakeNodeProcessConfig = {
   userId?: number
   groups?: number[]
@@ -11,8 +10,10 @@ export const DEFAULT_FAKE_NODE_PROCESS_CONFIG: Required<FakeNodeProcessConfig> =
   platform: 'linux',
 }
 
-export const createFakeNodeProcess: (config?: FakeNodeProcessConfig) => NodeJS.Process = (config) => {
-  const finalConfig = { ...DEFAULT_FAKE_NODE_PROCESS_CONFIG, ...config ?? {} }
+export const createFakeNodeProcess: (config?: FakeNodeProcessConfig) => NodeJS.Process = (
+  config,
+) => {
+  const finalConfig = { ...DEFAULT_FAKE_NODE_PROCESS_CONFIG, ...(config ?? {}) }
 
   return {
     getuid: finalConfig.platform === 'win32' ? undefined : () => finalConfig.userId,
@@ -21,5 +22,3 @@ export const createFakeNodeProcess: (config?: FakeNodeProcessConfig) => NodeJS.P
     platform: finalConfig.platform,
   } as unknown as NodeJS.Process
 }
-
-

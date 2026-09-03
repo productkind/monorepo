@@ -1,14 +1,11 @@
 import { $, os } from 'zx'
 
-export const gitStatus = async (): Promise<string[]> => 
-  (await $`git status --porcelain`.quiet())
-    .stdout
-    .trim()
-    .split(os.EOL)
+export const gitStatus = async (): Promise<string[]> =>
+  (await $`git status --porcelain`.quiet()).stdout.trim().split(os.EOL)
 
 export const gitStatusHasChanges = async (directory: string = '/'): Promise<boolean> => {
   const status = await gitStatus()
-  return status.some(line => line.includes(directory))
+  return status.some((line) => line.includes(directory))
 }
 
 export const gitAdd = async (paths: string[]) => {

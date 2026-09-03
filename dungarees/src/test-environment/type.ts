@@ -1,4 +1,10 @@
-import type { EntryTuple, FilterRecord, GetKey, GetValue, RecordToEntries } from '@dungarees/core/type-util.ts'
+import type {
+  EntryTuple,
+  FilterRecord,
+  GetKey,
+  GetValue,
+  RecordToEntries,
+} from '@dungarees/core/type-util.ts'
 
 import type { Observable } from 'rxjs'
 

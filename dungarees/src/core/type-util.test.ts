@@ -6,7 +6,6 @@ import type {
   FromCamelCase,
   FromKebabCase,
   FromSnakeCase,
-  SyncFunctionToAsync,
   GetAllPaths,
   GetGuarded,
   GetKey,
@@ -24,13 +23,14 @@ import type {
   SplitFilePath,
   SplitObjectPath,
   StringLiteral,
+  SyncFunctionToAsync,
   ToCamelCase,
   ToKebabCase,
   TokenNonEmptyString,
   ToSnakeCase,
 } from './type-util.ts'
 
-import { expectTypeOf, test } from 'vitest'
+import { expect, expectTypeOf, test } from 'vitest'
 
 test('Split<PATH, DELIMITER>', () => {
   expectTypeOf<Split<'a.a.a', '.'>>().toEqualTypeOf<readonly ['a', 'a', 'a']>()
@@ -38,10 +38,8 @@ test('Split<PATH, DELIMITER>', () => {
   expectTypeOf<Split<'', '.'>>().toEqualTypeOf<readonly ['']>()
   // @ts-expect-error it has to be a string
   type error1 = Split<1, '.'>
-  expectTypeOf<error1>().toEqualTypeOf<error1>()
   // @ts-expect-error it has to be a string
   type error2 = Split<'', 1>
-  expectTypeOf<error2>().toEqualTypeOf<error2>()
 })
 
 test('SplitObjectPath<PATH>', () => {
@@ -50,7 +48,6 @@ test('SplitObjectPath<PATH>', () => {
   expectTypeOf<SplitObjectPath<''>>().toEqualTypeOf<readonly ['']>()
   // @ts-expect-error it has to be a string
   type error = SplitObjectPath<1>
-  expectTypeOf<error>().toEqualTypeOf<error>()
 })
 
 test('SplitFilePath<PATH>', () => {
@@ -59,7 +56,6 @@ test('SplitFilePath<PATH>', () => {
   expectTypeOf<SplitFilePath<''>>().toEqualTypeOf<readonly ['']>()
   // @ts-expect-error it has to be a string
   type error = SplitFilePath<1>
-  expectTypeOf<error>().toEqualTypeOf<error>()
 })
 
 test('StringLiteral<LITERAL>', () => {
@@ -90,13 +86,13 @@ test('JsonType', () => {
     d: null,
     e: [1, '2', true, null, [1, '2', true, null]],
   }
-  expectTypeOf<typeof json>().toEqualTypeOf<typeof json>()
+  expect(json).toBeDefined()
 
   // @ts-expect-error it cannot be a function
   const nonJson: JsonType = {
-    f: () => { },
+    f: () => {},
   }
-  expectTypeOf<typeof nonJson>().toEqualTypeOf<typeof nonJson>()
+  expect(nonJson).toBeDefined()
 })
 
 test('TokenNonEmptyString<TOKEN>', () => {
@@ -109,10 +105,10 @@ test('TokenNonEmptyString<TOKEN>', () => {
 
 test('Guard<TYPE>', () => {
   const guard: Guard<1> = (arg: unknown): arg is 1 => arg === 1
-  expectTypeOf<typeof guard>().toEqualTypeOf<typeof guard>()
+  expectTypeOf(guard).toEqualTypeOf<Guard<1>>()
   // @ts-expect-error it has to be a guard
   const nonGuard: Guard<1> = (arg: unknown): boolean => arg === 1
-  expectTypeOf<typeof nonGuard>().toEqualTypeOf<typeof nonGuard>()
+  expectTypeOf(nonGuard).toEqualTypeOf<Guard<1>>()
 })
 
 test('GetGuarded<GUARD>', () => {
@@ -221,7 +217,11 @@ test('PartialBesides<OBJECT, KEYS>', () => {
   type OptionalA = PartialBesides<{ a: string; b: number; c: boolean }, 'b' | 'c'>
   // Flattened first: PartialBesides produces an intersection, and expectTypeOf compares that
   // by its parts rather than by the object it is equivalent to.
-  expectTypeOf<FlattenIntersection<OptionalA>>().toEqualTypeOf<{ a?: string; b: number; c: boolean }>()
+  expectTypeOf<FlattenIntersection<OptionalA>>().toEqualTypeOf<{
+    a?: string
+    b: number
+    c: boolean
+  }>()
 })
 
 test('DeepPartial<T> - single level', () => {
