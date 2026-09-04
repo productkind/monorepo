@@ -1,6 +1,7 @@
 import type { StdioMessage } from './type.ts'
 import { exit, stderr } from './utils.ts'
 
+import { getErrorMessage } from '@dungarees/core/error.ts'
 import type { DomainEvent } from '@dungarees/core/event.ts'
 
 import {
@@ -154,8 +155,10 @@ export const createYargsPromptApp = <
       switchMap((event) =>
         event.type === 'exit' ? throwError(() => new ExitError('Exit', event.code)) : of(event),
       ),
-      catchError((error) =>
-        error instanceof ExitError ? of(exit(error.exitCode)) : of(stderr(error.message), exit(1)),
+      catchError((error: unknown) =>
+        error instanceof ExitError
+          ? of(exit(error.exitCode))
+          : of(stderr(getErrorMessage(error)), exit(1)),
       ),
     )
   },

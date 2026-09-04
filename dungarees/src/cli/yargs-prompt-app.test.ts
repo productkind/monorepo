@@ -92,7 +92,7 @@ test('yargs-prompt-app', async () => {
             default: 'World',
           })
         },
-        async (argv) => {
+        (argv) => {
           io.registerEvents(of({ type: 'greet', payload: `Hello, ${argv.name}!` }))
         },
       ),
@@ -222,7 +222,7 @@ test('yargs-prompt-app', async () => {
           command: 'greet',
           describe: 'Greet someone',
           builder: (yargs) => yargs,
-          handler: async () => {
+          handler: () => {
             io.registerEvents(of({ type: 'greet', payload: 'Hello, World!' }))
           },
         }),
@@ -252,7 +252,7 @@ test('yargs-prompt-app waits for asynchronous registered events before exiting',
         'greet',
         'Greet someone',
         () => {},
-        async () => {
+        () => {
           io.registerEvents(of({ type: 'greet' as const, payload: 'Hello, async!' }).pipe(delay(5)))
         },
       ),
@@ -435,9 +435,9 @@ test('createCommand infers the handler arguments from what the builder declared'
         .option('times', { type: 'number' })
         .option('loud', { type: 'boolean', demandOption: true }),
     handler: (args) => {
-      expectTypeOf<typeof args.who>().toEqualTypeOf<string>()
-      expectTypeOf<typeof args.times>().toEqualTypeOf<number | undefined>()
-      expectTypeOf<typeof args.loud>().toEqualTypeOf<boolean>()
+      expectTypeOf(args.who).toEqualTypeOf<string>()
+      expectTypeOf(args.times).toEqualTypeOf<number | undefined>()
+      expectTypeOf(args.loud).toEqualTypeOf<boolean>()
     },
   })
 })
@@ -461,9 +461,8 @@ test('createCommand erases the argument type from the value the app holds', () =
   // Differing argument types share one list, and registering a command hands back the same app
   // type it was given — an argument type never accumulates into the chain.
   const commands: CommandRegistrar[] = [greet, count]
-  expectTypeOf<ReturnType<(typeof commands)[number]>>().toEqualTypeOf<
-    Parameters<CommandRegistrar>[0]
-  >()
+  expectTypeOf(commands).toEqualTypeOf<CommandRegistrar[]>()
+  expectTypeOf<ReturnType<CommandRegistrar>>().toEqualTypeOf<Parameters<CommandRegistrar>[0]>()
 })
 
 test('a handler that contradicts its builder does not type-check', () => {
@@ -503,4 +502,20 @@ test('an option the builder gives no default is optional to the handler', () => 
       expect(required).toBe(0)
     },
   })
+})
+
+test('yargs-prompt-app renders a thrown non-Error rather than undefined', async () => {
+  const app = createYargsPromptApp({
+    name: 'test-app',
+    route: (yargs, io) => {
+      io.registerEvents(throwError(() => 'a bare string'))
+      return yargs
+    },
+    presenter: {},
+  })
+
+  expect(await collectValuesFrom(app.present([], DUMMY_CONTROLS))).toEqual([
+    { type: 'stderr', message: 'a bare string', level: 'error' },
+    { type: 'exit', code: 1 },
+  ])
 })
