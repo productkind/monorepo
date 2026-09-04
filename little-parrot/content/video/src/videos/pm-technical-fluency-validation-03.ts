@@ -47,7 +47,11 @@ export default defineVideo({
     {
       // giphy "3d gears turning machine": https://giphy.com/gifs/3oEdv49tCsOOcl79Ac
       text: "It’s built, it’s tested,",
-      visual: gif({ src: 'section-02-machine-working.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-02-machine-working.gif',
+        playbackRate: 0.86,
+        place: 'above-captions',
+      }),
     },
     {
       // giphy "airplane waiting on runway": https://giphy.com/gifs/uOrArovddNCm0fjz4O
@@ -62,7 +66,7 @@ export default defineVideo({
       text: "Nobody told you that team ships once a month.",
       visual: gif({
         src: 'section-04-monthly-calendar.gif',
-        playbackRate: 1.66,
+        playbackRate: 1.36,
         place: 'above-captions',
       }),
       endsParagraph: true,
@@ -119,7 +123,7 @@ export default defineVideo({
       text: "through review, testing, environments",
       visual: gif({
         src: 'section-12-route-of-stages.gif',
-        playbackRate: 1.19,
+        playbackRate: 0.78,
         place: 'above-captions',
       }),
     },

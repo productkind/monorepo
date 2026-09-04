@@ -1,5 +1,6 @@
 """Shared helpers for the video-gifs scripts: paths, gif measurement, giphy access."""
 
+import hashlib
 import json
 import os
 import pathlib
@@ -339,6 +340,34 @@ def candidates_dir(video):
     base = pathlib.Path(os.environ.get('TMPDIR', '/tmp')) / 'gif-candidates' / video
     base.mkdir(parents=True, exist_ok=True)
     return base
+
+
+def artwork_signature(path):
+    """A hash of the opening frame, reduced to a 16x16 grey thumbnail.
+
+    Identifies the *artwork* rather than the upload. The same icon pack is hosted on giphy and on
+    klipy under different ids, so checking a pick against a list of used ids misses it entirely:
+    four of video 8's first picks turned out to be pixel-identical to gifs already used in videos
+    5, 6 and 7, and every one of them had passed the id check.
+    """
+    frame = subprocess.run(
+        ['magick', f'{path}[0]', '-coalesce', '-resize', '16x16!', '-colorspace', 'gray',
+         '-depth', '8', 'gray:-'],
+        capture_output=True,
+    )
+    return hashlib.sha256(frame.stdout).hexdigest()[:16]
+
+
+def campaign_assets(prefix, root=None):
+    """Every downloaded gif belonging to videos whose id starts with `prefix`."""
+    return sorted((video_root(root) / 'public').glob(f'{prefix}*/section-*.gif'))
+
+
+def repeats_existing_artwork(path, prefix, root=None):
+    """The already-downloaded assets whose artwork matches `path`, ignoring `path` itself."""
+    mine = artwork_signature(path)
+    return [other for other in campaign_assets(prefix, root)
+            if other.resolve() != path.resolve() and artwork_signature(other) == mine]
 
 
 def loop_seam(path):
