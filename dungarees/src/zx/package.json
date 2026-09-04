@@ -18,6 +18,8 @@
   "description": "A collection of useful utilities for zx scripts in the Dungarees ecosystem.",
   "dependencies": {
     "@dungarees/core": "*",
+    "@dungarees/zod": "*",
+    "zod": "^3.25.76",
     "zx": "^8.7.1"
   }
 }
