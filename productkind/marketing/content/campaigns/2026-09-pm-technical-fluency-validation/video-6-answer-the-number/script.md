@@ -6,13 +6,6 @@ account: little-parrot
 
 # Needed tomorrow, ready next week
 
-**Runs:** about 45 seconds. **Search phrase:** "SQL for product managers".
-**Need it comes from:** answering simple product data questions without
-waiting.
-
-**Treatment:** narration over a screen recording of a short query being run
-against a Little Parrot test database.
-
 You need a product metric for tomorrow's meeting. Analytics will have it next
 week.
 
@@ -35,22 +28,27 @@ learning path opens.
 
 How long does a simple number take where you work?
 
-**Cut cadence:** nothing holds on screen for more than three seconds. The
-Visual column lists every change in order, so a four-part visual is four cuts,
-and the longest beats are the ones carrying the most of them.
+## Channel swap
 
-**Channel swap:** the CTA line works as written on LinkedIn (first comment) and
-YouTube Shorts (pinned comment), where a link in a comment is clickable. On
-TikTok, pin the link too, and also speak and show the URL, because the account
-has no bio link until 1,000 followers. On Instagram Reels, speak and show the
-URL instead of saying "in the comments", because Instagram links aren't
-clickable in captions or comments and the bio holds five slots for more than
-eight destinations. The comment prompt is the last thing said on every channel.
+The CTA line works as written on LinkedIn (first comment) and YouTube Shorts
+(pinned comment), where a link in a comment is clickable. On TikTok, pin the
+link too, and also speak and show the URL, because the account has no bio link
+until 1,000 followers. On Instagram Reels, speak and show the URL instead of
+saying "in the comments", because Instagram links aren't clickable in captions
+or comments and the bio holds five slots for more than eight destinations. The
+comment prompt is the last thing said on every channel.
 
 ## Production notes
 
 - **Screen recording needed:** a real query against a Little Parrot test
   database, typed at readable speed. Show one count, never a table of people.
+- **Payoff to protect:** the two moves in "What changes", in order: write the
+  query yourself, then check what the number includes. The three things it
+  can wrongly include are the point of the second move, so keep at least one
+  of them if the list has to be cut for time.
 - **Say "last month", not a date range in SQL syntax.** The real date filter
   is the ugliest part of a query and it loses people who could follow the
   rest.
+- **The queue and the four lines are ours, not quotes.** They're the shape of
+  the wait product managers described, in the words a viewer would use, and no
+  real person, team or ticket is quoted anywhere in the set.
