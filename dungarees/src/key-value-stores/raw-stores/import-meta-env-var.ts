@@ -5,9 +5,8 @@ export const createImportMetaEnvVarRawKeyValueStore = (): ReadableRawKeyValueSto
 > => {
   return {
     get: (key) => {
-      // eslint-disable-next-line
-      // @ts-ignore - import.meta is not in the types because cucumber needs commonjs
-      return import.meta.env[key]
+      const value: unknown = import.meta.env[key]
+      return typeof value === 'string' ? value : undefined
     },
   }
 }
