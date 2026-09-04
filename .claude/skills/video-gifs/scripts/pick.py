@@ -9,8 +9,9 @@ for. Nothing is written to the definition: paste the lines, so the file stays ha
 """
 
 import argparse
+from urllib.parse import urlsplit
 
-from common import assets_dir, download_original, gif_seconds, gif_size, slots
+from common import assets_dir, download_original, gif_seconds, gif_size, slots, source_url
 
 
 def advise(seconds, slot):
@@ -35,6 +36,20 @@ def advise(seconds, slot):
         f'repeats {repeats:.1f}x and slowing it to {rate} would look like slow motion; '
         'let it loop if the motion is cyclic, otherwise pick another gif'
     )
+
+
+def provenance(gif_id):
+    """Where the pick came from, for the definition's comment.
+
+    Giphy originals are addressable from the id alone, so a giphy id needs no record. Anything
+    harvested elsewhere was recorded by `remember_source`, and that URL is its only real address:
+    a klipy id at giphy.com/gifs/<id> is either a 404 or, worse, somebody else's gif.
+    """
+    url = source_url(gif_id)
+    if not url:
+        return 'giphy', f'https://giphy.com/gifs/{gif_id}'
+    labels = (urlsplit(url).hostname or '').split('.')
+    return (labels[-2] if len(labels) > 1 else url), url
 
 
 def main():
@@ -66,7 +81,8 @@ def main():
         print(f'\n{target.name}  {seconds:.2f}s {frames}f {width}x{height} '
               f'{target.stat().st_size / 1e6:.1f}MB  slot {slot:.1f}s')
         print(f'  {why}')
-        print(f'      // giphy "<search that found it>": https://giphy.com/gifs/{gif_id}')
+        provider, origin = provenance(gif_id)
+        print(f'      // {provider} "<search that found it>": {origin}')
         if knob:
             print('      visual: gif({')
             print(f"        src: '{target.name}',")

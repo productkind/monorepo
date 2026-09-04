@@ -4,6 +4,8 @@ import json
 import os
 import pathlib
 import subprocess
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -71,44 +73,230 @@ def gif_size(path):
     return (int(out[0]), int(out[1])) if len(out) >= 2 else (0, 0)
 
 
-def api_key():
-    """The environment first, then .env at the repo root, which is where the other keys live."""
-    key = os.environ.get('GIPHY_API_KEY', '').strip()
-    if not key:
-        env_file = repo_root() / '.env'
-        if env_file.exists():
-            for line in env_file.read_text().splitlines():
-                name, _, value = line.partition('=')
-                if name.strip() == 'GIPHY_API_KEY':
-                    key = value.strip().strip('"\'')
-    if not key:
-        raise SystemExit(
-            'No GIPHY_API_KEY. Create a free key at https://developers.giphy.com/ and add\n'
-            'GIPHY_API_KEY=... to .env at the repo root (it is gitignored, like the other keys).'
-        )
-    return key
+class RateLimited(Exception):
+    """A provider said no more requests this hour."""
 
 
 def fetch(url, timeout=60):
-    request = urllib.request.Request(url, headers=GIPHY_HEADERS)
+    """The giphy Referer belongs only on giphy requests; other hosts get a plain user agent."""
+    headers = GIPHY_HEADERS if 'giphy.com' in url else {'User-Agent': GIPHY_HEADERS['User-Agent']}
+    request = urllib.request.Request(url, headers=headers)
     return urllib.request.urlopen(request, timeout=timeout).read()
 
 
-def search(term, limit=25):
-    """One giphy search. rating=g because these go on brand accounts."""
+# Giphy allows 100 searches per key per hour and resets on the hour. Three keys are pooled in
+# .env; a key that returns 429 is not touched again until the hour rolls over, and the count is
+# tracked on disk so the ban survives the many short-lived processes a video's harvest runs.
+GIPHY_SEARCHES_PER_HOUR = 100
+
+
+def shared_dir():
+    """One directory for provider state, shared by every video and every script invocation."""
+    base = pathlib.Path(os.environ.get('TMPDIR', '/tmp')) / 'gif-candidates'
+    base.mkdir(parents=True, exist_ok=True)
+    return base
+
+
+def env_value(name):
+    """The environment first, then .env at the repo root, which is where the other keys live."""
+    value = os.environ.get(name, '').strip()
+    if value:
+        return value
+    env_file = repo_root() / '.env'
+    if env_file.exists():
+        for line in env_file.read_text().splitlines():
+            key, _, raw = line.partition('=')
+            if key.strip() == name:
+                return raw.strip().strip('"\'')
+    return ''
+
+
+def giphy_keys():
+    """The pooled keys in order: GIPHY_API_KEY_POOL_0, _1, _2, … plus a plain GIPHY_API_KEY."""
+    keys = []
+    index = 0
+    while True:
+        value = env_value(f'GIPHY_API_KEY_POOL_{index}')
+        if not value:
+            break
+        keys.append(value)
+        index += 1
+    single = env_value('GIPHY_API_KEY')
+    if single and single not in keys:
+        keys.append(single)
+    return keys
+
+
+def fingerprint(key):
+    """A stable short id for a key, so state files never contain the secret."""
+    import hashlib
+
+    return hashlib.sha256(key.encode()).hexdigest()[:12]
+
+
+def _next_hour():
+    now = time.time()
+    return now - (now % 3600) + 3600
+
+
+def _current_hour():
+    return time.strftime('%Y-%m-%dT%H', time.gmtime())
+
+
+def _load_state():
+    """Per-hour search counts and per-key cooldowns. Counts reset when the hour rolls over."""
+    path = shared_dir() / '.provider-state.json'
+    state = {'hour': _current_hour(), 'counts': {}, 'cooldown': {}}
+    if path.exists():
+        try:
+            stored = json.loads(path.read_text())
+            if stored.get('hour') == state['hour']:
+                state = stored
+            else:
+                # New hour: counts start again, but keep cooldowns that still have time on them.
+                now = time.time()
+                state['cooldown'] = {
+                    fp: until for fp, until in stored.get('cooldown', {}).items() if until > now
+                }
+        except (ValueError, OSError):
+            pass
+    return state
+
+
+def _save_state(state):
+    (shared_dir() / '.provider-state.json').write_text(f'{json.dumps(state, indent=1)}\n')
+
+
+def _usable(state, key):
+    fp = fingerprint(key)
+    if state['cooldown'].get(fp, 0) > time.time():
+        return False
+    return state['counts'].get(fp, 0) < GIPHY_SEARCHES_PER_HOUR
+
+
+def _cool_down(state, key, reason):
+    """Take a key out of service until the hour rolls over. Never retried before then."""
+    fp = fingerprint(key)
+    state['cooldown'][fp] = _next_hour()
+    state['counts'][fp] = GIPHY_SEARCHES_PER_HOUR
+    _save_state(state)
+    left = int((_next_hour() - time.time()) / 60)
+    print(f'  giphy key {fp} out for this hour ({reason}); {left} min until reset')
+
+
+def _giphy_search(key, term, limit):
     url = (
         'https://api.giphy.com/v1/gifs/search'
-        f'?api_key={api_key()}&q={urllib.parse.quote(term)}&limit={limit}&rating=g'
+        f'?api_key={key}&q={urllib.parse.quote(term)}&limit={limit}&rating=g'
     )
     payload = json.loads(fetch(url, timeout=30))
-    if payload.get('meta', {}).get('status') != 200:
+    status = payload.get('meta', {}).get('status')
+    if status == 429:
+        raise RateLimited(payload.get('meta', {}).get('msg', 'rate limited'))
+    if status != 200:
         raise SystemExit(f'giphy refused the search: {payload.get("meta")}')
     return payload.get('data', [])
 
 
+def _klipy_search(key, term, limit):
+    """Klipy is Tenor-shaped. Normalise its items into the giphy shape the callers already read."""
+    url = (
+        'https://api.klipy.com/v2/search'
+        f'?key={key}&q={urllib.parse.quote(term)}&limit={limit}&contentfilter=high'
+    )
+    payload = json.loads(fetch(url, timeout=30))
+    rows = []
+    for item in payload.get('results', []):
+        formats = item.get('media_formats', {})
+        full = formats.get('gif')
+        if not full or not full.get('dims'):
+            continue
+        preview = formats.get('mediumgif') or formats.get('tinygif') or full
+        width, height = full['dims'][0], full['dims'][1]
+        rows.append({
+            'id': str(item['id']),
+            'title': item.get('title') or item.get('content_description') or '',
+            'images': {
+                'original': {'width': str(width), 'height': str(height), 'url': full['url']},
+                'fixed_height': {'url': preview['url']},
+            },
+        })
+        remember_source(str(item['id']), full['url'])
+    return rows
+
+
+def search(term, limit=25):
+    """One search, on whichever provider is available.
+
+    Pooled giphy keys are used in order of least-used-this-hour, so the load spreads instead of
+    burning the first key to its cap. A key that hits 429 is retired for the hour — never retried,
+    in this process or a later one. When every giphy key is spent, Klipy serves the search instead.
+    """
+    state = _load_state()
+    keys = giphy_keys()
+
+    for key in sorted((k for k in keys if _usable(state, k)),
+                      key=lambda k: state['counts'].get(fingerprint(k), 0)):
+        fp = fingerprint(key)
+        state['counts'][fp] = state['counts'].get(fp, 0) + 1
+        _save_state(state)
+        try:
+            return _giphy_search(key, term, limit)
+        except RateLimited as limited:
+            _cool_down(state, key, str(limited))
+        except urllib.error.HTTPError as error:
+            if error.code == 429:
+                _cool_down(state, key, 'HTTP 429')
+            else:
+                _cool_down(state, key, f'HTTP {error.code}')
+
+    klipy = env_value('KLIPY_API_KEY')
+    if klipy:
+        print('  all giphy keys spent this hour; searching klipy')
+        return _klipy_search(klipy, term, limit)
+
+    cooling = sorted(state['cooldown'].items())
+    raise SystemExit(
+        'No search provider available. '
+        + (f'{len(keys)} giphy key(s) are spent or cooling: '
+           + ', '.join(f'{fp} for {int((until - time.time()) / 60)} min'
+                       for fp, until in cooling if until > time.time())
+           if keys else 'No GIPHY_API_KEY_POOL_0… in the environment or .env.')
+        + ' Add KLIPY_API_KEY to .env for a fallback, or wait for the hour to roll over.'
+    )
+
+
+def remember_source(gif_id, url):
+    """Record where a gif came from, so pick.py can download a non-giphy original later."""
+    path = shared_dir() / '.sources.json'
+    try:
+        known = json.loads(path.read_text()) if path.exists() else {}
+    except (ValueError, OSError):
+        known = {}
+    if known.get(gif_id) != url:
+        known[gif_id] = url
+        path.write_text(f'{json.dumps(known, indent=1)}\n')
+
+
+def source_url(gif_id):
+    path = shared_dir() / '.sources.json'
+    if path.exists():
+        try:
+            return json.loads(path.read_text()).get(gif_id)
+        except (ValueError, OSError):
+            return None
+    return None
+
+
 def download_original(gif_id, target):
-    """media.giphy.com serves the original directly; the website itself blocks scripted requests."""
-    target.write_bytes(fetch(f'https://media.giphy.com/media/{gif_id}/giphy.gif'))
+    """Download a gif at full size.
+
+    media.giphy.com serves giphy originals from the id alone (the website itself blocks scripted
+    requests). Anything harvested from another provider was recorded by `remember_source`, so its
+    real URL is looked up rather than guessed.
+    """
+    url = source_url(gif_id) or f'https://media.giphy.com/media/{gif_id}/giphy.gif'
+    target.write_bytes(fetch(url))
     return target
 
 

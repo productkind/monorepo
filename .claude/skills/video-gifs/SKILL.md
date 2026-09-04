@@ -16,6 +16,15 @@ Reach for this when:
 - One beat's gif is wrong: too repetitive, wrong subject, text you spotted late.
 - You are about to publish and want the frame checks run.
 
+### Delegate the harvest loop
+
+The judging loop is the expensive part of this skill: every montage read and every harvest listing stays
+in context and gets re-billed on each later turn. **Hand the whole loop to the `video-gif-sourcer`
+subagent** — give it the video id and the section list (text plus slot seconds), and it returns the picks,
+already downloaded and measured, with the timing knob for each. Its context absorbs the montages instead
+of yours. Follow the rest of this file yourself when you are the one judging, and when you want to replace
+a single beat rather than source a whole video.
+
 ### Where things live
 
 - Definitions: `little-parrot/content/video/src/videos/<video-id>.ts`
@@ -32,9 +41,28 @@ folder or symlink into it (see Gotchas).
 
 ### The three scripts
 
-Run them from this skill's base directory (the paths below are relative to it). They read
-`GIPHY_API_KEY` from the environment or from `.env` at the repo root — get a free key at
-https://developers.giphy.com/. `ffmpeg` and ImageMagick are already installed.
+Run them from this skill's base directory (the paths below are relative to it). `ffmpeg` and
+ImageMagick are already installed.
+
+**Search keys and the hourly cap.** Giphy allows **100 searches per key per hour**, resetting on the
+hour — a full video sits right at that ceiling, so `.env` holds a pool: `GIPHY_API_KEY_POOL_0`, `_1`,
+`_2` (free keys from https://developers.giphy.com/), plus `KLIPY_API_KEY` as a different provider.
+`search()` handles all of it and there is nothing to pass on the command line:
+
+- **Rotation** — each search goes to the pooled key with the fewest searches this hour, so the load
+  spreads instead of burning the first key to its cap.
+- **A key that hits 429 is retired for the hour and never retried**, in that process or any later
+  one. The counts and cooldowns live in `$TMPDIR/gif-candidates/.provider-state.json`, because a
+  video's harvest runs as dozens of short-lived processes.
+- **When every giphy key is spent, Klipy serves the search** (`api.klipy.com/v2/search`, Tenor-shaped)
+  and its items are normalised into the giphy shape, so nothing downstream changes. It prints
+  `all giphy keys spent this hour; searching klipy` when it switches.
+- Klipy originals don't live at a giphy URL, so `search()` records each item's real URL in
+  `.sources.json` and `download_original` looks it up. Picking a Klipy gif needs no extra flag.
+
+If a run dies with "No search provider available", every giphy key is cooling *and* `KLIPY_API_KEY`
+is missing — the message names the keys and the minutes left. Wait for the hour, don't add keys you
+don't own.
 
 **1. `harvest.py` — search, filter, order, montage.**
 ```
@@ -111,6 +139,12 @@ Reject outright:
   candidates than anything else.
 - **Watermarks and branding**: channel bugs, studio logos, sponsor walls, branded kit, a URL in
   the corner.
+- **Character sticker packs from brand and NFT accounts.** Pudgy Penguins, VeeFriends, Selfless
+  Sloth, Leiturinha, MEETQUACK and their like dominate the cute-character results, and nearly every
+  one carries its wordmark burned in: a small caption under the character, a corner logo, or a faint
+  repeating tile across the background that only shows on zoom. They are the single biggest source
+  of near-misses, because the character itself is exactly the register these videos want. Treat the
+  uploader name in a candidate's title as a warning to zoom in before believing the thumbnail.
 - **Text that appears late.** Today's rejects included gifs that only added "OUCH", "SHHH",
   "WUT?", "I'm late!" and "TAP HERE" in their final third. Judge from eight frames, never four.
 - **16:9.** It renders as a thin band between the platform bar and the captions. The filter already
