@@ -172,7 +172,7 @@ export const createFileSystem = (fs: NodeFs): UnsafeService<FileSystemService> =
       await Promise.all(
         paths.map(async (filePath) => {
           const content = await fs.promises.readFile(filePath, 'utf8')
-          return [filePath, content]
+          return [filePath, content] as const
         }),
       ),
     )

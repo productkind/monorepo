@@ -125,6 +125,23 @@ if (configured === undefined) {
 const help = await configured.getHelp()
 ```
 
+### 4c. `as const` is not one of them
+
+A const assertion asserts nothing the checker has to take on trust — it only stops a literal from
+widening. Rule 4 is about `x as Foo` claiming a type that cannot be verified; `as const` makes no
+such claim, so it is allowed.
+
+```ts
+// Bad — an assertion, and nothing checks that the object really covers every level
+const levels = { debug: 0, info: 1 } as Record<LogLevel, number>
+```
+
+```ts
+// Good — a const assertion: no claim, it only keeps the literal from widening to
+// `{ debug: number; info: number }`
+const levels = { debug: 0, info: 1 } as const
+```
+
 ## 5. Stub with objects as real as possible; assert the contract, not the implementation
 
 This is **not** only about streams. Use the real collaborator — or the closest real thing — and only
@@ -512,3 +529,40 @@ handler: ({ libPath, registry }) => { /* ... */ }
 The same applies to parsing: use the real parser rather than a regex over source text.
 `ts.preProcessFile` knows an import from a string that merely contains one, which a regex cannot —
 and the difference was a wrong answer, not a stylistic preference.
+
+## 12. Keep a tuple a tuple, or the signature stops being checked
+
+An `any` reaching a return position means the declared type is no longer compared against the body,
+because `any` satisfies anything. The commonest source is an array literal widening to `T[]` where
+an overload wanted a tuple.
+
+Inference will not recover it. A generic parameter constrained to an array shape fixes itself from
+the argument before the contextual type arrives, and `Promise.all` is constrained that way — so the
+expectation of a pair never reaches the literal. Say it where the literal is created.
+
+```ts
+// Bad — the entry widens to `string[]`, so Object.fromEntries falls to its `any`-returning
+// overload. `readBulkAsync` still claims `Promise<Record<string, string>>`, but nothing now
+// checks the body against it: reading a value back as a `number` would compile.
+const readBulkAsync: FileSystemService['readBulkAsync'] = async (paths) =>
+  Object.fromEntries(
+    await Promise.all(
+      paths.map(async (filePath) => {
+        const content = await fs.promises.readFile(filePath, 'utf8')
+        return [filePath, content]
+      }),
+    ),
+  )
+```
+
+```ts
+// Good — a const assertion keeps the pair a pair, the overload resolves, and the declared
+// return type is checked again
+paths.map(async (filePath) => {
+  const content = await fs.promises.readFile(filePath, 'utf8')
+  return [filePath, content] as const
+})
+```
+
+Annotate the callback's return instead only when the shape is worth naming; `as const` restates
+nothing and stays correct when the contents change.
