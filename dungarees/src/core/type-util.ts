@@ -10,6 +10,10 @@ export type JsonType = number | string | boolean | null | undefined | JsonType[]
 
 export type JsonObject = { [key: string]: JsonType }
 
+// Anything that survives a round trip through JSON. Named for the requirement rather than the
+// mechanism, so a constraint reads as "this has to be serialisable".
+export type Serializable = JsonType
+
 export type TypedArray =
   | Int8Array
   | Uint8Array
