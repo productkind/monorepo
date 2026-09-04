@@ -4,7 +4,6 @@ import {
   assertPredicate,
   assertTypeByGuard,
   mapConstKeysToEntries,
-  objectFromConstEntries,
 } from '@dungarees/core/util.ts'
 
 import {
@@ -348,7 +347,7 @@ export function getObservableMethodsFromSync<
 ): ObservableMethodsFromSync<SERVICE, METHOD_NAMES>
 
 export function getObservableMethodsFromSync(
-  service: Record<`${string}Sync`, (...args: any[]) => any>,
+  service: Record<`${string}Sync`, (...args: never[]) => unknown>,
   methodNames: readonly string[],
   delayMs: number = 0,
 ) {
@@ -359,7 +358,7 @@ export function getObservableMethodsFromSync(
     ),
   )
 
-  return objectFromConstEntries(observableMethods)
+  return Object.fromEntries(observableMethods)
 }
 
 export const getUnsafeMethodNames = <
