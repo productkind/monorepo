@@ -4,6 +4,7 @@ import pmTechnicalFluencyValidation02 from './pm-technical-fluency-validation-02
 import pmTechnicalFluencyValidation03 from './pm-technical-fluency-validation-03'
 import pmTechnicalFluencyValidation04 from './pm-technical-fluency-validation-04'
 import pmTechnicalFluencyValidation05 from './pm-technical-fluency-validation-05'
+import pmTechnicalFluencyValidation06 from './pm-technical-fluency-validation-06'
 import social000 from './social-000'
 import social016 from './social-016'
 import social017 from './social-017'
@@ -21,4 +22,5 @@ export const VIDEOS = [
   pmTechnicalFluencyValidation03,
   pmTechnicalFluencyValidation04,
   pmTechnicalFluencyValidation05,
+  pmTechnicalFluencyValidation06,
 ]
