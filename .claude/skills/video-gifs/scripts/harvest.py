@@ -16,7 +16,7 @@ STILL = 0.02
 from common import candidates_dir, fetch, gif_seconds, motion, search, slots, stack, strip
 
 
-def harvest(video, section, terms, skip, limit, root=None, slot=None):
+def harvest(video, section, terms, skip, limit, root=None, slot=None, provider='auto'):
     # An explicit slot lets a video be sourced before narrate has run, from a word-count estimate.
     # Re-check the fits with verify.py once the real timeline exists.
     slot = slot if slot else slots(video, root)[section]
@@ -24,7 +24,7 @@ def harvest(video, section, terms, skip, limit, root=None, slot=None):
     seen, rows = set(skip), []
 
     for term in terms:
-        for gif in search(term, limit=limit):
+        for gif in search(term, limit=limit, provider=provider):
             gif_id = gif['id']
             if gif_id in seen:
                 continue
@@ -90,6 +90,9 @@ def main():
     parser.add_argument('--section', type=int, required=True)
     parser.add_argument('--terms', nargs='+', required=True)
     parser.add_argument('--skip', default='', help='comma-separated gif ids already rejected')
+    parser.add_argument('--provider', default='auto', choices=['auto', 'giphy', 'klipy'],
+                        help='force one catalogue: giphy is deeper in footage, klipy in flat '
+                             'vector illustration')
     parser.add_argument('--show', type=int, default=7, help='how many to montage')
     parser.add_argument('--limit', type=int, default=25, help='results per search term')
     parser.add_argument('--slot', type=float, default=None,
@@ -99,7 +102,8 @@ def main():
 
     skip = [value for value in args.skip.split(',') if value]
     slot, rows = harvest(
-        args.video, args.section, args.terms, skip, args.limit, args.root, args.slot
+        args.video, args.section, args.terms, skip, args.limit, args.root, args.slot,
+        args.provider
     )
     print(f'section {args.section:02d}  slot {slot:.1f}s  {len(rows)} candidates after filtering')
     shown = keep_moving(rows, args.video, args.show)

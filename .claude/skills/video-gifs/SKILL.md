@@ -68,12 +68,21 @@ don't own.
 ```
 scripts/harvest.py --video <video-id> --section 10 \
     --terms "woman raising hand" "businesswoman asking question" \
-    [--skip id1,id2] [--show 7] [--limit 25]
+    [--skip id1,id2] [--show 7] [--limit 25] [--provider giphy|klipy]
 ```
 Searches every term at `rating=g`, drops anything not squarish (aspect 0.7–1.5) or under 380px
 wide, measures each candidate's real duration from its frame delays, and orders them by how close
 **one play** comes to filling the slot. It prints a numbered list and writes one montage whose rows
 match that list, top to bottom. Read the montage; the script chooses nothing.
+
+**`--provider` picks the catalogue, and the two are not interchangeable.** Giphy is deeper in
+footage and reaction clips, Klipy in flat vector illustration and sticker sets. Left alone, Klipy is
+only ever reached by spending all 300 giphy searches for the hour, so a beat that only Klipy can
+serve costs an hour of quota to discover. When four rounds on giphy return nothing, try
+`--provider klipy` with the same terms before changing register again — and the reverse, because a
+run that started on Klipy has seen none of giphy's footage. Video 7's §11 went thirteen rounds
+partly for this reason. Measure the duration of anything you shortlist **after** downloading it:
+the search result describes a preview, and one §11 candidate was 3.4s in the list and 6.0s on disk.
 
 **2. `pick.py` — download at full size and report the fit.**
 ```
@@ -92,6 +101,19 @@ scripts/verify.py --video <video-id> --frames   # 8 frames of every chosen gif
 appears late. `--stills` renders one composed frame per section from the real composition, captions
 and parrot overlay included. `--serve` starts Studio and fetches every gif through its static
 server. It finishes with a fit table for the whole video.
+
+**4. `used-ids.py` — what the campaign has already spent.**
+```
+scripts/used-ids.py --prefix pm-technical-fluency          # one id per line
+scripts/used-ids.py --prefix pm-technical-fluency --where  # and where each is used
+```
+A campaign of eight videos will repeat a gif unless the sourcer is handed the ids already in use.
+Generate the list with this rather than grepping the definitions: a provenance comment holds a URL,
+and only giphy URLs carry the id in the path, so a grep silently misses every klipy pick. That gap
+is not cosmetic — two of video 7's picks repeated video 5 because the list they were checked
+against held klipy URLs where the sourcer was comparing klipy ids. The script resolves them through
+`.sources.json` and tells you if any URL no longer has an id, which happens when the candidate
+cache has been cleared since the pick was made.
 
 ### Writing search terms
 

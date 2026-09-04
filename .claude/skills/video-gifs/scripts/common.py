@@ -225,15 +225,21 @@ def _klipy_search(key, term, limit):
     return rows
 
 
-def search(term, limit=25):
+def search(term, limit=25, provider='auto'):
     """One search, on whichever provider is available.
 
     Pooled giphy keys are used in order of least-used-this-hour, so the load spreads instead of
     burning the first key to its cap. A key that hits 429 is retired for the hour — never retried,
     in this process or a later one. When every giphy key is spent, Klipy serves the search instead.
+
+    `provider` names one of them instead of letting availability decide. The two catalogues are not
+    interchangeable: giphy is deeper in footage and reaction clips, klipy in flat vector
+    illustration, so a beat giphy cannot serve at all is often one klipy answers on the first
+    search. Video 7's "a woman running the discussion" took eight fruitless giphy rounds and one
+    klipy search. Left on 'auto', klipy is only ever reached by exhausting 300 giphy searches.
     """
     state = _load_state()
-    keys = giphy_keys()
+    keys = giphy_keys() if provider in ('auto', 'giphy') else []
 
     for key in sorted((k for k in keys if _usable(state, k)),
                       key=lambda k: state['counts'].get(fingerprint(k), 0)):
@@ -250,9 +256,15 @@ def search(term, limit=25):
             else:
                 _cool_down(state, key, f'HTTP {error.code}')
 
+    if provider == 'giphy':
+        raise SystemExit(
+            'No usable giphy key this hour, and --provider giphy rules out the klipy fallback.'
+        )
+
     klipy = env_value('KLIPY_API_KEY')
     if klipy:
-        print('  all giphy keys spent this hour; searching klipy')
+        if provider == 'auto':
+            print('  all giphy keys spent this hour; searching klipy')
         return _klipy_search(klipy, term, limit)
 
     cooling = sorted(state['cooldown'].items())
