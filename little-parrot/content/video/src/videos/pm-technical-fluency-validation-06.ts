@@ -63,7 +63,11 @@ export default defineVideo({
     {
       // giphy "cute animal builder construction cartoon": https://giphy.com/gifs/hVJZt4rY9TR5rmmqfc
       text: 'The engineers assumed you’d already scoped it.',
-      visual: gif({ src: 'section-02-bears-building.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-02-bears-building.gif',
+        playbackRate: 0.85,
+        place: 'above-captions',
+      }),
     },
     {
       // giphy "puzzled character thinking question mark cartoon":
@@ -103,7 +107,7 @@ export default defineVideo({
       text: 'Running that discussion was your job,',
       visual: gif({
         src: 'section-07-superhero-cape.gif',
-        playbackRate: 0.98,
+        playbackRate: 0.84,
         place: 'above-captions',
       }),
     },
@@ -153,7 +157,11 @@ export default defineVideo({
       // klipy "yellow cat line sticker":
       // https://static.klipy.com/ii/2711dd8a75a85be822d136ec94899b3f/b1/03/FEpNhKJX.gif
       text: 'What happens when a request fails halfway?',
-      visual: gif({ src: 'section-13-confused-cats-group.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-13-confused-cats-group.gif',
+        playbackRate: 0.83,
+        place: 'above-captions',
+      }),
     },
     {
       // klipy "yellow cat line sticker":
@@ -161,7 +169,7 @@ export default defineVideo({
       text: 'Does it touch permissions, or data that already exists?',
       visual: gif({
         src: 'section-14-confused-cat-solo-black.gif',
-        playbackRate: 0.98,
+        playbackRate: 0.78,
         place: 'above-captions',
       }),
       endsParagraph: true,

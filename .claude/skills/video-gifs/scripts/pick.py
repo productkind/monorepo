@@ -11,7 +11,8 @@ for. Nothing is written to the definition: paste the lines, so the file stays ha
 import argparse
 from urllib.parse import urlsplit
 
-from common import assets_dir, download_original, gif_seconds, gif_size, slots, source_url
+from common import (assets_dir, download_original, gif_seconds, gif_size,
+                    repeats_existing_artwork, slots, source_url)
 
 
 def advise(seconds, slot):
@@ -72,6 +73,13 @@ def main():
         index = int(section)
         target = folder / f'section-{index:02d}-{name}.gif'
         download_original(gif_id, target)
+
+        # An id check cannot see that the same artwork was uploaded twice, so compare the file.
+        repeats = repeats_existing_artwork(target, args.video.rsplit('-', 1)[0], args.root)
+        if repeats:
+            print(f'\n!! {target.name} is the same artwork as '
+                  + ', '.join(f'{p.parent.name[-2:]}/{p.name}' for p in repeats)
+                  + '\n   Pick something else: it is already in the campaign under another id.')
 
         seconds, frames = gif_seconds(target)
         width, height = gif_size(target)
