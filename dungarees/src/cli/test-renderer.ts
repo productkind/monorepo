@@ -4,7 +4,7 @@ import { firstValueFrom, ReplaySubject, skip, Subject } from 'rxjs'
 
 type Terminal = {
   step: () => Promise<CliMessage[]>
-  select: (option: string) => Promise<void>
+  select: (option: string) => void
 }
 
 export const renderCli = <INTERACTORS extends keyof CliInteractors = never>(
@@ -45,7 +45,7 @@ export const renderCli = <INTERACTORS extends keyof CliInteractors = never>(
         state.outputSincePreviousStep = []
         return output
       },
-      select: async (option) => {
+      select: (option) => {
         const reply = state.replyToCurrentPrompt
         if (reply === null) throw new Error('no prompt is waiting for an answer')
         reply.next(option)

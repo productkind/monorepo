@@ -32,7 +32,7 @@ test('yargs-propmt-app', async () => {
             default: 'World',
           })
         },
-        async (argv) => {
+        (argv) => {
           io.registerEvents(of({ type: 'greet', payload: `Hello, ${argv.name}!` }))
         },
       ),
@@ -107,7 +107,7 @@ test.each([
   const { terminal } = renderCli(app, 'test-app greet')
   const out0 = await terminal.step()
   expect(out0).toEqual([{ type: 'stdout', message: 'Greeting starts', level: 'info' }])
-  await terminal.select(choice)
+  terminal.select(choice)
   const out1 = await terminal.step()
   expect(out1).toEqual([
     { type: 'stdout', message: greeting, level: 'info' },
@@ -190,10 +190,10 @@ test('yargs-prompt-app greets multiple times', async () => {
   const { terminal } = renderCli(app, 'test-app greet')
   const out0 = await terminal.step()
   expect(out0).toEqual([{ type: 'stdout', message: 'Greeting starts', level: 'info' }])
-  await terminal.select('you')
+  terminal.select('you')
   const out1 = await terminal.step()
   expect(out1).toEqual([{ type: 'stdout', message: 'Hello, You!', level: 'info' }])
-  await terminal.select('me')
+  terminal.select('me')
   const out2 = await terminal.step()
   expect(out2).toEqual([
     { type: 'stdout', message: 'Hello, Me!', level: 'info' },
