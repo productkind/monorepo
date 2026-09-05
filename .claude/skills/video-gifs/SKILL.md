@@ -102,7 +102,19 @@ appears late. `--stills` renders one composed frame per section from the real co
 and parrot overlay included. `--serve` starts Studio and fetches every gif through its static
 server. It finishes with a fit table for the whole video.
 
-**4. `used-ids.py` — what the campaign has already spent.**
+**4. `fit.py` — the pass to make straight after narrating.**
+```
+scripts/fit.py --prefix pm-technical-fluency     # every narrated video in a campaign
+scripts/fit.py --video <video-id>
+```
+Every rate set before a script is narrated is a guess: the word-count estimate runs about 20% out,
+and only narration gives the real slot. This prints each section that now restarts mid-beat and the
+`playbackRate` that fixes it, across a whole campaign in one go. Run it after every `npm run
+narrate`, including a **re-narration**: editing narration moves the slots again. Adding an
+ElevenLabs `[pause]` tag to a closing question lengthened the *previous* section by 1.3 seconds,
+because a section starts on its first spoken word, so the silence belongs to the beat before it.
+
+**5. `used-ids.py` — what the campaign has already spent.**
 ```
 scripts/used-ids.py --prefix pm-technical-fluency          # one id per line
 scripts/used-ids.py --prefix pm-technical-fluency --where  # and where each is used

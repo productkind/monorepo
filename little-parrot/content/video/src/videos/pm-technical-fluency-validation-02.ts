@@ -149,7 +149,7 @@ export default defineVideo({
     },
     {
       // giphy "pondering chin hand": https://giphy.com/gifs/y9U1fyL4Cs5Ntzefm3
-      text: "What ‘simple’ request turned out hardest?",
+      text: "[pause][curious] What ‘simple’ request turned out hardest?",
       visual: gif({ src: 'section-20-thinking.gif', playbackRate: 0.66, place: 'above-captions' }),
     },
   ],

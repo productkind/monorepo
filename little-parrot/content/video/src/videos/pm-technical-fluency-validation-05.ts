@@ -172,7 +172,7 @@ export default defineVideo({
     },
     {
       // giphy "wall clock hands moving simple icon": https://giphy.com/gifs/yw8lh1JuxnwB8mawsU
-      text: 'How long does a simple number take where you work?',
+      text: '[pause][curious] How long does a simple number take where you work?',
       visual: gif({ src: 'section-19-time-question.gif', place: 'above-captions' }),
     },
   ],

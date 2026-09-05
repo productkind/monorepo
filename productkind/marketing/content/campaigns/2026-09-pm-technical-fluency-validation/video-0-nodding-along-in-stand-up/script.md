@@ -27,4 +27,4 @@ your product, and understand the answer while you're in the meeting.
 The waitlist link is in the comments. Sign up and we'll let you know when the
 learning path opens.
 
-What technical word did you look up last?
+[pause][curious] What technical word did you look up last?

@@ -165,7 +165,7 @@ export default defineVideo({
     {
       // giphy "raised eyebrow curious": https://giphy.com/gifs/H9647AMy9XwjH1zgZY
       // Left looping: seam 0.00, the cleanest loop in the video.
-      text: 'Ever been asked to ship a prototype?',
+      text: '[pause][curious] Ever been asked to ship a prototype?',
       visual: gif({ src: 'section-19-curious-eyebrow.gif', place: 'above-captions' }),
     },
   ],

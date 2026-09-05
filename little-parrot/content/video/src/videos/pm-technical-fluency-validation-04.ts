@@ -196,7 +196,7 @@ export default defineVideo({
     {
       // klipy "cute owl thinking question mark illustration":
       // https://static.klipy.com/ii/35ccce3d852f7995dd2da910f2abd795/66/72/BVQ9Wyzg.gif
-      text: 'How long does a bug wait before fixing where you work?',
+      text: '[pause][curious] How long does a bug wait before fixing where you work?',
       visual: gif({
         src: 'section-18-confused-question-closer.gif',
         playbackRate: 0.98,

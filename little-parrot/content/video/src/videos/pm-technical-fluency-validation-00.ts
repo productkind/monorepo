@@ -138,7 +138,7 @@ export default defineVideo({
     {
       // giphy "question marks floating": https://giphy.com/gifs/ducsQFMyHcdiTeIcuD
       // Slowed so the question mark is still being drawn as the video ends.
-      text: "What technical word did you look up last?",
+      text: "[pause][curious] What technical word did you look up last?",
       visual: gif({
         src: 'section-17-question-mark.gif',
         playbackRate: 0.92,
