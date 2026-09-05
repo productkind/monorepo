@@ -4,7 +4,7 @@ import { RemotionRiveCanvas } from '@remotion/rive'
 import type { Timeline } from '../narration/timeline'
 import type { Overlay, VideoDefinition } from '../narration/definition'
 import { Captions } from './Captions'
-import { AnnotatedSection } from './SectionAnnotation'
+import { AnnotationLayer, TunedVisual } from './SectionAnnotation'
 import { sectionLabel } from './section-label'
 import { VisualView } from './Visual'
 
@@ -39,13 +39,7 @@ export const NarratedVideo: React.FC<{
             name={sectionLabel({ index: section.index, text, visual })}
           >
             {annotate ? (
-              <AnnotatedSection
-                index={section.index}
-                visual={visual}
-                assets={definition.assets}
-                slotFrames={section.durationInFrames}
-                fps={timeline.fps}
-              />
+              <TunedVisual index={section.index} visual={visual} assets={definition.assets} />
             ) : (
               <VisualView visual={visual} assets={definition.assets} />
             )}
@@ -79,7 +73,11 @@ export const NarratedVideo: React.FC<{
       </Sequence>
     ))}
 
-    <AbsoluteFill className="border-16 border-[#000000] z-10" />
+    {/* Decorative, and above everything at z-10, so it must not swallow clicks meant for the
+        annotated pass's controls. */}
+    <AbsoluteFill className="border-16 border-[#000000] z-10 pointer-events-none" />
+
+    {annotate ? <AnnotationLayer definition={definition} timeline={timeline} /> : null}
   </AbsoluteFill>
 )
 

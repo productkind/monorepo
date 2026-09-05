@@ -101,7 +101,8 @@ scripts/verify.py --video <video-id> --frames   # 8 frames of every chosen gif
 appears late. `--stills` renders one composed frame per section from the real composition, captions
 and parrot overlay included. `--serve` starts Studio and fetches every gif through its static
 server. `--backgrounds` compares each gif's own edge colour with the `color` its section declares.
-A full run does all four and finishes with a fit table for the whole video.
+`--flags` lists the sections a reviewer marked in Studio. A full run does all five and finishes
+with a fit table for the whole video.
 
 **4. `fit.py` — the pass to make straight after narrating.**
 ```
@@ -127,6 +128,20 @@ is not cosmetic — two of video 7's picks repeated video 5 because the list the
 against held klipy URLs where the sourcer was comparing klipy ids. The script resolves them through
 `.sources.json` and tells you if any URL no longer has an id, which happens when the candidate
 cache has been cleared since the pick was made.
+
+### Flags raised from Studio
+
+Every composition has a twin under Studio's **Annotated** folder that draws the slot, the gif
+length and the repeat count over each section, plus a **flag** button. Clicking it writes
+`public/<video-id>/flags.json` — Studio's `writeStaticFile` reaches the repo from composition
+code, so marking a gif takes no separate review app.
+
+A flag records the gif it was raised against, not just the section, so replacing that gif answers
+the complaint and the flag stops applying. `scripts/verify.py --video <video-id> --flags` lists
+what is outstanding and tells you which flags are stale.
+
+Start a re-sourcing round by reading that list: each flagged section wants fresh terms and a new
+harvest, and the gif that was flagged goes into `--skip` so it cannot come back.
 
 ### Letterboxing a flat background
 
