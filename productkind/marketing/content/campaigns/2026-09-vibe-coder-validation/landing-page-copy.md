@@ -74,7 +74,7 @@ You’ll define the main journey through your app, test the expected path and co
 
 ### 6. Publish the app and get your first customers
 
-You’ll work through hosting, your domain and transactional emails. You’ll finish with a launch checklist and know what to watch when the first customers arrive.
+You’ll work through hosting, your domain and transactional emails. You’ll identify whether your app needs a cookie banner and prepare its terms and conditions and privacy policy. You’ll record any questions that need professional legal advice, then finish with a launch checklist and know what to watch when the first customers arrive.
 
 ### 7. Add analytics that answer a product question
 
@@ -154,3 +154,50 @@ Be first to know when it opens
 **Placeholder:** you@work.com  
 **Button:** Sign up to waitlist  
 **Supporting text:** We’ll email you when the learning path opens.
+
+## Post-sign-up questions
+
+### Question 1: Price
+
+**Confirmation heading:** You’re on the list.
+
+**Confirmation text:** We’ll email you when the learning path opens.
+
+**Question heading:** One question: Which of these is closest to true for you?
+
+**Supporting text:** We’re still setting the price, and your answer helps us decide.
+
+**Response type:** Choose one
+
+- I’d pay $468 for lifetime access
+- I’d pay $58 a month
+- I’d ask my employer to cover it
+- That’s more than I’d spend right now
+- I’d want to try the first step before I decide
+
+### Question 2: Tool used
+
+**Confirmation heading:** You’re on the list.
+
+**Confirmation text:** We’ll email you when the learning path opens.
+
+**Question heading:** One more, then you’re done
+
+**Question:** Which tools did you use to build your app?
+
+**Supporting text:** Choose all that apply.
+
+**Response type:** Choose one or more
+
+- Lovable
+- Claude Code
+- Replit
+- Bolt
+- Base44
+- v0
+- Cursor
+- Bubble
+- FlutterFlow
+- Another tool (show a text field)
+
+**Skip link:** Skip this one
