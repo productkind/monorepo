@@ -247,8 +247,10 @@ export const createFileSystem = (fs: NodeFs): UnsafeService<FileSystemService> =
   const accessSync: FileSystemService['accessSync'] = (path, modes) =>
     boolFromThrow(() => fs.accessSync(path, modesToFlag(modes)))
 
-  const accessAsync: FileSystemService['accessAsync'] = (path, modes) =>
-    boolFromThrowAsync(() => fs.promises.access(path, modesToFlag(modes)))
+  const accessAsync: FileSystemService['accessAsync'] = async (path, modes) =>
+    boolFromThrowAsync(async () => {
+      await fs.promises.access(path, modesToFlag(modes))
+    })
 
   return {
     readFileSync,
@@ -269,7 +271,7 @@ export const createFileSystem = (fs: NodeFs): UnsafeService<FileSystemService> =
     mkdirSync,
     mkdirAsync,
     mkdir: asyncFunctionToObservable(mkdirAsync),
-    globAsync: (path) => glob(path),
+    globAsync: glob,
     globSync: (path) => globSync(path),
     glob: asyncFunctionToObservable(glob),
     getStatSync,
