@@ -1,5 +1,6 @@
 import { eventCreators, type PublishLibEvent } from './events.ts'
 
+import { createCausedError } from '@dungarees/core/error.ts'
 import type { JsonObject } from '@dungarees/core/type-util.ts'
 import {
   assertSchemaMap,
@@ -33,9 +34,8 @@ export const createOutDir = (
 ): Observable<PublishLibEvent> =>
   createOutDir$.pipe(
     map(() => eventCreators.outDirCreated({ outDir })),
-    catchAndRethrow(
-      (cause) =>
-        new Error(`Error creating output directory (${outDir}): ${cause.message}`, { cause }),
+    catchAndRethrow((cause) =>
+      createCausedError({ message: `Error creating output directory (${outDir})`, cause }),
     ),
   )
 
@@ -116,9 +116,9 @@ const setExports = ({
 
 const parsePackageJson = (): OperatorFunction<string, JsonObject> =>
   pipe(
-    map((content) => JSON.parse(content)),
-    catchAndRethrow(
-      (error) => new Error(`Invalid source package.json: ${error.message}`, { cause: error }),
+    map((content): unknown => JSON.parse(content)),
+    catchAndRethrow((cause) =>
+      createCausedError({ message: 'Invalid source package.json', cause }),
     ),
     assertTypeByGuardMap(
       (packageJson): packageJson is JsonObject =>
@@ -159,7 +159,7 @@ const handleTransformEnd = (
     map(({ context: version }) =>
       eventCreators.packageJsonWritten({ path: destinationPath, version }),
     ),
-    catchAndRethrow((cause) => new Error(`File transform failed: ${cause.message}`, { cause })),
+    catchAndRethrow((cause) => createCausedError({ message: 'File transform failed', cause })),
   )
 
 export const publishLib = (
@@ -171,7 +171,7 @@ export const publishLib = (
         ? eventCreators.publishSucceeded()
         : eventCreators.publishFailed({ exitCode, stderror }),
     ),
-    catchAndRethrow((cause) => new Error(`Error publishing library: ${cause.message}`, { cause })),
+    catchAndRethrow((cause) => createCausedError({ message: 'Error publishing library', cause })),
   )
 
 const getPackageDirs = (sourceDir: string): OperatorFunction<string[], string[]> =>
@@ -183,10 +183,8 @@ const getPackageDirs = (sourceDir: string): OperatorFunction<string[], string[]>
 
 const parseVersion = (): OperatorFunction<string, string> =>
   pipe(
-    map((content) => JSON.parse(content)),
-    catchAndRethrow(
-      (error) => new Error(`Invalid version.json: ${error.message}`, { cause: error }),
-    ),
+    map((content): unknown => JSON.parse(content)),
+    catchAndRethrow((cause) => createCausedError({ message: 'Invalid version.json', cause })),
     assertSchemaMap(
       z.object({ version: z.string().min(1) }),
       'Version is required in version.json',
