@@ -150,6 +150,10 @@ export type PartialBesides<OBJECT, KEYS extends keyof OBJECT> = Partial<Omit<OBJ
 // optional properties stay optional rather than becoming `| undefined`.
 export type FlattenIntersection<OBJECT> = { [KEY in keyof OBJECT]: OBJECT[KEY] }
 
+export type DetachableMethods<OBJECT> = {
+  [KEY in keyof OBJECT]: OmitThisParameter<OBJECT[KEY]>
+}
+
 export type DeepPartial<T> = {
   [K in keyof T]?: T[K] extends object ? DeepPartial<T[K]> : T[K]
 }

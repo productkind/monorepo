@@ -1,5 +1,6 @@
 import type {
   DeepPartial,
+  DetachableMethods,
   EntryTuple,
   FilterRecord,
   FlattenIntersection,
@@ -239,4 +240,20 @@ test('DeepPartial<T> - nested props', () => {
 test('SyncFunctionToAsync<FUNC>', () => {
   type AsyncFunc = SyncFunctionToAsync<(a: 1, b: 2) => 3>
   expectTypeOf<AsyncFunc>().toEqualTypeOf<(a: 1, b: 2) => Promise<3>>()
+})
+
+test('DetachableMethods<OBJECT>', () => {
+  type Context = {
+    equal(actual: string, expected: string): boolean
+    cold<VALUE>(marble: string, value: VALUE): VALUE
+    autoFlush: boolean
+  }
+
+  expectTypeOf<DetachableMethods<Context>['equal']>().toEqualTypeOf<
+    (actual: string, expected: string) => boolean
+  >()
+  expectTypeOf<DetachableMethods<Context>['cold']>().toEqualTypeOf<
+    <VALUE>(marble: string, value: VALUE) => VALUE
+  >()
+  expectTypeOf<DetachableMethods<Context>['autoFlush']>().toEqualTypeOf<boolean>()
 })
