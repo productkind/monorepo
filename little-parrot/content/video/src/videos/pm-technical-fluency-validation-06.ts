@@ -1,9 +1,9 @@
 import { defineVideo, gif, riveAtFrame } from '../narration/definition'
 
 /**
- * Video 7 of the PM technical fluency campaign, "Nobody raised the hard part".
+ * Video 6 of the PM technical fluency campaign, "Nobody raised the hard part".
  * Script: productkind/marketing/content/campaigns/2026-09-pm-technical-fluency-validation/
- * video-7-four-questions/script.md
+ * video-6-four-questions/script.md
  *
  * The CTA is the LinkedIn / YouTube Shorts variant ("link in the comments"), which is the script
  * as written. TikTok and Instagram Reels need the URL spoken and shown instead.
@@ -11,7 +11,7 @@ import { defineVideo, gif, riveAtFrame } from '../narration/definition'
  * Sections 0 and 12 to 14 stand in for the screen recording the production notes call for: a
  * planning discussion, then the questions on cards.
  *
- * This video is the meeting itself, not the aftermath. Video 3 owns the aftermath of a yes already
+ * This video is the meeting itself, not the aftermath. Video 2 owns the aftermath of a yes already
  * given, and the two are posted a fortnight apart to stay distinct, which is why nothing here is
  * carried by a calendar or a slipping deadline: section 4's "three weeks later" is a character
  * melting into a puddle rather than a sixth timepiece in a campaign that already has five.
@@ -28,10 +28,10 @@ import { defineVideo, gif, riveAtFrame } from '../narration/definition'
  * The only person in the video is the woman at section 9. Section 11 took thirteen rounds across
  * both providers looking for a woman running a discussion and neither catalogue has one that is
  * unbranded and uncaptioned, so the beat is carried by two characters in conversation instead,
- * which is the same choice video 3 made when its people beats came back unusable.
+ * which is the same choice video 2 made when its people beats came back unusable.
  *
  * The slots behind these rates are estimates from `0.98 + 0.209 x words`, fitted on the 39
- * narrated sections of videos 1 and 2. Every rate is a ratio to its slot, so all of them move once
+ * narrated sections of videos 0 and 1. Every rate is a ratio to its slot, so all of them move once
  * this script is narrated: re-check with `verify.py --video pm-technical-fluency-validation-06`
  * from the video-gifs skill, and render the composed stills at the same time.
  */

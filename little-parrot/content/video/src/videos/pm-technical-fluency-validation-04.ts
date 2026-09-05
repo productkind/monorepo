@@ -1,9 +1,9 @@
 import { defineVideo, gif, riveAtFrame } from '../narration/definition'
 
 /**
- * Video 5 of the PM technical fluency campaign, "All you can send is their screenshot".
+ * Video 4 of the PM technical fluency campaign, "All you can send is their screenshot".
  * Script: productkind/marketing/content/campaigns/2026-09-pm-technical-fluency-validation/
- * video-5-not-a-bug-report/script.md
+ * video-4-not-a-bug-report/script.md
  *
  * The CTA is the LinkedIn / YouTube Shorts variant ("link in the comments"), which is the script
  * as written. TikTok and Instagram Reels need the URL spoken and shown instead.
@@ -23,7 +23,7 @@ import { defineVideo, gif, riveAtFrame } from '../narration/definition'
  * static.klipy.com address: giphy's three pooled keys hit their hourly search cap partway through.
  *
  * The slots behind these rates are estimates from `0.98 + 0.209 x words`, fitted on the 39
- * narrated sections of videos 1 and 2. Every rate is a ratio to its slot, so all of them move once
+ * narrated sections of videos 0 and 1. Every rate is a ratio to its slot, so all of them move once
  * this script is narrated: re-check with `verify.py --video pm-technical-fluency-validation-04`
  * from the video-gifs skill, and render the composed stills at the same time.
  */

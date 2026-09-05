@@ -1,9 +1,9 @@
 import { defineVideo, gif, riveAtFrame } from '../narration/definition'
 
 /**
- * Video 8 of the PM technical fluency campaign, "When can we launch it?".
+ * Video 7 of the PM technical fluency campaign, "When can we launch it?".
  * Script: productkind/marketing/content/campaigns/2026-09-pm-technical-fluency-validation/
- * video-8-prototype-not-product/script.md
+ * video-7-prototype-not-product/script.md
  *
  * The CTA is the LinkedIn / YouTube Shorts variant ("link in the comments"), which is the script
  * as written. TikTok and Instagram Reels need the URL spoken and shown instead.
@@ -20,14 +20,14 @@ import { defineVideo, gif, riveAtFrame } from '../narration/definition'
  *
  * The five share "one object, plain background" but not a palette: three are dark line art, two are
  * flat colour on light. A uniform five could not be assembled from clean stock, and the attempt is
- * what produced video 6's mismatched trio, so the register is held loosely here and named honestly.
+ * what produced video 5's mismatched trio, so the register is held loosely here and named honestly.
  *
  * Section 15 carries a small hand-lettered "beep". The rule it bends exists to stop a viewer
  * reading a stray word that has nothing to do with the line, and on "who gets woken at 2am" the
  * word is the line, but it is a judgement worth revisiting.
  *
  * The slots behind these rates are estimates from `0.98 + 0.209 x words`, fitted on the 39
- * narrated sections of videos 1 and 2. Every rate is a ratio to its slot, so all of them move once
+ * narrated sections of videos 0 and 1. Every rate is a ratio to its slot, so all of them move once
  * this script is narrated: re-check with `verify.py --video pm-technical-fluency-validation-07`
  * from the video-gifs skill, and render the composed stills at the same time.
  */
@@ -107,7 +107,7 @@ export default defineVideo({
     },
     {
       // giphy "hiking trail path illustration": https://giphy.com/gifs/CtnjRbQTOahYtNqwdu
-      // A path rather than stacking blocks: video 1, video 6 and video 7 all build with blocks on
+      // A path rather than stacking blocks: video 0, video 5 and video 6 all build with blocks on
       // this beat, and a fourth would make the set look like one video.
       text: 'we’re building a learning path for it.',
       visual: gif({ src: 'section-10-trail-path.gif', place: 'above-captions' }),
@@ -147,7 +147,7 @@ export default defineVideo({
     },
     {
       // giphy "leaf falling illustration": https://giphy.com/gifs/9J8K8WEWLXZk7s0OMB
-      // Downward motion rather than a fourth arrow: videos 5, 6 and 7 all point down with one.
+      // Downward motion rather than a fourth arrow: videos 4, 5 and 6 all point down with one.
       text: 'The waitlist link is in the comments.',
       visual: gif({ src: 'section-17-leaves-falling.gif', place: 'above-captions' }),
     },
