@@ -24,4 +24,4 @@ code, and find the failed request in the network tab yourself.
 The waitlist link is in the comments. Sign up and we'll let you know when the
 learning path opens.
 
-How long does a bug wait before fixing where you work?
+[pause][curious] How long does a bug wait before fixing where you work?

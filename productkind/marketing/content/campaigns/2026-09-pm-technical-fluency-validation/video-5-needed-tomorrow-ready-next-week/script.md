@@ -26,4 +26,4 @@ twice. So you stop quoting numbers you can't defend.
 The waitlist link is in the comments. Sign up and we'll let you know when the
 learning path opens.
 
-How long does a simple number take where you work?
+[pause][curious] How long does a simple number take where you work?

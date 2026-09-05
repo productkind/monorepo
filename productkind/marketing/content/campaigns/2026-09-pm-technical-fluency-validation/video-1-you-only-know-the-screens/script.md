@@ -26,4 +26,4 @@ owns each part, where it slows down, and what breaks when one fails.
 The waitlist link is in the comments. Sign up and we'll let you know when the
 learning path opens.
 
-Which part of your product would you struggle to explain?
+[pause][curious] Which part of your product would you struggle to explain?

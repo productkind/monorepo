@@ -173,9 +173,12 @@ export default defineVideo({
       // klipy "yellow cat line sticker":
       // https://static.klipy.com/ii/71b2873e478b9d8d0482ea3ec777ba7f/46/8e/H0x9Oudz.gif
       text: 'Does it touch permissions, or data that already exists?',
+      // 0.59 is a hair under the 0.6 slow-motion floor, taken deliberately: the paragraph break
+      // after this beat stretched it to 4.7s once narrated, and the alternative is a visible
+      // restart on a 0.31 seam. Worth a longer gif if this one ever reads as slow motion.
       visual: gif({
         src: 'section-14-confused-cat-solo-black.gif',
-        playbackRate: 0.78,
+        playbackRate: 0.59,
         place: 'above-captions',
       }),
       endsParagraph: true,

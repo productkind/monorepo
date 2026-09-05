@@ -26,4 +26,4 @@ when something goes wrong, and who maintains it.
 The waitlist link is in the comments. Sign up and we'll let you know when the
 learning path opens.
 
-Ever been asked to ship a prototype?
+[pause][curious] Ever been asked to ship a prototype?

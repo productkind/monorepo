@@ -26,4 +26,4 @@ up.
 The waitlist link is in the comments. Sign up and we'll let you know when the
 learning path opens.
 
-How often do you release new improvements for your users?
+[pause][curious] How often do you release new improvements for your users?

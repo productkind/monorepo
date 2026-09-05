@@ -156,7 +156,7 @@ export default defineVideo({
     },
     {
       // giphy "cute animal tilting head curious": https://giphy.com/gifs/BbHAzBkwS0UydUwOEl
-      text: "How often do you release new improvements for your users?",
+      text: "[pause][curious] How often do you release new improvements for your users?",
       visual: gif({ src: 'section-17-asking-you.gif', place: 'above-captions' }),
     },
   ],

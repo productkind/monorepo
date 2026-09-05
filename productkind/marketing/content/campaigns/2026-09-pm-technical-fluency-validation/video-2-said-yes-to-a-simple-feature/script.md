@@ -27,4 +27,4 @@ request is possible before you answer.
 The waitlist link is in the comments. Sign up and we'll let you know when the
 learning path opens.
 
-What 'simple' request turned out hardest?
+[pause][curious] What 'simple' request turned out hardest?

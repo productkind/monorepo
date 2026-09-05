@@ -152,7 +152,7 @@ export default defineVideo({
     {
       // giphy "woman thinking question": https://giphy.com/gifs/528ZQA9p2ZEmDxs17j
       // Slowed so she is still thinking about it as the video ends, which is the prompt.
-      text: "Which part of your product would you struggle to explain?",
+      text: "[pause][curious] Which part of your product would you struggle to explain?",
       visual: gif({ src: 'section-20-wondering.gif', playbackRate: 0.84, place: 'above-captions' }),
     },
   ],
