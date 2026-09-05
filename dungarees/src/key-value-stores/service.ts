@@ -1,13 +1,8 @@
-import {
-  isWritableRawKeyValueStore,
-  type RawKeyValueStore,
-  type Schemas,
-  type WriteableRawKeyValueStore,
-} from './type.ts'
+import { isWritableRawKeyValueStore, type RawKeyValueStore, type Schemas } from './type.ts'
 
 import type { GetSchemaType } from '@dungarees/zod/zod.ts'
 
-import { type ZodSchema } from 'zod'
+import type { ZodType } from 'zod'
 
 type Readable<SCHEMAS extends Schemas> = {
   readonly _schemas?: SCHEMAS
@@ -22,10 +17,7 @@ type Writable<SCHEMAS extends Schemas> = {
 export type KeyValueStore<
   SCHEMAS extends Schemas,
   RAW_STORE extends RawKeyValueStore = RawKeyValueStore,
-> =
-  RAW_STORE extends WriteableRawKeyValueStore<any>
-    ? Readable<SCHEMAS> & Writable<SCHEMAS>
-    : Readable<SCHEMAS>
+> = 'set' extends keyof RAW_STORE ? Readable<SCHEMAS> & Writable<SCHEMAS> : Readable<SCHEMAS>
 
 export const createKeyValueStore = <SCHEMAS extends Schemas, RAW_STORE extends RawKeyValueStore>(
   rawStore: RAW_STORE,
@@ -41,7 +33,9 @@ export const createKeyValueStore = <SCHEMAS extends Schemas, RAW_STORE extends R
     }
   }
 
-  const getValidator = (key: string): ZodSchema<any> => {
+  const getValidator = <KEY extends keyof SCHEMAS & string>(
+    key: KEY,
+  ): ZodType<GetSchemaType<SCHEMAS[KEY]>> => {
     const validator = validators[key]
     if (validator === undefined) {
       throw new Error(`Invalid key: "${key}"`)
@@ -61,7 +55,7 @@ export const createKeyValueStore = <SCHEMAS extends Schemas, RAW_STORE extends R
     }
   }
 
-  const set: KeyValueStore<SCHEMAS, WriteableRawKeyValueStore<any>>['set'] = (key, value) => {
+  const set: Writable<SCHEMAS>['set'] = (key, value) => {
     if (!isWritableRawKeyValueStore(rawStore)) {
       return
     }
