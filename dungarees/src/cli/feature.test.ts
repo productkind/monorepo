@@ -69,7 +69,7 @@ test('each combined feature keeps its own command and presenter', async () => {
 
 test('combining features unions their event types', () => {
   const combined = combineFeatures(greetFeature, countFeature)
-  expectTypeOf<typeof combined>().toEqualTypeOf<CliFeature<GreetEvent | CountEvent>>()
+  expectTypeOf(combined).toEqualTypeOf<CliFeature<GreetEvent | CountEvent>>()
 })
 
 test('combining folds, so a third feature needs no new signature', () => {
@@ -80,7 +80,7 @@ test('combining folds, so a third feature needs no new signature', () => {
   }
   const combined = combineFeatures(combineFeatures(greetFeature, countFeature), logFeature)
 
-  expectTypeOf<typeof combined>().toEqualTypeOf<CliFeature<GreetEvent | CountEvent | LogEvent>>()
+  expectTypeOf(combined).toEqualTypeOf<CliFeature<GreetEvent | CountEvent | LogEvent>>()
 })
 
 test('a feature whose presenter misses one of its own events does not type-check', () => {
