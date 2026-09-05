@@ -58,10 +58,10 @@ export default tseslint.config(
       '@typescript-eslint/no-unused-vars': [
         'error',
         {
-          argsIgnorePattern: '^[Tt]estUnused_',
+          argsIgnorePattern: '^_',
           varsIgnorePattern: '^[Tt]estUnused_',
-          caughtErrorsIgnorePattern: '^[Tt]estUnused_',
-          destructuredArrayIgnorePattern: '^[Tt]estUnused_',
+          caughtErrorsIgnorePattern: '^_',
+          destructuredArrayIgnorePattern: '^_',
         },
       ],
     },

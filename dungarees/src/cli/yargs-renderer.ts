@@ -2,7 +2,7 @@ import type { CliControls, CliInteractors, CliMessage, YargsPromptApp } from './
 
 import { EOL } from 'node:os'
 import type { Writable } from 'node:stream'
-import { filter } from 'rxjs'
+import { filter, lastValueFrom, tap } from 'rxjs'
 
 export type RendererProcess = {
   stdout: Pick<Writable, 'write'>
@@ -23,42 +23,42 @@ type RenderCliToStdioOptions<INTERACTORS extends keyof CliInteractors> = {
   process?: RendererProcess
 }
 
-export const renderCliToStdio = <INTERACTORS extends keyof CliInteractors = never>({
+export const renderCliToStdio = async <INTERACTORS extends keyof CliInteractors = never>({
   app,
   argv,
   controls,
   levels = NODE_LOG_LEVELS,
   level,
   process = globalThis.process,
-}: RenderCliToStdioOptions<INTERACTORS>): Promise<void> =>
-  new Promise((resolve, reject) => {
-    const lowest = Math.min(...Object.values(levels))
-    const rankOf = (name: string | undefined): number => levels[name ?? 'info'] ?? lowest
-    const threshold = level === undefined ? lowest : rankOf(level)
-    const render: {
-      [TYPE in CliMessage['type']]: (message: Extract<CliMessage, { type: TYPE }>) => void
-    } = {
-      stdout: (message) => {
-        process.stdout.write(`${message.message}${EOL}`)
-      },
-      stderr: (message) => {
-        process.stderr.write(`${message.message}${EOL}`)
-      },
-      exit: (message) => {
-        process.exit(message.code)
-      },
-    }
+}: RenderCliToStdioOptions<INTERACTORS>): Promise<void> => {
+  const lowest = Math.min(...Object.values(levels))
+  const rankOf = (name: string | undefined): number => levels[name ?? 'info'] ?? lowest
+  const threshold = level === undefined ? lowest : rankOf(level)
+  const render: {
+    [TYPE in CliMessage['type']]: (message: Extract<CliMessage, { type: TYPE }>) => void
+  } = {
+    stdout: (message) => {
+      process.stdout.write(`${message.message}${EOL}`)
+    },
+    stderr: (message) => {
+      process.stderr.write(`${message.message}${EOL}`)
+    },
+    exit: (message) => {
+      process.exit(message.code)
+    },
+  }
 
-    const dispatch = <TYPE extends CliMessage['type']>(
-      message: Extract<CliMessage, { type: TYPE }>,
-    ): void => render[message.type](message)
+  const dispatch = <TYPE extends CliMessage['type']>(
+    message: Extract<CliMessage, { type: TYPE }>,
+  ): void => render[message.type](message)
 
-    app
-      .present(argv, controls)
-      .pipe(filter((message) => message.type === 'exit' || rankOf(message.level) >= threshold))
-      .subscribe({
-        next: (message) => dispatch(message),
-        error: reject,
-        complete: resolve,
-      })
-  })
+  await lastValueFrom(
+    app.present(argv, controls).pipe(
+      filter((message) => message.type === 'exit' || rankOf(message.level) >= threshold),
+      tap((message) => {
+        dispatch(message)
+      }),
+    ),
+    { defaultValue: undefined },
+  )
+}
