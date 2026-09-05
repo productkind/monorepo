@@ -74,7 +74,19 @@ describe('visual helpers', () => {
 
 describe('defineVideo', () => {
   test('fills in the frame rate and tail the videos are rendered at', () => {
-    expect(definition()).toMatchObject({ fps: 30, tailFrames: 6, splitOnBlankLines: false })
+    expect(definition()).toMatchObject({ fps: 30, tailFrames: 24, splitOnBlankLines: false })
+  })
+
+  test('holds the same tail in seconds whatever frame rate the video runs at', () => {
+    expect(
+      defineVideo({
+        id: 'social-y',
+        voice: 'chloe',
+        model: 'eleven_v3',
+        fps: 60,
+        sections: [{ text: 'One.', visual: gif({ src: 'a.gif' }) }],
+      }).tailFrames,
+    ).toBe(48)
   })
 
   test('takes its assets from its own folder unless pointed elsewhere', () => {

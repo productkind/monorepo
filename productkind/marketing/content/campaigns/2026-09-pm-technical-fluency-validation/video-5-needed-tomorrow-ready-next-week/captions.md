@@ -25,7 +25,7 @@ You need a product metric for tomorrow's meeting. Analytics will have it next we
 
 **Pinned comment:**
 
-Join the waitlist for the learning path here: https://littleparrot.app/guides/technical-product-manager?utm_source=tiktok&utm_medium=organic-social&utm_campaign=tech-pm-26&utm_content=needed-tomorrow-ready-next-week
+https://littleparrot.app/guides/technical-product-manager?utm_source=tiktok&utm_campaign=tech-pm-26&utm_content=needed-tomorrow-ready-next-week
 
 ## Instagram Reels
 
@@ -51,7 +51,7 @@ A vertical animated video with captions on screen. Cartoon clips illustrate each
 
 **Bio link while this Reel is active:**
 
-https://littleparrot.app/guides/technical-product-manager?utm_source=instagram&utm_medium=organic-social&utm_campaign=tech-pm-26&utm_content=needed-tomorrow-ready-next-week
+https://littleparrot.app/guides/technical-product-manager?utm_source=instagram&utm_campaign=tech-pm-26&utm_content=needed-tomorrow-ready-next-week
 
 **Founder comments:**
 
@@ -71,7 +71,7 @@ You need a product metric for tomorrow's meeting and analytics will have it next
 
 **Pinned comment:**
 
-Join the waitlist for the learning path here: https://littleparrot.app/guides/technical-product-manager?utm_source=youtube&utm_medium=organic-social&utm_campaign=tech-pm-26&utm_content=needed-tomorrow-ready-next-week
+https://littleparrot.app/guides/technical-product-manager?utm_source=youtube&utm_campaign=tech-pm-26&utm_content=needed-tomorrow-ready-next-week
 
 ## Posting checklist
 

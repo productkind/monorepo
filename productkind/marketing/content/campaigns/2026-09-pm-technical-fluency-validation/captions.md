@@ -27,7 +27,7 @@ campaign: pm-technical-fluency-validation-2026-08
 
 **Caption:** Frontend vs backend vs database for non-technical Product Managers: ask what changes on screen, which rule changes and what data must be stored. Women in product can join early access through our bio. #womeninproduct #womenintech #womenproductmanagers #softwarearchitecture
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p01-frontend-backend-database
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p01-frontend-backend-database
 
 #### Instagram Reels
 
@@ -43,7 +43,7 @@ Save this for your next refinement. If you are a woman in product who wants to u
 
 **Alt text:** A presenter explains a three-box diagram labelled frontend, backend and database, using a customer changing a delivery address as the example.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p01-frontend-backend-database
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p01-frontend-backend-database
 
 #### YouTube Shorts
 
@@ -51,7 +51,7 @@ Save this for your next refinement. If you are a woman in product who wants to u
 
 **Description:** Frontend vs backend vs database for non-technical Product Managers, using one delivery-address change. Ask what changes on screen, which product rule changes and what data must be stored. Subscribe for weekly explanations of how software works for women in product.
 
-**Pinned comment:** Join the Little Parrot early-access list for the full How Software Works for Product Managers course: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p01-frontend-backend-database
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p01-frontend-backend-database
 
 #### LinkedIn
 
@@ -71,7 +71,7 @@ A simple model is enough to show that “add an address field” may affect vali
 
 Save the three questions for your next feature discussion.
 
-If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p01-frontend-backend-database
+If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p01-frontend-backend-database
 
 **Alt text:** A simple diagram shows a delivery-address change moving through frontend, backend and database, with one Product Manager question under each part.
 
@@ -93,7 +93,7 @@ If you’re a woman in product who wants to make technical decisions with better
 
 **Caption:** What happens when you type a URL in the browser? Follow request, processing, data and response. That sequence helps Product Managers narrow a slow or broken page. Women in product can join early access through our bio. #womeninproduct #womenintech #womenproductmanagers #webapps
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p02-type-url-browser
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p02-type-url-browser
 
 #### Instagram Reels
 
@@ -111,7 +111,7 @@ Save this sequence for the next time a page behaves differently in staging and p
 
 **Alt text:** A browser address bar connects to four labelled steps: request, processing, data and response.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p02-type-url-browser
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p02-type-url-browser
 
 #### YouTube Shorts
 
@@ -119,7 +119,7 @@ Save this sequence for the next time a page behaves differently in staging and p
 
 **Description:** What happens when you type a URL in the browser? Learn the four-part sequence a Product Manager can use to narrow a slow or broken page: request, processing, data and response. Subscribe for weekly technical explanations for women in product.
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p02-type-url-browser
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p02-type-url-browser
 
 #### LinkedIn
 
@@ -137,7 +137,7 @@ If a page is slow, blank or different for one user, ask where the first unexpect
 
 That gives engineering a narrower starting point than “the page is broken”.
 
-If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p02-type-url-browser
+If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p02-type-url-browser
 
 **Alt text:** Five steps show how a browser finds a server, sends a request, the server reads data, returns a response and the browser draws the page.
 
@@ -159,7 +159,7 @@ If you’re a woman in product who wants to make technical decisions with better
 
 **Caption:** How does an API work? An application programming interface connects systems. Ask what it accepts, who owns returned data, which limits apply and what happens when it fails. Women in product can join early access in our bio. #womeninproduct #womenintech #womenproductmanagers #api
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p03-how-api-works
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p03-how-api-works
 
 #### Instagram Reels
 
@@ -177,7 +177,7 @@ Save this for your next integration discussion. Women in product can join the Li
 
 **Alt text:** A travel app sends a request through an API to a weather service and receives Lisbon forecast data in response.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p03-how-api-works
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p03-how-api-works
 
 #### YouTube Shorts
 
@@ -185,7 +185,7 @@ Save this for your next integration discussion. Women in product can join the Li
 
 **Description:** How does an API work? A travel app asks a weather service for Lisbon's forecast and receives structured data. Product Managers can assess the integration by asking about available requests, returned data, ownership, usage limits and failure behaviour. Subscribe for weekly technical explanations for women in product.
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p03-how-api-works
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p03-how-api-works
 
 #### LinkedIn
 
@@ -205,7 +205,7 @@ Before the team commits, ask:
 
 “The API supports it” answers only the first part. The product decision also needs limits, failure behaviour and ownership.
 
-If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p03-how-api-works
+If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p03-how-api-works
 
 **Alt text:** A five-question checklist sits beside a diagram of a travel app requesting weather data through an API.
 
@@ -227,7 +227,7 @@ If you’re a woman in product who wants to make technical decisions with better
 
 **Caption:** How does API integration work? Map every response: approved, declined, processing and timeout. Then ask who retries and which system owns the final status. Women in product can join early access through our bio. #womeninproduct #womenintech #womenproductmanagers #apiintegration
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p04-api-integration
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p04-api-integration
 
 #### Instagram Reels
 
@@ -245,7 +245,7 @@ Save this for your next integration. Women in product can join the Little Parrot
 
 **Alt text:** A checkout API integration branches into approved, declined, processing and timeout responses, each with questions about user experience, retry and ownership.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p04-api-integration
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p04-api-integration
 
 #### YouTube Shorts
 
@@ -253,7 +253,7 @@ Save this for your next integration. Women in product can join the Little Parrot
 
 **Description:** How does API integration work? A checkout sends a payment request and must handle approved, declined, processing and timeout results. Map what the user sees, who retries and which system owns the final status before customers meet an unhandled state. Subscribe for weekly technical explanations for women in product.
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p04-api-integration
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p04-api-integration
 
 #### LinkedIn
 
@@ -277,7 +277,7 @@ For each branch, ask:
 
 A happy-path diagram can make an integration look finished while payment-pending and timeout behaviour remain undecided.
 
-If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p04-api-integration
+If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p04-api-integration
 
 **Alt text:** A checkout-to-payment-provider diagram branches into four response states with a four-question Product Manager checklist.
 
@@ -299,7 +299,7 @@ If you’re a woman in product who wants to make technical decisions with better
 
 **Caption:** Webhook vs API: your product asks through an API; another system sends an event through a webhook. Product Managers should ask about timing, delay and duplicates. Women in product can join early access through our bio. #womeninproduct #womenintech #womenproductmanagers #webhooks
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p05-webhook-vs-api
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p05-webhook-vs-api
 
 #### Instagram Reels
 
@@ -319,7 +319,7 @@ Save this for your next integration discussion. Women in product can join the Li
 
 **Alt text:** A split diagram compares an app asking a courier API for a status with a courier sending a webhook when the status changes.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p05-webhook-vs-api
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p05-webhook-vs-api
 
 #### YouTube Shorts
 
@@ -327,7 +327,7 @@ Save this for your next integration discussion. Women in product can join the Li
 
 **Description:** Webhook vs API: an API request starts when your product asks, while a webhook starts when another system reports an event. Product Managers should ask about timing, delay, duplicate updates and recovery when an update is missed. Subscribe for weekly technical explanations for women in product.
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p05-webhook-vs-api
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p05-webhook-vs-api
 
 #### LinkedIn
 
@@ -348,7 +348,7 @@ Ask four product questions:
 
 Those answers define timing and reliability the user will notice.
 
-If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p05-webhook-vs-api
+If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p05-webhook-vs-api
 
 **Alt text:** A parcel-tracking example compares an API request made by the product with a webhook event sent by the courier.
 
@@ -372,7 +372,7 @@ If you’re a woman in product who wants to make technical decisions with better
 
 **Caption:** How does software deployment work? A change moves through review, automated tests, staging and production. Ask what version is where, what passed and how to roll back. Women in product can join early access through our bio. #womeninproduct #womenintech #womenproductmanagers #deployment
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p06-software-deployment
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p06-software-deployment
 
 #### Instagram Reels
 
@@ -390,7 +390,7 @@ Save this for your next stand-up. Women in product can join the Little Parrot ea
 
 **Alt text:** A feature card moves through code change, review, automated tests, staging and production, with four Product Manager questions underneath.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p06-software-deployment
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p06-software-deployment
 
 #### YouTube Shorts
 
@@ -398,7 +398,7 @@ Save this for your next stand-up. Women in product can join the Little Parrot ea
 
 **Description:** How does software deployment work? Follow a change through version control, review, automated tests, staging and production. Product Managers should ask what version is where, which evidence passed, what Product must verify and how the team can roll back. Subscribe for weekly technical explanations for women in product.
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p06-software-deployment
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p06-software-deployment
 
 #### LinkedIn
 
@@ -421,7 +421,7 @@ At each stage, a Product Manager can ask:
 
 Your part is to know which stage the change has reached and which evidence supports the release decision.
 
-If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p06-software-deployment
+If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p06-software-deployment
 
 **Alt text:** A release path shows version control, code review, automated tests, staging, deployment and production, with evidence at each stage.
 
@@ -443,7 +443,7 @@ If you’re a woman in product who wants to make technical decisions with better
 
 **Caption:** Staging vs production: data, permissions, integrations and configuration may differ. Ask what cannot be proved before release and which live signal comes first. Women in product can join early access through our bio. #womeninproduct #womenintech #womenproductmanagers #staging
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p07-staging-vs-production
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p07-staging-vs-production
 
 #### Instagram Reels
 
@@ -463,7 +463,7 @@ Save them for your next release. Women in product can join the Little Parrot ear
 
 **Alt text:** The same checkout appears in staging and production, with differences highlighted across users, data, integrations and monitoring.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p07-staging-vs-production
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p07-staging-vs-production
 
 #### YouTube Shorts
 
@@ -471,7 +471,7 @@ Save them for your next release. Women in product can join the Little Parrot ear
 
 **Description:** Staging vs production: a change can work in staging and still fail live because data, permissions, integrations or configuration differ. Ask what cannot be tested before release, which production signal comes first and who can stop the rollout. Subscribe for weekly technical explanations for women in product.
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p07-staging-vs-production
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p07-staging-vs-production
 
 #### LinkedIn
 
@@ -496,7 +496,7 @@ Before release, ask:
 
 The release decision can then name the remaining uncertainty and the plan for detecting a problem.
 
-If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p07-staging-vs-production
+If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p07-staging-vs-production
 
 **Alt text:** A staging and production comparison lists differences in data, accounts, integrations, configuration and monitoring.
 
@@ -518,7 +518,7 @@ If you’re a woman in product who wants to make technical decisions with better
 
 **Caption:** CI/CD explained for beginners: a repeatable path of builds, tests and release steps. A green pipeline means configured checks passed, not every user scenario. Women in product can join through our bio. #womeninproduct #womenintech #womenproductmanagers #cicd
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p08-cicd-beginners
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p08-cicd-beginners
 
 #### Instagram Reels
 
@@ -536,7 +536,7 @@ Save this distinction for the next time a ticket says “pipeline passed”. Wom
 
 **Alt text:** A conveyor belt moves a code change through automatic build, tests and deployment gates, with human decision points marked.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p08-cicd-beginners
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p08-cicd-beginners
 
 #### YouTube Shorts
 
@@ -544,7 +544,7 @@ Save this distinction for the next time a ticket says “pipeline passed”. Wom
 
 **Description:** Continuous integration and continuous delivery or deployment create a repeatable path for code changes. Ask which checks are automatic, which decisions need a person and what blocks the next step. A green pipeline proves only that its configured checks passed. Subscribe for weekly technical explanations for women in product.
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p08-cicd-beginners
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p08-cicd-beginners
 
 #### LinkedIn
 
@@ -563,7 +563,7 @@ For a Product Manager, four questions make the workflow useful:
 
 A green pipeline confirms only the checks configured in it. The release decision still needs Product's user scenarios and acceptance criteria.
 
-If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p08-cicd-beginners
+If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p08-cicd-beginners
 
 **Alt text:** A CI/CD workflow shows a code change passing automated checks and human gates before reaching users.
 
@@ -585,7 +585,7 @@ If you’re a woman in product who wants to make technical decisions with better
 
 **Caption:** Pull request explained: a proposed code change plus review and checks. Product Managers can ask whether behaviour matches the ticket, which cases were tested and what users need to know. Women in product can join through our bio. #womeninproduct #womenintech #womenproductmanagers #pullrequest
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p09-pull-request
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p09-pull-request
 
 #### Instagram Reels
 
@@ -603,7 +603,7 @@ Save this for your next delivery conversation. Women in product can join the Lit
 
 **Alt text:** A pull request shows a proposed checkout change, reviewer comments, automated checks and four Product Manager questions.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p09-pull-request
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p09-pull-request
 
 #### YouTube Shorts
 
@@ -611,7 +611,7 @@ Save this for your next delivery conversation. Women in product can join the Lit
 
 **Description:** A pull request is a proposed code change with review discussion and automated checks. Product Managers can use it to connect a ticket to the resulting behaviour, tested cases, known limits and any release or support updates. Subscribe for weekly technical explanations for women in product.
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p09-pull-request
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p09-pull-request
 
 #### LinkedIn
 
@@ -635,7 +635,7 @@ Product can use the same artefact to ask:
 
 This lets Product review the evidence while engineering owns code quality and implementation.
 
-If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p09-pull-request
+If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p09-pull-request
 
 **Alt text:** A pull request screen links a ticket, proposed code changes, reviewer discussion and automated checks.
 
@@ -657,7 +657,7 @@ If you’re a woman in product who wants to make technical decisions with better
 
 **Caption:** Feature flags explained: deploy once, enable gradually. Product Managers should define the audience, success signal, off switch and removal date. A flag adds a state to test too. Women in product can join through our bio. #womeninproduct #womenintech #womenproductmanagers #featureflags
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p10-feature-flags
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p10-feature-flags
 
 #### Instagram Reels
 
@@ -675,7 +675,7 @@ Save these questions for your next rollout plan. Women in product can join the L
 
 **Alt text:** A feature flag rollout moves through off, staff only, 10% of users and all users, with decision questions at each stage.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p10-feature-flags
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p10-feature-flags
 
 #### YouTube Shorts
 
@@ -683,7 +683,7 @@ Save these questions for your next rollout plan. Women in product can join the L
 
 **Description:** A feature flag can switch behaviour on or off without a fresh deployment. Product Managers should define the audience, the signal for expanding the rollout, the off switch, what happens mid-flow and when the flag will be removed. Subscribe for weekly technical explanations for women in product.
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p10-feature-flags
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p10-feature-flags
 
 #### LinkedIn
 
@@ -706,7 +706,7 @@ A flag can limit the effect of a faulty release. It also creates another state t
 
 A feature flag reduces risk only when the team has agreed who sees the feature, which signal pauses the rollout and who removes the flag.
 
-If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p10-feature-flags
+If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p10-feature-flags
 
 **Alt text:** A staged feature-flag rollout lists audience, progress signal, stop signal, owner and removal date.
 
@@ -730,7 +730,7 @@ If you’re a woman in product who wants to make technical decisions with better
 
 **Caption:** How to reproduce a bug: record user type, device, browser, environment, data, steps, expected result and actual result. Change one condition at a time. Women in product can join early access through our bio. #womeninproduct #womenintech #womenproductmanagers #bugreport
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p11-reproduce-bug
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p11-reproduce-bug
 
 #### Instagram Reels
 
@@ -748,7 +748,7 @@ Save this checklist for the next customer issue. Women in product can join the L
 
 **Alt text:** A vague “checkout broken” report becomes a structured bug report with user, device, browser, environment, data, steps, expected result and actual result.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p11-reproduce-bug
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p11-reproduce-bug
 
 #### YouTube Shorts
 
@@ -756,7 +756,7 @@ Save this checklist for the next customer issue. Women in product can join the L
 
 **Description:** Capture the user type, device, browser, environment, data, exact steps, expected result and actual result. Repeat once, then change one condition at a time. A reproducible bug report gives engineering the failing behaviour without guessing the cause. Subscribe for weekly technical explanations for women in product.
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p11-reproduce-bug
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p11-reproduce-bug
 
 #### LinkedIn
 
@@ -781,7 +781,7 @@ Repeat the steps once. Then change one condition at a time.
 
 Keep facts and guesses in separate sections. A suspected cause can help, but label it as an assumption so it does not replace the evidence.
 
-If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p11-reproduce-bug
+If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p11-reproduce-bug
 
 **Alt text:** A bug-report checklist turns a vague checkout complaint into exact conditions, steps and observed results.
 
@@ -803,7 +803,7 @@ If you’re a woman in product who wants to make technical decisions with better
 
 **Caption:** Bug triage process: separate impact, reach, urgency and evidence confidence. Then choose investigate now, schedule, gather evidence or monitor. Women in product can join early access through our bio. #womeninproduct #womenintech #womenproductmanagers #bugtriage
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p12-bug-triage-process
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p12-bug-triage-process
 
 #### Instagram Reels
 
@@ -823,7 +823,7 @@ Save this for your next triage meeting. Women in product can join the Little Par
 
 **Alt text:** Four bug-triage cards show user impact, affected users, urgency and evidence confidence, followed by four possible next actions.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p12-bug-triage-process
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p12-bug-triage-process
 
 #### YouTube Shorts
 
@@ -831,7 +831,7 @@ Save this for your next triage meeting. Women in product can join the Little Par
 
 **Description:** Triage a bug by separating user impact, reach, urgency and evidence confidence. Then choose a next action: investigate now, schedule it, gather more evidence or monitor. Severity describes the effect; priority describes when the team acts. Subscribe for weekly technical explanations for women in product.
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p12-bug-triage-process
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p12-bug-triage-process
 
 #### LinkedIn
 
@@ -855,7 +855,7 @@ Severity describes the effect of the issue. Priority describes when the team cho
 
 Writing the four inputs down makes the trade-off visible and easier to revisit.
 
-If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p12-bug-triage-process
+If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p12-bug-triage-process
 
 **Alt text:** A bug-triage worksheet separates impact, reach, urgency and confidence before assigning the next action.
 
@@ -877,7 +877,7 @@ If you’re a woman in product who wants to make technical decisions with better
 
 **Caption:** Severity vs priority bug: severity is the effect; priority is when the team acts. Record lost capability, timing, workaround and competing work. Women in product can join early access through our bio. #womeninproduct #womenintech #womenproductmanagers #bugtriage
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p13-severity-vs-priority
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p13-severity-vs-priority
 
 #### Instagram Reels
 
@@ -897,7 +897,7 @@ Save this for your next bug discussion. Women in product can join the Little Par
 
 **Alt text:** Two example bugs compare severity, priority, workarounds and timing to show why the labels can differ.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p13-severity-vs-priority
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p13-severity-vs-priority
 
 #### YouTube Shorts
 
@@ -905,7 +905,7 @@ Save this for your next bug discussion. Women in product can join the Little Par
 
 **Description:** Severity describes the effect of a bug. Priority describes when the team chooses to act. Record the lost capability, timing, business context, workaround and competing work so the team can explain why the two labels differ. Subscribe for weekly technical explanations for women in product.
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p13-severity-vs-priority
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p13-severity-vs-priority
 
 #### LinkedIn
 
@@ -932,7 +932,7 @@ For priority, add:
 
 Priority can change while severity stays the same. Keeping the labels separate gives the team a decision it can explain and revisit.
 
-If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p13-severity-vs-priority
+If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p13-severity-vs-priority
 
 **Alt text:** A severity and priority worksheet separates technical effect from timing, workaround and product context.
 
@@ -954,7 +954,7 @@ If you’re a woman in product who wants to make technical decisions with better
 
 **Caption:** What are application logs? Timestamped records of software events. Use time, environment, account and request ID with an engineer, then separate facts from inference. Women in product can join through our bio. #womeninproduct #womenintech #womenproductmanagers #applicationlogs
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p14-application-logs
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p14-application-logs
 
 #### Instagram Reels
 
@@ -972,7 +972,7 @@ Save this distinction for your next incident review. Women in product can join t
 
 **Alt text:** A user error at 10:42 connects to a filtered application-log entry showing request ID, service, status and duration.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p14-application-logs
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p14-application-logs
 
 #### YouTube Shorts
 
@@ -980,7 +980,7 @@ Save this distinction for your next incident review. Women in product can join t
 
 **Description:** Application logs are timestamped records produced while software runs. Investigate with an engineer using the exact time, environment, account and request ID. Then separate what the log confirms from the cause you still need to verify. Subscribe for weekly technical explanations for women in product.
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p14-application-logs
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p14-application-logs
 
 #### LinkedIn
 
@@ -1006,7 +1006,7 @@ Still uncertain: “The payment provider was unavailable.”
 
 The first may be visible in the log. The second still needs evidence from the provider or surrounding system.
 
-If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p14-application-logs
+If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p14-application-logs
 
 **Alt text:** A log investigation uses timestamp, environment, account and request ID to find a payment timeout and separate evidence from inference.
 
@@ -1028,7 +1028,7 @@ If you’re a woman in product who wants to make technical decisions with better
 
 **Caption:** DevTools Network tab explained: repeat the action, select the request and inspect status, duration, sent data and response. Use test data and company rules. Women in product can join through our bio. #womeninproduct #womenintech #womenproductmanagers #devtools
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p15-devtools-network
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p15-devtools-network
 
 #### Instagram Reels
 
@@ -1046,7 +1046,7 @@ Save this for a paired investigation with an engineer. Women in product can join
 
 **Alt text:** Browser developer tools show one form request with its name, status code, duration, request data and response data highlighted.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p15-devtools-network
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p15-devtools-network
 
 #### YouTube Shorts
 
@@ -1054,7 +1054,7 @@ Save this for a paired investigation with an engineer. Women in product can join
 
 **Description:** The DevTools Network tab shows web requests and responses. Repeat the action, select the request and inspect its name, status, duration, sent data and response. Use test data, follow company rules and bring the captured evidence to engineering. Subscribe for weekly technical explanations for women in product.
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p15-devtools-network
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p15-devtools-network
 
 #### LinkedIn
 
@@ -1074,7 +1074,7 @@ A failed request or unexpected response can tell you where the observed behaviou
 
 Capture the evidence, state what it confirms and involve engineering with the remaining questions.
 
-If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p15-devtools-network
+If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p15-devtools-network
 
 **Alt text:** A five-step checklist shows how to use the browser Network tab to capture one request's status, duration and data safely.
 
@@ -1098,7 +1098,7 @@ If you’re a woman in product who wants to make technical decisions with better
 
 **Caption:** What is technical debt? Future work created by a choice today. Record what was deferred, the growing cost, the repayment trigger and review owner. Women in product can join early access through our bio. #womeninproduct #womenintech #womenproductmanagers #technicaldebt
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p16-technical-debt
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p16-technical-debt
 
 #### Instagram Reels
 
@@ -1116,7 +1116,7 @@ Save the five fields for your next scope discussion. Women in product can join t
 
 **Alt text:** A checkout shortcut saves one week now but creates duplicate rules, longer testing and inconsistent address validation later.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p16-technical-debt
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p16-technical-debt
 
 #### YouTube Shorts
 
@@ -1124,7 +1124,7 @@ Save the five fields for your next scope discussion. Women in product can join t
 
 **Description:** Technical debt is future work created by a technical choice made today. Record what was deferred, why the team chose it, which cost or risk grows, what signal triggers repayment and who will review the decision. Subscribe for weekly technical explanations for women in product.
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p16-technical-debt
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p16-technical-debt
 
 #### LinkedIn
 
@@ -1151,7 +1151,7 @@ Record five fields:
 
 The decision can then be revisited with its original context, instead of becoming forgotten work labelled “engineering clean-up”.
 
-If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p16-technical-debt
+If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p16-technical-debt
 
 **Alt text:** A technical-debt record connects a checkout shortcut to future duplication, testing cost, risk, trigger and owner.
 
@@ -1173,7 +1173,7 @@ If you’re a woman in product who wants to make technical decisions with better
 
 **Caption:** How much technical debt is acceptable? Define the goal, duration, future consequence, detection signal and exit plan before accepting the shortcut. Women in product can join early access through our bio. #womeninproduct #womenintech #womenproductmanagers #technicaldebt
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p17-acceptable-tech-debt
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p17-acceptable-tech-debt
 
 #### Instagram Reels
 
@@ -1191,7 +1191,7 @@ Save these five questions for your next trade-off. Women in product can join the
 
 **Alt text:** A five-column technical-debt budget lists goal, duration, future consequence, detection signal and exit plan.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p17-acceptable-tech-debt
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p17-acceptable-tech-debt
 
 #### YouTube Shorts
 
@@ -1199,7 +1199,7 @@ Save these five questions for your next trade-off. Women in product can join the
 
 **Description:** Bound technical debt by defining its goal, duration, future consequence, detection signal and exit plan. A one-week experiment and a shortcut inside every customer payment require different levels of tolerance. Subscribe for weekly technical explanations for women in product.
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p17-acceptable-tech-debt
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p17-acceptable-tech-debt
 
 #### LinkedIn
 
@@ -1224,7 +1224,7 @@ If the team cannot name the exit condition, it has not bounded the debt yet.
 
 This gives Product the information needed to recommend whether the current trade-off supports the product goal.
 
-If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p17-acceptable-tech-debt
+If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p17-acceptable-tech-debt
 
 **Alt text:** Two shortcuts are compared through a technical-debt budget containing gain now, tolerated cost, review signal and owner.
 
@@ -1246,7 +1246,7 @@ If you’re a woman in product who wants to make technical decisions with better
 
 **Caption:** Buy vs build software pros and cons: compare differentiation, requirements, integration, operations, growing cost and exit. Use the same questions for both options. Women in product can join through our bio. #womeninproduct #womenintech #womenproductmanagers #buildvsbuy
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p18-buy-vs-build
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p18-buy-vs-build
 
 #### Instagram Reels
 
@@ -1264,7 +1264,7 @@ Save the six questions for your next decision. Women in product can join the Lit
 
 **Alt text:** A buy-versus-build table compares differentiation, requirements, integration, operations, growing cost and exit for an identity-verification capability.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p18-buy-vs-build
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p18-buy-vs-build
 
 #### YouTube Shorts
 
@@ -1272,7 +1272,7 @@ Save the six questions for your next decision. Women in product can join the Lit
 
 **Description:** Compare buy and build options through the same six questions: differentiation, fixed requirements, integration, operations, cost as usage grows and exit. Buying and building create different dependencies and ownership. Subscribe for weekly technical explanations for women in product.
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p18-buy-vs-build
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p18-buy-vs-build
 
 #### LinkedIn
 
@@ -1293,7 +1293,7 @@ Put the evidence in one table before comparing delivery dates. Include the first
 
 A faster launch can make later changes slower. A tailored build can create permanent work the team does not want to own.
 
-If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p18-buy-vs-build
+If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p18-buy-vs-build
 
 **Alt text:** A six-question matrix compares buying and building an identity-verification capability, including future cost and ownership.
 
@@ -1315,7 +1315,7 @@ If you’re a woman in product who wants to make technical decisions with better
 
 **Caption:** MVP vs prototype vs POC: POC tests feasibility, prototype tests an experience, MVP serves real users to test an assumption. Name the question before choosing the artefact. Women in product can join through our bio. #womeninproduct #womenintech #womenproductmanagers #mvp
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p19-mvp-prototype-poc
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p19-mvp-prototype-poc
 
 #### Instagram Reels
 
@@ -1333,7 +1333,7 @@ Save this for the next time a team uses all three labels for the same build. Wom
 
 **Alt text:** An AI meal-planner idea is shown as a proof of concept, a prototype and a minimum viable product, each answering a different question.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p19-mvp-prototype-poc
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p19-mvp-prototype-poc
 
 #### YouTube Shorts
 
@@ -1341,7 +1341,7 @@ Save this for the next time a team uses all three labels for the same build. Wom
 
 **Description:** A proof of concept tests feasibility, a prototype tests an idea or interaction and a minimum viable product serves real users to test a product assumption. Name the evidence question first, then choose the smallest artefact that can answer it. Subscribe for weekly technical explanations for women in product.
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p19-mvp-prototype-poc
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p19-mvp-prototype-poc
 
 #### LinkedIn
 
@@ -1363,7 +1363,7 @@ Start the brief with: “We need evidence about whether…”
 
 Then choose the smallest artefact that can produce that evidence. The label should describe the job the artefact performs, not how polished it looks.
 
-If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p19-mvp-prototype-poc
+If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p19-mvp-prototype-poc
 
 **Alt text:** Three cards define proof of concept, prototype and minimum viable product using an AI meal-planner example and a separate evidence question.
 
@@ -1385,7 +1385,7 @@ If you’re a woman in product who wants to make technical decisions with better
 
 **Caption:** How to assess technical feasibility: ask about systems touched, data and permissions, failure modes, reversible steps and unknowns needing investigation. Women in product can join early access through our bio. #womeninproduct #womenintech #womenproductmanagers #feasibility
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p20-technical-feasibility
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p20-technical-feasibility
 
 #### Instagram Reels
 
@@ -1403,7 +1403,7 @@ Save these questions for your next refinement. Women in product can join the Lit
 
 **Alt text:** An “add team permissions” feature expands into identity, billing, notifications, role data and account-migration dependencies.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p20-technical-feasibility
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p20-technical-feasibility
 
 #### YouTube Shorts
 
@@ -1411,7 +1411,7 @@ Save these questions for your next refinement. Women in product can join the Lit
 
 **Description:** Before asking for one estimate, ask which systems the change touches, which data or permissions change, what can fail, whether it can be released or reversed in smaller steps and which unknown needs investigation. Subscribe for weekly technical explanations for women in product.
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p20-technical-feasibility
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p20-technical-feasibility
 
 #### LinkedIn
 
@@ -1431,7 +1431,7 @@ The Product Manager helps the team expose dependencies, failure modes and uncert
 
 Ask for an estimate after the team has named what it is estimating.
 
-If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p20-technical-feasibility
+If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p20-technical-feasibility
 
 **Alt text:** A five-question feasibility checklist sits beside a team-permissions feature and its hidden system dependencies.
 
@@ -1455,7 +1455,7 @@ If you’re a woman in product who wants to make technical decisions with better
 
 **Caption:** What is vibe coding? You build through prompts and iteration. Product Managers can name the assumption, safe data, reviewer and owner. A working screen does not prove production readiness. Women in product can join through our bio. #womeninproduct #womenintech #womenwhobuild #vibecoding
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p21-what-is-vibe-coding
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p21-what-is-vibe-coding
 
 #### Instagram Reels
 
@@ -1473,7 +1473,7 @@ Save these boundaries before your next AI build. Women in product can join the L
 
 **Alt text:** An AI prompt produces a working interface beside four boundary cards labelled assumption, safe data, reviewer and owner.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p21-what-is-vibe-coding
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p21-what-is-vibe-coding
 
 #### YouTube Shorts
 
@@ -1481,7 +1481,7 @@ Save these boundaries before your next AI build. Women in product can join the L
 
 **Description:** Vibe coding uses prompts and iteration to build software with an AI coding tool. Product Managers can use it to answer one product question when they name the assumption, safe data, reviewer and owner. A working screen does not prove production readiness. Subscribe for weekly technical explanations for women in product.
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p21-what-is-vibe-coding
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p21-what-is-vibe-coding
 
 #### LinkedIn
 
@@ -1505,7 +1505,7 @@ Keep four questions beside the build:
 
 A working screen proves that a flow can run in the example you tried. It does not prove security, correctness, reliability or readiness for real customers.
 
-If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p21-what-is-vibe-coding
+If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p21-what-is-vibe-coding
 
 **Alt text:** A vibe-coded interface is framed by four Product Manager questions about the assumption, safe data, review and maintenance.
 
@@ -1527,7 +1527,7 @@ If you’re a woman in product who wants to make technical decisions with better
 
 **Caption:** How to vibe code: define one job, add example input and output, build one flow, test with made-up data and correct one behaviour at a time. Women in product can join early access through our bio. #womeninproduct #womenintech #womenwhobuild #vibecoding
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p22-how-to-vibe-code
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p22-how-to-vibe-code
 
 #### Instagram Reels
 
@@ -1545,7 +1545,7 @@ Save the four-step sequence for your first build. Women in product can join the 
 
 **Alt text:** An interview-note sorter is built through four passes: one job, example input and output, first flow, then tests and corrections.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p22-how-to-vibe-code
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p22-how-to-vibe-code
 
 #### YouTube Shorts
 
@@ -1553,7 +1553,7 @@ Save the four-step sequence for your first build. Women in product can join the 
 
 **Description:** Define one job, provide example input and output, build only the first flow, test with made-up data and correct one behaviour at a time. Delay accounts, payments and sharing until the product question is answered. Subscribe for weekly technical explanations for women in product.
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p22-how-to-vibe-code
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p22-how-to-vibe-code
 
 #### LinkedIn
 
@@ -1576,7 +1576,7 @@ Do not add accounts, payments or sharing until the first product question is ans
 
 Extra features create more work. Add one only when it gives you better evidence about the product question. Stop at the smallest working flow that can test the assumption.
 
-If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p22-how-to-vibe-code
+If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p22-how-to-vibe-code
 
 **Alt text:** A six-step AI prototyping sequence builds and tests a small interview-note sorter with made-up data.
 
@@ -1598,7 +1598,7 @@ If you’re a woman in product who wants to make technical decisions with better
 
 **Caption:** Build an MVP with AI: start with one decision, one user flow, success evidence, safe data, known gaps and a trial owner. Women in product can join early access through our bio. #womeninproduct #womenintech #womenwhobuild #aimvp
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p23-build-mvp-ai
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p23-build-mvp-ai
 
 #### Instagram Reels
 
@@ -1618,7 +1618,7 @@ Save this brief for your next AI prototype. Women in product can join the Little
 
 **Alt text:** An AI-built decision tracker is scoped through one hypothesis, one flow, success evidence, safe data, known gaps and a trial owner.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p23-build-mvp-ai
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p23-build-mvp-ai
 
 #### YouTube Shorts
 
@@ -1626,7 +1626,7 @@ Save this brief for your next AI prototype. Women in product can join the Little
 
 **Description:** Start with one decision, one user flow and success evidence. Use test or approved data, record known gaps, name the trial owner and state what must change before wider release. Build the smallest live version that can test the assumption responsibly. Subscribe for weekly technical explanations for women in product.
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p23-build-mvp-ai
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p23-build-mvp-ai
 
 #### LinkedIn
 
@@ -1651,7 +1651,7 @@ Then record:
 
 A minimum viable product (MVP) is the smallest live version that can test the assumption responsibly. A longer feature list does not improve the test automatically.
 
-If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p23-build-mvp-ai
+If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p23-build-mvp-ai
 
 **Alt text:** A decision-tracker MVP brief shows hypothesis, one live flow, success evidence, safe data, gaps and ownership.
 
@@ -1673,7 +1673,7 @@ If you’re a woman in product who wants to make technical decisions with better
 
 **Caption:** How to use GitHub for non-coders: repository, branch, commit, pull request. Practise one text change in a test project and stop before merging. Women in product can join early access through our bio. #womeninproduct #womenintech #womenwhobuild #github
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p24-github-non-coders
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p24-github-non-coders
 
 #### Instagram Reels
 
@@ -1691,7 +1691,7 @@ Save the four nouns for your first session. Women in product can join the Little
 
 **Alt text:** A test GitHub project shows the relationship between repository, branch, commit and pull request through one visible text change.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p24-github-non-coders
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p24-github-non-coders
 
 #### YouTube Shorts
 
@@ -1699,7 +1699,7 @@ Save the four nouns for your first session. Women in product can join the Little
 
 **Description:** Learn four GitHub nouns: repository, branch, commit and pull request. Practise safely by changing one line of text on a branch in a test project, committing it and opening a pull request without merging. Subscribe for weekly technical explanations for women in product.
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p24-github-non-coders
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p24-github-non-coders
 
 #### LinkedIn
 
@@ -1722,7 +1722,7 @@ You now have a reversible change and a reviewable record.
 
 Do this in a sandbox, not a production project. If the repository belongs to your company, pair with an engineer and follow the team's access and review rules.
 
-If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p24-github-non-coders
+If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p24-github-non-coders
 
 **Alt text:** A four-step GitHub practice shows a test repository, branch, text-change commit and unopened merge, with the pull request ready for review.
 
@@ -1744,7 +1744,7 @@ If you’re a woman in product who wants to make technical decisions with better
 
 **Caption:** Prototype vs production software: check access, data, deletion, failures, monitoring, support, maintenance and release ownership. A polished demo may answer none of them. Women in product can join through our bio. #womeninproduct #womenintech #womenwhobuild #prototype
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p25-prototype-vs-production
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p25-prototype-vs-production
 
 #### Instagram Reels
 
@@ -1764,7 +1764,7 @@ Save this handover checklist. Women in product can join the Little Parrot early-
 
 **Alt text:** A working appointment-booking prototype sits beside an eight-question production handover checklist covering access, data, failures, operations and ownership.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p25-prototype-vs-production
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p25-prototype-vs-production
 
 #### YouTube Shorts
 
@@ -1772,7 +1772,7 @@ Save this handover checklist. Women in product can join the Little Parrot early-
 
 **Description:** A prototype can prove that one flow works well enough to learn from. Production needs evidence about access, data protection and deletion, dependency failures, monitoring, user support, maintenance and release ownership. Subscribe for weekly technical explanations for women in product.
 
-**Pinned comment:** Join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p25-prototype-vs-production
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p25-prototype-vs-production
 
 #### LinkedIn
 
@@ -1797,7 +1797,7 @@ A polished appointment-booking demo may still have none of those answers.
 
 A working prototype can answer its product question. Releasing it also requires evidence about security, reliability, operations and ownership, with engineering reviewing and owning the production path.
 
-If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p25-prototype-vs-production
+If you’re a woman in product who wants to make technical decisions with better evidence, join the Little Parrot early-access list for How Software Works for Product Managers: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-technical-fluency-validation-2026-08&utm_content=p25-prototype-vs-production
 
 **Alt text:** A production-readiness checklist sits beside an appointment-booking prototype and covers access, data, failure handling, monitoring, support, maintenance and ownership.
 

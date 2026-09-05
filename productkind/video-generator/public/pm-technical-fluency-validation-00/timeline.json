@@ -1,7 +1,7 @@
 {
-  "hash": "9f7f244df2f3da2f",
+  "hash": "e186ecad453260cb",
   "fps": 30,
-  "durationInFrames": 1404,
+  "durationInFrames": 1422,
   "words": [
     {
       "text": "You’ve",
@@ -829,7 +829,7 @@
     {
       "index": 17,
       "fromFrame": 1337,
-      "durationInFrames": 67,
+      "durationInFrames": 85,
       "wordFrom": 131,
       "wordTo": 139
     }

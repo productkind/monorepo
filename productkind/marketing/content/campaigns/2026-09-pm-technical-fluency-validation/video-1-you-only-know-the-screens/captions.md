@@ -25,7 +25,7 @@ TikTok video posts have no separate title field, so the caption's first line is 
 
 **Pinned comment:**
 
-Join the waitlist for the learning path here: https://littleparrot.app/guides/technical-product-manager?utm_source=tiktok&utm_medium=organic-social&utm_campaign=tech-pm-26&utm_content=you-only-know-the-screens
+https://littleparrot.app/guides/technical-product-manager?utm_source=tiktok&utm_campaign=tech-pm-26&utm_content=you-only-know-the-screens
 
 ## Instagram Reels
 
@@ -51,7 +51,7 @@ A vertical animated video with captions on screen. Cartoon clips illustrate each
 
 **Bio link while this Reel is active:**
 
-https://littleparrot.app/guides/technical-product-manager?utm_source=instagram&utm_medium=organic-social&utm_campaign=tech-pm-26&utm_content=you-only-know-the-screens
+https://littleparrot.app/guides/technical-product-manager?utm_source=instagram&utm_campaign=tech-pm-26&utm_content=you-only-know-the-screens
 
 **Founder comments:**
 
@@ -71,7 +71,7 @@ You can demo every screen, and that's as far as your answer goes. Behind those s
 
 **Pinned comment:**
 
-Join the waitlist for the learning path here: https://littleparrot.app/guides/technical-product-manager?utm_source=youtube&utm_medium=organic-social&utm_campaign=tech-pm-26&utm_content=you-only-know-the-screens
+https://littleparrot.app/guides/technical-product-manager?utm_source=youtube&utm_campaign=tech-pm-26&utm_content=you-only-know-the-screens
 
 ## Posting checklist
 

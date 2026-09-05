@@ -1,7 +1,7 @@
 {
-  "hash": "23a9f10cb70067de",
+  "hash": "368d286c5423c4c2",
   "fps": 30,
-  "durationInFrames": 1010,
+  "durationInFrames": 1028,
   "words": [
     {
       "text": "If",
@@ -581,7 +581,7 @@
     {
       "index": 8,
       "fromFrame": 840,
-      "durationInFrames": 170,
+      "durationInFrames": 188,
       "wordFrom": 85,
       "wordTo": 102
     }

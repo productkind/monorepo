@@ -25,7 +25,7 @@ Engineering says it's done. Your users still don't have it. It's built, it's tes
 
 **Pinned comment:**
 
-Join the waitlist for the learning path here: https://littleparrot.app/guides/technical-product-manager?utm_source=tiktok&utm_medium=organic-social&utm_campaign=tech-pm-26&utm_content=done-and-users-still-dont-have-it
+https://littleparrot.app/guides/technical-product-manager?utm_source=tiktok&utm_campaign=tech-pm-26&utm_content=done-and-users-still-dont-have-it
 
 ## Instagram Reels
 
@@ -51,7 +51,7 @@ A vertical animated video with captions on screen. Cartoon clips illustrate each
 
 **Bio link while this Reel is active:**
 
-https://littleparrot.app/guides/technical-product-manager?utm_source=instagram&utm_medium=organic-social&utm_campaign=tech-pm-26&utm_content=done-and-users-still-dont-have-it
+https://littleparrot.app/guides/technical-product-manager?utm_source=instagram&utm_campaign=tech-pm-26&utm_content=done-and-users-still-dont-have-it
 
 **Founder comments:**
 
@@ -71,7 +71,7 @@ Engineering says it's done, and your users still don't have it. It's built, it's
 
 **Pinned comment:**
 
-Join the waitlist for the learning path here: https://littleparrot.app/guides/technical-product-manager?utm_source=youtube&utm_medium=organic-social&utm_campaign=tech-pm-26&utm_content=done-and-users-still-dont-have-it
+https://littleparrot.app/guides/technical-product-manager?utm_source=youtube&utm_campaign=tech-pm-26&utm_content=done-and-users-still-dont-have-it
 
 ## Posting checklist
 

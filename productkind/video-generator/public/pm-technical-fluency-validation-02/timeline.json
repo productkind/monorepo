@@ -1,7 +1,7 @@
 {
-  "hash": "3956f3c1637813c7",
+  "hash": "61cb8b21347574c3",
   "fps": 30,
-  "durationInFrames": 1511,
+  "durationInFrames": 1529,
   "words": [
     {
       "text": "A",
@@ -875,7 +875,7 @@
     {
       "index": 20,
       "fromFrame": 1437,
-      "durationInFrames": 74,
+      "durationInFrames": 92,
       "wordFrom": 138,
       "wordTo": 144
     }

@@ -25,7 +25,7 @@ TikTok video posts have no separate title field, so the caption's first line is 
 
 **Pinned comment:**
 
-Join the waitlist for the learning path here: https://littleparrot.app/guides/technical-product-manager?utm_source=tiktok&utm_medium=organic-social&utm_campaign=tech-pm-26&utm_content=said-yes-to-a-simple-feature
+https://littleparrot.app/guides/technical-product-manager?utm_source=tiktok&utm_campaign=tech-pm-26&utm_content=said-yes-to-a-simple-feature
 
 ## Instagram Reels
 
@@ -51,7 +51,7 @@ A vertical animated video with captions on screen. Cartoon clips illustrate each
 
 **Bio link while this Reel is active:**
 
-https://littleparrot.app/guides/technical-product-manager?utm_source=instagram&utm_medium=organic-social&utm_campaign=tech-pm-26&utm_content=said-yes-to-a-simple-feature
+https://littleparrot.app/guides/technical-product-manager?utm_source=instagram&utm_campaign=tech-pm-26&utm_content=said-yes-to-a-simple-feature
 
 **Founder comments:**
 
@@ -71,7 +71,7 @@ A stakeholder asks for something simple, just sync it with the CRM, and you say 
 
 **Pinned comment:**
 
-Join the waitlist for the learning path here: https://littleparrot.app/guides/technical-product-manager?utm_source=youtube&utm_medium=organic-social&utm_campaign=tech-pm-26&utm_content=said-yes-to-a-simple-feature
+https://littleparrot.app/guides/technical-product-manager?utm_source=youtube&utm_campaign=tech-pm-26&utm_content=said-yes-to-a-simple-feature
 
 ## Posting checklist
 

@@ -25,7 +25,7 @@ Everyone in that meeting agreed to the decision, and nobody raised the hard ques
 
 **Pinned comment:**
 
-Join the waitlist for the learning path here: https://littleparrot.app/guides/technical-product-manager?utm_source=tiktok&utm_medium=organic-social&utm_campaign=tech-pm-26&utm_content=nobody-raised-the-hard-part
+https://littleparrot.app/guides/technical-product-manager?utm_source=tiktok&utm_campaign=tech-pm-26&utm_content=nobody-raised-the-hard-part
 
 ## Instagram Reels
 
@@ -51,7 +51,7 @@ A vertical animated video with captions on screen. Cartoon clips illustrate each
 
 **Bio link while this Reel is active:**
 
-https://littleparrot.app/guides/technical-product-manager?utm_source=instagram&utm_medium=organic-social&utm_campaign=tech-pm-26&utm_content=nobody-raised-the-hard-part
+https://littleparrot.app/guides/technical-product-manager?utm_source=instagram&utm_campaign=tech-pm-26&utm_content=nobody-raised-the-hard-part
 
 **Founder comments:**
 
@@ -71,7 +71,7 @@ Everyone agreed to the decision, nobody raised the hard questions, and the work 
 
 **Pinned comment:**
 
-Join the waitlist for the learning path here: https://littleparrot.app/guides/technical-product-manager?utm_source=youtube&utm_medium=organic-social&utm_campaign=tech-pm-26&utm_content=nobody-raised-the-hard-part
+https://littleparrot.app/guides/technical-product-manager?utm_source=youtube&utm_campaign=tech-pm-26&utm_content=nobody-raised-the-hard-part
 
 ## Posting checklist
 
