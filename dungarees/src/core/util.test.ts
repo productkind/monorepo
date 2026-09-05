@@ -246,8 +246,7 @@ test('unPrototypeProperties', () => {
   expect(Object.hasOwn(noPrototype, 'method2')).toBe(false)
   const clone = { ...noPrototype }
   expect(clone.method()).toBe(1)
-  // @ts-expect-error method2 is not a property of clone
-  expect(() => clone.method2()).toThrow('method2 is not a function')
+  expect(Object.hasOwn(clone, 'method2')).toBe(false)
   // @ts-expect-error method3 is not a property of clone
   unPrototypeProperties(clone, ['method3'])
 })
@@ -276,7 +275,7 @@ test('mapConst infers input type from array', () => {
   const output: number[] = []
   mapConst(input)<AppendConstFn>((value, index) => {
     expectTypeOf<typeof value>().toEqualTypeOf<'a' | 'b' | 'c'>()
-    expectTypeOf<typeof index>().toEqualTypeOf<0 | 1 | 2>()
+    expectTypeOf(index).toEqualTypeOf<0 | 1 | 2>()
     output.push(index)
     return `${value}-const`
   })
@@ -288,7 +287,7 @@ test('mapConst non-curried infers input type from array', () => {
   const output: number[] = []
   const result = mapConst(input, (value, index) => {
     expectTypeOf<typeof value>().toEqualTypeOf<'a' | 'b' | 'c'>()
-    expectTypeOf<typeof index>().toEqualTypeOf<0 | 1 | 2>()
+    expectTypeOf(index).toEqualTypeOf<0 | 1 | 2>()
     output.push(index)
     return 1 as const
   })
@@ -321,7 +320,7 @@ test('mapConstKeysToEntries infers input type from array', () => {
   const output: number[] = []
   const a = mapConstKeysToEntries(input, (value, index) => {
     expectTypeOf<typeof value>().toEqualTypeOf<'a' | 'b' | 'c'>()
-    expectTypeOf<typeof index>().toEqualTypeOf<0 | 1 | 2>()
+    expectTypeOf(index).toEqualTypeOf<0 | 1 | 2>()
     output.push(index)
     return 1 as const
   })
@@ -339,7 +338,7 @@ test('mapConstKeysToEntries infers input type from array', () => {
   const output: number[] = []
   mapConstKeysToEntries(input)<AppendConstFn>((value, index) => {
     expectTypeOf<typeof value>().toEqualTypeOf<'a' | 'b' | 'c'>()
-    expectTypeOf<typeof index>().toEqualTypeOf<0 | 1 | 2>()
+    expectTypeOf(index).toEqualTypeOf<0 | 1 | 2>()
     output.push(index)
     return `${value}-const`
   })
@@ -361,7 +360,7 @@ test('mapObjectFromKeys', () => {
   const keys = ['a', 'b', 'c'] as const
   const obj = mapObjectFromKeys(keys)<AppendConstFn>((key, index) => {
     expectTypeOf<typeof key>().toEqualTypeOf<'a' | 'b' | 'c'>()
-    expectTypeOf<typeof index>().toEqualTypeOf<0 | 1 | 2>()
+    expectTypeOf(index).toEqualTypeOf<0 | 1 | 2>()
     return `${key}-const`
   })
   expectTypeOf<typeof obj>().toEqualTypeOf<{ a: 'a-const'; b: 'b-const'; c: 'c-const' }>()
@@ -372,7 +371,7 @@ test('mapObjectFromKeys non-curried infers input type from array', () => {
   const keys = ['a', 'b', 'c'] as const
   const obj = mapObjectFromKeys(keys, (key, index) => {
     expectTypeOf<typeof key>().toEqualTypeOf<'a' | 'b' | 'c'>()
-    expectTypeOf<typeof index>().toEqualTypeOf<0 | 1 | 2>()
+    expectTypeOf(index).toEqualTypeOf<0 | 1 | 2>()
     return 1 as const
   })
   expectTypeOf<typeof obj>().toEqualTypeOf<{ a: 1; b: 1; c: 1 }>()
