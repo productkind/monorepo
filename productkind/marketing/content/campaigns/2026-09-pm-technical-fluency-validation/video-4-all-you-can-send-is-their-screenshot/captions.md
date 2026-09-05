@@ -25,7 +25,7 @@ A customer reports a bug and all you can send engineering is their screenshot. I
 
 **Pinned comment:**
 
-Join the waitlist for the learning path here: https://littleparrot.app/guides/technical-product-manager?utm_source=tiktok&utm_medium=organic-social&utm_campaign=tech-pm-26&utm_content=all-you-can-send-is-their-screenshot
+https://littleparrot.app/guides/technical-product-manager?utm_source=tiktok&utm_campaign=tech-pm-26&utm_content=all-you-can-send-is-their-screenshot
 
 ## Instagram Reels
 
@@ -51,7 +51,7 @@ A vertical animated video with captions on screen. Cartoon clips illustrate each
 
 **Bio link while this Reel is active:**
 
-https://littleparrot.app/guides/technical-product-manager?utm_source=instagram&utm_medium=organic-social&utm_campaign=tech-pm-26&utm_content=all-you-can-send-is-their-screenshot
+https://littleparrot.app/guides/technical-product-manager?utm_source=instagram&utm_campaign=tech-pm-26&utm_content=all-you-can-send-is-their-screenshot
 
 **Founder comments:**
 
@@ -71,7 +71,7 @@ A customer reports a bug, and all you can send engineering is their screenshot. 
 
 **Pinned comment:**
 
-Join the waitlist for the learning path here: https://littleparrot.app/guides/technical-product-manager?utm_source=youtube&utm_medium=organic-social&utm_campaign=tech-pm-26&utm_content=all-you-can-send-is-their-screenshot
+https://littleparrot.app/guides/technical-product-manager?utm_source=youtube&utm_campaign=tech-pm-26&utm_content=all-you-can-send-is-their-screenshot
 
 ## Posting checklist
 

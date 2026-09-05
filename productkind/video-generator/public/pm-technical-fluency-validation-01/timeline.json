@@ -1,7 +1,7 @@
 {
-  "hash": "3f61ea680212a2be",
+  "hash": "50171d48c9e2b5c2",
   "fps": 30,
-  "durationInFrames": 1451,
+  "durationInFrames": 1469,
   "words": [
     {
       "text": "“So",
@@ -875,7 +875,7 @@
     {
       "index": 20,
       "fromFrame": 1371,
-      "durationInFrames": 80,
+      "durationInFrames": 98,
       "wordFrom": 134,
       "wordTo": 144
     }

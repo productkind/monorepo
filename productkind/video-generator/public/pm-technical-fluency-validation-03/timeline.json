@@ -1,7 +1,7 @@
 {
-  "hash": "b065647850d4e086",
+  "hash": "e78d561839ea6c4a",
   "fps": 30,
-  "durationInFrames": 1432,
+  "durationInFrames": 1450,
   "words": [
     {
       "text": "Engineering",
@@ -799,7 +799,7 @@
     {
       "index": 17,
       "fromFrame": 1327,
-      "durationInFrames": 105,
+      "durationInFrames": 123,
       "wordFrom": 123,
       "wordTo": 133
     }

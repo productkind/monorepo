@@ -24,7 +24,7 @@ The quoted hooks preserve representative phrases recorded in the research. They 
 
 **Caption:** Technical confidence for Product Managers can start with three columns: what I know, what this decision needs and who can verify it. Join early access to build more confidence in technical product conversations. Link in bio. #womeninproduct #womenintech #womenproductmanagers #productengineering
 
-**Pinned comment:** Join early access to build more confidence in technical product conversations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o01-feel-behind
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o01-feel-behind
 
 #### Instagram Reels
 
@@ -40,7 +40,7 @@ Save the three-column note for your next refinement or design discussion. If you
 
 **Alt text:** A presenter points to three columns labelled what I know, what this decision needs and who can verify it.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o01-feel-behind
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o01-feel-behind
 
 #### YouTube Shorts
 
@@ -48,7 +48,7 @@ Save the three-column note for your next refinement or design discussion. If you
 
 **Description:** One PM said, “I feel behind in my technical knowledge and skill set.” Use three columns before your next engineering meeting: what you know, what the decision requires and who can verify it. Subscribe for practical technical judgement tips for women in product.
 
-**Pinned comment:** Join early access to build more confidence in technical product conversations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o01-feel-behind
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o01-feel-behind
 
 #### LinkedIn
 
@@ -66,7 +66,7 @@ Suppose the team is discussing whether to add a new account-permission setting. 
 
 That is enough to take part in the discussion. State the decision, bring the evidence you have and ask for the missing context. Then play the answer back in your own words so the engineer can correct anything you misunderstood.
 
-Women in product can join early access to build more confidence in technical product conversations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o01-feel-behind
+Women in product can join early access to build more confidence in technical product conversations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o01-feel-behind
 
 **Alt text:** Three columns help a Product Manager separate known facts, information required for a decision and the person who can verify it.
 
@@ -88,7 +88,7 @@ Women in product can join early access to build more confidence in technical pro
 
 **Caption:** Feel like the least knowledgeable person in a technical meeting? Follow the decision: what are we choosing, what changes for users and what needs clarification? #womeninproduct #womenintech #womenproductmanagers #technicalconfidence
 
-**Pinned comment:** Join early access to build more confidence in technical product conversations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o02-least-knowledgeable
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o02-least-knowledgeable
 
 #### Instagram Reels
 
@@ -108,7 +108,7 @@ Save this four-question note for your next technical discussion. If you want to 
 
 **Alt text:** A meeting note lists the decision, an unfamiliar term, the user effect and one follow-up question.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o02-least-knowledgeable
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o02-least-knowledgeable
 
 #### YouTube Shorts
 
@@ -116,7 +116,7 @@ Save this four-question note for your next technical discussion. If you want to 
 
 **Description:** Feel like “the least knowledgeable person in the room”? Follow the decision instead of every technical detail. Record what the team is choosing, what changes for users and one question that checks your understanding.
 
-**Pinned comment:** Join early access to build more confidence in technical product conversations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o02-least-knowledgeable
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o02-least-knowledgeable
 
 #### LinkedIn
 
@@ -137,7 +137,7 @@ Explain the choice in your own words. For example: “We can support the new per
 
 The engineer can correct the system detail. You leave with a decision you can explain to the rest of the business.
 
-Women in product can join early access to build more confidence in technical product conversations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o02-least-knowledgeable
+Women in product can join early access to build more confidence in technical product conversations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o02-least-knowledgeable
 
 **Alt text:** A Product Manager follows a technical meeting using four prompts about the decision, terminology, user effect and next question.
 
@@ -159,7 +159,7 @@ Women in product can join early access to build more confidence in technical pro
 
 **Caption:** Lost in engineering meetings? Listen for three things: what changed, why it changed and what blocks the next step. Then play it back. #womeninproduct #womenintech #womenproductmanagers #engineeringmeetings
 
-**Pinned comment:** Join early access to build more confidence in technical product conversations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o03-kinda-lost
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o03-kinda-lost
 
 #### Instagram Reels
 
@@ -177,7 +177,7 @@ Save the three-sentence playback for your next stand-up. If you want to build mo
 
 **Alt text:** Three speech bubbles summarise what changed, why it changed and what blocks the next step.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o03-kinda-lost
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o03-kinda-lost
 
 #### YouTube Shorts
 
@@ -185,7 +185,7 @@ Save the three-sentence playback for your next stand-up. If you want to build mo
 
 **Description:** Listen for what changed, why it changed and what blocks the next step. Play those three points back to the engineer. You can check your understanding without repeating every implementation detail.
 
-**Pinned comment:** Join early access to build more confidence in technical product conversations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o03-kinda-lost
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o03-kinda-lost
 
 #### LinkedIn
 
@@ -207,7 +207,7 @@ You have captured the product state, the evidence and the unresolved decision. T
 
 This gives you enough context to update a stakeholder, adjust the release plan or ask what evidence the team needs next.
 
-Women in product can join early access to build more confidence in technical product conversations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o03-kinda-lost
+Women in product can join early access to build more confidence in technical product conversations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o03-kinda-lost
 
 **Alt text:** A stand-up update is reduced to three questions about the change, its reason and the blocker.
 
@@ -229,7 +229,7 @@ Women in product can join early access to build more confidence in technical pro
 
 **Caption:** Asking for clarification in technical meetings? Use three steps: define it, show where it appears in our product, connect it to the decision. #womeninproduct #womenintech #womenproductmanagers #technicalmeetings
 
-**Pinned comment:** Join early access to build more confidence in technical product conversations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o04-clarify
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o04-clarify
 
 #### Instagram Reels
 
@@ -249,7 +249,7 @@ Save this clarification ladder for your next technical meeting. If you want to b
 
 **Alt text:** A three-step ladder reads define the term, find it in our product and connect it to the decision.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o04-clarify
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o04-clarify
 
 #### YouTube Shorts
 
@@ -257,7 +257,7 @@ Save this clarification ladder for your next technical meeting. If you want to b
 
 **Description:** Ask three questions when a technical term stops you: What does it mean? Where does it appear in our product? What does it change about this decision? The answer becomes product context you can use.
 
-**Pinned comment:** Join early access to build more confidence in technical product conversations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o04-clarify
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o04-clarify
 
 #### LinkedIn
 
@@ -275,7 +275,7 @@ Suppose an engineer says the proposed feature creates a dependency. Ask which te
 
 The definition helps you follow the sentence. The product example shows you where the concept applies. The final question gives you information you can use in prioritisation, sequencing or stakeholder communication.
 
-Women in product can join early access to build more confidence in technical product conversations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o04-clarify
+Women in product can join early access to build more confidence in technical product conversations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o04-clarify
 
 **Alt text:** Three questions connect an unfamiliar technical term to the Product Manager's current decision.
 
@@ -297,7 +297,7 @@ Women in product can join early access to build more confidence in technical pro
 
 **Caption:** Productive conversations with engineers start with four things: decision, evidence, unknowns and a specific ask. Which one is missing from your next meeting? #womeninproduct #womenintech #womenproductmanagers #productengineering
 
-**Pinned comment:** Join early access to build more confidence in technical product conversations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o05-productive-conversations
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o05-productive-conversations
 
 #### Instagram Reels
 
@@ -315,7 +315,7 @@ Save the four headings for your next engineering discussion. If you want to buil
 
 **Alt text:** A conversation card has four headings: decision, evidence, unknowns and specific ask.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o05-productive-conversations
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o05-productive-conversations
 
 #### YouTube Shorts
 
@@ -323,7 +323,7 @@ Save the four headings for your next engineering discussion. If you want to buil
 
 **Description:** Prepare four headings before an engineering conversation: decision, evidence, unknowns and specific ask. End by confirming the options, unanswered questions and who will verify each one.
 
-**Pinned comment:** Join early access to build more confidence in technical product conversations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o05-productive-conversations
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o05-productive-conversations
 
 #### LinkedIn
 
@@ -342,7 +342,7 @@ Suppose you are considering a data-export feature. You may already know which us
 
 Finish by playing back the options, the remaining unknowns and who will verify each one. Everyone leaves knowing what has been decided and what must happen next.
 
-Women in product can join early access to build more confidence in technical product conversations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o05-productive-conversations
+Women in product can join early access to build more confidence in technical product conversations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o05-productive-conversations
 
 **Alt text:** Four preparation prompts help a Product Manager connect an engineering conversation to a decision and next step.
 
@@ -366,7 +366,7 @@ Women in product can join early access to build more confidence in technical pro
 
 **Caption:** Want to “speak the language of engineers”? Translate one term into a product example and its effect on users or delivery. Then ask an engineer to verify it. #womeninproduct #womenintech #womenproductmanagers #engineeringcommunication
 
-**Pinned comment:** Join early access to practise asking sharper questions and bringing useful evidence to engineering: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o06-speak-language
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o06-speak-language
 
 #### Instagram Reels
 
@@ -384,7 +384,7 @@ Save the three-line translation for the next unfamiliar term. If you want to pra
 
 **Alt text:** A technical term is translated into a definition, a product example and an effect on users or delivery.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o06-speak-language
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o06-speak-language
 
 #### YouTube Shorts
 
@@ -392,7 +392,7 @@ Save the three-line translation for the next unfamiliar term. If you want to pra
 
 **Description:** Turn one technical term into a definition, an example from your product and an effect on users or delivery. Play it back to an engineer so they can correct the parts you misunderstood.
 
-**Pinned comment:** Join early access to practise asking sharper questions and bringing useful evidence to engineering: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o06-speak-language
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o06-speak-language
 
 #### LinkedIn
 
@@ -410,7 +410,7 @@ For example, caching means storing a temporary copy of information so the produc
 
 Play that explanation back to an engineer and ask what you missed. You now have language you can use in a requirement, trade-off discussion or stakeholder update.
 
-Women in product can join early access to practise asking sharper questions and bringing useful evidence to engineering: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o06-speak-language
+Women in product can join early access to practise asking sharper questions and bringing useful evidence to engineering: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o06-speak-language
 
 **Alt text:** Three lines connect an engineering term to the Product Manager's own product and the resulting user or delivery effect.
 
@@ -432,7 +432,7 @@ Women in product can join early access to practise asking sharper questions and 
 
 **Caption:** How to ask engineers better questions: What changes? What depends on it? What could fail? How will we know it worked? Save these for refinement. #womeninproduct #womenintech #womenproductmanagers #productquestions
 
-**Pinned comment:** Join early access to practise asking sharper questions and bringing useful evidence to engineering: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o07-sharper-questions
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o07-sharper-questions
 
 #### Instagram Reels
 
@@ -452,7 +452,7 @@ Save these questions for your next refinement. If you want to practise asking sh
 
 **Alt text:** Five question cards ask what changes, what depends on it, what could fail, how success will be checked and how the change could be reversed.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o07-sharper-questions
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o07-sharper-questions
 
 #### YouTube Shorts
 
@@ -460,7 +460,7 @@ Save these questions for your next refinement. If you want to practise asking sh
 
 **Description:** Replace “Is this possible?” with: What changes? What depends on it? What could fail? How will we know it worked? Add “How would we undo it?” for decisions that are difficult to reverse.
 
-**Pinned comment:** Join early access to practise asking sharper questions and bringing useful evidence to engineering: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o07-sharper-questions
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o07-sharper-questions
 
 #### LinkedIn
 
@@ -480,7 +480,7 @@ The answers reveal scope, dependencies, failure cases, evidence and reversibilit
 
 You do not need to predict the implementation. Make the product decision and its conditions explicit, then ask engineering to recommend an approach.
 
-Women in product can join early access to practise asking sharper questions and bringing useful evidence to engineering: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o07-sharper-questions
+Women in product can join early access to practise asking sharper questions and bringing useful evidence to engineering: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o07-sharper-questions
 
 **Alt text:** Five sharper questions reveal the change, dependencies, failure cases, success evidence and reversibility.
 
@@ -502,7 +502,7 @@ Women in product can join early access to practise asking sharper questions and 
 
 **Caption:** Preparing for technical stakeholder questions? Record the question, evidence checked, current answer, confidence and who should verify it. #womeninproduct #womenintech #womenproductmanagers #stakeholdermanagement
 
-**Pinned comment:** Join early access to practise asking sharper questions and bringing useful evidence to engineering: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o08-burden
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o08-burden
 
 #### Instagram Reels
 
@@ -520,7 +520,7 @@ Save the five-line note for your next customer or leadership question. If you wa
 
 **Alt text:** A first-pass note records a stakeholder question, evidence, current answer, confidence and verification owner.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o08-burden
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o08-burden
 
 #### YouTube Shorts
 
@@ -528,7 +528,7 @@ Save the five-line note for your next customer or leadership question. If you wa
 
 **Description:** Make a five-line first pass before forwarding a technical question: question, evidence checked, current answer, confidence and who should verify it. Give the next person the remaining uncertainty, not the whole investigation.
 
-**Pinned comment:** Join early access to practise asking sharper questions and bringing useful evidence to engineering: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o08-burden
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o08-burden
 
 #### LinkedIn
 
@@ -550,7 +550,7 @@ If the answer is still unclear, ask engineering a narrow question about how dele
 
 Your stakeholder receives an answer with evidence and an honest confidence level.
 
-Women in product can join early access to practise asking sharper questions and bringing useful evidence to engineering: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o08-burden
+Women in product can join early access to practise asking sharper questions and bringing useful evidence to engineering: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o08-burden
 
 **Alt text:** A Product Manager prepares an evidence-based answer to a technical stakeholder question using five lines.
 
@@ -572,7 +572,7 @@ Women in product can join early access to practise asking sharper questions and 
 
 **Caption:** Product Managers can contribute to technical discussions by narrowing the evidence: expected, observed, affected users, conditions and first failure. #womeninproduct #womenintech #womenproductmanagers #buginvestigation
 
-**Pinned comment:** Join early access to practise asking sharper questions and bringing useful evidence to engineering: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o09-contribute
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o09-contribute
 
 #### Instagram Reels
 
@@ -592,7 +592,7 @@ Save this evidence list for the next customer issue. If you want to practise ask
 
 **Alt text:** An evidence card records expected behaviour, observed behaviour, affected users, reproduction conditions and the first failure.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o09-contribute
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o09-contribute
 
 #### YouTube Shorts
 
@@ -600,7 +600,7 @@ Save this evidence list for the next customer issue. If you want to practise ask
 
 **Description:** Narrow a product issue before engineering investigates it. Record expected and observed behaviour, affected users, reproduction conditions and the first unexpected result. Engineering owns the fix; Product can improve the evidence.
 
-**Pinned comment:** Join early access to practise asking sharper questions and bringing useful evidence to engineering: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o09-contribute
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o09-contribute
 
 #### LinkedIn
 
@@ -624,7 +624,7 @@ The second report gives engineering a narrower investigation. It also gives Prod
 
 Engineering still owns the diagnosis and production fix. A Product Manager can improve the quality of the evidence and the decision around it.
 
-Women in product can join early access to practise asking sharper questions and bringing useful evidence to engineering: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o09-contribute
+Women in product can join early access to practise asking sharper questions and bringing useful evidence to engineering: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o09-contribute
 
 **Alt text:** A vague payment complaint becomes a specific report about returning customers and saved cards.
 
@@ -646,7 +646,7 @@ Women in product can join early access to practise asking sharper questions and 
 
 **Caption:** What technical depth should a Product Manager have? Prepare evidence: explain a flow, assess a change, investigate an issue and defend a decision. #womeninproduct #womenintech #womenproductmanagers #pmcareer
 
-**Pinned comment:** Join early access to practise asking sharper questions and bringing useful evidence to engineering: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o10-technical-depth
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o10-technical-depth
 
 #### Instagram Reels
 
@@ -666,7 +666,7 @@ Save these four proof prompts for your next review or interview. If you want to 
 
 **Alt text:** Four examples show a Product Manager explaining a flow, assessing a change, investigating an issue and defending a recommendation.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o10-technical-depth
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o10-technical-depth
 
 #### YouTube Shorts
 
@@ -674,7 +674,7 @@ Save these four proof prompts for your next review or interview. If you want to 
 
 **Description:** Show technical depth through Product work: explain a flow, assess a proposed change, investigate an issue and defend a recommendation. Check the role because the expected depth changes across teams.
 
-**Pinned comment:** Join early access to practise asking sharper questions and bringing useful evidence to engineering: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o10-technical-depth
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o10-technical-depth
 
 #### LinkedIn
 
@@ -693,7 +693,7 @@ Prepare one relevant example for each expectation in the role. A system map, dec
 
 Ask the hiring manager which technical decisions the PM will participate in, which evidence she can inspect and where engineering ownership begins. The answer gives you a much more useful preparation plan.
 
-Women in product can join early access to practise asking sharper questions and bringing useful evidence to engineering: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o10-technical-depth
+Women in product can join early access to practise asking sharper questions and bringing useful evidence to engineering: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o10-technical-depth
 
 **Alt text:** A proof-of-work folder contains a product-flow explanation, change assessment, issue investigation and decision recommendation.
 
@@ -717,7 +717,7 @@ Women in product can join early access to practise asking sharper questions and 
 
 **Caption:** How to understand rough software scope: check screens, rules, data, connected systems and release. You are finding the work that needs an estimate. #womeninproduct #womenintech #womenproductmanagers #softwarescope
 
-**Pinned comment:** Join early access to practise spotting scope, dependencies and release risk before commitment: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o11-rough-scope
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o11-rough-scope
 
 #### Instagram Reels
 
@@ -735,7 +735,7 @@ Save these five areas for your next refinement. If you want to practise spotting
 
 **Alt text:** A proposed account-role feature is mapped across screens, product rules, data, connected systems and release.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o11-rough-scope
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o11-rough-scope
 
 #### YouTube Shorts
 
@@ -743,7 +743,7 @@ Save these five areas for your next refinement. If you want to practise spotting
 
 **Description:** Trace a proposed feature across screens, product rules, data, connected systems or teams, and safe release. You are identifying the work that engineering needs to investigate and estimate.
 
-**Pinned comment:** Join early access to practise spotting scope, dependencies and release risk before commitment: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o11-rough-scope
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o11-rough-scope
 
 #### LinkedIn
 
@@ -761,7 +761,7 @@ Imagine adding a new account role. The visible change may be one settings page. 
 
 You are identifying the work engineering needs to investigate before estimating it. That gives you a better basis for sequencing, cutting scope and communicating uncertainty.
 
-Women in product can join early access to practise spotting scope, dependencies and release risk before commitment: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o11-rough-scope
+Women in product can join early access to practise spotting scope, dependencies and release risk before commitment: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o11-rough-scope
 
 **Alt text:** Five questions expose the visible and hidden work behind a proposed software feature.
 
@@ -783,7 +783,7 @@ Women in product can join early access to practise spotting scope, dependencies 
 
 **Caption:** How to spot technical complexity early: check new states, permissions, existing data, external systems, volume and failure recovery. #womeninproduct #womenintech #womenproductmanagers #productscope
 
-**Pinned comment:** Join early access to practise spotting scope, dependencies and release risk before commitment: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o12-spot-complexity
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o12-spot-complexity
 
 #### Instagram Reels
 
@@ -801,7 +801,7 @@ Save the six signals for your next product review. If you want to practise spott
 
 **Alt text:** Six complexity signals surround an order-cancellation feature: state, permissions, data, external systems, volume and recovery.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o12-spot-complexity
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o12-spot-complexity
 
 #### YouTube Shorts
 
@@ -809,7 +809,7 @@ Save the six signals for your next product review. If you want to practise spott
 
 **Description:** Check six signals before commitment: new states, permissions, existing data, external systems or teams, volume and failure recovery. Each signal shows where the team needs more evidence.
 
-**Pinned comment:** Join early access to practise spotting scope, dependencies and release risk before commitment: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o12-spot-complexity
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o12-spot-complexity
 
 #### LinkedIn
 
@@ -830,7 +830,7 @@ Each signal identifies a question engineering needs to investigate before estima
 
 Product can then adjust scope, sequencing or the promise made to users while there is still time to change it.
 
-Women in product can join early access to practise spotting scope, dependencies and release risk before commitment: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o12-spot-complexity
+Women in product can join early access to practise spotting scope, dependencies and release risk before commitment: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o12-spot-complexity
 
 **Alt text:** An order-cancellation example reveals six early signals of wider software complexity.
 
@@ -852,7 +852,7 @@ Women in product can join early access to practise spotting scope, dependencies 
 
 **Caption:** Why simple software features become complex: trace where data is stored, shown, shared, edited and applied to existing users. Then cut scope by user case. #womeninproduct #womenintech #womenproductmanagers #featurescope
 
-**Pinned comment:** Join early access to practise spotting scope, dependencies and release risk before commitment: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o13-simple-feature
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o13-simple-feature
 
 #### Instagram Reels
 
@@ -872,7 +872,7 @@ Save these questions for the next “small” request. If you want to practise s
 
 **Alt text:** A preferred-name field connects to storage, screens, emails, external systems, permissions and existing accounts.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o13-simple-feature
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o13-simple-feature
 
 #### YouTube Shorts
 
@@ -880,7 +880,7 @@ Save these questions for the next “small” request. If you want to practise s
 
 **Description:** A new profile field can affect storage, screens, messages, connected systems, permissions and existing accounts. Ask which user cases create the extra work and whether the first release needs all of them.
 
-**Pinned comment:** Join early access to practise spotting scope, dependencies and release risk before commitment: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o13-simple-feature
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o13-simple-feature
 
 #### LinkedIn
 
@@ -902,7 +902,7 @@ If the scope grows, ask which user cases create the extra work. The first releas
 
 That is a product trade-off you can make with technical evidence.
 
-Women in product can join early access to practise spotting scope, dependencies and release risk before commitment: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o13-simple-feature
+Women in product can join early access to practise spotting scope, dependencies and release risk before commitment: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o13-simple-feature
 
 **Alt text:** A seemingly small profile field expands into decisions about data, permissions, connected systems and existing users.
 
@@ -924,7 +924,7 @@ Women in product can join early access to practise spotting scope, dependencies 
 
 **Caption:** How to pressure-test a feature with engineering: ask about assumptions, evidence, dependencies, failure and difficult-to-reverse choices. #womeninproduct #womenintech #womenproductmanagers #productdiscovery
 
-**Pinned comment:** Join early access to practise spotting scope, dependencies and release risk before commitment: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o14-pressure-test
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o14-pressure-test
 
 #### Instagram Reels
 
@@ -942,7 +942,7 @@ Save the five questions for your next commitment review. If you want to practise
 
 **Alt text:** A feature review asks about assumptions, evidence, dependencies, failure and difficult-to-reverse decisions.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o14-pressure-test
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o14-pressure-test
 
 #### YouTube Shorts
 
@@ -950,7 +950,7 @@ Save the five questions for your next commitment review. If you want to practise
 
 **Description:** Before commitment, ask about assumptions, evidence, dependencies, failure and difficult-to-reverse decisions. Keep unresolved answers beside the roadmap item so the estimate retains its uncertainty.
 
-**Pinned comment:** Join early access to practise spotting scope, dependencies and release risk before commitment: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o14-pressure-test
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o14-pressure-test
 
 #### LinkedIn
 
@@ -970,7 +970,7 @@ Engineering can investigate technical unknowns such as system capability and fai
 
 The result is an honest scope range, a visible risk list and a clear reason to delay, narrow or proceed with the commitment.
 
-Women in product can join early access to practise spotting scope, dependencies and release risk before commitment: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o14-pressure-test
+Women in product can join early access to practise spotting scope, dependencies and release risk before commitment: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o14-pressure-test
 
 **Alt text:** Five pre-commitment questions keep assumptions, evidence and unresolved risks visible beside a roadmap item.
 
@@ -992,7 +992,7 @@ Women in product can join early access to practise spotting scope, dependencies 
 
 **Caption:** Questions to ask before shipping a feature: who could be affected, how will we detect failure, what is the fallback, can we turn it off and can we restore the previous version? #womeninproduct #womenintech #womenproductmanagers #productrelease
 
-**Pinned comment:** Join early access to practise spotting scope, dependencies and release risk before commitment: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o15-what-breaks
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o15-what-breaks
 
 #### Instagram Reels
 
@@ -1010,7 +1010,7 @@ Save these questions for your next launch review. If you want to practise spotti
 
 **Alt text:** A release-risk card asks about affected users, detection, fallback, turning the change off and restoring the previous version.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o15-what-breaks
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o15-what-breaks
 
 #### YouTube Shorts
 
@@ -1018,7 +1018,7 @@ Save these questions for your next launch review. If you want to practise spotti
 
 **Description:** Before release, ask who could be affected, how the team will detect failure, what users can do meanwhile, whether the change can be turned off and how the previous working version can be restored.
 
-**Pinned comment:** Join early access to practise spotting scope, dependencies and release risk before commitment: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o15-what-breaks
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o15-what-breaks
 
 #### LinkedIn
 
@@ -1038,7 +1038,7 @@ The answers may show that the risk is understood and acceptable. They may show t
 
 Product brings the user and business consequences into the release decision, while engineering advises on the release mechanism.
 
-Women in product can join early access to practise spotting scope, dependencies and release risk before commitment: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o15-what-breaks
+Women in product can join early access to practise spotting scope, dependencies and release risk before commitment: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o15-what-breaks
 
 **Alt text:** Five questions help a Product Manager discuss the user and business risk of releasing a feature.
 
@@ -1062,7 +1062,7 @@ Women in product can join early access to practise spotting scope, dependencies 
 
 **Caption:** Small technical tasks for Product Managers need a safety line: inspect, reproduce, change in a test space, verify and hand over. Agree the boundary first. #womeninproduct #womenintech #womenproductmanagers #productskills
 
-**Pinned comment:** Join early access to practise safe first-pass data and issue investigations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o16-small-work
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o16-small-work
 
 #### Instagram Reels
 
@@ -1080,7 +1080,7 @@ Save the five-step safety line for the next small task. If you want to practise 
 
 **Alt text:** A safe participation ladder moves through inspect, reproduce, test-space change, verification and handover.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o16-small-work
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o16-small-work
 
 #### YouTube Shorts
 
@@ -1088,7 +1088,7 @@ Save the five-step safety line for the next small task. If you want to practise 
 
 **Description:** Use a safety line for bounded technical work: inspect, reproduce, change only in a test space, verify and hand over. Agree the boundary with engineering and keep customer data and production changes outside it.
 
-**Pinned comment:** Join early access to practise safe first-pass data and issue investigations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o16-small-work
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o16-small-work
 
 #### LinkedIn
 
@@ -1106,7 +1106,7 @@ The task might be editing copy in a separate test version, checking a data segme
 
 This lets a Product Manager handle a safe first pass and gives engineering an artefact or evidence they can inspect.
 
-Women in product can join early access to practise safe first-pass data and issue investigations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o16-small-work
+Women in product can join early access to practise safe first-pass data and issue investigations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o16-small-work
 
 **Alt text:** Five steps show how a Product Manager can complete and hand over a bounded technical task safely.
 
@@ -1128,7 +1128,7 @@ Women in product can join early access to practise safe first-pass data and issu
 
 **Caption:** How to pull your own data as a Product Manager: name the decision, define the metric, choose the segment and validate the result. The number needs a definition. #womeninproduct #womenintech #womenproductmanagers #productanalytics
 
-**Pinned comment:** Join early access to practise safe first-pass data and issue investigations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o17-pull-data
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o17-pull-data
 
 #### Instagram Reels
 
@@ -1146,7 +1146,7 @@ Save the four checks for your next product-data question. If you want to practis
 
 **Alt text:** A product-data check connects a decision to a metric definition, segment and validation step.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o17-pull-data
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o17-pull-data
 
 #### YouTube Shorts
 
@@ -1154,7 +1154,7 @@ Save the four checks for your next product-data question. If you want to practis
 
 **Description:** Before pulling a number, name the decision, define the metric, choose the segment and validate the result. You should be able to explain what the number includes, excludes and when an analyst should check it.
 
-**Pinned comment:** Join early access to practise safe first-pass data and issue investigations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o17-pull-data
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o17-pull-data
 
 #### LinkedIn
 
@@ -1173,7 +1173,7 @@ Suppose you want to know whether trial users who invite a colleague retain bette
 
 Pulling a number independently is useful when you can explain what it includes, what it excludes and which data-quality or statistical questions need an analyst.
 
-Women in product can join early access to practise safe first-pass data and issue investigations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o17-pull-data
+Women in product can join early access to practise safe first-pass data and issue investigations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o17-pull-data
 
 **Alt text:** Four prompts help a Product Manager produce and validate a trustworthy answer to a product-data question.
 
@@ -1195,7 +1195,7 @@ Women in product can join early access to practise safe first-pass data and issu
 
 **Caption:** Blocked by analytics on a product decision? Write what you will choose if the data shows A and what you will choose if it shows B. Then request the smallest useful data segment. #womeninproduct #womenintech #womenproductmanagers #productanalytics
 
-**Pinned comment:** Join early access to practise safe first-pass data and issue investigations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o18-analytics-blocked
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o18-analytics-blocked
 
 #### Instagram Reels
 
@@ -1213,7 +1213,7 @@ Save the decision rule for your next analytics request. If you want to practise 
 
 **Alt text:** A decision rule connects two possible data results to two explicit product choices.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o18-analytics-blocked
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o18-analytics-blocked
 
 #### YouTube Shorts
 
@@ -1221,7 +1221,7 @@ Save the decision rule for your next analytics request. If you want to practise 
 
 **Description:** State what you will choose if the data shows one result and what you will choose if it shows another. Then request the smallest metric, segment and time period that can distinguish between them.
 
-**Pinned comment:** Join early access to practise safe first-pass data and issue investigations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o18-analytics-blocked
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o18-analytics-blocked
 
 #### LinkedIn
 
@@ -1239,7 +1239,7 @@ For example: “We are deciding whether to improve mobile onboarding before desk
 
 If neither possible result would change your choice, the data request is not the blocker. If it would, you now have a focused question to pull yourself or send to an analyst.
 
-Women in product can join early access to practise safe first-pass data and issue investigations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o18-analytics-blocked
+Women in product can join early access to practise safe first-pass data and issue investigations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o18-analytics-blocked
 
 **Alt text:** A broad analytics request becomes one decision, two possible results and the product choice attached to each.
 
@@ -1261,7 +1261,7 @@ Women in product can join early access to practise safe first-pass data and issu
 
 **Caption:** How Product Managers can investigate bugs: reproduce in a test space, record time, account, device and steps, then match the event in safe read-only logs. #womeninproduct #womenintech #womenproductmanagers #buginvestigation
 
-**Pinned comment:** Join early access to practise safe first-pass data and issue investigations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o19-find-logs
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o19-find-logs
 
 #### Instagram Reels
 
@@ -1279,7 +1279,7 @@ Save the evidence list for your next bug. If you want to practise safe first-pas
 
 **Alt text:** A test error is connected to a time-stamped software record using the time, account and reproduction steps.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o19-find-logs
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o19-find-logs
 
 #### YouTube Shorts
 
@@ -1287,7 +1287,7 @@ Save the evidence list for your next bug. If you want to practise safe first-pas
 
 **Description:** Reproduce the issue in a test environment. Record time, test account, device, steps, expected and actual results. If you have safe read access, match the event in the software logs and hand the evidence to engineering.
 
-**Pinned comment:** Join early access to practise safe first-pass data and issue investigations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o19-find-logs
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o19-find-logs
 
 #### LinkedIn
 
@@ -1307,7 +1307,7 @@ Copy only the relevant entry and remove personal data before sharing it.
 
 Your goal is to connect the user's action to evidence and narrow the handover. You might show that the request reached the server, the computer system processing it, and failed with a particular error at 10:42. Engineering still decides the cause and production fix.
 
-Women in product can join early access to practise safe first-pass data and issue investigations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o19-find-logs
+Women in product can join early access to practise safe first-pass data and issue investigations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o19-find-logs
 
 **Alt text:** A Product Manager reproduces a test issue and matches it to a time-stamped software log entry.
 
@@ -1329,7 +1329,7 @@ Women in product can join early access to practise safe first-pass data and issu
 
 **Caption:** Investigating a customer error message? Capture the exact text, time, user action, account state, reproduction result and workaround. Separate facts from guesses. #womeninproduct #womenintech #womenproductmanagers #customerissues
 
-**Pinned comment:** Join early access to practise safe first-pass data and issue investigations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o20-customer-error
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o20-customer-error
 
 #### Instagram Reels
 
@@ -1347,7 +1347,7 @@ Save the six evidence fields for the next support question. If you want to pract
 
 **Alt text:** Six evidence fields turn a customer error message into a focused first-pass investigation.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o20-customer-error
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o20-customer-error
 
 #### YouTube Shorts
 
@@ -1355,7 +1355,7 @@ Save the six evidence fields for the next support question. If you want to pract
 
 **Description:** Capture the exact error, time, user action, account state, reproduction result and workaround. Keep observed facts separate from possible causes before handing the issue to engineering.
 
-**Pinned comment:** Join early access to practise safe first-pass data and issue investigations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o20-customer-error
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o20-customer-error
 
 #### LinkedIn
 
@@ -1376,7 +1376,7 @@ Then separate fact from inference.
 
 This first pass helps Support give the customer an accurate update. If engineering needs to investigate, they receive the conditions, evidence and current uncertainty instead of a screenshot without context.
 
-Women in product can join early access to practise safe first-pass data and issue investigations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o20-customer-error
+Women in product can join early access to practise safe first-pass data and issue investigations: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o20-customer-error
 
 **Alt text:** A support message becomes a six-field investigation with observed facts separated from possible causes.
 
@@ -1400,7 +1400,7 @@ Women in product can join early access to practise safe first-pass data and issu
 
 **Caption:** How to test a product idea faster: choose one risky assumption, build one flow, give one realistic task and decide what evidence changes your next step. #womeninproduct #womenintech #womenproductmanagers #aiprototyping
 
-**Pinned comment:** Join early access to test ideas and narrow routine technical questions without waiting for engineering to begin every task: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o21-validate-weekend
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o21-validate-weekend
 
 #### Instagram Reels
 
@@ -1418,7 +1418,7 @@ Save this five-part test card for your next prototype. If you want to test ideas
 
 **Alt text:** A one-flow prototype sits beside a test card containing an assumption, user task, evidence and next decision.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o21-validate-weekend
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o21-validate-weekend
 
 #### YouTube Shorts
 
@@ -1426,7 +1426,7 @@ Save this five-part test card for your next prototype. If you want to test ideas
 
 **Description:** Pick one risky assumption, build only the flow needed to expose it, give a target user one realistic task and decide which evidence changes your next step. Record the prototype's production limits too.
 
-**Pinned comment:** Join early access to test ideas and narrow routine technical questions without waiting for engineering to begin every task: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o21-validate-weekend
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o21-validate-weekend
 
 #### LinkedIn
 
@@ -1446,7 +1446,7 @@ The prototype gives the conversation something concrete. It does not prove secur
 
 If the idea moves forward, hand engineering the prototype, user evidence, data assumptions, known failures and unresolved risks. They can evaluate what is reusable and what needs to be rebuilt.
 
-Women in product can join early access to test ideas and narrow routine technical questions without waiting for engineering to begin every task: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o21-validate-weekend
+Women in product can join early access to test ideas and narrow routine technical questions without waiting for engineering to begin every task: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o21-validate-weekend
 
 **Alt text:** A five-part test card keeps a rapid prototype focused on one risky product assumption.
 
@@ -1468,7 +1468,7 @@ Women in product can join early access to test ideas and narrow routine technica
 
 **Caption:** Prototyping without engineering bandwidth? Set five boundaries: one user, one task, test data, no sensitive functions and a review or deletion date. #womeninproduct #womenintech #womenproductmanagers #productprototype
 
-**Pinned comment:** Join early access to test ideas and narrow routine technical questions without waiting for engineering to begin every task: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o22-no-bandwidth
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o22-no-bandwidth
 
 #### Instagram Reels
 
@@ -1486,7 +1486,7 @@ Save the boundary list before starting your next prototype. If you want to test 
 
 **Alt text:** A prototype boundary lists one user, one task, test data, excluded sensitive functions and a review date.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o22-no-bandwidth
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o22-no-bandwidth
 
 #### YouTube Shorts
 
@@ -1494,7 +1494,7 @@ Save the boundary list before starting your next prototype. If you want to test 
 
 **Description:** Set the boundary first: one user, one task, test data, no sensitive functions, no production access and a review or deletion date. Record simulated behaviour and the questions engineering still needs to answer.
 
-**Pinned comment:** Join early access to test ideas and narrow routine technical questions without waiting for engineering to begin every task: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o22-no-bandwidth
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o22-no-bandwidth
 
 #### LinkedIn
 
@@ -1517,7 +1517,7 @@ This can help you test whether a user understands a flow while the team is busy.
 
 The output is evidence about the product idea and a clear handover, rather than an unsupported request to ship the prototype.
 
-Women in product can join early access to test ideas and narrow routine technical questions without waiting for engineering to begin every task: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o22-no-bandwidth
+Women in product can join early access to test ideas and narrow routine technical questions without waiting for engineering to begin every task: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o22-no-bandwidth
 
 **Alt text:** Six boundaries keep an AI-assisted Product Manager prototype separate from production systems and sensitive data.
 
@@ -1539,7 +1539,7 @@ Women in product can join early access to test ideas and narrow routine technica
 
 **Caption:** How to show a product flow to engineers: pair the prototype with one page covering the user, assumption, scope, evidence and open decisions. #womeninproduct #womenintech #womenproductmanagers #producthandover
 
-**Pinned comment:** Join early access to test ideas and narrow routine technical questions without waiting for engineering to begin every task: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o23-show-flow
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o23-show-flow
 
 #### Instagram Reels
 
@@ -1557,7 +1557,7 @@ Save this prototype handover for your next idea. If you want to test ideas and n
 
 **Alt text:** A clickable product flow sits beside a one-page note containing the user, assumption, scope, evidence and open decisions.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o23-show-flow
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o23-show-flow
 
 #### YouTube Shorts
 
@@ -1565,7 +1565,7 @@ Save this prototype handover for your next idea. If you want to test ideas and n
 
 **Description:** Pair a prototype with one page covering the user, assumption, scope, evidence and open decisions. The flow shows the interaction; the note gives engineering the reasoning and review questions around it.
 
-**Pinned comment:** Join early access to test ideas and narrow routine technical questions without waiting for engineering to begin every task: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o23-show-flow
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o23-show-flow
 
 #### LinkedIn
 
@@ -1588,7 +1588,7 @@ Ask engineering to review behaviour, dependencies, data, failure cases and risks
 
 The team can inspect the interaction in the flow. The note records why you made each product choice and identifies which simulated behaviours still need a decision.
 
-Women in product can join early access to test ideas and narrow routine technical questions without waiting for engineering to begin every task: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o23-show-flow
+Women in product can join early access to test ideas and narrow routine technical questions without waiting for engineering to begin every task: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o23-show-flow
 
 **Alt text:** A prototype and a one-page decision note work together to show the product interaction and the reasoning behind it.
 
@@ -1610,7 +1610,7 @@ Women in product can join early access to test ideas and narrow routine technica
 
 **Caption:** How to unblock yourself as a Product Manager: observe, reproduce safely, check existing evidence, name the unknown and choose a bounded next step. #womeninproduct #womenintech #womenproductmanagers #productworkflow
 
-**Pinned comment:** Join early access to test ideas and narrow routine technical questions without waiting for engineering to begin every task: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o24-unblocked
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o24-unblocked
 
 #### Instagram Reels
 
@@ -1630,7 +1630,7 @@ Save the routine for your next small blocker. If you want to test ideas and narr
 
 **Alt text:** A 20-minute first-pass routine moves through observation, safe reproduction, existing evidence, open questions and a bounded next step.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o24-unblocked
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o24-unblocked
 
 #### YouTube Shorts
 
@@ -1638,7 +1638,7 @@ Save the routine for your next small blocker. If you want to test ideas and narr
 
 **Description:** Use a 20-minute first pass: observe, reproduce safely, check existing evidence, name the remaining uncertainty and choose one bounded next step. Escalate security, payments, personal data and production incidents immediately.
 
-**Pinned comment:** Join early access to test ideas and narrow routine technical questions without waiting for engineering to begin every task: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o24-unblocked
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o24-unblocked
 
 #### LinkedIn
 
@@ -1658,7 +1658,7 @@ Stop early for security, payments, personal data, production incidents or anythi
 
 The first pass reduces repeated investigation. It also gives the PM a clear stopping rule, so independence does not become unreviewed production work.
 
-Women in product can join early access to test ideas and narrow routine technical questions without waiting for engineering to begin every task: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o24-unblocked
+Women in product can join early access to test ideas and narrow routine technical questions without waiting for engineering to begin every task: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o24-unblocked
 
 **Alt text:** A bounded first-pass routine helps a Product Manager resolve or narrow a routine technical question.
 
@@ -1680,7 +1680,7 @@ Women in product can join early access to test ideas and narrow routine technica
 
 **Caption:** How to follow a feature through software delivery: built, reviewed, tested, deployed and released. Ask what proves each state and what blocks the next one. #womeninproduct #womenintech #womenproductmanagers #softwarerelease
 
-**Pinned comment:** Join early access to test ideas and narrow routine technical questions without waiting for engineering to begin every task: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o25-delivery-flow
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=tiktok&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o25-delivery-flow
 
 #### Instagram Reels
 
@@ -1698,7 +1698,7 @@ Save the five-state map for your next delivery update. If you want to test ideas
 
 **Alt text:** A feature card moves through built, reviewed, tested, deployed and released states, with evidence and ownership at each one.
 
-**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o25-delivery-flow
+**Bio link while this Reel is active:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=instagram&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o25-delivery-flow
 
 #### YouTube Shorts
 
@@ -1706,7 +1706,7 @@ Save the five-state map for your next delivery update. If you want to test ideas
 
 **Description:** Track a feature through five states: built, reviewed, tested, deployed and released. Ask what evidence proves each state, who can move it forward and what could send it back.
 
-**Pinned comment:** Join early access to test ideas and narrow routine technical questions without waiting for engineering to begin every task: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o25-delivery-flow
+**Pinned comment:** https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=youtube&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o25-delivery-flow
 
 #### LinkedIn
 
@@ -1732,7 +1732,7 @@ A feature can be built while waiting for review. It can pass review and fail a t
 
 This state map helps you identify the blocker and explain why “done” may not mean available.
 
-Women in product can join early access to test ideas and narrow routine technical questions without waiting for engineering to begin every task: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_medium=organic-social&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o25-delivery-flow
+Women in product can join early access to test ideas and narrow routine technical questions without waiting for engineering to begin every task: https://littleparrot.app/courses/technical-skills-for-product-managers?utm_source=linkedin&utm_campaign=pm-outcome-language-validation-2026-08&utm_content=o25-delivery-flow
 
 **Alt text:** Five states show a feature moving through build, review, testing, deployment and release to users.
 
@@ -1745,7 +1745,7 @@ Women in product can join early access to test ideas and narrow routine technica
 ## Posting checklist
 
 - Confirm that the dedicated Product Manager landing page and email form are live before publishing.
-- Confirm that every form submission stores `utm_source`, `utm_medium`, `utm_campaign` and `utm_content`.
+- Confirm that every form submission stores `utm_source`, `utm_campaign` and `utm_content`.
 - Use the quoted phrase as the spoken and on-screen opening so it matches the caption hook.
 - Publish Instagram Reels as Collab posts with Kinga's personal account. Do not upload the same video separately.
 - Post Kinga's and Thomas's comments within the first hour on Instagram and LinkedIn.

@@ -4,6 +4,15 @@ import { FRAME_RATE } from '../config'
 const HOUSE_BACKGROUND = '#1a0044'
 
 /**
+ * How long the video runs on after the last spoken word, in seconds rather than frames so the
+ * beat is the same length whatever frame rate a video is rendered at.
+ *
+ * Held on the closing visual, which keeps moving through it — the pause is in the narration, not
+ * in the picture, so nothing freezes on the final frame.
+ */
+const TAIL_SECONDS = 0.8
+
+/**
  * Every visual so far is one of three things. The `kind` is the dispatch key the renderer keys
  * off, so no part of the pipeline has to guess from a file extension.
  */
@@ -151,7 +160,11 @@ export type VideoDefinition = {
   sections: Section[]
   overlays: Overlay[]
   fps: number
-  /** Frames held after the last spoken word, so the video does not cut on the final syllable. */
+  /**
+   * Frames held after the last spoken word. Long enough to read as a beat, because every one of
+   * these plays on a platform that loops it: without a pause the last syllable runs straight into
+   * the first one and the restart reads as a glitch rather than a replay.
+   */
   tailFrames: number
   /** Generate one take per blank line instead of one take for the whole script. */
   splitOnBlankLines: boolean
@@ -167,7 +180,7 @@ export const defineVideo = ({
   sections,
   overlays = [],
   fps = FRAME_RATE,
-  tailFrames = 6,
+  tailFrames = Math.round(fps * TAIL_SECONDS),
   splitOnBlankLines = false,
 }: {
   id: string

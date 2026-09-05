@@ -1,7 +1,7 @@
 {
-  "hash": "f60010caad489d00",
+  "hash": "984961ea863a91dc",
   "fps": 30,
-  "durationInFrames": 1686,
+  "durationInFrames": 1704,
   "words": [
     {
       "text": "You",
@@ -947,7 +947,7 @@
     {
       "index": 16,
       "fromFrame": 1605,
-      "durationInFrames": 81,
+      "durationInFrames": 99,
       "wordFrom": 155,
       "wordTo": 164
     }

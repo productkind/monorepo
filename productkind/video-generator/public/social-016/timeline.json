@@ -1,7 +1,7 @@
 {
-  "hash": "b0cdc7806a24ba22",
+  "hash": "d553bb205fec9446",
   "fps": 30,
-  "durationInFrames": 2382,
+  "durationInFrames": 2400,
   "words": [
     {
       "text": "It",
@@ -1343,7 +1343,7 @@
     {
       "index": 24,
       "fromFrame": 2274,
-      "durationInFrames": 108,
+      "durationInFrames": 126,
       "wordFrom": 222,
       "wordTo": 232
     }
