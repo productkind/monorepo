@@ -38,7 +38,16 @@ export default tseslint.config(
       '@typescript-eslint/require-await': 'off',
       // No escape hatch in production code: an unused binding there is a defect, not a
       // convention. Tests get one, see the override below.
-      '@typescript-eslint/no-unused-vars': 'error',
+      // An unused parameter is usually mandated by an interface, so `_` is allowed anywhere.
+      // An unused variable is a defect, so it is not — tests get an escape, see the override.
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
+          destructuredArrayIgnorePattern: '^_',
+        },
+      ],
     },
   },
   {
