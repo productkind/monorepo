@@ -73,14 +73,14 @@ Rules the set follows:
 
 | # | Script | The situation | What they'll be able to do |
 |---|---|---|---|
-| 1 | [Nodding along in stand-up](video-1-say-it-back/script.md) | A word goes past in stand-up, you don't ask, and three weeks later the date is gone with it | Say a change back in their own words, ask what it does to the product, get an answer in the room |
-| 2 | [You only know the screens](video-2-follow-one-click/script.md) | Asked how their own product works, they can demo every screen, and behind those screens is a service another team owns, three integrations and an environment they've never seen | Map their product's dependencies, owners, bottlenecks and what breaks when one piece goes |
-| 3 | [You said yes to a simple feature](video-3-can-our-apis-do-that/script.md) | Said yes to a "simple" request, then found out two weeks in that the integration can't carry it | Check what the integrations they already pay for can do, before answering |
-| 4 | [Done, and your users still don't have it](video-4-where-is-the-change/script.md) | Built, tested, and waiting behind another team's monthly release | Follow a change through review, testing, environments and every team it waits on, and say what's holding it |
-| 5 | [All you can send is their screenshot](video-5-not-a-bug-report/script.md) | A customer reports a bug and all they can forward is a screenshot | Reproduce it, read the error code, and find the failed request in the browser themselves |
-| 6 | [Needed tomorrow, ready next week](video-6-answer-the-number/script.md) | A one-line data question that analytics will answer next week | Write the query and check what the number includes |
-| 7 | [Nobody raised the hard part](video-7-four-questions/script.md) | The decision got made in a meeting they were in, and nobody surfaced the complexity | Run that discussion with the four questions that surface it before anyone commits |
-| 8 | ["When can we launch it?"](video-8-prototype-not-product/script.md) | A business stakeholder saw the AI prototype and asked when it ships | Name what production needs that the prototype skipped, and hand both over |
+| 0 | [Nodding along in stand-up](video-0-say-it-back/script.md) | A word goes past in stand-up, you don't ask, and three weeks later the date is gone with it | Say a change back in their own words, ask what it does to the product, get an answer in the room |
+| 1 | [You only know the screens](video-1-follow-one-click/script.md) | Asked how their own product works, they can demo every screen, and behind those screens is a service another team owns, three integrations and an environment they've never seen | Map their product's dependencies, owners, bottlenecks and what breaks when one piece goes |
+| 2 | [You said yes to a simple feature](video-2-can-our-apis-do-that/script.md) | Said yes to a "simple" request, then found out two weeks in that the integration can't carry it | Check what the integrations they already pay for can do, before answering |
+| 3 | [Done, and your users still don't have it](video-3-where-is-the-change/script.md) | Built, tested, and waiting behind another team's monthly release | Follow a change through review, testing, environments and every team it waits on, and say what's holding it |
+| 4 | [All you can send is their screenshot](video-4-not-a-bug-report/script.md) | A customer reports a bug and all they can forward is a screenshot | Reproduce it, read the error code, and find the failed request in the browser themselves |
+| 5 | [Needed tomorrow, ready next week](video-5-answer-the-number/script.md) | A one-line data question that analytics will answer next week | Write the query and check what the number includes |
+| 6 | [Nobody raised the hard part](video-6-four-questions/script.md) | The decision got made in a meeting they were in, and nobody surfaced the complexity | Run that discussion with the four questions that surface it before anyone commits |
+| 7 | ["When can we launch it?"](video-7-prototype-not-product/script.md) | A business stakeholder saw the AI prototype and asked when it ships | Name what production needs that the prototype skipped, and hand both over |
 
 **The situations are ours, not quotes.** They're written from what product
 managers described in the
@@ -89,8 +89,8 @@ and the
 [needs research](../../../../ai-research/pm-technical-fluency/non-technical-pm-technical-needs-2024-2026.md#1-top-recurring-technical-needs),
 in the words a viewer would use. No script names or quotes a real person.
 
-**Videos 3 and 7 share a subject and split it deliberately.** Video 3 is the
-two weeks after a yes has been given. Video 7 is the meeting where it gets
+**Videos 2 and 6 share a subject and split it deliberately.** Video 2 is the
+two weeks after a yes has been given. Video 6 is the meeting where it gets
 given. Keep them apart in the edit and post them a fortnight apart.
 
 ## Pitched at software product managers, not beginners
@@ -99,7 +99,7 @@ The audience already knows what a frontend, a backend and a database are. A
 video that explains those three loses them, and it also misses the actual gap
 the research found: infrastructure and the complexity an enterprise product
 carries. Environments, access, reliability, performance, integrations, data
-migrations, and the parts other teams own. Video 2 is built on that, and the
+migrations, and the parts other teams own. Video 1 is built on that, and the
 others assume it.
 
 ## Choices made

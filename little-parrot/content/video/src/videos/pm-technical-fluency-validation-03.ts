@@ -1,9 +1,9 @@
 import { defineVideo, gif, riveAtFrame } from '../narration/definition'
 
 /**
- * Video 4 of the PM technical fluency campaign, "Done, and your users still don't have it".
+ * Video 3 of the PM technical fluency campaign, "Done, and your users still don't have it".
  * Script: productkind/marketing/content/campaigns/2026-09-pm-technical-fluency-validation/
- * video-4-where-is-the-change/script.md
+ * video-3-where-is-the-change/script.md
  *
  * The CTA is the LinkedIn / YouTube Shorts variant ("link in the comments"), which is the script
  * as written. TikTok and Instagram Reels need the URL spoken and shown instead.
@@ -16,7 +16,7 @@ import { defineVideo, gif, riveAtFrame } from '../narration/definition'
  * one after another and names none of them.
  *
  * The slots behind these rates are estimates from `0.98 + 0.209 x words`, fitted on the 39
- * narrated sections of videos 1 and 2. Every rate is a ratio to its slot, so all of them move once
+ * narrated sections of videos 0 and 1. Every rate is a ratio to its slot, so all of them move once
  * this script is narrated: re-check with `verify.py --video pm-technical-fluency-validation-03`
  * from the video-gifs skill, and render the composed stills at the same time.
  */
