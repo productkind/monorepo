@@ -11,6 +11,8 @@ export default tseslint.config(
       '.claude/**',
       '.agents/**',
       'productkind/site/**',
+      // Remotion project with its own eslint config, run from inside it via `npm run lint`.
+      'productkind/video-generator/**',
       'little-parrot/**',
     ],
   },

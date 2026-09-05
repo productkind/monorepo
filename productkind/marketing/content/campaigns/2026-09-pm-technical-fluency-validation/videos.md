@@ -106,7 +106,7 @@ others assume it.
 
 - **Nobody on camera.** Narration over screen recording and on-screen text,
   which suits the Little Parrot narrated video pipeline in
-  `little-parrot/content/video/`. Worth knowing that our own platform research
+  `productkind/video-generator/`. Worth knowing that our own platform research
   found person-present content outperforms brand content on these channels
   ([playbook](../../../channels/platform-playbook-2026.md)), so treat the reach
   from this set as a floor rather than a fair test of the niche.
