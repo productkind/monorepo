@@ -41,7 +41,12 @@ export default defineVideo({
       // giphy "puzzle pieces fitting together": https://giphy.com/gifs/3ohhwgzypC7LCONoeA
       // Sped up so the pieces finish coming together inside the beat.
       text: "Just sync it with the CRM.",
-      visual: gif({ src: 'section-01-assemble.gif', playbackRate: 1.42, place: 'above-captions' }),
+      visual: gif({
+        src: 'section-01-assemble.gif',
+        color: '#fde9f1',
+        playbackRate: 1.42,
+        place: 'above-captions',
+      }),
       endsParagraph: true,
     },
     {
@@ -57,7 +62,7 @@ export default defineVideo({
     {
       // giphy "red x mark animation": https://giphy.com/gifs/8cSU3YBfJxrXMz1Biu
       text: "engineering tells you the integration doesn’t have that field,",
-      visual: gif({ src: 'section-04-cross.gif', place: 'above-captions' }),
+      visual: gif({ src: 'section-04-cross.gif', color: '#ffd300', place: 'above-captions' }),
     },
     {
       // giphy "locked door key": https://giphy.com/gifs/iFyswxrc6wuMczLESA
@@ -69,7 +74,12 @@ export default defineVideo({
     {
       // giphy "date stamp": https://giphy.com/gifs/rbHQSU9TTXe4JEBYUY
       text: "You already promised the date.",
-      visual: gif({ src: 'section-06-stamp.gif', playbackRate: 0.99, place: 'above-captions' }),
+      visual: gif({
+        src: 'section-06-stamp.gif',
+        color: '#a9c1ff',
+        playbackRate: 0.99,
+        place: 'above-captions',
+      }),
     },
     {
       // giphy "erasing pencil rubber": https://giphy.com/gifs/2xEBaucWB9naO2JqLD
@@ -81,7 +91,12 @@ export default defineVideo({
     {
       // giphy "dark room torch": https://giphy.com/gifs/oFQxlyTLWPCQYV9gbT
       text: "You couldn’t have known.",
-      visual: gif({ src: 'section-08-dark.gif', playbackRate: 0.96, place: 'above-captions' }),
+      visual: gif({
+        src: 'section-08-dark.gif',
+        color: '#000000',
+        playbackRate: 0.96,
+        place: 'above-captions',
+      }),
     },
     {
       // giphy "woman reading documents laptop": https://giphy.com/gifs/VoEUCtpER6t0RW8Odn
@@ -137,7 +152,7 @@ export default defineVideo({
     {
       // giphy "message notification pop": https://giphy.com/gifs/CQWCsApevAijqqzygN
       text: "The waitlist link is in the comments.",
-      visual: gif({ src: 'section-18-phone.gif', place: 'above-captions' }),
+      visual: gif({ src: 'section-18-phone.gif', color: '#ffffff', place: 'above-captions' }),
     },
     {
       // giphy "opening curtains reveal": https://giphy.com/gifs/1JjkufuS3IcS74XTDn

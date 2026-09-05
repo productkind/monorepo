@@ -4,6 +4,7 @@ import hashlib
 import json
 import os
 import pathlib
+import re
 import subprocess
 import time
 import urllib.error
@@ -72,6 +73,62 @@ def gif_size(path):
         ['identify', '-format', '%w %h', str(path) + '[0]'], capture_output=True, text=True
     ).stdout.split()
     return (int(out[0]), int(out[1])) if len(out) >= 2 else (0, 0)
+
+
+# Below this share of the border ring, the colour is not a background — it is one element of a
+# picture that happens to reach the edge. Set from the real library: the obvious cases (a flat
+# card behind an illustration) sit at 0.94–1.00, while a white card whose artwork bleeds off the
+# edge lands near 0.78 and is left alone rather than guessed at.
+UNIFORM_EDGE = 0.90
+
+# Palette dithering shifts a flat colour by a few levels between frames, so exact equality would
+# reject backgrounds that read as one colour on screen.
+EDGE_TOLERANCE = 10
+
+_EDGES = (('North', 'x%d+0+0'), ('South', 'x%d+0+0'), ('West', '%dx+0+0'), ('East', '%dx+0+0'))
+_HISTOGRAM_LINE = re.compile(r'^\s*(\d+):\s*\(([^)]*)\)')
+
+
+def _ring_histogram(path, ring):
+    """Every colour on the gif's border ring, counted across every frame."""
+    counts = {}
+    for gravity, shape in _EDGES:
+        out = subprocess.run(
+            ['magick', str(path), '-coalesce', '-gravity', gravity, '-crop', shape % ring,
+             '+repage', '+append', '-depth', '8', '-format', '%c', 'histogram:info:-'],
+            capture_output=True, text=True).stdout
+        for line in out.splitlines():
+            match = _HISTOGRAM_LINE.match(line)
+            if match:
+                channels = tuple(int(float(v)) for v in match.group(2).split(',')[:4])
+                counts[channels] = counts.get(channels, 0) + int(match.group(1))
+    return counts
+
+
+def edge_colour(path, ring=2):
+    """The flat colour a gif sits on, or None when it does not sit on one.
+
+    A gif with a solid background renders with a visible seam where its edge meets the house
+    letterbox, and the fix is to letterbox in the gif's own colour. Reading the ring rather than
+    a corner pixel is what makes it safe to act on unasked: a photograph never covers 90% of its
+    own border with one colour, so it is never mistaken for a card.
+
+    Transparent edges return None. The gif composites onto whatever is behind it, so there is no
+    seam to remove and the house background is already right.
+    """
+    counts = _ring_histogram(path, ring)
+    if not counts:
+        return None
+    total = sum(counts.values())
+    mode = max(counts, key=counts.get)
+    if len(mode) > 3 and mode[3] < 250:
+        return None
+    near = sum(count for colour, count in counts.items()
+               if max(abs(a - b) for a, b in zip(colour[:3], mode[:3])) <= EDGE_TOLERANCE)
+    coverage = near / total
+    if coverage < UNIFORM_EDGE:
+        return None
+    return {'colour': '#%02x%02x%02x' % mode[:3], 'coverage': coverage}
 
 
 class RateLimited(Exception):

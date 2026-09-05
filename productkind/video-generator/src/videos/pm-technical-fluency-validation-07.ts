@@ -71,13 +71,22 @@ export default defineVideo({
       // A wrapped gift box character. Its source id was lost when the sourcing run died before
       // reporting, so this one cannot be traced back to giphy the way the others can.
       text: 'so to them it looks finished.',
-      visual: gif({ src: 'section-04-gift-wrapped.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-04-gift-wrapped.gif',
+        color: '#f4868c',
+        place: 'above-captions',
+      }),
       endsParagraph: true,
     },
     {
       // An empty cardboard box opening. Source id lost with the same run.
       text: 'And you can’t explain why it isn’t,',
-      visual: gif({ src: 'section-05-empty-box.gif', playbackRate: 0.91, place: 'above-captions' }),
+      visual: gif({
+        src: 'section-05-empty-box.gif',
+        color: '#fcfefc',
+        playbackRate: 0.91,
+        place: 'above-captions',
+      }),
     },
     {
       // A car stuck in mud with its wheels spinning. Source id lost with the same run.
@@ -95,6 +104,7 @@ export default defineVideo({
       text: 'None of what keeps a real product running is there.',
       visual: gif({
         src: 'section-08-empty-fridge.gif',
+        color: '#34bafc',
         playbackRate: 0.83,
         place: 'above-captions',
       }),
@@ -103,7 +113,11 @@ export default defineVideo({
     {
       // giphy "raised hand icon animation flat": https://giphy.com/gifs/l2QE4oA03MKLp9y2k
       text: 'If you want to answer that stakeholder with real reasons,',
-      visual: gif({ src: 'section-09-eager-answer.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-09-eager-answer.gif',
+        color: '#ff675a',
+        place: 'above-captions',
+      }),
     },
     {
       // giphy "hiking trail path illustration": https://giphy.com/gifs/CtnjRbQTOahYtNqwdu
@@ -117,22 +131,36 @@ export default defineVideo({
       // giphy "clipboard writing checklist": https://giphy.com/gifs/UKubhTGTqVKrs321IQ
       // A list being written, which opens the five items that follow.
       text: 'By the end you’ll be able to name what your prototype skipped:',
-      visual: gif({ src: 'section-11-checklist-icon.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-11-checklist-icon.gif',
+        color: '#000000',
+        place: 'above-captions',
+      }),
     },
     {
       // giphy "database data storage icon animation": https://giphy.com/gifs/fsmgUY2uzBgHw7S11V
       text: 'whose data it holds,',
-      visual: gif({ src: 'section-12-data-held.gif', playbackRate: 0.9, place: 'above-captions' }),
+      visual: gif({
+        src: 'section-12-data-held.gif',
+        color: '#000000',
+        playbackRate: 0.9,
+        place: 'above-captions',
+      }),
     },
     {
       // giphy "access key icon animation flat design": https://giphy.com/gifs/j5hdNsxZb7spU22I68
       text: 'who’s allowed in,',
-      visual: gif({ src: 'section-13-access-key.gif', playbackRate: 0.99, place: 'above-captions' }),
+      visual: gif({
+        src: 'section-13-access-key.gif',
+        color: '#000000',
+        playbackRate: 0.99,
+        place: 'above-captions',
+      }),
     },
     {
       // giphy "server load meter flat icon animation": https://giphy.com/gifs/VX7yEoXAFf8as
       text: 'what it does under real load,',
-      visual: gif({ src: 'section-14-server-load.gif', place: 'above-captions' }),
+      visual: gif({ src: 'section-14-server-load.gif', color: '#1b1b1b', place: 'above-captions' }),
     },
     {
       // giphy "alarm clock ringing icon animation": https://giphy.com/gifs/3kNjNGN7Rd8DDNAnNC
@@ -149,7 +177,11 @@ export default defineVideo({
       // giphy "leaf falling illustration": https://giphy.com/gifs/9J8K8WEWLXZk7s0OMB
       // Downward motion rather than a fourth arrow: videos 4, 5 and 6 all point down with one.
       text: 'The waitlist link is in the comments.',
-      visual: gif({ src: 'section-17-leaves-falling.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-17-leaves-falling.gif',
+        color: '#fffcf1',
+        place: 'above-captions',
+      }),
     },
     {
       // giphy "plant sprout growing timelapse": https://giphy.com/gifs/cKn42Gk4eznf1q45HM
@@ -157,6 +189,7 @@ export default defineVideo({
       text: 'Sign up and we’ll let you know when the learning path opens.',
       visual: gif({
         src: 'section-18-flower-opens.gif',
+        color: '#000000',
         playbackRate: 0.62,
         place: 'above-captions',
       }),

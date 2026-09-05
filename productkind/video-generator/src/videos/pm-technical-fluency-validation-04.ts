@@ -42,6 +42,7 @@ export default defineVideo({
       text: 'A customer reports a bug.',
       visual: gif({
         src: 'section-00-envelope-arriving.gif',
+        color: '#a8f2a0',
         playbackRate: 0.89,
         place: 'above-captions',
       }),
@@ -88,7 +89,11 @@ export default defineVideo({
       // klipy "text bubble question mark icon animation":
       // https://static.klipy.com/ii/d7aec6f6f171607374b2065c836f92f4/25/82/6NX9xRON.gif
       text: 'So you ask the customer,',
-      visual: gif({ src: 'section-06-asking-question-chick.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-06-asking-question-chick.gif',
+        color: '#fcfefc',
+        place: 'above-captions',
+      }),
     },
     {
       // klipy "hourglass time passing animation":
@@ -96,6 +101,7 @@ export default defineVideo({
       text: 'wait two days,',
       visual: gif({
         src: 'section-07-hourglass-flip.gif',
+        color: '#f5fefc',
         playbackRate: 0.87,
         place: 'above-captions',
       }),
@@ -108,6 +114,7 @@ export default defineVideo({
       text: 'and nobody has started looking.',
       visual: gif({
         src: 'section-08-untouched-pile.gif',
+        color: '#ffffff',
         playbackRate: 0.99,
         place: 'above-captions',
       }),
@@ -126,7 +133,11 @@ export default defineVideo({
     {
       // giphy "hand pointing arrow guide": https://giphy.com/gifs/3IUZ9PpKfTEUQNb4od
       text: 'if somebody showed you where to look.',
-      visual: gif({ src: 'section-10-hand-pointing-guide.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-10-hand-pointing-guide.gif',
+        color: '#ffffff',
+        place: 'above-captions',
+      }),
       endsParagraph: true,
     },
     {
@@ -163,7 +174,11 @@ export default defineVideo({
       // klipy "woman reading document focused illustration":
       // https://static.klipy.com/ii/2711dd8a75a85be822d136ec94899b3f/f9/60/MtI6Yweh.gif
       text: 'read the status code,',
-      visual: gif({ src: 'section-14-document-read-icon.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-14-document-read-icon.gif',
+        color: '#fcfefc',
+        place: 'above-captions',
+      }),
     },
     {
       // klipy "pin drop location marker icon animation":
@@ -171,6 +186,7 @@ export default defineVideo({
       text: 'and find the failed request in the network tab yourself.',
       visual: gif({
         src: 'section-15-eye-pin-found-it.gif',
+        color: '#e4e6e4',
         playbackRate: 0.81,
         place: 'above-captions',
       }),
@@ -182,6 +198,7 @@ export default defineVideo({
       text: 'The waitlist link is in the comments.',
       visual: gif({
         src: 'section-16-arrow-down-comments.gif',
+        color: '#ffffff',
         playbackRate: 0.82,
         place: 'above-captions',
       }),
@@ -190,7 +207,11 @@ export default defineVideo({
       // klipy "sign up checkmark confirmation icon":
       // https://static.klipy.com/ii/c3a19a0b747a76e98651f2b9a3cca5ff/85/e0/Fz3tnxKp.gif
       text: 'Sign up and we’ll let you know when the learning path opens.',
-      visual: gif({ src: 'section-17-signup-checkmark.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-17-signup-checkmark.gif',
+        color: '#040204',
+        place: 'above-captions',
+      }),
       endsParagraph: true,
     },
     {
@@ -199,6 +220,7 @@ export default defineVideo({
       text: '[pause][curious] How long does a bug wait before fixing where you work?',
       visual: gif({
         src: 'section-18-confused-question-closer.gif',
+        color: '#dad5d1',
         playbackRate: 0.98,
         place: 'above-captions',
       }),

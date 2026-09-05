@@ -89,8 +89,8 @@ the search result describes a preview, and one §11 candidate was 3.4s in the li
 scripts/pick.py --video <video-id> --pick 10=w5xEwipLyIBMdINSvn:hand-up --pick 13=Ie8ncf:question
 ```
 Writes `public/<video-id>/section-10-hand-up.gif`, then prints the definition line for it,
-including the timing knob the gap calls for. Paste the lines yourself so the definition stays
-hand-authored.
+including the timing knob the gap calls for and, when the gif sits on a flat colour, the `color`
+that letterboxes it in that colour. Paste the lines yourself so the definition stays hand-authored.
 
 **3. `verify.py` — the checks that catch real defects.**
 ```
@@ -100,7 +100,8 @@ scripts/verify.py --video <video-id> --frames   # 8 frames of every chosen gif
 `--frames` montages eight evenly spaced frames of each gif, which is how you catch text that only
 appears late. `--stills` renders one composed frame per section from the real composition, captions
 and parrot overlay included. `--serve` starts Studio and fetches every gif through its static
-server. It finishes with a fit table for the whole video.
+server. `--backgrounds` compares each gif's own edge colour with the `color` its section declares.
+A full run does all four and finishes with a fit table for the whole video.
 
 **4. `fit.py` — the pass to make straight after narrating.**
 ```
@@ -126,6 +127,24 @@ is not cosmetic — two of video 7's picks repeated video 5 because the list the
 against held klipy URLs where the sourcer was comparing klipy ids. The script resolves them through
 `.sources.json` and tells you if any URL no longer has an id, which happens when the candidate
 cache has been cleared since the pick was made.
+
+### Letterboxing a flat background
+
+A gif with a solid background renders with a hard rectangle around it, because the frame behind it
+is house purple. Matching the letterbox to the gif's own colour makes the edge disappear, and
+`pick.py` works it out at download time — no eyeballing, no colour picker.
+
+The rule is deliberately narrow: **90% of the border ring, across every frame, within a tolerance
+of 10 levels**. A flat card behind an illustration lands at 0.94–1.00 and a photograph never gets
+near it, so acting on the answer unasked is safe. What that misses is the awkward middle — a white
+card whose artwork bleeds off one edge scores about 0.78 and is left alone rather than guessed at.
+Those are rare; set them by hand when you spot one in the composed stills.
+
+Transparent-edged gifs are left alone too. They composite onto whatever is behind them, so there
+is no seam to remove.
+
+`scripts/verify.py --video <video-id> --backgrounds` runs the same check over a video already
+wired up, which is how 60 sections across the first campaign were found and fixed in one pass.
 
 ### Writing search terms
 
@@ -232,7 +251,8 @@ Record provenance in the definition, above each visual:
 
 ### Before you call it done
 
-- `scripts/verify.py --video <video-id>` — frames, composed stills, serving, fit table.
+- `scripts/verify.py --video <video-id>` — frames, composed stills, letterbox colours, serving,
+  fit table.
 - From the video package: `npx eslint src/videos`, `npx tsc --noEmit`, and
   `npm run narrate -- --check` (visuals don't affect timing, so this should stay green).
 - Look at the composed stills. A gif that reads on its own can still be unreadable at 380px wide
