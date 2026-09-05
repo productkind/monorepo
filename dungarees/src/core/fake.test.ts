@@ -51,7 +51,7 @@ test('Create multiple sync throwing function', () => {
 })
 
 test('Create async throwing function', async () => {
-  const originalFake = (): Original1Async => ({ method: async () => 1 })
+  const originalFake = (): Original1Async => ({ method: () => Promise.resolve(1) })
   const fakeCreator = addErrorMethodsToFake(originalFake)
   const error = new Error('test error')
   const fake = fakeCreator({ method: { type: 'async', error } })
