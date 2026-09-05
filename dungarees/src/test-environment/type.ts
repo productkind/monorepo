@@ -2,7 +2,6 @@ import type {
   EntryTuple,
   FilterRecord,
   GetKey,
-  GetValue,
   RecordToEntries,
 } from '@dungarees/core/type-util.ts'
 
@@ -33,7 +32,7 @@ export type ServiceConfig = InteractorConfig | RunnerConfig
 
 export type TestEnviornmentConfig = Record<string, ServiceConfig>
 
-export type GetInstance<CONFIG extends ServiceConfig> = ReturnType<CONFIG['creator']>
+export type GetInstance<CONFIG extends ServiceConfig> = Awaited<ReturnType<CONFIG['creator']>>
 
 export type GetInstanceEntry<CONFIG extends ConfigEntry> =
   CONFIG extends ConfigEntry<infer N, infer C> ? InstanceEntry<N, GetInstance<C>> : never
@@ -53,14 +52,17 @@ export type ReportEntry =
 
 export type DefaultConfig = { hook?: 'before-all' | 'before' }
 
-export type RunnerConfig<RUNNER = any, ARGS extends any[] = any[]> = {
+export type RunnerConfig<RUNNER extends Runner = Runner, ARGS extends any[] = any[]> = {
   type: 'runner'
-  creator: (...args: ARGS) => RUNNER
+  creator: (...args: ARGS) => RUNNER | Promise<RUNNER>
 } & DefaultConfig
 
-export type InteractorConfig<INTERACTOR = any, ARGS extends any[] = any[]> = {
+export type InteractorConfig<
+  INTERACTOR extends Interactor = Interactor,
+  ARGS extends any[] = any[],
+> = {
   type: 'interactor'
-  creator: (...args: ARGS) => INTERACTOR
+  creator: (...args: ARGS) => INTERACTOR | Promise<INTERACTOR>
 } & DefaultConfig
 
 export type RunnerInstance = { instance: Runner } & DefaultConfig
@@ -76,6 +78,6 @@ export type TestEnviornmentState<
   >,
 > = {
   serviceConfigs: SERVICES
-  interactors: Map<GetKey<INTERACTORS>, { instance: GetValue<INTERACTORS> } & DefaultConfig>
-  runners: Map<GetKey<RUNNERS>, { instance: GetValue<RUNNERS> } & DefaultConfig>
+  interactors: Map<GetKey<INTERACTORS>, InteractorInstance>
+  runners: Map<GetKey<RUNNERS>, RunnerInstance>
 }

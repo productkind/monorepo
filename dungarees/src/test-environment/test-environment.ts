@@ -2,11 +2,12 @@ import { isInteractorName, isRunnerName } from './guards.ts'
 import type {
   DefaultConfig,
   GetContext,
-  GetInstance,
   GetInstanceEntry,
+  Interactor,
   InteractorConfig,
   InteractorInstance,
   ReportEntry,
+  Runner,
   RunnerConfig,
   RunnerInstance,
   ServiceConfig,
@@ -29,20 +30,18 @@ export type TestEnviornment<SERVICES extends Record<string, ServiceConfig>> = {
   createWorld: () => TestEnvironmentWorld<SERVICES>
 }
 
-export const instantiateService = async <SERVICE extends InteractorConfig | RunnerConfig>(
-  { creator, hook }: SERVICE,
-  ...args: Parameters<SERVICE['creator']>
-): Promise<InstanceWithConfig<SERVICE>> => {
-  const created = creator(...args)
+export const instantiateService = async <
+  ARGS extends unknown[],
+  INSTANCE extends Interactor | Runner,
+>(
+  { creator, hook }: { creator: (...args: ARGS) => INSTANCE | Promise<INSTANCE> } & DefaultConfig,
+  ...args: ARGS
+): Promise<{ instance: INSTANCE } & DefaultConfig> => {
   return {
-    instance: created instanceof Promise ? await created : created,
-    ...(Boolean(hook) && { hook }),
+    instance: await creator(...args),
+    ...(hook === undefined ? {} : { hook }),
   }
 }
-
-type InstanceWithConfig<T extends InteractorConfig | RunnerConfig> = {
-  instance: Awaited<GetInstance<T>>
-} & DefaultConfig
 
 export const createTestEnvironment = <const SERVICES extends Record<string, ServiceConfig>>(
   serviceConfigs: SERVICES,
@@ -52,8 +51,8 @@ export const createTestEnvironment = <const SERVICES extends Record<string, Serv
 
   const state: TestEnviornmentState<SERVICES> = {
     serviceConfigs,
-    interactors: new Map<GetKey<Interactor>, { instance: GetValue<Interactor> } & DefaultConfig>(),
-    runners: new Map<GetKey<Runner>, { instance: GetValue<Runner> } & DefaultConfig>(),
+    interactors: new Map<GetKey<Interactor>, InteractorInstance>(),
+    runners: new Map<GetKey<Runner>, RunnerInstance>(),
   }
 
   const isBeforeAll = ({ hook }: DefaultConfig): boolean => hook === 'before-all'
@@ -111,7 +110,7 @@ export const createTestEnvironment = <const SERVICES extends Record<string, Serv
   ): Promise<void> => await forEachService({ hasHook: isNotBeforeAll, mapper })
 
   const forEachBeforeService = async (
-    mapper: (interactor: InteractorInstance) => Promise<void>,
+    mapper: (service: InteractorInstance | RunnerInstance) => Promise<void>,
   ): Promise<void> => {
     await asyncTransform([...state.interactors.values(), ...state.runners.values()], (list) =>
       list.filter(isBefore).map(mapper),
@@ -125,18 +124,6 @@ export const createTestEnvironment = <const SERVICES extends Record<string, Serv
       list.map(async ([name, interactor]) => await mapper({ name, ...interactor })),
     )
 
-  const addToInstances = (
-    name: string,
-    instance: InstanceWithConfig<InteractorConfig> & InstanceWithConfig<RunnerConfig>,
-  ): void => {
-    if (isInteractorName(serviceConfigs, name)) {
-      state.interactors.set(name, instance)
-    }
-    if (isRunnerName(serviceConfigs, name)) {
-      state.runners.set(name, instance)
-    }
-  }
-
   const instantiateAll = async (
     filter: (config: InteractorConfig | RunnerConfig) => boolean,
   ): Promise<void> => {
@@ -144,8 +131,12 @@ export const createTestEnvironment = <const SERVICES extends Record<string, Serv
       Object.entries(serviceConfigs)
         .filter(([_, config]) => filter(config))
         .map(async ([key, service]) => {
-          const instance = await instantiateService(service)
-          addToInstances(key, instance)
+          if (service.type === 'interactor' && isInteractorName(serviceConfigs, key)) {
+            state.interactors.set(key, await instantiateService(service))
+          }
+          if (service.type === 'runner' && isRunnerName(serviceConfigs, key)) {
+            state.runners.set(key, await instantiateService(service))
+          }
         }),
     )
   }
@@ -182,7 +173,7 @@ export const createTestEnvironment = <const SERVICES extends Record<string, Serv
           context,
           reportEntry$,
         }: {
-          context: GetContext<GetInstance<GetValue<Interactor>>>
+          context: GetContext<GetValue<Interactor>>
           reportEntry$: Observable<ReportEntry>
         } = await instance.startContext()
         world.register(name, context)

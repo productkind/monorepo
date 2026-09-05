@@ -52,20 +52,20 @@ export const createWorld = <SERVICES extends Record<string, ServiceConfig>>(
     })
 
   const start: TestEnvironmentWorld<SERVICES>['start'] = async (name, ...arg) => {
-    const service = assertDefined(
+    const service: ServiceConfig = assertDefined(
       state.serviceConfigs[name],
       `Service "${String(name)}" is not in the configuration`,
     )
-    const instantiatedService = await instantiateService(service, ...arg)
-    await instantiatedService.instance.start()
-    if (isInteractorName(state.serviceConfigs, name)) {
-      const context: GetContext<GetInstance<GetValue<Interactors>>> = (
-        await instantiatedService.instance.startContext()
-      ).context
+    if (service.type === 'interactor' && isInteractorName(state.serviceConfigs, name)) {
+      const instantiatedService = await instantiateService(service, ...arg)
+      await instantiatedService.instance.start()
+      const { context } = await instantiatedService.instance.startContext()
       register(name, context)
       state.interactors.set(name, instantiatedService)
     }
-    if (isRunnerName(state.serviceConfigs, name)) {
+    if (service.type === 'runner' && isRunnerName(state.serviceConfigs, name)) {
+      const instantiatedService = await instantiateService(service, ...arg)
+      await instantiatedService.instance.start()
       state.runners.set(name, instantiatedService)
     }
     console.log(`${name}: Started in step`)
