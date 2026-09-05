@@ -11,7 +11,7 @@ for. Nothing is written to the definition: paste the lines, so the file stays ha
 import argparse
 from urllib.parse import urlsplit
 
-from common import (assets_dir, download_original, gif_seconds, gif_size,
+from common import (assets_dir, download_original, edge_colour, gif_seconds, gif_size,
                     repeats_existing_artwork, slots, source_url)
 
 
@@ -85,20 +85,30 @@ def main():
         width, height = gif_size(target)
         slot = args.slot if args.slot else slot_of[index]
         knob, why = advise(seconds, slot)
+        background = edge_colour(target)
 
         print(f'\n{target.name}  {seconds:.2f}s {frames}f {width}x{height} '
               f'{target.stat().st_size / 1e6:.1f}MB  slot {slot:.1f}s')
         print(f'  {why}')
+        if background:
+            print(f"  sits on {background['colour']} across {background['coverage']:.0%} of its "
+                  'border, so the letterbox takes that colour and the edge disappears')
         provider, origin = provenance(gif_id)
         print(f'      // {provider} "<search that found it>": {origin}')
+
+        fields = [f"src: '{target.name}'"]
+        if background:
+            fields.append(f"color: '{background['colour']}'")
         if knob:
-            print('      visual: gif({')
-            print(f"        src: '{target.name}',")
-            print(f'        {knob},')
-            print("        place: 'above-captions',")
-            print('      }),')
+            fields.append(knob)
+        fields.append("place: 'above-captions'")
+        if len(fields) == 2:
+            print(f"      visual: gif({{ {', '.join(fields)} }}),")
         else:
-            print(f"      visual: gif({{ src: '{target.name}', place: 'above-captions' }}),")
+            print('      visual: gif({')
+            for field in fields:
+                print(f'        {field},')
+            print('      }),')
 
 
 if __name__ == '__main__':

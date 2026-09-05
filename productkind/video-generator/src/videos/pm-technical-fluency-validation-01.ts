@@ -35,7 +35,12 @@ export default defineVideo({
       // giphy "speech bubble question animation": https://giphy.com/gifs/mcdVjcUtgJz9603joH
       // Sped up a touch so the bubble finishes typing exactly as the question lands.
       text: "“So how does your product work?”",
-      visual: gif({ src: 'section-00-bubble.gif', playbackRate: 0.9, place: 'above-captions' }),
+      visual: gif({
+        src: 'section-00-bubble.gif',
+        color: '#000000',
+        playbackRate: 0.9,
+        place: 'above-captions',
+      }),
     },
     {
       // giphy "scrolling through app screens": https://giphy.com/gifs/64djN36d7Rr2NodQwQ
@@ -46,7 +51,7 @@ export default defineVideo({
     {
       // giphy "woman shrugging": https://giphy.com/gifs/6lnQpQebxJucdcRdrB
       text: "and that’s as far as your answer goes.",
-      visual: gif({ src: 'section-02-shrug.gif', place: 'above-captions' }),
+      visual: gif({ src: 'section-02-shrug.gif', color: '#fbfbfb', place: 'above-captions' }),
       endsParagraph: true,
     },
     {
@@ -66,19 +71,29 @@ export default defineVideo({
     {
       // giphy "cloud icon animation": https://giphy.com/gifs/W9qCmeTuUoaFG
       text: "cloud storage you’ve never seen,",
-      visual: gif({ src: 'section-05-cloud.gif', place: 'above-captions' }),
+      visual: gif({ src: 'section-05-cloud.gif', color: '#6b51e8', place: 'above-captions' }),
     },
     {
       // giphy "carrying boxes animation": https://giphy.com/gifs/Wkk9hGpx70nVQ3mT6j
       text: "and a database somebody migrated last year.",
-      visual: gif({ src: 'section-06-migration.gif', playbackRate: 0.76, place: 'above-captions' }),
+      visual: gif({
+        src: 'section-06-migration.gif',
+        color: '#ffffff',
+        playbackRate: 0.76,
+        place: 'above-captions',
+      }),
       endsParagraph: true,
     },
     {
       // giphy "broken screen crack": https://giphy.com/gifs/26BRuNOYPshwxGuDm
       // Slowed so the screen is still cracking at the cut, not cracking twice.
       text: "So when the load test fails,",
-      visual: gif({ src: 'section-07-crack.gif', playbackRate: 0.83, place: 'above-captions' }),
+      visual: gif({
+        src: 'section-07-crack.gif',
+        color: '#ffffff',
+        playbackRate: 0.83,
+        place: 'above-captions',
+      }),
     },
     {
       // giphy "is it me confused": https://giphy.com/gifs/0aSulNqJj5zfOshQXC
@@ -102,7 +117,12 @@ export default defineVideo({
       // giphy "woman looking at screen curious": https://giphy.com/gifs/Qt1jk5Q49C3h5CrlBe
       // 2.4s against a 3.0s slot, slowed so the study covers the whole line.
       text: "If you want to understand that about your own product,",
-      visual: gif({ src: 'section-11-studying.gif', playbackRate: 0.8, place: 'above-captions' }),
+      visual: gif({
+        src: 'section-11-studying.gif',
+        color: '#ffffff',
+        playbackRate: 0.8,
+        place: 'above-captions',
+      }),
     },
     {
       // giphy "stacking bricks build": https://giphy.com/gifs/F7ASV7LOSpcCn2lQkt
@@ -115,17 +135,22 @@ export default defineVideo({
       // 6.3s of drawing in a 3.1s slot. Sped up so the drawing finishes inside the beat, which is
       // the payoff the production notes protect: the map gets drawn, not half drawn.
       text: "By the end you’ll be able to map out your product:",
-      visual: gif({ src: 'section-13-drawing.gif', playbackRate: 2.07, place: 'above-captions' }),
+      visual: gif({
+        src: 'section-13-drawing.gif',
+        color: '#000000',
+        playbackRate: 2.07,
+        place: 'above-captions',
+      }),
     },
     {
       // giphy "connected dots lines animation": https://giphy.com/gifs/cG0HFVzbbaA8SenoCj
       text: "what it depends on,",
-      visual: gif({ src: 'section-14-links.gif', place: 'above-captions' }),
+      visual: gif({ src: 'section-14-links.gif', color: '#000000', place: 'above-captions' }),
     },
     {
       // giphy "cat raising paw": https://giphy.com/gifs/3UPNs8vXyJESQ
       text: "who owns each part,",
-      visual: gif({ src: 'section-15-paw.gif', place: 'above-captions' }),
+      visual: gif({ src: 'section-15-paw.gif', color: '#ffffff', place: 'above-captions' }),
     },
     {
       // giphy "loading spinner slow": https://giphy.com/gifs/3og0ID5AW1SmPuG3u0
@@ -150,7 +175,7 @@ export default defineVideo({
     {
       // giphy "email envelope notification": https://giphy.com/gifs/2wWBH0vXsVUmKtRJOe
       text: "Sign up and we’ll let you know when the learning path opens.",
-      visual: gif({ src: 'section-19-envelope.gif', place: 'above-captions' }),
+      visual: gif({ src: 'section-19-envelope.gif', color: '#ffffff', place: 'above-captions' }),
       endsParagraph: true,
     },
     {

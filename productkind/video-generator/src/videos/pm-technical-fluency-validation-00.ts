@@ -120,20 +120,21 @@ export default defineVideo({
     {
       // giphy "aha moment idea": https://giphy.com/gifs/3aYnAs1OHimXSuZAUm
       text: "and understand the answer while you’re in the meeting.",
-      visual: gif({ src: 'section-14-lightbulb.gif', place: 'above-captions' }),
+      visual: gif({ src: 'section-14-lightbulb.gif', color: '#298c8c', place: 'above-captions' }),
       endsParagraph: true,
     },
     {
       // giphy "tap here below": https://giphy.com/gifs/wPskSPeu2grXPyBmq1
       // Stands in for the waitlist page the production notes want on screen here.
       text: "The waitlist link is in the comments.",
-      visual: gif({ src: 'section-15-pointing.gif', place: 'above-captions' }),
+      visual: gif({ src: 'section-15-pointing.gif', color: '#edec00', place: 'above-captions' }),
     },
     {
       // giphy "notification bell ringing": https://giphy.com/gifs/bV43y3KbW5qozIXzMd
       text: "Sign up and we’ll let you know when the learning path opens.",
       visual: gif({
         src: 'section-16-notification.gif',
+        color: '#ffffff',
         playbackRate: 0.61,
         place: 'above-captions',
       }),
@@ -145,6 +146,7 @@ export default defineVideo({
       text: "[pause][curious] What technical word did you look up last?",
       visual: gif({
         src: 'section-17-question-mark.gif',
+        color: '#1de3a5',
         playbackRate: 0.92,
         place: 'above-captions',
       }),

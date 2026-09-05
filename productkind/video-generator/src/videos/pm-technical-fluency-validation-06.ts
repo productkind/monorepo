@@ -55,6 +55,7 @@ export default defineVideo({
       text: 'The decision was made in a meeting you were in.',
       visual: gif({
         src: 'section-00-sticky-notes-meeting.gif',
+        color: '#fdfdfd',
         playbackRate: 0.91,
         place: 'above-captions',
       }),
@@ -88,6 +89,7 @@ export default defineVideo({
       text: 'Three weeks later,',
       visual: gif({
         src: 'section-04-melting-cube.gif',
+        color: '#faffe9',
         playbackRate: 0.99,
         place: 'above-captions',
       }),
@@ -102,6 +104,7 @@ export default defineVideo({
       text: 'and your roadmap moves.',
       visual: gif({
         src: 'section-06-curving-arrow.gif',
+        color: '#000000',
         playbackRate: 0.81,
         place: 'above-captions',
       }),
@@ -123,6 +126,7 @@ export default defineVideo({
       text: 'and nobody teaches you the questions.',
       visual: gif({
         src: 'section-08-three-wise-monkeys.gif',
+        color: '#fcfefc',
         playbackRate: 0.9,
         place: 'above-captions',
       }),
@@ -140,6 +144,7 @@ export default defineVideo({
       text: 'we’re building a learning path for it.',
       visual: gif({
         src: 'section-10-lego-stack-building.gif',
+        color: '#fcfcfc',
         playbackRate: 0.9,
         place: 'above-captions',
       }),
@@ -157,7 +162,11 @@ export default defineVideo({
       // klipy "confused yellow cat sticker":
       // https://static.klipy.com/ii/2711dd8a75a85be822d136ec94899b3f/7f/7e/Th8v11dA.gif
       text: 'What does this change rely on that we don’t control?',
-      visual: gif({ src: 'section-12-confused-cat-solo.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-12-confused-cat-solo.gif',
+        color: '#fcfefc',
+        place: 'above-captions',
+      }),
     },
     {
       // klipy "yellow cat line sticker":
@@ -165,6 +174,7 @@ export default defineVideo({
       text: 'What happens when a request fails halfway?',
       visual: gif({
         src: 'section-13-confused-cats-group.gif',
+        color: '#040204',
         playbackRate: 0.83,
         place: 'above-captions',
       }),
@@ -178,6 +188,7 @@ export default defineVideo({
       // restart on a 0.31 seam. Worth a longer gif if this one ever reads as slow motion.
       visual: gif({
         src: 'section-14-confused-cat-solo-black.gif',
+        color: '#040204',
         playbackRate: 0.59,
         place: 'above-captions',
       }),
@@ -187,7 +198,11 @@ export default defineVideo({
       // klipy "arrow pointing downward simple animation":
       // https://static.klipy.com/ii/d7aec6f6f171607374b2065c836f92f4/d5/76/TlgeGabb.gif
       text: 'The waitlist link is in the comments.',
-      visual: gif({ src: 'section-15-down-arrow-circle-icon.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-15-down-arrow-circle-icon.gif',
+        color: '#fcfefc',
+        place: 'above-captions',
+      }),
     },
     {
       // klipy "cute character ringing bell sticker":
@@ -205,7 +220,11 @@ export default defineVideo({
       // https://static.klipy.com/ii/4e7bea9f7a3371424e6c16ebc93252fe/8a/c8/uYe04AbfmsjaQHfwvD.gif
       // Left looping as well: seam 0.01, and the head tilt is cyclic.
       text: '[pause][curious] Who raises the hard part on your team?',
-      visual: gif({ src: 'section-17-curious-dog-tilt.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-17-curious-dog-tilt.gif',
+        color: '#3c96c4',
+        place: 'above-captions',
+      }),
     },
   ],
 })

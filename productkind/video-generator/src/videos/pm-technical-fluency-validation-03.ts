@@ -66,6 +66,7 @@ export default defineVideo({
       text: "Nobody told you that team ships once a month.",
       visual: gif({
         src: 'section-04-monthly-calendar.gif',
+        color: '#ffffff',
         playbackRate: 1.36,
         place: 'above-captions',
       }),
@@ -90,7 +91,7 @@ export default defineVideo({
     {
       // giphy "lightbulb turning on illustration": https://giphy.com/gifs/3o7TKFODjEUB1gjWPS
       text: "That isn’t the same as live for your users.",
-      visual: gif({ src: 'section-08-switch-on.gif', place: 'above-captions' }),
+      visual: gif({ src: 'section-08-switch-on.gif', color: '#ffffff', place: 'above-captions' }),
       endsParagraph: true,
     },
     {
@@ -141,7 +142,7 @@ export default defineVideo({
     {
       // giphy "hand pointing down finger illustration": https://giphy.com/gifs/XCl8yrQkRPPyROoeJj
       text: "The waitlist link is in the comments.",
-      visual: gif({ src: 'section-15-pointing.gif', place: 'above-captions' }),
+      visual: gif({ src: 'section-15-pointing.gif', color: '#ff5d03', place: 'above-captions' }),
     },
     {
       // giphy "signing paper with pen close up": https://giphy.com/gifs/rjfldjGpjhpxm

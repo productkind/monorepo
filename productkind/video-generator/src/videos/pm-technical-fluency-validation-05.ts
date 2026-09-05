@@ -45,7 +45,12 @@ export default defineVideo({
     {
       // giphy "cute snail slow crawling character": https://giphy.com/gifs/Lx1GlkOqRy1JxRFrws
       text: 'Analytics will have it next week.',
-      visual: gif({ src: 'section-01-snail-slow.gif', playbackRate: 0.9, place: 'above-captions' }),
+      visual: gif({
+        src: 'section-01-snail-slow.gif',
+        color: '#ffffff',
+        playbackRate: 0.9,
+        place: 'above-captions',
+      }),
       endsParagraph: true,
     },
     {
@@ -53,6 +58,7 @@ export default defineVideo({
       text: 'And it’s usually not a hard question.',
       visual: gif({
         src: 'section-02-lightbulb-idea.gif',
+        color: '#fe806f',
         playbackRate: 0.98,
         place: 'above-captions',
       }),
@@ -72,7 +78,11 @@ export default defineVideo({
     {
       // giphy "people standing in line queue icon flat": https://giphy.com/gifs/WcOGF3mNL8gAAbIh3F
       text: 'You join the queue,',
-      visual: gif({ src: 'section-05-join-queue.gif', playbackRate: 0.75, place: 'above-captions' }),
+      visual: gif({
+        src: 'section-05-join-queue.gif',
+        playbackRate: 0.75,
+        place: 'above-captions',
+      }),
     },
     {
       // giphy "empty pockets nothing to show": https://giphy.com/gifs/RLo3AazZVeBBfWqmCB
@@ -80,6 +90,7 @@ export default defineVideo({
       text: 'and have the meeting without it.',
       visual: gif({
         src: 'section-06-empty-handed.gif',
+        color: '#ffffff',
         playbackRate: 0.99,
         place: 'above-captions',
       }),
@@ -94,7 +105,11 @@ export default defineVideo({
     {
       // giphy "cute character searching flashlight icon": https://giphy.com/gifs/PVrX3JmBB56KdqH1Y7
       text: 'You’ve just never been shown which four.',
-      visual: gif({ src: 'section-08-searching-flashlight.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-08-searching-flashlight.gif',
+        color: '#620c1b',
+        place: 'above-captions',
+      }),
       endsParagraph: true,
     },
     {
@@ -155,13 +170,21 @@ export default defineVideo({
     {
       // giphy "cute character holding solid shield icon": https://giphy.com/gifs/2GBfKwJ7bypANDoqRt
       text: 'So you stop quoting numbers you can’t defend.',
-      visual: gif({ src: 'section-16-defend-shield.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-16-defend-shield.gif',
+        color: '#ffffff',
+        place: 'above-captions',
+      }),
       endsParagraph: true,
     },
     {
       // giphy "down arrow bounce gif simple minimal": https://giphy.com/gifs/26BkMfCPUHOumk0oM
       text: 'The waitlist link is in the comments.',
-      visual: gif({ src: 'section-17-comments-below.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-17-comments-below.gif',
+        color: '#584604',
+        place: 'above-captions',
+      }),
     },
     {
       // giphy "watering can flowers growing icon flat": https://giphy.com/gifs/PuqmtajWzEZqPld7p2
@@ -169,6 +192,7 @@ export default defineVideo({
       text: 'Sign up and we’ll let you know when the learning path opens.',
       visual: gif({
         src: 'section-18-growing-signup.gif',
+        color: '#fafef8',
         playbackRate: 0.81,
         place: 'above-captions',
       }),
@@ -177,7 +201,11 @@ export default defineVideo({
     {
       // giphy "wall clock hands moving simple icon": https://giphy.com/gifs/yw8lh1JuxnwB8mawsU
       text: '[pause][curious] How long does a simple number take where you work?',
-      visual: gif({ src: 'section-19-time-question.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-19-time-question.gif',
+        color: '#000000',
+        place: 'above-captions',
+      }),
     },
   ],
 })

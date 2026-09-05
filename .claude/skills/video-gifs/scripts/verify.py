@@ -16,23 +16,55 @@ import subprocess
 import time
 import urllib.request
 
-from common import (assets_dir, candidates_dir, gif_seconds, loop_seam, motion, slots, stack,
-                    strip, timeline, video_root)
+from common import (assets_dir, candidates_dir, edge_colour, gif_seconds, loop_seam, motion,
+                    slots, stack, strip, timeline, video_root)
 
 
 def chosen_visuals(video, root=None):
     """Each section's gif and its playbackRate, in section order, as the definition has them."""
+    return [(name, rate) for name, rate, _ in declared(video, root)]
+
+
+def declared(video, root=None):
+    """Each section's gif, playbackRate and letterbox colour, in section order."""
     definition = video_root(root) / 'src' / 'videos' / f'{video}.ts'
     if not definition.exists():
         raise SystemExit(f'No definition at {definition}.')
     found = re.findall(
-        r"src: '([^']+\.gif)',(?:\s*color: '[^']+',)?(?:\s*playbackRate: ([\d.]+),)?",
+        r"src: '([^']+\.gif)',(?:\s*color: '([^']+)',)?(?:\s*playbackRate: ([\d.]+),)?",
         definition.read_text())
-    return [(name, float(rate) if rate else None) for name, rate in found]
+    return [(name, float(rate) if rate else None, colour or None)
+            for name, colour, rate in found]
 
 
 def chosen_gifs(video, root=None):
     return [name for name, _ in chosen_visuals(video, root)]
+
+
+def check_backgrounds(video, root=None):
+    """Sections whose gif sits on a flat colour the letterbox is not matching.
+
+    Worth a pass of its own because the defect is invisible in a frame grab of the gif: it only
+    shows once the gif is placed on the house purple and a hard rectangle appears around it.
+    """
+    folder = assets_dir(video, root)
+    changes = 0
+    for index, (name, _, colour) in enumerate(declared(video, root)):
+        gif = folder / name
+        if not gif.exists():
+            continue
+        found = edge_colour(gif)
+        if found and found['colour'] != colour:
+            changes += 1
+            print(f"  {index:02d} {name:32} sits on {found['colour']} "
+                  f"({found['coverage']:.0%} of its border) — "
+                  + (f"declared {colour}" if colour else "letterboxed on house purple"))
+        elif colour and not found:
+            changes += 1
+            print(f'  {index:02d} {name:32} declares {colour} but has no flat border '
+                  '— the gif was probably replaced')
+    print('  every section letterboxed to match' if not changes
+          else f'  {changes} section(s) want a colour change')
 
 
 def check_frames(video, root=None):
@@ -112,18 +144,25 @@ def main():
     parser.add_argument('--frames', action='store_true')
     parser.add_argument('--stills', action='store_true')
     parser.add_argument('--serve', action='store_true')
+    parser.add_argument('--backgrounds', action='store_true')
     parser.add_argument('--root', default=None)
     args = parser.parse_args()
-    everything = not (args.frames or args.stills or args.serve)
+    everything = not (args.frames or args.stills or args.serve or args.backgrounds)
 
     if args.frames or everything:
         check_frames(args.video, args.root)
     if args.stills or everything:
         print('composed stills:')
         check_stills(args.video, args.root)
+    if args.backgrounds or everything:
+        print('letterbox colours:')
+        check_backgrounds(args.video, args.root)
     if args.serve or everything:
         print('serving:')
         check_serve(args.video, args.root)
+
+    if not everything:
+        return
 
     folder = assets_dir(args.video, args.root)
     timeline_path = folder / 'timeline.json'
