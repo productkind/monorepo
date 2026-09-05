@@ -1,5 +1,6 @@
 import { createApplication } from './application.ts'
 
+import type { ReactElement } from 'react'
 import { expect, expectTypeOf, test } from 'vitest'
 
 test('empty application', () => {
@@ -269,7 +270,7 @@ test('Get delivery', () => {
   type Services = { myService: 'my-service' }
   const app = createApplication<{
     behaviors: Services
-    delivery: { AppComponent: () => JSX.Element }
+    delivery: { AppComponent: () => ReactElement<{ 'data-service': string }> }
   }>({
     getBehaviors: () => ({ myService }),
     getDelivery: ({ behaviors: { myService } }) => ({
@@ -298,7 +299,7 @@ test('main', () => {
   const myService = 'my-service'
   type Services = { myService: 'my-service' }
   const app = createApplication<{
-    delivery: { AppComponent: () => JSX.Element }
+    delivery: { AppComponent: () => ReactElement<{ 'data-service': string }> }
     behaviors: Services
     output: string
   }>({
@@ -378,7 +379,7 @@ test('Redefine delivery', () => {
   type Services = { myService: 'my-service' }
   const app = createApplication<{
     behaviors: Services
-    delivery: { AppComponent: () => JSX.Element }
+    delivery: { AppComponent: () => ReactElement<{ 'data-service': string }> }
   }>({
     getBehaviors: () => ({ myService }),
     getDelivery: ({ behaviors: { myService } }) => ({
@@ -398,7 +399,7 @@ test('Redefine main', () => {
   type Services = { myService: 'my-service' }
   const app = createApplication<{
     behaviors: Services
-    delivery: { AppComponent: () => JSX.Element }
+    delivery: { AppComponent: () => ReactElement<{ 'data-service': string }> }
   }>({
     getBehaviors: () => ({ myService }),
     getDelivery: ({ behaviors: { myService } }) => ({
