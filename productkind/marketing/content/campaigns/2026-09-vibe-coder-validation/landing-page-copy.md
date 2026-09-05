@@ -22,7 +22,7 @@ Make Your Vibe-Coded App Work for Real Customers
 
 ### Research quote
 
-> In our research with women building with AI, we kept seeing the same problem: “The problem is I can’t judge what it’s doing.”
+> In our research with women building with AI, we kept seeing the same problem: "I can’t judge what the AI is doing."
 
 ### Introduction
 
@@ -48,22 +48,6 @@ Built by Kinga, a lead product manager, and Tamas, a principal software engineer
 
 [Keep the existing Datadog, Citrix, Volkswagen and Cloudera logos.]
 
-## Is this learning path for you?
-
-### Yes, if
-
-- You have built a working web app or prototype with Lovable, Replit, Claude Code or another AI building tool.
-- Your app works in a preview, but you cannot yet tell whether it is ready for customers, customer data or payments.
-- You want to change and maintain your app without worrying that every update could break something else.
-- You want to use real customer behaviour to decide what to improve and test whether people will pay.
-- You plan to charge for your app or use it to deliver paid work, and you need to know when to involve a developer or security specialist.
-
-### Not really, if
-
-- You are still choosing your first idea or want help building your first app. Start with our beginner courses instead.
-- You want to train as a software engineer. This path teaches you how to make informed decisions about your app, not how to write production software by yourself.
-- You need someone to certify that your app is secure or compliant. A course cannot replace a professional review of your specific product.
-
 ## The learning path
 
 Ten steps, each built around a problem that appears after the first build, and each one leaves you able to check, measure or change something in your own app. The path is still being built, so the order may change.
@@ -78,27 +62,27 @@ You’ll connect your project to GitHub, save a known working version and practi
 
 ### 3. Fix bugs without rebuilding everything
 
-You’ll reproduce a bug, collect screenshots, error messages and browser evidence, then give your AI agent the context it needs. You’ll learn when another prompt is useful and when it is time to restore the working version or ask a developer.
+You’ll reproduce a bug, collect screenshots, error messages and browser evidence, then give your AI agent the context it needs. You’ll learn when another prompt is useful and when it is time to restore the working version and rebuild the new feature again.
 
 ### 4. Protect accounts, customer data and secrets
 
-You’ll check how sign-up, sign-in, permissions and stored data behave. You’ll identify exposed secrets and risky access rules, then record anything that needs review by a security or privacy specialist.
+You’ll check how sign-up, sign-in, permissions and stored data behave. You’ll identify exposed secrets and risky access rules, then execute next steps that make your app secure.
 
 ### 5. Test the journeys customers depend on
 
-You’ll define the main journey through your app and test the expected path, common mistakes and failure cases. You’ll repeat those checks after a change, so you can spot a broken sign-up, payment or email before a customer does.
+You’ll define the main journey through your app, test the expected path and common failure cases. You’ll repeat those checks after a change, so you can spot a broken sign-up, payment or email before a customer does.
 
-### 6. Publish the app and see what happens
+### 6. Publish the app and get your first customers
 
-You’ll work through hosting, your domain, staging and transactional emails. You’ll finish with a launch checklist and know what to watch when the first customers arrive.
+You’ll work through hosting, your domain and transactional emails. You’ll finish with a launch checklist and know what to watch when the first customers arrive.
 
 ### 7. Add analytics that answer a product question
 
-You’ll choose the actions that show whether people reach the result your app promises, then track those actions as events. You’ll finish with an analytics view of sign-up, first use, return visits and payment, so you can see where people stop and decide what to investigate.
+You’ll choose the actions that show whether people reach the result your app promises, then track those actions as events. You’ll build analytics dashboards, so you can see where your visitors stop and decide what to investigate.
 
 ### 8. Test improvements with focused experiments
 
-You’ll turn an assumption into a hypothesis, choose the result you expect to change and design the smallest useful test. You’ll test an improvement with users and learn when an A/B test can answer your question, and when a small number of users would make the result misleading. You’ll finish with an experiment brief and a record of what the evidence changed about your next decision.
+You’ll turn an assumption into a hypothesis, choose the result you expect to change and design the smallest useful test. You’ll test an improvement with users and learn when an A/B test can answer your question. You’ll finish with an experiment brief and a record of what the evidence changed about your next decision.
 
 ### 9. Choose how your app will make money
 
@@ -106,17 +90,33 @@ You’ll compare a subscription, a one-off payment and a service supported by yo
 
 ### 10. Maintain the app after launch
 
-You’ll set a routine for updates, backups, restoring a working version and monitoring your running costs. You’ll also create a short handover document, so a developer can understand the product if you need help later.
+You’ll set a routine for updates, backups, restoring a working version and monitoring your running costs. You’ll also create a system to get automatically notified if your app is down.
 
 ## How the learning path works
 
-Every step is self-paced, in short cards you can work through on your phone. Each one takes under an hour, so you can fit it around the work and responsibilities you already have.
+It's made up of hands-on challenges. Every step is self-paced, in short cards you can work through on your phone, so you can fit it around the work and responsibilities you already have.
 
-You finish each step with something you can use on your own app: a product map, a saved working version, a bug investigation, a security risk list, a set of customer-journey tests, a launch checklist, an analytics view, an experiment brief, a pricing hypothesis and a maintenance plan.
+You finish each challenge with something you can use on your own app: a product map, a saved working version, a bug investigation, a security risk list, a set of customer-journey tests, a launch checklist, an analytics view, an experiment brief, a pricing hypothesis and a maintenance plan.
 
 ## Who writes them
 
-We write all of it ourselves. Kinga learned to code, moved into product management and worked as a lead product manager. Tamas spent 15 years as a software engineer and engineering leader, and co-founded a coding school that graduated over 3,000 people into tech careers.
+We write all of it ourselves. Kinga spent over a decade in the tech industry, learned to code, moved into product management and worked as a lead product manager. Tamas spent 15 years as a software engineer and engineering leader, and co-founded a coding school that graduated over 3,000 people into tech careers.
+
+## Is this learning path for you?
+
+### Yes, if
+
+- You have built a working web app or prototype with Lovable, Replit, Claude Code or another AI building tool.
+- Your app works in a preview, but you cannot yet tell whether it is ready for customers, customer data or payments.
+- You want to change and maintain your app without worrying that every update could break something else.
+- You want to use real customer behaviour to decide what to improve and test whether people will pay.
+- You plan to charge for your app or use it to deliver paid work.
+
+### Not really, if
+
+- You are still choosing your first idea or want help building your first app. Start with our beginner courses instead.
+- You want to train as a software engineer. This path teaches you how to make informed decisions about your app, not how to write code.
+- You need someone to certify that your app is secure or compliant. A course cannot replace a professional review of your specific product.
 
 ## Frequently asked questions
 
@@ -130,19 +130,19 @@ You need evidence for the journeys your customers rely on. Can they create an ac
 
 ### Will this make my app secure and production-ready?
 
-No course can guarantee that for every app. The data you collect, the customers you serve and the services you connect all change the risk. You’ll learn practical checks, safer ways to make changes and the warning signs that mean your app needs a professional security, privacy or legal review.
+No course can guarantee that for every app. The data you collect, the customers you serve and the services you connect all change the risk. You’ll learn practical checks, safer ways to make changes and the warning signs that mean your app needs some fixes.
 
 ### Do I need to understand code?
 
-You’ll read small pieces of code and use an AI agent to explain them, but you will not learn a programming language. The aim is to understand your app well enough to test important behaviour, review a proposed change and give a developer useful evidence when you need help.
+You’ll read small pieces of code and use an AI agent to explain them, but you will not learn a programming language. The aim is to understand your app well enough to test important behaviour, review a proposed change and give an AI agent useful evidence when you are fixing problems.
 
 ### How much does it cost?
 
-We’re still setting the price. Join the list and you’ll see the current one straight after you sign up, along with one question about whether that price works for you. Your answer helps us decide what to charge.
+We’re still setting the price. Join the list and you’ll see the proposed price straight after you sign up, along with one question about whether that price works for you. Your answer helps us decide what to charge.
 
 ### How long does it take?
 
-Each step in the path is self-paced and takes under an hour, in short cards you can work through on your phone. You complete each one using your own app and finish with a saved working version, a customer-journey test or a launch checklist.
+Each challenge in the path is self-paced, in short cards you can work through on your phone. You complete each one using your own app and finish with a saved working version, a customer-journey test or a launch checklist.
 
 ## Closing waitlist form
 
