@@ -26,7 +26,7 @@ Make Your Vibe-Coded App Work for Real Customers
 
 ### Introduction
 
-Your app works in the preview. You still need to know what happens when someone signs up, pays, saves their data or returns tomorrow. You also need evidence to decide what to improve and whether people will pay for it. This learning path helps you test the journeys your customers depend on, measure how people use your app, run focused experiments and make changes you can undo.
+Your app works in the preview. You still need to know what happens when someone signs up, pays, saves their data or returns tomorrow. This learning path helps you build the technical confidence to test the journeys your customers depend on, measure how people use your app, run focused experiments and make changes you can undo.
 
 ### First waitlist form
 
