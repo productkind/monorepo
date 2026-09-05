@@ -46,11 +46,11 @@ export const createCucumberTestEnvironment = <SERVICES extends Record<string, Se
     })
   })
 
-  Before({ tags: '@ignore' }, async function () {
+  Before({ tags: '@ignore' }, function () {
     return 'skipped'
   })
 
-  Before({ tags: '@debug' }, async function (this: TestEnvironmentWorld) {
+  Before({ tags: '@debug' }, function (this: TestEnvironmentWorld) {
     this.debug = true
   })
 
