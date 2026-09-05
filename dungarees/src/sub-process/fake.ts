@@ -20,9 +20,9 @@ export const createFakeSpawn = (config: FakeSpawnConfig): FakeSpawn => {
       `Command "${serializedCommand}" is not listed in the fake options`,
     )
 
-    let doneCallback: Callback
-    let stdoutCallback: Callback
-    let stderrCallback: Callback
+    let doneCallback: CloseCallback
+    let stdoutCallback: DataCallback
+    let stderrCallback: DataCallback
 
     timer(delay ?? 1).subscribe(() => {
       stdoutCallback?.(Buffer.from(stdout))
@@ -35,18 +35,18 @@ export const createFakeSpawn = (config: FakeSpawnConfig): FakeSpawn => {
     })
 
     return {
-      on: (event: string, cb: Callback) => {
+      on: (event: string, cb: CloseCallback) => {
         if (event !== 'close') return
         doneCallback = cb
       },
       stdout: {
-        on: (_: string, cb: Callback) => {
+        on: (_: string, cb: DataCallback) => {
           stdoutCallback = cb
         },
         setEncoding: (_: string) => {},
       },
       stderr: {
-        on: (_: string, cb: Callback) => {
+        on: (_: string, cb: DataCallback) => {
           stderrCallback = cb
         },
         setEncoding: (_: string) => {},
@@ -84,7 +84,8 @@ type FakeCommandOutput = {
   delay?: number
 }
 
-type Callback = ((...args: any[]) => void) | undefined
+type DataCallback = ((chunk: Buffer) => void) | undefined
+type CloseCallback = ((code: number | undefined) => void) | undefined
 
 export type FakeCommandConfig = {
   command: string
