@@ -10,6 +10,7 @@
     "@remotion/gif": "4.0.321",
     "@remotion/google-fonts": "^4.0.321",
     "@remotion/rive": "4.0.321",
+    "@remotion/studio": "4.0.321",
     "@remotion/tailwind-v4": "4.0.321",
     "@remotion/zod-types": "4.0.321",
     "@rive-app/canvas-single": "^2.24.0",
