@@ -30,6 +30,10 @@ export default tseslint.config(
       ],
       // Replaces eslint-plugin-deprecation, which typescript-eslint v8 superseded.
       '@typescript-eslint/no-deprecated': 'error',
+      // A promise-returning function stays `async`, so a synchronous throw still reaches the
+      // caller as a rejection. require-await pushes the other way and is off for that reason.
+      '@typescript-eslint/promise-function-async': 'error',
+      '@typescript-eslint/require-await': 'off',
       // No escape hatch in production code: an unused binding there is a defect, not a
       // convention. Tests get one, see the override below.
       '@typescript-eslint/no-unused-vars': 'error',
