@@ -1,6 +1,6 @@
 ---
 name: video-gifs
-description: Find, judge and wire up giphy gifs for the sections of a narrated Remotion video in little-parrot/content/video, fitted to each section's on-screen slot. Use when a video definition needs visuals, when placeholder gifs have to be replaced, or when one beat's gif is wrong. Triggers include "find gifs for this video", "source the gifs", "replace the placeholder visuals", "find a better gif for section N".
+description: Find, judge and wire up giphy gifs for the sections of a narrated Remotion video in productkind/video-generator, fitted to each section's on-screen slot. Use when a video definition needs visuals, when placeholder gifs have to be replaced, or when one beat's gif is wrong. Triggers include "find gifs for this video", "source the gifs", "replace the placeholder visuals", "find a better gif for section N".
 ---
 
 ## Video gifs
@@ -27,8 +27,8 @@ a single beat rather than source a whole video.
 
 ### Where things live
 
-- Definitions: `little-parrot/content/video/src/videos/<video-id>.ts`
-- Assets: `little-parrot/content/video/public/<video-id>/section-NN-keyword.gif`
+- Definitions: `productkind/video-generator/src/videos/<video-id>.ts`
+- Assets: `productkind/video-generator/public/<video-id>/section-NN-keyword.gif`
 - Slots: `public/<video-id>/timeline.json`, written by narrate. If it is missing, either run
   `npm run narrate -- --allow-generate` from the video package first, or source against estimated
   slots and pass `--slot <seconds>` to `harvest.py` and `pick.py`. Estimate a slot as the section's

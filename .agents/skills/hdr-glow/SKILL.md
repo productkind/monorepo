@@ -9,7 +9,7 @@ Turn a normal SDR logo or image into one that **glows on HDR/EDR displays** (App
 
 Reach for this when:
 - You want a brand logo or social-share graphic to light up in a feed or on a Mac.
-- You're matching the effect of an existing HDR asset (the reference this was built from was `little-parrot/content/video/public/social-012/metaview_technologies_logo.jpeg`).
+- You're matching the effect of an existing HDR asset (the reference this was built from was `productkind/video-generator/public/social-012/metaview_technologies_logo.jpeg`).
 
 ### How it works
 

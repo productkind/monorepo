@@ -31,7 +31,7 @@ def repo_root(start=None):
 def video_root(root=None):
     if root:
         return pathlib.Path(root).resolve()
-    return repo_root() / 'little-parrot' / 'content' / 'video'
+    return repo_root() / 'productkind' / 'video-generator'
 
 
 def assets_dir(video, root=None):

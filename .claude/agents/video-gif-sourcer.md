@@ -1,6 +1,6 @@
 ---
 name: video-gif-sourcer
-description: "Use this agent to source the gifs for a narrated Little Parrot video in little-parrot/content/video. Give it the video id and the section list (each section's narration text plus its slot in seconds). It harvests candidates from giphy, judges them against the video-gifs skill's rules, downloads the picks into the video's own asset folder with the right filenames, and returns one line per section: gif id, filename, the search that found it, measured duration, slot, and the timing knob the fit calls for. It does not write or edit the video definition, and it returns the beats it could not resolve rather than settling for a bad gif."
+description: "Use this agent to source the gifs for a narrated Little Parrot video in productkind/video-generator. Give it the video id and the section list (each section's narration text plus its slot in seconds). It harvests candidates from giphy, judges them against the video-gifs skill's rules, downloads the picks into the video's own asset folder with the right filenames, and returns one line per section: gif id, filename, the search that found it, measured duration, slot, and the timing knob the fit calls for. It does not write or edit the video definition, and it returns the beats it could not resolve rather than settling for a bad gif."
 tools: Read, Bash, Glob, Grep
 model: sonnet
 color: pink
