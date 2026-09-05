@@ -4,6 +4,8 @@ import { RemotionRiveCanvas } from '@remotion/rive'
 import type { Timeline } from '../narration/timeline'
 import type { Overlay, VideoDefinition } from '../narration/definition'
 import { Captions } from './Captions'
+import { AnnotatedSection } from './SectionAnnotation'
+import { sectionLabel } from './section-label'
 import { VisualView } from './Visual'
 
 const BACKGROUND_CLASS = 'bg-[#1a0044]'
@@ -15,32 +17,64 @@ const SOUNDTRACK_VOLUME = 0.1
  * No duration appears here. Every cut is `timeline.sections`, and each of those boundaries is the
  * frame on which that section's first narrated word begins — so editing the script moves the cuts
  * on its own.
+ *
+ * Every sequence carries a `name`, because the Studio timeline is how you find a beat: unnamed,
+ * eighteen rows all read `Series.Sequence`. The soundtrack and the per-take audio are kept out of
+ * the timeline entirely — they are one row each per video and never the thing being looked for.
  */
 export const NarratedVideo: React.FC<{
   definition: VideoDefinition
   timeline: Timeline
-}> = ({ definition, timeline }) => (
+  /** Draws the slot, the gif length and the repeat count over each section. Studio only. */
+  annotate?: boolean
+}> = ({ definition, timeline, annotate = false }) => (
   <AbsoluteFill className={BACKGROUND_CLASS}>
     <Series>
-      {timeline.sections.map((section) => (
-        <Series.Sequence key={section.index} durationInFrames={section.durationInFrames}>
-          <VisualView visual={definition.sections[section.index].visual} assets={definition.assets} />
-        </Series.Sequence>
-      ))}
+      {timeline.sections.map((section) => {
+        const { text, visual } = definition.sections[section.index]
+        return (
+          <Series.Sequence
+            key={section.index}
+            durationInFrames={section.durationInFrames}
+            name={sectionLabel({ index: section.index, text, visual })}
+          >
+            {annotate ? (
+              <AnnotatedSection
+                index={section.index}
+                visual={visual}
+                assets={definition.assets}
+                slotFrames={section.durationInFrames}
+                fps={timeline.fps}
+              />
+            ) : (
+              <VisualView visual={visual} assets={definition.assets} />
+            )}
+          </Series.Sequence>
+        )
+      })}
     </Series>
 
-    {timeline.takes.map((take) => (
-      <Sequence key={take.audio} from={take.fromFrame} durationInFrames={take.durationInFrames}>
-        <Audio src={staticFile(take.audio)} />
+    {timeline.takes.map((take, index) => (
+      <Sequence
+        key={take.audio}
+        from={take.fromFrame}
+        durationInFrames={take.durationInFrames}
+        name={`take ${String(index + 1)}`}
+      >
+        <Audio src={staticFile(take.audio)} showInTimeline={false} />
       </Sequence>
     ))}
 
-    <Audio src={staticFile('soundtrack.wav')} volume={SOUNDTRACK_VOLUME} />
+    <Audio src={staticFile('soundtrack.wav')} volume={SOUNDTRACK_VOLUME} showInTimeline={false} />
 
     <Captions captions={timeline.words} />
 
     {definition.overlays.map((overlay, index) => (
-      <Sequence key={`${overlay.rive}-${index}`} from={startFrame({ overlay, timeline })}>
+      <Sequence
+        key={`${overlay.rive}-${index}`}
+        from={startFrame({ overlay, timeline })}
+        name={`overlay ${overlay.rive.replace(/\.riv$/, '')}`}
+      >
         <RemotionRiveCanvas src={staticFile(overlay.rive)} />
       </Sequence>
     ))}
