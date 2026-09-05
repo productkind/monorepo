@@ -51,3 +51,18 @@ test('MemoryDeepRawKeyValueStore set non object value at 2 level deep', () => {
     store.set('key1.key2.key3', 3)
   }).toThrow('Value under path: "key1.key2" is not an object')
 })
+
+test('MemoryDeepRawKeyValueStore keeps the cause of a failed lookup', () => {
+  const store = createMemoryDeepRawKeyValueStore()
+  store.set('key1', { key2: 1 })
+
+  let thrown: unknown
+  try {
+    store.get('key1.key2.key3')
+  } catch (error: unknown) {
+    thrown = error
+  }
+
+  expect(thrown).toBeInstanceOf(Error)
+  expect((thrown as Error).cause).toBeInstanceOf(Error)
+})
