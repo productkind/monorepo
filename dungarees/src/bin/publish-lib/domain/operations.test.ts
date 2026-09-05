@@ -12,7 +12,7 @@ import { mtest } from '@dungarees/core/marbles-vitest.ts'
 import { createGetTransformSetContextInspector } from '@dungarees/rxjs/fake.ts'
 import { collectValuesFrom, createGetTransformSetContext } from '@dungarees/rxjs/util.ts'
 
-import { of } from 'rxjs'
+import { of, throwError } from 'rxjs'
 import { expect, test } from 'vitest'
 
 mtest('create build start event', ({ expect }) => {
@@ -331,6 +331,16 @@ mtest('getPackageDirsWithVersion errors when version is not a string', ({ expect
     readPackageJson: () => of(JSON.stringify({ name: '@org/lib' })),
   })
   expect(combined$).toBeObservableError(new Error('Version is required in version.json'), 0)
+})
+
+mtest('getPackageDirsWithVersion passes a read failure through unlabelled', ({ expect }) => {
+  const combined$ = getPackageDirsWithVersion({
+    packageJsonPaths$: of(['/src/lib-1/package.json']),
+    versionContent$: throwError(() => new Error('Read failed')),
+    sourceDir: '/src',
+    readPackageJson: () => of(JSON.stringify({ name: '@org/lib' })),
+  })
+  expect(combined$).toBeObservableError(new Error('Read failed'), 0)
 })
 
 mtest('getPackageDirsWithVersion errors when version.json is not valid JSON', ({ expect }) => {

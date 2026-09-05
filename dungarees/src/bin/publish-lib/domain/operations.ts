@@ -4,11 +4,11 @@ import { createCausedError } from '@dungarees/core/error.ts'
 import type { JsonObject } from '@dungarees/core/type-util.ts'
 import {
   assertSchemaMap,
-  assertTypeByGuardMap,
   catchAndRethrow,
   type GetTransformSetContext,
 } from '@dungarees/rxjs/util.ts'
 import type { TranspileDirOutput } from '@dungarees/transpile/service.ts'
+import { jsonObjectSchema, parseJson } from '@dungarees/zod/json.ts'
 
 import path from 'node:path'
 import { defer, forkJoin, type Observable, of, type OperatorFunction, pipe } from 'rxjs'
@@ -115,16 +115,13 @@ const setExports = ({
   )
 
 const parsePackageJson = (): OperatorFunction<string, JsonObject> =>
-  pipe(
-    map((content): unknown => JSON.parse(content)),
-    catchAndRethrow((cause) =>
-      createCausedError({ message: 'Invalid source package.json', cause }),
-    ),
-    assertTypeByGuardMap(
-      (packageJson): packageJson is JsonObject =>
-        typeof packageJson === 'object' && packageJson !== null && !Array.isArray(packageJson),
-      'package.json must be a JSON object',
-    ),
+  map((json) =>
+    parseJson({
+      json,
+      schema: jsonObjectSchema,
+      message: 'Invalid source package.json',
+      schemaMessage: 'package.json must be a JSON object',
+    }),
   )
 
 const setPackageJsonVersion = (
@@ -182,14 +179,14 @@ const getPackageDirs = (sourceDir: string): OperatorFunction<string[], string[]>
   )
 
 const parseVersion = (): OperatorFunction<string, string> =>
-  pipe(
-    map((content): unknown => JSON.parse(content)),
-    catchAndRethrow((cause) => createCausedError({ message: 'Invalid version.json', cause })),
-    assertSchemaMap(
-      z.object({ version: z.string().min(1) }),
-      'Version is required in version.json',
-    ),
-    map(({ version }) => version),
+  map(
+    (json) =>
+      parseJson({
+        json,
+        schema: z.object({ version: z.string().min(1) }),
+        message: 'Invalid version.json',
+        schemaMessage: 'Version is required in version.json',
+      }).version,
   )
 
 const PACKAGE_PRIVACY = z.object({ private: z.boolean().optional() })
