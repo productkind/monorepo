@@ -5,8 +5,8 @@ export type KeyValueStoreCommon<STORE extends KeyValueStoreCommon_> = STORE
 export type KeyValueStoreWithValidator<STORE extends KeyValueStoreWithValidator_> = STORE
 
 type KeyValueStoreCommon_ = {
-  get: (key: any) => any
-  set: (ley: any, value: any) => void
+  get: (key: never) => unknown
+  set: (key: never, value: never) => void
 }
 
 type KeyValueStoreWithValidator_ = KeyValueStoreCommon_ & { validate: () => void }
