@@ -41,7 +41,7 @@ export const instantiateService = async <SERVICE extends InteractorConfig | Runn
 }
 
 type InstanceWithConfig<T extends InteractorConfig | RunnerConfig> = {
-  instance: GetValue<ReturnType<T['creator']>>
+  instance: Awaited<GetInstance<T>>
 } & DefaultConfig
 
 export const createTestEnvironment = <const SERVICES extends Record<string, ServiceConfig>>(
