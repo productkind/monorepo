@@ -29,16 +29,16 @@ export type TypedArray =
 
 export type TokenNonEmptyString<TOKEN extends string | number> = TOKEN extends '' ? never : TOKEN
 
-export type Guard<T = any> = (arg: unknown) => arg is T
+export type Guard<T = unknown> = (arg: unknown) => arg is T
 
 export type GetGuarded<GUARD extends Guard> = GUARD extends (arg: unknown) => arg is infer GUARDED
   ? GUARDED
   : never
 
-export type EntryTuple<KEY extends string = string, VALUE = any> = [KEY, VALUE]
+export type EntryTuple<KEY extends string = string, VALUE = unknown> = [KEY, VALUE]
 
 export type RecordToEntries<
-  RECORD extends Record<string, any>,
+  RECORD extends Record<string, unknown>,
   KEY = keyof RECORD,
 > = KEY extends string ? (KEY extends keyof RECORD ? EntryTuple<KEY, RECORD[KEY]> : never) : never
 
@@ -49,7 +49,7 @@ export type GetKey<ENTRIES extends EntryTuple> = ENTRIES[0]
 
 export type GetValue<ENTRIES extends EntryTuple> = ENTRIES[1]
 
-export type FilterRecord<RECORD extends Record<string | number | symbol, any>, TYPE> = Pick<
+export type FilterRecord<RECORD extends Record<string | number | symbol, unknown>, TYPE> = Pick<
   RECORD,
   {
     [K in keyof RECORD]: RECORD[K] extends TYPE ? K : never
@@ -75,10 +75,10 @@ export type GetAllPaths<OBJECT, PATH extends string = ''> = PathsHelper<OBJECT, 
 type PathsHelper<OBJECT, PATH extends string, ACC extends string> =
   | {
       [K in keyof OBJECT & string]: PATH extends ''
-        ? K | (OBJECT[K] extends Record<string, any> ? PathsHelper<OBJECT[K], K, K> : never)
+        ? K | (OBJECT[K] extends Record<string, unknown> ? PathsHelper<OBJECT[K], K, K> : never)
         :
             | `${PATH}.${K}`
-            | (OBJECT[K] extends Record<string, any>
+            | (OBJECT[K] extends Record<string, unknown>
                 ? PathsHelper<OBJECT[K], `${PATH}.${K}`, `${PATH}.${K}` | ACC>
                 : never)
     }[keyof OBJECT & string]
@@ -158,7 +158,7 @@ export type DeepPartial<T> = {
   [K in keyof T]?: T[K] extends object ? DeepPartial<T[K]> : T[K]
 }
 
-export type SyncFunctionToAsync<FUNC extends (...args: any[]) => any> = FUNC extends (
+export type SyncFunctionToAsync<FUNC extends (...args: never[]) => unknown> = FUNC extends (
   ...args: infer ARGS
 ) => infer RETURN
   ? (...args: ARGS) => Promise<RETURN>

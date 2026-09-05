@@ -242,6 +242,16 @@ test('SyncFunctionToAsync<FUNC>', () => {
   expectTypeOf<AsyncFunc>().toEqualTypeOf<(a: 1, b: 2) => Promise<3>>()
 })
 
+test('SyncFunctionToAsync<FUNC> accepts every function shape', () => {
+  expectTypeOf<SyncFunctionToAsync<() => void>>().toEqualTypeOf<() => Promise<void>>()
+  expectTypeOf<SyncFunctionToAsync<(a: string, b?: number) => boolean>>().toEqualTypeOf<
+    (a: string, b?: number) => Promise<boolean>
+  >()
+  expectTypeOf<SyncFunctionToAsync<(...items: string[]) => number>>().toEqualTypeOf<
+    (...items: string[]) => Promise<number>
+  >()
+})
+
 test('DetachableMethods<OBJECT>', () => {
   type Context = {
     equal(actual: string, expected: string): boolean
