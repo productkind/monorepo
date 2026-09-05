@@ -3,7 +3,7 @@ import { defineVideo, gif, riveAtFrame } from '../narration/definition'
 /**
  * Video 2 of the PM technical fluency campaign, "You said yes to a simple feature".
  * Script: productkind/marketing/content/campaigns/2026-09-pm-technical-fluency-validation/
- * video-2-can-our-apis-do-that/script.md
+ * video-2-said-yes-to-a-simple-feature/script.md
  *
  * The CTA is the LinkedIn / YouTube Shorts variant ("link in the comments"), which is the script
  * as written. TikTok and Instagram Reels need the URL spoken and shown instead.

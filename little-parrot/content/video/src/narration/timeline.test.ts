@@ -169,4 +169,24 @@ describe('buildTimeline against the hand-tuned social-017', () => {
       expect(Math.abs(frame - shipped[index]), `section ${index}`).toBeLessThanOrEqual(2)
     })
   })
+
+  test('cuts a tagged section on its first spoken word and keeps the tag out of the captions', () => {
+    // The take reads "One.\n\n[curious] Two?" at 0.1s a character, so the tag runs from index 6
+    // to 14 and "Two?" starts at index 16, or 1.6s, which is frame 48 at 30fps.
+    const timeline = buildTimeline({
+      takes: [
+        renderedTake({
+          sections: [{ text: 'One.', endsParagraph: true }, { text: '[curious] Two?' }],
+        }),
+      ],
+      fps: 30,
+      tailFrames: 0,
+    })
+
+    expect(timeline.words.map((word) => word.text)).toEqual(['One.', 'Two?'])
+    expect(timeline.sections.map(({ index, fromFrame }) => ({ index, fromFrame }))).toEqual([
+      { index: 0, fromFrame: 0 },
+      { index: 1, fromFrame: 48 },
+    ])
+  })
 })

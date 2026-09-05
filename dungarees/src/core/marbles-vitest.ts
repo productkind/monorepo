@@ -1,3 +1,5 @@
+import type { DetachableMethods } from './type-util.ts'
+
 import type { Observable } from 'rxjs'
 import { _cases, type NamedCase, type UnnamedCase } from 'rxjs-marbles/cases.js'
 import { type Configuration, defaults } from 'rxjs-marbles/configuration.js'
@@ -82,7 +84,7 @@ type MarblesExtensions = {
   coldError: (error: any, steps?: number) => TestObservableLike<any>
   coldStepAndError: <T = any>(value: any, error: any, steps?: number) => TestObservableLike<T>
   expect: <T = any>(actual: Observable<T>, subscription?: string) => ExtendedExpect<T>
-} & MarblesParam
+} & DetachableMethods<MarblesParam>
 
 class ExtendedExpect<T> extends Expect<T> {
   constructor(

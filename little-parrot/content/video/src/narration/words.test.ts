@@ -47,4 +47,43 @@ describe('alignmentToWords', () => {
       { text: 'B', start: 0.4, end: 0.5, charFrom: 4, charTo: 5 },
     ])
   })
+
+  test('leaves audio tags out of the words, since they are directions and not speech', () => {
+    // eleven_v3 takes inline tags like [curious]; the alignment echoes them, so without this
+    // they would be read out as caption words.
+    const alignment = {
+      characters: [...'[curious] Hi'],
+      character_start_times_seconds: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1],
+      character_end_times_seconds: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2],
+    }
+
+    expect(alignmentToWords({ alignment })).toEqual([
+      { text: 'Hi', start: 1, end: 1.2, charFrom: 10, charTo: 12 },
+    ])
+  })
+
+  test('separates the words either side of a tag', () => {
+    const alignment = {
+      characters: [...'a[x]b'],
+      character_start_times_seconds: [0, 0.1, 0.2, 0.3, 0.4],
+      character_end_times_seconds: [0.1, 0.2, 0.3, 0.4, 0.5],
+    }
+
+    expect(alignmentToWords({ alignment })).toEqual([
+      { text: 'a', start: 0, end: 0.1, charFrom: 0, charTo: 1 },
+      { text: 'b', start: 0.4, end: 0.5, charFrom: 4, charTo: 5 },
+    ])
+  })
+
+  test('keeps an unclosed bracket out of the words rather than swallowing the rest', () => {
+    const alignment = {
+      characters: [...'hi [oops'],
+      character_start_times_seconds: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7],
+      character_end_times_seconds: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8],
+    }
+
+    expect(alignmentToWords({ alignment })).toEqual([
+      { text: 'hi', start: 0, end: 0.2, charFrom: 0, charTo: 2 },
+    ])
+  })
 })

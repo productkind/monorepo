@@ -73,14 +73,14 @@ Rules the set follows:
 
 | # | Script | The situation | What they'll be able to do |
 |---|---|---|---|
-| 0 | [Nodding along in stand-up](video-0-say-it-back/script.md) | A word goes past in stand-up, you don't ask, and three weeks later the date is gone with it | Say a change back in their own words, ask what it does to the product, get an answer in the room |
-| 1 | [You only know the screens](video-1-follow-one-click/script.md) | Asked how their own product works, they can demo every screen, and behind those screens is a service another team owns, three integrations and an environment they've never seen | Map their product's dependencies, owners, bottlenecks and what breaks when one piece goes |
-| 2 | [You said yes to a simple feature](video-2-can-our-apis-do-that/script.md) | Said yes to a "simple" request, then found out two weeks in that the integration can't carry it | Check what the integrations they already pay for can do, before answering |
-| 3 | [Done, and your users still don't have it](video-3-where-is-the-change/script.md) | Built, tested, and waiting behind another team's monthly release | Follow a change through review, testing, environments and every team it waits on, and say what's holding it |
-| 4 | [All you can send is their screenshot](video-4-not-a-bug-report/script.md) | A customer reports a bug and all they can forward is a screenshot | Reproduce it, read the error code, and find the failed request in the browser themselves |
-| 5 | [Needed tomorrow, ready next week](video-5-answer-the-number/script.md) | A one-line data question that analytics will answer next week | Write the query and check what the number includes |
-| 6 | [Nobody raised the hard part](video-6-four-questions/script.md) | The decision got made in a meeting they were in, and nobody surfaced the complexity | Run that discussion with the four questions that surface it before anyone commits |
-| 7 | ["When can we launch it?"](video-7-prototype-not-product/script.md) | A business stakeholder saw the AI prototype and asked when it ships | Name what production needs that the prototype skipped, and hand both over |
+| 0 | [Nodding along in stand-up](video-0-nodding-along-in-stand-up/script.md) | A word goes past in stand-up, you don't ask, and three weeks later the date is gone with it | Say a change back in their own words, ask what it does to the product, get an answer in the room |
+| 1 | [You only know the screens](video-1-you-only-know-the-screens/script.md) | Asked how their own product works, they can demo every screen, and behind those screens is a service another team owns, three integrations and an environment they've never seen | Map their product's dependencies, owners, bottlenecks and what breaks when one piece goes |
+| 2 | [You said yes to a simple feature](video-2-said-yes-to-a-simple-feature/script.md) | Said yes to a "simple" request, then found out two weeks in that the integration can't carry it | Check what the integrations they already pay for can do, before answering |
+| 3 | [Done, and your users still don't have it](video-3-done-and-users-still-dont-have-it/script.md) | Built, tested, and waiting behind another team's monthly release | Follow a change through review, testing, environments and every team it waits on, and say what's holding it |
+| 4 | [All you can send is their screenshot](video-4-all-you-can-send-is-their-screenshot/script.md) | A customer reports a bug and all they can forward is a screenshot | Reproduce it, read the error code, and find the failed request in the browser themselves |
+| 5 | [Needed tomorrow, ready next week](video-5-needed-tomorrow-ready-next-week/script.md) | A one-line data question that analytics will answer next week | Write the query and check what the number includes |
+| 6 | [Nobody raised the hard part](video-6-nobody-raised-the-hard-part/script.md) | The decision got made in a meeting they were in, and nobody surfaced the complexity | Run that discussion with the four questions that surface it before anyone commits |
+| 7 | ["When can we launch it?"](video-7-when-can-we-launch-it/script.md) | A business stakeholder saw the AI prototype and asked when it ships | Name what production needs that the prototype skipped, and hand both over |
 
 **The situations are ours, not quotes.** They're written from what product
 managers described in the

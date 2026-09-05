@@ -21,9 +21,18 @@ export type Word = {
 
 const isWhitespace = (character: string): boolean => /\s/.test(character)
 
+const TAG_OPEN = '['
+const TAG_CLOSE = ']'
+
 /**
  * Groups character timings into words. Whitespace separates words and contributes no timing of
  * its own, so a word's span is always the span of its own characters.
+ *
+ * Bracketed audio tags are dropped. `eleven_v3` takes inline directions like `[curious]` or
+ * `[pause]`, and the alignment echoes them the same as any other characters, so a tag left in
+ * would be burned into the captions as a word the voice never says. An unclosed bracket takes the
+ * rest of the take with it, which is loud enough to notice in a caption and is the safer failure:
+ * the alternative is a stray `[` reaching the screen.
  */
 export const alignmentToWords = ({ alignment }: { alignment: Alignment }): Word[] => {
   const { characters, character_start_times_seconds, character_end_times_seconds } = alignment
@@ -44,7 +53,18 @@ export const alignmentToWords = ({ alignment }: { alignment: Alignment }): Word[
     charFrom = undefined
   }
 
+  let inTag = false
+
   characters.forEach((character, index) => {
+    if (inTag) {
+      inTag = character !== TAG_CLOSE
+      return
+    }
+    if (character === TAG_OPEN) {
+      closeWord(index)
+      inTag = true
+      return
+    }
     if (isWhitespace(character)) {
       closeWord(index)
       return

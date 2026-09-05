@@ -3,7 +3,7 @@ import { defineVideo, gif, riveAtFrame } from '../narration/definition'
 /**
  * Video 7 of the PM technical fluency campaign, "When can we launch it?".
  * Script: productkind/marketing/content/campaigns/2026-09-pm-technical-fluency-validation/
- * video-7-prototype-not-product/script.md
+ * video-7-when-can-we-launch-it/script.md
  *
  * The CTA is the LinkedIn / YouTube Shorts variant ("link in the comments"), which is the script
  * as written. TikTok and Instagram Reels need the URL spoken and shown instead.
@@ -137,7 +137,7 @@ export default defineVideo({
     {
       // giphy "alarm clock ringing icon animation": https://giphy.com/gifs/3kNjNGN7Rd8DDNAnNC
       text: 'who gets woken at 2am when something goes wrong,',
-      visual: gif({ src: 'section-15-alarm-2am.gif', playbackRate: 0.98, place: 'above-captions' }),
+      visual: gif({ src: 'section-15-alarm-2am.gif', playbackRate: 0.82, place: 'above-captions' }),
     },
     {
       // giphy "watering plant care icon animation": https://giphy.com/gifs/xUPJUkUHMMj1OirNqE

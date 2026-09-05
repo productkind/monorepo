@@ -3,7 +3,7 @@ import { defineVideo, gif, riveAtFrame } from '../narration/definition'
 /**
  * Video 6 of the PM technical fluency campaign, "Nobody raised the hard part".
  * Script: productkind/marketing/content/campaigns/2026-09-pm-technical-fluency-validation/
- * video-6-four-questions/script.md
+ * video-6-nobody-raised-the-hard-part/script.md
  *
  * The CTA is the LinkedIn / YouTube Shorts variant ("link in the comments"), which is the script
  * as written. TikTok and Instagram Reels need the URL spoken and shown instead.
@@ -29,6 +29,12 @@ import { defineVideo, gif, riveAtFrame } from '../narration/definition'
  * both providers looking for a woman running a discussion and neither catalogue has one that is
  * unbranded and uncaptioned, so the beat is carried by two characters in conversation instead,
  * which is the same choice video 2 made when its people beats came back unusable.
+ *
+ * Section 17 carries ElevenLabs audio tags. `eleven_v3` reads `[pause]` and `[curious]` as
+ * direction rather than as words, and `alignmentToWords` drops bracketed spans, so they shape how
+ * the closing question is delivered without reaching the burned-in captions. One consequence worth
+ * knowing: a section starts on its first *spoken* word, so the silence `[pause]` buys is counted
+ * in section 16's duration rather than section 17's, and section 16's gif holds through it.
  *
  * The slots behind these rates are estimates from `0.98 + 0.209 x words`, fitted on the 39
  * narrated sections of videos 0 and 1. Every rate is a ratio to its slot, so all of them move once
@@ -79,7 +85,7 @@ export default defineVideo({
     {
       // giphy "candle burning down melting animation": https://giphy.com/gifs/mCnNJF00DZbXlEy1TH
       // Melting all the way to a puddle inside the beat, so time passes without a clock.
-      text: 'Three weeks later',
+      text: 'Three weeks later,',
       visual: gif({
         src: 'section-04-melting-cube.gif',
         playbackRate: 0.99,
@@ -144,7 +150,7 @@ export default defineVideo({
       // https://giphy.com/gifs/g0jlZ04SeV4AM1lvFw
       // Two characters taking turns to speak. Left looping: the seam is 0.02, the lowest in the
       // video, so the repeat inside this beat cannot be seen.
-      text: 'By the end you’ll be able to run that discussion.',
+      text: 'By the end, you’ll be able to run that discussion.',
       visual: gif({ src: 'section-11-two-talking.gif', place: 'above-captions' }),
     },
     {
@@ -183,7 +189,7 @@ export default defineVideo({
     {
       // klipy "cute character ringing bell sticker":
       // https://static.klipy.com/ii/d7aec6f6f171607374b2065c836f92f4/3f/bd/X6FQ7EWA.gif
-      text: 'Sign up and we’ll let you know when the learning path opens.',
+      text: 'Sign up, and we’ll let you know when the learning path opens.',
       visual: gif({
         src: 'section-16-pingu-rings-bell.gif',
         playbackRate: 0.76,
@@ -195,7 +201,7 @@ export default defineVideo({
       // klipy "cute animal tilting head curious":
       // https://static.klipy.com/ii/4e7bea9f7a3371424e6c16ebc93252fe/8a/c8/uYe04AbfmsjaQHfwvD.gif
       // Left looping as well: seam 0.01, and the head tilt is cyclic.
-      text: 'Who raises the hard part on your team?',
+      text: '[pause][curious] Who raises the hard part on your team?',
       visual: gif({ src: 'section-17-curious-dog-tilt.gif', place: 'above-captions' }),
     },
   ],
