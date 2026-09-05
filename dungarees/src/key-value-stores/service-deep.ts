@@ -7,9 +7,9 @@ import {
 
 import type { GetAllPaths, GetValueByPath } from '@dungarees/core/type-util.ts'
 import { split } from '@dungarees/core/util.ts'
-import { getSchemaByObjectPath, type GetSchemaType } from '@dungarees/zod/zod.ts'
+import { getSchemaByRuntimePath, type GetSchemaType } from '@dungarees/zod/zod.ts'
 
-import type { ZodSchema } from 'zod'
+import type { ZodType } from 'zod'
 
 export type KeyValueStoreDeep<
   SCHEMAS extends Schemas,
@@ -27,7 +27,7 @@ export type KeyValueStoreDeep<
       value: GetValueByPath<FULL_OBJECT, KEY>,
     ) => void
   },
-> = RAW_STORE extends WriteableRawKeyValueStore<any> ? READABLE & WRITABLE : READABLE
+> = 'set' extends keyof RAW_STORE ? READABLE & WRITABLE : READABLE
 
 type SchemaRecordToObj<SCHEMAS extends Schemas> = {
   [K in keyof SCHEMAS]: GetSchemaType<SCHEMAS[K]>
@@ -40,14 +40,18 @@ export const createKeyValueStoreDeep = <
   rawStore: RAW_STORE,
   validators: SCHEMAS,
 ): KeyValueStoreDeep<SCHEMAS, RAW_STORE> => {
-  const getValidator = (path: string): ZodSchema<any> => {
+  const getValidator = <KEY extends GetAllPaths<SchemaRecordToObj<SCHEMAS>> & string>(
+    path: KEY,
+  ): ZodType<GetValueByPath<SchemaRecordToObj<SCHEMAS>, KEY>> => {
     const [firstKey, ...restKeys] = split(path, '.')
     const schema = validators[firstKey]
-    try {
-      // Without the `as any` it is an infinite loop for typecheking
-      return getSchemaByObjectPath(schema as any, restKeys.join('.') as any)
-    } catch (e) {
+    if (schema === undefined) {
       throw new Error(`Invalid path: "${path}"`)
+    }
+    try {
+      return getSchemaByRuntimePath(schema, restKeys.join('.'))
+    } catch (e) {
+      throw new Error(`Invalid path: "${path}"`, { cause: e })
     }
   }
 

@@ -26,6 +26,11 @@ export const getSchemaByObjectPath = <
   >
 }
 
+// A path only known at runtime cannot be checked against the schema, so the caller gets an
+// untyped schema back rather than a precise one it has not earned.
+export const getSchemaByRuntimePath = (schema: ZodTypeAny, path: string): ZodTypeAny =>
+  _getSchemaByObjectPathHelper(schema, path)
+
 // Without the untyped helper it is an infinite loop for typecheking
 const _getSchemaByObjectPathHelper = (schema: ZodTypeAny, path: string): ZodTypeAny => {
   if (path === '') {

@@ -1,4 +1,4 @@
-import { getSchemaByObjectPath, zodGuard } from './zod.ts'
+import { getSchemaByObjectPath, getSchemaByRuntimePath, zodGuard } from './zod.ts'
 
 import { expect, test } from 'vitest'
 import { z } from 'zod'
@@ -36,4 +36,24 @@ test('getSchemaByObjectPath gets the full object on empty path', () => {
   const schema = getSchemaByObjectPath(z.object({ key1: z.literal(1), key2: z.literal(2) }), '')
   const object: { key1: 1; key2: 2 } = schema.parse({ key1: 1, key2: 2 })
   expect(object).toEqual({ key1: 1, key2: 2 })
+})
+
+test('getSchemaByRuntimePath resolves a path that is only known at runtime', () => {
+  const path: string = 'key1.key2'
+  const schema = getSchemaByRuntimePath(z.object({ key1: z.object({ key2: z.literal(2) }) }), path)
+  expect(schema.parse(2)).toBe(2)
+})
+
+test('getSchemaByRuntimePath throws on a path that does not exist', () => {
+  const path: string = 'key1.missing'
+  expect(() =>
+    getSchemaByRuntimePath(z.object({ key1: z.object({ key2: z.literal(2) }) }), path),
+  ).toThrow('Path does not exist in schema')
+})
+
+test('getSchemaByRuntimePath throws when the path goes through a non-object schema', () => {
+  const path: string = 'key1.key2'
+  expect(() => getSchemaByRuntimePath(z.object({ key1: z.literal(1) }), path)).toThrow(
+    'Not an object schema',
+  )
 })
