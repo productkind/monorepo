@@ -1,14 +1,7 @@
 import type { GetAllPaths, GetGuarded, GetValueByPath, Guard } from '@dungarees/core/type-util.ts'
 import { join, split } from '@dungarees/core/util.ts'
 
-import {
-  z,
-  type ZodObject,
-  type ZodRawShape,
-  type ZodSchema,
-  type ZodType,
-  type ZodTypeDef,
-} from 'zod'
+import { z, type ZodObject, type ZodRawShape, type ZodSchema, type ZodTypeAny } from 'zod'
 
 export type GetSchemaType<SCHEMA = ZodSchema> = SCHEMA extends ZodSchema<infer TYPE> ? TYPE : never
 
@@ -19,7 +12,7 @@ export const zodGuard = <GUARD extends Guard>(
   return z.custom<GetGuarded<GUARD>>(guard, message)
 }
 
-const isObjectSchema = (schema: ZodSchema): schema is ZodObject<ZodRawShape> => 'shape' in schema
+const isObjectSchema = (schema: ZodTypeAny): schema is ZodObject<ZodRawShape> => 'shape' in schema
 
 export const getSchemaByObjectPath = <
   const SCHEMA extends ZodSchema,
@@ -33,8 +26,8 @@ export const getSchemaByObjectPath = <
   >
 }
 
-// Without the `ZodSchema<any>` returning helper it is an infinite loop for typecheking
-const _getSchemaByObjectPathHelper = (schema: ZodSchema<any>, path: string): ZodSchema<any> => {
+// Without the untyped helper it is an infinite loop for typecheking
+const _getSchemaByObjectPathHelper = (schema: ZodTypeAny, path: string): ZodTypeAny => {
   if (path === '') {
     return schema
   }
@@ -46,8 +39,5 @@ const _getSchemaByObjectPathHelper = (schema: ZodSchema<any>, path: string): Zod
   if (subschema === undefined) {
     throw new Error('Path does not exist in schema')
   }
-  return _getSchemaByObjectPathHelper(
-    subschema as ZodType<any, ZodTypeDef, any>,
-    join<typeof restPath, '.'>(restPath, '.'),
-  )
+  return _getSchemaByObjectPathHelper(subschema, join<typeof restPath, '.'>(restPath, '.'))
 }
