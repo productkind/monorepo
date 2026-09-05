@@ -1,84 +1,106 @@
-import { AbsoluteFill, staticFile } from 'remotion'
+import { AbsoluteFill, getRemotionEnvironment, staticFile, useCurrentFrame } from 'remotion'
 
-import type { Visual } from '../narration/definition'
+import type { VideoDefinition, Visual } from '../narration/definition'
+import type { Timeline } from '../narration/timeline'
+import { sectionAt } from './active-section'
+import { isFlagged } from './flags'
 import { annotationLine } from './section-label'
+import { useFlags } from './useFlags'
 import { useGifDuration } from './useGifDuration'
 import { VisualView } from './Visual'
 import { withKnobs } from './visual-knobs'
 
-type SectionProps = {
-  index: number
-  visual: Visual
-  assets: string
-  slotFrames: number
-  fps: number
-}
+const HIGHLIGHT = '#ffb65b'
+const FLAGGED = '#ff8a70'
+
+/** A section's visual with Studio's knobs applied. Lives inside the series, like the plain one. */
+export const TunedVisual: React.FC<{ index: number; visual: Visual; assets: string }> = ({
+  index,
+  visual,
+  assets,
+}) => <VisualView visual={withKnobs({ visual, index })} assets={assets} />
 
 /**
- * A section as the annotated compositions draw it: the visual with Studio's knobs applied, under
- * a strip saying how it fits the slot.
+ * The annotated pass's overlay: what the section is, how the gif fits its slot, and a control for
+ * marking the gif as one to replace.
  *
- * Studio has no API for a panel of its own, so anything richer than a timeline row label has to
- * live on the canvas.
+ * It renders outside the `Series`, after the captions and the Rive overlays, because those paint
+ * over anything drawn inside a section — a Rive animation is a canvas across the whole frame, and
+ * it swallowed the flag button until this moved out here.
  */
-export const AnnotatedSection: React.FC<SectionProps> = ({
-  index,
-  visual,
-  assets,
-  slotFrames,
-  fps,
-}) => {
-  const tuned = withKnobs({ visual, index })
-  return (
-    <>
-      <VisualView visual={tuned} assets={assets} />
-      <SectionAnnotation
-        index={index}
-        visual={tuned}
-        assets={assets}
-        slotFrames={slotFrames}
-        fps={fps}
-      />
-    </>
-  )
-}
-
-/** The strip itself. Sits above the platform-bar safe zone, where no visual is ever placed. */
-export const SectionAnnotation: React.FC<SectionProps> = ({
-  index,
-  visual,
-  assets,
-  slotFrames,
-  fps,
-}) => {
+export const AnnotationLayer: React.FC<{
+  definition: VideoDefinition
+  timeline: Timeline
+}> = ({ definition, timeline }) => {
+  const frame = useCurrentFrame()
+  const section = sectionAt({ sections: timeline.sections, frame })
+  const { flags, toggle } = useFlags({ assets: definition.assets })
+  const visual = section === undefined ? undefined : definition.sections[section.index].visual
   const gifSeconds = useGifDuration({
     // Hooks cannot be called conditionally, so a non-gif measures a path nothing will fetch.
-    src: visual.kind === 'gif' ? staticFile(`${assets}/${visual.src}`) : '',
+    src: visual?.kind === 'gif' ? staticFile(`${definition.assets}/${visual.src}`) : '',
   })
 
+  if (section === undefined || visual === undefined) {
+    return null
+  }
+
+  const flagged = isFlagged({ flags, section: section.index, src: visual.src })
+  const colour = flagged ? FLAGGED : HIGHLIGHT
+
   return (
-    <AbsoluteFill style={{ pointerEvents: 'none' }}>
+    <AbsoluteFill style={{ pointerEvents: 'none', zIndex: 20 }}>
       <div
         style={{
           position: 'absolute',
           top: 24,
           left: 24,
           right: 24,
-          padding: '14px 20px',
-          background: 'rgba(8, 8, 9, 0.82)',
-          color: '#ffb65b',
-          // 26px keeps the longest line — a stretched gif with every number — on one row at 1080 wide.
-          font: '500 26px/1.3 ui-monospace, SFMono-Regular, Menlo, monospace',
-          fontVariantNumeric: 'tabular-nums',
-          borderLeft: '6px solid #ffb65b',
+          display: 'flex',
+          alignItems: 'stretch',
+          gap: 12,
         }}
       >
-        {annotationLine({
-          index,
-          visual,
-          slotSeconds: slotFrames / fps,
-          gifSeconds: visual.kind === 'gif' ? gifSeconds : undefined,
-        })}
+        <div
+          style={{
+            flex: 1,
+            padding: '14px 20px',
+            background: 'rgba(8, 8, 9, 0.82)',
+            color: colour,
+            // 26px keeps the longest line — a stretched gif with every number — on one row at 1080 wide.
+            font: `500 26px/1.3 ui-monospace, SFMono-Regular, Menlo, monospace`,
+            fontVariantNumeric: 'tabular-nums',
+            borderLeft: `6px solid ${colour}`,
+          }}
+        >
+          {annotationLine({
+            index: section.index,
+            visual,
+            slotSeconds: section.durationInFrames / timeline.fps,
+            gifSeconds: visual.kind === 'gif' ? gifSeconds : undefined,
+          })}
+          {flagged ? ' · FLAGGED' : ''}
+        </div>
+        {/* A render has no one to click this, and no Studio to write the file it would change. */}
+        {getRemotionEnvironment().isStudio ? (
+          <button
+            type="button"
+            onClick={() => {
+              toggle({ section: section.index, src: visual.src })
+            }}
+            style={{
+              pointerEvents: 'auto',
+              cursor: 'pointer',
+              padding: '0 22px',
+              background: flagged ? FLAGGED : 'rgba(8, 8, 9, 0.82)',
+              color: flagged ? '#1a0044' : HIGHLIGHT,
+              border: `2px solid ${colour}`,
+              font: '600 24px/1 ui-monospace, SFMono-Regular, Menlo, monospace',
+            }}
+          >
+            {flagged ? 'flagged' : 'flag'}
+          </button>
+        ) : null}
       </div>
     </AbsoluteFill>
   )

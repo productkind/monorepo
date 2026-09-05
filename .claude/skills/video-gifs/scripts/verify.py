@@ -11,6 +11,7 @@ the last third of a gif, which a four-frame glance misses.
 """
 
 import argparse
+import json
 import re
 import subprocess
 import time
@@ -39,6 +40,32 @@ def declared(video, root=None):
 
 def chosen_gifs(video, root=None):
     return [name for name, _ in chosen_visuals(video, root)]
+
+
+def check_flags(video, root=None):
+    """Sections a reviewer flagged in Studio's annotated pass as wanting a different gif.
+
+    The flag records the gif it was made against, so replacing that gif answers the complaint and
+    the flag stops applying — a flag pointing at a gif the section no longer has is stale, not a
+    job still waiting.
+    """
+    path = assets_dir(video, root) / 'flags.json'
+    if not path.exists():
+        print('  nothing flagged')
+        return
+    flagged = json.loads(path.read_text() or '{}')
+    if not flagged:
+        print('  nothing flagged')
+        return
+    current = {index: name for index, (name, _, _) in enumerate(declared(video, root))}
+    for section in sorted(flagged, key=int):
+        wanted = flagged[section].get('src')
+        index = int(section)
+        if current.get(index) != wanted:
+            print(f'  {index:02d} flag was raised against {wanted}, which the section no longer '
+                  'has — clear it')
+        else:
+            print(f'  {index:02d} {wanted:32} re-source this one')
 
 
 def check_backgrounds(video, root=None):
@@ -145,15 +172,20 @@ def main():
     parser.add_argument('--stills', action='store_true')
     parser.add_argument('--serve', action='store_true')
     parser.add_argument('--backgrounds', action='store_true')
+    parser.add_argument('--flags', action='store_true')
     parser.add_argument('--root', default=None)
     args = parser.parse_args()
-    everything = not (args.frames or args.stills or args.serve or args.backgrounds)
+    everything = not (args.frames or args.stills or args.serve or args.backgrounds
+                      or args.flags)
 
     if args.frames or everything:
         check_frames(args.video, args.root)
     if args.stills or everything:
         print('composed stills:')
         check_stills(args.video, args.root)
+    if args.flags or everything:
+        print('flagged for re-sourcing:')
+        check_flags(args.video, args.root)
     if args.backgrounds or everything:
         print('letterbox colours:')
         check_backgrounds(args.video, args.root)
