@@ -12,6 +12,10 @@ import social017 from './social-017'
 import social018 from './social-018'
 import vibeCoderValidation00 from './vibe-coder-validation-00'
 import vibeCoderValidation01 from './vibe-coder-validation-01'
+import vibeCoderValidation02 from './vibe-coder-validation-02'
+import vibeCoderValidation03 from './vibe-coder-validation-03'
+import vibeCoderValidation04 from './vibe-coder-validation-04'
+import vibeCoderValidation05 from './vibe-coder-validation-05'
 
 /** Every video in the project. The narrate script and the Remotion root both read this list. */
 export const VIDEOS = [
@@ -29,4 +33,8 @@ export const VIDEOS = [
   pmTechnicalFluencyValidation07,
   vibeCoderValidation00,
   vibeCoderValidation01,
+  vibeCoderValidation02,
+  vibeCoderValidation03,
+  vibeCoderValidation04,
+  vibeCoderValidation05,
 ]

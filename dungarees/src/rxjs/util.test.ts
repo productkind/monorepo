@@ -16,6 +16,7 @@ import {
   tryPipe,
 } from './util.ts'
 
+import { getErrorMessage } from '@dungarees/core/error.ts'
 import { mtest } from '@dungarees/core/marbles-vitest.ts'
 
 import { catchError, lastValueFrom, map, type Observable, of, Subject } from 'rxjs'
@@ -59,7 +60,7 @@ mtest('catchAndRethrow', ({ expect, cold }) => {
   const input$ = cold('-#', {}, new Error('Test error'))
 
   const result$ = input$.pipe(
-    catchAndRethrow((error) => new Error(`Caught error: ${error.message}`)),
+    catchAndRethrow((error) => new Error(`Caught error: ${getErrorMessage(error)}`)),
   )
 
   expect(result$).toBeObservable('-#', {}, new Error('Caught error: Test error'))
@@ -70,8 +71,8 @@ mtest('catchValueAndRethrow', ({ expect, cold }) => {
 
   const result$ = input$.pipe(
     catchValueAndRethrow(
-      (error) => error.message,
-      (error) => new Error(`Caught error: ${error.message}`),
+      (error) => getErrorMessage(error),
+      (error) => new Error(`Caught error: ${getErrorMessage(error)}`),
     ),
   )
 
@@ -86,7 +87,7 @@ mtest('tryPipe no error', ({ expect }) => {
   const result$ = of(1).pipe(
     tryPipe(
       map((x) => x + 1),
-      catchError((error) => of(`Error: ${error.message}`)),
+      catchError((error: unknown) => of(`Error: ${getErrorMessage(error)}`)),
     ),
   )
   expect(result$).toBeObservable('(2|)', { '2': 2 })
@@ -98,7 +99,7 @@ mtest('tryPipe with error', ({ expect }) => {
       map(() => {
         throw new Error('Test error')
       }),
-      catchError((error) => of(`Error: ${error.message}`)),
+      catchError((error: unknown) => of(`Error: ${getErrorMessage(error)}`)),
     ),
   )
   expect(result$).toBeObservable('(e|)', { e: 'Error: Test error' })
@@ -109,7 +110,7 @@ mtest('tryPipe with error outside', ({ expect }) => {
     map(() => {
       throw new Error('Test error')
     }),
-    tryPipe(catchError((error) => of(`Error: ${error.message}`))),
+    tryPipe(catchError((error: unknown) => of(`Error: ${getErrorMessage(error)}`))),
   )
   expect(result$).toBeObservable('#', {}, new Error('Test error'))
 })
@@ -130,7 +131,8 @@ mtest('assertTypeByGuardMap with valid input', ({ expect }) => {
   const input$: Observable<object> = of({ name: 'John' })
   const result$ = input$.pipe(
     assertTypeByGuardMap(
-      (obj): obj is { name: string } => 'string' === typeof (obj as any).name,
+      (obj): obj is { name: string } =>
+        typeof obj === 'object' && obj !== null && 'name' in obj && typeof obj.name === 'string',
       'Name is required and must be a string',
     ),
     map((obj) => {
@@ -146,7 +148,8 @@ mtest('assertTypeByGuardMap with invalid input', ({ expect }) => {
   const input$: Observable<object> = of({ age: 30 })
   const result$ = input$.pipe(
     assertTypeByGuardMap(
-      (obj): obj is { name: string } => 'string' === typeof (obj as any).name,
+      (obj): obj is { name: string } =>
+        typeof obj === 'object' && obj !== null && 'name' in obj && typeof obj.name === 'string',
       'Name is required and must be a string',
     ),
   )

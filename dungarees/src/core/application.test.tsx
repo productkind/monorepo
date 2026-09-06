@@ -559,3 +559,31 @@ test('Register additional main after creation', () => {
   expect(output2).toBe(2)
   expect(() => app.run({ type: 'type-3' })).toThrow()
 })
+
+test('run requires the identity when the config declares one', () => {
+  const app = createApplication<{
+    behaviors: { name: string }
+    identity: 'dev' | 'prod'
+  }>({
+    getBehaviors: (_, identity) => {
+      expectTypeOf(identity).toEqualTypeOf<'dev' | 'prod'>()
+      return { name: identity }
+    },
+  })
+
+  // @ts-expect-error the identity is not optional for an app that declares one
+  app.run()
+
+  expect(app.run('dev').behaviors).toEqual({ name: 'dev' })
+})
+
+test('run keeps the identity optional when the config declares none', () => {
+  const app = createApplication<{ behaviors: { name: string } }>({
+    getBehaviors: (_, identity) => {
+      expectTypeOf(identity).toEqualTypeOf<unknown>()
+      return { name: 'no-identity' }
+    },
+  })
+
+  expect(app.run().behaviors).toEqual({ name: 'no-identity' })
+})
