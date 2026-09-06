@@ -17,13 +17,13 @@ campaign: vibe-coded-app-26
 
 **Caption:**
 
-How do you turn an AI app prototype into a product customers can use? Test sign-up, the core task, payment, email and result. Women building with AI can join the waitlist to learn how to test the full journey. Where does yours stop?
+How do you turn an app prototype you built with AI into a product customers can use? Test sign-up, the core task, payment, email and the result you promised. Women building with AI can join the waitlist to learn how to test the full journey to Make Your Vibe-Coded App Work for Real Customers, link in comments. Which part of your customer journey still needs testing?
 
 #womenwhobuild #womenintech #womenfounders #vibecoding
 
 **Pinned comment:**
 
-Join the Building Apps with AI waitlist: https://littleparrot.app/guides/building-apps-with-ai?utm_source=tiktok&utm_campaign=vibe-coded-app-26&utm_content=your-app-works-customers-get-stuck
+https://littleparrot.app/guides/building-apps-with-ai?utm_source=tiktok&utm_campaign=vibe-coded-app-26&utm_content=your-app-works-customers-get-stuck
 
 ## Instagram Reels
 
