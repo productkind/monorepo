@@ -1,6 +1,8 @@
+import type { JsonType } from './type-util.ts'
 import {
   assertDefined,
   findByPattern,
+  type FindByPatterns,
   type GetValueFromPatternList,
   type OptionalPatternList,
   optionalPatternToList,
@@ -10,10 +12,7 @@ import {
 export type Application<
   CONFIG extends Partial<ApplicationTypeConfig> = DefaultApplicationTypeConfig,
 > = {
-  run: (
-    identity?: CONFIG['identity'],
-    overrides?: Partial<SingleApplicationArgs<ApplicationTypeConfigWithDefaults<CONFIG>>>,
-  ) => ApplicationRunReturn<CONFIG>
+  run: (...args: RunArgs<CONFIG>) => ApplicationRunReturn<CONFIG>
   getArgs: () => Array<Partial<CreateApplicationArgs<CONFIG>>>
 }
 
@@ -36,7 +35,7 @@ export const createApplication = <
     importState: () => {},
   } as const
 
-  const toPatternLists = <const T extends Record<string, any>>(
+  const toPatternLists = <const T extends Record<string, unknown>>(
     defaults: T,
   ): {
     [K in keyof T]: OptionalPatternToList<T[K]>
@@ -47,7 +46,10 @@ export const createApplication = <
       }),
     ) as { [K in keyof T]: OptionalPatternToList<T[K]> }
 
-  const getArg = <KEY extends keyof AppArgs, PATTERN_LISTS extends Record<string, any>>(
+  const getArg = <
+    KEY extends keyof AppArgs,
+    PATTERN_LISTS extends Record<string, readonly FindByPatterns[]>,
+  >(
     patternLists: PATTERN_LISTS,
     key: KEY,
     runIdentity: CONFIG['identity'],
@@ -56,7 +58,7 @@ export const createApplication = <
     return assertDefined(arg, `No matching identity for "${key}"`)
   }
 
-  const getDefaultedArgs = <const PATTERN_LISTS extends Record<string, OptionalPatternToList<any>>>(
+  const getDefaultedArgs = <const PATTERN_LISTS extends Record<string, readonly FindByPatterns[]>>(
     patternLists: PATTERN_LISTS,
     identity: CONFIG['identity'],
   ): {
@@ -68,17 +70,16 @@ export const createApplication = <
       }),
     ) as { [K in keyof PATTERN_LISTS]: GetValueFromPatternList<PATTERN_LISTS[K]> }
 
-  const registerArg = <KEY extends keyof AppArgs, C extends Record<string, any>>(
+  const registerArg = <KEY extends keyof AppArgs, C extends Record<string, unknown>>(
     config: C,
     key: KEY,
     argPatternLists: ArgPatternList<CONFIG>,
   ): void => {
     if (config[key] !== undefined) {
-      const oldArgPatterns = argPatternLists[key]
       argPatternLists[key] = [
         ...argPatternLists[key],
         ...optionalPatternToList(config[key]),
-      ] as typeof oldArgPatterns
+      ] as ArgPatternList<CONFIG>[KEY]
     }
   }
 
@@ -93,7 +94,7 @@ export const createApplication = <
   }
 
   const app: Application<ApplicationTypeConfigWithDefaults<CONFIG>> = {
-    run: (runIdentity, overrides = {}) => {
+    run: (...[runIdentity, overrides = {}]) => {
       const [baseArg, ...restArgs] = app.getArgs()
       const firstArgsWithDefaults = {
         ...DEFAULTS,
@@ -147,6 +148,16 @@ export const createApplication = <
   return app
 }
 
+// The identity is optional only when the config did not declare one, so an app that declares one
+// cannot be run without it.
+type RunArgs<CONFIG extends Partial<ApplicationTypeConfig>> = undefined extends CONFIG['identity']
+  ? [identity?: CONFIG['identity'], overrides?: RunOverrides<CONFIG>]
+  : [identity: CONFIG['identity'], overrides?: RunOverrides<CONFIG>]
+
+type RunOverrides<CONFIG extends Partial<ApplicationTypeConfig>> = Partial<
+  SingleApplicationArgs<ApplicationTypeConfigWithDefaults<CONFIG>>
+>
+
 export type SingleApplicationArgs<CONFIG extends Partial<ApplicationTypeConfig>> = {
   getServices: GetServices<CONFIG>
   getBehaviors: GetBehaviors<CONFIG>
@@ -167,12 +178,12 @@ export type CreateApplicationArgs<CONFIG extends Partial<ApplicationTypeConfig>>
 }
 
 export type ApplicationTypeConfig = {
-  services: Record<string, any>
-  behaviors: Record<string, any>
-  delivery: Record<string, any>
-  output: any
-  identity: any
-  exportState: any
+  services: Record<string, unknown>
+  behaviors: Record<string, unknown>
+  delivery: Record<string, unknown>
+  output: unknown
+  identity: JsonType
+  exportState: unknown
 }
 
 type DefaultApplicationTypeConfig = {
@@ -229,10 +240,17 @@ type ImportState<CONFIG extends Partial<ApplicationTypeConfig>> = (
   newState: CONFIG['exportState'],
 ) => void
 
+// Only the record-shaped keys need the assignability check: an absent key arrives as `undefined`,
+// which is already the default for the scalar ones. Checking them anyway would leave a conditional
+// TypeScript cannot reduce while CONFIG is generic, which is what forced `identity` to be `any`.
+type RecordShapedKey = 'services' | 'behaviors' | 'delivery'
+
 type ApplicationTypeConfigWithDefaults<CONFIG extends Partial<ApplicationTypeConfig>> = {
-  [KEY in keyof DefaultApplicationTypeConfig]: CONFIG[KEY] extends ApplicationTypeConfig[KEY]
-    ? CONFIG[KEY]
-    : DefaultApplicationTypeConfig[KEY]
+  [KEY in keyof DefaultApplicationTypeConfig]: KEY extends RecordShapedKey
+    ? CONFIG[KEY] extends ApplicationTypeConfig[KEY]
+      ? CONFIG[KEY]
+      : DefaultApplicationTypeConfig[KEY]
+    : CONFIG[KEY]
 }
 
 export type ApplicationTypeConfigWithAnys<CONFIG extends Partial<ApplicationTypeConfig>> = {
