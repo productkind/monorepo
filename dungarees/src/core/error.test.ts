@@ -1,4 +1,4 @@
-import { createCausedError, getErrorMessage } from './error.ts'
+import { createCausedError, getErrorMessage, getThrownError } from './error.ts'
 
 import { expect, test } from 'vitest'
 
@@ -36,4 +36,26 @@ test('createCausedError works on a non-Error cause without losing it', () => {
 
   expect(caused.message).toBe('Invalid package.json: thrown string')
   expect(caused.cause).toBe('thrown string')
+})
+
+test('getThrownError hands back the Error that was thrown, cause and all', () => {
+  const cause = new Error('bad literal')
+  const thrown = getThrownError(() => {
+    throw new Error('Invalid type in store', { cause })
+  })
+
+  expect(thrown.message).toBe('Invalid type in store')
+  expect(thrown.cause).toBe(cause)
+})
+
+test('getThrownError fails when nothing is thrown, rather than returning undefined', () => {
+  expect(() => getThrownError(() => 'no throw here')).toThrow('Expected a throw')
+})
+
+test('getThrownError fails when the thrown value is not an Error', () => {
+  expect(() =>
+    getThrownError(() => {
+      throw 'a bare string'
+    }),
+  ).toThrow('Expected an Error to be thrown, got: a bare string')
 })

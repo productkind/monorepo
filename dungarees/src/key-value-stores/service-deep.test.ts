@@ -2,8 +2,13 @@ import { createMemoryDeepRawKeyValueStore } from './raw-stores/memory-deep.ts'
 import { createKeyValueStoreDeep } from './service-deep.ts'
 import type { RawKeyValueStore } from './type.ts'
 
+import { getThrownError } from '@dungarees/core/error.ts'
+
 import { expect, test } from 'vitest'
-import { z } from 'zod'
+import { z, ZodError } from 'zod'
+
+const zodIssueCode = ({ cause }: Error): string | undefined =>
+  cause instanceof ZodError ? cause.issues[0]?.code : undefined
 
 test('KeyValueStoreDeep single validator', () => {
   const rawStore: RawKeyValueStore = {
@@ -56,16 +61,12 @@ test('KeyValueStoreDeep failed validation in guard', () => {
   const store = createKeyValueStoreDeep(rawStore, {
     key: z.literal(1),
   } as const)
-  let message
-  let cause
-  try {
+  const thrown = getThrownError(() => {
     store.get('key')
-  } catch (e: any) {
-    message = e.message
-    cause = e.cause
-  }
-  expect(message).toBe('Invalid type in store: "key" => {"number":2}')
-  expect(cause.issues[0].code).toBe('invalid_literal')
+  })
+
+  expect(thrown.message).toBe('Invalid type in store: "key" => {"number":2}')
+  expect(zodIssueCode(thrown)).toBe('invalid_literal')
 })
 
 test('KeyValueStoreDeep deep validator', () => {
@@ -107,16 +108,12 @@ test('KeyValueStoreDeep validate all keys', () => {
     key1: z.literal(1),
     key2: z.literal(2),
   } as const)
-  let message
-  let cause
-  try {
+  const thrown = getThrownError(() => {
     store.validate()
-  } catch (e: any) {
-    message = e.message
-    cause = e.cause
-  }
-  expect(message).toBe('Invalid type in store: "key2" => 3')
-  expect(cause.issues[0].code).toBe('invalid_literal')
+  })
+
+  expect(thrown.message).toBe('Invalid type in store: "key2" => 3')
+  expect(zodIssueCode(thrown)).toBe('invalid_literal')
 })
 
 test('KeyValueStoreDeep store throws error', () => {
@@ -130,16 +127,12 @@ test('KeyValueStoreDeep store throws error', () => {
   const store = createKeyValueStoreDeep(rawStore, {
     key: z.literal(1),
   } as const)
-  let message
-  let cause
-  try {
+  const thrown = getThrownError(() => {
     store.get('key')
-  } catch (e: any) {
-    message = e.message
-    cause = e.cause
-  }
-  expect(message).toBe('Path is not present in store: "key"')
-  expect(cause).toBe(error)
+  })
+
+  expect(thrown.message).toBe('Path is not present in store: "key"')
+  expect(thrown.cause).toBe(error)
 })
 
 test('KeyValueStoreDeep set should validate the input', () => {
@@ -158,17 +151,13 @@ test('KeyValueStoreDeep deep set should validate the input', () => {
   const store = createKeyValueStoreDeep(rawStore, {
     key1: z.object({ key2: z.number() }),
   } as const)
-  let message
-  let cause
-  try {
+  const thrown = getThrownError(() => {
     // @ts-expect-error it should be number
     store.set('key1.key2', 'value')
-  } catch (e: any) {
-    message = e.message
-    cause = e.cause
-  }
-  expect(message).toBe('Invalid value type for path: "key1.key2" => "value"')
-  expect(cause.issues[0].code).toBe('invalid_type')
+  })
+
+  expect(thrown.message).toBe('Invalid value type for path: "key1.key2" => "value"')
+  expect(zodIssueCode(thrown)).toBe('invalid_type')
 })
 
 test('KeyValueStoreDeep deep set and get should expect valid path', () => {
