@@ -41,7 +41,11 @@ export function configure(configuration: Configuration): {
     func: (context: Context, _case: T) => void,
     cases: T[],
   ): void
-  function cases(name: string, func: any, cases: any): void {
+  function cases(
+    name: string,
+    func: (context: Context, _case: NamedCase, ...rest: unknown[]) => void,
+    cases: Record<string, NamedCase> | NamedCase[],
+  ): void {
     describe(name, () => {
       _cases(
         (c) => {
@@ -49,12 +53,14 @@ export function configure(configuration: Configuration): {
           if (func.length > 2) {
             t(
               c.name,
-              marbles((m: any, second: any, ...rest: any[]) => func(m, c, second, ...rest)),
+              marbles((m: Context, second: unknown, ...rest: unknown[]) =>
+                func(m, c, second, ...rest),
+              ),
             )
           } else {
             t(
               c.name,
-              marbles((m, ...rest: any[]) => func(m, c, ...rest)),
+              marbles((m: Context, ...rest: unknown[]) => func(m, c, ...rest)),
             )
           }
         },
@@ -71,19 +77,22 @@ const { marbles } = configure({})
 type Marbles = typeof marbles
 type MarblesRunner = Parameters<Marbles>[0]
 type MarblesParam = Parameters<MarblesRunner>[0]
-type Runner = (m: MarblesExtensions, ...args: any[]) => ReturnType<MarblesRunner>
+type Runner<ARGS extends unknown[] = []> = (
+  m: MarblesExtensions,
+  ...args: ARGS
+) => void | Promise<void>
 type MarbleFunctions = Record<string, () => void>
 
 type MarblesExtensions = {
   coldCall: (marble: string, functions: MarbleFunctions) => void
   coldBoolean: (marble: string) => TestObservableLike<boolean>
-  coldValue: <T = any>(marble: string, value: T) => TestObservableLike<T>
-  coldValueOrUndefined: <T = any>(marble: string, value: T) => TestObservableLike<T | undefined>
-  coldStep: <T = any>(value: T, steps?: number) => TestObservableLike<T>
-  coldStepAndClose: <T = any>(value: T, steps?: number) => TestObservableLike<T>
-  coldError: (error: any, steps?: number) => TestObservableLike<any>
-  coldStepAndError: <T = any>(value: any, error: any, steps?: number) => TestObservableLike<T>
-  expect: <T = any>(actual: Observable<T>, subscription?: string) => ExtendedExpect<T>
+  coldValue: <T = unknown>(marble: string, value: T) => TestObservableLike<T>
+  coldValueOrUndefined: <T = unknown>(marble: string, value: T) => TestObservableLike<T | undefined>
+  coldStep: <T = unknown>(value: T, steps?: number) => TestObservableLike<T>
+  coldStepAndClose: <T = unknown>(value: T, steps?: number) => TestObservableLike<T>
+  coldError: (error: unknown, steps?: number) => TestObservableLike<never>
+  coldStepAndError: <T = unknown>(value: T, error: unknown, steps?: number) => TestObservableLike<T>
+  expect: <T = unknown>(actual: Observable<T>, subscription?: string) => ExtendedExpect<T>
 } & DetachableMethods<MarblesParam>
 
 class ExtendedExpect<T> extends Expect<T> {
@@ -101,9 +110,8 @@ class ExtendedExpect<T> extends Expect<T> {
 
   toBeObservableValue(value: T): void
   toBeObservableValue(marble: string, value: T): void
-  toBeObservableValue(...args: any[]): void {
-    const value = args.length === 1 ? args[0] : args[1]
-    const marble = args.length === 1 ? 'v' : args[0]
+  toBeObservableValue(...args: [value: T] | [marble: string, value: T]): void {
+    const [marble, value] = args.length === 1 ? (['v', args[0]] as const) : args
     this.toBeObservable(marble, { v: value })
   }
 
@@ -111,7 +119,7 @@ class ExtendedExpect<T> extends Expect<T> {
     this.toBeObservable('(v|)', { v: value })
   }
 
-  toBeObservableValueAndError(value: T, error: any): void {
+  toBeObservableValueAndError(value: T, error: unknown): void {
     const marble = '(v#)'
     this.toBeObservable(marble, { v: value }, error)
   }
@@ -130,21 +138,21 @@ class ExtendedExpect<T> extends Expect<T> {
     return this.toBeObservable(marble, { v: value })
   }
 
-  toBeObservableError(error: any, steps = 1): void {
+  toBeObservableError(error: unknown, steps = 1): void {
     const marble = `-`.repeat(steps) + '#'
     this.toBeObservable(marble, {}, error)
   }
 
-  toBeObservableStepAndError(value: T, error: any, steps = 1): void {
+  toBeObservableStepAndError(value: T, error: unknown, steps = 1): void {
     const marble = `-`.repeat(steps) + '(v#)'
     this.toBeObservable(marble, { v: value }, error)
   }
 }
 
 export const coreMarbles =
-  (runner: Runner): (() => void) =>
-  (...args: any[]) =>
-    marbles((m) => {
+  <ARGS extends unknown[] = []>(runner: Runner<ARGS>): ((...args: ARGS) => void | Promise<void>) =>
+  (...args: ARGS): void | Promise<void> => {
+    const runInMarbles: () => void | Promise<void> = marbles((m): void | Promise<void> => {
       const coldCall: MarblesExtensions['coldCall'] = (marble, functions) => {
         const marbleDefinition = Object.fromEntries(Object.keys(functions).map((key) => [key, key]))
         m.cold(marble, marbleDefinition).subscribe((key) => {
@@ -176,8 +184,8 @@ export const coreMarbles =
       // This function and the ExtendedExpect depends on internals of the `rxjs-marbles` library
       // potentially not future proof
       const expect: MarblesExtensions['expect'] = (actual, subscription) => {
-        const { helpers_ } = m as any
-        return new ExtendedExpect(actual, helpers_ as ExpectHelpers, subscription)
+        const { helpers_ } = m as unknown as { helpers_: ExpectHelpers }
+        return new ExtendedExpect(actual, helpers_, subscription)
       }
 
       // The methods on `m` (the RunContext) are on the prototype, so we have to bind the original
@@ -208,9 +216,11 @@ export const coreMarbles =
           teardown: m.teardown.bind(m),
           time: m.time.bind(m),
         },
-        ...(args as Parameters<Runner>),
+        ...args,
       )
-    })()
+    })
+    return runInMarbles()
+  }
 
 export const MARBLES_BOOLEAN = {
   t: true,
@@ -220,14 +230,10 @@ export const MARBLES_BOOLEAN = {
 export const mtest = (name: string, runner: Runner): void => {
   test(
     name,
-    coreMarbles((m) => runner(m)),
+    coreMarbles((m): void | Promise<void> => runner(m)),
   )
 }
 
-mtest.each = <T>(cases: T[]): ((name: string, runner: Runner) => void) => {
-  return (name: string, runner: Runner): void =>
-    test.each(cases)(
-      name,
-      coreMarbles((m, ...args) => runner(m, ...args)),
-    )
+mtest.each = <T extends unknown[]>(cases: T[]): ((name: string, runner: Runner<T>) => void) => {
+  return (name: string, runner: Runner<T>): void => test.each(cases)(name, coreMarbles(runner))
 }
