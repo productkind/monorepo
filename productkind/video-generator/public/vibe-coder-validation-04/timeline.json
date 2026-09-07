@@ -1,0 +1,824 @@
+{
+  "hash": "8c1adda87bff2212",
+  "fps": 30,
+  "durationInFrames": 1443,
+  "words": [
+    {
+      "text": "The",
+      "start": 0,
+      "end": 3
+    },
+    {
+      "text": "app",
+      "start": 5,
+      "end": 12
+    },
+    {
+      "text": "you",
+      "start": 14,
+      "end": 17
+    },
+    {
+      "text": "built",
+      "start": 18,
+      "end": 24
+    },
+    {
+      "text": "with",
+      "start": 26,
+      "end": 32
+    },
+    {
+      "text": "AI",
+      "start": 36,
+      "end": 44
+    },
+    {
+      "text": "goes",
+      "start": 45,
+      "end": 48
+    },
+    {
+      "text": "down",
+      "start": 50,
+      "end": 56
+    },
+    {
+      "text": "on",
+      "start": 57,
+      "end": 58
+    },
+    {
+      "text": "Saturday.",
+      "start": 60,
+      "end": 77
+    },
+    {
+      "text": "Who",
+      "start": 81,
+      "end": 94
+    },
+    {
+      "text": "notices",
+      "start": 96,
+      "end": 108
+    },
+    {
+      "text": "it",
+      "start": 109,
+      "end": 111
+    },
+    {
+      "text": "first?",
+      "start": 114,
+      "end": 131
+    },
+    {
+      "text": "A",
+      "start": 143,
+      "end": 154
+    },
+    {
+      "text": "live",
+      "start": 156,
+      "end": 164
+    },
+    {
+      "text": "app",
+      "start": 165,
+      "end": 171
+    },
+    {
+      "text": "needs",
+      "start": 172,
+      "end": 178
+    },
+    {
+      "text": "ongoing",
+      "start": 180,
+      "end": 190
+    },
+    {
+      "text": "care.",
+      "start": 193,
+      "end": 213
+    },
+    {
+      "text": "A",
+      "start": 217,
+      "end": 221
+    },
+    {
+      "text": "service",
+      "start": 223,
+      "end": 233
+    },
+    {
+      "text": "can",
+      "start": 234,
+      "end": 238
+    },
+    {
+      "text": "fail,",
+      "start": 240,
+      "end": 252
+    },
+    {
+      "text": "a",
+      "start": 254,
+      "end": 255
+    },
+    {
+      "text": "platform",
+      "start": 257,
+      "end": 272
+    },
+    {
+      "text": "can",
+      "start": 272,
+      "end": 274
+    },
+    {
+      "text": "change",
+      "start": 276,
+      "end": 291
+    },
+    {
+      "text": "or",
+      "start": 292,
+      "end": 296
+    },
+    {
+      "text": "your",
+      "start": 296,
+      "end": 298
+    },
+    {
+      "text": "next",
+      "start": 300,
+      "end": 308
+    },
+    {
+      "text": "update",
+      "start": 310,
+      "end": 322
+    },
+    {
+      "text": "can",
+      "start": 323,
+      "end": 327
+    },
+    {
+      "text": "break",
+      "start": 328,
+      "end": 336
+    },
+    {
+      "text": "the",
+      "start": 337,
+      "end": 339
+    },
+    {
+      "text": "live",
+      "start": 341,
+      "end": 348
+    },
+    {
+      "text": "version.",
+      "start": 351,
+      "end": 368
+    },
+    {
+      "text": "If",
+      "start": 378,
+      "end": 394
+    },
+    {
+      "text": "the",
+      "start": 395,
+      "end": 396
+    },
+    {
+      "text": "only",
+      "start": 398,
+      "end": 406
+    },
+    {
+      "text": "recovery",
+      "start": 408,
+      "end": 420
+    },
+    {
+      "text": "plan",
+      "start": 422,
+      "end": 430
+    },
+    {
+      "text": "is",
+      "start": 431,
+      "end": 432
+    },
+    {
+      "text": "asking",
+      "start": 434,
+      "end": 444
+    },
+    {
+      "text": "the",
+      "start": 446,
+      "end": 449
+    },
+    {
+      "text": "AI",
+      "start": 453,
+      "end": 459
+    },
+    {
+      "text": "to",
+      "start": 460,
+      "end": 461
+    },
+    {
+      "text": "fix",
+      "start": 464,
+      "end": 471
+    },
+    {
+      "text": "it,",
+      "start": 474,
+      "end": 495
+    },
+    {
+      "text": "every",
+      "start": 496,
+      "end": 502
+    },
+    {
+      "text": "outage",
+      "start": 504,
+      "end": 519
+    },
+    {
+      "text": "starts",
+      "start": 521,
+      "end": 531
+    },
+    {
+      "text": "with",
+      "start": 531,
+      "end": 533
+    },
+    {
+      "text": "guessing.",
+      "start": 535,
+      "end": 555
+    },
+    {
+      "text": "You",
+      "start": 565,
+      "end": 572
+    },
+    {
+      "text": "need",
+      "start": 573,
+      "end": 579
+    },
+    {
+      "text": "alerts,",
+      "start": 581,
+      "end": 603
+    },
+    {
+      "text": "a",
+      "start": 604,
+      "end": 605
+    },
+    {
+      "text": "tested",
+      "start": 607,
+      "end": 617
+    },
+    {
+      "text": "backup",
+      "start": 620,
+      "end": 634
+    },
+    {
+      "text": "and",
+      "start": 637,
+      "end": 646
+    },
+    {
+      "text": "a",
+      "start": 647,
+      "end": 648
+    },
+    {
+      "text": "recovery",
+      "start": 650,
+      "end": 663
+    },
+    {
+      "text": "checklist",
+      "start": 665,
+      "end": 680
+    },
+    {
+      "text": "you",
+      "start": 680,
+      "end": 682
+    },
+    {
+      "text": "can",
+      "start": 683,
+      "end": 687
+    },
+    {
+      "text": "follow",
+      "start": 688,
+      "end": 696
+    },
+    {
+      "text": "yourself.",
+      "start": 698,
+      "end": 716
+    },
+    {
+      "text": "If",
+      "start": 724,
+      "end": 740
+    },
+    {
+      "text": "you",
+      "start": 740,
+      "end": 742
+    },
+    {
+      "text": "want",
+      "start": 744,
+      "end": 749
+    },
+    {
+      "text": "an",
+      "start": 750,
+      "end": 752
+    },
+    {
+      "text": "app",
+      "start": 753,
+      "end": 759
+    },
+    {
+      "text": "you",
+      "start": 759,
+      "end": 761
+    },
+    {
+      "text": "can",
+      "start": 762,
+      "end": 766
+    },
+    {
+      "text": "keep",
+      "start": 768,
+      "end": 773
+    },
+    {
+      "text": "operating",
+      "start": 775,
+      "end": 788
+    },
+    {
+      "text": "after",
+      "start": 789,
+      "end": 795
+    },
+    {
+      "text": "launch,",
+      "start": 797,
+      "end": 826
+    },
+    {
+      "text": "that’s",
+      "start": 827,
+      "end": 833
+    },
+    {
+      "text": "what",
+      "start": 834,
+      "end": 838
+    },
+    {
+      "text": "we’re",
+      "start": 839,
+      "end": 843
+    },
+    {
+      "text": "building",
+      "start": 844,
+      "end": 852
+    },
+    {
+      "text": "a",
+      "start": 854,
+      "end": 855
+    },
+    {
+      "text": "learning",
+      "start": 856,
+      "end": 867
+    },
+    {
+      "text": "path",
+      "start": 869,
+      "end": 876
+    },
+    {
+      "text": "for.",
+      "start": 879,
+      "end": 890
+    },
+    {
+      "text": "By",
+      "start": 898,
+      "end": 912
+    },
+    {
+      "text": "the",
+      "start": 914,
+      "end": 917
+    },
+    {
+      "text": "end,",
+      "start": 920,
+      "end": 939
+    },
+    {
+      "text": "you’ll",
+      "start": 939,
+      "end": 946
+    },
+    {
+      "text": "set",
+      "start": 947,
+      "end": 951
+    },
+    {
+      "text": "an",
+      "start": 952,
+      "end": 953
+    },
+    {
+      "text": "availability",
+      "start": 955,
+      "end": 975
+    },
+    {
+      "text": "alert,",
+      "start": 977,
+      "end": 1001
+    },
+    {
+      "text": "practise",
+      "start": 1003,
+      "end": 1016
+    },
+    {
+      "text": "restoring",
+      "start": 1017,
+      "end": 1030
+    },
+    {
+      "text": "a",
+      "start": 1031,
+      "end": 1032
+    },
+    {
+      "text": "working",
+      "start": 1034,
+      "end": 1044
+    },
+    {
+      "text": "version",
+      "start": 1047,
+      "end": 1064
+    },
+    {
+      "text": "and",
+      "start": 1067,
+      "end": 1078
+    },
+    {
+      "text": "plan",
+      "start": 1080,
+      "end": 1085
+    },
+    {
+      "text": "your",
+      "start": 1086,
+      "end": 1090
+    },
+    {
+      "text": "updates,",
+      "start": 1092,
+      "end": 1109
+    },
+    {
+      "text": "backups",
+      "start": 1111,
+      "end": 1124
+    },
+    {
+      "text": "and",
+      "start": 1124,
+      "end": 1126
+    },
+    {
+      "text": "cost",
+      "start": 1128,
+      "end": 1136
+    },
+    {
+      "text": "checks.",
+      "start": 1138,
+      "end": 1155
+    },
+    {
+      "text": "The",
+      "start": 1170,
+      "end": 1179
+    },
+    {
+      "text": "waitlist",
+      "start": 1180,
+      "end": 1193
+    },
+    {
+      "text": "link",
+      "start": 1194,
+      "end": 1198
+    },
+    {
+      "text": "is",
+      "start": 1200,
+      "end": 1203
+    },
+    {
+      "text": "in",
+      "start": 1204,
+      "end": 1205
+    },
+    {
+      "text": "the",
+      "start": 1206,
+      "end": 1210
+    },
+    {
+      "text": "comments.",
+      "start": 1212,
+      "end": 1229
+    },
+    {
+      "text": "Sign",
+      "start": 1233,
+      "end": 1248
+    },
+    {
+      "text": "up",
+      "start": 1252,
+      "end": 1258
+    },
+    {
+      "text": "and",
+      "start": 1260,
+      "end": 1265
+    },
+    {
+      "text": "we’ll",
+      "start": 1266,
+      "end": 1270
+    },
+    {
+      "text": "let",
+      "start": 1271,
+      "end": 1275
+    },
+    {
+      "text": "you",
+      "start": 1275,
+      "end": 1277
+    },
+    {
+      "text": "know",
+      "start": 1278,
+      "end": 1282
+    },
+    {
+      "text": "when",
+      "start": 1283,
+      "end": 1287
+    },
+    {
+      "text": "the",
+      "start": 1288,
+      "end": 1292
+    },
+    {
+      "text": "learning",
+      "start": 1293,
+      "end": 1301
+    },
+    {
+      "text": "path",
+      "start": 1303,
+      "end": 1308
+    },
+    {
+      "text": "opens.",
+      "start": 1312,
+      "end": 1331
+    },
+    {
+      "text": "How",
+      "start": 1369,
+      "end": 1371
+    },
+    {
+      "text": "would",
+      "start": 1372,
+      "end": 1376
+    },
+    {
+      "text": "you",
+      "start": 1376,
+      "end": 1378
+    },
+    {
+      "text": "know",
+      "start": 1379,
+      "end": 1383
+    },
+    {
+      "text": "your",
+      "start": 1384,
+      "end": 1388
+    },
+    {
+      "text": "app",
+      "start": 1390,
+      "end": 1397
+    },
+    {
+      "text": "was",
+      "start": 1398,
+      "end": 1402
+    },
+    {
+      "text": "down?",
+      "start": 1404,
+      "end": 1419
+    }
+  ],
+  "takes": [
+    {
+      "audio": "vibe-coder-validation-04/audio/0a9af8d58d932387.mp3",
+      "fromFrame": 0,
+      "durationInFrames": 1419
+    }
+  ],
+  "sections": [
+    {
+      "index": 0,
+      "fromFrame": 0,
+      "durationInFrames": 81,
+      "wordFrom": 0,
+      "wordTo": 10
+    },
+    {
+      "index": 1,
+      "fromFrame": 81,
+      "durationInFrames": 62,
+      "wordFrom": 10,
+      "wordTo": 14
+    },
+    {
+      "index": 2,
+      "fromFrame": 143,
+      "durationInFrames": 74,
+      "wordFrom": 14,
+      "wordTo": 20
+    },
+    {
+      "index": 3,
+      "fromFrame": 217,
+      "durationInFrames": 37,
+      "wordFrom": 20,
+      "wordTo": 24
+    },
+    {
+      "index": 4,
+      "fromFrame": 254,
+      "durationInFrames": 38,
+      "wordFrom": 24,
+      "wordTo": 28
+    },
+    {
+      "index": 5,
+      "fromFrame": 292,
+      "durationInFrames": 86,
+      "wordFrom": 28,
+      "wordTo": 37
+    },
+    {
+      "index": 6,
+      "fromFrame": 378,
+      "durationInFrames": 53,
+      "wordFrom": 37,
+      "wordTo": 42
+    },
+    {
+      "index": 7,
+      "fromFrame": 431,
+      "durationInFrames": 65,
+      "wordFrom": 42,
+      "wordTo": 49
+    },
+    {
+      "index": 8,
+      "fromFrame": 496,
+      "durationInFrames": 69,
+      "wordFrom": 49,
+      "wordTo": 54
+    },
+    {
+      "index": 9,
+      "fromFrame": 565,
+      "durationInFrames": 72,
+      "wordFrom": 54,
+      "wordTo": 60
+    },
+    {
+      "index": 10,
+      "fromFrame": 637,
+      "durationInFrames": 87,
+      "wordFrom": 60,
+      "wordTo": 68
+    },
+    {
+      "index": 11,
+      "fromFrame": 724,
+      "durationInFrames": 103,
+      "wordFrom": 68,
+      "wordTo": 79
+    },
+    {
+      "index": 12,
+      "fromFrame": 827,
+      "durationInFrames": 71,
+      "wordFrom": 79,
+      "wordTo": 87
+    },
+    {
+      "index": 13,
+      "fromFrame": 898,
+      "durationInFrames": 105,
+      "wordFrom": 87,
+      "wordTo": 95
+    },
+    {
+      "index": 14,
+      "fromFrame": 1003,
+      "durationInFrames": 64,
+      "wordFrom": 95,
+      "wordTo": 100
+    },
+    {
+      "index": 15,
+      "fromFrame": 1067,
+      "durationInFrames": 103,
+      "wordFrom": 100,
+      "wordTo": 108
+    },
+    {
+      "index": 16,
+      "fromFrame": 1170,
+      "durationInFrames": 63,
+      "wordFrom": 108,
+      "wordTo": 115
+    },
+    {
+      "index": 17,
+      "fromFrame": 1233,
+      "durationInFrames": 136,
+      "wordFrom": 115,
+      "wordTo": 127
+    },
+    {
+      "index": 18,
+      "fromFrame": 1369,
+      "durationInFrames": 74,
+      "wordFrom": 127,
+      "wordTo": 135
+    }
+  ]
+}
