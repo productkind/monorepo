@@ -12,6 +12,7 @@ import {
   type FindByPartialPattern,
   findByPattern,
   type FindByPattern,
+  isDeepEqual,
   isDefined,
   join,
   kebabCase2camelCase,
@@ -91,6 +92,12 @@ test('deepEqualPartial', () => {
   expect(deepEqualPartial({ foo: { baz: 'baz' } }, { foo: { baz: 'bar' }, quux: 'kill me' })).toBe(
     false,
   )
+})
+
+test('deepEqualPartial treats a null expected as unequal rather than throwing', () => {
+  expect(deepEqualPartial({ baz: 54 }, null)).toBe(false)
+  expect(deepEqualPartial({ baz: 54 }, undefined)).toBe(false)
+  expect(deepEqualPartial(null, null)).toBe(true)
 })
 
 test('findByPattern', () => {
@@ -400,4 +407,124 @@ test('boolFromThrowAsync returns false when async function rejects', async () =>
       throw new Error('fail')
     }),
   ).resolves.toBe(false)
+})
+
+test('isDeepEqual compares primitives by strict equality, with NaN equal to itself', () => {
+  expect(isDeepEqual(1, 1)).toBe(true)
+  expect(isDeepEqual(1, 2)).toBe(false)
+  expect(isDeepEqual('a', 'a')).toBe(true)
+  expect(isDeepEqual(1, '1')).toBe(false)
+  expect(isDeepEqual(NaN, NaN)).toBe(true)
+  expect(isDeepEqual(undefined, undefined)).toBe(true)
+  expect(isDeepEqual(null, null)).toBe(true)
+  expect(isDeepEqual(null, {})).toBe(false)
+  expect(isDeepEqual({}, null)).toBe(false)
+})
+
+test('isDeepEqual compares plain objects by their own keys', () => {
+  expect(isDeepEqual({ a: 1, b: 2 }, { a: 1, b: 2 })).toBe(true)
+  expect(isDeepEqual({ a: 1 }, { a: 1, b: 2 })).toBe(false)
+  expect(isDeepEqual({ a: 1, b: 2 }, { a: 1 })).toBe(false)
+  expect(isDeepEqual({ a: { b: { c: 1 } } }, { a: { b: { c: 1 } } })).toBe(true)
+  expect(isDeepEqual({ a: { b: { c: 1 } } }, { a: { b: { c: 2 } } })).toBe(false)
+})
+
+test('isDeepEqual compares arrays element-wise', () => {
+  expect(isDeepEqual([1, 2, 3], [1, 2, 3])).toBe(true)
+  expect(isDeepEqual([1, 2], [1, 2, 3])).toBe(false)
+  expect(isDeepEqual([{ a: 1 }], [{ a: 1 }])).toBe(true)
+  expect(isDeepEqual([{ a: 1 }], [{ a: 2 }])).toBe(false)
+  expect(isDeepEqual([], [])).toBe(true)
+})
+
+test('isDeepEqual treats a different prototype as unequal', () => {
+  class A {
+    constructor(readonly x: number) {}
+  }
+  class B {
+    constructor(readonly x: number) {}
+  }
+  expect(isDeepEqual(new A(1), new B(1))).toBe(false)
+  expect(isDeepEqual([1], { 0: 1 })).toBe(false)
+})
+
+test('isDeepEqual compares Dates by time', () => {
+  expect(isDeepEqual(new Date(1000), new Date(1000))).toBe(true)
+  expect(isDeepEqual(new Date(1000), new Date(2000))).toBe(false)
+})
+
+test('isDeepEqual compares RegExps by source and flags', () => {
+  expect(isDeepEqual(/ab+/g, /ab+/g)).toBe(true)
+  expect(isDeepEqual(/ab+/g, /ab+/i)).toBe(false)
+  expect(isDeepEqual(/ab+/g, /ac+/g)).toBe(false)
+})
+
+test('isDeepEqual compares Sets by size and membership', () => {
+  expect(isDeepEqual(new Set([1, 2]), new Set([1, 2]))).toBe(true)
+  expect(isDeepEqual(new Set([1, 2]), new Set([2, 1]))).toBe(true)
+  expect(isDeepEqual(new Set([1, 2]), new Set([1, 3]))).toBe(false)
+  expect(isDeepEqual(new Set([1]), new Set([1, 2]))).toBe(false)
+})
+
+test('isDeepEqual compares Maps by size and entries', () => {
+  expect(isDeepEqual(new Map([['a', 1]]), new Map([['a', 1]]))).toBe(true)
+  expect(isDeepEqual(new Map([['a', 1]]), new Map([['a', 2]]))).toBe(false)
+  expect(isDeepEqual(new Map([['a', 1]]), new Map([['b', 1]]))).toBe(false)
+  expect(isDeepEqual(new Map([['a', { b: 1 }]]), new Map([['a', { b: 1 }]]))).toBe(true)
+})
+
+test('isDeepEqual compares ArrayBuffers and typed arrays byte by byte', () => {
+  const bufferOf = (bytes: number[]): ArrayBuffer => new Uint8Array(bytes).buffer
+  expect(isDeepEqual(bufferOf([1, 2, 3]), bufferOf([1, 2, 3]))).toBe(true)
+  expect(isDeepEqual(bufferOf([1, 2, 3]), bufferOf([1, 2, 4]))).toBe(false)
+  expect(isDeepEqual(bufferOf([1, 2]), bufferOf([1, 2, 3]))).toBe(false)
+  expect(isDeepEqual(new Uint8Array([1, 2]), new Uint8Array([1, 2]))).toBe(true)
+  expect(isDeepEqual(new Uint8Array([1, 2]), new Uint8Array([1, 3]))).toBe(false)
+  expect(isDeepEqual(new DataView(bufferOf([9])), new DataView(bufferOf([9])))).toBe(true)
+  expect(isDeepEqual(new DataView(bufferOf([9])), new DataView(bufferOf([8])))).toBe(false)
+})
+
+test('isDeepEqual survives circular references', () => {
+  type Node = { name: string; self?: Node }
+  const a: Node = { name: 'a' }
+  a.self = a
+  const b: Node = { name: 'a' }
+  b.self = b
+  expect(isDeepEqual(a, b)).toBe(true)
+
+  const c: Node = { name: 'c' }
+  c.self = c
+  expect(isDeepEqual(a, c)).toBe(false)
+})
+
+test('isDeepEqual prefers a custom valueOf when one is defined', () => {
+  class Money {
+    constructor(private readonly cents: number) {}
+    valueOf(): number {
+      return this.cents
+    }
+  }
+  expect(isDeepEqual(new Money(100), new Money(100))).toBe(true)
+  expect(isDeepEqual(new Money(100), new Money(200))).toBe(false)
+})
+
+test('isDeepEqual falls back to a custom toString when one is defined', () => {
+  class Tag {
+    constructor(private readonly label: string) {}
+    toString(): string {
+      return this.label
+    }
+  }
+  expect(isDeepEqual(new Tag('x'), new Tag('x'))).toBe(true)
+  expect(isDeepEqual(new Tag('x'), new Tag('y'))).toBe(false)
+})
+
+test('isDeepEqual compares subclasses of built-ins by their built-in semantics', () => {
+  class MySet extends Set<number> {}
+  class MyMap extends Map<string, number> {}
+
+  expect(isDeepEqual(new MySet([1]), new MySet([1]))).toBe(true)
+  expect(isDeepEqual(new MySet([1]), new MySet([2]))).toBe(false)
+  expect(isDeepEqual(new MyMap([['a', 1]]), new MyMap([['a', 1]]))).toBe(true)
+  expect(isDeepEqual(new MyMap([['a', 1]]), new MyMap([['a', 2]]))).toBe(false)
 })
