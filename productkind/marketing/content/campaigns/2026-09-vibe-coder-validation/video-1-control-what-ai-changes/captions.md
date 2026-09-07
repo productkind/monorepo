@@ -17,13 +17,13 @@ campaign: vibe-coded-app-26
 
 **Caption:**
 
-How do you review an AI-generated change when you don’t code? One button can touch sign-in, payments or saved data. Women building with AI can join the waitlist to learn what to test before publishing. What’s your AI tool’s largest change?
+How do you review an AI-generated change when you don’t code? One button can touch sign-in, payments or saved data. Women building with AI can join the waitlist to learn what to test before publishing. What’s the largest change your AI tool has made for a small request?
 
 #womenwhobuild #womenintech #womenfounders #aicoding
 
 **Pinned comment:**
 
-Join the Building Apps with AI waitlist: https://littleparrot.app/guides/building-apps-with-ai?utm_source=tiktok&utm_campaign=vibe-coded-app-26&utm_content=you-asked-for-one-button
+https://littleparrot.app/guides/building-apps-with-ai?utm_source=tiktok&utm_campaign=vibe-coded-app-26&utm_content=you-asked-for-one-button
 
 ## Instagram Reels
 
