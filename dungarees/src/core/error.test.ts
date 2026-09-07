@@ -53,9 +53,11 @@ test('getThrownError fails when nothing is thrown, rather than returning undefin
 })
 
 test('getThrownError fails when the thrown value is not an Error', () => {
+  const notAnError: unknown = 'a bare string'
+
   expect(() =>
     getThrownError(() => {
-      throw 'a bare string'
+      throw notAnError
     }),
   ).toThrow('Expected an Error to be thrown, got: a bare string')
 })
