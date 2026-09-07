@@ -177,7 +177,3 @@ Track:
 
 The first article draft is in
 [`seo-article-01-technical-feasibility-for-product-managers.md`](./seo-article-01-technical-feasibility-for-product-managers.md).
-
-A personal-voice experiment of the same article is in
-[`seo-article-01b-technical-feasibility-personal-voice.md`](./seo-article-01b-technical-feasibility-personal-voice.md).
-It targets the same query and should not be published alongside the original.

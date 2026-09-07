@@ -5,6 +5,7 @@ channel: seo
 created: 2026-09-07
 campaign: pm-technical-fluency-validation-2026-09
 author: Kinga Magyar
+voice: personal
 slug: /guides/technical-feasibility-product-managers
 canonical: https://littleparrot.app/guides/technical-feasibility-product-managers
 primary_query: technical feasibility
@@ -18,30 +19,49 @@ meta_description: "Assess technical feasibility before you commit. Use this Prod
 conversion_url: /guides/technical-product-manager?utm_source=seo&utm_medium=organic&utm_campaign=tech-pm-26&utm_content=technical-feasibility
 ---
 
-# Technical feasibility for Product Managers: a checklist before you commit
+# Technical feasibility for Product Managers: the checklist I use before committing
 
-Technical feasibility is an assessment of whether a product idea or feature
-can work within your product's systems, data, integrations, team skills and
+As a Product Manager, I've had to answer versions of the same questions many
+times:
+
+“Can we do this?”
+
+Usually followed quite quickly by, “And how long will it take?”
+
+Sometimes the proposed change looked tiny. One new button, an extra field in a
+form, a setting someone wanted added. I could see the visible change, but I
+couldn't yet see which systems, data or teams it would affect.
+
+To be honest, saying “I don't know yet” never felt particularly comfortable.
+But a commitment made before the team had examined the dependencies and
+unknowns could force us to revise the scope or timing later.
+
+So I learned to slow down that first conversation and assess the **technical
+feasibility** of the change.
+
+Technical feasibility is an assessment of whether a proposed change or feature
+can work within the product's systems, data, integrations, team skills and
 delivery constraints.
 
-As a Product Manager, you don't need to choose the architecture or estimate the
-work alone. You need to make the proposed user behaviour clear, ask questions
-that expose dependencies and uncertainty, and avoid making a commitment before
-the team understands the difficult parts.
+A Product Manager's role in that assessment is to make the proposed user behaviour clear, ask
+questions that expose dependencies and uncertainty, and record what we know
+before anyone promises scope or timing. Engineering owns the technical
+assessment and implementation approach.
 
-This guide gives you a checklist and a copyable one-page summary for that
-conversation.
+Here is the checklist I use to structure that conversation.
 
-## The technical feasibility checklist
+## My technical feasibility checklist
 
-Bring a specific feature or product decision to the conversation. “Can we add
-subscriptions?” is too broad. “Can a workspace owner pay for ten seats by card,
-add seats later and receive one monthly invoice?” gives the team behaviour and
-states to examine.
+I start by making the feature specific. “Can we add subscriptions?” gives an
+engineer very little to assess. I would describe the behaviour more like this:
 
-Work through these six areas with an engineer or technical lead.
+> A workspace owner can pay for ten seats by card, add more seats later and
+> receive one monthly invoice.
 
-### 1. User behaviour and states
+Now we have a user, actions, states and an outcome. The team can start tracing
+what those actions would touch.
+
+### 1. Clarify the user behaviour and states
 
 - Who can take the action?
 - What must be true before they can take it?
@@ -49,22 +69,34 @@ Work through these six areas with an engineer or technical lead.
 - Can they undo or repeat it?
 - Which permissions, account states or edge cases change the behaviour?
 
-### 2. Systems and data
+I have found that states expose quite a lot of hidden work. “A customer can
+cancel” becomes several different behaviours once we ask whether the order has
+been paid, packed, dispatched or partly refunded.
 
-- Which frontend, backend service, database or internal tool will change?
+### 2. Ask what happens to the systems and data
+
+- What will change on the frontend, backend service, database or internal tool?
 - Where does the source data come from?
-- Which system is the source of truth after the change?
+- Which system becomes the source of truth after the change?
 - Does existing data need to be cleaned, moved or recalculated?
 - Does the change involve personal, payment or other sensitive data?
 
-### 3. Integrations and dependencies
+I am trying to follow the user action through the product here. If a customer
+changes something on screen, which system records it, which other systems need
+the new value, and what happens if one of them keeps the old value?
+
+### 3. Look for integrations and dependencies
 
 - Which other teams, services, APIs or vendors does this depend on?
-- Do those systems support the behaviour you want?
+- Do those systems support the behaviour we want?
 - Are there rate limits, contract limits, approval steps or release dates?
 - What happens if an external service is slow, unavailable or returns an error?
 
-### 4. Failure, quality and support
+Dependencies are often where a confident “yes” turns into “yes, if”. It's important to write
+down the condition after that “if”, because it can change the scope, timing or
+decision.
+
+### 4. Ask how it could fail
 
 - How could the feature fail for a user?
 - Which failure cases must the team test before release?
@@ -72,54 +104,69 @@ Work through these six areas with an engineer or technical lead.
 - How will the team detect incorrect data or behaviour?
 - Which accessibility, security, privacy or regulatory checks apply?
 
-### 5. Delivery and release
+I can sound a little pessimistic when I ask these questions. I quite like this
+part, though. It gives the team a chance to design the failure behaviour while
+the feature is still being discussed, rather than after a customer has found
+it for us.
 
-- Can the work be divided into a smaller useful version and later additions?
-- Does the team need a technical investigation, prototype or proof of concept
-  before estimating the feature?
-- Can the team release it to a small group first?
-- How will the team monitor the release?
-- Can the change be disabled or rolled back safely?
+### 5. Ask how we could deliver and release it
 
-### 6. Unknowns and reversibility
+- Can we divide the work into a smaller useful version and later additions?
+- Do we need a technical investigation, prototype or proof of concept before
+  estimating the feature?
+- Can we release it to a small group first?
+- How will we monitor the release?
+- What do we want to measure once the feature is live?
+- Can we disable or roll back the change safely?
 
-- Which answer is based on evidence, and which is still an assumption?
+When a feature is difficult to estimate, the next useful step may be a short
+technical investigation. That gives us a way to answer a specific unknown
+before asking for a delivery estimate.
+
+### 6. Separate facts, assumptions and unknowns
+
+- Which answer is supported by evidence?
+- Which answer is still an assumption?
 - What could make the work materially larger?
 - Which decision would be expensive or difficult to reverse?
 - What is the cheapest safe way to answer the biggest unknown?
-- Who owns that next step, and when will the team know enough to decide?
+- Who owns that next step, and when will we know enough to decide?
 
-You do not need every answer in the first meeting. A good feasibility check
-makes the missing answers visible and gives each important unknown an owner.
+The first meeting can end with unanswered questions. Just make sure that each important
+unknown has an owner and a next step, so it doesn't disappear into the
+meeting notes.
 
-## A worked example: changing a delivery address after checkout
+## A fictional example: changing a delivery address after checkout
 
-Imagine a request that looks small on screen:
+I'm using a fictional example here because I don't want to turn a real
+company's systems into a neat little story that never happened.
+
+Imagine this request:
 
 > Add an edit button so a customer can change their delivery address after
 > placing an order.
 
-The visible change might be one button and one form. The behaviour behind it
-could reach several parts of the product.
+It looks like one button and one form on screen. So what would I ask before
+making a commitment?
 
-| Area | Question | What the answer could change |
+| Area | My question | What the answer could change |
 |---|---|---|
-| User state | Until what point can the customer edit the address? | The feature may need different behaviour before and after warehouse fulfilment starts. |
+| User state | Until what point can the customer edit the address? | We may need different behaviour before and after warehouse fulfilment starts. |
 | Data | Which system owns the current delivery address: checkout, orders or fulfilment? | Updating one database may leave the warehouse with the old address. |
 | Integration | Can the fulfilment or courier API accept an address change after an order is created? | The external service may set a cut-off or require a cancellation and replacement. |
 | Payment and risk | Does a post-payment address change require another fraud check? | The change may affect payment rules and manual review. |
-| Failure | What does the customer see if the new address is valid in our form but rejected by the courier? | The flow needs a recoverable error state and support information. |
-| Release | Can the team offer the change only before fulfilment starts? | A narrower first version may deliver useful behaviour without automating every exception. |
+| Failure | What does the customer see if our form accepts the address but the courier rejects it? | The flow needs a recoverable error state and information that helps the support team investigate. |
+| Release | Can we offer the change only before fulfilment starts? | A narrower first version may help customers without automating every exception. |
 
-This is why a screen count is not a scope. The useful first conversation traces
-the user action through data, integrations, states and failure cases.
+A screen count tells me very little about scope. This conversation helps the whole team
+trace the proposed action through data, integrations, states and failure cases.
 
-## How to discuss rough scope without creating false precision
+## How to discuss rough scope without pretending we know more than we do
 
-A feasibility check can support rough scope, but it cannot produce a reliable
-delivery date while important facts are missing.
+So, can this conversation give us a rough scope? Yes, once we are clear about
+the uncertainty that still sits behind it.
 
-Ask the engineer for two things:
+I ask the engineers for two things:
 
 1. A relative complexity judgement, such as low, medium, high or unknown.
 2. The reasons that judgement could change.
@@ -128,16 +175,17 @@ For the delivery-address example, the answer might be:
 
 > Medium if the courier API accepts updates before fulfilment and the order
 > service already records address history. High if we need cancellation and
-> replacement across several fulfilment partners. We need to check two API
-> contracts before estimating.
+> replacement across several fulfilment partners. We need to check two APIs
+before estimating.
 
-That answer is more useful than an unsupported number of days. It tells you
-what the current judgement depends on and what evidence the team needs next.
+I can work with that answer. It tells me what the current judgement depends on,
+which evidence is missing and what we need to investigate next. An unsupported
+number of days would give me none of those things.
 
-## Copyable technical feasibility summary
+## The technical feasibility summary you can take away
 
-Use this after the conversation. Keep facts, assumptions and decisions
-separate so another person can see where the judgement came from.
+After the conversation, I write down the decision, evidence and open questions
+in one place. You can copy this version:
 
 ```markdown
 # Technical feasibility summary
@@ -160,7 +208,7 @@ separate so another person can see where the judgement came from.
 - [Failure case and user consequence]
 
 ## Delivery and release considerations
-- [Testing, rollout, monitoring and rollback requirement]
+- [Testing, rollout, monitoring, analytics and rollback requirement]
 
 ## Known facts
 - [Evidence-backed fact]
@@ -178,25 +226,26 @@ This judgement depends on:
 [Decision, technical investigation, prototype, data check or narrower scope]
 ```
 
-## What a Product Manager should own
+## What I own as the Product Manager
 
-You should own the decision context:
+The Product Manager owns the decision context:
 
 - the user problem and intended behaviour;
 - the evidence that makes the work worth considering;
 - the constraints and product trade-offs;
-- the assumptions that need testing;
-- the record of what the team knows, does not know and recommends.
+- the assumptions we need to test;
+- the record of what we know, what remains uncertain and what we recommend.
 
-Engineering should own the technical assessment and implementation approach.
-The overlap is the conversation where both sides examine the product behaviour,
-system consequences and evidence together.
+Engineering owns the technical assessment and implementation approach. We work
+together to understand the product behaviour, affected systems, risks and
+missing evidence.
 
-Technical confidence shows up when you know which question to ask, recognise
-that an answer is still an assumption and wait for the right evidence before
-you promise scope or timing.
+Over the years, I have become more comfortable saying that I need another
+answer before I can commit. I feel confident when I know which questions to ask,
+can recognise an assumption and wait for the right evidence before promising
+scope or timing to a stakeholder.
 
-## Frequently asked questions
+## A few questions I am often asked
 
 ### Who is responsible for technical feasibility?
 
@@ -208,32 +257,37 @@ when the proposed change affects their area.
 
 ### Is technical feasibility the same as software estimation?
 
-No. Feasibility asks whether the idea can work under the relevant constraints
-and identifies the difficult or uncertain parts. Estimation forecasts the
-effort or time after the team understands enough of that work. An investigation
-may be the honest next step when the largest unknown prevents an estimate.
+Feasibility asks whether the idea can work under the relevant constraints and
+identifies the difficult or uncertain parts. Estimation forecasts the effort
+or time after the team understands enough of that work. When an
+unknown blocks an estimate, an investigation is the best next step.
 
-### When should a team assess technical feasibility?
+### When should we assess technical feasibility?
 
-Assess it before a roadmap or delivery commitment whenever a proposed change
-touches unfamiliar systems, sensitive data, external services, migrations,
-performance limits or difficult-to-reverse decisions. Small and familiar work
-may need only a brief conversation. High-uncertainty work may need a technical
-investigation or proof of concept.
+I would assess it before a roadmap or delivery commitment whenever a proposed
+change touches unfamiliar systems, sensitive data, external services,
+migrations, performance limits or difficult-to-reverse decisions. Small and
+familiar work may need only a brief conversation. High-uncertainty work may
+need a technical investigation or proof of concept.
 
-### Does a Product Manager need to code to assess feasibility?
+### Do Product Managers need to understand code to assess feasibility?
 
-No. A Product Manager needs enough system context to describe the behaviour,
+A Product Manager needs enough system context to describe the behaviour,
 follow the explanation, ask about dependencies and failure cases, and use the
-answer in a product decision. Writing production code and choosing the
-implementation remain engineering work.
+answer in a product decision. Engineering still owns production code and the
+implementation choice.
 
-## Practise technical product decisions with evidence
+## Practise making technical product decisions with evidence
 
-Little Parrot's [technical Product Manager guide](/guides/technical-product-manager?utm_source=seo&utm_medium=organic&utm_campaign=tech-pm-26&utm_content=technical-feasibility)
-is for non-technical software Product Managers who want to trace how their
-product works, investigate questions and take part in scope and trade-off
-decisions with clearer evidence.
+We created Little Parrot's [technical Product Manager guide](/guides/technical-product-manager?utm_source=seo&utm_medium=organic&utm_campaign=tech-pm-26&utm_content=technical-feasibility)
+for Product Managers who want to understand how their product works,
+investigate questions and contribute to scope and trade-off decisions with
+clearer evidence.
+
+If you want to try the checklist first, take one roadmap item currently
+described as “small” and write down the user states, systems, data,
+dependencies and failure cases it could involve. Which questions do you need an
+engineer to help you answer?
 
 ### Publishing notes
 
@@ -248,4 +302,4 @@ decisions with clearer evidence.
 - Show author credentials, a published date and an updated date.
 - Add the build-versus-buy and technical-debt links only after those pages are
   live.
-- Validate the primary CTA route and email form before publishing.
+- Validate the primary course route and email form before publishing.
