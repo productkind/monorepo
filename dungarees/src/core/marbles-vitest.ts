@@ -49,7 +49,7 @@ export function configure(configuration: Configuration): {
     describe(name, () => {
       _cases(
         (c) => {
-          const t = c?.only !== undefined ? test.only : c?.skip === undefined ? test.skip : test
+          const t = c.only === true ? test.only : c.skip === true ? test.skip : test
           if (func.length > 2) {
             t(
               c.name,
