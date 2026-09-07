@@ -393,10 +393,10 @@ const setupFakeInteractor = <T = number>({
         }),
       }
     },
-    stopContext: async (_: T) => {
+    stopContext: async () => {
       state.isContextStarted = false
     },
-    onFailure: async (context: T, name: string) => {
+    onFailure: async (name: string) => {
       return {
         entry: `Failure in context ${String(context)} for test ${name}`,
         type: 'text/plain',
@@ -442,10 +442,10 @@ const setupFakeAsyncInteractor = <T = number>({
         }),
       }
     },
-    stopContext: async (_: T) => {
+    stopContext: async () => {
       state.isContextStarted = false
     },
-    onFailure: async (context: T, name: string) => {
+    onFailure: async (name: string) => {
       return {
         entry: `Failure in context ${String(context)} for test ${name}`,
         type: 'text/plain',

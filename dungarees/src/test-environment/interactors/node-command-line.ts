@@ -131,7 +131,7 @@ export const nodeCommandLineInteractor = ({
     stopContext: async () => {
       // Context cleanup handled in stop()
     },
-    onFailure: async (_context: NodeCommandLineContext, testName: string) => ({
+    onFailure: async (testName: string) => ({
       entry: `Node command line failed during test: ${testName}`,
       type: 'text/plain',
     }),

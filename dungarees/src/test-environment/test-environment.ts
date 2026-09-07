@@ -1,7 +1,6 @@
 import { isInteractorName, isRunnerName } from './guards.ts'
 import type {
   DefaultConfig,
-  GetContext,
   GetInstanceEntry,
   Interactor,
   InteractorConfig,
@@ -16,7 +15,7 @@ import type {
 import type { TestEnvironmentWorld } from './world.ts'
 import { createWorld } from './world.ts'
 
-import type { FilterRecord, GetKey, GetValue, RecordToEntries } from '@dungarees/core/type-util.ts'
+import type { FilterRecord, GetKey, RecordToEntries } from '@dungarees/core/type-util.ts'
 
 import type { Observable } from 'rxjs'
 import { map, merge, ReplaySubject } from 'rxjs'
@@ -169,13 +168,7 @@ export const createTestEnvironment = <const SERVICES extends Record<string, Serv
         await instance.start()
       })
       const reportEntries = await mapInteractors(async ({ name, instance }) => {
-        const {
-          context,
-          reportEntry$,
-        }: {
-          context: GetContext<GetValue<Interactor>>
-          reportEntry$: Observable<ReportEntry>
-        } = await instance.startContext()
+        const { context, reportEntry$ } = await instance.startContext()
         world.register(name, context)
         return reportEntry$.pipe(
           map(({ entry, type }) =>
@@ -185,10 +178,10 @@ export const createTestEnvironment = <const SERVICES extends Record<string, Serv
       })
       return merge<ReportEntry[]>(...reportEntries)
     },
-    onAfter: async (world) => {
+    onAfter: async () => {
       const entries$ = new ReplaySubject<ReportEntry>()
-      await mapInteractors(async ({ name, instance }) => {
-        await instance.stopContext(world.get(name))
+      await mapInteractors(async ({ instance }) => {
+        await instance.stopContext()
       })
       await forEachScenarioService(async ({ instance, name }) => {
         await instance.stop()
@@ -197,11 +190,8 @@ export const createTestEnvironment = <const SERVICES extends Record<string, Serv
       })
       return entries$.asObservable()
     },
-    onFailure: async (world, testName) => {
-      return await mapInteractors(async ({ name, instance }) => {
-        return await instance.onFailure(world.get(name), testName)
-      })
-    },
+    onFailure: async (_world, testName) =>
+      await mapInteractors(async ({ instance }) => await instance.onFailure(testName)),
     createWorld: () => createWorld<SERVICES>(state),
   }
 }

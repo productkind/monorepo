@@ -13,7 +13,6 @@ import type {
 import type {
   FilterRecord,
   GetKey,
-  GetValue,
   GetValueByKey,
   RecordToEntries,
 } from '@dungarees/core/type-util.ts'
@@ -27,10 +26,7 @@ export type TestEnvironmentWorld<
   get: <NAME extends GetKey<INTERACTORS>>(
     name: NAME,
   ) => GetContext<GetInstance<GetValueByKey<INTERACTORS, NAME>>>
-  register: <NAME extends GetKey<INTERACTORS>>(
-    name: NAME,
-    context: GetContext<GetInstance<GetValueByKey<INTERACTORS, NAME>>>,
-  ) => void
+  register: (name: GetKey<INTERACTORS>, context: unknown) => void
   start: (
     name: SERVICE_NAMES,
     ...args: Parameters<SERVICES[SERVICE_NAMES]['creator']>
@@ -40,14 +36,17 @@ export type TestEnvironmentWorld<
 export const createWorld = <SERVICES extends Record<string, ServiceConfig>>(
   state: TestEnviornmentState<SERVICES>,
 ): TestEnvironmentWorld<SERVICES> => {
-  type Interactors = GetInstanceEntry<RecordToEntries<FilterRecord<SERVICES, InteractorConfig>>>
-  const interactorContexts = new Map<GetKey<Interactors>, GetContext<GetValue<Interactors>>>()
+  type InteractorConfigs = RecordToEntries<FilterRecord<SERVICES, InteractorConfig>>
+  type Interactors = GetInstanceEntry<InteractorConfigs>
+  type ContextOf<NAME extends GetKey<InteractorConfigs>> = GetContext<
+    GetInstance<GetValueByKey<InteractorConfigs, NAME>>
+  >
+  const interactorContexts = new Map<GetKey<Interactors>, unknown>()
 
   const get: TestEnvironmentWorld<SERVICES>['get'] = (name) =>
     assertTypeByGuard({
       value: interactorContexts.get(name),
-      guard: (interactor): interactor is GetValueByKey<Interactors, typeof name> =>
-        interactor !== undefined,
+      guard: (context): context is ContextOf<typeof name> => context !== undefined,
       message: `Interactor "${String(name)}" is not registered`,
     })
 

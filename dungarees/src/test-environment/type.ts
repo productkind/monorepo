@@ -12,14 +12,13 @@ export type Runner = {
   stop: () => Promise<void>
 }
 
-// CONTEXT is invariant: `startContext` returns it while `stopContext` and `onFailure` accept it,
-// so neither `unknown` nor `never` is assignable in both directions and only a top type serves as
-// the bare `Interactor` used as a constraint. Splitting the producing and consuming halves into
-// separate types is what it would take to remove this.
-export type Interactor<CONTEXT = any> = {
+// An interactor creates its own context, so it is the one thing that already has it: handing it
+// back would put CONTEXT in both an output and an input position, making it invariant and leaving
+// no top type for the bare `Interactor` other than `any`. Produced only, it stays covariant.
+export type Interactor<CONTEXT = unknown> = {
   startContext: () => Promise<{ context: CONTEXT; reportEntry$: Observable<ReportEntry> }>
-  stopContext: (context: CONTEXT) => Promise<void>
-  onFailure: (context: CONTEXT, testName: string) => Promise<ReportEntry>
+  stopContext: () => Promise<void>
+  onFailure: (testName: string) => Promise<ReportEntry>
 } & Runner
 
 export type InstanceEntry<
