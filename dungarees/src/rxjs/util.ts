@@ -27,22 +27,22 @@ export const UNSAFE_MARBLE_TESTING_OBSERVABLE_FUNCTION = Symbol(
 )
 
 export type UnsafeMarbleTestingObservableFunction<
-  T extends (...args: any[]) => any = (...args: any[]) => any,
+  T extends (...args: never[]) => unknown = (...args: never[]) => unknown,
 > = T & {
   [UNSAFE_MARBLE_TESTING_OBSERVABLE_FUNCTION]: true
 }
 
-export type SafeMarbleTestingObservableFunction<T extends (...args: any[]) => any> = T & {
+export type SafeMarbleTestingObservableFunction<T extends (...args: never[]) => unknown> = T & {
   [UNSAFE_MARBLE_TESTING_OBSERVABLE_FUNCTION]: false
 }
 
-export type UnsafeService<SERVICE extends Record<string, (...args: any[]) => any>> = {
-  [K in keyof SERVICE]: SERVICE[K] extends (...args: any[]) => Observable<any>
+export type UnsafeService<SERVICE extends Record<string, (...args: never[]) => unknown>> = {
+  [K in keyof SERVICE]: SERVICE[K] extends (...args: never[]) => Observable<unknown>
     ? UnsafeMarbleTestingObservableFunction<SERVICE[K]>
     : SERVICE[K]
 }
 
-export const markUnsafeForMarbleTesting = <T extends (...args: any[]) => any>(
+export const markUnsafeForMarbleTesting = <T extends (...args: never[]) => unknown>(
   fn: T,
 ): UnsafeMarbleTestingObservableFunction<T> => {
   ;(fn as UnsafeMarbleTestingObservableFunction<T>)[UNSAFE_MARBLE_TESTING_OBSERVABLE_FUNCTION] =
@@ -50,7 +50,7 @@ export const markUnsafeForMarbleTesting = <T extends (...args: any[]) => any>(
   return fn as UnsafeMarbleTestingObservableFunction<T>
 }
 
-export type SyncFunctionToObservable<FUNC extends (...args: any[]) => any> = FUNC extends (
+export type SyncFunctionToObservable<FUNC extends (...args: never[]) => unknown> = FUNC extends (
   ...args: infer ARGS
 ) => infer RETURN
   ? (...args: ARGS) => Observable<RETURN>
@@ -59,33 +59,32 @@ export type SyncFunctionToObservable<FUNC extends (...args: any[]) => any> = FUN
 export const collectValuesFrom = async <T>(values$: Observable<T>): Promise<T[]> =>
   await lastValueFrom(values$.pipe(scan((acc, value) => [...acc, value], [] as T[])))
 
-export const asyncFunctionToObservable = <RETURN, ARGS extends any[]>(
+export const asyncFunctionToObservable = <RETURN, ARGS extends unknown[]>(
   asyncFn: (...args: ARGS) => Promise<RETURN>,
 ): UnsafeMarbleTestingObservableFunction<(...args: ARGS) => Observable<RETURN>> => {
   const wrapped = (...args: ARGS): Observable<RETURN> => {
-    return defer(() => asyncFn(...args))
+    return defer(async () => await asyncFn(...args))
   }
   return markUnsafeForMarbleTesting(wrapped)
 }
 
-export const syncFunctionToObservable = <F extends (...args: any[]) => any>(
+export const syncFunctionToObservable = <F extends (...args: never[]) => unknown>(
   syncFn: F,
   delayMs: number = 0,
 ): SyncFunctionToObservable<F> => {
-  const wrapped = (...args: Parameters<F>): Observable<ReturnType<F>> => {
-    return defer(() => of(syncFn(...args))).pipe(delay(delayMs))
-  }
+  const wrapped = (...args: Parameters<F>): Observable<unknown> =>
+    defer(() => of(syncFn(...args))).pipe(delay(delayMs))
   return wrapped as SyncFunctionToObservable<F>
 }
 
-export const catchAndRethrow = <T>(rethrowFn: (error: any) => Error): OperatorFunction<T, T> =>
-  catchError((error: any) => throwError(() => rethrowFn(error)))
+export const catchAndRethrow = <T>(rethrowFn: (error: unknown) => Error): OperatorFunction<T, T> =>
+  catchError((error: unknown) => throwError(() => rethrowFn(error)))
 
 export const catchValueAndRethrow = <VALUE, INPUT>(
-  valueFn: (error: any) => VALUE,
-  rethrowFn: (error: any) => Error,
+  valueFn: (error: unknown) => VALUE,
+  rethrowFn: (error: unknown) => Error,
 ): OperatorFunction<INPUT, VALUE | INPUT> =>
-  catchError((error: any) =>
+  catchError((error: unknown) =>
     concat(
       of(valueFn(error)),
       throwError(() => rethrowFn(error)),
@@ -147,13 +146,19 @@ type TryPipe = {
       OperatorFunction<C, D>,
       OperatorFunction<D, E>,
       OperatorFunction<E, F>,
-      ...[OperatorFunction<F, any>, ...OperatorFunction<any, any>[], OperatorFunction<any, OUTPUT>],
+      ...[
+        OperatorFunction<F, unknown>,
+        ...OperatorFunction<never, unknown>[],
+        OperatorFunction<never, OUTPUT>,
+      ],
     ]
   ): OperatorFunction<INPUT, OUTPUT>
 }
 
-export const tryPipe: TryPipe = (...operators: any[]) =>
-  mergeMap((value) => defer(() => of(value).pipe(...(operators as [OperatorFunction<any, any>]))))
+export const tryPipe: TryPipe = (...operators: OperatorFunction<never, unknown>[]) =>
+  mergeMap((value: unknown) =>
+    defer(() => of(value).pipe(...(operators as [OperatorFunction<unknown, unknown>]))),
+  )
 
 export const assertMap = <T>(
   predicate: (value: T) => boolean,
@@ -232,16 +237,21 @@ export type GetTransformSet<GET, SET> = {
       OperatorFunction<C, D>,
       OperatorFunction<D, E>,
       OperatorFunction<E, F>,
-      ...[OperatorFunction<F, any>, ...OperatorFunction<any, any>[], OperatorFunction<any, SET>],
+      ...[
+        OperatorFunction<F, unknown>,
+        ...OperatorFunction<never, unknown>[],
+        OperatorFunction<never, SET>,
+      ],
     ]
   ): Observable<{ get: GET; set: SET }>
 }
 
-export const createGetTransformSet = <GET, SET>(
-  getter: () => Observable<GET>,
-  setter: (value: SET) => Observable<void>,
-): GetTransformSet<GET, SET> =>
-  ((...operators: OperatorFunction<any, any>[]): Observable<{ get: GET; set: SET }> =>
+export const createGetTransformSet =
+  <GET, SET>(
+    getter: () => Observable<GET>,
+    setter: (value: SET) => Observable<void>,
+  ): GetTransformSet<GET, SET> =>
+  (...operators: OperatorFunction<never, unknown>[]): Observable<{ get: GET; set: SET }> =>
     getter().pipe(
       mergeMap((getValue) =>
         of(getValue).pipe(
@@ -251,7 +261,7 @@ export const createGetTransformSet = <GET, SET>(
           ),
         ),
       ),
-    )) as GetTransformSet<GET, SET>
+    )
 
 export type GetTransformSetContext<CONTEXT, GET, SET> = {
   (
@@ -296,20 +306,21 @@ export type GetTransformSetContext<CONTEXT, GET, SET> = {
       OperatorFunction<D, E>,
       OperatorFunction<E, F>,
       ...[
-        OperatorFunction<F, any>,
-        ...OperatorFunction<any, any>[],
-        OperatorFunction<any, { set: SET; context: CONTEXT }>,
+        OperatorFunction<F, unknown>,
+        ...OperatorFunction<never, unknown>[],
+        OperatorFunction<never, { set: SET; context: CONTEXT }>,
       ],
     ]
   ): Observable<{ get: GET; set: SET; context: CONTEXT }>
 }
 
-export const createGetTransformSetContext = <CONTEXT, GET, SET>(
-  getter: () => Observable<GET>,
-  setter: (value: SET) => Observable<void>,
-): GetTransformSetContext<CONTEXT, GET, SET> =>
-  ((
-    ...operators: OperatorFunction<any, any>[]
+export const createGetTransformSetContext =
+  <CONTEXT, GET, SET>(
+    getter: () => Observable<GET>,
+    setter: (value: SET) => Observable<void>,
+  ): GetTransformSetContext<CONTEXT, GET, SET> =>
+  (
+    ...operators: OperatorFunction<never, unknown>[]
   ): Observable<{ get: GET; set: SET; context: CONTEXT }> =>
     getter().pipe(
       mergeMap((getValue) =>
@@ -320,14 +331,14 @@ export const createGetTransformSetContext = <CONTEXT, GET, SET>(
           ),
         ),
       ),
-    )) as GetTransformSetContext<CONTEXT, GET, SET>
+    )
 
 type SyncMethodBase<SERVICE> = {
   [K in keyof SERVICE]: K extends `${infer BASE}Sync` ? BASE : never
 }[keyof SERVICE]
 
 type ObservableMethodsFromSync<
-  SERVICE extends Record<`${string}Sync`, (...args: any[]) => any>,
+  SERVICE extends Record<`${string}Sync`, (...args: never[]) => unknown>,
   METHOD_NAMES extends readonly SyncMethodBase<SERVICE>[],
 > = {
   [K in METHOD_NAMES[number]]: `${K & string}Sync` extends keyof SERVICE
@@ -338,7 +349,7 @@ type ObservableMethodsFromSync<
 }
 
 export function getObservableMethodsFromSync<
-  SERVICE extends Record<`${string}Sync`, (...args: any[]) => any>,
+  SERVICE extends Record<`${string}Sync`, (...args: never[]) => unknown>,
   const METHOD_NAMES extends readonly SyncMethodBase<SERVICE>[],
 >(
   service: SERVICE,
@@ -361,14 +372,14 @@ export function getObservableMethodsFromSync(
   return Object.fromEntries(observableMethods)
 }
 
-export const getUnsafeMethodNames = <
-  const SERVICE extends Record<string, any | UnsafeMarbleTestingObservableFunction>,
->(
+const isMarkedUnsafeForMarbleTesting = (value: unknown): boolean =>
+  typeof value === 'function' &&
+  UNSAFE_MARBLE_TESTING_OBSERVABLE_FUNCTION in value &&
+  value[UNSAFE_MARBLE_TESTING_OBSERVABLE_FUNCTION] === true
+
+export const getUnsafeMethodNames = <const SERVICE extends Record<string, unknown>>(
   service: SERVICE,
 ): Array<keyof FilterRecord<SERVICE, UnsafeMarbleTestingObservableFunction>> =>
-  Object.keys(service).filter(
-    (key) =>
-      typeof service[key] === 'function' &&
-      UNSAFE_MARBLE_TESTING_OBSERVABLE_FUNCTION in service[key] &&
-      service[key][UNSAFE_MARBLE_TESTING_OBSERVABLE_FUNCTION] === true,
-  ) as Array<keyof FilterRecord<SERVICE, UnsafeMarbleTestingObservableFunction>>
+  Object.keys(service).filter((key) => isMarkedUnsafeForMarbleTesting(service[key])) as Array<
+    keyof FilterRecord<SERVICE, UnsafeMarbleTestingObservableFunction>
+  >
