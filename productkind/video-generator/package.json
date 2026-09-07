@@ -37,7 +37,8 @@
     "test:watch": "vitest",
     "narrate": "esbuild scripts/narrate.ts --bundle --platform=node --format=cjs --outfile=node_modules/.cache/narrate.cjs --log-level=warning && node --env-file-if-exists=../../.env node_modules/.cache/narrate.cjs",
     "migrate": "esbuild scripts/migrate-legacy-video.ts --bundle --platform=node --format=cjs --outfile=node_modules/.cache/migrate.cjs --log-level=warning && node node_modules/.cache/migrate.cjs",
-    "studio": "remotion studio"
+    "studio": "remotion studio",
+    "apply-visual": "esbuild scripts/apply-visual.ts --bundle --platform=node --format=cjs --outfile=node_modules/.cache/apply-visual.cjs --log-level=warning && node node_modules/.cache/apply-visual.cjs"
   },
   "sideEffects": [
     "*.css"
