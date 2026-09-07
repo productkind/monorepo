@@ -11,32 +11,15 @@ for. Nothing is written to the definition: paste the lines, so the file stays ha
 import argparse
 from urllib.parse import urlsplit
 
-from common import (assets_dir, download_original, edge_colour, gif_seconds, gif_size,
-                    repeats_existing_artwork, slots, source_url)
+from common import (assets_dir, download_original, edge_colour, fit_advice, gif_seconds,
+                    gif_size, repeats_existing_artwork, slots, source_url)
 
 
 def advise(seconds, slot):
-    """How to fit the gif to the slot.
-
-    The house preference is a slowdown, never a held last frame: `pause-after-finish` freezes the
-    picture and reads as a stall in the middle of a video where everything else keeps moving.
-    """
-    if seconds >= slot:
-        return None, (
-            f'{seconds / slot:.0%} of the gif plays before the cut. If the motion has to finish '
-            f'(a drawing, a build, a reveal), speed it up with playbackRate: {seconds / slot:.2f}'
-        )
-    rate = round(seconds / slot, 2)
-    repeats = slot / seconds
-    if rate >= 0.6:
-        return (
-            f'playbackRate: {rate}',
-            f'repeats {repeats:.2f}x at full speed; at {rate} it covers the beat in a single pass',
-        )
-    return None, (
-        f'repeats {repeats:.1f}x and slowing it to {rate} would look like slow motion; '
-        'let it loop if the motion is cyclic, otherwise pick another gif'
-    )
+    """The knob line for the definition, and the sentence explaining it. Rule lives in common."""
+    fit = fit_advice(seconds, slot)
+    knob = None if fit['rate'] is None else f"playbackRate: {fit['rate']}"
+    return knob, fit['why']
 
 
 def provenance(gif_id):

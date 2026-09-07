@@ -6,6 +6,11 @@
  * it can neither read the filesystem nor hold an API key. It fetches the `timeline.json` this
  * script writes.
  *
+ * Audio is cached per video under `public/<id>/audio`, keyed by everything audible — the take's
+ * text, the voice, the model and the settings — and by nothing else. So a second cut of a video,
+ * same script and different visuals, adopts the first cut's takes instead of paying to generate
+ * them again; the copy is logged and the bytes are identical.
+ *
  *   npm run narrate              build every video, reusing cached audio
  *   npm run narrate -- --check   fail if any timeline is missing or stale, never call the API
  *   npm run narrate -- --watch   rebuild when a definition changes
@@ -14,6 +19,8 @@
 import { existsSync, mkdirSync, readFileSync, readdirSync, watch, writeFileSync } from 'node:fs'
 import { basename, join, resolve } from 'node:path'
 
+import type { AudioCache } from '../src/narration/audio-cache'
+import { cachedTakeIn } from '../src/narration/audio-cache'
 import type { VideoDefinition } from '../src/narration/definition'
 import { audioCacheKey, spokenOnly, timelineHash } from '../src/narration/definition'
 import { planTakes } from '../src/narration/takes'
@@ -88,19 +95,51 @@ const spokenSecondsOf = ({ alignment }: { alignment: Alignment }): number => {
   return ends.length === 0 ? 0 : ends[ends.length - 1]
 }
 
+/** Every video's audio folder, this video's first so it always prefers its own copy. */
+const cachesFor = ({ id }: { id: string }): AudioCache[] => {
+  const others = existsSync(PUBLIC_DIR)
+    ? readdirSync(PUBLIC_DIR).filter((name) => name !== id)
+    : []
+  return [id, ...others]
+    .filter((video) => existsSync(audioDirFor({ id: video })))
+    .map((video) => ({ video, names: readdirSync(audioDirFor({ id: video })) }))
+}
+
+/**
+ * The cached take for this video, or another video's copy of the same narration.
+ *
+ * A second cut of a video — same script, different visuals — has the same take text in the same
+ * voice, so `audioCacheKey` gives it the same key. Without this it would be a cache miss purely
+ * because the folder is named after the other video, and the narration would be paid for twice.
+ */
 const findCached = ({ id, key }: { id: string; key: string }): CachedTake | undefined => {
-  const alignmentPath = alignmentPathFor({ id, key })
-  if (!existsSync(alignmentPath)) {
+  const found = cachedTakeIn({ key, caches: cachesFor({ id }) })
+  if (found === undefined || found.video !== id) {
     return undefined
   }
-  const directory = audioDirFor({ id })
-  const audioName = readdirSync(directory).find(
-    (name) => name.startsWith(`${key}.`) && !name.endsWith('.alignment.json'),
-  )
-  if (audioName === undefined) {
+  return {
+    audio: `${id}/audio/${found.audio}`,
+    alignment: readAlignment({ path: join(audioDirFor({ id }), found.alignment) }),
+  }
+}
+
+/**
+ * Copies a sibling video's take into this video's folder, so each `public/<id>/` stays
+ * self-contained and no render depends on another video's assets still being there.
+ */
+const adoptCached = ({ id, key }: { id: string; key: string }): CachedTake | undefined => {
+  const found = cachedTakeIn({ key, caches: cachesFor({ id }) })
+  if (found === undefined || found.video === id) {
     return undefined
   }
-  return { audio: `${id}/audio/${audioName}`, alignment: readAlignment({ path: alignmentPath }) }
+  const directory = audioDirFor({ id: found.video })
+  console.log(`  ${id} <- reusing the narration already generated for ${found.video}`)
+  return writeCached({
+    id,
+    key,
+    audio: readFileSync(join(directory, found.audio)),
+    alignment: readAlignment({ path: join(directory, found.alignment) }),
+  })
 }
 
 const writeCached = ({
@@ -283,10 +322,22 @@ const buildVideo = async ({
       model: definition.model,
       settings: HOUSE_VOICE_SETTINGS,
     })
-    const cached = findCached({ id: definition.id, key })
+    // A check must not write, so adopting a sibling's take is left to a real run.
+    const cached =
+      findCached({ id: definition.id, key }) ??
+      (mode === 'check' ? undefined : adoptCached({ id: definition.id, key }))
     if (cached === undefined) {
       if (mode === 'check') {
-        return { id: definition.id, stale: true, reason: 'a take has no narrated audio' }
+        const elsewhere = cachedTakeIn({ key, caches: cachesFor({ id: definition.id }) })
+        return {
+          id: definition.id,
+          stale: true,
+          reason:
+            elsewhere === undefined
+              ? 'a take has no narrated audio'
+              : `a take is already narrated for ${elsewhere.video} and only needs copying in, ` +
+                'so "npm run narrate" will fix this without calling the API',
+        }
       }
       if (!allowGenerate) {
         return {

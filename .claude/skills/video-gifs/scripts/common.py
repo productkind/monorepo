@@ -75,6 +75,41 @@ def gif_size(path):
     return (int(out[0]), int(out[1])) if len(out) >= 2 else (0, 0)
 
 
+# Slowing a gif below this reads as slow motion rather than as a gif filling its beat.
+SLOW_FLOOR = 0.6
+
+
+def fit_advice(seconds, slot):
+    """How to fit a gif of `seconds` into a `slot`, as a rate and a sentence explaining it.
+
+    The house preference is a slowdown, never a held last frame: `pause-after-finish` freezes the
+    picture and reads as a stall in the middle of a video where everything else keeps moving.
+
+    Shared by `pick.py` and the desk API so the two cannot recommend different things for the same
+    gif — the numbers end up in a definition either way.
+    """
+    if seconds >= slot:
+        return {
+            'rate': None,
+            'why': (f'{seconds / slot:.0%} of the gif plays before the cut. If the motion has to '
+                    f'finish (a drawing, a build, a reveal), speed it up with playbackRate: '
+                    f'{seconds / slot:.2f}'),
+        }
+    rate = round(seconds / slot, 2)
+    repeats = slot / seconds
+    if rate >= SLOW_FLOOR:
+        return {
+            'rate': rate,
+            'why': (f'repeats {repeats:.2f}x at full speed; at {rate} it covers the beat in a '
+                    'single pass'),
+        }
+    return {
+        'rate': None,
+        'why': (f'repeats {repeats:.1f}x and slowing it to {rate} would look like slow motion; '
+                'let it loop if the motion is cyclic, otherwise pick another gif'),
+    }
+
+
 # Below this share of the border ring, the colour is not a background — it is one element of a
 # picture that happens to reach the edge. Set from the real library: the obvious cases (a flat
 # card behind an illustration) sit at 0.94–1.00, while a white card whose artwork bleeds off the

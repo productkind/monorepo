@@ -1,0 +1,30 @@
+{
+  "name": "video-desk",
+  "version": "1.0.0",
+  "description": "Sourcing desk for the narrated videos: find, judge and apply the gif for every section",
+  "private": true,
+  "license": "UNLICENSED",
+  "type": "module",
+  "scripts": {
+    "desk": "sh scripts/desk.sh",
+    "dev": "vite",
+    "api": "python3 api/serve.py",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "lint": "eslint src && tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.0.0",
+    "@types/react-dom": "19.0.0",
+    "@vitejs/plugin-react-swc": "^3.7.2",
+    "typescript": "5.8.2",
+    "vite": "^6.0.7",
+    "vitest": "^3.2.4"
+  }
+}
