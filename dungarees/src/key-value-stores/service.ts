@@ -40,7 +40,10 @@ export const createKeyValueStore = <SCHEMAS extends Schemas, RAW_STORE extends R
     if (validator === undefined) {
       throw new Error(`Invalid key: "${key}"`)
     }
-    return validator
+    // `validators[key]` resolves through the `Schemas` constraint, so its output type reads as
+    // `unknown` here. Only the caller's key ties it back to a schema, and a generic indexed access
+    // cannot carry that, so the pairing is restated once instead of leaking `unknown` outwards.
+    return validator as ZodType<GetSchemaType<SCHEMAS[KEY]>>
   }
 
   const get: KeyValueStore<SCHEMAS, RAW_STORE>['get'] = (key) => {

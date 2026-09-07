@@ -49,7 +49,11 @@ export const createKeyValueStoreDeep = <
       throw new Error(`Invalid path: "${path}"`)
     }
     try {
-      return getSchemaByRuntimePath(schema, restKeys.join('.'))
+      // The path is a runtime string, so the schema it resolves to carries no output type. Only
+      // the caller's key ties it back to one, which a generic indexed access cannot carry.
+      return getSchemaByRuntimePath(schema, restKeys.join('.')) as ZodType<
+        GetValueByPath<SchemaRecordToObj<SCHEMAS>, KEY>
+      >
     } catch (e) {
       throw new Error(`Invalid path: "${path}"`, { cause: e })
     }
