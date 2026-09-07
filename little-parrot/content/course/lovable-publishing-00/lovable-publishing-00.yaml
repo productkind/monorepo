@@ -1,7 +1,7 @@
 course:
   id: ff736c4f-8ccc-41b6-96c6-68806804c5d8
   note:
-  cover: /courses/lovable-publishing-00/cover.gif
+  cover: /courses/lovable-publishing-00/cover.webp
   title: 'Launch and Grow Your Lovable App'
   learningOutcomes:
     - Publish your app to production with professional meta tags and branding
