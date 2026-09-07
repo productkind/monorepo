@@ -25,9 +25,9 @@ export type Provenance = {
 
 /** Giphy or klipy, taken from the URL — a klipy id at giphy.com is somebody else's gif. */
 const providerOf = ({ url }: { url: string }): string => {
-  const host = url.replace(/^https?:\/\//, '').split('/')[0]
+  const host = url.replace(/^https?:\/\//, '').split('/')[0] ?? url
   const labels = host.split('.')
-  return labels.length > 1 ? labels[labels.length - 2] : host
+  return labels[labels.length - 2] ?? host
 }
 
 /**
@@ -108,7 +108,7 @@ export const withVisualApplied = ({
   if (indentMatch === null) {
     throw new Error(`Section ${section} has no gif to replace.`)
   }
-  const indent = indentMatch[1]
+  const indent = indentMatch[1] ?? ''
 
   // The whole call, whether it was written on one line or as a block.
   const replaced = original.replace(

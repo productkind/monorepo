@@ -1,4 +1,5 @@
 import pmTechnicalFluencyValidation00 from './pm-technical-fluency-validation-00'
+import pmTechnicalFluencyValidation00Ambient from './pm-technical-fluency-validation-00-ambient'
 import pmTechnicalFluencyValidation01 from './pm-technical-fluency-validation-01'
 import pmTechnicalFluencyValidation02 from './pm-technical-fluency-validation-02'
 import pmTechnicalFluencyValidation03 from './pm-technical-fluency-validation-03'
@@ -26,6 +27,7 @@ export const VIDEOS = [
   social017,
   social018,
   pmTechnicalFluencyValidation00,
+  pmTechnicalFluencyValidation00Ambient,
   pmTechnicalFluencyValidation01,
   pmTechnicalFluencyValidation02,
   pmTechnicalFluencyValidation03,

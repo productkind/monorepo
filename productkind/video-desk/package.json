@@ -8,16 +8,18 @@
   "scripts": {
     "desk": "sh scripts/desk.sh",
     "dev": "vite",
-    "api": "python3 api/serve.py",
-    "build": "tsc -b && vite build",
+    "api": "node http/server.ts",
+    "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
-    "lint": "eslint src && tsc --noEmit",
+    "lint": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest"
   },
   "dependencies": {
     "react": "19.0.0",
-    "react-dom": "19.0.0"
+    "react-dom": "19.0.0",
+    "rxjs": "^7.8.1",
+    "zod": "^3.25.76"
   },
   "devDependencies": {
     "@types/react": "19.0.0",
