@@ -35,9 +35,7 @@ class ExtendedExpect<T> extends Expect<T> {
 }
 
 export const coreMarbles =
-  <ARGS extends unknown[] = []>(
-    runner: Runner<ARGS>,
-  ): ((...args: ARGS) => void | Promise<void>) =>
+  <ARGS extends unknown[] = []>(runner: Runner<ARGS>): ((...args: ARGS) => void | Promise<void>) =>
   (...args: ARGS): void | Promise<void> => {
     const runInMarbles: () => void | Promise<void> = marbles((m): void | Promise<void> => {
       const coldCall = (marble: string, functions: MarbleFunctions): void => {
