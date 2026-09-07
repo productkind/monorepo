@@ -15,10 +15,12 @@ job. The content should help a reader do one piece of real PM work: question a
 rough scope, inspect evidence, investigate an issue, pull product data or build
 a bounded prototype.
 
-The conversion hub is the existing
+The conversion destination is the existing
 [`/guides/technical-product-manager`](https://littleparrot.app/guides/technical-product-manager)
-page. Supporting articles should serve their query completely before linking
-to the guide or course.
+landing page. It tests interest in the upcoming transformational learning path
+**Become a Technical Product Manager Without Becoming an Engineer**.
+Supporting articles should serve their query completely before inviting an
+interested reader to visit the landing page and register their interest.
 
 ## Strategic decision
 
@@ -168,12 +170,12 @@ Track:
   in Google Search Console;
 - citations and cited URLs in Bing Webmaster Tools AI Performance;
 - referrals containing `utm_source=chatgpt.com`;
-- visits and email sign-ups from each guide using one stable `utm_content`
-  value per article;
+- visits and interest registrations from each article using one stable
+  `utm_content` value per article;
 - the new queries each page earns, especially question queries that can improve
   an existing section;
 - assisted conversions, because an explanatory article may introduce the
-  course several visits before sign-up.
+  learning-path idea several visits before someone registers their interest.
 
 The first article draft is in
 [`seo-article-01-technical-feasibility-for-product-managers.md`](./seo-article-01-technical-feasibility-for-product-managers.md).

@@ -277,12 +277,17 @@ follow the explanation, ask about dependencies and failure cases, and use the
 answer in a product decision. Engineering still owns production code and the
 implementation choice.
 
-## Practise making technical product decisions with evidence
+## Become a Technical Product Manager Without Becoming an Engineer
 
-We created Little Parrot's [technical Product Manager guide](/guides/technical-product-manager?utm_source=seo&utm_medium=organic&utm_campaign=tech-pm-26&utm_content=technical-feasibility)
-for Product Managers who want to understand how their product works,
-investigate questions and contribute to scope and trade-off decisions with
-clearer evidence.
+We're testing interest in an upcoming Little Parrot transformational learning
+path called [**Become a Technical Product Manager Without Becoming an
+Engineer**](/guides/technical-product-manager).
+
+It's for non-technical software Product Managers who want to understand how
+their product works, investigate questions and contribute to scope and
+trade-off decisions with clearer evidence. The learning path isn't available
+yet. If you'd like us to tell you when it opens, [visit the
+landing page and register your interest](/guides/technical-product-manager).
 
 If you want to try the checklist first, take one roadmap item currently
 described as “small” and write down the user states, systems, data,
@@ -302,4 +307,4 @@ engineer to help you answer?
 - Show author credentials, a published date and an updated date.
 - Add the build-versus-buy and technical-debt links only after those pages are
   live.
-- Validate the primary course route and email form before publishing.
+- Validate the learning-path landing page and interest form before publishing.
