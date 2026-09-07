@@ -1,0 +1,10 @@
+{
+  "extends": "@dungarees/core/tsconfig.base.json",
+  "compilerOptions": {
+    "paths": {
+      "@dungarees/build-tools/*": ["./*"]
+    },
+    "noEmit": true,
+    "module": "NodeNext"
+  }
+}

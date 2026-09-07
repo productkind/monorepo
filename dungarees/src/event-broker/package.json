@@ -1,0 +1,16 @@
+{
+  "name": "@dungarees/event-broker",
+  "engines": {
+    "node": ">=25.0.0"
+  },
+  "scripts": {
+    "type-check": "tsc --noEmit"
+  },
+  "type": "module",
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vitest": "^3.0.2"
+  },
+  "author": "info@productkind.com",
+  "license": "MIT"
+}

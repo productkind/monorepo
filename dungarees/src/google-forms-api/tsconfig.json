@@ -1,0 +1,10 @@
+{
+  "extends": "@dungarees/core/tsconfig.base.json",
+  "compilerOptions": {
+    "paths": {
+      "@dungarees/google-forms-api/*": ["./*"]
+    },
+    "noEmit": true,
+    "module": "NodeNext"
+  }
+}

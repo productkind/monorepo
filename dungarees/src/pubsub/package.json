@@ -1,0 +1,19 @@
+{
+  "name": "@dungarees/pubsub",
+  "engines": {
+    "node": ">=25.0.0"
+  },
+  "scripts": {
+    "type-check": "tsc --noEmit"
+  },
+  "type": "module",
+  "dependencies": {
+    "@google-cloud/pubsub": "^4.5.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vitest": "^3.0.2"
+  },
+  "author": "info@productkind.com",
+  "license": "MIT"
+}

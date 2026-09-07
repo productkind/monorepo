@@ -10,6 +10,7 @@
   "dependencies": {
     "@dungarees/core": "*",
     "@dungarees/zod": "*",
+    "rxjs": "^7.8.1",
     "zod": "^3.25.76"
   },
   "devDependencies": {

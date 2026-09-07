@@ -1,0 +1,10 @@
+{
+  "extends": "@dungarees/core/tsconfig.base.json",
+  "compilerOptions": {
+    "paths": {
+      "@dungarees/pubsub/*": ["./*"]
+    },
+    "noEmit": true,
+    "module": "NodeNext"
+  }
+}
