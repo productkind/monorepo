@@ -1,7 +1,7 @@
 course:
   id: aaab45b7-209a-4578-a515-3e55687f0c53
   note: ''
-  cover: /courses/vibe-coding-debugging-00/cover.gif
+  cover: /courses/vibe-coding-debugging-00/cover.webp
   title: "Fix Bugs with Confidence: Debugging Your Lovable App"
   learningOutcomes:
     - Identify and categorise different types of bugs in your app

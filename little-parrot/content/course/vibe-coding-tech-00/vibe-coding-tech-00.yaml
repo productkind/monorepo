@@ -1,6 +1,6 @@
 course:
   id: 4794366d-b807-4804-8fd5-64c3a5a03472
-  cover: /courses/vibe-coding-tech-00/cover.gif
+  cover: /courses/vibe-coding-tech-00/cover.webp
   title: Basics of Software for Vibe Coding
   learningOutcomes:
     - Explain what frontend, backend, and databases do using friendly language

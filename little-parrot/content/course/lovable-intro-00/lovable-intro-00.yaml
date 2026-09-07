@@ -1,7 +1,7 @@
 course:
   id: 5e86e580-264c-442c-8cc4-be5645f13e87
   note: ""
-  cover: /courses/lovable-intro-00/cover.gif
+  cover: /courses/lovable-intro-00/cover.webp
   title: 'Build Your First App with Lovable'
   learningOutcomes:
     - Build a working web app from a structured prompt, no coding required

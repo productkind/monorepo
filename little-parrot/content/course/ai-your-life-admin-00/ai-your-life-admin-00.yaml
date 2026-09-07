@@ -2,7 +2,7 @@ course:
   id: 55dfd25b-b9a5-4f04-860d-ef5c1d1e20b9
   note: |-
     *This course needs an iPhone with Apple Intelligence (iPhone 15 Pro or 15 Pro Max, any iPhone 16 or newer). Everything runs free, with no subscription and nothing to install.*
-  cover: /courses/ai-your-life-admin-00/cover.gif
+  cover: /courses/ai-your-life-admin-00/cover.webp
   title: "Hand Off the Mental Load: Use AI to Turn a Brain Dump into a List"
   learningOutcomes:
     - Build a voice shortcut that sorts everything on your mind into categorised checklists your partner can see and tick off
