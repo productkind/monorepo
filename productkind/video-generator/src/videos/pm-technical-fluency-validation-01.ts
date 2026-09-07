@@ -122,11 +122,11 @@ export default defineVideo({
       visual: gif({ src: "section-09-laptop.gif", place: "above-captions" }),
     },
     {
-      // giphy "underground roots tree": https://giphy.com/gifs/A9FVjwWVIZ3TNob82s
+      // giphy "infrastrucutre": https://giphy.com/gifs/WsRay6mTizlOVn3nts
       // The canopy above the line, the roots below it, which is the beat.
       text: "Nobody explains the infrastructure around them.",
       visual: gif({
-        src: "section-10-roots.gif",
+        src: "section-10-infrastructure.gif",
         playbackRate: 0.61,
         place: "above-captions",
       }),
