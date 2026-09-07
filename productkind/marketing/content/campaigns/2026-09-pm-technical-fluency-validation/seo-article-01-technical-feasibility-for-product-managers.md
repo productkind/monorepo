@@ -16,7 +16,7 @@ secondary_queries:
   - software estimation
 seo_title: "Technical Feasibility for Product Managers: A Checklist"
 meta_description: "Assess technical feasibility before you commit. Use this Product Manager checklist to uncover dependencies, risks, unknowns and the next step."
-conversion_url: /guides/technical-product-manager?utm_source=seo&utm_medium=organic&utm_campaign=tech-pm-26&utm_content=technical-feasibility
+conversion_url: /guides/technical-product-manager
 ---
 
 # Technical feasibility for Product Managers: the checklist I use before committing
@@ -158,6 +158,8 @@ making a commitment?
 | Failure | What does the customer see if our form accepts the address but the courier rejects it? | The flow needs a recoverable error state and information that helps the support team investigate. |
 | Release | Can we offer the change only before fulfilment starts? | A narrower first version may help customers without automating every exception. |
 
+![Technical feasibility map for changing a delivery address after checkout, showing order, payment, fulfilment, courier and notification dependencies.](./seo-article-01-assets/delivery-address-technical-feasibility-map.svg)
+
 A screen count tells me very little about scope. This conversation helps the whole team
 trace the proposed action through data, integrations, states and failure cases.
 
@@ -298,11 +300,8 @@ engineer to help you answer?
 
 - Add a downloadable or copyable version of the technical feasibility summary
   immediately after the visible template.
-- Create one original diagram of the delivery-address example: customer action
-  to order service, payment/risk, fulfilment partner, courier and notification.
-- Alt text: “Technical feasibility map for changing a delivery address after
-  checkout, showing order, payment, fulfilment, courier and notification
-  dependencies.”
+- Use the editable SVG diagram included with the delivery-address example. A PNG
+  export sits beside it as a preview and fallback.
 - Add `Article` and `BreadcrumbList` structured data.
 - Show author credentials, a published date and an updated date.
 - Add the build-versus-buy and technical-debt links only after those pages are
