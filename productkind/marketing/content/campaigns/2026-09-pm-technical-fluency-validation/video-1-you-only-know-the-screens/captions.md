@@ -19,13 +19,13 @@ TikTok video posts have no separate title field, so the caption's first line is 
 
 **Caption:**
 
-"So how does your product work?" You can demo every screen, and that's as far as it goes. Behind them sit other teams' services and a database. Which part of your product would you struggle to explain? Waitlist for women in product in the comments.
+"So how does your product work?" You can demo every screen, and that's as far as it goes. Behind them sit other teams' services, cloud storage, and a database. Which part of your product would you struggle to explain? Waitlist for women in product for the Technical Product Manager learning path in the comments.
 
 #womeninproduct #womenintech #womenproductmanagers
 
 **Pinned comment:**
 
-https://littleparrot.app/guides/technical-product-manager?utm_source=tiktok&utm_campaign=tech-pm-26&utm_content=you-only-know-the-screens
+https://littleparrot.app/guides/technical-product-manager?utm_source=tiktok&utm_medium=organic-social&utm_campaign=tech-pm-26&utm_content=you-only-know-the-screens
 
 ## Instagram Reels
 
