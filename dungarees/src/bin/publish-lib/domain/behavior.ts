@@ -1,5 +1,6 @@
 import type { PublishLibEvent } from './events.ts'
 import {
+  copyAssets,
   createOutDir,
   getBuildStartEvent,
   getPackageDirsWithVersion,
@@ -54,6 +55,12 @@ export const createPublishLibBehavior = ({
       output: `${outDir}/package.json`,
     })
     const createOutDir$ = createOutDir(fileSystem.mkdir(outDir), outDir)
+    const assets$ = copyAssets({
+      packageJsonContent$: fileSystem.readFile(originalPackageJsonPath, 'utf-8'),
+      srcDir,
+      outDir,
+      copyFile: fileOperations.copyFile,
+    })
     const transpile$ = transpileService
       .transpileDir({
         input: srcDir,
@@ -61,7 +68,7 @@ export const createPublishLibBehavior = ({
       })
       .pipe(transformPackageJson(packageJsonTransform, { srcDir, outDir, version }))
     return {
-      events$: concat(startEvent$, createOutDir$, transpile$),
+      events$: concat(startEvent$, createOutDir$, assets$, transpile$),
     }
   }
 

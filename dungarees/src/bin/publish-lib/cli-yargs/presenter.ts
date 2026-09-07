@@ -10,6 +10,7 @@ export const publishLibPresenter: Presenter<PublishLibEvent> = {
   'out-dir-created': ({ outDir }) => stdout(`Output directory created: ${outDir}`),
   'package-json-written': ({ path, version }) =>
     stdout(`Package.json written to ${path}/package.json with version: ${version}`),
+  'asset-copied': ({ path }) => stdout(`Asset copied to ${path}`),
   'publish-succeeded': () => stdout('Published successfully'),
   'publish-failed': ({ exitCode, stderror }) =>
     stderr(`Publish failed with exit code ${exitCode}, and error: ${stderror}`),

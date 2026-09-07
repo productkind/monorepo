@@ -26,7 +26,7 @@ const publishDungareesBinary = async (
   npmPublisherExec: (command: string, context?: Partial<ExecContext>) => Promise<CommandResult>,
 ) => {
   await authenticateNpmRegistry(npmPublisherExec)
-  if (process.env.E2E_USE_HOST_NODE_MODULES !== 'true') {
+  if (process.env['E2E_USE_HOST_NODE_MODULES'] !== 'true') {
     await npmPublisherExec('npm install', { workingDir: '/opt/app/' })
   }
   await npmPublisherExec('npm run publish:dungarees -- --registry http://npmregistry:4873', {
