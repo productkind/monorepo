@@ -79,3 +79,15 @@ test('Forwarding constructor paramters', () => {
   expect(fake.method()).toBe(1)
   expect(fake.method2()).toBe(2)
 })
+
+test('A throwing method stays callable with the arguments the original took', () => {
+  type WithArgs = { method: (name: string, count: number) => number }
+  const originalFake = (): WithArgs => ({ method: (_, count) => count })
+  const fakeCreator = addErrorMethodsToFake(originalFake)
+
+  expect(fakeCreator().method('a', 1)).toBe(1)
+
+  const error = new Error('boom')
+  const fake = fakeCreator({ method: { type: 'sync', error } })
+  expect(() => fake.method('a', 1)).toThrow(error)
+})
