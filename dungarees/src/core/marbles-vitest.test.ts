@@ -1,7 +1,7 @@
-import { coreMarbles, mtest } from './marbles-vitest.ts'
+import { configure, coreMarbles, mtest } from './marbles-vitest.ts'
 
 import { Subject } from 'rxjs'
-import { test } from 'vitest'
+import { expect, test } from 'vitest'
 
 test(
   'it should run a single marble',
@@ -155,4 +155,23 @@ mtest('it should assert a step with an error', ({ expect, coldStepAndError }) =>
     new Error('test error'),
     2,
   )
+})
+
+const { cases } = configure({})
+const casesThatRan: string[] = []
+
+cases(
+  'skip and only flags',
+  (_m, { name }) => {
+    casesThatRan.push(name)
+  },
+  [
+    { name: 'plain case' },
+    { name: 'case flagged skip', skip: true },
+    { name: 'case with skip false', skip: false },
+  ],
+)
+
+test('cases runs every case except the ones flagged skip', () => {
+  expect(casesThatRan).toEqual(['plain case', 'case with skip false'])
 })
