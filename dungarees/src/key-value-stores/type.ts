@@ -1,4 +1,4 @@
-import type { ZodSchema } from 'zod'
+import type { ZodType } from 'zod'
 
 export type KeyValueStoreCommon<STORE extends KeyValueStoreCommon_> = STORE
 
@@ -24,7 +24,7 @@ export type WriteableRawKeyValueStore<T = unknown> = {
   set: (key: string, value: T) => void
 }
 
-export type Schemas = Record<string, ZodSchema>
+export type Schemas = Record<string, ZodType<unknown>>
 
 export const isWritableRawKeyValueStore = (
   store: RawKeyValueStore,
