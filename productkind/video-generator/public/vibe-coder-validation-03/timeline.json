@@ -1,0 +1,809 @@
+{
+  "hash": "cb873cfa422a80ac",
+  "fps": 30,
+  "durationInFrames": 1421,
+  "words": [
+    {
+      "text": "Would",
+      "start": 0,
+      "end": 5
+    },
+    {
+      "text": "you",
+      "start": 6,
+      "end": 8
+    },
+    {
+      "text": "take",
+      "start": 9,
+      "end": 12
+    },
+    {
+      "text": "a",
+      "start": 14,
+      "end": 15
+    },
+    {
+      "text": "payment",
+      "start": 16,
+      "end": 24
+    },
+    {
+      "text": "today?",
+      "start": 27,
+      "end": 38
+    },
+    {
+      "text": "What",
+      "start": 45,
+      "end": 68
+    },
+    {
+      "text": "is",
+      "start": 69,
+      "end": 72
+    },
+    {
+      "text": "that",
+      "start": 73,
+      "end": 77
+    },
+    {
+      "text": "customer",
+      "start": 79,
+      "end": 92
+    },
+    {
+      "text": "trusting",
+      "start": 93,
+      "end": 104
+    },
+    {
+      "text": "you",
+      "start": 105,
+      "end": 108
+    },
+    {
+      "text": "with?",
+      "start": 110,
+      "end": 120
+    },
+    {
+      "text": "Can",
+      "start": 126,
+      "end": 144
+    },
+    {
+      "text": "one",
+      "start": 146,
+      "end": 149
+    },
+    {
+      "text": "customer",
+      "start": 151,
+      "end": 161
+    },
+    {
+      "text": "see",
+      "start": 162,
+      "end": 166
+    },
+    {
+      "text": "another",
+      "start": 167,
+      "end": 173
+    },
+    {
+      "text": "person’s",
+      "start": 175,
+      "end": 192
+    },
+    {
+      "text": "data?",
+      "start": 194,
+      "end": 202
+    },
+    {
+      "text": "Are",
+      "start": 207,
+      "end": 221
+    },
+    {
+      "text": "private",
+      "start": 222,
+      "end": 231
+    },
+    {
+      "text": "keys",
+      "start": 233,
+      "end": 243
+    },
+    {
+      "text": "visible",
+      "start": 244,
+      "end": 255
+    },
+    {
+      "text": "in",
+      "start": 256,
+      "end": 257
+    },
+    {
+      "text": "the",
+      "start": 258,
+      "end": 260
+    },
+    {
+      "text": "browser?",
+      "start": 261,
+      "end": 279
+    },
+    {
+      "text": "Does",
+      "start": 283,
+      "end": 298
+    },
+    {
+      "text": "checkout",
+      "start": 300,
+      "end": 312
+    },
+    {
+      "text": "charge",
+      "start": 314,
+      "end": 322
+    },
+    {
+      "text": "the",
+      "start": 323,
+      "end": 324
+    },
+    {
+      "text": "right",
+      "start": 326,
+      "end": 332
+    },
+    {
+      "text": "amount",
+      "start": 333,
+      "end": 344
+    },
+    {
+      "text": "and",
+      "start": 345,
+      "end": 348
+    },
+    {
+      "text": "send",
+      "start": 350,
+      "end": 356
+    },
+    {
+      "text": "the",
+      "start": 356,
+      "end": 358
+    },
+    {
+      "text": "right",
+      "start": 359,
+      "end": 363
+    },
+    {
+      "text": "confirmation?",
+      "start": 365,
+      "end": 390
+    },
+    {
+      "text": "Then",
+      "start": 398,
+      "end": 423
+    },
+    {
+      "text": "there",
+      "start": 424,
+      "end": 428
+    },
+    {
+      "text": "are",
+      "start": 428,
+      "end": 430
+    },
+    {
+      "text": "backups,",
+      "start": 433,
+      "end": 459
+    },
+    {
+      "text": "cookie",
+      "start": 460,
+      "end": 466
+    },
+    {
+      "text": "consent,",
+      "start": 468,
+      "end": 490
+    },
+    {
+      "text": "terms",
+      "start": 491,
+      "end": 497
+    },
+    {
+      "text": "and",
+      "start": 498,
+      "end": 502
+    },
+    {
+      "text": "a",
+      "start": 503,
+      "end": 504
+    },
+    {
+      "text": "privacy",
+      "start": 506,
+      "end": 516
+    },
+    {
+      "text": "policy.",
+      "start": 519,
+      "end": 534
+    },
+    {
+      "text": "You",
+      "start": 542,
+      "end": 560
+    },
+    {
+      "text": "need",
+      "start": 561,
+      "end": 564
+    },
+    {
+      "text": "practical",
+      "start": 566,
+      "end": 579
+    },
+    {
+      "text": "checks",
+      "start": 581,
+      "end": 591
+    },
+    {
+      "text": "and",
+      "start": 592,
+      "end": 596
+    },
+    {
+      "text": "clear",
+      "start": 597,
+      "end": 603
+    },
+    {
+      "text": "signs",
+      "start": 605,
+      "end": 615
+    },
+    {
+      "text": "that",
+      "start": 616,
+      "end": 620
+    },
+    {
+      "text": "tell",
+      "start": 621,
+      "end": 627
+    },
+    {
+      "text": "you",
+      "start": 627,
+      "end": 629
+    },
+    {
+      "text": "when",
+      "start": 630,
+      "end": 634
+    },
+    {
+      "text": "the",
+      "start": 635,
+      "end": 639
+    },
+    {
+      "text": "app",
+      "start": 641,
+      "end": 646
+    },
+    {
+      "text": "needs",
+      "start": 647,
+      "end": 651
+    },
+    {
+      "text": "a",
+      "start": 652,
+      "end": 653
+    },
+    {
+      "text": "security",
+      "start": 655,
+      "end": 672
+    },
+    {
+      "text": "or",
+      "start": 674,
+      "end": 677
+    },
+    {
+      "text": "legal",
+      "start": 679,
+      "end": 687
+    },
+    {
+      "text": "professional.",
+      "start": 688,
+      "end": 708
+    },
+    {
+      "text": "If",
+      "start": 723,
+      "end": 747
+    },
+    {
+      "text": "you",
+      "start": 747,
+      "end": 749
+    },
+    {
+      "text": "want",
+      "start": 750,
+      "end": 754
+    },
+    {
+      "text": "to",
+      "start": 755,
+      "end": 756
+    },
+    {
+      "text": "handle",
+      "start": 758,
+      "end": 766
+    },
+    {
+      "text": "customer",
+      "start": 767,
+      "end": 778
+    },
+    {
+      "text": "data",
+      "start": 780,
+      "end": 790
+    },
+    {
+      "text": "and",
+      "start": 791,
+      "end": 795
+    },
+    {
+      "text": "money",
+      "start": 796,
+      "end": 802
+    },
+    {
+      "text": "responsibly,",
+      "start": 804,
+      "end": 831
+    },
+    {
+      "text": "that’s",
+      "start": 834,
+      "end": 848
+    },
+    {
+      "text": "what",
+      "start": 849,
+      "end": 852
+    },
+    {
+      "text": "we’re",
+      "start": 853,
+      "end": 857
+    },
+    {
+      "text": "building",
+      "start": 858,
+      "end": 867
+    },
+    {
+      "text": "a",
+      "start": 868,
+      "end": 869
+    },
+    {
+      "text": "learning",
+      "start": 870,
+      "end": 879
+    },
+    {
+      "text": "path",
+      "start": 881,
+      "end": 888
+    },
+    {
+      "text": "for.",
+      "start": 891,
+      "end": 900
+    },
+    {
+      "text": "By",
+      "start": 911,
+      "end": 927
+    },
+    {
+      "text": "the",
+      "start": 928,
+      "end": 932
+    },
+    {
+      "text": "end,",
+      "start": 934,
+      "end": 942
+    },
+    {
+      "text": "you’ll",
+      "start": 943,
+      "end": 946
+    },
+    {
+      "text": "test",
+      "start": 948,
+      "end": 958
+    },
+    {
+      "text": "access,",
+      "start": 960,
+      "end": 986
+    },
+    {
+      "text": "permissions,",
+      "start": 987,
+      "end": 1004
+    },
+    {
+      "text": "payments",
+      "start": 1005,
+      "end": 1011
+    },
+    {
+      "text": "and",
+      "start": 1011,
+      "end": 1013
+    },
+    {
+      "text": "backups,",
+      "start": 1016,
+      "end": 1035
+    },
+    {
+      "text": "and",
+      "start": 1038,
+      "end": 1047
+    },
+    {
+      "text": "record",
+      "start": 1049,
+      "end": 1059
+    },
+    {
+      "text": "the",
+      "start": 1059,
+      "end": 1061
+    },
+    {
+      "text": "risks",
+      "start": 1063,
+      "end": 1073
+    },
+    {
+      "text": "that",
+      "start": 1074,
+      "end": 1078
+    },
+    {
+      "text": "still",
+      "start": 1079,
+      "end": 1085
+    },
+    {
+      "text": "need",
+      "start": 1087,
+      "end": 1092
+    },
+    {
+      "text": "specialist",
+      "start": 1094,
+      "end": 1112
+    },
+    {
+      "text": "help.",
+      "start": 1114,
+      "end": 1132
+    },
+    {
+      "text": "The",
+      "start": 1145,
+      "end": 1152
+    },
+    {
+      "text": "waitlist",
+      "start": 1154,
+      "end": 1167
+    },
+    {
+      "text": "link",
+      "start": 1168,
+      "end": 1174
+    },
+    {
+      "text": "is",
+      "start": 1175,
+      "end": 1176
+    },
+    {
+      "text": "in",
+      "start": 1178,
+      "end": 1181
+    },
+    {
+      "text": "the",
+      "start": 1182,
+      "end": 1184
+    },
+    {
+      "text": "comments.",
+      "start": 1186,
+      "end": 1205
+    },
+    {
+      "text": "Sign",
+      "start": 1209,
+      "end": 1224
+    },
+    {
+      "text": "up",
+      "start": 1227,
+      "end": 1232
+    },
+    {
+      "text": "and",
+      "start": 1232,
+      "end": 1234
+    },
+    {
+      "text": "we’ll",
+      "start": 1235,
+      "end": 1239
+    },
+    {
+      "text": "let",
+      "start": 1240,
+      "end": 1244
+    },
+    {
+      "text": "you",
+      "start": 1245,
+      "end": 1248
+    },
+    {
+      "text": "know",
+      "start": 1249,
+      "end": 1253
+    },
+    {
+      "text": "when",
+      "start": 1254,
+      "end": 1256
+    },
+    {
+      "text": "the",
+      "start": 1256,
+      "end": 1258
+    },
+    {
+      "text": "learning",
+      "start": 1259,
+      "end": 1268
+    },
+    {
+      "text": "path",
+      "start": 1269,
+      "end": 1275
+    },
+    {
+      "text": "opens.",
+      "start": 1278,
+      "end": 1306
+    },
+    {
+      "text": "Which",
+      "start": 1333,
+      "end": 1337
+    },
+    {
+      "text": "safety",
+      "start": 1339,
+      "end": 1349
+    },
+    {
+      "text": "check",
+      "start": 1350,
+      "end": 1356
+    },
+    {
+      "text": "are",
+      "start": 1358,
+      "end": 1361
+    },
+    {
+      "text": "you",
+      "start": 1362,
+      "end": 1364
+    },
+    {
+      "text": "least",
+      "start": 1365,
+      "end": 1373
+    },
+    {
+      "text": "sure",
+      "start": 1375,
+      "end": 1380
+    },
+    {
+      "text": "about?",
+      "start": 1383,
+      "end": 1397
+    }
+  ],
+  "takes": [
+    {
+      "audio": "vibe-coder-validation-03/audio/7a079baf79a1f649.mp3",
+      "fromFrame": 0,
+      "durationInFrames": 1397
+    }
+  ],
+  "sections": [
+    {
+      "index": 0,
+      "fromFrame": 0,
+      "durationInFrames": 45,
+      "wordFrom": 0,
+      "wordTo": 6
+    },
+    {
+      "index": 1,
+      "fromFrame": 45,
+      "durationInFrames": 81,
+      "wordFrom": 6,
+      "wordTo": 13
+    },
+    {
+      "index": 2,
+      "fromFrame": 126,
+      "durationInFrames": 81,
+      "wordFrom": 13,
+      "wordTo": 20
+    },
+    {
+      "index": 3,
+      "fromFrame": 207,
+      "durationInFrames": 76,
+      "wordFrom": 20,
+      "wordTo": 27
+    },
+    {
+      "index": 4,
+      "fromFrame": 283,
+      "durationInFrames": 62,
+      "wordFrom": 27,
+      "wordTo": 33
+    },
+    {
+      "index": 5,
+      "fromFrame": 345,
+      "durationInFrames": 53,
+      "wordFrom": 33,
+      "wordTo": 38
+    },
+    {
+      "index": 6,
+      "fromFrame": 398,
+      "durationInFrames": 93,
+      "wordFrom": 38,
+      "wordTo": 44
+    },
+    {
+      "index": 7,
+      "fromFrame": 491,
+      "durationInFrames": 51,
+      "wordFrom": 44,
+      "wordTo": 49
+    },
+    {
+      "index": 8,
+      "fromFrame": 542,
+      "durationInFrames": 50,
+      "wordFrom": 49,
+      "wordTo": 53
+    },
+    {
+      "index": 9,
+      "fromFrame": 592,
+      "durationInFrames": 38,
+      "wordFrom": 53,
+      "wordTo": 59
+    },
+    {
+      "index": 10,
+      "fromFrame": 630,
+      "durationInFrames": 93,
+      "wordFrom": 59,
+      "wordTo": 68
+    },
+    {
+      "index": 11,
+      "fromFrame": 723,
+      "durationInFrames": 111,
+      "wordFrom": 68,
+      "wordTo": 78
+    },
+    {
+      "index": 12,
+      "fromFrame": 834,
+      "durationInFrames": 77,
+      "wordFrom": 78,
+      "wordTo": 86
+    },
+    {
+      "index": 13,
+      "fromFrame": 911,
+      "durationInFrames": 76,
+      "wordFrom": 86,
+      "wordTo": 92
+    },
+    {
+      "index": 14,
+      "fromFrame": 987,
+      "durationInFrames": 51,
+      "wordFrom": 92,
+      "wordTo": 96
+    },
+    {
+      "index": 15,
+      "fromFrame": 1038,
+      "durationInFrames": 107,
+      "wordFrom": 96,
+      "wordTo": 105
+    },
+    {
+      "index": 16,
+      "fromFrame": 1145,
+      "durationInFrames": 64,
+      "wordFrom": 105,
+      "wordTo": 112
+    },
+    {
+      "index": 17,
+      "fromFrame": 1209,
+      "durationInFrames": 124,
+      "wordFrom": 112,
+      "wordTo": 124
+    },
+    {
+      "index": 18,
+      "fromFrame": 1333,
+      "durationInFrames": 88,
+      "wordFrom": 124,
+      "wordTo": 132
+    }
+  ]
+}
