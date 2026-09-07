@@ -1,0 +1,746 @@
+{
+  "hash": "e186ecad453260cb",
+  "fps": 30,
+  "durationInFrames": 1422,
+  "words": [
+    {
+      "text": "You’ve",
+      "start": 0,
+      "end": 5
+    },
+    {
+      "text": "nodded",
+      "start": 7,
+      "end": 15
+    },
+    {
+      "text": "along",
+      "start": 16,
+      "end": 24
+    },
+    {
+      "text": "in",
+      "start": 25,
+      "end": 27
+    },
+    {
+      "text": "a",
+      "start": 28,
+      "end": 29
+    },
+    {
+      "text": "stand-up,",
+      "start": 31,
+      "end": 46
+    },
+    {
+      "text": "hoping",
+      "start": 48,
+      "end": 58
+    },
+    {
+      "text": "nobody",
+      "start": 60,
+      "end": 70
+    },
+    {
+      "text": "asks",
+      "start": 72,
+      "end": 82
+    },
+    {
+      "text": "you",
+      "start": 83,
+      "end": 84
+    },
+    {
+      "text": "a",
+      "start": 87,
+      "end": 89
+    },
+    {
+      "text": "follow-up",
+      "start": 90,
+      "end": 99
+    },
+    {
+      "text": "question.",
+      "start": 101,
+      "end": 120
+    },
+    {
+      "text": "Someone",
+      "start": 141,
+      "end": 156
+    },
+    {
+      "text": "says",
+      "start": 158,
+      "end": 166
+    },
+    {
+      "text": "the",
+      "start": 167,
+      "end": 168
+    },
+    {
+      "text": "migration",
+      "start": 170,
+      "end": 185
+    },
+    {
+      "text": "is",
+      "start": 187,
+      "end": 190
+    },
+    {
+      "text": "blocked",
+      "start": 191,
+      "end": 200
+    },
+    {
+      "text": "by",
+      "start": 201,
+      "end": 204
+    },
+    {
+      "text": "the",
+      "start": 205,
+      "end": 207
+    },
+    {
+      "text": "platform",
+      "start": 208,
+      "end": 221
+    },
+    {
+      "text": "team.",
+      "start": 224,
+      "end": 238
+    },
+    {
+      "text": "You",
+      "start": 243,
+      "end": 260
+    },
+    {
+      "text": "don’t",
+      "start": 260,
+      "end": 264
+    },
+    {
+      "text": "know",
+      "start": 265,
+      "end": 269
+    },
+    {
+      "text": "what",
+      "start": 270,
+      "end": 274
+    },
+    {
+      "text": "that",
+      "start": 275,
+      "end": 279
+    },
+    {
+      "text": "means",
+      "start": 280,
+      "end": 288
+    },
+    {
+      "text": "for",
+      "start": 290,
+      "end": 293
+    },
+    {
+      "text": "your",
+      "start": 294,
+      "end": 296
+    },
+    {
+      "text": "release.",
+      "start": 298,
+      "end": 315
+    },
+    {
+      "text": "So",
+      "start": 324,
+      "end": 339
+    },
+    {
+      "text": "you",
+      "start": 339,
+      "end": 341
+    },
+    {
+      "text": "don’t",
+      "start": 342,
+      "end": 348
+    },
+    {
+      "text": "ask.",
+      "start": 352,
+      "end": 368
+    },
+    {
+      "text": "Three",
+      "start": 374,
+      "end": 404
+    },
+    {
+      "text": "weeks",
+      "start": 405,
+      "end": 411
+    },
+    {
+      "text": "later,",
+      "start": 413,
+      "end": 431
+    },
+    {
+      "text": "that",
+      "start": 433,
+      "end": 440
+    },
+    {
+      "text": "blocker",
+      "start": 441,
+      "end": 452
+    },
+    {
+      "text": "is",
+      "start": 453,
+      "end": 456
+    },
+    {
+      "text": "why",
+      "start": 458,
+      "end": 461
+    },
+    {
+      "text": "your",
+      "start": 462,
+      "end": 466
+    },
+    {
+      "text": "release",
+      "start": 467,
+      "end": 476
+    },
+    {
+      "text": "date",
+      "start": 477,
+      "end": 483
+    },
+    {
+      "text": "moves.",
+      "start": 485,
+      "end": 498
+    },
+    {
+      "text": "Nobody",
+      "start": 504,
+      "end": 533
+    },
+    {
+      "text": "taught",
+      "start": 534,
+      "end": 540
+    },
+    {
+      "text": "you",
+      "start": 541,
+      "end": 543
+    },
+    {
+      "text": "those",
+      "start": 544,
+      "end": 552
+    },
+    {
+      "text": "words.",
+      "start": 555,
+      "end": 569
+    },
+    {
+      "text": "Looking",
+      "start": 573,
+      "end": 600
+    },
+    {
+      "text": "up",
+      "start": 601,
+      "end": 603
+    },
+    {
+      "text": "a",
+      "start": 604,
+      "end": 605
+    },
+    {
+      "text": "definition",
+      "start": 607,
+      "end": 622
+    },
+    {
+      "text": "afterwards",
+      "start": 624,
+      "end": 639
+    },
+    {
+      "text": "doesn’t",
+      "start": 640,
+      "end": 648
+    },
+    {
+      "text": "tell",
+      "start": 650,
+      "end": 656
+    },
+    {
+      "text": "you",
+      "start": 657,
+      "end": 660
+    },
+    {
+      "text": "what",
+      "start": 661,
+      "end": 663
+    },
+    {
+      "text": "it",
+      "start": 664,
+      "end": 668
+    },
+    {
+      "text": "means",
+      "start": 669,
+      "end": 677
+    },
+    {
+      "text": "for",
+      "start": 678,
+      "end": 680
+    },
+    {
+      "text": "your",
+      "start": 681,
+      "end": 684
+    },
+    {
+      "text": "release.",
+      "start": 687,
+      "end": 702
+    },
+    {
+      "text": "If",
+      "start": 713,
+      "end": 732
+    },
+    {
+      "text": "you’d",
+      "start": 733,
+      "end": 737
+    },
+    {
+      "text": "rather",
+      "start": 739,
+      "end": 747
+    },
+    {
+      "text": "be",
+      "start": 748,
+      "end": 749
+    },
+    {
+      "text": "the",
+      "start": 750,
+      "end": 754
+    },
+    {
+      "text": "one",
+      "start": 755,
+      "end": 759
+    },
+    {
+      "text": "who",
+      "start": 760,
+      "end": 764
+    },
+    {
+      "text": "asks",
+      "start": 766,
+      "end": 776
+    },
+    {
+      "text": "these",
+      "start": 777,
+      "end": 783
+    },
+    {
+      "text": "questions,",
+      "start": 785,
+      "end": 807
+    },
+    {
+      "text": "we’re",
+      "start": 810,
+      "end": 819
+    },
+    {
+      "text": "building",
+      "start": 820,
+      "end": 828
+    },
+    {
+      "text": "a",
+      "start": 830,
+      "end": 831
+    },
+    {
+      "text": "learning",
+      "start": 832,
+      "end": 840
+    },
+    {
+      "text": "path",
+      "start": 843,
+      "end": 852
+    },
+    {
+      "text": "for",
+      "start": 853,
+      "end": 855
+    },
+    {
+      "text": "exactly",
+      "start": 857,
+      "end": 872
+    },
+    {
+      "text": "this.",
+      "start": 874,
+      "end": 884
+    },
+    {
+      "text": "By",
+      "start": 893,
+      "end": 910
+    },
+    {
+      "text": "the",
+      "start": 911,
+      "end": 915
+    },
+    {
+      "text": "end",
+      "start": 917,
+      "end": 925
+    },
+    {
+      "text": "you’ll",
+      "start": 925,
+      "end": 929
+    },
+    {
+      "text": "say",
+      "start": 931,
+      "end": 934
+    },
+    {
+      "text": "a",
+      "start": 935,
+      "end": 937
+    },
+    {
+      "text": "change",
+      "start": 938,
+      "end": 949
+    },
+    {
+      "text": "back",
+      "start": 950,
+      "end": 956
+    },
+    {
+      "text": "in",
+      "start": 957,
+      "end": 958
+    },
+    {
+      "text": "your",
+      "start": 959,
+      "end": 963
+    },
+    {
+      "text": "own",
+      "start": 965,
+      "end": 970
+    },
+    {
+      "text": "words,",
+      "start": 972,
+      "end": 985
+    },
+    {
+      "text": "ask",
+      "start": 989,
+      "end": 1004
+    },
+    {
+      "text": "what",
+      "start": 1004,
+      "end": 1006
+    },
+    {
+      "text": "it",
+      "start": 1008,
+      "end": 1011
+    },
+    {
+      "text": "does",
+      "start": 1012,
+      "end": 1016
+    },
+    {
+      "text": "to",
+      "start": 1017,
+      "end": 1018
+    },
+    {
+      "text": "your",
+      "start": 1019,
+      "end": 1023
+    },
+    {
+      "text": "product,",
+      "start": 1025,
+      "end": 1047
+    },
+    {
+      "text": "and",
+      "start": 1049,
+      "end": 1054
+    },
+    {
+      "text": "understand",
+      "start": 1055,
+      "end": 1069
+    },
+    {
+      "text": "the",
+      "start": 1069,
+      "end": 1071
+    },
+    {
+      "text": "answer",
+      "start": 1073,
+      "end": 1083
+    },
+    {
+      "text": "while",
+      "start": 1084,
+      "end": 1088
+    },
+    {
+      "text": "you’re",
+      "start": 1088,
+      "end": 1093
+    },
+    {
+      "text": "in",
+      "start": 1093,
+      "end": 1095
+    },
+    {
+      "text": "the",
+      "start": 1096,
+      "end": 1097
+    },
+    {
+      "text": "meeting.",
+      "start": 1099,
+      "end": 1115
+    },
+    {
+      "text": "The",
+      "start": 1123,
+      "end": 1141
+    },
+    {
+      "text": "waitlist",
+      "start": 1142,
+      "end": 1155
+    },
+    {
+      "text": "link",
+      "start": 1156,
+      "end": 1162
+    },
+    {
+      "text": "is",
+      "start": 1163,
+      "end": 1165
+    },
+    {
+      "text": "in",
+      "start": 1165,
+      "end": 1167
+    },
+    {
+      "text": "the",
+      "start": 1168,
+      "end": 1172
+    },
+    {
+      "text": "comments.",
+      "start": 1174,
+      "end": 1191
+    },
+    {
+      "text": "Sign",
+      "start": 1195,
+      "end": 1210
+    },
+    {
+      "text": "up",
+      "start": 1213,
+      "end": 1217
+    },
+    {
+      "text": "and",
+      "start": 1219,
+      "end": 1222
+    },
+    {
+      "text": "we’ll",
+      "start": 1223,
+      "end": 1225
+    },
+    {
+      "text": "let",
+      "start": 1226,
+      "end": 1229
+    },
+    {
+      "text": "you",
+      "start": 1230,
+      "end": 1232
+    },
+    {
+      "text": "know",
+      "start": 1233,
+      "end": 1239
+    },
+    {
+      "text": "when",
+      "start": 1239,
+      "end": 1241
+    },
+    {
+      "text": "the",
+      "start": 1242,
+      "end": 1244
+    },
+    {
+      "text": "learning",
+      "start": 1245,
+      "end": 1256
+    },
+    {
+      "text": "path",
+      "start": 1257,
+      "end": 1263
+    },
+    {
+      "text": "opens.",
+      "start": 1266,
+      "end": 1285
+    },
+    {
+      "text": "What",
+      "start": 1337,
+      "end": 1340
+    },
+    {
+      "text": "technical",
+      "start": 1341,
+      "end": 1352
+    },
+    {
+      "text": "word",
+      "start": 1354,
+      "end": 1362
+    },
+    {
+      "text": "did",
+      "start": 1363,
+      "end": 1366
+    },
+    {
+      "text": "you",
+      "start": 1367,
+      "end": 1369
+    },
+    {
+      "text": "look",
+      "start": 1370,
+      "end": 1374
+    },
+    {
+      "text": "up",
+      "start": 1376,
+      "end": 1381
+    },
+    {
+      "text": "last?",
+      "start": 1384,
+      "end": 1398
+    }
+  ],
+  "takes": [
+    {
+      "audio": "pm-technical-fluency-validation-00-ambient/audio/3c2d97f2eb8f6528.mp3",
+      "fromFrame": 0,
+      "durationInFrames": 1398
+    }
+  ],
+  "sections": [
+    {
+      "index": 0,
+      "fromFrame": 0,
+      "durationInFrames": 324,
+      "wordFrom": 0,
+      "wordTo": 32
+    },
+    {
+      "index": 1,
+      "fromFrame": 324,
+      "durationInFrames": 180,
+      "wordFrom": 32,
+      "wordTo": 47
+    },
+    {
+      "index": 2,
+      "fromFrame": 504,
+      "durationInFrames": 209,
+      "wordFrom": 47,
+      "wordTo": 66
+    },
+    {
+      "index": 3,
+      "fromFrame": 713,
+      "durationInFrames": 410,
+      "wordFrom": 66,
+      "wordTo": 112
+    },
+    {
+      "index": 4,
+      "fromFrame": 1123,
+      "durationInFrames": 299,
+      "wordFrom": 112,
+      "wordTo": 139
+    }
+  ]
+}
