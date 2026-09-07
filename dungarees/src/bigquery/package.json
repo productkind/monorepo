@@ -1,0 +1,20 @@
+{
+  "name": "@dungarees/bigquery",
+  "engines": {
+    "node": ">=25.0.0"
+  },
+  "scripts": {
+    "type-check": "tsc --noEmit"
+  },
+  "type": "module",
+  "dependencies": {
+    "@dungarees/core": "*",
+    "@google-cloud/bigquery": "^8.1.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vitest": "^3.0.2"
+  },
+  "author": "info@productkind.com",
+  "license": "MIT"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@dungarees/build-tools",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "type-check": "tsc --noEmit"
+  },
+  "type": "module",
+  "dependencies": {
+    "vite": "^5.0.12"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vitest": "^3.0.2"
+  },
+  "author": "info@productkind.com",
+  "license": "MIT"
+}

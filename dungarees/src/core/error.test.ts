@@ -1,4 +1,10 @@
-import { createCausedError, getErrorMessage, getThrownError } from './error.ts'
+import {
+  createCausedError,
+  getErrorMessage,
+  getThrownError,
+  isAbortError,
+  isNetworkError,
+} from './error.ts'
 
 import { expect, test } from 'vitest'
 
@@ -60,4 +66,41 @@ test('getThrownError fails when the thrown value is not an Error', () => {
       throw notAnError
     }),
   ).toThrow('Expected an Error to be thrown, got: a bare string')
+})
+
+test('isAbortError recognises the DOMException a real abort produces', () => {
+  const controller = new AbortController()
+  controller.abort()
+
+  expect(isAbortError(controller.signal.reason)).toBe(true)
+})
+
+test('isAbortError recognises an error that only names AbortError in its message', () => {
+  expect(isAbortError(new Error('Fetch failed: AbortError'))).toBe(true)
+})
+
+test('isAbortError rejects an ordinary error', () => {
+  expect(isAbortError(new Error('it broke'))).toBe(false)
+})
+
+test('isAbortError rejects values that carry no name or message at all', () => {
+  expect(isAbortError(null)).toBe(false)
+  expect(isAbortError(undefined)).toBe(false)
+  expect(isAbortError('AbortError')).toBe(false)
+})
+
+test('isNetworkError recognises the TypeError a failed fetch throws', () => {
+  expect(isNetworkError(new TypeError('Load failed'))).toBe(true)
+})
+
+test('isNetworkError rejects a TypeError thrown for any other reason', () => {
+  expect(isNetworkError(new TypeError('x is not a function'))).toBe(false)
+})
+
+test('isNetworkError rejects a matching message on an error that is not a TypeError', () => {
+  expect(isNetworkError(new Error('Load failed'))).toBe(false)
+})
+
+test('isNetworkError rejects a nullish value', () => {
+  expect(isNetworkError(null)).toBe(false)
 })

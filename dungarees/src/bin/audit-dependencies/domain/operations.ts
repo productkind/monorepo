@@ -117,7 +117,10 @@ export const auditPackages = ({
     const imported = [...(importsByDir.get(dir) ?? [])].filter((used) => used !== name)
     const missing = imported.filter((used) => !declared.includes(used))
     const unused = declared.filter(
-      (dependency) => !imported.includes(dependency) && !usedWithoutImport.includes(dependency),
+      (dependency) =>
+        !imported.includes(dependency) &&
+        !usedWithoutImport.includes(dependency) &&
+        !isTypesPackage(dependency),
     )
     return missing.length === 0 && unused.length === 0 ? [] : [{ name, missing, unused }]
   })
@@ -135,6 +138,10 @@ export const readFiles = (
           ),
         ),
   )
+
+// A types package is never imported by name: it augments the module it provides types for, so tsc
+// picks it up from the import of that module instead.
+const isTypesPackage = (dependency: string): boolean => dependency.startsWith('@types/')
 
 // Declaring these without importing them is legitimate — tsc and vitest run as commands, and
 // react arrives through the react-jsx runtime.

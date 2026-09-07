@@ -143,6 +143,26 @@ test('a package used without an import is still reported when imported undeclare
   ).toEqual([{ name: '@org/a', missing: ['typescript'], unused: [] }])
 })
 
+test('a types package may be declared and never imported', () => {
+  expect(
+    auditPackages({
+      manifests: [{ dir: '/src/a', name: '@org/a', declared: ['@types/pg'] }],
+      sources: [{ path: '/src/a/index.ts', content: "import pg from 'pg'" }],
+      usedWithoutImport: [],
+    }),
+  ).toEqual([{ name: '@org/a', missing: ['pg'], unused: [] }])
+})
+
+test('a types package is reported when nothing it could type is there either', () => {
+  expect(
+    auditPackages({
+      manifests: [{ dir: '/src/a', name: '@org/a', declared: ['@types/pg'] }],
+      sources: [{ path: '/src/a/index.ts', content: 'export const x = 1' }],
+      usedWithoutImport: [],
+    }),
+  ).toEqual([])
+})
+
 test('getAuditStartEvent announces the directory being audited', async () => {
   expect(await collectValuesFrom(getAuditStartEvent({ dir: '/repo' }))).toEqual([
     { type: 'audit-start', payload: { dir: '/repo' } },
