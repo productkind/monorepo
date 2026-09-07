@@ -148,8 +148,6 @@ export const createApplication = <
   return app
 }
 
-// The identity is optional only when the config did not declare one, so an app that declares one
-// cannot be run without it.
 type RunArgs<CONFIG extends Partial<ApplicationTypeConfig>> = undefined extends CONFIG['identity']
   ? [identity?: CONFIG['identity'], overrides?: RunOverrides<CONFIG>]
   : [identity: CONFIG['identity'], overrides?: RunOverrides<CONFIG>]
@@ -240,9 +238,6 @@ type ImportState<CONFIG extends Partial<ApplicationTypeConfig>> = (
   newState: CONFIG['exportState'],
 ) => void
 
-// Only the record-shaped keys need the assignability check: an absent key arrives as `undefined`,
-// which is already the default for the scalar ones. Checking them anyway would leave a conditional
-// TypeScript cannot reduce while CONFIG is generic, which is what forced `identity` to be `any`.
 type RecordShapedKey = 'services' | 'behaviors' | 'delivery'
 
 type ApplicationTypeConfigWithDefaults<CONFIG extends Partial<ApplicationTypeConfig>> = {
