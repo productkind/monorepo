@@ -12,6 +12,10 @@ export type Runner = {
   stop: () => Promise<void>
 }
 
+// CONTEXT is invariant: `startContext` returns it while `stopContext` and `onFailure` accept it,
+// so neither `unknown` nor `never` is assignable in both directions and only a top type serves as
+// the bare `Interactor` used as a constraint. Splitting the producing and consuming halves into
+// separate types is what it would take to remove this.
 export type Interactor<CONTEXT = any> = {
   startContext: () => Promise<{ context: CONTEXT; reportEntry$: Observable<ReportEntry> }>
   stopContext: (context: CONTEXT) => Promise<void>
@@ -52,14 +56,14 @@ export type ReportEntry =
 
 export type DefaultConfig = { hook?: 'before-all' | 'before' }
 
-export type RunnerConfig<RUNNER extends Runner = Runner, ARGS extends any[] = any[]> = {
+export type RunnerConfig<RUNNER extends Runner = Runner, ARGS extends never[] = never[]> = {
   type: 'runner'
   creator: (...args: ARGS) => RUNNER | Promise<RUNNER>
 } & DefaultConfig
 
 export type InteractorConfig<
   INTERACTOR extends Interactor = Interactor,
-  ARGS extends any[] = any[],
+  ARGS extends never[] = never[],
 > = {
   type: 'interactor'
   creator: (...args: ARGS) => INTERACTOR | Promise<INTERACTOR>
