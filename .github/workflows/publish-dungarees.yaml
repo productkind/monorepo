@@ -33,10 +33,12 @@ jobs:
       - name: Type check
         run: npm run type-check
 
+      - name: Lint
+        run: npm run lint
+
       - name: Test
         run: npx vitest run
 
-      # Runs through the installed binary, so it also proves the published CLI works.
       - name: Audit dependencies
         run: npm run audit-dependencies
 
