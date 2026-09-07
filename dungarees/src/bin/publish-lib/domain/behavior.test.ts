@@ -259,3 +259,56 @@ test('a package marked private is not published', async () => {
 
   expect(executedCommands.map(({ options }) => options?.cwd)).toEqual(['/multi-lib/dist/lib-1'])
 })
+
+test('build copies declared assets and exports them', async () => {
+  const tsconfig = JSON.stringify({ compilerOptions: { strict: true } }, null, 2)
+  const fileSystem = createFakeFileSystem({
+    '/src/index.ts': 'export const numberValue: number = 42;',
+    '/src/tsconfig.base.json': tsconfig,
+    '/src/package.json': JSON.stringify({
+      name: 'my-lib',
+      version: '1.0.0',
+      dungarees: { assets: ['tsconfig.base.json'] },
+    }),
+  })
+  const { subProcess } = createFakeSubProcessService([])
+  const cliCommands = createCliCommands(subProcess)
+  const service = createPublishLibBehavior({ fileSystem, cliCommands })
+
+  await collectValuesFrom(
+    service.build({ srcDir: '/src', outDir: '/dist', version: undefined }).events$,
+  )
+
+  const publishedFiles = fileSystem.toJSON()
+  expect(publishedFiles['/dist/tsconfig.base.json']).toBe(tsconfig)
+  expect(JSON.parse(publishedFiles['/dist/package.json'] ?? '')).toEqual({
+    name: 'my-lib',
+    version: '1.0.0',
+    exports: {
+      './index.ts': { import: './index.js', types: './index.d.ts' },
+      './tsconfig.base.json': './tsconfig.base.json',
+    },
+  })
+})
+
+test('build copies an asset that sits in a subdirectory', async () => {
+  const tsconfig = JSON.stringify({ compilerOptions: { strict: true } }, null, 2)
+  const fileSystem = createFakeFileSystem({
+    '/src/index.ts': 'export const numberValue: number = 42;',
+    '/src/config/tsconfig.base.json': tsconfig,
+    '/src/package.json': JSON.stringify({
+      name: 'my-lib',
+      version: '1.0.0',
+      dungarees: { assets: ['config/tsconfig.base.json'] },
+    }),
+  })
+  const { subProcess } = createFakeSubProcessService([])
+  const cliCommands = createCliCommands(subProcess)
+  const service = createPublishLibBehavior({ fileSystem, cliCommands })
+
+  await collectValuesFrom(
+    service.build({ srcDir: '/src', outDir: '/dist', version: undefined }).events$,
+  )
+
+  expect(fileSystem.toJSON()['/dist/config/tsconfig.base.json']).toBe(tsconfig)
+})

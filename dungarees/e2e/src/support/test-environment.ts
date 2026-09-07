@@ -6,7 +6,7 @@ import { npmRegistryRunner } from '@dungarees/test-environment/runners/npm-regis
 import { resolve } from 'node:path'
 import { type StartedNetwork } from 'testcontainers'
 
-const useHostNodeModules = process.env.E2E_USE_HOST_NODE_MODULES === 'true'
+const useHostNodeModules = process.env['E2E_USE_HOST_NODE_MODULES'] === 'true'
 
 let networkSingleton: StartedNetwork | undefined
 let initializationPromise: Promise<StartedNetwork> | null = null

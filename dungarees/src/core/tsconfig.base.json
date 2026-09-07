@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "esnext",
     "lib": ["dom", "dom.iterable", "esnext", "webworker"],
-    "types": ["jest", "node", "vite/client"],
+    "types": ["node", "vite/client"],
     "allowJs": true,
     "allowImportingTsExtensions": true,
     "skipLibCheck": true,
@@ -25,7 +25,7 @@
     "strictPropertyInitialization": true,
     "useUnknownInCatchVariables": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
+    "module": "nodenext",
     "moduleResolution": "nodenext",
     "resolveJsonModule": true,
     "isolatedModules": true,

@@ -381,3 +381,72 @@ test('publishAllPackages passes packageDir and version to each publish call', as
     { packageDir: 'lib-2', version: '2.5.0' },
   ])
 })
+
+mtest('transformPackageJson exports declared assets and drops the dungarees key', ({ expect }) => {
+  const [transformer, contentInspector$] = createGetTransformSetContextInspector<
+    string,
+    string,
+    string
+  >({
+    content: JSON.stringify({
+      name: 'test-lib',
+      version: '1.0.0',
+      dungarees: { assets: ['tsconfig.base.json'] },
+    }),
+  })
+
+  const transformPackageJson$ = of([]).pipe(
+    transformPackageJson(transformer, { srcDir: '/src', outDir: '/out', version: undefined }),
+  )
+
+  expect(transformPackageJson$).toBeObservableValueAndClose(
+    eventCreators.packageJsonWritten({ path: '/out', version: '1.0.0' }),
+  )
+  expect(contentInspector$).toBeObservableValue(
+    JSON.stringify(
+      {
+        name: 'test-lib',
+        version: '1.0.0',
+        exports: { './tsconfig.base.json': './tsconfig.base.json' },
+      },
+      null,
+      2,
+    ),
+  )
+})
+
+mtest('transformPackageJson merges declared assets with the transpiled exports', ({ expect }) => {
+  const [transformer, contentInspector$] = createGetTransformSetContextInspector<
+    string,
+    string,
+    string
+  >({
+    content: JSON.stringify({
+      name: 'test-lib',
+      version: '1.0.0',
+      dungarees: { assets: ['tsconfig.base.json'] },
+    }),
+  })
+
+  const transformPackageJson$ = of([
+    { input: '/src/index.ts', output: '/out/index.js', type: '/out/index.d.ts' },
+  ]).pipe(transformPackageJson(transformer, { srcDir: '/src', outDir: '/out', version: undefined }))
+
+  expect(transformPackageJson$).toBeObservableValueAndClose(
+    eventCreators.packageJsonWritten({ path: '/out', version: '1.0.0' }),
+  )
+  expect(contentInspector$).toBeObservableValue(
+    JSON.stringify(
+      {
+        name: 'test-lib',
+        version: '1.0.0',
+        exports: {
+          './index.ts': { import: './index.js', types: './index.d.ts' },
+          './tsconfig.base.json': './tsconfig.base.json',
+        },
+      },
+      null,
+      2,
+    ),
+  )
+})

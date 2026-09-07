@@ -22,23 +22,23 @@ import {
 import type { ZodString } from 'zod'
 
 type ProcessOperations = {
-  runSilentUntilError(
+  runSilentUntilError: (
     command: string,
     args: string[],
     options?: RunOptions,
-  ): Observable<StdioMessage[]>
-  runValidated(
+  ) => Observable<StdioMessage[]>
+  runValidated: (
     command: string,
     args: string[],
     options?: RunOptions,
-  ): Observable<ProcessServiceOutput>
-  runSilentUntilErrorValidated(
+  ) => Observable<ProcessServiceOutput>
+  runSilentUntilErrorValidated: (
     command: string,
     args: string[],
     options?: RunOptions,
-  ): Observable<StdioMessage[]>
-  isExecutableFile(path: string): Observable<boolean>
-  isExecutable(commandOrPath: string): Observable<boolean>
+  ) => Observable<StdioMessage[]>
+  isExecutableFile: (path: string) => Observable<boolean>
+  isExecutable: (commandOrPath: string) => Observable<boolean>
 }
 
 type CreateProcessOperationsOptions = {

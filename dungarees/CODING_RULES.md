@@ -566,3 +566,45 @@ paths.map(async (filePath) => {
 
 Annotate the callback's return instead only when the shape is worth naming; `as const` restates
 nothing and stays correct when the contents change.
+
+## 13. Avoid `this`; declare members as properties, not methods
+
+Build objects from factories that close over what they need, so no member ever reads `this`. Then
+declare the type with function-valued properties rather than method shorthand. Method shorthand
+claims a receiver the closure does not have, and that claim costs twice.
+
+It stops the member being passed on. `unbound-method` flags detaching a shorthand method —
+destructuring it, or handing it to another function — because a method is allowed to read `this` and
+the linter cannot tell that this one does not.
+
+It also drops a real check. Shorthand parameters are compared bivariantly, so a narrower parameter
+type than declared is accepted. The same signature written as a property is checked contravariantly
+under `strictFunctionTypes` and rejects it.
+
+```ts
+// Bad — method shorthand. `fileOperations.copyFile` cannot be passed on without `unbound-method`
+// firing, and an implementation narrowing `source` to a literal union would still compile.
+type FileOperations = {
+  copyFile(source: string, destination: string): Observable<void>
+}
+```
+
+```ts
+// Good — a property. Safe to destructure or forward, and the parameters are checked properly.
+type FileOperations = {
+  copyFile: (source: string, destination: string) => Observable<void>
+}
+```
+
+```ts
+// Good — the factory closes over the file system, so there is nothing for `this` to refer to
+export const createFileOperations = (fileSystem: FileSystemService): FileOperations => {
+  const copyFile: FileOperations['copyFile'] = (source, destination) => ...
+  return { copyFile }
+}
+```
+
+`this` earns its place only where the language leaves no alternative: hotscript's `Fn` pattern (see
+6a), and subclassing a third-party class whose methods you have to call through. A type describing
+someone else's methods is a separate case — map it through `DetachableMethods` to bind the prototype
+methods once, rather than restating the shape.

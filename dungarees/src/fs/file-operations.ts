@@ -19,10 +19,12 @@ type Options = {
 }
 
 type FileOperations = {
-  transformFile(options: Options): GetTransformSet<string, string>
-  transformFileContext<CONTEXT>(options: Options): GetTransformSetContext<CONTEXT, string, string>
-  copyFile(source: string, destination: string): Observable<void>
-  copyDirectory(source: string, destination: string, exclude?: string[]): Observable<void>
+  transformFile: (options: Options) => GetTransformSet<string, string>
+  transformFileContext: <CONTEXT>(
+    options: Options,
+  ) => GetTransformSetContext<CONTEXT, string, string>
+  copyFile: (source: string, destination: string) => Observable<void>
+  copyDirectory: (source: string, destination: string, exclude?: string[]) => Observable<void>
 }
 
 export const createFileOperations = (fileSystem: FileSystemService): FileOperations => {

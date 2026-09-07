@@ -7,6 +7,11 @@
     "type-check": "tsc --noEmit"
   },
   "type": "module",
+  "dungarees": {
+    "assets": [
+      "tsconfig.base.json"
+    ]
+  },
   "devDependencies": {
     "react": "^19.1.0",
     "rxjs-marbles": "^7.0.1",

@@ -6,7 +6,7 @@ import type { Observable } from 'rxjs'
 import ts from 'typescript'
 
 type Transpiler = {
-  transpileDir(options: { input: string; output: string }): Observable<TranspileDirOutput[]>
+  transpileDir: (options: { input: string; output: string }) => Observable<TranspileDirOutput[]>
 }
 
 export type TranspileDirOutput = { input: string; output: string; type: string }

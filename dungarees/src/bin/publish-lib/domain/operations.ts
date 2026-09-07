@@ -11,7 +11,7 @@ import type { TranspileDirOutput } from '@dungarees/transpile/service.ts'
 import { jsonObjectSchema, parseJson } from '@dungarees/zod/json.ts'
 
 import path from 'node:path'
-import { defer, forkJoin, type Observable, of, type OperatorFunction, pipe } from 'rxjs'
+import { defer, forkJoin, from, type Observable, of, type OperatorFunction, pipe } from 'rxjs'
 import { map, mergeMap } from 'rxjs/operators'
 import { z } from 'zod'
 
@@ -39,6 +39,43 @@ export const createOutDir = (
     ),
   )
 
+const DUNGAREES_SETTINGS_SCHEMA = z.object({
+  dungarees: z.object({ assets: z.array(z.string()).optional() }).optional(),
+})
+
+type DungareesSettings = { assets?: string[] | undefined }
+
+// Assets are copied rather than transpiled, so nothing in the transpile step accounts for them.
+export const copyAssets = ({
+  packageJsonContent$,
+  srcDir,
+  outDir,
+  copyFile,
+}: {
+  packageJsonContent$: Observable<string>
+  srcDir: string
+  outDir: string
+  copyFile: (source: string, destination: string) => Observable<void>
+}): Observable<PublishLibEvent> =>
+  packageJsonContent$.pipe(
+    mergeMap((json) =>
+      from(
+        parseJson({
+          json,
+          schema: DUNGAREES_SETTINGS_SCHEMA,
+          message: 'Invalid source package.json',
+        }).dungarees?.assets ?? [],
+      ),
+    ),
+    mergeMap((asset) => {
+      const destination = path.join(outDir, asset)
+      return copyFile(path.join(srcDir, asset), destination).pipe(
+        map(() => eventCreators.assetCopied({ path: destination })),
+      )
+    }),
+    catchAndRethrow((cause) => createCausedError({ message: 'Error copying assets', cause })),
+  )
+
 export const transformPackageJson = (
   fileTransform: GetTransformSetContext<string, string, string>,
   { srcDir, outDir, version }: BaseBuildArgs,
@@ -48,18 +85,13 @@ export const transformPackageJson = (
       parsePackageJson(),
       setPackageJsonVersion(version),
       setExports({ srcDir, outDir, transpiledFiles }),
+      setAssetExports(),
       setBin(),
       stringifyPackageJson(),
     ).pipe(handleTransformEnd(outDir)),
   )
 
-type ExportMap = Record<
-  string,
-  {
-    import: string
-    types: string
-  }
->
+type ExportMap = Record<string, { import: string; types: string } | string>
 
 type BinMap = Record<string, string>
 
@@ -90,7 +122,10 @@ const setExports = ({
   srcDir: string
   outDir: string
   transpiledFiles: TranspileDirOutput[]
-}): OperatorFunction<{ version: string }, { version: string; exports?: ExportMap }> =>
+}): OperatorFunction<
+  { version: string; dungarees?: DungareesSettings | undefined },
+  { version: string; dungarees?: DungareesSettings | undefined; exports?: ExportMap }
+> =>
   pipe(
     map((packageJsonContent) => {
       const exports: ExportMap = Object.fromEntries(
@@ -114,6 +149,26 @@ const setExports = ({
     }),
   )
 
+const setAssetExports = (): OperatorFunction<
+  { version: string; dungarees?: DungareesSettings | undefined; exports?: ExportMap },
+  { version: string; exports?: ExportMap }
+> =>
+  pipe(
+    map(({ dungarees, ...packageJsonContent }) => {
+      const assets = dungarees?.assets
+      if (assets === undefined) {
+        return packageJsonContent
+      }
+      const assetExports: ExportMap = Object.fromEntries(
+        assets.map((asset) => [`./${asset}`, `./${asset}`] as const),
+      )
+      return {
+        ...packageJsonContent,
+        exports: { ...packageJsonContent.exports, ...assetExports },
+      }
+    }),
+  )
+
 const parsePackageJson = (): OperatorFunction<string, JsonObject> =>
   map((json) =>
     parseJson({
@@ -126,14 +181,14 @@ const parsePackageJson = (): OperatorFunction<string, JsonObject> =>
 
 const setPackageJsonVersion = (
   version: string | undefined,
-): OperatorFunction<JsonObject, { version: string }> =>
+): OperatorFunction<JsonObject, { version: string; dungarees?: DungareesSettings | undefined }> =>
   pipe(
     map((packageJson) => ({
       ...packageJson,
       version: version || packageJson['version'],
     })),
     assertSchemaMap(
-      z.object({ version: z.string().min(1) }),
+      z.object({ version: z.string().min(1) }).merge(DUNGAREES_SETTINGS_SCHEMA),
       'Version is required in package.json or as an argument',
     ),
   )
@@ -191,8 +246,6 @@ const parseVersion = (): OperatorFunction<string, string> =>
 
 const PACKAGE_PRIVACY = z.object({ private: z.boolean().optional() })
 
-// npm refuses to publish a package marked private, so one in the tree would fail the whole run
-// rather than being skipped. Test-only packages use the flag to opt out.
 const excludePrivatePackages = (
   readPackageJson: (path: string) => Observable<string>,
 ): OperatorFunction<string[], string[]> =>

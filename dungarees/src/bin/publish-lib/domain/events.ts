@@ -4,6 +4,7 @@ type PublishLibEventPayloads = {
   'build-start': { srcDir: string; outDir: string; version: string | undefined }
   'out-dir-created': { outDir: string }
   'package-json-written': { path: string; version: string }
+  'asset-copied': { path: string }
   'publish-succeeded': undefined
   'publish-failed': { exitCode: number | undefined; stderror: string | undefined }
   'all-published': undefined
