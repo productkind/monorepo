@@ -1,3 +1,5 @@
+import type { DetachableMethods } from './type-util.ts'
+
 import type { Observable } from 'rxjs'
 import { Expect } from 'rxjs-marbles/expect.js'
 import { marbles } from 'rxjs-marbles/jest/index.js'
@@ -6,14 +8,17 @@ import type { ExpectHelpers, TestObservableLike } from 'rxjs-marbles/types.js'
 type Marbles = typeof marbles
 type MarblesRunner = Parameters<Marbles>[0]
 type MarblesParam = Parameters<MarblesRunner>[0]
-type Runner = (m: MarblesExtensions, ...args: any[]) => ReturnType<MarblesRunner>
+type Runner<ARGS extends unknown[] = []> = (
+  m: MarblesExtensions,
+  ...args: ARGS
+) => void | Promise<void>
 type MarbleFunctions = Record<string, () => void>
 
 type MarblesExtensions = {
   coldCall: (marble: string, functions: MarbleFunctions) => void
   coldBoolean: (marble: string) => TestObservableLike<boolean>
-  expect: <T = any>(actual: Observable<T>, subscription?: string) => ExtendedExpect<T>
-} & MarblesParam
+  expect: <T = unknown>(actual: Observable<T>, subscription?: string) => ExtendedExpect<T>
+} & DetachableMethods<MarblesParam>
 
 class ExtendedExpect<T> extends Expect<T> {
   constructor(
@@ -30,9 +35,11 @@ class ExtendedExpect<T> extends Expect<T> {
 }
 
 export const coreMarbles =
-  (runner: Runner): (() => void) =>
-  (...args: any[]) =>
-    marbles((m) => {
+  <ARGS extends unknown[] = []>(
+    runner: Runner<ARGS>,
+  ): ((...args: ARGS) => void | Promise<void>) =>
+  (...args: ARGS): void | Promise<void> => {
+    const runInMarbles: () => void | Promise<void> = marbles((m): void | Promise<void> => {
       const coldCall = (marble: string, functions: MarbleFunctions): void => {
         const marbleDefinition = Object.fromEntries(Object.keys(functions).map((key) => [key, key]))
         m.cold(marble, marbleDefinition).subscribe((key) => {
@@ -44,9 +51,12 @@ export const coreMarbles =
 
       // This function and the ExtendedExpect depends on internals of the `rxjs-marbles` library
       // potentially not future proof
-      const expect = <T = any>(actual: Observable<T>, subscription?: string): ExtendedExpect<T> => {
-        const { helpers_ } = m as any
-        return new ExtendedExpect(actual, helpers_ as ExpectHelpers, subscription)
+      const expect = <T = unknown>(
+        actual: Observable<T>,
+        subscription?: string,
+      ): ExtendedExpect<T> => {
+        const { helpers_ } = m as unknown as { helpers_: ExpectHelpers }
+        return new ExtendedExpect(actual, helpers_, subscription)
       }
 
       // The methods on `m` (the RunContext) are on the prototype, so we have to bind the original
@@ -71,9 +81,11 @@ export const coreMarbles =
           teardown: m.teardown.bind(m),
           time: m.time.bind(m),
         },
-        ...(args as Parameters<Runner>),
+        ...args,
       )
-    })()
+    })
+    return runInMarbles()
+  }
 
 export const MARBLES_BOOLEAN = {
   t: true,
