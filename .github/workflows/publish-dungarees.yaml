@@ -44,3 +44,8 @@ jobs:
 
       - name: Publish to npm
         run: npm run publish:dungarees
+        env:
+          # Trusted publishing is configured per package and cannot create one that does not exist
+          # yet, so a scope-wide token is what lets a new @dungarees package be published for the
+          # first time.
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
