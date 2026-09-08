@@ -2,7 +2,7 @@
  * Applies a chosen gif to one section of a video definition.
  *
  *   npm run apply-visual -- --video pm-... --section 14 --src section-14-bulb.gif \
- *       --search "lightbulb idea" --url https://giphy.com/gifs/abc123 [--color '#298c8c'] [--rate 0.72]
+ *       --provider giphy --id abc123 --search "lightbulb idea" [--color '#298c8c'] [--rate 0.72]
  *
  * The desk's API shells out to this rather than editing the file itself, so the one piece of code
  * that rewrites a hand-authored definition lives in the package that owns those definitions and is
@@ -11,7 +11,8 @@
 import { readFileSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 
-import type { AppliedVisual, Provenance } from '../src/videos/apply-visual'
+import { isProvider, PROVIDERS } from '../src/narration/definition'
+import type { AppliedVisual } from '../src/videos/apply-visual'
 import { withVisualApplied } from '../src/videos/apply-visual'
 
 const valueOf = ({ name }: { name: string }): string | undefined => {
@@ -31,19 +32,26 @@ const main = (): void => {
   const video = required({ name: 'video' })
   const section = Number(required({ name: 'section' }))
   const rate = valueOf({ name: 'rate' })
+  const provider = required({ name: 'provider' })
+  if (!isProvider(provider)) {
+    throw new Error(`--provider must be one of: ${PROVIDERS.join(', ')}`)
+  }
+  const id = valueOf({ name: 'id' })
   const visual: AppliedVisual = {
     src: required({ name: 'src' }),
     color: valueOf({ name: 'color' }),
     playbackRate: rate === undefined ? undefined : Number(rate),
-  }
-  const provenance: Provenance = {
-    search: required({ name: 'search' }),
-    url: required({ name: 'url' }),
+    source: {
+      provider,
+      // Absent when a pick predates ids being kept; never invented.
+      ...(id === undefined ? {} : { id }),
+      search: required({ name: 'search' }),
+    },
   }
 
   const path = resolve(process.cwd(), 'src', 'videos', `${video}.ts`)
   const source = readFileSync(path, 'utf8')
-  writeFileSync(path, withVisualApplied({ source, section, visual, provenance }))
+  writeFileSync(path, withVisualApplied({ source, section, visual }))
   console.log(`${video} §${String(section).padStart(2, '0')} -> ${visual.src}`)
 }
 

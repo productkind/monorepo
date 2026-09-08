@@ -3,7 +3,7 @@ import { defineVideo, gif, riveAtFrame } from '../narration/definition'
 /**
  * Video 3 of the vibe coder campaign, "Scared to touch your own app?".
  * Script: productkind/marketing/content/campaigns/2026-09-vibe-coder-validation/
- * video-2-confidence-to-update/script.md
+ * video-3-confidence-to-update/script.md
  *
  * The CTA is the LinkedIn / YouTube Shorts variant ("link in the comments"), which is the script
  * as written. TikTok and Instagram Reels need the URL spoken and shown instead, so they want a
@@ -32,20 +32,24 @@ export default defineVideo({
   ],
   sections: [
     {
-      // giphy "covering eyes peeking cute": https://giphy.com/gifs/Gns1lc03zB3sw8oXvD
       // Slowed to cover the shortest beat in the video in one pass.
       text: 'Scared to touch your app',
       visual: gif({
         src: 'section-00-covering-eyes-scared.gif',
+        source: {
+          provider: 'giphy',
+          id: 'Gns1lc03zB3sw8oXvD',
+          search: 'covering eyes peeking cute',
+        },
         playbackRate: 0.73,
         place: 'above-captions',
       }),
     },
     {
-      // giphy "flat icon app building blocks": https://giphy.com/gifs/MvovQGsMBY9H2
       text: 'that you built with AI?',
       visual: gif({
         src: 'section-01-blocks-assembling.gif',
+        source: { provider: 'giphy', id: 'MvovQGsMBY9H2', search: 'flat icon app building blocks' },
         color: '#ffe7e7',
         playbackRate: 1.43,
         place: 'above-captions',
@@ -53,28 +57,40 @@ export default defineVideo({
       endsParagraph: true,
     },
     {
-      // giphy "toggle switch flip flat icon": https://giphy.com/gifs/3ohhwoWSCtJzznXbuo
       text: 'You want to change one onboarding screen.',
       visual: gif({
         src: 'section-02-toggle-flip.gif',
+        source: {
+          provider: 'giphy',
+          id: '3ohhwoWSCtJzznXbuo',
+          search: 'toggle switch flip flat icon',
+        },
         color: '#2aaeaf',
         place: 'above-captions',
       }),
     },
     {
-      // giphy "tangled wires spreading chaos": https://giphy.com/gifs/4KgDKknTMmdDjBmdFH
       text: 'The AI starts editing login, the database',
       visual: gif({
         src: 'section-03-tangled-wires.gif',
+        source: {
+          provider: 'giphy',
+          id: '4KgDKknTMmdDjBmdFH',
+          search: 'tangled wires spreading chaos',
+        },
         playbackRate: 0.87,
         place: 'above-captions',
       }),
     },
     {
-      // giphy "documents flying papers chaos": https://giphy.com/gifs/TuM35vpX9Z1lPchpOe
       text: 'and files you have never seen before.',
       visual: gif({
         src: 'section-04-paper-airplanes.gif',
+        source: {
+          provider: 'giphy',
+          id: 'TuM35vpX9Z1lPchpOe',
+          search: 'documents flying papers chaos',
+        },
         color: '#60c3d2',
         playbackRate: 0.97,
         place: 'above-captions',
@@ -82,10 +98,10 @@ export default defineVideo({
       endsParagraph: true,
     },
     {
-      // giphy "red x cancel mark flat icon": https://giphy.com/gifs/G7iGNzr3VBING
       text: 'So you cancel the change.',
       visual: gif({
         src: 'section-05-abort-button.gif',
+        source: { provider: 'giphy', id: 'G7iGNzr3VBING', search: 'red x cancel mark flat icon' },
         playbackRate: 0.91,
         place: 'above-captions',
       }),
@@ -95,6 +111,7 @@ export default defineVideo({
       text: 'The improvement stays on your list.',
       visual: gif({
         src: 'section-06-hourglass-waiting.gif',
+        source: { provider: 'klipy', search: 'hourglass sand timer' },
         color: '#fbfcfb',
         playbackRate: 0.88,
         place: 'above-captions',
@@ -102,91 +119,125 @@ export default defineVideo({
       endsParagraph: true,
     },
     {
-      // giphy "website live going online flat icon": https://giphy.com/gifs/v4r4rnbLi1n3QmqUM6
       text: 'Updating a live product',
       visual: gif({
         src: 'section-07-online-button-press.gif',
+        source: {
+          provider: 'giphy',
+          id: 'v4r4rnbLi1n3QmqUM6',
+          search: 'website live going online flat icon',
+        },
         playbackRate: 0.82,
         place: 'above-captions',
       }),
     },
     {
-      // giphy "floppy disk save icon animation": https://giphy.com/gifs/twdF6dEC6rK5ep7b4Y
       text: 'needs a working version you can return to',
       visual: gif({
         src: 'section-08-floppy-backup.gif',
+        source: {
+          provider: 'giphy',
+          id: 'twdF6dEC6rK5ep7b4Y',
+          search: 'floppy disk save icon animation',
+        },
         color: '#fbf05c',
         place: 'above-captions',
       }),
     },
     {
-      // giphy "magnifying glass checking screen flat icon":
-      // https://giphy.com/gifs/56AsTD2tXNmZBGR3hL
       text: 'and a way to check what the change might break.',
       visual: gif({
         src: 'section-09-eye-magnifier-check.gif',
+        source: {
+          provider: 'giphy',
+          id: '56AsTD2tXNmZBGR3hL',
+          search: 'magnifying glass checking screen flat icon',
+        },
         color: '#000000',
         place: 'above-captions',
       }),
       endsParagraph: true,
     },
     {
-      // giphy "woman determined nod yes": https://giphy.com/gifs/h9BsCz7jZEr9XPRgIi
       text: 'If you want to keep improving your app',
-      visual: gif({ src: 'section-10-woman-nodding-yes.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-10-woman-nodding-yes.gif',
+        source: { provider: 'giphy', id: 'h9BsCz7jZEr9XPRgIi', search: 'woman determined nod yes' },
+        place: 'above-captions',
+      }),
     },
     {
-      // giphy "four leaf clover luck icon flat": https://giphy.com/gifs/d6hqGx3d5Qqu9RJjcM
       text: 'without relying on luck,',
       visual: gif({
         src: 'section-11-four-leaf-clovers.gif',
+        source: {
+          provider: 'giphy',
+          id: 'd6hqGx3d5Qqu9RJjcM',
+          search: 'four leaf clover luck icon flat',
+        },
         color: '#ffffff',
         playbackRate: 0.91,
         place: 'above-captions',
       }),
     },
     {
-      // giphy "ladder climbing steps flat icon": https://giphy.com/gifs/A2Sgm68KhLRngFIwWQ
       text: 'that’s what we’re building a learning path for.',
       visual: gif({
-        src: 'section-12-ladder-climb-path.gif',
-        color: '#fefcfd',
+        src: 'section-12-walk-trail.gif',
+        source: { provider: 'giphy', id: 'os35W3MqeIoRVNMhL9', search: 'walk trail' },
+        playbackRate: 0.82,
         place: 'above-captions',
       }),
       endsParagraph: true,
     },
     {
-      // giphy "woman typing laptop confident smile": https://giphy.com/gifs/hSB0VA9cOkcCO5ssHd
       text: 'By the end, you’ll save a working version,',
       visual: gif({
         src: 'section-13-woman-at-desk-working.gif',
+        source: {
+          provider: 'giphy',
+          id: 'hSB0VA9cOkcCO5ssHd',
+          search: 'woman typing laptop confident smile',
+        },
         playbackRate: 0.8,
         place: 'above-captions',
       }),
     },
     {
-      // giphy "dart hits target center flat icon": https://giphy.com/gifs/PJ7L5D5nRAoddXiwLQ
       text: 'make a small scoped change,',
       visual: gif({
         src: 'section-14-dart-precision-target.gif',
+        source: {
+          provider: 'giphy',
+          id: 'PJ7L5D5nRAoddXiwLQ',
+          search: 'dart hits target center flat icon',
+        },
         color: '#ffffff',
         place: 'above-captions',
       }),
     },
     {
-      // giphy "walking through maze path flat icon": https://giphy.com/gifs/3o7TKFCb8DQ6feGcne
       text: 'test the affected journey',
       visual: gif({
         src: 'section-15-camel-walking-journey.gif',
+        source: {
+          provider: 'giphy',
+          id: '3o7TKFCb8DQ6feGcne',
+          search: 'walking through maze path flat icon',
+        },
         playbackRate: 0.8,
         place: 'above-captions',
       }),
     },
     {
-      // giphy "eraser undo mistake flat icon": https://giphy.com/gifs/KDz938kEyh1UfJJGAp
       text: 'and undo it if the test fails.',
       visual: gif({
         src: 'section-16-command-z-undo.gif',
+        source: {
+          provider: 'giphy',
+          id: 'KDz938kEyh1UfJJGAp',
+          search: 'eraser undo mistake flat icon',
+        },
         color: '#dedede',
         playbackRate: 0.83,
         place: 'above-captions',
@@ -194,19 +245,27 @@ export default defineVideo({
       endsParagraph: true,
     },
     {
-      // giphy "tap screen finger flat icon": https://giphy.com/gifs/S2EqXNJ2ASorP0ZPWD
       text: 'The waitlist link is in the comments.',
       visual: gif({
         src: 'section-17-cursor-click-link.gif',
+        source: {
+          provider: 'giphy',
+          id: 'S2EqXNJ2ASorP0ZPWD',
+          search: 'tap screen finger flat icon',
+        },
         color: '#ffffff',
         place: 'above-captions',
       }),
     },
     {
-      // giphy "mailbox letter flag animation": https://giphy.com/gifs/IQzFAfOGMZbKcdtJqf
       text: 'Sign up and we’ll let you know when the learning path opens.',
       visual: gif({
         src: 'section-18-mail-notification-badge.gif',
+        source: {
+          provider: 'giphy',
+          id: 'IQzFAfOGMZbKcdtJqf',
+          search: 'mailbox letter flag animation',
+        },
         color: '#be9384',
         playbackRate: 0.95,
         place: 'above-captions',
@@ -214,9 +273,12 @@ export default defineVideo({
       endsParagraph: true,
     },
     {
-      // giphy "cat tilting head curious": https://giphy.com/gifs/JSxuLOvwqgNBlMp5Nv
       text: '[pause][curious] What change have you been putting off?',
-      visual: gif({ src: 'section-19-cat-curious-thinking.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-19-cat-curious-thinking.gif',
+        source: { provider: 'giphy', id: 'JSxuLOvwqgNBlMp5Nv', search: 'cat tilting head curious' },
+        place: 'above-captions',
+      }),
     },
   ],
 })

@@ -88,9 +88,10 @@ the search result describes a preview, and one §11 candidate was 3.4s in the li
 ```
 scripts/pick.py --video <video-id> --pick 10=w5xEwipLyIBMdINSvn:hand-up --pick 13=Ie8ncf:question
 ```
-Writes `public/<video-id>/section-10-hand-up.gif`, then prints the definition line for it,
-including the timing knob the gap calls for and, when the gif sits on a flat colour, the `color`
-that letterboxes it in that colour. Paste the lines yourself so the definition stays hand-authored.
+Writes `public/<video-id>/section-10-hand-up.gif`, then prints the definition line for it: where it
+came from as data, the timing knob the gap calls for and, when the gif sits on a flat colour, the
+`color` that letterboxes it. Fill in the search that found it and paste the lines yourself, so the
+definition stays hand-authored.
 
 **3. `verify.py` — the checks that catch real defects.**
 ```
@@ -142,6 +143,31 @@ what is outstanding and tells you which flags are stale.
 
 Start a re-sourcing round by reading that list: each flagged section wants fresh terms and a new
 harvest, and the gif that was flagged goes into `--skip` so it cannot come back.
+
+### Where a gif came from is data, not a comment
+
+Every section records its own provenance in the definition:
+
+```ts
+visual: gif({
+  src: 'section-01-nervous.gif',
+  source: { provider: 'giphy', id: 'ycd33pEC8uLc9F3Cdz', search: 'avoid eye contact nervous' },
+  place: 'above-captions',
+}),
+```
+
+It used to be a comment holding a URL, which meant the id had to be re-derived — and only giphy
+URLs carry one. That is not a cosmetic gap: two of video 7's picks repeated video 5 because the
+list they were checked against held klipy URLs where the sourcer was comparing klipy ids.
+`used-ids.py` reads the field now, so a klipy pick counts the same as a giphy one.
+
+Forty sections predate ids being kept: their record holds a provider and a search but no id,
+because none was ever written down. They keep their comment, since the note in it exists nowhere
+else, and `used-ids.py` lists them at the end so it is clear nothing can be compared against them.
+
+**Comments are for notes.** Why a beat was sped up, what was tried and rejected, what to replace it
+with if the video is ever revisited — that reasoning belongs in prose and is the one thing the data
+cannot hold.
 
 ### Letterboxing a flat background
 

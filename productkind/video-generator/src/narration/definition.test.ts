@@ -72,6 +72,32 @@ describe('visual helpers', () => {
   })
 })
 
+describe('where a visual came from', () => {
+  test('a gif carries the provider, the id and the search that found it', () => {
+    // Recorded as data, not as a comment: the id is the asset's identity, and every duplicate
+    // that slipped into the campaign did so because it had to be re-derived from a URL.
+    expect(
+      gif({
+        src: 'section-01-nervous.gif',
+        source: { provider: 'giphy', id: 'ycd33pEC8uLc9F3Cdz', search: 'avoid eye contact nervous' },
+      }).source,
+    ).toEqual({ provider: 'giphy', id: 'ycd33pEC8uLc9F3Cdz', search: 'avoid eye contact nervous' })
+  })
+
+  test('a klipy id survives, where its url never carried one', () => {
+    expect(
+      gif({ src: 'a.gif', source: { provider: 'klipy', id: '9911', search: 'flat illustration' } })
+        .source?.id,
+    ).toBe('9911')
+  })
+
+  test('a visual that came from nowhere in particular has no source', () => {
+    // A typed screenshot or a screen recording was made, not found.
+    expect(still({ src: 'section-21-prompt.png' }).source).toBeUndefined()
+    expect(clip({ src: 'dump-full-flow.mp4' }).source).toBeUndefined()
+  })
+})
+
 describe('defineVideo', () => {
   test('fills in the frame rate and tail the videos are rendered at', () => {
     expect(definition()).toMatchObject({ fps: 30, tailFrames: 24, splitOnBlankLines: false })

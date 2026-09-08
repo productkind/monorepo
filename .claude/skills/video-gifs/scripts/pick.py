@@ -4,8 +4,9 @@
   scripts/pick.py --video pm-technical-fluency-validation-00 \
       --pick 10=w5xEwipLyIBMdINSvn:hand-up --pick 13=Ie8ncfWOhpNeH9morB:question
 
-Prints the definition line for each pick, including the loopBehavior or playbackRate the fit calls
-for. Nothing is written to the definition: paste the lines, so the file stays hand-authored.
+Prints the definition line for each pick: where it came from as data, the letterbox colour if it
+sits on one, and the playbackRate the fit calls for. Fill in the search that found it. Nothing is
+written to the definition: paste the lines, so the file stays hand-authored.
 """
 
 import argparse
@@ -23,17 +24,17 @@ def advise(seconds, slot):
 
 
 def provenance(gif_id):
-    """Where the pick came from, for the definition's comment.
+    """Which catalogue the pick came from.
 
-    Giphy originals are addressable from the id alone, so a giphy id needs no record. Anything
-    harvested elsewhere was recorded by `remember_source`, and that URL is its only real address:
-    a klipy id at giphy.com/gifs/<id> is either a 404 or, worse, somebody else's gif.
+    Recorded in the definition as data, not as a comment: the id is what says whether the campaign
+    is about to use the same gif twice, and a URL could only answer that for giphy. Anything
+    harvested elsewhere was recorded by `remember_source`, and its host is how the provider is told.
     """
     url = source_url(gif_id)
     if not url:
-        return 'giphy', f'https://giphy.com/gifs/{gif_id}'
+        return 'giphy'
     labels = (urlsplit(url).hostname or '').split('.')
-    return (labels[-2] if len(labels) > 1 else url), url
+    return labels[-2] if len(labels) > 1 else 'klipy'
 
 
 def main():
@@ -76,10 +77,12 @@ def main():
         if background:
             print(f"  sits on {background['colour']} across {background['coverage']:.0%} of its "
                   'border, so the letterbox takes that colour and the edge disappears')
-        provider, origin = provenance(gif_id)
-        print(f'      // {provider} "<search that found it>": {origin}')
-
-        fields = [f"src: '{target.name}'"]
+        provider = provenance(gif_id)
+        fields = [
+            f"src: '{target.name}'",
+            f"source: {{ provider: '{provider}', id: '{gif_id}', "
+            "search: '<search that found it>' }",
+        ]
         if background:
             fields.append(f"color: '{background['colour']}'")
         if knob:

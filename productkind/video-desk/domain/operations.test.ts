@@ -12,6 +12,7 @@ import {
   parseHistogram,
   parseRmse,
   parseSections,
+  providerFrom,
   repeatsIn,
   sectionName,
   usedIdsIn,
@@ -173,14 +174,19 @@ describe('parseSections', () => {
   const source = `export default defineVideo({
   sections: [
     {
-      // giphy "nodding yes cat": https://giphy.com/gifs/abc
       text: "You’ve nodded along,",
-      visual: gif({ src: 'section-00-nodding.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-00-nodding.gif',
+        source: { provider: 'giphy', id: 'abc', search: 'nodding yes cat' },
+        place: 'above-captions',
+      }),
     },
     {
+      // klipy "office meeting listening": the only clean one in eight rounds.
       text: 'A single-quoted line,',
       visual: gif({
         src: "section-01-meeting.gif",
+        source: { provider: "klipy", search: "office meeting listening" },
         color: "#ffffff",
         playbackRate: 0.61,
         place: "above-captions",
@@ -190,16 +196,15 @@ describe('parseSections', () => {
 })
 `
 
-  test('reads both quote styles, because four definitions are double-quoted throughout', () => {
-    const sections = parseSections({ source })
-
-    expect(sections).toEqual([
+  test('reads where each gif came from as data, in either quote style', () => {
+    expect(parseSections({ source })).toEqual([
       {
         index: 0,
         text: 'You’ve nodded along,',
         src: 'section-00-nodding.gif',
         color: null,
         playbackRate: null,
+        source: { provider: 'giphy', id: 'abc', search: 'nodding yes cat' },
         search: 'nodding yes cat',
       },
       {
@@ -208,22 +213,54 @@ describe('parseSections', () => {
         src: 'section-01-meeting.gif',
         color: '#ffffff',
         playbackRate: 0.61,
-        search: null,
+        // Forty sections have a provider and a search but no id, because none was ever recorded.
+        source: { provider: 'klipy', id: null, search: 'office meeting listening' },
+        search: 'office meeting listening',
       },
     ])
+  })
+
+  test('has no source for a visual that was made rather than found', () => {
+    const made = `export default defineVideo({
+  sections: [
+    {
+      text: 'using this prompt template,',
+      visual: still({ src: 'section-21-prompt.png', place: 'above-captions' }),
+    },
+  ],
+})
+`
+
+    expect(parseSections({ source: made })[0]?.source).toBeNull()
+    expect(parseSections({ source: made })[0]?.search).toBeNull()
   })
 })
 
 describe('usedIdsIn', () => {
-  test('maps every gif id in the campaign to where it is used', () => {
+  test('maps every gif id in the campaign to where it is used, from the recorded data', () => {
+    // Read from `source`, not from a url: only giphy urls carried an id, which is how two of
+    // video 7's picks repeated video 5.
     const used = usedIdsIn({
       definitions: [
-        { video: 'camp-00', source: '// giphy "x": https://giphy.com/gifs/aaa\nsrc: 1' },
-        { video: 'camp-01', source: '// giphy "y": https://giphy.com/gifs/aaa\n// giphy "z": https://giphy.com/gifs/bbb' },
+        {
+          video: 'camp-01',
+          sections: [
+            { source: { provider: 'giphy', id: 'aaa', search: 'x' } },
+            { source: { provider: 'klipy', id: 'kkk', search: 'y' } },
+          ],
+        },
+        {
+          video: 'camp-02',
+          sections: [
+            { source: { provider: 'giphy', id: 'aaa', search: 'z' } },
+            { source: null },
+            { source: { provider: 'klipy', id: null, search: 'no id was recorded' } },
+          ],
+        },
       ],
     })
 
-    expect(used).toEqual({ aaa: ['camp-00§00', 'camp-01§00'], bbb: ['camp-01§01'] })
+    expect(used).toEqual({ aaa: ['camp-01§00', 'camp-02§00'], kkk: ['camp-01§01'] })
   })
 })
 
@@ -256,6 +293,17 @@ describe('chooseKey', () => {
         now: hour,
       }),
     ).toBe('one')
+  })
+})
+
+describe('providerFrom', () => {
+  test('narrows a name that came off the wire to a provider', () => {
+    expect(providerFrom({ name: 'klipy' })).toBe('klipy')
+  })
+
+  test('falls back rather than trusting an unknown name', () => {
+    // `find` rather than a cast: the value itself is narrowed, so nothing is asserted.
+    expect(providerFrom({ name: 'tenor' })).toBe('giphy')
   })
 })
 
