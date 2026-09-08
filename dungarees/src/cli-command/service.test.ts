@@ -81,3 +81,48 @@ test('npm publish with cwd', async () => {
     },
   ])
 })
+
+test('npm viewVersion asks the registry for one exact version', async () => {
+  const { subProcess, executedCommands } = createFakeSubProcessService([
+    {
+      command: 'npm',
+      args: ['view', '@org/lib@1.2.3', 'version'],
+      stdout: '1.2.3',
+      exitCode: 0,
+    },
+  ])
+
+  const { npm } = createCliCommands(subProcess)
+
+  await lastValueFrom(npm.viewVersion({ name: '@org/lib', version: '1.2.3' }).output$)
+
+  expect(executedCommands).toEqual([
+    { command: 'npm', args: ['view', '@org/lib@1.2.3', 'version'], options: {} },
+  ])
+})
+
+test('npm viewVersion passes the registry through', async () => {
+  const { subProcess, executedCommands } = createFakeSubProcessService([
+    {
+      command: 'npm',
+      args: ['view', '@org/lib@1.2.3', 'version', '--registry', 'https://registry.test'],
+      stdout: '1.2.3',
+      exitCode: 0,
+    },
+  ])
+
+  const { npm } = createCliCommands(subProcess)
+
+  await lastValueFrom(
+    npm.viewVersion({ name: '@org/lib', version: '1.2.3', registry: 'https://registry.test' })
+      .output$,
+  )
+
+  expect(executedCommands).toEqual([
+    {
+      command: 'npm',
+      args: ['view', '@org/lib@1.2.3', 'version', '--registry', 'https://registry.test'],
+      options: {},
+    },
+  ])
+})

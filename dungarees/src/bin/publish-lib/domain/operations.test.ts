@@ -5,6 +5,7 @@ import {
   getPackageDirsWithVersion,
   publishAllPackages,
   publishLib,
+  publishUnlessPublished,
   transformPackageJson,
 } from './operations.ts'
 
@@ -495,4 +496,62 @@ mtest('transformPackageJson merges declared assets with the transpiled exports',
       2,
     ),
   )
+})
+
+const PACKAGE_JSON = JSON.stringify({ name: '@org/lib-1', version: '0.9.0' })
+
+test('publishUnlessPublished skips a version the registry already has', async () => {
+  let published = false
+  const events = await collectValuesFrom(
+    publishUnlessPublished({
+      packageJsonContent$: of(PACKAGE_JSON),
+      packageDir: 'lib-1',
+      version: '1.0.0',
+      viewVersion: () => of({ stdout: '1.0.0', stderror: '', exitCode: 0 }),
+      publishFactory: () => {
+        published = true
+        return of({ stdout: '', stderror: undefined, exitCode: 0 })
+      },
+    }),
+  )
+
+  expect(events).toEqual([eventCreators.publishSkipped({ packageDir: 'lib-1', version: '1.0.0' })])
+  expect(published).toBe(false)
+})
+
+test('publishUnlessPublished publishes when the registry does not have the version', async () => {
+  const viewedNames: string[] = []
+  const events = await collectValuesFrom(
+    publishUnlessPublished({
+      packageJsonContent$: of(PACKAGE_JSON),
+      packageDir: 'lib-1',
+      version: '1.0.0',
+      viewVersion: ({ name, version }) => {
+        viewedNames.push(`${name}@${version}`)
+        return of({ stdout: '', stderror: 'E404', exitCode: 1 })
+      },
+      publishFactory: () => of({ stdout: '', stderror: undefined, exitCode: 0 }),
+    }),
+  )
+
+  expect(viewedNames).toEqual(['@org/lib-1@1.0.0'])
+  expect(events).toEqual([eventCreators.publishSucceeded()])
+})
+
+test("publishUnlessPublished falls back to the package's own version when none is given", async () => {
+  const viewedNames: string[] = []
+  await collectValuesFrom(
+    publishUnlessPublished({
+      packageJsonContent$: of(PACKAGE_JSON),
+      packageDir: 'lib-1',
+      version: undefined,
+      viewVersion: ({ name, version }) => {
+        viewedNames.push(`${name}@${version}`)
+        return of({ stdout: '', stderror: 'E404', exitCode: 1 })
+      },
+      publishFactory: () => of({ stdout: '', stderror: undefined, exitCode: 0 }),
+    }),
+  )
+
+  expect(viewedNames).toEqual(['@org/lib-1@0.9.0'])
 })

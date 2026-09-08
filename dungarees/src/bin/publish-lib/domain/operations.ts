@@ -58,7 +58,6 @@ const DUNGAREES_SETTINGS_SCHEMA = z.object({
 
 type DungareesSettings = { assets?: string[] | undefined }
 
-// Assets are copied rather than transpiled, so nothing in the transpile step accounts for them.
 export const copyAssets = ({
   packageJsonContent$,
   srcDir,
@@ -241,6 +240,49 @@ export const publishLib = ({
         : eventCreators.publishFailed({ packageDir, exitCode, stderror }),
     ),
     catchAndRethrow((cause) => createCausedError({ message: 'Error publishing library', cause })),
+  )
+
+const PUBLISH_IDENTITY_SCHEMA = z.object({
+  name: z.string().min(1),
+  version: z.string().min(1).optional(),
+})
+
+export const publishUnlessPublished = ({
+  packageJsonContent$,
+  packageDir,
+  version,
+  viewVersion,
+  publishFactory,
+}: {
+  packageJsonContent$: Observable<string>
+  packageDir: string
+  version: string | undefined
+  viewVersion: (args: {
+    name: string
+    version: string
+  }) => Observable<{ exitCode: number | undefined }>
+  publishFactory: () => Observable<{ exitCode: number | undefined; stderror: string | undefined }>
+}): Observable<PublishLibEvent> =>
+  packageJsonContent$.pipe(
+    map((json) =>
+      parseJson({
+        json,
+        schema: PUBLISH_IDENTITY_SCHEMA,
+        message: 'Invalid source package.json',
+      }),
+    ),
+    map((identity) => ({ name: identity.name, version: version ?? identity.version })),
+    mergeMap(({ name, version: publishedVersion }) =>
+      publishedVersion === undefined
+        ? publishLib({ publishFactory, packageDir })
+        : viewVersion({ name, version: publishedVersion }).pipe(
+            mergeMap(({ exitCode }) =>
+              exitCode === 0
+                ? of(eventCreators.publishSkipped({ packageDir, version: publishedVersion }))
+                : publishLib({ publishFactory, packageDir }),
+            ),
+          ),
+    ),
   )
 
 const getPackageDirs = (sourceDir: string): OperatorFunction<string[], string[]> =>
