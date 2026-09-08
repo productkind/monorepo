@@ -357,6 +357,13 @@ const excludePrivatePackages = (
         ),
   )
 
+// The glob has to be deep, because packages nest — but that also reaches into installed
+// dependencies, and publishing one of those would push a third-party name under our version.
+const excludeInstalledDependencies = (): OperatorFunction<string[], string[]> =>
+  map((packageJsonPaths) =>
+    packageJsonPaths.filter((jsonPath) => !jsonPath.includes('/node_modules/')),
+  )
+
 export const getPackageDirsWithVersion = ({
   packageJsonPaths$,
   versionContent$,
@@ -370,6 +377,7 @@ export const getPackageDirsWithVersion = ({
 }): Observable<{ packageDirs: string[]; version: string }> =>
   forkJoin({
     packageDirs: packageJsonPaths$.pipe(
+      excludeInstalledDependencies(),
       excludePrivatePackages(readPackageJson),
       getPackageDirs(sourceDir),
     ),
