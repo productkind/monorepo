@@ -157,7 +157,6 @@ export const isDeepEqual = (a: unknown, b: unknown): boolean => {
       return isDataViewEqual(a, b)
     }
 
-    // this is a TypedArray.
     if (ArrayBuffer.isView(a) && ArrayBuffer.isView(b)) {
       return isDataViewEqual(new DataView(a.buffer), new DataView(b.buffer))
     }
