@@ -29,6 +29,7 @@ export type PublishLibBehavior = {
   publishSingleLib: (args: {
     srcDir: string
     outDir: string
+    packageDir: string
     version: string | undefined
     registry: string | undefined
   }) => PublishLibFeatureOutput
@@ -75,11 +76,15 @@ export const createPublishLibBehavior = ({
   const publishSingleLib: PublishLibBehavior['publishSingleLib'] = ({
     srcDir,
     outDir,
+    packageDir,
     version,
     registry,
   }) => {
     const build$ = build({ srcDir, outDir, version }).events$
-    const publish$ = publishLib(() => npm.publish({ cwd: outDir, registry }).output$)
+    const publish$ = publishLib({
+      publishFactory: () => npm.publish({ cwd: outDir, registry }).output$,
+      packageDir,
+    })
     return {
       events$: concat(build$, publish$),
     }
@@ -98,6 +103,7 @@ export const createPublishLibBehavior = ({
           publishSingleLib({
             srcDir: `${sourceDir}/${packageDir}`,
             outDir: `${dir}/dist/${packageDir}`,
+            packageDir,
             version,
             registry,
           }).events$,

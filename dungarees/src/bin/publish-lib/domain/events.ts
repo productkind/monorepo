@@ -6,7 +6,12 @@ type PublishLibEventPayloads = {
   'package-json-written': { path: string; version: string }
   'asset-copied': { path: string }
   'publish-succeeded': undefined
-  'publish-failed': { exitCode: number | undefined; stderror: string | undefined }
+  'publish-failed': {
+    packageDir: string
+    exitCode: number | undefined
+    stderror: string | undefined
+  }
+  'publishes-failed': { packageDirs: string[] }
   'all-published': undefined
 }
 

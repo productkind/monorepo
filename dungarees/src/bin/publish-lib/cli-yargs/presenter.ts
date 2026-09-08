@@ -1,5 +1,5 @@
 import type { PublishLibEvent } from '@dungarees/bin-publish-lib-domain/events.ts'
-import { stderr, stdout } from '@dungarees/cli/utils.ts'
+import { exit, stderr, stdout } from '@dungarees/cli/utils.ts'
 import type { Presenter } from '@dungarees/cli/yargs-prompt-app.ts'
 
 export const publishLibPresenter: Presenter<PublishLibEvent> = {
@@ -12,7 +12,8 @@ export const publishLibPresenter: Presenter<PublishLibEvent> = {
     stdout(`Package.json written to ${path}/package.json with version: ${version}`),
   'asset-copied': ({ path }) => stdout(`Asset copied to ${path}`),
   'publish-succeeded': () => stdout('Published successfully'),
-  'publish-failed': ({ exitCode, stderror }) =>
-    stderr(`Publish failed with exit code ${exitCode}, and error: ${stderror}`),
+  'publish-failed': ({ packageDir, exitCode, stderror }) =>
+    stderr(`Publish failed for ${packageDir} with exit code ${exitCode}, and error: ${stderror}`),
+  'publishes-failed': () => exit(1),
   'all-published': () => stdout('All packages published successfully'),
 }

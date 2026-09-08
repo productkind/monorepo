@@ -48,21 +48,37 @@ const MULTI_LIB = {
   '/multi-lib/src/sub/lib-2/utils.ts': srcFile4,
 }
 
-const createDungareesApp = ({ npmArgs }: { npmArgs: string[] }) =>
+const createDungareesApp = ({
+  npmPublishArgs,
+  npmPublishExitCode = 0,
+  npmPublishStdError,
+}: {
+  npmPublishArgs: string[]
+  npmPublishExitCode?: number
+  npmPublishStdError?: string
+}) =>
   createTestApp({
     files: MULTI_LIB,
     commands: [
       {
         command: 'npm',
-        args: npmArgs,
-        stdout: 'Published successfully',
-        exitCode: 0,
+        args: npmPublishArgs,
+        stdout: npmPublishExitCode === 0 ? 'Published successfully' : '',
+        ...(npmPublishStdError === undefined ? {} : { stderror: npmPublishStdError }),
+        exitCode: npmPublishExitCode,
       },
     ],
   })
 
+const SUCCESS_TAIL = [
+  { type: 'stdout', message: 'All packages published successfully', level: 'info' },
+  { type: 'exit', code: 0 },
+]
+
 test('publish-multi-lib publishes the folder and reports success, then exits 0', async () => {
-  const { app, executedCommands } = createDungareesApp({ npmArgs: PUBLISH_ARGS_WITH_REGISTRY })
+  const { app, executedCommands } = createDungareesApp({
+    npmPublishArgs: PUBLISH_ARGS_WITH_REGISTRY,
+  })
 
   const { terminal } = renderCli(
     app,
@@ -70,10 +86,12 @@ test('publish-multi-lib publishes the folder and reports success, then exits 0',
   )
   const output = await terminal.step()
 
-  expect(output).toEqual([
-    { type: 'stdout', message: 'All packages published successfully', level: 'info' },
-    { type: 'exit', code: 0 },
-  ])
+  expect(output.slice(-2)).toEqual(SUCCESS_TAIL)
+  expect(output).toContainEqual({
+    type: 'stdout',
+    message: 'Published successfully',
+    level: 'info',
+  })
   expect(executedCommands).toContainEqual({
     command: 'npm',
     args: PUBLISH_ARGS_WITH_REGISTRY,
@@ -82,18 +100,38 @@ test('publish-multi-lib publishes the folder and reports success, then exits 0',
 })
 
 test('publish-multi-lib omits the registry flag when none is given', async () => {
-  const { app, executedCommands } = createDungareesApp({ npmArgs: PUBLISH_ARGS })
+  const { app, executedCommands } = createDungareesApp({ npmPublishArgs: PUBLISH_ARGS })
 
   const { terminal } = renderCli(app, 'dungarees publish-multi-lib /multi-lib')
   const output = await terminal.step()
 
-  expect(output).toEqual([
-    { type: 'stdout', message: 'All packages published successfully', level: 'info' },
-    { type: 'exit', code: 0 },
-  ])
+  expect(output.slice(-2)).toEqual(SUCCESS_TAIL)
   expect(executedCommands).toContainEqual({
     command: 'npm',
     args: PUBLISH_ARGS,
     options: { cwd: '/multi-lib/dist/lib-1' },
   })
+})
+
+test('publish-multi-lib names each failed package and exits non-zero', async () => {
+  const { app } = createDungareesApp({
+    npmPublishArgs: PUBLISH_ARGS,
+    npmPublishExitCode: 1,
+    npmPublishStdError: 'You cannot publish over the previously published versions',
+  })
+
+  const { terminal } = renderCli(app, 'dungarees publish-multi-lib /multi-lib')
+  const output = await terminal.step()
+
+  expect(output.at(-1)).toEqual({ type: 'exit', code: 1 })
+  expect(output).not.toContainEqual({
+    type: 'stdout',
+    message: 'All packages published successfully',
+    level: 'info',
+  })
+  expect(
+    output.filter(
+      (message) => message.type === 'stderr' && message.message.startsWith('Publish failed for'),
+    ),
+  ).toHaveLength(2)
 })

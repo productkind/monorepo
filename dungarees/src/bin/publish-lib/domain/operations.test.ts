@@ -260,22 +260,31 @@ mtest('transformPackageJson with invalid JSON', ({ expect, coldStepAndClose }) =
 })
 
 mtest('publishLib with successful exit code', ({ expect, coldStepAndClose }) => {
-  const publish$ = publishLib(() => coldStepAndClose({ exitCode: 0, stderror: undefined }))
+  const publish$ = publishLib({
+    publishFactory: () => coldStepAndClose({ exitCode: 0, stderror: undefined }),
+    packageDir: 'lib-1',
+  })
   expect(publish$).toBeObservableStepAndClose(eventCreators.publishSucceeded())
 })
 
 mtest('publishLib with failed exit code', ({ expect, coldStepAndClose }) => {
-  const publish$ = publishLib(() => coldStepAndClose({ exitCode: 1, stderror: 'Some error' }))
+  const publish$ = publishLib({
+    publishFactory: () => coldStepAndClose({ exitCode: 1, stderror: 'Some error' }),
+    packageDir: 'lib-1',
+  })
   expect(publish$).toBeObservableStepAndClose(
-    eventCreators.publishFailed({ exitCode: 1, stderror: 'Some error' }),
+    eventCreators.publishFailed({ packageDir: 'lib-1', exitCode: 1, stderror: 'Some error' }),
   )
 })
 
 mtest('publishLib defers executing the command', ({ expect: mexpect, coldStepAndClose }) => {
   let commandExecuted = false
-  const publish$ = publishLib(() => {
-    commandExecuted = true
-    return coldStepAndClose({ exitCode: 0, stderror: undefined })
+  const publish$ = publishLib({
+    publishFactory: () => {
+      commandExecuted = true
+      return coldStepAndClose({ exitCode: 0, stderror: undefined })
+    },
+    packageDir: 'lib-1',
   })
   expect(commandExecuted).toBe(false)
   mexpect(publish$).toBeObservableStepAndClose(eventCreators.publishSucceeded())
@@ -283,7 +292,7 @@ mtest('publishLib defers executing the command', ({ expect: mexpect, coldStepAnd
 
 mtest('publishLib with error', ({ expect, coldError }) => {
   const input$ = coldError(new Error('Network timeout'))
-  const publish$ = publishLib(() => input$)
+  const publish$ = publishLib({ publishFactory: () => input$, packageDir: 'lib-1' })
   expect(publish$).toBeObservableError(new Error('Error publishing library: Network timeout'))
 })
 
@@ -357,15 +366,52 @@ mtest('getPackageDirsWithVersion errors when version.json is not valid JSON', ({
 })
 
 mtest(
-  'publishAllPackages emits all-published event after all packages publish',
+  'publishAllPackages passes each package event through, then reports all published',
   ({ expect, coldStepAndClose }) => {
     const publishPackage = () => coldStepAndClose(eventCreators.publishSucceeded())
     const publishAll$ = of({ packageDirs: ['lib-1', 'lib-2'], version: '1.0.0' }).pipe(
       publishAllPackages(publishPackage),
     )
-    expect(publishAll$).toBeObservableStepAndClose(eventCreators.allPublished())
+    expect(publishAll$).toBeObservable('-(abc|)', {
+      a: eventCreators.publishSucceeded(),
+      b: eventCreators.publishSucceeded(),
+      c: eventCreators.allPublished(),
+    })
   },
 )
+
+test('publishAllPackages reports the packages that failed', async () => {
+  const publishAll$ = of({ packageDirs: ['lib-1', 'lib-2'], version: '1.0.0' }).pipe(
+    publishAllPackages(({ packageDir }) =>
+      of(
+        packageDir === 'lib-1'
+          ? eventCreators.publishSucceeded()
+          : eventCreators.publishFailed({ packageDir, exitCode: 1, stderror: 'nope' }),
+      ),
+    ),
+  )
+
+  expect(await collectValuesFrom(publishAll$)).toEqual([
+    eventCreators.publishSucceeded(),
+    eventCreators.publishFailed({ packageDir: 'lib-2', exitCode: 1, stderror: 'nope' }),
+    eventCreators.publishesFailed({ packageDirs: ['lib-2'] }),
+  ])
+})
+
+test('publishAllPackages turns a thrown package error into that package failing', async () => {
+  const publishAll$ = of({ packageDirs: ['lib-1'], version: '1.0.0' }).pipe(
+    publishAllPackages(() => throwError(() => new Error('Build blew up'))),
+  )
+
+  expect(await collectValuesFrom(publishAll$)).toEqual([
+    eventCreators.publishFailed({
+      packageDir: 'lib-1',
+      exitCode: undefined,
+      stderror: 'Build blew up',
+    }),
+    eventCreators.publishesFailed({ packageDirs: ['lib-1'] }),
+  ])
+})
 
 test('publishAllPackages passes packageDir and version to each publish call', async () => {
   const publishedArgs: Array<{ packageDir: string; version: string }> = []
