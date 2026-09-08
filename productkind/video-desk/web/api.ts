@@ -91,9 +91,33 @@ export const setFlag = (options: {
   flagged: boolean
 }): Promise<{ flags: Record<string, { src: string }> }> => json('/api/flag', options)
 
-export const assetUrl = (options: { video: string; src: string }): string =>
-  `/api/asset/${options.video}/${options.src}`
+/**
+ * The version rides along in the URL.
+ *
+ * A pick can replace a section's visual without changing its filename — the name comes from the
+ * search, and two candidates from one search share it — so without this the browser keeps showing
+ * the file it already had and the change looks like it never happened.
+ */
+const versioned = ({ url, version }: { url: string; version: number | null }): string =>
+  version === null ? url : `${url}?v=${String(version)}`
+
+export const assetUrl = (options: {
+  video: string
+  src: string
+  version?: number | null
+}): string =>
+  versioned({
+    url: `/api/asset/${options.video}/${options.src}`,
+    version: options.version ?? null,
+  })
 
 /** A frame from a clip. A list of clips otherwise shows empty boxes until each one decodes. */
-export const posterUrl = (options: { video: string; src: string }): string =>
-  `/api/poster/${options.video}/${options.src}.jpg`
+export const posterUrl = (options: {
+  video: string
+  src: string
+  version?: number | null
+}): string =>
+  versioned({
+    url: `/api/poster/${options.video}/${options.src}.jpg`,
+    version: options.version ?? null,
+  })

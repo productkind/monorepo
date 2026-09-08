@@ -109,6 +109,7 @@ export const App: React.FC = () => {
                 kind={section.kind}
                 color={section.color}
                 size={56}
+                version={section.version}
               />
               <span>
                 <span className="section-index">

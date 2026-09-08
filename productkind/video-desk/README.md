@@ -88,6 +88,13 @@ repeated video 5. Forty sections predate ids being kept and carry a provider and
 - Video previews rely on range requests, which the api serves, plus a poster frame built on demand
   and cached outside the repo — a tab that is not really visible has its media loading throttled,
   and a poster shows the footage regardless.
+- **A pick reuses the filename** when the search is the same, because the name comes from the last
+  two words of the term. The file underneath is replaced, so every preview URL carries the file's
+  mtime and the poster is rebuilt when the clip is newer than it. Without that a swap looks like
+  nothing happened. Giving each pick a distinct name would be the tidier fix, but the skills' own
+  `section-NN-keyword` convention would have to change with it.
+- The api is a plain node process, so a change to `domain/` or `services/` needs it restarted;
+  only the front end hot-reloads.
 - Reading a gif through the filesystem service goes via latin1 text, because that service reads
   text. It is byte-exact but it copies more than a binary read would.
 - `video-generator` has no `"type": "module"`, so node prints a reparse warning when the api

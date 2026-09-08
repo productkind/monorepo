@@ -1,5 +1,5 @@
 import { execFile } from 'node:child_process'
-import { mkdtemp, rm } from 'node:fs/promises'
+import { mkdtemp, rm, stat } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { promisify } from 'node:util'
 
@@ -145,6 +145,14 @@ export const createDeskIo = ({
 
     assetPath: ({ video, name }) => `${assets(video)}/${name}`,
 
+    assetVersion: async ({ video, name }) => {
+      try {
+        return Math.round((await stat(`${assets(video)}/${name}`)).mtimeMs)
+      } catch {
+        return null
+      }
+    },
+
     removeAsset: async ({ video, name }) => {
       await rm(`${assets(video)}/${name}`, { force: true })
     },
@@ -245,7 +253,13 @@ export const createDeskIo = ({
       // Derived, so it lives in the throwaway cache rather than in the repo beside the footage.
       const folder = `${cache}/${video}`
       const out = `${folder}/${name}.poster.jpg`
-      if (await readTextOrNull({ path: out }) !== null) {
+      // Rebuilt when the clip is newer than the poster: a pick can replace the footage without
+      // changing its name, and a poster kept from the old file would show the wrong beat.
+      const [clipStat, posterStat] = await Promise.all([
+        stat(`${assets(video)}/${name}`).catch(() => null),
+        stat(out).catch(() => null),
+      ])
+      if (clipStat !== null && posterStat !== null && posterStat.mtimeMs > clipStat.mtimeMs) {
         return out
       }
       await fileSystem.mkdirAsync(folder)

@@ -186,6 +186,7 @@ export const SectionPanel: React.FC<{
             kind={measured.kind}
             color={measured.color}
             size={96}
+            version={measured.version}
           />
           <div>
             <div className="num" style={{ fontSize: 12 }}>
