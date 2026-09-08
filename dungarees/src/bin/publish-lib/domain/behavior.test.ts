@@ -4,9 +4,26 @@ import { eventCreators } from './events.ts'
 import { createCliCommands } from '@dungarees/cli-command/service.ts'
 import { createFakeFileSystem } from '@dungarees/fs/fake.ts'
 import { collectValuesFrom } from '@dungarees/rxjs/util.ts'
-import { createFakeSubProcessService } from '@dungarees/sub-process/fake.ts'
+import { createFakeSubProcessService, type ExecutedCommand } from '@dungarees/sub-process/fake.ts'
 
 import { expect, test } from 'vitest'
+
+// npm exits non-zero for a version the registry does not have, which is what lets a publish run.
+const notPublished = (nameAndVersion: string) => ({
+  command: 'npm',
+  args: ['view', nameAndVersion, 'version'],
+  stdout: '',
+  stderror: 'E404 Not found',
+  exitCode: 1,
+})
+
+const publishedDirs = (commands: ExecutedCommand[]) =>
+  commands
+    .filter(({ args }) => args[0] === 'publish')
+    .map(({ options }) => options?.cwd)
+    .sort()
+
+const NOT_PUBLISHED_TWO_LIBS = [notPublished('@org/lib-1@1.0.0'), notPublished('@org/lib-2@1.0.0')]
 
 test('build without version input', async () => {
   const fileSystem = createFakeFileSystem({
@@ -93,6 +110,7 @@ test('publish single lib', async () => {
     '/src/index.ts': 'console.log("Single lib")',
   })
   const { subProcess, executedCommands } = createFakeSubProcessService([
+    notPublished('single-lib@0.1.0'),
     {
       command: 'npm',
       args: ['publish', '--access', 'public'],
@@ -185,6 +203,7 @@ test('publish a multi-lib folder', async () => {
     '/multi-lib/src/sub/lib-2/utils.ts': srcFile4,
   })
   const { subProcess, executedCommands } = createFakeSubProcessService([
+    ...NOT_PUBLISHED_TWO_LIBS,
     {
       command: 'npm',
       args: ['publish', '--access', 'public'],
@@ -243,6 +262,7 @@ test('a package marked private is not published', async () => {
     '/multi-lib/src/fake-app/fake.ts': 'export const fake = 1\n',
   })
   const { subProcess, executedCommands } = createFakeSubProcessService([
+    ...NOT_PUBLISHED_TWO_LIBS,
     {
       command: 'npm',
       args: ['publish', '--access', 'public'],
@@ -259,7 +279,7 @@ test('a package marked private is not published', async () => {
     service.publishMultiLib({ dir: '/multi-lib', registry: undefined }).events$,
   )
 
-  expect(executedCommands.map(({ options }) => options?.cwd)).toEqual(['/multi-lib/dist/lib-1'])
+  expect(publishedDirs(executedCommands)).toEqual(['/multi-lib/dist/lib-1'])
 })
 
 test('build copies declared assets and exports them', async () => {
@@ -316,6 +336,7 @@ test('build copies an asset that sits in a subdirectory', async () => {
 })
 
 const failingNpm = (stderror: string) => [
+  ...NOT_PUBLISHED_TWO_LIBS,
   {
     command: 'npm',
     args: ['publish', '--access', 'public'],
@@ -374,8 +395,53 @@ test('publishMultiLib still attempts every package when one fails', async () => 
 
   await collectValuesFrom(service.publishMultiLib({ dir: '/m', registry: undefined }).events$)
 
-  expect(executedCommands.map(({ options }) => options?.cwd).sort()).toEqual([
-    '/m/dist/lib-1',
-    '/m/dist/lib-2',
+  expect(publishedDirs(executedCommands)).toEqual(['/m/dist/lib-1', '/m/dist/lib-2'])
+})
+
+test('publishMultiLib skips a package whose version is already on the registry', async () => {
+  const fileSystem = createFakeFileSystem({
+    '/m/config/version.json': JSON.stringify({ version: '1.0.0' }),
+    '/m/src/lib-1/package.json': JSON.stringify({ name: '@org/lib-1' }),
+    '/m/src/lib-1/a.ts': 'export const a = 1\n',
+    '/m/src/lib-2/package.json': JSON.stringify({ name: '@org/lib-2' }),
+    '/m/src/lib-2/b.ts': 'export const b = 1\n',
+  })
+  const { subProcess, executedCommands } = createFakeSubProcessService([
+    // lib-1 is already published at this version, lib-2 is not
+    {
+      command: 'npm',
+      args: ['view', '@org/lib-1@1.0.0', 'version'],
+      stdout: '1.0.0',
+      exitCode: 0,
+    },
+    {
+      command: 'npm',
+      args: ['view', '@org/lib-2@1.0.0', 'version'],
+      stdout: '',
+      stderror: 'E404 Not found',
+      exitCode: 1,
+    },
+    {
+      command: 'npm',
+      args: ['publish', '--access', 'public'],
+      stdout: 'Published successfully',
+      exitCode: 0,
+    },
   ])
+  const service = createPublishLibBehavior({
+    fileSystem,
+    cliCommands: createCliCommands(subProcess),
+  })
+
+  const events = await collectValuesFrom(
+    service.publishMultiLib({ dir: '/m', registry: undefined }).events$,
+  )
+
+  expect(events).toContainEqual(
+    eventCreators.publishSkipped({ packageDir: 'lib-1', version: '1.0.0' }),
+  )
+  expect(events.at(-1)).toEqual(eventCreators.allPublished())
+  expect(
+    executedCommands.filter(({ args }) => args[0] === 'publish').map(({ options }) => options?.cwd),
+  ).toEqual(['/m/dist/lib-2'])
 })

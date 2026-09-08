@@ -48,18 +48,36 @@ const MULTI_LIB = {
   '/multi-lib/src/sub/lib-2/utils.ts': srcFile4,
 }
 
+// npm exits non-zero for a version the registry does not have, which is what lets a publish run.
+const notPublished = (nameAndVersion: string, registry: string | undefined) => ({
+  command: 'npm',
+  args: [
+    'view',
+    nameAndVersion,
+    'version',
+    ...(registry === undefined ? [] : ['--registry', registry]),
+  ],
+  stdout: '',
+  stderror: 'E404 Not found',
+  exitCode: 1,
+})
+
 const createDungareesApp = ({
   npmPublishArgs,
   npmPublishExitCode = 0,
   npmPublishStdError,
+  registry,
 }: {
   npmPublishArgs: string[]
   npmPublishExitCode?: number
   npmPublishStdError?: string
+  registry?: string
 }) =>
   createTestApp({
     files: MULTI_LIB,
     commands: [
+      notPublished('@org/lib-1@1.0.0', registry),
+      notPublished('@org/lib-2@1.0.0', registry),
       {
         command: 'npm',
         args: npmPublishArgs,
@@ -78,6 +96,7 @@ const SUCCESS_TAIL = [
 test('publish-multi-lib publishes the folder and reports success, then exits 0', async () => {
   const { app, executedCommands } = createDungareesApp({
     npmPublishArgs: PUBLISH_ARGS_WITH_REGISTRY,
+    registry: REGISTRY,
   })
 
   const { terminal } = renderCli(

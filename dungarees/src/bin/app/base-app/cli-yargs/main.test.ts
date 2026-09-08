@@ -20,6 +20,13 @@ test('main renders the app to the process it was given', async () => {
     commands: [
       {
         command: 'npm',
+        args: ['view', '@org/lib-1@1.0.0', 'version'],
+        stdout: '',
+        stderror: 'E404 Not found',
+        exitCode: 1,
+      },
+      {
+        command: 'npm',
         args: ['publish', '--access', 'public'],
         stdout: 'Published successfully',
         exitCode: 0,

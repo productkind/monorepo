@@ -12,6 +12,8 @@ export const publishLibPresenter: Presenter<PublishLibEvent> = {
     stdout(`Package.json written to ${path}/package.json with version: ${version}`),
   'asset-copied': ({ path }) => stdout(`Asset copied to ${path}`),
   'publish-succeeded': () => stdout('Published successfully'),
+  'publish-skipped': ({ packageDir, version }) =>
+    stdout(`Skipped ${packageDir}: version ${version} is already published`),
   'publish-failed': ({ packageDir, exitCode, stderror }) =>
     stderr(`Publish failed for ${packageDir} with exit code ${exitCode}, and error: ${stderror}`),
   'publishes-failed': () => exit(1),
