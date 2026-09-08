@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
 
-import type { Candidate, Section } from './api'
-import { assetUrl, measureSection, pickGif, searchGifs, setFlag } from './api'
-import { fitBadge, motionBadge, seconds } from './badges'
+import type { Candidate, ClipCandidate, Section } from './api'
+import { measureSection, pickClip, pickGif, searchGifs, searchStock, setFlag } from './api'
+import { clipBadge, fitBadge, motionBadge, seconds } from './badges'
 import { BadgeRow } from './BadgeRow'
 import { CandidateGrid } from './CandidateGrid'
+import { ClipGrid } from './ClipGrid'
+import { VisualPreview } from './VisualPreview'
 
 /** Enough to name a file by, from whatever was searched for: `woman raising hand` -> `raising-hand`. */
 const nameFrom = ({ term }: { term: string }): string =>
@@ -16,6 +18,9 @@ const nameFrom = ({ term }: { term: string }): string =>
     .slice(-2)
     .join('-') || 'gif'
 
+const splitTerms = ({ text }: { text: string }): string[] =>
+  text.split(/\s*[,;]\s*/).filter((term) => term.length > 0)
+
 export const SectionPanel: React.FC<{
   video: string
   section: Section
@@ -23,8 +28,11 @@ export const SectionPanel: React.FC<{
 }> = ({ video, section, onChanged }) => {
   const [measured, setMeasured] = useState<Section>(section)
   const [terms, setTerms] = useState(section.search ?? '')
-  const [provider, setProvider] = useState('auto')
+  // A clip section searches the stock catalogues; a gif section searches the gif ones.
+  const stock = section.kind === 'clip'
+  const [provider, setProvider] = useState(stock ? 'pexels' : 'auto')
   const [candidates, setCandidates] = useState<Candidate[]>([])
+  const [clips, setClips] = useState<ClipCandidate[]>([])
   const [searching, setSearching] = useState(false)
   const [busy, setBusy] = useState<string | null>(null)
   const [problem, setProblem] = useState<string | null>(null)
@@ -35,6 +43,7 @@ export const SectionPanel: React.FC<{
     setMeasured(section)
     setTerms(section.search ?? '')
     setCandidates([])
+    setClips([])
     setProblem(null)
     let current = true
     measureSection({ video, section: section.index })
@@ -56,10 +65,29 @@ export const SectionPanel: React.FC<{
   const search = () => {
     setSearching(true)
     setProblem(null)
+    const searched = splitTerms({ text: terms })
+    if (stock) {
+      searchStock({ video, section: section.index, terms: searched, provider, show: 12 })
+        .then((result) => {
+          setClips(result.clips)
+          if (result.clips.length === 0) {
+            setProblem(
+              'Nothing came back long enough to cover the beat. Try different words, or pixabay.',
+            )
+          }
+        })
+        .catch((error: unknown) => {
+          setProblem(String(error))
+        })
+        .finally(() => {
+          setSearching(false)
+        })
+      return
+    }
     searchGifs({
       video,
       section: section.index,
-      terms: terms.split(/\s*[,;]\s*/).filter((term) => term.length > 0),
+      terms: searched,
       provider,
       show: 12,
     })
@@ -74,6 +102,31 @@ export const SectionPanel: React.FC<{
       })
       .finally(() => {
         setSearching(false)
+      })
+  }
+
+  const takeClip = (clip: ClipCandidate) => {
+    setBusy(clip.id)
+    setProblem(null)
+    pickClip({
+      video,
+      section: section.index,
+      id: clip.id,
+      term: clip.term,
+      author: clip.author,
+      provider: clip.provider,
+      downloadUrl: clip.downloadUrl,
+    })
+      .then((result) => {
+        setMeasured(result.section)
+        onChanged(result.section)
+        setClips([])
+      })
+      .catch((error: unknown) => {
+        setProblem(String(error))
+      })
+      .finally(() => {
+        setBusy(null)
       })
   }
 
@@ -127,32 +180,55 @@ export const SectionPanel: React.FC<{
         <p className="spoken">{section.text}</p>
 
         <div className="controls">
-          <img
-            src={assetUrl({ video, src: measured.src })}
-            alt={measured.src}
-            width={96}
-            height={96}
-            style={{ objectFit: 'contain', background: measured.color ?? '#1a0044' }}
+          <VisualPreview
+            video={video}
+            src={measured.src}
+            kind={measured.kind}
+            color={measured.color}
+            size={96}
           />
           <div>
             <div className="num" style={{ fontSize: 12 }}>
               {measured.src}
             </div>
             <BadgeRow
-              badges={[
-                fitBadge({ repeats: measured.repeats, seam: measured.seam }),
-                measured.motion === undefined
-                  ? { text: 'measuring…', tone: 'plain' }
-                  : motionBadge({ motion: measured.motion }),
-                measured.playbackRate === null
-                  ? undefined
-                  : { text: `rate ${measured.playbackRate}`, tone: 'plain' },
-                measured.color === null ? undefined : { text: measured.color, tone: 'plain' },
-                measured.seam === undefined
-                  ? undefined
-                  : { text: `seam ${measured.seam.toFixed(2)}`, tone: 'plain' },
-              ]}
+              badges={
+                measured.kind === 'clip'
+                  ? [
+                      clipBadge({ headroom: measured.clip?.headroom }),
+                      { text: 'clip', tone: 'plain' },
+                      measured.width === undefined
+                        ? undefined
+                        : {
+                            text: `${String(measured.width)}x${String(measured.height ?? 0)}`,
+                            tone: 'plain',
+                          },
+                      measured.source?.author === undefined
+                        ? undefined
+                        : { text: `by ${measured.source.author}`, tone: 'plain' },
+                    ]
+                  : [
+                      fitBadge({ repeats: measured.repeats, seam: measured.seam }),
+                      measured.motion === undefined
+                        ? { text: 'measuring…', tone: 'plain' }
+                        : motionBadge({ motion: measured.motion }),
+                      measured.playbackRate === null
+                        ? undefined
+                        : { text: `rate ${measured.playbackRate}`, tone: 'plain' },
+                      measured.color === null
+                        ? undefined
+                        : { text: measured.color, tone: 'plain' },
+                      measured.seam === undefined
+                        ? undefined
+                        : { text: `seam ${measured.seam.toFixed(2)}`, tone: 'plain' },
+                    ]
+              }
             />
+            {measured.kind === 'clip' && measured.clip !== undefined ? (
+              <span className={measured.clip.covers ? 'badge' : 'badge bad'}>
+                {measured.clip.why}
+              </span>
+            ) : null}
             {measured.edgeColour !== undefined &&
             measured.edgeColour !== null &&
             measured.edgeColour !== measured.color ? (
@@ -191,9 +267,18 @@ export const SectionPanel: React.FC<{
               setProvider(event.target.value)
             }}
           >
-            <option value="auto">giphy, then klipy</option>
-            <option value="giphy">giphy only</option>
-            <option value="klipy">klipy only</option>
+            {stock ? (
+              <>
+                <option value="pexels">pexels</option>
+                <option value="pixabay">pixabay</option>
+              </>
+            ) : (
+              <>
+                <option value="auto">giphy, then klipy</option>
+                <option value="giphy">giphy only</option>
+                <option value="klipy">klipy only</option>
+              </>
+            )}
           </select>
           <button type="button" className="action" disabled={searching} onClick={search}>
             {searching ? 'searching…' : 'search'}
@@ -202,7 +287,11 @@ export const SectionPanel: React.FC<{
 
         {problem === null ? null : <p className="problem">{problem}</p>}
 
-        <CandidateGrid candidates={candidates} busy={busy} onPick={pick} />
+        {stock ? (
+          <ClipGrid clips={clips} busy={busy} onPick={takeClip} />
+        ) : (
+          <CandidateGrid candidates={candidates} busy={busy} onPick={pick} />
+        )}
       </div>
     </section>
   )

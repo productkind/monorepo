@@ -85,9 +85,10 @@ export const findOwnerDir = ({
 }): string | undefined =>
   dirs
     .filter((dir) => filePath.startsWith(`${dir}/`))
-    .reduce<
-      string | undefined
-    >((deepest, dir) => (deepest === undefined || dir.length > deepest.length ? dir : deepest), undefined)
+    .reduce<string | undefined>(
+      (deepest, dir) => (deepest === undefined || dir.length > deepest.length ? dir : deepest),
+      undefined,
+    )
 
 export const isOutsideNodeModules = (filePath: string): boolean =>
   !filePath.split('/').includes('node_modules')

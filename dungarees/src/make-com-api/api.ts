@@ -51,9 +51,7 @@ export type ScenarioApiActionEndpoint = RestEndpoint<
 >
 
 export type ScenarioApi =
-  | ScenarioApiListEndpoint
-  | ScenarioApiSingleEndpoint
-  | ScenarioApiActionEndpoint
+  ScenarioApiListEndpoint | ScenarioApiSingleEndpoint | ScenarioApiActionEndpoint
 
 export type ScenarioApiClient = ReturnType<typeof createJsonRestClient<ScenarioApi>>
 

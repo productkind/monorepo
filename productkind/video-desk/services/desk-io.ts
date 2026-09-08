@@ -145,6 +145,10 @@ export const createDeskIo = ({
 
     assetPath: ({ video, name }) => `${assets(video)}/${name}`,
 
+    removeAsset: async ({ video, name }) => {
+      await rm(`${assets(video)}/${name}`, { force: true })
+    },
+
     readCandidate: ({ video, id }) => readBytesOrNull({ path: `${cache}/${video}/${id}.gif` }),
 
     writeCandidate: async ({ video, id, bytes }) => {
@@ -154,8 +158,9 @@ export const createDeskIo = ({
 
     candidatePath: ({ video, id }) => `${cache}/${video}/${id}.gif`,
 
-    fetchJson: async ({ url }) => {
-      const response = await http.fetch(url)
+    fetchJson: async ({ url, headers }) => {
+      // Pexels authorises with a header rather than a query parameter.
+      const response = await http.fetch(url, headers === undefined ? {} : { headers })
       return response.json()
     },
 
@@ -236,6 +241,77 @@ export const createDeskIo = ({
       }
     },
 
+    posterFrame: async ({ video, name }) => {
+      // Derived, so it lives in the throwaway cache rather than in the repo beside the footage.
+      const folder = `${cache}/${video}`
+      const out = `${folder}/${name}.poster.jpg`
+      if (await readTextOrNull({ path: out }) !== null) {
+        return out
+      }
+      await fileSystem.mkdirAsync(folder)
+      try {
+        // A second in, because the first frame of stock footage is often a fade from black.
+        await run(
+          'ffmpeg',
+          ['-y', '-v', 'error', '-ss', '1', '-i', assets(video) + `/${name}`, '-frames:v', '1',
+           '-vf', 'scale=-2:320', out],
+          { maxBuffer: 1 << 22 },
+        )
+        return out
+      } catch {
+        return null
+      }
+    },
+
+    trimClip: async ({ from, to, seconds }) => {
+      // The stock pipeline's own encode: H.264 at CRF 23, BT.709 tags, no audio and no grade.
+      // Stock arrives as SDR BT.709 already, and grading it again over-saturates it.
+      await run(
+        'ffmpeg',
+        ['-y', '-v', 'error', '-i', from, '-t', seconds.toFixed(2), '-an',
+         '-c:v', 'libx264', '-crf', '23', '-preset', 'veryfast', '-pix_fmt', 'yuv420p',
+         '-color_primaries', 'bt709', '-color_trc', 'bt709', '-colorspace', 'bt709', to],
+        { maxBuffer: 1 << 24 },
+      )
+    },
+
+    pexelsKey: () => env.PEXELS_API_KEY,
+
+    pixabayKey: () => env.PIXABAY_API_KEY,
+
+    videoSeconds: async ({ path }) => {
+      // ffprobe rather than ImageMagick: an mp4's length is in its container, and magick would
+      // decode the whole thing to answer.
+      try {
+        const { stdout } = await run(
+          'ffprobe',
+          ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', path],
+          { maxBuffer: 1 << 20 },
+        )
+        const seconds = Number(stdout.trim())
+        return Number.isFinite(seconds) ? Math.round(seconds * 100) / 100 : null
+      } catch {
+        return null
+      }
+    },
+
+    videoSize: async ({ path }) => {
+      try {
+        const { stdout } = await run(
+          'ffprobe',
+          ['-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=width,height',
+           '-of', 'csv=p=0:s=x', path],
+          { maxBuffer: 1 << 20 },
+        )
+        const [width, height] = stdout.trim().split('x').map(Number)
+        return width === undefined || height === undefined || !Number.isFinite(width)
+          ? null
+          : { width, height }
+      } catch {
+        return null
+      }
+    },
+
     applyVisual: async ({ video, section, visual }) => {
       // The video package's own command, so the one piece of code that rewrites a hand-authored
       // definition stays where its tests are. Spawned rather than imported: that package's
@@ -244,12 +320,21 @@ export const createDeskIo = ({
         'run', '--silent', 'apply-visual', '--',
         '--video', video,
         '--section', String(section),
+        '--kind', visual.kind,
         '--src', visual.src,
         '--provider', visual.source.provider,
         '--search', visual.source.search,
         ...(visual.source.id === undefined ? [] : ['--id', visual.source.id]),
-        ...(visual.color === undefined ? [] : ['--color', visual.color]),
-        ...(visual.playbackRate === undefined ? [] : ['--rate', String(visual.playbackRate)]),
+        ...(visual.source.author === undefined ? [] : ['--author', visual.source.author]),
+        // A gif takes a letterbox colour and a rate; a clip takes an in-point. Neither takes the
+        // other's, and the definition would not typecheck if it did.
+        ...(visual.kind === 'gif' && visual.color !== undefined ? ['--color', visual.color] : []),
+        ...(visual.kind === 'gif' && visual.playbackRate !== undefined
+          ? ['--rate', String(visual.playbackRate)]
+          : []),
+        ...(visual.kind === 'clip' && visual.trimBefore !== undefined
+          ? ['--trim', String(visual.trimBefore)]
+          : []),
       ]
       const { stderr } = await run('npm', args, { cwd: config.videoPackage, maxBuffer: 1 << 24 })
       if (stderr.trim() !== '') {

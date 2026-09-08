@@ -76,11 +76,10 @@ type PathsHelper<OBJECT, PATH extends string, ACC extends string> =
   | {
       [K in keyof OBJECT & string]: PATH extends ''
         ? K | (OBJECT[K] extends Record<string, unknown> ? PathsHelper<OBJECT[K], K, K> : never)
-        :
-            | `${PATH}.${K}`
-            | (OBJECT[K] extends Record<string, unknown>
-                ? PathsHelper<OBJECT[K], `${PATH}.${K}`, `${PATH}.${K}` | ACC>
-                : never)
+        : | `${PATH}.${K}`
+          | (OBJECT[K] extends Record<string, unknown>
+              ? PathsHelper<OBJECT[K], `${PATH}.${K}`, `${PATH}.${K}` | ACC>
+              : never)
     }[keyof OBJECT & string]
   | ACC
 

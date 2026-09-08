@@ -1,52 +1,26 @@
-/** Everything the desk knows comes from the API; nothing about gifs is decided in the browser. */
+/**
+ * Everything the desk knows comes from the API; nothing about a gif or a clip is decided here.
+ *
+ * The shapes are the domain's own, imported rather than restated: a second copy of `Section` is
+ * how the front end came to not know that a section has a kind.
+ */
 
-export type Fit = { rate: number | null; why: string }
+export type {
+  Candidate,
+  ClipCandidate,
+  Fit,
+  Section,
+  VideoDetail,
+  VideoSummary,
+} from '../domain/types.ts'
 
-export type Section = {
-  index: number
-  text: string
-  src: string
-  color: string | null
-  playbackRate: number | null
-  search: string | null
-  slotSeconds: number | null
-  gifSeconds: number | null
-  repeats: number | null
-  flagged: boolean
-  exists: boolean
-  /** Only present once the section has been measured. */
-  motion?: number
-  seam?: number
-  edgeColour?: string | null
-  edgeCoverage?: number | null
-  width?: number
-  height?: number
-  fit?: Fit
-}
-
-export type VideoSummary = {
-  id: string
-  sections: number
-  flagged: number
-  narrated: boolean
-}
-
-export type VideoDetail = { id: string; narrated: boolean; sections: Section[] }
-
-export type Candidate = {
-  id: string
-  term: string
-  title: string
-  seconds: number
-  frames: number
-  size: string
-  repeats: number
-  motion: number
-  usedIn: string[]
-  fit: Fit
-  gifUrl: string
-  stripUrl: string
-}
+import type {
+  Candidate,
+  ClipCandidate,
+  Section,
+  VideoDetail,
+  VideoSummary,
+} from '../domain/types.ts'
 
 const json = async <RESULT>(path: string, body?: unknown): Promise<RESULT> => {
   const response = await fetch(
@@ -84,6 +58,24 @@ export const searchGifs = (options: {
   show: number
 }): Promise<{ candidates: Candidate[]; slot: number | null }> => json('/api/search', options)
 
+export const searchStock = (options: {
+  video: string
+  section: number
+  terms: string[]
+  provider: string
+  show: number
+}): Promise<{ clips: ClipCandidate[]; slot: number }> => json('/api/search-stock', options)
+
+export const pickClip = (options: {
+  video: string
+  section: number
+  id: string
+  term: string
+  author: string
+  provider: string
+  downloadUrl: string
+}): Promise<{ section: Section; applied: string }> => json('/api/pick-clip', options)
+
 export const pickGif = (options: {
   video: string
   section: number
@@ -101,3 +93,7 @@ export const setFlag = (options: {
 
 export const assetUrl = (options: { video: string; src: string }): string =>
   `/api/asset/${options.video}/${options.src}`
+
+/** A frame from a clip. A list of clips otherwise shows empty boxes until each one decodes. */
+export const posterUrl = (options: { video: string; src: string }): string =>
+  `/api/poster/${options.video}/${options.src}.jpg`

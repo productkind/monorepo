@@ -79,8 +79,7 @@ export const createTestEnvironment = <const SERVICES extends Record<string, Serv
     hasHook: (config: DefaultConfig) => boolean
     mapper: (
       service: { name: GetKey<Interactor> | GetKey<Runner> } & (
-        | InteractorInstance
-        | RunnerInstance
+        InteractorInstance | RunnerInstance
       ),
     ) => Promise<void>
   }): Promise<void> => {
@@ -93,8 +92,7 @@ export const createTestEnvironment = <const SERVICES extends Record<string, Serv
   const forEachBeforeAllService = async (
     mapper: (
       service: { name: GetKey<Interactor> | GetKey<Runner> } & (
-        | InteractorInstance
-        | RunnerInstance
+        InteractorInstance | RunnerInstance
       ),
     ) => Promise<void>,
   ): Promise<void> => await forEachService({ hasHook: isBeforeAll, mapper })
@@ -102,8 +100,7 @@ export const createTestEnvironment = <const SERVICES extends Record<string, Serv
   const forEachScenarioService = async (
     mapper: (
       service: { name: GetKey<Interactor> | GetKey<Runner> } & (
-        | InteractorInstance
-        | RunnerInstance
+        InteractorInstance | RunnerInstance
       ),
     ) => Promise<void>,
   ): Promise<void> => await forEachService({ hasHook: isNotBeforeAll, mapper })

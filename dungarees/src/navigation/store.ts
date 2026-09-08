@@ -18,9 +18,7 @@ export type NavigationEventAppNavigation = NavigationStoreEvent<'appNavigation'>
 export type NavigationEventPlatformNavigation = NavigationStoreEvent<'platformNavigation'>
 
 export type NavigationEvent =
-  | NavigationEventChangeLocation
-  | NavigationEventAppNavigation
-  | NavigationEventPlatformNavigation
+  NavigationEventChangeLocation | NavigationEventAppNavigation | NavigationEventPlatformNavigation
 
 const INITIAL_STATE: NavigationState = {
   pathname: '/',

@@ -36,6 +36,7 @@ describe('readVisuals', () => {
     expect(readVisuals({ source: DEFINITION })).toEqual([
       {
         index: 0,
+        kind: 'gif',
         src: 'section-00-nodding.gif',
         provenance: {
           provider: 'giphy',
@@ -45,6 +46,7 @@ describe('readVisuals', () => {
       },
       {
         index: 1,
+        kind: 'gif',
         src: 'section-01-meeting.gif',
         color: '#ffffff',
         playbackRate: 0.61,
@@ -86,6 +88,7 @@ describe('readVisuals, wrapped provenance', () => {
       source: wrapped,
       section: 0,
       visual: {
+        kind: 'gif',
         src: 'section-05-hourglass.gif',
         source: { provider: 'klipy', id: 'xn1PrlJW', search: 'hourglass time passing animation' },
       },
@@ -103,6 +106,7 @@ describe('withVisualApplied', () => {
       source: DEFINITION,
       section: 0,
       visual: {
+        kind: 'gif',
         src: 'section-00-cat-nod.gif',
         source: { provider: 'giphy', id: 'abc123', search: 'cat nodding' },
       },
@@ -123,6 +127,7 @@ describe('withVisualApplied', () => {
       source: DEFINITION,
       section: 1,
       visual: {
+        kind: 'gif',
         src: 'section-01-talk.gif',
         source: { provider: 'klipy', id: '9911', search: 'someone explaining' },
       },
@@ -140,6 +145,7 @@ describe('withVisualApplied', () => {
       source: DEFINITION,
       section: 0,
       visual: {
+        kind: 'gif',
         src: 'section-00-cat-nod.gif',
         color: '#edec00',
         playbackRate: 0.72,
@@ -161,6 +167,7 @@ describe('withVisualApplied', () => {
       source: DEFINITION,
       section: 1,
       visual: {
+        kind: 'gif',
         src: 'section-01-talk.gif',
         source: { provider: 'giphy', id: 'xyz789', search: 'someone explaining' },
       },
@@ -178,6 +185,7 @@ describe('withVisualApplied', () => {
       source: doubleQuoted,
       section: 0,
       visual: {
+        kind: 'gif',
         src: 'section-00-cat-nod.gif',
         source: { provider: 'giphy', id: 'abc123', search: 'cat nodding' },
       },
@@ -194,6 +202,7 @@ describe('withVisualApplied', () => {
       source: DEFINITION,
       section: 0,
       visual: {
+        kind: 'gif',
         src: 'section-00-shrug.gif',
         source: { provider: 'giphy', id: 'abc123', search: "i don't know shrug" },
       },
@@ -208,6 +217,7 @@ describe('withVisualApplied', () => {
         source: DEFINITION,
         section: 7,
         visual: {
+          kind: 'gif',
           src: 'section-07-nope.gif',
           source: { provider: 'giphy', id: 'x', search: 'x' },
         },
@@ -220,6 +230,7 @@ describe('withVisualApplied', () => {
       source: DEFINITION,
       section: 0,
       visual: {
+        kind: 'gif',
         src: 'section-00-a-very-long-descriptive-filename-indeed.gif',
         color: '#ffffff',
         source: {
@@ -319,6 +330,7 @@ describe('a record with no url', () => {
       source: mixed,
       section: 0,
       visual: {
+        kind: 'gif',
         src: 'section-04-money.gif',
         source: { provider: 'klipy', search: 'money disappearing poof animation' },
       },
@@ -329,5 +341,119 @@ describe('a record with no url', () => {
     expect(applied).toContain(
       "source: { provider: 'klipy', search: 'money disappearing poof animation' },",
     )
+  })
+})
+
+describe('stock footage', () => {
+  const stock = `export default defineVideo({
+  sections: [
+    {
+      // pexels "empty meeting room chairs" by Belén Montero: https://www.pexels.com/video/empty-classroom-with-sunlit-whiteboard-37892573/
+      // An empty room with rows of chairs. The room the script opens in, with nobody in it.
+      text: 'You’ve nodded along in a stand-up,',
+      visual: clip({ src: 'clip-00-meeting-room.mp4' }),
+      endsParagraph: true,
+    },
+    {
+      // pexels "harbour cranes still water" by Someone Else: https://www.pexels.com/video/harbour-37476076/
+      text: 'So you don’t ask.',
+      visual: clip({ src: 'clip-01-harbour.mp4', trimBefore: 45 }),
+    },
+  ],
+})
+`
+
+  test('reads the record, the author it credits, and the clip it belongs to', () => {
+    expect(readVisuals({ source: stock })).toEqual([
+      {
+        index: 0,
+        kind: 'clip',
+        src: 'clip-00-meeting-room.mp4',
+        provenance: {
+          provider: 'pexels',
+          search: 'empty meeting room chairs',
+          author: 'Belén Montero',
+          url: 'https://www.pexels.com/video/empty-classroom-with-sunlit-whiteboard-37892573/',
+        },
+      },
+      {
+        index: 1,
+        kind: 'clip',
+        src: 'clip-01-harbour.mp4',
+        trimBefore: 45,
+        provenance: {
+          provider: 'pexels',
+          search: 'harbour cranes still water',
+          author: 'Someone Else',
+          url: 'https://www.pexels.com/video/harbour-37476076/',
+        },
+      },
+    ])
+  })
+
+  test('takes a pexels id from the end of its url, where the slug puts it', () => {
+    expect(
+      sourceFor({
+        provenance: {
+          provider: 'pexels',
+          search: 'empty meeting room chairs',
+          author: 'Belén Montero',
+          url: 'https://www.pexels.com/video/empty-classroom-with-sunlit-whiteboard-37892573/',
+        },
+        byUrl: {},
+      }),
+    ).toEqual({
+      provider: 'pexels',
+      id: '37892573',
+      search: 'empty meeting room chairs',
+      author: 'Belén Montero',
+    })
+  })
+
+  test('stays a clip when it is rewritten, and keeps its in-point', () => {
+    // Writing `gif(...)` here would turn a six-second stock clip into a still frame: a clip has no
+    // playback rate and no loop, and the two visual kinds are not interchangeable.
+    const applied = withVisualApplied({
+      source: stock,
+      section: 1,
+      visual: {
+        kind: 'clip',
+        src: 'clip-01-jetty.mp4',
+        trimBefore: 45,
+        source: {
+          provider: 'pexels',
+          id: '37476076',
+          search: 'jetty open water',
+          author: 'Someone Else',
+        },
+      },
+    })
+
+    expect(applied).toContain(`      visual: clip({
+        src: 'clip-01-jetty.mp4',
+        source: {
+          provider: 'pexels',
+          id: '37476076',
+          search: 'jetty open water',
+          author: 'Someone Else',
+        },
+        trimBefore: 45,
+      }),`)
+    expect(applied).not.toContain('gif({')
+  })
+
+  test('leaves the note under a stock record, which describes the footage', () => {
+    const applied = withVisualApplied({
+      source: stock,
+      section: 0,
+      visual: {
+        kind: 'clip',
+        src: 'clip-00-meeting-room.mp4',
+        source: { provider: 'pexels', id: '37892573', search: 'empty meeting room chairs' },
+      },
+    })
+
+    expect(applied).toContain('// An empty room with rows of chairs.')
+    expect(applied).not.toContain('// pexels "empty meeting room chairs"')
   })
 })

@@ -1,6 +1,8 @@
 import pmTechnicalFluencyValidation01 from './pm-technical-fluency-validation-01'
 import pmTechnicalFluencyValidation01BRoll from './pm-technical-fluency-validation-01-b-roll'
+import pmTechnicalFluencyValidation01Stock from './pm-technical-fluency-validation-01-stock'
 import pmTechnicalFluencyValidation02 from './pm-technical-fluency-validation-02'
+import pmTechnicalFluencyValidation02BRoll from './pm-technical-fluency-validation-02-b-roll'
 import pmTechnicalFluencyValidation03 from './pm-technical-fluency-validation-03'
 import pmTechnicalFluencyValidation04 from './pm-technical-fluency-validation-04'
 import pmTechnicalFluencyValidation05 from './pm-technical-fluency-validation-05'
@@ -14,6 +16,7 @@ import social018 from './social-018'
 import vibeCoderValidation01 from './vibe-coder-validation-01'
 import vibeCoderValidation01BRoll from './vibe-coder-validation-01-b-roll'
 import vibeCoderValidation02 from './vibe-coder-validation-02'
+import vibeCoderValidation02BRoll from './vibe-coder-validation-02-b-roll'
 import vibeCoderValidation03 from './vibe-coder-validation-03'
 import vibeCoderValidation04 from './vibe-coder-validation-04'
 import vibeCoderValidation05 from './vibe-coder-validation-05'
@@ -29,7 +32,9 @@ export const VIDEOS = [
   social018,
   pmTechnicalFluencyValidation01,
   pmTechnicalFluencyValidation01BRoll,
+  pmTechnicalFluencyValidation01Stock,
   pmTechnicalFluencyValidation02,
+  pmTechnicalFluencyValidation02BRoll,
   pmTechnicalFluencyValidation03,
   pmTechnicalFluencyValidation04,
   pmTechnicalFluencyValidation05,
@@ -39,6 +44,7 @@ export const VIDEOS = [
   vibeCoderValidation01,
   vibeCoderValidation01BRoll,
   vibeCoderValidation02,
+  vibeCoderValidation02BRoll,
   vibeCoderValidation03,
   vibeCoderValidation04,
   vibeCoderValidation05,

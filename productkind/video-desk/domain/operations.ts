@@ -205,7 +205,15 @@ export const edgeColourOf = ({
 }
 
 const SECTION_SPLIT = '    {\n'
-const TEXT = /text: (["'])([\s\S]*?)\1,\n/
+/**
+ * The narration expression, up to the visual that follows it.
+ *
+ * A line is sometimes written as a concatenation across several lines, and a pattern that needs
+ * the quote to sit right after `text:` skips those sections entirely — which shifts every index
+ * after them, so a pick lands on a beat nobody chose.
+ */
+const TEXT = /text:\s*([\s\S]*?),?\n\s*(?:visual|endsParagraph):/
+const QUOTED = /(["'])((?:[^\\]|\\.)*?)\1/g
 const SRC = /src: (["'])([^"']+)\1/
 const COLOUR = /color: (["'])([^"']+)\1/
 const RATE = /playbackRate: ([\d.]+)/
@@ -216,6 +224,7 @@ const RATE = /playbackRate: ([\d.]+)/
  * url and only giphy urls carried one. The fields are machine-written now, so this reads a shape
  * rather than prose.
  */
+const KIND = /visual: (gif|clip|still)\(/
 const SOURCE = /source: \{([^}]*)\}/
 const FIELD = (name: string) => new RegExp(`${name}: (["'])(.*?)\\1`)
 
@@ -224,17 +233,38 @@ export type ParsedSource = {
   /** Null for the sections whose record predates ids being kept. */
   id: string | null
   search: string
+  /** Who made it, where the provider names them. Pexels asks for the credit. */
+  author?: string
 }
+
+/** Which visual a section holds. A gif loops in a slot; a clip plays once and must outlast it. */
+export const VISUAL_KINDS = ['gif', 'clip', 'still'] as const
+
+export type VisualKind = (typeof VISUAL_KINDS)[number]
+
+const kindFrom = ({ name }: { name: string }): VisualKind =>
+  VISUAL_KINDS.find((kind) => kind === name) ?? 'gif'
 
 export type ParsedSection = {
   index: number
   text: string
+  kind: VisualKind
   src: string
   color: string | null
   playbackRate: number | null
   source: ParsedSource | null
   /** The search that found the gif, which is what a re-source starts from. */
   search: string | null
+}
+
+/** The pieces of a quoted, possibly concatenated expression, joined back into one line. */
+const textIn = ({ block }: { block: string }): string | null => {
+  const found = TEXT.exec(block)
+  if (found === null) {
+    return null
+  }
+  const pieces = [...(found[1] ?? '').matchAll(QUOTED)].map((match) => match[2] ?? '')
+  return pieces.length === 0 ? null : pieces.join('')
 }
 
 const sourceIn = ({ block }: { block: string }): ParsedSource | null => {
@@ -248,7 +278,13 @@ const sourceIn = ({ block }: { block: string }): ParsedSource | null => {
   if (provider === undefined || search === undefined) {
     return null
   }
-  return { provider, id: FIELD('id').exec(fields)?.[2] ?? null, search }
+  const author = FIELD('author').exec(fields)?.[2]
+  return {
+    provider,
+    id: FIELD('id').exec(fields)?.[2] ?? null,
+    search,
+    ...(author === undefined ? {} : { author }),
+  }
 }
 
 /** The read-side twin of `apply-visual.ts`, which writes the same shape back. */
@@ -258,8 +294,9 @@ export const parseSections = ({ source }: { source: string }): ParsedSection[] =
     .slice(1)
     .flatMap((block) => {
       const src = SRC.exec(block)
-      const text = TEXT.exec(block)
-      if (src === null || text === null) {
+      const text = textIn({ block })
+      const kind = KIND.exec(block)
+      if (src === null || text === null || kind === null) {
         return []
       }
       const colour = COLOUR.exec(block)
@@ -267,7 +304,8 @@ export const parseSections = ({ source }: { source: string }): ParsedSection[] =
       const source = sourceIn({ block })
       return [
         {
-          text: text[2] ?? '',
+          text,
+          kind: kindFrom({ name: kind[1] ?? 'gif' }),
           src: src[2] ?? '',
           color: colour?.[2] ?? null,
           playbackRate: rate?.[1] === undefined ? null : Number(rate[1]),
@@ -483,3 +521,184 @@ export const klipyItems = ({ payload }: { payload: unknown }): ProviderItem[] =>
     ]
   })
 }
+
+/**
+ * How a stock clip sits against its beat.
+ *
+ * A clip has no playback rate and no loop, so the question is not how often it repeats but whether
+ * it lasts: one that runs out holds a frozen frame while the captions keep moving. The pipeline
+ * trims every clip to its beat plus a second for exactly that reason.
+ */
+export const clipFit = ({
+  seconds,
+  slot,
+}: {
+  seconds: number
+  slot: number
+}): { covers: boolean; headroom: number; why: string } => {
+  const headroom = Math.round((seconds - slot) * 10) / 10
+  return headroom >= 0
+    ? {
+        covers: true,
+        headroom,
+        why: `covers the ${slot.toFixed(1)}s beat with ${headroom.toFixed(1)}s to spare`,
+      }
+    : {
+        covers: false,
+        headroom,
+        why:
+          `runs out ${Math.abs(headroom).toFixed(1)}s before the beat ends and would hold a ` +
+          'frozen frame; needs a longer clip',
+      }
+}
+
+/** The frame the videos render at. A file already this size is scaled by nothing. */
+export const FRAME = { width: 1080, height: 1920 }
+
+/** A clip is trimmed to its beat plus this, so it cannot run out while the captions move. */
+export const HEADROOM_SECONDS = 1
+
+export type StockClip = {
+  provider: 'pexels' | 'pixabay'
+  id: string
+  seconds: number
+  author: string
+  posterUrl: string
+  sourceUrl: string
+  /** The native 1080x1920 file. A clip without one is not a candidate. */
+  downloadUrl: string
+}
+
+const PEXELS_SEARCH = 'https://api.pexels.com/videos/search'
+const PIXABAY_SEARCH = 'https://pixabay.com/api/videos/'
+
+export const pexelsSearchUrl = ({ term, limit }: { term: string; limit: number }): string =>
+  `${PEXELS_SEARCH}?query=${encodeURIComponent(term)}&orientation=portrait&per_page=${String(limit)}`
+
+export const pixabaySearchUrl = ({
+  key,
+  term,
+  limit,
+}: {
+  key: string
+  term: string
+  limit: number
+}): string =>
+  `${PIXABAY_SEARCH}?key=${key}&q=${encodeURIComponent(term)}&per_page=${String(limit)}`
+
+const FILE = z.object({ width: z.number(), height: z.number() })
+
+const PEXELS_VIDEO = z.object({
+  id: z.number(),
+  duration: z.number().optional(),
+  url: z.string().optional(),
+  image: z.string().optional(),
+  user: z.object({ name: z.string() }).optional(),
+  video_files: z.array(FILE.extend({ link: z.string() })).optional(),
+})
+
+/** Neither provider can filter by duration in a search, so it is carried through and filtered here. */
+export const pexelsClips = ({ payload }: { payload: unknown }): StockClip[] => {
+  const parsed = z.object({ videos: z.array(z.unknown()) }).safeParse(payload)
+  if (!parsed.success) {
+    return []
+  }
+  return parsed.data.videos.flatMap((raw) => {
+    const video = PEXELS_VIDEO.safeParse(raw)
+    if (!video.success) {
+      return []
+    }
+    const exact = (video.data.video_files ?? []).find(
+      (file) => file.width === FRAME.width && file.height === FRAME.height,
+    )
+    if (exact === undefined) {
+      return []
+    }
+    return [
+      {
+        provider: 'pexels' as const,
+        id: String(video.data.id),
+        seconds: video.data.duration ?? 0,
+        author: video.data.user?.name ?? '',
+        posterUrl: video.data.image ?? '',
+        sourceUrl: video.data.url ?? '',
+        downloadUrl: exact.link,
+      },
+    ]
+  })
+}
+
+const PIXABAY_HIT = z.object({
+  id: z.number(),
+  duration: z.number().optional(),
+  pageURL: z.string().optional(),
+  user: z.string().optional(),
+  videos: z.record(FILE.extend({ url: z.string() })).optional(),
+})
+
+/** Pixabay keys its files by size name rather than listing them, and cannot filter orientation. */
+export const pixabayClips = ({ payload }: { payload: unknown }): StockClip[] => {
+  const parsed = z.object({ hits: z.array(z.unknown()) }).safeParse(payload)
+  if (!parsed.success) {
+    return []
+  }
+  return parsed.data.hits.flatMap((raw) => {
+    const hit = PIXABAY_HIT.safeParse(raw)
+    if (!hit.success) {
+      return []
+    }
+    const exact = Object.values(hit.data.videos ?? {}).find(
+      (file) => file.width === FRAME.width && file.height === FRAME.height,
+    )
+    if (exact === undefined) {
+      return []
+    }
+    return [
+      {
+        provider: 'pixabay' as const,
+        id: String(hit.data.id),
+        seconds: hit.data.duration ?? 0,
+        author: hit.data.user ?? '',
+        posterUrl: '',
+        sourceUrl: hit.data.pageURL ?? '',
+        downloadUrl: exact.url,
+      },
+    ]
+  })
+}
+
+/**
+ * The clips that can actually serve a beat, shortest usable first.
+ *
+ * Shortest first because everything past the beat plus its headroom is thrown away by the trim,
+ * and a twenty-second clip downloaded to keep five seconds is a slow way to get the same frames.
+ */
+export const keepThatCoverTheBeat = ({
+  items,
+  slot,
+  skip = [],
+}: {
+  items: StockClip[]
+  slot: number
+  skip?: string[]
+}): StockClip[] => {
+  const rejected = new Set(skip)
+  return items
+    .filter((item) => !rejected.has(item.id) && item.seconds >= slot + HEADROOM_SECONDS)
+    .sort((left, right) => left.seconds - right.seconds)
+}
+
+/**
+ * How many visuals the parser failed to account for.
+ *
+ * A section it cannot read is not a missing row: every index after it shifts, so a pick writes to
+ * a different beat from the one chosen. That happened — two beats in the stock cut write their
+ * narration as a concatenation across lines — so the count is checked rather than assumed.
+ */
+export const unreadSections = ({
+  source,
+  read,
+}: {
+  source: string
+  read: ParsedSection[]
+}): number => Math.max(0, (source.match(/^\s*visual: /gm) ?? []).length - read.length)
