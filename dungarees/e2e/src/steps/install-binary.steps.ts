@@ -22,6 +22,9 @@ Then('the user should be able to run dungarees', async function (world) {
   await nodeCommandLine.execWithAssertions('dungarees --help')
 })
 
+const isAuthTokenResponse = (value: unknown): value is { token: string } =>
+  typeof value === 'object' && value !== null && 'token' in value && typeof value.token === 'string'
+
 const publishDungareesBinary = async (
   npmPublisherExec: (command: string, context?: Partial<ExecContext>) => Promise<CommandResult>,
 ) => {
@@ -44,7 +47,10 @@ const authenticateNpmRegistry = async (
     },
     body: JSON.stringify({ name: 'test', password: 'test' }),
   })
-  const data = await response.json()
+  const data: unknown = await response.json()
+  if (!isAuthTokenResponse(data)) {
+    throw new Error(`Unexpected registry auth response: ${JSON.stringify(data)}`)
+  }
   await npmPublisherExec(`echo "//npmregistry:4873/:_authToken=${data.token}" > /root/.npmrc`)
   await npmPublisherExec('cat ~/.npmrc')
 }
