@@ -325,6 +325,31 @@ mtest('getPackageDirsWithVersion combines parsed package dirs and version', ({ e
   })
 })
 
+test('getPackageDirsWithVersion ignores installed dependencies', async () => {
+  const readPaths: string[] = []
+  const combined$ = getPackageDirsWithVersion({
+    packageJsonPaths$: of([
+      '/src/lib-1/package.json',
+      '/src/lib-1/node_modules/twilio/package.json',
+      '/src/sub/lib-2/package.json',
+      '/src/sub/lib-2/node_modules/@jsonjoy.com/fs-snapshot/package.json',
+      '/src/node_modules/typescript/package.json',
+    ]),
+    versionContent$: of(JSON.stringify({ version: '1.2.3' })),
+    sourceDir: '/src',
+    readPackageJson: (jsonPath) => {
+      readPaths.push(jsonPath)
+      return of(JSON.stringify({ name: '@org/lib' }))
+    },
+  })
+
+  expect(await collectValuesFrom(combined$)).toEqual([
+    { packageDirs: ['lib-1', 'sub/lib-2'], version: '1.2.3' },
+  ])
+  // the dropped ones are not even read
+  expect(readPaths).toEqual(['/src/lib-1/package.json', '/src/sub/lib-2/package.json'])
+})
+
 mtest('getPackageDirsWithVersion with no package.json paths', ({ expect }) => {
   const combined$ = getPackageDirsWithVersion({
     packageJsonPaths$: of<string[]>([]),
