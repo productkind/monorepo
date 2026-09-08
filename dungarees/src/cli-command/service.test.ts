@@ -82,31 +82,31 @@ test('npm publish with cwd', async () => {
   ])
 })
 
-test('npm viewVersion asks the registry for one exact version', async () => {
+test('npm viewVersions asks the registry for every published version', async () => {
   const { subProcess, executedCommands } = createFakeSubProcessService([
     {
       command: 'npm',
-      args: ['view', '@org/lib@1.2.3', 'version'],
-      stdout: '1.2.3',
+      args: ['view', '@org/lib', 'versions', '--json'],
+      stdout: '["1.0.0","1.1.0"]',
       exitCode: 0,
     },
   ])
 
   const { npm } = createCliCommands(subProcess)
 
-  await lastValueFrom(npm.viewVersion({ name: '@org/lib', version: '1.2.3' }).output$)
+  await lastValueFrom(npm.viewVersions({ name: '@org/lib' }).output$)
 
   expect(executedCommands).toEqual([
-    { command: 'npm', args: ['view', '@org/lib@1.2.3', 'version'], options: {} },
+    { command: 'npm', args: ['view', '@org/lib', 'versions', '--json'], options: {} },
   ])
 })
 
-test('npm viewVersion passes the registry through', async () => {
+test('npm viewVersions passes the registry through', async () => {
   const { subProcess, executedCommands } = createFakeSubProcessService([
     {
       command: 'npm',
-      args: ['view', '@org/lib@1.2.3', 'version', '--registry', 'https://registry.test'],
-      stdout: '1.2.3',
+      args: ['view', '@org/lib', 'versions', '--json', '--registry', 'https://registry.test'],
+      stdout: '["1.0.0"]',
       exitCode: 0,
     },
   ])
@@ -114,14 +114,13 @@ test('npm viewVersion passes the registry through', async () => {
   const { npm } = createCliCommands(subProcess)
 
   await lastValueFrom(
-    npm.viewVersion({ name: '@org/lib', version: '1.2.3', registry: 'https://registry.test' })
-      .output$,
+    npm.viewVersions({ name: '@org/lib', registry: 'https://registry.test' }).output$,
   )
 
   expect(executedCommands).toEqual([
     {
       command: 'npm',
-      args: ['view', '@org/lib@1.2.3', 'version', '--registry', 'https://registry.test'],
+      args: ['view', '@org/lib', 'versions', '--json', '--registry', 'https://registry.test'],
       options: {},
     },
   ])

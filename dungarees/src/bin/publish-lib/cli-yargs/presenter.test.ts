@@ -38,11 +38,31 @@ test('package-json-written maps to an info stdout message', () => {
   })
 })
 
-test('publish-succeeded maps to an info stdout message', () => {
-  expect(publishLibPresenter['publish-succeeded'](undefined)).toEqual({
+test('publish-succeeded reports a new version of a known package', () => {
+  expect(
+    publishLibPresenter['publish-succeeded']({
+      packageDir: 'lib-1',
+      version: '1.0.0',
+      created: false,
+    }),
+  ).toEqual({
     type: 'stdout',
     level: 'info',
-    message: 'Published successfully',
+    message: 'Published lib-1 version 1.0.0',
+  })
+})
+
+test('publish-succeeded says so when the package was created on the registry', () => {
+  expect(
+    publishLibPresenter['publish-succeeded']({
+      packageDir: 'lib-1',
+      version: '1.0.0',
+      created: true,
+    }),
+  ).toEqual({
+    type: 'stdout',
+    level: 'info',
+    message: 'Created lib-1 on the registry at version 1.0.0',
   })
 })
 

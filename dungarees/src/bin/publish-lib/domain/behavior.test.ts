@@ -8,22 +8,29 @@ import { createFakeSubProcessService, type ExecutedCommand } from '@dungarees/su
 
 import { expect, test } from 'vitest'
 
-// npm exits non-zero for a version the registry does not have, which is what lets a publish run.
-const notPublished = (nameAndVersion: string) => ({
+// npm exits non-zero for a package it has never seen, which is what lets a publish run.
+const notPublished = (name: string) => ({
   command: 'npm',
-  args: ['view', nameAndVersion, 'version'],
+  args: ['view', name, 'versions', '--json'],
   stdout: '',
   stderror: 'E404 Not found',
   exitCode: 1,
 })
+
+const alreadyPublished = (name: string, versions: string[]) => ({
+  command: 'npm',
+  args: ['view', name, 'versions', '--json'],
+  stdout: JSON.stringify(versions),
+  exitCode: 0,
+})
+
+const NOT_PUBLISHED_TWO_LIBS = [notPublished('@org/lib-1'), notPublished('@org/lib-2')]
 
 const publishedDirs = (commands: ExecutedCommand[]) =>
   commands
     .filter(({ args }) => args[0] === 'publish')
     .map(({ options }) => options?.cwd)
     .sort()
-
-const NOT_PUBLISHED_TWO_LIBS = [notPublished('@org/lib-1@1.0.0'), notPublished('@org/lib-2@1.0.0')]
 
 test('build without version input', async () => {
   const fileSystem = createFakeFileSystem({
@@ -110,7 +117,7 @@ test('publish single lib', async () => {
     '/src/index.ts': 'console.log("Single lib")',
   })
   const { subProcess, executedCommands } = createFakeSubProcessService([
-    notPublished('single-lib@0.1.0'),
+    notPublished('single-lib'),
     {
       command: 'npm',
       args: ['publish', '--access', 'public'],
@@ -407,20 +414,9 @@ test('publishMultiLib skips a package whose version is already on the registry',
     '/m/src/lib-2/b.ts': 'export const b = 1\n',
   })
   const { subProcess, executedCommands } = createFakeSubProcessService([
-    // lib-1 is already published at this version, lib-2 is not
-    {
-      command: 'npm',
-      args: ['view', '@org/lib-1@1.0.0', 'version'],
-      stdout: '1.0.0',
-      exitCode: 0,
-    },
-    {
-      command: 'npm',
-      args: ['view', '@org/lib-2@1.0.0', 'version'],
-      stdout: '',
-      stderror: 'E404 Not found',
-      exitCode: 1,
-    },
+    // lib-1 is already published at this version, lib-2 has never been published
+    alreadyPublished('@org/lib-1', ['1.0.0']),
+    notPublished('@org/lib-2'),
     {
       command: 'npm',
       args: ['publish', '--access', 'public'],
