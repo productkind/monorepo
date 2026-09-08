@@ -1,6 +1,6 @@
 import { eventCreators, type PublishLibEvent } from './events.ts'
 
-import { createCausedError } from '@dungarees/core/error.ts'
+import { createCausedError, getErrorMessage } from '@dungarees/core/error.ts'
 import type { JsonObject } from '@dungarees/core/type-util.ts'
 import {
   assertSchemaMap,
@@ -11,7 +11,20 @@ import type { TranspileDirOutput } from '@dungarees/transpile/service.ts'
 import { jsonObjectSchema, parseJson } from '@dungarees/zod/json.ts'
 
 import path from 'node:path'
-import { defer, forkJoin, from, type Observable, of, type OperatorFunction, pipe } from 'rxjs'
+import {
+  catchError,
+  connect,
+  defer,
+  EMPTY,
+  forkJoin,
+  from,
+  merge,
+  type Observable,
+  of,
+  type OperatorFunction,
+  pipe,
+  toArray,
+} from 'rxjs'
 import { map, mergeMap } from 'rxjs/operators'
 import { z } from 'zod'
 
@@ -214,14 +227,18 @@ const handleTransformEnd = (
     catchAndRethrow((cause) => createCausedError({ message: 'File transform failed', cause })),
   )
 
-export const publishLib = (
-  publishFactory: () => Observable<{ exitCode: number | undefined; stderror: string | undefined }>,
-): Observable<PublishLibEvent> =>
+export const publishLib = ({
+  publishFactory,
+  packageDir,
+}: {
+  publishFactory: () => Observable<{ exitCode: number | undefined; stderror: string | undefined }>
+  packageDir: string
+}): Observable<PublishLibEvent> =>
   defer(publishFactory).pipe(
     map(({ exitCode, stderror }) =>
       exitCode === 0
         ? eventCreators.publishSucceeded()
-        : eventCreators.publishFailed({ exitCode, stderror }),
+        : eventCreators.publishFailed({ packageDir, exitCode, stderror }),
     ),
     catchAndRethrow((cause) => createCausedError({ message: 'Error publishing library', cause })),
   )
@@ -291,7 +308,30 @@ export const publishAllPackages = (
   publishPackage: (args: { packageDir: string; version: string }) => Observable<PublishLibEvent>,
 ): OperatorFunction<{ packageDirs: string[]; version: string }, PublishLibEvent> =>
   mergeMap(({ packageDirs, version }) =>
-    forkJoin(packageDirs.map((packageDir) => publishPackage({ packageDir, version }))).pipe(
-      map(() => eventCreators.allPublished()),
+    merge(
+      ...packageDirs.map((packageDir) =>
+        publishPackage({ packageDir, version }).pipe(
+          catchError((cause: unknown) =>
+            of(
+              eventCreators.publishFailed({
+                packageDir,
+                exitCode: undefined,
+                stderror: getErrorMessage(cause),
+              }),
+            ),
+          ),
+        ),
+      ),
+    ).pipe(connect((events$) => merge(events$, events$.pipe(summariseOutcome())))),
+  )
+
+const summariseOutcome = (): OperatorFunction<PublishLibEvent, PublishLibEvent> =>
+  pipe(
+    mergeMap((event) => (event.type === 'publish-failed' ? of(event.payload.packageDir) : EMPTY)),
+    toArray(),
+    map((failedPackageDirs) =>
+      failedPackageDirs.length === 0
+        ? eventCreators.allPublished()
+        : eventCreators.publishesFailed({ packageDirs: [...failedPackageDirs].sort() }),
     ),
   )

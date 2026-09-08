@@ -1,4 +1,5 @@
 import { createPublishLibBehavior } from './behavior.ts'
+import { eventCreators } from './events.ts'
 
 import { createCliCommands } from '@dungarees/cli-command/service.ts'
 import { createFakeFileSystem } from '@dungarees/fs/fake.ts'
@@ -105,6 +106,7 @@ test('publish single lib', async () => {
     service.publishSingleLib({
       srcDir: '/src',
       outDir: '/dist',
+      packageDir: 'lib-1',
       version: undefined,
       registry: undefined,
     }).events$,
@@ -311,4 +313,69 @@ test('build copies an asset that sits in a subdirectory', async () => {
   )
 
   expect(fileSystem.toJSON()['/dist/config/tsconfig.base.json']).toBe(tsconfig)
+})
+
+const failingNpm = (stderror: string) => [
+  {
+    command: 'npm',
+    args: ['publish', '--access', 'public'],
+    stdout: '',
+    stderror,
+    exitCode: 1,
+  },
+]
+
+const twoLibFileSystem = () =>
+  createFakeFileSystem({
+    '/m/config/version.json': JSON.stringify({ version: '1.0.0' }),
+    '/m/src/lib-1/package.json': JSON.stringify({ name: '@org/lib-1' }),
+    '/m/src/lib-1/a.ts': 'export const a = 1\n',
+    '/m/src/lib-2/package.json': JSON.stringify({ name: '@org/lib-2' }),
+    '/m/src/lib-2/b.ts': 'export const b = 1\n',
+  })
+
+test('publishMultiLib surfaces each failed publish instead of swallowing it', async () => {
+  const { subProcess } = createFakeSubProcessService(failingNpm('Cannot publish over a version'))
+  const service = createPublishLibBehavior({
+    fileSystem: twoLibFileSystem(),
+    cliCommands: createCliCommands(subProcess),
+  })
+
+  const events = await collectValuesFrom(
+    service.publishMultiLib({ dir: '/m', registry: undefined }).events$,
+  )
+
+  expect(events.filter(({ type }) => type === 'publish-failed')).toHaveLength(2)
+})
+
+test('publishMultiLib reports the failed packages instead of claiming success', async () => {
+  const { subProcess } = createFakeSubProcessService(failingNpm('Cannot publish over a version'))
+  const service = createPublishLibBehavior({
+    fileSystem: twoLibFileSystem(),
+    cliCommands: createCliCommands(subProcess),
+  })
+
+  const events = await collectValuesFrom(
+    service.publishMultiLib({ dir: '/m', registry: undefined }).events$,
+  )
+
+  expect(events.map(({ type }) => type)).not.toContain('all-published')
+  expect(events.at(-1)).toEqual(eventCreators.publishesFailed({ packageDirs: ['lib-1', 'lib-2'] }))
+})
+
+test('publishMultiLib still attempts every package when one fails', async () => {
+  const { subProcess, executedCommands } = createFakeSubProcessService(
+    failingNpm('Cannot publish over a version'),
+  )
+  const service = createPublishLibBehavior({
+    fileSystem: twoLibFileSystem(),
+    cliCommands: createCliCommands(subProcess),
+  })
+
+  await collectValuesFrom(service.publishMultiLib({ dir: '/m', registry: undefined }).events$)
+
+  expect(executedCommands.map(({ options }) => options?.cwd).sort()).toEqual([
+    '/m/dist/lib-1',
+    '/m/dist/lib-2',
+  ])
 })

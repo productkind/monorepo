@@ -46,11 +46,24 @@ test('publish-succeeded maps to an info stdout message', () => {
   })
 })
 
-test('publish-failed maps to an error stderr message', () => {
-  expect(publishLibPresenter['publish-failed']({ exitCode: 1, stderror: 'Some error' })).toEqual({
+test('publish-failed names the package it failed for', () => {
+  expect(
+    publishLibPresenter['publish-failed']({
+      packageDir: 'lib-1',
+      exitCode: 1,
+      stderror: 'Some error',
+    }),
+  ).toEqual({
     type: 'stderr',
     level: 'error',
-    message: 'Publish failed with exit code 1, and error: Some error',
+    message: 'Publish failed for lib-1 with exit code 1, and error: Some error',
+  })
+})
+
+test('publishes-failed makes the run exit non-zero', () => {
+  expect(publishLibPresenter['publishes-failed']({ packageDirs: ['lib-1', 'lib-2'] })).toEqual({
+    type: 'exit',
+    code: 1,
   })
 })
 
