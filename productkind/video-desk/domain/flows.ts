@@ -50,6 +50,14 @@ export type DeskIo = {
   readAsset: (options: { video: string; name: string }) => Promise<Uint8Array | null>
   writeAsset: (options: { video: string; name: string; bytes: Uint8Array }) => Promise<void>
   assetPath: (options: { video: string; name: string }) => string
+  /**
+   * When the file was last written.
+   *
+   * A pick can replace a section's visual without changing its name — the name comes from the
+   * search, so two candidates from one search share it — and then nothing in a URL changes and
+   * the browser shows what it already had. The version is what makes the change visible.
+   */
+  assetVersion: (options: { video: string; name: string }) => Promise<number | null>
   readCandidate: (options: { video: string; id: string }) => Promise<Uint8Array | null>
   writeCandidate: (options: { video: string; id: string; bytes: Uint8Array }) => Promise<void>
   candidatePath: (options: { video: string; id: string }) => string
@@ -135,6 +143,7 @@ const sectionsOf = async ({
   const sections = await Promise.all(
     parsed.map(async (parsed) => {
       const slot = slots?.[parsed.index] ?? null
+      const version = await io.assetVersion({ video, name: parsed.src })
       // A clip is a video file: its length comes from the container, not from frame delays, and
       // it plays once rather than repeating, so a repeat count would be meaningless.
       if (parsed.kind === 'clip') {
@@ -144,6 +153,7 @@ const sectionsOf = async ({
           slotSeconds: slot,
           gifSeconds: seconds,
           repeats: null,
+          version,
           flagged: flags[String(parsed.index)]?.src === parsed.src,
           exists: seconds !== null,
         }
@@ -155,6 +165,7 @@ const sectionsOf = async ({
         slotSeconds: slot,
         gifSeconds: seconds,
         repeats: repeatsIn({ slot, seconds, playbackRate: parsed.playbackRate }),
+        version,
         flagged: flags[String(parsed.index)]?.src === parsed.src,
         exists: bytes !== null,
       }

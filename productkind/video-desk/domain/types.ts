@@ -19,6 +19,8 @@ export type Section = {
   repeats: number | null
   flagged: boolean
   exists: boolean
+  /** When the file was last written, so a replaced visual is a different thing to fetch. */
+  version: number | null
   motion?: number
   seam?: number
   edgeColour?: string | null

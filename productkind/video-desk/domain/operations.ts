@@ -633,7 +633,7 @@ const PIXABAY_HIT = z.object({
   duration: z.number().optional(),
   pageURL: z.string().optional(),
   user: z.string().optional(),
-  videos: z.record(FILE.extend({ url: z.string() })).optional(),
+  videos: z.record(z.string(), FILE.extend({ url: z.string() })).optional(),
 })
 
 /** Pixabay keys its files by size name rather than listing them, and cannot filter orientation. */
