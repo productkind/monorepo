@@ -17,11 +17,14 @@ export default tseslint.config(
     ],
   },
   {
-    files: ['dungarees/src/**/*.ts', 'dungarees/src/**/*.tsx'],
+    files: ['dungarees/src/**/*.ts', 'dungarees/src/**/*.tsx', 'dungarees/e2e/src/**/*.ts'],
     extends: [...tseslint.configs.recommendedTypeChecked],
     languageOptions: {
       parserOptions: {
-        projectService: true,
+        // The root tsconfig already covers every dungarees source file, so one program serves the
+        // whole run. `projectService` would build one per package tsconfig — about forty of them,
+        // held at once — and exhaust the heap.
+        project: ['./tsconfig.json'],
         tsconfigRootDir: import.meta.dirname,
       },
     },
@@ -62,7 +65,13 @@ export default tseslint.config(
     // A test may need a binding purely to host a `@ts-expect-error` or to satisfy a callback
     // signature. It has to say so in its name; `_` is avoided because it also reads as
     // "private". Allowed only here, so production code cannot use the same excuse.
-    files: ['**/*.test.ts', '**/*.test.tsx'],
+    // Scoped to the same files as the type-aware block above: this is a dungarees convention, and
+    // matching `**/*.test.ts` would also claim test files elsewhere in the repo that this config
+    // gives no TypeScript parser.
+    files: ['dungarees/src/**/*.test.ts', 'dungarees/src/**/*.test.tsx'],
+    // The rule below belongs to the plugin, so this object has to register it too: a flat config
+    // object cannot borrow one from a sibling.
+    plugins: { '@typescript-eslint': tseslint.plugin },
     rules: {
       '@typescript-eslint/no-unused-vars': [
         'error',
