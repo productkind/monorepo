@@ -41,7 +41,7 @@ export const CandidateGrid: React.FC<{
                     { text: `${candidate.seconds.toFixed(2)}s`, tone: 'plain' },
                     fitBadge({ repeats: candidate.repeats }),
                     motionBadge({ motion: candidate.motion }),
-                    { text: candidate.size, tone: 'plain' },
+                    { text: `${String(candidate.width)}x${String(candidate.height)}`, tone: 'plain' },
                     ...(used ? [used] : []),
                   ]}
                 />

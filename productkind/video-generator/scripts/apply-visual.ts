@@ -1,8 +1,12 @@
 /**
- * Applies a chosen gif to one section of a video definition.
+ * Applies a chosen visual to one section of a video definition.
  *
  *   npm run apply-visual -- --video pm-... --section 14 --src section-14-bulb.gif \
  *       --provider giphy --id abc123 --search "lightbulb idea" [--color '#298c8c'] [--rate 0.72]
+ *
+ * A stock clip is the same command with `--kind clip`, which keeps it a `clip(...)`: a gif and a
+ * clip are not interchangeable, and writing one as the other would turn a six-second clip into a
+ * frozen frame.
  *
  * The desk's API shells out to this rather than editing the file itself, so the one piece of code
  * that rewrites a hand-authored definition lives in the package that owns those definitions and is
@@ -32,22 +36,37 @@ const main = (): void => {
   const video = required({ name: 'video' })
   const section = Number(required({ name: 'section' }))
   const rate = valueOf({ name: 'rate' })
+  const trim = valueOf({ name: 'trim' })
   const provider = required({ name: 'provider' })
   if (!isProvider(provider)) {
     throw new Error(`--provider must be one of: ${PROVIDERS.join(', ')}`)
   }
   const id = valueOf({ name: 'id' })
-  const visual: AppliedVisual = {
-    src: required({ name: 'src' }),
-    color: valueOf({ name: 'color' }),
-    playbackRate: rate === undefined ? undefined : Number(rate),
-    source: {
-      provider,
-      // Absent when a pick predates ids being kept; never invented.
-      ...(id === undefined ? {} : { id }),
-      search: required({ name: 'search' }),
-    },
+  const author = valueOf({ name: 'author' })
+  const found = {
+    provider,
+    // Absent when a pick predates ids being kept; never invented.
+    ...(id === undefined ? {} : { id }),
+    search: required({ name: 'search' }),
+    // Pexels asks for the credit, which cannot be written without the name.
+    ...(author === undefined ? {} : { author }),
   }
+  const src = required({ name: 'src' })
+  const visual: AppliedVisual =
+    valueOf({ name: 'kind' }) === 'clip'
+      ? {
+          kind: 'clip',
+          src,
+          ...(trim === undefined ? {} : { trimBefore: Number(trim) }),
+          source: found,
+        }
+      : {
+          kind: 'gif',
+          src,
+          color: valueOf({ name: 'color' }),
+          playbackRate: rate === undefined ? undefined : Number(rate),
+          source: found,
+        }
 
   const path = resolve(process.cwd(), 'src', 'videos', `${video}.ts`)
   const source = readFileSync(path, 'utf8')

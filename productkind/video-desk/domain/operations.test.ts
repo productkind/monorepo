@@ -2,6 +2,7 @@ import { describe, expect, test } from 'vitest'
 
 import {
   chooseKey,
+  clipFit,
   edgeColourOf,
   fitAdvice,
   gifDurationInSeconds,
@@ -11,9 +12,13 @@ import {
   klipyItems,
   parseHistogram,
   parseRmse,
+  keepThatCoverTheBeat,
   parseSections,
+  pexelsClips,
+  pixabayClips,
   providerFrom,
   repeatsIn,
+  unreadSections,
   sectionName,
   usedIdsIn,
 } from './operations.ts'
@@ -201,6 +206,7 @@ describe('parseSections', () => {
       {
         index: 0,
         text: 'You’ve nodded along,',
+        kind: 'gif',
         src: 'section-00-nodding.gif',
         color: null,
         playbackRate: null,
@@ -210,6 +216,7 @@ describe('parseSections', () => {
       {
         index: 1,
         text: 'A single-quoted line,',
+        kind: 'gif',
         src: 'section-01-meeting.gif',
         color: '#ffffff',
         playbackRate: 0.61,
@@ -422,5 +429,255 @@ describe('providerItems', () => {
 
   test('drops a giphy item with no usable dimensions rather than guessing them', () => {
     expect(giphyItems({ payload: { data: [{ id: 'x', images: {} }] } })).toEqual([])
+  })
+})
+
+describe('sections that hold stock footage', () => {
+  const stock = `export default defineVideo({
+  sections: [
+    {
+      // An empty room with rows of chairs, and nobody in it to ask the follow-up question.
+      text: 'You’ve nodded along in a stand-up,',
+      visual: clip({
+        src: 'clip-00-meeting-room.mp4',
+        source: {
+          provider: 'pexels',
+          id: '37892573',
+          search: 'empty meeting room chairs',
+          author: 'Belén Montero',
+        },
+      }),
+    },
+    {
+      text: 'So you don’t ask.',
+      visual: gif({ src: 'section-01-quiet.gif', place: 'above-captions' }),
+    },
+  ],
+})
+`
+
+  test('reads which kind of visual each section holds', () => {
+    expect(parseSections({ source: stock }).map((section) => section.kind)).toEqual(['clip', 'gif'])
+  })
+
+  test('reads the author a stock record credits', () => {
+    expect(parseSections({ source: stock })[0]?.source).toEqual({
+      provider: 'pexels',
+      id: '37892573',
+      search: 'empty meeting room chairs',
+      author: 'Belén Montero',
+    })
+  })
+})
+
+describe('clipFit', () => {
+  test('a clip that outlasts its beat is what the pipeline aims for', () => {
+    // A clip has no playback rate and no loop, so one that runs out holds a frozen frame while
+    // the captions keep moving. A second of headroom is what guarantees it cannot.
+    expect(clipFit({ seconds: 5.7, slot: 4.7 })).toEqual({
+      covers: true,
+      headroom: 1,
+      why: 'covers the 4.7s beat with 1.0s to spare',
+    })
+  })
+
+  test('a clip shorter than its beat would freeze, and says so', () => {
+    expect(clipFit({ seconds: 3.2, slot: 4.7 })).toEqual({
+      covers: false,
+      headroom: -1.5,
+      why: 'runs out 1.5s before the beat ends and would hold a frozen frame; needs a longer clip',
+    })
+  })
+
+  test('a clip that only just reaches the end still counts as covering it', () => {
+    expect(clipFit({ seconds: 4.8, slot: 4.7 }).covers).toBe(true)
+    expect(clipFit({ seconds: 4.8, slot: 4.7 }).why).toContain('0.1s to spare')
+  })
+})
+
+describe('stock search', () => {
+  test('reads a pexels payload, keeping the author it must credit', () => {
+    const items = pexelsClips({
+      payload: {
+        videos: [
+          {
+            id: 37892573,
+            duration: 6,
+            url: 'https://www.pexels.com/video/empty-classroom-37892573/',
+            image: 'https://images.pexels.com/poster.jpg',
+            user: { name: 'Belén Montero' },
+            video_files: [
+              { width: 1080, height: 1920, link: 'https://player.pexels.com/exact.mp4' },
+              { width: 720, height: 1280, link: 'https://player.pexels.com/small.mp4' },
+            ],
+          },
+        ],
+      },
+    })
+
+    expect(items).toEqual([
+      {
+        provider: 'pexels',
+        id: '37892573',
+        seconds: 6,
+        author: 'Belén Montero',
+        posterUrl: 'https://images.pexels.com/poster.jpg',
+        sourceUrl: 'https://www.pexels.com/video/empty-classroom-37892573/',
+        // The file that is already 1080x1920, so nothing is scaled at render time.
+        downloadUrl: 'https://player.pexels.com/exact.mp4',
+      },
+    ])
+  })
+
+  test('drops a pexels clip with no native 1080x1920 file', () => {
+    expect(
+      pexelsClips({
+        payload: {
+          videos: [
+            {
+              id: 1,
+              duration: 9,
+              video_files: [{ width: 720, height: 1280, link: 'https://small.mp4' }],
+            },
+          ],
+        },
+      }),
+    ).toEqual([])
+  })
+
+  test('reads a pixabay payload, whose files come keyed rather than listed', () => {
+    const items = pixabayClips({
+      payload: {
+        hits: [
+          {
+            id: 44221,
+            duration: 8,
+            pageURL: 'https://pixabay.com/videos/id-44221/',
+            user: 'someone',
+            videos: {
+              large: { width: 1080, height: 1920, url: 'https://cdn.pixabay.com/large.mp4' },
+              small: { width: 540, height: 960, url: 'https://cdn.pixabay.com/small.mp4' },
+            },
+          },
+        ],
+      },
+    })
+
+    expect(items[0]?.downloadUrl).toBe('https://cdn.pixabay.com/large.mp4')
+    expect(items[0]?.provider).toBe('pixabay')
+  })
+})
+
+describe('keepThatCoverTheBeat', () => {
+  const clip = (seconds: number, id: string) => ({
+    provider: 'pexels' as const,
+    id,
+    seconds,
+    author: '',
+    posterUrl: '',
+    sourceUrl: '',
+    downloadUrl: '',
+  })
+
+  test('keeps only clips that outlast the beat by the headroom the pipeline trims to', () => {
+    // A clip has no loop: one that runs out holds a frozen frame while the captions keep moving.
+    expect(
+      keepThatCoverTheBeat({ items: [clip(4, 'short'), clip(6, 'long')], slot: 4.7 }).map(
+        (kept) => kept.id,
+      ),
+    ).toEqual(['long'])
+  })
+
+  test('puts the shortest usable clip first, so the least footage is thrown away', () => {
+    expect(
+      keepThatCoverTheBeat({
+        items: [clip(20, 'huge'), clip(6, 'snug'), clip(9, 'roomy')],
+        slot: 4.7,
+      }).map((kept) => kept.id),
+    ).toEqual(['snug', 'roomy', 'huge'])
+  })
+
+  test('skips clips already rejected for this beat', () => {
+    expect(
+      keepThatCoverTheBeat({ items: [clip(6, 'no'), clip(6, 'yes')], slot: 4.7, skip: ['no'] }).map(
+        (kept) => kept.id,
+      ),
+    ).toEqual(['yes'])
+  })
+})
+
+describe('parseSections, narration written across lines', () => {
+  // Two beats in the stock cut are written this way. A pattern that needs the quote to follow
+  // `text:` skips them, and then every index after them points at the wrong beat — which is how a
+  // pick lands on a section nobody chose.
+  const wrapped = `export default defineVideo({
+  sections: [
+    {
+      text: 'A single line,',
+      visual: clip({ src: 'clip-00-first.mp4' }),
+    },
+    {
+      text:
+        'Someone says the migration is blocked by the platform team. ' +
+        'You don’t know what that means for your release.',
+      visual: clip({ src: 'clip-01-second.mp4' }),
+    },
+    {
+      text: 'And a third,',
+      visual: clip({ src: 'clip-02-third.mp4' }),
+    },
+  ],
+})
+`
+
+  test('reads every section, so the indexes match the definition', () => {
+    expect(parseSections({ source: wrapped }).map((section) => section.src)).toEqual([
+      'clip-00-first.mp4',
+      'clip-01-second.mp4',
+      'clip-02-third.mp4',
+    ])
+  })
+
+  test('joins the pieces of a line written as a concatenation', () => {
+    expect(parseSections({ source: wrapped })[1]?.text).toBe(
+      'Someone says the migration is blocked by the platform team. ' +
+        'You don’t know what that means for your release.',
+    )
+  })
+
+  test('finds as many sections as there are visuals', () => {
+    const sections = parseSections({ source: wrapped })
+
+    expect(sections).toHaveLength((wrapped.match(/visual: /g) ?? []).length)
+  })
+})
+
+describe('unreadSections', () => {
+  test('counts nothing when every visual was read', () => {
+    const source = `sections: [
+    {
+      text: 'One,',
+      visual: gif({ src: 'a.gif' }),
+    },
+  ],`
+
+    expect(unreadSections({ source, read: parseSections({ source }) })).toBe(0)
+  })
+
+  test('counts the visuals the parser could not account for', () => {
+    // The guard exists because a section the parser skips shifts every index after it, and a pick
+    // then writes to a beat nobody chose. Failing loudly beats writing to the wrong place.
+    const source = `sections: [
+    {
+      text: 'One,',
+      visual: gif({ src: 'a.gif' }),
+    },
+    {
+      caption: 'not a section this parser understands',
+      visual: gif({ src: 'b.gif' }),
+    },
+  ],`
+
+    expect(unreadSections({ source, read: parseSections({ source }) })).toBe(1)
   })
 })

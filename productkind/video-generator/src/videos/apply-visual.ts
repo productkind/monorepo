@@ -15,21 +15,35 @@ import { isProvider } from '../narration/definition'
 
 const LIMIT = 100
 
-export type AppliedVisual = {
-  src: string
-  color?: string
-  playbackRate?: number
-  source?: VisualSource
-}
+export type AppliedVisual =
+  | {
+      kind: 'gif'
+      src: string
+      color?: string
+      playbackRate?: number
+      source?: VisualSource
+    }
+  | {
+      kind: 'clip'
+      src: string
+      /** The frame the clip starts on, when it was trimmed in the definition rather than on disk. */
+      trimBefore?: number
+      source?: VisualSource
+    }
 
-/** The old shape: a provider, a search and a URL, written as a comment above the line. */
-export type Provenance = { provider: string; search: string; url?: string }
+/** The old shape: a provider, a search, sometimes an author, and a URL, written as a comment. */
+export type Provenance = { provider: string; search: string; author?: string; url?: string }
+
+/** Which visual a section holds. A gif and a clip are not interchangeable. */
+export type VisualKind = 'gif' | 'clip' | 'still'
 
 export type ReadVisual = {
   index: number
+  kind: VisualKind
   src: string
   color?: string
   playbackRate?: number
+  trimBefore?: number
   provenance?: Provenance
 }
 
@@ -41,16 +55,18 @@ export type ReadVisual = {
  * are removed whole.
  */
 const PROVENANCE =
-  /^[ \t]*\/\/ (\w+) "([^"]*)":[ \t]*(?:(https?:\/\/[^\s'")]+)[ \t]*\n|\n[ \t]*\/\/[ \t]*(https?:\/\/[^\s'")]+)[ \t]*\n)/m
+  /^[ \t]*\/\/ (\w+) "([^"]*)"(?: by ([^:]+))?:[ \t]*(?:(https?:\/\/[^\s'")]+)[ \t]*\n|\n[ \t]*\/\/[ \t]*(https?:\/\/[^\s'")]+)[ \t]*\n)/m
 
 /**
  * The same record with a note where the url should be. Forty sections read this way, and the note
  * is the only place that reasoning exists — so this one is read but never removed.
  */
-const PROVENANCE_WITHOUT_URL = /^[ \t]*\/\/ (\w+) "([^"]*)":[ \t]*(?!https?:)\S/m
+const PROVENANCE_WITHOUT_URL = /^[ \t]*\/\/ (\w+) "([^"]*)"(?: by ([^:]+))?:[ \t]*(?!https?:)\S/m
 const SRC = /src: (["'])([^"']+)\1/
 const COLOUR = /color: (["'])([^"']+)\1/
 const RATE = /playbackRate: ([\d.]+)/
+const TRIM = /trimBefore: (\d+)/
+const KIND = /visual: (gif|clip|still)\(/
 
 /** Which quote a definition writes its strings with; four are double-quoted, the rest single. */
 const quoteOf = ({ source }: { source: string }): string =>
@@ -63,23 +79,51 @@ const quoted = ({ value, quote }: { value: string; quote: string }): string =>
  * `place` comes last, as every definition already reads: src, source, colour, rate, place. The
  * order is not cosmetic — a diff that reorders fields hides what actually changed.
  */
-const fieldsOf = ({ visual, quote }: { visual: AppliedVisual; quote: string }): string[] => [
-  `src: ${quoted({ value: visual.src, quote })}`,
-  ...(visual.source === undefined
-    ? []
-    : [
-        `source: { provider: ${quoted({ value: visual.source.provider, quote })}, ` +
-          (visual.source.id === undefined
-            ? ''
-            : `id: ${quoted({ value: visual.source.id, quote })}, `) +
-          `search: ${quoted({ value: visual.source.search, quote })} }`,
-      ]),
-  ...(visual.color === undefined ? [] : [`color: ${quoted({ value: visual.color, quote })}`]),
-  ...(visual.playbackRate === undefined || visual.playbackRate === 1
-    ? []
-    : [`playbackRate: ${String(visual.playbackRate)}`]),
-  `place: ${quoted({ value: 'above-captions', quote })}`,
-]
+const sourceField = ({ source, quote }: { source: VisualSource; quote: string }): string =>
+  `source: { provider: ${quoted({ value: source.provider, quote })}, ` +
+  (source.id === undefined ? '' : `id: ${quoted({ value: source.id, quote })}, `) +
+  `search: ${quoted({ value: source.search, quote })}` +
+  (source.author === undefined ? '' : `, author: ${quoted({ value: source.author, quote })}`) +
+  ' }'
+
+/**
+ * The fields a visual is written with, in the order every definition already reads them.
+ *
+ * Keyed by kind rather than switched on: a clip has an in-point where a gif has a rate and a
+ * letterbox, and writing one as the other would turn a six-second clip into a still frame.
+ */
+const FIELDS: {
+  [KIND in AppliedVisual['kind']]: (options: {
+    visual: Extract<AppliedVisual, { kind: KIND }>
+    quote: string
+  }) => string[]
+} = {
+  gif: ({ visual, quote }) => [
+    `src: ${quoted({ value: visual.src, quote })}`,
+    ...(visual.source === undefined ? [] : [sourceField({ source: visual.source, quote })]),
+    ...(visual.color === undefined ? [] : [`color: ${quoted({ value: visual.color, quote })}`]),
+    ...(visual.playbackRate === undefined || visual.playbackRate === 1
+      ? []
+      : [`playbackRate: ${String(visual.playbackRate)}`]),
+    `place: ${quoted({ value: 'above-captions', quote })}`,
+  ],
+  // A stock clip fills the frame, so it takes no `place`; it is trimmed on disk to its beat.
+  clip: ({ visual, quote }) => [
+    `src: ${quoted({ value: visual.src, quote })}`,
+    ...(visual.source === undefined ? [] : [sourceField({ source: visual.source, quote })]),
+    ...(visual.trimBefore === undefined || visual.trimBefore === 0
+      ? []
+      : [`trimBefore: ${String(visual.trimBefore)}`]),
+  ],
+}
+
+const fieldsOf = <KIND extends AppliedVisual['kind']>({
+  visual,
+  quote,
+}: {
+  visual: Extract<AppliedVisual, { kind: KIND }>
+  quote: string
+}): string[] => FIELDS[visual.kind]({ visual, quote })
 
 /** A field too long for its own line is broken across the object it describes. */
 const spread = ({ field, indent }: { field: string; indent: string }): string[] => {
@@ -104,12 +148,12 @@ const callFor = ({
   quote: string
 }): string => {
   const fields = fieldsOf({ visual, quote })
-  const oneLine = `${indent}visual: gif({ ${fields.join(', ')} }),`
+  const oneLine = `${indent}visual: ${visual.kind}({ ${fields.join(', ')} }),`
   if (oneLine.length <= LIMIT) {
     return oneLine
   }
   return [
-    `${indent}visual: gif({`,
+    `${indent}visual: ${visual.kind}({`,
     ...fields.flatMap((field) => spread({ field, indent })),
     `${indent}}),`,
   ].join('\n')
@@ -134,11 +178,13 @@ export const readVisuals = ({ source }: { source: string }): ReadVisual[] =>
     .map((block) => source.slice(block.start, block.end))
     .flatMap((block) => {
       const src = SRC.exec(block)
-      if (src === null) {
+      const kind = KIND.exec(block)
+      if (src === null || kind === null) {
         return []
       }
       const colour = COLOUR.exec(block)
       const rate = RATE.exec(block)
+      const trim = TRIM.exec(block)
       const recorded = PROVENANCE.exec(block)
       const noted = recorded === null ? PROVENANCE_WITHOUT_URL.exec(block) : null
       const provenance =
@@ -146,16 +192,23 @@ export const readVisuals = ({ source }: { source: string }): ReadVisual[] =>
           ? {
               provider: recorded[1] ?? '',
               search: recorded[2] ?? '',
-              url: recorded[3] ?? recorded[4] ?? '',
+              ...(recorded[3] === undefined ? {} : { author: recorded[3].trim() }),
+              url: recorded[4] ?? recorded[5] ?? '',
             }
           : noted !== null
-            ? { provider: noted[1] ?? '', search: noted[2] ?? '' }
+            ? {
+                provider: noted[1] ?? '',
+                search: noted[2] ?? '',
+                ...(noted[3] === undefined ? {} : { author: noted[3].trim() }),
+              }
             : undefined
       return [
         {
+          kind: kindOf({ name: kind[1] ?? 'gif' }),
           src: src[2] ?? '',
           ...(colour === null ? {} : { color: colour[2] ?? '' }),
           ...(rate === null ? {} : { playbackRate: Number(rate[1]) }),
+          ...(trim === null ? {} : { trimBefore: Number(trim[1]) }),
           ...(provenance === undefined ? {} : { provenance }),
         },
       ]
@@ -179,15 +232,15 @@ export const withVisualApplied = ({
   }
 
   const original = source.slice(block.start, block.end)
-  const indentMatch = /^(\s*)visual: gif\(/m.exec(original)
+  const indentMatch = /^(\s*)visual: (?:gif|clip|still)\(/m.exec(original)
   if (indentMatch === null) {
-    throw new Error(`Section ${section} has no gif to replace.`)
+    throw new Error(`Section ${section} has no visual to replace.`)
   }
   const indent = indentMatch[1] ?? ''
 
-  // The whole call, whether it was written on one line or as a block.
+  // The whole call, whether it was written on one line or as a block, and whatever kind it is.
   const replaced = original.replace(
-    /^\s*visual: gif\(\{[^}]*\}\),$|^\s*visual: gif\(\{(?:[^}]|\}(?!\),))*\}\),$/m,
+    /^\s*visual: (?:gif|clip|still)\(\{(?:[^}]|\}(?!\),))*\}\),$/m,
     callFor({ visual, indent, quote: quoteOf({ source }) }),
   )
 
@@ -200,6 +253,13 @@ export const withVisualApplied = ({
 }
 
 const GIPHY_ID = /giphy\.com\/gifs\/([A-Za-z0-9]+)/
+/** Pexels and pixabay put the id at the end of a slugged url. */
+const TRAILING_ID = /-(\d+)\/?$/
+
+const VISUAL_KINDS: VisualKind[] = ['gif', 'clip', 'still']
+
+const kindOf = ({ name }: { name: string }): VisualKind =>
+  VISUAL_KINDS.find((kind) => kind === name) ?? 'gif'
 
 /**
  * The source a provenance comment was recording, or null when its id cannot be known.
@@ -221,11 +281,23 @@ export const sourceFor = ({
   if (provenance.url === undefined) {
     // Provider and search are all that was ever written down. Recorded without an id rather than
     // left in prose, and never with an invented one.
-    return { provider: provenance.provider, search: provenance.search }
+    return {
+      provider: provenance.provider,
+      search: provenance.search,
+      ...(provenance.author === undefined ? {} : { author: provenance.author }),
+    }
   }
   const url = provenance.url
-  const id = provenance.provider === 'giphy' ? GIPHY_ID.exec(url)?.[1] : byUrl[url]
+  const id =
+    provenance.provider === 'giphy'
+      ? GIPHY_ID.exec(url)?.[1]
+      : (TRAILING_ID.exec(url)?.[1] ?? byUrl[url])
   return id === undefined
     ? null
-    : { provider: provenance.provider, id, search: provenance.search }
+    : {
+        provider: provenance.provider,
+        id,
+        search: provenance.search,
+        ...(provenance.author === undefined ? {} : { author: provenance.author }),
+      }
 }

@@ -48,23 +48,64 @@ const answer = async ({
   response.end(body)
 }
 
+/** By extension, because an mp4 served as a gif renders as nothing at all. */
+const CONTENT_TYPES: Record<string, string> = {
+  gif: 'image/gif',
+  mp4: 'video/mp4',
+  png: 'image/png',
+  jpg: 'image/jpeg',
+  webp: 'image/webp',
+}
+
+const contentTypeOf = ({ path }: { path: string }): string =>
+  CONTENT_TYPES[path.split('.').slice(-1)[0]?.toLowerCase() ?? ''] ?? 'application/octet-stream'
+
+/**
+ * A file, in whole or in part.
+ *
+ * Range support is not an optimisation here: a `<video>` asks for `bytes=0-` and waits for partial
+ * content, and served the whole body with a 200 it sits at `readyState 0` for ever. Gifs never
+ * needed it, which is why it only showed up once clips arrived.
+ */
 const sendFile = async ({
   response,
   path,
-  type,
+  range,
 }: {
   response: ServerResponse
   path: string
-  type: string
+  range?: string | undefined
 }): Promise<void> => {
+  let bytes: Buffer
   try {
-    const bytes = await readFile(path)
-    response.writeHead(200, { 'Content-Type': type, 'Content-Length': String(bytes.byteLength) })
-    response.end(bytes)
+    bytes = await readFile(path)
   } catch {
     response.writeHead(404, { 'Content-Type': 'application/json' })
     response.end(JSON.stringify({ error: `${path} not found` }))
+    return
   }
+
+  const asked = /bytes=(\d*)-(\d*)/.exec(range ?? '')
+  if (asked === null) {
+    response.writeHead(200, {
+      'Content-Type': contentTypeOf({ path }),
+      'Content-Length': String(bytes.byteLength),
+      'Accept-Ranges': 'bytes',
+    })
+    response.end(bytes)
+    return
+  }
+
+  const start = asked[1] === '' ? 0 : Number(asked[1])
+  const end = asked[2] === '' || asked[2] === undefined ? bytes.byteLength - 1 : Number(asked[2])
+  const slice = bytes.subarray(start, end + 1)
+  response.writeHead(206, {
+    'Content-Type': contentTypeOf({ path }),
+    'Content-Length': String(slice.byteLength),
+    'Content-Range': `bytes ${String(start)}-${String(end)}/${String(bytes.byteLength)}`,
+    'Accept-Ranges': 'bytes',
+  })
+  response.end(slice)
 }
 
 const asRecord = ({ body }: { body: unknown }): Record<string, unknown> =>
@@ -96,15 +137,25 @@ const handle = async ({
     return sendFile({
       response,
       path: io.assetPath({ video: parts[2] ?? '', name: parts[3] ?? '' }),
-      type: 'image/gif',
+      range: request.headers.range,
     })
   }
   if (request.method === 'GET' && parts.length === 4 && parts[1] === 'candidate') {
     return sendFile({
       response,
       path: io.candidatePath({ video: parts[2] ?? '', id: (parts[3] ?? '').replace(/\.gif$/, '') }),
-      type: 'image/gif',
+      range: request.headers.range,
     })
+  }
+  if (request.method === 'GET' && parts.length === 4 && parts[1] === 'poster') {
+    // Built on demand and kept beside the clip, so the second visit is a plain file read.
+    const poster = await io.posterFrame({
+      video: parts[2] ?? '',
+      name: (parts[3] ?? '').replace(/\.jpg$/, ''),
+    })
+    return poster === null
+      ? sendFile({ response, path: 'no-poster' })
+      : sendFile({ response, path: poster })
   }
   if (request.method === 'GET' && parts.length === 4 && parts[1] === 'strip') {
     // The eight-frame strip: text that only appears in a gif's final third is what four frames miss.
@@ -112,11 +163,43 @@ const handle = async ({
     const gif = io.candidatePath({ video: parts[2] ?? '', id })
     const strip = gif.replace(/\.gif$/, '-strip.png')
     await io.frameStrip({ gif, out: strip })
-    return sendFile({ response, path: strip, type: 'image/png' })
+    return sendFile({ response, path: strip })
   }
 
   if (request.method === 'POST') {
     const body = asRecord({ body: await readBody({ request }) })
+    // Stock footage and gifs are different catalogues judged on different things, so the section's
+    // own kind decides which is searched rather than the caller having to know.
+    if (url.pathname === '/api/search-stock') {
+      return answer({
+        response,
+        output: behavior.searchStock({
+          video: String(body.video ?? ''),
+          index: Number(body.section ?? 0),
+          terms: Array.isArray(body.terms) ? body.terms.map((term) => String(term)) : [],
+          provider: String(body.provider ?? 'pexels'),
+          show: Number(body.show ?? 12),
+          skip: Array.isArray(body.skip) ? body.skip.map((id) => String(id)) : [],
+        }),
+      })
+    }
+    if (url.pathname === '/api/pick-clip') {
+      return answer({
+        response,
+        output: behavior.pickClip({
+          video: String(body.video ?? ''),
+          index: Number(body.section ?? 0),
+          clip: {
+            id: String(body.id ?? ''),
+            name: sectionName({ term: String(body.name ?? body.term ?? '') }),
+            term: String(body.term ?? 'unrecorded'),
+            author: String(body.author ?? ''),
+            provider: String(body.provider ?? 'pexels') === 'pixabay' ? 'pixabay' : 'pexels',
+            downloadUrl: String(body.downloadUrl ?? ''),
+          },
+        }),
+      })
+    }
     if (url.pathname === '/api/search') {
       return answer({
         response,

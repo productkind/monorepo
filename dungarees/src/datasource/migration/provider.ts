@@ -24,12 +24,10 @@ export const createFolderMigrationProvider = (migrationsFolder: string): Migrati
 
     return Object.fromEntries(
       await Promise.all(
-        migrationFiles.map(
-          async (fileName): Promise<[string, Migration]> => [
-            basename(fileName, extname(fileName)),
-            await importMigration(join(migrationsFolder, fileName)),
-          ],
-        ),
+        migrationFiles.map(async (fileName): Promise<[string, Migration]> => [
+          basename(fileName, extname(fileName)),
+          await importMigration(join(migrationsFolder, fileName)),
+        ]),
       ),
     )
   },

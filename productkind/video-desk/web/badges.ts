@@ -52,3 +52,22 @@ export const usedBadge = ({ usedIn }: { usedIn: string[] }): Badge | undefined =
 
 export const seconds = ({ value }: { value: number | null }): string =>
   value === null ? '—' : `${value.toFixed(2)}s`
+
+/**
+ * How a clip sits against its beat.
+ *
+ * A clip has no rate and no loop, so the question is whether it lasts: one that runs out holds a
+ * frozen frame while the captions keep moving.
+ */
+export const clipBadge = ({
+  headroom,
+}: {
+  headroom: number | undefined
+}): Badge => {
+  if (headroom === undefined) {
+    return { text: 'measuring…', tone: 'plain' }
+  }
+  return headroom < 0
+    ? { text: `${headroom.toFixed(1)}s short`, tone: 'bad' }
+    : { text: `+${headroom.toFixed(1)}s spare`, tone: headroom < 0.5 ? 'warn' : 'good' }
+}

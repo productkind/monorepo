@@ -5,10 +5,14 @@ export type Fit = { rate: number | null; why: string }
 export type Section = {
   index: number
   text: string
+  /** A gif loops inside its slot; a clip plays once and has to outlast it. */
+  kind: 'gif' | 'clip' | 'still'
   src: string
   color: string | null
   playbackRate: number | null
-  /** The search recorded in the section's provenance comment, if it has one. */
+  /** Where the visual came from, as the definition records it. */
+  source: { provider: string; id: string | null; search: string; author?: string } | null
+  /** The search that found it, which is what a re-source starts from. */
   search: string | null
   slotSeconds: number | null
   gifSeconds: number | null
@@ -22,6 +26,8 @@ export type Section = {
   width?: number
   height?: number
   fit?: Fit
+  /** Only for a clip: whether it covers its beat, and by how much. */
+  clip?: { covers: boolean; headroom: number; why: string }
 }
 
 export type VideoSummary = {
@@ -63,4 +69,18 @@ export type ProviderItem = {
   previewUrl: string
   /** Where the gif can be linked to, which is the only real address for a klipy pick. */
   sourceUrl: string
+}
+
+/** A stock clip offered for a beat. */
+export type ClipCandidate = {
+  provider: 'pexels' | 'pixabay'
+  id: string
+  term: string
+  seconds: number
+  /** Who to credit: pexels asks for it, and the credit cannot be written without the name. */
+  author: string
+  posterUrl: string
+  sourceUrl: string
+  downloadUrl: string
+  fit: { covers: boolean; headroom: number; why: string }
 }

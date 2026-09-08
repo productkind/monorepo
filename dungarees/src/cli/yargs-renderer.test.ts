@@ -92,9 +92,7 @@ test('exits with the code carried by an exit event and renders nothing', async (
 
 test('drops messages below the given level but keeps those at or above it', async () => {
   type AppEvents =
-    | DomainEvent<'chatter', string>
-    | DomainEvent<'notice', string>
-    | DomainEvent<'alarm', string>
+    DomainEvent<'chatter', string> | DomainEvent<'notice', string> | DomainEvent<'alarm', string>
   const app = createYargsPromptApp<AppEvents>({
     name: 'test-app',
     route: (yargs, io) => {

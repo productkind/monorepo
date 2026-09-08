@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
 
 import type { Section, VideoDetail, VideoSummary } from './api'
-import { assetUrl, listVideos, loadVideo } from './api'
-import { fitBadge, seconds } from './badges'
+import { listVideos, loadVideo } from './api'
+import { clipBadge, fitBadge, seconds } from './badges'
 import { BadgeRow } from './BadgeRow'
 import { SectionPanel } from './SectionPanel'
+import { VisualPreview } from './VisualPreview'
 
 export const App: React.FC = () => {
   const [videos, setVideos] = useState<VideoSummary[]>([])
@@ -102,10 +103,12 @@ export const App: React.FC = () => {
                 setSelected(section.index)
               }}
             >
-              <img
-                src={assetUrl({ video: video.id, src: section.src })}
-                alt=""
-                style={{ background: section.color ?? '#1a0044' }}
+              <VisualPreview
+                video={video.id}
+                src={section.src}
+                kind={section.kind}
+                color={section.color}
+                size={56}
               />
               <span>
                 <span className="section-index">
@@ -116,10 +119,18 @@ export const App: React.FC = () => {
                 <BadgeRow
                   badges={[
                     { text: seconds({ value: section.slotSeconds }), tone: 'plain' },
-                    fitBadge({ repeats: section.repeats }),
-                    section.color === null
-                      ? undefined
-                      : { text: section.color, tone: 'plain' },
+                    // A clip is judged on whether it outlasts its beat, a gif on how often it
+                    // comes round inside it.
+                    section.kind === 'clip'
+                      ? clipBadge({
+                          headroom:
+                            section.gifSeconds === null || section.slotSeconds === null
+                              ? undefined
+                              : Math.round((section.gifSeconds - section.slotSeconds) * 10) / 10,
+                        })
+                      : fitBadge({ repeats: section.repeats }),
+                    section.kind === 'clip' ? { text: 'clip', tone: 'plain' } : undefined,
+                    section.color === null ? undefined : { text: section.color, tone: 'plain' },
                   ]}
                 />
               </span>

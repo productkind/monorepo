@@ -22,8 +22,11 @@ export type VisualKind = (typeof VISUAL_KINDS)[number]
 
 export type FitMode = 'contain' | 'cover' | 'fill'
 
-/** The catalogues gifs are sourced from. Their ids are not interchangeable. */
-export const PROVIDERS = ['giphy', 'klipy'] as const
+/**
+ * The catalogues visuals are sourced from. Their ids are not interchangeable: giphy and klipy for
+ * gifs, pexels and pixabay for stock footage.
+ */
+export const PROVIDERS = ['giphy', 'klipy', 'pexels', 'pixabay'] as const
 
 export type Provider = (typeof PROVIDERS)[number]
 
@@ -47,6 +50,11 @@ export type VisualSource = {
   id?: string
   /** The search that found it, which is also what a re-source starts from. */
   search: string
+  /**
+   * Who made it, where the provider names them. Pexels asks for a credit and a link back, and
+   * that credit cannot be written without keeping the name.
+   */
+  author?: string
 }
 
 /** Matches `GifLoopBehavior` in @remotion/gif; the compiler checks it where it is passed on. */

@@ -14,9 +14,9 @@ export type DomainEventOf<PAYLOADS extends Record<string, Serializable>> = {
 }[keyof PAYLOADS & string]
 
 export type EventCreators<PAYLOADS extends Record<string, Serializable>> = {
-  [TYPE in keyof PAYLOADS & string as ToCamelCase<
-    FromKebabCase<TYPE>
-  >]: undefined extends PAYLOADS[TYPE]
+  [
+    TYPE in keyof PAYLOADS & string as ToCamelCase<FromKebabCase<TYPE>>
+  ]: undefined extends PAYLOADS[TYPE]
     ? () => DomainEvent<TYPE, PAYLOADS[TYPE]>
     : (payload: PAYLOADS[TYPE]) => DomainEvent<TYPE, PAYLOADS[TYPE]>
 }

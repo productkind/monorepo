@@ -12,8 +12,7 @@ type KeyValueStoreCommon_ = {
 type KeyValueStoreWithValidator_ = KeyValueStoreCommon_ & { validate: () => void }
 
 export type RawKeyValueStore<T = unknown> =
-  | ReadableRawKeyValueStore<T>
-  | WriteableRawKeyValueStore<T>
+  ReadableRawKeyValueStore<T> | WriteableRawKeyValueStore<T>
 
 export type ReadableRawKeyValueStore<T = unknown> = {
   get: (key: string) => T

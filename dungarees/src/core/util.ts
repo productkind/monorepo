@@ -92,7 +92,7 @@ const isDataViewEqual = (a: DataView, b: DataView): boolean => {
   if (a.byteLength !== b.byteLength) {
     return false
   }
-  for (let index = a.byteLength; index-- !== 0; ) {
+  for (let index = a.byteLength; index-- !== 0;) {
     if (a.getUint8(index) !== b.getUint8(index)) {
       return false
     }

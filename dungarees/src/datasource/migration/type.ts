@@ -9,8 +9,7 @@ export type MigrationScripts = {
 
 // The second form is what makes a migrator testable without a build step or a filesystem layout.
 export type MigrationSource =
-  | { migrationsFolder: string }
-  | { migrations: Record<string, Migration> }
+  { migrationsFolder: string } | { migrations: Record<string, Migration> }
 
 export type MigratorConfig = { datasource: Datasource<AnySchema> } & MigrationSource
 

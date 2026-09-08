@@ -70,15 +70,29 @@ const migrate = ({
       )
       continue
     }
+    if (visual.kind === 'still') {
+      // A still was made rather than found, so no provider ever described one.
+      unresolved.push(`§${String(visual.index).padStart(2, '0')} a still, left alone`)
+      continue
+    }
     source = withVisualApplied({
       source,
       section: visual.index,
-      visual: {
-        src: visual.src,
-        ...(visual.color === undefined ? {} : { color: visual.color }),
-        ...(visual.playbackRate === undefined ? {} : { playbackRate: visual.playbackRate }),
-        source: found,
-      },
+      visual:
+        visual.kind === 'clip'
+          ? {
+              kind: 'clip',
+              src: visual.src,
+              ...(visual.trimBefore === undefined ? {} : { trimBefore: visual.trimBefore }),
+              source: found,
+            }
+          : {
+              kind: 'gif',
+              src: visual.src,
+              ...(visual.color === undefined ? {} : { color: visual.color }),
+              ...(visual.playbackRate === undefined ? {} : { playbackRate: visual.playbackRate }),
+              source: found,
+            },
     })
     moved += 1
     if (found.id === undefined) {

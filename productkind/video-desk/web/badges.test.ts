@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
 
-import { fitBadge, motionBadge, usedBadge } from './badges'
+import { clipBadge, fitBadge, motionBadge, usedBadge } from './badges'
 
 describe('fitBadge', () => {
   test('reads a gif that covers its slot in one pass as good', () => {
@@ -47,5 +47,19 @@ describe('usedBadge', () => {
 
   test('counts instead of naming when a gif is used more than once', () => {
     expect(usedBadge({ usedIn: ['a-00§01', 'a-03§04'] })).toEqual({ text: 'used 2x', tone: 'bad' })
+  })
+})
+
+describe('clipBadge', () => {
+  test('a clip with room to spare is good', () => {
+    expect(clipBadge({ headroom: 1 })).toEqual({ text: '+1.0s spare', tone: 'good' })
+  })
+
+  test('a clip that runs out before the beat is bad, because it freezes', () => {
+    expect(clipBadge({ headroom: -1.5 })).toEqual({ text: '-1.5s short', tone: 'bad' })
+  })
+
+  test('barely covering the beat is a warning, not a pass', () => {
+    expect(clipBadge({ headroom: 0.2 }).tone).toBe('warn')
   })
 })

@@ -7,15 +7,7 @@ export type AUTH_HEADER = {
 }
 
 export type RestMethod =
-  | 'GET'
-  | 'HEAD'
-  | 'POST'
-  | 'PUT'
-  | 'DELETE'
-  | 'CONNECT'
-  | 'OPTIONS'
-  | 'TRACE'
-  | 'PATCH'
+  'GET' | 'HEAD' | 'POST' | 'PUT' | 'DELETE' | 'CONNECT' | 'OPTIONS' | 'TRACE' | 'PATCH'
 
 export type RestEndpointRequest = {
   readonly method: RestMethod

@@ -20,6 +20,7 @@ export const videoDeskPresenter: VideoDeskPresenter = {
   'video-loaded': ({ payload }) => ({ status: 200, body: payload.video }),
   'section-measured': ({ payload }) => ({ status: 200, body: { section: payload.section } }),
   'candidates-found': ({ payload }) => ({ status: 200, body: payload }),
+  'clips-found': ({ payload }) => ({ status: 200, body: payload }),
   'gif-picked': ({ payload }) => ({ status: 200, body: payload }),
   'flags-changed': ({ payload }) => ({ status: 200, body: payload }),
   // Nothing can search until the hour turns, which is the one failure a person can act on.

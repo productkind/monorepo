@@ -3,7 +3,16 @@ import { defer, from, type Observable } from 'rxjs'
 import { eventCreators, type VideoDeskEvent } from './events.ts'
 import {
   chooseKey,
+  clipFit,
+  FRAME,
   edgeColourOf,
+  HEADROOM_SECONDS,
+  keepThatCoverTheBeat,
+  pexelsClips,
+  pexelsSearchUrl,
+  pixabayClips,
+  pixabaySearchUrl,
+  type StockClip,
   fitAdvice,
   gifDurationInSeconds,
   gifFrameCount,
@@ -15,6 +24,7 @@ import {
   klipySearchUrl,
   parseSections,
   type ProviderState,
+  unreadSections,
   repeatsIn,
   usedIdsIn,
 } from './operations.ts'
@@ -43,11 +53,27 @@ export type DeskIo = {
   readCandidate: (options: { video: string; id: string }) => Promise<Uint8Array | null>
   writeCandidate: (options: { video: string; id: string; bytes: Uint8Array }) => Promise<void>
   candidatePath: (options: { video: string; id: string }) => string
-  fetchJson: (options: { url: string }) => Promise<unknown>
+  fetchJson: (options: { url: string; headers?: Record<string, string> }) => Promise<unknown>
   fetchBytes: (options: { url: string }) => Promise<Uint8Array>
   /** Colours on the gif's border ring, across every frame. */
   ringHistogram: (options: { path: string }) => Promise<Parameters<typeof edgeColourOf>[0]['histogram']>
   motion: (options: { path: string }) => Promise<number>
+  /** How long a video file runs, which a gif's frame delays cannot answer. */
+  videoSeconds: (options: { path: string }) => Promise<number | null>
+  videoSize: (options: { path: string }) => Promise<{ width: number; height: number } | null>
+  /**
+   * Trims a downloaded clip to the beat plus its headroom, strips the audio and re-encodes.
+   *
+   * Not only about disk: a clip has no rate and no loop, so keeping a known margin past the beat
+   * is what guarantees it cannot run out and hold a frozen frame. Audio goes because every clip
+   * is muted anyway — the narration is the only sound.
+   */
+  trimClip: (options: { from: string; to: string; seconds: number }) => Promise<void>
+  removeAsset: (options: { video: string; name: string }) => Promise<void>
+  /** A frame from a clip, so a list of clips shows pictures rather than empty boxes. */
+  posterFrame: (options: { video: string; name: string }) => Promise<string | null>
+  pexelsKey: () => string | undefined
+  pixabayKey: () => string | undefined
   loopSeam: (options: { path: string }) => Promise<number | null>
   /** Eight evenly spaced frames side by side: how late-appearing text gets caught. */
   frameStrip: (options: { gif: string; out: string }) => Promise<void>
@@ -60,12 +86,20 @@ export type DeskIo = {
   applyVisual: (options: {
     video: string
     section: number
-    visual: {
-      src: string
-      color?: string
-      playbackRate?: number
-      source: { provider: 'giphy' | 'klipy'; id?: string; search: string }
-    }
+    visual:
+      | {
+          kind: 'gif'
+          src: string
+          color?: string
+          playbackRate?: number
+          source: { provider: string; id?: string; search: string; author?: string }
+        }
+      | {
+          kind: 'clip'
+          src: string
+          trimBefore?: number
+          source: { provider: string; id?: string; search: string; author?: string }
+        }
   }) => Promise<void>
   keys: () => { giphy: string[]; klipy: string | undefined }
   readProviderState: () => Promise<ProviderState>
@@ -87,10 +121,34 @@ const sectionsOf = async ({
   const slots = await io.readSlots({ video })
   const flags = await io.readFlags({ video })
 
+  const parsed = parseSections({ source })
+  const unread = unreadSections({ source, read: parsed })
+  if (unread > 0) {
+    // Refusing beats mis-indexing: a section the parser skipped shifts every index after it, and
+    // a pick would then rewrite a beat nobody chose.
+    throw new Error(
+      `${video} has ${String(unread)} visual(s) this desk cannot read, so its section numbers ` +
+        'cannot be trusted. Fix the parser before picking anything for it.',
+    )
+  }
+
   const sections = await Promise.all(
-    parseSections({ source }).map(async (parsed) => {
-      const bytes = await io.readAsset({ video, name: parsed.src })
+    parsed.map(async (parsed) => {
       const slot = slots?.[parsed.index] ?? null
+      // A clip is a video file: its length comes from the container, not from frame delays, and
+      // it plays once rather than repeating, so a repeat count would be meaningless.
+      if (parsed.kind === 'clip') {
+        const seconds = await io.videoSeconds({ path: io.assetPath({ video, name: parsed.src }) })
+        return {
+          ...parsed,
+          slotSeconds: slot,
+          gifSeconds: seconds,
+          repeats: null,
+          flagged: flags[String(parsed.index)]?.src === parsed.src,
+          exists: seconds !== null,
+        }
+      }
+      const bytes = await io.readAsset({ video, name: parsed.src })
       const seconds = bytes === null ? null : gifDurationInSeconds({ bytes })
       return {
         ...parsed,
@@ -171,11 +229,27 @@ export const measureSection = ({
         if (section === undefined) {
           return eventCreators.deskFailed({ reason: `${video} has no section ${String(index)}` })
         }
+        const path = io.assetPath({ video, name: section.src })
+        if (section.kind === 'clip') {
+          // No loop seam and no letterbox: a clip plays once and fills the frame. What matters is
+          // whether it outlasts its beat.
+          const size = await io.videoSize({ path })
+          return eventCreators.sectionMeasured({
+            section: {
+              ...section,
+              ...(size === null ? {} : size),
+              ...(section.slotSeconds === null || section.gifSeconds === null
+                ? {}
+                : {
+                    clip: clipFit({ seconds: section.gifSeconds, slot: section.slotSeconds }),
+                  }),
+            },
+          })
+        }
         const bytes = await io.readAsset({ video, name: section.src })
         if (bytes === null) {
           return eventCreators.sectionMeasured({ section })
         }
-        const path = io.assetPath({ video, name: section.src })
         const background = edgeColourOf({ histogram: await io.ringHistogram({ path }) })
         const seam = await io.loopSeam({ path })
         return eventCreators.sectionMeasured({
@@ -232,6 +306,79 @@ const searchOneTerm = async ({
   const payload = await io.fetchJson({ url: klipySearchUrl({ key: klipy, term, limit }) })
   return { items: klipyItems({ payload }), exhausted: false }
 }
+
+/**
+ * Stock footage for one beat.
+ *
+ * A clip section asks a different question from a gif one: not what reads well in a loop, but what
+ * covers the beat without running out. So the catalogues are different, the filter is duration
+ * rather than aspect, and nothing is measured for motion — footage moves by definition.
+ */
+export const searchStock = ({
+  io,
+  video,
+  index,
+  terms,
+  provider = 'pexels',
+  show = 12,
+  limit = 40,
+  skip = [],
+}: {
+  io: DeskIo
+  video: string
+  index: number
+  terms: string[]
+  provider?: string
+  show?: number
+  limit?: number
+  skip?: string[]
+}): Observable<VideoDeskEvent> =>
+  defer(() =>
+    from(
+      (async () => {
+        const slots = await io.readSlots({ video })
+        const slot = slots?.[index] ?? null
+        if (slot === null) {
+          return eventCreators.deskFailed({
+            reason: `${video} has no timeline, so no beat length to fit a clip to`,
+          })
+        }
+
+        const pexels = io.pexelsKey()
+        const pixabay = io.pixabayKey()
+        const wanted = provider === 'pixabay' ? 'pixabay' : 'pexels'
+        const key = wanted === 'pexels' ? pexels : pixabay
+        if (key === undefined || key === '') {
+          return eventCreators.deskFailed({
+            reason: `${wanted.toUpperCase()}_API_KEY is not set, so ${wanted} cannot be searched`,
+          })
+        }
+
+        const found: StockClip[] = []
+        for (const term of terms) {
+          const payload =
+            wanted === 'pexels'
+              ? await io.fetchJson({
+                  url: pexelsSearchUrl({ term, limit }),
+                  headers: { Authorization: key },
+                })
+              : await io.fetchJson({ url: pixabaySearchUrl({ key, term, limit }) })
+          const clips = wanted === 'pexels' ? pexelsClips({ payload }) : pixabayClips({ payload })
+          found.push(...clips.map((clip) => ({ ...clip, term })))
+        }
+
+        const usable = keepThatCoverTheBeat({ items: found, slot, skip }).slice(0, show)
+        return eventCreators.clipsFound({
+          slot,
+          clips: usable.map((clip) => ({
+            ...clip,
+            term: 'term' in clip && typeof clip.term === 'string' ? clip.term : terms[0] ?? '',
+            fit: clipFit({ seconds: clip.seconds, slot }),
+          })),
+        })
+      })(),
+    ),
+  )
 
 export const searchSection = ({
   io,
@@ -412,6 +559,7 @@ export const pickGif = ({
           video,
           section: index,
           visual: {
+            kind: 'gif',
             src: name,
             source: { provider: candidate.provider, id: candidate.id, search: candidate.search },
             ...(background === null ? {} : { color: background.colour }),
@@ -421,9 +569,118 @@ export const pickGif = ({
 
         const { sections } = await sectionsOf({ io, video })
         const section = sections[index]
-        return section === undefined
-          ? eventCreators.deskFailed({ reason: `${video} lost section ${String(index)}` })
-          : eventCreators.gifPicked({ section, applied: name })
+        if (section === undefined) {
+          return eventCreators.deskFailed({ reason: `${video} lost section ${String(index)}` })
+        }
+        return eventCreators.gifPicked({
+          section:
+            section.slotSeconds === null || section.gifSeconds === null
+              ? section
+              : {
+                  ...section,
+                  clip: clipFit({ seconds: section.gifSeconds, slot: section.slotSeconds }),
+                },
+          applied: name,
+        })
+      })(),
+    ),
+  )
+
+/**
+ * Apply a stock clip to a beat: fetch the native 1080x1920 file, trim it to the beat plus its
+ * headroom, and write it in as a clip.
+ *
+ * Written as a `clip`, never a `gif`: the two are not interchangeable, and a six-second piece of
+ * footage written as a gif would render as a still frame.
+ */
+export const pickClip = ({
+  io,
+  video,
+  index,
+  clip,
+}: {
+  io: DeskIo
+  video: string
+  index: number
+  clip: {
+    id: string
+    name: string
+    term: string
+    author: string
+    provider: 'pexels' | 'pixabay'
+    downloadUrl: string
+  }
+}): Observable<VideoDeskEvent> =>
+  defer(() =>
+    from(
+      (async () => {
+        const slots = await io.readSlots({ video })
+        const slot = slots?.[index] ?? null
+        if (slot === null) {
+          return eventCreators.deskFailed({
+            reason: `${video} has no timeline, so there is no beat to trim a clip to`,
+          })
+        }
+
+        const name = `clip-${String(index).padStart(2, '0')}-${clip.name}.mp4`
+        const untrimmed = `${name}.download`
+        await io.writeAsset({
+          video,
+          name: untrimmed,
+          bytes: await io.fetchBytes({ url: clip.downloadUrl }),
+        })
+
+        // What a provider says a file is cannot be trusted: pexels lists 6000421 as 1080x1920,
+        // names the file hd_1080_1920, and the stream inside is 720x1280 — which would be upscaled
+        // into the frame and read as visibly soft. The stream decides.
+        const measured = await io.videoSize({ path: io.assetPath({ video, name: untrimmed }) })
+        if (measured === null || measured.width !== FRAME.width || measured.height !== FRAME.height) {
+          await io.removeAsset({ video, name: untrimmed })
+          return eventCreators.deskFailed({
+            reason:
+              `${clip.provider} ${clip.id} claims ${String(FRAME.width)}x${String(FRAME.height)} ` +
+              `but its stream is ${measured === null ? 'unreadable' : `${String(measured.width)}x${String(measured.height)}`}. ` +
+              'Pick another clip; this one would be upscaled into the frame.',
+          })
+        }
+
+        await io.trimClip({
+          from: io.assetPath({ video, name: untrimmed }),
+          to: io.assetPath({ video, name }),
+          seconds: slot + HEADROOM_SECONDS,
+        })
+        await io.removeAsset({ video, name: untrimmed })
+
+        await io.applyVisual({
+          video,
+          section: index,
+          visual: {
+            kind: 'clip',
+            src: name,
+            source: {
+              provider: clip.provider,
+              id: clip.id,
+              search: clip.term,
+              author: clip.author,
+            },
+          },
+        })
+
+        const { sections } = await sectionsOf({ io, video })
+        const section = sections[index]
+        if (section === undefined) {
+          return eventCreators.deskFailed({ reason: `${video} lost section ${String(index)}` })
+        }
+        return eventCreators.gifPicked({
+          section:
+            section.slotSeconds === null || section.gifSeconds === null
+              ? section
+              : {
+                  ...section,
+                  clip: clipFit({ seconds: section.gifSeconds, slot: section.slotSeconds }),
+                },
+          applied: name,
+        })
       })(),
     ),
   )
