@@ -681,7 +681,7 @@
   ],
   "takes": [
     {
-      "audio": "vibe-coder-validation-00/audio/e021cc26d3b74a54.mp3",
+      "audio": "vibe-coder-validation-01-b-roll/audio/e021cc26d3b74a54.mp3",
       "fromFrame": 0,
       "durationInFrames": 1470
     }
@@ -690,131 +690,96 @@
     {
       "index": 0,
       "fromFrame": 0,
-      "durationInFrames": 60,
+      "durationInFrames": 115,
       "wordFrom": 0,
-      "wordTo": 7
-    },
-    {
-      "index": 1,
-      "fromFrame": 60,
-      "durationInFrames": 55,
-      "wordFrom": 7,
       "wordTo": 11
     },
     {
-      "index": 2,
+      "index": 1,
       "fromFrame": 115,
-      "durationInFrames": 57,
+      "durationInFrames": 141,
       "wordFrom": 11,
-      "wordTo": 15
-    },
-    {
-      "index": 3,
-      "fromFrame": 172,
-      "durationInFrames": 84,
-      "wordFrom": 15,
       "wordTo": 21
     },
     {
-      "index": 4,
+      "index": 2,
       "fromFrame": 256,
       "durationInFrames": 89,
       "wordFrom": 21,
       "wordTo": 26
     },
     {
-      "index": 5,
+      "index": 3,
       "fromFrame": 345,
-      "durationInFrames": 57,
+      "durationInFrames": 118,
       "wordFrom": 26,
-      "wordTo": 33
-    },
-    {
-      "index": 6,
-      "fromFrame": 402,
-      "durationInFrames": 61,
-      "wordFrom": 33,
       "wordTo": 38
     },
     {
-      "index": 7,
+      "index": 4,
       "fromFrame": 463,
       "durationInFrames": 92,
       "wordFrom": 38,
       "wordTo": 45
     },
     {
-      "index": 8,
+      "index": 5,
       "fromFrame": 555,
       "durationInFrames": 93,
       "wordFrom": 45,
       "wordTo": 55
     },
     {
-      "index": 9,
+      "index": 6,
       "fromFrame": 648,
       "durationInFrames": 81,
       "wordFrom": 55,
       "wordTo": 59
     },
     {
-      "index": 10,
+      "index": 7,
       "fromFrame": 729,
       "durationInFrames": 79,
       "wordFrom": 59,
       "wordTo": 65
     },
     {
-      "index": 11,
+      "index": 8,
       "fromFrame": 808,
-      "durationInFrames": 77,
+      "durationInFrames": 144,
       "wordFrom": 65,
-      "wordTo": 75
-    },
-    {
-      "index": 12,
-      "fromFrame": 885,
-      "durationInFrames": 67,
-      "wordFrom": 75,
       "wordTo": 83
     },
     {
-      "index": 13,
+      "index": 9,
       "fromFrame": 952,
-      "durationInFrames": 77,
+      "durationInFrames": 143,
       "wordFrom": 83,
-      "wordTo": 91
-    },
-    {
-      "index": 14,
-      "fromFrame": 1029,
-      "durationInFrames": 66,
-      "wordFrom": 91,
       "wordTo": 97
     },
     {
-      "index": 15,
+      "index": 10,
       "fromFrame": 1095,
       "durationInFrames": 102,
       "wordFrom": 97,
       "wordTo": 109
     },
     {
-      "index": 16,
+      "index": 11,
       "fromFrame": 1197,
       "durationInFrames": 72,
       "wordFrom": 109,
       "wordTo": 116
     },
     {
-      "index": 17,
+      "index": 12,
       "fromFrame": 1269,
       "durationInFrames": 129,
       "wordFrom": 116,
       "wordTo": 128
     },
     {
-      "index": 18,
+      "index": 13,
       "fromFrame": 1398,
       "durationInFrames": 96,
       "wordFrom": 128,

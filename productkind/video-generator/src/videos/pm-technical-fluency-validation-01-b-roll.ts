@@ -5,7 +5,7 @@ import { clip, defineVideo, riveAtFrame } from '../narration/definition'
  * Script: productkind/marketing/content/campaigns/2026-09-pm-technical-fluency-validation/
  * video-0-nodding-along-in-stand-up/script.md
  *
- * Same narration as `pm-technical-fluency-validation-00`, so the audio cache serves this one the
+ * Same narration as `pm-technical-fluency-validation-01`, so the audio cache serves this one the
  * take it already generated rather than paying ElevenLabs for the same words twice. The narration
  * has to stay character-identical for that to hold: edit the words here and this becomes a new
  * take at full price.
@@ -22,7 +22,7 @@ import { clip, defineVideo, riveAtFrame } from '../narration/definition'
  * the originals are 10-bit HEVC that Chromium cannot decode.
  */
 export default defineVideo({
-  id: 'pm-technical-fluency-validation-00-ambient',
+  id: 'pm-technical-fluency-validation-01-b-roll',
   voice: 'chloe',
   model: 'eleven_v3',
   overlays: [

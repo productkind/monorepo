@@ -1,21 +1,19 @@
 import { defineVideo, gif, riveAtFrame } from '../narration/definition'
 
 /**
- * Video 5 of the vibe coder campaign, "Could one customer increase your bill?".
+ * Video 5 of the vibe coder campaign, "Your app goes down on Saturday".
  * Script: productkind/marketing/content/campaigns/2026-09-vibe-coder-validation/
- * video-5-predictable-running-costs/script.md
+ * video-4-keep-the-product-operable/script.md
  *
  * The CTA is the LinkedIn / YouTube Shorts variant ("link in the comments"), which is the script
  * as written. TikTok and Instagram Reels need the URL spoken and shown instead, so they want a
  * second definition rather than a re-edit of this one.
  *
- * Cut at clause level. The list of services is two beats rather than four, because a single
- * service name leaves too short a slot to put a picture in, and "some costs stay fixed" and
- * "others rise with usage" are separate beats because the line is a contrast between them —
- * a drop falling at a steady rate against a stack that keeps growing.
+ * Cut at clause level. The three ways a live app breaks each get their own beat, because the
+ * point of the line is that they are separate things that can go wrong.
  *
- * A money script pulls the industry's trading-floor imagery, so nothing here uses it: no tickers,
- * no candlestick charts, no fanned banknotes. Each cost is an everyday object instead.
+ * An outage script pulls the industry's control-room imagery, so nothing here uses it: no walls
+ * of monitors, no blinking racks, no red terminals. Each failure is an everyday object instead.
  *
  * Where a gif is shorter than its slot it is slowed to cover the beat in one pass, rather than
  * held on a frozen last frame: a still picture reads as a stall while the captions and the parrot
@@ -33,176 +31,177 @@ export default defineVideo({
   ],
   sections: [
     {
-      // klipy "woman worried phone bill": a woman on the phone, working out what it will cost.
-      text: 'Could one customer increase your bill?',
-      visual: gif({ src: 'section-00-worried-phone-call.gif', place: 'above-captions' }),
-      endsParagraph: true,
-    },
-    {
-      // klipy "app development tools flat icon": a skyline growing out of a phone.
-      text: 'Your AI app builder, database,',
+      // giphy "screen goes black tv switching off": https://giphy.com/gifs/PjbOOXeMPysZneRwAk
+      // An eye closing, then a screen collapsing to a dot. Slowed to cover the beat in one pass.
+      text: 'The app you built with AI goes down on Saturday.',
       visual: gif({
-        src: 'section-01-app-city-buildup.gif',
-        color: '#fcfefc',
-        place: 'above-captions',
-      }),
-    },
-    {
-      // giphy "paper airplane sending message animation": https://giphy.com/gifs/dvViwfnYOy76fnrMqm
-      text: 'email service and AI model',
-      visual: gif({
-        src: 'section-02-paper-airplane-email.gif',
-        color: '#ee9ce1',
-        playbackRate: 0.83,
-        place: 'above-captions',
-      }),
-    },
-    {
-      // giphy "assorted shapes flat lay variety": https://giphy.com/gifs/kKJOl2NsnibMMNjUkH
-      text: 'all charge differently.',
-      visual: gif({ src: 'section-03-shape-morph-different.gif', place: 'above-captions' }),
-    },
-    {
-      // giphy "anchor dropping into water": https://giphy.com/gifs/VQ5vmfZWGnXqCH5vul
-      // One drop at a steady rate, against section 5's stack that keeps growing.
-      text: 'Some costs stay fixed.',
-      visual: gif({
-        src: 'section-04-drop-steady-ripple.gif',
-        color: '#3b43cb',
-        place: 'above-captions',
-      }),
-    },
-    {
-      // giphy "stack growing taller blocks": https://giphy.com/gifs/MTsnRpROcrxWS6wwta
-      // The build completes at about 1.6s, inside the beat, so it needs no rate.
-      text: 'Others rise with usage.',
-      visual: gif({
-        src: 'section-05-bricks-stacking-rising.gif',
-        color: '#f2f2f2',
-        place: 'above-captions',
-      }),
-      endsParagraph: true,
-    },
-    {
-      // giphy "quick doodle sketch hand drawing simple": https://giphy.com/gifs/GAmXgbPLJAjQOsyw8u
-      text: 'That makes a cheap prototype',
-      visual: gif({
-        src: 'section-06-sketching-draft-character.gif',
-        color: '#ffe7cd',
-        place: 'above-captions',
-      }),
-    },
-    {
-      // giphy "confused math calculation cute character": https://giphy.com/gifs/ojiP8Hymf5Vkcdw1A9
-      text: 'hard to price as a live product.',
-      visual: gif({
-        src: 'section-07-confused-math-character.gif',
-        color: '#000000',
-        playbackRate: 0.91,
-        place: 'above-captions',
-      }),
-      endsParagraph: true,
-    },
-    {
-      // giphy "calculator screen number result animation":
-      // https://giphy.com/gifs/QytRJAvwnaU7rvvjxC
-      text: 'You need to know what one active customer costs,',
-      visual: gif({
-        src: 'section-08-calculator-hand-tapping.gif',
-        playbackRate: 0.95,
-        place: 'above-captions',
-      }),
-    },
-    {
-      // klipy "dots forming crowd grid animation": one cell multiplying into a cluster.
-      text: 'what happens when ten become a hundred',
-      visual: gif({ src: 'section-09-hexagons-multiplying.gif', place: 'above-captions' }),
-    },
-    {
-      // giphy "checkered flag race finish line illustration": https://giphy.com/gifs/l4KhZ1DhTTUbsak8M
-      text: 'and which service will charge you first.',
-      visual: gif({ src: 'section-10-checkered-flag-first.gif', place: 'above-captions' }),
-      endsParagraph: true,
-    },
-    {
-      // giphy "woman working laptop cafe focused": https://giphy.com/gifs/n204doxIAfJWbgCFkv
-      text: 'If you want to understand the cost of running your app,',
-      visual: gif({
-        src: 'section-11-cute-character-laptop-desk.gif',
-        playbackRate: 0.78,
-        place: 'above-captions',
-      }),
-    },
-    {
-      // giphy "caterpillar butterfly transformation": https://giphy.com/gifs/fDC4ZpkHggPyji32m8
-      text: 'that’s what we’re building a learning path for.',
-      visual: gif({ src: 'section-12-caterpillar-becomes-butterfly.gif', place: 'above-captions' }),
-      endsParagraph: true,
-    },
-    {
-      // giphy "tally marks counting paper animation": https://giphy.com/gifs/f7kDY17LNy7NokAjy0
-      // Sped up so the tally is finished being counted by the cut.
-      text: 'By the end, you’ll list your fixed and usage costs,',
-      visual: gif({
-        src: 'section-13-tally-marks-counting.gif',
-        playbackRate: 1.32,
-        place: 'above-captions',
-      }),
-    },
-    {
-      // giphy "pie chart filling animation flat": https://giphy.com/gifs/fng8OzU2DvO2NCGeLY
-      text: 'estimate a cost per active customer,',
-      visual: gif({
-        src: 'section-14-pie-chart-breakdown.gif',
-        color: '#ffffff',
-        playbackRate: 0.78,
-        place: 'above-captions',
-      }),
-    },
-    {
-      // giphy "warning alert triangle icon flat animation": https://giphy.com/gifs/P54O7IqCTQuTABVUcC
-      // The shortest beat in the video, so the alert is slowed to cover it in one pass.
-      text: 'set spending alerts',
-      visual: gif({
-        src: 'section-15-warning-triangle-alert.gif',
-        color: '#000000',
-        playbackRate: 0.73,
-        place: 'above-captions',
-      }),
-    },
-    {
-      // giphy "woman celebrating success laptop confident": https://giphy.com/gifs/c6YbhJZ9PZ54dbjR1C
-      text: 'and test whether your price can cover them.',
-      visual: gif({
-        src: 'section-16-woman-confident-celebrating.gif',
-        playbackRate: 0.83,
-        place: 'above-captions',
-      }),
-      endsParagraph: true,
-    },
-    {
-      // giphy "hand pointing downwards illustration": https://giphy.com/gifs/ZQpFjNPJ3cEitXpphT
-      text: 'The waitlist link is in the comments.',
-      visual: gif({ src: 'section-17-woman-points-down.gif', place: 'above-captions' }),
-    },
-    {
-      // giphy "sunrise time lapse horizon": https://giphy.com/gifs/l0IyhFAkW40x1Abx6
-      // Dawn breaking over the rooftops, slowed to cover the beat in one pass.
-      text: 'Sign up and we’ll let you know when the learning path opens.',
-      visual: gif({
-        src: 'section-18-sunrise-day-breaks.gif',
+        src: 'section-00-screen-switches-off.gif',
         playbackRate: 0.84,
         place: 'above-captions',
       }),
+    },
+    {
+      // giphy "cat noticing something offscreen": https://giphy.com/gifs/dI5xjhEhWY6XUg9yem
+      text: 'Who notices it first?',
+      visual: gif({
+        src: 'section-01-girl-notices.gif',
+        playbackRate: 1.21,
+        place: 'above-captions',
+      }),
       endsParagraph: true,
     },
     {
-      // klipy "curious cute character tilting head animation": an owl blinking on a branch.
-      text: '[pause][curious] Which app cost is hardest for you to predict?',
+      // giphy "tending small plant animation": https://giphy.com/gifs/lefvGPhWaaRXc5a1sP
+      text: 'A live app needs ongoing care.',
       visual: gif({
-        src: 'section-19-curious-owl-blinking.gif',
+        src: 'section-02-watering-can-plant.gif',
+        color: '#efe6e6',
+        place: 'above-captions',
+      }),
+    },
+    {
+      // giphy "battery drains to empty icon": https://giphy.com/gifs/gPrngvbI77yBCXk53A
+      text: 'A service can fail,',
+      visual: gif({
+        src: 'section-03-battery-drains.gif',
+        color: '#fefefe',
+        playbackRate: 1.05,
+        place: 'above-captions',
+      }),
+    },
+    {
+      // giphy "interface redesign morph icon": https://giphy.com/gifs/FOXObRAsPTQVLZ8Kgj
+      text: 'a platform can change',
+      visual: gif({
+        src: 'section-04-flower-morph.gif',
+        color: '#0b0710',
+        place: 'above-captions',
+      }),
+    },
+    {
+      // giphy "block tower collapses cartoon": https://giphy.com/gifs/5G6eWbZP25gfeufGzS
+      // Sped up so the tower has finished falling by the cut.
+      text: 'or your next update can break the live version.',
+      visual: gif({
+        src: 'section-05-tower-topples.gif',
+        playbackRate: 1.21,
+        place: 'above-captions',
+      }),
+      endsParagraph: true,
+    },
+    {
+      // giphy "compass spinning lost icon": https://giphy.com/gifs/1X4Fug16uK7Vzzfxsj
+      text: 'If the only recovery plan',
+      visual: gif({
+        src: 'section-06-compass-spins.gif',
+        playbackRate: 0.79,
+        place: 'above-captions',
+      }),
+    },
+    {
+      // giphy "cute robot helper waving cartoon": https://giphy.com/gifs/dqxEEMhIXaR1DrcEZA
+      text: 'is asking the AI to fix it,',
+      visual: gif({
+        src: 'section-07-robot-waves.gif',
+        color: '#1e3586',
+        place: 'above-captions',
+      }),
+    },
+    {
+      // klipy "dice roll flat icon": a die still tumbling, for a fix you are gambling on.
+      text: 'every outage starts with guessing.',
+      visual: gif({
+        src: 'section-08-dice-tumbles.gif',
+        color: '#040204',
+        playbackRate: 1.22,
+        place: 'above-captions',
+      }),
+      endsParagraph: true,
+    },
+    {
+      // giphy "simple line icon bell notification": https://giphy.com/gifs/C1vogr3ZrH3nmfaADy
+      text: 'You need alerts, a tested backup',
+      visual: gif({
+        src: 'section-09-alert-bell-icon.gif',
+        color: '#ffffff',
+        playbackRate: 0.89,
+        place: 'above-captions',
+      }),
+    },
+    {
+      // giphy "following recipe cooking steps": https://giphy.com/gifs/3YUcEh0ZZU8aKTpAsI
+      // Hands working through a recipe, for steps you follow yourself rather than improvise.
+      text: 'and a recovery checklist you can follow yourself.',
+      visual: gif({ src: 'section-10-recipe-steps-follow.gif', place: 'above-captions' }),
+      endsParagraph: true,
+    },
+    {
+      // giphy "windmill turning steadily illustration": https://giphy.com/gifs/mXhDozGshI21AXUwA9
+      text: 'If you want an app you can keep operating after launch,',
+      visual: gif({
+        src: 'section-11-figure-lights-up.gif',
+        color: '#371941',
+        place: 'above-captions',
+      }),
+    },
+    {
+      // giphy "growing tree time lapse illustration": https://giphy.com/gifs/39wBNYC96wVjjBThrp
+      // One tree through the seasons, for something that is grown rather than switched on.
+      text: 'that’s what we’re building a learning path for.',
+      visual: gif({ src: 'section-12-tree-through-seasons.gif', place: 'above-captions' }),
+      endsParagraph: true,
+    },
+    {
+      // klipy "staircase steps going up icon flat": a settings gear turning.
+      text: 'By the end, you’ll set an availability alert,',
+      visual: gif({ src: 'section-13-settings-gear-spins.gif', place: 'above-captions' }),
+    },
+    {
+      // klipy "woman practicing calmly on laptop illustration": a gymnast rehearsing a routine,
+      // for practising the restore rather than improvising it.
+      text: 'practise restoring a working version',
+      visual: gif({
+        src: 'section-14-woman-practices-routine.gif',
+        playbackRate: 1.27,
+        place: 'above-captions',
+      }),
+    },
+    {
+      // klipy "woman planning calendar schedule illustration": a calendar cycling the months.
+      text: 'and plan your updates, backups and cost checks.',
+      visual: gif({
+        src: 'section-15-calendar-flips-months.gif',
         color: '#fcfefc',
-        playbackRate: 0.9,
+        playbackRate: 1.4,
+        place: 'above-captions',
+      }),
+      endsParagraph: true,
+    },
+    {
+      // giphy "paper clip attach icon animation": https://giphy.com/gifs/P5q2LWDkljCQsoAeau
+      text: 'The waitlist link is in the comments.',
+      visual: gif({
+        src: 'section-16-paperclip-link.gif',
+        color: '#000000',
+        place: 'above-captions',
+      }),
+    },
+    {
+      // klipy "curtains open reveal animation icon": curtains parting onto a bright window.
+      text: 'Sign up and we’ll let you know when the learning path opens.',
+      visual: gif({
+        src: 'section-17-curtains-open-light.gif',
+        playbackRate: 0.93,
+        place: 'above-captions',
+      }),
+      endsParagraph: true,
+    },
+    {
+      // klipy "woman curious thinking illustration": a woman looking up, hand on chin.
+      text: '[pause][curious] How would you know your app was down?',
+      visual: gif({
+        src: 'section-18-woman-curious-thinking.gif',
+        playbackRate: 0.95,
         place: 'above-captions',
       }),
     },

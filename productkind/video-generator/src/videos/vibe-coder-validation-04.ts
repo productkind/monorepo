@@ -1,19 +1,21 @@
 import { defineVideo, gif, riveAtFrame } from '../narration/definition'
 
 /**
- * Video 4 of the vibe coder campaign, "Your app goes down on Saturday".
+ * Video 4 of the vibe coder campaign, "Would you take a payment today?".
  * Script: productkind/marketing/content/campaigns/2026-09-vibe-coder-validation/
- * video-4-keep-the-product-operable/script.md
+ * video-3-customer-data-and-money/script.md
  *
  * The CTA is the LinkedIn / YouTube Shorts variant ("link in the comments"), which is the script
  * as written. TikTok and Instagram Reels need the URL spoken and shown instead, so they want a
  * second definition rather than a re-edit of this one.
  *
- * Cut at clause level. The three ways a live app breaks each get their own beat, because the
- * point of the line is that they are separate things that can go wrong.
+ * Cut at clause level. The second paragraph is four questions and each one gets its own beat,
+ * because the whole point of the passage is how many separate things there are to check.
  *
- * An outage script pulls the industry's control-room imagery, so nothing here uses it: no walls
- * of monitors, no blinking racks, no red terminals. Each failure is an everyday object instead.
+ * A security script pulls the industry's hacker imagery, so nothing here uses it: no balaclavas,
+ * no glowing padlocks over binary. The picture for each risk is an everyday object instead. The
+ * cookie in section 6 is the pun it looks like, and it is the one beat in the campaign where the
+ * literal object is funnier than the abstraction.
  *
  * Where a gif is shorter than its slot it is slowed to cover the beat in one pass, rather than
  * held on a frozen last frame: a still picture reads as a stall while the captions and the parrot
@@ -31,179 +33,156 @@ export default defineVideo({
   ],
   sections: [
     {
-      // giphy "screen goes black tv switching off": https://giphy.com/gifs/PjbOOXeMPysZneRwAk
-      // An eye closing, then a screen collapsing to a dot. Slowed to cover the beat in one pass.
-      text: 'The app you built with AI goes down on Saturday.',
-      visual: gif({
-        src: 'section-00-screen-switches-off.gif',
-        playbackRate: 0.84,
-        place: 'above-captions',
-      }),
-    },
-    {
-      // giphy "cat noticing something offscreen": https://giphy.com/gifs/dI5xjhEhWY6XUg9yem
-      text: 'Who notices it first?',
-      visual: gif({
-        src: 'section-01-girl-notices.gif',
-        playbackRate: 1.21,
-        place: 'above-captions',
-      }),
+      // giphy "piggy bank coin cute": https://giphy.com/gifs/d82h5KmOMrFIxI2y04
+      text: 'Would you take a payment today?',
+      visual: gif({ src: 'section-00-coin-piggy-bank.gif', place: 'above-captions' }),
       endsParagraph: true,
     },
     {
-      // giphy "tending small plant animation": https://giphy.com/gifs/lefvGPhWaaRXc5a1sP
-      text: 'A live app needs ongoing care.',
+      // giphy "treasure chest opening cartoon": https://giphy.com/gifs/GpXdx2ziOQFcYOkzHX
+      text: 'What is that customer trusting you with?',
+      visual: gif({ src: 'section-01-treasure-chest-trust.gif', place: 'above-captions' }),
+    },
+    {
+      // giphy "binoculars spying cute character": https://giphy.com/gifs/1dJWn50teA42ogaI1t
+      text: 'Can one customer see another person’s data?',
       visual: gif({
-        src: 'section-02-watering-can-plant.gif',
-        color: '#efe6e6',
+        src: 'section-02-binoculars-peeking.gif',
+        playbackRate: 0.96,
         place: 'above-captions',
       }),
     },
     {
-      // giphy "battery drains to empty icon": https://giphy.com/gifs/gPrngvbI77yBCXk53A
-      text: 'A service can fail,',
+      // giphy "web browser window flat icon": https://giphy.com/gifs/oIkKc14UI2eTXwfn4x
+      text: 'Are private keys visible in the browser?',
       visual: gif({
-        src: 'section-03-battery-drains.gif',
-        color: '#fefefe',
+        src: 'section-03-window-icon-draw.gif',
+        color: '#fcfcff',
+        playbackRate: 0.81,
+        place: 'above-captions',
+      }),
+    },
+    {
+      // giphy "balance scale icon animation": https://giphy.com/gifs/xT8qBit7YomT80d0M8
+      text: 'Does checkout charge the right amount',
+      visual: gif({
+        src: 'section-04-balance-scale.gif',
+        playbackRate: 0.97,
+        place: 'above-captions',
+      }),
+    },
+    {
+      // klipy "printer printing receipt icon": a receipt being fed out of a printer.
+      text: 'and send the right confirmation?',
+      visual: gif({
+        src: 'section-05-printer-confirmation.gif',
+        color: '#949294',
         playbackRate: 1.05,
         place: 'above-captions',
       }),
-    },
-    {
-      // giphy "interface redesign morph icon": https://giphy.com/gifs/FOXObRAsPTQVLZ8Kgj
-      text: 'a platform can change',
-      visual: gif({
-        src: 'section-04-flower-morph.gif',
-        color: '#0b0710',
-        place: 'above-captions',
-      }),
-    },
-    {
-      // giphy "block tower collapses cartoon": https://giphy.com/gifs/5G6eWbZP25gfeufGzS
-      // Sped up so the tower has finished falling by the cut.
-      text: 'or your next update can break the live version.',
-      visual: gif({
-        src: 'section-05-tower-topples.gif',
-        playbackRate: 1.21,
-        place: 'above-captions',
-      }),
       endsParagraph: true,
     },
     {
-      // giphy "compass spinning lost icon": https://giphy.com/gifs/1X4Fug16uK7Vzzfxsj
-      text: 'If the only recovery plan',
-      visual: gif({
-        src: 'section-06-compass-spins.gif',
-        playbackRate: 0.79,
-        place: 'above-captions',
-      }),
+      // klipy "chocolate chip cookie icon animation": the literal cookie, for cookie consent.
+      text: 'Then there are backups, cookie consent,',
+      visual: gif({ src: 'section-06-cookie-consent.gif', place: 'above-captions' }),
     },
     {
-      // giphy "cute robot helper waving cartoon": https://giphy.com/gifs/dqxEEMhIXaR1DrcEZA
-      text: 'is asking the AI to fix it,',
+      // giphy "document scroll icon animation": https://giphy.com/gifs/l41YrvqtJFqHOoV8I
+      // Sped up so the document has finished drawing itself by the cut.
+      text: 'terms and a privacy policy.',
       visual: gif({
-        src: 'section-07-robot-waves.gif',
-        color: '#1e3586',
-        place: 'above-captions',
-      }),
-    },
-    {
-      // klipy "dice roll flat icon": a die still tumbling, for a fix you are gambling on.
-      text: 'every outage starts with guessing.',
-      visual: gif({
-        src: 'section-08-dice-tumbles.gif',
-        color: '#040204',
-        playbackRate: 1.22,
-        place: 'above-captions',
-      }),
-      endsParagraph: true,
-    },
-    {
-      // giphy "simple line icon bell notification": https://giphy.com/gifs/C1vogr3ZrH3nmfaADy
-      text: 'You need alerts, a tested backup',
-      visual: gif({
-        src: 'section-09-alert-bell-icon.gif',
+        src: 'section-07-terms-document.gif',
         color: '#ffffff',
-        playbackRate: 0.89,
+        playbackRate: 1.2,
         place: 'above-captions',
       }),
-    },
-    {
-      // giphy "following recipe cooking steps": https://giphy.com/gifs/3YUcEh0ZZU8aKTpAsI
-      // Hands working through a recipe, for steps you follow yourself rather than improvise.
-      text: 'and a recovery checklist you can follow yourself.',
-      visual: gif({ src: 'section-10-recipe-steps-follow.gif', place: 'above-captions' }),
       endsParagraph: true,
     },
     {
-      // giphy "windmill turning steadily illustration": https://giphy.com/gifs/mXhDozGshI21AXUwA9
-      text: 'If you want an app you can keep operating after launch,',
+      // klipy "trying on shoes fitting icon": hands tying a lace, for a hands-on check.
+      text: 'You need practical checks',
       visual: gif({
-        src: 'section-11-figure-lights-up.gif',
-        color: '#371941',
+        src: 'section-08-tying-shoes-practical.gif',
+        playbackRate: 1.29,
         place: 'above-captions',
       }),
     },
     {
-      // giphy "growing tree time lapse illustration": https://giphy.com/gifs/39wBNYC96wVjjBThrp
-      // One tree through the seasons, for something that is grown rather than switched on.
+      // klipy "traffic light icon animation": red, amber, green, for a signal you can read.
+      text: 'and clear signs that tell you',
+      visual: gif({
+        src: 'section-09-traffic-light-signal.gif',
+        color: '#fbfcfb',
+        playbackRate: 1.18,
+        place: 'above-captions',
+      }),
+    },
+    {
+      // giphy "hiring expert handshake flat icon": https://giphy.com/gifs/umxRbhpV3joNMeS4Xx
+      text: 'when the app needs a security or legal professional.',
+      visual: gif({ src: 'section-10-cats-handshake-expert.gif', place: 'above-captions' }),
+      endsParagraph: true,
+    },
+    {
+      // giphy "woman typing laptop calm focused": https://giphy.com/gifs/3t0Ec1oCWsuHRV9fpL
+      text: 'If you want to handle customer data and money responsibly,',
+      visual: gif({ src: 'section-11-hippo-working-laptop.gif', place: 'above-captions' }),
+    },
+    {
+      // klipy "winding road path illustration flat": a road curving away through the hills.
       text: 'that’s what we’re building a learning path for.',
-      visual: gif({ src: 'section-12-tree-through-seasons.gif', place: 'above-captions' }),
-      endsParagraph: true,
-    },
-    {
-      // klipy "staircase steps going up icon flat": a settings gear turning.
-      text: 'By the end, you’ll set an availability alert,',
-      visual: gif({ src: 'section-13-settings-gear-spins.gif', place: 'above-captions' }),
-    },
-    {
-      // klipy "woman practicing calmly on laptop illustration": a gymnast rehearsing a routine,
-      // for practising the restore rather than improvising it.
-      text: 'practise restoring a working version',
       visual: gif({
-        src: 'section-14-woman-practices-routine.gif',
-        playbackRate: 1.27,
-        place: 'above-captions',
-      }),
-    },
-    {
-      // klipy "woman planning calendar schedule illustration": a calendar cycling the months.
-      text: 'and plan your updates, backups and cost checks.',
-      visual: gif({
-        src: 'section-15-calendar-flips-months.gif',
-        color: '#fcfefc',
-        playbackRate: 1.4,
+        src: 'section-12-winding-road-path.gif',
+        playbackRate: 1.25,
         place: 'above-captions',
       }),
       endsParagraph: true,
     },
     {
-      // giphy "paper clip attach icon animation": https://giphy.com/gifs/P5q2LWDkljCQsoAeau
-      text: 'The waitlist link is in the comments.',
-      visual: gif({
-        src: 'section-16-paperclip-link.gif',
-        color: '#000000',
-        place: 'above-captions',
-      }),
+      // klipy "door opening icon": a cat pushing a door open, for getting in.
+      text: 'By the end, you’ll test access,',
+      visual: gif({ src: 'section-13-cat-opens-door.gif', place: 'above-captions' }),
     },
     {
-      // klipy "curtains open reveal animation icon": curtains parting onto a bright window.
-      text: 'Sign up and we’ll let you know when the learning path opens.',
+      // klipy "juggling balls illustration": three things kept in the air at once.
+      text: 'permissions, payments and backups,',
+      visual: gif({ src: 'section-14-woman-juggling-oranges.gif', place: 'above-captions' }),
+    },
+    {
+      // klipy "signing contract pen icon animation": a pen writing, for recording what is left.
+      text: 'and record the risks that still need specialist help.',
       visual: gif({
-        src: 'section-17-curtains-open-light.gif',
+        src: 'section-15-pen-writing-record.gif',
         playbackRate: 0.93,
         place: 'above-captions',
       }),
       endsParagraph: true,
     },
     {
-      // klipy "woman curious thinking illustration": a woman looking up, hand on chin.
-      text: '[pause][curious] How would you know your app was down?',
+      // klipy "ticket stub icon animation": a ticket, for a place held on the list.
+      text: 'The waitlist link is in the comments.',
       visual: gif({
-        src: 'section-18-woman-curious-thinking.gif',
-        playbackRate: 0.95,
+        src: 'section-16-ticket-icon.gif',
+        color: '#414141',
+        playbackRate: 0.86,
         place: 'above-captions',
       }),
+    },
+    {
+      // giphy "door opening light shining through": https://giphy.com/gifs/04sTsB9oKq2DAc2T39
+      text: 'Sign up and we’ll let you know when the learning path opens.',
+      visual: gif({
+        src: 'section-17-door-opens-light.gif',
+        color: '#000000',
+        place: 'above-captions',
+      }),
+      endsParagraph: true,
+    },
+    {
+      // giphy "woman tilting head wondering": https://giphy.com/gifs/ATe6Re9HBxmxUSK14k
+      text: '[pause][curious] Which safety check are you least sure about?',
+      visual: gif({ src: 'section-18-woman-curious-closing.gif', place: 'above-captions' }),
     },
   ],
 })
