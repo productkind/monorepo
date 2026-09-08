@@ -19,14 +19,14 @@ question that invites comments.
 
 | # | Script | Outcome |
 |---:|---|---|
-| 0 | [Your app works. Customers get stuck.](video-0-real-product-not-prototype/script.md) | A real product, not just a prototype |
-| 1 | [You asked for one button](video-1-control-what-ai-changes/script.md) | Control over what the AI is doing |
-| 2 | [Scared to touch your own app?](video-2-confidence-to-update/script.md) | Confidence to update the product |
-| 3 | [Would you take a payment today?](video-3-customer-data-and-money/script.md) | Safety around customers, data and money |
-| 4 | [Your app goes down on Saturday](video-4-keep-the-product-operable/script.md) | A product that remains operable |
-| 5 | [Could one customer increase your bill?](video-5-predictable-running-costs/script.md) | Predictable costs |
-| 6 | [You launched. Three people visited.](video-6-revenue-and-validation/script.md) | Revenue and validation |
-| 7 | [Can you run your own app?](video-7-independent-without-becoming-an-engineer/script.md) | Independence without pretending to be an engineer |
+| 1 | [Your app works. Customers get stuck.](video-1-real-product-not-prototype/script.md) | A real product, not just a prototype |
+| 2 | [You asked for one button](video-2-control-what-ai-changes/script.md) | Control over what the AI is doing |
+| 3 | [Scared to touch your own app?](video-3-confidence-to-update/script.md) | Confidence to update the product |
+| 4 | [Would you take a payment today?](video-4-customer-data-and-money/script.md) | Safety around customers, data and money |
+| 5 | [Your app goes down on Saturday](video-5-keep-the-product-operable/script.md) | A product that remains operable |
+| 6 | [Could one customer increase your bill?](video-6-predictable-running-costs/script.md) | Predictable costs |
+| 7 | [You launched. Three people visited.](video-7-revenue-and-validation/script.md) | Revenue and validation |
+| 8 | [Can you run your own app?](video-8-independent-without-becoming-an-engineer/script.md) | Independence without pretending to be an engineer |
 
 The situations are reformulated from the audience research rather than quoted
 from individual participants. The scripts promise only the checks, decisions
