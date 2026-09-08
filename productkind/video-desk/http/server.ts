@@ -2,9 +2,8 @@ import { createServer, type IncomingMessage, type ServerResponse } from 'node:ht
 import { readFile } from 'node:fs/promises'
 import { last, lastValueFrom } from 'rxjs'
 
-import { withVisualApplied } from '../../video-generator/src/videos/apply-visual.ts'
 import { createVideoDeskBehavior, type VideoDeskBehavior } from '../domain/behavior.ts'
-import { sectionName } from '../domain/operations.ts'
+import { providerFrom, sectionName } from '../domain/operations.ts'
 import { createDeskIo } from '../services/desk-io.ts'
 import { getServices } from '../services/get-services.ts'
 import { present } from './presenter.ts'
@@ -21,7 +20,7 @@ const VIDEO_PACKAGE = new URL('../../video-generator', import.meta.url).pathname
 
 const services = getServices()
 const io = createDeskIo({ services, config: { videoPackage: VIDEO_PACKAGE } })
-const behavior = createVideoDeskBehavior({ io, applyVisual: withVisualApplied })
+const behavior = createVideoDeskBehavior({ io })
 
 const readBody = async ({ request }: { request: IncomingMessage }): Promise<unknown> => {
   const chunks: Buffer[] = []
@@ -142,7 +141,8 @@ const handle = async ({
             name: sectionName({ term: String(body.name ?? body.search ?? '') }),
             search: String(body.search ?? 'unrecorded'),
             sourceUrl: String(body.sourceUrl ?? `https://giphy.com/gifs/${String(body.gifId ?? '')}`),
-            provider: String(body.provider ?? 'giphy'),
+            // Narrowed rather than trusted: the body came off the wire.
+            provider: providerFrom({ name: String(body.provider ?? 'giphy') }),
           },
         }),
       })

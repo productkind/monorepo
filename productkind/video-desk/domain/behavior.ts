@@ -13,8 +13,6 @@ import {
 
 export type VideoDeskFeatureOutput = { events$: Observable<VideoDeskEvent> }
 
-export type ApplyVisual = Parameters<typeof pickGif>[0]['applyVisual']
-
 export type VideoDeskBehavior = {
   listVideos: () => VideoDeskFeatureOutput
   loadVideo: (args: { video: string }) => VideoDeskFeatureOutput
@@ -30,7 +28,7 @@ export type VideoDeskBehavior = {
   pickGif: (args: {
     video: string
     index: number
-    candidate: { id: string; name: string; search: string; sourceUrl: string; provider: string }
+    candidate: Parameters<typeof pickGif>[0]['candidate']
   }) => VideoDeskFeatureOutput
   setFlag: (args: {
     video: string
@@ -40,20 +38,15 @@ export type VideoDeskBehavior = {
   }) => VideoDeskFeatureOutput
 }
 
-export type CreateVideoDeskBehaviorOptions = {
-  io: DeskIo
-  /** Rewriting a definition belongs to the video package, so it is handed in rather than copied. */
-  applyVisual: ApplyVisual
-}
+export type CreateVideoDeskBehaviorOptions = { io: DeskIo }
 
 export const createVideoDeskBehavior = ({
   io,
-  applyVisual,
 }: CreateVideoDeskBehaviorOptions): VideoDeskBehavior => ({
   listVideos: () => ({ events$: concat(listVideos({ io })) }),
   loadVideo: ({ video }) => ({ events$: concat(loadVideo({ io, video })) }),
   measureSection: ({ video, index }) => ({ events$: concat(measureSection({ io, video, index })) }),
   searchSection: (args) => ({ events$: concat(searchSection({ io, ...args })) }),
-  pickGif: (args) => ({ events$: concat(pickGif({ io, applyVisual, ...args })) }),
+  pickGif: (args) => ({ events$: concat(pickGif({ io, ...args })) }),
   setFlag: (args) => ({ events$: concat(setFlag({ io, ...args })) }),
 })

@@ -22,6 +22,33 @@ export type VisualKind = (typeof VISUAL_KINDS)[number]
 
 export type FitMode = 'contain' | 'cover' | 'fill'
 
+/** The catalogues gifs are sourced from. Their ids are not interchangeable. */
+export const PROVIDERS = ['giphy', 'klipy'] as const
+
+export type Provider = (typeof PROVIDERS)[number]
+
+/** Mirrors `isVoiceName`: a name from outside the code is checked before it is trusted. */
+export const isProvider = (name: string): name is Provider =>
+  PROVIDERS.some((provider) => provider === name)
+
+/**
+ * Where a visual came from, for anything that was found rather than made.
+ *
+ * The id is here rather than in a comment because it is the asset's identity: it is what says
+ * whether a campaign is about to use the same gif twice, and a provenance URL could only answer
+ * that for giphy — klipy urls carry no id, which is how two of video 7's picks repeated video 5.
+ */
+export type VisualSource = {
+  provider: Provider
+  /**
+   * The provider's id. Absent for the sections whose record was written before ids were kept:
+   * their provider and search survived in a comment, the id never existed anywhere.
+   */
+  id?: string
+  /** The search that found it, which is also what a re-source starts from. */
+  search: string
+}
+
 /** Matches `GifLoopBehavior` in @remotion/gif; the compiler checks it where it is passed on. */
 export type LoopBehavior = 'loop' | 'pause-after-finish' | 'unmount-after-finish'
 
@@ -36,6 +63,10 @@ export type LoopBehavior = 'loop' | 'pause-after-finish' | 'unmount-after-finish
  */
 export type Place = 'frame' | 'above-captions'
 
+type Sourced = {
+  source?: VisualSource
+}
+
 type Framing = {
   /** Vertical nudge in pixels, used to lift the subject clear of the caption band. */
   offset: number
@@ -45,19 +76,19 @@ type Framing = {
   place: Place
 }
 
-export type GifVisual = Framing & {
+export type GifVisual = Framing & Sourced & {
   kind: 'gif'
   src: string
   loopBehavior: LoopBehavior
   playbackRate: number
 }
 
-export type StillVisual = Framing & {
+export type StillVisual = Framing & Sourced & {
   kind: 'still'
   src: string
 }
 
-export type ClipVisual = {
+export type ClipVisual = Sourced & {
   kind: 'clip'
   src: string
   trimBefore: number
@@ -81,22 +112,30 @@ export const gif = ({
   src,
   loopBehavior = 'loop',
   playbackRate = 1,
+  source,
   ...rest
 }: {
   src: string
   loopBehavior?: LoopBehavior
   playbackRate?: number
-} & Partial<Framing>): GifVisual => ({
+} & Sourced &
+  Partial<Framing>): GifVisual => ({
   kind: 'gif',
   src,
   loopBehavior,
   playbackRate,
+  ...(source === undefined ? {} : { source }),
   ...framing(rest),
 })
 
-export const still = ({ src, ...rest }: { src: string } & Partial<Framing>): StillVisual => ({
+export const still = ({
+  src,
+  source,
+  ...rest
+}: { src: string } & Sourced & Partial<Framing>): StillVisual => ({
   kind: 'still',
   src,
+  ...(source === undefined ? {} : { source }),
   ...framing(rest),
 })
 
@@ -107,6 +146,7 @@ export const clip = ({
   muted = true,
   place = 'frame',
   color = HOUSE_BACKGROUND,
+  source,
 }: {
   src: string
   trimBefore?: number
@@ -114,7 +154,16 @@ export const clip = ({
   muted?: boolean
   place?: Place
   color?: string
-}): ClipVisual => ({ kind: 'clip', src, trimBefore, offset, muted, place, color })
+} & Sourced): ClipVisual => ({
+  kind: 'clip',
+  src,
+  trimBefore,
+  offset,
+  muted,
+  place,
+  color,
+  ...(source === undefined ? {} : { source }),
+})
 
 export type Section = {
   /**

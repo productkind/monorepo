@@ -3,7 +3,7 @@ import { clip, defineVideo, riveAtFrame } from '../narration/definition'
 /**
  * A second cut of "Your app works. Customers get stuck.", the vibe coder campaign's video 0.
  * Script: productkind/marketing/content/campaigns/2026-09-vibe-coder-validation/
- * video-0-real-product-not-prototype/script.md
+ * video-1-real-product-not-prototype/script.md
  *
  * Same narration as `vibe-coder-validation-01`, so the audio cache serves this one the take it
  * already generated rather than paying ElevenLabs for the same words twice. The narration has to

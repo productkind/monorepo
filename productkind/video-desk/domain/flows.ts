@@ -33,7 +33,6 @@ export type Flags = Record<string, { src: string }>
 export type DeskIo = {
   listVideos: () => Promise<string[]>
   readDefinition: (options: { video: string }) => Promise<string>
-  writeDefinition: (options: { video: string; source: string }) => Promise<void>
   /** Section slots in seconds, from the timeline narrate wrote, or null when it has not run. */
   readSlots: (options: { video: string }) => Promise<number[] | null>
   readFlags: (options: { video: string }) => Promise<Flags>
@@ -52,6 +51,22 @@ export type DeskIo = {
   loopSeam: (options: { path: string }) => Promise<number | null>
   /** Eight evenly spaced frames side by side: how late-appearing text gets caught. */
   frameStrip: (options: { gif: string; out: string }) => Promise<void>
+  /**
+   * Rewrites one section of a definition.
+   *
+   * Delegated whole rather than done here: the definitions belong to the video package, and so do
+   * the tests for editing them. The desk decides what the fields should say and nothing more.
+   */
+  applyVisual: (options: {
+    video: string
+    section: number
+    visual: {
+      src: string
+      color?: string
+      playbackRate?: number
+      source: { provider: 'giphy' | 'klipy'; id?: string; search: string }
+    }
+  }) => Promise<void>
   keys: () => { giphy: string[]; klipy: string | undefined }
   readProviderState: () => Promise<ProviderState>
   writeProviderState: (options: { state: ProviderState }) => Promise<void>
@@ -257,7 +272,10 @@ export const searchSection = ({
           definitions: await Promise.all(
             (await io.listVideos())
               .filter((id) => id.startsWith(video.replace(/-\d+$/, '')))
-              .map(async (id) => ({ video: id, source: await io.readDefinition({ video: id }) })),
+              .map(async (id) => ({
+                video: id,
+                sections: parseSections({ source: await io.readDefinition({ video: id }) }),
+              })),
           ),
         })
 
@@ -355,21 +373,20 @@ export const setFlag = ({
  */
 export const pickGif = ({
   io,
-  applyVisual,
   video,
   index,
   candidate,
 }: {
   io: DeskIo
-  applyVisual: (options: {
-    source: string
-    section: number
-    visual: { src: string; color?: string; playbackRate?: number }
-    provenance: { search: string; url: string }
-  }) => string
   video: string
   index: number
-  candidate: { id: string; name: string; search: string; sourceUrl: string; provider: string }
+  candidate: {
+    id: string
+    name: string
+    search: string
+    sourceUrl: string
+    provider: 'giphy' | 'klipy'
+  }
 }): Observable<VideoDeskEvent> =>
   defer(() =>
     from(
@@ -391,19 +408,15 @@ export const pickGif = ({
           histogram: await io.ringHistogram({ path: io.assetPath({ video, name }) }),
         })
 
-        const source = await io.readDefinition({ video })
-        await io.writeDefinition({
+        await io.applyVisual({
           video,
-          source: applyVisual({
-            source,
-            section: index,
-            visual: {
-              src: name,
-              ...(background === null ? {} : { color: background.colour }),
-              ...(fit.rate === null ? {} : { playbackRate: fit.rate }),
-            },
-            provenance: { search: candidate.search, url: candidate.sourceUrl },
-          }),
+          section: index,
+          visual: {
+            src: name,
+            source: { provider: candidate.provider, id: candidate.id, search: candidate.search },
+            ...(background === null ? {} : { color: background.colour }),
+            ...(fit.rate === null ? {} : { playbackRate: fit.rate }),
+          },
         })
 
         const { sections } = await sectionsOf({ io, video })

@@ -7,11 +7,11 @@
 
 Hand the output to a sourcer so a video does not repeat a gif an earlier one already used.
 
-A definition's provenance comment holds a URL, not an id, and only giphy URLs carry the id in the
-path. Anything sourced elsewhere has to be resolved through `.sources.json`, which `remember_source`
-wrote when the gif was harvested. Grepping the ids straight out of the definitions therefore misses
-every non-giphy pick, which is not a cosmetic gap: two of video 7's picks repeated video 5 because
-the list they were checked against held klipy URLs where the sourcer was comparing klipy ids.
+Each section records where its gif came from as data — `source: { provider, id, search }` — so the
+id is read, not re-derived. It used to live in a provenance comment as a URL, and only giphy URLs
+carry an id in the path: that gap is why two of video 7's picks repeated video 5. Forty sections
+predate ids being kept and carry a provider and a search only; they are listed at the end, because
+nothing can be compared against them.
 """
 
 import argparse
@@ -21,8 +21,12 @@ import re
 
 from common import shared_dir, video_root
 
-GIPHY_ID = re.compile(r'giphy\.com/gifs/([A-Za-z0-9]+)')
-OTHER_URL = re.compile(r'(https://\S+\.(?:gif|mp4|webp))')
+# Where a gif came from is recorded in the definition as data now, so the id is read rather than
+# re-derived from a url. Only a giphy url ever carried one, which is how two of video 7's picks
+# repeated video 5.
+SOURCE_ID = re.compile(r'source: \{[^}]*?id: ["\']([^"\']+)["\']', re.S)
+# Records written before ids were kept: a provider and a search, and no id anywhere.
+SOURCE_NO_ID = re.compile(r'source: \{(?![^}]*id:)[^}]*?search: ["\']([^"\']+)["\']', re.S)
 
 
 def by_url():
@@ -38,22 +42,33 @@ def by_url():
 
 def used(prefix=None, root=None):
     """Every id in the definitions, mapped to the `<video>§<section>` places it appears."""
-    sources, places = by_url(), collections.defaultdict(list)
+    places = collections.defaultdict(list)
     definitions = sorted((video_root(root) / 'src' / 'videos').glob('*.ts'))
     for path in definitions:
-        if path.name == 'index.ts' or (prefix and not path.name.startswith(prefix)):
+        if path.name in ('index.ts', 'apply-visual.ts') or path.name.endswith('.test.ts'):
+            continue
+        if prefix and not path.name.startswith(prefix):
             continue
         # Sections are split the way the definitions are written, so a pick keeps its section
         # number in the report rather than just naming the file it came from.
         for index, section in enumerate(path.read_text().split('    {\n')[1:]):
-            for gif_id in GIPHY_ID.findall(section):
+            for gif_id in SOURCE_ID.findall(section):
                 places[gif_id].append(f'{path.stem}§{index:02d}')
-            for url in OTHER_URL.findall(section):
-                if 'giphy.com' in url:
-                    continue
-                gif_id = sources.get(url.strip())
-                places[gif_id or url.strip()].append(f'{path.stem}§{index:02d}')
     return places
+
+
+def without_ids(prefix=None, root=None):
+    """Sections whose record has no id, so nothing can be compared against them."""
+    stuck = []
+    for path in sorted((video_root(root) / 'src' / 'videos').glob('*.ts')):
+        if path.name in ('index.ts', 'apply-visual.ts') or path.name.endswith('.test.ts'):
+            continue
+        if prefix and not path.name.startswith(prefix):
+            continue
+        for index, section in enumerate(path.read_text().split('    {\n')[1:]):
+            for search in SOURCE_NO_ID.findall(section):
+                stuck.append(f'{path.stem}§{index:02d} "{search}"')
+    return stuck
 
 
 def main():
@@ -66,10 +81,12 @@ def main():
     places = used(args.prefix, args.root)
     for gif_id in sorted(places):
         print(f'{gif_id}\t{", ".join(places[gif_id])}' if args.where else gif_id)
-    unresolved = [gif_id for gif_id in places if gif_id.startswith('http')]
+    unresolved = without_ids(args.prefix, args.root)
     if unresolved:
-        print(f'\n{len(unresolved)} url(s) had no id in .sources.json; the cache may have been '
-              'cleared since they were harvested. A sourcer comparing ids cannot match these.')
+        print(f'\n{len(unresolved)} section(s) record a provider and a search but no id, because '
+              'none was written down when they were picked. Nothing can be compared against them:')
+        for line in unresolved:
+            print(f'  {line}')
 
 
 if __name__ == '__main__':

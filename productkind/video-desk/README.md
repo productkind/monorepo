@@ -30,8 +30,9 @@ web/        the vite client
 - **`behavior.ts` is thin**: services in, flows do the work, `concat` composes.
 - **`presenter.ts` is keyed by event type**, so an event the domain grows without a way to present
   it is a type error rather than a silent nothing.
-- **The definition is rewritten by `apply-visual`** in `video-generator`, imported rather than
-  copied, because the definitions live there and so do the tests for editing them.
+- **The definition is rewritten by `apply-visual`** in `video-generator` — spawned as that
+  package's own command, because the definitions live there and so do the tests for editing them.
+  Spawned rather than imported: its extensionless imports do not resolve under node's ESM loader.
 
 ## Where the numbers came from
 
@@ -45,6 +46,13 @@ Duration and size are read from the gif's own bytes in TypeScript, so the sectio
 subprocess at all. Motion, the loop seam and the border histogram still shell out to ImageMagick,
 which coalesces frames and resolves palettes properly; a hand-rolled LZW decoder would be a second
 implementation of the hardest part of the format.
+
+## Where a gif came from
+
+Each section records it as data in the definition — `source: { provider, id, search }` — so the
+desk reads a shape, not prose. It used to be a provenance comment holding a URL, which meant the id
+had to be re-derived and only giphy URLs carried one; that gap is why two of video 7's picks
+repeated video 5. Forty sections predate ids being kept and carry a provider and a search only.
 
 ## Known rough edges
 

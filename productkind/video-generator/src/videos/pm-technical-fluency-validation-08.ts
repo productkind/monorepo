@@ -3,7 +3,7 @@ import { defineVideo, gif, riveAtFrame } from '../narration/definition'
 /**
  * Video 8 of the PM technical fluency campaign, "When can we launch it?".
  * Script: productkind/marketing/content/campaigns/2026-09-pm-technical-fluency-validation/
- * video-7-when-can-we-launch-it/script.md
+ * video-8-when-can-we-launch-it/script.md
  *
  * The CTA is the LinkedIn / YouTube Shorts variant ("link in the comments"), which is the script
  * as written. TikTok and Instagram Reels need the URL spoken and shown instead.
@@ -41,31 +41,47 @@ export default defineVideo({
   ],
   sections: [
     {
-      // giphy "spark idea building": https://giphy.com/gifs/xUNda1t8JRgpyoC6re
       text: 'You built something with AI to test an idea.',
-      visual: gif({ src: 'section-00-spark-idea.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-00-spark-idea.gif',
+        source: { provider: 'giphy', id: 'xUNda1t8JRgpyoC6re', search: 'spark idea building' },
+        place: 'above-captions',
+      }),
     },
     {
-      // giphy "head turning look": https://giphy.com/gifs/BoFcsOXoErjrVcsfq2
       text: 'Your stakeholder saw it',
       visual: gif({
         src: 'section-01-eyes-notice.gif',
+        source: { provider: 'giphy', id: 'BoFcsOXoErjrVcsfq2', search: 'head turning look' },
         playbackRate: 0.96,
         place: 'above-captions',
       }),
     },
     {
-      // giphy "cute cartoon rocket ship flying animation":
-      // https://giphy.com/gifs/dJezVlwfVulTykjRQj
       // Left looping: the seam is 0.06, so the rocket simply keeps climbing through the beat.
       text: 'and asked when we can launch it.',
-      visual: gif({ src: 'section-02-rocket-launch.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-02-rocket-launch.gif',
+        source: {
+          provider: 'giphy',
+          id: 'dJezVlwfVulTykjRQj',
+          search: 'cute cartoon rocket ship flying animation',
+        },
+        place: 'above-captions',
+      }),
       endsParagraph: true,
     },
     {
-      // giphy "laptop screen turning on illustration": https://giphy.com/gifs/l41YwXexrlTJa25Ms
       text: 'It works on your laptop,',
-      visual: gif({ src: 'section-03-laptop-glow.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-03-laptop-glow.gif',
+        source: {
+          provider: 'giphy',
+          id: 'l41YwXexrlTJa25Ms',
+          search: 'laptop screen turning on illustration',
+        },
+        place: 'above-captions',
+      }),
     },
     {
       // A wrapped gift box character. Its source id was lost when the sourcing run died before
@@ -111,84 +127,138 @@ export default defineVideo({
       endsParagraph: true,
     },
     {
-      // giphy "raised hand icon animation flat": https://giphy.com/gifs/l2QE4oA03MKLp9y2k
       text: 'If you want to answer that stakeholder with real reasons,',
       visual: gif({
         src: 'section-09-eager-answer.gif',
+        source: {
+          provider: 'giphy',
+          id: 'l2QE4oA03MKLp9y2k',
+          search: 'raised hand icon animation flat',
+        },
         color: '#ff675a',
         place: 'above-captions',
       }),
     },
     {
-      // giphy "hiking trail path illustration": https://giphy.com/gifs/CtnjRbQTOahYtNqwdu
       // A path rather than stacking blocks: video 0, video 5 and video 6 all build with blocks on
       // this beat, and a fourth would make the set look like one video.
       text: 'we’re building a learning path for it.',
-      visual: gif({ src: 'section-10-trail-path.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-10-trail-path.gif',
+        source: {
+          provider: 'giphy',
+          id: 'CtnjRbQTOahYtNqwdu',
+          search: 'hiking trail path illustration',
+        },
+        place: 'above-captions',
+      }),
       endsParagraph: true,
     },
     {
-      // giphy "clipboard writing checklist": https://giphy.com/gifs/UKubhTGTqVKrs321IQ
       // A list being written, which opens the five items that follow.
       text: 'By the end you’ll be able to name what your prototype skipped:',
       visual: gif({
         src: 'section-11-checklist-icon.gif',
+        source: {
+          provider: 'giphy',
+          id: 'UKubhTGTqVKrs321IQ',
+          search: 'clipboard writing checklist',
+        },
         color: '#000000',
         place: 'above-captions',
       }),
     },
     {
-      // giphy "database data storage icon animation": https://giphy.com/gifs/fsmgUY2uzBgHw7S11V
       text: 'whose data it holds,',
       visual: gif({
         src: 'section-12-data-held.gif',
+        source: {
+          provider: 'giphy',
+          id: 'fsmgUY2uzBgHw7S11V',
+          search: 'database data storage icon animation',
+        },
         color: '#000000',
         playbackRate: 0.9,
         place: 'above-captions',
       }),
     },
     {
-      // giphy "access key icon animation flat design": https://giphy.com/gifs/j5hdNsxZb7spU22I68
       text: 'who’s allowed in,',
       visual: gif({
         src: 'section-13-access-key.gif',
+        source: {
+          provider: 'giphy',
+          id: 'j5hdNsxZb7spU22I68',
+          search: 'access key icon animation flat design',
+        },
         color: '#000000',
         playbackRate: 0.99,
         place: 'above-captions',
       }),
     },
     {
-      // giphy "server load meter flat icon animation": https://giphy.com/gifs/VX7yEoXAFf8as
       text: 'what it does under real load,',
-      visual: gif({ src: 'section-14-server-load.gif', color: '#1b1b1b', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-14-server-load.gif',
+        source: {
+          provider: 'giphy',
+          id: 'VX7yEoXAFf8as',
+          search: 'server load meter flat icon animation',
+        },
+        color: '#1b1b1b',
+        place: 'above-captions',
+      }),
     },
     {
-      // giphy "alarm clock ringing icon animation": https://giphy.com/gifs/3kNjNGN7Rd8DDNAnNC
       text: 'who gets woken at 2am when something goes wrong,',
-      visual: gif({ src: 'section-15-alarm-2am.gif', playbackRate: 0.82, place: 'above-captions' }),
+      visual: gif({
+        src: 'section-15-alarm-2am.gif',
+        source: {
+          provider: 'giphy',
+          id: '3kNjNGN7Rd8DDNAnNC',
+          search: 'alarm clock ringing icon animation',
+        },
+        playbackRate: 0.82,
+        place: 'above-captions',
+      }),
     },
     {
-      // giphy "watering plant care icon animation": https://giphy.com/gifs/xUPJUkUHMMj1OirNqE
       text: 'and who maintains it.',
-      visual: gif({ src: 'section-16-maintain-plant.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-16-maintain-plant.gif',
+        source: {
+          provider: 'giphy',
+          id: 'xUPJUkUHMMj1OirNqE',
+          search: 'watering plant care icon animation',
+        },
+        place: 'above-captions',
+      }),
       endsParagraph: true,
     },
     {
-      // giphy "leaf falling illustration": https://giphy.com/gifs/9J8K8WEWLXZk7s0OMB
       // Downward motion rather than a fourth arrow: videos 4, 5 and 6 all point down with one.
       text: 'The waitlist link is in the comments.',
       visual: gif({
         src: 'section-17-leaves-falling.gif',
+        source: {
+          provider: 'giphy',
+          id: '9J8K8WEWLXZk7s0OMB',
+          search: 'leaf falling illustration',
+        },
         color: '#fffcf1',
         place: 'above-captions',
       }),
     },
     {
-      // giphy "plant sprout growing timelapse": https://giphy.com/gifs/cKn42Gk4eznf1q45HM
       // A bud opening on the line about the learning path opening.
       text: 'Sign up and we’ll let you know when the learning path opens.',
       visual: gif({
         src: 'section-18-flower-opens.gif',
+        source: {
+          provider: 'giphy',
+          id: 'cKn42Gk4eznf1q45HM',
+          search: 'plant sprout growing timelapse',
+        },
         color: '#000000',
         playbackRate: 0.62,
         place: 'above-captions',
@@ -196,10 +266,13 @@ export default defineVideo({
       endsParagraph: true,
     },
     {
-      // giphy "raised eyebrow curious": https://giphy.com/gifs/H9647AMy9XwjH1zgZY
       // Left looping: seam 0.00, the cleanest loop in the video.
       text: '[pause][curious] Ever been asked to ship a prototype?',
-      visual: gif({ src: 'section-19-curious-eyebrow.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-19-curious-eyebrow.gif',
+        source: { provider: 'giphy', id: 'H9647AMy9XwjH1zgZY', search: 'raised eyebrow curious' },
+        place: 'above-captions',
+      }),
     },
   ],
 })

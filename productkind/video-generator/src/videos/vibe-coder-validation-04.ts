@@ -3,7 +3,7 @@ import { defineVideo, gif, riveAtFrame } from '../narration/definition'
 /**
  * Video 4 of the vibe coder campaign, "Would you take a payment today?".
  * Script: productkind/marketing/content/campaigns/2026-09-vibe-coder-validation/
- * video-3-customer-data-and-money/script.md
+ * video-4-customer-data-and-money/script.md
  *
  * The CTA is the LinkedIn / YouTube Shorts variant ("link in the comments"), which is the script
  * as written. TikTok and Instagram Reels need the URL spoken and shown instead, so they want a
@@ -33,40 +33,62 @@ export default defineVideo({
   ],
   sections: [
     {
-      // giphy "piggy bank coin cute": https://giphy.com/gifs/d82h5KmOMrFIxI2y04
       text: 'Would you take a payment today?',
-      visual: gif({ src: 'section-00-coin-piggy-bank.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-00-coin-piggy-bank.gif',
+        source: { provider: 'giphy', id: 'd82h5KmOMrFIxI2y04', search: 'piggy bank coin cute' },
+        place: 'above-captions',
+      }),
       endsParagraph: true,
     },
     {
-      // giphy "treasure chest opening cartoon": https://giphy.com/gifs/GpXdx2ziOQFcYOkzHX
       text: 'What is that customer trusting you with?',
-      visual: gif({ src: 'section-01-treasure-chest-trust.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-01-treasure-chest-trust.gif',
+        source: {
+          provider: 'giphy',
+          id: 'GpXdx2ziOQFcYOkzHX',
+          search: 'treasure chest opening cartoon',
+        },
+        place: 'above-captions',
+      }),
     },
     {
-      // giphy "binoculars spying cute character": https://giphy.com/gifs/1dJWn50teA42ogaI1t
       text: 'Can one customer see another person’s data?',
       visual: gif({
         src: 'section-02-binoculars-peeking.gif',
+        source: {
+          provider: 'giphy',
+          id: '1dJWn50teA42ogaI1t',
+          search: 'binoculars spying cute character',
+        },
         playbackRate: 0.96,
         place: 'above-captions',
       }),
     },
     {
-      // giphy "web browser window flat icon": https://giphy.com/gifs/oIkKc14UI2eTXwfn4x
       text: 'Are private keys visible in the browser?',
       visual: gif({
         src: 'section-03-window-icon-draw.gif',
+        source: {
+          provider: 'giphy',
+          id: 'oIkKc14UI2eTXwfn4x',
+          search: 'web browser window flat icon',
+        },
         color: '#fcfcff',
         playbackRate: 0.81,
         place: 'above-captions',
       }),
     },
     {
-      // giphy "balance scale icon animation": https://giphy.com/gifs/xT8qBit7YomT80d0M8
       text: 'Does checkout charge the right amount',
       visual: gif({
         src: 'section-04-balance-scale.gif',
+        source: {
+          provider: 'giphy',
+          id: 'xT8qBit7YomT80d0M8',
+          search: 'balance scale icon animation',
+        },
         playbackRate: 0.97,
         place: 'above-captions',
       }),
@@ -76,6 +98,7 @@ export default defineVideo({
       text: 'and send the right confirmation?',
       visual: gif({
         src: 'section-05-printer-confirmation.gif',
+        source: { provider: 'klipy', search: 'printer printing receipt icon' },
         color: '#949294',
         playbackRate: 1.05,
         place: 'above-captions',
@@ -85,14 +108,22 @@ export default defineVideo({
     {
       // klipy "chocolate chip cookie icon animation": the literal cookie, for cookie consent.
       text: 'Then there are backups, cookie consent,',
-      visual: gif({ src: 'section-06-cookie-consent.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-06-cookie-consent.gif',
+        source: { provider: 'klipy', search: 'chocolate chip cookie icon animation' },
+        place: 'above-captions',
+      }),
     },
     {
-      // giphy "document scroll icon animation": https://giphy.com/gifs/l41YrvqtJFqHOoV8I
       // Sped up so the document has finished drawing itself by the cut.
       text: 'terms and a privacy policy.',
       visual: gif({
         src: 'section-07-terms-document.gif',
+        source: {
+          provider: 'giphy',
+          id: 'l41YrvqtJFqHOoV8I',
+          search: 'document scroll icon animation',
+        },
         color: '#ffffff',
         playbackRate: 1.2,
         place: 'above-captions',
@@ -104,6 +135,7 @@ export default defineVideo({
       text: 'You need practical checks',
       visual: gif({
         src: 'section-08-tying-shoes-practical.gif',
+        source: { provider: 'klipy', search: 'trying on shoes fitting icon' },
         playbackRate: 1.29,
         place: 'above-captions',
       }),
@@ -113,27 +145,43 @@ export default defineVideo({
       text: 'and clear signs that tell you',
       visual: gif({
         src: 'section-09-traffic-light-signal.gif',
+        source: { provider: 'klipy', search: 'traffic light icon animation' },
         color: '#fbfcfb',
         playbackRate: 1.18,
         place: 'above-captions',
       }),
     },
     {
-      // giphy "hiring expert handshake flat icon": https://giphy.com/gifs/umxRbhpV3joNMeS4Xx
       text: 'when the app needs a security or legal professional.',
-      visual: gif({ src: 'section-10-cats-handshake-expert.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-10-cats-handshake-expert.gif',
+        source: {
+          provider: 'giphy',
+          id: 'umxRbhpV3joNMeS4Xx',
+          search: 'hiring expert handshake flat icon',
+        },
+        place: 'above-captions',
+      }),
       endsParagraph: true,
     },
     {
-      // giphy "woman typing laptop calm focused": https://giphy.com/gifs/3t0Ec1oCWsuHRV9fpL
       text: 'If you want to handle customer data and money responsibly,',
-      visual: gif({ src: 'section-11-hippo-working-laptop.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-11-hippo-working-laptop.gif',
+        source: {
+          provider: 'giphy',
+          id: '3t0Ec1oCWsuHRV9fpL',
+          search: 'woman typing laptop calm focused',
+        },
+        place: 'above-captions',
+      }),
     },
     {
       // klipy "winding road path illustration flat": a road curving away through the hills.
       text: 'that’s what we’re building a learning path for.',
       visual: gif({
         src: 'section-12-winding-road-path.gif',
+        source: { provider: 'klipy', search: 'winding road path illustration flat' },
         playbackRate: 1.25,
         place: 'above-captions',
       }),
@@ -142,18 +190,27 @@ export default defineVideo({
     {
       // klipy "door opening icon": a cat pushing a door open, for getting in.
       text: 'By the end, you’ll test access,',
-      visual: gif({ src: 'section-13-cat-opens-door.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-13-cat-opens-door.gif',
+        source: { provider: 'klipy', search: 'door opening icon' },
+        place: 'above-captions',
+      }),
     },
     {
       // klipy "juggling balls illustration": three things kept in the air at once.
       text: 'permissions, payments and backups,',
-      visual: gif({ src: 'section-14-woman-juggling-oranges.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-14-woman-juggling-oranges.gif',
+        source: { provider: 'klipy', search: 'juggling balls illustration' },
+        place: 'above-captions',
+      }),
     },
     {
       // klipy "signing contract pen icon animation": a pen writing, for recording what is left.
       text: 'and record the risks that still need specialist help.',
       visual: gif({
         src: 'section-15-pen-writing-record.gif',
+        source: { provider: 'klipy', search: 'signing contract pen icon animation' },
         playbackRate: 0.93,
         place: 'above-captions',
       }),
@@ -164,25 +221,37 @@ export default defineVideo({
       text: 'The waitlist link is in the comments.',
       visual: gif({
         src: 'section-16-ticket-icon.gif',
+        source: { provider: 'klipy', search: 'ticket stub icon animation' },
         color: '#414141',
         playbackRate: 0.86,
         place: 'above-captions',
       }),
     },
     {
-      // giphy "door opening light shining through": https://giphy.com/gifs/04sTsB9oKq2DAc2T39
       text: 'Sign up and we’ll let you know when the learning path opens.',
       visual: gif({
         src: 'section-17-door-opens-light.gif',
+        source: {
+          provider: 'giphy',
+          id: '04sTsB9oKq2DAc2T39',
+          search: 'door opening light shining through',
+        },
         color: '#000000',
         place: 'above-captions',
       }),
       endsParagraph: true,
     },
     {
-      // giphy "woman tilting head wondering": https://giphy.com/gifs/ATe6Re9HBxmxUSK14k
       text: '[pause][curious] Which safety check are you least sure about?',
-      visual: gif({ src: 'section-18-woman-curious-closing.gif', place: 'above-captions' }),
+      visual: gif({
+        src: 'section-18-woman-curious-closing.gif',
+        source: {
+          provider: 'giphy',
+          id: 'ATe6Re9HBxmxUSK14k',
+          search: 'woman tilting head wondering',
+        },
+        place: 'above-captions',
+      }),
     },
   ],
 })

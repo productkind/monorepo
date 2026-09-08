@@ -86,9 +86,6 @@ export const createDeskIo = ({
 
     readDefinition: ({ video }) => fileSystem.readFileAsync(`${definitions}/${video}.ts`, 'utf-8'),
 
-    writeDefinition: ({ video, source }) =>
-      fileSystem.writeFileAsync(`${definitions}/${video}.ts`, source),
-
     readSlots: async ({ video }) => {
       const text = await readTextOrNull({ path: `${assets(video)}/timeline.json` })
       if (text === null) {
@@ -236,6 +233,27 @@ export const createDeskIo = ({
         return parseRmse({ text })
       } finally {
         await rm(folder, { recursive: true, force: true })
+      }
+    },
+
+    applyVisual: async ({ video, section, visual }) => {
+      // The video package's own command, so the one piece of code that rewrites a hand-authored
+      // definition stays where its tests are. Spawned rather than imported: that package's
+      // extensionless imports do not resolve under node's own ESM loader.
+      const args = [
+        'run', '--silent', 'apply-visual', '--',
+        '--video', video,
+        '--section', String(section),
+        '--src', visual.src,
+        '--provider', visual.source.provider,
+        '--search', visual.source.search,
+        ...(visual.source.id === undefined ? [] : ['--id', visual.source.id]),
+        ...(visual.color === undefined ? [] : ['--color', visual.color]),
+        ...(visual.playbackRate === undefined ? [] : ['--rate', String(visual.playbackRate)]),
+      ]
+      const { stderr } = await run('npm', args, { cwd: config.videoPackage, maxBuffer: 1 << 24 })
+      if (stderr.trim() !== '') {
+        throw new Error(stderr.trim())
       }
     },
 

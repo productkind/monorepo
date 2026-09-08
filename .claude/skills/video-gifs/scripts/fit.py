@@ -34,13 +34,17 @@ def definitions(prefix=None, video=None, root=None):
 
 
 def sections_of(path):
-    """Each section's gif filename and playbackRate, in order."""
+    """Each section's gif filename and playbackRate, in order.
+
+    Both quote styles are read: four definitions are double-quoted throughout, and a single-quote
+    pattern reported them as having no visuals at all.
+    """
     for block in path.read_text().split('    {\n')[1:]:
-        name = re.search(r"src: '([^']+)'", block)
+        name = re.search(r'src: (["\'])([^"\']+)\1', block)
         if not name:
             continue
         rate = re.search(r'playbackRate: ([0-9.]+)', block)
-        yield name.group(1), float(rate.group(1)) if rate else 1.0
+        yield name.group(2), float(rate.group(1)) if rate else 1.0
 
 
 def report(path, root=None):
@@ -55,7 +59,12 @@ def report(path, root=None):
         gif = folder / name
         if not gif.exists() or index >= len(real):
             continue
-        plays = gif_seconds(gif)[0] / rate
+        seconds = gif_seconds(gif)[0]
+        # A `clip()` section holds an mp4, which has no frame delays to sum. Timing a video
+        # against a slot is a different question and this pass is about gifs.
+        if seconds == 0:
+            continue
+        plays = seconds / rate
         repeats = real[index] / plays
         if repeats <= REPEAT_LIMIT or loop_seam(gif) <= VISIBLE_SEAM:
             continue

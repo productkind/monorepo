@@ -24,6 +24,15 @@ const UNIFORM_EDGE = 0.9
 /** Palette dithering shifts a flat colour a few levels, so exact equality would reject it. */
 const EDGE_TOLERANCE = 10
 
+/** The catalogues gifs come from. Their ids are not interchangeable. */
+export const PROVIDERS = ['giphy', 'klipy'] as const
+
+export type Provider = (typeof PROVIDERS)[number]
+
+/** Narrows a provider name from outside the code, falling back rather than asserting. */
+export const providerFrom = ({ name }: { name: string }): Provider =>
+  PROVIDERS.find((provider) => provider === name) ?? 'giphy'
+
 /** Giphy allows this many searches per key per hour, resetting on the hour. */
 const SEARCHES_PER_HOUR = 100
 
@@ -200,8 +209,22 @@ const TEXT = /text: (["'])([\s\S]*?)\1,\n/
 const SRC = /src: (["'])([^"']+)\1/
 const COLOUR = /color: (["'])([^"']+)\1/
 const RATE = /playbackRate: ([\d.]+)/
-const SEARCH_TERM = /\/\/ \w+ "([^"]*)"/
-const GIPHY_ID = /giphy\.com\/gifs\/([A-Za-z0-9]+)/g
+/**
+ * Where a gif came from, read from the definition's own data.
+ *
+ * It used to be read out of a provenance comment, which meant the id had to be re-derived from a
+ * url and only giphy urls carried one. The fields are machine-written now, so this reads a shape
+ * rather than prose.
+ */
+const SOURCE = /source: \{([^}]*)\}/
+const FIELD = (name: string) => new RegExp(`${name}: (["'])(.*?)\\1`)
+
+export type ParsedSource = {
+  provider: string
+  /** Null for the sections whose record predates ids being kept. */
+  id: string | null
+  search: string
+}
 
 export type ParsedSection = {
   index: number
@@ -209,7 +232,23 @@ export type ParsedSection = {
   src: string
   color: string | null
   playbackRate: number | null
+  source: ParsedSource | null
+  /** The search that found the gif, which is what a re-source starts from. */
   search: string | null
+}
+
+const sourceIn = ({ block }: { block: string }): ParsedSource | null => {
+  const found = SOURCE.exec(block)
+  if (found === null) {
+    return null
+  }
+  const fields = found[1] ?? ''
+  const provider = FIELD('provider').exec(fields)?.[2]
+  const search = FIELD('search').exec(fields)?.[2]
+  if (provider === undefined || search === undefined) {
+    return null
+  }
+  return { provider, id: FIELD('id').exec(fields)?.[2] ?? null, search }
 }
 
 /** The read-side twin of `apply-visual.ts`, which writes the same shape back. */
@@ -225,14 +264,15 @@ export const parseSections = ({ source }: { source: string }): ParsedSection[] =
       }
       const colour = COLOUR.exec(block)
       const rate = RATE.exec(block)
-      const term = SEARCH_TERM.exec(block)
+      const source = sourceIn({ block })
       return [
         {
           text: text[2] ?? '',
           src: src[2] ?? '',
           color: colour?.[2] ?? null,
           playbackRate: rate?.[1] === undefined ? null : Number(rate[1]),
-          search: term?.[1] ?? null,
+          source,
+          search: source?.search ?? null,
         },
       ]
     })
@@ -247,13 +287,13 @@ export const parseSections = ({ source }: { source: string }): ParsedSection[] =
 export const usedIdsIn = ({
   definitions,
 }: {
-  definitions: { video: string; source: string }[]
+  definitions: { video: string; sections: { source: ParsedSource | null }[] }[]
 }): Record<string, string[]> => {
   const used: Record<string, string[]> = {}
-  for (const { video, source } of definitions) {
-    const ids = [...source.matchAll(GIPHY_ID)].map((match) => match[1])
-    ids.forEach((id, index) => {
-      if (id === undefined) {
+  for (const { video, sections } of definitions) {
+    sections.forEach((section, index) => {
+      const id = section.source?.id
+      if (id === undefined || id === null) {
         return
       }
       const place = `${video}§${String(index).padStart(2, '0')}`

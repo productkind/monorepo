@@ -3,7 +3,7 @@ import { clip, defineVideo, riveAtFrame } from '../narration/definition'
 /**
  * A second cut of "Nodding along in a stand-up", the PM technical fluency campaign's video 0.
  * Script: productkind/marketing/content/campaigns/2026-09-pm-technical-fluency-validation/
- * video-0-nodding-along-in-stand-up/script.md
+ * video-1-nodding-along-in-stand-up/script.md
  *
  * Same narration as `pm-technical-fluency-validation-01`, so the audio cache serves this one the
  * take it already generated rather than paying ElevenLabs for the same words twice. The narration

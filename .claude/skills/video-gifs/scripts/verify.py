@@ -26,16 +26,28 @@ def chosen_visuals(video, root=None):
     return [(name, rate) for name, rate, _ in declared(video, root)]
 
 
+# Read per section rather than as one positional sweep: a visual's fields are src, source, colour,
+# rate, place, and a pattern that expects colour to follow src silently loses it. Both quote styles
+# appear across the definitions.
+SRC = re.compile(r'src: (["\'])([^"\']+)\1')
+COLOUR = re.compile(r'color: (["\'])([^"\']+)\1')
+RATE = re.compile(r'playbackRate: ([\d.]+)')
+
+
 def declared(video, root=None):
     """Each section's gif, playbackRate and letterbox colour, in section order."""
     definition = video_root(root) / 'src' / 'videos' / f'{video}.ts'
     if not definition.exists():
         raise SystemExit(f'No definition at {definition}.')
-    found = re.findall(
-        r"src: '([^']+\.gif)',(?:\s*color: '([^']+)',)?(?:\s*playbackRate: ([\d.]+),)?",
-        definition.read_text())
-    return [(name, float(rate) if rate else None, colour or None)
-            for name, colour, rate in found]
+    sections = []
+    for block in definition.read_text().split('    {\n')[1:]:
+        src = SRC.search(block)
+        if not src:
+            continue
+        colour, rate = COLOUR.search(block), RATE.search(block)
+        sections.append((src.group(2), float(rate.group(1)) if rate else None,
+                         colour.group(2) if colour else None))
+    return sections
 
 
 def chosen_gifs(video, root=None):
@@ -206,6 +218,10 @@ def main():
     for index, (name, rate) in enumerate(chosen_visuals(args.video, args.root)):
         seconds = gif_seconds(folder / name)[0]
         slot = fits[index]
+        if seconds == 0:
+            # An mp4 in a `clip()` section: no frame delays to sum, and not what this pass checks.
+            print(f'  {index:02d} {name:32} not a gif, skipped')
+            continue
         covered = seconds / rate if rate else seconds
         if rate:
             note = f'rate {rate} covers {covered:.2f}s'
