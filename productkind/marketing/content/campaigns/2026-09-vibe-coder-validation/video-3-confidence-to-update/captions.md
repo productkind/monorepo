@@ -17,7 +17,13 @@ campaign: vibe-coded-app-26
 
 **Caption:**
 
-How do you update an AI-built app without breaking it? Save a working version, keep the change small and test the affected journey. Women building with AI can join the waitlist to learn a repeatable update process. What have you postponed?
+How do you update an AI-built app without breaking it? Save a working version, keep the change small and test the affected journey.
+
+We’re building a learning path for women who have already built an app with AI and want to keep improving it themselves. You’ll practise the whole update cycle on your own product.
+
+Sign up to the waitlist through the link in the comment.
+
+What update have you been postponing?
 
 #womenwhobuild #womenintech #womenfounders #vibecoding
 
