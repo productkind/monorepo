@@ -1,23 +1,26 @@
 import { defineVideo, gif, riveAtFrame } from '../narration/definition'
 
 /**
- * Video 5 of the PM technical fluency campaign, "Needed tomorrow, ready next week".
+ * Video 5 of the PM technical fluency campaign, "All you can send is their screenshot".
  * Script: productkind/marketing/content/campaigns/2026-09-pm-technical-fluency-validation/
- * video-5-needed-tomorrow-ready-next-week/script.md
+ * video-4-all-you-can-send-is-their-screenshot/script.md
  *
  * The CTA is the LinkedIn / YouTube Shorts variant ("link in the comments"), which is the script
  * as written. TikTok and Instagram Reels need the URL spoken and shown instead.
  *
- * Sections 7 and 11 stand in for the screen recording the production notes call for: a real query
- * against a Little Parrot test database, typed at readable speed, showing one count.
+ * Sections 1 and 13 to 15 stand in for the screen recording the production notes call for: a
+ * reproducible problem in a test account, then the network tab showing the failed request and its
+ * status code.
  *
- * Sections 13 to 15 are the three things a number can wrongly include, and they get a cut each
- * because the production notes make them the point of the second move. They do not share a visual
- * register, which was the intention and could not be met: giphy's stock for a matched set of
- * fake-account, unconfirmed and duplicate icons is almost entirely watermarked icon packs
- * (flat-icons.com) and branded sticker sets, across four rounds of searching. Each reads its own
- * beat instead — test tubes, a ghost fading out, identical robots — so the three are worth
- * revisiting together if a cleaner set turns up.
+ * Sections 3 to 5 are engineering's three questions, and they get three different detective
+ * characters rather than one repeated: a hamster, a polar bear, a teddy bear, all in the same
+ * flat magnifying-glass sticker style, so the questions escalate instead of looping.
+ *
+ * The frustration beats are carried by objects and animal characters and the three transformation
+ * beats by women, which is what the campaign brief asks of the channel. No men appear.
+ *
+ * Half of these were sourced from Klipy rather than giphy, which is why their comments carry a
+ * static.klipy.com address: giphy's three pooled keys hit their hourly search cap partway through.
  *
  * The slots behind these rates are estimates from `0.98 + 0.209 x words`, fitted on the 39
  * narrated sections of videos 0 and 1. Every rate is a ratio to its slot, so all of them move once
@@ -34,62 +37,83 @@ export default defineVideo({
   ],
   sections: [
     {
-      // giphy "loading spinner hourglass icon": https://giphy.com/gifs/xFmuT64Jto3mRO4w3G
-      text: 'You need a product metric for tomorrow’s meeting.',
+      // giphy "mail notification envelope icon animation":
+      // https://giphy.com/gifs/BQNRcCOckLqLJ9jPg1
+      text: 'A customer reports a bug.',
       visual: gif({
-        src: 'section-00-hourglass-time.gif',
-        playbackRate: 0.73,
+        src: 'section-00-envelope-arriving.gif',
+        color: '#a8f2a0',
+        playbackRate: 0.89,
         place: 'above-captions',
       }),
     },
     {
-      // giphy "cute snail slow crawling character": https://giphy.com/gifs/Lx1GlkOqRy1JxRFrws
-      text: 'Analytics will have it next week.',
+      // giphy "polaroid camera snapshot": https://giphy.com/gifs/7wNJdkFVkijFqvfjve
+      // A snapshot is the whole of what the PM can hand over, which is the line.
+      text: 'All you can send engineering is their screenshot.',
       visual: gif({
-        src: 'section-01-snail-slow.gif',
-        color: '#ffffff',
-        playbackRate: 0.9,
+        src: 'section-01-camera-flash.gif',
+        playbackRate: 0.7,
         place: 'above-captions',
       }),
       endsParagraph: true,
     },
     {
-      // giphy "lightbulb idea simple icon animation": https://giphy.com/gifs/SOb4AcaDitenU4XKdC
-      text: 'And it’s usually not a hard question.',
+      // giphy "question mark stamp icon": https://giphy.com/gifs/0KkF1e5fuhGoaAVOgt
+      text: 'It comes back as questions.',
+      visual: gif({ src: 'section-02-dog-questions.gif', place: 'above-captions' }),
+    },
+    {
+      // giphy "bear investigator sticker": https://giphy.com/gifs/v0DK0A7TcNsBkMWPhC
+      // The slowest rate in the campaign: a one-second sticker in a 1.6s beat. It loops 1.6 times
+      // at full speed, and a restart halfway reads as a stutter on a one-line question.
+      text: 'Who was it?',
       visual: gif({
-        src: 'section-02-lightbulb-idea.gif',
-        color: '#fe806f',
-        playbackRate: 0.98,
+        src: 'section-03-detective-bear-who.gif',
+        playbackRate: 0.62,
         place: 'above-captions',
       }),
     },
     {
-      // giphy "runner crossing finish line cute icon": https://giphy.com/gifs/SCs3VFALAvVHlTkgCJ
-      // The crossing happens in the first second, so the cut lands after it rather than on it.
-      text: 'How many people finished onboarding last month.',
-      visual: gif({ src: 'section-03-finish-line.gif', place: 'above-captions' }),
+      // giphy "bear investigator sticker": https://giphy.com/gifs/Tfd91e9R13cewUzBWh
+      text: 'What did they do?',
+      visual: gif({ src: 'section-04-detective-bear-what-did.gif', place: 'above-captions' }),
     },
     {
-      // giphy "cute character waving hello again icon": https://giphy.com/gifs/3o6Zth4Kv2kNZgvSmI
-      text: 'How many came back.',
-      visual: gif({ src: 'section-04-welcome-back.gif', place: 'above-captions' }),
+      // giphy "cute animal detective magnifying glass": https://giphy.com/gifs/HOYcveUFDFc6dKe4xb
+      text: 'What did the error say?',
+      visual: gif({ src: 'section-05-detective-bear-error-said.gif', place: 'above-captions' }),
       endsParagraph: true,
     },
     {
-      // giphy "people standing in line queue icon flat": https://giphy.com/gifs/WcOGF3mNL8gAAbIh3F
-      text: 'You join the queue,',
+      // klipy "text bubble question mark icon animation":
+      // https://static.klipy.com/ii/d7aec6f6f171607374b2065c836f92f4/25/82/6NX9xRON.gif
+      text: 'So you ask the customer,',
       visual: gif({
-        src: 'section-05-join-queue.gif',
-        playbackRate: 0.75,
+        src: 'section-06-asking-question-chick.gif',
+        color: '#fcfefc',
         place: 'above-captions',
       }),
     },
     {
-      // giphy "empty pockets nothing to show": https://giphy.com/gifs/RLo3AazZVeBBfWqmCB
-      // Turning out empty pockets: the meeting happens and you arrive with nothing.
-      text: 'and have the meeting without it.',
+      // klipy "hourglass time passing animation":
+      // https://static.klipy.com/ii/d7aec6f6f171607374b2065c836f92f4/d5/da/xn1PrlJW.gif
+      text: 'wait two days,',
       visual: gif({
-        src: 'section-06-empty-handed.gif',
+        src: 'section-07-hourglass-flip.gif',
+        color: '#f5fefc',
+        playbackRate: 0.87,
+        place: 'above-captions',
+      }),
+    },
+    {
+      // giphy "closed folder untouched paper stack icon":
+      // https://giphy.com/gifs/WV9R2niZMMbcE5a9um
+      // The report sitting in a tray nobody has picked up, in the same flat icon language as
+      // sections 14 and 16.
+      text: 'and nobody has started looking.',
+      visual: gif({
+        src: 'section-08-untouched-pile.gif',
         color: '#ffffff',
         playbackRate: 0.99,
         place: 'above-captions',
@@ -97,113 +121,107 @@ export default defineVideo({
       endsParagraph: true,
     },
     {
-      // giphy "code snippet typing icon flat": https://giphy.com/gifs/5NE2L7vdWZ9V39Sjq8
-      // Left looping on purpose: the seam is 0.05, so the repeat inside this beat is invisible.
-      text: 'It’s four lines of SQL.',
-      visual: gif({ src: 'section-07-writing-sql.gif', place: 'above-captions' }),
-    },
-    {
-      // giphy "cute character searching flashlight icon": https://giphy.com/gifs/PVrX3JmBB56KdqH1Y7
-      text: 'You’ve just never been shown which four.',
+      // klipy "woman raising fist success illustration flat":
+      // https://static.klipy.com/ii/39f2394ae36df6e199be9eb7c9fa1012/af/dd/zZ0EWjiw.gif
+      text: 'You could answer all of it yourself,',
       visual: gif({
-        src: 'section-08-searching-flashlight.gif',
-        color: '#620c1b',
-        place: 'above-captions',
-      }),
-      endsParagraph: true,
-    },
-    {
-      // giphy "cute creature confident pose animation": https://giphy.com/gifs/evX7WKDd4rYu5sqKLk
-      text: 'If you’d rather answer it yourself,',
-      visual: gif({
-        src: 'section-09-confident-woman.gif',
-        playbackRate: 0.9,
+        src: 'section-09-woman-raises-hand-confident.gif',
+        playbackRate: 0.98,
         place: 'above-captions',
       }),
     },
     {
-      // giphy "hammer building construction icon flat animation":
-      // https://giphy.com/gifs/1oDwWUJWeDvyz12yWb
-      text: 'that’s what we’re building a learning path for.',
+      // giphy "hand pointing arrow guide": https://giphy.com/gifs/3IUZ9PpKfTEUQNb4od
+      text: 'if somebody showed you where to look.',
       visual: gif({
-        src: 'section-10-building-path.gif',
-        playbackRate: 0.88,
-        place: 'above-captions',
-      }),
-      endsParagraph: true,
-    },
-    {
-      // giphy "woman typing laptop confident illustration": https://giphy.com/gifs/xUPGcevO43ANmVTCNO
-      text: 'By the end you’ll write it yourself,',
-      visual: gif({ src: 'section-11-write-it-yourself.gif', place: 'above-captions' }),
-    },
-    {
-      // giphy "package box open contents icon flat": https://giphy.com/gifs/8tKfi2prqf32kexOC6
-      text: 'and check what the number includes:',
-      visual: gif({
-        src: 'section-12-check-inside.gif',
-        playbackRate: 0.84,
-        place: 'above-captions',
-      }),
-    },
-    {
-      // giphy "spot illustration science beaker simple": https://giphy.com/gifs/l0HlQCEq4A9H2evVC
-      text: 'test accounts,',
-      visual: gif({ src: 'section-13-test-accounts.gif', place: 'above-captions' }),
-    },
-    {
-      // giphy "faded ghost ignored icon flat": https://giphy.com/gifs/zDmLzJfRkPkJ3Dw4b9
-      // The ghost fades out across the beat, which is the line: they signed up and never came back
-      // to confirm.
-      text: 'people who never confirmed their email,',
-      visual: gif({
-        src: 'section-14-unconfirmed-ghost.gif',
-        playbackRate: 0.9,
-        place: 'above-captions',
-      }),
-    },
-    {
-      // giphy "cute robot character icon 3d": https://giphy.com/gifs/nWDo0xi3pv1Adz18Ub
-      text: 'the ones who signed up twice.',
-      visual: gif({ src: 'section-15-signed-up-twice.gif', place: 'above-captions' }),
-    },
-    {
-      // giphy "cute character holding solid shield icon": https://giphy.com/gifs/2GBfKwJ7bypANDoqRt
-      text: 'So you stop quoting numbers you can’t defend.',
-      visual: gif({
-        src: 'section-16-defend-shield.gif',
+        src: 'section-10-hand-pointing-guide.gif',
         color: '#ffffff',
         place: 'above-captions',
       }),
       endsParagraph: true,
     },
     {
-      // giphy "down arrow bounce gif simple minimal": https://giphy.com/gifs/26BkMfCPUHOumk0oM
-      text: 'The waitlist link is in the comments.',
+      // klipy "woman raises hand front of class confident":
+      // https://static.klipy.com/ii/d7aec6f6f171607374b2065c836f92f4/37/90/cnc4k2LW.gif
+      text: 'If you want to be the one who investigates it first,',
       visual: gif({
-        src: 'section-17-comments-below.gif',
-        color: '#584604',
+        src: 'section-11-woman-raises-hand-volunteer.gif',
+        playbackRate: 0.75,
         place: 'above-captions',
       }),
     },
     {
-      // giphy "watering can flowers growing icon flat": https://giphy.com/gifs/PuqmtajWzEZqPld7p2
-      // Flowers opening on the line about the learning path opening.
-      text: 'Sign up and we’ll let you know when the learning path opens.',
+      // klipy "cute character building construction animation":
+      // https://static.klipy.com/ii/bea85337777ad0e23e63683391435543/30/55/hQRLC4aS.gif
+      text: 'we’re building a learning path for it.',
       visual: gif({
-        src: 'section-18-growing-signup.gif',
-        color: '#fafef8',
+        src: 'section-12-building-tower.gif',
+        playbackRate: 0.82,
+        place: 'above-captions',
+      }),
+      endsParagraph: true,
+    },
+    {
+      // klipy "woman using laptop testing confident illustration":
+      // https://static.klipy.com/ii/e293a233a303a98e471f78d04e13a1b0/44/2b/WLER1E8k.gif
+      // Left at full speed on purpose. Its motion score is 0.06, the lowest in the video, so
+      // slowing it down would push it towards reading as a still; the loop seam is 0.06, which
+      // means the repeat inside this beat is invisible.
+      text: 'By the end you’ll reproduce the bug on your own account,',
+      visual: gif({ src: 'section-13-woman-laptop-reproduce.gif', place: 'above-captions' }),
+    },
+    {
+      // klipy "woman reading document focused illustration":
+      // https://static.klipy.com/ii/2711dd8a75a85be822d136ec94899b3f/f9/60/MtI6Yweh.gif
+      text: 'read the status code,',
+      visual: gif({
+        src: 'section-14-document-read-icon.gif',
+        color: '#fcfefc',
+        place: 'above-captions',
+      }),
+    },
+    {
+      // klipy "pin drop location marker icon animation":
+      // https://static.klipy.com/ii/c3a19a0b747a76e98651f2b9a3cca5ff/71/98/i9ixmlQe.gif
+      text: 'and find the failed request in the network tab yourself.',
+      visual: gif({
+        src: 'section-15-eye-pin-found-it.gif',
+        color: '#e4e6e4',
         playbackRate: 0.81,
         place: 'above-captions',
       }),
       endsParagraph: true,
     },
     {
-      // giphy "wall clock hands moving simple icon": https://giphy.com/gifs/yw8lh1JuxnwB8mawsU
-      text: '[pause][curious] How long does a simple number take where you work?',
+      // klipy "arrow pointing down comments illustration":
+      // https://static.klipy.com/ii/4493325008d34b7bf8cd6813cd5c1619/3f/71/Fehr4syHffZVTJpI1C.gif
+      text: 'The waitlist link is in the comments.',
       visual: gif({
-        src: 'section-19-time-question.gif',
-        color: '#000000',
+        src: 'section-16-arrow-down-comments.gif',
+        color: '#ffffff',
+        playbackRate: 0.82,
+        place: 'above-captions',
+      }),
+    },
+    {
+      // klipy "sign up checkmark confirmation icon":
+      // https://static.klipy.com/ii/c3a19a0b747a76e98651f2b9a3cca5ff/85/e0/Fz3tnxKp.gif
+      text: 'Sign up and we’ll let you know when the learning path opens.',
+      visual: gif({
+        src: 'section-17-signup-checkmark.gif',
+        color: '#040204',
+        place: 'above-captions',
+      }),
+      endsParagraph: true,
+    },
+    {
+      // klipy "cute owl thinking question mark illustration":
+      // https://static.klipy.com/ii/35ccce3d852f7995dd2da910f2abd795/66/72/BVQ9Wyzg.gif
+      text: '[pause][curious] How long does a bug wait before fixing where you work?',
+      visual: gif({
+        src: 'section-18-confused-question-closer.gif',
+        color: '#dad5d1',
+        playbackRate: 0.98,
         place: 'above-captions',
       }),
     },

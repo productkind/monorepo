@@ -1,20 +1,20 @@
-import { defineVideo, gif, riveAtFrame } from '../narration/definition'
+import { defineVideo, gif, riveAtFrame } from "../narration/definition";
 
 /**
- * Video 2 of the vibe coder campaign, "Scared to touch your own app?".
+ * Video 2 of the vibe coder campaign, "You asked for one button".
  * Script: productkind/marketing/content/campaigns/2026-09-vibe-coder-validation/
- * video-2-confidence-to-update/script.md
+ * video-1-control-what-ai-changes/script.md
  *
  * The CTA is the LinkedIn / YouTube Shorts variant ("link in the comments"), which is the script
  * as written. TikTok and Instagram Reels need the URL spoken and shown instead, so they want a
  * second definition rather than a re-edit of this one.
  *
- * Cut at clause level. "Login, the database" stays one beat rather than two, because a two-word
- * section leaves too short a slot to put a picture in.
+ * Cut at clause level. "Release it" and "restore the working version" are two beats rather than
+ * one sentence, because the line is a choice between them and each half wants its own picture.
  *
- * Every visual is text-free apart from the labels that are part of the object itself — the abort
- * button in section 5, the backup disk in section 8 and the undo shortcut in section 16 — and
- * nothing here repeats a gif from videos 0 and 1 or from the PM technical fluency campaign.
+ * Every visual is text-free, and nothing here repeats a gif from video 0 or from the PM technical
+ * fluency campaign. Most of the flat-icon beats come from klipy, which carries that register;
+ * giphy's stock for "button", "file" and "payment" is mostly meme captions and branded cards.
  *
  * Where a gif is shorter than its slot it is slowed to cover the beat in one pass, rather than
  * held on a frozen last frame: a still picture reads as a stall while the captions and the parrot
@@ -23,200 +23,219 @@ import { defineVideo, gif, riveAtFrame } from '../narration/definition'
  * is ever re-narrated.
  */
 export default defineVideo({
-  id: 'vibe-coder-validation-02',
-  voice: 'chloe',
-  model: 'eleven_v3',
+  id: "vibe-coder-validation-02",
+  voice: "chloe",
+  model: "eleven_v3",
   overlays: [
-    riveAtFrame({ rive: 'parrot-greet-00.riv', frame: 0 }),
-    riveAtFrame({ rive: 'parrot-peek-00.riv', frame: 500 }),
+    riveAtFrame({ rive: "parrot-greet-00.riv", frame: 0 }),
+    riveAtFrame({ rive: "parrot-peek-00.riv", frame: 500 }),
   ],
   sections: [
     {
-      // giphy "covering eyes peeking cute": https://giphy.com/gifs/Gns1lc03zB3sw8oXvD
-      // Slowed to cover the shortest beat in the video in one pass.
-      text: 'Scared to touch your app',
+      // giphy "typing chat message simple": https://giphy.com/gifs/VJ4aJYrJPUUkWiFxfa
+      text: "You asked for one button.",
       visual: gif({
-        src: 'section-00-covering-eyes-scared.gif',
-        playbackRate: 0.73,
-        place: 'above-captions',
+        src: "section-00-chat-request.gif",
+        place: "above-captions",
       }),
     },
     {
-      // giphy "flat icon app building blocks": https://giphy.com/gifs/MvovQGsMBY9H2
-      text: 'that you built with AI?',
+      // giphy "papers flying out of laptop": https://giphy.com/gifs/XbBJTYS9hDeUFpTxwU
+      text: "The AI changed fourteen files.",
       visual: gif({
-        src: 'section-01-blocks-assembling.gif',
-        color: '#ffe7e7',
-        playbackRate: 1.43,
-        place: 'above-captions',
+        src: "section-01-files-flying.gif",
+        place: "above-captions",
       }),
       endsParagraph: true,
     },
     {
-      // giphy "toggle switch flip flat icon": https://giphy.com/gifs/3ohhwoWSCtJzznXbuo
-      text: 'You want to change one onboarding screen.',
+      // klipy "green checkmark success animation":
+      // https://static.klipy.com/ii/71b2873e478b9d8d0482ea3ec777ba7f/2d/6e/aXY7VSFP.gif
+      text: "The AI says it’s complete.",
       visual: gif({
-        src: 'section-02-toggle-flip.gif',
-        color: '#2aaeaf',
-        place: 'above-captions',
+        src: "section-02-checkmark-done.gif",
+        color: "#040204",
+        place: "above-captions",
       }),
     },
     {
-      // giphy "tangled wires spreading chaos": https://giphy.com/gifs/4KgDKknTMmdDjBmdFH
-      text: 'The AI starts editing login, the database',
+      // klipy "thumbs up flat icon animation":
+      // https://static.klipy.com/ii/c3a19a0b747a76e98651f2b9a3cca5ff/04/8e/rajehVgG.gif
+      text: "The page still loads in preview.",
       visual: gif({
-        src: 'section-03-tangled-wires.gif',
-        playbackRate: 0.87,
-        place: 'above-captions',
+        src: "section-03-thumbs-up-icon.gif",
+        color: "#fcfefc",
+        place: "above-captions",
       }),
     },
     {
-      // giphy "documents flying papers chaos": https://giphy.com/gifs/TuM35vpX9Z1lPchpOe
-      text: 'and files you have never seen before.',
+      // giphy "question mark flat icon animation": https://giphy.com/gifs/wH4rY2nPnEnp6
+      // Sped up so the question mark has finished drawing itself by the cut.
+      text: "Do you publish it?",
       visual: gif({
-        src: 'section-04-paper-airplanes.gif',
-        color: '#60c3d2',
-        playbackRate: 0.97,
-        place: 'above-captions',
+        src: "section-04-question-mark-draw.gif",
+        color: "#e6e6e6",
+        playbackRate: 1.17,
+        place: "above-captions",
       }),
       endsParagraph: true,
     },
     {
-      // giphy "red x cancel mark flat icon": https://giphy.com/gifs/G7iGNzr3VBING
-      text: 'So you cancel the change.',
+      // giphy "woman worried checking phone": https://giphy.com/gifs/cK4iC5be1skvlvceVL
+      text: "One of those files could control sign-in, payments",
       visual: gif({
-        src: 'section-05-abort-button.gif',
-        playbackRate: 0.91,
-        place: 'above-captions',
+        src: "section-05-bird-checks-phone.gif",
+        playbackRate: 0.96,
+        place: "above-captions",
       }),
     },
     {
-      // klipy "hourglass sand timer": the improvement waiting rather than being made.
-      text: 'The improvement stays on your list.',
+      // giphy "folder documents icon flat": https://giphy.com/gifs/5wWf7HfQJzA8cze6CWc
+      text: "or how customer data is saved.",
       visual: gif({
-        src: 'section-06-hourglass-waiting.gif',
-        color: '#fbfcfb',
+        src: "section-06-folder-icon.gif",
+        playbackRate: 0.75,
+        place: "above-captions",
+      }),
+    },
+    {
+      // klipy "question mark confused flat icon":
+      // https://static.klipy.com/ii/d7aec6f6f171607374b2065c836f92f4/99/a2/aDEd6scr.gif
+      text: "You can’t judge the change",
+      visual: gif({
+        src: "section-07-cat-question-mark.gif",
+        playbackRate: 1.07,
+        place: "above-captions",
+      }),
+    },
+    {
+      // giphy "single eye blinking icon flat": https://giphy.com/gifs/xTiTngNZh2OkpyrcQg
+      text: "by looking at the new button.",
+      visual: gif({
+        src: "section-08-eye-blink.gif",
+        color: "#ffffff",
         playbackRate: 0.88,
-        place: 'above-captions',
+        place: "above-captions",
       }),
       endsParagraph: true,
     },
     {
-      // giphy "website live going online flat icon": https://giphy.com/gifs/v4r4rnbLi1n3QmqUM6
-      text: 'Updating a live product',
+      // klipy "notepad writing list icon":
+      // https://static.klipy.com/ii/d7aec6f6f171607374b2065c836f92f4/4a/00/FlhBtES5.gif
+      text: "You need to know what changed,",
       visual: gif({
-        src: 'section-07-online-button-press.gif',
-        playbackRate: 0.82,
-        place: 'above-captions',
+        src: "section-09-chick-writing-notes.gif",
+        place: "above-captions",
       }),
     },
     {
-      // giphy "floppy disk save icon animation": https://giphy.com/gifs/twdF6dEC6rK5ep7b4Y
-      text: 'needs a working version you can return to',
+      // giphy "customer journey map icon": https://giphy.com/gifs/ildLrpK7sOV9ky6NOf
+      text: "which customer journeys could be affected",
       visual: gif({
-        src: 'section-08-floppy-backup.gif',
-        color: '#fbf05c',
-        place: 'above-captions',
+        src: "section-10-treasure-map-path.gif",
+        color: "#372506",
+        playbackRate: 0.99,
+        place: "above-captions",
       }),
     },
     {
-      // giphy "magnifying glass checking screen flat icon":
-      // https://giphy.com/gifs/56AsTD2tXNmZBGR3hL
-      text: 'and a way to check what the change might break.',
+      // klipy "rocket ready launch checklist":
+      // https://static.klipy.com/ii/e293a233a303a98e471f78d04e13a1b0/93/d2/UZ7CTRX5.gif
+      text: "and what to test before release.",
       visual: gif({
-        src: 'section-09-eye-magnifier-check.gif',
-        color: '#000000',
-        place: 'above-captions',
-      }),
-      endsParagraph: true,
-    },
-    {
-      // giphy "woman determined nod yes": https://giphy.com/gifs/h9BsCz7jZEr9XPRgIi
-      text: 'If you want to keep improving your app',
-      visual: gif({ src: 'section-10-woman-nodding-yes.gif', place: 'above-captions' }),
-    },
-    {
-      // giphy "four leaf clover luck icon flat": https://giphy.com/gifs/d6hqGx3d5Qqu9RJjcM
-      text: 'without relying on luck,',
-      visual: gif({
-        src: 'section-11-four-leaf-clovers.gif',
-        color: '#ffffff',
-        playbackRate: 0.91,
-        place: 'above-captions',
-      }),
-    },
-    {
-      // giphy "ladder climbing steps flat icon": https://giphy.com/gifs/A2Sgm68KhLRngFIwWQ
-      text: 'that’s what we’re building a learning path for.',
-      visual: gif({
-        src: 'section-12-ladder-climb-path.gif',
-        color: '#fefcfd',
-        place: 'above-captions',
+        src: "section-11-rocket-launch-ready.gif",
+        place: "above-captions",
       }),
       endsParagraph: true,
     },
     {
-      // giphy "woman typing laptop confident smile": https://giphy.com/gifs/hSB0VA9cOkcCO5ssHd
-      text: 'By the end, you’ll save a working version,',
+      // giphy "confident woman smiling laptop": https://giphy.com/gifs/fuHp2yhQ91ceA
+      text: "If you want that control over your own app,",
       visual: gif({
-        src: 'section-13-woman-at-desk-working.gif',
-        playbackRate: 0.8,
-        place: 'above-captions',
+        src: "section-12-woman-confident-smile.gif",
+        place: "above-captions",
       }),
     },
     {
-      // giphy "dart hits target center flat icon": https://giphy.com/gifs/PJ7L5D5nRAoddXiwLQ
-      text: 'make a small scoped change,',
+      // klipy "plant growing icon flat":
+      // https://static.klipy.com/ii/71b2873e478b9d8d0482ea3ec777ba7f/01/87/5esD6EwY.gif
+      text: "that’s what we’re building a learning path for.",
       visual: gif({
-        src: 'section-14-dart-precision-target.gif',
-        color: '#ffffff',
-        place: 'above-captions',
-      }),
-    },
-    {
-      // giphy "walking through maze path flat icon": https://giphy.com/gifs/3o7TKFCb8DQ6feGcne
-      text: 'test the affected journey',
-      visual: gif({
-        src: 'section-15-camel-walking-journey.gif',
-        playbackRate: 0.8,
-        place: 'above-captions',
-      }),
-    },
-    {
-      // giphy "eraser undo mistake flat icon": https://giphy.com/gifs/KDz938kEyh1UfJJGAp
-      text: 'and undo it if the test fails.',
-      visual: gif({
-        src: 'section-16-command-z-undo.gif',
-        color: '#dedede',
+        src: "section-13-sunflower-growing.gif",
         playbackRate: 0.83,
-        place: 'above-captions',
+        place: "above-captions",
       }),
       endsParagraph: true,
     },
     {
-      // giphy "tap screen finger flat icon": https://giphy.com/gifs/S2EqXNJ2ASorP0ZPWD
-      text: 'The waitlist link is in the comments.',
+      // klipy "woman reading laptop focused":
+      // https://static.klipy.com/ii/d7aec6f6f171607374b2065c836f92f4/b4/44/mdf113ZH.gif
+      text: "By the end, you’ll review a proposed change,",
       visual: gif({
-        src: 'section-17-cursor-click-link.gif',
-        color: '#ffffff',
-        place: 'above-captions',
+        src: "section-14-cat-reviews-laptop.gif",
+        place: "above-captions",
       }),
     },
     {
-      // giphy "mailbox letter flag animation": https://giphy.com/gifs/IQzFAfOGMZbKcdtJqf
-      text: 'Sign up and we’ll let you know when the learning path opens.',
+      // klipy "test tube shake icon flat":
+      // https://static.klipy.com/ii/d7aec6f6f171607374b2065c836f92f4/82/91/qPTuK4D8.gif
+      text: "test the affected behaviour",
       visual: gif({
-        src: 'section-18-mail-notification-badge.gif',
-        color: '#be9384',
-        playbackRate: 0.95,
-        place: 'above-captions',
+        src: "section-15-test-tube-walk.gif",
+        playbackRate: 0.92,
+        place: "above-captions",
+      }),
+    },
+    {
+      // klipy "switch toggle on icon flat":
+      // https://static.klipy.com/ii/d7aec6f6f171607374b2065c836f92f4/cc/c1/Vgrm4L9D.gif
+      text: "and decide whether to release it",
+      visual: gif({
+        src: "section-16-switch-flip-on.gif",
+        color: "#fcfefc",
+        playbackRate: 0.91,
+        place: "above-captions",
+      }),
+    },
+    {
+      // giphy "rewind restore icon flat": https://giphy.com/gifs/k3YfylIfk3glutpC5h
+      text: "or restore the working version.",
+      visual: gif({
+        src: "section-17-rewind-arrows.gif",
+        color: "#000000",
+        place: "above-captions",
       }),
       endsParagraph: true,
     },
     {
-      // giphy "cat tilting head curious": https://giphy.com/gifs/JSxuLOvwqgNBlMp5Nv
-      text: '[pause][curious] What change have you been putting off?',
-      visual: gif({ src: 'section-19-cat-curious-thinking.gif', place: 'above-captions' }),
+      // klipy "arrow down icon animation flat":
+      // https://static.klipy.com/ii/e293a233a303a98e471f78d04e13a1b0/d9/ff/lZ1FFKC7.gif
+      text: "The waitlist link is in the comments.",
+      visual: gif({
+        src: "section-18-arrow-down-loading.gif",
+        color: "#fcfefc",
+        playbackRate: 0.88,
+        place: "above-captions",
+      }),
+    },
+    {
+      // klipy "calendar mark date icon flat":
+      // https://static.klipy.com/ii/d7aec6f6f171607374b2065c836f92f4/b4/01/4plopjYL.gif
+      text: "Sign up and we’ll let you know when the learning path opens.",
+      visual: gif({
+        src: "section-19-calendar-months-flip.gif",
+        color: "#fcfefc",
+        place: "above-captions",
+      }),
+      endsParagraph: true,
+    },
+    {
+      // giphy "question": https://giphy.com/gifs/tU2mV8ALzJEdXAAwRo
+      text: "[pause][curious] What’s the biggest change you’ve approved without understanding it?",
+      visual: gif({
+        src: "section-20-question.gif",
+        place: "above-captions",
+      }),
     },
   ],
-})
+});

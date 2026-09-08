@@ -1,235 +1,155 @@
-import { defineVideo, gif, riveAtFrame } from "../narration/definition";
+import { defineVideo, gif, riveAtFrame } from '../narration/definition'
 
 /**
- * Video 1 of the PM technical fluency campaign, "You only know the screens".
+ * Video 1 of the PM technical fluency campaign, "Nodding along in stand-up".
  * Script: productkind/marketing/content/campaigns/2026-09-pm-technical-fluency-validation/
- * video-1-you-only-know-the-screens/script.md
+ * video-0-nodding-along-in-stand-up/script.md
  *
  * The CTA is the LinkedIn / YouTube Shorts variant ("link in the comments"), which is the script
- * as written. TikTok and Instagram Reels need the URL spoken and shown instead.
+ * as written. TikTok and Instagram Reels need the URL spoken and shown instead, so they want a
+ * second definition rather than a re-edit of this one.
  *
- * Cut at clause level, because the script's production notes want the map drawn as the narration
- * names each part: sections 3 to 6 are the four things behind the screens, and 14 to 17 are the
- * four parts of the map, one cut each.
+ * Every visual is a giphy gif, chosen text-free: no burned-in captions, no channel watermarks,
+ * and squarish, which is what the published videos look like. Each section names the search that
+ * found it. Two beats the production notes want as screenshots rather than gifs are marked below;
+ * the gifs there stand in until the screenshots exist.
  *
- * Every visual is a giphy gif chosen text-free, and every person shown is a woman, which is what
- * the campaign brief asks of the channel. Sections 1, 13 and 14 to 17 stand in for the screen
- * recordings the production notes call for: one flow in the Little Parrot app, then the map being
- * drawn live.
- *
- * Every gif shorter than its slot is slowed to cover the beat in one pass, rather than held on a
- * frozen last frame: a still picture reads as a stall while the captions and the parrot keep
- * moving. The rates come from the narrated timeline, so re-check them with the video-gifs skill's
- * `verify.py` if the script is ever re-narrated.
+ * Where a gif is shorter than its slot and plays a one-shot motion, `loopBehavior` holds the last
+ * frame instead of restarting mid-beat. Where the gap is wider, `playbackRate` stretches the gif
+ * to fill the slot in a single pass. Everything else is either longer than its slot or loops
+ * cyclically, so it needs neither.
  */
 export default defineVideo({
-  id: "pm-technical-fluency-validation-01",
-  voice: "chloe",
-  model: "eleven_v3",
+  id: 'pm-technical-fluency-validation-01',
+  voice: 'chloe',
+  model: 'eleven_v3',
   overlays: [
-    riveAtFrame({ rive: "parrot-greet-00.riv", frame: 0 }),
-    riveAtFrame({ rive: "parrot-peek-00.riv", frame: 500 }),
+    riveAtFrame({ rive: 'parrot-greet-00.riv', frame: 0 }),
+    riveAtFrame({ rive: 'parrot-peek-00.riv', frame: 500 }),
   ],
   sections: [
     {
-      // giphy "speech bubble question animation": https://giphy.com/gifs/mcdVjcUtgJz9603joH
-      // Sped up a touch so the bubble finishes typing exactly as the question lands.
-      text: "“So how does your product work?”",
-      visual: gif({
-        src: "section-00-bubble.gif",
-        color: "#000000",
-        playbackRate: 0.9,
-        place: "above-captions",
-      }),
+      // giphy "nodding yes cat": https://giphy.com/gifs/sdyQm2V3Mc2x2A4Sr3
+      text: "You’ve nodded along in a stand-up,",
+      visual: gif({ src: 'section-00-nodding.gif', place: 'above-captions' }),
     },
     {
-      // giphy "scrolling through app screens": https://giphy.com/gifs/64djN36d7Rr2NodQwQ
-      // Stands in for the Little Parrot app flow the production notes want here.
-      text: "You can demo every screen,",
-      visual: gif({
-        src: "section-01-screens.gif",
-        playbackRate: 0.77,
-        place: "above-captions",
-      }),
-    },
-    {
-      // giphy "woman shrugging": https://giphy.com/gifs/6lnQpQebxJucdcRdrB
-      text: "and that’s as far as your answer goes.",
-      visual: gif({
-        src: "section-02-shrug.gif",
-        color: "#fbfbfb",
-        place: "above-captions",
-      }),
+      // giphy "avoid eye contact nervous": https://giphy.com/gifs/ycd33pEC8uLc9F3Cdz
+      text: "hoping nobody asks you a follow-up question.",
+      visual: gif({ src: 'section-01-nervous.gif', place: 'above-captions' }),
       endsParagraph: true,
     },
     {
-      // giphy "server rack data centre": https://giphy.com/gifs/2ZmBuhE34beR6PjM0u
-      text: "Behind those screens is a service another team owns,",
+      // giphy "office meeting listening": https://giphy.com/gifs/ipgQEioEetBm0scBr3
+      // Stands in for what the production notes want here: a typed meeting note reading
+      // "migration blocked by platform team".
+      text: "Someone says the migration is blocked by the platform team.",
       visual: gif({
-        src: "section-03-servers.gif",
-        playbackRate: 0.87,
-        place: "above-captions",
-      }),
-    },
-    {
-      // giphy "puzzle pieces connecting": https://giphy.com/gifs/CaskNhYmzqSHUUhq4e
-      text: "three integrations,",
-      visual: gif({
-        src: "section-04-puzzle.gif",
+        src: 'section-02-meeting.gif',
         playbackRate: 0.61,
-        place: "above-captions",
+        place: 'above-captions',
       }),
     },
     {
-      // giphy "cloud icon animation": https://giphy.com/gifs/W9qCmeTuUoaFG
-      text: "cloud storage you’ve never seen,",
-      visual: gif({
-        src: "section-05-cloud.gif",
-        color: "#6b51e8",
-        place: "above-captions",
-      }),
-    },
-    {
-      // giphy "migration": https://giphy.com/gifs/ds9VVID0WdIqzBgLUT
-      text: "and a database somebody migrated last year.",
-      visual: gif({
-        src: "section-06-migration.gif",
-        playbackRate: 0.76,
-        place: "above-captions",
-      }),
+      // giphy "i dont know shrug": https://giphy.com/gifs/sZEl1yTi26mJzrI4VN
+      text: "You don’t know what that means for your release.",
+      visual: gif({ src: 'section-03-shrug.gif', place: 'above-captions' }),
       endsParagraph: true,
     },
     {
-      // giphy "broken screen crack": https://giphy.com/gifs/26BRuNOYPshwxGuDm
-      // Slowed so the screen is still cracking at the cut, not cracking twice.
-      text: "So when the load test fails,",
-      visual: gif({
-        src: "section-07-crack.gif",
-        color: "#ffffff",
-        playbackRate: 0.83,
-        place: "above-captions",
-      }),
+      // giphy "zip lips quiet": https://giphy.com/gifs/48hZD1upEM0w3tP0gW
+      // 1.84s of lips being sealed, slowed to cover the 1.9s beat in one pass.
+      text: "So you don’t ask.",
+      visual: gif({ src: 'section-04-quiet.gif', playbackRate: 0.97, place: 'above-captions' }),
     },
     {
-      // giphy "is it me confused": https://giphy.com/gifs/0aSulNqJj5zfOshQXC
-      text: "you can’t tell if it’s your problem.",
-      visual: gif({ src: "section-08-unsure.gif", place: "above-captions" }),
+      // giphy "time passing clock": https://giphy.com/gifs/xTiTnEeKtzw4zJyFsQ
+      // The shortest gif in the video, 0.90s against a 1.2s slot. At 0.75 speed the clocks
+      // tumble once across the whole beat instead of restarting a third of the way in.
+      text: "Three weeks later,",
+      visual: gif({ src: 'section-05-clocks.gif', playbackRate: 0.75, place: 'above-captions' }),
+    },
+    {
+      // giphy "domino falling": https://giphy.com/gifs/lvMhtbcATyeEBc1gzd
+      // Slowed so the field is still toppling at the cut, rather than springing back up.
+      text: "that blocker is why your release date moves.",
+      visual: gif({ src: 'section-06-dominoes.gif', playbackRate: 0.99, place: 'above-captions' }),
       endsParagraph: true,
     },
     {
-      // giphy "woman typing laptop office": https://giphy.com/gifs/qjlquZl0oHZbJBInpf
-      text: "You know the frontend and the backend.",
-      visual: gif({ src: "section-09-laptop.gif", place: "above-captions" }),
+      // giphy "confused reading book": https://giphy.com/gifs/2lzFTmg15tNbxHFWEg
+      text: "Nobody taught you those words.",
+      visual: gif({ src: 'section-07-book.gif', playbackRate: 0.97, place: 'above-captions' }),
     },
     {
-      // giphy "infrastrucutre": https://giphy.com/gifs/WsRay6mTizlOVn3nts
-      // The canopy above the line, the roots below it, which is the beat.
-      text: "Nobody explains the infrastructure around them.",
-      visual: gif({
-        src: "section-10-infrastructure.gif",
-        playbackRate: 0.61,
-        place: "above-captions",
-      }),
+      // giphy "typing search phone": https://giphy.com/gifs/XZMApO2tucBKWjtgvr
+      text: "Looking up a definition afterwards",
+      visual: gif({ src: 'section-08-search.gif', place: 'above-captions' }),
+    },
+    {
+      // giphy "blank stare confused": https://giphy.com/gifs/ZV0d7QC1bCC2RgXJtg
+      // 1.96s against 2.3s, stretched so the blank stare holds for the whole line.
+      text: "doesn’t tell you what it means for your release.",
+      visual: gif({ src: 'section-09-blank.gif', playbackRate: 0.85, place: 'above-captions' }),
       endsParagraph: true,
     },
     {
-      // giphy "woman looking at screen curious": https://giphy.com/gifs/Qt1jk5Q49C3h5CrlBe
-      // 2.4s against a 3.0s slot, slowed so the study covers the whole line.
-      text: "If you want to understand that about your own product,",
-      visual: gif({
-        src: "section-11-studying.gif",
-        color: "#ffffff",
-        playbackRate: 0.8,
-        place: "above-captions",
-      }),
+      // giphy "hand up pick me": https://giphy.com/gifs/w5xEwipLyIBMdINSvn
+      text: "If you’d rather be the one who asks these questions,",
+      visual: gif({ src: 'section-10-hand-up.gif', place: 'above-captions' }),
     },
     {
-      // giphy "stacking bricks build": https://giphy.com/gifs/F7ASV7LOSpcCn2lQkt
-      text: "that’s what we’re building a learning path for.",
-      visual: gif({ src: "section-12-building.gif", place: "above-captions" }),
+      // giphy "building blocks stacking": https://giphy.com/gifs/jvUjz1RF0pZue1JgVG
+      // Same family of 3D creatures as social-016's opener, which is the house look.
+      text: "we’re building a learning path for exactly this.",
+      visual: gif({ src: 'section-11-building.gif', place: 'above-captions' }),
       endsParagraph: true,
     },
     {
-      // giphy "woman drawing whiteboard": https://giphy.com/gifs/IKNlnE1Z9PH5CuAbic
-      // 6.3s of drawing in a 3.1s slot. Sped up so the drawing finishes inside the beat, which is
-      // the payoff the production notes protect: the map gets drawn, not half drawn.
-      text: "By the end you’ll be able to map out your product:",
-      visual: gif({
-        src: "section-13-drawing.gif",
-        color: "#000000",
-        playbackRate: 2.07,
-        place: "above-captions",
-      }),
+      // giphy "parrot talking": https://giphy.com/gifs/v02uv7Pshwxsa7viq2
+      // A parrot saying it back, on the Little Parrot account, over the line about saying a
+      // change back in your own words.
+      text: "By the end you’ll say a change back in your own words,",
+      visual: gif({ src: 'section-12-parrot.gif', playbackRate: 0.93, place: 'above-captions' }),
     },
     {
-      // giphy "connected dots lines animation": https://giphy.com/gifs/cG0HFVzbbaA8SenoCj
-      text: "what it depends on,",
-      visual: gif({
-        src: "section-14-links.gif",
-        color: "#000000",
-        place: "above-captions",
-      }),
+      // giphy "asking question": https://giphy.com/gifs/Ie8ncfWOhpNeH9morB
+      text: "ask what it does to your product,",
+      visual: gif({ src: 'section-13-question.gif', playbackRate: 0.72, place: 'above-captions' }),
     },
     {
-      // giphy "cat raising paw": https://giphy.com/gifs/3UPNs8vXyJESQ
-      text: "who owns each part,",
-      visual: gif({
-        src: "section-15-paw.gif",
-        color: "#ffffff",
-        place: "above-captions",
-      }),
-    },
-    {
-      // giphy "loading spinner slow": https://giphy.com/gifs/3og0ID5AW1SmPuG3u0
-      // Slowed to one rotation across the beat; a spinner that jumps back mid-turn is visible.
-      text: "where it slows down,",
-      visual: gif({
-        src: "section-16-spinner.gif",
-        playbackRate: 0.89,
-        place: "above-captions",
-      }),
-    },
-    {
-      // giphy "jenga tower collapse": https://giphy.com/gifs/xfCw2YVtj7ZpJjd4ZG
-      // Slowed so the tower is still going down at the cut, rather than standing back up.
-      text: "and what breaks when one fails.",
-      visual: gif({
-        src: "section-17-jenga.gif",
-        playbackRate: 0.81,
-        place: "above-captions",
-      }),
+      // giphy "aha moment idea": https://giphy.com/gifs/3aYnAs1OHimXSuZAUm
+      text: "and understand the answer while you’re in the meeting.",
+      visual: gif({ src: 'section-14-lightbulb.gif', color: '#298c8c', place: 'above-captions' }),
       endsParagraph: true,
     },
     {
-      // giphy "typing message phone": https://giphy.com/gifs/3ohhwDlKkjDll35yOQ
-      // Replaced a cat-with-speech-bubble gif that turned out to be a still photo: 16 frames of
-      // nothing but the bubble outline wobbling by a pixel.
+      // giphy "tap here below": https://giphy.com/gifs/wPskSPeu2grXPyBmq1
+      // Stands in for the waitlist page the production notes want on screen here.
       text: "The waitlist link is in the comments.",
-      visual: gif({
-        src: "section-18-phone.gif",
-        playbackRate: 0.84,
-        place: "above-captions",
-      }),
+      visual: gif({ src: 'section-15-pointing.gif', color: '#edec00', place: 'above-captions' }),
     },
     {
-      // giphy "email envelope notification": https://giphy.com/gifs/2wWBH0vXsVUmKtRJOe
+      // giphy "notification bell ringing": https://giphy.com/gifs/bV43y3KbW5qozIXzMd
       text: "Sign up and we’ll let you know when the learning path opens.",
       visual: gif({
-        src: "section-19-envelope.gif",
-        color: "#ffffff",
-        place: "above-captions",
+        src: 'section-16-notification.gif',
+        color: '#ffffff',
+        playbackRate: 0.61,
+        place: 'above-captions',
       }),
       endsParagraph: true,
     },
     {
-      // giphy "woman thinking question": https://giphy.com/gifs/528ZQA9p2ZEmDxs17j
-      // Slowed so she is still thinking about it as the video ends, which is the prompt.
-      text: "[pause][curious] Which part of your product would you struggle to explain?",
+      // giphy "question marks floating": https://giphy.com/gifs/ducsQFMyHcdiTeIcuD
+      // Slowed so the question mark is still being drawn as the video ends.
+      text: "[pause][curious] What technical word did you look up last?",
       visual: gif({
-        src: "section-20-wondering.gif",
-        playbackRate: 0.84,
-        place: "above-captions",
+        src: 'section-17-question-mark.gif',
+        color: '#1de3a5',
+        playbackRate: 0.92,
+        place: 'above-captions',
       }),
     },
   ],
-});
+})
