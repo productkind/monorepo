@@ -85,8 +85,7 @@ export const createPublishLibBehavior = ({
       packageJsonContent$: fileSystem.readFile(`${srcDir}/package.json`, 'utf-8'),
       packageDir,
       version,
-      viewVersion: ({ name, version: publishedVersion }) =>
-        npm.viewVersion({ name, version: publishedVersion, registry }).output$,
+      viewVersions: ({ name }) => npm.viewVersions({ name, registry }).output$,
       publishFactory: () => npm.publish({ cwd: outDir, registry }).output$,
     })
     return {

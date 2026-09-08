@@ -3,13 +3,7 @@ import { type SubProcessService } from '@dungarees/sub-process/type.ts'
 export type CliCommandsService = {
   npm: {
     publish: (options?: { registry?: string | undefined; cwd?: string }) => RunResult
-    // Exits non-zero when that exact version is not on the registry, which is also how a package
-    // that does not exist at all reports itself.
-    viewVersion: (options: {
-      name: string
-      version: string
-      registry?: string | undefined
-    }) => RunResult
+    viewVersions: (options: { name: string; registry?: string | undefined }) => RunResult
   }
 }
 
@@ -24,10 +18,10 @@ export const createCliCommands = (subProcess: SubProcessService): CliCommandsSer
           ['publish', '--access', 'public', ...(registry ? ['--registry', registry] : [])],
           { ...(cwd === undefined ? {} : { cwd }) },
         ),
-      viewVersion: ({ name, version, registry }) =>
+      viewVersions: ({ name, registry }) =>
         subProcess.run(
           'npm',
-          ['view', `${name}@${version}`, 'version', ...(registry ? ['--registry', registry] : [])],
+          ['view', name, 'versions', '--json', ...(registry ? ['--registry', registry] : [])],
           {},
         ),
     },

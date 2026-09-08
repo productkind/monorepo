@@ -20,7 +20,7 @@ test('main renders the app to the process it was given', async () => {
     commands: [
       {
         command: 'npm',
-        args: ['view', '@org/lib-1@1.0.0', 'version'],
+        args: ['view', '@org/lib-1', 'versions', '--json'],
         stdout: '',
         stderror: 'E404 Not found',
         exitCode: 1,

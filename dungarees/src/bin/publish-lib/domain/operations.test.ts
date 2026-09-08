@@ -264,14 +264,20 @@ mtest('publishLib with successful exit code', ({ expect, coldStepAndClose }) => 
   const publish$ = publishLib({
     publishFactory: () => coldStepAndClose({ exitCode: 0, stderror: undefined }),
     packageDir: 'lib-1',
+    version: '1.0.0',
+    created: false,
   })
-  expect(publish$).toBeObservableStepAndClose(eventCreators.publishSucceeded())
+  expect(publish$).toBeObservableStepAndClose(
+    eventCreators.publishSucceeded({ packageDir: 'lib-1', version: '1.0.0', created: false }),
+  )
 })
 
 mtest('publishLib with failed exit code', ({ expect, coldStepAndClose }) => {
   const publish$ = publishLib({
     publishFactory: () => coldStepAndClose({ exitCode: 1, stderror: 'Some error' }),
     packageDir: 'lib-1',
+    version: '1.0.0',
+    created: false,
   })
   expect(publish$).toBeObservableStepAndClose(
     eventCreators.publishFailed({ packageDir: 'lib-1', exitCode: 1, stderror: 'Some error' }),
@@ -286,14 +292,23 @@ mtest('publishLib defers executing the command', ({ expect: mexpect, coldStepAnd
       return coldStepAndClose({ exitCode: 0, stderror: undefined })
     },
     packageDir: 'lib-1',
+    version: '1.0.0',
+    created: false,
   })
   expect(commandExecuted).toBe(false)
-  mexpect(publish$).toBeObservableStepAndClose(eventCreators.publishSucceeded())
+  mexpect(publish$).toBeObservableStepAndClose(
+    eventCreators.publishSucceeded({ packageDir: 'lib-1', version: '1.0.0', created: false }),
+  )
 })
 
 mtest('publishLib with error', ({ expect, coldError }) => {
   const input$ = coldError(new Error('Network timeout'))
-  const publish$ = publishLib({ publishFactory: () => input$, packageDir: 'lib-1' })
+  const publish$ = publishLib({
+    publishFactory: () => input$,
+    packageDir: 'lib-1',
+    version: '1.0.0',
+    created: false,
+  })
   expect(publish$).toBeObservableError(new Error('Error publishing library: Network timeout'))
 })
 
@@ -369,13 +384,16 @@ mtest('getPackageDirsWithVersion errors when version.json is not valid JSON', ({
 mtest(
   'publishAllPackages passes each package event through, then reports all published',
   ({ expect, coldStepAndClose }) => {
-    const publishPackage = () => coldStepAndClose(eventCreators.publishSucceeded())
+    const publishPackage = () =>
+      coldStepAndClose(
+        eventCreators.publishSucceeded({ packageDir: 'lib-1', version: '1.0.0', created: false }),
+      )
     const publishAll$ = of({ packageDirs: ['lib-1', 'lib-2'], version: '1.0.0' }).pipe(
       publishAllPackages(publishPackage),
     )
     expect(publishAll$).toBeObservable('-(abc|)', {
-      a: eventCreators.publishSucceeded(),
-      b: eventCreators.publishSucceeded(),
+      a: eventCreators.publishSucceeded({ packageDir: 'lib-1', version: '1.0.0', created: false }),
+      b: eventCreators.publishSucceeded({ packageDir: 'lib-1', version: '1.0.0', created: false }),
       c: eventCreators.allPublished(),
     })
   },
@@ -386,14 +404,18 @@ test('publishAllPackages reports the packages that failed', async () => {
     publishAllPackages(({ packageDir }) =>
       of(
         packageDir === 'lib-1'
-          ? eventCreators.publishSucceeded()
+          ? eventCreators.publishSucceeded({
+              packageDir: 'lib-1',
+              version: '1.0.0',
+              created: false,
+            })
           : eventCreators.publishFailed({ packageDir, exitCode: 1, stderror: 'nope' }),
       ),
     ),
   )
 
   expect(await collectValuesFrom(publishAll$)).toEqual([
-    eventCreators.publishSucceeded(),
+    eventCreators.publishSucceeded({ packageDir: 'lib-1', version: '1.0.0', created: false }),
     eventCreators.publishFailed({ packageDir: 'lib-2', exitCode: 1, stderror: 'nope' }),
     eventCreators.publishesFailed({ packageDirs: ['lib-2'] }),
   ])
@@ -419,7 +441,9 @@ test('publishAllPackages passes packageDir and version to each publish call', as
   const publishAll$ = of({ packageDirs: ['lib-1', 'lib-2'], version: '2.5.0' }).pipe(
     publishAllPackages((args) => {
       publishedArgs.push(args)
-      return of(eventCreators.publishSucceeded())
+      return of(
+        eventCreators.publishSucceeded({ packageDir: 'lib-1', version: '1.0.0', created: false }),
+      )
     }),
   )
   await collectValuesFrom(publishAll$)
@@ -500,58 +524,95 @@ mtest('transformPackageJson merges declared assets with the transpiled exports',
 
 const PACKAGE_JSON = JSON.stringify({ name: '@org/lib-1', version: '0.9.0' })
 
+const published = (versions: string[]) => () =>
+  of({ stdout: JSON.stringify(versions), stderror: '', exitCode: 0 })
+
+const neverPublished = () => of({ stdout: '', stderror: 'E404', exitCode: 1 })
+
+const publishSucceeds = () => of({ stdout: '', stderror: undefined, exitCode: 0 })
+
 test('publishUnlessPublished skips a version the registry already has', async () => {
-  let published = false
+  let didPublish = false
   const events = await collectValuesFrom(
     publishUnlessPublished({
       packageJsonContent$: of(PACKAGE_JSON),
       packageDir: 'lib-1',
       version: '1.0.0',
-      viewVersion: () => of({ stdout: '1.0.0', stderror: '', exitCode: 0 }),
+      viewVersions: published(['0.9.0', '1.0.0']),
       publishFactory: () => {
-        published = true
-        return of({ stdout: '', stderror: undefined, exitCode: 0 })
+        didPublish = true
+        return publishSucceeds()
       },
     }),
   )
 
   expect(events).toEqual([eventCreators.publishSkipped({ packageDir: 'lib-1', version: '1.0.0' })])
-  expect(published).toBe(false)
+  expect(didPublish).toBe(false)
 })
 
-test('publishUnlessPublished publishes when the registry does not have the version', async () => {
-  const viewedNames: string[] = []
+test('publishUnlessPublished reports a new version of a known package as published', async () => {
   const events = await collectValuesFrom(
     publishUnlessPublished({
       packageJsonContent$: of(PACKAGE_JSON),
       packageDir: 'lib-1',
       version: '1.0.0',
-      viewVersion: ({ name, version }) => {
-        viewedNames.push(`${name}@${version}`)
-        return of({ stdout: '', stderror: 'E404', exitCode: 1 })
-      },
-      publishFactory: () => of({ stdout: '', stderror: undefined, exitCode: 0 }),
+      viewVersions: published(['0.9.0']),
+      publishFactory: publishSucceeds,
     }),
   )
 
-  expect(viewedNames).toEqual(['@org/lib-1@1.0.0'])
-  expect(events).toEqual([eventCreators.publishSucceeded()])
+  expect(events).toEqual([
+    eventCreators.publishSucceeded({ packageDir: 'lib-1', version: '1.0.0', created: false }),
+  ])
+})
+
+test('publishUnlessPublished reports a package the registry does not know as created', async () => {
+  const events = await collectValuesFrom(
+    publishUnlessPublished({
+      packageJsonContent$: of(PACKAGE_JSON),
+      packageDir: 'lib-1',
+      version: '1.0.0',
+      viewVersions: neverPublished,
+      publishFactory: publishSucceeds,
+    }),
+  )
+
+  expect(events).toEqual([
+    eventCreators.publishSucceeded({ packageDir: 'lib-1', version: '1.0.0', created: true }),
+  ])
+})
+
+test('publishUnlessPublished copes with npm collapsing a lone version to a string', async () => {
+  const events = await collectValuesFrom(
+    publishUnlessPublished({
+      packageJsonContent$: of(PACKAGE_JSON),
+      packageDir: 'lib-1',
+      version: '1.0.0',
+      viewVersions: () => of({ stdout: '"1.0.0"', stderror: '', exitCode: 0 }),
+      publishFactory: publishSucceeds,
+    }),
+  )
+
+  expect(events).toEqual([eventCreators.publishSkipped({ packageDir: 'lib-1', version: '1.0.0' })])
 })
 
 test("publishUnlessPublished falls back to the package's own version when none is given", async () => {
   const viewedNames: string[] = []
-  await collectValuesFrom(
+  const events = await collectValuesFrom(
     publishUnlessPublished({
       packageJsonContent$: of(PACKAGE_JSON),
       packageDir: 'lib-1',
       version: undefined,
-      viewVersion: ({ name, version }) => {
-        viewedNames.push(`${name}@${version}`)
-        return of({ stdout: '', stderror: 'E404', exitCode: 1 })
+      viewVersions: ({ name }) => {
+        viewedNames.push(name)
+        return neverPublished()
       },
-      publishFactory: () => of({ stdout: '', stderror: undefined, exitCode: 0 }),
+      publishFactory: publishSucceeds,
     }),
   )
 
-  expect(viewedNames).toEqual(['@org/lib-1@0.9.0'])
+  expect(viewedNames).toEqual(['@org/lib-1'])
+  expect(events).toEqual([
+    eventCreators.publishSucceeded({ packageDir: 'lib-1', version: '0.9.0', created: true }),
+  ])
 })

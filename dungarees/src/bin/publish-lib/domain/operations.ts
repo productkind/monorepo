@@ -229,14 +229,18 @@ const handleTransformEnd = (
 export const publishLib = ({
   publishFactory,
   packageDir,
+  version,
+  created,
 }: {
   publishFactory: () => Observable<{ exitCode: number | undefined; stderror: string | undefined }>
   packageDir: string
+  version: string
+  created: boolean
 }): Observable<PublishLibEvent> =>
   defer(publishFactory).pipe(
     map(({ exitCode, stderror }) =>
       exitCode === 0
-        ? eventCreators.publishSucceeded()
+        ? eventCreators.publishSucceeded({ packageDir, version, created })
         : eventCreators.publishFailed({ packageDir, exitCode, stderror }),
     ),
     catchAndRethrow((cause) => createCausedError({ message: 'Error publishing library', cause })),
@@ -247,20 +251,40 @@ const PUBLISH_IDENTITY_SCHEMA = z.object({
   version: z.string().min(1).optional(),
 })
 
+const PUBLISHED_VERSIONS_SCHEMA = z.union([z.string(), z.array(z.string())])
+
+const readPublishedVersions = ({
+  stdout,
+  exitCode,
+}: {
+  stdout: string
+  exitCode: number | undefined
+}): string[] | undefined => {
+  if (exitCode !== 0) {
+    return undefined
+  }
+  const versions = parseJson({
+    json: stdout,
+    schema: PUBLISHED_VERSIONS_SCHEMA,
+    message: 'Unexpected npm view output',
+  })
+  return typeof versions === 'string' ? [versions] : versions
+}
+
 export const publishUnlessPublished = ({
   packageJsonContent$,
   packageDir,
   version,
-  viewVersion,
+  viewVersions,
   publishFactory,
 }: {
   packageJsonContent$: Observable<string>
   packageDir: string
   version: string | undefined
-  viewVersion: (args: {
-    name: string
-    version: string
-  }) => Observable<{ exitCode: number | undefined }>
+  viewVersions: (args: { name: string }) => Observable<{
+    stdout: string
+    exitCode: number | undefined
+  }>
   publishFactory: () => Observable<{ exitCode: number | undefined; stderror: string | undefined }>
 }): Observable<PublishLibEvent> =>
   packageJsonContent$.pipe(
@@ -271,18 +295,24 @@ export const publishUnlessPublished = ({
         message: 'Invalid source package.json',
       }),
     ),
-    map((identity) => ({ name: identity.name, version: version ?? identity.version })),
-    mergeMap(({ name, version: publishedVersion }) =>
-      publishedVersion === undefined
-        ? publishLib({ publishFactory, packageDir })
-        : viewVersion({ name, version: publishedVersion }).pipe(
-            mergeMap(({ exitCode }) =>
-              exitCode === 0
-                ? of(eventCreators.publishSkipped({ packageDir, version: publishedVersion }))
-                : publishLib({ publishFactory, packageDir }),
+    mergeMap((identity) => {
+      const targetVersion = version ?? identity.version
+      return targetVersion === undefined
+        ? publishLib({ publishFactory, packageDir, version: 'unknown', created: true })
+        : viewVersions({ name: identity.name }).pipe(
+            map(readPublishedVersions),
+            mergeMap((publishedVersions) =>
+              publishedVersions?.includes(targetVersion) === true
+                ? of(eventCreators.publishSkipped({ packageDir, version: targetVersion }))
+                : publishLib({
+                    publishFactory,
+                    packageDir,
+                    version: targetVersion,
+                    created: publishedVersions === undefined,
+                  }),
             ),
-          ),
-    ),
+          )
+    }),
   )
 
 const getPackageDirs = (sourceDir: string): OperatorFunction<string[], string[]> =>
