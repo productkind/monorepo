@@ -145,13 +145,8 @@ export default defineVideo({
       // about understanding the answer, seen from behind.
       text: 'ask what it does to your product, and understand the answer while you’re in the meeting.',
       visual: clip({
-        src: 'clip-07-curtain-opened.mp4',
-        source: {
-          provider: 'pexels',
-          id: '37848048',
-          search: 'morning light through curtains room',
-          author: 'Ardina Setiorini',
-        },
+        src: 'clip-07-understand.mp4',
+        source: { provider: 'pexels', id: '4769973', search: 'understand', author: 'Ivan S' },
       }),
       endsParagraph: true,
     },

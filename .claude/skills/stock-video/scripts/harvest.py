@@ -21,7 +21,7 @@ from common import exact_frame_file, fetch, row as poster_row, search, work_dir
 HEADROOM_SECONDS = 1.0
 
 
-def harvest(video, run, seconds, terms, skip, provider, limit):
+def harvest(video, run, seconds, terms, skip, provider, limit, show):
     needed = seconds + HEADROOM_SECONDS
     folder = work_dir(video)
     seen, rows = set(skip), []
@@ -42,7 +42,7 @@ def harvest(video, run, seconds, terms, skip, provider, limit):
     print(f'run {run:02d}  beat {seconds:.2f}s, so a clip needs {needed:.2f}s+  '
           f'{len(rows)} candidates')
     posters = []
-    for index, entry in enumerate(rows[:12]):
+    for index, entry in enumerate(rows[:show]):
         print(f"  {index} {entry['id']:>10} {entry['seconds']:>3}s  {entry['term'][:34]:34} "
               f"by {entry['author'][:22]}")
         if not entry['poster']:
@@ -67,10 +67,13 @@ def main():
     parser.add_argument('--skip', default='', help='comma-separated ids already rejected')
     parser.add_argument('--provider', default='pexels', choices=['pexels', 'pixabay'])
     parser.add_argument('--limit', type=int, default=40)
+    parser.add_argument('--show', type=int, default=12,
+                        help='how many candidates to list and fetch posters for')
     args = parser.parse_args()
 
     harvest(args.video, args.run, args.seconds, args.terms,
-            [value for value in args.skip.split(',') if value], args.provider, args.limit)
+            [value for value in args.skip.split(',') if value], args.provider, args.limit,
+            args.show)
 
 
 if __name__ == '__main__':
