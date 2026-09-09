@@ -23,7 +23,7 @@ Engineering says it's done. Your users still don't have it. It's built, it's tes
 
 We're building a learning path so women in product can find out where their feature actually is, without waiting for someone else to tell them. Sign up in the link in the comment.
 
-#womeninproduct #womenintech #womenproductmanagers
+#womeninproduct #womenintech #productmanagers
 
 **Pinned comment:**
 

@@ -1,46 +1,49 @@
 name: Publish Dungarees to npm
 
+# Runs off the back of Checks rather than off the push, so the checks are never repeated here.
+# `workflow_run` carries no path filter, so this starts after every green push to main — the
+# publish itself skips each package whose version is already on the registry, which is a safer
+# filter than guessing the push range from `head_sha` and risking a missed version bump.
 on:
-  push:
+  workflow_run:
+    workflows: ['Checks']
+    types:
+      - completed
     branches:
       - main
-    paths:
-      - 'dungarees/config/version.json'
-      - 'dungarees/**'
 
 permissions:
   contents: read
   id-token: write
 
+# Never cancel a publish in flight, but never run two at once either.
+concurrency:
+  group: publish-dungarees
+  cancel-in-progress: false
+
 jobs:
   publish:
+    if: github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     environment: npm-publish
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          # `workflow_run` starts from the default branch, so the commit that passed Checks has to
+          # be named explicitly or a later push could be published as though it had been checked.
+          ref: ${{ github.event.workflow_run.head_sha }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 24
           registry-url: 'https://registry.npmjs.org'
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm ci
-
-      - name: Type check
-        run: npm run type-check
-
-      - name: Lint
-        run: npm run lint
-
-      - name: Test
-        run: npx vitest run
-
-      - name: Audit dependencies
-        run: npm run audit-dependencies
 
       - name: Publish to npm
         run: npm run publish:dungarees
