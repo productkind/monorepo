@@ -15,6 +15,7 @@ import social017 from './social-017'
 import social018 from './social-018'
 import vibeCoderValidation01 from './vibe-coder-validation-01'
 import vibeCoderValidation01BRoll from './vibe-coder-validation-01-b-roll'
+import vibeCoderValidation01Stock from './vibe-coder-validation-01-stock'
 import vibeCoderValidation02 from './vibe-coder-validation-02'
 import vibeCoderValidation02BRoll from './vibe-coder-validation-02-b-roll'
 import vibeCoderValidation03 from './vibe-coder-validation-03'
@@ -43,6 +44,7 @@ export const VIDEOS = [
   pmTechnicalFluencyValidation08,
   vibeCoderValidation01,
   vibeCoderValidation01BRoll,
+  vibeCoderValidation01Stock,
   vibeCoderValidation02,
   vibeCoderValidation02BRoll,
   vibeCoderValidation03,
