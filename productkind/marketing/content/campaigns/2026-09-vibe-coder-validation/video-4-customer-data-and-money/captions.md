@@ -17,13 +17,15 @@ campaign: vibe-coded-app-26
 
 **Caption:**
 
-How do you make an AI-built app safer for customers? Check account access, data, payments and backups before sign-up. Built an app with AI? Join our waitlist for women learning which safety checks to run. Which are you least sure about?
+How do you make an AI-built app safer for customers? Check account access, data, payments and backups. Built an app with AI? 
+
+We’re building a learning path for women who have already built a product with AI and want to handle customer data and money responsibly. Join our waitlist through the link in the comments.
 
 #womenwhobuild #womenintech #womenfounders #appsecurity
 
 **Pinned comment:**
 
-Join the Building Apps with AI waitlist: https://littleparrot.app/guides/building-apps-with-ai?utm_source=tiktok&utm_campaign=vibe-coded-app-26&utm_content=would-you-take-a-payment-today
+https://littleparrot.app/guides/building-apps-with-ai?utm_source=tiktok&utm_campaign=vibe-coded-app-26&utm_content=would-you-take-a-payment-today
 
 ## Instagram Reels
 
