@@ -1,0 +1,224 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1700" viewBox="0 0 1400 1700" role="img" aria-labelledby="transition-title transition-description">
+  <title id="transition-title">Replacing an e-commerce platform in small production releases</title>
+  <desc id="transition-description">Three phases of the replacement. Before, live customers reached a legacy e-commerce platform whose changes depended on an external vendor, sitting alongside existing back-office systems for licences, invoices and customer records. During the transition, real orders were directed to both routes at once: the remaining parts of the legacy platform and the first parts of the new build in production, with the same back-office systems serving both. After, the legacy platform was retired, customers reached the new platform for checkout, accounts and product changes, and the existing systems were integrated at explicit boundaries rather than replaced.</desc>
+
+  <defs>
+    <linearGradient id="brand-gradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffb65b"/>
+      <stop offset="28%" stop-color="#fdd825"/>
+      <stop offset="52%" stop-color="#fbfb00"/>
+      <stop offset="76%" stop-color="#8efd23"/>
+      <stop offset="100%" stop-color="#00ed70"/>
+    </linearGradient>
+    <linearGradient id="brand-gradient-v" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffb65b"/>
+      <stop offset="50%" stop-color="#fbfb00"/>
+      <stop offset="100%" stop-color="#00ed70"/>
+    </linearGradient>
+    <filter id="card-shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#080809" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 z" fill="#080809"/>
+    </marker>
+    <style>
+      .display { font-family: "Space Mono", Menlo, Consolas, monospace; fill: #080809; }
+      .copy { font-family: Inter, Arial, sans-serif; fill: #080809; }
+      .muted { fill: #4a4a50; }
+      .card-title { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 28px; font-weight: 700; fill: #080809; }
+      .card-copy { font-family: Inter, Arial, sans-serif; font-size: 22px; fill: #4a4a50; }
+      .card-copy-s { font-family: Inter, Arial, sans-serif; font-size: 20px; fill: #4a4a50; }
+      .label { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 18px; font-weight: 700; fill: #4a4a50; letter-spacing: 0.4px; }
+      .chip { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 18px; font-weight: 700; fill: #ffffff; letter-spacing: 1.2px; }
+      .connector { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow); }
+      .stem { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .icon { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .icon-muted { fill: none; stroke: #7c7b74; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .band { fill: #ffffff; stroke: #e6e5df; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="1700" fill="#fbfaf7"/>
+  <rect x="0" y="0" width="1400" height="14" fill="url(#brand-gradient)"/>
+
+  <text x="50" y="84" class="display" font-size="36" font-weight="700">Replacing the platform in small releases</text>
+  <text x="50" y="124" class="copy muted" font-size="22">The old and new systems served live users at the same time, until the old one could be retired.</text>
+
+  <!-- ============ PHASE 1 ============ -->
+  <rect x="50" y="170" width="1300" height="430" rx="28" class="band"/>
+  <rect x="84" y="200" width="200" height="44" rx="22" fill="#1a0044"/>
+  <text x="184" y="229" text-anchor="middle" class="chip">1  BEFORE</text>
+
+  <g filter="url(#card-shadow)">
+    <rect x="90" y="340" width="280" height="180" rx="24" fill="#fff3e6" stroke="#ffb65b" stroke-width="3"/>
+    <rect x="90" y="338" width="280" height="18" rx="9" fill="#ffb65b"/>
+  </g>
+  <g transform="translate(122 372)">
+    <circle cx="22" cy="14" r="12" class="icon"/>
+    <path d="M2 46 C2 30 42 30 42 46" class="icon"/>
+  </g>
+  <text x="186" y="396" class="label">LIVE</text>
+  <text x="122" y="458" class="card-title">Customers</text>
+  <text x="122" y="492" class="card-copy-s">buying subscriptions</text>
+  <text x="122" y="516" class="card-copy-s">and licences</text>
+
+  <path d="M370 430 H422" class="connector"/>
+
+  <g filter="url(#card-shadow)">
+    <rect x="430" y="310" width="390" height="240" rx="26" fill="#fff8d9" stroke="#f1c000" stroke-width="3"/>
+    <rect x="430" y="308" width="390" height="18" rx="9" fill="#fdd825"/>
+  </g>
+  <g transform="translate(462 356)">
+    <rect x="0" y="0" width="52" height="44" rx="6" class="icon"/>
+    <path d="M0 14 H52 M9 7 H13 M20 7 H24" class="icon"/>
+  </g>
+  <text x="530" y="382" class="label">E-COMMERCE</text>
+  <text x="462" y="446" class="card-title">Legacy platform</text>
+  <text x="462" y="488" class="card-copy">Changes depended on</text>
+  <text x="462" y="516" class="card-copy">an external vendor.</text>
+
+  <path d="M820 430 H892" class="connector"/>
+
+  <g filter="url(#card-shadow)">
+    <rect x="900" y="310" width="400" height="240" rx="26" fill="#efffe8" stroke="#8efd23" stroke-width="3"/>
+    <rect x="900" y="308" width="400" height="18" rx="9" fill="#8efd23"/>
+  </g>
+  <g transform="translate(932 356)">
+    <ellipse cx="24" cy="9" rx="23" ry="8" class="icon"/>
+    <path d="M1 9 V38 C1 42 11 46 24 46 C37 46 47 42 47 38 V9" class="icon"/>
+    <path d="M1 24 C1 28 11 32 24 32 C37 32 47 28 47 24" class="icon"/>
+  </g>
+  <text x="998" y="382" class="label">BACK OFFICE</text>
+  <text x="932" y="438" class="card-title">Existing systems</text>
+  <text x="932" y="478" class="card-copy">Licences, invoices and</text>
+  <text x="932" y="506" class="card-copy">customer records, with</text>
+  <text x="932" y="534" class="card-copy">manual steps between.</text>
+
+  <!-- ============ PHASE 2 ============ -->
+  <rect x="50" y="630" width="1300" height="430" rx="28" class="band"/>
+  <rect x="84" y="660" width="420" height="44" rx="22" fill="#1a0044"/>
+  <text x="294" y="689" text-anchor="middle" class="chip">2  OLD AND NEW TOGETHER</text>
+
+  <g filter="url(#card-shadow)">
+    <rect x="90" y="810" width="280" height="160" rx="24" fill="#fff3e6" stroke="#ffb65b" stroke-width="3"/>
+    <rect x="90" y="808" width="280" height="18" rx="9" fill="#ffb65b"/>
+  </g>
+  <g transform="translate(122 840)">
+    <path d="M0 4 H10 L18 32 H44 L50 13 H14" class="icon"/>
+    <circle cx="22" cy="42" r="5" class="icon"/>
+    <circle cx="40" cy="42" r="5" class="icon"/>
+  </g>
+  <text x="186" y="864" class="label">LIVE</text>
+  <text x="122" y="922" class="card-title">Real orders</text>
+  <text x="122" y="954" class="card-copy-s">sent to both routes</text>
+
+  <path d="M370 890 H400" class="stem"/>
+  <path d="M400 815 V965" class="stem"/>
+  <path d="M400 815 H422" class="connector"/>
+  <path d="M400 965 H422" class="connector"/>
+
+  <g filter="url(#card-shadow)">
+    <rect x="430" y="750" width="390" height="130" rx="24" fill="#f4f3ef" stroke="#c9c8c1" stroke-width="3"/>
+    <rect x="430" y="748" width="390" height="18" rx="9" fill="#c9c8c1"/>
+  </g>
+  <g transform="translate(462 790)">
+    <rect x="0" y="0" width="46" height="38" rx="6" class="icon-muted"/>
+    <path d="M0 12 H46" class="icon-muted"/>
+  </g>
+  <text x="530" y="800" class="card-title" style="fill:#4a4a50">Legacy platform</text>
+  <text x="530" y="838" class="card-copy">the parts not replaced yet</text>
+
+  <g filter="url(#card-shadow)">
+    <rect x="430" y="900" width="390" height="130" rx="24" fill="#eafff4" stroke="#00ed70" stroke-width="3"/>
+    <rect x="430" y="898" width="390" height="18" rx="9" fill="#00ed70"/>
+  </g>
+  <g transform="translate(462 940)">
+    <rect x="0" y="0" width="20" height="20" rx="4" class="icon"/>
+    <rect x="26" y="0" width="20" height="20" rx="4" class="icon"/>
+    <rect x="0" y="26" width="20" height="20" rx="4" class="icon"/>
+    <path d="M32 30 L38 36 L50 24" class="icon"/>
+  </g>
+  <text x="530" y="950" class="card-title">New build</text>
+  <text x="530" y="988" class="card-copy">first parts in production</text>
+
+  <path d="M820 815 H860 V890 H892" class="connector"/>
+  <path d="M820 965 H860 V890" class="stem"/>
+
+  <g filter="url(#card-shadow)">
+    <rect x="900" y="810" width="400" height="160" rx="24" fill="#efffe8" stroke="#8efd23" stroke-width="3"/>
+    <rect x="900" y="808" width="400" height="18" rx="9" fill="#8efd23"/>
+  </g>
+  <g transform="translate(932 846)">
+    <ellipse cx="24" cy="9" rx="23" ry="8" class="icon"/>
+    <path d="M1 9 V38 C1 42 11 46 24 46 C37 46 47 42 47 38 V9" class="icon"/>
+    <path d="M1 24 C1 28 11 32 24 32 C37 32 47 28 47 24" class="icon"/>
+  </g>
+  <text x="998" y="872" class="label">BACK OFFICE</text>
+  <text x="932" y="928" class="card-title">Same systems</text>
+  <text x="932" y="960" class="card-copy">serving both routes</text>
+
+  <!-- ============ PHASE 3 ============ -->
+  <rect x="50" y="1090" width="1300" height="410" rx="28" class="band"/>
+  <rect x="84" y="1120" width="200" height="44" rx="22" fill="#1a0044"/>
+  <text x="184" y="1149" text-anchor="middle" class="chip">3  AFTER</text>
+
+  <rect x="430" y="1110" width="390" height="76" rx="20" fill="#f4f3ef" stroke="#c9c8c1" stroke-width="3" stroke-dasharray="10 9"/>
+  <g transform="translate(464 1138)">
+    <path d="M0 0 L20 20 M20 0 L0 20" class="icon-muted"/>
+  </g>
+  <text x="502" y="1156" class="card-copy">Legacy platform retired</text>
+
+  <g filter="url(#card-shadow)">
+    <rect x="90" y="1250" width="280" height="185" rx="24" fill="#fff3e6" stroke="#ffb65b" stroke-width="3"/>
+    <rect x="90" y="1248" width="280" height="18" rx="9" fill="#ffb65b"/>
+  </g>
+  <g transform="translate(122 1282)">
+    <circle cx="22" cy="14" r="12" class="icon"/>
+    <path d="M2 46 C2 30 42 30 42 46" class="icon"/>
+  </g>
+  <text x="186" y="1306" class="label">LIVE</text>
+  <text x="122" y="1370" class="card-title">Customers</text>
+  <text x="122" y="1404" class="card-copy-s">one checkout and</text>
+  <text x="122" y="1428" class="card-copy-s">account flow</text>
+
+  <path d="M370 1340 H422" class="connector"/>
+
+  <g filter="url(#card-shadow)">
+    <rect x="430" y="1230" width="390" height="220" rx="26" fill="#eafff4" stroke="#00ed70" stroke-width="3"/>
+    <rect x="430" y="1228" width="390" height="18" rx="9" fill="#00ed70"/>
+  </g>
+  <g transform="translate(462 1276)">
+    <rect x="0" y="0" width="20" height="20" rx="4" class="icon"/>
+    <rect x="26" y="0" width="20" height="20" rx="4" class="icon"/>
+    <rect x="0" y="26" width="20" height="20" rx="4" class="icon"/>
+    <path d="M32 30 L38 36 L50 24" class="icon"/>
+  </g>
+  <text x="530" y="1300" class="label">BUILT</text>
+  <text x="462" y="1362" class="card-title">New platform</text>
+  <text x="462" y="1404" class="card-copy">checkout, accounts and</text>
+  <text x="462" y="1432" class="card-copy">product changes we control</text>
+
+  <path d="M820 1340 H892" class="connector"/>
+
+  <g filter="url(#card-shadow)">
+    <rect x="900" y="1230" width="400" height="220" rx="26" fill="#efffe8" stroke="#8efd23" stroke-width="3"/>
+    <rect x="900" y="1228" width="400" height="18" rx="9" fill="#8efd23"/>
+  </g>
+  <g transform="translate(932 1276)">
+    <ellipse cx="24" cy="9" rx="23" ry="8" class="icon"/>
+    <path d="M1 9 V38 C1 42 11 46 24 46 C37 46 47 42 47 38 V9" class="icon"/>
+    <path d="M1 24 C1 28 11 32 24 32 C37 32 47 28 47 24" class="icon"/>
+  </g>
+  <text x="998" y="1300" class="label">RETAINED</text>
+  <text x="932" y="1362" class="card-title">Existing systems</text>
+  <text x="932" y="1404" class="card-copy">integrated at explicit</text>
+  <text x="932" y="1432" class="card-copy">boundaries, not replaced</text>
+
+  <!-- Takeaway -->
+  <rect x="50" y="1530" width="1300" height="95" rx="24" fill="#1a0044"/>
+  <rect x="50" y="1530" width="14" height="95" rx="7" fill="url(#brand-gradient-v)"/>
+  <text x="94" y="1568" class="display" font-size="21" font-weight="700" style="fill:#ffffff">WHY IT WORKED</text>
+  <text x="94" y="1600" class="copy" font-size="21" style="fill:#ffffff">Every release was small enough to check against real orders, and the old route stayed available.</text>
+
+  <text x="1350" y="1668" text-anchor="end" class="label">LittleParrot.app</text>
+</svg>

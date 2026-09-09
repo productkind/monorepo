@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1740" viewBox="0 0 1400 1740" role="img" aria-labelledby="questions-title questions-description">
+  <title id="questions-title">Eight questions in a build versus buy decision framework</title>
+  <desc id="questions-description">The capability is defined first, before any option is named. Four questions test fit and constraints: does the capability differentiate the product, which requirements cannot move, how will it fit the existing systems and data, and what must change outside the software. Two questions cover owning it: who operates it after launch, and what each option costs under realistic scenarios. Two questions cover risk and evidence: how difficult it is to change direction, and which evidence would change the recommendation. The recommendation is then written in words, with the reasoning, conditions, first scope, ownership and review signal.</desc>
+
+  <defs>
+    <linearGradient id="brand-gradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffb65b"/>
+      <stop offset="28%" stop-color="#fdd825"/>
+      <stop offset="52%" stop-color="#fbfb00"/>
+      <stop offset="76%" stop-color="#8efd23"/>
+      <stop offset="100%" stop-color="#00ed70"/>
+    </linearGradient>
+    <linearGradient id="brand-gradient-v" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffb65b"/>
+      <stop offset="50%" stop-color="#fbfb00"/>
+      <stop offset="100%" stop-color="#00ed70"/>
+    </linearGradient>
+    <filter id="card-shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#080809" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 z" fill="#080809"/>
+    </marker>
+    <style>
+      .display { font-family: "Space Mono", Menlo, Consolas, monospace; fill: #080809; }
+      .copy { font-family: Inter, Arial, sans-serif; fill: #080809; }
+      .muted { fill: #4a4a50; }
+      .q { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 24px; font-weight: 700; fill: #080809; }
+      .sub { font-family: Inter, Arial, sans-serif; font-size: 20px; fill: #4a4a50; }
+      .num { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 26px; font-weight: 700; fill: #080809; }
+      .label { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 18px; font-weight: 700; fill: #4a4a50; letter-spacing: 0.4px; }
+      .chip { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 18px; font-weight: 700; fill: #ffffff; letter-spacing: 1.2px; }
+      .connector { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow); }
+      .icon { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .band { fill: #ffffff; stroke: #e6e5df; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="1740" fill="#fbfaf7"/>
+  <rect x="0" y="0" width="1400" height="14" fill="url(#brand-gradient)"/>
+
+  <text x="50" y="84" class="display" font-size="36" font-weight="700">Eight questions in a build versus buy decision</text>
+  <text x="50" y="124" class="copy muted" font-size="22">The capability comes first. The recommendation comes last.</text>
+
+  <!-- Step 0 -->
+  <g filter="url(#card-shadow)">
+    <rect x="50" y="175" width="1300" height="120" rx="26" fill="#fff3e6" stroke="#ffb65b" stroke-width="3"/>
+    <rect x="50" y="173" width="1300" height="18" rx="9" fill="#ffb65b"/>
+  </g>
+  <g transform="translate(88 211)">
+    <circle cx="24" cy="24" r="22" class="icon"/>
+    <circle cx="24" cy="24" r="11" class="icon"/>
+    <circle cx="24" cy="24" r="2.5" class="icon"/>
+  </g>
+  <text x="152" y="222" class="label">START HERE</text>
+  <text x="152" y="260" class="q" font-size="26">Define the capability</text>
+  <text x="600" y="236" class="sub" font-size="22">Describe the behaviour and information the</text>
+  <text x="600" y="266" class="sub" font-size="22">company needs, before naming an option.</text>
+
+  <path d="M700 295 V326" class="connector"/>
+
+  <!-- ===== FIT AND CONSTRAINTS ===== -->
+  <rect x="50" y="340" width="1300" height="488" rx="28" class="band"/>
+  <rect x="84" y="372" width="292" height="44" rx="22" fill="#1a0044"/>
+  <text x="230" y="401" text-anchor="middle" class="chip">FIT AND CONSTRAINTS</text>
+
+  <g filter="url(#card-shadow)">
+    <rect x="84" y="430" width="600" height="170" rx="24" fill="#fff8d9" stroke="#f1c000" stroke-width="3"/>
+    <rect x="84" y="428" width="600" height="18" rx="9" fill="#fdd825"/>
+  </g>
+  <circle cx="136" cy="494" r="28" fill="#fdd825" stroke="#080809" stroke-width="3"/>
+  <text x="136" y="504" text-anchor="middle" class="num">1</text>
+  <text x="188" y="486" class="q">Does this capability</text>
+  <text x="188" y="518" class="q">differentiate the product?</text>
+  <text x="188" y="560" class="sub">How much control the company needs</text>
+
+  <g filter="url(#card-shadow)">
+    <rect x="716" y="430" width="600" height="170" rx="24" fill="#fff8d9" stroke="#f1c000" stroke-width="3"/>
+    <rect x="716" y="428" width="600" height="18" rx="9" fill="#fdd825"/>
+  </g>
+  <circle cx="768" cy="494" r="28" fill="#fdd825" stroke="#080809" stroke-width="3"/>
+  <text x="768" y="504" text-anchor="middle" class="num">2</text>
+  <text x="820" y="486" class="q">Which requirements</text>
+  <text x="820" y="518" class="q">cannot move?</text>
+  <text x="820" y="560" class="sub">The conditions that rule an option out</text>
+
+  <g filter="url(#card-shadow)">
+    <rect x="84" y="624" width="600" height="170" rx="24" fill="#fff8d9" stroke="#f1c000" stroke-width="3"/>
+    <rect x="84" y="622" width="600" height="18" rx="9" fill="#fdd825"/>
+  </g>
+  <circle cx="136" cy="688" r="28" fill="#fdd825" stroke="#080809" stroke-width="3"/>
+  <text x="136" y="698" text-anchor="middle" class="num">3</text>
+  <text x="188" y="680" class="q">How will it fit the existing</text>
+  <text x="188" y="712" class="q">systems and data?</text>
+  <text x="188" y="754" class="sub">Where the source of truth sits</text>
+
+  <g filter="url(#card-shadow)">
+    <rect x="716" y="624" width="600" height="170" rx="24" fill="#fff8d9" stroke="#f1c000" stroke-width="3"/>
+    <rect x="716" y="622" width="600" height="18" rx="9" fill="#fdd825"/>
+  </g>
+  <circle cx="768" cy="688" r="28" fill="#fdd825" stroke="#080809" stroke-width="3"/>
+  <text x="768" y="698" text-anchor="middle" class="num">4</text>
+  <text x="820" y="680" class="q">What must change outside</text>
+  <text x="820" y="712" class="q">the software?</text>
+  <text x="820" y="754" class="sub">Process, migration, training and rollout</text>
+
+  <path d="M700 828 V856" class="connector"/>
+
+  <!-- ===== OWNING IT ===== -->
+  <rect x="50" y="870" width="1300" height="294" rx="28" class="band"/>
+  <rect x="84" y="902" width="172" height="44" rx="22" fill="#1a0044"/>
+  <text x="170" y="931" text-anchor="middle" class="chip">OWNING IT</text>
+
+  <g filter="url(#card-shadow)">
+    <rect x="84" y="960" width="600" height="170" rx="24" fill="#efffe8" stroke="#8efd23" stroke-width="3"/>
+    <rect x="84" y="958" width="600" height="18" rx="9" fill="#8efd23"/>
+  </g>
+  <circle cx="136" cy="1024" r="28" fill="#8efd23" stroke="#080809" stroke-width="3"/>
+  <text x="136" y="1034" text-anchor="middle" class="num">5</text>
+  <text x="188" y="1016" class="q">Who operates it after</text>
+  <text x="188" y="1048" class="q">launch?</text>
+  <text x="188" y="1090" class="sub">A named owner and real capacity</text>
+
+  <g filter="url(#card-shadow)">
+    <rect x="716" y="960" width="600" height="170" rx="24" fill="#efffe8" stroke="#8efd23" stroke-width="3"/>
+    <rect x="716" y="958" width="600" height="18" rx="9" fill="#8efd23"/>
+  </g>
+  <circle cx="768" cy="1024" r="28" fill="#8efd23" stroke="#080809" stroke-width="3"/>
+  <text x="768" y="1034" text-anchor="middle" class="num">6</text>
+  <text x="820" y="1016" class="q">What will each option cost</text>
+  <text x="820" y="1048" class="q">over three years?</text>
+  <text x="820" y="1090" class="sub">More than one scenario, assumptions visible</text>
+
+  <path d="M700 1164 V1192" class="connector"/>
+
+  <!-- ===== RISK AND EVIDENCE ===== -->
+  <rect x="50" y="1206" width="1300" height="294" rx="28" class="band"/>
+  <rect x="84" y="1238" width="268" height="44" rx="22" fill="#1a0044"/>
+  <text x="218" y="1267" text-anchor="middle" class="chip">RISK AND EVIDENCE</text>
+
+  <g filter="url(#card-shadow)">
+    <rect x="84" y="1296" width="600" height="170" rx="24" fill="#eafff4" stroke="#00ed70" stroke-width="3"/>
+    <rect x="84" y="1294" width="600" height="18" rx="9" fill="#00ed70"/>
+  </g>
+  <circle cx="136" cy="1360" r="28" fill="#00ed70" stroke="#080809" stroke-width="3"/>
+  <text x="136" y="1370" text-anchor="middle" class="num">7</text>
+  <text x="188" y="1352" class="q">How difficult is it to</text>
+  <text x="188" y="1384" class="q">change direction?</text>
+  <text x="188" y="1426" class="sub">Data export and the effort to leave</text>
+
+  <g filter="url(#card-shadow)">
+    <rect x="716" y="1296" width="600" height="170" rx="24" fill="#eafff4" stroke="#00ed70" stroke-width="3"/>
+    <rect x="716" y="1294" width="600" height="18" rx="9" fill="#00ed70"/>
+  </g>
+  <circle cx="768" cy="1360" r="28" fill="#00ed70" stroke="#080809" stroke-width="3"/>
+  <text x="768" y="1370" text-anchor="middle" class="num">8</text>
+  <text x="820" y="1352" class="q">Which evidence would</text>
+  <text x="820" y="1384" class="q">change the recommendation?</text>
+  <text x="820" y="1426" class="sub">Each unknown gets an owner and a date</text>
+
+  <path d="M700 1500 V1528" class="connector"/>
+
+  <!-- Recommendation -->
+  <rect x="50" y="1542" width="1300" height="150" rx="24" fill="#1a0044"/>
+  <rect x="50" y="1542" width="14" height="150" rx="7" fill="url(#brand-gradient-v)"/>
+  <text x="94" y="1584" class="display" font-size="21" font-weight="700" style="fill:#ffffff">WRITE THE RECOMMENDATION IN WORDS</text>
+  <text x="94" y="1616" class="copy" font-size="21" style="fill:#ffffff">A total score does not decide it. Two options can reach the same number for different reasons.</text>
+  <rect x="94" y="1636" width="1212" height="2" fill="#3a2a63"/>
+  <text x="94" y="1670" class="copy" font-size="20" style="fill:#c9bde6">Recommendation  ·  Why  ·  Conditions  ·  First scope  ·  Ownership  ·  Review signal</text>
+
+  <text x="1350" y="1716" text-anchor="end" class="label">LittleParrot.app</text>
+</svg>
