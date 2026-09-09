@@ -19,7 +19,9 @@ TikTok video posts have no separate title field, so the caption's first line is 
 
 **Caption:**
 
-Engineering says it's done. Your users still don't have it. It's built, it's tested, and it's waiting behind another team's monthly release. How often do you release new improvements for your users? Waitlist for women in product in the comments.
+Engineering says it's done. Your users still don't have it. It's built, it's tested, and it's waiting behind another team's monthly release. How often do you release new improvements for your users?
+
+We're building a learning path so women in product can find out where their feature actually is, without waiting for someone else to tell them. Sign up in the link in the comment.
 
 #womeninproduct #womenintech #womenproductmanagers
 
