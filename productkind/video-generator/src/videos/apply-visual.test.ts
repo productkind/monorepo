@@ -38,6 +38,7 @@ describe('readVisuals', () => {
         index: 0,
         kind: 'gif',
         src: 'section-00-nodding.gif',
+        place: 'above-captions',
         provenance: {
           provider: 'giphy',
           search: 'nodding yes cat',
@@ -48,6 +49,7 @@ describe('readVisuals', () => {
         index: 1,
         kind: 'gif',
         src: 'section-01-meeting.gif',
+        place: 'above-captions',
         color: '#ffffff',
         playbackRate: 0.61,
         provenance: {
@@ -108,6 +110,7 @@ describe('withVisualApplied', () => {
       visual: {
         kind: 'gif',
         src: 'section-00-cat-nod.gif',
+        place: 'above-captions',
         source: { provider: 'giphy', id: 'abc123', search: 'cat nodding' },
       },
     })
@@ -147,6 +150,7 @@ describe('withVisualApplied', () => {
       visual: {
         kind: 'gif',
         src: 'section-00-cat-nod.gif',
+        place: 'above-captions',
         color: '#edec00',
         playbackRate: 0.72,
         source: { provider: 'giphy', id: 'abc123', search: 'cat nodding' },
@@ -187,6 +191,7 @@ describe('withVisualApplied', () => {
       visual: {
         kind: 'gif',
         src: 'section-00-cat-nod.gif',
+        place: 'above-captions',
         source: { provider: 'giphy', id: 'abc123', search: 'cat nodding' },
       },
     })
@@ -455,5 +460,142 @@ describe('stock footage', () => {
 
     expect(applied).toContain('// An empty room with rows of chairs.')
     expect(applied).not.toContain('// pexels "empty meeting room chairs"')
+  })
+})
+
+describe('changing what kind of media a section holds', () => {
+  const mixed = `export default defineVideo({
+  sections: [
+    {
+      text: 'You’ve nodded along in a stand-up,',
+      visual: gif({ src: 'section-00-nodding.gif', place: 'above-captions' }),
+    },
+    {
+      // An empty room with rows of chairs, and nobody in it to ask the follow-up question.
+      text: 'So you don’t ask.',
+      visual: clip({
+        src: 'clip-01-meeting-room.mp4',
+        source: { provider: 'pexels', id: '37892573', search: 'empty meeting room' },
+      }),
+    },
+  ],
+})
+`
+
+  test('reads where each visual is placed, which is not the same for the two kinds', () => {
+    // Every gif in the repo sits above the captions; a stock clip omits `place` and fills the
+    // frame. A pick that changed the kind without carrying this would move the picture.
+    expect(readVisuals({ source: mixed }).map((visual) => visual.place)).toEqual([
+      'above-captions',
+      undefined,
+    ])
+  })
+
+  test('a clip replacing a gif stays above the captions, where the gif was', () => {
+    const applied = withVisualApplied({
+      source: mixed,
+      section: 0,
+      visual: {
+        kind: 'clip',
+        src: 'clip-00-meeting-room.mp4',
+        place: 'above-captions',
+        source: { provider: 'pexels', id: '37892573', search: 'empty meeting room' },
+      },
+    })
+
+    expect(applied).toContain(`      visual: clip({
+        src: 'clip-00-meeting-room.mp4',
+        source: { provider: 'pexels', id: '37892573', search: 'empty meeting room' },
+        place: 'above-captions',
+      }),`)
+  })
+
+  test('a gif replacing a full-frame clip fills the frame, as the clip did', () => {
+    // `place` defaults to the whole frame, so leaving it out is how a section says so — and
+    // writing `above-captions` here would shrink the picture and letterbox it.
+    const applied = withVisualApplied({
+      source: mixed,
+      section: 1,
+      visual: {
+        kind: 'gif',
+        src: 'section-01-quiet.gif',
+        source: { provider: 'giphy', id: 'abc', search: 'zip lips quiet' },
+      },
+    })
+
+    expect(applied).toContain(`      visual: gif({
+        src: 'section-01-quiet.gif',
+        source: { provider: 'giphy', id: 'abc', search: 'zip lips quiet' },
+      }),`)
+    // The section that was not picked for keeps its own placement.
+    expect(applied).toContain("visual: gif({ src: 'section-00-nodding.gif', place: 'above-captions' })")
+  })
+})
+
+describe('the factory a new kind needs', () => {
+  const gifOnly = `import { defineVideo, gif, riveAtFrame } from '../narration/definition'
+
+export default defineVideo({
+  sections: [
+    {
+      text: 'Three weeks later,',
+      visual: gif({ src: 'section-05-clocks.gif', place: 'above-captions' }),
+    },
+  ],
+})
+`
+
+  test('brings the factory in when a section changes kind', () => {
+    // Without this the definition calls `clip(...)` that the file never imported, and the video
+    // fails to render with "clip is not defined" — which is how this was found.
+    const applied = withVisualApplied({
+      source: gifOnly,
+      section: 0,
+      visual: {
+        kind: 'clip',
+        src: 'clip-05-time-passing.mp4',
+        place: 'above-captions',
+        source: { provider: 'pexels', id: '11267667', search: 'clock time passing' },
+      },
+    })
+
+    expect(applied).toContain(
+      "import { clip, defineVideo, gif, riveAtFrame } from '../narration/definition'",
+    )
+  })
+
+  test('leaves an import alone when the factory is already there', () => {
+    const applied = withVisualApplied({
+      source: gifOnly,
+      section: 0,
+      visual: {
+        kind: 'gif',
+        src: 'section-05-tumbling.gif',
+        place: 'above-captions',
+        source: { provider: 'giphy', id: 'abc', search: 'clocks tumbling' },
+      },
+    })
+
+    expect(applied).toContain(
+      "import { defineVideo, gif, riveAtFrame } from '../narration/definition'",
+    )
+    expect(applied).not.toContain('clip,')
+  })
+
+  test('keeps the double-quoted style of a file that uses it', () => {
+    const applied = withVisualApplied({
+      source: gifOnly.replace(/'/g, '"'),
+      section: 0,
+      visual: {
+        kind: 'clip',
+        src: 'clip-05-time-passing.mp4',
+        place: 'above-captions',
+        source: { provider: 'pexels', id: '11267667', search: 'clock time passing' },
+      },
+    })
+
+    expect(applied).toContain(
+      'import { clip, defineVideo, gif, riveAtFrame } from "../narration/definition"',
+    )
   })
 })

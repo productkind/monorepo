@@ -15,10 +15,18 @@ import { isProvider } from '../narration/definition'
 
 const LIMIT = 100
 
+/**
+ * Where a visual sits. Carried across a kind change, because the two kinds are placed differently
+ * in practice: every gif in the repo sits above the captions, and stock clips fill the frame.
+ * Writing the wrong one moves the picture.
+ */
+export type Place = 'frame' | 'above-captions'
+
 export type AppliedVisual =
   | {
       kind: 'gif'
       src: string
+      place?: Place
       color?: string
       playbackRate?: number
       source?: VisualSource
@@ -26,6 +34,7 @@ export type AppliedVisual =
   | {
       kind: 'clip'
       src: string
+      place?: Place
       /** The frame the clip starts on, when it was trimmed in the definition rather than on disk. */
       trimBefore?: number
       source?: VisualSource
@@ -41,6 +50,8 @@ export type ReadVisual = {
   index: number
   kind: VisualKind
   src: string
+  /** Absent means the whole frame, which is what `place` defaults to. */
+  place?: string
   color?: string
   playbackRate?: number
   trimBefore?: number
@@ -66,6 +77,7 @@ const SRC = /src: (["'])([^"']+)\1/
 const COLOUR = /color: (["'])([^"']+)\1/
 const RATE = /playbackRate: ([\d.]+)/
 const TRIM = /trimBefore: (\d+)/
+const PLACE = /place: (["'])([a-z-]+)\1/
 const KIND = /visual: (gif|clip|still)\(/
 
 /** Which quote a definition writes its strings with; four are double-quoted, the rest single. */
@@ -92,6 +104,12 @@ const sourceField = ({ source, quote }: { source: VisualSource; quote: string })
  * Keyed by kind rather than switched on: a clip has an in-point where a gif has a rate and a
  * letterbox, and writing one as the other would turn a six-second clip into a still frame.
  */
+/** Nothing is written for the whole frame, because that is what `place` already defaults to. */
+const placeField = ({ place, quote }: { place: Place | undefined; quote: string }): string[] =>
+  place === undefined || place === 'frame'
+    ? []
+    : [`place: ${quoted({ value: place, quote })}`]
+
 const FIELDS: {
   [KIND in AppliedVisual['kind']]: (options: {
     visual: Extract<AppliedVisual, { kind: KIND }>
@@ -105,15 +123,16 @@ const FIELDS: {
     ...(visual.playbackRate === undefined || visual.playbackRate === 1
       ? []
       : [`playbackRate: ${String(visual.playbackRate)}`]),
-    `place: ${quoted({ value: 'above-captions', quote })}`,
+    ...placeField({ place: visual.place, quote }),
   ],
-  // A stock clip fills the frame, so it takes no `place`; it is trimmed on disk to its beat.
+  // A clip is trimmed on disk to its beat rather than played at a rate.
   clip: ({ visual, quote }) => [
     `src: ${quoted({ value: visual.src, quote })}`,
     ...(visual.source === undefined ? [] : [sourceField({ source: visual.source, quote })]),
     ...(visual.trimBefore === undefined || visual.trimBefore === 0
       ? []
       : [`trimBefore: ${String(visual.trimBefore)}`]),
+    ...placeField({ place: visual.place, quote }),
   ],
 }
 
@@ -185,6 +204,7 @@ export const readVisuals = ({ source }: { source: string }): ReadVisual[] =>
       const colour = COLOUR.exec(block)
       const rate = RATE.exec(block)
       const trim = TRIM.exec(block)
+      const place = PLACE.exec(block)
       const recorded = PROVENANCE.exec(block)
       const noted = recorded === null ? PROVENANCE_WITHOUT_URL.exec(block) : null
       const provenance =
@@ -206,6 +226,7 @@ export const readVisuals = ({ source }: { source: string }): ReadVisual[] =>
         {
           kind: kindOf({ name: kind[1] ?? 'gif' }),
           src: src[2] ?? '',
+          ...(place === null ? {} : { place: place[2] ?? '' }),
           ...(colour === null ? {} : { color: colour[2] ?? '' }),
           ...(rate === null ? {} : { playbackRate: Number(rate[1]) }),
           ...(trim === null ? {} : { trimBefore: Number(trim[1]) }),
@@ -214,6 +235,38 @@ export const readVisuals = ({ source }: { source: string }): ReadVisual[] =>
       ]
     })
     .map((visual, index) => ({ index, ...visual }))
+
+const IMPORT = /^import \{ ([^}]+) \} from (["'])\.\.\/narration\/definition\2/m
+
+/**
+ * The definition's import, with the factory this visual needs in it.
+ *
+ * A section that changes kind calls a factory the file may never have imported, and the video
+ * then fails to render with `clip is not defined` — which is how this was found. Names stay in
+ * the alphabetical order every definition already keeps them in.
+ */
+const withFactoryImported = ({
+  source,
+  kind,
+}: {
+  source: string
+  kind: AppliedVisual['kind']
+}): string => {
+  const line = IMPORT.exec(source)
+  if (line === null) {
+    return source
+  }
+  const names = (line[1] ?? '').split(',').map((name) => name.trim())
+  if (names.includes(kind)) {
+    return source
+  }
+  const quote = line[2] ?? "'"
+  const sorted = [...names, kind].sort((left, right) => left.localeCompare(right))
+  return source.replace(
+    line[0],
+    `import { ${sorted.join(', ')} } from ${quote}../narration/definition${quote}`,
+  )
+}
 
 export const withVisualApplied = ({
   source,
@@ -244,12 +297,13 @@ export const withVisualApplied = ({
     callFor({ visual, indent, quote: quoteOf({ source }) }),
   )
 
-  return (
+  const written =
     source.slice(0, block.start) +
     // The record the data replaces. A note is left exactly where it was.
     replaced.replace(PROVENANCE, '') +
     source.slice(block.end)
-  )
+
+  return withFactoryImported({ source: written, kind: visual.kind })
 }
 
 const GIPHY_ID = /giphy\.com\/gifs\/([A-Za-z0-9]+)/

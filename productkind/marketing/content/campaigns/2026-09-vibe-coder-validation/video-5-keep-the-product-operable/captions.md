@@ -17,7 +17,13 @@ campaign: vibe-coded-app-26
 
 **Caption:**
 
-How do you maintain an AI-built app after launch? Set an alert, test a backup and keep a recovery checklist. Built an app with AI? Join our waitlist for women learning how to run it themselves. How would you know it was down?
+How do you maintain an AI-built app after launch?
+
+Set up an availability alert. Keep a known working version. Test that you can restore it. Write a recovery checklist while everything is working, so you can follow it when something goes wrong.
+
+Built an app with AI? Join our waitlist for women learning how to run it themselves, link in the comments.
+
+How would you know your app was down?
 
 #womenwhobuild #womenintech #womenfounders #appmaintenance
 

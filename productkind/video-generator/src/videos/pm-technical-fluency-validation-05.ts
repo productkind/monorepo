@@ -196,13 +196,8 @@ export default defineVideo({
     {
       text: 'we’re building a learning path for it.',
       visual: gif({
-        src: 'section-12-building-tower.gif',
-        source: {
-          provider: 'klipy',
-          id: '7106061894122461',
-          search: 'cute character building construction animation',
-        },
-        playbackRate: 0.82,
+        src: 'section-12-learning.gif',
+        source: { provider: 'giphy', id: 'WoWm8YzFQJg5i', search: 'learning' },
         place: 'above-captions',
       }),
       endsParagraph: true,

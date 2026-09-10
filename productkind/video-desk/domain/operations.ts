@@ -225,6 +225,7 @@ const RATE = /playbackRate: ([\d.]+)/
  * rather than prose.
  */
 const KIND = /visual: (gif|clip|still)\(/
+const PLACE = /place: (["'])([a-z-]+)\1/
 const SOURCE = /source: \{([^}]*)\}/
 const FIELD = (name: string) => new RegExp(`${name}: (["'])(.*?)\\1`)
 
@@ -240,6 +241,14 @@ export type ParsedSource = {
 /** Which visual a section holds. A gif loops in a slot; a clip plays once and must outlast it. */
 export const VISUAL_KINDS = ['gif', 'clip', 'still'] as const
 
+/** Where it sits. Absent in a definition means the whole frame, which is what `place` defaults to. */
+export const PLACES = ['frame', 'above-captions'] as const
+
+export type Place = (typeof PLACES)[number]
+
+const placeFrom = ({ name }: { name: string | undefined }): Place =>
+  PLACES.find((place) => place === name) ?? 'frame'
+
 export type VisualKind = (typeof VISUAL_KINDS)[number]
 
 const kindFrom = ({ name }: { name: string }): VisualKind =>
@@ -249,6 +258,8 @@ export type ParsedSection = {
   index: number
   text: string
   kind: VisualKind
+  /** Where the visual sits, so a pick that changes the kind can keep it there. */
+  place: Place
   src: string
   color: string | null
   playbackRate: number | null
@@ -299,6 +310,7 @@ export const parseSections = ({ source }: { source: string }): ParsedSection[] =
       if (src === null || text === null || kind === null) {
         return []
       }
+      const place = PLACE.exec(block)
       const colour = COLOUR.exec(block)
       const rate = RATE.exec(block)
       const source = sourceIn({ block })
@@ -306,6 +318,7 @@ export const parseSections = ({ source }: { source: string }): ParsedSection[] =
         {
           text,
           kind: kindFrom({ name: kind[1] ?? 'gif' }),
+          place: placeFrom({ name: place?.[2] }),
           src: src[2] ?? '',
           color: colour?.[2] ?? null,
           playbackRate: rate?.[1] === undefined ? null : Number(rate[1]),
@@ -702,3 +715,28 @@ export const unreadSections = ({
   source: string
   read: ParsedSection[]
 }): number => Math.max(0, (source.match(/^\s*visual: /gm) ?? []).length - read.length)
+
+/** Where each kind sits by house convention: a gif above the captions, footage across the frame. */
+const HOUSE_PLACE: Record<VisualKind, Place> = {
+  gif: 'above-captions',
+  clip: 'frame',
+  still: 'above-captions',
+}
+
+/**
+ * Where a pick should sit.
+ *
+ * Re-sourcing the same kind leaves a section exactly where it was, including any placement someone
+ * chose deliberately. Changing the kind takes that kind's own treatment instead: a gif inheriting
+ * a clip's full frame renders letterboxed with the captions across it, which is not how any gif in
+ * the repo is placed.
+ */
+export const placeFor = ({
+  was,
+  now,
+  place,
+}: {
+  was: VisualKind
+  now: VisualKind
+  place: Place
+}): Place => (was === now ? place : HOUSE_PLACE[now])

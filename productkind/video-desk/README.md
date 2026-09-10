@@ -49,6 +49,11 @@ implementation of the hardest part of the format.
 
 ## Gifs and stock footage
 
+**Every source is available on every section.** A beat that holds a gif can take stock footage and
+the other way round; a pick changes the section's kind, brings the factory the definition now needs
+into its import, and writes the fields that kind actually has. What the desk shows follows what was
+searched, not what is there now.
+
 A section holds either a gif or a stock clip, and the desk treats them as the different things
 they are. Which one it is comes from the definition, not from the file extension.
 
@@ -70,6 +75,13 @@ frame and read as visibly soft. The desk probes the downloaded stream and refuse
 than installing it.
 
 Flagging works the same for both, because a flag is about a file and a beat.
+
+**Where a converted section sits.** Re-sourcing the same kind leaves a section exactly where it
+was, including a placement someone chose deliberately. Changing the kind takes the new kind's own
+treatment: every gif in the repo sits above the captions and every clip fills the frame, and a gif
+that inherited a clip's full frame renders letterboxed with the captions across it. Note that
+`place` is moot for stock footage either way — it arrives at 1080x1920, the frame's own shape, and
+`placeMedia` fills the frame with anything frame-shaped rather than shrinking it into a band.
 
 ## Where a visual came from
 

@@ -83,12 +83,14 @@ const migrate = ({
           ? {
               kind: 'clip',
               src: visual.src,
+              ...(visual.place === 'above-captions' ? { place: 'above-captions' as const } : {}),
               ...(visual.trimBefore === undefined ? {} : { trimBefore: visual.trimBefore }),
               source: found,
             }
           : {
               kind: 'gif',
               src: visual.src,
+              ...(visual.place === 'above-captions' ? { place: 'above-captions' as const } : {}),
               ...(visual.color === undefined ? {} : { color: visual.color }),
               ...(visual.playbackRate === undefined ? {} : { playbackRate: visual.playbackRate }),
               source: found,

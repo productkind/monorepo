@@ -28,9 +28,10 @@ export const SectionPanel: React.FC<{
 }> = ({ video, section, onChanged }) => {
   const [measured, setMeasured] = useState<Section>(section)
   const [terms, setTerms] = useState(section.search ?? '')
-  // A clip section searches the stock catalogues; a gif section searches the gif ones.
-  const stock = section.kind === 'clip'
-  const [provider, setProvider] = useState(stock ? 'pexels' : 'auto')
+  // Every source is available on every section: a stock clip can serve a beat that holds a gif and
+  // the other way round, so what was searched decides what comes back, not what is there now.
+  const [provider, setProvider] = useState(section.kind === 'clip' ? 'pexels' : 'auto')
+  const stock = provider === 'pexels' || provider === 'pixabay'
   const [candidates, setCandidates] = useState<Candidate[]>([])
   const [clips, setClips] = useState<ClipCandidate[]>([])
   const [searching, setSearching] = useState(false)
@@ -66,6 +67,8 @@ export const SectionPanel: React.FC<{
     setSearching(true)
     setProblem(null)
     const searched = splitTerms({ text: terms })
+    setCandidates([])
+    setClips([])
     if (stock) {
       searchStock({ video, section: section.index, terms: searched, provider, show: 12 })
         .then((result) => {
@@ -268,18 +271,15 @@ export const SectionPanel: React.FC<{
               setProvider(event.target.value)
             }}
           >
-            {stock ? (
-              <>
-                <option value="pexels">pexels</option>
-                <option value="pixabay">pixabay</option>
-              </>
-            ) : (
-              <>
-                <option value="auto">giphy, then klipy</option>
-                <option value="giphy">giphy only</option>
-                <option value="klipy">klipy only</option>
-              </>
-            )}
+            <optgroup label="gifs">
+              <option value="auto">giphy, then klipy</option>
+              <option value="giphy">giphy only</option>
+              <option value="klipy">klipy only</option>
+            </optgroup>
+            <optgroup label="stock footage">
+              <option value="pexels">pexels</option>
+              <option value="pixabay">pixabay</option>
+            </optgroup>
           </select>
           <button type="button" className="action" disabled={searching} onClick={search}>
             {searching ? 'searching…' : 'search'}
@@ -288,7 +288,20 @@ export const SectionPanel: React.FC<{
 
         {problem === null ? null : <p className="problem">{problem}</p>}
 
-        {stock ? (
+        {(stock && measured.kind === 'gif') || (!stock && measured.kind === 'clip') ? (
+          <p className="problem" style={{ borderLeftColor: 'var(--warn)' }}>
+            {stock
+              ? `This beat holds a gif. Using footage turns it into a clip, trimmed to the ${
+                  measured.slotSeconds === null ? 'beat' : `${measured.slotSeconds.toFixed(1)}s beat`
+                } plus a second, and filling the frame with the captions over it — footage is the
+                  frame's own shape, so it is never letterboxed.`
+              : 'This beat holds a clip. Using a gif turns it into one: it loops inside the beat ' +
+                'rather than playing once, and sits above the captions the way every other gif ' +
+                'does.'}
+          </p>
+        ) : null}
+
+        {clips.length > 0 || (stock && candidates.length === 0) ? (
           <ClipGrid clips={clips} busy={busy} onPick={takeClip} />
         ) : (
           <CandidateGrid candidates={candidates} busy={busy} onPick={pick} />

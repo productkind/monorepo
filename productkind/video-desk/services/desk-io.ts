@@ -336,6 +336,7 @@ export const createDeskIo = ({
         '--section', String(section),
         '--kind', visual.kind,
         '--src', visual.src,
+        '--place', visual.place,
         '--provider', visual.source.provider,
         '--search', visual.source.search,
         ...(visual.source.id === undefined ? [] : ['--id', visual.source.id]),
