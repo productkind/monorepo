@@ -9,8 +9,8 @@ type: article
 status: experiment
 voice: personal (Kinga, first person)
 note: |
-  Comparison draft only, one of three. `what-is-the-mental-load.md` is the
-  brand-voice original; `-productkind-tone.md` is the educational mentor voice.
+  Comparison draft only, one of three. `../article.md` is the brand-voice
+  original; `productkind-tone.md` is the educational mentor voice.
   All three have now been through the tone-of-voice-critic. Do not publish more
   than one at this slug.
 ref: seo-what-is-mental-load

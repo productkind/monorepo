@@ -8,6 +8,8 @@ secondary_queries:
 type: article
 status: drafted
 ref: seo-what-is-mental-load
+source_course: ai-your-life-admin
+published_file: ../little-parrot-awakens/src/content/guides/articles/what-is-the-mental-load.ts
 ---
 
 # What Is the Mental Load?

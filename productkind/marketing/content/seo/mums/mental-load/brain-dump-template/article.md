@@ -9,6 +9,8 @@ semrush: 'The ADHD variants together outweigh the head term: adhd brain dump tem
 type: article
 status: drafted
 ref: seo-brain-dump-template
+source_course: ai-your-life-admin
+published_file: ../little-parrot-awakens/src/content/guides/articles/brain-dump-template.ts
 ---
 
 # A Brain Dump Template, and a Way to Skip the Sorting

@@ -6,13 +6,13 @@ account: little-parrot
 
 # SEO cluster: the mental load
 
-Four pages built from `../niche-research.md` (round 3). Drafted 15 August 2026, not yet implemented in the app.
+Six pages built from the [AI for Your Life Admin niche research](../../../courses/ai-your-life-admin/niche-research.md) (round 3). Drafted 15 August 2026.
 
-## Why these four
+## Why these six
 
 Google Trends put `mental load` well ahead of everything else tested: mean 16.4 in GB over five years and rising 4.6x, then rising another 2.2x inside the last twelve months alone. The rising related query in GB over those twelve months is **`mental load list`**, with `mental load checklist` beside it in the top list. That is the seam, and the course already produces exactly that output.
 
-One hub, three spokes, all linking to the hub:
+One hub, five spokes, all linking to the hub:
 
 | Page | Slug | Primary query | Secondary |
 | --- | --- | --- | --- |
@@ -99,10 +99,23 @@ The `brain-dump-template` page was retitled from "A Brain Dump Template That Sor
 
 ## Implementation notes
 
-See `../niche-research.md` round 3 and the architecture recommendation. The short version:
+See the [niche research](../../../courses/ai-your-life-admin/niche-research.md) round 3 and the architecture recommendation. The short version:
 
 - Render with `<Markdown variant="document">`, **not** `MdxRenderer`. `MdxRenderer` compiles inside a `useEffect`, so a prerendered article using it would serve crawlers an empty skeleton.
 - **Add `rehype-slug`** to the `Markdown` component's plugin list. It is not installed yet, and the app currently passes `remarkGfm` only, so headings get no `id` and the early forward-reference links in all four pages would do nothing. It is a one-line change (`rehypePlugins={[rehypeSlug]}`) and also earns the jump links Google sometimes shows under a result.
 - Add each slug to `staticRoutes` and to `writeSitemap` in `scripts/prerender.mjs`.
 - Use the existing `<SEO>` component with `type="article"` and a JSON-LD `Article` schema.
 - One `?ref=` per page on every course link, so PostHog can separate them.
+
+## Article drafts
+
+- [Mental load list](./mental-load-list/article.md)
+- [What is the mental load?](./what-is-the-mental-load/article.md)
+- [How to explain the mental load to your partner](./explain-mental-load-to-your-partner/article.md)
+- [Brain dump template](./brain-dump-template/article.md)
+- [The mental load on women](./mental-load-women/article.md)
+- [Invisible labour](./invisible-labor/article.md)
+
+The two alternate voice drafts for `what-is-the-mental-load` remain in its
+[`experiments`](./what-is-the-mental-load/experiments/) directory. Only one
+version should be published at that slug.

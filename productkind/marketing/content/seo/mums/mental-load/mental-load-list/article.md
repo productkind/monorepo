@@ -7,6 +7,8 @@ secondary_queries: [mental load checklist, mental load of motherhood, mental loa
 type: article
 status: drafted
 ref: seo-mental-load-list
+source_course: ai-your-life-admin
+published_file: ../little-parrot-awakens/src/content/guides/articles/mental-load-list.ts
 ---
 
 # The Mental Load List

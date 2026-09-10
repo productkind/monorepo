@@ -133,7 +133,7 @@ Every completion of `how i organise my life` and `organise my life` is Notion. B
 
 ## What to publish
 
-Four pages drafted in `seo-pages/`, one hub and three spokes, all linking to the hub:
+Six pages are maintained in the [mental-load SEO cluster](../../seo/mums/mental-load/), one hub and five spokes, all linking to the hub:
 
 | Page                                  | Primary query                                 | Status  |
 | ------------------------------------- | --------------------------------------------- | ------- |
@@ -141,8 +141,10 @@ Four pages drafted in `seo-pages/`, one hub and three spokes, all linking to the
 | `what-is-the-mental-load`             | what is mental load                           | Drafted |
 | `explain-mental-load-to-your-partner` | how to explain mental load to husband         | Drafted |
 | `brain-dump-template`                 | brain dump template, adhd brain dump template | Drafted |
+| `mental-load-women`                   | mental load women                             | Drafted |
+| `invisible-labor`                     | invisible labor                               | Drafted |
 
-Implementation notes and voice rules are in `seo-pages/README.md`. Not yet built in the app.
+Implementation notes and voice rules are in the [cluster document](../../seo/mums/mental-load/cluster.md).
 
 Next candidates once these are live, in rough priority order: `mental load checklist` (own the variant), `brain dump mom` (the paper-supply gap above), `mental load cards` (the rising Fair Play query, our list as the free alternative), `how to get organised with adhd`, `adhd mom organization`, `notion alternative for mums`.
 

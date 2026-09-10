@@ -8,6 +8,8 @@ secondary_queries:
 type: article
 status: drafted
 ref: seo-explain-mental-load
+source_course: ai-your-life-admin
+published_file: ../little-parrot-awakens/src/content/guides/articles/explain-mental-load-to-your-partner.ts
 ---
 
 # How to Explain the Mental Load to Your Partner

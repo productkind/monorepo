@@ -14,6 +14,8 @@ semrush: 'mental load women 880/mo, KD 27, low competition. No page owns this qu
 type: article
 status: drafted
 ref: seo-mental-load-women
+source_course: ai-your-life-admin
+published_file: ../little-parrot-awakens/src/content/guides/articles/mental-load-women.ts
 ---
 
 # The Mental Load on Women
