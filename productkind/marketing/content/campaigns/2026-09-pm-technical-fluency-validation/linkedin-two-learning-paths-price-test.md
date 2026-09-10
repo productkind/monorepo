@@ -2,7 +2,7 @@
 
 We were about to add prices to the landing pages for two proposed Little Parrot learning paths when we realised we would be testing interest and price at the same time.
 
-If we didn't get enough subscribers, we wouldn't know whether the price was too high or the outcomes weren't appealing.
+If we didn't get enough waitlist signups, we wouldn't know whether the price was too high or the outcomes weren't appealing.
 
 So we separated the questions. The landing pages show the proposed curriculum and ask people to join a waitlist. After signing up, they see the proposed price and can tell us whether it works for them.
 
