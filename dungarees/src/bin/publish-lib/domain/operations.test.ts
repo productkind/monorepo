@@ -554,76 +554,88 @@ const published = (versions: string[]) => () =>
 
 const neverPublished = () => of({ stdout: '', stderror: 'E404', exitCode: 1 })
 
-const publishSucceeds = () => of({ stdout: '', stderror: undefined, exitCode: 0 })
+const recordingBuildAndPublish = () => {
+  const calls: Array<{ version: string; created: boolean }> = []
+  return {
+    calls,
+    buildAndPublish: (args: { version: string; created: boolean }) => {
+      calls.push(args)
+      return of(eventCreators.publishSucceeded({ packageDir: 'lib-1', ...args }))
+    },
+  }
+}
 
-test('publishUnlessPublished skips a version the registry already has', async () => {
-  let didPublish = false
+test('publishUnlessPublished does not build a version the registry already has', async () => {
+  const { calls, buildAndPublish } = recordingBuildAndPublish()
+
   const events = await collectValuesFrom(
     publishUnlessPublished({
       packageJsonContent$: of(PACKAGE_JSON),
       packageDir: 'lib-1',
       version: '1.0.0',
       viewVersions: published(['0.9.0', '1.0.0']),
-      publishFactory: () => {
-        didPublish = true
-        return publishSucceeds()
-      },
+      buildAndPublish,
     }),
   )
 
   expect(events).toEqual([eventCreators.publishSkipped({ packageDir: 'lib-1', version: '1.0.0' })])
-  expect(didPublish).toBe(false)
+  expect(calls).toEqual([])
 })
 
-test('publishUnlessPublished reports a new version of a known package as published', async () => {
-  const events = await collectValuesFrom(
+test('publishUnlessPublished builds a new version of a known package', async () => {
+  const { calls, buildAndPublish } = recordingBuildAndPublish()
+
+  await collectValuesFrom(
     publishUnlessPublished({
       packageJsonContent$: of(PACKAGE_JSON),
       packageDir: 'lib-1',
       version: '1.0.0',
       viewVersions: published(['0.9.0']),
-      publishFactory: publishSucceeds,
+      buildAndPublish,
     }),
   )
 
-  expect(events).toEqual([
-    eventCreators.publishSucceeded({ packageDir: 'lib-1', version: '1.0.0', created: false }),
-  ])
+  expect(calls).toEqual([{ version: '1.0.0', created: false }])
 })
 
-test('publishUnlessPublished reports a package the registry does not know as created', async () => {
-  const events = await collectValuesFrom(
+test('publishUnlessPublished marks a package the registry does not know as created', async () => {
+  const { calls, buildAndPublish } = recordingBuildAndPublish()
+
+  await collectValuesFrom(
     publishUnlessPublished({
       packageJsonContent$: of(PACKAGE_JSON),
       packageDir: 'lib-1',
       version: '1.0.0',
       viewVersions: neverPublished,
-      publishFactory: publishSucceeds,
+      buildAndPublish,
     }),
   )
 
-  expect(events).toEqual([
-    eventCreators.publishSucceeded({ packageDir: 'lib-1', version: '1.0.0', created: true }),
-  ])
+  expect(calls).toEqual([{ version: '1.0.0', created: true }])
 })
 
 test('publishUnlessPublished copes with npm collapsing a lone version to a string', async () => {
+  const { calls, buildAndPublish } = recordingBuildAndPublish()
+
   const events = await collectValuesFrom(
     publishUnlessPublished({
       packageJsonContent$: of(PACKAGE_JSON),
       packageDir: 'lib-1',
       version: '1.0.0',
       viewVersions: () => of({ stdout: '"1.0.0"', stderror: '', exitCode: 0 }),
-      publishFactory: publishSucceeds,
+      buildAndPublish,
     }),
   )
 
   expect(events).toEqual([eventCreators.publishSkipped({ packageDir: 'lib-1', version: '1.0.0' })])
+  expect(calls).toEqual([])
 })
 
 test("publishUnlessPublished falls back to the package's own version when none is given", async () => {
+  const { calls, buildAndPublish } = recordingBuildAndPublish()
   const viewedNames: string[] = []
-  const events = await collectValuesFrom(
+
+  await collectValuesFrom(
     publishUnlessPublished({
       packageJsonContent$: of(PACKAGE_JSON),
       packageDir: 'lib-1',
@@ -632,12 +644,27 @@ test("publishUnlessPublished falls back to the package's own version when none i
         viewedNames.push(name)
         return neverPublished()
       },
-      publishFactory: publishSucceeds,
+      buildAndPublish,
     }),
   )
 
   expect(viewedNames).toEqual(['@org/lib-1'])
-  expect(events).toEqual([
-    eventCreators.publishSucceeded({ packageDir: 'lib-1', version: '0.9.0', created: true }),
-  ])
+  expect(calls).toEqual([{ version: '0.9.0', created: true }])
+})
+
+test('publishUnlessPublished fails before building when no version can be resolved', async () => {
+  const { calls, buildAndPublish } = recordingBuildAndPublish()
+
+  await expect(
+    collectValuesFrom(
+      publishUnlessPublished({
+        packageJsonContent$: of(JSON.stringify({ name: '@org/lib-1' })),
+        packageDir: 'lib-1',
+        version: undefined,
+        viewVersions: neverPublished,
+        buildAndPublish,
+      }),
+    ),
+  ).rejects.toThrow('Version is required in package.json or as an argument')
+  expect(calls).toEqual([])
 })

@@ -23,6 +23,7 @@ import {
   of,
   type OperatorFunction,
   pipe,
+  throwError,
   toArray,
 } from 'rxjs'
 import { map, mergeMap } from 'rxjs/operators'
@@ -271,12 +272,17 @@ const readPublishedVersions = ({
   return typeof versions === 'string' ? [versions] : versions
 }
 
+export type BuildAndPublish = (args: {
+  version: string
+  created: boolean
+}) => Observable<PublishLibEvent>
+
 export const publishUnlessPublished = ({
   packageJsonContent$,
   packageDir,
   version,
   viewVersions,
-  publishFactory,
+  buildAndPublish,
 }: {
   packageJsonContent$: Observable<string>
   packageDir: string
@@ -285,7 +291,7 @@ export const publishUnlessPublished = ({
     stdout: string
     exitCode: number | undefined
   }>
-  publishFactory: () => Observable<{ exitCode: number | undefined; stderror: string | undefined }>
+  buildAndPublish: BuildAndPublish
 }): Observable<PublishLibEvent> =>
   packageJsonContent$.pipe(
     map((json) =>
@@ -297,21 +303,20 @@ export const publishUnlessPublished = ({
     ),
     mergeMap((identity) => {
       const targetVersion = version ?? identity.version
-      return targetVersion === undefined
-        ? publishLib({ publishFactory, packageDir, version: 'unknown', created: true })
-        : viewVersions({ name: identity.name }).pipe(
-            map(readPublishedVersions),
-            mergeMap((publishedVersions) =>
-              publishedVersions?.includes(targetVersion) === true
-                ? of(eventCreators.publishSkipped({ packageDir, version: targetVersion }))
-                : publishLib({
-                    publishFactory,
-                    packageDir,
-                    version: targetVersion,
-                    created: publishedVersions === undefined,
-                  }),
-            ),
-          )
+      if (targetVersion === undefined) {
+        return throwError(() => new Error('Version is required in package.json or as an argument'))
+      }
+      return viewVersions({ name: identity.name }).pipe(
+        map(readPublishedVersions),
+        mergeMap((publishedVersions) =>
+          publishedVersions?.includes(targetVersion) === true
+            ? of(eventCreators.publishSkipped({ packageDir, version: targetVersion }))
+            : buildAndPublish({
+                version: targetVersion,
+                created: publishedVersions === undefined,
+              }),
+        ),
+      )
     }),
   )
 
@@ -357,8 +362,6 @@ const excludePrivatePackages = (
         ),
   )
 
-// The glob has to be deep, because packages nest — but that also reaches into installed
-// dependencies, and publishing one of those would push a third-party name under our version.
 const excludeInstalledDependencies = (): OperatorFunction<string[], string[]> =>
   map((packageJsonPaths) =>
     packageJsonPaths.filter((jsonPath) => !jsonPath.includes('/node_modules/')),
