@@ -132,3 +132,4 @@ Track:
 - [Technical feasibility for Product Managers](./technical-feasibility-product-managers/article.md)
 - [Build versus buy software](./build-vs-buy-software/article.md)
 - [Bug triage for Product Managers](./bug-triage-product-managers/article.md)
+- [How to write a useful software bug report](./software-bug-report-template/article.md)
