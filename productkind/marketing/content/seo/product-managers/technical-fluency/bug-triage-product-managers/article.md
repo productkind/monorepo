@@ -96,9 +96,7 @@ If any of these could be true, contact the people named in your incident process
 
 ## How I work through bug triage with a Product Manager
 
-The checklist is the short version you can use during triage. The next sections
-explain why each step helps Product and Engineering investigate the problem
-together.
+The checklist is the short version you can use during triage. The next sections explain why each step helps Product and Engineering investigate the problem together.
 
 ### 1. Check whether the situation needs an immediate response
 
@@ -231,9 +229,7 @@ After triage, the team knows:
 
 The team still does not know the root cause. It has a much narrower question, clear user impact and named next steps.
 
-Once the team has completed this triage, use the [software bug report
-template](/guides/software-bug-report-template) to structure the evidence while
-keeping confirmed facts separate from suspected causes.
+Once the team has completed this triage, use the [software bug report template](/guides/software-bug-report-template) to structure the evidence while keeping confirmed facts separate from suspected causes.
 
 ## What Product and Engineering each contribute
 

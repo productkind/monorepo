@@ -116,6 +116,4 @@ See the [niche research](../../../courses/ai-your-life-admin/niche-research.md) 
 - [The mental load on women](./mental-load-women/article.md)
 - [Invisible labour](./invisible-labor/article.md)
 
-The two alternate voice drafts for `what-is-the-mental-load` remain in its
-[`experiments`](./what-is-the-mental-load/experiments/) directory. Only one
-version should be published at that slug.
+The two alternate voice drafts for `what-is-the-mental-load` remain in its [`experiments`](./what-is-the-mental-load/experiments/) directory. Only one version should be published at that slug.
