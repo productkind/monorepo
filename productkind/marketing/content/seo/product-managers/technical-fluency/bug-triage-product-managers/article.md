@@ -231,6 +231,10 @@ After triage, the team knows:
 
 The team still does not know the root cause. It has a much narrower question, clear user impact and named next steps.
 
+Once the team has completed this triage, use the [software bug report
+template](/guides/software-bug-report-template) to structure the evidence while
+keeping confirmed facts separate from suspected causes.
+
 ## What Product and Engineering each contribute
 
 The Product Manager usually has the clearest view of:
@@ -289,7 +293,7 @@ For your next bug discussion, delay the priority label for five minutes. Ask for
 
 - Add a downloadable or copyable version of the first-pass bug triage checklist immediately after the visible checklist.
 - Add an original severity-and-priority visual based on the table in this article, with descriptive alt text.
-- Link to `/guides/software-bug-report-template` after that article is live. Keep the related article focused on structuring and communicating a bug report; do not add a full bug-report template here.
+- Keep the link to `/guides/software-bug-report-template` only when that article is published. Keep the related article focused on structuring and communicating a bug report; do not add a full bug-report template here.
 - Add `Article` and `BreadcrumbList` structured data that matches the visible page.
 - Show Tamas Kokeny's author credentials, published date and updated date.
 - Validate the learning-path landing page and interest form before publishing.
