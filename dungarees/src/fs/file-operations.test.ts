@@ -5,7 +5,7 @@ import { lastValueFrom } from 'rxjs'
 import { map } from 'rxjs/operators'
 import { expect, test } from 'vitest'
 
-test('fileOperations should transform files', async () => {
+test('fileOperations transformFile writes the transformed content to the output', async () => {
   const fakeFileSystem = createFakeFileSystem({
     '/test.txt': 'test',
   })
@@ -24,7 +24,7 @@ test('fileOperations should transform files', async () => {
   expect(fakeFileSystem.readFileSync('/output.txt', 'utf-8')).toBe('8')
 })
 
-test('fileOperations transformFile should handle read errors', async () => {
+test('fileOperations transformFile rejects an unreadable input and writes nothing', async () => {
   const fakeFileSystem = createFakeFileSystem({
     '/test.txt': 'test',
   })
@@ -39,7 +39,7 @@ test('fileOperations transformFile should handle read errors', async () => {
   expect(() => fakeFileSystem.readFileSync('/output.txt', 'utf-8')).toThrow()
 })
 
-test('fileOperations transformFile should handle read errors with custom message', async () => {
+test('fileOperations transformFile reports an unreadable input with the message it was given', async () => {
   const fakeFileSystem = createFakeFileSystem({
     '/test.txt': 'test',
   })
@@ -55,7 +55,7 @@ test('fileOperations transformFile should handle read errors with custom message
   expect(() => fakeFileSystem.readFileSync('/output.txt', 'utf-8')).toThrow()
 })
 
-test('fileOperations transformFile should handle write errors', async () => {
+test('fileOperations transformFile rejects an unwritable output', async () => {
   const fakeFileSystem = createFakeFileSystem({
     '/test.txt': 'test',
   })
@@ -70,7 +70,7 @@ test('fileOperations transformFile should handle write errors', async () => {
   expect(() => fakeFileSystem.readFileSync('/nonexistent/output.txt', 'utf-8')).toThrow()
 })
 
-test('fileOperations transformFile should handle write errors with custom message', async () => {
+test('fileOperations transformFile reports an unwritable output with the message it was given', async () => {
   const fakeFileSystem = createFakeFileSystem({
     '/test.txt': 'test',
   })
@@ -86,7 +86,7 @@ test('fileOperations transformFile should handle write errors with custom messag
   expect(() => fakeFileSystem.readFileSync('/nonexistent/output.txt', 'utf-8')).toThrow()
 })
 
-test('fileOperations transformFile should handle empty input files', async () => {
+test('fileOperations transformFile transforms an empty input file', async () => {
   const fakeFileSystem = createFakeFileSystem({
     '/empty.txt': '',
   })
@@ -99,7 +99,7 @@ test('fileOperations transformFile should handle empty input files', async () =>
   expect(fakeFileSystem.readFileSync('/output.txt', 'utf-8')).toBe(' processed')
 })
 
-test('fileOperations transformFileContext should save transform context', async () => {
+test('fileOperations transformFileContext hands back the context alongside the written value', async () => {
   const fakeFileSystem = createFakeFileSystem({
     '/test.txt': 'test',
   })
@@ -120,7 +120,7 @@ test('fileOperations transformFileContext should save transform context', async 
   expect(transform.context).toBe(1)
 })
 
-test('fileOperations should copy files', async () => {
+test('fileOperations copyFile copies a file to its destination', async () => {
   const fakeFileSystem = createFakeFileSystem({
     '/source.txt': 'source content',
   })
@@ -129,7 +129,7 @@ test('fileOperations should copy files', async () => {
   expect(fakeFileSystem.readFileSync('/destination.txt', 'utf-8')).toBe('source content')
 })
 
-test('fileOperations should create directories for the target', async () => {
+test('fileOperations copyFile creates the destination directory it needs', async () => {
   const fakeFileSystem = createFakeFileSystem({
     '/source.txt': 'source content',
   })
@@ -138,7 +138,7 @@ test('fileOperations should create directories for the target', async () => {
   expect(fakeFileSystem.readFileSync('/newdir/destination.txt', 'utf-8')).toBe('source content')
 })
 
-test('fileOperations should copy directories', async () => {
+test('fileOperations copyDirectory copies a tree, subdirectories and all', async () => {
   const fakeFileSystem = createFakeFileSystem({
     '/dir/file1.txt': 'content1',
     '/dir/file2.txt': 'content2',
@@ -151,7 +151,7 @@ test('fileOperations should copy directories', async () => {
   expect(fakeFileSystem.readFileSync('/dir-copy/subdir/file3.txt', 'utf-8')).toBe('content3')
 })
 
-test('fileOperations copyDirectory should filter files', async () => {
+test('fileOperations copyDirectory leaves out the paths it was told to exclude', async () => {
   const fakeFileSystem = createFakeFileSystem({
     '/dir/file1.txt': 'content1',
     '/dir/file2.log': 'content2',

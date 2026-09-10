@@ -4,13 +4,13 @@ import type { ReadableRawKeyValueStore } from './type.ts'
 
 import { expect, test } from 'vitest'
 
-test('it should transform store values based on the provided callback', () => {
+test('a transformed store returns what its callback made of the raw value', () => {
   const transformedStore = createTransformedStore(mockStore, transformKeyValue)
   const result = transformedStore.get('feature_1')
   expect(result).toEqual(true)
 })
 
-test('it should return undefined for missing keys', () => {
+test('a transformed store returns undefined for a key the raw store does not have', () => {
   const transformedStore = createTransformedStore(mockStore, transformKeyValue)
   const result = transformedStore.get('feature_2')
   expect(result).toBeUndefined()

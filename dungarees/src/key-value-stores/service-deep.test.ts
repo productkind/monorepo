@@ -135,7 +135,7 @@ test('KeyValueStoreDeep store throws error', () => {
   expect(thrown.cause).toBe(error)
 })
 
-test('KeyValueStoreDeep set should validate the input', () => {
+test('KeyValueStoreDeep reads back a value it validated on the way in', () => {
   const rawStore = createMemoryDeepRawKeyValueStore()
   const store = createKeyValueStoreDeep(rawStore, {
     key: z.string(),
@@ -145,7 +145,7 @@ test('KeyValueStoreDeep set should validate the input', () => {
   expect(value).toBe('value')
 })
 
-test('KeyValueStoreDeep deep set should validate the input', () => {
+test('KeyValueStoreDeep rejects a value that does not match the schema at a deep path', () => {
   const rawStore = createMemoryDeepRawKeyValueStore()
   rawStore.set('key1', { key2: 2 })
   const store = createKeyValueStoreDeep(rawStore, {
@@ -160,7 +160,7 @@ test('KeyValueStoreDeep deep set should validate the input', () => {
   expect(zodIssueCode(thrown)).toBe('invalid_type')
 })
 
-test('KeyValueStoreDeep deep set and get should expect valid path', () => {
+test('KeyValueStoreDeep throws for a path that is not in the schema', () => {
   const rawStore = createMemoryDeepRawKeyValueStore()
   rawStore.set('key1', { key2: 2 })
   const store = createKeyValueStoreDeep(rawStore, {

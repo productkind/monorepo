@@ -95,7 +95,7 @@ test('getOrCreateFolder treats the same name under a different parent as a diffe
   expect(files).toHaveLength(2)
 })
 
-test('getOrCreateFolder still works when the client has been destructured', async () => {
+test('getOrCreateFolder does not rely on its client being called as a method', async () => {
   const { client } = createFakeGoogleDriveClient()
   const { getOrCreateFolder } = client
 

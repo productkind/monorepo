@@ -25,7 +25,7 @@ const srcDirFile3 = `
 console.log('File 3');
 `
 
-test('transpile should transpile a directory', async () => {
+test('transpileDir transpiles every file in a directory, subdirectories included', async () => {
   const fs = createFakeFileSystem({
     '/src-dir/file1.ts': srcDirFile1.trim(),
     '/src-dir/file2.ts': srcDirFile2.trim(),

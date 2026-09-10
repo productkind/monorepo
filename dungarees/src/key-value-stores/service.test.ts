@@ -127,7 +127,7 @@ test('KeyValueStore set value validate', () => {
   expect(zodIssueCode(thrown)).toBe('invalid_type')
 })
 
-test('KeyValueStore set and get should expect valid key', () => {
+test('KeyValueStore reports a raw store that throws on get and set', () => {
   const error = new Error('Store error')
   const rawStore: RawKeyValueStore = {
     get: (_) => {
