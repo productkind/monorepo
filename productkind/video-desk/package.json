@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Sourcing desk for the narrated videos: find, judge and apply the gif for every section",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "AGPL-3.0",
   "type": "module",
   "scripts": {
     "desk": "sh scripts/desk.sh",

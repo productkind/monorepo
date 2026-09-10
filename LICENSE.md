@@ -5,6 +5,8 @@ This monorepo contains components under different licenses:
 - `dungarees/`: Licensed under the MIT License (see [`dungarees/LICENSE.md`](dungarees/LICENSE.md))
 - `little-parrot/`: Licensed under the AGPL-3.0 License
   (see [`little-parrot/LICENSE`](little-parrot/LICENSE.md))
+- `productkind/video-desk/`: Licensed under the AGPL-3.0 License
+  (see [`productkind/video-desk/LICENSE.md`](productkind/video-desk/LICENSE.md))
 - `seminars/`: Licensed under Creative Commons Attribution-ShareAlike 4.0 International
   (CC BY-SA 4.0) (see [`seminars/LICENSE.md`](seminars/LICENSE.md))
 - `kim-and-tim/`: Licensed under the Creative Commons Attribution-ShareAlike 4.0 International

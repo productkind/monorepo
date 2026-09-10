@@ -60,8 +60,6 @@ npm install
 npm run init
 ```
 
-TEST If works
-
 ## License
 
 This repository is licensed under several licenses, depending on the directory. Please refer to the individual directories for their respective licenses.

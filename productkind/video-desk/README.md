@@ -67,3 +67,7 @@ Each section records it as data in the definition — `source: { provider, id, s
 - The api is a plain node process, so a change to `domain/` or `services/` needs it restarted; only the front end hot-reloads.
 - Reading a gif through the filesystem service goes via latin1 text, because that service reads text. It is byte-exact but it copies more than a binary read would.
 - `video-generator` has no `"type": "module"`, so node prints a reparse warning when the api imports `apply-visual.ts` from it.
+
+## Licence
+
+AGPL-3.0, the same as `little-parrot/`, with the text in [`LICENSE.md`](LICENSE.md). Worth stating here because the package next door, `video-generator`, is `UNLICENSED` — nothing under `productkind/` carries a licence by default, so this one says so itself and is listed in the monorepo's own [`LICENSE.md`](../../LICENSE.md).
