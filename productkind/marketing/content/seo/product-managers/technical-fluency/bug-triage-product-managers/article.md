@@ -51,6 +51,8 @@ These questions give Product and Engineering a shared starting point. A label su
 
 You can use this checklist before or during a bug triage meeting. It is meant to guide the investigation, rather than serve as the final bug-report format.
 
+![The first-pass bug triage sequence. Triage starts with a safety gate: a security or privacy risk, data loss, an incorrect payment, or a core journey unavailable to many users goes to the company's incident process immediately, without waiting for the rest of the checklist. Four stages follow. One, establish the observed behaviour: what should have happened, what happened instead, where the journey first differs from the expected path, and which evidence shows the result. Two, record the conditions: environment, device, browser or app version, account type and state, test data and configuration, and whether it happens on every attempt, sometimes or once. Three, assess impact and reach: which user capability is blocked, which users, accounts, plans, countries or transactions appear affected, whether money, data or access is involved, and whether a workaround exists. Four, decide the next action together: investigate now, contain, gather evidence, schedule or monitor, whether there is enough evidence for a focused investigation, and who takes each step. Root cause is not the goal of first-pass triage.](./assets/bug-triage-first-pass.svg)
+
 ### Protect users first
 
 - [ ] Does the issue involve a security or privacy risk?
@@ -138,6 +140,8 @@ If the problem happens again, repeat the steps once to check whether the result 
 
 That last part is important. If you change the account, browser and payment method together, a successful attempt does not tell us which condition affected the result.
 
+![Two ways to run the same comparison on the saved-card checkout failure. On the left, three conditions change together: the account moves from an existing account to a new account, the browser from Safari to Chrome, and the payment method from a saved card to a newly entered card. The attempt succeeds, but three conditions moved, so the result does not say which one affected it. On the right, the account and the browser are kept the same and only the payment method changes, from a saved card to a newly entered card. The attempt succeeds, and because one condition moved the failure is connected to the saved-card journey. Neither result is a root cause, and the same steps should be repeated once before anything changes.](./assets/change-one-condition-at-a-time.svg)
+
 And if you cannot reproduce the bug, record that result too. It narrows the evidence when you can say exactly which conditions you tried.
 
 ### 4. Use comparisons to narrow the conditions
@@ -165,6 +169,8 @@ For a web product, the browser's **Network** tab can show the requests the page 
 
 A status code needs context. A `400` response tells us that the server rejected the request. The response may add that a required billing-address field was missing. This evidence still does not tell us why the saved-card journey omitted that field. An engineer may need to inspect the application logs and code to answer that question.
 
+![Where the saved-card checkout journey first differs from the expected behaviour. Three steps are shared by both descriptions: a signed-in customer with items chosen reaches the basket, a saved card is selected at checkout, and the customer confirms payment. The journey then separates. Expected: the order-confirmation page, and the order exists. What happened: the checkout returns to the basket with a generic error. The first point of difference is after payment confirmation, which is the part an engineer examines first. The browser Network tab adds confirmed evidence: the request returns a 400 status, meaning the server rejected it, and the response adds that a required billing-address field was missing. It still does not tell the team why the saved-card journey left the field out, whether production customers reach the same path, or when the behaviour began.](./assets/first-point-of-difference.svg)
+
 Be careful before copying a request, response or log excerpt. It may contain personal information, payment details, tokens or internal identifiers. Use test data where possible, remove sensitive values and follow the team's rules about where evidence can be stored.
 
 ### 6. Assess severity and priority separately
@@ -175,6 +181,8 @@ Severity and priority answer different questions.
 - **Priority** records when the team chooses to act after considering urgency, reach, workarounds, current commitments and competing risks.
 
 Priority can change while severity stays the same. A safe workaround may reduce the need for immediate work, even though the underlying effect has not changed. A smaller defect may need attention today if it blocks a release planned for tomorrow.
+
+![Severity and priority answer different questions. Severity describes what the bug does: the effect on the user, their data, access or money when it happens. Priority describes when the team acts, decided from urgency, reach, workarounds, commitments and competing risks. Priority can change while severity stays the same. In the first example a safe workaround exists, because entering the card again completes the order at the cost of extra effort, so severity is unchanged and priority is lower. In the second example a smaller defect blocks a release planned for tomorrow, so severity is unchanged and priority is higher. Six inputs give the label meaning: effect, reach, frequency, workaround, urgency and confidence. The team's own severity levels and incident rules decide the label.](./assets/severity-and-priority.svg)
 
 I prefer describing the evidence before choosing the label:
 
@@ -288,7 +296,10 @@ For your next bug discussion, delay the priority label for five minutes. Ask for
 ### Publishing notes
 
 - Add a downloadable or copyable version of the first-pass bug triage checklist immediately after the visible checklist.
-- Add an original severity-and-priority visual based on the table in this article, with descriptive alt text.
+- Use the four editable SVG diagrams in `assets/`. A PNG export sits beside each one as a preview and fallback.
+- The alt text in the article names the four triage stages and the safety gate, the two comparison attempts, the shared checkout steps and the point where they separate, and the severity-and-priority examples with the six inputs. Keep it if the diagrams change.
+- Let readers open each diagram full size on a phone. The card text is small at a 390px screen width.
+- The severity-and-priority diagram is the most likely one to be shared on its own. Give it a stable URL so other pages can link to it.
 - Keep the link to `/guides/software-bug-report-template` only when that article is published. Keep the related article focused on structuring and communicating a bug report; do not add a full bug-report template here.
 - Add `Article` and `BreadcrumbList` structured data that matches the visible page.
 - Show Tamas Kokeny's author credentials, published date and updated date.

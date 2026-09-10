@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1080" viewBox="0 0 1500 1080" role="img" aria-labelledby="fork-title fork-description">
+  <title id="fork-title">Where the saved-card checkout journey first differs from the expected behaviour</title>
+  <desc id="fork-description">Three steps of the checkout journey are shared by both the expected and the actual description: a signed-in customer with items chosen reaches the basket, selects a saved card at checkout, and confirms payment. The journey then forks. Expected: the order-confirmation page, and the order exists. What happened: the checkout returns to the basket with a generic error. The first point of difference is after payment confirmation, which is where an engineer starts looking. The browser Network tab adds evidence: the request returns a 400 status, meaning the server rejected it, and the response adds that a required billing-address field was missing. It still does not explain why the saved-card journey omitted the field, whether production customers reach the same path, or when the behaviour began.</desc>
+
+  <defs>
+    <linearGradient id="brand-gradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffb65b"/>
+      <stop offset="28%" stop-color="#fdd825"/>
+      <stop offset="52%" stop-color="#fbfb00"/>
+      <stop offset="76%" stop-color="#8efd23"/>
+      <stop offset="100%" stop-color="#00ed70"/>
+    </linearGradient>
+    <linearGradient id="brand-gradient-v" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffb65b"/>
+      <stop offset="50%" stop-color="#fbfb00"/>
+      <stop offset="100%" stop-color="#00ed70"/>
+    </linearGradient>
+    <filter id="card-shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#080809" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 z" fill="#080809"/>
+    </marker>
+    <style>
+      .display { font-family: "Space Mono", Menlo, Consolas, monospace; fill: #080809; }
+      .copy { font-family: Inter, Arial, sans-serif; fill: #080809; }
+      .muted { fill: #4a4a50; }
+      .card-title { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 24px; font-weight: 700; fill: #080809; }
+      .gloss { font-family: Inter, Arial, sans-serif; font-size: 19px; fill: #4a4a50; }
+      .body { font-family: Inter, Arial, sans-serif; font-size: 21px; fill: #080809; }
+      .label { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 17px; font-weight: 700; fill: #4a4a50; letter-spacing: 0.5px; }
+      .connector { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow); }
+      .stem { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .leader { fill: none; stroke: #1a0044; stroke-width: 3; stroke-dasharray: 9 9; stroke-linecap: round; }
+      .icon { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <rect width="1500" height="1080" fill="#fbfaf7"/>
+  <rect x="0" y="0" width="1500" height="14" fill="url(#brand-gradient)"/>
+
+  <text x="50" y="84" class="display" font-size="36" font-weight="700">Where the checkout journey first differs</text>
+  <text x="50" y="124" class="copy muted" font-size="22">Three steps both descriptions share, then one point where they separate.</text>
+
+  <text x="50" y="200" class="label">THE JOURNEY EVERYONE CAN SEE</text>
+
+  <!-- Shared step 1 -->
+  <g filter="url(#card-shadow)">
+    <rect x="50" y="240" width="290" height="150" rx="24" fill="#fff8d9" stroke="#f1c000" stroke-width="3"/>
+    <rect x="50" y="238" width="290" height="18" rx="9" fill="#fdd825"/>
+  </g>
+  <text x="86" y="296" class="card-title">Basket</text>
+  <text x="86" y="336" class="gloss">Signed-in customer</text>
+  <text x="86" y="364" class="gloss">with items chosen</text>
+
+  <path d="M340 315 H396" class="connector"/>
+
+  <!-- Shared step 2 -->
+  <g filter="url(#card-shadow)">
+    <rect x="400" y="240" width="290" height="150" rx="24" fill="#fff8d9" stroke="#f1c000" stroke-width="3"/>
+    <rect x="400" y="238" width="290" height="18" rx="9" fill="#fdd825"/>
+  </g>
+  <text x="436" y="296" class="card-title">Checkout</text>
+  <text x="436" y="336" class="gloss">Saved card selected</text>
+  <text x="436" y="364" class="gloss">on the payment screen</text>
+
+  <path d="M690 315 H746" class="connector"/>
+
+  <!-- Shared step 3 -->
+  <g filter="url(#card-shadow)">
+    <rect x="750" y="240" width="290" height="150" rx="24" fill="#fff8d9" stroke="#f1c000" stroke-width="3"/>
+    <rect x="750" y="238" width="290" height="18" rx="9" fill="#fdd825"/>
+  </g>
+  <text x="786" y="296" class="card-title">Confirm payment</text>
+  <text x="786" y="336" class="gloss">The last step both</text>
+  <text x="786" y="364" class="gloss">descriptions share</text>
+
+  <!-- Fork -->
+  <path d="M1040 315 H1080" class="stem"/>
+  <path d="M1080 190 V440" class="stem"/>
+  <path d="M1080 190 H1126" class="connector"/>
+  <path d="M1080 440 H1126" class="connector"/>
+  <circle cx="1080" cy="315" r="13" fill="#1a0044"/>
+  <path d="M1080 440 V556" class="leader"/>
+
+  <!-- Expected outcome -->
+  <g filter="url(#card-shadow)">
+    <rect x="1130" y="120" width="320" height="140" rx="24" fill="#eafff4" stroke="#00ed70" stroke-width="3"/>
+    <rect x="1130" y="118" width="320" height="18" rx="9" fill="#00ed70"/>
+  </g>
+  <text x="1166" y="172" class="label">EXPECTED</text>
+  <text x="1166" y="210" class="card-title" font-size="20">Order confirmation</text>
+  <text x="1166" y="242" class="gloss">The order exists.</text>
+
+  <!-- Actual outcome -->
+  <g filter="url(#card-shadow)">
+    <rect x="1130" y="370" width="320" height="140" rx="24" fill="#fff3e6" stroke="#ffb65b" stroke-width="3"/>
+    <rect x="1130" y="368" width="320" height="18" rx="9" fill="#ffb65b"/>
+  </g>
+  <text x="1166" y="422" class="label">WHAT HAPPENED</text>
+  <text x="1166" y="460" class="card-title" font-size="20">Back to the basket</text>
+  <text x="1166" y="492" class="gloss">with a generic error.</text>
+
+  <!-- Finding band -->
+  <g filter="url(#card-shadow)">
+    <rect x="50" y="556" width="1400" height="96" rx="24" fill="#1a0044"/>
+    <rect x="50" y="556" width="14" height="96" rx="7" fill="url(#brand-gradient-v)"/>
+  </g>
+  <text x="94" y="594" class="label" style="fill:#ffb65b">THE FIRST POINT OF DIFFERENCE</text>
+  <text x="94" y="630" class="copy" font-size="22" style="fill:#ffffff">The journey separates after the customer confirms payment. That is the part an engineer examines first.</text>
+
+  <text x="50" y="712" class="label">WHAT THE BROWSER NETWORK TAB ADDS</text>
+
+  <!-- Evidence -->
+  <g filter="url(#card-shadow)">
+    <rect x="50" y="742" width="690" height="250" rx="24" fill="#efffe8" stroke="#8efd23" stroke-width="3"/>
+    <rect x="50" y="740" width="690" height="18" rx="9" fill="#8efd23"/>
+  </g>
+  <text x="86" y="796" class="label">CONFIRMED EVIDENCE</text>
+  <text x="86" y="834" class="card-title">The failed request</text>
+  <rect x="86" y="858" width="86" height="46" rx="10" fill="#1a0044"/>
+  <text x="129" y="889" class="display" font-size="22" font-weight="700" text-anchor="middle" style="fill:#ffffff">400</text>
+  <text x="188" y="889" class="body">The server rejected it.</text>
+  <text x="86" y="936" class="body">The response adds that a required</text>
+  <text x="86" y="966" class="body">billing-address field was missing.</text>
+
+  <g filter="url(#card-shadow)">
+    <rect x="760" y="742" width="690" height="250" rx="24" fill="#ffffff" stroke="#e0dfd6" stroke-width="3"/>
+    <rect x="760" y="740" width="690" height="18" rx="9" fill="url(#brand-gradient)"/>
+  </g>
+  <text x="796" y="796" class="label">STILL UNKNOWN</text>
+  <text x="796" y="834" class="card-title">What it does not tell us</text>
+  <circle cx="806" cy="874" r="7" class="icon" stroke-width="3"/>
+  <text x="832" y="882" class="body">Why the saved-card journey left the field out</text>
+  <circle cx="806" cy="916" r="7" class="icon" stroke-width="3"/>
+  <text x="832" y="924" class="body">Whether production customers reach the same path</text>
+  <circle cx="806" cy="958" r="7" class="icon" stroke-width="3"/>
+  <text x="832" y="966" class="body">When the behaviour began</text>
+
+  <text x="1450" y="1044" text-anchor="end" class="label">LittleParrot.app</text>
+</svg>
