@@ -127,4 +127,8 @@ Track:
 - the new queries each page earns, especially question queries that can improve an existing section;
 - assisted conversions, because an explanatory article may introduce the learning-path idea several visits before someone registers their interest.
 
-The first article draft is in [`seo-article-01-technical-feasibility-for-product-managers.md`](./seo-article-01-technical-feasibility-for-product-managers.md).
+## Article drafts
+
+- [Technical feasibility for Product Managers](./technical-feasibility-product-managers/article.md)
+- [Build versus buy software](./build-vs-buy-software/article.md)
+- [Bug triage for Product Managers](./bug-triage-product-managers/article.md)

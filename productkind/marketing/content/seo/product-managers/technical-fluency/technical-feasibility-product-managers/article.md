@@ -17,6 +17,7 @@ secondary_queries:
 seo_title: 'Technical Feasibility for Product Managers: A Checklist'
 meta_description: 'Assess technical feasibility before you commit. Use this Product Manager checklist to uncover dependencies, risks, unknowns and the next step.'
 conversion_url: /guides/technical-product-manager
+published_file: ../little-parrot-awakens/src/content/guides/articles/technical-feasibility-product-managers.ts
 ---
 
 # Technical feasibility for Product Managers: the checklist I use before committing
@@ -127,7 +128,7 @@ It looks like one button and one form on screen. So what would I ask before maki
 | Failure | What does the customer see if our form accepts the address but the courier rejects it? | The flow needs a recoverable error state and information that helps the support team investigate. |
 | Release | Can we offer the change only before fulfilment starts? | A narrower first version may help customers without automating every exception. |
 
-![Technical feasibility map for changing a delivery address after checkout, showing order, payment, fulfilment, courier and notification dependencies.](./seo-article-01-assets/delivery-address-technical-feasibility-map.svg)
+![Technical feasibility map for changing a delivery address after checkout, showing order, payment, fulfilment, courier and notification dependencies.](./assets/delivery-address-technical-feasibility-map.svg)
 
 A screen count tells me very little about scope. This conversation helps the whole team trace the proposed action through data, integrations, states and failure cases.
 
