@@ -3,13 +3,13 @@ import { createLocalStorageRawKeyValueStore } from './local-storage.ts'
 
 import { expect, test } from 'vitest'
 
-test('LocalStorageRawKeyValueStore non set key should be undefined', () => {
+test('LocalStorageRawKeyValueStore returns undefined for a key that was never set', () => {
   const store = createLocalStorageRawKeyValueStore(createFakeStorage())
 
   expect(store.get('key')).toBe(undefined)
 })
 
-test('LocalStorageRawKeyValueStore it should set the value', () => {
+test('LocalStorageRawKeyValueStore reads back the value it was given', () => {
   const store = createLocalStorageRawKeyValueStore(createFakeStorage())
 
   store.set('key', 'value')

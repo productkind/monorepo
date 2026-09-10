@@ -70,7 +70,7 @@ test('onBefore hook starts the contexts', async () => {
   expect(world.get('service2')).toBe(2)
 })
 
-test('world keys should be typesafe', async () => {
+test('world.get is typed by the interactor its name refers to, and rejects an unknown name', async () => {
   const { creator: creator1 } = setupFakeInteractor<1>({ context: 1 })
   const { creator: creator2 } = setupFakeInteractor<2>({ context: 2 })
   const testEnvironment = createTestEnvironment({
@@ -170,7 +170,7 @@ test('start service from the world', async () => {
   expect(state3.isStarted).toBe(false)
 })
 
-test('world should be able to get the started service', async () => {
+test('world.start starts a service and hands its context to world.get', async () => {
   const { state: state1, creator: creator1 } = setupFakeInteractor({ context: 1 })
   const { state: state2, creator: creator2 } = setupFakeInteractor({ context: 2 })
   const testEnvironment = createTestEnvironment({
@@ -185,7 +185,7 @@ test('world should be able to get the started service', async () => {
   expect(context).toBe(1)
 })
 
-test('world should be able to pass params when starts a service', async () => {
+test('world.start passes its extra arguments to the service creator', async () => {
   const { state: state1, creator: creator1 } = setupFakeInteractor({ context: 1 })
   const { state: state2, creator: creator2 } = setupFakeRunner()
   const testEnvironment = createTestEnvironment({
@@ -199,7 +199,7 @@ test('world should be able to pass params when starts a service', async () => {
   expect(state2.startArg).toBe(3)
 })
 
-test('should not start non hook services', async () => {
+test('a service with no hook is left unstarted by both before hooks', async () => {
   const { state: state1, creator: creator1 } = setupFakeInteractor({ context: 1 })
   const { state: state2, creator: creator2 } = setupFakeRunner()
   const testEnvironment = createTestEnvironment({
@@ -232,7 +232,7 @@ test('onAfter stops services started from the world', async () => {
   expect(state3.isStarted).toBe(false)
 })
 
-test('start should be type-safe', async () => {
+test('world.start rejects a name that is not in the configuration', async () => {
   const { creator: creator1 } = setupFakeInteractor({ context: 1 })
   const { creator: creator2 } = setupFakeInteractor({ context: 2 })
   const testEnvironment = createTestEnvironment({
@@ -276,7 +276,7 @@ test('start context shows its log entries', async () => {
   expect(messages).toEqual(new Set(['service1: Coming from context start']))
 })
 
-test('onBeforeAll should log the started services', async () => {
+test('onBeforeAll reports each service it started', async () => {
   const { creator: creator1 } = setupFakeInteractor({ context: 1 })
   const { creator: creator2 } = setupFakeRunner()
   const testEnvironment = createTestEnvironment({
@@ -293,7 +293,7 @@ test('onBeforeAll should log the started services', async () => {
   )
 })
 
-test('onAfterAll should log the stopped services', async () => {
+test('onAfterAll reports each service it stopped', async () => {
   const { creator: creator1 } = setupFakeInteractor({ context: 1 })
   const { creator: creator2 } = setupFakeRunner()
   const testEnvironment = createTestEnvironment({
@@ -311,7 +311,7 @@ test('onAfterAll should log the stopped services', async () => {
   )
 })
 
-test('onAfter should log the stopped services', async () => {
+test('onAfter reports each service it stopped', async () => {
   const { creator: creator1 } = setupFakeInteractor({ context: 1 })
   const { creator: creator2 } = setupFakeRunner()
   const testEnvironment = createTestEnvironment({
@@ -328,7 +328,7 @@ test('onAfter should log the stopped services', async () => {
   expect(messages).toEqual(new Set(['service1: Stopped in after', 'service2: Stopped in after']))
 })
 
-test('it should handle an async creator', async () => {
+test('world.start awaits a creator that returns a promise', async () => {
   const { creator: creator1, state: state1 } = setupFakeAsyncRunner()
   const { creator: creator2, state: state2 } = setupFakeAsyncInteractor({ context: 1 })
   const testEnvironment = createTestEnvironment({
@@ -342,7 +342,7 @@ test('it should handle an async creator', async () => {
   expect(state2.isStarted).toBe(true)
 })
 
-test('it should handle an async creator', async () => {
+test('onBeforeAll awaits a creator that returns a promise', async () => {
   const { creator: creator1, state: state1 } = setupFakeAsyncRunner()
   const { creator: creator2, state: state2 } = setupFakeAsyncInteractor({ context: 1 })
   const testEnvironment = createTestEnvironment({

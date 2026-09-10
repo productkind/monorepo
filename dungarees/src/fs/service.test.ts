@@ -5,19 +5,19 @@ import * as fs from 'node:fs'
 import { lastValueFrom } from 'rxjs'
 import { expect, test } from 'vitest'
 
-test('FileSystem should write and read file sync', () => {
+test('FileSystem writeFileSync reads back through readFileSync', () => {
   const fakeFs = createFakeNodeFs()
   const fileSystem = createFileSystem(fakeFs)
   fileSystem.writeFileSync('/test.txt', 'test')
   expect(fileSystem.readFileSync('/test.txt', 'utf-8')).toBe('test')
 })
 
-test('FileSystem should work with the real fs', () => {
+test('FileSystem lists a directory through the real node fs', () => {
   const fileSystem = createFileSystem(fs)
   expect(fileSystem.readDirSync('.').length > 0).toBe(true)
 })
 
-test('Fake FileSystem should initialize with json', () => {
+test('a fake node fs starts from the files it was given', () => {
   const fakeFs = createFakeNodeFs({
     'test.txt': 'test',
   })
@@ -25,7 +25,7 @@ test('Fake FileSystem should initialize with json', () => {
   expect(fileSystem.readFileSync('test.txt', 'utf8')).toBe('test')
 })
 
-test('FileSystem should have a globAsync method', async () => {
+test('FileSystem globAsync matches files by pattern', async () => {
   const fakeFs = createFakeNodeFs({
     '/test.txt': 'test',
     '/test2.txt': 'test2',
@@ -37,7 +37,7 @@ test('FileSystem should have a globAsync method', async () => {
   expect(await fileSystem.globAsync('/*.json')).toEqual(['/test3.json'])
 })
 
-test('FileSystem should have a globSync method', () => {
+test('FileSystem globSync matches files by pattern', () => {
   const fakeFs = createFakeNodeFs({
     '/test.txt': 'test',
     '/test2.txt': 'test2',
@@ -49,7 +49,7 @@ test('FileSystem should have a globSync method', () => {
   expect(fileSystem.globSync('/*.json')).toEqual(['/test3.json'])
 })
 
-test('FileSystem should have a glob method', async () => {
+test('FileSystem glob emits the files matching a pattern', async () => {
   const fakeFs = createFakeNodeFs({
     '/test.txt': 'test',
     '/test2.txt': 'test2',
@@ -61,7 +61,7 @@ test('FileSystem should have a glob method', async () => {
   expect(await lastValueFrom(fileSystem.glob('/*.json'))).toEqual(['/test3.json'])
 })
 
-test('FileSystem should have a readDirAsync method', async () => {
+test('FileSystem readDirAsync lists the entries of a directory', async () => {
   const fakeFs = createFakeNodeFs({
     '/dir/test.txt': 'test',
     '/dir/test2.txt': 'test2',
@@ -72,7 +72,7 @@ test('FileSystem should have a readDirAsync method', async () => {
   expect(files).toEqual(['test.txt', 'test2.txt', 'test3.json'])
 })
 
-test('FileSystem should have a readFileAsync method', async () => {
+test('FileSystem readFileAsync reads the contents of a file', async () => {
   const fakeFs = createFakeNodeFs({
     '/test.txt': 'test',
   })
@@ -80,21 +80,21 @@ test('FileSystem should have a readFileAsync method', async () => {
   expect(await fileSystem.readFileAsync('/test.txt', 'utf8')).toBe('test')
 })
 
-test('FileSystem should have a writeFile method', async () => {
+test('FileSystem writeFileAsync writes the contents of a file', async () => {
   const fakeFs = createFakeNodeFs()
   const fileSystem = createFileSystem(fakeFs)
   await fileSystem.writeFileAsync('/test.txt', 'test')
   expect(fakeFs.readFileSync('/test.txt', 'utf8')).toBe('test')
 })
 
-test('FileSystem should have a mkdir method', async () => {
+test('FileSystem mkdirAsync creates a nested directory that can be written to', async () => {
   const fakeFs = createFakeNodeFs()
   const fileSystem = createFileSystem(fakeFs)
   await fileSystem.mkdirAsync('/dir/subdir')
   await fileSystem.writeFileAsync('/dir/subdir/test.txt', 'test')
 })
 
-test('FileSystem should have a readFile method', async () => {
+test('FileSystem readFile emits the contents of a file', async () => {
   const fakeFs = createFakeNodeFs({
     '/test.txt': 'test',
   })
@@ -102,14 +102,14 @@ test('FileSystem should have a readFile method', async () => {
   expect(await lastValueFrom(fileSystem.readFile('/test.txt', 'utf8'))).toBe('test')
 })
 
-test('FileSystem should have a writeFile method', async () => {
+test('FileSystem writeFile writes the contents of a file', async () => {
   const fakeFs = createFakeNodeFs()
   const fileSystem = createFileSystem(fakeFs)
   await lastValueFrom(fileSystem.writeFile('/test.txt', 'test'))
   expect(fakeFs.readFileSync('/test.txt', 'utf8')).toBe('test')
 })
 
-test('FileSystem should have a readDir method', async () => {
+test('FileSystem readDir emits the entries of a directory', async () => {
   const fakeFs = createFakeNodeFs({
     '/dir/test.txt': 'test',
     '/dir/test2.txt': 'test2',
@@ -120,7 +120,7 @@ test('FileSystem should have a readDir method', async () => {
   expect(files).toEqual(['test.txt', 'test2.txt', 'test3.json'])
 })
 
-test('FileSystem should have a mkdir method', async () => {
+test('FileSystem mkdir creates a nested directory that can be written to', async () => {
   const fakeFs = createFakeNodeFs()
   const fileSystem = createFileSystem(fakeFs)
   await lastValueFrom(fileSystem.mkdir('/dir/subdir'))
@@ -128,7 +128,7 @@ test('FileSystem should have a mkdir method', async () => {
   expect(fakeFs.readFileSync('/dir/subdir/test.txt', 'utf8')).toBe('test')
 })
 
-test('FileSystem should have a mkdirSync method', () => {
+test('FileSystem mkdirSync creates a nested directory that can be written to', () => {
   const fakeFs = createFakeNodeFs()
   const fileSystem = createFileSystem(fakeFs)
   fileSystem.mkdirSync('/dir/subdir')
@@ -172,7 +172,7 @@ test('FileSystem readDirDeep', async () => {
   )
 })
 
-test('FileSystem should have a readBulkAsync method', async () => {
+test('FileSystem readBulkAsync reads every path into one record', async () => {
   const fakeFs = createFakeNodeFs({
     '/test.txt': 'test',
     '/test2.txt': 'test2',
@@ -187,7 +187,7 @@ test('FileSystem should have a readBulkAsync method', async () => {
   })
 })
 
-test('FileSystem should have a readBulkSync method', () => {
+test('FileSystem readBulkSync reads every path into one record', () => {
   const fakeFs = createFakeNodeFs({
     '/test.txt': 'test',
     '/test2.txt': 'test2',
@@ -202,7 +202,7 @@ test('FileSystem should have a readBulkSync method', () => {
   })
 })
 
-test('FileSystem should read the file stats correctly', () => {
+test('FileSystem getStatSync reports the mode, owner and permissions of a file', () => {
   const fakeFs = createFakeNodeFs({
     '/dir/test.txt': 'test',
   })
@@ -221,7 +221,7 @@ test('FileSystem should read the file stats correctly', () => {
   })
 })
 
-test('FileSystem should read the file stats correctly with getStatAsync', async () => {
+test('FileSystem getStatAsync reports the mode, owner and permissions of a file', async () => {
   const fakeFs = createFakeNodeFs({
     '/dir/test.txt': 'test',
   })
@@ -240,7 +240,7 @@ test('FileSystem should read the file stats correctly with getStatAsync', async 
   })
 })
 
-test('FileSystem should read the file stats correctly with getStat observable', async () => {
+test('FileSystem getStat emits the mode, owner and permissions of a file', async () => {
   const fakeFs = createFakeNodeFs({
     '/dir/test.txt': 'test',
   })

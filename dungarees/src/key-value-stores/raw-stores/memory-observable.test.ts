@@ -3,13 +3,13 @@ import { createMemoryObservableRawKeyValueStore } from './memory-observable.ts'
 import { firstValueFrom } from 'rxjs'
 import { expect, test } from 'vitest'
 
-test('MemoryObservableRawKeyValueStore non set key should be undefined', () => {
+test('MemoryObservableRawKeyValueStore returns undefined for a key that was never set', () => {
   const store = createMemoryObservableRawKeyValueStore<number>()
 
   expect(store.get('key')).toBe(undefined)
 })
 
-test('MemoryObservableRawKeyValueStore it should set the value', () => {
+test('MemoryObservableRawKeyValueStore reads back the value it was given', () => {
   const store = createMemoryObservableRawKeyValueStore<number>()
 
   store.set('key', 1)

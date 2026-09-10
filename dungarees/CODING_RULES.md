@@ -602,3 +602,40 @@ export const createFileOperations = (fileSystem: FileSystemService): FileOperati
 6a), and subclassing a third-party class whose methods you have to call through. A type describing
 someone else's methods is a separate case — map it through `DetachableMethods` to bind the prototype
 methods once, rather than restating the shape.
+
+## 14. Name a test for the behaviour it pins, not for the function it calls
+
+A test name is read when it fails — usually in CI output, with no source beside it. Write it as
+`<subject> <present-tense verb> <observable outcome>` and that line alone says which contract broke.
+The subject is the export under test, or `a <thing>` for whatever a factory returns, whichever the
+test actually drives.
+
+Leave out `should`. Every test asserts a should, so the word narrows nothing while pushing the
+outcome further from the eye. `correctly`, `properly` and `works` are worse: they name no outcome at
+all, so the reader has to open the file to learn what was expected.
+
+```ts
+// Bad — neither name survives being read on its own
+test('fileOperations should copy files', ...)
+test('it should run without the wrapper', ...)
+test('transpile works correctly', ...)
+```
+
+```ts
+// Good — the outcome is in the name
+test('fileOperations copies a file to its destination', ...)
+test('coreMarbles runs a runner that takes no extra arguments', ...)
+test('a store reduces an event that was sent to it', ...)
+```
+
+Name a failure by its trigger and its consequence, so the name says when it happens as well as what
+happens:
+
+```ts
+test('parseJson throws when the JSON parses but does not match the schema', ...)
+test('publishMultiLib skips a package whose version is already on the registry', ...)
+```
+
+Describe what a caller can observe, never how the code reaches it — the same line rule 5 draws,
+applied to the name. `and` in a name is worth a second look, since it often means two behaviours are
+sharing one test, though a single behaviour sometimes needs the word.

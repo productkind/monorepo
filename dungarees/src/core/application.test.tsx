@@ -118,7 +118,7 @@ test('Register additional services after creation', () => {
   expect(services3.myService).toBe('my-service-default')
 })
 
-test('The getServices function should receive the run identity', () => {
+test('getServices receives the identity run was called with', () => {
   const myService = 'my-service'
   type Services = { myService: 'my-service' }
   let identity
@@ -220,7 +220,7 @@ test('Register additional main after creation', () => {
   expect(output3).toBe(3)
 })
 
-test('The getBehaviors function should receive the run identity', () => {
+test('getBehaviors receives the identity run was called with', () => {
   const myService = 'my-service'
   type Services = { myService: 'my-service' }
   let identity
@@ -252,7 +252,7 @@ test('Pre-main can execute side-effects', () => {
   expect(behaviors.myService).toBe('my-service-side-effect')
 })
 
-test('The preMain function should receive the run identity', () => {
+test('preMain receives the identity run was called with', () => {
   let identity
   const app = createApplication<{
     identity: string
@@ -281,7 +281,7 @@ test('Get delivery', () => {
   expect(delivery.AppComponent().props['data-service']).toEqual('my-service')
 })
 
-test('The getDelivery function should receive the run identity', () => {
+test('getDelivery receives the identity run was called with', () => {
   let identity
   const app = createApplication<{
     identity: string
@@ -314,7 +314,7 @@ test('main', () => {
   expect(output).toEqual('my-service-my-service')
 })
 
-test('The main function should receive the run identity', () => {
+test('main receives the identity run was called with', () => {
   let identity
   const app = createApplication<{
     identity: string

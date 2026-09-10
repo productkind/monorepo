@@ -37,7 +37,7 @@ test('createCausedError keeps the original as the cause, so the chain survives',
   )
 })
 
-test('createCausedError works on a non-Error cause without losing it', () => {
+test('createCausedError keeps a non-Error cause on the error it builds', () => {
   const caused = createCausedError({ message: 'Invalid package.json', cause: 'thrown string' })
 
   expect(caused.message).toBe('Invalid package.json: thrown string')
