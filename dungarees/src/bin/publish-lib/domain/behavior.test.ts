@@ -436,6 +436,11 @@ test('publishMultiLib skips a package whose version is already on the registry',
   expect(events).toContainEqual(
     eventCreators.publishSkipped({ packageDir: 'lib-1', version: '1.0.0' }),
   )
+  // the whole point of asking first: the skipped package is never transpiled
+  const publishedFiles = fileSystem.toJSON()
+  expect(publishedFiles['/m/dist/lib-1/package.json']).toBeUndefined()
+  expect(publishedFiles['/m/dist/lib-1/a.js']).toBeUndefined()
+  expect(publishedFiles['/m/dist/lib-2/package.json']).toBeDefined()
   expect(events.at(-1)).toEqual(eventCreators.allPublished())
   expect(
     executedCommands.filter(({ args }) => args[0] === 'publish').map(({ options }) => options?.cwd),

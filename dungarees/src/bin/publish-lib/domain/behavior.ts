@@ -1,10 +1,12 @@
 import type { PublishLibEvent } from './events.ts'
+import type { BuildAndPublish } from './operations.ts'
 import {
   copyAssets,
   createOutDir,
   getBuildStartEvent,
   getPackageDirsWithVersion,
   publishAllPackages,
+  publishLib,
   publishUnlessPublished,
   transformPackageJson,
 } from './operations.ts'
@@ -80,16 +82,25 @@ export const createPublishLibBehavior = ({
     version,
     registry,
   }) => {
-    const build$ = build({ srcDir, outDir, version }).events$
-    const publish$ = publishUnlessPublished({
-      packageJsonContent$: fileSystem.readFile(`${srcDir}/package.json`, 'utf-8'),
-      packageDir,
-      version,
-      viewVersions: ({ name }) => npm.viewVersions({ name, registry }).output$,
-      publishFactory: () => npm.publish({ cwd: outDir, registry }).output$,
-    })
+    const buildAndPublish: BuildAndPublish = ({ version: resolvedVersion, created }) =>
+      concat(
+        build({ srcDir, outDir, version: resolvedVersion }).events$,
+        publishLib({
+          publishFactory: () => npm.publish({ cwd: outDir, registry }).output$,
+          packageDir,
+          version: resolvedVersion,
+          created,
+        }),
+      )
+
     return {
-      events$: concat(build$, publish$),
+      events$: publishUnlessPublished({
+        packageJsonContent$: fileSystem.readFile(`${srcDir}/package.json`, 'utf-8'),
+        packageDir,
+        version,
+        viewVersions: ({ name }) => npm.viewVersions({ name, registry }).output$,
+        buildAndPublish,
+      }),
     }
   }
 
