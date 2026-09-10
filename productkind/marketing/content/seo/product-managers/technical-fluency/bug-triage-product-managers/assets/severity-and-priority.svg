@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1360" viewBox="0 0 1400 1360" role="img" aria-labelledby="sevpri-title sevpri-description">
+  <title id="sevpri-title">Severity and priority answer different questions</title>
+  <desc id="sevpri-description">Severity describes what the bug does: the effect on the user, their data, access or money when it happens. Priority describes when the team acts, decided from urgency, reach, workarounds, existing commitments and competing risks. Priority can change while severity stays the same. In the first example a safe workaround exists, because entering the card again completes the order at the cost of extra effort, so severity is unchanged and priority is lower. In the second example a smaller defect blocks a release planned for tomorrow, so severity is unchanged and priority is higher. Six inputs give the label meaning: effect, the capability, data, access or money affected; reach, the affected users, accounts or transactions; frequency, whether it happens on every attempt, intermittently or once; workaround, a safe alternative and its cost to the user; urgency, what gets worse while the team waits; and confidence, the confirmed evidence and the important unknowns. The team's own severity levels and incident rules decide the label.</desc>
+
+  <defs>
+    <linearGradient id="brand-gradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffb65b"/>
+      <stop offset="28%" stop-color="#fdd825"/>
+      <stop offset="52%" stop-color="#fbfb00"/>
+      <stop offset="76%" stop-color="#8efd23"/>
+      <stop offset="100%" stop-color="#00ed70"/>
+    </linearGradient>
+    <linearGradient id="brand-gradient-v" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffb65b"/>
+      <stop offset="50%" stop-color="#fbfb00"/>
+      <stop offset="100%" stop-color="#00ed70"/>
+    </linearGradient>
+    <filter id="card-shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#080809" flood-opacity="0.08"/>
+    </filter>
+    <style>
+      .display { font-family: "Space Mono", Menlo, Consolas, monospace; fill: #080809; }
+      .copy { font-family: Inter, Arial, sans-serif; fill: #080809; }
+      .muted { fill: #4a4a50; }
+      .card-title { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 26px; font-weight: 700; fill: #080809; }
+      .chip-title { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 21px; font-weight: 700; fill: #080809; }
+      .gloss { font-family: Inter, Arial, sans-serif; font-size: 20px; fill: #4a4a50; }
+      .small { font-family: Inter, Arial, sans-serif; font-size: 18px; fill: #4a4a50; }
+      .body { font-family: Inter, Arial, sans-serif; font-size: 21px; fill: #080809; }
+      .label { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 17px; font-weight: 700; fill: #4a4a50; letter-spacing: 0.5px; }
+      .mini { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 15px; font-weight: 700; fill: #4a4a50; letter-spacing: 1px; }
+      .pill { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 15px; font-weight: 700; letter-spacing: 1.2px; }
+      .divider { stroke: #e0dfd6; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="1360" fill="#fbfaf7"/>
+  <rect x="0" y="0" width="1400" height="14" fill="url(#brand-gradient)"/>
+
+  <text x="50" y="84" class="display" font-size="34" font-weight="700">Severity and priority answer different questions</text>
+  <text x="50" y="124" class="copy muted" font-size="22">One describes the effect. The other records when the team chooses to act.</text>
+
+  <!-- Severity -->
+  <g filter="url(#card-shadow)">
+    <rect x="50" y="190" width="640" height="210" rx="26" fill="#fff3e6" stroke="#ffb65b" stroke-width="3"/>
+    <rect x="50" y="188" width="640" height="18" rx="9" fill="#ffb65b"/>
+  </g>
+  <text x="86" y="250" class="label">SEVERITY</text>
+  <text x="86" y="294" class="card-title">What the bug does</text>
+  <text x="86" y="336" class="gloss">The effect on the user, their data,</text>
+  <text x="86" y="366" class="gloss">access or money when it happens.</text>
+
+  <!-- Priority -->
+  <g filter="url(#card-shadow)">
+    <rect x="710" y="190" width="640" height="210" rx="26" fill="#eafff4" stroke="#00ed70" stroke-width="3"/>
+    <rect x="710" y="188" width="640" height="18" rx="9" fill="#00ed70"/>
+  </g>
+  <text x="746" y="250" class="label">PRIORITY</text>
+  <text x="746" y="294" class="card-title">When the team acts</text>
+  <text x="746" y="336" class="gloss">Decided from urgency, reach, workarounds,</text>
+  <text x="746" y="366" class="gloss">commitments and competing risks.</text>
+
+  <text x="50" y="464" class="label">PRIORITY CAN CHANGE WHILE SEVERITY STAYS THE SAME</text>
+
+  <!-- Example 1 -->
+  <g filter="url(#card-shadow)">
+    <rect x="50" y="490" width="1300" height="140" rx="24" fill="#ffffff" stroke="#e0dfd6" stroke-width="3"/>
+  </g>
+  <rect x="50" y="490" width="10" height="140" rx="5" fill="url(#brand-gradient-v)"/>
+  <text x="94" y="546" class="body">A safe workaround exists. Entering the card again completes</text>
+  <text x="94" y="578" class="body">the order, at the cost of extra effort for the customer.</text>
+  <path d="M780 518 V602" class="divider"/>
+  <text x="820" y="542" class="mini">SEVERITY</text>
+  <rect x="820" y="556" width="220" height="42" rx="21" fill="#eeede6" stroke="#cfcec4" stroke-width="2"/>
+  <text x="930" y="583" class="pill" text-anchor="middle" style="fill:#4a4a50">UNCHANGED</text>
+  <text x="1070" y="542" class="mini">PRIORITY</text>
+  <rect x="1070" y="556" width="220" height="42" rx="21" fill="#1a0044"/>
+  <path d="M1096 572 L1106 583 L1116 572" fill="none" stroke="#8efd23" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1200" y="583" class="pill" text-anchor="middle" style="fill:#ffffff">LOWER</text>
+
+  <!-- Example 2 -->
+  <g filter="url(#card-shadow)">
+    <rect x="50" y="650" width="1300" height="140" rx="24" fill="#ffffff" stroke="#e0dfd6" stroke-width="3"/>
+  </g>
+  <rect x="50" y="650" width="10" height="140" rx="5" fill="url(#brand-gradient-v)"/>
+  <text x="94" y="706" class="body">A smaller defect blocks a release planned for tomorrow.</text>
+  <text x="94" y="738" class="body">The effect on any single user stays minor.</text>
+  <path d="M780 678 V762" class="divider"/>
+  <text x="820" y="702" class="mini">SEVERITY</text>
+  <rect x="820" y="716" width="220" height="42" rx="21" fill="#eeede6" stroke="#cfcec4" stroke-width="2"/>
+  <text x="930" y="743" class="pill" text-anchor="middle" style="fill:#4a4a50">UNCHANGED</text>
+  <text x="1070" y="702" class="mini">PRIORITY</text>
+  <rect x="1070" y="716" width="220" height="42" rx="21" fill="#1a0044"/>
+  <path d="M1096 743 L1106 732 L1116 743" fill="none" stroke="#ffb65b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1200" y="743" class="pill" text-anchor="middle" style="fill:#ffffff">HIGHER</text>
+
+  <text x="50" y="854" class="label">THE SIX INPUTS THAT GIVE THE LABEL MEANING</text>
+
+  <!-- Input chips -->
+  <g filter="url(#card-shadow)">
+    <rect x="50" y="880" width="420" height="118" rx="20" fill="#ffffff" stroke="#e0dfd6" stroke-width="3"/>
+  </g>
+  <rect x="50" y="880" width="10" height="118" rx="5" fill="url(#brand-gradient-v)"/>
+  <text x="90" y="926" class="chip-title">Effect</text>
+  <text x="90" y="958" class="small">The capability, data, access or</text>
+  <text x="90" y="982" class="small">money affected</text>
+
+  <g filter="url(#card-shadow)">
+    <rect x="490" y="880" width="420" height="118" rx="20" fill="#ffffff" stroke="#e0dfd6" stroke-width="3"/>
+  </g>
+  <rect x="490" y="880" width="10" height="118" rx="5" fill="url(#brand-gradient-v)"/>
+  <text x="530" y="926" class="chip-title">Reach</text>
+  <text x="530" y="958" class="small">Affected users, accounts or</text>
+  <text x="530" y="982" class="small">transactions</text>
+
+  <g filter="url(#card-shadow)">
+    <rect x="930" y="880" width="420" height="118" rx="20" fill="#ffffff" stroke="#e0dfd6" stroke-width="3"/>
+  </g>
+  <rect x="930" y="880" width="10" height="118" rx="5" fill="url(#brand-gradient-v)"/>
+  <text x="970" y="926" class="chip-title">Frequency</text>
+  <text x="970" y="958" class="small">Every attempt, intermittent or</text>
+  <text x="970" y="982" class="small">observed once</text>
+
+  <g filter="url(#card-shadow)">
+    <rect x="50" y="1018" width="420" height="118" rx="20" fill="#ffffff" stroke="#e0dfd6" stroke-width="3"/>
+  </g>
+  <rect x="50" y="1018" width="10" height="118" rx="5" fill="url(#brand-gradient-v)"/>
+  <text x="90" y="1064" class="chip-title">Workaround</text>
+  <text x="90" y="1096" class="small">A safe alternative and its cost</text>
+  <text x="90" y="1120" class="small">to the user</text>
+
+  <g filter="url(#card-shadow)">
+    <rect x="490" y="1018" width="420" height="118" rx="20" fill="#ffffff" stroke="#e0dfd6" stroke-width="3"/>
+  </g>
+  <rect x="490" y="1018" width="10" height="118" rx="5" fill="url(#brand-gradient-v)"/>
+  <text x="530" y="1064" class="chip-title">Urgency</text>
+  <text x="530" y="1096" class="small">What gets worse while the</text>
+  <text x="530" y="1120" class="small">team waits</text>
+
+  <g filter="url(#card-shadow)">
+    <rect x="930" y="1018" width="420" height="118" rx="20" fill="#ffffff" stroke="#e0dfd6" stroke-width="3"/>
+  </g>
+  <rect x="930" y="1018" width="10" height="118" rx="5" fill="url(#brand-gradient-v)"/>
+  <text x="970" y="1064" class="chip-title">Confidence</text>
+  <text x="970" y="1096" class="small">Confirmed evidence and the</text>
+  <text x="970" y="1120" class="small">important unknowns</text>
+
+  <!-- Footer band -->
+  <g filter="url(#card-shadow)">
+    <rect x="50" y="1180" width="1300" height="96" rx="24" fill="#1a0044"/>
+    <rect x="50" y="1180" width="14" height="96" rx="7" fill="url(#brand-gradient-v)"/>
+  </g>
+  <text x="94" y="1218" class="label" style="fill:#ffb65b">YOUR TEAM'S SEVERITY LEVELS AND INCIDENT RULES DECIDE THE LABEL</text>
+  <text x="94" y="1254" class="copy" font-size="22" style="fill:#ffffff">Recording these six inputs is what lets another person understand the label and revisit it.</text>
+
+  <text x="1350" y="1326" text-anchor="end" class="label">LittleParrot.app</text>
+</svg>

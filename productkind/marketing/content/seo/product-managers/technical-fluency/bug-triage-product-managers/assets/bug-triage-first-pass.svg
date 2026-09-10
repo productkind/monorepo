@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1560" viewBox="0 0 1400 1560" role="img" aria-labelledby="triage-title triage-description">
+  <title id="triage-title">The first-pass bug triage sequence</title>
+  <desc id="triage-description">Triage starts with a safety gate: a security or privacy risk, data loss, an incorrect payment, or a core journey down for many users goes to the company's incident process immediately, without waiting for the rest of the checklist. Four stages follow. Establish the observed behaviour: what should have happened, what happened instead, where the journey first differs from the expected path, and which evidence shows the result. Record the conditions: environment, device, browser or app version, account type and state, test data and configuration, and whether it happens every attempt, sometimes or once. Assess impact and reach: which user capability is blocked, which users, accounts, plans, countries or transactions appear affected, whether money, data or access is involved, and whether a workaround exists. Decide the next action together: investigate now, contain, gather evidence, schedule or monitor, whether there is enough evidence for a focused investigation, and who takes each step. Root cause is not the goal of first-pass triage.</desc>
+
+  <defs>
+    <linearGradient id="brand-gradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffb65b"/>
+      <stop offset="28%" stop-color="#fdd825"/>
+      <stop offset="52%" stop-color="#fbfb00"/>
+      <stop offset="76%" stop-color="#8efd23"/>
+      <stop offset="100%" stop-color="#00ed70"/>
+    </linearGradient>
+    <linearGradient id="brand-gradient-v" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffb65b"/>
+      <stop offset="50%" stop-color="#fbfb00"/>
+      <stop offset="100%" stop-color="#00ed70"/>
+    </linearGradient>
+    <filter id="card-shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#080809" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 z" fill="#080809"/>
+    </marker>
+    <style>
+      .display { font-family: "Space Mono", Menlo, Consolas, monospace; fill: #080809; }
+      .copy { font-family: Inter, Arial, sans-serif; fill: #080809; }
+      .muted { fill: #4a4a50; }
+      .card-title { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 26px; font-weight: 700; fill: #080809; }
+      .gloss { font-family: Inter, Arial, sans-serif; font-size: 20px; fill: #4a4a50; }
+      .q { font-family: Inter, Arial, sans-serif; font-size: 21px; fill: #080809; }
+      .num { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 24px; font-weight: 700; fill: #080809; }
+      .label { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 17px; font-weight: 700; fill: #4a4a50; letter-spacing: 0.5px; }
+      .connector { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow); }
+      .icon { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .tick { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .divider { stroke: #e0dfd6; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="1560" fill="#fbfaf7"/>
+  <rect x="0" y="0" width="1400" height="14" fill="url(#brand-gradient)"/>
+
+  <text x="50" y="84" class="display" font-size="36" font-weight="700">The first-pass bug triage sequence</text>
+  <text x="50" y="124" class="copy muted" font-size="22">Safety first, then behaviour, conditions, reach, and an agreed next step.</text>
+
+  <!-- Safety gate -->
+  <g filter="url(#card-shadow)">
+    <rect x="50" y="180" width="850" height="180" rx="26" fill="#fff3e6" stroke="#ffb65b" stroke-width="3"/>
+    <rect x="50" y="178" width="850" height="18" rx="9" fill="#ffb65b"/>
+  </g>
+  <g transform="translate(88 226)">
+    <path d="M25 2 L47 11 V29 C47 45 25 54 25 54 C25 54 3 45 3 29 V11 Z" class="icon"/>
+    <path d="M15 27 L23 35 L37 20" class="icon"/>
+  </g>
+  <text x="164" y="228" class="label">START HERE</text>
+  <text x="164" y="268" class="card-title">Protect users first</text>
+  <text x="164" y="306" class="gloss">A security or privacy risk, data loss, an incorrect payment,</text>
+  <text x="164" y="336" class="gloss">or a core journey unavailable to many users.</text>
+
+  <path d="M900 270 H978" class="connector"/>
+
+  <!-- Incident exit -->
+  <g filter="url(#card-shadow)">
+    <rect x="990" y="180" width="360" height="180" rx="26" fill="#1a0044"/>
+    <rect x="990" y="180" width="14" height="180" rx="7" fill="url(#brand-gradient-v)"/>
+  </g>
+  <text x="1026" y="228" class="label" style="fill:#ffb65b">IF ANY COULD BE TRUE</text>
+  <text x="1026" y="266" class="copy" font-size="20" style="fill:#ffffff">Contact the people named in</text>
+  <text x="1026" y="296" class="copy" font-size="20" style="fill:#ffffff">your incident process now. Do</text>
+  <text x="1026" y="326" class="copy" font-size="20" style="fill:#ffffff">not wait to finish the checklist.</text>
+
+  <path d="M475 360 V416" class="connector"/>
+
+  <!-- Stage 1 -->
+  <g filter="url(#card-shadow)">
+    <rect x="50" y="420" width="1300" height="200" rx="26" fill="#fff8d9" stroke="#f1c000" stroke-width="3"/>
+    <rect x="50" y="418" width="1300" height="18" rx="9" fill="#fdd825"/>
+  </g>
+  <circle cx="106" cy="484" r="26" fill="#ffffff" stroke="#080809" stroke-width="3"/>
+  <text x="106" y="493" class="num" text-anchor="middle">1</text>
+  <text x="152" y="478" class="card-title">Establish the</text>
+  <text x="152" y="512" class="card-title">observed behaviour</text>
+  <text x="152" y="552" class="gloss">Name the behaviour,</text>
+  <text x="152" y="580" class="gloss">not the area of the product.</text>
+  <path d="M566 452 V588" class="divider"/>
+  <g class="tick" transform="translate(606 468)"><path d="M0 9 L8 17 L20 2"/></g>
+  <text x="644" y="486" class="q">What should have happened, and what happened instead?</text>
+  <g class="tick" transform="translate(606 514)"><path d="M0 9 L8 17 L20 2"/></g>
+  <text x="644" y="532" class="q">Where does the journey first differ from the expected path?</text>
+  <g class="tick" transform="translate(606 560)"><path d="M0 9 L8 17 L20 2"/></g>
+  <text x="644" y="578" class="q">Which recording, screenshot, error or event shows the result?</text>
+
+  <path d="M700 620 V656" class="connector"/>
+
+  <!-- Stage 2 -->
+  <g filter="url(#card-shadow)">
+    <rect x="50" y="660" width="1300" height="200" rx="26" fill="#efffe8" stroke="#8efd23" stroke-width="3"/>
+    <rect x="50" y="658" width="1300" height="18" rx="9" fill="#8efd23"/>
+  </g>
+  <circle cx="106" cy="724" r="26" fill="#ffffff" stroke="#080809" stroke-width="3"/>
+  <text x="106" y="733" class="num" text-anchor="middle">2</text>
+  <text x="152" y="718" class="card-title">Record the</text>
+  <text x="152" y="752" class="card-title">conditions</text>
+  <text x="152" y="792" class="gloss">The exact situation the</text>
+  <text x="152" y="820" class="gloss">problem appeared in.</text>
+  <path d="M566 692 V828" class="divider"/>
+  <g class="tick" transform="translate(606 708)"><path d="M0 9 L8 17 L20 2"/></g>
+  <text x="644" y="726" class="q">Which environment, device, browser or app version?</text>
+  <g class="tick" transform="translate(606 754)"><path d="M0 9 L8 17 L20 2"/></g>
+  <text x="644" y="772" class="q">What account type and state, test data and configuration?</text>
+  <g class="tick" transform="translate(606 800)"><path d="M0 9 L8 17 L20 2"/></g>
+  <text x="644" y="818" class="q">Every attempt, sometimes, or only once so far?</text>
+
+  <path d="M700 860 V896" class="connector"/>
+
+  <!-- Stage 3 -->
+  <g filter="url(#card-shadow)">
+    <rect x="50" y="900" width="1300" height="200" rx="26" fill="#eafff4" stroke="#00ed70" stroke-width="3"/>
+    <rect x="50" y="898" width="1300" height="18" rx="9" fill="#00ed70"/>
+  </g>
+  <circle cx="106" cy="964" r="26" fill="#ffffff" stroke="#080809" stroke-width="3"/>
+  <text x="106" y="973" class="num" text-anchor="middle">3</text>
+  <text x="152" y="958" class="card-title">Assess impact</text>
+  <text x="152" y="992" class="card-title">and reach</text>
+  <text x="152" y="1032" class="gloss">What the user cannot do,</text>
+  <text x="152" y="1060" class="gloss">and how many are affected.</text>
+  <path d="M566 932 V1068" class="divider"/>
+  <g class="tick" transform="translate(606 948)"><path d="M0 9 L8 17 L20 2"/></g>
+  <text x="644" y="966" class="q">Which user capability is blocked or degraded?</text>
+  <g class="tick" transform="translate(606 994)"><path d="M0 9 L8 17 L20 2"/></g>
+  <text x="644" y="1012" class="q">Which users, accounts, plans, countries or transactions?</text>
+  <g class="tick" transform="translate(606 1040)"><path d="M0 9 L8 17 L20 2"/></g>
+  <text x="644" y="1058" class="q">Is money, data or access involved? Is there a workaround?</text>
+
+  <path d="M700 1100 V1136" class="connector"/>
+
+  <!-- Stage 4 -->
+  <g filter="url(#card-shadow)">
+    <rect x="50" y="1140" width="1300" height="200" rx="26" fill="#1a0044"/>
+    <rect x="50" y="1140" width="1300" height="18" rx="9" fill="url(#brand-gradient)"/>
+  </g>
+  <circle cx="106" cy="1210" r="26" fill="#ffffff" stroke="#ffffff" stroke-width="3"/>
+  <text x="106" y="1219" class="num" text-anchor="middle">4</text>
+  <text x="152" y="1204" class="card-title" style="fill:#ffffff">Decide the next</text>
+  <text x="152" y="1238" class="card-title" style="fill:#ffffff">action together</text>
+  <text x="152" y="1278" class="gloss" style="fill:#c9c6d8">Triage ends with an</text>
+  <text x="152" y="1306" class="gloss" style="fill:#c9c6d8">agreed next step.</text>
+  <path d="M566 1176 V1312" stroke="#4a3a70" stroke-width="2"/>
+  <g class="tick" style="stroke:#8efd23" transform="translate(606 1192)"><path d="M0 9 L8 17 L20 2"/></g>
+  <text x="644" y="1210" class="q" style="fill:#ffffff">Investigate now, contain, gather evidence, schedule or monitor?</text>
+  <g class="tick" style="stroke:#8efd23" transform="translate(606 1238)"><path d="M0 9 L8 17 L20 2"/></g>
+  <text x="644" y="1256" class="q" style="fill:#ffffff">Is there enough evidence for a focused investigation?</text>
+  <g class="tick" style="stroke:#8efd23" transform="translate(606 1284)"><path d="M0 9 L8 17 L20 2"/></g>
+  <text x="644" y="1302" class="q" style="fill:#ffffff">Who takes each step, and when does the team review it?</text>
+
+  <!-- Closing note -->
+  <rect x="50" y="1400" width="8" height="86" rx="4" fill="url(#brand-gradient-v)"/>
+  <text x="82" y="1428" class="label">ROOT CAUSE IS NOT THE GOAL OF FIRST-PASS TRIAGE</text>
+  <text x="82" y="1464" class="copy" font-size="22">A narrower question, clear user impact and named next steps are enough to hand over.</text>
+
+  <text x="1350" y="1524" text-anchor="end" class="label">LittleParrot.app</text>
+</svg>
