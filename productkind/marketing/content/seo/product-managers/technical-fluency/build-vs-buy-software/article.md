@@ -27,7 +27,7 @@ I interviewed 24 colleagues across Product, Engineering, Finance, Sales, Marketi
 
 Customer and purchase information was spread across several systems. In one process, a colleague had to check four different systems to understand what a customer used before changing their subscription. Records could disagree too: an order might remain marked as unpaid after the invoice had been paid, leaving someone to compare two reports and investigate it manually.
 
-![One customer question answered across four separate systems: customer records, order records, payment records and licence records, with records that could disagree and 85 to 170 invoices created manually each month.](./seo-article-02-assets/manual-work-across-systems.svg)
+![One customer question answered across four separate systems: customer records, order records, payment records and licence records, with records that could disagree and 85 to 170 invoices created manually each month.](./assets/manual-work-across-systems.svg)
 
 To be honest, the decision needed much more than a software comparison. It had to account for the existing data, the manual work and a business model that combined subscriptions with perpetual licences.
 
@@ -58,7 +58,7 @@ They also make a large programme easier to divide. A company may buy billing, bu
 
 ## The eight questions in my build versus buy decision framework
 
-![The eight questions grouped into three stages. The capability is defined first, before any option is named. Fit and constraints: does this capability differentiate the product, which requirements cannot move, how will it fit the existing systems and data, and what must change outside the software. Owning it: who operates it after launch, and what each option will cost over three years. Risk and evidence: how difficult it is to change direction, and which evidence would change the recommendation. The recommendation is then written in words, with its reasoning, conditions, first scope, ownership and review signal.](./seo-article-02-assets/build-vs-buy-eight-questions.svg)
+![The eight questions grouped into three stages. The capability is defined first, before any option is named. Fit and constraints: does this capability differentiate the product, which requirements cannot move, how will it fit the existing systems and data, and what must change outside the software. Owning it: who operates it after launch, and what each option will cost over three years. Risk and evidence: how difficult it is to change direction, and which evidence would change the recommendation. The recommendation is then written in words, with its reasoning, conditions, first scope, ownership and review signal.](./assets/build-vs-buy-eight-questions.svg)
 
 ### 1. Does this capability differentiate the product?
 
@@ -231,7 +231,7 @@ We isolated a part of the legacy system, reached the behaviour customers and col
 
 For a while, the company had a hybrid solution. We used that period to find problems with live behaviour and infrastructure performance while the old route was still available. We continued step by step until we could retire the old platform.
 
-![Three phases of replacing an e-commerce platform. Before: live customers reach a legacy platform whose changes depended on an external vendor, beside the existing back-office systems. During: real orders are sent to both routes, the parts of the legacy platform not replaced yet and the first parts of the new build in production, with the same back-office systems serving both. After: the legacy platform is retired, customers reach the new platform, and the existing systems are integrated at explicit boundaries rather than replaced.](./seo-article-02-assets/ecommerce-platform-transition.svg)
+![Three phases of replacing an e-commerce platform. Before: live customers reach a legacy platform whose changes depended on an external vendor, beside the existing back-office systems. During: real orders are sent to both routes, the parts of the legacy platform not replaced yet and the first parts of the new build in production, with the same back-office systems serving both. After: the legacy platform is retired, customers reach the new platform, and the existing systems are integrated at explicit boundaries rather than replaced.](./assets/ecommerce-platform-transition.svg)
 
 That experience is why I include **first scope** and **exit conditions** in the decision. The recommendation needs to explain how the company can move safely, especially when the current system already supports live customers and back-office work.
 
@@ -306,7 +306,7 @@ It's for software Product Managers who want to understand more deeply how their 
 ### Publishing notes
 
 - Keep the weighted table as a real HTML table so readers can copy it and search systems can interpret its rows and columns.
-- Use the three editable SVG diagrams in `seo-article-02-assets/`. A PNG export sits beside each one as a preview and fallback.
+- Use the three editable SVG diagrams in `assets/`. A PNG export sits beside each one as a preview and fallback.
 - The alt text in the article names the four separate systems, the manual invoicing, the eight questions and their grouping, the incremental releases, the parallel operation and the retained-system integrations. Keep it if the diagrams change.
 - The eight-questions diagram is the most likely one to be shared on its own. Give it a stable URL so other pages can link to it.
 - Let readers open both diagrams full size on a phone. The card text is small at a 390px screen width.

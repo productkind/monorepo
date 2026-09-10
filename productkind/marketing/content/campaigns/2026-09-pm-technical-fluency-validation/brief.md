@@ -54,6 +54,8 @@ Every LinkedIn link and TikTok/YouTube pinned-comment link has `utm_source`, `ut
 
 ## Source material
 
+- [Evergreen SEO cluster and article drafts](../../seo/product-managers/technical-fluency/cluster.md)
+
 - `productkind/ai-research/pm-technical-fluency/pm-technical-fluency-opportunity-synthesis-2026-08.md`
 - `productkind/ai-research/pm-technical-fluency/pm-technical-fluency-observed-search-phrases-2026-08.md`
 - `productkind/ai-research/pm-technical-fluency/pm-technical-fluency-search-demand-analysis-2026-08.md`
