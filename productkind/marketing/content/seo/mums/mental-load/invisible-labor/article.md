@@ -9,6 +9,8 @@ semrush: 'invisible labor 1,300/mo, KD 29. US spelling is the query, so it stays
 type: article
 status: drafted
 ref: seo-invisible-labor
+source_course: ai-your-life-admin
+published_file: ../little-parrot-awakens/src/content/guides/articles/invisible-labor.ts
 ---
 
 # Invisible Labor: The Work Nobody Counts
