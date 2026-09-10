@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+# Formats what is about to be committed, so a commit never fails CI on style alone.
+#
+# Only the staged files are touched. Running `prettier --write .` here would reformat work the
+# author deliberately left out of the commit, and would walk the whole repo on every commit.
+set -euo pipefail
+
+repo_root=$(git rev-parse --show-toplevel)
+cd "$repo_root"
+
+prettier=node_modules/.bin/prettier
+if [ ! -x "$prettier" ]; then
+  echo "pre-commit: $prettier not found, skipping format. Run 'npm ci' to enable it." >&2
+  exit 0
+fi
+
+staged=$(mktemp)
+unstaged=$(mktemp)
+trap 'rm -f "$staged" "$unstaged"' EXIT
+
+git diff --cached --name-only --diff-filter=ACM | sort >"$staged"
+[ -s "$staged" ] || exit 0
+git diff --name-only --diff-filter=ACM | sort >"$unstaged"
+
+# Formatting a file that is only partly staged would sweep its unstaged half into the commit, so
+# the author has to decide what to do with the rest first.
+partly_staged=$(comm -12 "$staged" "$unstaged")
+if [ -n "$partly_staged" ]; then
+  echo "pre-commit: these files are only partly staged, so formatting them would commit the rest:" >&2
+  echo "$partly_staged" | sed 's/^/  /' >&2
+  echo "Stage the rest or stash it, then commit again." >&2
+  exit 1
+fi
+
+# --ignore-unknown leaves binaries and anything prettier has no parser for alone; .prettierignore
+# is still honoured, so ignored paths are skipped too.
+xargs "$prettier" --write --ignore-unknown <"$staged" >/dev/null
+xargs git add <"$staged"
