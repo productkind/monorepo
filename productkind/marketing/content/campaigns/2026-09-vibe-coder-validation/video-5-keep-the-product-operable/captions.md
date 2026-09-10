@@ -29,7 +29,7 @@ How would you know your app was down?
 
 **Pinned comment:**
 
-Join the Building Apps with AI waitlist: https://littleparrot.app/guides/building-apps-with-ai?utm_source=tiktok&utm_campaign=vibe-coded-app-26&utm_content=your-app-goes-down-on-saturday
+:https://littleparrot.app/guides/building-apps-with-ai?utm_source=tiktok&utm_campaign=vibe-coded-app-26&utm_content=your-app-goes-down-on-saturday
 
 ## Instagram Reels
 
