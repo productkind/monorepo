@@ -95,6 +95,8 @@ Reproduction result: [Every time / intermittent / observed once / could not repr
 
 Your issue tracker may use different labels or separate fields. Keep the same information even when the screen looks different. GitHub's [example bug issue form](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms) asks for current behaviour, expected behaviour, reproduction steps and the environment. Chromium's [bug-reporting guidelines](https://www.chromium.org/for-testers/bug-reporting-guidelines/) also ask for a problem description, detailed steps, expected behaviour and useful screenshots.
 
+![Anatomy of a bug report. The nine parts of the template, grouped by the question each one answers for the next person. The title names one problem: can I tell what is wrong from the title alone. Context and conditions plus steps to reproduce make it repeatable: can I create the same conditions and make it happen on my machine. Expected behaviour beside actual behaviour shows the gap: what should have happened, and what happened instead. Evidence proves it: which evidence can another person look at. User impact and workaround, the confirmed, suspected and unknown labels, and related information set the stakes: what the user cannot do, and what is still unknown. One observable problem belongs in each report.](./assets/anatomy-of-a-bug-report.svg)
+
 ## A completed bug report example
 
 I will continue the fictional saved-card checkout issue from the [bug triage guide for Product Managers](/guides/bug-triage-product-managers). The team has reproduced the failure, confirmed a workaround and found one failed request. The technical cause is still under investigation.
@@ -249,6 +251,8 @@ Use three labels:
 
 For the saved-card example, the response confirms that the server rejected a missing field. The frontend omitting that field is still a suspected cause. Another service could have removed it, or a server-side rule could have changed.
 
+![Confirmed, suspected and unknown. One confident sentence, "the payment API is broken", sorts into three labelled lines instead. Confirmed: the server rejected the request because a required field was missing, backed by the reproduction and the 400 response. Suspected: the saved-card form may not add the current billing address to the request, which still needs a test that proves it. Unknown: which change introduced it, when it began in production and how many customers are affected, each needing an owner and a date.](./assets/confirmed-suspected-unknown.svg)
+
 Hypotheses are welcome. Their label tells the next person how much confidence to place in them.
 
 ## Keep one observable problem in each report
@@ -269,6 +273,8 @@ The first version records what the team knows at the start. Update it when:
 - the team contains the effect or releases a fix;
 - someone verifies the expected behaviour after the fix;
 - a release, pull request or follow-up issue should be linked.
+
+![One record, updated by everyone. Product writes the first version with the title, conditions, steps, expected and actual behaviour and the first evidence. Support adds the confirmed customer reach to user impact. Engineering adds the failing request, its status code and a safe log reference to evidence. Engineering then verifies the cause, so the suspected line becomes a confirmed one and the title can be corrected. Quality Assurance runs the same steps after the fix and links the release. Each step names the sections it touches.](./assets/one-record-updated-by-everyone.svg)
 
 Avoid making people reconstruct the current state from a long comment thread. Update the main fields or add a short current-status section, depending on how your issue tracker works.
 
@@ -326,6 +332,10 @@ The next time you create a bug report, write the title last. Read the completed 
 
 - Place a copy control and optional download immediately after the visible template.
 - Keep the completed checkout example copyable as well.
+- Use the three editable SVG diagrams in `assets/`. A PNG export sits beside each one as a preview and fallback.
+- The alt text in the article names the nine parts of the report and the question each group answers, the three confidence labels with the saved-card evidence, and the five updates to the same record. Keep it if the diagrams change.
+- Let readers open each diagram full size on a phone. The card text is small at a 390px screen width.
+- The anatomy diagram is the most likely one to be shared on its own. Give it a stable URL so other pages can link to it.
 - Publish with the bug triage article and link the two pages in both directions.
 - Use Tamas Kokeny's byline and engineering credentials.
 - Add `Article` and `BreadcrumbList` structured data that matches the visible page.
