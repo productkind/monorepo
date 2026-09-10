@@ -94,7 +94,13 @@ If any of these could be true, contact the people named in your incident process
 - [ ] Should the team investigate now, schedule the work, gather more evidence or monitor the behaviour?
 - [ ] Who will take each next step, and when will the team review the result?
 
-## 1. Check whether the situation needs an immediate response
+## How I work through bug triage with a Product Manager
+
+The checklist is the short version you can use during triage. The next sections
+explain why each step helps Product and Engineering investigate the problem
+together.
+
+### 1. Check whether the situation needs an immediate response
 
 I would start with user safety and business exposure before trying to reproduce the problem perfectly.
 
@@ -102,7 +108,7 @@ A possible security issue, exposed personal information, incorrect payment or da
 
 The Product Manager helps describe the customer and business effect. The engineer helps assess the technical risk and containment options. Waiting for a complete diagnosis can increase the damage, so an uncertain report can still deserve an immediate response.
 
-## 2. Separate expected and actual behaviour
+### 2. Separate expected and actual behaviour
 
 _"Checkout is broken"_ names an area of the product. It does not yet describe the bug.
 
@@ -116,11 +122,11 @@ Now we know the action, the expected state and the unexpected result. An enginee
 
 The wording should stay close to what you can see. _"The payment service is down"_ is a possible explanation. Until there is evidence for it, keep it as a hypothesis rather than mixing it with the observed behaviour.
 
-## 3. Reproduce the bug safely
+### 3. Reproduce the bug safely
 
 To reproduce a bug means performing the actions that trigger the same unexpected behaviour again.
 
-Use a test environment or test account where possible, especially when the journey involves payments, personal data, emails or destructive actions. Follow your company's access, security and privacy rules. A Product Manager should not open production logs or inspect customer information without the appropriate permission and training.
+Use a test environment or test account where possible, especially when the journey involves payments, personal data, emails or destructive actions. Follow your company's access, security and privacy rules.
 
 Start with the reported conditions:
 
@@ -136,7 +142,7 @@ That last part is important. If you change the account, browser and payment meth
 
 And if you cannot reproduce the bug, record that result too. It narrows the evidence when you can say exactly which conditions you tried.
 
-## 4. Use comparisons to narrow the conditions
+### 4. Use comparisons to narrow the conditions
 
 Comparisons are often more useful to me than an early guess about the code.
 
@@ -151,7 +157,7 @@ For the checkout example, I might ask the Product Manager to compare one pair at
 
 Suppose the failure appears for a saved card and the newly entered card works on the same account. We still have not found the root cause. We have, however, reduced the area the engineer needs to examine.
 
-## 5. Find the first visible point of failure
+### 5. Find the first visible point of failure
 
 Sometimes the screen gives us enough evidence. Sometimes it only shows the final symptom.
 
@@ -163,7 +169,7 @@ A status code needs context. A `400` response tells us that the server rejected 
 
 Be careful before copying a request, response or log excerpt. It may contain personal information, payment details, tokens or internal identifiers. Use test data where possible, remove sensitive values and follow the team's rules about where evidence can be stored.
 
-## 6. Assess severity and priority separately
+### 6. Assess severity and priority separately
 
 Severity and priority answer different questions.
 
@@ -185,7 +191,7 @@ I prefer describing the evidence before choosing the label:
 
 Your team's severity levels and incident rules should decide the label. The table gives the label evidence that another person can understand and revisit.
 
-## 7. Choose the next action as a product team
+### 7. Choose the next action as a product team
 
 Triage should end with an action, even when the root cause remains unknown.
 
