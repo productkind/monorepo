@@ -1,6 +1,25 @@
 import { $, path, fs, os } from 'zx'
 import { fileURLToPath } from 'node:url'
 
+const scriptDir = path.dirname(fileURLToPath(import.meta.url))
+const repoRoot = path.resolve(scriptDir, '../..')
+
+// Git hooks first, and outside the platform check below: the hook is plain git config and works
+// wherever git does, so a contributor on any OS gets the pre-commit formatting.
+const HOOKS_PATH = '.githooks'
+const configuredHooksPath = (
+  await $`git -C ${repoRoot} config --get core.hooksPath`.quiet().nothrow()
+).stdout.trim()
+if (configuredHooksPath === HOOKS_PATH) {
+  console.log(`✔︎ git hooks already read from ${HOOKS_PATH}`)
+} else {
+  await $`git -C ${repoRoot} config core.hooksPath ${HOOKS_PATH}`
+  console.log(`Pointed git hooks at ${HOOKS_PATH}`)
+}
+// The committed mode bit should cover this, but a checkout that dropped it would leave git
+// silently ignoring the hook.
+await $`chmod +x ${path.join(repoRoot, HOOKS_PATH, 'pre-commit')}`.quiet()
+
 if (process.platform === 'darwin') {
   if (!(await $`which brew`.quiet()).stdout.trim()) {
     console.error('Homebrew is not installed. Please install Homebrew first: https://brew.sh')
@@ -40,8 +59,7 @@ if (process.platform === 'darwin') {
   await brewInstall('sox')
 
   // Add dungarees/bin to the zsh PATH (idempotent)
-  const scriptDir = path.dirname(fileURLToPath(import.meta.url))
-  const binDir = path.resolve(scriptDir, '../../dungarees/bin')
+  const binDir = path.resolve(repoRoot, 'dungarees/bin')
   const zshrc = path.join(os.homedir(), '.zshrc')
   const marker = '# dungarees/bin (media scripts)'
   const block = `\n${marker}\nexport PATH="${binDir}:$PATH"\n`
