@@ -19,7 +19,11 @@ TikTok video posts have no separate title field, so the caption's first line is 
 
 **Caption:**
 
-A customer reports a bug and all you can send engineering is their screenshot. It comes back as questions. Who was it? What did they do? What did the error say? How long does a bug wait where you work? Waitlist for women in product in the comments.
+A customer reports a bug and all you can send engineering is their screenshot. It comes back as questions. Who was it? What did they do? What did the error say? 
+
+We're building a learning path for women in product who'd rather be the one who investigates it first. By the end you'll reproduce the bug on your own account, read the status code, and find the failed request in the network tab yourself. Waitlist link is in the comments.
+
+How long does a bug wait where you work?
 
 #womeninproduct #womenintech #womenproductmanagers
 

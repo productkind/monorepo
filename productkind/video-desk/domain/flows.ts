@@ -23,6 +23,7 @@ import {
   klipyItems,
   klipySearchUrl,
   parseSections,
+  placeFor,
   type ProviderState,
   unreadSections,
   repeatsIn,
@@ -98,6 +99,8 @@ export type DeskIo = {
       | {
           kind: 'gif'
           src: string
+          /** Where the section already sat, kept even when the kind changes. */
+          place: 'frame' | 'above-captions'
           color?: string
           playbackRate?: number
           source: { provider: string; id?: string; search: string; author?: string }
@@ -105,6 +108,7 @@ export type DeskIo = {
       | {
           kind: 'clip'
           src: string
+          place: 'frame' | 'above-captions'
           trimBefore?: number
           source: { provider: string; id?: string; search: string; author?: string }
         }
@@ -566,12 +570,18 @@ export const pickGif = ({
           histogram: await io.ringHistogram({ path: io.assetPath({ video, name }) }),
         })
 
+        const existing = parseSections({ source: await io.readDefinition({ video }) })[index]
         await io.applyVisual({
           video,
           section: index,
           visual: {
             kind: 'gif',
             src: name,
+            place: placeFor({
+              was: existing?.kind ?? 'gif',
+              now: 'gif',
+              place: existing?.place ?? 'above-captions',
+            }),
             source: { provider: candidate.provider, id: candidate.id, search: candidate.search },
             ...(background === null ? {} : { color: background.colour }),
             ...(fit.rate === null ? {} : { playbackRate: fit.rate }),
@@ -662,12 +672,20 @@ export const pickClip = ({
         })
         await io.removeAsset({ video, name: untrimmed })
 
+        // Any source can serve any section, so a pick can change the kind. Re-sourcing keeps the
+        // section where it was; a change takes the new kind's own treatment.
+        const existing = parseSections({ source: await io.readDefinition({ video }) })[index]
         await io.applyVisual({
           video,
           section: index,
           visual: {
             kind: 'clip',
             src: name,
+            place: placeFor({
+              was: existing?.kind ?? 'clip',
+              now: 'clip',
+              place: existing?.place ?? 'frame',
+            }),
             source: {
               provider: clip.provider,
               id: clip.id,

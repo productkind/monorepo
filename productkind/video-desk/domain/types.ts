@@ -7,6 +7,8 @@ export type Section = {
   text: string
   /** A gif loops inside its slot; a clip plays once and has to outlast it. */
   kind: 'gif' | 'clip' | 'still'
+  /** Where it sits, which a pick keeps even when it changes the kind. */
+  place: 'frame' | 'above-captions'
   src: string
   color: string | null
   playbackRate: number | null

@@ -2,7 +2,8 @@
  * Applies a chosen visual to one section of a video definition.
  *
  *   npm run apply-visual -- --video pm-... --section 14 --src section-14-bulb.gif \
- *       --provider giphy --id abc123 --search "lightbulb idea" [--color '#298c8c'] [--rate 0.72]
+ *       --provider giphy --id abc123 --search "lightbulb idea" [--color '#298c8c'] [--rate 0.72] \
+ *       [--place above-captions]
  *
  * A stock clip is the same command with `--kind clip`, which keeps it a `clip(...)`: a gif and a
  * clip are not interchangeable, and writing one as the other would turn a six-second clip into a
@@ -52,17 +53,23 @@ const main = (): void => {
     ...(author === undefined ? {} : { author }),
   }
   const src = required({ name: 'src' })
+  // Where the section already sat. Carried rather than assumed: every gif in the repo sits above
+  // the captions and stock clips fill the frame, so a kind change that dropped this would move
+  // the picture.
+  const place = valueOf({ name: 'place' }) === 'above-captions' ? 'above-captions' : undefined
   const visual: AppliedVisual =
     valueOf({ name: 'kind' }) === 'clip'
       ? {
           kind: 'clip',
           src,
+          ...(place === undefined ? {} : { place }),
           ...(trim === undefined ? {} : { trimBefore: Number(trim) }),
           source: found,
         }
       : {
           kind: 'gif',
           src,
+          ...(place === undefined ? {} : { place }),
           color: valueOf({ name: 'color' }),
           playbackRate: rate === undefined ? undefined : Number(rate),
           source: found,

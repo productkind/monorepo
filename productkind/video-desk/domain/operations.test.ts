@@ -15,6 +15,7 @@ import {
   keepThatCoverTheBeat,
   parseSections,
   pexelsClips,
+  placeFor,
   pixabayClips,
   providerFrom,
   repeatsIn,
@@ -207,6 +208,7 @@ describe('parseSections', () => {
         index: 0,
         text: 'You’ve nodded along,',
         kind: 'gif',
+        place: 'above-captions',
         src: 'section-00-nodding.gif',
         color: null,
         playbackRate: null,
@@ -217,6 +219,7 @@ describe('parseSections', () => {
         index: 1,
         text: 'A single-quoted line,',
         kind: 'gif',
+        place: 'above-captions',
         src: 'section-01-meeting.gif',
         color: '#ffffff',
         playbackRate: 0.61,
@@ -679,5 +682,48 @@ describe('unreadSections', () => {
   ],`
 
     expect(unreadSections({ source, read: parseSections({ source }) })).toBe(1)
+  })
+})
+
+describe('parseSections, where a visual sits', () => {
+  const both = `export default defineVideo({
+  sections: [
+    {
+      text: 'A gif above the captions,',
+      visual: gif({ src: 'section-00-nodding.gif', place: 'above-captions' }),
+    },
+    {
+      text: 'A clip filling the frame,',
+      visual: clip({ src: 'clip-01-meeting-room.mp4' }),
+    },
+  ],
+})
+`
+
+  test('reads the placement, so a pick can keep a section where it was', () => {
+    // Any source can be used on any section, so a pick can change the kind — and the two kinds
+    // are placed differently in practice. Dropping this would move the picture.
+    expect(parseSections({ source: both }).map((section) => section.place)).toEqual([
+      'above-captions',
+      'frame',
+    ])
+  })
+})
+
+describe('placeFor', () => {
+  test('re-sourcing the same kind leaves the section where it is', () => {
+    expect(placeFor({ was: 'gif', now: 'gif', place: 'above-captions' })).toBe('above-captions')
+    expect(placeFor({ was: 'clip', now: 'clip', place: 'frame' })).toBe('frame')
+  })
+
+  test('a changed kind takes the house treatment for that kind', () => {
+    // Every gif in the repo sits above the captions and every clip fills the frame. Inheriting
+    // the other kind's placement renders a gif letterboxed with captions across it.
+    expect(placeFor({ was: 'clip', now: 'gif', place: 'frame' })).toBe('above-captions')
+    expect(placeFor({ was: 'gif', now: 'clip', place: 'above-captions' })).toBe('frame')
+  })
+
+  test('an unusual placement is still respected when the kind is unchanged', () => {
+    expect(placeFor({ was: 'gif', now: 'gif', place: 'frame' })).toBe('frame')
   })
 })
