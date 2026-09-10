@@ -1,11 +1,11 @@
-import { AbsoluteFill, Img, Video, staticFile } from 'remotion'
-import { Gif } from '@remotion/gif'
-
-import type { ClipVisual, GifVisual, StillVisual, Visual } from '../narration/definition'
 import { FRAME_HEIGHT, FRAME_WIDTH } from '../config'
+import type { ClipVisual, GifVisual, StillVisual, Visual } from '../narration/definition'
 import type { Placement } from '../narration/safe-zone'
 import { placeMedia } from '../narration/safe-zone'
 import { useMediaSize } from './useMediaSize'
+
+import { Gif } from '@remotion/gif'
+import { AbsoluteFill, Img, staticFile, Video } from 'remotion'
 
 type Framed<VISUAL> = { visual: VISUAL; assets: string }
 
@@ -23,12 +23,9 @@ const Letterbox: React.FC<React.PropsWithChildren<{ color: string }>> = ({ color
 )
 
 /** A box at an exact position, for media whose placement has already been worked out. */
-const Placed: React.FC<React.PropsWithChildren<{ color: string; placement: Placement; scale: number }>> = ({
-  color,
-  placement,
-  scale,
-  children,
-}) => (
+const Placed: React.FC<
+  React.PropsWithChildren<{ color: string; placement: Placement; scale: number }>
+> = ({ color, placement, scale, children }) => (
   <AbsoluteFill style={{ backgroundColor: color, overflow: 'hidden' }}>
     <div
       style={{
@@ -122,9 +119,7 @@ const StillVisualView: React.FC<Framed<StillVisual>> = ({ visual, assets }) => {
         offset={visual.offset}
         scale={visual.scale}
         isVideo={false}
-        render={(placement) => (
-          <Img src={src} width={placement.width} height={placement.height} />
-        )}
+        render={(placement) => <Img src={src} width={placement.width} height={placement.height} />}
       />
     )
   }

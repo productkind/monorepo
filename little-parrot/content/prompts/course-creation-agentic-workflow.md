@@ -1,7 +1,9 @@
 ## Goal
+
 - Produce a high-quality Little Parrot micro-course on the first try, instead of catching factual, language, and pedagogy problems one by one during manual review.
 
 ## About
+
 - Claude Code (agent), run from the monorepo
 - Little Parrot project
 - Replaces the older one-shot prompts in this folder (`create-course-from-messy-draft.md`, `create-course-narrative-from-outline.md`) with a skill-driven pipeline that gathers tool facts up front and gates the draft with independent critics before you see it.
@@ -39,12 +41,14 @@ The critic loop is built into the `outline-to-micro-course` skill (its "Generati
 ## The components
 
 ### Skills (`.claude/skills/`)
+
 - **`messy-draft-to-outline`**: turns a messy draft into a structured outline. Now also emits a **Verification handoff**, a per-challenge list of tools taught, claims to verify, and premise risks, which the researcher consumes.
 - **`outline-to-micro-course`**: generates the full course YAML from the outline. Opens with the **Generation Loop** (research → generate → critique → revise). Carries the pedagogy checklist, the draft-time language rules, and the quiz/effort-gradient guidance.
 - **`productkind-tone`**: the educational voice. Banned words, British English, AI-tool terminology, and the "build your idea, not become a developer" framing. Loaded by the writer and by the language critic.
 - **`write-key-outcomes`**: outcome-shaped descriptions (action verb + benefit + deliverable).
 
 ### Agents (`.claude/agents/`)
+
 Each critic has **fresh eyes** (it did not write the draft) and a **single concern**. They do not see the user's memory, so every rule they enforce is written into their own file or a skill they load.
 
 - **`course-tool-researcher`** (web-enabled). Runs once, before generation. Reads the outline's Verification handoff, checks every tool the course teaches against current official docs (and a real repo where one exists), and writes a **facts sheet** to the course folder: prerequisites, exact UI labels, current step sequences, costs/credits, gotchas, each with a source link and the date checked. Flags premise risks before a word of the course is written.

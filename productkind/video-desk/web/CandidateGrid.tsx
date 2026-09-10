@@ -1,8 +1,8 @@
-import { useState } from 'react'
-
 import type { Candidate } from './api'
-import { fitBadge, motionBadge, usedBadge } from './badges'
 import { BadgeRow } from './BadgeRow'
+import { fitBadge, motionBadge, usedBadge } from './badges'
+
+import { useState } from 'react'
 
 /**
  * The candidates for one section.
@@ -41,7 +41,10 @@ export const CandidateGrid: React.FC<{
                     { text: `${candidate.seconds.toFixed(2)}s`, tone: 'plain' },
                     fitBadge({ repeats: candidate.repeats }),
                     motionBadge({ motion: candidate.motion }),
-                    { text: `${String(candidate.width)}x${String(candidate.height)}`, tone: 'plain' },
+                    {
+                      text: `${String(candidate.width)}x${String(candidate.height)}`,
+                      tone: 'plain',
+                    },
                     ...(used ? [used] : []),
                   ]}
                 />
@@ -63,7 +66,10 @@ export const CandidateGrid: React.FC<{
                     type="button"
                     className="action ghost"
                     onClick={() => {
-                      setStrips((current) => ({ ...current, [candidate.id]: !current[candidate.id] }))
+                      setStrips((current) => ({
+                        ...current,
+                        [candidate.id]: !current[candidate.id],
+                      }))
                     }}
                   >
                     8 frames

@@ -1,9 +1,8 @@
 # How to Run a Team Well-being Workshop
 
-*Processing bad news sometimes requires a workshop – here's a practical structure*
+_Processing bad news sometimes requires a workshop – here's a practical structure_
 
-**Date:** August 13, 2025
-**Author:** Kinga Magyar
+**Date:** August 13, 2025 **Author:** Kinga Magyar
 
 ---
 

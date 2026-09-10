@@ -27,6 +27,7 @@ What the user sees: the **final course plus a short summary** of what the critic
 ---
 
 ## Micro-course structure
+
 - Each micro-course is made up of challenges.
 - Each challenge is made up of steps.
 - Each step has a type: see all the types in [`./courseSteps.ts`](./courseSteps.ts)
@@ -97,4 +98,5 @@ Newest first; the newest examples best reflect the current format.
 - `../../../little-parrot/content/course/vibe-coding-tech-00/vibe-coding-tech-00.yaml`
 
 ### Save Micro-course
+
 Save the generated micro-course to this folder: `../../../little-parrot/content/course`

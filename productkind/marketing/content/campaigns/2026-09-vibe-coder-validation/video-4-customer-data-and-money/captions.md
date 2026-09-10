@@ -17,7 +17,7 @@ campaign: vibe-coded-app-26
 
 **Caption:**
 
-How do you make an AI-built app safer for customers? Check account access, data, payments and backups. Built an app with AI? 
+How do you make an AI-built app safer for customers? Check account access, data, payments and backups. Built an app with AI?
 
 We’re building a learning path for women who have already built a product with AI and want to handle customer data and money responsibly. Join our waitlist through the link in the comments.
 

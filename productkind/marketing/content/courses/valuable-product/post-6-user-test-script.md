@@ -6,28 +6,13 @@ account: little-parrot
 
 # Post 6: The 15-minute user test
 
-**Pillar:** the method, shown, with the confidence angle.
-**Research trace:** showing work to a real person is the fear moment, and a
-script makes it survivable (confidence-by-design); "that's the app's fault,
-not yours" models the judgement-free register we're known for;
-observation-before-interpretation is real PM craft shared plainly; testing
-before polishing protects credits and weeks. Repackages the Run Your
-First User Test toolkit item.
+**Pillar:** the method, shown, with the confidence angle. **Research trace:** showing work to a real person is the fear moment, and a script makes it survivable (confidence-by-design); "that's the app's fault, not yours" models the judgement-free register we're known for; observation-before-interpretation is real PM craft shared plainly; testing before polishing protects credits and weeks. Repackages the Run Your First User Test toolkit item.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Script style: a
-timeline down the side (2 min opening, 5 min task, 5 min questions, 2 min
-close), dialogue in speech bubbles, observation notes on paper-scrap cards.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Script style: a timeline down the side (2 min opening, 5 min task, 5 min questions, 2 min close), dialogue in speech bubbles, observation notes on paper-scrap cards.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -39,10 +24,7 @@ close), dialogue in speech bubbles, observation notes on paper-scrap cards.
 | 6 | An observation note with an arrow to a prompt card | "Afterwards, observations become prompts: 'She scrolled up and down three times looking for Add Book' becomes 'Move the Add Book button to the top of the page, above the list. Make it large and clearly labelled.'" |
 | 7 (CTA) | Brand card, a thank-you note | "The full script and question bank are in Build a Valuable Product: How to Break Down Your Idea for Vibe Coding, on LittleParrot.app. First challenge free 🟪 Save this 🔖" |
 
-**Alt text (for the post):** A user-test script carousel: an opening line
-that gives permission to be critical, a task with no explanations, writing
-observations rather than interpretations, three follow-up questions, and
-turning observations into Lovable prompts.
+**Alt text (for the post):** A user-test script carousel: an opening line that gives permission to be critical, a task with no explanations, writing observations rather than interpretations, three follow-up questions, and turning observations into Lovable prompts.
 
 ## Caption (exact)
 
@@ -56,7 +38,4 @@ The full script, including the deeper question bank, comes with Build a Valuable
 
 Save this for the day you have something to show. 🔖
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #productmanagement #userresearch #womenintech #techforwomen #productthinking #appbuilding #usertesting #learnwithai #femalefounder
+. . . #vibecoding #buildwithai #womenwhobuild #productmanagement #userresearch #womenintech #techforwomen #productthinking #appbuilding #usertesting #learnwithai #femalefounder

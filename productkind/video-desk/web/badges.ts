@@ -59,11 +59,7 @@ export const seconds = ({ value }: { value: number | null }): string =>
  * A clip has no rate and no loop, so the question is whether it lasts: one that runs out holds a
  * frozen frame while the captions keep moving.
  */
-export const clipBadge = ({
-  headroom,
-}: {
-  headroom: number | undefined
-}): Badge => {
+export const clipBadge = ({ headroom }: { headroom: number | undefined }): Badge => {
   if (headroom === undefined) {
     return { text: 'measuring…', tone: 'plain' }
   }

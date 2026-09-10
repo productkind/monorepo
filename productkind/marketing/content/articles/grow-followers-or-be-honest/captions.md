@@ -4,9 +4,7 @@ status: draft
 
 # Captions: Would you rather grow your follower count or be honest?
 
-**Brand:** productkind (Thoughts by productkind article carousel)
-**Source:** `thoughts/assets/articles/23-would-you-rather-grow-your-follower-count-or-be-honest.md` · carousel in this folder
-**Destination:** the full article on Substack (productkind.substack.com)
+**Brand:** productkind (Thoughts by productkind article carousel) **Source:** `thoughts/assets/articles/23-would-you-rather-grow-your-follower-count-or-be-honest.md` · carousel in this folder **Destination:** the full article on Substack (productkind.substack.com)
 
 ---
 
@@ -14,20 +12,17 @@ status: draft
 
 **Title:** Grow your follower count, or be honest? 👀
 
-**Caption:**
-I wrote this on a frustrated afternoon, torn between posting only the good bits about building a business online or being honest about what hasn't worked. The comparison honestly never stops. Which do you actually prefer to read? Follow along for honest notes on building as a woman in tech.
+**Caption:** I wrote this on a frustrated afternoon, torn between posting only the good bits about building a business online or being honest about what hasn't worked. The comparison honestly never stops. Which do you actually prefer to read? Follow along for honest notes on building as a woman in tech.
 
 **Hashtags:** #womenintech #womenwhobuild #womenfounders #buildinpublic
 
-**Pinned comment (link):**
-Full article, where I work through all of this in real time: productkind.substack.com
+**Pinned comment (link):** Full article, where I work through all of this in real time: productkind.substack.com
 
 ---
 
 ## Instagram (carousel)
 
-**Caption:**
-Grow your follower count, or be honest? I wrote this one on a frustrated afternoon in a bookshop-café, torn between two ways of posting as a woman building a business online.
+**Caption:** Grow your follower count, or be honest? I wrote this one on a frustrated afternoon in a bookshop-café, torn between two ways of posting as a woman building a business online.
 
 One path is showing only the good bits and making everything look aspirational. The other is being honest about my small follower count and everything I've tried that didn't work. On paper things might look fine, but a lot of the time they don't feel like it.
 
@@ -35,7 +30,7 @@ The reason the shiny version is so tempting is the constant comparison. There's 
 
 So I closed the apps, went for a walk, and asked myself why I'm doing all of this. And the answer was, to help women benefit more from technology. And an honest picture of building a business helps more than the polished version.
 
-I'm curious what you prefer to read: advice from people who've figured it out, or honest accounts of what didn't work? 
+I'm curious what you prefer to read: advice from people who've figured it out, or honest accounts of what didn't work?
 
 Send this to someone tired of the highlight reel, and follow along for honest notes on building.
 
@@ -53,8 +48,7 @@ Send this to someone tired of the highlight reel, and follow along for honest no
 
 ## Threads
 
-**Caption:**
-Torn between posting only the good bits or being honest about what hasn't worked as I build a business. Wrote this on a frustrated afternoon. What do you actually prefer to read: Advice from people who made it work, or honest accounts of not succeeding?
+**Caption:** Torn between posting only the good bits or being honest about what hasn't worked as I build a business. Wrote this on a frustrated afternoon. What do you actually prefer to read: Advice from people who made it work, or honest accounts of not succeeding?
 
 **Topic tag (type in composer):** building in public
 
@@ -70,8 +64,7 @@ Torn between posting only the good bits or being honest about what hasn't worked
 
 ## LinkedIn (from the productkind page)
 
-**Caption:**
-Would you rather grow your follower count, or be honest? I wrote this on a frustrated afternoon, torn between two ways of posting.
+**Caption:** Would you rather grow your follower count, or be honest? I wrote this on a frustrated afternoon, torn between two ways of posting.
 
 One path is projecting success, showing only the good bits, making everything look aspirational. The other is being honest about a small follower count and all the things I've tried that didn't really work. On paper things might look successful, but a lot of the time they don't feel it.
 
@@ -97,11 +90,9 @@ I'm curious what you prefer to read: advice from people who've figured out how t
 
 **Hashtags (render above the title):** #womenintech #womenwhobuild #buildinpublic
 
-**Description:**
-I wrote this on a frustrated afternoon, torn between posting only the good bits about building a business or being honest about what hasn't worked. This is me working through why the honest version helps more, with a question for you at the end. Subscribe for honest notes on building as a woman in tech.
+**Description:** I wrote this on a frustrated afternoon, torn between posting only the good bits about building a business or being honest about what hasn't worked. This is me working through why the honest version helps more, with a question for you at the end. Subscribe for honest notes on building as a woman in tech.
 
-**Pinned comment (link):**
-Full article, where I work through all of this in real time: productkind.substack.com
+**Pinned comment (link):** Full article, where I work through all of this in real time: productkind.substack.com
 
 ---
 

@@ -1,10 +1,16 @@
 ---
 slug: mental-load-women
-title: "The Mental Load on Women: Why It Falls the Way It Does"
-description: "A practical read on why the invisible work of remembering falls mostly to women, what the research actually found, and what shifts it."
+title: 'The Mental Load on Women: Why It Falls the Way It Does'
+description: 'A practical read on why the invisible work of remembering falls mostly to women, what the research actually found, and what shifts it.'
 primary_query: mental load women
-secondary_queries: [women mental load, mental load of motherhood, mental load working mothers, why do women carry the mental load]
-semrush: "mental load women 880/mo, KD 27, low competition. No page owns this query, which is why it gets its own page rather than a section elsewhere."
+secondary_queries:
+  [
+    women mental load,
+    mental load of motherhood,
+    mental load working mothers,
+    why do women carry the mental load,
+  ]
+semrush: 'mental load women 880/mo, KD 27, low competition. No page owns this query, which is why it gets its own page rather than a section elsewhere.'
 type: article
 status: drafted
 ref: seo-mental-load-women
@@ -18,7 +24,7 @@ So why does the noticing mostly fall to women? Here's what the research found, a
 
 ## What the research found
 
-The sociologist Allison Daminger interviewed 35 American heterosexual couples for [*The Cognitive Dimension of Household Labor*](https://journals.sagepub.com/doi/10.1177/0003122419859007), published in the *American Sociological Review* in 2019. She split the thinking work into four parts:
+The sociologist Allison Daminger interviewed 35 American heterosexual couples for [_The Cognitive Dimension of Household Labor_](https://journals.sagepub.com/doi/10.1177/0003122419859007), published in the _American Sociological Review_ in 2019. She split the thinking work into four parts:
 
 1. **Anticipate.** Noticing a need before it becomes urgent.
 2. **Identify.** Working out the options.
@@ -33,7 +39,7 @@ That might be why the same argument keeps coming back without either person bein
 
 Not in the same way, and the difference is worth knowing, because it tells you the pattern isn't inevitable.
 
-Daminger's couples were all heterosexual. A 2023 study in *PLoS One* by Caitlan McLean and colleagues, [*The management of cognitive labour in same-gender couples*](https://pmc.ncbi.nlm.nih.gov/articles/PMC10343096/), looked at same-gender couples instead. It's a much smaller study, so read it as a pointer rather than a settled finding.
+Daminger's couples were all heterosexual. A 2023 study in _PLoS One_ by Caitlan McLean and colleagues, [_The management of cognitive labour in same-gender couples_](https://pmc.ncbi.nlm.nih.gov/articles/PMC10343096/), looked at same-gender couples instead. It's a much smaller study, so read it as a pointer rather than a settled finding.
 
 They didn't split cognitive labour evenly either. What changed was the basis for the split: these couples divided it by task preference, by what each person was better at, and by how the relationship worked, rather than along gender lines.
 
@@ -51,7 +57,7 @@ Four reasons, none of which need anyone to be acting in bad faith.
 
 **Asking costs more than doing.** Explaining what needs doing, to what standard and by when, often takes longer than the job. So on the day, doing it yourself is faster. Over a year, explaining it once is what saves you the time.
 
-Sociologists have a broader name for this. Unpaid work at home stops counting as work at all, because nobody pays for it. Arlene Kaplan Daniels made that argument in [*Invisible Work*](https://academic.oup.com/socpro/article-abstract/34/5/403/1665982) back in 1987, and we cover it in [invisible labour](/guides/invisible-labor).
+Sociologists have a broader name for this. Unpaid work at home stops counting as work at all, because nobody pays for it. Arlene Kaplan Daniels made that argument in [_Invisible Work_](https://academic.oup.com/socpro/article-abstract/34/5/403/1665982) back in 1987, and we cover it in [invisible labour](/guides/invisible-labor).
 
 ## What it costs
 

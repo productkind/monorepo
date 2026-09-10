@@ -1,9 +1,8 @@
 # My journey from employee to running a business
 
-*I'm adjusting my focus to help you build your own products and use AI tools. Join me as I honestly share my process, so we can learn together.*
+_I'm adjusting my focus to help you build your own products and use AI tools. Join me as I honestly share my process, so we can learn together._
 
-**Date:** July 7, 2026
-**Author:** Kinga Magyar
+**Date:** July 7, 2026 **Author:** Kinga Magyar
 
 ---
 
@@ -127,6 +126,7 @@ Kinga
 2. National Center for Education Statistics — https://nces.ed.gov/programs/digest/d12/tables/dt12_349.asp
 3. Steve Henn: When Women Stopped Coding, NPR — https://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding
 4. Lovable: The build economy a first look — https://thebuildeconomy.lovable.app/
+
 - How to Share Bad News — https://productkind.substack.com/p/how-to-share-bad-news
 - How I Got Into Product Management – and You Can Too — https://productkind.substack.com/p/how-i-got-into-product-management-and-you-can-too
 - The Dilemma of the MVP — https://productkind.substack.com/p/the-dilemma-of-the-mvp

@@ -1,6 +1,6 @@
-import { describe, expect, test } from 'vitest'
-
 import { CAPTION_BAND_HEIGHT, contentRegion, placeMedia } from './safe-zone'
+
+import { describe, expect, test } from 'vitest'
 
 describe('contentRegion', () => {
   test('runs from below the top platform bar to the top of the captions', () => {

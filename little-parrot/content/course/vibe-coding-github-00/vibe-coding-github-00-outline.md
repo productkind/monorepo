@@ -28,6 +28,7 @@ The credit-saving focus is unchanged. The method moved from the GitHub web edito
 ## Structure
 
 ### Challenge 1: Why Edit on Your Own Computer (free)
+
 **See how editing yourself saves credits, and connect your app to GitHub.**
 
 - Comics: Dalmie's credits draining on tiny fixes; Little Parrot offers a workspace on her own computer (excited, not fearful).
@@ -39,6 +40,7 @@ The credit-saving focus is unchanged. The method moved from the GitHub web edito
 - Reflection: what small thing will you change first?
 
 ### Challenge 2: Set Up Your Workspace
+
 **Install the three free tools you need to edit and run your app locally.**
 
 - VS Code (the editor), Node.js (runs your app, gives npm), Git (the version-control engine that talks to GitHub).
@@ -49,6 +51,7 @@ The credit-saving focus is unchanged. The method moved from the GitHub web edito
 - Full click-by-click lives in **Builder's Workspace Setup**.
 
 ### Challenge 3: Run Your App on Your Computer
+
 **Clone your app, install its pieces, and run it locally.**
 
 - Copy the repo's HTTPS link from GitHub.
@@ -59,6 +62,7 @@ The credit-saving focus is unchanged. The method moved from the GitHub web edito
 - Exercise: get the app running, paste the local address.
 
 ### Challenge 4: Change Your Website Copy
+
 **Find and change copy in VS Code, see it update live, and push it back.**
 
 - Open the project folder in VS Code; search across files (Ctrl/Cmd + Shift + F).
@@ -69,6 +73,7 @@ The credit-saving focus is unchanged. The method moved from the GitHub web edito
 - Exercise: make a real copy edit and write the commit message.
 
 ### Challenge 5: Change an Icon
+
 **Swap an icon by renaming it in code, no image upload, no credits.**
 
 - Icons are code (Lovable apps use the Lucide set, e.g. `<Heart />`), not pictures.
@@ -77,6 +82,7 @@ The credit-saving focus is unchanged. The method moved from the GitHub web edito
 - Exercise: swap an icon in their own app.
 
 ### Challenge 6: Make a Bigger Change with Copilot
+
 **Put Copilot to work on your app, review its changes, and recover confidently when something goes wrong.**
 
 - Copilot Free in VS Code: sign-up via the Copilot icon (GitHub login from Challenge 2), open Chat with Ctrl+Alt+I / Ctrl+Cmd+I; the free plan includes ~50 chat requests plus completions monthly, so requests should count.
@@ -88,6 +94,7 @@ The credit-saving focus is unchanged. The method moved from the GitHub web edito
 - Exercise: run a real agent request and report back (AI feedback on the request's specificity and next moves).
 
 ### Challenge 7: Your Workflow
+
 **Know when to edit in VS Code, when to ask Copilot, and when to prompt Lovable.**
 
 - Decision rule: VS Code for small, specific changes; Copilot for fiddly-but-defined changes; Lovable for big new features.

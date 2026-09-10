@@ -5,7 +5,7 @@ Use these links when cross-referencing courses in course content.
 ## Courses
 
 | Course | Directory | URL |
-|--------|-----------|-----|
+| --- | --- | --- |
 | Build Your First App with Lovable | `lovable-intro-00` | `https://littleparrot.app/5e86e580-264c-442c-8cc4-be5645f13e87/course-overview` |
 | Launch and Grow Your Lovable App | `lovable-publishing-00` | `https://littleparrot.app/ff736c4f-8ccc-41b6-96c6-68806804c5d8/course-overview` |
 | Fix Bugs with Confidence: Debugging Your Lovable App | `vibe-coding-debugging-00` | `https://littleparrot.app/aaab45b7-209a-4578-a515-3e55687f0c53/course-overview` |

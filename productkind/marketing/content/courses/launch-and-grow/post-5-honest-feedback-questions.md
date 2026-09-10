@@ -6,28 +6,13 @@ account: little-parrot
 
 # Post 5: Questions that get honest answers
 
-**Pillar:** the method, shown, with the confidence angle.
-**Research trace:** question banks are saveable reference content; the
-audience pre-apologises ("dumb question, but...") and fears judgement, so a
-script that makes feedback conversations feel safe is confidence-by-design;
-follows on from the build-first-app campaign's first-user script post, so the
-two campaigns reinforce each other. Repackages the User Feedback Question
-Bank toolkit item.
+**Pillar:** the method, shown, with the confidence angle. **Research trace:** question banks are saveable reference content; the audience pre-apologises ("dumb question, but...") and fears judgement, so a script that makes feedback conversations feel safe is confidence-by-design; follows on from the build-first-app campaign's first-user script post, so the two campaigns reinforce each other. Repackages the User Feedback Question Bank toolkit item.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Swap-card style: each
-slide shows the polite-but-useless question crossed out and the better
-question beneath it, chat-bubble visual language.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Swap-card style: each slide shows the polite-but-useless question crossed out and the better question beneath it, chat-bubble visual language.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -39,10 +24,7 @@ question beneath it, chat-bubble visual language.
 | 6 | Five small avatars, three highlighted | "Then look for patterns, after 3 to 5 conversations. Three people mention the same problem? Fix it. One person? Note it and wait. Several describe the same struggle in different words? That's your strongest signal." |
 | 7 (CTA) | Brand card | "Listen, write it down, and don't defend your app while they talk. The full question bank (20+ questions, grouped by what you're trying to learn) is in Launch and Grow Your Lovable App, on LittleParrot.app. First challenge free 🟪 Save this 🔖" |
 
-**Alt text (for the post):** A question-swap carousel for user feedback:
-replace yes/no questions with walkthroughs, hypotheticals with real
-memories, answer questions with questions, ask what users would miss if the
-app disappeared, and look for patterns across three to five conversations.
+**Alt text (for the post):** A question-swap carousel for user feedback: replace yes/no questions with walkthroughs, hypotheticals with real memories, answer questions with questions, ask what users would miss if the app disappeared, and look for patterns across three to five conversations.
 
 ## Caption (exact)
 
@@ -56,7 +38,4 @@ The full question bank comes with our Launch and Grow Your Lovable App course. F
 
 Save this for your next user conversation. 🔖
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #lovable #userresearch #womenintech #buildinpublic #aitools #femalefounder #learnwithai #techforwomen #appbuilding
+. . . #vibecoding #buildwithai #womenwhobuild #lovable #userresearch #womenintech #buildinpublic #aitools #femalefounder #learnwithai #techforwomen #appbuilding

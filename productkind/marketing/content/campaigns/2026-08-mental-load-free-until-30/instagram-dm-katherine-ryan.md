@@ -1,7 +1,9 @@
 # Instagram DM to Katherine Ryan
+
 Sent from @by_productkind account
 
 ## Message
+
 Hi Katherine,
 
 I’m Kinga, founder of Little Parrot and a longtime admirer of your work. I was in the third row when you performed in Lisbon in 2024, and I love how candid and nuanced you are on your podcasts.
@@ -16,5 +18,4 @@ You build two iPhone voice shortcuts that use the AI already on your phone: one 
 
 If you think it could help other mums too, I’d be very grateful if you shared it.
 
-I look forward to First Born Daughter! 💛
-Kinga
+I look forward to First Born Daughter! 💛 Kinga

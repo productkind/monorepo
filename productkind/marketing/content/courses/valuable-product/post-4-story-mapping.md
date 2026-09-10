@@ -6,28 +6,13 @@ account: little-parrot
 
 # Post 4: Activities, steps, details, and the MVP line
 
-**Pillar:** the method, shown (PM expertise, shared).
-**Research trace:** "break a feature into testable steps" is our clearest
-comprehension miss across courses, and story mapping is the framework that
-teaches it; the map is what makes one-feature-at-a-time prompting possible
-(the credit-saving habit); teaches the real PM term (user story mapping)
-with a plain structure. Repackages the Map Your Idea into Buildable
-Steps toolkit item.
+**Pillar:** the method, shown (PM expertise, shared). **Research trace:** "break a feature into testable steps" is our clearest comprehension miss across courses, and story mapping is the framework that teaches it; the map is what makes one-feature-at-a-time prompting possible (the credit-saving habit); teaches the real PM term (user story mapping) with a plain structure. Repackages the Map Your Idea into Buildable Steps toolkit item.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Sticky-note style: a
-wall of sticky notes building up layer by layer, colour-coded per layer
-(activities, steps, details), the Book Club Organiser as the example.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Sticky-note style: a wall of sticky notes building up layer by layer, colour-coded per layer (activities, steps, details), the Book Club Organiser as the example.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -39,10 +24,7 @@ wall of sticky notes building up layer by layer, colour-coded per layer
 | 6 | A horizontal line drawn across the wall | "Then the most satisfying move in product planning: draw one horizontal line across the map. Above the line: your first version. Below: everything that can wait. You've scoped an MVP." |
 | 7 (CTA) | Brand card, the mapped wall complete | "The full cheat sheet with common mistakes is in Build a Valuable Product: How to Break Down Your Idea for Vibe Coding, on LittleParrot.app. First challenge free 🟪 Save this 🔖" |
 
-**Alt text (for the post):** A user story mapping carousel: activities
-across the top, steps beneath each activity, buildable details at the
-bottom, every note written from the user's perspective, and a horizontal
-line separating the first version from later work.
+**Alt text (for the post):** A user story mapping carousel: activities across the top, steps beneath each activity, buildable details at the bottom, every note written from the user's perspective, and a horizontal line separating the first version from later work.
 
 ## Caption (exact)
 
@@ -56,7 +38,4 @@ The full cheat sheet comes with Build a Valuable Product: How to Break Down Your
 
 Save this for planning day. 🔖
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #productmanagement #shebuilds #womenintech #techforwomen #productthinking #appbuilding #mvp #learnwithai #userstorymapping
+. . . #vibecoding #buildwithai #womenwhobuild #productmanagement #shebuilds #womenintech #techforwomen #productthinking #appbuilding #mvp #learnwithai #userstorymapping

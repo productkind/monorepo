@@ -6,8 +6,7 @@ account: kinga
 
 # LinkedIn - Little Parrot
 
-Post from Kinga's profile. New course announcement, value-first.
-Course overview link with `?ref=linkedin`.
+Post from Kinga's profile. New course announcement, value-first. Course overview link with `?ref=linkedin`.
 
 ---
 
@@ -17,10 +16,7 @@ Several of our learners have asked how to level up their vibe coding: how to con
 
 The real barrier is the setup. Editing on your own computer means installing a handful of tools, and if you've never used them before, that list can feel intimidating. We didn't want that to lock anyone out.
 
-So our newest course walks you through 
-🛠️ setting up your builder's workspace, 
-💻 making changes by hand in a code editor, and 
-🤖 using GitHub Copilot, which has a free tier. 
+So our newest course walks you through 🛠️ setting up your builder's workspace, 💻 making changes by hand in a code editor, and 🤖 using GitHub Copilot, which has a free tier.
 
 One thing you notice quickly: editing with an AI agent that changes your files directly is far faster than copying answers back and forth from a chat assistant like ChatGPT or Claude.ai. And the same approach works on any document you write, not only code, so this is a first step to creating and editing everything faster.
 

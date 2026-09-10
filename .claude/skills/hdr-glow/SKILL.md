@@ -5,9 +5,10 @@ description: Make a logo or image glow on HDR/EDR displays (Mac XDR, iPhone) by 
 
 ## HDR glow
 
-Turn a normal SDR logo or image into one that **glows on HDR/EDR displays** (Apple XDR/Liquid Retina Macs, recent iPhones, HDR browsers). The pixels are re-encoded so bright areas sit *above* SDR white, and the file carries the `Rec2020 Gamut with PQ Transfer` ICC profile so macOS, Safari and Preview render it as HDR. Everywhere HDR isn't supported it degrades gracefully to a normal image.
+Turn a normal SDR logo or image into one that **glows on HDR/EDR displays** (Apple XDR/Liquid Retina Macs, recent iPhones, HDR browsers). The pixels are re-encoded so bright areas sit _above_ SDR white, and the file carries the `Rec2020 Gamut with PQ Transfer` ICC profile so macOS, Safari and Preview render it as HDR. Everywhere HDR isn't supported it degrades gracefully to a normal image.
 
 Reach for this when:
+
 - You want a brand logo or social-share graphic to light up in a feed or on a Mac.
 - You're matching the effect of an existing HDR asset (the reference this was built from was `productkind/video-generator/public/social-012/metaview_technologies_logo.jpeg`).
 
@@ -20,6 +21,7 @@ Reach for this when:
 Run from this skill's base directory.
 
 **1. `scripts/glow.sh` — one command, SVG or raster in.**
+
 ```
 scripts/glow.sh <input.svg|png|jpg> [options]
   -o FILE     output (default <name>-hdr-glow-<peak>.jpg in the cwd)
@@ -35,7 +37,7 @@ scripts/glow.sh <input.svg|png|jpg> [options]
 ### Modes and the peak
 
 | Want | Use |
-|------|-----|
+| --- | --- |
 | Only the coloured gradients glow, white/black stay normal | `-m gradient` (default) |
 | White backgrounds glow too (whole tile lights up) | `-m all` |
 | Gentle, tasteful glow | `-p 1000` (default) |
@@ -50,14 +52,17 @@ scripts/glow.sh <input.svg|png|jpg> [options]
 The glow only shows on an **EDR/XDR display**, in **Safari, Chrome, Preview or Finder Quick Look**, at a decent screen brightness. It cannot appear on an SDR screen, in a screenshot, or in most image tools — so don't judge it by a thumbnail.
 
 Confirm an output is encoded right without an HDR screen:
+
 ```
 sips -g profile out.jpg            # -> "Rec2020 Gamut with PQ Transfer"
 ```
+
 For a live side-by-side (SDR vs HDR) on your own Mac, publish an HTML page that inlines the JPEGs as data URIs and open it in Safari (that's how these were reviewed).
 
 ### Where finished logos live
 
 These are brand assets, not course assets, so they sit with the other logos:
+
 - productkind set: `productkind/assets/dist/logo-*-hdr-glow-<peak>.jpg`
 - Little Parrot set: `little-parrot/assets/src/logo-*-hdr-glow-<peak>.jpg`
 

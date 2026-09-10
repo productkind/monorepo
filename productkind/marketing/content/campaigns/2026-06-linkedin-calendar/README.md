@@ -4,10 +4,10 @@
 
 The spine of the month is the evolution of how I work with AI: from copying answers out of a chat, to using projects, to Claude Code editing my real files with every change visible. Each post comes from something that genuinely happened or a view I actually hold. No self-promotion, no "look how smart I am".
 
-**Cadence:** 3x/week (Mon / Wed / Fri), 13 posts, Wed 3 Jun → Wed 1 Jul.
-**Format:** 90–200 words, personal tone-of-voice. British English, no hashtags, no em dashes. Links (if any) in the post body, never the first comment.
+**Cadence:** 3x/week (Mon / Wed / Fri), 13 posts, Wed 3 Jun → Wed 1 Jul. **Format:** 90–200 words, personal tone-of-voice. British English, no hashtags, no em dashes. Links (if any) in the post body, never the first comment.
 
 **Authenticity filter (governs every post):** see [`productkind/marketing/channels/linkedin/how-to-be-authentic.md`](../../../channels/linkedin/how-to-be-authentic.md). In practice:
+
 - Start from a genuine, specific moment (a real person, number, or thing that happened), not a post idea worked backwards.
 - Write like a note to a trusted colleague, then edit for clarity, not polish.
 - Resist the standard template (punchy opener → whitespace → numbered list → engagement CTA). Let a thought be a paragraph.
@@ -18,7 +18,7 @@ The spine of the month is the evolution of how I work with AI: from copying answ
 ## Schedule
 
 | # | Date | Title / angle | Transferable tip | Status |
-|---|------|---------------|------------------|--------|
+| --- | --- | --- | --- | --- |
 | 01 | Wed 3 Jun | My AI workflow evolved: chat → projects → Claude Code | The upgrade that matters: a tool that edits your real files and shows every change | ✅ drafted |
 | 02 | Fri 5 Jun | I stopped re-explaining myself to AI | Capture a repeated prompt as a reusable instruction, not a one-off chat | ✅ drafted |
 | 03 | Mon 8 Jun | The fix wasn't a better prompt | Build a staged pipeline with a checkpoint between each step | ✅ drafted |
@@ -36,6 +36,7 @@ The spine of the month is the evolution of how I work with AI: from copying answ
 ## Narrative spine
 
 Posts 01 and 08 carry the tooling story:
+
 - **01** tells the journey (chat assistant → projects → AI agent / Claude Code) and introduces change management: you can see exactly what changed.
 - **08** dramatises the risk that change visibility solves: a chat assistant rewriting something you never asked it to touch.
 

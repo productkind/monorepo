@@ -19,9 +19,10 @@ The course is deliberately small. The learner walks away having actually built b
 
 ## Structure
 
-> **Scope update (2026-07-27):** This course was substantially reworked during on-device testing, and the sections from here down to "Cross-check" reflect the shipped design. In summary: the Brain Dump now uses Apple's **Private Cloud Compute** model (not the ChatGPT app) with a **Dictionary** output to sort speech into **fixed category checklist notes** (Logistics, Food & Household, Misc) inside a shared **Mental Load folder**, via per-category *Get Dictionary Value → Combine Text → Find Notes → Append Checklist Item*, wrapped in an *If (Dictated Text has any value)* guard so an empty tap does nothing (otherwise the forced Dictionary output makes the model invent a phantom list). Calendar and Reminders routing were both dropped (date parsing too brittle; undated reminders added little). A new **Challenge 2, "Share the Load,"** was added, and the course's real point is now making the invisible mental load **visible and shareable with a partner**. The **Cross-check** and **Verification Handoff** sections further below are the original pre-generation record, left as history; they describe the old ChatGPT-app / Calendar-Reminders design and no longer match the course.
+> **Scope update (2026-07-27):** This course was substantially reworked during on-device testing, and the sections from here down to "Cross-check" reflect the shipped design. In summary: the Brain Dump now uses Apple's **Private Cloud Compute** model (not the ChatGPT app) with a **Dictionary** output to sort speech into **fixed category checklist notes** (Logistics, Food & Household, Misc) inside a shared **Mental Load folder**, via per-category _Get Dictionary Value → Combine Text → Find Notes → Append Checklist Item_, wrapped in an _If (Dictated Text has any value)_ guard so an empty tap does nothing (otherwise the forced Dictionary output makes the model invent a phantom list). Calendar and Reminders routing were both dropped (date parsing too brittle; undated reminders added little). A new **Challenge 2, "Share the Load,"** was added, and the course's real point is now making the invisible mental load **visible and shareable with a partner**. The **Cross-check** and **Verification Handoff** sections further below are the original pre-generation record, left as history; they describe the old ChatGPT-app / Calendar-Reminders design and no longer match the course.
 
 ### 1. The Brain Dump
+
 **Build a shortcut that sorts a spoken brain dump into shared category checklists.**
 
 The hook: by the end, the learner has a working shortcut and a set of category notes filling with tickable checklist items.
@@ -40,6 +41,7 @@ The hook: by the end, the learner has a working shortcut and a set of category n
 - Exercise: run your own brain dump once and watch it sort
 
 ### 2. Share the Load
+
 **Make the invisible mental load visible, and hand it off to your partner.**
 
 The heart of the course: a list only you can see can't be handed off. This challenge makes sure the lists reach a partner on any phone, framed as offloading, never a shared inbox the mum has to feed. The iPhone folder-share itself now happens back in Challenge 1 (in the make-your-category-notes step), so this challenge recaps that and adds the route for a partner who is not on an iPhone.
@@ -51,14 +53,15 @@ The heart of the course: a list only you can see can't be handed off. This chall
 - Exercise: do a brain dump and check it reaches the partner (shared folder, or the WhatsApp message)
 
 ### 3. The Baby Log
+
 **Reuse the same pattern to keep a running, timestamped record of your baby's day.**
 
-Faster than the earlier challenges because the learner already knows the building blocks. This challenge teaches the *pattern* (dictate → ask AI → save), not a one-off.
+Faster than the earlier challenges because the learner already knows the building blocks. This challenge teaches the _pattern_ (dictate → ask AI → save), not a one-off.
 
 - Why a log helps: foggy-brain days, spotting patterns, and having something concrete to show the doctor or health visitor without having to use your hands when you're feeding or measuring your baby
 - Build the second shortcut:
   - Make the running "Baby Log" note first, and turn on the **ChatGPT** extension (free, no download, no account needed to enable)
-  - Dictate what just happened, then **Current Date → Format Date** (short date + time) *before* the model, so the time can be fed into the prompt as a reference
+  - Dictate what just happened, then **Current Date → Format Date** (short date + time) _before_ the model, so the time can be fed into the prompt as a reference
   - Use Model set to **ChatGPT** (device-validated as the recommended model here: it lays out neat, categorised lines, which Private Cloud Compute formats less reliably; PCC offered as a fully private fallback) with a supplied **parser prompt** that splits the ramble into one line per activity, each stamped with the date+time and a bold category (Feed, Nappy, Nap, Mood, Weight, Milestone, Note)
   - Find Notes + **Append to Note** (the model's Response) into the one running "Baby Log" note; entries stack newest-last, each line self-dated
 - The parser prompt is the takeaway tool: it turns messy speech ("she woke up grumpy, weighed 4.5 kg, ate 60 ml") into clean, categorised, timestamped lines
@@ -67,6 +70,7 @@ Faster than the earlier challenges because the learner already knows the buildin
 - Exercise: log two or three things across an afternoon and scroll back over them
 
 ### 4. Make It Effortless
+
 **Set the shortcuts up so you can fire them one-handed, or even handless, in any language, without thinking.**
 
 A short closing challenge that removes the last bits of friction and sends the learner off.
@@ -118,7 +122,7 @@ Total estimated time: ~24 minutes across four short challenges (Brain Dump ~6, S
 - **Smart Brain Dump** — Challenge 1. Kept in full, including routing to Calendar / Reminders / Notes and the Siri/Action Button trigger.
 - **Baby Log** — Challenge 2. Kept in full, including the timestamped running note and sharing with the doctor.
 - **"Use dictation for everything"** — built into both shortcuts; reinforced in Challenge 3 (any language).
-- **"Break down large tasks and fit pieces into your schedule"** — *partially in scope.* The brain dump captures these tasks; actually breaking one down is handled in a normal ChatGPT chat, mentioned briefly in Challenge 3 as a pointer. Kept light on purpose so the course stays short. Flag for the user: drop it entirely if it muddies the concision.
+- **"Break down large tasks and fit pieces into your schedule"** — _partially in scope._ The brain dump captures these tasks; actually breaking one down is handled in a normal ChatGPT chat, mentioned briefly in Challenge 3 as a pointer. Kept light on purpose so the course stays short. Flag for the user: drop it entirely if it muddies the concision.
 - **"No subscription needed"** — premise to verify (free ChatGPT app + its Shortcuts action). See Verification handoff.
 - **"Notes with different notes, e.g. shopping list"** — simplified. Challenge 1 routes non-event, non-to-do items to Notes; splitting across several named notes (shopping vs other) is left as an optional tweak, not core, to keep the build simple.
 - **References (How I AI episode, Figma files)** — source material for the idea, not course content.
@@ -128,6 +132,7 @@ Total estimated time: ~24 minutes across four short challenges (Brain Dump ~6, S
 ## Verification Handoff
 
 ### Challenge 1: The 60-Second Brain Dump
+
 - **Tools taught:**
   - ChatGPT iOS app: install, sign in with a free account, and use it as a Shortcuts action.
   - Shortcuts app: build a shortcut using Dictate Text → an "Ask ChatGPT"/ChatGPT action → Add New Event (Calendar), Add Reminder (Reminders), and a Notes action.
@@ -141,6 +146,7 @@ Total estimated time: ~24 minutes across four short challenges (Brain Dump ~6, S
 - **Premise risk:** The whole course rests on a free ChatGPT account being usable from inside Shortcuts and on the routing being reliable enough for a non-technical first-timer. If the free app has no Shortcuts action, or it needs Plus, the angle ("already on your phone, no subscription") breaks and needs reframing. Confirm before generation.
 
 ### Challenge 2: The Baby Log
+
 - **Tools taught:**
   - Shortcuts: Dictate Text → ChatGPT action → append a timestamped line to one running note in Notes.
   - Notes: maintaining one running note that entries append to.
@@ -151,6 +157,7 @@ Total estimated time: ~24 minutes across four short challenges (Brain Dump ~6, S
 - **Premise risk:** Same free-ChatGPT-action dependency as Challenge 1. No new premise.
 
 ### Challenge 3: Make It Effortless
+
 - **Tools taught:**
   - Shortcuts triggers: Add to Home Screen, Add to Lock Screen, Back Tap (Settings → Accessibility → Touch), and the Action Button.
   - Dictation in non-English languages via Dictate Text / the keyboard dictation language.

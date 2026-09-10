@@ -1,4 +1,5 @@
 # SheBuilds Hackathon — Discord Channel Analysis
+
 ## #participants-alumni | June 21, 2026
 
 ---
@@ -92,6 +93,7 @@ Participants began prompting Lovable immediately at the 2 PM UTC kick-off (or ev
 Several shared that they were "front-loading" heavy work on Day 1: "Phew. Tbf, I am front-loading a lot of grunt work to today so it may slow down."
 
 A number of participants had to start over:
+
 - "It took me about 3 iterations for the design to land something passable, I started a different project totally fresh to see the difference." — Srklipsey
 - "This is me and Lovable discussing vector vs. AI rich images — I just went ahead and started over." — Dr. Tracie Q. Gilbert
 - "I am not doing too bad but I keep finding data gaps and haven't settled on a design I like." — Josephina Bonetto

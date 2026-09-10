@@ -1,7 +1,7 @@
-import { z } from 'zod'
-import { visualControl } from '@remotion/studio'
-
 import type { Visual } from '../narration/definition'
+
+import { visualControl } from '@remotion/studio'
+import { z } from 'zod'
 
 /**
  * Studio-only sliders for the knobs that decide whether a gif sits in its slot.

@@ -6,15 +6,9 @@ account: productkind
 
 # Intro TikTok — captions
 
-Brand: productkind (build-in-public) · Source: `script.md` · Destination:
-Little Parrot free challenges and toolkits at littleparrot.app (on TikTok the
-link lives in the pinned comment until 1,000 followers).
+Brand: productkind (build-in-public) · Source: `script.md` · Destination: Little Parrot free challenges and toolkits at littleparrot.app (on TikTok the link lives in the pinned comment until 1,000 followers).
 
-Scoped to TikTok (primary) and Instagram Reels (cross-post) for the launch.
-Threads, LinkedIn and YouTube Shorts are intentionally omitted for this piece.
-Passed the caption-critic (round 3, after reframing the headline to possibility:
-helping women build what felt impossible before AI, with fear and automation as
-supporting themes).
+Scoped to TikTok (primary) and Instagram Reels (cross-post) for the launch. Threads, LinkedIn and YouTube Shorts are intentionally omitted for this piece. Passed the caption-critic (round 3, after reframing the headline to possibility: helping women build what felt impossible before AI, with fear and automation as supporting themes).
 
 ## TikTok (video; one account, no founder comments)
 

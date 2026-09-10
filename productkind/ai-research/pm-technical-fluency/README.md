@@ -1,12 +1,11 @@
 # PM technical-fluency research
 
-Research into what non-technical, generalist software Product Managers want to
-understand or become able to do technically.
+Research into what non-technical, generalist software Product Managers want to understand or become able to do technically.
 
 ## Files
 
 | File | What it contains |
-|---|---|
+| --- | --- |
 | `non-technical-pm-technical-needs-2024-2026.md` | The original needs research: situations, pains, desired outcomes, recurring concepts and PM language |
 | `non-technical-pm-technical-needs-validation-2026-08.md` | Additional first-person evidence, identity screening, source-by-need matrix and saturation analysis |
 | `pm-technical-fluency-interview-survey-pack-2026-08.md` | Interview and survey materials for testing the ranking outside self-selected technical-skills discussions |
@@ -22,5 +21,4 @@ understand or become able to do technically.
 | `outputs/01a033b6-25b5-7020-b6ae-58bf9f1895d4/pm-technical-fluency-google-trends-data.xlsx` | Seven-sheet Google Trends workbook with Datasets A–D, run metadata and the data-quality log |
 | `outputs/01a033b6-25b5-7020-b6ae-58bf9f1895d4/google-trends-data/` | The four CSV datasets, run metadata, collection manifest, quality note and cached run-level evidence |
 
-The collection and audit scripts remain in
-`../../marketing/channels/niche-research-tools/`.
+The collection and audit scripts remain in `../../marketing/channels/niche-research-tools/`.

@@ -39,13 +39,13 @@ Google Trends initially rate-limited the research script, but a later five-year 
 
 A five-year UK Google Web Search comparison was run for `lovable`, `claude code`, `product validation`, `lead magnet` and `product management ai`. The full output and interpretation are in [google-trends-2026-08-19.md](google-trends-2026-08-19.md).
 
-| Term | Peak | Five-year mean | First-third average | Last-third average |
-|---|---:|---:|---:|---:|
-| lovable | 26 | 4.2 | 1.0 | 10.6 |
-| claude code | 100 | 10.7 | 0.0 | 32.0 |
-| product validation | 2 | 0.2 | 0.0 | 0.6 |
-| lead magnet | 2 | 0.3 | 0.1 | 0.5 |
-| product management ai | 5 | 0.5 | 0.0 | 1.4 |
+| Term                  | Peak | Five-year mean | First-third average | Last-third average |
+| --------------------- | ---: | -------------: | ------------------: | -----------------: |
+| lovable               |   26 |            4.2 |                 1.0 |               10.6 |
+| claude code           |  100 |           10.7 |                 0.0 |               32.0 |
+| product validation    |    2 |            0.2 |                 0.0 |                0.6 |
+| lead magnet           |    2 |            0.3 |                 0.1 |                0.5 |
+| product management ai |    5 |            0.5 |                 0.0 |                1.4 |
 
 The result strengthens the timing case for Lovable and Claude Code: both show substantial recent growth, with Claude Code rising fastest. Lovable's related searches included GitHub and Supabase, which supports the ownership, integration and post-prototype problems found in learner feedback. Claude Code related searches were dominated by setup, GitHub, pricing, documentation and general learning.
 
@@ -98,7 +98,7 @@ The evidence therefore supports this conclusion:
 Autocomplete is evidence that a phrase or close variant is searched, not evidence of monthly volume. Zero suggestions do not prove zero demand.
 
 | Candidate | Meaningful autocomplete signals | Weak or absent exact signals | Demand reading |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Lovable prototype to production | “how to launch lovable app”, “connect stripe to lovable”, “lovable design prompts” | Most long production-readiness phrases | Individual tasks have demand; the umbrella outcome is not established |
 | Lovable to Claude Code | “lovable to claude code”, “claude code with lovable”, “connect lovable to github”, “lovable vs claude code”, “claude code for non coders”, “claude code for beginners” | Few gaps in the main transition vocabulary | Strongest visible autocomplete demand |
 | Evidence-safe AI for PMs | “ai for user research”, “ai qualitative data analysis”, “ai user story generator”, “ai prompts for product managers” | Traceable-evidence and verification-specific phrases | Broad category demand; narrow differentiated demand is unproven |
@@ -125,7 +125,7 @@ This candidate produced the clearest exact autocomplete phrases. It also had the
 
 Lovable provides comprehensive [GitHub integration documentation](https://docs.lovable.dev/integrations/github). Lovable Labs also maintains an official [Claude Code integration and command set](https://github.com/lovablelabs/mcp/blob/main/CLAUDE.md), which may make today's migration pain easier and reduce the shelf life of a standalone course.
 
-Community questions still reveal a useful problem. One [migration question](https://www.reddit.com/r/ClaudeCode/comments/1ss5axc/has_anyone_here_migrated_a_real_lovable_project/) asks how to avoid breaking authentication, secrets, payments and integrations and whether to migrate or rebuild. A [beginner-guide discussion](https://www.reddit.com/r/lovable/comments/1s0h6qo/would_a_stepbystep_guide_for_moving_from_lovable/) says existing guides assume knowledge of Git, Node and terminal commands. A newsletter called *Claude Code for Non-Coders* [reported passing 25,000 subscribers](https://www.linkedin.com/posts/danieleugenewilliams_claude-code-for-non-coders-just-crossed-25000-activity-7453235277759807490-9Wjk), which is a strong interest signal but also evidence of active supply.
+Community questions still reveal a useful problem. One [migration question](https://www.reddit.com/r/ClaudeCode/comments/1ss5axc/has_anyone_here_migrated_a_real_lovable_project/) asks how to avoid breaking authentication, secrets, payments and integrations and whether to migrate or rebuild. A [beginner-guide discussion](https://www.reddit.com/r/lovable/comments/1s0h6qo/would_a_stepbystep_guide_for_moving_from_lovable/) says existing guides assume knowledge of Git, Node and terminal commands. A newsletter called _Claude Code for Non-Coders_ [reported passing 25,000 subscribers](https://www.linkedin.com/posts/danieleugenewilliams_claude-code-for-non-coders-just-crossed-25000-activity-7453235277759807490-9Wjk), which is a strong interest signal but also evidence of active supply.
 
 **Verdict:** do not lead with a general course. Use “Should I stay in Lovable or move to Claude Code?” as a decision resource and make the safe transition an advanced branch of the production product.
 
@@ -160,7 +160,7 @@ The audience also tends to seek a quick verdict or idea generator, while Little 
 These scores combine the observed evidence. They are not final because the volume gate has not been run.
 
 | Candidate | Demand 1–5 | Gap 1–5 | Money 1–5 | Fit 1–5 | Score / 100 | Volume gate | Product gate | Decision |
-|---|---:|---:|---:|---:|---:|---|---|---|
+| --- | --: | --: | --: | --: | --: | --- | --- | --- |
 | Lovable prototype to production | 3 | 3 | 4 | 5 | 71 | Unproven | Pass, 6/6 | First validation test |
 | Lovable to Claude Code | 4 | 2 | 4 | 5 | 71 | Unproven | Pass, 6/6 | Module/advanced product; not broad course |
 | Evidence-safe AI for PMs | 3 | 2 | 5 | 5 | 70 | Unproven | Pass, 6/6 | Test only one precise workflow |
@@ -174,11 +174,11 @@ The equal 71 scores conceal different situations. Candidate 2 has more visible d
 The required sales depend on price:
 
 | Product price | Sales/month for EUR 4,000 | Sales/month for EUR 5,000 |
-|---:|---:|---:|
-| EUR 49 | 82 | 103 |
-| EUR 79 | 51 | 64 |
-| EUR 99 | 41 | 51 |
-| EUR 149 | 27 | 34 |
+| ------------: | ------------------------: | ------------------------: |
+|        EUR 49 |                        82 |                       103 |
+|        EUR 79 |                        51 |                        64 |
+|        EUR 99 |                        41 |                        51 |
+|       EUR 149 |                        27 |                        34 |
 
 For illustration, if Little Parrot captured 15% of a query cluster as targeted site visits and 1% of those visitors purchased, a EUR 99 product would require roughly **27,000–34,000 monthly searches across the attainable cluster**. This is scenario maths, not a conversion benchmark. It excludes tax, refunds, repeat buyers, email conversion, partnerships and branded demand.
 
@@ -226,27 +226,27 @@ Run the workbook's three-cluster test before building the full product.
 
 **Outcome:** know whether a Lovable app is ready for real customers.
 
-1. Complete guide: *How to take a Lovable app from prototype to real customers*.
-2. Checklist: *Is your Lovable app production-ready? A non-technical launch check*.
-3. Troubleshooting resource: *The 12 problems to test before anyone pays for your Lovable app*.
+1. Complete guide: _How to take a Lovable app from prototype to real customers_.
+2. Checklist: _Is your Lovable app production-ready? A non-technical launch check_.
+3. Troubleshooting resource: _The 12 problems to test before anyone pays for your Lovable app_.
 4. Product page: the full production path at a visible intended price of **EUR 99**.
 
 ### Cluster B — demand-heavy alternative
 
 **Outcome:** decide when and how to move beyond Lovable.
 
-1. Complete guide: *Lovable to Claude Code: the safe path for a non-coder*.
-2. Decision tool: *Stay in Lovable, connect GitHub or move to Claude Code?*
-3. Troubleshooting resource: *How to avoid losing changes between Lovable, GitHub and Claude Code*.
+1. Complete guide: _Lovable to Claude Code: the safe path for a non-coder_.
+2. Decision tool: _Stay in Lovable, connect GitHub or move to Claude Code?_
+3. Troubleshooting resource: _How to avoid losing changes between Lovable, GitHub and Claude Code_.
 4. Product page: a focused advanced path at **EUR 79**.
 
 ### Cluster C — high-value professional alternative
 
 **Outcome:** verify AI analysis against product-research evidence.
 
-1. Complete guide: *How to analyse customer interviews with AI without losing the evidence*.
+1. Complete guide: _How to analyse customer interviews with AI without losing the evidence_.
 2. Template: an evidence table linking every insight to source material.
-3. Troubleshooting resource: *How to catch invented quotes and unsupported themes in AI research summaries*.
+3. Troubleshooting resource: _How to catch invented quotes and unsupported themes in AI research summaries_.
 4. Product page: a workflow and toolkit at **EUR 79**.
 
 Use price-qualified calls to action. A generic free waitlist will measure curiosity, not willingness to pay.

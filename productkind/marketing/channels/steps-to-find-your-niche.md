@@ -27,11 +27,11 @@ Begin with:
 
 Good starting markets tend to contain at least one of these:
 
-* Professionals trying to earn more, save time, or do their jobs better.
-* Businesses buying software, services, training, or equipment.
-* Consumers making expensive or confusing purchasing decisions.
-* Hobbyists who repeatedly buy tools, supplies, upgrades, or education.
-* People seeking qualifications, career advancement, or specialized skills.
+- Professionals trying to earn more, save time, or do their jobs better.
+- Businesses buying software, services, training, or equipment.
+- Consumers making expensive or confusing purchasing decisions.
+- Hobbyists who repeatedly buy tools, supplies, upgrades, or education.
+- People seeking qualifications, career advancement, or specialized skills.
 
 Use this niche statement:
 
@@ -39,10 +39,10 @@ Use this niche statement:
 
 For example:
 
-* Too broad: “Artificial intelligence”
-* Better: “AI tools”
-* Better again: “AI workflows for product managers”
-* Strong micro-niche: “AI workflows for B2B product managers who need to produce PRDs, research summaries, and stakeholder updates faster”
+- Too broad: “Artificial intelligence”
+- Better: “AI tools”
+- Better again: “AI workflows for product managers”
+- Strong micro-niche: “AI workflows for B2B product managers who need to produce PRDs, research summaries, and stakeholder updates faster”
 
 Run every potential market through five questions:
 
@@ -77,16 +77,16 @@ For each market, generate queries using these patterns:
 
 For example, from “AI workflows for product managers” you might generate:
 
-* How to write a PRD with AI
-* AI PRD template for B2B SaaS
-* How to summarize user interviews with AI
-* AI competitor analysis workflow for product managers
-* How to create stakeholder updates with AI
-* AI feature-prioritization workflow
-* Prompt library for product managers
-* AI product discovery workflow
-* AI tools for nontechnical product managers
-* How to evaluate AI-generated user stories
+- How to write a PRD with AI
+- AI PRD template for B2B SaaS
+- How to summarize user interviews with AI
+- AI competitor analysis workflow for product managers
+- How to create stakeholder updates with AI
+- AI feature-prioritization workflow
+- Prompt library for product managers
+- AI product discovery workflow
+- AI tools for nontechnical product managers
+- How to evaluate AI-generated user stories
 
 These are **hypotheses**, not yet validated opportunities.
 
@@ -104,19 +104,19 @@ Open YouTube in a logged-out or clean browser session and begin typing your phra
 
 Look for:
 
-* The complete phrase appearing in autocomplete.
-* Multiple variations of the same problem.
-* Modifiers such as “for beginners,” “template,” “example,” “2026,” “for small business,” or a particular profession.
-* Adjacent questions that could become additional videos.
+- The complete phrase appearing in autocomplete.
+- Multiple variations of the same problem.
+- Modifiers such as “for beginners,” “template,” “example,” “2026,” “for small business,” or a particular profession.
+- Adjacent questions that could become additional videos.
 
 Autocomplete is a useful demand signal, but it does not tell you the actual search volume. A phrase appearing once is weaker evidence than a cluster of 10–20 related suggestions.
 
 Try entering:
 
-* The core phrase.
-* The phrase followed by each letter of the alphabet.
-* The phrase followed by “for,” “without,” “vs,” “template,” “review,” “example,” and “problem.”
-* The problem first and the tool second, then reverse the order.
+- The core phrase.
+- The phrase followed by each letter of the alphabet.
+- The phrase followed by “for,” “without,” “vs,” “template,” “review,” “example,” and “problem.”
+- The problem first and the tool second, then reverse the order.
 
 ## Signal B: YouTube Studio Trends
 
@@ -124,11 +124,11 @@ In YouTube Studio, examine **Analytics → Trends**. Depending on your channel a
 
 Search your candidate phrases and record:
 
-* Search interest or popularity level.
-* Related searches.
-* Whether YouTube flags a content gap.
-* Popular existing videos.
-* Whether interest appears concentrated in Shorts or long-form content.
+- Search interest or popularity level.
+- Related searches.
+- Whether YouTube flags a content gap.
+- Popular existing videos.
+- Whether interest appears concentrated in Shorts or long-form content.
 
 If you already have a channel, go to the Reach analytics for your videos. The **Traffic source: YouTube Search** report can show the actual search terms through which viewers discovered your content. ([Google Support][2])
 
@@ -138,18 +138,18 @@ Those real search terms are often more valuable than third-party keyword estimat
 
 Use Google Trends to compare candidate phrases:
 
-* Set the target country or region.
-* Select **YouTube Search** as the search type.
-* Examine both the past 12 months and the past five years.
-* Compare related phrases against one another.
-* Look at regional differences.
-* Examine related and rising queries.
+- Set the target country or region.
+- Select **YouTube Search** as the search type.
+- Examine both the past 12 months and the past five years.
+- Compare related phrases against one another.
+- Look at regional differences.
+- Examine related and rising queries.
 
 Prefer one of these patterns:
 
-* Stable evergreen demand.
-* Gradually rising demand.
-* Predictable seasonal demand with commercial value.
+- Stable evergreen demand.
+- Gradually rising demand.
+- Predictable seasonal demand with commercial value.
 
 Be careful with a phrase showing one enormous spike followed by almost nothing. That may be an event rather than a sustainable niche.
 
@@ -159,10 +159,10 @@ Google Trends data is normalized relative interest, generally presented on a 0�
 
 Search the phrase and look for videos where:
 
-* The channel is relatively small.
-* The video received substantially more views than the channel’s other videos.
-* The video’s views appear large relative to its subscriber base.
-* Several channels have successful videos about the same narrow question.
+- The channel is relatively small.
+- The video received substantially more views than the channel’s other videos.
+- The video’s views appear large relative to its subscriber base.
+- Several channels have successful videos about the same narrow question.
 
 This suggests that the **topic**, rather than merely the creator’s reputation, is attracting viewers.
 
@@ -197,16 +197,16 @@ Create a spreadsheet with these columns:
 
 Treat the following as heuristics, not universal laws:
 
-* Fewer than three of the first 10 results precisely match the query.
-* Results answer a broader question rather than the one searched.
-* Most leading videos are outdated in a rapidly changing category.
-* Videos receive views but have weak production, structure, explanation, or examples.
-* The results target beginners when searchers need an advanced answer, or vice versa.
-* Content is generic and does not address a particular profession, industry, country, device, budget, or use case.
-* Search results are dominated by promotional vendor videos rather than independent explanations.
-* Comments repeatedly ask for templates, examples, updates, comparisons, or follow-up tutorials.
-* A modest channel ranks successfully, indicating that enormous channel authority is not essential.
-* There are individual videos, but no channel or playlist comprehensively owns the subject.
+- Fewer than three of the first 10 results precisely match the query.
+- Results answer a broader question rather than the one searched.
+- Most leading videos are outdated in a rapidly changing category.
+- Videos receive views but have weak production, structure, explanation, or examples.
+- The results target beginners when searchers need an advanced answer, or vice versa.
+- Content is generic and does not address a particular profession, industry, country, device, budget, or use case.
+- Search results are dominated by promotional vendor videos rather than independent explanations.
+- Comments repeatedly ask for templates, examples, updates, comparisons, or follow-up tutorials.
+- A modest channel ranks successfully, indicating that enormous channel authority is not essential.
+- There are individual videos, but no channel or playlist comprehensively owns the subject.
 
 A particularly attractive gap looks like this:
 
@@ -216,9 +216,9 @@ A particularly attractive gap looks like this:
 
 Avoid concluding that a niche is attractive merely because:
 
-* There are few results.
-* Existing videos have few views.
-* No major creator covers the topic.
+- There are few results.
+- Existing videos have few views.
+- No major creator covers the topic.
 
 That can mean there is no demand.
 
@@ -238,28 +238,28 @@ Ask:
 
 A commercially valuable viewer might:
 
-* Buy software through an affiliate link.
-* Download a paid template.
-* Join a course or community.
-* Request consulting, coaching, training, or implementation.
-* Purchase equipment or supplies.
-* Subscribe to a newsletter that later converts.
-* Make the channel attractive to sponsors.
+- Buy software through an affiliate link.
+- Download a paid template.
+- Join a course or community.
+- Request consulting, coaching, training, or implementation.
+- Purchase equipment or supplies.
+- Subscribe to a newsletter that later converts.
+- Make the channel attractive to sponsors.
 
 ## Search phrases with stronger commercial intent
 
 These frequently indicate that the viewer is closer to taking action:
 
-* Best `[product]` for `[use case]`
-* `[Product A]` vs `[Product B]`
-* `[Product]` review
-* `[Product]` alternatives
-* `[Product]` pricing or cost
-* How to set up `[product]`
-* `[Professional task]` template
-* `[Certification]` study plan
-* How to fix `[expensive problem]`
-* `[Software]` workflow for `[profession]`
+- Best `[product]` for `[use case]`
+- `[Product A]` vs `[Product B]`
+- `[Product]` review
+- `[Product]` alternatives
+- `[Product]` pricing or cost
+- How to set up `[product]`
+- `[Professional task]` template
+- `[Certification]` study plan
+- How to fix `[expensive problem]`
+- `[Software]` workflow for `[profession]`
 
 Use Google Ads Keyword Planner as a secondary commercial signal. It provides estimates relating to searches and advertising costs for Google Search campaigns. Therefore, CPC and advertiser competition can indicate that businesses value the audience, but they should **not** be treated as exact YouTube search-volume or YouTube RPM data. ([Google Support][4])
 
@@ -286,12 +286,12 @@ That is another reason to develop a product, affiliate, or lead-generation model
 
 Use four scores from 1 to 5.
 
-| Factor       | Weight | A score of 1                          | A score of 5                                                              |
-| ------------ | -----: | ------------------------------------- | ------------------------------------------------------------------------- |
-| Demand       |    30% | Little evidence of searching          | Multiple query clusters, stable/rising interest, strong platform evidence |
-| Supply gap   |    30% | Excellent recent results dominate     | Few exact answers, outdated or poorly targeted content                    |
-| Monetization |    25% | Advertising is the only option        | Products, affiliates, sponsors, services, and recurring buyer value       |
-| Creator fit  |    15% | Weak credibility or costly production | Strong expertise, differentiated angle, easy repeatable production        |
+| Factor | Weight | A score of 1 | A score of 5 |
+| --- | --: | --- | --- |
+| Demand | 30% | Little evidence of searching | Multiple query clusters, stable/rising interest, strong platform evidence |
+| Supply gap | 30% | Excellent recent results dominate | Few exact answers, outdated or poorly targeted content |
+| Monetization | 25% | Advertising is the only option | Products, affiliates, sponsors, services, and recurring buyer value |
+| Creator fit | 15% | Weak credibility or costly production | Strong expertise, differentiated angle, easy repeatable production |
 
 Calculate:
 
@@ -301,10 +301,10 @@ Maximum score: 100.
 
 Use this operational rule:
 
-* **80–100:** strong candidate for immediate testing.
-* **70–79:** worthwhile validation candidate.
-* **60–69:** test only when you have a significant strategic advantage.
-* **Below 60:** normally reject.
+- **80–100:** strong candidate for immediate testing.
+- **70–79:** worthwhile validation candidate.
+- **60–69:** test only when you have a significant strategic advantage.
+- **Below 60:** normally reject.
 
 Do not let an enormous demand score compensate for terrible competition or weak monetization. All four factors matter.
 
@@ -337,11 +337,11 @@ Five categories multiplied by six formats gives you 30 potential videos.
 
 Reject or broaden the niche when:
 
-* You can only find five interesting questions.
-* Every video would repeat the same answer.
-* The niche depends on one temporary trend.
-* You have no credible way to add new evidence, demonstrations, or experience.
-* It is expensive or impractical to produce the necessary footage.
+- You can only find five interesting questions.
+- Every video would repeat the same answer.
+- The niche depends on one temporary trend.
+- You have no credible way to add new evidence, demonstrations, or experience.
+- It is expensive or impractical to produce the necessary footage.
 
 A strong niche is narrow enough for viewers to understand the channel immediately, but broad enough to support an ongoing publication schedule.
 
@@ -357,12 +357,12 @@ Choose your three highest-scoring micro-niches and publish:
 
 Keep the test controlled:
 
-* Use comparable production quality.
-* Use similar video lengths where the questions warrant it.
-* Give each video an exact primary search query.
-* Do not artificially boost one candidate with paid traffic or unrelated promotion.
-* Give every niche a relevant conversion offer.
-* Track links with separate UTM parameters or landing pages.
+- Use comparable production quality.
+- Use similar video lengths where the questions warrant it.
+- Give each video an exact primary search query.
+- Do not artificially boost one candidate with paid traffic or unrelated promotion.
+- Give every niche a relevant conversion offer.
+- Track links with separate UTM parameters or landing pages.
 
 For a search-focused video:
 
@@ -386,10 +386,10 @@ Communicate the result or transformation. Do not merely repeat the entire title.
 
 Within the first 20–30 seconds:
 
-* Confirm that the video addresses the exact problem.
-* Show or describe the outcome.
-* Establish why your method is credible.
-* Remove unnecessary introductions.
+- Confirm that the video addresses the exact problem.
+- Show or describe the outcome.
+- Establish why your method is credible.
+- Remove unnecessary introductions.
 
 ### Content
 
@@ -399,10 +399,10 @@ Answer the basic query quickly, then provide examples, caveats, demonstrations, 
 
 Match the CTA to the viewer’s current intent:
 
-* Tutorial → template or checklist.
-* Comparison → affiliate link or evaluation guide.
-* Professional workflow → course, training, or consulting.
-* Troubleshooting → diagnostic resource or service.
+- Tutorial → template or checklist.
+- Comparison → affiliate link or evaluation guide.
+- Professional workflow → course, training, or consulting.
+- Troubleshooting → diagnostic resource or service.
 
 YouTube says its search system considers relevance, engagement, and quality. Relevance includes how the title, description, tags, and video content match the search; engagement signals can include watch time associated with the query. ([Google Support][6])
 
@@ -416,17 +416,17 @@ Review each video after approximately 7, 28, and 90 days.
 
 Track:
 
-* Impressions from YouTube Search.
-* Search terms that generated views.
-* Click-through rate.
-* Average view duration and average percentage viewed.
-* Search-view growth over time.
-* Subscribers generated.
-* Comments and follow-up questions.
-* Email sign-ups.
-* Affiliate clicks and sales.
-* Product or service enquiries.
-* Production hours and cost.
+- Impressions from YouTube Search.
+- Search terms that generated views.
+- Click-through rate.
+- Average view duration and average percentage viewed.
+- Search-view growth over time.
+- Subscribers generated.
+- Comments and follow-up questions.
+- Email sign-ups.
+- Affiliate clicks and sales.
+- Product or service enquiries.
+- Production hours and cost.
 
 Avoid choosing the niche based only on total views.
 
@@ -474,19 +474,17 @@ This is a strong signal that the video may become an evergreen search asset.
 
 Create your own equivalent of RPM:
 
-> **Business Revenue per 1,000 Targeted Views**
-> = `(affiliate revenue + product revenue + attributable service revenue) ÷ views × 1,000`
+> **Business Revenue per 1,000 Targeted Views** = `(affiliate revenue + product revenue + attributable service revenue) ÷ views × 1,000`
 
 Also calculate:
 
-> **Gross profit per production hour**
-> = `(attributable revenue − variable production costs) ÷ production hours`
+> **Gross profit per production hour** = `(attributable revenue − variable production costs) ÷ production hours`
 
 Example:
 
-* Niche A generates 40,000 views and €200.
-* Niche B generates 6,000 views and €900.
-* Niche B also produces qualified email subscribers and consulting leads.
+- Niche A generates 40,000 views and €200.
+- Niche B generates 6,000 views and €900.
+- Niche B also produces qualified email subscribers and consulting leads.
 
 Niche B is probably the better business, even though it is the smaller YouTube audience.
 
@@ -504,16 +502,16 @@ Suppose this video wins:
 
 The next cluster could be:
 
-* Best AI user-research workflow for product managers
-* AI user-interview summary template
-* Mistakes when using AI for qualitative research
-* How to remove bias from AI-generated research summaries
-* AI research synthesis: three tools compared
-* From interview transcript to product insights with AI
-* Real product-discovery case study
-* Advanced prompt for categorizing user pain points
-* How to create an opportunity-solution tree from interviews
-* Updated workflow after a major tool change
+- Best AI user-research workflow for product managers
+- AI user-interview summary template
+- Mistakes when using AI for qualitative research
+- How to remove bias from AI-generated research summaries
+- AI research synthesis: three tools compared
+- From interview transcript to product insights with AI
+- Real product-discovery case study
+- Advanced prompt for categorizing user pain points
+- How to create an opportunity-solution tree from interviews
+- Updated workflow after a major tool change
 
 Create a playlist, link the videos to each other, and direct viewers toward a relevant template, email course, or product.
 
@@ -525,12 +523,12 @@ You are trying to become the most complete answer provider for a **problem clust
 
 Use one row for every search phrase:
 
-| Candidate niche        | Search phrase                  | Demand 1–5 | Gap 1–5 | Money 1–5 | Fit 1–5 | Score | Missing content angle | Potential offer   |
-| ---------------------- | ------------------------------ | ---------: | ------: | --------: | ------: | ----: | --------------------- | ----------------- |
-| AI workflows for PMs   | How to write a PRD with AI     |            |         |           |         |       | Real B2B example      | PRD template      |
-| AI workflows for PMs   | AI user-interview synthesis    |            |         |           |         |       | Complete workflow     | Research template |
-| PM career development  | Product manager case interview |            |         |           |         |       | Worked example        | Interview course  |
-| B2B product operations | Product operations templates   |            |         |           |         |       | Downloadable system   | Template bundle   |
+| Candidate niche | Search phrase | Demand 1–5 | Gap 1–5 | Money 1–5 | Fit 1–5 | Score | Missing content angle | Potential offer |
+| --- | --- | --: | --: | --: | --: | --: | --- | --- |
+| AI workflows for PMs | How to write a PRD with AI |  |  |  |  |  | Real B2B example | PRD template |
+| AI workflows for PMs | AI user-interview synthesis |  |  |  |  |  | Complete workflow | Research template |
+| PM career development | Product manager case interview |  |  |  |  |  | Worked example | Interview course |
+| B2B product operations | Product operations templates |  |  |  |  |  | Downloadable system | Template bundle |
 
 Do this for at least 30 serious search phrases before choosing the top three micro-niches.
 
@@ -561,30 +559,30 @@ The positioning could be:
 
 Possible content pillars:
 
-* Product requirements and user stories.
-* User research and discovery.
-* Prioritization and roadmapping.
-* Competitor and market analysis.
-* Stakeholder communication.
-* Prompt testing and output evaluation.
+- Product requirements and user stories.
+- User research and discovery.
+- Prioritization and roadmapping.
+- Competitor and market analysis.
+- Stakeholder communication.
+- Prompt testing and output evaluation.
 
 Possible monetization:
 
-* Product-management prompt and workflow library.
-* PRD, research, and prioritization templates.
-* A focused course.
-* Team workshops and corporate training.
-* Software affiliate partnerships.
-* Sponsorships from product-management or AI tools.
-* Your existing microlearning platform.
+- Product-management prompt and workflow library.
+- PRD, research, and prioritization templates.
+- A focused course.
+- Team workshops and corporate training.
+- Software affiliate partnerships.
+- Sponsorships from product-management or AI tools.
+- Your existing microlearning platform.
 
 This is not yet a validated recommendation. It is a strategically suitable hypothesis because it combines your expertise, a professional audience, recurring problems, and several potential revenue paths.
 
 Your immediate objective should be to identify **three such hypotheses**, score them, and allow a controlled nine-video experiment to choose the winner.
 
-[1]: https://support.google.com/youtube/answer/11962757?co=GENIE.Platform%3DDesktop&hl=en&utm_source=chatgpt.com "Explore trends on YouTube - Computer - YouTube Help"
-[2]: https://support.google.com/youtube/answer/9314355/discover-video-traffic-sources?co=GENIE.Platform%3DDesktop&hl=en-GB&utm_source=chatgpt.com "Understand your YouTube video reach"
-[3]: https://support.google.com/trends/answer/4365533?hl=en&utm_source=chatgpt.com "FAQ about Google Trends data"
-[4]: https://support.google.com/google-ads/answer/7337243?hl=en&utm_source=chatgpt.com "Use Keyword Planner - Google Ads Help"
-[5]: https://support.google.com/youtube/answer/94522?hl=en-GB&utm_source=chatgpt.com "Choose how you want to monetise - YouTube Help - Google Help"
-[6]: https://support.google.com/youtube/answer/16090438?hl=en&utm_source=chatgpt.com "How YouTube search works - YouTube Help - Google Help"
+[1]: https://support.google.com/youtube/answer/11962757?co=GENIE.Platform%3DDesktop&hl=en&utm_source=chatgpt.com 'Explore trends on YouTube - Computer - YouTube Help'
+[2]: https://support.google.com/youtube/answer/9314355/discover-video-traffic-sources?co=GENIE.Platform%3DDesktop&hl=en-GB&utm_source=chatgpt.com 'Understand your YouTube video reach'
+[3]: https://support.google.com/trends/answer/4365533?hl=en&utm_source=chatgpt.com 'FAQ about Google Trends data'
+[4]: https://support.google.com/google-ads/answer/7337243?hl=en&utm_source=chatgpt.com 'Use Keyword Planner - Google Ads Help'
+[5]: https://support.google.com/youtube/answer/94522?hl=en-GB&utm_source=chatgpt.com 'Choose how you want to monetise - YouTube Help - Google Help'
+[6]: https://support.google.com/youtube/answer/16090438?hl=en&utm_source=chatgpt.com 'How YouTube search works - YouTube Help - Google Help'

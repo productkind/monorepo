@@ -1,6 +1,7 @@
 ---
-challenge: "1 - Your First Prompt"
+challenge: '1 - Your First Prompt'
 ---
+
 ## Structure Your Prompts with Markdown
 
 Lovable understands markdown, a simple way to format text that helps it read the structure of your request. You don't need to memorise any of this. Keep this guide open while you write your prompts, and copy the formatting you need.
@@ -17,11 +18,14 @@ Headings break your prompt into clear sections. There are different levels you c
 # Book Club Organiser
 
 ## Design system
+
 ### Colours
+
 - Primary: warm cream (#FDF6E3)
 - Accent: coral (#E07A5F)
 
 ### Typography
+
 - Heading font: Merriweather
 - Body font: Open Sans
 ```
@@ -34,6 +38,7 @@ Use `-` followed by a space to create a list of items that don't need to be in a
 
 ```markdown
 ## Platform requirements
+
 - Mobile-first layout
 - Accessible (WCAG AA compliance)
 ```
@@ -46,6 +51,7 @@ Use `1.` `2.` `3.` followed by a space for steps that happen in a specific order
 
 ```markdown
 ## User flow
+
 1. User opens the app and sees a list of book suggestions
 2. User clicks "Add book" and types the title and a short note
 3. User clicks "Save" and the book appears in the list
@@ -59,6 +65,7 @@ Wrap a word or phrase in `**double asterisks**` to make it bold.
 
 ```markdown
 ## Implementation details
+
 - **No login** required for the first version
 - Store data **locally** for now
 ```
@@ -105,11 +112,11 @@ Links help you point Lovable to visual references, design inspiration, or docume
 ### Quick reference
 
 | What you want | What you type | When to use it |
-|--------------|--------------|----------------|
+| --- | --- | --- |
 | Section heading | `## Your heading` | To separate parts of your prompt (Product overview, User flow, etc.) |
 | Bullet point | `- Your item` | For lists where order doesn't matter (requirements, design details) |
 | Numbered step | `1. First step` | For steps that happen in sequence (user flows) |
 | Bold text | `**important word**` | To highlight key decisions or constraints |
 | Exact value | `` `#FDF6E3` `` | For hex colours, button labels, placeholder text, error messages |
-| Block of exact text | ```` ``` your text ``` ```` | For longer content your app should display (welcome messages, email templates) |
+| Block of exact text | ` ``` your text ``` ` | For longer content your app should display (welcome messages, email templates) |
 | Link | `[text](URL)` | To reference design inspiration or external resources |

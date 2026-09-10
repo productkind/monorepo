@@ -1,34 +1,41 @@
 ---
-challenge: "1 - Your First Prompt"
+challenge: '1 - Your First Prompt'
 ---
+
 ## First Prompt Template
 
 Copy this template, replace the text in brackets with your own idea, and paste it into Lovable. You don't need to fill in every section perfectly. Start with what you know, and refine it later.
 
 ```markdown
 ## Product overview
+
 [What is this app? Describe it in 1-2 sentences. What problem does it solve for your user?]
 
 ## User flow
+
 1. [What does the user see when they first open the app?]
 2. [What's the first thing they do?]
 3. [What happens next?]
 
 ## Platform requirements
+
 - Mobile-first layout
 - Accessible (WCAG AA compliance)
 
 ## Design system
+
 - Brand colours: [your main colour], [your accent colour], [your background colour]
 - Heading font: [e.g. Merriweather, Playfair Display, or leave blank for Lovable to choose]
 - Paragraph font: [e.g. Open Sans, Inter, or leave blank for Lovable to choose]
 - Style: [describe the vibe in 2-3 words, e.g. "warm and friendly", "clean and minimal", "playful and bold"]
 
 ## Implementation details
+
 - No login required for the first version
 - Store data locally for now
 
 ## Target user
+
 [Who is this for? Give them a name and a one-sentence description, e.g. "Sarah, a book club organiser who wants to spend less time on admin and more time reading with friends."]
 ```
 
@@ -38,27 +45,33 @@ This is the prompt Dalmie uses in the course to build the Book Club Organiser. Y
 
 ```markdown
 ## Product overview
+
 A simple app where book club members can suggest books for the group to read next.
 
 ## User flow
+
 1. User opens the app and sees a list of book suggestions
 2. User can add a new suggestion with the book title and a short note about why they recommend it
 
 ## Platform requirements
+
 - Mobile-first layout
 - Accessible (WCAG AA compliance)
 
 ## Design system
+
 - Brand colours: warm cream (#FDF6E3), deep brown (#5C4033), coral (#E07A5F)
 - Heading font: Merriweather
 - Paragraph font: Open Sans
 - Style: cosy, bookish, friendly
 
 ## Implementation details
+
 - No login required for the first version
 - Store data locally for now
 
 ## Target user
+
 Sarah, a book club organiser who wants to spend less time on admin and more time reading with friends.
 ```
 

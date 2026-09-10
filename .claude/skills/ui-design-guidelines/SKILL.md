@@ -27,6 +27,7 @@ When designing any component, ask: "What should users see first, second, third?"
 **Use 3-5 colours maximum.** More creates visual noise.
 
 Pick:
+
 - 1 primary brand colour
 - 1-2 accent colours (for states, highlights, or semantic meaning)
 - 2-3 neutrals (white, near-black, greys)
@@ -63,6 +64,7 @@ Pick:
 **When something looks off, try removing elements before adding new ones.**
 
 Common things to remove:
+
 - Redundant labels (if hierarchy is clear, you don't need "Title:" above a title)
 - Decorative elements that don't serve a purpose
 - Borders and dividers when whitespace can do the job
@@ -77,6 +79,7 @@ Good design is often defined by what you choose not to include.
 **Interactive elements must look interactive.** Buttons should look clickable (background colour, border, shadow). Text links should be underlined or coloured. Inputs should have visible borders or backgrounds.
 
 **Every action needs feedback:**
+
 - Hover states for clickable elements
 - Loading states for async operations
 - Success/error states after form submissions
@@ -116,6 +119,7 @@ Inconsistency makes users think. Consistency lets them focus on their task.
 ## 9. The Squint Test
 
 **Squint at your design until it's blurry.** You should still be able to see:
+
 - The visual hierarchy (what's most prominent)
 - Distinct regions and groupings
 - Where the primary action is
@@ -127,12 +131,14 @@ If it looks like uniform grey mush, the hierarchy needs work.
 ## 10. Semantic HTML and Accessibility
 
 **Use the right HTML element for the job:**
+
 - `<button>` for actions, `<a>` for navigation
 - `<h1>` through `<h6>` in order (never skip levels)
 - `<main>`, `<nav>`, `<header>`, `<footer>` for landmarks
 - `<ul>`/`<ol>` for lists
 
 **Accessibility basics:**
+
 - Alt text for images (unless purely decorative)
 - Sufficient colour contrast (4.5:1 for normal text, 3:1 for large text)
 - Focus states for keyboard navigation
@@ -160,6 +166,7 @@ Before considering a UI complete, verify:
 ## References
 
 These guidelines are distilled from:
+
 - Gestalt principles of visual perception (proximity, similarity, hierarchy)
 - Typography best practices (Butterick's Practical Typography)
 - Refactoring UI by Adam Wathan and Steve Schoger

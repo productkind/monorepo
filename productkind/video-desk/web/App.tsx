@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react'
-
 import type { Section, VideoDetail, VideoSummary } from './api'
 import { listVideos, loadVideo } from './api'
-import { clipBadge, fitBadge, seconds } from './badges'
 import { BadgeRow } from './BadgeRow'
+import { clipBadge, fitBadge, seconds } from './badges'
 import { SectionPanel } from './SectionPanel'
 import { VisualPreview } from './VisualPreview'
+
+import { useEffect, useState } from 'react'
 
 export const App: React.FC = () => {
   const [videos, setVideos] = useState<VideoSummary[]>([])

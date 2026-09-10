@@ -6,28 +6,13 @@ account: little-parrot
 
 # Post 6: Picking a price on purpose
 
-**Pillar:** the method, shown.
-**Research trace:** pricing is the "earn" step of the dream state (first
-paying customer, "be my own boss"); teaching real terms (anchoring, decoy,
-endowment effect) with plain definitions per the teach-real-terms
-principle; grounding price in usage data connects back to the analytics
-posts, showing the system. Repackages the Pricing Psychology Cheat Sheet
-toolkit item.
+**Pillar:** the method, shown. **Research trace:** pricing is the "earn" step of the dream state (first paying customer, "be my own boss"); teaching real terms (anchoring, decoy, endowment effect) with plain definitions per the teach-real-terms principle; grounding price in usage data connects back to the analytics posts, showing the system. Repackages the Pricing Psychology Cheat Sheet toolkit item.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Pricing-page style:
-mock pricing tiers that rearrange across the slides to demonstrate each
-effect, one concept per slide with the real term named.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Pricing-page style: mock pricing tiers that rearrange across the slides to demonstrate each effect, one concept per slide with the real term named.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -39,10 +24,7 @@ effect, one concept per slide with the real term named.
 | 6 | Dalmie's two-tier pricing card | "Her result: free for book clubs up to 3 members, $5/month for unlimited members and reading stats. Small clubs try it, committed clubs pay, and the paid features are the proven ones." |
 | 7 (CTA) | Brand card, a tidy two-tier page | "The pricing page checklist: 2 to 3 tiers, clear inclusions, a way to try before paying. Full cheat sheet in Build Your Business: From Vibe Coded Product to Paying Customers, on LittleParrot.app. First challenge free 🟪 Save this for pricing day 🔖" |
 
-**Alt text (for the post):** A pricing-psychology carousel: anchoring with
-a higher tier, decoy pricing with an option built to lose, the endowment
-effect through trials and personalisation, grounding the price in feature
-usage data, and a worked freemium example at five dollars a month.
+**Alt text (for the post):** A pricing-psychology carousel: anchoring with a higher tier, decoy pricing with an option built to lose, the endowment effect through trials and personalisation, grounding the price in feature usage data, and a worked freemium example at five dollars a month.
 
 ## Caption (exact)
 
@@ -56,7 +38,4 @@ The full cheat sheet and pricing-page checklist come with Build Your Business: F
 
 Save this for pricing day. 🔖
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #womeninbusiness #pricing #womenintech #buildinpublic #femalefounder #solopreneur #smallbusinesstips #startupjourney
+. . . #vibecoding #buildwithai #womenwhobuild #womeninbusiness #pricing #womenintech #buildinpublic #femalefounder #solopreneur #smallbusinesstips #startupjourney

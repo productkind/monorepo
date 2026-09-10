@@ -1,6 +1,7 @@
 ---
-challenge: "2 - Design Elements for Vibe Coders"
+challenge: '2 - Design Elements for Vibe Coders'
 ---
+
 ## Visual Component Guide
 
 When you're prompting Lovable, using the right component name gets you what you want on the first try. This guide shows you what each component looks like, what it's called, and when to use it. Lovable uses a component library called **shadcn/ui**, so the names below are the ones Lovable understands best.
@@ -53,9 +54,15 @@ A row of toggle buttons where the user picks one or more options. Looks like a s
 
 <ComponentDisplay>
   <ToggleGroup type="multiple">
-    <ToggleGroupItem value="bold" aria-label="Toggle bold"><strong>B</strong></ToggleGroupItem>
-    <ToggleGroupItem value="italic" aria-label="Toggle italic"><em>I</em></ToggleGroupItem>
-    <ToggleGroupItem value="underline" aria-label="Toggle underline"><u>U</u></ToggleGroupItem>
+    <ToggleGroupItem value="bold" aria-label="Toggle bold">
+      <strong>B</strong>
+    </ToggleGroupItem>
+    <ToggleGroupItem value="italic" aria-label="Toggle italic">
+      <em>I</em>
+    </ToggleGroupItem>
+    <ToggleGroupItem value="underline" aria-label="Toggle underline">
+      <u>U</u>
+    </ToggleGroupItem>
   </ToggleGroup>
 </ComponentDisplay>
 
@@ -112,13 +119,13 @@ Like a Select, but the user can also type to search through the options.
 <ComponentDisplay>
   <Combobox
     items={[
-      { value: "london", label: "London" },
-      { value: "paris", label: "Paris" },
-      { value: "berlin", label: "Berlin" },
-      { value: "amsterdam", label: "Amsterdam" },
-      { value: "lisbon", label: "Lisbon" },
-      { value: "vienna", label: "Vienna" },
-      { value: "prague", label: "Prague" },
+      { value: 'london', label: 'London' },
+      { value: 'paris', label: 'Paris' },
+      { value: 'berlin', label: 'Berlin' },
+      { value: 'amsterdam', label: 'Amsterdam' },
+      { value: 'lisbon', label: 'Lisbon' },
+      { value: 'vienna', label: 'Vienna' },
+      { value: 'prague', label: 'Prague' },
     ]}
     placeholder="Select a city…"
     searchPlaceholder="Search cities…"
@@ -182,7 +189,7 @@ A horizontal bar with a draggable handle. The user slides it to choose a value w
 **When to use it:** For numeric ranges (e.g., price range, volume, brightness).
 
 <ComponentDisplay>
-  <div className="p-4" style={{width: '200px'}}>
+  <div className="p-4" style={{ width: '200px' }}>
     <Slider defaultValue={[350]} max={500} step={10} />
   </div>
 </ComponentDisplay>
@@ -255,7 +262,9 @@ A rectangular box with a subtle border or shadow, grouping related content toget
   <DefaultCard className="w-[300px]">
     <DefaultCardHeader>
       <DefaultCardTitle>Lemon Herb Pasta</DefaultCardTitle>
-      <DefaultCardDescription>A quick weeknight dinner with bright, fresh flavours.</DefaultCardDescription>
+      <DefaultCardDescription>
+        A quick weeknight dinner with bright, fresh flavours.
+      </DefaultCardDescription>
     </DefaultCardHeader>
     <DefaultCardContent>
       <div className="flex gap-4 text-sm text-muted-foreground">
@@ -284,7 +293,9 @@ A list of headings that expand and collapse to reveal content underneath. Only o
     </AccordionItem>
     <AccordionItem value="item-2">
       <AccordionTrigger>Is it styled?</AccordionTrigger>
-      <AccordionContent>Yes. It comes with default styles that match your design system.</AccordionContent>
+      <AccordionContent>
+        Yes. It comes with default styles that match your design system.
+      </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-3">
       <AccordionTrigger>Is it animated?</AccordionTrigger>
@@ -458,7 +469,9 @@ A coloured box with a message, usually at the top of a section. Often includes a
 <ComponentDisplay>
   <Alert className="max-w-md">
     <AlertTitle>Heads up!</AlertTitle>
-    <AlertDescription>Voting closes on Friday at 5pm. Make sure to cast your vote before then.</AlertDescription>
+    <AlertDescription>
+      Voting closes on Friday at 5pm. Make sure to cast your vote before then.
+    </AlertDescription>
   </Alert>
 </ComponentDisplay>
 
@@ -469,7 +482,7 @@ A small notification that slides in from the corner and disappears after a few s
 **When to use it:** For temporary feedback after an action: "Saved!", "Item deleted", "Link copied".
 
 <ComponentDisplay>
-  <DefaultButton variant="outline" onClick={() => toast("Book suggestion saved!")}>
+  <DefaultButton variant="outline" onClick={() => toast('Book suggestion saved!')}>
     Show Toast
   </DefaultButton>
 </ComponentDisplay>
@@ -538,16 +551,24 @@ A row of links at the top of the page, sometimes with dropdown sub-menus.
   <NavigationMenu>
     <NavigationMenuList>
       <NavigationMenuItem>
-        <NavigationMenuLink href="" className="px-3 py-2 text-sm font-medium">Home</NavigationMenuLink>
+        <NavigationMenuLink href="" className="px-3 py-2 text-sm font-medium">
+          Home
+        </NavigationMenuLink>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <NavigationMenuLink href="" className="px-3 py-2 text-sm font-medium">Books</NavigationMenuLink>
+        <NavigationMenuLink href="" className="px-3 py-2 text-sm font-medium">
+          Books
+        </NavigationMenuLink>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <NavigationMenuLink href="" className="px-3 py-2 text-sm font-medium">Members</NavigationMenuLink>
+        <NavigationMenuLink href="" className="px-3 py-2 text-sm font-medium">
+          Members
+        </NavigationMenuLink>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <NavigationMenuLink href="" className="px-3 py-2 text-sm font-medium">About</NavigationMenuLink>
+        <NavigationMenuLink href="" className="px-3 py-2 text-sm font-medium">
+          About
+        </NavigationMenuLink>
       </NavigationMenuItem>
     </NavigationMenuList>
   </NavigationMenu>
@@ -560,9 +581,14 @@ A vertical panel on the left (or right) side of the screen with links, icons, an
 **When to use it:** For apps with many pages or sections (e.g., dashboards, admin panels).
 
 <ComponentDisplay>
-  <div className="flex rounded-lg border overflow-hidden" style={{width: '100%', maxWidth: '500px', height: '200px'}}>
+  <div
+    className="flex rounded-lg border overflow-hidden"
+    style={{ width: '100%', maxWidth: '500px', height: '200px' }}
+  >
     <div className="w-[160px] border-r bg-muted/40 p-3 space-y-1 shrink-0">
-      <p className="text-xs font-semibold text-muted-foreground mb-2 uppercase tracking-wider">Menu</p>
+      <p className="text-xs font-semibold text-muted-foreground mb-2 uppercase tracking-wider">
+        Menu
+      </p>
       <p className="text-sm font-medium bg-accent rounded px-2 py-1">Dashboard</p>
       <p className="text-sm text-muted-foreground px-2 py-1">Books</p>
       <p className="text-sm text-muted-foreground px-2 py-1">Members</p>
@@ -611,7 +637,9 @@ Page numbers with Previous/Next buttons at the bottom of a list.
         <PaginationPrevious href="" />
       </PaginationItem>
       <PaginationItem>
-        <PaginationLink href="" isActive>1</PaginationLink>
+        <PaginationLink href="" isActive>
+          1
+        </PaginationLink>
       </PaginationItem>
       <PaginationItem>
         <PaginationLink href="">2</PaginationLink>
@@ -640,17 +668,27 @@ A horizontal bar with dropdown menus (like File, Edit, View in desktop apps).
     <MenubarMenu>
       <MenubarTrigger>File</MenubarTrigger>
       <MenubarContent>
-        <MenubarItem>New Tab <MenubarShortcut>⌘T</MenubarShortcut></MenubarItem>
-        <MenubarItem>New Window <MenubarShortcut>⌘N</MenubarShortcut></MenubarItem>
+        <MenubarItem>
+          New Tab <MenubarShortcut>⌘T</MenubarShortcut>
+        </MenubarItem>
+        <MenubarItem>
+          New Window <MenubarShortcut>⌘N</MenubarShortcut>
+        </MenubarItem>
         <MenubarSeparator />
-        <MenubarItem>Print <MenubarShortcut>⌘P</MenubarShortcut></MenubarItem>
+        <MenubarItem>
+          Print <MenubarShortcut>⌘P</MenubarShortcut>
+        </MenubarItem>
       </MenubarContent>
     </MenubarMenu>
     <MenubarMenu>
       <MenubarTrigger>Edit</MenubarTrigger>
       <MenubarContent>
-        <MenubarItem>Undo <MenubarShortcut>⌘Z</MenubarShortcut></MenubarItem>
-        <MenubarItem>Redo <MenubarShortcut>⇧⌘Z</MenubarShortcut></MenubarItem>
+        <MenubarItem>
+          Undo <MenubarShortcut>⌘Z</MenubarShortcut>
+        </MenubarItem>
+        <MenubarItem>
+          Redo <MenubarShortcut>⇧⌘Z</MenubarShortcut>
+        </MenubarItem>
       </MenubarContent>
     </MenubarMenu>
   </Menubar>
@@ -833,7 +871,10 @@ Like a tooltip, but richer: can contain images, links, and formatted text. Appea
       <DefaultButton variant="link">@littleparrot</DefaultButton>
     </HoverCardTrigger>
     <HoverCardContent className="w-80">
-      <p className="text-sm">Little Parrot – courses that teach non-technical women to build digital products using AI-powered development tools.</p>
+      <p className="text-sm">
+        Little Parrot – courses that teach non-technical women to build digital products using
+        AI-powered development tools.
+      </p>
     </HoverCardContent>
   </HoverCard>
 </ComponentDisplay>
@@ -893,9 +934,13 @@ A scrollable container with custom-styled scrollbars.
 <ComponentDisplay>
   <ScrollArea className="rounded-md border p-4" style={{ height: '120px' }}>
     <div className="space-y-4">
-      {["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"].map((m) => (
-        <div key={m} className="text-sm">{m}</div>
-      ))}
+      {['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'].map(
+        (m) => (
+          <div key={m} className="text-sm">
+            {m}
+          </div>
+        ),
+      )}
     </div>
   </ScrollArea>
 </ComponentDisplay>
@@ -907,8 +952,12 @@ An invisible wrapper that keeps content at a specific width-to-height ratio (e.g
 **When to use it:** For images and videos that need to maintain their proportions.
 
 <ComponentDisplay>
-  <div style={{width: '300px', maxWidth: '300px'}}>
-    <AspectRatio ratio={16 / 9} className="w-full max-w-sm rounded-lg bg-muted flex" style={{placeItems: 'center'}}>
+  <div style={{ width: '300px', maxWidth: '300px' }}>
+    <AspectRatio
+      ratio={16 / 9}
+      className="w-full max-w-sm rounded-lg bg-muted flex"
+      style={{ placeItems: 'center' }}
+    >
       <div style={{ textAlign: 'center', width: '100%' }}>16 / 9</div>
     </AspectRatio>
   </div>

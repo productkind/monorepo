@@ -6,36 +6,22 @@
 
 ## Bottom line
 
-This round adds **22 first-person evidence units** from recent LinkedIn and
-signed-in PM-community discussions. **Sixteen pass all four identity checks**;
-six are retained as contextual evidence but do not affect the ranking.
+This round adds **22 first-person evidence units** from recent LinkedIn and signed-in PM-community discussions. **Sixteen pass all four identity checks**; six are retained as contextual evidence but do not affect the ranking.
 
 The new evidence strengthens three conclusions:
 
-1. The most stable need is to understand enough to take part in engineering
-   conversations and make or explain a product decision—not to become a
-   developer.
-2. Development and release language is a real point of exclusion. PMs name
-   stand-ups, refinement, debugging, branches, PRs, pipelines, builds, staging,
-   deployment and rollback as moments when they lose the thread.
-3. Building a prototype or internal tool with AI is a genuine emerging need,
-   but it is much more concentrated on LinkedIn than the established fluency
-   needs. The same accounts repeatedly distinguish a working prototype from
-   safe, maintainable production software.
+1. The most stable need is to understand enough to take part in engineering conversations and make or explain a product decision—not to become a developer.
+2. Development and release language is a real point of exclusion. PMs name stand-ups, refinement, debugging, branches, PRs, pipelines, builds, staging, deployment and rollback as moments when they lose the thread.
+3. Building a prototype or internal tool with AI is a genuine emerging need, but it is much more concentrated on LinkedIn than the established fluency needs. The same accounts repeatedly distinguish a working prototype from safe, maintainable production software.
 
-It does **not** yet justify population-level prevalence claims. The strict new
-sample is 15 people across eight LinkedIn discussions and one person in one
-Women in Product Slack discussion. Searches in four other signed-in or public
-PM communities produced no additional strictly eligible people. That is useful
-negative evidence, but it is not independent replication.
+It does **not** yet justify population-level prevalence claims. The strict new sample is 15 people across eight LinkedIn discussions and one person in one Women in Product Slack discussion. Searches in four other signed-in or public PM communities produced no additional strictly eligible people. That is useful negative evidence, but it is not independent replication.
 
 ## 1. Identity screen
 
-Every candidate was checked against four conditions. A unit affects ranking
-only when all four pass.
+Every candidate was checked against four conditions. A unit affects ranking only when all four pass.
 
 | Code | Required condition | Pass rule |
-|---|---|---|
+| --- | --- | --- |
 | P | Practising Product Manager | Current PM, PO, GPM or product-lead role; not merely aspiring, formerly a PM, consulting to PMs or selling PM education. |
 | G | Generalist software-product context | Currently works with software engineers on a software product. Roles exclusively focused on AI/ML, data, platform, infrastructure, security or developer products fail. |
 | N | No software-engineering background | Explicitly says non-technical/no coding/no CS, or has a clearly non-software background such as marketing, law, medicine or humanities. A non-software engineering degree is allowed only when the person explicitly describes themselves as non-tech. |
@@ -44,19 +30,13 @@ only when all four pass.
 Additional counting rules:
 
 - One person is one evidence unit, even if they wrote several posts.
-- Several people commenting in one LinkedIn thread are several people but one
-  discussion.
-- Several discussions on LinkedIn remain one platform, not several independent
-  communities.
-- Advice from engineers, recruiters, coaches, course providers and job adverts
-  is excluded from demand counts.
+- Several people commenting in one LinkedIn thread are several people but one discussion.
+- Several discussions on LinkedIn remain one platform, not several independent communities.
+- Advice from engineers, recruiters, coaches, course providers and job adverts is excluded from demand counts.
 - Borderline units preserve useful language but cannot raise a need's rank.
-- Private-community participants are anonymised. Their permalinks remain in the
-  working evidence so the researcher with access can audit them.
+- Private-community participants are anonymised. Their permalinks remain in the working evidence so the researcher with access can audit them.
 
-This is stricter than the original ledger, whose anonymous Reddit authors could
-often be screened for role from the post but not independently checked for all
-four conditions.
+This is stricter than the original ledger, whose anonymous Reddit authors could often be screened for role from the post but not independently checked for all four conditions.
 
 ## 2. New evidence ledger
 
@@ -74,7 +54,7 @@ Need codes used below:
 - **H** — understand QA, testing and production boundaries
 
 | ID | Person and source | Identity screen | Situation, pain and desired outcome | Exact language retained | Concepts and plausible practice | Need |
-|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- |
 | V01 | Mohamed Shedou, [LinkedIn post](https://www.linkedin.com/posts/mohamedshedou_does-an-it-product-manager-have-to-come-from-activity-7406452418231668736-m-G5), [profile](https://www.linkedin.com/in/mohamedshedou/), 15 Dec 2025 | P✓ current IT PM; G✓ software; N✓ French literature, explicitly non-technical; C✓ | Wanted to work credibly in IT product without becoming a coder. The useful depth was application logic and architecture. | “Does an IT Product Manager have to come from a technical background?” | Draw one product flow and explain what each part does. | A, B |
 | V02 | Courtney Bain, [LinkedIn discussion](https://www.linkedin.com/posts/courtneybain_productmanagement-sidewaysmove-productlearnings-activity-7369869445583806464-OH6W), [profile](https://www.linkedin.com/in/courtneybain/), 5 Sep 2025 | P✓ current product-portfolio role; G✓ software; N✓ moved from marketing; C✓ | In stand-ups and refinement, engineering- and BA-background PMs appeared to have an automatic advantage. She wanted to become an effective business–technology translator and avoid distracting engineers with simple requests. | “They spoke the language of engineers in a way I couldn’t.” | Explain frontend/backend, ask a clarifying question and translate an engineering answer into a product decision. | A, B, C |
 | V03 | Rohini Achanta, comment in [the same LinkedIn discussion](https://www.linkedin.com/posts/courtneybain_productmanagement-sidewaysmove-productlearnings-activity-7369869445583806464-OH6W), [profile](https://www.linkedin.com/in/rohini-p-achanta/), Sep 2025 | P✓ current product director; G✓ software; N✓ management background and explicitly “non coding”; C✓ | Needed engineers to explain product logic rather than code detail so she could understand it and explain it to the business. | “speak in Rohini speak not engineering speak” | Use a logic-first system walkthrough, then teach it back to a business stakeholder. | A, B |
@@ -94,12 +74,10 @@ Need codes used below:
 
 ### B. First-person context retained but excluded from ranking
 
-These six units help preserve search language and identify edge cases. They do
-not increase frequency because one or more identity conditions failed or could
-not be verified.
+These six units help preserve search language and identify edge cases. They do not increase frequency because one or more identity conditions failed or could not be verified.
 
 | ID | Source and exact language | Screen result | Why excluded | Useful signal |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | V17 | WIP-S-02, [private Women in Product Slack message](https://womeninproduct.slack.com/archives/CEDP6HA49/p1743162890758189), 28 Mar 2025: “When do you usually involve QAs in the refinement process?” | P✓ G✓ N✗ C✓ | Current software PM, but Information Systems education and substantial prior IT experience fail the non-software-background rule. | QA participation, discovery/refinement timing, edge cases, bugs and avoiding PO bottlenecks. |
 | V18 | Obiekezie Onyekachi, [LinkedIn content-search capture](https://www.linkedin.com/search/results/content/?keywords=Navigating%20the%20language%20of%20development%20team%20when%20I%20was%20a%20non-technical%20PM), [profile](https://www.linkedin.com/in/obiekezie-onyekachi/), 10 Mar 2026: “What does that mean in simple terms?” | P? G? N✓ C✓ | Current title combines Senior Project Manager and Product Manager, so practising-generalist-PM status is ambiguous. LinkedIn surfaced the item as a related post but did not expose a stable direct permalink in the captured page. | Staging, API bugs, endpoints, refactoring, timeline impact and blocker classification. |
 | V19 | Pritam Bhattacharjee, [LinkedIn post](https://www.linkedin.com/posts/pritambhattacharjee_productmanagement-careerpaths-learninginpublic-activity-7426307049946365952-sWUv), [profile](https://www.linkedin.com/in/pritambhattacharjee/), 8 Feb 2026: “I couldn’t always follow how it was being built.” | P✓ G✗ N✓ C✓ | Current role is explicitly an AI product specialism. | Reading unfamiliar code, sitting in debugging sessions, asking why work is hard and using AI to explain/debug. |
@@ -109,12 +87,10 @@ not be verified.
 
 ## 3. Source-by-need matrix
 
-This matrix covers the **16 strict new units only**. Each cell is
-**people / distinct discussions**. “Communities” counts independent communities,
-not posts, comments or threads.
+This matrix covers the **16 strict new units only**. Each cell is **people / distinct discussions**. “Communities” counts independent communities, not posts, comments or threads.
 
 | Need | LinkedIn | Women in Product Slack | Product School Slack | Mind the Product Slack | Women in Product Facebook | PM Book Club Slack | Independent communities with strict evidence |
-|---|---:|---:|---:|---:|---:|---:|---:|
+| --- | --: | --: | --: | --: | --: | --: | --: |
 | A. Participate in technical conversations and decisions | 8 / 5 | 0 / 0 | 0 / 0 | 0 / 0 | 0 / 0 | 0 / 0 | 1 |
 | B. Understand how the product/system works | 4 / 3 | 0 / 0 | 0 / 0 | 0 / 0 | 0 / 0 | 0 / 0 | 1 |
 | C. Judge scope, dependencies and trade-offs | 2 / 2 | 0 / 0 | 0 / 0 | 0 / 0 | 0 / 0 | 0 / 0 | 1 |
@@ -124,25 +100,16 @@ not posts, comments or threads.
 | G. Build a prototype/internal tool with AI | 5 / 4 | 0 / 0 | 0 / 0 | 0 / 0 | 0 / 0 | 0 / 0 | 1 |
 | H. Understand QA and production boundaries | 3 / 3 | 0 / 0 | 0 / 0 | 0 / 0 | 0 / 0 | 0 / 0 | 1 |
 
-The distinction matters. “Five PMs want to build with AI” is five people, but
-they occur in only four LinkedIn discussions on one platform. It is an emerging
-pattern, not four-community triangulation. Tool navigation has fewer people but
-appears independently on LinkedIn and Women in Product Slack.
+The distinction matters. “Five PMs want to build with AI” is five people, but they occur in only four LinkedIn discussions on one platform. It is an emerging pattern, not four-community triangulation. Tool navigation has fewer people but appears independently on LinkedIn and Women in Product Slack.
 
 ### Whole-corpus source coverage
 
-The following is a presence map, not a frequency table. It prevents 20 Reddit
-threads or eight LinkedIn threads from being mistaken for 20 or eight
-independent communities. The original Reddit units were not all independently
-profile-screened to the new P/G/N/C standard, so their cells cannot be compared
-numerically with the strict validation sample.
+The following is a presence map, not a frequency table. It prevents 20 Reddit threads or eight LinkedIn threads from being mistaken for 20 or eight independent communities. The original Reddit units were not all independently profile-screened to the new P/G/N/C standard, so their cells cannot be compared numerically with the strict validation sample.
 
-**●** = repeated first-person signal in that source community; **○** = one
-first-person unit; **△** = lower-weight or identity-unverifiable support;
-**—** = none found.
+**●** = repeated first-person signal in that source community; **○** = one first-person unit; **△** = lower-weight or identity-unverifiable support; **—** = none found.
 
 | Need family | r/ProductManagement | r/ProductMgmt | r/vibecoding | LinkedIn | Women in Product Slack | YouTube PM audience | Provider-selected reviews |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| --- | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | Technical conversations and decision support | ● | ○ | — | ● | — | — | △ |
 | Product/system mental model | ● | ○ | — | ● | — | ○ | △ |
 | Scope, dependencies and trade-offs | ● | ○ | — | ● | — | — | — |
@@ -154,18 +121,14 @@ first-person unit; **△** = lower-weight or identity-unverifiable support;
 | AI-assisted prototype/internal-tool building | ● | — | ○ | ● | — | — | — |
 | Interview/performance technical signalling | ● | — | — | ○ | — | — | — |
 
-This makes two weaknesses visible that a thread count hides: SQL/analytics is
-still supported mainly by one subreddit community, while AI-assisted building
-has several people and threads but only two PM-centred source communities plus
-one non-PM builder community.
+This makes two weaknesses visible that a thread count hides: SQL/analytics is still supported mainly by one subreddit community, while AI-assisted building has several people and threads but only two PM-centred source communities plus one non-PM builder community.
 
 ### Search coverage and eligibility yield
 
-Search-result counts are result appearances, not unique people; overlapping
-queries are deliberately not added together as a prevalence measure.
+Search-result counts are result appearances, not unique people; overlapping queries are deliberately not added together as a prevalence measure.
 
 | Community | Search coverage | Strict eligible people / discussions | What happened |
-|---|---|---:|---|
+| --- | --- | --: | --- |
 | LinkedIn | Targeted posts plus profiles and comment threads about non-technical PMs, engineering language and AI building | 15 / 8 | Productive, but self-publishing and engagement algorithms favour people already discussing the topic. |
 | Women in Product Slack | Nine query families; at least 51 result appearances manually screened | 1 / 1 | Most results were jobs, events, aspiring PMs, replies without a qualifying first-person need or people with technical backgrounds. |
 | Product School Slack | Five query families; 19 result appearances | 0 / 0 | Mainly job adverts, job seekers and generic advice. |
@@ -178,65 +141,40 @@ queries are deliberately not added together as a prevalence measure.
 
 ### Stopping rule
 
-Cluster saturation would be claimed only after **three consecutive productive,
-heterogeneous search batches across at least three independent communities**
-produced no new need cluster. A batch with no eligible evidence because of
-access, retention or identity failure cannot prove saturation.
+Cluster saturation would be claimed only after **three consecutive productive, heterogeneous search batches across at least three independent communities** produced no new need cluster. A batch with no eligible evidence because of access, retention or identity failure cannot prove saturation.
 
 | Batch | Source and search focus | Strict units | New top-level cluster? | New nuance | Saturation status |
-|---|---|---:|---|---|---|
+| --- | --- | --: | --- | --- | --- |
 | S1 | LinkedIn: non-technical background, language of engineers, stand-ups and refinement | 11 | No | Teach-back, logic rather than code, glossary building, and the cost of performative nodding | One productive platform; insufficient. |
 | S2 | LinkedIn: Claude Code, AI tools, POCs and full-stack MVPs | 4 new people, plus one already counted | No | GitHub/terminal onboarding; “working” versus secure/correct; prototype versus production; useful-tool versus busywork test | Two batches, still one platform. |
 | S3 | Women in Product Slack: non-technical, engineering, API, Git, bugs, deployment, staging and technical debt | 1 | No | Tool navigation for team planning and pairing as the preferred learning method | Second productive community; still short of rule. |
 | S4 | Product School and Mind the Product Slack | 0 | Not assessable | High exclusion rate; demand language was overwhelmed by jobs, promotions and specialists | Cannot count as a productive saturation batch. |
 | S5 | Women in Product Facebook, PM Book Club Slack and Circle access check | 0 | Not assessable | Platform access/retention and identity-verification limits | Cannot count as a productive saturation batch. |
 
-**Conclusion:** the cluster structure is stabilising—the productive searches
-deepened existing needs rather than creating a tenth cluster—but formal
-cross-community saturation has **not** been reached. The honest stopping reason
-for this round is diminishing eligible yield plus platform limitations, not
-proof that no other needs exist.
+**Conclusion:** the cluster structure is stabilising—the productive searches deepened existing needs rather than creating a tenth cluster—but formal cross-community saturation has **not** been reached. The honest stopping reason for this round is diminishing eligible yield plus platform limitations, not proof that no other needs exist.
 
 ## 5. What changes in the ranking
 
 ### Conclusions strengthened
 
-1. **Participate in engineering conversations and make decisions.** This is the
-   clearest cross-period outcome and the strongest new first-person pattern.
-   Eight strict LinkedIn participants describe lost comprehension or the need
-   to translate, clarify and teach back. It reinforces the original Reddit-led
-   findings, but the new evidence is still one-platform-heavy.
-2. **Understand the development and release workflow.** Seven LinkedIn PMs and
-   one independent Women in Product Slack participant describe terms or tools
-   encountered in stand-ups, refinement, debugging, builds, GitLab and release
-   work. This is the best new cross-community triangulation.
-3. **Form a usable mental model of the product.** Four strict participants
-   independently frame the target as application logic, architecture or enough
-   frontend/backend understanding to translate—not code authorship.
+1. **Participate in engineering conversations and make decisions.** This is the clearest cross-period outcome and the strongest new first-person pattern. Eight strict LinkedIn participants describe lost comprehension or the need to translate, clarify and teach back. It reinforces the original Reddit-led findings, but the new evidence is still one-platform-heavy.
+2. **Understand the development and release workflow.** Seven LinkedIn PMs and one independent Women in Product Slack participant describe terms or tools encountered in stand-ups, refinement, debugging, builds, GitLab and release work. This is the best new cross-community triangulation.
+3. **Form a usable mental model of the product.** Four strict participants independently frame the target as application logic, architecture or enough frontend/backend understanding to translate—not code authorship.
 
 ### Conclusions that remain plausible but are not strengthened much by this round
 
-- APIs, integrations and data flow remain prominent in the original Reddit
-  corpus and in contextual language, but they were not a standalone strict need
-  in the new sample.
-- SQL, analytics and experimentation received no new strict evidence here.
-  Their original ranking should therefore remain provisional rather than being
-  described as newly cross-community validated.
+- APIs, integrations and data flow remain prominent in the original Reddit corpus and in contextual language, but they were not a standalone strict need in the new sample.
+- SQL, analytics and experimentation received no new strict evidence here. Their original ranking should therefore remain provisional rather than being described as newly cross-community validated.
 - Technical-debt prioritisation also received no new strict first-person unit.
 
 ### Emerging need
 
-**AI-assisted prototyping is real but concentrated.** Five strict people across
-four LinkedIn discussions wanted or reported independent POCs, MVPs or internal
-tools. This is enough to preserve it as an emerging secondary capability. It is
-not enough to make production coding essential, especially because the same
-evidence names integration complexity, bugs, data quality, security,
-correctness and maintenance as boundaries.
+**AI-assisted prototyping is real but concentrated.** Five strict people across four LinkedIn discussions wanted or reported independent POCs, MVPs or internal tools. This is enough to preserve it as an emerging secondary capability. It is not enough to make production coding essential, especially because the same evidence names integration complexity, bugs, data quality, security, correctness and maintenance as boundaries.
 
 ### Revised confidence language
 
 | Need family | Defensible confidence after validation | Reason |
-|---|---|---|
+| --- | --- | --- |
 | Engineering conversation, clarification and decision support | High for existence and importance; not a population percentage | Recurs in the original corpus and eight strict new PM accounts. |
 | Development/release workflow and vocabulary | High for existence; moderate for relative rank | Only broad original need family with strict new evidence from two independent communities. |
 | Product/system mental model | High for existence; moderate-high for rank | Strong original corpus plus four strict new accounts. |
@@ -251,64 +189,40 @@ correctness and maintenance as boundaries.
 
 ### Essential
 
-- Ask for a technical explanation, restate it accurately and connect it to a
-  product decision.
-- Explain one real product flow in plain language, including frontend,
-  backend/service and data boundaries at the level relevant to the product.
-- Follow one change through issue, branch or merge request, review, test,
-  staging, deployment and rollback—even if the team uses different labels.
-- Recognise common workflow and incident terms well enough not to lose the
-  decision: PR/MR, build, pipeline, environment, staging, production,
-  deployment, rollback, severity, SLA and feature flag.
-- Know when to ask about dependencies, failure modes, test coverage,
-  monitoring, security and maintenance rather than trying to supply the
-  engineering answer.
+- Ask for a technical explanation, restate it accurately and connect it to a product decision.
+- Explain one real product flow in plain language, including frontend, backend/service and data boundaries at the level relevant to the product.
+- Follow one change through issue, branch or merge request, review, test, staging, deployment and rollback—even if the team uses different labels.
+- Recognise common workflow and incident terms well enough not to lose the decision: PR/MR, build, pipeline, environment, staging, production, deployment, rollback, severity, SLA and feature flag.
+- Know when to ask about dependencies, failure modes, test coverage, monitoring, security and maintenance rather than trying to supply the engineering answer.
 
 ### Useful but secondary
 
-- Navigate the team's actual work-tracking/repository interface with a paired
-  guide: find the issue, change, review, build and release state.
-- Reproduce and document a known issue, then follow the request or log trail
-  with engineering.
-- Build a small prototype or internal utility with an AI coding tool to test an
-  assumption or improve communication.
-- Use a sandbox, version control and deployment preview, and state explicitly
-  what a working prototype does not prove.
-- SQL and API inspection remain useful from the original evidence, but this
-  round did not independently strengthen their rank.
+- Navigate the team's actual work-tracking/repository interface with a paired guide: find the issue, change, review, build and release state.
+- Reproduce and document a known issue, then follow the request or log trail with engineering.
+- Build a small prototype or internal utility with an AI coding tool to test an assumption or improve communication.
+- Use a sandbox, version control and deployment preview, and state explicitly what a working prototype does not prove.
+- SQL and API inspection remain useful from the original evidence, but this round did not independently strengthen their rank.
 
 ### Keep outside the generalist offer
 
 - Production software ownership without engineering review.
 - Advanced Git administration or terminal fluency as an end in itself.
 - Deep infrastructure, platform, security or reliability operations.
-- AI/ML-specialist material such as model training, RAG implementation, evals
-  and MLOps.
+- AI/ML-specialist material such as model training, RAG implementation, evals and MLOps.
 - Programming-language mastery or interview-style algorithms.
 
 ## 7. Interview/survey validation status
 
-No interviews were conducted and no survey was submitted in this round. Doing
-so would contact people or publish/submit information externally, which was not
-authorised by the research request alone. A ready-to-field, neutrally framed
-instrument is provided in
-[PM technical-fluency interview and survey pack](./pm-technical-fluency-interview-survey-pack-2026-08.md).
+No interviews were conducted and no survey was submitted in this round. Doing so would contact people or publish/submit information externally, which was not authorised by the research request alone. A ready-to-field, neutrally framed instrument is provided in [PM technical-fluency interview and survey pack](./pm-technical-fluency-interview-survey-pack-2026-08.md).
 
-Until that is fielded, the ranking should be described as **triangulated
-exploratory research**, not representative market research.
+Until that is fielded, the ranking should be described as **triangulated exploratory research**, not representative market research.
 
 ## 8. Audit notes and limitations
 
-- LinkedIn profiles were checked in the signed-in browser on 24 August 2026;
-  roles can change later.
-- Private Slack quotations are short and participants are anonymised. The WIP
-  permalink requires membership in the community.
-- Circle was not available in the signed-in session. This is an access gap, not
-  evidence of no demand in Circle communities.
-- Slack free-plan retention restricted historical coverage in at least one
-  community.
-- LinkedIn authors are self-selected and may overrepresent public builders,
-  career storytellers and people with unusually strong opinions about AI.
+- LinkedIn profiles were checked in the signed-in browser on 24 August 2026; roles can change later.
+- Private Slack quotations are short and participants are anonymised. The WIP permalink requires membership in the community.
+- Circle was not available in the signed-in session. This is an access gap, not evidence of no demand in Circle communities.
+- Slack free-plan retention restricted historical coverage in at least one community.
+- LinkedIn authors are self-selected and may overrepresent public builders, career storytellers and people with unusually strong opinions about AI.
 - Search ranking and private-community moderation affect discoverability.
-- A high exclusion rate improves construct validity but reduces sample size and
-  community breadth.
+- A high exclusion rate improves construct validity but reduces sample size and community breadth.

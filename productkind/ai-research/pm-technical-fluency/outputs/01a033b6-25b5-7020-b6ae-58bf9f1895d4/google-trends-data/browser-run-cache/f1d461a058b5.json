@@ -5,9 +5,7 @@
   "source_term": "vibe coding for beginners",
   "fallback_term": "",
   "comparison_group": "",
-  "terms": [
-    "vibe coding for beginners"
-  ],
+  "terms": ["vibe coding for beginners"],
   "term_type": "Search term",
   "geography": "UK",
   "geo_code": "GB",
@@ -20,9 +18,7 @@
   "data_status": "insufficient_no_series",
   "headers": [],
   "series": [],
-  "nonzero_points": [
-    0
-  ],
+  "nonzero_points": [0],
   "queries": [],
   "topics": [],
   "related_availability": {

@@ -1,5 +1,3 @@
-import { concat, type Observable } from 'rxjs'
-
 import type { VideoDeskEvent } from './events.ts'
 import type { DeskIo } from './flows.ts'
 import {
@@ -12,6 +10,8 @@ import {
   searchStock,
   setFlag,
 } from './flows.ts'
+
+import { concat, type Observable } from 'rxjs'
 
 export type VideoDeskFeatureOutput = { events$: Observable<VideoDeskEvent> }
 

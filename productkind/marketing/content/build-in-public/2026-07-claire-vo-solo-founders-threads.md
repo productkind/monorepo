@@ -6,9 +6,7 @@ account: kinga
 
 # Claire Vo / Solo Founders podcast — Threads
 
-**Account:** Kinga's personal Threads account (not the productkind brand account); personal voice, more credible for a founder reflection
-**Source:** `2026-07-claire-vo-solo-founders-linkedin.md` (posted LinkedIn version)
-**Destination:** none (pairs with reposting a post about the episode, same as LinkedIn)
+**Account:** Kinga's personal Threads account (not the productkind brand account); personal voice, more credible for a founder reflection **Source:** `2026-07-claire-vo-solo-founders-linkedin.md` (posted LinkedIn version) **Destination:** none (pairs with reposting a post about the episode, same as LinkedIn)
 
 ---
 
@@ -30,7 +28,7 @@ If you stopped measuring success by scale, what would you work on?
 
 A self-reply with the source is a normal Threads pattern (the "link in thread" convention); it keeps the main post tight and makes the episode findable. Fallback if you'd rather not self-reply: fold a short attribution into the post itself, e.g. "(Sparked by Claire Vo on the Solo Founders podcast.)" after the first paragraph.
 
-*(No Thomas comment: he doesn't have a Threads account yet.)*
+_(No Thomas comment: he doesn't have a Threads account yet.)_
 
 ---
 

@@ -1,7 +1,8 @@
 ---
-challenge: "2 - Write clear internal product updates with less effort"
-type: "Checklist"
+challenge: '2 - Write clear internal product updates with less effort'
+type: 'Checklist'
 ---
+
 ## What to Check in an AI Draft Before You Send It
 
 A quick checklist to verify what AI wrote for you, before it goes into Slack, an inbox, or a deck. Reach for it whenever your name is on the message and someone might act on what's in it.
@@ -28,7 +29,7 @@ Verify these in every draft AI creates for you.
 These are the parts worth reading twice, because they're where a draft goes wrong most often.
 
 | What it invents | What it looks like |
-|---|---|
+| --- | --- |
 | **Metrics** | "Reduces setup time by 40%", when you only said beta testers liked it |
 | **Customer quotes** | A convincing testimonial from nobody |
 | **Timelines** | "Shipping in Q3", when you gave it no date at all |

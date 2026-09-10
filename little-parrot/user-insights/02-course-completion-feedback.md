@@ -1,11 +1,10 @@
 # Course-completion feedback (verbatim)
 
 Source: `all_course_feedback_rows.csv` — the end-of-course feedback form learners submit on completion.  
-All text reproduced **verbatim**. Attribution joins the profiles table on `user_id`: **name (nickname) · role · company size · `id`**. `company_type` is a company-*size* bucket (the table has no company name). Where a learner isn't in the profiles table, only the `user_id` prefix is shown. Empty fields are omitted.  
+All text reproduced **verbatim**. Attribution joins the profiles table on `user_id`: **name (nickname) · role · company size · `id`**. `company_type` is a company-_size_ bucket (the table has no company name). Where a learner isn't in the profiles table, only the `user_id` prefix is shown. Empty fields are omitted.  
 Total feedback submissions: **25**
 
 ---
-
 
 ## Basics of Software for Vibe Coding
 
@@ -122,7 +121,6 @@ _confidence: **a_little** · would recommend: **maybe**_
 > How to de-bug the website, how to maintain the website
 
 ---
-
 
 ## Build Your First App With Lovable
 
@@ -282,7 +280,6 @@ _confidence: **fairly** · would recommend: **yes**_
 
 ---
 
-
 ## Build a Valuable Product
 
 ### `73a964f7` · 2025-12-10
@@ -309,8 +306,8 @@ _confidence: **very** · would recommend: **yes**_
 
 **Most useful:**
 
-> Getting hands on experience with the end-to-end process, from breaking down the problem definition > user persona > storyboarding > user story mapping to reducing MVP scope, getting AI feedback, structuring a prompt, etc. 
-> 
+> Getting hands on experience with the end-to-end process, from breaking down the problem definition > user persona > storyboarding > user story mapping to reducing MVP scope, getting AI feedback, structuring a prompt, etc.
+>
 > I am an overthinker so the AI feedback was great
 
 ---
@@ -347,15 +344,13 @@ _confidence: **very** · would recommend: **yes**_
 
 **Future learning interest:**
 
-> LLMs settings, tricks and tips 
-> Refining my prototype :)
+> LLMs settings, tricks and tips Refining my prototype :)
 
 **Other feedback:**
 
 > Keep up!
 
 ---
-
 
 ## Write Better With AI
 

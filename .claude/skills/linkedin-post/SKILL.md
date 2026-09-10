@@ -35,7 +35,7 @@ A post that only reports an observation or recounts an event gives the reader no
 
 - a reframe or mental model they can reuse (e.g. "I want women to understand that you can do deeply meaningful, important work, and make a lot of money.")
 - a technique or habit they can copy (e.g. "ask for a story in user interviews, instead of asking the user to hypothesize about their future behaviour")
-- a genuine reassurance grounded in a reason (e.g. "if it leaves you feeling behind, the missing piece is the how, not you") — emotional value counts, as long as the reader understands *why*
+- a genuine reassurance grounded in a reason (e.g. "if it leaves you feeling behind, the missing piece is the how, not you") — emotional value counts, as long as the reader understands _why_
 - an honest reflection or an opinion Kinga is willing to stand behind, paired with a real question that invites the reader to think (e.g. admitting she can no longer remember how she'd write a sentence without AI, then asking what they'd do)
 
 Don't force a how-to onto a reflective post to make it "earn" its read. A personal post earns it through honesty and a genuine question just as much as a teaching post earns it through a technique. Kinga often finds her point while writing, so don't demand the payoff be named before drafting; require only that the finished post leaves the reader with one of the above rather than stopping at a bare fact.
@@ -43,6 +43,7 @@ Don't force a how-to onto a reflective post to make it "earn" its read. A person
 ## Channel Guidelines
 
 ### LinkedIn Posts
+
 - Length: 90–200 words is the sweet spot, as a guideline rather than a ceiling; going slightly over is fine, and cutting lines that carry the voice just to hit the number is not
 - Structure: Hook → insight → implication
 - One idea per post
@@ -54,6 +55,7 @@ Don't force a how-to onto a reflective post to make it "earn" its read. A person
 - Value density: concentrated insights outperform verbose posts
 
 ### Substack Notes
+
 - More reflective, longer-form thinking allowed
 - Can explore nuance and uncertainty
 - Still no jargon or hype
@@ -63,11 +65,13 @@ Don't force a how-to onto a reflective post to make it "earn" its read. A person
 Open on a real, specific moment: something that happened, a frustration, an honest admission, or a precise observation. Curiosity comes from the concrete detail, never from a withheld secret or a promise of value.
 
 **Do:**
+
 - Start with a specific moment, frustration, or observation
 - Reframe a common belief, stated plainly
 - Name a practical distinction people miss
 
 **Don't:**
+
 - Grand claims about industries or "the future"
 - Curiosity-gap or data-tease hooks ("I discovered why 87% of X fails...", "...generated $157K in 30 days")
 - Rhetorical questions as hooks

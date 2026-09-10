@@ -1,6 +1,7 @@
 ---
-challenge: "7 - Handling Security Errors and Warnings"
+challenge: '7 - Handling Security Errors and Warnings'
 ---
+
 ## Security Warnings Decision Framework
 
 A step-by-step flow for handling the security findings that Lovable's built-in auditor surfaces. Use this every time you open the Security panel and see items to address.
@@ -10,7 +11,7 @@ A step-by-step flow for handling the security findings that Lovable's built-in a
 Before deciding what to fix, be clear about who uses your app. This determines how urgently each finding needs attention.
 
 | App type | Who uses it | Priority level |
-|---|---|---|
+| --- | --- | --- |
 | **Personal tool** | Just you | Low. Fix errors, note warnings for later. |
 | **Internal team tool** | A small group you know | Medium. Fix errors and review warnings. |
 | **Public app** | Anyone on the internet | High. Fix errors and warnings before publishing. |
@@ -20,7 +21,7 @@ Before deciding what to fix, be clear about who uses your app. This determines h
 Each finding in Lovable's Security panel has a severity label. Here's what they mean and what to do:
 
 | Severity | What it means | What to do |
-|---|---|---|
+| --- | --- | --- |
 | **Error** (red) | A critical security issue. Data could be exposed or the app could be exploited. | Fix before publishing, regardless of app type. |
 | **Warning** (orange) | An important concern that may or may not apply to your situation. | Fix for public apps. For personal or team tools, review the details and decide if it's relevant to your context. |
 | **Info** (white) | A general recommendation or best practice. | Good to address over time, but not urgent for any app type. |
@@ -36,6 +37,7 @@ Each finding in Lovable's Security panel has a severity label. Here's what they 
 For findings that weren't resolved automatically, ask Lovable about the finding in chat. This works like any chat message and uses credits; running the scans and **Try to fix all** are the free actions.
 
 **Copy this prompt and fill in the blanks:**
+
 ```
 Explain what this finding means and suggest how to fix it. Here's my context:
 - Who uses this app: [just me / my team / anyone on the internet]
@@ -60,6 +62,7 @@ Read Lovable's explanation and decide whether to apply the fix based on your app
 **What it means:** Your app doesn't check whether a user's password has appeared in known data breaches. Users could sign up with passwords that have already been exposed.
 
 **How to fix:**
+
 1. Open the **Cloud** menu in Lovable.
 2. Go to **Users**, then **Auth Settings**.
 3. Select the **Email** sign-in method.

@@ -16,10 +16,10 @@ Live recording, screen recording plus music. The text below is what appears **on
 Roughly 40 seconds.
 
 | Time | What's on screen | Text on screen |
-|---|---|---|
+| --- | --- | --- |
 | 0:00 | Tapping the Brain Dump icon on the Home Screen | **Nobody else can see the list in your head.** |
 | 0:03 | Dictation listening, waveform moving | So just say it out loud, however it comes out |
-| 0:06 | Still dictating, subtitle the ramble as it's said | *"Out of nappies, wipes, barrier cream. Book the six-week check. Health visitor Tuesday at 11. Buy bananas."* |
+| 0:06 | Still dictating, subtitle the ramble as it's said | _"Out of nappies, wipes, barrier cream. Book the six-week check. Health visitor Tuesday at 11. Buy bananas."_ |
 | 0:14 | Tapping the stop button ⏹️ | Then you tap stop, and that's your bit done |
 | 0:17 | Notes app opening, Mental Load folder | A few seconds later 👇 |
 | 0:20 | Logistics note, checklist lines appearing | The appointments went to Logistics |
@@ -43,16 +43,7 @@ Roughly 40 seconds.
 
 17 seconds.
 
-| What's on screen | Text on screen |
-|---|---|---|
-| Long press on the Action Button | **The Baby Log** |
-| Shortcut starts | What did your baby have for breakfast? |
-| Dictation | Say it to your phone |
-| Dictation continues | without typing anything |
-| Close up of screen with dictation: *She woke up at 6, had a 180 mL bottle, ate oatmeal and banana for breakfast, played on the floor, she was in a good mood, had a wet nappy, and then took a one-hour nap.* | The AI on your phone sorts it into neat lines |
-| Baby Log note opening | Hand off the mental load |
-| Baby Log note on screen | Build the shortcut on |
-| Hand holding phone | LittleParrot.app + Little Parrot mascot |
+| What's on screen | Text on screen | |---|---|---| | Long press on the Action Button | **The Baby Log** | | Shortcut starts | What did your baby have for breakfast? | | Dictation | Say it to your phone | | Dictation continues | without typing anything | | Close up of screen with dictation: _She woke up at 6, had a 180 mL bottle, ate oatmeal and banana for breakfast, played on the floor, she was in a good mood, had a wet nappy, and then took a one-hour nap._ | The AI on your phone sorts it into neat lines | | Baby Log note opening | Hand off the mental load | | Baby Log note on screen | Build the shortcut on | | Hand holding phone | LittleParrot.app + Little Parrot mascot |
 
 ### Alternative hooks (pick one, test the others later)
 
@@ -64,12 +55,7 @@ Roughly 40 seconds.
 
 ## Notes for both
 
-- The two reels start their shortcut differently on purpose: Brain Dump from
-  the Home Screen icon, Baby Log with the Action Button. Between them they show
-  two of the triggers the last challenge sets up, so don't level them out.
-- End card carries the course name and the deadline. On Instagram add "Link in
-  bio", on TikTok name the payoff instead, since there's no bio link yet.
-- The iPhone requirement (15 Pro or newer) belongs in the caption, not on
-  screen. It slows the reel down and the caption catches it.
-- Captions for all three channels come from the captions skill once the cut is
-  final.
+- The two reels start their shortcut differently on purpose: Brain Dump from the Home Screen icon, Baby Log with the Action Button. Between them they show two of the triggers the last challenge sets up, so don't level them out.
+- End card carries the course name and the deadline. On Instagram add "Link in bio", on TikTok name the payoff instead, since there's no bio link yet.
+- The iPhone requirement (15 Pro or newer) belongs in the caption, not on screen. It slows the reel down and the caption catches it.
+- Captions for all three channels come from the captions skill once the cut is final.

@@ -6,26 +6,13 @@ account: little-parrot
 
 # Post 4: The what-where-example recipe (before/after)
 
-**Pillar:** the method, shown.
-**Research trace:** the idea backlog's "before/after prompting carousel";
-prompt recipes are the top saveable format; vague prompts burning credits is
-the documented doom-loop trigger, and "diagnosis before fixing / specific
-requests" is the missing skill the audience asks for in their own words.
+**Pillar:** the method, shown. **Research trace:** the idea backlog's "before/after prompting carousel"; prompt recipes are the top saveable format; vague prompts burning credits is the documented doom-loop trigger, and "diagnosis before fixing / specific requests" is the missing skill the audience asks for in their own words.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 5 slides, 1080 x 1350 (4:5 portrait).** Before/after style: a
-"before" card in muted grey, an "after" card in brand purple, then the recipe
-broken down. Chat-bubble visual language.
+**Carousel, 5 slides, 1080 x 1350 (4:5 portrait).** Before/after style: a "before" card in muted grey, an "after" card in brand purple, then the recipe broken down. Chat-bubble visual language.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -35,10 +22,7 @@ broken down. Chat-bubble visual language.
 | 4 (recipe) | Three labelled ingredients, recipe-card style | "The recipe: WHAT to add or change · WHERE it goes · an EXAMPLE of the result. It works in GitHub Copilot, in Lovable, in any AI tool you use." |
 | 5 (CTA) | Brand card | "In our course you put this to work with GitHub Copilot's free tier: describe the change, review the diff, keep or undo. Save the recipe 🔖 Full course: Save Lovable Credits: Edit Your App Like a Developer, on LittleParrot.app. First challenge free." |
 
-**Alt text (for the post):** A before-and-after carousel comparing a vague AI
-request, "make the homepage better", with a specific one that names what to
-add, where it goes, and an example of the result, then breaks down the
-what-where-example recipe.
+**Alt text (for the post):** A before-and-after carousel comparing a vague AI request, "make the homepage better", with a specific one that names what to add, where it goes, and an example of the result, then breaks down the what-where-example recipe.
 
 ## Caption (exact)
 
@@ -52,7 +36,4 @@ In the course, you use it with Copilot's free tier on your own app: describe the
 
 Save the recipe for your next request. 🔖
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #githubcopilot #promptrecipe #womenintech #buildinpublic #aitools #learnwithai #aiforbeginners #techforwomen #lovable
+. . . #vibecoding #buildwithai #womenwhobuild #githubcopilot #promptrecipe #womenintech #buildinpublic #aitools #learnwithai #aiforbeginners #techforwomen #lovable

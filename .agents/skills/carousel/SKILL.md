@@ -61,16 +61,19 @@ Write the spec md with:
 No captions in the spec: channel captions are written after the carousel is final, with the **captions** skill.
 
 Where the spec lives:
+
 - Course post: the post md in `productkind/marketing/content/courses/<course>/post-N-*.md` (existing format examples there; follow them).
 - Article or other piece: `spec.md` inside the piece folder under `productkind/marketing/content/<type>/<piece-slug>/`.
 
 Voice: per the "Write the copy fresh, in the brand voice" principle above (productkind-tone; brand context from `productkind/little-parrot-context.md` when needed). Apply the **language-rules** skill in full, and invoke it if it is not already loaded: it is the single source for the banned list and all shared language rules. Do a deliberate phrase-by-phrase pass against it before showing the draft.
 
 Design-quality bar: the copy principles above are the bar (they distil `productkind/ai-research/carousel-research.md` and `productkind/ai-research/carousel-content-design-research.md`). Two rules that only appear at the design stage:
+
 - **Visuals that explain, never decorate**: every image carries part of the idea (a diagram, the prompt window, a before/after); a picture that is only pretty adds nothing and can distract.
 - **A concrete payoff by slide 2-3**, and a CTA with a share-ask that drives to the full article.
 
 Before showing the spec, run this quick gate and fix anything that fails:
+
 - Reread each slide's copy and cut it down: if it reads as a paragraph, trim to the one line that earns the swipe.
 - Name the one takeaway in a sentence, then check every slide serves it; cut any slide that doesn't, however good it is.
 - Check that each abstract point has a concrete example near it. A run of claim-slides with no example is the most common way a carousel stays vague instead of useful.

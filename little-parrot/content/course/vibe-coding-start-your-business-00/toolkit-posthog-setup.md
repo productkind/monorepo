@@ -1,6 +1,7 @@
 ---
-challenge: "4 - Set Up Analytics Before Your First Visitors Arrive"
+challenge: '4 - Set Up Analytics Before Your First Visitors Arrive'
 ---
+
 ## PostHog Analytics Setup Guide
 
 A step-by-step guide for adding PostHog analytics to your app. Use this while you're setting up analytics so you can copy the prompts directly into your AI app builder.
@@ -20,6 +21,7 @@ Copy this prompt, replace the two placeholders with your values, and paste it in
 Add PostHog analytics using posthog-js.
 
 **Requirements:**
+
 - Initialize PostHog at app startup so it works on all pages
 - Wrap the app with <PostHogProvider client={posthog}>
 - Call init() on the PostHog client before passing it to the provider
@@ -42,7 +44,7 @@ const options = {
 **Filling in the placeholders:**
 
 | Placeholder | What to put there |
-|-------------|-------------------|
+| --- | --- |
 | `[POSTHOG_TOKEN]` | Your project token from PostHog (starts with `phc_`) |
 | `[POSTHOG_HOST]` | `https://us.i.posthog.com` if your PostHog data is hosted in the US, `https://eu.i.posthog.com` if it's hosted in the EU |
 

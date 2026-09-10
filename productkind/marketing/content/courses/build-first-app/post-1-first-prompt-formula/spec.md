@@ -6,24 +6,11 @@ account: little-parrot
 
 # Post 1: The first prompt formula
 
-**Pillar:** the method, shown.
-**Research trace:** prompt recipes are the top saveable format; "vague prompts
-get vague results" is the course's own opening lesson; concrete promised
-outcomes ("a working app in minutes") close the confidence gap better than
-encouragement; points straight at the free first challenge, the builder-wedge
-lead magnet. Repackages the First Prompt Template toolkit item.
+**Pillar:** the method, shown. **Research trace:** prompt recipes are the top saveable format; "vague prompts get vague results" is the course's own opening lesson; concrete promised outcomes ("a working app in minutes") close the confidence gap better than encouragement; points straight at the free first challenge, the builder-wedge lead magnet. Repackages the First Prompt Template toolkit item.
 
 ## Format
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Recipe-card style, with
-one recurring device: **the prompt window**, a chat-input mockup (rounded
-input field, small "Your prompt" label, text cursor, send arrow) that holds
-everything the learner would literally type into Lovable. Prompt-window
-content is always monospace and rendered verbatim, including the markdown
-symbols (##, -, 1.), because the symbols ARE the typed text; they are never
-decoration or styled labels. Display copy (the teaching line) sits outside
-the window in the brand style. Dalmie's Book Club Organiser is the running
-example throughout.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Recipe-card style, with one recurring device: **the prompt window**, a chat-input mockup (rounded input field, small "Your prompt" label, text cursor, send arrow) that holds everything the learner would literally type into Lovable. Prompt-window content is always monospace and rendered verbatim, including the markdown symbols (##, -, 1.), because the symbols ARE the typed text; they are never decoration or styled labels. Display copy (the teaching line) sits outside the window in the brand style. Dalmie's Book Club Organiser is the running example throughout.
 
 | Slide | Visual | Display copy (brand style) | Prompt window content (verbatim, monospace) |
 | --- | --- | --- | --- |
@@ -35,25 +22,22 @@ example throughout.
 | 6 | A feature list with most items crossed out, one circled (no prompt window) | "The golden rule: describe ONE core feature, and leave the rest out. The first prompt skipped voting, deadlines, and tracking. Those come later, one prompt at a time." List, crossed out: "voting on the next book" / "reading deadlines" / "progress tracking" · Kept: "one shared reading list" | (none) |
 | 7 (CTA) | Brand card | "The full copy-paste template is in the Build Your First App with Lovable course toolkit." Badge: "LITTLEPARROT.APP" · "First challenge free 💛" · "Save this for your first prompt. 🔖" | (none) |
 
-**Alt text (for the post):** A recipe carousel showing the structure of a
-good first Lovable prompt: product overview, user flow, design system, and
-target user, with the rule to describe one core feature and add the rest in
-later prompts.
+**Alt text (for the post):** A recipe carousel showing the structure of a good first Lovable prompt: product overview, user flow, design system, and target user, with the rule to describe one core feature and add the rest in later prompts.
 
 ## Caption (exact)
 
 Your first prompt sets the direction for everything Lovable builds after it, and the good news is there's a structure for it. ✨
 
-Instead of one vague sentence, describe your idea in sections: 
+Instead of one vague sentence, describe your idea in sections:
 
- - what the app is, 
- - what the user does step by step, 
- - how it should look and feel, and 
- - who it's for. 
+- what the app is,
+- what the user does step by step,
+- how it should look and feel, and
+- who it's for.
 
 Lovable reads the structure and builds something much closer to what you imagined.
 
-The rule that surprises most people: leave things out. A lot of advice says to start with a full PRD (a product requirements document), but that's too much information in one go, and the features won't work the way you expect. 
+The rule that surprises most people: leave things out. A lot of advice says to start with a full PRD (a product requirements document), but that's too much information in one go, and the features won't work the way you expect.
 
 Pick the one core feature your app needs and describe that well. Voting, logins, reminders can each get their own prompt later, and each feature will come out better.
 
@@ -61,7 +45,4 @@ In the free first challenge of our Build Your First App with Lovable course on L
 
 What would you build by vibe coding? Tell us below. 👇🏼
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #lovable #shebuilds #womenintech #aiforbeginners #learnwithai #firstapp #appbuilding #vibecodingtips #prompttips
+. . . #vibecoding #buildwithai #womenwhobuild #lovable #shebuilds #womenintech #aiforbeginners #learnwithai #firstapp #appbuilding #vibecodingtips #prompttips

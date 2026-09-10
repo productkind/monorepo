@@ -1,12 +1,13 @@
 ---
-challenge: "3 - The Baby Log"
-type: "Guide"
+challenge: '3 - The Baby Log'
+type: 'Guide'
 ---
+
 ## Build the Baby Log Shortcut
 
 The Baby Log is an iPhone Shortcut that turns a few spoken words into a timestamped record of your baby's day. You tap it, say the feed, the nappy, the nap, and your phone uses AI to save it as neat, categorised lines in one running note you can scroll back through or show your doctor. This guide has every step, in order, so you can build it from scratch or rebuild it later.
 
-*You'll need an iPhone that runs Apple Intelligence: an **iPhone 15 Pro or 15 Pro Max, any iPhone 16 or newer, or an iPhone Air**. Everything else is built in, with nothing to buy or download.*
+_You'll need an iPhone that runs Apple Intelligence: an **iPhone 15 Pro or 15 Pro Max, any iPhone 16 or newer, or an iPhone Air**. Everything else is built in, with nothing to buy or download._
 
 ### 1. Make the note first
 
@@ -51,7 +52,7 @@ Open the **Shortcuts** app, tap **+**, and add these blocks in order:
 
 1. **Dictate Text.** Tap the blue arrow, set your **Language**, and set **Stop Listening** to **After Pause**, since a log entry is short and can end on its own.
 2. **Current Date**, then **Format Date** right after it. Tap the blue arrow on Format Date and set both **Date Format** and **Time Format** to **Short**, so you get today's date and the time in an easy-to-read format.
-3. **Use Model.** Tap the model and choose **ChatGPT** (leave the Output on **Automatic**). In the prompt box, delete the **Formatted Date** chip that's already there, paste your logging prompt, then place the **Formatted Date** chip right after *"the date and time now is:"*, and add the **Dictated Text** chip at the very end.
+3. **Use Model.** Tap the model and choose **ChatGPT** (leave the Output on **Automatic**). In the prompt box, delete the **Formatted Date** chip that's already there, paste your logging prompt, then place the **Formatted Date** chip right after _"the date and time now is:"_, and add the **Dictated Text** chip at the very end.
 
 ![Building the dictate, date and model blocks](/courses/ai-your-life-admin-00/build-babylog-model.webp)
 
@@ -70,10 +71,13 @@ To run it, add it to your Home Screen: tap the **Share** icon at the **bottom** 
 Now tap the **Baby Log** icon whenever something happens, say the feed and how much, a nappy, a nap, and each tap adds a timestamped session like:
 
 ---
+
 **07/08/2026 | 13:36**
+
 - **Feed**: 200 mL
 - **Mood**: a bit fussy after eating
 - **Nap**: went down to sleep
+
 ---
 
 Prefer to keep everything on your phone and share nothing with another company? Swap **ChatGPT** for **Cloud (Private Cloud Compute)** in the Use Model block. It's fully private, though it might lay the lines out less consistently well-structured.

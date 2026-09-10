@@ -16,9 +16,10 @@ caption: |-
   This is the Brain Dump, the first shortcut you build in our course. You make it yourself by tapping a few blocks together in the Shortcuts app that's already on your phone. It uses Apple Intelligence, so it needs an iPhone 15 Pro or newer, with nothing to download. We made it for mums, and you can reword the categories to fit your own household.
 
   The whole course is free until 30 August at littleparrot.app. Follow along for more, and save this to build it later.
-title: "Talk for twenty seconds, get a sorted list"
+title: 'Talk for twenty seconds, get a sorted list'
 hastags:
-  instagram: ["#mentalload", "#iphoneshortcuts", "#appleintelligence", "#mumsofinstagram", "#braindump"]
-  tiktok: ["#mentalload", "#iphoneshortcuts", "#appleintelligence", "#momtok", "#braindump"]
+  instagram:
+    ['#mentalload', '#iphoneshortcuts', '#appleintelligence', '#mumsofinstagram', '#braindump']
+  tiktok: ['#mentalload', '#iphoneshortcuts', '#appleintelligence', '#momtok', '#braindump']
 discord: |-
   Talk for twenty seconds and your phone sorts the ramble into a tidy list, one for logistics and one for food and household, no typing and no app. Short video showing the Brain Dump shortcut you build yourself. The first one is free.

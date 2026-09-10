@@ -1,11 +1,13 @@
 ---
-challenge: "3 - Save Data with Lovable Cloud"
+challenge: '3 - Save Data with Lovable Cloud'
 ---
+
 ## Prompts for Common Features
 
 These prompts follow the pattern taught in the course: specific, focused, one feature at a time. Copy the one you need, adjust the details in brackets, and paste it into Lovable as a follow-up prompt.
 
 ### Connect to Lovable Cloud
+
 Use this after your app is working locally and you want data to persist.
 
 ```
@@ -13,6 +15,7 @@ Connect this app to Lovable Cloud so that data is saved and accessible from any 
 ```
 
 ### Add Google Authentication
+
 Use this when you need users to log in (required before features like voting, personal profiles, or saved preferences).
 
 ```
@@ -20,6 +23,7 @@ Add Google Authentication. Users should be able to sign in with their Google acc
 ```
 
 ### Add a voting or "like" feature
+
 Use this after authentication is set up.
 
 ```
@@ -27,6 +31,7 @@ Add a voting feature. Each logged-in user can vote for one [item] from the list.
 ```
 
 ### Add a form field
+
 Use this to improve an existing form.
 
 ```
@@ -34,6 +39,7 @@ Improve the [form name] form. Add a "[Field name]" field with the placeholder te
 ```
 
 ### Add a confirmation message
+
 Use this after any action where the user should know something happened.
 
 ```
@@ -41,6 +47,7 @@ After the user [action, e.g. "submits a book suggestion"], show a confirmation m
 ```
 
 ### Add a search or filter
+
 Use this when your app has a list that could get long.
 
 ```
@@ -48,6 +55,7 @@ Add a search bar above the [list name]. Users can type to filter [items] by [fie
 ```
 
 ### Add a delete option
+
 Use this when users need to remove their own entries.
 
 ```
@@ -55,6 +63,7 @@ Allow logged-in users to delete [items] they created. Show a small delete icon n
 ```
 
 ### Change the layout or style of a section
+
 Use this for visual refinements.
 
 ```
@@ -62,6 +71,7 @@ Change the [section name, e.g. "book suggestion cards"] to [describe what you wa
 ```
 
 ### Add a simple navigation menu
+
 Use this when your app has more than one page.
 
 ```
@@ -69,6 +79,7 @@ Add a navigation bar at the top of the app with links to [page 1, e.g. "Suggesti
 ```
 
 ### Prompt to ask Lovable to test your feature
+
 Use this after building any feature.
 
 ```

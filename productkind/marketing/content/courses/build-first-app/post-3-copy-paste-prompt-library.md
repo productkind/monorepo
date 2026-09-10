@@ -6,28 +6,13 @@ account: little-parrot
 
 # Post 3: Copy-paste prompts for features every app needs
 
-**Pillar:** the method, shown.
-**Research trace:** prompt recipes and checklists lead saves; every prompt
-here models the specificity that prevents the credit-burning doom loop; the
-"ask Lovable to test it" prompt teaches diagnosis-before-fixing, the skill the
-audience asks for in their own words. Repackages the Prompts for Common
-Features toolkit item.
+**Pillar:** the method, shown. **Research trace:** prompt recipes and checklists lead saves; every prompt here models the specificity that prevents the credit-burning doom loop; the "ask Lovable to test it" prompt teaches diagnosis-before-fixing, the skill the audience asks for in their own words. Repackages the Prompts for Common Features toolkit item.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Prompt-library style:
-each slide is one chat-bubble card with the prompt in monospace, a one-line
-"when to use it" above it. Brackets shown in a highlight colour so it's
-obvious what to personalise.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Prompt-library style: each slide is one chat-bubble card with the prompt in monospace, a one-line "when to use it" above it. Brackets shown in a highlight colour so it's obvious what to personalise.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -39,10 +24,7 @@ obvious what to personalise.
 | 6 | Prompt card, magnifying glass icon | "And after any feature: 'Test the [feature] feature. Try [action 1]. Then try [action 2, something that should fail]. Report what happens.' Let Lovable check its own work before you move on." |
 | 7 (CTA) | Brand card | "Notice the pattern: one feature, described precisely, with the exact words your app should show. The full library (plus login and voting prompts) is in the Build Your First App with Lovable course toolkit, on LittleParrot.app. First challenge free 🟪" |
 
-**Alt text (for the post):** A prompt-library carousel with five copy-paste
-Lovable prompts: a confirmation message, a search bar, a delete option with a
-confirmation dialog, a navigation menu, and a prompt asking Lovable to test
-the feature it built.
+**Alt text (for the post):** A prompt-library carousel with five copy-paste Lovable prompts: a confirmation message, a search bar, a delete option with a confirmation dialog, a navigation menu, and a prompt asking Lovable to test the feature it built.
 
 ## Caption (exact)
 
@@ -56,7 +38,4 @@ These come with our Build Your First App with Lovable course on LittleParrot.app
 
 Which feature is your app missing right now? 👇
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #lovable #promptrecipe #womenintech #aitools #aiforbeginners #learnwithai #appbuilding #vibecodingtips #prompttips
+. . . #vibecoding #buildwithai #womenwhobuild #lovable #promptrecipe #womenintech #aitools #aiforbeginners #learnwithai #appbuilding #vibecodingtips #prompttips

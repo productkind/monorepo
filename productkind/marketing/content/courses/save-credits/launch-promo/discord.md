@@ -6,8 +6,7 @@ account: little-parrot
 
 # Discord - Little Parrot community
 
-Post into: the Little Parrot Discord. New course announcement.
-Course overview link with `?ref=discord`.
+Post into: the Little Parrot Discord. New course announcement. Course overview link with `?ref=discord`.
 
 ---
 

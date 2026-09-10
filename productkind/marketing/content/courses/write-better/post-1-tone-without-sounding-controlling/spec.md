@@ -6,32 +6,15 @@ account: little-parrot
 
 # Post 1: The status nudge that sounds right
 
-**Pillar:** the method, shown.
-**Research trace:** the work wedge: a task she has this week, solved with a
-teachable technique; the awkward-message fear is a confidence moment
-(wanting to check progress without sounding controlling); before/after
-prompting is the proven contrast format; points at the free first
-challenge, which practises this exact scenario in a sandbox. Draws on the
-course's Challenge 1.
+**Pillar:** the method, shown. **Research trace:** the work wedge: a task she has this week, solved with a teachable technique; the awkward-message fear is a confidence moment (wanting to check progress without sounding controlling); before/after prompting is the proven contrast format; points at the free first challenge, which practises this exact scenario in a sandbox. Draws on the course's Challenge 1.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Chat-mockup style:
-Slack-like message cards, the bare-prompt output buzzword-y, the tuned
-output short and warm, the tone block in monospace.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Chat-mockup style: Slack-like message cards, the bare-prompt output buzzword-y, the tuned output short and warm, the tone block in monospace.
 
-**Full-fidelity rule:** every word that appears on a slide is in this table,
-verbatim. The implemented carousel may not add copy; `check.py` in
-`productkind/carousel-design/` enforces it.
+**Full-fidelity rule:** every word that appears on a slide is in this table, verbatim. The implemented carousel may not add copy; `check.py` in `productkind/carousel-design/` enforces it.
 
 | Slide | Visual | Display copy (verbatim) | Prompt window / mockup content (verbatim) |
 | --- | --- | --- | --- |
@@ -43,10 +26,7 @@ verbatim. The implemented carousel may not add copy; `check.py` in
 | 6 | A tick card and a cross card | "What tone and style can do, and what they can't:" Tick card: "Make the output sound like you. Keep your messages consistent." Cross card: "Reduce factual errors. A message can sound exactly like you and still be wrong." Footnote: "Checking the facts is a separate skill (and a separate post)." | (none) |
 | 7 (CTA) | Brand card: badge, mascot at laptop | "Status nudges, reminders, feedback asks: they all yield to this technique. Practise it in the free first challenge of Write Better with AI: Prompting Foundations for Product Managers." Badge: "LITTLEPARROT.APP" · "First challenge free 💛" · "Send this to your colleagues who send you clearly AI-generated messages 📮" | (none) |
 
-**Alt text (for the post):** A before/after carousel about prompting a chat
-assistant for a Slack message: a bare prompt produces a buzzword-heavy
-corporate message, adding tone and style instructions produces two warm
-sentences, plus four levers for controlling tone.
+**Alt text (for the post):** A before/after carousel about prompting a chat assistant for a Slack message: a bare prompt produces a buzzword-heavy corporate message, adding tone and style instructions produces two warm sentences, plus four levers for controlling tone.
 
 ## Caption (exact)
 
@@ -60,7 +40,4 @@ You can practise this exact scenario, with a sandbox and feedback, in the free f
 
 Save this for the next message you keep redrafting. 🔖
 
-.
-.
-.
-#promptingtips #aiatwork #productmanagement #womenintech #chatgpt #productmanager #aiskills #learnwithai #techforwomen #worksmarter #careertips
+. . . #promptingtips #aiatwork #productmanagement #womenintech #chatgpt #productmanager #aiskills #learnwithai #techforwomen #worksmarter #careertips

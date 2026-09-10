@@ -1,20 +1,16 @@
 # LinkedIn Posts About LittleParrot
 
-*Search query: "LittleParrot" and "little parrot" | Extracted on: June 26, 2026*
+_Search query: "LittleParrot" and "little parrot" | Extracted on: June 26, 2026_
 
 ---
 
-**Name:** Marisha Drayton
-**Title:** 👻 Making Ghosting History | 🍧CoolJobs | HR Pop Culture | DEI Champion
-**Date:** June 25, 2026
-**URL:** https://www.linkedin.com/posts/marisha-drayton_cooljobs-cooljobs-muuza-share-7475952613994262529-dzJ8/
+**Name:** Marisha Drayton **Title:** 👻 Making Ghosting History | 🍧CoolJobs | HR Pop Culture | DEI Champion **Date:** June 25, 2026 **URL:** https://www.linkedin.com/posts/marisha-drayton_cooljobs-cooljobs-muuza-share-7475952613994262529-dzJ8/
 
 **Content:**
 
 🍧 **COOL JOBS - The Originals: The platform women have been waiting for.**
 
-**Why this job is cool to me 💜**
-My gut stopped me on this one.
+**Why this job is cool to me 💜** My gut stopped me on this one.
 
 An AI-driven vaginal health triage platform sitting at the intersection of femtech, AI, and community care.
 
@@ -24,21 +20,15 @@ If there are Hackathons just for women, and the amazing ease of use of systems l
 
 This is not a trend. This is overdue. ✨
 
-**Women's Health Community Manager | Muuza**
-**The Organisation:** Muuza **The Role:** Women's Health Community Manager **Location:** Remote, Part-time, Contract
+**Women's Health Community Manager | Muuza** **The Organisation:** Muuza **The Role:** Women's Health Community Manager **Location:** Remote, Part-time, Contract
 
-**The Essentials**
-• Ability to craft clear, empathetic, and accurate messages on sensitive health topics for diverse audiences
-• Building and managing online communities, including moderating discussions, enforcing community guidelines, and fostering an inclusive, supportive environment
-• Comfort working with AI or tech-enabled products and willingness to learn
+**The Essentials** • Ability to craft clear, empathetic, and accurate messages on sensitive health topics for diverse audiences • Building and managing online communities, including moderating discussions, enforcing community guidelines, and fostering an inclusive, supportive environment • Comfort working with AI or tech-enabled products and willingness to learn
 
-**What You'll Do**
-You'll build and nurture the Muuza community, creating a safe and supportive space for women engaging with the platform's AI-driven vaginal health triage services.
+**What You'll Do** You'll build and nurture the Muuza community, creating a safe and supportive space for women engaging with the platform's AI-driven vaginal health triage services.
 
 You'll manage community channels, develop engagement strategies, and act as the bridge between the women using the platform and the team building it.
 
-**The Cool Factor 🧊**
-Be part of a femtech company genuinely shifting the dial on women's healthcare, helping build community at the heart of a platform that puts female health needs first and uses AI to deliver it.
+**The Cool Factor 🧊** Be part of a femtech company genuinely shifting the dial on women's healthcare, helping build community at the heart of a platform that puts female health needs first and uses AI to deliver it.
 
 **Apply Here 👉🏾** https://lnkd.in/edtN-rX3
 
@@ -46,7 +36,7 @@ I find these jobs so you don't have to, and do this because I am the curator of 
 
 **Remember 💡:** Even if this specific role isn't for you, save it for someone in your network who might be the perfect fit!
 
-*Would you like to work with me to reimagine how to promote your vacancies? DM me.*
+_Would you like to work with me to reimagine how to promote your vacancies? DM me._
 
 #CoolJobs 🍧 #Muuza #WomensHealth #Femtech #AIHealth #CommunityManager #RemoteWork #DigitalHealth #WomenInTech
 
@@ -54,10 +44,7 @@ I find these jobs so you don't have to, and do this because I am the curator of 
 
 ## Post 2
 
-**Name:** Marisha Drayton
-**Title:** 👻 Making Ghosting History | 🍧CoolJobs | HR Pop Culture | DEI Champion
-**Date:** March 12, 2026
-**URL:** https://www.linkedin.com/posts/marisha-drayton_iwd2026-womenintech-littleparrot-ugcPost-7437804722465505282-9YqQ/
+**Name:** Marisha Drayton **Title:** 👻 Making Ghosting History | 🍧CoolJobs | HR Pop Culture | DEI Champion **Date:** March 12, 2026 **URL:** https://www.linkedin.com/posts/marisha-drayton_iwd2026-womenintech-littleparrot-ugcPost-7437804722465505282-9YqQ/
 
 **Content:**
 
@@ -67,23 +54,18 @@ Only 20% of vibe coders are women. A fact I learned from productkind and their f
 
 AI app builders have made it possible for anyone to turn an idea into working software. But if women aren't part of that shift, we'll repeat the same patterns that pushed them out of tech.
 
-**What is LittleParrot.app?**
-A microlearning platform that teaches women to build with AI in short, science-backed lessons that fit into busy lives. Built in Lovable, teaching Vibe Coding and AI Skills for Women in Business.
+**What is LittleParrot.app?** A microlearning platform that teaches women to build with AI in short, science-backed lessons that fit into busy lives. Built in Lovable, teaching Vibe Coding and AI Skills for Women in Business.
 
 They have two price points: monthly and yearly.
 
-The descriptions behind these price points are chef's kiss 🤌🏾 :
-Monthly - Are curious about AI but unsure where to begin
-Yearly - For the women who know this isn't a phase
+The descriptions behind these price points are chef's kiss 🤌🏾 : Monthly - Are curious about AI but unsure where to begin Yearly - For the women who know this isn't a phase
 
-**My Give to Gain Lesson**
-Completing the "Build a Lovable App" lesson, first challenge, didn't feel like you're even learning. I remembered everything I was taught because the structure of the lesson made perfect sense.
+**My Give to Gain Lesson** Completing the "Build a Lovable App" lesson, first challenge, didn't feel like you're even learning. I remembered everything I was taught because the structure of the lesson made perfect sense.
 
-**Their Give to Gain Lessons**
-Yes, ProductKind have yet another lesson.
-The 'Free' version: there are 6 courses, and the 1st Challenges are all free.
+**Their Give to Gain Lessons** Yes, ProductKind have yet another lesson. The 'Free' version: there are 6 courses, and the 1st Challenges are all free.
 
 The 6 Courses are:
+
 - Build Your First App with Lovable
 - Build a Valuable Product
 - Basics of Software for Vibe Coding
@@ -93,11 +75,10 @@ The 6 Courses are:
 
 But that's not all.
 
-Every paid membership helps sponsor a free one.
-Through the **Open Wings Scholarship**, they offer full access to people who face financial or structural barriers to learning.
+Every paid membership helps sponsor a free one. Through the **Open Wings Scholarship**, they offer full access to people who face financial or structural barriers to learning.
 
-**The Open Wings Scholarship: Who it's for**
-They prioritise those who have limited access to education, including:
+**The Open Wings Scholarship: Who it's for** They prioritise those who have limited access to education, including:
+
 - Women and girls with limited access to education
 - Refugees or displaced individuals
 - People from low-income or underfunded regions
@@ -107,8 +88,7 @@ They prioritise those who have limited access to education, including:
 - LGBTQIA+ individuals in environments lacking safety or support
 - Anyone shut out by circumstance, not lack of motivation
 
-Link to site: https://littleparrot.app/
-Link to Open Wings scholarship: https://lnkd.in/eRB9uhvM
+Link to site: https://littleparrot.app/ Link to Open Wings scholarship: https://lnkd.in/eRB9uhvM
 
 **Remember 💡:** Access to knowledge and tools isn't just about celebration, it's about capability. When organisations make technical skills accessible, they create pathways not just possibilities.
 
@@ -118,10 +98,7 @@ Link to Open Wings scholarship: https://lnkd.in/eRB9uhvM
 
 ## Post 3
 
-**Name:** Grace Hall, MBA
-**Title:** Lead Full Stack Software Engineer | Agentic Systems, RAG & ML Platforms | 0→1 Builder | Enterprise & Startup | Lovable SheBuilds S2 | User experience, converting data to action
-**Date:** December 15, 2025
-**URL:** https://www.linkedin.com/posts/gracesmall_shebuilds-little-parrot-ugcPost-7406435400921006080-iQQ-/
+**Name:** Grace Hall, MBA **Title:** Lead Full Stack Software Engineer | Agentic Systems, RAG & ML Platforms | 0→1 Builder | Enterprise & Startup | Lovable SheBuilds S2 | User experience, converting data to action **Date:** December 15, 2025 **URL:** https://www.linkedin.com/posts/gracesmall_shebuilds-little-parrot-ugcPost-7406435400921006080-iQQ-/
 
 **Content:**
 
@@ -132,6 +109,7 @@ For those building with AI or considering it, this resource stands out for its e
 What I appreciate most is that this isn't a course you skim. It's a hands-on micro-course that compels engagement in both thinking and building in tight, intentional increments.
 
 The flow is solid for Product People and relevant for founders:
+
 - Craft a real problem statement (not a feature pitch)
 - Define your target user and core need
 - Storyboard the journey from struggle to solution
@@ -152,10 +130,7 @@ If you're serious about creating something valuable (not just shipping something
 
 ## Post 4
 
-**Name:** Curt Meinhold
-**Title:** Enhancing Senior Care Through Person-Centered Tech | AI & Product Consultant | Workflow Automation Delivering Real ROI | Startup Leadership & Team Building | Musician, Film Producer, Author | Decent Human Being
-**Date:** February 25, 2026
-**URL:** https://www.linkedin.com/posts/curtmeinhold_i-dont-know-productkind-or-the-littleparrot-share-7432511404445868032-gLPL/
+**Name:** Curt Meinhold **Title:** Enhancing Senior Care Through Person-Centered Tech | AI & Product Consultant | Workflow Automation Delivering Real ROI | Startup Leadership & Team Building | Musician, Film Producer, Author | Decent Human Being **Date:** February 25, 2026 **URL:** https://www.linkedin.com/posts/curtmeinhold_i-dont-know-productkind-or-the-littleparrot-share-7432511404445868032-gLPL/
 
 **Content:**
 
@@ -165,30 +140,27 @@ But, if you are seeking a structured way to try out what the kids are calling "v
 
 And, if you do try this and have any issues along the way, feel free to reach out if I can support. Happy to help as I can.
 
-> *Sharing a post by Kinga Magyar (February 25, 2026):*
-> 
+> _Sharing a post by Kinga Magyar (February 25, 2026):_
+>
 > On International Women's Day, Lovable will be free to use.
-> 
+>
 > So we asked ourselves at productkind: how could we encourage more women to take advantage of this and build their own digital product?
-> 
+>
 > We decided to make our course, Build Your First App with Lovable, free until 8th March on LittleParrot.app.
-> 
+>
 > It's a practical, self-paced course designed for beginners. Our goal is to help you feel confident building, so you can make the most of the free Lovable credits on IWD.
-> 
+>
 > If you start learning now, by 8th March you will be ready to build your business idea, side project, community tool, or internal solution and launch it.
-> 
+>
 > Build your first digital product, and let me know what support you need to launch it!
-> 
+>
 > Thanks to Whitney and Elena for making this next round of SheBuilds on Lovable possible!
 
 ---
 
 ## Post 5
 
-**Name:** Trinica A.
-**Title:** Senior measurement and intelligence partner, without the full-time hire | Helping tech & FMCG brands find the signals that drive decisions
-**Date:** March 9, 2026
-**URL:** https://www.linkedin.com/posts/trinica_internationalwomensday-shebuilds-womenintech-ugcPost-7436794650289557504-NuRW/
+**Name:** Trinica A. **Title:** Senior measurement and intelligence partner, without the full-time hire | Helping tech & FMCG brands find the signals that drive decisions **Date:** March 9, 2026 **URL:** https://www.linkedin.com/posts/trinica_internationalwomensday-shebuilds-womenintech-ugcPost-7436794650289557504-NuRW/
 
 **Content:**
 
@@ -196,7 +168,7 @@ And, if you do try this and have any issues along the way, feel free to reach ou
 
 For a while now, I've wanted to better automate our family finance tracker, create a more user-friendly interface, and move away from Google Sheets. Yesterday, I finally built it. Live and fully functional - not a prototype, not a demo. All in under 4 hours.
 
-One of my favorite features? A runway calculator - really helpful especially in these uncertain times where layoffs are happening left and right. *(And yes, all data in the screenshots are dummy data 😄)*
+One of my favorite features? A runway calculator - really helpful especially in these uncertain times where layoffs are happening left and right. _(And yes, all data in the screenshots are dummy data 😄)_
 
 I took the "Build Your First App with Lovable" course on Little Parrot (free until IWD) - a microlearning platform designed to teach women to build with AI in short, science-backed lessons that actually fit into our busy lives. It was exactly what I needed to get out of my head and into action.
 
@@ -206,13 +178,11 @@ Then I joined the Lovable SheBuilds community online, making the most of Lovable
 
 That's exactly why initiatives like Little Parrot and SheBuilds on Lovable matter. They lower the barrier and make space for more of us at the table where products are being built.
 
-If you've been sitting on a business idea and wondering how to bring it to life: *this is your sign* ✨
+If you've been sitting on a business idea and wondering how to bring it to life: _this is your sign_ ✨
 
-👉 Check out LittleParrot.app: even if yesterday's free window has passed, it's worth exploring.
-👉 Look into the Lovable community and what's being built there.
-👉 And most importantly, start building. It's more accessible than ever.
+👉 Check out LittleParrot.app: even if yesterday's free window has passed, it's worth exploring. 👉 Look into the Lovable community and what's being built there. 👉 And most importantly, start building. It's more accessible than ever.
 
-To every woman who's already building, or who's just getting started: *I see you. Let's keep going* 💪
+To every woman who's already building, or who's just getting started: _I see you. Let's keep going_ 💪
 
 What did you build this IWD? Drop it below, I'd love to celebrate with you 👇
 
@@ -222,10 +192,7 @@ What did you build this IWD? Drop it below, I'd love to celebrate with you 👇
 
 ## Post 6
 
-**Name:** Ramona Maniceanu
-**Title:** Senior TA | Sourcing Specialist | Full Cycle Recruiter | Hiring Top Talent | Building AI Automated Workflows 🤖💡
-**Date:** March 7, 2026
-**URL:** https://www.linkedin.com/posts/ramona-maniceanu_ai-app-builders-are-dramatically-lowering-share-7436088595863461888-5tXR/
+**Name:** Ramona Maniceanu **Title:** Senior TA | Sourcing Specialist | Full Cycle Recruiter | Hiring Top Talent | Building AI Automated Workflows 🤖💡 **Date:** March 7, 2026 **URL:** https://www.linkedin.com/posts/ramona-maniceanu_ai-app-builders-are-dramatically-lowering-share-7436088595863461888-5tXR/
 
 **Content:**
 
@@ -234,17 +201,16 @@ AI app builders are dramatically lowering the barrier to creating software. You 
 For International Women's Day, I'm building on Lovable for SheBuilds, a global initiative encouraging women to experiment and create with AI.
 
 To celebrate International Women's Day:
+
 - Lovable is free for 24 hours
 - Participants receive $100 in Anthropic API credits
 - Plus $250 in Stripe fee credits
 
-The barrier to experimenting has never been lower.
-I'll be building because I believe the future of AI should reflect the diversity of the people who use it.
+The barrier to experimenting has never been lower. I'll be building because I believe the future of AI should reflect the diversity of the people who use it.
 
 To get started, I've been learning with LittleParrot, a microlearning platform designed to help women build with AI through short, science-backed lessons that actually fit into busy lives. One of their courses, "Build Your First App with Lovable", is free until tomorrow.
 
-👸 It's time to bring your idea to life with AI:
-👉 https://lnkd.in/eDRWJTvB
+👸 It's time to bring your idea to life with AI: 👉 https://lnkd.in/eDRWJTvB
 
 And if you're a recruiter, I'd love to hear your ideas on where AI could help us most!
 
@@ -252,29 +218,17 @@ And if you're a recruiter, I'd love to hear your ideas on where AI could help us
 
 ## Post 7
 
-**Name:** Elena Martin Hernandez
-**Title:** Product Manager · Builds with AI · EdTech & Growth · Open to work in Stockholm
-**Date:** March 25, 2026
-**URL:** https://www.linkedin.com/posts/elena-martin-hernandez-h_after-my-adventures-with-the-little-parrot-share-7442575960241205249-aiIp/
+**Name:** Elena Martin Hernandez **Title:** Product Manager · Builds with AI · EdTech & Growth · Open to work in Stockholm **Date:** March 25, 2026 **URL:** https://www.linkedin.com/posts/elena-martin-hernandez-h_after-my-adventures-with-the-little-parrot-share-7442575960241205249-aiIp/
 
 **Content:**
 
-After my adventures with the Little Parrot app and playing around with Lovable, this week I came back to my old website, https://helena.cool/, and refreshed it using my own brain.
-I had forgotten how tricky it is to set things up when you have limited knowledge of DNS, IPs, and SSH keys. But it's alive again, and I built a cheeky little thing to help me with my SFI ventures.
-It started as a way to practise Swedish A1 vocab, but (unsurprisingly) turned into a tiny experiment in learning, AI, and building on the internet.
-It's simple, a bit rough around the edges, but it works!
-If you're learning Swedish (or just curious), feel free to try my Swedish A1 vocabulary trainer. Baked with years of Learning Design expertise and sprinkled with SM-2:
-https://lnkd.in/gtCF5iCR
-And here's the post detailing how I built it: https://lnkd.in/gJ9C7_Vp
+After my adventures with the Little Parrot app and playing around with Lovable, this week I came back to my old website, https://helena.cool/, and refreshed it using my own brain. I had forgotten how tricky it is to set things up when you have limited knowledge of DNS, IPs, and SSH keys. But it's alive again, and I built a cheeky little thing to help me with my SFI ventures. It started as a way to practise Swedish A1 vocab, but (unsurprisingly) turned into a tiny experiment in learning, AI, and building on the internet. It's simple, a bit rough around the edges, but it works! If you're learning Swedish (or just curious), feel free to try my Swedish A1 vocabulary trainer. Baked with years of Learning Design expertise and sprinkled with SM-2: https://lnkd.in/gtCF5iCR And here's the post detailing how I built it: https://lnkd.in/gJ9C7_Vp
 
 ---
 
 ## Post 8
 
-**Name:** Elena Martin Hernandez
-**Title:** Product Manager · Builds with AI · EdTech & Growth · Open to work in Stockholm
-**Date:** March 11, 2026
-**URL:** https://www.linkedin.com/posts/elena-martin-hernandez-h_a-week-ago-my-daughter-started-nursery-and-share-7437458915229044737-jBwc/
+**Name:** Elena Martin Hernandez **Title:** Product Manager · Builds with AI · EdTech & Growth · Open to work in Stockholm **Date:** March 11, 2026 **URL:** https://www.linkedin.com/posts/elena-martin-hernandez-h_a-week-ago-my-daughter-started-nursery-and-share-7437458915229044737-jBwc/
 
 **Content:**
 
@@ -286,8 +240,7 @@ Before my leave, I had already started exploring AI: learning when it's a good u
 
 Now I'm on a mission to time-travel into the future. I thought it might be interesting to take you along on my learning journey and share some of the things I'm building with AI and how these tools are empowering my work (or, better said, my job search).
 
-Yesterday I discovered Little Parrot, an app that helps women learn and use AI and vibe coding. As a fellow educator, I have to say: this course app is just hats off. Easy to navigate, straight to the point… I loved every second I spent on it!
-Thanks Kinga Magyar and Tamas Kokeny for empowering my mom brain!
+Yesterday I discovered Little Parrot, an app that helps women learn and use AI and vibe coding. As a fellow educator, I have to say: this course app is just hats off. Easy to navigate, straight to the point… I loved every second I spent on it! Thanks Kinga Magyar and Tamas Kokeny for empowering my mom brain!
 
 And thanks to Lovable for your amazing product. If you haven't used it yet, come out from under your rock and give it a try. After just 15 minutes, I present to you my first AI-built website. And yes, it's about bread 😎🥖
 
@@ -297,10 +250,7 @@ https://lnkd.in/d6KKFBry
 
 ## Post 8
 
-**Name:** Sophie Wright
-**Title:** Digital transformation & AI | Jude Co-Founder | GovAI Product Manager
-**Date:** March 8, 2026
-**URL:** https://www.linkedin.com/posts/sophiewright6_only-20-of-vibe-coders-are-women-thats-share-7436303402135027712-K6ZH/
+**Name:** Sophie Wright **Title:** Digital transformation & AI | Jude Co-Founder | GovAI Product Manager **Date:** March 8, 2026 **URL:** https://www.linkedin.com/posts/sophiewright6_only-20-of-vibe-coders-are-women-thats-share-7436303402135027712-K6ZH/
 
 **Content:**
 
@@ -328,46 +278,37 @@ Anna Morgan Abbie Holbrook Courtney Tooth Kate Hogden Maddi Collings Millie Cler
 
 ## Post 10
 
-**Name:** Chloe Falcon
-**Title:** Transforming Employee Experience | Former English teacher | Passionate about Storytelling
-**Date:** March 6, 2026
-**URL:** https://www.linkedin.com/posts/chloe-falcon-2b2885251_shoutout-claire-ma-and-the-other-wonderful-share-7435755883760037889-RHgU/
+**Name:** Chloe Falcon **Title:** Transforming Employee Experience | Former English teacher | Passionate about Storytelling **Date:** March 6, 2026 **URL:** https://www.linkedin.com/posts/chloe-falcon-2b2885251_shoutout-claire-ma-and-the-other-wonderful-share-7435755883760037889-RHgU/
 
 **Content:**
 
 Shoutout Claire Ma and the other wonderful women at Staffbase who threw this great opportunity on my radar!
 
-> *Claire Ma (Communications and employee engagement @ Staffbase) — March 2026:*
-> 
+> _Claire Ma (Communications and employee engagement @ Staffbase) — March 2026:_
+>
 > I suck at tech-y stuff. Duh, I majored in creative writing.
-> 
+>
 > Love it or hate it, though, AI and coding (🤢) is something that women in business increasingly need to understand in our hyper-digitized world.
-> 
+>
 > On that note, this cute little vibe coding course is too cool not to share, and it's free until International Women's Day 💅 It's made for total newbies who want to get a basic grasp of coding cool things with AI.
-> 
+>
 > (btw this isn't an ad!! i just wanted to share the joy of finding cool, free courses online)
-> 
-> Here's the link if you wanna check it out:
-> https://lnkd.in/e5MMi62A
-> 
+>
+> Here's the link if you wanna check it out: https://lnkd.in/e5MMi62A
+>
 > #InternationalWomensDay #VibeCoding #ProfessionalDevelopment
 
-Little Parrot - Vibe Coding and AI Skills for Women in Business
-littleparrot.app
+Little Parrot - Vibe Coding and AI Skills for Women in Business littleparrot.app
 
 ---
 
 ## Post 11
 
-**Name:** Jane Tonal
-**Title:** Co-fondatrice @Count Me In | Nous aidons les dirigeants à mieux piloter la performance de leurs équipes grâce à un système fiable | Freelance Head of People & Coach professionnel
-**Date:** February 23, 2026
-**URL:** https://www.linkedin.com/posts/jane-tonal_journaezedesdroitsdesfemmes-ia-vibecoding-share-7431713517155545090-lYKP/
+**Name:** Jane Tonal **Title:** Co-fondatrice @Count Me In | Nous aidons les dirigeants à mieux piloter la performance de leurs équipes grâce à un système fiable | Freelance Head of People & Coach professionnel **Date:** February 23, 2026 **URL:** https://www.linkedin.com/posts/jane-tonal_journaezedesdroitsdesfemmes-ia-vibecoding-share-7431713517155545090-lYKP/
 
 **Content:**
 
-Le vibe coding devrait être une révolution pour l'égalité. Pourtant, les femmes sont encore une minorité à créer avec l'IA.
-Voici une idée pour faire évoluer les choses 👇
+Le vibe coding devrait être une révolution pour l'égalité. Pourtant, les femmes sont encore une minorité à créer avec l'IA. Voici une idée pour faire évoluer les choses 👇
 
 J'ai découvert récemment productkind. Et c'est exactement ce problème qu'ils veulent régler avec Little Parot.
 
@@ -385,17 +326,13 @@ Accessibles à toutes.
 
 Build Your First App with Lovable
 
-7 challenges pratiques :
-→ Construis ta première app sans écrire de code
-→ Apprends à itérer avec l'IA
-→ Publie ton app sur internet
+7 challenges pratiques : → Construis ta première app sans écrire de code → Apprends à itérer avec l'IA → Publie ton app sur internet
 
 Durée : ~1h.
 
 À la fin, tu as une app live.
 
-Je partage ça ici parce que je parle beaucoup d'IA.
-Et je sais que ça peut paraître inaccessible.
+Je partage ça ici parce que je parle beaucoup d'IA. Et je sais que ça peut paraître inaccessible.
 
 Je l'ai testée et cette formation est précisément le contraire.
 
@@ -417,5 +354,4 @@ PS : ils ne m'ont pas rémunéré pour ce post, je partage car ça mérite de l'
 
 ---
 
-*[Translation of Jane Tonal's post: Vibe coding should be a revolution for equality. Yet women are still a minority when it comes to building with AI. Here's an idea to change things. I recently discovered productkind. And that's exactly the problem they want to solve with Little Parrot. Little Parrot is a platform created by two people, Kinga Magyar and Tamas Kokeny, with a mission: to reduce the gender gap in AI adoption. They built practical micro-courses to learn how to build with AI. Without coding. Accessible to everyone. FREE COURSE (UNTIL MARCH 8): Build Your First App with Lovable. 7 practical challenges: Build your first app without writing code, Learn to iterate with AI, Publish your app on the internet. Duration: ~1h. At the end, you have a live app. I share this here because I talk a lot about AI. And I know it can seem inaccessible. I tested it and this training is precisely the opposite. Accessible. Practical. A beautiful way to mark Women's Rights Day: by opening access to a concrete skill. Link in the comments. Thank you to productkind for this initiative. Feel free to comment and reshare this post, to encourage more women to train in vibe-coding. PS: they did not pay me for this post, I share because it deserves to be.]*
-
+_[Translation of Jane Tonal's post: Vibe coding should be a revolution for equality. Yet women are still a minority when it comes to building with AI. Here's an idea to change things. I recently discovered productkind. And that's exactly the problem they want to solve with Little Parrot. Little Parrot is a platform created by two people, Kinga Magyar and Tamas Kokeny, with a mission: to reduce the gender gap in AI adoption. They built practical micro-courses to learn how to build with AI. Without coding. Accessible to everyone. FREE COURSE (UNTIL MARCH 8): Build Your First App with Lovable. 7 practical challenges: Build your first app without writing code, Learn to iterate with AI, Publish your app on the internet. Duration: ~1h. At the end, you have a live app. I share this here because I talk a lot about AI. And I know it can seem inaccessible. I tested it and this training is precisely the opposite. Accessible. Practical. A beautiful way to mark Women's Rights Day: by opening access to a concrete skill. Link in the comments. Thank you to productkind for this initiative. Feel free to comment and reshare this post, to encourage more women to train in vibe-coding. PS: they did not pay me for this post, I share because it deserves to be.]_

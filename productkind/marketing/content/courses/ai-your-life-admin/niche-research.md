@@ -1,8 +1,6 @@
 # Niche research: AI for Your Life Admin
 
-**Course:** `ai-your-life-admin-00` (Hand Off the Mental Load: Use AI to Turn a Brain Dump into a List)
-**Method:** `productkind/marketing/channels/steps-to-find-your-niche.md`
-**Run:** 14 to 15 August 2026. Signals A, C and D gathered; B and Keyword Planner still need your accounts.
+**Course:** `ai-your-life-admin-00` (Hand Off the Mental Load: Use AI to Turn a Brain Dump into a List) **Method:** `productkind/marketing/channels/steps-to-find-your-niche.md` **Run:** 14 to 15 August 2026. Signals A, C and D gathered; B and Keyword Planner still need your accounts.
 
 > This document was cut back on 15 August 2026 once Google Trends landed. Earlier drafts recommended renaming the course around `brain dump` and building a YouTube tutorial cluster around ADHD. Trends reversed both, so that working has been removed rather than left in to be read past. What remains is current.
 
@@ -25,7 +23,7 @@ No repositioning is needed to serve it. What needs to change is what we publish 
 Trends values are relative to the largest term in each comparison, so they only mean something within a row.
 
 | Term | Region | Mean | First third | Last third | Change |
-|---|---|---:|---:|---:|---|
+| --- | --- | --: | --: | --: | --- |
 | **mental load** | GB, 5y | 16.4 | 7.0 | 32.0 | **4.6x up** |
 | **mental load** | GB, **last 12m** | 43.1 | 23.8 | 52.8 | **2.2x up within the year** |
 | **mental load** | US, 5y | 19.1 | 8.0 | 36.4 | 4.5x up |
@@ -39,12 +37,12 @@ Trends values are relative to the largest term in each comparison, so they only 
 
 Rising related queries for `mental load`, GB, five years:
 
-| Rise | Query |
-|---:|---|
-| +78,650% | **mental load cards** |
+|     Rise | Query                                 |
+| -------: | ------------------------------------- |
+| +78,650% | **mental load cards**                 |
 | +73,450% | how to explain mental load to husband |
-| +67,700% | mental load in relationships |
-| +23,950% | fair play book |
+| +67,700% | mental load in relationships          |
+| +23,950% | fair play book                        |
 
 Top related in both GB and US includes **`mental load list`**. Over the **last twelve months** specifically, it is the one rising query in GB (+140%), with **`mental load checklist`** beside it in the top list.
 
@@ -52,12 +50,12 @@ So the intent divides three ways: define it, explain it to a partner, and get a 
 
 ### Platform split, which decides where content goes
 
-| Term | Google Search (GB, 5y mean) | YouTube Search (GB, 5y mean) |
-|---|---:|---:|
-| mental load | 16.4 and rising | **0.0** |
-| brain dump | 7.0 flat | 7.9, but a contaminated spike |
-| apple intelligence | not compared | 6.8, from a standing start |
-| apple shortcuts | not compared | 0.1 |
+| Term               | Google Search (GB, 5y mean) |  YouTube Search (GB, 5y mean) |
+| ------------------ | --------------------------: | ----------------------------: |
+| mental load        |             16.4 and rising |                       **0.0** |
+| brain dump         |                    7.0 flat | 7.9, but a contaminated spike |
+| apple intelligence |                not compared |    6.8, from a standing start |
+| apple shortcuts    |                not compared |                           0.1 |
 
 **`mental load` has no YouTube demand at all.** On YouTube, `brain dump` in GB is dominated by "burnbot brain dump", which rose 267,900% and collapsed (first-third average 19.7 down to 3.1). That is an event, not a niche.
 
@@ -79,7 +77,7 @@ Counts are YouTube autocomplete suggestions. Zero means nobody types the phrase.
 
 **Dead (zero suggestions), and this list is nearly a description of the course as we named it:** `iphone shortcuts for mums` · `iphone shortcuts for moms` · `apple shortcuts for parents` · `shortcuts for new parents` · `ai for busy mums` · `chatgpt for mums` · `mum life admin` · `new mum organisation` · `mental load mum` · `mental load app` · `baby log iphone` · `apple notes baby tracker` · `track baby feeds` · `voice to do list` · `dictate to notes iphone` · `apple notes checklist shortcut` · `apple intelligence use model` · `shortcuts use model`
 
-Mum-shaped *AI* phrasing is dead. Mum *vocabulary* is enormous. Use theirs.
+Mum-shaped _AI_ phrasing is dead. Mum _vocabulary_ is enormous. Use theirs.
 
 ### Two keywords to avoid
 
@@ -93,7 +91,7 @@ Mum-shaped *AI* phrasing is dead. Mum *vocabulary* is enormous. Use theirs.
 ### `brain dump mom`, the clearest gap found
 
 | # | Title | Channel | Views | Age |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | 1 | The "Brain Dump" Hack Every Busy Parent Needs | Things That Make Me Feel Good | **3** | 4 mo |
 | 2 | The 2-Step Productivity Method That Changed My Life | That Practical Mom | 117,497 | 2 yrs |
 | 4 | Why Your Brain Dumps Aren't Effective | Laura Smith | 20,431 | **4 yrs** |
@@ -110,7 +108,7 @@ On `how to share the mental load`, all twelve results are therapists and relatio
 But on `how to reduce mental load` the two biggest results are practical, and they beat the therapy videos by ten to a hundred times:
 
 | Title | Channel | Views | Age |
-|---|---|---:|---|
+| --- | --- | --: | --- |
 | 10 Game-Changing Tips for Managing the Mental Load **with ADHD** | How to ADHD | 264,923 | 1 yr |
 | How to Stop Feeling Overwhelmed by Everyday Life \| Manage "Life Admin" & Reduce the Mental Load | Michela Allocca | 156,939 | **6 mo** |
 | The Mental Load Is Ruining Your Relationship. Here's the Fix. | Paired (therapist) | 2,660 | 9 mo |
@@ -137,12 +135,12 @@ Every completion of `how i organise my life` and `organise my life` is Notion. B
 
 Four pages drafted in `seo-pages/`, one hub and three spokes, all linking to the hub:
 
-| Page | Primary query | Status |
-|---|---|---|
-| `mental-load-list` | mental load list | Drafted |
-| `what-is-the-mental-load` | what is mental load | Drafted |
-| `explain-mental-load-to-your-partner` | how to explain mental load to husband | Drafted |
-| `brain-dump-template` | brain dump template, adhd brain dump template | Drafted |
+| Page                                  | Primary query                                 | Status  |
+| ------------------------------------- | --------------------------------------------- | ------- |
+| `mental-load-list`                    | mental load list                              | Drafted |
+| `what-is-the-mental-load`             | what is mental load                           | Drafted |
+| `explain-mental-load-to-your-partner` | how to explain mental load to husband         | Drafted |
+| `brain-dump-template`                 | brain dump template, adhd brain dump template | Drafted |
 
 Implementation notes and voice rules are in `seo-pages/README.md`. Not yet built in the app.
 

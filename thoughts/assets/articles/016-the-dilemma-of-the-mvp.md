@@ -1,9 +1,8 @@
 # The Dilemma of the MVP
 
-*What exactly should you build as your first iteration of a valuable product?*
+_What exactly should you build as your first iteration of a valuable product?_
 
-**Date:** September 24, 2025
-**Author:** Kinga Magyar
+**Date:** September 24, 2025 **Author:** Kinga Magyar
 
 ---
 

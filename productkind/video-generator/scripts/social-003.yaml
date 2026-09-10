@@ -18,9 +18,9 @@ caption: |-
   You do not need the maths to use AI well. But knowing that a model has two phases, one for finding patterns and one for using them, changes how the whole thing reads.
 
   Follow along if you want the shape of AI explained without the maths, and save this for the next time someone mentions models like it is obvious.
-title: "What a language model actually is"
+title: 'What a language model actually is'
 hastags:
-  instagram: ["#womenintech", "#womenwhobuild", "#womenlearningai", "#llm", "#howaiworks"]
-  tiktok: ["#womenintech", "#womenempowerment", "#womenlearningai", "#llm", "#howaiworks"]
+  instagram: ['#womenintech', '#womenwhobuild', '#womenlearningai', '#llm', '#howaiworks']
+  tiktok: ['#womenintech', '#womenempowerment', '#womenlearningai', '#llm', '#howaiworks']
 discord: |-
   Ever used ChatGPT without knowing what happens under the hood? Short video explaining what a language model is, no maths required. Bonus: a very cramped chess master in a wooden cabinet.

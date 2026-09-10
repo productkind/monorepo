@@ -4,6 +4,7 @@ description: Email that founding subscribers receive.
 ---
 
 # Thank you for becoming a founding subscriber!
+
 [email banner]
 
 #### I'm writing this one personally, because you've gone above and beyond.

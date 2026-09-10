@@ -29,7 +29,7 @@ export default defineVideo({
   ],
   sections: [
     {
-      text: "You’ve nodded along in a stand-up,",
+      text: 'You’ve nodded along in a stand-up,',
       visual: gif({
         src: 'section-00-nodding.gif',
         source: { provider: 'giphy', id: 'sdyQm2V3Mc2x2A4Sr3', search: 'nodding yes cat' },
@@ -37,7 +37,7 @@ export default defineVideo({
       }),
     },
     {
-      text: "hoping nobody asks you a follow-up question.",
+      text: 'hoping nobody asks you a follow-up question.',
       visual: gif({
         src: 'section-01-nervous.gif',
         source: {
@@ -52,7 +52,7 @@ export default defineVideo({
     {
       // Stands in for what the production notes want here: a typed meeting note reading
       // "migration blocked by platform team".
-      text: "Someone says the migration is blocked by the platform team.",
+      text: 'Someone says the migration is blocked by the platform team.',
       visual: gif({
         src: 'section-02-meeting.gif',
         source: { provider: 'giphy', id: 'ipgQEioEetBm0scBr3', search: 'office meeting listening' },
@@ -61,7 +61,7 @@ export default defineVideo({
       }),
     },
     {
-      text: "You don’t know what that means for your release.",
+      text: 'You don’t know what that means for your release.',
       visual: gif({
         src: 'section-03-shrug.gif',
         source: { provider: 'giphy', id: 'sZEl1yTi26mJzrI4VN', search: 'i dont know shrug' },
@@ -71,7 +71,7 @@ export default defineVideo({
     },
     {
       // 1.84s of lips being sealed, slowed to cover the 1.9s beat in one pass.
-      text: "So you don’t ask.",
+      text: 'So you don’t ask.',
       visual: gif({
         src: 'section-04-quiet.gif',
         source: { provider: 'giphy', id: '48hZD1upEM0w3tP0gW', search: 'zip lips quiet' },
@@ -82,7 +82,7 @@ export default defineVideo({
     {
       // The shortest gif in the video, 0.90s against a 1.2s slot. At 0.75 speed the clocks
       // tumble once across the whole beat instead of restarting a third of the way in.
-      text: "Three weeks later,",
+      text: 'Three weeks later,',
       visual: gif({
         src: 'section-05-clocks.gif',
         source: { provider: 'giphy', id: 'xTiTnEeKtzw4zJyFsQ', search: 'time passing clock' },
@@ -92,7 +92,7 @@ export default defineVideo({
     },
     {
       // Slowed so the field is still toppling at the cut, rather than springing back up.
-      text: "that blocker is why your release date moves.",
+      text: 'that blocker is why your release date moves.',
       visual: gif({
         src: 'section-06-dominoes.gif',
         source: { provider: 'giphy', id: 'lvMhtbcATyeEBc1gzd', search: 'domino falling' },
@@ -102,7 +102,7 @@ export default defineVideo({
       endsParagraph: true,
     },
     {
-      text: "Nobody taught you those words.",
+      text: 'Nobody taught you those words.',
       visual: gif({
         src: 'section-07-book.gif',
         source: { provider: 'giphy', id: '2lzFTmg15tNbxHFWEg', search: 'confused reading book' },
@@ -111,7 +111,7 @@ export default defineVideo({
       }),
     },
     {
-      text: "Looking up a definition afterwards",
+      text: 'Looking up a definition afterwards',
       visual: gif({
         src: 'section-08-search.gif',
         source: { provider: 'giphy', id: 'XZMApO2tucBKWjtgvr', search: 'typing search phone' },
@@ -120,7 +120,7 @@ export default defineVideo({
     },
     {
       // 1.96s against 2.3s, stretched so the blank stare holds for the whole line.
-      text: "doesn’t tell you what it means for your release.",
+      text: 'doesn’t tell you what it means for your release.',
       visual: gif({
         src: 'section-09-blank.gif',
         source: { provider: 'giphy', id: 'ZV0d7QC1bCC2RgXJtg', search: 'blank stare confused' },
@@ -130,7 +130,7 @@ export default defineVideo({
       endsParagraph: true,
     },
     {
-      text: "If you’d rather be the one who asks these questions,",
+      text: 'If you’d rather be the one who asks these questions,',
       visual: gif({
         src: 'section-10-hand-up.gif',
         source: { provider: 'giphy', id: 'w5xEwipLyIBMdINSvn', search: 'hand up pick me' },
@@ -139,7 +139,7 @@ export default defineVideo({
     },
     {
       // Same family of 3D creatures as social-016's opener, which is the house look.
-      text: "we’re building a learning path for exactly this.",
+      text: 'we’re building a learning path for exactly this.',
       visual: gif({
         src: 'section-11-building.gif',
         source: { provider: 'giphy', id: 'jvUjz1RF0pZue1JgVG', search: 'building blocks stacking' },
@@ -150,7 +150,7 @@ export default defineVideo({
     {
       // A parrot saying it back, on the Little Parrot account, over the line about saying a
       // change back in your own words.
-      text: "By the end you’ll say a change back in your own words,",
+      text: 'By the end you’ll say a change back in your own words,',
       visual: gif({
         src: 'section-12-parrot.gif',
         source: { provider: 'giphy', id: 'v02uv7Pshwxsa7viq2', search: 'parrot talking' },
@@ -159,7 +159,7 @@ export default defineVideo({
       }),
     },
     {
-      text: "ask what it does to your product,",
+      text: 'ask what it does to your product,',
       visual: gif({
         src: 'section-13-question.gif',
         source: { provider: 'giphy', id: 'Ie8ncfWOhpNeH9morB', search: 'asking question' },
@@ -168,7 +168,7 @@ export default defineVideo({
       }),
     },
     {
-      text: "and understand the answer while you’re in the meeting.",
+      text: 'and understand the answer while you’re in the meeting.',
       visual: gif({
         src: 'section-14-lightbulb.gif',
         source: { provider: 'giphy', id: '3aYnAs1OHimXSuZAUm', search: 'aha moment idea' },
@@ -179,7 +179,7 @@ export default defineVideo({
     },
     {
       // Stands in for the waitlist page the production notes want on screen here.
-      text: "The waitlist link is in the comments.",
+      text: 'The waitlist link is in the comments.',
       visual: gif({
         src: 'section-15-pointing.gif',
         source: { provider: 'giphy', id: 'wPskSPeu2grXPyBmq1', search: 'tap here below' },
@@ -188,7 +188,7 @@ export default defineVideo({
       }),
     },
     {
-      text: "Sign up and we’ll let you know when the learning path opens.",
+      text: 'Sign up and we’ll let you know when the learning path opens.',
       visual: gif({
         src: 'section-16-notification.gif',
         source: {
@@ -204,7 +204,7 @@ export default defineVideo({
     },
     {
       // Slowed so the question mark is still being drawn as the video ends.
-      text: "[pause][curious] What technical word did you look up last?",
+      text: '[pause][curious] What technical word did you look up last?',
       visual: gif({
         src: 'section-17-question-mark.gif',
         source: { provider: 'giphy', id: 'ducsQFMyHcdiTeIcuD', search: 'question marks floating' },

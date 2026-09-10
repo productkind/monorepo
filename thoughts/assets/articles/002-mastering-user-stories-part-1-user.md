@@ -1,9 +1,8 @@
 # Mastering User Stories – Part 1 | User Stories Unpacked: The Power of Conversations
 
-*A guide for Product People to discover why user stories are about conversations, not documentation, and how to foster true shared understanding in your team*
+_A guide for Product People to discover why user stories are about conversations, not documentation, and how to foster true shared understanding in your team_
 
-**Date:** June 18, 2025
-**Author:** Kinga Magyar
+**Date:** June 18, 2025 **Author:** Kinga Magyar
 
 ---
 

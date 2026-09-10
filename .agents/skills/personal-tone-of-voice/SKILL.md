@@ -85,14 +85,14 @@ Only the rules specific to my first-person writing live here:
 
 ## Preferred Moves
 
-| Instead of | Write |
-|------------|-------|
-| "This is a game-changer" | Describe the specific change it enables |
-| "Best practices for X" | "What works for X in [specific context]" |
-| "The key takeaway is..." | Just state it |
-| "What people don't realise is..." | Just state the thing |
-| Long wind-up | Start with the point |
-| Generic example | Named tool, real scenario |
+| Instead of                        | Write                                    |
+| --------------------------------- | ---------------------------------------- |
+| "This is a game-changer"          | Describe the specific change it enables  |
+| "Best practices for X"            | "What works for X in [specific context]" |
+| "The key takeaway is..."          | Just state it                            |
+| "What people don't realise is..." | Just state the thing                     |
+| Long wind-up                      | Start with the point                     |
+| Generic example                   | Named tool, real scenario                |
 
 ---
 

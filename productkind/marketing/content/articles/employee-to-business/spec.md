@@ -6,31 +6,17 @@ account: kinga
 
 # Carousel: From employee to running a business
 
-**Source article:** `thoughts/assets/articles/020-my-journey-from-employee-to-running-a-business.md`
-**Channels:** Kinga's personal LinkedIn, Instagram, TikTok
-**Date:** July 2026
+**Source article:** `thoughts/assets/articles/020-my-journey-from-employee-to-running-a-business.md` **Channels:** Kinga's personal LinkedIn, Instagram, TikTok **Date:** July 2026
 
-**Story arc:** why I left (slides 1 to 2), what I tried (3 to 4), the moment
-that refocused everything (5), the history that explains it (6), the mission
-(7), the invitation (8). A personal story carousel, told as a fellow learner,
-never from above.
+**Story arc:** why I left (slides 1 to 2), what I tried (3 to 4), the moment that refocused everything (5), the history that explains it (6), the mission (7), the invitation (8). A personal story carousel, told as a fellow learner, never from above.
 
 ## Format
 
-**Carousel, 8 slides, 1080 x 1350 (4:5 portrait).** Editorial, personal
-style rather than product-promo: a real photo of Kinga on the cover if
-available (the Singapore veranda photo from the article fits slide 3),
-warm brand palette, generous whitespace. Slide 6 works as a simple line
-chart (women's share of CS degrees rising to 1984, then falling); slide 7
-as a big-number stat card (14%).
+**Carousel, 8 slides, 1080 x 1350 (4:5 portrait).** Editorial, personal style rather than product-promo: a real photo of Kinga on the cover if available (the Singapore veranda photo from the article fits slide 3), warm brand palette, generous whitespace. Slide 6 works as a simple line chart (women's share of CS degrees rising to 1984, then falling); slide 7 as a big-number stat card (14%).
 
-**Export note:** the same 1080 x 1350 export works on all three channels.
-TikTok photo mode prefers taller images and will pad the sides; keep all
-text inside the central safe area.
+**Export note:** the same 1080 x 1350 export works on all three channels. TikTok photo mode prefers taller images and will pad the sides; keep all text inside the central safe area.
 
-**Full-fidelity rule:** every word that appears on a slide is in this table,
-verbatim. The implemented carousel may not add copy; `check.py` in
-`productkind/carousel-design/` enforces it.
+**Full-fidelity rule:** every word that appears on a slide is in this table, verbatim. The implemented carousel may not add copy; `check.py` in `productkind/carousel-design/` enforces it.
 
 | Slide | Visual | Text on slide (verbatim) |
 | --- | --- | --- |
@@ -43,10 +29,7 @@ verbatim. The implemented carousel may not add copy; `check.py` in
 | 7 | Big-number stat card: "14%" | "Now a new technology is here: generative AI. Yet only 14% of Lovable's users are women, and you can only benefit from AI by using it. So we've refocused our two-person company, productkind, on one mission: closing the gender gap in AI adoption." |
 | 8 (CTA) | Brand card: new productkind logo, warm | "Nobody has ten years of experience in vibe coding yet. We're all starting from the same line. I'll be sharing what I try, what works, and what definitely doesn't in my newsletter, Thoughts by productkind." Badge: "PRODUCTKIND.SUBSTACK.COM" · "Full article on our Substack 💛" · "Know someone rethinking their path? Send them this" |
 
-**Alt text (for the post):** A personal carousel about leaving a full-time
-tech job to run a two-person business: trying coaching, discovering vibe
-coding, a women's hackathon, the history of women leaving computer science
-after 1984, and a mission to close the gender gap in AI adoption.
+**Alt text (for the post):** A personal carousel about leaving a full-time tech job to run a two-person business: trying coaching, discovering vibe coding, a women's hackathon, the history of women leaving computer science after 1984, and a mission to close the gender gap in AI adoption.
 
 ## LinkedIn caption (exact)
 
@@ -74,16 +57,13 @@ So we've refocused our two-person company, productkind, on closing the gender ga
 
 Subscribe to learn with us about running a business. 🎓
 
-.
-.
-.
-#careerchange #productmanagement #aiforwomen #techforwomen #genderequality
+. . . #careerchange #productmanagement #aiforwomen #techforwomen #genderequality
 
 ## TikTok caption (exact)
 
 I left my full-time job at the end of 2024, after 10 years in tech. This is what running my own business has been like since: coaching, vibe coding, a women's hackathon, and a new mission. Full story in my newsletter, link in bio. 💜
 
-*(House style keeps hashtags to Instagram; if you want discovery tags on TikTok, reuse two or three from the Instagram set, e.g. #careerchange #womenintech #vibecoding.)*
+_(House style keeps hashtags to Instagram; if you want discovery tags on TikTok, reuse two or three from the Instagram set, e.g. #careerchange #womenintech #vibecoding.)_
 
 ## Posting notes
 

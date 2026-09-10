@@ -1,6 +1,6 @@
-import { describe, expect, test } from 'vitest'
-
 import { clipBadge, fitBadge, motionBadge, usedBadge } from './badges'
+
+import { describe, expect, test } from 'vitest'
 
 describe('fitBadge', () => {
   test('reads a gif that covers its slot in one pass as good', () => {

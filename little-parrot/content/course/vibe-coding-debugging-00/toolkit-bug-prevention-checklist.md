@@ -1,13 +1,14 @@
 ---
-challenge: "2 - Preventing Bugs Before They Happen"
+challenge: '2 - Preventing Bugs Before They Happen'
 ---
+
 ## Bug Prevention Checklist
 
 Run through this checklist every time you're about to prompt Lovable to add new functionality and again after it finishes. These habits catch most bugs before they become problems.
 
 ### Before you prompt
 
-- [ ] **Is this one feature only?** Your prompt should do one thing. If you can describe it with "and" (e.g., "add voting *and* notifications *and* a leaderboard"), split it into separate prompts.
+- [ ] **Is this one feature only?** Your prompt should do one thing. If you can describe it with "and" (e.g., "add voting _and_ notifications _and_ a leaderboard"), split it into separate prompts.
 - [ ] **Is this feature small?** If the feature is complex, break it down into smaller parts. For example, instead of "add voting to books," start with "add a vote button to each book. When clicked, it stores the vote in the database." Then you can add "display the total votes on each book" in a separate prompt.
 - [ ] **Did you bookmark your current stable version?** Before changing anything, bookmark what's working. If the next change breaks something, you have a safe point to return to.
 - [ ] **Is the prompt specific enough?** Does it name the page, the component, the expected behaviour and the edge cases? Vague prompts lead to unexpected changes.

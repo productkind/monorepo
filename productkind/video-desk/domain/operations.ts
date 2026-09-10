@@ -1,6 +1,6 @@
-import { z } from 'zod'
-
 import type { Fit, ProviderItem } from './types.ts'
+
+import { z } from 'zod'
 
 /**
  * Everything the desk decides, with no filesystem, no network and no subprocess in sight.
@@ -195,9 +195,13 @@ export const edgeColourOf = ({
     return null
   }
   const near = histogram
-    .filter((entry) =>
-      Math.max(...[0, 1, 2].map((channel) => Math.abs((entry.rgba[channel] ?? 0) - (mode.rgba[channel] ?? 0)))) <=
-      EDGE_TOLERANCE,
+    .filter(
+      (entry) =>
+        Math.max(
+          ...[0, 1, 2].map((channel) =>
+            Math.abs((entry.rgba[channel] ?? 0) - (mode.rgba[channel] ?? 0)),
+          ),
+        ) <= EDGE_TOLERANCE,
     )
     .reduce((sum, entry) => sum + entry.count, 0)
   const coverage = near / total
@@ -596,8 +600,7 @@ export const pixabaySearchUrl = ({
   key: string
   term: string
   limit: number
-}): string =>
-  `${PIXABAY_SEARCH}?key=${key}&q=${encodeURIComponent(term)}&per_page=${String(limit)}`
+}): string => `${PIXABAY_SEARCH}?key=${key}&q=${encodeURIComponent(term)}&per_page=${String(limit)}`
 
 const FILE = z.object({ width: z.number(), height: z.number() })
 

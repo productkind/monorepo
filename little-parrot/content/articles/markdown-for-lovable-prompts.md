@@ -28,14 +28,18 @@ There are three levels:
 # Book Club Organiser
 
 ## Product overview
+
 A simple app where book club members can suggest books for the group to read next.
 
 ## Design system
+
 ### Colours
+
 - Primary: warm cream (#FDF6E3)
 - Accent: coral (#E07A5F)
 
 ### Typography
+
 - Heading font: Merriweather
 - Body font: Open Sans
 ```
@@ -50,10 +54,12 @@ Use `-` followed by a space to create a list. Bullet points are ideal for requir
 
 ```markdown
 ## Platform requirements
+
 - Mobile-first layout
 - Accessible (WCAG AA compliance)
 
 ## Design system
+
 - Brand colours: warm cream, deep brown, coral
 - Style: cosy, bookish, friendly
 - Rounded corners on cards and buttons
@@ -67,6 +73,7 @@ Use `1.` `2.` `3.` followed by a space for actions that happen in a specific ord
 
 ```markdown
 ## User flow
+
 1. User opens the app and sees a list of book suggestions
 2. User clicks "Add book" and types the title and a short note
 3. User clicks "Save" and the book appears in the list
@@ -82,6 +89,7 @@ Wrap a word or phrase in `**double asterisks**` to make it bold. Use it sparingl
 
 ```markdown
 ## Implementation details
+
 - **No login** required for the first version
 - Store data **locally** for now
 - **Mobile-first** layout is required
@@ -142,44 +150,53 @@ Here's a full prompt that uses all seven markdown features together. You can cop
 # Book Club Organiser
 
 ## Product overview
+
 A simple app where book club members can suggest books for the group to read next. Solves the problem of book suggestions getting lost in group chats.
 
 ## User flow
+
 1. User opens the app and sees a list of book suggestions
 2. User clicks `Add book` and types the title, author, and a short note
 3. User clicks `Save` and the book appears in the list
 
 ## Platform requirements
+
 - Mobile-first layout
 - Accessible (WCAG AA compliance)
 
 ## Design system
+
 ### Colours
+
 - Primary: `#FDF6E3` (warm cream)
 - Accent: `#E07A5F` (coral)
 - Dark: `#5C4033` (deep brown)
 
 ### Typography
+
 - Heading font: Merriweather
 - Body font: Open Sans
 
 ### Style
+
 - Cosy, bookish, friendly
 - Rounded corners on cards and buttons
 - Use the layout style of [Notion](https://notion.so) as inspiration
 
 ## Implementation details
+
 - **No login** required for the first version
 - Store data **locally** for now
 
 ## Target user
+
 Sarah, a book club organiser who wants to spend less time on admin and more time reading with friends.
 ```
 
 ## Quick reference table
 
 | What you want | What you type | When to use it |
-|--------------|--------------|----------------|
+| --- | --- | --- |
 | Main title | `# Your title` | Once at the top to name your app |
 | Section heading | `## Your heading` | To separate major parts of your prompt |
 | Sub-section | `### Your sub-heading` | To organise within a section (e.g., Colours, Typography) |
@@ -187,7 +204,7 @@ Sarah, a book club organiser who wants to spend less time on admin and more time
 | Numbered step | `1. First step` | For user flows and sequential steps |
 | Bold text | `**important word**` | To highlight key decisions or constraints |
 | Exact value | `` `#FDF6E3` `` | For hex colours, button labels, placeholder text |
-| Block of exact text | ```` ``` your text ``` ```` | For welcome messages, email templates, landing page copy |
+| Block of exact text | ` ``` your text ``` ` | For welcome messages, email templates, landing page copy |
 | Link | `[text](URL)` | To reference design inspiration or external resources |
 
 ## Common mistakes to avoid

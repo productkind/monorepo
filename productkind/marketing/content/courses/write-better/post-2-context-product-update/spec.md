@@ -6,35 +6,15 @@ account: little-parrot
 
 # Post 2: The release update people read
 
-**Pillar:** the method, shown.
-**Research trace:** a weekly PM/founder task made concrete; the
-vague-vs-specific contrast is the proven format; "without context, AI
-guesses" is the teaching line that transfers to every AI tool the audience
-uses, including app builders. Draws on the course's Challenge 2, reframed
-from the course's internal #releases update to a public product
-announcement, which is what our founder and micro-business audience
-actually has to write.
+**Pillar:** the method, shown. **Research trace:** a weekly PM/founder task made concrete; the vague-vs-specific contrast is the proven format; "without context, AI guesses" is the teaching line that transfers to every AI tool the audience uses, including app builders. Draws on the course's Challenge 2, reframed from the course's internal #releases update to a public product announcement, which is what our founder and micro-business audience actually has to write.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "Part 1:", "Part 2:") or written with markdown symbols (##,
--, 1., backticks) is a prompt snippet: literal text the learner types into
-a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat
-input field with a cursor and send arrow), so it reads as typed text rather
-than decoration; markdown symbols are part of the typed text, never styled
-labels. Message outputs render as public announcement post cards (avatar,
-reactions, a reply). Everything else in "Display copy" is display copy in
-the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "Part 1:", "Part 2:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Message outputs render as public announcement post cards (avatar, reactions, a reply). Everything else in "Display copy" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Announcement-mockup
-style: a public product announcement post, the bare prompt's generic version
-greyed and skimmed past, the context-rich announcement with reactions and a
-customer reply appearing under it.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Announcement-mockup style: a public product announcement post, the bare prompt's generic version greyed and skimmed past, the context-rich announcement with reactions and a customer reply appearing under it.
 
-**Full-fidelity rule:** every word that appears on a slide is in this table,
-verbatim. The implemented carousel may not add copy; `check.py` in
-`productkind/carousel-design/` enforces it.
+**Full-fidelity rule:** every word that appears on a slide is in this table, verbatim. The implemented carousel may not add copy; `check.py` in `productkind/carousel-design/` enforces it.
 
 | Slide | Visual | Display copy (verbatim) | Prompt window / mockup content (verbatim) |
 | --- | --- | --- | --- |
@@ -46,11 +26,7 @@ verbatim. The implemented carousel may not add copy; `check.py` in
 | 6 | A feed: one post with no reactions, one with a row of them | "Quick gut-check: the last thing you launched, did people reply, or just scroll past?" Footnote: "Without context, a chat assistant guesses, and guesses read as filler. Hand it the background instead." | (none) |
 | 7 (CTA) | Brand card: badge, mascot at laptop | "Launch emails, changelogs, landing pages: it works anywhere context does the heavy lifting. Practise it in the Write Better with AI: Prompting Foundations for Product Managers course." Badge: "LittleParrot.app" · "First challenge free 🧡" · "Save the checklist, and send it to whoever writes your next announcement 🔖" | (none) |
 
-**Alt text (for the post):** A before/after carousel about writing a product
-announcement with a chat assistant: a bare prompt produces a generic "We're
-excited to announce" post nobody reads, adding context (what the feature
-does, why, the proof, the date, who it's for) produces a concrete
-announcement people reply to, plus a reusable context checklist.
+**Alt text (for the post):** A before/after carousel about writing a product announcement with a chat assistant: a bare prompt produces a generic "We're excited to announce" post nobody reads, adding context (what the feature does, why, the proof, the date, who it's for) produces a concrete announcement people reply to, plus a reusable context checklist.
 
 ## Caption (exact)
 
@@ -64,7 +40,4 @@ Practising this kind of context prompting is Challenge 2 of Write Better with AI
 
 Save the checklist for your next launch. 🔖
 
-.
-.
-.
-#promptingtips #aiatwork #productmanagement #womenintech #productupdates #productmanager #aiskills #learnwithai #techforwomen #worksmarter #careertips
+. . . #promptingtips #aiatwork #productmanagement #womenintech #productupdates #productmanager #aiskills #learnwithai #techforwomen #worksmarter #careertips

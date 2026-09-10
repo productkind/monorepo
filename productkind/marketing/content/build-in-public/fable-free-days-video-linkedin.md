@@ -29,9 +29,9 @@ Anthropic's new model, Fable 5, is free to try for three more days, and my feed 
 For most everyday tasks we use AI for, the quality of the output is way less effected by the model. Is it Opus 4.8 or Fable 5? I didn't see a huge difference in its research output.
 
 The most important parts are:
+
 1. The context you give it
 2. Your definition of what goods look like
-
 
 I've been using it since it came out. It is a noticeably better model. And the two things that decide the quality of what I get from it are the same two things as with every model before it:
 

@@ -15,6 +15,7 @@ By the end, learners will be able to confidently launch a production-ready web a
 ## Structure
 
 ### 1. Go Live: Your First Real Launch
+
 Make your app production-ready and share it with a real person.
 
 - The comic/story hook: Dalmie shares her Book Club Organiser link with her friend, Sarah, but the friend sees test data, a generic favicon, and a "lovable.app" URL. "Is this... real?" The moment every builder dreads.
@@ -27,6 +28,7 @@ Make your app production-ready and share it with a real person.
 - Exercise: Prepare your app for production, publish it, and share the link with someone. Watch them use it.
 
 ### 2. Claim Your Corner of the Internet: Custom Domains
+
 Give your product a branded address.
 
 - Why a custom domain is useful: credibility, memorability, and ownership
@@ -38,6 +40,7 @@ Give your product a branded address.
 - Exercise: Buy or choose a custom domain and connect it to your Lovable app.
 
 ### 3. Build Trust: Legal Pages and Compliance
+
 The things that make visitors feel safe using your product.
 
 - Why legal pages are important (it's about trust, not just compliance)
@@ -48,6 +51,7 @@ The things that make visitors feel safe using your product.
 - Exercise: Generate your privacy policy and terms of use, add footer links, and set up a cookie banner if needed.
 
 ### 4. Get Found: SEO and Discoverability
+
 Help people find your product without you having to share every link by hand.
 
 - How users actually find websites (search engines, AI assistants, social media, word of mouth)
@@ -60,6 +64,7 @@ Help people find your product without you having to share every link by hand.
 - Exercise: Optimise your meta tags, set up Google site verification, and register your business on Google.
 
 ### 5. Track Your App Is Used: Metrics and Feedback
+
 Understand what's happening with your product and what your users think.
 
 - Built-in Lovable metrics: what's available out of the box
@@ -71,6 +76,7 @@ Understand what's happening with your product and what your users think.
 - Exercise: Set up Google Analytics, check your built-in metrics, and have one feedback conversation with a real user.
 
 ### 6. Launch Early, Grow Steadily
+
 The mindset and practices that turn a side project into a growing product.
 
 - When to launch: the case for "before you're ready"

@@ -6,8 +6,7 @@ account: productkind
 
 # LinkedIn - productkind company page
 
-Post from the productkind company page. New course announcement, value-first, mission-led.
-Course overview link with `?ref=linkedin-productkind`.
+Post from the productkind company page. New course announcement, value-first, mission-led. Course overview link with `?ref=linkedin-productkind`.
 
 ---
 
@@ -19,7 +18,6 @@ Removing walls like that is why productkind exists. So we built a course that wa
 
 Once it's set up, you notice something: editing with an AI agent that changes your files directly is far faster than copying answers back and forth from a chat assistant like ChatGPT or Claude.ai. And it works for any document you create, not only code.
 
-The course is called Save Lovable Credits: Edit Your App Like a Developer, on LittleParrot.app. 
-🟪 https://littleparrot.app/7171137b-9461-425f-8737-ad3400d56fd8/course-overview?utm_source=linkedin&utm_medium=social&utm_campaign=productkind
+The course is called Save Lovable Credits: Edit Your App Like a Developer, on LittleParrot.app. 🟪 https://littleparrot.app/7171137b-9461-425f-8737-ad3400d56fd8/course-overview?utm_source=linkedin&utm_medium=social&utm_campaign=productkind
 
 What would you build if the setup wasn't in the way?

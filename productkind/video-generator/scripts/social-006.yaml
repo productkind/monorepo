@@ -22,9 +22,9 @@ caption: |-
   Tokens are one of the first things we unpack with the women in our Little Parrot courses, because once you picture your message this way rather than as sentences, a lot of how AI behaves starts to make more sense.
 
   Follow along, we are explaining how AI really works one short video at a time, and save this for the next time it comes up.
-title: "What a token actually is"
+title: 'What a token actually is'
 hastags:
-  instagram: ["#womenintech", "#womenwhobuild", "#womenlearningai", "#tokens", "#howaiworks"]
-  tiktok: ["#womenintech", "#womenempowerment", "#womenlearningai", "#tokens", "#howaiworks"]
+  instagram: ['#womenintech', '#womenwhobuild', '#womenlearningai', '#tokens', '#howaiworks']
+  tiktok: ['#womenintech', '#womenempowerment', '#womenlearningai', '#tokens', '#howaiworks']
 discord: |-
   Ever seen AI pricing listed "per million tokens" and wondered what a token even is? Short video on how a chat assistant chops your message into chunks, and why a hundred tokens is only about seventy-five words.

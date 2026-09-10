@@ -1,9 +1,6 @@
 # Little Parrot positioning, August 2026
 
-**Question:** who exactly is Little Parrot for, how far beyond Lovable should the catalogue go, and where do paid users come from?
-**Method:** `channels/steps-to-find-your-niche.md`, signals A, B, C and D. Keyword Planner still needs a logged-in Google Ads session.
-**Evidence:** 289 uniquely identified learners with recorded roles across `little-parrot/user-insights/`, the IWD and S02 funnel figures in `little-parrot-context.md`, `channel-strategy-2026-08.md`, a Trends, autocomplete and supply run on 19 August 2026, and three research files in `productkind/ai-research/` (`signal-b-studio-2026-08.md`, `signal-b-content-gaps-2026-08.md`, `women-ai-building-research-2026-08.md`).
-**Written:** 19 August 2026. Review: November 2026.
+**Question:** who exactly is Little Parrot for, how far beyond Lovable should the catalogue go, and where do paid users come from? **Method:** `channels/steps-to-find-your-niche.md`, signals A, B, C and D. Keyword Planner still needs a logged-in Google Ads session. **Evidence:** 289 uniquely identified learners with recorded roles across `little-parrot/user-insights/`, the IWD and S02 funnel figures in `little-parrot-context.md`, `channel-strategy-2026-08.md`, a Trends, autocomplete and supply run on 19 August 2026, and three research files in `productkind/ai-research/` (`signal-b-studio-2026-08.md`, `signal-b-content-gaps-2026-08.md`, `women-ai-building-research-2026-08.md`). **Written:** 19 August 2026. Review: November 2026.
 
 > Search queries and video titles are quoted verbatim as data. `check-banned.py` will flag some of them. Ignore those hits, they are what people type, not our sentences.
 
@@ -13,7 +10,7 @@
 
 Three things, in order of how much they will change the revenue number.
 
-1. **The niche is a moment, not a job title.** No role owns even a fifth of the user base, and the roles all hit the same wall at the same point. Niche on the situation: *she has built something that works, and now it is stuck on her screen*.
+1. **The niche is a moment, not a job title.** No role owns even a fifth of the user base, and the roles all hit the same wall at the same point. Niche on the situation: _she has built something that works, and now it is stuck on her screen_.
 2. **Keep Lovable as the front door, add a second pillar behind the paywall.** Vibe coding search interest is flat over the last twelve months. `ai automation` is roughly three times its size in GB, five times in the US, and grew four-fold within the year. But Lovable prompting is the only proven content-market fit we have, so this is an expansion, not a repositioning.
 3. **Two paid subscribers is not a niche problem.** It is an offer problem. About 800 registered users converted 2 of them, and we have lost 5 of the 7 we ever had. Sharpening the audience fills a leaky bucket faster. Sections 4 and 5 are the ones that move revenue.
 
@@ -24,7 +21,7 @@ Three things, in order of how much they will change the revenue number.
 Every learner in `user-insights/` who filled in a role, deduplicated by user id. 289 people.
 
 | Role cluster | Unique learners | Share |
-|---|---:|---:|
+| --- | --: | --: |
 | Product management (PM, product owner, head of product, VP product) | ~50 | 17% |
 | Design (product designer, UX, UI, design strategist) | ~30 | 10% |
 | Founder, CEO, entrepreneur, owner | ~23 | 8% |
@@ -46,17 +43,17 @@ The job title is incidental. The situation is the thing they share.
 
 **"AI for product managers" is dead as a search position.** Google Trends, twelve months, with `vibe coding` as the yardstick:
 
-| Term | GB mean | US mean | Direction |
-|---|---:|---:|---|
-| ai automation | 44.8 | 53.2 | 17.0 → 68.6 in GB, strongly up |
-| vibe coding | 16.1 | 11.3 | flat |
-| lovable pricing | 1.4 | 0.9 | up from zero |
-| lovable credits | 0.3 | n/a | up from zero |
-| ai for product managers | 0.1 | 0.7 | declining |
+| Term                    | GB mean | US mean | Direction                      |
+| ----------------------- | ------: | ------: | ------------------------------ |
+| ai automation           |    44.8 |    53.2 | 17.0 → 68.6 in GB, strongly up |
+| vibe coding             |    16.1 |    11.3 | flat                           |
+| lovable pricing         |     1.4 |     0.9 | up from zero                   |
+| lovable credits         |     0.3 |     n/a | up from zero                   |
+| ai for product managers |     0.1 |     0.7 | declining                      |
 
 And the supply is entrenched. The first page for `ai for product managers` is Anthropic's own channel (57M views), HelloPM's 3.5-hour masterclass (429K), Aakash Gupta and Exponent. Low demand plus high-authority supply is the worst square on the grid in our own scoring model.
 
-**The mission is not a search term.** YouTube autocomplete returned zero suggestions for `women in tech ai` and zero for `ai for women entrepreneurs`. This is the same finding as the mental-load research: the audience vocabulary is enormous, the audience-shaped *AI* phrasing is dead. Closing the gender gap is why we exist and it belongs in the About page, the partner emails and the community work. It cannot be the search position, because nobody types it.
+**The mission is not a search term.** YouTube autocomplete returned zero suggestions for `women in tech ai` and zero for `ai for women entrepreneurs`. This is the same finding as the mental-load research: the audience vocabulary is enormous, the audience-shaped _AI_ phrasing is dead. Closing the gender gap is why we exist and it belongs in the About page, the partner emails and the community work. It cannot be the search position, because nobody types it.
 
 ### The recommendation
 
@@ -94,13 +91,13 @@ So the seam is not the head term. It is the audience nobody on that page is serv
 
 The IWD funnel, from `little-parrot-context.md`:
 
-| Stage | Count | Conversion |
-|---|---:|---|
-| Site visitors | 2,603 | |
-| Registered | 663 | 25.4% |
-| Started a course | 630 | 95% |
-| Finished at least one course | 132 | 21% |
-| **Paid** | **4** | **0.6% of registrations, 3% of completers** |
+| Stage                        | Count | Conversion                                  |
+| ---------------------------- | ----: | ------------------------------------------- |
+| Site visitors                | 2,603 |                                             |
+| Registered                   |   663 | 25.4%                                       |
+| Started a course             |   630 | 95%                                         |
+| Finished at least one course |   132 | 21%                                         |
+| **Paid**                     | **4** | **0.6% of registrations, 3% of completers** |
 
 And the trajectory: 7 paid users ever, 4 in June 2026, 2 now. **We lose paid users faster than we add them.** About 800 people are on the registered list and 2 of them pay, which is 0.25% monetisation on warm, owned, on-target traffic.
 
@@ -151,7 +148,7 @@ Three candidates to score with the 1 to 5 model, in my order of confidence:
 Scores updated after Signal B ran on 19 August. Changes from the first pass are marked.
 
 | Candidate | Demand | Gap | Money | Fit | Note |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | **Stuck after the first build** (publishing, cost, integrations, keeping it alive) | Medium | High **but narrow** | High | High | Still the leader. Matches the number one user request and the courses exist. Signal B narrowed the gap to the credits question specifically: publishing and GitHub came back with zero gaps and are already well served |
 | **Automating her own work with AI** (not an agency) | High | Medium | Medium | Medium | Biggest category, but Studio and the supply audit independently confirm the demand under the head term is agency-shaped. Reachable only by refusing that framing |
 | ~~**Women product managers building with AI**~~ | Low | Low | High | High | **Closed.** Low volume on every query naming the role, on top of a dead Google term and entrenched supply. Exactly one PM-specific gap exists in the whole pull, which makes it a topic rather than a position |
@@ -188,7 +185,7 @@ Analytics → Reach → Traffic source → YouTube search, date range **365 days
 Run the list once. Record one row per related search: parent term, related search, volume band, content gap yes or no, notes.
 
 | Priority | Term | What it decides |
-|---|---|---|
+| --- | --- | --- |
 | 1 | `vibe coding` | Yardstick. Does the flat Google reading hold on video |
 | 1 | `ai automation` | The category that is 3 to 5 times larger and rising four-fold |
 | 1 | `lovable` | The front door |
@@ -231,7 +228,7 @@ Full list in `productkind/ai-research/signal-b-content-gaps-2026-08.md`: 64 gap 
 Five queries survive both filters, on-topic and correctly parsed. Ranked.
 
 | Query | Volume | Format | Why |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `lovable unlimited credits` | High | Long-form | The one clean gap in the entire Lovable cluster, and it maps directly onto the credit-rebate pitch in section 4 |
 | `ai in everyday life` | High | Long-form | On-topic, High volume, and it surfaced under two separate terms |
 | `ai coding assistant` | Medium | Long-form | The most cross-cutting gap in the pull, surfacing under three terms |
@@ -240,7 +237,7 @@ Five queries survive both filters, on-topic and correctly parsed. Ranked.
 
 **Excluded on purpose.** All 21 generic-AI gaps, which are off our positioning however well they score. All 12 junk gaps. And the four Google-Cloud-flavoured entries (`automate data capture at scale with document ai` and the rest), which read as course-catalogue lesson titles rather than phrases a person types, and pair High volume with a Shorts flag in a way that does not fit an enterprise topic. That caution came from the capture itself and it is the right call: they are not equivalent evidence to the organic queries.
 
-**One frame to keep.** These are *YouTube* gaps, and our channels are Google, LinkedIn and email. A gap here is a reason to write a page or a document, never a reason to reopen the video channel.
+**One frame to keep.** These are _YouTube_ gaps, and our channels are Google, LinkedIn and email. A gap here is a reason to write a page or a document, never a reason to reopen the video channel.
 
 ### Three cautions for the next run
 
@@ -268,7 +265,7 @@ Comparability is the whole point, so hold these constant and vary only the posit
 - **The same three-week window for both.** Sequencing them makes them incomparable, because Kinga's LinkedIn cadence and any partner email land differently month to month.
 - **One specific question at the end of each LinkedIn post.** Our own data says a direct question is the only thing that earns comments, and the comments are qualitative evidence the numbers cannot give.
 
-**A confound to name rather than hide.** Candidate A can sell something that exists, candidate B can only sell a promise. That biases the comparison towards A. Keep both arms selling the same *shape* of thing, a named destination with a start date, and read B's numbers knowing they are a floor rather than a like-for-like.
+**A confound to name rather than hide.** Candidate A can sell something that exists, candidate B can only sell a promise. That biases the comparison towards A. Keep both arms selling the same _shape_ of thing, a named destination with a start date, and read B's numbers knowing they are a floor rather than a like-for-like.
 
 ### Candidate A: stuck after the first build
 
@@ -328,17 +325,17 @@ That is candidate A from section 5, arrived at again from a completely different
 
 ### The direct willingness-to-pay evidence
 
-The research is unusually explicit about which persona spends. Of its six, exactly one carries a plain statement of payment behaviour, and it is Persona 1, the Burned-Out Escapee: *"She'll pay real money. She is not price-sensitive about tools; she is furious about wasted hours."* Persona 2, the Problem-Owner with No Cofounder, is called *"the most underserved and highest-intent segment in this research."*
+The research is unusually explicit about which persona spends. Of its six, exactly one carries a plain statement of payment behaviour, and it is Persona 1, the Burned-Out Escapee: _"She'll pay real money. She is not price-sensitive about tools; she is furious about wasted hours."_ Persona 2, the Problem-Owner with No Cofounder, is called _"the most underserved and highest-intent segment in this research."_
 
 What those two share is not a job title. It is a **stake already placed**. Katherine Homuth reports *"about $140 on Claude credits this week, plus monthly subscriptions to Claude Max ($75/month) and Cursor Ultra ($200/month)."* That is roughly $800 a month from one non-technical founder. She is not deciding whether to spend. She is already spending, and she wants the spending to produce something.
 
-The sharpest commercial signal in the whole study is the "help me finish it" post, where a woman who has built an MVP goes looking for an engineer: *"I have an idea and an early prototype for an app I've been working for a while, built in Lovable, and I'm looking for a female Software Engineer who would be interested in helping bring it to life."* Hiring an engineer is an order of magnitude above a €24 subscription. The intent to pay is not in question at this stage. Only the thing to pay for is missing.
+The sharpest commercial signal in the whole study is the "help me finish it" post, where a woman who has built an MVP goes looking for an engineer: _"I have an idea and an early prototype for an app I've been working for a while, built in Lovable, and I'm looking for a female Software Engineer who would be interested in helping bring it to life."_ Hiring an engineer is an order of magnitude above a €24 subscription. The intent to pay is not in question at this stage. Only the thing to pay for is missing.
 
 ### The finding that explains our two subscribers
 
 The research also identifies, unmistakably, the segment with the **lowest** willingness to pay, and it is the one our free courses are built to attract.
 
-Its Part Three finding, described as the biggest in that section: across 28 TikTok videos, *"is it free / how much / do I have to pay / how many credits"* appeared on nearly every one, and *"it was usually the first question asked, before any question about capability."* Money arrives as a gate on whether she starts at all, not as a decision she reaches later.
+Its Part Three finding, described as the biggest in that section: across 28 TikTok videos, _"is it free / how much / do I have to pay / how many credits"_ appeared on nearly every one, and _"it was usually the first question asked, before any question about capability."_ Money arrives as a gate on whether she starts at all, not as a decision she reaches later.
 
 > "is it free 🥲" · "Free to sign up isn't free" · "which of these apps are for free and which ones are not"
 
@@ -349,7 +346,7 @@ This does not mean the beginner courses are wrong. They are the share loop and t
 ### Who else pays, and who does not
 
 | Persona | Willingness to pay | Read |
-|---|---|---|
+| --- | --- | --- |
 | **Burned-Out Escapee** (persona 1) | **Highest.** Explicit in the research | Already spending on tools, furious about wasted hours, wants work to feel good again |
 | **Problem-Owner with No Cofounder** (persona 2) | **Highest.** Highest-intent segment named | One specific thing that must exist. Would hire if she could afford it |
 | Non-Technical Operator inside a company (persona 3) | Medium to high, but the **employer** is the buyer | Blocked by legitimacy, not capability. A different sale, and a B2B one |
@@ -357,7 +354,7 @@ This does not mean the beginner courses are wrong. They are the share loop and t
 | Career-Changer / Returner (persona 5) | **Low**, despite finishing at 1.5x the male rate | Most grateful, least able to pay, and the free competitor serves her well |
 | Technical Woman (persona 6) | Not our customer | A completely different product. Guardrails, not tutorials |
 
-Two constraints on all of it, straight from the research. **"They price in coffees"**: free tiers dominate, paid clusters at $29 to $97 a month, and Women Defining AI defends $10 a month as *"less than one coffee per month."* And **the main competitor is free**: Women Build AI runs 20+ workshops a month and 33 courses for 5,547 members at no cost. We are not competing with other paid courses. We are competing with free and abundant, which is precisely why an outcome with a deadline beats a library, as section 4 already argued.
+Two constraints on all of it, straight from the research. **"They price in coffees"**: free tiers dominate, paid clusters at $29 to $97 a month, and Women Defining AI defends $10 a month as _"less than one coffee per month."_ And **the main competitor is free**: Women Build AI runs 20+ workshops a month and 33 courses for 5,547 members at no cost. We are not competing with other paid courses. We are competing with free and abundant, which is precisely why an outcome with a deadline beats a library, as section 4 already argued.
 
 ### The niche statement, sharpened
 
@@ -373,37 +370,27 @@ The addition is "safely", and section 10 explains why it is the most valuable wo
 
 Ranked by how well each is evidenced across **both** studies and how directly we can act. Each names the evidence and what it implies for us.
 
-**1. The post-build cliff, "I built it, now what."**
-Top-ranked future-learning request in our own insights (hosting, publishing, sharing, monetising) and confirmed in all four parts of the audience research, which calls post-build operations *"the clearest curriculum-shaped hole"* and notes it is *"answered only by scattered peer anecdote."* Our learners: *"I need to know how to share it, monetize it etc"*. Theirs: *"I vibe coded a web app...now what?"* Two independent studies, same number one. We already own `lovable-publishing-00` and `launch-and-grow`. **This is the paywall moment from section 4, now confirmed twice.**
+**1. The post-build cliff, "I built it, now what."** Top-ranked future-learning request in our own insights (hosting, publishing, sharing, monetising) and confirmed in all four parts of the audience research, which calls post-build operations _"the clearest curriculum-shaped hole"_ and notes it is _"answered only by scattered peer anecdote."_ Our learners: _"I need to know how to share it, monetize it etc"_. Theirs: _"I vibe coded a web app...now what?"_ Two independent studies, same number one. We already own `lovable-publishing-00` and `launch-and-grow`. **This is the paywall moment from section 4, now confirmed twice.**
 
-**2. She cannot judge what the AI built.**
-The second-loudest pattern in the audience research and the one with the highest stakes: *"The problem is I can't judge what it's doing."* · *"I don't know if my app is secure, if there is junk code, if there are any bugs."* · *"I ended up just clicking allow without reading."* · *"I won't use vibe-coded apps for client work because I don't know what I don't know."* Our own data has the same belief in a more dangerous form: *"It may hallucinate but mostly it is relaible."* The research's own conclusion is the strategic one: **teach evaluation, not generation.** Every competitor teaches how to make things. Almost nobody teaches how to check them. This is the single largest differentiation opportunity in either dataset.
+**2. She cannot judge what the AI built.** The second-loudest pattern in the audience research and the one with the highest stakes: _"The problem is I can't judge what it's doing."_ · _"I don't know if my app is secure, if there is junk code, if there are any bugs."_ · _"I ended up just clicking allow without reading."_ · _"I won't use vibe-coded apps for client work because I don't know what I don't know."_ Our own data has the same belief in a more dangerous form: _"It may hallucinate but mostly it is relaible."_ The research's own conclusion is the strategic one: **teach evaluation, not generation.** Every competitor teaches how to make things. Almost nobody teaches how to check them. This is the single largest differentiation opportunity in either dataset.
 
-**3. Credit burn and cost opacity.**
-Confirmed three separate ways, which nothing else in this project is. Our insights: the number one friction, roughly 35 mentions. The audience research: money is the *first* question, before capability, plus *"My soul is evaporating with every token spent"* and *"$10-15 Anthropic invoice at 2am"*. Signal B: `lovable unlimited credits`, High volume, content gap. Also cheap to own, since nobody teaches it. **The credit-rebate pitch in section 4 is the most evidenced idea in this entire document.**
+**3. Credit burn and cost opacity.** Confirmed three separate ways, which nothing else in this project is. Our insights: the number one friction, roughly 35 mentions. The audience research: money is the _first_ question, before capability, plus _"My soul is evaporating with every token spent"_ and _"$10-15 Anthropic invoice at 2am"_. Signal B: `lovable unlimited credits`, High volume, content gap. Also cheap to own, since nobody teaches it. **The credit-rebate pitch in section 4 is the most evidenced idea in this entire document.**
 
-**4. The infrastructure wall: terminal, GitHub, database, deploy.**
-Called *"the loudest and most actionable pattern in the entire corpus"*, and the phrasing is consistent: *"Almost nobody says 'I can't write code.' They say they hit a wall at the infrastructure around the code."* · *"Before I decided to sign up for Claude, I didn't even know what's Terminal."* · *"The only moment I felt like a five-year-old was right at the end, the GitHub and Vercel part."* Our own standout course win is the frontend/backend/database mental model, and `vibe-coding-github-00` already exists. We are closer to owning this than to owning anything else.
+**4. The infrastructure wall: terminal, GitHub, database, deploy.** Called _"the loudest and most actionable pattern in the entire corpus"_, and the phrasing is consistent: _"Almost nobody says 'I can't write code.' They say they hit a wall at the infrastructure around the code."_ · _"Before I decided to sign up for Claude, I didn't even know what's Terminal."_ · _"The only moment I felt like a five-year-old was right at the end, the GitHub and Vercel part."_ Our own standout course win is the frontend/backend/database mental model, and `vibe-coding-github-00` already exists. We are closer to owning this than to owning anything else.
 
-**5. The ship gap: stuck in builder mode.**
-The research ranks this first by evidence in its own recommendations, from the most emotionally charged posts in a 5,367-post community: *"stuck in builder mode"*, *"Just one more feature"*, *"closing the gap between 'I can design and explain this perfectly' and 'I can actually ship it'."* The free competitor celebrates builds and never forces a launch. **A deadline is a product feature here, and it is one a course library structurally cannot offer.**
+**5. The ship gap: stuck in builder mode.** The research ranks this first by evidence in its own recommendations, from the most emotionally charged posts in a 5,367-post community: _"stuck in builder mode"_, _"Just one more feature"_, _"closing the gap between 'I can design and explain this perfectly' and 'I can actually ship it'."_ The free competitor celebrates builds and never forces a launch. **A deadline is a product feature here, and it is one a course library structurally cannot offer.**
 
-**6. Legitimacy, and a competence penalty that is real.**
-47% of women feel intimidated by AI tools against 33% of men, and women are 32% more likely to fear being seen as cheating. The penalty is measured, not felt: in a randomised study of 1,026 engineers, AI users were rated 9% less competent, women 13%, and male non-AI-users rated female AI users **26% more harshly for identical code**. Our own learners say the same thing softly: *"I was very intimidated by vibe coding."* **One caution the research is emphatic about: do not build the message on deficit.** *"Resistance is not ignorance"* drew 4,000+ likes. Women get more out of AI when they use it (54% against 47% said it made launching easier) and complete courses at 1.5x the male rate. That is a competence story, not a catch-up story.
+**6. Legitimacy, and a competence penalty that is real.** 47% of women feel intimidated by AI tools against 33% of men, and women are 32% more likely to fear being seen as cheating. The penalty is measured, not felt: in a randomised study of 1,026 engineers, AI users were rated 9% less competent, women 13%, and male non-AI-users rated female AI users **26% more harshly for identical code**. Our own learners say the same thing softly: _"I was very intimidated by vibe coding."_ **One caution the research is emphatic about: do not build the message on deficit.** _"Resistance is not ignorance"_ drew 4,000+ likes. Women get more out of AI when they use it (54% against 47% said it made launching easier) and complete courses at 1.5x the male rate. That is a competence story, not a catch-up story.
 
-**7. Time poverty, and losing the thread between sessions.**
-*"Between naps, bedtime, family life."* The research's design conclusion is that 20-minute interrupted sessions are the core constraint, not an accessibility nicety, and that anything needing an uninterrupted afternoon excludes most of the market. Our own data: *"Time is the issue as usual: I'm currently juggling job, learning, and a family with quite an active toddler."* **This one we already answer.** Microlearning cards are the right format and it is worth saying so out loud in the positioning, because it is a genuine structural advantage over cohort courses and workshop libraries.
+**7. Time poverty, and losing the thread between sessions.** _"Between naps, bedtime, family life."_ The research's design conclusion is that 20-minute interrupted sessions are the core constraint, not an accessibility nicety, and that anything needing an uninterrupted afternoon excludes most of the market. Our own data: _"Time is the issue as usual: I'm currently juggling job, learning, and a family with quite an active toddler."_ **This one we already answer.** Microlearning cards are the right format and it is worth saying so out loud in the positioning, because it is a genuine structural advantage over cohort courses and workshop libraries.
 
-**8. Isolation, which volume does not fix.**
-Five independent sources use "lonely" or "no one I can talk to", and the research notes members of a 5,547-person community are improvising their own fix: *"Are you my Accountability Buddy?"*, local meetup requests, "10 for 10 app review". Its phrase is **"volume is not intimacy."** We should be honest that our format does not answer this and that we have chosen not to run live sessions. Small-cohort accountability is unmet demand, and if we ever add one non-course thing, this is the one the evidence supports.
+**8. Isolation, which volume does not fix.** Five independent sources use "lonely" or "no one I can talk to", and the research notes members of a 5,547-person community are improvising their own fix: _"Are you my Accountability Buddy?"_, local meetup requests, "10 for 10 app review". Its phrase is **"volume is not intimacy."** We should be honest that our format does not answer this and that we have chosen not to run live sessions. Small-cohort accountability is unmet demand, and if we ever add one non-course thing, this is the one the evidence supports.
 
-**9. She cannot tell which category her idea belongs to.**
-A sharper version of the vocabulary problem: *"is this an APP, or a website?"* · *"I thought application like an app you could sell in the App Store 😭"*. The research's read is that the deficit is *"not knowing which category her idea belongs to, and therefore which tool and which tutorial apply to her"*, and that this is why she cannot self-serve from the enormous free content available. Cheap to teach, and it sits naturally at the front of any course.
+**9. She cannot tell which category her idea belongs to.** A sharper version of the vocabulary problem: _"is this an APP, or a website?"_ · _"I thought application like an app you could sell in the App Store 😭"_. The research's read is that the deficit is _"not knowing which category her idea belongs to, and therefore which tool and which tutorial apply to her"_, and that this is why she cannot self-serve from the enormous free content available. Cheap to teach, and it sits naturally at the front of any course.
 
-**10. Pricing her own offer.**
-*"But what should I charge?"* Named as the loudest unanswered question among women who already build, repeatedly asked and never systematised. We already have a pricing-psychology cheat sheet in `vibe-coding-start-your-business-00`. This is a toolkit item that could stand alone.
+**10. Pricing her own offer.** _"But what should I charge?"_ Named as the loudest unanswered question among women who already build, repeatedly asked and never systematised. We already have a pricing-psychology cheat sheet in `vibe-coding-start-your-business-00`. This is a toolkit item that could stand alone.
 
-**Two vocabulary corrections worth applying immediately.** Use *make* for the first small thing and *build* for the ambition. And never use "software" or "digital product" in copy aimed at this audience: the research confirms decisively that "app", "tool" and "system" are her words.
+**Two vocabulary corrections worth applying immediately.** Use _make_ for the first small thing and _build_ for the ambition. And never use "software" or "digital product" in copy aimed at this audience: the research confirms decisively that "app", "tool" and "system" are her words.
 
 ---
 
@@ -433,7 +420,7 @@ Cost belongs inside it rather than beside it. "What will this cost to run" is th
 ### The alternatives, and why they lose
 
 | Candidate | Evidence | Why not |
-|---|---|---|
+| --- | --- | --- |
 | **Credit and cost controller** | Money is the first question. `lovable unlimited credits` gapped at High volume | A thin layer over vendor billing that vendors can close off, sold to buyers selected for cost aversion. Strong feature, weak business. Fold it into the checker |
 | **"Help me finish it" marketplace** | Called the sharpest commercial signal in the study. Highest absolute spend observed | Two-sided cold start and disintermediation, run by two people. Right demand, wrong shape for us |
 | **Launch and hosting layer** | Post-build operations, asked constantly on every platform | Mostly reselling commodity infrastructure that Vercel and Netlify already give away |

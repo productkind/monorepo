@@ -1,6 +1,6 @@
-import { describe, expect, test } from 'vitest'
-
 import { isFlagged, parseFlags, serialiseFlags, toggled } from './flags'
+
+import { describe, expect, test } from 'vitest'
 
 describe('toggled', () => {
   test('flags a section, recording the gif it was flagged against', () => {

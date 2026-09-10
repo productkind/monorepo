@@ -39,12 +39,22 @@ function scanMessages() {
     if (!text) {
       // Debug: show all class names inside this message element to find the right selector
       const allDivs = el.querySelectorAll('div[class*="prose"]')
-      const classes = Array.from(allDivs).map(d => d.className.split(' ').filter(c => c.includes('prose')).join(' '))
+      const classes = Array.from(allDivs).map((d) =>
+        d.className
+          .split(' ')
+          .filter((c) => c.includes('prose'))
+          .join(' '),
+      )
       console.log('[Little Parrot] message', id, 'no .prose-chat found. Prose divs:', classes)
       if (allDivs.length === 0) {
         console.log('[Little Parrot] message', id, 'innerHTML preview:', el.innerHTML.slice(0, 300))
       } else {
-        console.log('[Little Parrot] message', id, 'first prose div text:', allDivs[0].textContent.slice(0, 80))
+        console.log(
+          '[Little Parrot] message',
+          id,
+          'first prose div text:',
+          allDivs[0].textContent.slice(0, 80),
+        )
       }
       continue
     }

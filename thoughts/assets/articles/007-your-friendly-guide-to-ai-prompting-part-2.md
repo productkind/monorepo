@@ -1,9 +1,8 @@
 # Your Friendly Guide to AI Prompting: Four Practical Prompting Techniques (Part 2 of 3)
 
-*Get better at prompting and find out why AI has baked-in bias*
+_Get better at prompting and find out why AI has baked-in bias_
 
-**Date:** July 23, 2025
-**Author:** Kinga Magyar
+**Date:** July 23, 2025 **Author:** Kinga Magyar
 
 ---
 
@@ -100,6 +99,7 @@ Output: ["bug", "mobile", "performance"]
 
 Now tag the attached tickets.
 ```
+
 [Attach a document with support tickets]
 
 Life use cases:
@@ -193,6 +193,7 @@ Help me think through a potential career change by doing three things:
 – I'd like more flexibility and meaning in my work
 – My CV is attached with my professional background
 ```
+
 [Attach your CV or pdf of your LinkedIn page]
 
 ### 4. Affirmative Directives over Negative Constraints

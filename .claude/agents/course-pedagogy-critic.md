@@ -1,6 +1,6 @@
 ---
 name: course-pedagogy-critic
-description: "Use this agent to evaluate a drafted Little Parrot micro-course against the house pedagogy and structure guidelines before it is shown to the user. Give it the course file (the YAML, or its path) and the outline it was built from. It judges structure, step design, the practice/effort gradient, quiz quality, dependency ordering, and outcome framing, and returns PASS or NEEDS REVISION with every issue quoted, a concrete fix, and a prioritised revision brief. It does not judge tool accuracy (course-tool-accuracy-critic) or voice (course-language-critic)."
+description: 'Use this agent to evaluate a drafted Little Parrot micro-course against the house pedagogy and structure guidelines before it is shown to the user. Give it the course file (the YAML, or its path) and the outline it was built from. It judges structure, step design, the practice/effort gradient, quiz quality, dependency ordering, and outcome framing, and returns PASS or NEEDS REVISION with every issue quoted, a concrete fix, and a prioritised revision brief. It does not judge tool accuracy (course-tool-accuracy-critic) or voice (course-language-critic).'
 tools: Read
 model: opus
 skills:
@@ -81,6 +81,7 @@ Return exactly this structure, nothing before or after:
 ```
 
 Rules:
+
 - Always quote the exact step and field. Never give a vague note without quoting what to change.
 - Every issue comes with a concrete, copy-ready fix.
 - Be honest and specific, never padded. A clean PASS is valid and valuable; don't invent problems to look thorough.

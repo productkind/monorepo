@@ -1,7 +1,8 @@
 ---
-challenge: "1 - Craft a Problem Statement"
-type: "Template"
+challenge: '1 - Craft a Problem Statement'
+type: 'Template'
 ---
+
 ## Define the Problem You're Solving
 
 A fill-in-the-blank template for describing the problem your product solves, written from your user's perspective. Use it when you start a new product idea, or when you're deep in a list of features and no longer sure what you're building towards.
@@ -49,7 +50,7 @@ Before moving on, run your problem statement through these questions:
 ### Good vs not-so-good examples
 
 | Part | Not so good | Better |
-|---|---|---|
+| --- | --- | --- |
 | **I am...** | Someone who reads | A book club organiser who runs a monthly meeting for 8 members |
 | **I am trying to...** | Use a book app | Efficiently select and vote on monthly book choices |
 | **But...** | It's complicated | Our coordination is a mess |

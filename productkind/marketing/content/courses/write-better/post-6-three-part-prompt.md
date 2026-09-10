@@ -6,27 +6,13 @@ account: little-parrot
 
 # Post 6: One structure for every work message
 
-**Pillar:** the method, shown (series recap).
-**Research trace:** the synthesis post: the three-part structure is the
-course's unifying framework and the most saveable single asset in the set;
-the caption bridges work prompting to app-builder prompting, connecting
-this campaign to the builder courses (the migration path the research
-documents: work AI use leads to building). Draws on the whole course.
+**Pillar:** the method, shown (series recap). **Research trace:** the synthesis post: the three-part structure is the course's unifying framework and the most saveable single asset in the set; the caption bridges work prompting to app-builder prompting, connecting this campaign to the builder courses (the migration path the research documents: work AI use leads to building). Draws on the whole course.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Recipe-card style: one
-big three-layer card that fills in across the slides, then three mini
-examples showing the same skeleton wearing different jobs.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Recipe-card style: one big three-layer card that fills in across the slides, then three mini examples showing the same skeleton wearing different jobs.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -38,10 +24,7 @@ examples showing the same skeleton wearing different jobs.
 | 6 | The card passed from a chat window to an app-builder window | "And it travels: this is also exactly how you prompt an AI app builder like Lovable. Request, tone and design preferences, context about your users. Learn it on messages, reuse it on products." |
 | 7 (CTA) | Brand card | "Request, tone, context: three parts, every time. Full course: Write Better with AI: Prompting Foundations for Product Managers, on LittleParrot.app. First challenge free 🟪 Save the recipe, it's the whole series in one card 🔖" |
 
-**Alt text (for the post):** A recap carousel of the three-part prompt
-structure: a clear request, tone and style instructions, and context and
-background, shown across a Slack message, a release update, and a LinkedIn
-post, with a note that the same structure works in AI app builders.
+**Alt text (for the post):** A recap carousel of the three-part prompt structure: a clear request, tone and style instructions, and context and background, shown across a Slack message, a release update, and a LinkedIn post, with a note that the same structure works in AI app builders.
 
 ## Caption (exact)
 
@@ -57,7 +40,4 @@ The full course, Write Better with AI: Prompting Foundations for Product Manager
 
 Save the recipe. 🔖
 
-.
-.
-.
-#promptingtips #aiatwork #productmanagement #womenintech #vibecoding #buildinpublic #productmanager #aiskills #learnwithai #techforwomen #worksmarter
+. . . #promptingtips #aiatwork #productmanagement #womenintech #vibecoding #buildinpublic #productmanager #aiskills #learnwithai #techforwomen #worksmarter

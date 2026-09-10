@@ -5,9 +5,7 @@
   "source_term": "prototype vs production software",
   "fallback_term": "",
   "comparison_group": "",
-  "terms": [
-    "prototype vs production software"
-  ],
+  "terms": ["prototype vs production software"],
   "term_type": "Search term",
   "geography": "UK",
   "geo_code": "GB",
@@ -20,9 +18,7 @@
   "data_status": "insufficient_no_series",
   "headers": [],
   "series": [],
-  "nonzero_points": [
-    0
-  ],
+  "nonzero_points": [0],
   "queries": [],
   "topics": [],
   "related_availability": {

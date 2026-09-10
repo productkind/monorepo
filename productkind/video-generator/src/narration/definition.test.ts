@@ -1,5 +1,3 @@
-import { describe, expect, test } from 'vitest'
-
 import {
   audioCacheKey,
   clip,
@@ -10,6 +8,8 @@ import {
   still,
   timelineHash,
 } from './definition'
+
+import { describe, expect, test } from 'vitest'
 
 const definition = () =>
   defineVideo({
@@ -79,7 +79,11 @@ describe('where a visual came from', () => {
     expect(
       gif({
         src: 'section-01-nervous.gif',
-        source: { provider: 'giphy', id: 'ycd33pEC8uLc9F3Cdz', search: 'avoid eye contact nervous' },
+        source: {
+          provider: 'giphy',
+          id: 'ycd33pEC8uLc9F3Cdz',
+          search: 'avoid eye contact nervous',
+        },
       }).source,
     ).toEqual({ provider: 'giphy', id: 'ycd33pEC8uLc9F3Cdz', search: 'avoid eye contact nervous' })
   })
@@ -182,7 +186,12 @@ describe('audioCacheKey', () => {
 
   test('changes when the voice settings change, so a tweaked delivery is not served from cache', () => {
     expect(
-      audioCacheKey({ text: 'Hello.', voice: 'chloe', model: 'eleven_v3', settings: { speed: 1.1 } }),
+      audioCacheKey({
+        text: 'Hello.',
+        voice: 'chloe',
+        model: 'eleven_v3',
+        settings: { speed: 1.1 },
+      }),
     ).not.toBe(
       audioCacheKey({ text: 'Hello.', voice: 'chloe', model: 'eleven_v3', settings: { speed: 1 } }),
     )

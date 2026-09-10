@@ -1,9 +1,8 @@
 # User Stories in Action: Practical Steps for Continuous Improvement
 
-*A guide for Product People to put theory into practice: implement these strategies to enhance collaboration and continuously improve your product development process*
+_A guide for Product People to put theory into practice: implement these strategies to enhance collaboration and continuously improve your product development process_
 
-**Date:** July 9, 2025
-**Author:** Kinga Magyar
+**Date:** July 9, 2025 **Author:** Kinga Magyar
 
 ---
 

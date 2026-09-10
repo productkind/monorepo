@@ -1,7 +1,8 @@
 ---
-challenge: "4 - Learn more efficiently by using AI"
-type: "Prompt library"
+challenge: '4 - Learn more efficiently by using AI'
+type: 'Prompt library'
 ---
+
 ## Get AI to Explain a Technical Term
 
 Prompts for when a word comes up in stand-up, everyone nods, and you don't want to be the one who stops the meeting to ask for a definition. Open this afterwards and you'll understand the term, have a working idea of where it might fit in your product, and have a good question ready for next time.
@@ -108,7 +109,7 @@ Write two versions:
 Don't use the words [Redis, cache, or in-memory]. Explain it in terms of what the customer experiences.
 ```
 
-*Note:* This prompt only works once the AI has context about your product, you just need help with the phrasing or storytelling.
+_Note:_ This prompt only works once the AI has context about your product, you just need help with the phrasing or storytelling.
 
 ### When you're stuck in a technical document
 
@@ -129,7 +130,7 @@ Don't explain terms I probably already know as a PM, like API or database.
 
 ### What to be careful about
 
-An AI chat assistant like ChatGPT or Claude.ai knows these technologies in general terms. It knows nothing about your product. Everything it says about *your* architecture is a guess based on what similar products usually do.
+An AI chat assistant like ChatGPT or Claude.ai knows these technologies in general terms. It knows nothing about your product. Everything it says about _your_ architecture is a guess based on what similar products usually do.
 
 So use it to arrive at the conversation prepared, and treat what it tells you about your own system as questions to confirm. "Am I right that we're caching report results rather than raw data?" is a much better line in a review than a confident statement that turns out to be wrong.
 

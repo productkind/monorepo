@@ -1,11 +1,11 @@
-import { Composition, Folder } from 'remotion'
-
-import { FRAME_HEIGHT, FRAME_WIDTH } from './config'
 import { NarratedVideo } from './components/NarratedVideo'
+import { FRAME_HEIGHT, FRAME_WIDTH } from './config'
 import type { VideoDefinition } from './narration/definition'
 import type { Timeline } from './narration/timeline'
 import { loadTimeline } from './narration/timeline-file'
 import { VIDEOS } from './videos/index'
+
+import { Composition, Folder } from 'remotion'
 
 /** Replaced by calculateMetadata before a frame is drawn; present only to satisfy defaultProps. */
 const PLACEHOLDER_TIMELINE: Timeline = {

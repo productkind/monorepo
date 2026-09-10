@@ -6,27 +6,13 @@ account: little-parrot
 
 # Post 5: Is your first version small enough?
 
-**Pillar:** the method, shown (PM expertise, shared).
-**Research trace:** over-scoping is how first builds collapse into the doom
-loop (our No. 1 pain works backwards from here); "could you build and test
-it within a week?" is the concrete promised-outcome framing the confidence
-research favours; the MVP vs too-much table is a ready-made saveable
-contrast. Repackages the Is Your MVP Small Enough? toolkit item.
+**Pillar:** the method, shown (PM expertise, shared). **Research trace:** over-scoping is how first builds collapse into the doom loop (our No. 1 pain works backwards from here); "could you build and test it within a week?" is the concrete promised-outcome framing the confidence research favours; the MVP vs too-much table is a ready-made saveable contrast. Repackages the Is Your MVP Small Enough? toolkit item.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Checklist style: big
-tick boxes, one test per slide, the MVP vs too-much comparison as a
-two-column slide.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Checklist style: big tick boxes, one test per slide, the MVP vs too-much comparison as a two-column slide.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -38,10 +24,7 @@ two-column slide.
 | 6 | Two-column comparison card | "The difference in practice. MVP: suggest books (title and author), vote, see counts. Too much: cover images, genre tags, weighted voting, deadline reminders, notification emails. The left column solves the problem; the right column is for after the left column proves itself." |
 | 7 (CTA) | Brand card | "The full checklist is in Build a Valuable Product: How to Break Down Your Idea for Vibe Coding, on LittleParrot.app. First challenge free 🟪 Save this for scoping day 🔖" |
 
-**Alt text (for the post):** An MVP checklist carousel: describe it in one
-sentence, trace every feature to the problem statement, check it's
-buildable and testable within a week, make sure the user journey is
-complete, and compare an MVP column with a too-much column.
+**Alt text (for the post):** An MVP checklist carousel: describe it in one sentence, trace every feature to the problem statement, check it's buildable and testable within a week, make sure the user journey is complete, and compare an MVP column with a too-much column.
 
 ## Caption (exact)
 
@@ -55,7 +38,4 @@ The full checklist is part of Build a Valuable Product: How to Break Down Your I
 
 Save this for scoping day. 🔖
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #productmanagement #mvp #womenintech #techforwomen #productthinking #appbuilding #startupideas #learnwithai #buildinpublic
+. . . #vibecoding #buildwithai #womenwhobuild #productmanagement #mvp #womenintech #techforwomen #productthinking #appbuilding #startupideas #learnwithai #buildinpublic

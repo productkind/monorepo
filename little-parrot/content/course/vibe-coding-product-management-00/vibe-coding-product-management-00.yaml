@@ -1,6 +1,6 @@
 course:
   id: e16d932e-ac1f-4514-b5da-42629acf39ae
-  note: '*Note on timing:* The estimated times for each challenge include thinking and doing time. They''re designed so you can immediately apply the techniques to your own product idea, not just skim the content.'
+  note: "*Note on timing:* The estimated times for each challenge include thinking and doing time. They're designed so you can immediately apply the techniques to your own product idea, not just skim the content."
   cover: /courses/vibe-coding-product-management-00/cover.webp
   title: 'Build a Valuable Product: How to Break Down Your Idea for Vibe Coding'
   learningOutcomes:
@@ -73,7 +73,7 @@ course:
               **Because** [root cause]...
 
               **Which makes me feel** [emotions].
-          subtitle: 'You can use this problem statement template to define what you''re solving for your user:'
+          subtitle: "You can use this problem statement template to define what you're solving for your user:"
         - type: text
           title: The Book Club Organiser Example
           content:
@@ -87,7 +87,7 @@ course:
               **Because** messages are scattered across WhatsApp and our group chat buries the important stuff in off-topic messages
 
               **Which makes me feel** frustrated and exhausted.
-          subtitle: 'Let''s see how the problem statement works in practice for our example app, the **Book Club Organiser**:'
+          subtitle: "Let's see how the problem statement works in practice for our example app, the **Book Club Organiser**:"
         - type: free-text-exercise
           title: Write your problem statement
           content:
@@ -120,7 +120,7 @@ course:
         - type: challenge-end
           title: "Great start! You've defined the problem. \U0001F389"
           content:
-            nextModule: '**Next challenge:** Now that you''ve nailed the problem, let''s figure out **who** exactly has this problem.'
+            nextModule: "**Next challenge:** Now that you've nailed the problem, let's figure out **who** exactly has this problem."
             description: By focusing on a specific problem, you've given your idea a clear purpose.
             subDescription: |-
               Every successful product begins with understanding a real user need, pain point or desire. Whenever you feel lost in features, come back to this problem statement. It's your north star!
@@ -147,7 +147,7 @@ course:
           title: What's a user persona?
           content:
             body: In product design, we often create a **persona**, a fictional yet realistic character representing our typical user. This persona is an archetype based on real user research or assumptions; it captures the user's key characteristics, frustrations, and goals.
-          subtitle: ""
+          subtitle: ''
         - type: text
           title: Why create a persona?
           content:
@@ -155,7 +155,7 @@ course:
               A persona helps you keep the user in mind throughout development. Whenever you're making a decision, you can ask: *'Would this help [Persona's Name] achieve their goals? What would [Persona] think of this feature?'*
 
               It's a way to build empathy and ensure you're solving the right problems for the right people
-          subtitle: ""
+          subtitle: ''
         - type: text
           title: User persona for the Book Club Organiser
           content:
@@ -187,7 +187,8 @@ course:
         - type: free-text-exercise
           title: Let's create your user persona
           content:
-            description: "Describe the primary user of your product. Who are they? Focus on their main characteristics, frustrations, and goals. You can always improve on this as you learn more about your users. \n\nUse this template:\n\n**Persona:** Give them a name and a descriptive title, so they feel like a real person.\n\n**About:** Basic background relevant to your product. What is their situation or context?\n\n**Frustrations:** What pain points or problems do they encounter (especially related to the problem you identified)?\n\n**Goals:** What do they ultimately want to achieve? What does success or happiness look like for them?"
+            description:
+              "Describe the primary user of your product. Who are they? Focus on their main characteristics, frustrations, and goals. You can always improve on this as you learn more about your users. \n\nUse this template:\n\n**Persona:** Give them a name and a descriptive title, so they feel like a real person.\n\n**About:** Basic background relevant to your product. What is their situation or context?\n\n**Frustrations:** What pain points or problems do they encounter (especially related to the problem you identified)?\n\n**Goals:** What do they ultimately want to achieve? What does success or happiness look like for them?"
             placeholder: |-
               Persona:
 
@@ -206,7 +207,7 @@ course:
         - type: challenge-end
           title: "Great job! You've identified your target user! \U0001F3AF"
           content:
-            nextModule: '**Next challenge:** With a clear target user and problem in mind, you''ll visualise their journey from struggle to success with storyboarding.'
+            nextModule: "**Next challenge:** With a clear target user and problem in mind, you'll visualise their journey from struggle to success with storyboarding."
             description: You now know exactly who you're building for.
             subDescription: |-
               Keeping a specific user in mind (like Sarah) will guide your choices. It's like designing for one person, which makes it far more likely your product will really resonate.
@@ -224,7 +225,7 @@ course:
         - type: text
           title: 'Storyboard: From struggle to solution'
           content:
-            body: 'Now that you know **who** you''re designing for and **what problem** you need to solve, let''s visualize how your solution will help your user. A great way to do this is by creating a **storyboard**. This is a series of panels or sketches that illustrate the user''s journey: from experiencing the problem, to using your solution, to reaching a happy outcome.'
+            body: "Now that you know **who** you're designing for and **what problem** you need to solve, let's visualize how your solution will help your user. A great way to do this is by creating a **storyboard**. This is a series of panels or sketches that illustrate the user's journey: from experiencing the problem, to using your solution, to reaching a happy outcome."
           subtitle: A storyboard communicates your user's story through images.
         - type: text
           title: Why storyboard?
@@ -247,7 +248,7 @@ course:
             imageUrl: /courses/vibe-coding-product-management-00/1-the-struggle.png
           subtitle: 1. Draw what the user struggles with.
         - type: free-text-exercise
-          title: 'Now it''s your turn: Describe your target user''s struggle'
+          title: "Now it's your turn: Describe your target user's struggle"
           content:
             description: Now we invite you to get a piece of paper and sketch out what your user struggles with. Even if you're not an artist, simple sketches or stick figures are fine. The point is to capture the idea. Then write it down in a few sentences below.
             placeholder: Describe the moment your user is facing the problem your product will solve. What are they doing, and how do they feel?
@@ -265,7 +266,7 @@ course:
             imageUrl: /courses/vibe-coding-product-management-00/2-the-happy-ending.png
           subtitle: 2. Visualise what the user can do and how they feel once the struggle is resolved.
         - type: free-text-exercise
-          title: 'Now it''s your turn: Visualise what your user can do and how they feel once the struggle is resolved.'
+          title: "Now it's your turn: Visualise what your user can do and how they feel once the struggle is resolved."
           content:
             description: On the piece of paper, draw what your user can do and how they feel once the struggle is resolved. Then write it down in a few sentences below.
             placeholder: Describe the happy ending for your user. What can they do, and how do they feel?
@@ -283,7 +284,7 @@ course:
             imageUrl: /courses/vibe-coding-product-management-00/3-6-discovery-to-decision.png
           subtitle: 3. Sketch all the moments that lead the user from the initial struggling moment to their happy ending. Show how your solution helps them get there.
         - type: free-text-exercise
-          title: 'Now it''s your turn: Sketch all the moments inbetween'
+          title: "Now it's your turn: Sketch all the moments inbetween"
           content:
             description: On the piece of paper, sketch all the moments that lead the user from the initial struggling moment to their happy ending. Show how your solution helps them get there. Then write it down in a few sentences below.
             placeholder: Describe the key moments that lead the user from the initial struggling moment to their happy ending and how your solution helps them get there.
@@ -297,7 +298,7 @@ course:
         - type: challenge-end
           title: "Great story! \U0001F4D6"
           content:
-            nextModule: '**Next challenge:** Time to get granular. You''ll learn about **user story mapping**, a simple way to turn your idea into a plan of features to build.'
+            nextModule: "**Next challenge:** Time to get granular. You'll learn about **user story mapping**, a simple way to turn your idea into a plan of features to build."
             description: You've envisioned how your product will help your user solve their problem.
             subDescription: |-
               This storyboard is your compass. Whenever you're in doubt, remember how your solution makes your user's life better. Now, let's break this story into actual steps and features.
@@ -374,7 +375,7 @@ course:
             imageUrl: /courses/vibe-coding-product-management-00/book-club-organiser-activities.png
           subtitle: The Book Club Organiser example
         - type: free-text-exercise
-          title: 'Now it''s your turn: Map out the big picture'
+          title: "Now it's your turn: Map out the big picture"
           content:
             description: |-
               What are the main activities your user will perform in your product to achieve their goals?
@@ -421,7 +422,7 @@ course:
             imageUrl: /courses/vibe-coding-product-management-00/book-club-organiser-steps.png
           subtitle: The Book Club Organiser example
         - type: free-text-exercise
-          title: 'Now it''s your turn: Map out the steps'
+          title: "Now it's your turn: Map out the steps"
           content:
             description: |-
               What are the steps your user will take in your product to accomplish each activity?
@@ -468,7 +469,7 @@ course:
             imageUrl: /courses/vibe-coding-product-management-00/book-club-organiser-details.png
           subtitle: The Book Club Organiser example
         - type: free-text-exercise
-          title: 'Now it''s your turn: Map out the details'
+          title: "Now it's your turn: Map out the details"
           content:
             description: |-
               What are the details under each step that needs to be built? Go through all the steps and break them down into specific details. It's okay if your list gets a bit long, you'll prioritise them soon.
@@ -498,7 +499,7 @@ course:
         - type: challenge-end
           title: "Amazing work, you've got your user story map! \U0001F5FA️"
           content:
-            nextModule: '**Next challenge:** We''ll decide which are the most essential features to build first and define your MVP (Minimum Viable Product).'
+            nextModule: "**Next challenge:** We'll decide which are the most essential features to build first and define your MVP (Minimum Viable Product)."
             description: You've mapped out every part of your solution.
             subDescription: |-
               Now you can see your entire product at a glance. It's normal if it feels like a lot! The good news: you don't need to build all of it at once.
@@ -633,7 +634,7 @@ course:
         - type: challenge-end
           title: "Wonderful work: MVP scoped! \U0001F680"
           content:
-            nextModule: '**Next challenge:** Let''s turn your plan into action. You''ll learn to translate your MVP into a prompt that an AI tool can use to build your app.'
+            nextModule: "**Next challenge:** Let's turn your plan into action. You'll learn to translate your MVP into a prompt that an AI tool can use to build your app."
             description: You've decided what to build first (and what to postpone).
             subDescription: |-
               Great job resisting the urge to do everything at once. A clear MVP means you can move faster and learn from real users sooner.
@@ -743,7 +744,7 @@ course:
         - type: challenge-end
           title: "Well done! Prompt ready to go! \U0001F4A1"
           content:
-            nextModule: '**Next challenge:** Almost there! You''ll learn how to test your idea with real users ASAP.'
+            nextModule: "**Next challenge:** Almost there! You'll learn how to test your idea with real users ASAP."
             description: You translated your plan into a clear AI prompt.
             subDescription: |-
               It's like giving the AI a blueprint of your product. With a solid prompt in hand, you're one step away from actually building something. Finally, let's prepare to build and gather feedback!
@@ -819,7 +820,8 @@ course:
           content:
             nextModule: "Now it's time to bring your idea to life. Use your prompt to start building with AI, then let real users guide your next steps. Good luck and happy building! \U0001F917"
             description: 'In this micro-course, you started with a raw idea and ended with:'
-            subDescription: "✓ A well-defined problem statement (so you know exactly what you're solving).\n\n✓ A clear persona (so you know who you're solving it for).\n\n✓ A visualised storyboard of the user journey (so you understand how your solution fits into their life).\n\n✓ A detailed user story map of steps and features (your feature roadmap).\n\n✓ A scoped-down MVP plan (your immediate build target).\n\n✓ A crafted AI prompt to start building your product in Lovable (your development instructions).\n\n✓ A plan to test with users and get feedback right away (so you learn quickly).\n\nBy breaking the process into these steps, you've made a daunting task (building a product) much more manageable. This is the same approach experienced product managers and founders use. You're now equipped to build something people truly need. \n\nRemember, **keep the user in focus, start small, and iterate**. You've got this!"
+            subDescription:
+              "✓ A well-defined problem statement (so you know exactly what you're solving).\n\n✓ A clear persona (so you know who you're solving it for).\n\n✓ A visualised storyboard of the user journey (so you understand how your solution fits into their life).\n\n✓ A detailed user story map of steps and features (your feature roadmap).\n\n✓ A scoped-down MVP plan (your immediate build target).\n\n✓ A crafted AI prompt to start building your product in Lovable (your development instructions).\n\n✓ A plan to test with users and get feedback right away (so you learn quickly).\n\nBy breaking the process into these steps, you've made a daunting task (building a product) much more manageable. This is the same approach experienced product managers and founders use. You're now equipped to build something people truly need. \n\nRemember, **keep the user in focus, start small, and iterate**. You've got this!"
       title: Get Feedback on What You've Built
       isFree: false
       skills:

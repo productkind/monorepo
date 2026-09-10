@@ -6,28 +6,13 @@ account: little-parrot
 
 # Post 2: Fix, revert, or start fresh?
 
-**Pillar:** the messy middle.
-**Research trace:** the doom loop ("the agent said it fixed it, it isn't
-fixed") is the audience's No. 1 pain and the biggest competitive gap; the
-missing skill is judgement about what to do when something breaks;
-"bookmark before experiments" is one of the course's own credit-saving habits;
-normalising breakage ("things will break, and that's okay") is
-confidence-by-design.
+**Pillar:** the messy middle. **Research trace:** the doom loop ("the agent said it fixed it, it isn't fixed") is the audience's No. 1 pain and the biggest competitive gap; the missing skill is judgement about what to do when something breaks; "bookmark before experiments" is one of the course's own credit-saving habits; normalising breakage ("things will break, and that's okay") is confidence-by-design.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 6 slides, 1080 x 1350 (4:5 portrait).** Decision-guide style:
-calm colours, one route per slide, a small signpost motif. Colour-code the
-three routes (fix, revert, start fresh) like the earlier which-tool guide.
+**Carousel, 6 slides, 1080 x 1350 (4:5 portrait).** Decision-guide style: calm colours, one route per slide, a small signpost motif. Colour-code the three routes (fix, revert, start fresh) like the earlier which-tool guide.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -38,10 +23,7 @@ three routes (fix, revert, start fresh) like the earlier which-tool guide.
 | 5 | Route 3 card, fresh page icon | "START FRESH, when the whole approach came out wrong. Your prompt is the valuable thing, not the output. A clearer prompt gives you a cleaner result, and it's usually faster than fixing." |
 | 6 (CTA) | Brand card | "Breaking things is part of building, and now you know your three ways back. Save this for your next experiment 🔖 Full course: Build Your First App with Lovable, on LittleParrot.app. First challenge free." |
 
-**Alt text (for the post):** A decision-guide carousel for when a Lovable app
-breaks: bookmark your version before risky changes, fix small describable
-issues, revert tangles through version history, and start fresh with a
-clearer prompt when the approach itself came out wrong.
+**Alt text (for the post):** A decision-guide carousel for when a Lovable app breaks: bookmark your version before risky changes, fix small describable issues, revert tangles through version history, and start fresh with a clearer prompt when the approach itself came out wrong.
 
 ## Caption (exact)
 
@@ -55,7 +37,4 @@ One habit makes all of this painless: bookmark your version before you experimen
 
 Our Build Your First App with Lovable course on LittleParrot.app walks you through all of it on a real app, first challenge free.
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #lovable #shebuilds #womenintech #buildinpublic #aiforbeginners #learnwithai #appbuilding #vibecodingtips
+. . . #vibecoding #buildwithai #womenwhobuild #lovable #shebuilds #womenintech #buildinpublic #aiforbeginners #learnwithai #appbuilding #vibecodingtips

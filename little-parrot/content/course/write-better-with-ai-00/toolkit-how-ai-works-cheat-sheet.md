@@ -1,7 +1,8 @@
 ---
-challenge: "4 - Learn more efficiently by using AI"
-type: "Cheat sheet"
+challenge: '4 - Learn more efficiently by using AI'
+type: 'Cheat sheet'
 ---
+
 ## How AI Works
 
 The terms from the "Write Better with AI" course in one place, with what each one changes about the way you prompt. Look something up here when you hit the word in a meeting, or when the AI does something odd and you want to know whether it's just behaving as expected.
@@ -9,7 +10,7 @@ The terms from the "Write Better with AI" course in one place, with what each on
 ### The vocabulary
 
 | Term | What it means | What it changes about your prompting |
-|---|---|---|
+| --- | --- | --- |
 | **AI** | The umbrella term for machines doing things that would normally need human intelligence: recognising patterns, understanding language, making predictions. Covers face recognition, self-driving cars, fraud detection, and much more. | Not much on its own. When someone says "the AI", ask which kind, because the answer nowadays is usually a large language model (LLM). |
 | **AI model** | A program trained on data to do one particular job. It takes an input and produces an output. Inputs and outputs can be text, images, audio, or other data. | Reminds you the model has a job it was trained for, so you can adjust your expectations about what it's able to do. |
 | **LLM (Large Language Model)** | An AI model specialised in human language, trained on enormous amounts of text. The thing you're talking to when you use an AI chat assistant like ChatGPT or Claude.ai. | It's a language specialist. It's excellent at shaping and rewording what you give it, and unreliable about facts you didn't give it. |

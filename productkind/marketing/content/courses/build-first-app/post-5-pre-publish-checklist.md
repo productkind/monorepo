@@ -6,28 +6,13 @@ account: little-parrot
 
 # Post 5: Five minutes before you hit Publish
 
-**Pillar:** the messy middle.
-**Research trace:** security hygiene is what separates "toy" from the
-"production ready real" the audience says they want (the Enrichlead story is
-their canonical fear); checklists are top saveable content; "nobody will find
-your app unless you share the link" is the research-backed reassurance that
-gets people to publish early. Repackages the Pre-Publish Checklist toolkit
-item.
+**Pillar:** the messy middle. **Research trace:** security hygiene is what separates "toy" from the "production ready real" the audience says they want (the Enrichlead story is their canonical fear); checklists are top saveable content; "nobody will find your app unless you share the link" is the research-backed reassurance that gets people to publish early. Repackages the Pre-Publish Checklist toolkit item.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 6 slides, 1080 x 1350 (4:5 portrait).** Checklist style: big
-tick boxes, grouped by theme, one group per slide. A small rocket motif
-building towards launch on the final slide.
+**Carousel, 6 slides, 1080 x 1350 (4:5 portrait).** Checklist style: big tick boxes, grouped by theme, one group per slide. A small rocket motif building towards launch on the final slide.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -38,10 +23,7 @@ building towards launch on the final slide.
 | 5 | Bookmark icon on a version timeline | "Last step: bookmark this version in the version history. It's your stable point. Whatever you add next, you can always come back here." |
 | 6 (CTA) | Brand card, rocket taking off | "And remember: nobody will find your app unless you share the link, so it doesn't need to be perfect to go live. Save this for publish day 🔖 Full course: Build Your First App with Lovable, on LittleParrot.app. First challenge free." |
 
-**Alt text (for the post):** A pre-publish checklist carousel for Lovable
-apps: set the favicon, title, description, share image and URL, resolve
-security errors in the Security panel, test on phone and desktop, and
-bookmark the version before publishing.
+**Alt text (for the post):** A pre-publish checklist carousel for Lovable apps: set the favicon, title, description, share image and URL, resolve security errors in the Security panel, test on phone and desktop, and bookmark the version before publishing.
 
 ## Caption (exact)
 
@@ -55,7 +37,4 @@ The checklist comes with our Build Your First App with Lovable course on LittleP
 
 Save this for publish day. 🔖
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #lovable #shipit #womenintech #buildinpublic #firstapp #appbuilding #aiforbeginners #vibecodingtips
+. . . #vibecoding #buildwithai #womenwhobuild #lovable #shipit #womenintech #buildinpublic #firstapp #appbuilding #aiforbeginners #vibecodingtips

@@ -1,6 +1,7 @@
 ---
-challenge: "8 - Build a Sustainable Business"
+challenge: '8 - Build a Sustainable Business'
 ---
+
 ## Accountant Call Preparation Template
 
 Use this template to prepare for your first conversation with an accountant. Fill in your details before the call so you can make the most of the time, and bring the questions below so you walk away with clear answers.

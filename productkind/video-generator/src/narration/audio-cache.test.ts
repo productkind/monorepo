@@ -1,6 +1,6 @@
-import { describe, expect, test } from 'vitest'
-
 import { cachedTakeIn } from './audio-cache'
+
+import { describe, expect, test } from 'vitest'
 
 const KEY = 'a1b2c3'
 const ALIGNMENT = `${KEY}.alignment.json`
@@ -16,7 +16,7 @@ describe('cachedTakeIn', () => {
     })
   })
 
-  test('reuses another video\'s take, which is what stops a second cut re-paying for narration', () => {
+  test("reuses another video's take, which is what stops a second cut re-paying for narration", () => {
     const caches = [
       { video: 'wanted', names: [] },
       { video: 'already-narrated', names: [`${KEY}.wav`, ALIGNMENT] },
@@ -25,7 +25,7 @@ describe('cachedTakeIn', () => {
     expect(cachedTakeIn({ key: KEY, caches })?.video).toBe('already-narrated')
   })
 
-  test('prefers the earlier cache, so a video uses its own copy over a sibling\'s', () => {
+  test("prefers the earlier cache, so a video uses its own copy over a sibling's", () => {
     const caches = [
       { video: 'mine', names: [`${KEY}.mp3`, ALIGNMENT] },
       { video: 'theirs', names: [`${KEY}.wav`, ALIGNMENT] },
@@ -50,6 +50,8 @@ describe('cachedTakeIn', () => {
   })
 
   test('has nothing to offer when no cache holds the take', () => {
-    expect(cachedTakeIn({ key: KEY, caches: [{ video: 'a', names: ['other.mp3'] }] })).toBeUndefined()
+    expect(
+      cachedTakeIn({ key: KEY, caches: [{ video: 'a', names: ['other.mp3'] }] }),
+    ).toBeUndefined()
   })
 })

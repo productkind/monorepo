@@ -9,11 +9,11 @@
  *   npm run migrate -- --id social-016 --component SocialVideo016 \
  *     --alignment alignment-video-social-016-chloe.json --voice chloe --model eleven_v3
  */
-import { existsSync, readFileSync, writeFileSync } from 'node:fs'
-import { join, resolve } from 'node:path'
-
 import type { Alignment, Word } from '../src/narration/words'
 import { alignmentToWords } from '../src/narration/words'
+
+import { existsSync, readFileSync, writeFileSync } from 'node:fs'
+import { join, resolve } from 'node:path'
 
 const PROJECT_DIR = process.cwd()
 // Retired: the hand-run ElevenLabs scripts that seeded this project's audio cache lived at
@@ -114,7 +114,9 @@ const legacySectionsOf = ({
   }
   const body = source.slice(start, source.indexOf('\nexport const ', start + 1))
   const sequences = [
-    ...body.matchAll(/<Series\.Sequence durationInFrames=\{([^}]*)\}>([\s\S]*?)<\/Series\.Sequence>/g),
+    ...body.matchAll(
+      /<Series\.Sequence durationInFrames=\{([^}]*)\}>([\s\S]*?)<\/Series\.Sequence>/g,
+    ),
   ]
   if (sequences.length === 0) {
     throw new Error(`${component} has no Series.Sequence blocks.`)

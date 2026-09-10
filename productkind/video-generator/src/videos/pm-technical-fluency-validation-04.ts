@@ -30,7 +30,7 @@ export default defineVideo({
   ],
   sections: [
     {
-      text: "Engineering says it’s done.",
+      text: 'Engineering says it’s done.',
       visual: gif({
         src: 'section-00-finish-flag.gif',
         source: {
@@ -42,7 +42,7 @@ export default defineVideo({
       }),
     },
     {
-      text: "Your users still don’t have it.",
+      text: 'Your users still don’t have it.',
       visual: gif({
         src: 'section-01-still-nothing.gif',
         source: {
@@ -56,7 +56,7 @@ export default defineVideo({
       endsParagraph: true,
     },
     {
-      text: "It’s built, it’s tested,",
+      text: 'It’s built, it’s tested,',
       visual: gif({
         src: 'section-02-machine-working.gif',
         source: { provider: 'giphy', id: '3oEdv49tCsOOcl79Ac', search: '3d gears turning machine' },
@@ -67,7 +67,7 @@ export default defineVideo({
     {
       // Standing at a baggage carousel: the thing is finished and somewhere in a system you don't
       // control, and all you can do is wait at the belt.
-      text: "and it’s waiting behind another team’s release.",
+      text: 'and it’s waiting behind another team’s release.',
       visual: gif({
         src: 'section-03-waiting.gif',
         source: {
@@ -81,7 +81,7 @@ export default defineVideo({
     },
     {
       // Sped up so the whole year flips inside the beat; at full speed it only reaches July.
-      text: "Nobody told you that team ships once a month.",
+      text: 'Nobody told you that team ships once a month.',
       visual: gif({
         src: 'section-04-monthly-calendar.gif',
         source: {
@@ -96,7 +96,7 @@ export default defineVideo({
       endsParagraph: true,
     },
     {
-      text: "You’ve been telling your stakeholder it’s coming this week.",
+      text: 'You’ve been telling your stakeholder it’s coming this week.',
       visual: gif({
         src: 'section-05-telling-stakeholder.gif',
         source: {
@@ -108,7 +108,7 @@ export default defineVideo({
       }),
     },
     {
-      text: "For three weeks.",
+      text: 'For three weeks.',
       visual: gif({
         src: 'section-06-time-dragging.gif',
         source: {
@@ -121,7 +121,7 @@ export default defineVideo({
       endsParagraph: true,
     },
     {
-      text: "Done meant finished in your part of the system.",
+      text: 'Done meant finished in your part of the system.',
       visual: gif({
         src: 'section-07-your-part.gif',
         source: {
@@ -134,7 +134,7 @@ export default defineVideo({
       }),
     },
     {
-      text: "That isn’t the same as live for your users.",
+      text: 'That isn’t the same as live for your users.',
       visual: gif({
         src: 'section-08-switch-on.gif',
         source: {
@@ -148,7 +148,7 @@ export default defineVideo({
       endsParagraph: true,
     },
     {
-      text: "If you want to know where your feature actually is,",
+      text: 'If you want to know where your feature actually is,',
       visual: gif({
         src: 'section-09-searching.gif',
         source: {
@@ -161,7 +161,7 @@ export default defineVideo({
       }),
     },
     {
-      text: "we’re building a learning path for it.",
+      text: 'we’re building a learning path for it.',
       visual: gif({
         src: 'section-10-learning-path.gif',
         source: {
@@ -175,7 +175,7 @@ export default defineVideo({
       endsParagraph: true,
     },
     {
-      text: "By the end you’ll be able to follow one change",
+      text: 'By the end you’ll be able to follow one change',
       visual: gif({
         src: 'section-11-following-the-route.gif',
         source: {
@@ -189,7 +189,7 @@ export default defineVideo({
     },
     {
       // Sped up so the whole chain finishes falling inside the beat.
-      text: "through review, testing, environments",
+      text: 'through review, testing, environments',
       visual: gif({
         src: 'section-12-route-of-stages.gif',
         source: { provider: 'giphy', id: 'QzASHIVqZlFQ4eQTV7', search: 'domino chain falling' },
@@ -198,7 +198,7 @@ export default defineVideo({
       }),
     },
     {
-      text: "and every team it waits on,",
+      text: 'and every team it waits on,',
       visual: gif({
         src: 'section-13-chain-of-teams.gif',
         source: { provider: 'giphy', id: 'VtCrCSeLc1Ref320A9', search: 'chain links close up' },
@@ -206,7 +206,7 @@ export default defineVideo({
       }),
     },
     {
-      text: "and say exactly what’s holding it up.",
+      text: 'and say exactly what’s holding it up.',
       visual: gif({
         src: 'section-14-marking-the-blocker.gif',
         source: {
@@ -219,7 +219,7 @@ export default defineVideo({
       endsParagraph: true,
     },
     {
-      text: "The waitlist link is in the comments.",
+      text: 'The waitlist link is in the comments.',
       visual: gif({
         src: 'section-15-pointing.gif',
         source: {
@@ -233,7 +233,7 @@ export default defineVideo({
     },
     {
       // Sped up so the pen stroke lands inside the beat.
-      text: "Sign up and we’ll let you know when the learning path opens.",
+      text: 'Sign up and we’ll let you know when the learning path opens.',
       visual: gif({
         src: 'section-16-signing-up.gif',
         source: {
@@ -247,7 +247,7 @@ export default defineVideo({
       endsParagraph: true,
     },
     {
-      text: "[pause][curious] How often do you release new improvements for your users?",
+      text: '[pause][curious] How often do you release new improvements for your users?',
       visual: gif({
         src: 'section-17-asking-you.gif',
         source: {

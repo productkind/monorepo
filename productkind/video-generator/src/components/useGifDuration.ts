@@ -1,6 +1,6 @@
+import { getGifDurationInSeconds } from '@remotion/gif'
 import { useEffect, useState } from 'react'
 import { continueRender, delayRender } from 'remotion'
-import { getGifDurationInSeconds } from '@remotion/gif'
 
 /** Measured once per gif and kept, the way `useMediaSize` keeps sizes. */
 const MEASURED = new Map<string, number>()

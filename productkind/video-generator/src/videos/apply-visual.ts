@@ -106,9 +106,7 @@ const sourceField = ({ source, quote }: { source: VisualSource; quote: string })
  */
 /** Nothing is written for the whole frame, because that is what `place` already defaults to. */
 const placeField = ({ place, quote }: { place: Place | undefined; quote: string }): string[] =>
-  place === undefined || place === 'frame'
-    ? []
-    : [`place: ${quoted({ value: place, quote })}`]
+  place === undefined || place === 'frame' ? [] : [`place: ${quoted({ value: place, quote })}`]
 
 const FIELDS: {
   [KIND in AppliedVisual['kind']]: (options: {

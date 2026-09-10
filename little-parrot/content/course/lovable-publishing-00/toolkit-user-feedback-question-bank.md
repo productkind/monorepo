@@ -1,6 +1,7 @@
 ---
-challenge: "5 - Know Your Users: Metrics, Feedback, and Distribution"
+challenge: '5 - Know Your Users: Metrics, Feedback, and Distribution'
 ---
+
 ## User Feedback Question Bank
 
 A collection of questions for ongoing user conversations as your product grows. If you're gathering feedback for the very first time, start with the [First User Feedback Script](https://littleparrot.app/nest/toolkit/74d1c10f-5eba-4cca-9779-a2cb8594e113) tool. Come back here when you're ready to dig deeper.
@@ -20,7 +21,7 @@ A collection of questions for ongoing user conversations as your product grows. 
 Use these to learn how people actually use your product (not how you assume they do).
 
 | Question | What it tells you |
-|----------|------------------|
+| --- | --- |
 | Walk me through what you did the last time you used the app. | The real user flow, which often differs from what you designed |
 | Was there a moment where you felt confused or unsure what to do next? | Where your user flow has gaps or unclear navigation |
 | What did you expect to happen when you [clicked/tapped] that? | Where your design doesn't match user intuition |
@@ -31,7 +32,7 @@ Use these to learn how people actually use your product (not how you assume they
 Use these to find out whether your product solves a real problem well enough.
 
 | Question | What it tells you |
-|----------|------------------|
+| --- | --- |
 | Have you used this since the first time? What brought you back (or what stopped you)? | Whether your product delivers enough value to become a habit, based on real behaviour rather than politeness |
 | How did you solve this problem before using this app? | What you're competing with (even if it's spreadsheets or WhatsApp) |
 | If this app disappeared tomorrow, what would you miss most? | Your product's core value, in the user's own words |
@@ -43,7 +44,7 @@ Use these to find out whether your product solves a real problem well enough.
 Use these to find out what's missing. When users say "I wish it had X", there's usually a deeper need behind the request. If you build exactly what they ask for, you might miss a simpler or better solution. These questions help you understand the need first, so you can decide the best way to solve it.
 
 | Question | What it tells you |
-|----------|------------------|
+| --- | --- |
 | What were you trying to accomplish that you couldn't? | The underlying need behind a potential feature. The need can often be solved in a simpler way than what the user imagines |
 | Tell me about a moment where you felt stuck or slowed down. | Friction points that might not surface as explicit complaints |
 | Was there a point where you left the app and switched to another tool? Where and why? | Where your product falls short and what fills the gap |
@@ -54,7 +55,7 @@ Use these to find out what's missing. When users say "I wish it had X", there's 
 Use these when you have feedback from multiple users and need to prioritise.
 
 | Question | What it tells you |
-|----------|------------------|
+| --- | --- |
 | What would make you recommend this to a friend? | What would turn a user into an advocate |
 | What nearly made you stop using it? | The biggest risk to retention, which is often more urgent than new features |
 | Which part do you use most? Which part do you never use? | Where to invest more and what you might remove or simplify |
@@ -71,6 +72,7 @@ After 3-5 conversations, look for patterns. Not every piece of feedback needs ac
 - **People say they like it but don't come back?** The problem is value, not usability. Dig into whether your product solves a frequent enough problem to become a habit.
 
 **Keep a simple log.** After each conversation, write down:
+
 1. Who you talked to (role, how they fit your target user)
 2. The 2-3 most important things they said
 3. Any patterns you're starting to see

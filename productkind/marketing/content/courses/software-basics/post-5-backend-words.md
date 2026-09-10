@@ -6,28 +6,13 @@ account: little-parrot
 
 # Post 5: APIs, keys, and the two auth words
 
-**Pillar:** the method, shown.
-**Research trace:** integrations (payments, email, APIs) sit in the demand
-data as the wanted next step; API key hygiene is the security habit with a
-canonical fear story behind it; authentication vs authorisation is exactly
-the "confident conversations with developers" vocabulary our learner asked
-for. Draws on the course's Challenge 4 and the backend section of the
-Software Vocabulary Cheat Sheet.
+**Pillar:** the method, shown. **Research trace:** integrations (payments, email, APIs) sit in the demand data as the wanted next step; API key hygiene is the security habit with a canonical fear story behind it; authentication vs authorisation is exactly the "confident conversations with developers" vocabulary our learner asked for. Draws on the course's Challenge 4 and the backend section of the Software Vocabulary Cheat Sheet.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Backstage-tour style:
-behind-the-curtain illustrations, each term staged as a scene, the two auth
-words shown as two different doors.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Backstage-tour style: behind-the-curtain illustrations, each term staged as a scene, the two auth words shown as two different doors.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -39,10 +24,7 @@ words shown as two different doors.
 | 6 | A prompt card in monospace | "The words at work: 'Add Google authentication. Only authenticated members can vote, and only the club owner is authorised to close the vote.' Precise words, and the app comes back matching them." |
 | 7 (CTA) | Brand card | "Backstage stops being a mystery once it has names. Full cheat sheet: Basics of Software for Vibe Coding, on LittleParrot.app. First challenge free 🟪 Save this 🔖" |
 
-**Alt text (for the post):** A backend-vocabulary carousel: APIs as how
-apps talk to each other, API keys as secrets that never go in prompts,
-authentication versus authorisation as who-you-are versus
-what-you-may-do, and backend functions as small single-job workers.
+**Alt text (for the post):** A backend-vocabulary carousel: APIs as how apps talk to each other, API keys as secrets that never go in prompts, authentication versus authorisation as who-you-are versus what-you-may-do, and backend functions as small single-job workers.
 
 ## Caption (exact)
 
@@ -56,7 +38,4 @@ The full cheat sheet comes with our Basics of Software for Vibe Coding course, o
 
 Save this for your next feature. 🔖
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #techliteracy #shebuilds #api #womenintech #techforwomen #learnwithai #appbuilding #digitalskills
+. . . #vibecoding #buildwithai #womenwhobuild #techliteracy #shebuilds #api #womenintech #techforwomen #learnwithai #appbuilding #digitalskills

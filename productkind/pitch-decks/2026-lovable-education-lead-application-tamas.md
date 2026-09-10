@@ -3,6 +3,7 @@
 ## Your Lovable story
 
 ### What have you created with Lovable? Share a viewable link plus context about the project.
+
 0/1000
 
 Little Parrot is a microlearning platform that helps non-technical women learn how to build products with AI and vibe coding.
@@ -20,6 +21,7 @@ View Little Parrot: https://littleparrot.app
 https://vm.tiktok.com/ZN88ynqfq/
 
 ### Why do you want to represent Lovable in your community? What would make this a fantastic experience for you?
+
 0/1000
 
 I want to represent Lovable because, from teaching beginners, I think it has done something other AI tools still struggle with: lowering the barrier for non-technical people to start building, while also taking care of many of the most time-consuming parts of early product development.
@@ -29,6 +31,7 @@ One moment that stayed with us was a SheBuilds event in Singapore on Internation
 A fantastic Ambassador experience would mean helping more beginners build with confidence, sharing what we learn from teaching them, and having an easier way to provide Lovable credits for workshops. At the moment, access to credits is one of the biggest practical bottlenecks for our learners.
 
 ### Tell us about a community, group, or audience you've built or grown. What was your role, and what did it become?
+
 0/1000
 
 I co-founded Green Fox Academy, a programming bootcamp across Hungary, the Czech Republic and Slovakia, and led it as Head of Education. Over eight years, more than 3,000 people changed careers to become developers, some of them ending up at companies like Amazon, before the company was sold.
@@ -47,18 +50,14 @@ Product development, AI tools, Software Development
 
 ### What format(s) do you primarily teach in?
 
-[ ] Newsletter / Substack
-[x] Long-form video
-[x] Short-form video
-[x] Course
-[ ] Audio (podcast)
-[ ] Other
+[ ] Newsletter / Substack [x] Long-form video [x] Short-form video [x] Course [ ] Audio (podcast) [ ] Other
 
 ### Share 1-2 links to teaching content you're proud of.
 
 https://www.youtube.com/playlist?list=PLvh0QOS98b8CcEcBJCzTsNL2rVm2MQ5hJ
 
 ### Pitch us one session you'd run for the Lovable community. Title, audience, and what someone will be able to do afterward that they couldn't before.
+
 0/1000
 
 **Title:** Build your interactive lead magnet with Lovable to win bigger clients.

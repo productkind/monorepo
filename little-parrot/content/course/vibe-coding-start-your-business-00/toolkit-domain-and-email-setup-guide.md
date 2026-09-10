@@ -1,6 +1,7 @@
 ---
-challenge: "2 - Choose Your Domain"
+challenge: '2 - Choose Your Domain'
 ---
+
 ## Domain and Email Setup Guide
 
 A step-by-step guide for purchasing your domain, setting up Google Workspace, and configuring your email. Follow these steps after you've decided on your domain name.
@@ -51,13 +52,13 @@ For email to work, you need to point your domain's email to Google's servers. **
 
 Google Workspace MX records look like this:
 
-| Priority | Mail server |
-|----------|------------|
-| 1 | ASPMX.L.GOOGLE.COM |
-| 5 | ALT1.ASPMX.L.GOOGLE.COM |
-| 5 | ALT2.ASPMX.L.GOOGLE.COM |
-| 10 | ALT3.ASPMX.L.GOOGLE.COM |
-| 10 | ALT4.ASPMX.L.GOOGLE.COM |
+| Priority | Mail server             |
+| -------- | ----------------------- |
+| 1        | ASPMX.L.GOOGLE.COM      |
+| 5        | ALT1.ASPMX.L.GOOGLE.COM |
+| 5        | ALT2.ASPMX.L.GOOGLE.COM |
+| 10       | ALT3.ASPMX.L.GOOGLE.COM |
+| 10       | ALT4.ASPMX.L.GOOGLE.COM |
 
 **If you're using GoDaddy:**
 
@@ -111,7 +112,6 @@ Set up DMARC **after** SPF and DKIM have been active for at least 48 hours.
 ```
 v=DMARC1; p=none; rua=mailto:dmarc-reports@yourdomain.com; ruf=mailto:dmarc-forensic@yourdomain.com; fo=1; adkim=r; aspf=r; pct=100; sp=reject
 ```
-
 
 **Note:** After setting up DMARC, you'll start receiving automated report emails. These are machine-generated and you don't need to do anything with them. Feel free to set up a Gmail filter to archive them automatically.
 

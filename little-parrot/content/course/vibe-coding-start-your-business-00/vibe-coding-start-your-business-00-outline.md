@@ -15,6 +15,7 @@ The narrative follows Dalmie, who built the Book Club Organiser app with Lovable
 ## Structure
 
 ### 1. Craft Your Value Proposition
+
 Describe the value your product delivers in one sentence, then test it on real people.
 
 - The "you don't need" list: a company, investors, a perfect product, a trademark, business cards. You need users getting value from what you built. Everything else comes later.
@@ -26,6 +27,7 @@ Describe the value your product delivers in one sentence, then test it on real p
 - Exercise: Write three versions of your value proposition using the formula. Test each one on a different person. Write down their reactions and pick the version that sparked the most interest.
 
 ### 2. Choose Your Domain
+
 Pick the right name and set up a professional presence without overspending.
 
 - Why this comes first, before driving traffic: your domain is the address people will see in directories, community posts, and emails. Get it in place before you start sending people anywhere.
@@ -39,6 +41,7 @@ Pick the right name and set up a professional presence without overspending.
 - Exercise: Search for available domains for your product. Compare at least two top-level domain options on price and fit. Purchase your domain and set up a professional email.
 
 ### 3. Build Your Audience Before You Launch
+
 Set up the net before you start fishing. Prepare to capture every visitor before you drive traffic.
 
 - Why this comes before getting traffic: every visitor who lands on your site without a way to stay in touch is a lost opportunity. Set up email capture first, so that when traffic arrives, you're ready.
@@ -50,6 +53,7 @@ Set up the net before you start fishing. Prepare to capture every visitor before
 - Exercise: Add an email capture form (wait list or sign-up) to your product's landing page. Then create a simple lead magnet that your target audience would find useful and offer it as a reason to sign up.
 
 ### 4. Set Up Analytics Before Your First Visitors Arrive
+
 Install PostHog so you can learn from every visitor from day one.
 
 - Why this comes before driving traffic: if you set up analytics after you've already sent people to your product, you've lost data from your first visitors. Those are the most valuable ones to learn from. Set up tracking now so that when traffic arrives, you see everything.
@@ -62,6 +66,7 @@ Install PostHog so you can learn from every visitor from day one.
 - Exercise: Add PostHog to your product using the prompt template. Verify it works by visiting your own app and confirming the session shows up in your dashboard.
 
 ### 5. Get Your First Visitors
+
 Everything is in place. Now drive real people to your product.
 
 - Why this is the moment: you have a clear value proposition (Challenge 1), a professional domain (Challenge 2), a way to capture emails (Challenge 3), and analytics tracking every visit (Challenge 4). You're not sending people into a void. Every visitor will be captured, tracked, and learned from.
@@ -74,6 +79,7 @@ Everything is in place. Now drive real people to your product.
 - Exercise: Write a directory submission and a community post for your product using the templates. Submit to at least one directory and share in one community where your users spend time.
 
 ### 6. Listen to Your First Users
+
 Turn early visitors into a conversation that improves your product.
 
 - Add a feedback or "report a bug" feature into your product so visitors can tell you what's broken or confusing. This turns one-way traffic into a conversation.
@@ -84,6 +90,7 @@ Turn early visitors into a conversation that improves your product.
 - Exercise: Add a feedback feature to your product. Reach out to three people who have used it and ask what worked and what was confusing. If anyone shares something positive, ask to use it as a testimonial.
 
 ### 7. Decide What to Charge
+
 Choose a pricing model that fits your product and your audience.
 
 - Pricing strategies for a first product: free vs freemium vs paid
@@ -93,6 +100,7 @@ Choose a pricing model that fits your product and your audience.
 - Exercise: Write down your pricing model and the reasoning behind it. Connect it to what you've learned from your analytics and user feedback.
 
 ### 8. Get Ready to Accept Payment
+
 Set up the financial and legal basics so you can receive your first payment.
 
 - What Stripe is and what you need to set it up (e.g., tax number).

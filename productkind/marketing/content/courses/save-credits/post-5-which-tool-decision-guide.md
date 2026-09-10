@@ -6,26 +6,13 @@ account: little-parrot
 
 # Post 5: Which tool for which change? (decision guide)
 
-**Pillar:** the messy middle.
-**Research trace:** direct ROI framing (price against tool spend: one avoided
-credit-burn pays for itself); decision checklists are top saveable content;
-"which route do I take" is the judgement skill the audience says they lack,
-and judgement-building is our confidence-by-design angle.
+**Pillar:** the messy middle. **Research trace:** direct ROI framing (price against tool spend: one avoided credit-burn pays for itself); decision checklists are top saveable content; "which route do I take" is the judgement skill the audience says they lack, and judgement-building is our confidence-by-design angle.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 6 slides, 1080 x 1350 (4:5 portrait).** Decision-guide style: one
-big question, then one card per route, colour-coded (VS Code blue, Copilot
-green, Lovable purple), ending on a bonus tip.
+**Carousel, 6 slides, 1080 x 1350 (4:5 portrait).** Decision-guide style: one big question, then one card per route, colour-coded (VS Code blue, Copilot green, Lovable purple), ending on a bonus tip.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -36,10 +23,7 @@ green, Lovable purple), ending on a bonus tip.
 | 5 (bonus tip) | Lightbulb card | "Not sure which side it's on? Ask Lovable in Plan mode: 'Would this change touch the backend?' One credit, changes nothing, tells you the cheapest route." |
 | 6 (CTA) | Brand card | "The right tool for each change keeps your credits AND your time. Save this guide 🔖 Full course: Save Lovable Credits: Edit Your App Like a Developer, on LittleParrot.app. First challenge free." |
 
-**Alt text (for the post):** A decision-guide carousel for Lovable builders:
-changes people can see are free to make yourself in VS Code or with GitHub
-Copilot, while behind-the-scenes work like data and logins belongs in Lovable,
-with a Plan mode tip for the unsure cases.
+**Alt text (for the post):** A decision-guide carousel for Lovable builders: changes people can see are free to make yourself in VS Code or with GitHub Copilot, while behind-the-scenes work like data and logins belongs in Lovable, with a Plan mode tip for the unsure cases.
 
 ## Caption (exact)
 
@@ -57,7 +41,4 @@ This is the judgement our learners tell us they're missing, and it's very learna
 
 Save this for your next building session. 🔖
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #lovable #githubcopilot #womenintech #buildinpublic #aitools #learnwithai #aiforbeginners #techforwomen #vscode
+. . . #vibecoding #buildwithai #womenwhobuild #lovable #githubcopilot #womenintech #buildinpublic #aitools #learnwithai #aiforbeginners #techforwomen #vscode

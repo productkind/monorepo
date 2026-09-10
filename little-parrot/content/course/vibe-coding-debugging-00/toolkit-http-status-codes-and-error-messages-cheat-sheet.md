@@ -1,6 +1,7 @@
 ---
-challenge: "3 - How Developers Investigate Bugs"
+challenge: '3 - How Developers Investigate Bugs'
 ---
+
 ## HTTP Status Codes and Error Messages Cheat Sheet
 
 A quick-reference guide for the error codes and messages you'll see most often while debugging your Lovable app. Keep this open alongside your browser DevTools.
@@ -11,15 +12,15 @@ These appear in the Network tab of your browser DevTools. They tell you whether 
 
 #### Success
 
-| Code | Name | What it means |
-|------|------|--------------|
-| 200 | OK | Everything worked. If the bug persists, the problem is elsewhere. |
-| 201 | Created | A new record was successfully created (e.g., a new row in the database). |
+| Code | Name    | What it means                                                            |
+| ---- | ------- | ------------------------------------------------------------------------ |
+| 200  | OK      | Everything worked. If the bug persists, the problem is elsewhere.        |
+| 201  | Created | A new record was successfully created (e.g., a new row in the database). |
 
 #### Client errors (the app sent something wrong)
 
 | Code | Name | What it means | Common cause in Lovable |
-|------|------|--------------|------------------------|
+| --- | --- | --- | --- |
 | 400 | Bad Request | The data sent to the backend is missing or formatted incorrectly. | A required field is empty, or the data type is wrong (e.g., sending text where a number is expected). |
 | 401 | Unauthorised | The user isn't logged in, or the session has expired. | The user's login session timed out. Possibly you can try logging out and back in. |
 | 403 | Forbidden | The user is logged in but doesn't have permission. | Row Level Security (RLS) policies are blocking the request. This is the most common 403 cause in Lovable apps. |
@@ -30,7 +31,7 @@ These appear in the Network tab of your browser DevTools. They tell you whether 
 #### Server errors (something crashed on the backend)
 
 | Code | Name | What it means | Common cause in Lovable |
-|------|------|--------------|------------------------|
+| --- | --- | --- | --- |
 | 500 | Internal Server Error | Something went wrong in the backend code. | A bug in a backend function. Check the Cloud logs for the specific error. |
 | 502 | Bad Gateway | The server received an invalid response from another service. | Lovable or an external API (payment provider, email service) is down or misconfigured. Usually temporary, and you cannot really do something about it. Wait a moment, refresh and try again. |
 | 503 | Service Unavailable | The server is temporarily overloaded or down. | Usually temporary. Wait a moment, refresh and try again. |
@@ -39,13 +40,7 @@ These appear in the Network tab of your browser DevTools. They tell you whether 
 
 These appear in the Console tab of your browser DevTools or in the Cloud logs. They indicate problems in the frontend code (Console) or backend code (Cloud logs).
 
-| Error message | What it usually means |
-|---|---|---|
-| `TypeError: Cannot read properties of undefined (reading 'X')` | The code is trying to use data that hasn't loaded yet or doesn't exist. |
-| `TypeError: X is not a function` | The code is trying to execute something that isn't executeable or doesn't exist. |
-| `ReferenceError: X is not defined` | A variable or function name is misspelt or was never created. |
-| `SyntaxError: Unexpected token` | The code or some received data has a formatting mistake (missing bracket, extra comma). |
-| `Failed to fetch` | A network request failed entirely (no response at all). |
+| Error message | What it usually means | |---|---|---| | `TypeError: Cannot read properties of undefined (reading 'X')` | The code is trying to use data that hasn't loaded yet or doesn't exist. | | `TypeError: X is not a function` | The code is trying to execute something that isn't executeable or doesn't exist. | | `ReferenceError: X is not defined` | A variable or function name is misspelt or was never created. | | `SyntaxError: Unexpected token` | The code or some received data has a formatting mistake (missing bracket, extra comma). | | `Failed to fetch` | A network request failed entirely (no response at all). |
 
 ### How to use this cheat sheet
 

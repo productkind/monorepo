@@ -6,28 +6,13 @@ account: little-parrot
 
 # Post 2: Where developers look for clues
 
-**Pillar:** the messy middle.
-**Research trace:** "diagnosis before fixing" is the missing skill the
-audience asks for verbatim ("Help me identify where the exact problem is so
-that I can prompt accordingly"); investigating first is what stops the
-credit-burning guess cycle; teaches the real tools (DevTools, Console,
-Network tab) with plain descriptions. Repackages the Debugging Investigation
-Checklist toolkit item.
+**Pillar:** the messy middle. **Research trace:** "diagnosis before fixing" is the missing skill the audience asks for verbatim ("Help me identify where the exact problem is so that I can prompt accordingly"); investigating first is what stops the credit-burning guess cycle; teaches the real tools (DevTools, Console, Network tab) with plain descriptions. Repackages the Debugging Investigation Checklist toolkit item.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Detective-flow style: a
-numbered trail across the slides, cropped DevTools mockups, one place to
-look per slide.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Detective-flow style: a numbered trail across the slides, cropped DevTools mockups, one place to look per slide.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -39,10 +24,7 @@ look per slide.
 | 6 | A prompt card in monospace | "5️⃣ No clues anywhere? Ask Lovable to add temporary logging: 'Add logging to the [feature] process to show what data is sent, what response is received, and any errors. Then I'll reproduce the bug.'" |
 | 7 (CTA) | Brand card, a single clue card being handed over | "Stop at the first clue you find and share it with Lovable. One specific clue beats ten guesses. Full course: Fix Bugs with Confidence: Debugging Your Lovable App, on LittleParrot.app. First challenge free 🟪 Save this 🔖" |
 
-**Alt text (for the post):** An investigation-checklist carousel for Lovable
-bugs: reproduce with DevTools open, check the Console for errors, check the
-Network tab for failed requests, check Cloud logs and the database, and ask
-Lovable to add logging if there are no clues.
+**Alt text (for the post):** An investigation-checklist carousel for Lovable bugs: reproduce with DevTools open, check the Console for errors, check the Network tab for failed requests, check Cloud logs and the database, and ask Lovable to add logging if there are no clues.
 
 ## Caption (exact)
 
@@ -56,7 +38,4 @@ The full checklist, including the add-logging prompt for bugs with no visible cl
 
 Save this for the next time something breaks. 🔖
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #lovable #debugging #womenintech #buildinpublic #aitools #learnwithai #techforwomen #vibecodingtips #devtools
+. . . #vibecoding #buildwithai #womenwhobuild #lovable #debugging #womenintech #buildinpublic #aitools #learnwithai #techforwomen #vibecodingtips #devtools

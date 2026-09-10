@@ -1,13 +1,12 @@
 # Event & community feedback (verbatim)
 
-Source: GitHub backlog issues **#176, #224, #50, #250** — feedback gathered from events, AMAs, Discord, email, and course previews.
-All text is reproduced **verbatim**. Names/handles are kept exactly as recorded; where a source was an anonymous group, that is noted.
+Source: GitHub backlog issues **#176, #224, #50, #250** — feedback gathered from events, AMAs, Discord, email, and course previews. All text is reproduced **verbatim**. Names/handles are kept exactly as recorded; where a source was an anonymous group, that is noted.
 
 ---
 
 ## SheBuilds IWD — email & Discord feedback (Issue #224)
 
-*Before International Women's Day 2026.*
+_Before International Women's Day 2026._
 
 **Mostafa (email):**
 
@@ -19,8 +18,7 @@ All text is reproduced **verbatim**. Names/handles are kept exactly as recorded;
 
 **Briana (email):**
 
-> Thanks for reaching out! I thought the course was great, at times I felt a bit forced to come up with reflections at the end of each exercise - but then maybe that is informed by andragogy best practices?
-> I am trying to complete the course before the vibe-coding session I am attending on Sunday (for International Women's day! Yay!). The course was super helpful for getting started, but eventually it got me to where I felt I needed to be to keep playing around in Loveable on my own.
+> Thanks for reaching out! I thought the course was great, at times I felt a bit forced to come up with reflections at the end of each exercise - but then maybe that is informed by andragogy best practices? I am trying to complete the course before the vibe-coding session I am attending on Sunday (for International Women's day! Yay!). The course was super helpful for getting started, but eventually it got me to where I felt I needed to be to keep playing around in Loveable on my own.
 >
 > I hope that's helpful information. The mini course was clear and easy, and I did not encounter any technical difficulties.
 
@@ -40,9 +38,9 @@ All text is reproduced **verbatim**. Names/handles are kept exactly as recorded;
 
 ### Future course requests (SheBuilds Singapore)
 
-> All the Lovable websites look the same. How do you make it look better? What prompts do you give to Lovable? *(→ How to design with Lovable course)*
+> All the Lovable websites look the same. How do you make it look better? What prompts do you give to Lovable? _(→ How to design with Lovable course)_
 
-> I want to use an AI voice agent, how can I connect to elevenlabs? *(→ third-party integrations course)*
+> I want to use an AI voice agent, how can I connect to elevenlabs? _(→ third-party integrations course)_
 
 ---
 
@@ -50,14 +48,13 @@ All text is reproduced **verbatim**. Names/handles are kept exactly as recorded;
 
 **KFanni (Discord, 04:42):**
 
-> Thank you!
-> Still I have some thoughts on the cross-questions section: in the Basics of Software course, in the Frontend chapter, the cross-questions were a little bit odd. There were way too many of them: half of the steps were mandatory question (7-8 questions I think), and some of them asked something which were mentioned in one word before. (Like what is CSS or Javascript questions for example). After 2 or 3 questions I really wanted to skip the rest.
+> Thank you! Still I have some thoughts on the cross-questions section: in the Basics of Software course, in the Frontend chapter, the cross-questions were a little bit odd. There were way too many of them: half of the steps were mandatory question (7-8 questions I think), and some of them asked something which were mentioned in one word before. (Like what is CSS or Javascript questions for example). After 2 or 3 questions I really wanted to skip the rest.
 
 ---
 
 ## Prompting course preview — feedback (Issue #50)
 
-*Feedback collected on the prompting course preview. These were submitted anonymously.*
+_Feedback collected on the prompting course preview. These were submitted anonymously._
 
 **Reviewer 1:**
 
@@ -81,9 +78,7 @@ All text is reproduced **verbatim**. Names/handles are kept exactly as recorded;
 
 **Reviewer 6:**
 
-> Love the vibe you've got goin' over at Little Parrot—the neon highlighter on "In Minutes" practically shouts "no fluff, just learn," which is perfect for those of us juggling a million tabs. A quick, science-backed nudge on better AI prompts sounds like gold; half my day is already spent pokin' ChatGPT and praying it gets me.
-> Off the top of my head I'd love a crash-mini on "translating fuzzy stakeholder asks into clear user stories." Maybe that's still in the AI-prompting lane, maybe it's its own thing, but I swear every PM I know struggles there. Another one could be "analytics questions that actually move a roadmap," 'cause people toss vanity metrics around like confetti.
-> How short are you aiming each lesson to be, btw—ten minutes, five? Curious how bite-sized they'll feel once you're deep in examples. And do you sprinkle real-world mini-quizzes or is it more watch-and-go? Let me know, I might nudge a couple team-mates onto the waitlist with me.
+> Love the vibe you've got goin' over at Little Parrot—the neon highlighter on "In Minutes" practically shouts "no fluff, just learn," which is perfect for those of us juggling a million tabs. A quick, science-backed nudge on better AI prompts sounds like gold; half my day is already spent pokin' ChatGPT and praying it gets me. Off the top of my head I'd love a crash-mini on "translating fuzzy stakeholder asks into clear user stories." Maybe that's still in the AI-prompting lane, maybe it's its own thing, but I swear every PM I know struggles there. Another one could be "analytics questions that actually move a roadmap," 'cause people toss vanity metrics around like confetti. How short are you aiming each lesson to be, btw—ten minutes, five? Curious how bite-sized they'll feel once you're deep in examples. And do you sprinkle real-world mini-quizzes or is it more watch-and-go? Let me know, I might nudge a couple team-mates onto the waitlist with me.
 
 **Reviewer 7:**
 
@@ -105,7 +100,7 @@ All text is reproduced **verbatim**. Names/handles are kept exactly as recorded;
 
 ## Women's questions about AI — group AMA (Issue #176)
 
-*Source: a group AMA about AI with 4 women working in the technology industry in business positions (CEO, COO, Head of Marketing, HR). These are the questions and pain points they raised — recorded as a group, no individual attribution.*
+_Source: a group AMA about AI with 4 women working in the technology industry in business positions (CEO, COO, Head of Marketing, HR). These are the questions and pain points they raised — recorded as a group, no individual attribution._
 
 ### Terms & questions raised
 

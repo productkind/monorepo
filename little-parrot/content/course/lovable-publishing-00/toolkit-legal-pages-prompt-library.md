@@ -1,11 +1,12 @@
 ---
-challenge: "3 - Build Trust: Legal Pages That Protect You and Your Users"
+challenge: '3 - Build Trust: Legal Pages That Protect You and Your Users'
 ---
+
 ## Legal Pages Prompt Library
 
 Copy-paste prompts for generating and adding the legal pages your product needs. Adjust the details in brackets to match your app.
 
-*Important: These prompts are for educational purposes and help you get started. They are not legal advice. If your product handles sensitive data or processes payments, consider consulting a lawyer.*
+_Important: These prompts are for educational purposes and help you get started. They are not legal advice. If your product handles sensitive data or processes payments, consider consulting a lawyer._
 
 ### Generate a privacy policy and terms of use with AI
 
@@ -18,6 +19,7 @@ The Privacy Policy must describe the information collected, its purpose of use, 
 ```
 
 **Common data you might be collecting** (mention these if they apply):
+
 - Email addresses (for login or contact)
 - Names and profile information
 - Payment details (through Stripe or similar)
@@ -54,7 +56,7 @@ Add a GDPR compliant cookie consent banner that appears at the bottom of the scr
 ### When do you need what?
 
 | Your situation | What you need |
-|---------------|---------------|
+| --- | --- |
 | Your app has user login (email or Google) | Privacy policy + Terms of use |
 | You use Google Analytics or PostHog | Privacy policy + Cookie banner (if users are in EU/UK) |
 | You process payments (Stripe) | Privacy policy + Terms of use |

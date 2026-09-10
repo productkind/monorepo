@@ -1,9 +1,6 @@
 # PROW 2026 Workshop Pitch
 
-Conference: PROW Conference, 30 October 2026, Timișoara Convention Center (prow.ro).
-Audience: product, developers, marketers, designers, managers, business analysts across CEE.
-Facilitators: Kinga Magyar and Tamas Kokeny.
-Status: drafted, not sent.
+Conference: PROW Conference, 30 October 2026, Timișoara Convention Center (prow.ro). Audience: product, developers, marketers, designers, managers, business analysts across CEE. Facilitators: Kinga Magyar and Tamas Kokeny. Status: drafted, not sent.
 
 ---
 
@@ -26,8 +23,7 @@ You'll build a personal portfolio site and publish it to a live web address befo
 
 The site is the practice ground though. Learning these technical skills takes the mystery out of working with an AI agent. They used to be taught only to developers, and now you also get to use them. So you can build things that felt impossible before AI.
 
-**Target audience**
-Anyone who doesn't write code yet and wants to use AI with more confidence. Product managers, designers, marketers, business analysts and team leads all end up working alongside a repository at some point and this is the session where they get to work inside one themselves. No prior experience with Copilot, the terminal, Git or GitHub needed, we explain every step as we go.
+**Target audience** Anyone who doesn't write code yet and wants to use AI with more confidence. Product managers, designers, marketers, business analysts and team leads all end up working alongside a repository at some point and this is the session where they get to work inside one themselves. No prior experience with Copilot, the terminal, Git or GitHub needed, we explain every step as we go.
 
 **What you'll be able to do by the end**
 
@@ -64,8 +60,7 @@ Kinga Magyar is the founder of productkind, a two-person company building educat
 
 Would this fit your programme? Very happy to adjust the length or the focus.
 
-Best,
-Kinga
+Best, Kinga
 
 ---
 
@@ -99,25 +94,30 @@ Three swaps if the emphasis should sit differently:
 ## Notes on the draft
 
 **Balance across the four tools**
+
 - The agenda gives one block per step of the loop: terminal 45, Copilot 45, Git 40, GitHub 40. Copilot no longer has the largest slot.
 - The outcomes list one per tool, plus the site, plus the transfer to documents. Copilot keeps two bullets, since directing it and reviewing its work are separate skills, and the reviewing one is the harder half.
 - The final block runs all four steps end to end on the participant's own document, so the loop is integrated rather than taught as four separate lessons.
 - "Your work is files" opens the session as a 15-minute map, so people meet the connecting idea before the first tool.
 
 **Cost**
+
 - GitHub, VS Code and GitHub Pages are free outright. Copilot has a free tier with a monthly cap of roughly 50 chat requests plus completions, which is enough for one session, so participants should sign in before they arrive. That's why the pre-session email covers sign-ups as well as installs.
 
 **Outcome focus**
+
 - Every takeaway follows action, benefit, deliverable, with higher-order verbs (publish, direct, review, judge, save, run) rather than "learn about" or "understand".
 - The bullets are written in "you" so organisers can lift them straight into the programme listing without rewriting.
 - The session blocks are named by what participants produce in them, not by the topic covered.
 
 **Framing**
+
 - "Non-technical" appears nowhere in the pitch, including the facilitator bio. It's the label that makes people feel small, and it would sit oddly under a title built to be welcoming.
 - "Doesn't write code yet" keeps the door open, which is the whole point of the audience line.
 - PROW is a general product conference, so the gender gap mission sits in the bio as context. If we'd rather foreground it, that paragraph moves up into the pitch itself.
 
 **Content accuracy**
+
 - "Localhost" is named but defined inline, as "a localhost address, which only you can see". It's the real term people will meet in every tool afterwards, so it's worth teaching rather than paraphrasing away, and the preview is the step that makes publishing feel safe.
 - Still to decide before we build the session: whether the portfolio site is straight HTML and CSS or a framework build. Straight HTML previews through VS Code's Live Preview extension, which installs from inside VS Code, so there's no Node.js, no npm and no PATH to go wrong. Our existing course takes the Node route because Lovable apps are React, but a from-scratch portfolio site doesn't need it.
 - If we do go the framework route, the cost is in the tail rather than the average. Most people get Node installed in 10 to 15 minutes. The trouble comes from `npm install` pulling hundreds of packages over shared conference wifi with 30 laptops at once, blocked installers on work laptops, `node -v` failing because the terminal predates the install, and pre-existing Node or nvm versions conflicting. Four or five people out of 30 hit one of these, each costing a facilitator 5 to 15 minutes, and there are two of us. Nobody can start building until their machine works, so the slowest laptop sets the pace. The pre-session install email is what defuses this, since those failures then happen at home on a decent network.

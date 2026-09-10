@@ -100,7 +100,7 @@ Send these **after** they say yes, in the same thread. Not bundled into the firs
 
 The in-course data stops at completion. Across ~1,155 in-course reflections and 25 completion forms, there is almost nothing about what happened afterwards, so **"what did you do next" is the real gap** and the more valuable of the two questions.
 
-Expect the second question to return credits and Lovable pricing. That is already the No. 1 blocker in the data with 35+ mentions, and cost opacity is second. If all four say credits, that is confirmation rather than new information. The new information will be in what they hit *after* the course ended.
+Expect the second question to return credits and Lovable pricing. That is already the No. 1 blocker in the data with 35+ mentions, and cost opacity is second. If all four say credits, that is confirmation rather than new information. The new information will be in what they hit _after_ the course ended.
 
 Two changes to the phrasing, both from your own findings:
 
@@ -153,7 +153,7 @@ Adapted, because "what did you do next to keep learning" fits oddly for someone 
 
 ## 4. Elena Martin Hernandez
 
-Her "what next" is partly public already, and she wrote about a specific wall she hit, so use it. From her 25 March post: *"I had forgotten how tricky it is to set things up when you have limited knowledge of DNS, IPs, and SSH keys."*
+Her "what next" is partly public already, and she wrote about a specific wall she hit, so use it. From her 25 March post: _"I had forgotten how tricky it is to set things up when you have limited knowledge of DNS, IPs, and SSH keys."_
 
 > Thank you Elena, that's lovely.
 >

@@ -5,16 +5,9 @@ channels: [linkedin, instagram, tiktok, threads, youtube]
 
 # Captions: Building is cheaper, but distribution is still expensive
 
-**Brand:** productkind (Thoughts by productkind)
-**Source:** the finished carousel in this folder (`carousel.html` / `export/`),
-from article 022 (`thoughts/assets/articles/022-building-is-cheaper-but-distribution-is-still-expensive.md`)
-**Destination:** the full article on Thoughts by productkind
-(productkind.substack.com). Swap `[article link]` for the live post URL before
-posting.
+**Brand:** productkind (Thoughts by productkind) **Source:** the finished carousel in this folder (`carousel.html` / `export/`), from article 022 (`thoughts/assets/articles/022-building-is-cheaper-but-distribution-is-still-expensive.md`) **Destination:** the full article on Thoughts by productkind (productkind.substack.com). Swap `[article link]` for the live post URL before posting.
 
-Posting formats: LinkedIn takes the PDF as a document post (from the
-productkind page); Instagram and TikTok take the PNGs; Threads takes the PNGs
-from Kinga's personal profile.
+Posting formats: LinkedIn takes the PDF as a document post (from the productkind page); Instagram and TikTok take the PNGs; Threads takes the PNGs from Kinga's personal profile.
 
 ---
 
@@ -22,11 +15,7 @@ from Kinga's personal profile.
 
 Everyone keeps saying building software is cheap now, so we should all ship more. Building Little Parrot has convinced us building is the easy part.
 
-It's about 25% of the job. The other 75% is harder:
-– a problem worth solving
-– distribution (how your audience actually finds what you built)
-– driving the behaviour change to get people using it
-– revenue
+It's about 25% of the job. The other 75% is harder: – a problem worth solving – distribution (how your audience actually finds what you built) – driving the behaviour change to get people using it – revenue
 
 We've validated the problem with Little Parrot. Distribution is the bit we haven't cracked yet, so we've been testing organic channels before spending anything on ads. Two things stood out:
 
@@ -119,19 +108,9 @@ When we started LittleParrot.app, our app that teaches women to build their idea
 ## Posting checklist
 
 - [ ] Swap `[article link]` for the live Substack post URL.
-- [ ] LinkedIn: publish the PDF as a document post from the productkind page;
-      put the link in Kinga's first comment (not the body); post both founder
-      comments within the first hour and reply to every real commenter in
-      that window.
-- [ ] Instagram: invite Kinga as a collaborator before publishing (Tag people
-      > Invite collaborator); never re-upload the same post on her account.
-      Post both founder comments within the first hour.
-- [ ] TikTok: post the link in the pinned comment (no bio link yet); post from
-      the creator-type account so trending sounds stay available.
-- [ ] Threads: post from Kinga's personal account; type the "building in
-      public" topic tag in the composer; post Thomas's reply and Kinga's
-      reply within the first hour; the productkind account quote-posts
-      Kinga's Threads post once it's live.
-- [ ] YouTube Shorts: put the link in the pinned comment (no description
-      link); the spoken subscribe ask lives in the video's final seconds.
+- [ ] LinkedIn: publish the PDF as a document post from the productkind page; put the link in Kinga's first comment (not the body); post both founder comments within the first hour and reply to every real commenter in that window.
+- [ ] Instagram: invite Kinga as a collaborator before publishing (Tag people > Invite collaborator); never re-upload the same post on her account. Post both founder comments within the first hour.
+- [ ] TikTok: post the link in the pinned comment (no bio link yet); post from the creator-type account so trending sounds stay available.
+- [ ] Threads: post from Kinga's personal account; type the "building in public" topic tag in the composer; post Thomas's reply and Kinga's reply within the first hour; the productkind account quote-posts Kinga's Threads post once it's live.
+- [ ] YouTube Shorts: put the link in the pinned comment (no description link); the spoken subscribe ask lives in the video's final seconds.
 - [ ] Reply to every real commenter in the first hour on every platform.

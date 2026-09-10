@@ -1,6 +1,6 @@
-import { describe, expect, test } from 'vitest'
-
 import { readVisuals, sourceFor, withVisualApplied } from './apply-visual'
+
+import { describe, expect, test } from 'vitest'
 
 const DEFINITION = `import { defineVideo, gif, riveAtFrame } from '../narration/definition'
 
@@ -528,7 +528,9 @@ describe('changing what kind of media a section holds', () => {
         source: { provider: 'giphy', id: 'abc', search: 'zip lips quiet' },
       }),`)
     // The section that was not picked for keeps its own placement.
-    expect(applied).toContain("visual: gif({ src: 'section-00-nodding.gif', place: 'above-captions' })")
+    expect(applied).toContain(
+      "visual: gif({ src: 'section-00-nodding.gif', place: 'above-captions' })",
+    )
   })
 })
 

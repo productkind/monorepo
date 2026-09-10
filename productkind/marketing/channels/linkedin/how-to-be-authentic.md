@@ -6,7 +6,7 @@
 
 ## 1. Start with genuine experience, not a post idea
 
-Ask yourself: *"Did something actually happen to me, or did my thinking genuinely change?"* — not *"What kind of post should I write today?"*
+Ask yourself: _"Did something actually happen to me, or did my thinking genuinely change?"_ — not _"What kind of post should I write today?"_
 
 If you started with a post format and worked backwards to find content to fill it, it will read that way.
 
@@ -16,7 +16,7 @@ If you started with a post format and worked backwards to find content to fill i
 
 Vague reflections signal performance. Specific details signal real experience.
 
-- ❌ *"I've learned so much on this journey…"*
+- ❌ _"I've learned so much on this journey…"_
 - ✅ A named person, a precise moment, a real number
 
 If you can't name the specific thing that prompted a thought, it probably isn't ready to be written yet.
@@ -39,10 +39,10 @@ If you feel completely comfortable with a post before hitting publish, you may h
 
 ---
 
-## 5. Post about what you're currently *inside*, not what you've concluded
+## 5. Post about what you're currently _inside_, not what you've concluded
 
-- ❌ *"Here's what I figured out"* → feels packaged
-- ✅ *"I'm in the middle of this and I don't fully understand it yet"* → feels real
+- ❌ _"Here's what I figured out"_ → feels packaged
+- ✅ _"I'm in the middle of this and I don't fully understand it yet"_ → feels real
 
 Your current challenges, doubts, and open questions are far more interesting than your finished lessons.
 
@@ -50,7 +50,7 @@ Your current challenges, doubts, and open questions are far more interesting tha
 
 ## 6. Resist the standard LinkedIn template
 
-The dominant format — *short punchy opener → white space → numbered list → engagement CTA* — now reads as performance.
+The dominant format — _short punchy opener → white space → numbered list → engagement CTA_ — now reads as performance.
 
 If your genuine thought doesn't fit that shape, let it be a paragraph. Let it end without a question prompting comments.
 
@@ -66,10 +66,10 @@ Use your specific context, perspective, and combination of experiences. Posts th
 
 Before writing, ask:
 
-> *"Is this actually true for me, right now, and would I still post it if no one liked it?"*
+> _"Is this actually true for me, right now, and would I still post it if no one liked it?"_
 
 If yes: write it.
 
 ---
 
-*Based on language pattern analysis of 100+ LinkedIn feed posts.*
+_Based on language pattern analysis of 100+ LinkedIn feed posts._

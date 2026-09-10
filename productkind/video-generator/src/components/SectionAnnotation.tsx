@@ -1,5 +1,3 @@
-import { AbsoluteFill, getRemotionEnvironment, staticFile, useCurrentFrame } from 'remotion'
-
 import type { VideoDefinition, Visual } from '../narration/definition'
 import type { Timeline } from '../narration/timeline'
 import { sectionAt } from './active-section'
@@ -9,6 +7,8 @@ import { useFlags } from './useFlags'
 import { useGifDuration } from './useGifDuration'
 import { VisualView } from './Visual'
 import { withKnobs } from './visual-knobs'
+
+import { AbsoluteFill, getRemotionEnvironment, staticFile, useCurrentFrame } from 'remotion'
 
 const HIGHLIGHT = '#ffb65b'
 const FLAGGED = '#ff8a70'

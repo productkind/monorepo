@@ -1,7 +1,7 @@
 # Write Better With AI — Learner responses (verbatim)
 
 Source: in-course `reflection` and `free-text-exercise` step responses (`2026-06-20-course-step-responses/`).  
-Responses are reproduced **verbatim**. Attribution joins the profiles table on `user_id`: **name (nickname) · role · company size · `id`**. `company_type` is a company-*size* bucket (the table has no company name). Where a learner isn't in the profiles table, only the `user_id` prefix is shown.  
+Responses are reproduced **verbatim**. Attribution joins the profiles table on `user_id`: **name (nickname) · role · company size · `id`**. `company_type` is a company-_size_ bucket (the table has no company name). Where a learner isn't in the profiles table, only the `user_id` prefix is shown.  
 Junk/test/empty/unedited-template responses were excluded.  
 Total responses below: **51**
 
@@ -25,7 +25,7 @@ Total responses below: **51**
 
 ## Step 10 — Micro-reflection
 
-*Prompt: Take a moment to write down your key takeaways from the prompting techniques you've just learned.*
+_Prompt: Take a moment to write down your key takeaways from the prompting techniques you've just learned._
 
 **Lucy** · ba · small-business-51-200-employees · `ac8d523f` · 2026-04-03 · _reflection_
 
@@ -93,7 +93,7 @@ Total responses below: **51**
 
 **Orsi** · `c57331ea` · 2025-09-24 · _reflection_
 
-> - define tone of voice, style, 
+> - define tone of voice, style,
 > - define specific length
 > - define audience
 > - define generation
@@ -126,7 +126,7 @@ Total responses below: **51**
 
 ## Step 17 — Micro-reflection
 
-*Prompt: Compare the two outputs. What difference did adding context and background make?  How could you use this approach in your own work?*
+_Prompt: Compare the two outputs. What difference did adding context and background make? How could you use this approach in your own work?_
 
 **Corina** · Service Manager · small-business-51-200-employees · `de116dc4` · 2026-04-09 · _reflection_
 
@@ -154,7 +154,7 @@ Total responses below: **51**
 
 **Orsi** · `c57331ea` · 2025-09-24 · _reflection_
 
-> More cheerful, more exciting, more attention grabbing. We not just hope, we  are sure it works well.
+> More cheerful, more exciting, more attention grabbing. We not just hope, we are sure it works well.
 
 **Adam** · `3077af4b` · 2025-09-16 · _reflection_
 
@@ -172,7 +172,7 @@ Total responses below: **51**
 
 ## Step 31 — Micro-reflection
 
-*Prompt: In one sentence, write down how you'd explain what an LLM is, in your own words.*
+_Prompt: In one sentence, write down how you'd explain what an LLM is, in your own words._
 
 **Corina** · Service Manager · small-business-51-200-employees · `de116dc4` · 2026-04-09 · _reflection_
 
@@ -206,7 +206,7 @@ Total responses below: **51**
 
 ## Step 42 — Micro-reflection
 
-*Prompt: In one or two sentences, write down how you'd explain "What is an AI model?" to a colleague new to AI.*
+_Prompt: In one or two sentences, write down how you'd explain "What is an AI model?" to a colleague new to AI._
 
 **Corina** · Service Manager · small-business-51-200-employees · `de116dc4` · 2026-04-21 · _reflection_
 
@@ -236,7 +236,7 @@ Total responses below: **51**
 
 ## Step 45 — Prompting strategy
 
-*Prompt: Imagine you're writing a prompt asking AI to explain *what Redis is* and *why it's relevant for your product*.  What key details would you include so the answer is clear and useful for you as a PM?  **Think about:** - The level of explanation you need (plain English vs. technical) - The context (how it's used in your product) - The purpose (e.g. so you can talk about it in stand-up)  Write down th…*
+_Prompt: Imagine you're writing a prompt asking AI to explain *what Redis is* and *why it's relevant for your product*. What key details would you include so the answer is clear and useful for you as a PM? **Think about:** - The level of explanation you need (plain English vs. technical) - The context (how it's used in your product) - The purpose (e.g. so you can talk about it in stand-up) Write down th…_
 
 **Corina** · Service Manager · small-business-51-200-employees · `de116dc4` · 2026-04-21 · _free-text-exercise_
 
@@ -246,7 +246,7 @@ Total responses below: **51**
 
 ## Step 53 — Your key takeaways
 
-*Prompt: Take a minute and think trough what you learned in this micro-course about prompting, AI, and LLMs.*
+_Prompt: Take a minute and think trough what you learned in this micro-course about prompting, AI, and LLMs._
 
 **Corina** · Service Manager · small-business-51-200-employees · `de116dc4` · 2026-04-21 · _reflection_
 

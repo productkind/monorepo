@@ -6,30 +6,13 @@ account: little-parrot
 
 # Post 7: Structure your prompts with markdown
 
-**Pillar:** the method, shown.
-**Research trace:** teaches the real term (markdown) with an everyday
-definition, per our teach-real-terms principle; a quick-reference symbol
-guide is exactly the saveable, reference-later format that wins saves; the
-skill transfers beyond Lovable to any chat assistant, the transferable
-takeaway the research says makes posts shareable; pairs with post 1 (the
-formula gives the sections, this gives the formatting). Repackages the
-Structure Your Prompts with Markdown toolkit item.
+**Pillar:** the method, shown. **Research trace:** teaches the real term (markdown) with an everyday definition, per our teach-real-terms principle; a quick-reference symbol guide is exactly the saveable, reference-later format that wins saves; the skill transfers beyond Lovable to any chat assistant, the transferable takeaway the research says makes posts shareable; pairs with post 1 (the formula gives the sections, this gives the formatting). Repackages the Structure Your Prompts with Markdown toolkit item.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Symbol-guide style: each
-slide shows one markdown symbol drawn large, with a real snippet from the
-Book Club Organiser prompt in monospace beneath it and a one-line "when to
-use it". Type specimen feel, calm and roomy.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Symbol-guide style: each slide shows one markdown symbol drawn large, with a real snippet from the Book Club Organiser prompt in monospace beneath it and a one-line "when to use it". Type specimen feel, calm and roomy.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -41,11 +24,7 @@ use it". Type specimen feel, calm and roomy.
 | 6 | Large triple backticks framing a welcome message | "``` triple backticks frame a whole block of exact text, like the welcome message your app should display, word for word." |
 | 7 (CTA) | Brand card | "You don't need to memorise any of this: our toolkit guide has a quick-reference table to keep open while you write. Full course: Build Your First App with Lovable, on LittleParrot.app. First challenge free 🟪 Save this for your next prompt 🔖" |
 
-**Alt text (for the post):** A symbol-guide carousel explaining markdown for
-Lovable prompts: ## for section headings, dashes for bullet lists, numbers
-for ordered steps, double asterisks for bold constraints, backticks for
-exact values like hex colours and button labels, and triple backticks for
-blocks of exact text.
+**Alt text (for the post):** A symbol-guide carousel explaining markdown for Lovable prompts: ## for section headings, dashes for bullet lists, numbers for ordered steps, double asterisks for bold constraints, backticks for exact values like hex colours and button labels, and triple backticks for blocks of exact text.
 
 ## Caption (exact)
 
@@ -59,7 +38,4 @@ No memorising needed. Our toolkit guide has a quick-reference table to keep open
 
 Save this for your next prompt. 🔖
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #lovable #promptrecipe #womenintech #learnwithai #aiforbeginners #aitools #vibecodingtips #markdown
+. . . #vibecoding #buildwithai #womenwhobuild #lovable #promptrecipe #womenintech #learnwithai #aiforbeginners #aitools #vibecodingtips #markdown

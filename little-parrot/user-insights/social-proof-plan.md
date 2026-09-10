@@ -14,10 +14,10 @@ How to use the 11 known LinkedIn posts, plus the in-app feedback, to strengthen 
 ## What is on the site today
 
 | Block | What it proves | Weakness |
-|---|---|---|
+| --- | --- | --- |
 | "Built by product builders previously at" + Datadog, Citrix, Volkswagen, Cloudera | Kinga and Thomas can build | Proves the founders are credible, not that the visitor can build |
 | "What Our Learners Say" + 3 quotes (Sesha Kadakia, Jane Tonal, Michelle Grandville) | The courses are well made | Initials-only avatars, no link, no date, unverifiable. Reads as the default template component |
-| No numbers anywhere | | |
+| No numbers anywhere |  |  |
 
 The visitor's real doubt is not "is this course well made?" It is "can someone like me build a working thing, in the time I have?" Praise answers the first question. Shipped apps answer the second, and the LinkedIn posts are full of them.
 
@@ -27,41 +27,20 @@ The visitor's real doubt is not "is this course well made?" It is "can someone l
 
 The single biggest gain. Each card is the thing she made, how long it took, her own words, her name and role, and a link to the post. The link is the cheapest credibility upgrade available: it turns a claim into something the visitor can check in one click.
 
-**Card 1 — Trinica A.**, Senior measurement and intelligence partner
-Built: a family finance tracker with a runway calculator, replacing the family's Google Sheets. Live and fully functional.
-Time: under 4 hours.
-Quote: "I took the 'Build Your First App with Lovable' course on Little Parrot... It was exactly what I needed to get out of my head and into action."
-Link: https://www.linkedin.com/posts/trinica_internationalwomensday-shebuilds-womenintech-ugcPost-7436794650289557504-NuRW/
-Attribution strength: **clean**. She names the course, then describes what she built.
+**Card 1 — Trinica A.**, Senior measurement and intelligence partner Built: a family finance tracker with a runway calculator, replacing the family's Google Sheets. Live and fully functional. Time: under 4 hours. Quote: "I took the 'Build Your First App with Lovable' course on Little Parrot... It was exactly what I needed to get out of my head and into action." Link: https://www.linkedin.com/posts/trinica_internationalwomensday-shebuilds-womenintech-ugcPost-7436794650289557504-NuRW/ Attribution strength: **clean**. She names the course, then describes what she built.
 
-**Card 2 — Sophie Wright**, Co-founder at Jude, Product Manager at GovAI
-Built: an AI app prototype, designed, built and published.
-Time: under one hour.
-Quote: "I've been learning with LittleParrot.app... Today I designed, built and published an AI app prototype in less than one hour."
-Link: https://www.linkedin.com/posts/sophiewright6_only-20-of-vibe-coders-are-women-thats-share-7436303402135027712-K6ZH/
-Attribution strength: **clean**. Both halves are in one sentence pair.
+**Card 2 — Sophie Wright**, Co-founder at Jude, Product Manager at GovAI Built: an AI app prototype, designed, built and published. Time: under one hour. Quote: "I've been learning with LittleParrot.app... Today I designed, built and published an AI app prototype in less than one hour." Link: https://www.linkedin.com/posts/sophiewright6_only-20-of-vibe-coders-are-women-thats-share-7436303402135027712-K6ZH/ Attribution strength: **clean**. Both halves are in one sentence pair.
 
-**Card 3 — Jane Tonal**, Co-founder at Count Me In
-Built: an app to measure her clients' employee Net Promoter Score.
-Quote (already on the site): "The format is super concrete, highly actionable, and refreshingly simple, which is exactly what I've been looking for. I've already started building an app to help my clients measure their Employee Net Promoter Score (eNPS)."
-Link: https://www.linkedin.com/posts/jane-tonal_journaezedesdroitsdesfemmes-ia-vibecoding-share-7431713517155545090-lYKP/
-Attribution strength: **clean**, and she wrote publicly that she was not paid: "PS: ils ne m'ont pas rémunéré pour ce post, je partage car ça mérite de l'être." Her post is in French, which is also useful proof of reach beyond English.
+**Card 3 — Jane Tonal**, Co-founder at Count Me In Built: an app to measure her clients' employee Net Promoter Score. Quote (already on the site): "The format is super concrete, highly actionable, and refreshingly simple, which is exactly what I've been looking for. I've already started building an app to help my clients measure their Employee Net Promoter Score (eNPS)." Link: https://www.linkedin.com/posts/jane-tonal_journaezedesdroitsdesfemmes-ia-vibecoding-share-7431713517155545090-lYKP/ Attribution strength: **clean**, and she wrote publicly that she was not paid: "PS: ils ne m'ont pas rémunéré pour ce post, je partage car ça mérite de l'être." Her post is in French, which is also useful proof of reach beyond English.
 
-**Card 4 — Grace Hall, MBA**, Lead Full Stack Software Engineer, Lovable SheBuilds S2
-Not an outcome card, the highest-authority endorsement in the set. A senior engineer vouching for the product thinking answers the "is this actually rigorous?" objection that praise from beginners cannot.
-Quote: "this isn't a course you skim. It's a hands-on micro-course that compels engagement in both thinking and building in tight, intentional increments."
-Link: https://www.linkedin.com/posts/gracesmall_shebuilds-little-parrot-ugcPost-7406435400921006080-iQQ-/
+**Card 4 — Grace Hall, MBA**, Lead Full Stack Software Engineer, Lovable SheBuilds S2 Not an outcome card, the highest-authority endorsement in the set. A senior engineer vouching for the product thinking answers the "is this actually rigorous?" objection that praise from beginners cannot. Quote: "this isn't a course you skim. It's a hands-on micro-course that compels engagement in both thinking and building in tight, intentional increments." Link: https://www.linkedin.com/posts/gracesmall_shebuilds-little-parrot-ugcPost-7406435400921006080-iQQ-/
 
-**Card 5 — Lindsay**, video game producer, freelancer (in-app completion feedback, 2026-03-08)
-"I made and published an app that I will use everyday"
-No link, so use it on the "Build Your First App with Lovable" course page rather than in the linked set, so the homepage cards stay uniformly verifiable.
+**Card 5 — Lindsay**, video game producer, freelancer (in-app completion feedback, 2026-03-08) "I made and published an app that I will use everyday" No link, so use it on the "Build Your First App with Lovable" course page rather than in the linked set, so the homepage cards stay uniformly verifiable.
 
-**Handle with care — Elena Martin Hernandez**, Product Manager, EdTech & Growth
-Her course quote is the warmest in the whole set: "As a fellow educator, I have to say: this course app is just hats off. Easy to navigate, straight to the point… I loved every second I spent on it!"
-Link: https://www.linkedin.com/posts/elena-martin-hernandez-h_a-week-ago-my-daughter-started-nursery-and-share-7437458915229044737-jBwc/
-But the "15 minutes to my first AI-built website" line in that post credits Lovable, not the course. Use her as a **quote**, not as a build-time outcome. Her Swedish A1 vocabulary trainer (post of 25 March) is fair to mention as what she went on to build, since she opens with "After my adventures with the Little Parrot app".
+**Handle with care — Elena Martin Hernandez**, Product Manager, EdTech & Growth Her course quote is the warmest in the whole set: "As a fellow educator, I have to say: this course app is just hats off. Easy to navigate, straight to the point… I loved every second I spent on it!" Link: https://www.linkedin.com/posts/elena-martin-hernandez-h_a-week-ago-my-daughter-started-nursery-and-share-7437458915229044737-jBwc/ But the "15 minutes to my first AI-built website" line in that post credits Lovable, not the course. Use her as a **quote**, not as a build-time outcome. Her Swedish A1 vocabulary trainer (post of 25 March) is fair to mention as what she went on to build, since she opens with "After my adventures with the Little Parrot app".
 
 **Leave out:**
+
 - **Curt Meinhold** (25 Feb) opens "I don't know productkind or the LittleParrot app". A supportive reshare, not an endorsement.
 - **Marisha Drayton's June Cool Jobs post** mentions Little Parrot in passing inside a job advert.
 - Marisha's **March IWD post** is a genuinely detailed breakdown and belongs in the mentions strip, not a quote card, because it reads as a review of the pricing page rather than a learner outcome.
@@ -71,6 +50,7 @@ But the "15 minutes to my first AI-built website" line in that post credits Lova
 Sesha Kadakia, Jane Tonal and Michelle Grandville were each asked before their quote, full name and title went up, so nothing needs re-clearing.
 
 The "make them verifiable" upgrade also mostly does not apply to these three, because their quotes did not come from public posts:
+
 - **Sesha's** is a tidied version of her in-app completion feedback for Basics of Software for Vibe Coding (9 December 2025).
 - **Michelle's** is from her Write Better With AI completion feedback (8 October 2025).
 - **Jane's** reads like direct feedback too. Her LinkedIn post is in French and does not contain that quote, so the post is a separate, additional piece of proof rather than the source of the one on the site.
@@ -78,6 +58,7 @@ The "make them verifiable" upgrade also mostly does not apply to these three, be
 So there is no post to link for Sesha or Michelle, and initials are honest for quotes that were given privately. Keep them as they are. If a photo would be nice to have, fold the ask into the next natural contact rather than making a special request; the credibility gain from a photo is small next to the gain from the linked cards in section 1.
 
 What is still worth adding to this section:
+
 - **Grace Hall** and **Elena Martin Hernandez** as two new quote cards, both public and therefore linked. Grace does specific work here: a lead full stack engineer vouching for the product thinking answers the "is this actually rigorous?" objection that praise from beginners cannot.
 - One honest line under the section heading: **"Nobody here was paid to write this."** Jane Tonal wrote exactly that in her own post, so it is a fact about the set, not a claim invented for the site.
 
@@ -110,6 +91,7 @@ All the proof currently sits in one block, mid-homepage. Spread it:
 Do **not** publish the completion-feedback recommendation split. It is 14 yes, 6 maybe, 0 no out of 25 submissions, and while "nobody said they would not recommend it" is true, the base is small enough that a sharp reader will discount it and the surrounding proof with it.
 
 Pull instead from the database, verified fresh before publishing:
+
 - Learners who have started a challenge. The June 2026 extract found 555 distinct learners in the step-response data, so "over 500" is likely conservative, but check it against current numbers rather than reusing that figure.
 - Courses live (8).
 - Typical challenge length, since "fits into a busy life" is a core promise and a number makes it concrete.
@@ -132,7 +114,7 @@ Quoting a public LinkedIn post with the person's name, role and a link back is n
 The three learners already on the site were each asked before their quote, name and title went up, so they are done.
 
 | Person | Quote | Photo | Notes |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Sesha Kadakia | ✅ asked, live | not needed | private feedback, no post to link |
 | Jane Tonal | ✅ asked, live | not needed | her French post is separate, additional proof |
 | Michelle Grandville | ✅ asked, live | not needed | private feedback, no post to link |

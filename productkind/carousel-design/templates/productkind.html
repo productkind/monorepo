@@ -1,27 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Carousel design system — base template</title>
-<!-- BRAND: swap this link to re-brand the whole carousel.
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Carousel design system — base template</title>
+    <!-- BRAND: swap this link to re-brand the whole carousel.
      Fonts load via @import inside the brand file (needs a network connection). -->
-<link rel="stylesheet" href="../brands/productkind.css">
-<style>
-  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  html, body { margin: 0; padding: 0; }
-  body.single { overflow: hidden; }
-  body.single #strip { padding: 0 !important; gap: 0 !important; background: none !important; min-height: 0 !important; }
-  body.single section { display: none; }
-  body.single section.current { display: block; }
-  body:not(.crop) .cropguide { display: none; }
-  @media print {
-    #strip { padding: 0 !important; gap: 0 !important; background: none !important; min-height: 0 !important; display: block !important; }
-    section { page-break-after: always; break-after: page; }
-    @page { size: 1080px 1350px; margin: 0; }
-  }
+    <link rel="stylesheet" href="../brands/productkind.css" />
+    <style>
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      body.single {
+        overflow: hidden;
+      }
+      body.single #strip {
+        padding: 0 !important;
+        gap: 0 !important;
+        background: none !important;
+        min-height: 0 !important;
+      }
+      body.single section {
+        display: none;
+      }
+      body.single section.current {
+        display: block;
+      }
+      body:not(.crop) .cropguide {
+        display: none;
+      }
+      @media print {
+        #strip {
+          padding: 0 !important;
+          gap: 0 !important;
+          background: none !important;
+          min-height: 0 !important;
+          display: block !important;
+        }
+        section {
+          page-break-after: always;
+          break-after: page;
+        }
+        @page {
+          size: 1080px 1350px;
+          margin: 0;
+        }
+      }
 
-  /* ========================================================================
+      /* ========================================================================
      Shared carousel design system (Little Parrot + productkind).
      Everything brand-specific comes from the CSS variables defined in
      brands/<brand>.css: --grad, --grad-wash, --font-display, --font-copy,
@@ -29,93 +61,348 @@
      --ink-secondary.
      ======================================================================== */
 
-  /* Slide and card */
-  section.slide { flex: none; width: 1080px; height: 1350px; position: relative; overflow: hidden;
-    background: var(--grad-wash); box-sizing: border-box; }
-  .card { position: absolute; top: 100px; left: 100px; width: 880px; height: 1150px; box-sizing: border-box;
-    background: #ffffff; border: 12px solid var(--ink); box-shadow: 12px 12px 0 rgba(8,8,9,0.25); display: flex; flex-direction: column; }
-  .gradbar { flex: none; height: 24px; background: var(--grad); }
-  .inner { flex: 1; display: flex; flex-direction: column; justify-content: space-between; padding: 56px 72px 64px; box-sizing: border-box; }
-  /* Vertically centre a slide's body while the header stays at the top:
+      /* Slide and card */
+      section.slide {
+        flex: none;
+        width: 1080px;
+        height: 1350px;
+        position: relative;
+        overflow: hidden;
+        background: var(--grad-wash);
+        box-sizing: border-box;
+      }
+      .card {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        width: 880px;
+        height: 1150px;
+        box-sizing: border-box;
+        background: #ffffff;
+        border: 12px solid var(--ink);
+        box-shadow: 12px 12px 0 rgba(8, 8, 9, 0.25);
+        display: flex;
+        flex-direction: column;
+      }
+      .gradbar {
+        flex: none;
+        height: 24px;
+        background: var(--grad);
+      }
+      .inner {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 56px 72px 64px;
+        box-sizing: border-box;
+      }
+      /* Vertically centre a slide's body while the header stays at the top:
      keep .header as the first child of .inner, then wrap the rest in
      <div class="slidebody">…</div>. Use this instead of the space-between
      default whenever a slide has no bottom-anchored element, so content
      sits centred rather than pushed to the top with a gap below. */
-  .slidebody { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+      .slidebody {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
 
-  /* Header row: handle left, page count right */
-  .header { display: flex; justify-content: space-between; align-items: center;
-    font-family: var(--font-display); font-weight: 700; letter-spacing: 0.06em; color: var(--ink); }
-  .header .handle { font-size: 32px; } .header .page { font-size: 24px; }
+      /* Header row: handle left, page count right */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: var(--font-display);
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        color: var(--ink);
+      }
+      .header .handle {
+        font-size: 32px;
+      }
+      .header .page {
+        font-size: 24px;
+      }
 
-  /* Voiced text */
-  .headline { margin: 0; font-family: var(--font-display); font-weight: var(--weight-headline); line-height: 1.45; color: var(--ink); text-wrap: pretty; }
-  /* Keep line-height ≥ 1.45 on any block whose .hl wraps across lines, so
+      /* Voiced text */
+      .headline {
+        margin: 0;
+        font-family: var(--font-display);
+        font-weight: var(--weight-headline);
+        line-height: 1.45;
+        color: var(--ink);
+        text-wrap: pretty;
+      }
+      /* Keep line-height ≥ 1.45 on any block whose .hl wraps across lines, so
      the strips of adjacent lines don't cover each other. The background-size
      trick below also trims the strip to 90% of the line's glyph box,
      vertically centred. */
-  .copy { margin: 0; font-family: var(--font-copy); font-weight: var(--weight-copy); font-size: 34px; line-height: 1.45; color: var(--ink); text-wrap: pretty; }
-  .kicker { font-family: var(--font-display); font-weight: 700; letter-spacing: 0.08em; color: var(--ink); }
-  /* The gradient wash is the emphasis; the highlight keeps its paragraph's
+      .copy {
+        margin: 0;
+        font-family: var(--font-copy);
+        font-weight: var(--weight-copy);
+        font-size: 34px;
+        line-height: 1.45;
+        color: var(--ink);
+        text-wrap: pretty;
+      }
+      .kicker {
+        font-family: var(--font-display);
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        color: var(--ink);
+      }
+      /* The gradient wash is the emphasis; the highlight keeps its paragraph's
      own font family and weight (no forced bold), so a headline highlight
      stays headline-weight and a body highlight stays body-weight. */
-  .hl { background: var(--grad); background-position: 0 50%; background-size: 100% 90%; background-repeat: no-repeat;
-    padding: 0 0.12em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+      .hl {
+        background: var(--grad);
+        background-position: 0 50%;
+        background-size: 100% 90%;
+        background-repeat: no-repeat;
+        padding: 0 0.12em;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+      }
 
-  /* Framed content box (photos, charts, quote cards, mockups) */
-  .frame { border: 4px solid var(--ink); box-shadow: 12px 12px 0 rgba(8,8,9,0.25); background: #ffffff; position: relative; overflow: hidden; box-sizing: border-box; }
-  .frame.muted { background: #e8e8ea; }
-  .frame.muted p, .muted-copy { color: var(--ink-secondary); }
+      /* Framed content box (photos, charts, quote cards, mockups) */
+      .frame {
+        border: 4px solid var(--ink);
+        box-shadow: 12px 12px 0 rgba(8, 8, 9, 0.25);
+        background: #ffffff;
+        position: relative;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+      .frame.muted {
+        background: #e8e8ea;
+      }
+      .frame.muted p,
+      .muted-copy {
+        color: var(--ink-secondary);
+      }
 
-  /* Inverse (black) statement card */
-  .inverse { background: var(--ink); padding: 34px 40px; }
-  .inverse p { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: 38px; line-height: 1.3; color: #ffffff; text-wrap: pretty; }
-  .inverse .hl-text { background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+      /* Inverse (black) statement card */
+      .inverse {
+        background: var(--ink);
+        padding: 34px 40px;
+      }
+      .inverse p {
+        margin: 0;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 1.3;
+        color: #ffffff;
+        text-wrap: pretty;
+      }
+      .inverse .hl-text {
+        background: var(--grad);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
 
-  /* Badge (bordered label box, e.g. the CTA URL) */
-  .badge { font-family: var(--font-display); font-weight: 700; letter-spacing: 0.06em; border: 4px solid var(--ink);
-    box-shadow: 12px 12px 0 rgba(8,8,9,0.25); padding: 20px 36px; color: var(--ink); background: #ffffff; }
+      /* Badge (bordered label box, e.g. the CTA URL) */
+      .badge {
+        font-family: var(--font-display);
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        border: 4px solid var(--ink);
+        box-shadow: 12px 12px 0 rgba(8, 8, 9, 0.25);
+        padding: 20px 36px;
+        color: var(--ink);
+        background: #ffffff;
+      }
 
-  /* Prompt window: the chat-input mockup for anything the reader literally
+      /* Prompt window: the chat-input mockup for anything the reader literally
      types. Monospace, cursor, send arrow. Markdown symbols inside it are
      typed text, never decoration. */
-  .promptlabel { font-family: var(--font-mono); font-weight: 700; font-size: 20px; letter-spacing: 0.08em; color: var(--ink-secondary); }
-  .promptwin { background: #ffffff; border: 4px solid var(--ink); border-radius: 28px; box-shadow: 12px 12px 0 rgba(8,8,9,0.25); position: relative; }
-  .promptwin pre { margin: 0; font-family: var(--font-mono); white-space: pre-wrap; color: var(--ink); }
-  .send { position: absolute; right: 28px; bottom: 24px; width: 56px; height: 56px; border-radius: 50%;
-    background: var(--ink); color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 28px; }
-  .cursor { display: inline-block; width: 4px; height: 1.1em; background: var(--ink); vertical-align: text-bottom; }
+      .promptlabel {
+        font-family: var(--font-mono);
+        font-weight: 700;
+        font-size: 20px;
+        letter-spacing: 0.08em;
+        color: var(--ink-secondary);
+      }
+      .promptwin {
+        background: #ffffff;
+        border: 4px solid var(--ink);
+        border-radius: 28px;
+        box-shadow: 12px 12px 0 rgba(8, 8, 9, 0.25);
+        position: relative;
+      }
+      .promptwin pre {
+        margin: 0;
+        font-family: var(--font-mono);
+        white-space: pre-wrap;
+        color: var(--ink);
+      }
+      .send {
+        position: absolute;
+        right: 28px;
+        bottom: 24px;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: var(--ink);
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+      }
+      .cursor {
+        display: inline-block;
+        width: 4px;
+        height: 1.1em;
+        background: var(--ink);
+        vertical-align: text-bottom;
+      }
 
-  /* Slack-style message mockup */
-  .slack { background: #ffffff; border: 4px solid var(--ink); box-shadow: 8px 8px 0 rgba(8,8,9,0.25); padding: 28px 34px;
-    display: flex; gap: 20px; font-family: var(--font-plain); }
-  .slack .avatar { flex: none; width: 56px; height: 56px; border: 4px solid var(--ink); display: flex; align-items: center;
-    justify-content: center; font-family: var(--font-mono); font-weight: 700; font-size: 28px; color: var(--ink); box-sizing: border-box; }
-  .slack .msghead { font-weight: 700; font-size: 24px; color: var(--ink); }
-  .slack .msghead .time { font-weight: 400; font-size: 19px; color: #9a9aa3; margin-left: 10px; }
-  .slack .msgbody { font-size: 23px; line-height: 1.5; color: var(--ink); margin-top: 6px; }
+      /* Slack-style message mockup */
+      .slack {
+        background: #ffffff;
+        border: 4px solid var(--ink);
+        box-shadow: 8px 8px 0 rgba(8, 8, 9, 0.25);
+        padding: 28px 34px;
+        display: flex;
+        gap: 20px;
+        font-family: var(--font-plain);
+      }
+      .slack .avatar {
+        flex: none;
+        width: 56px;
+        height: 56px;
+        border: 4px solid var(--ink);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-mono);
+        font-weight: 700;
+        font-size: 28px;
+        color: var(--ink);
+        box-sizing: border-box;
+      }
+      .slack .msghead {
+        font-weight: 700;
+        font-size: 24px;
+        color: var(--ink);
+      }
+      .slack .msghead .time {
+        font-weight: 400;
+        font-size: 19px;
+        color: #9a9aa3;
+        margin-left: 10px;
+      }
+      .slack .msgbody {
+        font-size: 23px;
+        line-height: 1.5;
+        color: var(--ink);
+        margin-top: 6px;
+      }
 
-  /* Instagram post mockup: a visual-only stand-in for a carousel post
+      /* Instagram post mockup: a visual-only stand-in for a carousel post
      (avatar, image area, "multiple slides" glyph, carousel dots, caption
      bars). Holds no text, so it never needs spec coverage. Mark the active
      carousel dot with class "on". */
-  .igpost { border: 4px solid var(--ink); box-shadow: 12px 12px 0 rgba(8,8,9,0.25); background: #ffffff; box-sizing: border-box; }
-  .igpost .ighead { display: flex; align-items: center; gap: 16px; padding: 18px 20px; }
-  .igpost .igavatar { flex: none; width: 48px; height: 48px; border-radius: 50%; border: 3px solid var(--ink); background: var(--grad); box-sizing: border-box; }
-  .igpost .igbar { height: 13px; border-radius: 7px; background: var(--ink); }
-  .igpost .igbar.sub { height: 11px; background: #c9c9cf; margin-top: 8px; }
-  .igpost .igimage { position: relative; height: 320px; border-top: 3px solid var(--ink); border-bottom: 3px solid var(--ink); background: var(--grad-wash); }
-  .igpost .igstack { position: absolute; top: 20px; right: 20px; width: 34px; height: 34px; }
-  .igpost .igstack span { position: absolute; width: 26px; height: 26px; border: 3px solid var(--ink); background: #ffffff; box-sizing: border-box; }
-  .igpost .igstack span:first-child { top: 0; right: 0; }
-  .igpost .igstack span:last-child { bottom: 0; left: 0; }
-  .igpost .igdots { position: absolute; bottom: 20px; left: 0; right: 0; display: flex; justify-content: center; gap: 12px; }
-  .igpost .igdots span { width: 12px; height: 12px; border-radius: 50%; background: #ffffff; border: 2px solid var(--ink); box-sizing: border-box; }
-  .igpost .igdots span.on { background: var(--ink); }
-  .igpost .igcaption { display: flex; flex-direction: column; gap: 10px; padding: 18px 20px; }
-  .igpost .igcaption span { display: block; height: 12px; border-radius: 6px; background: #e8e8ea; }
+      .igpost {
+        border: 4px solid var(--ink);
+        box-shadow: 12px 12px 0 rgba(8, 8, 9, 0.25);
+        background: #ffffff;
+        box-sizing: border-box;
+      }
+      .igpost .ighead {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 18px 20px;
+      }
+      .igpost .igavatar {
+        flex: none;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: 3px solid var(--ink);
+        background: var(--grad);
+        box-sizing: border-box;
+      }
+      .igpost .igbar {
+        height: 13px;
+        border-radius: 7px;
+        background: var(--ink);
+      }
+      .igpost .igbar.sub {
+        height: 11px;
+        background: #c9c9cf;
+        margin-top: 8px;
+      }
+      .igpost .igimage {
+        position: relative;
+        height: 320px;
+        border-top: 3px solid var(--ink);
+        border-bottom: 3px solid var(--ink);
+        background: var(--grad-wash);
+      }
+      .igpost .igstack {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 34px;
+        height: 34px;
+      }
+      .igpost .igstack span {
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        border: 3px solid var(--ink);
+        background: #ffffff;
+        box-sizing: border-box;
+      }
+      .igpost .igstack span:first-child {
+        top: 0;
+        right: 0;
+      }
+      .igpost .igstack span:last-child {
+        bottom: 0;
+        left: 0;
+      }
+      .igpost .igdots {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+      }
+      .igpost .igdots span {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #ffffff;
+        border: 2px solid var(--ink);
+        box-sizing: border-box;
+      }
+      .igpost .igdots span.on {
+        background: var(--ink);
+      }
+      .igpost .igcaption {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 18px 20px;
+      }
+      .igpost .igcaption span {
+        display: block;
+        height: 12px;
+        border-radius: 6px;
+        background: #e8e8ea;
+      }
 
-  /* iPhone mockup: a device frame for app screenshots. Put an
+      /* iPhone mockup: a device frame for app screenshots. Put an
      <img class="photo"> (or an .imgslot placeholder) inside .phonescreen;
      the metal rail, the black bezel, the dynamic island and the side
      buttons are drawn in CSS. Scale the whole device with --phone-w on the
@@ -125,333 +412,723 @@
      status bar (web screenshots, or images cropped above the clock) and
      .homebar for the home indicator. Set --phone-ink to #ffffff when the
      screenshot behind them is dark. */
-  .phone { --phone-w: 420px; --phone-ink: #08080f; position: relative; flex: none;
-    width: var(--phone-w); aspect-ratio: 393 / 852; box-sizing: border-box;
-    padding: calc(var(--phone-w) * 0.034);
-    border-radius: calc(var(--phone-w) * 0.142);
-    background: linear-gradient(148deg, #6e6e78 0%, #2c2c31 16%, #8b8b95 38%, #26262b 58%, #5b5b65 78%, #2f2f35 100%);
-    box-shadow: 0 24px 48px rgba(8,8,9,0.30), 0 6px 14px rgba(8,8,9,0.18); }
-  /* side buttons: left volume rocker, right power */
-  .phone::before, .phone::after { content: ''; position: absolute;
-    width: calc(var(--phone-w) * 0.011); border-radius: calc(var(--phone-w) * 0.006);
-    background: linear-gradient(180deg, #33333a, #74747e); }
-  .phone::before { left: calc(var(--phone-w) * -0.009); top: 24%; height: 13%; }
-  .phone::after { right: calc(var(--phone-w) * -0.009); top: 26%; height: 9%; }
-  .phone .phonescreen { position: relative; width: 100%; height: 100%; overflow: hidden;
-    background: #ffffff; border-radius: calc(var(--phone-w) * 0.108);
-    box-shadow: 0 0 0 calc(var(--phone-w) * 0.016) #0a0a0c; }
-  .phone .island { position: absolute; z-index: 3; top: calc(var(--phone-w) * 0.028); left: 50%;
-    transform: translateX(-50%); width: calc(var(--phone-w) * 0.31); height: calc(var(--phone-w) * 0.094);
-    border-radius: 999px; background: #08080a; }
-  .phone .statusbar { position: absolute; z-index: 2; top: 0; left: 0; right: 0;
-    height: calc(var(--phone-w) * 0.137); display: flex; align-items: center; justify-content: space-between;
-    padding: calc(var(--phone-w) * 0.022) calc(var(--phone-w) * 0.075) 0;
-    font-family: var(--font-plain); font-weight: 600; color: var(--phone-ink); box-sizing: border-box; }
-  .phone .statusbar .clock { font-size: calc(var(--phone-w) * 0.043); letter-spacing: 0.01em; }
-  .phone .statusbar .icons { display: flex; align-items: center; gap: calc(var(--phone-w) * 0.016); }
-  .phone .statusbar .signal { display: flex; align-items: flex-end; gap: calc(var(--phone-w) * 0.005); }
-  .phone .statusbar .signal span { width: calc(var(--phone-w) * 0.009); background: currentColor;
-    border-radius: calc(var(--phone-w) * 0.003); }
-  .phone .statusbar .signal span:nth-child(1) { height: calc(var(--phone-w) * 0.012); }
-  .phone .statusbar .signal span:nth-child(2) { height: calc(var(--phone-w) * 0.019); }
-  .phone .statusbar .signal span:nth-child(3) { height: calc(var(--phone-w) * 0.026); }
-  .phone .statusbar .signal span:nth-child(4) { height: calc(var(--phone-w) * 0.033); }
-  .phone .statusbar svg { display: block; width: calc(var(--phone-w) * 0.042); height: auto; fill: currentColor; }
-  .phone .statusbar .battery { position: relative; width: calc(var(--phone-w) * 0.062);
-    height: calc(var(--phone-w) * 0.031); border: calc(var(--phone-w) * 0.004) solid currentColor;
-    border-radius: calc(var(--phone-w) * 0.010); opacity: 0.95; box-sizing: border-box; }
-  .phone .statusbar .battery::before { content: ''; position: absolute; inset: calc(var(--phone-w) * 0.004);
-    right: 30%; background: currentColor; border-radius: calc(var(--phone-w) * 0.004); }
-  .phone .statusbar .battery::after { content: ''; position: absolute; left: 100%; top: 30%; bottom: 30%;
-    width: calc(var(--phone-w) * 0.006); background: currentColor; opacity: 0.5;
-    border-radius: 0 calc(var(--phone-w) * 0.004) calc(var(--phone-w) * 0.004) 0; }
-  .phone .homebar { position: absolute; z-index: 3; bottom: calc(var(--phone-w) * 0.020); left: 50%;
-    transform: translateX(-50%); width: 35%; height: calc(var(--phone-w) * 0.013);
-    border-radius: 999px; background: var(--phone-ink); opacity: 0.85; }
+      .phone {
+        --phone-w: 420px;
+        --phone-ink: #08080f;
+        position: relative;
+        flex: none;
+        width: var(--phone-w);
+        aspect-ratio: 393 / 852;
+        box-sizing: border-box;
+        padding: calc(var(--phone-w) * 0.034);
+        border-radius: calc(var(--phone-w) * 0.142);
+        background: linear-gradient(
+          148deg,
+          #6e6e78 0%,
+          #2c2c31 16%,
+          #8b8b95 38%,
+          #26262b 58%,
+          #5b5b65 78%,
+          #2f2f35 100%
+        );
+        box-shadow:
+          0 24px 48px rgba(8, 8, 9, 0.3),
+          0 6px 14px rgba(8, 8, 9, 0.18);
+      }
+      /* side buttons: left volume rocker, right power */
+      .phone::before,
+      .phone::after {
+        content: '';
+        position: absolute;
+        width: calc(var(--phone-w) * 0.011);
+        border-radius: calc(var(--phone-w) * 0.006);
+        background: linear-gradient(180deg, #33333a, #74747e);
+      }
+      .phone::before {
+        left: calc(var(--phone-w) * -0.009);
+        top: 24%;
+        height: 13%;
+      }
+      .phone::after {
+        right: calc(var(--phone-w) * -0.009);
+        top: 26%;
+        height: 9%;
+      }
+      .phone .phonescreen {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #ffffff;
+        border-radius: calc(var(--phone-w) * 0.108);
+        box-shadow: 0 0 0 calc(var(--phone-w) * 0.016) #0a0a0c;
+      }
+      .phone .island {
+        position: absolute;
+        z-index: 3;
+        top: calc(var(--phone-w) * 0.028);
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(var(--phone-w) * 0.31);
+        height: calc(var(--phone-w) * 0.094);
+        border-radius: 999px;
+        background: #08080a;
+      }
+      .phone .statusbar {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: calc(var(--phone-w) * 0.137);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: calc(var(--phone-w) * 0.022) calc(var(--phone-w) * 0.075) 0;
+        font-family: var(--font-plain);
+        font-weight: 600;
+        color: var(--phone-ink);
+        box-sizing: border-box;
+      }
+      .phone .statusbar .clock {
+        font-size: calc(var(--phone-w) * 0.043);
+        letter-spacing: 0.01em;
+      }
+      .phone .statusbar .icons {
+        display: flex;
+        align-items: center;
+        gap: calc(var(--phone-w) * 0.016);
+      }
+      .phone .statusbar .signal {
+        display: flex;
+        align-items: flex-end;
+        gap: calc(var(--phone-w) * 0.005);
+      }
+      .phone .statusbar .signal span {
+        width: calc(var(--phone-w) * 0.009);
+        background: currentColor;
+        border-radius: calc(var(--phone-w) * 0.003);
+      }
+      .phone .statusbar .signal span:nth-child(1) {
+        height: calc(var(--phone-w) * 0.012);
+      }
+      .phone .statusbar .signal span:nth-child(2) {
+        height: calc(var(--phone-w) * 0.019);
+      }
+      .phone .statusbar .signal span:nth-child(3) {
+        height: calc(var(--phone-w) * 0.026);
+      }
+      .phone .statusbar .signal span:nth-child(4) {
+        height: calc(var(--phone-w) * 0.033);
+      }
+      .phone .statusbar svg {
+        display: block;
+        width: calc(var(--phone-w) * 0.042);
+        height: auto;
+        fill: currentColor;
+      }
+      .phone .statusbar .battery {
+        position: relative;
+        width: calc(var(--phone-w) * 0.062);
+        height: calc(var(--phone-w) * 0.031);
+        border: calc(var(--phone-w) * 0.004) solid currentColor;
+        border-radius: calc(var(--phone-w) * 0.01);
+        opacity: 0.95;
+        box-sizing: border-box;
+      }
+      .phone .statusbar .battery::before {
+        content: '';
+        position: absolute;
+        inset: calc(var(--phone-w) * 0.004);
+        right: 30%;
+        background: currentColor;
+        border-radius: calc(var(--phone-w) * 0.004);
+      }
+      .phone .statusbar .battery::after {
+        content: '';
+        position: absolute;
+        left: 100%;
+        top: 30%;
+        bottom: 30%;
+        width: calc(var(--phone-w) * 0.006);
+        background: currentColor;
+        opacity: 0.5;
+        border-radius: 0 calc(var(--phone-w) * 0.004) calc(var(--phone-w) * 0.004) 0;
+      }
+      .phone .homebar {
+        position: absolute;
+        z-index: 3;
+        bottom: calc(var(--phone-w) * 0.02);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 35%;
+        height: calc(var(--phone-w) * 0.013);
+        border-radius: 999px;
+        background: var(--phone-ink);
+        opacity: 0.85;
+      }
 
-  /* Placeholder for a photo drop (replace the div with an <img>) */
-  .imgslot { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
-    background: repeating-linear-gradient(45deg, #f4f4f6, #f4f4f6 24px, #ececef 24px, #ececef 48px); }
-  .imgslot span { font-family: var(--font-plain); font-weight: 600; font-size: 24px; color: var(--ink-secondary);
-    text-align: center; max-width: 70%; }
-  .imgslot img, img.photo { width: 100%; height: 100%; object-fit: cover; display: block; }
+      /* Placeholder for a photo drop (replace the div with an <img>) */
+      .imgslot {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: repeating-linear-gradient(
+          45deg,
+          #f4f4f6,
+          #f4f4f6 24px,
+          #ececef 24px,
+          #ececef 48px
+        );
+      }
+      .imgslot span {
+        font-family: var(--font-plain);
+        font-weight: 600;
+        font-size: 24px;
+        color: var(--ink-secondary);
+        text-align: center;
+        max-width: 70%;
+      }
+      .imgslot img,
+      img.photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
 
-  /* 1080x1080 centre-square crop guide (?crop=1 to show). Keep anything
+      /* 1080x1080 centre-square crop guide (?crop=1 to show). Keep anything
      essential inside it for TikTok/square crops. */
-  .cropguide { position: absolute; left: 0; top: 135px; width: 1080px; height: 1080px;
-    border-top: 2px dashed rgba(8,8,9,0.5); border-bottom: 2px dashed rgba(8,8,9,0.5); pointer-events: none; box-sizing: border-box; }
-</style>
-</head>
-<body>
-<div id="strip" style="min-height:100vh; background:#c9c9cf; display:flex; gap:64px; padding:64px; overflow-x:auto; align-items:flex-start; box-sizing:border-box; font-family:var(--font-plain);">
-
-  <!-- The 10 slides below are layout examples (the productkind "employee to
+      .cropguide {
+        position: absolute;
+        left: 0;
+        top: 135px;
+        width: 1080px;
+        height: 1080px;
+        border-top: 2px dashed rgba(8, 8, 9, 0.5);
+        border-bottom: 2px dashed rgba(8, 8, 9, 0.5);
+        pointer-events: none;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="strip"
+      style="
+        min-height: 100vh;
+        background: #c9c9cf;
+        display: flex;
+        gap: 64px;
+        padding: 64px;
+        overflow-x: auto;
+        align-items: flex-start;
+        box-sizing: border-box;
+        font-family: var(--font-plain);
+      "
+    >
+      <!-- The 10 slides below are layout examples (the productkind "employee to
        running a business" article, plus device slides): cover, paired quote
        cards, full-width photo, laptop mockup, photo + black statement card,
        chart, big stat, prompt window + Slack mockup, CTA, Instagram post
        mockup. Copy a slide, replace its content from the spec md. -->
 
-  <!-- SLIDE 1 — COVER: headline with one .hl phrase, kicker, SWIPE →, mascot -->
-  <section class="slide" data-screen-label="01 Cover">
-    <div class="card" style="overflow:hidden;">
-      <div class="gradbar"></div>
-      <div class="inner" style="position:relative;">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">01 / 11</span></div>
-        <div style="flex:1; display:flex; flex-direction:column; justify-content:center; max-width:500px;">
-          <h1 class="headline" style="font-size:52px; width:578px;">I left my full-time job at the end of 2024, after 10 years in tech. This is what <span class="hl">running my own business</span> has been like since.</h1>
-          <div class="kicker" style="font-size:24px; color:var(--ink-secondary); max-width:480px;">FROM EMPLOYEE TO RUNNING A BUSINESS.</div>
-          <div class="kicker" style="margin-top:28px; font-size:24px;">SWIPE →</div>
-        </div>
-        <img src="../assets/productkind/carousel-kim.png" alt="productkind mascot" style="position:absolute; width:158px; height:auto; left:698px; top:544px;">
-      </div>
-    </div>
-    <div class="cropguide"></div>
-  </section>
-
-  <!-- SLIDE 2 — PAIRED QUOTE CARDS (gradient-topped + muted) -->
-  <section class="slide" data-screen-label="02 Quote cards">
-    <div class="card">
-      <div class="gradbar"></div>
-      <div class="inner">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">02 / 11</span></div>
-        <div style="display:flex; flex-direction:column; gap:32px;">
-          <div class="frame">
-            <div style="height:12px; background:var(--grad);"></div>
-            <p style="margin:0; padding:36px 40px; font-family:var(--font-plain); font-size:34px; line-height:1.45; color:var(--ink); text-wrap:pretty;"><span style="font-family:var(--font-display); font-weight:700;">I love product management</span>. It's such an exciting mix of business, technology, design and psychology.</p>
-          </div>
-          <div class="frame muted" style="padding:36px 40px;">
-            <p style="margin:0; font-family:var(--font-plain); font-size:34px; line-height:1.45; text-wrap:pretty;">But I was tired of the corporate politics, and of building products executives wanted while the people using them had different ideas.</p>
-          </div>
-        </div>
-        <p class="copy" style="font-size:36px;">Call me idealistic, but I wanted a <span class="hl">positive impact</span> beyond shareholder revenue.</p>
-      </div>
-    </div>
-    <div class="cropguide"></div>
-  </section>
-
-  <!-- SLIDE 3 — FULL-WIDTH PHOTO + COPY -->
-  <section class="slide" data-screen-label="03 Full-width photo">
-    <div class="card">
-      <div class="gradbar"></div>
-      <div class="inner">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">03 / 11</span></div>
-        <div class="frame" style="width:100%; height:540px;">
-          <div class="imgslot"><span>Full-width photo (drop an &lt;img class="photo"&gt; here)</span></div>
-        </div>
-        <p class="copy" style="font-size:36px;">I started with an executive coaching programme. Did I enjoy coaching people? Yes, the nice ones. 😅 I also knew I wanted the <span class="hl">freedom</span> to work from anywhere.</p>
-      </div>
-    </div>
-    <div class="cropguide"></div>
-  </section>
-
-  <!-- SLIDE 4 — LAPTOP MOCKUP + COPY (window dots sample the brand's accent stops) -->
-  <section class="slide" data-screen-label="04 Laptop mockup">
-    <div class="card">
-      <div class="gradbar"></div>
-      <div class="inner">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">04 / 11</span></div>
-        <div style="display:flex; flex-direction:column; align-items:center; gap:0;">
-          <div class="frame" style="width:560px; height:360px;">
-            <div style="height:34px; background:var(--ink); display:flex; align-items:center; gap:10px; padding:0 16px;">
-              <span style="width:14px; height:14px; background:#ffb288; border-radius:50%;"></span>
-              <span style="width:14px; height:14px; background:#ff9ff7; border-radius:50%;"></span>
-              <span style="width:14px; height:14px; background:#00e8b6; border-radius:50%;"></span>
+      <!-- SLIDE 1 — COVER: headline with one .hl phrase, kicker, SWIPE →, mascot -->
+      <section class="slide" data-screen-label="01 Cover">
+        <div class="card" style="overflow: hidden">
+          <div class="gradbar"></div>
+          <div class="inner" style="position: relative">
+            <div class="header">
+              <span class="handle">productkind.substack.com</span><span class="page">01 / 11</span>
             </div>
-            <div style="position:absolute; top:34px; left:0; right:0; bottom:0;">
-              <div class="imgslot"><span>Screenshot (drop an &lt;img class="photo"&gt; here)</span></div>
+            <div
+              style="
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                max-width: 500px;
+              "
+            >
+              <h1 class="headline" style="font-size: 52px; width: 578px">
+                I left my full-time job at the end of 2024, after 10 years in tech. This is what
+                <span class="hl">running my own business</span> has been like since.
+              </h1>
+              <div
+                class="kicker"
+                style="font-size: 24px; color: var(--ink-secondary); max-width: 480px"
+              >
+                FROM EMPLOYEE TO RUNNING A BUSINESS.
+              </div>
+              <div class="kicker" style="margin-top: 28px; font-size: 24px">SWIPE →</div>
             </div>
-          </div>
-          <div style="width:680px; height:22px; background:var(--ink);"></div>
-          <div style="width:740px; height:16px; background:var(--ink); clip-path:polygon(2% 0, 98% 0, 100% 100%, 0 100%);"></div>
-        </div>
-        <p class="copy">Then I discovered <span class="hl">vibe coding</span>: building software with AI tools, without having to know how to code. I started building products, even though I don't know TypeScript. It was such an empowering feeling that I gave talks and ran workshops about it, and started building Little Parrot, a microlearning app.</p>
-      </div>
-    </div>
-    <div class="cropguide"></div>
-  </section>
-
-  <!-- SLIDE 5 — COPY + PHOTO + BLACK STATEMENT CARD -->
-  <section class="slide" data-screen-label="05 Statement card">
-    <div class="card">
-      <div class="gradbar"></div>
-      <div class="inner" style="justify-content:flex-start; gap:44px;">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">05 / 11</span></div>
-        <p class="copy" style="font-size:32px;">In the autumn I joined <span class="hl">SheBuilds on Lovable</span>, a 48-hour hackathon for women. There I saw a sea of professional women with ideas they wanted to build.</p>
-        <div class="frame" style="height:360px; aspect-ratio:1200/819; align-self:center; flex:none;">
-          <div class="imgslot"><span>Photo (drop an &lt;img class="photo"&gt; here)</span></div>
-        </div>
-        <div class="inverse" style="margin-top:auto;">
-          <p>But most vibe coding content is made by <span class="hl-text">tech bros, for tech bros.</span></p>
-        </div>
-      </div>
-    </div>
-    <div class="cropguide"></div>
-  </section>
-
-  <!-- SLIDE 6 — CHART + COPY (chart line samples the brand's accent stops) -->
-  <section class="slide" data-screen-label="06 Chart">
-    <div class="card">
-      <div class="gradbar"></div>
-      <div class="inner">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">06 / 11</span></div>
-        <div class="frame" style="padding:36px 40px; overflow:visible;">
-          <svg viewBox="0 0 660 360" width="100%" style="display:block;">
-            <defs>
-              <linearGradient id="chartLine" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%" stop-color="#ffb288"></stop>
-                <stop offset="20%" stop-color="#ffacb8"></stop>
-                <stop offset="45%" stop-color="#ff9ff7"></stop>
-                <stop offset="70%" stop-color="#9accff"></stop>
-                <stop offset="100%" stop-color="#00e8b6"></stop>
-              </linearGradient>
-            </defs>
-            <line x1="40" y1="320" x2="640" y2="320" stroke="#080809" stroke-width="3"></line>
-            <line x1="40" y1="40" x2="40" y2="320" stroke="#080809" stroke-width="3"></line>
-            <polyline points="40,270 130,240 220,180 300,90 340,66 430,120 520,180 620,215" fill="none" stroke="url(#chartLine)" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"></polyline>
-            <circle cx="340" cy="66" r="12" fill="#080809"></circle>
-            <text x="340" y="44" text-anchor="middle" font-family="'Space Mono',monospace" font-weight="700" font-size="30" fill="#080809">37%</text>
-            <text x="340" y="352" text-anchor="middle" font-family="'Space Mono',monospace" font-weight="700" font-size="24" fill="#4a4a50">1984</text>
-            <text x="40" y="352" text-anchor="middle" font-family="'Space Mono',monospace" font-weight="700" font-size="24" fill="#4a4a50">1963</text>
-          </svg>
-        </div>
-        <p class="copy" style="font-size:32px;">This has happened before. The term 'software engineer' was coined by a woman, <span class="hl">Margaret Hamilton</span>, in 1963. By 1984, women earned 37% of computer science degrees in the US. Then personal computers were marketed almost exclusively to boys and men, and the numbers began to drop.</p>
-      </div>
-    </div>
-    <div class="cropguide"></div>
-  </section>
-
-  <!-- SLIDE 7 — BIG STAT ON GRADIENT -->
-  <section class="slide" data-screen-label="07 Big stat">
-    <div class="card">
-      <div class="gradbar"></div>
-      <div class="inner">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">07 / 11</span></div>
-        <div style="align-self:center; border:4px solid var(--ink); box-shadow:16px 16px 0 rgba(8,8,9,0.25); padding:48px 72px; background:var(--grad);">
-          <span style="font-family:var(--font-display); font-weight:700; font-size:220px; line-height:1; color:var(--ink);">14%</span>
-        </div>
-        <p class="copy">Now a new technology is here: generative AI. Yet only 14% of Lovable's users are women, and you can only benefit from AI by using it. So we've refocused our two-person company, productkind, on one mission: <span class="hl">closing the gender gap in AI adoption</span>.</p>
-      </div>
-    </div>
-    <div class="cropguide"></div>
-  </section>
-
-  <!-- SLIDE 8 — PROMPT WINDOW + SLACK MOCKUP (the chat devices, demo content) -->
-  <section class="slide" data-screen-label="08 Chat devices">
-    <div class="card">
-      <div class="gradbar"></div>
-      <div class="inner">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">08 / 11</span></div>
-        <div style="display:flex; flex-direction:column; gap:12px;">
-          <span class="promptlabel">YOUR PROMPT</span>
-          <div class="promptwin" style="padding:36px 44px 84px;">
-            <pre style="font-size:24px; line-height:1.6;">Write a Slack message to the team sharing this week's status.<span class="cursor"></span></pre>
-            <span class="send">↑</span>
+            <img
+              src="../assets/productkind/carousel-kim.png"
+              alt="productkind mascot"
+              style="position: absolute; width: 158px; height: auto; left: 698px; top: 544px"
+            />
           </div>
         </div>
-        <div class="slack">
-          <div class="avatar" style="background:#c9b7f0;">AI</div>
-          <div>
-            <div class="msghead">you <span class="time">9:41</span></div>
-            <div class="msgbody">Hey team! 👋 Quick status for the week: the fix ships this afternoon. Thanks so much!</div>
-          </div>
-        </div>
-        <p class="copy" style="font-size:33px;">The <span class="hl">prompt window</span> is the recurring device for anything the reader literally types; the Slack card shows what comes back.</p>
-      </div>
-    </div>
-    <div class="cropguide"></div>
-  </section>
+        <div class="cropguide"></div>
+      </section>
 
-  <!-- SLIDE 9 — CTA: logo/mascot, URL badge, offer line, share-ask -->
-  <section class="slide" data-screen-label="09 CTA">
-    <div class="card">
-      <div class="gradbar"></div>
-      <div class="inner">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">09 / 11</span></div>
-        <p class="copy" style="font-size:36px;">Nobody has ten years of experience in vibe coding yet. <span class="hl">We're all starting from the same line.</span> I'll be sharing what I try, what works, and what definitely doesn't in my newsletter, Thoughts by productkind.</p>
-        <div style="display:flex; flex-direction:column; align-items:center; gap:32px;">
-          <img src="../assets/productkind/logo-thoughts-by-productkind-icon.png" alt="Thoughts by productkind logo" style="width:180px; height:180px; border:4px solid var(--ink); box-shadow:12px 12px 0 rgba(8,8,9,0.25);">
-          <span class="badge" style="font-size:32px;">PRODUCTKIND.SUBSTACK.COM</span>
-          <p style="margin:0; font-family:var(--font-display); font-weight:700; font-size:30px; color:var(--ink);">Full article on our Substack 💛</p>
-        </div>
-        <p style="margin:0; text-align:center; font-family:var(--font-plain); font-size:30px; line-height:1.45; color:var(--ink-secondary);">Know someone rethinking their path? Send them this</p>
-      </div>
-    </div>
-    <div class="cropguide"></div>
-  </section>
-
-  <!-- SLIDE 10 — INSTAGRAM POST MOCKUP (visual-only carousel post device;
-       uses the .slidebody helper to centre the body) -->
-  <section class="slide" data-screen-label="10 Instagram mockup">
-    <div class="card">
-      <div class="gradbar"></div>
-      <div class="inner">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">10 / 11</span></div>
-        <div class="slidebody" style="gap:44px;">
-          <p class="copy" style="text-align:center;">The Instagram post mockup is a text-free stand-in for a carousel post.</p>
-          <div class="igpost" style="width:400px; align-self:center;">
-            <div class="ighead">
-              <div class="igavatar"></div>
-              <div>
-                <div class="igbar" style="width:150px;"></div>
-                <div class="igbar sub" style="width:96px;"></div>
+      <!-- SLIDE 2 — PAIRED QUOTE CARDS (gradient-topped + muted) -->
+      <section class="slide" data-screen-label="02 Quote cards">
+        <div class="card">
+          <div class="gradbar"></div>
+          <div class="inner">
+            <div class="header">
+              <span class="handle">productkind.substack.com</span><span class="page">02 / 11</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 32px">
+              <div class="frame">
+                <div style="height: 12px; background: var(--grad)"></div>
+                <p
+                  style="
+                    margin: 0;
+                    padding: 36px 40px;
+                    font-family: var(--font-plain);
+                    font-size: 34px;
+                    line-height: 1.45;
+                    color: var(--ink);
+                    text-wrap: pretty;
+                  "
+                >
+                  <span style="font-family: var(--font-display); font-weight: 700"
+                    >I love product management</span
+                  >. It's such an exciting mix of business, technology, design and psychology.
+                </p>
+              </div>
+              <div class="frame muted" style="padding: 36px 40px">
+                <p
+                  style="
+                    margin: 0;
+                    font-family: var(--font-plain);
+                    font-size: 34px;
+                    line-height: 1.45;
+                    text-wrap: pretty;
+                  "
+                >
+                  But I was tired of the corporate politics, and of building products executives
+                  wanted while the people using them had different ideas.
+                </p>
               </div>
             </div>
-            <div class="igimage">
-              <div class="igstack"><span></span><span></span></div>
-              <div class="igdots"><span class="on"></span><span></span><span></span></div>
+            <p class="copy" style="font-size: 36px">
+              Call me idealistic, but I wanted a <span class="hl">positive impact</span> beyond
+              shareholder revenue.
+            </p>
+          </div>
+        </div>
+        <div class="cropguide"></div>
+      </section>
+
+      <!-- SLIDE 3 — FULL-WIDTH PHOTO + COPY -->
+      <section class="slide" data-screen-label="03 Full-width photo">
+        <div class="card">
+          <div class="gradbar"></div>
+          <div class="inner">
+            <div class="header">
+              <span class="handle">productkind.substack.com</span><span class="page">03 / 11</span>
             </div>
-            <div class="igcaption">
-              <span style="width:100%;"></span>
-              <span style="width:60%;"></span>
+            <div class="frame" style="width: 100%; height: 540px">
+              <div class="imgslot">
+                <span>Full-width photo (drop an &lt;img class="photo"&gt; here)</span>
+              </div>
+            </div>
+            <p class="copy" style="font-size: 36px">
+              I started with an executive coaching programme. Did I enjoy coaching people? Yes, the
+              nice ones. 😅 I also knew I wanted the <span class="hl">freedom</span> to work from
+              anywhere.
+            </p>
+          </div>
+        </div>
+        <div class="cropguide"></div>
+      </section>
+
+      <!-- SLIDE 4 — LAPTOP MOCKUP + COPY (window dots sample the brand's accent stops) -->
+      <section class="slide" data-screen-label="04 Laptop mockup">
+        <div class="card">
+          <div class="gradbar"></div>
+          <div class="inner">
+            <div class="header">
+              <span class="handle">productkind.substack.com</span><span class="page">04 / 11</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 0">
+              <div class="frame" style="width: 560px; height: 360px">
+                <div
+                  style="
+                    height: 34px;
+                    background: var(--ink);
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    padding: 0 16px;
+                  "
+                >
+                  <span
+                    style="width: 14px; height: 14px; background: #ffb288; border-radius: 50%"
+                  ></span>
+                  <span
+                    style="width: 14px; height: 14px; background: #ff9ff7; border-radius: 50%"
+                  ></span>
+                  <span
+                    style="width: 14px; height: 14px; background: #00e8b6; border-radius: 50%"
+                  ></span>
+                </div>
+                <div style="position: absolute; top: 34px; left: 0; right: 0; bottom: 0">
+                  <div class="imgslot">
+                    <span>Screenshot (drop an &lt;img class="photo"&gt; here)</span>
+                  </div>
+                </div>
+              </div>
+              <div style="width: 680px; height: 22px; background: var(--ink)"></div>
+              <div
+                style="
+                  width: 740px;
+                  height: 16px;
+                  background: var(--ink);
+                  clip-path: polygon(2% 0, 98% 0, 100% 100%, 0 100%);
+                "
+              ></div>
+            </div>
+            <p class="copy">
+              Then I discovered <span class="hl">vibe coding</span>: building software with AI
+              tools, without having to know how to code. I started building products, even though I
+              don't know TypeScript. It was such an empowering feeling that I gave talks and ran
+              workshops about it, and started building Little Parrot, a microlearning app.
+            </p>
+          </div>
+        </div>
+        <div class="cropguide"></div>
+      </section>
+
+      <!-- SLIDE 5 — COPY + PHOTO + BLACK STATEMENT CARD -->
+      <section class="slide" data-screen-label="05 Statement card">
+        <div class="card">
+          <div class="gradbar"></div>
+          <div class="inner" style="justify-content: flex-start; gap: 44px">
+            <div class="header">
+              <span class="handle">productkind.substack.com</span><span class="page">05 / 11</span>
+            </div>
+            <p class="copy" style="font-size: 32px">
+              In the autumn I joined <span class="hl">SheBuilds on Lovable</span>, a 48-hour
+              hackathon for women. There I saw a sea of professional women with ideas they wanted to
+              build.
+            </p>
+            <div
+              class="frame"
+              style="height: 360px; aspect-ratio: 1200/819; align-self: center; flex: none"
+            >
+              <div class="imgslot"><span>Photo (drop an &lt;img class="photo"&gt; here)</span></div>
+            </div>
+            <div class="inverse" style="margin-top: auto">
+              <p>
+                But most vibe coding content is made by
+                <span class="hl-text">tech bros, for tech bros.</span>
+              </p>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="cropguide"></div>
-  </section>
+        <div class="cropguide"></div>
+      </section>
 
-  <!-- SLIDE 11 — IPHONE MOCKUP (app screenshots; the status bar and home
+      <!-- SLIDE 6 — CHART + COPY (chart line samples the brand's accent stops) -->
+      <section class="slide" data-screen-label="06 Chart">
+        <div class="card">
+          <div class="gradbar"></div>
+          <div class="inner">
+            <div class="header">
+              <span class="handle">productkind.substack.com</span><span class="page">06 / 11</span>
+            </div>
+            <div class="frame" style="padding: 36px 40px; overflow: visible">
+              <svg viewBox="0 0 660 360" width="100%" style="display: block">
+                <defs>
+                  <linearGradient id="chartLine" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#ffb288"></stop>
+                    <stop offset="20%" stop-color="#ffacb8"></stop>
+                    <stop offset="45%" stop-color="#ff9ff7"></stop>
+                    <stop offset="70%" stop-color="#9accff"></stop>
+                    <stop offset="100%" stop-color="#00e8b6"></stop>
+                  </linearGradient>
+                </defs>
+                <line x1="40" y1="320" x2="640" y2="320" stroke="#080809" stroke-width="3"></line>
+                <line x1="40" y1="40" x2="40" y2="320" stroke="#080809" stroke-width="3"></line>
+                <polyline
+                  points="40,270 130,240 220,180 300,90 340,66 430,120 520,180 620,215"
+                  fill="none"
+                  stroke="url(#chartLine)"
+                  stroke-width="9"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                ></polyline>
+                <circle cx="340" cy="66" r="12" fill="#080809"></circle>
+                <text
+                  x="340"
+                  y="44"
+                  text-anchor="middle"
+                  font-family="'Space Mono',monospace"
+                  font-weight="700"
+                  font-size="30"
+                  fill="#080809"
+                >
+                  37%
+                </text>
+                <text
+                  x="340"
+                  y="352"
+                  text-anchor="middle"
+                  font-family="'Space Mono',monospace"
+                  font-weight="700"
+                  font-size="24"
+                  fill="#4a4a50"
+                >
+                  1984
+                </text>
+                <text
+                  x="40"
+                  y="352"
+                  text-anchor="middle"
+                  font-family="'Space Mono',monospace"
+                  font-weight="700"
+                  font-size="24"
+                  fill="#4a4a50"
+                >
+                  1963
+                </text>
+              </svg>
+            </div>
+            <p class="copy" style="font-size: 32px">
+              This has happened before. The term 'software engineer' was coined by a woman,
+              <span class="hl">Margaret Hamilton</span>, in 1963. By 1984, women earned 37% of
+              computer science degrees in the US. Then personal computers were marketed almost
+              exclusively to boys and men, and the numbers began to drop.
+            </p>
+          </div>
+        </div>
+        <div class="cropguide"></div>
+      </section>
+
+      <!-- SLIDE 7 — BIG STAT ON GRADIENT -->
+      <section class="slide" data-screen-label="07 Big stat">
+        <div class="card">
+          <div class="gradbar"></div>
+          <div class="inner">
+            <div class="header">
+              <span class="handle">productkind.substack.com</span><span class="page">07 / 11</span>
+            </div>
+            <div
+              style="
+                align-self: center;
+                border: 4px solid var(--ink);
+                box-shadow: 16px 16px 0 rgba(8, 8, 9, 0.25);
+                padding: 48px 72px;
+                background: var(--grad);
+              "
+            >
+              <span
+                style="
+                  font-family: var(--font-display);
+                  font-weight: 700;
+                  font-size: 220px;
+                  line-height: 1;
+                  color: var(--ink);
+                "
+                >14%</span
+              >
+            </div>
+            <p class="copy">
+              Now a new technology is here: generative AI. Yet only 14% of Lovable's users are
+              women, and you can only benefit from AI by using it. So we've refocused our two-person
+              company, productkind, on one mission:
+              <span class="hl">closing the gender gap in AI adoption</span>.
+            </p>
+          </div>
+        </div>
+        <div class="cropguide"></div>
+      </section>
+
+      <!-- SLIDE 8 — PROMPT WINDOW + SLACK MOCKUP (the chat devices, demo content) -->
+      <section class="slide" data-screen-label="08 Chat devices">
+        <div class="card">
+          <div class="gradbar"></div>
+          <div class="inner">
+            <div class="header">
+              <span class="handle">productkind.substack.com</span><span class="page">08 / 11</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 12px">
+              <span class="promptlabel">YOUR PROMPT</span>
+              <div class="promptwin" style="padding: 36px 44px 84px">
+                <pre
+                  style="font-size: 24px; line-height: 1.6"
+                >Write a Slack message to the team sharing this week's status.<span class="cursor"></span></pre>
+                <span class="send">↑</span>
+              </div>
+            </div>
+            <div class="slack">
+              <div class="avatar" style="background: #c9b7f0">AI</div>
+              <div>
+                <div class="msghead">you <span class="time">9:41</span></div>
+                <div class="msgbody">
+                  Hey team! 👋 Quick status for the week: the fix ships this afternoon. Thanks so
+                  much!
+                </div>
+              </div>
+            </div>
+            <p class="copy" style="font-size: 33px">
+              The <span class="hl">prompt window</span> is the recurring device for anything the
+              reader literally types; the Slack card shows what comes back.
+            </p>
+          </div>
+        </div>
+        <div class="cropguide"></div>
+      </section>
+
+      <!-- SLIDE 9 — CTA: logo/mascot, URL badge, offer line, share-ask -->
+      <section class="slide" data-screen-label="09 CTA">
+        <div class="card">
+          <div class="gradbar"></div>
+          <div class="inner">
+            <div class="header">
+              <span class="handle">productkind.substack.com</span><span class="page">09 / 11</span>
+            </div>
+            <p class="copy" style="font-size: 36px">
+              Nobody has ten years of experience in vibe coding yet.
+              <span class="hl">We're all starting from the same line.</span> I'll be sharing what I
+              try, what works, and what definitely doesn't in my newsletter, Thoughts by
+              productkind.
+            </p>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 32px">
+              <img
+                src="../assets/productkind/logo-thoughts-by-productkind-icon.png"
+                alt="Thoughts by productkind logo"
+                style="
+                  width: 180px;
+                  height: 180px;
+                  border: 4px solid var(--ink);
+                  box-shadow: 12px 12px 0 rgba(8, 8, 9, 0.25);
+                "
+              />
+              <span class="badge" style="font-size: 32px">PRODUCTKIND.SUBSTACK.COM</span>
+              <p
+                style="
+                  margin: 0;
+                  font-family: var(--font-display);
+                  font-weight: 700;
+                  font-size: 30px;
+                  color: var(--ink);
+                "
+              >
+                Full article on our Substack 💛
+              </p>
+            </div>
+            <p
+              style="
+                margin: 0;
+                text-align: center;
+                font-family: var(--font-plain);
+                font-size: 30px;
+                line-height: 1.45;
+                color: var(--ink-secondary);
+              "
+            >
+              Know someone rethinking their path? Send them this
+            </p>
+          </div>
+        </div>
+        <div class="cropguide"></div>
+      </section>
+
+      <!-- SLIDE 10 — INSTAGRAM POST MOCKUP (visual-only carousel post device;
+       uses the .slidebody helper to centre the body) -->
+      <section class="slide" data-screen-label="10 Instagram mockup">
+        <div class="card">
+          <div class="gradbar"></div>
+          <div class="inner">
+            <div class="header">
+              <span class="handle">productkind.substack.com</span><span class="page">10 / 11</span>
+            </div>
+            <div class="slidebody" style="gap: 44px">
+              <p class="copy" style="text-align: center">
+                The Instagram post mockup is a text-free stand-in for a carousel post.
+              </p>
+              <div class="igpost" style="width: 400px; align-self: center">
+                <div class="ighead">
+                  <div class="igavatar"></div>
+                  <div>
+                    <div class="igbar" style="width: 150px"></div>
+                    <div class="igbar sub" style="width: 96px"></div>
+                  </div>
+                </div>
+                <div class="igimage">
+                  <div class="igstack"><span></span><span></span></div>
+                  <div class="igdots"><span class="on"></span><span></span><span></span></div>
+                </div>
+                <div class="igcaption">
+                  <span style="width: 100%"></span>
+                  <span style="width: 60%"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cropguide"></div>
+      </section>
+
+      <!-- SLIDE 11 — IPHONE MOCKUP (app screenshots; the status bar and home
        bar here are the opt-in drawn ones, an iPhone screenshot brings its
        own) -->
-  <section class="slide" data-screen-label="11 iPhone mockup">
-    <div class="card">
-      <div class="gradbar"></div>
-      <div class="inner">
-        <div class="header"><span class="handle">productkind.substack.com</span><span class="page">11 / 11</span></div>
-        <div class="slidebody" style="gap:52px; align-items:center;">
-          <div class="phone" style="--phone-w:330px;">
-            <div class="phonescreen">
-              <div class="imgslot"><span>App screenshot (drop an &lt;img class="photo"&gt; here)</span></div>
-              <div class="statusbar">
-                <span class="clock">9:41</span>
-                <span class="icons">
-                  <span class="signal"><span></span><span></span><span></span><span></span></span>
-                  <svg viewBox="0 0 16 12" aria-hidden="true"><path d="M8 11.2 6.1 9.1a2.7 2.7 0 0 1 3.8 0L8 11.2Zm0-4.1a4.9 4.9 0 0 0-3.5 1.4L3.1 7.1a7 7 0 0 1 9.8 0l-1.4 1.4A4.9 4.9 0 0 0 8 7.1Zm0-3.4a8.3 8.3 0 0 0-5.9 2.4L.7 4.7a10.3 10.3 0 0 1 14.6 0l-1.4 1.4A8.3 8.3 0 0 0 8 3.7Z"/></svg>
-                  <span class="battery"></span>
-                </span>
+      <section class="slide" data-screen-label="11 iPhone mockup">
+        <div class="card">
+          <div class="gradbar"></div>
+          <div class="inner">
+            <div class="header">
+              <span class="handle">productkind.substack.com</span><span class="page">11 / 11</span>
+            </div>
+            <div class="slidebody" style="gap: 52px; align-items: center">
+              <div class="phone" style="--phone-w: 330px">
+                <div class="phonescreen">
+                  <div class="imgslot">
+                    <span>App screenshot (drop an &lt;img class="photo"&gt; here)</span>
+                  </div>
+                  <div class="statusbar">
+                    <span class="clock">9:41</span>
+                    <span class="icons">
+                      <span class="signal"
+                        ><span></span><span></span><span></span><span></span
+                      ></span>
+                      <svg viewBox="0 0 16 12" aria-hidden="true">
+                        <path
+                          d="M8 11.2 6.1 9.1a2.7 2.7 0 0 1 3.8 0L8 11.2Zm0-4.1a4.9 4.9 0 0 0-3.5 1.4L3.1 7.1a7 7 0 0 1 9.8 0l-1.4 1.4A4.9 4.9 0 0 0 8 7.1Zm0-3.4a8.3 8.3 0 0 0-5.9 2.4L.7 4.7a10.3 10.3 0 0 1 14.6 0l-1.4 1.4A8.3 8.3 0 0 0 8 3.7Z"
+                        />
+                      </svg>
+                      <span class="battery"></span>
+                    </span>
+                  </div>
+                  <div class="island"></div>
+                  <div class="homebar"></div>
+                </div>
               </div>
-              <div class="island"></div>
-              <div class="homebar"></div>
+              <p class="copy">
+                The <span class="hl">iPhone mockup</span> puts a real app screenshot on a slide.
+              </p>
             </div>
           </div>
-          <p class="copy">The <span class="hl">iPhone mockup</span> puts a real app screenshot on a slide.</p>
         </div>
-      </div>
+        <div class="cropguide"></div>
+      </section>
     </div>
-    <div class="cropguide"></div>
-  </section>
-
-</div>
-<script>
-  const params = new URLSearchParams(location.search);
-  const n = parseInt(params.get('slide'), 10);
-  const slides = document.querySelectorAll('#strip > section');
-  if (n >= 1 && n <= slides.length) {
-    document.body.classList.add('single');
-    slides[n - 1].classList.add('current');
-  }
-  if (params.get('crop') === '1') document.body.classList.add('crop');
-</script>
-</body>
+    <script>
+      const params = new URLSearchParams(location.search)
+      const n = parseInt(params.get('slide'), 10)
+      const slides = document.querySelectorAll('#strip > section')
+      if (n >= 1 && n <= slides.length) {
+        document.body.classList.add('single')
+        slides[n - 1].classList.add('current')
+      }
+      if (params.get('crop') === '1') document.body.classList.add('crop')
+    </script>
+  </body>
 </html>

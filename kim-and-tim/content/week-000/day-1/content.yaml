@@ -1,8 +1,8 @@
-id: "w000d1"
-caption: "Introducing the Business Stakeholders"
+id: 'w000d1'
+caption: 'Introducing the Business Stakeholders'
 panels:
   - characters:
-      - name: "Croc"
+      - name: 'Croc'
         dialogue: null
     caption: |
       Croc
@@ -18,7 +18,7 @@ panels:
         - often running late
     environment: null
   - characters:
-      - name: "Rabbit"
+      - name: 'Rabbit'
         dialogue: null
     caption: |
       Rabbit
@@ -34,7 +34,7 @@ panels:
         - talks a lot (about CrossFit)
     environment: null
   - characters:
-      - name: "Mouse"
+      - name: 'Mouse'
         dialogue: null
     caption: |
       Mouse
@@ -50,7 +50,7 @@ panels:
         - rushes things
     environment: null
   - characters:
-      - name: "Owl"
+      - name: 'Owl'
         dialogue: null
     caption: |
       Owl

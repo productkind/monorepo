@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react'
-
 import type { Candidate, ClipCandidate, Section } from './api'
 import { measureSection, pickClip, pickGif, searchGifs, searchStock, setFlag } from './api'
-import { clipBadge, fitBadge, motionBadge, seconds } from './badges'
 import { BadgeRow } from './BadgeRow'
+import { clipBadge, fitBadge, motionBadge, seconds } from './badges'
 import { CandidateGrid } from './CandidateGrid'
 import { ClipGrid } from './ClipGrid'
 import { VisualPreview } from './VisualPreview'
+
+import { useEffect, useState } from 'react'
 
 /** Enough to name a file by, from whatever was searched for: `woman raising hand` -> `raising-hand`. */
 const nameFrom = ({ term }: { term: string }): string =>
@@ -219,9 +219,7 @@ export const SectionPanel: React.FC<{
                       measured.playbackRate === null
                         ? undefined
                         : { text: `rate ${measured.playbackRate}`, tone: 'plain' },
-                      measured.color === null
-                        ? undefined
-                        : { text: measured.color, tone: 'plain' },
+                      measured.color === null ? undefined : { text: measured.color, tone: 'plain' },
                       measured.seam === undefined
                         ? undefined
                         : { text: `seam ${measured.seam.toFixed(2)}`, tone: 'plain' },
@@ -292,7 +290,9 @@ export const SectionPanel: React.FC<{
           <p className="problem" style={{ borderLeftColor: 'var(--warn)' }}>
             {stock
               ? `This beat holds a gif. Using footage turns it into a clip, trimmed to the ${
-                  measured.slotSeconds === null ? 'beat' : `${measured.slotSeconds.toFixed(1)}s beat`
+                  measured.slotSeconds === null
+                    ? 'beat'
+                    : `${measured.slotSeconds.toFixed(1)}s beat`
                 } plus a second, and filling the frame with the captions over it — footage is the
                   frame's own shape, so it is never letterboxed.`
               : 'This beat holds a clip. Using a gif turns it into one: it loops inside the beat ' +

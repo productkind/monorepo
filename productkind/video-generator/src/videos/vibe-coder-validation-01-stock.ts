@@ -129,7 +129,7 @@ export default defineVideo({
     {
       // A boardwalk leading forward. The turn in the script, and a path someone built rather than
       // one that was already there.
-      text: 
+      text:
         'If you want to prepare your app for real customers, that’s what we’re building a ' +
         'learning path for.',
       visual: clip({

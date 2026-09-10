@@ -13,6 +13,7 @@ The narrative follows a single thread: start with the user's problem, not the so
 ## Structure
 
 ### 1. Craft a Problem Statement
+
 Define what you're solving before jumping to solutions.
 
 - Introduce the problem statement template: I am [user] trying to [outcome], but [barrier] because [root cause], which makes me feel [emotion]
@@ -20,6 +21,7 @@ Define what you're solving before jumping to solutions.
 - Exercise: Write your own problem statement
 
 ### 2. Define Your Target User
+
 Create a persona to guide decisions throughout development.
 
 - What a persona is and why it helps
@@ -28,6 +30,7 @@ Create a persona to guide decisions throughout development.
 - Exercise: Create your persona
 
 ### 3. Storyboard: From Struggle to Solution
+
 Visualise the user's journey from problem to happy outcome.
 
 - Three-step storyboard process:
@@ -38,6 +41,7 @@ Visualise the user's journey from problem to happy outcome.
 - Exercise: Create each panel for your idea
 
 ### 4. Break Down Your Idea Into Buildable Steps
+
 Use story mapping to turn your storyboard into a feature map.
 
 - User story mapping structure:
@@ -48,6 +52,7 @@ Use story mapping to turn your storyboard into a feature map.
 - Exercises: Map activities, steps, and details
 
 ### 5. Decide What to Build First: Define Your MVP
+
 Scope down to the smallest version that delivers value.
 
 - What an MVP is (and isn't)
@@ -56,6 +61,7 @@ Scope down to the smallest version that delivers value.
 - Exercise: Define your MVP
 
 ### 6. Create a Prompt to Build Your MVP with AI
+
 Translate your plan into instructions for an AI app builder.
 
 - Prompt structure: Product Overview, Target User, User Flow, Platform Requirements, Design System
@@ -63,6 +69,7 @@ Translate your plan into instructions for an AI app builder.
 - Tip: Build iteratively, one feature at a time
 
 ### 7. Get Feedback on What You've Built
+
 Plan how to test your idea with real users.
 
 - Why test early

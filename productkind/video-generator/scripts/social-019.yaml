@@ -20,9 +20,10 @@ caption: |-
   You build it yourself by tapping a few blocks together in the Shortcuts app that's already on your phone. It uses Apple Intelligence, so it needs an iPhone 15 Pro or newer, with nothing to download. We made it for mums.
 
   The whole course is free until 30 August at littleparrot.app. Follow along, and save this for the next time your list falls behind.
-title: "Why your written list goes out of date"
+title: 'Why your written list goes out of date'
 hastags:
-  instagram: ["#mentalload", "#braindump", "#mumsofinstagram", "#mentalloadofmotherhood", "#lifeadmin"]
-  tiktok: ["#mentalload", "#braindump", "#momtok", "#mentalloadofmotherhood", "#lifeadmin"]
+  instagram:
+    ['#mentalload', '#braindump', '#mumsofinstagram', '#mentalloadofmotherhood', '#lifeadmin']
+  tiktok: ['#mentalload', '#braindump', '#momtok', '#mentalloadofmotherhood', '#lifeadmin']
 discord: |-
   You write the whole mental load down, feel lighter for a day, then it's out of date because new things arrive while you're driving or mid-feed. Short video on a list you talk to that stays current in ten seconds instead of a sit-down session.

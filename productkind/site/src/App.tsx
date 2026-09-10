@@ -1,5 +1,6 @@
-import type { RouteRecord } from 'vite-react-ssg'
 import Home from './Home'
+
+import type { RouteRecord } from 'vite-react-ssg'
 
 export const routes: RouteRecord[] = [
   {
@@ -8,4 +9,3 @@ export const routes: RouteRecord[] = [
     entry: 'src/Home.tsx',
   },
 ]
-

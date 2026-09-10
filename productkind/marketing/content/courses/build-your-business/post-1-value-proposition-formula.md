@@ -6,27 +6,13 @@ account: little-parrot
 
 # Post 1: The sentence that gets "how does it work?"
 
-**Pillar:** the method, shown.
-**Research trace:** the proven viral shape for this audience is real build +
-specific detail + transferable takeaway, and the three-versions table is
-exactly that; formulas are top saveable content; testing on five real people
-is a concrete, doable outcome; points at the free first challenge.
-Repackages the Value Proposition Formula toolkit item.
+**Pillar:** the method, shown. **Research trace:** the proven viral shape for this audience is real build + specific detail + transferable takeaway, and the three-versions table is exactly that; formulas are top saveable content; testing on five real people is a concrete, doable outcome; points at the free first challenge. Repackages the Value Proposition Formula toolkit item.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Reaction-test style:
-each version of the sentence shown as a speech bubble with the listener's
-reaction drawn next to it (flat face → curious face → leaning in).
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Reaction-test style: each version of the sentence shown as a speech bubble with the listener's reaction drawn next to it (flat face → curious face → leaning in).
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -38,10 +24,7 @@ reaction drawn next to it (flat face → curious face → leaning in).
 | 6 | The sentence appearing in many places at once | "Then one sentence works everywhere: your landing page heading, directory submissions, community posts, your bio, your emails. Write it once, reuse it for months." |
 | 7 (CTA) | Brand card | "Crafting and testing yours is the free first challenge of Build Your Business: From Vibe Coded Product to Paying Customers, on LittleParrot.app 🟪 Save the formula 🔖" |
 
-**Alt text (for the post):** A formula carousel for value propositions:
-product helps who to achieve what without pain point, shown through three
-versions of a book club app pitch with increasingly interested reactions,
-plus a five-person test.
+**Alt text (for the post):** A formula carousel for value propositions: product helps who to achieve what without pain point, shown through three versions of a book club app pitch with increasingly interested reactions, plus a five-person test.
 
 ## Caption (exact)
 
@@ -55,7 +38,4 @@ Crafting yours is the free first challenge of Build Your Business: From Vibe Cod
 
 Save the formula, you'll reuse the sentence everywhere. 🔖
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #womeninbusiness #shebuilds #womenintech #buildinpublic #femalefounder #learnwithai #startupjourney #firstcustomer
+. . . #vibecoding #buildwithai #womenwhobuild #womeninbusiness #shebuilds #womenintech #buildinpublic #femalefounder #learnwithai #startupjourney #firstcustomer

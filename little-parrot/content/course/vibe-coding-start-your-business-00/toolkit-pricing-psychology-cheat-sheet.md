@@ -1,6 +1,7 @@
 ---
-challenge: "7 - Decide What to Charge"
+challenge: '7 - Decide What to Charge'
 ---
+
 ## Pricing Psychology Cheat Sheet
 
 A quick reference for the pricing psychology techniques from Challenge 7. Open this when you're designing your pricing page.

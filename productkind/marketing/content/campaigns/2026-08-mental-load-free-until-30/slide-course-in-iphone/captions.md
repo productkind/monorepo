@@ -7,23 +7,11 @@ status: drafted
 
 # Captions: the course slide (two iPhones, brain dump to shared lists)
 
-**What the slide shows:** two iPhones side by side with a curly orange arrow
-between them. Left phone: a brain dump being spoken into the shortcut's
-dictation panel ("Buy raspberries and strawberries Book the doctor's
-appointment"). Right phone: the shared Food & Household note in Apple Notes,
-with Logistics and Misc stacked under it, so three real, populated checklists.
-Slide copy: "Hand Off the Mental Load", "Turn a spoken brain dump into a list
-your partner gets automatically", "Two iPhone voice shortcuts for mums",
-"Build the first one in 6 minutes on", LittleParrot.app, "Free until 30 August".
+**What the slide shows:** two iPhones side by side with a curly orange arrow between them. Left phone: a brain dump being spoken into the shortcut's dictation panel ("Buy raspberries and strawberries Book the doctor's appointment"). Right phone: the shared Food & Household note in Apple Notes, with Logistics and Misc stacked under it, so three real, populated checklists. Slide copy: "Hand Off the Mental Load", "Turn a spoken brain dump into a list your partner gets automatically", "Two iPhone voice shortcuts for mums", "Build the first one in 6 minutes on", LittleParrot.app, "Free until 30 August".
 
-**Destination:**
-`https://littleparrot.app/55dfd25b-b9a5-4f04-860d-ef5c1d1e20b9/course-overview?utm_source=instagram&utm_campaign=mental-load-aug26`
-(swap `utm_source` per channel)
+**Destination:** `https://littleparrot.app/55dfd25b-b9a5-4f04-860d-ef5c1d1e20b9/course-overview?utm_source=instagram&utm_campaign=mental-load-aug26` (swap `utm_source` per channel)
 
-No YouTube Shorts here: this is a single still, not a video. The three angles in
-this campaign stay apart. Kinga's personal LinkedIn post takes the search-language
-angle, the reel captions carry the Baby Log, and this one is the Brain Dump and
-the shared list.
+No YouTube Shorts here: this is a single still, not a video. The three angles in this campaign stay apart. Kinga's personal LinkedIn post takes the search-language angle, the reel captions carry the Baby Log, and this one is the Brain Dump and the shared list.
 
 ---
 
@@ -57,9 +45,9 @@ Two iPhones side by side with a curly orange arrow between them. On the left, a 
 
 **Founder comments** (post within the first hour)
 
-*Kinga:* We wanted this shortcut to set reminders and add calendar events too, and we cut both because they were too fiddly to be reliable. So it does the one job it can do every time: you talk, it sorts, it saves. If there's another job you'd want your phone to take off you, we'd love to hear it.
+_Kinga:_ We wanted this shortcut to set reminders and add calendar events too, and we cut both because they were too fiddly to be reliable. So it does the one job it can do every time: you talk, it sorts, it saves. If there's another job you'd want your phone to take off you, we'd love to hear it.
 
-*Thomas:* If your partner can't see the lists, the first thing I'd check is whether they've accepted the folder invite, and the second is whether Notes is switched off in their iCloud settings. A shared folder in Notes is always live collaboration, so there's no copy to send and nothing to forward by hand.
+_Thomas:_ If your partner can't see the lists, the first thing I'd check is whether they've accepted the folder invite, and the second is whether Notes is switched off in their iCloud settings. A shared folder in Notes is always live collaboration, so there's no copy to send and nothing to forward by hand.
 
 ---
 
@@ -71,9 +59,9 @@ Say your mental load out loud, your iPhone sorts it 🧠
 
 **Caption**
 
-You can get the mental load out of your head. 
+You can get the mental load out of your head.
 
-Talk, and the AI on your iPhone sorts everything you're carrying into checklists your partner can see and tick off. 
+Talk, and the AI on your iPhone sorts everything you're carrying into checklists your partner can see and tick off.
 
 Nappies, appointments, the shopping. You build it in about 6 minutes in the Shortcuts app you already have.
 
@@ -105,8 +93,7 @@ You tap the back of your phone, say everything you're carrying, and the AI built
 
 The first shortcut takes about 6 minutes to build. The second logs your baby's feeds, nappies and naps as timestamped lines in one running note.
 
-We want it to reach as many mums as we can, so the whole course is free until 30 August:
-https://littleparrot.app/55dfd25b-b9a5-4f04-860d-ef5c1d1e20b9/course-overview?utm_source=linkedin&utm_medium=pk&utm_campaign=mental-load-aug26&utm_content=brain-dump-slide
+We want it to reach as many mums as we can, so the whole course is free until 30 August: https://littleparrot.app/55dfd25b-b9a5-4f04-860d-ef5c1d1e20b9/course-overview?utm_source=linkedin&utm_medium=pk&utm_campaign=mental-load-aug26&utm_content=brain-dump-slide
 
 If you know a mum who's carrying the whole household list in her head, send it to her before the 30th. 💛
 
@@ -116,9 +103,9 @@ Two iPhones side by side with a curly orange arrow between them. On the left, a 
 
 **Founder comments** (post within the first hour)
 
-*Kinga:* We tried letting the AI format the message that goes to your partner as well as sort it, and the formatting wasn't reliable enough to trust. So in the end we type the layout by hand inside the shortcut, and the AI only does the sorting, which it's reliable at. The course is free until 30 August, so please do pass it on if you know a group of mums who'd find it useful.
+_Kinga:_ We tried letting the AI format the message that goes to your partner as well as sort it, and the formatting wasn't reliable enough to trust. So in the end we type the layout by hand inside the shortcut, and the AI only does the sorting, which it's reliable at. The course is free until 30 August, so please do pass it on if you know a group of mums who'd find it useful.
 
-*Thomas:* Two things worth knowing before you build it. The sorting uses Apple Intelligence, so it needs an iPhone 15 Pro or newer, and it runs through Apple's own Private Cloud Compute rather than a third-party AI service, with nothing to subscribe to. And the categories live in the prompt, so you can reword them for work or meal planning and the rest of the shortcut keeps working.
+_Thomas:_ Two things worth knowing before you build it. The sorting uses Apple Intelligence, so it needs an iPhone 15 Pro or newer, and it runs through Apple's own Private Cloud Compute rather than a third-party AI service, with nothing to subscribe to. And the categories live in the prompt, so you can reword them for work or meal planning and the rest of the shortcut keeps working.
 
 ---
 

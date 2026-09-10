@@ -5,9 +5,7 @@
   "source_term": "claude code for non technical people",
   "fallback_term": "",
   "comparison_group": "",
-  "terms": [
-    "claude code for non technical people"
-  ],
+  "terms": ["claude code for non technical people"],
   "term_type": "Search term",
   "geography": "Worldwide",
   "geo_code": "",
@@ -20,9 +18,7 @@
   "data_status": "insufficient_no_series",
   "headers": [],
   "series": [],
-  "nonzero_points": [
-    0
-  ],
+  "nonzero_points": [0],
   "queries": [],
   "topics": [],
   "related_availability": {

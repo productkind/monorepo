@@ -1,7 +1,7 @@
 # Basics of Software for Vibe Coding — Learner responses (verbatim)
 
 Source: in-course `reflection` and `free-text-exercise` step responses (`2026-06-20-course-step-responses/`).  
-Responses are reproduced **verbatim**. Attribution joins the profiles table on `user_id`: **name (nickname) · role · company size · `id`**. `company_type` is a company-*size* bucket (the table has no company name). Where a learner isn't in the profiles table, only the `user_id` prefix is shown.  
+Responses are reproduced **verbatim**. Attribution joins the profiles table on `user_id`: **name (nickname) · role · company size · `id`**. `company_type` is a company-_size_ bucket (the table has no company name). Where a learner isn't in the profiles table, only the `user_id` prefix is shown.  
 Junk/test/empty/unedited-template responses were excluded.  
 Total responses below: **72**
 
@@ -9,7 +9,7 @@ Total responses below: **72**
 
 ## Step 17 — Micro-reflection
 
-*Prompt: What's one thing from this section that you'll take away? How might it change the way you describe what you want to build?*
+_Prompt: What's one thing from this section that you'll take away? How might it change the way you describe what you want to build?_
 
 **Lara** · Business Operations Manager · medium-sized-company-201-1000-employees · `a4822511` · 2026-03-24 · _reflection_
 
@@ -189,8 +189,7 @@ Total responses below: **72**
 
 `794db165` · 2025-12-08 · _reflection_
 
-> Front end - Runs on client side
-> Backend - runs on remote servers
+> Front end - Runs on client side Backend - runs on remote servers
 
 `73a964f7` · 2025-12-08 · _reflection_
 
@@ -244,7 +243,7 @@ Total responses below: **72**
 
 ## Step 42 — Micro-reflection
 
-*Prompt: Think of your current project. What's one component or design term from this section that you'll use in your next prompt?*
+_Prompt: Think of your current project. What's one component or design term from this section that you'll use in your next prompt?_
 
 `1c055c19` · 2026-01-13 · _reflection_
 

@@ -6,28 +6,13 @@ account: little-parrot
 
 # Post 5: What an LLM really does
 
-**Pillar:** the calm view, taught.
-**Research trace:** teaches the real terms (LLM, token, hallucination) with
-plain definitions per the teach-real-terms principle; honest limitation
-framing (verify what matters) is the trust-building register the audience
-rewards over hype; understanding the mechanism is what turns prompting
-tips into judgement. Draws on the course's LLM-literacy thread across
-Challenges 2-4.
+**Pillar:** the calm view, taught. **Research trace:** teaches the real terms (LLM, token, hallucination) with plain definitions per the teach-real-terms principle; honest limitation framing (verify what matters) is the trust-building register the audience rewards over hype; understanding the mechanism is what turns prompting tips into judgement. Draws on the course's LLM-literacy thread across Challenges 2-4.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Diagram style: clean
-schematic illustrations (a text stream splitting into tokens, a ranked
-list of next-word candidates), one concept per slide.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Diagram style: clean schematic illustrations (a text stream splitting into tokens, a ranked list of next-word candidates), one concept per slide.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -39,11 +24,7 @@ list of next-word candidates), one concept per slide.
 | 6 | Dials feeding into the prediction stream | "And this is why prompting techniques work: patterns in, patterns out. Naming the tone, audience, and length, and supplying context, steers which patterns it draws from: you're aiming the prediction." |
 | 7 (CTA) | Brand card | "LLM, token, hallucination: three terms that upgrade you at every AI conversation. Full course: Write Better with AI: Prompting Foundations for Product Managers, on LittleParrot.app. First challenge free 🟪 Save this 🔖" |
 
-**Alt text (for the post):** An explainer carousel on how LLMs work: a
-large language model as text-specialised AI, tokens as small text units
-predicted one by one, hallucinations as confident plausible errors, why
-answers vary between runs, and why prompting techniques steer the
-predictions.
+**Alt text (for the post):** An explainer carousel on how LLMs work: a large language model as text-specialised AI, tokens as small text units predicted one by one, hallucinations as confident plausible errors, why answers vary between runs, and why prompting techniques steer the predictions.
 
 ## Caption (exact)
 
@@ -57,7 +38,4 @@ The full foundations, with practice, are in Write Better with AI: Prompting Foun
 
 Save this for the next "how does this thing work?" conversation. 🔖
 
-.
-.
-.
-#promptingtips #aiatwork #womenintech #ailiteracy #llm #aiskills #learnwithai #techforwomen #worksmarter #careertips #productmanager
+. . . #promptingtips #aiatwork #womenintech #ailiteracy #llm #aiskills #learnwithai #techforwomen #worksmarter #careertips #productmanager

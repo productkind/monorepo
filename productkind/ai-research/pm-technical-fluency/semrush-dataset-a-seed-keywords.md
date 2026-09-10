@@ -7,7 +7,7 @@ Source: Semrush via `phrase_this` (keyword_compare). Databases: `us`, `uk`. Retr
 - `n/a (no row returned)` = Semrush returned no data row for that keyword in that database.
 
 | seed_keyword | country | volume | KDI | CPC | competition | intent | trend/history | data_status |
-|---|---|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | how web apps work for beginners | US | n/a (no row returned) | n/a (no row returned) | n/a (no row returned) | n/a (no row returned) | n/a (not returned by endpoint) | n/a (not returned by endpoint) | no_data |
 | how web apps work for beginners | UK | n/a (no row returned) | n/a (no row returned) | n/a (no row returned) | n/a (no row returned) | n/a (not returned by endpoint) | n/a (not returned by endpoint) | no_data |
 | what happens when you type a url in the browser | US | 40/mo | 0/100 | $0 | 0.33 (medium) | n/a (not returned by endpoint) | n/a (not returned by endpoint) | ok |

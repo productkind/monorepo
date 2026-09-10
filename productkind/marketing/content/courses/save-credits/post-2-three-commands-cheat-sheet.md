@@ -6,26 +6,13 @@ account: little-parrot
 
 # Post 2: Run your app on your own computer (3-command cheat sheet)
 
-**Pillar:** the method, shown.
-**Research trace:** saveable, reference-later content (checklists, recipes)
-wins saves; concrete promised outcomes do more than encouragement; mirrors the
-course's "Run It on Your Computer" cheat sheet toolkit item, so it's pre-made
-saveable content.
+**Pillar:** the method, shown. **Research trace:** saveable, reference-later content (checklists, recipes) wins saves; concrete promised outcomes do more than encouragement; mirrors the course's "Run It on Your Computer" cheat sheet toolkit item, so it's pre-made saveable content.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 6 slides, 1080 x 1350 (4:5 portrait).** Cheat-sheet style: dark
-editor-inspired background, large monospace type for the commands, one command
-per slide so each is screenshot-clean.
+**Carousel, 6 slides, 1080 x 1350 (4:5 portrait).** Cheat-sheet style: dark editor-inspired background, large monospace type for the commands, one command per slide so each is screenshot-clean.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -36,9 +23,7 @@ per slide so each is screenshot-clean.
 | 5 | Terminal-style card, browser window showing an app at localhost:8080 | "3️⃣ npm run dev · Your app appears at localhost:8080, running just for you. Edit, save, and watch it update instantly." |
 | 6 (CTA) | Brand text card | "Every change you make here costs no credits. Save this for your next session. 🔖 Full course: Save Lovable Credits: Edit Your App Like a Developer, on LittleParrot.app. First challenge free." |
 
-**Alt text (for the post):** A cheat sheet carousel showing the three terminal
-commands that run a Lovable app on your own computer: git clone, npm install,
-npm run dev, ending at localhost:8080.
+**Alt text (for the post):** A cheat sheet carousel showing the three terminal commands that run a Lovable app on your own computer: git clone, npm install, npm run dev, ending at localhost:8080.
 
 ## Caption (exact)
 
@@ -52,7 +37,4 @@ You'll need VS Code, Node.js, and Git installed first (all free), and your app c
 
 Save this post for your next building session. 🔖
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #lovable #githubcopilot #womenintech #buildinpublic #aitools #learnwithai #aiforbeginners #techforwomen #vscode
+. . . #vibecoding #buildwithai #womenwhobuild #lovable #githubcopilot #womenintech #buildinpublic #aitools #learnwithai #aiforbeginners #techforwomen #vscode

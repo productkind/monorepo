@@ -26,9 +26,9 @@ caption: |-
   It is done with school. Knowing that changes what you can reasonably expect from it.
 
   Follow along if you want to understand what AI can and cannot do, and save this for the next time it repeats a mistake.
-title: "Why AI does not learn from your chats"
+title: 'Why AI does not learn from your chats'
 hastags:
-  instagram: ["#womenintech", "#womenwhobuild", "#womenlearningai", "#howaiworks", "#aiweights"]
-  tiktok: ["#womenintech", "#womenempowerment", "#womenlearningai", "#howaiworks", "#aitraining"]
+  instagram: ['#womenintech', '#womenwhobuild', '#womenlearningai', '#howaiworks', '#aiweights']
+  tiktok: ['#womenintech', '#womenempowerment', '#womenlearningai', '#howaiworks', '#aitraining']
 discord: |-
   Ever wondered if you are teaching the AI when you correct it in a chat? Short video on what a model actually is (a giant pile of numbers), how training works, and why the model stopped learning the day it was released.

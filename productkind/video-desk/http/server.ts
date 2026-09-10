@@ -1,12 +1,12 @@
-import { createServer, type IncomingMessage, type ServerResponse } from 'node:http'
-import { readFile } from 'node:fs/promises'
-import { last, lastValueFrom } from 'rxjs'
-
 import { createVideoDeskBehavior, type VideoDeskBehavior } from '../domain/behavior.ts'
 import { providerFrom, sectionName } from '../domain/operations.ts'
 import { createDeskIo } from '../services/desk-io.ts'
 import { getServices } from '../services/get-services.ts'
 import { present } from './presenter.ts'
+
+import { readFile } from 'node:fs/promises'
+import { createServer, type IncomingMessage, type ServerResponse } from 'node:http'
+import { last, lastValueFrom } from 'rxjs'
 
 /**
  * The delivery layer: routes in, one behaviour call each, its last event presented as JSON.
@@ -127,7 +127,12 @@ const handle = async ({
   if (request.method === 'GET' && parts.length === 3 && parts[1] === 'videos') {
     return answer({ response, output: behavior.loadVideo({ video: parts[2] ?? '' }) })
   }
-  if (request.method === 'GET' && parts.length === 5 && parts[1] === 'section' && parts[3] === 'measure') {
+  if (
+    request.method === 'GET' &&
+    parts.length === 5 &&
+    parts[1] === 'section' &&
+    parts[3] === 'measure'
+  ) {
     return answer({
       response,
       output: behavior.measureSection({ video: parts[2] ?? '', index: Number(parts[4]) }),
@@ -223,7 +228,9 @@ const handle = async ({
             id: String(body.gifId ?? ''),
             name: sectionName({ term: String(body.name ?? body.search ?? '') }),
             search: String(body.search ?? 'unrecorded'),
-            sourceUrl: String(body.sourceUrl ?? `https://giphy.com/gifs/${String(body.gifId ?? '')}`),
+            sourceUrl: String(
+              body.sourceUrl ?? `https://giphy.com/gifs/${String(body.gifId ?? '')}`,
+            ),
             // Narrowed rather than trusted: the body came off the wire.
             provider: providerFrom({ name: String(body.provider ?? 'giphy') }),
           },

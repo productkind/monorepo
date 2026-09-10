@@ -1,9 +1,9 @@
-import { describe, expect, test } from 'vitest'
-
-import { alignmentToWords } from './words'
-import { buildTimeline } from './timeline'
-import { planTakes } from './takes'
 import social017Alignment from './__fixtures__/social-017.alignment.json'
+import { planTakes } from './takes'
+import { buildTimeline } from './timeline'
+import { alignmentToWords } from './words'
+
+import { describe, expect, test } from 'vitest'
 
 /** A real Alignment, spaced at a fixed rate so the expected frames are obvious by hand. */
 const alignmentFor = ({ text }: { text: string }) => {

@@ -1,10 +1,10 @@
-import { describe, expect, test } from 'vitest'
-
-import { alignmentToWords } from './words'
 import social000Alignment from './__fixtures__/social-000.alignment.json'
 import social000Words from './__fixtures__/social-000.words.json'
 import social017Alignment from './__fixtures__/social-017.alignment.json'
 import social017Words from './__fixtures__/social-017.words.json'
+import { alignmentToWords } from './words'
+
+import { describe, expect, test } from 'vitest'
 
 const withoutCharSpan = (words: ReturnType<typeof alignmentToWords>) =>
   words.map(({ text, start, end }) => ({ text, start, end }))

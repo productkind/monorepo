@@ -1,7 +1,7 @@
 ---
 slug: mental-load-list
 title: "The Mental Load List: Everything You're Carrying, Written Down"
-description: "A complete, categorised mental load list you can copy, covering the invisible jobs nobody sees. Plus a way to keep it filled in by talking to your phone."
+description: 'A complete, categorised mental load list you can copy, covering the invisible jobs nobody sees. Plus a way to keep it filled in by talking to your phone.'
 primary_query: mental load list
 secondary_queries: [mental load checklist, mental load of motherhood, mental load women]
 type: article
@@ -108,21 +108,24 @@ The other way is to say it out loud when it occurs to you, and let your phone so
 
 You talk, however it comes out:
 
-> *"Right, we're out of nappies, wipes and barrier cream, I keep meaning to book the six-week check, the health visitor's coming Tuesday at eleven, and the car really needs a wash. Oh, and we need bananas."*
+> _"Right, we're out of nappies, wipes and barrier cream, I keep meaning to book the six-week check, the health visitor's coming Tuesday at eleven, and the car really needs a wash. Oh, and we need bananas."_
 
 A few seconds later your phone has sorted it into three lists, and you can tick off each line:
 
 **Logistics**
+
 - [ ] Book six week check
 - [ ] Health visitor Tuesday at 11
 
 **Food and household**
+
 - [ ] Buy bananas
 - [ ] Out of nappies
 - [ ] Out of wipes
 - [ ] Out of barrier cream
 
 **Misc**
+
 - [ ] Car really needs a wash
 
 You didn't type anything, and you didn't open an app. And because the lists are saved in a shared folder, your partner sees the same three lists on their own phone and can tick things off from their end.

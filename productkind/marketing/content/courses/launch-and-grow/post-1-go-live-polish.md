@@ -6,27 +6,13 @@ account: little-parrot
 
 # Post 1: The five details that make your link look real
 
-**Pillar:** the messy middle.
-**Research trace:** "production ready real" is the audience's own bar for a
-build that counts; the course's opening story (a friend opens the link and
-asks "Is this... real?") is the relatable pain moment; setup guides are
-saveable content; points at the free first challenge, where learners do all
-of this. Repackages the Meta Tags and Favicon Setup Guide toolkit item.
+**Pillar:** the messy middle. **Research trace:** "production ready real" is the audience's own bar for a build that counts; the course's opening story (a friend opens the link and asks "Is this... real?") is the relatable pain moment; setup guides are saveable content; points at the free first challenge, where learners do all of this. Repackages the Meta Tags and Favicon Setup Guide toolkit item.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Setup-guide style: each
-slide shows a mockup of where the detail appears (browser tab, link preview,
-address bar) so the payoff is visible, with the exact Lovable path beneath.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Setup-guide style: each slide shows a mockup of where the detail appears (browser tab, link preview, address bar) so the payoff is visible, with the exact Lovable path beneath.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -38,10 +24,7 @@ address bar) so the payoff is visible, with the exact Lovable path beneath.
 | 6 | Chat bubble with the review prompt in monospace | "5️⃣ Then let Lovable double-check: 'Review the meta tags, favicon, and published URL of this app. Are they set up correctly? Is anything missing?'" |
 | 7 (CTA) | Brand card, the same link preview now polished | "Fifteen minutes, and your link looks like a product. All five steps are in the free first challenge of Launch and Grow Your Lovable App, on LittleParrot.app 🟪 Save this for publish day 🔖" |
 
-**Alt text (for the post):** A setup-guide carousel showing five details that
-make a published Lovable app look professional: a favicon, a title and
-description, a social share image, a memorable URL, and a prompt asking
-Lovable to review the setup.
+**Alt text (for the post):** A setup-guide carousel showing five details that make a published Lovable app look professional: a favicon, a title and description, a social share image, a memorable URL, and a prompt asking Lovable to review the setup.
 
 ## Caption (exact)
 
@@ -55,7 +38,4 @@ This is the free first challenge of our Launch and Grow Your Lovable App course,
 
 Save this for publish day. 🔖
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #lovable #shebuilds #womenintech #buildinpublic #aitools #femalefounder #learnwithai #techforwomen #websitetips
+. . . #vibecoding #buildwithai #womenwhobuild #lovable #shebuilds #womenintech #buildinpublic #aitools #femalefounder #learnwithai #techforwomen #websitetips

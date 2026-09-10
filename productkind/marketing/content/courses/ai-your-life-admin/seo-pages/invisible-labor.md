@@ -1,10 +1,11 @@
 ---
 slug: invisible-labor
-title: "Invisible Labor: The Work Nobody Counts"
-description: "Where the term invisible labor came from, what counts as it, and how it differs from the mental load, emotional labour and cognitive labour."
+title: 'Invisible Labor: The Work Nobody Counts'
+description: 'Where the term invisible labor came from, what counts as it, and how it differs from the mental load, emotional labour and cognitive labour.'
 primary_query: invisible labor
-secondary_queries: [invisible labour, invisible work, what is invisible labor, invisible labor at home]
-semrush: "invisible labor 1,300/mo, KD 29. US spelling is the query, so it stays in the slug, title and headings; prose is British English."
+secondary_queries:
+  [invisible labour, invisible work, what is invisible labor, invisible labor at home]
+semrush: 'invisible labor 1,300/mo, KD 29. US spelling is the query, so it stays in the slug, title and headings; prose is British English.'
 type: article
 status: drafted
 ref: seo-invisible-labor
@@ -18,7 +19,7 @@ Nobody schedules it. It rarely gets thanked. It only becomes visible when it sto
 
 ## Where the term comes from
 
-The sociologist Arlene Kaplan Daniels named it in [*Invisible Work*](https://academic.oup.com/socpro/article-abstract/34/5/403/1665982), published in *Social Problems* in 1987.
+The sociologist Arlene Kaplan Daniels named it in [_Invisible Work_](https://academic.oup.com/socpro/article-abstract/34/5/403/1665982), published in _Social Problems_ in 1987.
 
 Her argument was that we define "work" as the things somebody pays you for. So unpaid work done at home stops counting as work at all, and because that work has mostly fallen to women, other people treat that effort as a personality trait rather than work. Being organised. Being thoughtful. Being the sort of person who remembers.
 
@@ -53,9 +54,9 @@ Four terms, often used interchangeably, and they aren't the same thing.
 
 **The mental load** is the thinking part specifically: noticing what needs doing, working out the options, deciding, and checking it happened. It's the thinking you keep doing while you're getting on with something else. We cover it in full in [what is the mental load](/guides/what-is-the-mental-load).
 
-**Cognitive labour** is what the research calls the mental load. If you want the academic literature rather than the popular writing, that's the phrase to search. Allison Daminger's [*The Cognitive Dimension of Household Labor*](https://journals.sagepub.com/doi/10.1177/0003122419859007) is widely cited.
+**Cognitive labour** is what the research calls the mental load. If you want the academic literature rather than the popular writing, that's the phrase to search. Allison Daminger's [_The Cognitive Dimension of Household Labor_](https://journals.sagepub.com/doi/10.1177/0003122419859007) is widely cited.
 
-**Emotional labour** comes from the sociologist Arlie Hochschild's [*The Managed Heart*](https://www.ucpress.edu/books/the-managed-heart/paper), published in 1983. It originally described managing your own feelings as part of a paid job, like a flight attendant staying friendly through a twelve-hour shift. It's now widely used for the work of managing everyone's moods at home, remembering who needs cheering up and heading off arguments before they start, which is a broader use than the original.
+**Emotional labour** comes from the sociologist Arlie Hochschild's [_The Managed Heart_](https://www.ucpress.edu/books/the-managed-heart/paper), published in 1983. It originally described managing your own feelings as part of a paid job, like a flight attendant staying friendly through a twelve-hour shift. It's now widely used for the work of managing everyone's moods at home, remembering who needs cheering up and heading off arguments before they start, which is a broader use than the original.
 
 Visible work can be divided by asking. **Invisible work has to be seen before it can be shared**, which is why writing it down gets you further than agreeing a rota: the other person can see the whole list before you split it.
 

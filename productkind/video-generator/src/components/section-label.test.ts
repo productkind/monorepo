@@ -1,7 +1,7 @@
-import { describe, expect, test } from 'vitest'
-
 import { clip, gif, still } from '../narration/definition'
 import { annotationLine, sectionLabel } from './section-label'
+
+import { describe, expect, test } from 'vitest'
 
 describe('sectionLabel', () => {
   test('names a section by its index, its asset and the line spoken over it', () => {

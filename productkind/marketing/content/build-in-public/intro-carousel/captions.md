@@ -6,17 +6,9 @@ account: productkind
 
 # Intro carousel: captions
 
-**Brand:** productkind (build-in-public)
-**Source:** `spec.md` in this folder, the 10-slide photo carousel made by hand.
-**Destination:** littleparrot.app, where the first challenge of every course is
-free. On TikTok the link lives in the pinned comment (no bio link yet).
+**Brand:** productkind (build-in-public) **Source:** `spec.md` in this folder, the 10-slide photo carousel made by hand. **Destination:** littleparrot.app, where the first challenge of every course is free. On TikTok the link lives in the pinned comment (no bio link yet).
 
-Every caption covers the same three things in the reader's own words: our
-mission (closing the gender gap in AI adoption), the problem (AI app builders
-opened up who can make software, and the people using them come from the same
-backgrounds as before), and our answer (Little Parrot's short hands-on
-courses, where you build something in every one). None of it repeats the
-slide copy word for word.
+Every caption covers the same three things in the reader's own words: our mission (closing the gender gap in AI adoption), the problem (AI app builders opened up who can make software, and the people using them come from the same backgrounds as before), and our answer (Little Parrot's short hands-on courses, where you build something in every one). None of it repeats the slide copy word for word.
 
 ---
 
@@ -98,13 +90,7 @@ If you have an idea you keep not starting, the first challenge of every course i
 
 ## Posting checklist
 
-- Instagram: invite Kinga as a collaborator before publishing (Tag people >
-  Invite collaborator); never re-upload the same post on her account. Pin the
-  post to the top of the `by_productkind` profile.
-- TikTok: post the PNGs in photo mode, paste the Title into the Title field and
-  the caption into the caption field. The link goes in the pinned comment, not
-  the caption. Pin the post on `littleparrot.app`.
-- LinkedIn: publish the PDF as a document post from the productkind page and
-  set it as the featured post. The link stays in the body.
-- Founder comments go up within the first hour on Instagram and LinkedIn, and
-  reply to every real commenter in that window.
+- Instagram: invite Kinga as a collaborator before publishing (Tag people > Invite collaborator); never re-upload the same post on her account. Pin the post to the top of the `by_productkind` profile.
+- TikTok: post the PNGs in photo mode, paste the Title into the Title field and the caption into the caption field. The link goes in the pinned comment, not the caption. Pin the post on `littleparrot.app`.
+- LinkedIn: publish the PDF as a document post from the productkind page and set it as the featured post. The link stays in the body.
+- Founder comments go up within the first hour on Instagram and LinkedIn, and reply to every real commenter in that window.

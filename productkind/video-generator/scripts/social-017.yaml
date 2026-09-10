@@ -11,7 +11,7 @@ script: |-
 
   In our Hand Off the Mental Load course, you build both shortcuts yourself in about 20 minutes.
 
-  The whole course is free until the 30th of August, link in comments to build your shortcuts.  
+  The whole course is free until the 30th of August, link in comments to build your shortcuts.
 caption: |-
   When everything lives in your head, even the small things add up.
 
@@ -26,9 +26,10 @@ caption: |-
   The course is free until 30 August, so more mums can try it. Link in comments.
 
   If there’s a mum in your life who could use this, send it to her. 💛
-title: "Build this to hand off some of the mental load"
+title: 'Build this to hand off some of the mental load'
 hastags:
-  instagram: ["#mentalload", "#mumsofinstagram", "#newmum", "#mentalloadofmotherhood", "#iphoneshortcuts"]
-  tiktok: ["#mentalload", "#momtok", "#newmomtips", "#mentalloadofmotherhood", "#iphoneshortcuts"]
+  instagram:
+    ['#mentalload', '#mumsofinstagram', '#newmum', '#mentalloadofmotherhood', '#iphoneshortcuts']
+  tiktok: ['#mentalload', '#momtok', '#newmomtips', '#mentalloadofmotherhood', '#iphoneshortcuts']
 discord: |-
   The thoughts that arrive at 2am with a baby on you, the ones that keep you awake until six. Short video on a shortcut you talk to that sorts them onto the right list, so you can put them down and go back to sleep. You build it yourself, and the first one is free.

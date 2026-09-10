@@ -26,10 +26,8 @@ The work is judgement, not search. Giphy's stock is overwhelmingly captioned mem
 
 ## The loop, per section
 
-1. **Write three or four search terms** for the beat's *idea*, following the skill's rules on register and on who appears. Lead with object and character registers — they come back clean far more often than people.
-2. **Harvest**, from the skill's own directory (`cd .claude/skills/video-gifs` once — the scripts resolve
-   `scripts/…` relative to it):
-   `python3 scripts/harvest.py --video <id> --section N --slot <seconds> --show 5 --terms "..." "..." "..."`. Pass `--skip` with every id you have already rejected for that section, so rounds don't repeat themselves.
+1. **Write three or four search terms** for the beat's _idea_, following the skill's rules on register and on who appears. Lead with object and character registers — they come back clean far more often than people.
+2. **Harvest**, from the skill's own directory (`cd .claude/skills/video-gifs` once — the scripts resolve `scripts/…` relative to it): `python3 scripts/harvest.py --video <id> --section N --slot <seconds> --show 5 --terms "..." "..." "..."`. Pass `--skip` with every id you have already rejected for that section, so rounds don't repeat themselves.
 3. **Read the montage once.** Its rows match the printed list top to bottom. Judge every candidate against the skill's reject list and its house-style preference. Do not re-read a montage you have already read.
 4. **If nothing passes, change the register, not the wording.** Two failed rounds on near-identical phrasings means the register is wrong, not the query: move from people to objects, from footage to illustration, from literal to metaphor. Cap at four rounds per section.
 5. **If four rounds produce nothing usable, leave the section unresolved** and move on. Say what you tried and what you would need. A captioned or watermarked gif is worse than an empty beat — the caller can shoot a screenshot, but they cannot un-ship a channel bug.

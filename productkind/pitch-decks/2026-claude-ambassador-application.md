@@ -30,11 +30,10 @@ Through LinkedIn.
 
 ## 4. Anything else we should know?
 
-Two things: 
+Two things:
 
 1. At the SheBuilds event in Singapore this March, we discovered that a Lovable Ambassador had used our course content word-for-word in her own presentation, unprompted, because it taught the tool better than the official materials did. I mention it because that is the job of an ambassador in miniature: making material good enough that other teachers reach for it.
 
 2. And when I say our company runs on Claude Code, I mean well beyond writing code. Our courses are drafted, critiqued by review agents we built, and shipped through it, along with our emails and content. We've written skills that give Claude enough context on what good looks like for us, from our tone of voice to our course pedagogy, so the expertise stays ours and the output stays consistent. This application was written with it too. I'd be representing a tool I use every day, and I'd want to bring what we've built at Little Parrot to the Claude community: a space where women feel welcomed, ask questions freely, and stay. That is how a community becomes diverse.
 
 ---
-

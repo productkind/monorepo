@@ -6,28 +6,13 @@ account: little-parrot
 
 # Post 3: Which part of your app misbehaves
 
-**Pillar:** the messy middle.
-**Research trace:** locating the problem by layer is the beginner's version
-of diagnosis-before-fixing, the skill the audience asks for verbatim; it
-builds directly on the bakery mental model (post 1), showing the vocabulary
-paying rent; symptom-to-prompt guides are saveable decision content.
-Repackages the "Where Is the Problem?" Troubleshooting Guide toolkit item.
+**Pillar:** the messy middle. **Research trace:** locating the problem by layer is the beginner's version of diagnosis-before-fixing, the skill the audience asks for verbatim; it builds directly on the bakery mental model (post 1), showing the vocabulary paying rent; symptom-to-prompt guides are saveable decision content. Repackages the "Where Is the Problem?" Troubleshooting Guide toolkit item.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Symptom-map style: each
-slide pairs a symptom (drawn as a small app mockup with the fault visible)
-with the layer it points to and the prompt to send, using the bakery room
-icons from post 1 as location markers.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Symptom-map style: each slide pairs a symptom (drawn as a small app mockup with the fault visible) with the layer it points to and the prompt to send, using the bakery room icons from post 1 as location markers.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -39,11 +24,7 @@ icons from post 1 as location markers.
 | 6 | An unsent envelope and a card machine, a key icon | "An EXTERNAL service fails (emails not sending, payments not processing)? That's the API or its key. Say: 'The email feature isn't working. Check if the API key is configured correctly and the backend function calls the service properly.'" |
 | 7 (CTA) | Brand card, the map complete | "Match the symptom to its layer, then prompt: every fix conversation gets shorter. Full guide: Basics of Software for Vibe Coding, on LittleParrot.app. First challenge free 🟪 Save this for the next hiccup 🔖" |
 
-**Alt text (for the post):** A troubleshooting-map carousel matching app
-symptoms to layers: visual issues point to frontend styling, dead clicks to
-frontend logic or backend, missing data to backend or database, unsaved
-data to the database connection, and failing emails or payments to the API
-key, each with a ready prompt.
+**Alt text (for the post):** A troubleshooting-map carousel matching app symptoms to layers: visual issues point to frontend styling, dead clicks to frontend logic or backend, missing data to backend or database, unsaved data to the database connection, and failing emails or payments to the API key, each with a ready prompt.
 
 ## Caption (exact)
 
@@ -57,7 +38,4 @@ The full guide comes with our Basics of Software for Vibe Coding course; you'll 
 
 Save this for the next hiccup. 🔖
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #techliteracy #debugging #womenintech #techforwomen #learnwithai #techbasics #appbuilding #codingforbeginners
+. . . #vibecoding #buildwithai #womenwhobuild #techliteracy #debugging #womenintech #techforwomen #learnwithai #techbasics #appbuilding #codingforbeginners

@@ -1,6 +1,7 @@
 ---
-challenge: "8 - Build a Sustainable Business"
+challenge: '8 - Build a Sustainable Business'
 ---
+
 ## Break-Even and Cashflow Tracker
 
 A Google Sheet to calculate how many paying users you need to cover your costs, and track your income and expenses month by month. Make a copy to your own Google Drive and fill it in with your own numbers.

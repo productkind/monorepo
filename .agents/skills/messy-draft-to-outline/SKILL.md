@@ -38,4 +38,5 @@ Newest first. Only the first example carries the required **Verification handoff
 - `../../../little-parrot/content/course/lovable-intro-00/lovable-intro-00-outline.md`
 
 ### Save Outline
+
 Save the generated outline to this folder: `../../../little-parrot/content/course`

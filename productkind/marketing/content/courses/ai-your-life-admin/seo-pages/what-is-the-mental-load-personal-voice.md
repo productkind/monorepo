@@ -1,9 +1,10 @@
 ---
 slug: what-is-the-mental-load
-title: "What Is the Mental Load? What I Found When I Went Looking"
-description: "The mental load is the work of noticing, deciding and keeping track. What the research says, and what surprised me when I read it."
+title: 'What Is the Mental Load? What I Found When I Went Looking'
+description: 'The mental load is the work of noticing, deciding and keeping track. What the research says, and what surprised me when I read it.'
 primary_query: what is mental load
-secondary_queries: [mental load meaning, women mental load, mental load of motherhood, emotional load]
+secondary_queries:
+  [mental load meaning, women mental load, mental load of motherhood, emotional load]
 type: article
 status: experiment
 voice: personal (Kinga, first person)
@@ -33,15 +34,15 @@ It happens before and around the visible jobs, and that's what makes it hard to 
 
 ## Where the term comes from
 
-The phrase spread widely in 2017, when the French cartoonist Emma published [*You Should've Asked*](https://english.emmaclit.com/2017/05/20/you-shouldve-asked/), in which a mother runs a household and a dinner party at the same time, and her husband answers her frustration with "You should've asked", which is where the title comes from. Her argument is that a partner who offers to help and waits to be told what to do leaves all the managing with the person already doing it. Which is why "just tell me what to do" doesn't fix it.
+The phrase spread widely in 2017, when the French cartoonist Emma published [_You Should've Asked_](https://english.emmaclit.com/2017/05/20/you-shouldve-asked/), in which a mother runs a household and a dinner party at the same time, and her husband answers her frustration with "You should've asked", which is where the title comes from. Her argument is that a partner who offers to help and waits to be told what to do leaves all the managing with the person already doing it. Which is why "just tell me what to do" doesn't fix it.
 
-The sociologist Allison Daminger interviewed 35 American heterosexual couples for [*The Cognitive Dimension of Household Labor*](https://journals.sagepub.com/doi/10.1177/0003122419859007), published in 2019, and split the thinking work into four parts: anticipating a need, working out the options, deciding, and then checking it got done.
+The sociologist Allison Daminger interviewed 35 American heterosexual couples for [_The Cognitive Dimension of Household Labor_](https://journals.sagepub.com/doi/10.1177/0003122419859007), published in 2019, and split the thinking work into four parts: anticipating a need, working out the options, deciding, and then checking it got done.
 
 Daminger found that deciding was often shared fairly evenly, while anticipating and monitoring were not, and that surprised me. Those two steps, noticing what's needed and checking it got done, fell mostly to women. Her couples also shared the cooking far more readily than the remembering.
 
 Which explains an argument I've heard versions of for years without ever being able to name it. A partner who does help, and does take part in the decisions, can be telling the truth when they say the work is shared. They're thinking of the deciding. The other two steps, the noticing and the checking, are the ones that never stop.
 
-Eve Rodsky's [*Fair Play*](https://www.fairplaylife.com/the-book) turned the same idea into a deck of cards, one per household job, where whoever holds a card is responsible for that whole job – the noticing and the planning, not only the doing.
+Eve Rodsky's [_Fair Play_](https://www.fairplaylife.com/the-book) turned the same idea into a deck of cards, one per household job, where whoever holds a card is responsible for that whole job – the noticing and the planning, not only the doing.
 
 ## Why it's heavy, when each job is small
 
@@ -55,7 +56,7 @@ One more thing works against you, and it was the most interesting part of everyt
 
 Three approaches, all worth trying.
 
-**Write it down for a week.** Write down the things you *noticed* needed doing, rather than the jobs you actually finished. It's boring, and at the end you have a list of everything you noticed, which you can show the person you live with. We keep a [mental load list](/guides/mental-load-list) you can copy so you're not starting from a blank page.
+**Write it down for a week.** Write down the things you _noticed_ needed doing, rather than the jobs you actually finished. It's boring, and at the end you have a list of everything you noticed, which you can show the person you live with. We keep a [mental load list](/guides/mental-load-list) you can copy so you're not starting from a blank page.
 
 **Hand over whole jobs rather than tasks.** "Can you book the dentist" leaves you doing the noticing, the working out and the checking. "Dentists are yours" hands over all four parts. The hard bit is accepting it'll be done differently from how you'd do it, and to be honest I think most advice skips past that part.
 

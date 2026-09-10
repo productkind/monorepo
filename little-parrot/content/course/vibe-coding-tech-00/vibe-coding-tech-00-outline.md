@@ -13,6 +13,7 @@ The narrative moves from the outside in: start with the visible (what users see)
 ## Structure
 
 ### 1. Building Blocks of an Application
+
 Understand how apps are structured so you can direct your AI builder to the right place.
 
 - What vibe coding is: building with words, not code
@@ -24,6 +25,7 @@ Understand how apps are structured so you can direct your AI builder to the righ
 - Quizzes: identify which part handles what
 
 ### 2. Design Elements for Vibe Coders
+
 Get the vocabulary to describe how you want things to look.
 
 - Wireframes: sketch before you prompt
@@ -35,6 +37,7 @@ Get the vocabulary to describe how you want things to look.
 - Quizzes: match components to use cases
 
 ### 3. Frontend for Vibe Coders
+
 Understand what the AI builder generates so you can give better feedback.
 
 - The three languages: HTML (structure), CSS (style), JavaScript (behaviour)
@@ -45,6 +48,7 @@ Understand what the AI builder generates so you can give better feedback.
 - Quizzes: identify what each technology does
 
 ### 4. Backend for Vibe Coders
+
 Learn to prompt for features that go beyond what users see.
 
 - Supabase: the backend toolkit most AI builders use
@@ -56,6 +60,7 @@ Learn to prompt for features that go beyond what users see.
 - Quizzes: distinguish auth concepts, understand API purpose
 
 ### 5. Databases for Vibe Coders
+
 Understand how your app stores and remembers data.
 
 - Tables, columns, and rows: data organised like structured spreadsheets

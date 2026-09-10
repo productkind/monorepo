@@ -1,6 +1,6 @@
-import { describe, expect, test } from 'vitest'
-
 import { sectionAt } from './active-section'
+
+import { describe, expect, test } from 'vitest'
 
 const SECTIONS = [
   { index: 0, fromFrame: 0, durationInFrames: 60, wordFrom: 0, wordTo: 6 },

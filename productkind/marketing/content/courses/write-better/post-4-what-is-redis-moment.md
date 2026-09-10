@@ -6,28 +6,13 @@ account: little-parrot
 
 # Post 4: The stand-up nod-along prompt
 
-**Pillar:** the method, shown, with the confidence angle.
-**Research trace:** this is Corina's want verbatim ("key technical terms
-that will allow me to have confident conversations with the developers");
-the nod-along moment and the unasked "dumb question" are documented
-audience behaviour; the level-context-purpose recipe turns a private
-embarrassment into a repeatable technique. Draws on the course's
-Challenge 4.
+**Pillar:** the method, shown, with the confidence angle. **Research trace:** this is Corina's want verbatim ("key technical terms that will allow me to have confident conversations with the developers"); the nod-along moment and the unasked "dumb question" are documented audience behaviour; the level-context-purpose recipe turns a private embarrassment into a repeatable technique. Draws on the course's Challenge 4.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Stand-up-scene style: a
-meeting illustration on the cover (everyone nodding, one thought bubble),
-then recipe cards, the assembled prompt in monospace.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Stand-up-scene style: a meeting illustration on the cover (everyone nodding, one thought bubble), then recipe cards, the assembled prompt in monospace.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -39,10 +24,7 @@ then recipe cards, the assembled prompt in monospace.
 | 6 | A small caution card | "One honest caveat: chat assistants can hallucinate (confidently state something wrong), so verify anything you'll repeat in an important room. For building your understanding, they're superb." |
 | 7 (CTA) | Brand card, the same stand-up, a hand raised comfortably | "Next stand-up, you ask a sharper question instead of nodding. That shift is what Write Better with AI: Prompting Foundations for Product Managers is for, on LittleParrot.app. First challenge free 🟪 Save the recipe 🔖" |
 
-**Alt text (for the post):** A carousel about learning technical terms with
-a chat assistant: the stand-up nod-along moment, a prompt recipe with
-level, context, and purpose, follow-up questions, and a caveat about
-verifying facts.
+**Alt text (for the post):** A carousel about learning technical terms with a chat assistant: the stand-up nod-along moment, a prompt recipe with level, context, and purpose, follow-up questions, and a caveat about verifying facts.
 
 ## Caption (exact)
 
@@ -58,7 +40,4 @@ The full technique is Challenge 4 of Write Better with AI: Prompting Foundations
 
 Save the recipe for the next mystery term. 🔖
 
-.
-.
-.
-#promptingtips #aiatwork #productmanagement #womenintech #techliteracy #productmanager #aiskills #learnwithai #techforwomen #careertips #worksmarter
+. . . #promptingtips #aiatwork #productmanagement #womenintech #techliteracy #productmanager #aiskills #learnwithai #techforwomen #careertips #worksmarter

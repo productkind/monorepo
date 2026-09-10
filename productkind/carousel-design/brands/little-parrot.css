@@ -12,14 +12,15 @@
 
 :root {
   --grad: linear-gradient(120deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70);
-  --grad-wash: linear-gradient(120deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020), #ffffff;
+  --grad-wash:
+    linear-gradient(120deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020), #ffffff;
 
-  --font-display: 'Space Mono', monospace;   /* headlines, header row, kickers, labels, badges */
-  --font-copy: 'Inter', sans-serif;          /* body copy on slides */
-  --font-plain: 'Inter', sans-serif;         /* supporting/secondary text */
-  --font-mono: 'Space Mono', monospace;      /* prompt windows, chart labels */
+  --font-display: 'Space Mono', monospace; /* headlines, header row, kickers, labels, badges */
+  --font-copy: 'Inter', sans-serif; /* body copy on slides */
+  --font-plain: 'Inter', sans-serif; /* supporting/secondary text */
+  --font-mono: 'Space Mono', monospace; /* prompt windows, chart labels */
 
-  --weight-headline: 700;                    /* Space Mono only has 400 and 700 */
+  --weight-headline: 700; /* Space Mono only has 400 and 700 */
   --weight-copy: 400;
 
   --ink: #080809;

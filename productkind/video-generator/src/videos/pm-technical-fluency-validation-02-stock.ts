@@ -40,7 +40,7 @@ export default defineVideo({
   sections: [
     {
       // A keyboard and a screen, close. The whole of what the answer covers.
-      text: 
+      text:
         '“So how does your product work?” You can demo every screen, and that’s as far as ' +
         'your answer goes.',
       visual: clip({
@@ -115,7 +115,7 @@ export default defineVideo({
     },
     {
       // Fog lifting off a valley, which is what understanding your own product looks like.
-      text: 
+      text:
         'If you want to understand that about your own product, that’s what we’re building a ' +
         'learning path for.',
       visual: clip({

@@ -1,7 +1,7 @@
 # Build Your First App With Lovable — Learner responses (verbatim)
 
 Source: in-course `reflection` and `free-text-exercise` step responses (`2026-06-20-course-step-responses/`).  
-Responses are reproduced **verbatim**. Attribution joins the profiles table on `user_id`: **name (nickname) · role · company size · `id`**. `company_type` is a company-*size* bucket (the table has no company name). Where a learner isn't in the profiles table, only the `user_id` prefix is shown.  
+Responses are reproduced **verbatim**. Attribution joins the profiles table on `user_id`: **name (nickname) · role · company size · `id`**. `company_type` is a company-_size_ bucket (the table has no company name). Where a learner isn't in the profiles table, only the `user_id` prefix is shown.  
 Junk/test/empty/unedited-template responses were excluded.  
 Total responses below: **835**
 
@@ -9,7 +9,7 @@ Total responses below: **835**
 
 ## Step 17 — Your turn: Build your first app
 
-*Prompt: Open [Lovable](https://lovable.dev/), paste [Dalmie's structured prompt](https://littleparrot.app/nest/toolkit/17e40eb9-e190-40ed-b3d3-44300f2e2b08) (or adapt it for your own idea), and press Enter.  Watch what happens. In a couple of minutes, you'll have a working app.  Click around. Test the buttons. See what Lovable created. It might not be perfect, and that's completely fine.  What did you not…*
+_Prompt: Open [Lovable](https://lovable.dev/), paste [Dalmie's structured prompt](https://littleparrot.app/nest/toolkit/17e40eb9-e190-40ed-b3d3-44300f2e2b08) (or adapt it for your own idea), and press Enter. Watch what happens. In a couple of minutes, you'll have a working app. Click around. Test the buttons. See what Lovable created. It might not be perfect, and that's completely fine. What did you not…_
 
 **María Constanza Foix (MC)** · Lawyer/Future CEO · startup-1-50-employees · `02207165` · 2026-06-18 · _reflection_
 
@@ -53,7 +53,7 @@ Total responses below: **835**
 
 **La Shara Cordero** · Judicial Services Manager · medium-sized-company-201-1000-employees · `c5dab3ae` · 2026-06-03 · _reflection_
 
-> I can't believe Lovable's capabilities.  My first build was a type faster tool and now I can build Saas product.  Unreal.
+> I can't believe Lovable's capabilities. My first build was a type faster tool and now I can build Saas product. Unreal.
 
 **Surabhi Nair** · Applied ML · freelancer · `ee34cde9` · 2026-06-02 · _reflection_
 
@@ -65,10 +65,7 @@ Total responses below: **835**
 
 **Dhanashree Chougule (DC)** · Data expert · medium-sized-company-201-1000-employees · `a02281f2` · 2026-06-02 · _reflection_
 
-> Product overview
-> A app where we can extract the costs from PRIIP KID Document.
-> User flow
-> When user upload the KID in PDF format. It extract the Cost in XLS or CSV and provide the file back
+> Product overview A app where we can extract the costs from PRIIP KID Document. User flow When user upload the KID in PDF format. It extract the Cost in XLS or CSV and provide the file back
 
 **Blue Tile Web (Fernanda)** · Founder and CEO · startup-1-50-employees · `88910899` · 2026-06-02 · _reflection_
 
@@ -76,8 +73,7 @@ Total responses below: **835**
 
 **Kate Rushton** · Community Manager · freelancer · `c50f76d4` · 2026-06-02 · _reflection_
 
-> Clear user interface
-> Some errors
+> Clear user interface Some errors
 
 **Akankshya Jena** · Undergraduate · freelancer · `1fd50caa` · 2026-06-02 · _reflection_
 
@@ -85,7 +81,7 @@ Total responses below: **835**
 
 **Vida** · Product manager · small-business-51-200-employees · `f0b159aa` · 2026-04-21 · _reflection_
 
-> it made almost what i imagined, and it is quite straight forward for what i gave it  as a prompt
+> it made almost what i imagined, and it is quite straight forward for what i gave it as a prompt
 
 **Dániel Falus (dani)** · Software developer · startup-1-50-employees · `30b21f2e` · 2026-03-24 · _reflection_
 
@@ -134,7 +130,7 @@ Total responses below: **835**
 **M** · Founder · startup-1-50-employees · `451a6fcf` · 2026-03-09 · _reflection_
 
 > I noticed that once I became clear about the vision for my app, I was able to communicate that much more effectively in my prompts.
-> 
+>
 > I was also surprised by how quickly the basic structure of the app was created. However, integrating the app with other platforms, such as Kit to build an email list, took more time. Overall, the process was straightforward, but it requires commitment and patience to work through the iterative development process.
 
 **xirui hu** · UX Designer · freelancer · `c6519251` · 2026-03-09 · _reflection_
@@ -144,53 +140,65 @@ Total responses below: **835**
 **Ashley Sinclair (Ashlx)** · UX designer · freelancer · `5755869a` · 2026-03-09 · _reflection_
 
 > ## Product overview
+>
 > A simple app where book club members can suggest books for the group to read next.
-> 
+>
 > ## User flow
+>
 > 1. User opens the app and sees a list of book suggestions
 > 2. User can add a new suggestion with the book title and a short note about why they recommend it
-> 
+>
 > ## Platform requirements
+>
 > - Mobile-first layout
 > - Accessible (WCAG AA compliance)
-> 
+>
 > ## Design system
+>
 > - Brand colours: warm cream (#FDF6E3), deep brown (#5C4033), coral (#E07A5F)
 > - Heading font: Merriweather
 > - Paragraph font: Open Sans
 > - Style: cosy, bookish, friendly
-> 
+>
 > ## Implementation details
+>
 > - No login required for the first version
 > - Store data locally for now
-> 
+>
 > ## Target user
+>
 > Sarah, a book club organiser who wants to spend less time on admin and more time reading with friends.
 
 **Dipti Soul** · Head of Digital · medium-sized-company-201-1000-employees · `b3d427c0` · 2026-03-09 · _reflection_
 
 > ## Product overview
+>
 > A simple app where book club members can suggest books for the group to read next.
-> 
+>
 > ## User flow
+>
 > 1. User opens the app and sees a list of book suggestions
 > 2. User can add a new suggestion with the book title and a short note about why they recommend it
-> 
+>
 > ## Platform requirements
+>
 > - Mobile-first layout
 > - Accessible (WCAG AA compliance)
-> 
+>
 > ## Design system
+>
 > - Brand colours: warm cream (#FDF6E3), deep brown (#5C4033), coral (#E07A5F)
 > - Heading font: Merriweather
 > - Paragraph font: Open Sans
 > - Style: cosy, bookish, friendly
-> 
+>
 > ## Implementation details
+>
 > - No login required for the first version
 > - Store data locally for now
-> 
+>
 > ## Target user
+>
 > Sarah, a book club organiser who wants to spend less time on admin and more time reading with friends.
 
 **Jen Benz** · Product Leader · large-enterprise-1001-employees · `f9dfe745` · 2026-03-09 · _reflection_
@@ -284,27 +292,33 @@ Total responses below: **835**
 **Phoebe** · Analyst · freelancer · `3900ed44` · 2026-03-08 · _reflection_
 
 > ## Product overview
+>
 > A simple app where book club members can suggest books for the group to read next.
-> 
+>
 > ## User flow
+>
 > 1. User opens the app and sees a list of book suggestions
 > 2. User can add a new suggestion with the book title and a short note about why they recommend it
-> 
+>
 > ## Platform requirements
+>
 > - Mobile-first layout
 > - Accessible (WCAG AA compliance)
-> 
+>
 > ## Design system
+>
 > - Brand colours: warm cream (#FDF6E3), deep brown (#5C4033), coral (#E07A5F)
 > - Heading font: Merriweather
 > - Paragraph font: Open Sans
 > - Style: cosy, bookish, friendly
-> 
+>
 > ## Implementation details
+>
 > - No login required for the first version
 > - Store data locally for now
-> 
+>
 > ## Target user
+>
 > Sarah, a book club organiser who wants to spend less time on admin and more time reading with friends.
 
 **Aida Benkirane** · Founder · startup-1-50-employees · `0930444c` · 2026-03-08 · _reflection_
@@ -357,8 +371,7 @@ Total responses below: **835**
 
 **Marta Knežević (Martić)** · Entrepreneur · startup-1-50-employees · `ca38d2b9` · 2026-03-08 · _reflection_
 
-> I noticed that the design is similar to other lovable-built apps
-> But i love the fact I can change everything!
+> I noticed that the design is similar to other lovable-built apps But i love the fact I can change everything!
 
 **bojana jevtovic** · Project manager · startup-1-50-employees · `3024e4d1` · 2026-03-08 · _reflection_
 
@@ -387,7 +400,7 @@ Total responses below: **835**
 **Chinyere Okpara (ItsmeChi)** · Data Scientist · startup-1-50-employees · `4becc96d` · 2026-03-08 · _reflection_
 
 > I noticed the the color palette and font was predefined, instead of suggested.
-> 
+>
 > I'm surprised that the backend is even taken care of for you.
 
 **Seena Iype** · Product · freelancer · `f5e93b18` · 2026-03-08 · _reflection_
@@ -409,27 +422,33 @@ Total responses below: **835**
 **Avanthika Sankara raman** · Data engineer · freelancer · `cced74a7` · 2026-03-08 · _reflection_
 
 > ## Product overview
+>
 > A simple app where book club members can suggest books for the group to read next.
-> 
+>
 > ## User flow
+>
 > 1. User opens the app and sees a list of book suggestions
 > 2. User can add a new suggestion with the book title and a short note about why they recommend it
-> 
+>
 > ## Platform requirements
+>
 > - Mobile-first layout
 > - Accessible (WCAG AA compliance)
-> 
+>
 > ## Design system
+>
 > - Brand colours: warm cream (#FDF6E3), deep brown (#5C4033), coral (#E07A5F)
 > - Heading font: Merriweather
 > - Paragraph font: Open Sans
 > - Style: cosy, bookish, friendly
-> 
+>
 > ## Implementation details
+>
 > - No login required for the first version
 > - Store data locally for now
-> 
+>
 > ## Target user
+>
 > Sarah, a book club organiser who wants to spend less time on admin and more time reading with friends.
 
 **Sophie** · Product Manager · startup-1-50-employees · `d746db88` · 2026-03-08 · _reflection_
@@ -483,26 +502,32 @@ Total responses below: **835**
 **Ashna Goradia** · User Experience Designer · freelancer · `bc4ebd9e` · 2026-03-08 · _reflection_
 
 > ## Product overview
+>
 > A simple app where user can search for verified charities/ngo’s to donate to and be able to search by location. He also wants to know what his donation would be used towards
-> 
+>
 > ## User flow
+>
 > 1. User opens the app and is able to search for a verified charity/ngo by location
-> 
+>
 > ## Platform requirements
+>
 > - Mobile-first layout
 > - Accessible (WCAG AA compliance)
-> 
+>
 > ## Design system
+>
 > - Brand colours: white (#FAFAFA), dark blue (#003049), red (#c1121f)
 > - Heading font: Epilogue
 > - Paragraph font: Open Sans
 > - Style: minimalist, clean, elegant
-> 
+>
 > ## Implementation details
+>
 > - No login required for the first version
 > - Store data locally for now
-> 
+>
 > ## Target user
+>
 > Ashish, who is looking to donate to a charity every month. He wants to see a list of verified charities/ngo’s that he can donate to and what his donation would be used towards
 
 **Bénédicte Gaucher (Beni)** · marketing manager · startup-1-50-employees · `220e835d` · 2026-03-08 · _reflection_
@@ -523,9 +548,8 @@ Total responses below: **835**
 
 **Maori Devos (Momo)** · Business analyst · large-enterprise-1001-employees · `ba4861ba` · 2026-03-07 · _reflection_
 
-> I noticed that it also helps me to start small and see which features are missing than wanting everything at once. 
-> 
-> 
+> I noticed that it also helps me to start small and see which features are missing than wanting everything at once.
+>
 > I was surprised to see what a lovable is capable of doing with one prompt
 
 **waxwing** · Learner · startup-1-50-employees · `bdc5cb4c` · 2026-03-07 · _reflection_
@@ -575,13 +599,12 @@ Total responses below: **835**
 **Trang Nguyễn (Violet)** · Student · freelancer · `e82c172b` · 2026-03-07 · _reflection_
 
 > I noticed that i missed something I wanna do with it but didn’t clarify in the first prompt.
-> 
+>
 > I am surprised that the application is done so quick.
 
 **Smita Madam** · Product Manager · large-enterprise-1001-employees · `62fe5de1` · 2026-03-07 · _reflection_
 
-> I noticed that the app had the core flow.
-> I was surprised that the core flow could be narrowed down so much.
+> I noticed that the app had the core flow. I was surprised that the core flow could be narrowed down so much.
 
 **Lauren** · Startup Advisor · freelancer · `f4c57ee3` · 2026-03-07 · _reflection_
 
@@ -589,8 +612,7 @@ Total responses below: **835**
 
 **Măniceanu Alina-Ramona** · Recruiter · medium-sized-company-201-1000-employees · `1d02593d` · 2026-03-07 · _reflection_
 
-> I noticed how hard it'd be for me to take it one step at a time. 
-> What surprised me is how simple and efficient it is to start by defining one single user flow and building from there. Perfect is indeed the enemy of good
+> I noticed how hard it'd be for me to take it one step at a time. What surprised me is how simple and efficient it is to start by defining one single user flow and building from there. Perfect is indeed the enemy of good
 
 **Hunar Maheshwari** · Student · large-enterprise-1001-employees · `71e38457` · 2026-03-07 · _reflection_
 
@@ -626,39 +648,41 @@ Total responses below: **835**
 
 **Laurène** · Founder and Coach · startup-1-50-employees · `3b088666` · 2026-03-07 · _reflection_
 
-> claude could help me! 
-> currently building it, i love it !
+> claude could help me! currently building it, i love it !
 
 **Pınar Akyazı (Pinar)** · Solutions Architect · small-business-51-200-employees · `24b14005` · 2026-03-07 · _reflection_
 
-> Noticed it created and/or edited a bunch of code in the backend
-> Surprisingly fast!! 
-> And for the first version looks good
-> Even integrated the error field - you can't post a book title empty
+> Noticed it created and/or edited a bunch of code in the backend Surprisingly fast!! And for the first version looks good Even integrated the error field - you can't post a book title empty
 
 **Sanja Gabler** · Cro · small-business-51-200-employees · `ca87b05a` · 2026-03-07 · _reflection_
 
 > ## Product overview
-> A simple app where sales reps ca get ideAs of questions to ask when interacting with a prospect. The questions should be based on MEDDPICC sales methodology 
-> 
+>
+> A simple app where sales reps ca get ideAs of questions to ask when interacting with a prospect. The questions should be based on MEDDPICC sales methodology
+>
 > ## User flow
+>
 > 1. User open the app and can ask to generate à question based on what information according to MEDDPICC you want to pursue
-> 
-> 2. User can add a tonality or more information or brief of the prospect and what the goal is to use the i formtio 
-> 
+>
+> 2. User can add a tonality or more information or brief of the prospect and what the goal is to use the i formtio
+>
 > ## Platform requirements
+>
 > - desktop first
 > - Accessible
-> 
+>
 > ## Design system
+>
 > - Brand colours according to Trapets.com
-> - Style: easy, professional and supportive 
-> 
+> - Style: easy, professional and supportive
+>
 > ## Implementation details
+>
 > - No login required for the first version
 > - Store data locally for now
-> 
+>
 > ## Target user
+>
 > Sales rep when prospecting and qualifying deal into pipeline
 
 **shahanasv chinju (Assesment module developer)** · Assesment module developer · startup-1-50-employees · `c712978a` · 2026-03-07 · _reflection_
@@ -759,8 +783,7 @@ Total responses below: **835**
 
 **Sara França (Herofile)** · Transcriber and bookseller · freelancer · `1b2022df` · 2026-03-06 · _reflection_
 
-> I noticed that I had to wait some time (😁), and that AI complemented my central idea with accurate suggestions to integrate it better (I altered the prompt slightly to match my own ideas for an app).
-> I was surprised to see such a good result.
+> I noticed that I had to wait some time (😁), and that AI complemented my central idea with accurate suggestions to integrate it better (I altered the prompt slightly to match my own ideas for an app). I was surprised to see such a good result.
 
 **Polina Grigorieva** · Product Designer · large-enterprise-1001-employees · `cacbec1c` · 2026-03-06 · _reflection_
 
@@ -812,8 +835,7 @@ Total responses below: **835**
 
 **Rosie Howie** · Product Manager · small-business-51-200-employees · `baec3ee0` · 2026-03-05 · _reflection_
 
-> It works as described
-> It was fast and easy
+> It works as described It was fast and easy
 
 **Victor Lesdanon (Vikutoru)** · Business Automation & Efficiency specialist · medium-sized-company-201-1000-employees · `874d4633` · 2026-03-05 · _reflection_
 
@@ -869,8 +891,7 @@ Total responses below: **835**
 
 **Shreya Kela** · Product Manager · startup-1-50-employees · `b58256bf` · 2026-03-04 · _reflection_
 
-> It was awesome. 
-> I also made a few changes.
+> It was awesome. I also made a few changes.
 
 **Olga Agentka (Ola)** · Ux researcher · freelancer · `fca718c4` · 2026-03-04 · _reflection_
 
@@ -878,8 +899,7 @@ Total responses below: **835**
 
 **Elizabeth Hunter** · Founder, Copy Lead · startup-1-50-employees · `c42845a1` · 2026-03-04 · _reflection_
 
-> i noticed that it starts work really fast
-> and it can build whatever i say
+> i noticed that it starts work really fast and it can build whatever i say
 
 **amira sallam** · UX · large-enterprise-1001-employees · `fc9777cc` · 2026-03-04 · _reflection_
 
@@ -912,44 +932,48 @@ Total responses below: **835**
 **Tee** · QA · small-business-51-200-employees · `280f757f` · 2026-03-04 · _reflection_
 
 > I was surprised that pushing enter automatically made it start running. I wasn't finished yet and it started generating.
-> 
+>
 > I needed to enable Lovable Cloud in order to have my app send emails.
-> 
+>
 > The result is really nice. I like it. But where is the code?
-> 
+>
 > It also worked even though the Target User section still showed Sarah and the bookclub app.
 
 **Soundy** · Product designer · small-business-51-200-employees · `b8137760` · 2026-03-04 · _reflection_
 
 > ## Product overview
+>
 > A simple app where book club members can suggest books for the group to read next.
-> 
+>
 > ## User flow
+>
 > 1. User opens the app and sees a list of book suggestions
 > 2. User can add a new suggestion with the book title and a short note about why they recommend it
-> 
+>
 > ## Platform requirements
+>
 > - Mobile-first layout
 > - Accessible (WCAG AA compliance)
-> 
+>
 > ## Design system
+>
 > - Brand colours: warm cream (#FDF6E3), deep brown (#5C4033), coral (#E07A5F)
 > - Heading font: Merriweather
 > - Paragraph font: Open Sans
 > - Style: cosy, bookish, friendly
-> 
+>
 > ## Implementation details
+>
 > - No login required for the first version
 > - Store data locally for now
-> 
+>
 > ## Target user
+>
 > Sarah, a book club organiser who wants to spend less time on admin and more time reading with friends.
 
 **Michaela** · Growth Marketing · startup-1-50-employees · `7dc1dc68` · 2026-03-04 · _reflection_
 
-> I noticed that it took a couple of minutes. 
-> It surprised me how easy it was to create a functional app. 
-> Also, that I could read both the text and the code output.
+> I noticed that it took a couple of minutes. It surprised me how easy it was to create a functional app. Also, that I could read both the text and the code output.
 
 **Mimi N** · product manager · startup-1-50-employees · `84764f79` · 2026-03-04 · _reflection_
 
@@ -994,15 +1018,15 @@ Total responses below: **835**
 **Anastasia Sakharova** · Methodologist · small-business-51-200-employees · `892327b8` · 2026-03-03 · _reflection_
 
 > I noticed that it worked.
-> 
+>
 > It didn't surprise me much though.
 
 **muhabbat** · founder · startup-1-50-employees · `9bc17211` · 2026-03-03 · _reflection_
 
 > The Translation of Abstract to Concrete: I noticed how quickly the "cozy, bookish" vibe transformed from a mere description into actual visual design. The AI didn't just pick generic colors; it applied the brand palette (#FDF6E3 cream and #E07A5F coral) exactly where they mattered—the buttons and backgrounds.
-> 
+>
 > The "Zero-to-One" Velocity: The most striking observation is how the "blank page" problem disappears. Usually, a developer spends hours setting up the environment, installing dependencies, and configuring Tailwind CSS. Lovable essentially skipped all that, allowing me to focus immediately on the logic of the app rather than the mechanics of coding.The Translation of Abstract to Concrete: I noticed how quickly the "cozy, bookish" vibe transformed from a mere description into actual visual design. The AI didn't just pick generic colors; it applied the brand palette (#FDF6E3 cream and #E07A5F coral) exactly where they mattered—the buttons and backgrounds.
-> 
+>
 > The "Zero-to-One" Velocity: The most striking observation is how the "blank page" problem disappears. Usually, a developer spends hours setting up the environment, installing dependencies, and configuring Tailwind CSS. Lovable essentially skipped all that, allowing me to focus immediately on the logic of the app rather than the mechanics of coding.
 
 **Natalia Jaszczuk (Natienka)** · VP Product · medium-sized-company-201-1000-employees · `1986bd77` · 2026-03-03 · _reflection_
@@ -1016,28 +1040,32 @@ Total responses below: **835**
 **Zsuzsi** · HR Specialist · large-enterprise-1001-employees · `fcd48c23` · 2026-03-03 · _reflection_
 
 > ## Product overview
+>
 > A simple app for patients family with all kinds of dementia which helps with the right information in treating at home those patients and also in preventing dementia
-> 
+>
 > ## User flow
-> 1. User opens the app and sees a categories such as a patient, or preventing dementia or having apoe4 genes 
-> 
-> 
-> 
+>
+> 1. User opens the app and sees a categories such as a patient, or preventing dementia or having apoe4 genes
+>
 > ## Platform requirements
+>
 > - Mobile-first layout
 > - Accessible (WCAG AA compliance)
-> 
+>
 > ## Design system
+>
 > - Brand colours: warm cream (#FDF6E3), deep brown (#5C4033), coral (#E07A5F)
 > - Heading font: Merriweather
 > - Paragraph font: Open Sans
 > - Style: high contrast, but not vibrant colours, big icons
-> 
+>
 > ## Implementation details
+>
 > - No login required for the first version
 > - Store data locally for now
-> 
+>
 > ## Target user
+>
 > Dementia patients, dementia patients relatives and who wants to prevent dementia
 
 **Siba Siddique** · `4289eb5a` · 2026-03-03 · _reflection_
@@ -1067,53 +1095,53 @@ Total responses below: **835**
 **Aguilar Aguilar (Elaine)** · Software Developer · freelancer · `9d79e2a4` · 2026-03-02 · _reflection_
 
 > Product overview
-> 
+>
 > A simple lead capture app for Now Conecta, a digital services brand that helps small businesses with website creation, social media presence, branding, and automation.
-> 
+>
 > User flow
-> 
+>
 > The user opens the app and sees a short introduction about Now Conecta
-> 
+>
 > The user selects the service they are interested in
-> 
+>
 > The user fills out a short form with name, email, and a brief project description
-> 
+>
 > The user sees a confirmation message after submitting
-> 
+>
 > Platform requirements
-> 
+>
 > Mobile-first layout
-> 
+>
 > Accessible (WCAG AA compliance)
-> 
+>
 > Clear, large buttons
-> 
+>
 > Fast loading experience
-> 
+>
 > Design system
-> 
+>
 > Primary background: white (#FFFFFF)
-> 
+>
 > Soft background sections: light grey (#F5F5F5)
-> 
+>
 > Primary brand color: professional teal (#1F7A8C)
-> 
+>
 > Heading font: Inter or Poppins
-> 
+>
 > Paragraph font: Inter or Open Sans
-> 
+>
 > Style: minimal, professional, trustworthy
-> 
+>
 > Implementation details
-> 
+>
 > No login required for the first version
-> 
+>
 > Store data locally for now
-> 
+>
 > Structure prepared for future backend/database integration
-> 
+>
 > Target user
-> 
+>
 > Small business owners who need a professional digital presence but don’t know where to start.
 
 **Ksju** · Business analyst · medium-sized-company-201-1000-employees · `9d3dde9c` · 2026-03-02 · _reflection_
@@ -1142,8 +1170,7 @@ Total responses below: **835**
 
 **Nurul Bahirah (Iyun)** · teacher · freelancer · `8a8fde01` · 2026-03-02 · _reflection_
 
-> that it can make a website that is sophisticated and modern
-> the picture is AI
+> that it can make a website that is sophisticated and modern the picture is AI
 
 **Iryna Plaskon** · Business analyst · freelancer · `5c74ba44` · 2026-03-02 · _reflection_
 
@@ -1159,8 +1186,7 @@ Total responses below: **835**
 
 **mohamed qasem (Moe)** · UX Designer · startup-1-50-employees · `a81fc1f5` · 2026-03-01 · _reflection_
 
-> super easy
-> also super smart
+> super easy also super smart
 
 **Julie Crauet** · Head of Product · medium-sized-company-201-1000-employees · `79e37330` · 2026-03-01 · _reflection_
 
@@ -1180,13 +1206,12 @@ Total responses below: **835**
 
 **Pop** · UI Designer / developer · freelancer · `80963290` · 2026-02-28 · _reflection_
 
-> it's fast
-> it describe everything
+> it's fast it describe everything
 
 **Fatma Saper** · product designer · startup-1-50-employees · `eaed0f2a` · 2026-02-27 · _reflection_
 
 > I noticed that Lovable quickly created a simple, clear page for collecting book suggestions, with input fields and a list that updates when I add a new suggestion. I tested the buttons and basic flow, and most of it worked right away.
-> 
+>
 > What surprised me was how much structure it added automatically—like a neat layout and sensible labels—without me specifying design details. It wasn’t perfect though: I noticed I still need small improvements like preventing empty submissions, adding a delete/edit option, and making sure suggestions don’t disappear after refreshing the page
 
 **Om** · UI ux · freelancer · `560a6bea` · 2026-02-27 · _reflection_
@@ -1251,38 +1276,36 @@ Total responses below: **835**
 
 **Mahmoud Raafat** · Product Designer · startup-1-50-employees · `2709a01a` · 2026-02-26 · _reflection_
 
-> You are a professional mobile app developer.
-> Build a simple mobile application with two screens only using [choose one: Flutter / React Native / SwiftUI / Jetpack Compose].
-> 
-> App Idea:
-> A simple To-Do List application.
-> 
+> You are a professional mobile app developer. Build a simple mobile application with two screens only using [choose one: Flutter / React Native / SwiftUI / Jetpack Compose].
+>
+> App Idea: A simple To-Do List application.
+>
 > Screen 1 – Home Screen:
-> 
+>
 > Display a list of tasks.
-> 
+>
 > A button to navigate to the “Add Task” screen.
-> 
+>
 > Clean and minimal UI.
-> 
+>
 > Screen 2 – Add Task Screen:
-> 
+>
 > Text input field for the task title.
-> 
+>
 > Save button.
-> 
+>
 > On save, navigate back to the Home screen and update the task list.
-> 
+>
 > Requirements:
-> 
+>
 > Provide complete, runnable code.
-> 
+>
 > Use simple state management.
-> 
+>
 > Keep the project structure clean.
-> 
+>
 > Add brief comments explaining key parts of the code.
-> 
+>
 > No backend or database; store data in memory only.
 
 **Mariella** · Product Manager · medium-sized-company-201-1000-employees · `e39ccf85` · 2026-02-26 · _reflection_
@@ -1327,9 +1350,7 @@ Total responses below: **835**
 
 **Carolina Rodrigues** · `b048415f` · 2026-02-25 · _reflection_
 
-> Incredible!!! 
-> I notice how fast lovable create a app!
-> Everything was surprising. Amazing
+> Incredible!!! I notice how fast lovable create a app! Everything was surprising. Amazing
 
 **Carolina Ferreira** · `5aad90de` · 2026-02-25 · _reflection_
 
@@ -1342,28 +1363,34 @@ Total responses below: **835**
 **Jennifer** · `ecf3ebf1` · 2026-02-25 · _reflection_
 
 > ## Product overview
+>
 > A simple app where book club members can suggest books for the group to read next.
-> 
+>
 > ## User flow
+>
 > 1. User opens the app and sees a list of book suggestions
 > 2. User can add a new suggestion with the book title and a short note about why they recommend it
-> 
+>
 > ## Platform requirements
+>
 > - Mobile-first layout
 > - Accessible (WCAG AA compliance)
-> 
+>
 > ## Design system
+>
 > - Brand colours: warm cream (#FDF6E3), deep brown (#5C4033), coral (#E07A5F)
 > - Heading font: Merriweather
 > - Paragraph font: Open Sans
 > - Style: cosy, bookish, friendly
 > - Title : Book club 84
-> 
+>
 > ## Implementation details
+>
 > - No login required for the first version
 > - Store data locally for now
-> 
+>
 > ## Target user
+>
 > Sarah, a book club organiser who wants to spend less time on admin and more time reading with friends.
 
 `da76e06e` · 2026-02-25 · _reflection_
@@ -1382,12 +1409,11 @@ Total responses below: **835**
 
 ## Step 21 — Your turn: Build your first app
 
-*Prompt: Open [Lovable](https://lovable.dev/), paste Dalmie's structured prompt (or adapt it for your own idea), and press Enter.  Watch what happens. In a couple of minutes, you'll have a working app.  Click around. Test the buttons. See what Lovable created. It might not be perfect, and that's completely fine.  What did you notice? What surprised you?*
+_Prompt: Open [Lovable](https://lovable.dev/), paste Dalmie's structured prompt (or adapt it for your own idea), and press Enter. Watch what happens. In a couple of minutes, you'll have a working app. Click around. Test the buttons. See what Lovable created. It might not be perfect, and that's completely fine. What did you notice? What surprised you?_
 
 **Mayar Zaki** · `d151006c` · 2026-03-02 · _reflection_
 
-> I noticed that it took more time than what I expected and also finished all my credits in one prompt.
-> I was so surprised with the result, the design and the prototype.
+> I noticed that it took more time than what I expected and also finished all my credits in one prompt. I was so surprised with the result, the design and the prototype.
 
 **Morgane Hamon** · `94ad0eb6` · 2026-02-27 · _reflection_
 
@@ -1395,8 +1421,7 @@ Total responses below: **835**
 
 **Feryal Medhat** · UX UI designer · freelancer · `ba2235ad` · 2026-02-27 · _reflection_
 
-> I noticed that I can build good app by structure 
-> I surprised by one click I get what I want in a few minutes
+> I noticed that I can build good app by structure I surprised by one click I get what I want in a few minutes
 
 **Lujain Rashed** · `7921d160` · 2026-02-26 · _reflection_
 
@@ -1410,7 +1435,7 @@ Total responses below: **835**
 
 ## Step 23 — Practice: Write your prompt
 
-*Prompt: Write a simple prompt describing a basic app or page you want to build. Keep it to 1-2 sentences describing the main purpose.*
+_Prompt: Write a simple prompt describing a basic app or page you want to build. Keep it to 1-2 sentences describing the main purpose._
 
 `97b719f1` · 2026-02-03 · _free-text-exercise_
 
@@ -1420,7 +1445,7 @@ Total responses below: **835**
 
 ## Step 26 — Your turn: Improve your app
 
-*Prompt: Prompt an improvement to your app in Lovable. Then take a moment to reflect on what happened.  Was the change close to what you had in mind, or did it surface something you’d describe differently next time?*
+_Prompt: Prompt an improvement to your app in Lovable. Then take a moment to reflect on what happened. Was the change close to what you had in mind, or did it surface something you’d describe differently next time?_
 
 **María Constanza Foix (MC)** · Lawyer/Future CEO · startup-1-50-employees · `02207165` · 2026-06-18 · _reflection_
 
@@ -1444,10 +1469,7 @@ Total responses below: **835**
 
 **Dhanashree Chougule (DC)** · Data expert · medium-sized-company-201-1000-employees · `a02281f2` · 2026-06-02 · _reflection_
 
-> Product overview
-> A app where we can extract the costs from PRIIP KID Document.
-> User flow
-> When user upload the KID in PDF format. It extract the Cost in XLS or CSV and provide the file back
+> Product overview A app where we can extract the costs from PRIIP KID Document. User flow When user upload the KID in PDF format. It extract the Cost in XLS or CSV and provide the file back
 
 **Corina** · Service Manager · small-business-51-200-employees · `de116dc4` · 2026-04-07 · _reflection_
 
@@ -1820,8 +1842,9 @@ Total responses below: **835**
 **Anastasia Vankovich (Nasyanya)** · QA · large-enterprise-1001-employees · `4805a75c` · 2026-03-05 · _reflection_
 
 > Create the logic and interactive simulation for "Body Optimizer" app.
-> 
+>
 > 1️⃣ Data Inputs:
+>
 > - Sliders:
 >   - weekly_training_hours (float, 0–15)
 >   - interval_sessions_per_week (integer, 0–5)
@@ -1835,8 +1858,9 @@ Total responses below: **835**
 >   - Recovery score
 >   - Fatigue risk
 >   - HRV trend
-> 
+>
 > 2️⃣ Calculations:
+>
 > - Projected VO2max:
 >   - increases with interval training, long runs, sleep, optimal weight
 >   - diminishing returns beyond optimal ranges
@@ -1850,8 +1874,9 @@ Total responses below: **835**
 >   - decreases with excessive load or plateaus
 > - Injury Risk:
 >   - increases with long run over ramp rate limits or too many high-intensity sessions
-> 
+>
 > 3️⃣ Interactive Updates:
+>
 > - Any change in sliders immediately recalculates:
 >   - Projected VO2max
 >   - Projected Fitness Age
@@ -1862,48 +1887,56 @@ Total responses below: **835**
 >   - ✅ Metrics improved
 >   - ⚠️ Metrics at risk
 >   - 🔄 Metrics stable
-> 
+>
 > 4️⃣ Optimization Radar:
+>
 > - Analyze all sliders and current metrics
 > - Calculate top 3 actions with highest impact
 > - Show estimated gains for Fitness Age, VO2max, Recovery Score
-> 
+>
 > 5️⃣ Future Fitness Snapshot:
+>
 > - Generate 12-week projection based on current sliders
 > - Compare Today vs Future metrics
 > - Provide motivational highlights for improved metrics
-> 
+>
 > 6️⃣ Plateau Detection:
+>
 > - If metrics unchanged for 8+ weeks, show plateau warning
 > - Suggest targeted interventions
-> 
+>
 > 7️⃣ Quick Experiments Buttons:
+>
 > - Predefined actions:
 >   - +30 minutes sleep
 >   - +1 interval session
 >   - -2 kg weight
 >   - +1 rest day
 > - Trigger instant recalculation and update dashboard & board
-> 
+>
 > 8️⃣ Shareable Board:
+>
 > - Automatically update with each calculation
 > - Display Today vs Future metrics, highlights, progress graph
 > - Ready to export as PNG/JPG for sharing
 > - Use color coding for highlights (green ✅, orange ⚠️, gray 🔄)
-> 
+>
 > 9️⃣ Simulation Modes:
+>
 > - Conservative → small safe improvements
 > - Optimized → balanced improvements
 > - Aggressive → maximum improvements with higher fatigue risk
 > - Slider changes or mode selection update all metrics instantly
-> 
+>
 > 10️⃣ Output:
+>
 > - Update dashboard and graphs in real-time
 > - Update Optimization Radar suggestions
 > - Update Future Fitness Snapshot and Shareable Board
 > - Include motivational messages for key improvements
-> 
+>
 > End goal:
+>
 > - Fully interactive simulation engine
 > - Users see projected impact of any change immediately
 > - AI coach explains results and highlights high-value optimizations
@@ -2055,10 +2088,7 @@ Total responses below: **835**
 
 **Aguilar Aguilar (Elaine)** · Software Developer · freelancer · `9d79e2a4` · 2026-03-02 · _reflection_
 
-> Improve the lead capture form.
-> Add a required "Phone number" field with placeholder text "e.g., +351 545 345 678".
-> Add inline validation for email format.
-> Show a success message that says: "Thank you! Our team will contact you within 24 hours.
+> Improve the lead capture form. Add a required "Phone number" field with placeholder text "e.g., +351 545 345 678". Add inline validation for email format. Show a success message that says: "Thank you! Our team will contact you within 24 hours.
 
 **Gisela Cunha (Gisa)** · Startup Advisor · freelancer · `387ce93a` · 2026-03-02 · _reflection_
 
@@ -2083,7 +2113,7 @@ Total responses below: **835**
 **Fatma Saper** · product designer · startup-1-50-employees · `eaed0f2a` · 2026-02-27 · _reflection_
 
 > I prompted a small improvement: add validation to prevent empty submissions, clear the input fields after adding a suggestion, and include a delete button for each entry. After applying it, the change was mostly close to what I had in mind—the flow felt smoother and it was harder to accidentally add bad data.
-> 
+>
 > However, it also surfaced something I’d describe more precisely next time. For example, I’d specify exactly what the validation message should say and confirm whether suggestions should persist after a page refresh (local storage or database). Overall, I noticed that a small, focused prompt led to a very specific, easy-to-test change without breaking the rest of the app.
 
 **Kat** · AI Educator · startup-1-50-employees · `4c0acc0b` · 2026-02-27 · _reflection_
@@ -2108,7 +2138,7 @@ Total responses below: **835**
 
 **Aya** · ui ux · small-business-51-200-employees · `2c01c2a4` · 2026-02-26 · _reflection_
 
-> lovable fix issues  when i start illustrated it
+> lovable fix issues when i start illustrated it
 
 **Carolina Ferreira** · `5aad90de` · 2026-02-25 · _reflection_
 
@@ -2134,7 +2164,7 @@ Total responses below: **835**
 
 ## Step 30 — Your turn: Improve your app
 
-*Prompt: Prompt an improvement to your app in Lovable. Then take a moment to reflect on what happened.  Was the change close to what you had in mind, or did it surface something you’d describe differently next time?*
+_Prompt: Prompt an improvement to your app in Lovable. Then take a moment to reflect on what happened. Was the change close to what you had in mind, or did it surface something you’d describe differently next time?_
 
 **Morgane Hamon** · `94ad0eb6` · 2026-03-03 · _reflection_
 
@@ -2160,7 +2190,7 @@ Total responses below: **835**
 
 ## Step 38 — Your Takeaway
 
-*Prompt: What is your takeaway from this challenge?  What surprised you when you added Lovable Cloud?*
+_Prompt: What is your takeaway from this challenge? What surprised you when you added Lovable Cloud?_
 
 **María Constanza Foix (MC)** · Lawyer/Future CEO · startup-1-50-employees · `02207165` · 2026-06-18 · _reflection_
 
@@ -2313,7 +2343,7 @@ Total responses below: **835**
 **Ashna Goradia** · User Experience Designer · freelancer · `bc4ebd9e` · 2026-03-08 · _reflection_
 
 > My biggest takeaway was how quickly ideas can move from concept to something tangible when the right tools are in place. The challenge reinforced the importance of rapid experimentation and iterating based on what works rather than trying to perfect everything upfront.
-> 
+>
 > What surprised me most was how seamlessly Lovable Cloud streamlined the workflow. It reduced friction in connecting different parts of the project and made collaboration and iteration much faster than I expected.
 
 **Fanny** · Retail store owner · startup-1-50-employees · `5689323e` · 2026-03-07 · _reflection_
@@ -2434,7 +2464,7 @@ Total responses below: **835**
 
 **254_RUCHIKA RANGARI** · Software Developer · freelancer · `85911c0f` · 2026-03-06 · _reflection_
 
-> My takeaway is I want to make a backend now for  building my app
+> My takeaway is I want to make a backend now for building my app
 
 **Ambytious** · Software QA Engineer · small-business-51-200-employees · `df05c378` · 2026-03-06 · _reflection_
 
@@ -2555,9 +2585,9 @@ Total responses below: **835**
 **Aguilar Aguilar (Elaine)** · Software Developer · freelancer · `9d79e2a4` · 2026-03-02 · _reflection_
 
 > My main takeaway from this challenge is that building an app isn’t just about UI — it’s about architecture.
-> 
+>
 > Connecting Lovable Cloud early completely changes how you think about features. Instead of building something that only works “locally,” you start thinking about real users, real data, and real constraints.
-> 
+>
 > It reinforced the importance of setting the foundation correctly before adding complexity.
 
 **Ksju** · Business analyst · medium-sized-company-201-1000-employees · `9d3dde9c` · 2026-03-02 · _reflection_
@@ -2591,11 +2621,11 @@ Total responses below: **835**
 **Fatma Saper** · product designer · startup-1-50-employees · `eaed0f2a` · 2026-02-27 · _reflection_
 
 > **إجابة جاهزة تحطيها (بالإنجليزي):**
-> 
+>
 > My biggest takeaway from this challenge is that building step by step really works. Starting small made it easier to understand what the app was doing, test it properly, and improve it without feeling overwhelmed.
-> 
+>
 > What surprised me most when I added Lovable Cloud was how quickly the app shifted from a simple prototype to something that feels real. Instead of data disappearing on refresh, it started saving actual, persistent data. That small change made a huge difference — it no longer felt like a demo, but like a real product that multiple people could use and share.
-> 
+>
 > Connecting the backend made the project feel more serious and powerful. It showed me how a focused prompt plus a backend connection can turn a basic interface into a functional, shareable app.
 
 **Simoni (Schatzi)** · God · medium-sized-company-201-1000-employees · `8fb97e56` · 2026-02-26 · _reflection_
@@ -2634,7 +2664,7 @@ Total responses below: **835**
 
 ## Step 42 — Your Takeaway
 
-*Prompt: What is your takeaway from this challenge?  What surprised you when you added Lovable Cloud?*
+_Prompt: What is your takeaway from this challenge? What surprised you when you added Lovable Cloud?_
 
 **Morgane Hamon** · `94ad0eb6` · 2026-03-04 · _reflection_
 
@@ -2656,7 +2686,7 @@ Total responses below: **835**
 
 ## Step 47 — Your turn: Explore the interface
 
-*Prompt: How will you use these tools as you continue building?*
+_Prompt: How will you use these tools as you continue building?_
 
 **María Constanza Foix (MC)** · Lawyer/Future CEO · startup-1-50-employees · `02207165` · 2026-06-18 · _reflection_
 
@@ -2678,7 +2708,7 @@ Total responses below: **835**
 
 ## Step 48 — Your turn: Explore the interface
 
-*Prompt: How will you use these tools as you continue building?*
+_Prompt: How will you use these tools as you continue building?_
 
 **Corina** · Service Manager · small-business-51-200-employees · `de116dc4` · 2026-04-07 · _reflection_
 
@@ -2999,33 +3029,31 @@ Total responses below: **835**
 **Fatma Saper** · product designer · startup-1-50-employees · `eaed0f2a` · 2026-03-03 · _reflection_
 
 > As I continue building, I’ll use these tools in a step-by-step way — starting with a small, clear feature, testing it, and then improving it with focused prompts. Instead of trying to build everything at once, I’ll rely on iteration to refine the app gradually.
-> 
+>
 > I also plan to click around more and explore what’s already been generated before making changes. Testing buttons, checking data flow, and reviewing structure will help me write better, more precise prompts. These tools will save me time by reducing manual setup and allowing me to focus more on ideas, user experience, and problem-solving rather than technical details.
 
 **Aguilar Aguilar (Elaine)** · Software Developer · freelancer · `9d79e2a4` · 2026-03-02 · _reflection_
 
 > As I continue building, I’ll use these tools intentionally instead of randomly experimenting.
-> 
+>
 > I plan to:
-> 
+>
 > Check the preview after every change to validate layout, interactions, and responsiveness
-> 
+>
 > Use Design settings to experiment with visual direction before rewriting prompts
-> 
+>
 > Open Code View occasionally to start recognising patterns and understand structure
-> 
+>
 > Attach reference images when visual changes are easier to show than describe
-> 
+>
 > Use small, focused prompts for improvements instead of trying to change everything at once
-> 
+>
 > Getting comfortable clicking around makes the process faster and more strategic.
-> 
-> Instead of guessing, I can:
-> Test visually
-> Adjust precisely
-> 
+>
+> Instead of guessing, I can: Test visually Adjust precisely
+>
 > Validate immediately
-> 
+>
 > The more I explore the interface, the more confident I become in controlling the outcome instead of just accepting what’s generated.
 
 **Julie Crauet** · Head of Product · medium-sized-company-201-1000-employees · `79e37330` · 2026-03-02 · _reflection_
@@ -3056,7 +3084,7 @@ Total responses below: **835**
 
 ## Step 52 — Your turn: Explore the interface
 
-*Prompt: How will you use these tools as you continue building?*
+_Prompt: How will you use these tools as you continue building?_
 
 **Morgane Hamon** · `94ad0eb6` · 2026-03-05 · _reflection_
 
@@ -3064,9 +3092,7 @@ Total responses below: **835**
 
 **Feryal Medhat** · UX UI designer · freelancer · `ba2235ad` · 2026-02-28 · _reflection_
 
-> I will use design to show my design 
-> Use Visual edits to edit spicing and colors 
-> and code panel to show my code
+> I will use design to show my design Use Visual edits to edit spicing and colors and code panel to show my code
 
 `c71a6b9f` · 2026-02-27 · _reflection_
 
@@ -3080,7 +3106,7 @@ Total responses below: **835**
 
 ## Step 54 — Your turn: Practice safe experimentation
 
-*Prompt: 1. Bookmark your latest stable app version 2. Make an experimental change (something you're not sure will work) 3. If it breaks things, practise reverting to your bookmarked version 4. If it works, great! Bookmark the new version too  What did you try? What happened?*
+_Prompt: 1. Bookmark your latest stable app version 2. Make an experimental change (something you're not sure will work) 3. If it breaks things, practise reverting to your bookmarked version 4. If it works, great! Bookmark the new version too What did you try? What happened?_
 
 **Clara (crara)** · UX Researcher · medium-sized-company-201-1000-employees · `0dc32b87` · 2026-06-17 · _reflection_
 
@@ -3098,7 +3124,7 @@ Total responses below: **835**
 
 ## Step 55 — Your turn: Practice safe experimentation
 
-*Prompt: 1. Bookmark your latest stable app version 2. Make an experimental change (something you're not sure will work) 3. If it breaks things, practise reverting to your bookmarked version 4. If it works, great! Bookmark the new version too  What did you try? What happened?*
+_Prompt: 1. Bookmark your latest stable app version 2. Make an experimental change (something you're not sure will work) 3. If it breaks things, practise reverting to your bookmarked version 4. If it works, great! Bookmark the new version too What did you try? What happened?_
 
 **Corina** · Service Manager · small-business-51-200-employees · `de116dc4` · 2026-04-08 · _reflection_
 
@@ -3106,8 +3132,7 @@ Total responses below: **835**
 
 **Trang Nguyễn (Violet)** · Student · freelancer · `e82c172b` · 2026-03-09 · _reflection_
 
-> I tried to add all currencies.
-> It worked. But the exchange rate does not update.
+> I tried to add all currencies. It worked. But the exchange rate does not update.
 
 **Furi Aly (fari)** · Data Analytics · small-business-51-200-employees · `d8b7e958` · 2026-03-09 · _reflection_
 
@@ -3232,7 +3257,7 @@ Total responses below: **835**
 **Michaela** · Growth Marketing · startup-1-50-employees · `7dc1dc68` · 2026-03-07 · _reflection_
 
 > I tried: Show book rating next to book title based on their rating in goodreads.com. This rating is 1-5 (5 being the highest)
-> 
+>
 > It didn't work: It says this feature is already implemented in your current code using the Google Books API (since the Goodreads API is deprecated and no longer available). The star rating appears next to each book title when Google Books has rating data - but none of my books show these ratings.
 
 **Mars** · Product Designer · freelancer · `89186de9` · 2026-03-07 · _reflection_
@@ -3241,8 +3266,7 @@ Total responses below: **835**
 
 **Măniceanu Alina-Ramona** · Recruiter · medium-sized-company-201-1000-employees · `1d02593d` · 2026-03-07 · _reflection_
 
-> I tried to build an app using Lovable
-> I tried something new, without expectations of greatness and was amazed by the journey and what I learned. The outcome was the least important element. The courage to start is the big thing.
+> I tried to build an app using Lovable I tried something new, without expectations of greatness and was amazed by the journey and what I learned. The outcome was the least important element. The courage to start is the big thing.
 
 **Team TransFoodMission (Julia)** · Founder CEO · startup-1-50-employees · `8bc31038` · 2026-03-07 · _reflection_
 
@@ -3347,11 +3371,11 @@ Total responses below: **835**
 **Fatma Saper** · product designer · startup-1-50-employees · `eaed0f2a` · 2026-03-03 · _reflection_
 
 > I bookmarked my latest stable version before making any changes. Then I tried adding a voting feature to each book suggestion, even though I wasn’t completely sure how it would integrate with the existing structure.
-> 
+>
 > At first, the change caused some layout issues and the vote count didn’t update correctly. Instead of trying to patch everything, I reverted back to my bookmarked stable version. That gave me a clean starting point again and reduced the stress of fixing multiple problems at once.
-> 
+>
 > After that, I reintroduced the voting feature with a smaller, more focused prompt. This time it worked much better, and once everything was stable, I bookmarked the new version as well.
-> 
+>
 > This exercise helped me realize that bookmarking and reverting removes the fear of experimentation. Knowing I can always go back makes me more confident to test new ideas without worrying about breaking the app permanently.
 
 **Romeo Chelaru** · A bit of everything · startup-1-50-employees · `c6ff492b` · 2026-03-01 · _reflection_
@@ -3364,8 +3388,7 @@ Total responses below: **835**
 
 **Stephen Lagrimas** · `dcecf0b0` · 2026-02-25 · _reflection_
 
-> I tried to revert it in the old version
-> and it works
+> I tried to revert it in the old version and it works
 
 **Jane Tonal** · `057d3e2a` · 2026-02-23 · _reflection_
 
@@ -3375,7 +3398,7 @@ Total responses below: **835**
 
 ## Step 59 — Your turn: Practice safe experimentation
 
-*Prompt: 1. Bookmark your latest stable app version 2. Make an experimental change (something you're not sure will work) 3. If it breaks things, practise reverting to your bookmarked version 4. If it works, great! Bookmark the new version too  What did you try? What happened?*
+_Prompt: 1. Bookmark your latest stable app version 2. Make an experimental change (something you're not sure will work) 3. If it breaks things, practise reverting to your bookmarked version 4. If it works, great! Bookmark the new version too What did you try? What happened?_
 
 **Morgane Hamon** · `94ad0eb6` · 2026-03-05 · _reflection_
 
@@ -3393,7 +3416,7 @@ Total responses below: **835**
 
 ## Step 65 — Your turn: Try Plan mode
 
-*Prompt: What have you always wanted to know about building software? Go to Lovable, switch to Plan mode, and ask your question.*
+_Prompt: What have you always wanted to know about building software? Go to Lovable, switch to Plan mode, and ask your question._
 
 **Clara (crara)** · UX Researcher · medium-sized-company-201-1000-employees · `0dc32b87` · 2026-06-18 · _reflection_
 
@@ -3407,7 +3430,7 @@ Total responses below: **835**
 
 ## Step 66 — Your turn: Try Plan mode
 
-*Prompt: What have you always wanted to know about building software? Go to Lovable, switch to Plan mode, and ask your question.*
+_Prompt: What have you always wanted to know about building software? Go to Lovable, switch to Plan mode, and ask your question._
 
 **Corina** · Service Manager · small-business-51-200-employees · `de116dc4` · 2026-04-08 · _reflection_
 
@@ -3443,7 +3466,7 @@ Total responses below: **835**
 
 **Bernadine** · Data Consultant · medium-sized-company-201-1000-employees · `05781d36` · 2026-03-08 · _reflection_
 
-> I learned ledifferent ways of building the same feature. It was  good brainstorming.
+> I learned ledifferent ways of building the same feature. It was good brainstorming.
 
 **Danka Jokic (Promenilica)** · Change Manager · small-business-51-200-employees · `d71fcfdf` · 2026-03-08 · _reflection_
 
@@ -3636,9 +3659,9 @@ Total responses below: **835**
 **Fatma Saper** · product designer · startup-1-50-employees · `eaed0f2a` · 2026-03-03 · _reflection_
 
 > I’ve always wanted to understand how experienced developers decide what to build first and how they break big ideas into manageable steps.
-> 
+>
 > In Plan mode, I asked how to turn a simple app idea into a structured development plan. From the conversation, I learned that building software is less about coding everything at once and more about defining a clear user flow, identifying the core problem, and prioritizing features based on impact. I also learned the importance of starting with a minimal, valuable version (MVP), testing it early, and improving it through iteration.
-> 
+>
 > The biggest insight for me was that good software is usually the result of thoughtful planning and gradual refinement — not a single perfect build.
 
 **Romeo Chelaru** · A bit of everything · startup-1-50-employees · `c6ff492b` · 2026-03-01 · _reflection_
@@ -3661,7 +3684,7 @@ Total responses below: **835**
 
 ## Step 70 — Your turn: Try Plan mode
 
-*Prompt: What have you always wanted to know about building software? Go to Lovable, switch to Plan mode, and ask your question.*
+_Prompt: What have you always wanted to know about building software? Go to Lovable, switch to Plan mode, and ask your question._
 
 **Morgane Hamon** · `94ad0eb6` · 2026-03-06 · _reflection_
 
@@ -3675,7 +3698,7 @@ Total responses below: **835**
 
 ## Step 75 — Reflect on your journey
 
-*Prompt: You started this course without knowing how to build an app. Now you have one live on the internet.  Take a moment to reflect on what you've learned and experienced: - What surprised you most about vibe coding? - What felt easier than you expected? - What was harder?*
+_Prompt: You started this course without knowing how to build an app. Now you have one live on the internet. Take a moment to reflect on what you've learned and experienced: - What surprised you most about vibe coding? - What felt easier than you expected? - What was harder?_
 
 **Corina** · Service Manager · small-business-51-200-employees · `de116dc4` · 2026-04-08 · _reflection_
 
@@ -3683,10 +3706,10 @@ Total responses below: **835**
 
 **Sara Vitale** · Manager of Customer Education · small-business-51-200-employees · `1285338c` · 2026-03-09 · _reflection_
 
-> How quickly Lovable produces something that looks good and is usable! It made me understand how powerful it can be for prototyping ideas for more complex applications. 
-> 
-> It was very easy to prompt Lovable and get the results I wanted as long as I focused on one thing at a time. 
-> 
+> How quickly Lovable produces something that looks good and is usable! It made me understand how powerful it can be for prototyping ideas for more complex applications.
+>
+> It was very easy to prompt Lovable and get the results I wanted as long as I focused on one thing at a time.
+>
 > It hasn't felt very hard at this point in my journey.
 
 **Fredrika** · CMO · startup-1-50-employees · `c58d43b6` · 2026-03-09 · _reflection_
@@ -3728,7 +3751,7 @@ Total responses below: **835**
 **Lindsay** · Video game producer · freelancer · `d53d03d3` · 2026-03-08 · _reflection_
 
 > ease of use when using written words
-> 
+>
 > Clarifying my desires
 
 **Basma Faris (Basumi)** · founder · startup-1-50-employees · `7969cd3c` · 2026-03-08 · _reflection_
@@ -3805,14 +3828,12 @@ Total responses below: **835**
 
 **Michaela** · Growth Marketing · startup-1-50-employees · `7dc1dc68` · 2026-03-07 · _reflection_
 
-> Surprised me: That is was relatively easy and you can get a working app without writing code. 
-> What felt easier: How fast it is to get a good-looking UI
-> What was harder: Prompting it precisely to do what I want
+> Surprised me: That is was relatively easy and you can get a working app without writing code. What felt easier: How fast it is to get a good-looking UI What was harder: Prompting it precisely to do what I want
 
 **Lauren** · Startup Advisor · freelancer · `f4c57ee3` · 2026-03-07 · _reflection_
 
 > exciting to see the full circle
-> 
+>
 > still don't know what it will cost though to publish, cloud, api etc.
 
 **Mars** · Product Designer · freelancer · `89186de9` · 2026-03-07 · _reflection_
@@ -3821,8 +3842,7 @@ Total responses below: **835**
 
 **Măniceanu Alina-Ramona** · Recruiter · medium-sized-company-201-1000-employees · `1d02593d` · 2026-03-07 · _reflection_
 
-> What surprised me most: how lovely lovable is 
-> What felt easier than I expected: completing this course
+> What surprised me most: how lovely lovable is What felt easier than I expected: completing this course
 
 **Team TransFoodMission (Julia)** · Founder CEO · startup-1-50-employees · `8bc31038` · 2026-03-07 · _reflection_
 
@@ -3862,8 +3882,7 @@ Total responses below: **835**
 
 **dinah gardner** · Reporter · freelancer · `34e86085` · 2026-03-06 · _reflection_
 
-> Its super easy and intuitive.
-> It seems like it would be expensive to make a really good app
+> Its super easy and intuitive. It seems like it would be expensive to make a really good app
 
 **Ambytious** · Software QA Engineer · small-business-51-200-employees · `df05c378` · 2026-03-06 · _reflection_
 
@@ -3872,7 +3891,7 @@ Total responses below: **835**
 **Daniela Vallejo (Dany)** · AI Engineer · freelancer · `f11801d3` · 2026-03-06 · _reflection_
 
 > What surprised me most is how different publishing an app is now compared to a few years ago. I love that lovable allows us to publish our projects directly without having to find a separate host and deal with all the details that entails.
-> 
+>
 > The easiest part was having a functional app from the first prompt. The hardest part may be understanding the security risks.
 
 **Liseth Fda. Ramos G. (Liso)** · Business Analyst · freelancer · `9622be7b` · 2026-03-06 · _reflection_
@@ -3914,11 +3933,11 @@ Total responses below: **835**
 **Fatma Saper** · product designer · startup-1-50-employees · `eaed0f2a` · 2026-03-03 · _reflection_
 
 > What surprised me most about vibe coding was how quickly an idea turned into a working app. I didn’t expect the first version to come together so fast, or for the structure (pages, components, basic logic) to be generated in a way that felt usable right away.
-> 
+>
 > What felt easier than I expected was getting a functional UI and iterating through small improvements. Writing focused prompts, testing, and adjusting step by step made progress feel simple and motivating — even without a traditional coding background.
-> 
+>
 > What was harder was being precise about what I wanted. When my prompt was slightly vague, the app sometimes behaved differently than I imagined, and I had to refine my wording. Debugging “why it built it that way” and thinking through edge cases (validation, data persistence, user behavior) also took more effort than I expected.
-> 
+>
 > Overall, I learned that building software is mostly about clarity, iteration, and testing — and vibe coding makes it possible to go from idea to something real much faster than I thought.
 
 **Mohamed Adel** · Ui/Ux Designer · startup-1-50-employees · `a663a8b0` · 2026-03-02 · _reflection_
@@ -3935,8 +3954,7 @@ Total responses below: **835**
 
 **Stephen Lagrimas** · `dcecf0b0` · 2026-02-25 · _reflection_
 
-> That it so easy to build a website less than minutes
-> The 80/20
+> That it so easy to build a website less than minutes The 80/20
 
 **Jane Tonal** · `057d3e2a` · 2026-02-23 · _reflection_
 

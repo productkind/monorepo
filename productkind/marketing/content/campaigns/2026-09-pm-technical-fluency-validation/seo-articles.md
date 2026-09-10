@@ -9,74 +9,44 @@ campaign: pm-technical-fluency-validation-2026-09
 
 # SEO cluster: technical confidence for Product Managers
 
-This cluster is for practising, generalist software Product Managers who want
-to make better technical product decisions without taking over an engineer's
-job. The content should help a reader do one piece of real PM work: question a
-rough scope, inspect evidence, investigate an issue, pull product data or build
-a bounded prototype.
+This cluster is for practising, generalist software Product Managers who want to make better technical product decisions without taking over an engineer's job. The content should help a reader do one piece of real PM work: question a rough scope, inspect evidence, investigate an issue, pull product data or build a bounded prototype.
 
-The conversion destination is the existing
-[`/guides/technical-product-manager`](https://littleparrot.app/guides/technical-product-manager)
-landing page. It tests interest in the upcoming transformational learning path
-**Become a Technical Product Manager Without Becoming an Engineer**.
-Supporting articles should serve their query completely before inviting an
-interested reader to visit the landing page and register their interest.
+The conversion destination is the existing [`/guides/technical-product-manager`](https://littleparrot.app/guides/technical-product-manager) landing page. It tests interest in the upcoming transformational learning path **Become a Technical Product Manager Without Becoming an Engineer**. Supporting articles should serve their query completely before inviting an interested reader to visit the landing page and register their interest.
 
 ## Strategic decision
 
-Build the cluster around **jobs and decisions**, then connect each job to the
-professional outcome it supports. Confidence, credibility, judgement,
-independence and speed describe why a PM cares. They are weak article topics
-because a reader cannot tell what they will be able to do after reading.
+Build the cluster around **jobs and decisions**, then connect each job to the professional outcome it supports. Confidence, credibility, judgement, independence and speed describe why a PM cares. They are weak article topics because a reader cannot tell what they will be able to do after reading.
 
 | Reader's job | Professional result | Search territory |
-|---|---|---|
+| --- | --- | --- |
 | Understand what a proposed change touches | Judgement and credibility | Technical feasibility, software estimation, APIs, application architecture |
 | Compare options before the team commits | Judgement | Technical debt, build versus buy, prototype versus MVP |
 | Narrow a problem before involving engineering | Independence and speed | Bug triage, bug reports, root cause analysis |
 | Answer a product question with evidence | Independence and confidence | Product analytics, SQL for Product Managers, A/B testing |
 | Turn an assumption into something testable | Independence and speed | AI prototyping, application building with AI, production handover |
 
-This follows the central finding in the research: the product is independent
-technical judgement, while the searchable entry points are the concrete tasks
-and concepts that support it.
+This follows the central finding in the research: the product is independent technical judgement, while the searchable entry points are the concrete tasks and concepts that support it.
 
 ## What search and AI discovery require
 
-There is no separate house style for AI search. Google's current guidance says
-that its generative search features use the same core search index and ranking
-systems as Search. It recommends unique, expert-led, non-commodity content and
-warns against making one page for every query variation. It also says that
-`llms.txt`, artificial content chunking and special AI markup do not improve
-visibility in Google Search.
+There is no separate house style for AI search. Google's current guidance says that its generative search features use the same core search index and ranking systems as Search. It recommends unique, expert-led, non-commodity content and warns against making one page for every query variation. It also says that `llms.txt`, artificial content chunking and special AI markup do not improve visibility in Google Search.
 
-For ChatGPT search, the site must allow `OAI-SearchBot` in `robots.txt` and at
-the hosting or content-delivery-network layer. OpenAI adds
-`utm_source=chatgpt.com` to referral links, which makes this traffic measurable.
+For ChatGPT search, the site must allow `OAI-SearchBot` in `robots.txt` and at the hosting or content-delivery-network layer. OpenAI adds `utm_source=chatgpt.com` to referral links, which makes this traffic measurable.
 
 Apply these rules to every article:
 
 1. Answer the primary question in the opening paragraph.
-2. Add an original artefact: a checklist, template, worked example, decision
-   table, diagram or annotated screenshot.
-3. Make the productkind point of view explicit: technical fluency helps a PM
-   form and test a judgement; it does not transfer engineering ownership.
+2. Add an original artefact: a checklist, template, worked example, decision table, diagram or annotated screenshot.
+3. Make the productkind point of view explicit: technical fluency helps a PM form and test a judgement; it does not transfer engineering ownership.
 4. Use one concrete example throughout the page.
 5. Put the useful artefact before the offer.
-6. Show a named author, their relevant experience, a published date and an
-   updated date.
-7. Link claims to primary sources where a source is needed. Link named ideas to
-   their originator.
-8. Use descriptive headings, short paragraphs, real tables and semantic HTML.
-   Do not split prose into tiny fragments for machines.
-9. Add a useful original image or diagram with descriptive alt text when the
-   idea is easier to understand visually.
-10. Add `Article` and `BreadcrumbList` structured data that matches the visible
-    page. Do not add invisible FAQ copy or schema solely to chase a result type.
-11. Give each article one primary intent. Merge pages if two URLs begin ranking
-    for the same query.
-12. Link each spoke to the conversion hub and to no more than two closely
-    related articles.
+6. Show a named author, their relevant experience, a published date and an updated date.
+7. Link claims to primary sources where a source is needed. Link named ideas to their originator.
+8. Use descriptive headings, short paragraphs, real tables and semantic HTML. Do not split prose into tiny fragments for machines.
+9. Add a useful original image or diagram with descriptive alt text when the idea is easier to understand visually.
+10. Add `Article` and `BreadcrumbList` structured data that matches the visible page. Do not add invisible FAQ copy or schema solely to chase a result type.
+11. Give each article one primary intent. Merge pages if two URLs begin ranking for the same query.
+12. Link each spoke to the conversion hub and to no more than two closely related articles.
 
 Sources checked on 7 September 2026:
 
@@ -87,12 +57,10 @@ Sources checked on 7 September 2026:
 
 ## Prioritised article roadmap
 
-The volumes and keyword difficulty values below are the August 2026 Semrush
-snapshot in the PM technical-fluency research. US and UK are kept separate.
-They are directional inputs, not traffic forecasts.
+The volumes and keyword difficulty values below are the August 2026 Semrush snapshot in the PM technical-fluency research. US and UK are kept separate. They are directional inputs, not traffic forecasts.
 
 | Priority | Article and slug | Primary query evidence | Reader leaves with | Main outcome |
-|---:|---|---|---|---|
+| --: | --- | --- | --- | --- |
 | 1 | **Technical feasibility for Product Managers: a checklist before you commit**<br>`/guides/technical-feasibility-product-managers` | `technical feasibility`: US 320, KD 22; UK 110, KD 19 | A copyable feasibility brief and a worked feature example | Judgement |
 | 2 | **Build versus buy software: a decision framework for Product Managers**<br>`/guides/build-vs-buy-software` | `build vs buy software`: US 210, SERP KD 28; UK 30, KD 0. CPC $12.90 US | A weighted decision table that includes data, switching, maintenance and reversibility | Judgement |
 | 3 | **Bug triage for Product Managers: what to check before engineering starts**<br>`/guides/bug-triage-product-managers` | `bug triage`: US 170, KD 21; UK 20, KD 0 | A first-pass investigation checklist and severity/priority grid | Independence |
@@ -108,17 +76,9 @@ They are directional inputs, not traffic forecasts.
 
 ### Why this order differs slightly from the August research
 
-The August research placed AI prototyping first. A current search check now
-shows several detailed 2026 guides from Bubble, Builder.io, Aha! and specialist
-PM sites. The opportunity still exists, but a generic overview would arrive in
-a crowded result set. It moves to fourth and must own the neglected boundary:
-what the prototype proves, what it does not prove and what Engineering needs
-for a safe handover.
+The August research placed AI prototyping first. A current search check now shows several detailed 2026 guides from Bubble, Builder.io, Aha! and specialist PM sites. The opportunity still exists, but a generic overview would arrive in a crowded result set. It moves to fourth and must own the neglected boundary: what the prototype proves, what it does not prove and what Engineering needs for a safe handover.
 
-Technical feasibility moves first because it combines low difficulty, strong
-fit with the PM evidence and a result page still dominated by definitions and
-broad feasibility studies. A practical PM worksheet and one realistic worked
-example can add information that is missing from those results.
+Technical feasibility moves first because it combines low difficulty, strong fit with the PM evidence and a result page still dominated by definitions and broad feasibility studies. A practical PM worksheet and one realistic worked example can add information that is missing from those results.
 
 ## Internal-link structure
 
@@ -138,9 +98,7 @@ example can add information that is missing from those results.
     └── staging-vs-production-product-managers
 ```
 
-The hub should define the larger promise and route readers to the job they need
-help with. Each spoke should link back with a descriptive anchor such as
-“technical skills for Product Managers”, not a repeated “learn more”.
+The hub should define the larger promise and route readers to the job they need help with. Each spoke should link back with a descriptive anchor such as “technical skills for Product Managers”, not a repeated “learn more”.
 
 ## Publishing sequence
 
@@ -154,28 +112,19 @@ Publish in pairs so each new page has a useful sibling link at launch:
 6. How web applications work + API integrations
 7. Staging versus production, then refresh the release sections across the hub
 
-Do not publish all pages at once. Two good articles every two weeks leaves time
-to collect impressions, rewrite titles that do not earn clicks and strengthen
-the pages that begin appearing for adjacent queries.
+Do not publish all pages at once. Two good articles every two weeks leaves time to collect impressions, rewrite titles that do not earn clicks and strengthen the pages that begin appearing for adjacent queries.
 
 ## Measurement
 
-Before publishing, record the query, intent, page promise, conversion action
-and current ranking URL in a simple content ledger. Review at 14, 30, 60 and 90
-days.
+Before publishing, record the query, intent, page promise, conversion action and current ranking URL in a simple content ledger. Review at 14, 30, 60 and 90 days.
 
 Track:
 
-- indexed status, impressions, clicks, click-through rate and average position
-  in Google Search Console;
+- indexed status, impressions, clicks, click-through rate and average position in Google Search Console;
 - citations and cited URLs in Bing Webmaster Tools AI Performance;
 - referrals containing `utm_source=chatgpt.com`;
-- visits and interest registrations from each article using one stable
-  `utm_content` value per article;
-- the new queries each page earns, especially question queries that can improve
-  an existing section;
-- assisted conversions, because an explanatory article may introduce the
-  learning-path idea several visits before someone registers their interest.
+- visits and interest registrations from each article using one stable `utm_content` value per article;
+- the new queries each page earns, especially question queries that can improve an existing section;
+- assisted conversions, because an explanatory article may introduce the learning-path idea several visits before someone registers their interest.
 
-The first article draft is in
-[`seo-article-01-technical-feasibility-for-product-managers.md`](./seo-article-01-technical-feasibility-for-product-managers.md).
+The first article draft is in [`seo-article-01-technical-feasibility-for-product-managers.md`](./seo-article-01-technical-feasibility-for-product-managers.md).

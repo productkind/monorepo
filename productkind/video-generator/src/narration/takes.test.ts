@@ -1,6 +1,6 @@
-import { describe, expect, test } from 'vitest'
-
 import { planTakes } from './takes'
+
+import { describe, expect, test } from 'vitest'
 
 describe('planTakes', () => {
   test('joins the sections into one narration, without their text carrying the whitespace', () => {

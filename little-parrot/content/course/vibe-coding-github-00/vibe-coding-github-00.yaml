@@ -2,7 +2,7 @@ course:
   id: 7171137b-9461-425f-8737-ad3400d56fd8
   cover: /courses/vibe-coding-github-00/cover.webp
   title: 'Save Lovable Credits: Edit Your App Like a Developer'
-  note: "This course uses **Lovable** as its running example, but you can follow along just as well if you build with another AI app builder like **Replit**, **v0**, or **Bolt**. They all connect to GitHub, so the setup, editing, running, and saving you learn here apply either way."
+  note: 'This course uses **Lovable** as its running example, but you can follow along just as well if you build with another AI app builder like **Replit**, **v0**, or **Bolt**. They all connect to GitHub, so the setup, editing, running, and saving you learn here apply either way.'
   learningOutcomes:
     - Make small changes to your app yourself, without spending Lovable credits
     - Set up a workspace on your own computer that works for every app, and any document, you'll work on with AI
@@ -199,13 +199,13 @@ course:
               On a **Mac**, you install Git from the terminal you just opened, in three steps:
 
               1. Install [**Homebrew**](https://brew.sh/), a free helper that installs builder's tools for you: copy its one-line install command from the [brew.sh](https://brew.sh/) website, paste it into the Terminal, and press Enter.
-              
+
               2. When it finishes, type 
               ```
               brew install git
               ```
               Press Enter, and Git is on your computer.
-              
+
               3. Finally, type 
               ```
               brew install --cask git-credential-manager
@@ -290,7 +290,7 @@ course:
               Here's the moment your workspace pays off: you'll copy your app's code onto your computer and run it, so you can see every change instantly.
 
               **The plan has three parts:**
-              
+
               1. find your place in the terminal, 
               2. fetch your app's link from GitHub, then 
               3. bring your app's code to your computer with a few short commands.
@@ -300,7 +300,7 @@ course:
           content:
             body: |-
               Start by opening your terminal (**Terminal** on Mac, **Git Bash** on Windows). Your terminal is always standing in a folder, and commands that work with files, like the ones you're about to run, act right where you're standing. So it's worth a quick glance to check where that is. 
-              
+
               Look at the text the terminal prints every time it's ready for your next command, ending where your cursor blinks. That text is called the **prompt** (it's prompting you to type), and tucked inside it is your current location.
 
               - In **Git Bash** on Windows, the prompt takes two lines. The first line ends with your location, for example `dalmie@LAPTOP MINGW64 ~`, and you type on the line below, next to the `$`.
@@ -320,7 +320,7 @@ course:
           content:
             body: |-
               Next, your app's link. On [**GitHub**](https://github.com/), open your project: 
-              
+
               1. Click your **profile picture** in the top-right corner. 
               2. Click **Repositories** in the menu.
               3. Open the repository Lovable created for your project (it carries your project's name).
@@ -348,7 +348,7 @@ course:
               ```
 
               `cd Projects` steps into your *Projects* folder. 
-              
+
               Now type `git clone` and paste your link from GitHub, like this:
 
               ```
@@ -414,9 +414,9 @@ course:
               ```
 
               You'll see a local web address appear, usually `http://localhost:8080`. Paste it into your browser. 
-              
+
               **Your app is now running on your own computer.** 🎉 
-              
+
               The address gives it away: **localhost** literally means "this computer". Only you can see this copy. It's your sandbox stage, where you can try anything, while the published app your visitors use stays untouched.
 
               Leave this terminal window open while you work. It's running your app the whole time, and it will refresh the moment you save your change in VS Code.
@@ -429,7 +429,7 @@ course:
               Sometimes the app doesn't start, and the terminal prints an error. Take a breath: **the error is the terminal trying to help**, it names exactly what's missing.
 
               The one you're most likely to meet: `The following dependencies are imported but could not be resolved` 
-              
+
               It appears when you've been building in Lovable, which added new building blocks your computer doesn't have yet. Run the install once more to add the missing dependencies:
 
               ```
@@ -458,7 +458,7 @@ course:
               npm run dev
               ``` 
               and you can open your app's local copy in your browser. 
-              
+
               (On a Mac you'll never see this, the runtime is built in.)
             imageUrl: /courses/vibe-coding-github-00/install-cpp-windows.webp
           subtitle: A small, free piece from Microsoft
@@ -482,11 +482,11 @@ course:
               ```
               cd Projects/book-club-pick
               ``` 
-              
+
               (use your own folder name).
-              
+
               2. Type 
-              
+
               ```
               npm run dev
               ```
@@ -563,7 +563,7 @@ course:
               Type the words exactly as they appear in your app, for example `Suggest a book`. The results are grouped by file. Click a result to jump straight to that line.
 
               Two things that *make the open file easier to read:*
-              
+
               1. The **numbers down the left edge** are **line numbers**: every line of a file has one, like verse numbers in a poem, so any spot can be pointed to exactly (an error or your AI agent will say things like "line 24"). 
               2. If some lines stretch off the screen, turn on **Word Wrap** (in the **View** menu, or press **Alt + Z** / **Option + Z**): long lines fold to fit your window, so nothing hides off to the right.
             imageUrl: /courses/vibe-coding-github-00/vscode-search.webp
@@ -608,7 +608,7 @@ course:
               Once it's on GitHub, your change syncs back into your Lovable project automatically, usually within seconds.
 
               One thing to remember: this updates your project, **not the live app your visitors see**. To update that, press **Publish** in Lovable, as you always have. 
-              
+
               So the full path is: **edit in VS Code → stage → commit → push → the change arrives to GitHub → it syncs into Lovable → publish**.
             imageUrl: /courses/vibe-coding-github-00/lovable-commit.webp
           subtitle: Commit, sync, then publish
@@ -695,7 +695,7 @@ course:
           content:
             body: |-
               Now that you know the icon's name, search for it in VS Code (**Ctrl/Cmd + Shift + F**). 
-              
+
               *One twist:* in the code the name is written in **upper camel case**, each word capitalised and the dashes removed, so `book-open` becomes `BookOpen`.
 
               You'll spot it at least **twice** in the file: once at the very top, in an `import` line (the file's list of which icons it borrows from the set), and once at each spot where it's used. And if your app uses the same icon in *several places*, it'll turn up even more times, sometimes across several files. The file names in the search results help you tell which one belongs to the part of the app you're changing.
@@ -752,7 +752,7 @@ course:
               Publish alone wouldn't do it: Lovable can only publish what code change has reached it, and a change that was never pushed is still sitting on Dalmie's laptop.
             correctAnswer: 3
         - type: challenge-end
-          title: "You swapped your first icon ⭐"
+          title: 'You swapped your first icon ⭐'
           content:
             description: You found an icon in your code and swapped it.
             nextModule: "**Next challenge:** You've made changes by hand. Now you'll get some help, GitHub Copilot, an AI agent with a free tier living right inside VS Code, for the changes that need more complex code written."
@@ -787,7 +787,7 @@ course:
               - on the top right in the VS Code window, click the sidebar icon, or
 
               - press **Ctrl + Alt + i** (Windows) or **Ctrl + Cmd + i** (Mac). 
-              
+
               A chat opens beside your code, that's where you and your agent will talk.
 
               One thing to know about the free plan: it includes about **50 chat requests a month** (plus thousands of inline code completions). That's plenty when each request is a clear one, and you're about to learn how to make them count.
@@ -900,13 +900,13 @@ course:
               No question is too small. Getting unstuck is exactly how confidence grows.
             subDescription: Type your question and you'll get a clear answer right back.
             placeholder: e.g. What does it mean to stage a change?
-            systemPrompt: 'You are a warm, knowledgeable mentor for a curious non-technical app builder taking a course on editing their Lovable app on their own computer with VS Code, GitHub, and GitHub Copilot. The learner asks a question about anything from the course: VS Code, the terminal, Git and GitHub, pull, commit, push and publish, Copilot''s Ask, Plan, and Agent modes, reviewing changes, recovering from errors, or the local setup. Answer it clearly and warmly in British English, in plain language for someone non-technical, in at most a few short sentences or bullets. If it falls outside the course, gently point them to where they could find out (they can ask Kinga and Tamas in the Discord community). Reassure them it was a good question to ask. Do not use em dashes. End on an encouraging note, and encourage them to ask in our Discord community if anything is unclear. Reply in a markdown format.'
+            systemPrompt: "You are a warm, knowledgeable mentor for a curious non-technical app builder taking a course on editing their Lovable app on their own computer with VS Code, GitHub, and GitHub Copilot. The learner asks a question about anything from the course: VS Code, the terminal, Git and GitHub, pull, commit, push and publish, Copilot's Ask, Plan, and Agent modes, reviewing changes, recovering from errors, or the local setup. Answer it clearly and warmly in British English, in plain language for someone non-technical, in at most a few short sentences or bullets. If it falls outside the course, gently point them to where they could find out (they can ask Kinga and Tamas in the Discord community). Reassure them it was a good question to ask. Do not use em dashes. End on an encouraging note, and encourage them to ask in our Discord community if anything is unclear. Reply in a markdown format."
             checkerPrompt: 'The learner is asking a question or sharing something they are unsure about. Accept any genuine question or comment. Only flag clearly empty or nonsense input. This is their message:'
         - type: challenge-end
           title: "You've got an AI agent now \U0001F916"
           content:
             description: You've met your AI agent, and you know how to ask it for a change, review what it does, and recover when something breaks.
-            nextModule: "**Next challenge:** The last piece, a simple rule for when to edit on your computer, when to ask Copilot, and when to go back to Lovable."
+            nextModule: '**Next challenge:** The last piece, a simple rule for when to edit on your computer, when to ask Copilot, and when to go back to Lovable.'
             subDescription: |-
               Describe, review, keep, and when something breaks, hand the error straight back to the agent. With that loop and the Source Control escape hatch, there's no situation you can't work your way out of.
 
@@ -954,7 +954,7 @@ course:
           content:
             body: |-
               A couple of habits keep things smooth: 
-              
+
               1. When you sit back down to work, **pull** in VS Code to grab anything that changed in Lovable since last time. This pull is the big one, it keeps your copy in step so your work and Lovable's never clash.
               2. Then **start your app** again with `npm run dev` to see it in your browser (at `localhost:8080`). 
               3. Then when you're done with your change, **stage, commit and push** in VS Code. 
@@ -991,8 +991,9 @@ course:
           title: "You're a builder with your own workspace now \U0001F38A"
           content:
             description: Look at everything you can do.
-            nextModule: "**Your next step:** Make that one change this week, the one you just named. Then reach for VS Code or Copilot for the next small thing, and the one after that. Each is a credit saved, and before long this is simply how you work on your app."
-            subDescription: "✓ **You've got a builder's workspace:** it's yours for working on any app and document from here on.\n\n✓ **You run your app on your own computer:** start it with `npm run dev`, and watch every change appear the instant you save.\n\n✓ **You make small changes for free:** edit copy and swap icons yourself and push them live, without spending a single Lovable credit.\n\n✓ **You save and ship safely:** every change is committed to GitHub with a full history you can roll back, then published to your live app when you're ready.\n\n✓ **You have a free AI agent on call:** GitHub Copilot makes the bigger, code-level changes you describe, with you reviewing its work before you keep it.\n\n✓ **You always pick the cheapest route:** by hand or with Copilot for what people see, Lovable for the backend and brand-new features.\n\nThe workspace you've built is the same one developers use everywhere, so it serves you far beyond this one app.\n\n**Reusable tools:** all the guides, cheat sheets, and prompts from this course are waiting in the [**Toolkit**](https://littleparrot.app/nest/toolkit?course=Save+Lovable+Credits%3A+Edit+Your+App+Like+a+Developer). Keep them close while you build.\n\n**Want to go further?** These courses pair well:\n\n- [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview)\n- [Build a Valuable Product: How to Break Down Your Idea for Vibe Coding](https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview)\n- [Fix Bugs with Confidence: Debugging Your Lovable App](https://littleparrot.app/aaab45b7-209a-4578-a515-3e55687f0c53/course-overview)"
+            nextModule: '**Your next step:** Make that one change this week, the one you just named. Then reach for VS Code or Copilot for the next small thing, and the one after that. Each is a credit saved, and before long this is simply how you work on your app.'
+            subDescription:
+              "✓ **You've got a builder's workspace:** it's yours for working on any app and document from here on.\n\n✓ **You run your app on your own computer:** start it with `npm run dev`, and watch every change appear the instant you save.\n\n✓ **You make small changes for free:** edit copy and swap icons yourself and push them live, without spending a single Lovable credit.\n\n✓ **You save and ship safely:** every change is committed to GitHub with a full history you can roll back, then published to your live app when you're ready.\n\n✓ **You have a free AI agent on call:** GitHub Copilot makes the bigger, code-level changes you describe, with you reviewing its work before you keep it.\n\n✓ **You always pick the cheapest route:** by hand or with Copilot for what people see, Lovable for the backend and brand-new features.\n\nThe workspace you've built is the same one developers use everywhere, so it serves you far beyond this one app.\n\n**Reusable tools:** all the guides, cheat sheets, and prompts from this course are waiting in the [**Toolkit**](https://littleparrot.app/nest/toolkit?course=Save+Lovable+Credits%3A+Edit+Your+App+Like+a+Developer). Keep them close while you build.\n\n**Want to go further?** These courses pair well:\n\n- [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview)\n- [Build a Valuable Product: How to Break Down Your Idea for Vibe Coding](https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview)\n- [Fix Bugs with Confidence: Debugging Your Lovable App](https://littleparrot.app/aaab45b7-209a-4578-a515-3e55687f0c53/course-overview)"
       title: Your Workflow
       isFree: false
       skills:

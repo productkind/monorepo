@@ -1,9 +1,8 @@
 # How I Got Into Product Management – And You Can Too
 
-*How I transitioned to a product role, and the lessons I learned, so you can do the same*
+_How I transitioned to a product role, and the lessons I learned, so you can do the same_
 
-**Date:** June 11, 2025
-**Author:** Kinga Magyar
+**Date:** June 11, 2025 **Author:** Kinga Magyar
 
 ---
 

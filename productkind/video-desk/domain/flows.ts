@@ -1,35 +1,35 @@
-import { defer, from, type Observable } from 'rxjs'
-
 import { eventCreators, type VideoDeskEvent } from './events.ts'
 import {
   chooseKey,
   clipFit,
-  FRAME,
   edgeColourOf,
-  HEADROOM_SECONDS,
-  keepThatCoverTheBeat,
-  pexelsClips,
-  pexelsSearchUrl,
-  pixabayClips,
-  pixabaySearchUrl,
-  type StockClip,
   fitAdvice,
+  FRAME,
   gifDurationInSeconds,
   gifFrameCount,
   gifSize,
   giphyItems,
   giphySearchUrl,
+  HEADROOM_SECONDS,
+  keepThatCoverTheBeat,
   keepThatFitTheFrame,
   klipyItems,
   klipySearchUrl,
   parseSections,
+  pexelsClips,
+  pexelsSearchUrl,
+  pixabayClips,
+  pixabaySearchUrl,
   placeFor,
   type ProviderState,
-  unreadSections,
   repeatsIn,
+  type StockClip,
+  unreadSections,
   usedIdsIn,
 } from './operations.ts'
 import type { Candidate, ProviderItem, Section, VideoDetail, VideoSummary } from './types.ts'
+
+import { defer, from, type Observable } from 'rxjs'
 
 /**
  * What the desk does, expressed over a boundary it is handed rather than one it reaches for.
@@ -65,7 +65,9 @@ export type DeskIo = {
   fetchJson: (options: { url: string; headers?: Record<string, string> }) => Promise<unknown>
   fetchBytes: (options: { url: string }) => Promise<Uint8Array>
   /** Colours on the gif's border ring, across every frame. */
-  ringHistogram: (options: { path: string }) => Promise<Parameters<typeof edgeColourOf>[0]['histogram']>
+  ringHistogram: (options: {
+    path: string
+  }) => Promise<Parameters<typeof edgeColourOf>[0]['histogram']>
   motion: (options: { path: string }) => Promise<number>
   /** How long a video file runs, which a gif's frame delays cannot answer. */
   videoSeconds: (options: { path: string }) => Promise<number | null>
@@ -387,7 +389,7 @@ export const searchStock = ({
           slot,
           clips: usable.map((clip) => ({
             ...clip,
-            term: 'term' in clip && typeof clip.term === 'string' ? clip.term : terms[0] ?? '',
+            term: 'term' in clip && typeof clip.term === 'string' ? clip.term : (terms[0] ?? ''),
             fit: clipFit({ seconds: clip.seconds, slot }),
           })),
         })
@@ -424,7 +426,10 @@ export const searchSection = ({
           const { items, exhausted } = await searchOneTerm({ io, term, limit, provider })
           if (exhausted) {
             const { giphy } = io.keys()
-            return eventCreators.searchUnavailable({ minutes: 60 - new Date().getMinutes(), keys: giphy.map((key) => key.slice(0, 6)) })
+            return eventCreators.searchUnavailable({
+              minutes: 60 - new Date().getMinutes(),
+              keys: giphy.map((key) => key.slice(0, 6)),
+            })
           }
           found.push(...items.map((item) => ({ ...item, term })))
         }
@@ -487,7 +492,10 @@ export const searchSection = ({
             repeats: slot === null ? 0 : slot / seconds,
             motion,
             usedIn: used[item.id] ?? [],
-            fit: slot === null ? { rate: null, why: 'not narrated yet' } : fitAdvice({ seconds, slot }),
+            fit:
+              slot === null
+                ? { rate: null, why: 'not narrated yet' }
+                : fitAdvice({ seconds, slot }),
             gifUrl: `/api/candidate/${video}/${item.id}.gif`,
             stripUrl: `/api/strip/${video}/${item.id}.png`,
             sourceUrl: item.sourceUrl,
@@ -655,7 +663,11 @@ export const pickClip = ({
         // names the file hd_1080_1920, and the stream inside is 720x1280 — which would be upscaled
         // into the frame and read as visibly soft. The stream decides.
         const measured = await io.videoSize({ path: io.assetPath({ video, name: untrimmed }) })
-        if (measured === null || measured.width !== FRAME.width || measured.height !== FRAME.height) {
+        if (
+          measured === null ||
+          measured.width !== FRAME.width ||
+          measured.height !== FRAME.height
+        ) {
           await io.removeAsset({ video, name: untrimmed })
           return eventCreators.deskFailed({
             reason:

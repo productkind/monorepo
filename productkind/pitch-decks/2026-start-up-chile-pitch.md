@@ -3,9 +3,11 @@
 ## Project Information
 
 ### High-Level Concept Pitch (Pitch your Startup in 7 words)
+
 AI skills platform for women in business
 
 ### Public Description
+
 Little Parrot is an AI skills platform for women in business. It helps non-technical women solopreneurs and micro-business owners turn their ideas into digital products without relying on a developer, by learning to build software with AI tools. The platform combines two products:
 
 1. Microlearning courses with science-based, practical challenges that guide users through AI app-building, using vibe-coding tools like Lovable. Designed for busy lives, most challenges can be completed while your coffee brews or you wait for the bus.

@@ -9,7 +9,7 @@ Toolkit items are practical resources that live alongside a course. They help le
 
 ### What makes a good toolkit item
 
-A good toolkit item is something the learner opens *while they're working*, not something they read once and forget. It should:
+A good toolkit item is something the learner opens _while they're working_, not something they read once and forget. It should:
 
 - **Be immediately usable.** The learner should be able to copy, paste, or tick off items without needing to re-read the course first.
 - **Solve a real moment.** Each item should map to a specific situation: "I'm about to publish", "I need to add a feature", "I'm talking to a user for the first time."
@@ -22,7 +22,7 @@ A good toolkit item is something the learner opens *while they're working*, not 
 The database tags each toolkit item with a **type**, set in the frontmatter (see File structure below). There are five, told apart by how the learner uses them:
 
 | Type | How the learner uses it | When to create it | Example |
-|------|-------------------------|-------------------|---------|
+| --- | --- | --- | --- |
 | **Template** | Fill in with their own details | The course teaches a structure or formula the learner reuses | First Prompt Template, Problem Statement Template |
 | **Guide** | Follow the steps to set something up | The course walks through configuring a tool step by step | Builder's Workspace Setup, Connect Your App to GitHub |
 | **Prompt library** | Paste into their AI app builder | The course teaches prompting patterns with copy-paste prompts | Asking Copilot for Changes, Prompts for Common Features |
@@ -58,7 +58,7 @@ Each toolkit item belongs to a specific challenge. Choose the challenge where th
 
 **Follow the productkind tone.** Warm, encouraging, mentor-like. Apply the **language-rules** skill in full, and invoke it if it is not already loaded. It is the single source for the banned list and all shared language rules.
 
-**Open with the payoff, and make it work cold.** The first sentence says what the learner *gets*, not what the item is or which challenge it belongs to: "The Brain Dump is an iPhone Shortcut that turns your mental load into organised lists" beats "Every step to build the Brain Dump, in order." Then, in the same opening, name the tool, the input (you talk), and the output (sorted checklist notes), so someone who found the item cold in the Toolkit menu understands it before any how-to.
+**Open with the payoff, and make it work cold.** The first sentence says what the learner _gets_, not what the item is or which challenge it belongs to: "The Brain Dump is an iPhone Shortcut that turns your mental load into organised lists" beats "Every step to build the Brain Dump, in order." Then, in the same opening, name the tool, the input (you talk), and the output (sorted checklist notes), so someone who found the item cold in the Toolkit menu understands it before any how-to.
 
 **Name prerequisites up front.** If the item needs a particular device, OS version, plan tier, or tool installed, say so in one short line right after the opening, so nobody follows a guide their setup can't run.
 
@@ -74,7 +74,7 @@ Each toolkit item belongs to a specific challenge. Choose the challenge where th
 
 **Explain every entry, never just list it.** A toolkit is opened after the course, as a reference, so a bare list teaches nothing. Put an informative one-line explanation beside every command (what it does), every prompt (when to reach for it), and every step (why it's useful). A cheat sheet of terminal commands with no notes, or a prompt library that just dumps prompts, is useless to a learner who can't yet read them on sight. (See "Run Your App on Your Computer", which explains `mkdir`, `cd`, `git clone`, and `npm`; and "Asking Copilot for Changes", which gives each prompt a "when to use" lead-in.)
 
-**Model specificity in example prompts.** In a prompt library, write each prompt the way a strong prompt should be written, because specific, technical prompts get far better results when vibe coding, and the examples teach by imitation. Go beyond *what* + *where* + *example* to name the **look** (size, colour, spacing, and which existing style to match), the **behaviour** (what it does and when), and the **edge cases** (empty list, single item, long text). Use real design and product vocabulary: empty state, primary action, secondary text, hover state, subtitle, component. A vague example teaches a vague habit.
+**Model specificity in example prompts.** In a prompt library, write each prompt the way a strong prompt should be written, because specific, technical prompts get far better results when vibe coding, and the examples teach by imitation. Go beyond _what_ + _where_ + _example_ to name the **look** (size, colour, spacing, and which existing style to match), the **behaviour** (what it does and when), and the **edge cases** (empty list, single item, long text). Use real design and product vocabulary: empty state, primary action, secondary text, hover state, subtitle, component. A vague example teaches a vague habit.
 
 **Use screenshots only where they aid understanding, and only real ones.** For step-by-step guides, a screenshot at the decisive moment helps; for command or prompt references, the words usually carry it. When you do use an image, use the `.mdx` format and embed it by its real served path, reuse the course's existing screenshots at the same `/courses/<course-id>/...` paths where they fit. Never invent a placeholder image URL that would render broken; if no asset exists, keep the step text-only or note the exact shot to capture.
 
@@ -121,6 +121,7 @@ toolkit-[kebab-case-name].mdx
 ```
 
 Examples:
+
 - `toolkit-first-prompt-template.md`
 - `toolkit-pre-publish-checklist.md`
 - `toolkit-software-vocabulary-cheat-sheet.md`
@@ -131,12 +132,14 @@ Examples:
 Some toolkit items are more useful when the learner can interact with them directly, rather than just reading about them. These use the `.mdx` format, which allows embedding live components inside the markdown.
 
 **When to make a toolkit item interactive:**
+
 - When seeing or trying the thing is more valuable than reading a description of it (e.g., seeing what a Button or Dialog looks like by clicking on it)
 - When the learner needs to practise a skill in a safe environment before applying it to their own product
 - When a static reference would be incomplete without the interactive element
 - When a troubleshooting or lookup item would otherwise be a wall of text, an `Accordion` lets the learner scan the entries and expand only the one they need (see "Troubleshooting and lookup items" below)
 
 **How interactive items work:**
+
 - Use `.mdx` file extension instead of `.md`
 - The available components depend on what's registered in the app's MDX component registry
 - The interactive elements should directly support the learning goals of the toolkit item (e.g., a visual component guide with live examples of each component)
@@ -145,7 +148,7 @@ Some toolkit items are more useful when the learner can interact with them direc
 
 Troubleshooting sheets, "when do I use X" references, and other lookup items are read differently from guides: the learner arrives with a symptom and needs to find the matching fix fast. Two rules keep them usable:
 
-**Lead every entry with the observable symptom, never the cause.** The heading (or accordion trigger) describes what the learner *sees or experiences*, so they can recognise their situation at a glance. "A category comes out empty even though you spoke items for it" beats "Get Dictionary Value is reading the wrong thing", which names an internal cause the learner has no way to connect to. Put the cause and the fix in the body: plain-language why first, then the concrete steps.
+**Lead every entry with the observable symptom, never the cause.** The heading (or accordion trigger) describes what the learner _sees or experiences_, so they can recognise their situation at a glance. "A category comes out empty even though you spoke items for it" beats "Get Dictionary Value is reading the wrong thing", which names an internal cause the learner has no way to connect to. Put the cause and the fix in the body: plain-language why first, then the concrete steps.
 
 **Group entries by the area the learner recognises, not by an internal phase.** File each entry under the feature or moment it belongs to (the shortcut, sharing, triggers), and make sure it sits where the symptom actually occurs. Splitting by build-time vs run-time tends to miscategorise, because most "building" symptoms only surface when the learner runs the thing.
 
@@ -157,14 +160,16 @@ Each toolkit item starts with the challenge it belongs to, and a heading:
 
 ```markdown
 ---
-challenge: "[Challenge Number] - [Challenge Title]"
-type: "[Template | Guide | Prompt library | Checklist | Cheat sheet]"
+challenge: '[Challenge Number] - [Challenge Title]'
+type: '[Template | Guide | Prompt library | Checklist | Cheat sheet]'
 ---
+
 ## [Toolkit Item Name]
 
 [Brief description of what this toolkit item is and when to use it. 1-2 sentences.]
 
 ### [First section]
+
 ...
 ```
 

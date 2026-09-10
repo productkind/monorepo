@@ -1,7 +1,8 @@
 ---
-challenge: "5 - Decide What to Build First: Define Your MVP"
-type: "Checklist"
+challenge: '5 - Decide What to Build First: Define Your MVP'
+type: 'Checklist'
 ---
+
 ## Is Your MVP Small Enough?
 
 A checklist for your MVP (Minimum Viable Product): the smallest version of your product that's still useful for your target user. Go through this while or after you've sliced out your MVP on your story map and before you write a single prompt. It helps you to confirm you're building enough to be valuable, but not too much to lose focus.
@@ -35,7 +36,7 @@ A checklist for your MVP (Minimum Viable Product): the smallest version of your 
 At each new feature you add to your product, first, you can build its MVP version, test it, then build on top of that.
 
 | MVP | Too much |
-|---|---|
+| --- | --- |
 | Create club with club name | Create club with description, rules, reading pace, and club type |
 | Suggest books with title and author | Suggest books with cover image, recommendation note, genre tags, and reading level |
 | Vote on books (cast vote, view counts) | Vote with comments, deadline reminders, notification emails, and weighted voting |

@@ -1,9 +1,39 @@
-import './index.css';
+import { NarratedCompositions } from './compositions'
+import { FRAME_HEIGHT, FRAME_RATE, FRAME_WIDTH } from './config'
+import './index.css'
+import {
+  Captions,
+  LessonVideo,
+  LessonVideo2,
+  LessonVideo3,
+  LessonVideo4,
+  LessonVideo5,
+  LessonVideo6,
+  LessonVideo7,
+  LessonVideoAiAdmin00,
+  LessonVideoDebugging01,
+  LessonVideoLanding,
+  LessonVideoLovableBasics01,
+  LessonVideoLovablePublish01,
+  LessonVideoPropsSchema,
+  SocialVideo001,
+  SocialVideo002,
+  SocialVideo003,
+  SocialVideo004,
+  SocialVideo005,
+  SocialVideo006,
+  SocialVideo007,
+  SocialVideo008,
+  SocialVideo009,
+  SocialVideo010,
+  SocialVideo011,
+  SocialVideo012,
+  SocialVideo013,
+  SocialVideo014,
+  SocialVideo015,
+} from './LessonVideo'
 
-import { Composition, staticFile } from "remotion";
-import { LessonVideo, LessonVideoPropsSchema, Captions, LessonVideo2, LessonVideo3, LessonVideo4, LessonVideo5, LessonVideo6, LessonVideo7, LessonVideoLanding, LessonVideoDebugging01, LessonVideoLovableBasics01, LessonVideoLovablePublish01, SocialVideo001, SocialVideo002, SocialVideo003, SocialVideo004, SocialVideo005, SocialVideo006, SocialVideo007, SocialVideo008, SocialVideo009, SocialVideo010, SocialVideo011, SocialVideo012, SocialVideo013, SocialVideo014, SocialVideo015, LessonVideoAiAdmin00 } from "./LessonVideo";
-import { FRAME_HEIGHT, FRAME_RATE, FRAME_WIDTH } from './config';
-import { NarratedCompositions } from './compositions';
+import { Composition, staticFile } from 'remotion'
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -35,7 +65,7 @@ export const RemotionRoot: React.FC = () => {
               ...props,
               captions: transformCaptionsToFrames(captions),
               allDuration: duration,
-            }
+            },
           }
         }}
       />
@@ -66,7 +96,7 @@ export const RemotionRoot: React.FC = () => {
               ...props,
               captions: transformCaptionsToFrames(captions),
               allDuration: duration,
-            }
+            },
           }
         }}
       />
@@ -98,7 +128,7 @@ export const RemotionRoot: React.FC = () => {
               ...props,
               captions: transformCaptionsToFrames(captions),
               allDuration: duration,
-            }
+            },
           }
         }}
       />
@@ -130,7 +160,7 @@ export const RemotionRoot: React.FC = () => {
               ...props,
               captions: transformCaptionsToFrames(captions),
               allDuration: duration,
-            }
+            },
           }
         }}
       />
@@ -162,7 +192,7 @@ export const RemotionRoot: React.FC = () => {
               ...props,
               captions: transformCaptionsToFrames(captions),
               allDuration: duration,
-            }
+            },
           }
         }}
       />
@@ -194,7 +224,7 @@ export const RemotionRoot: React.FC = () => {
               ...props,
               captions: transformCaptionsToFrames(captions),
               allDuration: duration,
-            }
+            },
           }
         }}
       />
@@ -226,7 +256,7 @@ export const RemotionRoot: React.FC = () => {
               ...props,
               captions: transformCaptionsToFrames(captions),
               allDuration: duration,
-            }
+            },
           }
         }}
       />
@@ -258,7 +288,7 @@ export const RemotionRoot: React.FC = () => {
               ...props,
               captions: transformCaptionsToFrames(captions),
               allDuration: duration,
-            }
+            },
           }
         }}
       />
@@ -290,7 +320,7 @@ export const RemotionRoot: React.FC = () => {
               ...props,
               captions: transformCaptionsToFrames(captions),
               allDuration: duration,
-            }
+            },
           }
         }}
       />
@@ -322,7 +352,7 @@ export const RemotionRoot: React.FC = () => {
               ...props,
               captions: transformCaptionsToFrames(captions),
               allDuration: duration,
-            }
+            },
           }
         }}
       />
@@ -354,11 +384,10 @@ export const RemotionRoot: React.FC = () => {
               ...props,
               captions: transformCaptionsToFrames(captions),
               allDuration: duration,
-            }
+            },
           }
         }}
       />
-
 
       <Composition
         id="social-001"
@@ -388,7 +417,7 @@ export const RemotionRoot: React.FC = () => {
               ...props,
               captions: transformCaptionsToFrames(captions),
               allDuration: duration,
-            }
+            },
           }
         }}
       />
@@ -420,7 +449,7 @@ export const RemotionRoot: React.FC = () => {
               ...props,
               captions: transformCaptionsToFrames(captions),
               allDuration: duration,
-            }
+            },
           }
         }}
       />
@@ -453,7 +482,7 @@ export const RemotionRoot: React.FC = () => {
               ...props,
               captions: transformCaptionsToFrames(captions),
               allDuration: duration,
-            }
+            },
           }
         }}
       />
@@ -486,7 +515,7 @@ export const RemotionRoot: React.FC = () => {
               ...props,
               captions: transformCaptionsToFrames(captions),
               allDuration: duration,
-            }
+            },
           }
         }}
       />
@@ -519,7 +548,7 @@ export const RemotionRoot: React.FC = () => {
               ...props,
               captions: transformCaptionsToFrames(captions),
               allDuration: duration,
-            }
+            },
           }
         }}
       />
@@ -552,7 +581,7 @@ export const RemotionRoot: React.FC = () => {
               ...props,
               captions: transformCaptionsToFrames(captions),
               allDuration: duration,
-            }
+            },
           }
         }}
       />
@@ -585,11 +614,10 @@ export const RemotionRoot: React.FC = () => {
               ...props,
               captions: transformCaptionsToFrames(captions),
               allDuration: duration,
-            }
+            },
           }
         }}
       />
-
 
       <Composition
         id="social-008"
@@ -619,7 +647,7 @@ export const RemotionRoot: React.FC = () => {
               ...props,
               captions: transformCaptionsToFrames(captions),
               allDuration: duration,
-            }
+            },
           }
         }}
       />
@@ -652,11 +680,10 @@ export const RemotionRoot: React.FC = () => {
               ...props,
               captions: transformCaptionsToFrames(captions),
               allDuration: duration,
-            }
+            },
           }
         }}
       />
-
 
       <Composition
         id="social-010"
@@ -686,7 +713,7 @@ export const RemotionRoot: React.FC = () => {
               ...props,
               captions: transformCaptionsToFrames(captions),
               allDuration: duration,
-            }
+            },
           }
         }}
       />
@@ -719,7 +746,7 @@ export const RemotionRoot: React.FC = () => {
               ...props,
               captions: transformCaptionsToFrames(captions),
               allDuration: duration,
-            }
+            },
           }
         }}
       />
@@ -752,7 +779,7 @@ export const RemotionRoot: React.FC = () => {
               ...props,
               captions: transformCaptionsToFrames(captions),
               allDuration: duration,
-            }
+            },
           }
         }}
       />
@@ -785,7 +812,7 @@ export const RemotionRoot: React.FC = () => {
               ...props,
               captions: transformCaptionsToFrames(captions),
               allDuration: duration,
-            }
+            },
           }
         }}
       />
@@ -818,7 +845,7 @@ export const RemotionRoot: React.FC = () => {
               ...props,
               captions: transformCaptionsToFrames(captions),
               allDuration: duration,
-            }
+            },
           }
         }}
       />
@@ -851,7 +878,7 @@ export const RemotionRoot: React.FC = () => {
               ...props,
               captions: transformCaptionsToFrames(captions),
               allDuration: duration,
-            }
+            },
           }
         }}
       />
@@ -883,12 +910,10 @@ export const RemotionRoot: React.FC = () => {
               ...props,
               captions: transformCaptionsToFrames(captions),
               allDuration: duration,
-            }
+            },
           }
         }}
       />
-
-
 
       <NarratedCompositions />
     </>
@@ -904,4 +929,3 @@ const transformCaptionsToFrames = (captions: Captions): Captions => {
     }
   })
 }
-

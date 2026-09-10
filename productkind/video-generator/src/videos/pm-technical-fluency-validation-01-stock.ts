@@ -55,7 +55,7 @@ export default defineVideo({
     {
       // Cranes and containers across grey water: somebody else's system, far too big to move, and
       // nothing to do with you.
-      text: 
+      text:
         'Someone says the migration is blocked by the platform team. You don’t know what that ' +
         'means for your release.',
       visual: clip({
@@ -113,7 +113,7 @@ export default defineVideo({
     {
       // A road running away through trees with the light coming down it. The turn in the script, and
       // the one beat allowed to be literal about a learning path.
-      text: 
+      text:
         'If you’d rather be the one who asks these questions, we’re building a learning path ' +
         'for exactly this.',
       visual: clip({

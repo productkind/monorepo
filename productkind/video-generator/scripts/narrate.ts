@@ -16,9 +16,6 @@
  *   npm run narrate -- --watch   rebuild when a definition changes
  *   npm run narrate -- --import  seed the cache from previously generated audio
  */
-import { existsSync, mkdirSync, readFileSync, readdirSync, watch, writeFileSync } from 'node:fs'
-import { basename, join, resolve } from 'node:path'
-
 import type { AudioCache } from '../src/narration/audio-cache'
 import { cachedTakeIn } from '../src/narration/audio-cache'
 import type { VideoDefinition } from '../src/narration/definition'
@@ -26,9 +23,12 @@ import { audioCacheKey, spokenOnly, timelineHash } from '../src/narration/defini
 import { planTakes } from '../src/narration/takes'
 import type { RenderedTake } from '../src/narration/timeline'
 import { buildTimeline } from '../src/narration/timeline'
-import type { Alignment } from '../src/narration/words'
 import { HOUSE_VOICE_SETTINGS, voiceIdFor } from '../src/narration/voices'
+import type { Alignment } from '../src/narration/words'
 import { VIDEOS } from '../src/videos/index'
+
+import { existsSync, mkdirSync, readdirSync, readFileSync, watch, writeFileSync } from 'node:fs'
+import { basename, join, resolve } from 'node:path'
 
 /** Run as an npm script, so the working directory is the video package. */
 const PROJECT_DIR = process.cwd()
@@ -97,9 +97,7 @@ const spokenSecondsOf = ({ alignment }: { alignment: Alignment }): number => {
 
 /** Every video's audio folder, this video's first so it always prefers its own copy. */
 const cachesFor = ({ id }: { id: string }): AudioCache[] => {
-  const others = existsSync(PUBLIC_DIR)
-    ? readdirSync(PUBLIC_DIR).filter((name) => name !== id)
-    : []
+  const others = existsSync(PUBLIC_DIR) ? readdirSync(PUBLIC_DIR).filter((name) => name !== id) : []
   return [id, ...others]
     .filter((video) => existsSync(audioDirFor({ id: video })))
     .map((video) => ({ video, names: readdirSync(audioDirFor({ id: video })) }))
@@ -262,7 +260,9 @@ const generateTake = async ({
   }
 
   const voiceId = voiceIdFor({ voice: definition.voice })
-  console.log(`  generating ${definition.id} (${text.length} characters, voice ${definition.voice})`)
+  console.log(
+    `  generating ${definition.id} (${text.length} characters, voice ${definition.voice})`,
+  )
 
   const response = await fetch(`${ELEVENLABS_ENDPOINT}/${voiceId}/with-timestamps`, {
     method: 'POST',

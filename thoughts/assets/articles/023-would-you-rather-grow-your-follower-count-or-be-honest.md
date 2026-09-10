@@ -2,14 +2,13 @@
 
 ## The dilemma of sharing content online
 
-**Date:** July 28, 2026
-**Author:** Kinga Magyar
+**Date:** July 28, 2026 **Author:** Kinga Magyar
 
-*Hi, it's Kinga. 👋🏼 This article was born on a frustrated afternoon, working from a coffee shop. It's not much about product management, but about the often frustrating process of trying to reach your target audience.*
+_Hi, it's Kinga. 👋🏼 This article was born on a frustrated afternoon, working from a coffee shop. It's not much about product management, but about the often frustrating process of trying to reach your target audience._
 
-*I debated whether to publish these raw thoughts. Then I decided I don't have to be polished all the time. And I tried not to overthink it.*
+_I debated whether to publish these raw thoughts. Then I decided I don't have to be polished all the time. And I tried not to overthink it._
 
-*Let me know what you think about it. More constructive product management articles are coming over the next few weeks.*
+_Let me know what you think about it. More constructive product management articles are coming over the next few weeks._
 
 > Thoughts by productkind is a reader-supported publication. To receive new posts and support my work, consider becoming a free or paid subscriber.
 
@@ -31,8 +30,7 @@ The definition of "success" I use here is "you are a business person who has fig
 
 Of course, there is more to success than that. But I can still feel unimpressed with myself, even if I'm writing these lines from a cool Estonian bookshop-café, without being monitored by a manager.
 
-[image: The Estonian bookshop-café]
-*The Estonian bookshop-café*
+[image: The Estonian bookshop-café] _The Estonian bookshop-café_
 
 ## Why is it so hard to be satisfied with what we've got?
 
@@ -56,7 +54,7 @@ Also, let me know if reading this article was valuable for you in any way where 
 
 Thanks for being here,
 
-*Kinga*
+_Kinga_
 
 ---
 

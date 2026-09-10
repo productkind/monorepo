@@ -1,8 +1,6 @@
 # Distribution channel strategy, August 2026
 
-**Goal:** reach more people and guide them to Little Parrot or the newsletter, in service of revenue growth.
-**Based on:** PostHog referral data for littleparrot.app (365 days), Substack traffic and subscriber data, Kinga's personal LinkedIn analytics, and the channel + content analytics reports for LinkedIn, TikTok, Instagram and YouTube Shorts (all in `productkind/little parrot/data-analytics/`).
-**Written:** 6 August 2026. Review: November 2026.
+**Goal:** reach more people and guide them to Little Parrot or the newsletter, in service of revenue growth. **Based on:** PostHog referral data for littleparrot.app (365 days), Substack traffic and subscriber data, Kinga's personal LinkedIn analytics, and the channel + content analytics reports for LinkedIn, TikTok, Instagram and YouTube Shorts (all in `productkind/little parrot/data-analytics/`). **Written:** 6 August 2026. Review: November 2026.
 
 ---
 
@@ -19,7 +17,7 @@ Effort and results are inverted. Roughly 80+ short videos a month across TikTok,
 ### Channels ranked by visitors actually delivered to littleparrot.app (365 days)
 
 | Channel | Unique visitors | Quality (pages/visitor) | Effort level today |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | LinkedIn | ~574 | 2.7 | Medium, currently paused |
 | Email (all) | ~426 | 4.2 warm / 1.4 cold | Low |
 | Google organic | ~284 | 4.7 (highest intent) | Zero (passive) |
@@ -54,7 +52,7 @@ The "your first Lovable prompt" piece is the top performer on three platforms at
 ### Four content pillars rank consistently across every platform
 
 | Pillar | What it wins | Evidence |
-|---|---|---|
+| --- | --- | --- |
 | Practical how-to / templates | Saves, clicks, search discovery (buying intent) | Lovable prompt everywhere; Markdown prompts; "business ideas" 6 saves |
 | Story-led AI explainers | Retention and likes (watch quality) | Mechanical Turk: top YouTube Short (570 views, 50% stayed), most-liked TikTok (12 likes), high Instagram reach |
 | Reassurance ("you're not behind") | Reach and follower conversion | Best TikTok follower conversion (+2), second-best YouTube Short, 195 Instagram views |

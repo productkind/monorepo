@@ -20,7 +20,13 @@
       "@type": "WebPage",
       "@id": "https://littleparrot.app/articles/markdown-for-lovable-prompts"
     },
-    "keywords": ["markdown for lovable prompts", "lovable prompts", "how to write prompts for lovable", "vibe coding prompts", "lovable app builder tips"],
+    "keywords": [
+      "markdown for lovable prompts",
+      "lovable prompts",
+      "how to write prompts for lovable",
+      "vibe coding prompts",
+      "lovable app builder tips"
+    ],
     "articleSection": "Vibe Coding",
     "inLanguage": "en-GB"
   },

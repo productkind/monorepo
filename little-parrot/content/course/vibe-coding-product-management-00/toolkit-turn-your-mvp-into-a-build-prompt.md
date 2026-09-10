@@ -1,7 +1,8 @@
 ---
-challenge: "6 - Create a Prompt to Build Your MVP with AI"
-type: "Template"
+challenge: '6 - Create a Prompt to Build Your MVP with AI'
+type: 'Template'
 ---
+
 ## Turn Your MVP into a Build Prompt
 
 A copy-paste prompt structure for Lovable, or any other AI app builder. It uses the work you've already done in this course: your problem statement, your persona, and the slice of your user story map you chose as your MVP (Minimum Viable Product).
@@ -12,12 +13,15 @@ Copy this into Lovable and replace the bracketed text with your own details. Del
 
 ```markdown
 ## Product Overview
+
 [One sentence on what the app does. Pull this from your problem statement.]
 
 ## Target User
+
 [One sentence of who your persona is. Pull this from your user persona.]
 
 ## User Flow
+
 [List the steps your user will take in the app, in order. Pull these directly from your MVP scope: the activities, steps, and details you chose to include.]
 
 1. [First thing the user does]
@@ -26,10 +30,12 @@ Copy this into Lovable and replace the bracketed text with your own details. Del
 4. [Continue until the journey is complete]
 
 ## Platform Requirements
+
 - Mobile-first layout
 - Accessible (WCAG AA compliance)
 
 ## Design System
+
 - Brand colours: [your main colour], [your accent colour], [your background colour]
 - Heading font: [e.g. Merriweather, Playfair Display, or leave blank for Lovable to choose]
 - Paragraph font: [e.g. Open Sans, Inter, or leave blank for Lovable to choose]
@@ -47,12 +53,15 @@ This is the prompt for the Book Club Organiser MVP, built directly from the stor
 
 ```markdown
 ## Product Overview
+
 A web app for book club organisers to collect book suggestions from members and vote on which book to read next.
 
 ## Target User
+
 A book club organiser who wants to spend less time on admin and more time reading with friends.
 
 ## User Flow
+
 1. Create a book club by entering a club name
 2. Invite members with a shareable link
 3. Suggest books by adding a title and author
@@ -60,10 +69,12 @@ A book club organiser who wants to spend less time on admin and more time readin
 5. Vote on books and see vote counts
 
 ## Platform Requirements
+
 - Mobile-first layout
 - Accessible (WCAG AA compliance)
 
 ## Design System
+
 - Brand colours: warm cream (#FDF6E3), deep brown (#5C4033), coral (#E07A5F)
 - Heading font: Merriweather
 - Paragraph font: Open Sans
@@ -73,7 +84,7 @@ A book club organiser who wants to spend less time on admin and more time readin
 ### Where each section comes from
 
 | Prompt section | Where to find it |
-|---|---|
+| --- | --- |
 | **Product Overview** | Your problem statement ("I am trying to...") rephrased as what the app does |
 | **Target User** | Your persona's descriptive title |
 | **User Flow** | Your MVP scope: the steps, and details you included |
