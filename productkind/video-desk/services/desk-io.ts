@@ -1,11 +1,11 @@
+import type { DeskIo, Flags } from '../domain/flows.ts'
+import { parseHistogram, parseRmse, type ProviderState } from '../domain/operations.ts'
+import type { VideoDeskServices } from './services.ts'
+
 import { execFile } from 'node:child_process'
 import { mkdtemp, rm, stat } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { promisify } from 'node:util'
-
-import type { DeskIo, Flags } from '../domain/flows.ts'
-import { parseHistogram, parseRmse, type ProviderState } from '../domain/operations.ts'
-import type { VideoDeskServices } from './services.ts'
 
 /**
  * The boundary the flows are handed: the video package's files, the two providers, and ImageMagick.
@@ -104,7 +104,9 @@ export const createDeskIo = ({
       }
       const fps = timeline.fps
       return timeline.sections.map((section: unknown) =>
-        typeof section === 'object' && section !== null && 'durationInFrames' in section &&
+        typeof section === 'object' &&
+        section !== null &&
+        'durationInFrames' in section &&
         typeof section.durationInFrames === 'number'
           ? section.durationInFrames / fps
           : 0,
@@ -184,8 +186,21 @@ export const createDeskIo = ({
       const histograms = await Promise.all(
         EDGES.map(({ gravity, crop }) =>
           magick({
-            args: [path, '-coalesce', '-gravity', gravity, '-crop', crop, '+repage', '+append',
-                   '-depth', '8', '-format', '%c', 'histogram:info:-'],
+            args: [
+              path,
+              '-coalesce',
+              '-gravity',
+              gravity,
+              '-crop',
+              crop,
+              '+repage',
+              '+append',
+              '-depth',
+              '8',
+              '-format',
+              '%c',
+              'histogram:info:-',
+            ],
           }),
         ),
       )
@@ -212,8 +227,14 @@ export const createDeskIo = ({
         const differences = await Promise.all(
           picked.slice(1).map(async (name, index) => {
             const text = await magick({
-              args: ['compare', '-metric', 'RMSE', `${folder}/${picked[index] ?? name}`,
-                     `${folder}/${name}`, 'null:'],
+              args: [
+                'compare',
+                '-metric',
+                'RMSE',
+                `${folder}/${picked[index] ?? name}`,
+                `${folder}/${name}`,
+                'null:',
+              ],
             }).catch((error: unknown) => (error instanceof Error ? error.message : ''))
             return parseRmse({ text }) ?? 0
           }),
@@ -241,7 +262,14 @@ export const createDeskIo = ({
           ),
         )
         const text = await magick({
-          args: ['compare', '-metric', 'RMSE', `${folder}/first.png`, `${folder}/last.png`, 'null:'],
+          args: [
+            'compare',
+            '-metric',
+            'RMSE',
+            `${folder}/first.png`,
+            `${folder}/last.png`,
+            'null:',
+          ],
         }).catch((error: unknown) => (error instanceof Error ? error.message : ''))
         return parseRmse({ text })
       } finally {
@@ -267,8 +295,20 @@ export const createDeskIo = ({
         // A second in, because the first frame of stock footage is often a fade from black.
         await run(
           'ffmpeg',
-          ['-y', '-v', 'error', '-ss', '1', '-i', assets(video) + `/${name}`, '-frames:v', '1',
-           '-vf', 'scale=-2:320', out],
+          [
+            '-y',
+            '-v',
+            'error',
+            '-ss',
+            '1',
+            '-i',
+            assets(video) + `/${name}`,
+            '-frames:v',
+            '1',
+            '-vf',
+            'scale=-2:320',
+            out,
+          ],
           { maxBuffer: 1 << 22 },
         )
         return out
@@ -282,9 +322,31 @@ export const createDeskIo = ({
       // Stock arrives as SDR BT.709 already, and grading it again over-saturates it.
       await run(
         'ffmpeg',
-        ['-y', '-v', 'error', '-i', from, '-t', seconds.toFixed(2), '-an',
-         '-c:v', 'libx264', '-crf', '23', '-preset', 'veryfast', '-pix_fmt', 'yuv420p',
-         '-color_primaries', 'bt709', '-color_trc', 'bt709', '-colorspace', 'bt709', to],
+        [
+          '-y',
+          '-v',
+          'error',
+          '-i',
+          from,
+          '-t',
+          seconds.toFixed(2),
+          '-an',
+          '-c:v',
+          'libx264',
+          '-crf',
+          '23',
+          '-preset',
+          'veryfast',
+          '-pix_fmt',
+          'yuv420p',
+          '-color_primaries',
+          'bt709',
+          '-color_trc',
+          'bt709',
+          '-colorspace',
+          'bt709',
+          to,
+        ],
         { maxBuffer: 1 << 24 },
       )
     },
@@ -313,8 +375,17 @@ export const createDeskIo = ({
       try {
         const { stdout } = await run(
           'ffprobe',
-          ['-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=width,height',
-           '-of', 'csv=p=0:s=x', path],
+          [
+            '-v',
+            'error',
+            '-select_streams',
+            'v:0',
+            '-show_entries',
+            'stream=width,height',
+            '-of',
+            'csv=p=0:s=x',
+            path,
+          ],
           { maxBuffer: 1 << 20 },
         )
         const [width, height] = stdout.trim().split('x').map(Number)
@@ -331,14 +402,24 @@ export const createDeskIo = ({
       // definition stays where its tests are. Spawned rather than imported: that package's
       // extensionless imports do not resolve under node's own ESM loader.
       const args = [
-        'run', '--silent', 'apply-visual', '--',
-        '--video', video,
-        '--section', String(section),
-        '--kind', visual.kind,
-        '--src', visual.src,
-        '--place', visual.place,
-        '--provider', visual.source.provider,
-        '--search', visual.source.search,
+        'run',
+        '--silent',
+        'apply-visual',
+        '--',
+        '--video',
+        video,
+        '--section',
+        String(section),
+        '--kind',
+        visual.kind,
+        '--src',
+        visual.src,
+        '--place',
+        visual.place,
+        '--provider',
+        visual.source.provider,
+        '--search',
+        visual.source.search,
         ...(visual.source.id === undefined ? [] : ['--id', visual.source.id]),
         ...(visual.source.author === undefined ? [] : ['--author', visual.source.author]),
         // A gif takes a letterbox colour and a rate; a clip takes an in-point. Neither takes the

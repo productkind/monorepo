@@ -1,9 +1,9 @@
-import { useCallback, useEffect, useState } from 'react'
-import { getRemotionEnvironment, staticFile } from 'remotion'
-import { watchStaticFile, writeStaticFile } from '@remotion/studio'
-
 import type { Flags } from './flags'
 import { parseFlags, serialiseFlags, toggled } from './flags'
+
+import { watchStaticFile, writeStaticFile } from '@remotion/studio'
+import { useCallback, useEffect, useState } from 'react'
+import { getRemotionEnvironment, staticFile } from 'remotion'
 
 /**
  * The flags for one video, kept in `public/<assets>/flags.json` and written from Studio.

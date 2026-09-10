@@ -1,3 +1,11 @@
+import type {
+  Candidate,
+  ClipCandidate,
+  Section,
+  VideoDetail,
+  VideoSummary,
+} from '../domain/types.ts'
+
 /**
  * Everything the desk knows comes from the API; nothing about a gif or a clip is decided here.
  *
@@ -9,14 +17,6 @@ export type {
   Candidate,
   ClipCandidate,
   Fit,
-  Section,
-  VideoDetail,
-  VideoSummary,
-} from '../domain/types.ts'
-
-import type {
-  Candidate,
-  ClipCandidate,
   Section,
   VideoDetail,
   VideoSummary,

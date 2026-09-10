@@ -6,26 +6,13 @@ account: little-parrot
 
 # Post 4: Free places to find first visitors
 
-**Pillar:** the method, shown.
-**Research trace:** curated lists are top saveable content; "getting found"
-sits in the strongest demand data; the ref-tag tip closes the loop with the
-analytics post, showing the method as a system rather than scattered tips.
-Repackages the Startup Directory List toolkit item.
+**Pillar:** the method, shown. **Research trace:** curated lists are top saveable content; "getting found" sits in the strongest demand data; the ref-tag tip closes the loop with the analytics post, showing the method as a system rather than scattered tips. Repackages the Startup Directory List toolkit item.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** List-and-tips style: a
-map-of-directories cover, directory names as pin cards, a mock submission
-form filled in with Dalmie's product.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** List-and-tips style: a map-of-directories cover, directory names as pin cards, a mock submission form filled in with Dalmie's product.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -37,11 +24,7 @@ form filled in with Dalmie's product.
 | 6 | A big stage with a "later" sign | "And Product Hunt? It's the big stage: save it for when your product and your confidence are ready. The smaller directories are where you warm up, with real visitors and lower stakes." |
 | 7 (CTA) | Brand card | "The full curated list of 40+ free directories comes with Build Your Business: From Vibe Coded Product to Paying Customers, on LittleParrot.app. First challenge free 🟪 Save this for launch week 🔖" |
 
-**Alt text (for the post):** A directory-guide carousel: submit to
-early-stage-friendly directories like BetaList first, use your value
-proposition and a real screenshot in submissions, start with two or three,
-track which send visitors via ref tags in analytics, and save Product Hunt
-for later.
+**Alt text (for the post):** A directory-guide carousel: submit to early-stage-friendly directories like BetaList first, use your value proposition and a real screenshot in submissions, start with two or three, track which send visitors via ref tags in analytics, and save Product Hunt for later.
 
 ## Caption (exact)
 
@@ -55,7 +38,4 @@ The full curated list (40+ directories, grouped by stage) comes with Build Your 
 
 Save this for launch week. 🔖
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #womeninbusiness #startupdirectories #womenintech #buildinpublic #femalefounder #startupjourney #firstcustomer #marketing
+. . . #vibecoding #buildwithai #womenwhobuild #womeninbusiness #startupdirectories #womenintech #buildinpublic #femalefounder #startupjourney #firstcustomer #marketing

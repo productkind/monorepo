@@ -1,4 +1,5 @@
 # Publishing Your Lovable App Course
+
 This micro-course aims to give foundational skills to the learner to confidently publish web applications with Lovable, the AI-development tool. By the end of the course, they should feel confident in growing their digital product as a business and improving it further.
 
 ## Target Audience

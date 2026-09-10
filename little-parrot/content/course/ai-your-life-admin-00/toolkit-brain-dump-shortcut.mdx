@@ -1,12 +1,13 @@
 ---
-challenge: "1 - The Brain Dump"
-type: "Guide"
+challenge: '1 - The Brain Dump'
+type: 'Guide'
 ---
+
 ## Build the Brain Dump Shortcut
 
-The Brain Dump is an iPhone Shortcut that turns your mental load into organised lists. You tap it, talk through everything on your mind, and your phone uses Apple's built-in AI to **sort what you said into checklist notes**: *Logistics, Food & Household, and Misc*. You can **share those notes** with your partner, so the mental load isn't yours alone to carry. This guide has every step, in order, so you can build it from scratch or rebuild it later.
+The Brain Dump is an iPhone Shortcut that turns your mental load into organised lists. You tap it, talk through everything on your mind, and your phone uses Apple's built-in AI to **sort what you said into checklist notes**: _Logistics, Food & Household, and Misc_. You can **share those notes** with your partner, so the mental load isn't yours alone to carry. This guide has every step, in order, so you can build it from scratch or rebuild it later.
 
-*You'll need an iPhone that runs Apple Intelligence: an **iPhone 15 Pro or 15 Pro Max, any iPhone 16 or newer, or an iPhone Air**. Everything else is built in, with nothing to buy or download.*
+_You'll need an iPhone that runs Apple Intelligence: an **iPhone 15 Pro or 15 Pro Max, any iPhone 16 or newer, or an iPhone Air**. Everything else is built in, with nothing to buy or download._
 
 ### 1. Turn on Apple Intelligence
 
@@ -69,7 +70,7 @@ Add these four actions in order, all for **Logistics**:
 
 ### 8. Test it before you copy it
 
-Tap the **▶️ play button** at the bottom, say one or two Logistics things (like *"call the dentist, book a yoga class"*), then tap the stop button. Open your **Logistics** note; the items should be there as checklist lines. If the note stayed empty, check the **Append Checklist Item** points at your **Logistics** note and that **Get Dictionary Value** reads from **Response**.
+Tap the **▶️ play button** at the bottom, say one or two Logistics things (like _"call the dentist, book a yoga class"_), then tap the stop button. Open your **Logistics** note; the items should be there as checklist lines. If the note stayed empty, check the **Append Checklist Item** points at your **Logistics** note and that **Get Dictionary Value** reads from **Response**.
 
 ![Testing the first block](/courses/ai-your-life-admin-00/build-test-first-block.webp)
 
@@ -78,6 +79,7 @@ Tap the **▶️ play button** at the bottom, say one or two Logistics things (l
 Build the same block again for each remaining category. Only the **category name** changes.
 
 **Food & Household:**
+
 1. **Get Dictionary Value**: type **Food & Household** as the **Key**, and set the **Dictionary** field to the **Response**.
 2. **Combine Text**: the **Dictionary Value** above, combined with **New Lines**.
 3. **If**: **Combined Text** → **has any value**, then delete the **Otherwise** line.
@@ -94,7 +96,7 @@ Wrap everything after **Dictate Text** in one guard so an empty tap does nothing
 1. Add an **If**, delete its **Otherwise** line, and set it to **Dictated Text** → **has any value**.
 2. Drag the **If** up so it sits right under **Dictate Text**, and drag the **End If** to the very bottom, so every other action is inside it.
 
-*If the End If won't stay at the bottom* and springs back above your last block, add any action at the very end (a **Combine Text** will do), drag the **End If** just above it, then delete that extra action.
+_If the End If won't stay at the bottom_ and springs back above your last block, add any action at the very end (a **Combine Text** will do), drag the **End If** just above it, then delete that extra action.
 
 ![Wrapping the shortcut in the outer If guard](/courses/ai-your-life-admin-00/build-if-guard.webp)
 
@@ -119,4 +121,5 @@ Now tap the **Brain Dump** icon on your Home Screen to run it, talk about everyt
 That's the whole build. If a step misbehaves, the Troubleshooting Your Shortcuts toolkit item covers the common issues.
 
 ### Want your partner to get these lists in a message?
+
 Sending the list as a message **works on any phone** (your partner doesn't need to have an iPhone). The [Send Your List to Your Partner](https://littleparrot.app/nest/toolkit/69103a0a-1e68-4db2-ad24-4ff619f10d52) guide adds an automatic message to your shortcut.

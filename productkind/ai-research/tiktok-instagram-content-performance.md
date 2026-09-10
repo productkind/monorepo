@@ -44,7 +44,7 @@ Non-follower reach is won per-post, not per-account, on both platforms: Instagra
 
 - On **TikTok**, creator-controlled metadata (captions, sounds, hashtags) is one of the three official ranking signal categories, alongside user interactions and device/account settings. **Caption keywords and sound choice are ranking inputs, not decoration.** Practitioner analyses in 2025-2026 suggest keyword captions, spoken audio, and on-screen text now outweigh hashtags within this category, though TikTok publishes no relative weights.
 - Write captions (and on-screen text, and spoken words) with the search phrase a target learner would type, e.g. "build an app without coding".
-- Coverage gap: the verified evidence says little about caption *craft* (length, hook phrasing, hashtag count) beyond captions being ranking metadata. What surfaced on this was low-quality blog material that didn't survive prioritisation. Treat detailed caption-formula advice found online as unverified.
+- Coverage gap: the verified evidence says little about caption _craft_ (length, hook phrasing, hashtag count) beyond captions being ranking metadata. What surfaced on this was low-quality blog material that didn't survive prioritisation. Treat detailed caption-formula advice found online as unverified.
 
 ## Education content specifically
 
@@ -58,7 +58,7 @@ Non-follower reach is won per-post, not per-account, on both platforms: Instagra
 3. **Treat captions, on-screen text, and spoken words as searchable metadata**, phrased in the words a non-technical learner would search.
 4. **Post quality over volume.** Education accounts win with modest cadence; every post is its own shot at non-follower reach regardless of follower count.
 5. **At 1,000 Instagram followers, start using Trial Reels** to test discovery content on non-followers before it hits the main grid.
-6. Tutorial-length content works: reels up to 3 minutes are discovery-eligible on Instagram, and TikTok rewards longer videos *if* they hold watch time.
+6. Tutorial-length content works: reels up to 3 minutes are discovery-eligible on Instagram, and TikTok rewards longer videos _if_ they hold watch time.
 
 ## Refuted in verification (do not cite)
 
@@ -71,7 +71,7 @@ Non-follower reach is won per-post, not per-account, on both platforms: Instagra
 - What specific caption characteristics (length, keyword/SEO usage, hook phrasing, hashtag count) measurably improve discovery reach in 2025-2026? Verified evidence establishes captions are ranking metadata, not what makes a caption perform.
 - Do Instagram carousels with audio in the Reels tab actually achieve non-follower reach comparable to native Reels?
 - What posting frequency optimises growth for accounts under 10K followers? (The one small-account growth statistic surfaced was refuted, leaving no verified benchmark.)
-- Do TikTok photo-mode carousels serve niche educational content for small accounts? Signals conflict: higher engagement *rates* within TikTok, but far lower absolute reach than video.
+- Do TikTok photo-mode carousels serve niche educational content for small accounts? Signals conflict: higher engagement _rates_ within TikTok, but far lower absolute reach than video.
 
 ## Caveats
 
@@ -83,6 +83,7 @@ Non-follower reach is won per-post, not per-account, on both platforms: Instagra
 ## Key sources
 
 Platform-official:
+
 - [Instagram ranking explained (Mosseri)](https://about.instagram.com/blog/announcements/instagram-ranking-explained)
 - [Instagram Creators blog: the latest with Instagram (Jan 2025)](https://creators.instagram.com/blog/the-latest-with-instagram)
 - [Instagram Trial Reels](https://creators.instagram.com/blog/instagram-trial-reels) / [Meta newsroom announcement](https://about.fb.com/news/2024/12/trial-reels-)
@@ -91,6 +92,7 @@ Platform-official:
 - [TikTok Creator Academy: recommendation system guidelines (April 2026)](https://www.tiktok.com/creator-academy/article/guidelines-recommendation-system-intro)
 
 Benchmark studies:
+
 - [Metricool Instagram content playbook (700M posts, with HypeAuditor)](https://metricool.com/press-release-instagram-content-playbook/)
 - [Metricool Instagram study 2026 (24.3M posts)](https://metricool.com/press-release-instagram-study-2026/)
 - [Rival IQ social media industry benchmark report (2,100 brands)](https://www.rivaliq.com/blog/social-media-industry-benchmark-report/)

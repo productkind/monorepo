@@ -1,5 +1,7 @@
 # Creating a full course from a messy draft
+
 ## About
+
 - Tool: Claude Code
 - Skills used: /productkind-tone /micro-course
 - 2 separate contexts:
@@ -7,6 +9,7 @@
   - From structured outline to yaml
 
 ## TLDR
+
 0. Create a productkind-tone skill from a document that uses the language we're going for
 1. Create good quality course outlines from existing courses
 2. Create course outline from messy draft
@@ -14,9 +17,10 @@
 4. Create course from finalised course outline
 
 ## Process
+
 ### From messy draft to structured outline
-Compact summary
-  This session is being continued from a previous conversation that ran out of context. The summary below covers the earlier portion of the conversation.
+
+Compact summary This session is being continued from a previous conversation that ran out of context. The summary below covers the earlier portion of the conversation.
 
      Analysis:
      Let me chronologically analyze the conversation:
@@ -75,8 +79,8 @@ Compact summary
      - No em dashes, hashtags, decorative punctuation
      - Be friendly, engaging, understated, natural, mentor-like, succinct
 
-
 #### All user messages:
+
         - "From this micro-course, create a concise and high-level course outline about the structure and narrative of this micro-course. Put the output in a markdown format in the same folder.
      /tone-of-voice"
         - "Now create an outline for this micro-course. Put the output in a markdown format in the same folder. /tone-of-voice" (for vibe-coding-tech-00)
@@ -92,10 +96,11 @@ Compact summary
         - "Apply our tone of voice and style for the Lovable course outline /tone-of-voice"
 
 ### From structured outline to yaml
-   /Users/kingamagyar/Documents/productkind/monorepo/little-parrot/content/course/lovable-intro-01-course.md Amazing, now I want you to turn the course into the yaml format we use that we can just add to our database and the online course is working. /micro-course
-   "timestamp":"2026-02-05T03:56:58.033Z"}
 
-####  All user messages:
+/Users/kingamagyar/Documents/productkind/monorepo/little-parrot/content/course/lovable-intro-01-course.md Amazing, now I want you to turn the course into the yaml format we use that we can just add to our database and the online course is working. /micro-course "timestamp":"2026-02-05T03:56:58.033Z"}
+
+#### All user messages:
+
         - Initial request to create micro-course from draft with productkind-tone, output to course folder
         - "It's great, but in the first structured prompt we advise the learner to use, there are too many features listed for the Book Club Organiser. It's more effective to outline one core user flow to
      start with..."
@@ -113,5 +118,3 @@ Compact summary
         - "Create two steps from the 'Adding assets and design themes' step. 1. Talk about design themes... 2. Learners can attach images to reference inspiration..."
         - "After the 'Quiz: Visual edits' step, add a quiz question about the preview mode."
         - "In the 'Go Beyond the Interface' challenge, we want to mention the new Lovable feature that enables the learner to do browser testing. Add one step about it."
-
-

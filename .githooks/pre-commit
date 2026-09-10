@@ -18,13 +18,15 @@ staged=$(mktemp)
 unstaged=$(mktemp)
 trap 'rm -f "$staged" "$unstaged"' EXIT
 
-git diff --cached --name-only --diff-filter=ACM | sort >"$staged"
+# NUL-delimited throughout: a path with spaces in it would otherwise arrive at xargs as several
+# arguments, and prettier would report each fragment as a file it cannot find.
+git diff --cached --name-only --diff-filter=ACM -z >"$staged"
 [ -s "$staged" ] || exit 0
-git diff --name-only --diff-filter=ACM | sort >"$unstaged"
+git diff --name-only --diff-filter=ACM -z >"$unstaged"
 
 # Formatting a file that is only partly staged would sweep its unstaged half into the commit, so
 # the author has to decide what to do with the rest first.
-partly_staged=$(comm -12 "$staged" "$unstaged")
+partly_staged=$(comm -12 <(tr '\0' '\n' <"$staged" | sort) <(tr '\0' '\n' <"$unstaged" | sort))
 if [ -n "$partly_staged" ]; then
   echo "pre-commit: these files are only partly staged, so formatting them would commit the rest:" >&2
   echo "$partly_staged" | sed 's/^/  /' >&2
@@ -34,5 +36,5 @@ fi
 
 # --ignore-unknown leaves binaries and anything prettier has no parser for alone; .prettierignore
 # is still honoured, so ignored paths are skipped too.
-xargs "$prettier" --write --ignore-unknown <"$staged" >/dev/null
-xargs git add <"$staged"
+xargs -0 "$prettier" --write --ignore-unknown <"$staged" >/dev/null
+xargs -0 git add <"$staged"

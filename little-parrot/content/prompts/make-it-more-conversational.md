@@ -1,17 +1,21 @@
 ## Goal
+
 - Make course material more conversational and friendlier.
 
 ## About
+
 - ChatGPT
 - Little Parrot project
 - Search selected
 
 ## Prompt
+
 I'm designing a new micro-course for Little Parrot. It's about helping a non-technical women who build digital products with Lovable (AI app builder) to gain technical literacy. The goal is that they understand how software works, so they can build with vibe coding tools (AI app builders) more efficiently.
 
 Below you can see the learning material we developed for the course. Make the learning material (values) more conversational and friendly, make it more practical, so learners can apply what they learn while building with AI-development tools. While making these changes, keep the exact structure of the JSON.
 
 ## Learning Material
+
 ```
 {
   "course": {
@@ -1019,4 +1023,5 @@ Below you can see the learning material we developed for the course. Make the le
 ```
 
 ## Answer
+
 Here’s the revised learning-material JSON, keeping your structure exactly but making the tone more conversational, more practical, and more friendly—so a learner building with AI app-builders like Lovable feels empowered rather than intimidated:

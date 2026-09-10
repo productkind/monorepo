@@ -11,7 +11,7 @@
 Terms compared: `lovable`, `claude code`, `product validation`, `lead magnet`, `product management ai`.
 
 | Term | Peak | Five-year mean | First-third average | Last-third average | Direction |
-|---|---:|---:|---:|---:|---|
+| --- | --: | --: | --: | --: | --- |
 | lovable | 26 | 4.2 | 1.0 | 10.6 | Strong recent growth |
 | claude code | 100 | 10.7 | 0.0 | 32.0 | Strongest recent growth |
 | product validation | 2 | 0.2 | 0.0 | 0.6 | Too compressed for a useful reading |
@@ -69,10 +69,10 @@ Google returned no useful related-query lists for `product validation` or `produ
 
 ### Lovable app versus Lovable production
 
-| Term | Peak | Five-year mean | First-third average | Last-third average |
-|---|---:|---:|---:|---:|
-| lovable app | 100 | 9.3 | 0.0 | 28.1 |
-| lovable production | 15 | 0.1 | 0.0 | 0.2 |
+| Term               | Peak | Five-year mean | First-third average | Last-third average |
+| ------------------ | ---: | -------------: | ------------------: | -----------------: |
+| lovable app        |  100 |            9.3 |                 0.0 |               28.1 |
+| lovable production |   15 |            0.1 |                 0.0 |                0.2 |
 
 `Lovable app` has grown strongly, while the proposed umbrella wording `Lovable production` is almost absent. Related searches for `Lovable app` included app-builder, pricing, GitHub, Replit and Base44 terms.
 
@@ -82,20 +82,20 @@ This means Little Parrot should not rely on “Lovable production” as the phra
 
 The original five-term request returned related queries but Google throttled its time-series subrequest. A smaller comparison recovered the three missing task terms:
 
-| Term | Peak | Five-year mean | First-third average | Last-third average |
-|---|---:|---:|---:|---:|
-| lovable github | 100 | 4.7 | 0.0 | 13.8 |
-| lovable stripe | 36 | 0.3 | 0.0 | 0.9 |
-| lovable authentication | 3 | 0.0 | 0.0 | 0.1 |
+| Term                   | Peak | Five-year mean | First-third average | Last-third average |
+| ---------------------- | ---: | -------------: | ------------------: | -----------------: |
+| lovable github         |  100 |            4.7 |                 0.0 |               13.8 |
+| lovable stripe         |   36 |            0.3 |                 0.0 |                0.9 |
+| lovable authentication |    3 |            0.0 |                 0.0 |                0.1 |
 
 GitHub is the only task term with a sustained signal in this comparison. Stripe is small but recent. The exact `Lovable authentication` wording is effectively absent. This reinforces the autocomplete finding that GitHub/control is a stronger acquisition cluster than a generic production label.
 
 ### Product-manager category versus user-research workflow
 
-| Term | Peak | Five-year mean | First-third average | Last-third average |
-|---|---:|---:|---:|---:|
-| ai user research | 100 | 7.4 | 0.0 | 21.9 |
-| ai for product managers | 32 | 0.3 | 0.0 | 0.8 |
+| Term                    | Peak | Five-year mean | First-third average | Last-third average |
+| ----------------------- | ---: | -------------: | ------------------: | -----------------: |
+| ai user research        |  100 |            7.4 |                 0.0 |               21.9 |
+| ai for product managers |   32 |            0.3 |                 0.0 |                0.8 |
 
 `AI user research` has a much stronger and more sustained recent signal than the role-based category. This supports narrowing Candidate 3 around a workflow rather than marketing a general “AI for product managers” course. It does not yet prove demand for the differentiated evidence-verification layer.
 

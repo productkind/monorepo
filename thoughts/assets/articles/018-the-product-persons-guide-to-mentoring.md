@@ -1,9 +1,8 @@
 # The Product Person's Guide to Mentoring
 
-*How to mentor and how to be a mentee*
+_How to mentor and how to be a mentee_
 
-**Date:** October 8, 2025
-**Author:** Kinga Magyar
+**Date:** October 8, 2025 **Author:** Kinga Magyar
 
 ---
 

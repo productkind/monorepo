@@ -1,7 +1,7 @@
-import { describe, expect, test } from 'vitest'
-
-import { sectionSpansIn } from './spans'
 import social017Alignment from './__fixtures__/social-017.alignment.json'
+import { sectionSpansIn } from './spans'
+
+import { describe, expect, test } from 'vitest'
 
 const alignmentFor = ({ text }: { text: string }) => {
   const characters = [...text]
@@ -67,7 +67,9 @@ describe('sectionSpansIn', () => {
 
     // The narration opens with a newline and separates the two with a blank line, none of which
     // the section text needs to carry.
-    expect(social017Alignment.characters.slice(first.charFrom, first.charTo).join('')).toBe(texts[0])
+    expect(social017Alignment.characters.slice(first.charFrom, first.charTo).join('')).toBe(
+      texts[0],
+    )
     expect(social017Alignment.characters.slice(second.charFrom, second.charTo).join('')).toBe(
       texts[1],
     )

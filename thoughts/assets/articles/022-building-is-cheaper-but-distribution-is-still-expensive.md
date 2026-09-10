@@ -2,8 +2,7 @@
 
 > Why the cost of building software is not the full story to building a successful product
 
-**Date:** July 21, 2026
-**Author:** Kinga Magyar
+**Date:** July 21, 2026 **Author:** Kinga Magyar
 
 ---
 
@@ -20,12 +19,11 @@ Building a product is like 25% of the job. The other 75% looks a bit like this:
 3. Your target audience needs to have time to try it, and find it useful enough to come back to it over and over. So, you also need to drive the **behaviour change** required for them to adopt the product.
 4. And finally, the holy grail of a business: **revenue**. You need to make sure this product is so valuable that your users will happily pay for it.
 
-> *Thoughts by productkind is a reader-supported publication. To receive new posts and support my work, consider becoming a free or paid subscriber.*
+> _Thoughts by productkind is a reader-supported publication. To receive new posts and support my work, consider becoming a free or paid subscriber._
 >
 > [subscribe widget]
 
-[image: A bright, modern workspace with two open laptops on a wooden table. A notebook and papers sit beside one laptop, and a rusty orange coffee cup is on the other side. On the screen, the PostHog dashboard is open. In the background, there is a spacious lounge area with light wood beams across the ceiling, indoor plants, low seating, small tables, and large glass doors letting in natural light.]
-*Caption: The primary tool we use for our product analytics to track where our users are coming from is PostHog.*
+[image: A bright, modern workspace with two open laptops on a wooden table. A notebook and papers sit beside one laptop, and a rusty orange coffee cup is on the other side. On the screen, the PostHog dashboard is open. In the background, there is a spacious lounge area with light wood beams across the ceiling, indoor plants, low seating, small tables, and large glass doors letting in natural light.] _Caption: The primary tool we use for our product analytics to track where our users are coming from is PostHog._
 
 For a B2C product, getting to the point where you have enough paying users to comfortably live off the income takes a lot of time and experimentation. Unless, of course, you're a "tech bro" with a massive network of influential people ready to amplify your launch, meaning you don't have to figure out scrappy ways to reach your audience.
 
@@ -97,6 +95,6 @@ Kinga
 
 ---
 
-*Thanks for reading Thoughts by productkind! This post is public so feel free to share it.*
+_Thanks for reading Thoughts by productkind! This post is public so feel free to share it._
 
 [share button]

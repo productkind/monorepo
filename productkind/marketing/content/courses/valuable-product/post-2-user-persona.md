@@ -6,27 +6,13 @@ account: little-parrot
 
 # Post 2: Give your app one specific person
 
-**Pillar:** the method, shown (PM expertise, shared).
-**Research trace:** the persona is the decision-making tool that answers
-"would she actually use this?", the judgement skill our confidence-by-design
-angle centres; frustrations written as quotes mirror how the audience
-already narrates pain; the template is pre-made saveable content. Repackages
-the Get to Know Your Target User toolkit item.
+**Pillar:** the method, shown (PM expertise, shared). **Research trace:** the persona is the decision-making tool that answers "would she actually use this?", the judgement skill our confidence-by-design angle centres; frustrations written as quotes mirror how the audience already narrates pain; the template is pre-made saveable content. Repackages the Get to Know Your Target User toolkit item.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Profile-card style: a
-persona card that fills in section by section, Sarah as the worked example,
-her quotes in speech bubbles.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Profile-card style: a persona card that fills in section by section, Sarah as the worked example, her quotes in speech bubbles.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -38,10 +24,7 @@ her quotes in speech bubbles.
 | 6 | The card beside a confusing screen mockup | "And when something feels off: 'If I showed this to Sarah, would she understand what to do?' One imagined person answers questions that 'my users' never can." |
 | 7 (CTA) | Brand card, the completed persona card | "The full template is in Build a Valuable Product: How to Break Down Your Idea for Vibe Coding, on LittleParrot.app. First challenge free 🟪 Save this 🔖" |
 
-**Alt text (for the post):** A persona-template carousel: name and
-situation, an About section, frustrations written as first-person quotes,
-measurable goals, and three decision questions for using the persona while
-building.
+**Alt text (for the post):** A persona-template carousel: name and situation, an About section, frustrations written as first-person quotes, measurable goals, and three decision questions for using the persona while building.
 
 ## Caption (exact)
 
@@ -57,7 +40,4 @@ The full template comes with Build a Valuable Product: How to Break Down Your Id
 
 Who's your Sarah? Tell us about her. 👇
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #productmanagement #shebuilds #womenintech #techforwomen #productthinking #appbuilding #userresearch #learnwithai #femalefounder
+. . . #vibecoding #buildwithai #womenwhobuild #productmanagement #shebuilds #womenintech #techforwomen #productthinking #appbuilding #userresearch #learnwithai #femalefounder

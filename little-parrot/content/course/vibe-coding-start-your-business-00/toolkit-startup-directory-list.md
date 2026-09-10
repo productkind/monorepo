@@ -1,6 +1,7 @@
 ---
-challenge: "5 - Get Your First Visitors"
+challenge: '5 - Get Your First Visitors'
 ---
+
 ## Startup Directory List
 
 A curated list of directories where you can submit your product to get your first visitors. All of them are free to submit to. You don't need to submit to all of them. Start with a few that fit your product and your audience.
@@ -17,7 +18,7 @@ A curated list of directories where you can submit your product to get your firs
 These directories specifically welcome small, new, and pre-revenue products. If you're just starting out, this is where to begin.
 
 | Directory | What it is |
-|-----------|-----------|
+| --- | --- |
 | [BetaList](https://betalist.com/) | Directory of early-stage products looking for beta testers |
 | [Tiny Startups](https://tinystartups.com) | The #1 launch platform for tiny, bootstrapped startups |
 | [Startups.fm](https://www.startups.fm) | Directory for discovering early-stage startups and side projects |
@@ -35,7 +36,7 @@ These directories specifically welcome small, new, and pre-revenue products. If 
 These work like Product Hunt: you "launch" your product on a specific day, the community votes, and top products get visibility. Good for a spike of attention.
 
 | Directory | What it is |
-|-----------|-----------|
+| --- | --- |
 | [Product Hunt](https://producthunt.com/) | The biggest launch platform. Save this for when you're confident in your product. |
 | [Uneed](https://uneed.best) | Launch platform with 64,000+ makers. Good for indie builders. |
 | [TinyLaunch](https://tinylaunch.com) | Daily launches with competitive rankings and badges |
@@ -55,7 +56,7 @@ These work like Product Hunt: you "launch" your product on a specific day, the c
 Searchable catalogues where people browse by category. Less of a "launch moment," more of a long-term presence that brings steady traffic over time.
 
 | Directory | What it is |
-|-----------|-----------|
+| --- | --- |
 | [AlternativeTo](https://alternativeto.net/) | If your product is an alternative to an existing tool |
 | [Launching Next](https://www.launchingnext.com/) | Startup directory for new products |
 | [StartupStash](https://startupstash.com) | One of the largest directories of tools and resources for startups |
@@ -77,7 +78,7 @@ Searchable catalogues where people browse by category. Less of a "launch moment,
 Places where founders share and discuss what they're building. Good for conversations and connections, not just listings.
 
 | Directory | What it is |
-|-----------|-----------|
+| --- | --- |
 | [Indie Hackers](https://www.indiehackers.com/) | Community of independent founders building products |
 | [Hacker News (Show HN)](https://news.ycombinator.com/showhn.html) | Tech community. Good for developer tools and technical audiences. |
 | [SideProjectors](https://sideprojectors.com) | Marketplace for buying, selling, and showcasing side projects |
@@ -88,7 +89,7 @@ Places where founders share and discuss what they're building. Good for conversa
 Only relevant if your product is AI-powered or built with AI tools.
 
 | Directory | What it is |
-|-----------|-----------|
+| --- | --- |
 | [AI Tools Inc](https://aitools.inc) | AI tool discovery and directory |
 | [Dang AI](https://dang.ai) | AI tools directory since 2022, with ratings and categories |
 | [AI Agents Directory](https://aiagentsdirectory.com/) | Specifically for AI agent products |

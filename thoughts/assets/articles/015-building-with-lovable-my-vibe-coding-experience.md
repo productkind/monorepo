@@ -1,9 +1,8 @@
 # Building with Lovable: My Vibe Coding Experience
 
-*A product manager's learnings from working with an AI engineer*
+_A product manager's learnings from working with an AI engineer_
 
-**Date:** September 17, 2025
-**Author:** Kinga Magyar
+**Date:** September 17, 2025 **Author:** Kinga Magyar
 
 ---
 
@@ -49,11 +48,7 @@ I found that using Gherkin to explain to Lovable what I wanted works pretty well
 
 When we were implementing discount codes on Little Parrot, I prompted it:
 
-> Scenario: Learner can remove the discount code
-> Given the learner added a discount code at checkout
-> When they click the trashcan icon next to the discount code
-> Then the discount disappears
-> And the price of the subscription reverts to the original price.
+> Scenario: Learner can remove the discount code Given the learner added a discount code at checkout When they click the trashcan icon next to the discount code Then the discount disappears And the price of the subscription reverts to the original price.
 
 What I failed to do was specify that it should also remove the discount code from the backend and Stripe (which we use as our payment provider).
 

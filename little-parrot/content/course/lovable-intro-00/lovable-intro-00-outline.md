@@ -38,25 +38,31 @@ This formula helps you describe your app clearly:
 
 ```markdown
 ## Product overview
+
 [What is this app? What problem does it solve?]
 
 ## User flow
+
 [What does the user do, step by step?]
 
 ## Platform requirements
+
 - It's a mobile-first platform. Optimise layout, font sizes, and buttons for mobile. Prioritise speed and readability.
 - The platform is accessible. Implement WCAG AA compliance.
 
 ## Design system
+
 - Brand colours: [your colours]
 - Heading font: [font name]
 - Paragraph font: [font name]
 - Logo: [describe or upload later]
 
 ## Implementation details
+
 [Any specific technical requirements]
 
 ## Target user
+
 [Who is this app for?]
 ```
 
@@ -80,27 +86,33 @@ Here's her starting prompt:
 
 ```markdown
 ## Product overview
+
 A simple app where book club members can suggest books for the group to read next.
 
 ## User flow
+
 1. User opens the app and sees a list of book suggestions
 2. User can add a new suggestion with the book title and a short note about why they recommend it
 
 ## Platform requirements
+
 - It's a mobile-first platform. Optimise layout, font sizes, and buttons for mobile. Prioritise speed and readability.
 - The platform is accessible. Implement WCAG AA compliance.
 
 ## Design system
+
 - Brand colours: warm cream background (#FDF6E3), deep brown text (#5C4033), accent coral (#E07A5F)
 - Heading font: Merriweather
 - Paragraph font: Open Sans
 - Style: cosy, bookish, friendly
 
 ## Implementation details
+
 - No login required for the first version
 - Store data locally for now
 
 ## Target user
+
 Sarah, a book club organiser who wants to spend less time on admin and more time reading with friends.
 ```
 
@@ -131,11 +143,13 @@ Now that you have something working, let's make it better. This is where the rea
 You might be wondering: why didn't we include voting, deadlines, and everything else in the first prompt? Wouldn't it be faster to describe it all at once?
 
 Here's what actually happens when you try that:
+
 - Lovable might misunderstand one part, and that mistake ripples through everything else
 - You get a complex app that's harder to understand and fix
 - You spend more time untangling problems than you saved by combining prompts
 
 Building one feature at a time means:
+
 - You can test each piece before adding the next
 - Problems are easier to spot and fix
 - You stay in control of how your app grows
@@ -151,6 +165,7 @@ If Lovable creates something that's 70% right but the 30% that's wrong is fundam
 This might feel wasteful if you're used to thinking about code as precious. But in vibe coding, your prompt is the valuable thing, not the output. A clearer prompt will give you a cleaner result.
 
 **When to tweak vs when to start fresh:**
+
 - Tweak when the structure is right but details need adjusting
 - Start fresh when the fundamental approach is wrong
 
@@ -173,6 +188,7 @@ After this works, she might add the ability to close voting, then a "currently r
 Think of the next feature your app needs. Just one. Resist the temptation to add three things at once.
 
 Maybe it's:
+
 - A way to filter or sort items
 - A confirmation message when something is saved
 - A place to add notes or comments
@@ -191,6 +207,7 @@ Lovable has several helpful features beyond the chat window. Let's explore the o
 ### Preview mode
 
 The preview shows your app as users will see it. You can:
+
 - View it full-screen (click the expand icon)
 - Test how it looks on mobile vs desktop (use the device toggle)
 - Click around to test all the interactions
@@ -206,6 +223,7 @@ Think of it like the engine of a car. You don't need to be a mechanic to drive, 
 ### The preview toolbar
 
 This is one of the most useful features for quick tweaks. The preview toolbar sits at the bottom of your app preview and lets you point at what you want to change. It gives you a few modes:
+
 - Select elements: click a part of your app, then describe the change
 - Edit text inline: fix a typo or change wording directly on the page
 - Draw annotation: sketch on the preview to show a layout change
@@ -248,6 +266,7 @@ Look for the bookmark icon in the version history. Give it a name you'll recogni
 If something goes wrong, you can go back to any previous version. Open the version history, find the version you want, and restore it.
 
 **When to revert vs when to fix:**
+
 - Revert when the change broke something fundamental or created a mess you can't easily untangle
 - Fix when it's a small issue and you can describe clearly what went wrong
 
@@ -306,6 +325,7 @@ You've built something. Now let's share it with the world.
 ### Before you publish
 
 Take a few minutes to set up:
+
 - **Favicon:** The small icon that appears in browser tabs. Upload something simple, like your logo.
 - **Meta tags:** The title and description that appear when someone shares your link. Make them clear and inviting.
 - **Thumbnail:** The image that shows when your app is shared on social media.
@@ -331,6 +351,7 @@ This means a simple, working version is achievable quickly. Polishing every deta
 ### What to do next
 
 Share your app with one person. Maybe a friend, a potential user, or someone who fits your target audience. Ask them:
+
 - What makes sense?
 - What's confusing?
 - What would they want to see added?

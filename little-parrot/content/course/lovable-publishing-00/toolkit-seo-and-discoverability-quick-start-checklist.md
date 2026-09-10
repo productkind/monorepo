@@ -1,6 +1,7 @@
 ---
-challenge: "4 - Get Found: SEO and Discoverability"
+challenge: '4 - Get Found: SEO and Discoverability'
 ---
+
 ## SEO and Discoverability Quick-Start Checklist
 
 A step-by-step checklist for making your product discoverable through search engines and AI tools. Work through it after publishing your app. You don't need to do everything in one sitting. Tick items off over the first few weeks.
@@ -10,15 +11,20 @@ A step-by-step checklist for making your product discoverable through search eng
 These are changes to your app itself that help search engines understand your content.
 
 - [ ] **Fix your heading tag hierarchy.** Each page should have exactly one h1 tag as the main title, with h2 and h3 tags for sections and sub-sections. Prompt Lovable:
+
 ```
 Review all pages in the app and fix the heading tag hierarchy. Each page should have exactly one h1 tag as the main title. Make sure the heading hierarchy follows HTML structure best practices. List what you changed.
 ```
+
 - [ ] **Add alt text to all images.** Alt text helps search engines understand your images and makes your app accessible to screen readers. Prompt Lovable:
+
 ```
 Add descriptive alt text to all images in the app for accessibility and SEO.
 ```
+
 - [ ] **Set clear, descriptive page titles.** Each page should have a title that describes what it does. Your meta tags cover the homepage, but individual pages need attention too.
 - [ ] **Ask Lovable for a general SEO review.** Prompt:
+
 ```
 Review this app for SEO best practices and suggest improvements.
 ```
@@ -29,9 +35,11 @@ These steps help Google find and index your pages faster.
 
 - [ ] **Verify your domain.** Go to [Google Search Console](https://search.google.com/search-console), add your domain, and follow the verification steps. Note: this requires a custom domain that you own (e.g., `bookcluborganiser.com`). If you're still using a Lovable URL (e.g., `bookclub.lovable.app`), you can't verify it because you don't own the `lovable.app` domain. Set up a custom domain first, then come back to this step.
 - [ ] **Submit your sitemap.** In [Google Search Console](https://search.google.com/search-console), click **Sitemaps** in the left menu and submit `https://yourdomain.com/sitemap.xml`. If you're unsure where to find it, prompt Lovable:
+
 ```
 Does this app have a sitemap.xml? If not, generate one.
 ```
+
 - [ ] **Check for indexing issues.** After a few days, come back to Google Search Console and check the **Pages** report in the left menu. It shows which pages Google has indexed and any problems it found.
 
 ### GEO (Generative Engine Optimisation)
@@ -50,13 +58,16 @@ AEO focuses on getting your content cited by AI-powered search features like Goo
 - [ ] **Add an FAQ section to your site.** Write out the questions your target users are likely to search for, with clear, concise answers. For a book club organiser, that could be questions like "How do I organise a book club?" or "How do book club voting apps work?"
 - [ ] **Structure answers for AI extraction.** When answering a question, put a short, direct answer (1-2 sentences) right after the heading, then expand with more detail below. AI-powered search features tend to pull from content that leads with a clear answer.
 - [ ] **Add FAQ schema markup.** Schema markup is structured data that helps search engines and AI systems understand your content. Prompt Lovable:
+
 ```
 Add FAQ schema markup (JSON-LD) to the FAQ section of the site. Each question and answer should be included in the structured data.
 ```
+
 - [ ] **Target "how to" and "what is" queries.** These are the types of searches that trigger AI-generated answers. Create content that directly answers questions related to the problem your product solves.
 - [ ] **Keep answers concise and factual.** AI-powered search features favour clear, straightforward language. Avoid long introductions before getting to the answer. Lead with the answer, then explain.
 
 **How SEO, AEO, and GEO work together:**
+
 - **SEO** gets your pages ranked in traditional search results
 - **GEO** gets conversational AI tools (ChatGPT, Claude, Gemini) to recommend your product
 - **AEO** gets your content cited by AI-powered search features (Google AI Overviews, Bing Copilot, Perplexity)
@@ -84,6 +95,7 @@ Mostly relevant if your product has a local component (serves a local community 
 ### Set expectations
 
 SEO results take time. After publishing and setting everything up:
+
 - **Best case:** a few days to start appearing in Google results
 - **Typical case:** a few weeks
 - **Competitive space:** a few months

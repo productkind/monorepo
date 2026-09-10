@@ -35,21 +35,27 @@ Every phrase below is banned outright, in any format. This section is the closed
 `scripts/check-banned.py <file...>` checks any draft against this list, em dashes and American spellings mechanically, parsing the list from this file at run time. Adding a phrase here is the only step needed for the script to catch it. Run it on any draft that exists as a file before shipping.
 
 ### Hyperbolic adjectives
+
 game-changing, mind-blowing
 
 ### Drama words
+
 hack, chaos, crisis, fluff, hype
 
 ### Business jargon
+
 leverage, synergy, move the needle, circle back, land on
 
 ### Announcing clarity
+
 in plain English, in plain language, plain wording, in one plain paragraph
 
 ### Empty fillers
+
 but here's the catch, to cut through the chaos, cutting through the noise, that moment stuck with me, this stuck with me, it stuck with me, that stayed with me, this stayed with me, it stayed with me, that actually lands, that sticks, which makes a real difference, makes a real difference, made a real difference, I keep coming back to, one idea I keep coming back to, it clicked, something clicked, the book finally clicked, it finally clicked
 
 ### Pseudo punchlines
+
 Here's the thing, Bottom line, No fluff, This one's for you, Why this matters, What moved me, This matters because, that matters, it matters most, matters most for, In this piece
 
 ## 3. Rules that need judgement
@@ -97,7 +103,7 @@ The rule to carry from it: **precision, not concision.** Corrections are often l
 - **No overselling.** Promise only what the thing actually delivers. No sweeping comprehension claims a course does not teach.
 - **Building your idea with AI, never becoming a developer.** Lead with the reader's idea or business outcome. "Like a developer" as a borrowed workflow is fine; a developer career or identity as the destination is not. Avoid "no code needed".
 - **Tool terminology.** "AI chat assistant" for ChatGPT and Claude.ai (you copy the answer out). "AI agent" for Claude Code and Codex (it acts in your files and shows the changes). Write "AI chat assistant" in full, never "chat assistant". Avoid "chat AI" and "agentic".
-- **No invented assumptions or strawmen.** Do not write "people think X" or "you might assume Y" unless we know they do. The same holds for what people *do*: "most people try this once and never again" is a claim about behaviour and needs a source or it goes. Start from what is true.
+- **No invented assumptions or strawmen.** Do not write "people think X" or "you might assume Y" unless we know they do. The same holds for what people _do_: "most people try this once and never again" is a claim about behaviour and needs a source or it goes. Start from what is true.
 - **Never invent facts about us.** Our backstory, motivation and experience are only ever what we have actually been told. "We made it for mums" is true. "The examples come from new-mum life, because that is where we built it" invents an experience Kinga has not had. This kind of line reads as warm, authentic detail, which is exactly what makes it dangerous, because a reader takes it as fact about the founders. Watch for clauses beginning "because that is where we...", "after we...", "when I was...", "having been...". Reassigning an unsourced claim to Kinga's first person is not a fix, it is a second fabrication on top of the first.
 - **Do not speak for a group's experience from outside it.** "A version that suits an ADHD brain" states what suits every reader with ADHD. Address the reader: "a version that works better if you have ADHD".
 - **Name the source when an idea is not ours** (a researcher, a podcast, a book).

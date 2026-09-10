@@ -25,7 +25,6 @@ Which is why our newest course is called Hand Off the Mental Load, rather than s
 
 The build is technical, the problem it solves isn't. If you're the one holding the running list of what everyone in the house needs, and both your hands are usually full, that's who it's for.
 
-It's free in full until 30 August, then the first challenge stays free:
-https://littleparrot.app/55dfd25b-b9a5-4f04-860d-ef5c1d1e20b9/course-overview?utm_source=linkedin&utm_campaign=mental-load-aug26
+It's free in full until 30 August, then the first challenge stays free: https://littleparrot.app/55dfd25b-b9a5-4f04-860d-ef5c1d1e20b9/course-overview?utm_source=linkedin&utm_campaign=mental-load-aug26
 
 I'm curious whether it's the same for you. Are you building for the words your users type into a search box, or the words you'd use?

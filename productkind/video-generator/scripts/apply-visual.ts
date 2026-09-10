@@ -13,12 +13,12 @@
  * that rewrites a hand-authored definition lives in the package that owns those definitions and is
  * covered by its tests.
  */
-import { readFileSync, writeFileSync } from 'node:fs'
-import { resolve } from 'node:path'
-
 import { isProvider, PROVIDERS } from '../src/narration/definition'
 import type { AppliedVisual } from '../src/videos/apply-visual'
 import { withVisualApplied } from '../src/videos/apply-visual'
+
+import { readFileSync, writeFileSync } from 'node:fs'
+import { resolve } from 'node:path'
 
 const valueOf = ({ name }: { name: string }): string | undefined => {
   const index = process.argv.indexOf(`--${name}`)

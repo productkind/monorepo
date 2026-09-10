@@ -10,7 +10,10 @@ const LINE_LIMIT = 44
 
 /** What the visual is called, once the section number and extension are stripped off. */
 const shortName = ({ src }: { src: string }): string => {
-  const file = src.split('/').slice(-1)[0].replace(/\.[a-z0-9]+$/i, '')
+  const file = src
+    .split('/')
+    .slice(-1)[0]
+    .replace(/\.[a-z0-9]+$/i, '')
   return file.replace(/^section-\d+-/, '')
 }
 

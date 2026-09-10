@@ -6,40 +6,17 @@ account: little-parrot
 
 # Post 3: LinkedIn posts that sound like you
 
-**Pillar:** the method, shown (and our own register, modelled).
-**Research trace:** LinkedIn is the audience's primary career channel, and
-the fear of sounding braggy or staged is the documented visibility blocker;
-the anti-guru stance is our grounded-register positioning made teachable;
-the three-part prompt is the course's synthesis and arrives here. Draws on
-the course's Challenge 3 (its parody output, its two tone options, and its
-three-part prompt are the source for the slide mockups).
+**Pillar:** the method, shown (and our own register, modelled). **Research trace:** LinkedIn is the audience's primary career channel, and the fear of sounding braggy or staged is the documented visibility blocker; the anti-guru stance is our grounded-register positioning made teachable; the three-part prompt is the course's synthesis and arrives here. Draws on the course's Challenge 3 (its parody output, its two tone options, and its three-part prompt are the source for the slide mockups).
 
-**The one takeaway:** your chat assistant writes LinkedIn like a guru
-because you never told it whose voice to use; naming the voice and handing
-over the real facts fixes it, and pasting one of your own past posts is the
-shortcut.
+**The one takeaway:** your chat assistant writes LinkedIn like a guru because you never told it whose voice to use; naming the voice and handing over the real facts fixes it, and pasting one of your own past posts is the shortcut.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "Part 1:", "Part 2:", "Part 3:") or written with markdown
-symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner
-types into a tool. Render it verbatim in monospace inside a prompt-input
-mockup (a chat input field with a cursor and send arrow), so it reads as
-typed text rather than decoration; markdown symbols are part of the typed
-text, never styled labels. Message outputs render as LinkedIn post cards
-(avatar, reactions, a comment). Everything else in "Display copy" is display
-copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "Part 1:", "Part 2:", "Part 3:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Message outputs render as LinkedIn post cards (avatar, reactions, a comment). Everything else in "Display copy" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Parody-then-rebuild
-style, with a repeating rhythm on slides 2 to 4: prompt window on top, the
-resulting post card below it, one part added to the prompt each time. The
-guru post is rendered in full cringe on slide 2 (rocket, 10x, hashtag pile),
-then the calm rebuild, tone and context blocks in monospace.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Parody-then-rebuild style, with a repeating rhythm on slides 2 to 4: prompt window on top, the resulting post card below it, one part added to the prompt each time. The guru post is rendered in full cringe on slide 2 (rocket, 10x, hashtag pile), then the calm rebuild, tone and context blocks in monospace.
 
-**Full-fidelity rule:** every word that appears on a slide is in this table,
-verbatim. The implemented carousel may not add copy; `check.py` in
-`productkind/carousel-design/` enforces it.
+**Full-fidelity rule:** every word that appears on a slide is in this table, verbatim. The implemented carousel may not add copy; `check.py` in `productkind/carousel-design/` enforces it.
 
 | Slide | Visual | Display copy (verbatim) | Prompt window / mockup content (verbatim) |
 | --- | --- | --- | --- |
@@ -51,15 +28,8 @@ verbatim. The implemented carousel may not add copy; `check.py` in
 | 6 | A post of your own being pasted into the prompt window as a sample | "The shortcut to 'sounds like me': paste one of your own past posts in as a style sample." Footnote: "A chat assistant mirrors patterns, so give it yours. Go and find the post you were happiest with, that's your sample." | Label: "YOUR PROMPT" · Part 4: `Here is a post I wrote myself. Match this voice:` `[paste your post]` |
 | 7 (CTA) | Brand card: badge, mascot at laptop | "Being visible in your industry shouldn't need a voice that isn't yours. Rebuild your own post in Challenge 3 of Write Better with AI: Prompting Foundations for Product Managers." Badge: "LittleParrot.app" · "First challenge free 💛" · "Save the tone block for your next post 🔖" | (none) |
 
-**Alt text (for the post):** A carousel about de-buzzwording AI-drafted
-LinkedIn posts: a bare prompt produces a rocket-and-hashtags guru post,
-adding a tone block produces a calm but empty post, adding real context
-produces a specific post people comment on, plus the three-part prompt
-structure and the shortcut of pasting one of your own past posts as a style
-sample.
+**Alt text (for the post):** A carousel about de-buzzwording AI-drafted LinkedIn posts: a bare prompt produces a rocket-and-hashtags guru post, adding a tone block produces a calm but empty post, adding real context produces a specific post people comment on, plus the three-part prompt structure and the shortcut of pasting one of your own past posts as a style sample.
 
 ## Caption
 
-Written after the exports are signed off, with the **captions** skill, into
-`captions.md` in this piece's folder. The earlier hand-drafted caption was
-based on the previous 7-slide draft; it is superseded by that step.
+Written after the exports are signed off, with the **captions** skill, into `captions.md` in this piece's folder. The earlier hand-drafted caption was based on the previous 7-slide draft; it is superseded by that step.

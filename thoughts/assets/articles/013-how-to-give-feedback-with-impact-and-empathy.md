@@ -1,9 +1,8 @@
 # How to Give Feedback with Impact and Empathy
 
-*Practical techniques to make your feedback easier to give and to hear*
+_Practical techniques to make your feedback easier to give and to hear_
 
-**Date:** September 3, 2025
-**Author:** Kinga Magyar
+**Date:** September 3, 2025 **Author:** Kinga Magyar
 
 ---
 

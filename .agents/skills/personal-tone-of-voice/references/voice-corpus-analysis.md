@@ -9,6 +9,7 @@ Medium, comma-chained sentences that unspool the way speech does, often with a t
 ## Openings
 
 First-person, in-scene or plain timeline, often landing in dialogue within three lines:
+
 - "It was a warm February day, I was sitting in a tiny meeting room" (001)
 - "A couple of years ago, I was sitting in a meeting room in Berlin." (009)
 - "The other day I was scrolling through LinkedIn when I saw yet another bold claim: 'No need for PMs, because PRDs are dead.' I stared at the screen, irritated." (011)
@@ -18,6 +19,7 @@ First-person, in-scene or plain timeline, often landing in dialogue within three
 ## Closings
 
 A modest wish plus a genuine invitation, usually a question:
+
 - "I'm curious, have you ever struggled with defining an MVP of your product or new feature?" (016)
 - "Try rewriting an email using the 'Define Tone and Style' technique and let me know how it goes!" (006)
 - "I'd be intrigued to hear what techniques you use... Let's learn from each other." (008)
@@ -41,6 +43,7 @@ A modest wish plus a genuine invitation, usually a question:
 ## Humour and asides
 
 Dry, embedded, frequent; self-deprecating without performing:
+
 - "These are my drawings, please don't laugh…" (017)
 - "I said out loud, to no one but my sofa" (011)
 - "(not insignificantly) pays the bills" (020)
@@ -69,6 +72,7 @@ Consistently British (colour, prioritised, realised, sceptical, instalment, prac
 ## Rulings on conflicts with the banned list (Kinga, 2026-07-09)
 
 Her corpus uses several banned-list items. She ruled:
+
 - **"actually": allowed.** Her natural hedge.
 - **Mid-piece rhetorical questions: allowed.** Core transition device. (Still banned as opening hooks.)
 - **"Not X, but Y": stays banned**, even though the corpus uses it. Deliberate correction of a habit she's leaving behind.

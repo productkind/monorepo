@@ -4,6 +4,7 @@ description: Email that free subscribers receive.
 ---
 
 # Welcome to Thoughts by productkind!
+
 [email banner]
 
 #### I'm glad you're here.

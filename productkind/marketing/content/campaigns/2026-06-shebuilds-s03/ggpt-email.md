@@ -20,5 +20,4 @@ If you'd like to get comfortable with Lovable first, on Little Parrot we made ou
 
 Feel free to pass either on to a friend or colleague who's been curious about building with AI.
 
-Warm wishes,
-Kinga
+Warm wishes, Kinga

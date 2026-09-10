@@ -1,12 +1,14 @@
 import eventsRaw from '../content/events.json' with { type: 'json' }
-import { z } from 'zod'
+
 import { createFileSystem } from '@dungarees/fs/service.ts'
+import { rasterizeSvg } from '@dungarees/zx/image.ts'
+
+import { DOMParser, XMLSerializer } from '@xmldom/xmldom'
 import fs from 'node:fs'
 import path from 'node:path'
-import { rasterizeSvg } from '@dungarees/zx/image.ts'
-import { $ } from 'zx'
 import qrcode from 'qrcode'
-import { DOMParser, XMLSerializer } from '@xmldom/xmldom'
+import { z } from 'zod'
+import { $ } from 'zx'
 
 const fsService = createFileSystem(fs)
 
@@ -75,7 +77,12 @@ for (const event of events) {
 
   // ----- NEW QR CODE COVER GENERATION -----
   if (event.registerForm) {
-    const fixedTemplatePath = path.join(absoluteBaseDir, ASSETS_DIR, SOURCE_DIR, 'cover-seminars-by-productkind-qr.svg')
+    const fixedTemplatePath = path.join(
+      absoluteBaseDir,
+      ASSETS_DIR,
+      SOURCE_DIR,
+      'cover-seminars-by-productkind-qr.svg',
+    )
     const rawSvgTemplate = fsService.readFileSync(fixedTemplatePath, 'utf-8')
 
     const substitutedContent = event.title.reduce((acc, line, index) => {
@@ -122,7 +129,7 @@ for (const event of events) {
     const qrGroup = doc.createElementNS('http://www.w3.org/2000/svg', 'g')
     qrGroup.setAttribute('transform', `translate(${padding}, ${y}) scale(${qrScale})`)
 
-    Array.from(qrSvg.childNodes).forEach(node => {
+    Array.from(qrSvg.childNodes).forEach((node) => {
       if (node.nodeType === 1 || node.nodeType === 3) {
         qrGroup.appendChild(doc.importNode(node, true))
       }
@@ -143,4 +150,3 @@ for (const event of events) {
     console.log(`✅ Generated QR cover: ${outputFileName} and PNG`)
   }
 }
-

@@ -6,28 +6,13 @@ account: little-parrot
 
 # Post 3: Plan your app with stick figures
 
-**Pillar:** the method, shown (PM expertise, shared).
-**Research trace:** storyboarding lowers the entry bar to planning (no
-technical skill, no drawing skill), which is confidence-by-design; the
-ends-first method gives a concrete, repeatable technique rather than
-results-without-method; the struggle and happy-ending panels mirror the
-audience's own narrative arc (chaos at the kitchen table, calm on the
-sofa). Repackages the Sketch Your User's Journey toolkit item.
+**Pillar:** the method, shown (PM expertise, shared). **Research trace:** storyboarding lowers the entry bar to planning (no technical skill, no drawing skill), which is confidence-by-design; the ends-first method gives a concrete, repeatable technique rather than results-without-method; the struggle and happy-ending panels mirror the audience's own narrative arc (chaos at the kitchen table, calm on the sofa). Repackages the Sketch Your User's Journey toolkit item.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Sketchbook style:
-hand-drawn panel frames, deliberately simple stick-figure illustrations (the
-roughness is the message), captions beneath each panel.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Sketchbook style: hand-drawn panel frames, deliberately simple stick-figure illustrations (the roughness is the message), captions beneath each panel.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -39,9 +24,7 @@ roughness is the message), captions beneath each panel.
 | 6 | A wobbly stick figure with a big grin, a caption line beneath | "Sketching rules: stick figures are perfect, one moment per panel, show the emotion on the faces, and write a one-line caption under each panel. The caption works as hard as the drawing." |
 | 7 (CTA) | Brand card, the finished storyboard strip | "Take the next step in Build a Valuable Product: How to Break Down Your Idea for Vibe Coding, on LittleParrot.app. First challenge free 🟪 Save this for your next idea 🔖" |
 
-**Alt text (for the post):** A storyboard-template carousel: draw the
-user's struggle, then the happy ending, then three to five moments in
-between where the product appears, using stick figures with captions.
+**Alt text (for the post):** A storyboard-template carousel: draw the user's struggle, then the happy ending, then three to five moments in between where the product appears, using stick figures with captions.
 
 ## Caption (exact)
 
@@ -55,7 +38,4 @@ The full template comes with our course, Build a Valuable Product: How to Break 
 
 Save this for your next idea. 🔖
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #productmanagement #shebuilds #womenintech #techforwomen #productthinking #appbuilding #startupideas #learnwithai #storyboarding
+. . . #vibecoding #buildwithai #womenwhobuild #productmanagement #shebuilds #womenintech #techforwomen #productthinking #appbuilding #startupideas #learnwithai #storyboarding

@@ -38,7 +38,11 @@ export type Region = {
  * Where content is allowed to go: from the bottom of the top platform bar down to the top of the
  * captions. Everything below is either caption or platform interface.
  */
-export const contentRegion = ({ captionLines = CAPTION_LINES }: { captionLines?: number }): Region => {
+export const contentRegion = ({
+  captionLines = CAPTION_LINES,
+}: {
+  captionLines?: number
+}): Region => {
   const top = PLATFORM_UI.top
   const bottom = FRAME_HEIGHT - PLATFORM_UI.bottom - CAPTION_LINE_HEIGHT * captionLines
   return { top, bottom, height: bottom - top }
@@ -82,9 +86,7 @@ export const placeMedia = ({
   const region = contentRegion({ captionLines })
   const height = (FRAME_WIDTH * media.height) / media.width
   const top =
-    height <= region.height
-      ? region.bottom - height
-      : region.top + (region.height - height) / 2
+    height <= region.height ? region.bottom - height : region.top + (region.height - height) / 2
 
   return { width: FRAME_WIDTH, height, top: top + offset }
 }

@@ -1,9 +1,8 @@
 # What We Learned from Building Digital Products: Lessons and Pivots
 
-*Looking back at last year, I'm sharing what worked and what most certainly didn't, so you can do even better.*
+_Looking back at last year, I'm sharing what worked and what most certainly didn't, so you can do even better._
 
-**Date:** July 14, 2026
-**Author:** Kinga Magyar
+**Date:** July 14, 2026 **Author:** Kinga Magyar
 
 ---
 

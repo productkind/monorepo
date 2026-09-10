@@ -1,18 +1,15 @@
 # Posting calendar
 
-The single time view over `content/`: one row per planned or posted piece, newest first.
-Link the piece column to its folder so the pool stays the source of truth.
+The single time view over `content/`: one row per planned or posted piece, newest first. Link the piece column to its folder so the pool stays the source of truth.
 
-The Instagram course carousels (49 posts, two per week from 21 July 2026) follow
-their own master schedule: [content/courses/posting-sequence.md](content/courses/posting-sequence.md).
+The Instagram course carousels (49 posts, two per week from 21 July 2026) follow their own master schedule: [content/courses/posting-sequence.md](content/courses/posting-sequence.md).
 
-Channels - productkind: instagram, tiktok, youtube, linkedin, threads
-Channels - Kinga: linkedin, threads
+Channels - productkind: instagram, tiktok, youtube, linkedin, threads Channels - Kinga: linkedin, threads
 
 Statuses: todo, created, scheduled, posted
 
 | Date | Piece | Channels | Status |
-| ---- | ----- | -------- | ------ |
+| --- | --- | --- | --- |
 | 2026-08-23 | none |  |  |
 | 2026-08-22 | none |  |  |
 | 2026-08-21 | social-015 | instagram, tiktok, youtube, linkedin productkind | scheduled |
@@ -34,23 +31,23 @@ Statuses: todo, created, scheduled, posted
 | --- | --- | --- | --- |
 | 2026-08-09 | none |  |  |
 | 2026-08-08 | none |  |  |
-| 2026-08-07 | social-011 | instagram, tiktok, youtube, linkedin productkind, threads productkind  | posted |
+| 2026-08-07 | social-011 | instagram, tiktok, youtube, linkedin productkind, threads productkind | posted |
 | 2026-08-06 | none |  |  |
 | 2026-08-05 | none |  |  |
 | 2026-08-04 | none |  |  |
-| 2026-08-03 | social-010 | instagram, tiktok, youtube, linkedin productkind, threads productkind  | posted |
+| 2026-08-03 | social-010 | instagram, tiktok, youtube, linkedin productkind, threads productkind | posted |
 | --- | --- | --- | --- |
 | 2026-08-02 | none |  |  |
 | 2026-08-01 | Lovable application video about starting building | tiktok, youtube | posted |
-| 2026-07-31 | social-009 | instagram, tiktok, youtube, linkedin productkind, threads productkind  | posted |
+| 2026-07-31 | social-009 | instagram, tiktok, youtube, linkedin productkind, threads productkind | posted |
 | 2026-07-30 | WB-3 LinkedIn without buzzwords | instagram, tiktok, youtube, linkedin productkind, threads Kinga | posted |
 | 2026-07-29 | B-roll: AI made starting easier | instagram, tiktok, youtube, linkedin productkind, threads Kinga | posted |
 | 2026-07-28 | Substack article carousel: | instagram, tiktok, youtube, linkedin Kinga, threads Kinga | posted |
-| 2026-07-27 | social-008 | tiktok, youtube, linkedin productkind, threads productkind  | posted |
+| 2026-07-27 | social-008 | tiktok, youtube, linkedin productkind, threads productkind | posted |
 | --- | --- | --- | --- |
 | 2026-07-26 | SB-2 component names | instagram, tiktok, youtube, linkedin productkind | posted |
 | 2026-07-25 | B-roll: Substack article | tiktok, youtube, linkedin productkind | posted |
-| 2026-07-24 | social-007 | instagram, tiktok, youtube, linkedin productkind, threads productkind  | posted |
+| 2026-07-24 | social-007 | instagram, tiktok, youtube, linkedin productkind, threads productkind | posted |
 | 2026-07-23 | WB-2 context: release update | instagram, tiktok, youtube, linkedin productkind, threads productkind | posted |
 | 2026-07-22 | B-roll: business ideas for women 2026 – how to find what to do | instagram, tiktok, youtube, linkedin prodcutkind, threads productkind | posted |
 | 2026-07-21 | Substack article carousel: Building is cheap(er), but distribution is still expensive | instagram, tiktok, youtube, linkedin Kinga, threads Kinga | posted |

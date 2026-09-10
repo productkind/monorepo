@@ -26,7 +26,9 @@ const config = {
       },
     },
   ],
-  proseWrap: 'always',
+  // Markdown paragraphs stay on one line each: rules and docs here get copied into chat and
+  // review comments, and a hard-wrapped paragraph arrives full of stray newlines.
+  proseWrap: 'never',
   endOfLine: 'lf',
 }
 

@@ -1,6 +1,6 @@
 course:
   id: 5e86e580-264c-442c-8cc4-be5645f13e87
-  note: ""
+  note: ''
   cover: /courses/lovable-intro-00/cover.webp
   title: 'Build Your First App with Lovable'
   learningOutcomes:
@@ -52,7 +52,7 @@ course:
           content:
             videoRemotionId: lesson-vibe-coding-lovable-basics-00-video-00
             vimeoId: 1164637801
-            youtubeId: "-uW1u_XSZl8"
+            youtubeId: '-uW1u_XSZl8'
             transcript: |-
               **You have an idea for an app.** Maybe it's something to help your community, your
               business, or just solve a problem that's been bugging you. But you don't know how
@@ -292,7 +292,7 @@ course:
           content:
             body: |-
               Here’s a freeing thought: **starting over is often cheap**, especially early on.
-              
+
               After your first few prompts, **pause and take a look** at what Lovable has built. If something fundamental feels off, it’s usually faster to start again with a clearer prompt than to keep fixing it.
 
               This doesn’t mean you should throw everything away after weeks of work. But in the early stages, restarting can save time and frustration.
@@ -515,7 +515,7 @@ course:
               My takeaway is...
             subDescription: With your backend connected, your app can now save real data that persists and can be shared with others.
         - type: challenge-end
-          title: "Your app saves data! ☁️"
+          title: 'Your app saves data! ☁️'
           content:
             nextModule: "**Next:** Let's explore the tools Lovable provides so you can make changes more effectively. You'll learn how to preview your app on different devices, make targeted changes, and attach images for inspiration to show Lovable exactly what you want."
             description: You've connected your app to Lovable Cloud.
@@ -620,7 +620,7 @@ course:
               I will use...
             subDescription: Get comfortable clicking around. These tools will save you time as you build.
         - type: challenge-end
-          title: "You know your way around! 🧭"
+          title: 'You know your way around! 🧭'
           content:
             nextModule: "**Next challenge:** Things will break as you build. Let's make sure you're never afraid to experiment. You'll learn how to bookmark stable versions and revert changes so you exactly know what to do when things go wrong."
             description: You can now use Lovable's interface confidently.
@@ -632,7 +632,7 @@ course:
         - Version Bookmarking
         - Reverting Changes
         - Safe Experimentation
-      description: You'll know exactly what to do when things go wrong, and how to recover without losing your work or getting stuck. Learn to experiment freely by using Lovable's version history features. 
+      description: You'll know exactly what to do when things go wrong, and how to recover without losing your work or getting stuck. Learn to experiment freely by using Lovable's version history features.
       completionTime: '6:00'
       steps:
         - type: text
@@ -706,7 +706,7 @@ course:
               What happened:
             subDescription: Getting comfortable with bookmarking and reverting means you can experiment freely without fear.
         - type: challenge-end
-          title: "You can experiment safely! 🛡️"
+          title: 'You can experiment safely! 🛡️'
           content:
             nextModule: "**Next challenge:** Let's unlock more possibilities by using plan mode to think before building, browser testing to verify features, and API keys to connect external services. You'll also learn how to handle security warnings confidently and keep your app safe."
             description: You know how to recover when things go wrong.
@@ -739,7 +739,7 @@ course:
               When you need a partner **to discuss your ideas or questions with**, you can switch to Plan mode.
 
               **Plan mode** in Lovable is a way to think, explore, and map out your ideas before any code is changed or written. It’s like having a helpful partner who talks through your problem, compares options, investigates bugs, and helps you choose the best approach before you build anything. 
-              
+
               You can use it to ask questions, debug issues, and get a clear plan. When you’re happy with the plan, you can switch back to **Build** mode from the same menu to build it.
 
               To enter Plan mode, click the **Build** button below the input field and select **Plan** from the dropdown.
@@ -754,7 +754,7 @@ course:
               A word of caution: **Lovable works best when you build as you go**.
 
               Planning too far ahead leads to what's called "context rot." 
-              
+
               **Context rot** is what happens when an AI model starts to get worse at using everything you’ve already told it because the conversation or input has become too long or cluttered. Even though the earlier information is still technically there, the model begins to ignore, forget, or misinterpret those details, leading to less accurate or confused responses.
 
               Plan one feature at a time, not your entire product roadmap. Build, test, learn, then plan the next thing.
@@ -764,7 +764,7 @@ course:
           content:
             body: |-
               You can capture key details about your app in your project's **Knowledge** panel. It acts like the project’s central reference and is sent with AI prompts so the AI can better understand your context, and rules.
-              
+
               You can use it to store things like your user personas, design rules, naming conventions, and other guidelines. This makes the AI’s responses more relevant and consistent with your project’s needs.
 
               This is useful when you want consistent styling or behaviour across your app.
@@ -790,7 +790,7 @@ course:
               Check the security errors and warnings in the **Security** panel, and click "Try to fix all". Usually Lovable takes care of all issues, like making sure certain data isn't publicly accessible.
 
               It can happen that new warnings appear after fixing others. As long as you don't have any security errors, you are good to publish your app.
-              
+
               *You can find more guidance on security in our [Fix Bugs with Confidence: Debugging Your Lovable App](https://littleparrot.app/aaab45b7-209a-4578-a515-3e55687f0c53/course-overview) micro-course.*
             imageUrl: /courses/lovable-intro-00/security-errors-and-warnings.webp
           subtitle: Stay calm and follow the guidance
@@ -810,7 +810,7 @@ course:
 
               **Best practice:** Verify the test steps actually make sense for what you want to check. You can even specify exact actions for Lovable to perform.
 
-              **Note:** Browser testing cannot test everything in your app, for example it cannot automatically log in with Google authentication. It’s best for straightforward interactions. So you should still manually test important features yourself. 
+              **Note:** Browser testing cannot test everything in your app, for example it cannot automatically log in with Google authentication. It’s best for straightforward interactions. So you should still manually test important features yourself.
             imageUrl: /courses/lovable-intro-00/browser-testing.webp
           subtitle: Ask Lovable to test your app
         - type: quiz-question
@@ -924,7 +924,7 @@ course:
               When you're ready, click **Publish** in the Publish panel. It's now on the internet!
 
               Here's something reassuring: **nobody will find your app on the internet**. So don't worry if it's not perfect yet. It takes digital marketing work to get discovered.
-              
+
               This means you can **publish early and improve based on feedback** without worrying about it being "perfect."
 
               Digital products are never done. They evolve. The apps you use every day get updates constantly.

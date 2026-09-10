@@ -1,9 +1,8 @@
 # Stop Defining Yourself by Your Title: How to Build a Resilient Identity
 
-*Why anchoring your sense of self to your values helps you navigate career shifts and uncertainty.*
+_Why anchoring your sense of self to your values helps you navigate career shifts and uncertainty._
 
-**Date:** October 22, 2025
-**Author:** Kinga Magyar
+**Date:** October 22, 2025 **Author:** Kinga Magyar
 
 ---
 

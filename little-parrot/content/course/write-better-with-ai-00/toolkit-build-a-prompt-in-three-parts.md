@@ -1,7 +1,8 @@
 ---
-challenge: "3 - Craft impactful LinkedIn posts that sound like you"
-type: "Template"
+challenge: '3 - Craft impactful LinkedIn posts that sound like you'
+type: 'Template'
 ---
+
 ## Build a Prompt in Three Parts
 
 The structure behind every prompt in this course: the request, the tone and style, and the context. Copy the block, fill in what you know, and leave out what you don't. Use it when you're writing something from scratch and want the first draft to be close enough to edit rather than close enough to bin.
@@ -39,25 +40,30 @@ The structure behind every prompt in this course: the request, the tone and styl
 Work through this when the draft comes back vague. Vagueness is nearly always missing context.
 
 **About the thing itself**
+
 - What it is, described the way you'd describe it to a new joiner
 - What it replaces or changes
 - What it deliberately does not do yet
 
 **About the people**
+
 - Who reads this, and what they already know about the topic
 - What they'll do with the information
 - Who else gets credit or a mention
 
 **About the situation**
+
 - What problem this solves, and who asked for it
 - What's already been said publicly or internally
 - Any history that influences how this will be received (a previous slip, a heated debate, a promise made)
 
 **The hard facts**
+
 - Numbers, dates, names, issue titles, quotes from real users
 - Constraints: what's not agreed, what's not ready to ship, what's under embargo (not to be shared outside the company until an agreed date)
 
 **The boundaries**
+
 - What to leave out, and why
 - Anything the model should not guess at
 

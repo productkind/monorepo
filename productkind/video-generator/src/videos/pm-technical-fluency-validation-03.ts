@@ -33,7 +33,7 @@ export default defineVideo({
   ],
   sections: [
     {
-      text: "A stakeholder asked for something simple.",
+      text: 'A stakeholder asked for something simple.',
       visual: gif({
         src: 'section-00-asking.gif',
         source: { provider: 'giphy', id: 'TEX6BFu46QQh3A23hN', search: 'finger snap easy' },
@@ -42,7 +42,7 @@ export default defineVideo({
     },
     {
       // Sped up so the pieces finish coming together inside the beat.
-      text: "Just sync it with the CRM.",
+      text: 'Just sync it with the CRM.',
       visual: gif({
         src: 'section-01-assemble.gif',
         source: {
@@ -57,7 +57,7 @@ export default defineVideo({
       endsParagraph: true,
     },
     {
-      text: "You said yes.",
+      text: 'You said yes.',
       visual: gif({
         src: 'section-02-nod.gif',
         source: { provider: 'giphy', id: 'tj50OVdyNiewAuffJt', search: 'woman nodding yes' },
@@ -66,7 +66,7 @@ export default defineVideo({
       }),
     },
     {
-      text: "Two weeks in,",
+      text: 'Two weeks in,',
       visual: gif({
         src: 'section-03-clock.gif',
         source: {
@@ -78,7 +78,7 @@ export default defineVideo({
       }),
     },
     {
-      text: "engineering tells you the integration doesn’t have that field,",
+      text: 'engineering tells you the integration doesn’t have that field,',
       visual: gif({
         src: 'section-04-cross.gif',
         source: { provider: 'giphy', id: '8cSU3YBfJxrXMz1Biu', search: 'red x mark animation' },
@@ -88,7 +88,7 @@ export default defineVideo({
     },
     {
       // A keyhole: the system is there, somebody else holds the key to it.
-      text: "and it’s the vendor’s system.",
+      text: 'and it’s the vendor’s system.',
       visual: gif({
         src: 'section-05-keyhole.gif',
         source: { provider: 'giphy', id: 'iFyswxrc6wuMczLESA', search: 'locked door key' },
@@ -98,7 +98,7 @@ export default defineVideo({
       endsParagraph: true,
     },
     {
-      text: "You already promised the date.",
+      text: 'You already promised the date.',
       visual: gif({
         src: 'section-06-date.gif',
         source: { provider: 'giphy', id: 'KfZOXJbJXTimRyf6N3', search: 'date' },
@@ -108,7 +108,7 @@ export default defineVideo({
     },
     {
       // Drawn, then rubbed out, which is what renegotiating an agreed thing looks like.
-      text: "Now you’re renegotiating something you’d already said yes to.",
+      text: 'Now you’re renegotiating something you’d already said yes to.',
       visual: gif({
         src: 'section-07-erase.gif',
         source: { provider: 'giphy', id: '2xEBaucWB9naO2JqLD', search: 'erasing pencil rubber' },
@@ -118,16 +118,16 @@ export default defineVideo({
       endsParagraph: true,
     },
     {
-      text: "You couldn’t have known.",
+      text: 'You couldn’t have known.',
       visual: gif({
         src: 'section-08-dont-know.gif',
-        source: { provider: 'giphy', id: '2lKKCodWzvFjmqrmxz', search: 'don\'t know' },
+        source: { provider: 'giphy', id: '2lKKCodWzvFjmqrmxz', search: "don't know" },
         playbackRate: 0.78,
         place: 'above-captions',
       }),
     },
     {
-      text: "Nobody showed you how to check",
+      text: 'Nobody showed you how to check',
       visual: gif({
         src: 'section-09-searching.gif',
         source: {
@@ -140,7 +140,7 @@ export default defineVideo({
     },
     {
       // Two circles overlapping: the part of the other system yours can actually reach.
-      text: "what the connecting system can do.",
+      text: 'what the connecting system can do.',
       visual: gif({
         src: 'section-10-overlap.gif',
         source: { provider: 'giphy', id: 'l4FGw4d101Sa0pGTe', search: 'connected systems diagram' },
@@ -149,7 +149,7 @@ export default defineVideo({
       endsParagraph: true,
     },
     {
-      text: "If you want to be more confident",
+      text: 'If you want to be more confident',
       visual: gif({
         src: 'section-11-confident.gif',
         source: { provider: 'giphy', id: 'J341jtyRPKQCfXFImt', search: 'power pose woman' },
@@ -157,7 +157,7 @@ export default defineVideo({
       }),
     },
     {
-      text: "about the complexity of a new feature before you commit,",
+      text: 'about the complexity of a new feature before you commit,',
       visual: gif({
         src: 'section-12-knot.gif',
         source: { provider: 'giphy', id: 'cfelXlrEdY5q2iPxZE', search: 'untangling knot' },
@@ -166,7 +166,7 @@ export default defineVideo({
       }),
     },
     {
-      text: "we’re building a learning path for it.",
+      text: 'we’re building a learning path for it.',
       visual: gif({
         src: 'section-13-ladder.gif',
         source: { provider: 'giphy', id: '29HWHVyD4wB3MRmtIg', search: 'ladder climbing' },
@@ -176,7 +176,7 @@ export default defineVideo({
     },
     {
       // Sped up so the folder is open by the cut, since opening it is the whole line.
-      text: "By the end you’ll be able to open the documentation",
+      text: 'By the end you’ll be able to open the documentation',
       visual: gif({
         src: 'section-14-open-book.gif',
         source: { provider: 'giphy', id: 'ikMppMKl5htEnKnwQv', search: 'open book' },
@@ -186,7 +186,7 @@ export default defineVideo({
     },
     {
       // The cards say "already pay for", which is the part of the line that does the work.
-      text: "for the integrations you already pay for,",
+      text: 'for the integrations you already pay for,',
       visual: gif({
         src: 'section-15-cards.gif',
         source: { provider: 'giphy', id: 'ycANs3udEsdsdgDIDZ', search: 'credit card payment icon' },
@@ -194,7 +194,7 @@ export default defineVideo({
       }),
     },
     {
-      text: "see which fields they actually expose,",
+      text: 'see which fields they actually expose,',
       visual: gif({
         src: 'section-16-magnifier.gif',
         source: {
@@ -206,7 +206,7 @@ export default defineVideo({
       }),
     },
     {
-      text: "and know whether the request is possible before you answer.",
+      text: 'and know whether the request is possible before you answer.',
       visual: gif({
         src: 'section-17-approve.gif',
         source: { provider: 'giphy', id: 'nMasa5KUxralWiLD5s', search: 'approved check mark' },
@@ -216,7 +216,7 @@ export default defineVideo({
       endsParagraph: true,
     },
     {
-      text: "The waitlist link is in the comments.",
+      text: 'The waitlist link is in the comments.',
       visual: gif({
         src: 'section-18-phone.gif',
         source: { provider: 'giphy', id: 'CQWCsApevAijqqzygN', search: 'message notification pop' },
@@ -227,7 +227,7 @@ export default defineVideo({
     {
       // A door opening on the line about the learning path opening. Sped up so it is open by the
       // cut rather than still swinging.
-      text: "Sign up and we’ll let you know when the learning path opens.",
+      text: 'Sign up and we’ll let you know when the learning path opens.',
       visual: gif({
         src: 'section-19-door.gif',
         source: { provider: 'giphy', id: '1JjkufuS3IcS74XTDn', search: 'opening curtains reveal' },
@@ -237,7 +237,7 @@ export default defineVideo({
       endsParagraph: true,
     },
     {
-      text: "[pause][curious] What ‘simple’ request turned out hardest?",
+      text: '[pause][curious] What ‘simple’ request turned out hardest?',
       visual: gif({
         src: 'section-20-thinking.gif',
         source: { provider: 'giphy', id: 'y9U1fyL4Cs5Ntzefm3', search: 'pondering chin hand' },

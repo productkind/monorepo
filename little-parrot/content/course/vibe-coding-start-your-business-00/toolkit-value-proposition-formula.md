@@ -1,6 +1,7 @@
 ---
-challenge: "1 - Craft Your Value Proposition"
+challenge: '1 - Craft Your Value Proposition'
 ---
+
 ## Value Proposition Formula
 
 Use this formula whenever you need to describe your product in one sentence: on your landing page, in directory submissions, community posts, emails, or conversations.
@@ -10,6 +11,7 @@ Use this formula whenever you need to describe your product in one sentence: on 
 **"[Product] helps [who] to [achieve what] without [pain point]."**
 
 Four elements:
+
 - **What it is** (so people can picture it)
 - **Who it's for** (so the right people recognise themselves)
 - **What it helps achieve** (so people understand the value)
@@ -18,7 +20,7 @@ Four elements:
 ### Dalmie's example
 
 | Version | Text | Reaction |
-|---------|------|----------|
+| --- | --- | --- |
 | 1 | "I built a book club app." | Polite nods. End of conversation. |
 | 2 | "I built a tool for book clubs to manage their reading lists." | Some interest. "What does it do exactly?" |
 | 3 | "I built an app that helps book clubs pick their next read without endless WhatsApp debates." | Eyes light up. "How does it work?" |

@@ -1,7 +1,8 @@
 ---
-challenge: "6 - Make a Bigger Change with Copilot"
-type: "Prompt library"
+challenge: '6 - Make a Bigger Change with Copilot'
+type: 'Prompt library'
 ---
+
 ## Asking Copilot for Changes
 
 Ready-to-adapt prompts for GitHub Copilot, grouped by the moment you'd reach for them. Each one is written to model a good prompt, and comes with a short note on when to use it. Send them in **Agent** mode (or **Ask** mode for the understanding ones), and swap in your own app's details.
@@ -13,6 +14,7 @@ The examples use Dalmie's Book Club Organiser; change the headings, labels, and 
 > Name the **what**, the **where**, and an **example** of the result, then add detail.
 
 The more specific you are, the closer Copilot's first attempt. Beyond what and where, spell out:
+
 - **the look:** size, colour, spacing, and which existing style to match (e.g. "the same muted grey as the card subtitles")
 - **the behaviour:** what it should do, and when ("update automatically as books are added")
 - **the edge cases:** the empty list, a single item, a very long title
@@ -26,6 +28,7 @@ With about 50 requests a month on the Copilot free plan, you'll be able to chang
 ```
 On the home page, directly under the "On the shelf" heading, add a small line of muted secondary text showing how many books are currently in the list, for example "5 books suggested so far". Update it automatically as books are added or removed, handle the singular case ("1 book suggested so far"), and hide the line entirely when the list is empty.
 ```
+
 Notice how specific that is: not just the **what** and **where**, but the **look** (muted secondary text), the **behaviour** (updates automatically), and the **edge cases** (singular, and empty). That detail is what earns a good first result.
 
 **Handle an empty state, what the page shows before there's any data:**
@@ -55,8 +58,8 @@ Make the "Suggest a book" button the primary action on the home page: use the ap
 Switch to Ask mode.
 
 ```
-Walk me through what happens when a member votes for a book. 
-1. Where is the vote stored? 
+Walk me through what happens when a member votes for a book.
+1. Where is the vote stored?
 2. Can the same person vote for the same book more than once?
 3. What stops duplicate votes?
 ```
@@ -74,8 +77,8 @@ Which file and component render the home page, and which lines hold the "What sh
 **When it's close but not quite, refine in a follow-up rather than starting over:**
 
 ```
-That's close. Two tweaks: 
-1. make the count line one size smaller and use the same muted grey as the card subtitles, 
+That's close. Two tweaks:
+1. make the count line one size smaller and use the same muted grey as the card subtitles,
 2. move the count line to sit below the list instead of above it.
 ```
 

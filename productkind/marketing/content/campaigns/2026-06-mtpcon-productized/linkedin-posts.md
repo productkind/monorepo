@@ -18,8 +18,6 @@ Have you noticed the discrepancy between what people present on stage or social 
 
 During July, I chatted with so many product people at different events, and a repeatedly heard the same story. Their company had told them to "use AI", but given no guidance on what for. So using AI had become another task on the list. Use it for something, anything, just to be seen using it.
 
-
-
 I spent last week at two product conferences, mtpcon in London and Productized in Lisbon. Many talks had a part where the speaker showed how AI had made their team faster: more pull requests, more products shipped, weeks of work done in an afternoon.
 
 Not one of them showed how. There were no practical steps I could take home and try on Monday.
@@ -94,7 +92,7 @@ The habit that helps: at the end of every week we reflect on our work. We discus
 
 Christian Idiodi closed his #mtpcon London talk with a question: when was the last time you had a great day at work?
 
-He meant the kind of day you'd happily relive. For most product people that memory might be a release that delighted a user, or a problem you cracked as a team that resulted in a better solution. 
+He meant the kind of day you'd happily relive. For most product people that memory might be a release that delighted a user, or a problem you cracked as a team that resulted in a better solution.
 
 It might be the last time you felt like a creator, rather than someone managing a backlog. Christian said that is where the product management discipline is heading: you become "the conductor of capability, not the author of backlogs".
 

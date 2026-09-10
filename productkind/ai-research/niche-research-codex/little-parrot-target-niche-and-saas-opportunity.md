@@ -52,7 +52,7 @@ This is the strongest **willingness-to-pay hypothesis**, not a measured pricing 
 ## 2. Top ten pains, needs and desires
 
 | Priority | Pain, need or desire | Opportunity for productkind and Little Parrot |
-|---:|---|---|
+| --: | --- | --- |
 | 1 | **“I can’t judge what it’s doing.”** She can generate an app but cannot evaluate whether it works correctly. | Teach and automate evaluation through evidence, tests, failure cases and explicit pass/fail criteria. |
 | 2 | **Fear of changing something and breaking everything.** She merges blindly, repeatedly clicks Allow and is afraid to remove suspicious code. | Provide checkpoints, plain-English change explanations, staging, review and rollback. |
 | 3 | **The post-build cliff.** Hosting, domains, deployment, Supabase, payments, email, app stores and analytics appear after the exciting build. | Provide a coherent route from working prototype to operated product. |

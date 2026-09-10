@@ -12,11 +12,11 @@
  * wrote to a temporary folder. Once that is cleared they cannot be recovered from the definitions
  * at all.
  */
-import { readFileSync, readdirSync, writeFileSync } from 'node:fs'
+import { readVisuals, sourceFor, withVisualApplied } from '../src/videos/apply-visual'
+
+import { readdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join, resolve } from 'node:path'
-
-import { readVisuals, sourceFor, withVisualApplied } from '../src/videos/apply-visual'
 
 const VIDEOS = resolve(process.cwd(), 'src', 'videos')
 const RECORDED = join(tmpdir(), 'gif-candidates', '.sources.json')
@@ -113,7 +113,9 @@ const main = (): void => {
   const recorded = byUrl()
   console.log(
     `${String(Object.keys(recorded).length)} harvested urls available to resolve ids from` +
-      (Object.keys(recorded).length === 0 ? ` — ${RECORDED} is gone, klipy ids cannot come back` : ''),
+      (Object.keys(recorded).length === 0
+        ? ` — ${RECORDED} is gone, klipy ids cannot come back`
+        : ''),
   )
 
   let moved = 0

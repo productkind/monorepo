@@ -1,9 +1,8 @@
 # What AI Can't Do for Product Teams
 
-*Building faster doesn't replace collaboration*
+_Building faster doesn't replace collaboration_
 
-**Date:** August 20, 2025
-**Author:** Kinga Magyar
+**Date:** August 20, 2025 **Author:** Kinga Magyar
 
 ---
 

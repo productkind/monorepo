@@ -6,32 +6,15 @@ account: little-parrot
 
 # Post 1: Every app is a bakery
 
-**Pillar:** the method, shown.
-**Research trace:** the mental model that makes all later vocabulary stick;
-analogy-first teaching lowers the entry bar (confidence-by-design); knowing
-which part of the app to point at is the beginning of precise prompting;
-points at the free first challenge, which teaches exactly this. Draws on
-the course's Challenge 1 and the Software Vocabulary Cheat Sheet toolkit
-item.
+**Pillar:** the method, shown. **Research trace:** the mental model that makes all later vocabulary stick; analogy-first teaching lowers the entry bar (confidence-by-design); knowing which part of the app to point at is the beginning of precise prompting; points at the free first challenge, which teaches exactly this. Draws on the course's Challenge 1 and the Software Vocabulary Cheat Sheet toolkit item.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Display copy" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Display copy" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Illustrated-analogy
-style: a warm bakery cutaway drawing that highlights a different room per
-slide, the technical term and the bakery part paired on each.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Illustrated-analogy style: a warm bakery cutaway drawing that highlights a different room per slide, the technical term and the bakery part paired on each.
 
-**Full-fidelity rule:** every word that appears on a slide is in this table,
-verbatim. The implemented carousel may not add copy; `check.py` in
-`productkind/carousel-design/` enforces it.
+**Full-fidelity rule:** every word that appears on a slide is in this table, verbatim. The implemented carousel may not add copy; `check.py` in `productkind/carousel-design/` enforces it.
 
 | Slide | Visual | Display copy (verbatim) | Prompt window / mockup content (verbatim) |
 | --- | --- | --- | --- |
@@ -43,11 +26,7 @@ verbatim. The implemented carousel may not add copy; `check.py` in
 | 6 | A phone line between a bakery and a mill, a key beside it | "The phone line to the mill who supplies the flour is an API: how your app talks to other apps, like Stripe." Footnote: "The API KEY is the access code. Keep it secret: it never goes in a prompt." | (none) |
 | 7 (CTA) | Brand card: the whole bakery labelled, mascot, prompt window | "Next time something breaks, you'll understand better what happened." Then: "This is part of the free first challenge of Basics of Software for Vibe Coding." Badge: "LittleParrot.app" · "First challenge free 💛" · "Follow for more vibe coding explained for women building with AI 🏃🏽‍♀️" | (none) |
 
-**Alt text (for the post):** An illustrated analogy carousel mapping app
-architecture to a bakery: frontend as the counter, backend as the kitchen,
-database as the storage room, servers and cloud computing as the rented
-building, and APIs as the phone line between the bakery and the mill that
-supplies its flour.
+**Alt text (for the post):** An illustrated analogy carousel mapping app architecture to a bakery: frontend as the counter, backend as the kitchen, database as the storage room, servers and cloud computing as the rented building, and APIs as the phone line between the bakery and the mill that supplies its flour.
 
 ## Captions (exact)
 
@@ -61,11 +40,7 @@ The analogy helps most when something goes wrong. "The button looks weird" is a 
 
 There's more to the tour (APIs are the phone line to the mill who supplies the flour, and the key to that line stays secret), and it's all in the free first challenge of Basics of Software for Vibe Coding, our course for women building their first app with AI, on LittleParrot.app.
 
-Follow us for more vibe coding explained for women building with AI.
-.
-.
-.
-#womenintech #womenwhobuild #techforwomen #vibecoding #techbasics
+Follow us for more vibe coding explained for women building with AI. . . . #womenintech #womenwhobuild #techforwomen #vibecoding #techbasics
 
 ### TikTok
 

@@ -9,7 +9,7 @@ Source: Semrush `keyword_research` (phrase match / related / questions, database
 - Seed keywords that re-appeared as their own question/phrase match are in Dataset A and are not duplicated here.
 
 | keyword | source_seeds | relationship_type | US_volume | UK_volume | KDI_US | KDI_UK | CPC_US | CPC_UK | competition_US | competition_UK | intent | trend/history |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | api | how does an api work; what is an api and how does it work | related | 135,000/mo | 27,100/mo | n/a (not returned by endpoint) | 72/100 | $2.91 | $2.03 | 0.04 (low) | 0.05 (low) | n/a (not returned by endpoint) | n/a (not returned by endpoint) |
 | api connection | how does api integration work | related | 1,300/mo | 170/mo | n/a (not returned by endpoint) | 61/100 | $3.04 | $5.61 | 0.08 (low) | 0.09 (low) | n/a (not returned by endpoint) | n/a (not returned by endpoint) |
 | api development | how does an api work; what is an api and how does it work | related | 9,900/mo | 720/mo | n/a (not returned by endpoint) | 45/100 | $7.22 | $3.9 | 0.2 (low) | 0.1 (low) | n/a (not returned by endpoint) | n/a (not returned by endpoint) |

@@ -20,7 +20,7 @@ This workbook starts with hypotheses. No demand, gap or monetisation score shoul
 ## Little Parrot's fixed business constraints
 
 | Decision | Boundary for this research |
-|---|---|
+| --- | --- |
 | Business model | Self-serve digital products; no service dependency |
 | Product formats | Courses, learning paths, templates, checklists and toolkits |
 | Brand audience | Non-technical and lightly technical women |
@@ -297,7 +297,7 @@ Is the audience searching for a rigorous workflow, or is most demand concentrate
 These are hypotheses, not scores.
 
 | Candidate | Likely buyer value | Little Parrot fit | Major uncertainty | Candidate product |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | Lovable prototype to production | Launch a usable product and reduce technical risk | Very high | Official and creator supply | Prototype-to-production path |
 | Lovable to Claude Code | Gain control and reduce builder limitations | Very high | Audience size and technical willingness | Beyond Lovable |
 | Evidence-safe AI for PMs | Save time on recurring professional work | Very high | Competitive density; correct sub-niche | One workflow-specific product |
@@ -416,7 +416,7 @@ Reject candidates with fewer than four “yes” answers.
 ## Step 8: Score the survivors
 
 | Candidate | Demand 1–5 | Gap 1–5 | Money 1–5 | Fit 1–5 | Score / 100 | Volume gate | Product gate | Decision |
-|---|---:|---:|---:|---:|---:|---|---|---|
+| --- | --: | --: | --: | --: | --: | --- | --- | --- |
 | Lovable prototype to production | 3 | 3 | 4 | 5 | 71 | Unproven | Pass, 6/6 | First validation test |
 | Lovable to Claude Code | 4 | 2 | 4 | 5 | 71 | Unproven | Pass, 6/6 | Module/advanced product; not broad course |
 | Evidence-safe AI for PMs | 3 | 2 | 5 | 5 | 70 | Unproven | Pass, 6/6 | Test only one precise workflow |
@@ -464,16 +464,16 @@ Choose the niche that produces the best combination of commercial conversion, se
 Duplicate one row for each phrase audited.
 
 | Candidate | Cluster | Exact query | Google/YouTube | Monthly searches | Trend | CPC | Ads present | Exact top-ten results | Current | Complete | Beginner-usable | Main missing angle | Paid product found | Notes |
-|---|---|---|---|---:|---|---:|---|---:|---|---|---|---|---|---|
-| | | | | | | | | | | | | | | |
+| --- | --- | --- | --- | --: | --- | --: | --- | --: | --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 
 ---
 
 # Content-validation sheet
 
 | Candidate | Query | Content URL | Format | Publish date | Search impressions | CTR | Engaged visits | Registrations | Product visits | Checkouts | Purchases | Revenue | Decision |
-|---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| | | | | | | | | | | | | | |
+| --- | --- | --- | --- | --- | --: | --: | --: | --: | --: | --: | --: | --: | --- |
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 
 ---
 
@@ -515,5 +515,5 @@ Complete this only after the research and validation test.
 Record why each candidate was rejected so the team does not reopen the same decision without new evidence.
 
 | Candidate | Reason rejected | Evidence that would justify retesting |
-|---|---|---|
-| | | |
+| --------- | --------------- | ------------------------------------- |
+|           |                 |                                       |

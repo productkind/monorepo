@@ -6,28 +6,13 @@ account: little-parrot
 
 # Post 3: Four things before your first visitor
 
-**Pillar:** the method, shown.
-**Research trace:** the prepare-then-act order is judgement content (what to
-do when, and why), our confidence-by-design angle; "your first visitors are
-the most valuable to learn from" reframes analytics as care rather than
-tech; every step is budget-conscious, matching the cost-anxiety evidence.
-Draws on the course's Challenges 2-4 arc and the PostHog Setup and Domain
-and Email Setup Guide toolkit items.
+**Pillar:** the method, shown. **Research trace:** the prepare-then-act order is judgement content (what to do when, and why), our confidence-by-design angle; "your first visitors are the most valuable to learn from" reframes analytics as care rather than tech; every step is budget-conscious, matching the cost-anxiety evidence. Draws on the course's Challenges 2-4 arc and the PostHog Setup and Domain and Email Setup Guide toolkit items.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Fishing-net style (the
-course's own metaphor): a net being knotted piece by piece across the
-slides, one setup step per slide, small cost tags on each.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Fishing-net style (the course's own metaphor): a net being knotted piece by piece across the slides, one setup step per slide, small cost tags on each.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -39,10 +24,7 @@ slides, one setup step per slide, small cost tags on each.
 | 6 | The finished net, visitors landing softly | "Now send traffic. Every visitor arrives at a real domain, can leave an email, and teaches you something in the analytics. Nothing is wasted, and that's the point of the order." |
 | 7 (CTA) | Brand card | "Prepare, then act: the whole first half of Build Your Business: From Vibe Coded Product to Paying Customers, on LittleParrot.app. First challenge free 🟪 Save this checklist 🔖" |
 
-**Alt text (for the post):** A preparation-checklist carousel for before
-driving traffic to a product: a tested value proposition, a domain with
-professional email, an email capture form with a lead magnet, and free
-PostHog analytics installed before the first visitors arrive.
+**Alt text (for the post):** A preparation-checklist carousel for before driving traffic to a product: a tested value proposition, a domain with professional email, an email capture form with a lead magnet, and free PostHog analytics installed before the first visitors arrive.
 
 ## Caption (exact)
 
@@ -56,7 +38,4 @@ The step-by-step, including the exact PostHog setup prompt, is in Build Your Bus
 
 Save this for the week before you launch. 🔖
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #womeninbusiness #shebuilds #womenintech #buildinpublic #learnwithai #aitools #startupjourney #marketing
+. . . #vibecoding #buildwithai #womenwhobuild #womeninbusiness #shebuilds #womenintech #buildinpublic #learnwithai #aitools #startupjourney #marketing

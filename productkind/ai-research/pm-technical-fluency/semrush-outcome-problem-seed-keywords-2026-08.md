@@ -172,4 +172,3 @@ Combine promising roots with:
 - [What non-technical software Product Managers want to understand and do technically](./non-technical-pm-technical-needs-2024-2026.md)
 - [Validation addendum](./non-technical-pm-technical-needs-validation-2026-08.md)
 - [Opportunity synthesis](./pm-technical-fluency-opportunity-synthesis-2026-08.md)
-

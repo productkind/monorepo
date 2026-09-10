@@ -1,9 +1,10 @@
 ---
 slug: explain-mental-load-to-your-partner
-title: "How to Explain the Mental Load to Your Partner"
-description: "A way to describe the invisible work of remembering so it can be seen, without it turning into a row. What to show, what to ask for, and what to hand over."
+title: 'How to Explain the Mental Load to Your Partner'
+description: 'A way to describe the invisible work of remembering so it can be seen, without it turning into a row. What to show, what to ask for, and what to hand over.'
 primary_query: how to explain mental load to husband
-secondary_queries: [mental load in relationships, explaining mental load to husband, mental load cards]
+secondary_queries:
+  [mental load in relationships, explaining mental load to husband, mental load cards]
 type: article
 status: drafted
 ref: seo-explain-mental-load
@@ -27,7 +28,7 @@ Don't filter it and don't tidy it. A week of that is usually between forty and a
 
 If you know you won't keep writing each one down as it happens, and most people don't, you can [say them out loud instead](#make-it-visible-permanently).
 
-Then show it as a description of what you're keeping track of rather than as evidence in an argument: *this is what I'm holding in my head all the time, and I'd like to share some of it with you.*
+Then show it as a description of what you're keeping track of rather than as evidence in an argument: _this is what I'm holding in my head all the time, and I'd like to share some of it with you._
 
 We keep a full [mental load list](/guides/mental-load-list) you can start from if writing your own from scratch feels like one more job.
 
@@ -35,7 +36,7 @@ We keep a full [mental load list](/guides/mental-load-list) you can start from i
 
 "Help more" sounds like it means doing more tasks, which leaves out the part that takes up the most room in your head.
 
-The sociologist Allison Daminger interviewed 35 couples for her 2019 paper [*The Cognitive Dimension of Household Labor*](https://journals.sagepub.com/doi/10.1177/0003122419859007), and found every household job has four parts:
+The sociologist Allison Daminger interviewed 35 couples for her 2019 paper [_The Cognitive Dimension of Household Labor_](https://journals.sagepub.com/doi/10.1177/0003122419859007), and found every household job has four parts:
 
 1. **Anticipate.** Noticing it needs doing.
 2. **Identify.** Working out the options.
@@ -56,7 +57,7 @@ Then pick two or three whole jobs and hand them over properly. Dentists. Bins an
 
 Owning a job means you don't remind them, you don't check, and you accept it'll be done their way rather than yours. Accepting their way is the hardest part, and you have to accept it if you want to stop carrying the job yourself. If you're still checking, the job is still yours.
 
-Eve Rodsky's [*Fair Play*](https://www.fairplaylife.com/the-book) is built entirely around this idea, with a card per job, and is worth reading if you want a system to run week to week rather than a single conversation. Emma's comic [*You Should've Asked*](https://english.emmaclit.com/2017/05/20/you-shouldve-asked/) is the five-minute version, and sending it is easier than starting the conversation cold.
+Eve Rodsky's [_Fair Play_](https://www.fairplaylife.com/the-book) is built entirely around this idea, with a card per job, and is worth reading if you want a system to run week to week rather than a single conversation. Emma's comic [_You Should've Asked_](https://english.emmaclit.com/2017/05/20/you-shouldve-asked/) is the five-minute version, and sending it is easier than starting the conversation cold.
 
 ## Say what you want, not only what is wrong
 

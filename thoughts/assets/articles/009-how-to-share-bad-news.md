@@ -1,9 +1,8 @@
 # How to Share Bad News
 
-*A proven technique for sharing difficult news with your team*
+_A proven technique for sharing difficult news with your team_
 
-**Date:** August 6, 2025
-**Author:** Kinga Magyar
+**Date:** August 6, 2025 **Author:** Kinga Magyar
 
 ---
 

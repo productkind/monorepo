@@ -21,6 +21,7 @@ The shared course-design rules for Little Parrot micro-courses. Two readers use 
 ---
 
 ## Important Aspects to Follow
+
 - You don't have to follow the exact structure of the course outline given. It's important that you craft the micro-course in a way that engages learners and help them efficiently acquire new skills.
 - The first challenge must hook the learner with a specific, reusable tool they can apply immediately: a formula, a template, a checklist, or a practical technique. The learner decides based on the first challenge whether to subscribe, so they need to walk away with concrete value, not just motivation or mindset. Avoid hooks that rely on unrealistic scenarios (e.g., "strangers start asking for your product"). Most learners have to work hard for attention, so the hook should equip them to do that work.
 - The learner should encounter a practical and hands-on step in the micro-course as soon as possible. Build their mindset during the micro-course, connecting it to practical experiences, not in a separate challenge focusing only on the mindset. Mindset points (like "you don't need investors") work best as supporting content after the learner has already engaged with a practical exercise.
@@ -66,7 +67,7 @@ The shared course-design rules for Little Parrot micro-courses. Two readers use 
 
 **Define unfamiliar terms inline.** If a concept is mentioned before its dedicated challenge (e.g., "directory submissions" in Challenge 1 that are taught in Challenge 5), add a brief inline explanation so the learner isn't confused. Don't assume they'll know what it means because it's covered later.
 
-**Teach real terms, don't dumb them down.** When a technical term is the right word (e.g. *static* / *dynamic*, *commit*, *localhost*, *hardcode*), teach it with a short plain-language definition on first use rather than swapping it for a softer paraphrase. The audience is non-technical but capable, and building real builder vocabulary is part of the value. Defining the term inline is the goal, not avoiding it.
+**Teach real terms, don't dumb them down.** When a technical term is the right word (e.g. _static_ / _dynamic_, _commit_, _localhost_, _hardcode_), teach it with a short plain-language definition on first use rather than swapping it for a softer paraphrase. The audience is non-technical but capable, and building real builder vocabulary is part of the value. Defining the term inline is the goal, not avoiding it.
 
 **Introduce a reassuring analogy after the concept it explains, not before.** If you compare a new idea to something familiar (e.g., version control to a document's edit history in Google Docs), make sure the learner already knows what the new idea is. An analogy that arrives before the concept reads as coming out of nowhere, and the learner won't see why you're mentioning it.
 
@@ -78,7 +79,7 @@ The shared course-design rules for Little Parrot micro-courses. Two readers use 
 
 **Quiz explanations should teach, not just confirm.** Use the explanation text after a quiz answer as a teaching moment. Introduce a principle, reframe the concept, or add nuance that wasn't in the text steps. "Correct, B is the right answer" wastes a learning opportunity. "Features don't equal value. A list of features tells people what the product has, but not what they can achieve with it" teaches something new.
 
-**Examples should model the thinking process, not just the output.** When showing Dalmie's example, focus on *how* she arrived at her decision, not just what she decided. The learner benefits more from seeing a replicable thought process ("she asked Sarah what she struggles with most") than from seeing the finished result ("she made a PDF"). Show the question that led to the answer.
+**Examples should model the thinking process, not just the output.** When showing Dalmie's example, focus on _how_ she arrived at her decision, not just what she decided. The learner benefits more from seeing a replicable thought process ("she asked Sarah what she struggles with most") than from seeing the finished result ("she made a PDF"). Show the question that led to the answer.
 
 **Exercises should focus on one thing.** Don't bundle multiple tasks into a single exercise. "Plan your email capture + design your lead magnet + check it against three criteria" is three exercises pretending to be one. One clear question or task per exercise. If you need the learner to do multiple things, use separate steps.
 
@@ -98,9 +99,9 @@ The shared course-design rules for Little Parrot micro-courses. Two readers use 
 
 **Dense information should be scannable.** Avoid tables (they break on mobile) and long paragraphs with multiple concepts. Use stacked formats: bold name, one-line description, key details on separate lines. Design for vertical reading on a phone screen.
 
-**Style every text step for scanning.** Use **bold** for the key concept or benefit in each paragraph, and *italics* for UI labels, button names, and short examples. Bold technical terms on first use. Don't leave flat paragraphs with no emphasis, and don't over-bold either: one or two emphases per paragraph, so a learner skimming the bold still gets the gist. Quiz options stay unstyled (formatting shouldn't hint at the answer).
+**Style every text step for scanning.** Use **bold** for the key concept or benefit in each paragraph, and _italics_ for UI labels, button names, and short examples. Bold technical terms on first use. Don't leave flat paragraphs with no emphasis, and don't over-bold either: one or two emphases per paragraph, so a learner skimming the bold still gets the gist. Quiz options stay unstyled (formatting shouldn't hint at the answer).
 
-**Style video transcripts the same way.** A video step's `transcript` is not just a backup caption: learners can choose to read it instead of watching, so it must carry markdown emphasis on its key points exactly like a text step. **Bold** the main beat of each paragraph (and *italics* for UI labels), one or two emphases per paragraph, so a learner reading rather than watching gets the same beats at a glance. A flat, unformatted transcript is a fail.
+**Style video transcripts the same way.** A video step's `transcript` is not just a backup caption: learners can choose to read it instead of watching, so it must carry markdown emphasis on its key points exactly like a text step. **Bold** the main beat of each paragraph (and _italics_ for UI labels), one or two emphases per paragraph, so a learner reading rather than watching gets the same beats at a glance. A flat, unformatted transcript is a fail.
 
 **Don't assume which option the learner will choose.** When teaching decision frameworks with multiple paths (e.g., pricing models, trial types), keep the guidance flexible so it applies regardless of which path the learner takes. Don't write follow-up steps that only make sense for one option.
 
@@ -118,8 +119,8 @@ The shared course-design rules for Little Parrot micro-courses. Two readers use 
 
 **Model what you teach.** If the course teaches "build incrementally," the course itself should build incrementally. The running example should start simple and grow, mirroring the learner's journey. Don't dump all features in the first prompt example.
 
-
 ## Checklist for Micro-course Content
+
 Micro-course content should follow these principles to ensure it's engaging, effective, and aligned with our educational philosophy. Use this checklist as a guide when creating or reviewing micro-course content.
 
 ### 1. Single-Concept Focus
@@ -127,9 +128,11 @@ Micro-course content should follow these principles to ensure it's engaging, eff
 **Requirement:** Each challenge teaches exactly one action-oriented concept, skill, or problem.
 
 **Check:** Can the challenge's outcome be stated in one sentence using this format?
+
 > "After this challenge, you will be able to [specific action]."
 
 **Fail indicators:**
+
 - The outcome sentence contains "and" connecting two different skills
 - You need more than one sentence to explain what the learner will be able to do
 
@@ -142,11 +145,13 @@ Micro-course content should follow these principles to ensure it's engaging, eff
 **Check:** Does the challenge end with a clear, concrete action the learner can take right now?
 
 **The action must be:**
+
 - Specific (not "try using prompts" but "write a prompt asking for a signup form with email validation")
 - Achievable without additional research or setup
 - Completable in under 15 minutes
 
 **Fail indicators:**
+
 - The challenge ends with conceptual understanding only
 - The suggested action is vague ("experiment with this technique")
 - The exercise offers a choice between tactics where one depends on the other (e.g., "choose a wait list or lead magnet" when a lead magnet requires email capture). If tactics have prerequisites, make the sequence explicit rather than presenting them as alternatives.
@@ -158,6 +163,7 @@ Micro-course content should follow these principles to ensure it's engaging, eff
 **Requirement:** The challenge includes multiple moments where the learner does something, not just watches or reads. Interactive steps should be distributed throughout the challenge, not clumped at the end.
 
 **Effort gradient within a challenge:** Structure interactions so effort increases gradually:
+
 - **Low effort (after 1-2 text steps):** Scenario-based quiz where the learner makes a judgement call on a given example. Not recall ("What is X?") but evaluation ("Is this a good X? Why?").
 - **Medium effort (mid-challenge):** Evaluate someone else's work using the criteria just taught. "Your friend made a 30-page PDF about the history of meal planning. Is this a good lead magnet for her meal planning app?" The learner applies criteria to a given situation, not their own.
 - **High effort (end of challenge):** Apply what they've learned to their own product. By this point, they've practised the judgement on easier examples, so applying it to their own situation feels like a natural next step rather than a cold start.
@@ -171,22 +177,26 @@ Micro-course content should follow these principles to ensure it's engaging, eff
 **Quiz answers must not be stated in the preceding step.** If the answer to a quiz question appears word-for-word in the text step before it, the quiz is testing short-term memory, not understanding. Rewrite it as a scenario where the learner has to apply the concept to a new situation.
 
 **Acceptable practice formats:**
+
 - Scenario-based quiz (judgement, not recall)
 - Evaluate a given example against criteria just taught
 - Reflection question that requires writing a response
 - Free-text exercise applying concepts to the learner's own product
 
 **Practice must:**
+
 - Be distributed throughout the challenge, not grouped at the end
 - Take under 3 minutes to complete
 - Directly reinforce the concept taught in the preceding text steps
 
 **Quiz answer formatting:**
+
 - Keep all options similar in length. If the correct answer is noticeably longer than the others, the learner picks it without thinking.
 - Prefer scenario-based questions ("Your data shows 70% drop-off. What should you do next?") over recognition questions ("What can X help you spot?"). Scenarios force the learner to think through a real decision.
 - **Quizzes don't need the running persona.** A learner-centred "you" scenario ("You're stuck in a fix-break loop, what do you do?") is preferred and puts the learner in the driver's seat. Don't force the course's persona (e.g. Dalmie) into every quiz; keep the persona for the running example and text steps, and reserve "apply to your own product" for the end-of-challenge high-effort step.
 
 **Fail indicators:**
+
 - All interactive steps are grouped at the end of the challenge
 - Quiz questions test recall of definitions instead of judgement or application
 - The correct quiz answer is visually obvious because it's the longest option
@@ -200,13 +210,15 @@ Micro-course content should follow these principles to ensure it's engaging, eff
 **Requirement:** One challenge (content + practice) is completable in one sitting.
 
 **Target duration:** 5-10 minutes  
-**Maximum duration:** 15 minutes  
+**Maximum duration:** 15 minutes
 
 **Estimation guide:**
+
 - Video content: actual runtime
 - Text content: ~200 words per minute reading speed
 
 **Fail indicators:**
+
 - Content exceeds 10 minutes of video or 1,500 words of text
 - Practice requires more than 10 minutes
 
@@ -217,6 +229,7 @@ Micro-course content should follow these principles to ensure it's engaging, eff
 **Requirement:** A learner with no technical background can understand every sentence.
 
 **Rules:**
+
 - Every technical term is either explained on first use OR avoided entirely
 - Explanations use plain language inline, e.g., "**kebab-case** (all lowercase, words separated by hyphens)". Don't assume any term is too basic to explain for this audience.
 - Explanations use analogies to familiar, everyday concepts
@@ -225,6 +238,7 @@ Micro-course content should follow these principles to ensure it's engaging, eff
 **Check:** Read each sentence and ask: "Would my non-technical friend understand this without stopping to Google anything?"
 
 **Fail indicators:**
+
 - Technical terms appear without explanation
 - Explanations assume prior technical knowledge
 - Sentences require re-reading to understand
@@ -236,12 +250,14 @@ Micro-course content should follow these principles to ensure it's engaging, eff
 **Requirement:** This challenge fits logically in the course sequence.
 
 **Check:**
+
 - Does this challenge assume only knowledge taught in previous challenges?
 - Does this challenge prepare the learner for what comes next?
 - Is there a clear reason this challenge comes at this point in the sequence?
-- If the course has a "go live" moment (e.g., driving traffic, launching publicly), are all setup challenges (analytics, email capture, feedback mechanisms) placed before it? Data lost before tracking is set up can't be recovered. Explain the *why* behind the ordering in the content so the learner builds this mindset.
+- If the course has a "go live" moment (e.g., driving traffic, launching publicly), are all setup challenges (analytics, email capture, feedback mechanisms) placed before it? Data lost before tracking is set up can't be recovered. Explain the _why_ behind the ordering in the content so the learner builds this mindset.
 
 **Fail indicators:**
+
 - Challenge references concepts not yet introduced
 - Challenge repeats content from earlier challenges without building on it
 - A setup step (analytics, email capture) comes after the moment it's needed
@@ -253,17 +269,20 @@ Micro-course content should follow these principles to ensure it's engaging, eff
 **Requirement:** The content makes learners feel empowered and capable, not intimidated.
 
 **Tone markers to include:**
+
 - Acknowledgment that this might feel new or unfamiliar
 - Normalisation of mistakes ("Don't worry about getting it perfect on the first try")
 - Encouragement that is specific, not generic ("You just wrote your first prompt! That's the hardest part done.")
 - Mentor-like, kind tone that makes learning enjoyable, occasionally making jokes to lighten the mood
 
 **Tone markers to avoid:**
+
 - "Simply" or "just" before instructions (implies it should be easy)
 - "Obviously" or "of course" (implies the learner should already know)
 - Excessive exclamation marks or forced enthusiasm
 
 **Fail indicators:**
+
 - Instructions assume confidence the learner may not have
 - Mistakes are not normalised
 - Encouragement feels performative rather than genuine

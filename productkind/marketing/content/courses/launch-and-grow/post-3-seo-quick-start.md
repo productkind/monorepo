@@ -6,27 +6,13 @@ account: little-parrot
 
 # Post 3: Get found on Google (SEO quick start)
 
-**Pillar:** the method, shown.
-**Research trace:** discoverability sits in our strongest demand data ("help
-people find it without sharing every link by hand"); honest expectation
-setting (days to months) is the anti-hype, trust-building register the
-audience rewards; checklist format wins saves. Repackages the SEO and
-Discoverability Quick-Start Checklist toolkit item.
+**Pillar:** the method, shown. **Research trace:** discoverability sits in our strongest demand data ("help people find it without sharing every link by hand"); honest expectation setting (days to months) is the anti-hype, trust-building register the audience rewards; checklist format wins saves. Repackages the SEO and Discoverability Quick-Start Checklist toolkit item.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Checklist style: tick
-boxes, Lovable prompts in monospace chat bubbles, a small magnifying-glass
-motif. The Book Club Organiser as the running example.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Checklist style: tick boxes, Lovable prompts in monospace chat bubbles, a small magnifying-glass motif. The Book Club Organiser as the running example.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -38,10 +24,7 @@ motif. The Book Club Organiser as the running example.
 | 6 | A calendar with a gentle curve rising | "5️⃣ Then give it time. Best case: days. Typically: a few weeks. Competitive space: months. Every improvement compounds, and the earlier you start, the sooner results arrive." |
 | 7 (CTA) | Brand card | "Dalmie searched 'book club organiser app' and found her own product on page two. A month later, page one. Full checklist: Launch and Grow Your Lovable App, on LittleParrot.app. First challenge free 🟪 Save this 🔖" |
 
-**Alt text (for the post):** An SEO quick-start checklist carousel for
-Lovable apps: fix heading hierarchy, add alt text, verify your domain and
-submit a sitemap in Google Search Console, list your product on a directory,
-and expect results in weeks rather than days.
+**Alt text (for the post):** An SEO quick-start checklist carousel for Lovable apps: fix heading hierarchy, add alt text, verify your domain and submit a sitemap in Google Search Console, list your product on a directory, and expect results in weeks rather than days.
 
 ## Caption (exact)
 
@@ -55,7 +38,4 @@ The full checklist, including the prompts, comes with our Launch and Grow Your L
 
 Save this for after publish day. 🔖
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #lovable #seo #womenintech #buildinpublic #aitools #femalefounder #learnwithai #techforwomen #websitetips
+. . . #vibecoding #buildwithai #womenwhobuild #lovable #seo #womenintech #buildinpublic #aitools #femalefounder #learnwithai #techforwomen #websitetips

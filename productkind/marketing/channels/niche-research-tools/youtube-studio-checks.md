@@ -50,7 +50,7 @@ Even a handful of terms is worth having. If the list is empty, note that and mov
 **Analytics**, then **Trends**, then use the search box. Work through these in order and record each one before moving on.
 
 | Priority | Term | Why |
-|---|---|---|
+| --- | --- | --- |
 | 1 | `mental load` | Confirm or contradict the 0.0 YouTube reading |
 | 1 | `mental load list` | The seam we're building on |
 | 2 | `brain dump` | Trends showed a contaminated spike in GB; does Studio see the same |
@@ -90,7 +90,7 @@ Two reasons this matters here: `adhd mum` is a British spelling and `adhd mom` i
 One row per term, so the results stay comparable and can be pasted back into the research doc:
 
 | Term | Region | Interest | Content gap? | Shorts or long-form | Notes |
-|---|---|---|---|---|---|
+| ---- | ------ | -------- | ------------ | ------------------- | ----- |
 
 Add the findings to `../../content/courses/ai-your-life-admin/niche-research.md` under "Still to run", and change that section's status.
 

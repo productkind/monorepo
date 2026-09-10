@@ -1,7 +1,9 @@
 ## Goal
+
 - Produce a Little Parrot HTML email that already meets the house technical, design, voice, accessibility, and inbox-presentation guidelines before you see it, instead of catching breaches by re-reading the draft yourself.
 
 ## About
+
 - Claude Code (agent), run from the monorepo
 - Little Parrot project, transactional and marketing emails (welcome, payment, cancellation, certificate, course updates, promotions, raffles, discount reminders)
 - A skill-driven generate → critique → revise loop: the main agent drafts the email, an independent critic sub-agent gates it with fresh eyes, the agent revises, and only a passing email reaches you.
@@ -35,6 +37,7 @@ The loop is built into the `little-parrot-email` skill (its "Evaluation Loop" se
 ## The components
 
 ### Skills (`.claude/skills/`)
+
 - **`little-parrot-email`**: the single source of truth for emails. Now covers, in order:
   - **Inbox Presentation** (new this session): subject line (30 to 50 chars, point in the first ~30 for mobile, clarity over curiosity, spam-trigger list, emoji default off), preheader text (always set, complement not repeat, stop "view in browser" leaking in), sender name (stable, "Little Parrot" vs "Kinga at Little Parrot"), and a note that Apple Mail Privacy Protection has made raw open rate unreliable, so judge success by clicks and course progress.
   - **Technical Requirements**: no flexbox, inline styles, self-hosted images, gradient fallbacks, and an **Accessibility & Dark Mode** subsection (new): semantic structure, `role="presentation"`, `lang="en-GB"`, alt text, never bake meaningful text into images, descriptive link text, and dark-mode handling for the black-on-white sticker look.
@@ -45,6 +48,7 @@ The loop is built into the `little-parrot-email` skill (its "Evaluation Loop" se
 - **`productkind-tone`**: applied alongside for the educational voice; `productkind/little-parrot-context.md` (a plain file, formerly the little-parrot-ai-skill-gap skill) is read for the company context.
 
 ### Agent (`.claude/agents/`)
+
 - **`email-critic`** (read-only). Has **fresh eyes** (it did not write the draft) and a **single job**: judge a drafted email against the guidelines and return a verdict a writer can act on. It does not rewrite the email. Its rubric is the `little-parrot-email` and `productkind-tone` skills (preloaded into its context via the `skills:` frontmatter field), and it reads a recent email from `little-parrot/assets/emails/` at runtime to check the current structure. It judges both the copy and the markup, because in email a layout bug ships as badly as a tone slip. Three tiers:
   - **Tier 1, hard fails (binary):** inbox presentation (subject/preheader length and leaks), copy bans (em dashes, non-British English, patronising language, "just", doubt words, count words, subscription pitch to paid subscribers, untrue claims), and technical breakers (`display: flex`, hotlinked icons, gradient with no solid fallback, competing CTA buttons, missing footer essentials, malformed merge fields, missing tracking params, meaningful text baked into an image, missing alt, non-descriptive link text).
   - **Tier 2, structure, design, and rendering:** standard structure and type scale, one highlight box, cards not buttons, skimmability, CTA tap target, body type, contrast, accessibility scaffolding, dark mode, clip-limit risk.

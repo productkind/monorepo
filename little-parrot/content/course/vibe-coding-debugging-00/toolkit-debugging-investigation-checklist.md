@@ -1,6 +1,7 @@
 ---
-challenge: "3 - How Developers Investigate Bugs"
+challenge: '3 - How Developers Investigate Bugs'
 ---
+
 ## Debugging Investigation Checklist
 
 A step-by-step investigation flow to follow every time something goes wrong in your app. Work through the steps in order. Stop as soon as you find a clue, and share it with Lovable.
@@ -42,13 +43,12 @@ If nothing above revealed the problem, ask Lovable to add temporary logging so y
 **Copy this prompt and fill in the blanks:**
 
 ```markdown
-There is a bug in the [feature name] feature, but I can't find any clues in the Console, Network
-tab, Cloud logs, or database.
+There is a bug in the [feature name] feature, but I can't find any clues in the Console, Network tab, Cloud logs, or database.
 
-The bug happens when I [describe the steps to reproduce the bug].
-[Describe what you expected to happen, and what actually happened instead.]
+The bug happens when I [describe the steps to reproduce the bug]. [Describe what you expected to happen, and what actually happened instead.]
 
 Add logging to the [feature name] process to show:
+
 - What data is being sent
 - What response is received
 - Any errors or edgecases that could occur
@@ -56,10 +56,7 @@ Add logging to the [feature name] process to show:
 Then I'll reproduce the bug to provide you with the new log messages to help find the issue.
 ```
 
-After reproducing the bug, check the Console for the new log messages and share what you find with Lovable.
-In many cases, even without pasting the messages Lovable can read the logs directly and find the issue after you ask it to add logging.
-It is possible that you will need to repeat this process a few times, asking Lovable to add more
-logging in different places until you find the clue that leads to the fix.
+After reproducing the bug, check the Console for the new log messages and share what you find with Lovable. In many cases, even without pasting the messages Lovable can read the logs directly and find the issue after you ask it to add logging. It is possible that you will need to repeat this process a few times, asking Lovable to add more logging in different places until you find the clue that leads to the fix.
 
 ### What to do with your clues
 

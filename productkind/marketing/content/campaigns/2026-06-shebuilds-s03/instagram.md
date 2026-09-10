@@ -6,9 +6,7 @@ account: little-parrot
 
 # Instagram (productkind company account)
 
-Post from: https://www.instagram.com/by_productkind/
-Link: put the course link in bio with `?ref=instagram`. For applying, a Story with a
-SheBuilds link sticker works (captions can't carry clickable links).
+Post from: https://www.instagram.com/by_productkind/ Link: put the course link in bio with `?ref=instagram`. For applying, a Story with a SheBuilds link sticker works (captions can't carry clickable links).
 
 Posting order: Post 1 (the mission image) first, then Post 2 (the parrot advice Reel).
 
@@ -30,8 +28,7 @@ Link in bio to start. 💛
 
 ## Post 2 - Reel (parrot advice video: SheBuildsS03.mp4)
 
-The video carries the full message on screen (the parrot "advice" sequence), so the
-caption adds personality and the call to action rather than repeating it.
+The video carries the full message on screen (the parrot "advice" sequence), so the caption adds personality and the call to action rather than repeating it.
 
 Take it from the parrot 🦜
 

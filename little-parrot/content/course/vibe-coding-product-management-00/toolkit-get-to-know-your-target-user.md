@@ -1,7 +1,8 @@
 ---
-challenge: "2 - Define Your Target User"
-type: "Template"
+challenge: '2 - Define Your Target User'
+type: 'Template'
 ---
+
 ## Get to Know Your Target User
 
 A template for building a persona: a short profile of the person you're building for, covering their situation, their frustrations, and what they want. Fill it in for each new product idea, and open it again whenever you're deciding whether a feature is worth building.
@@ -54,15 +55,16 @@ Goals:
 
 If you're stuck on a section, try answering these:
 
-**Name and title:**
-What one phrase would describe this person's situation? Think "[Name], the [adjective] [role]" (e.g. "Sarah, the overwhelmed book club organiser" or "Marco, the time-pressed freelance designer").
+**Name and title:** What one phrase would describe this person's situation? Think "[Name], the [adjective] [role]" (e.g. "Sarah, the overwhelmed book club organiser" or "Marco, the time-pressed freelance designer").
 
 **About:**
+
 - What's their day-to-day context related to your product?
 - How comfortable are they with technology?
 - What constraints do they have (time, budget, skills)?
 
 **Frustrations (write these as quotes):**
+
 - What makes them sigh or roll their eyes?
 - What takes them way too long right now?
 - What workaround are they currently using, and why does it fall short?
@@ -70,6 +72,7 @@ What one phrase would describe this person's situation? Think "[Name], the [adje
 Writing frustrations as quotes ("I can't find...") instead of descriptions ("The user can't find...") helps you see the world through their eyes and empathise with them.
 
 **Goals:**
+
 - What do they want to achieve?
 - What change do they want to see in their life?
 - What do they want to stop doing?

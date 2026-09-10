@@ -89,6 +89,7 @@ Return exactly this structure, nothing before or after:
 ```
 
 Rules for your output:
+
 - Always quote the exact text you are flagging. Never give a vague note like "tighten the opening" without quoting what to change.
 - Every issue must come with a concrete, copy-ready fix, not just a diagnosis.
 - Be honest and specific, never padded. If the post is genuinely good, say PASS and do not invent problems to look thorough. A clean PASS is a valid and valuable result.

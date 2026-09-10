@@ -5,9 +5,7 @@
   "source_term": "vibe coding production apps",
   "fallback_term": "",
   "comparison_group": "",
-  "terms": [
-    "vibe coding production apps"
-  ],
+  "terms": ["vibe coding production apps"],
   "term_type": "Search term",
   "geography": "US",
   "geo_code": "US",
@@ -20,9 +18,7 @@
   "data_status": "insufficient_no_series",
   "headers": [],
   "series": [],
-  "nonzero_points": [
-    0
-  ],
+  "nonzero_points": [0],
   "queries": [],
   "topics": [],
   "related_availability": {

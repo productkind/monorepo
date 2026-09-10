@@ -1,7 +1,7 @@
+import { sectionSpansIn } from './spans'
+import type { PlannedTake } from './takes'
 import type { Alignment } from './words'
 import { alignmentToWords } from './words'
-import type { PlannedTake } from './takes'
-import { sectionSpansIn } from './spans'
 
 export type RenderedTake = PlannedTake & {
   alignment: Alignment

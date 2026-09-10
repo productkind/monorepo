@@ -84,17 +84,19 @@ type Framing = {
   place: Place
 }
 
-export type GifVisual = Framing & Sourced & {
-  kind: 'gif'
-  src: string
-  loopBehavior: LoopBehavior
-  playbackRate: number
-}
+export type GifVisual = Framing &
+  Sourced & {
+    kind: 'gif'
+    src: string
+    loopBehavior: LoopBehavior
+    playbackRate: number
+  }
 
-export type StillVisual = Framing & Sourced & {
-  kind: 'still'
-  src: string
-}
+export type StillVisual = Framing &
+  Sourced & {
+    kind: 'still'
+    src: string
+  }
 
 export type ClipVisual = Sourced & {
   kind: 'clip'

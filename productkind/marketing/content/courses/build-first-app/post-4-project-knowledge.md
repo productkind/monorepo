@@ -6,27 +6,13 @@ account: little-parrot
 
 # Post 4: Tell Lovable once (Project Knowledge)
 
-**Pillar:** the method, shown.
-**Research trace:** repeating context in every prompt wastes credits, and
-credit anxiety is the No. 1 blocker; consistency ("design that doesn't look
-like every other Lovable app") sits in our strongest demand data; the
-"decisions, not plans" tip is judgement content, our confidence-by-design
-angle. Repackages the Project Knowledge Starter Template toolkit item.
+**Pillar:** the method, shown. **Research trace:** repeating context in every prompt wastes credits, and credit anxiety is the No. 1 blocker; consistency ("design that doesn't look like every other Lovable app") sits in our strongest demand data; the "decisions, not plans" tip is judgement content, our confidence-by-design angle. Repackages the Project Knowledge Starter Template toolkit item.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 6 slides, 1080 x 1350 (4:5 portrait).** Explainer style: a
-notebook motif (the app's "memory"), one section of the Knowledge doc per
-slide, monospace snippets for the examples.
+**Carousel, 6 slides, 1080 x 1350 (4:5 portrait).** Explainer style: a notebook motif (the app's "memory"), one section of the Knowledge doc per slide, monospace snippets for the examples.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -37,10 +23,7 @@ slide, monospace snippets for the examples.
 | 5 | A rule being added to the notebook | "And when Lovable keeps getting something wrong, add a rule instead of correcting it again. One line in Knowledge fixes it for every future prompt." |
 | 6 (CTA) | Brand card | "Consistent app, shorter prompts, fewer corrections to pay for. Our starter template has every section ready to fill in. Full course: Build Your First App with Lovable, on LittleParrot.app. First challenge free 🟪 Save this 🔖" |
 
-**Alt text (for the post):** An explainer carousel about Lovable's Project
-Knowledge panel: where to find it, what to put in it (target user, design
-system, tone, naming), why to record decisions like "no payments in version
-1", and how one written rule prevents repeated corrections.
+**Alt text (for the post):** An explainer carousel about Lovable's Project Knowledge panel: where to find it, what to put in it (target user, design system, tone, naming), why to record decisions like "no payments in version 1", and how one written rule prevents repeated corrections.
 
 ## Caption (exact)
 
@@ -54,7 +37,4 @@ Our starter template has every section ready to fill in, and it comes with our B
 
 What would your first Knowledge rule be? 👇
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #lovable #shebuilds #womenintech #aitools #aiforbeginners #learnwithai #appbuilding #vibecodingtips
+. . . #vibecoding #buildwithai #womenwhobuild #lovable #shebuilds #womenintech #aitools #aiforbeginners #learnwithai #appbuilding #vibecodingtips

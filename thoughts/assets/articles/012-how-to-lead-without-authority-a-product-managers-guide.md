@@ -1,9 +1,8 @@
 # How to Lead Without Authority: A Product Manager's Guide
 
-*What to do when you are not the boss, but still have to lead*
+_What to do when you are not the boss, but still have to lead_
 
-**Date:** August 27, 2025
-**Author:** Kinga Magyar
+**Date:** August 27, 2025 **Author:** Kinga Magyar
 
 ---
 
@@ -21,8 +20,7 @@ What connects these leaders is that they lead with empathy and advocate for peop
 
 Of course, you don't need to be a prime minister or a foundation head to be a leader. Being a leader doesn't depend on your title, but on your actions.
 
-> "We have this notion that confidence in leadership comes through having all the answers all the time; we are trusted because we show no shred of doubt. But I think, in any crisis, trust is built by being open about information and knowledge gaps."
-> – Jacinda Ardern, Source: Harvard Business Review
+> "We have this notion that confidence in leadership comes through having all the answers all the time; we are trusted because we show no shred of doubt. But I think, in any crisis, trust is built by being open about information and knowledge gaps." – Jacinda Ardern, Source: Harvard Business Review
 
 [Upgrade to paid button]
 

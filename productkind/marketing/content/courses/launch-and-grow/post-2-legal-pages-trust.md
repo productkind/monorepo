@@ -6,27 +6,13 @@ account: little-parrot
 
 # Post 2: Legal pages, and when you need what
 
-**Pillar:** the messy middle.
-**Research trace:** trust and safety separate a "toy" from the "production
-ready real" the audience wants; legal hygiene, like security hygiene, is the
-unglamorous skill nobody else teaches at this level; the when-do-you-need-what
-table is a saveable decision guide. Repackages the Legal Pages Prompt Library
-toolkit item.
+**Pillar:** the messy middle. **Research trace:** trust and safety separate a "toy" from the "production ready real" the audience wants; legal hygiene, like security hygiene, is the unglamorous skill nobody else teaches at this level; the when-do-you-need-what table is a saveable decision guide. Repackages the Legal Pages Prompt Library toolkit item.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Decision-guide style: a
-calm, official-but-friendly look (think stamped documents drawn kindly), one
-situation or prompt per slide, prompts in monospace.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Decision-guide style: a calm, official-but-friendly look (think stamped documents drawn kindly), one situation or prompt per slide, prompts in monospace.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -38,10 +24,7 @@ situation or prompt per slide, prompts in monospace.
 | 6 | A heart between a user and the app | "The point of all this: legal pages tell a stranger 'someone responsible built this', and that makes signing up feel safe." |
 | 7 (CTA) | Brand card | "The full prompt library is in the Launch and Grow Your Lovable App toolkit, on LittleParrot.app. First challenge free 🟪 Save this for when strangers start arriving 🔖" |
 
-**Alt text (for the post):** A decision-guide carousel about legal pages for
-a published app: which pages you need for login, analytics, or payments, how
-to generate them with Termly or a chat assistant, and the Lovable prompts
-for footer links and a GDPR cookie banner.
+**Alt text (for the post):** A decision-guide carousel about legal pages for a published app: which pages you need for login, analytics, or payments, how to generate them with Termly or a chat assistant, and the Lovable prompts for footer links and a GDPR cookie banner.
 
 ## Caption (exact)
 
@@ -55,7 +38,4 @@ Full prompt library comes with our Launch and Grow Your Lovable App course, on L
 
 Save this for when strangers start arriving. 🔖
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #lovable #shebuilds #womenintech #buildinpublic #aitools #femalefounder #learnwithai #techforwomen #appbuilding
+. . . #vibecoding #buildwithai #womenwhobuild #lovable #shebuilds #womenintech #buildinpublic #aitools #femalefounder #learnwithai #techforwomen #appbuilding

@@ -1,6 +1,7 @@
 ---
-challenge: "5 - Databases for Vibe Coders"
+challenge: '5 - Databases for Vibe Coders'
 ---
+
 ## Software Vocabulary Cheat Sheet
 
 A quick-reference guide to every term covered in the Basics of Software for Vibe Coding course. Bookmark it and come back whenever you need the right word for your prompt.
@@ -8,7 +9,7 @@ A quick-reference guide to every term covered in the Basics of Software for Vibe
 ### Architecture (how apps are built)
 
 | Term | What it means | Bakery analogy |
-|------|--------------|----------------|
+| --- | --- | --- |
 | **Frontend** | Everything your users see and interact with (buttons, forms, images). Runs on the user's device. Also called the **client**. | The front counter where customers order |
 | **Backend** | The behind-the-scenes brain: saves data, sends emails, processes payments. Runs on a **server**. | The kitchen where baking happens |
 | **Database** | Where your app remembers things: user profiles, orders, posts. A program on the server that stores and organises information. | The storage room for ingredients |
@@ -21,7 +22,7 @@ A quick-reference guide to every term covered in the Basics of Software for Vibe
 ### Design (how apps look)
 
 | Term | What it means | How to use it in a prompt |
-|------|--------------|--------------------------|
+| --- | --- | --- |
 | **Wireframe** | A quick sketch showing where things go on a screen. No colours, just structure. | "Here's my wireframe [attach image]" |
 | **Component** | A reusable building block: button, card, input field, modal, dropdown. | "Add a card component for each item" |
 | **Design system** | A ready-made kit of components that all look good together. Most AI app builders use **shadcn/ui**. | "Use a shadcn accordion for the FAQ" |
@@ -33,7 +34,7 @@ A quick-reference guide to every term covered in the Basics of Software for Vibe
 ### Components (the building blocks you'll use most)
 
 | Component | What it does | Example prompt |
-|-----------|-------------|----------------|
+| --- | --- | --- |
 | **Button** | Triggers an action. **Primary** = main action (colourful). **Secondary** = less prominent (outline). **Tertiary** = just text. | "Add a primary 'Save' button in the bottom right of the /profile page" |
 | **Input field** | A single line where users type text. | "Add an email input field with placeholder 'Enter your email'" |
 | **Textarea** | A multi-line text input. | "Add a textarea for the description, 4 rows tall" |
@@ -46,7 +47,7 @@ A quick-reference guide to every term covered in the Basics of Software for Vibe
 ### Frontend (how screens are built)
 
 | Term | What it means |
-|------|--------------|
+| --- | --- |
 | **HTML** | The skeleton of every page. Defines what's on the page: headings, paragraphs, images, buttons. |
 | **CSS** | The styling. Controls colours, fonts, spacing, and layout. |
 | **JavaScript** | The behaviour. Handles clicks, form submissions, animations, and loading data. |
@@ -57,7 +58,7 @@ A quick-reference guide to every term covered in the Basics of Software for Vibe
 ### Backend (what happens behind the scenes)
 
 | Term | What it means |
-|------|--------------|
+| --- | --- |
 | **Backend function** | A small program that performs a specific job: validate an email, save data, send a notification. |
 | **Third-party service** | An external tool your app connects to (Stripe for payments, Resend for emails). |
 | **Supabase** | The backend toolkit most AI app builders use. Handles databases, authentication, and more. |
@@ -67,7 +68,7 @@ A quick-reference guide to every term covered in the Basics of Software for Vibe
 ### Database (how your app remembers things)
 
 | Term | What it means |
-|------|--------------|
+| --- | --- |
 | **Table** | Like a spreadsheet. Has columns (headers) and rows (individual records). |
 | **Column** | A field in a table (e.g. name, email, created_at). Each column has a data type. |
 | **Row** | A single record (e.g. one user, one order). |

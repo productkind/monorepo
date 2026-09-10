@@ -2,8 +2,7 @@
 
 - **Brand:** little-parrot (the carousel and the course it drives to are Little Parrot).
 - **Source material:** the approved `spec.md` and the 7-slide export in this folder. A specimen carousel: every part of an app has a name (buttons and their ranks, cards, modals, input fields, textareas, dropdowns, navigation bars), each drawn large with a ready-to-use prompt beneath, so naming the component gets you the design you pictured in one clear prompt.
-- **Destination:** the course, first challenge free. Base link:
-  `https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview?utm_medium=social&utm_campaign=software-basics&utm_content=post-2` (add `&utm_source=<platform>` per channel below).
+- **Destination:** the course, first challenge free. Base link: `https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview?utm_medium=social&utm_campaign=software-basics&utm_content=post-2` (add `&utm_source=<platform>` per channel below).
 - **Posted from:** Instagram = Little Parrot Instagram (Collab post with Kinga's personal account); LinkedIn = productkind page; TikTok = our single account; YouTube Shorts = our channel (carousel run as a slideshow video).
 - **Platforms:** TikTok, Instagram, LinkedIn, YouTube Shorts.
 
@@ -27,13 +26,7 @@ Every part of your app has a name, and your AI builder knows them all 🧩
 
 The gap is on our side: when we can't name the pop-up, we describe around it, and the AI guesses. So the design comes back not quite like the one in our head. Learning the words is how you get the best result.
 
-The six components you'll use most while vibe coding are:
-• buttons, with their ranks (primary, secondary, tertiary)
-• cards
-• modals (that's the pop-up over everything else)
-• input fields and textareas
-• dropdowns
-• navigation bars
+The six components you'll use most while vibe coding are: • buttons, with their ranks (primary, secondary, tertiary) • cards • modals (that's the pop-up over everything else) • input fields and textareas • dropdowns • navigation bars
 
 Once you use these names, the back-and-forth decreases: "show each note as a card with a category dropdown and a primary Save button" is one prompt and a good result.
 
@@ -57,8 +50,7 @@ Save this for the next time you're vibe coding your app 🔖, and send it to a f
 
 #womenwhobuild #womenintech #vibecoding
 
-**Description:**
-Every part of an app has a name, and your AI builder knows them all. Learn the six components you'll use most: buttons (and their ranks), cards, modals, input fields, dropdowns, and navigation bars, each with a ready prompt. Name the part, and one clear prompt gets you the design you pictured instead of describing it three different ways. Made for women building their first app with AI. Subscribe for a new vibe coding short every week.
+**Description:** Every part of an app has a name, and your AI builder knows them all. Learn the six components you'll use most: buttons (and their ranks), cards, modals, input fields, dropdowns, and navigation bars, each with a ready prompt. Name the part, and one clear prompt gets you the design you pictured instead of describing it three different ways. Made for women building their first app with AI. Subscribe for a new vibe coding short every week.
 
 **Pinned comment (holds the link):** The full prompt library is in the free first challenge of Basics of Software for Vibe Coding: https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview?utm_source=youtube-short
 
@@ -71,6 +63,7 @@ Every part of an app has a name, and your AI builder already knows all of them. 
 That's how you get a design that doesn't look like the one in your head. Because "that pop-up box that asks are you sure" leaves a lot open. "A confirmation modal with a Cancel and a red Delete button" doesn't.
 
 The six components you'll use most:
+
 - buttons, with their ranks (primary, secondary, tertiary)
 - cards
 - modals (the pop-up over everything else)

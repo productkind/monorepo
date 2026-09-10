@@ -1,10 +1,11 @@
 ---
 slug: brain-dump-template
-title: "A Brain Dump Template, and a Way to Skip the Sorting"
-description: "A free brain dump template to copy, an ADHD brain dump template with three piles instead of five, and a way to fill either in by talking instead of writing."
+title: 'A Brain Dump Template, and a Way to Skip the Sorting'
+description: 'A free brain dump template to copy, an ADHD brain dump template with three piles instead of five, and a way to fill either in by talking instead of writing.'
 primary_query: brain dump template
-secondary_queries: [adhd brain dump template, adhd brain dump template free, brain dump worksheet, adhd brain dump]
-semrush: "The ADHD variants together outweigh the head term: adhd brain dump template 720/mo KD 24, adhd brain dump 590/mo KD 12, brain dump worksheet 590/mo KD 14. Printable/template SERP (Pinterest, Notion, Asana), so the copyable blocks stay high on the page."
+secondary_queries:
+  [adhd brain dump template, adhd brain dump template free, brain dump worksheet, adhd brain dump]
+semrush: 'The ADHD variants together outweigh the head term: adhd brain dump template 720/mo KD 24, adhd brain dump 590/mo KD 12, brain dump worksheet 590/mo KD 14. Printable/template SERP (Pinterest, Notion, Asana), so the copyable blocks stay high on the page.'
 type: article
 status: drafted
 ref: seo-brain-dump-template
@@ -71,7 +72,7 @@ The standard template asks you to sit down at a desk, with ten spare minutes, fe
 
 Three changes to try if you have ADHD:
 
-**Drop step 2 to three piles.** *Now*, *Later*, *Not a task*. Five categories means making a decision on every line, and making those decisions can be more tiring than writing the list.
+**Drop step 2 to three piles.** _Now_, _Later_, _Not a task_. Five categories means making a decision on every line, and making those decisions can be more tiring than writing the list.
 
 **Write the trigger, not the task.** "Dentist" beats "Ring the dentist to book a check-up for both of us, ideally a Thursday". You're leaving a note for yourself, not writing instructions for a stranger.
 
@@ -125,11 +126,11 @@ You can say the task out loud when you think of it, and let your phone sort it i
 
 You talk, however it comes out, mid-ramble and out of order:
 
-> *"We're out of nappies and wipes, I keep meaning to book the six-week check, health visitor's coming Tuesday at eleven, and I need bananas."*
+> _"We're out of nappies and wipes, I keep meaning to book the six-week check, health visitor's coming Tuesday at eleven, and I need bananas."_
 
 A few seconds later the shortcut has sorted what you said into your categories, and every line is a task you can tick off. You didn't type anything, open anything, or decide which pile each item belonged in.
 
-You choose the categories: the *Now / Later / Not a task* set above works, so does *Work / Home / People*, so does the five-pile version. You write them once into the prompt, the instruction you give the AI, and it sorts everything into those categories from then on. You never have to do step 2 yourself.
+You choose the categories: the _Now / Later / Not a task_ set above works, so does _Work / Home / People_, so does the five-pile version. You write them once into the prompt, the instruction you give the AI, and it sorts everything into those categories from then on. You never have to do step 2 yourself.
 
 So you never have to book time for a brain dump. It takes the four seconds it needs to say one sentence, whenever something comes to mind: walking to the car, waiting for the kettle, or lying awake at half two with a thought you'd otherwise carry until morning. You say it, the shortcut files it in the right list, and you can stop holding it in your head.
 

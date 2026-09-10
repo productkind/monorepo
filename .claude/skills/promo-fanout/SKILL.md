@@ -63,6 +63,7 @@ Take one campaign brief and produce per-channel drafts, each shaped to its chann
 ## Output quality bar
 
 Before finishing, check each draft:
+
 1. Would the user only need to lightly edit, not rewrite?
 2. Does it lead with the reader's benefit and the deadline?
 3. Correct `utm` tag on every link?

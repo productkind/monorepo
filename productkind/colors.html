@@ -1,119 +1,119 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Colors</title>
-  <style>
-    .color-card {
-      border: 2px solid black;
-      margin: 6px;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colors</title>
+    <style>
+      .color-card {
+        border: 2px solid black;
+        margin: 6px;
+      }
 
-    .color-box {
-      width: 96px;
-      height: 96px;
-      margin: 6px;
-    }
+      .color-box {
+        width: 96px;
+        height: 96px;
+        margin: 6px;
+      }
 
-    .color-hue {
-      display: flex;
-      flex-direction: row;
-      gap: 10px;
-    }
+      .color-hue {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+      }
 
-    .color-main {
-      outline: 2px solid black;
-      outline-offset: 2px;
-    }
+      .color-main {
+        outline: 2px solid black;
+        outline-offset: 2px;
+      }
 
-    .color-code {
-      font-family: monospace;
-      font-size: 8px;
-      padding: 4px;
-      display: block;
-      text-align: center;
-    }
+      .color-code {
+        font-family: monospace;
+        font-size: 8px;
+        padding: 4px;
+        display: block;
+        text-align: center;
+      }
 
-    .color-primary {
-      outline: 4px dashed black;
-    }
+      .color-primary {
+        outline: 4px dashed black;
+      }
 
-    .main-colors {
-      display: flex;
-      flex-direction: row;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
+      .main-colors {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
 
-    .gradient-display {
-      width: 100%;
-      height: 48px;
-      margin: 12px 0;
-      border: 2px solid black;
-    }
-  </style>
-</head>
-<body>
-  <h1>Colors</h1>
-  <div class="colors"></div>
-  <script type="module">
-    import Color from "https://colorjs.io/dist/color.js";
+      .gradient-display {
+        width: 100%;
+        height: 48px;
+        margin: 12px 0;
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Colors</h1>
+    <div class="colors"></div>
+    <script type="module">
+      import Color from 'https://colorjs.io/dist/color.js'
 
+      const SATURATION_BASE = 100
+      const SATURATION_GREY = 5
+      const HUE_BASE = 290
+      const COLOR_COUNT = 18
+      const BASE_LIGHTNESS = 50
+      const LIGHTNESS_STEP = 10
+      const LIGHTNESS_VARIANT_COUNT = 5
 
-    const SATURATION_BASE = 100
-    const SATURATION_GREY = 5
-    const HUE_BASE = 290
-    const COLOR_COUNT = 18;
-    const BASE_LIGHTNESS = 50;
-    const LIGHTNESS_STEP = 10;
-    const LIGHTNESS_VARIANT_COUNT = 5;
+      const getLightnessVariants = (baseLightness, step, count) => {
+        return Array.from({ length: count }, (_, i) => baseLightness + (i + 1) * step)
+      }
 
-    const getLightnessVariants = (baseLightness, step, count) => {
-      return Array.from({ length: count }, (_, i) => baseLightness + (i + 1) * step);
-    };
+      const lightnessVariants = [
+        ...getLightnessVariants(BASE_LIGHTNESS, LIGHTNESS_STEP, LIGHTNESS_VARIANT_COUNT).reverse(),
+        BASE_LIGHTNESS,
+        ...getLightnessVariants(BASE_LIGHTNESS, -LIGHTNESS_STEP, LIGHTNESS_VARIANT_COUNT),
+      ]
 
-    const lightnessVariants = [
-      ...getLightnessVariants(BASE_LIGHTNESS, LIGHTNESS_STEP, LIGHTNESS_VARIANT_COUNT).reverse(),
-      BASE_LIGHTNESS,
-      ...getLightnessVariants(BASE_LIGHTNESS, -LIGHTNESS_STEP, LIGHTNESS_VARIANT_COUNT)
-    ]
+      lightnessVariants[0] = 95
+      lightnessVariants[lightnessVariants.length - 1] = 5
 
-    lightnessVariants[0] = 95;
-    lightnessVariants[lightnessVariants.length -1] = 5;
-
-
-    const root = document.querySelector('.colors');
-    const createColorHue = (hue, saturation, isPrimary) => {
-      return `
+      const root = document.querySelector('.colors')
+      const createColorHue = (hue, saturation, isPrimary) => {
+        return `
         <div class="color-hue${isPrimary ? ' color-primary' : ''}">
           ${createColorBoxes(hue, saturation)}
-        </div>`;
-    };
+        </div>`
+      }
 
-    const createColorBoxes = (hue, saturation) => {
-      return lightnessVariants.map((lightness, index) => {
-        const isMain = index === 6;
-        return createColorBox(hue, saturation, lightness, isMain);
-      }).join('');
-    };
+      const createColorBoxes = (hue, saturation) => {
+        return lightnessVariants
+          .map((lightness, index) => {
+            const isMain = index === 6
+            return createColorBox(hue, saturation, lightness, isMain)
+          })
+          .join('')
+      }
 
-    const convertColor = (hue, saturation, lightness) => {
-      const color = new Color('okhsl', [hue, saturation / 100, lightness / 100]);
-      return color.toString({ format: 'hex'});
-    };
+      const convertColor = (hue, saturation, lightness) => {
+        const color = new Color('okhsl', [hue, saturation / 100, lightness / 100])
+        return color.toString({ format: 'hex' })
+      }
 
-    const convertColorToHsl = (hue, saturation, lightness) => {
-      const color = new Color('okhsl', [hue, saturation / 100, lightness / 100]);
-      const hsl = color.to('hsl');
-      const [h, s, l] = hsl.coords;
-      return `hsl(${Math.round(h || 0)}, ${Math.round(s)}%, ${Math.round(l)}%)`;
-    };
+      const convertColorToHsl = (hue, saturation, lightness) => {
+        const color = new Color('okhsl', [hue, saturation / 100, lightness / 100])
+        const hsl = color.to('hsl')
+        const [h, s, l] = hsl.coords
+        return `hsl(${Math.round(h || 0)}, ${Math.round(s)}%, ${Math.round(l)}%)`
+      }
 
-    const createColorBox = (hue, saturation, lightness, isMain = false) => {
-      const colorName = `okhsl<br>(${hue % 360}, ${saturation}%, ${lightness}%)`;
-      const hex = convertColor(hue, saturation, lightness);
-      const hsl = convertColorToHsl(hue, saturation, lightness);
+      const createColorBox = (hue, saturation, lightness, isMain = false) => {
+        const colorName = `okhsl<br>(${hue % 360}, ${saturation}%, ${lightness}%)`
+        const hex = convertColor(hue, saturation, lightness)
+        const hsl = convertColorToHsl(hue, saturation, lightness)
         return `
           <div class="color-card${isMain ? ' color-main' : ''}">
             <div class="color-box" style="background-color: ${hex};"></div>
@@ -121,55 +121,63 @@
             <code class="color-code">${hex}</code>
             <code class="color-code">${hsl}</code>
           </div>
-        `;
-    };
+        `
+      }
 
-    const hues = Array.from({ length: COLOR_COUNT }, (_, i) => {
-      const hueStep = 360 / COLOR_COUNT;
-      return (HUE_BASE + i * hueStep) % 360;
-    });
+      const hues = Array.from({ length: COLOR_COUNT }, (_, i) => {
+        const hueStep = 360 / COLOR_COUNT
+        return (HUE_BASE + i * hueStep) % 360
+      })
 
-    const secondaryColorStep = 100;
+      const secondaryColorStep = 100
 
-    const productkindGradentStep = 20;
+      const productkindGradentStep = 20
 
-    const productkindGradientSteps = [
-      ...Array.from({ length: 6 }, (_, i) => HUE_BASE + (i + 1) * productkindGradentStep).reverse(),
-      HUE_BASE,
-      ...Array.from({ length: 6 }, (_, i) => HUE_BASE - (i + 1) * productkindGradentStep),
-    ]
+      const productkindGradientSteps = [
+        ...Array.from(
+          { length: 6 },
+          (_, i) => HUE_BASE + (i + 1) * productkindGradentStep,
+        ).reverse(),
+        HUE_BASE,
+        ...Array.from({ length: 6 }, (_, i) => HUE_BASE - (i + 1) * productkindGradentStep),
+      ]
 
-    const productkindGradient = productkindGradientSteps.reduce((acc, hue) => {
-      return acc + createColorBox(hue, SATURATION_BASE, BASE_LIGHTNESS + 3 * LIGHTNESS_STEP);
-    }, '');
+      const productkindGradient = productkindGradientSteps.reduce((acc, hue) => {
+        return acc + createColorBox(hue, SATURATION_BASE, BASE_LIGHTNESS + 3 * LIGHTNESS_STEP)
+      }, '')
 
-    const productkindGradientHexes = productkindGradientSteps.map((hue) => {
-      const hex = convertColor(hue, SATURATION_BASE, BASE_LIGHTNESS + 3 * LIGHTNESS_STEP);
-      return hex;
-    })
+      const productkindGradientHexes = productkindGradientSteps.map((hue) => {
+        const hex = convertColor(hue, SATURATION_BASE, BASE_LIGHTNESS + 3 * LIGHTNESS_STEP)
+        return hex
+      })
 
-    const productkindGradientCss = `linear-gradient(120deg, ${productkindGradientHexes.join(',')})`;
+      const productkindGradientCss = `linear-gradient(120deg, ${productkindGradientHexes.join(',')})`
 
-    const littleParrotGradientSteps = [
-      [HUE_BASE + 180 - 40, SATURATION_BASE, BASE_LIGHTNESS + 2 * LIGHTNESS_STEP],
-      [HUE_BASE + 180 - 20, SATURATION_BASE, BASE_LIGHTNESS + 3 * LIGHTNESS_STEP],
-      [HUE_BASE + 180, SATURATION_BASE, 95],
-      [HUE_BASE + 180 + 20, SATURATION_BASE, BASE_LIGHTNESS + 4 * LIGHTNESS_STEP],
-      [HUE_BASE + 180 + 40, SATURATION_BASE, BASE_LIGHTNESS + 3 * LIGHTNESS_STEP],
-    ]
+      const littleParrotGradientSteps = [
+        [HUE_BASE + 180 - 40, SATURATION_BASE, BASE_LIGHTNESS + 2 * LIGHTNESS_STEP],
+        [HUE_BASE + 180 - 20, SATURATION_BASE, BASE_LIGHTNESS + 3 * LIGHTNESS_STEP],
+        [HUE_BASE + 180, SATURATION_BASE, 95],
+        [HUE_BASE + 180 + 20, SATURATION_BASE, BASE_LIGHTNESS + 4 * LIGHTNESS_STEP],
+        [HUE_BASE + 180 + 40, SATURATION_BASE, BASE_LIGHTNESS + 3 * LIGHTNESS_STEP],
+      ]
 
-    const littleParrotGradient = littleParrotGradientSteps.reduce((acc, [hue, saturation, lightness]) => {
-      return acc + createColorBox(hue, saturation, lightness);
-    }, '');
+      const littleParrotGradient = littleParrotGradientSteps.reduce(
+        (acc, [hue, saturation, lightness]) => {
+          return acc + createColorBox(hue, saturation, lightness)
+        },
+        '',
+      )
 
-    const littleParrotGradientHexes = littleParrotGradientSteps.map(([hue, saturation, lightness]) => {
-      const hex = convertColor(hue, saturation, lightness);
-      return hex;
-    })
+      const littleParrotGradientHexes = littleParrotGradientSteps.map(
+        ([hue, saturation, lightness]) => {
+          const hex = convertColor(hue, saturation, lightness)
+          return hex
+        },
+      )
 
-    const littleParrotGradientCss = `linear-gradient(120deg, ${littleParrotGradientHexes.join(',')})`;
+      const littleParrotGradientCss = `linear-gradient(120deg, ${littleParrotGradientHexes.join(',')})`
 
-    root.innerHTML = `
+      root.innerHTML = `
       <h2>Main Colors</h2>
       <h3>productkind</h3>
       <div class="main-colors">
@@ -207,12 +215,12 @@
       </div>
 
       <h2>All Colors</h2>
-    `;
+    `
 
-    hues.forEach((hue, index) => {
-      root.innerHTML += createColorHue(hue, SATURATION_BASE, index % 2 === 0);
-    });
-    root.innerHTML += createColorHue(HUE_BASE, SATURATION_GREY);
-  </script>
-</body>
+      hues.forEach((hue, index) => {
+        root.innerHTML += createColorHue(hue, SATURATION_BASE, index % 2 === 0)
+      })
+      root.innerHTML += createColorHue(HUE_BASE, SATURATION_GREY)
+    </script>
+  </body>
 </html>

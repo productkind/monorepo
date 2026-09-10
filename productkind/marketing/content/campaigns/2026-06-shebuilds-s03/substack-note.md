@@ -8,10 +8,7 @@ account: little-parrot
 
 Post from: https://substack.com/@kingamagyar
 
-Deliberate choices (don't "fix" these): @mentions are kept (Elena and Whitney are on
-Substack, so they tag and notify); no ref tag on the course link so it reads less
-promotional; 💜 heart instead of the usual 💛 so it doesn't look like a copy-paste of
-the other channels.
+Deliberate choices (don't "fix" these): @mentions are kept (Elena and Whitney are on Substack, so they tag and notify); no ref tag on the course link so it reads less promotional; 💜 heart instead of the usual 💛 so it doesn't look like a copy-paste of the other channels.
 
 ---
 

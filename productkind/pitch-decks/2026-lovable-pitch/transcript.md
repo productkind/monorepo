@@ -74,7 +74,6 @@ The **number one complaint** from our learners was running out of free Lovable c
 
 We're already building what your community needs. A partnership makes that work better for everyone.
 
-**Kinga Magyar & Tamas Kokeny**
-productkind — makers of Little Parrot
+**Kinga Magyar & Tamas Kokeny** productkind — makers of Little Parrot
 
 littleparrot.app

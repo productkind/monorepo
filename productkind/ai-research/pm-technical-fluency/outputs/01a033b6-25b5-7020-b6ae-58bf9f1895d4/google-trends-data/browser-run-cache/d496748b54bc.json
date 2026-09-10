@@ -5,9 +5,7 @@
   "source_term": "what happens when you type a url in the browser",
   "fallback_term": "",
   "comparison_group": "",
-  "terms": [
-    "what happens when you type a url in the browser"
-  ],
+  "terms": ["what happens when you type a url in the browser"],
   "term_type": "Search term",
   "geography": "US",
   "geo_code": "US",
@@ -20,9 +18,7 @@
   "data_status": "insufficient_no_series",
   "headers": [],
   "series": [],
-  "nonzero_points": [
-    0
-  ],
+  "nonzero_points": [0],
   "queries": [],
   "topics": [],
   "related_availability": {

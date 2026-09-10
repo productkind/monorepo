@@ -2,8 +2,7 @@
 
 - **Brand:** little-parrot (the carousel and the course it drives to are Little Parrot).
 - **Source material:** the approved `spec.md` and the 7-slide export in this folder. A before/after carousel: a bare prompt produces a generic "We're excited to announce..." post, adding context (what the feature does, why, the proof, when, who it's for) produces a concrete announcement people reply to, plus a reusable context checklist.
-- **Destination:** the course, first challenge free. Base link:
-  `https://littleparrot.app/550e8400-e29b-41d4-a716-446655440000/course-overview?utm_medium=social&utm_campaign=write-better&utm_content=post-2` (add `&utm_source=<platform>` per channel below).
+- **Destination:** the course, first challenge free. Base link: `https://littleparrot.app/550e8400-e29b-41d4-a716-446655440000/course-overview?utm_medium=social&utm_campaign=write-better&utm_content=post-2` (add `&utm_source=<platform>` per channel below).
 - **Posted from:** Instagram = Little Parrot Instagram (Collab post with Kinga's personal account); Threads = productkind profile (per the house rule, whichever brand the carousel is); LinkedIn = productkind page; TikTok = our single account; YouTube Shorts = our channel (carousel run as a slideshow video).
 - **Platforms:** TikTok, Instagram, Threads, LinkedIn, YouTube Shorts.
 
@@ -11,9 +10,7 @@
 
 ## TikTok
 
-How to write a product update with AI people actually read 📣
-The difference is context. Tell it what the feature does, why, the proof, when it's live, who it's for. Same prompt, real facts, and people reply instead of scrolling past.
-Follow for AI prompting tips for women building products.
+How to write a product update with AI people actually read 📣 The difference is context. Tell it what the feature does, why, the proof, when it's live, who it's for. Same prompt, real facts, and people reply instead of scrolling past. Follow for AI prompting tips for women building products.
 
 #womenwhobuild #womenintech #femalefounders #promptingtips
 
@@ -67,8 +64,8 @@ Same prompt, real facts, and people reply. Which of the six do you always forget
 
 **Title:** How to write a product update with AI people actually read
 
-**Description:**
-Most product updates written with AI open with "We're excited to announce...", because that's all you get when the AI only knows the feature name. Give it these six things instead:
+**Description:** Most product updates written with AI open with "We're excited to announce...", because that's all you get when the AI only knows the feature name. Give it these six things instead:
+
 1. What the feature does, in one line
 2. Who it's for
 3. The problem it solves

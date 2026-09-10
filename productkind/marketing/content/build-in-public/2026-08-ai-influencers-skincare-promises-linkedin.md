@@ -10,6 +10,7 @@ account: kinga
 **Angle:** Some AI influencers sell unproven outcomes the same way the cosmetics industry sells "botox in a jar". Both exploit an insecurity, and neither has the evidence to back the promise.
 
 **Open before posting:**
+
 - Which cream was it, and where did the anti-ageing evidence (sunscreen, retinoids) come from? The post asks the reader to check the evidence, so naming the source closes that loop: "The strongest evidence I could find, from [source], is..."
 - "the Little Parrot website and the tools behind it" is a placeholder for whatever Kinga actually builds with AI.
 

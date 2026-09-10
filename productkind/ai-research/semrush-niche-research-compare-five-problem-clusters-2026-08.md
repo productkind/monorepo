@@ -13,7 +13,7 @@ All data is in (~34 Semrush calls). Here is the full deliverable — everything 
 ## Cluster 1 — Client operations for solo consultants / freelancers
 
 | Keyword | US Vol | UK Vol | CPC (US) | Density | KD (US) | Intent |
-|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- |
 | client onboarding | 2,400 | 880 | $31.03 | 0.25 | 38 | C |
 | client onboarding software | 1,000 | 480 | $39.21 | 0.15 | 30 | T |
 | customer onboarding template | 720 | 90 | $10.05 | 0.12 | 31 | C |
@@ -50,6 +50,7 @@ All data is in (~34 Semrush calls). Here is the full deliverable — everything 
 Excluded / flagged: `client portal` head term (12,100 US) — SERP and related terms are dominated by login/navigation queries (SimplePractice, Canopy, etc.), so it's not counted. `onboarding software` (4,400, $50.60) and `best employee onboarding software` (590, $60.18) — enterprise/HR buyer, not client onboarding. `crm consulting services` / `crm implementation consultant` — hiring an implementation agency, company budget.
 
 ### Cluster stats
+
 1. Total relevant volume: ~19,500/mo US + ~5,000/mo UK (excl. the navigational `client portal` head term)
 2. Commercial/transactional volume: ~16,300/mo US — the highest commercial share of any cluster (~84%)
 3. Meaningful long-tails: ~22
@@ -66,7 +67,7 @@ SERP evidence: `crm for consultants` has Reddit at #1, plus a solo-consultant bl
 ## Cluster 2 — Client reporting automation
 
 | Keyword | US Vol | UK Vol | CPC (US) | Density | KD (US) | Intent |
-|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- |
 | automated client reporting | 480 | 90 | $24.44 | 0.08 | 22 | C |
 | client reporting software | 320 | 50 | $22.77 | 0.04 | 25 | T |
 | marketing reporting tools | 720 | 90 | $23.55 | 0.02 | 24 | T |
@@ -95,6 +96,7 @@ SERP evidence: `crm for consultants` has Reddit at #1, plus a solo-consultant bl
 Excluded / flagged: `agency analytics` (3,600) / `agencyanalytics` (1,900) / `dashthis` (1,000) — brand-navigational, not counted. Enterprise skew is low here — the buyers are small agencies and freelancers, i.e. individuals with a company card. `white label seo reporting tool` leans agency-SMB rather than solo.
 
 ### Cluster stats
+
 1. Total relevant volume: ~13,700/mo US + ~2,600/mo UK
 2. Commercial/transactional volume: ~13,500/mo US — ~98% of the cluster is commercial
 3. Meaningful long-tails: ~17
@@ -111,7 +113,7 @@ SERP evidence: `automated client reporting` has Reddit at #2 and small blogs (ro
 ## Cluster 3 — Customer feedback synthesis for product managers
 
 | Keyword | US Vol | UK Vol | CPC (US) | Density | KD (US) | Intent |
-|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- |
 | customer feedback analysis | 390 | 210 | $16.09 | 0.03 | 30 | C |
 | customer feedback analysis tool | 210 | 20 | $34.83 | 0.04 | 21 | T |
 | feedback analysis | 210 | 30 | $19.54 | 0.07 | 31 | C |
@@ -144,6 +146,7 @@ SERP evidence: `automated client reporting` has Reddit at #2 and small blogs (ro
 Excluded / flagged: `user interviews` (33,100) — it's the brand userinterviews.com (participant recruitment), not analysis. Enterprise flags: the SERP for `voice of customer analytics` is Qualtrics, Medallia, Salesforce, InMoment, Glassbox — enterprise CX-suite buyers, company budgets. Same for `voc tools` / `voice of the customer tools`. The individual-PM pocket of this cluster is: feedback-analysis how-tos, research repositories, and the AI-analysis long-tails.
 
 ### Cluster stats
+
 1. Total relevant volume: ~14,100/mo US + ~2,800/mo UK
 2. Commercial/transactional volume: ~8,900/mo US — but roughly half of that sits behind enterprise VoC terms
 3. Meaningful long-tails: ~18
@@ -160,7 +163,7 @@ SERP evidence: `customer feedback analysis tool` SERP mixes mid-size vendors wit
 ## Cluster 4 — Turning a vibe-coded app into a validated business
 
 | Keyword | US Vol | UK Vol | CPC (US) | Density | KD (US) | Intent |
-|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- |
 | validate saas idea | 20 | 20 | $3.45 | 0.22 | 0 | C |
 | validate app idea | 20 | 20 | $5.09 | 0.54 | 0 | C |
 | how to validate a business idea | 210 | 50 | $3.90 | 0.16 | 38 | I (DIY) |
@@ -204,6 +207,7 @@ SERP evidence: `customer feedback analysis tool` SERP mixes mid-size vendors wit
 Excluded / flagged: `saas pricing news` (6,600) — informational/news junk, not counted. No enterprise skew to speak of — this audience is individuals. The caveat is the opposite: intent is heavily informational, so commercial value per visit is low.
 
 ### Cluster stats
+
 1. Total relevant volume: ~11,200/mo US + ~1,700/mo UK
 2. Commercial/transactional volume: ~5,700/mo US — only ~50%, the lowest commercial share
 3. Meaningful long-tails: ~24 (deepest long-tail bench, but many are KD 0 micro-terms)
@@ -220,7 +224,7 @@ SERP evidence: `how to validate a business idea` has Reddit at #1, Medium at #6,
 ## Cluster 5 — SEO / organic acquisition for solo & micro-SaaS founders
 
 | Keyword | US Vol | UK Vol | CPC (US) | Density | KD (US) | Intent |
-|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- |
 | seo for saas | 1,600 | 590 | $14.10 | 0.05 | 27 | C |
 | saas seo | 2,900 | 880 | $17.23 | 0.12 | 33 | C |
 | b2b saas seo | 1,300 | 480 | $32.13 | 0.03 | 11 | C ⚠️ agency-hiring |
@@ -250,6 +254,7 @@ SERP evidence: `how to validate a business idea` has Reddit at #1, Medium at #6,
 Excluded / flagged: `learn seo` (12,100, KD 73) — too broad, not SaaS-specific; excluded from totals. Buyer-type flag: the highest-CPC terms (`seo for b2b saas` $38.59, `b2b saas seo` $32.13, `seo for saas companies` $22.62) are "company hiring an agency" intent — the `b2b saas seo` SERP is literally a list of SEO agencies plus a Reddit AMA from an agency owner. That's B2B budget, not an individual buying a digital product. The individual/founder pocket is: `diy seo`, `do it yourself seo`, `saas keyword research`, `technical seo for saas`, `saas seo strategy`, `saas seo course`, `programmatic seo for saas`.
 
 ### Cluster stats
+
 1. Total relevant volume: ~19,800/mo US + ~5,400/mo UK
 2. Commercial/transactional volume: ~12,000/mo US — but roughly half is agency-hiring intent
 3. Meaningful long-tails: ~16
@@ -268,7 +273,7 @@ SERP evidence: `b2b saas seo` (KD 11) has Reddit at #3 and small agency blogs (s
 Scored on: individual buyer intent + long-tail depth + commercial demand + achievable competition for a small website.
 
 | # | Cluster | Relevant vol (US+UK) | Commercial vol (US) | Median CPC | Median KD | Verdict |
-|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- |
 | 1 | Client operations (consultants/freelancers) | ~24,500 | ~16,300 | $14.60 | 25 | Best overall. Buyers are visibly individuals, SERPs already have Reddit #1 and solo bloggers ranking, and KD 14–16 entry points carry $19–31 CPCs. |
 | 2 | Client reporting automation | ~16,300 | ~13,500 | $13.80 | 25 | Nearly 100% commercial intent, two KD-7 gems, and a proven "alternative to expensive SaaS" angle (`agencyanalytics alternative`, KD 13). Small-agency buyers are individuals. |
 | 3 | SaaS SEO for founders | ~25,200 | ~12,000 | $12.60 | 22 | Biggest pool and lowest KD, but split in two: high-CPC half is companies hiring agencies; the individual half (`diy seo`, `saas seo course`) is smaller and lower-CPC. Great fit if the product teaches founders to DIY. |

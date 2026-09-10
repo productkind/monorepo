@@ -4,14 +4,17 @@ let projectUrl = ''
 
 function sendToTutor() {
   if (!tutorFrame.contentWindow || !projectUrl) return
-  tutorFrame.contentWindow.postMessage({
-    type: 'lovable-chat-context',
-    projectUrl,
-    messages: allMessages.map((msg) => ({
-      source: msg.role === 'user' ? 'user' : 'ai',
-      content: msg.text,
-    })),
-  }, '*')
+  tutorFrame.contentWindow.postMessage(
+    {
+      type: 'lovable-chat-context',
+      projectUrl,
+      messages: allMessages.map((msg) => ({
+        source: msg.role === 'user' ? 'user' : 'ai',
+        content: msg.text,
+      })),
+    },
+    '*',
+  )
 }
 
 chrome.runtime.onMessage.addListener((message) => {

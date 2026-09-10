@@ -22,7 +22,7 @@ The audience is therefore not primarily asking for “more AI”. They are askin
 ## Research coverage
 
 | Source category | Items inspected | Notes |
-| --- | ---: | --- |
+| --- | --: | --- |
 | Reddit | 56 | Unique threads in r/ProductManagement, with close reading of the most relevant discussions |
 | Slack | 50 | Women in Product messages/threads returned by a role-relevant AI search; membership-only |
 | Facebook | 61 | Unique posts in the Women In Product group; membership-only; names withheld |
@@ -116,7 +116,7 @@ This is why personal time savings often fail to become team or company throughpu
 PMs worry that polished artefacts and automated tickets create the appearance of product work while distancing the team from the customer problem.
 
 - “My team is focused on using AI to drive automation at the expense of understanding customers and their problems.” — [Reddit](https://www.reddit.com/r/ProductManagement/comments/1usc7ey/anyone_else_dealing_with_ai_disrupting_team/)
-- “tickets end up being incredibly verbose and contain little *actual* info I need to work it.” — [Reddit](https://www.reddit.com/r/ProductManagement/comments/1usc7ey/anyone_else_dealing_with_ai_disrupting_team/)
+- “tickets end up being incredibly verbose and contain little _actual_ info I need to work it.” — [Reddit](https://www.reddit.com/r/ProductManagement/comments/1usc7ey/anyone_else_dealing_with_ai_disrupting_team/)
 - “AI can definitely make a product smarter, but it can’t fix a problem we don’t understand properly.” — [LinkedIn search sample](https://www.linkedin.com/search/results/content/?keywords=product%20manager%20AI%20productivity)
 - “Customer problem definition is the main problem” — [TikTok comment](https://www.tiktok.com/@justinfineberg/video/7270980618878586155)
 - “it just underscores how truly imaginary and disconnected most user personas are from any real people.” — [Hacker News](https://news.ycombinator.com/item?id=40191728)

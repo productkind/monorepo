@@ -1,9 +1,8 @@
 # The Case For Consistency
 
-*Why success doesn't happen overnight*
+_Why success doesn't happen overnight_
 
-**Date:** September 14, 2025
-**Author:** Kinga Magyar
+**Date:** September 14, 2025 **Author:** Kinga Magyar
 
 ---
 

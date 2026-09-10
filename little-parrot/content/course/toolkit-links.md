@@ -5,7 +5,7 @@ Use these links when referencing toolkit items in course content.
 ## Build Your First App with Lovable (`lovable-intro-00`)
 
 | Toolkit Item | URL |
-|-------------|-----|
+| --- | --- |
 | First Prompt Template | `https://littleparrot.app/nest/toolkit/17e40eb9-e190-40ed-b3d3-44300f2e2b08` |
 | Structure Your Prompts with Markdown | `https://littleparrot.app/nest/toolkit/17e472a2-d2f4-4c99-8b1f-1a0b540df31a` |
 | Prompts for Common Features | `https://littleparrot.app/nest/toolkit/43475578-0f46-41a8-8375-0c8a153a1882` |
@@ -16,7 +16,7 @@ Use these links when referencing toolkit items in course content.
 ## Basics of Software for Vibe Coding (`vibe-coding-tech-00`)
 
 | Toolkit Item | URL |
-|-------------|-----|
+| --- | --- |
 | "Where Is the Problem?" Troubleshooting Guide | `https://littleparrot.app/nest/toolkit/10bfa9f3-7e39-4b67-aa66-8f9c95716a4f` |
 | Visual Component Guide | `https://littleparrot.app/nest/toolkit/bcc544b5-26aa-498a-bc46-ff75f76e3a19` |
 | Component Prompt Library | `https://littleparrot.app/nest/toolkit/954f1c91-6a56-4c4c-8c16-489f45915fb8` |
@@ -25,7 +25,7 @@ Use these links when referencing toolkit items in course content.
 ## Launch and Grow Your Lovable App (`lovable-publishing-00`)
 
 | Toolkit Item | URL |
-|-------------|-----|
+| --- | --- |
 | Meta Tags and Favicon Setup Guide | `https://littleparrot.app/nest/toolkit/0b1f2dca-14c3-4db6-a653-e139cf8222f4` |
 | Legal Pages Prompt Library | `https://littleparrot.app/nest/toolkit/6f1be631-8fdd-4353-96a1-2d4cdefdad1a` |
 | SEO and Discoverability Quick-Start Checklist | `https://littleparrot.app/nest/toolkit/aceb0958-b112-4abc-8710-5d49e8b60c8b` |
@@ -35,7 +35,7 @@ Use these links when referencing toolkit items in course content.
 ## Build Your Business: From Vibe Coded Product to Paying Customers (`vibe-coding-start-your-business-00`)
 
 | Toolkit Item | URL |
-|-------------|-----|
+| --- | --- |
 | Value Proposition Formula | `https://littleparrot.app/nest/toolkit/800d1e61-6372-41be-9892-f41b99be7acc` |
 | Domain and Email Setup Guide | `https://littleparrot.app/nest/toolkit/1e786fc7-42d8-4713-a094-f0de2315e168` |
 | PostHog Analytics Setup Guide | `https://littleparrot.app/nest/toolkit/db3ed06f-0594-41b3-8f9f-82051865627c` |
@@ -47,7 +47,7 @@ Use these links when referencing toolkit items in course content.
 ## Save Lovable Credits: Edit Your App Like a Developer (`vibe-coding-github-00`)
 
 | Toolkit Item | URL |
-|-------------|-----|
+| --- | --- |
 | Connect Your App to GitHub | `https://littleparrot.app/nest/toolkit/5fcda78e-1847-47fc-bff8-b02beececa14` |
 | Builder's Workspace Setup | `https://littleparrot.app/nest/toolkit/928f6d38-4da5-44a5-b856-4f0479c24beb` |
 | Run Your App on Your Computer | `https://littleparrot.app/nest/toolkit/6cdb24bd-b8c1-4d3b-8154-bbfd703da608` |
@@ -59,7 +59,7 @@ Use these links when referencing toolkit items in course content.
 ## Write Better with AI: Prompting Foundations for Product Managers (`write-better-with-ai-00`)
 
 | Toolkit Item | URL |
-|-------------|-----|
+| --- | --- |
 | Tone and Style Word Bank | `https://littleparrot.app/nest/toolkit/a7ce6e37-719e-45e3-98a1-d054a35ec827` |
 | What to Check in an AI Draft Before You Send It | `https://littleparrot.app/nest/toolkit/c96761e7-2166-4f46-8216-799d0b7f6f67` |
 | Build a Prompt in Three Parts | `https://littleparrot.app/nest/toolkit/ecaaeb78-0bc1-402d-8d7a-c214997e91c8` |
@@ -70,7 +70,7 @@ Use these links when referencing toolkit items in course content.
 ## Build a Valuable Product: How to Break Down Your Idea for Vibe Coding (`vibe-coding-product-management-00`)
 
 | Toolkit Item | URL |
-|-------------|-----|
+| --- | --- |
 | Define the Problem You're Solving | `https://littleparrot.app/nest/toolkit/601eef13-40b0-45bf-bb1b-cda233787916` |
 | Get to Know Your Target User | `https://littleparrot.app/nest/toolkit/6ca8bf34-03ce-4960-9e84-0b457e1672de` |
 | Sketch Your User's Journey | `https://littleparrot.app/nest/toolkit/a4b7037f-8402-4269-8a3f-266584b7d5c8` |
@@ -82,7 +82,7 @@ Use these links when referencing toolkit items in course content.
 ## Hand off the mental load: use AI to turn a brain dump into a list (`ai-your-life-admin-00`)
 
 | Toolkit Item | URL |
-|-------------|-----|
+| --- | --- |
 | Build the Brain Dump Shortcut | `https://littleparrot.app/nest/toolkit/6cb7e7a7-af39-4fe7-b985-6a3fc5f6bbd5` |
 | Send Your List to Your Partner | `https://littleparrot.app/nest/toolkit/69103a0a-1e68-4db2-ad24-4ff619f10d52` |
 | Troubleshooting Your Shortcuts | `https://littleparrot.app/nest/toolkit/f969c32b-5325-49a5-91c5-454f5641c1f9` |

@@ -18,9 +18,10 @@ The winnable niche, confirmed across two large Semrush studies (~285 keywords, 4
 **On €5,000/month:** the arithmetic supports a path, but not quickly and not from SEO alone. Total qualified, deduplicated 4-country demand is ~9,500–11,000 searches/month across all winnable clusters. At a realistic mid-case (15% click share, 2% visitor→customer conversion) that is ~30 new customers/month — €1,470–€2,970 in first-value terms, or ~€720 in new MRR. Reaching €5,000/month needs 9–14 months of compounding subscription MRR after rankings are achieved (rankings themselves take 4–9 months at KD 13–38), supplemented by non-search channels. It does **not** require ranking for the KD-77 `vibe coding` head term. SEO should be treated as one acquisition channel alongside community, partnerships and the existing referral/social loops — not the sole engine.
 
 **Distinctions the conclusion rests on:**
-- *Useful course* ≠ *course with search demand*: Fix Bugs with Confidence is clearly useful, but every debugging query phrasing returns near-zero volume in four countries.
-- *Search demand* ≠ *SEO revenue*: Write Better With AI sits under head terms (`ai for product managers`, 1,900/mo) whose SERPs are career-change/certification intent (Coursera, Pragmatic Institute), not writing-help intent.
-- *Cluster size* ≠ *material revenue*: only the tool-choice and course-intent clusters are large and close enough to purchase to move €5k/month meaningfully.
+
+- _Useful course_ ≠ _course with search demand_: Fix Bugs with Confidence is clearly useful, but every debugging query phrasing returns near-zero volume in four countries.
+- _Search demand_ ≠ _SEO revenue_: Write Better With AI sits under head terms (`ai for product managers`, 1,900/mo) whose SERPs are career-change/certification intent (Coursera, Pragmatic Institute), not writing-help intent.
+- _Cluster size_ ≠ _material revenue_: only the tool-choice and course-intent clusters are large and close enough to purchase to move €5k/month meaningfully.
 
 ---
 
@@ -29,7 +30,7 @@ The winnable niche, confirmed across two large Semrush studies (~285 keywords, 4
 Crawled 2026-08-22. All 9 course overview pages are live, indexable, prerendered (SSR), with canonical URLs, unique titles, meta descriptions, and single H1s. **One defect found:** the prerendered HTML contains only `Organization` JSON-LD — the `Course` structured data is injected client-side after the Supabase fetch, so crawlers that don't execute JavaScript never see it. Fix: bake Course schema into the prerendered output (or render it from the prerender cache).
 
 | # | Course | URL | Title tag | H1 | Meta desc | Canonical | Indexable | JSON-LD (prerendered) |
-|---|---|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | Hand Off the Mental Load | /55dfd25b-b9a5-4f04-860d-ef5c1d1e20b9/course-overview | ✓ | ✓ (includes "Free until 30 August" badge text — pollutes H1) | ✓ | ✓ | ✓ | Organization only ⚠ |
 | 2 | Save Lovable Credits | /7171137b-9461-425f-8737-ad3400d56fd8/course-overview | ✓ | ✓ | ✓ | ✓ | ✓ | Organization only ⚠ |
 | 3 | Build Your Business | /b7455f5a-166c-4614-a4ca-be83369ff7f1/course-overview | ✓ | ✓ | ✓ | ✓ | ✓ | Organization only ⚠ |
@@ -45,7 +46,7 @@ Catalogue vs. expected list: all 8 expected courses present and accessible. **On
 Challenge/module inventory (from the database):
 
 | Course | Challenges |
-|---|---|
+| --- | --- |
 | Hand Off the Mental Load | The Brain Dump · Share the Load · The Baby Log · Make It Effortless |
 | Save Lovable Credits | Why Edit on Your Own Computer · Set Up Your Workspace · Run Your App on Your Computer · Change Your Website Copy · Change an Icon · Make a Bigger Change with Copilot · Your Workflow |
 | Build Your Business | Craft Your Value Proposition · Choose Your Domain · Build Your Audience Before You Launch · Set Up Analytics Before Your First Visitors Arrive · Get Your First Visitors · Listen to Your First Users · Decide What to Charge · Build a Sustainable Business |
@@ -65,7 +66,7 @@ Pricing (live, /pricing): **€24/month subscription** (loaded dynamically from 
 Semrush, August 2026:
 
 | Database | Ranking keywords | Est. organic traffic | Rankings |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | US | 3 | ~21/mo | `little parrot` #2 (260/mo) · `parrot software` #36 · `pinparrot` #40 (both irrelevant spillover) |
 | UK | 1 | ~14/mo | `little parrot` **#1** (110/mo) |
 
@@ -85,7 +86,7 @@ Interpretation: the site is a blank slate with a clean technical base. There is 
 Qualified = audience fit A, deduplicated within Semrush cluster groups. Volumes = searches/month, 4-country (US+UK+CA+AU). KD/CPC from US database.
 
 | Cluster | Anchor keywords | Raw 4-country vol | Dedup. qualified vol | KD range | CPC | Proximity | Verdict |
-|---|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | **A. Lovable tool choice** | lovable vs replit (720 US; `replit vs lovable` 1,300 same cluster), lovable alternatives 590, lovable vs base44 480, lovable vs bolt 390, lovable competitors 320, lovable vs v0 140, lovable review 110, lovable vs bubble 70 | ~6,000 | **~4,000** | 13–27 | $4.36–7.42 | 2 | Strongest volume opportunity; TOFU/MOFU |
 | **B. Course-intent modifiers** | vibe coding course 480, vibe coding tutorial 260, vibe coding bootcamp 110, vibe coding training 90, vibe coding for beginners 90, lovable certification 70, lovable tutorial 110, lovable workshop 40, lovable training 30, lovable course 20 | ~2,300 | **~1,700** | 0–38 | $1.90–14.89 | 5 | Highest purchase proximity; courses rank on this SERP |
 | **C. Credits, cost & code ownership** | lovable credits 260 + question cluster ~350 US (`how do lovable credits work` 90, `do lovable credits roll over` 30…), can i export lovable 260, lovable import from github 260, lovable github 140, export lovable code 20, connect lovable to github 20, lovable credit usage 20, vibe coding technical debt 40 | ~2,200 | **~1,400** | 0–19 (lovable github 46) | $0–12.18 | 3–4 | Best course fit in catalogue (Save Lovable Credits) |
@@ -105,7 +106,7 @@ Qualified = audience fit A, deduplicated within Semrush cluster groups. Volumes 
 ## 5. Rejected and misleading keyword clusters
 
 | Keyword / cluster | Raw volume | Why rejected |
-|---|---|---|
+| --- | --- | --- |
 | `vibe coding` (head) | 90,500 US | KD 77, developer-skewed mixed SERP. Brand/authority play for year 2+, not a target now. Fit B. |
 | `lovable login` / `lovable signup` | 880+ US | Navigational — users signing into Lovable itself. Fit C. |
 | `lovable` / `lovable ai` / `loveable ai` spillover | 110,000 / 40,500 / 27,100 | Brand-navigational + English-word spillover (`loveable`, `lovely ai`). Excluded. |
@@ -131,7 +132,7 @@ Live pricing used: **€24/mo subscription**, **€950 lifetime**. Modelled firs
 Funnel maths (per month, at steady rankings): `qualified volume × click share × conversion = customers`.
 
 | Scenario | Click share | Conversion | Monthly customers | Revenue @ €49 | @ €79 | @ €99 | @ €149 |
-|---|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | Conservative | 5% | 1% | ~5 | €245 | €395 | €495 | €745 |
 | Base | 15% | 2% | ~30 | €1,470 | €2,370 | €2,970 | €4,470 |
 | Strong | 30% | 3% | ~90 | €4,410 | €7,110 | €8,910 | €13,410 |
@@ -151,7 +152,7 @@ Funnel maths (per month, at steady rankings): `qualified volume × click share �
 Selection criteria: KD 0–25, audience fit A, purchase proximity ≥3, weak/technical SERP, direct course link. (No existing rankings exist to improve — §3.)
 
 | # | Article | Primary keyword (US vol, KD) | Dedup. cluster vol (4-country) | Proximity | Class | Linked course |
-|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- |
 | 1 | Lovable credits explained: how they work, and how to stop burning through them | lovable credits (260, KD 19) | ~1,400 (incl. question cluster) | 4 | BOFU | Save Lovable Credits |
 | 2 | Can you export your Lovable code? Ownership, GitHub and backups for non-technical founders | can i export lovable (260, KD 0–19) | ~700 (shares cluster C) | 3 | MOFU | Save Lovable Credits |
 | 3 | Vibe coding security, in plain English: a checklist for your first real users | vibe coding security (140, KD 23) | ~350 | 4 | BOFU | Fix Bugs with Confidence (security challenge) — until a dedicated course exists |
@@ -165,7 +166,7 @@ Selection criteria: KD 0–25, audience fit A, purchase proximity ≥3, weak/tec
 **Days 31–90 (next 10, in publication order):**
 
 | # | Article | Primary keyword (US vol, KD) | Class | Links to |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | 6 | How to connect Supabase to Lovable (and when you actually need to) | how to connect supabase to lovable (140, KD 0) | MOFU | Courses 6, 7 |
 | 7 | How Lovable hosting works: where your app lives and what it costs | lovable hosting (170, KD 28) | MOFU | Course 7 |
 | 8 | Lovable certification: what exists, what's worth it, and what actually proves skill | lovable certification (70, KD 20) | BOFU | Course 6 + certificates feature |
@@ -186,30 +187,35 @@ Selection criteria: KD 0–25, audience fit A, purchase proximity ≥3, weak/tec
 ## 9. Detailed article briefs (top 5)
 
 ### Article 1 — Lovable credits explained
+
 - **Reader:** woman mid-build in Lovable, watching credits burn, no dev background. **Situation:** task/failure-aware ("why did my credits run out").
 - **Primary:** `lovable credits` (US 260, UK 70, CA 30, AU 20; KD 19; CPC $5.71). **Secondary:** `how do lovable credits work` (90), `do lovable credits roll over` (30), `when do lovable daily credits reset` (30), `does lovable chat mode use credits` (20), `lovable credit usage` (20).
 - **Dedup. cluster:** ~1,400/mo 4-country. **Proximity 4** (active cost pain on a paid tool). **SERP weakness:** #1 is Lovable's own docs; then Reddit, a dev.to post and a Medium "stop burning credits" post — nothing structured, nothing for non-developers.
 - **Format:** explainer + FAQ block (FAQPage schema) + cost-saving checklist. **Slug:** `/guides/lovable-credits`. **Course CTA:** "Save Lovable Credits: Edit Your App Like a Developer — first challenge free." **Internal links:** to article 2 (export/GitHub), course 2 overview, from course 2 overview back. **Downloadable:** one-page credit-saving checklist (yes). **Why LP wins:** the only resource written for non-technical builders, with a course behind it. **Updates:** quarterly — Lovable changes credit mechanics often (medium-high volatility).
 
 ### Article 2 — Can you export your Lovable code?
+
 - **Reader:** founder who built on Lovable and is asking "do I actually own this?" **Situation:** outcome/ownership anxiety before scaling or hiring help.
 - **Primary:** `can i export lovable` (US 260, KD ~0). **Secondary:** `lovable import from github` (260), `lovable github` (140, KD 46 — mention, don't target), `connect lovable to github` (20), `export lovable code` (20), `how to backup a supabase project` (210, fit B — cover briefly).
 - **Dedup. cluster:** ~700/mo. **Proximity 3.** **SERP weakness:** docs + dev.to + Reddit; no founder-perspective ownership guide.
 - **Format:** Q&A explainer with a decision tree (stay / sync to GitHub / export). **Slug:** `/guides/export-lovable-code`. **CTA:** course 2 (the GitHub/local-editing workflow is exactly its content). **Links:** article 1, cluster G articles. **Downloadable:** no. **Updates:** twice yearly.
 
 ### Article 3 — Vibe coding security in plain English
+
 - **Reader:** founder about to give real users access to her app; saw a scary headline about vibe-coded apps leaking data.
 - **Primary:** `vibe coding security` (US 140, UK 40, CA 30, AU 20; KD 23; CPC $10.49). **Secondary:** `vibe coding security risks` (140), `lovable security` (~200 across countries), `is lovable secure` (~100), `lovable data privacy` (50), `row level security explained` (30, fit B).
 - **Dedup. cluster:** ~350/mo. **Proximity 4** (customer data = urgent). **SERP weakness:** quality 4 — every top-10 result (Checkmarx, Wiz, Invicti, CSA) is written for security professionals; the Reddit #1 is a alarmist thread. Nothing answers "is MY app safe, and what do I check today?"
 - **Format:** plain-English explainer + 10-point checklist (downloadable, FAQPage schema). **Slug:** `/guides/vibe-coding-security`. **CTA:** Fix Bugs with Confidence (contains the security-warnings challenge) — flag: a dedicated security course is the clearest catalogue gap (§12). **Links:** articles 6, 7. **Updates:** twice yearly.
 
 ### Article 4 — Lovable vs Replit vs Bolt
+
 - **Reader:** professional woman choosing her first AI builder; comparison-shopping before committing.
 - **Primary:** `lovable vs replit` (US 720, KD 27). **Secondary:** `replit vs lovable` (1,300, same cluster), `lovable vs bolt` (390, KD 26), `bolt.new vs lovable` (480), `lovable alternatives` (590, KD 22), `lovable vs base44` (480, KD 15), `lovable competitors` (320), `lovable vs v0` (140), `lovable vs bubble` (70, KD 13), `lovable vs cursor` (480, fit B-leaning — cover in a "if you can code" aside).
 - **Dedup. cluster:** ~4,000/mo 4-country. **Proximity 2** (tool choice precedes purchase by weeks). **SERP weakness:** vendor listicles, Reddit, Medium; zero learner-perspective comparisons.
 - **Format:** honest comparison table + "who each tool is for" + verdict. **Slug:** `/guides/lovable-vs-replit-vs-bolt`. **CTA:** Build Your First App With Lovable. **Links:** article 12 (course chooser), course 6. **Downloadable:** no. **Updates:** quarterly (tools change fast — high volatility). **Note:** one page covering all comparison variants — do NOT split per-vs-page, they share the cluster.
 
 ### Article 5 — The mental load checklist (retarget existing)
+
 - **Action:** retarget `/guides/mental-load-list` to `mental load checklist` (US 170, UK 20, CA 20, AU 30; **KD 6**) rather than publishing a new URL — same intent, existing page equity.
 - **Secondary:** `mental load` (2,400 — mention in intro/H2, not target), `invisible labor` (1,300 — already has its own article; interlink). **Proximity 3.** **SERP weakness:** KD 6; top results are blogs, a Reddit thread, PDFs and an Instagram post — a definitive, downloadable checklist wins.
 - **Format:** interactive/downloadable checklist + FAQ. **CTA:** Hand Off the Mental Load course. **Links:** `/guides/working-mums` hub, `brain-dump-template`, `invisible-labor`. **Updates:** yearly.
@@ -221,6 +227,7 @@ Selection criteria: KD 0–25, audience fit A, purchase proximity ≥3, weak/tec
 **Verdict: one site, separate topical hubs — do not split brands or domains.** The three content areas (vibe-coding courses, AI-writing/PM content, working-mums guides) share one audience identity (professional women using AI practically) but not one search identity. That's fine: topical authority is built per-hub via internal linking, not domain-wide. A split would halve a young domain's already-small authority. The working-mums cluster is not "unrelated traffic" — it is the same person in a different life context, and the mums course is the platform's clearest product-market proof.
 
 **Architecture:**
+
 - Create `/guides/vibe-coding` (hub for articles 1–4, 6–12) alongside the existing `/guides/working-mums` hub. The `/guides` index becomes a two-hub directory.
 - Bidirectional links: every course overview → its cluster articles ("Guides: How Lovable hosting works…"); every article → exactly one primary course CTA + hub link + 1–2 siblings.
 - Add `BreadcrumbList` schema on guides (Home → Guides → Hub → Article) and visible breadcrumbs.
@@ -234,7 +241,7 @@ Selection criteria: KD 0–25, audience fit A, purchase proximity ≥3, weak/tec
 ## 11. Course positioning changes
 
 | Course | Change |
-|---|---|
+| --- | --- |
 | Save Lovable Credits | **None — model course.** Title already matches the searched problem. Add "credits" FAQ to its overview page targeting the question cluster (FAQPage schema). |
 | Build Your First App With Lovable | Add "tutorial" language to meta description (`lovable tutorial`, `vibe coding tutorial` cluster). Keep title. |
 | Launch And Grow | Reposition copy toward searched phrasing: "hosting", "custom domain", "launch checklist" (current copy says "publish to production" — a phrasing with zero search demand). Title → "Launch and Host Your Lovable App: Domain, Legal, SEO and Growth". |
@@ -270,7 +277,7 @@ Selection criteria: KD 0–25, audience fit A, purchase proximity ≥3, weak/tec
 Volumes = searches/month. KD/CPC/Comp from US database. `—` = no data in Semrush.
 
 | Keyword | US | UK | CA | AU | KD | CPC | Comp |
-|---|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | ai prompts for product managers | 40 | 20 | 10 | 10 | 8 | $6.00 | 0.34 |
 | chatgpt for product managers | 50 | 10 | 10 | 10 | 29 | $0 | 0.01 |
 | write better with ai | 20 | 10 | — | 20 | 0 | $1.54 | 0.59 |
@@ -325,20 +332,20 @@ The 242-keyword × 6-country dataset (clusters: market discovery, Lovable-specif
 
 Semrush clusters overlapping phrasings; raw sums overstate demand. Qualified = fit A only, deduplicated.
 
-| Cluster | Raw 4-country | Deduplicated | Qualified (A-fit) |
-|---|---|---|---|
-| A Tool choice | ~6,000 | ~4,200 | ~4,000 |
-| B Course intent | ~2,300 | ~1,800 | ~1,700 |
-| C Credits/ownership | ~2,200 | ~1,500 | ~1,400 |
-| D First build | ~1,300 | ~1,000 | ~900 |
-| E Supabase/backend | ~640 | ~520 | ~500 |
-| F Security | ~600 | ~370 | ~350 |
-| G Hosting/launch | ~600 | ~460 | ~450 |
-| H Payments | ~130 | ~100 | ~90 |
-| I Validation/customers | ~2,200 | ~1,500 | ~1,100 (50% intent haircut) |
-| J Mums/mental load | ~4,700 | ~2,900 | ~500 |
-| K AI writing PM | ~760 | ~400 | ~350 |
-| **Total** | **~21,700** | **~14,800** | **~10,300** |
+| Cluster                | Raw 4-country | Deduplicated | Qualified (A-fit)           |
+| ---------------------- | ------------- | ------------ | --------------------------- |
+| A Tool choice          | ~6,000        | ~4,200       | ~4,000                      |
+| B Course intent        | ~2,300        | ~1,800       | ~1,700                      |
+| C Credits/ownership    | ~2,200        | ~1,500       | ~1,400                      |
+| D First build          | ~1,300        | ~1,000       | ~900                        |
+| E Supabase/backend     | ~640          | ~520         | ~500                        |
+| F Security             | ~600          | ~370         | ~350                        |
+| G Hosting/launch       | ~600          | ~460         | ~450                        |
+| H Payments             | ~130          | ~100         | ~90                         |
+| I Validation/customers | ~2,200        | ~1,500       | ~1,100 (50% intent haircut) |
+| J Mums/mental load     | ~4,700        | ~2,900       | ~500                        |
+| K AI writing PM        | ~760          | ~400         | ~350                        |
+| **Total**              | **~21,700**   | **~14,800**  | **~10,300**                 |
 
 Excluded from all totals: `vibe coding` head (fit B, KD 77), `lovable login` (navigational), `lovable pricing` (existing-user), `saas security checklist` (IT-buyer), `brain dump`/`mental load` heads (definitional), identity modifiers (zero volume), all "production ready"/"maintenance"/"testing" phrasings (zero volume).
 

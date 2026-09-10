@@ -1,7 +1,7 @@
+import type { Size } from '../narration/safe-zone'
+
 import { useEffect, useState } from 'react'
 import { cancelRender, continueRender, delayRender } from 'remotion'
-
-import type { Size } from '../narration/safe-zone'
 
 /**
  * Measured sizes, kept for the life of the process. A gif reused across sections is measured once,
@@ -40,7 +40,13 @@ const measureVideo = async ({ src }: { src: string }): Promise<Size> =>
  * Measuring happens inside `delayRender`, so Remotion holds the frame until the answer is in.
  * Nothing is ever captured mid-measurement, in Studio or in a render.
  */
-export const useMediaSize = ({ src, isVideo }: { src: string; isVideo: boolean }): Size | undefined => {
+export const useMediaSize = ({
+  src,
+  isVideo,
+}: {
+  src: string
+  isVideo: boolean
+}): Size | undefined => {
   const alreadyMeasured = MEASURED.get(src)
   const [size, setSize] = useState<Size | undefined>(alreadyMeasured)
   const [handle] = useState<number | undefined>(() =>

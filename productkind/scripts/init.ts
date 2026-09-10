@@ -1,5 +1,5 @@
-import { $, path, fs, os } from 'zx'
 import { fileURLToPath } from 'node:url'
+import { $, fs, os, path } from 'zx'
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url))
 const repoRoot = path.resolve(scriptDir, '../..')

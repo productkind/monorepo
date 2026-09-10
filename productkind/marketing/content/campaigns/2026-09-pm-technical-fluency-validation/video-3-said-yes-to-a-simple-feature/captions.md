@@ -19,8 +19,7 @@ TikTok video posts have no separate title field, so the caption's first line is 
 
 **Caption:**
 
-A stakeholder asked for something simple. Just sync it with the CRM. You said yes.
-Two weeks in, engineering tells you the integration doesn't have that field, and it's the vendor's system.
+A stakeholder asked for something simple. Just sync it with the CRM. You said yes. Two weeks in, engineering tells you the integration doesn't have that field, and it's the vendor's system.
 
 We're building a learning path for product managers who want to know how big a "simple" request really is before they promise a date. Sign up to the waitlist through the link in the comment.
 

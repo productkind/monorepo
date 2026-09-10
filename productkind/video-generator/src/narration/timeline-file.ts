@@ -1,8 +1,8 @@
-import { staticFile } from 'remotion'
-
 import type { VideoDefinition } from './definition'
 import { timelineHash } from './definition'
 import type { Timeline } from './timeline'
+
+import { staticFile } from 'remotion'
 
 /**
  * `calculateMetadata` runs in a browser, in Studio and while rendering alike, so it cannot build

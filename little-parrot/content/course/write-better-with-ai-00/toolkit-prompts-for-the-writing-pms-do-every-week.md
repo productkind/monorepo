@@ -1,7 +1,8 @@
 ---
-challenge: "3 - Craft impactful LinkedIn posts that sound like you"
-type: "Prompt library"
+challenge: '3 - Craft impactful LinkedIn posts that sound like you'
+type: 'Prompt library'
 ---
+
 ## Prompts for the Writing PMs Do Every Week
 
 A collection of ready-made prompts for the recurring writing jobs in a product manager's week, grouped by the time you'd reach for them. Each one is already filled in with tone, style, and context, so you swap the details in brackets and paste the prompt into your AI chat assistant (ChatGPT, Claude.ai, or similar).

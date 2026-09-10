@@ -24,7 +24,7 @@ Non-technical women will follow these steps literally. If a button label is wron
 
 3. **For each task, capture and confirm:**
    - **Prerequisites**: account needed, sign-up cost, plan tier required, anything that must exist first (e.g. "a GitHub account", "a published app"), and whether the learner can do it for free.
-   - **Exact UI labels**: the real names of buttons, menus, settings, and screens, quoted as the product shows them (e.g. *Settings → GitHub → Connect*). Note where the label differs from what a beginner would guess.
+   - **Exact UI labels**: the real names of buttons, menus, settings, and screens, quoted as the product shows them (e.g. _Settings → GitHub → Connect_). Note where the label differs from what a beginner would guess.
    - **The current step sequence**: the actual ordered clicks/actions to complete the task today, end to end. If a step has a companion action that's easy to miss (a confirmation, a required field, a separate enable toggle), record it.
    - **Cost / credits impact**: if the action consumes credits, costs money, or has a free alternative, say so plainly. This often decides a course's whole angle.
    - **Gotchas**: common errors, version differences, platform differences (Mac vs Windows), or recent changes that would trip up a beginner.
@@ -47,29 +47,36 @@ The file structure:
 
 ```markdown
 # Tool facts: <course-name>
+
 _Checked <YYYY-MM-DD>. Verify again if generating more than ~2 weeks later._
 
 ## Premise check
+
 <The course's core premise, and whether current docs support it. "Holds" or "At risk: <why> → suggested reframe". Omit if the course teaches no single load-bearing premise.>
 
 ## <Tool name>: <official docs URL>
+
 **Prerequisites:** <account / cost / plan tier / what must exist first>
 
 ### Task: <the thing the course teaches, e.g. "Connect the project to GitHub">
-- **Steps (as of <date>):** 1. <exact action with quoted UI label> 2. … 
-- **Exact labels:** *<Button/Menu/Setting>* (not "<what a beginner might call it>")
+
+- **Steps (as of <date>):** 1. <exact action with quoted UI label> 2. …
+- **Exact labels:** _<Button/Menu/Setting>_ (not "<what a beginner might call it>")
 - **Cost/credits:** <free / consumes credits / paid tier required>
 - **Gotchas:** <common error, companion step easy to miss, platform difference>
 - **Source:** <URL> (checked <date>)
 
 ### Task: <next task>
+
 …
 
 ## Could not confirm
+
 - <claim or step>: <what you looked for, why it's unconfirmed, what the writer should do (ask the user / test on a real project / leave out)>
 ```
 
 Rules for the sheet:
+
 - Quote UI labels exactly as the product shows them. A paraphrased label is a defect.
 - Every task block carries a source URL and a checked-date. No source, no fact.
 - British English in your prose. Never use em dashes (—).

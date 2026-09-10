@@ -6,28 +6,13 @@ account: little-parrot
 
 # Post 2: What you don't need to start earning
 
-**Pillar:** the calm view (permission content).
-**Research trace:** the audience's native arc starts with permission ("I did
-not wait for permission or a co-founder or a computer science degree");
-premature setup costs feed the documented cost anxiety, so the $20-30
-budget rule is trust-building; deferring company registration is honest,
-unglamorous advice nobody else leads with. Draws on the course's opening
-"you don't need" list and the Accountant Call Preparation toolkit item.
+**Pillar:** the calm view (permission content). **Research trace:** the audience's native arc starts with permission ("I did not wait for permission or a co-founder or a computer science degree"); premature setup costs feed the documented cost anxiety, so the $20-30 budget rule is trust-building; deferring company registration is honest, unglamorous advice nobody else leads with. Draws on the course's opening "you don't need" list and the Accountant Call Preparation toolkit item.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Declutter style: items
-crossed off a list one per slide, calm colours, the one kept item glowing on
-its own slide.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Declutter style: items crossed off a list one per slide, calm colours, the one kept item glowing on its own slide.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -39,11 +24,7 @@ its own slide.
 | 6 | A small receipt: domain + email, under $25 | "The budget rule until you have traction: $20 to 30 total. A domain and a professional email (hello@yourdomain.com), and that's the spending done. Dalmie's entire setup: under $25." |
 | 7 (CTA) | Brand card | "One prepared hour with an accountant beats a week of googling; the question list is in Build Your Business: From Vibe Coded Product to Paying Customers, on LittleParrot.app. First challenge free 🟪 Save this before you spend anything 🔖" |
 
-**Alt text (for the post):** A permission-list carousel about starting to
-earn from a self-built product: no registered company, investors,
-trademark, or perfect product needed yet; what's needed is users getting
-value, a $20-30 budget for domain and email, and an accountant conversation
-once revenue arrives.
+**Alt text (for the post):** A permission-list carousel about starting to earn from a self-built product: no registered company, investors, trademark, or perfect product needed yet; what's needed is users getting value, a $20-30 budget for domain and email, and an accountant conversation once revenue arrives.
 
 ## Caption (exact)
 
@@ -57,7 +38,4 @@ The course is on LittleParrot.app, and the first challenge is free.
 
 Save this before you spend anything. 🔖
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #womeninbusiness #shebuilds #womenintech #buildinpublic #femalefounder #solopreneur #smallbusinesstips #startupjourney
+. . . #vibecoding #buildwithai #womenwhobuild #womeninbusiness #shebuilds #womenintech #buildinpublic #femalefounder #solopreneur #smallbusinesstips #startupjourney

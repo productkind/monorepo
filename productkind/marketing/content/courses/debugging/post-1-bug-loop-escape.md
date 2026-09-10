@@ -6,27 +6,13 @@ account: little-parrot
 
 # Post 1: Escaping the fix-and-break loop
 
-**Pillar:** the messy middle.
-**Research trace:** the doom loop is the No. 1 pain in our own feedback and
-on r/lovable, named in the audience's own words ("fix and break cycle");
-every escaped loop is credits saved, the honest ROI frame; the
-stop-prompting rule turns panic into a plan, which is confidence-by-design.
-Repackages the Bug Loop Escape Strategy Guide toolkit item.
+**Pillar:** the messy middle. **Research trace:** the doom loop is the No. 1 pain in our own feedback and on r/lovable, named in the audience's own words ("fix and break cycle"); every escaped loop is credits saved, the honest ROI frame; the stop-prompting rule turns panic into a plan, which is confidence-by-design. Repackages the Bug Loop Escape Strategy Guide toolkit item.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Escape-route style: a
-loop motif on the cover that opens into a path across the slides, one
-strategy per slide, prompts in monospace, strategy names big.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Escape-route style: a loop motif on the cover that opens into a path across the slides, one strategy per slide, prompts in monospace, strategy names big.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -38,10 +24,7 @@ strategy per slide, prompts in monospace, strategy names big.
 | 6 | A fresh blank page | "REWRITE, when the feature is so patched that every change creates a new bug. Revert to your last bookmark and describe the simplest version of the feature from scratch, using everything you've learned. Rebuilding with Lovable is fast." |
 | 7 (CTA) | Brand card, the loop now a straight line | "Escaped? Bookmark the working version straight away and test the features around it. The full guide (five strategies, with a decision table) is in Fix Bugs with Confidence: Debugging Your Lovable App, on LittleParrot.app. First challenge free 🟪 Save this for your next loop 🔖" |
 
-**Alt text (for the post):** An escape-guide carousel for Lovable bug loops:
-stop after three failed fixes, then revert to a working response, ask for
-the root cause in Plan mode before fixing, isolate one part at a time, or
-rewrite the feature from a bookmark.
+**Alt text (for the post):** An escape-guide carousel for Lovable bug loops: stop after three failed fixes, then revert to a working response, ask for the root cause in Plan mode before fixing, isolate one part at a time, or rewrite the feature from a bookmark.
 
 ## Caption (exact)
 
@@ -55,7 +38,4 @@ The full escape guide, with a decision table and the exact prompts, comes with o
 
 Save this for your next loop. 🔖
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #lovable #debugging #womenintech #buildinpublic #aitools #learnwithai #techforwomen #vibecodingtips #codingtips
+. . . #vibecoding #buildwithai #womenwhobuild #lovable #debugging #womenintech #buildinpublic #aitools #learnwithai #techforwomen #vibecodingtips #codingtips

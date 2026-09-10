@@ -1,9 +1,8 @@
 # Building Valuable Products: Edge Cases, Error Handling, and Outcome-Driven Stories
 
-*A guide for Product People to go beyond the happy path: master anticipating challenges and focusing on outcomes to build truly impactful products*
+_A guide for Product People to go beyond the happy path: master anticipating challenges and focusing on outcomes to build truly impactful products_
 
-**Date:** July 2, 2025
-**Author:** Kinga Magyar
+**Date:** July 2, 2025 **Author:** Kinga Magyar
 
 ---
 

@@ -6,8 +6,7 @@ account: kinga
 
 # Substack AI detection / losing our uniqueness
 
-**Angle:** Substack's new AI-detection feature (built on Pangram) as a way in to a worry Kinga notices in herself: AI-generated writing is homogenising everyone's voice, even pulling non-native speakers towards borrowed American idioms.
-**Key point:** Keep a list of the phrases you never used to say and read your drafts back to cut them, so your writing doesn't blur into everyone else's. Posts alongside the Pangram chart.
+**Angle:** Substack's new AI-detection feature (built on Pangram) as a way in to a worry Kinga notices in herself: AI-generated writing is homogenising everyone's voice, even pulling non-native speakers towards borrowed American idioms. **Key point:** Keep a list of the phrases you never used to say and read your drafts back to cut them, so your writing doesn't blur into everyone else's. Posts alongside the Pangram chart.
 
 ---
 
@@ -25,6 +24,6 @@ And when I write, I catch myself thinking about phrases like "why it matters" th
 
 What do you think, would it serve LinkedIn if we could scan every post and comment for AI use?
 
-_______________
+---
 
 Source of chart: "AI Content Is Everywhere on Social Media, Especially LinkedIn", Max Spero, Pangram Blog

@@ -6,28 +6,13 @@ account: little-parrot
 
 # Post 6: Your app's memory is a spreadsheet
 
-**Pillar:** the method, shown, with a safety thread.
-**Research trace:** the spreadsheet analogy meets the audience in a tool
-they already master; SQL verbs taught as recognise-don't-write is
-teach-real-terms without overwhelm; the no-undo warning and RLS close with
-the safety habits that make an app "production ready real". Draws on the
-course's Challenge 5 and the database section of the Software Vocabulary
-Cheat Sheet.
+**Pillar:** the method, shown, with a safety thread. **Research trace:** the spreadsheet analogy meets the audience in a tool they already master; SQL verbs taught as recognise-don't-write is teach-real-terms without overwhelm; the no-undo warning and RLS close with the safety habits that make an app "production ready real". Draws on the course's Challenge 5 and the database section of the Software Vocabulary Cheat Sheet.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Spreadsheet style: a
-friendly spreadsheet that gains labels slide by slide, SQL verbs as four
-big stamps, a gentle warning slide with no alarm-red.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Spreadsheet style: a friendly spreadsheet that gains labels slide by slide, SQL verbs as four big stamps, a gentle warning slide with no alarm-red.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -39,10 +24,7 @@ big stamps, a gentle warning slide with no alarm-red.
 | 6 | Rows with little shields, one user seeing only hers | "RLS (Row Level Security): the rules deciding which rows each user can see or change. It keeps one member's data private from another, and it's the security finding you'll meet most often. Always worth enabling." |
 | 7 (CTA) | Brand card | "Tables, keys, four verbs, one no-undo rule, and RLS will cover most of your database conversations. Full cheat sheet: Basics of Software for Vibe Coding, on LittleParrot.app. First challenge free 🟪 Save this 🔖" |
 
-**Alt text (for the post):** A database-literacy carousel: tables as
-spreadsheets with columns and rows, primary and foreign keys connecting
-them, the four SQL verbs to recognise, the no-undo rule for database
-changes, and Row Level Security keeping each user's rows private.
+**Alt text (for the post):** A database-literacy carousel: tables as spreadsheets with columns and rows, primary and foreign keys connecting them, the four SQL verbs to recognise, the no-undo rule for database changes, and Row Level Security keeping each user's rows private.
 
 ## Caption (exact)
 
@@ -56,7 +38,4 @@ The full cheat sheet comes with our Basics of Software for Vibe Coding course. F
 
 Save this before your next database change. 🔖
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #techliteracy #shebuilds #database #womenintech #techforwomen #learnwithai #digitalskills #codingforbeginners
+. . . #vibecoding #buildwithai #womenwhobuild #techliteracy #shebuilds #database #womenintech #techforwomen #learnwithai #digitalskills #codingforbeginners

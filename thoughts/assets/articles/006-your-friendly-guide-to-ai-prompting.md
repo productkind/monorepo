@@ -1,9 +1,8 @@
 # Your Friendly Guide to AI Prompting: Four Practical Prompting Techniques (Part 1 of 3)
 
-*Enough of the fear-mongering that makes you feel late and behind if you haven't mastered all the hyped AI tools and cannot prompt ChatGPT masterfully yet*
+_Enough of the fear-mongering that makes you feel late and behind if you haven't mastered all the hyped AI tools and cannot prompt ChatGPT masterfully yet_
 
-**Date:** July 16, 2025
-**Author:** Kinga Magyar
+**Date:** July 16, 2025 **Author:** Kinga Magyar
 
 ---
 
@@ -82,13 +81,7 @@ Business use cases:
 
 > "Given these user interview transcripts, what patterns and pain points can you identify?" [Attach or copy-paste the transcripts]
 
-> "I'm the PM for a B2B SaaS tool that helps marketing teams plan and publish content. We launched an onboarding flow 2 months ago, but our activation rate (users who connect 2+ social accounts and publish a post) is stuck at 30%. Our goal is 50% in 6 months.
-> Key feedback:
-> New users feel overwhelmed by too many setup steps.
-> They don't see immediate value in the dashboard until they publish something.
-> Our capacity is limited: we can tackle 1-2 small experiments this quarter.
-> Attached: User journey map, recent NPS feedback, and usage data for onboarding steps.
-> Please suggest practical experiments to boost activation."
+> "I'm the PM for a B2B SaaS tool that helps marketing teams plan and publish content. We launched an onboarding flow 2 months ago, but our activation rate (users who connect 2+ social accounts and publish a post) is stuck at 30%. Our goal is 50% in 6 months. Key feedback: New users feel overwhelmed by too many setup steps. They don't see immediate value in the dashboard until they publish something. Our capacity is limited: we can tackle 1-2 small experiments this quarter. Attached: User journey map, recent NPS feedback, and usage data for onboarding steps. Please suggest practical experiments to boost activation."
 
 Life use cases:
 

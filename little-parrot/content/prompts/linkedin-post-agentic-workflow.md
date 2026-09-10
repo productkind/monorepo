@@ -1,7 +1,9 @@
 ## Goal
+
 - Produce a LinkedIn post or Substack Note that already meets the house voice, structure, and authenticity guidelines before you see it, instead of catching breaches by re-reading the draft yourself.
 
 ## About
+
 - Claude Code (agent), run from the monorepo
 - Little Parrot project, posts from Kinga's profile
 - A skill-driven generate → critique → revise loop: the main agent drafts, an independent critic sub-agent gates the draft with fresh eyes, the agent revises, and only a passing post reaches you.
@@ -33,11 +35,13 @@ The loop is built into the `linkedin-post` skill (its "Evaluation Loop" section)
 ## The components
 
 ### Skills (`.claude/skills/`)
+
 - **`personal-tone-of-voice`**: the voice. Banned-language list, British English, the "real moment not a hook" opening, "give a usable technique", "frame our AI use correctly", and the formatting rules (no em dashes, no hashtags except Instagram). The single source of truth for words.
 - **`linkedin-post`**: channel mechanics and structure. Length range, openings, "every post must earn its read", and the **Evaluation Loop** section that drives this whole process. Also applies to Substack Notes.
 - **`productkind/marketing/channels/linkedin/how-to-be-authentic.md`**: the seven authenticity principles and the filter ("would I still post it if no one liked it?"). Not a skill, a channel doc the critic reads at runtime.
 
 ### Agent (`.claude/agents/`)
+
 - **`linkedin-critic`** (read-only). Has **fresh eyes** (it did not write the draft) and a **single job**: judge a draft against the guidelines and return a verdict a writer can act on. It does not rewrite the post. Its rubric is the two skills above (preloaded into its context via the `skills:` frontmatter field) plus the authenticity doc (read at runtime). It judges in three tiers:
   - **Tier 1, hard fails (binary):** banned words, rhetorical formulas including the split-sentence form, em dashes, hashtags, British English, length.
   - **Tier 2, structure and craft:** grounded opening, leads with the point, one idea, ending that gives something to try, experiences not features.

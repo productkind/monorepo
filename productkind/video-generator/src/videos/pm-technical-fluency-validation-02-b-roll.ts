@@ -1,4 +1,4 @@
-import { clip, defineVideo, riveAtFrame } from "../narration/definition";
+import { clip, defineVideo, riveAtFrame } from '../narration/definition'
 
 /**
  * A b-roll cut of "You only know the screens", the PM technical fluency campaign's video 2.
@@ -23,94 +23,94 @@ import { clip, defineVideo, riveAtFrame } from "../narration/definition";
  * since the originals are 10-bit HLG HEVC that Chromium cannot decode and that convert flat.
  */
 export default defineVideo({
-  id: "pm-technical-fluency-validation-02-b-roll",
-  voice: "chloe",
-  model: "eleven_v3",
+  id: 'pm-technical-fluency-validation-02-b-roll',
+  voice: 'chloe',
+  model: 'eleven_v3',
   overlays: [
-    riveAtFrame({ rive: "parrot-greet-00.riv", frame: 0 }),
-    riveAtFrame({ rive: "parrot-peek-00.riv", frame: 500 }),
+    riveAtFrame({ rive: 'parrot-greet-00.riv', frame: 0 }),
+    riveAtFrame({ rive: 'parrot-peek-00.riv', frame: 500 }),
   ],
   sections: [
     {
       // IMG_8638 2
-      text: "“So how does your product work?”",
-      visual: clip({ src: "clip-00-laptop-asked.mp4" }),
+      text: '“So how does your product work?”',
+      visual: clip({ src: 'clip-00-laptop-asked.mp4' }),
     },
     {
       // IMG_8496
-      text: "You can demo every screen, and that’s as far as your answer goes.",
-      visual: clip({ src: "clip-01-screens-editor.mp4" }),
+      text: 'You can demo every screen, and that’s as far as your answer goes.',
+      visual: clip({ src: 'clip-01-screens-editor.mp4' }),
       endsParagraph: true,
     },
     {
       // IMG_8497
-      text: "Behind those screens is a service another team owns,",
-      visual: clip({ src: "clip-02-old-works.mp4" }),
+      text: 'Behind those screens is a service another team owns,',
+      visual: clip({ src: 'clip-02-old-works.mp4' }),
     },
     {
       // IMG_8802
-      text: "three integrations, cloud storage you’ve never seen,",
-      visual: clip({ src: "clip-03-institution.mp4" }),
+      text: 'three integrations, cloud storage you’ve never seen,',
+      visual: clip({ src: 'clip-03-institution.mp4' }),
     },
     {
       // IMG_8754
-      text: "and a database somebody migrated last year.",
-      visual: clip({ src: "clip-04-fort-wall.mp4" }),
+      text: 'and a database somebody migrated last year.',
+      visual: clip({ src: 'clip-04-fort-wall.mp4' }),
       endsParagraph: true,
     },
     {
       // IMG_8636
-      text: "So when the load test fails, you can’t tell if it’s your problem.",
-      visual: clip({ src: "clip-05-rough-water.mp4" }),
+      text: 'So when the load test fails, you can’t tell if it’s your problem.',
+      visual: clip({ src: 'clip-05-rough-water.mp4' }),
       endsParagraph: true,
     },
     {
       // IMG_8501
-      text: "You know the frontend and the backend.",
-      visual: clip({ src: "clip-06-bike-rack.mp4" }),
+      text: 'You know the frontend and the backend.',
+      visual: clip({ src: 'clip-06-bike-rack.mp4' }),
     },
     {
       // IMG_8699
-      text: "Nobody explains the infrastructure around them.",
-      visual: clip({ src: "clip-07-harbour-crane.mp4" }),
+      text: 'Nobody explains the infrastructure around them.',
+      visual: clip({ src: 'clip-07-harbour-crane.mp4' }),
       endsParagraph: true,
     },
     {
       // IMG_8485
-      text: "If you want to understand that about your own product,",
-      visual: clip({ src: "clip-08-park-path.mp4" }),
+      text: 'If you want to understand that about your own product,',
+      visual: clip({ src: 'clip-08-park-path.mp4' }),
     },
     {
       // IMG_8721
-      text: "that’s what we’re building a learning path for.",
-      visual: clip({ src: "clip-09-green-hill.mp4" }),
+      text: 'that’s what we’re building a learning path for.',
+      visual: clip({ src: 'clip-09-green-hill.mp4' }),
       endsParagraph: true,
     },
     {
       // IMG_8704
-      text: "By the end you’ll be able to map out your product:",
-      visual: clip({ src: "clip-10-island-buildings.mp4" }),
+      text: 'By the end you’ll be able to map out your product:',
+      visual: clip({ src: 'clip-10-island-buildings.mp4' }),
     },
     {
       // IMG_8718
-      text: "what it depends on, who owns each part, where it slows down,",
-      visual: clip({ src: "clip-11-bay-rocks.mp4" }),
+      text: 'what it depends on, who owns each part, where it slows down,',
+      visual: clip({ src: 'clip-11-bay-rocks.mp4' }),
     },
     {
       // IMG_8791
-      text: "and what breaks when one fails. The waitlist link is in the comments.",
-      visual: clip({ src: "clip-12-rooftops.mp4" }),
+      text: 'and what breaks when one fails. The waitlist link is in the comments.',
+      visual: clip({ src: 'clip-12-rooftops.mp4' }),
     },
     {
       // IMG_8631
-      text: "Sign up and we’ll let you know when the learning path opens.",
-      visual: clip({ src: "clip-13-open-sea.mp4" }),
+      text: 'Sign up and we’ll let you know when the learning path opens.',
+      visual: clip({ src: 'clip-13-open-sea.mp4' }),
       endsParagraph: true,
     },
     {
       // IMG_8514
-      text: "[pause][curious] Which part of your product would you struggle to explain?",
-      visual: clip({ src: "clip-14-clear-shallows.mp4" }),
+      text: '[pause][curious] Which part of your product would you struggle to explain?',
+      visual: clip({ src: 'clip-14-clear-shallows.mp4' }),
     },
   ],
-});
+})

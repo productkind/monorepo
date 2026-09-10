@@ -16,7 +16,7 @@ account: productkind
 Three shots, no voiceover, text building word by word in white over each shot.
 
 | Time | Shot | On-screen text |
-|---|---|---|
+| --- | --- | --- |
 | 0-3s | A cafe: laptop and an iced coffee on a wooden table, warm pendant lights, people moving in the background | You don't need funding to start your business |
 | 3-5s | Closer on the laptop screen, an AI coding conversation filling the window | AI made it easier to start |
 | 5-8s | Pink and white flowers in front of a river, a bridge and a boat behind them | What are you building? Share in the comments, we'd love to check it out! |

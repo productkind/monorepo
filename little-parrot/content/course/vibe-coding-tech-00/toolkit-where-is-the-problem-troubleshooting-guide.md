@@ -1,6 +1,7 @@
 ---
-challenge: "1 - Building Blocks of an Application"
+challenge: '1 - Building Blocks of an Application'
 ---
+
 ## "Where Is the Problem?" Troubleshooting Guide
 
 When something goes wrong with your app, this guide helps you point your AI app builder in the right direction. Knowing which part of the app is affected makes your bug report clearer and the fix faster.
@@ -16,6 +17,7 @@ Look at the symptom, find which part of the app is likely causing it, then use t
 **Where the problem is:** Frontend (CSS)
 
 **What to say:**
+
 ```
 The [element] on the [page name] looks wrong. [Describe what you see, e.g. "The cards overlap on mobile" or "The heading text is too small"]. Fix the styling so that [describe what you want instead].
 ```
@@ -27,6 +29,7 @@ The [element] on the [page name] looks wrong. [Describe what you see, e.g. "The 
 **Where the problem is:** Frontend (JavaScript) or Backend
 
 **What to say:**
+
 ```
 When I click [element] on [page], nothing happens. I expected [what should happen]. Check the frontend logic and backend function for this interaction.
 ```
@@ -38,6 +41,7 @@ When I click [element] on [page], nothing happens. I expected [what should happe
 **Where the problem is:** Backend or Database
 
 **What to say:**
+
 ```
 The [page/section] is not showing any data. I added [items] earlier but the list appears empty. Check if the data is being saved to the database correctly and if the query is fetching it.
 ```
@@ -49,6 +53,7 @@ The [page/section] is not showing any data. I added [items] earlier but the list
 **Where the problem is:** Backend or Database (or you haven't connected Lovable Cloud yet)
 
 **What to say:**
+
 ```
 When I submit the [form name], the data doesn't save. After refreshing the page, the [items] I added are gone. Check the database connection and the save function.
 ```
@@ -60,6 +65,7 @@ When I submit the [form name], the data doesn't save. After refreshing the page,
 **Where the problem is:** API / API key
 
 **What to say:**
+
 ```
 The [service, e.g. "email sending"] feature isn't working. I've added the API key for [service name]. Check if the API key is configured correctly and if the backend function is calling the service properly.
 ```

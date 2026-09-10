@@ -2,8 +2,7 @@
 
 Shares the Substack article `thoughts/assets/articles/023-would-you-rather-grow-your-follower-count-or-be-honest.md`.
 
-**Status:** draft, passed `linkedin-critic` (round 2)
-**Length:** 201 words excluding the URL
+**Status:** draft, passed `linkedin-critic` (round 2) **Length:** 201 words excluding the URL
 
 ## To fill in before posting
 
@@ -20,7 +19,7 @@ It's tempting, and I understand why. If you're building a business and can't rea
 
 What I keep noticing though is that this is all survivorship bias. One person followed a formula, it worked for them, and now the formula is the product. Nobody posts about following the same formula and still reaching no one, and honestly, I'd learn far more from those. They're just much harder to tell than a highlight reel.
 
-So I closed the apps and went for a walk, and asked myself something I'd forgotten to ask: why am I doing all of this? 
+So I closed the apps and went for a walk, and asked myself something I'd forgotten to ask: why am I doing all of this?
 
 To help women benefit more from technology. And I've decided an honest picture of building a business helps more than the polished version, even when the polished version is easier to post.
 

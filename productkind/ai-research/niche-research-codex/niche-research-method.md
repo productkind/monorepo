@@ -193,7 +193,7 @@ Inspect the first ten Google results and first ten YouTube results for each seri
 Record:
 
 | Field | Question |
-|---|---|
+| --- | --- |
 | Exact match | Does the result answer this precise question? |
 | Recency | Is it current enough for the tool or market? |
 | Completeness | Could someone finish the task from it? |
@@ -284,14 +284,14 @@ Use two hard gates before accepting a high score:
 Research table:
 
 | Cluster | Phrase | Monthly searches | Trend | CPC | Exact top-ten answers | Gap | Commercial intent | Product idea |
-|---|---|---:|---|---:|---:|---:|---:|---|
-| | | | | | | | | |
+| --- | --- | --: | --- | --: | --: | --: | --: | --- |
+|  |  |  |  |  |  |  |  |  |
 
 Candidate scorecard:
 
 | Candidate | Demand 1–5 | Gap 1–5 | Money 1–5 | Fit 1–5 | Score / 100 | Volume gate | Product gate | Decision |
-|---|---:|---:|---:|---:|---:|---|---|---|
-| | | | | | | | | |
+| --- | --: | --: | --: | --: | --: | --- | --- | --- |
+|  |  |  |  |  |  |  |  |  |
 
 ---
 

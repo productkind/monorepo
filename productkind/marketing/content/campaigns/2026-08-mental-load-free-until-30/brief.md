@@ -6,6 +6,7 @@ account: kinga + productkind
 # Brief: Hand Off the Mental Load, free until 30 August
 
 ## Target channels
+
 - Slack communities
 - Geek Girls email
 - Portuguese Women in Tech (Circle community)
@@ -26,8 +27,6 @@ Course title: **Hand Off the Mental Load: Use AI to Turn a Brain Dump into a Lis
 Course file: `/../../../../little-parrot/content/course/ai-your-life-admin-00/ai-your-life-admin-00.yaml`
 
 Course link: `https://littleparrot.app/55dfd25b-b9a5-4f04-860d-ef5c1d1e20b9/course-overview`
-
-
 
 ## Who it's for
 

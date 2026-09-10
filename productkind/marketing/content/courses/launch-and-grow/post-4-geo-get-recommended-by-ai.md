@@ -6,28 +6,13 @@ account: little-parrot
 
 # Post 4: Get recommended by chat assistants (GEO)
 
-**Pillar:** the method, shown.
-**Research trace:** first-in-category content: nobody in this niche teaches
-GEO to non-technical builders, and the open creator lane is ours to take;
-teaches the real terms (GEO, AEO, schema markup) with inline definitions per
-our teach-real-terms principle; the before/after language example is the
-proven contrast format. Repackages the GEO and AEO sections of the SEO and
-Discoverability Quick-Start Checklist toolkit item.
+**Pillar:** the method, shown. **Research trace:** first-in-category content: nobody in this niche teaches GEO to non-technical builders, and the open creator lane is ours to take; teaches the real terms (GEO, AEO, schema markup) with inline definitions per our teach-real-terms principle; the before/after language example is the proven contrast format. Repackages the GEO and AEO sections of the SEO and Discoverability Quick-Start Checklist toolkit item.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Explainer style: a chat
-assistant conversation motif (a user asking for a recommendation, the
-assistant answering), before/after cards, prompts in monospace.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Explainer style: a chat assistant conversation motif (a user asking for a recommendation, the assistant answering), before/after cards, prompts in monospace.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -39,11 +24,7 @@ assistant answering), before/after cards, prompts in monospace.
 | 6 | Small directory and blog logos linking to an app | "And get mentioned elsewhere: AI tools learn from the whole web, so every reputable site that mentions your product (directories, a guest post, a community thread) makes a recommendation more likely." |
 | 7 (CTA) | Brand card | "SEO, GEO, and AEO all reward the same thing: clear, helpful content that answers real questions. Full checklist: Launch and Grow Your Lovable App, on LittleParrot.app. First challenge free 🟪 Save this 🔖" |
 
-**Alt text (for the post):** An explainer carousel about GEO and AEO:
-defining both terms, using concrete language on your homepage, adding an FAQ
-that leads with direct answers, adding FAQ schema markup via a Lovable
-prompt, and getting mentioned on other websites so chat assistants recommend
-your product.
+**Alt text (for the post):** An explainer carousel about GEO and AEO: defining both terms, using concrete language on your homepage, adding an FAQ that leads with direct answers, adding FAQ schema markup via a Lovable prompt, and getting mentioned on other websites so chat assistants recommend your product.
 
 ## Caption (exact)
 
@@ -57,7 +38,4 @@ The full checklist comes with our Launch and Grow Your Lovable App course, on Li
 
 Save this one for a free afternoon. 🔖
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #lovable #geo #seo #womenintech #buildinpublic #aitools #femalefounder #learnwithai #techforwomen
+. . . #vibecoding #buildwithai #womenwhobuild #lovable #geo #seo #womenintech #buildinpublic #aitools #femalefounder #learnwithai #techforwomen

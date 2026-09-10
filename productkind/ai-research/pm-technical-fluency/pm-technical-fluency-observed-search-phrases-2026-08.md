@@ -27,7 +27,7 @@ Audience-fit scale:
 ## Observed search-phrase table
 
 | Underlying PM need | Exact search phrase | Source | Search intent | Audience-fit score | Evidence/notes | Date observed |
-|---|---|---|---|---:|---|---|
+| --- | --- | --- | --- | --: | --- | --- |
 | Understand how a software product/system fits together | how does software work | Google + YouTube autocomplete | Understand the parts and request flow of a software or web product. | 2 | Broad learner intent; results also cover hardware and computing basics. | 24 Aug 2026 |
 | Understand how a software product/system fits together | how does software development work | Google + YouTube autocomplete | Understand the parts and request flow of a software or web product. | 2 | Process overview; substantial student and career intent. | 24 Aug 2026 |
 | Understand how a software product/system fits together | how does a web application work | Google + YouTube autocomplete | Understand the parts and request flow of a software or web product. | 3 | Direct mental-model question with accessible web-flow explainers. | 24 Aug 2026 |
@@ -203,7 +203,7 @@ The table's fit judgements were informed by these representative result-page che
 ## Most promising search territories
 
 | Search territory | Representative observed phrases | Purchase motivation from PM research | Why it is promising now | Main caveat |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | How a web product fits together | “how does a web application work”; “frontend backend database flow”; “frontend vs backend vs database” | Form a usable mental model and follow engineering discussions. | Dense autocomplete; accessible result intent; standout recent video performance on a small channel. | Broad developer/student demand is also present. |
 | Browser-to-server request flow | “what happens when you type a url in the browser”; “what happens when you visit a website” | Understand what actually happens when a user takes an action. | Natural question wording appears on both search surfaces; visual explainers rank. | Often framed as an engineering interview question. |
 | APIs in plain English | “how does an api work for dummies”; “api explained simply”; “api explained with real world example” | Understand integrations and ask better questions about product behaviour. | Extremely dense autocomplete and YouTube supply; comments reward simple examples and analogies. | Mature territory with abundant existing supply. |

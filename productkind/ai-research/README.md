@@ -1,14 +1,11 @@
 # Research findings
 
-Evidence, not decisions. Everything here is a record of what was found: audience and
-niche research, market and competitor reads, content-performance analysis, and AI
-research. Each file should stay readable on its own years from now, so keep the method,
-the date and the source links inside the file.
+Evidence, not decisions. Everything here is a record of what was found: audience and niche research, market and competitor reads, content-performance analysis, and AI research. Each file should stay readable on its own years from now, so keep the method, the date and the source links inside the file.
 
 **Where the rest of the chain lives:**
 
 | Part | Where |
-|---|---|
+| --- | --- |
 | The method | `../marketing/channels/steps-to-find-your-niche.md` and `../marketing/channels/niche-research-tools/youtube-studio-checks.md` |
 | The scripts | `../marketing/channels/niche-research-tools/` |
 | The evidence | here |
@@ -17,7 +14,7 @@ the date and the source links inside the file.
 ## What's here
 
 | File | What it is |
-|---|---|
+| --- | --- |
 | `niche-research-codex/` | Complete Little Parrot niche-research package: reusable method, five-candidate workbook, seed queries, search and Trends findings, scoring, positioning recommendation and SaaS opportunity synthesis |
 | `pm-technical-fluency/` | Research package on the technical needs of non-technical, generalist software PMs: original study, validation addendum, interview/survey pack and observed Google/YouTube search phrases. August 2026 |
 | `pm-use-ai/` | Research package on overwhelmed software PMs being told to use AI to become more productive. Synthesises 370 Reddit, Slack, Facebook, YouTube, LinkedIn, TikTok and Hacker News threads or comment sections into 12 pain-point clusters, 12 needs, functional and emotional desires, verbatim evidence and 132 search-demand phrases. 26 August 2026 |
@@ -40,13 +37,6 @@ the date and the source links inside the file.
 
 ## Two conventions
 
-**Verbatim captures stay verbatim.** Several files quote search queries, video titles and
-community posts exactly as written, which means American spellings, em dashes and words we
-never use ourselves. `check-banned.py` reports hits on those files and **the hits should be
-ignored**. Correcting them would falsify the record. Each affected file says so at the top.
-Conclusions drawn from them belong in the marketing docs, which are written to house style
-and pass clean.
+**Verbatim captures stay verbatim.** Several files quote search queries, video titles and community posts exactly as written, which means American spellings, em dashes and words we never use ourselves. `check-banned.py` reports hits on those files and **the hits should be ignored**. Correcting them would falsify the record. Each affected file says so at the top. Conclusions drawn from them belong in the marketing docs, which are written to house style and pass clean.
 
-**Date the filename when the finding is a snapshot.** Search volumes, platform UIs and
-competitor offers all move. A file named for its month tells a later reader how much to
-trust it without opening it.
+**Date the filename when the finding is a snapshot.** Search volumes, platform UIs and competitor offers all move. A file named for its month tells a later reader how much to trust it without opening it.

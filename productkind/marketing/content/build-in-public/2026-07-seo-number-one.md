@@ -38,6 +38,7 @@ If you've built an app with Lovable or a similar tool, start with number 2 today
 ---
 
 ## Explanations
+
 ### What does the "no mixing www and non-www versions" mean?
 
 It's about the fact that www.littleparrot.app and littleparrot.app are technically two different addresses, even though they usually show the same site. The same is true of http:// vs https:// versions.

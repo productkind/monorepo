@@ -19,7 +19,10 @@ export const parseFlags = ({ text: contents }: { text: string }): Flags => {
     }
     return Object.fromEntries(
       Object.entries(parsed).flatMap(([section, value]) =>
-        typeof value === 'object' && value !== null && 'src' in value && typeof value.src === 'string'
+        typeof value === 'object' &&
+        value !== null &&
+        'src' in value &&
+        typeof value.src === 'string'
           ? [[section, { src: value.src }]]
           : [],
       ),

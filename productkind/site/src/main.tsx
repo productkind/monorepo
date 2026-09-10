@@ -1,5 +1,6 @@
-import { ViteReactSSG } from 'vite-react-ssg'
 import { routes } from './App.tsx'
+
+import { ViteReactSSG } from 'vite-react-ssg'
 
 export const createRoot = ViteReactSSG(
   // react-router-dom data routes

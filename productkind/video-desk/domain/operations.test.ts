@@ -1,5 +1,3 @@
-import { describe, expect, test } from 'vitest'
-
 import {
   chooseKey,
   clipFit,
@@ -8,34 +6,49 @@ import {
   gifDurationInSeconds,
   gifSize,
   giphyItems,
+  keepThatCoverTheBeat,
   keepThatFitTheFrame,
   klipyItems,
   parseHistogram,
   parseRmse,
-  keepThatCoverTheBeat,
   parseSections,
   pexelsClips,
-  placeFor,
   pixabayClips,
+  placeFor,
   providerFrom,
   repeatsIn,
-  unreadSections,
   sectionName,
+  unreadSections,
   usedIdsIn,
 } from './operations.ts'
 import type { ProviderItem } from './types.ts'
 
+import { describe, expect, test } from 'vitest'
+
 /** A minimal but real GIF: header, screen descriptor, then one control extension per frame. */
-const gifBytes = ({ delays, width = 480, height = 392 }: {
+const gifBytes = ({
+  delays,
+  width = 480,
+  height = 392,
+}: {
   delays: number[]
   width?: number
   height?: number
 }): Uint8Array => {
   const bytes: number[] = [
-    0x47, 0x49, 0x46, 0x38, 0x39, 0x61,
-    width & 0xff, width >> 8,
-    height & 0xff, height >> 8,
-    0x00, 0x00, 0x00,
+    0x47,
+    0x49,
+    0x46,
+    0x38,
+    0x39,
+    0x61,
+    width & 0xff,
+    width >> 8,
+    height & 0xff,
+    height >> 8,
+    0x00,
+    0x00,
+    0x00,
   ]
   for (const delay of delays) {
     bytes.push(0x21, 0xf9, 0x04, 0x00, delay & 0xff, delay >> 8, 0x00, 0x00)
@@ -131,14 +144,20 @@ describe('keepThatFitTheFrame', () => {
 
   test('keeps the same aspect range the montage workflow already used', () => {
     const kept = keepThatFitTheFrame({
-      items: [item({ id: 'just-wide', width: 480, height: 340 }), item({ id: 'just-tall', width: 400, height: 500 })],
+      items: [
+        item({ id: 'just-wide', width: 480, height: 340 }),
+        item({ id: 'just-tall', width: 400, height: 500 }),
+      ],
     })
 
     expect(kept.map((kept) => kept.id)).toEqual(['just-wide', 'just-tall'])
   })
 
   test('skips ids already rejected for this beat', () => {
-    const kept = keepThatFitTheFrame({ items: [item({ id: 'no' }), item({ id: 'yes' })], skip: ['no'] })
+    const kept = keepThatFitTheFrame({
+      items: [item({ id: 'no' }), item({ id: 'yes' })],
+      skip: ['no'],
+    })
 
     expect(kept.map((kept) => kept.id)).toEqual(['yes'])
   })
@@ -170,9 +189,7 @@ describe('edgeColourOf', () => {
   })
 
   test('leaves a transparent border alone, because there is no seam to remove', () => {
-    expect(
-      edgeColourOf({ histogram: [{ rgba: [0, 0, 0, 0] as const, count: 1000 }] }),
-    ).toBeNull()
+    expect(edgeColourOf({ histogram: [{ rgba: [0, 0, 0, 0] as const, count: 1000 }] })).toBeNull()
   })
 })
 
@@ -376,7 +393,11 @@ describe('providerItems', () => {
             id: 'abc123',
             title: 'Cat Yes GIF',
             images: {
-              original: { width: '480', height: '392', url: 'https://media.giphy.test/abc123/giphy.gif' },
+              original: {
+                width: '480',
+                height: '392',
+                url: 'https://media.giphy.test/abc123/giphy.gif',
+              },
               fixed_height: { url: 'https://media.giphy.test/abc123/200.gif' },
               fixed_height_downsampled: { url: 'https://media.giphy.test/abc123/dropped.gif' },
             },

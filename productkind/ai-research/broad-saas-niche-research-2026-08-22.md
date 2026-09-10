@@ -29,7 +29,7 @@ These constraints make a pure consumer subscription difficult. At €10 per mont
 The table is a comparative judgement based on current products, free alternatives, platform features, observed complaints and the founders' distribution. It is not a measured market-size model.
 
 | Market/problem | Economic pain and recurrence | Existing supply/platform risk | Access | Decision |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | Non-technical builders maintaining Lovable apps | Broken production apps matter and changes recur | Lovable already tests apps, scans security and explains changes; several low-cost external QA agents exist | Good | Reject: the proposed App Steward is too substitutable |
 | Developers tracking Claude/Codex costs | Recurring, but usually modest individual spend | Built-in reporting plus many free/local/open-source trackers | Good | Reject: commoditised |
 | Freelancers controlling scope creep | Direct loss of time and margin | A dense group of scope, change-request and contract tools already exists; much of the failure is an awkward conversation rather than missing software | Good | Reject as a new entrant |
@@ -207,7 +207,7 @@ The result was substantially weaker than the initial market hypothesis required:
 The only small, genuinely relevant footholds were:
 
 | Keyword | Combined observed volume across US, UK, CA and AU | Intent |
-|---|---:|---|
+| --- | --: | --- |
 | `online course review checklist` | 20 | Informational/template |
 | `course review process` | 50 | Mixed, including Udemy submission review |
 | `Udemy course quality` | 20 | Relevant instructor information |

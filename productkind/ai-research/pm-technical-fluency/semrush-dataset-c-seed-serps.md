@@ -5,7 +5,7 @@ Retrieval date: 2026-08-24 (UTC). Top 10 organic results per seed where Semrush 
 - `title` and `SERP_features`: not returned by the SERP endpoint used (it returns position, domain, URL, and a keyword difficulty score only). KD shown per seed below.
 
 | seed_keyword | position | title | URL | domain | SERP_features |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | how does an api work | 1 | n/a (not returned by endpoint) | https://www.reddit.com/r/cybersecurity/comments/1elnz4j/what_is_an_api_really_need_deeper_explanation/ | www.reddit.com | n/a (not returned by endpoint) |
 | how does an api work | 2 | n/a (not returned by endpoint) | https://www.postman.com/what-is-an-api/ | www.postman.com | n/a (not returned by endpoint) |
 | how does an api work | 3 | n/a (not returned by endpoint) | https://aws.amazon.com/what-is/api/ | aws.amazon.com | n/a (not returned by endpoint) |
@@ -109,18 +109,18 @@ Retrieval date: 2026-08-24 (UTC). Top 10 organic results per seed where Semrush 
 
 ## Keyword difficulty returned with each SERP
 
-| seed_keyword | KDI (US) |
-|---|---|
-| how does an api work | 46/100 |
-| what is an api and how does it work | 55/100 |
-| how does api integration work | 35/100 |
-| webhooks vs api | 30/100 |
-| how does ci cd pipeline work | 45/100 |
-| staging vs production | 27/100 |
-| what is technical debt in software development | 42/100 |
-| mvp vs prototype vs poc | 44/100 |
-| vibe coding for beginners | 33/100 |
-| how does vibe coding work | 49/100 |
+| seed_keyword                                   | KDI (US) |
+| ---------------------------------------------- | -------- |
+| how does an api work                           | 46/100   |
+| what is an api and how does it work            | 55/100   |
+| how does api integration work                  | 35/100   |
+| webhooks vs api                                | 30/100   |
+| how does ci cd pipeline work                   | 45/100   |
+| staging vs production                          | 27/100   |
+| what is technical debt in software development | 42/100   |
+| mvp vs prototype vs poc                        | 44/100   |
+| vibe coding for beginners                      | 33/100   |
+| how does vibe coding work                      | 49/100   |
 
 ## Seeds with no SERP data returned (US database)
 

@@ -1,9 +1,10 @@
 ---
 slug: what-is-the-mental-load
-title: "What Is the Mental Load? A Guide to the Work Nobody Sees"
-description: "The mental load is the work of noticing, deciding and keeping track. What it is, why it feels heavy, and what you can do about it this week."
+title: 'What Is the Mental Load? A Guide to the Work Nobody Sees'
+description: 'The mental load is the work of noticing, deciding and keeping track. What it is, why it feels heavy, and what you can do about it this week.'
 primary_query: what is mental load
-secondary_queries: [mental load meaning, women mental load, mental load of motherhood, emotional load]
+secondary_queries:
+  [mental load meaning, women mental load, mental load of motherhood, emotional load]
 type: article
 status: experiment
 voice: productkind educational (mentor tone)
@@ -56,13 +57,13 @@ If you've been feeling tired in a way that's hard to point at, this is often why
 
 You don't need the history to fix anything, but it helps to know that researchers have studied this, and it gives you a name and a study you can cite when you talk to your partner.
 
-**Emma's comic, 2017.** The French cartoonist Emma published [*You Should've Asked*](https://english.emmaclit.com/2017/05/20/you-shouldve-asked/), where a mother runs a household and a dinner party at the same time and her husband answers her frustration with "You should've asked", which gave the comic its title. Her point is that asking someone to help hands the managing straight back to the person already managing it.
+**Emma's comic, 2017.** The French cartoonist Emma published [_You Should've Asked_](https://english.emmaclit.com/2017/05/20/you-shouldve-asked/), where a mother runs a household and a dinner party at the same time and her husband answers her frustration with "You should've asked", which gave the comic its title. Her point is that asking someone to help hands the managing straight back to the person already managing it.
 
-**Allison Daminger's research, 2019.** A sociologist interviewed 35 American heterosexual couples for [*The Cognitive Dimension of Household Labor*](https://journals.sagepub.com/doi/10.1177/0003122419859007) and split the thinking work into the four parts listed above. She found that couples often shared the deciding fairly evenly, while the noticing and the checking fell mostly to women.
+**Allison Daminger's research, 2019.** A sociologist interviewed 35 American heterosexual couples for [_The Cognitive Dimension of Household Labor_](https://journals.sagepub.com/doi/10.1177/0003122419859007) and split the thinking work into the four parts listed above. She found that couples often shared the deciding fairly evenly, while the noticing and the checking fell mostly to women.
 
 That last point explains a conversation many couples have without getting anywhere. A partner who does help, and does take part in decisions, can honestly believe the work is shared. They're thinking of the deciding. The noticing and the checking are the two parts that never switch off.
 
-**Eve Rodsky's *Fair Play*, 2019.** [A system of cards](https://www.fairplaylife.com/the-book), one per household job, where whoever holds a card is responsible for that whole job: the noticing and the planning, right through to the doing.
+**Eve Rodsky's _Fair Play_, 2019.** [A system of cards](https://www.fairplaylife.com/the-book), one per household job, where whoever holds a card is responsible for that whole job: the noticing and the planning, right through to the doing.
 
 ## Three things to try this week
 

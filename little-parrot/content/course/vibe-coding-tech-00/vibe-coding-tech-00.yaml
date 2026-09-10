@@ -51,7 +51,7 @@ course:
           content:
             videoRemotionId: lesson-vibe-coding-tech-00-video-00
             vimeoId: 1164638011
-            youtubeId: "ZamAz_W2VwY"
+            youtubeId: 'ZamAz_W2VwY'
             transcript: |-
               Until recently, building applications was much harder. Now, with AI app builders such
               as Lovable, anyone can get started.
@@ -446,7 +446,7 @@ course:
           title: "You can now describe look and layout clearly! \U0001F3A8"
           content:
             cta: Next
-            nextModule: '**Next challenge:** Let''s peek under the hood at the **frontend**, how HTML, CSS, and components actually work together. Don''t worry, you won''t need to write code! But understanding the basics helps you troubleshoot when things look off and guide the AI app builder more efficiently.'
+            nextModule: "**Next challenge:** Let's peek under the hood at the **frontend**, how HTML, CSS, and components actually work together. Don't worry, you won't need to write code! But understanding the basics helps you troubleshoot when things look off and guide the AI app builder more efficiently."
             description: You've got the vocabulary to describe exactly what you're picturing!
             subDescription: |-
               This is huge. Instead of "make it look nicer," you can now say "use a card with rounded corners" or "add a modal for the confirmation." Open an AI app builder and try describing one screen using at least three component names, notice how much more accurate the result is!
@@ -529,7 +529,7 @@ course:
           content:
             videoRemotionId: lesson-vibe-coding-tech-00-video-01
             vimeoId: 1164638055
-            youtubeId: "YHhq_ziY8XY"
+            youtubeId: 'YHhq_ziY8XY'
             transcript: |-
               Everything on the web is made up of boxes.
 
@@ -653,7 +653,7 @@ course:
           title: "Well done! Frontend foundations locked in! \U0001F4BB"
           content:
             cta: Next
-            nextModule: '**Next challenge:** Time to explore the **backend**—where the real magic happens behind the scenes. You''ll learn about APIs, authentication, and how your app talks to other services. This is what turns a pretty interface into a powerful, functional product!'
+            nextModule: "**Next challenge:** Time to explore the **backend**—where the real magic happens behind the scenes. You'll learn about APIs, authentication, and how your app talks to other services. This is what turns a pretty interface into a powerful, functional product!"
             description: You now understand what's happening when the AI app builder generates your interface!
             subDescription: This knowledge is like having X-ray vision. Next time the AI app builder shows you code, see if you can spot the HTML elements (look for those angle brackets!). You'll start recognising the structure of what you're building. It's oddly satisfying!
       title: Frontend for Vibe Coders
@@ -817,7 +817,7 @@ course:
           title: "Amazing work! Backend basics locked in! \U0001F510"
           content:
             cta: Next
-            nextModule: '**Next challenge:** Let''s talk about **databases**, where your app stores and remembers everything. You''ll learn how data is organised, how tables connect to each other, and (importantly!) how to avoid accidentally deleting everything. This is where your app gets its memory!'
+            nextModule: "**Next challenge:** Let's talk about **databases**, where your app stores and remembers everything. You'll learn how data is organised, how tables connect to each other, and (importantly!) how to avoid accidentally deleting everything. This is where your app gets its memory!"
             description: You can now prompt for features that go beyond what users see!
             subDescription: This is a big deal. You're moving from shaping what users see to handling things like sending emails or processing payments. Think of one third-party service your app might need. Look up their website and find where API keys are created. Even a bit of exploration helps you feel more at home with these tools.
       title: Backend for Vibe Coders
@@ -971,9 +971,10 @@ course:
         - type: course-end
           title: "Congratulations! You speak \"software\" now! \U0001F38A"
           content:
-            nextModule: '**Your next step:** Take one of your ideas and start building it in Lovable. Keep the scope tiny—one screen, one feature. Ship it, share it with someone real, and learn from their feedback. That''s how real products are born. You''ve got this!'
+            nextModule: "**Your next step:** Take one of your ideas and start building it in Lovable. Keep the scope tiny—one screen, one feature. Ship it, share it with someone real, and learn from their feedback. That's how real products are born. You've got this!"
             description: Look at everything you've learned!
-            subDescription: "✓ **You understand the architecture:** Frontend (what users see), backend (the brain), database (the memory), infrastructure (the backbone). You can point your AI app builder to exactly the right place.\n\n✓ **You speak design language:** Wireframes, components, colours, fonts. You can describe exactly what you're picturing, no more \"make it nicer.\"\n\n✓ **You know what's under the hood:** HTML, CSS, JavaScript. You can give meaningful feedback to your AI app builder and ask better questions.\n\n✓ **You can prompt for backend features:** APIs, authentication, backend functions. You've graduated from pretty interfaces to powerful, functional products.\n\n✓ **You understand data:** Tables, relationships, SQL. You can think about how your app remembers things and ask the right questions.\n\n✓ **You know the danger zones:** Irreversible database changes, exposed API keys. You can protect yourself from common mistakes that trip up beginners.\n\n✓ **You share a vocabulary with developers:** Collaboration just got so much easier. You're no longer on the outside looking in.\n\nTools will change, but these foundations won't. The more you practise describing what you want in this language, the more powerful your vibe coding becomes.\n\n**Remember:** Start small, describe clearly, ship often, and learn from real users. You've built a superpower. Now go use it! \U0001F4AA\n\n**Toolkit:** Keep the [Software Vocabulary Cheat Sheet](https://littleparrot.app/nest/toolkit/ac7e9348-f7e1-459e-b46c-9078e909d282) open while you build. It has every term from this course in one quick-reference guide."
+            subDescription:
+              "✓ **You understand the architecture:** Frontend (what users see), backend (the brain), database (the memory), infrastructure (the backbone). You can point your AI app builder to exactly the right place.\n\n✓ **You speak design language:** Wireframes, components, colours, fonts. You can describe exactly what you're picturing, no more \"make it nicer.\"\n\n✓ **You know what's under the hood:** HTML, CSS, JavaScript. You can give meaningful feedback to your AI app builder and ask better questions.\n\n✓ **You can prompt for backend features:** APIs, authentication, backend functions. You've graduated from pretty interfaces to powerful, functional products.\n\n✓ **You understand data:** Tables, relationships, SQL. You can think about how your app remembers things and ask the right questions.\n\n✓ **You know the danger zones:** Irreversible database changes, exposed API keys. You can protect yourself from common mistakes that trip up beginners.\n\n✓ **You share a vocabulary with developers:** Collaboration just got so much easier. You're no longer on the outside looking in.\n\nTools will change, but these foundations won't. The more you practise describing what you want in this language, the more powerful your vibe coding becomes.\n\n**Remember:** Start small, describe clearly, ship often, and learn from real users. You've built a superpower. Now go use it! \U0001F4AA\n\n**Toolkit:** Keep the [Software Vocabulary Cheat Sheet](https://littleparrot.app/nest/toolkit/ac7e9348-f7e1-459e-b46c-9078e909d282) open while you build. It has every term from this course in one quick-reference guide."
       title: Databases for Vibe Coders
       isFree: false
       skills:

@@ -1,12 +1,12 @@
-import { AbsoluteFill, Audio, Sequence, Series, staticFile } from 'remotion'
-import { RemotionRiveCanvas } from '@remotion/rive'
-
-import type { Timeline } from '../narration/timeline'
 import type { Overlay, VideoDefinition } from '../narration/definition'
+import type { Timeline } from '../narration/timeline'
 import { Captions } from './Captions'
-import { AnnotationLayer, TunedVisual } from './SectionAnnotation'
 import { sectionLabel } from './section-label'
+import { AnnotationLayer, TunedVisual } from './SectionAnnotation'
 import { VisualView } from './Visual'
+
+import { RemotionRiveCanvas } from '@remotion/rive'
+import { AbsoluteFill, Audio, Sequence, Series, staticFile } from 'remotion'
 
 const BACKGROUND_CLASS = 'bg-[#1a0044]'
 const SOUNDTRACK_VOLUME = 0.1

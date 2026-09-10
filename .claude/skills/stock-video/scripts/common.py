@@ -57,8 +57,24 @@ def env_value(name):
 
 def fetch(url, headers=None, timeout=60):
     request = urllib.request.Request(url, headers={**HEADERS, **(headers or {})})
-    with urllib.request.urlopen(request, timeout=timeout) as response:
-        return response.read()
+    try:
+        with urllib.request.urlopen(request, timeout=timeout) as response:
+            return response.read()
+    except urllib.error.HTTPError as error:
+        # Pexels allows 200 searches an hour. Two sourcers working at once can pass that, and the
+        # bare HTTPError reads like a broken script rather than a quota that refills on the hour.
+        if error.code == 429:
+            raise SystemExit(
+                'Pexels returned 429: the 200-per-hour search limit is spent. It refills on the '
+                'hour — wait, or finish the beats already downloaded. Nothing is wrong with the '
+                'key.'
+            ) from error
+        if error.code in (401, 403):
+            raise SystemExit(
+                f'Pexels refused the request ({error.code}). A 403 with no key problem usually '
+                'means the request lost its browser User-Agent; check HEADERS in common.py.'
+            ) from error
+        raise
 
 
 def search(term, limit=40, provider='pexels'):

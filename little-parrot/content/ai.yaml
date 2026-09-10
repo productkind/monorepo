@@ -22,7 +22,7 @@ concepts:
     when:
       - 'A neural network trained to classify images into categories.'
       - "OpenAI's GPT 4o"
-      - "Claude 4 sonnet"
+      - 'Claude 4 sonnet'
     like: |
       You can think of an AI model as the recipe for pizza. The input is the ingredients
       (data), the model is the recipe (algorithm), and the output is the pizza (predictions or
@@ -82,39 +82,28 @@ aspects:
     level: 1
     related_concepts:
       - AI
-    aspect:
-      Current AI solutions are based on machine learning particularly deep learning techniques.
+    aspect: Current AI solutions are based on machine learning particularly deep learning techniques.
   - name: 'Model Input and Output'
     level: 1
     related_concepts:
       - Model
-    aspect:
-      Always has an input and an output.
+    aspect: Always has an input and an output.
   - name: 'Model Input and Output Types'
     level: 1
     related_concepts:
       - Model
-    aspect:
-      The input and output types of a model can vary widely depending on the task it is designed
-      to perform. For example, a model for image recognition might take an image as input and
-      output a label or a set of labels, while a model for text generation might take a prompt
-      as input and output a generated text.
+    aspect: The input and output types of a model can vary widely depending on the task it is designed to perform. For example, a model for image recognition might take an image as input and output a label or a set of labels, while a model for text generation might take a prompt as input and output a generated text.
   - name: 'Model Training'
     level: 1
     related_concepts:
       - Model
       - Training
-    aspect:
-      Models are created through a process called training, where they learn from a large dataset
-      to improve their performance on a specific task.
+    aspect: Models are created through a process called training, where they learn from a large dataset to improve their performance on a specific task.
   - name: 'LLMs are not thinking'
     level: 1
     related_concepts:
       - LLM
-    aspect:
-      LLMs do not think or understand in the way humans do. They just follow the statistical
-      patterns they have learned from the data they were trained on. They are just always
-      predicting the most probable next token based on the previous tokens in the input.
+    aspect: LLMs do not think or understand in the way humans do. They just follow the statistical patterns they have learned from the data they were trained on. They are just always predicting the most probable next token based on the previous tokens in the input.
 exercises:
   - type: 'Quiz'
     level: 1

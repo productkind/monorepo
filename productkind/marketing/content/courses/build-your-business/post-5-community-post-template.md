@@ -6,27 +6,13 @@ account: little-parrot
 
 # Post 5: Sharing without feeling spammy
 
-**Pillar:** the messy middle, with the confidence angle.
-**Research trace:** this audience pre-apologises and fears taking up space
-("dumb question, but..." is as far as she gets); the fear of looking
-spammy is the documented blocker to the sharing that acquisition depends
-on; a worked template plus the permission to ask for feedback rather than
-customers is confidence-by-design. Draws on the course's Challenge 5
-community-sharing section, with the testimonial rule from Challenge 6.
+**Pillar:** the messy middle, with the confidence angle. **Research trace:** this audience pre-apologises and fears taking up space ("dumb question, but..." is as far as she gets); the fear of looking spammy is the documented blocker to the sharing that acquisition depends on; a worked template plus the permission to ask for feedback rather than customers is confidence-by-design. Draws on the course's Challenge 5 community-sharing section, with the testimonial rule from Challenge 6.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Community-thread style:
-forum-post mockups, Dalmie's real post shown as a card, reply bubbles.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Community-thread style: forum-post mockups, Dalmie's real post shown as a card, reply bubbles.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -38,10 +24,7 @@ forum-post mockups, Dalmie's real post shown as a card, reply bubbles.
 | 6 | A kind reply being quoted onto a landing page | "And when someone replies with something kind ('We finally stopped arguing in the group chat about what to read next'), ask permission and put it on your landing page. Real sentences from real people only; never generate testimonials with AI." |
 | 7 (CTA) | Brand card | "The post template and feedback playbook are in Build Your Business: From Vibe Coded Product to Paying Customers, on LittleParrot.app. First challenge free 🟪 Save this for the day you press post 🔖" |
 
-**Alt text (for the post):** A community-sharing carousel: contribute
-first, lead with the problem rather than a link, a worked example post
-about a book club tool, why it works, the modest real results, and the rule
-of using only real testimonials with permission.
+**Alt text (for the post):** A community-sharing carousel: contribute first, lead with the problem rather than a link, a worked example post about a book club tool, why it works, the modest real results, and the rule of using only real testimonials with permission.
 
 ## Caption (exact)
 
@@ -55,7 +38,4 @@ The template comes with Build Your Business: From Vibe Coded Product to Paying C
 
 Save this for the day you press post. 🔖
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #womeninbusiness #shebuilds #womenintech #buildinpublic #techforwomen #femalefounder #firstcustomer #marketing
+. . . #vibecoding #buildwithai #womenwhobuild #womeninbusiness #shebuilds #womenintech #buildinpublic #techforwomen #femalefounder #firstcustomer #marketing

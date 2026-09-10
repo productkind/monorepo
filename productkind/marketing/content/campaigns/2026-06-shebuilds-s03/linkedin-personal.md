@@ -6,14 +6,13 @@ account: kinga
 
 # LinkedIn - personal (Kinga, founder voice)
 
-Post from: https://www.linkedin.com/in/kinga-magyar/
-Asset: attach linkedin-tbip-shebuilds.svg (exported to PNG)
+Post from: https://www.linkedin.com/in/kinga-magyar/ Asset: attach linkedin-tbip-shebuilds.svg (exported to PNG)
 
 ---
 
 The top prize at this year's SheBuilds is one-to-one mentorship with Elena Verna, Head of Growth at Lovable.
 
-SheBuilds is a 48-hour buildathon by Lovable, made for women, and season 03 is back this June. You get free Lovable credits and hundreds of other women building alongside you. 
+SheBuilds is a 48-hour buildathon by Lovable, made for women, and season 03 is back this June. You get free Lovable credits and hundreds of other women building alongside you.
 
 I've been part of it since the very first season, first as a participant, later helping other women through it, and it's the event I recommend most to anyone who wants to build with AI but isn't sure these spaces are for them. You can apply here until 3 June: https://shebuilds.lovable.app/?ref=littleparrot.app
 

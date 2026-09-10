@@ -28,10 +28,9 @@ In this course only use the GitHub web UI in the browser, not the CLI, to avoid 
 - Explain what is the difference between GitHub and Git.
 
 ### Practical Example
+
 Use Dalmie's example throughout the course. She is building her Book Club Organiser. Every time you explain how to do something on the UI of GitHub, set it up with a practical example what Dalmie wants to achieve, then explain how she can do that to achieve her goal.
 
-
 ## Resources to consult
-Lovable's documentation: https://docs.lovable.dev/introduction/welcome
-GitHub documentation: https://docs.GitHub.com/en
 
+Lovable's documentation: https://docs.lovable.dev/introduction/welcome GitHub documentation: https://docs.GitHub.com/en

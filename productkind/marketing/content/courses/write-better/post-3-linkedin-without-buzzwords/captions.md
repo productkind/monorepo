@@ -2,8 +2,7 @@
 
 - **Brand:** little-parrot (the carousel and the course it drives to are Little Parrot).
 - **Source material:** the approved `spec.md` and the 7-slide export in this folder. A parody-then-rebuild carousel: a bare prompt produces a rocket-and-hashtags guru post, adding a tone block produces a calm but empty post, adding real context produces a specific post people comment on, plus the three-part prompt structure and the shortcut of pasting one of your own past posts as a style sample.
-- **Destination:** the course, first challenge free. Base link:
-  `https://littleparrot.app/550e8400-e29b-41d4-a716-446655440000/course-overview?utm_medium=social&utm_campaign=write-better&utm_content=post-3` (add `&utm_source=<platform>` per channel below).
+- **Destination:** the course, first challenge free. Base link: `https://littleparrot.app/550e8400-e29b-41d4-a716-446655440000/course-overview?utm_medium=social&utm_campaign=write-better&utm_content=post-3` (add `&utm_source=<platform>` per channel below).
 - **Posted from:** Instagram = Little Parrot Instagram (Collab post with Kinga's personal account); Threads = productkind profile (per the house rule, whichever brand the carousel is); LinkedIn = productkind page; TikTok = our single account; YouTube Shorts = our channel (carousel run as a slideshow video).
 - **Platforms:** TikTok, Instagram, Threads, LinkedIn, YouTube Shorts.
 
@@ -69,8 +68,7 @@ Ask AI for "a LinkedIn post" and you get rockets and "10x productivity", because
 
 #womenintech #womenwhobuild #linkedintips
 
-**Description:**
-Ask a chat assistant for "a LinkedIn post" and you get its guru impression: rockets, "10x productivity", a hashtag pile. It imitates the posts it has read, because nothing in your prompt said whose voice to use. Add part two, tone and style (understated, sincere, simple wording, no buzzwords), and part three, the real context: what you did and why it was worth your time. For women who want to be visible at work as themselves. Subscribe for a new prompting short every week.
+**Description:** Ask a chat assistant for "a LinkedIn post" and you get its guru impression: rockets, "10x productivity", a hashtag pile. It imitates the posts it has read, because nothing in your prompt said whose voice to use. Add part two, tone and style (understated, sincere, simple wording, no buzzwords), and part three, the real context: what you did and why it was worth your time. For women who want to be visible at work as themselves. Subscribe for a new prompting short every week.
 
 **Pinned comment (holds the link):** Rebuild your own post in Challenge 3 of Write Better with AI, and the first challenge is free: https://littleparrot.app/550e8400-e29b-41d4-a716-446655440000/course-overview?utm_source=youtube&utm_medium=social&utm_campaign=write-better&utm_content=post-3
 

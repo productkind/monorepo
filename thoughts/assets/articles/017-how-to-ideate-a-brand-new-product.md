@@ -1,7 +1,6 @@
 # How to Ideate a Brand New Product
 
-**Date:** October 1, 2025
-**Author:** Kinga Magyar
+**Date:** October 1, 2025 **Author:** Kinga Magyar
 
 ---
 
@@ -11,9 +10,7 @@ What often happens in large corporations is that someone – a business leader o
 
 I've recently heard from a software engineer at a workshop I was running that they were frustrated with the user story template:
 
-> I as a [user persona]
-> Want to [do an action]
-> So that [I can achieve an outcome]
+> I as a [user persona] Want to [do an action] So that [I can achieve an outcome]
 
 The reason for their frustration was that they didn't know who the user was, and neither what outcome the user wanted to achieve.
 
@@ -43,19 +40,11 @@ It's important to make sure that your whole team is on the same page about the p
 
 Even though we have a two-person team building Little Parrot, we still started from the prioritised user problem we aim to solve by filling in this template:
 
-> I am [your user]
-> I am trying to [desired outcome]
-> But [barrier / problem]
-> Because [root of problem]
-> Which makes me feel [emotions]
+> I am [your user] I am trying to [desired outcome] But [barrier / problem] Because [root of problem] Which makes me feel [emotions]
 
 Here's what it looked like in action:
 
-> I am a busy product manager
-> I am trying to feel confident
-> But I don't even know where to start to get actual skills
-> Because I don't know what the best framework or methodology to apply is and I don't find real practical resources
-> Which makes me feel overwhelmed and paralysed.
+> I am a busy product manager I am trying to feel confident But I don't even know where to start to get actual skills Because I don't know what the best framework or methodology to apply is and I don't find real practical resources Which makes me feel overwhelmed and paralysed.
 
 We predominantly thought about the current AI hype and how overwhelming that can feel, but we didn't want to only focus on AI skills, but broader product skills as well.
 

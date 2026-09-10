@@ -1,8 +1,8 @@
-id: "w000d0"
-caption: "Introducing the Product Team"
+id: 'w000d0'
+caption: 'Introducing the Product Team'
 panels:
   - characters:
-      - name: "Chick"
+      - name: 'Chick'
         dialogue: null
     caption: |
       Chick
@@ -18,7 +18,7 @@ panels:
         - anxious
     environment: null
   - characters:
-      - name: "Snail"
+      - name: 'Snail'
         dialogue: null
     caption: |
       Snail
@@ -34,7 +34,7 @@ panels:
         - uses Linux
     environment: null
   - characters:
-      - name: "Cat"
+      - name: 'Cat'
         dialogue: null
     caption: |
       Cat
@@ -50,7 +50,7 @@ panels:
         - shopaholic
     environment: null
   - characters:
-      - name: "AI"
+      - name: 'AI'
         dialogue: null
     caption: |
       AI

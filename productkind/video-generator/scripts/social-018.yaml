@@ -22,9 +22,17 @@ caption: |-
   You build the first shortcut by tapping a few blocks together in the Shortcuts app that's already on your phone. It uses Apple Intelligence, so it needs an iPhone 15 Pro or newer, with nothing to download. We made it for mums.
 
   The whole course is free until 30 August at littleparrot.app. Follow along, and save this for when the list is only in your head.
-title: "The list in your house only you can see"
+title: 'The list in your house only you can see'
 hastags:
-  instagram: ["#mentalload", "#invisiblelabour", "#mentalloadofmotherhood", "#mumlife", "#sharethementalload"]
-  tiktok: ["#mentalload", "#invisiblelabor", "#momtok", "#mentalloadofmotherhood", "#sharethementalload"]
+  instagram:
+    [
+      '#mentalload',
+      '#invisiblelabour',
+      '#mentalloadofmotherhood',
+      '#mumlife',
+      '#sharethementalload',
+    ]
+  tiktok:
+    ['#mentalload', '#invisiblelabor', '#momtok', '#mentalloadofmotherhood', '#sharethementalload']
 discord: |-
   The mental load is the invisible work of keeping track: nappies running low, the check that needs booking, the birthday a fortnight on Thursday. Short video on making it visible with a shortcut you talk to, so it's not living only in your head. You build the first one free.

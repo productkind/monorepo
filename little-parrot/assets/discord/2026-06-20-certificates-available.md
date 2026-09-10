@@ -4,7 +4,7 @@
 
 # Certificates of Completion are here! 🎓
 
-We've just added Certificates of Completion to Little Parrot, so every course you finish now comes with something to show for it. 🏅 
+We've just added Certificates of Completion to Little Parrot, so every course you finish now comes with something to show for it. 🏅
 
 ### How to download yours:
 
@@ -16,7 +16,7 @@ Adding it to your LinkedIn profile shows your network what AI skills you've acqu
 
 💡 Even among academics, research shows women are 28% less likely to promote their work, but this is absolutely worth celebrating. You developed new skills, so let people see it.
 
--# Source: Peng, Teplitskiy, Romero & Horvát (2025), *The gender gap in scholarly self-promotion on social media*, Nature Communications. https://doi.org/10.1038/s41467-025-60590-y
+-# Source: Peng, Teplitskiy, Romero & Horvát (2025), _The gender gap in scholarly self-promotion on social media_, Nature Communications. https://doi.org/10.1038/s41467-025-60590-y
 
 And if you share a post about your certificate, tag **@productkind** and we'll cheer you on. It also helps more women find Little Parrot and see that building with AI is within their reach too. 🦜
 

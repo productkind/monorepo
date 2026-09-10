@@ -6,27 +6,13 @@ account: little-parrot
 
 # Post 4: The bug report that gets a fix in one round
 
-**Pillar:** the method, shown.
-**Research trace:** vague bug reports are how the doom loop starts, so a
-report template is prevention in disguise; the "What NOT to touch" guardrail
-answers the audience's documented fear of fixes that break other things;
-prompt templates are top saveable content. Repackages the Debugging Prompt
-Formula Template toolkit item.
+**Pillar:** the method, shown. **Research trace:** vague bug reports are how the doom loop starts, so a report template is prevention in disguise; the "What NOT to touch" guardrail answers the audience's documented fear of fixes that break other things; prompt templates are top saveable content. Repackages the Debugging Prompt Formula Template toolkit item.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Form-filling style: the
-template builds up slide by slide like a document being completed, with the
-vote-button example filled in, monospace for the template lines.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Form-filling style: the template builds up slide by slide like a document being completed, with the vote-button example filled in, monospace for the template lines.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -38,10 +24,7 @@ vote-button example filled in, monospace for the template lines.
 | 6 | A fence around part of an app mockup | "Finish with the guardrail, WHAT NOT TO TOUCH: 'Don't change the book listing layout or the navigation. Only fix the voting logic.' This line keeps a fix from breaking something else." |
 | 7 (CTA) | Brand card | "One thorough report beats five quick retries, in time and in credits. The copy-paste template with a filled-in example is in Fix Bugs with Confidence: Debugging Your Lovable App, on LittleParrot.app. First challenge free 🟪 Save this 🔖" |
 
-**Alt text (for the post):** A template carousel for reporting bugs to
-Lovable: describe where you were and what you did, expected versus actual
-behaviour, the clues you found, what you already tried, and what Lovable
-should not touch.
+**Alt text (for the post):** A template carousel for reporting bugs to Lovable: describe where you were and what you did, expected versus actual behaviour, the clues you found, what you already tried, and what Lovable should not touch.
 
 ## Caption (exact)
 
@@ -55,7 +38,4 @@ The copy-paste version with a filled-in example comes with the full course, Fix 
 
 Save this for your next bug. 🔖
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #lovable #debugging #womenintech #buildinpublic #aitools #femalefounder #learnwithai #techforwomen #vibecodingtips
+. . . #vibecoding #buildwithai #womenwhobuild #lovable #debugging #womenintech #buildinpublic #aitools #femalefounder #learnwithai #techforwomen #vibecodingtips

@@ -1,9 +1,8 @@
 # Your Friendly Guide to AI Prompting: 4+1 Practical Prompting Techniques (Part 3 of 3)
 
-*How to enhance your thinking with AI, not replace it*
+_How to enhance your thinking with AI, not replace it_
 
-**Date:** July 30, 2025
-**Author:** Kinga Magyar
+**Date:** July 30, 2025 **Author:** Kinga Magyar
 
 ---
 
@@ -79,10 +78,7 @@ Life use cases:
 
 > "I'm a product manager. I want to explore a more creative path outside of work, maybe something with writing, mentoring, or coaching. But I'm not sure how to start or whether it's worth pursuing seriously. What are three different ways to explore this desire? Evaluate each approach in terms of time investment, clarity gained, and potential to lead to something fulfilling."
 
-> "I'm choosing between two weekend routines to create more balance in my life:
-> Option 1: Saturday focused on errands and productivity, Sunday fully off.
-> Option 2: Spread tasks lightly across both days to reduce pressure.
-> Compare these two approaches and identify their similarities and differences in terms of mental load, rest quality, and long-term sustainability. I have two kids and a demanding job, so I need something that restores me."
+> "I'm choosing between two weekend routines to create more balance in my life: Option 1: Saturday focused on errands and productivity, Sunday fully off. Option 2: Spread tasks lightly across both days to reduce pressure. Compare these two approaches and identify their similarities and differences in terms of mental load, rest quality, and long-term sustainability. I have two kids and a demanding job, so I need something that restores me."
 
 ### 3. Encourage Self-Criticism
 

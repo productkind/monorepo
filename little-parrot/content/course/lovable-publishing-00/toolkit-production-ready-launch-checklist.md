@@ -1,6 +1,7 @@
 ---
-challenge: "6 - Launch Early, Grow Steadily"
+challenge: '6 - Launch Early, Grow Steadily'
 ---
+
 ## Production-Ready Launch Checklist
 
 Use this checklist to turn your published app into a professional, discoverable product. It covers everything beyond the basics of publishing. You don't need to complete every item before launching, but the more you tick off, the more professional and discoverable your product will be.
@@ -20,13 +21,17 @@ Use this checklist to turn your published app into a professional, discoverable 
 ### Discoverability
 
 - [ ] **Optimise pages for SEO.** Prompt Lovable:
+
 ```
 Review all pages and fix the heading tag hierarchy. Each page should have exactly one h1 tag. Add descriptive alt text to all images.
 ```
-- [ ] **Submit your sitemap to Google Search Console.** Go to Sitemaps in the left menu of [Google Search Console](https://search.google.com/search-console) and submit `https://yourdomain.com/sitemap.xml`. If you can't find your Sitemap, prompt Lovable: 
+
+- [ ] **Submit your sitemap to Google Search Console.** Go to Sitemaps in the left menu of [Google Search Console](https://search.google.com/search-console) and submit `https://yourdomain.com/sitemap.xml`. If you can't find your Sitemap, prompt Lovable:
+
 ```
 Does this app have a sitemap.xml? If not, generate one.
 ```
+
 - [ ] **Register on Google Business Profile** (if your product has a local component). Set it up at [business.google.com](https://business.google.com/).
 - [ ] **List on at least one product directory.** Consider Product Hunt, Indie Hackers, BetaList, or a niche directory relevant to your audience.
 
@@ -34,9 +39,11 @@ Does this app have a sitemap.xml? If not, generate one.
 
 - [ ] **Check Lovable's built-in analytics.** Click the **...** at the top of your project (next to Preview), then select the Analytics tab.
 - [ ] **Set up Google Analytics** for deeper insights. Create a free account at [analytics.google.com](https://analytics.google.com/), get your Measurement ID (starts with `G-`), then prompt Lovable:
+
 ```
 Add Google Analytics with Measurement ID G-XXXXXXXXXX to the app.
 ```
+
 - [ ] **Plan your first feedback conversation.** Identify 3-5 people who fit your target user and prepare specific questions (see the [User Feedback Question Bank](https://littleparrot.app/nest/toolkit/ab78ba0e-37bb-4c6c-b21b-a7466df4b19d) in the Toolkit).
 - [ ] **Choose one distribution channel to focus on.** Pick the one place where your target users are most active and start sharing there.
 

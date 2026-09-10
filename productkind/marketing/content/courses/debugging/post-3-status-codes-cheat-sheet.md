@@ -6,28 +6,13 @@ account: little-parrot
 
 # Post 3: What the error numbers mean
 
-**Pillar:** the method, shown.
-**Research trace:** teaches real technical terms (HTTP status codes, RLS)
-with inline plain-language definitions, per our teach-real-terms principle;
-cheat sheets are the top saveable format; knowing what 403 means is also
-what lets her "have confident conversations with developers", the
-standing-in-technical-rooms outcome the audience names. Repackages the HTTP
-Status Codes and Error Messages Cheat Sheet toolkit item.
+**Pillar:** the method, shown. **Research trace:** teaches real technical terms (HTTP status codes, RLS) with inline plain-language definitions, per our teach-real-terms principle; cheat sheets are the top saveable format; knowing what 403 means is also what lets her "have confident conversations with developers", the standing-in-technical-rooms outcome the audience names. Repackages the HTTP Status Codes and Error Messages Cheat Sheet toolkit item.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Cheat-sheet style: each
-code drawn huge like a type specimen, name and meaning beneath, the common
-Lovable cause in a highlighted footnote.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Cheat-sheet style: each code drawn huge like a type specimen, name and meaning beneath, the common Lovable cause in a highlighted footnote.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -39,10 +24,7 @@ Lovable cause in a highlighted footnote.
 | 6 | Giant 500, a small flame being watered | "500 Internal Server Error: something crashed in the backend code; check the Cloud logs for the specific error. 502 and 503: a service is down or overloaded, usually temporarily. Wait a moment, refresh, try again." |
 | 7 (CTA) | Brand card, a filled-in example sentence | "Then say what you found: 'I see a 403 in the Network tab when I submit the form, likely an RLS issue. Can you check the policies for that table?' The full cheat sheet is in Fix Bugs with Confidence: Debugging Your Lovable App, on LittleParrot.app. First challenge free 🟪 Save this 🔖" |
 
-**Alt text (for the post):** A cheat-sheet carousel of HTTP status codes for
-debugging Lovable apps: 200 and 201 mean success, 400 bad data, 401 logged
-out, 403 permission and Row Level Security, 404 missing, 409 duplicate, and
-500-level codes for backend errors.
+**Alt text (for the post):** A cheat-sheet carousel of HTTP status codes for debugging Lovable apps: 200 and 201 mean success, 400 bad data, 401 logged out, 403 permission and Row Level Security, 404 missing, 409 duplicate, and 500-level codes for backend errors.
 
 ## Caption (exact)
 
@@ -56,7 +38,4 @@ The full cheat sheet, including the common Console errors, comes with Fix Bugs w
 
 Save this next to your DevTools. 🔖
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #lovable #debugging #womenintech #aitools #learnwithai #techforwomen #vibecodingtips #codingtips #techsupport
+. . . #vibecoding #buildwithai #womenwhobuild #lovable #debugging #womenintech #aitools #learnwithai #techforwomen #vibecodingtips #codingtips #techsupport

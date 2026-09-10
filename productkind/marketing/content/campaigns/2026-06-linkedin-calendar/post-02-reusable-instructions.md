@@ -6,8 +6,7 @@ account: kinga
 
 # Post 02
 
-**Angle:** Stop re-explaining the same things to AI; keep your instructions in a file it reads every time.
-**Key point:** A concrete, low-effort technique anyone can copy, grounded in real examples from our own instructions file.
+**Angle:** Stop re-explaining the same things to AI; keep your instructions in a file it reads every time. **Key point:** A concrete, low-effort technique anyone can copy, grounded in real examples from our own instructions file.
 
 ---
 

@@ -1,6 +1,7 @@
 ---
-challenge: "6 - Make a Bigger Change with Copilot"
+challenge: '6 - Make a Bigger Change with Copilot'
 ---
+
 ## Copilot Guardrails for Your Lovable App
 
 A small file you set up once on your own computer that teaches GitHub Copilot the rules of a Lovable project. After this, Copilot knows which parts of your app to leave alone (the bits Lovable manages) and what to do instead when a task touches one of those bits: hand you a ready-made prompt for Lovable.
@@ -53,7 +54,7 @@ Copy everything from the block further down and paste it into `lovable.md`.
 
 **6. Copy the file's full address**
 
-In the file list on the left, right-click on `lovable.md` and choose **Copy Path**. (This is the *full* path, not the relative one. On Mac it starts with `/Users/`, on Windows it starts with `C:\Users\`.) Keep this on your clipboard for the next step.
+In the file list on the left, right-click on `lovable.md` and choose **Copy Path**. (This is the _full_ path, not the relative one. On Mac it starts with `/Users/`, on Windows it starts with `C:\Users\`.) Keep this on your clipboard for the next step.
 
 **7. Open VS Code's user settings**
 
@@ -180,8 +181,8 @@ Your `lovable.md` file lives in your `copilot-rules` folder like any other text 
 
 Two useful tweaks as you learn more:
 
-- **Add project-specific habits.** For example: *"Prefer the existing Button component from `src/components/ui/button.tsx`. Do not restyle a raw `<button>` element."*
-- **Add tone or naming rules.** For example: *"All user-facing copy should be in British English."*
+- **Add project-specific habits.** For example: _"Prefer the existing Button component from `src/components/ui/button.tsx`. Do not restyle a raw `<button>` element."_
+- **Add tone or naming rules.** For example: _"All user-facing copy should be in British English."_
 
 Keep the file short and focused. Copilot reads it on every chat, so a tight set of rules works better than a long one.
 

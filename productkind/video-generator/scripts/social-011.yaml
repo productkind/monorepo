@@ -22,9 +22,9 @@ caption: |-
   We think the women in our Little Parrot courses deserve to know this part too, not just how to type a prompt.
 
   Follow along for more of the parts of AI nobody explains, and save this for the next time someone asks where AI gets its data.
-title: "Where AI training data comes from"
+title: 'Where AI training data comes from'
 hastags:
-  instagram: ["#womenintech", "#womenwhobuild", "#womenlearningai", "#aidata", "#howaiworks"]
-  tiktok: ["#womenintech", "#womenempowerment", "#womenlearningai", "#aidata", "#howaiworks"]
+  instagram: ['#womenintech', '#womenwhobuild', '#womenlearningai', '#aidata', '#howaiworks']
+  tiktok: ['#womenintech', '#womenempowerment', '#womenlearningai', '#aidata', '#howaiworks']
 discord: |-
   The text used to train an AI is called a corpus, and the big labs mostly buy it rather than gather it themselves. Short video on the invisible industry of data brokers selling the internet by the truckload.

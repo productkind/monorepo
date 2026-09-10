@@ -1,9 +1,10 @@
 ---
 slug: what-is-the-mental-load
-title: "What Is the Mental Load? The Invisible Work of Remembering"
-description: "The mental load is the work of noticing, deciding and keeping track, rather than the doing. Where the term came from, what the research calls it, and why it falls unevenly."
+title: 'What Is the Mental Load? The Invisible Work of Remembering'
+description: 'The mental load is the work of noticing, deciding and keeping track, rather than the doing. Where the term came from, what the research calls it, and why it falls unevenly.'
 primary_query: what is mental load
-secondary_queries: [mental load meaning, women mental load, mental load of motherhood, emotional load]
+secondary_queries:
+  [mental load meaning, women mental load, mental load of motherhood, emotional load]
 type: article
 status: drafted
 ref: seo-what-is-mental-load
@@ -27,9 +28,9 @@ If you already recognise it and want to put some of it down, skip to [what actua
 
 ## Where the term comes from
 
-The phrase reached most people through a comic. In 2017 the French cartoonist Emma published [*You Should've Asked*](https://english.emmaclit.com/2017/05/20/you-shouldve-asked/) (*Fallait demander*), in which a mother runs a household and a dinner party at once, and her husband answers her frustration with "you should've asked", which is where the title comes from. Her argument was that being asked to help puts the job of managing the household back onto the person already managing it. So asking someone to take a job over is itself part of the work.
+The phrase reached most people through a comic. In 2017 the French cartoonist Emma published [_You Should've Asked_](https://english.emmaclit.com/2017/05/20/you-shouldve-asked/) (_Fallait demander_), in which a mother runs a household and a dinner party at once, and her husband answers her frustration with "you should've asked", which is where the title comes from. Her argument was that being asked to help puts the job of managing the household back onto the person already managing it. So asking someone to take a job over is itself part of the work.
 
-The sociologist Allison Daminger then researched what that work is actually made of. She interviewed 35 couples for [*The Cognitive Dimension of Household Labor*](https://journals.sagepub.com/doi/10.1177/0003122419859007), published in the *American Sociological Review* in 2019, and broke cognitive labour into four parts:
+The sociologist Allison Daminger then researched what that work is actually made of. She interviewed 35 couples for [_The Cognitive Dimension of Household Labor_](https://journals.sagepub.com/doi/10.1177/0003122419859007), published in the _American Sociological Review_ in 2019, and broke cognitive labour into four parts:
 
 1. **Anticipate.** Noticing a need before it becomes urgent.
 2. **Identify.** Working out the options for meeting it.
@@ -38,7 +39,7 @@ The sociologist Allison Daminger then researched what that work is actually made
 
 She found that couples often split the deciding fairly evenly, while anticipating and monitoring fell mostly to women. Those two run all day, and nobody else can see them happening.
 
-Eve Rodsky's [*Fair Play*](https://www.fairplaylife.com/the-book) (2019) turned the same idea into a system of cards, one per household job, where whoever holds a card owns all of it: the noticing, the planning and the doing, rather than only doing the job once someone else has asked.
+Eve Rodsky's [_Fair Play_](https://www.fairplaylife.com/the-book) (2019) turned the same idea into a system of cards, one per household job, where whoever holds a card owns all of it: the noticing, the planning and the doing, rather than only doing the job once someone else has asked.
 
 ## Why it is heavy
 

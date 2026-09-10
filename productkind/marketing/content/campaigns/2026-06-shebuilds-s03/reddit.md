@@ -6,9 +6,7 @@ account: little-parrot
 
 # Reddit (one shared draft, value-first, plain link, no ref tag)
 
-Post into: subreddits you choose, where it fits the rules. Lead with the experience,
-keep the offer as a footnote, and drop the link in a comment if the sub disallows
-links in posts.
+Post into: subreddits you choose, where it fits the rules. Lead with the experience, keep the offer as a footnote, and drop the link in a comment if the sub disallows links in posts.
 
 ---
 
@@ -32,5 +30,4 @@ Happy to answer questions from my own experience doing this.
 
 ---
 
-**Link to drop in a comment (plain, no ref tag):**
-https://littleparrot.app/5e86e580-264c-442c-8cc4-be5645f13e87/course-overview
+**Link to drop in a comment (plain, no ref tag):** https://littleparrot.app/5e86e580-264c-442c-8cc4-be5645f13e87/course-overview

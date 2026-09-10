@@ -81,8 +81,9 @@ INPUT: [Specific instruction for what the learner should write/do]
 ### Emoji Usage
 
 Use emojis sparingly but strategically for emotional signposting:
+
 - 😫 for struggle/pain points
-- 🤗 for success/happy outcomes  
+- 🤗 for success/happy outcomes
 - 💫 for action/momentum
 - 💡 for insights/discoveries
 - ✨ for "magic moments"
@@ -101,6 +102,7 @@ Use emojis sparingly but strategically for emotional signposting:
 ### Reflection Prompts
 
 Invite self-assessment:
+
 - "Reflect on your [work]: What are the key moments?"
 - "Double-check: Does this cover the entire journey?"
 - "Think about it..."
@@ -130,19 +132,20 @@ Why [do this thing]? [2-3 sentences on importance and user benefit].
 
 How to [do the thing]: [Clear instructions, often with a template or framework]
 
-**Example – [Concrete Example Title]:**
-[Detailed, relatable example using running persona]
+**Example – [Concrete Example Title]:** [Detailed, relatable example using running persona]
 
 Now it's your turn. [Encouragement].
 
 INPUT: [Specific prompt for learner action]
 
 ## Challenge 2: [Next Topic]
+
 [Pattern continues...]
 
 ## Conclusion & Next Steps
 
 Congratulations on working through the process! 🎉 You now have:
+
 - [Outcome 1]
 - [Outcome 2]
 - [Outcome 3]
@@ -168,7 +171,7 @@ Good luck, and happy [doing the thing]! 🚀
 ## Good vs Bad Examples
 
 | ❌ Avoid | ✅ Prefer |
-|---------|----------|
+| --- | --- |
 | "Simply add authentication" | "Adding authentication takes a few steps. Let's walk through it." |
 | "It's easy to fix bugs" | "Bugs are a normal part of building. Here's how to approach them." |
 | "Obviously you'll need a backend" | "Your app needs a backend to save data. Here's why..." |

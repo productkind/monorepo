@@ -6,8 +6,7 @@ account: kinga
 
 # Substack AI detection / losing our uniqueness (Substack Note)
 
-**Angle:** Substack's new AI-detection feature (built on Pangram) as a way in to a worry Kinga notices in herself: AI-generated writing is homogenising everyone's voice, even pulling non-native speakers towards borrowed American idioms.
-**Key point:** A reflection post, not a how-to. Honest admission (she can no longer remember how she'd write something without AI) plus a genuine question about platform-wide detection. Note version of `2026-07-ai-detection-homogenous-writing-linkedin.md`; attach the Pangram chart as an image.
+**Angle:** Substack's new AI-detection feature (built on Pangram) as a way in to a worry Kinga notices in herself: AI-generated writing is homogenising everyone's voice, even pulling non-native speakers towards borrowed American idioms. **Key point:** A reflection post, not a how-to. Honest admission (she can no longer remember how she'd write something without AI) plus a genuine question about platform-wide detection. Note version of `2026-07-ai-detection-homogenous-writing-linkedin.md`; attach the Pangram chart as an image.
 
 ---
 

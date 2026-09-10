@@ -6,32 +6,15 @@ account: little-parrot
 
 # Post 2: That pop-up has a name
 
-**Pillar:** the method, shown.
-**Research trace:** "design that doesn't look like every other Lovable app"
-sits in the demand data, and component vocabulary is the first step to
-directing design; named components get the design she pictured instead of a
-guessing loop (credit ROI); prompt libraries are top saveable content.
-Repackages the Component Prompt Library and the components section of the
-Software Vocabulary Cheat Sheet.
+**Pillar:** the method, shown. **Research trace:** "design that doesn't look like every other Lovable app" sits in the demand data, and component vocabulary is the first step to directing design; named components get the design she pictured instead of a guessing loop (credit ROI); prompt libraries are top saveable content. Repackages the Component Prompt Library and the components section of the Software Vocabulary Cheat Sheet.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in the "Display copy"
-column is display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in the "Display copy" column is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Specimen style: each
-slide draws the component large and labelled, with a ready prompt in
-monospace beneath.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Specimen style: each slide draws the component large and labelled, with a ready prompt in monospace beneath.
 
-**Full-fidelity rule:** every word that appears on a slide is in this table,
-verbatim. The implemented carousel may not add copy; `check.py` in
-`productkind/carousel-design/` enforces it.
+**Full-fidelity rule:** every word that appears on a slide is in this table, verbatim. The implemented carousel may not add copy; `check.py` in `productkind/carousel-design/` enforces it.
 
 | Slide | Visual | Display copy (verbatim) | Prompt window / mockup content (verbatim) |
 | --- | --- | --- | --- |
@@ -43,12 +26,8 @@ verbatim. The implemented carousel may not add copy; `check.py` in
 | 6 | A nav bar collapsing into a hamburger icon | "NAVIGATION BAR: the links that move people around your website" | Add a top nav bar with Home, About, and Contact. Highlight the active page. Collapse into a hamburger menu on mobile. |
 | 7 (CTA) | Brand card, all components assembled into a page | "Referring to each component by name gets you what you pictured" Then: "The full prompt library is in Basics of Software for Vibe Coding." Badge: "LittleParrot.app" · "First challenge free 💛" · "Save this for your next vibe coding session 🔖" | (none) |
 
-**Alt text (for the post):** A component-vocabulary carousel: primary,
-secondary, and tertiary buttons, cards, modals, input fields, textareas,
-dropdowns, and navigation bars, each with a ready-to-use Lovable prompt.
+**Alt text (for the post):** A component-vocabulary carousel: primary, secondary, and tertiary buttons, cards, modals, input fields, textareas, dropdowns, and navigation bars, each with a ready-to-use Lovable prompt.
 
 ## Captions
 
-Channel captions live in `captions.md` in this folder (written with the
-captions skill): TikTok, Instagram, LinkedIn, and YouTube Shorts, plus the
-founder comments and pinned-comment links.
+Channel captions live in `captions.md` in this folder (written with the captions skill): TikTok, Instagram, LinkedIn, and YouTube Shorts, plus the founder comments and pinned-comment links.

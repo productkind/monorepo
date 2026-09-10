@@ -6,28 +6,13 @@ account: little-parrot
 
 # Post 6: Reading security warnings calmly
 
-**Pillar:** the messy middle.
-**Research trace:** security fear has a canonical story in this audience
-("Guys, I'm under attack"), and security hygiene is their own line between a
-toy and a real product; the framework turns a panic moment into a triage
-routine, which is confidence-by-design; frames the learner's situation, not
-the tool's failings. Repackages the Security Warnings Decision Framework
-toolkit item.
+**Pillar:** the messy middle. **Research trace:** security fear has a canonical story in this audience ("Guys, I'm under attack"), and security hygiene is their own line between a toy and a real product; the framework turns a panic moment into a triage routine, which is confidence-by-design; frames the learner's situation, not the tool's failings. Repackages the Security Warnings Decision Framework toolkit item.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Triage-guide style:
-calm colours (no alarm-red backgrounds), the severity labels shown as neat
-tags, one step per slide.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Triage-guide style: calm colours (no alarm-red backgrounds), the severity labels shown as neat tags, one step per slide.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -39,11 +24,7 @@ tags, one step per slide.
 | 6 | A database table with a small rule shield per row | "The finding you'll meet most: 'RLS not enabled'. Row Level Security is the set of database rules controlling who can see or change each row. Without it, your data is open even if your app's screens look private. Worth fixing every time." |
 | 7 (CTA) | Brand card, the panel showing all clear | "Fixed? Run one final scan, bookmark the secure version, and re-check after new features. The full framework is in Fix Bugs with Confidence: Debugging Your Lovable App, on LittleParrot.app. First challenge free 🟪 Save this for publish week 🔖" |
 
-**Alt text (for the post):** A triage-guide carousel for Lovable security
-findings: weigh your app's context, read the error, warning, and info
-severity labels, use the free Try to fix all button up to three times, ask
-Lovable about remaining findings with context, and always enable Row Level
-Security.
+**Alt text (for the post):** A triage-guide carousel for Lovable security findings: weigh your app's context, read the error, warning, and info severity labels, use the free Try to fix all button up to three times, ask Lovable about remaining findings with context, and always enable Row Level Security.
 
 ## Caption (exact)
 
@@ -57,7 +38,4 @@ The full framework comes with our course Fix Bugs with Confidence: Debugging You
 
 Save this for publish week. 🔖
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #lovable #appsecurity #debugging #womenintech #buildinpublic #aitools #learnwithai #techforwomen #vibecodingtips
+. . . #vibecoding #buildwithai #womenwhobuild #lovable #appsecurity #debugging #womenintech #buildinpublic #aitools #learnwithai #techforwomen #vibecodingtips

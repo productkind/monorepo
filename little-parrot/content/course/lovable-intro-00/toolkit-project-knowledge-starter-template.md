@@ -1,6 +1,7 @@
 ---
-challenge: "6 - Plan, Test, and Connect Services"
+challenge: '6 - Plan, Test, and Connect Services'
 ---
+
 ## Project Knowledge Starter Template
 
 Paste this template into Lovable's Knowledge panel (in your project, click `+` in the chat input, and select `Knowledge`). Fill in the sections that apply to your project. You don't need to complete everything at once. Start with the target user and design system, then add more as your project grows.
@@ -9,15 +10,18 @@ Lovable reads this context with every prompt you send, so it keeps your app cons
 
 ```markdown
 ## Target user
+
 - Persona name: [e.g. Sarah]
 - Who they are: [e.g. A book club organiser who coordinates a group of 8-12 members]
 - What they need: [e.g. A simple way to collect book suggestions and vote on what to read next]
 - What frustrates them: [e.g. Book suggestions get lost in WhatsApp, and organising votes is chaotic]
 
 ## Product outcome
+
 This app helps [target user] to [core outcome, e.g. "organise book club activities without the chaos of group chats"].
 
 ## Design system
+
 - Style: [e.g. warm, friendly, bookish]
 - Primary colour: [e.g. #FDF6E3 (warm cream)]
 - Accent colour: [e.g. #E07A5F (coral)]
@@ -29,14 +33,17 @@ This app helps [target user] to [core outcome, e.g. "organise book club activiti
 - [Any other visual rules, e.g. "use illustrations instead of stock photos"]
 
 ## Tone of voice
+
 The app should feel [e.g. "friendly and encouraging, like talking to a helpful friend"]. Avoid [e.g. "formal or corporate language"]. Use [e.g. "short sentences and casual phrasing"].
 
 ## Naming conventions
+
 - App name: [e.g. Book Club Picks]
 - Users are called: [e.g. "members", not "users"]
 - The main items are called: [e.g. "suggestions", not "entries" or "posts"]
 
 ## Technical requirements
+
 - Backend: Lovable Cloud
 - Authentication: Google Sign-In
 - It's a mobile-first platform. Optimise layout, font sizes, and buttons for mobile. Prioritise speed and readability.

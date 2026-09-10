@@ -1,7 +1,8 @@
 ---
-challenge: "1 - Prompt AI to communicate confidently in high pressure situations"
-type: "Cheat sheet"
+challenge: '1 - Prompt AI to communicate confidently in high pressure situations'
+type: 'Cheat sheet'
 ---
+
 ## Tone and Style Word Bank
 
 The vocabulary to describe how you want something to sound, so you don't have to invent the words while you're already under pressure. Open it when a draft is technically fine but doesn't sound like you, or when you know the message is delicate and you want the level of formality right before you send anything.
@@ -22,7 +23,7 @@ Length: under 40 words.
 Tone influences how your message will feel. Pick two or three descriptors, depending on your situation.
 
 | The situation | Tone words to use | What they stop the AI doing |
-|---|---|---|
+| --- | --- | --- |
 | Asking for an urgent fix without escalating | collaborative, warm, confident, not blaming | Sounding like a formal escalation |
 | Telling stakeholders something has slipped | direct, calm, accountable, no hedging | Burying the news in three paragraphs of caveats |
 | Pushing back on a feature request | respectful, firm, curious, solution-focused | Either caving or sounding defensive |
@@ -38,7 +39,7 @@ Tone influences how your message will feel. Pick two or three descriptors, depen
 Style influences how your message will look.
 
 | What you're controlling | Write this in your prompt |
-|---|---|
+| --- | --- |
 | **Length** | "Under 40 words", "three short paragraphs", "no more than 200 words" |
 | **Format** | "One Slack message, no bullet points", "a bullet list of at most four points, one line each", "a single paragraph" |
 | **Sentence shape** | "Short sentences, one idea each, no subclauses" |
@@ -100,7 +101,7 @@ Use this as a starting point rather than the whole instruction, since a referenc
 ### When the draft is wrong, add this
 
 | The draft is... | Add this to the prompt |
-|---|---|
+| --- | --- |
 | Four paragraphs when you wanted a line | "Length: under 40 words. Format: one Slack message, no bullets." |
 | Too formal for your team | "Tone: conversational, the way I'd say it out loud in stand-up." |
 | Too breezy for the audience | "Tone: professional and calm. No emoji, no exclamation marks." |

@@ -1,4 +1,4 @@
-import { clip, defineVideo, riveAtFrame } from "../narration/definition";
+import { clip, defineVideo, riveAtFrame } from '../narration/definition'
 
 /**
  * A b-roll cut of "You asked for one button", the vibe coder campaign's video 2.
@@ -23,90 +23,89 @@ import { clip, defineVideo, riveAtFrame } from "../narration/definition";
  * since the originals are 10-bit HLG HEVC that Chromium cannot decode and that convert flat.
  */
 export default defineVideo({
-  id: "vibe-coder-validation-02-b-roll",
-  voice: "chloe",
-  model: "eleven_v3",
+  id: 'vibe-coder-validation-02-b-roll',
+  voice: 'chloe',
+  model: 'eleven_v3',
   overlays: [
-    riveAtFrame({ rive: "parrot-greet-00.riv", frame: 0 }),
-    riveAtFrame({ rive: "parrot-peek-00.riv", frame: 500 }),
+    riveAtFrame({ rive: 'parrot-greet-00.riv', frame: 0 }),
+    riveAtFrame({ rive: 'parrot-peek-00.riv', frame: 500 }),
   ],
   sections: [
     {
       // IMG_8900
-      text: "You asked for one button. The AI changed fourteen files.",
-      visual: clip({ src: "clip-00-laptop-many-rows.mp4" }),
+      text: 'You asked for one button. The AI changed fourteen files.',
+      visual: clip({ src: 'clip-00-laptop-many-rows.mp4' }),
       endsParagraph: true,
     },
     {
       // IMG_8491
-      text: "The AI says it’s complete.",
-      visual: clip({ src: "clip-01-table-served.mp4" }),
+      text: 'The AI says it’s complete.',
+      visual: clip({ src: 'clip-01-table-served.mp4' }),
     },
     {
       // IMG_8589: reeds and still water at dusk, held for the question.
-      text: "The page still loads in preview. Do you publish it?",
-      visual: clip({ src: "clip-02-dusk-water-still.mp4" }),
+      text: 'The page still loads in preview. Do you publish it?',
+      visual: clip({ src: 'clip-02-dusk-water-still.mp4' }),
       endsParagraph: true,
     },
     {
       // IMG_8706
-      text: "One of those files could control sign-in, payments",
-      visual: clip({ src: "clip-03-stone-wall.mp4" }),
+      text: 'One of those files could control sign-in, payments',
+      visual: clip({ src: 'clip-03-stone-wall.mp4' }),
     },
     {
       // IMG_8662
-      text: "or how customer data is saved. You can’t judge the change",
-      visual: clip({ src: "clip-04-shelf-storage.mp4" }),
+      text: 'or how customer data is saved. You can’t judge the change',
+      visual: clip({ src: 'clip-04-shelf-storage.mp4' }),
     },
     {
       // IMG_6967
-      text: "by looking at the new button. You need to know what changed,",
-      visual: clip({ src: "clip-05-tangled-branches.mp4" }),
+      text: 'by looking at the new button. You need to know what changed,',
+      visual: clip({ src: 'clip-05-tangled-branches.mp4' }),
     },
     {
       // IMG_8510
-      text: "which customer journeys could be affected and what to test before release.",
-      visual: clip({ src: "clip-06-rocky-shore.mp4" }),
+      text: 'which customer journeys could be affected and what to test before release.',
+      visual: clip({ src: 'clip-06-rocky-shore.mp4' }),
       endsParagraph: true,
     },
     {
       // IMG_7649
-      text: "If you want that control over your own app,",
-      visual: clip({ src: "clip-07-willow-park.mp4" }),
+      text: 'If you want that control over your own app,',
+      visual: clip({ src: 'clip-07-willow-park.mp4' }),
     },
     {
       // IMG_8761
-      text: "that’s what we’re building a learning path for.",
-      visual: clip({ src: "clip-08-pines-path.mp4" }),
+      text: 'that’s what we’re building a learning path for.',
+      visual: clip({ src: 'clip-08-pines-path.mp4' }),
       endsParagraph: true,
     },
     {
       // IMG_8650
-      text: "By the end, you’ll review a proposed change,",
-      visual: clip({ src: "clip-09-reeds-lake.mp4" }),
+      text: 'By the end, you’ll review a proposed change,',
+      visual: clip({ src: 'clip-09-reeds-lake.mp4' }),
     },
     {
       // IMG_8680
-      text: "test the affected behaviour and decide whether to release it",
-      visual: clip({ src: "clip-10-ducks-water.mp4" }),
+      text: 'test the affected behaviour and decide whether to release it',
+      visual: clip({ src: 'clip-10-ducks-water.mp4' }),
     },
     {
       // IMG_8762
-      text: "or restore the working version. The waitlist link is in the comments.",
-      visual: clip({ src: "clip-11-white-blossom.mp4" }),
+      text: 'or restore the working version. The waitlist link is in the comments.',
+      visual: clip({ src: 'clip-11-white-blossom.mp4' }),
     },
     {
       // IMG_8764
-      text: "Sign up and we’ll let you know when the learning path opens.",
-      visual: clip({ src: "clip-12-field-river.mp4" }),
+      text: 'Sign up and we’ll let you know when the learning path opens.',
+      visual: clip({ src: 'clip-12-field-river.mp4' }),
       endsParagraph: true,
     },
     {
       // IMG_8849
       text:
-        "[pause][curious] What’s the biggest change you’ve approved without " +
-        "understanding it?",
-      visual: clip({ src: "clip-13-deer-grass.mp4" }),
+        '[pause][curious] What’s the biggest change you’ve approved without ' + 'understanding it?',
+      visual: clip({ src: 'clip-13-deer-grass.mp4' }),
     },
   ],
-});
+})

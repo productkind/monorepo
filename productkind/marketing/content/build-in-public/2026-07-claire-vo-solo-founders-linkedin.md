@@ -6,8 +6,7 @@ account: kinga
 
 # Claire Vo / Solo Founders podcast — small businesses, personal goals
 
-**Angle:** Reflection on the Solo Founders episode with Claire Vo (ChatPRD). Lower capital requirements make much smaller businesses viable, so measure a business by whether it fits your personal goals, not by scale.
-**Key point:** Small business means small overhead; know where your time goes (Kinga's spring tracking showed 629 app switches on the busiest day, messaging cutting into every work block) so you can protect time for the work that fits your goals.
+**Angle:** Reflection on the Solo Founders episode with Claire Vo (ChatPRD). Lower capital requirements make much smaller businesses viable, so measure a business by whether it fits your personal goals, not by scale. **Key point:** Small business means small overhead; know where your time goes (Kinga's spring tracking showed 629 app switches on the busiest day, messaging cutting into every work block) so you can protect time for the work that fits your goals.
 
 ---
 

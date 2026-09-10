@@ -6,27 +6,13 @@ account: little-parrot
 
 # Post 1: The five-blank problem statement
 
-**Pillar:** the method, shown (PM expertise, shared).
-**Research trace:** the audience self-describe as idea people, and this
-template turns an idea into build decisions; fill-in-the-blank templates are
-top saveable content; problem-first thinking is the PM judgement that
-prevents weeks of aimless prompting (direct credit ROI); points at the free
-first challenge. Repackages the Define the Problem You're Solving toolkit item.
+**Pillar:** the method, shown (PM expertise, shared). **Research trace:** the audience self-describe as idea people, and this template turns an idea into build decisions; fill-in-the-blank templates are top saveable content; problem-first thinking is the PM judgement that prevents weeks of aimless prompting (direct credit ROI); points at the free first challenge. Repackages the Define the Problem You're Solving toolkit item.
 
 ## Format
 
-**Spec key for the designer:** In the slide table, any text introduced as
-"Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with
-markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text
-the learner types into a tool. Render it verbatim in monospace inside a
-prompt-input mockup (a chat input field with a cursor and send arrow), so
-it reads as typed text rather than decoration; markdown symbols are part of
-the typed text, never styled labels. Everything else in "Text on slide" is
-display copy in the brand style.
+**Spec key for the designer:** In the slide table, any text introduced as "Prompt:" (or "prompt Lovable:", "Say:", "Assembled:") or written with markdown symbols (##, -, 1., backticks) is a prompt snippet: literal text the learner types into a tool. Render it verbatim in monospace inside a prompt-input mockup (a chat input field with a cursor and send arrow), so it reads as typed text rather than decoration; markdown symbols are part of the typed text, never styled labels. Everything else in "Text on slide" is display copy in the brand style.
 
-**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Fill-in-the-blank
-style: the template lines set large with blanks as highlighted boxes,
-filling in slide by slide with the Book Club Organiser example.
+**Carousel, 7 slides, 1080 x 1350 (4:5 portrait).** Fill-in-the-blank style: the template lines set large with blanks as highlighted boxes, filling in slide by slide with the Book Club Organiser example.
 
 | Slide | Visual | Text on slide |
 | --- | --- | --- |
@@ -38,9 +24,7 @@ filling in slide by slide with the Book Club Organiser example.
 | 6 | A crossed-out app icon | "And the rule that surprises people: your solution doesn't appear anywhere in it. This statement is for understanding the problem. The product comes later, and it comes out better for the wait." |
 | 7 (CTA) | Brand card | "Writing yours is the free first challenge of Build a Valuable Product: How to Break Down Your Idea for Vibe Coding, on LittleParrot.app 🟪 Save the template 🔖" |
 
-**Alt text (for the post):** A template carousel for writing a product
-problem statement: I am, trying to, but, because, which makes me feel, with
-a filled-in book club example and rules for making each blank specific.
+**Alt text (for the post):** A template carousel for writing a product problem statement: I am, trying to, but, because, which makes me feel, with a filled-in book club example and rules for making each blank specific.
 
 ## Caption (exact)
 
@@ -54,7 +38,4 @@ Writing your own problem statement is the free first challenge of Build a Valuab
 
 Save the template for your next idea. 🔖
 
-.
-.
-.
-#vibecoding #buildwithai #womenwhobuild #productmanagement #shebuilds #womenintech #techforwomen #productthinking #appbuilding #startupideas #learnwithai #buildinpublic
+. . . #vibecoding #buildwithai #womenwhobuild #productmanagement #shebuilds #womenintech #techforwomen #productthinking #appbuilding #startupideas #learnwithai #buildinpublic

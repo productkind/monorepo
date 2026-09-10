@@ -6,8 +6,7 @@ account: kinga
 
 # How has the tech industry changed in the past year and a half
 
-**Angle:** AI tremendously influenced the tech industry, and people get disillusioned. I saw a reel that made me think how it has changed for people to work in the tech industry.
-**Instagram reel:** https://www.instagram.com/reel/DbeWEnDOVIB/?igsh=cjZic2oxNjE5aWJn
+**Angle:** AI tremendously influenced the tech industry, and people get disillusioned. I saw a reel that made me think how it has changed for people to work in the tech industry. **Instagram reel:** https://www.instagram.com/reel/DbeWEnDOVIB/?igsh=cjZic2oxNjE5aWJn
 
 ---
 

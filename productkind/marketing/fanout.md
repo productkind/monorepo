@@ -1,37 +1,21 @@
 # Marketing fanout
 
-A small system so promoting a campaign across many channels takes minutes, not
-an afternoon, and never starts from a blank page.
+A small system so promoting a campaign across many channels takes minutes, not an afternoon, and never starts from a blank page.
 
 ## The idea
 
-You write the message once, as a short brief. The promo-fanout skill turns that one
-brief into channel-ready drafts (LinkedIn, Substack, Slack, Discord, email,
-WhatsApp, Reddit, Circle), each shaped to that channel's norms and carrying its own
-analytics tag. Your job shrinks to the two things only you can do: a final edit, and
-hitting publish.
+You write the message once, as a short brief. The promo-fanout skill turns that one brief into channel-ready drafts (LinkedIn, Substack, Slack, Discord, email, WhatsApp, Reddit, Circle), each shaped to that channel's norms and carrying its own analytics tag. Your job shrinks to the two things only you can do: a final edit, and hitting publish.
 
 ## Files
 
-- **`productkind/marketing/channels/README.md`** — the registry of where you post
-  and the rules for each place. Maintained once, reused every campaign. Keep it
-  current.
-- **`brief-template.md`** (next to this file) — the 5-minute brief you fill in
-  per campaign.
-- **`content/campaigns/<slug>/`** — one folder per campaign. Holds the filled
-  `brief.md`, the generated per-channel drafts, and a `posting-plan.md` checklist.
+- **`productkind/marketing/channels/README.md`** — the registry of where you post and the rules for each place. Maintained once, reused every campaign. Keep it current.
+- **`brief-template.md`** (next to this file) — the 5-minute brief you fill in per campaign.
+- **`content/campaigns/<slug>/`** — one folder per campaign. Holds the filled `brief.md`, the generated per-channel drafts, and a `posting-plan.md` checklist.
 
 ## Workflow
 
-1. **Once:** finish filling the `TO FILL` fields in the channel registry
-   (`productkind/marketing/channels/README.md`): community rules, handles, timing.
-   This is the only setup, and it pays off every campaign.
-2. **Per campaign:** copy `brief-template.md` to
-   `content/campaigns/<slug>/brief.md` and fill it in.
-3. Run the **promo-fanout** skill (tell Claude the campaign slug, or just say
-   "fan out the <slug> campaign").
-4. It writes one draft per target channel into `content/campaigns/<slug>/`. Each draft's
-   header says where to post it, the asset, and any caution. If a channel needs a
-   real sequence (e.g. two LinkedIn posts spaced days apart), it also writes a short
-   `posting-plan.md` for that sequence. Otherwise there's no plan file to read.
+1. **Once:** finish filling the `TO FILL` fields in the channel registry (`productkind/marketing/channels/README.md`): community rules, handles, timing. This is the only setup, and it pays off every campaign.
+2. **Per campaign:** copy `brief-template.md` to `content/campaigns/<slug>/brief.md` and fill it in.
+3. Run the **promo-fanout** skill (tell Claude the campaign slug, or just say "fan out the <slug> campaign").
+4. It writes one draft per target channel into `content/campaigns/<slug>/`. Each draft's header says where to post it, the asset, and any caution. If a channel needs a real sequence (e.g. two LinkedIn posts spaced days apart), it also writes a short `posting-plan.md` for that sequence. Otherwise there's no plan file to read.
 5. Edit, then post. Reuse the ref tags to see which channels actually drive signups.

@@ -8,7 +8,7 @@ script: |-
   Second, the same prompt can give you different answers. When the model predicts the next token, it does not always pick the single most likely word. It samples from the top few options. A bit of randomness is why hitting regenerate can produce a different reply.
 
   So the model is not remembering you, and it is not being consistent either. It is doing maths, with a small amount of dice-rolling on top.
-  
+
   How AI assistants handle the context is getting more nuanced every day. If you want to learn more about it, follow along.
 caption: |-
   Two things about chat assistants tend to surprise people.
@@ -22,9 +22,9 @@ caption: |-
   It is the sort of thing we unpack with the women in our Little Parrot courses, because it explains so much of what feels odd about AI.
 
   Follow along for more of these, and save this for the next time a long chat starts to drift.
-title: "Why AI forgets, and never repeats itself"
+title: 'Why AI forgets, and never repeats itself'
 hastags:
-  instagram: ["#womenintech", "#womenwhobuild", "#womenlearningai", "#aicontext", "#howaiworks"]
-  tiktok: ["#womenintech", "#womenempowerment", "#womenlearningai", "#aicontext", "#howaiworks"]
+  instagram: ['#womenintech', '#womenwhobuild', '#womenlearningai', '#aicontext', '#howaiworks']
+  tiktok: ['#womenintech', '#womenempowerment', '#womenlearningai', '#aicontext', '#howaiworks']
 discord: |-
   Two things that surprise people about chat assistants: they do not remember past chats, and the same prompt can give different answers. Short video on context and the little bit of dice-rolling behind every reply.

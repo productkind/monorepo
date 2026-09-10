@@ -6,16 +6,12 @@ account: productkind
 
 # Stop re-explaining yourself to AI — script
 
-Bucket: automation / how a two-person company runs on AI (the reclaim-time
-promise made concrete). Source:
-`../../campaigns/2026-06-linkedin-calendar/post-02-reusable-instructions.md`.
-Written in personal-tone-of-voice.
+Bucket: automation / how a two-person company runs on AI (the reclaim-time promise made concrete). Source: `../../campaigns/2026-06-linkedin-calendar/post-02-reusable-instructions.md`. Written in personal-tone-of-voice.
 
-**Treatment:** Kinga to camera to open and close, screen recording of the real
-instructions file in the middle. Roughly 55 seconds.
+**Treatment:** Kinga to camera to open and close, screen recording of the real instructions file in the middle. Roughly 55 seconds.
 
 | Beat | Spoken | On-screen text |
-|---|---|---|
+| --- | --- | --- |
 | Hook (0-4s, to camera) | "I used to waste the first ten minutes of every task re-explaining the same things to AI." | Stop re-explaining yourself to AI |
 | The problem (4-14s) | "How our courses should read, what a good outline looks like, the words we never use. I was retyping the same context most mornings." | — |
 | The fix (14-32s, screen recording of the file) | "So I put all of it into one file the AI reads before it writes anything for me. Now when I ask for an outline, it already knows our standards. When I draft a post, it already knows the words we avoid, like never using 'game-changing', or an em dash." | — |

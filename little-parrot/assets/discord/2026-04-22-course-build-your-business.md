@@ -27,13 +27,7 @@ Our newest micro-course walks you through everything between "I built something 
 
 We also built **7 bonus toolkits** to go with the course. These are practical resources you can use while you're working, not just while you're learning:
 
-📝 **Value Proposition Formula** — the formula, examples, and a list of everywhere you'll use it
-🌐 **Domain and Email Setup Guide** — step-by-step setup for GoDaddy, Google Workspace, SPF, DKIM, and DMARC
-📊 **PostHog Analytics Setup Guide** — two ready-to-use prompts for adding analytics to your app
-📋 **Startup Directory List** — 50+ free directories to submit your product to, categorised by stage
-💰 **Pricing Psychology Cheat Sheet** — anchoring, decoy pricing, and the endowment effect explained with examples
-📈 **Break-Even and Cashflow Tracker** — a Google Sheet to calculate your break-even point and track income/expenses
-📞 **Accountant Call Preparation Template** — questions to bring to your first accountant call so you walk away with clear answers
+📝 **Value Proposition Formula** — the formula, examples, and a list of everywhere you'll use it 🌐 **Domain and Email Setup Guide** — step-by-step setup for GoDaddy, Google Workspace, SPF, DKIM, and DMARC 📊 **PostHog Analytics Setup Guide** — two ready-to-use prompts for adding analytics to your app 📋 **Startup Directory List** — 50+ free directories to submit your product to, categorised by stage 💰 **Pricing Psychology Cheat Sheet** — anchoring, decoy pricing, and the endowment effect explained with examples 📈 **Break-Even and Cashflow Tracker** — a Google Sheet to calculate your break-even point and track income/expenses 📞 **Accountant Call Preparation Template** — questions to bring to your first accountant call so you walk away with clear answers
 
 All toolkit items are available in the [Nest](https://littleparrot.app/nest/toolkit).
 

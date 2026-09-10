@@ -28,9 +28,11 @@ caption: |-
   It is the kind of thing we walk through with the women in our Little Parrot courses, no maths required.
 
   Follow along for more of these, no maths needed, and save this for the next time you hear a model described by its number of parameters.
-title: "How an artificial neuron works"
+title: 'How an artificial neuron works'
 hastags:
-  instagram: ["#womenintech", "#womenwhobuild", "#womenlearningai", "#neuralnetworks", "#howaiworks"]
-  tiktok: ["#womenintech", "#womenempowerment", "#womenlearningai", "#neuralnetworks", "#howaiworks"]
+  instagram:
+    ['#womenintech', '#womenwhobuild', '#womenlearningai', '#neuralnetworks', '#howaiworks']
+  tiktok:
+    ['#womenintech', '#womenempowerment', '#womenlearningai', '#neuralnetworks', '#howaiworks']
 discord: |-
   Language models borrow one idea from the brain: the neuron. Short video on how an artificial neuron adds up numbers, decides whether to fire, and why "billions of parameters" starts to mean something once you have seen one.

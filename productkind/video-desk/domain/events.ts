@@ -1,6 +1,6 @@
-import { createEventCreators, type DomainEventOf } from '@dungarees/core/event.ts'
-
 import type { Candidate, ClipCandidate, Section, VideoDetail, VideoSummary } from './types.ts'
+
+import { createEventCreators, type DomainEventOf } from '@dungarees/core/event.ts'
 
 type VideoDeskEventPayloads = {
   'videos-listed': { videos: VideoSummary[] }

@@ -1,9 +1,11 @@
 # Email to Geek Girls Portugal mailing list
 
 ## Subject
+
 Hand Off the Mental Load – free course for mums 💛
 
 ## Email
+
 Hi Geek Girls,
 
 I’d like to share a new Little Parrot course we made especially for mums. It’s free until 30 August so more mums can benefit from it:

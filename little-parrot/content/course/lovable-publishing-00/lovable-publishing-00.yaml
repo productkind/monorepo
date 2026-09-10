@@ -11,7 +11,7 @@ course:
     - Track how people use your app and make data-informed decisions
     - Plan and execute a growth strategy for your product
   challenges:
-    - title: "Go Live: Your First Real Launch"
+    - title: 'Go Live: Your First Real Launch'
       isFree: true
       skills:
         - Publishing
@@ -54,7 +54,7 @@ course:
           content:
             videoRemotionId: lesson-vibe-coding-lovable-publish-00-video-00
             vimeoId: 1165274396
-            youtubeId: "CKXnK9Agq18"
+            youtubeId: 'CKXnK9Agq18'
             transcript: |-
               You've built an app with Lovable. That's a real achievement. But right now, it
               probably lives on a generic URL, has a default favicon, and maybe still uses test
@@ -84,7 +84,7 @@ course:
             imageUrl: /courses/lovable-publishing-00/publish.gif
           subtitle: From your editor to the internet
         - type: text
-          title: "Preview vs production: two different worlds"
+          title: 'Preview vs production: two different worlds'
           content:
             body: |-
               Lovable gives you **two environments**:
@@ -205,7 +205,7 @@ course:
             imageUrl: /courses/lovable-publishing-00/device-toggle.webp
           subtitle: Make sure it looks right everywhere
         - type: quiz-question
-          title: "Quiz: Preview vs production"
+          title: 'Quiz: Preview vs production'
           content:
             question: What is the difference between preview and production in Lovable?
             options:
@@ -216,7 +216,7 @@ course:
             correctAnswer: 2
             explanation: Preview is the environment where you build your app and test changes safely. Production is the live version your users see. Changes only reach production when you click Publish, which means you can experiment in preview without affecting real users.
         - type: quiz-question
-          title: "Quiz: API keys"
+          title: 'Quiz: API keys'
           content:
             question: Why should you check your API keys before publishing?
             options:
@@ -227,7 +227,7 @@ course:
             correctAnswer: 0
             explanation: Test API keys are designed for development and testing your app works as expected, not real users. If you forget to switch to production keys, features like payments, or sending emails will not work, even though the app looks fine on the surface.
         - type: reflection
-          title: "Your turn: Publish your app"
+          title: 'Your turn: Publish your app'
           content:
             description: |-
               Time to go live!
@@ -241,7 +241,7 @@ course:
               Their first reaction was:
             subDescription: You've taken your app from preview to production. That's a real milestone.
         - type: challenge-end
-          title: "Your app is live on the internet! 💫"
+          title: 'Your app is live on the internet! 💫'
           content:
             nextModule: "**Next challenge:** Your app is live, but its address is still something like `bookclub.lovable.app`. What if it could be `bookcluborganiser.com`? In the next challenge, you'll claim a custom domain and give your product a professional home on the internet."
             description: You've published your first production-ready app.
@@ -250,7 +250,7 @@ course:
 
               **Toolkit:** Need to revisit these steps later? Use the [Meta Tags and Favicon Setup Guide](https://littleparrot.app/nest/toolkit/0b1f2dca-14c3-4db6-a653-e139cf8222f4) for a quick reference.
 
-    - title: "Connect a Custom Domain"
+    - title: 'Connect a Custom Domain'
       isFree: false
       skills:
         - Custom Domains
@@ -334,18 +334,18 @@ course:
               This step takes less than five minutes and unlocks tools you'll use in later challenges.
           subtitle: Prove ownership to Google
         - type: quiz-question
-          title: "Quiz: Custom domains"
+          title: 'Quiz: Custom domains'
           content:
             question: What's the most important benefit of a custom domain for a new product?
             options:
               - It makes the your product load faster
               - It builds credibility and makes the product easier to share
               - It's required by Lovable before you can publish your app
-              - It's the only way for users you don't know to access your app 
+              - It's the only way for users you don't know to access your app
             correctAnswer: 1
             explanation: A custom domain makes your product look professional and trustworthy. People are more likely to click, share, and remember a clean domain name. It's not required for publishing, but it's one of the most impactful steps for growth.
         - type: quiz-question
-          title: "Quiz: DNS changes"
+          title: 'Quiz: DNS changes'
           content:
             question: What should you do if your custom domain doesn't work immediately after connecting it with Lovable?
             options:
@@ -356,7 +356,7 @@ course:
             correctAnswer: 3
             explanation: When you add your custom domain to Lovable, it adds a record to the internet's phonebook. This requires a DNS (Domain Name System) change. DNS changes can take anywhere from a few minutes to several hours to take effect across the internet. This is called DNS propagation and it's completely normal. Give it some time before troubleshooting.
         - type: reflection
-          title: "Your turn: Choose your domain"
+          title: 'Your turn: Choose your domain'
           content:
             description: |-
               Search for a domain name for your product on a registrar like GoDaddy.
@@ -370,14 +370,14 @@ course:
               I chose this name because:
             subDescription: Having a custom domain is a significant step. Even if you're still deciding, thinking about your domain name helps you think about your brand.
         - type: challenge-end
-          title: "Your product has a proper address! 🏠"
+          title: 'Your product has a proper address! 🏠'
           content:
             nextModule: "**Next challenge:** Your product has a proper address and looks professional. But when a stranger lands on it for the first time, will they feel safe enough to sign up? In the next challenge, you'll add the legal pages and trust signals that make visitors feel confident using your product."
             description: You know how to find, buy, and connect a custom domain.
             subDescription: |-
               You've learned how to check domain availability, choose a memorable name, buy and connect a custom domain to your Lovable app, and verify ownership with Google. Whether you've connected one now or have it on your list, you've taken an important step towards building a recognisable brand.
 
-    - title: "Build Trust: Legal Pages That Protect You and Your Users"
+    - title: 'Build Trust: Legal Pages That Protect You and Your Users'
       isFree: false
       skills:
         - Privacy Policy
@@ -408,10 +408,10 @@ course:
 
               ```
               You are an expert lawyer. What information do you need from me to write a Privacy Policy and Terms of Use for my [brief description of your product] where I collect [data you collect, e.g., email addresses, customers' payment methods]? 
-              
+
               The Privacy Policy must describe the information collected, its purpose of use, to whom and how to disclose it and reasonable security practices followed to safeguard such information.
               ```
-              
+
               If you want something more trustworthy, you could use a tool like [Termly](https://termly.io/). It generates legal documents based on your answers to a questionnaire. It's free up to one document, and the generated documents are more reliable than a generic AI response.
 
               **Tip:** If you're using Google Analytics or Lovable Cloud (for data storage and authentication), you are collecting user data. Make sure to mention these in the questionnaire or the AI assistant.
@@ -440,7 +440,7 @@ course:
               ```
           subtitle: Where to put your legal links
         - type: text
-          title: "Cookie banners: when you need one"
+          title: 'Cookie banners: when you need one'
           content:
             body: |-
               A **cookie banner** is the notification that appears when you first visit a website, asking you to accept or manage cookies. **Cookies** are data that websites store on your browser to remember things like your preferences or login status.
@@ -465,7 +465,7 @@ course:
             imageUrl: /courses/lovable-publishing-00/cookie-banner.webp
           subtitle: Respecting your users' privacy
         - type: quiz-question
-          title: "Quiz: Privacy policy"
+          title: 'Quiz: Privacy policy'
           content:
             question: When do you need a privacy policy for your web app?
             options:
@@ -476,7 +476,7 @@ course:
             correctAnswer: 0
             explanation: If your app collects any personal data, including email addresses for login, most countries require a privacy policy. It's about being transparent with your users about how their information is handled.
         - type: quiz-question
-          title: "Quiz: Cookie banners"
+          title: 'Quiz: Cookie banners'
           content:
             question: Which of the following are good reasons to add a cookie banner?
             options:
@@ -487,7 +487,7 @@ course:
             correctAnswer: [1, 2]
             explanation: EU and UK privacy regulations (GDPR) require consent for non-essential cookies like those used by analytics tools. If you use Google Analytics and have users in these regions, a cookie banner is the right thing to add.
         - type: reflection
-          title: "Your turn: Think about data protection"
+          title: 'Your turn: Think about data protection'
           content:
             description: |-
               Think it through: what data does your app collect from users?
@@ -495,7 +495,7 @@ course:
               My app collects:
             subDescription: Thinking about data protection might not be the most exciting part of building a product, but they're an important foundation. You're building something people can trust.
         - type: challenge-end
-          title: "Your product looks trustworthy! 🛡️"
+          title: 'Your product looks trustworthy! 🛡️'
           content:
             nextModule: "**Next challenge:** Right now, only people you share the link with can find your product. In the next challenge, you'll change that. You'll learn how to make your app discoverable through search engines and AI tools, so people you've never met can find what you've built."
             description: You've added the legal essentials that build trust.
@@ -504,7 +504,7 @@ course:
 
               **Toolkit:** The [Legal Pages Prompt Library](https://littleparrot.app/nest/toolkit/6f1be631-8fdd-4353-96a1-2d4cdefdad1a) has all the prompts from this challenge ready to copy and paste.
 
-    - title: "Get Found: SEO and Discoverability"
+    - title: 'Get Found: SEO and Discoverability'
       isFree: false
       skills:
         - SEO
@@ -551,7 +551,7 @@ course:
               ```
           subtitle: Help Google understand your product
         - type: text
-          title: "Heading tags: helping search engines read your pages"
+          title: 'Heading tags: helping search engines read your pages'
           content:
             body: |-
               We mentioned **heading tags** (h1, h2, h3) in the previous step. These are worth a closer look, because they're one of the easiest ways to improve your SEO.
@@ -605,7 +605,7 @@ course:
             imageUrl: /courses/lovable-publishing-00/sitemap.webp
           subtitle: Help Google find your pages faster
         - type: text
-          title: "GEO: Being found by AI tools"
+          title: 'GEO: Being found by AI tools'
           content:
             body: |-
               **GEO** stands for Generative Engine Optimisation. It's a newer concept that focuses on making your product discoverable by AI tools like ChatGPT, Perplexity, and Google's AI Overview.
@@ -632,7 +632,7 @@ course:
               Not every product needs this, but if yours has any local component (like a local book club organiser, a neighbourhood service, or a business with a physical address), it's worth the few minutes to set up.
           subtitle: Boost local discoverability
         - type: text
-          title: "Backlinks: getting other sites to link to you"
+          title: 'Backlinks: getting other sites to link to you'
           content:
             body: |-
               **Backlinks** are links from other websites that point to yours. Search engines treat them as votes of confidence. The more quality backlinks you have, the higher you'll rank.
@@ -646,7 +646,7 @@ course:
               Backlink building is a long-term effort, but even a few quality links help.
           subtitle: Votes of confidence from around the web
         - type: quiz-question
-          title: "Quiz: SEO timing"
+          title: 'Quiz: SEO timing'
           content:
             question: After publishing and optimising your app for SEO, how long does it typically take to appear in Google search results?
             options:
@@ -657,7 +657,7 @@ course:
             correctAnswer: 3
             explanation: SEO takes patience. Search engines need time to discover, crawl, and index your website. It typically takes a few weeks, and in competitive spaces it can take months. Submitting your sitemap through Google Search Console can help speed things up.
         - type: quiz-question
-          title: "Quiz: Backlinks"
+          title: 'Quiz: Backlinks'
           content:
             question: What are backlinks, and why do they help with SEO?
             options:
@@ -668,7 +668,7 @@ course:
             correctAnswer: 1
             explanation: Backlinks are links from external websites pointing to yours. Search engines like Google use them as a signal that your content is valuable and trustworthy, which helps improve your search ranking.
         - type: reflection
-          title: "Your turn: Plan your backlink strategy"
+          title: 'Your turn: Plan your backlink strategy'
           content:
             description: |-
               Think about where your target users spend time online. Where could you share your product or write about it to earn backlinks?
@@ -687,7 +687,7 @@ course:
               Directories I'll list on:
             subDescription: Having a concrete list of places to share your product is more valuable than a vague plan to "do marketing." You can start with one and build from there.
         - type: challenge-end
-          title: "People can start finding you! 🔍"
+          title: 'People can start finding you! 🔍'
           content:
             nextModule: "**Next challenge:** People are starting to find your product. But how many? And what do they do when they get there? In the next challenge, you'll set up analytics and learn how to get feedback that actually helps you improve."
             description: You've laid the foundation for being discovered online.
@@ -698,12 +698,12 @@ course:
               - You've submitted your sitemap to Google Search Console
               - Learned how AI tools discover products through GEO 
               - You have a plan for building backlinks in communities where your users spend time
-              
+
               These aren't one-time tasks, but you've started building the habits that will make your product more discoverable over time.
 
               **Toolkit:** The [SEO and Discoverability Quick-Start Checklist](https://littleparrot.app/nest/toolkit/aceb0958-b112-4abc-8710-5d49e8b60c8b) has every step from this challenge as a tick-box list you can work through at your own pace.
 
-    - title: "Know Your Users: Metrics, Feedback, and Distribution"
+    - title: 'Know Your Users: Metrics, Feedback, and Distribution'
       isFree: false
       skills:
         - Metrics
@@ -828,7 +828,7 @@ course:
               Don't try all of these at once. Pick one or two channels where your target users are most active, and focus your energy there. Share your product, ask for feedback, and listen to what people say. Then iterate based on what you learn.
           subtitle: Where to share your product
         - type: quiz-question
-          title: "Quiz: Analytics"
+          title: 'Quiz: Analytics'
           content:
             question: Which metric is most useful for an early-stage product?
             options:
@@ -839,22 +839,22 @@ course:
             correctAnswer: 2
             explanation: Early on, the most important thing to know is whether users are doing the thing your app was built for. Are they adding book suggestions? Voting? Completing the core action? This tells you whether your product is delivering value.
         - type: quiz-question
-          title: "Quiz: User feedback"
+          title: 'Quiz: User feedback'
           content:
-            question: "What's a more effective way to ask for feedback than \"What do you think?\""
+            question: 'What''s a more effective way to ask for feedback than "What do you think?"'
             options:
               - "What's the one thing you'd change?"
-              - "Do you like it?"
-              - "Is it good enough?"
-              - "Would you recommend it?"
+              - 'Do you like it?'
+              - 'Is it good enough?'
+              - 'Would you recommend it?'
             correctAnswer: 0
             explanation: Specific questions get specific answers. "What's the one thing you'd change?" gives you actionable feedback. Broad questions like "What do you think?", or leading questions like "Is it good enough?" often result in polite but unhelpful responses like "It's nice!"
         - type: reflection
-          title: "Your turn: Plan a feedback conversation"
+          title: 'Your turn: Plan a feedback conversation'
           content:
             description: |-
               Stop for a moment and think about what you'll ask users when you talk to them about your product. 
-              
+
               What do you want to learn from them? What questions will help you get that information?
             placeholder: |-
               I'll ask users these questions:
@@ -877,7 +877,7 @@ course:
 
               **Toolkit:** The [User Feedback Question Bank](https://littleparrot.app/nest/toolkit/ab78ba0e-37bb-4c6c-b21b-a7466df4b19d) has a full collection of questions organised by what you want to learn, plus tips on spotting patterns across conversations.
 
-    - title: "Launch Early, Grow Steadily"
+    - title: 'Launch Early, Grow Steadily'
       isFree: false
       skills:
         - Agile Development
@@ -888,7 +888,7 @@ course:
       completionTime: '10:00'
       steps:
         - type: text
-          title: "The case for launching \"before you're ready\""
+          title: 'The case for launching "before you''re ready"'
           content:
             body: |-
               If you've been waiting for your product to be "done" before sharing it widely, here's a perspective shift: **your product will never feel done**. The apps you use every day, from Instagram to Google Maps, are constantly updated. "Done" doesn't exist in the world of digital products.
@@ -905,7 +905,7 @@ course:
               *Want to dig deeper into this idea? Our article [The Dilemma of the MVP](https://productkind.substack.com/p/the-dilemma-of-the-mvp) explores how to decide what's "enough" to launch. And if you need help slicing out an Minimum Viable Product from your idea, our [Build a Valuable Product](https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview) micro-course walks you through it step by step.*
           subtitle: Perfect is the enemy of launched
         - type: text
-          title: "How Buffer launched with almost nothing"
+          title: 'How Buffer launched with almost nothing'
           content:
             body: |-
               **Buffer**, the social media scheduling tool used by millions, started with a landing page and nothing else.
@@ -920,7 +920,7 @@ course:
             imageUrl: /courses/lovable-publishing-00/buffer-mvp.webp
           subtitle: A real-world example of launching lean
         - type: text
-          title: "Agile development: what it means for solo builders"
+          title: 'Agile development: what it means for solo builders'
           content:
             body: |-
               **Agile development** is a way of building software in short cycles instead of one big push. For solo builders, the core idea is:
@@ -984,7 +984,7 @@ course:
               **Toolkit:** This checklist is also available as the [Production-Ready Launch Checklist](https://littleparrot.app/nest/toolkit/5066c12c-66ad-4844-a768-1bdae81c86ec) in your Toolkit, with detailed instructions for each step. Save it and come back to it whenever you launch something new.
           subtitle: Everything in one place
         - type: quiz-question
-          title: "Quiz: Launching early"
+          title: 'Quiz: Launching early'
           content:
             question: Why is it better to launch early than to wait until your product feels "done"?
             options:
@@ -995,7 +995,7 @@ course:
             correctAnswer: 1
             explanation: Launching early lets you learn from real users before investing too much time in features that might not be important. You can always improve based on what you learn. The longer you wait for "perfect," the more time you risk spending on the wrong things. Until you get real user feedback on your product, everything you think you know is just an assumption.
         - type: quiz-question
-          title: "Quiz: The agile cycle"
+          title: 'Quiz: The agile cycle'
           content:
             question: What is the core cycle of agile development for solo builders?
             options:
@@ -1006,7 +1006,7 @@ course:
             correctAnswer: 3
             explanation: The agile cycle for solo builders is "build, measure, learn, repeat." You build one small feature, check if it works, learn from the result, and then decide what to do next. This keeps you moving forward without getting overwhelmed.
         - type: reflection
-          title: "Your turn: Get ready to launch and grow"
+          title: 'Your turn: Get ready to launch and grow'
           content:
             description: |-
               Think about this:

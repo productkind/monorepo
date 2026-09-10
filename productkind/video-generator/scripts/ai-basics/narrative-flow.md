@@ -59,6 +59,3 @@
   - Why is hard to say
   - Getting cheaper but not
   - local vs non local
-
-
-

@@ -4,6 +4,7 @@ description: Email that paid subscribers receive.
 ---
 
 # Thank you for becoming a paid subscriber!
+
 [email banner]
 
 #### This made my day.

@@ -1,9 +1,8 @@
 # Crafting Clear User Stories: Slicing, Structure, and Succinct Titles
 
-*A guide for Product People to learn actionable techniques to write user stories that are quicker to implement, and deliver value*
+_A guide for Product People to learn actionable techniques to write user stories that are quicker to implement, and deliver value_
 
-**Date:** June 25, 2025
-**Author:** Kinga Magyar
+**Date:** June 25, 2025 **Author:** Kinga Magyar
 
 ---
 
@@ -77,20 +76,11 @@ For this user action to work, you also need to implement pagination that appears
 
 Use acceptance criteria to clarify the details. So, as you see, this user interaction is a lot of work, even though it seems like a small step for your user. Acceptance criteria can really help in clarifying all these details. Just ask yourselves, "What would we need to check to confirm this story is done?" For the structure of the acceptance criteria you can either use bullet points or Gherkin that helps your developers write test cases. If you and your team decide to use Gherkin, then each acceptance criteria will be its own scenario:
 
-> Scenario: The learner views the available courses
-> Given I am logged into the application
-> When I navigate to the courses page,
-> Then I can see the list of available courses.
+> Scenario: The learner views the available courses Given I am logged into the application When I navigate to the courses page, Then I can see the list of available courses.
 
-> Scenario: The learner looks at a specific course tile
-> Given I am on the list of courses
-> When I look at a specific course tile,
-> Then I can see the content type, title, instructor, library, level, length, publication date of the course.
+> Scenario: The learner looks at a specific course tile Given I am on the list of courses When I look at a specific course tile, Then I can see the content type, title, instructor, library, level, length, publication date of the course.
 
-> Scenario: The learner hovers over the info icon on the course tile
-> Given I am looking at a specific course tile
-> When I hover over the info icon,
-> Then I can see the following text in a tooltip: "This course is only available in the libraries listed. To access this course you will need to purchase a package that includes at least one of these libraries."
+> Scenario: The learner hovers over the info icon on the course tile Given I am looking at a specific course tile When I hover over the info icon, Then I can see the following text in a tooltip: "This course is only available in the libraries listed. To access this course you will need to purchase a package that includes at least one of these libraries."
 
 (I didn't include error scenarios in this story on purpose, because my suggestion is to focus on the "happy case" first, then tackle error cases in separate stories. We are going to cover those in the next article.)
 
