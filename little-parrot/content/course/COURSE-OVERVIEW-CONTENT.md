@@ -181,7 +181,7 @@ Stop panicking when your app breaks. Build a practical debugging toolkit so you 
 
 ---
 
-## 4. Build a Valuable Product: How to Break Down Your Idea for Vibe Coding
+## 4. Plan Your Vibe Coded App: Define the Problem, User, MVP and First Prompt
 
 ### Short description
 

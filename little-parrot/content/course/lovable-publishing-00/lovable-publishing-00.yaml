@@ -62,7 +62,7 @@ course:
 
               That's about to change.
 
-              In this micro-course, you'll go from "I built an app" to "I'm running a product
+              In this course, you'll go from "I built an app" to "I'm running a product
               that people can find, trust, and use." You'll publish your app properly, set up a
               custom domain, add legal pages, make it discoverable through search engines and AI
               tools, track how people use it, and plan your growth.
@@ -103,7 +103,7 @@ course:
 
               **Forgetting to switch them** is a common gotcha. Your app will look like it works, but behind the scenes, data might not save, emails might not send, or payments might not process. A quick check now saves confusion later.
 
-              *If API keys are new to you, our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) micro-course explains them in friendly terms.*
+              *If API keys are new to you, our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) course explains them in friendly terms.*
           subtitle: A common gotcha to avoid
         - type: text
           title: How to check and update your API keys
@@ -569,7 +569,7 @@ course:
               Review all pages in the app and fix the heading tag hierarchy. Each page should have exactly one h1 tag as the main title. Make sure the heading hierarchy follows HTML structure best practices. List what you changed.
               ```
 
-              *Curious about HTML and how web pages are built? Our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) micro-course explains these concepts in friendly terms.*
+              *Curious about HTML and how web pages are built? Our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) course explains these concepts in friendly terms.*
           subtitle: Structure your content for Google
         - type: text
           title: Setting expectations about timing
@@ -902,7 +902,7 @@ course:
 
               This doesn't mean shipping broken software. It means **shipping the smallest possible piece of your product that can deliver core user value**. Then getting this limited scope into users' hands to validate whether it's valuable for them.
 
-              *Want to dig deeper into this idea? Our article [The Dilemma of the MVP](https://productkind.substack.com/p/the-dilemma-of-the-mvp) explores how to decide what's "enough" to launch. And if you need help slicing out an Minimum Viable Product from your idea, our [Build a Valuable Product](https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview) micro-course walks you through it step by step.*
+              *Want to dig deeper into this idea? Our article [The Dilemma of the MVP](https://productkind.substack.com/p/the-dilemma-of-the-mvp) explores how to decide what's "enough" to launch. And if you need help slicing out an Minimum Viable Product from your idea, our [Plan Your Vibe Coded App](https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview) course walks you through it step by step.*
           subtitle: Perfect is the enemy of launched
         - type: text
           title: 'How Buffer launched with almost nothing'
@@ -955,7 +955,7 @@ course:
           title: Your production-ready checklist
           content:
             body: |-
-              Here's everything you've learned in this micro-course, collected into one checklist. Use it every time you prepare a product for launch:
+              Here's everything you've learned in this course, collected into one checklist. Use it every time you prepare a product for launch:
 
               **Before publishing:**
               - ☐ Switch to production API keys
@@ -1040,9 +1040,9 @@ course:
             nextModule: |-
               **Keep building:**
 
-              - If you haven't taken it yet, our [Build a Valuable Product: How to Break Down Your Idea for Vibe Coding](https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview) micro-course helps you structure your next big idea into small, promptable pieces.
-              - Our [Fix Bugs with Confidence: Debugging Your Lovable App](https://littleparrot.app/aaab45b7-209a-4578-a515-3e55687f0c53/course-overview) micro-course teaches you how to handle problems when they come up.
-              - Check out our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) micro-course to communicate more effectively with Lovable by understanding core software concepts.
+              - If you haven't taken it yet, our [Plan Your Vibe Coded App: Define the Problem, User, MVP and First Prompt](https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview) course helps you structure your next big idea into small, promptable pieces.
+              - Our [Fix Bugs with Confidence: Debugging Your Lovable App](https://littleparrot.app/aaab45b7-209a-4578-a515-3e55687f0c53/course-overview) course teaches you how to handle problems when they come up.
+              - Check out our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) course to communicate more effectively with Lovable by understanding core software concepts.
   titleSplit:
     - 'Launch and Grow'
     - 'Your Lovable App'
