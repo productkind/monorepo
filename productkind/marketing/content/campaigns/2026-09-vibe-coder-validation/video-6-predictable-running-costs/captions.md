@@ -17,13 +17,21 @@ campaign: vibe-coded-app-26
 
 **Caption:**
 
-How much does an AI-built app cost to run? Separate fixed subscriptions from usage costs, then test if your price covers both. Built an app with AI? Join our waitlist for women learning how to model its costs. Which cost is hardest to predict?
+How much does an AI-built app cost to run?
+
+The amount on your AI builder’s monthly plan is only one part. Your database, email service, hosting and AI model may all charge differently. Some costs stay fixed. Others rise whenever a customer uploads a file, generates an answer or receives an email.
+
+We’re building a learning path for women who have already built an app with AI and want to understand its running costs to build a sustainable business.
+
+Join the waitlist through the link in the comments, so we can let you know when it opens.
+
+Which of your app's costs is hardest for you to predict?
 
 #womenwhobuild #womenintech #womenfounders #saascosts
 
 **Pinned comment:**
 
-Join the Building Apps with AI waitlist: https://littleparrot.app/guides/building-apps-with-ai?utm_source=tiktok&utm_campaign=vibe-coded-app-26&utm_content=could-one-customer-increase-your-bill
+https://littleparrot.app/guides/building-apps-with-ai?utm_source=tiktok&utm_campaign=vibe-coded-app-26&utm_content=could-one-customer-increase-your-bill
 
 ## Instagram Reels
 
@@ -31,7 +39,7 @@ Join the Building Apps with AI waitlist: https://littleparrot.app/guides/buildin
 
 How much does an AI-built app cost to run?
 
-The amount on your builder’s monthly plan is only one part. Your database, email service, hosting and AI model may all charge differently. Some costs stay fixed. Others rise whenever a customer uploads a file, generates an answer or receives an email.
+The amount on your AI builder’s monthly plan is only one part. Your database, email service, hosting and AI model may all charge differently. Some costs stay fixed. Others rise whenever a customer uploads a file, generates an answer or receives an email.
 
 List every service your app depends on. Record what you pay now, what usage the plan includes and what triggers the next charge. Then estimate the cost of one active customer and compare what those costs look like with ten active customers and with a hundred.
 
