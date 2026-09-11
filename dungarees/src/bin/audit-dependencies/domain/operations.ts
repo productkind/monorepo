@@ -1,4 +1,4 @@
-import { type AuditDependenciesEvent, eventCreators } from './events.ts'
+import { type AuditDependenciesEvent, eventCreators, type MisdeclaredDependency } from './events.ts'
 
 import { createCausedError } from '@dungarees/core/error.ts'
 import { catchAndRethrow } from '@dungarees/rxjs/util.ts'
@@ -21,7 +21,9 @@ import { z } from 'zod'
 export type PackageManifest = {
   dir: string
   name: string
-  declared: string[]
+  dependencies: string[]
+  devDependencies: string[]
+  peerDependencies: string[]
 }
 
 export type SourceFile = {
@@ -33,12 +35,14 @@ export type DependencyFindings = {
   name: string
   missing: string[]
   unused: string[]
+  misdeclared: MisdeclaredDependency[]
 }
 
 const MANIFEST = z.object({
   name: z.string(),
   dependencies: z.record(z.string()).optional(),
   devDependencies: z.record(z.string()).optional(),
+  peerDependencies: z.record(z.string()).optional(),
 })
 
 // TypeScript's own scanner, so specifiers quoted inside template literals, strings and comments
@@ -69,10 +73,9 @@ export const parseManifest = ({
   return {
     dir: path.dirname(manifestPath),
     name: manifest.name,
-    declared: [
-      ...Object.keys(manifest.dependencies ?? {}),
-      ...Object.keys(manifest.devDependencies ?? {}),
-    ],
+    dependencies: Object.keys(manifest.dependencies ?? {}),
+    devDependencies: Object.keys(manifest.devDependencies ?? {}),
+    peerDependencies: Object.keys(manifest.peerDependencies ?? {}),
   }
 }
 
@@ -93,6 +96,8 @@ export const findOwnerDir = ({
 export const isOutsideNodeModules = (filePath: string): boolean =>
   !filePath.split('/').includes('node_modules')
 
+export const isTestFile = (filePath: string): boolean => /\.(test|spec)\.tsx?$/.test(filePath)
+
 export const auditPackages = ({
   manifests,
   sources,
@@ -105,17 +110,32 @@ export const auditPackages = ({
   usedWithoutImport?: string[]
 }): DependencyFindings[] => {
   const dirs = manifests.map(({ dir }) => dir)
-  const importsByDir = new Map<string, Set<string>>(dirs.map((dir) => [dir, new Set<string>()]))
+  const importsByDir = new Map<string, { shipped: Set<string>; tested: Set<string> }>(
+    dirs.map((dir) => [dir, { shipped: new Set<string>(), tested: new Set<string>() }]),
+  )
   sources.forEach(({ path: filePath, content }) => {
     const owner = findOwnerDir({ filePath, dirs })
     if (owner === undefined) {
       return
     }
-    getImportedPackages(content).forEach((name) => importsByDir.get(owner)?.add(name))
+    const imports = importsByDir.get(owner)
+    getImportedPackages(content).forEach((name) => {
+      if (isTestFile(filePath)) {
+        imports?.tested.add(name)
+        return
+      }
+      imports?.shipped.add(name)
+    })
   })
 
-  return manifests.flatMap(({ dir, name, declared }) => {
-    const imported = [...(importsByDir.get(dir) ?? [])].filter((used) => used !== name)
+  return manifests.flatMap(({ dir, name, dependencies, devDependencies, peerDependencies }) => {
+    const { shipped, tested } = importsByDir.get(dir) ?? {
+      shipped: new Set<string>(),
+      tested: new Set<string>(),
+    }
+    const shippedImports = [...shipped].filter((used) => used !== name)
+    const imported = [...new Set([...shippedImports, ...tested])].filter((used) => used !== name)
+    const declared = [...dependencies, ...devDependencies, ...peerDependencies]
     const missing = imported.filter((used) => !declared.includes(used))
     const unused = declared.filter(
       (dependency) =>
@@ -123,7 +143,25 @@ export const auditPackages = ({
         !usedWithoutImport.includes(dependency) &&
         !isTypesPackage(dependency),
     )
-    return missing.length === 0 && unused.length === 0 ? [] : [{ name, missing, unused }]
+    const misdeclared: MisdeclaredDependency[] = [
+      ...dependencies
+        .filter(
+          (dependency) =>
+            tested.has(dependency) &&
+            !shippedImports.includes(dependency) &&
+            !usedWithoutImport.includes(dependency),
+        )
+        .map((dependency) => ({ name: dependency, expected: 'devDependency' as const })),
+      ...devDependencies
+        .filter(
+          (dependency) =>
+            shippedImports.includes(dependency) && !peerDependencies.includes(dependency),
+        )
+        .map((dependency) => ({ name: dependency, expected: 'dependency' as const })),
+    ]
+    return missing.length === 0 && unused.length === 0 && misdeclared.length === 0
+      ? []
+      : [{ name, missing, unused, misdeclared }]
   })
 }
 
