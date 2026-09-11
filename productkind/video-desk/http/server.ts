@@ -194,6 +194,8 @@ const handle = async ({
         output: behavior.pickClip({
           video: String(body.video ?? ''),
           index: Number(body.section ?? 0),
+          // Keeping is the default: a delete asked for by accident cannot be undone.
+          oldFile: body.oldFile === 'delete' ? 'delete' : 'keep',
           clip: {
             id: String(body.id ?? ''),
             name: sectionName({ term: String(body.name ?? body.term ?? '') }),
@@ -224,6 +226,7 @@ const handle = async ({
         output: behavior.pickGif({
           video: String(body.video ?? ''),
           index: Number(body.section ?? 0),
+          oldFile: body.oldFile === 'delete' ? 'delete' : 'keep',
           candidate: {
             id: String(body.gifId ?? ''),
             name: sectionName({ term: String(body.name ?? body.search ?? '') }),

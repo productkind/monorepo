@@ -58,10 +58,18 @@ Flagging works the same for both, because a flag is about a file and a beat.
 
 Each section records it as data in the definition — `source: { provider, id, search, author }` — so the desk reads a shape, not prose. The author is there because pexels asks for the credit, and that cannot be written without keeping the name. It used to be a provenance comment holding a URL, which meant the id had to be re-derived and only giphy URLs carried one; that gap is why two of video 7's picks repeated video 5. Forty sections predate ids being kept and carry a provider and a search only.
 
+## The file a pick replaces
+
+A pick can keep it or delete it, and keeping is the default: a delete asked for by accident cannot be undone, and a kept file only costs disk. The panel says which happened, and why.
+
+**A delete is refused whenever anything still plays the file.** Two videos can share an assets folder — `social-018` renders from `social-016`'s — and one video can use the same file in two sections, which `social-017` does. Either way the desk keeps the file and names what is still using it, rather than deleting it from under another video.
+
+Nothing sweeps up the orphans already in the folders. That wants a command of its own, and it wants the same reference check.
+
 ## Known rough edges
 
 - **The python scripts still exist** in `.claude/skills/video-gifs/scripts` and now hold a second implementation of search, measurement and the fit rule. The sourcing agent uses them, so they cannot simply go; the way out is a CLI over this domain that the skill calls instead.
-- Picking does not delete the gif it replaced, so asset folders collect orphans.
+
 - Video previews rely on range requests, which the api serves, plus a poster frame built on demand and cached outside the repo — a tab that is not really visible has its media loading throttled, and a poster shows the footage regardless.
 - **A pick reuses the filename** when the search is the same, because the name comes from the last two words of the term. The file underneath is replaced, so every preview URL carries the file's mtime and the poster is rebuilt when the clip is newer than it. Without that a swap looks like nothing happened. Giving each pick a distinct name would be the tidier fix, but the skills' own `section-NN-keyword` convention would have to change with it.
 - The api is a plain node process, so a change to `domain/` or `services/` needs it restarted; only the front end hot-reloads.

@@ -1,5 +1,6 @@
 import { eventCreators, type VideoDeskEvent } from './events.ts'
 import {
+  assetsFolderOf,
   chooseKey,
   clipFit,
   edgeColourOf,
@@ -23,6 +24,7 @@ import {
   placeFor,
   type ProviderState,
   repeatsIn,
+  stillReferenced,
   type StockClip,
   unreadSections,
   usedIdsIn,
@@ -123,6 +125,63 @@ export type DeskIo = {
 
 /** Below this frame-to-frame change a gif reads as a still image, whatever its duration says. */
 const STILL = 0.02
+
+export type OldFile = 'keep' | 'delete'
+
+/**
+ * What to do with the file a pick replaced.
+ *
+ * Deleting is refused whenever anything still plays the file, whichever video that is: two videos
+ * can share an assets folder — `social-018` renders from `social-016`'s — and one video can use
+ * the same file in two sections, which `social-017` does. Keeping a file costs disk; deleting one
+ * that is still referenced breaks a video.
+ */
+const retireOldFile = async ({
+  io,
+  video,
+  was,
+  now,
+  choice,
+}: {
+  io: DeskIo
+  video: string
+  was: string
+  now: string
+  choice: OldFile
+}): Promise<{ src: string; removed: boolean; why: string } | null> => {
+  if (was === now) {
+    return null
+  }
+  if (choice === 'keep') {
+    return { src: was, removed: false, why: 'kept, as asked' }
+  }
+
+  const videos = await io.listVideos()
+  const definitions = await Promise.all(
+    videos.map(async (id) => {
+      const source = await io.readDefinition({ video: id })
+      return {
+        video: id,
+        folder: assetsFolderOf({ video: id, source }),
+        sources: parseSections({ source }).map((section) => section.src),
+      }
+    }),
+  )
+  const folder = assetsFolderOf({
+    video,
+    source: await io.readDefinition({ video }),
+  })
+  const users = stillReferenced({ src: was, folder, definitions })
+  if (users.length > 0) {
+    return {
+      src: was,
+      removed: false,
+      why: `kept: still used by ${users.join(', ')}`,
+    }
+  }
+  await io.removeAsset({ video, name: was })
+  return { src: was, removed: true, why: 'deleted, nothing else was using it' }
+}
 
 const sectionsOf = async ({
   io,
@@ -546,10 +605,12 @@ export const pickGif = ({
   video,
   index,
   candidate,
+  oldFile = 'keep',
 }: {
   io: DeskIo
   video: string
   index: number
+  oldFile?: OldFile
   candidate: {
     id: string
     name: string
@@ -596,6 +657,16 @@ export const pickGif = ({
           },
         })
 
+        // Only once the definition points at the new file, so nothing is deleted that a failed
+        // write would have left in use.
+        const replaced = await retireOldFile({
+          io,
+          video,
+          was: existing?.src ?? name,
+          now: name,
+          choice: oldFile,
+        })
+
         const { sections } = await sectionsOf({ io, video })
         const section = sections[index]
         if (section === undefined) {
@@ -610,6 +681,7 @@ export const pickGif = ({
                   clip: clipFit({ seconds: section.gifSeconds, slot: section.slotSeconds }),
                 },
           applied: name,
+          replaced,
         })
       })(),
     ),
@@ -627,10 +699,12 @@ export const pickClip = ({
   video,
   index,
   clip,
+  oldFile = 'keep',
 }: {
   io: DeskIo
   video: string
   index: number
+  oldFile?: OldFile
   clip: {
     id: string
     name: string
@@ -707,6 +781,16 @@ export const pickClip = ({
           },
         })
 
+        // Only once the definition points at the new file, so nothing is deleted that a failed
+        // write would have left in use.
+        const replaced = await retireOldFile({
+          io,
+          video,
+          was: existing?.src ?? name,
+          now: name,
+          choice: oldFile,
+        })
+
         const { sections } = await sectionsOf({ io, video })
         const section = sections[index]
         if (section === undefined) {
@@ -721,6 +805,7 @@ export const pickClip = ({
                   clip: clipFit({ seconds: section.gifSeconds, slot: section.slotSeconds }),
                 },
           applied: name,
+          replaced,
         })
       })(),
     ),

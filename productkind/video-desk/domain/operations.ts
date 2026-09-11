@@ -743,3 +743,34 @@ export const placeFor = ({
   now: VisualKind
   place: Place
 }): Place => (was === now ? place : HOUSE_PLACE[now])
+
+const ASSETS = /assets: (["'])([^"']+)\1/
+
+/**
+ * The folder a video's visuals live in: its own name, unless it borrows another video's.
+ *
+ * `social-018` renders from `social-016`'s folder, which is why this matters for deleting: a file
+ * replaced in one video can still be the file another one plays.
+ */
+export const assetsFolderOf = ({ video, source }: { video: string; source: string }): string =>
+  ASSETS.exec(source)?.[2] ?? video
+
+/**
+ * Every video still playing a file, after a change.
+ *
+ * Returned as places rather than a yes or no, so a file kept back can say who is still using it.
+ * Two videos can share a folder, and one video can use the same file in two sections — `social-017`
+ * does — so neither is a reason to delete it.
+ */
+export const stillReferenced = ({
+  src,
+  folder,
+  definitions,
+}: {
+  src: string
+  folder: string
+  definitions: { video: string; folder: string; sources: string[] }[]
+}): string[] =>
+  definitions
+    .filter((definition) => definition.folder === folder && definition.sources.includes(src))
+    .map((definition) => definition.video)
