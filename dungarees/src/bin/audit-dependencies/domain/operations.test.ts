@@ -180,8 +180,13 @@ test('getManifestsAndSources drops node_modules from both globs', async () => {
   expect(
     await collectValuesFrom(
       getManifestsAndSources({
-        manifestPaths$: of(['/src/a/package.json', '/src/a/node_modules/dep/package.json']),
-        sourcePaths$: of(['/src/a/index.ts', '/src/a/node_modules/dep/index.ts']),
+        dir: '/repo',
+        glob: (pattern) =>
+          of(
+            pattern.endsWith('package.json')
+              ? ['/src/a/package.json', '/src/a/node_modules/dep/package.json']
+              : ['/src/a/index.ts', '/src/a/node_modules/dep/index.ts'],
+          ),
         readFile: (path) => of(contents[path] ?? ''),
       }),
     ),
@@ -197,8 +202,8 @@ test('getManifestsAndSources rejects an unparsable package.json', async () => {
   await expect(
     collectValuesFrom(
       getManifestsAndSources({
-        manifestPaths$: of(['/src/a/package.json']),
-        sourcePaths$: of([]),
+        dir: '/repo',
+        glob: (pattern) => of(pattern.endsWith('package.json') ? ['/src/a/package.json'] : []),
         readFile: () => of('not json'),
       }),
     ),

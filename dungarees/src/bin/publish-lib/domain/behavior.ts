@@ -4,7 +4,7 @@ import {
   copyAssets,
   createOutDir,
   getBuildStartEvent,
-  getPackageDirsWithVersion,
+  getPackagesToPublish,
   publishAllPackages,
   publishLib,
   publishUnlessPublished,
@@ -121,29 +121,18 @@ export const createPublishLibBehavior = ({
     ),
   })
 
-  const publishMultiLib: PublishLibBehavior['publishMultiLib'] = ({ dir, registry }) => {
-    const sourceDir = `${dir}/src`
-    const publishAll$ = getPackageDirsWithVersion({
-      packageJsonPaths$: fileSystem.glob(`${sourceDir}/**/package.json`),
-      versionContent$: fileSystem.readFile(`${dir}/config/version.json`, 'utf-8'),
-      sourceDir,
-      readPackageJson: (path) => fileSystem.readFile(path, 'utf-8'),
+  const publishMultiLib: PublishLibBehavior['publishMultiLib'] = ({ dir, registry }) => ({
+    events$: getPackagesToPublish({
+      dir,
+      glob: fileSystem.glob,
+      readFile: (filePath) => fileSystem.readFile(filePath, 'utf-8'),
     }).pipe(
       publishAllPackages(
-        ({ packageDir, version }) =>
-          publishPackage({
-            srcDir: `${sourceDir}/${packageDir}`,
-            outDir: `${dir}/dist/${packageDir}`,
-            packageDir,
-            version,
-            registry,
-          }).events$,
+        ({ packageDir, srcDir, outDir, version }) =>
+          publishPackage({ srcDir, outDir, packageDir, version, registry }).events$,
       ),
-    )
-    return {
-      events$: publishAll$,
-    }
-  }
+    ),
+  })
 
   return {
     build,
