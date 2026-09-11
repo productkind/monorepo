@@ -64,7 +64,7 @@ const notPublished = (name: string, registry: string | undefined) => ({
     ...(registry === undefined ? [] : ['--registry', registry]),
   ],
   stdout: '',
-  stderror: 'E404 Not found',
+  stderr: 'E404 Not found',
   exitCode: 1,
 })
 
@@ -96,7 +96,7 @@ const createDungareesApp = ({
         command: 'npm',
         args: npmPublishArgs,
         stdout: npmPublishExitCode === 0 ? 'Published successfully' : '',
-        ...(npmPublishStdError === undefined ? {} : { stderror: npmPublishStdError }),
+        ...(npmPublishStdError === undefined ? {} : { stderr: npmPublishStdError }),
         exitCode: npmPublishExitCode,
       },
     ],
@@ -222,7 +222,7 @@ test('publish-single-lib exits non-zero when the publish fails', async () => {
     files: SINGLE_LIB,
     commands: [
       notPublished('@org/lib-1', undefined),
-      { command: 'npm', args: PUBLISH_ARGS, stdout: '', stderror: 'Forbidden', exitCode: 1 },
+      { command: 'npm', args: PUBLISH_ARGS, stdout: '', stderr: 'Forbidden', exitCode: 1 },
     ],
   })
 

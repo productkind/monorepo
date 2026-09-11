@@ -11,7 +11,7 @@ const notPublished = (name: string) => ({
   command: 'npm',
   args: ['view', name, 'versions', '--json'],
   stdout: '',
-  stderror: 'E404 Not found',
+  stderr: 'E404 Not found',
   exitCode: 1,
 })
 
@@ -168,7 +168,7 @@ test('publishSingleLib reports the failure so the command can exit non-zero', as
         command: 'npm',
         args: ['publish', '--access', 'public'],
         stdout: '',
-        stderror: 'You cannot publish over the previously published versions',
+        stderr: 'You cannot publish over the previously published versions',
         exitCode: 1,
       },
     ],
@@ -365,13 +365,13 @@ test('build copies an asset that sits in a subdirectory', async () => {
   expect(service.fileSystem.toJSON()['/dist/config/tsconfig.base.json']).toBe(tsconfig)
 })
 
-const failingNpm = (stderror: string) => [
+const failingNpm = (stderr: string) => [
   ...NOT_PUBLISHED_TWO_LIBS,
   {
     command: 'npm',
     args: ['publish', '--access', 'public'],
     stdout: '',
-    stderror,
+    stderr,
     exitCode: 1,
   },
 ]

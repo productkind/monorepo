@@ -22,18 +22,18 @@ mtest('subProcessService.$stdout', ({ expect }) => {
   })
 })
 
-mtest('subProcessService.$stderror', ({ expect }) => {
+mtest('subProcessService.$stderr', ({ expect }) => {
   const { spawn: fakeSpawn } = createFakeSpawn([
     {
       command: 'ls',
       args: [],
       stdout: '',
-      stderror: 'Error',
+      stderr: 'Error',
       exitCode: 1,
     },
   ])
   const subProcessService = createSubProcessService(fakeSpawn)
-  expect(subProcessService.run('ls').stderror$).toBeObservable('-(1|)', {
+  expect(subProcessService.run('ls').stderr$).toBeObservable('-(1|)', {
     '1': 'Error',
   })
 })
@@ -59,7 +59,7 @@ mtest('subProcessService.$output', ({ expect }) => {
       command: 'ls',
       args: [],
       stdout: 'file.ts',
-      stderror: 'Error',
+      stderr: 'Error',
       exitCode: 1,
     },
   ])
@@ -67,7 +67,7 @@ mtest('subProcessService.$output', ({ expect }) => {
   expect(subProcessService.run('ls').output$).toBeObservable('-(1|)', {
     '1': {
       stdout: 'file.ts',
-      stderror: 'Error',
+      stderr: 'Error',
       exitCode: 1,
     },
   })
@@ -86,7 +86,7 @@ mtest('subProcessService.$output no error', ({ expect }) => {
   expect(subProcessService.run('ls').output$).toBeObservable('-(1|)', {
     '1': {
       stdout: 'file.ts',
-      stderror: '',
+      stderr: '',
       exitCode: 1,
     },
   })
@@ -122,18 +122,18 @@ test('subProcessService.runAsync', async () => {
     },
   ])
   const subProcessService = createSubProcessService(fakeSpawn)
-  const { stdout, stderror, exitCode } = await subProcessService.runAsync('ls')
+  const { stdout, stderr, exitCode } = await subProcessService.runAsync('ls')
   expect(stdout).toBe('file.ts')
-  expect(stderror).toBe('')
+  expect(stderr).toBe('')
   expect(exitCode).toBe(1)
   expect(executedCommands).toEqual([{ command: 'ls', args: [], options: {} }])
 })
 
 test('subProcessService integration', async () => {
   const subProcessService = createSubProcessService(spawn)
-  const { stdout, stderror, exitCode } = await firstValueFrom(subProcessService.run('ls').output$)
+  const { stdout, stderr, exitCode } = await firstValueFrom(subProcessService.run('ls').output$)
   expect(typeof stdout).toBe('string')
-  expect(typeof stderror).toBe('string')
+  expect(typeof stderr).toBe('string')
   expect(typeof exitCode).toBe('number')
 })
 

@@ -47,3 +47,74 @@ jobs:
 
       - name: Audit dependencies
         run: npm run audit-dependencies
+
+  # `push` is the only event that names both ends of what arrived, so the comparison lives here
+  # rather than in a `workflow_run` follow-up, where the range would have to be guessed.
+  dungarees-changed:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.compare.outputs.changed }}
+
+    steps:
+      - name: Compare the pushed range
+        id: compare
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BEFORE: ${{ github.event.before }}
+          HEAD: ${{ github.sha }}
+          EVENT: ${{ github.event_name }}
+          REPOSITORY: ${{ github.repository }}
+        # Asked of the API rather than of a checkout: the history needed to diff locally costs
+        # more to fetch than the run it decides.
+        run: |
+          set -euo pipefail
+          # A dispatch, or the first push to a branch, has nothing to compare against, so run the
+          # suite rather than assume nothing moved.
+          if [ "${EVENT}" != 'push' ] || [ -z "${BEFORE}" ] || [ "${BEFORE}" = '0000000000000000000000000000000000000000' ]; then
+            echo 'changed=true' >> "${GITHUB_OUTPUT}"
+            exit 0
+          fi
+          changed_files="$(gh api "repos/${REPOSITORY}/compare/${BEFORE}...${HEAD}" --paginate --jq '.files[].filename')"
+          if printf '%s\n' "${changed_files}" | grep -q '^dungarees/'; then
+            echo 'changed=true' >> "${GITHUB_OUTPUT}"
+          else
+            echo 'changed=false' >> "${GITHUB_OUTPUT}"
+          fi
+
+  # The suite publishes the library to a throwaway registry and installs the binary from it, so it
+  # only means anything once the code it would publish has passed everything else.
+  dungarees-e2e:
+    needs: [checks, dungarees-changed]
+    if: needs.dungarees-changed.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    # The cucumber world sets its own step timeout in the hours; this is what actually bounds a
+    # run whose containers never come up.
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run end-to-end suite
+        working-directory: dungarees/e2e
+        env:
+          # Bind mounts this checkout into the containers. Copying the monorepo in and installing
+          # it again would move several gigabytes per run to arrive at what npm ci already has.
+          E2E_USE_HOST_NODE_MODULES: 'true'
+        run: npm test
+
+      - name: Upload cucumber report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dungarees-e2e-report
+          path: dungarees/reports/

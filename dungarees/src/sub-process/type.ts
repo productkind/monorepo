@@ -5,7 +5,7 @@ export type Spawn = (command: string, args: string[], options: SpawnOptions) => 
 
 export type ProcessServiceOutput = {
   stdout: string
-  stderror: string
+  stderr: string
   exitCode: number | undefined
 }
 
@@ -20,7 +20,7 @@ export type SubProcessService = {
     options?: RunOptions,
   ) => {
     stdout$: Observable<string>
-    stderror$: Observable<string>
+    stderr$: Observable<string>
     exitCode$: Observable<number | undefined>
     output$: Observable<ProcessServiceOutput>
   }

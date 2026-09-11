@@ -1,19 +1,20 @@
+import { createErrorHandling } from './error-handling.ts'
 import { getServices } from './get-services.ts'
 
 import { baseApplication } from '@dungarees/bin-base-app-cli-yargs/base-app.ts'
 import { createApplication } from '@dungarees/core/application.ts'
 
+const { onError, topLevelErrorHandling } = createErrorHandling({
+  process,
+  log: (error) => {
+    console.error(error)
+  },
+})
+
 export const application = createApplication(
   {
-    onError: (error) => {
-      console.error(error)
-      // Set rather than exit, so anything already written to stdio still flushes.
-      process.exitCode = 1
-    },
-    topLevelErrorHandling: (onError) => {
-      process.on('unhandledRejection', onError)
-      process.on('uncaughtException', onError)
-    },
+    onError,
+    topLevelErrorHandling,
     getServices: [
       {
         patternPartial: { environment: 'prod' },

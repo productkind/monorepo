@@ -71,7 +71,7 @@ test('publish-failed names the package it failed for', () => {
     publishLibPresenter['publish-failed']({
       packageDir: 'lib-1',
       exitCode: 1,
-      stderror: 'Some error',
+      stderr: 'Some error',
     }),
   ).toEqual({
     type: 'stderr',

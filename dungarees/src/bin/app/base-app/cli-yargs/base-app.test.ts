@@ -20,7 +20,7 @@ test('the dungarees application renders its command to the process it was given'
         command: 'npm',
         args: ['view', '@org/lib-1', 'versions', '--json'],
         stdout: '',
-        stderror: 'E404 Not found',
+        stderr: 'E404 Not found',
         exitCode: 1,
       },
       {

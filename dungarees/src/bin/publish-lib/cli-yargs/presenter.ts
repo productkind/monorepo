@@ -19,8 +19,8 @@ export const publishLibPresenter: Presenter<PublishLibEvent> = {
     ),
   'publish-skipped': ({ packageDir, version }) =>
     stdout(`Skipped ${packageDir}: version ${version} is already published`),
-  'publish-failed': ({ packageDir, exitCode, stderror }) =>
-    stderr(`Publish failed for ${packageDir} with exit code ${exitCode}, and error: ${stderror}`),
+  'publish-failed': ({ packageDir, exitCode, stderr: error }) =>
+    stderr(`Publish failed for ${packageDir} with exit code ${exitCode}, and error: ${error}`),
   'publishes-failed': ({ packageDirs }) => [
     stderr(`Failed to publish: ${packageDirs.join(', ')}`),
     exit(1),

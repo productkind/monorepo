@@ -18,6 +18,6 @@ export const auditDependenciesYargsModule =
           default: '.',
         }),
       handler: ({ libPath }) => {
-        io.registerEvents(auditDependencies.auditDependencies({ dir: libPath }).events$)
+        io.registerEvents(auditDependencies.audit({ dir: libPath }).events$)
       },
     })
