@@ -56,7 +56,7 @@ Use these links when referencing toolkit items in course content.
 | Which Tool for Which Change | `https://littleparrot.app/nest/toolkit/8ce77728-a3c5-4c45-af70-b621f35a7bd0` |
 | Builder's Workspace Glossary | `https://littleparrot.app/nest/toolkit/63cdb31b-16b3-4fdc-b53d-cb73e886cea0` |
 
-## Write Better with AI: Prompting Foundations for Product Managers (`write-better-with-ai-00`)
+## AI Prompts for Product Managers: Write Messages, Updates and Posts (`write-better-with-ai-00`)
 
 | Toolkit Item | URL |
 | --- | --- |

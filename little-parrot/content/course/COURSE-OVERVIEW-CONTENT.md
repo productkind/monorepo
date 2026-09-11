@@ -290,7 +290,7 @@ Learn the language of software so you can tell your AI app builder exactly what 
 
 ---
 
-## 6. Write Better with AI: Prompting Foundations for Product Managers
+## 6. AI Prompts for Product Managers: Write Messages, Updates and Posts
 
 ### Short description
 

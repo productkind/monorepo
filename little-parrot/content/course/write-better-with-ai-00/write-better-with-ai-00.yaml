@@ -1,7 +1,7 @@
 course:
   id: 550e8400-e29b-41d4-a716-446655440000
   cover: /courses/writing-with-ai-00/cover.webp
-  title: 'Write Better with AI: Prompting Foundations for Product Managers'
+  title: 'AI Prompts for Product Managers: Write Messages, Updates and Posts'
   learningOutcomes:
     - Draft team messages in the right tone for any high-pressure situation
     - Turn messy Jira tickets into clear, compelling stakeholder updates
@@ -417,7 +417,7 @@ course:
             sourceItems: []
             targetItems:
               - id: context
-                content: "You are helping me write a LinkedIn post. Task: Draft a short post announcing that I've learned practical prompting techniques at a Little Parrot micro-course."
+                content: "You are helping me write a LinkedIn post. Task: Draft a short post announcing that I've learned practical prompting techniques at a Little Parrot course."
                 isFixed: true
                 readOnly: true
             systemPrompt: You are a helpful AI assistant that helps users write LinkedIn posts.
@@ -456,7 +456,7 @@ course:
                   - Concise: 4-5 sentences
             targetItems:
               - id: context
-                content: 'You are helping me write a LinkedIn post. Task: Draft a short post announcing that I just completed a practical Little Parrot micro-course on AI prompting techniques.'
+                content: 'You are helping me write a LinkedIn post. Task: Draft a short post announcing that I just completed a practical Little Parrot course on AI prompting techniques.'
             isPlainAIResponse: true
           subtitle: 'This prompt has two parts:'
         - type: prompting-exercise
@@ -465,7 +465,7 @@ course:
             description: |-
               Since we only gave the AI the vague context "learned prompting techniques," it filled in the blanks and made some things up. That means the output wasn't very informative.
 
-              Let's fix that by adding more context about what you've actually learned in this micro-course.
+              Let's fix that by adding more context about what you've actually learned in this course.
 
               **Now your prompt will have 3 parts:**
               1. The main request
@@ -475,7 +475,7 @@ course:
               Use the pencil icon to adjust the text so it feels like something you would naturally write. When you're done, save it and press **Check** to see how the AI responds.
             targetItems:
               - id: context1
-                content: 'You are helping me write a LinkedIn post. Task: Draft a short post announcing that I just completed a practical Little Parrot micro-course on AI prompting techniques.'
+                content: 'You are helping me write a LinkedIn post. Task: Draft a short post announcing that I just completed a practical Little Parrot course on AI prompting techniques.'
               - id: context2
                 content: |-
                   Tone and style:
@@ -705,12 +705,12 @@ course:
         - type: reflection
           title: Your key takeaways
           content:
-            description: Take a minute and think through what you learned in this micro-course about prompting, AI, and LLMs.
+            description: Take a minute and think through what you learned in this course about prompting, AI, and LLMs.
             placeholder: Type your answer here...
             subDescription: It's a cognitive science trick, called retrieval practice, that helps you to retain the knowledge you learned.
           subtitle: ''
         - type: course-end
-          title: "Congratulations! You've completed the micro-course! \U0001F38A"
+          title: "Congratulations! You've completed the course! \U0001F38A"
           content:
             nextModule: Keep practising these techniques on your real work, and they'll start to feel automatic.
             description: You've learned the prompting techniques that make AI useful for everyday work writing.
@@ -750,6 +750,6 @@ course:
       description: Learn practical prompts to get AI to explain technical terms without the jargon, customised to your needs.
       completionTime: 8:00
   titleSplit:
-    - 'Write Better with AI:'
-    - Prompting Foundations for Product Managers
+    - 'AI Prompts for Product Managers:'
+    - Write Messages, Updates and Posts
   description: Learn practical prompting techniques to write faster and communicate more effectively at work. Whether it's a team message, a stakeholder update, or a LinkedIn post, craft content that sounds like you, not like a robot.
