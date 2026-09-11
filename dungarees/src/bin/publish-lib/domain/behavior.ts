@@ -5,6 +5,7 @@ import {
   createOutDir,
   getBuildStartEvent,
   getPackagesToPublish,
+  isTestFile,
   publishAllPackages,
   publishLib,
   publishUnlessPublished,
@@ -68,6 +69,7 @@ export const createPublishLibBehavior = ({
       .transpileDir({
         input: srcDir,
         output: outDir,
+        exclude: isTestFile,
       })
       .pipe(transformPackageJson({ fileTransform: packageJsonTransform, srcDir, outDir, version }))
     return {

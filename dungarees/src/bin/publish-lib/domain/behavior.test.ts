@@ -463,3 +463,28 @@ test('publishMultiLib skips a package whose version is already on the registry',
       .map(({ options }) => options?.cwd),
   ).toEqual(['/m/dist/lib-2'])
 })
+
+test('build leaves the tests out of the package it writes', async () => {
+  const service = createFakePublishLib({
+    files: {
+      '/src/package.json': JSON.stringify({ name: 'my-lib', version: '1.0.0' }),
+      '/src/index.ts': 'export const a = 1',
+      '/src/index.test.ts': "import { a } from './index.ts'",
+    },
+  })
+
+  await collectValuesFrom(
+    service.build({ srcDir: '/src', outDir: '/dist', version: undefined }).events$,
+  )
+
+  const publishedFiles = service.fileSystem.toJSON()
+  expect(publishedFiles['/dist/index.js']).toBeDefined()
+  expect(publishedFiles['/dist/index.test.js']).toBeUndefined()
+  expect(JSON.parse(publishedFiles['/dist/package.json'] ?? '')).toEqual({
+    name: 'my-lib',
+    version: '1.0.0',
+    exports: {
+      './index.ts': { import: './index.js', types: './index.d.ts' },
+    },
+  })
+})

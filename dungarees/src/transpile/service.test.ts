@@ -64,3 +64,49 @@ test('transpileDir transpiles every file in a directory, subdirectories included
     },
   ])
 })
+
+test('transpileDir leaves installed dependencies where they are', async () => {
+  const fs = createFakeFileSystem({
+    '/src-dir/file1.ts': srcDirFile3.trim(),
+    '/src-dir/node_modules/dep/index.ts': 'export const dep = 1;',
+    '/src-dir/node_modules/dep/index.d.ts': 'export declare const dep: number;',
+    '/src-dir/sub-dir/node_modules/other/index.ts': 'export const other = 1;',
+  })
+
+  const transpileService = createTranspilerService(fs)
+  const files = await lastValueFrom(
+    transpileService.transpileDir({ input: '/src-dir', output: '/dist-dir' }),
+  )
+
+  expect(files).toEqual([
+    { input: '/src-dir/file1.ts', output: '/dist-dir/file1.js', type: '/dist-dir/file1.d.ts' },
+  ])
+  expect(Object.keys(fs.toJSON()).filter((path) => path.startsWith('/dist-dir'))).toEqual([
+    '/dist-dir/file1.js',
+    '/dist-dir/file1.d.ts',
+  ])
+})
+
+test('transpileDir skips the files the caller excludes', async () => {
+  const fs = createFakeFileSystem({
+    '/src-dir/file1.ts': srcDirFile3.trim(),
+    '/src-dir/file1.test.ts': srcDirFile3.trim(),
+  })
+
+  const transpileService = createTranspilerService(fs)
+  const files = await lastValueFrom(
+    transpileService.transpileDir({
+      input: '/src-dir',
+      output: '/dist-dir',
+      exclude: (filePath) => filePath.endsWith('.test.ts'),
+    }),
+  )
+
+  expect(files).toEqual([
+    { input: '/src-dir/file1.ts', output: '/dist-dir/file1.js', type: '/dist-dir/file1.d.ts' },
+  ])
+  expect(Object.keys(fs.toJSON()).filter((path) => path.startsWith('/dist-dir'))).toEqual([
+    '/dist-dir/file1.js',
+    '/dist-dir/file1.d.ts',
+  ])
+})
