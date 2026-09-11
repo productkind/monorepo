@@ -17,7 +17,15 @@ campaign: vibe-coded-app-26
 
 **Caption:**
 
-How do you run an AI-built app yourself? Map its main parts, keep a working version and test the customer journey before publishing. Built yours with AI? The waitlist for women is in the pinned comment. Which part feels hardest?
+How do you run an AI-built app yourself?
+
+You built it with AI. Then a customer cannot sign in, a payment fails or a change breaks another screen. The AI can propose a fix. You still decide whether to publish it, restore the working version or collect more evidence.
+
+We’re building a learning path for women who have already built an app with AI and want to run it confidently themselves.
+
+Join the waitlist through the link in the comments. We'll email you when the hands-on learning path opens.
+
+Which part of running your app feels hardest?
 
 #womenwhobuild #womenintech #womenfounders #aiproductbuilder
 
