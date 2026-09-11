@@ -8,6 +8,7 @@ import {
   publishAllPackages,
   publishLib,
   publishUnlessPublished,
+  summarisePublishes,
   transformPackageJson,
 } from './operations.ts'
 
@@ -31,7 +32,6 @@ export type PublishLibBehavior = {
   publishSingleLib: (args: {
     srcDir: string
     outDir: string
-    packageDir: string
     version: string | undefined
     registry: string | undefined
   }) => PublishLibFeatureOutput
@@ -75,13 +75,19 @@ export const createPublishLibBehavior = ({
     }
   }
 
-  const publishSingleLib: PublishLibBehavior['publishSingleLib'] = ({
+  const publishPackage = ({
     srcDir,
     outDir,
     packageDir,
     version,
     registry,
-  }) => {
+  }: {
+    srcDir: string
+    outDir: string
+    packageDir: string
+    version: string | undefined
+    registry: string | undefined
+  }): PublishLibFeatureOutput => {
     const buildAndPublish: BuildAndPublish = ({ version: resolvedVersion, created }) =>
       concat(
         build({ srcDir, outDir, version: resolvedVersion }).events$,
@@ -104,6 +110,17 @@ export const createPublishLibBehavior = ({
     }
   }
 
+  const publishSingleLib: PublishLibBehavior['publishSingleLib'] = ({
+    srcDir,
+    outDir,
+    version,
+    registry,
+  }) => ({
+    events$: publishPackage({ srcDir, outDir, packageDir: srcDir, version, registry }).events$.pipe(
+      summarisePublishes(),
+    ),
+  })
+
   const publishMultiLib: PublishLibBehavior['publishMultiLib'] = ({ dir, registry }) => {
     const sourceDir = `${dir}/src`
     const publishAll$ = getPackageDirsWithVersion({
@@ -114,7 +131,7 @@ export const createPublishLibBehavior = ({
     }).pipe(
       publishAllPackages(
         ({ packageDir, version }) =>
-          publishSingleLib({
+          publishPackage({
             srcDir: `${sourceDir}/${packageDir}`,
             outDir: `${dir}/dist/${packageDir}`,
             packageDir,
