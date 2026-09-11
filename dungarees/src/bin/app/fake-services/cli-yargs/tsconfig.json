@@ -2,7 +2,7 @@
   "extends": "@dungarees/core/tsconfig.base.json",
   "compilerOptions": {
     "paths": {
-      "@dungarees/bin/*": ["./*"]
+      "@dungarees/bin-fake-services-cli-yargs/*": ["./*"]
     },
     "noEmit": true,
     "module": "NodeNext"
