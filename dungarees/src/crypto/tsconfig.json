@@ -5,6 +5,7 @@
       "@dungarees/crypto/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }

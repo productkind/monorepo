@@ -5,6 +5,7 @@
       "@dungarees/jwt/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }

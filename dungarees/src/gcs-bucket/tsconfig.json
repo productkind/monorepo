@@ -5,6 +5,7 @@
       "@dungarees/gcs-bucket/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }

@@ -5,6 +5,7 @@
       "@dungarees/build-tools/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }

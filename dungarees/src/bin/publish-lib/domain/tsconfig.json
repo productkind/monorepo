@@ -5,6 +5,7 @@
       "@dungarees/bin-publish-lib-domain/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }

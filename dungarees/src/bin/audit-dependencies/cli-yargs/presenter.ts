@@ -37,5 +37,8 @@ export const auditDependenciesPresenter: Presenter<AuditDependenciesEvent> = {
   'package-findings': (findings) => stderr(describeFindings(findings)),
   'audit-passed': ({ packageCount }) => stdout(`${packageCount} packages audited, no findings`),
   // Non-zero so the command can gate a build the way the old script did.
-  'audit-failed': () => exit(1),
+  'audit-failed': ({ packageCount, findingCount }) => [
+    stderr(`${findingCount} of ${packageCount} packages have findings`),
+    exit(1),
+  ],
 }

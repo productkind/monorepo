@@ -253,7 +253,10 @@ export const reportFindings = ({
       of(
         findings.length === 0
           ? eventCreators.auditPassed({ packageCount: manifests.length })
-          : eventCreators.auditFailed({ packageCount: manifests.length }),
+          : eventCreators.auditFailed({
+              packageCount: manifests.length,
+              findingCount: findings.length,
+            }),
       ),
     )
   })

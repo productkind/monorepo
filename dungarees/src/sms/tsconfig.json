@@ -5,6 +5,7 @@
       "@dungarees/sms/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }

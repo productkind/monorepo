@@ -48,11 +48,13 @@ test('audit-passed reports how many packages were checked', () => {
   })
 })
 
-test('audit-failed exits non-zero so the audit can gate a build', () => {
-  expect(auditDependenciesPresenter['audit-failed']({ packageCount: 17 })).toEqual({
-    type: 'exit',
-    code: 1,
-  })
+test('audit-failed counts the packages with findings, then exits non-zero', () => {
+  expect(auditDependenciesPresenter['audit-failed']({ packageCount: 17, findingCount: 3 })).toEqual(
+    [
+      { type: 'stderr', message: '3 of 17 packages have findings', level: 'error' },
+      { type: 'exit', code: 1 },
+    ],
+  )
 })
 
 test('package-findings says which list a misdeclared dependency belongs in', () => {

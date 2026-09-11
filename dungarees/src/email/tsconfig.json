@@ -5,6 +5,7 @@
       "@dungarees/email/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }

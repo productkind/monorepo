@@ -5,6 +5,7 @@
       "@dungarees/test-environment/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }

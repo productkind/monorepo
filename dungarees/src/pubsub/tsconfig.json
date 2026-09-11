@@ -5,6 +5,7 @@
       "@dungarees/pubsub/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }

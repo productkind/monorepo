@@ -5,6 +5,7 @@
       "@dungarees/random/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }

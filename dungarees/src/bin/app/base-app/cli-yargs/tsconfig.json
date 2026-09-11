@@ -5,6 +5,7 @@
       "@dungarees/bin-base-app-cli-yargs/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }

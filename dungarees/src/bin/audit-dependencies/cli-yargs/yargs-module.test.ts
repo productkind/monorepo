@@ -43,6 +43,7 @@ test('audit-dependencies reports an undeclared import and exits 1', async () => 
   expect(await terminal.step()).toEqual([
     { type: 'stdout', message: 'Auditing dependencies in /repo', level: 'info' },
     { type: 'stderr', message: '@org/a\n  missing: rxjs', level: 'error' },
+    { type: 'stderr', message: '1 of 1 packages have findings', level: 'error' },
     { type: 'exit', code: 1 },
   ])
 })

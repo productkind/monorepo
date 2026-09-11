@@ -5,6 +5,7 @@
       "@dungarees/event-broker/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }

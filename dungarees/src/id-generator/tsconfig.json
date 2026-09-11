@@ -5,6 +5,7 @@
       "@dungarees/id-generator/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }

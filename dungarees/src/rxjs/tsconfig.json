@@ -5,6 +5,7 @@
       "@dungarees/rxjs/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }
