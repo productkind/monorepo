@@ -2,7 +2,7 @@ course:
   id: ff736c4f-8ccc-41b6-96c6-68806804c5d8
   note:
   cover: /courses/lovable-publishing-00/cover.webp
-  title: 'Launch and Grow Your Lovable App'
+  title: 'How to Publish a Lovable App: Custom Domain, Legal Pages, SEO and Analytics'
   learningOutcomes:
     - Publish your app to production with professional meta tags and branding
     - Set up a custom domain that makes your product memorable
@@ -1044,6 +1044,6 @@ course:
               - Our [Fix Bugs with Confidence: Debugging Your Lovable App](https://littleparrot.app/aaab45b7-209a-4578-a515-3e55687f0c53/course-overview) course teaches you how to handle problems when they come up.
               - Check out our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) course to communicate more effectively with Lovable by understanding core software concepts.
   titleSplit:
-    - 'Launch and Grow'
-    - 'Your Lovable App'
+    - 'How to Publish a Lovable App:'
+    - 'Custom Domain, Legal Pages, SEO and Analytics'
   description: You've built an app in Lovable. Now turn it into a live, trustworthy product that people can find and use. Go from a generic Lovable URL to a professional, discoverable product with its own domain, legal pages, and growth plan. By the end, you'll have a repeatable checklist for launching anything you build next.
