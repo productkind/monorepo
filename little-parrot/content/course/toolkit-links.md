@@ -32,7 +32,7 @@ Use these links when referencing toolkit items in course content.
 | User Feedback Question Bank | `https://littleparrot.app/nest/toolkit/ab78ba0e-37bb-4c6c-b21b-a7466df4b19d` |
 | Production-Ready Launch Checklist | `https://littleparrot.app/nest/toolkit/5066c12c-66ad-4844-a768-1bdae81c86ec` |
 
-## Build Your Business: From Vibe Coded Product to Paying Customers (`vibe-coding-start-your-business-00`)
+## Build a Business with Your Vibe Coded App: Validate Your Offer, Set a Price and Find Customers (`vibe-coding-start-your-business-00`)
 
 | Toolkit Item | URL |
 | --- | --- |
