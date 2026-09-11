@@ -15,11 +15,10 @@
     "@dungarees/cli": "*",
     "@dungarees/cli-command": "*",
     "@dungarees/core": "*",
-    "@dungarees/fs": "*",
-    "@dungarees/sub-process": "*"
+    "@dungarees/fs": "*"
   },
   "devDependencies": {
-    "@dungarees/bin-fake-app-cli-yargs": "*",
+    "@dungarees/bin-fake-services-cli-yargs": "*",
     "typescript": "^5.9.3",
     "vitest": "^3.0.2"
   },

@@ -1,16 +1,14 @@
 import { type DungareesBinBehaviors } from './behaviors.ts'
 
 import { auditDependenciesFeature } from '@dungarees/bin-audit-dependencies-cli-yargs/feature.ts'
-import type { AuditDependenciesEvent } from '@dungarees/bin-audit-dependencies-domain/events.ts'
 import { publishLibFeature } from '@dungarees/bin-publish-lib-cli-yargs/feature.ts'
-import type { PublishLibEvent } from '@dungarees/bin-publish-lib-domain/events.ts'
-import { combineFeatures } from '@dungarees/cli/feature.ts'
-import { createYargsPromptApp, type YargsPromptApp } from '@dungarees/cli/yargs-prompt-app.ts'
+import { combineFeatures, createFeatureApp } from '@dungarees/cli/feature.ts'
+import type { YargsPromptApp } from '@dungarees/cli/yargs-prompt-app.ts'
 
 export const createYargsApp = (behaviors: DungareesBinBehaviors): YargsPromptApp =>
-  createYargsPromptApp<PublishLibEvent | AuditDependenciesEvent>({
+  createFeatureApp({
     name: 'dungarees',
-    ...combineFeatures(
+    feature: combineFeatures(
       publishLibFeature({ publishLib: behaviors.publishLib }),
       auditDependenciesFeature({ auditDependencies: behaviors.auditDependencies }),
     ),

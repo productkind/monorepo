@@ -1,10 +1,8 @@
-import { createPublishLibBehavior } from './behavior.ts'
 import { eventCreators } from './events.ts'
+import { createFakePublishLib } from './fake.ts'
 
-import { createCliCommands } from '@dungarees/cli-command/service.ts'
-import { createFakeFileSystem } from '@dungarees/fs/fake.ts'
+import type { ExecutedCommand } from '@dungarees/cli-command/fake.ts'
 import { collectValuesFrom } from '@dungarees/rxjs/util.ts'
-import { createFakeSubProcessService, type ExecutedCommand } from '@dungarees/sub-process/fake.ts'
 
 import { expect, test } from 'vitest'
 
@@ -33,16 +31,15 @@ const publishedDirs = (commands: ExecutedCommand[]) =>
     .sort()
 
 test('build without version input', async () => {
-  const fileSystem = createFakeFileSystem({
-    '/src/index.ts': 'export const numberValue: number = 42;',
-    '/src/package.json': JSON.stringify({
-      name: 'my-lib',
-      version: '1.0.0',
-    }),
+  const service = createFakePublishLib({
+    files: {
+      '/src/index.ts': 'export const numberValue: number = 42;',
+      '/src/package.json': JSON.stringify({
+        name: 'my-lib',
+        version: '1.0.0',
+      }),
+    },
   })
-  const { subProcess } = createFakeSubProcessService([])
-  const cliCommands = createCliCommands(subProcess)
-  const service = createPublishLibBehavior({ fileSystem, cliCommands })
   await collectValuesFrom(
     service.build({
       srcDir: '/src',
@@ -50,7 +47,7 @@ test('build without version input', async () => {
       version: undefined,
     }).events$,
   )
-  const publishedFiles = fileSystem.toJSON()
+  const publishedFiles = service.fileSystem.toJSON()
   expect(publishedFiles['/dist/index.js']).toBe('export const numberValue = 42;\n')
   expect(publishedFiles['/dist/index.d.ts']).toBe('export declare const numberValue: number;\n')
   expect(JSON.parse(publishedFiles['/dist/package.json'] ?? '')).toEqual({
@@ -66,18 +63,17 @@ test('build without version input', async () => {
 })
 
 test('transpile files in subdirectories', async () => {
-  const fileSystem = createFakeFileSystem({
-    '/src/index.ts': 'console.log("Hello, world!")',
-    '/src/package.json': JSON.stringify({
-      name: 'my-lib',
-      version: '1.0.0',
-      main: 'index.js',
-    }),
-    '/src/lib/util.ts': 'export const util = () => {};',
+  const service = createFakePublishLib({
+    files: {
+      '/src/index.ts': 'console.log("Hello, world!")',
+      '/src/package.json': JSON.stringify({
+        name: 'my-lib',
+        version: '1.0.0',
+        main: 'index.js',
+      }),
+      '/src/lib/util.ts': 'export const util = () => {};',
+    },
   })
-  const { subProcess } = createFakeSubProcessService([])
-  const cliCommands = createCliCommands(subProcess)
-  const service = createPublishLibBehavior({ fileSystem, cliCommands })
   await collectValuesFrom(
     service.build({
       srcDir: '/src',
@@ -85,7 +81,7 @@ test('transpile files in subdirectories', async () => {
       version: undefined,
     }).events$,
   )
-  const publishedFiles = fileSystem.toJSON()
+  const publishedFiles = service.fileSystem.toJSON()
   expect(publishedFiles['/dist/index.js']).toBe('console.log("Hello, world!");\n')
   expect(publishedFiles['/dist/index.d.ts']).toBe('')
   expect(JSON.parse(publishedFiles['/dist/package.json'] ?? '')).toEqual({
@@ -108,25 +104,25 @@ test('transpile files in subdirectories', async () => {
 })
 
 test('publish single lib', async () => {
-  const fileSystem = createFakeFileSystem({
-    '/src/package.json': JSON.stringify({
-      name: 'single-lib',
-      version: '0.1.0',
-      main: 'index.js',
-    }),
-    '/src/index.ts': 'console.log("Single lib")',
-  })
-  const { subProcess, executedCommands } = createFakeSubProcessService([
-    notPublished('single-lib'),
-    {
-      command: 'npm',
-      args: ['publish', '--access', 'public'],
-      stdout: 'Published successfully',
-      exitCode: 0,
+  const service = createFakePublishLib({
+    files: {
+      '/src/package.json': JSON.stringify({
+        name: 'single-lib',
+        version: '0.1.0',
+        main: 'index.js',
+      }),
+      '/src/index.ts': 'console.log("Single lib")',
     },
-  ])
-  const cliCommands = createCliCommands(subProcess)
-  const service = createPublishLibBehavior({ fileSystem, cliCommands })
+    commands: [
+      notPublished('single-lib'),
+      {
+        command: 'npm',
+        args: ['publish', '--access', 'public'],
+        stdout: 'Published successfully',
+        exitCode: 0,
+      },
+    ],
+  })
   await collectValuesFrom(
     service.publishSingleLib({
       srcDir: '/src',
@@ -136,7 +132,7 @@ test('publish single lib', async () => {
       registry: undefined,
     }).events$,
   )
-  const publishedFiles = fileSystem.toJSON()
+  const publishedFiles = service.fileSystem.toJSON()
   expect(publishedFiles['/dist/index.js']).toBe('console.log("Single lib");\n')
   expect(publishedFiles['/dist/index.d.ts']).toBe('')
   expect(JSON.parse(publishedFiles['/dist/package.json'] ?? '')).toEqual({
@@ -150,7 +146,7 @@ test('publish single lib', async () => {
       },
     },
   })
-  expect(executedCommands).toContainEqual({
+  expect(service.executedCommands).toContainEqual({
     command: 'npm',
     args: ['publish', '--access', 'public'],
     options: {
@@ -188,45 +184,45 @@ export const assertDefined = (input) => external(input)
 `
 
 test('publish a multi-lib folder', async () => {
-  const fileSystem = createFakeFileSystem({
-    '/multi-lib/config/version.json': JSON.stringify({
-      version: '1.0.0',
-      type: 'module',
-    }),
-    '/multi-lib/src/lib-1/package.json': JSON.stringify({
-      name: '@org/lib-1',
-      bin: {
-        run: './run.ts',
-      },
-    }),
-    '/multi-lib/src/lib-1/file-1.ts': srcFile1,
-    '/multi-lib/src/lib-1/file-2.ts': srcFile2,
-    '/multi-lib/src/lib-1/run.ts': srcFile3,
-    '/multi-lib/src/sub/lib-2/package.json': JSON.stringify({
-      name: '@org/lib-2',
-      type: 'module',
-    }),
+  const service = createFakePublishLib({
+    files: {
+      '/multi-lib/config/version.json': JSON.stringify({
+        version: '1.0.0',
+        type: 'module',
+      }),
+      '/multi-lib/src/lib-1/package.json': JSON.stringify({
+        name: '@org/lib-1',
+        bin: {
+          run: './run.ts',
+        },
+      }),
+      '/multi-lib/src/lib-1/file-1.ts': srcFile1,
+      '/multi-lib/src/lib-1/file-2.ts': srcFile2,
+      '/multi-lib/src/lib-1/run.ts': srcFile3,
+      '/multi-lib/src/sub/lib-2/package.json': JSON.stringify({
+        name: '@org/lib-2',
+        type: 'module',
+      }),
 
-    '/multi-lib/src/sub/lib-2/utils.ts': srcFile4,
-  })
-  const { subProcess, executedCommands } = createFakeSubProcessService([
-    ...NOT_PUBLISHED_TWO_LIBS,
-    {
-      command: 'npm',
-      args: ['publish', '--access', 'public'],
-      stdout: 'Published successfully',
-      exitCode: 0,
+      '/multi-lib/src/sub/lib-2/utils.ts': srcFile4,
     },
-  ])
-  const cliCommands = createCliCommands(subProcess)
-  const service = createPublishLibBehavior({ fileSystem, cliCommands })
+    commands: [
+      ...NOT_PUBLISHED_TWO_LIBS,
+      {
+        command: 'npm',
+        args: ['publish', '--access', 'public'],
+        stdout: 'Published successfully',
+        exitCode: 0,
+      },
+    ],
+  })
   await collectValuesFrom(
     service.publishMultiLib({
       dir: '/multi-lib',
       registry: undefined,
     }).events$,
   )
-  const publishedFiles = fileSystem.toJSON()
+  const publishedFiles = service.fileSystem.toJSON()
   expect(JSON.parse(publishedFiles['/multi-lib/dist/lib-1/package.json'] ?? '')).toEqual({
     name: '@org/lib-1',
     version: '1.0.0',
@@ -248,7 +244,7 @@ test('publish a multi-lib folder', async () => {
       run: './run.js',
     },
   })
-  expect(executedCommands).toContainEqual({
+  expect(service.executedCommands).toContainEqual({
     command: 'npm',
     args: ['publish', '--access', 'public'],
     options: {
@@ -258,57 +254,54 @@ test('publish a multi-lib folder', async () => {
 })
 
 test('a package marked private is not published', async () => {
-  const fileSystem = createFakeFileSystem({
-    '/multi-lib/config/version.json': JSON.stringify({ version: '1.0.0' }),
-    '/multi-lib/src/lib-1/package.json': JSON.stringify({ name: '@org/lib-1' }),
-    '/multi-lib/src/lib-1/file-1.ts': 'export const a = 1\n',
-    '/multi-lib/src/fake-app/package.json': JSON.stringify({
-      name: '@org/fake-app',
-      private: true,
-    }),
-    '/multi-lib/src/fake-app/fake.ts': 'export const fake = 1\n',
-  })
-  const { subProcess, executedCommands } = createFakeSubProcessService([
-    ...NOT_PUBLISHED_TWO_LIBS,
-    {
-      command: 'npm',
-      args: ['publish', '--access', 'public'],
-      stdout: 'Published successfully',
-      exitCode: 0,
+  const service = createFakePublishLib({
+    files: {
+      '/multi-lib/config/version.json': JSON.stringify({ version: '1.0.0' }),
+      '/multi-lib/src/lib-1/package.json': JSON.stringify({ name: '@org/lib-1' }),
+      '/multi-lib/src/lib-1/file-1.ts': 'export const a = 1\n',
+      '/multi-lib/src/fake-app/package.json': JSON.stringify({
+        name: '@org/fake-app',
+        private: true,
+      }),
+      '/multi-lib/src/fake-app/fake.ts': 'export const fake = 1\n',
     },
-  ])
-  const service = createPublishLibBehavior({
-    fileSystem,
-    cliCommands: createCliCommands(subProcess),
+    commands: [
+      ...NOT_PUBLISHED_TWO_LIBS,
+      {
+        command: 'npm',
+        args: ['publish', '--access', 'public'],
+        stdout: 'Published successfully',
+        exitCode: 0,
+      },
+    ],
   })
 
   await collectValuesFrom(
     service.publishMultiLib({ dir: '/multi-lib', registry: undefined }).events$,
   )
 
-  expect(publishedDirs(executedCommands)).toEqual(['/multi-lib/dist/lib-1'])
+  expect(publishedDirs(service.executedCommands)).toEqual(['/multi-lib/dist/lib-1'])
 })
 
 test('build copies declared assets and exports them', async () => {
   const tsconfig = JSON.stringify({ compilerOptions: { strict: true } }, null, 2)
-  const fileSystem = createFakeFileSystem({
-    '/src/index.ts': 'export const numberValue: number = 42;',
-    '/src/tsconfig.base.json': tsconfig,
-    '/src/package.json': JSON.stringify({
-      name: 'my-lib',
-      version: '1.0.0',
-      dungarees: { assets: ['tsconfig.base.json'] },
-    }),
+  const service = createFakePublishLib({
+    files: {
+      '/src/index.ts': 'export const numberValue: number = 42;',
+      '/src/tsconfig.base.json': tsconfig,
+      '/src/package.json': JSON.stringify({
+        name: 'my-lib',
+        version: '1.0.0',
+        dungarees: { assets: ['tsconfig.base.json'] },
+      }),
+    },
   })
-  const { subProcess } = createFakeSubProcessService([])
-  const cliCommands = createCliCommands(subProcess)
-  const service = createPublishLibBehavior({ fileSystem, cliCommands })
 
   await collectValuesFrom(
     service.build({ srcDir: '/src', outDir: '/dist', version: undefined }).events$,
   )
 
-  const publishedFiles = fileSystem.toJSON()
+  const publishedFiles = service.fileSystem.toJSON()
   expect(publishedFiles['/dist/tsconfig.base.json']).toBe(tsconfig)
   expect(JSON.parse(publishedFiles['/dist/package.json'] ?? '')).toEqual({
     name: 'my-lib',
@@ -322,24 +315,23 @@ test('build copies declared assets and exports them', async () => {
 
 test('build copies an asset that sits in a subdirectory', async () => {
   const tsconfig = JSON.stringify({ compilerOptions: { strict: true } }, null, 2)
-  const fileSystem = createFakeFileSystem({
-    '/src/index.ts': 'export const numberValue: number = 42;',
-    '/src/config/tsconfig.base.json': tsconfig,
-    '/src/package.json': JSON.stringify({
-      name: 'my-lib',
-      version: '1.0.0',
-      dungarees: { assets: ['config/tsconfig.base.json'] },
-    }),
+  const service = createFakePublishLib({
+    files: {
+      '/src/index.ts': 'export const numberValue: number = 42;',
+      '/src/config/tsconfig.base.json': tsconfig,
+      '/src/package.json': JSON.stringify({
+        name: 'my-lib',
+        version: '1.0.0',
+        dungarees: { assets: ['config/tsconfig.base.json'] },
+      }),
+    },
   })
-  const { subProcess } = createFakeSubProcessService([])
-  const cliCommands = createCliCommands(subProcess)
-  const service = createPublishLibBehavior({ fileSystem, cliCommands })
 
   await collectValuesFrom(
     service.build({ srcDir: '/src', outDir: '/dist', version: undefined }).events$,
   )
 
-  expect(fileSystem.toJSON()['/dist/config/tsconfig.base.json']).toBe(tsconfig)
+  expect(service.fileSystem.toJSON()['/dist/config/tsconfig.base.json']).toBe(tsconfig)
 })
 
 const failingNpm = (stderror: string) => [
@@ -353,20 +345,18 @@ const failingNpm = (stderror: string) => [
   },
 ]
 
-const twoLibFileSystem = () =>
-  createFakeFileSystem({
-    '/m/config/version.json': JSON.stringify({ version: '1.0.0' }),
-    '/m/src/lib-1/package.json': JSON.stringify({ name: '@org/lib-1' }),
-    '/m/src/lib-1/a.ts': 'export const a = 1\n',
-    '/m/src/lib-2/package.json': JSON.stringify({ name: '@org/lib-2' }),
-    '/m/src/lib-2/b.ts': 'export const b = 1\n',
-  })
+const TWO_LIBS = {
+  '/m/config/version.json': JSON.stringify({ version: '1.0.0' }),
+  '/m/src/lib-1/package.json': JSON.stringify({ name: '@org/lib-1' }),
+  '/m/src/lib-1/a.ts': 'export const a = 1\n',
+  '/m/src/lib-2/package.json': JSON.stringify({ name: '@org/lib-2' }),
+  '/m/src/lib-2/b.ts': 'export const b = 1\n',
+}
 
 test('publishMultiLib surfaces each failed publish instead of swallowing it', async () => {
-  const { subProcess } = createFakeSubProcessService(failingNpm('Cannot publish over a version'))
-  const service = createPublishLibBehavior({
-    fileSystem: twoLibFileSystem(),
-    cliCommands: createCliCommands(subProcess),
+  const service = createFakePublishLib({
+    files: TWO_LIBS,
+    commands: failingNpm('Cannot publish over a version'),
   })
 
   const events = await collectValuesFrom(
@@ -377,10 +367,9 @@ test('publishMultiLib surfaces each failed publish instead of swallowing it', as
 })
 
 test('publishMultiLib reports the failed packages instead of claiming success', async () => {
-  const { subProcess } = createFakeSubProcessService(failingNpm('Cannot publish over a version'))
-  const service = createPublishLibBehavior({
-    fileSystem: twoLibFileSystem(),
-    cliCommands: createCliCommands(subProcess),
+  const service = createFakePublishLib({
+    files: TWO_LIBS,
+    commands: failingNpm('Cannot publish over a version'),
   })
 
   const events = await collectValuesFrom(
@@ -392,41 +381,36 @@ test('publishMultiLib reports the failed packages instead of claiming success', 
 })
 
 test('publishMultiLib still attempts every package when one fails', async () => {
-  const { subProcess, executedCommands } = createFakeSubProcessService(
-    failingNpm('Cannot publish over a version'),
-  )
-  const service = createPublishLibBehavior({
-    fileSystem: twoLibFileSystem(),
-    cliCommands: createCliCommands(subProcess),
+  const service = createFakePublishLib({
+    files: TWO_LIBS,
+    commands: failingNpm('Cannot publish over a version'),
   })
 
   await collectValuesFrom(service.publishMultiLib({ dir: '/m', registry: undefined }).events$)
 
-  expect(publishedDirs(executedCommands)).toEqual(['/m/dist/lib-1', '/m/dist/lib-2'])
+  expect(publishedDirs(service.executedCommands)).toEqual(['/m/dist/lib-1', '/m/dist/lib-2'])
 })
 
 test('publishMultiLib skips a package whose version is already on the registry', async () => {
-  const fileSystem = createFakeFileSystem({
-    '/m/config/version.json': JSON.stringify({ version: '1.0.0' }),
-    '/m/src/lib-1/package.json': JSON.stringify({ name: '@org/lib-1' }),
-    '/m/src/lib-1/a.ts': 'export const a = 1\n',
-    '/m/src/lib-2/package.json': JSON.stringify({ name: '@org/lib-2' }),
-    '/m/src/lib-2/b.ts': 'export const b = 1\n',
-  })
-  const { subProcess, executedCommands } = createFakeSubProcessService([
-    // lib-1 is already published at this version, lib-2 has never been published
-    alreadyPublished('@org/lib-1', ['1.0.0']),
-    notPublished('@org/lib-2'),
-    {
-      command: 'npm',
-      args: ['publish', '--access', 'public'],
-      stdout: 'Published successfully',
-      exitCode: 0,
+  const service = createFakePublishLib({
+    files: {
+      '/m/config/version.json': JSON.stringify({ version: '1.0.0' }),
+      '/m/src/lib-1/package.json': JSON.stringify({ name: '@org/lib-1' }),
+      '/m/src/lib-1/a.ts': 'export const a = 1\n',
+      '/m/src/lib-2/package.json': JSON.stringify({ name: '@org/lib-2' }),
+      '/m/src/lib-2/b.ts': 'export const b = 1\n',
     },
-  ])
-  const service = createPublishLibBehavior({
-    fileSystem,
-    cliCommands: createCliCommands(subProcess),
+    commands: [
+      // lib-1 is already published at this version, lib-2 has never been published
+      alreadyPublished('@org/lib-1', ['1.0.0']),
+      notPublished('@org/lib-2'),
+      {
+        command: 'npm',
+        args: ['publish', '--access', 'public'],
+        stdout: 'Published successfully',
+        exitCode: 0,
+      },
+    ],
   })
 
   const events = await collectValuesFrom(
@@ -437,12 +421,14 @@ test('publishMultiLib skips a package whose version is already on the registry',
     eventCreators.publishSkipped({ packageDir: 'lib-1', version: '1.0.0' }),
   )
   // the whole point of asking first: the skipped package is never transpiled
-  const publishedFiles = fileSystem.toJSON()
+  const publishedFiles = service.fileSystem.toJSON()
   expect(publishedFiles['/m/dist/lib-1/package.json']).toBeUndefined()
   expect(publishedFiles['/m/dist/lib-1/a.js']).toBeUndefined()
   expect(publishedFiles['/m/dist/lib-2/package.json']).toBeDefined()
   expect(events.at(-1)).toEqual(eventCreators.allPublished())
   expect(
-    executedCommands.filter(({ args }) => args[0] === 'publish').map(({ options }) => options?.cwd),
+    service.executedCommands
+      .filter(({ args }) => args[0] === 'publish')
+      .map(({ options }) => options?.cwd),
   ).toEqual(['/m/dist/lib-2'])
 })

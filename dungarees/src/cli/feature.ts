@@ -1,4 +1,10 @@
-import type { CommandFactory, Presenter } from './yargs-prompt-app.ts'
+import {
+  type CommandFactory,
+  createYargsPromptApp,
+  type Presenter,
+  type YargsPromptApp,
+  type YargsPromptAppOptions,
+} from './yargs-prompt-app.ts'
 
 import type { DomainEvent } from '@dungarees/core/event.ts'
 
@@ -17,3 +23,16 @@ export const combineFeatures = <A extends DomainEvent, B extends DomainEvent>(
   commands: [...a.commands, ...b.commands],
   presenter: { ...a.presenter, ...b.presenter },
 })
+
+export type CreateFeatureAppOptions<EVENTS extends DomainEvent> = {
+  name: string
+  feature: CliFeature<EVENTS>
+  route?: YargsPromptAppOptions<EVENTS>['route']
+}
+
+export const createFeatureApp = <EVENTS extends DomainEvent>({
+  name,
+  feature,
+  route = (yargs) => yargs.demandCommand(1).strict().version(false),
+}: CreateFeatureAppOptions<EVENTS>): YargsPromptApp =>
+  createYargsPromptApp<EVENTS>({ name, ...feature, route })
