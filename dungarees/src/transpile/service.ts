@@ -6,20 +6,31 @@ import type { Observable } from 'rxjs'
 import ts from 'typescript'
 
 type Transpiler = {
-  transpileDir: (options: { input: string; output: string }) => Observable<TranspileDirOutput[]>
+  transpileDir: (options: {
+    input: string
+    output: string
+    exclude?: (filePath: string) => boolean
+  }) => Observable<TranspileDirOutput[]>
 }
 
 export type TranspileDirOutput = { input: string; output: string; type: string }
+
+const isOutsideNodeModules = (filePath: string): boolean =>
+  !filePath.split('/').includes('node_modules')
 
 export const createTranspilerService = (fileSystem: FileSystemService): Transpiler => {
   const transpileDirAsync = async ({
     input,
     output,
+    exclude = () => false,
   }: {
     input: string
     output: string
+    exclude?: (filePath: string) => boolean
   }): Promise<TranspileDirOutput[]> => {
-    const tsFiles = await fileSystem.globAsync(path.join(input, '**', '*.ts'))
+    const tsFiles = (await fileSystem.globAsync(path.join(input, '**', '*.ts'))).filter(
+      (filePath) => isOutsideNodeModules(filePath) && !exclude(filePath),
+    )
 
     const pathAndContentPairs = Object.entries(await fileSystem.readBulkAsync(tsFiles))
 

@@ -36,6 +36,8 @@ type BaseBuildArgs = {
   version: string | undefined
 }
 
+export const isTestFile = (filePath: string): boolean => /\.(test|spec)\.tsx?$/.test(filePath)
+
 export const getBuildStartEvent = ({
   srcDir,
   outDir,
