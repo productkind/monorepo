@@ -131,4 +131,4 @@ A yes with a date in it tells you more than an enthusiastic compliment. A polite
 - "Which parts of this have you needed in the last month?"
 - "What would you tell a friend this app does?"
 
-If you're looking for an even broader set of feedback questions for after you've launched, the [User Feedback Question Bank](https://littleparrot.app/nest/toolkit/ab78ba0e-37bb-4c6c-b21b-a7466df4b19d) in the Launch and Grow Your Lovable App course covers post-launch feedback conversations in more depth.
+If you're looking for an even broader set of feedback questions for after you've launched, the [User Feedback Question Bank](https://littleparrot.app/nest/toolkit/ab78ba0e-37bb-4c6c-b21b-a7466df4b19d) covers post-launch feedback conversations in more depth.

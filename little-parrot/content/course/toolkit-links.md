@@ -22,7 +22,7 @@ Use these links when referencing toolkit items in course content.
 | Component Prompt Library | `https://littleparrot.app/nest/toolkit/954f1c91-6a56-4c4c-8c16-489f45915fb8` |
 | Software Vocabulary Cheat Sheet | `https://littleparrot.app/nest/toolkit/ac7e9348-f7e1-459e-b46c-9078e909d282` |
 
-## Launch and Grow Your Lovable App (`lovable-publishing-00`)
+## How to Publish a Lovable App: Custom Domain, Legal Pages, SEO and Analytics (`lovable-publishing-00`)
 
 | Toolkit Item | URL |
 | --- | --- |

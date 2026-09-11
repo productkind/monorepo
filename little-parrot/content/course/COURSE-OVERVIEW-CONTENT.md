@@ -65,7 +65,7 @@ Turn your app idea into a working product you can share — without writing a si
 
 ---
 
-## 2. Launch and Grow Your Lovable App
+## 2. How to Publish a Lovable App: Custom Domain, Legal Pages, SEO and Analytics
 
 ### Short description
 
