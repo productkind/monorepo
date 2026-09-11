@@ -1,17 +1,26 @@
-import { createTestApp } from '@dungarees/bin-fake-app-cli-yargs/test-app.ts'
+import { auditDependenciesFeature } from './feature.ts'
+
+import { createFakeAuditDependencies } from '@dungarees/bin-audit-dependencies-domain/fake.ts'
+import { createFeatureApp } from '@dungarees/cli/feature.ts'
 import { renderCli } from '@dungarees/cli/test-renderer.ts'
 
 import { expect, test } from 'vitest'
 
+const createApp = (files: Record<string, string>) =>
+  createFeatureApp({
+    name: 'dungarees',
+    feature: auditDependenciesFeature({
+      auditDependencies: createFakeAuditDependencies({ files }),
+    }),
+  })
+
 test('audit-dependencies reports a clean tree and exits 0', async () => {
-  const { app } = createTestApp({
-    files: {
-      '/repo/src/a/package.json': JSON.stringify({
-        name: '@org/a',
-        dependencies: { rxjs: '^7.8.1' },
-      }),
-      '/repo/src/a/index.ts': "import { of } from 'rxjs'\n",
-    },
+  const app = createApp({
+    '/repo/src/a/package.json': JSON.stringify({
+      name: '@org/a',
+      dependencies: { rxjs: '^7.8.1' },
+    }),
+    '/repo/src/a/index.ts': "import { of } from 'rxjs'\n",
   })
 
   const { terminal } = renderCli(app, 'dungarees audit-dependencies /repo')
@@ -24,11 +33,9 @@ test('audit-dependencies reports a clean tree and exits 0', async () => {
 })
 
 test('audit-dependencies reports an undeclared import and exits 1', async () => {
-  const { app } = createTestApp({
-    files: {
-      '/repo/src/a/package.json': JSON.stringify({ name: '@org/a' }),
-      '/repo/src/a/index.ts': "import { of } from 'rxjs'\n",
-    },
+  const app = createApp({
+    '/repo/src/a/package.json': JSON.stringify({ name: '@org/a' }),
+    '/repo/src/a/index.ts': "import { of } from 'rxjs'\n",
   })
 
   const { terminal } = renderCli(app, 'dungarees audit-dependencies /repo')

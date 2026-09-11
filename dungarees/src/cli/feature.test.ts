@@ -1,5 +1,5 @@
-import { type CliFeature, combineFeatures } from './feature.ts'
-import { createCommand, createYargsPromptApp } from './yargs-prompt-app.ts'
+import { type CliFeature, combineFeatures, createFeatureApp } from './feature.ts'
+import { createCommand } from './yargs-prompt-app.ts'
 
 import type { DomainEvent } from '@dungarees/core/event.ts'
 import { collectValuesFrom } from '@dungarees/rxjs/util.ts'
@@ -44,15 +44,32 @@ const countFeature: CliFeature<CountEvent> = {
   },
 }
 
-const createCombinedApp = () => {
-  const combined = combineFeatures(greetFeature, countFeature)
-  return createYargsPromptApp<GreetEvent | CountEvent>({
-    name: 'test-app',
-    commands: combined.commands,
-    presenter: combined.presenter,
-    route: (yargs) => yargs.demandCommand(1).strict(),
-  })
-}
+const createCombinedApp = () =>
+  createFeatureApp({ name: 'test-app', feature: combineFeatures(greetFeature, countFeature) })
+
+test('a feature app runs the command of the feature it mounted', async () => {
+  const app = createFeatureApp({ name: 'test-app', feature: greetFeature })
+
+  expect(await collectValuesFrom(app.present(['greet', '--who', 'Alice'], {}))).toEqual([
+    { type: 'stdout', message: 'Hello, Alice', level: 'info' },
+    { type: 'exit', code: 0 },
+  ])
+})
+
+test('a feature app rejects an argument its commands never declared', async () => {
+  const app = createFeatureApp({ name: 'test-app', feature: greetFeature })
+
+  const [error, exit] = await collectValuesFrom(app.present(['greet', '--nope'], {}))
+
+  expect(error).toMatchObject({ type: 'stderr', level: 'error' })
+  expect(exit).toEqual({ type: 'exit', code: 1 })
+})
+
+test('a feature app run with no command at all exits 1', async () => {
+  const app = createFeatureApp({ name: 'test-app', feature: greetFeature })
+
+  expect(await collectValuesFrom(app.present([], {}))).toContainEqual({ type: 'exit', code: 1 })
+})
 
 test('each combined feature keeps its own command and presenter', async () => {
   expect(await collectValuesFrom(createCombinedApp().present(['greet'], {}))).toEqual([

@@ -1,4 +1,5 @@
 import type { DungareesBinServices } from '@dungarees/bin-base-app-cli-yargs/services.ts'
+import { createCliCommands } from '@dungarees/cli-command/service.ts'
 import { createFileSystem } from '@dungarees/fs/service.ts'
 import { createSubProcessService } from '@dungarees/sub-process/service.ts'
 
@@ -7,7 +8,7 @@ import * as fs from 'node:fs'
 
 export const getServices = (): DungareesBinServices => ({
   fileSystem: createFileSystem(fs),
-  subProcess: createSubProcessService(spawn),
+  ...createCliCommands(createSubProcessService(spawn)),
   process: {
     argv: process.argv,
     stdout: process.stdout,

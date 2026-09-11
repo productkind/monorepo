@@ -11,7 +11,7 @@ import {
   transformPackageJson,
 } from './operations.ts'
 
-import type { CliCommandsService } from '@dungarees/cli-command/service.ts'
+import type { NpmCommands } from '@dungarees/cli-command/service.ts'
 import { createFileOperations } from '@dungarees/fs/file-operations.ts'
 import type { FileSystemService } from '@dungarees/fs/service.ts'
 import { createTranspilerService } from '@dungarees/transpile/service.ts'
@@ -40,12 +40,12 @@ export type PublishLibBehavior = {
 
 export type CreatePublishLibBehaviorOptions = {
   fileSystem: FileSystemService
-  cliCommands: CliCommandsService
+  npm: NpmCommands
 }
 
 export const createPublishLibBehavior = ({
   fileSystem,
-  cliCommands: { npm },
+  npm,
 }: CreatePublishLibBehaviorOptions): PublishLibBehavior => {
   const fileOperations = createFileOperations(fileSystem)
   const transpileService = createTranspilerService(fileSystem)

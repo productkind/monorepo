@@ -1,17 +1,15 @@
-import { getBehaviors } from './get-behaviors.ts'
-import { main } from './main.ts'
-import { createYargsApp } from './yargs-app.ts'
+import { baseApplication } from './base-app.ts'
 
-import { createFakeServices } from '@dungarees/bin-fake-app-cli-yargs/get-services.ts'
+import { createFakeServices } from '@dungarees/bin-fake-services-cli-yargs/get-services.ts'
 
 import { PassThrough } from 'node:stream'
 import { expect, test } from 'vitest'
 
-test('main renders the app to the process it was given', async () => {
+test('the dungarees application renders its command to the process it was given', async () => {
   const stdout = new PassThrough()
   const stderr = new PassThrough()
   const exitCodes: number[] = []
-  const { services } = createFakeServices({
+  const services = createFakeServices({
     files: {
       '/multi-lib/config/version.json': JSON.stringify({ version: '1.0.0' }),
       '/multi-lib/src/lib-1/package.json': JSON.stringify({ name: '@org/lib-1' }),
@@ -41,9 +39,8 @@ test('main renders the app to the process it was given', async () => {
       },
     },
   })
-  const app = createYargsApp(getBehaviors(services))
 
-  await main({ services, delivery: { app } })
+  await baseApplication.run({ environment: 'test' }, { getServices: () => services }).output
 
   expect(String(stderr.read() ?? '')).toBe('')
   expect(String(stdout.read() ?? '')).toContain('All packages published successfully')

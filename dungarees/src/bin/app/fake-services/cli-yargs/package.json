@@ -1,5 +1,5 @@
 {
-  "name": "@dungarees/bin-fake-app-cli-yargs",
+  "name": "@dungarees/bin-fake-services-cli-yargs",
   "private": true,
   "engines": {
     "node": ">=25.0.0"
@@ -9,11 +9,9 @@
   },
   "type": "module",
   "dependencies": {
-    "@dungarees/bin-base-app-cli-yargs": "*",
     "@dungarees/cli": "*",
-    "@dungarees/core": "*",
-    "@dungarees/fs": "*",
-    "@dungarees/sub-process": "*"
+    "@dungarees/cli-command": "*",
+    "@dungarees/fs": "*"
   },
   "devDependencies": {
     "typescript": "^5.9.3",

@@ -1,4 +1,10 @@
-import { createTestApp } from '@dungarees/bin-fake-app-cli-yargs/test-app.ts'
+import { publishLibFeature } from './feature.ts'
+
+import {
+  createFakePublishLib,
+  type FakePublishLibWorld,
+} from '@dungarees/bin-publish-lib-domain/fake.ts'
+import { createFeatureApp } from '@dungarees/cli/feature.ts'
 import { renderCli } from '@dungarees/cli/test-renderer.ts'
 
 import { expect, test } from 'vitest'
@@ -62,6 +68,14 @@ const notPublished = (name: string, registry: string | undefined) => ({
   exitCode: 1,
 })
 
+const mountPublishLib = (world: FakePublishLibWorld) => {
+  const publishLib = createFakePublishLib(world)
+  return {
+    app: createFeatureApp({ name: 'dungarees', feature: publishLibFeature({ publishLib }) }),
+    executedCommands: publishLib.executedCommands,
+  }
+}
+
 const createDungareesApp = ({
   npmPublishArgs,
   npmPublishExitCode = 0,
@@ -73,7 +87,7 @@ const createDungareesApp = ({
   npmPublishStdError?: string
   registry?: string
 }) =>
-  createTestApp({
+  mountPublishLib({
     files: MULTI_LIB,
     commands: [
       notPublished('@org/lib-1', registry),
