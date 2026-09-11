@@ -34,9 +34,9 @@
       .mini { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 15px; font-weight: 700; fill: #4a4a50; letter-spacing: 1px; }
       .pill { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 15px; font-weight: 700; letter-spacing: 1.2px; }
       .code { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 18px; fill: #080809; }
-      .connector { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow); }
-      .stem { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
-      .bracket { fill: none; stroke: #b4b3aa; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      .connector { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: butt; stroke-linejoin: miter; marker-end: url(#arrow); }
+      .stem { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: butt; stroke-linejoin: miter; }
+      .bracket { fill: none; stroke: #b4b3aa; stroke-width: 3; stroke-linecap: butt; stroke-linejoin: miter; }
       .divider { stroke: #e0dfd6; stroke-width: 2; }
       .band { fill: #ffffff; stroke: #e6e5df; stroke-width: 2; }
     </style>
@@ -47,94 +47,94 @@
   <text x="50" y="84" class="display" font-size="36" font-weight="700">One record, updated by everyone</text>
   <text x="50" y="124" class="copy muted" font-size="22">The report is not finished when you press create.</text>
   <path d="M120 200 V1012" class="stem" style="stroke:#c9c8c1"/>
-  <circle cx="120" cy="260" r="20" fill="#ffb65b" stroke="#080809" stroke-width="3"/>
+  <rect x="100" y="240" width="40" height="40" fill="#ffb65b" stroke="#080809" stroke-width="3"/>
   <text x="120" y="267" text-anchor="middle" class="pill" style="fill:#080809">1</text>
   <g filter="url(#card-shadow)">
-    <rect x="190" y="190" width="1150" height="140" rx="24" fill="#ffffff" stroke="#e6e5df" stroke-width="2"/>
-    <rect x="190" y="190" width="8" height="140" rx="4" fill="#ffb65b"/>
+    <rect x="190" y="190" width="1150" height="140" fill="#ffffff" stroke="#e6e5df" stroke-width="2"/>
+    <rect x="190" y="190" width="8" height="140" fill="#ffb65b"/>
   </g>
-  <rect x="222" y="216" width="93" height="32" rx="16" fill="#ffb65b"/>
+  <rect x="222" y="216" width="93" height="32" fill="#ffb65b"/>
   <text x="268" y="237" text-anchor="middle" class="pill" style="fill:#080809">PRODUCT</text>
   <text x="222" y="286" class="card-title" font-size="24">First version</text>
   <text x="222" y="316" class="gloss">One observable problem, the conditions, the steps and what you saw.</text>
   <line x1="890" y1="214" x2="890" y2="306" class="divider"/>
   <text x="926" y="236" class="mini">SECTIONS TOUCHED</text>
-  <rect x="926" y="252" width="75" height="30" rx="15" fill="#f0efe7"/>
+  <rect x="926" y="252" width="75" height="30" fill="#f0efe7"/>
   <text x="964" y="272" text-anchor="middle" class="pill" style="fill:#4a4a50">Title</text>
-  <rect x="1013.0" y="252" width="120" height="30" rx="15" fill="#f0efe7"/>
+  <rect x="1013.0" y="252" width="120" height="30" fill="#f0efe7"/>
   <text x="1073" y="272" text-anchor="middle" class="pill" style="fill:#4a4a50">Conditions</text>
-  <rect x="1145.0" y="252" width="75" height="30" rx="15" fill="#f0efe7"/>
+  <rect x="1145.0" y="252" width="75" height="30" fill="#f0efe7"/>
   <text x="1182" y="272" text-anchor="middle" class="pill" style="fill:#4a4a50">Steps</text>
-  <rect x="926" y="290" width="102" height="30" rx="15" fill="#f0efe7"/>
+  <rect x="926" y="290" width="102" height="30" fill="#f0efe7"/>
   <text x="977" y="310" text-anchor="middle" class="pill" style="fill:#4a4a50">Expected</text>
-  <rect x="1040.0" y="290" width="84" height="30" rx="15" fill="#f0efe7"/>
+  <rect x="1040.0" y="290" width="84" height="30" fill="#f0efe7"/>
   <text x="1082" y="310" text-anchor="middle" class="pill" style="fill:#4a4a50">Actual</text>
-  <rect x="1136.0" y="290" width="102" height="30" rx="15" fill="#f0efe7"/>
+  <rect x="1136.0" y="290" width="102" height="30" fill="#f0efe7"/>
   <text x="1187" y="310" text-anchor="middle" class="pill" style="fill:#4a4a50">Evidence</text>
-  <circle cx="120" cy="430" r="20" fill="#fdd825" stroke="#080809" stroke-width="3"/>
+  <rect x="100" y="410" width="40" height="40" fill="#fdd825" stroke="#080809" stroke-width="3"/>
   <text x="120" y="437" text-anchor="middle" class="pill" style="fill:#080809">2</text>
   <g filter="url(#card-shadow)">
-    <rect x="190" y="360" width="1150" height="140" rx="24" fill="#ffffff" stroke="#e6e5df" stroke-width="2"/>
-    <rect x="190" y="360" width="8" height="140" rx="4" fill="#fdd825"/>
+    <rect x="190" y="360" width="1150" height="140" fill="#ffffff" stroke="#e6e5df" stroke-width="2"/>
+    <rect x="190" y="360" width="8" height="140" fill="#fdd825"/>
   </g>
-  <rect x="222" y="386" width="93" height="32" rx="16" fill="#fdd825"/>
+  <rect x="222" y="386" width="93" height="32" fill="#fdd825"/>
   <text x="268" y="407" text-anchor="middle" class="pill" style="fill:#080809">SUPPORT</text>
   <text x="222" y="456" class="card-title" font-size="24">Confirmed reach</text>
   <text x="222" y="486" class="gloss">Two more customers report the same failure on a saved card.</text>
   <line x1="890" y1="384" x2="890" y2="476" class="divider"/>
   <text x="926" y="406" class="mini">SECTIONS TOUCHED</text>
-  <rect x="926" y="422" width="129" height="30" rx="15" fill="#f0efe7"/>
+  <rect x="926" y="422" width="129" height="30" fill="#f0efe7"/>
   <text x="990" y="442" text-anchor="middle" class="pill" style="fill:#4a4a50">User impact</text>
-  <circle cx="120" cy="600" r="20" fill="#b9dc14" stroke="#080809" stroke-width="3"/>
+  <rect x="100" y="580" width="40" height="40" fill="#b9dc14" stroke="#080809" stroke-width="3"/>
   <text x="120" y="607" text-anchor="middle" class="pill" style="fill:#080809">3</text>
   <g filter="url(#card-shadow)">
-    <rect x="190" y="530" width="1150" height="140" rx="24" fill="#ffffff" stroke="#e6e5df" stroke-width="2"/>
-    <rect x="190" y="530" width="8" height="140" rx="4" fill="#b9dc14"/>
+    <rect x="190" y="530" width="1150" height="140" fill="#ffffff" stroke="#e6e5df" stroke-width="2"/>
+    <rect x="190" y="530" width="8" height="140" fill="#b9dc14"/>
   </g>
-  <rect x="222" y="556" width="129" height="32" rx="16" fill="#b9dc14"/>
+  <rect x="222" y="556" width="129" height="32" fill="#b9dc14"/>
   <text x="286" y="577" text-anchor="middle" class="pill" style="fill:#080809">ENGINEERING</text>
   <text x="222" y="626" class="card-title" font-size="24">Technical evidence</text>
   <text x="222" y="656" class="gloss">The failing request, its status code and a safe log reference.</text>
   <line x1="890" y1="554" x2="890" y2="646" class="divider"/>
   <text x="926" y="576" class="mini">SECTIONS TOUCHED</text>
-  <rect x="926" y="592" width="102" height="30" rx="15" fill="#f0efe7"/>
+  <rect x="926" y="592" width="102" height="30" fill="#f0efe7"/>
   <text x="977" y="612" text-anchor="middle" class="pill" style="fill:#4a4a50">Evidence</text>
-  <rect x="1040.0" y="592" width="111" height="30" rx="15" fill="#f0efe7"/>
+  <rect x="1040.0" y="592" width="111" height="30" fill="#f0efe7"/>
   <text x="1096" y="612" text-anchor="middle" class="pill" style="fill:#4a4a50">Suspected</text>
-  <circle cx="120" cy="770" r="20" fill="#8efd23" stroke="#080809" stroke-width="3"/>
+  <rect x="100" y="750" width="40" height="40" fill="#8efd23" stroke="#080809" stroke-width="3"/>
   <text x="120" y="777" text-anchor="middle" class="pill" style="fill:#080809">4</text>
   <g filter="url(#card-shadow)">
-    <rect x="190" y="700" width="1150" height="140" rx="24" fill="#ffffff" stroke="#e6e5df" stroke-width="2"/>
-    <rect x="190" y="700" width="8" height="140" rx="4" fill="#8efd23"/>
+    <rect x="190" y="700" width="1150" height="140" fill="#ffffff" stroke="#e6e5df" stroke-width="2"/>
+    <rect x="190" y="700" width="8" height="140" fill="#8efd23"/>
   </g>
-  <rect x="222" y="726" width="129" height="32" rx="16" fill="#8efd23"/>
+  <rect x="222" y="726" width="129" height="32" fill="#8efd23"/>
   <text x="286" y="747" text-anchor="middle" class="pill" style="fill:#080809">ENGINEERING</text>
   <text x="222" y="796" class="card-title" font-size="24">Cause verified</text>
   <text x="222" y="826" class="gloss">The suspected line becomes a confirmed one, and the title can be corrected.</text>
   <line x1="890" y1="724" x2="890" y2="816" class="divider"/>
   <text x="926" y="746" class="mini">SECTIONS TOUCHED</text>
-  <rect x="926" y="762" width="111" height="30" rx="15" fill="#f0efe7"/>
+  <rect x="926" y="762" width="111" height="30" fill="#f0efe7"/>
   <text x="982" y="782" text-anchor="middle" class="pill" style="fill:#4a4a50">Confirmed</text>
-  <rect x="1049.0" y="762" width="75" height="30" rx="15" fill="#f0efe7"/>
+  <rect x="1049.0" y="762" width="75" height="30" fill="#f0efe7"/>
   <text x="1086" y="782" text-anchor="middle" class="pill" style="fill:#4a4a50">Title</text>
-  <circle cx="120" cy="940" r="20" fill="#00ed70" stroke="#080809" stroke-width="3"/>
+  <rect x="100" y="920" width="40" height="40" fill="#00ed70" stroke="#080809" stroke-width="3"/>
   <text x="120" y="947" text-anchor="middle" class="pill" style="fill:#080809">5</text>
   <g filter="url(#card-shadow)">
-    <rect x="190" y="870" width="1150" height="140" rx="24" fill="#ffffff" stroke="#e6e5df" stroke-width="2"/>
-    <rect x="190" y="870" width="8" height="140" rx="4" fill="#00ed70"/>
+    <rect x="190" y="870" width="1150" height="140" fill="#ffffff" stroke="#e6e5df" stroke-width="2"/>
+    <rect x="190" y="870" width="8" height="140" fill="#00ed70"/>
   </g>
-  <rect x="222" y="896" width="183" height="32" rx="16" fill="#00ed70"/>
+  <rect x="222" y="896" width="183" height="32" fill="#00ed70"/>
   <text x="314" y="917" text-anchor="middle" class="pill" style="fill:#080809">QUALITY ASSURANCE</text>
   <text x="222" y="966" class="card-title" font-size="24">Verified after the fix</text>
   <text x="222" y="996" class="gloss">The same steps run again, with the release linked to the report.</text>
   <line x1="890" y1="894" x2="890" y2="986" class="divider"/>
   <text x="926" y="916" class="mini">SECTIONS TOUCHED</text>
-  <rect x="926" y="932" width="93" height="30" rx="15" fill="#f0efe7"/>
+  <rect x="926" y="932" width="93" height="30" fill="#f0efe7"/>
   <text x="972" y="952" text-anchor="middle" class="pill" style="fill:#4a4a50">Related</text>
-  <rect x="1031.0" y="932" width="84" height="30" rx="15" fill="#f0efe7"/>
+  <rect x="1031.0" y="932" width="84" height="30" fill="#f0efe7"/>
   <text x="1073" y="952" text-anchor="middle" class="pill" style="fill:#4a4a50">Status</text>
-  <rect x="60" y="1060" width="1280" height="95" rx="24" fill="#1a0044"/>
-  <rect x="60" y="1060" width="14" height="95" rx="7" fill="url(#brand-gradient-v)"/>
+  <rect x="60" y="1060" width="1280" height="95" fill="#1a0044"/>
+  <rect x="60" y="1060" width="14" height="95" fill="url(#brand-gradient-v)"/>
   <text x="104" y="1100" class="display" font-size="20" font-weight="700" style="fill:#ffd79a">UPDATE THE FIELDS THEMSELVES</text>
   <text x="104" y="1134" class="copy" font-size="21" style="fill:#ffffff">Nobody should have to reconstruct the current state from a long comment thread.</text>
   <text x="1340" y="1202" text-anchor="end" class="label">LittleParrot.app</text>

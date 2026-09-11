@@ -23,7 +23,7 @@ Build the cluster around **jobs and decisions**, then connect each job to the pr
 | Compare options before the team commits | Judgement | Technical debt, build versus buy, prototype versus MVP |
 | Narrow a problem before involving engineering | Independence and speed | Bug triage, bug reports, root cause analysis |
 | Answer a product question with evidence | Independence and confidence | Product analytics, SQL for Product Managers, A/B testing |
-| Turn an assumption into something testable | Independence and speed | AI prototyping, application building with AI, production handover |
+| Turn an assumption into something testable | Independence and speed | AI prototyping, application building with AI, prototype review |
 
 This follows the central finding in the research: the product is independent technical judgement, while the searchable entry points are the concrete tasks and concepts that support it.
 
@@ -64,7 +64,7 @@ The volumes and keyword difficulty values below are the August 2026 Semrush snap
 | 1 | **Technical feasibility for Product Managers: a checklist before you commit**<br>`/guides/technical-feasibility-product-managers` | `technical feasibility`: US 320, KD 22; UK 110, KD 19 | A copyable feasibility brief and a worked feature example | Judgement |
 | 2 | **Build versus buy software: a decision framework for Product Managers**<br>`/guides/build-vs-buy-software` | `build vs buy software`: US 210, SERP KD 28; UK 30, KD 0. CPC $12.90 US | A weighted decision table that includes data, switching, maintenance and reversibility | Judgement |
 | 3 | **Bug triage for Product Managers: what to check before engineering starts**<br>`/guides/bug-triage-product-managers` | `bug triage`: US 170, KD 21; UK 20, KD 0 | A first-pass investigation checklist and severity/priority grid | Independence |
-| 4 | **AI prototyping for Product Managers: test an assumption and hand it over safely**<br>`/guides/ai-prototyping-product-managers` | `ai prototyping`: US 90, KD 24; UK 30, KD 0, plus PM-specific related-search evidence | A prototype brief, test plan and production handover | Speed |
+| 4 | **AI prototyping for Product Managers: test one assumption before you build**<br>`/guides/ai-prototyping-product-managers` | `ai prototyping`: US 90, KD 24; UK 30, KD 0, plus PM-specific related-search evidence | A prototype brief, test plan and shared production-boundary review | Speed |
 | 5 | **Product analytics for Product Managers: answer a question before opening a dashboard**<br>`/guides/product-analytics-product-managers` | `product analytics`: US 1,900, KD 44; UK 320, KD 41 | A question-to-metric worksheet and one worked funnel | Independence |
 | 6 | **What is technical debt? A Product Manager's decision guide**<br>`/guides/technical-debt-product-managers` | `what is technical debt`: US 2,900; UK 720, KD 44 | A way to express debt through user, revenue, support and future-delivery consequences | Credibility |
 | 7 | **API integrations explained for Product Managers**<br>`/guides/api-integration-product-managers` | `api integration`: US 5,400; UK 1,600. `how does an api work`: US 720; UK 90 | A request-and-data-flow diagram plus questions for integration discovery | Confidence |
@@ -76,7 +76,7 @@ The volumes and keyword difficulty values below are the August 2026 Semrush snap
 
 ### Why this order differs slightly from the August research
 
-The August research placed AI prototyping first. A current search check now shows several detailed 2026 guides from Bubble, Builder.io, Aha! and specialist PM sites. The opportunity still exists, but a generic overview would arrive in a crowded result set. It moves to fourth and must own the neglected boundary: what the prototype proves, what it does not prove and what Engineering needs for a safe handover.
+The August research placed AI prototyping first. A current search check now shows several detailed 2026 guides from Bubble, Builder.io, Aha! and specialist PM sites. The opportunity still exists, but a generic overview would arrive in a crowded result set. It moves to fourth and must own the neglected boundary: what the prototype proves, what it does not prove and which questions the product team still needs to assess together.
 
 Technical feasibility moves first because it combines low difficulty, strong fit with the PM evidence and a result page still dominated by definitions and broad feasibility studies. A practical PM worksheet and one realistic worked example can add information that is missing from those results.
 
@@ -133,3 +133,4 @@ Track:
 - [Build versus buy software](./build-vs-buy-software/article.md)
 - [Bug triage for Product Managers](./bug-triage-product-managers/article.md)
 - [How to write a useful software bug report](./software-bug-report-template/article.md)
+- [AI prototyping for Product Managers](./ai-prototyping-product-managers/article.md)

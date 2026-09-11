@@ -27,9 +27,9 @@
       .card-copy { font-family: Inter, Arial, sans-serif; font-size: 20px; fill: #4a4a50; }
       .label { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 16px; font-weight: 700; fill: #4a4a50; letter-spacing: 0.4px; }
       .question { font-family: Inter, Arial, sans-serif; font-size: 17px; font-weight: 600; fill: #080809; }
-      .connector { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow); }
-      .connector-green { fill: none; stroke: #00a952; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow-green); }
-      .icon { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .connector { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: butt; stroke-linejoin: miter; marker-end: url(#arrow); }
+      .connector-green { fill: none; stroke: #00a952; stroke-width: 4; stroke-linecap: butt; stroke-linejoin: miter; marker-end: url(#arrow-green); }
+      .icon { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: butt; stroke-linejoin: miter; }
     </style>
   </defs>
 
@@ -41,11 +41,11 @@
 
   <!-- Customer action -->
   <g filter="url(#card-shadow)">
-    <rect x="50" y="320" width="300" height="220" rx="26" fill="#fff3e6" stroke="#ffb65b" stroke-width="3"/>
-    <rect x="50" y="318" width="300" height="18" rx="9" fill="#ffb65b"/>
+    <rect x="50" y="320" width="300" height="220" fill="#fff3e6" stroke="#ffb65b" stroke-width="3"/>
+    <rect x="50" y="318" width="300" height="18" fill="#ffb65b"/>
   </g>
   <g transform="translate(82 360)">
-    <rect x="0" y="0" width="48" height="62" rx="9" class="icon"/>
+    <rect x="0" y="0" width="48" height="62" class="icon"/>
     <path d="M12 14 H36 M12 26 H32 M12 38 H27" class="icon"/>
     <path d="M31 48 L45 34 M37 31 L48 42" class="icon"/>
   </g>
@@ -57,14 +57,14 @@
   <!-- Customer to order -->
   <path d="M350 430 H482" class="connector"/>
   <g>
-    <rect x="366" y="376" width="100" height="36" rx="18" fill="#ffffff" stroke="#d8d8d2" stroke-width="2"/>
+    <rect x="366" y="376" width="100" height="36" fill="#ffffff" stroke="#d8d8d2" stroke-width="2"/>
     <text x="416" y="400" text-anchor="middle" class="question">request</text>
   </g>
 
   <!-- Order service -->
   <g filter="url(#card-shadow)">
-    <rect x="490" y="275" width="380" height="295" rx="28" fill="#fcffe8" stroke="#b9dc14" stroke-width="3"/>
-    <rect x="490" y="273" width="380" height="18" rx="9" fill="#d7ef3c"/>
+    <rect x="490" y="275" width="380" height="295" fill="#fcffe8" stroke="#b9dc14" stroke-width="3"/>
+    <rect x="490" y="273" width="380" height="18" fill="#d7ef3c"/>
   </g>
   <g transform="translate(526 320)">
     <ellipse cx="28" cy="10" rx="27" ry="9" class="icon"/>
@@ -86,8 +86,8 @@
 
   <!-- Payment and risk -->
   <g filter="url(#card-shadow)">
-    <rect x="990" y="130" width="340" height="160" rx="24" fill="#fff8d9" stroke="#f1c000" stroke-width="3"/>
-    <rect x="990" y="128" width="340" height="18" rx="9" fill="#fdd825"/>
+    <rect x="990" y="130" width="340" height="160" fill="#fff8d9" stroke="#f1c000" stroke-width="3"/>
+    <rect x="990" y="128" width="340" height="18" fill="#fdd825"/>
   </g>
   <g transform="translate(1020 180)">
     <path d="M28 0 L51 9 V27 C51 43 41 52 28 59 C15 52 5 43 5 27 V9 Z" class="icon"/>
@@ -96,13 +96,13 @@
   <text x="1090" y="200" class="card-title">Payment &amp; risk</text>
   <text x="1090" y="236" class="card-copy">Does the new address</text>
   <text x="1090" y="264" class="card-copy">need another risk check?</text>
-  <rect x="882" y="160" width="94" height="38" rx="19" fill="#ffffff" stroke="#e4d37a" stroke-width="2"/>
+  <rect x="882" y="160" width="94" height="38" fill="#ffffff" stroke="#e4d37a" stroke-width="2"/>
   <text x="929" y="185" text-anchor="middle" class="question">validate</text>
 
   <!-- Fulfilment partner -->
   <g filter="url(#card-shadow)">
-    <rect x="990" y="330" width="300" height="180" rx="24" fill="#efffe8" stroke="#8efd23" stroke-width="3"/>
-    <rect x="990" y="328" width="300" height="18" rx="9" fill="#8efd23"/>
+    <rect x="990" y="330" width="300" height="180" fill="#efffe8" stroke="#8efd23" stroke-width="3"/>
+    <rect x="990" y="328" width="300" height="18" fill="#8efd23"/>
   </g>
   <g transform="translate(1018 375)">
     <path d="M2 18 L29 3 L56 18 V52 H2 Z" class="icon"/>
@@ -113,20 +113,20 @@
   <text x="1090" y="446" class="card-copy">Has packing started?</text>
   <text x="1090" y="476" class="card-copy">Can its API accept</text>
   <text x="1090" y="501" class="card-copy">this update?</text>
-  <rect x="882" y="370" width="94" height="38" rx="19" fill="#ffffff" stroke="#b9de8f" stroke-width="2"/>
+  <rect x="882" y="370" width="94" height="38" fill="#ffffff" stroke="#b9de8f" stroke-width="2"/>
   <text x="929" y="395" text-anchor="middle" class="question">update</text>
 
   <!-- Fulfilment to courier -->
   <path d="M1290 420 H1392" class="connector-green"/>
   <g>
-    <rect x="1302" y="365" width="82" height="36" rx="18" fill="#ffffff" stroke="#90ddae" stroke-width="2"/>
+    <rect x="1302" y="365" width="82" height="36" fill="#ffffff" stroke="#90ddae" stroke-width="2"/>
     <text x="1343" y="389" text-anchor="middle" class="question">pass on</text>
   </g>
 
   <!-- Courier -->
   <g filter="url(#card-shadow)">
-    <rect x="1400" y="340" width="150" height="170" rx="24" fill="#eafff4" stroke="#00ed70" stroke-width="3"/>
-    <rect x="1400" y="338" width="150" height="18" rx="9" fill="#00ed70"/>
+    <rect x="1400" y="340" width="150" height="170" fill="#eafff4" stroke="#00ed70" stroke-width="3"/>
+    <rect x="1400" y="338" width="150" height="18" fill="#00ed70"/>
   </g>
   <g transform="translate(1443 370)">
     <path d="M2 15 H35 V48 H2 Z M35 25 H50 L61 36 V48 H35 Z" class="icon"/>
@@ -138,8 +138,8 @@
 
   <!-- Notification -->
   <g filter="url(#card-shadow)">
-    <rect x="990" y="570" width="340" height="160" rx="24" fill="#fff1e8" stroke="#ffb65b" stroke-width="3"/>
-    <rect x="990" y="568" width="340" height="18" rx="9" fill="#ffb65b"/>
+    <rect x="990" y="570" width="340" height="160" fill="#fff1e8" stroke="#ffb65b" stroke-width="3"/>
+    <rect x="990" y="568" width="340" height="18" fill="#ffb65b"/>
   </g>
   <g transform="translate(1020 618)">
     <path d="M5 8 H58 V49 H5 Z" class="icon"/>
@@ -148,13 +148,13 @@
   <text x="1090" y="635" class="card-title">Notification</text>
   <text x="1090" y="672" class="card-copy">Confirm the change or</text>
   <text x="1090" y="701" class="card-copy">explain why it failed</text>
-  <rect x="882" y="600" width="94" height="38" rx="19" fill="#ffffff" stroke="#efc7ae" stroke-width="2"/>
+  <rect x="882" y="600" width="94" height="38" fill="#ffffff" stroke="#efc7ae" stroke-width="2"/>
   <text x="929" y="625" text-anchor="middle" class="question">tell user</text>
 
   <!-- Scope note -->
   <g>
-    <rect x="70" y="756" width="1478" height="82" rx="24" fill="#1a0044"/>
-    <rect x="70" y="756" width="14" height="82" rx="7" fill="url(#brand-gradient)"/>
+    <rect x="70" y="756" width="1478" height="82" fill="#1a0044"/>
+    <rect x="70" y="756" width="14" height="82" fill="url(#brand-gradient)"/>
     <text x="113" y="791" class="display" font-size="20" font-weight="700" style="fill:#ffffff">THE FEASIBILITY QUESTION</text>
     <text x="113" y="819" class="copy" font-size="21" style="fill:#ffffff">Which answer could change the scope, timing or release decision?</text>
   </g>

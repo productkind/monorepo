@@ -30,9 +30,9 @@
       .q { font-family: Inter, Arial, sans-serif; font-size: 21px; fill: #080809; }
       .num { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 24px; font-weight: 700; fill: #080809; }
       .label { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 17px; font-weight: 700; fill: #4a4a50; letter-spacing: 0.5px; }
-      .connector { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow); }
-      .icon { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
-      .tick { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .connector { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: butt; stroke-linejoin: miter; marker-end: url(#arrow); }
+      .icon { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: butt; stroke-linejoin: miter; }
+      .tick { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: butt; stroke-linejoin: miter; }
       .divider { stroke: #e0dfd6; stroke-width: 2; }
     </style>
   </defs>
@@ -45,8 +45,8 @@
 
   <!-- Safety gate -->
   <g filter="url(#card-shadow)">
-    <rect x="50" y="180" width="850" height="180" rx="26" fill="#fff3e6" stroke="#ffb65b" stroke-width="3"/>
-    <rect x="50" y="178" width="850" height="18" rx="9" fill="#ffb65b"/>
+    <rect x="50" y="180" width="850" height="180" fill="#fff3e6" stroke="#ffb65b" stroke-width="3"/>
+    <rect x="50" y="178" width="850" height="18" fill="#ffb65b"/>
   </g>
   <g transform="translate(88 226)">
     <path d="M25 2 L47 11 V29 C47 45 25 54 25 54 C25 54 3 45 3 29 V11 Z" class="icon"/>
@@ -61,8 +61,8 @@
 
   <!-- Incident exit -->
   <g filter="url(#card-shadow)">
-    <rect x="990" y="180" width="360" height="180" rx="26" fill="#1a0044"/>
-    <rect x="990" y="180" width="14" height="180" rx="7" fill="url(#brand-gradient-v)"/>
+    <rect x="990" y="180" width="360" height="180" fill="#1a0044"/>
+    <rect x="990" y="180" width="14" height="180" fill="url(#brand-gradient-v)"/>
   </g>
   <text x="1026" y="228" class="label" style="fill:#ffb65b">IF ANY COULD BE TRUE</text>
   <text x="1026" y="266" class="copy" font-size="20" style="fill:#ffffff">Contact the people named in</text>
@@ -73,10 +73,10 @@
 
   <!-- Stage 1 -->
   <g filter="url(#card-shadow)">
-    <rect x="50" y="420" width="1300" height="200" rx="26" fill="#fff8d9" stroke="#f1c000" stroke-width="3"/>
-    <rect x="50" y="418" width="1300" height="18" rx="9" fill="#fdd825"/>
+    <rect x="50" y="420" width="1300" height="200" fill="#fff8d9" stroke="#f1c000" stroke-width="3"/>
+    <rect x="50" y="418" width="1300" height="18" fill="#fdd825"/>
   </g>
-  <circle cx="106" cy="484" r="26" fill="#ffffff" stroke="#080809" stroke-width="3"/>
+  <rect x="80" y="458" width="52" height="52" fill="#ffffff" stroke="#080809" stroke-width="3"/>
   <text x="106" y="493" class="num" text-anchor="middle">1</text>
   <text x="152" y="478" class="card-title">Establish the</text>
   <text x="152" y="512" class="card-title">observed behaviour</text>
@@ -94,10 +94,10 @@
 
   <!-- Stage 2 -->
   <g filter="url(#card-shadow)">
-    <rect x="50" y="660" width="1300" height="200" rx="26" fill="#efffe8" stroke="#8efd23" stroke-width="3"/>
-    <rect x="50" y="658" width="1300" height="18" rx="9" fill="#8efd23"/>
+    <rect x="50" y="660" width="1300" height="200" fill="#efffe8" stroke="#8efd23" stroke-width="3"/>
+    <rect x="50" y="658" width="1300" height="18" fill="#8efd23"/>
   </g>
-  <circle cx="106" cy="724" r="26" fill="#ffffff" stroke="#080809" stroke-width="3"/>
+  <rect x="80" y="698" width="52" height="52" fill="#ffffff" stroke="#080809" stroke-width="3"/>
   <text x="106" y="733" class="num" text-anchor="middle">2</text>
   <text x="152" y="718" class="card-title">Record the</text>
   <text x="152" y="752" class="card-title">conditions</text>
@@ -115,10 +115,10 @@
 
   <!-- Stage 3 -->
   <g filter="url(#card-shadow)">
-    <rect x="50" y="900" width="1300" height="200" rx="26" fill="#eafff4" stroke="#00ed70" stroke-width="3"/>
-    <rect x="50" y="898" width="1300" height="18" rx="9" fill="#00ed70"/>
+    <rect x="50" y="900" width="1300" height="200" fill="#eafff4" stroke="#00ed70" stroke-width="3"/>
+    <rect x="50" y="898" width="1300" height="18" fill="#00ed70"/>
   </g>
-  <circle cx="106" cy="964" r="26" fill="#ffffff" stroke="#080809" stroke-width="3"/>
+  <rect x="80" y="938" width="52" height="52" fill="#ffffff" stroke="#080809" stroke-width="3"/>
   <text x="106" y="973" class="num" text-anchor="middle">3</text>
   <text x="152" y="958" class="card-title">Assess impact</text>
   <text x="152" y="992" class="card-title">and reach</text>
@@ -136,10 +136,10 @@
 
   <!-- Stage 4 -->
   <g filter="url(#card-shadow)">
-    <rect x="50" y="1140" width="1300" height="200" rx="26" fill="#1a0044"/>
-    <rect x="50" y="1140" width="1300" height="18" rx="9" fill="url(#brand-gradient)"/>
+    <rect x="50" y="1140" width="1300" height="200" fill="#1a0044"/>
+    <rect x="50" y="1140" width="1300" height="18" fill="url(#brand-gradient)"/>
   </g>
-  <circle cx="106" cy="1210" r="26" fill="#ffffff" stroke="#ffffff" stroke-width="3"/>
+  <rect x="80" y="1184" width="52" height="52" fill="#ffffff" stroke="#ffffff" stroke-width="3"/>
   <text x="106" y="1219" class="num" text-anchor="middle">4</text>
   <text x="152" y="1204" class="card-title" style="fill:#ffffff">Decide the next</text>
   <text x="152" y="1238" class="card-title" style="fill:#ffffff">action together</text>
@@ -154,7 +154,7 @@
   <text x="644" y="1302" class="q" style="fill:#ffffff">Who takes each step, and when does the team review it?</text>
 
   <!-- Closing note -->
-  <rect x="50" y="1400" width="8" height="86" rx="4" fill="url(#brand-gradient-v)"/>
+  <rect x="50" y="1400" width="8" height="86" fill="url(#brand-gradient-v)"/>
   <text x="82" y="1428" class="label">ROOT CAUSE IS NOT THE GOAL OF FIRST-PASS TRIAGE</text>
   <text x="82" y="1464" class="copy" font-size="22">A narrower question, clear user impact and named next steps are enough to hand over.</text>
 

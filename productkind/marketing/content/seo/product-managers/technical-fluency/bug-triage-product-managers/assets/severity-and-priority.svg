@@ -42,8 +42,8 @@
 
   <!-- Severity -->
   <g filter="url(#card-shadow)">
-    <rect x="50" y="190" width="640" height="210" rx="26" fill="#fff3e6" stroke="#ffb65b" stroke-width="3"/>
-    <rect x="50" y="188" width="640" height="18" rx="9" fill="#ffb65b"/>
+    <rect x="50" y="190" width="640" height="210" fill="#fff3e6" stroke="#ffb65b" stroke-width="3"/>
+    <rect x="50" y="188" width="640" height="18" fill="#ffb65b"/>
   </g>
   <text x="86" y="250" class="label">SEVERITY</text>
   <text x="86" y="294" class="card-title">What the bug does</text>
@@ -52,8 +52,8 @@
 
   <!-- Priority -->
   <g filter="url(#card-shadow)">
-    <rect x="710" y="190" width="640" height="210" rx="26" fill="#eafff4" stroke="#00ed70" stroke-width="3"/>
-    <rect x="710" y="188" width="640" height="18" rx="9" fill="#00ed70"/>
+    <rect x="710" y="190" width="640" height="210" fill="#eafff4" stroke="#00ed70" stroke-width="3"/>
+    <rect x="710" y="188" width="640" height="18" fill="#00ed70"/>
   </g>
   <text x="746" y="250" class="label">PRIORITY</text>
   <text x="746" y="294" class="card-title">When the team acts</text>
@@ -64,91 +64,91 @@
 
   <!-- Example 1 -->
   <g filter="url(#card-shadow)">
-    <rect x="50" y="490" width="1300" height="140" rx="24" fill="#ffffff" stroke="#e0dfd6" stroke-width="3"/>
+    <rect x="50" y="490" width="1300" height="140" fill="#ffffff" stroke="#e0dfd6" stroke-width="3"/>
   </g>
-  <rect x="50" y="490" width="10" height="140" rx="5" fill="url(#brand-gradient-v)"/>
+  <rect x="50" y="490" width="10" height="140" fill="url(#brand-gradient-v)"/>
   <text x="94" y="546" class="body">A safe workaround exists. Entering the card again completes</text>
   <text x="94" y="578" class="body">the order, at the cost of extra effort for the customer.</text>
   <path d="M780 518 V602" class="divider"/>
   <text x="820" y="542" class="mini">SEVERITY</text>
-  <rect x="820" y="556" width="220" height="42" rx="21" fill="#eeede6" stroke="#cfcec4" stroke-width="2"/>
+  <rect x="820" y="556" width="220" height="42" fill="#eeede6" stroke="#cfcec4" stroke-width="2"/>
   <text x="930" y="583" class="pill" text-anchor="middle" style="fill:#4a4a50">UNCHANGED</text>
   <text x="1070" y="542" class="mini">PRIORITY</text>
-  <rect x="1070" y="556" width="220" height="42" rx="21" fill="#1a0044"/>
-  <path d="M1096 572 L1106 583 L1116 572" fill="none" stroke="#8efd23" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="1070" y="556" width="220" height="42" fill="#1a0044"/>
+  <path d="M1096 572 L1106 583 L1116 572" fill="none" stroke="#8efd23" stroke-width="3" stroke-linecap="butt" stroke-linejoin="miter"/>
   <text x="1200" y="583" class="pill" text-anchor="middle" style="fill:#ffffff">LOWER</text>
 
   <!-- Example 2 -->
   <g filter="url(#card-shadow)">
-    <rect x="50" y="650" width="1300" height="140" rx="24" fill="#ffffff" stroke="#e0dfd6" stroke-width="3"/>
+    <rect x="50" y="650" width="1300" height="140" fill="#ffffff" stroke="#e0dfd6" stroke-width="3"/>
   </g>
-  <rect x="50" y="650" width="10" height="140" rx="5" fill="url(#brand-gradient-v)"/>
+  <rect x="50" y="650" width="10" height="140" fill="url(#brand-gradient-v)"/>
   <text x="94" y="706" class="body">A smaller defect blocks a release planned for tomorrow.</text>
   <text x="94" y="738" class="body">The effect on any single user stays minor.</text>
   <path d="M780 678 V762" class="divider"/>
   <text x="820" y="702" class="mini">SEVERITY</text>
-  <rect x="820" y="716" width="220" height="42" rx="21" fill="#eeede6" stroke="#cfcec4" stroke-width="2"/>
+  <rect x="820" y="716" width="220" height="42" fill="#eeede6" stroke="#cfcec4" stroke-width="2"/>
   <text x="930" y="743" class="pill" text-anchor="middle" style="fill:#4a4a50">UNCHANGED</text>
   <text x="1070" y="702" class="mini">PRIORITY</text>
-  <rect x="1070" y="716" width="220" height="42" rx="21" fill="#1a0044"/>
-  <path d="M1096 743 L1106 732 L1116 743" fill="none" stroke="#ffb65b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="1070" y="716" width="220" height="42" fill="#1a0044"/>
+  <path d="M1096 743 L1106 732 L1116 743" fill="none" stroke="#ffb65b" stroke-width="3" stroke-linecap="butt" stroke-linejoin="miter"/>
   <text x="1200" y="743" class="pill" text-anchor="middle" style="fill:#ffffff">HIGHER</text>
 
   <text x="50" y="854" class="label">THE SIX INPUTS THAT GIVE THE LABEL MEANING</text>
 
   <!-- Input chips -->
   <g filter="url(#card-shadow)">
-    <rect x="50" y="880" width="420" height="118" rx="20" fill="#ffffff" stroke="#e0dfd6" stroke-width="3"/>
+    <rect x="50" y="880" width="420" height="118" fill="#ffffff" stroke="#e0dfd6" stroke-width="3"/>
   </g>
-  <rect x="50" y="880" width="10" height="118" rx="5" fill="url(#brand-gradient-v)"/>
+  <rect x="50" y="880" width="10" height="118" fill="url(#brand-gradient-v)"/>
   <text x="90" y="926" class="chip-title">Effect</text>
   <text x="90" y="958" class="small">The capability, data, access or</text>
   <text x="90" y="982" class="small">money affected</text>
 
   <g filter="url(#card-shadow)">
-    <rect x="490" y="880" width="420" height="118" rx="20" fill="#ffffff" stroke="#e0dfd6" stroke-width="3"/>
+    <rect x="490" y="880" width="420" height="118" fill="#ffffff" stroke="#e0dfd6" stroke-width="3"/>
   </g>
-  <rect x="490" y="880" width="10" height="118" rx="5" fill="url(#brand-gradient-v)"/>
+  <rect x="490" y="880" width="10" height="118" fill="url(#brand-gradient-v)"/>
   <text x="530" y="926" class="chip-title">Reach</text>
   <text x="530" y="958" class="small">Affected users, accounts or</text>
   <text x="530" y="982" class="small">transactions</text>
 
   <g filter="url(#card-shadow)">
-    <rect x="930" y="880" width="420" height="118" rx="20" fill="#ffffff" stroke="#e0dfd6" stroke-width="3"/>
+    <rect x="930" y="880" width="420" height="118" fill="#ffffff" stroke="#e0dfd6" stroke-width="3"/>
   </g>
-  <rect x="930" y="880" width="10" height="118" rx="5" fill="url(#brand-gradient-v)"/>
+  <rect x="930" y="880" width="10" height="118" fill="url(#brand-gradient-v)"/>
   <text x="970" y="926" class="chip-title">Frequency</text>
   <text x="970" y="958" class="small">Every attempt, intermittent or</text>
   <text x="970" y="982" class="small">observed once</text>
 
   <g filter="url(#card-shadow)">
-    <rect x="50" y="1018" width="420" height="118" rx="20" fill="#ffffff" stroke="#e0dfd6" stroke-width="3"/>
+    <rect x="50" y="1018" width="420" height="118" fill="#ffffff" stroke="#e0dfd6" stroke-width="3"/>
   </g>
-  <rect x="50" y="1018" width="10" height="118" rx="5" fill="url(#brand-gradient-v)"/>
+  <rect x="50" y="1018" width="10" height="118" fill="url(#brand-gradient-v)"/>
   <text x="90" y="1064" class="chip-title">Workaround</text>
   <text x="90" y="1096" class="small">A safe alternative and its cost</text>
   <text x="90" y="1120" class="small">to the user</text>
 
   <g filter="url(#card-shadow)">
-    <rect x="490" y="1018" width="420" height="118" rx="20" fill="#ffffff" stroke="#e0dfd6" stroke-width="3"/>
+    <rect x="490" y="1018" width="420" height="118" fill="#ffffff" stroke="#e0dfd6" stroke-width="3"/>
   </g>
-  <rect x="490" y="1018" width="10" height="118" rx="5" fill="url(#brand-gradient-v)"/>
+  <rect x="490" y="1018" width="10" height="118" fill="url(#brand-gradient-v)"/>
   <text x="530" y="1064" class="chip-title">Urgency</text>
   <text x="530" y="1096" class="small">What gets worse while the</text>
   <text x="530" y="1120" class="small">team waits</text>
 
   <g filter="url(#card-shadow)">
-    <rect x="930" y="1018" width="420" height="118" rx="20" fill="#ffffff" stroke="#e0dfd6" stroke-width="3"/>
+    <rect x="930" y="1018" width="420" height="118" fill="#ffffff" stroke="#e0dfd6" stroke-width="3"/>
   </g>
-  <rect x="930" y="1018" width="10" height="118" rx="5" fill="url(#brand-gradient-v)"/>
+  <rect x="930" y="1018" width="10" height="118" fill="url(#brand-gradient-v)"/>
   <text x="970" y="1064" class="chip-title">Confidence</text>
   <text x="970" y="1096" class="small">Confirmed evidence and the</text>
   <text x="970" y="1120" class="small">important unknowns</text>
 
   <!-- Footer band -->
   <g filter="url(#card-shadow)">
-    <rect x="50" y="1180" width="1300" height="96" rx="24" fill="#1a0044"/>
-    <rect x="50" y="1180" width="14" height="96" rx="7" fill="url(#brand-gradient-v)"/>
+    <rect x="50" y="1180" width="1300" height="96" fill="#1a0044"/>
+    <rect x="50" y="1180" width="14" height="96" fill="url(#brand-gradient-v)"/>
   </g>
   <text x="94" y="1218" class="label" style="fill:#ffb65b">YOUR TEAM'S SEVERITY LEVELS AND INCIDENT RULES DECIDE THE LABEL</text>
   <text x="94" y="1254" class="copy" font-size="22" style="fill:#ffffff">Recording these six inputs is what lets another person understand the label and revisit it.</text>
