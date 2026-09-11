@@ -1,5 +1,5 @@
 import { createFakeFileSystem, createFakeNodeFs } from './fake.ts'
-import { createFileSystem } from './service.ts'
+import { createFileSystemService } from './service.ts'
 
 import * as fs from 'node:fs'
 import { lastValueFrom } from 'rxjs'
@@ -7,13 +7,13 @@ import { expect, test } from 'vitest'
 
 test('FileSystem writeFileSync reads back through readFileSync', () => {
   const fakeFs = createFakeNodeFs()
-  const fileSystem = createFileSystem(fakeFs)
+  const fileSystem = createFileSystemService(fakeFs)
   fileSystem.writeFileSync('/test.txt', 'test')
   expect(fileSystem.readFileSync('/test.txt', 'utf-8')).toBe('test')
 })
 
 test('FileSystem lists a directory through the real node fs', () => {
-  const fileSystem = createFileSystem(fs)
+  const fileSystem = createFileSystemService(fs)
   expect(fileSystem.readDirSync('.').length > 0).toBe(true)
 })
 
@@ -21,7 +21,7 @@ test('a fake node fs starts from the files it was given', () => {
   const fakeFs = createFakeNodeFs({
     'test.txt': 'test',
   })
-  const fileSystem = createFileSystem(fakeFs)
+  const fileSystem = createFileSystemService(fakeFs)
   expect(fileSystem.readFileSync('test.txt', 'utf8')).toBe('test')
 })
 
@@ -31,7 +31,7 @@ test('FileSystem globAsync matches files by pattern', async () => {
     '/test2.txt': 'test2',
     '/test3.json': '{"test": "test3"}',
   })
-  const fileSystem = createFileSystem(fakeFs)
+  const fileSystem = createFileSystemService(fakeFs)
   expect(await fileSystem.globAsync('/*.txt')).toContain('/test.txt')
   expect(await fileSystem.globAsync('/*.txt')).toContain('/test2.txt')
   expect(await fileSystem.globAsync('/*.json')).toEqual(['/test3.json'])
@@ -43,7 +43,7 @@ test('FileSystem globSync matches files by pattern', () => {
     '/test2.txt': 'test2',
     '/test3.json': '{"test": "test3"}',
   })
-  const fileSystem = createFileSystem(fakeFs)
+  const fileSystem = createFileSystemService(fakeFs)
   expect(fileSystem.globSync('/*.txt')).toContain('/test.txt')
   expect(fileSystem.globSync('/*.txt')).toContain('/test2.txt')
   expect(fileSystem.globSync('/*.json')).toEqual(['/test3.json'])
@@ -55,7 +55,7 @@ test('FileSystem glob emits the files matching a pattern', async () => {
     '/test2.txt': 'test2',
     '/test3.json': '{"test": "test3"}',
   })
-  const fileSystem = createFileSystem(fakeFs)
+  const fileSystem = createFileSystemService(fakeFs)
   expect(await lastValueFrom(fileSystem.glob('/*.txt'))).toContain('/test.txt')
   expect(await lastValueFrom(fileSystem.glob('/*.txt'))).toContain('/test2.txt')
   expect(await lastValueFrom(fileSystem.glob('/*.json'))).toEqual(['/test3.json'])
@@ -67,7 +67,7 @@ test('FileSystem readDirAsync lists the entries of a directory', async () => {
     '/dir/test2.txt': 'test2',
     '/dir/test3.json': '{"test": "test3"}',
   })
-  const fileSystem = createFileSystem(fakeFs)
+  const fileSystem = createFileSystemService(fakeFs)
   const files = await fileSystem.readDirAsync('/dir')
   expect(files).toEqual(['test.txt', 'test2.txt', 'test3.json'])
 })
@@ -76,20 +76,20 @@ test('FileSystem readFileAsync reads the contents of a file', async () => {
   const fakeFs = createFakeNodeFs({
     '/test.txt': 'test',
   })
-  const fileSystem = createFileSystem(fakeFs)
+  const fileSystem = createFileSystemService(fakeFs)
   expect(await fileSystem.readFileAsync('/test.txt', 'utf8')).toBe('test')
 })
 
 test('FileSystem writeFileAsync writes the contents of a file', async () => {
   const fakeFs = createFakeNodeFs()
-  const fileSystem = createFileSystem(fakeFs)
+  const fileSystem = createFileSystemService(fakeFs)
   await fileSystem.writeFileAsync('/test.txt', 'test')
   expect(fakeFs.readFileSync('/test.txt', 'utf8')).toBe('test')
 })
 
 test('FileSystem mkdirAsync creates a nested directory that can be written to', async () => {
   const fakeFs = createFakeNodeFs()
-  const fileSystem = createFileSystem(fakeFs)
+  const fileSystem = createFileSystemService(fakeFs)
   await fileSystem.mkdirAsync('/dir/subdir')
   await fileSystem.writeFileAsync('/dir/subdir/test.txt', 'test')
 })
@@ -98,13 +98,13 @@ test('FileSystem readFile emits the contents of a file', async () => {
   const fakeFs = createFakeNodeFs({
     '/test.txt': 'test',
   })
-  const fileSystem = createFileSystem(fakeFs)
+  const fileSystem = createFileSystemService(fakeFs)
   expect(await lastValueFrom(fileSystem.readFile('/test.txt', 'utf8'))).toBe('test')
 })
 
 test('FileSystem writeFile writes the contents of a file', async () => {
   const fakeFs = createFakeNodeFs()
-  const fileSystem = createFileSystem(fakeFs)
+  const fileSystem = createFileSystemService(fakeFs)
   await lastValueFrom(fileSystem.writeFile('/test.txt', 'test'))
   expect(fakeFs.readFileSync('/test.txt', 'utf8')).toBe('test')
 })
@@ -115,14 +115,14 @@ test('FileSystem readDir emits the entries of a directory', async () => {
     '/dir/test2.txt': 'test2',
     '/dir/test3.json': '{"test": "test3"}',
   })
-  const fileSystem = createFileSystem(fakeFs)
+  const fileSystem = createFileSystemService(fakeFs)
   const files = await lastValueFrom(fileSystem.readDir('/dir'))
   expect(files).toEqual(['test.txt', 'test2.txt', 'test3.json'])
 })
 
 test('FileSystem mkdir creates a nested directory that can be written to', async () => {
   const fakeFs = createFakeNodeFs()
-  const fileSystem = createFileSystem(fakeFs)
+  const fileSystem = createFileSystemService(fakeFs)
   await lastValueFrom(fileSystem.mkdir('/dir/subdir'))
   await lastValueFrom(fileSystem.writeFile('/dir/subdir/test.txt', 'test'))
   expect(fakeFs.readFileSync('/dir/subdir/test.txt', 'utf8')).toBe('test')
@@ -130,7 +130,7 @@ test('FileSystem mkdir creates a nested directory that can be written to', async
 
 test('FileSystem mkdirSync creates a nested directory that can be written to', () => {
   const fakeFs = createFakeNodeFs()
-  const fileSystem = createFileSystem(fakeFs)
+  const fileSystem = createFileSystemService(fakeFs)
   fileSystem.mkdirSync('/dir/subdir')
   fileSystem.writeFileSync('/dir/subdir/test.txt', 'test')
   expect(fakeFs.readFileSync('/dir/subdir/test.txt', 'utf8')).toBe('test')
@@ -178,7 +178,7 @@ test('FileSystem readBulkAsync reads every path into one record', async () => {
     '/test2.txt': 'test2',
     '/test3.json': '{"test": "test3"}',
   })
-  const fileSystem = createFileSystem(fakeFs)
+  const fileSystem = createFileSystemService(fakeFs)
   const results = await fileSystem.readBulkAsync(['/test.txt', '/test2.txt', '/test3.json'])
   expect(results).toEqual({
     '/test.txt': 'test',
@@ -193,7 +193,7 @@ test('FileSystem readBulkSync reads every path into one record', () => {
     '/test2.txt': 'test2',
     '/test3.json': '{"test": "test3"}',
   })
-  const fileSystem = createFileSystem(fakeFs)
+  const fileSystem = createFileSystemService(fakeFs)
   const results = fileSystem.readBulkSync(['/test.txt', '/test2.txt', '/test3.json'])
   expect(results).toEqual({
     '/test.txt': 'test',
@@ -206,7 +206,7 @@ test('FileSystem getStatSync reports the mode, owner and permissions of a file',
   const fakeFs = createFakeNodeFs({
     '/dir/test.txt': 'test',
   })
-  const fileSystem = createFileSystem(fakeFs)
+  const fileSystem = createFileSystemService(fakeFs)
   fakeFs.chmodSync('/dir/test.txt', 0o654)
   fakeFs.chownSync('/dir/test.txt', 1000, 1001)
   const stat = fileSystem.getStatSync('/dir/test.txt')
@@ -225,7 +225,7 @@ test('FileSystem getStatAsync reports the mode, owner and permissions of a file'
   const fakeFs = createFakeNodeFs({
     '/dir/test.txt': 'test',
   })
-  const fileSystem = createFileSystem(fakeFs)
+  const fileSystem = createFileSystemService(fakeFs)
   fakeFs.chmodSync('/dir/test.txt', 0o654)
   fakeFs.chownSync('/dir/test.txt', 1000, 1001)
   const stat = await fileSystem.getStatAsync('/dir/test.txt')
@@ -244,7 +244,7 @@ test('FileSystem getStat emits the mode, owner and permissions of a file', async
   const fakeFs = createFakeNodeFs({
     '/dir/test.txt': 'test',
   })
-  const fileSystem = createFileSystem(fakeFs)
+  const fileSystem = createFileSystemService(fakeFs)
   fakeFs.chmodSync('/dir/test.txt', 0o654)
   fakeFs.chownSync('/dir/test.txt', 1000, 1001)
   const stat = await lastValueFrom(fileSystem.getStat('/dir/test.txt'))
@@ -263,7 +263,7 @@ test('FileSystem.accessSync returns true for executable file', () => {
   const fakeFs = createFakeNodeFs()
   fakeFs.writeFileSync('/exec.sh', '#!/bin/sh\necho hello')
   fakeFs.chmodSync('/exec.sh', 0o755)
-  const fileSystem = createFileSystem(fakeFs)
+  const fileSystem = createFileSystemService(fakeFs)
   expect(fileSystem.accessSync('/exec.sh', ['executable'])).toBe(true)
 })
 
@@ -271,7 +271,7 @@ test('FileSystem.accessSync returns false for non-executable file', () => {
   const fakeFs = createFakeNodeFs()
   fakeFs.writeFileSync('/file.txt', 'hello')
   fakeFs.chmodSync('/file.txt', 0o644)
-  const fileSystem = createFileSystem(fakeFs)
+  const fileSystem = createFileSystemService(fakeFs)
   expect(fileSystem.accessSync('/file.txt', ['executable'])).toBe(false)
 })
 
@@ -279,13 +279,13 @@ test('FileSystem.accessSync returns true for readable file', () => {
   const fakeFs = createFakeNodeFs()
   fakeFs.writeFileSync('/file.txt', 'hello')
   fakeFs.chmodSync('/file.txt', 0o644)
-  const fileSystem = createFileSystem(fakeFs)
+  const fileSystem = createFileSystemService(fakeFs)
   expect(fileSystem.accessSync('/file.txt', ['readable'])).toBe(true)
 })
 
 test('FileSystem.accessSync returns false for non-existent file with visible', () => {
   const fakeFs = createFakeNodeFs()
-  const fileSystem = createFileSystem(fakeFs)
+  const fileSystem = createFileSystemService(fakeFs)
   expect(fileSystem.accessSync('/does-not-exist', ['visible'])).toBe(false)
 })
 
@@ -293,7 +293,7 @@ test('FileSystem.accessSync supports combining modes', () => {
   const fakeFs = createFakeNodeFs()
   fakeFs.writeFileSync('/exec.sh', '#!/bin/sh')
   fakeFs.chmodSync('/exec.sh', 0o755)
-  const fileSystem = createFileSystem(fakeFs)
+  const fileSystem = createFileSystemService(fakeFs)
   expect(fileSystem.accessSync('/exec.sh', ['readable', 'executable'])).toBe(true)
 
   fakeFs.writeFileSync('/readonly.txt', 'hello')
@@ -305,13 +305,13 @@ test('FileSystem.accessAsync returns true for executable file', async () => {
   const fakeFs = createFakeNodeFs()
   fakeFs.writeFileSync('/exec.sh', '#!/bin/sh\necho hello')
   fakeFs.chmodSync('/exec.sh', 0o755)
-  const fileSystem = createFileSystem(fakeFs)
+  const fileSystem = createFileSystemService(fakeFs)
   await expect(fileSystem.accessAsync('/exec.sh', ['executable'])).resolves.toBe(true)
 })
 
 test('FileSystem.accessAsync returns false for non-existent file', async () => {
   const fakeFs = createFakeNodeFs()
-  const fileSystem = createFileSystem(fakeFs)
+  const fileSystem = createFileSystemService(fakeFs)
   await expect(fileSystem.accessAsync('/does-not-exist', ['visible'])).resolves.toBe(false)
 })
 
@@ -319,13 +319,13 @@ test('FileSystem.access observable returns true for executable file', async () =
   const fakeFs = createFakeNodeFs()
   fakeFs.writeFileSync('/exec.sh', '#!/bin/sh\necho hello')
   fakeFs.chmodSync('/exec.sh', 0o755)
-  const fileSystem = createFileSystem(fakeFs)
+  const fileSystem = createFileSystemService(fakeFs)
   await expect(lastValueFrom(fileSystem.access('/exec.sh', ['executable']))).resolves.toBe(true)
 })
 
 test('FileSystem.access observable returns false for non-existent file', async () => {
   const fakeFs = createFakeNodeFs()
-  const fileSystem = createFileSystem(fakeFs)
+  const fileSystem = createFileSystemService(fakeFs)
   await expect(lastValueFrom(fileSystem.access('/does-not-exist', ['visible']))).resolves.toBe(
     false,
   )
@@ -336,7 +336,7 @@ test('FileSystem.chmod sets permissions based on mode', async () => {
     '/test.txt': 'test',
   })
   fakeFs.chmodSync('/test.txt', 0o644)
-  const fileSystem = createFileSystem(fakeFs)
+  const fileSystem = createFileSystemService(fakeFs)
   fileSystem.chmodSync('/test.txt', 0o754)
   const stat = fileSystem.getStatSync('/test.txt')
   expect(stat.mode & 0o777).toBe(0o754)
@@ -355,7 +355,7 @@ test('FileSystem.chown sets owner', async () => {
     '/test.txt': 'test',
   })
   fakeFs.chownSync('/test.txt', 1000, 1000)
-  const fileSystem = createFileSystem(fakeFs)
+  const fileSystem = createFileSystemService(fakeFs)
   fileSystem.chownSync('/test.txt', 1001, 1001)
   const stat = fileSystem.getStatSync('/test.txt')
   expect(stat.userId).toBe(1001)

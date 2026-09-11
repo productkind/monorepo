@@ -1,4 +1,4 @@
-import { createFileSystem } from '@dungarees/fs/service.ts'
+import { createFileSystemService } from '@dungarees/fs/service.ts'
 import { rasterizeSvg } from '@dungarees/zx/image.ts'
 
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom'
@@ -13,7 +13,7 @@ const gapY = 75
 const cols = 2
 const rows = 2
 
-const fsService = createFileSystem(fs)
+const fsService = createFileSystemService(fs)
 
 const PRODUCT_BASE_DIR = '../'
 const CONTENT_DIR = 'content'

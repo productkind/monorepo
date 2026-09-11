@@ -1,4 +1,4 @@
-import { type CliCommandsService, createCliCommands } from './service.ts'
+import { type CliCommands, createCliCommands } from './service.ts'
 
 import {
   createFakeSubProcessService,
@@ -8,7 +8,7 @@ import {
 
 export type { ExecutedCommand, FakeSpawnConfig }
 
-export type FakeCliCommands = CliCommandsService & {
+export type FakeCliCommands = CliCommands & {
   executedCommands: ExecutedCommand[]
 }
 

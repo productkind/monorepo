@@ -1,6 +1,6 @@
 import eventsRaw from '../content/events.json' with { type: 'json' }
 
-import { createFileSystem } from '@dungarees/fs/service.ts'
+import { createFileSystemService } from '@dungarees/fs/service.ts'
 import { rasterizeSvg } from '@dungarees/zx/image.ts'
 
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom'
@@ -10,7 +10,7 @@ import qrcode from 'qrcode'
 import { z } from 'zod'
 import { $ } from 'zx'
 
-const fsService = createFileSystem(fs)
+const fsService = createFileSystemService(fs)
 
 const EventBaseSchema = z.object({
   id: z.number(),

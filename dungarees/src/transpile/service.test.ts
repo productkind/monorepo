@@ -1,4 +1,4 @@
-import { createTranspilerService } from './service.ts'
+import { createTranspiler } from './service.ts'
 
 import { createFakeFileSystem } from '@dungarees/fs/fake.ts'
 
@@ -32,7 +32,7 @@ test('transpileDir transpiles every file in a directory, subdirectories included
     '/src-dir/sub-dir/file3.ts': srcDirFile3.trim(),
   })
 
-  const transpileService = createTranspilerService(fs)
+  const transpileService = createTranspiler(fs)
   const files = await lastValueFrom(
     transpileService.transpileDir({
       input: '/src-dir',
@@ -73,7 +73,7 @@ test('transpileDir leaves installed dependencies where they are', async () => {
     '/src-dir/sub-dir/node_modules/other/index.ts': 'export const other = 1;',
   })
 
-  const transpileService = createTranspilerService(fs)
+  const transpileService = createTranspiler(fs)
   const files = await lastValueFrom(
     transpileService.transpileDir({ input: '/src-dir', output: '/dist-dir' }),
   )
@@ -93,7 +93,7 @@ test('transpileDir skips the files the caller excludes', async () => {
     '/src-dir/file1.test.ts': srcDirFile3.trim(),
   })
 
-  const transpileService = createTranspilerService(fs)
+  const transpileService = createTranspiler(fs)
   const files = await lastValueFrom(
     transpileService.transpileDir({
       input: '/src-dir',

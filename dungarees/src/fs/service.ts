@@ -97,7 +97,7 @@ export type NodeFs = Pick<typeof import('node:fs'), UsedFsMethods> & {
   promises: Pick<(typeof import('node:fs'))['promises'], UsedPromisesMethods>
 }
 
-export const createFileSystem = (fs: NodeFs): UnsafeService<FileSystemService> => {
+export const createFileSystemService = (fs: NodeFs): UnsafeService<FileSystemService> => {
   const fsForGlob = {
     ...unPrototypeProperties(fs, [
       'lstatSync',

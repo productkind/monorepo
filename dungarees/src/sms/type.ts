@@ -27,7 +27,7 @@ export type SMSBackend = {
   verify: (attempt: VerificationAttempt) => Observable<VerificationResult>
 }
 
-export type Sender = SMSBackend
+export type SmsSender = SMSBackend
 
 export type TwilioConfig = {
   accountSid: string

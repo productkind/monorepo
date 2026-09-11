@@ -16,7 +16,7 @@ import {
 import type { NpmCommands } from '@dungarees/cli-command/service.ts'
 import { createFileOperations } from '@dungarees/fs/file-operations.ts'
 import type { FileSystemService } from '@dungarees/fs/service.ts'
-import { createTranspilerService } from '@dungarees/transpile/service.ts'
+import { createTranspiler } from '@dungarees/transpile/service.ts'
 
 import { concat, type Observable } from 'rxjs'
 
@@ -49,7 +49,7 @@ export const createPublishLibBehavior = ({
   npm,
 }: CreatePublishLibBehaviorOptions): PublishLibBehavior => {
   const fileOperations = createFileOperations(fileSystem)
-  const transpileService = createTranspilerService(fileSystem)
+  const transpileService = createTranspiler(fileSystem)
 
   const build: PublishLibBehavior['build'] = ({ srcDir, outDir, version }) => {
     const originalPackageJsonPath = `${srcDir}/package.json`

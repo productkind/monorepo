@@ -1,4 +1,4 @@
-import type { Sender, SMSBackend } from './type.ts'
+import type { SMSBackend, SmsSender } from './type.ts'
 
 import { createCausedError } from '@dungarees/core/error.ts'
 
@@ -11,7 +11,7 @@ const failWith =
       catchError((cause: unknown) => throwError(() => createCausedError({ message, cause }))),
     )
 
-export const createSender = (smsBackend: SMSBackend): Sender => ({
+export const createSmsSender = (smsBackend: SMSBackend): SmsSender => ({
   sendMessage: (request) => smsBackend.sendMessage(request).pipe(failWith('SMS sending failed')),
   requestVerification: (request) =>
     smsBackend.requestVerification(request).pipe(failWith('SMS verification request failed')),

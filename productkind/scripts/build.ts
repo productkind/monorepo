@@ -1,6 +1,6 @@
 import platformsRaw from '../config/platforms.json' with { type: 'json' }
 
-import { createFileSystem } from '@dungarees/fs/service.ts'
+import { createFileSystemService } from '@dungarees/fs/service.ts'
 import { rasterizeSvg, type SvgToRasterize } from '@dungarees/zx/image.ts'
 
 import {
@@ -16,7 +16,7 @@ import { fileURLToPath } from 'node:url'
 import { z } from 'zod'
 import { $ } from 'zx'
 
-const fsService = createFileSystem(fs)
+const fsService = createFileSystemService(fs)
 
 const PlatformNameSchema = z.union([
   z.literal('github'),

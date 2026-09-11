@@ -1,7 +1,7 @@
 import type { EmailAddress } from './email-address.ts'
 import { createFakeEmailBackend } from './fake.ts'
 import { isVerificationApproved } from './sendgrid.ts'
-import { createSender } from './service.ts'
+import { createEmailSender } from './service.ts'
 import type { Email, EmailBackend } from './type.ts'
 
 import { addErrorMethodsToFake } from '@dungarees/core/fake.ts'
@@ -26,7 +26,7 @@ const failingBackend = (
 
 test('send hands the email to the backend', async () => {
   const { received, backend } = createFakeEmailBackend()
-  const sender = createSender(backend)
+  const sender = createEmailSender(backend)
 
   await sender.send(TEST_EMAIL)
 
@@ -35,7 +35,7 @@ test('send hands the email to the backend', async () => {
 
 test('send reports a failing backend as a sending failure', async () => {
   const cause = new Error('Fake Backend Failed')
-  const sender = createSender(failingBackend({ send: { type: 'async', error: cause } }))
+  const sender = createEmailSender(failingBackend({ send: { type: 'async', error: cause } }))
 
   await expect(sender.send(TEST_EMAIL)).rejects.toThrow(
     'Email sending backend failed: Fake Backend Failed',
@@ -44,14 +44,14 @@ test('send reports a failing backend as a sending failure', async () => {
 
 test('send keeps the backend failure as the cause', async () => {
   const cause = new Error('Fake Backend Failed')
-  const sender = createSender(failingBackend({ send: { type: 'async', error: cause } }))
+  const sender = createEmailSender(failingBackend({ send: { type: 'async', error: cause } }))
 
   await expect(sender.send(TEST_EMAIL)).rejects.toHaveProperty('cause', cause)
 })
 
 test('requestVerification reaches the backend with the address and code', async () => {
   const { verificationRequests, backend } = createFakeEmailBackend()
-  const sender = createSender(backend)
+  const sender = createEmailSender(backend)
 
   await firstValueFrom(
     sender.requestVerification({ to: 'to@example.org' as EmailAddress, code: '123456' }),
@@ -62,7 +62,7 @@ test('requestVerification reaches the backend with the address and code', async 
 
 test('requestVerification reports a failing backend as a request failure', async () => {
   const cause = new Error('Fake Backend Failed')
-  const sender = createSender(
+  const sender = createEmailSender(
     failingBackend({ requestVerification: { type: 'observable', error: cause } }),
   )
 
@@ -73,7 +73,7 @@ test('requestVerification reports a failing backend as a request failure', async
 
 test('verify hands the attempt to the backend and returns its verdict', async () => {
   const { backend } = createFakeEmailBackend()
-  const sender = createSender(backend)
+  const sender = createEmailSender(backend)
 
   const result = await firstValueFrom(
     sender.verify({ to: 'to@example.org' as EmailAddress, code: '123456', attempt: '123456' }),
@@ -84,7 +84,7 @@ test('verify hands the attempt to the backend and returns its verdict', async ()
 
 test('verify returns a failed verdict for the wrong attempt', async () => {
   const { backend } = createFakeEmailBackend()
-  const sender = createSender(backend)
+  const sender = createEmailSender(backend)
 
   const result = await firstValueFrom(
     sender.verify({ to: 'to@example.org' as EmailAddress, code: '123456', attempt: '000000' }),
@@ -95,7 +95,7 @@ test('verify returns a failed verdict for the wrong attempt', async () => {
 
 test('verify reports a failing backend as a verification failure', async () => {
   const cause = new Error('Fake Backend Failed')
-  const sender = createSender(failingBackend({ verify: { type: 'observable', error: cause } }))
+  const sender = createEmailSender(failingBackend({ verify: { type: 'observable', error: cause } }))
 
   await expect(
     firstValueFrom(
@@ -106,7 +106,7 @@ test('verify reports a failing backend as a verification failure', async () => {
 
 test('the fake backend records the verification email it would have sent', async () => {
   const { received, backend } = createFakeEmailBackend()
-  const sender = createSender(backend)
+  const sender = createEmailSender(backend)
 
   await firstValueFrom(
     sender.requestVerification({ to: 'to@example.org' as EmailAddress, code: '123456' }),

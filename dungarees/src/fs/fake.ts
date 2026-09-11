@@ -1,4 +1,4 @@
-import { createFileSystem, type FileSystemService, type NodeFs } from './service.ts'
+import { createFileSystemService, type FileSystemService, type NodeFs } from './service.ts'
 
 import { getObservableMethodsFromSync, getUnsafeMethodNames } from '@dungarees/rxjs/util.ts'
 
@@ -19,7 +19,7 @@ export const createFakeNodeFs = (files?: Record<string, string>): FakeFs =>
 
 export const createFakeFileSystem = (filesOrFs?: Record<string, string>): FakeFileSystem => {
   const fs = createFakeNodeFs(filesOrFs)
-  const fileSystem = createFileSystem(fs)
+  const fileSystem = createFileSystemService(fs)
   const observableMethodNames = getUnsafeMethodNames(fileSystem)
   const observableFake = getObservableMethodsFromSync(fileSystem, observableMethodNames, 1)
   return {

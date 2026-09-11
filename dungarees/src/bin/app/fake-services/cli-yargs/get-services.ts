@@ -3,7 +3,7 @@ import {
   type ExecutedCommand,
   type FakeSpawnConfig,
 } from '@dungarees/cli-command/fake.ts'
-import type { CliCommandsService } from '@dungarees/cli-command/service.ts'
+import type { CliCommands } from '@dungarees/cli-command/service.ts'
 import type { RendererProcess } from '@dungarees/cli/yargs-renderer.ts'
 import { createFakeFileSystem } from '@dungarees/fs/fake.ts'
 import type { FileSystemService } from '@dungarees/fs/service.ts'
@@ -20,7 +20,7 @@ export type FakeServices = {
   fileSystem: FileSystemService
   process: FakeProcess
   executedCommands: ExecutedCommand[]
-} & CliCommandsService
+} & CliCommands
 
 const DISCARDED_PROCESS: FakeProcess = {
   argv: [],
