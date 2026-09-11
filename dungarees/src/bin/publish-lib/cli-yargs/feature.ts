@@ -1,5 +1,9 @@
 import { publishLibPresenter } from './presenter.ts'
-import { publishLibYargsModule } from './yargs-module.ts'
+import {
+  buildYargsModule,
+  publishMultiLibYargsModule,
+  publishSingleLibYargsModule,
+} from './yargs-module.ts'
 
 import type { PublishLibBehavior } from '@dungarees/bin-publish-lib-domain/behavior.ts'
 import type { PublishLibEvent } from '@dungarees/bin-publish-lib-domain/events.ts'
@@ -10,6 +14,10 @@ export const publishLibFeature = ({
 }: {
   publishLib: PublishLibBehavior
 }): CliFeature<PublishLibEvent> => ({
-  commands: [publishLibYargsModule({ publishLib })],
+  commands: [
+    buildYargsModule({ publishLib }),
+    publishMultiLibYargsModule({ publishLib }),
+    publishSingleLibYargsModule({ publishLib }),
+  ],
   presenter: publishLibPresenter,
 })

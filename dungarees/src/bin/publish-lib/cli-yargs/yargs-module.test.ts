@@ -102,6 +102,13 @@ const createDungareesApp = ({
     ],
   })
 
+const publishes = (args: string[] = PUBLISH_ARGS) => ({
+  command: 'npm',
+  args,
+  stdout: 'Published successfully',
+  exitCode: 0,
+})
+
 const SUCCESS_TAIL = [
   { type: 'stdout', message: 'All packages published successfully', level: 'info' },
   { type: 'exit', code: 0 },
@@ -167,4 +174,108 @@ test('publish-multi-lib names each failed package and exits non-zero', async () 
       (message) => message.type === 'stderr' && message.message.startsWith('Publish failed for'),
     ),
   ).toHaveLength(2)
+})
+
+const SINGLE_LIB = {
+  '/src/package.json': JSON.stringify({ name: '@org/lib-1', version: '1.0.0' }),
+  '/src/index.ts': 'export const a = 1\n',
+}
+
+test('publish-single-lib builds and publishes the one package, then exits 0', async () => {
+  const { app, executedCommands } = mountPublishLib({
+    files: SINGLE_LIB,
+    commands: [notPublished('@org/lib-1', undefined), publishes()],
+  })
+
+  const { terminal } = renderCli(app, 'dungarees publish-single-lib /src /dist')
+  const output = await terminal.step()
+
+  expect(output.slice(-2)).toEqual(SUCCESS_TAIL)
+  expect(executedCommands).toContainEqual({
+    command: 'npm',
+    args: PUBLISH_ARGS,
+    options: { cwd: '/dist' },
+  })
+})
+
+test('publish-single-lib passes the registry through to npm', async () => {
+  const { app, executedCommands } = mountPublishLib({
+    files: SINGLE_LIB,
+    commands: [notPublished('@org/lib-1', REGISTRY), publishes(PUBLISH_ARGS_WITH_REGISTRY)],
+  })
+
+  const { terminal } = renderCli(
+    app,
+    `dungarees publish-single-lib /src /dist --registry ${REGISTRY}`,
+  )
+  await terminal.step()
+
+  expect(executedCommands).toContainEqual({
+    command: 'npm',
+    args: PUBLISH_ARGS_WITH_REGISTRY,
+    options: { cwd: '/dist' },
+  })
+})
+
+test('publish-single-lib exits non-zero when the publish fails', async () => {
+  const { app } = mountPublishLib({
+    files: SINGLE_LIB,
+    commands: [
+      notPublished('@org/lib-1', undefined),
+      { command: 'npm', args: PUBLISH_ARGS, stdout: '', stderror: 'Forbidden', exitCode: 1 },
+    ],
+  })
+
+  const { terminal } = renderCli(app, 'dungarees publish-single-lib /src /dist')
+  const output = await terminal.step()
+
+  expect(output).toContainEqual({
+    type: 'stderr',
+    message: 'Publish failed for /src with exit code 1, and error: Forbidden',
+    level: 'error',
+  })
+  expect(output.at(-1)).toEqual({ type: 'exit', code: 1 })
+})
+
+test('build transpiles the package into the output directory, then exits 0', async () => {
+  const { app } = mountPublishLib({ files: SINGLE_LIB, commands: [] })
+
+  const { terminal } = renderCli(app, 'dungarees build /src /dist')
+
+  expect(await terminal.step()).toEqual([
+    {
+      type: 'stdout',
+      message: 'Building package from /src to /dist with version: original version',
+      level: 'info',
+    },
+    { type: 'stdout', message: 'Output directory created: /dist', level: 'info' },
+    {
+      type: 'stdout',
+      message: 'Package.json written to /dist/package.json with version: 1.0.0',
+      level: 'info',
+    },
+    { type: 'exit', code: 0 },
+  ])
+})
+
+test('build publishes nothing, whatever the package contains', async () => {
+  const { app, executedCommands } = mountPublishLib({ files: SINGLE_LIB, commands: [] })
+
+  const { terminal } = renderCli(app, 'dungarees build /src /dist')
+  const output = await terminal.step()
+
+  expect(output.at(-1)).toEqual({ type: 'exit', code: 0 })
+  expect(executedCommands).toEqual([])
+})
+
+test('build writes the version it was given instead of the declared one', async () => {
+  const { app } = mountPublishLib({ files: SINGLE_LIB, commands: [] })
+
+  const { terminal } = renderCli(app, 'dungarees build /src /dist --version 2.0.0')
+
+  expect(await terminal.step()).toContainEqual({
+    type: 'stdout',
+    message: 'Package.json written to /dist/package.json with version: 2.0.0',
+    level: 'info',
+  })
 })

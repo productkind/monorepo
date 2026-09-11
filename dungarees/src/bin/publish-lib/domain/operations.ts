@@ -19,6 +19,7 @@ import {
   forkJoin,
   from,
   merge,
+  type MonoTypeOperatorFunction,
   type Observable,
   of,
   type OperatorFunction,
@@ -405,8 +406,11 @@ export const publishAllPackages = (
           ),
         ),
       ),
-    ).pipe(connect((events$) => merge(events$, events$.pipe(summariseOutcome())))),
+    ).pipe(summarisePublishes()),
   )
+
+export const summarisePublishes = (): MonoTypeOperatorFunction<PublishLibEvent> =>
+  connect((events$) => merge(events$, events$.pipe(summariseOutcome())))
 
 const summariseOutcome = (): OperatorFunction<PublishLibEvent, PublishLibEvent> =>
   pipe(

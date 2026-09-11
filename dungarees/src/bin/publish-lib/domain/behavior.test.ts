@@ -123,15 +123,16 @@ test('publish single lib', async () => {
       },
     ],
   })
-  await collectValuesFrom(
+  const events = await collectValuesFrom(
     service.publishSingleLib({
       srcDir: '/src',
       outDir: '/dist',
-      packageDir: 'lib-1',
       version: undefined,
       registry: undefined,
     }).events$,
   )
+
+  expect(events.at(-1)).toEqual(eventCreators.allPublished())
   const publishedFiles = service.fileSystem.toJSON()
   expect(publishedFiles['/dist/index.js']).toBe('console.log("Single lib");\n')
   expect(publishedFiles['/dist/index.d.ts']).toBe('')
@@ -153,6 +154,36 @@ test('publish single lib', async () => {
       cwd: '/dist',
     },
   })
+})
+
+test('publishSingleLib reports the failure so the command can exit non-zero', async () => {
+  const service = createFakePublishLib({
+    files: {
+      '/src/package.json': JSON.stringify({ name: 'single-lib', version: '0.1.0' }),
+      '/src/index.ts': 'console.log("Single lib")',
+    },
+    commands: [
+      notPublished('single-lib'),
+      {
+        command: 'npm',
+        args: ['publish', '--access', 'public'],
+        stdout: '',
+        stderror: 'You cannot publish over the previously published versions',
+        exitCode: 1,
+      },
+    ],
+  })
+
+  const events = await collectValuesFrom(
+    service.publishSingleLib({
+      srcDir: '/src',
+      outDir: '/dist',
+      version: undefined,
+      registry: undefined,
+    }).events$,
+  )
+
+  expect(events.at(-1)).toEqual(eventCreators.publishesFailed({ packageDirs: ['/src'] }))
 })
 
 const srcFile1 = `
