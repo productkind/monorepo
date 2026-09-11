@@ -19,9 +19,15 @@ TikTok video posts have no separate title field, so the caption's first line is 
 
 **Caption:**
 
-You need a product metric for tomorrow's meeting. Analytics will have it next week. It's four lines of SQL, you've just never been shown which four. How long does a simple number take where you work? Waitlist for women in product in the comments.
+You need a product metric for tomorrow's meeting. The Data team will have it next week. And it's usually not a hard question. How many people finished onboarding last month. How many came back. You join the queue, and have the meeting without it.
 
-#womeninproduct #womenintech #womenproductmanagers
+We're putting together a learning path for product managers who'd rather get these metrics themselves. By the end you'll write the query yourself, and check what the number includes.
+
+Join the waitlist through the link in the comments.
+
+How long does it take to get an answer for a simple data question where you work?
+
+#womeninproduct #womenintech #productmanagers
 
 **Pinned comment:**
 
