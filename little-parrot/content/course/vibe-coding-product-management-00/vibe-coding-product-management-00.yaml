@@ -2,7 +2,7 @@ course:
   id: e16d932e-ac1f-4514-b5da-42629acf39ae
   note: "*Note on timing:* The estimated times for each challenge include thinking and doing time. They're designed so you can immediately apply the techniques to your own product idea, not just skim the content."
   cover: /courses/vibe-coding-product-management-00/cover.webp
-  title: 'Build a Valuable Product: How to Break Down Your Idea for Vibe Coding'
+  title: 'Plan Your Vibe Coded App: Define the Problem, User, MVP and First Prompt'
   learningOutcomes:
     - Define the core problem your product solves using a clear problem statement
     - Create a user persona that guides every product decision
@@ -44,7 +44,7 @@ course:
             transcript: |-
               When you start working on an app idea, it can be hard to know where to begin.
 
-              In this micro-course, you’ll define the problem you want to solve, understand your 
+              In this course, you’ll define the problem you want to solve, understand your 
               target user, and sketch a simple storyboard that shows how your product helps them.
               You’ll then break your idea into buildable steps using user story mapping, shape a 
               focused minimum viable product, and turn it into a clear prompt for an AI app
@@ -443,7 +443,7 @@ course:
             systemPrompt: |-
               You are a product management mentor helping a learner build a user story map. They were tasked with mapping out the main steps the user takes in the product. Provide friendly, concise feedback (2-3 sentences) in British English.
               - User steps are short verb phrases that are the basic building block of a map. If the learner wrote the steps in a different way, encourage them to use verb phrases. You can tell them the example: 'If I ask you what you did earlier today when using email, you’ll likely respond with tasks like: Read an email message, Respond to a message, Mark a message as spam.'
-              - If the steps are too granular, gently encourage them to focus on the main steps, and add the details under them (we'll tackle that in the next step of the micro-course).
+              - If the steps are too granular, gently encourage them to focus on the main steps, and add the details under them (we'll tackle that in the next step of the course).
               - If the steps are not user-focused, encourage them to phrase each step as the user does them.
               - If the description clearly identifies the user steps, congratulate them on defining them clearly.
               End with an encouraging note (e.g. 'Great job outlining the main steps you user will take in your product!').
@@ -831,6 +831,6 @@ course:
       description: Plan how to gather feedback quickly by testing your idea with real users.
       completionTime: 15:00
   titleSplit:
-    - 'Build a Valuable Product:'
-    - How to Break Down Your Idea for Vibe Coding
+    - 'Plan Your Vibe Coded App:'
+    - Define the Problem, User, MVP and First Prompt
   description: Turn a messy app idea into a clear, buildable plan. You'll define who it's for, what problem it solves, and break it down into steps you can build with an AI app builder.

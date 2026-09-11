@@ -67,7 +67,7 @@ Use these links when referencing toolkit items in course content.
 | Get AI to Explain a Technical Term | `https://littleparrot.app/nest/toolkit/2dfc2ae3-1b9b-4bad-b59b-10bb88b78d18` |
 | How AI Works | `https://littleparrot.app/nest/toolkit/9a4596f0-38ca-4e2b-a7cf-0ae57dba3dc2` |
 
-## Build a Valuable Product: How to Break Down Your Idea for Vibe Coding (`vibe-coding-product-management-00`)
+## Plan Your Vibe Coded App: Define the Problem, User, MVP and First Prompt (`vibe-coding-product-management-00`)
 
 | Toolkit Item | URL |
 | --- | --- |

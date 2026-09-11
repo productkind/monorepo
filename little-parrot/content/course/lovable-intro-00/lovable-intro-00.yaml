@@ -61,7 +61,7 @@ course:
               **What if that changed today?** What if you could describe what you want and watch it
               become real software, live on the internet, that you can share with anyone?
 
-              That's exactly what's about to happen. By the end of this micro-course, you'll go
+              That's exactly what's about to happen. By the end of this course, you'll go
               from *"I can't build apps"* to *"I just published my first one."* You'll know how to
               turn ideas into working products by describing what you want. No coding required.
               Along the way, you'll learn to build step by step, handle problems calmly, and
@@ -157,7 +157,7 @@ course:
 
               Instead, start with one core user flow. Get that working. Then add the next piece.
 
-              If you need help deciding what to build first, check out our [Build a Valuable Product: How to Break Down Your Idea for Vibe Coding](https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview) micro-course.
+              If you need help deciding what to build first, check out our [Plan Your Vibe Coded App: Define the Problem, User, MVP and First Prompt](https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview) course.
           subtitle: The mindset that saves time
         - type: text
           title: 'Example: The Book Club Organiser'
@@ -399,7 +399,7 @@ course:
 
               For most apps, Lovable Cloud is the simplest way to add these capabilities.
 
-              If you’re curious about what’s happening under the hood, you can take our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) micro-course. It explains these ideas in simple, non-technical terms.
+              If you’re curious about what’s happening under the hood, you can take our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) course. It explains these ideas in simple, non-technical terms.
             imageUrl: /courses/lovable-intro-00/enable-lovable-cloud.webp
           subtitle: Backend without the complexity
         - type: text
@@ -426,7 +426,7 @@ course:
 
               If you'd like more control, you can switch to **manual approval**. Click the **+** button under the chat input, then go to **Connectors → Manage connectors → Cloud → Manage permissions**. With manual approval on, Lovable shows a **Modify database** message before each change, and you decide whether to allow it.
 
-              *If you're curious about what databases are and how they work, our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) micro-course explains these concepts in friendly terms.*
+              *If you're curious about what databases are and how they work, our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) course explains these concepts in friendly terms.*
             imageUrl: /courses/lovable-intro-00/modify-database-popup.webp
           subtitle: How Lovable handles your data
         - type: text
@@ -439,7 +439,7 @@ course:
 
               If the error persists or there's no "Try to fix" button, you'll need to investigate further. Debugging is a skill that every builder develops over time.
 
-              *Want to learn how to handle errors confidently? Our [Fix Bugs with Confidence: Debugging Your Lovable App](https://littleparrot.app/aaab45b7-209a-4578-a515-3e55687f0c53/course-overview) micro-course teaches you exactly how to investigate and fix problems.*
+              *Want to learn how to handle errors confidently? Our [Fix Bugs with Confidence: Debugging Your Lovable App](https://littleparrot.app/aaab45b7-209a-4578-a515-3e55687f0c53/course-overview) course teaches you exactly how to investigate and fix problems.*
             imageUrl: /courses/lovable-intro-00/click-try-to-fix.webp
           subtitle: Errors are part of building
         - type: text
@@ -778,7 +778,7 @@ course:
 
               **Never put API keys in your prompts.** Lovable has a dedicated secrets panel for storing them safely. When you add a feature that needs an API key, Lovable will directly ask you for it in a secure **Add Secret** panel.
 
-              *If you want to know more about using API keys and connecting to other services, check out our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) micro-course.*
+              *If you want to know more about using API keys and connecting to other services, check out our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) course.*
             imageUrl: /courses/lovable-intro-00/api-key-panel.webp
           subtitle: Connect to other services
         - type: text
@@ -791,7 +791,7 @@ course:
 
               It can happen that new warnings appear after fixing others. As long as you don't have any security errors, you are good to publish your app.
 
-              *You can find more guidance on security in our [Fix Bugs with Confidence: Debugging Your Lovable App](https://littleparrot.app/aaab45b7-209a-4578-a515-3e55687f0c53/course-overview) micro-course.*
+              *You can find more guidance on security in our [Fix Bugs with Confidence: Debugging Your Lovable App](https://littleparrot.app/aaab45b7-209a-4578-a515-3e55687f0c53/course-overview) course.*
             imageUrl: /courses/lovable-intro-00/security-errors-and-warnings.webp
           subtitle: Stay calm and follow the guidance
         - type: text
@@ -1008,10 +1008,10 @@ course:
             nextModule: |-
               **Explore more:**
 
-              - Take your app further with our [Launch and Grow Your Lovable App](https://littleparrot.app/ff736c4f-8ccc-41b6-96c6-68806804c5d8/course-overview) micro-course to turn it into a discoverable product with its own domain, legal pages, and a growth plan.
-              - Try our [Build a Valuable Product: How to Break Down Your Idea for Vibe Coding](https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview) micro-course to learn how to structure your big ideas into small, promptable pieces.
-              - Check out our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) micro-course to communicate more effectively with Lovable by understanding core software concepts.
-              - Dive into our [Fix Bugs with Confidence: Debugging Your Lovable App](https://littleparrot.app/aaab45b7-209a-4578-a515-3e55687f0c53/course-overview) micro-course to learn how to fix things when they break.
+              - Take your app further with our [Launch and Grow Your Lovable App](https://littleparrot.app/ff736c4f-8ccc-41b6-96c6-68806804c5d8/course-overview) course to turn it into a discoverable product with its own domain, legal pages, and a growth plan.
+              - Try our [Plan Your Vibe Coded App: Define the Problem, User, MVP and First Prompt](https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview) course to learn how to structure your big ideas into small, promptable pieces.
+              - Check out our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) course to communicate more effectively with Lovable by understanding core software concepts.
+              - Dive into our [Fix Bugs with Confidence: Debugging Your Lovable App](https://littleparrot.app/aaab45b7-209a-4578-a515-3e55687f0c53/course-overview) course to learn how to fix things when they break.
   titleSplit:
     - 'Build Your First App'
     - 'with Lovable'
