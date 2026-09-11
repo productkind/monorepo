@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1090" viewBox="0 0 1400 1090" role="img" aria-labelledby="boundary-title boundary-description">
+  <title id="boundary-title">The boundary between an AI prototype and a production decision</title>
+  <desc id="boundary-description">A prototype can test one user, task, flow and set of approved examples, and it produces evidence about one assumption. A production decision also needs assessment of access and permissions, data protection and deletion, correctness and failure cases, scale and performance, testing and monitoring, accessibility and compliance, support and maintenance, and the engineering approach and effort, which is work the test did not cover. The product team reviews the evidence and gaps together before deciding what happens next.</desc>
+
+  <defs>
+    <linearGradient id="brand-gradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffb65b"/>
+      <stop offset="28%" stop-color="#fdd825"/>
+      <stop offset="52%" stop-color="#fbfb00"/>
+      <stop offset="76%" stop-color="#8efd23"/>
+      <stop offset="100%" stop-color="#00ed70"/>
+    </linearGradient>
+    <linearGradient id="brand-gradient-v" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffb65b"/>
+      <stop offset="50%" stop-color="#fbfb00"/>
+      <stop offset="100%" stop-color="#00ed70"/>
+    </linearGradient>
+    <filter id="card-shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#080809" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 z" fill="#080809"/>
+    </marker>
+    <style>
+      .display { font-family: "Space Mono", Menlo, Consolas, monospace; fill: #080809; }
+      .copy { font-family: Inter, Arial, sans-serif; fill: #080809; }
+      .muted { fill: #4a4a50; }
+      .card-title { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 26px; font-weight: 700; fill: #080809; }
+      .body { font-family: Inter, Arial, sans-serif; font-size: 21px; fill: #080809; }
+      .gloss { font-family: Inter, Arial, sans-serif; font-size: 20px; fill: #4a4a50; }
+      .small { font-family: Inter, Arial, sans-serif; font-size: 18px; fill: #4a4a50; }
+      .label { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 17px; font-weight: 700; fill: #4a4a50; letter-spacing: 0.5px; }
+      .mini { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 15px; font-weight: 700; fill: #4a4a50; letter-spacing: 1px; }
+      .pill { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 15px; font-weight: 700; letter-spacing: 1.2px; }
+      .num { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 24px; font-weight: 700; fill: #080809; }
+      .connector { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: butt; stroke-linejoin: miter; marker-end: url(#arrow); }
+      .stem { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: butt; stroke-linejoin: miter; }
+      .icon { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: butt; stroke-linejoin: miter; }
+      .divider { stroke: #e0dfd6; stroke-width: 2; }
+      .band { fill: #ffffff; stroke: #e6e5df; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="1090" fill="#fbfaf7"/>
+  <rect x="0" y="0" width="1400" height="14" fill="url(#brand-gradient)"/>
+  <text x="50" y="84" class="display" font-size="36" font-weight="700">A working prototype is one piece of evidence</text>
+  <text x="50" y="124" class="copy muted" font-size="22">The team still has different questions to answer before a release decision.</text>
+  <g filter="url(#card-shadow)">
+    <rect x="60" y="190" width="620" height="620" fill="#fff8d9" stroke="#f1c000" stroke-width="3"/>
+    <rect x="60" y="188" width="620" height="18" fill="#fdd825"/>
+  </g>
+  <rect x="92" y="230" width="115" height="32" fill="#1a0044"/>
+  <text x="150" y="251" text-anchor="middle" class="pill" style="fill:#ffffff">PROTOTYPE</text>
+  <text x="92" y="304" class="card-title">What can we learn?</text>
+  <text x="92" y="340" class="gloss">A focused test can examine:</text>
+  <rect x="95" y="372" width="14" height="14" fill="#fdd825" stroke="#080809" stroke-width="2"/>
+  <text x="130" y="386" class="body">One intended user</text>
+  <rect x="95" y="416" width="14" height="14" fill="#fdd825" stroke="#080809" stroke-width="2"/>
+  <text x="130" y="430" class="body">One realistic task</text>
+  <rect x="95" y="460" width="14" height="14" fill="#fdd825" stroke="#080809" stroke-width="2"/>
+  <text x="130" y="474" class="body">One complete flow</text>
+  <rect x="95" y="504" width="14" height="14" fill="#fdd825" stroke="#080809" stroke-width="2"/>
+  <text x="130" y="518" class="body">Approved example data</text>
+  <rect x="95" y="548" width="14" height="14" fill="#fdd825" stroke="#080809" stroke-width="2"/>
+  <text x="130" y="562" class="body">Observed user behaviour</text>
+  <rect x="95" y="592" width="14" height="14" fill="#fdd825" stroke="#080809" stroke-width="2"/>
+  <text x="130" y="606" class="body">The next product question</text>
+  <line x1="92" y1="718" x2="648" y2="718" class="divider"/>
+  <text x="92" y="756" class="small">Result: evidence about one assumption</text>
+  <g filter="url(#card-shadow)">
+    <rect x="720" y="190" width="620" height="620" fill="#eafff4" stroke="#00ed70" stroke-width="3"/>
+    <rect x="720" y="188" width="620" height="18" fill="#00ed70"/>
+  </g>
+  <rect x="752" y="230" width="205" height="32" fill="#1a0044"/>
+  <text x="854" y="251" text-anchor="middle" class="pill" style="fill:#ffffff">PRODUCTION DECISION</text>
+  <text x="752" y="304" class="card-title">What must we assess?</text>
+  <text x="752" y="340" class="gloss">A release decision also needs:</text>
+  <rect x="755" y="372" width="14" height="14" fill="#00ed70" stroke="#080809" stroke-width="2"/>
+  <text x="790" y="386" class="body">Access and permissions</text>
+  <rect x="755" y="416" width="14" height="14" fill="#00ed70" stroke="#080809" stroke-width="2"/>
+  <text x="790" y="430" class="body">Data protection and deletion</text>
+  <rect x="755" y="460" width="14" height="14" fill="#00ed70" stroke="#080809" stroke-width="2"/>
+  <text x="790" y="474" class="body">Correctness and failure cases</text>
+  <rect x="755" y="504" width="14" height="14" fill="#00ed70" stroke="#080809" stroke-width="2"/>
+  <text x="790" y="518" class="body">Scale and performance</text>
+  <rect x="755" y="548" width="14" height="14" fill="#00ed70" stroke="#080809" stroke-width="2"/>
+  <text x="790" y="562" class="body">Testing and monitoring</text>
+  <rect x="755" y="592" width="14" height="14" fill="#00ed70" stroke="#080809" stroke-width="2"/>
+  <text x="790" y="606" class="body">Accessibility and compliance</text>
+  <rect x="755" y="636" width="14" height="14" fill="#00ed70" stroke="#080809" stroke-width="2"/>
+  <text x="790" y="650" class="body">Support and maintenance</text>
+  <rect x="755" y="680" width="14" height="14" fill="#00ed70" stroke="#080809" stroke-width="2"/>
+  <text x="790" y="694" class="body">Engineering approach and effort</text>
+  <line x1="752" y1="718" x2="1308" y2="718" class="divider"/>
+  <text x="752" y="756" class="small">Result: work the test did not cover</text>
+  <rect x="60" y="860" width="1280" height="150" fill="#1a0044"/>
+  <rect x="60" y="860" width="14" height="150" fill="url(#brand-gradient-v)"/>
+  <text x="104" y="900" class="display" font-size="20" font-weight="700" style="fill:#ffd79a">REVIEW THE EVIDENCE AND GAPS TOGETHER</text>
+  <text x="104" y="934" class="copy" font-size="21" style="fill:#ffffff">Then continue, change, stop or investigate the next question.</text>
+  <rect x="104" y="954" width="1192" height="2" fill="#3a2a63"/>
+  <text x="104" y="988" class="copy" font-size="20" style="fill:#c9bde6">Product  ·  Design  ·  User Research  ·  Engineering  ·  relevant specialists</text>
+  <text x="1340" y="1051" text-anchor="end" class="label">LittleParrot.app</text>
+</svg>

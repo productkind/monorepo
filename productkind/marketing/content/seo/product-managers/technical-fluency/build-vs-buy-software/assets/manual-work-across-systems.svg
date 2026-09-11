@@ -28,9 +28,9 @@
       .card-title { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 28px; font-weight: 700; fill: #080809; }
       .card-copy { font-family: Inter, Arial, sans-serif; font-size: 22px; fill: #4a4a50; }
       .label { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 18px; font-weight: 700; fill: #4a4a50; letter-spacing: 0.4px; }
-      .connector { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow); }
-      .stem { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
-      .icon { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .connector { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: butt; stroke-linejoin: miter; marker-end: url(#arrow); }
+      .stem { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: butt; stroke-linejoin: miter; }
+      .icon { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: butt; stroke-linejoin: miter; }
     </style>
   </defs>
 
@@ -42,8 +42,8 @@
 
   <!-- The question -->
   <g filter="url(#card-shadow)">
-    <rect x="60" y="340" width="330" height="300" rx="26" fill="#fff3e6" stroke="#ffb65b" stroke-width="3"/>
-    <rect x="60" y="338" width="330" height="18" rx="9" fill="#ffb65b"/>
+    <rect x="60" y="340" width="330" height="300" fill="#fff3e6" stroke="#ffb65b" stroke-width="3"/>
+    <rect x="60" y="338" width="330" height="18" fill="#ffb65b"/>
   </g>
   <g transform="translate(92 384)">
     <circle cx="22" cy="22" r="18" class="icon"/>
@@ -58,7 +58,7 @@
 
   <!-- Fan-out -->
   <path d="M390 490 H500" class="stem"/>
-  <path d="M500 245 V731" class="stem"/>
+  <path d="M500 243 V733" class="stem"/>
   <path d="M500 245 H604" class="connector"/>
   <path d="M500 407 H604" class="connector"/>
   <path d="M500 569 H604" class="connector"/>
@@ -66,8 +66,8 @@
 
   <!-- Customer records -->
   <g filter="url(#card-shadow)">
-    <rect x="612" y="175" width="628" height="140" rx="24" fill="#fff3e6" stroke="#ffb65b" stroke-width="3"/>
-    <rect x="612" y="173" width="628" height="18" rx="9" fill="#ffb65b"/>
+    <rect x="612" y="175" width="628" height="140" fill="#fff3e6" stroke="#ffb65b" stroke-width="3"/>
+    <rect x="612" y="173" width="628" height="18" fill="#ffb65b"/>
   </g>
   <g transform="translate(644 221)">
     <circle cx="22" cy="14" r="12" class="icon"/>
@@ -78,11 +78,11 @@
 
   <!-- Order records -->
   <g filter="url(#card-shadow)">
-    <rect x="612" y="337" width="628" height="140" rx="24" fill="#fff8d9" stroke="#f1c000" stroke-width="3"/>
-    <rect x="612" y="335" width="628" height="18" rx="9" fill="#fdd825"/>
+    <rect x="612" y="337" width="628" height="140" fill="#fff8d9" stroke="#f1c000" stroke-width="3"/>
+    <rect x="612" y="335" width="628" height="18" fill="#fdd825"/>
   </g>
   <g transform="translate(648 383)">
-    <rect x="0" y="0" width="40" height="48" rx="6" class="icon"/>
+    <rect x="0" y="0" width="40" height="48" class="icon"/>
     <path d="M10 14 H30 M10 25 H30 M10 36 H22" class="icon"/>
   </g>
   <text x="716" y="395" class="card-title">Order records</text>
@@ -90,11 +90,11 @@
 
   <!-- Payment records -->
   <g filter="url(#card-shadow)">
-    <rect x="612" y="499" width="628" height="140" rx="24" fill="#efffe8" stroke="#8efd23" stroke-width="3"/>
-    <rect x="612" y="497" width="628" height="18" rx="9" fill="#8efd23"/>
+    <rect x="612" y="499" width="628" height="140" fill="#efffe8" stroke="#8efd23" stroke-width="3"/>
+    <rect x="612" y="497" width="628" height="18" fill="#8efd23"/>
   </g>
   <g transform="translate(644 549)">
-    <rect x="0" y="0" width="52" height="38" rx="6" class="icon"/>
+    <rect x="0" y="0" width="52" height="38" class="icon"/>
     <path d="M0 13 H52 M10 27 H24" class="icon"/>
   </g>
   <text x="716" y="557" class="card-title">Payment records</text>
@@ -102,8 +102,8 @@
 
   <!-- Licence records -->
   <g filter="url(#card-shadow)">
-    <rect x="612" y="661" width="628" height="140" rx="24" fill="#eafff4" stroke="#00ed70" stroke-width="3"/>
-    <rect x="612" y="659" width="628" height="18" rx="9" fill="#00ed70"/>
+    <rect x="612" y="661" width="628" height="140" fill="#eafff4" stroke="#00ed70" stroke-width="3"/>
+    <rect x="612" y="659" width="628" height="18" fill="#00ed70"/>
   </g>
   <g transform="translate(644 707)">
     <circle cx="12" cy="24" r="11" class="icon"/>
@@ -114,13 +114,13 @@
   <text x="716" y="759" class="card-copy">Which subscription or perpetual licence is active</text>
 
   <!-- Conflict note -->
-  <rect x="60" y="826" width="8" height="56" rx="4" fill="url(#brand-gradient-v)"/>
+  <rect x="60" y="826" width="8" height="56" fill="url(#brand-gradient-v)"/>
   <text x="90" y="850" class="label">RECORDS COULD DISAGREE</text>
   <text x="90" y="880" class="copy" font-size="22">An order could stay marked unpaid after its invoice had been paid.</text>
 
   <!-- Manual work band -->
-  <rect x="60" y="910" width="1180" height="95" rx="24" fill="#1a0044"/>
-  <rect x="60" y="910" width="14" height="95" rx="7" fill="url(#brand-gradient-v)"/>
+  <rect x="60" y="910" width="1180" height="95" fill="#1a0044"/>
+  <rect x="60" y="910" width="14" height="95" fill="url(#brand-gradient-v)"/>
   <text x="104" y="948" class="display" font-size="21" font-weight="700" style="fill:#ffffff">85 TO 170 INVOICES CREATED MANUALLY EACH MONTH</text>
   <text x="104" y="980" class="copy" font-size="21" style="fill:#ffffff">A wire transfer meant checking the bank, finding the order and marking it paid by hand.</text>
 

@@ -34,9 +34,9 @@
       .mini { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 15px; font-weight: 700; fill: #4a4a50; letter-spacing: 1px; }
       .pill { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 15px; font-weight: 700; letter-spacing: 1.2px; }
       .code { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 18px; fill: #080809; }
-      .connector { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow); }
-      .stem { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
-      .bracket { fill: none; stroke: #b4b3aa; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      .connector { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: butt; stroke-linejoin: miter; marker-end: url(#arrow); }
+      .stem { fill: none; stroke: #080809; stroke-width: 4; stroke-linecap: butt; stroke-linejoin: miter; }
+      .bracket { fill: none; stroke: #b4b3aa; stroke-width: 3; stroke-linecap: butt; stroke-linejoin: miter; }
       .divider { stroke: #e0dfd6; stroke-width: 2; }
       .band { fill: #ffffff; stroke: #e6e5df; stroke-width: 2; }
     </style>
@@ -47,66 +47,66 @@
   <text x="50" y="84" class="display" font-size="36" font-weight="700">Anatomy of a bug report</text>
   <text x="50" y="124" class="copy muted" font-size="22">Every section answers a question the next person will ask.</text>
   <g filter="url(#card-shadow)">
-    <rect x="60" y="210" width="620" height="904" rx="24" fill="#ffffff" stroke="#e6e5df" stroke-width="2"/>
-    <path d="M60 234 a24 24 0 0 1 24 -24 h572 a24 24 0 0 1 24 24 v32 h-620 z" fill="#f4f3ef"/>
+    <rect x="60" y="210" width="620" height="904" fill="#ffffff" stroke="#e6e5df" stroke-width="2"/>
+    <rect x="60" y="210" width="620" height="56" fill="#f4f3ef"/>
   </g>
   <text x="88" y="248" class="mini">BUG REPORT</text>
-  <circle cx="640" cy="238" r="6" fill="#d8d7ce"/>
-  <circle cx="618" cy="238" r="6" fill="#d8d7ce"/>
-  <rect x="84" y="302" width="6" height="72" rx="3" fill="#ffb65b"/>
+  <rect x="634" y="232" width="12" height="12" fill="#d8d7ce"/>
+  <rect x="612" y="232" width="12" height="12" fill="#d8d7ce"/>
+  <rect x="84" y="302" width="6" height="72" fill="#ffb65b"/>
   <text x="108" y="328" class="sec" font-size="23"># Observed behaviour</text>
   <text x="108" y="360" class="sec" font-size="23" style="fill:#4a4a50">when [condition]</text>
   <line x1="84" y1="390" x2="656" y2="390" class="divider"/>
-  <rect x="84" y="406" width="6" height="56" rx="3" fill="#fdd825"/>
+  <rect x="84" y="406" width="6" height="56" fill="#fdd825"/>
   <text x="108" y="426" class="sec">Context and conditions</text>
-  <rect x="108" y="442" width="380" height="9" rx="4.5" fill="#e9e8e0"/>
-  <rect x="108" y="458" width="250" height="9" rx="4.5" fill="#e9e8e0"/>
+  <rect x="108" y="442" width="380" height="9" fill="#e9e8e0"/>
+  <rect x="108" y="458" width="250" height="9" fill="#e9e8e0"/>
   <line x1="84" y1="478" x2="656" y2="478" class="divider"/>
-  <rect x="84" y="494" width="6" height="56" rx="3" fill="#fdd825"/>
+  <rect x="84" y="494" width="6" height="56" fill="#fdd825"/>
   <text x="108" y="514" class="sec">Steps to reproduce</text>
-  <rect x="108" y="530" width="400" height="9" rx="4.5" fill="#e9e8e0"/>
-  <rect x="108" y="546" width="330" height="9" rx="4.5" fill="#e9e8e0"/>
+  <rect x="108" y="530" width="400" height="9" fill="#e9e8e0"/>
+  <rect x="108" y="546" width="330" height="9" fill="#e9e8e0"/>
   <line x1="84" y1="566" x2="656" y2="566" class="divider"/>
-  <rect x="84" y="582" width="6" height="56" rx="3" fill="#b9dc14"/>
+  <rect x="84" y="582" width="6" height="56" fill="#b9dc14"/>
   <text x="108" y="602" class="sec">Expected behaviour</text>
-  <rect x="108" y="618" width="300" height="9" rx="4.5" fill="#e9e8e0"/>
+  <rect x="108" y="618" width="300" height="9" fill="#e9e8e0"/>
   <line x1="84" y1="654" x2="656" y2="654" class="divider"/>
-  <rect x="84" y="670" width="6" height="56" rx="3" fill="#b9dc14"/>
+  <rect x="84" y="670" width="6" height="56" fill="#b9dc14"/>
   <text x="108" y="690" class="sec">Actual behaviour</text>
-  <rect x="108" y="706" width="350" height="9" rx="4.5" fill="#e9e8e0"/>
-  <rect x="108" y="722" width="240" height="9" rx="4.5" fill="#e9e8e0"/>
+  <rect x="108" y="706" width="350" height="9" fill="#e9e8e0"/>
+  <rect x="108" y="722" width="240" height="9" fill="#e9e8e0"/>
   <line x1="84" y1="742" x2="656" y2="742" class="divider"/>
-  <rect x="84" y="758" width="6" height="56" rx="3" fill="#8efd23"/>
+  <rect x="84" y="758" width="6" height="56" fill="#8efd23"/>
   <text x="108" y="778" class="sec">Evidence</text>
-  <rect x="108" y="794" width="410" height="9" rx="4.5" fill="#e9e8e0"/>
-  <rect x="108" y="810" width="260" height="9" rx="4.5" fill="#e9e8e0"/>
+  <rect x="108" y="794" width="410" height="9" fill="#e9e8e0"/>
+  <rect x="108" y="810" width="260" height="9" fill="#e9e8e0"/>
   <line x1="84" y1="830" x2="656" y2="830" class="divider"/>
-  <rect x="84" y="846" width="6" height="56" rx="3" fill="#00ed70"/>
+  <rect x="84" y="846" width="6" height="56" fill="#00ed70"/>
   <text x="108" y="866" class="sec">User impact and workaround</text>
-  <rect x="108" y="882" width="390" height="9" rx="4.5" fill="#e9e8e0"/>
-  <rect x="108" y="898" width="300" height="9" rx="4.5" fill="#e9e8e0"/>
+  <rect x="108" y="882" width="390" height="9" fill="#e9e8e0"/>
+  <rect x="108" y="898" width="300" height="9" fill="#e9e8e0"/>
   <line x1="84" y1="918" x2="656" y2="918" class="divider"/>
-  <rect x="84" y="934" width="6" height="56" rx="3" fill="#00ed70"/>
+  <rect x="84" y="934" width="6" height="56" fill="#00ed70"/>
   <text x="108" y="954" class="sec">Confirmed, suspected, unknown</text>
-  <rect x="108" y="970" width="420" height="9" rx="4.5" fill="#e9e8e0"/>
-  <rect x="108" y="986" width="280" height="9" rx="4.5" fill="#e9e8e0"/>
+  <rect x="108" y="970" width="420" height="9" fill="#e9e8e0"/>
+  <rect x="108" y="986" width="280" height="9" fill="#e9e8e0"/>
   <line x1="84" y1="1006" x2="656" y2="1006" class="divider"/>
-  <rect x="84" y="1022" width="6" height="56" rx="3" fill="#00ed70"/>
+  <rect x="84" y="1022" width="6" height="56" fill="#00ed70"/>
   <text x="108" y="1042" class="sec">Related information</text>
-  <rect x="108" y="1058" width="300" height="9" rx="4.5" fill="#e9e8e0"/>
+  <rect x="108" y="1058" width="300" height="9" fill="#e9e8e0"/>
   <path d="M700 296 H712 V380 H700" class="bracket"/>
   <path d="M712 338 H740" class="bracket"/>
   <g filter="url(#card-shadow)">
-    <rect x="752" y="288" width="588" height="100" rx="22" fill="#ffffff" stroke="#e6e5df" stroke-width="2"/>
-    <rect x="752" y="288" width="8" height="100" rx="4" fill="#ffb65b"/>
+    <rect x="752" y="288" width="588" height="100" fill="#ffffff" stroke="#e6e5df" stroke-width="2"/>
+    <rect x="752" y="288" width="8" height="100" fill="#ffb65b"/>
   </g>
   <text x="786" y="328" class="label">NAMES ONE PROBLEM</text>
   <text x="786" y="364" class="body">Can I tell what is wrong from the title alone?</text>
   <path d="M700 400 H712 V556 H700" class="bracket"/>
   <path d="M712 478 H740" class="bracket"/>
   <g filter="url(#card-shadow)">
-    <rect x="752" y="408" width="588" height="140" rx="22" fill="#ffffff" stroke="#e6e5df" stroke-width="2"/>
-    <rect x="752" y="408" width="8" height="140" rx="4" fill="#fdd825"/>
+    <rect x="752" y="408" width="588" height="140" fill="#ffffff" stroke="#e6e5df" stroke-width="2"/>
+    <rect x="752" y="408" width="8" height="140" fill="#fdd825"/>
   </g>
   <text x="786" y="448" class="label">MAKES IT REPEATABLE</text>
   <text x="786" y="484" class="body">Can I create the same conditions and</text>
@@ -114,8 +114,8 @@
   <path d="M700 576 H712 V732 H700" class="bracket"/>
   <path d="M712 654 H740" class="bracket"/>
   <g filter="url(#card-shadow)">
-    <rect x="752" y="584" width="588" height="140" rx="22" fill="#ffffff" stroke="#e6e5df" stroke-width="2"/>
-    <rect x="752" y="584" width="8" height="140" rx="4" fill="#b9dc14"/>
+    <rect x="752" y="584" width="588" height="140" fill="#ffffff" stroke="#e6e5df" stroke-width="2"/>
+    <rect x="752" y="584" width="8" height="140" fill="#b9dc14"/>
   </g>
   <text x="786" y="624" class="label">SHOWS THE GAP</text>
   <text x="786" y="660" class="body">What should have happened, and what</text>
@@ -123,22 +123,22 @@
   <path d="M700 752 H712 V820 H700" class="bracket"/>
   <path d="M712 786 H740" class="bracket"/>
   <g filter="url(#card-shadow)">
-    <rect x="752" y="736" width="588" height="100" rx="22" fill="#ffffff" stroke="#e6e5df" stroke-width="2"/>
-    <rect x="752" y="736" width="8" height="100" rx="4" fill="#8efd23"/>
+    <rect x="752" y="736" width="588" height="100" fill="#ffffff" stroke="#e6e5df" stroke-width="2"/>
+    <rect x="752" y="736" width="8" height="100" fill="#8efd23"/>
   </g>
   <text x="786" y="776" class="label">PROVES IT</text>
   <text x="786" y="812" class="body">Which evidence can another person look at?</text>
   <path d="M700 840 H712 V1084 H700" class="bracket"/>
   <path d="M712 962 H740" class="bracket"/>
   <g filter="url(#card-shadow)">
-    <rect x="752" y="892" width="588" height="140" rx="22" fill="#ffffff" stroke="#e6e5df" stroke-width="2"/>
-    <rect x="752" y="892" width="8" height="140" rx="4" fill="#00ed70"/>
+    <rect x="752" y="892" width="588" height="140" fill="#ffffff" stroke="#e6e5df" stroke-width="2"/>
+    <rect x="752" y="892" width="8" height="140" fill="#00ed70"/>
   </g>
   <text x="786" y="932" class="label">SETS THE STAKES</text>
   <text x="786" y="968" class="body">What can the user not do, and what is</text>
   <text x="786" y="998" class="body">still unknown?</text>
-  <rect x="60" y="1150" width="1280" height="95" rx="24" fill="#1a0044"/>
-  <rect x="60" y="1150" width="14" height="95" rx="7" fill="url(#brand-gradient-v)"/>
+  <rect x="60" y="1150" width="1280" height="95" fill="#1a0044"/>
+  <rect x="60" y="1150" width="14" height="95" fill="url(#brand-gradient-v)"/>
   <text x="104" y="1190" class="display" font-size="20" font-weight="700" style="fill:#ffd79a">ONE OBSERVABLE PROBLEM PER REPORT</text>
   <text x="104" y="1224" class="copy" font-size="21" style="fill:#ffffff">Combining unrelated symptoms in one ticket makes ownership, testing and closure harder.</text>
   <text x="1340" y="1292" text-anchor="end" class="label">LittleParrot.app</text>
