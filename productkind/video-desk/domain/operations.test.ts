@@ -1,4 +1,5 @@
 import {
+  assetsFolderOf,
   chooseKey,
   clipFit,
   edgeColourOf,
@@ -18,6 +19,7 @@ import {
   providerFrom,
   repeatsIn,
   sectionName,
+  stillReferenced,
   unreadSections,
   usedIdsIn,
 } from './operations.ts'
@@ -746,5 +748,53 @@ describe('placeFor', () => {
 
   test('an unusual placement is still respected when the kind is unchanged', () => {
     expect(placeFor({ was: 'gif', now: 'gif', place: 'frame' })).toBe('frame')
+  })
+})
+
+describe('assetsFolderOf', () => {
+  test('a video keeps its visuals in a folder of its own name', () => {
+    expect(assetsFolderOf({ video: 'social-016', source: 'export default defineVideo({' })).toBe(
+      'social-016',
+    )
+  })
+
+  test("unless it borrows another video's folder", () => {
+    // social-018 renders from social-016's assets, so a file replaced in one is a file the other
+    // still plays.
+    expect(assetsFolderOf({ video: 'social-018', source: "  assets: 'social-016',\n" })).toBe(
+      'social-016',
+    )
+  })
+})
+
+describe('stillReferenced', () => {
+  const definitions = [
+    { video: 'social-016', folder: 'social-016', sources: ['a.gif', 'b.gif'] },
+    { video: 'social-018', folder: 'social-016', sources: ['b.gif'] },
+    { video: 'social-017', folder: 'social-017', sources: ['dump.mp4', 'dump.mp4'] },
+  ]
+
+  test('names every video still playing the file, so it is not deleted from under one', () => {
+    expect(stillReferenced({ src: 'b.gif', folder: 'social-016', definitions })).toEqual([
+      'social-016',
+      'social-018',
+    ])
+  })
+
+  test('says nothing when the file is no longer referenced anywhere', () => {
+    expect(stillReferenced({ src: 'a.gif', folder: 'social-016', definitions })).toEqual([
+      'social-016',
+    ])
+    expect(stillReferenced({ src: 'gone.gif', folder: 'social-016', definitions })).toEqual([])
+  })
+
+  test('counts a file used twice inside one video, which social-017 does', () => {
+    expect(stillReferenced({ src: 'dump.mp4', folder: 'social-017', definitions })).toEqual([
+      'social-017',
+    ])
+  })
+
+  test('ignores a file of the same name in a different folder', () => {
+    expect(stillReferenced({ src: 'b.gif', folder: 'social-017', definitions })).toEqual([])
   })
 })

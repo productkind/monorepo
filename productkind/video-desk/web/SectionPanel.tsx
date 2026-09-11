@@ -37,6 +37,9 @@ export const SectionPanel: React.FC<{
   const [searching, setSearching] = useState(false)
   const [busy, setBusy] = useState<string | null>(null)
   const [problem, setProblem] = useState<string | null>(null)
+  // Keeping is the default: an accidental delete cannot be undone, and a kept file costs disk.
+  const [oldFile, setOldFile] = useState<'keep' | 'delete'>('keep')
+  const [replaced, setReplaced] = useState<string | null>(null)
 
   // Measuring costs a full decode per gif, so it happens when a section is opened, not for the
   // whole list. Candidates are dropped on the way in: they belong to the section just left.
@@ -46,6 +49,7 @@ export const SectionPanel: React.FC<{
     setCandidates([])
     setClips([])
     setProblem(null)
+    setReplaced(null)
     let current = true
     measureSection({ video, section: section.index })
       .then((result) => {
@@ -119,11 +123,15 @@ export const SectionPanel: React.FC<{
       author: clip.author,
       provider: clip.provider,
       downloadUrl: clip.downloadUrl,
+      oldFile,
     })
       .then((result) => {
         setMeasured(result.section)
         onChanged(result.section)
         setClips([])
+        setReplaced(
+          result.replaced === null ? null : `${result.replaced.src}: ${result.replaced.why}`,
+        )
       })
       .catch((error: unknown) => {
         setProblem(String(error))
@@ -142,11 +150,17 @@ export const SectionPanel: React.FC<{
       gifId: candidate.id,
       name: nameFrom({ term: candidate.term }),
       search: candidate.term,
+      sourceUrl: candidate.sourceUrl,
+      provider: candidate.provider,
+      oldFile,
     })
       .then((result) => {
         setMeasured(result.section)
         onChanged(result.section)
         setCandidates([])
+        setReplaced(
+          result.replaced === null ? null : `${result.replaced.src}: ${result.replaced.why}`,
+        )
       })
       .catch((error: unknown) => {
         setProblem(String(error))
@@ -282,9 +296,20 @@ export const SectionPanel: React.FC<{
           <button type="button" className="action" disabled={searching} onClick={search}>
             {searching ? 'searching…' : 'search'}
           </button>
+          <label className="label" style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+            <input
+              type="checkbox"
+              checked={oldFile === 'delete'}
+              onChange={(event) => {
+                setOldFile(event.target.checked ? 'delete' : 'keep')
+              }}
+            />
+            delete the file it replaces
+          </label>
         </div>
 
         {problem === null ? null : <p className="problem">{problem}</p>}
+        {replaced === null ? null : <p className="problem">{replaced}</p>}
 
         {(stock && measured.kind === 'gif') || (!stock && measured.kind === 'clip') ? (
           <p className="problem" style={{ borderLeftColor: 'var(--warn)' }}>

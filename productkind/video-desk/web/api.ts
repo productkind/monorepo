@@ -66,6 +66,8 @@ export const searchStock = (options: {
   show: number
 }): Promise<{ clips: ClipCandidate[]; slot: number }> => json('/api/search-stock', options)
 
+export type Replaced = { src: string; removed: boolean; why: string } | null
+
 export const pickClip = (options: {
   video: string
   section: number
@@ -74,7 +76,10 @@ export const pickClip = (options: {
   author: string
   provider: string
   downloadUrl: string
-}): Promise<{ section: Section; applied: string }> => json('/api/pick-clip', options)
+  /** What to do with the file this replaces. Deleting is refused if anything still uses it. */
+  oldFile: 'keep' | 'delete'
+}): Promise<{ section: Section; applied: string; replaced: Replaced }> =>
+  json('/api/pick-clip', options)
 
 export const pickGif = (options: {
   video: string
@@ -82,7 +87,10 @@ export const pickGif = (options: {
   gifId: string
   name: string
   search: string
-}): Promise<{ section: Section; applied: string }> => json('/api/pick', options)
+  sourceUrl?: string
+  provider?: string
+  oldFile: 'keep' | 'delete'
+}): Promise<{ section: Section; applied: string; replaced: Replaced }> => json('/api/pick', options)
 
 export const setFlag = (options: {
   video: string

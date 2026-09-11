@@ -31,6 +31,8 @@ export type VideoDeskBehavior = {
     video: string
     index: number
     candidate: Parameters<typeof pickGif>[0]['candidate']
+    /** Whether the file this replaces is kept or deleted. Deleting is refused if anything uses it. */
+    oldFile?: 'keep' | 'delete'
   }) => VideoDeskFeatureOutput
   /** Stock footage for a clip section, which is judged on covering its beat. */
   searchStock: (args: {
@@ -45,6 +47,7 @@ export type VideoDeskBehavior = {
     video: string
     index: number
     clip: Parameters<typeof pickClip>[0]['clip']
+    oldFile?: 'keep' | 'delete'
   }) => VideoDeskFeatureOutput
   setFlag: (args: {
     video: string
