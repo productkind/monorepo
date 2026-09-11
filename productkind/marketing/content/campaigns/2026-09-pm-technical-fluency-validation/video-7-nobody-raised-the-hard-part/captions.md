@@ -19,9 +19,15 @@ TikTok video posts have no separate title field, so the caption's first line is 
 
 **Caption:**
 
-Everyone in that meeting agreed to the decision, and nobody raised the hard questions. Three weeks later the work is twice the size and your roadmap moves. Who raises the hard part on your team? Waitlist for women in product in the comments.
+Everyone in that meeting agreed to the decision, and nobody raised the hard questions. Three weeks later the work is twice the size and your roadmap moves.
 
-#womeninproduct #womenintech #womenproductmanagers
+We're building a learning path for women in product who want to be the one who raises these questions. By the end you'll be able to run that discussion. What does this change rely on that we don't control? What happens when a request fails halfway? Does it touch permissions, or data that already exists?
+
+Join the waitlist through the link in the comments, and we'll let you know when the learning path opens.
+
+Who raises the challenging questions on your team?
+
+#womeninproduct #womenintech #productmanagers
 
 **Pinned comment:**
 
