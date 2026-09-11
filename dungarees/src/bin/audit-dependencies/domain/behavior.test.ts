@@ -31,7 +31,10 @@ test('reports an undeclared import and fails the audit', async () => {
 
   expect(await collectValuesFrom(behavior.auditDependencies({ dir: '/repo' }).events$)).toEqual([
     { type: 'audit-start', payload: { dir: '/repo' } },
-    { type: 'package-findings', payload: { name: '@org/a', missing: ['rxjs'], unused: [] } },
+    {
+      type: 'package-findings',
+      payload: { name: '@org/a', missing: ['rxjs'], unused: [], misdeclared: [] },
+    },
     { type: 'audit-failed', payload: { packageCount: 1 } },
   ])
 })
@@ -61,7 +64,10 @@ test('audits tsx sources as well as ts', async () => {
 
   expect(await collectValuesFrom(behavior.auditDependencies({ dir: '/repo' }).events$)).toEqual([
     { type: 'audit-start', payload: { dir: '/repo' } },
-    { type: 'package-findings', payload: { name: '@org/a', missing: ['some-ui'], unused: [] } },
+    {
+      type: 'package-findings',
+      payload: { name: '@org/a', missing: ['some-ui'], unused: [], misdeclared: [] },
+    },
     { type: 'audit-failed', payload: { packageCount: 1 } },
   ])
 })
@@ -78,7 +84,10 @@ test('audits only what sits under the source directory', async () => {
 
   expect(await collectValuesFrom(behavior.auditDependencies({ dir: '/repo' }).events$)).toEqual([
     { type: 'audit-start', payload: { dir: '/repo' } },
-    { type: 'package-findings', payload: { name: '@org/a', missing: ['rxjs'], unused: [] } },
+    {
+      type: 'package-findings',
+      payload: { name: '@org/a', missing: ['rxjs'], unused: [], misdeclared: [] },
+    },
     { type: 'audit-failed', payload: { packageCount: 1 } },
   ])
 })

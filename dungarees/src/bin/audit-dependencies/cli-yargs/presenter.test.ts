@@ -16,6 +16,7 @@ test('package-findings lists both kinds on stderr', () => {
       name: '@org/a',
       missing: ['rxjs', 'zod'],
       unused: ['react'],
+      misdeclared: [],
     }),
   ).toEqual({
     type: 'stderr',
@@ -30,6 +31,7 @@ test('package-findings omits a kind that is empty', () => {
       name: '@org/a',
       missing: ['rxjs'],
       unused: [],
+      misdeclared: [],
     }),
   ).toEqual({
     type: 'stderr',
@@ -50,5 +52,24 @@ test('audit-failed exits non-zero so the audit can gate a build', () => {
   expect(auditDependenciesPresenter['audit-failed']({ packageCount: 17 })).toEqual({
     type: 'exit',
     code: 1,
+  })
+})
+
+test('package-findings says which list a misdeclared dependency belongs in', () => {
+  expect(
+    auditDependenciesPresenter['package-findings']({
+      name: '@org/a',
+      missing: [],
+      unused: [],
+      misdeclared: [
+        { name: 'memfs', expected: 'devDependency' },
+        { name: 'rxjs', expected: 'dependency' },
+        { name: 'vitest', expected: 'devDependency' },
+      ],
+    }),
+  ).toEqual({
+    type: 'stderr',
+    level: 'error',
+    message: '@org/a\n  move to devDependencies: memfs, vitest\n  move to dependencies: rxjs',
   })
 })

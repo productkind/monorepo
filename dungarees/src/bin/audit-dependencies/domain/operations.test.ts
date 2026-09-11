@@ -39,7 +39,7 @@ test('getImportedPackages ignores relative paths, builtins and quoted code', () 
   expect(getImportedPackages(FIXTURE_SOURCE)).not.toContain('@fixture/inside-a-template-literal')
 })
 
-test('parseManifest collects both dependency kinds under the package directory', () => {
+test('parseManifest keeps the two dependency kinds apart, under the package directory', () => {
   expect(
     parseManifest({
       manifestPath: '/repo/src/thing/package.json',
@@ -52,7 +52,9 @@ test('parseManifest collects both dependency kinds under the package directory',
   ).toEqual({
     dir: '/repo/src/thing',
     name: '@org/thing',
-    declared: ['rxjs', 'vitest'],
+    dependencies: ['rxjs'],
+    devDependencies: ['vitest'],
+    peerDependencies: [],
   })
 })
 
@@ -78,25 +80,49 @@ test('isOutsideNodeModules rejects only paths with a node_modules segment', () =
 test('auditPackages reports imports that are not declared', () => {
   expect(
     auditPackages({
-      manifests: [{ dir: '/src/a', name: '@org/a', declared: [] }],
+      manifests: [
+        {
+          dir: '/src/a',
+          name: '@org/a',
+          dependencies: [],
+          devDependencies: [],
+          peerDependencies: [],
+        },
+      ],
       sources: [{ path: '/src/a/index.ts', content: "import { x } from 'rxjs'" }],
     }),
-  ).toEqual([{ name: '@org/a', missing: ['rxjs'], unused: [] }])
+  ).toEqual([{ name: '@org/a', missing: ['rxjs'], unused: [], misdeclared: [] }])
 })
 
 test('auditPackages reports declarations that are not imported', () => {
   expect(
     auditPackages({
-      manifests: [{ dir: '/src/a', name: '@org/a', declared: ['rxjs'] }],
+      manifests: [
+        {
+          dir: '/src/a',
+          name: '@org/a',
+          dependencies: ['rxjs'],
+          devDependencies: [],
+          peerDependencies: [],
+        },
+      ],
       sources: [{ path: '/src/a/index.ts', content: 'export const x = 1' }],
     }),
-  ).toEqual([{ name: '@org/a', missing: [], unused: ['rxjs'] }])
+  ).toEqual([{ name: '@org/a', missing: [], unused: ['rxjs'], misdeclared: [] }])
 })
 
 test('auditPackages says nothing about a package whose imports match its manifest', () => {
   expect(
     auditPackages({
-      manifests: [{ dir: '/src/a', name: '@org/a', declared: ['rxjs'] }],
+      manifests: [
+        {
+          dir: '/src/a',
+          name: '@org/a',
+          dependencies: ['rxjs'],
+          devDependencies: [],
+          peerDependencies: [],
+        },
+      ],
       sources: [{ path: '/src/a/index.ts', content: "import { x } from 'rxjs'" }],
     }),
   ).toEqual([])
@@ -106,18 +132,38 @@ test('auditPackages attributes a file to its own package, not an ancestor', () =
   expect(
     auditPackages({
       manifests: [
-        { dir: '/src/a', name: '@org/a', declared: [] },
-        { dir: '/src/a/nested', name: '@org/nested', declared: [] },
+        {
+          dir: '/src/a',
+          name: '@org/a',
+          dependencies: [],
+          devDependencies: [],
+          peerDependencies: [],
+        },
+        {
+          dir: '/src/a/nested',
+          name: '@org/nested',
+          dependencies: [],
+          devDependencies: [],
+          peerDependencies: [],
+        },
       ],
       sources: [{ path: '/src/a/nested/index.ts', content: "import { x } from 'rxjs'" }],
     }),
-  ).toEqual([{ name: '@org/nested', missing: ['rxjs'], unused: [] }])
+  ).toEqual([{ name: '@org/nested', missing: ['rxjs'], unused: [], misdeclared: [] }])
 })
 
 test('auditPackages does not report a package importing itself', () => {
   expect(
     auditPackages({
-      manifests: [{ dir: '/src/a', name: '@org/a', declared: [] }],
+      manifests: [
+        {
+          dir: '/src/a',
+          name: '@org/a',
+          dependencies: [],
+          devDependencies: [],
+          peerDependencies: [],
+        },
+      ],
       sources: [{ path: '/src/a/index.ts', content: "import { x } from '@org/a/other.ts'" }],
     }),
   ).toEqual([])
@@ -126,7 +172,15 @@ test('auditPackages does not report a package importing itself', () => {
 test('a package used without an import may be declared and never imported', () => {
   expect(
     auditPackages({
-      manifests: [{ dir: '/src/a', name: '@org/a', declared: ['typescript'] }],
+      manifests: [
+        {
+          dir: '/src/a',
+          name: '@org/a',
+          dependencies: ['typescript'],
+          devDependencies: [],
+          peerDependencies: [],
+        },
+      ],
       sources: [{ path: '/src/a/index.ts', content: 'export const x = 1' }],
       usedWithoutImport: ['typescript'],
     }),
@@ -136,27 +190,51 @@ test('a package used without an import may be declared and never imported', () =
 test('a package used without an import is still reported when imported undeclared', () => {
   expect(
     auditPackages({
-      manifests: [{ dir: '/src/a', name: '@org/a', declared: [] }],
+      manifests: [
+        {
+          dir: '/src/a',
+          name: '@org/a',
+          dependencies: [],
+          devDependencies: [],
+          peerDependencies: [],
+        },
+      ],
       sources: [{ path: '/src/a/index.ts', content: "import ts from 'typescript'" }],
       usedWithoutImport: ['typescript'],
     }),
-  ).toEqual([{ name: '@org/a', missing: ['typescript'], unused: [] }])
+  ).toEqual([{ name: '@org/a', missing: ['typescript'], unused: [], misdeclared: [] }])
 })
 
 test('a types package may be declared and never imported', () => {
   expect(
     auditPackages({
-      manifests: [{ dir: '/src/a', name: '@org/a', declared: ['@types/pg'] }],
+      manifests: [
+        {
+          dir: '/src/a',
+          name: '@org/a',
+          dependencies: ['@types/pg'],
+          devDependencies: [],
+          peerDependencies: [],
+        },
+      ],
       sources: [{ path: '/src/a/index.ts', content: "import pg from 'pg'" }],
       usedWithoutImport: [],
     }),
-  ).toEqual([{ name: '@org/a', missing: ['pg'], unused: [] }])
+  ).toEqual([{ name: '@org/a', missing: ['pg'], unused: [], misdeclared: [] }])
 })
 
 test('a types package is reported when nothing it could type is there either', () => {
   expect(
     auditPackages({
-      manifests: [{ dir: '/src/a', name: '@org/a', declared: ['@types/pg'] }],
+      manifests: [
+        {
+          dir: '/src/a',
+          name: '@org/a',
+          dependencies: ['@types/pg'],
+          devDependencies: [],
+          peerDependencies: [],
+        },
+      ],
       sources: [{ path: '/src/a/index.ts', content: 'export const x = 1' }],
       usedWithoutImport: [],
     }),
@@ -192,7 +270,15 @@ test('getManifestsAndSources drops node_modules from both globs', async () => {
     ),
   ).toEqual([
     {
-      manifests: [{ dir: '/src/a', name: '@org/a', declared: [] }],
+      manifests: [
+        {
+          dir: '/src/a',
+          name: '@org/a',
+          dependencies: [],
+          devDependencies: [],
+          peerDependencies: [],
+        },
+      ],
       sources: [{ path: '/src/a/index.ts', content: 'export const a = 1' }],
     },
   ])
@@ -214,7 +300,15 @@ test('reportFindings emits one event per package and passes when there are none'
   expect(
     await collectValuesFrom(
       of({
-        manifests: [{ dir: '/src/a', name: '@org/a', declared: [] }],
+        manifests: [
+          {
+            dir: '/src/a',
+            name: '@org/a',
+            dependencies: [],
+            devDependencies: [],
+            peerDependencies: [],
+          },
+        ],
         sources: [],
       }).pipe(reportFindings()),
     ),
@@ -225,12 +319,23 @@ test('reportFindings emits each finding then fails the audit', async () => {
   expect(
     await collectValuesFrom(
       of({
-        manifests: [{ dir: '/src/a', name: '@org/a', declared: [] }],
+        manifests: [
+          {
+            dir: '/src/a',
+            name: '@org/a',
+            dependencies: [],
+            devDependencies: [],
+            peerDependencies: [],
+          },
+        ],
         sources: [{ path: '/src/a/index.ts', content: "import { of } from 'rxjs'" }],
       }).pipe(reportFindings()),
     ),
   ).toEqual([
-    { type: 'package-findings', payload: { name: '@org/a', missing: ['rxjs'], unused: [] } },
+    {
+      type: 'package-findings',
+      payload: { name: '@org/a', missing: ['rxjs'], unused: [], misdeclared: [] },
+    },
     { type: 'audit-failed', payload: { packageCount: 1 } },
   ])
 })
@@ -239,9 +344,154 @@ test('reportFindings treats its configured packages as declarable without import
   expect(
     await collectValuesFrom(
       of({
-        manifests: [{ dir: '/src/a', name: '@org/a', declared: ['typescript'] }],
+        manifests: [
+          {
+            dir: '/src/a',
+            name: '@org/a',
+            dependencies: ['typescript'],
+            devDependencies: [],
+            peerDependencies: [],
+          },
+        ],
         sources: [],
       }).pipe(reportFindings()),
     ),
   ).toEqual([{ type: 'audit-passed', payload: { packageCount: 1 } }])
+})
+
+test('auditPackages reports a dependency that only a test file imports', () => {
+  expect(
+    auditPackages({
+      manifests: [
+        {
+          dir: '/src/a',
+          name: '@org/a',
+          dependencies: ['memfs'],
+          devDependencies: [],
+          peerDependencies: [],
+        },
+      ],
+      sources: [{ path: '/src/a/index.test.ts', content: "import { x } from 'memfs'" }],
+    }),
+  ).toEqual([
+    {
+      name: '@org/a',
+      missing: [],
+      unused: [],
+      misdeclared: [{ name: 'memfs', expected: 'devDependency' }],
+    },
+  ])
+})
+
+test('auditPackages reports a dev dependency that shipped source imports', () => {
+  expect(
+    auditPackages({
+      manifests: [
+        {
+          dir: '/src/a',
+          name: '@org/a',
+          dependencies: [],
+          devDependencies: ['rxjs'],
+          peerDependencies: [],
+        },
+      ],
+      sources: [{ path: '/src/a/index.ts', content: "import { x } from 'rxjs'" }],
+    }),
+  ).toEqual([
+    {
+      name: '@org/a',
+      missing: [],
+      unused: [],
+      misdeclared: [{ name: 'rxjs', expected: 'dependency' }],
+    },
+  ])
+})
+
+test('auditPackages accepts a dev dependency that only a test file imports', () => {
+  expect(
+    auditPackages({
+      manifests: [
+        {
+          dir: '/src/a',
+          name: '@org/a',
+          dependencies: [],
+          devDependencies: ['vitest'],
+          peerDependencies: [],
+        },
+      ],
+      sources: [{ path: '/src/a/index.test.ts', content: "import { test } from 'vitest'" }],
+    }),
+  ).toEqual([])
+})
+
+test('auditPackages accepts a dependency that both source and tests import', () => {
+  expect(
+    auditPackages({
+      manifests: [
+        {
+          dir: '/src/a',
+          name: '@org/a',
+          dependencies: ['rxjs'],
+          devDependencies: [],
+          peerDependencies: [],
+        },
+      ],
+      sources: [
+        { path: '/src/a/index.ts', content: "import { x } from 'rxjs'" },
+        { path: '/src/a/index.test.ts', content: "import { y } from 'rxjs'" },
+      ],
+    }),
+  ).toEqual([])
+})
+
+test('auditPackages accepts a peer dependency that shipped source imports', () => {
+  expect(
+    auditPackages({
+      manifests: [
+        {
+          dir: '/src/a',
+          name: '@org/a',
+          dependencies: [],
+          devDependencies: [],
+          peerDependencies: ['react'],
+        },
+      ],
+      sources: [{ path: '/src/a/index.ts', content: "import { x } from 'react'" }],
+    }),
+  ).toEqual([])
+})
+
+test('auditPackages accepts a dev dependency that is also declared as a peer', () => {
+  expect(
+    auditPackages({
+      manifests: [
+        {
+          dir: '/src/a',
+          name: '@org/a',
+          dependencies: [],
+          devDependencies: ['react'],
+          peerDependencies: ['react'],
+        },
+      ],
+      sources: [{ path: '/src/a/index.ts', content: "import { x } from 'react'" }],
+    }),
+  ).toEqual([])
+})
+
+test('parseManifest keeps peer dependencies too', () => {
+  expect(
+    parseManifest({
+      manifestPath: '/src/a/package.json',
+      content: JSON.stringify({
+        name: '@org/a',
+        peerDependencies: { react: '^19.0.0' },
+      }),
+    }),
+  ).toEqual({
+    dir: '/src/a',
+    name: '@org/a',
+    dependencies: [],
+    devDependencies: [],
+    peerDependencies: ['react'],
+  })
 })

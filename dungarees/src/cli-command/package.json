@@ -8,10 +8,10 @@
   },
   "type": "module",
   "dependencies": {
-    "@dungarees/sub-process": "*",
-    "rxjs": "^7.8.1"
+    "@dungarees/sub-process": "*"
   },
   "devDependencies": {
+    "rxjs": "^7.8.1",
     "typescript": "^5.9.3",
     "vitest": "^3.0.2"
   },
