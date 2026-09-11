@@ -43,10 +43,13 @@ export const getBuildStartEvent = ({
 }: BaseBuildArgs): Observable<PublishLibEvent> =>
   of(eventCreators.buildStart({ srcDir, outDir, version }))
 
-export const createOutDir = (
-  createOutDir$: Observable<void>,
-  outDir: string,
-): Observable<PublishLibEvent> =>
+export const createOutDir = ({
+  createOutDir$,
+  outDir,
+}: {
+  createOutDir$: Observable<void>
+  outDir: string
+}): Observable<PublishLibEvent> =>
   createOutDir$.pipe(
     map(() => eventCreators.outDirCreated({ outDir })),
     catchAndRethrow((cause) =>
@@ -90,10 +93,14 @@ export const copyAssets = ({
     catchAndRethrow((cause) => createCausedError({ message: 'Error copying assets', cause })),
   )
 
-export const transformPackageJson = (
-  fileTransform: GetTransformSetContext<string, string, string>,
-  { srcDir, outDir, version }: BaseBuildArgs,
-): OperatorFunction<TranspileDirOutput[], PublishLibEvent> =>
+export const transformPackageJson = ({
+  fileTransform,
+  srcDir,
+  outDir,
+  version,
+}: {
+  fileTransform: GetTransformSetContext<string, string, string>
+} & BaseBuildArgs): OperatorFunction<TranspileDirOutput[], PublishLibEvent> =>
   mergeMap((transpiledFiles) =>
     fileTransform(
       parsePackageJson(),
@@ -234,16 +241,16 @@ export const publishLib = ({
   version,
   created,
 }: {
-  publishFactory: () => Observable<{ exitCode: number | undefined; stderror: string | undefined }>
+  publishFactory: () => Observable<{ exitCode: number | undefined; stderr: string | undefined }>
   packageDir: string
   version: string
   created: boolean
 }): Observable<PublishLibEvent> =>
   defer(publishFactory).pipe(
-    map(({ exitCode, stderror }) =>
+    map(({ exitCode, stderr }) =>
       exitCode === 0
         ? eventCreators.publishSucceeded({ packageDir, version, created })
-        : eventCreators.publishFailed({ packageDir, exitCode, stderror }),
+        : eventCreators.publishFailed({ packageDir, exitCode, stderr }),
     ),
     catchAndRethrow((cause) => createCausedError({ message: 'Error publishing library', cause })),
   )
@@ -435,7 +442,7 @@ export const publishAllPackages = (
               eventCreators.publishFailed({
                 packageDir: packageToPublish.packageDir,
                 exitCode: undefined,
-                stderror: getErrorMessage(cause),
+                stderr: getErrorMessage(cause),
               }),
             ),
           ),

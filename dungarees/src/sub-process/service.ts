@@ -5,7 +5,7 @@ import { combineLatest, firstValueFrom, map, merge, scan, startWith, Subject } f
 export const createSubProcessService = (spawn: Spawn): SubProcessService => {
   const run: SubProcessService['run'] = (command, args, options = {}) => {
     const stdout$ = new Subject<string>()
-    const stderror$ = new Subject<string>()
+    const stderr$ = new Subject<string>()
     const exitCode$ = new Subject<number | undefined>()
     const error$ = new Subject<ProcessServiceOutput>()
     const spawnProcess = spawn(command, args ?? [], options)
@@ -13,12 +13,12 @@ export const createSubProcessService = (spawn: Spawn): SubProcessService => {
     const output$ = merge(
       combineLatest([
         stdout$.pipe(startWith(''), scan(accumulateOutput, '')),
-        stderror$.pipe(startWith(''), scan(accumulateOutput, '')),
+        stderr$.pipe(startWith(''), scan(accumulateOutput, '')),
         exitCode$,
       ]).pipe(
-        map(([stdout, stderror, exitCode]) => ({
+        map(([stdout, stderr, exitCode]) => ({
           stdout,
-          stderror,
+          stderr,
           exitCode,
         })),
       ),
@@ -33,12 +33,12 @@ export const createSubProcessService = (spawn: Spawn): SubProcessService => {
     })
 
     spawnProcess.stderr?.on('data', (data) => {
-      stderror$.next(String(data))
+      stderr$.next(String(data))
     })
 
     spawnProcess.on('close', (exitCode) => {
       exitCode$.next(exitCode ?? undefined)
-      stderror$.complete()
+      stderr$.complete()
       stdout$.complete()
       exitCode$.complete()
       error$.complete()
@@ -50,7 +50,7 @@ export const createSubProcessService = (spawn: Spawn): SubProcessService => {
 
     return {
       stdout$,
-      stderror$,
+      stderr$,
       exitCode$,
       output$,
     }

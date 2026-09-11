@@ -57,7 +57,7 @@ export const createPublishLibBehavior = ({
       input: originalPackageJsonPath,
       output: `${outDir}/package.json`,
     })
-    const createOutDir$ = createOutDir(fileSystem.mkdir(outDir), outDir)
+    const createOutDir$ = createOutDir({ createOutDir$: fileSystem.mkdir(outDir), outDir })
     const assets$ = copyAssets({
       packageJsonContent$: fileSystem.readFile(originalPackageJsonPath, 'utf-8'),
       srcDir,
@@ -69,7 +69,7 @@ export const createPublishLibBehavior = ({
         input: srcDir,
         output: outDir,
       })
-      .pipe(transformPackageJson(packageJsonTransform, { srcDir, outDir, version }))
+      .pipe(transformPackageJson({ fileTransform: packageJsonTransform, srcDir, outDir, version }))
     return {
       events$: concat(startEvent$, createOutDir$, assets$, transpile$),
     }

@@ -9,7 +9,7 @@ type PublishLibEventPayloads = {
   'publish-failed': {
     packageDir: string
     exitCode: number | undefined
-    stderror: string | undefined
+    stderr: string | undefined
   }
   'publish-skipped': { packageDir: string; version: string }
   'publishes-failed': { packageDirs: string[] }

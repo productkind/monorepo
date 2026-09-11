@@ -7,10 +7,10 @@
   "dependencies": {
     "@dungarees/fs": "*",
     "@dungarees/rxjs": "*",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "typescript": "^5.9.3",
     "vitest": "^3.0.2"
   },
   "author": "info@productkind.com",

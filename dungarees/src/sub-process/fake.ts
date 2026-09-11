@@ -15,7 +15,7 @@ export const createFakeSpawn = (config: FakeSpawnConfig): FakeSpawn => {
 
   const fakeSpawn: Spawn = (command, args, options) => {
     const serializedCommand = serializeCommand(command, args)
-    const { stdout, stderror, exitCode, delay } = assertDefined(
+    const { stdout, stderr, exitCode, delay } = assertDefined(
       commands.get(serializedCommand),
       `Command "${serializedCommand}" is not listed in the fake options`,
     )
@@ -26,8 +26,8 @@ export const createFakeSpawn = (config: FakeSpawnConfig): FakeSpawn => {
 
     timer(delay ?? 1).subscribe(() => {
       stdoutCallback?.(Buffer.from(stdout))
-      if (stderror !== undefined) {
-        stderrCallback?.(Buffer.from(stderror))
+      if (stderr !== undefined) {
+        stderrCallback?.(Buffer.from(stderr))
       }
       $executedCommands.next({ command, args, options })
       executedCommands.push({ command, args, options })
@@ -79,7 +79,7 @@ export type FakeSpawnConfig = FakeCommandConfig[]
 
 type FakeCommandOutput = {
   stdout: string
-  stderror?: string
+  stderr?: string
   exitCode: number
   delay?: number
 }

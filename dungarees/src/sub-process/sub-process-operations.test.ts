@@ -50,7 +50,7 @@ mtest('subProcessOperations.runSilentUntilError both output on error', ({ expect
       command: 'ls',
       args: [],
       stdout: 'file.ts',
-      stderror: 'Error',
+      stderr: 'Error',
       exitCode: 1,
     },
   ])
@@ -295,7 +295,7 @@ test('subProcessOperations.runValidated runs command when executable and cwd acc
   const result = await lastValueFrom(subProcessOperations.runValidated('ls', [], { cwd: '/work' }))
   expect(result).toEqual({
     stdout: 'file.ts',
-    stderror: '',
+    stderr: '',
     exitCode: 0,
   })
 })
@@ -315,7 +315,7 @@ test('subProcessOperations.runValidated returns error when command is not execut
   )
   expect(result).toEqual({
     stdout: '',
-    stderror: 'Command not executable: nonexistent',
+    stderr: 'Command not executable: nonexistent',
     exitCode: 1,
   })
 })
@@ -337,7 +337,7 @@ test('subProcessOperations.runValidated returns error when cwd is not accessible
   )
   expect(result).toEqual({
     stdout: '',
-    stderror: 'Working directory not accessible: /nonexistent',
+    stderr: 'Working directory not accessible: /nonexistent',
     exitCode: 1,
   })
 })
@@ -354,8 +354,8 @@ test('subProcessOperations.runValidated returns both errors when command and cwd
   const result = await lastValueFrom(
     subProcessOperations.runValidated('nonexistent', [], { cwd: '/nonexistent' }),
   )
-  expect(result.stderror).toContain('Command not executable: nonexistent')
-  expect(result.stderror).toContain('Working directory not accessible: /nonexistent')
+  expect(result.stderr).toContain('Command not executable: nonexistent')
+  expect(result.stderr).toContain('Working directory not accessible: /nonexistent')
   expect(result.exitCode).toBe(1)
 })
 
@@ -381,7 +381,7 @@ test('subProcessOperations.runValidated runs without cwd validation when no cwd 
   const result = await lastValueFrom(subProcessOperations.runValidated('ls', []))
   expect(result).toEqual({
     stdout: 'file.ts',
-    stderror: '',
+    stderr: '',
     exitCode: 0,
   })
 })
@@ -477,7 +477,7 @@ test('subProcessOperations.runSilentUntilErrorValidated shows all output on proc
       command: 'ls',
       args: [],
       stdout: 'file.ts',
-      stderror: 'Error',
+      stderr: 'Error',
       exitCode: 1,
     },
   ])

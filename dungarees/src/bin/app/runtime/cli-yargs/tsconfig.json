@@ -2,7 +2,7 @@
   "extends": "@dungarees/core/tsconfig.base.json",
   "compilerOptions": {
     "paths": {
-      "@dungarees/cli-bin/*": ["./*"]
+      "@dungarees/bin-runtime-cli-yargs/*": ["./*"]
     },
     "noEmit": true,
     "rootDir": ".",

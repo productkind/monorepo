@@ -7,7 +7,7 @@ import { expect, test } from 'vitest'
 const manifest = (name: string, deps: Record<string, string> = {}) =>
   JSON.stringify({ name, dependencies: deps })
 
-test('reports nothing when every import is declared', async () => {
+test('auditDependencies reports nothing when every import is declared', async () => {
   const behavior = createFakeAuditDependencies({
     files: {
       '/repo/src/a/package.json': manifest('@org/a', { rxjs: '^7.8.1' }),
@@ -15,13 +15,13 @@ test('reports nothing when every import is declared', async () => {
     },
   })
 
-  expect(await collectValuesFrom(behavior.auditDependencies({ dir: '/repo' }).events$)).toEqual([
+  expect(await collectValuesFrom(behavior.audit({ dir: '/repo' }).events$)).toEqual([
     { type: 'audit-start', payload: { dir: '/repo' } },
     { type: 'audit-passed', payload: { packageCount: 1 } },
   ])
 })
 
-test('reports an undeclared import and fails the audit', async () => {
+test('auditDependencies reports an undeclared import and fails the audit', async () => {
   const behavior = createFakeAuditDependencies({
     files: {
       '/repo/src/a/package.json': manifest('@org/a'),
@@ -29,7 +29,7 @@ test('reports an undeclared import and fails the audit', async () => {
     },
   })
 
-  expect(await collectValuesFrom(behavior.auditDependencies({ dir: '/repo' }).events$)).toEqual([
+  expect(await collectValuesFrom(behavior.audit({ dir: '/repo' }).events$)).toEqual([
     { type: 'audit-start', payload: { dir: '/repo' } },
     {
       type: 'package-findings',
@@ -39,7 +39,7 @@ test('reports an undeclared import and fails the audit', async () => {
   ])
 })
 
-test('ignores anything inside node_modules', async () => {
+test('auditDependencies ignores anything inside node_modules', async () => {
   const behavior = createFakeAuditDependencies({
     files: {
       '/repo/src/a/package.json': manifest('@org/a'),
@@ -48,13 +48,13 @@ test('ignores anything inside node_modules', async () => {
     },
   })
 
-  expect(await collectValuesFrom(behavior.auditDependencies({ dir: '/repo' }).events$)).toEqual([
+  expect(await collectValuesFrom(behavior.audit({ dir: '/repo' }).events$)).toEqual([
     { type: 'audit-start', payload: { dir: '/repo' } },
     { type: 'audit-passed', payload: { packageCount: 1 } },
   ])
 })
 
-test('audits tsx sources as well as ts', async () => {
+test('auditDependencies audits tsx sources as well as ts', async () => {
   const behavior = createFakeAuditDependencies({
     files: {
       '/repo/src/a/package.json': manifest('@org/a'),
@@ -62,7 +62,7 @@ test('audits tsx sources as well as ts', async () => {
     },
   })
 
-  expect(await collectValuesFrom(behavior.auditDependencies({ dir: '/repo' }).events$)).toEqual([
+  expect(await collectValuesFrom(behavior.audit({ dir: '/repo' }).events$)).toEqual([
     { type: 'audit-start', payload: { dir: '/repo' } },
     {
       type: 'package-findings',
@@ -72,7 +72,7 @@ test('audits tsx sources as well as ts', async () => {
   ])
 })
 
-test('audits only what sits under the source directory', async () => {
+test('auditDependencies audits only what sits under the source directory', async () => {
   const behavior = createFakeAuditDependencies({
     files: {
       '/repo/src/a/package.json': manifest('@org/a'),
@@ -82,7 +82,7 @@ test('audits only what sits under the source directory', async () => {
     },
   })
 
-  expect(await collectValuesFrom(behavior.auditDependencies({ dir: '/repo' }).events$)).toEqual([
+  expect(await collectValuesFrom(behavior.audit({ dir: '/repo' }).events$)).toEqual([
     { type: 'audit-start', payload: { dir: '/repo' } },
     {
       type: 'package-findings',

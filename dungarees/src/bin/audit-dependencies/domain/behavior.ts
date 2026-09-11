@@ -10,7 +10,7 @@ export type AuditDependenciesFeatureOutput = {
 }
 
 export type AuditDependenciesBehavior = {
-  auditDependencies: (args: { dir: string }) => AuditDependenciesFeatureOutput
+  audit: (args: { dir: string }) => AuditDependenciesFeatureOutput
 }
 
 export type CreateAuditDependenciesBehaviorOptions = {
@@ -20,7 +20,7 @@ export type CreateAuditDependenciesBehaviorOptions = {
 export const createAuditDependenciesBehavior = ({
   fileSystem,
 }: CreateAuditDependenciesBehaviorOptions): AuditDependenciesBehavior => {
-  const auditDependencies: AuditDependenciesBehavior['auditDependencies'] = ({ dir }) => {
+  const audit: AuditDependenciesBehavior['audit'] = ({ dir }) => {
     const startEvent$ = getAuditStartEvent({ dir })
     const audit$ = getManifestsAndSources({
       dir,
@@ -33,5 +33,5 @@ export const createAuditDependenciesBehavior = ({
     }
   }
 
-  return { auditDependencies }
+  return { audit }
 }

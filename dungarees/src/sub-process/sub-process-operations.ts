@@ -57,10 +57,10 @@ export const createSubProcessOperations = ({
     args,
     options,
   ) => {
-    const { stdout$, stderror$ } = subProcessService.run(command, args, options)
+    const { stdout$, stderr$ } = subProcessService.run(command, args, options)
     const allOutput$ = merge(
       stdout$.pipe(map((line) => stdout(line))),
-      stderror$.pipe(map((line) => stderr(line))),
+      stderr$.pipe(map((line) => stderr(line))),
     )
     return allOutput$.pipe(
       toArray(),
@@ -89,7 +89,7 @@ export const createSubProcessOperations = ({
     validate(command, options).pipe(
       switchMap((errors) =>
         errors.length > 0
-          ? of({ stdout: '', stderror: errors.join('\n'), exitCode: 1 })
+          ? of({ stdout: '', stderr: errors.join('\n'), exitCode: 1 })
           : subProcessService.run(command, args, options).output$,
       ),
     )

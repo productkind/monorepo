@@ -74,7 +74,7 @@ test('the dungarees app reaches the publish-single-lib command', async () => {
         command: 'npm',
         args: ['view', '@org/lib-1', 'versions', '--json'],
         stdout: '',
-        stderror: 'E404 Not found',
+        stderr: 'E404 Not found',
         exitCode: 1,
       },
       {

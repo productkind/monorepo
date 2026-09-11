@@ -29,13 +29,13 @@ mtest('create build start event', ({ expect }) => {
 })
 
 mtest('create output directory', ({ expect, coldStepAndClose }) => {
-  const createOutDir$ = createOutDir(coldStepAndClose(undefined), '/out')
+  const createOutDir$ = createOutDir({ createOutDir$: coldStepAndClose(undefined), outDir: '/out' })
   expect(createOutDir$).toBeObservableStepAndClose(eventCreators.outDirCreated({ outDir: '/out' }))
 })
 
 mtest('create output directory with error', ({ expect, coldError }) => {
   const input$ = coldError(new Error('Could not create directory'))
-  const createOutDir$ = createOutDir(input$, '/out')
+  const createOutDir$ = createOutDir({ createOutDir$: input$, outDir: '/out' })
   expect(createOutDir$).toBeObservableError(
     new Error('Error creating output directory (/out): Could not create directory'),
   )
@@ -51,7 +51,8 @@ mtest('transformPackageJson with version from file', ({ expect }) => {
   })
 
   const transformPackageJson$ = of([]).pipe(
-    transformPackageJson(transformer, {
+    transformPackageJson({
+      fileTransform: transformer,
       srcDir: '/src',
       outDir: '/out',
       version: undefined,
@@ -86,7 +87,8 @@ mtest('transformPackageJson with exports', ({ expect }) => {
       type: '/out/dir/file.d.ts',
     },
   ]).pipe(
-    transformPackageJson(transformer, {
+    transformPackageJson({
+      fileTransform: transformer,
       srcDir: '/src',
       outDir: '/out',
       version: undefined,
@@ -127,7 +129,8 @@ mtest('transformPackageJson with version override', ({ expect }) => {
   })
 
   const transformPackageJson$ = of([]).pipe(
-    transformPackageJson(transformer, {
+    transformPackageJson({
+      fileTransform: transformer,
       srcDir: '/src',
       outDir: '/out',
       version: '2.0.0',
@@ -147,7 +150,8 @@ mtest('transformPackageJson without version in file or parameter', ({ expect }) 
   })
 
   const transformPackageJson$ = of([]).pipe(
-    transformPackageJson(transformer, {
+    transformPackageJson({
+      fileTransform: transformer,
       srcDir: '/src',
       outDir: '/out',
       version: undefined,
@@ -169,7 +173,8 @@ mtest('transformPackageJson without version in file', ({ expect }) => {
   })
 
   const transformPackageJson$ = of([]).pipe(
-    transformPackageJson(transformer, {
+    transformPackageJson({
+      fileTransform: transformer,
       srcDir: '/src',
       outDir: '/out',
       version: '2.0.0',
@@ -197,7 +202,8 @@ mtest('transformPackageJson change bin paths', ({ expect }) => {
   })
 
   const transformPackageJson$ = of([]).pipe(
-    transformPackageJson(transformer, {
+    transformPackageJson({
+      fileTransform: transformer,
       srcDir: '/src',
       outDir: '/out',
       version: '1.0.0',
@@ -227,7 +233,8 @@ mtest('transformPackageJson with write error', ({ expect, coldStepAndClose, cold
   const transformer = createGetTransformSetContext<string, string, string>(readFile, writeFile)
 
   const transformPackageJson$ = of([]).pipe(
-    transformPackageJson(transformer, {
+    transformPackageJson({
+      fileTransform: transformer,
       srcDir: '/src',
       outDir: '/out',
       version: undefined,
@@ -247,7 +254,8 @@ mtest('transformPackageJson with invalid JSON', ({ expect, coldStepAndClose }) =
   const transformer = createGetTransformSetContext<string, string, string>(readFile, writeFile)
 
   const transformPackageJson$ = of([]).pipe(
-    transformPackageJson(transformer, {
+    transformPackageJson({
+      fileTransform: transformer,
       srcDir: '/src',
       outDir: '/out',
       version: undefined,
@@ -262,7 +270,7 @@ mtest('transformPackageJson with invalid JSON', ({ expect, coldStepAndClose }) =
 
 mtest('publishLib with successful exit code', ({ expect, coldStepAndClose }) => {
   const publish$ = publishLib({
-    publishFactory: () => coldStepAndClose({ exitCode: 0, stderror: undefined }),
+    publishFactory: () => coldStepAndClose({ exitCode: 0, stderr: undefined }),
     packageDir: 'lib-1',
     version: '1.0.0',
     created: false,
@@ -274,13 +282,13 @@ mtest('publishLib with successful exit code', ({ expect, coldStepAndClose }) => 
 
 mtest('publishLib with failed exit code', ({ expect, coldStepAndClose }) => {
   const publish$ = publishLib({
-    publishFactory: () => coldStepAndClose({ exitCode: 1, stderror: 'Some error' }),
+    publishFactory: () => coldStepAndClose({ exitCode: 1, stderr: 'Some error' }),
     packageDir: 'lib-1',
     version: '1.0.0',
     created: false,
   })
   expect(publish$).toBeObservableStepAndClose(
-    eventCreators.publishFailed({ packageDir: 'lib-1', exitCode: 1, stderror: 'Some error' }),
+    eventCreators.publishFailed({ packageDir: 'lib-1', exitCode: 1, stderr: 'Some error' }),
   )
 })
 
@@ -289,7 +297,7 @@ mtest('publishLib defers executing the command', ({ expect: mexpect, coldStepAnd
   const publish$ = publishLib({
     publishFactory: () => {
       commandExecuted = true
-      return coldStepAndClose({ exitCode: 0, stderror: undefined })
+      return coldStepAndClose({ exitCode: 0, stderr: undefined })
     },
     packageDir: 'lib-1',
     version: '1.0.0',
@@ -464,14 +472,14 @@ test('publishAllPackages reports the packages that failed', async () => {
               version: '1.0.0',
               created: false,
             })
-          : eventCreators.publishFailed({ packageDir, exitCode: 1, stderror: 'nope' }),
+          : eventCreators.publishFailed({ packageDir, exitCode: 1, stderr: 'nope' }),
       ),
     ),
   )
 
   expect(await collectValuesFrom(publishAll$)).toEqual([
     eventCreators.publishSucceeded({ packageDir: 'lib-1', version: '1.0.0', created: false }),
-    eventCreators.publishFailed({ packageDir: 'lib-2', exitCode: 1, stderror: 'nope' }),
+    eventCreators.publishFailed({ packageDir: 'lib-2', exitCode: 1, stderr: 'nope' }),
     eventCreators.publishesFailed({ packageDirs: ['lib-2'] }),
   ])
 })
@@ -486,7 +494,7 @@ test('publishAllPackages turns a thrown package error into that package failing'
     eventCreators.publishFailed({
       packageDir: 'lib-1',
       exitCode: undefined,
-      stderror: 'Build blew up',
+      stderr: 'Build blew up',
     }),
     eventCreators.publishesFailed({ packageDirs: ['lib-1'] }),
   ])
@@ -540,7 +548,12 @@ mtest('transformPackageJson exports declared assets and drops the dungarees key'
   })
 
   const transformPackageJson$ = of([]).pipe(
-    transformPackageJson(transformer, { srcDir: '/src', outDir: '/out', version: undefined }),
+    transformPackageJson({
+      fileTransform: transformer,
+      srcDir: '/src',
+      outDir: '/out',
+      version: undefined,
+    }),
   )
 
   expect(transformPackageJson$).toBeObservableValueAndClose(
@@ -574,7 +587,14 @@ mtest('transformPackageJson merges declared assets with the transpiled exports',
 
   const transformPackageJson$ = of([
     { input: '/src/index.ts', output: '/out/index.js', type: '/out/index.d.ts' },
-  ]).pipe(transformPackageJson(transformer, { srcDir: '/src', outDir: '/out', version: undefined }))
+  ]).pipe(
+    transformPackageJson({
+      fileTransform: transformer,
+      srcDir: '/src',
+      outDir: '/out',
+      version: undefined,
+    }),
+  )
 
   expect(transformPackageJson$).toBeObservableValueAndClose(
     eventCreators.packageJsonWritten({ path: '/out', version: '1.0.0' }),
@@ -598,9 +618,9 @@ mtest('transformPackageJson merges declared assets with the transpiled exports',
 const PACKAGE_JSON = JSON.stringify({ name: '@org/lib-1', version: '0.9.0' })
 
 const published = (versions: string[]) => () =>
-  of({ stdout: JSON.stringify(versions), stderror: '', exitCode: 0 })
+  of({ stdout: JSON.stringify(versions), stderr: '', exitCode: 0 })
 
-const neverPublished = () => of({ stdout: '', stderror: 'E404', exitCode: 1 })
+const neverPublished = () => of({ stdout: '', stderr: 'E404', exitCode: 1 })
 
 const recordingBuildAndPublish = () => {
   const calls: Array<{ version: string; created: boolean }> = []
@@ -670,7 +690,7 @@ test('publishUnlessPublished copes with npm collapsing a lone version to a strin
       packageJsonContent$: of(PACKAGE_JSON),
       packageDir: 'lib-1',
       version: '1.0.0',
-      viewVersions: () => of({ stdout: '"1.0.0"', stderror: '', exitCode: 0 }),
+      viewVersions: () => of({ stdout: '"1.0.0"', stderr: '', exitCode: 0 }),
       buildAndPublish,
     }),
   )
