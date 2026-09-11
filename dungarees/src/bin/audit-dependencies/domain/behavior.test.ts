@@ -65,3 +65,20 @@ test('audits tsx sources as well as ts', async () => {
     { type: 'audit-failed', payload: { packageCount: 1 } },
   ])
 })
+
+test('audits only what sits under the source directory', async () => {
+  const behavior = createFakeAuditDependencies({
+    files: {
+      '/repo/src/a/package.json': manifest('@org/a'),
+      '/repo/src/a/index.ts': "import { of } from 'rxjs'\n",
+      '/repo/scripts/package.json': manifest('@org/scripts'),
+      '/repo/scripts/index.ts': "import { x } from 'undeclared'\n",
+    },
+  })
+
+  expect(await collectValuesFrom(behavior.auditDependencies({ dir: '/repo' }).events$)).toEqual([
+    { type: 'audit-start', payload: { dir: '/repo' } },
+    { type: 'package-findings', payload: { name: '@org/a', missing: ['rxjs'], unused: [] } },
+    { type: 'audit-failed', payload: { packageCount: 1 } },
+  ])
+})

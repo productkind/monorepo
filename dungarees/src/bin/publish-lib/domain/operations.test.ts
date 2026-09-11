@@ -2,7 +2,7 @@ import { eventCreators } from './events.ts'
 import {
   createOutDir,
   getBuildStartEvent,
-  getPackageDirsWithVersion,
+  getPackagesToPublish,
   publishAllPackages,
   publishLib,
   publishUnlessPublished,
@@ -312,95 +312,115 @@ mtest('publishLib with error', ({ expect, coldError }) => {
   expect(publish$).toBeObservableError(new Error('Error publishing library: Network timeout'))
 })
 
-mtest('getPackageDirsWithVersion combines parsed package dirs and version', ({ expect }) => {
-  const combined$ = getPackageDirsWithVersion({
-    packageJsonPaths$: of(['/src/lib-1/package.json', '/src/sub/lib-2/package.json']),
-    versionContent$: of(JSON.stringify({ version: '1.2.3' })),
-    sourceDir: '/src',
-    readPackageJson: () => of(JSON.stringify({ name: '@org/lib' })),
+const readLibFile =
+  (version: unknown = { version: '1.2.3' }) =>
+  (filePath: string) =>
+    of(
+      filePath.endsWith('version.json')
+        ? JSON.stringify(version)
+        : JSON.stringify({ name: '@org/lib' }),
+    )
+
+mtest('getPackagesToPublish pairs every package it found with the version', ({ expect }) => {
+  const packages$ = getPackagesToPublish({
+    dir: '/repo',
+    glob: () => of(['/repo/src/lib-1/package.json', '/repo/src/sub/lib-2/package.json']),
+    readFile: readLibFile(),
   })
-  expect(combined$).toBeObservableValueAndClose({
-    packageDirs: ['lib-1', 'sub/lib-2'],
+  expect(packages$).toBeObservableValueAndClose({
+    packages: [
+      { packageDir: 'lib-1', srcDir: '/repo/src/lib-1', outDir: '/repo/dist/lib-1' },
+      { packageDir: 'sub/lib-2', srcDir: '/repo/src/sub/lib-2', outDir: '/repo/dist/sub/lib-2' },
+    ],
     version: '1.2.3',
   })
 })
 
-test('getPackageDirsWithVersion ignores installed dependencies', async () => {
+test('getPackagesToPublish ignores installed dependencies', async () => {
   const readPaths: string[] = []
-  const combined$ = getPackageDirsWithVersion({
-    packageJsonPaths$: of([
-      '/src/lib-1/package.json',
-      '/src/lib-1/node_modules/twilio/package.json',
-      '/src/sub/lib-2/package.json',
-      '/src/sub/lib-2/node_modules/@jsonjoy.com/fs-snapshot/package.json',
-      '/src/node_modules/typescript/package.json',
-    ]),
-    versionContent$: of(JSON.stringify({ version: '1.2.3' })),
-    sourceDir: '/src',
-    readPackageJson: (jsonPath) => {
-      readPaths.push(jsonPath)
-      return of(JSON.stringify({ name: '@org/lib' }))
+  const packages$ = getPackagesToPublish({
+    dir: '/repo',
+    glob: () =>
+      of([
+        '/repo/src/lib-1/package.json',
+        '/repo/src/lib-1/node_modules/twilio/package.json',
+        '/repo/src/sub/lib-2/package.json',
+        '/repo/src/sub/lib-2/node_modules/@jsonjoy.com/fs-snapshot/package.json',
+        '/repo/src/node_modules/typescript/package.json',
+      ]),
+    readFile: (filePath) => {
+      readPaths.push(filePath)
+      return readLibFile()(filePath)
     },
   })
 
-  expect(await collectValuesFrom(combined$)).toEqual([
-    { packageDirs: ['lib-1', 'sub/lib-2'], version: '1.2.3' },
+  expect(await collectValuesFrom(packages$)).toEqual([
+    {
+      packages: [
+        { packageDir: 'lib-1', srcDir: '/repo/src/lib-1', outDir: '/repo/dist/lib-1' },
+        { packageDir: 'sub/lib-2', srcDir: '/repo/src/sub/lib-2', outDir: '/repo/dist/sub/lib-2' },
+      ],
+      version: '1.2.3',
+    },
   ])
   // the dropped ones are not even read
-  expect(readPaths).toEqual(['/src/lib-1/package.json', '/src/sub/lib-2/package.json'])
+  expect(readPaths).toEqual([
+    '/repo/config/version.json',
+    '/repo/src/lib-1/package.json',
+    '/repo/src/sub/lib-2/package.json',
+  ])
 })
 
-mtest('getPackageDirsWithVersion with no package.json paths', ({ expect }) => {
-  const combined$ = getPackageDirsWithVersion({
-    packageJsonPaths$: of<string[]>([]),
-    versionContent$: of(JSON.stringify({ version: '1.0.0' })),
-    sourceDir: '/src',
-    readPackageJson: () => of(JSON.stringify({ name: '@org/lib' })),
+mtest('getPackagesToPublish with no package.json paths', ({ expect }) => {
+  const packages$ = getPackagesToPublish({
+    dir: '/repo',
+    glob: () => of<string[]>([]),
+    readFile: readLibFile({ version: '1.0.0' }),
   })
-  expect(combined$).toBeObservableValueAndClose({
-    packageDirs: [],
+  expect(packages$).toBeObservableValueAndClose({
+    packages: [],
     version: '1.0.0',
   })
 })
 
-mtest('getPackageDirsWithVersion errors when version.json has no version field', ({ expect }) => {
-  const combined$ = getPackageDirsWithVersion({
-    packageJsonPaths$: of(['/src/lib-1/package.json']),
-    versionContent$: of(JSON.stringify({ name: 'my-app' })),
-    sourceDir: '/src',
-    readPackageJson: () => of(JSON.stringify({ name: '@org/lib' })),
+mtest('getPackagesToPublish errors when version.json has no version field', ({ expect }) => {
+  const packages$ = getPackagesToPublish({
+    dir: '/repo',
+    glob: () => of(['/repo/src/lib-1/package.json']),
+    readFile: readLibFile({ name: 'my-app' }),
   })
-  expect(combined$).toBeObservableError(new Error('Version is required in version.json'), 0)
+  expect(packages$).toBeObservableError(new Error('Version is required in version.json'), 0)
 })
 
-mtest('getPackageDirsWithVersion errors when version is not a string', ({ expect }) => {
-  const combined$ = getPackageDirsWithVersion({
-    packageJsonPaths$: of(['/src/lib-1/package.json']),
-    versionContent$: of(JSON.stringify({ version: 42 })),
-    sourceDir: '/src',
-    readPackageJson: () => of(JSON.stringify({ name: '@org/lib' })),
+mtest('getPackagesToPublish errors when version is not a string', ({ expect }) => {
+  const packages$ = getPackagesToPublish({
+    dir: '/repo',
+    glob: () => of(['/repo/src/lib-1/package.json']),
+    readFile: readLibFile({ version: 42 }),
   })
-  expect(combined$).toBeObservableError(new Error('Version is required in version.json'), 0)
+  expect(packages$).toBeObservableError(new Error('Version is required in version.json'), 0)
 })
 
-mtest('getPackageDirsWithVersion passes a read failure through unlabelled', ({ expect }) => {
-  const combined$ = getPackageDirsWithVersion({
-    packageJsonPaths$: of(['/src/lib-1/package.json']),
-    versionContent$: throwError(() => new Error('Read failed')),
-    sourceDir: '/src',
-    readPackageJson: () => of(JSON.stringify({ name: '@org/lib' })),
+mtest('getPackagesToPublish passes a read failure through unlabelled', ({ expect }) => {
+  const packages$ = getPackagesToPublish({
+    dir: '/repo',
+    glob: () => of(['/repo/src/lib-1/package.json']),
+    readFile: (filePath) =>
+      filePath.endsWith('version.json')
+        ? throwError(() => new Error('Read failed'))
+        : readLibFile()(filePath),
   })
-  expect(combined$).toBeObservableError(new Error('Read failed'), 0)
+  expect(packages$).toBeObservableError(new Error('Read failed'), 0)
 })
 
-mtest('getPackageDirsWithVersion errors when version.json is not valid JSON', ({ expect }) => {
-  const combined$ = getPackageDirsWithVersion({
-    packageJsonPaths$: of(['/src/lib-1/package.json']),
-    versionContent$: of('not json'),
-    sourceDir: '/src',
-    readPackageJson: () => of(JSON.stringify({ name: '@org/lib' })),
+mtest('getPackagesToPublish errors when version.json is not valid JSON', ({ expect }) => {
+  const packages$ = getPackagesToPublish({
+    dir: '/repo',
+    glob: () => of(['/repo/src/lib-1/package.json']),
+    readFile: (filePath) =>
+      filePath.endsWith('version.json') ? of('not json') : readLibFile()(filePath),
   })
-  expect(combined$).toBeObservableError(
+  expect(packages$).toBeObservableError(
     new Error('Invalid version.json: Unexpected token \'o\', "not json" is not valid JSON'),
     0,
   )
@@ -413,9 +433,13 @@ mtest(
       coldStepAndClose(
         eventCreators.publishSucceeded({ packageDir: 'lib-1', version: '1.0.0', created: false }),
       )
-    const publishAll$ = of({ packageDirs: ['lib-1', 'lib-2'], version: '1.0.0' }).pipe(
-      publishAllPackages(publishPackage),
-    )
+    const publishAll$ = of({
+      packages: [
+        { packageDir: 'lib-1', srcDir: '/repo/src/lib-1', outDir: '/repo/dist/lib-1' },
+        { packageDir: 'lib-2', srcDir: '/repo/src/lib-2', outDir: '/repo/dist/lib-2' },
+      ],
+      version: '1.0.0',
+    }).pipe(publishAllPackages(publishPackage))
     expect(publishAll$).toBeObservable('-(abc|)', {
       a: eventCreators.publishSucceeded({ packageDir: 'lib-1', version: '1.0.0', created: false }),
       b: eventCreators.publishSucceeded({ packageDir: 'lib-1', version: '1.0.0', created: false }),
@@ -425,7 +449,13 @@ mtest(
 )
 
 test('publishAllPackages reports the packages that failed', async () => {
-  const publishAll$ = of({ packageDirs: ['lib-1', 'lib-2'], version: '1.0.0' }).pipe(
+  const publishAll$ = of({
+    packages: [
+      { packageDir: 'lib-1', srcDir: '/repo/src/lib-1', outDir: '/repo/dist/lib-1' },
+      { packageDir: 'lib-2', srcDir: '/repo/src/lib-2', outDir: '/repo/dist/lib-2' },
+    ],
+    version: '1.0.0',
+  }).pipe(
     publishAllPackages(({ packageDir }) =>
       of(
         packageDir === 'lib-1'
@@ -447,9 +477,10 @@ test('publishAllPackages reports the packages that failed', async () => {
 })
 
 test('publishAllPackages turns a thrown package error into that package failing', async () => {
-  const publishAll$ = of({ packageDirs: ['lib-1'], version: '1.0.0' }).pipe(
-    publishAllPackages(() => throwError(() => new Error('Build blew up'))),
-  )
+  const publishAll$ = of({
+    packages: [{ packageDir: 'lib-1', srcDir: '/repo/src/lib-1', outDir: '/repo/dist/lib-1' }],
+    version: '1.0.0',
+  }).pipe(publishAllPackages(() => throwError(() => new Error('Build blew up'))))
 
   expect(await collectValuesFrom(publishAll$)).toEqual([
     eventCreators.publishFailed({
@@ -461,9 +492,20 @@ test('publishAllPackages turns a thrown package error into that package failing'
   ])
 })
 
-test('publishAllPackages passes packageDir and version to each publish call', async () => {
-  const publishedArgs: Array<{ packageDir: string; version: string }> = []
-  const publishAll$ = of({ packageDirs: ['lib-1', 'lib-2'], version: '2.5.0' }).pipe(
+test('publishAllPackages passes each package and the version to every publish call', async () => {
+  const publishedArgs: Array<{
+    packageDir: string
+    srcDir: string
+    outDir: string
+    version: string
+  }> = []
+  const publishAll$ = of({
+    packages: [
+      { packageDir: 'lib-1', srcDir: '/repo/src/lib-1', outDir: '/repo/dist/lib-1' },
+      { packageDir: 'lib-2', srcDir: '/repo/src/lib-2', outDir: '/repo/dist/lib-2' },
+    ],
+    version: '2.5.0',
+  }).pipe(
     publishAllPackages((args) => {
       publishedArgs.push(args)
       return of(
@@ -473,8 +515,14 @@ test('publishAllPackages passes packageDir and version to each publish call', as
   )
   await collectValuesFrom(publishAll$)
   expect(publishedArgs).toEqual([
-    { packageDir: 'lib-1', version: '2.5.0' },
-    { packageDir: 'lib-2', version: '2.5.0' },
+    {
+      ...{ packageDir: 'lib-1', srcDir: '/repo/src/lib-1', outDir: '/repo/dist/lib-1' },
+      version: '2.5.0',
+    },
+    {
+      ...{ packageDir: 'lib-2', srcDir: '/repo/src/lib-2', outDir: '/repo/dist/lib-2' },
+      version: '2.5.0',
+    },
   ])
 })
 

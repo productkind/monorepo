@@ -321,11 +321,44 @@ export const publishUnlessPublished = ({
     }),
   )
 
-const getPackageDirs = (sourceDir: string): OperatorFunction<string[], string[]> =>
+export type PackageToPublish = {
+  packageDir: string
+  srcDir: string
+  outDir: string
+}
+
+export type LibLayout = {
+  sourceDir: string
+  outDir: string
+  versionFile: string
+  manifests: string
+}
+
+const DUNGAREES_LAYOUT: LibLayout = {
+  sourceDir: 'src',
+  outDir: 'dist',
+  versionFile: 'config/version.json',
+  manifests: '**/package.json',
+}
+
+const getPackages = ({
+  dir,
+  sourceDir,
+  layout,
+}: {
+  dir: string
+  sourceDir: string
+  layout: LibLayout
+}): OperatorFunction<string[], PackageToPublish[]> =>
   map((packageJsonPaths) =>
-    packageJsonPaths.map((jsonPath) =>
-      path.relative(sourceDir, jsonPath).replace('/package.json', ''),
-    ),
+    packageJsonPaths.map((jsonPath) => {
+      const packageDir = path.relative(sourceDir, jsonPath).replace('/package.json', '')
+      return {
+        packageDir,
+        srcDir: `${sourceDir}/${packageDir}`,
+        outDir: `${dir}/${layout.outDir}/${packageDir}`,
+      }
+    }),
   )
 
 const parseVersion = (): OperatorFunction<string, string> =>
@@ -368,37 +401,39 @@ const excludeInstalledDependencies = (): OperatorFunction<string[], string[]> =>
     packageJsonPaths.filter((jsonPath) => !jsonPath.includes('/node_modules/')),
   )
 
-export const getPackageDirsWithVersion = ({
-  packageJsonPaths$,
-  versionContent$,
-  sourceDir,
-  readPackageJson,
+export const getPackagesToPublish = ({
+  dir,
+  glob,
+  readFile,
+  layout = DUNGAREES_LAYOUT,
 }: {
-  packageJsonPaths$: Observable<string[]>
-  versionContent$: Observable<string>
-  sourceDir: string
-  readPackageJson: (path: string) => Observable<string>
-}): Observable<{ packageDirs: string[]; version: string }> =>
-  forkJoin({
-    packageDirs: packageJsonPaths$.pipe(
+  dir: string
+  glob: (pattern: string) => Observable<string[]>
+  readFile: (filePath: string) => Observable<string>
+  layout?: LibLayout
+}): Observable<{ packages: PackageToPublish[]; version: string }> => {
+  const sourceDir = `${dir}/${layout.sourceDir}`
+  return forkJoin({
+    packages: glob(`${sourceDir}/${layout.manifests}`).pipe(
       excludeInstalledDependencies(),
-      excludePrivatePackages(readPackageJson),
-      getPackageDirs(sourceDir),
+      excludePrivatePackages(readFile),
+      getPackages({ dir, sourceDir, layout }),
     ),
-    version: versionContent$.pipe(parseVersion()),
+    version: readFile(`${dir}/${layout.versionFile}`).pipe(parseVersion()),
   })
+}
 
 export const publishAllPackages = (
-  publishPackage: (args: { packageDir: string; version: string }) => Observable<PublishLibEvent>,
-): OperatorFunction<{ packageDirs: string[]; version: string }, PublishLibEvent> =>
-  mergeMap(({ packageDirs, version }) =>
+  publishPackage: (args: PackageToPublish & { version: string }) => Observable<PublishLibEvent>,
+): OperatorFunction<{ packages: PackageToPublish[]; version: string }, PublishLibEvent> =>
+  mergeMap(({ packages, version }) =>
     merge(
-      ...packageDirs.map((packageDir) =>
-        publishPackage({ packageDir, version }).pipe(
+      ...packages.map((packageToPublish) =>
+        publishPackage({ ...packageToPublish, version }).pipe(
           catchError((cause: unknown) =>
             of(
               eventCreators.publishFailed({
-                packageDir,
+                packageDir: packageToPublish.packageDir,
                 exitCode: undefined,
                 stderror: getErrorMessage(cause),
               }),

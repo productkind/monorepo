@@ -21,11 +21,10 @@ export const createAuditDependenciesBehavior = ({
   fileSystem,
 }: CreateAuditDependenciesBehaviorOptions): AuditDependenciesBehavior => {
   const auditDependencies: AuditDependenciesBehavior['auditDependencies'] = ({ dir }) => {
-    const sourceDir = `${dir}/src`
     const startEvent$ = getAuditStartEvent({ dir })
     const audit$ = getManifestsAndSources({
-      manifestPaths$: fileSystem.glob(`${sourceDir}/**/package.json`),
-      sourcePaths$: fileSystem.glob(`${sourceDir}/**/*.{ts,tsx}`),
+      dir,
+      glob: fileSystem.glob,
       readFile: (filePath) => fileSystem.readFile(filePath, 'utf-8'),
     }).pipe(reportFindings())
 

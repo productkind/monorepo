@@ -172,19 +172,35 @@ const readSources = (
   readFile: (filePath: string) => Observable<string>,
 ): OperatorFunction<string[], SourceFile[]> => pipe(excludeNodeModules(), readFiles(readFile))
 
+export type AuditLayout = {
+  sourceDir: string
+  manifests: string
+  sources: string
+}
+
+const DUNGAREES_LAYOUT: AuditLayout = {
+  sourceDir: 'src',
+  manifests: '**/package.json',
+  sources: '**/*.{ts,tsx}',
+}
+
 export const getManifestsAndSources = ({
-  manifestPaths$,
-  sourcePaths$,
+  dir,
+  glob,
   readFile,
+  layout = DUNGAREES_LAYOUT,
 }: {
-  manifestPaths$: Observable<string[]>
-  sourcePaths$: Observable<string[]>
+  dir: string
+  glob: (pattern: string) => Observable<string[]>
   readFile: (filePath: string) => Observable<string>
-}): Observable<{ manifests: PackageManifest[]; sources: SourceFile[] }> =>
-  forkJoin({
-    manifests: manifestPaths$.pipe(readManifests(readFile)),
-    sources: sourcePaths$.pipe(readSources(readFile)),
+  layout?: AuditLayout
+}): Observable<{ manifests: PackageManifest[]; sources: SourceFile[] }> => {
+  const sourceDir = `${dir}/${layout.sourceDir}`
+  return forkJoin({
+    manifests: glob(`${sourceDir}/${layout.manifests}`).pipe(readManifests(readFile)),
+    sources: glob(`${sourceDir}/${layout.sources}`).pipe(readSources(readFile)),
   })
+}
 
 export const reportFindings = ({
   usedWithoutImport = PACKAGES_USED_WITHOUT_IMPORT,
