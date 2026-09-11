@@ -5,6 +5,7 @@
       "@dungarees/bigquery/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }

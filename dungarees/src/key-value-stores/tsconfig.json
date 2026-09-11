@@ -5,6 +5,7 @@
       "@dungarees/key-value-stores/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }

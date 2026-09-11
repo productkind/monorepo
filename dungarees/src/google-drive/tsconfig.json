@@ -5,6 +5,7 @@
       "@dungarees/google-drive/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }

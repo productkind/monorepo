@@ -5,6 +5,7 @@
       "@dungarees/google-forms-api/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }

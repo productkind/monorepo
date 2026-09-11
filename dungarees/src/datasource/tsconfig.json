@@ -5,6 +5,7 @@
       "@dungarees/datasource/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }

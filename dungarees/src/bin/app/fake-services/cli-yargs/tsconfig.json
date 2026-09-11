@@ -5,6 +5,7 @@
       "@dungarees/bin-fake-services-cli-yargs/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }

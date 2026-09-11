@@ -5,6 +5,7 @@
       "@dungarees/feature-flipper/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }

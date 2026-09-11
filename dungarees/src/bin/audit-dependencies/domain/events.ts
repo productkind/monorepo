@@ -14,7 +14,7 @@ type AuditDependenciesEventPayloads = {
     misdeclared: MisdeclaredDependency[]
   }
   'audit-passed': { packageCount: number }
-  'audit-failed': { packageCount: number }
+  'audit-failed': { packageCount: number; findingCount: number }
 }
 
 export type AuditDependenciesEvent = DomainEventOf<AuditDependenciesEventPayloads>

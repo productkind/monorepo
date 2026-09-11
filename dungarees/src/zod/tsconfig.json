@@ -5,6 +5,7 @@
       "@dungarees/zod/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }

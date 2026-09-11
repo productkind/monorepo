@@ -80,11 +80,11 @@ test('publish-failed names the package it failed for', () => {
   })
 })
 
-test('publishes-failed makes the run exit non-zero', () => {
-  expect(publishLibPresenter['publishes-failed']({ packageDirs: ['lib-1', 'lib-2'] })).toEqual({
-    type: 'exit',
-    code: 1,
-  })
+test('publishes-failed names the packages that failed, then exits non-zero', () => {
+  expect(publishLibPresenter['publishes-failed']({ packageDirs: ['lib-1', 'lib-2'] })).toEqual([
+    { type: 'stderr', message: 'Failed to publish: lib-1, lib-2', level: 'error' },
+    { type: 'exit', code: 1 },
+  ])
 })
 
 test('all-published maps to an info stdout message', () => {

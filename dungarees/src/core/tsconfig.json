@@ -5,6 +5,7 @@
       "@dungarees/core/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }

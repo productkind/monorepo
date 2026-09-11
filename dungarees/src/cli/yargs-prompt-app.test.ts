@@ -52,6 +52,29 @@ test('yargs-propmt-app can register an input', async () => {
   ])
 })
 
+test('a presenter answers one event with every message it returns, in order', async () => {
+  type AppEvents = DomainEvent<'greet', string>
+  const app = createYargsPromptApp<AppEvents>({
+    name: 'test-app',
+    route: (yargs, io) => {
+      io.registerEvents(of({ type: 'greet', payload: 'Hello, World!' }))
+      return yargs
+    },
+    presenter: {
+      greet: (payload) => [
+        { type: 'stdout', message: payload, level: 'info' },
+        { type: 'stderr', message: 'and a warning', level: 'error' },
+      ],
+    },
+  })
+
+  expect(await collectValuesFrom(app.present([], DUMMY_CONTROLS))).toEqual([
+    { type: 'stdout', message: 'Hello, World!', level: 'info' },
+    { type: 'stderr', message: 'and a warning', level: 'error' },
+    { type: 'exit', code: 0 },
+  ])
+})
+
 test('yargs-propmt-app can register multiple inputs', async () => {
   type AppEvents = DomainEvent<'greet', string>
   const app = createYargsPromptApp<AppEvents>({

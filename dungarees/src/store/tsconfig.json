@@ -5,6 +5,7 @@
       "@dungarees/store/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }

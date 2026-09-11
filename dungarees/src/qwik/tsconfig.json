@@ -5,6 +5,7 @@
       "@dungarees/qwik/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }

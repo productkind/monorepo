@@ -5,6 +5,7 @@
       "@dungarees/cli-command/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }

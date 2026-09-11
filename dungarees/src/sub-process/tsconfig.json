@@ -5,6 +5,7 @@
       "@dungarees/sub-process/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }

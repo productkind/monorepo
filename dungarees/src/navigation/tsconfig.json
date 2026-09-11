@@ -5,6 +5,7 @@
       "@dungarees/navigation/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }

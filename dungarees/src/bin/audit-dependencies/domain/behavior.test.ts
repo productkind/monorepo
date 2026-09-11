@@ -35,7 +35,7 @@ test('reports an undeclared import and fails the audit', async () => {
       type: 'package-findings',
       payload: { name: '@org/a', missing: ['rxjs'], unused: [], misdeclared: [] },
     },
-    { type: 'audit-failed', payload: { packageCount: 1 } },
+    { type: 'audit-failed', payload: { packageCount: 1, findingCount: 1 } },
   ])
 })
 
@@ -68,7 +68,7 @@ test('audits tsx sources as well as ts', async () => {
       type: 'package-findings',
       payload: { name: '@org/a', missing: ['some-ui'], unused: [], misdeclared: [] },
     },
-    { type: 'audit-failed', payload: { packageCount: 1 } },
+    { type: 'audit-failed', payload: { packageCount: 1, findingCount: 1 } },
   ])
 })
 
@@ -88,6 +88,6 @@ test('audits only what sits under the source directory', async () => {
       type: 'package-findings',
       payload: { name: '@org/a', missing: ['rxjs'], unused: [], misdeclared: [] },
     },
-    { type: 'audit-failed', payload: { packageCount: 1 } },
+    { type: 'audit-failed', payload: { packageCount: 1, findingCount: 1 } },
   ])
 })

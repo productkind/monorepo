@@ -5,6 +5,7 @@
       "@dungarees/transpile/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }

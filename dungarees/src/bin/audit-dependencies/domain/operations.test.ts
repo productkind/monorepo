@@ -336,7 +336,7 @@ test('reportFindings emits each finding then fails the audit', async () => {
       type: 'package-findings',
       payload: { name: '@org/a', missing: ['rxjs'], unused: [], misdeclared: [] },
     },
-    { type: 'audit-failed', payload: { packageCount: 1 } },
+    { type: 'audit-failed', payload: { packageCount: 1, findingCount: 1 } },
   ])
 })
 

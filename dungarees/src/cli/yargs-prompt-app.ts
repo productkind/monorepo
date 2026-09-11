@@ -7,11 +7,11 @@ import type { DomainEvent } from '@dungarees/core/event.ts'
 import {
   catchError,
   concatAll,
+  concatMap,
   defer,
   endWith,
   from,
   ignoreElements,
-  map,
   merge,
   Observable,
   of,
@@ -53,7 +53,9 @@ export type CliIo<EVENTS extends DomainEvent, INTERACTORS extends keyof CliInter
 } & CliControls<INTERACTORS>
 
 export type Presenter<EVENTS extends DomainEvent> = {
-  [TYPE in EVENTS['type']]: (payload: Extract<EVENTS, { type: TYPE }>['payload']) => CliMessage
+  [TYPE in EVENTS['type']]: (
+    payload: Extract<EVENTS, { type: TYPE }>['payload'],
+  ) => CliMessage | CliMessage[]
 }
 
 export type CommandRegistrar = (yargs: YargsApp) => YargsApp
@@ -129,7 +131,9 @@ export const createYargsPromptApp = <
           // constraint `DomainEvent`'s `type` field is declared as `string`, discarding the
           // caller's literal. The cast recovers it. Droppable if TS ever resolves property
           // access against the instantiated type argument rather than the constraint.
-          events$.pipe(map((event) => presenter[event.type as EVENTS['type']](event.payload))),
+          events$.pipe(
+            concatMap((event) => [presenter[event.type as EVENTS['type']](event.payload)].flat()),
+          ),
         )
       },
       ...controls,

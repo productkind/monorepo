@@ -5,6 +5,7 @@
       "@dungarees/make-com-api/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }

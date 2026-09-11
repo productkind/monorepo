@@ -5,6 +5,7 @@
       "@dungarees/bin-audit-dependencies-domain/*": ["./*"]
     },
     "noEmit": true,
+    "rootDir": ".",
     "module": "NodeNext"
   }
 }
