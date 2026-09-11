@@ -19,7 +19,13 @@ TikTok video posts have no separate title field, so the caption's first line is 
 
 **Caption:**
 
-You built something with AI to test an idea, and your stakeholder asked when we can launch it. It works on your laptop, so to them it looks finished. Ever been asked to ship a prototype? Waitlist for women in product in the comments.
+You built something with AI to test an idea, and your stakeholder asked when we can launch it. It works on your laptop, so to them it looks finished.
+
+We're building a learning path for women in product, so you can answer that stakeholder with the specific reasons it isn't ready. By the end you'll be able to name what your prototype skipped: whose data it holds, who's allowed in, what it does under real load, who gets woken at 2am when something goes wrong, and who maintains it.
+
+Join the waitlist through the link in the comments, and we'll make sure to email you when the learning path opens.
+
+Ever been asked to ship a prototype?
 
 #womeninproduct #womenintech #womenproductmanagers
 
