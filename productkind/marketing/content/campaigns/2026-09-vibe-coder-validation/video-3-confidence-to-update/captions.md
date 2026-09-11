@@ -29,7 +29,7 @@ What update have you been postponing?
 
 **Pinned comment:**
 
-Join the Building Apps with AI waitlist: https://littleparrot.app/guides/building-apps-with-ai?utm_source=tiktok&utm_campaign=vibe-coded-app-26&utm_content=scared-to-touch-your-own-app
+https://littleparrot.app/guides/building-apps-with-ai?utm_source=tiktok&utm_campaign=vibe-coded-app-26&utm_content=scared-to-touch-your-own-app
 
 ## Instagram Reels
 
