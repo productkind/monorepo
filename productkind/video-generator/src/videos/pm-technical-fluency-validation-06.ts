@@ -173,13 +173,10 @@ export default defineVideo({
     {
       text: 'that’s what we’re building a learning path for.',
       visual: gif({
-        src: 'section-10-building-path.gif',
-        source: {
-          provider: 'giphy',
-          id: '1oDwWUJWeDvyz12yWb',
-          search: 'hammer building construction icon flat animation',
-        },
-        playbackRate: 0.88,
+        src: 'section-10-learn.gif',
+        source: { provider: 'giphy', id: 'YArIEQSfgefyWF25qL', search: 'learn' },
+        color: '#0641f6',
+        playbackRate: 0.77,
         place: 'above-captions',
       }),
       endsParagraph: true,
@@ -294,13 +291,8 @@ export default defineVideo({
     {
       text: '[pause][curious] How long does a simple number take where you work?',
       visual: gif({
-        src: 'section-19-time-question.gif',
-        source: {
-          provider: 'giphy',
-          id: 'yw8lh1JuxnwB8mawsU',
-          search: 'wall clock hands moving simple icon',
-        },
-        color: '#000000',
+        src: 'section-19-wait.gif',
+        source: { provider: 'giphy', id: 'z4lwT4QTkK3sYITR7Z', search: 'wait' },
         place: 'above-captions',
       }),
     },
