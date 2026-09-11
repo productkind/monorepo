@@ -17,7 +17,15 @@ campaign: vibe-coded-app-26
 
 **Caption:**
 
-How do you validate an AI-built app after launch? Measure one action, write one hypothesis and run one small test. Built yours with AI? The waitlist for women is in the pinned comment. What’s harder: finding users or choosing a price?
+How do you validate an AI-built app after launch?
+
+Three people visited and nobody paid. That result does not tell you what to change. You may need more of the right visitors, a clearer offer, an easier sign-up or a different price.
+
+We’re building a learning path for women who have already built an app with AI and want evidence for what to improve next.
+
+We'll let you know when the course opens, just join the waitlist through the link in the comment.
+
+What do you find harder: finding users or choosing a price?
 
 #womenwhobuild #womenintech #womenfounders #productvalidation
 
