@@ -5,7 +5,7 @@ export type NpmCommands = {
   viewVersions: (options: { name: string; registry?: string | undefined }) => RunResult
 }
 
-export type CliCommandsService = {
+export type CliCommands = {
   npm: NpmCommands
 }
 
@@ -26,6 +26,6 @@ export const createNpmCommands = (subProcess: SubProcessService): NpmCommands =>
     ),
 })
 
-export const createCliCommands = (subProcess: SubProcessService): CliCommandsService => ({
+export const createCliCommands = (subProcess: SubProcessService): CliCommands => ({
   npm: createNpmCommands(subProcess),
 })

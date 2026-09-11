@@ -31,7 +31,7 @@ export type EmailBackend = {
   verify: (attempt: VerificationAttempt) => Observable<VerificationResult>
 }
 
-export type Sender = EmailBackend
+export type EmailSender = EmailBackend
 
 // The template and the address a verification comes from belong to the application, not to this
 // library, so they are configuration rather than constants.

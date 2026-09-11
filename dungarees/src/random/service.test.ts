@@ -1,29 +1,29 @@
 import { createFakeRandomBackend } from './fake.ts'
 import { createNodeCryptoBackend } from './node-crypto.ts'
-import { createRandomService } from './service.ts'
+import { createRandomGenerator } from './service.ts'
 
 import { expect, test } from 'vitest'
 
 test('generateString returns a string of the requested length', () => {
-  const random = createRandomService(createNodeCryptoBackend())
+  const random = createRandomGenerator(createNodeCryptoBackend())
 
   expect(random.generateString(8)).toHaveLength(8)
 })
 
 test('generateString returns 16 characters when no length is given', () => {
-  const random = createRandomService(createNodeCryptoBackend())
+  const random = createRandomGenerator(createNodeCryptoBackend())
 
   expect(random.generateString()).toHaveLength(16)
 })
 
 test('generateString handles an odd length, which is half a hex byte', () => {
-  const random = createRandomService(createNodeCryptoBackend())
+  const random = createRandomGenerator(createNodeCryptoBackend())
 
   expect(random.generateString(7)).toHaveLength(7)
 })
 
 test('generateString returns a different string every time', () => {
-  const random = createRandomService(createNodeCryptoBackend())
+  const random = createRandomGenerator(createNodeCryptoBackend())
 
   const values = new Set(Array.from({ length: 100 }, () => random.generateString(16)))
 
@@ -31,7 +31,7 @@ test('generateString returns a different string every time', () => {
 })
 
 test('generateString refuses a length beyond the 1024 character limit', () => {
-  const random = createRandomService(createNodeCryptoBackend())
+  const random = createRandomGenerator(createNodeCryptoBackend())
 
   expect(() => random.generateString(1025)).toThrow(
     'Random string cannot be longer than 1024 characters',
@@ -39,13 +39,13 @@ test('generateString refuses a length beyond the 1024 character limit', () => {
 })
 
 test('generateString accepts a length exactly at the limit', () => {
-  const random = createRandomService(createNodeCryptoBackend())
+  const random = createRandomGenerator(createNodeCryptoBackend())
 
   expect(random.generateString(1024)).toHaveLength(1024)
 })
 
 test('generateString reports a failing backend as a random string failure', () => {
-  const random = createRandomService({
+  const random = createRandomGenerator({
     generateString: () => {
       throw new Error('no entropy')
     },
@@ -56,7 +56,7 @@ test('generateString reports a failing backend as a random string failure', () =
 })
 
 test('generateInteger returns a number within the requested range', () => {
-  const random = createRandomService(createNodeCryptoBackend())
+  const random = createRandomGenerator(createNodeCryptoBackend())
 
   const values = Array.from({ length: 100 }, () => random.generateInteger({ min: 5, max: 10 }))
 
@@ -64,7 +64,7 @@ test('generateInteger returns a number within the requested range', () => {
 })
 
 test('generateInteger can return both ends of the range', () => {
-  const random = createRandomService(createNodeCryptoBackend())
+  const random = createRandomGenerator(createNodeCryptoBackend())
 
   const values = new Set(
     Array.from({ length: 200 }, () => random.generateInteger({ min: 0, max: 1 })),
@@ -74,13 +74,13 @@ test('generateInteger can return both ends of the range', () => {
 })
 
 test('generateInteger returns the only value a single-value range allows', () => {
-  const random = createRandomService(createNodeCryptoBackend())
+  const random = createRandomGenerator(createNodeCryptoBackend())
 
   expect(random.generateInteger({ min: 7, max: 7 })).toBe(7)
 })
 
 test('generateInteger returns a safe integer when no range is given', () => {
-  const random = createRandomService(createNodeCryptoBackend())
+  const random = createRandomGenerator(createNodeCryptoBackend())
 
   const value = random.generateInteger()
 
@@ -88,7 +88,7 @@ test('generateInteger returns a safe integer when no range is given', () => {
 })
 
 test('generateInteger reports a failing backend as a random integer failure', () => {
-  const random = createRandomService({
+  const random = createRandomGenerator({
     generateString: () => '',
     generateInteger: () => {
       throw new Error('no entropy')
@@ -102,7 +102,7 @@ test('generateInteger reports a failing backend as a random integer failure', ()
 
 test('the fake backend records the ranges it was asked for', () => {
   const { backend, integerRequests } = createFakeRandomBackend()
-  const random = createRandomService(backend)
+  const random = createRandomGenerator(backend)
 
   random.generateInteger({ min: 10, max: 20 })
 
@@ -111,7 +111,7 @@ test('the fake backend records the ranges it was asked for', () => {
 
 test('the fake backend records the lengths it was asked for', () => {
   const { backend, stringRequests } = createFakeRandomBackend()
-  const random = createRandomService(backend)
+  const random = createRandomGenerator(backend)
 
   random.generateString(8)
 
@@ -120,14 +120,14 @@ test('the fake backend records the lengths it was asked for', () => {
 
 test('the fake backend returns a string of the requested length', () => {
   const { backend } = createFakeRandomBackend()
-  const random = createRandomService(backend)
+  const random = createRandomGenerator(backend)
 
   expect(random.generateString(4)).toBe('aaaa')
 })
 
 test('the fake backend returns a different character on each call', () => {
   const { backend } = createFakeRandomBackend()
-  const random = createRandomService(backend)
+  const random = createRandomGenerator(backend)
 
   expect([random.generateString(2), random.generateString(2)]).toEqual(['aa', 'bb'])
 })

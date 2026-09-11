@@ -1,6 +1,6 @@
 import { createFakeSMSBackend } from './fake.ts'
 import type { PhoneNumber } from './phone-number.ts'
-import { createSender } from './service.ts'
+import { createSmsSender } from './service.ts'
 import type { SMSBackend } from './type.ts'
 
 import { addErrorMethodsToFake } from '@dungarees/core/fake.ts'
@@ -23,7 +23,7 @@ const failingBackend = (
 
 test('sendMessage reaches the backend with the number and content', async () => {
   const { messageRequests, backend } = createFakeSMSBackend()
-  const sender = createSender(backend)
+  const sender = createSmsSender(backend)
 
   await firstValueFrom(sender.sendMessage(MESSAGE_REQUEST))
 
@@ -32,7 +32,9 @@ test('sendMessage reaches the backend with the number and content', async () => 
 
 test('sendMessage reports a failing backend as a sending failure', async () => {
   const cause = new Error('Fake Backend Failed')
-  const sender = createSender(failingBackend({ sendMessage: { type: 'observable', error: cause } }))
+  const sender = createSmsSender(
+    failingBackend({ sendMessage: { type: 'observable', error: cause } }),
+  )
 
   await expect(firstValueFrom(sender.sendMessage(MESSAGE_REQUEST))).rejects.toThrow(
     'SMS sending failed: Fake Backend Failed',
@@ -41,7 +43,9 @@ test('sendMessage reports a failing backend as a sending failure', async () => {
 
 test('sendMessage keeps the backend failure as the cause', async () => {
   const cause = new Error('Fake Backend Failed')
-  const sender = createSender(failingBackend({ sendMessage: { type: 'observable', error: cause } }))
+  const sender = createSmsSender(
+    failingBackend({ sendMessage: { type: 'observable', error: cause } }),
+  )
 
   await expect(firstValueFrom(sender.sendMessage(MESSAGE_REQUEST))).rejects.toHaveProperty(
     'cause',
@@ -51,7 +55,7 @@ test('sendMessage keeps the backend failure as the cause', async () => {
 
 test('requestVerification reaches the backend', async () => {
   const { verificationRequests, backend } = createFakeSMSBackend()
-  const sender = createSender(backend)
+  const sender = createSmsSender(backend)
 
   await firstValueFrom(sender.requestVerification(VERIFICATION_REQUEST))
 
@@ -60,7 +64,7 @@ test('requestVerification reaches the backend', async () => {
 
 test('requestVerification reports a failing backend as a request failure', async () => {
   const cause = new Error('Fake Backend Failed')
-  const sender = createSender(
+  const sender = createSmsSender(
     failingBackend({ requestVerification: { type: 'observable', error: cause } }),
   )
 
@@ -71,7 +75,7 @@ test('requestVerification reports a failing backend as a request failure', async
 
 test('verify hands the attempt to the backend and returns its verdict', async () => {
   const { backend, verificationAttempts } = createFakeSMSBackend()
-  const sender = createSender(backend)
+  const sender = createSmsSender(backend)
 
   const result = await firstValueFrom(sender.verify({ to: TO, code: '123456' }))
 
@@ -81,7 +85,7 @@ test('verify hands the attempt to the backend and returns its verdict', async ()
 
 test('verify refuses a code the fake was told is wrong', async () => {
   const { backend } = createFakeSMSBackend({ approvedCodes: ['123456'] })
-  const sender = createSender(backend)
+  const sender = createSmsSender(backend)
 
   const result = await firstValueFrom(sender.verify({ to: TO, code: '000000' }))
 
@@ -90,7 +94,7 @@ test('verify refuses a code the fake was told is wrong', async () => {
 
 test('verify accepts a code the fake was told is right', async () => {
   const { backend } = createFakeSMSBackend({ approvedCodes: ['123456'] })
-  const sender = createSender(backend)
+  const sender = createSmsSender(backend)
 
   const result = await firstValueFrom(sender.verify({ to: TO, code: '123456' }))
 
@@ -99,7 +103,7 @@ test('verify accepts a code the fake was told is right', async () => {
 
 test('verify reports a failing backend as a verification failure', async () => {
   const cause = new Error('Fake Backend Failed')
-  const sender = createSender(failingBackend({ verify: { type: 'observable', error: cause } }))
+  const sender = createSmsSender(failingBackend({ verify: { type: 'observable', error: cause } }))
 
   await expect(firstValueFrom(sender.verify({ to: TO, code: '123456' }))).rejects.toThrow(
     'SMS verification failed: Fake Backend Failed',

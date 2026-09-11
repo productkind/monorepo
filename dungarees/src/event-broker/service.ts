@@ -1,6 +1,6 @@
 import type { EventBroker, EventBrokerBackend } from './type.ts'
 
-export const createBroker = <PAYLOADS extends Record<string, unknown>>(
+export const createEventBroker = <PAYLOADS extends Record<string, unknown>>(
   brokerBackend: EventBrokerBackend,
 ): EventBroker<PAYLOADS> => ({
   dispatch: (event, args) => {

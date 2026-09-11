@@ -1,13 +1,13 @@
 import type { VideoDeskServices } from './services.ts'
 
-import { createFileSystem } from '@dungarees/fs/service.ts'
+import { createFileSystemService } from '@dungarees/fs/service.ts'
 import { createSubProcessService } from '@dungarees/sub-process/service.ts'
 
 import { spawn } from 'node:child_process'
 import * as fs from 'node:fs'
 
 export const getServices = (): VideoDeskServices => ({
-  fileSystem: createFileSystem(fs),
+  fileSystem: createFileSystemService(fs),
   subProcess: createSubProcessService(spawn),
   http: { fetch: (input, init) => fetch(input, init) },
   clock: { now: () => new Date() },

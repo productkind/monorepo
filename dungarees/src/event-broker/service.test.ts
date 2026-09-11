@@ -1,5 +1,5 @@
 import { createEventEmitterBackend } from './event-emitter.ts'
-import { createBroker } from './service.ts'
+import { createEventBroker } from './service.ts'
 
 import { expect, expectTypeOf, test } from 'vitest'
 
@@ -9,7 +9,7 @@ type TestEvents = {
 }
 
 test('a handler receives the payload dispatched for its event', () => {
-  const broker = createBroker<TestEvents>(createEventEmitterBackend())
+  const broker = createEventBroker<TestEvents>(createEventEmitterBackend())
   const received: Array<{ name: string }> = []
   broker.on('greeted', (args) => {
     received.push(args)
@@ -21,7 +21,7 @@ test('a handler receives the payload dispatched for its event', () => {
 })
 
 test('a handler is left alone when a different event is dispatched', () => {
-  const broker = createBroker<TestEvents>(createEventEmitterBackend())
+  const broker = createEventBroker<TestEvents>(createEventEmitterBackend())
   const received: number[] = []
   broker.on('counted', (args) => {
     received.push(args)
@@ -33,7 +33,7 @@ test('a handler is left alone when a different event is dispatched', () => {
 })
 
 test('every handler registered for an event receives it', () => {
-  const broker = createBroker<TestEvents>(createEventEmitterBackend())
+  const broker = createEventBroker<TestEvents>(createEventEmitterBackend())
   const first: number[] = []
   const second: number[] = []
   broker.on('counted', (args) => {
@@ -49,7 +49,7 @@ test('every handler registered for an event receives it', () => {
 })
 
 test('a handler receives each dispatch in turn', () => {
-  const broker = createBroker<TestEvents>(createEventEmitterBackend())
+  const broker = createEventBroker<TestEvents>(createEventEmitterBackend())
   const received: number[] = []
   broker.on('counted', (args) => {
     received.push(args)
@@ -62,13 +62,13 @@ test('a handler receives each dispatch in turn', () => {
 })
 
 test('dispatching an event nobody listens for is not an error', () => {
-  const broker = createBroker<TestEvents>(createEventEmitterBackend())
+  const broker = createEventBroker<TestEvents>(createEventEmitterBackend())
 
   expect(() => broker.dispatch('counted', 7)).not.toThrow()
 })
 
 test('the handler payload is typed from the event it is registered for', () => {
-  const broker = createBroker<TestEvents>(createEventEmitterBackend())
+  const broker = createEventBroker<TestEvents>(createEventEmitterBackend())
 
   broker.on('greeted', (args) => {
     expectTypeOf(args).toEqualTypeOf<{ name: string }>()
@@ -79,21 +79,21 @@ test('the handler payload is typed from the event it is registered for', () => {
 })
 
 test('dispatch rejects a payload that belongs to a different event', () => {
-  const broker = createBroker<TestEvents>(createEventEmitterBackend())
+  const broker = createEventBroker<TestEvents>(createEventEmitterBackend())
 
   // @ts-expect-error the 'greeted' payload is an object, so a number is never valid for it
   broker.dispatch('greeted', 7)
 })
 
 test('dispatch rejects an event the payload map does not declare', () => {
-  const broker = createBroker<TestEvents>(createEventEmitterBackend())
+  const broker = createEventBroker<TestEvents>(createEventEmitterBackend())
 
   // @ts-expect-error 'shouted' is not one of the declared events
   broker.dispatch('shouted', { name: 'Ada' })
 })
 
 test('on rejects an event the payload map does not declare', () => {
-  const broker = createBroker<TestEvents>(createEventEmitterBackend())
+  const broker = createEventBroker<TestEvents>(createEventEmitterBackend())
 
   // @ts-expect-error 'shouted' is not one of the declared events
   broker.on('shouted', () => undefined)

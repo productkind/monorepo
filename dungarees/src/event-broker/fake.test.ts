@@ -1,5 +1,5 @@
 import { createFakeEventBrokerBackend } from './fake.ts'
-import { createBroker } from './service.ts'
+import { createEventBroker } from './service.ts'
 
 import { expect, test } from 'vitest'
 
@@ -9,7 +9,7 @@ type TestEvents = {
 
 test('the fake backend records what a broker dispatched through it', () => {
   const { backend, dispatchedEvents } = createFakeEventBrokerBackend()
-  const broker = createBroker<TestEvents>(backend)
+  const broker = createEventBroker<TestEvents>(backend)
 
   broker.dispatch('counted', 7)
 
@@ -18,7 +18,7 @@ test('the fake backend records what a broker dispatched through it', () => {
 
 test('the fake backend records dispatches in the order they happened', () => {
   const { backend, dispatchedEvents } = createFakeEventBrokerBackend()
-  const broker = createBroker<TestEvents>(backend)
+  const broker = createEventBroker<TestEvents>(backend)
 
   broker.dispatch('counted', 1)
   broker.dispatch('counted', 2)
@@ -31,7 +31,7 @@ test('the fake backend records dispatches in the order they happened', () => {
 
 test('the fake backend does not deliver a dispatch to handlers on its own', () => {
   const { backend } = createFakeEventBrokerBackend()
-  const broker = createBroker<TestEvents>(backend)
+  const broker = createEventBroker<TestEvents>(backend)
   const received: number[] = []
   broker.on('counted', (args) => {
     received.push(args)
@@ -44,7 +44,7 @@ test('the fake backend does not deliver a dispatch to handlers on its own', () =
 
 test('invokeHandlers drives the handlers registered for that event', () => {
   const { backend, invokeHandlers } = createFakeEventBrokerBackend()
-  const broker = createBroker<TestEvents>(backend)
+  const broker = createEventBroker<TestEvents>(backend)
   const received: number[] = []
   broker.on('counted', (args) => {
     received.push(args)
@@ -57,7 +57,7 @@ test('invokeHandlers drives the handlers registered for that event', () => {
 
 test('invokeHandlers leaves handlers for other events alone', () => {
   const { backend, invokeHandlers } = createFakeEventBrokerBackend()
-  const broker = createBroker<TestEvents>(backend)
+  const broker = createEventBroker<TestEvents>(backend)
   const received: number[] = []
   broker.on('counted', (args) => {
     received.push(args)
@@ -70,7 +70,7 @@ test('invokeHandlers leaves handlers for other events alone', () => {
 
 test('invokeHandlers drives every handler registered for the event', () => {
   const { backend, invokeHandlers } = createFakeEventBrokerBackend()
-  const broker = createBroker<TestEvents>(backend)
+  const broker = createEventBroker<TestEvents>(backend)
   const received: number[] = []
   broker.on('counted', (args) => {
     received.push(args)
@@ -86,7 +86,7 @@ test('invokeHandlers drives every handler registered for the event', () => {
 
 test('the fake backend records what a broker subscribed to', () => {
   const { backend, subscriptions } = createFakeEventBrokerBackend()
-  const broker = createBroker<TestEvents>(backend)
+  const broker = createEventBroker<TestEvents>(backend)
   const handler = (): void => undefined
 
   broker.on('counted', handler)

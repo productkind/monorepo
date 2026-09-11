@@ -5,7 +5,7 @@ import path from 'node:path'
 import type { Observable } from 'rxjs'
 import ts from 'typescript'
 
-type Transpiler = {
+export type Transpiler = {
   transpileDir: (options: {
     input: string
     output: string
@@ -18,7 +18,7 @@ export type TranspileDirOutput = { input: string; output: string; type: string }
 const isOutsideNodeModules = (filePath: string): boolean =>
   !filePath.split('/').includes('node_modules')
 
-export const createTranspilerService = (fileSystem: FileSystemService): Transpiler => {
+export const createTranspiler = (fileSystem: FileSystemService): Transpiler => {
   const transpileDirAsync = async ({
     input,
     output,

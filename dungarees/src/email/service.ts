@@ -1,4 +1,4 @@
-import type { EmailBackend, Sender } from './type.ts'
+import type { EmailBackend, EmailSender } from './type.ts'
 
 import { createCausedError } from '@dungarees/core/error.ts'
 
@@ -11,7 +11,7 @@ const failWith =
       catchError((cause: unknown) => throwError(() => createCausedError({ message, cause }))),
     )
 
-export const createSender = (emailBackend: EmailBackend): Sender => ({
+export const createEmailSender = (emailBackend: EmailBackend): EmailSender => ({
   send: async (email) => {
     try {
       await emailBackend.send(email)
