@@ -1,4 +1,4 @@
-import type { CryptoBackend } from './type.ts'
+import type { CryptoBackend } from './service.ts'
 
 import { compareSync, genSaltSync, hashSync } from 'bcryptjs'
 

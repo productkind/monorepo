@@ -3,7 +3,7 @@ import type {
   BehaviorsTools,
   LoadBehaviors,
   RequiredApplicationConfig,
-} from './type.ts'
+} from './application.ts'
 
 import { createCausedError } from '@dungarees/core/error.ts'
 

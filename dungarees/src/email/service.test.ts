@@ -2,7 +2,7 @@ import type { EmailAddress } from './email-address.ts'
 import { createFakeEmailBackend } from './fake.ts'
 import { isVerificationApproved } from './sendgrid.ts'
 import { createEmailSender } from './service.ts'
-import type { Email, EmailBackend } from './type.ts'
+import type { Email, EmailBackend } from './service.ts'
 
 import { addErrorMethodsToFake } from '@dungarees/core/fake.ts'
 

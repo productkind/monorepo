@@ -1,4 +1,4 @@
-import type { EmailBackend, SendGridConfig } from './type.ts'
+import type { EmailBackend, SendGridConfig } from './service.ts'
 
 import sendgridMail from '@sendgrid/mail'
 import { from, map, of } from 'rxjs'

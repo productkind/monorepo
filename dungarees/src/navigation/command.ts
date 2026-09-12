@@ -1,7 +1,7 @@
+import type { Location } from './service.ts'
 import { createChangeLocation, type NavigationEvent } from './store.ts'
-import type { Location } from './type.ts'
 
-import type { EventReceiver } from '@dungarees/store/type.ts'
+import type { EventReceiver } from '@dungarees/store/service.ts'
 
 export type NavigationCommand = {
   appNavigation: (location: Location) => void

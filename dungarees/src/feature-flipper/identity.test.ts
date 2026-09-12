@@ -1,5 +1,5 @@
 import { getIdentityValue } from './identity.ts'
-import type { FeatureFlipperConfiguration } from './type.ts'
+import type { FeatureFlipperConfiguration } from './service.ts'
 
 import { expect, test } from 'vitest'
 

@@ -1,4 +1,4 @@
-import type { MigrationSource } from './type.ts'
+import type { MigrationSource } from './service.ts'
 
 import type { Migration, MigrationProvider } from 'kysely/migration'
 import { readdir } from 'node:fs/promises'

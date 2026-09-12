@@ -1,6 +1,6 @@
-import type { ProcessServiceOutput, RunOptions, SubProcessService } from './type.ts'
+import type { ProcessServiceOutput, RunOptions, SubProcessService } from './service.ts'
 
-import type { StdioMessage } from '@dungarees/cli/type.ts'
+import type { StdioMessage } from '@dungarees/cli/message.ts'
 import { stderr, stdout } from '@dungarees/cli/utils.ts'
 import type { FileSystemService } from '@dungarees/fs/service.ts'
 import type { KeyValueStore } from '@dungarees/key-value-stores/service.ts'

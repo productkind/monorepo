@@ -1,6 +1,6 @@
 import { filterByType } from './effect.ts'
 import { createStore, createStoreSlice, identityReducer } from './service.ts'
-import type { Reducer } from './type.ts'
+import type { Reducer } from './service.ts'
 
 import type { DomainEvent } from '@dungarees/core/event.ts'
 import { mtest } from '@dungarees/core/marbles-vitest.ts'

@@ -1,5 +1,6 @@
+import type { RestEndpoint, RestEndpointRequest } from './endpoint.ts'
+import type { Fetcher, RestClient } from './service.ts'
 import { createRestClientCreator } from './service.ts'
-import type { Fetcher, RestClient, RestEndpoint, RestEndpointRequest } from './type.ts'
 
 export const htmlFetcher: Fetcher<string | Error> = async (url, request) => {
   const response = await fetch(url, {

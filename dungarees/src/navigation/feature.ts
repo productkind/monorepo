@@ -6,7 +6,7 @@ import type { NavigationService } from './service.ts'
 import type { NavigationEvent, NavigationState } from './store.ts'
 
 import type { DomainEvent } from '@dungarees/core/event.ts'
-import type { Store } from '@dungarees/store/type.ts'
+import type { Store } from '@dungarees/store/service.ts'
 
 export type NavigationFeature = NavigationQuery & NavigationCommand
 

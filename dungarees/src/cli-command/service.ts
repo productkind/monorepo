@@ -1,4 +1,4 @@
-import { type SubProcessService } from '@dungarees/sub-process/type.ts'
+import { type SubProcessService } from '@dungarees/sub-process/service.ts'
 
 export type NpmCommands = {
   publish: (options?: { registry?: string | undefined; cwd?: string }) => RunResult

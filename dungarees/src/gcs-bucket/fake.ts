@@ -1,5 +1,5 @@
 import { toBuffer, toSignedUrlConfig } from './request.ts'
-import type { GcsClient, GcsWriteOptions } from './type.ts'
+import type { GcsClient, GcsWriteOptions } from './service.ts'
 
 import { PassThrough, Readable } from 'node:stream'
 

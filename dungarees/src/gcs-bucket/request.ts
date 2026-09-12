@@ -1,4 +1,4 @@
-import type { GcsListOptions, GcsSignedUrlOptions, GcsWriteOptions } from './type.ts'
+import type { GcsListOptions, GcsSignedUrlOptions, GcsWriteOptions } from './service.ts'
 
 export const MINIMUM_SIGNED_URL_SECONDS = 1
 

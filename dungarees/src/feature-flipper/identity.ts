@@ -1,4 +1,4 @@
-import type { FeatureFlipperConfiguration, IdentityMatcher } from './type.ts'
+import type { FeatureFlipperConfiguration, IdentityMatcher } from './service.ts'
 
 const PERCENTAGE_BUCKETS = 100
 

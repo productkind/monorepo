@@ -1,4 +1,4 @@
-import type { InteractorConfig, RunnerConfig, ServiceConfig } from './type.ts'
+import type { InteractorConfig, RunnerConfig, ServiceConfig } from './test-environment.ts'
 
 import type { FilterRecord, GetKey, RecordToEntries } from '@dungarees/core/type-util.ts'
 

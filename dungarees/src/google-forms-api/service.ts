@@ -1,7 +1,13 @@
 import { createSaveAnswersRequest, type GoogleFormsAPIClient } from './api.ts'
-import type { GoogleFormsService } from './type.ts'
 
+import type { Observable } from 'rxjs'
 import { map } from 'rxjs/operators'
+
+export type FormAnswers = Record<string, unknown>
+
+export type GoogleFormsService = {
+  saveAnswers: (args: { formId: string; answers: FormAnswers }) => Observable<void>
+}
 
 export const createGoogleFormsService = (
   googleFormsAPIClient: GoogleFormsAPIClient,

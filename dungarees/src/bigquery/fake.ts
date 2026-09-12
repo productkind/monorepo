@@ -1,4 +1,4 @@
-import type { BigQueryClient, BigQueryQueryArgs, BigQueryRow } from './type.ts'
+import type { BigQueryClient, BigQueryQueryArgs, BigQueryRow } from './service.ts'
 
 export type FakeBigQueryClient = {
   client: BigQueryClient

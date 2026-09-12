@@ -1,4 +1,4 @@
-import type { WriteableRawKeyValueStore } from '../type.ts'
+import type { WriteableRawKeyValueStore } from '../raw-store.ts'
 
 import { BehaviorSubject, type Observable } from 'rxjs'
 

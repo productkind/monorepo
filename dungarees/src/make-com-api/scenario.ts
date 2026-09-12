@@ -1,5 +1,3 @@
-import type { Observable } from 'rxjs'
-
 export type UserInfo = {
   id: number
   name: string
@@ -48,11 +46,4 @@ export type AuthParams = {
 
 export type ScenarioRequestParams = AuthParams & {
   scenarioId: number
-}
-
-export type ScenarioService = {
-  getAllScenarios: (params: AuthParams & AuthSearchParams) => Observable<Scenario[]>
-  getScenarioById: (params: ScenarioRequestParams) => Observable<Scenario | undefined>
-  startScenario: (params: ScenarioRequestParams) => Observable<ScenarioActionResponse | undefined>
-  stopScenario: (params: ScenarioRequestParams) => Observable<ScenarioActionResponse | undefined>
 }

@@ -1,9 +1,9 @@
 import { createInMemoryMigrator } from './migration/inmemory-migrator.ts'
 import { createMigrator } from './migration/service.ts'
-import type { MigrationSource, Migrator } from './migration/type.ts'
+import type { MigrationSource, Migrator } from './migration/service.ts'
 import { createInMemoryPostgresConnectionBuilder } from './postgres/fake.ts'
 import { createDatasource } from './service.ts'
-import type { ConnectionBuilder, Datasource, Generated } from './type.ts'
+import type { ConnectionBuilder, Datasource, Generated } from './service.ts'
 
 import { createCausedError } from '@dungarees/core/error.ts'
 

@@ -1,8 +1,8 @@
 import { createSaveAnswersRequest, type GoogleFormsAPI, type GoogleFormsAPIClient } from './api.ts'
-import type { FormAnswers } from './type.ts'
+import type { FormAnswers } from './service.ts'
 
 import { createStubRestClient } from '@dungarees/rest/stub.ts'
-import type { StubEndpoint } from '@dungarees/rest/type.ts'
+import type { StubEndpoint } from '@dungarees/rest/stub.ts'
 
 export type StubbedForm = {
   formId: string

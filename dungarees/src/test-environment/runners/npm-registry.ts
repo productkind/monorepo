@@ -1,4 +1,4 @@
-import type { Runner } from '../type.ts'
+import type { Runner } from '../test-environment.ts'
 
 import type { StartedNetwork, StartedTestContainer } from 'testcontainers'
 import { GenericContainer, Wait } from 'testcontainers'

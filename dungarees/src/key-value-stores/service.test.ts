@@ -1,6 +1,6 @@
+import type { RawKeyValueStore } from './raw-store.ts'
 import { createMemoryRawKeyValueStore } from './raw-stores/memory.ts'
 import { createKeyValueStore, type KeyValueStore } from './service.ts'
-import type { RawKeyValueStore } from './type.ts'
 
 import { getThrownError } from '@dungarees/core/error.ts'
 

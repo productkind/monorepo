@@ -1,5 +1,6 @@
+import type { RestEndpoint } from './endpoint.ts'
+import type { Fetcher } from './service.ts'
 import { createRestClientCreator } from './service.ts'
-import type { Fetcher, RestEndpoint } from './type.ts'
 
 import type { JsonType } from '@dungarees/core/type-util.ts'
 

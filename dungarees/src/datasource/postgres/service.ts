@@ -1,4 +1,4 @@
-import type { ConnectionBuilder } from '../type.ts'
+import type { ConnectionBuilder } from '../service.ts'
 
 import { CamelCasePlugin, Kysely, PostgresDialect } from 'kysely'
 import pg from 'pg'

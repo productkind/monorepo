@@ -1,4 +1,4 @@
-import type { SMSBackend, TwilioConfig } from './type.ts'
+import type { SMSBackend, TwilioConfig } from './service.ts'
 
 import { from, map } from 'rxjs'
 import twilio from 'twilio'

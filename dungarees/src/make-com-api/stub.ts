@@ -5,10 +5,10 @@ import {
   type ScenarioApi,
   type ScenarioApiClient,
 } from './api.ts'
-import { type Scenario, SCENARIO_ACTIONS } from './type.ts'
+import { type Scenario, SCENARIO_ACTIONS } from './scenario.ts'
 
 import { createStubRestClient } from '@dungarees/rest/stub.ts'
-import type { StubEndpoint } from '@dungarees/rest/type.ts'
+import type { StubEndpoint } from '@dungarees/rest/stub.ts'
 
 export const FAKE_USER = {
   id: 1,

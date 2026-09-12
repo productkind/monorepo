@@ -1,4 +1,4 @@
-import type { EventBrokerBackend } from './type.ts'
+import type { EventBrokerBackend } from './service.ts'
 
 import { EventEmitter } from 'node:events'
 

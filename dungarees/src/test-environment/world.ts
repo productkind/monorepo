@@ -8,7 +8,7 @@ import type {
   InteractorConfig,
   ServiceConfig,
   TestEnviornmentState,
-} from './type.ts'
+} from './test-environment.ts'
 
 import type {
   FilterRecord,

@@ -1,4 +1,4 @@
-import type { StdioMessage } from './type.ts'
+import type { StdioMessage } from './message.ts'
 import { exit, stderr } from './utils.ts'
 
 import { getErrorMessage } from '@dungarees/core/error.ts'
