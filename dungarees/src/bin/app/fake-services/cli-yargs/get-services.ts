@@ -1,9 +1,9 @@
-import {
-  createFakeCliCommands,
-  type ExecutedCommand,
-  type FakeSpawnConfig,
-} from '@dungarees/cli-command/fake.ts'
 import type { CliCommands } from '@dungarees/cli-command/service.ts'
+import {
+  createStubCliCommands,
+  type ExecutedCommand,
+  type StubSpawnConfig,
+} from '@dungarees/cli-command/stub.ts'
 import type { RendererProcess } from '@dungarees/cli/yargs-renderer.ts'
 import { createFakeFileSystem } from '@dungarees/fs/fake.ts'
 import type { FileSystemService } from '@dungarees/fs/service.ts'
@@ -12,7 +12,7 @@ export type FakeProcess = { argv: string[] } & RendererProcess
 
 export type FakeWorld = {
   files?: Record<string, string>
-  commands?: FakeSpawnConfig
+  commands?: StubSpawnConfig
   process?: FakeProcess
 }
 
@@ -34,7 +34,7 @@ export const createFakeServices = ({
   commands = [],
   process = DISCARDED_PROCESS,
 }: FakeWorld = {}): FakeServices => {
-  const { executedCommands, ...cliCommands } = createFakeCliCommands(commands)
+  const { executedCommands, ...cliCommands } = createStubCliCommands(commands)
   return {
     fileSystem: createFakeFileSystem(files),
     ...cliCommands,

@@ -1,5 +1,5 @@
 import { NAVIGATION_NAMESPACE } from './config.ts'
-import { createAppStore, createNavigationServiceFake } from './fake.ts'
+import { createAppStore, createFakeNavigationService } from './fake.ts'
 import { createNavigation } from './feature.ts'
 import { createRouter } from './router.ts'
 
@@ -13,7 +13,7 @@ mtest('an app navigation through the feature moves the location', ({ expect, col
   const { store } = createAppStore()
   const { appNavigation, location$ } = createNavigation({
     store,
-    navigationService: createNavigationServiceFake(),
+    navigationService: createFakeNavigationService(),
   })
   coldCall('-1', {
     1: () => {
@@ -26,7 +26,7 @@ mtest('an app navigation through the feature moves the location', ({ expect, col
 
 mtest('a platform navigation reaches the store through the feature', ({ expect, coldCall }) => {
   const { store } = createAppStore()
-  const navigationService = createNavigationServiceFake()
+  const navigationService = createFakeNavigationService()
   createNavigation({ store, navigationService })
   coldCall('1', {
     1: () => {
@@ -43,7 +43,7 @@ mtest('the feature resolves the route with the router it was given', ({ expect, 
   const { store } = createAppStore()
   const { appNavigation, route$ } = createNavigation({
     store,
-    navigationService: createNavigationServiceFake(),
+    navigationService: createFakeNavigationService(),
     router: createRouter([
       { route: '/', id: 'INDEX' },
       { route: '/path', id: 'PATH' },

@@ -6,10 +6,10 @@ import { assertDefined } from '@dungarees/core/util.ts'
 import { type ChildProcess, type SpawnOptions } from 'node:child_process'
 import { type Observable, Subject, timer } from 'rxjs'
 
-export const createFakeSpawn = (config: FakeSpawnConfig): FakeSpawn => {
+export const createStubSpawn = (config: StubSpawnConfig): StubSpawn => {
   const $executedCommands = new Subject<ExecutedCommand>()
   const executedCommands: ExecutedCommand[] = []
-  const commands = new Map<string, FakeCommandOutput>(
+  const commands = new Map<string, StubCommandOutput>(
     config.map(({ command, args, ...rest }) => [serializeCommand(command, args), rest]),
   )
 
@@ -17,7 +17,7 @@ export const createFakeSpawn = (config: FakeSpawnConfig): FakeSpawn => {
     const serializedCommand = serializeCommand(command, args)
     const { stdout, stderr, exitCode, delay } = assertDefined(
       commands.get(serializedCommand),
-      `Command "${serializedCommand}" is not listed in the fake options`,
+      `Command "${serializedCommand}" is not listed in the stub options`,
     )
 
     let doneCallback: CloseCallback
@@ -62,8 +62,8 @@ export const createFakeSpawn = (config: FakeSpawnConfig): FakeSpawn => {
   }
 }
 
-export const createFakeSubProcessService = (config: FakeSpawnConfig): FakeSubProcessService => {
-  const { spawn, $executedCommands, executedCommands } = createFakeSpawn(config)
+export const createStubSubProcessService = (config: StubSpawnConfig): StubSubProcessService => {
+  const { spawn, $executedCommands, executedCommands } = createStubSpawn(config)
   const subProcessService = createSubProcessService(spawn)
   return {
     subProcess: subProcessService,
@@ -75,9 +75,9 @@ export const createFakeSubProcessService = (config: FakeSpawnConfig): FakeSubPro
 const serializeCommand = (command: string, args: string[] = []): string =>
   [command, ...args].join(' ')
 
-export type FakeSpawnConfig = FakeCommandConfig[]
+export type StubSpawnConfig = StubCommandConfig[]
 
-type FakeCommandOutput = {
+type StubCommandOutput = {
   stdout: string
   stderr?: string
   exitCode: number
@@ -87,10 +87,10 @@ type FakeCommandOutput = {
 type DataCallback = ((chunk: Buffer) => void) | undefined
 type CloseCallback = ((code: number | undefined) => void) | undefined
 
-export type FakeCommandConfig = {
+export type StubCommandConfig = {
   command: string
   args: string[]
-} & FakeCommandOutput
+} & StubCommandOutput
 
 export type ExecutedCommand = {
   command: string
@@ -98,13 +98,13 @@ export type ExecutedCommand = {
   options?: SpawnOptions
 }
 
-export type FakeSpawn = {
+export type StubSpawn = {
   spawn: Spawn
   $executedCommands: Observable<ExecutedCommand>
   executedCommands: ExecutedCommand[]
 }
 
-export type FakeSubProcessService = {
+export type StubSubProcessService = {
   subProcess: SubProcessService
   $executedCommands: Observable<ExecutedCommand>
   executedCommands: ExecutedCommand[]

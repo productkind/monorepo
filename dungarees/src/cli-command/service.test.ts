@@ -1,12 +1,12 @@
 import { createCliCommands } from './service.ts'
 
-import { createFakeSubProcessService } from '@dungarees/sub-process/fake.ts'
+import { createStubSubProcessService } from '@dungarees/sub-process/stub.ts'
 
 import { lastValueFrom } from 'rxjs'
 import { expect, test } from 'vitest'
 
 test('npm publish', async () => {
-  const { subProcess, executedCommands } = createFakeSubProcessService([
+  const { subProcess, executedCommands } = createStubSubProcessService([
     {
       command: 'npm',
       args: ['publish', '--access', 'public'],
@@ -29,7 +29,7 @@ test('npm publish', async () => {
 })
 
 test('npm publish with registry', async () => {
-  const { subProcess, executedCommands } = createFakeSubProcessService([
+  const { subProcess, executedCommands } = createStubSubProcessService([
     {
       command: 'npm',
       args: ['publish', '--access', 'public', '--registry', 'https://registry.npmjs.org/'],
@@ -56,7 +56,7 @@ test('npm publish with registry', async () => {
 })
 
 test('npm publish with cwd', async () => {
-  const { subProcess, executedCommands } = createFakeSubProcessService([
+  const { subProcess, executedCommands } = createStubSubProcessService([
     {
       command: 'npm',
       args: ['publish', '--access', 'public'],
@@ -83,7 +83,7 @@ test('npm publish with cwd', async () => {
 })
 
 test('npm viewVersions asks the registry for every published version', async () => {
-  const { subProcess, executedCommands } = createFakeSubProcessService([
+  const { subProcess, executedCommands } = createStubSubProcessService([
     {
       command: 'npm',
       args: ['view', '@org/lib', 'versions', '--json'],
@@ -102,7 +102,7 @@ test('npm viewVersions asks the registry for every published version', async () 
 })
 
 test('npm viewVersions passes the registry through', async () => {
-  const { subProcess, executedCommands } = createFakeSubProcessService([
+  const { subProcess, executedCommands } = createStubSubProcessService([
     {
       command: 'npm',
       args: ['view', '@org/lib', 'versions', '--json', '--registry', 'https://registry.test'],

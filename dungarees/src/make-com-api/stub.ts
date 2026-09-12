@@ -10,13 +10,13 @@ import { type Scenario, SCENARIO_ACTIONS } from './scenario.ts'
 import { createStubRestClient } from '@dungarees/rest/stub.ts'
 import type { StubEndpoint } from '@dungarees/rest/stub.ts'
 
-export const FAKE_USER = {
+export const STUB_USER = {
   id: 1,
   name: 'Test User',
   email: 'test@email.com',
 }
 
-export const FAKE_SCENARIO: Scenario = {
+export const STUB_SCENARIO: Scenario = {
   id: 1,
   name: 'Test Scenario',
   description: 'This is a test scenario',
@@ -33,14 +33,14 @@ export const FAKE_SCENARIO: Scenario = {
   iswaiting: false,
   usedPackages: [],
   nextExec: '2021-08-10T15:00:00.000Z',
-  createdByUser: FAKE_USER,
-  updatedByUser: FAKE_USER,
+  createdByUser: STUB_USER,
+  updatedByUser: STUB_USER,
 }
 
-export const createScenarioApiStub = ({
+export const createStubScenarioApi = ({
   accessToken = '12345',
   organizationId = '1',
-  scenario = FAKE_SCENARIO,
+  scenario = STUB_SCENARIO,
 }: {
   accessToken?: string
   organizationId?: string

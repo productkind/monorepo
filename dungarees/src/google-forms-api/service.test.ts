@@ -4,7 +4,7 @@ import {
   GOOGLE_FORMS_BASE_URL,
 } from './api.ts'
 import { createGoogleFormsService } from './service.ts'
-import { createGoogleFormsApiStub } from './stub.ts'
+import { createStubGoogleFormsApi } from './stub.ts'
 
 import { mtest } from '@dungarees/core/marbles-vitest.ts'
 
@@ -15,7 +15,7 @@ const ANSWERS = { question1: 'answer1' }
 
 mtest('saving answers reports that the form was accepted', ({ expect }) => {
   const service = createGoogleFormsService(
-    createGoogleFormsApiStub([{ formId: 'formId', answers: ANSWERS }]),
+    createStubGoogleFormsApi([{ formId: 'formId', answers: ANSWERS }]),
   )
 
   expect(service.saveAnswers({ formId: 'formId', answers: ANSWERS })).toBeObservable('-(n|)', {
@@ -25,7 +25,7 @@ mtest('saving answers reports that the form was accepted', ({ expect }) => {
 
 test('saving answers to a form the stub does not know about fails', async () => {
   const service = createGoogleFormsService(
-    createGoogleFormsApiStub([{ formId: 'formId', answers: ANSWERS }]),
+    createStubGoogleFormsApi([{ formId: 'formId', answers: ANSWERS }]),
   )
 
   await expect(
@@ -35,7 +35,7 @@ test('saving answers to a form the stub does not know about fails', async () => 
 
 mtest('the stub tells two forms apart', ({ expect }) => {
   const service = createGoogleFormsService(
-    createGoogleFormsApiStub([
+    createStubGoogleFormsApi([
       { formId: 'first', answers: { a: '1' } },
       { formId: 'second', answers: { b: '2' } },
     ]),

@@ -8,7 +8,7 @@ import {
 } from './api.ts'
 import { SCENARIO_ACTIONS } from './scenario.ts'
 import { createScenarioService } from './service.ts'
-import { createScenarioApiStub, FAKE_SCENARIO } from './stub.ts'
+import { createStubScenarioApi, STUB_SCENARIO } from './stub.ts'
 
 import { mtest } from '@dungarees/core/marbles-vitest.ts'
 
@@ -18,18 +18,18 @@ import { expect, test } from 'vitest'
 const AUTH = { accessToken: '12345', organizationId: '1' }
 
 const createService = (): ReturnType<typeof createScenarioService> =>
-  createScenarioService(createScenarioApiStub())
+  createScenarioService(createStubScenarioApi())
 
 mtest('getAllScenarios lists the scenarios Make answered with', ({ expect }) => {
   expect(createService().getAllScenarios(AUTH)).toBeObservable('-(s|)', {
-    s: [FAKE_SCENARIO],
+    s: [STUB_SCENARIO],
   })
 })
 
 mtest('getScenarioById returns the scenario that was asked for', ({ expect }) => {
   expect(
     createService().getScenarioById({ accessToken: AUTH.accessToken, scenarioId: 1 }),
-  ).toBeObservable('-(s|)', { s: FAKE_SCENARIO })
+  ).toBeObservable('-(s|)', { s: STUB_SCENARIO })
 })
 
 mtest('startScenario reports the scenario as linked', ({ expect }) => {

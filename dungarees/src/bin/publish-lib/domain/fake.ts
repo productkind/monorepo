@@ -1,15 +1,15 @@
 import { createPublishLibBehavior, type PublishLibBehavior } from './behavior.ts'
 
 import {
-  createFakeCliCommands,
+  createStubCliCommands,
   type ExecutedCommand,
-  type FakeSpawnConfig,
-} from '@dungarees/cli-command/fake.ts'
+  type StubSpawnConfig,
+} from '@dungarees/cli-command/stub.ts'
 import { createFakeFileSystem, type FakeFileSystem } from '@dungarees/fs/fake.ts'
 
 export type FakePublishLibWorld = {
   files?: Record<string, string>
-  commands?: FakeSpawnConfig
+  commands?: StubSpawnConfig
 }
 
 export type FakePublishLib = PublishLibBehavior & {
@@ -22,7 +22,7 @@ export const createFakePublishLib = ({
   commands = [],
 }: FakePublishLibWorld = {}): FakePublishLib => {
   const fileSystem = createFakeFileSystem(files)
-  const { npm, executedCommands } = createFakeCliCommands(commands)
+  const { npm, executedCommands } = createStubCliCommands(commands)
   return {
     ...createPublishLibBehavior({ fileSystem, npm }),
     fileSystem,

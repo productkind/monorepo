@@ -557,3 +557,74 @@ test('publishMultiLib skips a package whose version is already on the registry',
 ```
 
 Describe what a caller can observe, never how the code reaches it — the same line rule 5 draws, applied to the name. `and` in a name is worth a second look, since it often means two behaviours are sharing one test, though a single behaviour sometimes needs the word.
+
+## 15. Name a thing after what it is, and its factory after what it returns
+
+A reader gets one chance to guess an import path and a call site. Four conventions for the same idea cost more than any of them saves.
+
+### 15a. A factory is `create` plus the name of the type it returns
+
+The two names move together. When they disagree, the better name wins and the other follows.
+
+```ts
+// Bad — the factory promises a service, the type delivers a generator
+export const createRandomService = (backend: RandomBackend): RandomGenerator => ...
+export const createBroker = (backend: EventBrokerBackend): EventBroker<PAYLOADS> => ...
+```
+
+```ts
+// Good
+export const createRandomGenerator = (backend: RandomBackend): RandomGenerator => ...
+export const createEventBroker = (backend: EventBrokerBackend): EventBroker<PAYLOADS> => ...
+```
+
+The suffix says what kind of thing it is, and there are three: `XClient` wraps a third-party SDK, `XService` is injected through a service bag, and a plain noun is a value you construct. Do not force one suffix onto all three — `Store`, `Datasource` and `KeyValueStore` are better names than `StoreService` would be.
+
+### 15b. A fake is an implementation; a stub answers with what it was handed
+
+They are different things, so the word is not decoration. A **fake** is a working in-memory implementation: state goes in, the same state comes back, and the contract holds. A **stub** returns responses the test supplied, keyed by input, and knows nothing else.
+
+```ts
+// Good — a fake: memfs really stores the file, and reading it back returns it
+export const createFakeFileSystem = (files?: Record<string, string>): FakeFileSystem => ...
+
+// Good — a stub: the caller lists the commands and what each answers with
+export const createStubSpawn = (config: StubSpawnConfig): StubSpawn => ...
+```
+
+Both take the prefix, never a suffix, and the module is named for what it holds — `fake.ts` or `stub.ts`. The types follow the same word: `StubSpawnConfig`, not `FakeSpawnConfig`.
+
+```ts
+// Bad
+export const createNavigationServiceFake = () => ...
+export const createGoogleFormsApiStub = (forms: StubbedForm[]) => ...
+export const FAKE_USER = { id: 1, name: 'Test User' }   // canned data a stub returns
+```
+
+```ts
+// Good
+export const createFakeNavigationService = () => ...
+export const createStubGoogleFormsApi = (forms: StubbedForm[]) => ...
+export const STUB_USER = { id: 1, name: 'Test User' }
+```
+
+### 15c. Types live with what they describe, and never in a `type.ts`
+
+A consumer should not have to guess whether a service type is at `@dungarees/fs/service.ts` or `@dungarees/fs/type.ts`. The service's own types belong beside it in `service.ts`; a cluster big enough to stand alone gets a file named for the cluster.
+
+```ts
+// Bad — every package with a type.ts is a coin toss for whoever imports from it
+import type { FileSystemService } from '@dungarees/fs/service.ts'
+import type { SubProcessService } from '@dungarees/sub-process/type.ts'
+```
+
+```ts
+// Good — the service's types sit with the service
+import type { SubProcessService } from '@dungarees/sub-process/service.ts'
+
+// Good — a cluster large enough to own a file is named for what it holds, not for being types
+import type { RestEndpoint } from '@dungarees/rest/endpoint.ts'
+import type { StdioMessage } from '@dungarees/cli/message.ts'
+```
+
+A name that repeats its package stutters at the call site: `auditDependencies.audit(...)`, not `auditDependencies.auditDependencies(...)`. And two packages must not export the same name for different things — `createSmsSender` and `createEmailSender`, never `createSender` twice.

@@ -1,6 +1,6 @@
 import type { RandomBackend } from './service.ts'
 
-export type FakeRandomBackend = {
+export type StubRandomBackend = {
   backend: RandomBackend
   integerRequests: Array<[number, number]>
   stringRequests: number[]
@@ -8,7 +8,7 @@ export type FakeRandomBackend = {
 
 // Returns the top of the range and a repeated letter, so a test can name the value it expects
 // rather than reading it back out of the subject.
-export const createFakeRandomBackend = (): FakeRandomBackend => {
+export const createStubRandomBackend = (): StubRandomBackend => {
   const integerRequests: Array<[number, number]> = []
   const stringRequests: number[] = []
   const FIRST_LETTER_CHAR_CODE = 97
