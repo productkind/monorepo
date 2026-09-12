@@ -34,7 +34,7 @@ A working screen demonstrates that one flow can run in the conditions you tried.
 
 I'll use one fictional example throughout this article: a product team responsible for a live B2B project-planning product is considering a new customer-facing feature. When a project schedule moves, project leads currently change task dates one by one. The proposed feature would let them select several tasks, shift their dates and review every change before confirming it.
 
-The team uses an AI coding tool to prototype that feature before deciding whether it deserves further design and engineering work. I have made the example fictional because I don't want to turn a real company's product or customer research into a tidy story that never happened.
+The team uses an AI coding tool to prototype that feature before deciding whether it deserves further design and engineering work. I have made the example fictional because I don't want to turn a real company's product or customer research into a neat story that never happened.
 
 ## A new feature that quickly grows beyond one flow
 
@@ -53,7 +53,7 @@ All of those behaviours may be required eventually. None of them tells me whethe
 
 This is where an AI prototype can easily become a small software product. The build grows because the tool can generate more, while the original uncertainty remains untested.
 
-## The question I ask before building the prototype
+## I clarify our goal before building the prototype
 
 For this example, I would write:
 
@@ -101,9 +101,7 @@ I would leave out:
 
 The exclusions are part of the product work. They keep the test small, protect information and make it easier to tell which interaction produced the evidence.
 
-Your company's security, privacy and procurement rules still apply to prototype tools. If you do not know whether a tool may receive company or customer information, stop and ask the colleague responsible for that policy. Invented project data is enough for this first interaction test.
-
-I would also add a review or deletion date. Otherwise a prototype can remain available, gather unofficial users and slowly become a tool someone depends on without an owner or support plan.
+Your company's security, privacy and procurement rules still apply to prototype tools. Invented project data is enough for this first interaction test.
 
 ## The prompt I would give the AI coding tool
 
