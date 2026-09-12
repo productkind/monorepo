@@ -1,5 +1,5 @@
-import { createFakeSpawn } from './fake.ts'
 import { createSubProcessService } from './service.ts'
+import { createStubSpawn } from './stub.ts'
 
 import { mtest } from '@dungarees/core/marbles-vitest.ts'
 
@@ -8,7 +8,7 @@ import { firstValueFrom } from 'rxjs'
 import { expect, test } from 'vitest'
 
 mtest('subProcessService.$stdout', ({ expect }) => {
-  const { spawn: fakeSpawn } = createFakeSpawn([
+  const { spawn: fakeSpawn } = createStubSpawn([
     {
       command: 'ls',
       args: [],
@@ -23,7 +23,7 @@ mtest('subProcessService.$stdout', ({ expect }) => {
 })
 
 mtest('subProcessService.$stderr', ({ expect }) => {
-  const { spawn: fakeSpawn } = createFakeSpawn([
+  const { spawn: fakeSpawn } = createStubSpawn([
     {
       command: 'ls',
       args: [],
@@ -39,7 +39,7 @@ mtest('subProcessService.$stderr', ({ expect }) => {
 })
 
 mtest('subProcessService.$exitCode', ({ expect }) => {
-  const { spawn: fakeSpawn } = createFakeSpawn([
+  const { spawn: fakeSpawn } = createStubSpawn([
     {
       command: 'ls',
       args: [],
@@ -54,7 +54,7 @@ mtest('subProcessService.$exitCode', ({ expect }) => {
 })
 
 mtest('subProcessService.$output', ({ expect }) => {
-  const { spawn: fakeSpawn } = createFakeSpawn([
+  const { spawn: fakeSpawn } = createStubSpawn([
     {
       command: 'ls',
       args: [],
@@ -74,7 +74,7 @@ mtest('subProcessService.$output', ({ expect }) => {
 })
 
 mtest('subProcessService.$output no error', ({ expect }) => {
-  const { spawn: fakeSpawn } = createFakeSpawn([
+  const { spawn: fakeSpawn } = createStubSpawn([
     {
       command: 'ls',
       args: [],
@@ -93,7 +93,7 @@ mtest('subProcessService.$output no error', ({ expect }) => {
 })
 
 mtest('subProcessService $executedCommands', ({ expect }) => {
-  const { spawn: fakeSpawn, $executedCommands } = createFakeSpawn([
+  const { spawn: fakeSpawn, $executedCommands } = createStubSpawn([
     {
       command: 'ls',
       args: [],
@@ -113,7 +113,7 @@ mtest('subProcessService $executedCommands', ({ expect }) => {
 })
 
 test('subProcessService.runAsync', async () => {
-  const { spawn: fakeSpawn, executedCommands } = createFakeSpawn([
+  const { spawn: fakeSpawn, executedCommands } = createStubSpawn([
     {
       command: 'ls',
       args: [],

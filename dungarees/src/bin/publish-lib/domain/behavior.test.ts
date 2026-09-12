@@ -1,7 +1,7 @@
 import { eventCreators } from './events.ts'
 import { createFakePublishLib } from './fake.ts'
 
-import type { ExecutedCommand } from '@dungarees/cli-command/fake.ts'
+import type { ExecutedCommand } from '@dungarees/cli-command/stub.ts'
 import { collectValuesFrom } from '@dungarees/rxjs/util.ts'
 
 import { expect, test } from 'vitest'

@@ -6,7 +6,7 @@ import { createStoreTools } from '@dungarees/store/fake.ts'
 
 import { createMemoryHistory } from 'history'
 
-export const createNavigationServiceFake = (): NavigationService =>
+export const createFakeNavigationService = (): NavigationService =>
   createNavigationService(createMemoryHistory())
 
 export const { createAppStore, getStateReadable } = createStoreTools({

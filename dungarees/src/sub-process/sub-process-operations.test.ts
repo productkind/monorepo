@@ -1,5 +1,5 @@
-import { createFakeSpawn } from './fake.ts'
 import { createSubProcessService } from './service.ts'
+import { createStubSpawn } from './stub.ts'
 import { createSubProcessOperations } from './sub-process-operations.ts'
 
 import { stderr, stdout } from '@dungarees/cli/utils.ts'
@@ -25,7 +25,7 @@ const createEnvironment = (path: string) => {
 }
 
 mtest('subProcessOperations.runSilentUntilError no output if no error', ({ expect }) => {
-  const { spawn: fakeSpawn } = createFakeSpawn([
+  const { spawn: fakeSpawn } = createStubSpawn([
     {
       command: 'ls',
       args: [],
@@ -45,7 +45,7 @@ mtest('subProcessOperations.runSilentUntilError no output if no error', ({ expec
 })
 
 mtest('subProcessOperations.runSilentUntilError both output on error', ({ expect }) => {
-  const { spawn: fakeSpawn } = createFakeSpawn([
+  const { spawn: fakeSpawn } = createStubSpawn([
     {
       command: 'ls',
       args: [],
@@ -72,7 +72,7 @@ mtest(
       '/exec-world.sh': '#!/bin/sh\necho hello',
     })
     fileSystem.chmodSync('/exec-world.sh', OTHERS_EXECUTE)
-    const { spawn } = createFakeSpawn([])
+    const { spawn } = createStubSpawn([])
     const subProcessService = createSubProcessService(spawn)
     const subProcessOperations = createSubProcessOperations({
       subProcessService,
@@ -88,7 +88,7 @@ mtest('subProcessOperations.isExecutableFile is false if directory', ({ expect }
   const fileSystem = createFakeFileSystem()
   fileSystem.mkdirSync('/exec-world')
   fileSystem.chmodSync('/exec-world', ALL_EXECUTE)
-  const { spawn } = createFakeSpawn([])
+  const { spawn } = createStubSpawn([])
   const subProcessService = createSubProcessService(spawn)
   const subProcessOperations = createSubProcessOperations({
     subProcessService,
@@ -106,7 +106,7 @@ mtest(
       '/exec-world.sh': '#!/bin/sh\necho hello',
     })
     fileSystem.chmodSync('/exec-world.sh', NO_PERMISSIONS)
-    const { spawn } = createFakeSpawn([])
+    const { spawn } = createStubSpawn([])
     const subProcessService = createSubProcessService(spawn)
     const subProcessOperations = createSubProcessOperations({
       subProcessService,
@@ -135,7 +135,7 @@ test('subProcessOperations.isExecutableFile is false for user-executable file wh
     ;(process as unknown as { getuid?: (() => number) | undefined }).getuid = () => 2000
     ;(process as unknown as { getgid?: (() => number) | undefined }).getgid = () => 2000
 
-    const { spawn } = createFakeSpawn([])
+    const { spawn } = createStubSpawn([])
     const subProcessService = createSubProcessService(spawn)
     const subProcessOperations = createSubProcessOperations({
       subProcessService,
@@ -163,7 +163,7 @@ test('subProcessOperations.isExecutableFile is true for user-executable file whe
     })
     fileSystem.chmodSync('/exec.sh', USER_EXECUTE)
 
-    const { spawn } = createFakeSpawn([])
+    const { spawn } = createStubSpawn([])
     const subProcessService = createSubProcessService(spawn)
     const subProcessOperations = createSubProcessOperations({
       subProcessService,
@@ -183,7 +183,7 @@ test('subProcessOperations.isExecutable is true for a command found in PATH', as
     '/usr/bin/npm': '#!/bin/sh',
   })
   fileSystem.chmodSync('/usr/bin/npm', ALL_EXECUTE)
-  const { spawn } = createFakeSpawn([])
+  const { spawn } = createStubSpawn([])
   const subProcessService = createSubProcessService(spawn)
   const subProcessOperations = createSubProcessOperations({
     subProcessService,
@@ -199,7 +199,7 @@ test('subProcessOperations.isExecutable is false for a command not found in PATH
     '/usr/bin/npm': '#!/bin/sh',
   })
   fileSystem.chmodSync('/usr/bin/npm', ALL_EXECUTE)
-  const { spawn } = createFakeSpawn([])
+  const { spawn } = createStubSpawn([])
   const subProcessService = createSubProcessService(spawn)
   const subProcessOperations = createSubProcessOperations({
     subProcessService,
@@ -215,7 +215,7 @@ test('subProcessOperations.isExecutable is false for a command in PATH that is n
     '/usr/bin/npm': '#!/bin/sh',
   })
   fileSystem.chmodSync('/usr/bin/npm', NO_PERMISSIONS)
-  const { spawn } = createFakeSpawn([])
+  const { spawn } = createStubSpawn([])
   const subProcessService = createSubProcessService(spawn)
   const subProcessOperations = createSubProcessOperations({
     subProcessService,
@@ -231,7 +231,7 @@ test('subProcessOperations.isExecutable delegates to isExecutableFile for paths 
     '/usr/bin/npm': '#!/bin/sh',
   })
   fileSystem.chmodSync('/usr/bin/npm', ALL_EXECUTE)
-  const { spawn } = createFakeSpawn([])
+  const { spawn } = createStubSpawn([])
   const subProcessService = createSubProcessService(spawn)
   const subProcessOperations = createSubProcessOperations({
     subProcessService,
@@ -248,7 +248,7 @@ test('subProcessOperations.isExecutable finds command in second PATH directory',
   })
   fileSystem.mkdirSync('/usr/bin')
   fileSystem.chmodSync('/usr/local/bin/npm', ALL_EXECUTE)
-  const { spawn } = createFakeSpawn([])
+  const { spawn } = createStubSpawn([])
   const subProcessService = createSubProcessService(spawn)
   const subProcessOperations = createSubProcessOperations({
     subProcessService,
@@ -261,7 +261,7 @@ test('subProcessOperations.isExecutable finds command in second PATH directory',
 
 test('subProcessOperations.isExecutable is false for empty PATH', async () => {
   const fileSystem = createFakeFileSystem()
-  const { spawn } = createFakeSpawn([])
+  const { spawn } = createStubSpawn([])
   const subProcessService = createSubProcessService(spawn)
   const subProcessOperations = createSubProcessOperations({
     subProcessService,
@@ -278,7 +278,7 @@ test('subProcessOperations.runValidated runs command when executable and cwd acc
   })
   fileSystem.chmodSync('/usr/bin/ls', ALL_EXECUTE)
   fileSystem.mkdirSync('/work')
-  const { spawn } = createFakeSpawn([
+  const { spawn } = createStubSpawn([
     {
       command: 'ls',
       args: [],
@@ -303,7 +303,7 @@ test('subProcessOperations.runValidated runs command when executable and cwd acc
 test('subProcessOperations.runValidated returns error when command is not executable', async () => {
   const fileSystem = createFakeFileSystem()
   fileSystem.mkdirSync('/work')
-  const { spawn } = createFakeSpawn([])
+  const { spawn } = createStubSpawn([])
   const subProcessService = createSubProcessService(spawn)
   const subProcessOperations = createSubProcessOperations({
     subProcessService,
@@ -325,7 +325,7 @@ test('subProcessOperations.runValidated returns error when cwd is not accessible
     '/usr/bin/ls': '#!/bin/sh',
   })
   fileSystem.chmodSync('/usr/bin/ls', ALL_EXECUTE)
-  const { spawn } = createFakeSpawn([])
+  const { spawn } = createStubSpawn([])
   const subProcessService = createSubProcessService(spawn)
   const subProcessOperations = createSubProcessOperations({
     subProcessService,
@@ -344,7 +344,7 @@ test('subProcessOperations.runValidated returns error when cwd is not accessible
 
 test('subProcessOperations.runValidated returns both errors when command and cwd are invalid', async () => {
   const fileSystem = createFakeFileSystem()
-  const { spawn } = createFakeSpawn([])
+  const { spawn } = createStubSpawn([])
   const subProcessService = createSubProcessService(spawn)
   const subProcessOperations = createSubProcessOperations({
     subProcessService,
@@ -364,7 +364,7 @@ test('subProcessOperations.runValidated runs without cwd validation when no cwd 
     '/usr/bin/ls': '#!/bin/sh',
   })
   fileSystem.chmodSync('/usr/bin/ls', ALL_EXECUTE)
-  const { spawn } = createFakeSpawn([
+  const { spawn } = createStubSpawn([
     {
       command: 'ls',
       args: [],
@@ -392,7 +392,7 @@ test('subProcessOperations.runSilentUntilErrorValidated returns no output on suc
   })
   fileSystem.chmodSync('/usr/bin/ls', ALL_EXECUTE)
   fileSystem.mkdirSync('/work')
-  const { spawn } = createFakeSpawn([
+  const { spawn } = createStubSpawn([
     {
       command: 'ls',
       args: [],
@@ -415,7 +415,7 @@ test('subProcessOperations.runSilentUntilErrorValidated returns no output on suc
 test('subProcessOperations.runSilentUntilErrorValidated returns stderr error for non-executable command', async () => {
   const fileSystem = createFakeFileSystem()
   fileSystem.mkdirSync('/work')
-  const { spawn } = createFakeSpawn([])
+  const { spawn } = createStubSpawn([])
   const subProcessService = createSubProcessService(spawn)
   const subProcessOperations = createSubProcessOperations({
     subProcessService,
@@ -433,7 +433,7 @@ test('subProcessOperations.runSilentUntilErrorValidated returns stderr error for
     '/usr/bin/ls': '#!/bin/sh',
   })
   fileSystem.chmodSync('/usr/bin/ls', ALL_EXECUTE)
-  const { spawn } = createFakeSpawn([])
+  const { spawn } = createStubSpawn([])
   const subProcessService = createSubProcessService(spawn)
   const subProcessOperations = createSubProcessOperations({
     subProcessService,
@@ -448,7 +448,7 @@ test('subProcessOperations.runSilentUntilErrorValidated returns stderr error for
 
 test('subProcessOperations.runSilentUntilErrorValidated returns both errors when command and cwd are invalid', async () => {
   const fileSystem = createFakeFileSystem()
-  const { spawn } = createFakeSpawn([])
+  const { spawn } = createStubSpawn([])
   const subProcessService = createSubProcessService(spawn)
   const subProcessOperations = createSubProcessOperations({
     subProcessService,
@@ -472,7 +472,7 @@ test('subProcessOperations.runSilentUntilErrorValidated shows all output on proc
   })
   fileSystem.chmodSync('/usr/bin/ls', ALL_EXECUTE)
   fileSystem.mkdirSync('/work')
-  const { spawn } = createFakeSpawn([
+  const { spawn } = createStubSpawn([
     {
       command: 'ls',
       args: [],

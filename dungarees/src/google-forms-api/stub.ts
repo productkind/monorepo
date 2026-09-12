@@ -9,7 +9,7 @@ export type StubbedForm = {
   answers: FormAnswers
 }
 
-export const createGoogleFormsApiStub = (forms: StubbedForm[]): GoogleFormsAPIClient => {
+export const createStubGoogleFormsApi = (forms: StubbedForm[]): GoogleFormsAPIClient => {
   const endpoints = forms.map(({ formId, answers }): StubEndpoint<GoogleFormsAPI> => ({
     request: createSaveAnswersRequest({ formId, body: answers }),
     response: '',

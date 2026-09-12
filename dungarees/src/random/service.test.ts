@@ -1,6 +1,6 @@
-import { createFakeRandomBackend } from './fake.ts'
 import { createNodeCryptoBackend } from './node-crypto.ts'
 import { createRandomGenerator } from './service.ts'
+import { createStubRandomBackend } from './stub.ts'
 
 import { expect, test } from 'vitest'
 
@@ -101,7 +101,7 @@ test('generateInteger reports a failing backend as a random integer failure', ()
 })
 
 test('the fake backend records the ranges it was asked for', () => {
-  const { backend, integerRequests } = createFakeRandomBackend()
+  const { backend, integerRequests } = createStubRandomBackend()
   const random = createRandomGenerator(backend)
 
   random.generateInteger({ min: 10, max: 20 })
@@ -110,7 +110,7 @@ test('the fake backend records the ranges it was asked for', () => {
 })
 
 test('the fake backend records the lengths it was asked for', () => {
-  const { backend, stringRequests } = createFakeRandomBackend()
+  const { backend, stringRequests } = createStubRandomBackend()
   const random = createRandomGenerator(backend)
 
   random.generateString(8)
@@ -119,14 +119,14 @@ test('the fake backend records the lengths it was asked for', () => {
 })
 
 test('the fake backend returns a string of the requested length', () => {
-  const { backend } = createFakeRandomBackend()
+  const { backend } = createStubRandomBackend()
   const random = createRandomGenerator(backend)
 
   expect(random.generateString(4)).toBe('aaaa')
 })
 
 test('the fake backend returns a different character on each call', () => {
-  const { backend } = createFakeRandomBackend()
+  const { backend } = createStubRandomBackend()
   const random = createRandomGenerator(backend)
 
   expect([random.generateString(2), random.generateString(2)]).toEqual(['aa', 'bb'])
