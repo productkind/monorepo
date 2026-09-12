@@ -1,8 +1,21 @@
-import { isWritableRawKeyValueStore, type RawKeyValueStore, type Schemas } from './type.ts'
+import { isWritableRawKeyValueStore, type RawKeyValueStore } from './raw-store.ts'
 
 import type { GetSchemaType } from '@dungarees/zod/zod.ts'
 
 import type { ZodType } from 'zod'
+
+export type KeyValueStoreCommon<STORE extends KeyValueStoreCommon_> = STORE
+
+export type KeyValueStoreWithValidator<STORE extends KeyValueStoreWithValidator_> = STORE
+
+type KeyValueStoreCommon_ = {
+  get: (key: never) => unknown
+  set: (key: never, value: never) => void
+}
+
+type KeyValueStoreWithValidator_ = KeyValueStoreCommon_ & { validate: () => void }
+
+export type Schemas = Record<string, ZodType<unknown>>
 
 type Readable<SCHEMAS extends Schemas> = {
   readonly _schemas?: SCHEMAS

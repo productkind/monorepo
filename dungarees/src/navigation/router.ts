@@ -1,4 +1,4 @@
-import type { Location } from './type.ts'
+import type { Location } from './service.ts'
 
 import { createCausedError } from '@dungarees/core/error.ts'
 

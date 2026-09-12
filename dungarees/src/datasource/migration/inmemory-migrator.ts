@@ -1,11 +1,11 @@
-import type { AnySchema, Datasource } from '../type.ts'
+import type { AnySchema, Datasource } from '../service.ts'
 import { getMigrationProvider } from './provider.ts'
 import type {
   MigrationDirection,
   MigrationRunner,
   MigrationStatus,
   MigratorConfig,
-} from './type.ts'
+} from './service.ts'
 
 import {
   type Migration,

@@ -1,8 +1,8 @@
 import { NAVIGATION_NAMESPACE } from './config.ts'
-import type { Location } from './type.ts'
+import type { Location } from './service.ts'
 
 import { createStoreSlice, identityReducer } from '@dungarees/store/service.ts'
-import type { NamespacedState, NamespacedStoreEvent } from '@dungarees/store/type.ts'
+import type { NamespacedState, NamespacedStoreEvent } from '@dungarees/store/service.ts'
 
 export type NavigationState = Location
 

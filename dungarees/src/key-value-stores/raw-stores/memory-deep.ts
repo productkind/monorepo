@@ -1,4 +1,4 @@
-import type { WriteableRawKeyValueStore } from '../type.ts'
+import type { WriteableRawKeyValueStore } from '../raw-store.ts'
 
 type NestedStore = Record<string, unknown>
 

@@ -1,4 +1,4 @@
-import type { IgnoreForTests, MigrationScripts } from './type.ts'
+import type { IgnoreForTests, MigrationScripts } from './service.ts'
 
 import type { Migration } from 'kysely/migration'
 

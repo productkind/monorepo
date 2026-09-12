@@ -1,6 +1,6 @@
 import { createStoreTools, STORE_INIT } from './fake.ts'
 import { createStoreSlice } from './service.ts'
-import type { Reducer } from './type.ts'
+import type { Reducer } from './service.ts'
 
 import type { DomainEvent } from '@dungarees/core/event.ts'
 import { mtest } from '@dungarees/core/marbles-vitest.ts'

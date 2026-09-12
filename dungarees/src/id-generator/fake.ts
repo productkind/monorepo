@@ -1,4 +1,4 @@
-import type { IdGeneratorBackend } from './type.ts'
+import type { IdGeneratorBackend } from './service.ts'
 
 export type FakeIdGeneratorBackend = {
   backend: IdGeneratorBackend

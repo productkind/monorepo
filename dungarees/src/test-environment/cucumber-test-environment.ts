@@ -1,5 +1,5 @@
 import { createTestEnvironment } from './test-environment.ts'
-import type { ServiceConfig } from './type.ts'
+import type { ServiceConfig } from './test-environment.ts'
 import type { TestEnvironmentWorld } from './world.ts'
 
 import {

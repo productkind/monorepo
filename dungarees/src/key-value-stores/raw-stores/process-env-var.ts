@@ -1,4 +1,4 @@
-import type { WriteableRawKeyValueStore } from '../type.ts'
+import type { WriteableRawKeyValueStore } from '../raw-store.ts'
 
 export const createProcessEnvVarRawKeyValueStore = (): WriteableRawKeyValueStore<
   string | undefined

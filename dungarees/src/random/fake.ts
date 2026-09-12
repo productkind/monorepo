@@ -1,4 +1,4 @@
-import type { RandomBackend } from './type.ts'
+import type { RandomBackend } from './service.ts'
 
 export type FakeRandomBackend = {
   backend: RandomBackend

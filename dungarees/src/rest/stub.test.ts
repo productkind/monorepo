@@ -1,5 +1,7 @@
+import type { RestEndpoint } from './endpoint.ts'
+import type { Fetcher, RestClient } from './service.ts'
+import type { StubEndpoint } from './stub.ts'
 import { createStubRestClient } from './stub.ts'
-import type { Fetcher, RestClient, RestEndpoint, StubEndpoint } from './type.ts'
 
 import { mtest } from '@dungarees/core/marbles-vitest.ts'
 

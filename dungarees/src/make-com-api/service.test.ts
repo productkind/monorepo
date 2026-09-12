@@ -6,9 +6,9 @@ import {
   MAKE_COM_BASE_URL,
   SCENARIO_BASE_PATHNAME,
 } from './api.ts'
+import { SCENARIO_ACTIONS } from './scenario.ts'
 import { createScenarioService } from './service.ts'
 import { createScenarioApiStub, FAKE_SCENARIO } from './stub.ts'
-import { SCENARIO_ACTIONS } from './type.ts'
 
 import { mtest } from '@dungarees/core/marbles-vitest.ts'
 

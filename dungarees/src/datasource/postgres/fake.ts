@@ -1,4 +1,4 @@
-import type { ConnectionBuilder, Datasource } from '../type.ts'
+import type { ConnectionBuilder, Datasource } from '../service.ts'
 
 import { CamelCasePlugin } from 'kysely'
 import { randomUUID } from 'node:crypto'

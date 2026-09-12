@@ -1,8 +1,12 @@
-import type { Location } from './type.ts'
-
 import type { History, Location as HistoryLocation } from 'history'
 import { fromEventPattern, merge, type Observable, of } from 'rxjs'
 import { delay } from 'rxjs/operators'
+
+export type Location = {
+  pathname: string
+  search: string
+  hash: string
+}
 
 export type NavigationService = {
   getLocation: () => Location

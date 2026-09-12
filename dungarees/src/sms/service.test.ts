@@ -1,7 +1,7 @@
 import { createFakeSMSBackend } from './fake.ts'
 import type { PhoneNumber } from './phone-number.ts'
 import { createSmsSender } from './service.ts'
-import type { SMSBackend } from './type.ts'
+import type { SMSBackend } from './service.ts'
 
 import { addErrorMethodsToFake } from '@dungarees/core/fake.ts'
 

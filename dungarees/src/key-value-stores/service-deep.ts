@@ -1,9 +1,9 @@
 import {
   isWritableRawKeyValueStore,
   type RawKeyValueStore,
-  type Schemas,
   type WriteableRawKeyValueStore,
-} from './type.ts'
+} from './raw-store.ts'
+import type { Schemas } from './service.ts'
 
 import type { GetAllPaths, GetValueByPath } from '@dungarees/core/type-util.ts'
 import { split } from '@dungarees/core/util.ts'

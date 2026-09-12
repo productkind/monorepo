@@ -1,4 +1,4 @@
-import type { EventBrokerBackend } from './type.ts'
+import type { EventBrokerBackend } from './service.ts'
 
 type Subscription = [string, (args: never) => void]
 

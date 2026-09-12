@@ -1,4 +1,4 @@
-import type { ReadableRawKeyValueStore } from '../type.ts'
+import type { ReadableRawKeyValueStore } from '../raw-store.ts'
 
 export const createImportMetaEnvVarRawKeyValueStore = (): ReadableRawKeyValueStore<
   string | undefined

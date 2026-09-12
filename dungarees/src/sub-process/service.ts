@@ -1,6 +1,44 @@
-import type { ProcessServiceOutput, Spawn, SubProcessService } from './type.ts'
+import { type ChildProcess, type SpawnOptions } from 'node:child_process'
+import {
+  combineLatest,
+  firstValueFrom,
+  map,
+  merge,
+  type Observable,
+  scan,
+  startWith,
+  Subject,
+} from 'rxjs'
 
-import { combineLatest, firstValueFrom, map, merge, scan, startWith, Subject } from 'rxjs'
+export type Spawn = (command: string, args: string[], options: SpawnOptions) => ChildProcess
+
+export type ProcessServiceOutput = {
+  stdout: string
+  stderr: string
+  exitCode: number | undefined
+}
+
+export type RunOptions = {
+  cwd?: string
+}
+
+export type SubProcessService = {
+  run: (
+    command: string,
+    args?: string[],
+    options?: RunOptions,
+  ) => {
+    stdout$: Observable<string>
+    stderr$: Observable<string>
+    exitCode$: Observable<number | undefined>
+    output$: Observable<ProcessServiceOutput>
+  }
+  runAsync: (
+    command: string,
+    args?: string[],
+    options?: RunOptions,
+  ) => Promise<ProcessServiceOutput>
+}
 
 export const createSubProcessService = (spawn: Spawn): SubProcessService => {
   const run: SubProcessService['run'] = (command, args, options = {}) => {

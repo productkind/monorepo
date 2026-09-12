@@ -1,7 +1,7 @@
-import type { FormAnswers } from './type.ts'
+import type { FormAnswers } from './service.ts'
 
+import type { RestEndpoint } from '@dungarees/rest/endpoint.ts'
 import { createHtmlRestClient } from '@dungarees/rest/html.ts'
-import type { RestEndpoint } from '@dungarees/rest/type.ts'
 
 export const GOOGLE_FORMS_BASE_URL = 'https://docs.google.com'
 

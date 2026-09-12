@@ -1,8 +1,8 @@
 import { createFeatureFlipperService } from './service.ts'
-import type { FeatureFlipperService } from './type.ts'
+import type { FeatureFlipperService } from './service.ts'
 
+import type { WriteableRawKeyValueStore } from '@dungarees/key-value-stores/raw-store.ts'
 import { createMemoryRawKeyValueStore } from '@dungarees/key-value-stores/raw-stores/memory.ts'
-import type { WriteableRawKeyValueStore } from '@dungarees/key-value-stores/type.ts'
 
 import { expect, expectTypeOf, test } from 'vitest'
 

@@ -1,5 +1,5 @@
 import { NODE_CONTAINER_IMAGE } from '../constants.ts'
-import type { Interactor } from '../type.ts'
+import type { Interactor } from '../test-environment.ts'
 
 import { ReplaySubject } from 'rxjs'
 import type { StartedNetwork, StartedTestContainer } from 'testcontainers'

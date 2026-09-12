@@ -1,7 +1,12 @@
-import type { AuthSearchParams, Scenario, ScenarioAction, ScenarioActionResponse } from './type.ts'
+import type {
+  AuthSearchParams,
+  Scenario,
+  ScenarioAction,
+  ScenarioActionResponse,
+} from './scenario.ts'
 
+import type { AUTH_HEADER, RestEndpoint } from '@dungarees/rest/endpoint.ts'
 import { createJsonRestClient } from '@dungarees/rest/json.ts'
-import type { AUTH_HEADER, RestEndpoint } from '@dungarees/rest/type.ts'
 
 export const MAKE_COM_BASE_URL = 'https://eu2.make.com'
 

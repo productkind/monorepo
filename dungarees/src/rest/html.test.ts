@@ -1,6 +1,6 @@
+import type { RestEndpoint } from './endpoint.ts'
 import { createHtmlRestClient, htmlFetcher } from './html.ts'
 import { startTestServer, type TestServer } from './test-server.ts'
-import type { RestEndpoint } from './type.ts'
 
 import { firstValueFrom } from 'rxjs'
 import { afterEach, expect, test } from 'vitest'

@@ -1,4 +1,4 @@
-import type { WriteableRawKeyValueStore } from '../type.ts'
+import type { WriteableRawKeyValueStore } from '../raw-store.ts'
 
 // The Storage is a parameter so a test can hand one over: there is no localStorage outside a
 // browser, and reaching for the global directly would make this store untestable in Node.

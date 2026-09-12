@@ -1,4 +1,4 @@
-import { type Interactor } from '../type.ts'
+import { type Interactor } from '../test-environment.ts'
 
 import { EMPTY } from 'rxjs'
 import { Network, type StartedNetwork } from 'testcontainers'

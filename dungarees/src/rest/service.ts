@@ -1,16 +1,34 @@
 import type {
-  Fetcher,
-  FetcherConfigArg,
-  GetParsedType,
   GetRequestType,
   GetResponseType,
   RestEndpoint,
   RestEndpointRequest,
-} from './type.ts'
+} from './endpoint.ts'
 
 import { stringifyUrl } from '@dungarees/core/url.ts'
 
 import { defer, type Observable } from 'rxjs'
+
+export type RestClient<
+  FETCHER extends Fetcher,
+  API extends RestEndpoint<RestEndpointRequest, GetParsedType<FETCHER>>,
+> = <REQUEST extends RestEndpointRequest>(
+  request: REQUEST,
+) => Observable<GetResponseType<API, REQUEST>>
+
+export type Fetcher<PARSED_TYPE = unknown> = (
+  url: string,
+  request: FetcherConfigArg,
+) => Promise<PARSED_TYPE>
+
+export type FetcherConfigArg = {
+  method: string
+  headers: Record<string, string>
+  body: unknown
+}
+
+export type GetParsedType<FETCHER extends Fetcher> =
+  FETCHER extends Fetcher<infer PARSED_TYPE> ? PARSED_TYPE : never
 
 type ParsedBaseUrl = {
   protocol: string

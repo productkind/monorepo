@@ -1,5 +1,5 @@
 import { getMigrationProvider } from './provider.ts'
-import type { MigrationRunner, MigratorConfig } from './type.ts'
+import type { MigrationRunner, MigratorConfig } from './service.ts'
 
 import { Migrator as KyselyMigrator } from 'kysely/migration'
 

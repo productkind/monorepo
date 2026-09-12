@@ -1,4 +1,4 @@
-import type { FolderRef, GoogleDriveListOptions } from './type.ts'
+import type { FolderRef, GoogleDriveListOptions } from './service.ts'
 
 export const FOLDER_MIME_TYPE = 'application/vnd.google-apps.folder'
 

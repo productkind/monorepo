@@ -1,11 +1,11 @@
-import { IdentityContext } from './identity-context.ts'
 import type {
   BehaviorByName,
   BehaviorName,
   BehaviorsTools,
   LoadBehaviorsByName,
   QwikApplicationConfig,
-} from './type.ts'
+} from './application.ts'
+import { IdentityContext } from './identity-context.ts'
 
 import {
   type QRL,

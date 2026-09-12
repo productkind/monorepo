@@ -1,9 +1,37 @@
 import { toBatches } from './batch.ts'
 import { formatBigQueryError } from './error.ts'
 import { toNewlineDelimitedJson } from './rows.ts'
-import type { BigQueryClient, BigQueryConfig, BigQueryQueryArgs, BigQueryRow } from './type.ts'
 
 import { BigQuery, type Table } from '@google-cloud/bigquery'
+
+export type BigQueryConfig = {
+  projectId?: string
+}
+
+export type BigQueryQueryOptions = {
+  location?: string
+}
+
+export type BigQueryRow = Record<string, unknown>
+
+export type BigQueryQueryArgs = {
+  sql: string
+  params?: BigQueryRow
+  options?: BigQueryQueryOptions
+}
+
+export type BigQueryRowsArgs = {
+  dataset: string
+  table: string
+  rows: BigQueryRow[]
+}
+
+export type BigQueryClient = {
+  query: <ROW = BigQueryRow>(args: BigQueryQueryArgs) => Promise<ROW[]>
+  appendRows: (args: BigQueryRowsArgs) => Promise<void>
+  // Given no rows this empties the table, rather than leaving what was there untouched.
+  replaceRows: (args: BigQueryRowsArgs) => Promise<void>
+}
 
 const LOAD_JOB_METADATA = {
   sourceFormat: 'NEWLINE_DELIMITED_JSON',

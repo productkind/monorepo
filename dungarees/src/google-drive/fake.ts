@@ -1,5 +1,5 @@
 import { FOLDER_MIME_TYPE } from './query.ts'
-import type { GoogleDriveClient, GoogleDriveFile } from './type.ts'
+import type { GoogleDriveClient, GoogleDriveFile } from './service.ts'
 
 export type StoredFile = GoogleDriveFile & {
   parents: string[]

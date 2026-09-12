@@ -1,5 +1,5 @@
 import { createSubProcessService } from './service.js'
-import { type Spawn, SubProcessService } from './type.ts'
+import { type Spawn, SubProcessService } from './service.ts'
 
 import { assertDefined } from '@dungarees/core/util.ts'
 

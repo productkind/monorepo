@@ -1,6 +1,6 @@
+import type { ReadableRawKeyValueStore } from './raw-store.ts'
 import { createMemoryRawKeyValueStore } from './raw-stores/memory.ts'
 import { createTransformedStore } from './service-transform.ts'
-import type { ReadableRawKeyValueStore } from './type.ts'
 
 import { expect, test } from 'vitest'
 

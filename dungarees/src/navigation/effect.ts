@@ -8,7 +8,7 @@ import {
 } from './store.ts'
 
 import type { DomainEvent } from '@dungarees/core/event.ts'
-import type { Effect } from '@dungarees/store/type.ts'
+import type { Effect } from '@dungarees/store/effect.ts'
 
 import { of } from 'rxjs'
 import { filter, map, switchMap, tap } from 'rxjs/operators'

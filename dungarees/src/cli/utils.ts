@@ -1,4 +1,4 @@
-import type { LogLevel, StdioErrorMessage, StdioOutputMessage } from './type.ts'
+import type { LogLevel, StdioErrorMessage, StdioOutputMessage } from './message.ts'
 
 export const stdout = (message: string, level: LogLevel = 'info'): StdioOutputMessage => ({
   type: 'stdout',

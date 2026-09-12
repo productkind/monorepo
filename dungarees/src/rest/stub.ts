@@ -1,8 +1,17 @@
-import type { GetResponseType, RestEndpoint, RestEndpointRequest, StubEndpoint } from './type.ts'
+import type { GetResponseType, RestEndpoint, RestEndpointRequest } from './endpoint.ts'
 
 import { isDeepEqual } from '@dungarees/core/util.ts'
 
 import { delay, mergeMap, type Observable, of, throwError, timer } from 'rxjs'
+
+export type StubEndpoint<API extends RestEndpoint> =
+  API extends RestEndpoint<infer REQUEST, infer RESPONSE>
+    ? {
+        request: REQUEST
+        response: RESPONSE
+        delay?: number
+      }
+    : never
 
 export const DEFAULT_STUB_DELAY = 1
 

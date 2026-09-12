@@ -1,5 +1,5 @@
 import { createStore } from './service.ts'
-import type { Reducer, ReducersObject, StateReadable, Store } from './type.ts'
+import type { Reducer, ReducersObject, StateReadable, Store } from './service.ts'
 
 import type { DomainEvent } from '@dungarees/core/event.ts'
 import type {

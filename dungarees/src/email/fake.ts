@@ -1,6 +1,6 @@
 import type { EmailAddress } from './email-address.ts'
 import { isVerificationApproved } from './sendgrid.ts'
-import type { Email, EmailBackend, VerificationAttempt, VerificationRequest } from './type.ts'
+import type { Email, EmailBackend, VerificationAttempt, VerificationRequest } from './service.ts'
 
 import { of } from 'rxjs'
 

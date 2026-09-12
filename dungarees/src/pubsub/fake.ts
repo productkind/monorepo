@@ -1,5 +1,5 @@
 import { serializeData } from './message.ts'
-import type { PublishMessage, PubSubClient } from './type.ts'
+import type { PublishMessage, PubSubClient } from './service.ts'
 
 export type PublishedMessage = PublishMessage & { topicName: string }
 

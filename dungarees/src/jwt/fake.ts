@@ -1,4 +1,4 @@
-import type { JWTPayload, JwtService, VerifiedPayload } from './type.ts'
+import type { JWTPayload, JwtService, VerifiedPayload } from './service.ts'
 
 import { isDeepEqual } from '@dungarees/core/util.ts'
 

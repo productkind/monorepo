@@ -5,15 +5,24 @@ import {
   type ScenarioApiClient,
 } from './api.ts'
 import {
+  type AuthParams,
+  type AuthSearchParams,
+  type Scenario,
   SCENARIO_ACTIONS,
   type ScenarioAction,
   type ScenarioActionResponse,
   type ScenarioRequestParams,
-  type ScenarioService,
-} from './type.ts'
+} from './scenario.ts'
 
 import type { Observable } from 'rxjs'
 import { map } from 'rxjs/operators'
+
+export type ScenarioService = {
+  getAllScenarios: (params: AuthParams & AuthSearchParams) => Observable<Scenario[]>
+  getScenarioById: (params: ScenarioRequestParams) => Observable<Scenario | undefined>
+  startScenario: (params: ScenarioRequestParams) => Observable<ScenarioActionResponse | undefined>
+  stopScenario: (params: ScenarioRequestParams) => Observable<ScenarioActionResponse | undefined>
+}
 
 export const createScenarioService = (scenarioApiClient: ScenarioApiClient): ScenarioService => {
   const runAction = (
