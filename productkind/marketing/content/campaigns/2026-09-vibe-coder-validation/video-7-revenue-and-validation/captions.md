@@ -31,7 +31,7 @@ What do you find harder: finding users or choosing a price?
 
 **Pinned comment:**
 
-Join the Building Apps with AI waitlist: https://littleparrot.app/guides/building-apps-with-ai?utm_source=tiktok&utm_campaign=vibe-coded-app-26&utm_content=you-launched-three-people-visited
+https://littleparrot.app/guides/building-apps-with-ai?utm_source=tiktok&utm_campaign=vibe-coded-app-26&utm_content=you-launched-three-people-visited
 
 ## Instagram Reels
 
