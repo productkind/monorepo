@@ -82,13 +82,8 @@ export default defineVideo({
       // One drop at a steady rate, against section 5's stack that keeps growing.
       text: 'Some costs stay fixed.',
       visual: gif({
-        src: 'section-04-drop-steady-ripple.gif',
-        source: {
-          provider: 'giphy',
-          id: 'VQ5vmfZWGnXqCH5vul',
-          search: 'anchor dropping into water',
-        },
-        color: '#3b43cb',
+        src: 'section-04-tied.gif',
+        source: { provider: 'giphy', id: 'WsMfyF0KR0eGsxrwQZ', search: 'tied' },
         place: 'above-captions',
       }),
     },
@@ -160,12 +155,9 @@ export default defineVideo({
     {
       text: 'and which service will charge you first.',
       visual: gif({
-        src: 'section-10-checkered-flag-first.gif',
-        source: {
-          provider: 'giphy',
-          id: 'l4KhZ1DhTTUbsak8M',
-          search: 'checkered flag race finish line illustration',
-        },
+        src: 'section-10-pay.gif',
+        source: { provider: 'giphy', id: 'o56hISbxCRipgSrIB0', search: 'pay' },
+        playbackRate: 0.75,
         place: 'above-captions',
       }),
       endsParagraph: true,

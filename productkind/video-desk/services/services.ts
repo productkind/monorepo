@@ -1,5 +1,5 @@
 import type { FileSystemService } from '@dungarees/fs/service.ts'
-import type { SubProcessService } from '@dungarees/sub-process/type.ts'
+import type { SubProcessService } from '@dungarees/sub-process/service.ts'
 
 /**
  * What the desk needs from the world. Each field is the boundary as it is: the pixel work is a
