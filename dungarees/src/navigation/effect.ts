@@ -19,17 +19,17 @@ import { filter, map, switchMap, tap } from 'rxjs/operators'
 const isAppNavigation = (event: DomainEvent): event is NavigationEventAppNavigation =>
   event.type === `${NAVIGATION_NAMESPACE}/appNavigation`
 
-export type NavigationEffect<APP_STORE_STATE, APP_STORE_EVENT extends DomainEvent> = Effect<
-  APP_STORE_STATE,
+export type NavigationEffect<SLICED_STATE, APP_STORE_EVENT extends DomainEvent> = Effect<
+  SLICED_STATE,
   APP_STORE_EVENT | NavigationEvent,
   'handleAppNavigation',
   'handlePlatformNavigation',
   NavigationEvent
 >
 
-export const navigationEffect = <APP_STORE_STATE, APP_STORE_EVENT extends DomainEvent = never>(
+export const navigationEffect = <SLICED_STATE, APP_STORE_EVENT extends DomainEvent = never>(
   navigationService: NavigationService,
-): NavigationEffect<APP_STORE_STATE, APP_STORE_EVENT> => ({
+): NavigationEffect<SLICED_STATE, APP_STORE_EVENT> => ({
   handleAppNavigation: (event$) =>
     event$.pipe(
       filter(isAppNavigation),

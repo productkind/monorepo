@@ -14,4 +14,4 @@ export const { createAppStore, getStateReadable } = createStoreTools({
   reducer: navigationReducer,
 })
 
-export const baseStore = { [NAVIGATION_NAMESPACE]: navigationReducer }
+export const navigationReducers = { [NAVIGATION_NAMESPACE]: navigationReducer }

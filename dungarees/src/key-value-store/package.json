@@ -1,5 +1,5 @@
 {
-  "name": "@dungarees/key-value-stores",
+  "name": "@dungarees/key-value-store",
   "engines": {
     "node": ">=25.0.0"
   },

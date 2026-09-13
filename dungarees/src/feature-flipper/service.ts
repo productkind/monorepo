@@ -1,8 +1,8 @@
 import { getIdentityValue } from './identity.ts'
 
-import type { ReadableRawKeyValueStore } from '@dungarees/key-value-stores/raw-store.ts'
-import { createMemoryRawKeyValueStore } from '@dungarees/key-value-stores/raw-stores/memory.ts'
-import { createTransformedStore } from '@dungarees/key-value-stores/service-transform.ts'
+import type { ReadableRawKeyValueStore } from '@dungarees/key-value-store/raw-store.ts'
+import { createMemoryRawKeyValueStore } from '@dungarees/key-value-store/raw-stores/memory.ts'
+import { createTransformedStore } from '@dungarees/key-value-store/service-transform.ts'
 
 export type IdentityMatcher =
   | {

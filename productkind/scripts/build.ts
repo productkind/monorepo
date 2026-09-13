@@ -1,7 +1,7 @@
 import platformsRaw from '../config/platforms.json' with { type: 'json' }
 
 import { createFileSystemService } from '@dungarees/fs/service.ts'
-import { rasterizeSvg, type SvgToRasterize } from '@dungarees/zx/image.ts'
+import { rasterizeSvg, type SvgToRasterize } from '@dungarees/shell/image.ts'
 
 import {
   type FaviconSettings,

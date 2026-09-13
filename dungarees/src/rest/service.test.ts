@@ -1,6 +1,6 @@
 import type { RestEndpoint } from './endpoint.ts'
 import type { Fetcher } from './service.ts'
-import { createRestClientCreator } from './service.ts'
+import { createRestClientFactory } from './service.ts'
 
 import type { JsonType } from '@dungarees/core/type-util.ts'
 
@@ -26,20 +26,20 @@ const PROBE_FETCHER: Fetcher<ProbeResponse> = async (url, { method, headers = {}
 type ProbeApi = RestEndpoint<GetPath, ProbeResponse>
 
 const probeUrl = async (baseUrl: string): Promise<string> => {
-  const client = createRestClientCreator(PROBE_FETCHER)<ProbeApi>(baseUrl)
+  const client = createRestClientFactory(PROBE_FETCHER)<ProbeApi>(baseUrl)
   const { url } = await firstValueFrom(client({ method: 'GET', pathname: '/path' }))
   return url
 }
 
 test('the client resolves to the response the fetcher produced', async () => {
   const client =
-    createRestClientCreator(JSON_FETCHER)<RestEndpoint<GetPath, TestResponse>>('https://host')
+    createRestClientFactory(JSON_FETCHER)<RestEndpoint<GetPath, TestResponse>>('https://host')
 
   expect(await firstValueFrom(client({ method: 'GET', pathname: '/path' }))).toEqual(TEST_RESPONSE)
 })
 
 test('the client narrows the response type from the request it was given', () => {
-  const client = createRestClientCreator(JSON_FETCHER)<
+  const client = createRestClientFactory(JSON_FETCHER)<
     RestEndpoint<GetPath, TestResponse> | RestEndpoint<GetPath2, OtherResponse>
   >('https://host')
 
@@ -52,7 +52,7 @@ test('the client narrows the response type from the request it was given', () =>
 })
 
 test('the client narrows the response type from the method', () => {
-  const client = createRestClientCreator(JSON_FETCHER)<
+  const client = createRestClientFactory(JSON_FETCHER)<
     RestEndpoint<GetPath, TestResponse> | RestEndpoint<PostPath, OtherResponse>
   >('https://host')
 
@@ -60,7 +60,7 @@ test('the client narrows the response type from the method', () => {
 })
 
 test('the awaited value is narrowed the same way the observable is', async () => {
-  const client = createRestClientCreator(JSON_FETCHER)<
+  const client = createRestClientFactory(JSON_FETCHER)<
     RestEndpoint<GetPath, TestResponse> | RestEndpoint<GetPath2, OtherResponse>
   >('https://host')
 
@@ -80,7 +80,7 @@ test('the client narrows on search and headers as well as path and method', () =
     { method: 'GET'; pathname: '/path'; search: { b: string }; headers: { 'header-1': 'value-1' } },
     OtherResponse
   >
-  const client = createRestClientCreator(JSON_FETCHER)<WithA | WithB>('https://host')
+  const client = createRestClientFactory(JSON_FETCHER)<WithA | WithB>('https://host')
   const search: Record<'a', string> = { a: '1' } as const
   const headers: Record<'header-1', 'value-1'> = { 'header-1': 'value-1' } as const
 
@@ -104,7 +104,7 @@ test('the client rejects a request the api does not declare', () => {
     { method: 'GET'; pathname: '/path'; search: { a: string }; headers: { 'header-1': 'value-1' } },
     TestResponse
   >
-  const client = createRestClientCreator(JSON_FETCHER)<Api>('https://host')
+  const client = createRestClientFactory(JSON_FETCHER)<Api>('https://host')
   const search: Record<'a', string> = { a: '1' } as const
   const headers: Record<'header-1', 'value-1'> = { 'header-1': 'value-1' } as const
 
@@ -130,12 +130,12 @@ test('the client rejects a request the api does not declare', () => {
 
 test('the creator rejects a type that is not a RestEndpoint', () => {
   // @ts-expect-error a string is not a RestEndpoint
-  createRestClientCreator(JSON_FETCHER)<string>('https://host')
+  createRestClientFactory(JSON_FETCHER)<string>('https://host')
 })
 
 test('the creator rejects an api whose response the fetcher cannot produce', () => {
   // @ts-expect-error a JSON fetcher cannot produce a function
-  createRestClientCreator(JSON_FETCHER)<RestEndpoint<GetPath, () => void>>('https://host')
+  createRestClientFactory(JSON_FETCHER)<RestEndpoint<GetPath, () => void>>('https://host')
 })
 
 test('every part of the request reaches the fetcher', async () => {
@@ -148,7 +148,7 @@ test('every part of the request reaches the fetcher', async () => {
     },
     ProbeResponse
   >
-  const client = createRestClientCreator(PROBE_FETCHER)<Api>('https://host')
+  const client = createRestClientFactory(PROBE_FETCHER)<Api>('https://host')
   const search: Record<'a', number> = { a: 1 } as const
   const headers: Record<'header-1', 'value-1'> = { 'header-1': 'value-1' } as const
 
@@ -183,7 +183,7 @@ test('a baseUrl port is kept', async () => {
 
 test('a request pathname without a leading slash still gets a separator', async () => {
   type Api = RestEndpoint<{ method: 'GET'; pathname: 'a/b' }, ProbeResponse>
-  const client = createRestClientCreator(PROBE_FETCHER)<Api>('https://host/api')
+  const client = createRestClientFactory(PROBE_FETCHER)<Api>('https://host/api')
 
   const { url } = await firstValueFrom(client({ method: 'GET', pathname: 'a/b' }))
 
@@ -191,19 +191,19 @@ test('a request pathname without a leading slash still gets a separator', async 
 })
 
 test('a baseUrl carrying a query string is refused when the client is created', () => {
-  expect(() => createRestClientCreator(PROBE_FETCHER)<ProbeApi>('https://host?key=abc')).toThrow(
+  expect(() => createRestClientFactory(PROBE_FETCHER)<ProbeApi>('https://host?key=abc')).toThrow(
     'baseUrl must not contain a query string',
   )
 })
 
 test('a baseUrl carrying a hash fragment is refused when the client is created', () => {
-  expect(() => createRestClientCreator(PROBE_FETCHER)<ProbeApi>('https://host#section')).toThrow(
+  expect(() => createRestClientFactory(PROBE_FETCHER)<ProbeApi>('https://host#section')).toThrow(
     'baseUrl must not contain a hash fragment',
   )
 })
 
 test('a baseUrl that is not a url at all is refused when the client is created', () => {
-  expect(() => createRestClientCreator(PROBE_FETCHER)<ProbeApi>('not-a-url')).toThrow()
+  expect(() => createRestClientFactory(PROBE_FETCHER)<ProbeApi>('not-a-url')).toThrow()
 })
 
 test('the fetcher is not called until the observable is subscribed to', () => {
@@ -213,7 +213,7 @@ test('the fetcher is not called until the observable is subscribed to', () => {
     return await Promise.resolve(TEST_RESPONSE)
   }
   const client =
-    createRestClientCreator(countingFetcher)<RestEndpoint<GetPath, TestResponse>>('https://host')
+    createRestClientFactory(countingFetcher)<RestEndpoint<GetPath, TestResponse>>('https://host')
 
   client({ method: 'GET', pathname: '/path' })
 
@@ -227,7 +227,7 @@ test('each subscription runs the request again', async () => {
     return await Promise.resolve(TEST_RESPONSE)
   }
   const client =
-    createRestClientCreator(countingFetcher)<RestEndpoint<GetPath, TestResponse>>('https://host')
+    createRestClientFactory(countingFetcher)<RestEndpoint<GetPath, TestResponse>>('https://host')
   const response$ = client({ method: 'GET', pathname: '/path' })
 
   await firstValueFrom(response$)
@@ -241,7 +241,7 @@ test('a rejecting fetcher surfaces as an observable error', async () => {
     throw new Error('network down')
   }
   const client =
-    createRestClientCreator(failingFetcher)<RestEndpoint<GetPath, TestResponse>>('https://host')
+    createRestClientFactory(failingFetcher)<RestEndpoint<GetPath, TestResponse>>('https://host')
 
   await expect(firstValueFrom(client({ method: 'GET', pathname: '/path' }))).rejects.toThrow(
     'network down',

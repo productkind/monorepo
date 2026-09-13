@@ -11,7 +11,7 @@
     "@dungarees/core": "*",
     "@dungarees/cli": "*",
     "@dungarees/fs": "*",
-    "@dungarees/key-value-stores": "*",
+    "@dungarees/key-value-store": "*",
     "rxjs": "^7.8.1",
     "zod": "^3.25.76"
   },

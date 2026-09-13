@@ -8,7 +8,7 @@
   },
   "type": "module",
   "dependencies": {
-    "@dungarees/key-value-stores": "*"
+    "@dungarees/key-value-store": "*"
   },
   "devDependencies": {
     "typescript": "^5.9.3",

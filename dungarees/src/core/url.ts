@@ -36,9 +36,4 @@ export const parseUrl = (url: `${string}://${string}`): UrlConfig => {
   }
 }
 
-export type Split<
-  STRING,
-  CHARACTER extends string,
-> = STRING extends `${infer S1}${CHARACTER}${infer S2}` ? [S1, S2] : never
-
 export type Url = string
