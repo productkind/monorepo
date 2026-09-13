@@ -1,10 +1,10 @@
-import type { JWTPayload, JwtService, VerifiedPayload } from './service.ts'
+import type { JwtPayload, JwtService, VerifiedPayload } from './service.ts'
 
 import { isDeepEqual } from '@dungarees/core/util.ts'
 
 // The token is the JSON of its payload: readable in a failing test, and cheap enough to create in
 // a loop, which a real signature is not.
-export const createFakeJwtService = <PAYLOAD extends JWTPayload>(
+export const createFakeJwtService = <PAYLOAD extends JwtPayload>(
   invalid: PAYLOAD[] = [],
 ): JwtService<PAYLOAD> => {
   const parseToken = (token: string): VerifiedPayload<PAYLOAD> | undefined => {

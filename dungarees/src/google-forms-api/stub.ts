@@ -1,4 +1,4 @@
-import { createSaveAnswersRequest, type GoogleFormsAPI, type GoogleFormsAPIClient } from './api.ts'
+import { createSaveAnswersRequest, type GoogleFormsApi, type GoogleFormsApiClient } from './api.ts'
 import type { FormAnswers } from './service.ts'
 
 import { createStubRestClient } from '@dungarees/rest/stub.ts'
@@ -9,10 +9,10 @@ export type StubbedForm = {
   answers: FormAnswers
 }
 
-export const createStubGoogleFormsApi = (forms: StubbedForm[]): GoogleFormsAPIClient => {
-  const endpoints = forms.map(({ formId, answers }): StubEndpoint<GoogleFormsAPI> => ({
+export const createStubGoogleFormsApi = (forms: StubbedForm[]): GoogleFormsApiClient => {
+  const endpoints = forms.map(({ formId, answers }): StubEndpoint<GoogleFormsApi> => ({
     request: createSaveAnswersRequest({ formId, body: answers }),
     response: '',
   }))
-  return createStubRestClient<GoogleFormsAPI, typeof endpoints>(endpoints)
+  return createStubRestClient<GoogleFormsApi, typeof endpoints>(endpoints)
 }

@@ -1,7 +1,7 @@
-import { createFakeSMSBackend } from './fake.ts'
+import { createFakeSmsBackend } from './fake.ts'
 import type { PhoneNumber } from './phone-number.ts'
 import { createSmsSender } from './service.ts'
-import type { SMSBackend } from './service.ts'
+import type { SmsBackend } from './service.ts'
 
 import { addErrorMethodsToFake } from '@dungarees/core/fake.ts'
 
@@ -15,14 +15,14 @@ const VERIFICATION_REQUEST = { to: TO, code: '123456' }
 const MESSAGE_REQUEST = { to: TO, content: 'test message' }
 
 const failingBackend = (
-  configs: Parameters<ReturnType<typeof addErrorMethodsToFake<SMSBackend, []>>>[0],
-): SMSBackend => {
-  const { backend } = createFakeSMSBackend()
+  configs: Parameters<ReturnType<typeof addErrorMethodsToFake<SmsBackend, []>>>[0],
+): SmsBackend => {
+  const { backend } = createFakeSmsBackend()
   return addErrorMethodsToFake(() => backend)(configs)
 }
 
 test('sendMessage reaches the backend with the number and content', async () => {
-  const { messageRequests, backend } = createFakeSMSBackend()
+  const { messageRequests, backend } = createFakeSmsBackend()
   const sender = createSmsSender(backend)
 
   await firstValueFrom(sender.sendMessage(MESSAGE_REQUEST))
@@ -54,7 +54,7 @@ test('sendMessage keeps the backend failure as the cause', async () => {
 })
 
 test('requestVerification reaches the backend', async () => {
-  const { verificationRequests, backend } = createFakeSMSBackend()
+  const { verificationRequests, backend } = createFakeSmsBackend()
   const sender = createSmsSender(backend)
 
   await firstValueFrom(sender.requestVerification(VERIFICATION_REQUEST))
@@ -74,7 +74,7 @@ test('requestVerification reports a failing backend as a request failure', async
 })
 
 test('verify hands the attempt to the backend and returns its verdict', async () => {
-  const { backend, verificationAttempts } = createFakeSMSBackend()
+  const { backend, verificationAttempts } = createFakeSmsBackend()
   const sender = createSmsSender(backend)
 
   const result = await firstValueFrom(sender.verify({ to: TO, code: '123456' }))
@@ -84,7 +84,7 @@ test('verify hands the attempt to the backend and returns its verdict', async ()
 })
 
 test('verify refuses a code the fake was told is wrong', async () => {
-  const { backend } = createFakeSMSBackend({ approvedCodes: ['123456'] })
+  const { backend } = createFakeSmsBackend({ approvedCodes: ['123456'] })
   const sender = createSmsSender(backend)
 
   const result = await firstValueFrom(sender.verify({ to: TO, code: '000000' }))
@@ -93,7 +93,7 @@ test('verify refuses a code the fake was told is wrong', async () => {
 })
 
 test('verify accepts a code the fake was told is right', async () => {
-  const { backend } = createFakeSMSBackend({ approvedCodes: ['123456'] })
+  const { backend } = createFakeSmsBackend({ approvedCodes: ['123456'] })
   const sender = createSmsSender(backend)
 
   const result = await firstValueFrom(sender.verify({ to: TO, code: '123456' }))

@@ -23,13 +23,13 @@ export type VerificationResult = {
   status: 'verified' | 'failed'
 }
 
-export type SMSBackend = {
+export type SmsBackend = {
   sendMessage: (request: SendMessageRequest) => Observable<void>
   requestVerification: (request: VerificationRequest) => Observable<void>
   verify: (attempt: VerificationAttempt) => Observable<VerificationResult>
 }
 
-export type SmsSender = SMSBackend
+export type SmsSender = SmsBackend
 
 export type TwilioConfig = {
   accountSid: string
@@ -46,7 +46,7 @@ const failWith =
       catchError((cause: unknown) => throwError(() => createCausedError({ message, cause }))),
     )
 
-export const createSmsSender = (smsBackend: SMSBackend): SmsSender => ({
+export const createSmsSender = (smsBackend: SmsBackend): SmsSender => ({
   sendMessage: (request) => smsBackend.sendMessage(request).pipe(failWith('SMS sending failed')),
   requestVerification: (request) =>
     smsBackend.requestVerification(request).pipe(failWith('SMS verification request failed')),

@@ -38,7 +38,7 @@ export type ConfigEntry<
 
 export type ServiceConfig = InteractorConfig | RunnerConfig
 
-export type TestEnviornmentConfig = Record<string, ServiceConfig>
+export type TestEnvironmentConfig = Record<string, ServiceConfig>
 
 export type GetInstance<CONFIG extends ServiceConfig> = Awaited<ReturnType<CONFIG['creator']>>
 
@@ -76,7 +76,7 @@ export type InteractorConfig<
 export type RunnerInstance = { instance: Runner } & DefaultConfig
 export type InteractorInstance = { instance: Interactor } & DefaultConfig
 
-export type TestEnviornmentState<
+export type TestEnvironmentState<
   SERVICES extends Record<string, ServiceConfig>,
   INTERACTORS extends InstanceEntry = GetInstanceEntry<
     RecordToEntries<FilterRecord<SERVICES, InteractorConfig>>
@@ -90,7 +90,7 @@ export type TestEnviornmentState<
   runners: Map<GetKey<RUNNERS>, RunnerInstance>
 }
 
-export type TestEnviornment<SERVICES extends Record<string, ServiceConfig>> = {
+export type TestEnvironment<SERVICES extends Record<string, ServiceConfig>> = {
   onBeforeAll: () => Promise<Observable<ReportEntry>>
   onAfterAll: () => Promise<Observable<ReportEntry>>
   onBefore: (world: TestEnvironmentWorld<SERVICES>) => Promise<Observable<ReportEntry>>
@@ -114,11 +114,11 @@ export const instantiateService = async <
 
 export const createTestEnvironment = <const SERVICES extends Record<string, ServiceConfig>>(
   serviceConfigs: SERVICES,
-): TestEnviornment<SERVICES> => {
+): TestEnvironment<SERVICES> => {
   type Runner = GetInstanceEntry<RecordToEntries<FilterRecord<SERVICES, RunnerConfig>>>
   type Interactor = GetInstanceEntry<RecordToEntries<FilterRecord<SERVICES, InteractorConfig>>>
 
-  const state: TestEnviornmentState<SERVICES> = {
+  const state: TestEnvironmentState<SERVICES> = {
     serviceConfigs,
     interactors: new Map<GetKey<Interactor>, InteractorInstance>(),
     runners: new Map<GetKey<Runner>, RunnerInstance>(),
