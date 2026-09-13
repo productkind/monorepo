@@ -27,7 +27,7 @@ Join the waitlist through the link in the comments, and we'll make sure to email
 
 Ever been asked to ship a prototype?
 
-#womeninproduct #womenintech #womenproductmanagers
+#womeninproduct #womenintech #productmanagers
 
 **Pinned comment:**
 

@@ -31,7 +31,7 @@ Which part of running your app feels hardest?
 
 **Pinned comment:**
 
-Join the Building Apps with AI waitlist: https://littleparrot.app/guides/building-apps-with-ai?utm_source=tiktok&utm_campaign=vibe-coded-app-26&utm_content=can-you-run-your-own-app
+https://littleparrot.app/guides/building-apps-with-ai?utm_source=tiktok&utm_campaign=vibe-coded-app-26&utm_content=can-you-run-your-own-app
 
 ## Instagram Reels
 
