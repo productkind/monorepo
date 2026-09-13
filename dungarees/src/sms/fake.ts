@@ -1,14 +1,14 @@
 import type {
   SendMessageRequest,
-  SMSBackend,
+  SmsBackend,
   VerificationAttempt,
   VerificationRequest,
 } from './service.ts'
 
 import { of } from 'rxjs'
 
-export type FakeSMSBackend = {
-  backend: SMSBackend
+export type FakeSmsBackend = {
+  backend: SmsBackend
   verificationRequests: VerificationRequest[]
   verificationAttempts: VerificationAttempt[]
   messageRequests: SendMessageRequest[]
@@ -16,9 +16,9 @@ export type FakeSMSBackend = {
 
 // Left unset, every attempt is approved, which keeps a test that does not care about verification
 // short.
-export const createFakeSMSBackend = ({
+export const createFakeSmsBackend = ({
   approvedCodes,
-}: { approvedCodes?: string[] } = {}): FakeSMSBackend => {
+}: { approvedCodes?: string[] } = {}): FakeSmsBackend => {
   const verificationRequests: VerificationRequest[] = []
   const verificationAttempts: VerificationAttempt[] = []
   const messageRequests: SendMessageRequest[] = []

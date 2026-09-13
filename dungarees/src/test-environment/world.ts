@@ -7,7 +7,7 @@ import type {
   GetInstanceEntry,
   InteractorConfig,
   ServiceConfig,
-  TestEnviornmentState,
+  TestEnvironmentState,
 } from './test-environment.ts'
 
 import type {
@@ -34,7 +34,7 @@ export type TestEnvironmentWorld<
 }
 
 export const createWorld = <SERVICES extends Record<string, ServiceConfig>>(
-  state: TestEnviornmentState<SERVICES>,
+  state: TestEnvironmentState<SERVICES>,
 ): TestEnvironmentWorld<SERVICES> => {
   type InteractorConfigs = RecordToEntries<FilterRecord<SERVICES, InteractorConfig>>
   type Interactors = GetInstanceEntry<InteractorConfigs>

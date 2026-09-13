@@ -1,4 +1,4 @@
-import type { SMSBackend, TwilioConfig } from './service.ts'
+import type { SmsBackend, TwilioConfig } from './service.ts'
 
 import { from, map } from 'rxjs'
 import twilio from 'twilio'
@@ -15,7 +15,7 @@ export const createTwilioBackend = ({
   verificationServiceId,
   messagingServiceId,
   timeout = DEFAULT_TWILIO_TIMEOUT,
-}: TwilioConfig): SMSBackend => {
+}: TwilioConfig): SmsBackend => {
   const client = twilio(accountSid, authToken, { timeout })
   const verifyService = client.verify.v2.services(verificationServiceId)
 

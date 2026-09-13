@@ -13,13 +13,13 @@ export type SaveAnswersRequest = {
 
 export type SaveAnswersEndpoint = RestEndpoint<SaveAnswersRequest, string>
 
-export type GoogleFormsAPI = SaveAnswersEndpoint
+export type GoogleFormsApi = SaveAnswersEndpoint
 
-export type GoogleFormsAPIClient = ReturnType<typeof createHtmlRestClient<GoogleFormsAPI>>
+export type GoogleFormsApiClient = ReturnType<typeof createHtmlRestClient<GoogleFormsApi>>
 
 export const createGoogleFormsApiClient = (
   baseUrl: string = GOOGLE_FORMS_BASE_URL,
-): GoogleFormsAPIClient => createHtmlRestClient<GoogleFormsAPI>(baseUrl)
+): GoogleFormsApiClient => createHtmlRestClient<GoogleFormsApi>(baseUrl)
 
 export const createSaveAnswersRequest = ({
   formId,

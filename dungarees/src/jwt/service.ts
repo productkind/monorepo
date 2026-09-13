@@ -1,14 +1,14 @@
 import { createCausedError } from '@dungarees/core/error.ts'
 
-import { decodeJwt, type JWTPayload as JoseJWTPayload, jwtVerify, SignJWT } from 'jose'
+import { decodeJwt, type JWTPayload as JoseJwtPayload, jwtVerify, SignJWT } from 'jose'
 
-export type JWTPayload = JoseJWTPayload
+export type JwtPayload = JoseJwtPayload
 
 // A decoded token carries the registered claims (iat, exp, iss...) alongside whatever the caller
 // put in it, so the payload that comes back out is the intersection rather than PAYLOAD alone.
-export type VerifiedPayload<PAYLOAD extends JWTPayload> = PAYLOAD & JWTPayload
+export type VerifiedPayload<PAYLOAD extends JwtPayload> = PAYLOAD & JwtPayload
 
-export type JwtService<PAYLOAD extends JWTPayload> = {
+export type JwtService<PAYLOAD extends JwtPayload> = {
   decodeToken: (token: string) => { payload: VerifiedPayload<PAYLOAD> | undefined }
   verifyToken: (token: string) => Promise<{ payload: VerifiedPayload<PAYLOAD> }>
   createToken: (payload: PAYLOAD) => Promise<string>
@@ -24,7 +24,7 @@ export const DEFAULT_JWT_ALGORITHM = 'HS256'
 
 export const DEFAULT_JWT_EXPIRATION_TIME = '30d'
 
-export const createJwtService = <PAYLOAD extends JWTPayload>({
+export const createJwtService = <PAYLOAD extends JwtPayload>({
   secret,
   algorithm = DEFAULT_JWT_ALGORITHM,
   expirationTime = DEFAULT_JWT_EXPIRATION_TIME,

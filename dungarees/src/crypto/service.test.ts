@@ -1,4 +1,4 @@
-import { createBCryptBackend } from './bcrypt.ts'
+import { createBcryptBackend } from './bcrypt.ts'
 import { createFakeCryptoBackend } from './fake.ts'
 import { createCryptoService } from './service.ts'
 
@@ -9,7 +9,7 @@ import { expect, test } from 'vitest'
 const TEST_ROUNDS = 4
 
 const createRealCryptoService = (): ReturnType<typeof createCryptoService> =>
-  createCryptoService(createBCryptBackend({ rounds: TEST_ROUNDS }))
+  createCryptoService(createBcryptBackend({ rounds: TEST_ROUNDS }))
 
 test('encryptPassword does not hand back the password it was given', () => {
   const crypto = createRealCryptoService()

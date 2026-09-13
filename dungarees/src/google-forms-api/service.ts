@@ -1,4 +1,4 @@
-import { createSaveAnswersRequest, type GoogleFormsAPIClient } from './api.ts'
+import { createSaveAnswersRequest, type GoogleFormsApiClient } from './api.ts'
 
 import type { Observable } from 'rxjs'
 import { map } from 'rxjs/operators'
@@ -10,7 +10,7 @@ export type GoogleFormsService = {
 }
 
 export const createGoogleFormsService = (
-  googleFormsAPIClient: GoogleFormsAPIClient,
+  googleFormsAPIClient: GoogleFormsApiClient,
 ): GoogleFormsService => ({
   // A form response answers with an HTML page nobody reads, so the outcome is only that it was
   // accepted.
