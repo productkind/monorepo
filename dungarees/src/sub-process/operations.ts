@@ -1,9 +1,8 @@
 import type { ProcessServiceOutput, RunOptions, SubProcessService } from './service.ts'
 
-import type { StdioMessage } from '@dungarees/cli/message.ts'
-import { stderr, stdout } from '@dungarees/cli/utils.ts'
+import { stderr, type StdioMessage, stdout } from '@dungarees/cli/message.ts'
 import type { FileSystemService } from '@dungarees/fs/service.ts'
-import type { KeyValueStore } from '@dungarees/key-value-stores/service.ts'
+import type { KeyValueStore } from '@dungarees/key-value-store/service.ts'
 
 import { join } from 'node:path'
 import {
@@ -21,7 +20,7 @@ import {
 } from 'rxjs'
 import type { ZodString } from 'zod'
 
-type ProcessOperations = {
+export type SubProcessOperations = {
   runSilentUntilError: (
     command: string,
     args: string[],
@@ -41,7 +40,7 @@ type ProcessOperations = {
   isExecutable: (commandOrPath: string) => Observable<boolean>
 }
 
-type CreateProcessOperationsOptions = {
+type CreateSubProcessOperationsOptions = {
   subProcessService: SubProcessService
   fileSystem: FileSystemService
   environment: KeyValueStore<{ PATH: ZodString }>
@@ -51,8 +50,8 @@ export const createSubProcessOperations = ({
   subProcessService,
   fileSystem,
   environment,
-}: CreateProcessOperationsOptions): ProcessOperations => {
-  const runSilentUntilError: ProcessOperations['runSilentUntilError'] = (
+}: CreateSubProcessOperationsOptions): SubProcessOperations => {
+  const runSilentUntilError: SubProcessOperations['runSilentUntilError'] = (
     command,
     args,
     options,
@@ -85,7 +84,7 @@ export const createSubProcessOperations = ({
       ]),
     )
 
-  const runValidated: ProcessOperations['runValidated'] = (command, args, options) =>
+  const runValidated: SubProcessOperations['runValidated'] = (command, args, options) =>
     validate(command, options).pipe(
       switchMap((errors) =>
         errors.length > 0
@@ -94,7 +93,7 @@ export const createSubProcessOperations = ({
       ),
     )
 
-  const runSilentUntilErrorValidated: ProcessOperations['runSilentUntilErrorValidated'] = (
+  const runSilentUntilErrorValidated: SubProcessOperations['runSilentUntilErrorValidated'] = (
     command,
     args,
     options,
@@ -107,14 +106,14 @@ export const createSubProcessOperations = ({
       ),
     )
 
-  const isExecutableFile: ProcessOperations['isExecutableFile'] = (path) => {
+  const isExecutableFile: SubProcessOperations['isExecutableFile'] = (path) => {
     return combineLatest([fileSystem.access(path, ['executable']), fileSystem.getStat(path)]).pipe(
       map(([canExecute, stat]) => canExecute && !stat.isDirectory),
       catchError(() => of(false)),
     )
   }
 
-  const isExecutable: ProcessOperations['isExecutable'] = (commandOrPath) => {
+  const isExecutable: SubProcessOperations['isExecutable'] = (commandOrPath) => {
     if (commandOrPath.includes('/')) {
       return isExecutableFile(commandOrPath)
     }

@@ -1,12 +1,12 @@
+import { createSubProcessOperations } from './operations.ts'
 import { createSubProcessService } from './service.ts'
 import { createStubSpawn } from './stub.ts'
-import { createSubProcessOperations } from './sub-process-operations.ts'
 
-import { stderr, stdout } from '@dungarees/cli/utils.ts'
+import { stderr, stdout } from '@dungarees/cli/message.ts'
 import { mtest } from '@dungarees/core/marbles-vitest.ts'
 import { createFakeFileSystem } from '@dungarees/fs/fake.ts'
-import { createMemoryRawKeyValueStore } from '@dungarees/key-value-stores/raw-stores/memory.ts'
-import { createKeyValueStore } from '@dungarees/key-value-stores/service.ts'
+import { createMemoryRawKeyValueStore } from '@dungarees/key-value-store/raw-stores/memory.ts'
+import { createKeyValueStore } from '@dungarees/key-value-store/service.ts'
 
 import { lastValueFrom } from 'rxjs'
 import { expect, test } from 'vitest'

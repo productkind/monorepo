@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@dungarees/fs": "*",
-    "@dungarees/zx": "*",
+    "@dungarees/shell": "*",
     "@xmldom/xmldom": "^0.9.8",
     "zx": "^8.5.5"
   }

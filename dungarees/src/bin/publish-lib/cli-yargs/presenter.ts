@@ -1,5 +1,5 @@
 import type { PublishLibEvent } from '@dungarees/bin-publish-lib-domain/events.ts'
-import { exit, stderr, stdout } from '@dungarees/cli/utils.ts'
+import { exit, stderr, stdout } from '@dungarees/cli/message.ts'
 import type { Presenter } from '@dungarees/cli/yargs-prompt-app.ts'
 
 export const publishLibPresenter: Presenter<PublishLibEvent> = {

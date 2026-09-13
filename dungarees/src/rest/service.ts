@@ -16,6 +16,14 @@ export type RestClient<
   request: REQUEST,
 ) => Observable<GetResponseType<API, REQUEST>>
 
+export type RestClientFactory<FETCHER extends Fetcher> = <
+  API extends RestEndpoint<RestEndpointRequest, GetParsedType<FETCHER>>,
+>(
+  baseUrl: string,
+) => <REQUEST extends GetRequestType<API>>(
+  request: REQUEST,
+) => Observable<GetResponseType<API, REQUEST>>
+
 export type Fetcher<PARSED_TYPE = unknown> = (
   url: string,
   request: FetcherConfigArg,
@@ -37,8 +45,8 @@ type ParsedBaseUrl = {
   basePath: string
 }
 
-export const createRestClientCreator =
-  <FETCHER extends Fetcher>(fetcher: FETCHER) =>
+export const createRestClientFactory =
+  <FETCHER extends Fetcher>(fetcher: FETCHER): RestClientFactory<FETCHER> =>
   <API extends RestEndpoint<RestEndpointRequest, GetParsedType<FETCHER>>>(baseUrl: string) => {
     const parsedBase = parseBaseUrl(baseUrl)
     return <REQUEST extends GetRequestType<API>>(

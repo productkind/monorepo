@@ -1,5 +1,5 @@
 {
-  "name": "@dungarees/zx",
+  "name": "@dungarees/shell",
   "version": "0.1.0",
   "main": "index.ts",
   "type": "module",

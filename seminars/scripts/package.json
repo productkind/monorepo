@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@dungarees/fs": "*",
-    "@dungarees/zx": "*",
+    "@dungarees/shell": "*",
     "qrcode": "^1.5.4",
     "zod": "^3.25.55",
     "zx": "^8.5.5"

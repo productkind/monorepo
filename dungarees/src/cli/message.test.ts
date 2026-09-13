@@ -1,4 +1,4 @@
-import { exit, stderr, stdout } from './utils.ts'
+import { exit, stderr, stdout } from './message.ts'
 
 import { expect, test } from 'vitest'
 

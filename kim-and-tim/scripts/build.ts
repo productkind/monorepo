@@ -1,5 +1,5 @@
 import { createFileSystemService } from '@dungarees/fs/service.ts'
-import { rasterizeSvg } from '@dungarees/zx/image.ts'
+import { rasterizeSvg } from '@dungarees/shell/image.ts'
 
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom'
 import fs from 'node:fs'

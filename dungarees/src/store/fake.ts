@@ -12,7 +12,7 @@ import { makeObjectFromStringLiteral } from '@dungarees/core/util.ts'
 import type { Observable } from 'rxjs'
 import { map } from 'rxjs/operators'
 
-export type TestAppStoreState<STATE, STATE_KEY> = ObjectWithStringLiteralKey<STATE_KEY, STATE>
+export type SlicedStoreState<STATE, STATE_KEY> = ObjectWithStringLiteralKey<STATE_KEY, STATE>
 
 // No reducer handles this, so reducing it returns whatever initial state each one declares. That
 // is the only way to read an initial state out of a reducer without standing up a store.
@@ -23,11 +23,11 @@ export type StoreTools<
   EVENT extends DomainEvent,
   STATE_KEY,
   BASE_STATE extends JsonObject = Record<never, never>,
-  APP_STORE_STATE = TestAppStoreState<STATE, STATE_KEY>,
+  SLICED_STATE = SlicedStoreState<STATE, STATE_KEY>,
 > = {
-  getStateReadable: (in$: Observable<Partial<STATE>>) => StateReadable<APP_STORE_STATE>
+  getStateReadable: (in$: Observable<Partial<STATE>>) => StateReadable<SLICED_STATE>
   createAppStore: () => {
-    store: Store<APP_STORE_STATE & BASE_STATE, EVENT>
+    store: Store<SLICED_STATE & BASE_STATE, EVENT>
     sliceState$: Observable<STATE>
   }
 }
@@ -40,7 +40,7 @@ type CreateStoreToolsArgs<
 > = {
   namespace: StringLiteral<NAMESPACE>
   reducer: Reducer<STATE, EVENT>
-  baseStore?: ReducersObject<BASE_STATE, EVENT>
+  baseReducers?: ReducersObject<BASE_STATE, EVENT>
 }
 
 export const createStoreTools = <
@@ -51,14 +51,14 @@ export const createStoreTools = <
 >({
   namespace,
   reducer,
-  baseStore,
+  baseReducers,
 }: CreateStoreToolsArgs<NAMESPACE, STATE, EVENT, BASE_STATE>): StoreTools<
   STATE,
   EVENT,
   NAMESPACE,
   BASE_STATE
 > => {
-  type AppStoreState = TestAppStoreState<STATE, NAMESPACE>
+  type SlicedState = SlicedStoreState<STATE, NAMESPACE>
 
   return {
     getStateReadable: (in$) => ({
@@ -66,15 +66,15 @@ export const createStoreTools = <
       // point of this helper: a query test states the fields it reads and nothing else.
       state$: in$.pipe(
         map((sliceState) => makeObjectFromStringLiteral(namespace, sliceState)),
-      ) as Observable<AppStoreState>,
+      ) as Observable<SlicedState>,
     }),
     createAppStore: () => {
-      const store = createStore<AppStoreState & BASE_STATE, EVENT>({
-        ...baseStore,
+      const store = createStore<SlicedState & BASE_STATE, EVENT>({
+        ...baseReducers,
         ...makeObjectFromStringLiteral(namespace, reducer),
         // The reducer map is assembled from a dynamically keyed object, which cannot be built in a
         // way TypeScript can check against the state it produces.
-      } as unknown as ReducersObject<AppStoreState & BASE_STATE, EVENT>)
+      } as unknown as ReducersObject<SlicedState & BASE_STATE, EVENT>)
 
       return {
         store,

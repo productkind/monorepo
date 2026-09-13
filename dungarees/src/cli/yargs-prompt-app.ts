@@ -1,5 +1,4 @@
-import type { StdioMessage } from './message.ts'
-import { exit, stderr } from './utils.ts'
+import { exit, stderr, type StdioMessage } from './message.ts'
 
 import { getErrorMessage } from '@dungarees/core/error.ts'
 import type { DomainEvent } from '@dungarees/core/event.ts'

@@ -2,7 +2,7 @@
   "extends": "@dungarees/core/tsconfig.base.json",
   "compilerOptions": {
     "paths": {
-      "@dungarees/key-value-stores/*": ["./*"]
+      "@dungarees/key-value-store/*": ["./*"]
     },
     "noEmit": true,
     "rootDir": ".",

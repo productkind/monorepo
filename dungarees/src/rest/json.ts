@@ -1,6 +1,6 @@
 import type { RestEndpoint, RestEndpointRequest } from './endpoint.ts'
 import type { Fetcher, RestClient } from './service.ts'
-import { createRestClientCreator } from './service.ts'
+import { createRestClientFactory } from './service.ts'
 
 import type { JsonType } from '@dungarees/core/type-util.ts'
 
@@ -19,7 +19,7 @@ export const jsonFetcher: Fetcher<JsonType | Error> = async (url, request) => {
   return parsed as JsonType
 }
 
-export const createJsonRestClient = createRestClientCreator(jsonFetcher)
+export const createJsonRestClient = createRestClientFactory(jsonFetcher)
 
 export type JsonRestClient<API extends RestEndpoint<RestEndpointRequest, JsonType | Error>> =
   RestClient<Fetcher<JsonType | Error>, API>

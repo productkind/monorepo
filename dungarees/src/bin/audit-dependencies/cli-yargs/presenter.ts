@@ -2,7 +2,7 @@ import type {
   AuditDependenciesEvent,
   MisdeclaredDependency,
 } from '@dungarees/bin-audit-dependencies-domain/events.ts'
-import { exit, stderr, stdout } from '@dungarees/cli/utils.ts'
+import { exit, stderr, stdout } from '@dungarees/cli/message.ts'
 import type { Presenter } from '@dungarees/cli/yargs-prompt-app.ts'
 
 const listLine = (label: string, names: string[]): string[] =>

@@ -1,6 +1,6 @@
 import type { RestEndpoint, RestEndpointRequest } from './endpoint.ts'
 import type { Fetcher, RestClient } from './service.ts'
-import { createRestClientCreator } from './service.ts'
+import { createRestClientFactory } from './service.ts'
 
 export const htmlFetcher: Fetcher<string | Error> = async (url, request) => {
   const response = await fetch(url, {
@@ -26,7 +26,7 @@ const formEncode = (body: unknown): string => {
   ).toString()
 }
 
-export const createHtmlRestClient = createRestClientCreator(htmlFetcher)
+export const createHtmlRestClient = createRestClientFactory(htmlFetcher)
 
 export type HtmlRestClient<API extends RestEndpoint<RestEndpointRequest, string | Error>> =
   RestClient<Fetcher<string | Error>, API>

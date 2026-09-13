@@ -14,3 +14,20 @@ export type StdioErrorMessage = {
 } & SharedStdioMessage
 
 export type StdioMessage = StdioOutputMessage | StdioErrorMessage
+
+export const stdout = (message: string, level: LogLevel = 'info'): StdioOutputMessage => ({
+  type: 'stdout',
+  message,
+  level,
+})
+
+export const stderr = (message: string, level: LogLevel = 'error'): StdioErrorMessage => ({
+  type: 'stderr',
+  message,
+  level,
+})
+
+export const exit = (code: number): { type: 'exit'; code: number } => ({
+  type: 'exit',
+  code,
+})
