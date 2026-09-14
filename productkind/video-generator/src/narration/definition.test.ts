@@ -243,3 +243,28 @@ describe('timelineHash', () => {
     expect(timelineHash({ definition: nudged })).toBe(timelineHash({ definition: definition() }))
   })
 })
+
+describe('timelineHash and take boundaries', () => {
+  const sections = [
+    { text: 'Hook.', visual: gif({ src: 'a.gif' }) },
+    { text: 'Body.', visual: gif({ src: 'b.gif' }) },
+  ]
+  const video = (over: Partial<Parameters<typeof defineVideo>[0]>) =>
+    defineVideo({ id: 'x', voice: 'chloe', model: 'eleven_v3', sections, ...over })
+
+  test('moving a take boundary invalidates the timeline, because the timings change', () => {
+    // Two takes do not add up to the same durations as one, so a timeline kept from before would
+    // put the cuts in the wrong places.
+    const asOneTake = timelineHash({ definition: video({}) })
+    const cutAfterHook = timelineHash({
+      definition: video({
+        sections: [
+          { text: 'Hook.', visual: gif({ src: 'a.gif' }), endsTake: true },
+          { text: 'Body.', visual: gif({ src: 'b.gif' }) },
+        ],
+      }),
+    })
+
+    expect(cutAfterHook).not.toBe(asOneTake)
+  })
+})

@@ -185,6 +185,14 @@ export type Section = {
   visual: Visual
   /** Ends the paragraph, so a blank line follows this section in the narration. */
   endsParagraph?: boolean
+  /**
+   * Ends the take, so what follows is narrated separately.
+   *
+   * For videos that differ only in their opening: audio is cached by a take's own words, so
+   * cutting after the hook lets every variant share one recording of the body. It stays a single
+   * continuous read that way, where `splitOnBlankLines` would chop it at every paragraph.
+   */
+  endsTake?: boolean
 }
 
 /**
@@ -326,6 +334,11 @@ export const audioCacheKey = ({
  * Detects a `timeline.json` that no longer matches its definition. Deliberately blind to how
  * visuals are framed: nudging a gif changes no timing, so it must not force a rebuild.
  */
+const takeBoundariesOf = ({ definition }: { definition: VideoDefinition }): string[] => {
+  const marks = definition.sections.map((section) => (section.endsTake === true ? 'T' : '-'))
+  return marks.includes('T') ? [marks.join('')] : []
+}
+
 export const timelineHash = ({ definition }: { definition: VideoDefinition }): string =>
   hash(
     [
@@ -334,6 +347,11 @@ export const timelineHash = ({ definition }: { definition: VideoDefinition }): s
       String(definition.fps),
       String(definition.tailFrames),
       String(definition.splitOnBlankLines),
+      // Where the takes are cut, because two takes do not add up to the same durations as one:
+      // move a boundary and every cut after it moves with it. Contributed only when a boundary
+      // exists, so a video that has none hashes exactly as it did before this was a feature —
+      // which is right, since having none is the single continuous take it always described.
+      ...takeBoundariesOf({ definition }),
       ...definition.sections.map((section) => spokenOnly(section.text)),
     ].join(' '),
   )

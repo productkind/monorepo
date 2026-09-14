@@ -22,6 +22,8 @@ export type PlannedSection = {
   text: string
   /** Ends the paragraph, so a blank line follows this section in the narration. */
   endsParagraph?: boolean
+  /** Ends the take, so what follows is narrated separately. Why, in `Section`. */
+  endsTake?: boolean
 }
 
 const PARAGRAPH_BREAK = '\n\n'
@@ -69,7 +71,7 @@ export const planTakes = ({
     takeSections.push({ index: sectionIndex, text })
     separator = section.endsParagraph === true ? PARAGRAPH_BREAK : SENTENCE_BREAK
 
-    if (section.endsParagraph === true && splitOnBlankLines) {
+    if (section.endsTake === true || (section.endsParagraph === true && splitOnBlankLines)) {
       close()
     }
   })

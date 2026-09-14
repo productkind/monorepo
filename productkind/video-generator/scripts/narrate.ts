@@ -15,6 +15,7 @@
  *   npm run narrate -- --check   fail if any timeline is missing or stale, never call the API
  *   npm run narrate -- --watch   rebuild when a definition changes
  *   npm run narrate -- --import  seed the cache from previously generated audio
+ *   npm run narrate -- --video <id> [--video <id>]   build just those videos
  */
 import type { AudioCache } from '../src/narration/audio-cache'
 import { cachedTakeIn } from '../src/narration/audio-cache'
@@ -26,6 +27,7 @@ import { buildTimeline } from '../src/narration/timeline'
 import { HOUSE_VOICE_SETTINGS, voiceIdFor } from '../src/narration/voices'
 import type { Alignment } from '../src/narration/words'
 import { VIDEOS } from '../src/videos/index'
+import { selectVideos } from '../src/videos/select'
 
 import { existsSync, mkdirSync, readdirSync, readFileSync, watch, writeFileSync } from 'node:fs'
 import { basename, join, resolve } from 'node:path'
@@ -398,12 +400,14 @@ const buildVideo = async ({
 const runOnce = async ({
   mode,
   allowGenerate,
+  only,
 }: {
   mode: Mode
   allowGenerate: boolean
+  only: string[]
 }): Promise<boolean> => {
   const results = []
-  for (const definition of VIDEOS) {
+  for (const definition of selectVideos({ videos: VIDEOS, only })) {
     results.push(await buildVideo({ definition, mode, allowGenerate }))
   }
 
@@ -436,12 +440,13 @@ const main = async (): Promise<void> => {
       ? 'watch'
       : 'build'
   const allowGenerate = argv.includes('--allow-generate')
+  const only = argv.flatMap((arg, index) => (argv[index - 1] === '--video' ? [arg] : []))
 
   if (argv.includes('--import')) {
     importLegacyAudio({ definitions: VIDEOS })
   }
 
-  const ok = await runOnce({ mode: mode === 'watch' ? 'build' : mode, allowGenerate })
+  const ok = await runOnce({ mode: mode === 'watch' ? 'build' : mode, allowGenerate, only })
 
   if (mode !== 'watch') {
     process.exitCode = ok ? 0 : 1
@@ -460,7 +465,7 @@ const main = async (): Promise<void> => {
     }
     queued = setTimeout(() => {
       console.log(`\n${filename} changed, rebuilding.`)
-      void runOnce({ mode: 'build', allowGenerate })
+      void runOnce({ mode: 'build', allowGenerate, only })
     }, 200)
   })
 }
