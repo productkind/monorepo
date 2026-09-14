@@ -13,9 +13,6 @@ export type CliFeature<EVENTS extends DomainEvent> = {
   presenter: Presenter<EVENTS>
 }
 
-// Binary rather than variadic: fixed type parameters keep each feature's commands correlated
-// with its own presenter, where an array of features collapses to a union and loses that. Fold
-// it — combineFeatures(combineFeatures(a, b), c) — for three or more.
 export const combineFeatures = <A extends DomainEvent, B extends DomainEvent>(
   a: CliFeature<A>,
   b: CliFeature<B>,
@@ -23,6 +20,22 @@ export const combineFeatures = <A extends DomainEvent, B extends DomainEvent>(
   commands: [...a.commands, ...b.commands],
   presenter: { ...a.presenter, ...b.presenter },
 })
+
+type EventsOf<FEATURES extends readonly unknown[]> = {
+  [KEY in keyof FEATURES]: FEATURES[KEY] extends CliFeature<infer EVENTS> ? EVENTS : never
+}[number]
+
+export const combineAll = <FEATURES extends readonly [unknown, ...unknown[]]>(
+  ...features: FEATURES
+): CliFeature<EventsOf<FEATURES>> => {
+  const [first, ...rest] = features as readonly [
+    CliFeature<DomainEvent>,
+    ...CliFeature<DomainEvent>[],
+  ]
+  return rest.reduce((combined, next) => combineFeatures(combined, next), first) as CliFeature<
+    EventsOf<FEATURES>
+  >
+}
 
 export type CreateFeatureAppOptions<EVENTS extends DomainEvent> = {
   name: string

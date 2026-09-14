@@ -13,7 +13,8 @@
     "format:check": "prettier --check .",
     "lint": "eslint",
     "type-check": "tsc --noEmit -p tsconfig.json",
-    "audit-dependencies": "dungarees audit-dependencies ./dungarees"
+    "audit-dependencies": "dungarees audit-dependencies ./dungarees",
+    "audit-comments": "dungarees audit-comments"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,23 @@
+{
+  "name": "@dungarees/bin-audit-comments-domain",
+  "engines": {
+    "node": ">=25.0.0"
+  },
+  "scripts": {
+    "type-check": "tsc --noEmit"
+  },
+  "type": "module",
+  "dependencies": {
+    "@dungarees/cli-command": "*",
+    "@dungarees/core": "*",
+    "rxjs": "^7.8.1",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@dungarees/rxjs": "*",
+    "@dungarees/sub-process": "*",
+    "vitest": "^3.0.2"
+  },
+  "author": "info@productkind.com",
+  "license": "MIT"
+}

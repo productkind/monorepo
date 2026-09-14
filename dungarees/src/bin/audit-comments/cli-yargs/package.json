@@ -1,0 +1,20 @@
+{
+  "name": "@dungarees/bin-audit-comments-cli-yargs",
+  "engines": {
+    "node": ">=25.0.0"
+  },
+  "scripts": {
+    "type-check": "tsc --noEmit"
+  },
+  "type": "module",
+  "dependencies": {
+    "@dungarees/cli": "*",
+    "@dungarees/bin-audit-comments-domain": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vitest": "^3.0.2"
+  },
+  "author": "info@productkind.com",
+  "license": "MIT"
+}

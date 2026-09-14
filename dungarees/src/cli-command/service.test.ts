@@ -125,3 +125,36 @@ test('npm viewVersions passes the registry through', async () => {
     },
   ])
 })
+
+test('git diff asks for the working tree against a ref, with context lines', async () => {
+  const { subProcess, executedCommands } = createStubSubProcessService([
+    {
+      command: 'git',
+      args: ['diff', 'HEAD', '--unified=2'],
+      stdout: 'diff --git a/a.ts b/a.ts',
+      exitCode: 0,
+    },
+  ])
+
+  const { git } = createCliCommands(subProcess)
+
+  await lastValueFrom(git.diff({ ref: 'HEAD' }).output$)
+
+  expect(executedCommands).toEqual([
+    { command: 'git', args: ['diff', 'HEAD', '--unified=2'], options: {} },
+  ])
+})
+
+test('git diff runs in the directory it is given', async () => {
+  const { subProcess, executedCommands } = createStubSubProcessService([
+    { command: 'git', args: ['diff', 'HEAD', '--unified=2'], stdout: '', exitCode: 0 },
+  ])
+
+  const { git } = createCliCommands(subProcess)
+
+  await lastValueFrom(git.diff({ ref: 'HEAD', cwd: '/repo' }).output$)
+
+  expect(executedCommands).toEqual([
+    { command: 'git', args: ['diff', 'HEAD', '--unified=2'], options: { cwd: '/repo' } },
+  ])
+})

@@ -1,4 +1,4 @@
-import { type CliFeature, combineFeatures, createFeatureApp } from './feature.ts'
+import { type CliFeature, combineAll, combineFeatures, createFeatureApp } from './feature.ts'
 import { createCommand } from './yargs-prompt-app.ts'
 
 import type { DomainEvent } from '@dungarees/core/event.ts'
@@ -89,15 +89,54 @@ test('combining features unions their event types', () => {
   expectTypeOf(combined).toEqualTypeOf<CliFeature<GreetEvent | CountEvent>>()
 })
 
-test('combining folds, so a third feature needs no new signature', () => {
-  type LogEvent = DomainEvent<'logged', { line: string }>
-  const logFeature: CliFeature<LogEvent> = {
-    commands: [],
-    presenter: { logged: ({ line }) => ({ type: 'stdout', message: line, level: 'info' }) },
-  }
-  const combined = combineFeatures(combineFeatures(greetFeature, countFeature), logFeature)
+type LogEvent = DomainEvent<'logged', { line: string }>
+
+const logFeature: CliFeature<LogEvent> = {
+  commands: [
+    (io) =>
+      createCommand({
+        command: 'log',
+        describe: 'Log a line',
+        builder: (yargs) => yargs.option('line', { type: 'string', default: 'nothing' }),
+        handler: ({ line }) => {
+          io.registerEvents(of({ type: 'logged' as const, payload: { line } }))
+        },
+      }),
+  ],
+  presenter: { logged: ({ line }) => ({ type: 'stdout', message: line, level: 'info' }) },
+}
+
+test('combineAll unions the event types of every feature it is given', () => {
+  const combined = combineAll(greetFeature, countFeature, logFeature)
 
   expectTypeOf(combined).toEqualTypeOf<CliFeature<GreetEvent | CountEvent | LogEvent>>()
+})
+
+test('combineAll of a single feature is that feature', () => {
+  expectTypeOf(combineAll(greetFeature)).toEqualTypeOf<CliFeature<GreetEvent>>()
+})
+
+test('a presenter key no feature declares is rejected after combining', () => {
+  const combined = combineAll(greetFeature, countFeature, logFeature)
+
+  // @ts-expect-error only the events of the combined features are present
+  expect(combined.presenter['never-happened']).toBeUndefined()
+})
+
+test('every combined feature keeps its own command and presenter', async () => {
+  const app = createFeatureApp({
+    name: 'test-app',
+    feature: combineAll(greetFeature, countFeature, logFeature),
+  })
+
+  expect(await collectValuesFrom(app.present(['log', '--line', 'here'], {}))).toEqual([
+    { type: 'stdout', message: 'here', level: 'info' },
+    { type: 'exit', code: 0 },
+  ])
+  expect(await collectValuesFrom(app.present(['greet'], {}))).toEqual([
+    { type: 'stdout', message: 'Hello, World', level: 'info' },
+    { type: 'exit', code: 0 },
+  ])
 })
 
 test('a feature whose presenter misses one of its own events does not type-check', () => {
