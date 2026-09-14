@@ -25,7 +25,7 @@ export const createAuditDependenciesBehavior = ({
     const audit$ = getManifestsAndSources({
       dir,
       glob: fileSystem.glob,
-      readFile: (filePath) => fileSystem.readFile(filePath, 'utf-8'),
+      readFile: fileSystem.readFile,
     }).pipe(reportFindings())
 
     return {

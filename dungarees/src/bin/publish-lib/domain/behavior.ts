@@ -5,7 +5,6 @@ import {
   createOutDir,
   getBuildStartEvent,
   getPackagesToPublish,
-  isTestFile,
   publishAllPackages,
   publishLib,
   publishUnlessPublished,
@@ -13,6 +12,7 @@ import {
   transformPackageJson,
 } from './operations.ts'
 
+import { isTestFile } from '@dungarees/bin-shared-domain/source-files.ts'
 import type { NpmCommands } from '@dungarees/cli-command/service.ts'
 import { createFileOperations } from '@dungarees/fs/file-operations.ts'
 import type { FileSystemService } from '@dungarees/fs/service.ts'
@@ -60,7 +60,7 @@ export const createPublishLibBehavior = ({
     })
     const createOutDir$ = createOutDir({ createOutDir$: fileSystem.mkdir(outDir), outDir })
     const assets$ = copyAssets({
-      packageJsonContent$: fileSystem.readFile(originalPackageJsonPath, 'utf-8'),
+      packageJsonContent$: fileSystem.readFile(originalPackageJsonPath),
       srcDir,
       outDir,
       copyFile: fileOperations.copyFile,
@@ -103,7 +103,7 @@ export const createPublishLibBehavior = ({
 
     return {
       events$: publishUnlessPublished({
-        packageJsonContent$: fileSystem.readFile(`${srcDir}/package.json`, 'utf-8'),
+        packageJsonContent$: fileSystem.readFile(`${srcDir}/package.json`),
         packageDir,
         version,
         viewVersions: ({ name }) => npm.viewVersions({ name, registry }).output$,
@@ -127,7 +127,7 @@ export const createPublishLibBehavior = ({
     events$: getPackagesToPublish({
       dir,
       glob: fileSystem.glob,
-      readFile: (filePath) => fileSystem.readFile(filePath, 'utf-8'),
+      readFile: fileSystem.readFile,
     }).pipe(
       publishAllPackages(
         ({ packageDir, srcDir, outDir, version }) =>
