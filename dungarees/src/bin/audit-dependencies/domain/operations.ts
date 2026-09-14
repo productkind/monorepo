@@ -33,6 +33,7 @@ export type PackageManifest = {
   dependencies: string[]
   devDependencies: string[]
   peerDependencies: string[]
+  scriptCommands: string[]
 }
 
 export type SourceFile = {
@@ -52,6 +53,7 @@ const MANIFEST = z.object({
   dependencies: z.record(z.string()).optional(),
   devDependencies: z.record(z.string()).optional(),
   peerDependencies: z.record(z.string()).optional(),
+  scripts: z.record(z.string()).optional(),
 })
 
 // TypeScript's own scanner, so specifiers quoted inside template literals, strings and comments
@@ -85,6 +87,7 @@ export const parseManifest = ({
     dependencies: Object.keys(manifest.dependencies ?? {}),
     devDependencies: Object.keys(manifest.devDependencies ?? {}),
     peerDependencies: Object.keys(manifest.peerDependencies ?? {}),
+    scriptCommands: Object.values(manifest.scripts ?? {}),
   }
 }
 
@@ -105,13 +108,9 @@ export const findOwnerDir = ({
 export const auditPackages = ({
   manifests,
   sources,
-  usedWithoutImport = [],
 }: {
   manifests: PackageManifest[]
   sources: SourceFile[]
-  // Declaring these without importing them is legitimate — they are invoked as commands, or
-  // pulled in by a runtime. Importing one undeclared is still a finding.
-  usedWithoutImport?: string[]
 }): DependencyFindings[] => {
   const dirs = manifests.map(({ dir }) => dir)
   const importsByDir = new Map<string, { shipped: Set<string>; tested: Set<string> }>(
@@ -132,41 +131,43 @@ export const auditPackages = ({
     })
   })
 
-  return manifests.flatMap(({ dir, name, dependencies, devDependencies, peerDependencies }) => {
-    const { shipped, tested } = importsByDir.get(dir) ?? {
-      shipped: new Set<string>(),
-      tested: new Set<string>(),
-    }
-    const shippedImports = [...shipped].filter((used) => used !== name)
-    const imported = [...new Set([...shippedImports, ...tested])].filter((used) => used !== name)
-    const declared = [...dependencies, ...devDependencies, ...peerDependencies]
-    const missing = imported.filter((used) => !declared.includes(used))
-    const unused = declared.filter(
-      (dependency) =>
-        !imported.includes(dependency) &&
-        !usedWithoutImport.includes(dependency) &&
-        !isTypesPackage(dependency),
-    )
-    const misdeclared: MisdeclaredDependency[] = [
-      ...dependencies
-        .filter(
-          (dependency) =>
-            tested.has(dependency) &&
-            !shippedImports.includes(dependency) &&
-            !usedWithoutImport.includes(dependency),
-        )
-        .map((dependency) => ({ name: dependency, expected: 'devDependency' as const })),
-      ...devDependencies
-        .filter(
-          (dependency) =>
-            shippedImports.includes(dependency) && !peerDependencies.includes(dependency),
-        )
-        .map((dependency) => ({ name: dependency, expected: 'dependency' as const })),
-    ]
-    return missing.length === 0 && unused.length === 0 && misdeclared.length === 0
-      ? []
-      : [{ name, missing, unused, misdeclared }]
-  })
+  return manifests.flatMap(
+    ({ dir, name, dependencies, devDependencies, peerDependencies, scriptCommands }) => {
+      const { shipped, tested } = importsByDir.get(dir) ?? {
+        shipped: new Set<string>(),
+        tested: new Set<string>(),
+      }
+      const shippedImports = [...shipped].filter((used) => used !== name)
+      const imported = [...new Set([...shippedImports, ...tested])].filter((used) => used !== name)
+      const declared = [...dependencies, ...devDependencies, ...peerDependencies]
+      const missing = imported.filter((used) => !declared.includes(used))
+      const unused = declared.filter(
+        (dependency) =>
+          !imported.includes(dependency) &&
+          !isRunByAScript({ dependency, scriptCommands }) &&
+          !isTypesPackage(dependency),
+      )
+      const misdeclared: MisdeclaredDependency[] = [
+        ...dependencies
+          .filter(
+            (dependency) =>
+              tested.has(dependency) &&
+              !shippedImports.includes(dependency) &&
+              !isRunByAScript({ dependency, scriptCommands }),
+          )
+          .map((dependency) => ({ name: dependency, expected: 'devDependency' as const })),
+        ...devDependencies
+          .filter(
+            (dependency) =>
+              shippedImports.includes(dependency) && !peerDependencies.includes(dependency),
+          )
+          .map((dependency) => ({ name: dependency, expected: 'dependency' as const })),
+      ]
+      return missing.length === 0 && unused.length === 0 && misdeclared.length === 0
+        ? []
+        : [{ name, missing, unused, misdeclared }]
+    },
+  )
 }
 
 export const readFiles = (readFile: TextFileReader): OperatorFunction<string[], SourceFile[]> =>
@@ -184,9 +185,25 @@ export const readFiles = (readFile: TextFileReader): OperatorFunction<string[], 
 // picks it up from the import of that module instead.
 const isTypesPackage = (dependency: string): boolean => dependency.startsWith('@types/')
 
-// Declaring these without importing them is legitimate — tsc and vitest run as commands, and
-// react arrives through the react-jsx runtime.
-const PACKAGES_USED_WITHOUT_IMPORT = ['typescript', 'vitest', 'react']
+// A package run as a command is used without being imported, but the binary it installs cannot be
+// derived from its name, so the ones this repo runs are named here.
+const COMMAND_BINARIES: Record<string, string> = {
+  typescript: 'tsc',
+  vitest: 'vitest',
+}
+
+const isRunByAScript = ({
+  dependency,
+  scriptCommands,
+}: {
+  dependency: string
+  scriptCommands: string[]
+}): boolean => {
+  const binary = COMMAND_BINARIES[dependency]
+  return (
+    binary !== undefined && scriptCommands.some((command) => command.split(/\s+/).includes(binary))
+  )
+}
 
 export const getAuditStartEvent = ({ dir }: { dir: string }): Observable<AuditDependenciesEvent> =>
   of(eventCreators.auditStart({ dir }))
@@ -233,14 +250,12 @@ export const getManifestsAndSources = ({
   })
 }
 
-export const reportFindings = ({
-  usedWithoutImport = PACKAGES_USED_WITHOUT_IMPORT,
-}: { usedWithoutImport?: string[] } = {}): OperatorFunction<
+export const reportFindings = (): OperatorFunction<
   { manifests: PackageManifest[]; sources: SourceFile[] },
   AuditDependenciesEvent
 > =>
   mergeMap(({ manifests, sources }) => {
-    const findings = auditPackages({ manifests, sources, usedWithoutImport })
+    const findings = auditPackages({ manifests, sources })
     return concat(
       from(findings.map((finding) => eventCreators.packageFindings(finding))),
       of(

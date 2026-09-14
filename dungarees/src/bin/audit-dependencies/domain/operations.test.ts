@@ -54,7 +54,20 @@ test('parseManifest keeps the two dependency kinds apart, under the package dire
     dependencies: ['rxjs'],
     devDependencies: ['vitest'],
     peerDependencies: [],
+    scriptCommands: [],
   })
+})
+
+test('parseManifest keeps the command line of every script the package declares', () => {
+  expect(
+    parseManifest({
+      manifestPath: '/repo/src/thing/package.json',
+      content: JSON.stringify({
+        name: '@org/thing',
+        scripts: { 'type-check': 'tsc --noEmit', build: 'tsc -p tsconfig.build.json' },
+      }),
+    }),
+  ).toMatchObject({ scriptCommands: ['tsc --noEmit', 'tsc -p tsconfig.build.json'] })
 })
 
 test('findOwnerDir picks the deepest package containing the file', () => {
@@ -80,6 +93,7 @@ test('auditPackages reports imports that are not declared', () => {
           dependencies: [],
           devDependencies: [],
           peerDependencies: [],
+          scriptCommands: [],
         },
       ],
       sources: [{ path: '/src/a/index.ts', content: "import { x } from 'rxjs'" }],
@@ -97,6 +111,7 @@ test('auditPackages reports declarations that are not imported', () => {
           dependencies: ['rxjs'],
           devDependencies: [],
           peerDependencies: [],
+          scriptCommands: [],
         },
       ],
       sources: [{ path: '/src/a/index.ts', content: 'export const x = 1' }],
@@ -114,6 +129,7 @@ test('auditPackages says nothing about a package whose imports match its manifes
           dependencies: ['rxjs'],
           devDependencies: [],
           peerDependencies: [],
+          scriptCommands: [],
         },
       ],
       sources: [{ path: '/src/a/index.ts', content: "import { x } from 'rxjs'" }],
@@ -131,6 +147,7 @@ test('auditPackages attributes a file to its own package, not an ancestor', () =
           dependencies: [],
           devDependencies: [],
           peerDependencies: [],
+          scriptCommands: [],
         },
         {
           dir: '/src/a/nested',
@@ -138,6 +155,7 @@ test('auditPackages attributes a file to its own package, not an ancestor', () =
           dependencies: [],
           devDependencies: [],
           peerDependencies: [],
+          scriptCommands: [],
         },
       ],
       sources: [{ path: '/src/a/nested/index.ts', content: "import { x } from 'rxjs'" }],
@@ -155,6 +173,7 @@ test('auditPackages does not report a package importing itself', () => {
           dependencies: [],
           devDependencies: [],
           peerDependencies: [],
+          scriptCommands: [],
         },
       ],
       sources: [{ path: '/src/a/index.ts', content: "import { x } from '@org/a/other.ts'" }],
@@ -162,7 +181,7 @@ test('auditPackages does not report a package importing itself', () => {
   ).toEqual([])
 })
 
-test('a package used without an import may be declared and never imported', () => {
+test('a package whose binary a script runs may be declared and never imported', () => {
   expect(
     auditPackages({
       manifests: [
@@ -172,15 +191,51 @@ test('a package used without an import may be declared and never imported', () =
           dependencies: ['typescript'],
           devDependencies: [],
           peerDependencies: [],
+          scriptCommands: ['tsc --noEmit'],
         },
       ],
       sources: [{ path: '/src/a/index.ts', content: 'export const x = 1' }],
-      usedWithoutImport: ['typescript'],
     }),
   ).toEqual([])
 })
 
-test('a package used without an import is still reported when imported undeclared', () => {
+test('a package whose binary no script of this package runs is reported as unused', () => {
+  expect(
+    auditPackages({
+      manifests: [
+        {
+          dir: '/src/a',
+          name: '@org/a',
+          dependencies: ['vitest'],
+          devDependencies: [],
+          peerDependencies: [],
+          scriptCommands: ['tsc --noEmit'],
+        },
+      ],
+      sources: [{ path: '/src/a/index.ts', content: 'export const x = 1' }],
+    }),
+  ).toEqual([{ name: '@org/a', unused: ['vitest'], missing: [], misdeclared: [] }])
+})
+
+test('a script naming a binary inside a longer word does not count as running it', () => {
+  expect(
+    auditPackages({
+      manifests: [
+        {
+          dir: '/src/a',
+          name: '@org/a',
+          dependencies: ['typescript'],
+          devDependencies: [],
+          peerDependencies: [],
+          scriptCommands: ['echo tsconfig'],
+        },
+      ],
+      sources: [{ path: '/src/a/index.ts', content: 'export const x = 1' }],
+    }),
+  ).toEqual([{ name: '@org/a', unused: ['typescript'], missing: [], misdeclared: [] }])
+})
+
+test('a package whose binary a script runs is still reported when imported undeclared', () => {
   expect(
     auditPackages({
       manifests: [
@@ -190,10 +245,10 @@ test('a package used without an import is still reported when imported undeclare
           dependencies: [],
           devDependencies: [],
           peerDependencies: [],
+          scriptCommands: ['tsc --noEmit'],
         },
       ],
       sources: [{ path: '/src/a/index.ts', content: "import ts from 'typescript'" }],
-      usedWithoutImport: ['typescript'],
     }),
   ).toEqual([{ name: '@org/a', missing: ['typescript'], unused: [], misdeclared: [] }])
 })
@@ -208,10 +263,10 @@ test('a types package may be declared and never imported', () => {
           dependencies: ['@types/pg'],
           devDependencies: [],
           peerDependencies: [],
+          scriptCommands: [],
         },
       ],
       sources: [{ path: '/src/a/index.ts', content: "import pg from 'pg'" }],
-      usedWithoutImport: [],
     }),
   ).toEqual([{ name: '@org/a', missing: ['pg'], unused: [], misdeclared: [] }])
 })
@@ -226,10 +281,10 @@ test('a types package is reported when nothing it could type is there either', (
           dependencies: ['@types/pg'],
           devDependencies: [],
           peerDependencies: [],
+          scriptCommands: [],
         },
       ],
       sources: [{ path: '/src/a/index.ts', content: 'export const x = 1' }],
-      usedWithoutImport: [],
     }),
   ).toEqual([])
 })
@@ -270,6 +325,7 @@ test('getManifestsAndSources drops node_modules from both globs', async () => {
           dependencies: [],
           devDependencies: [],
           peerDependencies: [],
+          scriptCommands: [],
         },
       ],
       sources: [{ path: '/src/a/index.ts', content: 'export const a = 1' }],
@@ -300,6 +356,7 @@ test('reportFindings emits one event per package and passes when there are none'
             dependencies: [],
             devDependencies: [],
             peerDependencies: [],
+            scriptCommands: [],
           },
         ],
         sources: [],
@@ -319,6 +376,7 @@ test('reportFindings emits each finding then fails the audit', async () => {
             dependencies: [],
             devDependencies: [],
             peerDependencies: [],
+            scriptCommands: [],
           },
         ],
         sources: [{ path: '/src/a/index.ts', content: "import { of } from 'rxjs'" }],
@@ -333,7 +391,7 @@ test('reportFindings emits each finding then fails the audit', async () => {
   ])
 })
 
-test('reportFindings treats its configured packages as declarable without import', async () => {
+test('reportFindings passes a package whose own script runs the binary it declares', async () => {
   expect(
     await collectValuesFrom(
       of({
@@ -344,6 +402,7 @@ test('reportFindings treats its configured packages as declarable without import
             dependencies: ['typescript'],
             devDependencies: [],
             peerDependencies: [],
+            scriptCommands: ['tsc --noEmit'],
           },
         ],
         sources: [],
@@ -362,6 +421,7 @@ test('auditPackages reports a dependency that only a test file imports', () => {
           dependencies: ['memfs'],
           devDependencies: [],
           peerDependencies: [],
+          scriptCommands: [],
         },
       ],
       sources: [{ path: '/src/a/index.test.ts', content: "import { x } from 'memfs'" }],
@@ -386,6 +446,7 @@ test('auditPackages reports a dev dependency that shipped source imports', () =>
           dependencies: [],
           devDependencies: ['rxjs'],
           peerDependencies: [],
+          scriptCommands: [],
         },
       ],
       sources: [{ path: '/src/a/index.ts', content: "import { x } from 'rxjs'" }],
@@ -410,6 +471,7 @@ test('auditPackages accepts a dev dependency that only a test file imports', () 
           dependencies: [],
           devDependencies: ['vitest'],
           peerDependencies: [],
+          scriptCommands: [],
         },
       ],
       sources: [{ path: '/src/a/index.test.ts', content: "import { test } from 'vitest'" }],
@@ -427,6 +489,7 @@ test('auditPackages accepts a dependency that both source and tests import', () 
           dependencies: ['rxjs'],
           devDependencies: [],
           peerDependencies: [],
+          scriptCommands: [],
         },
       ],
       sources: [
@@ -447,6 +510,7 @@ test('auditPackages accepts a peer dependency that shipped source imports', () =
           dependencies: [],
           devDependencies: [],
           peerDependencies: ['react'],
+          scriptCommands: [],
         },
       ],
       sources: [{ path: '/src/a/index.ts', content: "import { x } from 'react'" }],
@@ -464,6 +528,7 @@ test('auditPackages accepts a dev dependency that is also declared as a peer', (
           dependencies: [],
           devDependencies: ['react'],
           peerDependencies: ['react'],
+          scriptCommands: [],
         },
       ],
       sources: [{ path: '/src/a/index.ts', content: "import { x } from 'react'" }],
@@ -478,6 +543,7 @@ test('parseManifest keeps peer dependencies too', () => {
       content: JSON.stringify({
         name: '@org/a',
         peerDependencies: { react: '^19.0.0' },
+        scriptCommands: [],
       }),
     }),
   ).toEqual({
@@ -486,5 +552,6 @@ test('parseManifest keeps peer dependencies too', () => {
     dependencies: [],
     devDependencies: [],
     peerDependencies: ['react'],
+    scriptCommands: [],
   })
 })
