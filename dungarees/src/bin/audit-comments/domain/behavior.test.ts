@@ -1,9 +1,7 @@
-import { createAuditCommentsBehavior } from './behavior.ts'
 import { eventCreators } from './events.ts'
+import { createFakeAuditComments } from './fake.ts'
 
-import { createCliCommands } from '@dungarees/cli-command/service.ts'
 import { collectValuesFrom } from '@dungarees/rxjs/util.ts'
-import { createStubSubProcessService } from '@dungarees/sub-process/stub.ts'
 
 import { expect, test } from 'vitest'
 
@@ -16,18 +14,13 @@ const DIFF = `diff --git a/src/a.ts b/src/a.ts
  if (ArrayBuffer.isView(a)) {
 `
 
-const behaviorOver = (stdout: string) => {
-  const { subProcess, executedCommands } = createStubSubProcessService([
-    { command: 'git', args: ['diff', 'HEAD', '--unified=2'], stdout, exitCode: 0 },
-  ])
-  return {
-    executedCommands,
-    behavior: createAuditCommentsBehavior({ cliCommands: createCliCommands(subProcess) }),
-  }
-}
+const behaviorOver = ({ stdout = '', ref = 'HEAD' }: { stdout?: string; ref?: string } = {}) =>
+  createFakeAuditComments({
+    commands: [{ command: 'git', args: ['diff', ref, '--unified=2'], stdout, exitCode: 0 }],
+  })
 
 test('audit reports a comment added to the working tree', async () => {
-  const { behavior } = behaviorOver(DIFF)
+  const behavior = behaviorOver({ stdout: DIFF })
 
   const events = await collectValuesFrom(behavior.audit({ ref: 'HEAD', dir: '.' }).events$)
 
@@ -44,7 +37,7 @@ test('audit reports a comment added to the working tree', async () => {
 })
 
 test('audit says so when the diff added no comments', async () => {
-  const { behavior } = behaviorOver('diff --git a/src/a.ts b/src/a.ts\n')
+  const behavior = behaviorOver({ stdout: 'diff --git a/src/a.ts b/src/a.ts\n' })
 
   const events = await collectValuesFrom(behavior.audit({ ref: 'HEAD', dir: '.' }).events$)
 
@@ -55,14 +48,11 @@ test('audit says so when the diff added no comments', async () => {
 })
 
 test('audit diffs against the ref and directory it is given', async () => {
-  const { subProcess, executedCommands } = createStubSubProcessService([
-    { command: 'git', args: ['diff', 'main', '--unified=2'], stdout: '', exitCode: 0 },
-  ])
-  const behavior = createAuditCommentsBehavior({ cliCommands: createCliCommands(subProcess) })
+  const behavior = behaviorOver({ ref: 'main' })
 
   await collectValuesFrom(behavior.audit({ ref: 'main', dir: '/repo' }).events$)
 
-  expect(executedCommands).toEqual([
+  expect(behavior.executedCommands).toEqual([
     { command: 'git', args: ['diff', 'main', '--unified=2'], options: { cwd: '/repo' } },
   ])
 })
