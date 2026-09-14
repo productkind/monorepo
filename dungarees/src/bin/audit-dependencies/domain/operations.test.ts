@@ -4,7 +4,6 @@ import {
   getAuditStartEvent,
   getImportedPackages,
   getManifestsAndSources,
-  isOutsideNodeModules,
   parseManifest,
   reportFindings,
 } from './operations.ts'
@@ -69,12 +68,6 @@ test('findOwnerDir picks the deepest package containing the file', () => {
 
 test('findOwnerDir returns undefined for a file no package owns', () => {
   expect(findOwnerDir({ filePath: '/elsewhere/file.ts', dirs: ['/repo/src/a'] })).toBeUndefined()
-})
-
-test('isOutsideNodeModules rejects only paths with a node_modules segment', () => {
-  expect(isOutsideNodeModules('/repo/src/a/index.ts')).toBe(true)
-  expect(isOutsideNodeModules('/repo/src/a/node_modules/dep/index.ts')).toBe(false)
-  expect(isOutsideNodeModules('/repo/src/node_modules_helper/index.ts')).toBe(true)
 })
 
 test('auditPackages reports imports that are not declared', () => {

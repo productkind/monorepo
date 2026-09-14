@@ -8,6 +8,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@dungarees/bin-shared-domain": "*",
     "@dungarees/cli-command": "*",
     "@dungarees/core": "*",
     "@dungarees/fs": "*",

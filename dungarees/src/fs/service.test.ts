@@ -371,3 +371,27 @@ test('FileSystem.chown sets owner', async () => {
   expect(statObservable.userId).toBe(1003)
   expect(statObservable.groupId).toBe(1003)
 })
+
+test('FileSystem readFileSync reads text when no encoding is given', () => {
+  const fileSystem = createFileSystemService(createFakeNodeFs({ '/test.txt': 'test' }))
+
+  expect(fileSystem.readFileSync('/test.txt')).toBe('test')
+})
+
+test('FileSystem readFileAsync reads text when no encoding is given', async () => {
+  const fileSystem = createFileSystemService(createFakeNodeFs({ '/test.txt': 'test' }))
+
+  expect(await fileSystem.readFileAsync('/test.txt')).toBe('test')
+})
+
+test('FileSystem readFile emits text when no encoding is given', async () => {
+  const fileSystem = createFileSystemService(createFakeNodeFs({ '/test.txt': 'test' }))
+
+  expect(await lastValueFrom(fileSystem.readFile('/test.txt'))).toBe('test')
+})
+
+test('a fake file system reads text when no encoding is given', async () => {
+  const fileSystem = createFakeFileSystem({ '/test.txt': 'test' })
+
+  expect(await lastValueFrom(fileSystem.readFile('/test.txt'))).toBe('test')
+})

@@ -8,6 +8,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@dungarees/bin-shared-domain": "*",
     "@dungarees/core": "*",
     "@dungarees/fs": "*",
     "@dungarees/rxjs": "*",

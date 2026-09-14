@@ -32,10 +32,15 @@ export type FileStats = {
 
 export type AccessMode = 'readable' | 'writable' | 'executable' | 'visible'
 
+const DEFAULT_ENCODING: BufferEncoding = 'utf-8'
+
+// The port an operation declares when all it needs is to read a file as text.
+export type TextFileReader = (path: string) => Observable<string>
+
 export type FileSystemService = {
-  readFileSync: (path: string, encoding: BufferEncoding) => string
-  readFileAsync: (path: string, encoding: BufferEncoding) => Promise<string>
-  readFile: (path: string, encoding: BufferEncoding) => Observable<string>
+  readFileSync: (path: string, encoding?: BufferEncoding) => string
+  readFileAsync: (path: string, encoding?: BufferEncoding) => Promise<string>
+  readFile: (path: string, encoding?: BufferEncoding) => Observable<string>
   writeFileSync: (path: string, data: string | TypedArray) => void
   writeFileAsync: (path: string, data: string | TypedArray) => Promise<void>
   writeFile: (path: string, data: string | TypedArray) => Observable<void>
@@ -122,7 +127,7 @@ export const createFileSystemService = (fs: NodeFs): UnsafeService<FileSystemSer
 
   const pathToString = (path: string) => path.toString()
 
-  const readFileSync: FileSystemService['readFileSync'] = (path, encoding) =>
+  const readFileSync: FileSystemService['readFileSync'] = (path, encoding = DEFAULT_ENCODING) =>
     fs.readFileSync(path, encoding).toString()
 
   const writeFileSync: FileSystemService['writeFileSync'] = (path, data) =>
@@ -142,7 +147,10 @@ export const createFileSystemService = (fs: NodeFs): UnsafeService<FileSystemSer
     fs.mkdirSync(path, { recursive: true })
   }
 
-  const readFileAsync: FileSystemService['readFileAsync'] = async (path, encoding) => {
+  const readFileAsync: FileSystemService['readFileAsync'] = async (
+    path,
+    encoding = DEFAULT_ENCODING,
+  ) => {
     const content = await fs.promises.readFile(path, encoding)
     return content.toString()
   }
@@ -171,7 +179,7 @@ export const createFileSystemService = (fs: NodeFs): UnsafeService<FileSystemSer
     return Object.fromEntries(
       await Promise.all(
         paths.map(async (filePath) => {
-          const content = await fs.promises.readFile(filePath, 'utf8')
+          const content = await fs.promises.readFile(filePath, DEFAULT_ENCODING)
           return [filePath, content] as const
         }),
       ),
@@ -181,7 +189,7 @@ export const createFileSystemService = (fs: NodeFs): UnsafeService<FileSystemSer
   const readBulkSync: FileSystemService['readBulkSync'] = (paths) => {
     return Object.fromEntries(
       paths.map((filePath) => {
-        const content = fs.readFileSync(filePath, 'utf8')
+        const content = fs.readFileSync(filePath, DEFAULT_ENCODING)
         return [filePath, content]
       }),
     )

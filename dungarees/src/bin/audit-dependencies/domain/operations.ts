@@ -1,6 +1,15 @@
 import { type AuditDependenciesEvent, eventCreators, type MisdeclaredDependency } from './events.ts'
 
+import {
+  DUNGAREES_LIBRARY_PATHS,
+  type DungareesLibraryPaths,
+} from '@dungarees/bin-shared-domain/library-paths.ts'
+import {
+  excludeInstalledDependencies,
+  isTestFile,
+} from '@dungarees/bin-shared-domain/source-files.ts'
 import { createCausedError } from '@dungarees/core/error.ts'
+import type { TextFileReader } from '@dungarees/fs/service.ts'
 import { catchAndRethrow } from '@dungarees/rxjs/util.ts'
 
 import path from 'node:path'
@@ -93,11 +102,6 @@ export const findOwnerDir = ({
       undefined,
     )
 
-export const isOutsideNodeModules = (filePath: string): boolean =>
-  !filePath.split('/').includes('node_modules')
-
-export const isTestFile = (filePath: string): boolean => /\.(test|spec)\.tsx?$/.test(filePath)
-
 export const auditPackages = ({
   manifests,
   sources,
@@ -165,9 +169,7 @@ export const auditPackages = ({
   })
 }
 
-export const readFiles = (
-  readFile: (filePath: string) => Observable<string>,
-): OperatorFunction<string[], SourceFile[]> =>
+export const readFiles = (readFile: TextFileReader): OperatorFunction<string[], SourceFile[]> =>
   mergeMap((paths) =>
     paths.length === 0
       ? of<SourceFile[]>([])
@@ -189,14 +191,9 @@ const PACKAGES_USED_WITHOUT_IMPORT = ['typescript', 'vitest', 'react']
 export const getAuditStartEvent = ({ dir }: { dir: string }): Observable<AuditDependenciesEvent> =>
   of(eventCreators.auditStart({ dir }))
 
-const excludeNodeModules = (): OperatorFunction<string[], string[]> =>
-  map((paths) => paths.filter(isOutsideNodeModules))
-
-const readManifests = (
-  readFile: (filePath: string) => Observable<string>,
-): OperatorFunction<string[], PackageManifest[]> =>
+const readManifests = (readFile: TextFileReader): OperatorFunction<string[], PackageManifest[]> =>
   pipe(
-    excludeNodeModules(),
+    excludeInstalledDependencies(),
     readFiles(readFile),
     map((files) =>
       files.map(({ path: manifestPath, content }) => parseManifest({ manifestPath, content })),
@@ -206,19 +203,15 @@ const readManifests = (
     ),
   )
 
-const readSources = (
-  readFile: (filePath: string) => Observable<string>,
-): OperatorFunction<string[], SourceFile[]> => pipe(excludeNodeModules(), readFiles(readFile))
+const readSources = (readFile: TextFileReader): OperatorFunction<string[], SourceFile[]> =>
+  pipe(excludeInstalledDependencies(), readFiles(readFile))
 
-export type AuditLayout = {
-  sourceDir: string
-  manifests: string
+export type DependencyAuditPaths = DungareesLibraryPaths & {
   sources: string
 }
 
-const DUNGAREES_LAYOUT: AuditLayout = {
-  sourceDir: 'src',
-  manifests: '**/package.json',
+const DEPENDENCY_AUDIT_PATHS: DependencyAuditPaths = {
+  ...DUNGAREES_LIBRARY_PATHS,
   sources: '**/*.{ts,tsx}',
 }
 
@@ -226,17 +219,17 @@ export const getManifestsAndSources = ({
   dir,
   glob,
   readFile,
-  layout = DUNGAREES_LAYOUT,
+  paths = DEPENDENCY_AUDIT_PATHS,
 }: {
   dir: string
   glob: (pattern: string) => Observable<string[]>
-  readFile: (filePath: string) => Observable<string>
-  layout?: AuditLayout
+  readFile: TextFileReader
+  paths?: DependencyAuditPaths
 }): Observable<{ manifests: PackageManifest[]; sources: SourceFile[] }> => {
-  const sourceDir = `${dir}/${layout.sourceDir}`
+  const sourceDir = `${dir}/${paths.sourceDir}`
   return forkJoin({
-    manifests: glob(`${sourceDir}/${layout.manifests}`).pipe(readManifests(readFile)),
-    sources: glob(`${sourceDir}/${layout.sources}`).pipe(readSources(readFile)),
+    manifests: glob(`${sourceDir}/${paths.manifests}`).pipe(readManifests(readFile)),
+    sources: glob(`${sourceDir}/${paths.sources}`).pipe(readSources(readFile)),
   })
 }
 

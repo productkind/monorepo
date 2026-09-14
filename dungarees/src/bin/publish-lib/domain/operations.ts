@@ -1,7 +1,13 @@
 import { eventCreators, type PublishLibEvent } from './events.ts'
 
+import {
+  DUNGAREES_LIBRARY_PATHS,
+  type DungareesLibraryPaths,
+} from '@dungarees/bin-shared-domain/library-paths.ts'
+import { excludeInstalledDependencies } from '@dungarees/bin-shared-domain/source-files.ts'
 import { createCausedError, getErrorMessage } from '@dungarees/core/error.ts'
 import type { JsonObject } from '@dungarees/core/type-util.ts'
+import type { TextFileReader } from '@dungarees/fs/service.ts'
 import {
   assertSchemaMap,
   catchAndRethrow,
@@ -35,8 +41,6 @@ type BaseBuildArgs = {
   outDir: string
   version: string | undefined
 }
-
-export const isTestFile = (filePath: string): boolean => /\.(test|spec)\.tsx?$/.test(filePath)
 
 export const getBuildStartEvent = ({
   srcDir,
@@ -336,28 +340,25 @@ export type PackageToPublish = {
   outDir: string
 }
 
-export type LibLayout = {
-  sourceDir: string
+export type LibraryPublishPaths = DungareesLibraryPaths & {
   outDir: string
   versionFile: string
-  manifests: string
 }
 
-const DUNGAREES_LAYOUT: LibLayout = {
-  sourceDir: 'src',
+const LIBRARY_PUBLISH_PATHS: LibraryPublishPaths = {
+  ...DUNGAREES_LIBRARY_PATHS,
   outDir: 'dist',
   versionFile: 'config/version.json',
-  manifests: '**/package.json',
 }
 
 const getPackages = ({
   dir,
   sourceDir,
-  layout,
+  paths,
 }: {
   dir: string
   sourceDir: string
-  layout: LibLayout
+  paths: LibraryPublishPaths
 }): OperatorFunction<string[], PackageToPublish[]> =>
   map((packageJsonPaths) =>
     packageJsonPaths.map((jsonPath) => {
@@ -365,7 +366,7 @@ const getPackages = ({
       return {
         packageDir,
         srcDir: `${sourceDir}/${packageDir}`,
-        outDir: `${dir}/${layout.outDir}/${packageDir}`,
+        outDir: `${dir}/${paths.outDir}/${packageDir}`,
       }
     }),
   )
@@ -384,7 +385,7 @@ const parseVersion = (): OperatorFunction<string, string> =>
 const PACKAGE_PRIVACY = z.object({ private: z.boolean().optional() })
 
 const excludePrivatePackages = (
-  readPackageJson: (path: string) => Observable<string>,
+  readPackageJson: TextFileReader,
 ): OperatorFunction<string[], string[]> =>
   mergeMap((packageJsonPaths) =>
     packageJsonPaths.length === 0
@@ -405,30 +406,25 @@ const excludePrivatePackages = (
         ),
   )
 
-const excludeInstalledDependencies = (): OperatorFunction<string[], string[]> =>
-  map((packageJsonPaths) =>
-    packageJsonPaths.filter((jsonPath) => !jsonPath.includes('/node_modules/')),
-  )
-
 export const getPackagesToPublish = ({
   dir,
   glob,
   readFile,
-  layout = DUNGAREES_LAYOUT,
+  paths = LIBRARY_PUBLISH_PATHS,
 }: {
   dir: string
   glob: (pattern: string) => Observable<string[]>
-  readFile: (filePath: string) => Observable<string>
-  layout?: LibLayout
+  readFile: TextFileReader
+  paths?: LibraryPublishPaths
 }): Observable<{ packages: PackageToPublish[]; version: string }> => {
-  const sourceDir = `${dir}/${layout.sourceDir}`
+  const sourceDir = `${dir}/${paths.sourceDir}`
   return forkJoin({
-    packages: glob(`${sourceDir}/${layout.manifests}`).pipe(
+    packages: glob(`${sourceDir}/${paths.manifests}`).pipe(
       excludeInstalledDependencies(),
       excludePrivatePackages(readFile),
-      getPackages({ dir, sourceDir, layout }),
+      getPackages({ dir, sourceDir, paths }),
     ),
-    version: readFile(`${dir}/${layout.versionFile}`).pipe(parseVersion()),
+    version: readFile(`${dir}/${paths.versionFile}`).pipe(parseVersion()),
   })
 }
 
