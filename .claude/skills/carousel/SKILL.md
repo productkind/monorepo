@@ -51,12 +51,64 @@ This skill produces the carousel itself: the approved spec, the designed slides,
 
 ## Step 1 — Draft the spec (Claude)
 
-Write the spec md with:
+**The spec is the slides, one section each.** It exists so Kinga can approve every word before any design work, and so `check.py` can bind the HTML to it. If something is not a word that appears on a slide, or an instruction the implementer cannot get from the slide sections, it does not belong in the spec.
 
-- **Header**: pillar/goal, research trace or source reference.
-- **Format block**: slide count, dimensions (1080x1350), the spec key for prompt snippets (any text the reader literally types renders verbatim in monospace inside the prompt-window mockup), and the full-fidelity rule ("every word that appears on a slide is in this table, verbatim; `check.py` enforces it"). "Verbatim" binds the HTML to the spec, not the spec to the article (see the copy principles above).
-- **The slide table**: `| Slide | Visual | Display copy (verbatim) | Prompt window / mockup content (verbatim) |`. ALL on-slide text: headlines, kickers, labels, footnotes, card text, badges. Parody content (deliberately bad example messages) is marked "(parody; banned-list exempt)".
-- **Alt text** for the post.
+Write it in this shape, and nothing more. Everything in angle brackets is a slot to fill from the piece you are working on; the shape is prescribed, the content of the slots never is:
+
+```md
+---
+status: drafted
+brand: <little-parrot | productkind>
+channels: [<channels>]
+source: <path to the article, course or research file>
+---
+
+# Carousel: <title>
+
+**One takeaway:** <one sentence> **Format:** <N> slides · 1080 x 1350 · <brand>
+
+## Slide 1 (cover)
+
+Visual: <one line: layout, device, asset>
+
+- <Role>: <the exact words that appear on the slide>
+- <Role>: <the exact words that appear on the slide>
+
+## Slide 2
+
+Visual: <one line: layout, device, asset>
+
+- <Role>: <the exact words that appear on the slide>
+
+## Slide <N> (CTA)
+
+Visual: <one line: layout, device, asset>
+
+- <Role>: <the exact words that appear on the slide>
+
+## Alt text
+
+<one paragraph describing the slides, for the post>
+
+## Design notes
+
+- <only if needed; up to 5 one-line bullets>
+```
+
+How to write a slide section:
+
+- One `##` section per slide, in order, headed `## Slide N` (add `(cover)` or `(CTA)` where it helps).
+- **`Visual:`** is the illustration, on the first line: which layout, which device, which asset. One line, and it says what to build, not why. The devices available are the ones in `productkind/carousel-design/templates/<brand>.html`: read it and pick what this idea needs, rather than reaching for the device the last carousel used. Repeating one device down a deck is right when the slides are a series of the same kind of thing and the repetition is the point, and wrong when it is just the first device that came to mind.
+- **One bullet per piece of text on the slide**, labelled with the role that piece plays on that slide (Kicker, Headline, Lead, Label, Card 1, Aside, Footnote, Badge, Runner, Share-ask, and anything else the layout has; it is not a closed list). Everything after the colon is the slide copy itself, written bare with no surrounding quotes.
+- **Text the reader literally types** gets its own bullet, labelled with whichever mockup holds it and marked `(typed, monospace)`.
+- **Never hard-wrap a line of copy.** `check.py` matches each on-slide text unit as one continuous string, so a line break inside a piece of copy splits the match and coverage fails. One element, one bullet, one line, however long.
+- Parody content (deliberately bad example messages) gets `(parody; banned-list exempt)` at the end of its bullet.
+
+Design notes are only for things the implementer needs and cannot see in the slide sections: the UTM link for the CTA, a specific asset to use, or a warning that some copy must not be tidied up because its exact form is the evidence. If there are none, leave the section out.
+
+**Do not write** a story-arc paragraph, a rationale section arguing why the deck is built this way, a slide-by-slide mapping back to the source, posting notes, channel strategy, export notes, or restatements of the rules below. That work is real, but it is your thinking, not the deliverable: do it, then write the slides. Outside the slide sections and the alt text, the whole spec stays under 150 words. Bullets hold slide copy, not commentary.
+
+**Constants you never restate in a spec**, because they are true of every carousel: the full-fidelity rule (`check.py` enforces that the design adds no text the spec lacks; "verbatim" binds the HTML to the spec, not the spec to the source), the 1080 x 1080 TikTok centre-square crop, and that any text the reader literally types renders verbatim in monospace inside its mockup.
 
 No captions in the spec: channel captions are written after the carousel is final, with the **captions** skill.
 
@@ -72,13 +124,14 @@ Design-quality bar: the copy principles above are the bar (they distil `productk
 - **Visuals that explain, never decorate**: every image carries part of the idea (a diagram, the prompt window, a before/after); a picture that is only pretty adds nothing and can distract.
 - **A concrete payoff by slide 2-3**, and a CTA with a share-ask that drives to the full article.
 
-Before showing the spec, run this quick gate and fix anything that fails:
+Before showing the spec, run this quick gate and fix anything that fails. These are checks you run, not sections you write into the spec:
 
 - Reread each slide's copy and cut it down: if it reads as a paragraph, trim to the one line that earns the swipe.
 - Name the one takeaway in a sentence, then check every slide serves it; cut any slide that doesn't, however good it is.
 - Check that each abstract point has a concrete example near it. A run of claim-slides with no example is the most common way a carousel stays vague instead of useful.
 - Check there is a do-this-or-decide beat before the CTA.
 - Read the display copy slide 1 to N: does it move one step at a time, and is the last idea clearly ahead of the first? If two slides could swap without the reader noticing, tighten the order.
+- Read everything that is not a slide section or the alt text. If it explains, justifies, or narrates rather than instructs, delete it.
 
 Then gate the language with fresh eyes, still before showing the spec:
 
