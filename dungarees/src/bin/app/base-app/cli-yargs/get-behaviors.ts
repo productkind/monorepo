@@ -5,8 +5,12 @@ import { createAuditCommentsBehavior } from '@dungarees/bin-audit-comments-domai
 import { createAuditDependenciesBehavior } from '@dungarees/bin-audit-dependencies-domain/behavior.ts'
 import { createPublishLibBehavior } from '@dungarees/bin-publish-lib-domain/behavior.ts'
 
-export const getBehaviors = (services: DungareesBinServices): DungareesBinBehaviors => ({
-  publishLib: createPublishLibBehavior(services),
-  auditDependencies: createAuditDependenciesBehavior(services),
-  auditComments: createAuditCommentsBehavior({ cliCommands: services }),
+export const getBehaviors = ({
+  fileSystem,
+  npm,
+  git,
+}: DungareesBinServices): DungareesBinBehaviors => ({
+  publishLib: createPublishLibBehavior({ fileSystem, npm }),
+  auditDependencies: createAuditDependenciesBehavior({ fileSystem }),
+  auditComments: createAuditCommentsBehavior({ git }),
 })
