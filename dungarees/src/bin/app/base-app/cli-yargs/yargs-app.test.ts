@@ -1,6 +1,7 @@
 import { getBehaviors } from './get-behaviors.ts'
 import { createYargsApp } from './yargs-app.ts'
 
+import { auditCommentsPresenter } from '@dungarees/bin-audit-comments-cli-yargs/presenter.ts'
 import { auditDependenciesPresenter } from '@dungarees/bin-audit-dependencies-cli-yargs/presenter.ts'
 import {
   createFakeServices,
@@ -94,10 +95,23 @@ test('the dungarees app reaches the publish-single-lib command', async () => {
   ])
 })
 
-test('the two features share no event type', () => {
-  const shared = Object.keys(publishLibPresenter).filter(
-    (type) => type in auditDependenciesPresenter,
-  )
+test('the dungarees app reaches the audit-comments command', async () => {
+  const app = createApp({
+    commands: [{ command: 'git', args: ['diff', 'HEAD', '--unified=2'], stdout: '', exitCode: 0 }],
+  })
 
-  expect(shared).toEqual([])
+  const { terminal } = renderCli(app, 'dungarees audit-comments /repo')
+
+  expect(await terminal.step()).toContainEqual({
+    type: 'stdout',
+    message: 'Comments added since HEAD',
+    level: 'info',
+  })
+})
+
+test('the features share no event type', () => {
+  const presenters = [publishLibPresenter, auditDependenciesPresenter, auditCommentsPresenter]
+  const types = presenters.flatMap((presenter) => Object.keys(presenter))
+
+  expect(types).toEqual([...new Set(types)])
 })

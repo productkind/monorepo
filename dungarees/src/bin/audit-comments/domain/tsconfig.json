@@ -1,0 +1,11 @@
+{
+  "extends": "@dungarees/core/tsconfig.base.json",
+  "compilerOptions": {
+    "paths": {
+      "@dungarees/bin-audit-dependencies-domain/*": ["./*"]
+    },
+    "noEmit": true,
+    "rootDir": ".",
+    "module": "NodeNext"
+  }
+}

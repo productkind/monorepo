@@ -628,3 +628,52 @@ import type { StdioMessage } from '@dungarees/cli/message.ts'
 ```
 
 A name that repeats its package stutters at the call site: `auditDependencies.audit(...)`, not `auditDependencies.auditDependencies(...)`. And two packages must not export the same name for different things — `createSmsSender` and `createEmailSender`, never `createSender` twice.
+
+## 16. Always brace the body of a statement
+
+An unbraced body reads as one statement and silently stays one when a second line is added under it. Brace every `if`, `else`, `for`, `while` and `do`, including single-line early returns, so adding a line is an edit to the body and not a change of meaning.
+
+```ts
+// Bad — the guard and the body are one line apart from being wrong
+if (raw.startsWith('-')) continue
+if (!isBlockStart(lines, index, entry)) return []
+```
+
+```ts
+// Good
+if (raw.startsWith('-')) {
+  continue
+}
+if (!isBlockStart(lines, index, entry)) {
+  return []
+}
+```
+
+## 17. Build a new value; do not mutate one
+
+Prefer a transformation that returns a new value over a loop that pushes into an accumulator or reassigns a `let`. `map`, `filter`, `flatMap`, `slice`, `findIndex` and `reduce` say what the result _is_; a loop says how it was assembled and leaves the reader to reconstruct the invariant. Carry loop state as a value through `reduce` rather than as reassigned bindings.
+
+This is about the code you write, not about defending against callers: an operation still takes its input as given and returns something new.
+
+```ts
+// Bad — three mutable bindings, and the invariant relating them lives only in the reader's head
+const toDiffLines = (diff: string): DiffLine[] => {
+  const lines: DiffLine[] = []
+  let file = ''
+  let lineNumber = 0
+  for (const raw of diff.split('\n')) {
+    ...
+    lines.push({ file, line: lineNumber, text: raw.slice(1) })
+    lineNumber += 1
+  }
+  return lines
+}
+```
+
+```ts
+// Good — the state is one value, and each step returns the next one
+const toDiffLines = (diff: string): DiffLine[] =>
+  diff.split('\n').reduce(scanDiffLine, { file: '', lineNumber: 0, lines: [] }).lines
+```
+
+A `for` loop earns its place when the work is genuinely sequential and the functional form would hide that — reading until a terminator, or short-circuiting a search that cannot be expressed with `find`. Reach for it after the transformation, not before.
