@@ -1,7 +1,7 @@
 import type { AuditCommentsEvent } from './events.ts'
 import { getAddedComments, getAuditStartEvent, reportAddedComments } from './operations.ts'
 
-import type { CliCommands } from '@dungarees/cli-command/service.ts'
+import type { GitCommands } from '@dungarees/cli-command/service.ts'
 
 import { concat, type Observable } from 'rxjs'
 
@@ -14,11 +14,11 @@ export type AuditCommentsBehavior = {
 }
 
 export type CreateAuditCommentsBehaviorOptions = {
-  cliCommands: CliCommands
+  git: GitCommands
 }
 
 export const createAuditCommentsBehavior = ({
-  cliCommands: { git },
+  git,
 }: CreateAuditCommentsBehaviorOptions): AuditCommentsBehavior => {
   const audit: AuditCommentsBehavior['audit'] = ({ ref, dir }) => {
     const startEvent$ = getAuditStartEvent({ ref })

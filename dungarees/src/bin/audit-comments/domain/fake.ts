@@ -17,9 +17,9 @@ export type FakeAuditComments = AuditCommentsBehavior & {
 export const createFakeAuditComments = ({
   commands = [],
 }: FakeAuditCommentsWorld = {}): FakeAuditComments => {
-  const { executedCommands, ...cliCommands } = createStubCliCommands(commands)
+  const { executedCommands, git } = createStubCliCommands(commands)
   return {
-    ...createAuditCommentsBehavior({ cliCommands }),
+    ...createAuditCommentsBehavior({ git }),
     executedCommands,
   }
 }

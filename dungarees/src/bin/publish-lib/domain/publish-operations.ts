@@ -1,3 +1,4 @@
+import { type BuildIo, buildPackage } from './build-operations.ts'
 import { eventCreators, type PublishLibEvent } from './events.ts'
 
 import {
@@ -6,24 +7,18 @@ import {
 } from '@dungarees/bin-shared-domain/library-paths.ts'
 import { excludeInstalledDependencies } from '@dungarees/bin-shared-domain/source-files.ts'
 import { createCausedError, getErrorMessage } from '@dungarees/core/error.ts'
-import type { JsonObject } from '@dungarees/core/type-util.ts'
 import type { TextFileReader } from '@dungarees/fs/service.ts'
-import {
-  assertSchemaMap,
-  catchAndRethrow,
-  type GetTransformSetContext,
-} from '@dungarees/rxjs/util.ts'
-import type { TranspileDirOutput } from '@dungarees/transpile/service.ts'
-import { jsonObjectSchema, parseJson } from '@dungarees/zod/json.ts'
+import { catchAndRethrow } from '@dungarees/rxjs/util.ts'
+import { parseJson } from '@dungarees/zod/json.ts'
 
 import path from 'node:path'
 import {
   catchError,
+  concat,
   connect,
   defer,
   EMPTY,
   forkJoin,
-  from,
   merge,
   type MonoTypeOperatorFunction,
   type Observable,
@@ -35,211 +30,6 @@ import {
 } from 'rxjs'
 import { map, mergeMap } from 'rxjs/operators'
 import { z } from 'zod'
-
-type BaseBuildArgs = {
-  srcDir: string
-  outDir: string
-  version: string | undefined
-}
-
-export const getBuildStartEvent = ({
-  srcDir,
-  outDir,
-  version,
-}: BaseBuildArgs): Observable<PublishLibEvent> =>
-  of(eventCreators.buildStart({ srcDir, outDir, version }))
-
-export const createOutDir = ({
-  createOutDir$,
-  outDir,
-}: {
-  createOutDir$: Observable<void>
-  outDir: string
-}): Observable<PublishLibEvent> =>
-  createOutDir$.pipe(
-    map(() => eventCreators.outDirCreated({ outDir })),
-    catchAndRethrow((cause) =>
-      createCausedError({ message: `Error creating output directory (${outDir})`, cause }),
-    ),
-  )
-
-const DUNGAREES_SETTINGS_SCHEMA = z.object({
-  dungarees: z.object({ assets: z.array(z.string()).optional() }).optional(),
-})
-
-type DungareesSettings = { assets?: string[] | undefined }
-
-export const copyAssets = ({
-  packageJsonContent$,
-  srcDir,
-  outDir,
-  copyFile,
-}: {
-  packageJsonContent$: Observable<string>
-  srcDir: string
-  outDir: string
-  copyFile: (source: string, destination: string) => Observable<void>
-}): Observable<PublishLibEvent> =>
-  packageJsonContent$.pipe(
-    mergeMap((json) =>
-      from(
-        parseJson({
-          json,
-          schema: DUNGAREES_SETTINGS_SCHEMA,
-          message: 'Invalid source package.json',
-        }).dungarees?.assets ?? [],
-      ),
-    ),
-    mergeMap((asset) => {
-      const destination = path.join(outDir, asset)
-      return copyFile(path.join(srcDir, asset), destination).pipe(
-        map(() => eventCreators.assetCopied({ path: destination })),
-      )
-    }),
-    catchAndRethrow((cause) => createCausedError({ message: 'Error copying assets', cause })),
-  )
-
-export const transformPackageJson = ({
-  fileTransform,
-  srcDir,
-  outDir,
-  version,
-}: {
-  fileTransform: GetTransformSetContext<string, string, string>
-} & BaseBuildArgs): OperatorFunction<TranspileDirOutput[], PublishLibEvent> =>
-  mergeMap((transpiledFiles) =>
-    fileTransform(
-      parsePackageJson(),
-      setPackageJsonVersion(version),
-      setExports({ srcDir, outDir, transpiledFiles }),
-      setAssetExports(),
-      setBin(),
-      stringifyPackageJson(),
-    ).pipe(handleTransformEnd(outDir)),
-  )
-
-type ExportMap = Record<string, { import: string; types: string } | string>
-
-type BinMap = Record<string, string>
-
-const setBin = (): OperatorFunction<
-  { version: string; bin?: BinMap },
-  { version: string; bin?: BinMap }
-> =>
-  pipe(
-    map((packageJsonContent) => {
-      const bin: BinMap = Object.fromEntries(
-        Object.entries(packageJsonContent.bin ?? {}).map(([name, binPath]) => [
-          name,
-          binPath.replace(/\.ts$/, '.js'),
-        ]),
-      )
-      return {
-        ...packageJsonContent,
-        ...(packageJsonContent.bin === undefined ? {} : { bin }),
-      }
-    }),
-  )
-
-const setExports = ({
-  srcDir,
-  outDir,
-  transpiledFiles,
-}: {
-  srcDir: string
-  outDir: string
-  transpiledFiles: TranspileDirOutput[]
-}): OperatorFunction<
-  { version: string; dungarees?: DungareesSettings | undefined },
-  { version: string; dungarees?: DungareesSettings | undefined; exports?: ExportMap }
-> =>
-  pipe(
-    map((packageJsonContent) => {
-      const exports: ExportMap = Object.fromEntries(
-        transpiledFiles.map(({ input, output, type }) => {
-          const exportFile = path.relative(srcDir, input)
-          const importFile = path.relative(outDir, output)
-          const typeFile = path.relative(outDir, type)
-          return [
-            `./${exportFile}`,
-            {
-              import: `./${importFile}`,
-              types: `./${typeFile}`,
-            },
-          ]
-        }),
-      )
-      return {
-        ...packageJsonContent,
-        ...(transpiledFiles.length > 0 ? { exports } : {}),
-      }
-    }),
-  )
-
-const setAssetExports = (): OperatorFunction<
-  { version: string; dungarees?: DungareesSettings | undefined; exports?: ExportMap },
-  { version: string; exports?: ExportMap }
-> =>
-  pipe(
-    map(({ dungarees, ...packageJsonContent }) => {
-      const assets = dungarees?.assets
-      if (assets === undefined) {
-        return packageJsonContent
-      }
-      const assetExports: ExportMap = Object.fromEntries(
-        assets.map((asset) => [`./${asset}`, `./${asset}`] as const),
-      )
-      return {
-        ...packageJsonContent,
-        exports: { ...packageJsonContent.exports, ...assetExports },
-      }
-    }),
-  )
-
-const parsePackageJson = (): OperatorFunction<string, JsonObject> =>
-  map((json) =>
-    parseJson({
-      json,
-      schema: jsonObjectSchema,
-      message: 'Invalid source package.json',
-      schemaMessage: 'package.json must be a JSON object',
-    }),
-  )
-
-const setPackageJsonVersion = (
-  version: string | undefined,
-): OperatorFunction<JsonObject, { version: string; dungarees?: DungareesSettings | undefined }> =>
-  pipe(
-    map((packageJson) => ({
-      ...packageJson,
-      version: version || packageJson['version'],
-    })),
-    assertSchemaMap(
-      z.object({ version: z.string().min(1) }).merge(DUNGAREES_SETTINGS_SCHEMA),
-      'Version is required in package.json or as an argument',
-    ),
-  )
-
-const stringifyPackageJson = (): OperatorFunction<
-  { version: string },
-  { set: string; context: string }
-> =>
-  pipe(
-    map((packageJson) => ({
-      set: JSON.stringify(packageJson, null, 2),
-      context: packageJson.version,
-    })),
-  )
-
-const handleTransformEnd = (
-  destinationPath: string,
-): OperatorFunction<{ context: string }, PublishLibEvent> =>
-  pipe(
-    map(({ context: version }) =>
-      eventCreators.packageJsonWritten({ path: destinationPath, version }),
-    ),
-    catchAndRethrow((cause) => createCausedError({ message: 'File transform failed', cause })),
-  )
 
 export const publishLib = ({
   publishFactory,
@@ -460,5 +250,64 @@ const summariseOutcome = (): OperatorFunction<PublishLibEvent, PublishLibEvent> 
       failedPackageDirs.length === 0
         ? eventCreators.allPublished()
         : eventCreators.publishesFailed({ packageDirs: [...failedPackageDirs].sort() }),
+    ),
+  )
+
+export type PublishIo = BuildIo & {
+  publish: (options: {
+    cwd: string
+  }) => Observable<{ exitCode: number | undefined; stderr: string | undefined }>
+  viewVersions: (options: {
+    name: string
+  }) => Observable<{ stdout: string; exitCode: number | undefined }>
+}
+
+type PublishPackageArgs = {
+  srcDir: string
+  outDir: string
+  packageDir: string
+  version: string | undefined
+  io: PublishIo
+}
+
+const buildAndPublishPackage = ({
+  srcDir,
+  outDir,
+  packageDir,
+  version,
+  io,
+}: PublishPackageArgs): Observable<PublishLibEvent> =>
+  publishUnlessPublished({
+    packageJsonContent$: io.readText(`${srcDir}/package.json`),
+    packageDir,
+    version,
+    viewVersions: io.viewVersions,
+    buildAndPublish: ({ version: resolvedVersion, created }) =>
+      concat(
+        buildPackage({ srcDir, outDir, version: resolvedVersion, io }),
+        publishLib({
+          publishFactory: () => io.publish({ cwd: outDir }),
+          packageDir,
+          version: resolvedVersion,
+          created,
+        }),
+      ),
+  })
+
+export const publishOnePackage = (args: PublishPackageArgs): Observable<PublishLibEvent> =>
+  buildAndPublishPackage(args).pipe(summarisePublishes())
+
+export const publishEveryPackage = ({
+  dir,
+  glob,
+  io,
+}: {
+  dir: string
+  glob: (pattern: string) => Observable<string[]>
+  io: PublishIo
+}): Observable<PublishLibEvent> =>
+  getPackagesToPublish({ dir, glob, readFile: io.readText }).pipe(
+    publishAllPackages(({ packageDir, srcDir, outDir, version }) =>
+      buildAndPublishPackage({ srcDir, outDir, packageDir, version, io }),
     ),
   )

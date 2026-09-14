@@ -1,24 +1,13 @@
+import { type BuildIo, buildPackage } from './build-operations.ts'
 import type { PublishLibEvent } from './events.ts'
-import type { BuildAndPublish } from './operations.ts'
-import {
-  copyAssets,
-  createOutDir,
-  getBuildStartEvent,
-  getPackagesToPublish,
-  publishAllPackages,
-  publishLib,
-  publishUnlessPublished,
-  summarisePublishes,
-  transformPackageJson,
-} from './operations.ts'
+import { publishEveryPackage, type PublishIo, publishOnePackage } from './publish-operations.ts'
 
-import { isTestFile } from '@dungarees/bin-shared-domain/source-files.ts'
 import type { NpmCommands } from '@dungarees/cli-command/service.ts'
 import { createFileOperations } from '@dungarees/fs/file-operations.ts'
 import type { FileSystemService } from '@dungarees/fs/service.ts'
 import { createTranspiler } from '@dungarees/transpile/service.ts'
 
-import { concat, type Observable } from 'rxjs'
+import type { Observable } from 'rxjs'
 
 export type PublishLibFeatureOutput = {
   events$: Observable<PublishLibEvent>
@@ -49,68 +38,25 @@ export const createPublishLibBehavior = ({
   npm,
 }: CreatePublishLibBehaviorOptions): PublishLibBehavior => {
   const fileOperations = createFileOperations(fileSystem)
-  const transpileService = createTranspiler(fileSystem)
+  const transpiler = createTranspiler(fileSystem)
 
-  const build: PublishLibBehavior['build'] = ({ srcDir, outDir, version }) => {
-    const originalPackageJsonPath = `${srcDir}/package.json`
-    const startEvent$ = getBuildStartEvent({ srcDir, outDir, version })
-    const packageJsonTransform = fileOperations.transformFileContext<string>({
-      input: originalPackageJsonPath,
-      output: `${outDir}/package.json`,
-    })
-    const createOutDir$ = createOutDir({ createOutDir$: fileSystem.mkdir(outDir), outDir })
-    const assets$ = copyAssets({
-      packageJsonContent$: fileSystem.readFile(originalPackageJsonPath),
-      srcDir,
-      outDir,
-      copyFile: fileOperations.copyFile,
-    })
-    const transpile$ = transpileService
-      .transpileDir({
-        input: srcDir,
-        output: outDir,
-        exclude: isTestFile,
-      })
-      .pipe(transformPackageJson({ fileTransform: packageJsonTransform, srcDir, outDir, version }))
-    return {
-      events$: concat(startEvent$, createOutDir$, assets$, transpile$),
-    }
+  const buildIo: BuildIo = {
+    readText: fileSystem.readFile,
+    mkdir: fileSystem.mkdir,
+    copyFile: fileOperations.copyFile,
+    getPackageJsonTransform: fileOperations.transformFileContext,
+    transpileDir: transpiler.transpileDir,
   }
 
-  const publishPackage = ({
-    srcDir,
-    outDir,
-    packageDir,
-    version,
-    registry,
-  }: {
-    srcDir: string
-    outDir: string
-    packageDir: string
-    version: string | undefined
-    registry: string | undefined
-  }): PublishLibFeatureOutput => {
-    const buildAndPublish: BuildAndPublish = ({ version: resolvedVersion, created }) =>
-      concat(
-        build({ srcDir, outDir, version: resolvedVersion }).events$,
-        publishLib({
-          publishFactory: () => npm.publish({ cwd: outDir, registry }).output$,
-          packageDir,
-          version: resolvedVersion,
-          created,
-        }),
-      )
+  const getPublishIo = (registry: string | undefined): PublishIo => ({
+    ...buildIo,
+    publish: ({ cwd }) => npm.publish({ cwd, registry }).output$,
+    viewVersions: ({ name }) => npm.viewVersions({ name, registry }).output$,
+  })
 
-    return {
-      events$: publishUnlessPublished({
-        packageJsonContent$: fileSystem.readFile(`${srcDir}/package.json`),
-        packageDir,
-        version,
-        viewVersions: ({ name }) => npm.viewVersions({ name, registry }).output$,
-        buildAndPublish,
-      }),
-    }
-  }
+  const build: PublishLibBehavior['build'] = ({ srcDir, outDir, version }) => ({
+    events$: buildPackage({ srcDir, outDir, version, io: buildIo }),
+  })
 
   const publishSingleLib: PublishLibBehavior['publishSingleLib'] = ({
     srcDir,
@@ -118,27 +64,22 @@ export const createPublishLibBehavior = ({
     version,
     registry,
   }) => ({
-    events$: publishPackage({ srcDir, outDir, packageDir: srcDir, version, registry }).events$.pipe(
-      summarisePublishes(),
-    ),
+    events$: publishOnePackage({
+      srcDir,
+      outDir,
+      packageDir: srcDir,
+      version,
+      io: getPublishIo(registry),
+    }),
   })
 
   const publishMultiLib: PublishLibBehavior['publishMultiLib'] = ({ dir, registry }) => ({
-    events$: getPackagesToPublish({
+    events$: publishEveryPackage({
       dir,
       glob: fileSystem.glob,
-      readFile: fileSystem.readFile,
-    }).pipe(
-      publishAllPackages(
-        ({ packageDir, srcDir, outDir, version }) =>
-          publishPackage({ srcDir, outDir, packageDir, version, registry }).events$,
-      ),
-    ),
+      io: getPublishIo(registry),
+    }),
   })
 
-  return {
-    build,
-    publishSingleLib,
-    publishMultiLib,
-  }
+  return { build, publishSingleLib, publishMultiLib }
 }

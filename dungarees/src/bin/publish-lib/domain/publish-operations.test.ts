@@ -1,272 +1,34 @@
 import { eventCreators } from './events.ts'
 import {
-  createOutDir,
-  getBuildStartEvent,
   getPackagesToPublish,
   publishAllPackages,
   publishLib,
   publishUnlessPublished,
-  transformPackageJson,
-} from './operations.ts'
+} from './publish-operations.ts'
 
 import { mtest } from '@dungarees/core/marbles-vitest.ts'
-import { createGetTransformSetContextInspector } from '@dungarees/rxjs/fake.ts'
-import { collectValuesFrom, createGetTransformSetContext } from '@dungarees/rxjs/util.ts'
+import { collectValuesFrom } from '@dungarees/rxjs/util.ts'
 
 import { of, throwError } from 'rxjs'
 import { expect, test } from 'vitest'
 
-mtest('create build start event', ({ expect }) => {
-  const startEvent$ = getBuildStartEvent({
-    srcDir: './src',
-    outDir: './out',
-    version: '1.0.0',
-  })
-  expect(startEvent$).toBeObservableStepAndClose(
-    eventCreators.buildStart({ srcDir: './src', outDir: './out', version: '1.0.0' }),
-    0,
-  )
-})
+const PACKAGE_JSON = JSON.stringify({ name: '@org/lib-1', version: '0.9.0' })
 
-mtest('create output directory', ({ expect, coldStepAndClose }) => {
-  const createOutDir$ = createOutDir({ createOutDir$: coldStepAndClose(undefined), outDir: '/out' })
-  expect(createOutDir$).toBeObservableStepAndClose(eventCreators.outDirCreated({ outDir: '/out' }))
-})
+const published = (versions: string[]) => () =>
+  of({ stdout: JSON.stringify(versions), stderr: '', exitCode: 0 })
 
-mtest('create output directory with error', ({ expect, coldError }) => {
-  const input$ = coldError(new Error('Could not create directory'))
-  const createOutDir$ = createOutDir({ createOutDir$: input$, outDir: '/out' })
-  expect(createOutDir$).toBeObservableError(
-    new Error('Error creating output directory (/out): Could not create directory'),
-  )
-})
+const neverPublished = () => of({ stdout: '', stderr: 'E404', exitCode: 1 })
 
-mtest('transformPackageJson with version from file', ({ expect }) => {
-  const [transformer, contentInspector$] = createGetTransformSetContextInspector<
-    string,
-    string,
-    string
-  >({
-    content: JSON.stringify({ name: 'test-lib', version: '1.0.0' }),
-  })
-
-  const transformPackageJson$ = of([]).pipe(
-    transformPackageJson({
-      fileTransform: transformer,
-      srcDir: '/src',
-      outDir: '/out',
-      version: undefined,
-    }),
-  )
-  expect(transformPackageJson$).toBeObservableValueAndClose(
-    eventCreators.packageJsonWritten({ path: '/out', version: '1.0.0' }),
-  )
-  expect(contentInspector$).toBeObservableValue(
-    JSON.stringify({ name: 'test-lib', version: '1.0.0' }, null, 2),
-  )
-})
-
-mtest('transformPackageJson with exports', ({ expect }) => {
-  const [transformer, contentInspector$] = createGetTransformSetContextInspector<
-    string,
-    string,
-    string
-  >({
-    content: JSON.stringify({ name: 'test-lib', version: '1.0.0' }),
-  })
-
-  const transformPackageJson$ = of([
-    {
-      input: '/src/index.ts',
-      output: '/out/index.js',
-      type: '/out/index.d.ts',
+const recordingBuildAndPublish = () => {
+  const calls: Array<{ version: string; created: boolean }> = []
+  return {
+    calls,
+    buildAndPublish: (args: { version: string; created: boolean }) => {
+      calls.push(args)
+      return of(eventCreators.publishSucceeded({ packageDir: 'lib-1', ...args }))
     },
-    {
-      input: '/src/dir/file.ts',
-      output: '/out/dir/file.js',
-      type: '/out/dir/file.d.ts',
-    },
-  ]).pipe(
-    transformPackageJson({
-      fileTransform: transformer,
-      srcDir: '/src',
-      outDir: '/out',
-      version: undefined,
-    }),
-  )
-  expect(transformPackageJson$).toBeObservableValueAndClose(
-    eventCreators.packageJsonWritten({ path: '/out', version: '1.0.0' }),
-  )
-  expect(contentInspector$).toBeObservableValue(
-    JSON.stringify(
-      {
-        name: 'test-lib',
-        version: '1.0.0',
-        exports: {
-          './index.ts': {
-            import: './index.js',
-            types: './index.d.ts',
-          },
-          './dir/file.ts': {
-            import: './dir/file.js',
-            types: './dir/file.d.ts',
-          },
-        },
-      },
-      null,
-      2,
-    ),
-  )
-})
-
-mtest('transformPackageJson with version override', ({ expect }) => {
-  const [transformer, contentInspector$] = createGetTransformSetContextInspector<
-    string,
-    string,
-    string
-  >({
-    content: JSON.stringify({ name: 'test-lib', version: '1.0.0' }),
-  })
-
-  const transformPackageJson$ = of([]).pipe(
-    transformPackageJson({
-      fileTransform: transformer,
-      srcDir: '/src',
-      outDir: '/out',
-      version: '2.0.0',
-    }),
-  )
-  expect(transformPackageJson$).toBeObservableValueAndClose(
-    eventCreators.packageJsonWritten({ path: '/out', version: '2.0.0' }),
-  )
-  expect(contentInspector$).toBeObservableValue(
-    JSON.stringify({ name: 'test-lib', version: '2.0.0' }, null, 2),
-  )
-})
-
-mtest('transformPackageJson without version in file or parameter', ({ expect }) => {
-  const [transformer] = createGetTransformSetContextInspector<string, string, string>({
-    content: JSON.stringify({ name: 'test-lib' }),
-  })
-
-  const transformPackageJson$ = of([]).pipe(
-    transformPackageJson({
-      fileTransform: transformer,
-      srcDir: '/src',
-      outDir: '/out',
-      version: undefined,
-    }),
-  )
-  expect(transformPackageJson$).toBeObservableError(
-    new Error('File transform failed: Version is required in package.json or as an argument'),
-    0,
-  )
-})
-
-mtest('transformPackageJson without version in file', ({ expect }) => {
-  const [transformer, contentInspector$] = createGetTransformSetContextInspector<
-    string,
-    string,
-    string
-  >({
-    content: JSON.stringify({ name: 'test-lib' }),
-  })
-
-  const transformPackageJson$ = of([]).pipe(
-    transformPackageJson({
-      fileTransform: transformer,
-      srcDir: '/src',
-      outDir: '/out',
-      version: '2.0.0',
-    }),
-  )
-  expect(transformPackageJson$).toBeObservableValueAndClose(
-    eventCreators.packageJsonWritten({ path: '/out', version: '2.0.0' }),
-  )
-  expect(contentInspector$).toBeObservableValue(
-    JSON.stringify({ name: 'test-lib', version: '2.0.0' }, null, 2),
-  )
-})
-
-mtest('transformPackageJson change bin paths', ({ expect }) => {
-  const [transformer, contentInspector$] = createGetTransformSetContextInspector<
-    string,
-    string,
-    string
-  >({
-    content: JSON.stringify({
-      name: 'test-lib',
-      version: '1.0.0',
-      bin: { run: './run.ts', run2: './dir/run2.ts' },
-    }),
-  })
-
-  const transformPackageJson$ = of([]).pipe(
-    transformPackageJson({
-      fileTransform: transformer,
-      srcDir: '/src',
-      outDir: '/out',
-      version: '1.0.0',
-    }),
-  )
-  expect(transformPackageJson$).toBeObservableValueAndClose(
-    eventCreators.packageJsonWritten({ path: '/out', version: '1.0.0' }),
-  )
-  expect(contentInspector$).toBeObservableValue(
-    JSON.stringify(
-      {
-        name: 'test-lib',
-        version: '1.0.0',
-        bin: { run: './run.js', run2: './dir/run2.js' },
-      },
-      null,
-      2,
-    ),
-  )
-})
-
-mtest('transformPackageJson with write error', ({ expect, coldStepAndClose, coldError }) => {
-  const packageJsonContent = JSON.stringify({ name: 'test-lib', version: '1.0.0' })
-  const readFile = () => coldStepAndClose(packageJsonContent)
-  const writeFile = () => coldError(new Error('Write failed'))
-
-  const transformer = createGetTransformSetContext<string, string, string>(readFile, writeFile)
-
-  const transformPackageJson$ = of([]).pipe(
-    transformPackageJson({
-      fileTransform: transformer,
-      srcDir: '/src',
-      outDir: '/out',
-      version: undefined,
-    }),
-  )
-  expect(transformPackageJson$).toBeObservableError(
-    new Error('File transform failed: Write failed'),
-    2,
-  )
-})
-
-mtest('transformPackageJson with invalid JSON', ({ expect, coldStepAndClose }) => {
-  const invalidJson = 'invalid json content'
-  const readFile = () => coldStepAndClose(invalidJson)
-  const writeFile = () => coldStepAndClose(undefined)
-
-  const transformer = createGetTransformSetContext<string, string, string>(readFile, writeFile)
-
-  const transformPackageJson$ = of([]).pipe(
-    transformPackageJson({
-      fileTransform: transformer,
-      srcDir: '/src',
-      outDir: '/out',
-      version: undefined,
-    }),
-  )
-  expect(transformPackageJson$).toBeObservableError(
-    new Error(
-      'File transform failed: Invalid source package.json: Unexpected token \'i\', "invalid json content" is not valid JSON',
-    ),
-  )
-})
+  }
+}
 
 mtest('publishLib with successful exit code', ({ expect, coldStepAndClose }) => {
   const publish$ = publishLib({
@@ -279,7 +41,6 @@ mtest('publishLib with successful exit code', ({ expect, coldStepAndClose }) => 
     eventCreators.publishSucceeded({ packageDir: 'lib-1', version: '1.0.0', created: false }),
   )
 })
-
 mtest('publishLib with failed exit code', ({ expect, coldStepAndClose }) => {
   const publish$ = publishLib({
     publishFactory: () => coldStepAndClose({ exitCode: 1, stderr: 'Some error' }),
@@ -291,7 +52,6 @@ mtest('publishLib with failed exit code', ({ expect, coldStepAndClose }) => {
     eventCreators.publishFailed({ packageDir: 'lib-1', exitCode: 1, stderr: 'Some error' }),
   )
 })
-
 mtest('publishLib defers executing the command', ({ expect: mexpect, coldStepAndClose }) => {
   let commandExecuted = false
   const publish$ = publishLib({
@@ -308,7 +68,6 @@ mtest('publishLib defers executing the command', ({ expect: mexpect, coldStepAnd
     eventCreators.publishSucceeded({ packageDir: 'lib-1', version: '1.0.0', created: false }),
   )
 })
-
 mtest('publishLib with error', ({ expect, coldError }) => {
   const input$ = coldError(new Error('Network timeout'))
   const publish$ = publishLib({
@@ -328,7 +87,6 @@ const readLibFile =
         ? JSON.stringify(version)
         : JSON.stringify({ name: '@org/lib' }),
     )
-
 mtest('getPackagesToPublish pairs every package it found with the version', ({ expect }) => {
   const packages$ = getPackagesToPublish({
     dir: '/repo',
@@ -343,7 +101,6 @@ mtest('getPackagesToPublish pairs every package it found with the version', ({ e
     version: '1.2.3',
   })
 })
-
 test('getPackagesToPublish ignores installed dependencies', async () => {
   const readPaths: string[] = []
   const packages$ = getPackagesToPublish({
@@ -378,7 +135,6 @@ test('getPackagesToPublish ignores installed dependencies', async () => {
     '/repo/src/sub/lib-2/package.json',
   ])
 })
-
 mtest('getPackagesToPublish with no package.json paths', ({ expect }) => {
   const packages$ = getPackagesToPublish({
     dir: '/repo',
@@ -390,7 +146,6 @@ mtest('getPackagesToPublish with no package.json paths', ({ expect }) => {
     version: '1.0.0',
   })
 })
-
 mtest('getPackagesToPublish errors when version.json has no version field', ({ expect }) => {
   const packages$ = getPackagesToPublish({
     dir: '/repo',
@@ -399,7 +154,6 @@ mtest('getPackagesToPublish errors when version.json has no version field', ({ e
   })
   expect(packages$).toBeObservableError(new Error('Version is required in version.json'), 0)
 })
-
 mtest('getPackagesToPublish errors when version is not a string', ({ expect }) => {
   const packages$ = getPackagesToPublish({
     dir: '/repo',
@@ -408,7 +162,6 @@ mtest('getPackagesToPublish errors when version is not a string', ({ expect }) =
   })
   expect(packages$).toBeObservableError(new Error('Version is required in version.json'), 0)
 })
-
 mtest('getPackagesToPublish passes a read failure through unlabelled', ({ expect }) => {
   const packages$ = getPackagesToPublish({
     dir: '/repo',
@@ -420,7 +173,6 @@ mtest('getPackagesToPublish passes a read failure through unlabelled', ({ expect
   })
   expect(packages$).toBeObservableError(new Error('Read failed'), 0)
 })
-
 mtest('getPackagesToPublish errors when version.json is not valid JSON', ({ expect }) => {
   const packages$ = getPackagesToPublish({
     dir: '/repo',
@@ -433,7 +185,6 @@ mtest('getPackagesToPublish errors when version.json is not valid JSON', ({ expe
     0,
   )
 })
-
 mtest(
   'publishAllPackages passes each package event through, then reports all published',
   ({ expect, coldStepAndClose }) => {
@@ -455,7 +206,6 @@ mtest(
     })
   },
 )
-
 test('publishAllPackages reports the packages that failed', async () => {
   const publishAll$ = of({
     packages: [
@@ -483,7 +233,6 @@ test('publishAllPackages reports the packages that failed', async () => {
     eventCreators.publishesFailed({ packageDirs: ['lib-2'] }),
   ])
 })
-
 test('publishAllPackages turns a thrown package error into that package failing', async () => {
   const publishAll$ = of({
     packages: [{ packageDir: 'lib-1', srcDir: '/repo/src/lib-1', outDir: '/repo/dist/lib-1' }],
@@ -499,7 +248,6 @@ test('publishAllPackages turns a thrown package error into that package failing'
     eventCreators.publishesFailed({ packageDirs: ['lib-1'] }),
   ])
 })
-
 test('publishAllPackages passes each package and the version to every publish call', async () => {
   const publishedArgs: Array<{
     packageDir: string
@@ -533,106 +281,6 @@ test('publishAllPackages passes each package and the version to every publish ca
     },
   ])
 })
-
-mtest('transformPackageJson exports declared assets and drops the dungarees key', ({ expect }) => {
-  const [transformer, contentInspector$] = createGetTransformSetContextInspector<
-    string,
-    string,
-    string
-  >({
-    content: JSON.stringify({
-      name: 'test-lib',
-      version: '1.0.0',
-      dungarees: { assets: ['tsconfig.base.json'] },
-    }),
-  })
-
-  const transformPackageJson$ = of([]).pipe(
-    transformPackageJson({
-      fileTransform: transformer,
-      srcDir: '/src',
-      outDir: '/out',
-      version: undefined,
-    }),
-  )
-
-  expect(transformPackageJson$).toBeObservableValueAndClose(
-    eventCreators.packageJsonWritten({ path: '/out', version: '1.0.0' }),
-  )
-  expect(contentInspector$).toBeObservableValue(
-    JSON.stringify(
-      {
-        name: 'test-lib',
-        version: '1.0.0',
-        exports: { './tsconfig.base.json': './tsconfig.base.json' },
-      },
-      null,
-      2,
-    ),
-  )
-})
-
-mtest('transformPackageJson merges declared assets with the transpiled exports', ({ expect }) => {
-  const [transformer, contentInspector$] = createGetTransformSetContextInspector<
-    string,
-    string,
-    string
-  >({
-    content: JSON.stringify({
-      name: 'test-lib',
-      version: '1.0.0',
-      dungarees: { assets: ['tsconfig.base.json'] },
-    }),
-  })
-
-  const transformPackageJson$ = of([
-    { input: '/src/index.ts', output: '/out/index.js', type: '/out/index.d.ts' },
-  ]).pipe(
-    transformPackageJson({
-      fileTransform: transformer,
-      srcDir: '/src',
-      outDir: '/out',
-      version: undefined,
-    }),
-  )
-
-  expect(transformPackageJson$).toBeObservableValueAndClose(
-    eventCreators.packageJsonWritten({ path: '/out', version: '1.0.0' }),
-  )
-  expect(contentInspector$).toBeObservableValue(
-    JSON.stringify(
-      {
-        name: 'test-lib',
-        version: '1.0.0',
-        exports: {
-          './index.ts': { import: './index.js', types: './index.d.ts' },
-          './tsconfig.base.json': './tsconfig.base.json',
-        },
-      },
-      null,
-      2,
-    ),
-  )
-})
-
-const PACKAGE_JSON = JSON.stringify({ name: '@org/lib-1', version: '0.9.0' })
-
-const published = (versions: string[]) => () =>
-  of({ stdout: JSON.stringify(versions), stderr: '', exitCode: 0 })
-
-const neverPublished = () => of({ stdout: '', stderr: 'E404', exitCode: 1 })
-
-const recordingBuildAndPublish = () => {
-  const calls: Array<{ version: string; created: boolean }> = []
-  return {
-    calls,
-    buildAndPublish: (args: { version: string; created: boolean }) => {
-      calls.push(args)
-      return of(eventCreators.publishSucceeded({ packageDir: 'lib-1', ...args }))
-    },
-  }
-}
-
 test('publishUnlessPublished does not build a version the registry already has', async () => {
   const { calls, buildAndPublish } = recordingBuildAndPublish()
 
@@ -649,7 +297,6 @@ test('publishUnlessPublished does not build a version the registry already has',
   expect(events).toEqual([eventCreators.publishSkipped({ packageDir: 'lib-1', version: '1.0.0' })])
   expect(calls).toEqual([])
 })
-
 test('publishUnlessPublished builds a new version of a known package', async () => {
   const { calls, buildAndPublish } = recordingBuildAndPublish()
 
@@ -665,7 +312,6 @@ test('publishUnlessPublished builds a new version of a known package', async () 
 
   expect(calls).toEqual([{ version: '1.0.0', created: false }])
 })
-
 test('publishUnlessPublished marks a package the registry does not know as created', async () => {
   const { calls, buildAndPublish } = recordingBuildAndPublish()
 
@@ -681,7 +327,6 @@ test('publishUnlessPublished marks a package the registry does not know as creat
 
   expect(calls).toEqual([{ version: '1.0.0', created: true }])
 })
-
 test('publishUnlessPublished copes with npm collapsing a lone version to a string', async () => {
   const { calls, buildAndPublish } = recordingBuildAndPublish()
 
@@ -698,7 +343,6 @@ test('publishUnlessPublished copes with npm collapsing a lone version to a strin
   expect(events).toEqual([eventCreators.publishSkipped({ packageDir: 'lib-1', version: '1.0.0' })])
   expect(calls).toEqual([])
 })
-
 test("publishUnlessPublished falls back to the package's own version when none is given", async () => {
   const { calls, buildAndPublish } = recordingBuildAndPublish()
   const viewedNames: string[] = []
@@ -719,7 +363,6 @@ test("publishUnlessPublished falls back to the package's own version when none i
   expect(viewedNames).toEqual(['@org/lib-1'])
   expect(calls).toEqual([{ version: '0.9.0', created: true }])
 })
-
 test('publishUnlessPublished fails before building when no version can be resolved', async () => {
   const { calls, buildAndPublish } = recordingBuildAndPublish()
 
