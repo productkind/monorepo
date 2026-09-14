@@ -15,6 +15,8 @@ silence therefore belongs to the beat before it.
 """
 
 import argparse
+import json
+import subprocess
 import re
 
 from common import assets_dir, gif_seconds, loop_seam, slots, video_root
@@ -30,21 +32,28 @@ def definitions(prefix=None, video=None, root=None):
     if video:
         return [folder / f'{video}.ts']
     return [p for p in sorted(folder.glob('*.ts'))
-            if p.name != 'index.ts' and (not prefix or p.name.startswith(prefix))]
+            if p.name not in ('index.ts', 'apply-visual.ts') and not p.name.endswith('.test.ts')
+            and (not prefix or p.name.startswith(prefix))]
 
 
-def sections_of(path):
-    """Each section's gif filename and playbackRate, in order.
+def sections_of(path, root=None):
+    """The assets folder, and each section's filename and playbackRate in order.
 
-    Both quote styles are read: four definitions are double-quoted throughout, and a single-quote
-    pattern reported them as having no visuals at all.
+    Read from the definition itself, through the video package, rather than by matching text in
+    the file. Sections assembled from a shared module are invisible to a text parser, and a video
+    whose sections it cannot see reads as a video with nothing wrong with it.
     """
-    for block in path.read_text().split('    {\n')[1:]:
-        name = re.search(r'src: (["\'])([^"\']+)\1', block)
-        if not name:
-            continue
-        rate = re.search(r'playbackRate: ([0-9.]+)', block)
-        yield name.group(2), float(rate.group(1)) if rate else 1.0
+    package = video_root(root)
+    dump = subprocess.run(
+        ['npx', 'tsx', 'scripts/sections.ts', '--video', path.stem],
+        cwd=package, capture_output=True, text=True)
+    if dump.returncode != 0:
+        raise RuntimeError(f'could not read {path.stem}: {dump.stderr.strip().splitlines()[-1:]}')
+    read = json.loads(dump.stdout)
+    if not read:
+        raise RuntimeError(f'{path.stem} is not a known video')
+    return (read[0]['assets'],
+            [(section['src'], float(section['playbackRate'])) for section in read[0]['sections']])
 
 
 def report(path, root=None):
@@ -53,11 +62,20 @@ def report(path, root=None):
         real = slots(video, root)
     except (FileNotFoundError, SystemExit):
         return f'{video}: not narrated yet', 0
-    folder = assets_dir(video, root)
+    assets, read = sections_of(path, root)
+    # The folder a video loads from is its own `assets`, which is not always its id: the hook
+    # experiments share one folder between variants so a body gif is sourced once.
+    folder = assets_dir(assets, root)
     lines, problems = [], 0
-    for index, (name, rate) in enumerate(sections_of(path)):
+    if not read:
+        return f'{video}: no sections could be read — the fit is UNCHECKED', 1
+    for index, (name, rate) in enumerate(read):
         gif = folder / name
-        if not gif.exists() or index >= len(real):
+        if index >= len(real):
+            continue
+        if not gif.exists():
+            problems += 1
+            lines.append(f'    §{index:02d} {name:36} MISSING from {folder.name}/')
             continue
         seconds = gif_seconds(gif)[0]
         # A `clip()` section holds an mp4, which has no frame delays to sum. Timing a video
