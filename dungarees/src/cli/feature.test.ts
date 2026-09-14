@@ -147,3 +147,39 @@ test('a feature whose presenter misses one of its own events does not type-check
   }
   expect(broken).toBeDefined()
 })
+
+type ShoutEvent = DomainEvent<'greeted', { who: string }>
+
+const shoutFeature: CliFeature<ShoutEvent> = {
+  commands: [
+    (io) =>
+      createCommand({
+        command: 'shout',
+        describe: 'Greet someone loudly',
+        builder: (yargs) => yargs.option('who', { type: 'string', default: 'World' }),
+        handler: ({ who }) => {
+          io.registerEvents(of({ type: 'greeted' as const, payload: { who } }))
+        },
+      }),
+  ],
+  presenter: {
+    greeted: ({ who }) => ({ type: 'stdout', message: `HELLO, ${who}`, level: 'info' }),
+  },
+}
+
+test('combineFeatures rejects a feature that presents an event type the other already presents', () => {
+  const combined = combineFeatures(
+    greetFeature,
+    // @ts-expect-error greetFeature already presents 'greeted', so merging would drop one
+    shoutFeature,
+  )
+
+  expect(combined).toBeDefined()
+})
+
+test('combineAll rejects a feature that presents an event type an earlier feature already presents', () => {
+  // @ts-expect-error greetFeature already presents 'greeted', so merging would drop one
+  const combined = combineAll(greetFeature, countFeature, shoutFeature)
+
+  expect(combined).toBeDefined()
+})

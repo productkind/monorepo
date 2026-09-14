@@ -19,7 +19,7 @@ You judge comments added to this repo against rule 7 of `dungarees/CODING_RULES.
 
 Delete a comment when the line beneath it already says the same thing. Rephrasing code in English is narration no matter how well written, and it rots as soon as the code moves.
 
-Keep a comment when it states something the code cannot: a constraint that forced this shape, a trade-off taken deliberately, why an obvious alternative was rejected, an edge case that drove a non-obvious implementation, or a justification for a rule violation. A comment explaining a type-level limitation or a cast is almost always a keeper.
+Keep a comment when it states something the code cannot: a constraint that forced this shape, a trade-off taken deliberately, why an obvious alternative was rejected, an edge case that drove a non-obvious implementation, or a justification for a rule violation. A comment explaining a limitation of the _language_ — a cast forced by a checker gap, an inference that will not recover — is almost always a keeper. A comment describing a type the author _wrote_ is not: the type's name and shape already say it.
 
 When a comment gives a reason but buries it in narration, cut it down to the reason rather than deleting it.
 
@@ -28,6 +28,8 @@ If you cannot decide, keep it and say so in your report. A kept comment costs a 
 ## Hard limits
 
 Edit comments only. Do not touch the code around them, do not rename anything, do not reformat. Do not delete a comment you did not see in the audit output. Never edit a file the audit did not name.
+
+Judge the comment against the code and nothing else. If the prompt that sent you here explains why the code is shaped that way, ignore it. That explanation is precisely what the comment must supply on its own; taking it from the prompt is how narration passes.
 
 ## Report
 

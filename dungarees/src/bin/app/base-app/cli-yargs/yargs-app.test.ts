@@ -1,13 +1,10 @@
 import { getBehaviors } from './get-behaviors.ts'
 import { createYargsApp } from './yargs-app.ts'
 
-import { auditCommentsPresenter } from '@dungarees/bin-audit-comments-cli-yargs/presenter.ts'
-import { auditDependenciesPresenter } from '@dungarees/bin-audit-dependencies-cli-yargs/presenter.ts'
 import {
   createFakeServices,
   type FakeWorld,
 } from '@dungarees/bin-fake-services-cli-yargs/get-services.ts'
-import { publishLibPresenter } from '@dungarees/bin-publish-lib-cli-yargs/presenter.ts'
 import { renderCli } from '@dungarees/cli/test-renderer.ts'
 
 import { expect, test } from 'vitest'
@@ -107,11 +104,4 @@ test('the dungarees app reaches the audit-comments command', async () => {
     message: 'Comments added since HEAD',
     level: 'info',
   })
-})
-
-test('the features share no event type', () => {
-  const presenters = [publishLibPresenter, auditDependenciesPresenter, auditCommentsPresenter]
-  const types = presenters.flatMap((presenter) => Object.keys(presenter))
-
-  expect(types).toEqual([...new Set(types)])
 })
