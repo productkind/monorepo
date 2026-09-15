@@ -58,11 +58,11 @@ You’ll map the frontend, backend, database and external services your app uses
 
 ### 2. Own your code: GitHub, versions and backups
 
-You’ll connect your project to GitHub, save a known working version and practise making a change you can reverse. You’ll also work out what you can export and what still depends on your current building platform.
+Connect your project to GitHub, then sync the codebase to your computer so you are no longer dependent on a single platform. Learn to read diffs – the before-and-after view of each change – keep a clear version history, and return to a previous working version when something goes wrong. Once you control the code, you can move your project between platforms without starting again.
 
-### 3. Fix bugs without rebuilding everything
+### 3. Escape the bug-fixing loops
 
-You’ll reproduce a bug, collect screenshots, error messages and browser evidence, then give your AI agent the context it needs. You’ll learn when another prompt is useful and when it is time to restore the working version and rebuild the new feature again.
+Stop making one AI-generated fix after another without knowing whether you are getting closer. Learn a repeatable process for reproducing the problem, reading error messages, collecting evidence from the browser, inspecting recent changes, narrowing down the cause, and restoring a working version when needed.
 
 ### 4. Protect accounts, customer data and secrets
 
@@ -72,9 +72,9 @@ You’ll check how sign-up, sign-in, permissions and stored data behave. You’l
 
 You’ll define the main journey through your app, test the expected path and common failure cases. You’ll repeat those checks after a change, so you can spot a broken sign-up, payment or email before a customer does.
 
-### 6. Publish the app and get your first customers
+### 6. Ensure your app is ready for your customers
 
-You’ll work through hosting, your domain and transactional emails. You’ll identify whether your app needs a cookie banner and prepare its terms and conditions and privacy policy. You’ll record any questions that need professional legal advice, then finish with a launch checklist and know what to watch when the first customers arrive.
+You’ll work through hosting, custom domain, transactional emails and SEO. You’ll identify whether your app needs a cookie banner and prepare its terms and conditions and privacy policy. You’ll finish with a launch checklist and catch the issues that could undermine trust.
 
 ### 7. Add analytics that answer a product question
 
