@@ -1,7 +1,8 @@
 ---
 channel: linkedin-personal
-account: Tamas, invite Kinga and productkind as collaborators
-status: drafted
+account: Kinga, invite Tamas and productkind as collaborators
+status: published
+date: 2026-09-16
 ---
 
 As a product manager, you may have heard the terms "API requests" and "webhooks". If you have ever been too afraid to ask what the difference is, or you could not explain it in your own words, this post might help.
@@ -36,4 +37,4 @@ With a webhook, we give them an address so they can tell us when something happe
 
 —
 
-🧪 We're testing interest in a Little Parrot learning path for PMs who want to understand more deeply how their product works: https://littleparrot.app/guides/technical-product-manager?utm_source=linkedin&utm_medium=t&utm_campaign=tech-pm-26&utm_content=webhook-vs-api
+🧪 We're testing interest in a Little Parrot learning path for PMs who want to understand more deeply how their product works: https://littleparrot.app/guides/technical-product-manager?utm_source=linkedin&utm_medium=k-t-pk&utm_campaign=tech-pm-26&utm_content=webhook-vs-api
