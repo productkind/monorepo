@@ -6,7 +6,7 @@ status: drafted
 
 As a product manager, you may have heard the terms "API requests" and "webhooks". If you have ever been too afraid to ask what the difference is, or you could not explain it in your own words, this post might help.
 
-Both terms describe communication between services. If you ask what a service is: a separate running parts of software that need to communicate and share data. These services could all belong to your product, or some could be third-party services provided by an external company.
+Both terms describe communication between services. If you ask what a service is: the separate running parts of software that need to communicate to share data. These services could all belong to your product, or some could be third-party services provided by an external company.
 
 One of the most common ways for services to communicate is through HTTP requests. If you remember one thing about them, let it be this: they follow a request-and-response pattern, rather than a back-and-forth conversation like a chat.
 
