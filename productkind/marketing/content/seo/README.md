@@ -44,4 +44,4 @@ Use these status values consistently: `idea`, `drafted`, `approved`, `published`
 
 `article.md` is the editorial source. If the published website stores the body in TypeScript or another format, add its path to the article frontmatter as `published_file` and compare the two copies whenever the article changes.
 
-The cluster plan owns keyword evidence, publishing order and internal-link design. The shared [content ledger](./content-ledger.md) owns measurement dates and results. Campaign folders retain promotion plans, captions, videos and experiment results, then link back to the relevant cluster.
+The cluster plan owns keyword evidence, publishing order and internal-link design. The shared [content ledger](./content-ledger.md) owns measurement dates and results. The [discoverability checklist](../../channels/search/discoverability-checklist.md) owns the technical and editorial checks that apply to every article, with the primary-source link behind each one. Campaign folders retain promotion plans, captions, videos and experiment results, then link back to the relevant cluster.

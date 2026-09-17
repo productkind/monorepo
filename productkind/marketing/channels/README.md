@@ -6,6 +6,8 @@ The places Little Parrot posts into, and the rules for each one. The promo-fanou
 
 **Utm params:** most channels add `?utm_source=`, `&utm_medium=`, `&utm_campaign=` and `&utm_content=` parameters to links so you can see in analytics which channel drove a click.
 
+**Search is not in the channel list below.** People arrive from Google and from AI search without us posting anything, so there is no draft for the promo-fanout skill to write and no block for it here. Skip it when fanning out a campaign. The guidance for that surface lives in [search/discoverability-checklist.md](./search/discoverability-checklist.md), which covers Google, AI Overviews, AI Mode, ChatGPT search and Claude search together.
+
 ---
 
 ## LinkedIn (productkind)
