@@ -37,7 +37,7 @@ Once you’ve fixed the problems, go back to Search Console and **request indexi
 
 One important distinction:
 
-Being indexed doesn’t mean Google will rank your page.
+**Being indexed doesn’t mean Google will rank your page.**
 
 Think of indexing as getting through the front door.
 
