@@ -23,6 +23,7 @@ import pmTechnicalFluencyValidation06BRoll from './pm-technical-fluency-validati
 import pmTechnicalFluencyValidation06Stock from './pm-technical-fluency-validation-06-stock'
 import pmTechnicalFluencyValidation07 from './pm-technical-fluency-validation-07'
 import pmTechnicalFluencyValidation08 from './pm-technical-fluency-validation-08'
+import pmTechnicalFluencyValidation09 from './pm-technical-fluency-validation-09'
 import social000 from './social-000'
 import social016 from './social-016'
 import social017 from './social-017'
@@ -80,6 +81,7 @@ export const VIDEOS = [
   pmTechnicalFluencyValidation06Stock,
   pmTechnicalFluencyValidation07,
   pmTechnicalFluencyValidation08,
+  pmTechnicalFluencyValidation09,
   vibeCoderValidation01,
   vibeCoderValidation01BRoll,
   vibeCoderValidation01Stock,
