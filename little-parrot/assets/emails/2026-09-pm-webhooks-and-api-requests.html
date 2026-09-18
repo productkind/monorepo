@@ -1,6 +1,6 @@
 <!--
-Subject: API request or webhook? When to use each
-Preheader: Know which to suggest in your next technical conversation.
+Subject: A mental model for PMs: API request vs webhook
+Preheader: Take part in the next technical conversation.
 Sender name: Little Parrot
 Draft: educational PM engagement email; resolve unsubscribe URL in sending platform.
 -->
@@ -16,7 +16,7 @@ Draft: educational PM engagement email; resolve unsubscribe URL in sending platf
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="color-scheme" content="light dark" />
     <meta name="supported-color-schemes" content="light dark" />
-    <title>API request or webhook? When to use each</title>
+    <title>A mental model for PMs: API request vs webhook</title>
     <!--[if mso
       ]><noscript
         ><xml
@@ -41,6 +41,32 @@ Draft: educational PM engagement email; resolve unsubscribe URL in sending platf
         width: 100%;
         box-sizing: border-box;
         padding: 28px 16px;
+      }
+      /* Keep automatically detected address links as muted footer text. */
+      .company-address a {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+      /* Keep this separate: Gmail can discard rules with attribute selectors. */
+      .company-address a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+      u + #email-body .company-address a {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
       }
       @media only screen and (max-width: 620px) {
         .email-wrapper {
@@ -81,7 +107,7 @@ Draft: educational PM engagement email; resolve unsubscribe URL in sending platf
       }
     </style>
   </head>
-  <body>
+  <body id="email-body">
     <div
       style="
         display: none;
@@ -92,8 +118,8 @@ Draft: educational PM engagement email; resolve unsubscribe URL in sending platf
         line-height: 1px;
       "
     >
-      Know which to suggest in your next technical
-      conversation.&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+      Take part in the next technical
+      conversation.&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj:&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj:&nbsp;&zwnj:&nbsp;
     </div>
     <div class="email-wrapper">
       <!--[if mso]><table role="presentation" align="center" width="640" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
@@ -287,7 +313,8 @@ Draft: educational PM engagement email; resolve unsubscribe URL in sending platf
                   <p style="font-size: 17px; line-height: 1.6; margin: 0">
                     Want to participate <strong>more confidently</strong> in technical discussions?
                     Explore the learning path we’re considering building for product managers on
-                    Little Parrot, and join the waitlist if you want us to build it.
+                    Little Parrot, and
+                    <strong>join the waitlist if you want us to build it.</strong>
                   </p>
 
                   <table
@@ -342,7 +369,6 @@ Draft: educational PM engagement email; resolve unsubscribe URL in sending platf
             </table>
           </td>
         </tr>
-        <!-- Sign-off and footer styling match 2026-08-monthly-update.html. -->
         <tr>
           <td
             class="cta-section"
@@ -381,7 +407,7 @@ Draft: educational PM engagement email; resolve unsubscribe URL in sending platf
               Kinga, Tamas &amp; Little Parrot 💛
             </p>
             <p style="font-size: 12px; line-height: 1.6; margin: 4px 0 0; color: hsl(245, 3%, 40%)">
-              Little Parrot by productkind
+              {{company_info_name}}
             </p>
           </td>
         </tr>
@@ -470,11 +496,24 @@ Draft: educational PM engagement email; resolve unsubscribe URL in sending platf
               </tr>
             </table>
             <p style="font-size: 12px; line-height: 1.8; margin: 0; color: hsl(245, 3%, 45%)">
-              You're receiving this because you have an account on Little Parrot.<br />
+              You're receiving this because you have an account on Little Parrot or signed up for
+              our waitlist.<br />
               <a
                 href="https://littleparrot.app/?utm_source=email&amp;utm_medium=value&amp;utm_campaign=tech-pm-26&amp;utm_content=registered"
                 style="font-size: 12px; color: hsl(245, 3%, 40%); text-decoration: underline"
                 >littleparrot.app</a
+              >
+              <br /><br />
+              <span
+                class="company-address"
+                style="
+                  color: hsl(245, 3%, 45%);
+                  font-size: 12px;
+                  line-height: 1.8;
+                  text-decoration: none;
+                "
+              >
+                {{company_info_address}}, 2825-343 Costa da Caparica, Portugal </span
               ><br /><br />
               <a
                 href="__unsubscribe_url__"
