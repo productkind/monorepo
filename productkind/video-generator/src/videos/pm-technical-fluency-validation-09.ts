@@ -34,14 +34,18 @@ export default defineVideo({
   voice: 'chloe',
   model: 'eleven_v3',
   overlays: [
-    riveAtSection({ rive: 'parrot-greet-00.riv', section: 0 }),
+    // Section 3 rather than 0: over the cold open the parrot sits on the left third of the
+    // stage, hiding the sender avatar and clipping the S off the stamp as it lands. Section 3 is
+    // a cut to a new scene, which is what a greet belongs on.
+    riveAtSection({ rive: 'parrot-greet-00.riv', section: 3 }),
     riveAtSection({ rive: 'parrot-peek-00.riv', section: 17 }),
   ],
   sections: [
     {
-      // Cold open on black. "PRODUCT MANAGERS" types on in huge white capitals, then gets pushed
-      // upward by a Slack-like message card. A small Little Parrot gradient orb pulses behind the
-      // sender avatar. No Slack logo: the channel name and message shape do the recognition work.
+      // Cold open on black. "PRODUCT MANAGERS" appears as a small eyebrow above the huge white
+      // search phrase "HOW TO WRITE A BUG REPORT", then both get pushed upward by a Slack-like
+      // message card. A small Little Parrot gradient orb pulses behind the sender avatar. No Slack
+      // logo: the channel name and message shape do the recognition work.
       text: 'Product managers,',
       visual: clip({ src: 'section-00-product-managers.mp4' }),
     },
