@@ -1,3 +1,4 @@
+import { Pm09ClipCompositions } from './clips/pm-09/compositions'
 import { NarratedCompositions } from './compositions'
 import { FRAME_HEIGHT, FRAME_RATE, FRAME_WIDTH } from './config'
 import './index.css'
@@ -916,6 +917,7 @@ export const RemotionRoot: React.FC = () => {
       />
 
       <NarratedCompositions />
+      <Pm09ClipCompositions />
     </>
   )
 }
