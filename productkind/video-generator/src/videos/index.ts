@@ -22,7 +22,11 @@ import pmTechnicalFluencyValidation06 from './pm-technical-fluency-validation-06
 import pmTechnicalFluencyValidation06BRoll from './pm-technical-fluency-validation-06-b-roll'
 import pmTechnicalFluencyValidation06Stock from './pm-technical-fluency-validation-06-stock'
 import pmTechnicalFluencyValidation07 from './pm-technical-fluency-validation-07'
+import pmTechnicalFluencyValidation07BRoll from './pm-technical-fluency-validation-07-b-roll'
+import pmTechnicalFluencyValidation07Stock from './pm-technical-fluency-validation-07-stock'
 import pmTechnicalFluencyValidation08 from './pm-technical-fluency-validation-08'
+import pmTechnicalFluencyValidation08BRoll from './pm-technical-fluency-validation-08-b-roll'
+import pmTechnicalFluencyValidation08Stock from './pm-technical-fluency-validation-08-stock'
 import pmTechnicalFluencyValidation09 from './pm-technical-fluency-validation-09'
 import social000 from './social-000'
 import social016 from './social-016'
@@ -47,7 +51,11 @@ import vibeCoderValidation06 from './vibe-coder-validation-06'
 import vibeCoderValidation06BRoll from './vibe-coder-validation-06-b-roll'
 import vibeCoderValidation06Stock from './vibe-coder-validation-06-stock'
 import vibeCoderValidation07 from './vibe-coder-validation-07'
+import vibeCoderValidation07BRoll from './vibe-coder-validation-07-b-roll'
+import vibeCoderValidation07Stock from './vibe-coder-validation-07-stock'
 import vibeCoderValidation08 from './vibe-coder-validation-08'
+import vibeCoderValidation08BRoll from './vibe-coder-validation-08-b-roll'
+import vibeCoderValidation08Stock from './vibe-coder-validation-08-stock'
 
 /** Every video in the project. The narrate script and the Remotion root both read this list. */
 export const VIDEOS = [
@@ -80,8 +88,12 @@ export const VIDEOS = [
   pmTechnicalFluencyValidation06BRoll,
   pmTechnicalFluencyValidation06Stock,
   pmTechnicalFluencyValidation07,
+  pmTechnicalFluencyValidation07BRoll,
+  pmTechnicalFluencyValidation07Stock,
   pmTechnicalFluencyValidation08,
   pmTechnicalFluencyValidation09,
+  pmTechnicalFluencyValidation08BRoll,
+  pmTechnicalFluencyValidation08Stock,
   vibeCoderValidation01,
   vibeCoderValidation01BRoll,
   vibeCoderValidation01Stock,
@@ -101,5 +113,9 @@ export const VIDEOS = [
   vibeCoderValidation06BRoll,
   vibeCoderValidation06Stock,
   vibeCoderValidation07,
+  vibeCoderValidation07BRoll,
+  vibeCoderValidation07Stock,
   vibeCoderValidation08,
+  vibeCoderValidation08BRoll,
+  vibeCoderValidation08Stock,
 ]
