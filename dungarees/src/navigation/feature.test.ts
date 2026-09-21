@@ -5,6 +5,8 @@ import { createRouter } from './router.ts'
 
 import { mtest } from '@dungarees/core/marbles-vitest.ts'
 
+import { expect, test } from 'vitest'
+
 const INDEX_LOCATION = { pathname: '/', search: '', hash: '' }
 
 const PATH_LOCATION = { pathname: '/path', search: 'a=1&b=2', hash: 'some' }
@@ -73,4 +75,14 @@ mtest('the feature resolves the route with the router it was given', ({ expect, 
       params: {},
     },
   })
+})
+
+test('an app navigation is pushed to the platform so the address bar follows it', () => {
+  const { store } = createAppStore()
+  const navigationService = createFakeNavigationService()
+  const { appNavigation } = createNavigation({ store, navigationService })
+
+  appNavigation(PATH_LOCATION)
+
+  expect(navigationService.getLocation()).toEqual(PATH_LOCATION)
 })

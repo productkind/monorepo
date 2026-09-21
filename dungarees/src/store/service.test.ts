@@ -4,6 +4,7 @@ import type { Reducer } from './service.ts'
 
 import type { DomainEvent } from '@dungarees/core/event.ts'
 import { mtest } from '@dungarees/core/marbles-vitest.ts'
+import { recordValuesFrom } from '@dungarees/rxjs/util.ts'
 
 import { of } from 'rxjs'
 import { catchError, map, mergeMap, take } from 'rxjs/operators'
@@ -291,4 +292,32 @@ test('identityReducer hands back the very state it was given', () => {
   const state = { count: 1 }
 
   expect(identityReducer(state, { type: 'count/increment', payload: undefined })).toBe(state)
+})
+
+test('event$ reports the events the store reduced, in the order it reduced them', () => {
+  const store = createStore<AllCountState, AllEvents>({ count: countReducer })
+  const recorded = recordValuesFrom(store.event$)
+
+  store.send({ type: 'count/increment', payload: undefined })
+  store.send({ type: 'count/incrementAmount', payload: 5 })
+
+  expect(recorded()).toEqual([
+    { type: 'count/increment', payload: undefined },
+    { type: 'count/incrementAmount', payload: 5 },
+  ])
+})
+
+test('event$ reports what effects sent as well as what was sent to the store', () => {
+  const store = createStore<AllCountState, AllEvents>({ count: countReducer })
+  store.registerEffect((event$) =>
+    event$.pipe(
+      filterByType('count/start'),
+      map((): Increment => ({ type: 'count/increment', payload: undefined })),
+    ),
+  )
+  const recorded = recordValuesFrom(store.event$)
+
+  store.send({ type: 'count/start', payload: undefined })
+
+  expect(recorded().map(({ type }) => type)).toEqual(['count/start', 'count/increment'])
 })

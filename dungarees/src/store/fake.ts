@@ -1,5 +1,5 @@
 import { createStore } from './service.ts'
-import type { Reducer, ReducersObject, StateReadable, Store } from './service.ts'
+import type { Reducer, ReducersObject, StateReadable, Store, StoreImportExport } from './service.ts'
 
 import type { DomainEvent } from '@dungarees/core/event.ts'
 import type {
@@ -8,6 +8,7 @@ import type {
   StringLiteral,
 } from '@dungarees/core/type-util.ts'
 import { makeObjectFromStringLiteral } from '@dungarees/core/util.ts'
+import { recordValuesFrom } from '@dungarees/rxjs/util.ts'
 
 import type { Observable } from 'rxjs'
 import { map } from 'rxjs/operators'
@@ -27,8 +28,9 @@ export type StoreTools<
 > = {
   getStateReadable: (in$: Observable<Partial<STATE>>) => StateReadable<SLICED_STATE>
   createAppStore: () => {
-    store: Store<SLICED_STATE & BASE_STATE, EVENT>
+    store: Store<SLICED_STATE & BASE_STATE, EVENT> & StoreImportExport<SLICED_STATE & BASE_STATE>
     sliceState$: Observable<STATE>
+    recordedEvents: () => EVENT[]
   }
 }
 
@@ -79,6 +81,7 @@ export const createStoreTools = <
       return {
         store,
         sliceState$: store.state$.pipe(map((state) => state[namespace])),
+        recordedEvents: recordValuesFrom(store.event$),
       }
     },
   }

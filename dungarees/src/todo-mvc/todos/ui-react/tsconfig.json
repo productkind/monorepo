@@ -1,0 +1,11 @@
+{
+  "extends": "@dungarees/core/tsconfig.base.json",
+  "compilerOptions": {
+    "paths": {
+      "@dungarees/todo-mvc-todos-ui-react/*": ["./*"]
+    },
+    "noEmit": true,
+    "rootDir": ".",
+    "module": "NodeNext"
+  }
+}

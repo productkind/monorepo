@@ -212,6 +212,42 @@ const { app, executedCommands } = createTestApp({ files, commands })
 const { terminal } = renderCli(app, 'dungarees publish-multi-lib /multi-lib')
 ```
 
+### 5d. Events are a contract, but only where there is no state to read
+
+A store's events are public: they are namespaced, serialisable, and the boundary between a command, a reducer and an effect. So asserting on them is not automatically reaching into the implementation — but it usually is. Assert what the queries report, and reach for the event log only where the event is the entire observable behaviour: a command whose reducer is an identity reducer on purpose changes no state, and announcing the event is all it does.
+
+Read the log with `recordedEvents()` from `createAppStore`, which records against a real store from the moment it is built. Never stand in a hand-written object with a `send` on it — that is a spy on a collaborator, and it cannot tell a working command from a broken one.
+
+```ts
+// Bad — a hand-rolled receiver, so the test passes whatever the store would really have done
+const events: NavigationEvent[] = []
+navigationCommand({ send: (event) => events.push(event) }).appNavigation(LOCATION)
+expect(events).toEqual([createAppNavigation(LOCATION)])
+```
+
+```ts
+// Good — the real store, recording from the moment it exists
+const { store, recordedEvents } = createAppStore()
+
+navigationCommand(store).appNavigation(LOCATION)
+
+expect(recordedEvents()).toEqual([createAppNavigation(LOCATION)])
+```
+
+```ts
+// Bad — the state is right there to be read, so the events are an implementation detail
+todosBehavior.add('Write tests')
+expect(recordedEvents()).toEqual([createAddTodo({ id: 'fake-uuid-1', title: 'Write tests' })])
+```
+
+```ts
+// Good — assert what a reader of the feature would see
+todosBehavior.add('Write tests')
+expect(todosBehavior.toTodos()).toEqual([
+  { id: 'fake-uuid-1', title: 'Write tests', completed: false },
+])
+```
+
 ## 6. Prefer built-in/standard types; own the source of truth when there is none
 
 Reach for built-in and standard-library types before hand-rolling.
@@ -677,3 +713,49 @@ const toDiffLines = (diff: string): DiffLine[] =>
 ```
 
 A `for` loop earns its place when the work is genuinely sequential and the functional form would hide that — reading until a terminator, or short-circuiting a search that cannot be expressed with `find`. Reach for it after the transformation, not before.
+
+## 18. Lay an application out by feature, then by delivery
+
+An application is a tree of workspace packages under `<product>/src/`. Every leaf directory is one package, and its position in the tree says what it is allowed to know.
+
+```
+<product>/src/                      Without src if under dungarees
+  <feature>/domain/                 the feature, with no delivery and no framework in it
+  <feature>/<delivery>/             that feature presented through one delivery
+  app/base-app/<delivery>/          the application object: services, behaviors, delivery, main
+  app/fake-services/<delivery>/     a services record built from fakes, for tests
+  app/runtime/<runtime>/           the real services and the executable entry point
+```
+
+A `<delivery>` segment is named `<delivery-mechanism>-<framework>` — `cli-yargs`, `ui-react`. Both halves are load-bearing: the mechanism says how the application meets the outside world, the framework says what it is built with.
+
+A `<runtime>` segment is named `<runtime>-<framework>` too, but it is not a delivery: it is the real services and the executable entry point for one runtime. Examples are `ssr-react`, `cli-yargs` and `server-koa`.
+
+The package name is the path with `app` dropped and the segments joined by `-`, prefixed with `@dungarees/`:
+
+```
+bin/publish-lib/domain            @dungarees/bin-publish-lib-domain
+bin/app/runtime/cli-yargs         @dungarees/bin-runtime-cli-yargs
+todo-mvc/todos/ui-react           @dungarees/todo-mvc-todos-ui-react
+todo-mvc/app/base-app/ssr-react   @dungarees/todo-mvc-base-app-ssr-react
+```
+
+Dependencies only ever point inwards — runtime → base-app → feature delivery → feature domain → libraries. A domain package that imports a delivery, or a feature that imports `app/`, has put the tree the wrong way up.
+
+```
+// Bad — one directory per runtime, so the same delivery is split in two and neither is whole
+app/runtime/ssr-react/        the server
+app/runtime/hydration-react/  the browser half of the same server-rendered app
+```
+
+```
+// Good — one delivery, one package; the server entry and the client entry are both part of
+// what "server-rendered React" means
+app/runtime/ssr-react/
+  entry-server.ts   renders a request
+  entry-client.ts   the document's entry point
+  start.ts          the hydration it calls, kept separate so a test can call it too
+  server.ts         the executable
+```
+
+There is no delivery segment above the feature level. `<product>/src/` is the product and nothing else, so `src/todo-mvc/ssr-react/app/runtime/ssr-react` names the same thing twice and stops a second delivery from sharing the domain.

@@ -298,7 +298,8 @@
       "WebFetch(domain:macnative.com)",
       "WebFetch(domain:developers.buffer.com)",
       "WebFetch(domain:support.buffer.com)",
-      "WebFetch(domain:prow.ro)"
+      "WebFetch(domain:prow.ro)",
+      "Bash(awk NR>=240 && NR<=270 *)"
     ],
     "deny": [],
     "ask": []
