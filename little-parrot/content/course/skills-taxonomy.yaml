@@ -1,0 +1,611 @@
+# Little Parrot skills taxonomy
+#
+# Two axes, deliberately kept apart:
+#   skill    - what a learner can do. Drives skip logic and ordering. Closed list.
+#   scenario - the use case a block is written around. Drives niche targeting. Open list.
+# The old `skills:` field in the course YAMLs mixed these, which is why it grew to
+# 168 distinct tags across 55 challenges with no two blocks agreeing on anything.
+#
+# block kinds:
+#   core    - tool skill, no use case baked in. Shared across paths. One canonical copy.
+#   applied - same skill, specific scenario. Authored per niche.
+#   frame   - opening or closing of a path (comics, promise, wrap-up). Never shared.
+#   mixed   - currently frame + core in one challenge. Split candidate.
+
+version: 1
+updated: 2026-09-19
+
+domains:
+  ai: Working with AI itself, independent of any one tool
+  build: Building an app with an AI app builder
+  soft: Software literacy, the vocabulary to describe what you want
+  debug: Finding and fixing what went wrong
+  workspace: Editing your app outside the app builder
+  product: Deciding what to build
+  launch: Getting a product in front of people
+  biz: Turning a product into a business
+  auto: Personal automation on your phone
+
+skills:
+  - id: ai.how-models-work
+    domain: ai
+    name: How AI models work
+    description: What a model is, tokens, training, why it makes things up.
+  - id: ai.prompt-craft
+    domain: ai
+    name: Writing a good prompt
+    description: Structure, context, specificity, and refining with follow-ups.
+  - id: ai.tone-and-voice
+    domain: ai
+    name: Getting AI to match a voice
+    description: Steering tone and style so the output sounds like the person, not a robot.
+  - id: ai.agents
+    domain: ai
+    name: Working with an AI agent
+    description: What an agent does differently to a chat assistant, and how to review its work.
+
+  - id: build.prompt-to-app
+    domain: build
+    name: Describing an app and refining it
+    description: Turning an idea into a first build, then improving it with focused follow-ups.
+  - id: build.refine-visually
+    domain: build
+    name: Making targeted changes visually
+    description: Preview, device views, the preview toolbar, attaching images as reference.
+  - id: build.versioning
+    domain: build
+    name: Undoing safely
+    description: Version history, bookmarking a working version, reverting, comparing versions.
+  - id: build.context-and-planning
+    domain: build
+    name: Planning before building
+    description: Plan mode, project knowledge, giving the builder lasting context.
+  - id: build.data-and-services
+    domain: build
+    name: Connecting data and services
+    description: Backend, database approval, login, API keys and external services.
+  - id: build.publish
+    domain: build
+    name: Publishing an app
+    description: Preview versus production, subdomain, favicon, meta tags, going live.
+
+  - id: soft.app-anatomy
+    domain: soft
+    name: What an app is made of
+    description: Frontend, backend, database, infrastructure and how they fit together.
+  - id: soft.design-vocabulary
+    domain: soft
+    name: Describing how it should look
+    description: Wireframes, design systems, colour, type, spacing.
+  - id: soft.frontend
+    domain: soft
+    name: How screens are built
+    description: Components, layout, semantic structure.
+  - id: soft.backend
+    domain: soft
+    name: What happens behind the screen
+    description: APIs, authentication, the work an app does out of sight.
+  - id: soft.databases
+    domain: soft
+    name: How an app remembers things
+    description: Tables, relationships, data types, queries.
+
+  - id: debug.fundamentals
+    domain: debug
+    name: Reading a bug calmly
+    description: What a bug is, the common types, and the mindset that keeps you moving.
+  - id: debug.prevention
+    domain: debug
+    name: Preventing bugs
+    description: Small prompts, testing after every change, bookmarking before anything risky.
+  - id: debug.investigation
+    domain: debug
+    name: Investigating a bug
+    description: Logs, network requests, status codes, reproducing the problem, checking the data.
+  - id: debug.fix-loops
+    domain: debug
+    name: Escaping a fix-break-fix loop
+    description: Knowing when to stop asking, isolate, compare versions, or rebuild the feature.
+  - id: debug.security
+    domain: debug
+    name: Handling security warnings
+    description: Reading a security warning, row level security, auth safety, deciding what matters.
+
+  - id: workspace.version-control
+    domain: workspace
+    name: Version control and GitHub
+    description: Repositories, commits, pushing, and keeping the builder and your computer in sync.
+  - id: workspace.local-setup
+    domain: workspace
+    name: Running a project on your own computer
+    description: Installing the editor and tools, cloning a project, installing and running it.
+  - id: workspace.edit-code
+    domain: workspace
+    name: Editing code by hand
+    description: Finding the right file, changing it, and seeing the change live.
+  - id: workspace.coding-agent
+    domain: workspace
+    name: Using a coding agent
+    description: Giving an agent a task in your own project, reviewing its diff, undoing it.
+
+  - id: product.problem-and-user
+    domain: product
+    name: Defining the problem and who has it
+    description: A problem statement grounded in a real need, and the person you are building for.
+  - id: product.journey
+    domain: product
+    name: Mapping the journey
+    description: Storyboarding what the user does to get unstuck, then breaking it into buildable steps.
+  - id: product.mvp
+    domain: product
+    name: Scoping a first version
+    description: Choosing the smallest set of features worth building now.
+  - id: product.user-research
+    domain: product
+    name: Testing an idea with people
+    description: Planning and running a test of something before you commit to building it.
+
+  - id: launch.domain
+    domain: launch
+    name: Choosing and connecting a domain
+    description: Picking a name, weighing the extension, buying it, pointing it at your product.
+  - id: launch.legal
+    domain: launch
+    name: Legal pages
+    description: Privacy policy, terms, cookie banner, and what a small product actually needs.
+  - id: launch.seo
+    domain: launch
+    name: Being found
+    description: Search and AI discoverability, listings, links in.
+  - id: launch.analytics
+    domain: launch
+    name: Measuring what people do
+    description: Installing analytics, choosing events, reading them without drowning.
+  - id: launch.user-feedback
+    domain: launch
+    name: Feedback from real users
+    description: Asking live users well, building a feedback route in, collecting testimonials.
+  - id: launch.reach-users
+    domain: launch
+    name: Getting people to your product
+    description: Directories, communities, email capture, and staying in touch with visitors.
+
+  - id: biz.value-proposition
+    domain: biz
+    name: Saying what your product is worth
+    description: One sentence of value, tested on real people.
+  - id: biz.pricing
+    domain: biz
+    name: Deciding what to charge
+    description: Pricing models and the psychology behind a number.
+  - id: biz.ship-steadily
+    domain: biz
+    name: Launching early and shipping steadily
+    description: Releasing before it feels ready, working in small cycles, growing the product over time.
+  - id: biz.money
+    domain: biz
+    name: Knowing your numbers
+    description: Break-even, taking payment, keeping money separate, the legal basics of a small business.
+
+  - id: auto.build-shortcut
+    domain: auto
+    name: Building a phone shortcut
+    description: Assembling actions into a working shortcut that calls an AI model.
+  - id: auto.shortcut-triggers
+    domain: auto
+    name: Running a shortcut hands-free
+    description: Voice, back tap, action button, automations.
+  - id: auto.notes-and-sharing
+    domain: auto
+    name: Getting the output to other people
+    description: Notes, sharing across platforms, making the result usable by someone else.
+
+# Every published challenge, mapped. `ref` is course-slug#position, which is how
+# challenges are addressable today. Replace with a stable UUID when ids land.
+blocks:
+  - ref: ai-your-life-admin-00#1
+    title: The Brain Dump
+    kind: mixed
+    steps: 22
+    teaches: [auto.build-shortcut, ai.prompt-craft]
+    assumes: []
+    scenario: mental-load
+    example: learner-own
+  - ref: ai-your-life-admin-00#2
+    title: Share the Load
+    kind: applied
+    steps: 7
+    teaches: [auto.notes-and-sharing]
+    assumes: [auto.build-shortcut]
+    scenario: mental-load
+    example: learner-own
+  - ref: ai-your-life-admin-00#3
+    title: The Baby Log
+    kind: applied
+    steps: 10
+    teaches: [auto.build-shortcut, ai.prompt-craft]
+    assumes: [auto.build-shortcut]
+    scenario: baby-log
+    example: learner-own
+  - ref: ai-your-life-admin-00#4
+    title: Make It Effortless
+    kind: core
+    steps: 7
+    teaches: [auto.shortcut-triggers]
+    assumes: [auto.build-shortcut]
+    example: learner-own
+
+  - ref: lovable-intro-00#1
+    title: Your First Prompt
+    kind: mixed
+    steps: 18
+    teaches: [build.prompt-to-app, ai.prompt-craft]
+    assumes: []
+    example: book-club
+  - ref: lovable-intro-00#2
+    title: Iterate and Improve
+    kind: core
+    steps: 9
+    teaches: [build.prompt-to-app]
+    assumes: [build.prompt-to-app]
+    example: book-club
+  - ref: lovable-intro-00#3
+    title: Save Data with Lovable Cloud
+    kind: core
+    steps: 12
+    teaches: [build.data-and-services, soft.databases]
+    assumes: [build.prompt-to-app]
+    example: book-club
+  - ref: lovable-intro-00#4
+    title: Make Quick Changes with the Tools Lovable Provides
+    kind: core
+    steps: 9
+    teaches: [build.refine-visually]
+    assumes: [build.prompt-to-app]
+    example: book-club
+  - ref: lovable-intro-00#5
+    title: Experiment and Undo Mistakes Safely
+    kind: core
+    steps: 7
+    teaches: [build.versioning]
+    assumes: [build.prompt-to-app]
+    example: book-club
+  - ref: lovable-intro-00#6
+    title: Plan, Test, and Connect Services
+    kind: core
+    steps: 11
+    teaches: [build.context-and-planning, build.data-and-services]
+    assumes: [build.prompt-to-app]
+    example: book-club
+  - ref: lovable-intro-00#7
+    title: Publish and Share Your App
+    kind: core
+    steps: 10
+    teaches: [build.publish, launch.user-feedback]
+    assumes: [build.prompt-to-app]
+    example: book-club
+
+  - ref: lovable-publishing-00#1
+    title: 'Go Live: Your First Real Launch'
+    kind: mixed
+    steps: 19
+    teaches: [build.publish, build.data-and-services]
+    assumes: [build.prompt-to-app]
+    example: book-club
+  - ref: lovable-publishing-00#2
+    title: Connect a Custom Domain
+    kind: core
+    steps: 8
+    teaches: [launch.domain]
+    assumes: [build.publish]
+    example: book-club
+  - ref: lovable-publishing-00#3
+    title: 'Build Trust: Legal Pages That Protect You and Your Users'
+    kind: core
+    steps: 8
+    teaches: [launch.legal]
+    assumes: [build.publish]
+    example: book-club
+  - ref: lovable-publishing-00#4
+    title: 'Get Found: SEO and Discoverability'
+    kind: core
+    steps: 12
+    teaches: [launch.seo]
+    assumes: [build.publish, launch.domain]
+    example: book-club
+  - ref: lovable-publishing-00#5
+    title: 'Know Your Users: Metrics, Feedback, and Distribution'
+    kind: core
+    steps: 11
+    teaches: [launch.analytics, launch.user-feedback, launch.reach-users]
+    assumes: [build.publish]
+    example: book-club
+    note: Bundles three skills into one challenge. Split candidate.
+  - ref: lovable-publishing-00#6
+    title: Launch Early, Grow Steadily
+    kind: core
+    steps: 9
+    teaches: [biz.ship-steadily]
+    assumes: [build.publish]
+    example: book-club
+
+  - ref: vibe-coding-debugging-00#1
+    title: The Anatomy of a Bug
+    kind: mixed
+    steps: 26
+    teaches: [debug.fundamentals]
+    assumes: [build.prompt-to-app]
+    example: book-club
+  - ref: vibe-coding-debugging-00#2
+    title: Preventing Bugs Before They Happen
+    kind: core
+    steps: 12
+    teaches: [debug.prevention, build.versioning]
+    assumes: [build.prompt-to-app]
+    example: book-club
+  - ref: vibe-coding-debugging-00#3
+    title: How Developers Investigate Bugs
+    kind: core
+    steps: 27
+    teaches: [debug.investigation, soft.app-anatomy]
+    assumes: [debug.fundamentals]
+    example: book-club
+  - ref: vibe-coding-debugging-00#4
+    title: Lovable's Debugging Toolkit
+    kind: applied
+    steps: 13
+    teaches: [build.context-and-planning, build.refine-visually]
+    assumes: [debug.fundamentals]
+    scenario: debugging
+    example: book-club
+  - ref: vibe-coding-debugging-00#5
+    title: Escaping Bug Loops
+    kind: core
+    steps: 12
+    teaches: [debug.fix-loops, build.versioning]
+    assumes: [debug.fundamentals]
+    example: book-club
+  - ref: vibe-coding-debugging-00#6
+    title: How to Guide Lovable to Fix Bugs
+    kind: applied
+    steps: 13
+    teaches: [debug.fix-loops, ai.prompt-craft]
+    assumes: [debug.fundamentals]
+    scenario: debugging
+    example: book-club
+  - ref: vibe-coding-debugging-00#7
+    title: Handling Security Errors and Warnings
+    kind: core
+    steps: 22
+    teaches: [debug.security, soft.backend]
+    assumes: [build.data-and-services]
+    example: book-club
+
+  - ref: vibe-coding-github-00#1
+    title: Why Edit on Your Own Computer
+    kind: mixed
+    steps: 12
+    teaches: [workspace.version-control]
+    assumes: [build.prompt-to-app]
+    example: book-club
+  - ref: vibe-coding-github-00#2
+    title: Set Up Your Workspace
+    kind: core
+    steps: 10
+    teaches: [workspace.local-setup]
+    assumes: []
+    example: none
+  - ref: vibe-coding-github-00#3
+    title: Run Your App on Your Computer
+    kind: core
+    steps: 14
+    teaches: [workspace.local-setup]
+    assumes: [workspace.local-setup, workspace.version-control]
+    example: book-club
+  - ref: vibe-coding-github-00#4
+    title: Change Your Website Copy
+    kind: core
+    steps: 12
+    teaches: [workspace.edit-code, workspace.version-control]
+    assumes: [workspace.local-setup]
+    example: book-club
+  - ref: vibe-coding-github-00#5
+    title: Change an Icon
+    kind: applied
+    steps: 8
+    teaches: [workspace.edit-code, soft.frontend]
+    assumes: [workspace.edit-code]
+    scenario: icon-swap
+    example: book-club
+  - ref: vibe-coding-github-00#6
+    title: Make a Bigger Change with Copilot
+    kind: core
+    steps: 11
+    teaches: [workspace.coding-agent, ai.agents]
+    assumes: [workspace.edit-code]
+    example: book-club
+  - ref: vibe-coding-github-00#7
+    title: Your Workflow
+    kind: frame
+    steps: 7
+    teaches: [workspace.coding-agent, workspace.version-control]
+    assumes: [workspace.coding-agent]
+    example: book-club
+
+  - ref: vibe-coding-product-management-00#1
+    title: Craft a Problem Statement
+    kind: mixed
+    steps: 9
+    teaches: [product.problem-and-user]
+    assumes: []
+    example: book-club
+  - ref: vibe-coding-product-management-00#2
+    title: Define Your Target User
+    kind: core
+    steps: 6
+    teaches: [product.problem-and-user]
+    assumes: [product.problem-and-user]
+    example: book-club
+  - ref: vibe-coding-product-management-00#3
+    title: 'Storyboard: From Struggle to Solution'
+    kind: core
+    steps: 10
+    teaches: [product.journey]
+    assumes: [product.problem-and-user]
+    example: book-club
+  - ref: vibe-coding-product-management-00#4
+    title: Break Down Your Idea Into Buildable Steps
+    kind: core
+    steps: 14
+    teaches: [product.journey]
+    assumes: [product.journey]
+    example: book-club
+  - ref: vibe-coding-product-management-00#5
+    title: 'Decide What to Build First: Define Your MVP'
+    kind: core
+    steps: 10
+    teaches: [product.mvp]
+    assumes: [product.journey]
+    example: book-club
+  - ref: vibe-coding-product-management-00#6
+    title: Create a Prompt to Build Your MVP with AI
+    kind: applied
+    steps: 6
+    teaches: [ai.prompt-craft, build.prompt-to-app]
+    assumes: [product.mvp]
+    scenario: mvp-build-prompt
+    example: book-club
+  - ref: vibe-coding-product-management-00#7
+    title: Get Feedback on What You've Built
+    kind: core
+    steps: 8
+    teaches: [product.user-research]
+    assumes: [product.mvp]
+    example: book-club
+
+  - ref: vibe-coding-start-your-business-00#1
+    title: Craft Your Value Proposition
+    kind: mixed
+    steps: 14
+    teaches: [biz.value-proposition]
+    assumes: []
+    example: book-club
+  - ref: vibe-coding-start-your-business-00#2
+    title: Choose Your Domain
+    kind: core
+    steps: 10
+    teaches: [launch.domain]
+    assumes: []
+    example: book-club
+  - ref: vibe-coding-start-your-business-00#3
+    title: Build Your Audience Before You Launch
+    kind: core
+    steps: 11
+    teaches: [launch.reach-users]
+    assumes: [build.publish]
+    example: book-club
+  - ref: vibe-coding-start-your-business-00#4
+    title: Set Up Analytics Before Your First Visitors Arrive
+    kind: applied
+    steps: 13
+    teaches: [launch.analytics]
+    assumes: [build.publish]
+    scenario: posthog
+    example: book-club
+  - ref: vibe-coding-start-your-business-00#5
+    title: Get Your First Visitors
+    kind: core
+    steps: 9
+    teaches: [launch.reach-users]
+    assumes: [build.publish]
+    example: book-club
+  - ref: vibe-coding-start-your-business-00#6
+    title: Listen to Your First Users
+    kind: core
+    steps: 7
+    teaches: [launch.user-feedback]
+    assumes: [launch.reach-users]
+    example: book-club
+  - ref: vibe-coding-start-your-business-00#7
+    title: Decide What to Charge
+    kind: core
+    steps: 13
+    teaches: [biz.pricing]
+    assumes: [launch.analytics]
+    example: book-club
+  - ref: vibe-coding-start-your-business-00#8
+    title: Build a Sustainable Business
+    kind: core
+    steps: 14
+    teaches: [biz.money, launch.analytics]
+    assumes: [biz.pricing]
+    example: book-club
+
+  - ref: vibe-coding-tech-00#1
+    title: Building Blocks of an Application
+    kind: mixed
+    steps: 18
+    teaches: [soft.app-anatomy]
+    assumes: []
+    example: none
+  - ref: vibe-coding-tech-00#2
+    title: Design Elements for Vibe Coders
+    kind: core
+    steps: 25
+    teaches: [soft.design-vocabulary]
+    assumes: [soft.app-anatomy]
+    example: none
+  - ref: vibe-coding-tech-00#3
+    title: Frontend for Vibe Coders
+    kind: core
+    steps: 16
+    teaches: [soft.frontend]
+    assumes: [soft.app-anatomy]
+    example: none
+  - ref: vibe-coding-tech-00#4
+    title: Backend for Vibe Coders
+    kind: core
+    steps: 14
+    teaches: [soft.backend]
+    assumes: [soft.app-anatomy]
+    example: none
+  - ref: vibe-coding-tech-00#5
+    title: Databases for Vibe Coders
+    kind: core
+    steps: 13
+    teaches: [soft.databases]
+    assumes: [soft.app-anatomy]
+    example: none
+
+  - ref: write-better-with-ai-00#1
+    title: Prompt AI to communicate confidently in high pressure situations
+    kind: mixed
+    steps: 11
+    teaches: [ai.prompt-craft, ai.tone-and-voice]
+    assumes: []
+    scenario: team-message
+    example: none
+  - ref: write-better-with-ai-00#2
+    title: Write clear internal product updates with less effort
+    kind: applied
+    steps: 21
+    teaches: [ai.prompt-craft, ai.how-models-work]
+    assumes: [ai.prompt-craft]
+    scenario: stakeholder-update
+    example: none
+  - ref: write-better-with-ai-00#3
+    title: Craft impactful LinkedIn posts that sound like you
+    kind: applied
+    steps: 11
+    teaches: [ai.tone-and-voice, ai.prompt-craft]
+    assumes: [ai.prompt-craft]
+    scenario: linkedin-post
+    example: none
+  - ref: write-better-with-ai-00#4
+    title: Learn more efficiently by using AI
+    kind: applied
+    steps: 11
+    teaches: [ai.prompt-craft, ai.how-models-work]
+    assumes: [ai.prompt-craft]
+    scenario: learning
+    example: none

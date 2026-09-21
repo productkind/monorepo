@@ -1,13 +1,13 @@
 ---
 status: drafted
-channels: [tiktok, instagram, youtube-shorts]
-account: little-parrot
+channels: [tiktok, instagram, youtube-shorts, linkedin]
+accounts: [little-parrot, productkind]
 campaign: tech-pm-26
 ---
 
 # Captions: "Before you Slack an engineer about a bug"
 
-- **Brand:** Little Parrot. TikTok and Instagram publish from Little Parrot; YouTube Shorts publishes from the Little Parrot channel.
+- **Brand:** Little Parrot for TikTok, Instagram and YouTube Shorts. LinkedIn publishes from the productkind company page.
 - **Source material:** [script.md](script.md) and [video definition](../../../../../video-generator/src/videos/pm-technical-fluency-validation-09.ts).
 - **What the video shows:** a vertical motion-graphics video that turns a vague Slack bug message into a seven-part software bug report, then previews a DevTools network request for episode two.
 - **Destination:** no external link. The call to action is to save the template and follow or subscribe for episode two.
@@ -61,7 +61,7 @@ Follow for episode two: how to find the failed network request behind an error.
 
 **Alt text:**
 
-A vertical motion-graphics video shows a Slack-style message reading “I found a bug”, followed by three questions an engineer still needs answered. Seven numbered cards demonstrate a software bug report: reproduce the issue, attach a screenshot or recording, list the steps, compare the expected and actual result, include the device, browser and app version, and explain who is affected. The cards combine into one report before a browser DevTools panel previews episode two.
+A vertical motion-graphics video shows a Slack-style message reading “I found a bug”, followed by three questions an engineer still needs answered. Seven numbered cards demonstrate a software bug report: reproduce the issue, attach a screenshot or recording, list the steps, compare the expected result with what happened, include the device, browser and app version, and explain who is affected. The cards combine into one report before a browser DevTools panel previews episode two.
 
 **Founder comments:**
 
@@ -83,9 +83,69 @@ How to write a bug report for a software team. We made this checklist for women 
 
 Copy this bug report template: 1) Can I reproduce it, and does it happen every time? 2) Screenshot or screen recording. 3) Exact steps. 4) Expected result. 5) Actual result. 6) Device, browser and app version. 7) Who is affected, and what can’t they do?
 
+## LinkedIn
+
+Publish from the productkind company page.
+
+**Post:**
+
+How to write a bug report that helps an engineer investigate: answer these seven questions before you send the Slack message.
+
+“I found a bug” leaves the engineer to ask where it happened, what you did and whether it happens again.
+
+A useful software bug report includes:
+
+1. Can you reproduce it, and does it happen every time?
+
+2. Do you have a screenshot or screen recording?
+
+3. What exact steps produced the bug?
+
+4. What did you expect to happen?
+
+5. What happened instead?
+
+6. Which device, browser and app version were you using?
+
+7. Who is affected, and what can’t they do?
+
+Your report gives the engineer enough evidence to begin investigating without spending the first conversation collecting the basics.
+
+Save the checklist for the next bug your team finds.
+
+We’re making this short series for women in product who want to ask clearer technical questions and work through software problems with engineers. Follow productkind for episode two: how to find the failed network request behind an error.
+
+**Alt text:**
+
+A vertical motion-graphics video shows a Slack-style message reading “I found a bug”, followed by three questions an engineer still needs answered. Seven numbered cards demonstrate a software bug report: reproduce the issue, attach a screenshot or recording, list the steps, compare the expected result with what happened, include the device, browser and app version, and explain who is affected. The cards combine into one report before a browser DevTools panel previews episode two.
+
+**Founder comments:**
+
+**Kinga:** I’d keep expected and actual behaviour as two separate lines. “The photo should save” and “the spinner keeps loading” give the engineer a clean comparison. If the actual line is hard to write, try the steps again; if the expected line is unclear, check the requirement or agreed behaviour before sending the report.
+
+**Thomas:** A screen recording shows what happened. The repeatable steps let someone test the same path on another machine. Device, browser and app version can then help narrow down why the same steps behave differently.
+
+## Kinga’s LinkedIn repost
+
+Repost the productkind company-page post with this commentary.
+
+**Post:**
+
+We built this motion-graphics video with Claude Code.
+
+Claude Code gave us React and TypeScript code, which Remotion rendered into the finished video.
+
+The Slack message, the seven bug-report cards, every transition and the final DevTools scene are defined in that code. So we can adjust one card’s timing, move text away from TikTok’s controls or reuse the same visual system for episode two, then render it again.
+
+We still wrote the script, decided what every scene needed to communicate and reviewed the finished animation. Claude Code helped turn those decisions into components and motion.
+
+Keeping the code means the work stays editable. A change means editing a component and rendering again, rather than prompting from scratch and hoping the next version keeps everything else.
+
+Have you used an AI coding tool to make something that doesn’t look like software?
+
 ## Posting checklist
 
-- Post the Instagram founder comments within the first hour, and reply to every real commenter in that window.
+- Post the Instagram and LinkedIn founder comments within the first hour, and reply to every real commenter in that window.
 - On Instagram, invite Kinga as a collaborator before publishing. Never upload the same Reel separately on her account.
 - Pin the copyable bug report template on TikTok and YouTube Shorts.
 - Keep the search phrase “how to write a bug report” in the first line, title and opening on-screen text when finalising the edit.
