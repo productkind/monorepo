@@ -383,3 +383,27 @@ export const getUnsafeMethodNames = <const SERVICE extends Record<string, unknow
   Object.keys(service).filter((key) => isMarkedUnsafeForMarbleTesting(service[key])) as Array<
     keyof FilterRecord<SERVICE, UnsafeMarbleTestingObservableFunction>
   >
+
+export type SynchronousValue<VALUE> = { value: VALUE }
+
+export const readSynchronousValue = <VALUE>(
+  source$: Observable<VALUE>,
+): SynchronousValue<VALUE> | undefined => {
+  let synchronous: SynchronousValue<VALUE> | undefined
+  source$
+    .subscribe((value) => {
+      synchronous = { value }
+    })
+    .unsubscribe()
+
+  return synchronous
+}
+
+export const recordValuesFrom = <T>(values$: Observable<T>): (() => T[]) => {
+  const recorded: T[] = []
+  values$.subscribe((value) => {
+    recorded.push(value)
+  })
+
+  return () => [...recorded]
+}

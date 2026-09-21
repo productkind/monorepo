@@ -1,27 +1,30 @@
 import { navigationCommand } from './command.ts'
 import { createAppStore } from './fake.ts'
+import { createAppNavigation } from './store.ts'
 
-import { mtest } from '@dungarees/core/marbles-vitest.ts'
+import { expect, test } from 'vitest'
 
-mtest('an app navigation moves the location in the store', ({ expect }) => {
-  const { store, sliceState$ } = createAppStore()
-  const command = navigationCommand(store)
+const PATH_LOCATION = { pathname: '/path', search: 'a=1&b=1', hash: 'some' }
 
-  command.appNavigation({ pathname: '/', search: 'a=1&b=1', hash: 'some' })
+const OTHER_LOCATION = { pathname: '/other', search: '', hash: '' }
 
-  expect(sliceState$).toBeObservable('n', {
-    n: { pathname: '/', search: 'a=1&b=1', hash: 'some' },
-  })
+test('an app navigation is announced as an intent rather than as a state change', () => {
+  const { store, recordedEvents } = createAppStore()
+
+  navigationCommand(store).appNavigation(PATH_LOCATION)
+
+  expect(recordedEvents()).toEqual([createAppNavigation(PATH_LOCATION)])
 })
 
-mtest('the location keeps the last app navigation of several', ({ expect }) => {
-  const { store, sliceState$ } = createAppStore()
+test('each app navigation is announced in the order it was asked for', () => {
+  const { store, recordedEvents } = createAppStore()
   const command = navigationCommand(store)
 
-  command.appNavigation({ pathname: '/first', search: '', hash: '' })
-  command.appNavigation({ pathname: '/second', search: '', hash: '' })
+  command.appNavigation(PATH_LOCATION)
+  command.appNavigation(OTHER_LOCATION)
 
-  expect(sliceState$).toBeObservable('n', {
-    n: { pathname: '/second', search: '', hash: '' },
-  })
+  expect(recordedEvents()).toEqual([
+    createAppNavigation(PATH_LOCATION),
+    createAppNavigation(OTHER_LOCATION),
+  ])
 })

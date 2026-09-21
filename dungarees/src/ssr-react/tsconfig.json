@@ -1,0 +1,11 @@
+{
+  "extends": "@dungarees/core/tsconfig.base.json",
+  "compilerOptions": {
+    "paths": {
+      "@dungarees/ssr-react/*": ["./*"]
+    },
+    "noEmit": true,
+    "rootDir": ".",
+    "module": "NodeNext"
+  }
+}

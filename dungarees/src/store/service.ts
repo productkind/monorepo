@@ -23,11 +23,17 @@ import { concatMap, mergeAll } from 'rxjs/operators'
 
 export type Store<ALL_STATE, ALL_EVENT extends DomainEvent> = StateReadable<ALL_STATE> &
   EventReceiver<ALL_EVENT> &
+  EventReadable<ALL_EVENT> &
   EffectRegistry<ALL_STATE, ALL_EVENT>
 
-export type StoreImportExport<ALL_STATE> = {
-  importState: (state: ALL_STATE) => void
+// Split out because reading the state as it stands is the smaller capability: a caller that only
+// serialises would otherwise have to ask for the power to overwrite the store as well.
+export type StateExportable<ALL_STATE> = {
   exportState: () => ALL_STATE
+}
+
+export type StoreImportExport<ALL_STATE> = StateExportable<ALL_STATE> & {
+  importState: (state: ALL_STATE) => void
 }
 
 export type StoreWithImport<ALL_STATE, ALL_EVENT extends DomainEvent> = Store<
@@ -42,6 +48,13 @@ export type StateReadable<ALL_STATE> = {
 
 export type EventReceiver<ALL_EVENT extends DomainEvent> = {
   send: (event: ALL_EVENT) => void
+}
+
+// Everything the store reduced, which is what was sent to it plus whatever the effects answered
+// with. A command whose reducer leaves the state alone on purpose has nothing else to show for
+// itself, and an event log is what a devtool or an audit trail would read too.
+export type EventReadable<ALL_EVENT extends DomainEvent> = {
+  event$: Observable<ALL_EVENT>
 }
 
 export type EffectRegistry<ALL_STATE, ALL_EVENT extends DomainEvent> = {
@@ -189,8 +202,10 @@ export const createStore = <STATE extends JsonObject, EVENT extends DomainEvent>
   const event$ = new Subject<EVENT>()
   const event$$ = new Subject<Observable<EVENT>>()
   const eventAfterEffects$ = new Subject<EVENT>()
+  const observedEvent$ = new Subject<EVENT>()
   event$$.pipe(mergeAll()).subscribe((event) => {
     store.dispatch(event)
+    observedEvent$.next(event)
     eventAfterEffects$.next(event)
   })
   event$$.next(event$)
@@ -204,6 +219,7 @@ export const createStore = <STATE extends JsonObject, EVENT extends DomainEvent>
 
   return {
     state$,
+    event$: observedEvent$,
     send: (event) => {
       event$.next(event)
     },

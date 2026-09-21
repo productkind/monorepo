@@ -11,6 +11,8 @@ import {
   getObservableMethodsFromSync,
   getUnsafeMethodNames,
   markUnsafeForMarbleTesting,
+  readSynchronousValue,
+  recordValuesFrom,
   syncFunctionToObservable,
   SyncFunctionToObservable,
   tryPipe,
@@ -19,7 +21,7 @@ import {
 import { getErrorMessage } from '@dungarees/core/error.ts'
 import { mtest } from '@dungarees/core/marbles-vitest.ts'
 
-import { catchError, lastValueFrom, map, type Observable, of, Subject } from 'rxjs'
+import { catchError, from, lastValueFrom, map, type Observable, of, Subject } from 'rxjs'
 import { expect, expectTypeOf, test } from 'vitest'
 import { z } from 'zod'
 
@@ -269,4 +271,43 @@ test('getUnsafeMethodNames', () => {
   const methodNames = getUnsafeMethodNames(service)
   expect(methodNames).toEqual(['unsafe'])
   expectTypeOf<(typeof methodNames)[0]>().toEqualTypeOf<'unsafe'>()
+})
+
+test('readSynchronousValue takes the value an observable already has', () => {
+  expect(readSynchronousValue(of('now'))).toEqual({ value: 'now' })
+})
+
+test('readSynchronousValue keeps the last of several synchronous values', () => {
+  expect(readSynchronousValue(from(['first', 'second']))).toEqual({ value: 'second' })
+})
+
+test('readSynchronousValue answers nothing when the observable has not emitted yet', () => {
+  expect(readSynchronousValue(new Subject<string>())).toBeUndefined()
+  expect(readSynchronousValue(of(undefined))).toEqual({ value: undefined })
+})
+
+test('recordValuesFrom reads back what has arrived since it started', () => {
+  const source$ = new Subject<string>()
+  const recorded = recordValuesFrom(source$)
+
+  source$.next('first')
+  source$.next('second')
+
+  expect(recorded()).toEqual(['first', 'second'])
+})
+
+test('recordValuesFrom misses nothing sent after it started', () => {
+  const source$ = new Subject<string>()
+
+  expect(recordValuesFrom(source$)()).toEqual([])
+})
+
+test('recordValuesFrom hands out a copy, so a reader cannot rewrite the record', () => {
+  const source$ = new Subject<string>()
+  const recorded = recordValuesFrom(source$)
+  source$.next('first')
+
+  recorded().push('forged')
+
+  expect(recorded()).toEqual(['first'])
 })

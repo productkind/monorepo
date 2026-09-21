@@ -74,3 +74,23 @@ mtest('a store from createAppStore reduces the events sent to it', ({ expect }) 
 
   expect(sliceState$).toBeObservable('s', { s: { count: 1, label: 'none' } })
 })
+
+test('createAppStore records the events sent through it', () => {
+  const { store, recordedEvents } = createStoreTools({
+    namespace: 'count',
+    reducer: countReducer,
+  }).createAppStore()
+
+  store.send({ type: 'count/increment', payload: undefined })
+
+  expect(recordedEvents()).toEqual([{ type: 'count/increment', payload: undefined }])
+})
+
+test('createAppStore records nothing before anything is sent', () => {
+  const { recordedEvents } = createStoreTools({
+    namespace: 'count',
+    reducer: countReducer,
+  }).createAppStore()
+
+  expect(recordedEvents()).toEqual([])
+})
