@@ -12,7 +12,6 @@
     "@dungarees/core": "*",
     "@dungarees/id-generator": "*",
     "@dungarees/navigation": "*",
-    "@dungarees/react": "*",
     "@dungarees/ssr-react": "*",
     "@dungarees/store": "*",
     "@dungarees/todo-mvc-todos-domain": "*",
@@ -29,7 +28,6 @@
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0",
     "typescript": "^5.9.3",
     "vitest": "^3.0.2"
   },
