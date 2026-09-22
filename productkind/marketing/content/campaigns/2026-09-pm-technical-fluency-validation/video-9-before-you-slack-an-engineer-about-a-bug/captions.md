@@ -125,24 +125,6 @@ A vertical motion-graphics video shows a Slack-style message reading “I found 
 
 **Thomas:** A screen recording shows what happened. The repeatable steps let someone test the same path on another machine. Device, browser and app version can then help narrow down why the same steps behave differently.
 
-## Kinga’s LinkedIn repost
-
-Repost the productkind company-page post with this commentary.
-
-**Post:**
-
-We built this motion-graphics video with Claude Code.
-
-Claude Code gave us React and TypeScript code, which Remotion rendered into the finished video.
-
-The Slack message, the seven bug-report cards, every transition and the final DevTools scene are defined in that code. So we can adjust one card’s timing, move text away from TikTok’s controls or reuse the same visual system for episode two, then render it again.
-
-We still wrote the script, decided what every scene needed to communicate and reviewed the finished animation. Claude Code helped turn those decisions into components and motion.
-
-Keeping the code means the work stays editable. A change means editing a component and rendering again, rather than prompting from scratch and hoping the next version keeps everything else.
-
-Have you used an AI coding tool to make something that doesn’t look like software?
-
 ## Posting checklist
 
 - Post the Instagram and LinkedIn founder comments within the first hour, and reply to every real commenter in that window.
