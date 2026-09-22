@@ -299,7 +299,11 @@
       "WebFetch(domain:developers.buffer.com)",
       "WebFetch(domain:support.buffer.com)",
       "WebFetch(domain:prow.ro)",
-      "Bash(awk NR>=240 && NR<=270 *)"
+      "Bash(awk NR>=240 && NR<=270 *)",
+      "Bash(mkdir -p email-cards-seo-indexing/uploads)",
+      "Bash(cp ../2026-09-pm-technical-fluency-validation/email-cards-api-webhook/uploads/little-parrot-wave.png email-cards-seo-indexing/uploads/)",
+      "Read(//Users/eggdice/Projects/little-parrot-awakens/**)",
+      "Read(//Users/eggdice/Projects/**)"
     ],
     "deny": [],
     "ask": []
