@@ -96,7 +96,7 @@ course:
 
               The secret to getting closer to what you want on the first try? A **structured prompt**.
 
-              *Prompting Lovable uses credits, by default you get 5 free credits every day. A single prompt can use multiple credits depending on how much the AI needs to do.*
+              *Prompting Lovable uses credits. On the free plan you get 5 a day, up to 30 a month. A single prompt can use multiple credits depending on how much the AI needs to do.*
           subtitle: The secret to better results
         - type: text
           title: The prompt formula
@@ -400,22 +400,23 @@ course:
               For most apps, Lovable Cloud is the simplest way to add these capabilities.
 
               If you’re curious about what’s happening under the hood, you can take our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) course. It explains these ideas in simple, non-technical terms.
-            imageUrl: /courses/lovable-intro-00/enable-lovable-cloud.webp
           subtitle: Backend without the complexity
         - type: text
           title: Enable Lovable Cloud
           content:
             body: |-
-              To connect your app to Lovable Cloud, you can simply prompt Lovable:
+              Cloud is switched on for your workspace already, and the first time you ask for something that needs a backend, like logins or saved data, Lovable sets it up for your project without being asked. Depending on your settings it either does it straight away or shows you an **Enable Cloud** card to approve first.
+
+              So you may never type this prompt. We'd still suggest you do it deliberately, now, rather than letting it happen halfway through building a feature:
 
               ```
               Connect this app to Lovable Cloud so that data is saved and accessible from any device.
               ```
 
-              Lovable will set up the backend for you. After this, any data your app creates will be stored properly.
+              That way you know exactly when your app got its backend, and you can check it works before you build anything on top of it.
 
-              You only need to do this once. From now on, new features you add will automatically use the backend.
-          subtitle: One prompt to set it up
+              It only happens once. From then on, new features you add use the backend automatically.
+          subtitle: It happens on its own, but do it on purpose
         - type: text
           title: Database changes
           content:
@@ -424,7 +425,7 @@ course:
 
               By default, Lovable **auto-approves these changes** so you can keep building without interruption. This is normal and expected. You can always see what's happened in the chat as it happens.
 
-              If you'd like more control, you can switch to **manual approval**. Click the **+** button under the chat input, then go to **Connectors → Manage connectors → Cloud → Manage permissions**. With manual approval on, Lovable shows a **Modify database** message before each change, and you decide whether to allow it.
+              If you'd like more control, you can ask Lovable to check with you first. Go to **Settings → Your account → Preferences → Agent permissions**, find **Cloud**, and set **Modify database** to **Ask each time**. Lovable then shows a **Modify database** message before each change, and you decide whether to allow it.
 
               *If you're curious about what databases are and how they work, our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) course explains these concepts in friendly terms.*
             imageUrl: /courses/lovable-intro-00/modify-database-popup.webp
@@ -436,6 +437,8 @@ course:
               Sometimes errors happen when connecting to Lovable Cloud or making changes to your app. Don't worry, this is a normal part of building.
 
               If you see an error, look for the **Try to fix** button. Clicking it tells Lovable to attempt an automatic repair. This often resolves the issue quickly.
+
+              Your account includes **10 free fixes**, shared across all your projects. Each one you use comes back 24 hours later. After that, a fix costs credits like any other prompt, so it's worth reading what the error says rather than clicking the button five times in a row.
 
               If the error persists or there's no "Try to fix" button, you'll need to investigate further. Debugging is a skill that every builder develops over time.
 
@@ -568,7 +571,7 @@ course:
             body: |-
               This is one of the most useful features for targeted tweaks. The **preview toolbar** sits at the bottom of your app preview and lets you point at what you want to change instead of describing it in a prompt. It gives you a few modes:
               - **Select elements:** Click a part of your app, then describe the change you want. To select more than one element, hold Command (Mac) or Control (Windows) while you click
-              - **Edit text inline:** Fix a typo or change wording directly on the page, no prompt needed and it costs no credits
+              - **Edit text inline:** Fix a typo or change wording directly on the page, no prompt needed. Your account includes 100 free inline edits in total, after which they cost credits like any other change
               - **Draw annotation:** Sketch on the preview to show a layout change that's hard to put into words
               - **Add a comment:** Pin a note to an element for yourself or a teammate
 
@@ -716,11 +719,12 @@ course:
       isFree: false
       skills:
         - Plan Mode
+        - Chat Mode
         - Project Knowledge
         - API Keys
         - Security Issues
-      description: You'll learn how to think through complex problems with Lovable as your partner, give it lasting context about your project, connect to external services safely, handle security warnings confidently, and even ask Lovable to test your app for you.
-      completionTime: '7:00'
+      description: You'll learn how to think through complex problems with Lovable as your partner, ask it questions for free, give it lasting context about your project, connect to external services safely, handle security warnings confidently, and even ask Lovable to test your app for you.
+      completionTime: '8:00'
       steps:
         - type: text
           title: More powerful features
@@ -742,11 +746,24 @@ course:
 
               You can use it to ask questions, debug issues, and get a clear plan. When you’re happy with the plan, you can switch back to **Build** mode from the same menu to build it.
 
-              To enter Plan mode, click the **Build** button below the input field and select **Plan** from the dropdown.
+              To enter Plan mode, click the **Build** button below the input field and select **Plan** from the dropdown. That dropdown has a third option, **Chat**, which is the next step.
 
-              *Each Plan mode prompt uses 1 credit regardless the complexity of the question.*
+              *A Plan mode prompt costs 1 credit, plus whatever Lovable spends if it goes off and reads through your project to answer you.*
             imageUrl: /courses/lovable-intro-00/plan-mode.webp
           subtitle: Discuss before writing code
+        - type: text
+          title: Chat mode
+          content:
+            body: |-
+              The third option in that dropdown is **Chat**.
+
+              Chat mode talks about the app you have open without touching its code and without writing a plan. Use it when you want to understand something rather than change it: *what would break if I removed this page?*
+
+              The reason to know about it: **chatting is free**, within a daily allowance. Plan mode costs a credit because it produces a plan you can build from. Chat mode is for the questions you'd otherwise be nervous to spend a credit on, so ask as many as you like.
+
+              When your question turns out to need a change after all, Lovable shows a **Start building** card and you carry on from there.
+            imageUrl: /courses/lovable-intro-00/chat-mode.webp
+          subtitle: Ask questions without spending credits
         - type: text
           title: "Don't over-plan"
           content:
@@ -778,6 +795,8 @@ course:
 
               **Never put API keys in your prompts.** Lovable has a dedicated secrets panel for storing them safely. When you add a feature that needs an API key, Lovable will directly ask you for it in a secure **Add Secret** panel.
 
+              If you do paste a key into the chat by accident, Lovable spots it and swaps the value for a label like `SENDGRID_API_KEY` before your message is sent, then saves the real key as a secret. That's a safety net, not a reason to stop being careful.
+
               *If you want to know more about using API keys and connecting to other services, check out our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) course.*
             imageUrl: /courses/lovable-intro-00/api-key-panel.webp
           subtitle: Connect to other services
@@ -787,7 +806,9 @@ course:
             body: |-
               Sometimes Lovable will flag security issues before you publish. Don't panic. This is normal and helpful. Developers deal with security considerations all the time.
 
-              Check the security errors and warnings in the **Security** panel, and click "Try to fix all". Usually Lovable takes care of all issues, like making sure certain data isn't publicly accessible.
+              Check the security errors and warnings in the **Security** panel, and click **Try to fix all**. Usually Lovable takes care of all issues, like making sure certain data isn't publicly accessible.
+
+              These come out of the same 10 free fixes as the **Try to fix** button, so if you've been using it all afternoon, a round may cost credits. Running the scans is always free.
 
               It can happen that new warnings appear after fixing others. As long as you don't have any security errors, you are good to publish your app.
 
@@ -810,7 +831,7 @@ course:
 
               **Best practice:** Verify the test steps actually make sense for what you want to check. You can even specify exact actions for Lovable to perform.
 
-              **Note:** Browser testing cannot test everything in your app, for example it cannot automatically log in with Google authentication. It’s best for straightforward interactions. So you should still manually test important features yourself.
+              **Note:** Browser testing can sign in to your app and check the pages behind the login, as long as your sign-in runs on Lovable Cloud. If your app has several users, it asks you which one to use first. It still can't test everything, so keep testing the important features yourself.
             imageUrl: /courses/lovable-intro-00/browser-testing.webp
           subtitle: Ask Lovable to test your app
         - type: quiz-question
@@ -846,8 +867,8 @@ course:
         - type: challenge-end
           title: "You've unlocked advanced features! ⚡"
           content:
-            nextModule: "**Next challenge:** Time to share your creation with the world. Let's publish your app. You'll learn how to set your favicon, meta tags, and custom URL, then publish your app, and techniques to gather feedback."
-            description: You know how to use plan mode, project knowledge, API keys, and handle security errors and warnings.
+            nextModule: "**Next challenge:** Time to share your creation with the world. Let's publish your app. You'll learn how to check your favicon, meta tags, and custom URL, then publish your app, and techniques to gather feedback."
+            description: You know how to use plan mode, chat mode, project knowledge, API keys, and handle security errors and warnings.
             subDescription: |-
               You can now plan and build apps in Lovable confidently and safely by combining these core skills.
 
@@ -860,7 +881,7 @@ course:
         - Favicon
         - Share Image
         - Gathering Feedback
-      description: How to make your app more professional before you share it with the world by setting your favicon, meta tags, and custom URL. You'll also learn techniques to gather feedback and improve your app.
+      description: How to make your app more professional before you share it with the world by checking your favicon, meta tags, and custom URL. You'll also learn techniques to gather feedback and improve your app.
       completionTime: '6:00'
       steps:
         - type: text
@@ -875,53 +896,51 @@ course:
           title: Before you publish
           content:
             body: |-
-              Take a few minutes to polish the details that make your app feel like a real product:
+              Lovable writes these four details for you while it builds your app, so you're not starting from a blank form. Your job is to read what it came up with and decide whether it's right:
 
-              - **Favicon:** The small icon that appears in browser tabs. Upload something simple, like your logo or a clear initial. You can create one for free with tools like [realfavicongenerator.net](https://realfavicongenerator.net/).
+              - **Favicon:** The small icon that appears in browser tabs. The one Lovable generates is fine to start with, but if you'd rather use your own logo or a clear initial, you can make one for free with a tool like [realfavicongenerator.net](https://realfavicongenerator.net/).
               - **Title:** The name that appears in browser tabs and link previews. Keep it clear and recognisable.
               - **Description:** A short summary that appears under the title in link previews. Make it inviting.
-              - **Social image:** The image that shows in social media previews when someone shares your app. A 1200x630 pixel image works best.
+              - **Social image:** The image that shows in social media previews when someone shares your app. If you make your own rather than using Lovable's, 1200x630 pixels works best.
 
-              The favicon, title, description, and social image together are called **meta tags**.
+              Together these are called **meta tags**. They're the first impression anyone gets of your app, before they've even opened it.
             imageUrl: /courses/lovable-intro-00/social-media-preview.webp
           subtitle: Polish the details
         - type: text
-          title: Set up your meta tags
+          title: Change your meta tags
           content:
             body: |-
-              Once you have your favicon, title, description, and social image ready, here's how to add them in Lovable:
+              The quickest way to change any of them is to **ask Lovable in the chat**:
 
-              1. Click the **Publish** button in the top-right corner of Lovable
-              2. Follow the guided flow until you reach the **Add info to help people find your site** step
-              3. In the **Icon & title** section, upload your favicon and add your title
-              4. Add your **Description** in the next field
-              5. Upload your **Social image**, or click **Generate** to have Lovable create one for you
+              ```
+              Change my site title to "Book Club Organiser", write a description about collecting and voting on book suggestions, and generate a new social image.
+              ```
 
-              You can come back and update any of these later through **Edit settings** in the Publish panel. Don't worry about getting everything perfect on the first try.
+              You can also see and edit them in the **Publish** panel: open the **⋮** menu and choose **Social & search appearance**, or click the favicon next to your website URL. That's where you upload your own favicon or social image, if you made one. Once your app is live, there's an **Edit** link next to your site's title on the "Your website is live" screen.
+
+              Don't worry about getting everything right on the first try. You can change all of it later, as many times as you like.
             imageUrl: /courses/lovable-intro-00/publish-your-app-menu.webp
-          subtitle: Where to add them in Lovable
+          subtitle: Ask Lovable, or use the Publish panel
         - type: text
           title: Choose your URL
           content:
             body: |-
               By default, Lovable gives your app a URL like `book-club-picks.lovable.app`. That works, but you can customise it to make it shorter and easier to remember.
 
-              **To change your URL:**
-              1. Click the **Publish** button in the top-right corner
-              2. In the **Your website URL** section, click the pencil icon
-              3. Enter something short and descriptive (e.g., `bookcluborganiser.lovable.app`)
-              4. Save by clicking the checkmark icon
+              **Before your first publish:** click the **Publish** button in the top-right corner and edit the **Website URL** field right there, then publish.
+
+              **After you've published:** open your project settings (press **Cmd + .** on a Mac, **Ctrl + .** on Windows, or use the **More** tab in the toolbar), go to **URL subdomain**, change it to something short and descriptive, and click **Update URL subdomain**.
 
               A clean URL makes your app feel more professional, and easier for people to remember and type.
 
-              **Note:** Your URL will end with `.lovable.app`. If you want a custom domain (like `bookcluborganiser.com`) you'll need a paid Lovable plan, and you'll need to buy the domain separately before connecting it in Lovable.
+              **Note:** Your URL will end with `.lovable.app`. A custom domain (like `bookcluborganiser.com`) needs a paid Lovable plan. You can buy one through Lovable or connect a domain you already own, and you can do either by asking Lovable in the chat.
             imageUrl: /courses/lovable-intro-00/published-url.webp
           subtitle: Make it memorable
         - type: text
           title: The publish button
           content:
             body: |-
-              When you're ready, click **Publish** in the Publish panel. It's now on the internet!
+              When you're ready, open the **Publish** panel. It's a single view showing three things: your website URL, who can see the site, and the result of a security scan. Check those, click **Publish**, and it's on the internet!
 
               Here's something reassuring: **nobody will find your app on the internet**. So don't worry if it's not perfect yet. It takes digital marketing work to get discovered.
 
@@ -992,7 +1011,7 @@ course:
 
               ✓ **Build in small steps**, testing each feature before adding the next
 
-              ✓ **Use Lovable's interface** confidently: preview, the preview toolbar, bookmarks, reverting, plan mode, project knowledge, adding API keys
+              ✓ **Use Lovable's interface** confidently: preview, the preview toolbar, bookmarks, reverting, plan mode, chat mode, project knowledge, adding API keys
 
               ✓ **Handle security warnings** calmly, knowing they're normal and fixable
 

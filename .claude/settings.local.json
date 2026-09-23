@@ -303,7 +303,8 @@
       "Bash(mkdir -p email-cards-seo-indexing/uploads)",
       "Bash(cp ../2026-09-pm-technical-fluency-validation/email-cards-api-webhook/uploads/little-parrot-wave.png email-cards-seo-indexing/uploads/)",
       "Read(//Users/eggdice/Projects/little-parrot-awakens/**)",
-      "Read(//Users/eggdice/Projects/**)"
+      "Read(//Users/eggdice/Projects/**)",
+      "Bash(git diff *)"
     ],
     "deny": [],
     "ask": []
