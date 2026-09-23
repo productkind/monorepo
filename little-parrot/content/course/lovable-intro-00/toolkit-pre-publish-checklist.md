@@ -8,15 +8,17 @@ Go through this list before you publish your app for the first time. It takes fi
 
 ### Branding and first impressions
 
-- [ ] **Favicon set.** Upload a simple icon (your logo works well) so your app has its own icon in browser tabs.
-- [ ] **Title written.** Write a clear, short title that tells people what your app does (this appears in browser tabs and search results).
-- [ ] **Description written.** Write 1-2 sentences about what your app does and who it's for (this appears when someone shares your link).
-- [ ] **Share image uploaded.** Add an image that shows up when your link is shared on social media or in messaging apps.
-- [ ] **Published URL set.** Choose a short, memorable URL instead of the default one (e.g. `book-club-picks.lovable.app` instead of a random string).
+Lovable writes your title, description, icon and social image while it builds, so these are checks rather than blank forms. To change any of them, ask Lovable in the chat, or open the **⋮** menu in the Publish panel and choose **Social & search appearance**.
+
+- [ ] **Favicon checked.** Does your app have its own icon in browser tabs, rather than a generic one?
+- [ ] **Title checked.** Is it clear and short, and does it tell people what your app does? (It appears in browser tabs and search results.)
+- [ ] **Description checked.** Is it 1-2 sentences about what your app does and who it's for? (It appears when someone shares your link.)
+- [ ] **Social image checked.** Is there an image that shows up when your link is shared on social media or in messaging apps?
+- [ ] **Published URL set.** Choose a short, memorable URL instead of the default one (e.g. `book-club-picks.lovable.app` instead of a random string). Before your first publish you can edit it in the Publish panel; afterwards it's in **Project settings → URL subdomain**.
 
 ### Security and stability
 
-- [ ] **Security warnings checked.** Open the Security panel and resolve any errors. Click "Try to fix all" first. Warnings are okay, errors need fixing.
+- [ ] **Security warnings checked.** Open the Security panel and resolve any errors. Click **Try to fix all** first. Warnings are okay, errors need fixing. Running the scan is free; the fixes come out of your 10 free fixes, and cost credits after that.
 - [ ] **Tested on mobile.** Use the device preview to check your app looks good on a phone screen.
 - [ ] **Tested on desktop.** Check the full-screen preview to make sure nothing looks broken on a larger screen.
 - [ ] **Key features tested.** Walk through the main user flow yourself. Does everything work as expected?
