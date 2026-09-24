@@ -25,7 +25,7 @@ Clarity through care. Writing exists to reduce confusion and enable action, not 
 
 This is the structure my Substack articles actually use. Apply it to LinkedIn posts and Notes too.
 
-**Open from something real, never from hype.** The opening comes from something that happened, a frustration, or an honest admission ("When I started, I worked in ChatGPT", "I kept running into the same problem"), never an aphorism, a curiosity gap, or a punchy hype line. (How each channel opens – long-form on a real moment, a caption on a search-phrase hook – is set by the channel skills.)
+**Open from something real, and make the reader want the next line.** The opening comes from something that happened, a frustration, an honest admission, a result or a specific number ("When I started, I worked in ChatGPT", "I kept running into the same problem", "We posted 76 times on Instagram... and got to 33"). A curiosity gap is welcome in any of my writing (LinkedIn posts, Substack articles and Notes, founder comments) as long as it serves the story and is useful to the reader: it's specific enough to guess at, built from true details, and the piece resolves it. What stays out is hype: empty teasers ("you won't believe what happened"), withholding the point to sell something, aphorisms and punchy hype lines. (The detailed hook rules for each channel live in the channel skills: linkedin-post for posts and Notes, captions for captions and founder comments; the storytelling playbook in `productkind/marketing/storytelling-playbook/README.md` has the full formula bank.)
 
 **Write plainly and conversationally.** Real paragraphs, medium-length sentences, the way I'd explain something to a colleague. No theatrical short declaratives for effect ("The expertise is ours."), and no metaphors dropped in as standalone lines ("I was the courier."). If I use an analogy, it goes inside a sentence doing real work, e.g. "tell it to build an umbrella in detail, instead of asking it to solve the problem of our user getting wet in the rain."
 
@@ -57,7 +57,7 @@ These come from a close read of my 20 published Substack articles. Draft with th
 - **Spaced en dash asides**: "someone – usually a man – with all the right answers".
 - **Honesty markers**: "To be honest,", "But to be perfectly honest,", "It's weird to admit, but", "Call me idealistic, but".
 - **Self-Q&A beats**: "Did I enjoy coaching people? Yes; the nice ones."
-- **Mid-piece rhetorical questions as pivots**: "What happened?", "So how do you do all this?" These are a core transition device for me. (As opening hooks they stay banned.)
+- **Mid-piece rhetorical questions as pivots**: "What happened?", "So how do you do all this?" These are a core transition device for me. As an opening, a question works when it's one the reader answers about their own life ("When was the last time you had a great day at work?"); a yes/no question or one with an obvious answer doesn't.
 - **Reconstructed dialogue.** Real scenes with quoted lines and a recurring cast: "Annie, why did you score it 3?", "the Workshop Guy", "I said out loud, to no one but my sofa".
 - **Reassurance and fellow-feeling**: "It's totally okay to handle it once several users mention it", "I've been there."
 - **Self-labelling confessions**: "I'm the type of person who loves to prepare for things", "I'm impatient".
