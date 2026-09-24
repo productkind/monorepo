@@ -50,4 +50,4 @@ We're currently validating a new Little Parrot learning path for women building 
 
 If that sounds useful, you can take a look at what we're planning and join the waitlist:
 
-https://littleparrot.app/guides/building-apps-with-ai?utm_source=linkedin&utm_medium=k-t-pk&utm_campaign=tech-pm-26&utm_content=webhook-vs-api
+https://littleparrot.app/guides/building-apps-with-ai?utm_source=linkedin&utm_medium=k-t-pk&utm_campaign=tech-pm-26&utm_content=seo-structured-data
