@@ -31,7 +31,8 @@ Body design can't save an email no one opens. Three things drive the open, none 
 ### Subject line
 
 - **30 to 50 characters, around 6 to 7 words.** Gmail's mobile app shows only ~30 characters, so put the point in the first ~30 and let the rest be a bonus.
-- **Clarity over curiosity.** This audience is busy and wary of being tricked. Say what's inside plainly. No curiosity-gap teasers, no clickbait.
+- **A curiosity gap is welcome when it serves the story and is useful to the reader.** It has to be specific enough to guess at, built from true details, and resolved in the email body, e.g. "The shortest course took us the longest" for an update email. This audience is busy and wary of being tricked, so what stays out is clickbait: empty teasers ("You won't believe this"), a promise the email doesn't deliver, or hiding what the email is about. The full hook formula bank is in `productkind/marketing/storytelling-playbook/README.md` (section 3).
+- **Transactional emails stay plain.** For welcome, payment, cancellation and certificate emails the reader needs to recognise what the email is at a glance ("Your certificate is ready"), so say what's inside directly.
 - **Personalise with `{{first_name}}` only where it feels natural** (welcome, certificate, a personal nudge), not bolted onto every promo.
 - **Avoid spam triggers:** no ALL CAPS, no `!!!` / `$$$`, no "FREE", "act now", "guaranteed".
 - **Emoji: default to none.** Evidence on opens is contradictory, and emoji measurably raise unsubscribe and spam-complaint rates, which hurt deliverability for every future send. At most one purposeful emoji, never an all-emoji line. (The 💛 lives in the sign-off, not the subject.)
