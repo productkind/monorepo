@@ -52,7 +52,7 @@ Take one campaign brief and produce per-channel drafts, each shaped to its chann
 
 - **LinkedIn:** 90 to 200 words, no hashtags, end on a reframe or question. Two drafts: personal (Kinga, first person) and company (productkind, "we").
 - **Substack:** Notes are reflective, less salesy, more thinking.
-- **Instagram:** company account, "we" voice, warm. The visual carries the post; the caption is a short hook plus context. Links aren't clickable in captions, so end on "link in bio" (or note a Story link sticker). Use a few relevant hashtags.
+- **Instagram:** company account, "we" voice, warm. The visual carries the post; the caption is a short hook plus context. Links aren't clickable in captions, so end on the comment-to-receive ask: "Comment on this and we'll send you the link." Any comment counts, never a "comment [WORD]" keyword, and we DM the link by hand (or note a Story link sticker). Use a few relevant hashtags.
 - **Discord:** value-first, friendly, conversational, clear paragraphs.
 - **Slack communities:** one shared draft, short and value-first. The user posts it into whichever channels allow a link, so no per-community variants.
 - **Geek Girls email:** plain text, no HTML template. Subject line plus a short, warm body written like a personal note from a member, opening from Kinga's own experience (see the member-channel rule above). Kinga sends it by hand to the list.

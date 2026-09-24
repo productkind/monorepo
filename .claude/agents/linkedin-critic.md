@@ -54,6 +54,7 @@ Judge against the linkedin-post skill's **The First Line**, **Confirm the Hook**
 - **Specific gap.** Does line 1 give the reader enough detail to start guessing (Kallaway)? A vague teaser fails even when it's curious.
 - **Line 2 confirms line 1** and sets the stakes (who, what's at risk, why now). If line 2 drifts into background, the hook reads as bait.
 - **The loop.** For story posts: stakes, a big question, a turn or head fake, and a re-hook at paragraph breaks. For teaching posts: the cost of not knowing, then the steps. Name the paragraph break where a reader is most likely to stop, and prescribe a re-hook there.
+- **Format followed.** If the writer named a storytelling format, read its beat table in `productkind/marketing/storytelling-playbook/storytelling-formats.md` and check the beats are there with real material. A missing beat (often the stakes, the failed attempt or the turn) is a fail. If the draft deliberately found a better shape, judge the loop instead of forcing the format.
 - **Payoff delivered.** The takeaway is in the post, not held back for a link (no value-edging). The loop the hook opened is resolved.
 - **One ask, matched to the job** the writer named (reach or community: a question about the reader's own experience; conversion: one link after the value). Engagement bait or a summary ending fails.
 

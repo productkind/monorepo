@@ -92,7 +92,7 @@ Confirm, briefly, that the draft followed the captions skill. Flag only a clear 
 
 - First line (or line 2) carries the search phrase a learner would actually type. (Hook strength is judged in Tier 3, not here.)
 - A women-specific phrase is worked into the hook or body where it reads naturally (not forced into every line).
-- The CTA is payoff-anchored (a save-ask, share-ask, or payoff-named follow/subscribe), never engagement bait ("comment YES", "tag a friend", giveaway mechanics).
+- The CTA is payoff-anchored (a save-ask, share-ask, or payoff-named follow/subscribe), never engagement bait ("comment YES", "tag a friend", giveaway mechanics). A conversion post on TikTok, Instagram or YouTube Shorts uses comment-to-receive ("Comment on this and we'll send you..."), which the captions skill allows: never flag it as bait. Flag "link in bio", "link in the comments" and any "comment [WORD]" keyword prompt on those platforms.
 - Hashtags are niche and specific, most of them women-specific, per the platform's rule in the captions skill.
 - Alt text is present where the skill requires it (Instagram/LinkedIn).
 
