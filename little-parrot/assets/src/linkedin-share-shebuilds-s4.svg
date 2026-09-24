@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1080"
+   height="1350"
+   viewBox="0 0 1080 1350"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   sodipodi:docname="linkedin-share-shebuilds-s4.svg"
+   inkscape:export-filename="/Users/eggdice/Projects/little-parrot-awakens/public/linkedin-share-s4.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="0.31870494"
+     inkscape:cx="149.04068"
+     inkscape:cy="558.51033"
+     inkscape:window-width="1728"
+     inkscape:window-height="1057"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:export-bgcolor="#ffffffff" />
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient220-8"
+       inkscape:collect="always"
+       inkscape:label="LP">
+      <stop
+         style="stop-color:#eb9600;stop-opacity:1;"
+         offset="0.05045871"
+         id="stop215-1" />
+      <stop
+         style="stop-color:#f1c000;stop-opacity:1;"
+         offset="0.29931194"
+         id="stop216-6" />
+      <stop
+         style="stop-color:#fbfb00;stop-opacity:1;"
+         offset="0.50286698"
+         id="stop217-1" />
+      <stop
+         style="stop-color:#aeff37;stop-opacity:1;"
+         offset="0.70326835"
+         id="stop218-5" />
+      <stop
+         style="stop-color:#00ed70;stop-opacity:1;"
+         offset="0.94954127"
+         id="stop219-7" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient220-8"
+       id="linearGradient2"
+       x1="-249.25923"
+       y1="-79.513535"
+       x2="788.22607"
+       y2="427.87061"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.38461538,267.52792,592.8508)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient220-8"
+       id="linearGradient1"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="rotate(-26.786425,1265.0188,98.194608)"
+       x1="-8.5435457"
+       y1="1247.0193"
+       x2="109.02718"
+       y2="1549.4371" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient220-8"
+       id="linearGradient2-9"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-4.1301822,0.46327417,0.46327417,4.1301822,3857.1061,-1024.205)"
+       x1="825.8642"
+       y1="559.99164"
+       x2="862.62091"
+       y2="627.89258" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient220-8"
+       id="linearGradient3"
+       gradientUnits="userSpaceOnUse"
+       x1="-8.5435457"
+       y1="1247.0193"
+       x2="109.02718"
+       y2="1549.4371"
+       gradientTransform="matrix(-0.99999996,0,0,0.99999996,694.93988,423.67263)" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g48-3"
+       inkscape:label="leg-front"
+       transform="translate(320.85945,-39.678873)">
+      <g
+         id="g5"
+         transform="matrix(-1.2004045,0.51453288,0.51453288,1.2004045,189.63438,-1240.2282)">
+        <g
+           id="g43-2"
+           inkscape:label="leg-back">
+          <path
+             style="fill:#080809;fill-opacity:1;stroke:#080809;stroke-width:12;stroke-linecap:butt;stroke-dasharray:none;stroke-opacity:1"
+             d="m 414.95621,1983.1441 v 72.282"
+             id="path42-7" />
+          <path
+             style="fill:#080809;fill-opacity:1;stroke:#080809;stroke-width:12;stroke-linecap:butt;stroke-dasharray:none;stroke-opacity:1"
+             d="m 388.32601,2049.7196 25.6141,-6.8633 27.016,7.239"
+             id="path43-3" />
+        </g>
+        <path
+           style="opacity:0.984509;fill:url(#linearGradient1);fill-opacity:1;stroke:#000000;stroke-width:12;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+           d="m 891.37032,1840.5246 c -81.00039,60.6162 -136.6699,48.3459 -168.11017,13.9401 -28.20385,-30.8641 -20.97429,-73.6217 20.80045,-61.1088 l 141.3509,20.4364 c 30.51111,4.4904 19.42185,17.4862 5.95882,26.7323 z"
+           id="path44-7"
+           inkscape:label="wing-right"
+           sodipodi:nodetypes="csccc"
+           transform="translate(-311.44635,20.852682)" />
+        <path
+           style="display:inline;fill:url(#linearGradient2-9);stroke:#080809;stroke-width:12;stroke-dasharray:none;stroke-opacity:1"
+           d="m 748.33271,1734.5344 36.8851,-16.6352 -35.51545,-28.3516 c -0.54342,-25.4981 -13.11132,-45.5317 -45.10483,-40.214 -12.46797,2.0724 -29.44411,15.8753 -30.79374,44.0221 -1.36269,28.419 5.03288,100.8152 -34.01264,136.1195 -42.64276,38.5568 -92.7036,84.024 -124.15947,89.2563 57.04814,53.3978 183.08166,75.6922 233.57094,44.3358 42.76717,-26.5606 14.77627,-164.1805 -0.86991,-228.5329 -10.11179,4.2329 -22.83225,2.2119 -32.89579,-2.587 10.0643,4.7962 22.78084,6.8255 32.89579,2.587 z"
+           id="path45-9"
+           sodipodi:nodetypes="cccssscsccc"
+           inkscape:label="parrot-body"
+           transform="translate(-311.44635,20.852682)" />
+        <path
+           id="path36-6-8-9"
+           style="display:inline;fill:#080809;stroke:#000000;stroke-width:4;stroke-dasharray:none;stroke-opacity:1"
+           inkscape:label="parrot-eye"
+           d="m 731.13939,1685.6469 c -2.59779,-3.2114 -3.67094,-5.4517 -8.92841,-6.0414 -5.25748,-0.5897 -6.50951,1.2183 -10.11056,3.9058 0.5897,-5.2574 5.32979,-9.0414 10.58727,-8.4517 5.25747,0.5897 9.04143,5.3299 8.4517,10.5873 z"
+           sodipodi:nodetypes="cscsc"
+           transform="translate(-311.44635,20.852682)" />
+        <path
+           style="opacity:0.984509;fill:url(#linearGradient3);fill-opacity:1;stroke:#000000;stroke-width:12;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+           d="m 514.81638,1901.3045 c 123.69304,32.7465 176.31671,-6.1012 190.2199,-55.7803 11.26789,-40.2627 -14.45518,-75.1739 -46.10806,-45.1773 z"
+           id="path46-2"
+           inkscape:label="wing-left"
+           sodipodi:nodetypes="cscc"
+           transform="translate(-311.44635,20.852682)" />
+        <path
+           style="fill:#080809;fill-opacity:1;stroke:#080809;stroke-width:12;stroke-linecap:butt;stroke-dasharray:none;stroke-opacity:1"
+           d="m 355.8219,1985.6347 v 72.282"
+           id="path47-9" />
+        <path
+           style="fill:#080809;fill-opacity:1;stroke:#080809;stroke-width:12;stroke-linecap:butt;stroke-dasharray:none;stroke-opacity:1"
+           d="m 329.1917,2052.2102 25.6141,-6.8633 27.016,7.239"
+           id="path48-9" />
+      </g>
+    </g>
+    <rect
+       style="fill:url(#linearGradient2);stroke:#080809;stroke-width:50;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1"
+       width="1030"
+       height="199.96985"
+       x="25"
+       y="560.86908" />
+    <g
+       id="g4"
+       transform="translate(1.8363245,220.03358)">
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:72px;line-height:1.2;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold';text-align:start;text-decoration-color:#000000;letter-spacing:0.14px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;inline-size:969.784;display:inline;fill:#080809;fill-opacity:1;stroke:none;stroke-width:2;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         x="21.77317"
+         y="294.79181"
+         id="text2"
+         transform="translate(78.059204,169.02355)"><tspan
+           x="21.77317"
+           y="294.79181"
+           id="tspan7"><tspan
+             style="stroke:#000000"
+             id="tspan4">Let's change that!</tspan></tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:64px;line-height:1.3;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold';text-align:start;text-decoration-color:#000000;letter-spacing:0.14px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;inline-size:918.706;display:inline;fill:#080809;fill-opacity:1;stroke:none;stroke-width:50;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       x="21.77317"
+       y="294.79181"
+       id="text7"
+       transform="translate(77.601562,427.17728)"><tspan
+         x="21.77317"
+         y="294.79181"
+         id="tspan9"><tspan
+           style="font-weight:normal;font-family:inter;-inkscape-font-specification:inter"
+           id="tspan8">
+</tspan></tspan><tspan
+         x="21.77317"
+         y="380.83339"
+         id="tspan11"><tspan
+           style="font-weight:normal;font-family:inter;-inkscape-font-specification:inter"
+           id="tspan10">
+</tspan></tspan><tspan
+         x="21.77317"
+         y="466.87498"
+         id="tspan13"><tspan
+           style="font-weight:900;font-family:inter;-inkscape-font-specification:'inter Heavy'"
+           id="tspan12">Build Your First App with </tspan></tspan><tspan
+         x="21.77317"
+         y="552.91658"
+         id="tspan16"><tspan
+           style="font-weight:900;font-family:inter;-inkscape-font-specification:'inter Heavy'"
+           id="tspan14">Lovable </tspan><tspan
+           style="font-weight:normal;font-family:inter;-inkscape-font-specification:inter"
+           id="tspan15">course
+</tspan></tspan><tspan
+         x="21.77317"
+         y="638.95814"
+         id="tspan18"><tspan
+           style="font-weight:normal;font-family:inter;-inkscape-font-specification:inter"
+           id="tspan17">Free until 18 October</tspan></tspan></text>
+    <rect
+       style="fill:none;stroke:#080809;stroke-width:50;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4"
+       width="1030"
+       height="1300"
+       x="25"
+       y="25" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:64px;line-height:1.2;font-family:inter;-inkscape-font-specification:'inter Heavy';text-align:end;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:end;fill:none;stroke:#080809;stroke-width:50;stroke-dasharray:none;stroke-opacity:1"
+       x="721.43951"
+       y="1242.051"
+       id="text5"><tspan
+         sodipodi:role="line"
+         id="tspan5"
+         x="721.43951"
+         y="1242.051"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:64px;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold';fill:#080809;fill-opacity:1;stroke:none">LittleParrot.app</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:64px;line-height:1.3;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold';text-align:start;text-decoration-color:#000000;letter-spacing:0.14px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;inline-size:902.027;display:inline;fill:#080809;fill-opacity:1;stroke:none;stroke-width:50;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       x="21.77317"
+       y="294.79181"
+       id="text10"
+       transform="translate(76.226562,-233.52089)"><tspan
+         x="21.77317"
+         y="294.79181"
+         id="tspan20"><tspan
+           style="font-weight:normal;font-family:inter;-inkscape-font-specification:inter"
+           id="tspan19">
+</tspan></tspan><tspan
+         x="21.77317"
+         y="380.83339"
+         id="tspan26"><tspan
+           style="font-weight:normal;font-family:inter;-inkscape-font-specification:inter"
+           id="tspan21">In </tspan><tspan
+           style="font-family:inter;-inkscape-font-specification:'inter Bold'"
+           id="tspan22">2026</tspan><tspan
+           style="font-weight:normal;font-family:inter;-inkscape-font-specification:inter"
+           id="tspan23">, </tspan><tspan
+           style="font-family:inter;-inkscape-font-specification:'inter Bold'"
+           id="tspan24">80%</tspan><tspan
+           style="font-weight:normal;font-family:inter;-inkscape-font-specification:inter"
+           id="tspan25"> of people </tspan></tspan><tspan
+         x="21.77317"
+         y="466.87498"
+         id="tspan28"><tspan
+           style="font-weight:normal;font-family:inter;-inkscape-font-specification:inter"
+           id="tspan27">building with Lovable come </tspan></tspan><tspan
+         x="21.77317"
+         y="552.91658"
+         id="tspan30"><tspan
+           style="font-weight:normal;font-family:inter;-inkscape-font-specification:inter"
+           id="tspan29">from non-technical </tspan></tspan><tspan
+         x="21.77317"
+         y="638.95814"
+         id="tspan36"><tspan
+           style="font-weight:normal;font-family:inter;-inkscape-font-specification:inter"
+           id="tspan31">backgrounds. But only </tspan><tspan
+           style="font-family:inter;-inkscape-font-specification:'inter Bold'"
+           id="tspan34">13%</tspan><tspan
+           style="font-weight:normal;font-family:inter;-inkscape-font-specification:inter"
+           id="tspan35"> are </tspan></tspan><tspan
+         x="21.77317"
+         y="724.99971"
+         id="tspan38"><tspan
+           style="font-weight:normal;font-family:inter;-inkscape-font-specification:inter"
+           id="tspan37">women.</tspan></tspan></text>
+  </g>
+</svg>
