@@ -20,7 +20,7 @@ The most natural-sounding source material is Kinga's own rough wording, so colle
 A drafted post is never returned to the user until an independent critic has gated it. Self-review misses what fresh eyes catch, so the writer and the judge must be different.
 
 1. **Draft** the post following this skill, the personal-tone-of-voice skill, and the authentic doc. Write at least 5 candidate first lines (Galloway recommends 10) and pick the strongest before drafting the rest.
-2. **Critique.** Spawn the `linkedin-critic` agent (Agent tool) and pass it the full draft text, saying whether it is a LinkedIn post or a Substack Note, and the post's job (see "Decide the post's job"). Do not show the draft to the user yet.
+2. **Critique.** Spawn the `linkedin-critic` agent (Agent tool) and pass it the full draft text, saying whether it is a LinkedIn post or a Substack Note, the post's job (see "Decide the post's job") and the storytelling format used. Do not show the draft to the user yet.
 3. **Read the verdict:**
    - **PASS** → show the user the final post, with a short note on what the critic checked, plus the two runner-up first lines so Kinga can swap if she prefers.
    - **NEEDS REVISION** → apply the critic's revision brief, then re-run the critic on the new draft. Repeat, up to **3 rounds**.
@@ -56,6 +56,12 @@ Before writing, pick one job (Ralston). It decides the ending and how the post i
 - **Conversion:** a waitlist, a course, an article. Judged on sign-ups or clicks by UTM, not impressions. Ending: one link.
 
 One job per post.
+
+## Choose a Storytelling Format
+
+Pick one format from `productkind/marketing/storytelling-playbook/storytelling-formats.md` (its **Choosing a format** table) and follow its beat table. That gives the post a proven skeleton before any wording. Our top posts already map onto these formats: the Idiodi post is a _lesson from others_, the price test a _personal update_, and "Above the actual parrots" a textbook _personal learning_ (proof first, then the non-obvious steps). The Substack post is a _personal learning_ that buried its proof in paragraph five. Kallaway's formats are all first person. Tell the critic which format you used.
+
+Personal formats need Kinga's real material for every beat. If a beat has none, ask her or pick another format; never invent it. Kinga often finds her point while writing, so the format is a skeleton to start from, not a cage: if her draft finds a better shape, keep it and say so.
 
 ## Every Post Must Earn Its Read
 
@@ -201,6 +207,7 @@ The default is Kallaway's loop, which the experts say works for "emails, tweets,
 
 Before handing the draft to the critic, verify:
 
+0. A **storytelling format** was chosen, and every beat is built on Kinga's real material.
 1. **Line 1** works on its own above "see more", and is a moment with a turn, a result, a contradiction, a specific number, a belief-then-evidence, the cost of not knowing, or a question about the reader's own life. It is not a topic intro, a tip promise, a general claim, a request or someone else's news.
 2. **The most interesting line of the post is at the top**, not in paragraph 2 or 5.
 3. **Line 2 confirms line 1** and sets the stakes.

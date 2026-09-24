@@ -14,6 +14,9 @@ It's built from seven expert sources recommended by Nicholas Mlakar (full transc
 - [research/00-synthesis.md](research/00-synthesis.md): all principles across sources, with who says what.
 - [research/01-diagnosis.md](research/01-diagnosis.md): our September videos and 20 LinkedIn posts checked against those principles.
 - `research/1-...md` to `research/7-...md`: per-source notes with timestamps.
+- [storytelling-formats.md](storytelling-formats.md): 15 story shapes (Kallaway's ten storytelling formats plus five teaching formats), each with a beat table mapped to Kallaway's loop.
+
+**Where it's applied:** the `video-script`, `linkedin-post` and `captions` skills and their critics (`video-script-critic`, `linkedin-critic`, `caption-critic`) in `.claude/`.
 
 **Source short names used throughout:**
 
@@ -398,7 +401,7 @@ These show how to apply the playbook. They follow the experts' techniques, not y
 
 **After:**
 
-> **Frame one (text):** "It works on my laptop. Why can't it launch?" **Frame one (visual):** a real screen with the prototype running, and a Slack message arriving from a stakeholder: "Looks great, when can we launch?" **0:00 (spoken):** "Your stakeholder just saw your AI prototype and asked when it launches." **0:03 (confirm):** "Here are the five things it skipped, so you can answer them." **Body:** each of the five (whose data it holds, who's allowed in, what happens under real load, who gets woken at 2am, who maintains it) as one short beat with a concrete example, and a re-hook between them ("And that's the easy one."). **Payoff, then ask:** "Save this for the next time someone asks. We're building a learning path that goes through each one; the waitlist is in the comments."
+> **Frame one (text):** "It works on my laptop. Why can't it launch?" **Frame one (visual):** a real screen with the prototype running, and a Slack message arriving from a stakeholder: "Looks great, when can we launch?" **0:00 (spoken):** "Your stakeholder just saw your AI prototype and asked when it launches." **0:03 (confirm):** "Here are the five things it skipped, so you can answer them." **Body:** each of the five (whose data it holds, who's allowed in, what happens under real load, who gets woken at 2am, who maintains it) as one short beat with a concrete example, and a re-hook between them ("And that's the easy one."). **Payoff, then ask:** "Save this for the next time someone asks. We're building a learning path that goes through each one. Comment on this video and we'll send you the waitlist link."
 
 What changed: the contradiction is now in frame one, the stakes arrive in the first sentence, and the video delivers the five answers instead of promising a course that will.
 

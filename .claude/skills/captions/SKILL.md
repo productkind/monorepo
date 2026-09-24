@@ -66,9 +66,12 @@ The critic judges language and hook strength; this skill remains the source of t
 - **Carry the value the content points at.** The steps, the prompt, the checklist, the one real takeaway. That is what earns saves and sends (Garcia: shares are the strongest distribution signal). Never make the caption a promise of value the viewer only gets after clicking.
 - **Name the audience in the keywords, not only the hashtags.** Search phrases and caption keywords are audience signals too, so work a women-specific phrase into the hook or caption body where it reads naturally ("AI tools for women starting a business", "for women who want to build their idea"). One natural mention does the categorisation work; don't force it into every line or let it break the spoken voice.
 - **CTA: payoff-anchored, never engagement bait.** Meta demotes comment/tag/like-bait from recommendations and LinkedIn won't promote posts that ask for reactions: no "comment YES", no "tag a friend", no giveaway mechanics. Save-asks and share-asks are safe and are what distribution rewards (saves and sends drive reach), so "save this for when you build yours" or a send-to-a-friend nudge does double duty with our share-ask acquisition. Follow-asks name the payoff ("follow for [specific promise]"), never a bare "follow for more".
+- **Conversion ask: comment-to-receive outside LinkedIn.** **Comment-to-receive** on TikTok, Instagram and YouTube Shorts: links aren't clickable in captions or comments there, and our TikTok has no bio link, so the ask is "Comment on this and we'll send you [the link / the checklist]." Any comment counts. Never a "comment [WORD]" keyword prompt: we have no automation, so we send every link by hand, by DM. On LinkedIn, the link goes in the post body. This is a deliberate choice (Kinga, 2026-09-24): a real offer in exchange for a comment is different from vote-bait like "comment YES", but keep it to posts whose job is conversion. Draft the DM reply too, so it's ready to paste.
 - **Hashtags are categorisation, not reach.** Niche and specific only, never generic (#instagood, #fyp), always placed last. **Most tags in every set are women-specific** (e.g. #womenintech #womenwhobuild #womenfounders #techforwomen): hashtags tell the algorithm who the content is for, and our audience is women. Topic/format tags (#nocode #learntobuild) fill the remaining one or two slots.
 
 ## Video hook review (video posts only)
+
+New video scripts are written with the **video-script** skill, which plans the hook, format and first 12 seconds. This review catches what an older or externally made video still needs.
 
 The caption can't rescue a video that loses people at second 1: our September videos lost most viewers at 0:01 to 0:02 whatever the visuals. So when the piece is a video, check the video's own hook while writing its captions, and report what you find to the user under **Video hook notes** in `captions.md`. This doesn't block the captions; it's advice for the edit, or for the next script.
 
@@ -92,7 +95,7 @@ For each miss, suggest a concrete fix built only from what's already in the vide
 - TikTok search indexes voiceovers and on-screen text as well as captions, so pick the search phrase that is actually spoken or shown in the video and put that same phrase in the caption.
 - 3-5 hashtags: 1 broad women-in-tech community tag + 2-3 niche, most of them women-specific.
 - A genuine question in the caption invites comments; use one when it is natural, never as bait.
-- "Follow for more [topic] tips" and "part 2 tomorrow" CTAs are fine here (TikTok encourages them). Links go in the bio or a pinned comment, not the caption; if the post drives somewhere, draft the pinned comment too.
+- "Follow for more [topic] tips" and "part 2 tomorrow" CTAs are fine here (TikTok encourages them). The account has no bio link and links in captions or comments aren't clickable, so a post that drives somewhere uses the comment-to-receive ask (see the conversion-ask rule above).
 
 **Instagram** (Reels for video/B-roll)
 
@@ -108,7 +111,7 @@ For each miss, suggest a concrete fix built only from what's already in the vide
 - 2-3 hashtags, women-specific first (e.g. #womenintech #womenwhobuild) plus one topic tag, placed **right after the title on the same line**: hashtags live in the title field on a Short, so the deliverable is one title-plus-hashtags line that pastes into the title field in one go. **Title plus hashtags together must fit YouTube's 100-character title limit.** Stuffing makes YouTube ignore all of them. Skip #Shorts: YouTube detects Shorts by format (vertical, short length), so the tag adds nothing. This matters most on Shorts: its pull system currently shows our videos to a mostly male audience, and women-specific hashtags, title keywords, and spoken phrases (e.g. "for women who...") are how we tell it who the videos are for.
 - **Description: 150-500 focused characters** in natural sentences that extend what the video actually shows; the 5,000-character limit is not a target.
 - Subscribe asks are openly allowed and encouraged, payoff-named: "Subscribe for a new [topic] short every week" or "Subscribe, part 2 drops tomorrow". They belong verbally in the video's final seconds; echo in the description if natural.
-- Links go in a pinned comment, not the description; if the post drives somewhere, draft the pinned comment too.
+- Links in Shorts descriptions and comments aren't clickable, so a post that drives somewhere uses the comment-to-receive ask (see the conversion-ask rule above).
 
 **LinkedIn** (from the productkind page)
 
@@ -137,7 +140,7 @@ Write one `captions.md` into the piece's folder under `productkind/marketing/con
 - Header: brand, source material, destination link.
 - For video posts, a **Video hook notes** section (from the video hook review) near the top, so Kinga sees it before the captions.
 - One section per platform: the caption ready to paste (for YouTube Shorts, one title-plus-hashtags line for the title field, then the description), alt text (Instagram/LinkedIn), hashtags included in place, plus the pinned comment (TikTok and YouTube Shorts, if any), and the two founder comments labelled **Kinga** and **Thomas**.
-- A short posting checklist at the end: founder comments go up within the first hour; reply to every real commenter in that window too (it is the cheapest measured engagement lift on every platform); TikTok and YouTube Shorts links go in the pinned comment; on Instagram, invite Kinga as collaborator before publishing (never re-upload the same post on her account).
+- A short posting checklist at the end: founder comments go up within the first hour; reply to every real commenter in that window too (it is the cheapest measured engagement lift on every platform); for comment-to-receive posts, DM the link by hand to everyone who comments, the same day, using the drafted DM reply; on Instagram, invite Kinga as collaborator before publishing (never re-upload the same post on her account).
 
 **Never hard-wrap anything that gets pasted into a platform.** Every caption, description, alt text, pinned comment and founder comment is copied straight out of this file into the composer, so a line break in the file becomes a line break in the live post. Write each paragraph as **one single line**, however long it runs, and use a blank line only where the caption itself should break into a new paragraph. Same for a hashtag set: one line each, never split across two. Wrapping is fine in the surrounding notes, the treatment and the checklist, because nobody pastes those anywhere.
 
