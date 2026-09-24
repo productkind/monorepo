@@ -74,6 +74,6 @@ Consistently British (colour, prioritised, realised, sceptical, instalment, prac
 Her corpus uses several banned-list items. She ruled:
 
 - **"actually": allowed.** Her natural hedge.
-- **Mid-piece rhetorical questions: allowed.** Core transition device. (Still banned as opening hooks.)
+- **Mid-piece rhetorical questions: allowed.** Core transition device. (Update 2026-09-24: opening questions are also allowed when the reader answers them about their own life, and curiosity gaps are allowed in all her writing when they serve the story; see the personal-tone-of-voice skill.)
 - **"Not X, but Y": stays banned**, even though the corpus uses it. Deliberate correction of a habit she's leaving behind.
 - **"matters": stays banned**, same reason.
