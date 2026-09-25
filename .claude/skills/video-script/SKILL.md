@@ -214,7 +214,7 @@ The remaining 7+ candidates, one per line.
 Afterwards:
 
 - Captions come from the **captions** skill, once the video is made.
-- Narrated videos are built in `productkind/video-generator`, and their visuals come from the **video-gifs** or **stock-video** skills.
+- Narrated videos are built in `productkind/video-generator`. The **production-script** skill turns the approved script into the video definition and the visual brief for every beat; the visuals then come from motion clips, own footage, or the **video-gifs** and **stock-video** skills.
 - After posting, record the real numbers next to the prediction (Galloway: judge against your own expectation).
 
 ## Self-check (before the critic)

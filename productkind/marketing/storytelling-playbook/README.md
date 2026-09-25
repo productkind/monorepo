@@ -16,7 +16,7 @@ It's built from seven expert sources recommended by Nicholas Mlakar (full transc
 - `research/1-...md` to `research/7-...md`: per-source notes with timestamps.
 - [storytelling-formats.md](storytelling-formats.md): 15 story shapes (Kallaway's ten storytelling formats plus five teaching formats), each with a beat table mapped to Kallaway's loop.
 
-**Where it's applied:** the `video-script`, `linkedin-post` and `captions` skills and their critics (`video-script-critic`, `linkedin-critic`, `caption-critic`) in `.claude/`.
+**Where it's applied:** the `video-script`, `production-script`, `linkedin-post` and `captions` skills and their critics (`video-script-critic`, `production-script-critic`, `linkedin-critic`, `caption-critic`) in `.claude/`.
 
 **Source short names used throughout:**
 
