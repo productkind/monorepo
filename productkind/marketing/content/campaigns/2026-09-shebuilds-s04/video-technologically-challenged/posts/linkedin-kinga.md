@@ -18,4 +18,4 @@ And that's why I'd love more women to apply to SheBuilds, Lovable's hackathon fo
 
 Applications close this Sunday, 27 September: https://shebuilds.lovable.app/?ref=littleparrot.app
 
-And if you'd like a guided start, our Build Your First App with Lovable course is free until 18 October, the end of SheBuilds: https://littleparrot.app/5e86e580-264c-442c-8cc4-be5645f13e87/course-overview?utm_source=linkedin&utm_medium=social&utm_campaign=shebuilds-s04&utm_content=kinga-technologically-challenged
+And if you'd like a guided start, our Build Your First App with Lovable course is free until 18 October, the end of SheBuilds. You can take it whether or not you get a place: https://littleparrot.app/5e86e580-264c-442c-8cc4-be5645f13e87/course-overview?utm_source=linkedin&utm_medium=social&utm_campaign=shebuilds-s04&utm_content=kinga-technologically-challenged
