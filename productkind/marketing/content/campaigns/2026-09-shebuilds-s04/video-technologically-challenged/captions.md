@@ -27,7 +27,17 @@ No video exists yet, so these are notes for the recording:
 
 **Caption**
 
-SheBuilds, Lovable's hackathon for women, closes Sunday 27 Sept. This week I heard several women call themselves “technologically challenged”. The only way I know to get confident is to practise, and if you get in, you get a lot of Lovable credits for it. Comment for the link, plus our Lovable course, free until 18 Oct.
+SheBuilds, Lovable's hackathon for women, applications close on 27 September.
+
+This week I heard several women call themselves “technologically challenged”, and a belief like that can stop us building a website for our business, a portfolio, or a small tool that would help at work. The only way I know to get more confident with AI tools like Lovable is to practise, and practising is easier when you're not counting every credit.
+
+If you get in, you'll get a lot of Lovable credits to experiment with, and you don't need a paid plan to apply.
+
+To help more women make a start, our Build Your First App with Lovable course is free until 18 October, the end of SheBuilds. It starts with one core feature, then moves on to saving data and publishing your app.
+
+Comment on this and we'll send you the SheBuilds application link and the free course.
+
+Know someone who says she's “not techy”? Send this to her before Sunday.
 
 **Hashtags** (paste at the end of the caption)
 
@@ -37,11 +47,11 @@ SheBuilds, Lovable's hackathon for women, closes Sunday 27 Sept. This week I hea
 
 **Caption**
 
-SheBuilds, Lovable's hackathon for women, closes this Sunday.
+SheBuilds, Lovable's hackathon for women, applications close on 27 September.
 
 This week I heard several women call themselves “technologically challenged”, and a belief like that can stop us building a website for our business, a portfolio, or a small tool that would help at work. The only way I know to get more confident with AI tools like Lovable is to practise, and practising is easier when you're not counting every credit.
 
-If you get in, you build with a lot of Lovable credits to experiment with, and you don't need a paid plan to apply. Applications close on 27 September.
+If you get in, you'll get a lot of Lovable credits to experiment with, and you don't need a paid plan to apply.
 
 To help more women make a start, our Build Your First App with Lovable course is free until 18 October, the end of SheBuilds. It starts with one core feature, then moves on to saving data and publishing your app.
 
