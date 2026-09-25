@@ -6,9 +6,14 @@ challenge: '4 - Get Found: SEO and Discoverability'
 
 A step-by-step checklist for making your product discoverable through search engines and AI tools. Work through it after publishing your app. You don't need to do everything in one sitting. Tick items off over the first few weeks.
 
-### On-page SEO (do this first)
+### Start here: let Lovable scan your app
 
-These are changes to your app itself that help search engines understand your content.
+- [ ] **Run the SEO & AI search review.** Open the **More** tab in your project toolbar, select **SEO & AI search**, and click **Scan project**. It checks your `robots.txt`, sitemap, titles and descriptions, social preview tags, heading structure, alt text, indexing and Google Search Console setup, all in one pass. **Running the review is free on every plan.** Each finding has a **Try to fix** button, and those cost credits because Lovable changes your code. Work through the failing findings first, starting with the red ones.
+- [ ] **Check which stack your app is on.** Apps built before May 2026 render pages in the browser, so some crawlers see very little of your content. If yours is one of them, type `/` in the message box and choose **Migrate to TanStack Start**, or find it in **Project settings → General → Project actions**. Costs roughly 10-35 credits. Everything else in this checklist works better afterwards.
+
+### On-page SEO
+
+These are changes to your app itself that help search engines understand your content. The review above will flag most of them, but these are the prompts if you'd rather fix them by hand.
 
 - [ ] **Fix your heading tag hierarchy.** Each page should have exactly one h1 tag as the main title, with h2 and h3 tags for sections and sub-sections. Prompt Lovable:
 
@@ -22,23 +27,14 @@ Review all pages in the app and fix the heading tag hierarchy. Each page should 
 Add descriptive alt text to all images in the app for accessibility and SEO.
 ```
 
-- [ ] **Set clear, descriptive page titles.** Each page should have a title that describes what it does. Your meta tags cover the homepage, but individual pages need attention too.
-- [ ] **Ask Lovable for a general SEO review.** Prompt:
-
-```
-Review this app for SEO best practices and suggest improvements.
-```
+- [ ] **Set clear, descriptive page titles.** Each page should have a title that describes what it does. Your meta tags cover the homepage, but individual pages need attention too. To check a page, hover its preview icon in the **page selector** above the preview: the **Social** and **Search** cards show exactly what gets read.
 
 ### Google Search Console
 
 These steps help Google find and index your pages faster.
 
 - [ ] **Verify your domain.** Go to [Google Search Console](https://search.google.com/search-console), add your domain, and follow the verification steps. Note: this requires a custom domain that you own (e.g., `bookcluborganiser.com`). If you're still using a Lovable URL (e.g., `bookclub.lovable.app`), you can't verify it because you don't own the `lovable.app` domain. Set up a custom domain first, then come back to this step.
-- [ ] **Submit your sitemap.** In [Google Search Console](https://search.google.com/search-console), click **Sitemaps** in the left menu and submit `https://yourdomain.com/sitemap.xml`. If you're unsure where to find it, prompt Lovable:
-
-```
-Does this app have a sitemap.xml? If not, generate one.
-```
+- [ ] **Submit your sitemap.** Lovable doesn't always create a sitemap up front, so don't assume you have one. The SEO & AI search review checks for it and can generate or repair it in one click. Publish your latest changes first, because Google fetches the sitemap from your live site. Then in [Google Search Console](https://search.google.com/search-console), click **Sitemaps** in the left menu and submit `https://yourdomain.com/sitemap.xml`. The review can also walk you through this part if you'd rather not do it by hand.
 
 - [ ] **Check for indexing issues.** After a few days, come back to Google Search Console and check the **Pages** report in the left menu. It shows which pages Google has indexed and any problems it found.
 

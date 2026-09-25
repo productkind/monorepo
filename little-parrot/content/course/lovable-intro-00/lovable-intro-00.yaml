@@ -910,7 +910,7 @@ course:
           title: Change your meta tags
           content:
             body: |-
-              The quickest way to change any of them is to **ask Lovable in the chat**:
+              The quickest way to change any of them is to **ask Lovable in Build mode**:
 
               ```
               Change my site title to "Book Club Organiser", write a description about collecting and voting on book suggestions, and generate a new social image.
@@ -933,7 +933,7 @@ course:
 
               A clean URL makes your app feel more professional, and easier for people to remember and type.
 
-              **Note:** Your URL will end with `.lovable.app`. A custom domain (like `bookcluborganiser.com`) needs a paid Lovable plan. You can buy one through Lovable or connect a domain you already own, and you can do either by asking Lovable in the chat.
+              **Note:** Your URL will end with `.lovable.app`. A custom domain (like `bookcluborganiser.com`) needs a paid Lovable plan. You can buy one through Lovable or connect a domain you already own, and you can ask Lovable to do either for you in Build mode.
             imageUrl: /courses/lovable-intro-00/published-url.webp
           subtitle: Make it memorable
         - type: text

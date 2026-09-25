@@ -19,7 +19,7 @@ course:
         - Meta Tags
         - Favicon
       description: Make your app production-ready and share it with a potential user.
-      completionTime: '10:00'
+      completionTime: '12:00'
       steps:
         - type: comic
           content:
@@ -111,9 +111,13 @@ course:
             body: |-
               **Here's how to find and update your API keys in Lovable:**
 
-              1. In your Lovable project, open the **Cloud** tab (click the **+** button next to Preview at the top of the screen)
-              2. Go to the **Secrets** section. You'll see a list of all the secrets (API keys) your app uses. Some keys are added automatically by Lovable and cannot be deleted. (These will have a *Lovable* label next to them.)
-              3. To **update a key** you added, copy its name (e.g., `STRIPE_API_KEY`), paste it in the **Name** field. Then add the corresponding production API key from your external service, and paste that in the **Value** field. Make sure to save your changes. This will override the previously saved key.
+              1. In your Lovable project, open the **More** tab in the toolbar at the top and select **Cloud**
+              2. Go to the **Secrets** section. You'll see every secret your app uses, listed by name and the date it was added. Ones with a **Lovable** badge are managed for you and can't be deleted
+              3. To **update a key**, click **Add secret** and save a new value under the **same name** as the old one: the name (e.g. `STRIPE_API_KEY`) in the **Name** field, your production key from the external service in the **Value** field
+
+              There's no edit button, and that's deliberate. **Values are never shown again once saved**, not even to you, so the only way to change one is to write over it. Worth having the new key on your clipboard before you start.
+
+              If a **Not in use** badge appears next to a secret, you've ended up with two of the same name and only one is being used. Delete the old one from its **...** menu.
 
               If your app doesn't use any external services yet, you can skip this step. Lovable's own API keys are managed automatically.
             imageUrl: /courses/lovable-publishing-00/update-api-key.webp
@@ -131,11 +135,11 @@ course:
           title: Customising your subdomain
           content:
             body: |-
-              You can **customise this subdomain** to make it cleaner and more recognisable:
-              1. Click the **Publish** button in the top-right corner
-              2. If you *haven't published yet*, you'll see the **Your website URL** section, click the pencil icon to change your subdomain. If you've *already published*, click **Edit settings**, then click the **URL** section
-              3. **Change the subdomain** to something short and descriptive (e.g., `bookcluborganiser.lovable.app`)
-              4. Save your changes by **clicking the checkmark icon**
+              You can **customise this subdomain** to make it cleaner and more recognisable. Where you do it depends on whether you've published yet:
+
+              **Before your first publish:** click the **Publish** button in the top-right corner and edit the **Website URL** field right there in the Publish panel, then publish.
+
+              **After you've published:** open your project settings (press **Cmd + .** on a Mac, **Ctrl + .** on Windows, or use the **More** tab in the toolbar), go to **URL subdomain**, change it to something short and descriptive, and click **Update URL subdomain**.
 
               This URL works perfectly for **sharing your app early on**. Later, in *Challenge 2*, you'll learn how to connect a custom domain (like `bookcluborganiser.com`) if you want an even more professional address. But the Lovable subdomain is a great starting point, and you can keep using it for as long as you like.
           imageUrl: /courses/lovable-publishing-00/lovable-subdomain-updated.webp
@@ -144,29 +148,26 @@ course:
           title: Give your app a favicon
           content:
             body: |-
-              A **favicon** is the small icon that appears in browser tabs next to your app's name. Without one, your app shows Lovable's icon, which is a bit misleading for your users.
+              A **favicon** is the small icon that appears in browser tabs next to your app's name.
+
+              Lovable generates one for you while it builds your app, so you won't be stuck with Lovable's own icon. But a generated icon is a guess at your brand, and swapping it for your real logo is one of the quickest ways to make your app feel like yours.
 
               You can **create a favicon for free** using tools like [realfavicongenerator.net](https://realfavicongenerator.net/). Upload your logo, your brand initials, or a simple icon that represents your product. These tools will generate the right file format and sizes for you automatically.
 
-              It's a small detail, but it **makes a noticeable difference**. When Sarah sees the Book Club Organiser tab in her browser with a proper icon, it feels like a real product. Let's see how to set it.
+              It's a small detail, but it **makes a noticeable difference**. When Sarah sees the Book Club Organiser tab in her browser with your icon on it, it feels like a real product. Let's see how to set it.
             imageUrl: /courses/lovable-publishing-00/favicon.webp
           subtitle: The small icon that makes a big difference
         - type: text
           title: Set your favicon
           content:
             body: |-
-              If you **haven't published** yet:
               1. Click the **Publish** button in the top-right corner
-              2. Follow the steps until you reach the one called **Add info to help people find your site**
-              3. In the **Icon & title** section, click the favicon area and upload your generated file
+              2. Click the **favicon** next to your website URL, or open the **⋮** menu and choose **Social & search appearance**
+              3. Upload your generated file in the icon area
 
-              If you've **already published**:
-              1. Click the **Publish** button in the top-right corner
-              2. Click the **Edit settings** button
-              3. In the **Add info to help people find your site** section, click the pencil icon
-              4. In the **Icon & title** section, click the favicon area and upload your generated file
+              Once your app is live, there's a second route in: click **Edit** next to your site's title on the "Your website is live" screen.
 
-              You can **change your favicon at any time**, so don't worry about getting it perfect on the first try. Once you set your custom favicon, publish your app and it will show up in the browser tab when users visit your app.
+              You can **change your favicon at any time**, so don't worry about getting it perfect on the first try. Once you've uploaded it, publish your app and it will show up in the browser tab when users visit.
             imageUrl: /courses/lovable-publishing-00/upload-favicon.webp
           subtitle: To set your favicon in Lovable
         - type: text
@@ -179,13 +180,34 @@ course:
               - **Description:** A short summary that appears below the title
               - **Social image:** The image that shows in social media previews
 
-              You can set all of these in the **Add info to help people find your site** section of the Publish panel (the same place you uploaded your favicon).
+              Lovable writes all three for you while it builds, so your job is to read them and decide whether they're right. They're in **Social & search appearance**, the same place you uploaded your favicon.
 
-              Make your title clear (e.g., "Book Club Organiser") and your description inviting (e.g., "The easiest way to pick your book club's next read"). For the social image, use a 1200x630 pixel image for best results on social media. You can create one for free with tools like [Canva](https://www.canva.com/), or click **Generate** in Lovable to have it create one for you.
+              The quickest way to change them is to **ask Lovable in Build mode**:
+
+              ```
+              Change my site title to "Book Club Organiser", write a description about collecting and voting on book suggestions, and generate a new social image.
+              ```
+
+              Make your title clear (e.g., "Book Club Organiser") and your description inviting (e.g., "The easiest way to pick your book club's next read"). For the social image, 1200x630 pixels works best on social media. You can make your own for free with tools like [Canva](https://www.canva.com/) and upload it, or let Lovable generate one.
 
               When someone shares your link, these details are the **first impression**.
-            imageUrl: /courses/lovable-publishing-00/set-meta-tags.webp
           subtitle: Control how your link looks when shared
+        - type: text
+          title: See it the way other people will
+          content:
+            body: |-
+              You don't have to publish and then paste your link into WhatsApp to find out how it looks. Lovable shows you first.
+
+              Open the **page selector** above the preview and hover the preview icon on any page of your app. Two cards appear:
+
+              - The **Social** card shows the title, description and image that social platforms read
+              - The **Search** card shows how the page appears in search results
+
+              These reflect your latest changes, even before you publish. If something looks wrong, select **Ask Lovable to edit** and describe the change.
+
+              Worth doing this **per page**, not just your home page. People share the page they were looking at, not your front door.
+            imageUrl: /courses/lovable-publishing-00/share-review.webp
+          subtitle: Check the Social and Search cards
         - type: text
           title: Test on mobile and desktop before publishing
           content:
@@ -246,7 +268,7 @@ course:
             nextModule: "**Next challenge:** Your app is live, but its address is still something like `bookclub.lovable.app`. What if it could be `bookcluborganiser.com`? In the next challenge, you'll claim a custom domain and give your product a professional home on the internet."
             description: You've published your first production-ready app.
             subDescription: |-
-              You've checked your API keys, customised your Lovable subdomain, added a favicon, set meta tags, tested on mobile and desktop, and published. Your app has its first real address on the internet, and someone out there can use something you built. That's worth celebrating.
+              You've checked your API keys, customised your Lovable subdomain, set your own favicon, reviewed your meta tags, seen how your link looks when it's shared, tested on mobile and desktop, and published. Your app has its first real address on the internet, and someone out there can use something you built. That's worth celebrating.
 
               **Toolkit:** Need to revisit these steps later? Use the [Meta Tags and Favicon Setup Guide](https://littleparrot.app/nest/toolkit/0b1f2dca-14c3-4db6-a653-e139cf8222f4) for a quick reference.
 
@@ -272,7 +294,7 @@ course:
 
               A custom domain is not required to launch. But if you're serious about growing your product, it's one of the most impactful steps you can take.
 
-              **Note:** Connecting a custom domain in Lovable requires a paid plan. You'll also need to buy the domain separately from a registrar (more on that in the next step).
+              **Note:** Connecting a custom domain in Lovable requires a paid plan. You can buy the domain through Lovable itself, or from a separate registrar and connect it afterwards. We'll cover both.
           subtitle: More than a vanity URL
         - type: text
           title: How to check if a domain is available
@@ -280,6 +302,7 @@ course:
             body: |-
               Before you buy, you need to check if your desired domain name is available. Here are a few ways to do this:
 
+              - **Ask Lovable in your project, in Build mode.** Describe the kind of name you want and it shows you what's available, with prices
               - Visit a domain registrar like [GoDaddy](https://www.godaddy.com/) and search for your desired domain name
               - Try variations if your first choice is taken (e.g., `getbookclub.com`, `mybookclub.app`, `bookclubhq.com`)
 
@@ -295,21 +318,15 @@ course:
           title: How to buy and connect a domain
           content:
             body: |-
-              Once you've found an available domain, buying it takes a few minutes on the registrar's website. Most domains cost between $10-15 per year.
+              Most domains cost between $10-15 per year. You have two routes, and both end in the same place.
 
-              You can **set a custom domain after publishing your app in Lovable**.
+              **Buying through Lovable.** Ask Lovable in Build mode: `Find me a domain for my book club app`. Lovable shows you what's available with prices, and buying the one you pick continues in checkout. It shows a confirmation card before it buys anything, and it sets up the connection for you afterwards. Only workspace admins and owners on a paid plan can buy this way.
 
-              To **connect your custom domain** to your Lovable app:
-              1. Click the **Publish** button in your Lovable project
-              2. Click the **Edit settings** button
-              3. In the **URL** section, click the pencil icon
-              4. Click **Add custom domain**
-              5. In the **Add existing domain** section, click **Connect domain**
-              6. In the popup, **enter the domain** you bought (e.g., `bookcluborganiser.com`) and click **Connect domain**, then follow the instructions (you will have to log into your domain registrar, like GoDaddy, to connect your domain)
-
-              Lovable will take care of the necessary changes. 
+              **Connecting a domain you already own.** Open your project settings, go to the **Domains** tab, and add your domain there. You can also reach it from **Add domain** in the Publish panel, or just ask Lovable in Build mode to connect it. You'll need to log into your registrar, like Porkbun, or GoDaddy, to finish the connection.
 
               DNS changes can take a few minutes to a few hours to take effect. Don't worry if it doesn't work immediately. This is called **DNS propagation** and it's completely normal.
+
+              Your project's **Domains** tab tells you where things stand. Lovable checks each live domain when you open it, and a domain that stops working shows **Connection issue** with what it found and what to do next. Worth a glance if someone ever tells you your site won't load.
 
               *DNS (Domain Name System) is like a phone book for the internet. It tells browsers which server to connect to when someone types your domain name.*
           subtitle: From registrar to Lovable
@@ -327,7 +344,7 @@ course:
               2. **Sign in** with your Google account
               3. Add your **domain**
               4. Click **Start verification** 
-              5. **Sign into** your domain registrar (like GoDaddy)
+              5. **Sign into** your domain registrar (like Porkbun, or GoDaddy)
               6. **Connect** to verify your domain (Google will automatically check for the verification record in your DNS settings)
               7. Once Google confirms the record is found, **your domain is verified!**
 
@@ -512,7 +529,7 @@ course:
         - Backlinks
         - Google Business
       description: Make your product discoverable through search engines and AI tools, so people you've never met can find what you've built.
-      completionTime: '10:00'
+      completionTime: '13:00'
       steps:
         - type: text
           title: How users actually find websites
@@ -545,11 +562,22 @@ course:
               Add descriptive alt text to all images in the app for accessibility and SEO.
               ```
 
-              *You can also ask Lovable to do a general review:*
-              ```
-              Review this app for SEO best practices and suggest improvements.
-              ```
+              You don't have to work through all of this by hand, though. Lovable has a tool that checks the lot for you, which is the next step.
           subtitle: Help Google understand your product
+        - type: text
+          title: Let Lovable review your SEO
+          content:
+            body: |-
+              Open the **More** tab in your project toolbar and select **SEO & AI search**, then click **Scan project**.
+
+              Lovable reads through your app and reports back on the things search engines and AI tools look for: your `robots.txt` and sitemap, titles and descriptions, the social preview tags on each page, heading structure, alt text on images, whether your home page can be reached and indexed at all, and whether Google Search Console is set up.
+
+              Findings are sorted with the failing ones at the top, each marked by how much it affects you: a red X blocks indexing entirely, an amber triangle is worth fixing, a blue lightbulb is a nice-to-have.
+
+              **Running the review is free on every plan.** Each finding has a **Try to fix** button, and there's **Try to fix all** for the batch. Those cost credits, because Lovable is changing your code. After a fix, publish and scan again to confirm it worked.
+
+              A status badge tells you whether the results are **Up to date** or **Out of date** after you've made changes, so you know when it's worth rescanning.
+          subtitle: A free scan that finds what you missed
         - type: text
           title: 'Heading tags: helping search engines read your pages'
           content:
@@ -572,6 +600,18 @@ course:
               *Curious about HTML and how web pages are built? Our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) course explains these concepts in friendly terms.*
           subtitle: Structure your content for Google
         - type: text
+          title: If your app was built before May 2026
+          content:
+            body: |-
+              This one is worth checking, because it affects everything else in this challenge.
+
+              Apps Lovable built from **May 2026** onwards put your pages together **on the server** before sending them out. Every visitor, search engine and AI crawler gets the finished page. Older apps, built on a setup called React + Vite, assemble the page **in the browser** instead, which means some tools see very little of your content.
+
+              If your app is one of the older ones, upgrading fixes your social link previews and gives crawlers a readable page on every request. To do it, type `/` in the message box and choose **Migrate to TanStack Start**, or find **Migrate to TanStack Start** in **Project settings → General → Project actions**. You confirm before anything happens, and it costs somewhere between 10 and 35 credits depending on the size of your app.
+
+              Not sure which one you're on? Ask Lovable. Your published site doesn't change until you publish, and you can go back through version history if it doesn't look right.
+          subtitle: Check whether your pages are readable to Google
+        - type: text
           title: Setting expectations about timing
           content:
             body: |-
@@ -592,13 +632,13 @@ course:
             body: |-
               You can **speed things up** by submitting your sitemap through [Google Search Console](https://search.google.com/search-console). A **sitemap** is a file that lists all the pages on your website, making it easier for search engines to find and index them.
 
-              **To submit your sitemap:**
+              Lovable doesn't always create a sitemap up front, so don't assume you have one. The **SEO & AI search** review from two steps ago checks for it, and can generate or repair it in one click. Publish your latest changes before you click **Try to fix** on the sitemap step, because Google fetches the sitemap from your live site, not from your editor.
+
+              The review can also walk you through connecting Google Search Console and submitting the sitemap for you. If you'd rather do that part yourself:
+
               1. Open [Google Search Console](https://search.google.com/search-console) and select your property (the domain you verified in *Challenge 2*)
               2. Click **Sitemaps** in the left menu
-              3. Enter your **sitemap URL**. For most Lovable apps, try `https://yourdomain.com/sitemap.xml`. If you're not sure whether your app has one, ask Lovable:
-              ```
-              Does this app have a sitemap.xml? If not, generate one.
-              ```
+              3. Enter your **sitemap URL**, usually `https://yourdomain.com/sitemap.xml`
               4. Click **Submit**
 
               This nudges Google to notice your site sooner rather than waiting for it to discover you on its own.
@@ -694,7 +734,7 @@ course:
             subDescription: |-
               You've done a lot in this challenge:
 
-              - You now know how to optimise your pages for search engines with meta tags, heading tags, and alt text
+              - You now know how to optimise your pages for search engines with meta tags, heading tags, and alt text, and how to let Lovable's free SEO & AI search review find what you missed
               - You've submitted your sitemap to Google Search Console
               - Learned how AI tools discover products through GEO 
               - You have a plan for building backlinks in communities where your users spend time
@@ -733,15 +773,18 @@ course:
 
               **To find them:**
               1. Open your project in Lovable
-              2. Click on **...** at the top, next to Preview
-              3. Select the **Analytics** tab
+              2. Open the **More** tab in the toolbar at the top
+              3. Select **Analytics**
 
               These metrics **give you a basic picture** of:
-              - **How many** people visit your app
+              - **How many** people visit your app, and how many are on it right now
               - **Where** they come from (referral source)
               - **Which pages** they visit
               - **Which country** they're in
               - **What device** they're using
+              - **How many leave** after seeing only one page (your bounce rate)
+
+              This only works for published apps, and it relies on a setting called **Visitor analytics** in **Project settings → General → Publishing**. It's on by default, so you shouldn't need to touch it. If your dashboard is stubbornly empty, that's the first place to look.
 
               This is a great starting point. For most early-stage products, built-in metrics are enough to understand whether people are using your app and how often.
 
@@ -959,8 +1002,9 @@ course:
 
               **Before publishing:**
               - ☐ Switch to production API keys
-              - ☐ Create and upload a favicon
-              - ☐ Set meta tags (title, description, social image)
+              - ☐ Upload your own favicon, if you'd rather not use the generated one
+              - ☐ Check your meta tags (title, description, social image) and change anything that's off
+              - ☐ Check the Social and Search cards on your main pages
               - ☐ Check your app on mobile and desktop (use the device toggle in Lovable's preview, and test on your own phone after publishing)
 
               **Professional touches:**
@@ -971,7 +1015,8 @@ course:
               - ☐ Add a cookie banner (if needed)
 
               **Discoverability:**
-              - ☐ Optimise pages for SEO (headings, alt text, clear content)
+              - ☐ Run the SEO & AI search review and work through the failing findings
+              - ☐ Upgrade to TanStack Start, if your app predates May 2026
               - ☐ Submit sitemap to Google Search Console
               - ☐ Register on Google Business Profile (if relevant)
               - ☐ List on at least one product directory

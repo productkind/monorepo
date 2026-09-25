@@ -8,7 +8,7 @@ Go through this list before you publish your app for the first time. It takes fi
 
 ### Branding and first impressions
 
-Lovable writes your title, description, icon and social image while it builds, so these are checks rather than blank forms. To change any of them, ask Lovable in the chat, or open the **⋮** menu in the Publish panel and choose **Social & search appearance**.
+Lovable writes your title, description, icon and social image while it builds, so these are checks rather than blank forms. To change any of them, ask Lovable in Build mode, or open the **⋮** menu in the Publish panel and choose **Social & search appearance**.
 
 - [ ] **Favicon checked.** Does your app have its own icon in browser tabs, rather than a generic one?
 - [ ] **Title checked.** Is it clear and short, and does it tell people what your app does? (It appears in browser tabs and search results.)

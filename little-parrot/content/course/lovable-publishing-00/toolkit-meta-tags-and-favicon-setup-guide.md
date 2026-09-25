@@ -4,29 +4,38 @@ challenge: '1 - Go Live: Your First Real Launch'
 
 ## Meta Tags and Favicon Setup Guide
 
-A step-by-step guide for setting up the details that make your app look professional when published and shared.
+A step-by-step guide for checking and changing the details that make your app look professional when published and shared.
 
-### Set up a favicon
+Lovable writes your title, description, icon and social image while it builds your app, so none of this starts from a blank form. Your job is to read what it came up with, and replace the bits that aren't right.
 
-A favicon is the small icon in browser tabs. Without one, your app shows Lovable's default icon.
+### Where all of this lives
+
+Everything below is in one place: **Social & search appearance**.
+
+1. Click the **Publish** button in the top-right corner
+2. Click the **favicon** next to your website URL, or open the **⋮** menu and choose **Social & search appearance**
+
+Once your app is live, there's a second way in: click **Edit** next to your site's title on the "Your website is live" screen.
+
+### Set your own favicon
+
+A favicon is the small icon in browser tabs. Lovable generates one, but swapping it for your real logo is one of the quickest ways to make your app feel like yours.
 
 **How to create one:** Use [realfavicongenerator.net](https://realfavicongenerator.net/) to generate a favicon from your logo or initials. Download the generated file.
 
-**How to set it in Lovable:**
+**How to set it:** Open **Social & search appearance** and upload your file in the icon area.
 
-1. Click the **Publish** button in the top-right corner
-2. If you haven't published yet, follow the steps until you reach **Website info**. If you've already published, click **Edit settings**, then click the pencil icon in the **Website info** section
-3. In the **Icon & title** section, click the favicon area and upload your file
-
-### Set your meta tags
+### Change your meta tags
 
 Meta tags control how your app appears in browser tabs, search results, and link previews on social media and messaging apps.
 
-**How to set them in Lovable:**
+The quickest way to change them is to **ask Lovable in Build mode**:
 
-1. Click the **Publish** button
-2. Open the **Website info** section (same place as the favicon)
-3. Fill in the **title**, **description**, and **social image**
+```
+Change my site title to "Book Club Organiser", write a description about collecting and voting on book suggestions, and generate a new social image.
+```
+
+You can also edit them directly in **Social & search appearance**.
 
 **Guidelines for writing good meta tags:**
 
@@ -34,18 +43,21 @@ Meta tags control how your app appears in browser tabs, search results, and link
 | --- | --- | --- |
 | **Title** | A clear, short name for your product (under 60 characters) | Book Club Organiser |
 | **Description** | 1-2 sentences about what your app does and who it's for (under 160 characters) | The easiest way to pick your book club's next read. Suggest books, vote on favourites, and organise your reading list. |
-| **Social image** | A 1200x630px image. Create one free with [Canva](https://www.canva.com/) | Your logo, a screenshot, or a branded graphic |
+| **Social image** | A 1200x630px image. Create one free with [Canva](https://www.canva.com/), or let Lovable generate one | Your logo, a screenshot, or a branded graphic |
+
+### Check how it actually looks
+
+Open the **page selector** above the preview and hover the preview icon on any page. The **Social** card shows what social platforms will read, and the **Search** card shows how the page appears in search results. Both reflect your latest changes, even before you publish.
+
+Do this per page, not only your home page. People share the page they were looking at.
 
 ### Customise your Lovable subdomain
 
 Your app gets a default URL like `abc123.lovable.app`. You can change it to something memorable.
 
-**How to change it:**
+**Before your first publish:** click **Publish** and edit the **Website URL** field in the Publish panel.
 
-1. Click the **Publish** button
-2. If you haven't published yet, click the pencil icon next to **Website address**. If you've already published, click **Edit settings**, then click the pencil icon in the **URL** section
-3. Type a short, descriptive subdomain (e.g., `bookcluborganiser`)
-4. Click the checkmark icon to save
+**After you've published:** open your project settings (**Cmd + .** on a Mac, **Ctrl + .** on Windows, or the **More** tab in the toolbar), go to **URL subdomain**, and click **Update URL subdomain**.
 
 **Tips for choosing a good subdomain:**
 
@@ -68,3 +80,5 @@ Alt text improves accessibility and helps with SEO. If you haven't added it duri
 ```
 Add descriptive alt text to all images in the app for accessibility and SEO.
 ```
+
+For a fuller check, run the **SEO & AI search** review under the **More** tab. It's free, and it flags missing alt text along with everything else search engines look for.
