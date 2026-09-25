@@ -1,5 +1,5 @@
 ---
-status: drafted
+status: posted
 channels: [tiktok, instagram, youtube-shorts]
 account: little-parrot
 ---
