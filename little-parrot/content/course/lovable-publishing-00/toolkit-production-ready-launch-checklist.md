@@ -12,7 +12,7 @@ Use this checklist to turn your published app into a professional, discoverable 
 
 ### Professional touches
 
-- [ ] **Connect a custom domain** (optional but recommended). Buy a domain from a registrar like [GoDaddy](https://www.godaddy.com/), then connect it in the Publish panel under URL > Add custom domain. DNS changes can take a few hours to take effect.
+- [ ] **Connect a custom domain** (optional but recommended). Either ask Lovable in Build mode to find and buy one, or buy from a registrar like [Porkbun](https://porkbun.com/), or [GoDaddy](https://www.godaddy.com/) and connect it in **Project settings → Domains**. Needs a paid plan. DNS changes can take a few hours to take effect.
 - [ ] **Set up Google site verification.** Go to [Google Search Console](https://search.google.com/search-console), add your domain, and follow the verification steps. This unlocks SEO tools you'll need later.
 - [ ] **Add a privacy policy and terms of use.** Generate them using [Termly](https://termly.io/) or an AI assistant. If your app collects any user data (including email for login), you need a privacy policy.
 - [ ] **Add footer links to legal pages.** Prompt Lovable to add a footer with links to your Privacy Policy, Terms of Use, and a contact email.
@@ -37,7 +37,7 @@ Does this app have a sitemap.xml? If not, generate one.
 
 ### Growth
 
-- [ ] **Check Lovable's built-in analytics.** Click the **...** at the top of your project (next to Preview), then select the Analytics tab.
+- [ ] **Check Lovable's built-in analytics.** Open the **More** tab in your project toolbar, then select **Analytics**. It only works once you've published.
 - [ ] **Set up Google Analytics** for deeper insights. Create a free account at [analytics.google.com](https://analytics.google.com/), get your Measurement ID (starts with `G-`), then prompt Lovable:
 
 ```
