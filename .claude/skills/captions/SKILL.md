@@ -91,7 +91,7 @@ For each miss, suggest a concrete fix built only from what's already in the vide
 **TikTok** (no founder comments; we run one account there)
 
 - **Carousels post as TikTok photo mode, which has a Title field separate from the caption**: give it a short, scroll-stopping title that names the topic and its search term with a hook ingredient (a pain, a contradiction, a number or a stake, not a cute line), e.g. "Why your vibe coded app doesn't look how you pictured 👀" or "Your page can be perfect and still not show up on Google 👀", and include it as a **Title** line in the deliverable. Video posts have no separate title field; there the caption's first line is the hook.
-- 150-300 characters total; only the first ~80-100 show before "more", so hook + keyword go there.
+- Write a long description: roughly 100-200 words (about 600-1,200 characters; the limit is 4,000). TikTok itself says "writing a long description can help get 3x more views on average", and the extra words give its search more to index. Only the first ~80-100 characters show before "more", so put the caption in this order: hook + exact search phrase and audience; several sentences of useful value or context that extend what the video shows, in the words people search for; payoff-specific follow ask; 3-5 niche hashtags. Do not pad the caption or paste in the full script.
 - TikTok search indexes voiceovers and on-screen text as well as captions, so pick the search phrase that is actually spoken or shown in the video and put that same phrase in the caption.
 - 3-5 hashtags: 1 broad women-in-tech community tag + 2-3 niche, most of them women-specific.
 - A genuine question in the caption invites comments; use one when it is natural, never as bait.
