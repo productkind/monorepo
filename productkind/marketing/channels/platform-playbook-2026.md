@@ -51,13 +51,13 @@ Hard truncation points are facts; "optimal length" figures are correlational.
 | --- | --- | --- | --- |
 | Instagram feed/carousel | 2,200 chars | ~125 chars ("... more") | Short (under ~150 chars) for engagement plays; long keyword-rich (150-300 words) for educational carousels you want found in search |
 | Instagram Reels | 2,200 chars | ~55-60 chars in the Reels tab | Hook + keyword in the first 60 characters |
-| TikTok | 4,000 chars | ~80-100 chars | Treat 150-300 chars as a working target, not a cap. Go longer when useful context, search language or a specific follow ask earns the space. A question in the caption correlates with ~26% more comments (Metricool, n=2.3M) |
+| TikTok | 4,000 chars | ~80-100 chars | Write a long description: roughly 100-200 words (about 600-1,200 chars) of real context in search language. TikTok itself says "writing a long description can help get 3x more views on average" (TikTok's own upload tip, seen September 2026; platform-stated, no methodology published). A question in the caption correlates with ~26% more comments (Metricool, n=2.3M) |
 | YouTube Shorts | Title 100, description 5,000 | Title is the hook | Title 20-40 chars, keyword first (trending-Shorts data); description 150-500 focused chars |
 | LinkedIn | 3,000 chars | ~140 (mobile) to ~210 (desktop) chars | 800-2,500 chars of substance. AuthoredUp (372K posts, late 2025 to early 2026): 1,301-2,500 chars earned +27% engagement vs short posts. LinkedIn is the one platform where longer wins |
 
 Universal rule: the first line is the only text most people ever see, and on Instagram it is now also the Google snippet. Spend disproportionate effort there.
 
-For TikTok, prioritise the caption in this order: **hook + exact search phrase and audience → useful value or context → payoff-specific follow ask → 3-5 niche hashtags**. Do not remove useful copy simply to stay under 300 characters, but do not pad the caption or paste in the full script either.
+For TikTok, prioritise the caption in this order: **hook + exact search phrase and audience → useful value or context → payoff-specific follow ask → 3-5 niche hashtags**. The long description earns its length from the middle step: several sentences that extend what the video shows, in the words people search for. Do not pad the caption or paste in the full script.
 
 ## 4. What each algorithm actually rewards
 
