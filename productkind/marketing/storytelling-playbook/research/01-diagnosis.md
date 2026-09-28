@@ -1,6 +1,6 @@
 # Diagnosis: our recent content against the expert principles
 
-Written 2026-09-24. Checks our September short videos and recent LinkedIn posts against [00-synthesis.md](00-synthesis.md). Performance numbers come from `../../content/campaigns/2026-09-pm-technical-fluency-validation/tiktok-experiment-review-6-14-sept.md` (TikTok, 48 validation videos) `../../channel-strategy-2026-08.md` and `../../channels/linkedin/linkedin-post-analytics-kinga-jun-sep-2026.md` (Kinga's 20 LinkedIn posts with analytics, 23 June to 21 September).
+Written 2026-09-24. Checks our September short videos and recent LinkedIn posts against [00-synthesis.md](00-synthesis.md). Performance numbers come from `../../content/campaigns/2026-09-pm-technical-fluency-validation/tiktok-experiment-review-6-18-sept.md` (TikTok, 48 validation videos) `../../channel-strategy-2026-08.md` and `../../channels/linkedin/linkedin-post-analytics-kinga-jun-sep-2026.md` (Kinga's 20 LinkedIn posts with analytics, 23 June to 21 September).
 
 Principles are tagged with their source (Parr, Kallaway, Mino, Ralston, Galloway, Garcia, Howard). Observations the sources don't cover are marked **(not from the sources)**.
 
