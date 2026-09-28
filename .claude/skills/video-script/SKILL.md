@@ -9,7 +9,7 @@ Turn one idea into a short-video script that earns its first 3 seconds, confirms
 
 **Where the rules come from.** `productkind/marketing/storytelling-playbook/README.md` (sources: Sam Parr, Kallaway, Mino Lee, Caleb Ralston, Paddy Galloway, Alex Garcia, Anna Corinne Howard), its short-video guide in section 8, and `productkind/marketing/storytelling-playbook/storytelling-formats.md`. Read the formats file every time; read the playbook when you need a formula or the reasoning.
 
-**Why this matters for us.** Our September validation videos averaged 3.4 to 4.0 seconds of watch time, with most viewers gone by 0:01 to 0:02, whatever the visuals (GIF, B-roll and stock cuts scored within 0.3 s of each other). The script, the first frame and the first line are the lever. See `productkind/marketing/storytelling-playbook/research/01-diagnosis.md` and `productkind/marketing/content/campaigns/2026-09-pm-technical-fluency-validation/tiktok-experiment-review-6-14-sept.md`.
+**Why this matters for us.** Our September validation videos averaged 3.4 to 4.0 seconds of watch time, with most viewers gone by 0:01 to 0:02, whatever the visuals (GIF, B-roll and stock cuts scored within 0.3 s of each other). The script, the first frame and the first line are the lever. See `productkind/marketing/storytelling-playbook/research/01-diagnosis.md` and `productkind/marketing/content/campaigns/2026-09-pm-technical-fluency-validation/tiktok-experiment-review-6-18-sept.md`.
 
 ## Inputs to establish first
 

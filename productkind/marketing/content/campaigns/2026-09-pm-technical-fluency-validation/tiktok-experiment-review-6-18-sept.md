@@ -1,4 +1,4 @@
-# TikTok experiment review — 6–14 September 2026
+# TikTok experiment review — 6–18 September 2026
 
 **@littleparrot.app · 29 posts · v2, with format labels confirmed by Kinga**
 
