@@ -1,5 +1,6 @@
 ---
-status: drafted
+status: posted
+date: 2026-09-28
 channels: [linkedin]
 account: kinga
 job: community
@@ -8,15 +9,21 @@ format: Lesson from others / personal learning
 
 # LinkedIn (Kinga): Ladies Who Build & Network, Lisbon
 
-Several women told me last Wednesday that they were "technologically challenged". A little later, they were building.
+Several women told me last Wednesday that they were "technologically challenged". A little later, they were building software.
 
-I was volunteering at Ladies Who Build & Network in Lisbon, helping women build with Lovable, many of them for the first time.
+I was volunteering at a Ladies Who Talk event in Lisbon, helping women build with Lovable, many of them for the first time.
 
 I expected most of the questions to be about how to build things. Most of them were about how to explain what they wanted:
 
-How much should I write in my first prompt? How specific should I be? Should I work this out in ChatGPT first, or ask Lovable directly? How do I explain that I don't like the font, the spacing or the colours? How do I phrase this so it gives me what I have in my head?
+How much should I write in my first prompt?
 
-And one I particularly liked: how do I become an end-to-end designer?
+How specific should I be?
+
+Should I work this out in ChatGPT first, or ask Lovable directly?
+
+How do I explain that I don't like the font, the spacing or the colours?
+
+How do I phrase this so it gives me what I have in my head?
 
 So AI has made building software much more accessible, but it hasn't removed the need to learn how to build. What you need to learn has changed, and those questions show what it is.
 
@@ -26,7 +33,7 @@ The same goes for everything else you build: you need to know what you want, say
 
 That's also why getting started seemed to be one of the hardest parts. The women I talked to were clearly capable. When you haven't built before, you just don't have the vocabulary or the mental models for directing the tool yet. That's something you can learn, and it's a very different thing from being "technologically challenged".
 
-The conversations went both ways, too. Lis, Daria, Nene and Aniko showed me the amazing things they're building and told me how they think about running a business. We're recalibrating Little Parrot at the moment, and those conversations have helped us with it.
+The conversations went both ways, too. Lis, Daria, Nene, Jane, Aniko and Valentina shared with me the amazing things they're building and told me how they think about running a business. We're recalibrating LittleParrot.app at the moment, and those conversations have helped us with it.
 
 Thank you, Irina, for organising it and for bringing women together to build and swap ideas. I'd love to help again next time.
 
