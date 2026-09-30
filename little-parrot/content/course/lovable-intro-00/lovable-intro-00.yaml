@@ -806,11 +806,11 @@ course:
             body: |-
               Sometimes Lovable will flag security issues before you publish. Don't panic. This is normal and helpful. Developers deal with security considerations all the time.
 
-              Check the security errors and warnings in the **Security** panel, and click **Try to fix all**. Usually Lovable takes care of all issues, like making sure certain data isn't publicly accessible.
+              Open **More → Security** to see the findings, and click **Try to fix all**. Usually Lovable takes care of all issues, like making sure certain data isn't publicly accessible.
 
               These come out of the same 10 free fixes as the **Try to fix** button, so if you've been using it all afternoon, a round may cost credits. Running the scans is always free.
 
-              It can happen that new warnings appear after fixing others. As long as you don't have any security errors, you are good to publish your app.
+              It can happen that new warnings appear after fixing others. Findings are labelled **Critical**, **Warning** or **Info**, and as long as nothing is left marked **Critical**, you are good to publish your app.
 
               *You can find more guidance on security in our [Fix Bugs with Confidence: Debugging Your Lovable App](https://littleparrot.app/aaab45b7-209a-4578-a515-3e55687f0c53/course-overview) course.*
             imageUrl: /courses/lovable-intro-00/security-errors-and-warnings.webp

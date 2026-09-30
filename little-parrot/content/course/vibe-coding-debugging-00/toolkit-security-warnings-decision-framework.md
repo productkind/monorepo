@@ -4,7 +4,7 @@ challenge: '7 - Handling Security Errors and Warnings'
 
 ## Security Warnings Decision Framework
 
-A step-by-step flow for handling the security findings that Lovable's built-in auditor surfaces. Use this every time you open the Security panel and see items to address.
+A step-by-step flow for handling the security findings that Lovable's built-in auditor surfaces. Use this every time you open **More → Security** and see items to address.
 
 ### Step 1: Know your app's context
 
@@ -12,29 +12,33 @@ Before deciding what to fix, be clear about who uses your app. This determines h
 
 | App type | Who uses it | Priority level |
 | --- | --- | --- |
-| **Personal tool** | Just you | Low. Fix errors, note warnings for later. |
-| **Internal team tool** | A small group you know | Medium. Fix errors and review warnings. |
-| **Public app** | Anyone on the internet | High. Fix errors and warnings before publishing. |
+| **Personal tool** | Just you | Low. Fix critical findings, note warnings for later. |
+| **Internal team tool** | A small group you know | Medium. Fix critical findings and review warnings. |
+| **Public app** | Anyone on the internet | High. Fix critical findings and warnings before publishing. |
 
 ### Step 2: Read the severity levels
 
-Each finding in Lovable's Security panel has a severity label. Here's what they mean and what to do:
+Each finding in the Security view has a severity label. Here's what they mean and what to do:
 
 | Severity | What it means | What to do |
 | --- | --- | --- |
-| **Error** (red) | A critical security issue. Data could be exposed or the app could be exploited. | Fix before publishing, regardless of app type. |
-| **Warning** (orange) | An important concern that may or may not apply to your situation. | Fix for public apps. For personal or team tools, review the details and decide if it's relevant to your context. |
-| **Info** (white) | A general recommendation or best practice. | Good to address over time, but not urgent for any app type. |
+| **Critical** | A serious security issue. Data could be exposed or the app could be exploited. | Fix before publishing, regardless of app type. |
+| **Warning** | An important concern that may or may not apply to your situation. | Fix for public apps. For personal or team tools, review the details and decide if it's relevant to your context. |
+| **Info** | A general recommendation or best practice. | Good to address over time, but not urgent for any app type. |
+
+Open any finding and it leads with **What could happen**, an explanation in everyday words of the risk to your app and your users, then **Technical details** with the evidence and where it was found. Read that first: it's free, and it often answers the question on its own.
 
 ### Step 3: Fix what you can automatically
 
-1. **Click "Try to fix all"** in the Security panel. Lovable will attempt to resolve the findings automatically.
+1. **Click "Try to fix all"** in the header, or **Try to fix** on a single finding, or tick a few checkboxes and choose **Try to fix selected**.
 2. **Run the scan again.** Check how many findings remain.
 3. **Repeat up to 3 times total.** If findings persist after 3 rounds, move to Step 4.
 
+**Mind the budget.** Your account includes **10 free fixes**, shared across every project and covering both these security fixes and the _Try to Fix_ button on build errors. Each one comes back 24 hours after you use it, and past that a fix costs credits. Running the scans is always free, however often you do it.
+
 ### Step 4: Ask for guidance on remaining issues
 
-For findings that weren't resolved automatically, ask Lovable about the finding in chat. This works like any chat message and uses credits; running the scans and **Try to fix all** are the free actions.
+For findings that weren't resolved automatically, open the finding's **…** menu and choose **Reference in chat**, then ask about it. This works like any chat message and uses credits. Reading **What could happen** on the finding costs nothing, so start there.
 
 **Copy this prompt and fill in the blanks:**
 
@@ -63,7 +67,7 @@ Read Lovable's explanation and decide whether to apply the fix based on your app
 
 **How to fix:**
 
-1. Open the **Cloud** menu in Lovable.
+1. Open **More → Cloud** in your project.
 2. Go to **Users**, then **Auth Settings**.
 3. Select the **Email** sign-in method.
 4. Enable the **Password HIBP Check** toggle.
@@ -75,4 +79,4 @@ This checks passwords against billions of known breached passwords and blocks an
 - [ ] **Run the security scan one final time** to confirm everything is resolved.
 - [ ] **Bookmark the secure version** so you have a safe point if future changes reintroduce issues.
 - [ ] **Re-check security after adding new features** that involve user data, authentication, or database tables. New features can introduce new findings.
-- [ ] **Security issues can rise even if you don't change code.** For example, if a new vulnerability is discovered in a library you use, it could trigger a new finding. Regularly check the Security panel to stay on top of any new issues.
+- [ ] **Security issues can rise even if you don't change code.** For example, if a new vulnerability is discovered in a library you use, it could trigger a new finding. Regularly check **More → Security** to stay on top of any new issues.
