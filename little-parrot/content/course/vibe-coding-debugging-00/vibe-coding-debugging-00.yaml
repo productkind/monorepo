@@ -363,7 +363,7 @@ course:
               Lovable keeps a history of every change. You can **bookmark** working versions so you can always get back to them.
 
               **After every working feature:**
-              Click the bookmark option to mark that version as stable.
+              Click the bookmark option to mark that version as stable. The history panel has its own **Bookmarks** tab, so your saved checkpoints stay separate from the full list of every change.
 
               **What this gives you:**
               If a bug appears later, you have a known good state to return to. You can compare what changed between the working version and the broken one.
@@ -382,8 +382,8 @@ course:
               Take a moment to **try this now**:
 
               1. **Open** your Lovable project
-              2. Find the **bookmark** option in your **version history**
-              3. **Bookmark** your current version as a stable checkpoint
+              2. Open your **version history** and find the **bookmark** option on the version you want
+              3. **Bookmark** your current version as a stable checkpoint, then check it appears under the **Bookmarks** tab
 
               From now on, try to bookmark after every feature that **works as expected**.
             imageUrl: /courses/vibe-coding-debugging-00/bookmark-your-version.webp
@@ -852,9 +852,11 @@ course:
             body: |-
               **Plan mode** transforms Lovable from a code generator into an **investigative partner**. This is your most powerful debugging tool.
 
-              **How to access it:** Look at the **bottom of your screen** where you type prompts. You'll find a switch between two modes: *Build* and *Plan*. Select **Plan** to enter Plan mode.
+              **How to access it:** Look at the **bottom of your screen** where you type prompts. You'll find a mode picker with three options: *Build*, *Plan* and *Chat*. Select **Plan** to enter Plan mode.
 
               **The key difference:** In **Plan mode**, Lovable **investigates without changing your code**. When you're ready to apply a fix, switch back to **Build mode** (Lovable's default mode that **writes code**). This makes Plan mode safe for investigation, you won't accidentally make things worse while exploring.
+
+              **Chat** is the third option, and it's worth knowing about while you're debugging: it talks about your app without changing anything and without producing a plan, and it's free within a daily allowance. Use it for the questions you want answered before you spend anything, like *what does this error message actually mean?*
             imageUrl: /courses/vibe-coding-debugging-00/plan-mode.webp
           subtitle: Investigation mode
         - type: text
@@ -899,7 +901,7 @@ course:
           title: 'Pause and try this: Plan mode'
           content:
             body: |-
-              Open **your Lovable project** and try **Plan mode** right now (it will cost one credit):
+              Open **your Lovable project** and try **Plan mode** right now (it costs one credit, plus a little more if Lovable goes off and reads through your project to answer):
 
               1. Switch to **Plan** mode using the mode switch at the bottom of your screen
               2. Type:
@@ -919,7 +921,7 @@ course:
               For appearance fixes, your best friend is the **preview toolbar**. It sits at the bottom, in your app preview and lets you point at what you want to change instead of describing it in a prompt. Two of its modes are perfect for this:
 
               - **Select elements:** Click a part of your app, then describe the change you want. To select more than one element, hold Command (Mac) or Control (Windows) while you click.
-              - **Edit text inline:** Fix a typo or change wording directly on the page, no prompt needed. Inline text edits are free for up to 100 a day, then they use credits.
+              - **Edit text inline:** Fix a typo or change wording directly on the page, no prompt needed. Your account includes 100 free inline edits in total, after which they use credits.
 
               **Best for:**
               - Changing colours, fonts, sizes
@@ -953,6 +955,8 @@ course:
               - Error messages in Console or Cloud logs
 
               **The three-attempt rule:** If 'Try to Fix' fails three times, stop and switch to **Plan mode** for proper investigation.
+
+              **There's a budget on this.** Your account includes **10 free fixes**, shared across all your projects and covering both this button and the security fixes you'll meet in Challenge 7. Each one you use comes back 24 hours later, and past that a fix costs credits like any other prompt. Another good reason not to click it a fourth time.
           subtitle: Quick fixes for clear errors
         - type: quiz-question
           title: 'Quiz: What Plan mode is for'
@@ -1012,7 +1016,7 @@ course:
         - Problem Isolation
         - Fresh Starts
       description: Learn specific strategies to escape frustrating fix-break-fix cycles.
-      completionTime: '9:00'
+      completionTime: '11:00'
       steps:
         - type: text
           title: The dreaded bug loop
@@ -1114,6 +1118,20 @@ course:
               Then, prompt Lovable to **build the feature again**, but with a different approach or simpler design.
 
               Because building features with AI builders has become so fast, **rewriting can be quicker than untangling**. It can cost fewer credits to start fresh than to spend ages debugging.
+        - type: text
+          title: 'Strategy 6: Try the risky fix in a draft'
+          content:
+            body: |-
+              The strategies so far all fix things in your project and undo them if they go wrong. A **draft** lets you avoid the undoing.
+
+              A draft is a **separate copy of your project**, with its own chat, its own preview and its own edits. You try the fix there. If it works, you accept the draft and its changes join your project. If it makes things worse, you delete it and your project never knew.
+
+              Open the draft switcher from your project's name at the top of the editor.
+
+              **When to use it:** when you have two plausible fixes and want to see both, or when the fix is big enough that you'd rather not find out the hard way.
+
+              **Two things to know.** Drafts share your project's data, so anything you add or change while testing is real. And some backend changes still have to be made in the main version of your project.
+          subtitle: Experiment without touching your project
         - type: quiz-question
           title: 'Quiz: The three-attempt rule'
           content:
@@ -1373,8 +1391,8 @@ course:
         - Row Level Security (RLS)
         - Authentication Safety
         - Security Context
-      description: Understand what Lovable's security errors and warnings mean and how to tackle them based on your app's purpose.
-      completionTime: '12:00'
+      description: Understand what Lovable's security findings mean and how to tackle them based on your app's purpose.
+      completionTime: '13:00'
       steps:
         - type: text
           title: Your app works, but is it safe?
@@ -1395,11 +1413,14 @@ course:
           title: Lovable's security auditor
           content:
             body: |-
-              Lovable has a **built-in security auditor** that checks your app for potential risks. You'll find the results in the **Security view**.
+              Lovable has a **built-in security auditor** that checks your app for potential risks. You'll find the results in the **Security view**: open the **More** tab in your project toolbar and select **Security**.
 
-              It runs two kinds of scan: a **Basic scan** (automatic every time you publish, a quick check of your settings and building blocks) and a **Deep scan** (a more thorough review of your code that you can run on demand).
+              Two cards at the top show the two kinds of scan:
 
-              Together, these scans look at a few different parts of your app. Let's walk through them so you know what to expect.
+              - **Quick security scan**, marked *Automatic*. It runs on its own every time you publish, checking your code and your live database setup for common problems.
+              - **Deep security scan**, marked *Recommended*. A thorough read through your app's code that you start yourself. It takes a few minutes, sometimes up to fifteen.
+
+              **Both scans are free**, on every plan. Together they look at a few different parts of your app. Let's walk through them so you know what to expect.
             imageUrl: /courses/vibe-coding-debugging-00/find-security-panel.webp
           subtitle: Two scans, working for you
         - type: text
@@ -1409,10 +1430,10 @@ course:
               Before we look at what the auditor checks, take a moment to **see it for yourself**.
 
               1. **Open** your project in Lovable
-              2. Open the **Security view**
+              2. Go to **More → Security**
               3. **Run** a scan and see what findings come up
 
-              Don't worry about fixing anything yet. Just look at the list and notice the **severity labels** (Error, Warning, Info). We'll walk through what each one means in the next steps.
+              Don't worry about fixing anything yet. Just look at the list and notice the **severity labels** (Critical, Warning, Info). We'll walk through what each one means in the next steps.
             imageUrl: /courses/vibe-coding-debugging-00/open-security-panel.webp
           subtitle: See it for yourself
         - type: text
@@ -1437,7 +1458,7 @@ course:
           title: 'The scan checks: Your code'
           content:
             body: |-
-              The **deep scan** reads through your **application code** and looks for common security mistakes. For example:
+              The **deep security scan** reads through your **application code** and looks for common security mistakes. For example:
 
               - Are there any secret keys or passwords accidentally left in the code?
               - Could someone inject harmful content through a form or input field?
@@ -1456,18 +1477,22 @@ course:
               If it finds one, Lovable can usually **update the affected dependency** to a safer version.
 
               These issues can appear even if you haven't made any changes to your app recently.
+
+              Not every flaw in a building block can reach your app, though. If a problem is rated serious in general but can't affect a published Lovable app, you'll see it listed with an info marker explaining why, rather than as something you're asked to fix.
           subtitle: Are your building blocks up to date?
         - type: text
           title: 'The findings list'
           content:
             body: |-
-              When the security scan finishes, you'll see a list of **findings**, the potential security issues Lovable discovered.
+              When the security scan finishes, you'll see a list of **findings**, the potential security issues Lovable discovered. They're grouped into areas, like **Access control & authorization** or **Leaked secrets & credentials**, so related problems sit together.
 
               Each finding is labelled with a **severity level**:
 
-              - **Error** (red): Critical issues you should address before publishing.
-              - **Warning** (orange): Important concerns worth reviewing.
-              - **Info** (white): General recommendations and best practices.
+              - **Critical**: Serious issues you should address before publishing.
+              - **Warning**: Important concerns worth reviewing.
+              - **Info**: General recommendations and best practices.
+
+              Open any finding and it starts with **What could happen**, an explanation in everyday words of what the risk actually is for your app and your users, followed by **Technical details** with the evidence and where in your code it was found.
             imageUrl: /courses/vibe-coding-debugging-00/security-menu.webp
           subtitle: Understanding the findings
         - type: text
@@ -1493,7 +1518,6 @@ course:
               Your app stores data in database tables (think of them like spreadsheets). Each row is a piece of data: a user's profile, a book suggestion, or a vote on a book.
 
               **RLS is a set of rules that controls who can see and change each row.** Without these rules, the data in that table has no protection.
-            imageUrl: /courses/vibe-coding-debugging-00/no-rls-policy.webp
           subtitle: Who can see your data?
         - type: text
           title: 'RLS: The hidden danger'
@@ -1515,12 +1539,11 @@ course:
 
               The good news: Lovable can fix most RLS issues for you.
 
-              **Step 1:** In the security findings, open the RLS warning and ask Lovable to `Add Row Level Security policies`, **or** click the **Try to fix all** button to tackle all the identified issues at once.
+              **Step 1:** In the security findings, open the RLS warning and click its own **Try to fix** button, or use **Try to fix all** in the header to tackle everything at once. If you'd rather pick a few, tick their checkboxes and choose **Try to fix selected**.
 
               **Step 2:** Lovable will **add policies** that typically restrict each user to only see and modify their own data.
 
               **Step 3:** **Run the security scan again** to confirm the warning is gone. If Lovable's scanner no longer flags the table, the policies are in place.
-            imageUrl: /courses/vibe-coding-debugging-00/fix-rls-issue.webp
           subtitle: Let Lovable help
         - type: quiz-question
           title: 'Quiz: Row Level Security'
@@ -1542,7 +1565,6 @@ course:
               The first common one: **Leaked password protection disabled.** 
 
               This means your app doesn't check whether a user's chosen password has appeared in known data breaches. Without this check, users might sign up with passwords that have been **exposed in public data leaks**.
-            imageUrl: /courses/vibe-coding-debugging-00/leaked-password-protection.webp
           subtitle: Blocking known compromised passwords
         - type: text
           title: 'Leaked password protection fix'
@@ -1563,7 +1585,9 @@ course:
           title: When a warning feels too technical
           content:
             body: |-
-              If a warning feels too technical or unfamiliar, you don't have to figure it out alone. Open the finding and click **Reference in chat**. This pulls that specific warning into the chat, so Lovable knows exactly which issue you mean.
+              If a warning feels too technical or unfamiliar, start by opening the finding and reading **What could happen**. That section is written in everyday words and tells you what the risk means for your app and your users, which is often all you need to decide whether it applies to you.
+
+              If you want to go further, open the finding's **…** menu and choose **Reference in chat**. This pulls that specific warning into the chat, so Lovable knows exactly which issue you mean.
 
               From there you can **ask questions about it or give Lovable more context**. For example:
 
@@ -1571,7 +1595,7 @@ course:
               Explain what this security finding means and suggest how to fix it. Don't make changes to the user experience.
               ```
 
-              Referencing the warning first means you understand the risk before any code changes happen, and you stay in control of what gets touched. Asking about a finding in chat works like any chat message, so it uses credits. Running the scans and the **Try to fix all** button are the free actions.
+              Referencing the warning first means you understand the risk before any code changes happen, and you stay in control of what gets touched. Asking about a finding in chat works like any chat message, so it uses credits. Running the scans is always free, and reading **What could happen** costs nothing at all.
             imageUrl: /courses/vibe-coding-debugging-00/reference-in-chat.webp
           subtitle: Reference the warning and ask Lovable
         - type: text
@@ -1581,6 +1605,8 @@ course:
               When you see security errors and warnings, here's a simple **framework to help you decide what to do**:
 
               **Step 1: Let Lovable try first.** Click the **Try to fix all** button to let Lovable attempt automatic fixes. You could do this up to 3 times. Sometimes new security issues appear in subsequent rounds.
+
+              Keep an eye on the budget while you do: these fixes come out of the same **10 free fixes** as the **Try to Fix** button from Challenge 4, and each one comes back 24 hours after you use it. Past that, a round costs credits. The scans themselves stay free however often you run them.
 
               **Step 2: Ask for guidance on what's left.** If any issues remain after 3 rounds, go through them one by one. Open the top issue and **ask Lovable about it, giving it some context**:
               - **Who** uses your app? (just you, your team, or the public)
@@ -1609,7 +1635,7 @@ course:
               - Ask a developer friend to review the issues
               - Ignore the warnings, fix the errors and focus on building new features
             correctAnswer: 0
-            explanation: The first step is always to let Lovable try to fix the issues automatically. You could click "Try to fix all" up to 3 times. Only after that do you need to look at what's left, if there are any issues remaining.
+            explanation: The first step is always to let Lovable try to fix the issues automatically. You could click "Try to fix all" up to 3 times, keeping in mind that these come out of your 10 free fixes. Only after that do you need to look at what's left, if there are any issues remaining.
         - type: quiz-question
           title: 'Quiz: Asking for guidance'
           content:
