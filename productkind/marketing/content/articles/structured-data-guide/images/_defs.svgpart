@@ -1,0 +1,34 @@
+  <defs>
+    <linearGradient id="brand-gradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffb65b"/>
+      <stop offset="28%" stop-color="#fdd825"/>
+      <stop offset="52%" stop-color="#fbfb00"/>
+      <stop offset="76%" stop-color="#8efd23"/>
+      <stop offset="100%" stop-color="#00ed70"/>
+    </linearGradient>
+    <linearGradient id="brand-gradient-v" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffb65b"/>
+      <stop offset="50%" stop-color="#fbfb00"/>
+      <stop offset="100%" stop-color="#00ed70"/>
+    </linearGradient>
+    <filter id="card-shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#080809" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 z" fill="#080809"/>
+    </marker>
+    <style>
+      .display { font-family: "Space Mono", Menlo, Consolas, monospace; fill: #080809; }
+      .copy { font-family: Inter, Arial, sans-serif; fill: #080809; }
+      .muted { fill: #4a4a50; }
+      .card-title { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 26px; font-weight: 700; fill: #080809; }
+      .body { font-family: Inter, Arial, sans-serif; font-size: 21px; fill: #080809; }
+      .small { font-family: Inter, Arial, sans-serif; font-size: 18px; fill: #4a4a50; }
+      .label { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 17px; font-weight: 700; fill: #4a4a50; letter-spacing: 0.5px; }
+      .mini { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 15px; font-weight: 700; fill: #4a4a50; letter-spacing: 1px; }
+      .pill { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 15px; font-weight: 700; letter-spacing: 1.2px; fill: #080809; }
+      .code { font-family: "Space Mono", Menlo, Consolas, monospace; font-size: 17px; white-space: pre; fill: #080809; }
+      .connector { fill: none; stroke: #080809; stroke-width: 4; marker-end: url(#arrow); }
+      .divider { stroke: #e0dfd6; stroke-width: 2; }
+    </style>
+  </defs>

@@ -1,0 +1,40 @@
+W=1400 H=1050
+TITLE=Five steps to being found on Google and in AI search
+DESC=The five steps in this guide. Steps one to four get your website found. One, set up Google Search Console: it tells Google your website exists, and shows what people searched to find you. Two, submit your sitemap: it lists every page, so Google doesn't have to find each one through links. Three, let search engines and AI tools in: your robots.txt lets the right crawlers read your pages. Four, check which pages Google has indexed: it shows which pages made it into Google, and why others didn't. Step five gets your facts read correctly. Five, help Google and AI tools understand your website: schema markup states the facts about your business, so they don't have to guess. These steps get you found. Ranking takes longer, and depends on how well your pages answer what people search for.
+---
+  <text x="50" y="84" class="display" font-size="36" font-weight="700">Five steps to being found</text>
+  <text x="50" y="124" class="copy muted" font-size="22">How to get your website to show up on Google and in AI search.</text>
+  <rect x="60" y="170" width="76" height="534" fill="#eafff4" stroke="#00ed70" stroke-width="3"/>
+  <text x="98" y="437" text-anchor="middle" class="pill" font-size="17" transform="rotate(-90 98 437)">FOUND</text>
+  <rect x="60" y="722" width="76" height="120" fill="#fff8d9" stroke="#fdd825" stroke-width="3"/>
+  <text x="98" y="782" text-anchor="middle" class="pill" font-size="15" transform="rotate(-90 98 782)">UNDERSTOOD</text>
+  <g filter="url(#card-shadow)"><rect x="160" y="170" width="1180" height="120" fill="#ffffff" stroke="#080809" stroke-width="3"/></g>
+  <rect x="184" y="202" width="56" height="56" fill="#00ed70" stroke="#080809" stroke-width="2"/>
+  <text x="212" y="240" text-anchor="middle" class="display" font-size="26" font-weight="700">1</text>
+  <text x="270" y="222" class="card-title" font-size="24">Set up Google Search Console</text>
+  <text x="270" y="258" class="body" font-size="20" style="fill:#4a4a50">Tells Google your website exists, and shows what people searched to find you.</text>
+  <g filter="url(#card-shadow)"><rect x="160" y="308" width="1180" height="120" fill="#ffffff" stroke="#080809" stroke-width="3"/></g>
+  <rect x="184" y="340" width="56" height="56" fill="#00ed70" stroke="#080809" stroke-width="2"/>
+  <text x="212" y="378" text-anchor="middle" class="display" font-size="26" font-weight="700">2</text>
+  <text x="270" y="360" class="card-title" font-size="24">Submit your sitemap</text>
+  <text x="270" y="396" class="body" font-size="20" style="fill:#4a4a50">Lists every page, so Google doesn't have to find each one through links.</text>
+  <g filter="url(#card-shadow)"><rect x="160" y="446" width="1180" height="120" fill="#ffffff" stroke="#080809" stroke-width="3"/></g>
+  <rect x="184" y="478" width="56" height="56" fill="#00ed70" stroke="#080809" stroke-width="2"/>
+  <text x="212" y="516" text-anchor="middle" class="display" font-size="26" font-weight="700">3</text>
+  <text x="270" y="498" class="card-title" font-size="24">Let search engines and AI tools in</text>
+  <text x="270" y="534" class="body" font-size="20" style="fill:#4a4a50">Your robots.txt lets the right crawlers read your pages.</text>
+  <g filter="url(#card-shadow)"><rect x="160" y="584" width="1180" height="120" fill="#ffffff" stroke="#080809" stroke-width="3"/></g>
+  <rect x="184" y="616" width="56" height="56" fill="#00ed70" stroke="#080809" stroke-width="2"/>
+  <text x="212" y="654" text-anchor="middle" class="display" font-size="26" font-weight="700">4</text>
+  <text x="270" y="636" class="card-title" font-size="24">Check which pages Google has indexed</text>
+  <text x="270" y="672" class="body" font-size="20" style="fill:#4a4a50">Shows which pages made it into Google, and why others didn't.</text>
+  <g filter="url(#card-shadow)"><rect x="160" y="722" width="1180" height="120" fill="#ffffff" stroke="#080809" stroke-width="3"/></g>
+  <rect x="184" y="754" width="56" height="56" fill="#fdd825" stroke="#080809" stroke-width="2"/>
+  <text x="212" y="792" text-anchor="middle" class="display" font-size="26" font-weight="700">5</text>
+  <text x="270" y="774" class="card-title" font-size="24">Help Google and AI tools understand your website</text>
+  <text x="270" y="810" class="body" font-size="20" style="fill:#4a4a50">Schema markup states the facts about your business, so they don't have to guess.</text>
+  <rect x="60" y="880" width="1280" height="110" fill="#1a0044"/>
+  <rect x="60" y="880" width="14" height="110" fill="url(#brand-gradient-v)"/>
+  <text x="104" y="920" class="display" font-size="20" font-weight="700" style="fill:#ffd79a">THESE STEPS GET YOU FOUND. RANKING TAKES LONGER.</text>
+  <text x="104" y="954" class="copy" font-size="21" style="fill:#ffffff">Where your pages rank depends on how well they answer what people search for.</text>
+  <text x="1340" y="1025" text-anchor="end" class="label">LittleParrot.app</text>
