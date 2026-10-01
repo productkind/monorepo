@@ -99,7 +99,9 @@ course:
             body: |-
               Before any of this works, your Lovable project needs to be connected to GitHub. You only do this once.
 
-              In Lovable, open **Project settings → Git → GitHub** (or use the **+** menu in the chat), click to connect, and authorise the Lovable GitHub app. Lovable then creates a repository for your project and keeps it in sync.
+              In Lovable, open your project settings (press **Cmd + .** on a Mac, **Ctrl + .** on Windows, or use the **More** tab in the toolbar), go to the **Git** tab and choose **GitHub**. Click to connect and authorise the Lovable GitHub app. Lovable then creates a repository for your project and keeps it in sync.
+
+              *The same tab offers GitLab and Bitbucket if you'd rather use one of those. Everything in this course works the same way with any of them, we just use GitHub because it's the one most people start with.*
 
               The steps are in [**Connect Your App to GitHub**](https://littleparrot.app/nest/toolkit/5fcda78e-1847-47fc-bff8-b02beececa14), the guide that comes with this course. Once you're connected, come back here.
             imageUrl: /courses/vibe-coding-github-00/connect-github.webp
@@ -108,7 +110,7 @@ course:
           title: A glimpse of what's coming
           content:
             description: |-
-              Picture how you work with a chat assistant like ChatGPT or Claude.ai today: you ask, it answers, and you copy-paste the result into your document, over and over.
+              Picture how you work with an AI chat assistant like ChatGPT or Claude.ai today: you ask, it answers, and you copy-paste the result into your document, over and over.
 
               An **AI agent on your computer** skips all of that. It opens your files and **makes the changes directly**, in your app's code or in any document you keep in your workspace. And with version control, **you see exactly what it changed**, line by line, and keep only what you like.
 
@@ -468,7 +470,7 @@ course:
             body: |-
               Errors will pop up now and then, that's normal, and you won't need to memorise a fix for each one.
 
-              For anything beyond the two before, on any computer, you'll soon have the perfect helper: **GitHub Copilot**, the AI agent you'll set up in VS Code later in this course. It reads the error and your files right where they are, and can even install what's missing for you. No copy-pasting into a chat assistant and ferrying answers back, that's the power of an AI agent with access to your files.
+              For anything beyond the two before, on any computer, you'll soon have the perfect helper: **GitHub Copilot**, the AI agent you'll set up in VS Code later in this course. It reads the error and your files right where they are, and can even install what's missing for you. No copy-pasting into an AI chat assistant and ferrying answers back, that's the power of an AI agent with access to your files.
           subtitle: An AI agent will soon have your back
         - type: text
           title: Stopping, and picking up again
@@ -797,7 +799,7 @@ course:
           title: Pick the right mode
           content:
             body: |-
-              At the bottom of the chat there's a small **mode picker**, and choosing the right one is half the skill. Three to know:
+              In the chat input there's a small picker for choosing how Copilot should behave, and choosing the right one is half the skill. VS Code has renamed this over time, from "chat modes" to "agents", so you may see either word, but the three options you'll pick between are the same:
 
               - **Ask** answers questions and explains, without changing any files. It's your built-in tutor: *"What happens when a member votes for a book? Can they vote more than once?"*
               - **Plan** is for a bigger or fuzzier change: it asks you a few clarifying questions, then writes up a plan you can read and adjust. Nothing changes until you approve it.
@@ -900,7 +902,7 @@ course:
               No question is too small. Getting unstuck is exactly how confidence grows.
             subDescription: Type your question and you'll get a clear answer right back.
             placeholder: e.g. What does it mean to stage a change?
-            systemPrompt: "You are a warm, knowledgeable mentor for a curious non-technical app builder taking a course on editing their Lovable app on their own computer with VS Code, GitHub, and GitHub Copilot. The learner asks a question about anything from the course: VS Code, the terminal, Git and GitHub, pull, commit, push and publish, Copilot's Ask, Plan, and Agent modes, reviewing changes, recovering from errors, or the local setup. Answer it clearly and warmly in British English, in plain language for someone non-technical, in at most a few short sentences or bullets. If it falls outside the course, gently point them to where they could find out (they can ask Kinga and Tamas in the Discord community). Reassure them it was a good question to ask. Do not use em dashes. End on an encouraging note, and encourage them to ask in our Discord community if anything is unclear. Reply in a markdown format."
+            systemPrompt: "You are a warm, knowledgeable mentor for a curious non-technical app builder taking a course on editing their Lovable app on their own computer with VS Code, GitHub, and GitHub Copilot. The learner asks a question about anything from the course: VS Code, the terminal, Git and GitHub, pull, commit, push and publish, Copilot's Ask, Plan, and Agent modes, reviewing changes, recovering from errors, or the local setup. Answer it clearly and warmly in British English, in everyday words for someone non-technical, in at most a few short sentences or bullets. If it falls outside the course, gently point them to where they could find out (they can ask Kinga and Tamas in the Discord community). Reassure them it was a good question to ask. Do not use em dashes. End on an encouraging note, and encourage them to ask in our Discord community if anything is unclear. Reply in a markdown format."
             checkerPrompt: 'The learner is asking a question or sharing something they are unsure about. Accept any genuine question or comment. Only flag clearly empty or nonsense input. This is their message:'
         - type: challenge-end
           title: "You've got an AI agent now \U0001F916"
@@ -947,8 +949,14 @@ course:
           title: Not sure which side it's on? Ask Lovable
           content:
             body: |-
-              When you can't tell whether a change touches the backend, ask Lovable itself. In its **Plan mode** (one credit, and it changes nothing), describe what you want and ask whether it would touch the backend. The answer tells you straight away: if it does, build it in Lovable; if it doesn't, you can make it yourself with Copilot, for free.
-          subtitle: Plan mode answers, for one credit
+              When you can't tell whether a change touches the backend, ask Lovable itself.
+
+              Use **Chat** mode for this, the third option in the mode picker next to Build and Plan. It talks about your app without touching the code, and **chatting is free** within a daily allowance. For a course about not spending credits, that's the right tool: describe what you want and ask whether it would touch the backend.
+
+              The answer tells you straight away. If it does, build it in Lovable. If it doesn't, you can make it yourself with Copilot, for free.
+
+              *Plan mode would also answer, but it costs at least a credit because it writes you a plan you could build from. You only want the answer here.*
+          subtitle: A free question before you spend anything
         - type: text
           title: Keeping everything in sync
           content:
@@ -960,7 +968,7 @@ course:
               3. Then when you're done with your change, **stage, commit and push** in VS Code. 
               4. And **Publish** in Lovable when you want your website visitors to see the change.
 
-              And **if a change ever goes wrong**, you can roll back: in Lovable's **chat**, scroll to the version from just before your change and click its **revert** option.
+              And **if a change ever goes wrong**, you can roll back: in Lovable's **chat history**, scroll to the version from just before your change and click its **revert** option.
             imageUrl: /courses/vibe-coding-github-00/lovable-revert.webp
           subtitle: Pull, push, publish, and revert if needed
         - type: quiz-question
