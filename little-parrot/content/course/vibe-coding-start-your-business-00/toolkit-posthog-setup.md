@@ -8,10 +8,12 @@ A step-by-step guide for adding PostHog analytics to your app. Use this while yo
 
 ### Before you start
 
-You'll need a PostHog account. Sign up for free at [posthog.com](https://posthog.com/) (the free tier covers up to 1 million events per month). Once you're in, find these two values in your project settings:
+You'll need a PostHog account. Sign up for free at [posthog.com](https://posthog.com/). The free tier covers up to 1 million events a month, plus 5,000 session recordings, counted separately. Once you're in, find these two values in your project settings:
 
 - **Your project token** (a long string starting with `phc_`)
 - **Your project host URL** (either `https://us.i.posthog.com` if your PostHog data is hosted in the US or `https://eu.i.posthog.com` if it's hosted in the EU)
+
+While you're in project settings, turn on **Record user sessions**. Session replay is off by default, and recordings only start from the moment you enable it.
 
 ### Prompt 1: Set up PostHog
 
@@ -55,9 +57,9 @@ const options = {
 After your app builder adds the code, open your app in the browser and then check your PostHog dashboard. You should see:
 
 - A new event appearing in the **Activity** tab
-- Your visit showing up under **Session Replay** (give it a minute or two)
+- Your visit showing up under **Session Replay** (give it a minute or two, and check you enabled **Record user sessions**)
 
-If nothing appears, check that your project token and host URL are correct.
+If nothing appears, check that your project token and host URL are correct. If events arrive but recordings don't, it's almost always **Record user sessions** still being off.
 
 ### Prompt 2: Add custom event tracking
 
