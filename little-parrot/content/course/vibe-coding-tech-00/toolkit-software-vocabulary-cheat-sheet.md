@@ -61,7 +61,7 @@ A quick-reference guide to every term covered in the Basics of Software for Vibe
 | --- | --- |
 | **Backend function** | A small program that performs a specific job: validate an email, save data, send a notification. |
 | **Third-party service** | An external tool your app connects to (Stripe for payments, Resend for emails). |
-| **Supabase** | The backend toolkit most AI app builders use. Handles databases, authentication, and more. |
+| **Supabase** | The backend toolkit several AI app builders are built on. Handles databases, authentication, storage and more. Builders often give their built-in version their own name (Lovable calls it Lovable Cloud), so you may see both words for the same thing. |
 | **Authentication** | "Who are you?" Signing up and logging in. |
 | **Authorisation** | "What are you allowed to do?" Permissions and access control. |
 
@@ -76,4 +76,4 @@ A quick-reference guide to every term covered in the Basics of Software for Vibe
 | **Foreign key** | A column that links to another table's primary key (e.g. `user_id` in an orders table). |
 | **Relationship** | How tables connect to each other through primary and foreign keys. |
 | **SQL** | The language databases speak. **SELECT** = get data, **INSERT** = add data, **UPDATE** = change data, **DELETE** = remove data. |
-| **RLS (Row Level Security)** | A Supabase feature that controls which rows each user can access. Keeps data private. |
+| **RLS (Row Level Security)** | A database feature that controls which rows each user can access. Keeps data private. |
