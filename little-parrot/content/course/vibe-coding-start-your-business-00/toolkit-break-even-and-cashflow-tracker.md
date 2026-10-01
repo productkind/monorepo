@@ -41,7 +41,7 @@ For each transaction, log the date, description, and whether it's income or an e
 - **Monthly average** net income so you can spot trends
 - **Runway** showing how long your current balance lasts at the current burn rate
 
-**Why this matters:**
+**What this gives you:**
 
 - Your accountant will need these records at tax time
 - You can see at a glance whether your business is trending up or down

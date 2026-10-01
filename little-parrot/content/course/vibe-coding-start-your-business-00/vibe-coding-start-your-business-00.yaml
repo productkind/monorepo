@@ -486,7 +486,7 @@ course:
 
               It's free for up to 1 million events per month, which is more than enough for a product that's getting started.
 
-              PostHog also has a **session replay** feature that records how people navigate through your product. You can watch a real visitor's session like a video: see where they clicked, where they hesitated, and where they gave up. This is incredibly useful for spotting confusing parts of your product that you'd never notice yourself.
+              PostHog also has a **session replay** feature that records how people navigate through your product. You can watch a real visitor's session like a video: see where they clicked, where they hesitated, and where they gave up. This is incredibly useful for spotting confusing parts of your product that you'd never notice yourself. Session replay has its own free allowance, 5,000 recordings a month, counted separately from your events.
           subtitle: Your window into user behaviour
         - type: text
           title: What PostHog tracks automatically
@@ -555,12 +555,16 @@ course:
               - An ad blocker in your browser is blocking PostHog
 
               Try in an incognito/private browser window with ad blockers disabled.
+
+              **If events arrive but recordings don't**, that's a separate setting: see the Session replay step coming up.
           subtitle: Check the dashboard, not the code
         - type: text
           title: Session replay
           content:
             body: |-
-              Once PostHog is running, open the **Session replay** menu. Here you can watch recordings of real visitor sessions.
+              Session replay is **off until you turn it on**, which catches a lot of people out. In PostHog, go to your **project settings** and enable **Record user sessions**. Recordings only start from that moment, so do it early rather than after the launch you wanted to watch.
+
+              Once it's on and someone has visited, open the **Session replay** menu to watch real visitor sessions.
 
               **You'll see exactly what your visitors saw:** which pages they opened, where they clicked, where they scrolled, where they paused, and where they left. It's like looking over someone's shoulder as they use your product.
 
