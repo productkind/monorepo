@@ -1,0 +1,68 @@
+W=1400 H=1090
+TITLE=Who reads your robots.txt
+DESC=Your robots.txt file, at yourbusiness.com/robots.txt, is read by two groups of crawlers, the programs search engines and AI tools use to read websites. Search crawlers: let these in, so your website can appear in search results and AI answers. Googlebot for Google Search, AI Overviews and AI Mode. Bingbot for Bing and Microsoft Copilot. OAI-SearchBot for ChatGPT search. Claude-SearchBot for Claude search, and Claude-User for Claude fetching a page on demand when a user asks. PerplexityBot for Perplexity. Training crawlers: your choice, because blocking these does not remove you from search answers. GPTBot for OpenAI's AI models, ClaudeBot for Anthropic's AI models and Google-Extended for Google's Gemini. Blocking Google-Extended does not affect Google Search. If you have no robots.txt, every crawler is allowed. A wrong rule can keep all of them out, and the prompt in step 3 lets the right ones in while keeping private pages blocked.
+---
+  <text x="50" y="84" class="display" font-size="36" font-weight="700">Who reads your robots.txt</text>
+  <text x="50" y="124" class="copy muted" font-size="22">Crawlers are the programs search engines and AI tools use to read websites.</text>
+
+  <g filter="url(#card-shadow)">
+    <rect x="450" y="168" width="500" height="92" fill="#ffffff" stroke="#080809" stroke-width="3"/>
+  </g>
+  <text x="482" y="204" class="mini">YOUR FILE</text>
+  <text x="482" y="240" class="code" font-size="21" font-weight="700">yourbusiness.com/robots.txt</text>
+  <path d="M700 260 V296" fill="none" stroke="#080809" stroke-width="4"/>
+  <path d="M370 296 H1030" fill="none" stroke="#080809" stroke-width="4"/>
+  <path d="M370 294 V326" class="connector"/>
+  <path d="M1030 294 V326" class="connector"/>
+
+  <g filter="url(#card-shadow)">
+    <rect x="60" y="340" width="620" height="510" fill="#eafff4" stroke="#00ed70" stroke-width="3"/>
+    <rect x="60" y="338" width="620" height="18" fill="#00ed70"/>
+  </g>
+  <rect x="92" y="378" width="200" height="38" fill="#00ed70"/>
+  <text x="192" y="402" text-anchor="middle" class="pill">SEARCH CRAWLERS</text>
+  <text x="92" y="458" class="body">Let these in, so your website can appear in</text>
+  <text x="92" y="486" class="body">search results and AI answers.</text>
+  <text x="92" y="548" class="code" font-weight="700" font-size="19">Googlebot</text>
+  <text x="330" y="548" class="small" style="fill:#080809">Google Search, AI Overviews, AI Mode</text>
+  <line x1="92" y1="570" x2="648" y2="570" class="divider"/>
+  <text x="92" y="602" class="code" font-weight="700" font-size="19">Bingbot</text>
+  <text x="330" y="602" class="small" style="fill:#080809">Bing and Microsoft Copilot</text>
+  <line x1="92" y1="624" x2="648" y2="624" class="divider"/>
+  <text x="92" y="656" class="code" font-weight="700" font-size="19">OAI-SearchBot</text>
+  <text x="330" y="656" class="small" style="fill:#080809">ChatGPT search</text>
+  <line x1="92" y1="678" x2="648" y2="678" class="divider"/>
+  <text x="92" y="710" class="code" font-weight="700" font-size="19">Claude-SearchBot</text>
+  <text x="330" y="710" class="small" style="fill:#080809">Claude search</text>
+  <line x1="92" y1="732" x2="648" y2="732" class="divider"/>
+  <text x="92" y="764" class="code" font-weight="700" font-size="19">Claude-User</text>
+  <text x="330" y="764" class="small" style="fill:#080809">Claude, on-demand user fetch</text>
+  <line x1="92" y1="786" x2="648" y2="786" class="divider"/>
+  <text x="92" y="818" class="code" font-weight="700" font-size="19">PerplexityBot</text>
+  <text x="330" y="818" class="small" style="fill:#080809">Perplexity</text>
+
+  <g filter="url(#card-shadow)">
+    <rect x="720" y="340" width="620" height="510" fill="#fff8d9" stroke="#fdd825" stroke-width="3"/>
+    <rect x="720" y="338" width="620" height="18" fill="#fdd825"/>
+  </g>
+  <rect x="752" y="378" width="222" height="38" fill="#fdd825"/>
+  <text x="863" y="402" text-anchor="middle" class="pill">TRAINING CRAWLERS</text>
+  <text x="752" y="458" class="body">Your choice. Blocking these doesn't remove you</text>
+  <text x="752" y="486" class="body">from search answers.</text>
+  <text x="752" y="548" class="code" font-weight="700" font-size="19">GPTBot</text>
+  <text x="990" y="548" class="small" style="fill:#080809">OpenAI's AI models</text>
+  <line x1="752" y1="570" x2="1308" y2="570" class="divider"/>
+  <text x="752" y="602" class="code" font-weight="700" font-size="19">ClaudeBot</text>
+  <text x="990" y="602" class="small" style="fill:#080809">Anthropic's AI models</text>
+  <line x1="752" y1="624" x2="1308" y2="624" class="divider"/>
+  <text x="752" y="656" class="code" font-weight="700" font-size="19">Google-Extended</text>
+  <text x="990" y="656" class="small" style="fill:#080809">Google's Gemini</text>
+  <rect x="752" y="742" width="556" height="76" fill="#ffffff" stroke="#fdd825" stroke-width="2"/>
+  <text x="776" y="776" class="small" style="fill:#080809">Google says blocking Google-Extended doesn't</text>
+  <text x="776" y="802" class="small" style="fill:#080809">affect Google Search.</text>
+
+  <rect x="60" y="890" width="1280" height="110" fill="#1a0044"/>
+  <rect x="60" y="890" width="14" height="110" fill="url(#brand-gradient-v)"/>
+  <text x="104" y="930" class="display" font-size="20" font-weight="700" style="fill:#ffd79a">NO ROBOTS.TXT MEANS EVERY CRAWLER IS ALLOWED</text>
+  <text x="104" y="964" class="copy" font-size="21" style="fill:#ffffff">A wrong rule can keep all of them out. The prompt in step 3 lets the right ones in and keeps private pages blocked.</text>
+  <text x="1340" y="1055" text-anchor="end" class="label">LittleParrot.app</text>
