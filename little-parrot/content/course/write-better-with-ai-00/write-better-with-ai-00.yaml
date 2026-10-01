@@ -274,11 +274,17 @@ course:
           title: 'Examples: Popular LLMs'
           content:
             body: |-
-              - OpenAI: GPT-5, o3
-              - Anthropic: Claude Sonnet 4, Claude Opus 4.1
-              - Google: Gemini 2.5 Pro, Gemini 2.5 Flash
-              - Meta: LLaMA 3, LLaMA 4
-          subtitle: ''
+              A handful of companies build the models most people use. Each one makes a **family** of models, not a single one:
+
+              - **OpenAI** make **GPT**, the models behind ChatGPT
+              - **Anthropic** make **Claude**
+              - **Google** make **Gemini**
+              - **Meta** make **Llama**
+
+              Inside each family there are versions, usually marked with a number, a size, or a nickname. New ones arrive every few months, so any list of them goes out of date quickly. **You don't need to keep track.**
+
+              The pattern worth knowing is that each family tends to offer a bigger, slower, more expensive model and a smaller, faster, cheaper one. The big ones are better at working through a complicated problem. The small ones are perfectly good for the everyday writing in this course.
+          subtitle: A few families, many versions
         - type: text
           title: Not thinking. Predicting.
           content:
