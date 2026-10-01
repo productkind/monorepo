@@ -128,7 +128,7 @@ course:
             body: |-
               The **database** is where your app remembers things: user profiles, orders, blog posts, favourite recipes, you name it. It's a program on the server that stores and organises information so your backend can find it whenever it's needed.
 
-              When you prompt *"let users save their favourite recipes,"* you're asking for database storage. Most AI app builders use Supabase to handle this for you, so you don't need to set anything up yourself.
+              When you prompt *"let users save their favourite recipes,"* you're asking for database storage. Your AI app builder sets the database up for you, so there's nothing to install or configure yourself.
             imageUrl: /courses/vibe-coding-tech-00/database.gif
           subtitle: Where your app remembers things
         - type: quiz-question
@@ -185,7 +185,7 @@ course:
             nextModule: '**Next challenge:** Now that you know the parts of an app, let''s learn the **design vocabulary** that helps you describe exactly how you want things to look and feel. No more "make it nicer," you''ll have the words to say exactly what you mean!'
             description: You now have a mental map of how apps are built.
             subDescription: |-
-              It's powerful to know the difference between frontend and backend. It means you can point the AI app builder to exactly the right place. Try noticing which part you're talking about in your next prompt, it makes a real difference!
+              It's powerful to know the difference between frontend and backend. It means you can point the AI app builder to exactly the right place. Try naming which part you're talking about in your next prompt, and watch how much less the AI app builder has to guess.
 
               **Toolkit:** When something goes wrong with your app, the ["Where Is the Problem?" Troubleshooting Guide](https://littleparrot.app/nest/toolkit/10bfa9f3-7e39-4b67-aa66-8f9c95716a4f) helps you figure out which part is causing it and what to say to your AI app builder.
       title: Building Blocks of an Application
@@ -653,7 +653,7 @@ course:
           title: "Well done! Frontend foundations locked in! \U0001F4BB"
           content:
             cta: Next
-            nextModule: "**Next challenge:** Time to explore the **backend**—where the real magic happens behind the scenes. You'll learn about APIs, authentication, and how your app talks to other services. This is what turns a pretty interface into a powerful, functional product!"
+            nextModule: "**Next challenge:** Time to explore the **backend**, where the real magic happens behind the scenes. You'll learn about APIs, authentication, and how your app talks to other services. This is what turns a pretty interface into a powerful, functional product!"
             description: You now understand what's happening when the AI app builder generates your interface!
             subDescription: This knowledge is like having X-ray vision. Next time the AI app builder shows you code, see if you can spot the HTML elements (look for those angle brackets!). You'll start recognising the structure of what you're building. It's oddly satisfying!
       title: Frontend for Vibe Coders
@@ -678,11 +678,13 @@ course:
           title: Your backend toolkit
           content:
             body: |-
-              Most AI app builders use **Supabase** for your app as the backend. Think of Supabase as a toolkit that comes with user authentication, database storage, and more, all ready to use.
+              AI app builders come with a backend already built in. Think of it as a toolkit that arrives with user authentication, database storage, file storage and more, all ready to use.
 
-              You don't need to set up servers yourself. The AI app builder and Supabase handle the heavy lifting while you focus on what your app should actually do. It's like having a whole tech team in your pocket!
+              Most builders give theirs a product name (Lovable calls it Lovable Cloud), and several of them are built on the same underlying toolkit, **Supabase**. That's why you'll sometimes see the word Supabase in your app's code or settings even though you never signed up for it. Same thing, different name on the label.
+
+              You don't set up servers yourself either way. You focus on what your app should actually do. It's like having a whole tech team in your pocket!
             imageUrl: /courses/vibe-coding-tech-00/supabase.png
-          subtitle: Most AI app builders use Supabase
+          subtitle: The backend that comes built in
         - type: text
           title: Backend functions
           content:
@@ -696,9 +698,11 @@ course:
           title: Third-party services
           content:
             body: |-
-              Why build everything from scratch when someone else has already solved the problem? **Third-party services** handle things like sending emails (Resend, SendGrid), processing payments (Stripe), or posting to social media (Hootsuit, Buffer).
+              Why build everything from scratch when someone else has already solved the problem? **Third-party services** handle things like sending emails (Resend, SendGrid), processing payments (Stripe), or posting to social media (Hootsuite, Buffer).
 
               Most offer free tiers for small projects, perfect for getting started! When you need one, you can prompt: *"Integrate Stripe for payments"* and the AI app builder will guide you through connecting it.
+
+              Many popular services now come as ready-made **connectors**, so there's often nothing to wire up by hand. Look for a connectors or integrations list in your AI app builder, or simply name the service in your prompt and see what it offers.
             imageUrl: /courses/vibe-coding-tech-00/service.gif
           subtitle: Why reinvent the wheel?
         - type: text
@@ -740,7 +744,7 @@ course:
 
               **Authorisation** answers: "What are you allowed to do?" (can this user edit? can they see admin pages?).
 
-              Supabase handles authentication beautifully. You can prompt: *"Add email signup and login"* or *"Let users sign in with Google."* For authorisation, try: *"Only let admins access the dashboard."*
+              Your built-in backend handles authentication beautifully. You can prompt: *"Add email signup and login"* or *"Let users sign in with Google."* For authorisation, try: *"Only let admins access the dashboard."*
             imageUrl: /courses/vibe-coding-tech-00/auth.gif
           subtitle: Who you are vs what you can do
         - type: quiz-question
@@ -873,16 +877,16 @@ course:
             body: |-
               Here's the important truth: **deleted data is usually gone forever from the database**. There's no recycle bin. That's why the AI app builder often shows you the SQL code before running it, so you can approve changes first.
 
-              **If you can't read the SQL:** Just ask! Prompt *"Explain what this SQL will do in plain English"* before clicking confirm. A few seconds of checking can save hours of heartache.
+              **If you can't read the SQL:** Just ask! Prompt *"Explain what this SQL will do in everyday words"* before clicking confirm. A few seconds of checking can save hours of heartache.
             imageUrl: /courses/vibe-coding-tech-00/check.gif
           subtitle: Why you should always double-check
         - type: text
           title: Backups
           content:
             body: |-
-              **Backups** are copies of your database from a specific point in time. If something goes wrong, you can restore from a backup. Supabase offers automatic backups on paid plans.
+              **Backups** are copies of your database from a specific point in time. If something goes wrong, you can restore from a backup. Automatic backups usually come with paid plans.
 
-              Even on free plans, consider exporting important data regularly. For a side project, even a simple spreadsheet export can save you from disaster! Better safe than sorry.
+              Whatever plan you're on, it's worth taking your own copy now and then. Most backends have an export option somewhere in their settings, and for a side project even a simple spreadsheet export can save you from disaster! Better safe than sorry.
             imageUrl: /courses/vibe-coding-tech-00/backup.gif
           subtitle: Your safety net
         - type: text
@@ -891,7 +895,7 @@ course:
             body: |-
               Databases often store sensitive info, so access control is important. You can set rules for who can read, create, update, or delete data.
 
-              When building with an AI app builder, you'll often see **RLS** mentioned, this stands for **Row Level Security**. It's a Supabase feature that controls which rows each user can access.
+              When building with an AI app builder, you'll often see **RLS** mentioned, this stands for **Row Level Security**. It's a database feature that controls which rows each user can access, and you'll meet it whatever backend your app ends up using.
 
               For example, RLS can ensure users only see their own orders, not everyone else's. When the AI app builder asks you to "enable RLS" or shows RLS warnings, it's helping you protect your users' data.
 
@@ -966,12 +970,12 @@ course:
             explanation: |-
               Database changes can be permanent! There's no undo button for deleted data.
 
-              Always ask your AI app builder to explain SQL in plain English if you're unsure. A few seconds of checking can save hours of rebuilding!
+              Always ask your AI app builder to explain SQL in everyday words if you're unsure. A few seconds of checking can save hours of rebuilding!
             correctAnswer: 0
         - type: course-end
           title: "Congratulations! You speak \"software\" now! \U0001F38A"
           content:
-            nextModule: "**Your next step:** Take one of your ideas and start building it in Lovable. Keep the scope tiny—one screen, one feature. Ship it, share it with someone real, and learn from their feedback. That's how real products are born. You've got this!"
+            nextModule: "**Your next step:** Take one of your ideas and start building it in Lovable. Keep the scope tiny: one screen, one feature. Ship it, share it with someone real, and learn from their feedback. That's how real products are born. You've got this!"
             description: Look at everything you've learned!
             subDescription:
               "✓ **You understand the architecture:** Frontend (what users see), backend (the brain), database (the memory), infrastructure (the backbone). You can point your AI app builder to exactly the right place.\n\n✓ **You speak design language:** Wireframes, components, colours, fonts. You can describe exactly what you're picturing, no more \"make it nicer.\"\n\n✓ **You know what's under the hood:** HTML, CSS, JavaScript. You can give meaningful feedback to your AI app builder and ask better questions.\n\n✓ **You can prompt for backend features:** APIs, authentication, backend functions. You've graduated from pretty interfaces to powerful, functional products.\n\n✓ **You understand data:** Tables, relationships, SQL. You can think about how your app remembers things and ask the right questions.\n\n✓ **You know the danger zones:** Irreversible database changes, exposed API keys. You can protect yourself from common mistakes that trip up beginners.\n\n✓ **You share a vocabulary with developers:** Collaboration just got so much easier. You're no longer on the outside looking in.\n\nTools will change, but these foundations won't. The more you practise describing what you want in this language, the more powerful your vibe coding becomes.\n\n**Remember:** Start small, describe clearly, ship often, and learn from real users. You've built a superpower. Now go use it! \U0001F4AA\n\n**Toolkit:** Keep the [Software Vocabulary Cheat Sheet](https://littleparrot.app/nest/toolkit/ac7e9348-f7e1-459e-b46c-9078e909d282) open while you build. It has every term from this course in one quick-reference guide."
