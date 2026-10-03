@@ -73,6 +73,49 @@ const render: {
 }
 ```
 
+### 3a. A dispatch that returns a value needs its handler map annotated
+
+When the handlers produce a value rather than performing an effect, make the map generic in its result and **annotate the map where you build it**. Left to inference, each handler's object literal widens — `type: 'skip'` becomes `string` — and the result stops matching the union it was supposed to be.
+
+```ts
+// Bad — RESULT is inferred from the literals, so `type` widens and the return no longer fits
+return dispatchLookup({
+  lookup,
+  handlers: {
+    published: () => ({ type: 'skip', version }), // { type: string; version: string }
+    missing: () => ({ type: 'bootstrap', name }),
+    unavailable: ({ exitCode, stderr }) => ({ type: 'unavailable', exitCode, stderr }),
+  },
+})
+```
+
+```ts
+// Good — the map is declared as LookupTo<PublishDecision>, which contextually types every return
+type LookupTo<RESULT> = {
+  [TYPE in RegistryLookup['type']]: (lookup: Extract<RegistryLookup, { type: TYPE }>) => RESULT
+}
+
+const dispatchLookup = <RESULT, TYPE extends RegistryLookup['type']>({
+  lookup,
+  handlers,
+}: {
+  lookup: Extract<RegistryLookup, { type: TYPE }>
+  handlers: LookupTo<RESULT>
+}): RESULT => handlers[lookup.type](lookup)
+
+const handlers: LookupTo<PublishDecision> = {
+  published: ({ versions }) =>
+    versions.includes(targetVersion)
+      ? { type: 'skip', version: targetVersion }
+      : { type: 'publish', version: targetVersion },
+  missing: () => ({ type: 'bootstrap', name }),
+  unavailable: ({ exitCode, stderr }) => ({ type: 'unavailable', exitCode, stderr }),
+}
+return dispatchLookup({ lookup, handlers })
+```
+
+The `TYPE` parameter is still doing the job rule 4a describes: without it, indexing the map with a union key trips TypeScript's correlated-union limitation and tempts a cast.
+
 ## 4. No unsafe type assertions — neither `as` casts nor `!` non-null assertions
 
 Both `as` and `!` silence the type checker instead of satisfying it. Reach for a type-safe construction, a narrowing guard, or a runtime check that also asserts the invariant.
@@ -334,6 +377,38 @@ const parsed$ = defer(() => from(routed.parseAsync(argv)))
 ```
 
 The failure mode to watch for is a real _why_ padded with a second sentence describing the code beneath it. Write the reason, then stop.
+
+### 7a. If a test can carry the claim, write the test and delete the comment
+
+A comment that asserts a property is a claim nobody checks. Before keeping one, ask: **could a test fail when this stops being true?** If it could, write that test, name the test with the claim, and delete the comment.
+
+Then prove the test has teeth — break the thing on purpose and watch it fail. A test that passes either way is worth less than the comment it replaced, because it looks like enforcement and is not.
+
+Why: prose decays silently. Three comments in `bin/publish-lib` each asserted something no test could contradict; one of them had quietly become false, one described a condition the code no longer used, and one was true but unenforced, so `concat` could be changed to `merge` with every test still green.
+
+```ts
+// Bad — a claim about ordering, checked by nobody
+// One at a time, not in parallel: each call may stop and ask for a one-time password, and two
+// prompts competing for the same terminal cannot both be answered.
+const trustInTurn = ({ names, io }) => concat(...names.map((name) => trustOne({ name, io })))
+```
+
+```ts
+// Good — the claim is the test's name, and the test fails if anyone parallelises it
+const trustInTurn = ({ names, io }) => concat(...names.map((name) => trustOne({ name, io })))
+
+test('trustEveryLib does not start a second npm trust while the first is still waiting for a one-time password', async () => {
+  // hold the first call open, then assert the second has not been asked for
+})
+```
+
+The reason now arrives when someone needs it — in the failure message of the test they just broke — instead of sitting above the code hoping to be read.
+
+What survives this rule is knowledge about the **outside world** or about **intent**, never about what the code does:
+
+- a fact about a tool you stub, so no test of yours executes it — "npm writes only the dist-tag it is given on a first publish"
+- why a check exists at all, when the alternative is only worse ergonomics — "an older npm answers `Unknown command`, which reads as a typo"
+- a design intent a test cannot enforce — "one rule, so the three callers cannot disagree"; duplicate the rule and every test stays green
 
 ## 8. Test complicated types at the type level
 
@@ -759,3 +834,126 @@ app/runtime/ssr-react/
 ```
 
 There is no delivery segment above the feature level. `<product>/src/` is the product and nothing else, so `src/todo-mvc/ssr-react/app/runtime/ssr-react` names the same thing twice and stops a second delivery from sharing the domain.
+
+## 19. Decide first, then act — the edge cases do not live in the happy path
+
+A function that works out what the situation is **and** reacts to it buries the one thing it exists to do under the guards around it. Split it: a pure function maps the inputs to a **decision union**, and a thin function maps each decision to its effect. The decision function holds no rx, no events and no IO, so every outcome can be tested as a value.
+
+Anything that is not "do the thing" is a decision — not only failures. A version already on the registry is nobody's error, but it is still a reason not to publish, so it belongs on the decision side. Done right, the happy branch of the reaction is a single call.
+
+Why: the branches stop competing for the reader's attention; each outcome gets a name; and the handler map makes a forgotten case a compile error rather than a silent fall-through.
+
+```ts
+// Bad — parse, resolve, ask the registry, and pick between four outcomes, all in one function
+mergeMap((identity) => {
+  const targetVersion = version ?? identity.version
+  if (targetVersion === undefined) {
+    return throwError(() => new Error('Version is required in package.json or as an argument'))
+  }
+  return viewVersions({ name: identity.name }).pipe(
+    map(readRegistryLookup),
+    mergeMap((lookup) =>
+      lookup.type === 'missing'
+        ? of(eventCreators.publishNeedsBootstrap({ packageDir, name: identity.name }))
+        : lookup.type === 'unavailable'
+          ? of(eventCreators.publishFailed({ packageDir, ...lookup }))
+          : lookup.versions.includes(targetVersion)
+            ? of(eventCreators.publishSkipped({ packageDir, version: targetVersion }))
+            : buildAndPublish({ version: targetVersion }),
+    ),
+  )
+})
+```
+
+```ts
+// Good — a pure decision, then a thin reaction, with the pipe reading as the three steps it is
+type PublishDecision =
+  | { type: 'publish'; version: string }
+  | { type: 'skip'; version: string }
+  | { type: 'bootstrap'; name: string }
+  | { type: 'unavailable'; exitCode: number | undefined; stderr: string }
+
+const decidePublish = ({ lookup, targetVersion, name }): PublishDecision => {
+  /* no rx, no events — see 3a */
+}
+
+const actOnDecision = ({ decision, packageDir, buildAndPublish }) => {
+  const handlers: DecisionTo<Observable<PublishLibEvent>> = {
+    publish: ({ version }) => buildAndPublish({ version }),
+    skip: ({ version }) => of(eventCreators.publishSkipped({ packageDir, version })),
+    bootstrap: ({ name }) => of(eventCreators.publishNeedsBootstrap({ packageDir, name })),
+    unavailable: ({ exitCode, stderr }) =>
+      of(eventCreators.publishFailed({ packageDir, exitCode, stderr })),
+  }
+  return dispatchDecision({ decision, handlers })
+}
+
+viewVersions({ name }).pipe(
+  map(readRegistryLookup),
+  map((lookup) => decidePublish({ lookup, targetVersion, name })),
+  mergeMap((decision) => actOnDecision({ decision, packageDir, buildAndPublish })),
+)
+```
+
+The same split applies to reading a boundary: `readRegistryLookup` picks between `readPublishedVersions` and `readRegistryFailure` and does neither itself.
+
+## 20. Name the function you hand to an operator
+
+An operator's argument is a step in a pipeline, and a step deserves a name. Lift anything past a one-line forwarding call out to a named function, so the pipe reads as a list of what happens rather than as nested bodies. A named step is also callable from a test without building an observable.
+
+Why: `pipe(mergeMap(toUnpublishedPackageDir), toArray(), map(summariseUnpublished))` says what the operator does; the same code inline says only that it has three stages.
+
+```ts
+// Bad — three operator bodies, none of them named
+pipe(
+  mergeMap((event) =>
+    event.type === 'publish-failed' || event.type === 'publish-needs-bootstrap'
+      ? of(event.payload.packageDir)
+      : EMPTY,
+  ),
+  toArray(),
+  map((dirs) =>
+    dirs.length === 0
+      ? eventCreators.allPublished()
+      : eventCreators.publishesFailed({ packageDirs: [...dirs].sort() }),
+  ),
+)
+```
+
+```ts
+// Good — the steps are named, and the pipe is a sentence
+const toUnpublishedPackageDir = (event: PublishLibEvent): Observable<string> =>
+  event.type === 'publish-failed' || event.type === 'publish-needs-bootstrap'
+    ? of(event.payload.packageDir)
+    : EMPTY
+
+const summariseUnpublished = (packageDirs: string[]): PublishLibEvent =>
+  packageDirs.length === 0
+    ? eventCreators.allPublished()
+    : eventCreators.publishesFailed({ packageDirs: [...packageDirs].sort() })
+
+pipe(mergeMap(toUnpublishedPackageDir), toArray(), map(summariseUnpublished))
+```
+
+What stays inline is a forward that names nothing new — `map((lookup) => decidePublish({ lookup, targetVersion, name }))` only closes over the arguments, so naming it would add a hop without adding a word worth reading. The same goes for an error mapper: `catchAndRethrow(asPublishError)` beats a lambda that wraps one call.
+
+## 21. Order a module top-down
+
+Put the entry points first and descend: each function is followed by the ones it calls, one branch at a time, until that branch reaches its leaves. A reader starts where the module is entered and stops as soon as they have enough.
+
+Types and schemas go immediately above the function that owns them, not in a block at the top. Being exported does not promote a function: `publishUnlessPublished` is exported only so a test can reach it, so it sits at its depth like everything else.
+
+```
+// Good — entry points, then one branch at a time to its leaves
+publishEveryPackage, publishOnePackage     the entry points
+  buildAndPublishPackage → buildThenPublish
+  publishUnlessPublished → publishAtResolvedVersion → publishAgainstRegistry
+    parsePublishIdentity
+    readRegistryLookup   → readPublishedVersions, readRegistryFailure, readErrorCode
+    decidePublish        → dispatchLookup
+  getPackagesToPublish
+    excludePrivatePackages → publicPackagePaths → readPrivacy → isPrivatePackage
+  summarisePublishes → summariseOutcome → toUnpublishedPackageDir, summariseUnpublished
+```
+
+This works because every reference is inside a function body and so resolves when it is called, not when the module loads. A `const` initialised by calling another `const` is the exception, and has to come after it.

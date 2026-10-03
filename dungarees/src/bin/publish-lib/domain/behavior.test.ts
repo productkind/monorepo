@@ -6,12 +6,14 @@ import { collectValuesFrom } from '@dungarees/rxjs/util.ts'
 
 import { expect, test } from 'vitest'
 
-// npm exits non-zero for a package it has never seen, which is what lets a publish run.
-const notPublished = (name: string) => ({
+// For a name it has never seen npm exits non-zero and prints its error as JSON on stdout.
+const neverPublished = (name: string) => ({
   command: 'npm',
   args: ['view', name, 'versions', '--json'],
-  stdout: '',
-  stderr: 'E404 Not found',
+  stdout: JSON.stringify({
+    error: { code: 'E404', summary: 'Not Found', detail: 'not in this registry' },
+  }),
+  stderr: 'npm error code E404',
   exitCode: 1,
 })
 
@@ -22,7 +24,12 @@ const alreadyPublished = (name: string, versions: string[]) => ({
   exitCode: 0,
 })
 
-const NOT_PUBLISHED_TWO_LIBS = [notPublished('@org/lib-1'), notPublished('@org/lib-2')]
+// Publishing only ever happens over a name the registry already knows, so every test that expects
+// a publish has to say the package exists at some other version.
+const PUBLISHED_TWO_LIBS = [
+  alreadyPublished('@org/lib-1', ['0.9.0']),
+  alreadyPublished('@org/lib-2', ['0.9.0']),
+]
 
 const publishedDirs = (commands: ExecutedCommand[]) =>
   commands
@@ -114,7 +121,7 @@ test('publish single lib', async () => {
       '/src/index.ts': 'console.log("Single lib")',
     },
     commands: [
-      notPublished('single-lib'),
+      alreadyPublished('single-lib', ['0.0.1']),
       {
         command: 'npm',
         args: ['publish', '--access', 'public'],
@@ -129,6 +136,7 @@ test('publish single lib', async () => {
       outDir: '/dist',
       version: undefined,
       registry: undefined,
+      allowNewPackages: false,
     }).events$,
   )
 
@@ -163,7 +171,7 @@ test('publishSingleLib reports the failure so the command can exit non-zero', as
       '/src/index.ts': 'console.log("Single lib")',
     },
     commands: [
-      notPublished('single-lib'),
+      alreadyPublished('single-lib', ['0.0.1']),
       {
         command: 'npm',
         args: ['publish', '--access', 'public'],
@@ -180,6 +188,7 @@ test('publishSingleLib reports the failure so the command can exit non-zero', as
       outDir: '/dist',
       version: undefined,
       registry: undefined,
+      allowNewPackages: false,
     }).events$,
   )
 
@@ -238,7 +247,7 @@ test('publish a multi-lib folder', async () => {
       '/multi-lib/src/sub/lib-2/utils.ts': srcFile4,
     },
     commands: [
-      ...NOT_PUBLISHED_TWO_LIBS,
+      ...PUBLISHED_TWO_LIBS,
       {
         command: 'npm',
         args: ['publish', '--access', 'public'],
@@ -251,6 +260,7 @@ test('publish a multi-lib folder', async () => {
     service.publishMultiLib({
       dir: '/multi-lib',
       registry: undefined,
+      allowNewPackages: false,
     }).events$,
   )
   const publishedFiles = service.fileSystem.toJSON()
@@ -297,7 +307,7 @@ test('a package marked private is not published', async () => {
       '/multi-lib/src/fake-app/fake.ts': 'export const fake = 1\n',
     },
     commands: [
-      ...NOT_PUBLISHED_TWO_LIBS,
+      ...PUBLISHED_TWO_LIBS,
       {
         command: 'npm',
         args: ['publish', '--access', 'public'],
@@ -308,7 +318,8 @@ test('a package marked private is not published', async () => {
   })
 
   await collectValuesFrom(
-    service.publishMultiLib({ dir: '/multi-lib', registry: undefined }).events$,
+    service.publishMultiLib({ dir: '/multi-lib', registry: undefined, allowNewPackages: false })
+      .events$,
   )
 
   expect(publishedDirs(service.executedCommands)).toEqual(['/multi-lib/dist/lib-1'])
@@ -366,7 +377,7 @@ test('build copies an asset that sits in a subdirectory', async () => {
 })
 
 const failingNpm = (stderr: string) => [
-  ...NOT_PUBLISHED_TWO_LIBS,
+  ...PUBLISHED_TWO_LIBS,
   {
     command: 'npm',
     args: ['publish', '--access', 'public'],
@@ -391,7 +402,7 @@ test('publishMultiLib surfaces each failed publish instead of swallowing it', as
   })
 
   const events = await collectValuesFrom(
-    service.publishMultiLib({ dir: '/m', registry: undefined }).events$,
+    service.publishMultiLib({ dir: '/m', registry: undefined, allowNewPackages: false }).events$,
   )
 
   expect(events.filter(({ type }) => type === 'publish-failed')).toHaveLength(2)
@@ -404,7 +415,7 @@ test('publishMultiLib reports the failed packages instead of claiming success', 
   })
 
   const events = await collectValuesFrom(
-    service.publishMultiLib({ dir: '/m', registry: undefined }).events$,
+    service.publishMultiLib({ dir: '/m', registry: undefined, allowNewPackages: false }).events$,
   )
 
   expect(events.map(({ type }) => type)).not.toContain('all-published')
@@ -417,7 +428,9 @@ test('publishMultiLib still attempts every package when one fails', async () => 
     commands: failingNpm('Cannot publish over a version'),
   })
 
-  await collectValuesFrom(service.publishMultiLib({ dir: '/m', registry: undefined }).events$)
+  await collectValuesFrom(
+    service.publishMultiLib({ dir: '/m', registry: undefined, allowNewPackages: false }).events$,
+  )
 
   expect(publishedDirs(service.executedCommands)).toEqual(['/m/dist/lib-1', '/m/dist/lib-2'])
 })
@@ -432,9 +445,8 @@ test('publishMultiLib skips a package whose version is already on the registry',
       '/m/src/lib-2/b.ts': 'export const b = 1\n',
     },
     commands: [
-      // lib-1 is already published at this version, lib-2 has never been published
       alreadyPublished('@org/lib-1', ['1.0.0']),
-      notPublished('@org/lib-2'),
+      alreadyPublished('@org/lib-2', ['0.9.0']),
       {
         command: 'npm',
         args: ['publish', '--access', 'public'],
@@ -445,7 +457,7 @@ test('publishMultiLib skips a package whose version is already on the registry',
   })
 
   const events = await collectValuesFrom(
-    service.publishMultiLib({ dir: '/m', registry: undefined }).events$,
+    service.publishMultiLib({ dir: '/m', registry: undefined, allowNewPackages: false }).events$,
   )
 
   expect(events).toContainEqual(
@@ -462,6 +474,67 @@ test('publishMultiLib skips a package whose version is already on the registry',
       .filter(({ args }) => args[0] === 'publish')
       .map(({ options }) => options?.cwd),
   ).toEqual(['/m/dist/lib-2'])
+})
+
+test('publishMultiLib leaves a package the registry has never seen for a human to bootstrap', async () => {
+  const service = createFakePublishLib({
+    files: TWO_LIBS,
+    commands: [
+      alreadyPublished('@org/lib-1', ['0.9.0']),
+      neverPublished('@org/lib-2'),
+      {
+        command: 'npm',
+        args: ['publish', '--access', 'public'],
+        stdout: 'Published successfully',
+        exitCode: 0,
+      },
+    ],
+  })
+
+  const events = await collectValuesFrom(
+    service.publishMultiLib({ dir: '/m', registry: undefined, allowNewPackages: false }).events$,
+  )
+
+  expect(events).toContainEqual(
+    eventCreators.publishNeedsBootstrap({ packageDir: 'lib-2', name: '@org/lib-2' }),
+  )
+  expect(publishedDirs(service.executedCommands)).toEqual(['/m/dist/lib-1'])
+  expect(events.at(-1)).toEqual(eventCreators.publishesFailed({ packageDirs: ['lib-2'] }))
+})
+
+test('publishMultiLib reports a registry it could not reach as a failure, not as a new package', async () => {
+  const service = createFakePublishLib({
+    files: TWO_LIBS,
+    commands: [
+      alreadyPublished('@org/lib-1', ['0.9.0']),
+      {
+        command: 'npm',
+        args: ['view', '@org/lib-2', 'versions', '--json'],
+        stdout: '',
+        stderr: 'npm error network request failed',
+        exitCode: 1,
+      },
+      {
+        command: 'npm',
+        args: ['publish', '--access', 'public'],
+        stdout: 'Published successfully',
+        exitCode: 0,
+      },
+    ],
+  })
+
+  const events = await collectValuesFrom(
+    service.publishMultiLib({ dir: '/m', registry: undefined, allowNewPackages: false }).events$,
+  )
+
+  expect(events).toContainEqual(
+    eventCreators.publishFailed({
+      packageDir: 'lib-2',
+      exitCode: 1,
+      stderr: 'npm error network request failed',
+    }),
+  )
+  expect(events.map(({ type }) => type)).not.toContain('publish-needs-bootstrap')
 })
 
 test('build leaves the tests out of the package it writes', async () => {
@@ -487,4 +560,105 @@ test('build leaves the tests out of the package it writes', async () => {
       './index.ts': { import: './index.js', types: './index.d.ts' },
     },
   })
+})
+
+const TRUST_SETTINGS = {
+  repository: 'org/repo',
+  workflow: 'publish.yaml',
+  environment: 'npm-publish',
+  registry: undefined,
+  dryRun: false,
+}
+
+const npmVersionIs = (version: string) => ({
+  command: 'npm',
+  args: ['--version'],
+  stdout: `${version}\n`,
+  exitCode: 0,
+})
+
+const trusts = (name: string) => ({
+  command: 'npm',
+  args: [
+    'trust',
+    'github',
+    name,
+    '--file',
+    'publish.yaml',
+    '--repository',
+    'org/repo',
+    '--environment',
+    'npm-publish',
+    '--allow-publish',
+    '--yes',
+  ],
+  stdout: '',
+  exitCode: 0,
+})
+
+test('bootstrapLib reserves the name with npm, then points it at the workflow', async () => {
+  const service = createFakePublishLib({
+    files: {
+      '/m/src/lib-1/package.json': JSON.stringify({ name: '@org/lib-1' }),
+    },
+    commands: [
+      npmVersionIs('11.15.0'),
+      neverPublished('@org/lib-1'),
+      {
+        command: 'npm',
+        args: ['publish', '--access', 'public', '--tag', 'bootstrap'],
+        stdout: '',
+        exitCode: 0,
+      },
+      {
+        command: 'npm',
+        args: [
+          'deprecate',
+          '@org/lib-1@0.0.0',
+          'Placeholder version, never published from CI. Use the latest release.',
+        ],
+        stdout: '',
+        exitCode: 0,
+      },
+      trusts('@org/lib-1'),
+    ],
+  })
+
+  const events = await collectValuesFrom(
+    service.bootstrapLib({ srcDir: '/m/src/lib-1', outDir: '/m/dist/lib-1', ...TRUST_SETTINGS })
+      .events$,
+  )
+
+  expect(events.at(-1)).toEqual(eventCreators.bootstrapSucceeded({ name: '@org/lib-1' }))
+  expect(service.executedCommands).toContainEqual({
+    command: 'npm',
+    args: ['publish', '--access', 'public', '--tag', 'bootstrap'],
+    options: { cwd: '/m/dist/lib-1', stdio: 'inherit' },
+  })
+  expect(JSON.parse(service.fileSystem.toJSON()['/m/dist/lib-1/package.json'] ?? '')).toEqual({
+    name: '@org/lib-1',
+    version: '0.0.0',
+    description: 'Placeholder reserving the name. The first real release comes from org/repo.',
+    repository: { type: 'git', url: 'git+https://github.com/org/repo.git' },
+  })
+})
+
+test('trustAllLibs points every public package at the workflow', async () => {
+  const service = createFakePublishLib({
+    files: {
+      '/m/src/lib-1/package.json': JSON.stringify({ name: '@org/lib-1' }),
+      '/m/src/lib-2/package.json': JSON.stringify({ name: '@org/lib-2' }),
+      '/m/src/app/package.json': JSON.stringify({ name: '@org/app', private: true }),
+    },
+    commands: [npmVersionIs('11.15.0'), trusts('@org/lib-1'), trusts('@org/lib-2')],
+  })
+
+  const events = await collectValuesFrom(
+    service.trustAllLibs({ dir: '/m', ...TRUST_SETTINGS }).events$,
+  )
+
+  expect(events.at(-1)).toEqual(eventCreators.allTrusted({ count: 2 }))
+  expect(
+    service.executedCommands.filter(({ args }) => args[0] === 'trust').map(({ args }) => args[2]),
+  ).toEqual(['@org/lib-1', '@org/lib-2'])
 })

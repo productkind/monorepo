@@ -50,6 +50,20 @@ Initializes the monorepo by setting up the environment.
 
 Builds all the projects in the monorepo.
 
+### `npm run bootstrap:lib -- dungarees/src/<lib> dungarees/dist/<lib>`
+
+Run this once when you add a new `@dungarees/*` package, before you push it.
+
+CI publishes over trusted publishing (OIDC), which carries no token and therefore cannot create a package: npm only accepts an OIDC publish for a name that already exists and already names `publish-dungarees.yaml` as a trusted publisher. Setting that up needs an interactive 2FA challenge, which no unattended job can answer.
+
+This is `dungarees bootstrap-lib` with this repository's coordinates filled in. It reserves the name with a throwaway `0.0.0` under the `bootstrap` dist-tag, deprecates it, and registers the trusted publisher. The real release still comes from CI, with provenance. Run `npm login` first, and use npm 11.15 or newer — the command refuses to start on anything older, because `npm trust` arrived in 11.15.
+
+The `pre-push` hook blocks a push that adds a package the registry has never seen, so you will be told if you forget. `SKIP_BOOTSTRAP_CHECK=1 git push` overrides it; the publish job then fails on main instead, and re-running it after bootstrapping is enough — no follow-up commit needed.
+
+### `npm run trust:dungarees`
+
+The one-off migration (`dungarees trust-libs`): registers `publish-dungarees.yaml` as the trusted publisher for every public package, one at a time in name order so a 2FA prompt is answerable and an interrupted run is resumable by eye. Add `--dry-run` to see what it would configure without touching the registry. npm rejects a package that is already set up rather than duplicating it, so re-running a half-finished migration is safe — the already-done ones are reported as failures.
+
 ## Getting started
 
 To get started with the productkind monorepo, clone the repository and run the initialization script:

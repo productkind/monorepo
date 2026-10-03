@@ -32,9 +32,12 @@ const publishDungareesBinary = async (
   if (process.env['E2E_USE_HOST_NODE_MODULES'] !== 'true') {
     await npmPublisherExec('npm install', { workingDir: '/opt/app/' })
   }
-  await npmPublisherExec('npm run publish:dungarees -- --registry http://npmregistry:4873', {
-    workingDir: '/opt/app/',
-  })
+  // The throwaway registry has never seen any of these names, and has no trusted publishing to
+  // configure, so here creating them is the whole point. Against npmjs the publish refuses.
+  await npmPublisherExec(
+    'npm run publish:dungarees -- --registry http://npmregistry:4873 --allow-new-packages',
+    { workingDir: '/opt/app/' },
+  )
 }
 
 const authenticateNpmRegistry = async (

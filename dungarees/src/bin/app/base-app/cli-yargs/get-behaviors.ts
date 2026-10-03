@@ -10,7 +10,7 @@ export const getBehaviors = ({
   npm,
   git,
 }: DungareesBinServices): DungareesBinBehaviors => ({
-  publishLib: createPublishLibBehavior({ fileSystem, npm }),
+  publishLib: createPublishLibBehavior({ fileSystem, npm, git }),
   auditDependencies: createAuditDependenciesBehavior({ fileSystem }),
   auditComments: createAuditCommentsBehavior({ git }),
 })

@@ -23,6 +23,14 @@ Keep a comment when it states something the code cannot: a constraint that force
 
 When a comment gives a reason but buries it in narration, cut it down to the reason rather than deleting it.
 
+Before keeping a comment that asserts a **property of the code** — this runs sequentially, this one failure does not stop the others, this branch is never reached — apply rule 7a and ask whether a test could fail when that stops being true. Three outcomes:
+
+- **A test already pins it and its name says the same thing.** Delete the comment and name that test in your report. This is the best case and it is common once a feature has tests.
+- **A test could pin it but none does.** Keep the comment, and say in your report that it should become a test, quoting the claim. Do not write the test yourself — see the hard limits.
+- **No test could reach it.** Keep it. This is the real keeper: a fact about a tool the code stubs rather than runs, why a check exists at all, or a design intent that duplication would not break.
+
+To tell the first case from the second, look for the test and read its name; do not assume one exists because the feature has tests. A test that cannot fail when the claim is broken does not count, so prefer a test whose name states the claim over one that merely touches the code path.
+
 If you cannot decide, keep it and say so in your report. A kept comment costs a line; a wrongly deleted one loses knowledge that is not recoverable from the code.
 
 ## Hard limits

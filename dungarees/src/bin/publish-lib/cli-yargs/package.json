@@ -9,7 +9,8 @@
   "type": "module",
   "dependencies": {
     "@dungarees/bin-publish-lib-domain": "*",
-    "@dungarees/cli": "*"
+    "@dungarees/cli": "*",
+    "yargs": "^18.0.0"
   },
   "devDependencies": {
     "typescript": "^5.9.3",

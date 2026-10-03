@@ -1,3 +1,7 @@
+# Do not rename this file or the environment below. Every @dungarees package names both in its
+# trusted publisher configuration, npm matches them exactly, and those configurations cannot be
+# edited — only revoked and recreated. A rename means running `npm run trust:dungarees` again for
+# all of them, with publishing broken in between.
 name: Publish Dungarees to npm
 
 # Runs off the back of Checks rather than off the push, so the checks are never repeated here.
@@ -31,8 +35,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          # `workflow_run` starts from the default branch, so the commit that passed Checks has to
-          # be named explicitly or a later push could be published as though it had been checked.
           ref: ${{ github.event.workflow_run.head_sha }}
 
       - name: Setup Node.js
@@ -42,13 +44,11 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           cache: 'npm'
 
+      - name: Use an npm that can publish over OIDC
+        run: npm install -g npm@latest
+
       - name: Install dependencies
         run: npm ci
 
       - name: Publish to npm
         run: npm run publish:dungarees
-        env:
-          # Trusted publishing is configured per package and cannot create one that does not exist
-          # yet, so a scope-wide token is what lets a new @dungarees package be published for the
-          # first time.
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
