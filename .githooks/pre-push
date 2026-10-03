@@ -52,6 +52,7 @@ while read -r _local_ref local_oid _remote_ref remote_oid; do
 done
 
 if [ "$found_new_package" = 1 ]; then
+  echo "Bootstrap them all with: npm run bootstrap:missing" >&2
   echo "To push anyway: SKIP_BOOTSTRAP_CHECK=1 git push" >&2
   exit 1
 fi

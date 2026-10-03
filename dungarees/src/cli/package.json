@@ -18,5 +18,10 @@
   },
   "type": "module",
   "author": "info@productkind.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/productkind/monorepo.git",
+    "directory": "dungarees/src/cli"
+  },
   "license": "MIT"
 }

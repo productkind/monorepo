@@ -31,5 +31,10 @@
     "vitest": "^3.0.2"
   },
   "author": "info@productkind.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/productkind/monorepo.git",
+    "directory": "dungarees/src/test-environment"
+  },
   "license": "MIT"
 }

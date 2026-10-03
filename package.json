@@ -10,6 +10,7 @@
     "init": "zx ./productkind/scripts/init.ts",
     "publish:dungarees": "dungarees publish-multi-lib ./dungarees",
     "bootstrap:lib": "dungarees bootstrap-lib --repository productkind/monorepo --workflow publish-dungarees.yaml --environment npm-publish",
+    "bootstrap:missing": "dungarees bootstrap-missing ./dungarees --repository productkind/monorepo --workflow publish-dungarees.yaml --environment npm-publish",
     "trust:dungarees": "dungarees trust-libs ./dungarees --repository productkind/monorepo --workflow publish-dungarees.yaml --environment npm-publish",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
