@@ -41,13 +41,13 @@ export const publishLibPresenter: Presenter<PublishLibEvent> = {
     stdout(`${name} is already on the registry, so only its publisher is missing`),
   'name-reserved': ({ name, version, tag }) =>
     stdout(`Reserved ${name} with a placeholder ${version} under the ${tag} tag`),
-  'placeholder-publish-failed': ({ name, stderr: error }) =>
-    stderr(`Could not reserve ${name}: ${error}`),
+  'placeholder-publish-failed': ({ name }) =>
+    stderr(`Could not reserve ${name}. npm's own output is above.`),
   'deprecate-failed': ({ name, version }) =>
     stderr(`Could not deprecate ${name}@${version}; do it by hand when you can`, 'warn'),
   'publisher-trusted': ({ name }) => stdout(`${name} now trusts this workflow to publish it`),
-  'trust-failed': ({ name, stderr: error }) =>
-    stderr(`Could not configure the publisher for ${name}: ${error}`),
+  'trust-failed': ({ name }) =>
+    stderr(`Could not configure the publisher for ${name}. npm's own output is above.`),
   'bootstrap-succeeded': ({ name }) =>
     stdout(`${name} is ready. CI publishes it from the next green push to main.`),
   'bootstrap-failed': ({ srcDir }) => [stderr(`Did not bootstrap ${srcDir}`), exit(1)],
@@ -70,6 +70,9 @@ export const publishLibPresenter: Presenter<PublishLibEvent> = {
   // Silence is the point: this runs on every push, and a push with nothing new to say should not
   // print anything at all.
   'no-new-packages': () => [],
+  'not-logged-in': () => [stderr('Not logged in to the registry. Run: npm login'), exit(1)],
+  'bootstrapping-missing': ({ count }) =>
+    stdout(count === 0 ? 'Nothing to bootstrap' : `${count} packages to bootstrap`),
   'some-not-trusted': ({ names }) => [
     stderr(
       `Not configured: ${names.join(', ')}. npm rejects a package that is already set up rather than duplicating it, so re-running a finished migration reports every package here. Check one with: npm trust list <package>`,

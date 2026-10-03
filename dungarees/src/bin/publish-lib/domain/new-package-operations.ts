@@ -15,9 +15,9 @@ import { map, mergeMap } from 'rxjs/operators'
 
 type GitOutput = { stdout: string; exitCode: number | undefined }
 
-export type NewPackageIo = {
-  listAddedFiles: (options: { base: string; tip: string }) => Observable<GitOutput>
-  showFile: (options: { ref: string; path: string }) => Observable<GitOutput>
+// Sweeping the working tree needs no git at all, so the glob side is its own port rather than
+// something that drags `listAddedFiles` along for callers that never diff anything.
+export type PackageCheckIo = {
   glob: (pattern: string) => Observable<string[]>
   readText: TextFileReader
   viewVersions: (options: { name: string }) => Observable<{
@@ -26,6 +26,13 @@ export type NewPackageIo = {
     exitCode: number | undefined
   }>
 }
+
+export type NewPackageIo = PackageCheckIo & {
+  listAddedFiles: (options: { base: string; tip: string }) => Observable<GitOutput>
+  showFile: (options: { ref: string; path: string }) => Observable<GitOutput>
+}
+
+export type MissingPackage = { name: string; srcDir: string; outDir: string }
 
 export const checkNewPackages = ({
   base,
@@ -59,7 +66,7 @@ export const checkEveryPackage = ({
 }: {
   dir: string
   bootstrapCommand: string | undefined
-  io: NewPackageIo
+  io: PackageCheckIo
   paths?: LibraryPublishPaths
 }): Observable<PublishLibEvent> =>
   checkPackages({
@@ -76,7 +83,7 @@ const everyManifest = ({
   paths,
 }: {
   dir: string
-  io: NewPackageIo
+  io: PackageCheckIo
   paths: LibraryPublishPaths
 }): Observable<string[]> =>
   io
@@ -95,7 +102,7 @@ const checkPackages = ({
   manifestPaths$: Observable<string[]>
   readManifest: (path: string) => Observable<string>
   bootstrapCommand: string | undefined
-  io: NewPackageIo
+  io: PackageCheckIo
   paths: LibraryPublishPaths
 }): Observable<PublishLibEvent> =>
   manifestPaths$.pipe(
@@ -152,7 +159,7 @@ const checkEachManifest = ({
   manifestPaths: string[]
   readManifest: (path: string) => Observable<string>
   bootstrapCommand: string | undefined
-  io: NewPackageIo
+  io: PackageCheckIo
   paths: LibraryPublishPaths
 }): Observable<PublishLibEvent> =>
   manifestPaths.length === 0
@@ -175,7 +182,7 @@ const checkManifest = ({
   manifestPath: string
   readManifest: (path: string) => Observable<string>
   bootstrapCommand: string | undefined
-  io: NewPackageIo
+  io: PackageCheckIo
   paths: LibraryPublishPaths
 }): Observable<PublishLibEvent> =>
   readManifest(manifestPath).pipe(
@@ -197,7 +204,7 @@ const askRegistryAbout = ({
   name: string
   manifestPath: string
   bootstrapCommand: string | undefined
-  io: NewPackageIo
+  io: PackageCheckIo
   paths: LibraryPublishPaths
 }): Observable<PublishLibEvent> =>
   io.viewVersions({ name }).pipe(

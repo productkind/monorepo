@@ -330,3 +330,15 @@ test('git showFile reads a path as of one commit, not as it sits on disk', async
 
   expect(executedCommands).toEqual([{ command: 'git', args, options: {} }])
 })
+
+test('npm whoami asks the registry who the stored credentials belong to', async () => {
+  const { subProcess, executedCommands } = createStubSubProcessService([
+    { command: 'npm', args: ['whoami'], stdout: 'eggdice\n', exitCode: 0 },
+  ])
+
+  const { npm } = createCliCommands(subProcess)
+
+  await lastValueFrom(npm.whoami().output$)
+
+  expect(executedCommands).toEqual([{ command: 'npm', args: ['whoami'], options: {} }])
+})

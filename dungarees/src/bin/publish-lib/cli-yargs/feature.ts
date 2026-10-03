@@ -1,6 +1,7 @@
 import { publishLibPresenter } from './presenter.ts'
 import {
   bootstrapLibYargsModule,
+  bootstrapMissingYargsModule,
   buildYargsModule,
   checkNewPackagesYargsModule,
   publishMultiLibYargsModule,
@@ -22,6 +23,7 @@ export const publishLibFeature = ({
     publishMultiLibYargsModule({ publishLib }),
     publishSingleLibYargsModule({ publishLib }),
     bootstrapLibYargsModule({ publishLib }),
+    bootstrapMissingYargsModule({ publishLib }),
     trustLibsYargsModule({ publishLib }),
     checkNewPackagesYargsModule({ publishLib }),
   ],

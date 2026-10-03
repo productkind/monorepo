@@ -312,6 +312,13 @@ test('build writes the version it was given instead of the declared one', async 
 
 const TRUST_FLAGS = '--repository org/repo --workflow publish.yaml --environment npm-publish'
 
+const loggedIn = () => ({
+  command: 'npm',
+  args: ['whoami'],
+  stdout: 'someone\n',
+  exitCode: 0,
+})
+
 const npmVersionIs = (version: string) => ({
   command: 'npm',
   args: ['--version'],
@@ -339,6 +346,7 @@ test('bootstrap-lib reserves the name, trusts the workflow, then exits 0', async
     files: { '/src/package.json': JSON.stringify({ name: '@org/lib-1' }) },
     commands: [
       npmVersionIs('11.15.0'),
+      loggedIn(),
       {
         command: 'npm',
         args: ['view', '@org/lib-1', 'versions', '--json'],
@@ -377,6 +385,7 @@ test('bootstrap-lib reserves the name, trusts the workflow, then exits 0', async
   })
   expect(executedCommands.map(({ args }) => args[0])).toEqual([
     '--version',
+    'whoami',
     'view',
     'publish',
     'deprecate',
@@ -389,6 +398,7 @@ test('bootstrap-lib exits non-zero when it could not reserve the name', async ()
     files: { '/src/package.json': JSON.stringify({ name: '@org/lib-1' }) },
     commands: [
       npmVersionIs('11.15.0'),
+      loggedIn(),
       {
         command: 'npm',
         args: ['view', '@org/lib-1', 'versions', '--json'],
@@ -413,6 +423,7 @@ test('trust-libs walks the whole folder and exits 0', async () => {
     },
     commands: [
       npmVersionIs('11.15.0'),
+      loggedIn(),
       { command: 'npm', args: trustArgs('@org/lib-1'), stdout: '', exitCode: 0 },
       { command: 'npm', args: trustArgs('@org/lib-2'), stdout: '', exitCode: 0 },
     ],
@@ -435,6 +446,7 @@ test('trust-libs can be asked to change nothing', async () => {
     files: { '/m/src/lib-1/package.json': JSON.stringify({ name: '@org/lib-1' }) },
     commands: [
       npmVersionIs('11.15.0'),
+      loggedIn(),
       {
         command: 'npm',
         args: trustArgs('@org/lib-1', ['--dry-run']),

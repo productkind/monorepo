@@ -1,5 +1,5 @@
 import { eventCreators } from './events.ts'
-import { bootstrapLib, trustEveryLib, type TrustIo } from './trust-operations.ts'
+import { bootstrapLib, bootstrapMissing, trustEveryLib, type TrustIo } from './trust-operations.ts'
 
 import { collectValuesFrom } from '@dungarees/rxjs/util.ts'
 
@@ -35,6 +35,7 @@ const io = (overrides: Partial<TrustIo> = {}): TrustIo => ({
   trust: succeeds,
   deprecate: () => of({ exitCode: 0 }),
   npmVersion: () => of({ stdout: '11.15.0\n', exitCode: 0 }),
+  npmWhoami: () => of({ stdout: 'someone\n', exitCode: 0 }),
   ...overrides,
 })
 
@@ -180,10 +181,7 @@ test('bootstrapLib does not configure a publisher for a name it failed to reserv
   })
 
   expect(events).toEqual([
-    eventCreators.placeholderPublishFailed({
-      name: '@org/lib-1',
-      stderr: '402 Payment Required',
-    }),
+    eventCreators.placeholderPublishFailed({ name: '@org/lib-1' }),
     eventCreators.bootstrapFailed({ srcDir: '/m/src/lib-1' }),
   ])
   expect(trusted).toEqual([])
@@ -194,7 +192,7 @@ test('bootstrapLib reports a publisher it could not configure', async () => {
 
   expect(events).toEqual([
     eventCreators.nameReserved({ name: '@org/lib-1', version: '0.0.0', tag: 'bootstrap' }),
-    eventCreators.trustFailed({ name: '@org/lib-1', stderr: 'One-time password was wrong' }),
+    eventCreators.trustFailed({ name: '@org/lib-1' }),
     eventCreators.bootstrapFailed({ srcDir: '/m/src/lib-1' }),
   ])
 })
@@ -293,7 +291,7 @@ test('trustEveryLib names the packages it could not configure and does not claim
   expect(events).toEqual([
     eventCreators.trustingPackages({ count: 2 }),
     eventCreators.publisherTrusted({ name: '@org/lib-1' }),
-    eventCreators.trustFailed({ name: '@org/lib-2', stderr: 'already exists' }),
+    eventCreators.trustFailed({ name: '@org/lib-2' }),
     eventCreators.someNotTrusted({ names: ['@org/lib-2'] }),
   ])
 })
@@ -326,4 +324,91 @@ test('trustEveryLib finishes rather than hanging when the folder holds no public
     eventCreators.trustingPackages({ count: 0 }),
     eventCreators.allTrusted({ count: 0 }),
   ])
+})
+
+test('bootstrapLib refuses before publishing anything when the registry credentials are stale', async () => {
+  const published: string[] = []
+
+  const events = await bootstrap({
+    npmWhoami: () => of({ stdout: '', exitCode: 1 }),
+    publishPlaceholder: ({ cwd }) => {
+      published.push(cwd)
+      return succeeds()
+    },
+  })
+
+  expect(events).toEqual([eventCreators.notLoggedIn()])
+  expect(published).toEqual([])
+})
+
+test('trustEveryLib refuses when the registry credentials are stale', async () => {
+  const events = await trustAll({ npmWhoami: () => of({ stdout: '', exitCode: 1 }) })
+
+  expect(events).toEqual([eventCreators.notLoggedIn()])
+})
+
+const MISSING_WORLD = {
+  glob: () =>
+    of(['/m/src/lib-1/package.json', '/m/src/lib-2/package.json', '/m/src/app/package.json']),
+  readText: (path: string) => of(MANIFESTS[path] ?? ''),
+}
+
+const missingOnly =
+  (names: string[]) =>
+  ({ name }: { name: string }) =>
+    names.includes(name) ? notOnRegistry() : onRegistry(['1.0.0'])()
+
+const runBootstrapMissing = async (overrides: Partial<TrustIo> = {}) =>
+  await collectValuesFrom(
+    bootstrapMissing({
+      dir: '/m',
+      repository: REPOSITORY,
+      io: io({ ...MISSING_WORLD, ...overrides }),
+    }),
+  )
+
+test('bootstrapMissing bootstraps every package the registry has never seen, in turn', async () => {
+  const trusted: string[] = []
+
+  const events = await runBootstrapMissing({
+    viewVersions: missingOnly(['@org/lib-1', '@org/lib-2']),
+    trust: ({ name }) => {
+      trusted.push(name)
+      return succeeds()
+    },
+  })
+
+  expect(trusted).toEqual(['@org/lib-1', '@org/lib-2'])
+  expect(events.at(0)).toEqual(eventCreators.bootstrappingMissing({ count: 2 }))
+  expect(events.at(-1)).toEqual(eventCreators.bootstrapSucceeded({ name: '@org/lib-2' }))
+})
+
+test('bootstrapMissing leaves alone the packages that are already on the registry', async () => {
+  const events = await runBootstrapMissing({ viewVersions: missingOnly(['@org/lib-2']) })
+
+  expect(events.at(0)).toEqual(eventCreators.bootstrappingMissing({ count: 1 }))
+  expect(events).toContainEqual(eventCreators.bootstrapSucceeded({ name: '@org/lib-2' }))
+  expect(events).not.toContainEqual(eventCreators.bootstrapSucceeded({ name: '@org/lib-1' }))
+})
+
+test('bootstrapMissing stops at the first failure rather than publishing more names', async () => {
+  const published: string[] = []
+
+  const events = await runBootstrapMissing({
+    viewVersions: missingOnly(['@org/lib-1', '@org/lib-2']),
+    publishPlaceholder: ({ cwd }) => {
+      published.push(cwd)
+      return fails('402 Payment Required')()
+    },
+  })
+
+  expect(published).toEqual(['/m/dist/lib-1'])
+  expect(events.at(-1)).toEqual(eventCreators.bootstrapFailed({ srcDir: '/m/src/lib-1' }))
+})
+
+test('bootstrapMissing reports a package it could not ask about, without bootstrapping it', async () => {
+  const events = await runBootstrapMissing({ viewVersions: registryDown })
+
+  expect(events).toContainEqual(eventCreators.registryUnreachable({ name: '@org/lib-1' }))
+  expect(events.at(-1)).toEqual(eventCreators.bootstrappingMissing({ count: 0 }))
 })

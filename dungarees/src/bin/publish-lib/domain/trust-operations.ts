@@ -1,4 +1,5 @@
 import { eventCreators, type PublishLibEvent } from './events.ts'
+import { checkEveryPackage, type MissingPackage } from './new-package-operations.ts'
 import {
   LIBRARY_PUBLISH_PATHS,
   type LibraryPublishPaths,
@@ -10,7 +11,18 @@ import {
 import { excludeInstalledDependencies } from '@dungarees/bin-shared-domain/source-files.ts'
 import type { TextFileReader } from '@dungarees/fs/service.ts'
 
-import { catchError, concat, defer, EMPTY, from, merge, type Observable, of, toArray } from 'rxjs'
+import {
+  catchError,
+  concat,
+  defer,
+  EMPTY,
+  from,
+  merge,
+  type Observable,
+  of,
+  takeWhile,
+  toArray,
+} from 'rxjs'
 import { map, mergeMap } from 'rxjs/operators'
 
 // `npm trust` arrived in 11.15.0; an older npm answers "Unknown command", which reads as a typo
@@ -42,6 +54,7 @@ export type TrustIo = {
     message: string
   }) => Observable<{ exitCode: number | undefined }>
   npmVersion: () => Observable<{ stdout: string; exitCode: number | undefined }>
+  npmWhoami: () => Observable<{ stdout: string; exitCode: number | undefined }>
 }
 
 export const bootstrapLib = ({
@@ -85,9 +98,81 @@ const withUsableNpm = ({
               minimum: MINIMUM_NPM_FOR_TRUST.join('.'),
             }),
           )
-        : run(),
+        : withCredentials({ io, run }),
     ),
   )
+
+// npm answers a publish with 404 rather than 401 when the stored token is stale, which reads as
+// "no such package" and sends people looking in the wrong place.
+const withCredentials = ({
+  io,
+  run,
+}: {
+  io: TrustIo
+  run: () => Observable<PublishLibEvent>
+}): Observable<PublishLibEvent> =>
+  io
+    .npmWhoami()
+    .pipe(mergeMap(({ exitCode }) => (exitCode === 0 ? run() : of(eventCreators.notLoggedIn()))))
+
+export const bootstrapMissing = ({
+  dir,
+  repository,
+  io,
+  paths = LIBRARY_PUBLISH_PATHS,
+}: {
+  dir: string
+  repository: string
+  io: TrustIo
+  paths?: LibraryPublishPaths
+}): Observable<PublishLibEvent> =>
+  withUsableNpm({ io, run: () => bootstrapMissingWithUsableNpm({ dir, repository, io, paths }) })
+
+const bootstrapMissingWithUsableNpm = ({
+  dir,
+  repository,
+  io,
+  paths,
+}: {
+  dir: string
+  repository: string
+  io: TrustIo
+  paths: LibraryPublishPaths
+}): Observable<PublishLibEvent> =>
+  checkEveryPackage({ dir, bootstrapCommand: undefined, io, paths }).pipe(
+    toArray(),
+    mergeMap((found) =>
+      concat(
+        from(found.filter(({ type }) => type === 'registry-unreachable')),
+        of(eventCreators.bootstrappingMissing({ count: missingPackages(found).length })),
+        bootstrapInTurn({ packages: missingPackages(found), repository, io }),
+      ),
+    ),
+  )
+
+const missingPackages = (events: PublishLibEvent[]): MissingPackage[] =>
+  events.flatMap((event) =>
+    event.type === 'new-package-not-on-registry'
+      ? [{ name: event.payload.name, srcDir: event.payload.srcDir, outDir: event.payload.outDir }]
+      : [],
+  )
+
+// Stops at the first failure: publishing more names after one went wrong turns a recoverable
+// mistake into several packages nobody can unpublish after 72 hours.
+const bootstrapInTurn = ({
+  packages,
+  repository,
+  io,
+}: {
+  packages: MissingPackage[]
+  repository: string
+  io: TrustIo
+}): Observable<PublishLibEvent> =>
+  concat(
+    ...packages.map(({ srcDir, outDir }) =>
+      bootstrapWithUsableNpm({ srcDir, outDir, repository, io }),
+    ),
+  ).pipe(takeWhile((event) => event.type !== 'bootstrap-failed', true))
 
 const bootstrapWithUsableNpm = ({
   srcDir,
@@ -191,10 +276,10 @@ const reserveName = ({
   concat(
     io.mkdir(outDir).pipe(mergeMap(() => writePlaceholder({ name, outDir, repository, io }))),
     defer(() => io.publishPlaceholder({ cwd: outDir, tag: PLACEHOLDER_TAG })).pipe(
-      mergeMap(({ exitCode, stderr }) =>
+      mergeMap(({ exitCode }) =>
         exitCode === 0
           ? thenDeprecatePlaceholder({ name, io })
-          : of(eventCreators.placeholderPublishFailed({ name, stderr })),
+          : of(eventCreators.placeholderPublishFailed({ name })),
       ),
     ),
   )
@@ -268,10 +353,10 @@ const trustName = ({
 
 const trustOne = ({ name, io }: { name: string; io: TrustIo }): Observable<PublishLibEvent> =>
   defer(() => io.trust({ name })).pipe(
-    map(({ exitCode, stderr }) =>
+    map(({ exitCode }) =>
       exitCode === 0
         ? eventCreators.publisherTrusted({ name })
-        : eventCreators.trustFailed({ name, stderr }),
+        : eventCreators.trustFailed({ name }),
     ),
   )
 
