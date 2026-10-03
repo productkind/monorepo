@@ -23,6 +23,7 @@ export type NpmCommands = {
     registry?: string | undefined
   }) => RunResult
   version: () => RunResult
+  whoami: (options?: { registry?: string | undefined }) => RunResult
 }
 
 export type GitCommands = {
@@ -89,6 +90,7 @@ export const createNpmCommands = (subProcess: SubProcessService): NpmCommands =>
       INTERACTIVE,
     ),
   version: () => subProcess.run('npm', ['--version'], {}),
+  whoami: ({ registry } = {}) => subProcess.run('npm', ['whoami', ...registryArgs(registry)], {}),
 })
 
 export const createGitCommands = (subProcess: SubProcessService): GitCommands => ({

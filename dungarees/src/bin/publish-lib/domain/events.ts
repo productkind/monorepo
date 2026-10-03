@@ -21,10 +21,12 @@ type PublishLibEventPayloads = {
   'registry-unreachable': { name: string }
   'name-already-on-registry': { name: string }
   'name-reserved': { name: string; version: string; tag: string }
-  'placeholder-publish-failed': { name: string; stderr: string | undefined }
+  // No stderr: both of these run with the terminal handed to npm so it can prompt for a
+  // one-time password, which means nothing comes back on stderr for us to pass on.
+  'placeholder-publish-failed': { name: string }
   'deprecate-failed': { name: string; version: string }
   'publisher-trusted': { name: string }
-  'trust-failed': { name: string; stderr: string | undefined }
+  'trust-failed': { name: string }
   'bootstrap-succeeded': { name: string }
   'bootstrap-failed': { srcDir: string }
   'trusting-packages': { count: number }
@@ -38,6 +40,8 @@ type PublishLibEventPayloads = {
   }
   'new-packages-need-bootstrap': { count: number }
   'no-new-packages': undefined
+  'not-logged-in': undefined
+  'bootstrapping-missing': { count: number }
 }
 
 export type PublishLibEvent = DomainEventOf<PublishLibEventPayloads>

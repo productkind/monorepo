@@ -570,6 +570,13 @@ const TRUST_SETTINGS = {
   dryRun: false,
 }
 
+const loggedIn = () => ({
+  command: 'npm',
+  args: ['whoami'],
+  stdout: 'someone\n',
+  exitCode: 0,
+})
+
 const npmVersionIs = (version: string) => ({
   command: 'npm',
   args: ['--version'],
@@ -603,6 +610,7 @@ test('bootstrapLib reserves the name with npm, then points it at the workflow', 
     },
     commands: [
       npmVersionIs('11.15.0'),
+      loggedIn(),
       neverPublished('@org/lib-1'),
       {
         command: 'npm',
@@ -650,7 +658,7 @@ test('trustAllLibs points every public package at the workflow', async () => {
       '/m/src/lib-2/package.json': JSON.stringify({ name: '@org/lib-2' }),
       '/m/src/app/package.json': JSON.stringify({ name: '@org/app', private: true }),
     },
-    commands: [npmVersionIs('11.15.0'), trusts('@org/lib-1'), trusts('@org/lib-2')],
+    commands: [npmVersionIs('11.15.0'), loggedIn(), trusts('@org/lib-1'), trusts('@org/lib-2')],
   })
 
   const events = await collectValuesFrom(

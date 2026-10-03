@@ -2,7 +2,7 @@ import { type BuildIo, buildPackage } from './build-operations.ts'
 import type { PublishLibEvent } from './events.ts'
 import { checkEveryPackage, checkNewPackages, type NewPackageIo } from './new-package-operations.ts'
 import { publishEveryPackage, type PublishIo, publishOnePackage } from './publish-operations.ts'
-import { bootstrapLib, trustEveryLib, type TrustIo } from './trust-operations.ts'
+import { bootstrapLib, bootstrapMissing, trustEveryLib, type TrustIo } from './trust-operations.ts'
 
 import type { GitCommands, NpmCommands } from '@dungarees/cli-command/service.ts'
 import { createFileOperations } from '@dungarees/fs/file-operations.ts'
@@ -37,6 +37,7 @@ export type PublishLibBehavior = {
     args: { srcDir: string; outDir: string } & TrustSettings,
   ) => PublishLibFeatureOutput
   trustAllLibs: (args: { dir: string } & TrustSettings) => PublishLibFeatureOutput
+  bootstrapMissing: (args: { dir: string } & TrustSettings) => PublishLibFeatureOutput
   checkNewPackages: (args: {
     dir: string
     base: string | undefined
@@ -135,6 +136,7 @@ export const createPublishLibBehavior = ({
     deprecate: ({ name, version, message }) =>
       npm.deprecate({ name, version, message, registry }).output$,
     npmVersion: () => npm.version().output$,
+    npmWhoami: () => npm.whoami({ registry }).output$,
   })
 
   const bootstrap: PublishLibBehavior['bootstrapLib'] = ({ srcDir, outDir, ...settings }) => ({
@@ -148,6 +150,14 @@ export const createPublishLibBehavior = ({
 
   const trustAllLibs: PublishLibBehavior['trustAllLibs'] = ({ dir, ...settings }) => ({
     events$: trustEveryLib({ dir, io: getTrustIo(settings) }),
+  })
+
+  const bootstrapMissingLibs: PublishLibBehavior['bootstrapMissing'] = ({ dir, ...settings }) => ({
+    events$: bootstrapMissing({
+      dir,
+      repository: settings.repository,
+      io: getTrustIo(settings),
+    }),
   })
 
   const getNewPackageIo = (registry: string | undefined): NewPackageIo => ({
@@ -177,6 +187,7 @@ export const createPublishLibBehavior = ({
     publishMultiLib,
     bootstrapLib: bootstrap,
     trustAllLibs,
+    bootstrapMissing: bootstrapMissingLibs,
     checkNewPackages: checkNew,
   }
 }

@@ -106,6 +106,28 @@ export const trustLibsYargsModule =
       },
     })
 
+export const bootstrapMissingYargsModule =
+  ({ publishLib }: { publishLib: PublishLibBehavior }): CommandFactory<PublishLibEvent> =>
+  (io) =>
+    createCommand({
+      command: 'bootstrap-missing [lib-path]',
+      describe: 'Reserve and trust every package of a library folder the registry has never seen',
+      builder: (yargs) =>
+        trustOptions(yargs.positional('lib-path', { type: 'string', default: '.' })),
+      handler: ({ libPath, repository, workflow, environment, registry, dryRun }) => {
+        io.registerEvents(
+          publishLib.bootstrapMissing({
+            dir: libPath,
+            repository,
+            workflow,
+            environment,
+            registry,
+            dryRun,
+          }).events$,
+        )
+      },
+    })
+
 export const checkNewPackagesYargsModule =
   ({ publishLib }: { publishLib: PublishLibBehavior }): CommandFactory<PublishLibEvent> =>
   (io) =>

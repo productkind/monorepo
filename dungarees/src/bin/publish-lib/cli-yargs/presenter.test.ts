@@ -154,16 +154,11 @@ test('name-reserved reports the placeholder and the tag it hid behind', () => {
   })
 })
 
-test('placeholder-publish-failed passes npm complaint through', () => {
-  expect(
-    publishLibPresenter['placeholder-publish-failed']({
-      name: '@org/lib-1',
-      stderr: '402 Payment Required',
-    }),
-  ).toEqual({
+test('placeholder-publish-failed points at npm own output, which it cannot capture', () => {
+  expect(publishLibPresenter['placeholder-publish-failed']({ name: '@org/lib-1' })).toEqual({
     type: 'stderr',
     level: 'error',
-    message: 'Could not reserve @org/lib-1: 402 Payment Required',
+    message: "Could not reserve @org/lib-1. npm's own output is above.",
   })
 })
 
@@ -185,13 +180,11 @@ test('publisher-trusted reports the package that can now be published by CI', ()
   })
 })
 
-test('trust-failed names the package and what npm said', () => {
-  expect(
-    publishLibPresenter['trust-failed']({ name: '@org/lib-1', stderr: 'already exists' }),
-  ).toEqual({
+test('trust-failed points at npm own output, which it cannot capture', () => {
+  expect(publishLibPresenter['trust-failed']({ name: '@org/lib-1' })).toEqual({
     type: 'stderr',
     level: 'error',
-    message: 'Could not configure the publisher for @org/lib-1: already exists',
+    message: "Could not configure the publisher for @org/lib-1. npm's own output is above.",
   })
 })
 
