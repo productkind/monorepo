@@ -4,9 +4,11 @@ import { $, fs, os, path } from 'zx'
 const scriptDir = path.dirname(fileURLToPath(import.meta.url))
 const repoRoot = path.resolve(scriptDir, '../..')
 
-// Git hooks first, and outside the platform check below: the hook is plain git config and works
-// wherever git does, so a contributor on any OS gets the pre-commit formatting.
+// Git hooks first, and outside the platform check below: the hooks are plain git config and work
+// wherever git does, so a contributor on any OS gets the pre-commit formatting and the pre-push
+// check that stops a package npm has never seen from reaching a workflow that cannot create it.
 const HOOKS_PATH = '.githooks'
+const HOOKS = ['pre-commit', 'pre-push']
 const configuredHooksPath = (
   await $`git -C ${repoRoot} config --get core.hooksPath`.quiet().nothrow()
 ).stdout.trim()
@@ -18,7 +20,9 @@ if (configuredHooksPath === HOOKS_PATH) {
 }
 // The committed mode bit should cover this, but a checkout that dropped it would leave git
 // silently ignoring the hook.
-await $`chmod +x ${path.join(repoRoot, HOOKS_PATH, 'pre-commit')}`.quiet()
+for (const hook of HOOKS) {
+  await $`chmod +x ${path.join(repoRoot, HOOKS_PATH, hook)}`.quiet()
+}
 
 if (process.platform === 'darwin') {
   if (!(await $`which brew`.quiet()).stdout.trim()) {

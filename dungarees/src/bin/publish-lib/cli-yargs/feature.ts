@@ -1,8 +1,11 @@
 import { publishLibPresenter } from './presenter.ts'
 import {
+  bootstrapLibYargsModule,
   buildYargsModule,
+  checkNewPackagesYargsModule,
   publishMultiLibYargsModule,
   publishSingleLibYargsModule,
+  trustLibsYargsModule,
 } from './yargs-module.ts'
 
 import type { PublishLibBehavior } from '@dungarees/bin-publish-lib-domain/behavior.ts'
@@ -18,6 +21,9 @@ export const publishLibFeature = ({
     buildYargsModule({ publishLib }),
     publishMultiLibYargsModule({ publishLib }),
     publishSingleLibYargsModule({ publishLib }),
+    bootstrapLibYargsModule({ publishLib }),
+    trustLibsYargsModule({ publishLib }),
+    checkNewPackagesYargsModule({ publishLib }),
   ],
   presenter: publishLibPresenter,
 })

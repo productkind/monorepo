@@ -1,8 +1,10 @@
 import { type BuildIo, buildPackage } from './build-operations.ts'
 import type { PublishLibEvent } from './events.ts'
+import { checkNewPackages, type NewPackageIo } from './new-package-operations.ts'
 import { publishEveryPackage, type PublishIo, publishOnePackage } from './publish-operations.ts'
+import { bootstrapLib, trustEveryLib, type TrustIo } from './trust-operations.ts'
 
-import type { NpmCommands } from '@dungarees/cli-command/service.ts'
+import type { GitCommands, NpmCommands } from '@dungarees/cli-command/service.ts'
 import { createFileOperations } from '@dungarees/fs/file-operations.ts'
 import type { FileSystemService } from '@dungarees/fs/service.ts'
 import { createTranspiler } from '@dungarees/transpile/service.ts'
@@ -24,18 +26,44 @@ export type PublishLibBehavior = {
     outDir: string
     version: string | undefined
     registry: string | undefined
+    allowNewPackages: boolean
   }) => PublishLibFeatureOutput
-  publishMultiLib: (args: { dir: string; registry: string | undefined }) => PublishLibFeatureOutput
+  publishMultiLib: (args: {
+    dir: string
+    registry: string | undefined
+    allowNewPackages: boolean
+  }) => PublishLibFeatureOutput
+  bootstrapLib: (
+    args: { srcDir: string; outDir: string } & TrustSettings,
+  ) => PublishLibFeatureOutput
+  trustAllLibs: (args: { dir: string } & TrustSettings) => PublishLibFeatureOutput
+  checkNewPackages: (args: {
+    dir: string
+    base: string
+    tip: string
+    bootstrapCommand: string | undefined
+    registry: string | undefined
+  }) => PublishLibFeatureOutput
+}
+
+export type TrustSettings = {
+  repository: string
+  workflow: string
+  environment: string | undefined
+  registry: string | undefined
+  dryRun: boolean
 }
 
 export type CreatePublishLibBehaviorOptions = {
   fileSystem: FileSystemService
   npm: NpmCommands
+  git: GitCommands
 }
 
 export const createPublishLibBehavior = ({
   fileSystem,
   npm,
+  git,
 }: CreatePublishLibBehaviorOptions): PublishLibBehavior => {
   const fileOperations = createFileOperations(fileSystem)
   const transpiler = createTranspiler(fileSystem)
@@ -63,6 +91,7 @@ export const createPublishLibBehavior = ({
     outDir,
     version,
     registry,
+    allowNewPackages,
   }) => ({
     events$: publishOnePackage({
       srcDir,
@@ -70,16 +99,85 @@ export const createPublishLibBehavior = ({
       packageDir: srcDir,
       version,
       io: getPublishIo(registry),
+      allowNewPackages,
     }),
   })
 
-  const publishMultiLib: PublishLibBehavior['publishMultiLib'] = ({ dir, registry }) => ({
+  const publishMultiLib: PublishLibBehavior['publishMultiLib'] = ({
+    dir,
+    registry,
+    allowNewPackages,
+  }) => ({
     events$: publishEveryPackage({
       dir,
       glob: fileSystem.glob,
       io: getPublishIo(registry),
+      allowNewPackages,
     }),
   })
 
-  return { build, publishSingleLib, publishMultiLib }
+  const getTrustIo = ({
+    repository,
+    workflow,
+    environment,
+    registry,
+    dryRun,
+  }: TrustSettings): TrustIo => ({
+    readText: fileSystem.readFile,
+    writeText: fileSystem.writeFile,
+    mkdir: fileSystem.mkdir,
+    glob: fileSystem.glob,
+    viewVersions: ({ name }) => npm.viewVersions({ name, registry }).output$,
+    publishPlaceholder: ({ cwd, tag }) =>
+      npm.publish({ cwd, registry, tag, interactive: true }).output$,
+    trust: ({ name }) =>
+      npm.trust({ name, workflow, repository, environment, registry, dryRun }).output$,
+    deprecate: ({ name, version, message }) =>
+      npm.deprecate({ name, version, message, registry }).output$,
+    npmVersion: () => npm.version().output$,
+  })
+
+  const bootstrap: PublishLibBehavior['bootstrapLib'] = ({ srcDir, outDir, ...settings }) => ({
+    events$: bootstrapLib({
+      srcDir,
+      outDir,
+      repository: settings.repository,
+      io: getTrustIo(settings),
+    }),
+  })
+
+  const trustAllLibs: PublishLibBehavior['trustAllLibs'] = ({ dir, ...settings }) => ({
+    events$: trustEveryLib({ dir, io: getTrustIo(settings) }),
+  })
+
+  const getNewPackageIo = (registry: string | undefined): NewPackageIo => ({
+    listAddedFiles: ({ base, tip }) => git.listAddedFiles({ base, tip }).output$,
+    showFile: ({ ref, path }) => git.showFile({ ref, path }).output$,
+    viewVersions: ({ name }) => npm.viewVersions({ name, registry }).output$,
+  })
+
+  const checkNew: PublishLibBehavior['checkNewPackages'] = ({
+    dir,
+    base,
+    tip,
+    bootstrapCommand,
+    registry,
+  }) => ({
+    events$: checkNewPackages({
+      dir,
+      base,
+      tip,
+      bootstrapCommand,
+      io: getNewPackageIo(registry),
+    }),
+  })
+
+  return {
+    build,
+    publishSingleLib,
+    publishMultiLib,
+    bootstrapLib: bootstrap,
+    trustAllLibs,
+    checkNewPackages: checkNew,
+  }
 }

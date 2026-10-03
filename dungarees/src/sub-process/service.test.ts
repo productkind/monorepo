@@ -155,3 +155,16 @@ test('subProcessService integration on error no cwd dir', async () => {
     await subProcessService.runAsync('ls', [], { cwd: '/non-existent-dir' })
   await expect(asyncFs()).rejects.toThrow()
 })
+
+test('subProcessService hands the child the terminal when asked to', async () => {
+  const { spawn: fakeSpawn, executedCommands } = createStubSpawn([
+    { command: 'npm', args: ['trust'], stdout: '', exitCode: 0 },
+  ])
+  const subProcessService = createSubProcessService(fakeSpawn)
+
+  await firstValueFrom(subProcessService.run('npm', ['trust'], { stdio: 'inherit' }).output$)
+
+  expect(executedCommands).toEqual([
+    { command: 'npm', args: ['trust'], options: { stdio: 'inherit' } },
+  ])
+})

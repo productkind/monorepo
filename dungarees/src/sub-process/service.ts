@@ -20,6 +20,9 @@ export type ProcessServiceOutput = {
 
 export type RunOptions = {
   cwd?: string
+  // 'inherit' gives the child the real terminal, which is the only way a command that prompts can
+  // be answered. Nothing arrives on stdout$ or stderr$ then — the child wrote straight past us.
+  stdio?: 'inherit'
 }
 
 export type SubProcessService = {

@@ -22,9 +22,9 @@ export const createFakePublishLib = ({
   commands = [],
 }: FakePublishLibWorld = {}): FakePublishLib => {
   const fileSystem = createFakeFileSystem(files)
-  const { npm, executedCommands } = createStubCliCommands(commands)
+  const { npm, git, executedCommands } = createStubCliCommands(commands)
   return {
-    ...createPublishLibBehavior({ fileSystem, npm }),
+    ...createPublishLibBehavior({ fileSystem, npm, git }),
     fileSystem,
     executedCommands,
   }

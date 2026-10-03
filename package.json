@@ -9,6 +9,8 @@
     "build": "zx ./productkind/scripts/build.ts && zx ./seminars/scripts/build.ts && zx ./kim-and-tim/scripts/build.ts",
     "init": "zx ./productkind/scripts/init.ts",
     "publish:dungarees": "dungarees publish-multi-lib ./dungarees",
+    "bootstrap:lib": "dungarees bootstrap-lib --repository productkind/monorepo --workflow publish-dungarees.yaml --environment npm-publish",
+    "trust:dungarees": "dungarees trust-libs ./dungarees --repository productkind/monorepo --workflow publish-dungarees.yaml --environment npm-publish",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint",

@@ -19,9 +19,8 @@ test('the dungarees application renders its command to the process it was given'
       {
         command: 'npm',
         args: ['view', '@org/lib-1', 'versions', '--json'],
-        stdout: '',
-        stderr: 'E404 Not found',
-        exitCode: 1,
+        stdout: JSON.stringify(['0.9.0']),
+        exitCode: 0,
       },
       {
         command: 'npm',
