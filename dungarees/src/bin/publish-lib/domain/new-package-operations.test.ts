@@ -1,5 +1,5 @@
 import { eventCreators } from './events.ts'
-import { checkNewPackages, type NewPackageIo } from './new-package-operations.ts'
+import { checkEveryPackage, checkNewPackages, type NewPackageIo } from './new-package-operations.ts'
 
 import { collectValuesFrom } from '@dungarees/rxjs/util.ts'
 
@@ -30,6 +30,8 @@ const registryDown = () =>
 
 const io = (overrides: Partial<NewPackageIo> = {}): NewPackageIo => ({
   listAddedFiles: added([]),
+  glob: () => of<string[]>([]),
+  readText: () => of(''),
   showFile: ({ path }) => of({ stdout: MANIFESTS[path] ?? '', exitCode: 0 }),
   viewVersions: notOnRegistry,
   ...overrides,
@@ -159,4 +161,98 @@ test('checkNewPackages counts every missing package, not just the first', async 
   })
 
   expect(events.at(-1)).toEqual(eventCreators.newPackagesNeedBootstrap({ count: 2 }))
+})
+
+const ALL_MANIFESTS = [
+  './dungarees/src/core/package.json',
+  './dungarees/src/react/package.json',
+  './dungarees/src/fake-app/package.json',
+]
+
+const WORKING_TREE: Record<string, string> = {
+  './dungarees/src/core/package.json': JSON.stringify({ name: '@dungarees/core' }),
+  './dungarees/src/react/package.json': JSON.stringify({ name: '@dungarees/react' }),
+  './dungarees/src/fake-app/package.json': JSON.stringify({
+    name: '@dungarees/app',
+    private: true,
+  }),
+}
+
+const checkEvery = async (overrides: Partial<NewPackageIo> = {}) =>
+  await collectValuesFrom(
+    checkEveryPackage({
+      dir: './dungarees',
+      bootstrapCommand: BOOTSTRAP_COMMAND,
+      io: io({
+        glob: () => of(ALL_MANIFESTS),
+        readText: (path) => of(WORKING_TREE[path] ?? ''),
+        ...overrides,
+      }),
+    }),
+  )
+
+test('checkEveryPackage reports a package that was added long ago and never published', async () => {
+  const events = await checkEvery({
+    viewVersions: ({ name }) => (name === '@dungarees/react' ? notOnRegistry() : onRegistry()),
+  })
+
+  expect(events).toEqual([
+    eventCreators.newPackageNotOnRegistry({
+      name: '@dungarees/react',
+      srcDir: './dungarees/src/react',
+      outDir: './dungarees/dist/react',
+      bootstrapCommand: BOOTSTRAP_COMMAND,
+    }),
+    eventCreators.newPackagesNeedBootstrap({ count: 1 }),
+  ])
+})
+
+test('checkEveryPackage stays quiet when every package is on the registry', async () => {
+  const events = await checkEvery({ viewVersions: onRegistry })
+
+  expect(events).toEqual([eventCreators.noNewPackages()])
+})
+
+test('checkEveryPackage never asks the registry about a private package', async () => {
+  const viewed: string[] = []
+
+  await checkEvery({
+    viewVersions: ({ name }) => {
+      viewed.push(name)
+      return onRegistry()
+    },
+  })
+
+  expect(viewed).toEqual(['@dungarees/core', '@dungarees/react'])
+})
+
+test('checkEveryPackage reads the working tree, since there is no commit range to read from', async () => {
+  const readFromGit: string[] = []
+
+  await checkEvery({
+    showFile: ({ path }) => {
+      readFromGit.push(path)
+      return of({ stdout: '', exitCode: 0 })
+    },
+  })
+
+  expect(readFromGit).toEqual([])
+})
+
+test('checkEveryPackage reports in a stable order, whatever order the glob walked the folder', async () => {
+  const events = await checkEvery({
+    glob: () =>
+      of([
+        './dungarees/src/react/package.json',
+        './dungarees/src/fake-app/package.json',
+        './dungarees/src/core/package.json',
+      ]),
+    viewVersions: notOnRegistry,
+  })
+
+  expect(
+    events.flatMap((event) =>
+      event.type === 'new-package-not-on-registry' ? [event.payload.name] : [],
+    ),
+  ).toEqual(['@dungarees/core', '@dungarees/react'])
 })

@@ -1,6 +1,6 @@
 import { type BuildIo, buildPackage } from './build-operations.ts'
 import type { PublishLibEvent } from './events.ts'
-import { checkNewPackages, type NewPackageIo } from './new-package-operations.ts'
+import { checkEveryPackage, checkNewPackages, type NewPackageIo } from './new-package-operations.ts'
 import { publishEveryPackage, type PublishIo, publishOnePackage } from './publish-operations.ts'
 import { bootstrapLib, trustEveryLib, type TrustIo } from './trust-operations.ts'
 
@@ -39,8 +39,8 @@ export type PublishLibBehavior = {
   trustAllLibs: (args: { dir: string } & TrustSettings) => PublishLibFeatureOutput
   checkNewPackages: (args: {
     dir: string
-    base: string
-    tip: string
+    base: string | undefined
+    tip: string | undefined
     bootstrapCommand: string | undefined
     registry: string | undefined
   }) => PublishLibFeatureOutput
@@ -153,6 +153,8 @@ export const createPublishLibBehavior = ({
   const getNewPackageIo = (registry: string | undefined): NewPackageIo => ({
     listAddedFiles: ({ base, tip }) => git.listAddedFiles({ base, tip }).output$,
     showFile: ({ ref, path }) => git.showFile({ ref, path }).output$,
+    glob: fileSystem.glob,
+    readText: fileSystem.readFile,
     viewVersions: ({ name }) => npm.viewVersions({ name, registry }).output$,
   })
 
@@ -163,13 +165,10 @@ export const createPublishLibBehavior = ({
     bootstrapCommand,
     registry,
   }) => ({
-    events$: checkNewPackages({
-      dir,
-      base,
-      tip,
-      bootstrapCommand,
-      io: getNewPackageIo(registry),
-    }),
+    events$:
+      base === undefined || tip === undefined
+        ? checkEveryPackage({ dir, bootstrapCommand, io: getNewPackageIo(registry) })
+        : checkNewPackages({ dir, base, tip, bootstrapCommand, io: getNewPackageIo(registry) }),
   })
 
   return {

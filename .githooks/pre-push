@@ -38,17 +38,16 @@ while read -r _local_ref local_oid _remote_ref remote_oid; do
     base=$remote_oid
   fi
 
-  # Cheap gate: the usual push adds no manifest at all, and skipping the node startup for those
-  # keeps a hook that runs on every push from being felt.
-  if ! git diff --name-only --diff-filter=A "$base" "$local_oid" |
-    grep -q '^dungarees/src/.*/package\.json$'; then
+  # Most pushes here touch marketing content and never go near the library, and skipping the
+  # sweep for those keeps a hook that runs on every push from being felt.
+  if ! git diff --name-only "$base" "$local_oid" | grep -q '^dungarees/'; then
     continue
   fi
 
+  # The whole library, not just what this push added: a package can have sat unpublished since
+  # long before this range, and CI will refuse it just the same.
   # The loop body runs in this shell, so the flag survives to the end.
   "$dungarees" check-new-packages ./dungarees \
-    --base "$base" \
-    --tip "$local_oid" \
     --bootstrap-command 'npm run bootstrap:lib --' || found_new_package=1
 done
 
