@@ -528,3 +528,38 @@ test('check-new-packages lets the push through when the registry did not answer'
 
   expect(output.at(-1)).toEqual({ type: 'exit', code: 0 })
 })
+
+test('check-new-packages sweeps the whole library when given no commit range', async () => {
+  const { app, executedCommands } = mountPublishLib({
+    files: {
+      '/m/src/lib-1/package.json': JSON.stringify({ name: '@org/lib-1' }),
+      '/m/src/lib-2/package.json': JSON.stringify({ name: '@org/lib-2' }),
+    },
+    commands: [
+      {
+        command: 'npm',
+        args: ['view', '@org/lib-1', 'versions', '--json'],
+        stdout: JSON.stringify(['1.0.0']),
+        exitCode: 0,
+      },
+      {
+        command: 'npm',
+        args: ['view', '@org/lib-2', 'versions', '--json'],
+        stdout: JSON.stringify({ error: { code: 'E404', summary: 'Not Found', detail: '' } }),
+        stderr: 'npm error code E404',
+        exitCode: 1,
+      },
+    ],
+  })
+
+  const { terminal } = renderCli(app, 'dungarees check-new-packages /m')
+  const output = await terminal.step()
+
+  expect(output).toContainEqual({
+    type: 'stderr',
+    level: 'error',
+    message: '@org/lib-2 is not on the registry',
+  })
+  expect(output.at(-1)).toEqual({ type: 'exit', code: 1 })
+  expect(executedCommands.filter(({ command }) => command === 'git')).toEqual([])
+})

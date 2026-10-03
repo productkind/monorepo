@@ -8,6 +8,7 @@ import {
 } from './publish-operations.ts'
 
 import { excludeInstalledDependencies } from '@dungarees/bin-shared-domain/source-files.ts'
+import type { TextFileReader } from '@dungarees/fs/service.ts'
 
 import { concat, EMPTY, forkJoin, from, type Observable, of, toArray } from 'rxjs'
 import { map, mergeMap } from 'rxjs/operators'
@@ -17,6 +18,8 @@ type GitOutput = { stdout: string; exitCode: number | undefined }
 export type NewPackageIo = {
   listAddedFiles: (options: { base: string; tip: string }) => Observable<GitOutput>
   showFile: (options: { ref: string; path: string }) => Observable<GitOutput>
+  glob: (pattern: string) => Observable<string[]>
+  readText: TextFileReader
   viewVersions: (options: { name: string }) => Observable<{
     stdout: string
     stderr: string
@@ -39,9 +42,65 @@ export const checkNewPackages = ({
   io: NewPackageIo
   paths?: LibraryPublishPaths
 }): Observable<PublishLibEvent> =>
-  addedManifests({ base, tip, dir, io, paths }).pipe(
+  checkPackages({
+    manifestPaths$: addedManifests({ base, tip, dir, io, paths }),
+    readManifest: (path) => io.showFile({ ref: tip, path }).pipe(map(({ stdout }) => stdout)),
+    bootstrapCommand,
+    io,
+    paths,
+  })
+
+// A package can sit unpublished for months, and nothing about today's push would mention it.
+export const checkEveryPackage = ({
+  dir,
+  bootstrapCommand,
+  io,
+  paths = LIBRARY_PUBLISH_PATHS,
+}: {
+  dir: string
+  bootstrapCommand: string | undefined
+  io: NewPackageIo
+  paths?: LibraryPublishPaths
+}): Observable<PublishLibEvent> =>
+  checkPackages({
+    manifestPaths$: everyManifest({ dir, io, paths }),
+    readManifest: io.readText,
+    bootstrapCommand,
+    io,
+    paths,
+  })
+
+const everyManifest = ({
+  dir,
+  io,
+  paths,
+}: {
+  dir: string
+  io: NewPackageIo
+  paths: LibraryPublishPaths
+}): Observable<string[]> =>
+  io
+    .glob(`${dir}/${paths.sourceDir}/${paths.manifests}`)
+    .pipe(excludeInstalledDependencies(), map(inPathOrder))
+
+const inPathOrder = (manifestPaths: string[]): string[] => [...manifestPaths].sort()
+
+const checkPackages = ({
+  manifestPaths$,
+  readManifest,
+  bootstrapCommand,
+  io,
+  paths,
+}: {
+  manifestPaths$: Observable<string[]>
+  readManifest: (path: string) => Observable<string>
+  bootstrapCommand: string | undefined
+  io: NewPackageIo
+  paths: LibraryPublishPaths
+}): Observable<PublishLibEvent> =>
+  manifestPaths$.pipe(
     mergeMap((manifestPaths) =>
-      checkEachManifest({ manifestPaths, tip, bootstrapCommand, io, paths }),
+      checkEachManifest({ manifestPaths, readManifest, bootstrapCommand, io, paths }),
     ),
     summariseNewPackages(),
   )
@@ -85,13 +144,13 @@ const isLibraryManifest = ({
 
 const checkEachManifest = ({
   manifestPaths,
-  tip,
+  readManifest,
   bootstrapCommand,
   io,
   paths,
 }: {
   manifestPaths: string[]
-  tip: string
+  readManifest: (path: string) => Observable<string>
   bootstrapCommand: string | undefined
   io: NewPackageIo
   paths: LibraryPublishPaths
@@ -100,25 +159,27 @@ const checkEachManifest = ({
     ? EMPTY
     : forkJoin(
         manifestPaths.map((manifestPath) =>
-          checkManifest({ manifestPath, tip, bootstrapCommand, io, paths }).pipe(toArray()),
+          checkManifest({ manifestPath, readManifest, bootstrapCommand, io, paths }).pipe(
+            toArray(),
+          ),
         ),
       ).pipe(mergeMap((events) => from(events.flat())))
 
 const checkManifest = ({
   manifestPath,
-  tip,
+  readManifest,
   bootstrapCommand,
   io,
   paths,
 }: {
   manifestPath: string
-  tip: string
+  readManifest: (path: string) => Observable<string>
   bootstrapCommand: string | undefined
   io: NewPackageIo
   paths: LibraryPublishPaths
 }): Observable<PublishLibEvent> =>
-  io.showFile({ ref: tip, path: manifestPath }).pipe(
-    map(({ stdout }) => readPublishableName(stdout)),
+  readManifest(manifestPath).pipe(
+    map(readPublishableName),
     mergeMap((name) =>
       name === undefined
         ? EMPTY

@@ -111,12 +111,15 @@ export const checkNewPackagesYargsModule =
   (io) =>
     createCommand({
       command: 'check-new-packages [lib-path]',
-      describe: 'Report packages a commit range adds that the registry has never seen',
+      describe:
+        'Report packages the registry has never seen, across a commit range or the whole library',
       builder: (yargs) =>
         yargs
           .positional('lib-path', { type: 'string', default: '.' })
-          .option('base', { type: 'string', demandOption: true })
-          .option('tip', { type: 'string', demandOption: true })
+          .option('base', { type: 'string' })
+          .option('tip', { type: 'string' })
+          .implies('base', 'tip')
+          .implies('tip', 'base')
           .option('bootstrap-command', { type: 'string' })
           .option('registry', { type: 'string' }),
       handler: ({ libPath, base, tip, bootstrapCommand, registry }) => {
