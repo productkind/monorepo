@@ -222,7 +222,7 @@ course:
         - type: text
           title: 'Storyboard: From struggle to solution'
           content:
-            body: "Now that you know **who** you're designing for and **what problem** you need to solve, let's visualize how your solution will help your user. A great way to do this is by creating a **storyboard**. This is a series of panels or sketches that illustrate the user's journey: from experiencing the problem, to using your solution, to reaching a happy outcome."
+            body: "Now that you know **who** you're designing for and **what problem** you need to solve, let's visualise how your solution will help your user. A great way to do this is by creating a **storyboard**. This is a series of panels or sketches that illustrate the user's journey: from experiencing the problem, to using your solution, to reaching a happy outcome."
           subtitle: A storyboard communicates your user's story through images.
         - type: text
           title: Why storyboard?
@@ -503,7 +503,7 @@ course:
             body: |-
               - **Speed and focus:** With fewer features, you can develop and launch quickly. This means you get your solution into users' hands sooner.
               - **User feedback:** An MVP allows you to test your assumptions. You can find out early if you're solving the right problem. If not, you can pivot or adjust with less wasted work.
-              - **Resource savings:** You avoid spending time and money on features that users don't actually need or want. Build the core that matters most, and save the 'nice-to-haves' for later.
+              - **Resource savings:** You avoid spending time and money on features that users don't actually need or want. Build the core your users actually need, and save the 'nice-to-haves' for later.
               - **Clarity:** For you and your team, an MVP forces clarity on what's truly essential. It's easy to get caught up thinking everything is important. But when you constrain scope, you make tough choices about what will have the biggest impact on the user's problem.
           subtitle: 'There are many benefits:'
         - type: quiz-question
@@ -613,7 +613,7 @@ course:
       isFree: false
       skills:
         - MVP
-        - Prioritization
+        - Prioritisation
         - Lean Product
       description: Carve out the minimal set of features (the MVP) to build now.
       completionTime: 30:00
