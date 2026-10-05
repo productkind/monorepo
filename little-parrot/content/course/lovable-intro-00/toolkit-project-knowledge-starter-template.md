@@ -18,7 +18,7 @@ Lovable reads this context with every prompt you send, so it keeps your app cons
 
 ## Product outcome
 
-This app helps [target user] to [core outcome, e.g. "organise book club activities without the chaos of group chats"].
+This app helps [target user] to [core outcome, e.g. "organise book club activities without suggestions getting lost in group chats"].
 
 ## Design system
 

@@ -4,6 +4,8 @@ Scope: all 9 courses in `little-parrot/content/course/` plus their toolkit items
 
 Lovable courses were last updated **14 June 2026**. Checked against the Lovable changelog (`docs.lovable.dev/changelog`, every entry from 15 June 2026 to 22 September 2026 — 61 dated entries) and against current Lovable docs pages. Non-Lovable tools checked against their own current documentation.
 
+> **Status: all 9 courses updated, 1 October 2026.** This file is the original 23 September snapshot, kept as the record of what was wrong. Two findings below were corrected during the work and are marked **[AUDIT WAS WRONG]**; two things the audit missed entirely are listed under _What the audit missed_. The **What was done** section at the end records the outcome, including what is still outstanding.
+
 Severity:
 
 - **BROKEN** — verified against current docs; a learner following the step cannot complete it.
@@ -96,7 +98,17 @@ This is the worst-affected course — publishing is precisely what changed most.
 
 - Backend logs path **More → Preview … Cloud → Logs** (yaml:698) — the "More button" wording is right; current docs confirm "open the **More** tab in the project toolbar and select **Cloud**".
 - Leaked-password fix path **Cloud → Users → Auth Settings → Email → Password HIBP Check** (yaml:1553) — matches the current Auth settings structure.
-- Basic scan runs automatically on publish (yaml:1400) — still true, and the old opt-out setting was removed on 10 Aug, which makes this _more_ true than when it was written.
+- ~~Basic scan runs automatically on publish (yaml:1400) — still true, and the old opt-out setting was removed on 10 Aug, which makes this _more_ true than when it was written.~~
+
+**[AUDIT WAS WRONG]** The scan behaviour is still automatic, but the **labels are not**. This entry trusted the June tool-facts sheet instead of checking the live Security view. Lovable **redesigned the project Security view on 23 September 2026**, the same day this audit was written, and it was not in the changelog copy used here. Three labels the course taught no longer exist:
+
+| Course said                      | Actually                                      |
+| -------------------------------- | --------------------------------------------- |
+| **Basic scan**                   | **Quick security scan** (marked _Automatic_)  |
+| **Deep scan**                    | **Deep security scan** (marked _Recommended_) |
+| **Error** (red) / Warning / Info | **Critical** / Warning / Info                 |
+
+Navigation was also never stated: the Security view is **More → Security**. Findings are now grouped into areas (**Access control & authorization**, **Leaked secrets & credentials**), each opening with **What could happen** in everyday words, then **Technical details**. Fix controls are **Try to fix** per finding, **Try to fix selected** via checkboxes, and **Try to fix all**. All corrected in the course and the security toolkit.
 
 ### GAP
 
@@ -135,7 +147,9 @@ Conceptual course, mostly durable. One framing issue:
 
 ## 6. Plan Your Vibe Coded App (`vibe-coding-product-management-00`)
 
-No tool-specific instructions; the Lovable mentions are all generic ("open Lovable or your chosen AI app builder"). **Nothing to change.** This is the right pattern for staying evergreen.
+No tool-specific instructions; the Lovable mentions are all generic ("open Lovable or your chosen AI app builder"). This is the right pattern for staying evergreen.
+
+**[AUDIT WAS WRONG]** "Nothing to change" was reached by skimming for tool instructions and stopping. The language checker was never run on it. It had four real violations: **"visualize"** and the skill tag **"Prioritization"** (American spellings), **"Build the core that matters most"** (banned importance claim), and **"Land on homepage"** in a journey table. All fixed. Lesson: a course being evergreen on tools says nothing about whether it is clean on language.
 
 ---
 
@@ -201,16 +215,46 @@ Highest-priority recaptures, because the flow changed _and_ the image is load-be
 
 ---
 
-## Suggested order of work
+## What the audit missed
 
-1. **`lovable-publishing-00`** — four broken step-by-step flows (API keys, subdomain, favicon/meta tags, custom domain) plus analytics. A learner cannot complete Challenge 1 or Challenge 2 as written. Fix first.
-2. **`lovable-intro-00`** — one broken flow (meta tags), plus the credit and free-fix claims. Add **Chat mode** while you are in there; it is the most learner-relevant new feature of the quarter.
-3. **`vibe-coding-debugging-00`** + its security toolkit + the intro course's pre-publish checklist — the "Try to fix all is free" correction, which appears in six places across three files.
-4. **`write-better-with-ai-00`** — one step, five minutes, and it removes a recurring maintenance burden if you switch to model families.
-5. **`ai-your-life-admin-00`** — needs a device with iOS 27 and a screenshot rebuild. Schedule it rather than squeezing it in.
-6. **`vibe-coding-tech-00`** — vocabulary reconciliation (Supabase vs Lovable Cloud) and the Connectors reality. Not urgent.
-7. **`vibe-coding-github-00`**, **`vibe-coding-start-your-business-00`** — wording touch-ups only.
-8. **`vibe-coding-product-management-00`** — nothing.
+Two things were not in this audit at all, both found during the work.
+
+**The SEO & AI search review (shipped 18 May 2026).** Lovable has a built-in review under **More → SEO & AI search** that checks `robots.txt`, sitemap, metadata, social preview tags, heading structure, alt text, indexing and Google Search Console setup in one pass. Running it is free on every plan; only the fixes cost credits. The publishing course taught all of this by hand and never mentioned the tool. The audit missed it because the changelog was scoped to entries from 15 June onwards, and this shipped three weeks _before_ the last course update. **A date-scoped changelog sweep only finds what changed since the last update, not what was already missed at the time of it.** Worth one backward pass over the months before the last update date.
+
+**The Security view redesign (23 September 2026).** Landed the same day as this audit; see the correction under course 3.
+
+---
+
+## What was done — 1 October 2026
+
+All nine courses updated. Every YAML parses. The language checker is clean except for three files of known false positives (listed below).
+
+| Course | Outcome |
+| --- | --- |
+| `lovable-publishing-00` | All six broken flows fixed (API keys, subdomain, favicon, meta tags, custom domain, analytics). Added the **SEO & AI search** review, **TanStack Start** migration, **Social and Search cards**, domain health statuses. Challenge 1 → 12:00, Challenge 4 → 13:00. Three toolkits rewritten or corrected. |
+| `lovable-intro-00` | Meta tags and URL steps rewritten. Corrected free-plan credits, Plan mode cost, inline-edit cost, 10 free fixes, browser-testing login, database approval path, security severity labels. Added a **Chat mode** step. Challenge 5 → 8:00. |
+| `vibe-coding-debugging-00` | "Try to fix all is free" corrected in five places plus the security toolkit. Security scan names, severity labels and navigation updated for the 23 Sep redesign. Added **Chat mode** and a sixth bug-loop strategy, **drafts**. Challenge 5 → 11:00, Challenge 7 → 13:00. |
+| `write-better-with-ai-00` | Model list replaced with **families** rather than versions, so it stops rotting. "LLaMA" → "Llama". |
+| `vibe-coding-tech-00` | Supabase / Lovable Cloud vocabulary reconciled **without making the course Lovable-specific**. "Hootsuit" → "Hootsuite". Connectors and database export added generically. Five pre-existing language violations fixed. |
+| `vibe-coding-github-00` | **Chat mode is free**, so the "ask in Plan mode for one credit" step was rewritten — this is the credit-saving course. GitHub connection path, Copilot agent terminology, "AI chat assistant" in full. |
+| `vibe-coding-start-your-business-00` | **Session replay is off by default** and needs **Record user sessions** enabling, which the course assumed worked. Added its separate 5,000-recordings free allowance. |
+| `ai-your-life-admin-00` | **Use Model** picker is now On-Device / Cloud / **Cloud Pro** / **Extension Model**. The Baby Log told learners to pick "ChatGPT", which no longer exists as an option. Fixed in the course, two toolkits and all three mentor `systemPrompt`s. |
+| `vibe-coding-product-management-00` | Four language violations fixed. See the correction above. |
+
+### Two rules learned the hard way
+
+**Check whether a course is tool-independent before "improving" it.** `vibe-coding-tech-00` and `vibe-coding-start-your-business-00` are deliberately vendor-neutral (the latter mentions Lovable zero times). Several GAP suggestions in this audit would have broken that by adding Lovable navigation paths. A GAP that names a vendor feature is only an improvement in a course that already names that vendor.
+
+**Don't delete concrete information while fixing currency.** Two near-misses: the favicon generator link and the 1200x630 social image spec were cut from the intro course because Lovable now generates both, and the 512MB deployment limit was cut from the publishing course because it isn't in Lovable's docs. All three were restored. The limit was _deliberately_ undocumented, which the course's own messy draft states plainly. Absence from vendor docs is not evidence against a claim.
+
+### Still outstanding
+
+- **Screenshots.** Essentially every Lovable UI image across the four Lovable courses is stale, and the security ones got worse on 23 September. The `ai-your-life-admin-00` images show the iOS 26 Shortcuts editor and the old model picker. See _Cross-cutting_ above for the priority list.
+- **`ai-your-life-admin-00` build-through.** The text is corrected against Apple's documentation, but both shortcuts need rebuilding on an iOS 27 device to confirm the flow and recapture the step images.
+- **Three files cannot be run clean through `check-banned.py`**, all false positives: `write-better-with-ai-00` (quotes banned phrases to teach avoidance, and the word bank exists to list them), `toolkit-visual-component-guide.mdx` (shadcn component names `Dialog`, `AlertDialog`), and one "Never use the word 'synergy'" example.
+- **Challenge title.** `vibe-coding-debugging-00` still has "Handling Security Errors and Warnings", though "errors" is no longer a severity label. Renaming touches `COURSE-OVERVIEW-CONTENT.md`, `skills-taxonomy.yaml` and a toolkit frontmatter, so it was left for a taxonomy pass.
+
+---
 
 ## A note on cadence
 
