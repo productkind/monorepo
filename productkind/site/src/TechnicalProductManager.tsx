@@ -238,9 +238,14 @@ const TechnicalProductManager = () => (
         </Typography>
         <Typography>
           We write all of it ourselves. Kinga spent over a decade in the tech industry, learned to
-          code, moved into product management and worked as a lead product manager. Tamas spent 15
-          years as a software engineer and engineering leader, and co-founded a coding school that
-          graduated over 3,000 people into tech careers.
+          code, moved into product management and worked as a lead product manager. She has mentored
+          product managers and holds an executive coaching diploma.
+        </Typography>
+        <Typography>
+          Tamas spent 15 years as a software engineer and engineering leader. He co-founded Green
+          Fox Academy, a coding school that graduated over 3,000 students into tech careers, and has
+          spent more than a decade mentoring girls and women in STEM. We both speak at international
+          tech conferences.
         </Typography>
       </div>
     </section>

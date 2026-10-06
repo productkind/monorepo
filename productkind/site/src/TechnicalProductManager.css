@@ -16,6 +16,11 @@
   top: 100%;
 }
 
+/* The homepage's parrot that peeks out of each box on hover isn't used on this page. */
+.tpm-page .box::after {
+  content: none;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -204,7 +209,7 @@
   font-size: 0.9rem;
 }
 
-.tpm-team-bio .typography-body {
+.tpm-team-bio .typography-body:last-child {
   margin: 0;
 }
 
