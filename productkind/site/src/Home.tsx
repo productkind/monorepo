@@ -1,63 +1,24 @@
 import './Home.css'
+import { SiteFooter } from './SiteFooter'
+import { SiteHeader } from './SiteHeader'
 import { Typography } from './Typography'
 
-import { Instagram, Linkedin } from 'lucide-react'
-import { useState } from 'react'
+import { Head } from 'vite-react-ssg'
 
 const Home = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
-
-  const closeMenu = () => {
-    setIsMenuOpen(false)
-  }
-
   return (
     <main className="site">
-      <header className="site-header" data-menu-open={isMenuOpen}>
-        <nav className="site-navigation">
-          <a href="#hero" className="navigation-logo">
-            <img src="assets/logo-invert.svg" width="48" alt="productkind logo" />
-          </a>
-          <span className="menu-items">
-            <a href="#hero" className="navigation-link" onClick={closeMenu}>
-              <span className="navigation-link-text">Home</span>
-            </a>
-            <a
-              href="#our-product"
-              className="navigation-link navigation-link-product"
-              onClick={closeMenu}
-            >
-              <span className="navigation-link-text">Our&nbsp;Product</span>
-            </a>
-            <a href="#about" className="navigation-link" onClick={closeMenu}>
-              <span className="navigation-link-text">About</span>
-            </a>
-            <a href="#newsletter" className="navigation-link" onClick={closeMenu}>
-              <span className="navigation-link-text">Newsletter</span>
-            </a>
-            <a href="#seminars" className="navigation-link" onClick={closeMenu}>
-              <span className="navigation-link-text">Seminars</span>
-            </a>
-            <a href="#our-talks" className="navigation-link" onClick={closeMenu}>
-              <span className="navigation-link-text">Our&nbsp;Talks</span>
-            </a>
-          </span>
-          <div
-            className="hamburger-button"
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-            aria-expanded={isMenuOpen}
-          >
-            <span className="hamburger-bar"></span>
-            <span className="hamburger-bar"></span>
-            <span className="hamburger-bar"></span>
-          </div>
-        </nav>
-      </header>
+      <Head>
+        <title>productkind</title>
+        <meta property="og:title" content="productkind" />
+        <meta
+          property="og:description"
+          content="At productkind, we teach curious people product and tech skills in a nurturing, human way. Our goal is to help people learn and succeed who might not otherwise have the opportunity, to replace skill anxiety with confidence, curiosity, and a sense of purpose."
+        />
+        <meta property="og:image" content="assets/og-image.png" />
+        <meta property="og:type" content="website" />
+      </Head>
+      <SiteHeader />
       <section id="hero" className="bento hero">
         <div className="box left hero-logo">
           <img
@@ -449,49 +410,7 @@ const Home = () => {
           </dl>
         </div>
       </section>
-      <footer className="site-footer">
-        <a href="#" className="footer-logo">
-          <img src="assets/logo-invert.svg" width="48" alt="productkind logo" />
-        </a>
-        <a className="footer-link" href="mailto:hello@productkind.com">
-          hello@productkind.com
-        </a>
-        <div className="footer-social">
-          <a
-            className="footer-link"
-            href="https://www.instagram.com/by_productkind/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Instagram />
-          </a>
-          <a
-            className="footer-link"
-            href="https://www.linkedin.com/company/productkind"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Linkedin />
-          </a>
-        </div>
-        <div className="sponsors">
-          <Typography component="p" variant="body">
-            Partner of
-          </Typography>
-          <Typography component="p" variant="body">
-            <a href="https://https://elevenlabs.io/startup-grants">
-              <img
-                className="sponsor-elevenlabs"
-                src="https://eleven-public-cdn.elevenlabs.io/payloadcms/cy7rxce8uki-IIElevenLabsGrants%201.webp"
-                alt="ElevenLabs"
-              />
-            </a>
-          </Typography>
-        </div>
-        <Typography component="p" variant="body">
-          © 2026 productkind. All rights reserved.
-        </Typography>
-      </footer>
+      <SiteFooter />
     </main>
   )
 }

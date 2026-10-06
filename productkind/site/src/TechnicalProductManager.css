@@ -1,0 +1,493 @@
+/* Mobile-first: the base rules are the phone layout, the media queries add to it. */
+
+.tpm-page {
+  --border-width: 0.5rem;
+  --box-padding: 1.25rem;
+  --font-size-body: 1rem;
+}
+
+.tpm-page .navigation-logo img {
+  display: block;
+  width: 40px;
+}
+
+/* Open the phone menu directly under the slimmer header. */
+.tpm-page .menu-items {
+  top: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.tpm-page .typography.typography-h1 {
+  font-size: 2.25rem;
+  line-height: 1.1;
+}
+
+.tpm-page .typography.typography-h2 {
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+.tpm-page .typography.typography-h3 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.tpm-page .typography.typography-h4 {
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+.tpm-page .typography.typography-h5 {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 1.05rem;
+  line-height: 1.3;
+  margin: 0 0 0.5rem 0;
+}
+
+.tpm-page li {
+  line-height: 1.5;
+}
+
+.tpm-hero {
+  border-top: 0;
+}
+
+.tpm-eyebrow {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 1rem 0;
+}
+
+.typography.typography-h1.tpm-title {
+  margin-bottom: 1.5rem;
+}
+
+.tpm-title-highlight {
+  background: var(--color-accent);
+  background-size: 100% 0.9em;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.tpm-quote {
+  margin: 0 0 1.25rem 0;
+  padding-left: 0.75rem;
+  border-left: 0.25rem solid var(--color-black);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.typography.typography-body.tpm-lead {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.waitlist-form {
+  max-width: 40rem;
+}
+
+.waitlist-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.waitlist-input {
+  flex: 1;
+  width: 100%;
+  min-height: 3rem;
+  padding: 0 1rem;
+  font-family: var(--font-body);
+  /* 16px or more stops iOS Safari zooming in on focus. */
+  font-size: 1rem;
+  color: var(--color-black);
+  background: var(--color-white);
+  border: 0.2rem solid var(--color-black);
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+.waitlist-input:focus-visible {
+  outline: 0.2rem solid var(--color-secondary-accent-dark);
+  outline-offset: 2px;
+}
+
+.waitlist-button {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0;
+  font-family: var(--font-body);
+}
+
+.waitlist-note {
+  margin: 0.75rem 0 0 0;
+  font-size: 0.875rem;
+}
+
+.tpm-checklist {
+  padding: 0;
+  margin: 1.5rem 0 0 0;
+}
+
+.tpm-checklist li {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  list-style: none;
+  margin-bottom: 0.75rem;
+}
+
+.tpm-check {
+  flex: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 0.15rem;
+  color: #00a650;
+}
+
+/* The photo runs edge to edge across the top of the card; the caption keeps the padding. */
+.tpm-team {
+  margin: 0;
+  padding: 0;
+}
+
+.tpm-team-photo {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+}
+
+.tpm-team-caption {
+  padding: var(--box-padding);
+}
+
+.tpm-team-names {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 0 0 1.25rem 0;
+  padding: 0;
+}
+
+.tpm-team-names li {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.tpm-team-names strong {
+  font-family: var(--font-heading);
+  font-weight: 900;
+}
+
+.tpm-team-names span {
+  font-size: 0.9rem;
+}
+
+.tpm-team-bio .typography-body {
+  margin: 0;
+}
+
+.tpm-team-previously {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.75rem 0;
+}
+
+.tpm-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.tpm-logo-large {
+  max-height: 1.75rem;
+  width: auto;
+}
+
+.tpm-logo-small {
+  max-height: 0.9rem;
+  width: auto;
+}
+
+.tpm-steps {
+  display: grid;
+  gap: var(--border-width);
+  margin: 0;
+  padding: 0;
+}
+
+/* On phones the number sits on a strip above the card so the text keeps the full width. */
+.tpm-step {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.tpm-step-number {
+  flex: none;
+  padding: 0.25rem var(--box-padding);
+  background: var(--color-accent);
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+.tpm-step-body {
+  flex: 1;
+}
+
+.tpm-step-body .typography-body {
+  margin: 0;
+}
+
+.tpm-list {
+  padding-left: 0;
+  margin: 0;
+}
+
+.tpm-list li {
+  margin-bottom: 0.75rem;
+}
+
+.tpm-faq {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.tpm-faq-item {
+  border-bottom: 0.2rem solid var(--color-black);
+}
+
+.tpm-faq-item:last-child {
+  border-bottom: 0;
+}
+
+.tpm-faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  min-height: 3rem;
+  padding: 0.75rem 0;
+}
+
+.tpm-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.tpm-faq-item summary::after {
+  content: '+';
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.tpm-faq-item[open] summary::after {
+  content: '−';
+}
+
+.tpm-faq-item .typography.typography-h5.tpm-faq-question {
+  margin: 0;
+}
+
+.tpm-faq-item .typography-body {
+  margin: 0 0 1rem 0;
+}
+
+.tpm-closing .typography-h3 {
+  margin-bottom: 1.25rem;
+}
+
+/* A gradient button disappears on a gradient card, so here it turns solid black. */
+.tpm-closing .waitlist-button {
+  background: var(--color-black);
+  color: var(--color-white);
+  transition:
+    background-color 0.2s,
+    transform 0.1s;
+}
+
+.tpm-closing .waitlist-button:hover {
+  animation: none;
+  background: #2c2c31;
+}
+
+.tpm-closing .waitlist-button:active {
+  transform: translateY(1px);
+}
+
+.tpm-closing .waitlist-button:focus-visible {
+  outline: 0.2rem solid var(--color-black);
+  outline-offset: 3px;
+}
+
+@media (min-width: 600px) {
+  .tpm-page {
+    --border-width: 0.75rem;
+    --box-padding: 1.5rem;
+    --font-size-body: 1.1rem;
+  }
+
+  .tpm-page .typography.typography-h1 {
+    font-size: 3rem;
+  }
+
+  .tpm-page .typography.typography-h2 {
+    font-size: 2.25rem;
+  }
+
+  .tpm-page .typography.typography-h3 {
+    font-size: 1.75rem;
+  }
+
+  .tpm-page .typography.typography-h5 {
+    font-size: 1.2rem;
+  }
+
+  .typography.typography-body.tpm-lead {
+    font-size: 1.25rem;
+  }
+
+  .waitlist-form-row {
+    flex-direction: row;
+  }
+
+  .waitlist-input {
+    font-size: var(--font-size-body);
+  }
+
+  .waitlist-button {
+    width: auto;
+    white-space: nowrap;
+  }
+
+  .tpm-step {
+    flex-direction: row;
+    gap: var(--border-width);
+  }
+
+  .tpm-step-number {
+    display: grid;
+    place-items: center;
+    width: 3.5rem;
+    padding: 0;
+    font-size: 1.5rem;
+  }
+
+  .tpm-two-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tpm-full-width {
+    grid-column: 1 / 3;
+  }
+}
+
+@media (min-width: 1000px) {
+  .tpm-page {
+    --border-width: 1rem;
+    --font-size-body: 1.2rem;
+  }
+
+  .tpm-page .navigation-logo img {
+    width: 48px;
+  }
+
+  .tpm-page .typography.typography-h1 {
+    font-size: 4rem;
+  }
+
+  .tpm-page .typography.typography-h2 {
+    font-size: 3rem;
+  }
+
+  .tpm-page .typography.typography-h3 {
+    font-size: 2.5rem;
+  }
+
+  .tpm-page .typography.typography-h4 {
+    font-size: 2rem;
+  }
+
+  .tpm-page .typography.typography-h5 {
+    font-size: 1.5rem;
+  }
+
+  .tpm-eyebrow {
+    font-size: 1rem;
+  }
+
+  .tpm-quote {
+    font-size: var(--font-size-body);
+  }
+
+  .typography.typography-body.tpm-lead {
+    font-size: 1.4rem;
+  }
+
+  /* The copy spans both rows; the bio card stretches so both columns end on the same line. */
+  .tpm-hero {
+    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .tpm-hero-copy {
+    grid-row: 1 / 3;
+    padding: 3rem;
+  }
+
+  .tpm-team-bio {
+    padding: 2rem;
+  }
+
+  .tpm-team-caption {
+    padding: 2rem;
+  }
+
+  .tpm-team-names span {
+    font-size: 1rem;
+  }
+
+  .tpm-logo-large {
+    max-height: 2rem;
+  }
+
+  .tpm-logo-small {
+    max-height: 1rem;
+  }
+
+  .tpm-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tpm-step-number {
+    width: 4rem;
+  }
+}
