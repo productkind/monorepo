@@ -5,7 +5,7 @@
 ## The design on one page
 
 - **Shape.** A free live workshop that is also Mission 0, then an eight-week season: seven missions, one a week, with a catch-up week in the middle. Learners work at their own pace inside the season window, with a weekly live case clinic and a help channel we answer within one working day.
-- **One product, one story.** The learner joins a fictional software company as its newest PM. The product is a real open-source app (the recommendation is Twenty, an open-source CRM) that we host, fill with realistic data and break on purpose, so learners never install anything. Every mission starts with a message from a colleague or a customer: a problem or a decision, with a deadline.
+- **One product, one story.** The learner joins a fictional software company as its newest PM. The product is a real open-source app (the recommendation is Twenty, an open-source CRM). Each learner runs their own copy in a cloud development environment that opens in the browser, set up with one click, with our story data and problems we break on purpose. Nothing gets installed on their laptop. Every mission starts with a message from a colleague or a customer: a problem or a decision, with a deadline.
 - **The same rhythm every week.** Predict, investigate in the real product, compare with a worked answer, produce a work artefact, then use it in your own job the following week (the "Monday move").
 - **Audio for the commute.** Each mission has up to three optional 8–10 minute briefings (the product story, an engineer explains, a debate), delivered to the learner's own podcast app, with a question to think about before and after, and a transcript.
 - **The missions add up.** Evidence planted in earlier missions (an escalation the network tab can't explain, a flaky test, a worrying number in the data) all points to the same part of the system. The final mission asks the learner to decide whether to fix it or build the feature a big customer is asking for.
@@ -45,7 +45,7 @@ Learners spend the whole season inside one product. They join a fictional compan
 
 - **It's what our research asked for.** The highest-value questions are about the PM's own product, which no generic explainer can answer. One product traced end to end is the closest practice we can give.
 - **Problem-first learning.** Schank's goal-based scenarios and Merrill's first principles of instruction both start from a realistic problem the learner wants to solve, and bring in each skill when the problem needs it. A PM who needs to answer a security questionnaire by Friday has a reason to learn what a worker process is.
-- **Transfer.** Practice that looks like the real job is more likely to be used in the real job. A sandbox CRM with permissions, integrations and a release train looks much more like an enterprise product than a to-do app.
+- **Transfer.** Practice that looks like the real job is more likely to be used in the real job. A CRM with permissions, integrations and background jobs looks much more like an enterprise product than a to-do app.
 
 ### The cast
 
@@ -74,10 +74,10 @@ The final decision is hard because of everything before it. That's the design: t
 | When | Mission | The message that starts it | What you do in the product | What you leave with |
 | --- | --- | --- | --- | --- |
 | Week 0, live and free | **0. "Saving doesn't work"** | Customer success: a customer can't save a record. Can you look before the 3pm call? | Reproduce it, find the failed request in the network tab, read the status code and response | Your first bug report and a network tab cheat sheet |
-| Week 1 | **1. Where does our customers' data go?** (how a web app works) | Sales forwards a prospect's security questionnaire | Trace one action from the browser to the database; find every service and third party | A system map and the questionnaire answers |
+| Week 1 | **1. Where does our customers' data go?** (how a web app works) | Sales forwards a prospect's security questionnaire | Start your own copy and watch its services start; trace one action from the browser to the database; find every third party | A system map and the questionnaire answers |
 | Week 2 | **2. Can we promise the integration?** (APIs, webhooks, integrations) | Sales: "It's just an API, right?" | Send API requests, break them on purpose, catch a webhook, build a no-code workflow | An integration feasibility brief |
 | Week 3 | **3. Four escalations before lunch** (bug triage) | Customer success forwards four tickets | Triage each one: bug or not, where, how bad | A bug report (personal feedback) and a triage table |
-| Week 4 | **4. It's merged, so where is it?** (deployment) | The CEO: Calder was promised the fix today | Follow the fix through review, checks, staging and release; ship and roll back your own change on GitHub | A release timeline, a stakeholder update and your first merged pull request |
+| Week 4 | **4. It's merged, so where is it?** (deployment) | The CEO: Calder was promised the fix today | Follow the fix through review and checks, deploy it to your own copy; ship and roll back your own change on GitHub | A release timeline, a stakeholder update and your first merged pull request |
 | Week 5 | **Catch-up week** | None | Finish anything you skipped, or take the deeper track |  |
 | Week 6 | **5. Did the onboarding checklist work?** (product analytics) | The head of product questions a board-deck number | Write a tracking plan, check the events fire, answer with a funnel and a SQL query | A data answer and a tracking plan entry |
 | Week 7 | **6. One AI workflow that saves real time** (AI for PM work) | The head of product: "One workflow each, and show me it's right" | Build and test an AI workflow on sandbox material | An AI workflow card |
@@ -94,7 +94,7 @@ Every mission has the same eight steps. A familiar structure means the learner s
 | 1. The message | 2 min | Phone or laptop | A message from a colleague or customer, with a deadline | Starts from a realistic problem (Schank's goal-based scenarios, Merrill's first principles). Noticing a gap in what you know creates curiosity (Loewenstein) |
 | 2. Briefings, optional | 8–10 min each | Podcast app | The story, an engineer explains, a debate. One question before, one after | A question asked before listening improves learning of what it asks about, so each one targets the idea we most want remembered (pretesting research) |
 | 3. Predict | 2 min | Laptop | Commit to a guess: where is the problem, what will the data say? | Producing an answer yourself, even a wrong one, before being told improves later learning (generation effect, pretesting) |
-| 4. Lab | Two sittings of 35–40 min | Laptop browser | Hands-on in the sandbox, with a hint ladder | Practice on the whole realistic task (Merrill), in chunks the learner works through at their own pace (Mayer's segmenting principle) |
+| 4. Lab | Two sittings of 35–40 min | Laptop browser | Hands-on in your own copy of the product, with a hint ladder | Practice on the whole realistic task (Merrill), in chunks the learner works through at their own pace (Mayer's segmenting principle) |
 | 5. Worked answer | 5–10 min | Laptop | How Tamas or Kinga did it, step by step, then one question: "What did they check that you didn't?" | Worked examples help beginners most; once learners have the basics, trying first and then seeing the expert solution helps them apply it to new problems (productive failure) |
 | 6. Artefact | 15–20 min | Laptop | A work artefact made from a template | Applying the new skill to produce something, with feedback (Merrill's application principle) |
 | 7. Monday move | 15 min | At work | One small action in your own product | Using the skill in your own world (Merrill's integration principle); transfer of training (Baldwin and Ford) |
@@ -124,7 +124,7 @@ Each mission lists the message, what the learner does, the worked answer, the ar
 | --- | --- |
 | 0–10 | Kinga introduces the season and the two of you. Everyone takes the 12-question Technical Product Confidence self-assessment (already specified in the research folder) as their "before" snapshot. |
 | 10–15 | Predict: a poll on where the problem is. The browser, the server, the database or the customer's network? |
-| 15–40 | Guided lab. Everyone opens the sandbox and the network tab, reproduces the problem, finds the failed request, opens its Payload tab to see what it was trying to do, and reads the status code and the response. Tamas helps people in the chat. The answer: the server rejected the request with a clear message, and the app showed a spinner instead of the message. |
+| 15–40 | Guided lab. Everyone opens the workshop copy (a temporary copy of the product we run for the day, so attendees need nothing but a browser) and the network tab. They reproduce the problem, find the failed request, open its Payload tab to see what it was trying to do, and read the status code and the response. Tamas helps people in the chat. The answer: the server rejected the request with a clear message, and the app showed a spinner instead of the message. |
 | 40–50 | Write a three-line bug report from a template, then compare it with Tamas's. |
 | 50–65 | A mini case clinic: two volunteers' bug reports get live feedback, so everyone sees what the clinics are like. |
 | 65–75 | The season map, booking two lab slots a week in the calendar, and the offer. |
@@ -135,11 +135,11 @@ Each mission lists the message, what the learner does, the worked answer, the ar
 
 **The message.** Sales forwards a security questionnaire from a prospect in financial services: "Which components process our data? Where is it stored, and in which cloud region? Which third parties receive it?" The engineering lead adds: "Have a go first and I'll check it on Thursday."
 
-**Sitting 1: the browser side.** Load the product with the network tab open. What did the browser download (HTML, JavaScript, styles, images), and what did it ask the server for (API requests)? In this product most of those requests are called "graphql", and the Payload tab shows what each one asked for. Find how the app remembers who you are (cookies and storage in the Application tab). List every domain the page talks to: our servers, the analytics tool, a font service, a content delivery network. That list is already the start of the questionnaire's answer on third parties.
+**Sitting 1: start your own copy.** On our GitHub repository, click the button that creates your codespace: a development environment in GitHub's cloud, the same kind of place an engineer works in, opened in your browser. While it starts, open the deployment file it follows, which lists everything that runs behind the browser: the server, a background worker, the database (Postgres) and Redis, which works as both a cache and the queue the worker takes its jobs from. Watch each one start in the log. When the app's address appears in the Ports tab, open it and sign in to the story's workspace. Ask an AI chat assistant to explain each service, then check two of its claims against the project's own documentation.
 
-**Sitting 2: the server side.** On GitHub, open the app's deployment file, the list of everything that runs behind the browser: the API server, a background worker, the database, a cache and queue, and file storage. Ask an AI chat assistant to explain each one, then check two of its claims against the project's own documentation. Draw the system map: a user action, the frontend, the API, the server, the database and worker, and the third parties.
+**Sitting 2: the browser side.** Load the product with the network tab open. What did the browser download (HTML, JavaScript, styles, images), and what did it ask the server for (API requests)? In this product most of those requests are called "graphql", and the Payload tab shows what each one asked for. Find how the app remembers who you are (cookies and storage in the Application tab). List every domain the page talks to: your copy of the server, the analytics tool, a font service, a content delivery network. That list is already the start of the questionnaire's answer on third parties.
 
-**Sitting 3: the cloud translation.** The same building blocks under their AWS, Azure and Google Cloud names: managed database, object storage, cache, queue, container hosting, load balancer, content delivery network and region. This covers the waitlist page's promise of "AWS, Google Cloud and Azure included".
+**Sitting 3: the map and the cloud translation.** Draw the system map: a user action, the frontend, the API, the server, the database and worker, and the third parties. Then the same building blocks under their AWS, Azure and Google Cloud names: managed database, object storage, cache, queue, container hosting, load balancer, content delivery network and region. This covers the waitlist page's promise of "AWS, Google Cloud and Azure included".
 
 **Worked answer.** Tamas's system map and his questionnaire answers, each marked with how sure he is and what he'd still ask the platform team.
 
@@ -183,7 +183,7 @@ This is the longest mission and the foundation for the rest. If the founding coh
 
 **Why four at once.** Each looks like "it's broken" to a customer, and telling them apart is the skill. Practising easily confused categories side by side is where mixing problem types (interleaving) helps learning most.
 
-**The four problems, set up in the sandbox**
+**The four problems, switched on in your copy**
 
 | Ticket | What the network tab shows | What it turns out to be |
 | --- | --- | --- |
@@ -192,7 +192,7 @@ This is the longest mission and the foundation for the rest. If the founding coh
 | "Amounts show in dollars, but we use euros." | The response says EUR; the screen shows $ | The data is right and the display is wrong: a frontend bug |
 | "Emails with our biggest client stopped appearing on their contact record." | Nothing: every request succeeds, and no new emails come back | The email sync for that account is failing in a background job. The network tab only shows what the browser asks for, so the learner escalates with the account, when it stopped and the account's sync status |
 
-**What the learner practises.** Reproducing the problem as the right user with the right data; reading the status code, timing, request and response; checking the console; checking whether it worked before the last release; recognising when the problem isn't in the browser at all; classifying the problem; combining severity and reach into a priority; and sharing evidence safely. HAR files, the network-tab export engineers often ask for, include session cookies and tokens, so the learner practises removing them or sharing screenshots of the relevant request instead.
+**What the learner practises.** Reproducing the problem as the right user with the right data; reading the status code, timing, request and response; checking the console; checking whether it worked before the last release; checking whether it happens in your own copy too, and if not, what's different; recognising when the problem isn't in the browser at all; classifying the problem; combining severity and reach into a priority; and sharing evidence safely. HAR files, the network-tab export engineers often ask for, include session cookies and tokens, so the learner practises removing them or sharing screenshots of the relevant request instead.
 
 **Worked answer.** Tamas's triage table, then an audio reveal of what was wrong in each case and how an engineer would fix it.
 
@@ -217,7 +217,7 @@ This is the longest mission and the foundation for the rest. If the founding coh
 
 **The message.** The CEO: "Calder was told the fix for the euro amounts would be live today. Engineering says it's merged. When will Calder actually have it?"
 
-**Sitting 1: follow the fix.** The currency bug from Mission 3 is now a GitHub issue (our model version of the report). Follow it through the pull request, the change itself (a few lines in the frontend; ask an AI chat assistant to explain it in product terms, then check that against the pull request description), the review comments and the automated checks. One check failed twice before passing: a flaky test in the email sync code, which has nothing to do with this change and still held it up for a day. After the merge, the fix deploys automatically to staging. Acceptance-test it there: the amounts show in euros, and the network tab shows the response was right all along. Production gets it on the Thursday release train, so check the version number and the release notes after it ships. Then follow a real change through the upstream open-source project: a merged pull request, its checks, the release it went into and its changelog entry. That shows the same process at the scale of a real engineering team.
+**Sitting 1: follow the fix, then deploy it.** The currency bug from Mission 3 is now a GitHub issue (our model version of the report). Follow it through the pull request, the change itself (a few lines in the frontend; ask an AI chat assistant to explain it in product terms, then check that against the pull request description), the review comments and the automated checks. One check failed twice before passing: a flaky test in the email sync code, which has nothing to do with this change and still held it up for a day. After the merge, our pipeline builds a new version of the product and publishes it. Deploy it yourself: change one version number in your environment's settings and restart it. Watch the services stop and start again, and notice the app is unavailable for a minute, which is one reason teams deploy at set times. Then acceptance-test: the amounts show in euros, and the network tab shows the response was right all along. At the fictional company, the same version goes to staging first and to production on the Thursday release train, and the worked answer walks through how that differs from what you just did. Then follow a real change through the upstream open-source project: a merged pull request, its checks, the release it went into and its changelog entry. That shows the same process at the scale of a real engineering team.
 
 **Sitting 2: ship your own change.** Create your own copy of the product's help-centre repository from our template on GitHub, and switch on GitHub Pages in its settings. Make a branch, write the release note for the fix in the browser editor and open a pull request. A check fails (a broken link, or a missing version number). Fix it, open the preview link, merge it and see it live. Then notice you announced the wrong version, revert the merge (a rollback) and watch the corrected page deploy.
 
@@ -233,7 +233,7 @@ This is the longest mission and the foundation for the rest. If the founding coh
 
 **Plants.** A flaky test in the sync code holds up releases that have nothing to do with it.
 
-**The deeper track (catch-up week).** Open the training app in a browser-based development environment, ask an AI agent to change a button label, run the app, see the change and open a pull request. For learners who want to see the engineer's side of the same pipeline. Twenty ships no development container, so we'd have to write one, and it needs the 4-core machine, which halves the free Codespaces hours to 30 a month. That's why it's in the "later" list in section 14.
+**The deeper track (catch-up week).** The engineer's version of the environment: Twenty built from its source code in a bigger codespace. Ask an AI agent to change a button label, run the app, see the change and open a pull request. For learners who want to see the engineer's side of the same pipeline. Building from source needs the 4-core machine, which halves the free Codespaces hours to 30 a month, so it stays optional and is in the "later" list in section 14.
 
 ### Catch-up week
 
@@ -243,7 +243,7 @@ No new mission. Learners finish anything they skipped or take the deeper track, 
 
 **The message.** Head of product: "The board deck says activation went up after we launched the onboarding checklist. Is that true? And before we build the integration setup flow, I want it tracked properly from day one."
 
-**Sitting 1: how tracking works.** Read the tracking plan. Do the onboarding steps in the sandbox and find the analytics requests in the network tab: the event names and properties leaving the browser. Watch them arrive in the analytics tool's live view. Spot the data problem: the same action is tracked under two different names since a release. Write the tracking plan entry for the integration setup flow: the event names, when each fires, its properties, who owns it and how to check it before launch.
+**Sitting 1: how tracking works.** Read the tracking plan. Do the onboarding steps in your copy and find the analytics requests in the network tab: the event names and properties leaving the browser. Watch them arrive in the analytics tool's live view. Spot the data problem: the same action is tracked under two different names since a release. Write the tracking plan entry for the integration setup flow: the event names, when each fires, its properties, who owns it and how to check it before launch.
 
 **Sitting 2: answer the question.** Define activation in one sentence. Build a funnel and a retention view in the cohort's shared analytics project, which holds three months of realistic, made-up usage. Ask an AI chat assistant for a SQL query that answers the question and run it. Its answer disagrees with the funnel, because it counts our internal test accounts and misses the renamed event. Find out why and fix the query. Then the harder part: the checklist launched the same week as a pricing change. What can you claim, and what can't you? The staggered rollout from Mission 4 helps: for one week, 10% of customers had the checklist and the rest didn't, all on the same pricing.
 
@@ -311,9 +311,11 @@ Then listen to the interviews with the engineering lead and the head of sales (a
 
 ## 6. The training app and the zero-install setup
 
-All facts in this section were checked against official docs, the repositories and Docker Hub on 9 October 2026. Anything that couldn't be confirmed is marked as unverified or listed in the spike at the end.
+All facts in this section were checked against official docs, the repositories and Docker Hub on 9 October 2026. Anything that couldn't be confirmed is marked as unverified or listed in the trial checks at the end.
 
-### Recommendation: Twenty, hosted by us
+### Recommendation: Twenty, run by each learner in GitHub Codespaces
+
+Every learner runs their own copy of the product in GitHub Codespaces, a development environment that runs in GitHub's cloud and opens in the browser. Nothing gets installed on the laptop, so admin rights don't come into it, and every learner has their own workspace, API keys and webhooks. Setting up the environment is part of Mission 1, so learners also find out what a development environment is and how it differs from staging and production.
 
 |  | Mealie | Twenty | Mattermost |
 | --- | --- | --- | --- |
@@ -324,74 +326,85 @@ All facts in this section were checked against official docs, the repositories a
 | Webhooks and no-code integrations (Mission 2) | Notifiers through Apprise, meal-plan webhooks | Signed webhooks on every record change, built-in workflows, an official Zapier app | Slack-compatible incoming and outgoing webhooks, slash commands, n8n and Zapier |
 | Network tab for beginners | REST, easy to read | GraphQL: every request is called "graphql", so you open Payload to see which is which | REST under `/api/v4`, easy to read |
 | Code a beginner can read | Best: small and conventional | Hardest: a very large TypeScript monorepo | Hard: large, in two languages |
-| Work for us to fork, break and host | Least: one container | Most: about 8–16 GB of server memory for staging and production | In between, plus an easy-to-miss edition trap (Entry vs Team) |
+| Work to package for one-click Codespaces | Least: it already ships a development container and runs as one container | Most: no development container, four services, at least 2 GB of memory, and it has to fit the free 2-core machine | In between: an official all-in-one preview image, meant for evaluation only, plus an easy-to-miss edition trap (Entry vs Team) |
 | Fits the season's story | Weak: no business customers or integrations | Strong: customers, deals, a renewal, integrations, and sync jobs on a worker with real GitHub issues | Medium |
-| Licence | AGPL-3.0 | AGPL-3.0 core; SSO, row-level permissions, audit logs and more than five workspaces need a paid Organization key | AGPL-3.0, with MIT-licensed builds |
+| Licence | AGPL-3.0 | AGPL-3.0 core; SSO, row-level permissions and audit logs need a paid key, and the course needs none of them | AGPL-3.0, with MIT-licensed builds |
 
-**Why Twenty.** The deciding question is who runs the app. If every learner had to run their own copy, Mealie would win easily, because it's the only one light enough. In this design we host one sandbox for everyone, so Twenty's weight becomes our server bill and Tamas's setup time instead of a barrier for learners. In exchange it shows what an enterprise PM needs to see: a backend made of several services, two API styles over the same data, signed webhooks, built-in workflows, roles, and a B2B story about customers, deals and integrations. Its email and calendar sync run as jobs on a background worker, and the project has dozens of real, closed GitHub issues about them (a backfill stalling on rate limits, duplicate messages), so the finale argues about a real part of a real codebase.
+**Why Twenty.** It shows what an enterprise PM needs to see: a backend made of several services, two API styles over the same data, signed webhooks, built-in workflows, roles, and a B2B story about customers, deals and integrations. Its email and calendar sync run as jobs on a background worker, and the project has dozens of real, closed GitHub issues about them (a backfill stalling on rate limits, duplicate messages), so the finale argues about a real part of a real codebase. Running it in each learner's own environment makes two missions better as well: in Mission 1 learners watch the four services start, and in Mission 4 they deploy the fix to their own copy themselves.
 
-**What Twenty costs us.** Its code is the hardest of the three for a beginner to read, so code-reading stays small and guided (the deployment file, one pull request, issue threads), and learners who want to search the code use an AI agent. Its screens talk GraphQL, so the network tab needs one extra skill, opening the Payload tab, taught in Mission 0. And it's the most work to fork, seed with bugs and host.
+**What Twenty costs.** It's the heaviest of the three to run and ships no Codespaces setup, so we write one, and it has to fit the free 2-core machine (unverified, and the first of the trial checks). Its code is the hardest of the three for a beginner to read, so code-reading stays small and guided (the deployment file, one pull request, issue threads), and learners who want to search the code use an AI agent. Its screens talk GraphQL, so the network tab needs one extra skill, opening the Payload tab, taught in Mission 0.
 
-**The fallback is Mealie.** If the spike shows Twenty is too much work to seed and run, Mealie supports every mission with simpler code and a readable network tab. The price is a weaker story and a one-container backend, which makes "why a backend is usually several services" something we explain rather than show.
+**The fallback is Mealie.** If Twenty doesn't fit the free machine or takes too long to start, Mealie already ships a development container, runs as one container and has simpler code and a readable network tab. The price is a weaker story and a one-container backend, which makes "why a backend is usually several services" something we explain rather than show.
 
 **Mattermost** is strong on webhooks, but it has no API console to try requests in, ships with tokens switched off, needs care to install the right free edition, and fits a CRM-and-renewal story less naturally.
 
-### Workspaces: the five-workspace limit
+### How each learner runs their own copy
 
-Self-hosted Twenty can run several workspaces, each on its own subdomain, but only five without a paid Organization key. So a free instance can't give 25–60 learners a workspace each. Two routes:
+**What the learner does.** One click on an "Open in GitHub Codespaces" button on our repository, a few minutes' wait, and the app opens from the Ports tab at the learner's own private address. The copy keeps its data between sessions. It stops by itself after 30 minutes without activity (GitHub's default) and starts again where it left off.
 
-1. **Ask Twenty for an education key first.** An Organization key removes the limit, so every learner gets their own workspace with their own API keys and webhooks. Eight weeks of enterprise PMs learning on Twenty is exposure Twenty might want. The self-hosted price is unverified.
-2. **The free route.** One shared workspace per cohort for Missions 0, 1, 3, 4 and 5. That's realistic: a real company has one workspace and many colleagues, and roles give each learner the right access. For Mission 2, where each learner needs their own API keys, webhooks and workflows, learners start Twenty's free 30-day cloud trial (no card) and import the story's companies and deals from a CSV we provide. The import runs in the browser as batches of GraphQL requests, which is worth watching in the network tab. The cost is a second account, and a Mission 2 workspace without our seeded bugs, which Mission 2 doesn't need.
+**What we build**
+
+- Our fork of Twenty, built by our pipeline into images and published to GitHub's container registry. Mission 4's fix arrives as a new image version.
+- A development container setup that starts the four services from those images (ready-built images, not the source code, which would need a much bigger machine), loads the story data on first start, points Twenty's server address at the codespace's forwarded address, and switches each mission's problems on with a setting.
+- Prebuilds, so the first start takes minutes. Their storage and Actions minutes are billed to us as the repository owner.
+- One temporary copy for each free workshop, sized for the group, so attendees need only a browser. Nobody needs a GitHub account or any setup before they've decided to join.
+
+**The free allowance.** A personal GitHub account gets 120 core-hours and 15 GB-months of storage a month, with no card, and usage stops at the limit instead of being charged. On the 2-core machine that's 60 hours. A season needs roughly 3 hours of running time a week, counting the idle time before an automatic stop, so about 25–30 hours: half the allowance. On a 4-core machine the same season would use nearly all of it, which is why the core path has to fit on 2 cores. Both numbers are estimates to check in the founding cohort.
+
+**Setting up the environment is a lesson, not a hurdle.** Learners click, wait and open the app; nobody debugs an installation in week one. What they learn is what started: the services, the deployment file that lists them, the address their copy runs at, and why an engineer's development environment, staging and production are three different places. Mission 3 comes back to it: when a customer's problem doesn't happen in your own copy, the difference in data, role, version or configuration is the first clue.
 
 ### What runs where
 
 | Piece | Where it runs | What the learner needs |
 | --- | --- | --- |
-| The training product, staging and production copies | Our server, running our fork of Twenty | A browser |
+| The training product | The learner's own codespace, running our fork's images | A personal GitHub account, and Codespaces reachable from their network |
+| The free workshop | One temporary copy we start for the day | A browser |
 | Developer tools | Built into Chrome, Edge and Firefox; Safari needs them switched on in its settings | Developer tools not blocked by IT |
 | Request inspector for webhooks | Our domain | A browser |
-| Code, issues, pull requests and checks | github.com; github.dev also works for reading code, though it runs nothing | A free GitHub account |
+| Code, issues, pull requests and checks | github.com; github.dev also works for reading code, though it runs nothing | The same GitHub account |
 | The help-centre site with preview links | The learner's own repository, created from our template, built by GitHub Actions and hosted on GitHub Pages | The same account; on a free plan the repository has to be public |
-| Product analytics | PostHog Cloud, one shared project | An invite; PostHog has no per-seat charges |
-| The deeper track | GitHub Codespaces: 120 core-hours a month free on a personal account, so 60 hours on a 2-core machine, no card needed | A personal GitHub account |
+| Product analytics | PostHog Cloud, one shared project that every learner's copy sends events to | An invite; PostHog has no per-seat charges |
+| The deeper track | A bigger codespace that builds Twenty from source: the 4-core machine, so 30 free hours a month | The same account |
 | AI tools | Whatever the learner's company approves, or a personal account used on sandbox material only |  |
 
-- **Why the learner's own deploy is a help-centre site.** No card-free host can run a copy of Twenty or Mattermost per learner: Fly.io has no free tier for new organisations, Koyeb has closed its free plan, Google Cloud Run needs a billing account, and Render's free tier has 512 MB of memory and wipes local data when it sleeps. A static site on GitHub Pages costs nothing, needs no extra account and still goes through branch, pull request, checks, preview, merge, deploy and revert. The app's own deploys happen on our staging and production, where learners follow them and acceptance-test the result.
+- **Why the learner still ships a help-centre site.** A codespace is a development environment, not a place real users visit. So the full route of branch, pull request, checks, preview link, merge, live site and revert happens on a static site on GitHub Pages, which costs nothing and needs no extra account. Free hosts without a card couldn't run a copy of Twenty per learner anyway: Fly.io has no free tier for new organisations, Koyeb has closed its free plan, Google Cloud Run needs a billing account, and Render's free tier has 512 MB of memory and wipes local data when it sleeps.
 - **A template, not a fork.** Workflows don't run in forks by default, and the preview action (`rossjrw/pr-preview-action`, maintained, MIT licence) doesn't support pull requests from forks. A repository created from a template runs Actions normally. GitHub Pages still has to be switched on by hand (Settings → Pages, deploy from the `gh-pages` branch), so the lab makes that a step of its own: switching on hosting. New repositories get a read-only token by default, so the template's workflow declares the write permissions it needs.
-- **PostHog.** The free plan includes 1 million events a month and one project. We generate three months of made-up usage ourselves, because PostHog has no public demo dataset, and send it with past timestamps through the capture API. Events can't be deleted selectively, so test the backfill in a separate throwaway organisation first.
+- **PostHog.** The free plan includes 1 million events a month and one project. Each learner's copy tags its events with the learner, so they can find their own in the live view. We generate three months of made-up usage ourselves, because PostHog has no public demo dataset, and send it with past timestamps through the capture API. Events can't be deleted selectively, so test the backfill in a separate throwaway organisation first.
 
 ### The laptop check
 
-Five minutes before the workshop, from a link in the confirmation email:
+Five minutes, before the season starts. The workshop only needs the first two steps.
 
-1. Open the sandbox. This checks our domain isn't blocked.
+1. Open a test page on our domain. This checks our domain isn't blocked.
 2. Open developer tools and find the request called `laptop-check`. This checks they aren't disabled by company policy.
 3. Sign in to GitHub and open the help-centre template. This checks GitHub isn't blocked for personal accounts.
-4. Optional, for the deeper track: open a test codespace. This checks the company proxy doesn't break it.
+4. Open a test codespace and the app inside it. Every lab from Mission 1 runs in a codespace, so this is the step that decides the most.
 
-The result is green (use your work laptop for everything), amber (use your work laptop, plus a personal one for the GitHub work in Mission 4 and the deeper track) or red (use a personal laptop for the labs). Amber and red come with a ready-to-send message to IT. Chrome and Edge let IT allow developer tools on named sites while keeping them blocked elsewhere (the `DeveloperToolsAvailabilityAllowlist` policy), so the request is small: "please allow developer tools on [sandbox domain]". Where a company proxy inspects encrypted traffic and breaks Codespaces, GitHub's documented fix is to exempt `*.visualstudio.com`, and it publishes a test URL learners can open.
+The result is green (the work laptop works for everything), amber (developer tools work but GitHub or Codespaces doesn't: the workshop on the work laptop, the season on a personal one) or red (developer tools are blocked: a personal laptop for everything). Amber and red come with a ready-to-send message to IT. Chrome and Edge let IT allow developer tools on named sites while keeping them blocked elsewhere (the `DeveloperToolsAvailabilityAllowlist` policy). For Codespaces, GitHub documents the domains it needs and notes that proxies which inspect encrypted traffic break the connection. Its fix is to exempt `*.visualstudio.com`, and it publishes a test URL learners can open.
 
 ### Risks
 
-- **IT blocks developer tools.** The allowlist request, or a personal laptop. Learners who get a red result find out before they pay.
+- **Codespaces blocked at work.** Now the biggest risk, because every lab needs it. The laptop check catches it before anyone pays, and a personal laptop is the fallback. We found no data on how often companies block it.
+- **IT blocks developer tools.** The allowlist request, or a personal laptop.
+- **Support moves from one server to 25–60 environments.** Week one will bring setup questions. Tamas covers the stuck thread daily that week, and every fix goes into the setup or the hints.
+- **The free hours run out.** That happens if a learner picks a bigger machine or runs the deeper track for long. The idle stop protects most of the allowance, and the setup asks for the 2-core machine.
 - **Phone-only learners.** Messages, audio and recall work on a phone; labs don't. The sales page says so.
 - **AI tools blocked at work.** The sandbox is fictional, so a personal account on a personal device is fine for labs. At work, only approved tools, which Mission 6 covers.
-- **The AGPL licence.** It requires us to offer the source of our modified Twenty to the people who use it over the network, so our fork, seeded bugs included, is public. A determined learner could find a bug in the code, which is also a skill worth having. Check the obligations with someone who knows AGPL before launch; this note isn't legal advice.
-- **Twenty moves fast.** v2.45 came out on 5 October and v2.46 four days later. Pin one version per season and upgrade between seasons.
-- **Server size.** Two instances need about 8 GB of memory and 4 virtual CPUs at minimum, and 16 GB to be comfortable. That's an inference from Twenty's official Helm chart; the only official figure is "at least 2GB of RAM" per instance.
+- **The AGPL licence.** It requires us to offer the source of our modified Twenty to anyone we give it to or who uses it over a network, so our fork, seeded bugs included, is public. A determined learner could find a bug in the code, which is also a skill worth having. Check the obligations with someone who knows AGPL before launch; this note isn't legal advice.
+- **Twenty moves fast.** v2.45 came out on 5 October and v2.46 four days later. Pin one version per season, so every learner's copy runs the same one, and upgrade between seasons.
 
-### The one-day spike
+### Trial checks before committing
 
-Before committing to Twenty, spend a day on these:
-
-1. Host staging and production on one server and pin the version.
-2. Seed the story: companies, deals, the Calder account and the roles.
-3. Seed Mission 0's bug and check it shows in the network tab as a failed request with a 4xx or 5xx status. GraphQL apps often return errors inside a response marked 200, which is a good Mission 3 lesson and too hard for the first hour.
-4. Check what a missing permission looks like. In the interface the object is hidden; over GraphQL it's a `FORBIDDEN` error. Confirm what the network tab shows when the rep opens a deal link.
-5. Check that the email sync's status is visible somewhere a PM would look, for Mission 3's fourth ticket, or add it in the fork.
-6. Check whether workflows on self-hosted Twenty use credits.
-7. Time Mission 0 on a locked-down laptop, from opening the sandbox to a finished bug report.
-8. Ask Twenty about an education key.
+1. Write the development container setup and check that Twenty's four services run on the free 2-core, 8 GB machine.
+2. Time the first start with and without a prebuild, and a restart after an idle stop.
+3. Point Twenty's server address at the codespace's forwarded address and check that signing in works through the private port.
+4. Measure disk use against the free 15 GB-months.
+5. Seed the story: companies, deals, the Calder account, the roles and a login for the new sales rep.
+6. Seed Mission 0's bug and check it shows in the network tab as a failed request with a 4xx or 5xx status. GraphQL apps often return errors inside a response marked 200, which is a good Mission 3 lesson and too hard for the first hour.
+7. Check what a missing permission looks like. In the interface the object is hidden; over GraphQL it's a `FORBIDDEN` error. Confirm what the network tab shows when the rep opens a deal link.
+8. A learner's copy has no real mailbox, so seed a connected email account whose sync has failed, and check its status shows somewhere a PM would look (Mission 3's fourth ticket).
+9. Check whether workflows on self-hosted Twenty use credits.
+10. Time Mission 0, and Mission 1's setup, on a locked-down laptop.
 
 ## 7. The audio briefings
 
@@ -425,7 +438,7 @@ For the system map, the feasibility brief and the data answer, learning partners
 
 1. **The hint ladder** in every lab step answers most questions without waiting for anyone.
 2. **A "stuck" thread per mission** in the community space, with a posting template: what I tried, what I expected, what I saw (screenshot) and my guess. That's the bug report format, so asking for help well is practice for Mission 3.
-3. **We answer within one working day**, and add common answers to the lab's hints the same week.
+3. **We answer within one working day**, and add common answers to the lab's hints the same week. In week one, when the setup questions come, Tamas checks the thread daily.
 4. **Later:** an AI lab assistant that answers from the lab content and past answers, once we have enough real questions to test it on.
 
 ## 9. Designing for completion
@@ -468,7 +481,7 @@ The evidence on getting adults to finish online courses is less encouraging than
 - **The expense route.** The manager message template, an invoice and the outcomes written in an employer's language.
 - **Follow-up emails.** Day 1: the recording, the cheat sheet and Tamas's model bug report. Day 3: a full audio briefing from Mission 1 with its transcript. Day 5: two Monday moves from workshop attendees, with permission. Then enrolment closes before the start date.
 - **A recorded version** of the workshop with the same lab, for people who can't attend live, so sign-up can stay open between seasons.
-- **Size.** A live lab works with up to about 40–60 people if Tamas covers the chat and everyone has done the laptop check beforehand (section 6).
+- **Size.** A live lab works with up to about 40–60 people on a temporary copy sized for the group, if Tamas covers the chat and everyone has done the short laptop check beforehand (section 6).
 
 ## 12. The learning science behind it
 
@@ -506,6 +519,7 @@ Each claim below was checked against the original paper or a reliable summary on
   - a one-question weekly pulse: "How useful was this week for your actual work? 1–5, and why?";
   - clinic attendance and recording views;
   - hint use per lab step, to find confusing steps;
+  - setup: the time from clicking the button to a running app, and how many learners needed help with it;
   - the recommendation question after Mission 4 and at the end, and referrals (invites sent, colleagues who joined);
   - the before-and-after self-assessment;
   - wins reported, counted and kept as stories.
@@ -519,7 +533,8 @@ There are two of you, so build the shared foundation and the first missions befo
 
 **Before launch**
 
-- The sandbox: a hosted copy of the training app with seed data, the season's bugs behind on/off switches, separate staging and production copies, and analytics instrumentation.
+- The one-click environment: our fork of Twenty built into images, a development container setup that starts it in Codespaces with the story data, the season's problems behind settings, analytics instrumentation and prebuilds.
+- A temporary copy of the product for each free workshop.
 - A request inspector on our own domain.
 - The help-centre repository template, with checks and preview links.
 - The cohort's analytics project with three months of made-up usage.
@@ -532,7 +547,7 @@ There are two of you, so build the shared foundation and the first missions befo
 
 ## 15. Decisions for the two of you
 
-1. **The training app.** I recommend Twenty, with Mealie as the fallback (section 6). Run the one-day spike before deciding, and ask Twenty about an education key at the same time, because the answer decides whether each learner gets their own workspace.
+1. **The training app.** I recommend Twenty, run by each learner in GitHub Codespaces, with Mealie as the fallback (section 6). Run the trial checks before deciding, above all whether Twenty fits the free 2-core machine.
 2. **The fictional company and customer names.**
 3. **Price and seats.** The research suggests €400–€800 is a defensible range to test for an applied programme with feedback and a substantial artefact.
 4. **Where it lives.** Your own site plus a community tool, or a cohort platform such as Maven that handles payments, reimbursement letters and discovery for a fee.
@@ -565,7 +580,7 @@ The page at `productkind/site/src/TechnicalProductManager.tsx` was written for t
 
 ### Learning science and behaviour change
 
-Titles and journal names are quoted as published, so `check-banned.py` reports their American spellings ("behavior", "organization"), along with Twenty's plan name "Organization" in section 6. Ignore those hits; correcting them would misquote the source.
+Titles and journal names are quoted as published, so `check-banned.py` reports their American spellings ("behavior", "organization"). Ignore those hits; correcting them would misquote the source.
 
 - Baldwin, T.T. and Ford, J.K. (1988). Transfer of training: A review and directions for future research. _Personnel Psychology_, 41(1), 63–105.
 - Bandura, A. (1977). Self-efficacy: Toward a unifying theory of behavioral change. _Psychological Review_, 84(2), 191–215.
