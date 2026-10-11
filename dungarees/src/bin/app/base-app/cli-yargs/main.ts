@@ -5,11 +5,12 @@ import { renderCliToStdio } from '@dungarees/cli/yargs-renderer.ts'
 
 export const main = async ({
   services,
-  delivery,
+  createBehaviorsAndDelivery,
 }: {
   services: DungareesBinServices
-  delivery: YargsDelivery
+  createBehaviorsAndDelivery: () => { delivery: YargsDelivery }
 }): Promise<void> => {
+  const { delivery } = createBehaviorsAndDelivery()
   const { argv, ...process } = services.process
   await renderCliToStdio({
     // argv is the real process.argv, so the node binary and the script path come first.

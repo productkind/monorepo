@@ -121,21 +121,24 @@ export const createApplication = <
       try {
         topLevelErrorHandling(onError)
         const services = getServices(runIdentity)
-        const behaviors = getBehaviors(services, runIdentity)
-        preMain(behaviors, runIdentity)
-        const exportState = (): CONFIG['exportState'] => exportStateOriginal(behaviors)
-        const delivery = getDelivery({ services, behaviors, exportState }, runIdentity)
-        const output = main({ services, delivery, behaviors }, runIdentity)
-        return {
-          services,
-          behaviors,
-          delivery,
-          output,
-          exportState,
-          importState: (newState) => {
-            importState(behaviors, newState)
-          },
+        const createBehaviorsAndDelivery: CreateBehaviorsAndDelivery<
+          ApplicationTypeConfigWithDefaults<CONFIG>
+        > = (...args) => {
+          const behaviors = getBehaviors(services, runIdentity, args[0])
+          preMain(behaviors, runIdentity)
+          const exportState = (): CONFIG['exportState'] => exportStateOriginal(behaviors)
+          const delivery = getDelivery({ services, behaviors, exportState }, runIdentity)
+          return {
+            behaviors,
+            delivery,
+            exportState,
+            importState: (newState) => {
+              importState(behaviors, newState)
+            },
+          }
         }
+        const output = main({ services, createBehaviorsAndDelivery }, runIdentity)
+        return { services, output, createBehaviorsAndDelivery }
       } catch (e) {
         onError(e)
         throw new Error('Could not run application', { cause: e })
@@ -153,7 +156,7 @@ type RunArgs<CONFIG extends Partial<ApplicationTypeConfig>> = undefined extends 
   : [identity: CONFIG['identity'], overrides?: RunOverrides<CONFIG>]
 
 type RunOverrides<CONFIG extends Partial<ApplicationTypeConfig>> = Partial<
-  SingleApplicationArgs<ApplicationTypeConfigWithDefaults<CONFIG>>
+  SingleApplicationArgs<CONFIG>
 >
 
 export type SingleApplicationArgs<CONFIG extends Partial<ApplicationTypeConfig>> = {
@@ -182,6 +185,7 @@ export type ApplicationTypeConfig = {
   output: unknown
   identity: JsonType
   exportState: unknown
+  input: unknown
 }
 
 type DefaultApplicationTypeConfig = {
@@ -191,6 +195,7 @@ type DefaultApplicationTypeConfig = {
   output: undefined
   identity: undefined
   exportState: undefined
+  input: undefined
 }
 
 type GetServices<CONFIG extends Partial<ApplicationTypeConfig>> = (
@@ -200,6 +205,7 @@ type GetServices<CONFIG extends Partial<ApplicationTypeConfig>> = (
 type GetBehaviors<CONFIG extends Partial<ApplicationTypeConfig>> = (
   services: CONFIG['services'],
   identity: CONFIG['identity'],
+  input: BehaviorsAndDeliveryInput<CONFIG>,
 ) => CONFIG['behaviors']
 
 type PreMain<CONFIG extends Partial<ApplicationTypeConfig>> = (
@@ -219,11 +225,27 @@ type GetDelivery<CONFIG extends Partial<ApplicationTypeConfig>> = (
 type Main<CONFIG extends Partial<ApplicationTypeConfig>> = (
   injected: {
     services: CONFIG['services']
-    behaviors: CONFIG['behaviors']
-    delivery: CONFIG['delivery']
+    createBehaviorsAndDelivery: CreateBehaviorsAndDelivery<CONFIG>
   },
   identity: CONFIG['identity'],
 ) => CONFIG['output']
+
+type BehaviorsAndDeliveryArgs<CONFIG extends Partial<ApplicationTypeConfig>> =
+  undefined extends CONFIG['input'] ? [input?: CONFIG['input']] : [input: CONFIG['input']]
+
+type BehaviorsAndDeliveryInput<CONFIG extends Partial<ApplicationTypeConfig>> =
+  BehaviorsAndDeliveryArgs<CONFIG>[0]
+
+export type CreateBehaviorsAndDelivery<CONFIG extends Partial<ApplicationTypeConfig>> = (
+  ...args: BehaviorsAndDeliveryArgs<CONFIG>
+) => BehaviorsAndDelivery<CONFIG>
+
+export type BehaviorsAndDelivery<CONFIG extends Partial<ApplicationTypeConfig>> = {
+  behaviors: CONFIG['behaviors']
+  delivery: CONFIG['delivery']
+  exportState: () => CONFIG['exportState']
+  importState: (newState: CONFIG['exportState']) => void
+}
 
 type OnError = (error: unknown) => void
 
@@ -245,7 +267,11 @@ type ApplicationTypeConfigWithDefaults<CONFIG extends Partial<ApplicationTypeCon
     ? CONFIG[KEY] extends ApplicationTypeConfig[KEY]
       ? CONFIG[KEY]
       : DefaultApplicationTypeConfig[KEY]
-    : CONFIG[KEY]
+    : KEY extends 'input'
+      ? unknown extends CONFIG[KEY]
+        ? DefaultApplicationTypeConfig[KEY]
+        : CONFIG[KEY]
+      : CONFIG[KEY]
 }
 
 export type ApplicationTypeConfigWithAnys<CONFIG extends Partial<ApplicationTypeConfig>> = {
@@ -261,9 +287,6 @@ type ArgPatternList<
 
 export type ApplicationRunReturn<CONFIG extends Partial<ApplicationTypeConfig>> = {
   services: CONFIG['services']
-  behaviors: CONFIG['behaviors']
-  delivery: CONFIG['delivery']
   output: CONFIG['output']
-  importState: (newState: CONFIG['exportState']) => void
-  exportState: () => CONFIG['exportState']
+  createBehaviorsAndDelivery: CreateBehaviorsAndDelivery<CONFIG>
 }

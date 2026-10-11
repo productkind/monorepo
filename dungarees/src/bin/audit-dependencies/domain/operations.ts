@@ -190,6 +190,7 @@ const isTypesPackage = (dependency: string): boolean => dependency.startsWith('@
 const COMMAND_BINARIES: Record<string, string> = {
   typescript: 'tsc',
   vitest: 'vitest',
+  'vite-node': 'vite-node',
 }
 
 const isRunByAScript = ({

@@ -5,7 +5,8 @@ import { expect, expectTypeOf, test } from 'vitest'
 
 test('empty application', () => {
   const app = createApplication()
-  const { services, behaviors } = app.run()
+  const { services, createBehaviorsAndDelivery } = app.run()
+  const { behaviors } = createBehaviorsAndDelivery()
   expectTypeOf<typeof services>().toEqualTypeOf<Record<string, never>>()
   expectTypeOf<typeof behaviors>().toEqualTypeOf<Record<string, never>>()
   expect(services).toEqual({})
@@ -152,7 +153,7 @@ test('Get behaviors', () => {
       }
     },
   })
-  const { behaviors } = app.run()
+  const { behaviors } = app.run().createBehaviorsAndDelivery()
   expect(behaviors.myService).toBe('my-service')
 })
 
@@ -179,13 +180,13 @@ test('Register additional behaviors after creation', () => {
     },
     () => baseApp,
   )
-  const { behaviors: services1 } = app.run({ type: 'type-1', data: 1 })
+  const { behaviors: services1 } = app.run({ type: 'type-1', data: 1 }).createBehaviorsAndDelivery()
   expectTypeOf<typeof services1>().toEqualTypeOf<Services>()
   expect(services1.myService).toBe('my-service-1')
-  const { behaviors: services2 } = app.run({ type: 'type-2', data: 2 })
+  const { behaviors: services2 } = app.run({ type: 'type-2', data: 2 }).createBehaviorsAndDelivery()
   expectTypeOf<typeof services2>().toEqualTypeOf<Services>()
   expect(services2.myService).toBe('my-service-2')
-  const { behaviors: services3 } = app.run({ type: 'type-3', data: 3 })
+  const { behaviors: services3 } = app.run({ type: 'type-3', data: 3 }).createBehaviorsAndDelivery()
   expectTypeOf<typeof services3>().toEqualTypeOf<Services>()
   expect(services3.myService).toBe('my-service-default')
 })
@@ -233,7 +234,7 @@ test('getBehaviors receives the identity run was called with', () => {
       return { myService }
     },
   })
-  app.run('identity')
+  app.run('identity').createBehaviorsAndDelivery()
   expect(identity).toBe('identity')
 })
 
@@ -248,7 +249,7 @@ test('Pre-main can execute side-effects', () => {
       behaviors.myService += '-side-effect'
     },
   })
-  const { behaviors } = app.run()
+  const { behaviors } = app.run().createBehaviorsAndDelivery()
   expect(behaviors.myService).toBe('my-service-side-effect')
 })
 
@@ -261,7 +262,7 @@ test('preMain receives the identity run was called with', () => {
       identity = identityExternalService
     },
   })
-  app.run('identity')
+  app.run('identity').createBehaviorsAndDelivery()
   expect(identity).toBe('identity')
 })
 
@@ -277,7 +278,7 @@ test('Get delivery', () => {
       AppComponent: () => <span data-service={myService}></span>,
     }),
   })
-  const { delivery } = app.run()
+  const { delivery } = app.run().createBehaviorsAndDelivery()
   expect(delivery.AppComponent().props['data-service']).toEqual('my-service')
 })
 
@@ -291,7 +292,7 @@ test('getDelivery receives the identity run was called with', () => {
       return {}
     },
   })
-  app.run('identity')
+  app.run('identity').createBehaviorsAndDelivery()
   expect(identity).toBe('identity')
 })
 
@@ -307,8 +308,10 @@ test('main', () => {
     getDelivery: ({ behaviors: { myService } }) => ({
       AppComponent: () => <span data-service={myService}></span>,
     }),
-    main: ({ behaviors, delivery }) =>
-      `${delivery.AppComponent().props['data-service']}-${behaviors.myService}`,
+    main: ({ createBehaviorsAndDelivery }) => {
+      const { behaviors, delivery } = createBehaviorsAndDelivery()
+      return `${delivery.AppComponent().props['data-service']}-${behaviors.myService}`
+    },
   })
   const { output } = app.run()
   expect(output).toEqual('my-service-my-service')
@@ -336,9 +339,11 @@ test('Redefine behaviors', () => {
   }>({
     getBehaviors: () => ({ myService }),
   })
-  const { behaviors } = app.run(undefined, {
-    getBehaviors: () => ({ myService: 'other-service' }),
-  })
+  const { behaviors } = app
+    .run(undefined, {
+      getBehaviors: () => ({ myService: 'other-service' }),
+    })
+    .createBehaviorsAndDelivery()
   expect(behaviors.myService).toBe('other-service')
 })
 
@@ -366,11 +371,13 @@ test('Redefine pre-main', () => {
   }>({
     getBehaviors: () => ({ myService }),
   })
-  const { behaviors } = app.run(undefined, {
-    preMain: (behaviors) => {
-      behaviors.myService += '-side-effect'
-    },
-  })
+  const { behaviors } = app
+    .run(undefined, {
+      preMain: (behaviors) => {
+        behaviors.myService += '-side-effect'
+      },
+    })
+    .createBehaviorsAndDelivery()
   expect(behaviors.myService).toBe('my-service-side-effect')
 })
 
@@ -386,12 +393,14 @@ test('Redefine delivery', () => {
       AppComponent: () => <span data-service={myService}></span>,
     }),
   })
-  const { delivery } = app.run(undefined, {
-    getDelivery: ({ behaviors: { myService } }) => ({
-      AppComponent: () => <span data-service={`${myService}-change`}></span>,
-    }),
-  })
-  expect(delivery?.AppComponent().props['data-service']).toEqual('my-service-change')
+  const { delivery } = app
+    .run(undefined, {
+      getDelivery: ({ behaviors: { myService } }) => ({
+        AppComponent: () => <span data-service={`${myService}-change`}></span>,
+      }),
+    })
+    .createBehaviorsAndDelivery()
+  expect(delivery.AppComponent().props['data-service']).toEqual('my-service-change')
 })
 
 test('Redefine main', () => {
@@ -405,12 +414,16 @@ test('Redefine main', () => {
     getDelivery: ({ behaviors: { myService } }) => ({
       AppComponent: () => <span data-service={myService}></span>,
     }),
-    main: ({ behaviors, delivery }) =>
-      `${delivery.AppComponent().props['data-service']}-${behaviors.myService}`,
+    main: ({ createBehaviorsAndDelivery }) => {
+      const { behaviors, delivery } = createBehaviorsAndDelivery()
+      return `${delivery.AppComponent().props['data-service']}-${behaviors.myService}`
+    },
   })
   const { output } = app.run(undefined, {
-    main: ({ behaviors, delivery }) =>
-      `${delivery.AppComponent().props['data-service']}-${behaviors.myService}-change`,
+    main: ({ createBehaviorsAndDelivery }) => {
+      const { behaviors, delivery } = createBehaviorsAndDelivery()
+      return `${delivery.AppComponent().props['data-service']}-${behaviors.myService}-change`
+    },
   })
   expect(output).toEqual('my-service-my-service-change')
 })
@@ -461,7 +474,7 @@ test('export state hook in delivery', () => {
       return myService
     },
   })
-  const { exportState } = app.run()
+  const { exportState } = app.run().createBehaviorsAndDelivery()
   expect(exportData).toEqual('my-service')
   expect(exportState()).toEqual('my-service')
 })
@@ -478,7 +491,7 @@ test('importState can update behaviors', () => {
       myService.value += newState
     },
   })
-  const { behaviors, importState } = app.run()
+  const { behaviors, importState } = app.run().createBehaviorsAndDelivery()
   importState('-new-state')
   expect(behaviors.myService.value).toBe('my-service-new-state')
 })
@@ -574,7 +587,7 @@ test('run requires the identity when the config declares one', () => {
   // @ts-expect-error the identity is not optional for an app that declares one
   app.run()
 
-  expect(app.run('dev').behaviors).toEqual({ name: 'dev' })
+  expect(app.run('dev').createBehaviorsAndDelivery().behaviors).toEqual({ name: 'dev' })
 })
 
 test('run keeps the identity optional when the config declares none', () => {
@@ -585,5 +598,149 @@ test('run keeps the identity optional when the config declares none', () => {
     },
   })
 
-  expect(app.run().behaviors).toEqual({ name: 'no-identity' })
+  expect(app.run().createBehaviorsAndDelivery().behaviors).toEqual({ name: 'no-identity' })
+})
+
+test('running builds the services and not the behaviors or delivery', () => {
+  const built: string[] = []
+  const app = createApplication<{ services: { name: string }; behaviors: { name: string } }>({
+    getServices: () => {
+      built.push('services')
+      return { name: 'services' }
+    },
+    getBehaviors: () => {
+      built.push('behaviors')
+      return { name: 'behaviors' }
+    },
+    getDelivery: () => {
+      built.push('delivery')
+      return {}
+    },
+  })
+
+  app.run()
+
+  expect(built).toEqual(['services'])
+})
+
+test('every call builds behaviors of its own over the services of the run', () => {
+  let servicesBuilt = 0
+  const app = createApplication<{
+    services: { shared: object }
+    behaviors: { shared: object; own: object }
+  }>({
+    getServices: () => {
+      servicesBuilt += 1
+      return { shared: {} }
+    },
+    getBehaviors: ({ shared }) => ({ shared, own: {} }),
+  })
+  const { createBehaviorsAndDelivery } = app.run()
+
+  const first = createBehaviorsAndDelivery().behaviors
+  const second = createBehaviorsAndDelivery().behaviors
+
+  expect(servicesBuilt).toBe(1)
+  expect(first.shared).toBe(second.shared)
+  expect(first.own).not.toBe(second.own)
+})
+
+test('getBehaviors receives the input behaviors and delivery are built from', () => {
+  const app = createApplication<{ behaviors: { path: string }; input: { path: string } }>({
+    getBehaviors: (_, _identity, { path }) => ({ path }),
+  })
+  const { createBehaviorsAndDelivery } = app.run()
+
+  expect(createBehaviorsAndDelivery({ path: '/a' }).behaviors).toEqual({ path: '/a' })
+  expect(createBehaviorsAndDelivery({ path: '/b' }).behaviors).toEqual({ path: '/b' })
+})
+
+test('createBehaviorsAndDelivery requires the input when the config declares one', () => {
+  const app = createApplication<{ input: { path: string } }>({})
+  const { createBehaviorsAndDelivery } = app.run()
+
+  expectTypeOf(createBehaviorsAndDelivery).parameters.toEqualTypeOf<[input: { path: string }]>()
+})
+
+test('main receives the services and builds the behaviors and delivery it needs', () => {
+  const app = createApplication<{
+    services: { prefix: string }
+    behaviors: { label: string }
+    input: { name: string }
+    output: string[]
+  }>({
+    getServices: () => ({ prefix: 'hello' }),
+    getBehaviors: ({ prefix }, _identity, { name }) => ({ label: `${prefix} ${name}` }),
+    main: ({ services, createBehaviorsAndDelivery }) => [
+      services.prefix,
+      createBehaviorsAndDelivery({ name: 'a' }).behaviors.label,
+      createBehaviorsAndDelivery({ name: 'b' }).behaviors.label,
+    ],
+  })
+
+  expect(app.run().output).toEqual(['hello', 'hello a', 'hello b'])
+})
+
+test('state is exported from and imported into the behaviors of one call only', () => {
+  const app = createApplication<{
+    behaviors: { box: { value: string } }
+    exportState: string
+  }>({
+    getBehaviors: () => ({ box: { value: 'initial' } }),
+    exportState: ({ box }) => box.value,
+    importState: ({ box }, state) => {
+      box.value = state
+    },
+  })
+  const { createBehaviorsAndDelivery } = app.run()
+  const first = createBehaviorsAndDelivery()
+  const second = createBehaviorsAndDelivery()
+
+  first.importState('imported')
+
+  expect(first.exportState()).toBe('imported')
+  expect(second.exportState()).toBe('initial')
+})
+
+test('a failure building behaviors inside main is reported once', () => {
+  const errors: unknown[] = []
+  const app = createApplication({
+    onError: (error) => {
+      errors.push(error)
+    },
+    getBehaviors: () => {
+      throw new Error('behaviors failed')
+    },
+    main: ({ createBehaviorsAndDelivery }) => {
+      createBehaviorsAndDelivery()
+      return undefined
+    },
+  })
+
+  expect(() => app.run()).toThrow('Could not run application')
+  expect(errors).toEqual([new Error('behaviors failed')])
+})
+
+test('an application that declares no input builds behaviors and delivery from none', () => {
+  const { createBehaviorsAndDelivery } = createApplication<{ behaviors: { name: string } }>({
+    getBehaviors: () => ({ name: 'no-input' }),
+  }).run()
+
+  expectTypeOf(createBehaviorsAndDelivery).parameters.toEqualTypeOf<[input?: undefined]>()
+})
+
+test('a failure building behaviors after the run is left to its caller', () => {
+  const errors: unknown[] = []
+  const app = createApplication({
+    onError: (error) => {
+      errors.push(error)
+    },
+    getBehaviors: () => {
+      throw new Error('behaviors failed')
+    },
+  })
+  const { createBehaviorsAndDelivery } = app.run()
+
+  expect(() => createBehaviorsAndDelivery()).toThrow('behaviors failed')
+  expect(errors).toEqual([])
 })

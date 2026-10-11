@@ -199,6 +199,24 @@ test('a package whose binary a script runs may be declared and never imported', 
   ).toEqual([])
 })
 
+test('vite-node run by a script counts as used', () => {
+  expect(
+    auditPackages({
+      manifests: [
+        {
+          dir: '/src/a',
+          name: '@org/a',
+          dependencies: [],
+          devDependencies: ['vite-node'],
+          peerDependencies: [],
+          scriptCommands: ['vite-node --watch entry.ts'],
+        },
+      ],
+      sources: [{ path: '/src/a/index.ts', content: 'export const x = 1' }],
+    }),
+  ).toEqual([])
+})
+
 test('a package whose binary no script of this package runs is reported as unused', () => {
   expect(
     auditPackages({

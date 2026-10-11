@@ -5,7 +5,7 @@ import { renderCli } from '@dungarees/cli/test-renderer.ts'
 import { expect, test } from 'vitest'
 
 test('the production application builds a working app from the real services', async () => {
-  const { services, delivery } = application.run(
+  const { services, createBehaviorsAndDelivery } = application.run(
     { environment: 'prod' },
     // The real main renders to stdio and exits the process, and the real top level handlers
     // would outlive the test.
@@ -14,7 +14,7 @@ test('the production application builds a working app from the real services', a
 
   expect(services.process.argv).toBe(process.argv)
 
-  const { terminal } = renderCli(delivery.app, 'dungarees')
+  const { terminal } = renderCli(createBehaviorsAndDelivery().delivery.app, 'dungarees')
 
   expect(await terminal.step()).toEqual([
     {
