@@ -9,8 +9,8 @@ channels: [linkedin, email, communities, events, partners]
 
 **Date:** 10 October 2026 **For:** Kinga and Tamas **Builds on:**
 
-- [Matt Pocock's Total TypeScript launch](../../../ai-research/total-typescript-launch-research-2026-10.md)
-- [the learning journey design](../../../../little-parrot/content/course/technical-skills-for-product-managers-learning-journey-design.md)
+- [Matt Pocock's Total TypeScript launch](../../../../ai-research/total-typescript-launch-research-2026-10.md)
+- [the learning journey design](../../../../../little-parrot/content/course/technical-skills-for-product-managers-learning-journey-design.md)
 - [the September validation campaign](../2026-09-pm-technical-fluency-validation/brief.md)
 - [the content ideas planned to feed the waitlist](../2026-09-waitlist-value-content/README.md)
 
@@ -20,9 +20,9 @@ Numbers marked _target_ are guesses to test, not forecasts.
 
 ## The plan on one page
 
-- **Goal for the first season:** 10–15 paying founding learners, most of them paid for by their employer, before we build Missions 3–7.
+- **Goal for the first season:** 10–15 paying founding learners, most of them paid for by their employer, before we build Missions 4–8.
 - **Sell before we build, as Matt did.**
-  - Run the free workshop (Mission 0) twice: in person in Lisbon during Portugal Tech Week, then online the week after.
+  - Run the free workshop (Mission 1) twice: in person in Lisbon during Portugal Tech Week, then online the week after.
   - Open founding enrolment straight after, with the season starting in January 2027.
   - Employers can pay from what's left of their 2026 budget (invoice in December) or from the new year's budget (start in January).
 - **Three channels, in this order:**
@@ -46,9 +46,11 @@ The plan depends on these. My recommendation is in brackets.
    - (Recommend: ask the Volkswagen contacts whether their Lisbon office can host it, or ask Product Management Society Lisbon to co-host.)
    - A host company brings its own PMs into the room.
 3. **What the workshop runs on.**
-   - The design builds Mission 0 on a temporary copy of Twenty, and that environment isn't built yet. Four weeks of evenings is tight.
-   - (Recommend: build only Mission 0's lab, the save request that fails, on the simplest setup that works in a browser. Leave the full Codespaces environment for January.)
-   - This is the biggest risk to the dates, so decide it first.
+   - The design now has attendees set up their own copy of the product in GitHub Codespaces during the workshop, with a shared fallback copy for laptops that can't run it. None of it is built yet, and four weeks of evenings is tight.
+   - (Agreed on 11 October: run the Codespaces trial checks in the week of 12 October and decide on Friday 16 October.)
+   - If the checks pass, both workshops run on Codespaces.
+   - If they don't, Lisbon runs on one shared copy with the browser, the server log and the database view on a single page. Codespaces then starts with the online workshop on 17 November, or in January, when founding learners set up their copy at the start of the season, if it still isn't ready.
+   - This is the biggest risk to the dates, so the workshop build (section 3) runs alongside the marketing weeks.
 4. **Founding price.**
    - (Recommend €490 per learner, invoiced to the employer, with a team price for three or more.)
    - It sits inside the €400–€800 range from the willingness-to-pay research, and it's the same deliberate move as Matt's $490: under the amount that often needs no extra approval.
@@ -60,7 +62,7 @@ The plan depends on these. My recommendation is in brackets.
    - (Recommend: self-paced missions with two fixed office-hour slots a week, a suggested pace, and a start date in January so the founding group moves through together.)
 6. **What the session says about the paid season.**
    - Portugal Tech Week rejects side events that "try to sell products and services".
-   - (Recommend: the Lisbon session only teaches. At the end, people are told they'll get an email with the bug report template, the recording and details of what comes next. The online session on 17 November can show the season map and the offer, as the design describes.)
+   - (Recommend: the Lisbon session only teaches. At the end, people are told they'll get an email with the field guide, the bug report template, the recording and details of what comes next. The online session on 17 November ends with five minutes on what the learning path covers, after the teaching, as the design now describes.)
 
 ## 2. Targets
 
@@ -77,6 +79,19 @@ If registrations are under 15 for Lisbon or 40 online by 2 November, that tells 
 ## 3. Week by week
 
 Each week is one marketing day.
+
+### The workshop build, alongside the marketing weeks
+
+The marketing days don't include building. This is the build track that has to keep pace with them. The check numbers refer to the trial checks in the design's section 6.
+
+| Week | Build | Done when |
+| --- | --- | --- |
+| From 12 October | The trial checks the workshop depends on, 1–4 and 6–10: Twenty on the free 2-core machine, the codespace opening ready to use, start times, signing in through the forwarded address, the story data, the bug seeded across all four layers, 30 codespaces at once, a phone hotspot, and a locked-down work laptop | The decision on Friday 16 October |
+| From 19 October | If the checks passed: the development container and prebuild, the seeded bug and the story data. If not: the one-page shared copy | The whole trail works on one laptop |
+| From 26 October | The shared fallback copy, the field guide, the recorded run of the trail, and a small test codespace for the laptop check | Everything in place by Friday 30 October |
+| From 2 November | A full rehearsal with two or three testers, one of them on a locked-down work laptop over a phone hotspot. Fix what breaks, then send the setup email | Setup email out by Tuesday 3 November, a week before Lisbon |
+
+The remaining trial checks (5 and 11–13) are for the season, so they move to December.
 
 ### Week 1, from 12 October: set up and tell the warm network
 
@@ -121,7 +136,7 @@ Each week is one marketing day.
 
 1. **Series posts #3 and #4.**
 2. **A build-in-public post,** like Matt's "How I gained 6,250 followers": what we learned from the four Volkswagen conversations and the price answers so far. People respond to a real process.
-3. **Email registrants** the laptop check from the design (section 6), one week ahead. This also reminds them it's happening.
+3. **Email registrants** the laptop check from the design (section 6), using the small test codespace, two weeks ahead. Anyone with an amber or red result has time to find a personal laptop or ask IT. This also reminds them it's happening.
 4. **Pitch Code Like a Girl** by Substack DM.
    - A solo-authored post of 1,000–3,000 words, draft due two weeks before publication.
    - Aim for early December. Its job is to bring readers to the season two waitlist, not to this launch.
@@ -130,9 +145,10 @@ Each week is one marketing day.
 ### Week 4, from 2 November: last push
 
 1. **Series posts #5 and #6.**
-2. **Run the paid ad** (section 4.4) on Kinga's online-workshop post, for 10 days until 16 November.
-3. **Ask the Volkswagen and memoQ contacts to share the online session** with a ready-to-forward message.
-4. **Fix the offer:** the price, the start date, what's included, the invoice and the message to send to a manager. The design's expense route has the template.
+2. **Send the setup email** by Tuesday 3 November: create a free GitHub account and open your codespace with one click, about five minutes. Only if the trial checks passed; otherwise the email says the workshop needs nothing but a browser.
+3. **Run the paid ad** (section 4.4) on Kinga's online-workshop post, for 10 days until 16 November.
+4. **Ask the Volkswagen and memoQ contacts to share the online session** with a ready-to-forward message.
+5. **Fix the offer:** the price, the start date, what's included, the invoice and the message to send to a manager. The design's expense route has the template.
 
 ### Week 5, from 9 November: the workshops
 
@@ -152,7 +168,11 @@ Each week is one marketing day.
 
 ### January 2027: the founding season starts
 
-Build Missions 1 and 2 in December, and the later missions one week ahead during the season, as the design proposes.
+Build the self-paced version of Mission 1 and Missions 2 and 3 in December, run the remaining trial checks, and build the later missions one week ahead during the season, as the design proposes.
+
+Founding learners who didn't attend a workshop do the self-paced Mission 1 in the week before the season starts. It uses chapters of the 17 November recording as its worked answers, so record that session.
+
+GitHub deletes a codespace after 30 days without use (its default), so most November attendees' copies will be gone by January. The follow-up emails say Mission 2 starts with the same one-click setup, instead of promising their copy is still there.
 
 ## 4. Channels in more detail
 
@@ -176,7 +196,7 @@ Build Missions 1 and 2 in December, and the later missions one week ahead during
 
 - **Little Parrot list (859):** one segmenting email in week 2, then only to people who say they're PMs or register.
 - **Waitlist (4):** the workshop invitation now, and the offer later.
-- **Registrants:** laptop check, reminder, then the follow-up sequence.
+- **Registrants:** laptop check, setup email, reminder, then the follow-up sequence.
 
 ### 4.4 Paid ads, €135
 
@@ -203,8 +223,8 @@ Build Missions 1 and 2 in December, and the later missions one week ahead during
 
 This builds on the design's Day 1/3/5 emails, adding the teams and objections emails that sold most in Matt's launch. No invented scarcity and no fear.
 
-1. **Day 1:** the recording, the cheat sheet, Tamas's model bug report, and what the season is.
-2. **Day 3:** a full audio briefing from Mission 1 with its transcript.
+1. **Day 1:** the recording, the field guide, Tamas's model bug report, and what the season is.
+2. **Day 3:** a full audio briefing from Mission 2 with its transcript.
 3. **Day 5:** two things attendees did at work, quoted with permission.
 4. **Day 7, for your manager:**
    - what the learner will produce;
