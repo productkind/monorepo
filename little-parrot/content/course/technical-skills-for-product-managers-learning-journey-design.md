@@ -4,7 +4,7 @@
 
 ## The design on one page
 
-- **Shape.** Mission 1 is a free workshop that stands on its own: it teaches how a web app works, and runs at conferences, online or as a talk. Learners who miss it do the same Mission 1 in their own time. Then comes an eight-week season: Missions 2 to 8, one a week, with a catch-up week in the middle. Learners work at their own pace inside the season window, with a weekly live case clinic and a help channel we answer within one working day.
+- **Shape.** Mission 1 is a free workshop that stands on its own: it teaches how a web app works by setting one up, tracing a bug through it and fixing the bug with an AI agent, and runs at conferences, online or as a talk. Learners who miss it do the same Mission 1 in their own time. Then comes an eight-week season: Missions 2 to 8, one a week, with a catch-up week in the middle. Learners work at their own pace inside the season window, with a weekly live case clinic and a help channel we answer within one working day.
 - **One product, one story.** The learner joins a fictional software company as its newest PM. The product is a real open-source app (the recommendation is Twenty, an open-source CRM). Each learner runs their own copy in a cloud development environment that opens in the browser, set up with one click, with our story data and problems we break on purpose. Nothing gets installed on their laptop. Every mission starts with a message from a colleague or a customer: a problem or a decision, with a deadline.
 - **The same rhythm every week.** Predict, investigate in the real product, compare with a worked answer, produce a work artefact, then use it in your own job the following week (the "Monday move").
 - **Audio for the commute.** Each mission has up to three optional 8–10 minute briefings (the product story, an engineer explains, a debate), delivered to the learner's own podcast app, with a question to think about before and after, and a transcript.
@@ -73,7 +73,7 @@ The final decision is hard because of everything before it. That's the design: t
 
 | When | Mission | The message that starts it | What you do in the product | What you leave with |
 | --- | --- | --- | --- | --- |
-| Week 0: live and free at a workshop, or self-paced | **1. "Saving doesn't work"** (how a web app works, one request deep) | Customer success: Calder clicked Save and the company isn't there | Confirm nothing was saved, then follow the failed save from the browser through the network and the server to the database | A map of how a web app works, a bug report and your own copy of the product |
+| Week 0: live and free at a workshop, or self-paced | **1. "Saving doesn't work"** (how a web app works, one request deep) | Customer success: Calder clicked Save and the company isn't there | Set up your development environment and start the app; confirm nothing was saved; follow the failed save from the browser through the network and the server to the database; give your bug report to GitHub Copilot and test its fix | A map of how a web app works, a bug report, a tested fix and your own copy of the product |
 | Week 1 | **2. Where does our customers' data go?** (how a web app works, the whole system) | Sales forwards a prospect's security questionnaire | Find everything else that runs (worker, queue, cache) and every third party; translate it into cloud names | A system map and the questionnaire answers |
 | Week 2 | **3. Can we promise the integration?** (APIs, webhooks, integrations) | Sales: "It's just an API, right?" | Send API requests, break them on purpose, catch a webhook, build a no-code workflow | An integration feasibility brief |
 | Week 3 | **4. Four escalations before lunch** (bug triage) | Customer success forwards four tickets | Triage each one: bug or not, where, how bad | A bug report (personal feedback) and a triage table |
@@ -118,9 +118,24 @@ Each mission lists the message, what the learner does, the worked answer, the ar
 
 **Two ways to do it.** Live at a free workshop, or self-paced in the learner's own time. Both follow the same trail in the learner's own codespace and end with the same artefacts, so anyone can start the learning path at Mission 1, whether or not they came to a workshop.
 
-**The promise.** Non-technical PMs leave understanding how a web app works: what happens between clicking a button and the data reaching the database, and where each step can be checked. The bug is the use case that takes them through every layer. Keeping the promise this broad means the session fits general tech conferences as well as product events. It also stands on its own: the story finishes in the room, and the last exercise works on the attendee's own product the next day, whether or not they join the learning path.
+**The promise.** Non-technical PMs leave understanding how a web app works: what happens between clicking a button and the data reaching the database, and where each step can be checked. They set up the development environment the app runs in and start the app themselves. The bug is the use case that takes them through every layer, and the session ends with them giving their bug report to GitHub Copilot and testing its fix in their own copy. Keeping the promise this broad means the session fits general tech conferences as well as product events. It also stands on its own: the story finishes in the room, and the own-product exercise works the next day, whether or not they join the learning path.
+
+**Why the setup and the fix are part of it**
+
+- **Running the app first shows the parts before the bug sends you through them.** The database, the server and the frontend start one after another in front of the learner. PMs hear "the dev environment", "staging" and "it works on my machine" every week, and seeing one makes those words concrete.
+- **The bug report is also the prompt.** What lets an engineer fix a bug quickly (the steps, the expected and actual result, the evidence from each layer) is what an AI agent needs too. Seeing what Copilot does with a one-line complaint, and then with the bug report, shows this on the learner's own screen. Even when the one-line complaint happens to produce a fix, only the learner with a bug report knows what "fixed" should look like, so only they can check it.
+- **The story ends with the bug fixed as well as reported.** Fixing something yourself is the strongest source of self-efficacy (section 12), and it gives the session a high point at the end, which is what people remember it by (the peak-end rule).
+- **It stays honest about the learner's role.** Copilot changes the code; the learner doesn't learn to code. Their part is the PM's part: give it the evidence, then test the result against the bug report's expected behaviour, including a check that a normal save still works.
+- **The fix isn't deployed.** It works in the learner's copy, and the copy everyone else would use still has the bug. What it takes to get a fix to customers (review, automated checks, a release) is Mission 5, so the session ends on that open question instead of a sales pitch.
 
 **The message.** Customer success lead: "Calder clicked Save on a new company. It spun, and the company isn't there. Engineering is in planning all day. Can you take a look before my 3pm call?"
+
+**Set up the development environment and start the app**
+
+- **Create the codespace** from our repository with one click. While it builds, Tamas explains what a development environment is: a copy of the app on a computer the team controls, with made-up data, where engineers run and change it without affecting customers, and how it differs from staging and production.
+- **Read the recipe.** Open the file that describes the environment and find the parts it lists: the database, the server and the frontend.
+- **Start the app** from the terminal and watch each part start. One command starts the ready-built app (the same package customers' servers would run), and a second starts the frontend from its source code, which is the copy engineers change. A third loads the story data, because development environments use made-up data, never customers'.
+- **Open the app** from the Ports tab at the learner's own private address, and sign in.
 
 **Following the failed save is the tour of the app**
 
@@ -130,41 +145,46 @@ Each mission lists the message, what the learner does, the worked answer, the ar
 4. **Back to the database.** The rule that rejected the save lives here: two companies can't share a web address, and a colleague at Calder had already added the same company under a slightly different name. So the data was there all along. The server rejected the save correctly, and the bug is that the app showed a spinner instead of saying why.
 5. **Draw the map from the trail.** Frontend, API, server and database. Attendees have just walked through each one, so the diagram describes something they've seen.
 6. **Write the bug report** with evidence from each layer. Then the honest part: at work, most PMs can open the network tab, but few can see server logs or the production database. Having seen all four layers once tells them what to ask engineers for, and makes the browser the place they can start on their own.
-7. **Try it on your own product**, or any web app you use: do one action, find its request and name the parts. It needs no sandbox, so it works at their desk the next day.
+7. **Fix it with AI.** First, on the big screen, see what Copilot does with "Saving a company doesn't work. Fix it." Then paste your bug report into Copilot's agent mode in your codespace. It finds the code that hides the error, changes it and shows which file it changed; ask it to explain the change in product terms. The frontend reloads by itself. Test the fix against your bug report: saving the duplicate company now shows a message saying why, and a new company still saves. Then open the ready-built app at its own address and try the same save: it still spins, because that's the version customers have, and your fix hasn't been reviewed, tested or released.
+8. **Try it on your own product**, or any web app you use: do one action, find its request and name the parts. It needs no sandbox, so it works at their desk the next day.
 
-**Run of show, in person**
+**Run of show, in person (2 hours)**
 
 | Minutes | What happens |
 | --- | --- |
 | 0–10 | Kinga and Tamas introduce themselves and read out the message from customer success. Attendees form pairs, so anyone without a working codespace sits with someone who has one. |
-| 10–25 | Setup. Most attendees open the codespace they created from the setup email; the rest create one now, with Tamas and a helper going round. It opens ready to use: the app in one tab, the server log running in a panel and the database table view one click away, with no commands to type. |
-| 25–30 | Predict: a phone poll on where the save got lost. |
-| 30–60 | Steps 1–4 of the trail, guided. Tamas narrates each layer the way an engineer would, and Kinga asks the questions a PM would ask. |
+| 10–30 | Set up the development environment and start the app. Everyone creates their codespace in the room, because setting it up is part of the lesson. While it builds, Tamas explains what a development environment is; then attendees read the recipe, start the app, load the story data and sign in. Tamas and a helper go round. |
+| 30–35 | Predict: a phone poll on where the save got lost. |
+| 35–60 | Steps 1–4 of the trail, guided. Tamas narrates each layer the way an engineer would, and Kinga asks the questions a PM would ask. |
 | 60–70 | Step 5: draw the map together. |
-| 70–80 | Step 6: write the bug report, compare it with Tamas's, and give live feedback on two volunteers' reports. |
-| 80–90 | Step 7 on their own products, then the QR code for the field guide and the recording. |
+| 70–85 | Step 6: write the bug report, compare it with Tamas's, and give live feedback on two volunteers' reports. |
+| 85–105 | Step 7: the one-line complaint on the big screen, then each pair gives Copilot their bug report, reads what it changed and tests the fix, in their copy and then in the ready-built app. |
+| 105–120 | Step 8 on their own products. Close on the open question (the fix works in your copy, so what would it take to reach Calder?), then the QR code for the field guide and the recording. |
+
+**If the slot is 90 minutes:** attendees create their codespace from the setup email beforehand, so the setup segment starts the app instead of creating it; one volunteer's report gets live feedback instead of two; and the own-product exercise becomes homework from the field guide.
 
 Section 11 has the online, talk and company-session versions of the same trail.
 
-**The self-paced version (about 90 minutes, in two sittings).** For learners who didn't come to a workshop, done in the week before the season starts or whenever they join.
+**The self-paced version (about two hours, in two sittings).** For learners who didn't come to a workshop, done in the week before the season starts or whenever they join.
 
-- **Sitting 1: set up, then steps 1–4.** One click creates the codespace, with a two-minute setup video and the hint ladder in place of help in the room. The predict step is a question on the mission page. Then the trail, guided click by click. After each step, the matching chapter of a workshop recording is the worked answer: Tamas narrating the layer, Kinga asking the PM's questions.
-- **Sitting 2: steps 5–7.** Draw the map, write the bug report and compare it with Tamas's, then do the own-product exercise. The recorded feedback on two volunteers' reports stands in for the live clinic, and learners can bring their own report to the first case clinic of the season.
+- **Sitting 1: set up, then steps 1–4.** One click creates the codespace. A short video stands in for Tamas's explanation while it builds, and the hint ladder stands in for help in the room while the learner starts the app. The predict step is a question on the mission page. Then the trail, guided click by click. After each step, the matching chapter of a workshop recording is the worked answer: Tamas narrating the layer, Kinga asking the PM's questions.
+- **Sitting 2: steps 5–8.** Draw the map, write the bug report and compare it with Tamas's, then give it to Copilot and test the fix. A recorded run of the one-line complaint stands in for the big screen. Then the own-product exercise. The recorded feedback on two volunteers' reports stands in for the live clinic, and learners can bring their own report to the first case clinic of the season.
 - **The field guide and the self-assessment** are on the mission page instead of behind a QR code.
 
-**Before the session.** A setup email a week ahead: create a free GitHub account and open your codespace with one click, about five minutes. Plan for a good share of people not doing it, which is why the first 15 minutes cover setup and why attendees work in pairs: only half the room needs a working codespace.
+**Before the session.** A setup email a week ahead, about ten minutes: create a free personal GitHub account, turn on GitHub Copilot's free plan and switch off its use of their data for training, and run the laptop check (section 6), which opens a small test codespace. The workshop's own codespace is created in the room. Plan for a good share of people not doing the email, which is why attendees work in pairs: only half the room needs a working account.
 
-**The fallbacks.** Laptops that can't run Codespaces (a corporate VPN or proxy that breaks it, or no personal GitHub sign-in on a work laptop) use a shared copy of the product we run for the day. Those attendees do the browser steps themselves and follow the server log and database on the presenters' screen. If the venue wifi fails, Kinga and Tamas switch to a recorded run of the trail and printed screenshots.
+**The fallbacks.** Laptops that can't run Codespaces (a corporate VPN or proxy that breaks it, or no personal GitHub sign-in on a work laptop) use a shared copy of the product we run for the day. Those attendees do the browser steps themselves and follow the setup, the server log, the database and the fix on the presenters' screen. If Copilot fails, or isn't available on someone's account, one command switches their copy to a branch with the fix already in it, so everyone still tests a fix. If the venue wifi fails, Kinga and Tamas switch to a recorded run of the trail and printed screenshots.
 
 **Leaves with**
 
 - a map of how a web app works, drawn from a trail they followed themselves;
 - a bug report with evidence from each layer;
+- a fix Copilot made from that bug report, tested in their own copy and not deployed;
 - a one-page network tab field guide: where to click, which columns to read, the status codes PMs actually meet, how to spot a slow request, how to share evidence safely (HAR files contain login cookies) and what the browser can't show, plus the bug report template;
 - the Technical Product Confidence self-assessment and its manager-ready report, offered behind the same QR code instead of taking stage time;
-- their own copy of the product, still in their GitHub account.
+- their own copy of the product, which they set up and started themselves, still in their GitHub account.
 
-**How it leads to the learning path.** The copy attendees set up stays in their GitHub account, and Mission 2 starts from it. GitHub deletes a codespace after 30 days without use (its default). When a season starts later than that, as the first one will (November workshops, a January start), the follow-up emails say Mission 2 starts with the same one-click setup instead of promising the copy is still there. Workshop attendees join the season with Mission 1 already done, one of eight. Everyone else starts with the self-paced version. Nothing is sold from the stage (section 11).
+**How it leads to the learning path.** The session ends on the gap between the fix in the learner's copy and the ready-built app that still spins, which is where Mission 5 picks up. The copy attendees set up stays in their GitHub account, and Mission 2 starts from it. GitHub deletes a codespace after 30 days without use (its default). When a season starts later than that, as the first one will (November workshops, a January start), the follow-up emails say Mission 2 starts with the same one-click setup instead of promising the copy is still there. Workshop attendees join the season with Mission 1 already done, one of eight. Everyone else starts with the self-paced version. Nothing is sold from the stage (section 11).
 
 ### Mission 2: Where does our customers' data go? (How a web application works: the whole system)
 
@@ -172,7 +192,7 @@ Mission 1 followed one request down through four layers. Mission 2 goes wide: ev
 
 **The message.** Sales forwards a security questionnaire from a prospect in financial services: "Which components process our data? Where is it stored, and in which cloud region? Which third parties receive it?" The engineering lead adds: "Have a go first and I'll check it on Thursday."
 
-**Sitting 1: everything that runs.** Open your codespace, the one from Mission 1. If GitHub has deleted it after 30 days without use, the same button creates a new one in a few minutes. Open the deployment file it follows, which lists everything behind the browser, including two services the workshop trail didn't touch: a background worker, and Redis, which works as both a cache and the queue the worker takes its jobs from. Restart your copy and watch each service start in the log. Then find a job the worker runs on a schedule and watch it appear in the worker's log without anyone clicking anything. Ask an AI chat assistant to explain each service, then check two of its claims against the project's own documentation. The worked answer also explains what a development environment is, and why an engineer's development environment, staging and production are three different places.
+**Sitting 1: everything that runs.** Open your codespace, the one from Mission 1. If GitHub has deleted it after 30 days without use, the same button creates a new one in a few minutes. Open the deployment file it follows, which lists everything behind the browser, including two services the workshop trail didn't touch: a background worker, and Redis, which works as both a cache and the queue the worker takes its jobs from. Restart your copy and watch each service start in the log, the same start you saw in Mission 1, now with a name for every line. Then find a job the worker runs on a schedule and watch it appear in the worker's log without anyone clicking anything. Ask an AI chat assistant to explain each service, then check two of its claims against the project's own documentation. The worked answer goes back to Mission 1's development environment and shows where staging and production would sit next to it.
 
 **Sitting 2: where the data goes beyond the database.** Load the product with the network tab open and list every domain the page talks to: your copy of the server, the analytics tool, a font service, a content delivery network. Find how the app remembers who you are (cookies and storage in the Application tab). That list is already the start of the questionnaire's answer on third parties.
 
@@ -268,7 +288,7 @@ Mission 1 followed one request down through four layers. Mission 2 goes wide: ev
 
 **Plants.** A flaky test in the sync code holds up releases that have nothing to do with it.
 
-**The deeper track (catch-up week).** The engineer's version of the environment: Twenty built from its source code in a bigger codespace. Ask an AI agent to change a button label, run the app, see the change and open a pull request. For learners who want to see the engineer's side of the same pipeline. Building from source needs the 4-core machine, which halves the free Codespaces hours to 30 a month, so it stays optional and is in the "later" list in section 14.
+**The deeper track (catch-up week).** The engineer's whole environment: the server and worker built from source as well as the frontend, so a backend change shows up too. Then take your Mission 1 fix to a pull request in your own copy of the repository and watch the checks run on it. For learners who want to see the engineer's side of the same pipeline. It needs more memory than the core path, so it stays optional and is in the "later" list in section 14.
 
 ### Catch-up week
 
@@ -346,11 +366,11 @@ Then listen to the interviews with the engineering lead and the head of sales (a
 
 ## 6. The training app and the zero-install setup
 
-All facts in this section were checked against official docs, the repositories and Docker Hub on 9 October 2026. Anything that couldn't be confirmed is marked as unverified or listed in the trial checks at the end.
+All facts in this section were checked against official docs, the repositories and Docker Hub on 9 October 2026, and the facts about GitHub Copilot and running Twenty's frontend from source on 11 October 2026. Anything that couldn't be confirmed is marked as unverified or listed in the trial checks at the end.
 
 ### Recommendation: Twenty, run by each learner in GitHub Codespaces
 
-Every learner runs their own copy of the product in GitHub Codespaces, a development environment that runs in GitHub's cloud and opens in the browser. Nothing gets installed on the laptop, so admin rights don't come into it, and every learner has their own workspace, API keys and webhooks. Setting up the environment is part of Mission 1, so learners also find out what a development environment is and how it differs from staging and production.
+Every learner runs their own copy of the product in GitHub Codespaces, a development environment that runs in GitHub's cloud and opens in the browser. Nothing gets installed on the laptop, so admin rights don't come into it, and every learner has their own workspace, API keys and webhooks. Setting up the environment and starting the app are part of Mission 1, so learners also find out what a development environment is, how it differs from staging and production, and how a change to the code shows up in it.
 
 |  | Mealie | Twenty | Mattermost |
 | --- | --- | --- | --- |
@@ -361,46 +381,60 @@ Every learner runs their own copy of the product in GitHub Codespaces, a develop
 | Webhooks and no-code integrations (Mission 3) | Notifiers through Apprise, meal-plan webhooks | Signed webhooks on every record change, built-in workflows, an official Zapier app | Slack-compatible incoming and outgoing webhooks, slash commands, n8n and Zapier |
 | Network tab for beginners | REST, easy to read | GraphQL: every request is called "graphql", so you open Payload to see which is which | REST under `/api/v4`, easy to read |
 | Code a beginner can read | Best: small and conventional | Hardest: a very large TypeScript monorepo | Hard: large, in two languages |
-| Work to package for one-click Codespaces | Least: it already ships a development container and runs as one container | Most: no development container, four services, at least 2 GB of memory, and it has to fit the free 2-core machine | In between: an official all-in-one preview image, meant for evaluation only, plus an easy-to-miss edition trap (Entry vs Team) |
+| Work to package for one-click Codespaces | Least: it already ships a development container and runs as one container | Most: no development container (the project decided against one), four services plus the frontend running from source, and nobody publishes how much memory that needs | In between: an official all-in-one preview image, meant for evaluation only, plus an easy-to-miss edition trap (Entry vs Team) |
 | Fits the season's story | Weak: no business customers or integrations | Strong: customers, deals, a renewal, integrations, and sync jobs on a worker with real GitHub issues | Medium |
 | Licence | AGPL-3.0 | AGPL-3.0 core; SSO, row-level permissions and audit logs need a paid key, and the course needs none of them | AGPL-3.0, with MIT-licensed builds |
 
-**Why Twenty.** It shows what an enterprise PM needs to see: a backend made of several services, two API styles over the same data, signed webhooks, built-in workflows, roles, and a B2B story about customers, deals and integrations. Its email and calendar sync run as jobs on a background worker, and the project has dozens of real, closed GitHub issues about them (a backfill stalling on rate limits, duplicate messages), so the finale argues about a real part of a real codebase. Running it in each learner's own environment makes two missions better as well: in Mission 2 learners watch the four services start, and in Mission 5 they deploy the fix to their own copy themselves.
+**Why Twenty.** It shows what an enterprise PM needs to see: a backend made of several services, two API styles over the same data, signed webhooks, built-in workflows, roles, and a B2B story about customers, deals and integrations. Its email and calendar sync run as jobs on a background worker, and the project has dozens of real, closed GitHub issues about them (a backfill stalling on rate limits, duplicate messages), so the finale argues about a real part of a real codebase. Running it in each learner's own environment makes two missions better as well: in Mission 1 learners start the app and fix a bug in it themselves, in Mission 2 they find out what each service does, and in Mission 5 they deploy a fix to their own copy.
 
-**What Twenty costs.** It's the heaviest of the three to run and ships no Codespaces setup, so we write one, and it has to fit the free 2-core machine (unverified, and the first of the trial checks). Its code is the hardest of the three for a beginner to read, so code-reading stays small and guided (the deployment file, one pull request, issue threads), and learners who want to search the code use an AI agent. Its screens talk GraphQL, so the network tab needs one extra skill, opening the Payload tab, taught in Mission 1.
+**What Twenty costs.** It's the heaviest of the three to run and ships no Codespaces setup, so we write one. With the frontend running from source as well, it probably needs the 4-core machine (unverified, and the first of the trial checks). Its code is the hardest of the three for a beginner to read, so code-reading stays small and guided (the deployment file, one pull request, issue threads), and learners who want to search the code use an AI agent. Its screens talk GraphQL, so the network tab needs one extra skill, opening the Payload tab, taught in Mission 1.
 
-**The fallback is Mealie.** If Twenty doesn't fit the free machine or takes too long to start, Mealie already ships a development container, runs as one container and has simpler code and a readable network tab. The price is a weaker story and a one-container backend, which makes "why a backend is usually several services" something we explain rather than show.
+**The fallback is Mealie.** If Twenty doesn't fit the 4-core machine or takes too long to start, Mealie already ships a development container, runs as one container and has simpler code and a readable network tab. The price is a weaker story and a one-container backend, which makes "why a backend is usually several services" something we explain rather than show.
 
 **Mattermost** is strong on webhooks, but it has no API console to try requests in, ships with tokens switched off, needs care to install the right free edition, and fits a CRM-and-renewal story less naturally.
 
 ### How each learner runs their own copy
 
-**What the learner does.** One click on an "Open in GitHub Codespaces" button on our repository, a few minutes' wait, and the app opens from the Ports tab at the learner's own private address. The copy keeps its data between sessions. It stops by itself after 30 minutes without activity (GitHub's default) and starts again where it left off.
+**What the learner does.** One click on an "Open in GitHub Codespaces" button on our repository and a few minutes' wait. Then a few commands in the terminal, each explained, start the app, and it opens from the Ports tab at the learner's own private address. The copy keeps its data between sessions. It stops by itself after 30 minutes without activity (GitHub's default) and starts again where it left off. The button has to be the one on our repository, not GitHub's "Use this template": a codespace created from a template can't change its machine type, and GitHub doesn't document whether it uses prebuilds.
+
+**Two versions of the app in one copy.** The ready-built app runs from our images, the same package customers' servers would run. Next to it, the frontend runs from its source code with a development server that reloads when the code changes, and passes the frontend's requests on to the same server. This is how Mission 1's fix gets tested: it shows up at the frontend's address and not in the ready-built app, which is the gap between fixed in development and fixed for customers. Running only the frontend from source keeps the machine smaller than building the whole of Twenty, and the bugs learners fix are in the frontend.
 
 **What we build**
 
-- Our fork of Twenty, built by our pipeline into images and published to GitHub's container registry. Mission 5's fix arrives as a new image version.
-- A development container setup that starts the four services from those images (ready-built images, not the source code, which would need a much bigger machine), loads the story data on first start, points Twenty's server address at the codespace's forwarded address, and switches each mission's problems on with a setting.
+- Our training repository: Twenty's code at the pinned version, without the project's history (about 2.1 GB with it), plus our seeded bugs and story data. Our pipeline builds it into images and publishes them to GitHub's container registry. Mission 5's fix arrives as a new image version.
+- A development container setup that:
+  - runs the ready-built app's four services from those images;
+  - installs the frontend's dependencies, so learners only start it;
+  - points Twenty's server address at the codespace's forwarded address, and lets the frontend's development server accept that address (by default it blocks addresses other than `localhost`);
+  - asks for the 4-core machine as a minimum, unless the trial shows 2 cores are enough;
+  - switches each mission's problems on with a setting.
+- Short commands with names a PM can read, for starting the app, starting the frontend from source and loading the story data.
+- A branch with Mission 1's fix already in it, for anyone whose Copilot run fails.
 - Prebuilds, so the first start takes minutes. Their storage and Actions minutes are billed to us as the repository owner.
 - A shared fallback copy for each workshop, sized for the group, for attendees whose laptops can't run Codespaces.
 
-**The free allowance.** A personal GitHub account gets 120 core-hours and 15 GB-months of storage a month, with no card, and usage stops at the limit instead of being charged. On the 2-core machine that's 60 hours. A season needs roughly 3 hours of running time a week, counting the idle time before an automatic stop, so about 25–30 hours: half the allowance. On a 4-core machine the same season would use nearly all of it, which is why the core path has to fit on 2 cores. Both numbers are estimates to check in the founding cohort.
+**The free allowance.** A personal GitHub account gets 120 core-hours and 15 GB-months of storage a month, with no card, and usage stops at the limit instead of being charged. That's 60 hours on the 2-core machine or 30 hours on the 4-core one. A season needs roughly 3 hours of running time a week, counting the idle time before an automatic stop, so about 13 hours a month: 26 core-hours on 2 cores, 52 on 4. Both fit, with room for a bad week. Storage is the tighter limit: the installed frontend and the images take several gigabytes, and a learner who keeps two codespaces for a whole month could go over. Both numbers are estimates to check in the trial and the founding cohort.
 
-**Setting up the environment is a lesson, not a hurdle.** Learners click, wait and open the app; nobody debugs an installation in week one. What they learn is what started: the services, the deployment file that lists them, the address their copy runs at, and why an engineer's development environment, staging and production are three different places. Mission 4 comes back to it: when a customer's problem doesn't happen in your own copy, the difference in data, role, version or configuration is the first clue.
+**GitHub Copilot in the codespace.** Copilot has been built into VS Code since April 2026, so it should already be in every codespace without us adding it (trial check). Its free plan includes agent mode, which edits files across the code; the cloud agent that opens pull requests from an issue is paid only. Since June 2026 GitHub measures Copilot use in credits and doesn't publish the free plan's allowance, and free users can't choose a model, so two learners may get different results from the same prompt. Two more facts shape the setup email:
+
+- The free plan isn't available on accounts an employer manages or on accounts that already get Copilot from an employer, so learners use a personal account.
+- GitHub may train its models on free-plan prompts and code unless the user switches it off in their Copilot settings. The sandbox is made up, so nothing private is at risk, but the setup email shows how to switch it off. It's a good habit before Mission 7's data rules.
+
+**Setting up the environment is a lesson, not a hurdle.** Learners click, wait, then start the app with a few commands, each one explained. The prebuild has already done the installing, so nobody debugs an installation in week one. What they learn is what started: the services, the file that lists them, the address their copy runs at, why an engineer's development environment, staging and production are three different places, and how a change to the code shows up in their copy and not in the ready-built app. Mission 4 comes back to it: when a customer's problem doesn't happen in your own copy, the difference in data, role, version or configuration is the first clue.
 
 ### What runs where
 
 | Piece | Where it runs | What the learner needs |
 | --- | --- | --- |
-| The training product | The learner's own codespace, running our fork's images | A personal GitHub account, and Codespaces reachable from their network |
-| The workshop | Each attendee's own codespace, set up before or during the session; a shared fallback copy for laptops that can't run Codespaces | A GitHub account, or a partner who has one |
+| The training product | The learner's own codespace: the ready-built app from our images, and the frontend from its source code | A personal GitHub account, and Codespaces reachable from their network |
+| The workshop | Each attendee's own codespace, created during the session; a shared fallback copy for laptops that can't run Codespaces | A personal GitHub account with Copilot's free plan turned on, or a partner who has one |
 | Developer tools | Built into Chrome, Edge and Firefox; Safari needs them switched on in its settings | Developer tools not blocked by IT |
 | Request inspector for webhooks | Our domain | A browser |
 | Code, issues, pull requests and checks | github.com; github.dev also works for reading code, though it runs nothing | The same GitHub account |
 | The help-centre site with preview links | The learner's own repository, created from our template, built by GitHub Actions and hosted on GitHub Pages | The same account; on a free plan the repository has to be public |
 | Product analytics | PostHog Cloud, one shared project that every learner's copy sends events to | An invite; PostHog has no per-seat charges |
-| The deeper track | A bigger codespace that builds Twenty from source: the 4-core machine, so 30 free hours a month | The same account |
-| AI tools | Whatever the learner's company approves, or a personal account used on sandbox material only |  |
+| The deeper track | A bigger codespace that builds the server and worker from source too | The same account |
+| AI tools | GitHub Copilot's free plan inside the codespace, for Mission 1's fix and for questions about the code later on; otherwise whatever the learner's company approves, or a personal account used on sandbox material only | A personal account, because accounts an employer manages can't use Copilot's free plan |
 
 - **Why the learner still ships a help-centre site.** A codespace is a development environment, not a place real users visit. So the full route of branch, pull request, checks, preview link, merge, live site and revert happens on a static site on GitHub Pages, which costs nothing and needs no extra account. Free hosts without a card couldn't run a copy of Twenty per learner anyway: Fly.io has no free tier for new organisations, Koyeb has closed its free plan, Google Cloud Run needs a billing account, and Render's free tier has 512 MB of memory and wipes local data when it sleeps.
 - **A template, not a fork.** Workflows don't run in forks by default, and the preview action (`rossjrw/pr-preview-action`, maintained, MIT licence) doesn't support pull requests from forks. A repository created from a template runs Actions normally. GitHub Pages still has to be switched on by hand (Settings → Pages, deploy from the `gh-pages` branch), so the lab makes that a step of its own: switching on hosting. New repositories get a read-only token by default, so the template's workflow declares the write permissions it needs.
@@ -408,41 +442,57 @@ Every learner runs their own copy of the product in GitHub Codespaces, a develop
 
 ### The laptop check
 
-Five minutes, linked from the workshop's setup email and repeated before the season starts.
+About ten minutes, linked from the workshop's setup email and repeated before the season starts.
 
 1. Open a test page on our domain. This checks our domain isn't blocked.
 2. Open developer tools and find the request called `laptop-check`. This checks they aren't disabled by company policy.
 3. Sign in to GitHub and open the help-centre template. This checks GitHub isn't blocked for personal accounts.
 4. Open a test codespace and the app inside it. Every lab, from Mission 1 on, runs in a codespace, so this is the step that decides the most.
+5. In the test codespace, turn on Copilot's free plan and send it one message. This checks the account can use the free plan.
 
-The result is green (the work laptop works for everything), amber (developer tools work but GitHub or Codespaces doesn't: the browser steps on the work laptop, with the fallback copy in the workshop, and the codespace on a personal one) or red (developer tools are blocked: a personal laptop for everything). Amber and red come with a ready-to-send message to IT. Chrome and Edge let IT allow developer tools on named sites while keeping them blocked elsewhere (the `DeveloperToolsAvailabilityAllowlist` policy). For Codespaces, GitHub documents the domains it needs and notes that proxies which inspect encrypted traffic break the connection. Its fix is to exempt `*.visualstudio.com`, and it publishes a test URL learners can open.
+The result is green (the work laptop works for everything), amber (developer tools work but GitHub or Codespaces doesn't: the browser steps on the work laptop, with the fallback copy in the workshop, and the codespace on a personal one) or red (developer tools are blocked: a personal laptop for everything). If only Copilot fails, the learner pairs with someone whose account works, or uses the branch with the fix. Amber and red come with a ready-to-send message to IT. Chrome and Edge let IT allow developer tools on named sites while keeping them blocked elsewhere (the `DeveloperToolsAvailabilityAllowlist` policy). For Codespaces, GitHub documents the domains it needs and notes that proxies which inspect encrypted traffic break the connection. Its fix is to exempt `*.visualstudio.com`, and it publishes a test URL learners can open.
 
 ### Risks
 
 - **Codespaces blocked at work.** Now the biggest risk, because every lab needs it. The laptop check catches it before anyone pays, and a personal laptop is the fallback. We found no data on how often companies block it.
 - **IT blocks developer tools.** The allowlist request, or a personal laptop.
 - **Support moves from one server to 25–60 environments.** Week one will bring setup questions. Tamas covers the stuck thread daily that week, and every fix goes into the setup or the hints.
-- **The free hours run out.** That happens if a learner picks a bigger machine or runs the deeper track for long. The idle stop protects most of the allowance, and the setup asks for the 2-core machine.
+- **The free hours run out.** A season uses about half the monthly hours even on the 4-core machine (see the free allowance above), so it happens only if a learner picks a bigger machine or runs the deeper track for long. The idle stop protects most of the allowance.
+- **Copilot gets the fix wrong in the room, or the free allowance runs out.** GitHub doesn't publish the free plan's allowance, and free users can't choose the model. The trial measures both, and the branch with the fix means everyone still tests a fix.
+- **No free Copilot on the learner's account.** Accounts an employer manages, or that already get Copilot from an employer, can't use the free plan. The setup email asks for a personal account, and the laptop check catches it before the workshop.
+- **The codespace stops in the middle of the workshop.** Drawing the map and writing the bug report may not count as activity, and the default stop comes after 30 minutes. The trial checks it; if it happens, the setup email asks attendees to raise their idle timeout.
 - **Phone-only learners.** Messages, audio and recall work on a phone; labs don't. The sales page says so.
 - **AI tools blocked at work.** The sandbox is fictional, so a personal account on a personal device is fine for labs. At work, only approved tools, which Mission 7 covers.
 - **The AGPL licence.** It requires us to offer the source of our modified Twenty to anyone we give it to or who uses it over a network, so our fork, seeded bugs included, is public. A determined learner could find a bug in the code, which is also a skill worth having. Check the obligations with someone who knows AGPL before launch; this note isn't legal advice.
-- **Twenty moves fast.** v2.45 came out on 5 October and v2.46 four days later. Pin one version per season, so every learner's copy runs the same one, and upgrade between seasons.
+- **Twenty moves fast.** v2.45 came out on 5 October and v2.46 four days later. Pin one version per season, so every learner's copy runs the same one, and upgrade between seasons. VS Code and Copilot change every month, so re-run the Copilot checks a week before each workshop.
 
 ### Trial checks before committing
 
-1. Write the development container setup and check that Twenty's four services run on the free 2-core, 8 GB machine.
-2. Make the codespace open ready to use: the app in one tab, the server log running in a panel and a database table view one click away, with no commands to type.
-3. Time the first start with and without a prebuild, and a restart after an idle stop.
-4. Point Twenty's server address at the codespace's forwarded address and check that signing in works through the private port.
-5. Measure disk use against the free 15 GB-months.
-6. Seed the story: companies, deals, the Calder account, the roles and a login for the new sales rep.
-7. Seed Mission 1's bug so all four layers show it. The save is rejected by a database rule attendees can see in the table view (two companies can't share a web address). The server log shows the rejection. The network tab shows a failed request with a 4xx or 5xx status and a clear message the app never displays. GraphQL apps often return errors inside a response marked 200, which is a good Mission 4 lesson and too hard for the workshop.
-8. Start 30 codespaces at once from the prebuild, in one region, and time them.
-9. Run the whole workshop over a phone hotspot, to mimic venue wifi, and check the shared fallback copy copes with the expected room size.
-10. On a locked-down work laptop, time creating a GitHub account from scratch and opening a codespace, then the full Mission 1 trail.
-11. Check what a missing permission looks like. In the interface the object is hidden; over GraphQL it's a `FORBIDDEN` error. Confirm what the network tab shows when the rep opens a deal link.
-12. A learner's copy has no real mailbox, so seed a connected email account whose sync has failed, and check its status shows somewhere a PM would look (Mission 4's fourth ticket).
-13. Check whether workflows on self-hosted Twenty use credits.
+**For the workshop** (the week of 12 October, deciding on Friday 16 October)
+
+1. Write the development container setup and find the machine it needs, with the ready-built app's four services, the frontend running from source, VS Code and Copilot's agent all running at once. Try the 2-core, 8 GB machine first, and set the 4-core machine as the minimum if it runs out of memory. Twenty's own troubleshooting page mentions out-of-memory errors when starting it from source.
+2. Make setup a short lesson. The codespace opens with the file that lists the app's parts and a terminal. Three named commands start the ready-built app, start the frontend from source and load the story data. The server log stays running in a panel, and the database table view is one click away. Check that each command's output is something Tamas can narrate.
+3. Time the first start with and without a prebuild, the frontend's first load in the browser (thousands of small files through the forwarded address), and a restart after an idle stop.
+4. Sign in through both forwarded addresses, the ready-built app's and the frontend's. The frontend's development server blocks unfamiliar addresses by default, and other projects report Codespaces changing a request header that login checks rely on.
+5. Seed the story: companies, deals, the Calder account, the roles and a login for the new sales rep.
+6. Seed Mission 1's bug so all four layers show it. The save is rejected by a database rule attendees can see in the table view (two companies can't share a web address). The server log shows the rejection. The network tab shows a failed request with a 4xx or 5xx status and a clear message. Real Twenty shows "This record already exists" in a pop-up message, so our version hides that message behind a spinner, in one small piece of frontend code that Copilot can find from a bug report. GraphQL apps often return errors inside a response marked 200, which is a good Mission 4 lesson and too hard for the workshop.
+7. Open Copilot in a browser codespace with a new free account. Check that it's already there, what turning on the free plan looks like, and that it works on a network that blocks Copilot's own addresses. It should, because in a browser codespace Copilot runs on the codespace's machine, but GitHub doesn't say so directly.
+8. Give Tamas's model bug report to agent mode ten times, on new free accounts. Record how often it fixes the bug, how long it takes, which files it changes and how much of the free allowance it uses. The workshop needs a working fix in at least nine runs out of ten, within five minutes.
+9. Give it the one-line complaint ten times too. The workshop only claims the difference these runs show. If the complaint often works, the point becomes that only the learner with a bug report can tell whether it did.
+10. Check that one command switches a copy to the branch with the fix, and that the frontend reloads with it.
+11. Start 30 codespaces at once from the prebuild, in one region, and time them.
+12. Run the whole workshop over a phone hotspot, to mimic venue wifi, and check the shared fallback copy copes with the expected room size.
+13. On a locked-down work laptop, time creating a GitHub account from scratch, turning on Copilot's free plan and opening a codespace, then the full Mission 1 trail and the fix.
+14. Check whether drawing the map and writing the bug report count as activity in the codespace. If they don't, the codespace could stop in the middle of the session after 30 minutes, so the setup email asks attendees to raise their default idle timeout (it goes up to 240 minutes).
+
+Re-run checks 7–10 a week before each workshop, because VS Code and Copilot change every month.
+
+**For the season** (December)
+
+15. Measure disk use against the free 15 GB-months, with the installed frontend and the images.
+16. Check what a missing permission looks like. In the interface the object is hidden; over GraphQL it's a `FORBIDDEN` error. Confirm what the network tab shows when the rep opens a deal link.
+17. A learner's copy has no real mailbox, so seed a connected email account whose sync has failed, and check its status shows somewhere a PM would look (Mission 4's fourth ticket).
+18. Check whether workflows on self-hosted Twenty use credits.
 
 ## 7. The audio briefings
 
@@ -517,13 +567,13 @@ The evidence on getting adults to finish online courses is less encouraging than
 
 | Format | Length | What attendees need | How it runs |
 | --- | --- | --- | --- |
-| In-person workshop | 90 min | A laptop per pair and a GitHub account | The run of show in Mission 1 |
-| Online workshop | 60–75 min | A browser, with the codespace set up from the email beforehand | The same trail, with Tamas in the chat instead of going round the room. The mini clinic on two volunteers' bug reports shows what the season's clinics are like |
-| Conference talk | 20–30 min | Nothing | Kinga and Tamas walk the trail live on screen, the audience predicts by phone poll, and the own-product exercise becomes homework |
-| Company session | 60–90 min | As for the in-person or online workshop | The same workshop for one company's PMs, which leads straight to team seats |
+| In-person workshop | 2 hours, or 90 minutes in the shorter version | A laptop per pair, a GitHub account and Copilot's free plan turned on | The run of show in Mission 1 |
+| Online workshop | 90 min | A browser, the account and Copilot set up from the email beforehand | The same trail, with Tamas in the chat instead of going round the room. The mini clinic on two volunteers' bug reports shows what the season's clinics are like |
+| Conference talk | 20–30 min | Nothing | Kinga and Tamas start the app, walk the trail and run the Copilot fix live on screen, the audience predicts by phone poll, and the own-product exercise becomes homework |
+| Company session | 90 min to 2 hours | As for the in-person or online workshop, plus a check that the company allows Copilot's free plan on personal accounts for sandbox work | The same workshop for one company's PMs, which leads straight to team seats |
 
-- **The promise in the listing** is understanding how a web app works, for non-technical PMs, with the bug as the use case inside it. That's broad enough for general tech conferences (Portugal Tech Week is the first candidate) as well as product events.
-- **Teach, never sell, from the stage** (the event playbook's rule). The story finishes in the room: the bug is found, explained and written up, and the own-product exercise gives attendees something to do the next day. The QR code at the end leads to the field guide, the recording and the self-assessment. It's also how we measure each event, with its own link per event.
+- **The promise in the listing** is understanding how a web app works, for non-technical PMs: set one up, trace a bug through it, and fix the bug with an AI agent using the bug report. That's broad enough for general tech conferences (Portugal Tech Week is the first candidate) as well as product events, and the AI fix gives a tech-week audience a reason to pick this session.
+- **Teach, never sell, from the stage** (the event playbook's rule). The story finishes in the room: the bug is found, explained, reported and fixed in the learner's own copy, and the own-product exercise gives attendees something to do the next day. The QR code at the end leads to the field guide, the recording and the self-assessment. It's also how we measure each event, with its own link per event.
 - **The learning path comes after the value.** At the online workshop, the last five minutes say what the path covers. At conferences, the follow-up email does it.
 - **The bridge is the copy attendees already have.** "Your copy is still in your GitHub account, and Mission 2 starts from it." The offer is the founding season: the start date, the price and what's included, framed as momentum ("Keep going: seven more missions"). Unused codespaces are deleted after 30 days by default, so when the season starts later than that, the bridge is the same one-click setup rather than the copy itself.
 - **The expense route.** The manager message template, an invoice and the outcomes written in an employer's language.
@@ -550,7 +600,7 @@ Each claim below was checked against the original paper or a reliable summary on
 | Learning from audio (Daniel and Woody, 2010; Clinton-Lisell meta-analysis; Leahy and Sweller, 2011) | Mixed: reading beat a podcast in one classroom study; across 46 studies, reading and listening came out about equal, with reading ahead for inference; long, complex spoken explanations do worse than written ones | Briefings are short, optional and transcribed, and never carry anything the lab needs | No direct study of conceptual against procedural audio; our split is an inference |
 | Feedback (Hattie and Timperley, 2007; Wisniewski, Zierer and Hattie, 2020; Kluger and DeNisi, 1996) | Feedback helps on average (d = 0.48), more when it carries more information, and over a third of interventions made things worse, especially feedback aimed at the person | Rubric-based personal feedback on two artefacts; worked answers after every lab | High variation between studies |
 | Transfer of training (Baldwin and Ford, 1988; Blume and colleagues, 2010) | Whether training gets used at work depends on the learner, the training design and the work environment; supervisor support and voluntary participation both predicted transfer | Monday moves, the manager message, voluntary team seats | The authors flag inconsistent ways of measuring transfer |
-| Self-efficacy (Bandura, 1977) | Belief in your ability to do a task comes mainly from doing it successfully, then from seeing peers do it | Mission 1's found bug; the wins thread |  |
+| Self-efficacy (Bandura, 1977) | Belief in your ability to do a task comes mainly from doing it successfully, then from seeing peers do it | Mission 1's bug, found and then fixed with Copilot; the wins thread |  |
 | Self-determination theory (Deci and Ryan; Ryan and Deci, 2000) | Autonomy, competence and relatedness support motivation; autonomy is the one most consistently linked to outcomes in online-course research | Choice of Monday move, AI workflow and final brief; clinics; partners | Mostly self-report surveys; few studies measure actual completion |
 | Implementation intentions (Gollwitzer and Sheeran, 2006; Kizilcec and colleagues, 2020) | If-then plans help people act (d = 0.65), but planning prompts across 247 MOOCs raised early engagement and not completion | Booking lab slots at the workshop | Expect it to help the start, not the finish |
 | Commitment and accountability (Patterson, 2018; Li and colleagues, 2025) | A self-set commitment raised MOOC completion by 40%; reminders alone did nothing; prompting people to find an accountability partner had no average effect | Booked slots as the learner's own commitment; partners only with a real joint task | One course and one trial each |
@@ -569,6 +619,7 @@ Each claim below was checked against the original paper or a reliable summary on
   - clinic attendance and recording views;
   - hint use per lab step, to find confusing steps;
   - setup: the time from clicking the button to a running app, and how many learners needed help with it;
+  - the Copilot fix: how many attendees got a working fix from their bug report, and how many needed the branch with the fix;
   - how many learners who didn't attend a workshop finish the self-paced Mission 1, compared with attendees' completion of Mission 2;
   - the recommendation question after Mission 5 and at the end, and referrals (invites sent, colleagues who joined);
   - the before-and-after self-assessment;
@@ -583,8 +634,8 @@ There are two of you, so build the shared foundation and the first missions befo
 
 **Before launch**
 
-- The one-click environment: our fork of Twenty built into images, a development container setup that starts it in Codespaces with the story data, the season's problems behind settings, analytics instrumentation and prebuilds.
-- For each workshop: the setup email, the shared fallback copy, the field guide and a recorded run of the trail.
+- The one-click environment: our training repository built into images, a development container setup that runs the ready-built app and the frontend from source in Codespaces, the story data, the season's problems behind settings, analytics instrumentation and prebuilds.
+- For each workshop: the setup email, the shared fallback copy, the field guide, a recorded run of the trail, Tamas's model bug report tested as a Copilot prompt, the branch with the fix and a recorded run of the one-line complaint.
 - A request inspector on our own domain.
 - The help-centre repository template, with checks and preview links.
 - The cohort's analytics project with three months of made-up usage.
@@ -597,13 +648,14 @@ There are two of you, so build the shared foundation and the first missions befo
 
 ## 15. Decisions for the two of you
 
-1. **The training app.** I recommend Twenty, run by each learner in GitHub Codespaces, with Mealie as the fallback (section 6). Run the trial checks before deciding, above all whether Twenty fits the free 2-core machine.
-2. **The fictional company and customer names.**
-3. **Price and seats.** The research suggests €400–€800 is a defensible range to test for an applied programme with feedback and a substantial artefact.
-4. **Where it lives.** Your own site plus a community tool, or a cohort platform such as Maven that handles payments, reimbursement letters and discovery for a fee.
-5. **The clinic slot.** One time that works for the UK, Europe and US East, or two alternating slots.
-6. **AI prototyping.** A headline step, as on the waitlist page, or one of five options inside Mission 7, as proposed here.
-7. **Season length.** Eight weeks after the workshop, or a shorter season with fewer missions.
+1. **The training app.** I recommend Twenty, run by each learner in GitHub Codespaces, with Mealie as the fallback (section 6). Run the trial checks before deciding, above all which machine Twenty needs with the frontend running from source, and whether Copilot fixes Mission 1's bug from the bug report reliably.
+2. **The workshop's length.** Two hours with the setup and the Copilot fix, or the 90-minute version in Mission 1, which moves codespace creation into the setup email and the own-product exercise into homework.
+3. **The fictional company and customer names.**
+4. **Price and seats.** The research suggests €400–€800 is a defensible range to test for an applied programme with feedback and a substantial artefact.
+5. **Where it lives.** Your own site plus a community tool, or a cohort platform such as Maven that handles payments, reimbursement letters and discovery for a fee.
+6. **The clinic slot.** One time that works for the UK, Europe and US East, or two alternating slots.
+7. **AI prototyping.** A headline step, as on the waitlist page, or one of five options inside Mission 7, as proposed here.
+8. **Season length.** Eight weeks after the workshop, or a shorter season with fewer missions.
 
 ## 16. Where the waitlist page now disagrees with this design
 

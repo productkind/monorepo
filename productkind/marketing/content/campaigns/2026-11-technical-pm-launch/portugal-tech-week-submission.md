@@ -14,11 +14,12 @@ The listing text for the free workshop (Mission 1 in the [learning journey desig
 - **Their rules, checked on 11 October 2026:**
   - They won't accept events that "try to sell product and services". The text below only teaches and doesn't mention the paid learning path.
   - They prefer in-person events.
-  - "Organizer should be related to Portugal." If Product Management Society Lisbon co-hosts, or the Volkswagen Lisbon office hosts (both are options in the launch plan), name them as co-organiser.
+  - "Organizer should be related to Portugal." Kinga and Tamas live in Portugal, which covers it. A co-host such as Product Management Society Lisbon or the Volkswagen Lisbon office is optional: it would help with a venue and bring their members.
   - The registration link has to go in the event content.
+- **Submit after the decision on Friday 16 October.** This version promises that attendees set up their own development environment and fix the bug with GitHub Copilot, which needs Codespaces. If the trial checks fail and Lisbon runs on one shared copy, remove the "First" and "Finally" paragraphs, the second outcome and the GitHub account, and change the length back to 90 minutes.
+- **The trial also has to confirm the Copilot comparison.** The "Finally" paragraph says Copilot does better with the bug report than with a one-line complaint. If the trial runs don't show that, cut the sentence that starts "You'll also see".
 - **Images:** a logo at 512 × 512, and a featured image at 1920 × 1080 (1080 × 540 at the very least).
-- **Fill in before submitting:** the date, the time, the venue, the registration link, the number of places and the co-host.
-- **Still open:** whether attendees need a GitHub account depends on the Codespaces decision on 16 October. The text says "we'll email you short setup instructions a week before the workshop", which is true either way.
+- **Fill in before submitting:** the date, the time, the venue, the registration link and the number of places.
 
 ## Title
 
@@ -26,42 +27,51 @@ What happens when you click Save? How a web app works, for non-technical product
 
 If the form has a short character limit: **How a web app works: a hands-on workshop for non-technical product managers**
 
+If you'd rather lead with the AI fix: **Run a web app, find a bug and fix it with AI: a workshop for non-technical product managers**
+
 ## Categories and tags
 
-- **Categories:** Information Technologies (IT). Add Innovation if a second one is allowed. Pick an education or product category instead if the form offers one.
-- **Tags:** Product Management, Workshop, Web Apps, Engineering, Web Summit
+- **Categories:** Information Technologies (IT). Add Artificial Intelligence or Innovation if a second one is allowed. Pick an education or product category instead if the form offers one.
+- **Tags:** Product Management, Workshop, Web Apps, Engineering, AI, GitHub Copilot, Web Summit
 
 ## Short description
 
 For listings and social posts:
 
-> A hands-on workshop for product managers without an engineering background. You'll investigate a bug in a real web app, follow it through the browser, the server and the database, and leave able to explain what happens between clicking Save and the data reaching the database.
+> A hands-on workshop for product managers without an engineering background. You'll run a real web app in your own development environment, follow a failed save through the browser, the server and the database, write a bug report, then give it to GitHub Copilot and test the fix it makes in your copy of the app.
 
 ## Event content
 
 > You know what your product does. When something breaks and your engineers start talking about requests, servers and databases, it's harder to follow what went wrong, and even harder to know what to ask them.
 >
-> In this 90-minute workshop, you'll learn how a web app works by investigating a bug in a real one. A customer clicks Save, the app spins, and their new record never appears. You'll follow that save through every part of the app:
+> In this 2-hour workshop, you'll learn how a web app works by running one yourself and investigating a bug in it. A customer clicks Save, the app spins, and their new record never appears.
+>
+> **First, you'll set up your own development environment.** It's the copy of an app that engineers run and change without affecting real customers. Yours runs in GitHub's cloud and opens in your browser, so you won't install anything on your laptop. You'll start the app yourself and watch its parts start up: the database, the server and the screens you click on.
+>
+> **Then you'll follow the failed save through every part of the app:**
 >
 > 1. Check the database and confirm nothing was saved.
 > 2. Open your browser's developer tools and find the request that failed: what it sent and what came back.
 > 3. Read the server log, where you'll see the same request arrive and fail, just as an engineer would.
 > 4. Find the rule in the database that rejected the save, and work out where the bug really is.
 >
-> Then you'll draw a map of how the browser, the server and the database connect, write a bug report an engineer can act on, and try the browser steps on a product you use at work.
+> You'll draw a map of how the browser, the server and the database connect, and write a bug report with the evidence an engineer needs to fix it.
 >
-> The app you'll investigate is Twenty, a real open-source CRM. It has the same parts as most business software: a frontend, an API, a server and a database.
+> **Finally, you'll fix the bug with AI.** You'll give your bug report to GitHub Copilot, an AI agent that can change the app's code, and test its fix in your copy of the app. You'll also see what Copilot does with a one-line complaint instead, and why the evidence an engineer asks for helps an AI agent fix the bug too.
+>
+> The app you'll run is Twenty, a real open-source CRM. It has the same parts as most business software: a frontend, an API, a server and a database.
 >
 > **By the end, you'll be able to:**
 >
 > - explain what happens between clicking Save and the data reaching the database;
+> - run Twenty in your own development environment, and explain how that differs from the live product your customers use;
 > - find a request in your browser's network tab and read its status code and response;
 > - tell whether a problem starts in the browser, on the server or in the database;
-> - write a bug report with the evidence engineers ask for.
+> - write a bug report with the evidence engineers ask for, and give it to an AI agent to fix.
 >
-> **Who it's for:** product managers and product owners without an engineering background. You won't write code, and you don't need any technical knowledge.
+> **Who it's for:** product managers and product owners without an engineering background. You won't write code yourself, and you don't need any technical knowledge.
 >
-> **What to bring:** a laptop. You'll work in pairs, so one laptop between two is enough. We'll email you short setup instructions a week before the workshop.
+> **What to bring:** a laptop and a free, personal GitHub account. You'll work in pairs, so one laptop between two is enough. Before the workshop, we'll email you instructions for setting up the account and turning on GitHub Copilot's free plan, plus a short check that your laptop can open your development environment and GitHub Copilot (some company laptops can't).
 >
 > **Your hosts**
 >
@@ -71,6 +81,6 @@ For listings and social posts:
 >
 > Between them, they've worked at Datadog, Citrix, Volkswagen and Cloudera. In the workshop, Tamas explains how each part of the app works, and Kinga asks him the questions you'd ask as a product manager.
 >
-> Free, in English, with [30] places. Run by Little Parrot [and co-host].
+> Free, in English, with [30] places. Run by Little Parrot.
 >
 > Register here: [registration link]
