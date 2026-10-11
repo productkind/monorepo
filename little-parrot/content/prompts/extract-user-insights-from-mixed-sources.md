@@ -6,6 +6,7 @@
 - Skills used: none (data extraction + analysis task)
 - Needed beforehand: authenticate into GitHub via the terminal; export the data to CSV (course feedback, in-course step responses, and the profiles/users table)
 - Output: a folder of markdown files holding verbatim user insights (one per source/course), a cross-cutting patterns synthesis, and a README index
+- Where the output lives: `../user-insights/little-parrot/` (a private repo), never this public monorepo, because the files name learners
 
 ## Prompt
 
