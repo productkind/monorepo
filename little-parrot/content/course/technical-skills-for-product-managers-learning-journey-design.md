@@ -4,7 +4,7 @@
 
 ## The design on one page
 
-- **Shape.** A free live workshop that is also Mission 0, then an eight-week season: seven missions, one a week, with a catch-up week in the middle. Learners work at their own pace inside the season window, with a weekly live case clinic and a help channel we answer within one working day.
+- **Shape.** A free workshop that stands on its own (it teaches how a web app works, and runs at conferences, online or as a talk) and is also Mission 0, then an eight-week season: seven missions, one a week, with a catch-up week in the middle. Learners work at their own pace inside the season window, with a weekly live case clinic and a help channel we answer within one working day.
 - **One product, one story.** The learner joins a fictional software company as its newest PM. The product is a real open-source app (the recommendation is Twenty, an open-source CRM). Each learner runs their own copy in a cloud development environment that opens in the browser, set up with one click, with our story data and problems we break on purpose. Nothing gets installed on their laptop. Every mission starts with a message from a colleague or a customer: a problem or a decision, with a deadline.
 - **The same rhythm every week.** Predict, investigate in the real product, compare with a worked answer, produce a work artefact, then use it in your own job the following week (the "Monday move").
 - **Audio for the commute.** Each mission has up to three optional 8–10 minute briefings (the product story, an engineer explains, a debate), delivered to the learner's own podcast app, with a question to think about before and after, and a transcript.
@@ -73,8 +73,8 @@ The final decision is hard because of everything before it. That's the design: t
 
 | When | Mission | The message that starts it | What you do in the product | What you leave with |
 | --- | --- | --- | --- | --- |
-| Week 0, live and free | **0. "Saving doesn't work"** | Customer success: a customer can't save a record. Can you look before the 3pm call? | Reproduce it, find the failed request in the network tab, read the status code and response | Your first bug report and a network tab cheat sheet |
-| Week 1 | **1. Where does our customers' data go?** (how a web app works) | Sales forwards a prospect's security questionnaire | Start your own copy and watch its services start; trace one action from the browser to the database; find every third party | A system map and the questionnaire answers |
+| Week 0, live and free | **0. "Saving doesn't work"** (how a web app works, one request deep) | Customer success: Calder clicked Save and the company isn't there | Confirm nothing was saved, then follow the failed save from the browser through the network and the server to the database | A map of how a web app works, a bug report and your own copy of the product |
+| Week 1 | **1. Where does our customers' data go?** (how a web app works, the whole system) | Sales forwards a prospect's security questionnaire | Find everything else that runs (worker, queue, cache) and every third party; translate it into cloud names | A system map and the questionnaire answers |
 | Week 2 | **2. Can we promise the integration?** (APIs, webhooks, integrations) | Sales: "It's just an API, right?" | Send API requests, break them on purpose, catch a webhook, build a no-code workflow | An integration feasibility brief |
 | Week 3 | **3. Four escalations before lunch** (bug triage) | Customer success forwards four tickets | Triage each one: bug or not, where, how bad | A bug report (personal feedback) and a triage table |
 | Week 4 | **4. It's merged, so where is it?** (deployment) | The CEO: Calder was promised the fix today | Follow the fix through review and checks, deploy it to your own copy; ship and roll back your own change on GitHub | A release timeline, a stakeholder update and your first merged pull request |
@@ -114,32 +114,63 @@ Every mission has the same eight steps. A familiar structure means the learner s
 
 Each mission lists the message, what the learner does, the worked answer, the artefact, the Monday move, the AI step, the audio briefings and what it plants for the finale.
 
-### Mission 0: "Saving doesn't work" (the free live workshop, 75 minutes)
+### Mission 0: "Saving doesn't work" (the workshop: 90 minutes in person, 60–75 online)
 
-**The message.** Customer success lead: "Calder can't save new companies. It just spins. Engineering is in planning all day. Can you take a look before my 3pm call?"
+**The promise.** Non-technical PMs leave understanding how a web app works: what happens between clicking a button and the data reaching the database, and where each step can be checked. The bug is the use case that takes them through every layer. Keeping the promise this broad means the session fits general tech conferences as well as product events. It also stands on its own: the story finishes in the room, and the last exercise works on the attendee's own product the next day, whether or not they join the learning path.
 
-**Run of show**
+**The message.** Customer success lead: "Calder clicked Save on a new company. It spun, and the company isn't there. Engineering is in planning all day. Can you take a look before my 3pm call?"
+
+**Following the failed save is the tour of the app**
+
+1. **Confirm it in the database.** Open the database table view: the company Calder typed isn't there. The customer is right, so the question becomes where the save got lost.
+2. **Start where the user was: the browser.** The spinner, then the network tab: the request, its Payload (what the app sent), the status code and the error in the response.
+3. **Go deeper: the server log.** It's already running in a panel, and it shows the same request arriving and failing. This is what engineers see.
+4. **Back to the database.** The rule that rejected the save lives here: two companies can't share a web address, and a colleague at Calder had already added the same company under a slightly different name. So the data was there all along. The server rejected the save correctly, and the bug is that the app showed a spinner instead of saying why.
+5. **Draw the map from the trail.** Frontend, API, server and database. Attendees have just walked through each one, so the diagram describes something they've seen.
+6. **Write the bug report** with evidence from each layer. Then the honest part: at work, most PMs can open the network tab, but few can see server logs or the production database. Having seen all four layers once tells them what to ask engineers for, and makes the browser the place they can start on their own.
+7. **Try it on your own product**, or any web app you use: do one action, find its request and name the parts. It needs no sandbox, so it works at their desk the next day.
+
+**Run of show, in person**
 
 | Minutes | What happens |
 | --- | --- |
-| 0–10 | Kinga introduces the season and the two of you. Everyone takes the 12-question Technical Product Confidence self-assessment (already specified in the research folder) as their "before" snapshot. |
-| 10–15 | Predict: a poll on where the problem is. The browser, the server, the database or the customer's network? |
-| 15–40 | Guided lab. Everyone opens the workshop copy (a temporary copy of the product we run for the day, so attendees need nothing but a browser) and the network tab. They reproduce the problem, find the failed request, open its Payload tab to see what it was trying to do, and read the status code and the response. Tamas helps people in the chat. The answer: the server rejected the request with a clear message, and the app showed a spinner instead of the message. |
-| 40–50 | Write a three-line bug report from a template, then compare it with Tamas's. |
-| 50–65 | A mini case clinic: two volunteers' bug reports get live feedback, so everyone sees what the clinics are like. |
-| 65–75 | The season map, booking two lab slots a week in the calendar, and the offer. |
+| 0–10 | Kinga and Tamas introduce themselves and read out the message from customer success. Attendees form pairs, so anyone without a working codespace sits with someone who has one. |
+| 10–25 | Setup. Most attendees open the codespace they created from the setup email; the rest create one now, with Tamas and a helper going round. It opens ready to use: the app in one tab, the server log running in a panel and the database table view one click away, with no commands to type. |
+| 25–30 | Predict: a phone poll on where the save got lost. |
+| 30–60 | Steps 1–4 of the trail, guided. Tamas narrates each layer the way an engineer would, and Kinga asks the questions a PM would ask. |
+| 60–70 | Step 5: draw the map together. |
+| 70–80 | Step 6: write the bug report, compare it with Tamas's, and give live feedback on two volunteers' reports. |
+| 80–90 | Step 7 on their own products, then the QR code for the field guide and the recording. |
 
-**Leaves with:** a first bug report, a network tab cheat sheet and the self-assessment report to share with their manager. The workshop counts as Mission 0, so anyone who joins the season starts with one of eight missions done.
+Section 11 has the online, talk and company-session versions of the same trail.
 
-### Mission 1: Where does our customers' data go? (How a web application works)
+**Before the session.** A setup email a week ahead: create a free GitHub account and open your codespace with one click, about five minutes. Plan for a good share of people not doing it, which is why the first 15 minutes cover setup and why attendees work in pairs: only half the room needs a working codespace.
+
+**The fallbacks.** Laptops that can't run Codespaces (a corporate VPN or proxy that breaks it, or no personal GitHub sign-in on a work laptop) use a shared copy of the product we run for the day. Those attendees do the browser steps themselves and follow the server log and database on the presenters' screen. If the venue wifi fails, Kinga and Tamas switch to a recorded run of the trail and printed screenshots.
+
+**Leaves with**
+
+- a map of how a web app works, drawn from a trail they followed themselves;
+- a bug report with evidence from each layer;
+- a one-page network tab field guide: where to click, which columns to read, the status codes PMs actually meet, how to spot a slow request, how to share evidence safely (HAR files contain login cookies) and what the browser can't show, plus the bug report template;
+- the Technical Product Confidence self-assessment and its manager-ready report, offered behind the same QR code instead of taking stage time;
+- their own copy of the product, still in their GitHub account.
+
+**How it leads to the learning path.** The copy attendees set up stays in their GitHub account, and Mission 1 starts from it. GitHub deletes unused codespaces after a while (30 days by default), so seasons should start soon after events. The workshop counts as Mission 0, so anyone who joins starts with one of eight missions done. Nothing is sold from the stage (section 11).
+
+### Mission 1: Where does our customers' data go? (How a web application works: the whole system)
+
+Mission 0 followed one request down through four layers. Mission 1 goes wide: everything else that runs, where data goes beyond the database, and what the infrastructure is called. Depth first in the workshop, then breadth here.
 
 **The message.** Sales forwards a security questionnaire from a prospect in financial services: "Which components process our data? Where is it stored, and in which cloud region? Which third parties receive it?" The engineering lead adds: "Have a go first and I'll check it on Thursday."
 
-**Sitting 1: start your own copy.** On our GitHub repository, click the button that creates your codespace: a development environment in GitHub's cloud, the same kind of place an engineer works in, opened in your browser. While it starts, open the deployment file it follows, which lists everything that runs behind the browser: the server, a background worker, the database (Postgres) and Redis, which works as both a cache and the queue the worker takes its jobs from. Watch each one start in the log. When the app's address appears in the Ports tab, open it and sign in to the story's workspace. Ask an AI chat assistant to explain each service, then check two of its claims against the project's own documentation.
+**Sitting 1: everything that runs.** Open your codespace, the one from the workshop. Open the deployment file it follows, which lists everything behind the browser, including two services the workshop trail didn't touch: a background worker, and Redis, which works as both a cache and the queue the worker takes its jobs from. Restart your copy and watch each service start in the log. Then find a job the worker runs on a schedule and watch it appear in the worker's log without anyone clicking anything. Ask an AI chat assistant to explain each service, then check two of its claims against the project's own documentation. The worked answer also explains what a development environment is, and why an engineer's development environment, staging and production are three different places.
 
-**Sitting 2: the browser side.** Load the product with the network tab open. What did the browser download (HTML, JavaScript, styles, images), and what did it ask the server for (API requests)? In this product most of those requests are called "graphql", and the Payload tab shows what each one asked for. Find how the app remembers who you are (cookies and storage in the Application tab). List every domain the page talks to: your copy of the server, the analytics tool, a font service, a content delivery network. That list is already the start of the questionnaire's answer on third parties.
+Learners who missed the workshop create their codespace in the first ten minutes of this sitting and watch a 15-minute recording of the Mission 0 trail first.
 
-**Sitting 3: the map and the cloud translation.** Draw the system map: a user action, the frontend, the API, the server, the database and worker, and the third parties. Then the same building blocks under their AWS, Azure and Google Cloud names: managed database, object storage, cache, queue, container hosting, load balancer, content delivery network and region. This covers the waitlist page's promise of "AWS, Google Cloud and Azure included".
+**Sitting 2: where the data goes beyond the database.** Load the product with the network tab open and list every domain the page talks to: your copy of the server, the analytics tool, a font service, a content delivery network. Find how the app remembers who you are (cookies and storage in the Application tab). That list is already the start of the questionnaire's answer on third parties.
+
+**Sitting 3: the full map and the cloud translation.** Extend the map from Mission 0: add the worker, the queue, the cache and the third parties. Then the same building blocks under their AWS, Azure and Google Cloud names: managed database, object storage, cache, queue, container hosting, load balancer, content delivery network and region. This covers the waitlist page's promise of "AWS, Google Cloud and Azure included".
 
 **Worked answer.** Tamas's system map and his questionnaire answers, each marked with how sure he is and what he'd still ask the platform team.
 
@@ -152,8 +183,6 @@ Each mission lists the message, what the learner does, the worked answer, the ar
 **Audio.** The story: why enterprise deals wait on security questionnaires, and which parts a PM can answer. An engineer explains: why a backend is usually several services. The debate: should PMs read code?
 
 **Plants.** Email and calendar sync run as jobs on the background worker, so when a problem never shows up in the browser, that's one place it can be.
-
-This is the longest mission and the foundation for the rest. If the founding cohort finds three sittings too much for one week, split it into two missions.
 
 ### Mission 2: Can we promise the integration? (APIs, webhooks and integrations)
 
@@ -347,7 +376,7 @@ Every learner runs their own copy of the product in GitHub Codespaces, a develop
 - Our fork of Twenty, built by our pipeline into images and published to GitHub's container registry. Mission 4's fix arrives as a new image version.
 - A development container setup that starts the four services from those images (ready-built images, not the source code, which would need a much bigger machine), loads the story data on first start, points Twenty's server address at the codespace's forwarded address, and switches each mission's problems on with a setting.
 - Prebuilds, so the first start takes minutes. Their storage and Actions minutes are billed to us as the repository owner.
-- One temporary copy for each free workshop, sized for the group, so attendees need only a browser. Nobody needs a GitHub account or any setup before they've decided to join.
+- A shared fallback copy for each workshop, sized for the group, for attendees whose laptops can't run Codespaces.
 
 **The free allowance.** A personal GitHub account gets 120 core-hours and 15 GB-months of storage a month, with no card, and usage stops at the limit instead of being charged. On the 2-core machine that's 60 hours. A season needs roughly 3 hours of running time a week, counting the idle time before an automatic stop, so about 25–30 hours: half the allowance. On a 4-core machine the same season would use nearly all of it, which is why the core path has to fit on 2 cores. Both numbers are estimates to check in the founding cohort.
 
@@ -358,7 +387,7 @@ Every learner runs their own copy of the product in GitHub Codespaces, a develop
 | Piece | Where it runs | What the learner needs |
 | --- | --- | --- |
 | The training product | The learner's own codespace, running our fork's images | A personal GitHub account, and Codespaces reachable from their network |
-| The free workshop | One temporary copy we start for the day | A browser |
+| The workshop | Each attendee's own codespace, set up before or during the session; a shared fallback copy for laptops that can't run Codespaces | A GitHub account, or a partner who has one |
 | Developer tools | Built into Chrome, Edge and Firefox; Safari needs them switched on in its settings | Developer tools not blocked by IT |
 | Request inspector for webhooks | Our domain | A browser |
 | Code, issues, pull requests and checks | github.com; github.dev also works for reading code, though it runs nothing | The same GitHub account |
@@ -373,14 +402,14 @@ Every learner runs their own copy of the product in GitHub Codespaces, a develop
 
 ### The laptop check
 
-Five minutes, before the season starts. The workshop only needs the first two steps.
+Five minutes, linked from the workshop's setup email and repeated before the season starts.
 
 1. Open a test page on our domain. This checks our domain isn't blocked.
 2. Open developer tools and find the request called `laptop-check`. This checks they aren't disabled by company policy.
 3. Sign in to GitHub and open the help-centre template. This checks GitHub isn't blocked for personal accounts.
 4. Open a test codespace and the app inside it. Every lab from Mission 1 runs in a codespace, so this is the step that decides the most.
 
-The result is green (the work laptop works for everything), amber (developer tools work but GitHub or Codespaces doesn't: the workshop on the work laptop, the season on a personal one) or red (developer tools are blocked: a personal laptop for everything). Amber and red come with a ready-to-send message to IT. Chrome and Edge let IT allow developer tools on named sites while keeping them blocked elsewhere (the `DeveloperToolsAvailabilityAllowlist` policy). For Codespaces, GitHub documents the domains it needs and notes that proxies which inspect encrypted traffic break the connection. Its fix is to exempt `*.visualstudio.com`, and it publishes a test URL learners can open.
+The result is green (the work laptop works for everything), amber (developer tools work but GitHub or Codespaces doesn't: the browser steps on the work laptop, with the fallback copy in the workshop, and the codespace on a personal one) or red (developer tools are blocked: a personal laptop for everything). Amber and red come with a ready-to-send message to IT. Chrome and Edge let IT allow developer tools on named sites while keeping them blocked elsewhere (the `DeveloperToolsAvailabilityAllowlist` policy). For Codespaces, GitHub documents the domains it needs and notes that proxies which inspect encrypted traffic break the connection. Its fix is to exempt `*.visualstudio.com`, and it publishes a test URL learners can open.
 
 ### Risks
 
@@ -396,15 +425,18 @@ The result is green (the work laptop works for everything), amber (developer too
 ### Trial checks before committing
 
 1. Write the development container setup and check that Twenty's four services run on the free 2-core, 8 GB machine.
-2. Time the first start with and without a prebuild, and a restart after an idle stop.
-3. Point Twenty's server address at the codespace's forwarded address and check that signing in works through the private port.
-4. Measure disk use against the free 15 GB-months.
-5. Seed the story: companies, deals, the Calder account, the roles and a login for the new sales rep.
-6. Seed Mission 0's bug and check it shows in the network tab as a failed request with a 4xx or 5xx status. GraphQL apps often return errors inside a response marked 200, which is a good Mission 3 lesson and too hard for the first hour.
-7. Check what a missing permission looks like. In the interface the object is hidden; over GraphQL it's a `FORBIDDEN` error. Confirm what the network tab shows when the rep opens a deal link.
-8. A learner's copy has no real mailbox, so seed a connected email account whose sync has failed, and check its status shows somewhere a PM would look (Mission 3's fourth ticket).
-9. Check whether workflows on self-hosted Twenty use credits.
-10. Time Mission 0, and Mission 1's setup, on a locked-down laptop.
+2. Make the codespace open ready to use: the app in one tab, the server log running in a panel and a database table view one click away, with no commands to type.
+3. Time the first start with and without a prebuild, and a restart after an idle stop.
+4. Point Twenty's server address at the codespace's forwarded address and check that signing in works through the private port.
+5. Measure disk use against the free 15 GB-months.
+6. Seed the story: companies, deals, the Calder account, the roles and a login for the new sales rep.
+7. Seed Mission 0's bug so all four layers show it. The save is rejected by a database rule attendees can see in the table view (two companies can't share a web address). The server log shows the rejection. The network tab shows a failed request with a 4xx or 5xx status and a clear message the app never displays. GraphQL apps often return errors inside a response marked 200, which is a good Mission 3 lesson and too hard for the workshop.
+8. Start 30 codespaces at once from the prebuild, in one region, and time them.
+9. Run the whole workshop over a phone hotspot, to mimic venue wifi, and check the shared fallback copy copes with the expected room size.
+10. On a locked-down work laptop, time creating a GitHub account from scratch and opening a codespace, then the full Mission 0 trail.
+11. Check what a missing permission looks like. In the interface the object is hidden; over GraphQL it's a `FORBIDDEN` error. Confirm what the network tab shows when the rep opens a deal link.
+12. A learner's copy has no real mailbox, so seed a connected email account whose sync has failed, and check its status shows somewhere a PM would look (Mission 3's fourth ticket).
+13. Check whether workflows on self-hosted Twenty use credits.
 
 ## 7. The audio briefings
 
@@ -449,7 +481,7 @@ The evidence on getting adults to finish online courses is less encouraging than
 
 | Lever | What we do | Basis, and how strong it is |
 | --- | --- | --- |
-| A fast first win | Mission 0 gives a real result in 20 minutes, in the free workshop | Succeeding at the task yourself is the strongest source of self-efficacy (Bandura). For an audience that feels like "the least knowledgeable person in the room", this is the main job of the first hour |
+| A fast first win | Mission 0 ends with a found bug and a map of the app, in the free workshop | Succeeding at the task yourself is the strongest source of self-efficacy (Bandura). For an audience that feels like "the least knowledgeable person in the room", this is the main job of the first hour |
 | Starting with progress | The workshop counts as Mission 0, so the season starts at one of eight | Endowed progress: 34% finished a loyalty card with two stamps already on it, against 19% for a blank card of the same length (Nunes and Drèze). Consumer evidence, not learning |
 | Deciding when, in advance | At the end of the workshop, learners book two recurring 40-minute lab slots and pick their audio moment. We send calendar files | If-then plans have a solid track record (Gollwitzer and Sheeran, d = 0.65). But across 247 MOOCs, planning prompts raised engagement in the first weeks and didn't raise completion (Kizilcec and colleagues, 2020). This gets people started; the rest of the table has to keep them going |
 | A weekly rhythm that carries the work | Monday: the message and the episode arrive. Wednesday: the clinic. Friday: artefacts due. A shared start date | In Patterson's MOOC experiment, reminders had no effect, while a commitment learners set for themselves raised completion by 40%. So the Monday email is the mission itself, not a nudge, and the booked slots are the learner's own commitment |
@@ -473,15 +505,26 @@ The evidence on getting adults to finish online courses is less encouraging than
 - **Ask at the right moment.** A recommendation question after Mission 4 and at the finale. Learners who score 9 or 10 get a direct ask with a link to the next free workshop.
 - **Alumni clinics.** A monthly open clinic for past learners keeps them close, gives them a reason to bring colleagues and gives us a steady supply of real cases.
 
-## 11. The free workshop and the paid season
+## 11. The workshop and the paid season
 
-- **The workshop is Mission 0 for real, not a pitch.** Everyone leaves with a bug report and the cheat sheet, whether or not they buy.
-- **It shows the paid parts.** The live mini clinic shows the feedback, a 60-second audio clip shows the briefings, and the season map shows the missions and the finale.
-- **The offer** is the founding season: the start date, the price and what's included, framed as momentum ("Keep going: seven more missions").
+**One trail, four formats**
+
+| Format | Length | What attendees need | How it runs |
+| --- | --- | --- | --- |
+| In-person workshop | 90 min | A laptop per pair and a GitHub account | The run of show in Mission 0 |
+| Online workshop | 60–75 min | A browser, with the codespace set up from the email beforehand | The same trail, with Tamas in the chat instead of going round the room. The mini clinic on two volunteers' bug reports shows what the season's clinics are like |
+| Conference talk | 20–30 min | Nothing | Kinga and Tamas walk the trail live on screen, the audience predicts by phone poll, and the own-product exercise becomes homework |
+| Company session | 60–90 min | As for the in-person or online workshop | The same workshop for one company's PMs, which leads straight to team seats |
+
+- **The promise in the listing** is understanding how a web app works, for non-technical PMs, with the bug as the use case inside it. That's broad enough for general tech conferences (Portugal Tech Week is the first candidate) as well as product events.
+- **Teach, never sell, from the stage** (the event playbook's rule). The story finishes in the room: the bug is found, explained and written up, and the own-product exercise gives attendees something to do the next day. The QR code at the end leads to the field guide, the recording and the self-assessment. It's also how we measure each event, with its own link per event.
+- **The learning path comes after the value.** At the online workshop, the last five minutes say what the path covers. At conferences, the follow-up email does it.
+- **The bridge is the copy attendees already have.** "Your copy is still in your GitHub account, and Mission 1 starts from it." The offer is the founding season: the start date, the price and what's included, framed as momentum ("Keep going: seven more missions"). Season start dates follow events closely, because unused codespaces are deleted after 30 days by default.
 - **The expense route.** The manager message template, an invoice and the outcomes written in an employer's language.
-- **Follow-up emails.** Day 1: the recording, the cheat sheet and Tamas's model bug report. Day 3: a full audio briefing from Mission 1 with its transcript. Day 5: two Monday moves from workshop attendees, with permission. Then enrolment closes before the start date.
-- **A recorded version** of the workshop with the same lab, for people who can't attend live, so sign-up can stay open between seasons.
-- **Size.** A live lab works with up to about 40–60 people on a temporary copy sized for the group, if Tamas covers the chat and everyone has done the short laptop check beforehand (section 6).
+- **Follow-up emails.** Day 1: the recording, the field guide and Tamas's model bug report. Day 3: a full audio briefing from Mission 1 with its transcript. Day 5: what two attendees found on their own products, with permission. Then the season offer, closing before the start date.
+- **A recorded version** of the workshop for people who can't attend live, so sign-up can stay open between seasons.
+- **Size.** Up to about 40–60 people in person, with Tamas and one helper going round and pairs halving the number of setups. Online, the same, with Tamas in the chat.
+- **Choosing events.** The event playbook scores audience fit for non-technical women who build with AI. For this workshop the fit row should score non-technical software PMs, and the event list should add product events (Mind the Product, ProductTank meetups, Women in Product) and in-company sessions.
 
 ## 12. The learning science behind it
 
@@ -534,7 +577,7 @@ There are two of you, so build the shared foundation and the first missions befo
 **Before launch**
 
 - The one-click environment: our fork of Twenty built into images, a development container setup that starts it in Codespaces with the story data, the season's problems behind settings, analytics instrumentation and prebuilds.
-- A temporary copy of the product for each free workshop.
+- For each workshop: the setup email, the shared fallback copy, the field guide and a recorded run of the trail.
 - A request inspector on our own domain.
 - The help-centre repository template, with checks and preview links.
 - The cohort's analytics project with three months of made-up usage.
