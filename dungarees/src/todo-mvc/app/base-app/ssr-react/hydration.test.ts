@@ -1,11 +1,14 @@
 // @vitest-environment happy-dom
-import { startBrowserApp } from './start.ts'
+import { baseApplication } from './base-app.ts'
 
-import { baseApplication } from '@dungarees/todo-mvc-base-app-ssr-react/base-app.ts'
-import { createFakeTodoMvcServices } from '@dungarees/todo-mvc-fake-services-ssr-react/get-services.ts'
+import {
+  createFakeTodoMvcBrowserServices,
+  createFakeTodoMvcServerServices,
+} from '@dungarees/todo-mvc-fake-services-ssr-react/get-services.ts'
 import type { Todo } from '@dungarees/todo-mvc-todos-domain/type.ts'
 
 import { act, fireEvent } from '@testing-library/react'
+import type { History } from 'history'
 import { afterEach, beforeEach, expect, test, vi } from 'vitest'
 
 const TEMPLATE = [
@@ -18,18 +21,14 @@ const TODOS: Todo[] = [
   { id: '2', title: 'Read the spec', completed: true },
 ]
 
-const renderOnServer = (path: string): string =>
-  baseApplication.run(
+const renderOnServer = async (path: string): Promise<string> => {
+  const { services, render } = createFakeTodoMvcServerServices({ readTodos: () => TODOS })
+  await baseApplication.run(
     { environment: 'test', runtime: 'server' },
-    {
-      getServices: () =>
-        createFakeTodoMvcServices({
-          path,
-          todos: TODOS,
-          target: { kind: 'server', template: TEMPLATE, nonce: 'test-nonce' },
-        }),
-    },
-  ).output?.html ?? ''
+    { getServices: () => services },
+  ).output
+  return (await render({ url: path, nonce: 'test-nonce', template: TEMPLATE })).html
+}
 
 const bodyOf = (html: string): string => /<body>([\s\S]*)<\/body>/.exec(html)?.[1] ?? ''
 
@@ -49,46 +48,43 @@ beforeEach(() => {
 
 afterEach(() => {
   vi.restoreAllMocks()
-  window.history.replaceState(null, '', '/')
 })
 
-const hydrateServerRenderOf = (path: string): void => {
-  window.history.replaceState(null, '', path)
-  document.body.innerHTML = bodyOf(renderOnServer(path))
+const hydrateServerRenderOf = async (path: string): Promise<History> => {
+  document.body.innerHTML = bodyOf(await renderOnServer(path))
+  const { services, history } = createFakeTodoMvcBrowserServices({ path, document })
   act(() => {
-    startBrowserApp()
+    baseApplication.run(
+      { environment: 'test', runtime: 'browser' },
+      { getServices: () => services },
+    )
   })
+  return history
 }
 
-test('the browser takes over the markup the server produced', () => {
-  hydrateServerRenderOf('/')
+test('the browser takes over the markup the server produced', async () => {
+  await hydrateServerRenderOf('/')
 
   expect(titles()).toEqual(['Write tests', 'Read the spec'])
 })
 
 // React reports a server and browser tree that disagree by warning and throwing the server's
 // markup away, which is the failure this whole arrangement exists to avoid.
-test('hydration reports no mismatch between the two renders', () => {
-  hydrateServerRenderOf('/')
+test('hydration reports no mismatch between the two renders', async () => {
+  await hydrateServerRenderOf('/')
 
   const messages = errors.flat().filter((arg) => typeof arg === 'string')
   expect(messages.filter((message) => /hydrat|did not match|mismatch/i.test(message))).toEqual([])
 })
 
-test('the filter the server rendered is the one the browser starts on', () => {
-  hydrateServerRenderOf('/active')
+test('the filter the server rendered is the one the browser starts on', async () => {
+  await hydrateServerRenderOf('/active')
 
   expect(titles()).toEqual(['Write tests'])
 })
 
-test('the state the server left behind is what the browser starts from', () => {
-  hydrateServerRenderOf('/completed')
-
-  expect(titles()).toEqual(['Read the spec'])
-})
-
-test('a hydrated page is interactive: toggling changes the list', () => {
-  hydrateServerRenderOf('/active')
+test('a hydrated page is interactive: toggling changes the list', async () => {
+  await hydrateServerRenderOf('/active')
   const toggle = document.querySelector('.todo-list li .toggle')
   if (toggle === null) {
     throw new Error('The hydrated page has no toggle to click')
@@ -99,8 +95,8 @@ test('a hydrated page is interactive: toggling changes the list', () => {
   expect(titles()).toEqual([])
 })
 
-test('clicking a filter navigates in the browser rather than reloading', () => {
-  hydrateServerRenderOf('/')
+test('clicking a filter navigates in the browser rather than reloading', async () => {
+  const history = await hydrateServerRenderOf('/')
   const completed = Array.from(document.querySelectorAll('.filters a')).find(
     (link) => link.textContent === 'Completed',
   )
@@ -111,5 +107,5 @@ test('clicking a filter navigates in the browser rather than reloading', () => {
   fireEvent.click(completed)
 
   expect(titles()).toEqual(['Read the spec'])
-  expect(window.location.pathname).toBe('/completed')
+  expect(history.location.pathname).toBe('/completed')
 })

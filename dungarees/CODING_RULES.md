@@ -827,10 +827,33 @@ app/runtime/hydration-react/  the browser half of the same server-rendered app
 // Good — one delivery, one package; the server entry and the client entry are both part of
 // what "server-rendered React" means
 app/runtime/ssr-react/
-  entry-server.ts   renders a request
-  entry-client.ts   the document's entry point
-  start.ts          the hydration it calls, kept separate so a test can call it too
-  server.ts         the executable
+  app.ts                        the base application with the browser's real services
+  server-services.ts            the server's real services, given how to serve
+  entry-server.ts               the production server, run from its bundle
+  entry-server-development.ts   the same server, serving through Vite's dev server
+  entry-client.ts               the document's entry point
+```
+
+A run lives as long as its runtime: one process on the server, one document in the browser. `getServices` is called once per run. Behaviours and delivery hold the state of one unit of work, so they are built by `createBehaviorsAndDelivery`, which `main` calls as often as the runtime needs: once per request on the server, once in the browser. Neither is built until `main` asks for it.
+
+```ts
+// Bad — the application runs once per request, so every request rebuilds the services too
+const render = ({ url }) =>
+  application.run(identity, { getServices: () => servicesFor(url) }).output
+```
+
+```ts
+// Good — services once per process; behaviours and delivery per request, built from that request's input
+const serverMain = async ({ services, createBehaviorsAndDelivery }) => {
+  await services.serve({
+    render: ({ url }) => {
+      const { delivery, exportState } = createBehaviorsAndDelivery({
+        history: services.createHistory(url),
+      })
+      // ...render delivery.Root and exportState() into the document
+    },
+  })
+}
 ```
 
 There is no delivery segment above the feature level. `<product>/src/` is the product and nothing else, so `src/todo-mvc/ssr-react/app/runtime/ssr-react` names the same thing twice and stops a second delivery from sharing the domain.

@@ -1,33 +1,77 @@
 import { createFakeIdGeneratorBackend } from '@dungarees/id-generator/fake.ts'
-import { createIdGenerator } from '@dungarees/id-generator/service.ts'
-import type { IdGenerator } from '@dungarees/id-generator/service.ts'
+import { createIdGenerator, type IdGenerator } from '@dungarees/id-generator/service.ts'
+import type { SsrTemplateRender } from '@dungarees/ssr-react/responder.ts'
 import type { Todo } from '@dungarees/todo-mvc-todos-domain/type.ts'
 
 import { createMemoryHistory, type History } from 'history'
 
-export type FakeTodoMvcTarget =
-  { kind: 'server'; template: string; nonce: string } | { kind: 'browser'; container: Element }
-
-export type FakeTodoMvcServices = {
-  history: History
+export type FakeTodoMvcServerServices = {
+  kind: 'server'
   idGenerator: IdGenerator
-  initialTodos: Todo[]
-  target: FakeTodoMvcTarget
+  readTodos: () => Todo[]
+  createHistory: (url: string) => History
+  serve: (args: { render: SsrTemplateRender }) => Promise<void>
 }
 
-export type FakeWorld = {
-  path?: string
-  todos?: Todo[]
-  target: FakeTodoMvcTarget
+export type FakeTodoMvcBrowserServices = {
+  kind: 'browser'
+  idGenerator: IdGenerator
+  createHistory: () => History
+  document: Document
 }
 
-export const createFakeTodoMvcServices = ({
+export type FakeTodoMvcServer = {
+  services: FakeTodoMvcServerServices
+  render: SsrTemplateRender
+}
+
+export const createFakeTodoMvcServerServices = ({
+  readTodos = () => [],
+}: {
+  readTodos?: () => Todo[]
+} = {}): FakeTodoMvcServer => {
+  let served: SsrTemplateRender | undefined
+
+  return {
+    services: {
+      kind: 'server',
+      idGenerator: createIdGenerator(createFakeIdGeneratorBackend().backend),
+      readTodos,
+      createHistory: (url) => createMemoryHistory({ initialEntries: [url] }),
+      serve: async ({ render }) => {
+        served = render
+      },
+    },
+    render: async (args) => {
+      if (served === undefined) {
+        throw new Error('The application has not served anything yet')
+      }
+      return served(args)
+    },
+  }
+}
+
+export type FakeTodoMvcBrowser = {
+  services: FakeTodoMvcBrowserServices
+  history: History
+}
+
+export const createFakeTodoMvcBrowserServices = ({
   path = '/',
-  todos = [],
-  target,
-}: FakeWorld): FakeTodoMvcServices => ({
-  history: createMemoryHistory({ initialEntries: [path] }),
-  idGenerator: createIdGenerator(createFakeIdGeneratorBackend().backend),
-  initialTodos: todos,
-  target,
-})
+  document,
+}: {
+  path?: string
+  document: Document
+}): FakeTodoMvcBrowser => {
+  const history = createMemoryHistory({ initialEntries: [path] })
+
+  return {
+    services: {
+      kind: 'browser',
+      idGenerator: createIdGenerator(createFakeIdGeneratorBackend().backend),
+      createHistory: () => history,
+      document,
+    },
+    history,
+  }
+}

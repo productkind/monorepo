@@ -1,7 +1,7 @@
 export type IsSecureRequestArgs = {
   isEncrypted: boolean
   trustProxy: boolean
-  forwardedProto?: string
+  forwardedProto: string | readonly string[] | undefined
 }
 
 export const isSecureRequest = ({
@@ -15,5 +15,6 @@ export const isSecureRequest = ({
   if (!trustProxy || forwardedProto === undefined) {
     return false
   }
-  return forwardedProto.split(',')[0]?.trim() === 'https'
+  const firstHop = [forwardedProto].flat().join(',').split(',')[0]?.trim()
+  return firstHop === 'https'
 }

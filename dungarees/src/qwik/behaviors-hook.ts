@@ -29,10 +29,12 @@ export const createBehaviorsHook = <const APPLICATION extends RequiredApplicatio
       return
     }
     try {
-      const run = application().run(identityTransform(identity))
-      storedBehaviors = run.behaviors
-      storedExportState = run.exportState
-      storedImportState = run.importState
+      const { behaviors, exportState, importState } = application()
+        .run(identityTransform(identity))
+        .createBehaviorsAndDelivery(undefined)
+      storedBehaviors = behaviors
+      storedExportState = exportState
+      storedImportState = importState
     } catch (cause: unknown) {
       throw createCausedError({
         message: `Behaviors are not set for "${describeIdentity(identity)}"`,

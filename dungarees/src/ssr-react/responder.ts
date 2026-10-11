@@ -1,3 +1,5 @@
+import { createNonce as createDefaultNonce } from './nonce.ts'
+
 export type SsrHttpRequest = {
   method: string
   url: string
@@ -17,9 +19,19 @@ export type SsrRenderOutcome = {
 
 export type SsrResponder = (request: SsrHttpRequest) => Promise<SsrHttpResponse>
 
+export type SsrTemplateRenderArgs = {
+  url: string
+  nonce: string
+  template: string
+}
+
+export type SsrTemplateRender = (
+  args: SsrTemplateRenderArgs,
+) => SsrRenderOutcome | Promise<SsrRenderOutcome>
+
 export type SsrResponderArgs = {
   render: (args: { url: string; nonce: string }) => Promise<SsrRenderOutcome>
-  createNonce: () => string
+  createNonce?: () => string
   onError: (error: unknown) => void
   contentSecurityPolicy?: (args: { nonce: string }) => string
 }
@@ -43,7 +55,7 @@ const defaultContentSecurityPolicy = ({ nonce }: { nonce: string }): string =>
 
 export const createSsrResponder = ({
   render,
-  createNonce,
+  createNonce = createDefaultNonce,
   onError,
   contentSecurityPolicy = defaultContentSecurityPolicy,
 }: SsrResponderArgs): SsrResponder => {

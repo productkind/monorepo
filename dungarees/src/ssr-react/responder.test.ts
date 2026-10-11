@@ -86,3 +86,16 @@ test('a failed render is reported and answered with a bare five hundred', async 
   expect(response.status).toBe(500)
   expect(response.body).not.toContain('render exploded')
 })
+
+const nonceInPolicy = (headers: Record<string, string>): string =>
+  /'nonce-([^']+)'/.exec(headers['content-security-policy'] ?? '')?.[1] ?? ''
+
+test('without a nonce source, every response is given a fresh nonce of its own', async () => {
+  const respond = createSsrResponder({ render: async () => RENDERED, onError: () => {} })
+
+  const first = await respond({ method: 'GET', url: '/', isSecure: false })
+  const second = await respond({ method: 'GET', url: '/', isSecure: false })
+
+  expect(nonceInPolicy(first.headers)).not.toBe('')
+  expect(nonceInPolicy(first.headers)).not.toBe(nonceInPolicy(second.headers))
+})

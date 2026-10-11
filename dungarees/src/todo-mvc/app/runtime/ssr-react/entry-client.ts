@@ -1,5 +1,3 @@
-import { startBrowserApp } from './start.ts'
+import { application } from './app.ts'
 
-// Kept apart from start.ts because this file runs on import: the document names it as the client
-// entry, while a test needs the hydration to be something it can call when it is ready.
-startBrowserApp()
+application.run({ environment: import.meta.env.DEV ? 'test' : 'prod', runtime: 'browser' })

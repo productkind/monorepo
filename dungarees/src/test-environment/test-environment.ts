@@ -36,7 +36,7 @@ export type ConfigEntry<
   CONFIG extends ServiceConfig = ServiceConfig,
 > = EntryTuple<NAME, CONFIG>
 
-export type ServiceConfig = InteractorConfig | RunnerConfig
+export type ServiceConfig = InteractorConfig | RunnerConfig | StateConfig
 
 export type TestEnvironmentConfig = Record<string, ServiceConfig>
 
@@ -72,6 +72,11 @@ export type InteractorConfig<
   type: 'interactor'
   creator: (...args: ARGS) => INTERACTOR | Promise<INTERACTOR>
 } & DefaultConfig
+
+export type StateConfig<STATE = unknown> = {
+  type: 'state'
+  creator: () => STATE
+}
 
 export type RunnerInstance = { instance: Runner } & DefaultConfig
 export type InteractorInstance = { instance: Interactor } & DefaultConfig
@@ -195,7 +200,7 @@ export const createTestEnvironment = <const SERVICES extends Record<string, Serv
   ): Promise<void> => {
     await Promise.all(
       Object.entries(serviceConfigs)
-        .filter(([_, config]) => filter(config))
+        .filter(([_, config]) => config.type !== 'state' && filter(config))
         .map(async ([key, service]) => {
           if (service.type === 'interactor' && isInteractorName(serviceConfigs, key)) {
             state.interactors.set(key, await instantiateService(service))

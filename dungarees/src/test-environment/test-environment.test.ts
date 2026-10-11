@@ -2,7 +2,7 @@ import { createTestEnvironment } from './test-environment.ts'
 import type { Interactor, Runner } from './test-environment.ts'
 
 import { of } from 'rxjs'
-import { expect, test } from 'vitest'
+import { expect, expectTypeOf, test } from 'vitest'
 
 test('onBeforeAll hook starts the runners', async () => {
   const { state: state1, creator: creator1 } = setupFakeRunner()
@@ -359,6 +359,76 @@ type InteractorState = {
   isContextStarted: boolean
   startArg: number | undefined
 }
+
+type Visit = { path: string; errors: string[] }
+
+const createStateEnvironment = () => {
+  const { creator } = setupFakeRunner()
+  return createTestEnvironment({
+    server: { type: 'runner', creator, hook: 'before-all' },
+    visit: { type: 'state', creator: (): Visit => ({ path: '/', errors: [] }) },
+  })
+}
+
+test('a state starts every scenario as its creator builds it', () => {
+  const world = createStateEnvironment().createWorld()
+
+  expect(world.getState('visit')).toEqual({ path: '/', errors: [] })
+})
+
+test('setState replaces the state that getState reads back', () => {
+  const world = createStateEnvironment().createWorld()
+
+  world.setState('visit', { path: '/active', errors: ['boom'] })
+
+  expect(world.getState('visit')).toEqual({ path: '/active', errors: ['boom'] })
+})
+
+test('a state set in one scenario is not seen by the next', () => {
+  const testEnvironment = createStateEnvironment()
+  const first = testEnvironment.createWorld()
+  const second = testEnvironment.createWorld()
+
+  first.setState('visit', { path: '/active', errors: [] })
+
+  expect(second.getState('visit')).toEqual({ path: '/', errors: [] })
+})
+
+test('a state is typed by what its creator builds', () => {
+  const world = createStateEnvironment().createWorld()
+
+  expectTypeOf(world.getState).parameter(0).toEqualTypeOf<'visit'>()
+  expectTypeOf(world.getState('visit')).toEqualTypeOf<Visit>()
+  expectTypeOf(world.setState).parameters.toEqualTypeOf<[name: 'visit', state: Visit]>()
+})
+
+test('a state is neither an interactor to get nor a service to start', () => {
+  const world = createStateEnvironment().createWorld()
+
+  expectTypeOf(world.get).parameter(0).toEqualTypeOf<never>()
+  expectTypeOf(world.start).parameter(0).toEqualTypeOf<'server'>()
+})
+
+test('the hooks leave a state alone', async () => {
+  let built = 0
+  const testEnvironment = createTestEnvironment({
+    visit: {
+      type: 'state',
+      creator: (): Visit => {
+        built += 1
+        return { path: '/', errors: [] }
+      },
+    },
+  })
+  const world = testEnvironment.createWorld()
+
+  await testEnvironment.onBeforeAll()
+  await testEnvironment.onBefore(world)
+  await testEnvironment.onAfter(world)
+  await testEnvironment.onAfterAll()
+
+  expect(built).toBe(0)
+})
 
 const setupFakeInteractor = <T = number>({
   context,

@@ -332,7 +332,12 @@
       "Bash(perl -pi -e \"s/\\\\bpublishIdentity\\\\\\(/publishAtResolvedVersion\\(/g; s/^const publishIdentity = /const publishAtResolvedVersion = /\" dungarees/src/bin/publish-lib/domain/publish-operations.ts)",
       "Bash(echo \"EXIT: $?\")",
       "Bash(perl -pi -e \"s/^import \\\\{ catchError, concat, defer, from, merge, type Observable, of, toArray \\\\} from 'rxjs'$/import { catchError, concat, defer, forkJoin, from, type Observable, of, toArray } from 'rxjs'/\" dungarees/src/bin/publish-lib/domain/trust-operations.ts)",
-      "Bash(awk '/node -e/,/^  '\"'\"'$/' .githooks/pre-push)"
+      "Bash(awk '/node -e/,/^  '\"'\"'$/' .githooks/pre-push)",
+      "WebFetch(domain:labs.thisdot.co)",
+      "WebFetch(domain:notes.dsebastien.net)",
+      "WebFetch(domain:www.totaltypescript.com)",
+      "WebFetch(domain:www.thisdot.co)",
+      "WebFetch(domain:newsletter.pragmaticengineer.com)"
     ],
     "deny": [],
     "ask": []

@@ -10,7 +10,7 @@ import type { GetValueByKey, PartialBesides, RecordToEntries } from '@dungarees/
 export type RequiredApplicationConfig = PartialBesides<
   ApplicationTypeConfig,
   'behaviors' | 'exportState' | 'identity'
->
+> & { input?: undefined }
 
 // The hooks put the identity into a Qwik context, which is declared with one concrete shape, so an
 // application driven through them identifies itself that way.

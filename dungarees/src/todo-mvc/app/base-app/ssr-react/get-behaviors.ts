@@ -1,6 +1,7 @@
 import { createTodoMvcStore } from './app-store.ts'
 import type { TodoMvcBehaviors } from './behaviors.ts'
-import type { TodoMvcServices } from './services.ts'
+import type { TodoMvcIdentity, TodoMvcServices } from './services.ts'
+import type { TodoMvcInput } from './state.ts'
 
 import { createNavigation } from '@dungarees/navigation/feature.ts'
 import { createRouter } from '@dungarees/navigation/router.ts'
@@ -10,11 +11,11 @@ import { TODO_ROUTES, toTodoFilter } from '@dungarees/todo-mvc-todos-ui-react/ro
 
 import { map } from 'rxjs/operators'
 
-export const getBehaviors = ({
-  history,
-  idGenerator,
-  initialTodos,
-}: TodoMvcServices): TodoMvcBehaviors => {
+export const getBehaviors = (
+  { idGenerator }: TodoMvcServices,
+  _identity: TodoMvcIdentity,
+  { history, state }: TodoMvcInput,
+): TodoMvcBehaviors => {
   const store = createTodoMvcStore()
   const navigationService = createNavigationService(history)
   const navigation = createNavigation({
@@ -31,7 +32,7 @@ export const getBehaviors = ({
     idGenerator,
     filter$: navigation.route$.pipe(map(toTodoFilter)),
   })
-  todos.seed(initialTodos)
+  todos.seed(state.todos)
 
   return { todos, navigation }
 }

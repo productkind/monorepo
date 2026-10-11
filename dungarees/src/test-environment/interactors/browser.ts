@@ -1,4 +1,5 @@
-import { type Interactor } from '@bobcats-coding/skid/test/type.js'
+import type { Interactor } from '../test-environment.ts'
+
 import { chromium, firefox, webkit } from '@playwright/test'
 import type {
   APIRequestContext,
@@ -41,6 +42,14 @@ export const browserInteractor = (
   }
 
   let browser: Awaited<ReturnType<(typeof BROWSERS)[typeof config.browser]['launch']>>
+  let current: BrowserInteractorContext | undefined
+
+  const requireCurrent = (): BrowserInteractorContext => {
+    if (current === undefined) {
+      throw new Error('The browser has no context: startContext was not called')
+    }
+    return current
+  }
 
   return {
     start: async () => {
@@ -58,6 +67,7 @@ export const browserInteractor = (
       })
       await context.tracing.start({ screenshots: true, snapshots: true })
       const page = await context.newPage()
+      current = { page, context }
       const console$: Observable<string> = fromEventPattern((handler) =>
         page.on('console', (msg: ConsoleMessage) => {
           handler(`${msg.type()}: ${msg.text()}`)
@@ -73,11 +83,14 @@ export const browserInteractor = (
         ),
       }
     },
-    stopContext: async ({ page, context }) => {
+    stopContext: async () => {
+      const { page, context } = requireCurrent()
+      current = undefined
       await page.close()
       await context.close()
     },
-    onFailure: async ({ page, context }, testName) => {
+    onFailure: async (testName) => {
+      const { page, context } = requireCurrent()
       const image: Buffer = await page.screenshot()
       await context.tracing.stop({
         path: `${config.tracesDir}/${testName}-${

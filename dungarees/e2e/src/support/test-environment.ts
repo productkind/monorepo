@@ -1,4 +1,8 @@
+import { todoMvcServerRunner } from './todo-mvc-server.ts'
+import { createTodoMvcVisit } from './todo-mvc-visit.ts'
+
 import { createCucumberTestEnvironment } from '@dungarees/test-environment/cucumber-test-environment.ts'
+import { browserInteractor } from '@dungarees/test-environment/interactors/browser.ts'
 import { networkInteractor } from '@dungarees/test-environment/interactors/network.ts'
 import { nodeCommandLineInteractor } from '@dungarees/test-environment/interactors/node-command-line.ts'
 import { npmRegistryRunner } from '@dungarees/test-environment/runners/npm-registry.ts'
@@ -72,6 +76,32 @@ export const { Given, When, Then } = createCucumberTestEnvironment(
       },
       type: 'interactor',
       hook: 'before-all',
+    },
+    browser: {
+      creator: () =>
+        browserInteractor({
+          browser: 'chromium',
+          browserOptions: { headless: true },
+          tracesDir: '../reports/traces',
+          screenshotsDir: '../reports/screenshots',
+          isVideoEnabled: false,
+        }),
+      type: 'interactor',
+      hook: 'before-all',
+    },
+    todoMvcDevelopmentServer: {
+      creator: () => todoMvcServerRunner({ mode: 'development' }),
+      type: 'runner',
+      hook: 'before-all',
+    },
+    todoMvcProductionServer: {
+      creator: () => todoMvcServerRunner({ mode: 'production' }),
+      type: 'runner',
+      hook: 'before-all',
+    },
+    todoMvcVisit: {
+      creator: createTodoMvcVisit,
+      type: 'state',
     },
   },
   {

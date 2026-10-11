@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@dungarees/todo-mvc-fake-services-ssr-react": "*",
+    "@testing-library/react": "^16.3.0",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
     "react": "^19.1.0",

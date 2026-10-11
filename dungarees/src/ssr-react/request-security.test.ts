@@ -3,7 +3,9 @@ import { isSecureRequest } from './request-security.ts'
 import { expect, test } from 'vitest'
 
 test('a request that arrived over tls is secure', () => {
-  expect(isSecureRequest({ isEncrypted: true, trustProxy: false })).toBe(true)
+  expect(isSecureRequest({ isEncrypted: true, trustProxy: false, forwardedProto: undefined })).toBe(
+    true,
+  )
 })
 
 // Anyone can send the header, so believing it without being told there is a proxy in front would
@@ -33,6 +35,17 @@ test('the first hop of a forwarded chain is the one that counts', () => {
   ).toBe(false)
 })
 
+test('the first hop counts when the forwarded chain arrives as separate values', () => {
+  expect(
+    isSecureRequest({ isEncrypted: false, trustProxy: true, forwardedProto: ['https', 'http'] }),
+  ).toBe(true)
+  expect(
+    isSecureRequest({ isEncrypted: false, trustProxy: true, forwardedProto: ['http', 'https'] }),
+  ).toBe(false)
+})
+
 test('a trusted proxy that reported nothing leaves the request insecure', () => {
-  expect(isSecureRequest({ isEncrypted: false, trustProxy: true })).toBe(false)
+  expect(isSecureRequest({ isEncrypted: false, trustProxy: true, forwardedProto: undefined })).toBe(
+    false,
+  )
 })

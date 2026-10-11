@@ -1,54 +1,84 @@
-import { type TodoMvcBehaviors, toTodoMvcState } from './behaviors.ts'
 import type { TodoMvcDelivery } from './get-delivery.tsx'
-import type { TodoMvcServices, TodoMvcTarget } from './services.ts'
+import type { TodoMvcBrowserServices, TodoMvcServerServices, TodoMvcServices } from './services.ts'
+import { readTodoMvcState, type TodoMvcInput, type TodoMvcState } from './state.ts'
 
 import { hydrateApp } from '@dungarees/ssr-react/hydrate.ts'
 import { renderAppToHtml } from '@dungarees/ssr-react/render.ts'
+import { resolveTodoRoute } from '@dungarees/todo-mvc-todos-ui-react/routes.ts'
 
 import { createElement } from 'react'
 
-export type TodoMvcOutput = { html: string; status: number } | undefined
+export type TodoMvcOutput = Promise<void> | undefined
 
 type MainArgs = {
   services: TodoMvcServices
-  behaviors: TodoMvcBehaviors
-  delivery: TodoMvcDelivery
+  createBehaviorsAndDelivery: (input: TodoMvcInput) => {
+    delivery: TodoMvcDelivery
+    exportState: () => TodoMvcState
+  }
 }
+
+const ROOT_ELEMENT_ID = 'root'
+
+const NOT_FOUND_HTML = '<!doctype html><title>Not found</title><p>No such page.'
 
 // The identity picks the main, and the services are built for that same identity; a mismatch is a
 // wiring mistake rather than a case to handle.
-const requireServerTarget = (target: TodoMvcTarget): Extract<TodoMvcTarget, { kind: 'server' }> => {
-  if (target.kind !== 'server') {
-    throw new Error(`The server main was run with a ${target.kind} render target`)
+const requireServerServices = (services: TodoMvcServices): TodoMvcServerServices => {
+  if (services.kind !== 'server') {
+    throw new Error(`The server main was run with ${services.kind} services`)
   }
-  return target
+  return services
 }
 
-const requireBrowserTarget = (
-  target: TodoMvcTarget,
-): Extract<TodoMvcTarget, { kind: 'browser' }> => {
-  if (target.kind !== 'browser') {
-    throw new Error(`The browser main was run with a ${target.kind} render target`)
+const requireBrowserServices = (services: TodoMvcServices): TodoMvcBrowserServices => {
+  if (services.kind !== 'browser') {
+    throw new Error(`The browser main was run with ${services.kind} services`)
   }
-  return target
+  return services
 }
 
-export const serverMain = ({ services, behaviors, delivery }: MainArgs): TodoMvcOutput => {
-  const { template, nonce } = requireServerTarget(services.target)
+export const serverMain = async ({
+  services,
+  createBehaviorsAndDelivery,
+}: MainArgs): Promise<void> => {
+  const { serve, createHistory, readTodos } = requireServerServices(services)
 
-  return {
-    status: 200,
-    html: renderAppToHtml({
-      element: createElement(delivery.Root),
-      template,
-      state: toTodoMvcState(behaviors),
-      nonce,
-    }),
-  }
+  await serve({
+    render: ({ url, nonce, template }) => {
+      if (resolveTodoRoute(url) === undefined) {
+        return { status: 404, html: NOT_FOUND_HTML }
+      }
+
+      const { delivery, exportState } = createBehaviorsAndDelivery({
+        history: createHistory(url),
+        state: { todos: readTodos() },
+      })
+
+      return {
+        status: 200,
+        html: renderAppToHtml({
+          element: createElement(delivery.Root),
+          template,
+          state: exportState(),
+          nonce,
+        }),
+      }
+    },
+  })
 }
 
-export const browserMain = ({ services, delivery }: MainArgs): TodoMvcOutput => {
-  const { container } = requireBrowserTarget(services.target)
+export const browserMain = ({ services, createBehaviorsAndDelivery }: MainArgs): undefined => {
+  const { document, createHistory } = requireBrowserServices(services)
+  const container = document.getElementById(ROOT_ELEMENT_ID)
+  if (container === null) {
+    throw new Error(`No element with id "${ROOT_ELEMENT_ID}" to hydrate into`)
+  }
+
+  const { delivery } = createBehaviorsAndDelivery({
+    history: createHistory(),
+    state: readTodoMvcState({ document }),
+  })
   hydrateApp({ element: createElement(delivery.Root), container })
 
   return undefined

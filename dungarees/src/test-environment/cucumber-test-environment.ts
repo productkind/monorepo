@@ -1,3 +1,4 @@
+import { type StepParameters, toCucumberStep } from './step.ts'
 import { createTestEnvironment } from './test-environment.ts'
 import type { ServiceConfig } from './test-environment.ts'
 import type { TestEnvironmentWorld } from './world.ts'
@@ -17,10 +18,18 @@ import {
 } from '@cucumber/cucumber'
 import { type ITestCaseHookParameter } from '@cucumber/cucumber'
 
+type DefineStep<SERVICES extends Record<string, ServiceConfig>> = <EXPRESSION extends string>(
+  expression: EXPRESSION,
+  callback: (
+    world: TestEnvironmentWorld<SERVICES>,
+    ...parameters: StepParameters<EXPRESSION>
+  ) => Promise<void>,
+) => void
+
 type CucumberTestEnvironment<SERVICES extends Record<string, ServiceConfig>> = {
-  Given: (step: string, callback: (world: TestEnvironmentWorld<SERVICES>) => Promise<void>) => void
-  When: (step: string, callback: (world: TestEnvironmentWorld<SERVICES>) => Promise<void>) => void
-  Then: (step: string, callback: (world: TestEnvironmentWorld<SERVICES>) => Promise<void>) => void
+  Given: DefineStep<SERVICES>
+  When: DefineStep<SERVICES>
+  Then: DefineStep<SERVICES>
 }
 
 export const createCucumberTestEnvironment = <SERVICES extends Record<string, ServiceConfig>>(
@@ -84,17 +93,14 @@ export const createCucumberTestEnvironment = <SERVICES extends Record<string, Se
   })
 
   return {
-    Given: (step, callback) =>
-      CucumberGiven(step, async function (this: TestEnvironmentWorld) {
-        await callback(this.testEnvironmentWorld)
-      }),
-    When: (step, callback) =>
-      CucumberWhen(step, async function (this: TestEnvironmentWorld) {
-        await callback(this.testEnvironmentWorld)
-      }),
-    Then: (step, callback) =>
-      CucumberThen(step, async function (this: TestEnvironmentWorld) {
-        await callback(this.testEnvironmentWorld)
-      }),
+    Given: (expression, callback) => {
+      CucumberGiven(expression, toCucumberStep({ expression, callback }))
+    },
+    When: (expression, callback) => {
+      CucumberWhen(expression, toCucumberStep({ expression, callback }))
+    },
+    Then: (expression, callback) => {
+      CucumberThen(expression, toCucumberStep({ expression, callback }))
+    },
   }
 }
