@@ -3,7 +3,8 @@ Subject: Our September update, a little late
 Preheader: Our beginner Lovable course is free until 18 October, plus four updated courses.
 Sender name: Little Parrot
 Audience: everyone with a Little Parrot account (paid and free). Merge tags are EmailOctopus syntax.
-Feedback: both buttons go to the Tally form https://tally.so/r/PdMkP0, whose hidden fields read the UTMs; utm_content is yes or no (issue #456).
+Feedback: both buttons go to the Tally form https://tally.so/r/PdMkP0, whose hidden fields read the UTMs; utm_content is yes or no, utm_term carries the user ID (issue #456).
+UserID: EmailOctopus custom field holding the Supabase user ID (profiles.id), filled from the Supabase export before each send.
 -->
 <!doctype html>
 <html
@@ -661,7 +662,7 @@ Feedback: both buttons go to the Tally form https://tally.so/r/PdMkP0, whose hid
                               style="background-color: #fffffe; mso-padding-alt: 12px 20px"
                             >
                               <a
-                                href="https://tally.so/r/PdMkP0?utm_source=email&amp;utm_medium=monthly&amp;utm_campaign=sep26&amp;utm_content=yes"
+                                href="https://tally.so/r/PdMkP0?utm_source=email&amp;utm_medium=monthly&amp;utm_campaign=sep26&amp;utm_content=yes&amp;utm_term={{UserID}}"
                                 style="
                                   display: block;
                                   padding: 12px 20px;
@@ -693,7 +694,7 @@ Feedback: both buttons go to the Tally form https://tally.so/r/PdMkP0, whose hid
                               style="background-color: #fffffe; mso-padding-alt: 12px 20px"
                             >
                               <a
-                                href="https://tally.so/r/PdMkP0?utm_source=email&amp;utm_medium=monthly&amp;utm_campaign=sep26&amp;utm_content=no"
+                                href="https://tally.so/r/PdMkP0?utm_source=email&amp;utm_medium=monthly&amp;utm_campaign=sep26&amp;utm_content=no&amp;utm_term={{UserID}}"
                                 style="
                                   display: block;
                                   padding: 12px 20px;
