@@ -1,4 +1,9 @@
-import { type StepParameters, toCucumberStep } from './step.ts'
+import {
+  type ParameterTypeDefinition,
+  type ParameterTypeValues,
+  type StepParameters,
+  toCucumberStep,
+} from './step.ts'
 import { createTestEnvironment } from './test-environment.ts'
 import type { ServiceConfig } from './test-environment.ts'
 import type { TestEnvironmentWorld } from './world.ts'
@@ -11,6 +16,7 @@ import {
   Given as CucumberGiven,
   Then as CucumberThen,
   When as CucumberWhen,
+  defineParameterType,
   setDefaultTimeout,
   setWorldConstructor,
   Status,
@@ -18,27 +24,42 @@ import {
 } from '@cucumber/cucumber'
 import { type ITestCaseHookParameter } from '@cucumber/cucumber'
 
-type DefineStep<SERVICES extends Record<string, ServiceConfig>> = <EXPRESSION extends string>(
+type ParameterTypeDefinitions = Record<string, ParameterTypeDefinition<unknown>>
+
+type DefineStep<
+  SERVICES extends Record<string, ServiceConfig>,
+  PARAMETER_TYPES extends ParameterTypeDefinitions,
+> = <EXPRESSION extends string>(
   expression: EXPRESSION,
   callback: (
     world: TestEnvironmentWorld<SERVICES>,
-    ...parameters: StepParameters<EXPRESSION>
+    ...parameters: StepParameters<EXPRESSION, ParameterTypeValues<PARAMETER_TYPES>>
   ) => Promise<void>,
 ) => void
 
-type CucumberTestEnvironment<SERVICES extends Record<string, ServiceConfig>> = {
-  Given: DefineStep<SERVICES>
-  When: DefineStep<SERVICES>
-  Then: DefineStep<SERVICES>
+type CucumberTestEnvironment<
+  SERVICES extends Record<string, ServiceConfig>,
+  PARAMETER_TYPES extends ParameterTypeDefinitions,
+> = {
+  Given: DefineStep<SERVICES, PARAMETER_TYPES>
+  When: DefineStep<SERVICES, PARAMETER_TYPES>
+  Then: DefineStep<SERVICES, PARAMETER_TYPES>
 }
 
-export const createCucumberTestEnvironment = <SERVICES extends Record<string, ServiceConfig>>(
+export const createCucumberTestEnvironment = <
+  SERVICES extends Record<string, ServiceConfig>,
+  PARAMETER_TYPES extends ParameterTypeDefinitions = Record<never, never>,
+>(
   services: SERVICES,
   options: {
     timeout?: number
+    parameterTypes?: PARAMETER_TYPES
   } = {},
-): CucumberTestEnvironment<SERVICES> => {
+): CucumberTestEnvironment<SERVICES, PARAMETER_TYPES> => {
   setDefaultTimeout(options.timeout ?? 60 * 1000)
+  Object.entries(options.parameterTypes ?? {}).forEach(([name, { regexp, transformer }]) => {
+    defineParameterType({ name, regexp, transformer })
+  })
   const testEnvironment = createTestEnvironment(services)
 
   class TestEnvironmentWorld extends World {

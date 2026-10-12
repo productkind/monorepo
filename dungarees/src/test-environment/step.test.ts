@@ -1,4 +1,9 @@
-import { type StepParameters, toCucumberStep } from './step.ts'
+import {
+  type ParameterTypeDefinition,
+  type ParameterTypeValues,
+  type StepParameters,
+  toCucumberStep,
+} from './step.ts'
 
 import { expect, expectTypeOf, test } from 'vitest'
 
@@ -22,8 +27,23 @@ test('the anonymous parameter arrives as a string', () => {
   expectTypeOf<StepParameters<'the {} button'>>().toEqualTypeOf<[string]>()
 })
 
-test('a custom parameter type arrives as unknown', () => {
+test('an unregistered parameter type arrives as unknown', () => {
   expectTypeOf<StepParameters<'a {colour} todo'>>().toEqualTypeOf<[unknown]>()
+})
+
+test('a registered parameter type arrives as its registered value', () => {
+  expectTypeOf<
+    StepParameters<'a {colour} todo on the {word} server', { colour: 'red' | 'blue' }>
+  >().toEqualTypeOf<['red' | 'blue', string]>()
+})
+
+test('a parameter type registers the value its transformer returns', () => {
+  expectTypeOf<
+    ParameterTypeValues<{
+      colour: ParameterTypeDefinition<'red' | 'blue'>
+      count: ParameterTypeDefinition<number>
+    }>
+  >().toEqualTypeOf<{ colour: 'red' | 'blue'; count: number }>()
 })
 
 test('a step is handed the world of its scenario and the parameters of its text', async () => {

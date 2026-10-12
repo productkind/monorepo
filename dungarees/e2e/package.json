@@ -1,7 +1,9 @@
 {
   "name": "@skid-lib/e2e",
   "scripts": {
-    "test": "NODE_OPTIONS=\"--experimental-strip-types\" cucumber-js"
+    "test": "npm run test:publish-lib && npm run test:todo-mvc",
+    "test:publish-lib": "NODE_OPTIONS=\"--experimental-strip-types\" cucumber-js --profile publishLib",
+    "test:todo-mvc": "NODE_OPTIONS=\"--experimental-strip-types\" cucumber-js --profile todoMvc"
   },
   "engines": {
     "node": ">=20.0.0"

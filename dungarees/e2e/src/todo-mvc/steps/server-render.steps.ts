@@ -1,5 +1,5 @@
 import { Then, When } from '../support/test-environment.ts'
-import { TODO_MVC_MODES, type TodoMvcMode, todoMvcOrigin } from '../support/todo-mvc-server.ts'
+import { todoMvcOrigin } from '../support/todo-mvc-server.ts'
 import type { TodoMvcVisit } from '../support/todo-mvc-visit.ts'
 
 import { expect, type Page } from '@playwright/test'
@@ -7,36 +7,33 @@ import { expect, type Page } from '@playwright/test'
 const SEEDED_COMPLETED_TITLES = ['Render this list on the server', 'Hydrate it in the browser']
 const SEEDED_ACTIVE_TITLES = ['Navigate the filters without a reload']
 
-const isTodoMvcMode = (mode: string): mode is TodoMvcMode =>
-  TODO_MVC_MODES.some((known) => known === mode)
-
-When('the visitor opens {string} on the {word} server', async (world, path, mode) => {
-  if (!isTodoMvcMode(mode)) {
-    throw new Error(`There is no ${mode} server, only ${TODO_MVC_MODES.join(' and ')}`)
-  }
-  const { page } = world.get('browser')
-  const recordError = (error: string): void => {
-    const visit = world.getState('todoMvcVisit')
-    world.setState('todoMvcVisit', { ...visit, errors: [...visit.errors, error] })
-  }
-  page.on('console', (message) => {
-    if (message.type() === 'error') {
-      recordError(message.text())
+When(
+  'the visitor opens {string} on the {serverEnvironment} server',
+  async (world, path, environment) => {
+    const { page } = world.get('browser')
+    const recordError = (error: string): void => {
+      const visit = world.getState('todoMvcVisit')
+      world.setState('todoMvcVisit', { ...visit, errors: [...visit.errors, error] })
     }
-  })
-  page.on('pageerror', (error) => {
-    recordError(error.message)
-  })
+    page.on('console', (message) => {
+      if (message.type() === 'error') {
+        recordError(message.text())
+      }
+    })
+    page.on('pageerror', (error) => {
+      recordError(error.message)
+    })
 
-  const response = await page.goto(`${todoMvcOrigin(mode)}${path}`)
-  if (response === null) {
-    throw new Error(`Opening ${path} got no response`)
-  }
-  world.setState('todoMvcVisit', {
-    ...world.getState('todoMvcVisit'),
-    response: { status: response.status(), html: await response.text() },
-  })
-})
+    const response = await page.goto(`${todoMvcOrigin(environment)}${path}`)
+    if (response === null) {
+      throw new Error(`Opening ${path} got no response`)
+    }
+    world.setState('todoMvcVisit', {
+      ...world.getState('todoMvcVisit'),
+      response: { status: response.status(), html: await response.text() },
+    })
+  },
+)
 
 const responseOf = ({ response }: TodoMvcVisit): NonNullable<TodoMvcVisit['response']> => {
   if (response === undefined) {
