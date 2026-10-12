@@ -42,7 +42,8 @@ Body design can't save an email no one opens. Three things drive the open, none 
 - **Always set it.** If you don't, clients pull the first text they find, usually "View in browser", the unsubscribe line, or an image's alt text. Add a hidden preheader block at the very top of the body.
 - **Core message in the first ~40 characters; keep the whole thing under ~90.** Outlook shows as little as ~35.
 - **Complement the subject, don't repeat it.** Expand it, add warmth, or say what the reader gets.
-- **Stop body text leaking into the preview** by following the preheader with a hidden spacer (e.g. a run of `&nbsp;&zwnj;`).
+- **Stop body text leaking into the preview** by following the preheader with a hidden spacer of about 100 `&nbsp;&zwnj;` pairs. Desktop Gmail shows well over 100 characters of preview, so a short run lets the body's first lines through after the gap.
+- **Every entity in the spacer needs its closing semicolon.** `&zwnj:` with a colon isn't recognised, so it shows as literal text in the preview. Two September 2026 emails went out with it.
 
 ### Sender name
 
