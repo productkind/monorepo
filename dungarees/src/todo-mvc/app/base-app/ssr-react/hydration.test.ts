@@ -22,7 +22,7 @@ const TODOS: Todo[] = [
 ]
 
 const renderOnServer = async (path: string): Promise<string> => {
-  const { services, render } = createFakeTodoMvcServerServices({ readTodos: () => TODOS })
+  const { services, render } = createFakeTodoMvcServerServices({ listTodos: async () => TODOS })
   await baseApplication.run(
     { environment: 'test', runtime: 'server' },
     { getServices: () => services },
@@ -53,11 +53,11 @@ afterEach(() => {
 const hydrateServerRenderOf = async (path: string): Promise<History> => {
   document.body.innerHTML = bodyOf(await renderOnServer(path))
   const { services, history } = createFakeTodoMvcBrowserServices({ path, document })
-  act(() => {
-    baseApplication.run(
+  await act(async () => {
+    await baseApplication.run(
       { environment: 'test', runtime: 'browser' },
       { getServices: () => services },
-    )
+    ).output
   })
   return history
 }
@@ -81,6 +81,18 @@ test('the filter the server rendered is the one the browser starts on', async ()
   await hydrateServerRenderOf('/active')
 
   expect(titles()).toEqual(['Write tests'])
+})
+
+test('a document without the todos the server listed fails to start rather than showing an empty list', async () => {
+  document.body.innerHTML = '<div id="root"></div>'
+  const { services } = createFakeTodoMvcBrowserServices({ document })
+
+  await expect(
+    baseApplication.run(
+      { environment: 'test', runtime: 'browser' },
+      { getServices: () => services },
+    ).output,
+  ).rejects.toThrow('There is no todos endpoint for the browser to fetch from yet')
 })
 
 test('a hydrated page is interactive: toggling changes the list', async () => {

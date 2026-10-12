@@ -12,6 +12,9 @@ export const application = createApplication(
         value: () => ({
           kind: 'browser',
           idGenerator: createIdGenerator({ generateUuid: () => crypto.randomUUID() }),
+          listTodos: async () => {
+            throw new Error('There is no todos endpoint for the browser to fetch from yet')
+          },
           createHistory: () => createBrowserHistory(),
           document,
         }),

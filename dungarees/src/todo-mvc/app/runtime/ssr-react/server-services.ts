@@ -1,4 +1,4 @@
-import { readTodos } from './todo-repository.ts'
+import { listTodos } from './todo-repository.ts'
 
 import { createIdGenerator } from '@dungarees/id-generator/service.ts'
 import type { SsrNodeServer } from '@dungarees/ssr-react/node-http.ts'
@@ -29,7 +29,7 @@ export const getServerServices = ({
 }: GetServerServicesArgs): TodoMvcServerServices => ({
   kind: 'server',
   idGenerator: createIdGenerator({ generateUuid: () => crypto.randomUUID() }),
-  readTodos,
+  listTodos,
   createHistory: (url) => createMemoryHistory({ initialEntries: [url] }),
   serve: async ({ render }) => {
     const { listener, close } = await createSsrServer({

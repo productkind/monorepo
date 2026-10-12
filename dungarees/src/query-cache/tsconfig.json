@@ -1,0 +1,11 @@
+{
+  "extends": "@dungarees/core/tsconfig.base.json",
+  "compilerOptions": {
+    "paths": {
+      "@dungarees/query-cache/*": ["./*"]
+    },
+    "noEmit": true,
+    "rootDir": ".",
+    "module": "NodeNext"
+  }
+}

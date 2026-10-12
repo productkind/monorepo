@@ -8,7 +8,7 @@ import { createMemoryHistory, type History } from 'history'
 export type FakeTodoMvcServerServices = {
   kind: 'server'
   idGenerator: IdGenerator
-  readTodos: () => Todo[]
+  listTodos: () => Promise<Todo[]>
   createHistory: (url: string) => History
   serve: (args: { render: SsrTemplateRender }) => Promise<void>
 }
@@ -16,6 +16,7 @@ export type FakeTodoMvcServerServices = {
 export type FakeTodoMvcBrowserServices = {
   kind: 'browser'
   idGenerator: IdGenerator
+  listTodos: () => Promise<Todo[]>
   createHistory: () => History
   document: Document
 }
@@ -26,9 +27,9 @@ export type FakeTodoMvcServer = {
 }
 
 export const createFakeTodoMvcServerServices = ({
-  readTodos = () => [],
+  listTodos = async () => [],
 }: {
-  readTodos?: () => Todo[]
+  listTodos?: () => Promise<Todo[]>
 } = {}): FakeTodoMvcServer => {
   let served: SsrTemplateRender | undefined
 
@@ -36,7 +37,7 @@ export const createFakeTodoMvcServerServices = ({
     services: {
       kind: 'server',
       idGenerator: createIdGenerator(createFakeIdGeneratorBackend().backend),
-      readTodos,
+      listTodos,
       createHistory: (url) => createMemoryHistory({ initialEntries: [url] }),
       serve: async ({ render }) => {
         served = render
@@ -69,6 +70,9 @@ export const createFakeTodoMvcBrowserServices = ({
     services: {
       kind: 'browser',
       idGenerator: createIdGenerator(createFakeIdGeneratorBackend().backend),
+      listTodos: async () => {
+        throw new Error('There is no todos endpoint for the browser to fetch from yet')
+      },
       createHistory: () => history,
       document,
     },

@@ -16,8 +16,10 @@ const TODOS: Todo[] = [
   { id: '2', title: 'Read the spec', completed: true },
 ]
 
-const startServer = async ({ readTodos = () => TODOS }: { readTodos?: () => Todo[] } = {}) => {
-  const { services, render } = createFakeTodoMvcServerServices({ readTodos })
+const startServer = async ({
+  listTodos = async () => TODOS,
+}: { listTodos?: () => Promise<Todo[]> } = {}) => {
+  const { services, render } = createFakeTodoMvcServerServices({ listTodos })
   await baseApplication.run(
     { environment: 'test', runtime: 'server' },
     { getServices: () => services },
@@ -63,7 +65,7 @@ test('the nonce the request carried is the one written into the document', async
 })
 
 test('an empty list still renders a usable page', async () => {
-  const { html } = await (await startServer({ readTodos: () => [] }))('/')
+  const { html } = await (await startServer({ listTodos: async () => [] }))('/')
 
   expect(html).toContain('What needs to be done?')
   expect(html).not.toContain('todo-count')
@@ -79,7 +81,7 @@ test('a query string does not stop a path being recognised', async () => {
 
 test('every request renders the todos as they are when it arrives', async () => {
   let todos: Todo[] = []
-  const render = await startServer({ readTodos: () => todos })
+  const render = await startServer({ listTodos: async () => todos })
 
   const before = await render('/')
   todos = TODOS
@@ -90,7 +92,7 @@ test('every request renders the todos as they are when it arrives', async () => 
 })
 
 const createBehaviorsAndDeliveryOnServer = () => {
-  const { services } = createFakeTodoMvcServerServices({ readTodos: () => [] })
+  const { services } = createFakeTodoMvcServerServices({ listTodos: async () => [] })
   return baseApplication.run(
     { environment: 'test', runtime: 'server' },
     { getServices: () => services, main: async () => {} },

@@ -7,7 +7,7 @@ import type { History } from 'history'
 export type TodoMvcServerServices = {
   kind: 'server'
   idGenerator: IdGenerator
-  readTodos: () => Todo[]
+  listTodos: () => Promise<Todo[]>
   createHistory: (url: string) => History
   serve: (args: { render: SsrTemplateRender }) => Promise<void>
 }
@@ -15,6 +15,7 @@ export type TodoMvcServerServices = {
 export type TodoMvcBrowserServices = {
   kind: 'browser'
   idGenerator: IdGenerator
+  listTodos: () => Promise<Todo[]>
   createHistory: () => History
   document: Document
 }

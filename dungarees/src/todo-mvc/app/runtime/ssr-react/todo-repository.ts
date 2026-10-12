@@ -9,4 +9,4 @@ const todos: Todo[] = [
   { id: 'seed-3', title: 'Navigate the filters without a reload', completed: false },
 ]
 
-export const readTodos = (): Todo[] => [...todos]
+export const listTodos = async (): Promise<Todo[]> => [...todos]

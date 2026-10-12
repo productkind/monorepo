@@ -1,20 +1,22 @@
 import type { TodoMvcDelivery } from './get-delivery.tsx'
 import type { TodoMvcBrowserServices, TodoMvcServerServices, TodoMvcServices } from './services.ts'
-import { readTodoMvcState, type TodoMvcInput, type TodoMvcState } from './state.ts'
+import type { TodoMvcInput } from './state.ts'
 
+import { createQueryCache } from '@dungarees/query-cache/service.ts'
 import { hydrateApp } from '@dungarees/ssr-react/hydrate.ts'
 import { renderAppToHtml } from '@dungarees/ssr-react/render.ts'
+import { readSerialisedState } from '@dungarees/ssr-react/serialised-state.ts'
+import { createTodosService } from '@dungarees/todo-mvc-todos-domain/service.ts'
 import { resolveTodoRoute } from '@dungarees/todo-mvc-todos-ui-react/routes.ts'
 
 import { createElement } from 'react'
 
-export type TodoMvcOutput = Promise<void> | undefined
+export type TodoMvcOutput = Promise<void>
 
 type MainArgs = {
   services: TodoMvcServices
   createBehaviorsAndDelivery: (input: TodoMvcInput) => {
     delivery: TodoMvcDelivery
-    exportState: () => TodoMvcState
   }
 }
 
@@ -42,17 +44,19 @@ export const serverMain = async ({
   services,
   createBehaviorsAndDelivery,
 }: MainArgs): Promise<void> => {
-  const { serve, createHistory, readTodos } = requireServerServices(services)
+  const { serve, createHistory, listTodos } = requireServerServices(services)
 
   await serve({
-    render: ({ url, nonce, template }) => {
+    render: async ({ url, nonce, template }) => {
       if (resolveTodoRoute(url) === undefined) {
         return { status: 404, html: NOT_FOUND_HTML }
       }
 
-      const { delivery, exportState } = createBehaviorsAndDelivery({
+      const queryCache = createQueryCache()
+      const todos = await createTodosService({ queryCache, listTodos }).list()
+      const { delivery } = createBehaviorsAndDelivery({
         history: createHistory(url),
-        state: { todos: readTodos() },
+        state: { todos },
       })
 
       return {
@@ -60,7 +64,7 @@ export const serverMain = async ({
         html: renderAppToHtml({
           element: createElement(delivery.Root),
           template,
-          state: exportState(),
+          state: queryCache.dehydrate(),
           nonce,
         }),
       }
@@ -68,18 +72,24 @@ export const serverMain = async ({
   })
 }
 
-export const browserMain = ({ services, createBehaviorsAndDelivery }: MainArgs): undefined => {
-  const { document, createHistory } = requireBrowserServices(services)
+export const browserMain = async ({
+  services,
+  createBehaviorsAndDelivery,
+}: MainArgs): Promise<void> => {
+  const { document, createHistory, listTodos } = requireBrowserServices(services)
   const container = document.getElementById(ROOT_ELEMENT_ID)
   if (container === null) {
     throw new Error(`No element with id "${ROOT_ELEMENT_ID}" to hydrate into`)
   }
 
+  // The browser has no endpoint to fetch the todos from yet, so the list the server left in the
+  // document must never count as stale.
+  const queryCache = createQueryCache({ staleTime: Infinity })
+  queryCache.hydrate(readSerialisedState({ document }))
+  const todos = await createTodosService({ queryCache, listTodos }).list()
   const { delivery } = createBehaviorsAndDelivery({
     history: createHistory(),
-    state: readTodoMvcState({ document }),
+    state: { todos },
   })
   hydrateApp({ element: createElement(delivery.Root), container })
-
-  return undefined
 }

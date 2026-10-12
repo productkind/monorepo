@@ -1,0 +1,25 @@
+{
+  "name": "@dungarees/query-cache",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "type-check": "tsc --noEmit"
+  },
+  "type": "module",
+  "dependencies": {
+    "@tanstack/query-core": "^5.104.2",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vitest": "^3.0.2"
+  },
+  "author": "info@productkind.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/productkind/monorepo.git",
+    "directory": "dungarees/src/query-cache"
+  },
+  "license": "MIT"
+}
