@@ -1,0 +1,123 @@
+#!/usr/bin/env python3
+"""Search giphy for one section, keep what fits the frame, and montage it for judging.
+
+  scripts/harvest.py --video pm-technical-fluency-validation-00 --section 10 \
+      --terms "woman raising hand" "businesswoman asking question" "woman hand up meeting"
+
+Candidates are ordered by how close one play is to filling the slot, so the top rows need the
+least fixing. Nothing is chosen here: read the montage and pick with pick.py.
+"""
+
+import argparse
+
+# Below this much frame-to-frame change, a gif reads as a still image on screen.
+STILL = 0.02
+
+from common import candidates_dir, fetch, gif_seconds, motion, search, slots, stack, strip
+
+
+def harvest(video, section, terms, skip, limit, root=None, slot=None, provider='auto'):
+    # An explicit slot lets a video be sourced before narrate has run, from a word-count estimate.
+    # Re-check the fits with verify.py once the real timeline exists.
+    slot = slot if slot else slots(video, root)[section]
+    cache = candidates_dir(video)
+    seen, rows = set(skip), []
+
+    for term in terms:
+        for gif in search(term, limit=limit, provider=provider):
+            gif_id = gif['id']
+            if gif_id in seen:
+                continue
+            seen.add(gif_id)
+
+            original = gif['images']['original']
+            width, height = int(original['width']), int(original['height'])
+            # Squarish and big enough to hold the frame width; the published videos look like this.
+            if not 0.7 < width / height < 1.5 or width < 380:
+                continue
+
+            path = cache / f'{gif_id}.gif'
+            if not path.exists():
+                try:
+                    # fixed_height keeps every frame, so its delays match the original's. The
+                    # _downsampled variants drop frames and would report the wrong duration.
+                    variant = gif['images'].get('fixed_height', original)
+                    path.write_bytes(fetch(variant['url']))
+                except Exception as error:  # a single dead candidate must not end the harvest
+                    print(f'  skipped {gif_id}: {error}')
+                    continue
+
+            seconds, frames = gif_seconds(path)
+            if not seconds:
+                continue
+            rows.append({
+                'id': gif_id,
+                'term': term,
+                'title': (gif.get('title') or '')[:38],
+                'seconds': seconds,
+                'frames': frames,
+                'size': f'{width}x{height}',
+                'repeats': slot / seconds,
+            })
+
+    rows.sort(key=lambda row: abs(row['repeats'] - 1))
+    return slot, rows
+
+
+def keep_moving(rows, video, show):
+    """Take candidates off the sorted list until `show` of them actually move.
+
+    A still photo with a jittering overlay can carry 16 frames and three seconds and still read as
+    frozen on screen, and no other measurement notices. Measuring costs a full coalesce per gif, so
+    it happens here, on the few candidates that could be chosen, rather than on every search hit.
+    """
+    cache = candidates_dir(video)
+    kept = []
+    for row in rows:
+        if len(kept) == show:
+            break
+        row['motion'] = motion(cache / f'{row["id"]}.gif')
+        if row['motion'] < STILL:
+            print(f'  dropped {row["id"]}: a still image (motion {row["motion"]:.3f})')
+            continue
+        kept.append(row)
+    return kept
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--video', required=True)
+    parser.add_argument('--section', type=int, required=True)
+    parser.add_argument('--terms', nargs='+', required=True)
+    parser.add_argument('--skip', default='', help='comma-separated gif ids already rejected')
+    parser.add_argument('--provider', default='auto', choices=['auto', 'giphy', 'klipy'],
+                        help='force one catalogue: giphy is deeper in footage, klipy in flat '
+                             'vector illustration')
+    parser.add_argument('--show', type=int, default=7, help='how many to montage')
+    parser.add_argument('--limit', type=int, default=25, help='results per search term')
+    parser.add_argument('--slot', type=float, default=None,
+                        help='seconds on screen, when timeline.json does not exist yet')
+    parser.add_argument('--root', default=None)
+    args = parser.parse_args()
+
+    skip = [value for value in args.skip.split(',') if value]
+    slot, rows = harvest(
+        args.video, args.section, args.terms, skip, args.limit, args.root, args.slot,
+        args.provider
+    )
+    print(f'section {args.section:02d}  slot {slot:.1f}s  {len(rows)} candidates after filtering')
+    shown = keep_moving(rows, args.video, args.show)
+    for index, row in enumerate(shown):
+        print(
+            f'  {index} {row["id"]:20} {row["seconds"]:5.2f}s {row["repeats"]:4.1f}x '
+            f'{row["size"]:>9} m{row["motion"]:.2f}  {row["term"][:22]:22} {row["title"]}'
+        )
+
+    cache = candidates_dir(args.video)
+    strips = [strip(cache / f'{row["id"]}.gif', cache / f'{row["id"]}-strip.png') for row in shown]
+    montage = stack(strips, cache / f'section-{args.section:02d}-candidates.png')
+    print(f'montage (rows top to bottom = the list above): {montage}')
+
+
+if __name__ == '__main__':
+    main()
