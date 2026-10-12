@@ -31,7 +31,8 @@ Body design can't save an email no one opens. Three things drive the open, none 
 ### Subject line
 
 - **30 to 50 characters, around 6 to 7 words.** Gmail's mobile app shows only ~30 characters, so put the point in the first ~30 and let the rest be a bonus.
-- **Clarity over curiosity.** This audience is busy and wary of being tricked. Say what's inside plainly. No curiosity-gap teasers, no clickbait.
+- **A curiosity gap is welcome when it serves the story and is useful to the reader.** It has to be specific enough to guess at, built from true details, and resolved in the email body, e.g. "The shortest course took us the longest" for an update email. This audience is busy and wary of being tricked, so what stays out is clickbait: empty teasers ("You won't believe this"), a promise the email doesn't deliver, or hiding what the email is about. The full hook formula bank is in `productkind/marketing/storytelling-playbook/README.md` (section 3).
+- **Transactional emails stay plain.** For welcome, payment, cancellation and certificate emails the reader needs to recognise what the email is at a glance ("Your certificate is ready"), so say what's inside directly.
 - **Personalise with `{{first_name}}` only where it feels natural** (welcome, certificate, a personal nudge), not bolted onto every promo.
 - **Avoid spam triggers:** no ALL CAPS, no `!!!` / `$$$`, no "FREE", "act now", "guaranteed".
 - **Emoji: default to none.** Evidence on opens is contradictory, and emoji measurably raise unsubscribe and spam-complaint rates, which hurt deliverability for every future send. At most one purposeful emoji, never an all-emoji line. (The 💛 lives in the sign-off, not the subject.)
@@ -60,7 +61,7 @@ Apple Mail Privacy Protection loads the tracking pixel on delivery whether or no
 - **Inline styles on table cells**. Don't rely on CSS classes for table-based layouts since some clients strip `<style>` blocks.
 - **Give `<a>` links an explicit (inline) `font-size`.** Gmail does not pass an _inherited_ font-size down to link elements, so a link that relies on its parent's size renders correctly in the browser but shrinks in Gmail. Set the size on the anchor itself (e.g. `style="font-size: 16px;"`), don't lean on inheritance from a `<style>` rule. (Paragraph text is fine because it's sized by a rule that targets it directly.)
 - **Every `<img>` needs explicit `width` and `height` attributes**, even with responsive `width: 100%; height: auto` CSS. The Gmail iOS app measures the email's total height once, before remote images load; an image with no declared dimensions reserves zero height until it downloads, then pushes everything below it (often the footer and unsubscribe link) past the locked-in height, where it gets clipped — with no "[Message clipped]" notice. Set the attributes to the image's real pixel ratio (the CSS still scales it). As a belt-and-braces measure, end the email with a small bottom-buffer spacer (e.g. `<div style="height: 32px; line-height: 32px; font-size: 1px;">&nbsp;</div>`) so any residual shift from webfonts/logo never eats the unsubscribe link.
-- **Self-hosted images only**. Don't reference third-party icon services. Social icons are hosted at `https://littleparrot.app/icon-{linkedin,instagram,tiktok,youtube}.png` (see **Footer Social Icons** below).
+- **Self-hosted images only**. Don't reference third-party icon services. Social icons are hosted at `https://littleparrot.app/icon-{linkedin,instagram,tiktok,youtube,substack}.png` (see **Footer Social Icons** below).
 - **Header logo: use `logo-little-parrot-email.png`**, with explicit `width="220" height="63"`. It is 660x189, which is **3x** the 220px display width (most of the audience is on 3x-density iPhones), rendered from `logo-little-parrot.svg` with a real alpha channel so it sits cleanly on the tinted gradient header. **Raster is the default for email images**, since it is the one format every client and security gateway renders; see the format note below.
   - **Never use `logo-little-parrot.png`.** Despite the name it is a _white-backed_ variant with zero transparent pixels and a different 3.15:1 ratio, so it paints a white block on the gradient header and gets the height wrong. Nothing should reference it.
   - **PNG over SVG is a default, not a fix for a known bug.** SVG does render in the Gmail iOS app: verified by Kinga in August 2026 on a Google account, which contradicts caniemail's `image-svg` entry reporting Gmail iOS/Android as partial ("only works with non Google accounts"). That data appears stale, most likely because Gmail proxies images through googleusercontent. Two lessons: **treat caniemail as a guide to what to test, not proof**, and **never swap a working asset without inspecting the replacement** (the white-backed PNG above shipped that way once).
@@ -88,17 +89,20 @@ Every email follows this structure:
 1. **Header**: Logo (linked to littleparrot.app) with optional subtitle in Space Mono
 2. **Content**: Greeting, body, optional highlight box, optional CTA
 3. **Sign-off**: Centred text with sign-off from "Kinga, Tamas & Little Parrot" / "Little Parrot by productkind"
-4. **Footer**: Social icons (LinkedIn, Instagram, TikTok, YouTube), context line ("You're receiving this because..."), littleparrot.app link, unsubscribe link
+4. **Footer**: Feedback vote (marketing emails only, see **Feedback Vote** below), social icons (LinkedIn, Instagram, TikTok, YouTube, Substack), context line ("You're receiving this because..."), littleparrot.app link, sender address, unsubscribe link
 
 Set a clear `<title>` that mirrors the subject line (e.g. "Your certificate is ready") — it shows as the browser/preview title.
 
 ### URL Conventions
 
-- Add `?utm_source=<email-name>` to all littleparrot.app links for tracking. We track on `utm_source` because PostHog picks it up directly (it's easier to track than a custom `ref` param).
-- **The monthly update email always uses `utm_source=monthly-email`.** (Don't date it per month; the same constant value lets the monthly series be tracked as one source over time.)
+- Add the full UTM set to every littleparrot.app and Substack link: `utm_source`, `utm_medium`, `utm_campaign`, `utm_content`. PostHog picks the parameters up directly, and since September 2026 they are also recorded in the profile table (#394).
+- **`utm_source=email` for every email.** `utm_medium` names the kind of email, `utm_campaign` the send or series, `utm_content` the audience or the link's job. Escape the `&` as `&amp;` inside `href`.
+  - **Monthly update:** `utm_medium=monthly&utm_campaign=<mon><yy>&utm_content=registered`, e.g. `utm_campaign=sep26`. The constant medium groups the series; the campaign dates each send.
+  - **Value emails:** `utm_medium=value&utm_campaign=<series>&utm_content=<topic>-registered`, e.g. `utm_campaign=vibe-coded-app-26&utm_content=seo-indexing-registered`.
+  - **Links the reader is asked to pass on:** prefix `utm_content` with `share-` (e.g. `share-registered`) so visits from shared links are separable from the reader's own clicks.
+  - Until the August 2026 monthly update, emails used a descriptive `utm_source` instead (`monthly-email`, `reg-welcome`, `new-course-email`). Older files in `little-parrot/assets/emails/` still show it; don't copy it into new emails.
 - Add `&auth=login` to links that require authentication (Nest pages, Toolkit, courses)
 - Add `&force_auth=true` for personal pages that must re-authenticate the recipient (e.g. a personal certificate page)
-- Use descriptive `utm_source` values for other emails: `reg-welcome`, `sub-cancelled`, `ai-summit-raffle`. Give a distinct value to each send of a related pair so they're separable in analytics (e.g. `certificate` vs `certificates`)
 
 ### Brand Styling (design tokens)
 
@@ -131,15 +135,19 @@ Readability rules on top of the scale:
 
 ### Personalisation & Repeating Content
 
-- Merge fields use `{{snake_case}}` (`{{first_name}}`, `{{course_name}}`, `{{certificate_id}}`); the unsubscribe link is `__unsubscribe_url__`.
+- **Merge fields depend on the sending platform**, so check which one the email goes out from before writing any:
+  - **EmailOctopus** (marketing emails since 22 September 2026: monthly updates, value emails): `{{FirstName}}`, `{{UnsubscribeURL}}`, and `{{SenderInfoLine}}` for the sender address in the footer. The footer also keeps the `Powered by EmailOctopus` link to `{{RewardsURL}}`. Copy the footer from `2026-09-monthly-update.html`.
+  - **Mailtrap** (earlier marketing sends): `{{snake_case}}` fields (`{{first_name}}`, `{{course_name}}`, `{{certificate_id}}`), with the unsubscribe link as `__unsubscribe_url__`.
+  - **Transactional emails** are built in code in `little-parrot-awakens/supabase/functions/`, not with merge fields.
+- **A blank first name renders as "Hi ,".** Before sending, check the list for contacts with no first name, or give the field a default value ("there").
 - **Merge fields and per-recipient links must resolve correctly for everyone**, including recipients at the edges of the set: zero items, one item, many items.
 - For content that repeats per recipient (e.g. one card per completed course), **confirm the email tool's loop syntax before using it** (Liquid `{% for %}` vs Handlebars/Mustache `{{#each}}`). If the syntax is unknown or the audience is small, build one reusable block and duplicate it manually, wrapped in `<!-- start/end -->` comments with numbered fields (`{{course_name_2}}`, `{{certificate_id_2}}`).
 
 ### Footer Social Icons
 
-Include all four channels, in the same order as the website footer (`little-parrot-awakens/src/components/Footer.tsx`): **LinkedIn, Instagram, TikTok, YouTube**. Keep the email and the website in step; if a channel is added or dropped on the site, change it here too.
+Include all five channels, in the same order as the website footer (`little-parrot-awakens/src/components/Footer.tsx`): **LinkedIn, Instagram, TikTok, YouTube, Substack**. Keep the email and the website in step; if a channel is added or dropped on the site, change it here too. The Substack link carries the email's UTM set (see **URL Conventions**); the other four don't.
 
-Build the row as a presentational `<table>`, not inline anchors with horizontal margins. Outlook's Word engine drops `margin` on inline elements, which collapses four icons into a single smudge; cell padding is the one horizontal spacing it honours. Every anchor also needs an inline `font-size`, because with images blocked the `alt` text renders inside the anchor and Gmail won't inherit the footer's 12px.
+Build the row as a presentational `<table>`, not inline anchors with horizontal margins. Outlook's Word engine drops `margin` on inline elements, which collapses the icons into a single smudge; cell padding is the one horizontal spacing it honours. Every anchor also needs an inline `font-size`, because with images blocked the `alt` text renders inside the anchor and Gmail won't inherit the footer's 12px.
 
 ```html
 <table
@@ -207,13 +215,27 @@ Build the row as a presentational `<table>`, not inline anchors with horizontal 
         />
       </a>
     </td>
+    <td style="padding: 0 6px;">
+      <a
+        href="https://productkind.substack.com/?utm_source=email&amp;utm_medium=monthly&amp;utm_campaign=sep26&amp;utm_content=registered"
+        style="text-decoration: none; font-size: 12px;"
+      >
+        <img
+          src="https://littleparrot.app/icon-substack.png"
+          width="24"
+          height="24"
+          alt="Substack newsletter"
+          style="vertical-align: middle; border: 0;"
+        />
+      </a>
+    </td>
   </tr>
 </table>
 ```
 
 The icon PNGs are 48x48 (2x for a 24px display), greyscale + alpha, **`#767676` stroke** on a white matte, and live in `little-parrot-awakens/public/`, which serves `littleparrot.app/icon-*.png`. They are drawn from the same SVG paths as the website's icon components. **Adding a channel means adding its PNG there and deploying the site before the email sends**, or the icon 404s in every inbox.
 
-`#767676` on the near-white footer measures 4.50:1, clearing the 3:1 WCAG asks for meaningful graphics. It replaced `#999999` (2.82:1, failing) in August 2026. Keep all four the same colour: they read as one set, and the same four files are used by every transactional email template in `little-parrot-awakens/supabase/functions/`, so a change to one file lands everywhere at once.
+`#767676` on the near-white footer measures 4.50:1, clearing the 3:1 WCAG asks for meaningful graphics. It replaced `#999999` (2.82:1, failing) in August 2026. Keep all five the same colour: they read as one set, and the same five files are used by every transactional email template in `little-parrot-awakens/supabase/functions/`, so a change to one file lands everywhere at once.
 
 To recolour without disturbing the artwork, keep the existing alpha channel and replace only the grey. Every opaque pixel is a single flat grey and all anti-aliasing lives in alpha, so this is lossless:
 
@@ -225,6 +247,16 @@ magick -size 48x48 xc:"#767676" alpha.png -alpha off -compose CopyOpacity -compo
 ```
 
 Verify with `magick compare -metric RMSE` on the alpha channel before and after; it must be 0. Re-rendering from SVG instead introduces a few per cent of anti-aliasing drift.
+
+### Feedback Vote
+
+Marketing emails (monthly updates, value emails) end with a "Was this email useful?" box at the top of the footer, so we can see whether the emails help (#456). Transactional emails don't get one.
+
+- **Both buttons go to one Tally form, `https://tally.so/r/PdMkP0`**, with the email's UTM set and `utm_content` set to the vote: `…&utm_content=yes` for 👍, `…&utm_content=no` for 👎. The form's hidden fields (`utm_source`, `utm_medium`, `utm_campaign`, `utm_content`) save those values with each response, so one form serves every email.
+- **The vote only identifies the email if its `utm_campaign` belongs to that email alone.** That holds for monthly updates (`sep26`). Value emails in a series share a campaign, so agree with Kinga how to tell them apart before adding the vote there.
+- **Hidden fields only save if they're in the published form.** Tally applies edits only when the form is republished. To check what's live, fetch the form URL and look in the page's `__NEXT_DATA__` JSON for a `HIDDEN_FIELDS` block. Don't search the page for `utm_content`: Tally echoes your own link back into the page, so that matches even when the fields are missing. The surest check is a test submission.
+- **Build them as text buttons, not images:** an `aria-hidden` emoji plus a word ("👍 Yes", "👎 No"), white fill, 2px black border, no gradient. They work with images blocked, need no hosted icon, and never compete with the primary CTA. Copy the block from `2026-09-monthly-update.html`.
+- **Count votes from the email platform's per-link click report.** Tally records a response only when someone submits the form, so a reader who clicks 👍 and closes the tab leaves nothing in Tally. Use the Tally responses for the written answers.
 
 ## Design Rules
 
