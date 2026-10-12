@@ -74,6 +74,7 @@ Return exactly this structure, nothing before or after:
 ```
 
 Rules:
+
 - Always quote the exact step and field. Never give a vague note without quoting what to change.
 - Every issue comes with a concrete, copy-ready fix.
 - Be honest and specific, never padded. A clean PASS is valid and valuable; don't invent problems to look thorough.
