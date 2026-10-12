@@ -23,11 +23,9 @@ The listing text for the free workshop (Mission 1 in the [learning journey desig
 
 ## Title
 
-What happens when you click Save? How a web app works, for non-technical product managers
+How web apps work: for product managers who want to follow the technical conversation
 
-If the form has a short character limit: **How a web app works: a hands-on workshop for non-technical product managers**
-
-If you'd rather lead with the AI fix: **Run a web app, find a bug and fix it with AI: a workshop for non-technical product managers**
+If the form has a short character limit: **How web apps work: a hands-on workshop for product managers**
 
 ## Categories and tags
 
@@ -38,7 +36,7 @@ If you'd rather lead with the AI fix: **Run a web app, find a bug and fix it wit
 
 For listings and social posts:
 
-> A hands-on workshop for product managers without an engineering background. You'll run a real web app in your own development environment, follow a failed save through the browser, the server and the database, write a bug report, then give it to GitHub Copilot and test the fix it makes in your copy of the app.
+> A hands-on workshop for product managers without an engineering background. You'll see how a web app works by running one yourself and following a failed save through the browser, the server and the database. The next time an engineer explains why something isn't working, you'll know which part of the app they mean and what to ask them.
 
 ## Event content
 
@@ -46,18 +44,18 @@ For listings and social posts:
 >
 > In this 2-hour workshop, you'll learn how a web app works by running one yourself and investigating a bug in it. A customer clicks Save, the app spins, and their new record never appears.
 >
-> **First, you'll set up your own development environment.** It's the copy of an app that engineers run and change without affecting real customers. Yours runs in GitHub's cloud and opens in your browser, so you won't install anything on your laptop. You'll start the app yourself and watch its parts start up: the database, the server and the screens you click on.
+> **First, you'll set up your own development environment.** It's the copy of an app that engineers run and change without affecting real customers. Yours runs in GitHub's cloud and opens in your browser, so you won't install anything on your laptop. You'll start the app yourself and watch its parts start up: the database, the server and the frontend.
 >
 > **Then you'll follow the failed save through every part of the app:**
 >
-> 1. Check the database and confirm nothing was saved.
-> 2. Open your browser's developer tools and find the request that failed: what it sent and what came back.
-> 3. Read the server log, where you'll see the same request arrive and fail, just as an engineer would.
-> 4. Find the rule in the database that rejected the save, and work out where the bug really is.
+> 1. Open your browser's developer tools and find the request that failed: what it sent and what came back.
+> 2. Read the server log, where you'll see the same request arrive and fail, just as an engineer would.
+> 3. Check the database and confirm nothing was saved.
+> 4. Find the rule that rejected the save, and work out where the bug really is.
 >
 > You'll draw a map of how the browser, the server and the database connect, and write a bug report with the evidence an engineer needs to fix it.
 >
-> **Finally, you'll fix the bug with AI.** You'll give your bug report to GitHub Copilot, an AI agent that can change the app's code, and test its fix in your copy of the app. You'll also see what Copilot does with a one-line complaint instead, and why the evidence an engineer asks for helps an AI agent fix the bug too.
+> **Finally, you'll fix the bug with AI.** You'll give your bug report to GitHub Copilot, an AI agent that can change the app's code, and test its fix in your copy of the app. You'll also see why the evidence an engineer asks for helps an AI agent fix the bug too.
 >
 > The app you'll run is Twenty, a real open-source CRM. It has the same parts as most business software: a frontend, an API, a server and a database.
 >
@@ -71,16 +69,16 @@ For listings and social posts:
 >
 > **Who it's for:** product managers and product owners without an engineering background. You won't write code yourself, and you don't need any technical knowledge.
 >
-> **What to bring:** a laptop and a free, personal GitHub account. You'll work in pairs, so one laptop between two is enough. Before the workshop, we'll email you instructions for setting up the account and turning on GitHub Copilot's free plan, plus a short check that your laptop can open your development environment and GitHub Copilot (some company laptops can't).
+> **What to bring:** a laptop and a free, personal GitHub account. Before the workshop, we'll email you instructions for setting up the account and turning on GitHub Copilot's free plan, plus a short check that your laptop can open your development environment and GitHub Copilot (some company laptops can't).
 >
 > **Your hosts**
 >
 > Kinga Magyar spent over a decade in the tech industry, learned to code, moved into product management and worked as a lead product manager. She has mentored product managers and holds an executive coaching diploma.
 >
-> Tamas Kokeny spent 15 years as a software engineer and engineering leader, including as a principal software engineer. He co-founded Green Fox Academy, a coding school that graduated over 3,000 students into tech careers.
+> Tamas Kokeny spent 15+ years as a software engineer and engineering leader. He co-founded Green Fox Academy, a coding school that graduated over 3,000 students into tech careers.
 >
-> Between them, they've worked at Datadog, Citrix, Volkswagen and Cloudera. In the workshop, Tamas explains how each part of the app works, and Kinga asks him the questions you'd ask as a product manager.
+> Between them, they've worked at Datadog, Citrix, Volkswagen and Cloudera. In the workshop, they explain how each part of the app works, and you'll be able to apply the knowledge to your own product.
 >
-> Free, in English, with [30] places. Run by Little Parrot.
+> Free, in English, with [30] places. Run by LittleParrot.app.
 >
 > Register here: [registration link]
