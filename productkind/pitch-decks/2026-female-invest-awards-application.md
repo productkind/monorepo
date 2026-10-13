@@ -20,11 +20,13 @@ Little Parrot helps women with a business idea build a digital product themselve
 
 ## What problem are you solving, and why does it matter?
 
-Women with a business idea can now build a product themselves with AI app builders like Lovable. But these tools are expensive, and not every woman can afford a paid plan.
+AI can now write the code, but building a product still takes technical knowledge. In 230 quotes we gathered from women building with AI, they got stuck on the terminal, GitHub, databases and publishing. "The problem is I can't judge what it's doing," one wrote. So they struggle to fix, secure or launch what they've built, and the idea often stays a prototype.
 
-At Little Parrot, women build their own product with AI as they learn, in short courses they can do after the children are asleep. Course by course, she plans her app, builds a working version and publishes it. 933 learners have signed up and 160 have finished at least one course. Our learners' No. 1 complaint is running out of credits on the free plan halfway through a course. A learner who runs out has to wait or pay before she knows whether her idea works. Our Open Wings Scholarship already gives lifetime access to our courses, but we can't also pay for the AI tools women need to build.
+Women-led businesses are underfunded: in 2024, all-female founding teams got 2.1% of US venture capital (PitchBook). So building the product herself, without raising money, gives a woman a route to economic independence, if she has the skills to finish it.
 
-Women-led businesses are underfunded, so a woman who can build the product herself, without raising money first, has a route to economic independence. We've both seen how access to technology can change a woman's career. I started mine in luxury fashion, have spent the past decade in tech and have been mentoring women. My co-founder has mentored women and girls in software development for 11 years.
+At Little Parrot, a woman learns these skills by building her own product, in short courses she can do after the children are asleep. Course by course, she plans her app, builds it, fixes it and publishes it. 933 learners have signed up and 160 have finished at least one course.
+
+We've both seen how access to technology changes a woman's career. I started mine in luxury fashion, then spent a decade in tech, learning to code and becoming a lead product manager. I've been mentoring women, and my co-founder has mentored women and girls in software development for 11 years.
 
 ## What stage are you at?
 
