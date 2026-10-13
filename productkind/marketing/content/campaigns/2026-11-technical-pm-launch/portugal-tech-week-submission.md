@@ -18,7 +18,7 @@ The listing text for the free workshop (Mission 1 in the [learning journey desig
   - The registration link has to go in the event content.
 - **Submit after the decision on Friday 16 October.** This version promises that attendees set up their own development environment and fix the bug with GitHub Copilot, which needs Codespaces. If the trial checks fail and Lisbon runs on one shared copy, remove the "First" and "Finally" paragraphs, the second outcome and the GitHub account, and change the length back to 90 minutes.
 - **The trial also has to confirm the Copilot comparison.** The "Finally" paragraph says Copilot does better with the bug report than with a one-line complaint. If the trial runs don't show that, cut the sentence that starts "You'll also see".
-- **Images:** a logo at 512 × 512, and a featured image at 1920 × 1080 (1080 × 540 at the very least).
+- **Images:** a logo at 512 × 512, and a featured image at 1920 × 1080 (1080 × 540 at the very least). The featured image is [`workshop-event-images/export/featured-image-1920x1080.png`](workshop-event-images/export/featured-image-1920x1080.png), with its alt text in the [spec](workshop-event-images/spec.md). The same folder has the square Luma cover.
 - **Fill in before submitting:** the date, the time, the venue, the registration link and the number of places.
 
 ## Title
@@ -77,7 +77,7 @@ For listings and social posts:
 >
 > Tamas Kokeny spent 15+ years as a software engineer and engineering leader. He co-founded Green Fox Academy, a coding school that graduated over 3,000 students into tech careers.
 >
-> Between them, they've worked at Datadog, Citrix, Volkswagen and Cloudera. In the workshop, they explain how each part of the app works, and you'll be able to apply the knowledge to your own product.
+> Between them, they've worked at Datadog, Citrix, Volkswagen and Cloudera. In the workshop, they'll guide you through how each part of a web app works, and you'll be able to apply the knowledge to your own product.
 >
 > Free, in English, with [30] places. Run by LittleParrot.app.
 >

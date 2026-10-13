@@ -1,0 +1,510 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Workshop featured images: Portugal Tech Week and Luma (Little Parrot brand)</title>
+    <!-- Two images built from the carousel design system
+         (productkind/carousel-design): slide 1 is the 1920x1080 Portugal Tech
+         Week image, slide 2 the 1080x1080 Luma cover. Open with ?slide=N to
+         show one of them, as the export does. The file is called
+         carousel.html so check.py can run on it. Copy comes from spec.md. -->
+    <style>
+      /* Little Parrot brand tokens, inlined from carousel-design/brands/little-parrot.css */
+      @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+      :root {
+        --grad: linear-gradient(120deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70);
+        --grad-wash:
+          linear-gradient(120deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020), #ffffff;
+        --font-display: 'Space Mono', monospace;
+        --font-copy: 'Inter', sans-serif;
+        --ink: #080809;
+        --ink-secondary: #4a4a50;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      section.slide {
+        width: 1920px;
+        height: 1080px;
+        position: relative;
+        overflow: hidden;
+        background: var(--grad);
+        box-sizing: border-box;
+      }
+      .card {
+        position: absolute;
+        top: 100px;
+        left: 150px;
+        width: 1620px;
+        height: 880px;
+        box-sizing: border-box;
+        background: #ffffff;
+        border: 12px solid var(--ink);
+        box-shadow: 16px 16px 0 rgba(8, 8, 9, 0.25);
+        display: flex;
+        flex-direction: column;
+      }
+      .gradbar {
+        flex: none;
+        height: 30px;
+        background: var(--grad);
+      }
+      .inner {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 40px 70px 56px;
+        box-sizing: border-box;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: var(--font-display);
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        color: var(--ink);
+      }
+      .handle {
+        font-size: 46px;
+      }
+      .badge {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 38px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        border: 5px solid var(--ink);
+        box-shadow: 8px 8px 0 rgba(8, 8, 9, 0.25);
+        padding: 6px 30px;
+        background: var(--grad);
+        color: var(--ink);
+      }
+      .slidebody {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .headline {
+        margin: 0;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 132px;
+        line-height: 1.1;
+        color: var(--ink);
+        text-align: center;
+      }
+      .kicker {
+        margin-top: 18px;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 44px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--ink);
+        text-align: center;
+      }
+
+      /* The diagram: browser, server, database, with request and response arrows */
+      .diagram {
+        margin-top: 64px;
+        display: flex;
+        align-items: flex-start;
+        gap: 24px;
+      }
+      .part {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+      }
+      .box {
+        width: 350px;
+        height: 220px;
+        border: 6px solid var(--ink);
+        box-shadow: 12px 12px 0 rgba(8, 8, 9, 0.25);
+        background: #ffffff;
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+      }
+      .label {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 48px;
+        color: var(--ink);
+      }
+
+      /* Browser window */
+      .titlebar {
+        height: 40px;
+        background: var(--ink);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 0 18px;
+      }
+      .dot {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+      }
+      .browserbody {
+        position: absolute;
+        top: 40px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--grad-wash);
+      }
+      .savebtn {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        border: 5px solid var(--ink);
+        border-radius: 16px;
+        background: #ffffff;
+        padding: 14px 28px;
+        font-family: var(--font-copy);
+        font-weight: 600;
+        font-size: 44px;
+        color: var(--ink);
+      }
+      .spinner {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 7px solid #e3e3e6;
+        border-top-color: var(--ink);
+        border-right-color: var(--ink);
+        transform: rotate(20deg);
+      }
+
+      /* Server panel: log lines drawn as bars */
+      .box.server {
+        background: var(--ink);
+        padding: 34px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .logline {
+        height: 16px;
+        border-radius: 8px;
+        background: #5a5a62;
+      }
+      .logline.lit {
+        background: var(--grad);
+      }
+
+      /* Database */
+      .box.database {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--grad-wash);
+      }
+
+      .arrows {
+        width: 140px;
+        height: 220px;
+        display: flex;
+        align-items: center;
+      }
+      /* Show one slide at a time when opened with ?slide=N (used for export) */
+      body.single section.slide {
+        display: none;
+      }
+      body.single section.slide.current {
+        display: block;
+      }
+
+      /* Square variant (Luma cover, 1080x1080). Luma rounds the corners, so
+         everything stays well inside the edges. */
+      section.slide.square {
+        width: 1080px;
+        height: 1080px;
+      }
+      .square .card {
+        top: 64px;
+        left: 64px;
+        width: 952px;
+        height: 952px;
+        border-width: 10px;
+        box-shadow: 14px 14px 0 rgba(8, 8, 9, 0.25);
+      }
+      .square .gradbar {
+        height: 26px;
+      }
+      .square .inner {
+        padding: 34px 48px 48px;
+      }
+      .square .handle {
+        font-size: 38px;
+      }
+      .square .badge {
+        font-size: 32px;
+        border-width: 4px;
+        padding: 4px 24px;
+        box-shadow: 6px 6px 0 rgba(8, 8, 9, 0.25);
+      }
+      .square .headline {
+        font-size: 128px;
+        line-height: 1.08;
+      }
+      .square .kicker {
+        margin-top: 26px;
+        font-size: 40px;
+        line-height: 1.35;
+      }
+      .square .diagram {
+        margin-top: 56px;
+        gap: 12px;
+      }
+      .square .part {
+        gap: 16px;
+      }
+      .square .box {
+        width: 220px;
+        height: 150px;
+        border-width: 5px;
+        box-shadow: 9px 9px 0 rgba(8, 8, 9, 0.25);
+      }
+      .square .label {
+        font-size: 38px;
+      }
+      .square .titlebar {
+        height: 28px;
+        gap: 9px;
+        padding: 0 12px;
+      }
+      .square .dot {
+        width: 11px;
+        height: 11px;
+      }
+      .square .browserbody {
+        top: 28px;
+      }
+      .square .savebtn {
+        gap: 12px;
+        border-width: 4px;
+        border-radius: 12px;
+        padding: 8px 18px;
+        font-size: 32px;
+      }
+      .square .spinner {
+        width: 20px;
+        height: 20px;
+        border-width: 5px;
+      }
+      .square .box.server {
+        padding: 22px 20px;
+      }
+      .square .logline {
+        height: 11px;
+      }
+      .square .arrows {
+        width: 84px;
+        height: 150px;
+      }
+      .square .arrows svg {
+        width: 84px;
+        height: 72px;
+      }
+      .square .box.database svg {
+        width: 96px;
+        height: 108px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="slide">
+      <div class="card">
+        <div class="gradbar"></div>
+        <div class="inner">
+          <div class="header">
+            <span class="handle">LittleParrot.app</span><span class="badge">Free</span>
+          </div>
+          <div class="slidebody">
+            <h1 class="headline">How web apps work</h1>
+            <div class="kicker">A hands-on workshop for product managers</div>
+
+            <div class="diagram">
+              <div class="part">
+                <div class="box">
+                  <div class="titlebar">
+                    <span class="dot" style="background: #ffb65b"></span>
+                    <span class="dot" style="background: #fbfb00"></span>
+                    <span class="dot" style="background: #00ed70"></span>
+                  </div>
+                  <div class="browserbody">
+                    <div class="savebtn"><span>Save</span><span class="spinner"></span></div>
+                  </div>
+                </div>
+                <div class="label">Browser</div>
+              </div>
+
+              <div class="arrows">
+                <svg width="140" height="120" viewBox="0 0 140 120" aria-hidden="true">
+                  <line x1="8" y1="36" x2="112" y2="36" stroke="#080809" stroke-width="8" />
+                  <polygon points="104,16 136,36 104,56" fill="#080809" />
+                  <line x1="132" y1="84" x2="28" y2="84" stroke="#080809" stroke-width="8" />
+                  <polygon points="36,64 4,84 36,104" fill="#080809" />
+                </svg>
+              </div>
+
+              <div class="part">
+                <div class="box server">
+                  <div class="logline" style="width: 82%"></div>
+                  <div class="logline" style="width: 58%"></div>
+                  <div class="logline lit" style="width: 74%"></div>
+                  <div class="logline" style="width: 46%"></div>
+                  <div class="logline" style="width: 66%"></div>
+                </div>
+                <div class="label">Server</div>
+              </div>
+
+              <div class="arrows">
+                <svg width="140" height="120" viewBox="0 0 140 120" aria-hidden="true">
+                  <line x1="8" y1="36" x2="112" y2="36" stroke="#080809" stroke-width="8" />
+                  <polygon points="104,16 136,36 104,56" fill="#080809" />
+                  <line x1="132" y1="84" x2="28" y2="84" stroke="#080809" stroke-width="8" />
+                  <polygon points="36,64 4,84 36,104" fill="#080809" />
+                </svg>
+              </div>
+
+              <div class="part">
+                <div class="box database">
+                  <svg width="150" height="168" viewBox="0 0 150 168" aria-hidden="true">
+                    <defs>
+                      <linearGradient id="lpgrad" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0" stop-color="#ffb65b" />
+                        <stop offset="0.25" stop-color="#fdd825" />
+                        <stop offset="0.5" stop-color="#fbfb00" />
+                        <stop offset="0.75" stop-color="#8efd23" />
+                        <stop offset="1" stop-color="#00ed70" />
+                      </linearGradient>
+                    </defs>
+                    <path
+                      d="M8 28 V140 A67 22 0 0 0 142 140 V28"
+                      fill="url(#lpgrad)"
+                      stroke="#080809"
+                      stroke-width="7"
+                    />
+                    <ellipse cx="75" cy="28" rx="67" ry="22" fill="#ffffff" stroke="#080809" stroke-width="7" />
+                    <path d="M8 66 A67 22 0 0 0 142 66" fill="none" stroke="#080809" stroke-width="7" />
+                    <path d="M8 104 A67 22 0 0 0 142 104" fill="none" stroke="#080809" stroke-width="7" />
+                  </svg>
+                </div>
+                <div class="label">Database</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide square">
+      <div class="card">
+        <div class="gradbar"></div>
+        <div class="inner">
+          <div class="header">
+            <span class="handle">LittleParrot.app</span><span class="badge">Free</span>
+          </div>
+          <div class="slidebody">
+            <h1 class="headline">How web<br />apps work</h1>
+            <div class="kicker">A hands-on workshop<br />for product managers</div>
+
+            <div class="diagram">
+              <div class="part">
+                <div class="box">
+                  <div class="titlebar">
+                    <span class="dot" style="background: #ffb65b"></span>
+                    <span class="dot" style="background: #fbfb00"></span>
+                    <span class="dot" style="background: #00ed70"></span>
+                  </div>
+                  <div class="browserbody">
+                    <div class="savebtn"><span>Save</span><span class="spinner"></span></div>
+                  </div>
+                </div>
+                <div class="label">Browser</div>
+              </div>
+
+              <div class="arrows">
+                <svg width="140" height="120" viewBox="0 0 140 120" aria-hidden="true">
+                  <line x1="8" y1="36" x2="112" y2="36" stroke="#080809" stroke-width="8" />
+                  <polygon points="104,16 136,36 104,56" fill="#080809" />
+                  <line x1="132" y1="84" x2="28" y2="84" stroke="#080809" stroke-width="8" />
+                  <polygon points="36,64 4,84 36,104" fill="#080809" />
+                </svg>
+              </div>
+
+              <div class="part">
+                <div class="box server">
+                  <div class="logline" style="width: 82%"></div>
+                  <div class="logline" style="width: 58%"></div>
+                  <div class="logline lit" style="width: 74%"></div>
+                  <div class="logline" style="width: 46%"></div>
+                  <div class="logline" style="width: 66%"></div>
+                </div>
+                <div class="label">Server</div>
+              </div>
+
+              <div class="arrows">
+                <svg width="140" height="120" viewBox="0 0 140 120" aria-hidden="true">
+                  <line x1="8" y1="36" x2="112" y2="36" stroke="#080809" stroke-width="8" />
+                  <polygon points="104,16 136,36 104,56" fill="#080809" />
+                  <line x1="132" y1="84" x2="28" y2="84" stroke="#080809" stroke-width="8" />
+                  <polygon points="36,64 4,84 36,104" fill="#080809" />
+                </svg>
+              </div>
+
+              <div class="part">
+                <div class="box database">
+                  <svg width="150" height="168" viewBox="0 0 150 168" aria-hidden="true">
+                    <defs>
+                      <linearGradient id="lpgrad2" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0" stop-color="#ffb65b" />
+                        <stop offset="0.25" stop-color="#fdd825" />
+                        <stop offset="0.5" stop-color="#fbfb00" />
+                        <stop offset="0.75" stop-color="#8efd23" />
+                        <stop offset="1" stop-color="#00ed70" />
+                      </linearGradient>
+                    </defs>
+                    <path
+                      d="M8 28 V140 A67 22 0 0 0 142 140 V28"
+                      fill="url(#lpgrad2)"
+                      stroke="#080809"
+                      stroke-width="7"
+                    />
+                    <ellipse cx="75" cy="28" rx="67" ry="22" fill="#ffffff" stroke="#080809" stroke-width="7" />
+                    <path d="M8 66 A67 22 0 0 0 142 66" fill="none" stroke="#080809" stroke-width="7" />
+                    <path d="M8 104 A67 22 0 0 0 142 104" fill="none" stroke="#080809" stroke-width="7" />
+                  </svg>
+                </div>
+                <div class="label">Database</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      const n = new URLSearchParams(location.search).get('slide');
+      if (n) {
+        document.body.classList.add('single');
+        document.querySelectorAll('section.slide')[Number(n) - 1].classList.add('current');
+      }
+    </script>
+  </body>
+</html>

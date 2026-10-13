@@ -1,0 +1,31 @@
+---
+status: drafted
+channels: [events]
+account: little-parrot
+---
+
+# Workshop event images: Portugal Tech Week and Luma
+
+Two images for the free workshop's event listings, from one design in `carousel.html`:
+
+- **Slide 1, Portugal Tech Week:** the featured image for the [listing](../portugal-tech-week-submission.md), 1920 × 1080, exported to `export/featured-image-1920x1080.png`. Portugal Tech Week shows it as a 750 × 465 card with the event title as text underneath, so the image doesn't repeat the title. Everything sits inside a central safe area, because the card crops about 90 px from each side and the form's 2:1 minimum suggests a crop of 60 px from the top and bottom elsewhere.
+- **Slide 2, Luma:** the event cover, 1080 × 1080, exported to `export/luma-cover-1080x1080.png`. Luma asks for a square image of at least 800 × 800 and rounds the corners, so everything stays well inside the edges ([Luma help](https://help.luma.com/p/event-cover-images), checked 12 October 2026).
+
+Export each with headless Chrome, opening `carousel.html?slide=1` at a 1920 × 1080 window and `carousel.html?slide=2` at 1080 × 1080.
+
+## Both slides
+
+Visual: the Little Parrot gradient as the background, with the design system's white card (thick black border, hard shadow, gradient bar) on top. Below the headline, a three-part diagram of how a web app works: a browser window with a Save button and a spinner, a dark server panel with log lines drawn as bars, and a database drawn as a cylinder. Two arrows between each pair, one going right and one coming back, to show the request and the response.
+
+- Header, left: LittleParrot.app
+- Header, right badge: Free
+- Headline: How web apps work
+- Kicker: A hands-on workshop for product managers
+- Diagram labels: Browser, Server, Database
+- Button in the browser window: Save
+
+The square slide uses the same words, with the headline on two lines (How web / apps work) and the kicker on two lines (A hands-on workshop / for product managers).
+
+## Alt text
+
+A diagram of how a web app works: a browser window with a Save button, a server and a database, with arrows going between them in both directions. Text: How web apps work. A hands-on workshop for product managers. Free. LittleParrot.app.
