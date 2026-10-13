@@ -82,3 +82,25 @@ For listings and social posts:
 > Free, in English, with [30] places. Run by LittleParrot.app.
 >
 > Register here: [registration link]
+
+## PTW Palace questions
+
+PTW Palace is the festival's central venue in Lisbon (R. Gomes Freire 98), running 9–13 November. Its programme lists talks, roundtables, a live build sprint and a mixer, on AI adoption, leadership, marketing and legal tech for founders ([portugaltechweek.com](https://portugaltechweek.com/), checked 13 October 2026). Like the event content, the first answer and the second and fourth takeaways rely on the trial checks for the development environment and the Copilot fix.
+
+**Describe your event in 2–3 sentences. What happens, who speaks, what participants leave with.**
+
+> Kinga Magyar, a lead product manager, and Tamas Kokeny, an engineering leader, run a 2-hour hands-on workshop on how web apps work, for product managers without an engineering background. Each participant sets up their own development environment, starts a real app, follows a failed save through the browser, the server and the database, and then fixes the bug behind it with GitHub Copilot. They leave with a map of how the parts of the app connect and a bug report with the evidence engineers ask for, so the next time an engineer explains why something isn't working, they'll know which part of the app it's in and what to ask.
+
+**Why PTW Palace? Why is PTW Palace the right home for this event? What makes it relevant for the PTW community?**
+
+> The PTW Palace programme already covers AI adoption, leadership and marketing. This workshop adds a hands-on session on how software itself works. Many product managers come from business, design or other non-technical backgrounds, yet they work closely with engineers and make decisions that involve technical trade-offs. This free workshop gives Lisbon's product community a hands-on way to learn how web apps work, with no technical knowledge needed. Product managers who can follow the technical conversation work better with their engineering teams, and that helps build a stronger pool of product talent for Lisbon's tech companies.
+
+**What are the key takeaways for participants? (What will they leave with?)**
+
+> The main takeaway: the next time an engineer explains why something isn't working, they'll know which part of the app it's in and what to ask. They'll also leave with:
+>
+> - **How a web app works:** what happens between clicking Save and the data reaching the database, and a map they drew themselves of how the browser, the server and the database connect.
+> - **Their own development environment:** a copy of a real app they set up and started themselves, still in their GitHub account after the workshop.
+> - **Skills they can use at work the next day:** finding a failed request in the browser's network tab, reading its status code, and telling whether a problem starts in the browser, on the server or in the database.
+> - **A bug report and an AI fix:** a bug report with the evidence engineers ask for, and the fix GitHub Copilot made from it, tested in their own copy of the app.
+> - **A field guide and a template:** a one-page guide to the network tab and a bug report template to use with their own product.
