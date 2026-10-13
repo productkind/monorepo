@@ -34,28 +34,28 @@ Launched and generating revenue
 
 Our mission is to close the gender gap in AI adoption.
 
-A gap like this has opened before, in computing. In 1984, the share of women studying computer science in the US stopped rising and then fell. NPR's Planet Money traced part of it to the first home computers, which were marketed mainly to boys. AI app builders now let anyone with an idea build software, and we don't want history to repeat itself.
+A gap like this has opened before. In 1984, the share of women studying computer science in the US started to fall, and NPR's Planet Money traced part of it to the first home computers being marketed mainly to boys. We don't want history to repeat itself with AI.
 
 Building software gives you power, and we want more women to have it. When a woman builds her own product, she earns her own income, solves problems her community has, and shows other women they can build too.
 
-So we want Little Parrot to be where women learn to build with AI: short, practical courses in a kind space, where a woman can ask the questions she thinks are too basic.
+Our vision is an incubator that teaches women technical skills and funds them, so they have time to build their own digital product. Women who can afford it pay for their place, and their fees fund places for women who can't.
 
-We're building a profitable, purpose-driven business, and our Open Wings Scholarship already gives lifetime access to underrepresented groups in tech. This award would start a credit fund we run every year, and we'll ask the AI companies our learners build with to co-fund it. Our big goal is to grow it into an incubator that funds women's ideas. [Numbers, e.g. X women funded and €X a month by 20XX]
+Today, we're building a for-profit, purpose-driven business: self-paced courses where women learn technical skills and build their products with AI, and an Open Wings Scholarship that gives underrepresented groups in tech lifetime access. By 2030, we want to fund 100 women a year.
 
 ## If you win, what will this money help you do?
 
-Half of the £10,000 goes straight to five women who want to build their own product with AI but couldn't otherwise afford the tools. Each gets £1,000 for her AI tools and hosting her digital product, and lifetime access to Little Parrot through our Open Wings Scholarship. The £1,000 covers building until launch, even on Claude's Max plan (about £77 a month).
+This award would fund the first, smallest version of our incubator. Half of the £10,000 goes straight to five women who want to build their own product with AI but couldn't otherwise afford the tools. Each woman gets £1,000 for her AI tools and hosting her digital product, and lifetime access to Little Parrot through our Open Wings Scholarship.
 
-We'll find them through trustworthy organisations that support women who need this, such as [two or three names]. Each woman tells us what she wants to build, and we choose five [on what basis]. Each launch becomes a case study, and we track its sign-ups.
+We'll find them through trustworthy organisations that support women who need this, such as the Cherie Blair Foundation for Women and ReDI School. Each woman tells us what she wants to build, and we choose the five with the clearest problem, user and way to earn.
 
-Today, our No. 1 barrier to growing the business and to our mission is reaching more people. Winning would help with both: the publicity across Female Invest's community of over a million women, and the other £5,000:
+The other £5,000 goes on:
 
-- [£X] creating courses for Claude Code, Codex and GitHub Copilot, to reach their users too.
-- [£X] setting up partnerships and the application page, to reach the women our partners support.
+- £4,000 creating courses for Claude Code, Codex and GitHub Copilot.
+- £1,000 setting up partnerships and the application page.
 
-We'll also ask AI companies to match the credits: each £1,000 funds another woman.
+This first round tells us whether paying for the tools helps women launch, what else they need, and which partners reach them. We'll take those answers and the five launches to AI companies and partners, to fund a bigger round. The publicity from winning would also help with our No. 1 barrier to reaching profitability: reaching more people.
 
-By June 2027, we want five products live, three new courses and 50 paying learners.
+By the end of 2027, we want all five products live with their own customers.
 
 ## Where can we find you online?
 
@@ -65,12 +65,12 @@ https://littleparrot.app
 
 The complaint we hear most from our learners is that they run out of credits halfway through a course.
 
-I'm Kinga, co-founder of Little Parrot. We teach women to build their own products with AI. The courses are short, and you can do them after the children are asleep. Course by course, you plan your app, build it and publish it. 933 learners have signed up so far, and 160 have finished at least one course.
+I'm Kinga, co-founder of Little Parrot. We teach women to build their own products with AI. The courses are hands-on, and you can do them after the children are asleep. Course by course, you plan your app, build it and launch it. 933 learners have signed up so far, and 160 have completed at least one course.
 
-But AI tools like Lovable are expensive, and not everyone can afford them. On the free plan, a learner runs out of credits halfway through, and has to pay before she knows whether her idea works.
+But AI tools like Lovable are expensive, and not everyone can afford them. On the free plan, a learner runs out of AI credits halfway through the course, and has to pay before she knows whether her idea works.
 
-We've seen how access to technology can change a woman's career. I started mine in luxury fashion, I've spent the past decade in tech, and I've been mentoring women. My co-founder Tamas has mentored women and girls in software development for 11 years.
+We've seen how access to technology can change a woman's career. I started mine in luxury fashion, I've spent the past decade in tech, and I've been mentoring women. My co-founder has mentored women and girls in software development for 11 years.
 
-If we win, we'll create courses for more AI tools, like Claude Code and Codex, so women can learn with us whichever tool they build with. And £5,000 goes to five women who couldn't otherwise afford these tools: £1,000 each for their AI tools, plus lifetime access to Little Parrot through our Open Wings Scholarship. We'll find them through organisations that already support them.
+Our vision is an incubator that teaches women technical skills and funds them for a year, so they have time to build their product and market it. Women who can afford it pay, and their fees fund free places. This award would fund its first, smallest version. £5,000 goes to five women who couldn't otherwise afford these tools: £1,000 each for their AI tools and hosting. The rest goes on finding them and on new courses.
 
-By [year], I want [X] women paying to learn with us. I'd love to tell you more in London!
+By the end of 2027, I want all five to have launched their product and have paying users. I'd love to tell you more in London!
