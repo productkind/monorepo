@@ -32,15 +32,17 @@ Launched and generating revenue
 
 ## What's your vision? Don't hold back, we love big goals.
 
-Our mission is to close the gender gap in AI adoption.
+In 1984, 37% of computer science graduates in the US were women. By 2010, it was 18%. NPR's Planet Money traced part of the fall to the first home computers being marketed mainly to boys.
 
-A gap like this has opened before. In 1984, the share of women studying computer science in the US started to fall, and NPR's Planet Money traced part of it to the first home computers being marketed mainly to boys. We don't want history to repeat itself with AI.
+AI is opening a gap like this again. Across 18 studies of more than 140,000 people, Harvard Business School researchers found that women adopt AI tools at a 25% lower rate than men. We don't want history to repeat itself, so our mission is to close this gap.
 
 Building software gives you power, and we want more women to have it. When a woman builds her own product, she earns her own income, solves problems her community has, and shows other women they can build too.
 
-Our vision is an incubator that teaches women technical skills and funds them, so they have time to build their own digital product. Women who can afford it pay for their place, and their fees fund places for women who can't.
+But it takes time to build a successful business. So our vision is an incubator that teaches women technical skills and funds them, giving them that time. Women who can afford it pay for their place, and their fees fund places for women who can't.
 
-Today, we're building a for-profit, purpose-driven business: self-paced courses where women learn technical skills and build their products with AI, and an Open Wings Scholarship that gives underrepresented groups in tech lifetime access. By 2030, we want to fund 100 women a year.
+Today, we're a for-profit, purpose-driven business with self-paced courses where women learn technical skills and build their products with AI, and an Open Wings Scholarship that gives underrepresented groups in tech lifetime access.
+
+By 2030, we want to fund 100 women a year.
 
 ## If you win, what will this money help you do?
 
