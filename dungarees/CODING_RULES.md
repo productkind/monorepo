@@ -836,6 +836,8 @@ app/runtime/ssr-react/
 
 A run lives as long as its runtime: one process on the server, one document in the browser. `getServices` is called once per run. Behaviours and delivery hold the state of one unit of work, so they are built by `createBehaviorsAndDelivery`, which `main` calls as often as the runtime needs: once per request on the server, once in the browser. Neither is built until `main` asks for it.
 
+How often that is belongs to the runtime, not to `main`. Both runtimes take the same services type, and the part that differs is a host service: `main` hands it one handler, and the server's host calls it per request while the browser's calls it once. A `main` per runtime, or services told apart by a `kind` field, splits one application in two and makes every shared service be declared twice.
+
 ```ts
 // Bad — the application runs once per request, so every request rebuilds the services too
 const render = ({ url }) =>
@@ -843,15 +845,11 @@ const render = ({ url }) =>
 ```
 
 ```ts
-// Good — services once per process; behaviours and delivery per request, built from that request's input
-const serverMain = async ({ services, createBehaviorsAndDelivery }) => {
-  await services.serve({
-    render: ({ url }) => {
-      const { delivery, exportState } = createBehaviorsAndDelivery({
-        history: services.createHistory(url),
-      })
-      // ...render delivery.Root and exportState() into the document
-    },
+// Good — services once per run; behaviours and delivery each time the host hands main a request
+const main = async ({ services, createBehaviorsAndDelivery }) => {
+  await services.host.run(async ({ history, state }) => {
+    const { delivery } = createBehaviorsAndDelivery({ history, state: fromDocument(state) })
+    return { type: 'found', element: createElement(delivery.Root), state: toDocument(delivery) }
   })
 }
 ```

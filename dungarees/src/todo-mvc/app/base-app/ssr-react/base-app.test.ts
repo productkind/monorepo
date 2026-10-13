@@ -1,10 +1,13 @@
 import { baseApplication } from './base-app.ts'
+import type { TodoMvcServices } from './services.ts'
 
+import type { IdGenerator } from '@dungarees/id-generator/service.ts'
+import type { SsrHost } from '@dungarees/ssr-react/host.ts'
 import { createFakeTodoMvcServerServices } from '@dungarees/todo-mvc-fake-services-ssr-react/get-services.ts'
 import type { Todo } from '@dungarees/todo-mvc-todos-domain/type.ts'
 
 import { createMemoryHistory } from 'history'
-import { expect, test } from 'vitest'
+import { expect, expectTypeOf, test } from 'vitest'
 
 const TEMPLATE = [
   '<!doctype html><html><head><meta property="csp-nonce" content="%NONCE%"></head>',
@@ -117,4 +120,12 @@ test('imported state replaces the list the behaviors hold', () => {
   importState({ todos: TODOS })
 
   expect(exportState()).toEqual({ todos: TODOS })
+})
+
+test('the server and the browser are given the same services, told apart only by their host', () => {
+  expectTypeOf<TodoMvcServices>().toEqualTypeOf<{
+    idGenerator: IdGenerator
+    listTodos: () => Promise<Todo[]>
+    host: SsrHost
+  }>()
 })

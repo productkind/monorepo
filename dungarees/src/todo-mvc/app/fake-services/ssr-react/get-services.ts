@@ -1,60 +1,36 @@
 import { createFakeIdGeneratorBackend } from '@dungarees/id-generator/fake.ts'
-import { createIdGenerator, type IdGenerator } from '@dungarees/id-generator/service.ts'
+import { createIdGenerator } from '@dungarees/id-generator/service.ts'
+import { createBrowserSsrHost } from '@dungarees/ssr-react/browser-host.ts'
 import type { SsrTemplateRender } from '@dungarees/ssr-react/responder.ts'
+import { createServerSsrHost } from '@dungarees/ssr-react/server-host.ts'
 import type { Todo } from '@dungarees/todo-mvc-todos-domain/type.ts'
 
-import { createMemoryHistory, type History } from 'history'
-
-export type FakeTodoMvcServerServices = {
-  kind: 'server'
-  idGenerator: IdGenerator
-  listTodos: () => Promise<Todo[]>
-  createHistory: (url: string) => History
-  serve: (args: { render: SsrTemplateRender }) => Promise<void>
-}
-
-export type FakeTodoMvcBrowserServices = {
-  kind: 'browser'
-  idGenerator: IdGenerator
-  listTodos: () => Promise<Todo[]>
-  createHistory: () => History
-  document: Document
-}
-
-export type FakeTodoMvcServer = {
-  services: FakeTodoMvcServerServices
-  render: SsrTemplateRender
-}
+import { createMemoryHistory } from 'history'
 
 export const createFakeTodoMvcServerServices = ({
   listTodos = async () => [],
 }: {
   listTodos?: () => Promise<Todo[]>
-} = {}): FakeTodoMvcServer => {
+} = {}) => {
   let served: SsrTemplateRender | undefined
 
   return {
     services: {
-      kind: 'server',
       idGenerator: createIdGenerator(createFakeIdGeneratorBackend().backend),
       listTodos,
-      createHistory: (url) => createMemoryHistory({ initialEntries: [url] }),
-      serve: async ({ render }) => {
-        served = render
-      },
+      host: createServerSsrHost({
+        serve: async ({ render }) => {
+          served = render
+        },
+      }),
     },
-    render: async (args) => {
+    render: (async (args) => {
       if (served === undefined) {
         throw new Error('The application has not served anything yet')
       }
       return served(args)
-    },
+    }) satisfies SsrTemplateRender,
   }
-}
-
-export type FakeTodoMvcBrowser = {
-  services: FakeTodoMvcBrowserServices
-  history: History
 }
 
 export const createFakeTodoMvcBrowserServices = ({
@@ -63,18 +39,16 @@ export const createFakeTodoMvcBrowserServices = ({
 }: {
   path?: string
   document: Document
-}): FakeTodoMvcBrowser => {
+}) => {
   const history = createMemoryHistory({ initialEntries: [path] })
 
   return {
     services: {
-      kind: 'browser',
       idGenerator: createIdGenerator(createFakeIdGeneratorBackend().backend),
-      listTodos: async () => {
+      listTodos: async (): Promise<Todo[]> => {
         throw new Error('There is no todos endpoint for the browser to fetch from yet')
       },
-      createHistory: () => history,
-      document,
+      host: createBrowserSsrHost({ document, history, rootElementId: 'root' }),
     },
     history,
   }

@@ -1,7 +1,7 @@
 import { fromTodoMvcState, type TodoMvcBehaviors, toTodoMvcState } from './behaviors.ts'
 import { getBehaviors } from './get-behaviors.ts'
 import { getDelivery, type TodoMvcDelivery } from './get-delivery.tsx'
-import { browserMain, serverMain, type TodoMvcOutput } from './main.tsx'
+import { main, type TodoMvcOutput } from './main.tsx'
 import type { TodoMvcIdentity, TodoMvcServices } from './services.ts'
 import type { TodoMvcInput, TodoMvcState } from './state.ts'
 
@@ -22,8 +22,5 @@ export const baseApplication = createApplication<TodoMvcApplicationConfig>({
   getDelivery,
   exportState: toTodoMvcState,
   importState: fromTodoMvcState,
-  main: [
-    { patternPartial: { runtime: 'server' }, value: serverMain },
-    { patternPartial: { runtime: 'browser' }, value: browserMain },
-  ],
+  main,
 })
