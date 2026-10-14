@@ -8,7 +8,7 @@ The Little Parrot company page (renamed from productkind). Drafted 2026-10-14.
 
 **Understand the software behind your product**
 
-Hands-on courses for women building with AI and product managers
+Hands-on courses for product managers and women building with AI
 
 ## Tagline
 
@@ -32,7 +32,7 @@ Source: Harvard Business School Working Paper 25-023, May 2026: https://www.hbs.
 
 ## Notes
 
-- Banner: 1128 × 191 px. The logo overlaps the bottom-left corner on desktop, so keep the text centred and clear of it, and check the crop on a phone after uploading. It speaks to both audiences: "your product" is the vibe coder's own app and the product manager's product at work. It says "women building with AI" rather than "vibe coders", which can read as dismissive to a professional audience, and puts them first so "product managers and women" doesn't read as two separate groups. Kinga chose the shorter wording without a second "for".
+- Banner: 1128 × 191 px. The logo overlaps the bottom-left corner on desktop, so keep the text centred and clear of it, and check the crop on a phone after uploading. It speaks to both audiences: "your product" is the vibe coder's own app and the product manager's product at work. It says "women building with AI" rather than "vibe coders", which can read as dismissive to a professional audience. Kinga chose this order after comparing it with "women building with AI and product managers".
 - LinkedIn limits: tagline 120 characters, overview 2,000. The overview has no formatting on LinkedIn, so it's kept short to avoid a wall of text.
 - The overview doesn't repeat the tagline, since LinkedIn shows the tagline under the page name. It opens on the problem instead.
 - Source for the figure: Cranney, Delecourt and Koning, "Global Evidence on Gender Gaps and Generative AI Over Time", HBS Working Paper 25-023, May 2026 version, checked in the PDF on 2026-10-14. Abstract: 76 sources, 318,924 respondents, adoption 47.8% for men and 39.3% for women (a 22% relative gap overall), "stabilized at roughly 16% since early 2025". Only Koning is at HBS (Cranney is at Stanford, Delecourt at Berkeley Haas), so the copy says "published by Harvard Business School" rather than "Harvard researchers". "Widest on the newest AI coding tools" rests on the paper's finding that the largest gap among its March 2026 studies (13 percentage points) was in frontier agentic coding tools, from Anthropic's survey of social scientists (Lyttelton, Massenkoff and Wilmers, 2026: 22% of men against 9% of women use coding agents more than once a week). It deliberately doesn't rest on the paper's web-traffic data, because visitors aren't users. The earlier 25% figure (18 studies, 140,000+ people) came from the February 2025 HBS Working Knowledge article on the first version. The stuck points come from the 230 quotes in the Female Invest research.
