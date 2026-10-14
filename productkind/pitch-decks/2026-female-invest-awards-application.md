@@ -67,14 +67,14 @@ https://littleparrot.app
 
 ## 90-second video script
 
-The complaint we hear most from our learners is that they run out of credits halfway through a course.
+Women adopt AI tools at a 25% lower rate than men, Harvard researchers found. I'm Kinga, co-founder of Little Parrot, and we want to close this gap.
 
-I'm Kinga, co-founder of Little Parrot. We teach women to build their own products with AI. The courses are hands-on, and you can do them after the children are asleep. Course by course, you plan your app, build it and launch it. 933 learners have signed up so far, and 160 have completed at least one course.
+AI can now write the code, but you still need technical skills to fix and launch what it builds. So at Little Parrot, women learn these skills by building their own product, in short courses they can do after the children are asleep. 933 learners have signed up, and 160 have finished at least one course.
 
-But AI tools like Lovable are expensive, and not everyone can afford them. On the free plan, a learner runs out of AI credits halfway through the course, and has to pay before she knows whether her idea works.
+I started my career in luxury fashion, then spent a decade in tech, learning to code and becoming a lead product manager. My co-founder has mentored women and girls in software development for 11 years.
 
-We've seen how access to technology can change a woman's career. I started mine in luxury fashion, I've spent the past decade in tech, and I've been mentoring women. My co-founder has mentored women and girls in software development for 11 years.
+Our vision is an incubator that teaches women technical skills and funds them, so they have time to build. Women who can afford it pay for their place, and their fees fund places for women who can't.
 
-Our vision is an incubator that teaches women technical skills and funds them for a year, so they have time to build their product and market it. Women who can afford it pay, and their fees fund free places. This award would fund its first, smallest version. £5,000 goes to five women who couldn't otherwise afford these tools: £1,000 each for their AI tools and hosting. The rest goes on finding them and on new courses.
+This award would fund its first, smallest version: £1,000 each to five women who couldn't otherwise afford their AI tools and hosting. The rest goes on finding them through partner organisations, and on courses for Claude Code, Codex and GitHub Copilot.
 
-By the end of 2027, I want all five to have launched their product and have paying users. I'd love to tell you more in London!
+By the end of 2027, I want all five to have launched their product and have paying users. By 2030, we want to fund 100 women a year. I'd love to tell you more in London!
