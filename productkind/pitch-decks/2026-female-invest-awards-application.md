@@ -16,7 +16,7 @@ Little Parrot
 
 ## In one sentence, what is it?
 
-Little Parrot helps women with a business idea build a digital product themselves with AI, in hands-on courses that fit around a busy life.
+Little Parrot's hands-on courses teach women with a business idea the technical skills to build and launch their own product with AI.
 
 ## What problem are you solving, and why does it matter?
 
