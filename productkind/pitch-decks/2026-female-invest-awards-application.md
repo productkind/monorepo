@@ -65,7 +65,7 @@ At Little Parrot, we cap our profits, and we still want to sell a lot. Because e
 
 I'm Kinga. I started in luxury fashion, learned to code at a bootcamp and became a lead product manager in tech.
 
-AI can write the code now, but in our research, women building with it got stuck on GitHub, databases and launching. And investors gave all-female founding teams 1.3% of European venture capital last year.
+All-female founding teams got 1.3% of European venture capital last year, so a woman with an idea often has to build it herself. AI can write the code, but many women building with it get stuck on GitHub, databases and launching.
 
 So my co-founder and I teach these skills in short, hands-on challenges you can do after the children are asleep. One in six of our learners has finished a course. Most online courses get fewer than one in ten.
 
