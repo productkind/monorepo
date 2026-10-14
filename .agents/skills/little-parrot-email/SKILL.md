@@ -312,7 +312,7 @@ When relevant, always link to:
 
 - Lead with user value, not about Little Parrot
 - Frame the community as "direct access to us" with credentials: Kinga (Lead Product Manager) and Tamas (Principal Software Engineer)
-- Mention the mission ("close the gender gap in AI") when introducing Little Parrot to new or lapsed users
+- Mention the mission ("help women build their own products, and their own income, with AI") when introducing Little Parrot to new or lapsed users
 - Confirm courses are "practical and designed to fit into a busy day"
 - Use "What you might not know yet" or "Here's what's included" framing for discovery
 - Keep the door open in cancellation/end emails without guilt-tripping

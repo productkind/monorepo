@@ -30,7 +30,7 @@ const Home = () => {
         </div>
         <div className="box box-highlight hero-tagline">
           <Typography component="h1" variant="h1" className="tagline main-title">
-            Closing the gender gap in AI technology adoption.
+            Helping women build their own products, and their own income, with&nbsp;AI.
           </Typography>
         </div>
         <div className="box right hero-what-we-do">
@@ -44,8 +44,8 @@ const Home = () => {
             supportive space where everyone belongs.
           </Typography>
           <Typography component="p" variant="body">
-            We’re on a mission to close the gender gap in AI technology adoption by making tech and
-            product skills accessible to everyone, regardless of their background.
+            We’re on a mission to help women build their own products, and their own income, with
+            AI.
           </Typography>
         </div>
       </section>

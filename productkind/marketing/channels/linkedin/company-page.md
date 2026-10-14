@@ -20,7 +20,7 @@ AI can now write the code, but building a product still takes technical knowledg
 
 At Little Parrot, you learn these skills by building your own product: you plan it, build it with an AI agent, fix its bugs and release it. The challenges are short enough for a coffee break or the evening after the children are asleep.
 
-Research published by Harvard Business School found that women use AI tools at a rate about 16% lower than men, and the gap is widest on the newest AI coding tools. Our mission is to close it.
+Research published by Harvard Business School found that women use AI tools at a rate about 16% lower than men, and the gap is widest on the newest AI coding tools. Our mission is to help women build their own products, and their own income, with AI.
 
 For product managers, we're building a learning path on how a web app works. Join the waiting list on littleparrot.app/guides/technical-product-manager.
 

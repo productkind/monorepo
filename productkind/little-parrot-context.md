@@ -6,7 +6,7 @@ Little Parrot is a microlearning platform that offers practical, science-based c
 
 ## Little Parrot's Mission
 
-Our mission is to close the gender gap in AI adoption.
+Our mission is to help women build their own products, and their own income, with AI.
 
 ## Why Little Parrot Exists
 
@@ -89,8 +89,8 @@ Lovable is the platform at the centre of Little Parrot's vibe coding courses. Li
 
 ### Relationship history
 
-There is no formal partnership, but the relationship has developed organically through three SheBuilds on Lovable buildathlons:
+There is no formal partnership, but the relationship has developed organically through three SheBuilds on Lovable buildathons:
 
-1. **October 2025** — Kinga participated as one of 215 accepted women in the first SheBuilds cohort.
-2. **December 2025** — Kinga took a support role, helping women in the second cohort via the SheBuilds Discord community.
-3. **March 2026 (IWD global event)** — Kinga and Tamas offered the "Build Your First App with Lovable" course for free, enabling more women to benefit from the free Lovable credits available on International Women's Day. They also attended a SheBuilds event in Singapore organised by a local Ambassador. There, they discovered that the Lovable Ambassador had used Little Parrot course content word-for-word in her own presentation — unprompted — because it was more effective for teaching Lovable than the materials Lovable itself provides. This was taken as strong validation of the course material's quality and practical usefulness.
+1. **October 2025:** Kinga participated as one of 215 accepted women in the first SheBuilds cohort.
+2. **December 2025:** Kinga took a support role, helping women in the second cohort via the SheBuilds Discord community.
+3. **March 2026 (IWD global event):** Kinga and Tamas offered the "Build Your First App with Lovable" course for free, enabling more women to benefit from the free Lovable credits available on International Women's Day. They also attended a SheBuilds event in Singapore organised by a local Ambassador. There, they discovered that the Lovable Ambassador had used Little Parrot course content word-for-word in her own presentation – unprompted – because it was more effective for teaching Lovable than the materials Lovable itself provides. This was taken as strong validation of the course material's quality and practical usefulness.
