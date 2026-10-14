@@ -69,7 +69,7 @@ AI can write the code now, but in our research, women building with it got stuck
 
 So my co-founder and I teach these skills in short, hands-on challenges you can do after the children are asleep. One in six of our learners has finished a course. Most online courses get fewer than one in ten.
 
-Companies pay us to train their product managers, and at two companies, our journey has already been put forward for next year's learning budget.
+Companies need the same skills, so they pay us to train their product managers. Two have already put our upcoming journey forward for next year's learning budget. Company sales are what fund the women.
 
 This award funds our first five women: £1,000 each for AI tools and hosting, plus monthly calls with us. The rest goes on live events and online promotion to find customers.
 
