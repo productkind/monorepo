@@ -34,7 +34,7 @@ Launched and generating revenue
 
 By 2030, Little Parrot will be an incubator that teaches women to build their own products and funds 100 of them a year: their AI tools first, then the time they spend building.
 
-AI means a woman with an idea can build it herself, without investors or developers, and earn her own income. Women were left behind once before: in 1984, 37% of US computer science graduates were women, and by 2010, only 18%. Harvard researchers find women already adopt AI tools at a 25% lower rate than men. We don't want them to miss this chance too.
+Women were left behind once before: in 1984, 37% of US computer science graduates were women, and by 2010, only 18%. A Harvard Business School paper finds women use AI tools at a rate about 16% lower than men, and the gap is widest on the newest AI coding tools, the ones that let a woman build a product herself. We don't want them to miss this chance too.
 
 Our course sales pay for the incubator. We're two founders who built Little Parrot with AI, so we don't need to grow huge to make a profit. We cap our profits, and everything above it funds women.
 
