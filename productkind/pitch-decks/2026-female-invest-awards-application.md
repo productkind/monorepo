@@ -16,17 +16,17 @@ Little Parrot
 
 ## In one sentence, what is it?
 
-Little Parrot's hands-on courses teach women with a business idea the technical skills to build and launch their own product with AI.
+Little Parrot teaches women technical skills for the AI era, and our profits above a set cap buy AI tools for women who can't afford them.
 
 ## What problem are you solving, and why does it matter?
 
-AI can now write the code, but building a product still takes technical knowledge. In 230 quotes we gathered from women building with AI, they got stuck on GitHub, databases and launching. "I don't know what I don't know," one said. So they struggle to fix, secure or launch what they've built, and the idea often stays a prototype.
+AI can now write the code, but building a product still takes technical knowledge. In 230 quotes we gathered from women building with AI, they got stuck on GitHub, databases and launching. "I don't know what I don't know," one said. So their ideas stay prototypes.
 
-Women-led businesses are underfunded: in 2025, all-female founding teams got 1.3% of European venture capital (PitchBook). So building the product herself, without raising money, gives a woman a route to economic independence, if she has the skills to finish it.
+And investors won't close the gap for them: in 2025, all-female founding teams got 1.3% of European venture capital (PitchBook). For a woman with an idea, building the product herself is the realistic route to her own income.
 
-At Little Parrot, a woman learns these skills by building her own product, in short courses she can do after the children are asleep. Course by course, she plans her app, builds it, fixes it and launches it. 933 learners have signed up and 160 have finished at least one course.
+Little Parrot exists to close this gap. Women learn by doing, in short, hands-on challenges they can do after the children are asleep: course by course, they plan, build, fix and launch their own product. 933 learners have joined, and one in six has finished a course, against fewer than one in ten for online courses. Sign-ups from our free courses at women's buildathons grew nearly eightfold in three months.
 
-We've both seen how access to technology changes a woman's career. I started mine in luxury fashion, then spent a decade in tech, learning to code and becoming a lead product manager. I've been mentoring women, and my co-founder has mentored women and girls in software development for 11 years.
+We know this gap from the inside. I started my career in luxury fashion, learned to code and became a lead product manager in tech. My co-founder has mentored women and girls in software development for 11 years. And we built Little Parrot ourselves, with AI.
 
 ## What stage are you at?
 
@@ -34,34 +34,30 @@ Launched and generating revenue
 
 ## What's your vision? Don't hold back, we love big goals.
 
-In 1984, 37% of computer science graduates in the US were women. By 2010, it was 18%. NPR's Planet Money traced part of the fall to the first home computers being marketed mainly to boys.
+In 1984, 37% of computer science graduates in the US were women. By 2010, it was 18%. AI is opening a gap like this again: Harvard Business School researchers found that women adopt AI tools at a 25% lower rate than men. We're going to close it.
 
-AI is opening a gap like this again. Across 18 studies of more than 140,000 people, Harvard Business School researchers found that women adopt AI tools at a 25% lower rate than men. We don't want history to repeat itself, so our mission is to close this gap.
+Our vision is an incubator that teaches women technical skills and funds them while they build their own products. Building software gives you power: a woman who builds her own product earns her own income, solves problems her community has, and shows other women they can build too.
 
-Building software gives you power, and we want more women to have it. When a woman builds her own product, she earns her own income, solves problems her community has, and shows other women they can build too.
+We'll pay for it with a business built differently. Our model: companies pay €800 a place to train their product managers, and women pay €299 to build their own product.
 
-But it takes time to build a successful business. So our vision is an incubator that teaches women technical skills and funds them, giving them that time. AI and fintech companies sponsor free places, and women who can afford it pay for their own.
+We're two founders working with AI, so we don't need to grow huge to be profitable. And we cap our profits: everything above the cap funds women. So the more we sell, the more women we fund. Above the cap, every three company places pay for two women's AI tools.
 
-Today, we're a for-profit, purpose-driven business with self-paced courses where women learn technical skills and build their products with AI, and an Open Wings Scholarship that gives underrepresented groups in tech lifetime access.
-
-By 2030, we want to fund 100 women a year.
+We start with the tools, then fund their time. By 2030, we'll fund 100 women a year, which means selling about 150 company places a year above our cap.
 
 ## If you win, what will this money help you do?
 
-This award would fund the first, smallest version of our incubator. Our Open Wings Scholarship already gives lifetime course access, but we can't pay for our learners' AI tools. So half the £10,000 goes to five women who can't afford them: £1,000 each for AI tools and hosting, plus a scholarship and monthly calls with us.
+This award funds our first five women and puts more money behind the channels that already bring us learners.
 
-We'll find them through nonprofits like the Cherie Blair Foundation for Women and ReDI School. Women tell us what they want to build, and we pick the five with the clearest problem, user and way to earn.
+£5,000 goes to five women who want to build their own product with AI but can't afford the tools: £1,000 each for AI tools and hosting, free access to our courses, and monthly calls with us. We'll open applications to our learners, ask nonprofits such as the Cherie Blair Foundation for Women and ReDI School to share the call, and pick the five with the clearest problem, user and way to earn.
 
-The other £5,000:
+£5,000 goes on reaching more people, our No. 1 barrier to growth:
 
-- £2,000 creating a course on the AI agent the five pick, like Claude Code. Even in desktop apps, these leave version control, hosting and checking their work to you, where women in our research got stuck.
-- £1,500 testing paid places with an application page, waiting list and ads.
-- £1,000 turning the launches into a pitch for AI and fintech sponsors.
-- £500 finding the five women.
+- £3,000 on more live events. Our events at conferences in 2025 already turned attendees into learners.
+- £2,000 on online promotion: LinkedIn ads aimed at product managers and their employers, cross-promotion with women's tech communities, and rewards for learners who refer friends.
 
-This round shows whether paying for tools helps women launch, and who will pay for the next round. Winning would also help with our No. 1 barrier to profitability: reaching more people.
+We'll move the money to whichever channel brings in paying customers more cheaply.
 
-By the end of 2027, we want all five products live with their own customers.
+Our goal for the end of 2027: all five women's products live with their own customers, the first of many we fund from our profits.
 
 ## Where can we find you online?
 
@@ -69,12 +65,12 @@ https://littleparrot.app
 
 ## 90-second video script
 
-All-female founding teams got 1.3% of European venture capital last year. So by 2030, we want to run an incubator that funds 100 women a year, and £10,000 would start it with five. I'm Kinga, co-founder of Little Parrot.
+All-female founding teams got 1.3% of European venture capital last year. So we built a business whose profits will fund women.
 
-The incubator would teach women to build their own product with AI, and fund them while they do. We already run the courses: 933 learners have signed up, 160 have finished a course, and we're earning revenue.
+I'm Kinga, co-founder of Little Parrot. I started in luxury fashion and became a lead product manager in tech. Now we teach women the technical skills to build with AI. 933 learners have joined, and one in six has finished a course, against fewer than one in ten for online courses.
 
-£5,000 goes to five women who can't afford the AI tools: £1,000 each for tools and hosting, plus monthly calls with me and my co-founder, who has mentored women and girls in software development for 11 years. £2,000 builds a course on AI agents like Claude Code. £1,500 tests paid places, and £1,500 finds the five women and builds our pitch for sponsors.
+Our model is simple. Companies pay €800 a place to train their product managers, and women pay €299 to build their own product. And we cap our profits: everything above the cap buys AI tools for women who can't afford them. Every three company places fund two women. So we want to sell a lot.
 
-By the end of 2027, we want all five products live with paying users. With those launches, we'll ask AI and fintech companies to sponsor the next round's free places. And women who can afford it will pay for their own place.
+This award starts it. £5,000 gives five women £1,000 each for AI tools and hosting, plus monthly calls with us. The other £5,000 goes into the live events that already bring us learners, and into online promotion.
 
-I'd love to tell you more in London!
+By 2030, we'll fund 100 women a year. I'd love to tell you how in London!
