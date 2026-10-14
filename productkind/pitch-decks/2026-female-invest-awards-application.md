@@ -20,7 +20,7 @@ Little Parrot's hands-on courses teach women with a business idea the technical 
 
 ## What problem are you solving, and why does it matter?
 
-AI can now write the code, but building a product still takes technical knowledge. In 230 quotes we gathered from women building with AI, they got stuck on GitHub, databases and launching. "The problem is I can't judge what it's doing," one wrote. So they struggle to fix, secure or launch what they've built, and the idea often stays a prototype.
+AI can now write the code, but building a product still takes technical knowledge. In 230 quotes we gathered from women building with AI, they got stuck on GitHub, databases and launching. "I don't know what I don't know," one said. So they struggle to fix, secure or launch what they've built, and the idea often stays a prototype.
 
 Women-led businesses are underfunded: in 2025, all-female founding teams got 1.3% of European venture capital (PitchBook). So building the product herself, without raising money, gives a woman a route to economic independence, if she has the skills to finish it.
 
