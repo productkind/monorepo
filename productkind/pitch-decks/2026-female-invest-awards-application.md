@@ -16,7 +16,7 @@ Little Parrot
 
 ## In one sentence, what is it?
 
-Little Parrot teaches women and product teams to build with AI, and profits above our cap buy AI tools for women who can't afford them.
+Little Parrot teaches women to build with AI, and profits above our cap buy AI tools for women who can't afford them.
 
 ## What problem are you solving, and why does it matter?
 
@@ -32,24 +32,26 @@ Launched and generating revenue
 
 ## What's your vision? Don't hold back, we love big goals.
 
-By 2030, Little Parrot will be an incubator that teaches women to build their own products and funds 100 of them a year. We'll fund their AI tools first, then their time.
+By 2030, Little Parrot will be an incubator that teaches women to build their own products and funds 100 of them a year: their AI tools first, then the time they spend building.
 
-AI means a woman with an idea can build the product herself, without investors or developers. It's a route to her own income, and we want as many women as possible to take it. Women were left behind once before: in 1984, 37% of US computer science graduates were women, and by 2010, only 18%. Harvard researchers already see it happening with AI: women adopt AI tools at a 25% lower rate than men. We don't want women to miss this chance too.
+AI means a woman with an idea can build it herself, without investors or developers, and earn her own income. Women were left behind once before: in 1984, 37% of US computer science graduates were women, and by 2010, only 18%. Harvard researchers find women already adopt AI tools at a 25% lower rate than men. We don't want them to miss this chance too.
 
-Our sales pay for it. Companies buy our learning journey for their product managers, and two have already put it forward for next year's learning budget. Women pay to learn to build their own product. We're two founders who built Little Parrot with AI, so we don't need to grow huge to make a profit. Our salaries count as costs, and we cap our profits: everything above the cap funds women. So the more we sell, the more women we fund.
+Our course sales pay for the incubator. We're two founders who built Little Parrot with AI, so we don't need to grow huge to make a profit. We cap our profits, and everything above it funds women.
+
+Women who can afford it pay to learn. Companies need the same skills for their product managers and can pay far more than individuals, so in 2027 we're focusing on them. Two have already put our learning journey forward for next year's budget. Bigger sales mean more profit above the cap, so the more we sell, the more women we fund.
 
 Every woman we fund will build a product of her own, earn an income of her own, and show the women around her they can build too.
 
 ## If you win, what will this money help you do?
 
-This £10,000 unlocks our next step: our first company customers and our first funded women.
+£10,000 starts our incubator with five women and finds the company customers whose sales will fund the next five.
 
-£5,000 funds our incubator's first five women. Each gets £1,000 for AI tools and hosting, free course access and a monthly call with us. We'll open applications to our learners and ask nonprofits like the Cherie Blair Foundation for Women and ReDI School to share the call. We'll pick the five with the clearest problem, user and way to earn.
+Each person gets £1,000 for AI tools and hosting, free course access and a monthly call with us. We'll open applications to our community and ask nonprofits like the Cherie Blair Foundation for Women and ReDI School to share the call. We'll pick the five with the clearest problem, user and way to earn.
 
 £5,000 goes on reaching customers, our No. 1 barrier to growth. Two channels already bring us learners: live events, and free courses at women's buildathons, where sign-ups grew nearly eightfold in three months.
 
-- £3,000 on more live events.
-- £2,000 on online promotion: LinkedIn ads, cross-promotion with women's tech communities and referral rewards.
+- £3,000 on live events for product managers, whose companies pay for their learning.
+- £2,000 on online promotion: LinkedIn ads, cross-promotion with women's communities and referral rewards.
 
 We'll move money to the channel that brings paying customers most cheaply.
 
@@ -69,7 +71,7 @@ All-female founding teams got 1.3% of European venture capital last year, so a w
 
 So my co-founder and I teach the technical skills in short, hands-on challenges you can do after the children are asleep. 933 learners have signed up, and one in six has finished a course. Most online courses get fewer than one in ten.
 
-Companies need the same skills, so they buy our learning journey for their product managers. Two have already put it forward for next year's learning budget. Company sales are what fund the women.
+Companies need the same skills for their product managers, and they can pay far more than a woman paying for herself. Two have already put our learning journey forward for next year's budget. So company sales are what will fund the women.
 
 Those five women get £1,000 each for AI tools and hosting, plus monthly calls with us. The rest goes on live events and online promotion to find more customers.
 
