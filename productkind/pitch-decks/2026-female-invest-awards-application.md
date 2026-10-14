@@ -54,10 +54,12 @@ We'll find them through nonprofits like the Cherie Blair Foundation for Women an
 
 The other £5,000:
 
-- £4,000 creating courses for Claude Code, Codex and GitHub Copilot. Even in desktop apps, they leave version control, hosting and checking their work to you, where women in our research got stuck.
-- £1,000 for partnerships and an application page with a waiting list for paid places.
+- £2,000 creating a course on the AI agent the five pick, like Claude Code. Even in desktop apps, these leave version control, hosting and checking their work to you, where women in our research got stuck.
+- £1,500 testing paid places with an application page, waiting list and ads.
+- £1,000 turning the launches into a pitch for AI and fintech sponsors.
+- £500 finding the five women.
 
-This round shows whether paying for tools helps women launch, and what else they need. Then we'll ask AI and fintech companies to sponsor the next round, and open paid places to the waiting list. Winning would also help with our No. 1 barrier to profitability: reaching more people.
+This round shows whether paying for tools helps women launch, and who will pay for the next round. Winning would also help with our No. 1 barrier to profitability: reaching more people.
 
 By the end of 2027, we want all five products live with their own customers.
 
@@ -67,14 +69,12 @@ https://littleparrot.app
 
 ## 90-second video script
 
-In 2025, all-female founding teams got 1.3% of European venture capital. AI means a woman can now build her product without investors, but she still needs technical skills to understand and launch what it builds.
+All-female founding teams got 1.3% of European venture capital last year. So by 2030, we want to run an incubator that funds 100 women a year, and £10,000 would start it with five. I'm Kinga, co-founder of Little Parrot.
 
-I'm Kinga, co-founder of Little Parrot. Women learn these skills with us by building their own product, in short courses they can do after the children are asleep. 933 learners have signed up, and 160 have finished a course.
+The incubator would teach women to build their own product with AI, and fund them while they do. We already run the courses: 933 learners have signed up, 160 have finished a course, and we're earning revenue.
 
-I started in luxury fashion, then spent a decade in tech, learning to code and becoming a lead product manager. My co-founder has mentored women and girls in software development for 11 years.
+£5,000 goes to five women who can't afford the AI tools: £1,000 each for tools and hosting, plus monthly calls with me and my co-founder, who has mentored women and girls in software development for 11 years. £2,000 builds a course on AI agents like Claude Code. £1,500 tests paid places, and £1,500 finds the five women and builds our pitch for sponsors.
 
-But skills don't pay for AI tools, or for the time it takes to build a business. So our vision is an incubator that teaches these skills and funds women while they build. AI and fintech companies sponsor free places, and women who can afford it pay for their own.
+By the end of 2027, we want all five products live with paying users. With those launches, we'll ask AI and fintech companies to sponsor the next round's free places. And women who can afford it will pay for their own place.
 
-This award would fund its first, smallest version: £1,000 each to five women who can't afford their AI tools and hosting, plus monthly calls with us. The rest goes on finding them, and on courses for AI agents like Claude Code.
-
-By the end of 2027, I want all five to have launched, with paying users. By 2030, we want to fund 100 women a year. I'd love to tell you more in London!
+I'd love to tell you more in London!
