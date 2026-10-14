@@ -22,7 +22,7 @@ Little Parrot teaches women and product teams to build with AI, and profits abov
 
 "I don't know what I don't know." A woman said it at a women-only meetup, and it's the problem we're solving.
 
-AI can write the code now, but building a product still takes technical knowledge. In about 230 quotes we gathered from women building with AI, they got stuck on GitHub, databases and launching. So their ideas stay prototypes and never reach a paying customer. And investors won't close the gap: in 2025, all-female founding teams got 1.3% of European venture capital (PitchBook). For a woman with an idea, building the product herself is the realistic route to her own income.
+AI can write the code now, but building a product still takes technical knowledge. In about 230 quotes we gathered from women building with AI, they got stuck on version control, databases and launching. So their ideas stay prototypes and never reach a paying customer. And investors won't close the gap: in 2025, all-female founding teams got 1.3% of European venture capital (PitchBook). For a woman with an idea, building the product herself is the realistic route to her own income.
 
 We teach these skills in short, hands-on challenges a woman can do after her children are asleep. Course by course, she plans, builds, fixes and launches her own product. One in six of our 933 learners has finished a course. Online courses typically see fewer than one in ten.
 
@@ -65,9 +65,9 @@ At Little Parrot, we cap our profits, and we still want to sell a lot. Because e
 
 I'm Kinga. I started in luxury fashion, learned to code at a bootcamp and became a lead product manager in tech.
 
-All-female founding teams got 1.3% of European venture capital last year, so a woman with an idea often has to build it herself. AI can write the code, but many women building with it get stuck on GitHub, databases and launching.
+All-female founding teams got 1.3% of European venture capital last year, so a woman with an idea often has to build it herself. AI can write the code, but many women building with it get stuck before they can launch.
 
-So my co-founder and I teach these skills in short, hands-on challenges you can do after the children are asleep. One in six of our learners has finished a course. Most online courses get fewer than one in ten.
+So my co-founder and I teach the technical skills in short, hands-on challenges you can do after the children are asleep. One in six of our learners has finished a course. Most online courses get fewer than one in ten.
 
 Companies need the same skills, so they buy our learning journey for their product managers. Two have already put it forward for next year's learning budget. Company sales are what fund the women.
 
