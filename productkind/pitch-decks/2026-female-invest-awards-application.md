@@ -48,16 +48,16 @@ By 2030, we want to fund 100 women a year.
 
 ## If you win, what will this money help you do?
 
-This award would fund the first, smallest version of our incubator. Half of the £10,000 goes straight to five women who want to build their own product with AI but couldn't otherwise afford the tools. Each woman gets £1,000 for her AI tools and hosting her digital product, and lifetime access to Little Parrot through our Open Wings Scholarship.
+This award would fund the first, smallest version of our incubator. Our Open Wings Scholarship already gives lifetime course access, but we can't pay for our learners' AI tools. So half the £10,000 goes to five women who can't afford them: £1,000 each for AI tools and hosting, plus a scholarship and monthly calls with us.
 
-We'll find them through trustworthy organisations that support women who need this, such as the Cherie Blair Foundation for Women and ReDI School. Each woman tells us what she wants to build, and we choose the five with the clearest problem, user and way to earn.
+We'll find them through nonprofits like the Cherie Blair Foundation for Women and ReDI School. Women tell us what they want to build, and we pick the five with the clearest problem, user and way to earn.
 
-The other £5,000 goes on:
+The other £5,000:
 
-- £4,000 creating courses for Claude Code, Codex and GitHub Copilot.
-- £1,000 setting up partnerships and the application page.
+- £4,000 creating courses for Claude Code, Codex and GitHub Copilot. These AI agents work in the terminal and GitHub, where women in our research got stuck, and paying learners will take them too.
+- £1,000 for partnerships and an application page with a waiting list for paid places.
 
-This first round tells us whether paying for the tools helps women launch, what else they need, and which partners reach them. We'll take those answers and the five launches to AI companies and partners, to fund a bigger round. The publicity from winning would also help with our No. 1 barrier to reaching profitability: reaching more people.
+This round shows whether paying for tools helps women launch, and what else they need. Then we'll take the launches and waiting list to AI companies, to co-fund the next round alongside paid places. Winning would also help with our No. 1 barrier to profitability: reaching more people.
 
 By the end of 2027, we want all five products live with their own customers.
 
