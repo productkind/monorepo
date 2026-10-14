@@ -63,14 +63,14 @@ https://littleparrot.app
 
 At Little Parrot, we cap our profits, and we still want to sell a lot. Because everything above the cap buys AI tools for women who can't afford them.
 
-I'm Kinga. I started in luxury fashion, learned to code at a bootcamp and became a lead product manager in tech.
+I'm Kinga, co-founder of Little Parrot. I started in luxury fashion, learned to code and became a lead product manager in tech.
 
 All-female founding teams got 1.3% of European venture capital last year, so a woman with an idea often has to build it herself. AI can write the code, but many women building with it get stuck before they can launch.
 
-So my co-founder and I teach the technical skills in short, hands-on challenges you can do after the children are asleep. One in six of our learners has finished a course. Most online courses get fewer than one in ten.
+So my co-founder and I teach the technical skills in short, hands-on challenges you can do after the children are asleep. 933 learners have signed up, and one in six has finished a course. Most online courses get fewer than one in ten.
 
 Companies need the same skills, so they buy our learning journey for their product managers. Two have already put it forward for next year's learning budget. Company sales are what fund the women.
 
-This award funds our first five women: £1,000 each for AI tools and hosting, plus monthly calls with us. The rest goes on live events and online promotion to find customers.
+This award funds our first five women: £1,000 each for AI tools and hosting, plus monthly calls with us. The rest goes on live events and online promotion to find more customers.
 
-By 2030, we'll fund 100 women a year. The more we sell, the more women we fund.
+By 2030, our incubator will fund 100 women a year. The more we sell, the more women we fund.
