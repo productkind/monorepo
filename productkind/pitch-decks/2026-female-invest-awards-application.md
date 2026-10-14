@@ -16,7 +16,7 @@ Little Parrot
 
 ## In one sentence, what is it?
 
-Little Parrot teaches women to build with AI, and profits above our cap buy AI tools for women who can't afford them.
+Little Parrot teaches women to build their own products with AI, and profits above a set cap will fund women who can't afford AI tools.
 
 ## What problem are you solving, and why does it matter?
 
