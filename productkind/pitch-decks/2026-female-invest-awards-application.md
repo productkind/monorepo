@@ -36,7 +36,7 @@ By 2030, Little Parrot will be an incubator that teaches women to build their ow
 
 AI means a woman with an idea can build the product herself, without investors or developers. It's a route to her own income, and we want as many women as possible to take it. Women were left behind once before: in 1984, 37% of US computer science graduates were women, and by 2010, only 18%. Harvard researchers already see it happening with AI: women adopt AI tools at a 25% lower rate than men. We don't want women to miss this chance too.
 
-Our sales pay for it. Companies pay us to train their product managers, and two have already put our upcoming learning journey forward for next year's learning budget. Women pay to learn to build their own product. We're two founders who built Little Parrot with AI, so we don't need to grow huge to make a profit. Our salaries count as costs, and we cap our profits: everything above the cap funds women. So the more we sell, the more women we fund.
+Our sales pay for it. Companies buy our learning journey for their product managers, and two have already put it forward for next year's learning budget. Women pay to learn to build their own product. We're two founders who built Little Parrot with AI, so we don't need to grow huge to make a profit. Our salaries count as costs, and we cap our profits: everything above the cap funds women. So the more we sell, the more women we fund.
 
 Every woman we fund will build a product of her own, earn an income of her own, and show the women around her they can build too.
 
@@ -69,7 +69,7 @@ AI can write the code now, but in our research, women building with it got stuck
 
 So my co-founder and I teach these skills in short, hands-on challenges you can do after the children are asleep. One in six of our learners has finished a course. Most online courses get fewer than one in ten.
 
-Companies need the same skills, so they pay us to train their product managers. Two have already put our upcoming journey forward for next year's learning budget. Company sales are what fund the women.
+Companies need the same skills, so they buy our learning journey for their product managers. Two have already put it forward for next year's learning budget. Company sales are what fund the women.
 
 This award funds our first five women: £1,000 each for AI tools and hosting, plus monthly calls with us. The rest goes on live events and online promotion to find customers.
 
