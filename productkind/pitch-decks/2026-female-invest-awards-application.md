@@ -65,12 +65,12 @@ https://littleparrot.app
 
 By 2030, we want to run an incubator that buys 100 women a year the time to build their own products with AI, and £10,000 would start it with five. We'll fund it from profits above a set cap, so we want to sell a lot.
 
-I'm Kinga, co-founder of Little Parrot. I started in luxury fashion, learned to code and became a lead product manager in tech.
+I'm Kinga, co-founder of Little Parrot. I started in luxury fashion, learned to code and became a lead product manager in tech. Somehow, women are expected to choose between meaningful work and making a lot of money. I want to show we can do both.
 
 All-female founding teams got 1.3% of European venture capital last year, so a woman with an idea often has to build it herself. AI can write the code, but many women get stuck before they can launch.
 
-So my co-founder and I teach the technical skills in short, hands-on challenges you can do after the children are asleep. 933 learners have signed up, and one in six has finished a course. Most online courses get fewer than one in ten. But our biggest competitor is everything else demanding women's time. So those five women get £1,000 each to buy time: childcare, meals, help at home, whatever they need. They decide.
+So my co-founder and I teach the technical skills in short, hands-on challenges. One in six of our 933 learners has finished a course. Most online courses get fewer than one in ten. But our biggest competitor is everything else demanding women's time. So those five women get £1,000 each to buy time: childcare, meals, help at home, whatever they need. They decide.
 
-Companies need the same skills for their product managers, and can pay far more than individuals. Two have already put our learning journey forward for next year's budget. The other £5,000 goes on live events and online promotion to find more customers.
+Companies need the same skills and can pay far more than individuals. Two have already put our learning journey forward for next year's budget. The other £5,000 goes on finding more customers.
 
 The more we sell, the more women we fund.
