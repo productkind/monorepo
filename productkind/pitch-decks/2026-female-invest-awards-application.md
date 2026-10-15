@@ -71,7 +71,7 @@ I'm Kinga, co-founder of Little Parrot. I started in luxury fashion, learned to 
 
 All-female founding teams got 1.3% of European venture capital last year, so a woman with an idea often has to build it herself. Now, AI can write the code, but many women get stuck before they can launch.
 
-So my co-founder and I teach the technical skills in short, hands-on challenges. One in six of our 933 learners has finished a course. Most online courses get fewer than one in ten.
+So we built an app that teaches the technical skills in short, hands-on challenges. One in six of our 933 learners has finished a course. Most online courses get fewer than one in ten.
 
 But our biggest competitor is everything else demanding women's time. So the incubator's first five women get £1,000 each to buy time: childcare, meals, help at home, whatever they need. They decide.
 
