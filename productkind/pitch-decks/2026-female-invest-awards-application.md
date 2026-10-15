@@ -65,15 +65,14 @@ https://littleparrot.app
 
 ## 90-second video script
 
-By 2030, we want to run an incubator that buys 100 women a year the time to build their own products with AI. £10,000 would start it with five.
+By 2030, we want to run an incubator that buys 100 women a year the time to build their own products with AI. The £10,000 would start it with five.
 
 I'm Kinga, co-founder of Little Parrot. I started in luxury fashion, learned to code in a bootcamp and became a lead product manager in tech.
 
 All-female founding teams got 1.3% of European venture capital last year, so a woman with an idea often has to build it herself. Now, AI can write the code, but many women get stuck before they can launch.
-
 So we built an app that teaches the technical skills in short, hands-on challenges. One in six of our 933 learners has finished a course. Most online courses get fewer than one in ten.
 
-But our biggest competitor is everything else demanding women's time. So the incubator's first five women get £1,000 each to buy time: childcare, meals, help at home, whatever they need. They decide.
+But our biggest competitor is everything else demanding women's time. So the incubator's first five women get £1,000 each to buy time: childcare, meals, whatever they need. They decide.
 
 Companies need the same skills and can pay far more than individuals. Two have already put our learning journey forward for next year's budget, and the other £5,000 goes on finding more of them. We'll fund the incubator from profits above a set cap.
 
