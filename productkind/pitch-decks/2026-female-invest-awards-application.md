@@ -65,17 +65,19 @@ https://littleparrot.app
 
 ## 90-second video script
 
-By 2030, we want to run an incubator that buys 100 women a year the time to build their own products with AI, and £10,000 would start it with five. We'll fund it from profits above a set cap, so we want to sell a lot.
+By 2030, we want to run an incubator that buys 100 women a year the time to build their own products with AI. £10,000 would start it with five.
 
-I'm Kinga, co-founder of Little Parrot. I started in luxury fashion, learned to code in a bootcamp and became a lead product manager in tech. Somehow, women are still expected to choose between meaningful work and making a lot of money. I want to show we can do both.
+I'm Kinga, co-founder of Little Parrot. I started in luxury fashion, learned to code in a bootcamp and became a lead product manager in tech.
 
 All-female founding teams got 1.3% of European venture capital last year, so a woman with an idea often has to build it herself. Now, AI can write the code, but many women get stuck before they can launch.
 
-So my co-founder and I teach the technical skills in short, hands-on challenges. One in six of our 933 learners has finished a course. Most online courses get fewer than one in ten. But our biggest competitor is everything else demanding women's time. So those five women get £1,000 each to buy time: childcare, meals, help at home, whatever they need. They decide.
+So my co-founder and I teach the technical skills in short, hands-on challenges. One in six of our 933 learners has finished a course. Most online courses get fewer than one in ten.
 
-Companies need the same skills and can pay far more than individuals. Two have already put our learning journey forward for next year's budget. The other £5,000 goes on finding more customers.
+But our biggest competitor is everything else demanding women's time. So the incubator's first five women get £1,000 each to buy time: childcare, meals, help at home, whatever they need. They decide.
 
-The more we sell, the more women we fund.
+Companies need the same skills and can pay far more than individuals. Two have already put our learning journey forward for next year's budget, and the other £5,000 goes on finding more of them. We'll fund the incubator from profits above a set cap.
+
+Somehow, women are still expected to choose between meaningful work and making a lot of money. I want to show we can do both. The more we sell, the more women we fund.
 
 ## Sources
 
