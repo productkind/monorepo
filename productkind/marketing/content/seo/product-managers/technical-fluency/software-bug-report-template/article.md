@@ -322,9 +322,9 @@ It should contain enough information for another person to reconstruct the probl
 
 ## Become a Technical Product Manager Without Becoming an Engineer
 
-We're testing interest in an upcoming Little Parrot transformational learning path called [**Become a Technical Product Manager Without Becoming an Engineer**](/guides/technical-product-manager).
+We're testing interest in an upcoming Little Parrot transformational learning journey called [**Become a Technical Product Manager Without Becoming an Engineer**](/guides/technical-product-manager).
 
-It's for non-technical software Product Managers who want to understand how their product works, investigate problems and contribute to technical decisions with better evidence. The learning path isn't available yet. If you'd like us to tell you when it opens, [visit the landing page and register your interest](/guides/technical-product-manager).
+It's for non-technical software Product Managers who want to understand how their product works, investigate problems and contribute to technical decisions with better evidence. The learning journey isn't available yet. If you'd like us to tell you when it opens, [visit the landing page and register your interest](/guides/technical-product-manager).
 
 The next time you create a bug report, write the title last. Read the completed report, then name the observed behaviour and the condition that produces it. Could another person understand the failure from that title without being told your suspected cause?
 
@@ -340,4 +340,4 @@ The next time you create a bug report, write the title last. Read the completed 
 - Use Tamas Kokeny's byline and engineering credentials.
 - Add `Article` and `BreadcrumbList` structured data that matches the visible page.
 - Show a published date and updated date.
-- Validate the learning-path landing page and interest form before publishing.
+- Validate the learning-journey landing page and interest form before publishing.

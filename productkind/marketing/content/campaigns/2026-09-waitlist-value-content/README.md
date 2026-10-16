@@ -7,7 +7,7 @@ channels: [linkedin, email, tiktok, youtube, instagram, communities]
 
 # Ten content ideas that feed the two waitlists
 
-Five per audience. Each one teaches something a person can use the same day, collects an email, and sends the reader to the learning path that continues the work.
+Five per audience. Each one teaches something a person can use the same day, collects an email, and sends the reader to the learning journey that continues the work.
 
 ## How this sits next to what already exists
 
@@ -28,7 +28,7 @@ Taken from our own data and research, not from general practice.
 
 - **LinkedIn carries the conversion.** It converts impressions to site visits at roughly 0.9%, more than ten times TikTok's rate, and delivers more visitors than every other social channel combined. Documents and carousels are its best format (30 to 67% engagement). ([channel strategy](../../../channel-strategy-2026-08.md))
 - **TikTok is a testing lab.** 16.7K views produced 8 followers and about 11 site visits. Use it to find out which opening line works and what people are searching for, then move the winner to LinkedIn. Don't judge it on traffic.
-- **YouTube changes role.** The strategy drops Shorts because the channel served women-focused content to a 100% male audience. That mismatch is about the subject, not the platform, so YouTube stays here for the Product Manager path only, as longer search-intent video. The search demand is real: `what is an api` is 673,000 US a month, `ci/cd` 14,800, `what is technical debt` 2,900, `what is vibe coding` 49,500. ([search-demand analysis](../../../../ai-research/pm-technical-fluency/pm-technical-fluency-search-demand-analysis-2026-08.md))
+- **YouTube changes role.** The strategy drops Shorts because the channel served women-focused content to a 100% male audience. That mismatch is about the subject, not the platform, so YouTube stays here for the Product Manager journey only, as longer search-intent video. The search demand is real: `what is an api` is 673,000 US a month, `ci/cd` 14,800, `what is technical debt` 2,900, `what is vibe coding` 49,500. ([search-demand analysis](../../../../ai-research/pm-technical-fluency/pm-technical-fluency-search-demand-analysis-2026-08.md))
 - **Instagram is Reels only.** Carousels reached 18 to 35 accounts against 130 to 165 for Reels.
 - **Community and partner emails are the highest return per hour of work.** One Geek Girls email drove 106 unique visitors, three times Instagram's entire year.
 - **No deficit framing.** "Women are behind" alienates the most capable part of this audience, and there's an articulate refusal of it on the record. What works is deflating the competition rather than the reader: "we are all early", "most people are asking ChatGPT to write captions and calling it a day". ([women research §11.5, §15.5](../../../../ai-research/women-ai-building-research-2026-08.md))
@@ -56,7 +56,7 @@ Be clear about the scope: these are checks she can run herself, and they don't a
 
 **Channels.** LinkedIn document (lead). Instagram Reel and TikTok cut showing three of the checks running against a real app, with the failure visible on screen. One email to registered users who haven't paid. Discord SheBuilds and the women-in-tech Slacks, where this audience already sits.
 
-**Route.** Last page of the worksheet: the learning path covers the rest of it, steps 4 and 5, testing the journeys customers depend on. Link to the waitlist.
+**Route.** Last page of the worksheet: the learning journey covers the rest of it, steps 4 and 5, testing the journeys customers depend on. Link to the waitlist.
 
 ## 2. What you actually own when you build on Lovable, Replit or Base44
 
@@ -66,11 +66,11 @@ Be clear about the scope: these are checks she can run herself, and they don't a
 
 This is the ownership question rather than the credits question, which is why it can carry a post when credits content can't: it's a decision she can act on, not a complaint.
 
-**Email capture.** _Put your app in GitHub_, a walkthrough with screenshots: connect the project, save a working version, make a change, undo it. Roughly the shape of step 2 on the learning path, stopping before branches.
+**Email capture.** _Put your app in GitHub_, a walkthrough with screenshots: connect the project, save a working version, make a change, undo it. Roughly the shape of step 2 on the learning journey, stopping before branches.
 
 **Channels.** LinkedIn document. Email. Instagram Reel of the undo working, which is the moment that sells it. Communities.
 
-**Route.** Waitlist link at the end of the walkthrough, framed as continuing: the path picks up at what to do when the change you want to undo is three changes back.
+**Route.** Waitlist link at the end of the walkthrough, framed as continuing: the journey picks up at what to do when the change you want to undo is three changes back.
 
 ## 3. Stop prompting. Go back to the version that worked.
 
@@ -84,7 +84,7 @@ Kinga has her own stuck moment for the opening. Told as a flop we learned from, 
 
 **Channels.** LinkedIn plain-text story post, then the resource in the first comment. TikTok and Instagram Reel of the loop and the moment of going back. Email.
 
-**Route.** Step 3 of the learning path, fix bugs without rebuilding everything.
+**Route.** Step 3 of the learning journey, fix bugs without rebuilding everything.
 
 ## 4. The receipts: women with apps that work, and what broke on the way
 
@@ -110,7 +110,7 @@ Gender framing is explicit, because it's the highest-engagement lever in the res
 
 **Channels.** LinkedIn document. Email. Instagram Reel. Worth a TikTok test because it fits the post-build cliff the research says is dense there.
 
-**Route.** Steps 7 and 8 of the learning path, analytics and focused experiments.
+**Route.** Steps 7 and 8 of the learning journey, analytics and focused experiments.
 
 ---
 
@@ -130,7 +130,7 @@ The five ideas map to the five opportunity territories in the [synthesis](../../
 
 **Channels.** LinkedIn document (lead). YouTube, a 6 to 10 minute video against the real search terms. Email. Women In Product and Mind the Product communities.
 
-**Route.** Step 1 of the learning path.
+**Route.** Step 1 of the learning journey.
 
 ## 7. Engineering says it's done. Users still don't have it. Where is it?
 
@@ -142,7 +142,7 @@ The five ideas map to the five opportunity territories in the [synthesis](../../
 
 **Channels.** LinkedIn document. YouTube against the search terms. TikTok test, because a 40-second version of "it's done but you can't have it" is a recognisable situation. Email.
 
-**Route.** Step on the learning path covering review, tests, environments and rollback.
+**Route.** Step on the learning journey covering review, tests, environments and rollback.
 
 ## 8. Send engineering a bug they can act on in five minutes
 
@@ -156,7 +156,7 @@ The honest framing: what this buys her is engineering trusting that she looked f
 
 **Channels.** LinkedIn document. Email. Women In Product and the Product Manager Slacks, where this is a daily problem. Low priority for video.
 
-**Route.** Step on the learning path covering investigation and escalation.
+**Route.** Step on the learning journey covering investigation and escalation.
 
 ## 9. "Can we just add a field?"
 
@@ -168,7 +168,7 @@ The honest framing: what this buys her is engineering trusting that she looked f
 
 **Channels.** LinkedIn document (strongest of the five for saves). YouTube, aimed at the technical-debt search demand. Email. Communities.
 
-**Route.** Step on the learning path covering technical debt, feasibility and build against buy.
+**Route.** Step on the learning journey covering technical debt, feasibility and build against buy.
 
 ## 10. You prototyped it with AI. Now someone wants to give it to customers.
 
@@ -182,7 +182,7 @@ This is also the piece that answers the wider pressure without being a post abou
 
 **Channels.** LinkedIn (lead; the AI-mandate framing is what this audience is living through). YouTube, against `what is vibe coding` search demand, 49,500 US a month. TikTok test. Email.
 
-**Route.** Step 5 of the learning path, build to learn and know where production starts.
+**Route.** Step 5 of the learning journey, build to learn and know where production starts.
 
 ---
 
@@ -194,12 +194,12 @@ This is also the piece that answers the wider pressure without being a post abou
 | Email (registered, unpaid) | One practical idea per send, one link. Learner-centred, not company news. | Fortnightly, between the monthly updates |
 | Communities | Resource shared value-first, no build-up. Discord SheBuilds, women-in-tech Slacks, PWIT, Women In Product, Mind the Product. | One per idea, where it fits |
 | Partner email | The Geek Girls play, repeated. Highest return per hour we have measured. | One a month |
-| Instagram | Reels only, women's path only. | Repurpose, no original production |
+| Instagram | Reels only, women's journey only. | Repurpose, no original production |
 | TikTok | Hook testing and reading search demand. | Repurpose, judge on what it teaches |
-| YouTube | Search-intent video, Product Manager path only. | One per Product Manager idea, when there's capacity |
+| YouTube | Search-intent video, Product Manager journey only. | One per Product Manager idea, when there's capacity |
 
 ## Two things to decide
 
-**Email segmentation.** The plan sends women's-path content to the whole registered-unpaid list and Product Manager content only to a segment, but I don't know from the repo whether the list can be split that way. If it can't, the fallback is to send Product Manager ideas through the communities and LinkedIn only, and keep the list on the building-apps content.
+**Email segmentation.** The plan sends women's-journey content to the whole registered-unpaid list and Product Manager content only to a segment, but I don't know from the repo whether the list can be split that way. If it can't, the fallback is to send Product Manager ideas through the communities and LinkedIn only, and keep the list on the building-apps content.
 
 **Order.** If only two of these get made this month, make 1 and 9: idea 1 hits the need the research says nothing in the market serves, and idea 9 needs no new resource because the worksheet is already drafted.

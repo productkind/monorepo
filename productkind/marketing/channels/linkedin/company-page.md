@@ -22,7 +22,7 @@ At Little Parrot, you learn these skills by building your own product: you plan 
 
 Research published by Harvard Business School found that women use AI tools at a rate about 16% lower than men, and the gap is widest on the newest AI coding tools. Our mission is to help women build their own products, and their own income, with AI.
 
-For product managers, we're building a learning path on how a web app works. Join the waiting list on littleparrot.app/guides/technical-product-manager.
+For product managers, we're building a learning journey on how a web app works. Join the waiting list on littleparrot.app/guides/technical-product-manager.
 
 The first challenge of every course is free. Start at littleparrot.app.
 

@@ -293,9 +293,9 @@ So, take one build versus buy decision your team is discussing and leave the opt
 
 ## Become a Technical Product Manager Without Becoming an Engineer
 
-We're testing interest in an upcoming Little Parrot transformational learning path called [**Become a Technical Product Manager Without Becoming an Engineer**](/guides/technical-product-manager).
+We're testing interest in an upcoming Little Parrot transformational learning journey called [**Become a Technical Product Manager Without Becoming an Engineer**](/guides/technical-product-manager).
 
-It's for software Product Managers who want to understand more deeply how their product works, investigate questions and contribute to scope and trade-off decisions with clearer evidence. The learning path isn't available yet. If you'd like us to tell you when it opens, [visit the landing page and register your interest](/guides/technical-product-manager).
+It's for software Product Managers who want to understand more deeply how their product works, investigate questions and contribute to scope and trade-off decisions with clearer evidence. The learning journey isn't available yet. If you'd like us to tell you when it opens, [visit the landing page and register your interest](/guides/technical-product-manager).
 
 ### Editorial privacy note
 
@@ -313,4 +313,4 @@ It's for software Product Managers who want to understand more deeply how their 
 - Add `Article` and `BreadcrumbList` structured data that matches the visible page.
 - Show Kinga's author credentials, a published date and an updated date.
 - Link back to the technical-feasibility article once both pages are live.
-- Validate the learning-path landing page and interest form before publishing.
+- Validate the learning-journey landing page and interest form before publishing.

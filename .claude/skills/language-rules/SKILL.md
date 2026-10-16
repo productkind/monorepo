@@ -58,6 +58,10 @@ but here's the catch, to cut through the chaos, cutting through the noise, that 
 
 Here's the thing, Bottom line, No fluff, This one's for you, Why this matters, What moved me, This matters because, that matters, it matters most, matters most for, In this piece
 
+### Retired product names
+
+learning path, learning paths
+
 ## 3. Rules that need judgement
 
 - **"matters" / "matter" as an importance claim**, in any form: "tone matters", "your first prompt matters more than any prompt after it", "faces matter more than artistry". It asserts importance without saying anything. Say what the thing does or changes instead: "your first prompt sets the direction for everything built after it".
@@ -103,6 +107,7 @@ The rule to carry from it: **precision, not concision.** Corrections are often l
 - **No overselling.** Promise only what the thing actually delivers. No sweeping comprehension claims a course does not teach.
 - **Building your idea with AI, never becoming a developer.** Lead with the reader's idea or business outcome. "Like a developer" as a borrowed workflow is fine; a developer career or identity as the destination is not. Avoid "no code needed".
 - **Tool terminology.** "AI chat assistant" for ChatGPT and Claude.ai (you copy the answer out). "AI agent" for Claude Code and Codex (it acts in your files and shows the changes). Write "AI chat assistant" in full, never "chat assistant". Avoid "chat AI" and "agentic".
+- **Product names.** "Learning journey" for our fixed-price products, such as the technical PM learning journey and Launch Your App Idea with Lovable. Never "learning path".
 - **No invented assumptions or strawmen.** Do not write "people think X" or "you might assume Y" unless we know they do. The same holds for what people _do_: "most people try this once and never again" is a claim about behaviour and needs a source or it goes. Start from what is true.
 - **Never invent facts about us.** Our backstory, motivation and experience are only ever what we have actually been told. "We made it for mums" is true. "The examples come from new-mum life, because that is where we built it" invents an experience Kinga has not had. This kind of line reads as warm, authentic detail, which is exactly what makes it dangerous, because a reader takes it as fact about the founders. Watch for clauses beginning "because that is where we...", "after we...", "when I was...", "having been...". Reassigning an unsourced claim to Kinga's first person is not a fix, it is a second fabrication on top of the first.
 - **Do not speak for a group's experience from outside it.** "A version that suits an ADHD brain" states what suits every reader with ADHD. Address the reader: "a version that works better if you have ADHD".

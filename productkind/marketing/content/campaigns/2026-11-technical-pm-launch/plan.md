@@ -64,7 +64,7 @@ The plan depends on these. My recommendation is in brackets.
    - (Recommend: self-paced missions with two fixed office-hour slots a week, a suggested pace, and a start date in January so the founding group moves through together.)
 6. **What the session says about the paid season.**
    - Portugal Tech Week rejects side events that "try to sell products and services".
-   - (Recommend: the Lisbon session only teaches. At the end, people are told they'll get an email with the field guide, the bug report template, the recording and details of what comes next. The online session on 17 November ends with five minutes on what the learning path covers, after the teaching, as the design now describes.)
+   - (Recommend: the Lisbon session only teaches. At the end, people are told they'll get an email with the field guide, the bug report template, the recording and details of what comes next. The online session on 17 November ends with five minutes on what the learning journey covers, after the teaching, as the design now describes.)
 
 ## 2. Targets
 

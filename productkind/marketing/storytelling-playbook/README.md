@@ -157,7 +157,7 @@ Fill in the blanks. The examples use our own topics to show the shape; check any
 | 9 | **Here's how to [specific, differentiated outcome].** + read the pain back + "The solution that's always worked for me is..." + "Now, I know you're probably thinking..." | "Here's how to write a bug report an engineer can act on without asking you a single question." | Mino (educational) |
 | 10 | **POV: [relatable real moment]**, real footage first, then narration. | "POV: your stakeholder just asked when your prototype launches." | Mino (POV) |
 | 11 | **[$X version] vs [$10X version] of [thing].** | "A 5-minute bug report vs a 5-second one." | Garcia (borrowed contrast) |
-| 12 | **Day [N] of trying to [big goal], but today [obstacle], because [constraint], and [personal stake].** | "Day [3] of validating our learning path, and [today's real obstacle]." | Garcia (story in the day) |
+| 12 | **Day [N] of trying to [big goal], but today [obstacle], because [constraint], and [personal stake].** | "Day [3] of validating our learning journey, and [today's real obstacle]." | Garcia (story in the day) |
 | 13 | **Imagine [something obviously absurd]. That's exactly what you do when [everyday behaviour].** | "Imagine posting a letter with no address. That's what 'I found a bug' is to an engineer." | Parr (visual comparison) |
 | 14 | **[Group], stop [common behaviour] if you want [outcome].** | "Product managers, stop sending engineers 'I found a bug'." | Parr (call-out), Mino (extreme word) |
 | 15 | **Everyone says [common advice]. [What happened when we did it].** | "Everyone says enable paid subscriptions on day one. 44% of my new subscribers came from somewhere else." | Ralston (contrarian), Kallaway |
@@ -220,7 +220,7 @@ When a piece feels flat, it usually lacks stakes (Galloway, Kallaway).
 | --- | --- |
 | **Doubter or enemy** | "My stakeholder thought it was ready to ship." |
 | **Time limit** | "The demo was on Thursday." |
-| **Reward** | "If this worked, we'd know whether anyone wanted the path." |
+| **Reward** | "If this worked, we'd know whether anyone wanted the journey." |
 | **Punishment or loss** | "Three weeks later, the roadmap moved." |
 | **Missing out** | "Every week without this, you're re-explaining your app from scratch." |
 | **Cost of not knowing** (for teaching content) | "The best-written page gets zero visitors if Google hasn't indexed it." |
@@ -397,11 +397,11 @@ These show how to apply the playbook. They follow the experts' techniques, not y
 
 **Before** (average watch 2.4 to 4.6 s):
 
-> Frame one: stock clip, subtitle begins. "You built something with AI to test an idea. Your stakeholder saw it and asked when we can launch it. [...] If you want to answer that stakeholder with real reasons, we're building a learning path for it."
+> Frame one: stock clip, subtitle begins. "You built something with AI to test an idea. Your stakeholder saw it and asked when we can launch it. [...] If you want to answer that stakeholder with real reasons, we're building a learning journey for it."
 
 **After:**
 
-> **Frame one (text):** "It works on my laptop. Why can't it launch?" **Frame one (visual):** a real screen with the prototype running, and a Slack message arriving from a stakeholder: "Looks great, when can we launch?" **0:00 (spoken):** "Your stakeholder just saw your AI prototype and asked when it launches." **0:03 (confirm):** "Here are the five things it skipped, so you can answer them." **Body:** each of the five (whose data it holds, who's allowed in, what happens under real load, who gets woken at 2am, who maintains it) as one short beat with a concrete example, and a re-hook between them ("And that's the easy one."). **Payoff, then ask:** "Save this for the next time someone asks. We're building a learning path that goes through each one. Comment on this video and we'll send you the waitlist link."
+> **Frame one (text):** "It works on my laptop. Why can't it launch?" **Frame one (visual):** a real screen with the prototype running, and a Slack message arriving from a stakeholder: "Looks great, when can we launch?" **0:00 (spoken):** "Your stakeholder just saw your AI prototype and asked when it launches." **0:03 (confirm):** "Here are the five things it skipped, so you can answer them." **Body:** each of the five (whose data it holds, who's allowed in, what happens under real load, who gets woken at 2am, who maintains it) as one short beat with a concrete example, and a re-hook between them ("And that's the easy one."). **Payoff, then ask:** "Save this for the next time someone asks. We're building a learning journey that goes through each one. Comment on this video and we'll send you the waitlist link."
 
 What changed: the contradiction is now in frame one, the stakes arrive in the first sentence, and the video delivers the five answers instead of promising a course that will.
 

@@ -339,9 +339,9 @@ Set a time limit based on the value of the unanswered question. Stop when the pr
 
 ## Become a Technical Product Manager Without Becoming an Engineer
 
-We're testing interest in an upcoming Little Parrot transformational learning path called [**Become a Technical Product Manager Without Becoming an Engineer**](/guides/technical-product-manager).
+We're testing interest in an upcoming Little Parrot transformational learning journey called [**Become a Technical Product Manager Without Becoming an Engineer**](/guides/technical-product-manager).
 
-It's for non-technical software Product Managers who want to understand how their product works, investigate questions and contribute to scope and trade-off decisions with clearer evidence. The learning path isn't available yet. If you'd like us to tell you when it opens, [visit the landing page and register your interest](/guides/technical-product-manager).
+It's for non-technical software Product Managers who want to understand how their product works, investigate questions and contribute to scope and trade-off decisions with clearer evidence. The learning journey isn't available yet. If you'd like us to tell you when it opens, [visit the landing page and register your interest](/guides/technical-product-manager).
 
 Before your next prototype, write one sentence beginning _"We need evidence about whether..."_ Then list every feature you can leave out while still answering that question.
 
@@ -352,4 +352,4 @@ Before your next prototype, write one sentence beginning _"We need evidence abou
 - Add `Article` and `BreadcrumbList` structured data.
 - Show author credentials, a published date and an updated date.
 - Add the MVP/prototype/proof-of-concept comparison link only after that page is live.
-- Validate the learning-path landing page and interest form before publishing.
+- Validate the learning-journey landing page and interest form before publishing.

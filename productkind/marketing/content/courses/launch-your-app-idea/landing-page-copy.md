@@ -1,14 +1,14 @@
 ---
 status: drafted
 brand: little-parrot
-page_type: learning-path
+page_type: learning-journey
 url: https://littleparrot.app/guides/launch-your-app-idea-with-lovable
 redirect_from: https://littleparrot.app/guides/building-apps-with-ai
 ---
 
 # Landing page copy: Launch Your App Idea with Lovable
 
-The page for the learning path made of our seven Lovable courses. The path is open now and sold at its own price. It replaces the September waitlist page in `../../campaigns/2026-09-vibe-coder-validation/landing-page-copy.md`. The name, title tag and FAQ questions come from the keyword research in `productkind/ai-research/vibe-coder/`.
+The page for the learning journey made of our seven Lovable courses. The journey is open now and sold at its own price. It replaces the September waitlist page in `../../campaigns/2026-09-vibe-coder-validation/landing-page-copy.md`. The name, title tag and FAQ questions come from the keyword research in `productkind/ai-research/vibe-coder/`.
 
 ## SEO
 
@@ -34,13 +34,13 @@ Finish with a live app on your own domain, one you know how to fix and change, a
 
 ### Introduction
 
-You have an idea for an app, and with AI you can build it yourself. This learning path takes you through each stage of building and launching your app with Lovable, the AI app builder. You'll plan a first version small enough to build in one sitting, build it, fix what breaks, make changes yourself, publish it on your own domain and work out what to charge. You apply every step to your own idea.
+You have an idea for an app, and with AI you can build it yourself. This learning journey takes you through each stage of building and launching your app with Lovable, the AI app builder. You'll plan a first version small enough to build in one sitting, build it, fix what breaks, make changes yourself, publish it on your own domain and work out what to charge. You apply every step to your own idea.
 
 ### Buttons
 
 **Primary button:** Start planning your app  
 **Supporting text:** The first challenge of every course is free.  
-**Secondary button:** Get the full path for €299
+**Secondary button:** Get the full journey for €299
 
 ### Four outcomes
 
@@ -55,7 +55,7 @@ Built by Kinga, a lead product manager, and Tamas, a principal software engineer
 
 [Keep the existing Datadog, Citrix, Volkswagen and Cloudera logos.]
 
-## The learning path
+## The learning journey
 
 Seven stages, in the order you'll need them. Each stage is one course, and each picks up where the one before it stopped.
 
@@ -101,12 +101,12 @@ You'll switch your app to real API keys, connect your own domain and add a priva
 
 You'll describe what your app does for people in one sentence and test it on real people. You'll set up email sign-ups, bring in your first visitors through directories and community posts, and ask your first users what to improve. Then you'll choose a price, work out how many customers you need to cover your costs and set up payments.
 
-## How the learning path works
+## How the learning journey works
 
 - **Short challenges, at your own pace.** There are 47 challenges across the seven courses, about ten hours in total. Most take 10 to 15 minutes. The planning challenges take longer, 15 to 50 minutes, because you're writing your own plan.
 - **On your phone or your computer.** You can read every challenge on your phone. A computer is easier for the hands-on parts, and the Save Lovable Credits course needs one, because you'll install VS Code.
 - **Your own app.** You apply the steps to your own idea, so you finish with your app rather than a copy of an example.
-- **Free to start.** The first challenge of every course is free. The full path is a one-off payment of €299, with a year's access.
+- **Free to start.** The first challenge of every course is free. The full journey is a one-off payment of €299, with a year's access.
 
 ## Who writes the courses
 
@@ -114,7 +114,7 @@ We write every course ourselves, from our own experience of building products, a
 
 [Check the last sentence is true before publishing.]
 
-## Is this learning path for you?
+## Is this learning journey for you?
 
 ### Yes, if
 
@@ -125,7 +125,7 @@ We write every course ourselves, from our own experience of building products, a
 
 ### Not really, if
 
-- You want to publish an app in the App Store or Google Play. This path covers apps that open in a web browser, on a phone or a computer.
+- You want to publish an app in the App Store or Google Play. This journey covers apps that open in a web browser, on a phone or a computer.
 - You want to train as a software engineer. You'll change small parts of your app's code, but you won't learn a programming language.
 - You need someone to certify that your app is secure or compliant. A course can't replace a professional review of your app.
 
@@ -141,25 +141,25 @@ No. You build your app by describing it to Lovable. In the Save Lovable Credits 
 
 ### How do I know if my app idea is worth building?
 
-That's the first thing the path helps you check. In the planning course, you'll write down the problem your app solves and who has it, and judge whether it's worth solving before you build anything. In the last course, you'll test a one-sentence description of your app on real people and see how they respond.
+That's the first thing the journey helps you check. In the planning course, you'll write down the problem your app solves and who has it, and judge whether it's worth solving before you build anything. In the last course, you'll test a one-sentence description of your app on real people and see how they respond.
 
 ### Is vibe coding bad?
 
-It depends on how you do it. A lot of the criticism is about apps that go live without anyone testing them or checking their security. In this path, you'll test after each change, investigate a bug before you ask for a fix, read Lovable's security warnings and keep working versions you can go back to.
+It depends on how you do it. A lot of the criticism is about apps that go live without anyone testing them or checking their security. In this journey, you'll test after each change, investigate a bug before you ask for a fix, read Lovable's security warnings and keep working versions you can go back to.
 
 ### How much does it cost to make an app?
 
-With Lovable, your main costs are a Lovable plan, a domain name once you want your own address, and this path. In the Save Lovable Credits course, you'll make small changes without spending credits. In the last course, you'll work out how many paying customers you need to cover what your app costs to run.
+With Lovable, your main costs are a Lovable plan, a domain name once you want your own address, and this journey. In the Save Lovable Credits course, you'll make small changes without spending credits. In the last course, you'll work out how many paying customers you need to cover what your app costs to run.
 
 ### Can I use a different AI app builder?
 
-The path uses Lovable throughout, so the steps are written for Lovable. The planning, software basics and business courses work with any tool. The Save Lovable Credits course also works with Replit, v0 and Bolt, because they all connect to GitHub.
+The journey uses Lovable throughout, so the steps are written for Lovable. The planning, software basics and business courses work with any tool. The Save Lovable Credits course also works with Replit, v0 and Bolt, because they all connect to GitHub.
 
 ### Will my app be secure?
 
 No course can promise that for every app, because the data you collect and the services you connect change the risks. You'll learn what Lovable's security warnings mean and how to fix them. Whether a warning needs action straight away depends on whether your app handles sensitive data, and you'll learn how to decide. If your app holds health, financial or other sensitive information, get a professional review too.
 
-### How much does the learning path cost?
+### How much does the learning journey cost?
 
 €299, paid once, for a year's access to all seven courses. There's no subscription. The first challenge of every course is free, so you can try each stage before you pay.
 

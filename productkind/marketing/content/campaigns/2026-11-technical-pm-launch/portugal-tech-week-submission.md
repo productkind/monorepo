@@ -12,7 +12,7 @@ The listing text for the free workshop (Mission 1 in the [learning journey desig
 
 - **Where:** https://portugaltechweek.com/submit-event/ (you need to log in to see the form). Published events show a title, categories, date, time, venue, the event content and tags.
 - **Their rules, checked on 11 October 2026:**
-  - They won't accept events that "try to sell product and services". The text below only teaches and doesn't mention the paid learning path.
+  - They won't accept events that "try to sell product and services". The text below only teaches and doesn't mention the paid learning journey.
   - They prefer in-person events.
   - "Organizer should be related to Portugal." Kinga and Tamas live in Portugal, which covers it. A co-host such as Product Management Society Lisbon or the Volkswagen Lisbon office is optional: it would bring their members.
   - The registration link has to go in the event content.

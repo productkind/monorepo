@@ -287,9 +287,9 @@ A Product Manager can narrow the conditions, separate facts from hypotheses and 
 
 ## Become a Technical Product Manager Without Becoming an Engineer
 
-We're testing interest in an upcoming Little Parrot transformational learning path called [**Become a Technical Product Manager Without Becoming an Engineer**](/guides/technical-product-manager).
+We're testing interest in an upcoming Little Parrot transformational learning journey called [**Become a Technical Product Manager Without Becoming an Engineer**](/guides/technical-product-manager).
 
-It's for non-technical software Product Managers who want to understand how their product works, investigate problems and contribute to technical decisions with better evidence. The learning path isn't available yet. If you'd like us to tell you when it opens, [visit the landing page and register your interest](/guides/technical-product-manager).
+It's for non-technical software Product Managers who want to understand how their product works, investigate problems and contribute to technical decisions with better evidence. The learning journey isn't available yet. If you'd like us to tell you when it opens, [visit the landing page and register your interest](/guides/technical-product-manager).
 
 For your next bug discussion, delay the priority label for five minutes. Ask for the observed effect, reach, frequency, workaround and confidence first. Which answer changes what your team should do next?
 
@@ -303,4 +303,4 @@ For your next bug discussion, delay the priority label for five minutes. Ask for
 - Keep the link to `/guides/software-bug-report-template` only when that article is published. Keep the related article focused on structuring and communicating a bug report; do not add a full bug-report template here.
 - Add `Article` and `BreadcrumbList` structured data that matches the visible page.
 - Show Tamas Kokeny's author credentials, published date and updated date.
-- Validate the learning-path landing page and interest form before publishing.
+- Validate the learning-journey landing page and interest form before publishing.
