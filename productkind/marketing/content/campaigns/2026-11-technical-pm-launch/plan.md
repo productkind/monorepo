@@ -40,11 +40,12 @@ Numbers marked _target_ are guesses to test, not forecasts.
 The plan depends on these. My recommendation is in brackets.
 
 1. **Workshop format and dates.**
-   - (Recommend: in person in Lisbon in the week of 9 November, for 20–30 people, plus the same workshop online on Tuesday 17 November for up to 60.)
+   - (Agreed on 16 October: in person in Lisbon on Friday 13 November, 19:00–21:30, the day after Web Summit ends. The workshop takes 2 hours and starts a little after 19:00, because people often arrive late to evening meetups in Portugal.)
+   - (Recommend: 20–30 places in Lisbon, plus the same workshop online on Tuesday 17 November for up to 60.)
    - Portugal Tech Week prefers in-person events. The online repeat reaches the LinkedIn audience outside Lisbon, and people who are busy with Web Summit, which runs 9–12 November in the same week.
 2. **A venue for the Lisbon workshop.**
-   - (Recommend: ask the Volkswagen contacts whether their Lisbon office can host it, or ask Product Management Society Lisbon to co-host.)
-   - A host company brings its own PMs into the room.
+   - (Agreed on 16 October: PTW Palace, the festival's central venue, at R. Gomes Freire 98.)
+   - A co-host is still worth asking for: Product Management Society Lisbon or the Volkswagen contacts would bring their own PMs into the room.
 3. **What the workshop runs on.**
    - The design now has attendees set up their own copy of the product in GitHub Codespaces during the workshop, start the app themselves, and end by giving their bug report to GitHub Copilot and testing its fix in their copy. A shared fallback copy covers laptops that can't run it. None of it is built yet, and four weeks of evenings is tight.
    - (Agreed on 11 October: run the Codespaces trial checks in the week of 12 October and decide on Friday 16 October.)
@@ -89,7 +90,7 @@ The marketing days don't include building. This is the build track that has to k
 | From 12 October | The workshop trial checks, 1–14: the machine Twenty needs with the frontend running from source, setup as a short lesson, start times, signing in through the forwarded addresses, the story data, the bug seeded across all four layers, Copilot in a codespace, ten Copilot runs with the bug report and ten with a one-line complaint, the branch with the fix, 30 codespaces at once, a phone hotspot, a locked-down work laptop and idle stops | The decision on Friday 16 October |
 | From 19 October | If the checks passed: the development container and prebuild, the seeded bug, the story data and the branch with the fix. If not: the one-page shared copy | The whole trail and the fix work on one laptop |
 | From 26 October | The shared fallback copy, the field guide, the recorded run of the trail and of the one-line complaint, and a small test codespace for the laptop check | Everything in place by Friday 30 October |
-| From 2 November | Re-run the Copilot checks (7–10), then a full rehearsal with two or three testers, one of them on a locked-down work laptop over a phone hotspot. Fix what breaks, then send the setup email | Setup email out by Tuesday 3 November, a week before Lisbon |
+| From 2 November | Re-run the Copilot checks (7–10), then a full rehearsal with two or three testers, one of them on a locked-down work laptop over a phone hotspot. Fix what breaks, then send the setup email | Setup email out by Tuesday 3 November, ten days before Lisbon |
 
 The remaining trial checks (15–18) are for the season, so they move to December.
 
@@ -153,7 +154,7 @@ The remaining trial checks (15–18) are for the season, so they move to Decembe
 
 ### Week 5, from 9 November: the workshops
 
-- **Lisbon session** during Portugal Tech Week.
+- **Lisbon session** on Friday 13 November, 19:00–21:30, at PTW Palace.
 - **Day 1 email** the next morning (section 5).
 - **One LinkedIn post each:** what happened, with photos and a quote from an attendee (ask permission).
 - **Online session on Tuesday 17 November.**

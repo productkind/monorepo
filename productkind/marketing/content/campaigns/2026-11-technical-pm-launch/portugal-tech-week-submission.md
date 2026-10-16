@@ -14,18 +14,26 @@ The listing text for the free workshop (Mission 1 in the [learning journey desig
 - **Their rules, checked on 11 October 2026:**
   - They won't accept events that "try to sell product and services". The text below only teaches and doesn't mention the paid learning path.
   - They prefer in-person events.
-  - "Organizer should be related to Portugal." Kinga and Tamas live in Portugal, which covers it. A co-host such as Product Management Society Lisbon or the Volkswagen Lisbon office is optional: it would help with a venue and bring their members.
+  - "Organizer should be related to Portugal." Kinga and Tamas live in Portugal, which covers it. A co-host such as Product Management Society Lisbon or the Volkswagen Lisbon office is optional: it would bring their members.
   - The registration link has to go in the event content.
 - **Submit after the decision on Friday 16 October.** This version promises that attendees set up their own development environment and fix the bug with GitHub Copilot, which needs Codespaces. If the trial checks fail and Lisbon runs on one shared copy, remove the "First" and "Finally" paragraphs, the second outcome and the GitHub account, and change the length back to 90 minutes.
 - **The trial also has to confirm the Copilot comparison.** The "Finally" paragraph says Copilot does better with the bug report than with a one-line complaint. If the trial runs don't show that, cut the sentence that starts "You'll also see".
 - **Images:** a logo at 512 × 512, and a featured image at 1920 × 1080 (1080 × 540 at the very least). The featured image is [`workshop-event-images/export/featured-image-1920x1080.png`](workshop-event-images/export/featured-image-1920x1080.png), with its alt text in the [spec](workshop-event-images/spec.md). The same folder has the square Luma cover.
-- **Fill in before submitting:** the date, the time, the venue, the registration link and the number of places.
+- **Fill in before submitting:** the registration link and the number of places.
 
 ## Title
 
 How web apps work: for product managers who want to follow the technical conversation
 
 If the form has a short character limit: **How web apps work: a hands-on workshop for product managers**
+
+## Date, time and venue
+
+- **Date:** Friday 13 November 2026
+- **Time:** 19:00–21:30
+- **Venue:** PTW Palace, R. Gomes Freire 98, Lisbon
+
+The workshop itself takes 2 hours. People often arrive late to evening meetups in Portugal, so the slot leaves time to settle in, and the workshop starts a little after 19:00.
 
 ## Categories and tags
 
@@ -78,6 +86,8 @@ For listings and social posts:
 > Tamas Kokeny spent 15+ years as a software engineer and engineering leader. He co-founded Green Fox Academy, a coding school that graduated over 3,000 students into tech careers.
 >
 > Between them, they've worked at Datadog, Citrix, Volkswagen and Cloudera. In the workshop, they'll guide you through how each part of a web app works, and you'll be able to apply the knowledge to your own product.
+>
+> Doors open at 19:00, and we'll start once people have settled in.
 >
 > Free, in English, with [30] places. Run by LittleParrot.app.
 >

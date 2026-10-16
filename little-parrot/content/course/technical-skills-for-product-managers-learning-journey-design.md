@@ -161,6 +161,8 @@ Each mission lists the message, what the learner does, the worked answer, the ar
 | 85–105 | Step 7: the one-line complaint on the big screen, then each pair gives Copilot their bug report, reads what it changed and tests the fix, in their copy and then in the ready-built app. |
 | 105–120 | Step 8 on their own products. Close on the open question (the fix works in your copy, so what would it take to reach Calder?), then the QR code for the field guide and the recording. |
 
+**Book a slot about 30 minutes longer than the run of show** for evening events. People often arrive late to evening meetups in Portugal, so the Lisbon session at Portugal Tech Week has a 19:00–21:30 slot and starts a little after 19:00, once people have settled in.
+
 **If the slot is 90 minutes:** attendees create their codespace from the setup email beforehand, so the setup segment starts the app instead of creating it; one volunteer's report gets live feedback instead of two; and the own-product exercise becomes homework from the field guide.
 
 Section 11 has the online, talk and company-session versions of the same trail.
@@ -572,7 +574,7 @@ The evidence on getting adults to finish online courses is less encouraging than
 | Conference talk | 20–30 min | Nothing | Kinga and Tamas start the app, walk the trail and run the Copilot fix live on screen, the audience predicts by phone poll, and the own-product exercise becomes homework |
 | Company session | 90 min to 2 hours | As for the in-person or online workshop, plus a check that the company allows Copilot's free plan on personal accounts for sandbox work | The same workshop for one company's PMs, which leads straight to team seats |
 
-- **The promise in the listing** is understanding how a web app works, for non-technical PMs: set one up, trace a bug through it, and fix the bug with an AI agent using the bug report. That's broad enough for general tech conferences (Portugal Tech Week is the first candidate) as well as product events, and the AI fix gives a tech-week audience a reason to pick this session.
+- **The promise in the listing** is understanding how a web app works, for non-technical PMs: set one up, trace a bug through it, and fix the bug with an AI agent using the bug report. That's broad enough for general tech conferences (the first is Portugal Tech Week, on 13 November at PTW Palace) as well as product events, and the AI fix gives a tech-week audience a reason to pick this session.
 - **Teach, never sell, from the stage** (the event playbook's rule). The story finishes in the room: the bug is found, explained, reported and fixed in the learner's own copy, and the own-product exercise gives attendees something to do the next day. The QR code at the end leads to the field guide, the recording and the self-assessment. It's also how we measure each event, with its own link per event.
 - **The learning path comes after the value.** At the online workshop, the last five minutes say what the path covers. At conferences, the follow-up email does it.
 - **The bridge is the copy attendees already have.** "Your copy is still in your GitHub account, and Mission 2 starts from it." The offer is the founding season: the start date, the price and what's included, framed as momentum ("Keep going: seven more missions"). Unused codespaces are deleted after 30 days by default, so when the season starts later than that, the bridge is the same one-click setup rather than the copy itself.
