@@ -49,6 +49,7 @@ The plan depends on these. My recommendation is in brackets.
 3. **What the workshop runs on.**
    - The design now has attendees set up their own copy of the product in GitHub Codespaces during the workshop, start the app themselves, and end by giving their bug report to GitHub Copilot and testing its fix in their copy. A shared fallback copy covers laptops that can't run it. None of it is built yet, and four weeks of evenings is tight.
    - (Agreed on 11 October: run the Codespaces trial checks in the week of 12 October and decide on Friday 16 October.)
+   - (Agreed on 16 October: stay on GitHub Free, so there are no prebuilds and each codespace installs what the app needs when it's created. The install test (trial check 3) decides whether attendees create their codespace in the room or from the setup email. One repository in the productkind organisation serves the workshops and the learning journey, so nothing in it mentions the workshop.)
    - If the checks pass, both workshops run on Codespaces.
    - If they don't, Lisbon runs on one shared copy with the browser, the server log and the database view on a single page, and without the setup and the Copilot fix, so it goes back to 90 minutes. Codespaces then starts with the online workshop on 17 November, or in January, when founding learners set up their copy at the start of the season, if it still isn't ready.
    - This is the biggest risk to the dates, so the workshop build (section 3) runs alongside the marketing weeks.
@@ -88,7 +89,7 @@ The marketing days don't include building. This is the build track that has to k
 | Week | Build | Done when |
 | --- | --- | --- |
 | From 12 October | The workshop trial checks, 1–14: the machine Twenty needs with the frontend running from source, setup as a short lesson, start times, signing in through the forwarded addresses, the story data, the bug seeded across all four layers, Copilot in a codespace, ten Copilot runs with the bug report and ten with a one-line complaint, the branch with the fix, 30 codespaces at once, a phone hotspot, a locked-down work laptop and idle stops | The decision on Friday 16 October |
-| From 19 October | If the checks passed: the development container and prebuild, the seeded bug, the story data and the branch with the fix. If not: the one-page shared copy | The whole trail and the fix work on one laptop |
+| From 19 October | If the checks passed: the development container (no prebuild, since we stay on GitHub Free), the seeded bug, the story data and the branch with the fix. If not: the one-page shared copy | The whole trail and the fix work on one laptop |
 | From 26 October | The shared fallback copy, the field guide, the recorded run of the trail and of the one-line complaint, and a small test codespace for the laptop check | Everything in place by Friday 30 October |
 | From 2 November | Re-run the Copilot checks (7–10), then a full rehearsal with two or three testers, one of them on a locked-down work laptop over a phone hotspot. Fix what breaks, then send the setup email | Setup email out by Tuesday 3 November, ten days before Lisbon |
 
@@ -147,7 +148,7 @@ The remaining trial checks (15–18) are for the season, so they move to Decembe
 ### Week 4, from 2 November: last push
 
 1. **Series posts #5 and #6.**
-2. **Send the setup email** by Tuesday 3 November: create a free GitHub account, turn on GitHub Copilot's free plan and run the laptop check, about ten minutes. The workshop's own codespace is created in the room, because setting it up is part of the lesson. Only if the trial checks passed; otherwise the email says the workshop needs nothing but a browser.
+2. **Send the setup email** by Tuesday 3 November: create a free GitHub account, turn on GitHub Copilot's free plan and run the laptop check, about ten minutes. The workshop's own codespace is created in the room, because setting it up is part of the lesson, unless the install test shows creating it takes more than about 10 minutes; then the email asks attendees to create it beforehand. Only if the trial checks passed; otherwise the email says the workshop needs nothing but a browser.
 3. **Run the paid ad** (section 4.4) on Kinga's online-workshop post, for 10 days until 16 November.
 4. **Ask the Volkswagen and memoQ contacts to share the online session** with a ready-to-forward message.
 5. **Fix the offer:** the price, the start date, what's included, the invoice and the message to send to a manager. The design's expense route has the template.
