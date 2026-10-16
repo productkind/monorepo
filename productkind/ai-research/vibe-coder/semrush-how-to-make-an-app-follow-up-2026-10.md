@@ -218,3 +218,17 @@ Added 13 October 2026, after Kinga questioned whether non-technical people say "
 | launch | 7 |
 
 "Web app" is almost absent from how these women describe their work, and the top result for `how to make a web app` is r/webdev, so the phrase reaches developers more than this audience. "Build" is their verb by more than three to one. These women already build with AI, so newcomers may still search "make" or "create" (see the Trends check in the first report).
+
+## Tool momentum check (Google Trends)
+
+Added 16 October 2026, to test the risk of naming the learning path after Lovable. Same script and method as the Trends check in the first report: Google web search, past 12 months. `lovable ai` stands in for Lovable, because the bare word `lovable` can't be separated from the English adjective, so compare directions, not levels.
+
+| Term | US first → last third | US change | GB first → last third | GB change |
+|---|---|---|---|---|
+| lovable ai | 11.3 → 15.5 | +37% | 22.6 → 29.1 | +29% |
+| base44 | 21.9 → 33.5 | +53% | 46.5 → 73.9 | +59% |
+| replit | 39.1 → 29.1 | −26% | 70.2 → 65.5 | −7% |
+| bolt.new | 3.6 → 5.1 | small | 6.4 → 6.9 | flat |
+| vibe coding | 24.8 → 31.4 | +27% | 44.7 → 45.0 | flat |
+
+Lovable is growing in both markets. Base44 is growing fastest, and it was also the rising query on `how to make an app`. In the August research quotes, "vibe coding" appears in 80 of 575 lines, Lovable in 31, "no code" in 8 and Base44 in none.
