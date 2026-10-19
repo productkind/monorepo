@@ -27,19 +27,25 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="0.77330552"
-     inkscape:cx="757.1393"
-     inkscape:cy="104.74515"
+     inkscape:zoom="0.51530554"
+     inkscape:cx="557.92142"
+     inkscape:cy="-120.31697"
      inkscape:window-width="1728"
      inkscape:window-height="1057"
      inkscape:window-x="0"
      inkscape:window-y="32"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g31"
+     inkscape:current-layer="g7"
      inkscape:export-bgcolor="#ffffffff"
-     showguides="true" />
+     showguides="false" />
   <defs
      id="defs1">
+    <rect
+       x="394.41074"
+       y="206.90399"
+       width="662.09276"
+       height="171.98895"
+       id="rect1" />
     <linearGradient
        id="linearGradient22"
        inkscape:label="Little Parrot">
@@ -142,10 +148,10 @@
        inkscape:collect="always"
        xlink:href="#linearGradient29"
        id="linearGradient13"
-       x1="682.8772"
-       y1="398.40884"
-       x2="787.81256"
-       y2="504.44324"
+       x1="678.20581"
+       y1="403.48071"
+       x2="792.48389"
+       y2="499.37146"
        gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(0.02955874,0,0,0.0060772,-20.191418,-2.4231669)" />
     <linearGradient
@@ -241,35 +247,39 @@
          inkscape:label="main-background" />
       <g
          id="g7"
-         transform="matrix(0.00268571,0,0,0.00268571,0.02375646,-0.15164902)">
+         transform="matrix(0.00268571,0,0,0.00268571,-0.02124356,-0.20827783)">
         <text
            xml:space="preserve"
            style="font-weight:bold;font-size:21.2121px;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#080809;fill-opacity:1;stroke:none;stroke-width:21.2877;stroke-linecap:square"
-           x="691.34137"
-           y="239.91632"
+           x="989.99078"
+           y="273.19235"
            id="text22-2-5"
            inkscape:label="url"><tspan
              sodipodi:role="line"
              style="font-size:21.2121px;opacity:1;fill:#080809;fill-opacity:1;stroke-width:21.2877"
-             x="691.34137"
-             y="239.91632"
+             x="989.99078"
+             y="273.19235"
              id="tspan24-5-7">LittleParrot.app</tspan></text>
         <text
            xml:space="preserve"
-           style="font-weight:bold;font-size:7.74546px;line-height:1.3;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;white-space:pre;inline-size:122.941;display:inline;opacity:1;fill:#080809;fill-opacity:1;stroke:none;stroke-width:7.26295;stroke-linecap:square"
+           transform="matrix(1.2716098,0,0,1.2716098,-191.85689,-106.50322)"
+           id="text1"
+           style="font-weight:bold;font-size:20px;line-height:1.2;font-family:inter;-inkscape-font-specification:'inter Bold';text-align:start;text-decoration-color:#000000;letter-spacing:0.14px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;shape-inside:url(#rect1);display:inline;fill:#080809;fill-opacity:1;stroke:none;stroke-width:30.912;paint-order:fill markers stroke"
+           inkscape:label="subtext"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:inter;-inkscape-font-specification:'inter Medium'"
+             id="tspan2">Hands-on courses for product managers and women building with AI</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;font-size:5.7679px;line-height:1.3;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;white-space:pre;inline-size:162.721;display:inline;opacity:1;fill:#080809;fill-opacity:1;stroke:none;stroke-width:7.26295;stroke-linecap:square"
            x="140.11034"
            y="35.159763"
            id="text22"
-           transform="matrix(5.1643187,0,0,5.1643187,-24.054498,-46.214943)"
+           transform="matrix(5.1809032,0,0,5.1809032,-22.944759,-46.727454)"
            inkscape:label="slogan"><tspan
              x="140.11034"
              y="35.159763"
-             id="tspan1">Vibe Coding and AI Skills<tspan
-   y="35.159763"
-   id="tspan2"> </tspan></tspan><tspan
-             x="140.11034"
-             y="45.228862"
-             id="tspan3">for Women in Business.</tspan></text>
+             id="tspan1"
+             style="font-size:5.7679px;fill:#080809;fill-opacity:1">Understand the software behind your product</tspan></text>
       </g>
       <rect
          style="fill:none;stroke:none;stroke-width:0.029511;stroke-dasharray:none"
@@ -285,7 +295,7 @@
          sodipodi:nodetypes="cc" />
       <g
          id="g45-2-7-9"
-         transform="matrix(2.1047207e-4,0,0,2.1047207e-4,1.4293735,-2.0363418)">
+         transform="matrix(2.1047207e-4,0,0,2.1047207e-4,1.4295138,-2.0363418)">
         <text
            xml:space="preserve"
            style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:163.82px;line-height:0;font-family:Montserrat;-inkscape-font-specification:'Montserrat Heavy';text-align:start;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;fill:#000000;fill-opacity:1;stroke:none;stroke-width:9.478;stroke-linecap:round;stroke-dasharray:none"

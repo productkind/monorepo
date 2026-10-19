@@ -27,9 +27,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="0.15038434"
-     inkscape:cx="575.19288"
-     inkscape:cy="-232.737"
+     inkscape:zoom="0.73293945"
+     inkscape:cx="418.86134"
+     inkscape:cy="50.48166"
      inkscape:window-width="1728"
      inkscape:window-height="1057"
      inkscape:window-x="0"
@@ -218,6 +218,12 @@
        y1="559.99164"
        x2="860.4278"
        y2="627.82635" />
+    <rect
+       x="394.41074"
+       y="206.90399"
+       width="662.09277"
+       height="171.98895"
+       id="rect1" />
   </defs>
   <g
      inkscape:label="Layer 1"
@@ -233,38 +239,6 @@
        rx="0"
        ry="0"
        inkscape:label="main-background" />
-    <g
-       id="g7"
-       transform="translate(-20.813477,0.00629044)">
-      <text
-         xml:space="preserve"
-         style="font-weight:bold;font-size:21.2121px;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#080809;fill-opacity:1;stroke:none;stroke-width:21.2877;stroke-linecap:square"
-         x="691.34137"
-         y="239.91632"
-         id="text22-2-5"
-         inkscape:label="url"><tspan
-           sodipodi:role="line"
-           style="font-size:21.2121px;opacity:1;fill:#080809;fill-opacity:1;stroke-width:21.2877"
-           x="691.34137"
-           y="239.91632"
-           id="tspan24-5-7">LittleParrot.app</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-weight:bold;font-size:7.74546px;line-height:1.3;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;white-space:pre;inline-size:122.941;display:inline;opacity:1;fill:#080809;fill-opacity:1;stroke:none;stroke-width:7.26295;stroke-linecap:square"
-         x="140.11034"
-         y="35.159763"
-         id="text22"
-         transform="matrix(5.1643187,0,0,5.1643187,-24.054498,-46.214943)"
-         inkscape:label="slogan"><tspan
-           x="140.11034"
-           y="35.159763"
-           id="tspan5">Vibe Coding and AI Skills<tspan
-   y="35.159763"
-   id="tspan6"> </tspan></tspan><tspan
-           x="140.11034"
-           y="45.228862"
-           id="tspan7">for Women in Business.</tspan></text>
-    </g>
     <rect
        style="opacity:1;fill:none;stroke:none;stroke-width:12;stroke-dasharray:none"
        id="rect7"
@@ -384,5 +358,45 @@
        x="1050"
        y="0"
        inkscape:label="WhiteBGPlaceholder" />
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:20px;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#080809;fill-opacity:1;stroke:none;stroke-width:17.1518;stroke-linecap:square"
+       x="838.96991"
+       y="290.85254"
+       id="text22-2-5-9"
+       inkscape:label="url"><tspan
+         sodipodi:role="line"
+         style="font-size:20px;opacity:1;fill:#080809;fill-opacity:1;stroke-width:17.1518"
+         x="838.96991"
+         y="290.85254"
+         id="tspan24-5-7-4">LittleParrot.app</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(1.5347038,0,0,1.5347038,-683.41638,-146.20889)"
+       id="text1"
+       style="font-weight:bold;font-size:20px;line-height:1.2;font-family:inter;-inkscape-font-specification:'inter Bold';text-align:end;text-decoration-color:#000000;letter-spacing:0.14px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:end;white-space:pre;shape-inside:url(#rect1);display:inline;fill:#080809;fill-opacity:1;stroke:none;stroke-width:30.912;paint-order:fill markers stroke"
+       inkscape:label="subtext"
+       x="363.5322"
+       y="0"><tspan
+         x="394.41016"
+         y="224.91721"
+         id="tspan4"
+         style="text-align:end;text-anchor:end"><tspan
+           style="font-weight:500;-inkscape-font-specification:'inter Medium';text-align:end;text-anchor:end"
+           id="tspan3">Hands-on courses for product managers
+and women building with AI</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:5.7679px;line-height:1.3;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:end;white-space:pre;inline-size:162.721;display:inline;fill:#080809;fill-opacity:1;stroke:none;stroke-width:7.26295;stroke-linecap:square"
+       x="180.37891"
+       y="35.159763"
+       id="text22-9"
+       transform="matrix(6.9160651,0,0,6.9160651,-308.1587,-160.17539)"
+       inkscape:label="slogan"><tspan
+         x="140.11034"
+         y="35.159763"
+         id="tspan5-1"
+         style="text-align:end;text-anchor:end">Understand the software
+behind your product</tspan></text>
   </g>
 </svg>
