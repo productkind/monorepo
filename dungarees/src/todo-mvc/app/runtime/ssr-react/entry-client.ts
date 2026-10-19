@@ -1,3 +1,9 @@
-import { application } from './app.ts'
+import { getBrowserServices } from './browser-services.ts'
 
-application.run({ environment: import.meta.env.DEV ? 'test' : 'prod', runtime: 'browser' })
+import { createApplication } from '@dungarees/core/application.ts'
+import { baseApplication } from '@dungarees/todo-mvc-base-app-ssr-react/base-app.ts'
+
+createApplication({ getServices: () => getBrowserServices() }, () => baseApplication).run({
+  environment: import.meta.env.DEV ? 'test' : 'prod',
+  runtime: 'browser',
+})
