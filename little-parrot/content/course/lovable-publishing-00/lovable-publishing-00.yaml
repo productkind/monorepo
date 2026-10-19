@@ -103,7 +103,7 @@ course:
 
               **Forgetting to switch them** is a common gotcha. Your app will look like it works, but behind the scenes, data might not save, emails might not send, or payments might not process. A quick check now saves confusion later.
 
-              *If API keys are new to you, our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) course explains them in friendly terms.*
+              *If you'd like a refresher on API keys, look back at [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview), earlier in your learning path.*
           subtitle: A common gotcha to avoid
         - type: text
           title: How to check and update your API keys
@@ -597,7 +597,7 @@ course:
               Review all pages in the app and fix the heading tag hierarchy. Each page should have exactly one h1 tag as the main title. Make sure the heading hierarchy follows HTML structure best practices. List what you changed.
               ```
 
-              *Curious about HTML and how web pages are built? Our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) course explains these concepts in friendly terms.*
+              *Want a refresher on HTML and how web pages are built? [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview), earlier in your learning path, explains them in friendly terms.*
           subtitle: Structure your content for Google
         - type: text
           title: If your app was built before May 2026
@@ -945,7 +945,7 @@ course:
 
               This doesn't mean shipping broken software. It means **shipping the smallest possible piece of your product that can deliver core user value**. Then getting this limited scope into users' hands to validate whether it's valuable for them.
 
-              *Want to dig deeper into this idea? Our article [The Dilemma of the MVP](https://productkind.substack.com/p/the-dilemma-of-the-mvp) explores how to decide what's "enough" to launch. And if you need help slicing out an Minimum Viable Product from your idea, our [Plan Your Vibe Coded App](https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview) course walks you through it step by step.*
+              *Want to dig deeper into this idea? Our article [The Dilemma of the MVP](https://productkind.substack.com/p/the-dilemma-of-the-mvp) explores how to decide what's "enough" to launch. And if you need help slicing a Minimum Viable Product out of your idea, look back at [Plan Your Vibe Coded App](https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview), the first course in your learning path, which walks you through it step by step.*
           subtitle: Perfect is the enemy of launched
         - type: text
           title: 'How Buffer launched with almost nothing'
@@ -1083,11 +1083,7 @@ course:
 
               Good luck, and happy growing! 🚀
             nextModule: |-
-              **Keep building:**
-
-              - If you haven't taken it yet, our [Plan Your Vibe Coded App: Define the Problem, User, MVP and First Prompt](https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview) course helps you structure your next big idea into small, promptable pieces.
-              - Our [Fix Bugs with Confidence: Debugging Your Lovable App](https://littleparrot.app/aaab45b7-209a-4578-a515-3e55687f0c53/course-overview) course teaches you how to handle problems when they come up.
-              - Check out our [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview) course to communicate more effectively with Lovable by understanding core software concepts.
+              **Next in your learning path:** [Build a Business with Your Vibe Coded App: Validate Your Offer, Set a Price and Find Customers](https://littleparrot.app/b7455f5a-166c-4614-a4ca-be83369ff7f1/course-overview). You'll write a value proposition, build an audience before you launch, get your first visitors and listen to their feedback, then decide what to charge and work out how many paying users you need to cover your costs.
   titleSplit:
     - 'How to Publish a Lovable App:'
     - 'Custom Domain, Legal Pages, SEO and Analytics'
