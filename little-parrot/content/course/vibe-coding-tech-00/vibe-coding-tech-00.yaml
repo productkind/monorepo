@@ -60,7 +60,7 @@ course:
               learning key terms from design and software development, you can become better at
               prompting these AI tools.
 
-              In this micro-course, we’ll focus on demystifying the common terms used when building
+              In this course, we’ll focus on demystifying the common terms used when building
               software, so you can grow your vocabulary and confidence.
 
               By the end, you’ll be able to: Understand key terms used in app design and
@@ -966,7 +966,7 @@ course:
               - The database always creates automatic backups
               - SQL code cannot delete data
               - The database always restores itself
-            question: Why does this micro-course emphasise reviewing SQL before running it?
+            question: Why does this course emphasise reviewing SQL before running it?
             explanation: |-
               Database changes can be permanent! There's no undo button for deleted data.
 
