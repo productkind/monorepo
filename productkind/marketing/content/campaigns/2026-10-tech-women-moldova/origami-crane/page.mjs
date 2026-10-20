@@ -10,6 +10,7 @@ const design = buildDesign()
 writeFileSync('debug/paper.svg', flatSvg(design, { rotate: 0 }))
 execFileSync('rsvg-convert', ['-w', '1200', '-o', 'debug/paper.png', 'debug/paper.svg'])
 execFileSync('magick', ['debug/paper.png', '-quality', '88', 'debug/paper.webp'])
+const logo = `data:image/svg+xml;base64,${readFileSync('logo-little-parrot.svg').toString('base64')}`
 const paper = `data:image/webp;base64,${readFileSync('debug/paper.webp').toString('base64')}`
 writeFileSync(
   'debug/paper-back.svg',
@@ -96,99 +97,142 @@ const html = `<!doctype html>
 <meta name="description" content="How to fold the Little Parrot flyer into an origami parrot, step by step.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
+  /* Little Parrot design system (little-parrot-awakens/src/styles.css). */
   :root {
-    --ink: #0b0b0d;
-    --muted: #55555c;
-    --page: #faf8f3;
-    --stage: #17171b;
-    --gradient: linear-gradient(120deg, #eb9600, #f1c000, #fbfb00, #aeff37, #00ed70);
+    --foreground: hsl(245 7% 3%);
+    --muted-foreground: hsl(245 3% 42%);
+    --gray-900: hsl(245 4% 9%);
+    --orange-200: hsl(33 100% 68%);
+    --footer: #1a0044;
+    --brand-gradient: linear-gradient(120deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70);
+    --brand-gradient-bg: linear-gradient(120deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020);
+    --shadow-rect: 0.25rem 0.25rem 0.125rem rgba(8 8 9 / 0.25);
+    --shadow-rect-light: 0.25rem 0.25rem 0.125rem rgba(8 8 9 / 0.125);
+    --shadow-rect-hover: 0.25rem 0.25rem 0.125rem rgba(8 8 9 / 0.125);
+    --shadow-rect-active: 0.125rem 0.125rem 0.125rem rgba(8 8 9 / 0.125);
   }
   * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   body {
     margin: 0;
-    background: var(--page);
-    color: var(--ink);
-    font: 400 17px/1.6 Montserrat, system-ui, sans-serif;
+    background: #fff;
+    color: var(--foreground);
+    font: 400 17px/1.625 Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
-  main { max-width: 1040px; margin: 0 auto; padding: 48px 24px 64px; }
-  .brand { font: 700 14px/1 'Space Mono', monospace; letter-spacing: 0.04em; margin: 0 0 32px; }
-  .brand a { color: inherit; text-decoration: none; }
-  h1 { font-size: clamp(36px, 6vw, 56px); line-height: 1.05; font-weight: 800; margin: 0 0 16px; }
-  h1 span { background: var(--gradient); padding: 0 8px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
-  .lead { font-size: 19px; max-width: 60ch; margin: 0 0 32px; }
-  .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 0 0 48px; }
-  .hero figure { margin: 0; }
-  .hero .stage { aspect-ratio: 4 / 3; }
-  .hero figcaption { font-size: 14px; color: var(--muted); margin-top: 8px; }
-  .tips { background: #fff; border: 1px solid #e6e1d6; border-radius: 16px; padding: 24px; margin: 0 0 48px; }
-  .tips h2 { font-size: 20px; margin: 0 0 8px; }
+  h1, h2, h3 { font-family: 'Space Mono', monospace; font-weight: 700; }
+  .container { max-width: 1100px; margin-inline: auto; padding-inline: 16px; }
+  .navbar { position: sticky; top: 0; z-index: 10; background: #fff; border-bottom: 2px solid var(--foreground); box-shadow: var(--shadow-rect-light); }
+  .navbar a { display: inline-block; transition: opacity 0.15s; }
+  .navbar a:hover { opacity: 0.8; }
+  .navbar img { display: block; height: 48px; width: auto; margin: 16px 0; }
+  .hero { padding: 48px 0 56px; }
+  h1 { font-size: clamp(36px, 6vw, 64px); line-height: 1.1; margin: 0 0 24px; }
+  .highlight {
+    background: var(--brand-gradient) center / 100% 0.9em no-repeat;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .lead { font-size: 20px; max-width: 62ch; margin: 0 0 40px; }
+  .finished { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .finished figure { margin: 0; }
+  .finished .stage { aspect-ratio: 4 / 3; }
+  .finished figcaption { font-size: 14px; color: var(--muted-foreground); margin-top: 12px; }
+  .band { background: var(--brand-gradient-bg); padding: 48px 0; }
+  .card { background: #fff; border: 2px solid var(--foreground); box-shadow: var(--shadow-rect); }
+  .tips { padding: 24px 28px; }
+  .tips h2 { font-size: 22px; margin: 0 0 12px; }
   .tips ul { margin: 0; padding-left: 20px; }
   .tips li + li { margin-top: 8px; }
-  h2.steps-title { font-size: 28px; margin: 0 0 24px; }
-  ol.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 32px; }
-  .step { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 32px; align-items: center; }
-  .stage { background: var(--stage); border-radius: 16px; aspect-ratio: 1 / 1; overflow: hidden; }
+  .how { padding: 56px 0 72px; }
+  .how > .container > h2 { font-size: clamp(28px, 4vw, 40px); margin: 0 0 32px; }
+  ol.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 40px; }
+  .step { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 40px; align-items: center; }
+  .stage { background: var(--gray-900); border: 2px solid var(--foreground); box-shadow: var(--shadow-rect); aspect-ratio: 1 / 1; overflow: hidden; }
   .stage svg { width: 100%; height: 100%; display: block; }
-  .number { font: 700 13px/1 'Space Mono', monospace; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 0 0 8px; }
-  .step h3 { font-size: 24px; line-height: 1.2; margin: 0 0 12px; }
-  .step p { margin: 0 0 16px; max-width: 60ch; }
+  .number { font: 700 13px/1 'Space Mono', monospace; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted-foreground); margin: 0 0 10px; }
+  .step h3 { font-size: 24px; line-height: 1.25; margin: 0 0 12px; }
+  .step p { margin: 0 0 20px; max-width: 60ch; }
   .toggle {
-    font: 600 14px/1 Montserrat, sans-serif;
-    padding: 10px 16px;
-    border-radius: 999px;
-    border: 2px solid var(--ink);
-    background: transparent;
-    color: var(--ink);
+    font: 700 14px/1 Inter, sans-serif;
+    height: 40px;
+    padding: 0 16px;
+    border: 2px solid var(--foreground);
+    border-radius: 0;
+    background: var(--brand-gradient);
+    color: var(--foreground);
+    box-shadow: var(--shadow-rect);
     cursor: pointer;
+    transition: all 75ms;
   }
-  .toggle:hover { background: var(--ink); color: var(--page); }
-  .toggle:focus-visible { outline: 3px solid #f1c000; outline-offset: 2px; }
-  footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid #e6e1d6; }
-  footer a { color: var(--ink); font-weight: 700; }
+  .toggle:hover { filter: brightness(0.95); box-shadow: var(--shadow-rect-hover); }
+  .toggle:active { box-shadow: var(--shadow-rect-active); transform: translate(2px, 2px); }
+  .toggle:focus-visible, .navbar a:focus-visible, footer a:focus-visible { outline: 2px solid transparent; box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--orange-200); }
+  footer { background: var(--footer); color: #fff; border-top: 2px solid var(--foreground); padding: 48px 0; text-align: center; }
+  footer p { margin: 0; font-size: 18px; }
+  footer a { color: #fff; font-weight: 700; text-underline-offset: 4px; }
   @media (max-width: 760px) {
-    main { padding-top: 32px; }
-    .hero { grid-template-columns: 1fr; }
-    .step { grid-template-columns: 1fr; gap: 16px; }
+    .hero { padding-top: 32px; }
+    .finished { grid-template-columns: 1fr; }
+    .step { grid-template-columns: 1fr; gap: 20px; }
   }
 </style>
 </head>
 <body>
-<main>
-  <p class="brand"><a href="https://littleparrot.app">LittleParrot.app</a></p>
-  <h1>Fold your <span>Little Parrot</span></h1>
-  <p class="lead">Your flyer is a 10 cm square, and with the folds below it becomes a parrot: orange head, green tail, an eye on one side and a wink on the other. Every step has an animation that loops, so you can watch it as many times as you need.</p>
-
-  <div class="hero">
-    <figure>
-      <div class="stage" data-final="front" role="img" aria-label="The finished parrot, side with the open eye and the LittleParrot.app tail"></div>
-      <figcaption>This side looks at you.</figcaption>
-    </figure>
-    <figure>
-      <div class="stage" data-final="back" role="img" aria-label="The finished parrot, side with the wink"></div>
-      <figcaption>This side winks.</figcaption>
-    </figure>
+<header class="navbar">
+  <div class="container">
+    <a href="https://littleparrot.app" aria-label="Little Parrot home"><img src="${logo}" alt="Little Parrot"></a>
   </div>
+</header>
 
-  <section class="tips" aria-labelledby="tips-title">
-    <h2 id="tips-title">Before you start</h2>
-    <ul>
-      <li>Work on a hard, flat table and run a fingernail along every crease. Sharp creases make the later steps much easier.</li>
-      <li>The <strong>inside reverse fold</strong> in steps 7 and 8 is the trickiest part. Pre-crease the line first by folding the point over both ways, then open the layers and push the point in along that crease.</li>
-      <li>If a step goes wrong, unfold it and try again. The creases you already made are still there to guide you.</li>
-    </ul>
+<main>
+  <section class="hero">
+    <div class="container">
+      <h1>Fold your <span class="highlight">Little Parrot</span></h1>
+      <p class="lead">Your flyer is a 10 cm square, and with the folds below it becomes a parrot: orange head, green tail, an eye on one side and a wink on the other. Every step has an animation that loops, so you can watch it as many times as you need.</p>
+      <div class="finished">
+        <figure>
+          <div class="stage" data-final="front" role="img" aria-label="The finished parrot, side with the open eye and the LittleParrot.app tail"></div>
+          <figcaption>This side looks at you.</figcaption>
+        </figure>
+        <figure>
+          <div class="stage" data-final="back" role="img" aria-label="The finished parrot, side with the wink"></div>
+          <figcaption>This side winks.</figcaption>
+        </figure>
+      </div>
+    </div>
   </section>
 
-  <h2 class="steps-title">How to fold it</h2>
-  <ol class="steps">
-${stepsHtml}
-  </ol>
+  <section class="band" aria-labelledby="tips-title">
+    <div class="container">
+      <div class="card tips">
+        <h2 id="tips-title">Before you start</h2>
+        <ul>
+          <li>Work on a hard, flat table and run a fingernail along every crease. Sharp creases make the later steps much easier.</li>
+          <li>The <strong>inside reverse fold</strong> in steps 7 and 8 is the trickiest part. Pre-crease the line first by folding the point over both ways, then open the layers and push the point in along that crease.</li>
+          <li>If a step goes wrong, unfold it and try again. The creases you already made are still there to guide you.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-  <footer>
-    <p>Folded it? Learn to build your own ideas with AI on <a href="https://littleparrot.app">LittleParrot.app</a>.</p>
-  </footer>
+  <section class="how" aria-labelledby="how-title">
+    <div class="container">
+      <h2 id="how-title">How to fold it</h2>
+      <ol class="steps">
+${stepsHtml}
+      </ol>
+    </div>
+  </section>
 </main>
+
+<footer>
+  <div class="container">
+    <p>Folded it? Learn to build your own ideas with AI on <a href="https://littleparrot.app">LittleParrot.app</a>.</p>
+  </div>
+</footer>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>

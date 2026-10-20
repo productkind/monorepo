@@ -11,89 +11,135 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&family=Space+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <style>
+      /* Little Parrot design system (little-parrot-awakens/src/styles.css). */
       :root {
-        --ink: #0b0b0d;
-        --muted: #55555c;
-        --page: #faf8f3;
-        --stage: #17171b;
-        --gradient: linear-gradient(120deg, #eb9600, #f1c000, #fbfb00, #aeff37, #00ed70);
+        --foreground: hsl(245 7% 3%);
+        --muted-foreground: hsl(245 3% 42%);
+        --gray-900: hsl(245 4% 9%);
+        --orange-200: hsl(33 100% 68%);
+        --footer: #1a0044;
+        --brand-gradient: linear-gradient(120deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70);
+        --brand-gradient-bg: linear-gradient(
+          120deg,
+          #ffb65b20,
+          #fdd82520,
+          #fbfb0020,
+          #8efd2320,
+          #00ed7020
+        );
+        --shadow-rect: 0.25rem 0.25rem 0.125rem rgba(8 8 9 / 0.25);
+        --shadow-rect-light: 0.25rem 0.25rem 0.125rem rgba(8 8 9 / 0.125);
+        --shadow-rect-hover: 0.25rem 0.25rem 0.125rem rgba(8 8 9 / 0.125);
+        --shadow-rect-active: 0.125rem 0.125rem 0.125rem rgba(8 8 9 / 0.125);
       }
       * {
         box-sizing: border-box;
       }
+      html {
+        scroll-behavior: smooth;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
       body {
         margin: 0;
-        background: var(--page);
-        color: var(--ink);
+        background: #fff;
+        color: var(--foreground);
         font:
-          400 17px/1.6 Montserrat,
-          system-ui,
+          400 17px/1.625 Inter,
+          -apple-system,
+          BlinkMacSystemFont,
+          'Segoe UI',
+          Roboto,
           sans-serif;
       }
-      main {
-        max-width: 1040px;
-        margin: 0 auto;
-        padding: 48px 24px 64px;
+      h1,
+      h2,
+      h3 {
+        font-family: 'Space Mono', monospace;
+        font-weight: 700;
       }
-      .brand {
-        font:
-          700 14px/1 'Space Mono',
-          monospace;
-        letter-spacing: 0.04em;
-        margin: 0 0 32px;
+      .container {
+        max-width: 1100px;
+        margin-inline: auto;
+        padding-inline: 16px;
       }
-      .brand a {
-        color: inherit;
-        text-decoration: none;
+      .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: #fff;
+        border-bottom: 2px solid var(--foreground);
+        box-shadow: var(--shadow-rect-light);
+      }
+      .navbar a {
+        display: inline-block;
+        transition: opacity 0.15s;
+      }
+      .navbar a:hover {
+        opacity: 0.8;
+      }
+      .navbar img {
+        display: block;
+        height: 48px;
+        width: auto;
+        margin: 16px 0;
+      }
+      .hero {
+        padding: 48px 0 56px;
       }
       h1 {
-        font-size: clamp(36px, 6vw, 56px);
-        line-height: 1.05;
-        font-weight: 800;
-        margin: 0 0 16px;
+        font-size: clamp(36px, 6vw, 64px);
+        line-height: 1.1;
+        margin: 0 0 24px;
       }
-      h1 span {
-        background: var(--gradient);
-        padding: 0 8px;
+      .highlight {
+        background: var(--brand-gradient) center / 100% 0.9em no-repeat;
         box-decoration-break: clone;
         -webkit-box-decoration-break: clone;
       }
       .lead {
-        font-size: 19px;
-        max-width: 60ch;
-        margin: 0 0 32px;
+        font-size: 20px;
+        max-width: 62ch;
+        margin: 0 0 40px;
       }
-      .hero {
+      .finished {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 16px;
-        margin: 0 0 48px;
+        gap: 24px;
       }
-      .hero figure {
+      .finished figure {
         margin: 0;
       }
-      .hero .stage {
+      .finished .stage {
         aspect-ratio: 4 / 3;
       }
-      .hero figcaption {
+      .finished figcaption {
         font-size: 14px;
-        color: var(--muted);
-        margin-top: 8px;
+        color: var(--muted-foreground);
+        margin-top: 12px;
+      }
+      .band {
+        background: var(--brand-gradient-bg);
+        padding: 48px 0;
+      }
+      .card {
+        background: #fff;
+        border: 2px solid var(--foreground);
+        box-shadow: var(--shadow-rect);
       }
       .tips {
-        background: #fff;
-        border: 1px solid #e6e1d6;
-        border-radius: 16px;
-        padding: 24px;
-        margin: 0 0 48px;
+        padding: 24px 28px;
       }
       .tips h2 {
-        font-size: 20px;
-        margin: 0 0 8px;
+        font-size: 22px;
+        margin: 0 0 12px;
       }
       .tips ul {
         margin: 0;
@@ -102,26 +148,30 @@
       .tips li + li {
         margin-top: 8px;
       }
-      h2.steps-title {
-        font-size: 28px;
-        margin: 0 0 24px;
+      .how {
+        padding: 56px 0 72px;
+      }
+      .how > .container > h2 {
+        font-size: clamp(28px, 4vw, 40px);
+        margin: 0 0 32px;
       }
       ol.steps {
         list-style: none;
         margin: 0;
         padding: 0;
         display: grid;
-        gap: 32px;
+        gap: 40px;
       }
       .step {
         display: grid;
         grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-        gap: 32px;
+        gap: 40px;
         align-items: center;
       }
       .stage {
-        background: var(--stage);
-        border-radius: 16px;
+        background: var(--gray-900);
+        border: 2px solid var(--foreground);
+        box-shadow: var(--shadow-rect);
         aspect-ratio: 1 / 1;
         overflow: hidden;
       }
@@ -136,282 +186,342 @@
           monospace;
         text-transform: uppercase;
         letter-spacing: 0.08em;
-        color: var(--muted);
-        margin: 0 0 8px;
+        color: var(--muted-foreground);
+        margin: 0 0 10px;
       }
       .step h3 {
         font-size: 24px;
-        line-height: 1.2;
+        line-height: 1.25;
         margin: 0 0 12px;
       }
       .step p {
-        margin: 0 0 16px;
+        margin: 0 0 20px;
         max-width: 60ch;
       }
       .toggle {
         font:
-          600 14px/1 Montserrat,
+          700 14px/1 Inter,
           sans-serif;
-        padding: 10px 16px;
-        border-radius: 999px;
-        border: 2px solid var(--ink);
-        background: transparent;
-        color: var(--ink);
+        height: 40px;
+        padding: 0 16px;
+        border: 2px solid var(--foreground);
+        border-radius: 0;
+        background: var(--brand-gradient);
+        color: var(--foreground);
+        box-shadow: var(--shadow-rect);
         cursor: pointer;
+        transition: all 75ms;
       }
       .toggle:hover {
-        background: var(--ink);
-        color: var(--page);
+        filter: brightness(0.95);
+        box-shadow: var(--shadow-rect-hover);
       }
-      .toggle:focus-visible {
-        outline: 3px solid #f1c000;
-        outline-offset: 2px;
+      .toggle:active {
+        box-shadow: var(--shadow-rect-active);
+        transform: translate(2px, 2px);
+      }
+      .toggle:focus-visible,
+      .navbar a:focus-visible,
+      footer a:focus-visible {
+        outline: 2px solid transparent;
+        box-shadow:
+          0 0 0 2px #fff,
+          0 0 0 4px var(--orange-200);
       }
       footer {
-        margin-top: 64px;
-        padding-top: 24px;
-        border-top: 1px solid #e6e1d6;
+        background: var(--footer);
+        color: #fff;
+        border-top: 2px solid var(--foreground);
+        padding: 48px 0;
+        text-align: center;
+      }
+      footer p {
+        margin: 0;
+        font-size: 18px;
       }
       footer a {
-        color: var(--ink);
+        color: #fff;
         font-weight: 700;
+        text-underline-offset: 4px;
       }
       @media (max-width: 760px) {
-        main {
+        .hero {
           padding-top: 32px;
         }
-        .hero {
+        .finished {
           grid-template-columns: 1fr;
         }
         .step {
           grid-template-columns: 1fr;
-          gap: 16px;
+          gap: 20px;
         }
       }
     </style>
   </head>
   <body>
-    <main>
-      <p class="brand"><a href="https://littleparrot.app">LittleParrot.app</a></p>
-      <h1>Fold your <span>Little Parrot</span></h1>
-      <p class="lead">
-        Your flyer is a 10 cm square, and with the folds below it becomes a parrot: orange head,
-        green tail, an eye on one side and a wink on the other. Every step has an animation that
-        loops, so you can watch it as many times as you need.
-      </p>
-
-      <div class="hero">
-        <figure>
-          <div
-            class="stage"
-            data-final="front"
-            role="img"
-            aria-label="The finished parrot, side with the open eye and the LittleParrot.app tail"
-          ></div>
-          <figcaption>This side looks at you.</figcaption>
-        </figure>
-        <figure>
-          <div
-            class="stage"
-            data-final="back"
-            role="img"
-            aria-label="The finished parrot, side with the wink"
-          ></div>
-          <figcaption>This side winks.</figcaption>
-        </figure>
+    <header class="navbar">
+      <div class="container">
+        <a href="https://littleparrot.app" aria-label="Little Parrot home"
+          ><img
+            src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB3aWR0aD0iNDUzMC45NiIKICAgaGVpZ2h0PSIxMzAwIgogICB2aWV3Qm94PSIwIDAgNDUzMC45NiAxMzAwIgogICB2ZXJzaW9uPSIxLjEiCiAgIGlkPSJzdmcxIgogICBpbmtzY2FwZTp2ZXJzaW9uPSIxLjQgKGU3YzNmZWIxLCAyMDI0LTEwLTA5KSIKICAgc29kaXBvZGk6ZG9jbmFtZT0ibG9nby1saXR0bGUtcGFycm90LnN2ZyIKICAgeG1sbnM6aW5rc2NhcGU9Imh0dHA6Ly93d3cuaW5rc2NhcGUub3JnL25hbWVzcGFjZXMvaW5rc2NhcGUiCiAgIHhtbG5zOnNvZGlwb2RpPSJodHRwOi8vc29kaXBvZGkuc291cmNlZm9yZ2UubmV0L0RURC9zb2RpcG9kaS0wLmR0ZCIKICAgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHNvZGlwb2RpOm5hbWVkdmlldwogICAgIGlkPSJuYW1lZHZpZXcxIgogICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIKICAgICBib3JkZXJjb2xvcj0iIzAwMDAwMCIKICAgICBib3JkZXJvcGFjaXR5PSIwLjI1IgogICAgIGlua3NjYXBlOnNob3dwYWdlc2hhZG93PSIyIgogICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwLjAiCiAgICAgaW5rc2NhcGU6cGFnZWNoZWNrZXJib2FyZD0iMCIKICAgICBpbmtzY2FwZTpkZXNrY29sb3I9IiNkMWQxZDEiCiAgICAgaW5rc2NhcGU6ZG9jdW1lbnQtdW5pdHM9InB4IgogICAgIGlua3NjYXBlOnpvb209IjAuMDc1OTgzMTk3IgogICAgIGlua3NjYXBlOmN4PSIyMTc4LjExMzEiCiAgICAgaW5rc2NhcGU6Y3k9IjI2My4yMTYwOSIKICAgICBpbmtzY2FwZTp3aW5kb3ctd2lkdGg9IjE3MjgiCiAgICAgaW5rc2NhcGU6d2luZG93LWhlaWdodD0iMTA1NyIKICAgICBpbmtzY2FwZTp3aW5kb3cteD0iMCIKICAgICBpbmtzY2FwZTp3aW5kb3cteT0iMzIiCiAgICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMCIKICAgICBpbmtzY2FwZTpjdXJyZW50LWxheWVyPSJsYXllcjEiCiAgICAgc2hvd2dyaWQ9ImZhbHNlIiAvPgogIDxkZWZzCiAgICAgaWQ9ImRlZnMxIj4KICAgIDxjbGlwUGF0aAogICAgICAgY2xpcFBhdGhVbml0cz0idXNlclNwYWNlT25Vc2UiCiAgICAgICBpZD0iY2xpcFBhdGg0My00LTktMy00Ij4KICAgICAgPHJlY3QKICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzBiMGIwZDtzdHJva2Utd2lkdGg6MzguMjQyNDtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgICAgaWQ9InJlY3Q0NC0xLTMtNDAtMCIKICAgICAgICAgd2lkdGg9IjQ1OC45MDkwMyIKICAgICAgICAgaGVpZ2h0PSI0NTguOTA5MDMiCiAgICAgICAgIHg9IjE1NDQuMTAzIgogICAgICAgICB5PSItOTk0LjYxNjA5IgogICAgICAgICBpbmtzY2FwZTpsYWJlbD0ibG9nby1yZWN0IgogICAgICAgICB0cmFuc2Zvcm09InJvdGF0ZSg5MCkiIC8+CiAgICA8L2NsaXBQYXRoPgogICAgPGNsaXBQYXRoCiAgICAgICBjbGlwUGF0aFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIKICAgICAgIGlkPSJjbGlwUGF0aDQzLTQtOS0zLTQtMSI+CiAgICAgIDxyZWN0CiAgICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwYjBiMGQ7c3Ryb2tlLXdpZHRoOjM4LjI0MjQ7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1vcGFjaXR5OjEiCiAgICAgICAgIGlkPSJyZWN0NDQtMS0zLTQwLTAtMiIKICAgICAgICAgd2lkdGg9IjQ1OC45MDkwMyIKICAgICAgICAgaGVpZ2h0PSI0NTguOTA5MDMiCiAgICAgICAgIHg9IjE1NDQuMTAzIgogICAgICAgICB5PSItOTk0LjYxNjA5IgogICAgICAgICBpbmtzY2FwZTpsYWJlbD0ibG9nby1yZWN0IgogICAgICAgICB0cmFuc2Zvcm09InJvdGF0ZSg5MCkiIC8+CiAgICA8L2NsaXBQYXRoPgogICAgPGxpbmVhckdyYWRpZW50CiAgICAgICBpbmtzY2FwZTpjb2xsZWN0PSJhbHdheXMiCiAgICAgICB4bGluazpocmVmPSIjbGluZWFyR3JhZGllbnQyMjAtOCIKICAgICAgIGlkPSJsaW5lYXJHcmFkaWVudDg5IgogICAgICAgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiCiAgICAgICBncmFkaWVudFRyYW5zZm9ybT0ibWF0cml4KC00LjEzMDE4MjQsMC40NjMyNzQxOSwwLjQ2MzI3NDE5LDQuMTMwMTgyNCwzODMxLjY3MjQsLTEwMDMuMzUyNCkiCiAgICAgICB4MT0iODI1Ljg2NDIiCiAgICAgICB5MT0iNTU5Ljk5MTY0IgogICAgICAgeDI9Ijg2MC40Mjc4IgogICAgICAgeTI9IjYyNy44MjYzNSIgLz4KICAgIDxsaW5lYXJHcmFkaWVudAogICAgICAgaWQ9ImxpbmVhckdyYWRpZW50MjIwLTgiCiAgICAgICBpbmtzY2FwZTpjb2xsZWN0PSJhbHdheXMiCiAgICAgICBpbmtzY2FwZTpsYWJlbD0iTFAiPgogICAgICA8c3RvcAogICAgICAgICBzdHlsZT0ic3RvcC1jb2xvcjojZWI5NjAwO3N0b3Atb3BhY2l0eToxOyIKICAgICAgICAgb2Zmc2V0PSIwLjA1MDQ1ODcxIgogICAgICAgICBpZD0ic3RvcDIxNS0xIiAvPgogICAgICA8c3RvcAogICAgICAgICBzdHlsZT0ic3RvcC1jb2xvcjojZjFjMDAwO3N0b3Atb3BhY2l0eToxOyIKICAgICAgICAgb2Zmc2V0PSIwLjI5OTMxMTk0IgogICAgICAgICBpZD0ic3RvcDIxNi02IiAvPgogICAgICA8c3RvcAogICAgICAgICBzdHlsZT0ic3RvcC1jb2xvcjojZmJmYjAwO3N0b3Atb3BhY2l0eToxOyIKICAgICAgICAgb2Zmc2V0PSIwLjUwMjg2Njk4IgogICAgICAgICBpZD0ic3RvcDIxNy0xIiAvPgogICAgICA8c3RvcAogICAgICAgICBzdHlsZT0ic3RvcC1jb2xvcjojYWVmZjM3O3N0b3Atb3BhY2l0eToxOyIKICAgICAgICAgb2Zmc2V0PSIwLjcwMzI2ODM1IgogICAgICAgICBpZD0ic3RvcDIxOC01IiAvPgogICAgICA8c3RvcAogICAgICAgICBzdHlsZT0ic3RvcC1jb2xvcjojMDBlZDcwO3N0b3Atb3BhY2l0eToxOyIKICAgICAgICAgb2Zmc2V0PSIwLjk0OTU0MTI3IgogICAgICAgICBpZD0ic3RvcDIxOS03IiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPGcKICAgICBpbmtzY2FwZTpsYWJlbD0iTGF5ZXIgMSIKICAgICBpbmtzY2FwZTpncm91cG1vZGU9ImxheWVyIgogICAgIGlkPSJsYXllcjEiCiAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMC45OTk5OTk5OSwwLDAsMS4wMDAwMDEyLC01LjI1NTI2NTdlLTYsMS4wNjA5MTJlLTQpIj4KICAgIDxyZWN0CiAgICAgICBzdHlsZT0iZmlsbDojZmZmZmZmO3N0cm9rZTojMGIwYjBkO3N0cm9rZS13aWR0aDoxMDA7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1vcGFjaXR5OjE7ZmlsbC1vcGFjaXR5OjEiCiAgICAgICBpZD0icmVjdDEiCiAgICAgICB3aWR0aD0iMTE5OS45OTg1IgogICAgICAgaGVpZ2h0PSIxMjAwIgogICAgICAgeD0iNTAuMDAwMjI5IgogICAgICAgeT0iLTE0NzYuNTc2MyIKICAgICAgIGlua3NjYXBlOmxhYmVsPSJsb2dvLXJlY3QiCiAgICAgICB0cmFuc2Zvcm09InJvdGF0ZSg5MCkiIC8+CiAgICA8ZwogICAgICAgaWQ9Imc4LTkxLTUtNC04LTgtMjAtNyIKICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDMuMTI4NDI0OSwwLDAsMy4xMjg0MjExLC0xMzk5LjM0MzMsLTUwMTYuMjY2NykiCiAgICAgICBpbmtzY2FwZTpsYWJlbD0ibGl0dGxlLXBhcnJvdC1ub3JtYWwiCiAgICAgICBjbGlwLXBhdGg9InVybCgjY2xpcFBhdGg0My00LTktMy00LTEpIj4KICAgICAgPGcKICAgICAgICAgaWQ9Imc0NC04LTctMjMtNCIKICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMS4yNzEzNTE0LDAuODU4ODYxOTEsLTAuODU4ODYxOTEsMS4yNzEzNTE0LDEzNTUuNzU2LC0xMDAyLjk2NTYpIj4KICAgICAgICA8ZwogICAgICAgICAgIGlkPSJnMjAtNi0yLTEtNC0zLTgtOSIKICAgICAgICAgICBpbmtzY2FwZTpsYWJlbD0ibGVnLWJhY2siCiAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjg2LjAxMjQyKSI+CiAgICAgICAgICA8cGF0aAogICAgICAgICAgICAgc3R5bGU9ImZpbGw6IzA4MDgwOTtmaWxsLW9wYWNpdHk6MTtzdHJva2U6IzA4MDgwOTtzdHJva2Utd2lkdGg6MTI7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgICAgICAgIGQ9Im0gNDE0Ljk1NjIxLDE5ODMuMTQ0MSB2IDcyLjI4MiIKICAgICAgICAgICAgIGlkPSJwYXRoMTctNi03LTMtOC03LTItMS05IiAvPgogICAgICAgICAgPHBhdGgKICAgICAgICAgICAgIHN0eWxlPSJmaWxsOiMwODA4MDk7ZmlsbC1vcGFjaXR5OjE7c3Ryb2tlOiMwODA4MDk7c3Ryb2tlLXdpZHRoOjEyO3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1vcGFjaXR5OjEiCiAgICAgICAgICAgICBkPSJtIDM4OC4zMjYwMSwyMDQ5LjcxOTYgMjUuNjE0MSwtNi44NjMzIDI3LjAxNiw3LjIzOSIKICAgICAgICAgICAgIGlkPSJwYXRoMTgtNC0xOC01LTktNS0xLTYtOCIgLz4KICAgICAgICA8L2c+CiAgICAgICAgPHBhdGgKICAgICAgICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmU7ZmlsbDp1cmwoI2xpbmVhckdyYWRpZW50ODkpO3N0cm9rZTojMDgwODA5O3N0cm9rZS13aWR0aDoxMjtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgICAgICBkPSJtIDcyMi44OTg4MiwxNzU1LjM4NzIgMzYuODg1MSwtMTYuNjM1MiAtMzUuNTE1NDUsLTI4LjM1MTYgYyAtMC41NDM0MiwtMjUuNDk4MiAtMTMuMTExMzMsLTQ1LjUzMTggLTQ1LjEwNDg0LC00MC4yMTQxIC0xMi40Njc5NywyLjA3MjQgLTI5LjQ0NDExLDE1Ljg3NTMgLTMwLjc5Mzc0LDQ0LjAyMjIgLTEuMzYyNjksMjguNDE5IDUuMDMyODgsMTAwLjgxNTIgLTM0LjAxMjY0LDEzNi4xMTk1IC00Mi42NDI3NiwzOC41NTY4IC05Mi43MDM2MSw4NC4wMjQgLTEyNC4xNTk0OCw4OS4yNTYzIDU3LjA0ODE1LDUzLjM5NzggMTgzLjA4MTY3LDc1LjY5MjIgMjMzLjU3MDk2LDQ0LjMzNTggNDIuNzY3MTcsLTI2LjU2MDYgMTQuNzc2MjcsLTE2NC4xODA1IC0wLjg2OTkxLC0yMjguNTMyOSAtMTAuMTExOCw0LjIzMjkgLTIwLjY2MTg4LDguNzIzIC0zMS41MDA1NSw4Ljg4NSAxMC44Mzk0MywtMC4xNjQ3IDIxLjM4NTU5LC00LjY0NjUgMzEuNTAwNTUsLTguODg1IHoiCiAgICAgICAgICAgaWQ9InBhdGgyLTUtNTItOC01LTctMy0yLTMtMS0wIgogICAgICAgICAgIHNvZGlwb2RpOm5vZGV0eXBlcz0iY2Njc3NzY3NjY2MiCiAgICAgICAgICAgaW5rc2NhcGU6bGFiZWw9InBhcnJvdC1ib2R5IiAvPgogICAgICAgIDxjaXJjbGUKICAgICAgICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmU7ZmlsbDojMDgwODA5O2ZpbGwtb3BhY2l0eToxO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDoxMC45OTYzO3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2Utb3BhY2l0eToxIgogICAgICAgICAgIGlkPSJwYXRoMTgtMC01LTAtOC01LTgtNi0yLTUtMiIKICAgICAgICAgICBjeD0iLTUwMS42NjQ2NyIKICAgICAgICAgICBjeT0iMTc3Mi4wNzAzIgogICAgICAgICAgIHI9IjkuNTc5MTgzNiIKICAgICAgICAgICBpbmtzY2FwZTpsYWJlbD0icGFycm90LWV5ZSIKICAgICAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgtMC45OTM3Njc5MiwwLjExMTQ2ODkzLDAuMTExNDY4OTMsMC45OTM3Njc5MiwwLDApIiAvPgogICAgICAgIDxnCiAgICAgICAgICAgaWQ9ImcxOS0xLTItNy03LTctNy0zIgogICAgICAgICAgIGlua3NjYXBlOmxhYmVsPSJsZWctZnJvbnQiCiAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjg2LjAxMjQyKSI+CiAgICAgICAgICA8cGF0aAogICAgICAgICAgICAgc3R5bGU9ImZpbGw6IzA4MDgwOTtmaWxsLW9wYWNpdHk6MTtzdHJva2U6IzA4MDgwOTtzdHJva2Utd2lkdGg6MTI7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgICAgICAgIGQ9Im0gMzU1LjgyMTksMTk4NS42MzQ3IHYgNzIuMjgyIgogICAgICAgICAgICAgaWQ9InBhdGgxNy0zLTgtMi01LTAtNy03IiAvPgogICAgICAgICAgPHBhdGgKICAgICAgICAgICAgIHN0eWxlPSJmaWxsOiMwODA4MDk7ZmlsbC1vcGFjaXR5OjE7c3Ryb2tlOiMwODA4MDk7c3Ryb2tlLXdpZHRoOjEyO3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1vcGFjaXR5OjEiCiAgICAgICAgICAgICBkPSJtIDMyOS4xOTE3LDIwNTIuMjEwMiAyNS42MTQxLC02Ljg2MzMgMjcuMDE2LDcuMjM5IgogICAgICAgICAgICAgaWQ9InBhdGgxOC03LTYtMy00LTUtNC0wIiAvPgogICAgICAgIDwvZz4KICAgICAgPC9nPgogICAgPC9nPgogICAgPHJlY3QKICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwYjBiMGQ7c3Ryb2tlLXdpZHRoOjEwMDtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgIGlkPSJyZWN0MS01LTYtNi03LTMtMC01LTEtMi0wLTAtNC01LTctMS0zLTYtMy0wLTMtNC0wLTcyLTciCiAgICAgICB3aWR0aD0iMTE5OS45OTg1IgogICAgICAgaGVpZ2h0PSIxMjAwIgogICAgICAgeD0iNTAuMDAwMjI5IgogICAgICAgeT0iLTE0NzYuNTc2MyIKICAgICAgIGlua3NjYXBlOmxhYmVsPSJsb2dvLXJlY3QiCiAgICAgICB0cmFuc2Zvcm09InJvdGF0ZSg5MCkiIC8+CiAgICA8ZwogICAgICAgaWQ9Imc0NS0yLTctMCIKICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLDAuOTk5OTk4OCwtODA5MS40MDQsLTEwMjcwLjI3NCkiPgogICAgICA8cGF0aAogICAgICAgICBzdHlsZT0iZm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTYzLjgycHg7bGluZS1oZWlnaHQ6MDtmb250LWZhbWlseTpNb250c2VycmF0Oy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J01vbnRzZXJyYXQgQm9sZCc7bGV0dGVyLXNwYWNpbmc6MHB4O3dvcmQtc3BhY2luZzowcHg7d2hpdGUtc3BhY2U6cHJlO2ZpbGw6IzBiMGIwZDtzdHJva2Utd2lkdGg6OS40Nzg7c3Ryb2tlLWxpbmVjYXA6cm91bmQiCiAgICAgICAgIGQ9Im0gMTAzMjIuMzgxLC04MTIzLjE4NSBxIC0xMS42MzEsMCAtMTkuOTg2LC00LjkxNDYgLTguMzU1LC00LjkxNDYgLTEyLjc3OCwtMTQuOTA3NyAtNC40MjMsLTEwLjE1NjggLTQuNDIzLC0yNS41NTU5IDAsLTE1LjU2MjkgNC41ODcsLTI1LjU1NTkgNC43NTEsLTkuOTkzIDEzLjEwNSwtMTQuOTA3NiA4LjM1NSwtNC45MTQ2IDE5LjQ5NSwtNC45MTQ2IDEyLjQ1LDAgMjIuMjgsNS41Njk5IDkuOTkzLDUuNTY5OCAxNS43MjYsMTUuNzI2NyA1Ljg5OCwxMC4xNTY4IDUuODk4LDI0LjA4MTUgMCwxMy43NjA5IC01Ljg5OCwyMy45MTc3IC01LjczMywxMC4xNTY5IC0xNS43MjYsMTUuODkwNiAtOS44Myw1LjU2OTkgLTIyLjI4LDUuNTY5OSB6IG0gLTUyLjA5NSwtMS4zMTA2IHYgLTEyMS41NTQ1IGggMjUuNTU2IHYgNTEuMjc1NyBsIC0xLjYzOCwyNi4wNDc0IDAuNDkxLDI2LjIxMTIgdiAxOC4wMjAyIHogbSA0Ny42NzIsLTE5LjY1ODQgcSA2LjM4OSwwIDExLjMwMywtMi45NDg4IDUuMDc5LC0yLjk0ODcgOC4wMjgsLTguMzU0OCAzLjExMiwtNS41Njk5IDMuMTEyLC0xMy4xMDU2IDAsLTcuNjk5NSAtMy4xMTIsLTEzLjEwNTYgLTIuOTQ5LC01LjQwNiAtOC4wMjgsLTguMzU0OCAtNC45MTQsLTIuOTQ4OCAtMTEuMzAzLC0yLjk0ODggLTYuMzg5LDAgLTExLjQ2OCwyLjk0ODggLTUuMDc4LDIuOTQ4OCAtOC4wMjcsOC4zNTQ4IC0yLjk0OCw1LjQwNjEgLTIuOTQ4LDEzLjEwNTYgMCw3LjUzNTcgMi45NDgsMTMuMTA1NiAyLjk0OSw1LjQwNjEgOC4wMjcsOC4zNTQ4IDUuMDc5LDIuOTQ4OCAxMS40NjgsMi45NDg4IHogbSA3NC4wNDcsNTIuNzUgcSAtNi44ODEsMCAtMTMuNTk3LC0yLjEyOTYgLTYuNzE3LC0yLjEyOTcgLTEwLjk3NiwtNS44OTc1IGwgOS4zMzcsLTE4LjE4NDEgcSAyLjk0OSwyLjYyMTIgNi43MTcsNC4wOTU1IDMuOTMyLDEuNDc0NCA3LjcsMS40NzQ0IDUuNDA2LDAgOC41MTgsLTIuNjIxMSAzLjI3NywtMi40NTczIDUuODk4LC04LjM1NDggbCA0LjU4NywtMTAuODEyMSAxLjk2NiwtMi43ODUgMzEuNjE3LC03Ni4wMTI1IGggMjQuNTczIGwgLTM5LjgwOCw5My41NDEzIHEgLTQuMjYsMTAuNjQ4MyAtOS44MywxNi43MDk2IC01LjQwNiw2LjA2MTMgLTEyLjEyMiw4LjUxODYgLTYuNTUzLDIuNDU3MyAtMTQuNTgsMi40NTczIHogbSAxNS4wNzEsLTI5LjY1MTQgLTM5LjMxNywtOTEuNTc1NCBoIDI2LjM3NSBsIDMwLjQ3MSw3My43MTkgeiBtIDE3MC4yMDksLTIuMTI5NiBxIC0xMS4xNCwwIC0xOS40OTQsLTQuOTE0NiAtOC4zNTUsLTQuOTE0NiAtMTMuMTA2LC0xNC45MDc3IC00LjU4NywtMTAuMTU2OCAtNC41ODcsLTI1LjU1NTkgMCwtMTUuNTYyOSA0LjQyMywtMjUuNTU1OSA0LjQyMywtOS45OTMgMTIuNzc4LC0xNC45MDc2IDguMzU1LC00LjkxNDYgMTkuOTg2LC00LjkxNDYgMTIuNDUxLDAgMjIuMjgsNS43MzM3IDkuOTkzLDUuNTY5OSAxNS43MjYsMTUuNzI2NyA1Ljg5OCwxMC4xNTY4IDUuODk4LDIzLjkxNzcgMCwxMy45MjQ3IC01Ljg5OCwyNC4wODE2IC01LjczMywxMC4xNTY4IC0xNS43MjYsMTUuNzI2NyAtOS44MjksNS41Njk5IC0yMi4yOCw1LjU2OTkgeiBtIC01Mi4wOTUsMzAuNDcwNSB2IC0xMTkuOTE2MyBoIDI0LjQxIHYgMTguMDIwMiBsIC0wLjQ5MiwyNi4yMTEyIDEuNjM4LDI2LjA0NzQgdiA0OS42Mzc1IHogbSA0Ny42NzIsLTUxLjQzOTUgcSA2LjM4OSwwIDExLjMwNCwtMi45NDg4IDUuMDc4LC0yLjk0ODcgOC4wMjcsLTguMzU0OCAzLjExMiwtNS41Njk5IDMuMTEyLC0xMy4xMDU2IDAsLTcuNjk5NSAtMy4xMTIsLTEzLjEwNTYgLTIuOTQ5LC01LjQwNiAtOC4wMjcsLTguMzU0OCAtNC45MTUsLTIuOTQ4OCAtMTEuMzA0LC0yLjk0ODggLTYuMzg5LDAgLTExLjQ2NywyLjk0ODggLTUuMDc5LDIuOTQ4OCAtOC4wMjgsOC4zNTQ4IC0yLjk0OCw1LjQwNjEgLTIuOTQ4LDEzLjEwNTYgMCw3LjUzNTcgMi45NDgsMTMuMTA1NiAyLjk0OSw1LjQwNjEgOC4wMjgsOC4zNTQ4IDUuMDc4LDIuOTQ4OCAxMS40NjcsMi45NDg4IHogbSA2NS4zNjQsMTkuNjU4NCB2IC04OC4xMzUyIGggMjQuNDEgdiAyNC45MDA3IGwgLTMuNDQxLC03LjIwODEgcSAzLjkzMiwtOS4zMzc3IDEyLjYxNCwtMTQuMDg4NSA4LjY4MywtNC45MTQ2IDIxLjEzMywtNC45MTQ2IHYgMjMuNTkwMSBxIC0xLjYzOCwtMC4xNjM5IC0yLjk0OSwtMC4xNjM5IC0xLjMxLC0wLjE2MzggLTIuNzg0LC0wLjE2MzggLTEwLjQ4NSwwIC0xNy4wMzgsNi4wNjE0IC02LjM4OSw1Ljg5NzUgLTYuMzg5LDE4LjUxMTYgdiA0MS42MTAzIHogbSAxMTEuMTMzLDEuMzEwNiBxIC0xNC4wODksMCAtMjUuMDY1LC01Ljg5NzYgLTEwLjgxMiwtNS44OTc1IC0xNy4yMDEsLTE2LjA1NDMgLTYuMjI1LC0xMC4zMjA3IC02LjIyNSwtMjMuNDI2MyAwLC0xMy4yNjk0IDYuMjI1LC0yMy40MjYyIDYuMzg5LC0xMC4zMjA3IDE3LjIwMSwtMTYuMDU0NCAxMC45NzYsLTUuODk3NSAyNS4wNjUsLTUuODk3NSAxMy45MjUsMCAyNC45MDEsNS44OTc1IDEwLjk3Niw1LjczMzcgMTcuMjAxLDE1Ljg5MDUgNi4yMjUsMTAuMTU2OSA2LjIyNSwyMy41OTAxIDAsMTMuMTA1NiAtNi4yMjUsMjMuNDI2MyAtNi4yMjUsMTAuMTU2OCAtMTcuMjAxLDE2LjA1NDMgLTEwLjk3Niw1Ljg5NzYgLTI0LjkwMSw1Ljg5NzYgeiBtIDAsLTIwLjk2OSBxIDYuMzg5LDAgMTEuNDY3LC0yLjk0ODggNS4wNzksLTIuOTQ4NyA4LjAyOCwtOC4zNTQ4IDIuOTQ4LC01LjU2OTkgMi45NDgsLTEzLjEwNTYgMCwtNy42OTk1IC0yLjk0OCwtMTMuMTA1NiAtMi45NDksLTUuNDA2IC04LjAyOCwtOC4zNTQ4IC01LjA3OCwtMi45NDg4IC0xMS40NjcsLTIuOTQ4OCAtNi4zODksMCAtMTEuNDY3LDIuOTQ4OCAtNS4wNzksMi45NDg4IC04LjE5MSw4LjM1NDggLTIuOTQ5LDUuNDA2MSAtMi45NDksMTMuMTA1NiAwLDcuNTM1NyAyLjk0OSwxMy4xMDU2IDMuMTEyLDUuNDA2MSA4LjE5MSw4LjM1NDggNS4wNzgsMi45NDg4IDExLjQ2NywyLjk0ODggeiBtIDEwMy4yMDcsMjAuOTY5IHEgLTEyLjQ1MSwwIC0yMi40NDQsLTUuNTY5OSAtOS45OTMsLTUuNzMzNyAtMTUuODksLTE1Ljg5MDYgLTUuNzM0LC0xMC4xNTY4IC01LjczNCwtMjMuOTE3NyAwLC0xMy45MjQ3IDUuNzM0LC0yNC4wODE1IDUuODk3LC0xMC4xNTY5IDE1Ljg5LC0xNS43MjY3IDkuOTkzLC01LjU2OTkgMjIuNDQ0LC01LjU2OTkgMTEuMTM5LDAgMTkuNDk0LDQuOTE0NiA4LjM1NSw0LjkxNDYgMTIuOTQyLDE0LjkwNzYgNC41ODcsOS45OTMgNC41ODcsMjUuNTU1OSAwLDE1LjM5OTEgLTQuNDIzLDI1LjU1NTkgLTQuNDIzLDkuOTkzMSAtMTIuNzc4LDE0LjkwNzcgLTguMTkxLDQuOTE0NiAtMTkuODIyLDQuOTE0NiB6IG0gNC40MjMsLTIwLjk2OSBxIDYuMjI1LDAgMTEuMzAzLC0yLjk0ODggNS4wNzksLTIuOTQ4NyA4LjAyOCwtOC4zNTQ4IDMuMTEyLC01LjU2OTkgMy4xMTIsLTEzLjEwNTYgMCwtNy42OTk1IC0zLjExMiwtMTMuMTA1NiAtMi45NDksLTUuNDA2IC04LjAyOCwtOC4zNTQ4IC01LjA3OCwtMi45NDg4IC0xMS4zMDMsLTIuOTQ4OCAtNi4zODksMCAtMTEuNDY4LDIuOTQ4OCAtNS4wNzgsMi45NDg4IC04LjE5MSw4LjM1NDggLTIuOTQ4LDUuNDA2MSAtMi45NDgsMTMuMTA1NiAwLDcuNTM1NyAyLjk0OCwxMy4xMDU2IDMuMTEzLDUuNDA2MSA4LjE5MSw4LjM1NDggNS4wNzksMi45NDg4IDExLjQ2OCwyLjk0ODggeiBtIDIzLjA5OCwxOS42NTg0IHYgLTE4LjAyMDIgbCAwLjQ5MiwtMjYuMjExMiAtMS42MzgsLTI2LjA0NzQgdiAtNTEuMjc1NyBoIDI1LjU1NiB2IDEyMS41NTQ1IHogbSA4NS4xODcsMS4zMTA2IHEgLTEwLjk3NiwwIC0xOS42NTksLTQuMjU5NCAtOC41MTgsLTQuMjU5MyAtMTMuMjY5LC0xMi45NDE3IC00Ljc1MSwtOC44NDYzIC00Ljc1MSwtMjIuNDQzNCB2IC00OS44MDEzIGggMjUuNTU2IHYgNDYuMDMzNSBxIDAsMTAuOTc1OSA0LjU4NywxNi4yMTgxIDQuNzUxLDUuMDc4NSAxMy4yNjksNS4wNzg1IDUuODk4LDAgMTAuNDg1LC0yLjQ1NzMgNC41ODcsLTIuNjIxMiA3LjIwOCwtNy44NjM0IDIuNjIxLC01LjQwNjEgMi42MjEsLTEzLjQzMzIgdiAtNDMuNTc2MiBoIDI1LjU1NiB2IDg4LjEzNTIgaCAtMjQuMjQ1IHYgLTI0LjI0NTQgbCA0LjQyMyw3LjA0NDMgcSAtNC40MjMsOS4xNzM5IC0xMy4xMDYsMTMuOTI0NyAtOC41MTgsNC41ODcgLTE4LjY3NSw0LjU4NyB6IG0gMTE3Ljk1LDAgcSAtMTQuMjUyLDAgLTI1LjM5MiwtNS43MzM3IC0xMS4xNCwtNS44OTc2IC0xNy41MjksLTE2LjIxODIgLTYuMjI1LC0xMC4zMjA3IC02LjIyNSwtMjMuNDI2MyAwLC0xMy4yNjk0IDYuMjI1LC0yMy40MjYyIDYuMzg5LC0xMC4zMjA3IDE3LjUyOSwtMTYuMDU0NCAxMS4xNCwtNS44OTc1IDI1LjM5MiwtNS44OTc1IDEzLjkyNSwwIDI0LjI0Niw1Ljg5NzUgMTAuMzIsNS43MzM3IDE1LjIzNSwxNi41NDU4IGwgLTE5LjgyMiwxMC42NDgzIHEgLTMuNDQxLC02LjIyNTEgLTguNjgzLC05LjE3MzkgLTUuMDc4LC0yLjk0ODggLTExLjE0LC0yLjk0ODggLTYuNTUyLDAgLTExLjc5NSwyLjk0ODggLTUuMjQyLDIuOTQ4OCAtOC4zNTUsOC4zNTQ4IC0yLjk0OCw1LjQwNjEgLTIuOTQ4LDEzLjEwNTYgMCw3LjY5OTYgMi45NDgsMTMuMTA1NiAzLjExMyw1LjQwNjEgOC4zNTUsOC4zNTQ4IDUuMjQzLDIuOTQ4OCAxMS43OTUsMi45NDg4IDYuMDYyLDAgMTEuMTQsLTIuNzg0OSA1LjI0MiwtMi45NDg4IDguNjgzLC05LjMzNzggbCAxOS44MjIsMTAuODEyMSBxIC00LjkxNSwxMC42NDgzIC0xNS4yMzUsMTYuNTQ1OSAtMTAuMzIxLDUuNzMzNyAtMjQuMjQ2LDUuNzMzNyB6IG0gOTEuNjA3LDAgcSAtMTUuNTYzLDAgLTI0LjI0NiwtNy44NjM0IC04LjY4MiwtOC4wMjcyIC04LjY4MiwtMjMuNzUzOSB2IC03Ny4zMjMxIGggMjUuNTU2IHYgNzYuOTk1NSBxIDAsNS41Njk4IDIuOTQ5LDguNjgyNCAyLjk0OCwyLjk0ODggOC4wMjcsMi45NDg4IDYuMDYxLDAgMTAuMzIsLTMuMjc2NCBsIDYuODgxLDE4LjAyMDIgcSAtMy45MzIsMi43ODQ5IC05LjUwMiw0LjI1OTMgLTUuNDA2LDEuMzEwNiAtMTEuMzAzLDEuMzEwNiB6IG0gLTQ2LjUyNSwtNjkuNzg3NCB2IC0xOS42NTg0IGggNjEuMTA1IHYgMTkuNjU4NCB6IG0gMTAyLjg3OSw1MC40NTY2IDAuNjU1LC0zMS4xMjU4IDQxLjExOSwtMzguOTg5MiBoIDMwLjQ3IGwgLTM5LjQ4LDQwLjEzNTkgLTEzLjI3LDEwLjgxMjIgeiBtIC0yMS4xMzMsMTguMDIwMiB2IC0xMjEuNTU0NSBoIDI1LjU1NiB2IDEyMS41NTQ1IHogbSA2NS42OTIsMCAtMjkuODE2LC0zNy4wMjMzIDE2LjA1NSwtMTkuODIyMiA0NC43MjMsNTYuODQ1NSB6IG0gNDEuNjEsMCB2IC04OC4xMzUyIGggMjUuNTU2IHYgODguMTM1MiB6IG0gMTIuNzc4LC0xMDAuNDIxNyBxIC03LjA0NCwwIC0xMS40NjcsLTQuMDk1NSAtNC40MjMsLTQuMDk1NSAtNC40MjMsLTEwLjE1NjggMCwtNi4wNjE0IDQuNDIzLC0xMC4xNTY5IDQuNDIzLC00LjA5NTUgMTEuNDY3LC00LjA5NTUgNy4wNDQsMCAxMS40NjcsMy45MzE3IDQuNDI0LDMuNzY3OSA0LjQyNCw5LjgyOTIgMCw2LjM4OSAtNC40MjQsMTAuNjQ4MyAtNC4yNTksNC4wOTU1IC0xMS40NjcsNC4wOTU1IHogbSAzNi41MzIsMTAwLjQyMTcgdiAtODguMTM1MiBoIDI0LjQwOSB2IDI0LjQwOTIgbCAtNC41ODcsLTcuMzcxOSBxIDQuNzUxLC04Ljg0NjMgMTMuNTk3LC0xMy41OTcgOC44NDcsLTQuNzUwOCAyMC4xNSwtNC43NTA4IDEwLjQ4NSwwIDE4LjY3Niw0LjI1OTMgOC4zNTUsNC4wOTU1IDEzLjEwNSwxMi43NzggNC43NTEsOC41MTg2IDQuNzUxLDIxLjk1MTggdiA1MC40NTY2IGggLTI1LjU1NiB2IC00Ni41MjQ5IHEgMCwtMTAuNjQ4MyAtNC43NTEsLTE1LjcyNjcgLTQuNTg3LC01LjA3ODQgLTEzLjEwNSwtNS4wNzg0IC02LjA2MiwwIC0xMC45NzYsMi42MjExIC00Ljc1MSwyLjQ1NzMgLTcuNTM2LDcuNjk5NSAtMi42MjEsNS4yNDIzIC0yLjYyMSwxMy40MzMzIHYgNDMuNTc2MSB6IG0gMTUxLjY5MiwxLjMxMDYgcSAtMTIuNDUsMCAtMjIuNDQzLC01LjU2OTkgLTkuOTkzLC01LjczMzcgLTE1Ljg5MSwtMTUuODkwNiAtNS43MzMsLTEwLjE1NjggLTUuNzMzLC0yMy45MTc3IDAsLTEzLjkyNDcgNS43MzMsLTI0LjA4MTUgNS44OTgsLTEwLjE1NjkgMTUuODkxLC0xNS43MjY3IDkuOTkzLC01LjU2OTkgMjIuNDQzLC01LjU2OTkgMTEuMTQsMCAxOS40OTUsNC45MTQ2IDguMzU1LDQuOTE0NiAxMi45NDIsMTQuOTA3NiA0LjU4Nyw5Ljk5MyA0LjU4NywyNS41NTU5IDAsMTUuMzk5MSAtNC40MjMsMjUuNTU1OSAtNC40MjQsOS45OTMxIC0xMi43NzgsMTQuOTA3NyAtOC4xOTEsNC45MTQ2IC0xOS44MjMsNC45MTQ2IHogbSA0LjQyMywtMjAuOTY5IHEgNi4yMjYsMCAxMS4zMDQsLTIuOTQ4OCA1LjA3OCwtMi45NDg3IDguMDI3LC04LjM1NDggMy4xMTMsLTUuNTY5OSAzLjExMywtMTMuMTA1NiAwLC03LjY5OTUgLTMuMTEzLC0xMy4xMDU2IC0yLjk0OSwtNS40MDYgLTguMDI3LC04LjM1NDggLTUuMDc4LC0yLjk0ODggLTExLjMwNCwtMi45NDg4IC02LjM4OSwwIC0xMS40NjcsMi45NDg4IC01LjA3OCwyLjk0ODggLTguMTkxLDguMzU0OCAtMi45NDksNS40MDYxIC0yLjk0OSwxMy4xMDU2IDAsNy41MzU3IDIuOTQ5LDEzLjEwNTYgMy4xMTMsNS40MDYxIDguMTkxLDguMzU0OCA1LjA3OCwyLjk0ODggMTEuNDY3LDIuOTQ4OCB6IG0gMjMuMDk5LDE5LjY1ODQgdiAtMTguMDIwMiBsIDAuNDkyLC0yNi4yMTEyIC0xLjYzOSwtMjYuMDQ3NCB2IC01MS4yNzU3IGggMjUuNTU2IHYgMTIxLjU1NDUgeiIKICAgICAgICAgaWQ9InRleHQxLTMtOC04LTktMi0xLTQtMC0wLTYtNC04LTYtMy0zLTMtNi03LTEtNy0zLTctNiIKICAgICAgICAgaW5rc2NhcGU6bGFiZWw9ImxvZ28tcHJvZHVjdGtpbmQiCiAgICAgICAgIHRyYW5zZm9ybT0icm90YXRlKDkwKSIKICAgICAgICAgYXJpYS1sYWJlbD0iYnkgcHJvZHVjdGtpbmQmIzEwOyIgLz4KICAgICAgPGcKICAgICAgICAgaWQ9InRleHQxOC02LTItOS0xLTAtNS0wLTMtNy05LTctNy0xLTItMCIKICAgICAgICAgc3R5bGU9ImZvbnQtc2l6ZToyNC4yNTA3cHg7bGluZS1oZWlnaHQ6MC44O2ZvbnQtZmFtaWx5OidNb25hc3BhY2UgTmVvbic7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonTW9uYXNwYWNlIE5lb24nO3doaXRlLXNwYWNlOnByZTtpbmxpbmUtc2l6ZToxNDAuOTU3O2ZpbGw6IzBiMGIwZDtzdHJva2Utd2lkdGg6MC41MjQ0ODEiCiAgICAgICAgIGlua3NjYXBlOmxhYmVsPSJMaXR0bGVQYXJyb3RUZXh0IgogICAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgzMy45NjU3OTksMCwwLDMzLjk2NTgxNyw5MDQwLjA4MTksNjgzNi40Mzc1KSIKICAgICAgICAgYXJpYS1sYWJlbD0iTGl0dGxlJiMxMDtQYXJyb3QiPgogICAgICAgIDxwYXRoCiAgICAgICAgICAgc3R5bGU9ImZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6J1NwYWNlIE1vbm8nOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J1NwYWNlIE1vbm8gQm9sZCciCiAgICAgICAgICAgZD0ibSAxOS44MzgxNjcsMTAyLjAxODczIGggMy4yMDEwOTIgdiAxMy45MTk5IGggNy43MTE3MjMgdiAzLjA1NTU5IEggMTkuODM4MTY3IFogbSAxNC45NjI2NywxNC4wNjU0IGggNC4wNzQxMTcgdiAtNi4yMDgxOCBoIC0zLjc4MzEwOSB2IC0yLjkxMDA4IGggNi44Mzg2OTcgdiA5LjExODI2IGggMy40OTIxMDEgdiAyLjkxMDA5IEggMzQuODAwODM3IFogbSA3Ljg4MTQ3NywtMTIuNjgzMTEgcSAwLDAuNDg1MDEgLTAuMTk0MDA1LDAuOTIxNTIgLTAuMTY5NzU1LDAuNDEyMjcgLTAuNDg1MDE0LDAuNzI3NTIgLTAuMzE1MjYsMC4yOTEwMSAtMC43NTE3NzIsMC40ODUwMiAtMC40MTIyNjIsMC4xNjk3NSAtMC44NzMwMjUsMC4xNjk3NSAtMC40ODUwMTQsMCAtMC44OTcyNzYsLTAuMTY5NzUgLTAuNDEyMjYyLC0wLjE5NDAxIC0wLjcyNzUyMSwtMC40ODUwMiAtMC4zMTUyNTksLTAuMzE1MjUgLTAuNTA5MjY1LC0wLjcyNzUyIC0wLjE2OTc1NSwtMC40MzY1MSAtMC4xNjk3NTUsLTAuOTIxNTIgMCwtMC40ODUwMiAwLjE2OTc1NSwtMC44OTcyOCAwLjE5NDAwNiwtMC40MzY1MSAwLjUwOTI2NSwtMC43Mjc1MiAwLjMxNTI1OSwtMC4zMTUyNiAwLjcyNzUyMSwtMC40ODUwMSAwLjQxMjI2MiwtMC4xOTQwMSAwLjg5NzI3NiwtMC4xOTQwMSAwLjQ2MDc2MywwIDAuODczMDI1LDAuMTk0MDEgMC40MzY1MTIsMC4xNjk3NSAwLjc1MTc3MiwwLjQ4NTAxIDAuMzE1MjU5LDAuMjkxMDEgMC40ODUwMTQsMC43Mjc1MiAwLjE5NDAwNSwwLjQxMjI2IDAuMTk0MDA1LDAuODk3MjggeiBtIDYuNDAyMTczLDMuNTY0ODUgaCAzLjU2NDg1MyB2IC00Ljk0NzE0IGggMy4wNTU1ODggdiA0Ljk0NzE0IGggNC4zNDA4NzUgdiAyLjkxMDA4IGggLTQuMzQwODc1IHYgNS40ODA2NiBxIDAsMC43Mjc1MiAwLjY1NDc2OSwwLjcyNzUyIGggMy4yNDk1OTQgdiAyLjkxMDA5IGggLTUuMDkyNjQ3IHEgLTAuODI0NTI0LDAgLTEuMzU4MDQsLTAuNTMzNTIgLTAuNTA5MjY0LC0wLjUzMzUxIC0wLjUwOTI2NCwtMS4zNTgwNCB2IC03LjIyNjcxIGggLTMuNTY0ODUzIHogbSAxNC44NDE0MTcsMCBoIDMuNTY0ODUzIHYgLTQuOTQ3MTQgaCAzLjA1NTU4OCB2IDQuOTQ3MTQgaCA0LjM0MDg3NiB2IDIuOTEwMDggaCAtNC4zNDA4NzYgdiA1LjQ4MDY2IHEgMCwwLjcyNzUyIDAuNjU0NzY5LDAuNzI3NTIgaCAzLjI0OTU5NCB2IDIuOTEwMDkgaCAtNS4wOTI2NDcgcSAtMC44MjQ1MjQsMCAtMS4zNTgwMzksLTAuNTMzNTIgLTAuNTA5MjY1LC0wLjUzMzUxIC0wLjUwOTI2NSwtMS4zNTgwNCB2IC03LjIyNjcxIGggLTMuNTY0ODUzIHogbSAxNS4xMDgxNzMsOS4xMTgyNiBoIDQuMjE5NjIyIHYgLTExLjE1NTMyIGggLTQuMDc0MTE3IHYgLTIuOTEwMDggaCA3LjEyOTcwNSB2IDE0LjA2NTQgaCAzLjkyODYxNCB2IDIuOTEwMDkgSCA3OS4wMzQwNzcgWiBtIDE3LjYwNTk5OSwtMi4xMDk4MSBxIDAuMDI0MjUsMC41MzM1MiAwLjI0MjUwNywwLjk5NDI4IDAuMjQyNTA3LDAuNDM2NTEgMC42MzA1MTksMC43NzYwMiAwLjQxMjI2MSwwLjMxNTI2IDAuOTIxNTI2LDAuNTA5MjcgMC41MzM1MTYsMC4xNjk3NSAxLjExNTUzMiwwLjE2OTc1IDEuMTM5NzgsMCAxLjc0NjA1LC0wLjM4ODAxIDAuNjA2MjcsLTAuNDEyMjYgMC44NzMwMywtMC45NzAwMyBsIDIuNjE5MDcsMS40NTUwNSBxIC0wLjIxODI1LDAuNDYwNzYgLTAuNjA2MjcsMC45NzAwMiAtMC4zODgwMSwwLjQ4NTAyIC0xLjAxODUzLDAuODk3MjggLTAuNjA2MjYsMC40MTIyNiAtMS41MDM1NCwwLjY3OTAyIC0wLjg3MzAyLDAuMjY2NzYgLTIuMDYxMzA4LDAuMjY2NzYgLTEuMzU4MDM5LDAgLTIuNDczNTcyLC0wLjQzNjUyIC0xLjExNTUzMiwtMC40MzY1MSAtMS45NDAwNTYsLTEuMjYxMDMgLTAuODAwMjczLC0wLjgyNDUzIC0xLjI2MTAzNiwtMi4wMTI4MSAtMC40MzY1MTMsLTEuMTg4MjggLTAuNDM2NTEzLC0yLjY5MTgzIHYgLTAuMTQ1NSBxIDAsLTEuMzgyMjkgMC40NjA3NjQsLTIuNTIyMDggMC40ODUwMTQsLTEuMTM5NzggMS4zMDk1MzcsLTEuOTQwMDUgMC44MjQ1MjQsLTAuODAwMjcgMS45MTU4MDYsLTEuMjM2NzkgMS4xMTU1MzIsLTAuNDYwNzYgMi4zNzY1NjgsLTAuNDYwNzYgMS41NTIwNSwwIDIuNjY3NTgsMC41NTc3NyAxLjExNTUzLDAuNTMzNTEgMS44NDMwNSwxLjM4MjI5IDAuNzI3NTIsMC44MjQ1MiAxLjA2NzAzLDEuODQzMDUgMC4zMzk1MSwwLjk5NDI4IDAuMzM5NTEsMS45NDAwNiB2IDEuNjI0NzkgeiBtIDIuODg1ODM0LC00LjU4MzM4IHEgLTEuMTY0MDM0LDAgLTEuODkxNTU1LDAuNjA2MjcgLTAuNzI3NTIxLDAuNTgyMDEgLTAuOTQ1Nzc3LDEuMzU4MDQgaCA1LjY3NDY2MiBxIC0wLjE0NTUsLTAuODQ4NzggLTAuOTIxNTMsLTEuNDA2NTQgLTAuNzUxNzcsLTAuNTU3NzcgLTEuOTE1OCwtMC41NTc3NyB6IgogICAgICAgICAgIGlkPSJwYXRoMSIgLz4KICAgICAgICA8cGF0aAogICAgICAgICAgIHN0eWxlPSJmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OidTcGFjZSBNb25vJzstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOidTcGFjZSBNb25vIEJvbGQnIgogICAgICAgICAgIGQ9Im0gMjIuNzk2NzUyLDEzMi42MjkyOCB2IDYuNDAyMTggSCAxOS41OTU2NiB2IC0xNi45NzU0OSBoIDYuNjQ0NjkyIHEgMS4zMDk1MzcsMCAyLjI3OTU2NSwwLjQzNjUyIDAuOTcwMDI4LDAuNDEyMjYgMS42MDA1NDcsMS4xMTU1MyAwLjY1NDc2OCwwLjY3OTAyIDAuOTcwMDI4LDEuNTc2MyAwLjMzOTUwOSwwLjg3MzAyIDAuMzM5NTA5LDEuNzk0NTUgdiAwLjU4MjAxIHEgMCwwLjk0NTc4IC0wLjMzOTUwOSwxLjg2NzMxIC0wLjMxNTI2LDAuODk3MjcgLTAuOTcwMDI4LDEuNjI0NzkgLTAuNjMwNTE5LDAuNzAzMjcgLTEuNjAwNTQ3LDEuMTM5NzkgLTAuOTcwMDI4LDAuNDM2NTEgLTIuMjc5NTY1LDAuNDM2NTEgeiBtIDAsLTMuMDU1NTkgaCAzLjEyODM0IHEgMS4wNjcwMzEsMCAxLjY3MzI5OSwtMC41ODIwMSAwLjYzMDUxOCwtMC41ODIwMiAwLjYzMDUxOCwtMS41MDM1NSB2IC0wLjI5MTAxIHEgMCwtMC45MjE1MiAtMC42MzA1MTgsLTEuNTAzNTQgLTAuNjA2MjY4LC0wLjU4MjAyIC0xLjY3MzI5OSwtMC41ODIwMiBoIC0zLjEyODM0IHogbSAxOS41NzAzMDMsNy43MTE3MiBxIC0wLjQ4NTAxNCwxLjEzOTc5IC0xLjM1ODAzOSwxLjYyNDggLTAuODczMDI1LDAuNDYwNzYgLTIuMDM3MDU5LDAuNDYwNzYgLTEuMDkxMjgxLDAgLTIuMDYxMzA5LC0wLjQxMjI2IC0wLjk0NTc3OCwtMC40MTIyNiAtMS42NzMyOTksLTEuMjEyNTMgLTAuNzI3NTIxLC0wLjgwMDI4IC0xLjE2NDAzMywtMS45NDAwNiAtMC40MTIyNjIsLTEuMTM5NzggLTAuNDEyMjYyLC0yLjU5NDgyIHYgLTAuMzg4MDEgcSAwLC0xLjQzMDggMC40MTIyNjIsLTIuNTcwNTggMC40MTIyNjIsLTEuMTM5NzggMS4xMTU1MzIsLTEuOTQwMDUgMC43MDMyNywtMC44MDAyOCAxLjYyNDc5NywtMS4yMTI1NCAwLjk0NTc3NywtMC40MzY1MSAyLjAxMjgwOCwtMC40MzY1MSAxLjI4NTI4NywwIDIuMDYxMzA5LDAuNDM2NTEgMC44MDAyNzMsMC40MzY1MSAxLjI2MTAzNywxLjM1ODA0IGggMC40MzY1MTIgdiAtMS40NTUwNCBIIDQ1LjY0MDkgdiA4LjM5MDc0IHEgMCwwLjcyNzUyIDAuNjU0NzY4LDAuNzI3NTIgaCAwLjQ2MDc2NCB2IDIuOTEwMDggaCAtMi4wODU1NiBxIC0wLjgyNDUyNCwwIC0xLjM1ODA0LC0wLjQ4NTAxIC0wLjUwOTI2NCwtMC40ODUwMSAtMC41MDkyNjQsLTEuMjYxMDQgeiBtIC0yLjcxNjA3OCwtMC44MjQ1MiBxIDEuMzMzNzg4LDAgMi4xMzQwNjEsLTAuODczMDIgMC44MDAyNzMsLTAuODk3MjggMC44MDAyNzMsLTIuNDI1MDcgdiAtMC4yOTEwMSBxIDAsLTEuNTI3OCAtMC44MDAyNzMsLTIuNDAwODIgLTAuODAwMjczLC0wLjg5NzI4IC0yLjEzNDA2MSwtMC44OTcyOCAtMS4zMzM3ODksMCAtMi4xMzQwNjIsMC44OTcyOCAtMC44MDAyNzMsMC44NzMwMiAtMC44MDAyNzMsMi40MDA4MiB2IDAuMjkxMDEgcSAwLDEuNTI3NzkgMC44MDAyNzMsMi40MjUwNyAwLjgwMDI3MywwLjg3MzAyIDIuMTM0MDYyLDAuODczMDIgeiBtIDkuMTkxMDAzLC05LjQ1Nzc3IGggNS4wOTI2NDcgdiAxLjc0NjA1IGggMC40MzY1MTIgcSAwLjMzOTUxLC0wLjk5NDI4IDEuMTM5NzgzLC0xLjUyNzggMC44MjQ1MjQsLTAuNTU3NzYgMS45NjQzMDcsLTAuNTU3NzYgMS43OTQ1NTIsMCAyLjg4NTgzMywxLjEzOTc4IDEuMDkxMjgyLDEuMTE1NTMgMS4wOTEyODIsMy40MTkzNSB2IDAuNTMzNTEgbCAtMy4xNTI1OTEsMC4yOTEwMSB2IC0wLjMzOTUxIHEgMCwtMC45OTQyOCAtMC41MDkyNjUsLTEuNTc2MjkgLTAuNTA5MjY1LC0wLjYwNjI3IC0xLjUyNzc5NCwtMC42MDYyNyAtMS4wMTg1MjksMCAtMS42MDA1NDYsMC43MDMyNyAtMC41ODIwMTcsMC43MDMyNyAtMC41ODIwMTcsMi4wMTI4MSB2IDMuODgwMTEgaCAyLjc2NDU4IHYgMi45MTAwOCBoIC04LjI5Mzc0IHYgLTIuOTEwMDggaCAyLjQ3MzU3MiBWIDEyOS45MTMyIEggNDguODQxOTggWiBtIDE0Ljg0MTQxNywwIGggNS4wOTI2NDcgdiAxLjc0NjA1IGggMC40MzY1MTMgcSAwLjMzOTUxLC0wLjk5NDI4IDEuMTM5NzgzLC0xLjUyNzggMC44MjQ1MjQsLTAuNTU3NzYgMS45NjQzMDYsLTAuNTU3NzYgMS43OTQ1NTIsMCAyLjg4NTgzNCwxLjEzOTc4IDEuMDkxMjgxLDEuMTE1NTMgMS4wOTEyODEsMy40MTkzNSB2IDAuNTMzNTEgbCAtMy4xNTI1OTEsMC4yOTEwMSB2IC0wLjMzOTUxIHEgMCwtMC45OTQyOCAtMC41MDkyNjQsLTEuNTc2MjkgLTAuNTA5MjY1LC0wLjYwNjI3IC0xLjUyNzc5NSwtMC42MDYyNyAtMS4wMTg1MjksMCAtMS42MDA1NDYsMC43MDMyNyAtMC41ODIwMTcsMC43MDMyNyAtMC41ODIwMTcsMi4wMTI4MSB2IDMuODgwMTEgaCAyLjc2NDU4IHYgMi45MTAwOCBoIC04LjI5MzczOSB2IC0yLjkxMDA4IGggMi40NzM1NzEgdiAtNi4yMDgxOCBoIC0yLjE4MjU2MyB6IG0gMjcuMjA5MjczLDYuMTU5NjggcSAwLDEuNTAzNTQgLTAuNTA5MjY1LDIuNjY3NTcgLTAuNTA5MjY1LDEuMTM5NzkgLTEuMzgyMjksMS45NDAwNiAtMC44NzMwMjUsMC43NzYwMiAtMi4wMTI4MDgsMS4xODgyOCAtMS4xMTU1MzIsMC40MTIyNiAtMi4zNTIzMTgsMC40MTIyNiAtMS4yMzY3ODYsMCAtMi4zNzY1NjksLTAuNDEyMjYgLTEuMTE1NTMyLC0wLjQxMjI2IC0xLjk4ODU1NywtMS4xODgyOCAtMC44NzMwMjUsLTAuODAwMjcgLTEuMzgyMjksLTEuOTQwMDYgLTAuNTA5MjY1LC0xLjE2NDAzIC0wLjUwOTI2NSwtMi42Njc1NyB2IC0wLjI5MTAxIHEgMCwtMS40NzkzIDAuNTA5MjY1LC0yLjYxOTA4IDAuNTA5MjY1LC0xLjE2NDAzIDEuMzgyMjksLTEuOTY0MzEgMC44NzMwMjUsLTAuODAwMjcgMS45ODg1NTcsLTEuMjEyNTMgMS4xMzk3ODMsLTAuNDEyMjYgMi4zNzY1NjksLTAuNDEyMjYgMS4yMzY3ODYsMCAyLjM1MjMxOCwwLjQxMjI2IDEuMTM5NzgzLDAuNDEyMjYgMi4wMTI4MDgsMS4yMTI1MyAwLjg3MzAyNSwwLjgwMDI4IDEuMzgyMjksMS45NjQzMSAwLjUwOTI2NSwxLjEzOTc4IDAuNTA5MjY1LDIuNjE5MDggeiBtIC02LjI1NjY4MSwzLjI5ODA5IHEgMC42NTQ3NjksMCAxLjIzNjc4NiwtMC4yMTgyNiAwLjU4MjAxNywtMC4yMTgyNSAxLjAxODUyOSwtMC42MzA1MSAwLjQzNjUxMywtMC40MTIyNyAwLjY3OTAyLC0wLjk5NDI4IDAuMjY2NzU3LC0wLjYwNjI3IDAuMjY2NzU3LC0xLjM1ODA0IHYgLTAuNDg1MDIgcSAwLC0wLjc1MTc3IC0wLjI2Njc1NywtMS4zMzM3OCAtMC4yNDI1MDcsLTAuNjA2MjcgLTAuNjc5MDIsLTEuMDE4NTMgLTAuNDM2NTEyLC0wLjQxMjI3IC0xLjAxODUyOSwtMC42MzA1MiAtMC41ODIwMTcsLTAuMjE4MjYgLTEuMjM2Nzg2LC0wLjIxODI2IC0wLjY1NDc2OSwwIC0xLjIzNjc4NiwwLjIxODI2IC0wLjU4MjAxNiwwLjIxODI1IC0xLjAxODUyOSwwLjYzMDUyIC0wLjQzNjUxMywwLjQxMjI2IC0wLjcwMzI3LDEuMDE4NTMgLTAuMjQyNTA3LDAuNTgyMDEgLTAuMjQyNTA3LDEuMzMzNzggdiAwLjQ4NTAyIHEgMCwwLjc1MTc3IDAuMjQyNTA3LDEuMzU4MDQgMC4yNjY3NTcsMC41ODIwMSAwLjcwMzI3LDAuOTk0MjggMC40MzY1MTMsMC40MTIyNiAxLjAxODUyOSwwLjYzMDUxIDAuNTgyMDE3LDAuMjE4MjYgMS4yMzY3ODYsMC4yMTgyNiB6IG0gOC45NzI3NSwtOS40NTc3NyBoIDMuNTY0ODUzIHYgLTQuOTQ3MTUgaCAzLjA1NTU4OCB2IDQuOTQ3MTUgaCA0LjM0MDg4IHYgMi45MTAwOCBoIC00LjM0MDg4IHYgNS40ODA2NiBxIDAsMC43Mjc1MiAwLjY1NDc3LDAuNzI3NTIgaCAzLjI0OTU5IHYgMi45MTAwOCBoIC01LjA5MjY0NCBxIC0wLjgyNDUyNCwwIC0xLjM1ODA0LC0wLjUzMzUxIC0wLjUwOTI2NCwtMC41MzM1MiAtMC41MDkyNjQsLTEuMzU4MDQgdiAtNy4yMjY3MSBoIC0zLjU2NDg1MyB6IgogICAgICAgICAgIGlkPSJwYXRoMiIgLz4KICAgICAgPC9nPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg=="
+            alt="Little Parrot"
+        /></a>
       </div>
+    </header>
 
-      <section class="tips" aria-labelledby="tips-title">
-        <h2 id="tips-title">Before you start</h2>
-        <ul>
-          <li>
-            Work on a hard, flat table and run a fingernail along every crease. Sharp creases make
-            the later steps much easier.
-          </li>
-          <li>
-            The <strong>inside reverse fold</strong> in steps 7 and 8 is the trickiest part.
-            Pre-crease the line first by folding the point over both ways, then open the layers and
-            push the point in along that crease.
-          </li>
-          <li>
-            If a step goes wrong, unfold it and try again. The creases you already made are still
-            there to guide you.
-          </li>
-        </ul>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Fold your <span class="highlight">Little Parrot</span></h1>
+          <p class="lead">
+            Your flyer is a 10 cm square, and with the folds below it becomes a parrot: orange head,
+            green tail, an eye on one side and a wink on the other. Every step has an animation that
+            loops, so you can watch it as many times as you need.
+          </p>
+          <div class="finished">
+            <figure>
+              <div
+                class="stage"
+                data-final="front"
+                role="img"
+                aria-label="The finished parrot, side with the open eye and the LittleParrot.app tail"
+              ></div>
+              <figcaption>This side looks at you.</figcaption>
+            </figure>
+            <figure>
+              <div
+                class="stage"
+                data-final="back"
+                role="img"
+                aria-label="The finished parrot, side with the wink"
+              ></div>
+              <figcaption>This side winks.</figcaption>
+            </figure>
+          </div>
+        </div>
       </section>
 
-      <h2 class="steps-title">How to fold it</h2>
-      <ol class="steps">
-        <li class="step" id="step-book-folds">
-          <div
-            class="stage"
-            data-step="0"
-            role="img"
-            aria-label="Animation of step 1: Crease it in half both ways"
-          ></div>
-          <div class="text">
-            <p class="number">Step 1</p>
-            <h3>Crease it in half both ways</h3>
-            <p>
-              Start with the colourful side face down, so you see the dashed fold lines. Fold the
-              sheet in half edge to edge and unfold it. Then fold it in half the other way and
-              unfold it again.
-            </p>
-            <button type="button" class="toggle" data-step="0" aria-pressed="false">Pause</button>
+      <section class="band" aria-labelledby="tips-title">
+        <div class="container">
+          <div class="card tips">
+            <h2 id="tips-title">Before you start</h2>
+            <ul>
+              <li>
+                Work on a hard, flat table and run a fingernail along every crease. Sharp creases
+                make the later steps much easier.
+              </li>
+              <li>
+                The <strong>inside reverse fold</strong> in steps 7 and 8 is the trickiest part.
+                Pre-crease the line first by folding the point over both ways, then open the layers
+                and push the point in along that crease.
+              </li>
+              <li>
+                If a step goes wrong, unfold it and try again. The creases you already made are
+                still there to guide you.
+              </li>
+            </ul>
           </div>
-        </li>
-        <li class="step" id="step-diagonals">
-          <div
-            class="stage"
-            data-step="1"
-            role="img"
-            aria-label="Animation of step 2: Crease the diagonals"
-          ></div>
-          <div class="text">
-            <p class="number">Step 2</p>
-            <h3>Crease the diagonals</h3>
-            <p>
-              Turn the sheet over so the colours face you. Fold it in half corner to corner and
-              unfold, then do the same with the other two corners.
-            </p>
-            <button type="button" class="toggle" data-step="1" aria-pressed="false">Pause</button>
-          </div>
-        </li>
-        <li class="step" id="step-collapse">
-          <div
-            class="stage"
-            data-step="2"
-            role="img"
-            aria-label="Animation of step 3: Collapse it into a small square"
-          ></div>
-          <div class="text">
-            <p class="number">Step 3</p>
-            <h3>Collapse it into a small square</h3>
-            <p>
-              Push the centre down gently and bring all four corners together at the bottom. The
-              creases do most of the work. Flatten it with the colours on the outside and the loose
-              corners pointing down.
-              <strong>The corner on top should be a plain one, with no eye and no writing.</strong>
-              If it isn’t, swing one flap across like turning a page.
-            </p>
-            <button type="button" class="toggle" data-step="2" aria-pressed="false">Pause</button>
-          </div>
-        </li>
-        <li class="step" id="step-kite">
-          <div
-            class="stage"
-            data-step="3"
-            role="img"
-            aria-label="Animation of step 4: Make three guide creases"
-          ></div>
-          <div class="text">
-            <p class="number">Step 4</p>
-            <h3>Make three guide creases</h3>
-            <p>
-              Fold the lower edges of the top layer in to the centre line. Fold the small triangle
-              at the top down over them. Crease firmly, then unfold all three.
-            </p>
-            <button type="button" class="toggle" data-step="3" aria-pressed="false">Pause</button>
-          </div>
-        </li>
-        <li class="step" id="step-petal">
-          <div
-            class="stage"
-            data-step="4"
-            role="img"
-            aria-label="Animation of step 5: Lift the top layer up"
-          ></div>
-          <div class="text">
-            <p class="number">Step 5</p>
-            <h3>Lift the top layer up</h3>
-            <p>
-              Lift the bottom corner of the top layer and fold it up along the crease you made under
-              the triangle. The sides fold inwards along the other two creases. Flatten it into a
-              long diamond.
-            </p>
-            <button type="button" class="toggle" data-step="4" aria-pressed="false">Pause</button>
-          </div>
-        </li>
-        <li class="step" id="step-repeat">
-          <div
-            class="stage"
-            data-step="5"
-            role="img"
-            aria-label="Animation of step 6: Repeat on the back"
-          ></div>
-          <div class="text">
-            <p class="number">Step 6</p>
-            <h3>Repeat on the back</h3>
-            <p>
-              Turn it over and repeat the last two steps on this side. The two loose points at the
-              bottom become the neck and the tail.
-            </p>
-            <button type="button" class="toggle" data-step="5" aria-pressed="false">Pause</button>
-          </div>
-        </li>
-        <li class="step" id="step-neck-tail">
-          <div
-            class="stage"
-            data-step="6"
-            role="img"
-            aria-label="Animation of step 7: Fold up the neck and the tail"
-          ></div>
-          <div class="text">
-            <p class="number">Step 7</p>
-            <h3>Fold up the neck and the tail</h3>
-            <p>
-              Look at the two bottom points: the one with the eye on it is the neck. Inside reverse
-              fold each point up between the wings: open its layers a little, push the point up
-              inside along a slanted crease, then flatten it.
-            </p>
-            <button type="button" class="toggle" data-step="6" aria-pressed="false">Pause</button>
-          </div>
-        </li>
-        <li class="step" id="step-head">
-          <div
-            class="stage"
-            data-step="7"
-            role="img"
-            aria-label="Animation of step 8: Fold the head"
-          ></div>
-          <div class="text">
-            <p class="number">Step 8</p>
-            <h3>Fold the head</h3>
-            <p>
-              Inside reverse fold the tip of the neck down, about 1.5 cm from the end, just above
-              the eye.
-            </p>
-            <button type="button" class="toggle" data-step="7" aria-pressed="false">Pause</button>
-          </div>
-        </li>
-        <li class="step" id="step-wings">
-          <div
-            class="stage"
-            data-step="8"
-            role="img"
-            aria-label="Animation of step 9: Fold the wings down"
-          ></div>
-          <div class="text">
-            <p class="number">Step 9</p>
-            <h3>Fold the wings down</h3>
-            <p>
-              Fold the front wing down along its base, where it meets the body, then fold the back
-              wing down the same way. Hold the base of the neck and the tail and pull gently to
-              spread the wings. One side winks, the other one is looking at you. Lift the wing on
-              that side to find an arrow pointing to the QR code on top.
-            </p>
-            <button type="button" class="toggle" data-step="8" aria-pressed="false">Pause</button>
-          </div>
-        </li>
-      </ol>
+        </div>
+      </section>
 
-      <footer>
+      <section class="how" aria-labelledby="how-title">
+        <div class="container">
+          <h2 id="how-title">How to fold it</h2>
+          <ol class="steps">
+            <li class="step" id="step-book-folds">
+              <div
+                class="stage"
+                data-step="0"
+                role="img"
+                aria-label="Animation of step 1: Crease it in half both ways"
+              ></div>
+              <div class="text">
+                <p class="number">Step 1</p>
+                <h3>Crease it in half both ways</h3>
+                <p>
+                  Start with the colourful side face down, so you see the dashed fold lines. Fold
+                  the sheet in half edge to edge and unfold it. Then fold it in half the other way
+                  and unfold it again.
+                </p>
+                <button type="button" class="toggle" data-step="0" aria-pressed="false">
+                  Pause
+                </button>
+              </div>
+            </li>
+            <li class="step" id="step-diagonals">
+              <div
+                class="stage"
+                data-step="1"
+                role="img"
+                aria-label="Animation of step 2: Crease the diagonals"
+              ></div>
+              <div class="text">
+                <p class="number">Step 2</p>
+                <h3>Crease the diagonals</h3>
+                <p>
+                  Turn the sheet over so the colours face you. Fold it in half corner to corner and
+                  unfold, then do the same with the other two corners.
+                </p>
+                <button type="button" class="toggle" data-step="1" aria-pressed="false">
+                  Pause
+                </button>
+              </div>
+            </li>
+            <li class="step" id="step-collapse">
+              <div
+                class="stage"
+                data-step="2"
+                role="img"
+                aria-label="Animation of step 3: Collapse it into a small square"
+              ></div>
+              <div class="text">
+                <p class="number">Step 3</p>
+                <h3>Collapse it into a small square</h3>
+                <p>
+                  Push the centre down gently and bring all four corners together at the bottom. The
+                  creases do most of the work. Flatten it with the colours on the outside and the
+                  loose corners pointing down.
+                  <strong
+                    >The corner on top should be a plain one, with no eye and no writing.</strong
+                  >
+                  If it isn’t, swing one flap across like turning a page.
+                </p>
+                <button type="button" class="toggle" data-step="2" aria-pressed="false">
+                  Pause
+                </button>
+              </div>
+            </li>
+            <li class="step" id="step-kite">
+              <div
+                class="stage"
+                data-step="3"
+                role="img"
+                aria-label="Animation of step 4: Make three guide creases"
+              ></div>
+              <div class="text">
+                <p class="number">Step 4</p>
+                <h3>Make three guide creases</h3>
+                <p>
+                  Fold the lower edges of the top layer in to the centre line. Fold the small
+                  triangle at the top down over them. Crease firmly, then unfold all three.
+                </p>
+                <button type="button" class="toggle" data-step="3" aria-pressed="false">
+                  Pause
+                </button>
+              </div>
+            </li>
+            <li class="step" id="step-petal">
+              <div
+                class="stage"
+                data-step="4"
+                role="img"
+                aria-label="Animation of step 5: Lift the top layer up"
+              ></div>
+              <div class="text">
+                <p class="number">Step 5</p>
+                <h3>Lift the top layer up</h3>
+                <p>
+                  Lift the bottom corner of the top layer and fold it up along the crease you made
+                  under the triangle. The sides fold inwards along the other two creases. Flatten it
+                  into a long diamond.
+                </p>
+                <button type="button" class="toggle" data-step="4" aria-pressed="false">
+                  Pause
+                </button>
+              </div>
+            </li>
+            <li class="step" id="step-repeat">
+              <div
+                class="stage"
+                data-step="5"
+                role="img"
+                aria-label="Animation of step 6: Repeat on the back"
+              ></div>
+              <div class="text">
+                <p class="number">Step 6</p>
+                <h3>Repeat on the back</h3>
+                <p>
+                  Turn it over and repeat the last two steps on this side. The two loose points at
+                  the bottom become the neck and the tail.
+                </p>
+                <button type="button" class="toggle" data-step="5" aria-pressed="false">
+                  Pause
+                </button>
+              </div>
+            </li>
+            <li class="step" id="step-neck-tail">
+              <div
+                class="stage"
+                data-step="6"
+                role="img"
+                aria-label="Animation of step 7: Fold up the neck and the tail"
+              ></div>
+              <div class="text">
+                <p class="number">Step 7</p>
+                <h3>Fold up the neck and the tail</h3>
+                <p>
+                  Look at the two bottom points: the one with the eye on it is the neck. Inside
+                  reverse fold each point up between the wings: open its layers a little, push the
+                  point up inside along a slanted crease, then flatten it.
+                </p>
+                <button type="button" class="toggle" data-step="6" aria-pressed="false">
+                  Pause
+                </button>
+              </div>
+            </li>
+            <li class="step" id="step-head">
+              <div
+                class="stage"
+                data-step="7"
+                role="img"
+                aria-label="Animation of step 8: Fold the head"
+              ></div>
+              <div class="text">
+                <p class="number">Step 8</p>
+                <h3>Fold the head</h3>
+                <p>
+                  Inside reverse fold the tip of the neck down, about 1.5 cm from the end, just
+                  above the eye.
+                </p>
+                <button type="button" class="toggle" data-step="7" aria-pressed="false">
+                  Pause
+                </button>
+              </div>
+            </li>
+            <li class="step" id="step-wings">
+              <div
+                class="stage"
+                data-step="8"
+                role="img"
+                aria-label="Animation of step 9: Fold the wings down"
+              ></div>
+              <div class="text">
+                <p class="number">Step 9</p>
+                <h3>Fold the wings down</h3>
+                <p>
+                  Fold the front wing down along its base, where it meets the body, then fold the
+                  back wing down the same way. Hold the base of the neck and the tail and pull
+                  gently to spread the wings. One side winks, the other one is looking at you. Lift
+                  the wing on that side to find an arrow pointing to the QR code on top.
+                </p>
+                <button type="button" class="toggle" data-step="8" aria-pressed="false">
+                  Pause
+                </button>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
         <p>
           Folded it? Learn to build your own ideas with AI on
           <a href="https://littleparrot.app">LittleParrot.app</a>.
         </p>
-      </footer>
-    </main>
+      </div>
+    </footer>
 
     <svg width="0" height="0" style="position: absolute" aria-hidden="true">
       <defs>
