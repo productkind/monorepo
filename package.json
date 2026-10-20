@@ -53,5 +53,8 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.70.0",
     "vitest": "^3.2.4"
+  },
+  "overrides": {
+    "svgdom": "0.1.24"
   }
 }
