@@ -11,8 +11,13 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..')
 
 await createApplication(
   {
-    getServices: () =>
-      getServerServices({ root: ROOT, createSsrServer: createViteSsrProductionServer }),
+    getServices: [
+      {
+        patternPartial: { runtime: 'server' },
+        value: () =>
+          getServerServices({ root: ROOT, createSsrServer: createViteSsrProductionServer }),
+      },
+    ],
   },
   () => baseApplication,
 ).run({ environment: 'prod', runtime: 'server' }).output
