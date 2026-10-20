@@ -56,6 +56,14 @@ If it prints `<no data>`, YouTube changed its page shape. The regex for `ytIniti
 
 `seeds.txt`, `seeds2.txt` and `seeds3.txt` are the phrase lists from the August 2026 run on `ai-your-life-admin-00` (`../../content/courses/ai-your-life-admin/niche-research.md`). Keep them as worked examples of how broad to cast the first pass.
 
+`common-ai-questions-seeds.txt` (81 question stems) and `common-ai-questions-seeds-alphabet.txt` (nine stems with a to z) are from the October 2026 run on common AI questions (`../../../ai-research/common-ai-questions/`). `common-ai-questions-themes.py` sorts that run's autocomplete output into question themes and counts distinct suggestions per source:
+
+```
+python3 common-ai-questions-themes.py ../../../ai-research/common-ai-questions/raw --show environment
+```
+
+Counts show how many different ways people phrase a theme, not how often they search it. Pair them with Trends.
+
 ## `google-trends.py` (Signal C)
 
 Interest over time plus top and rising related queries. **No account needed.** If it returns 429, that is rate limiting, not a login wall; wait a minute.
