@@ -180,6 +180,15 @@
         height: 100%;
         display: block;
       }
+      /* The play/pause button sits on the animation's bottom-right corner. */
+      .stage-wrap {
+        position: relative;
+      }
+      .stage-wrap .toggle {
+        position: absolute;
+        right: 12px;
+        bottom: 12px;
+      }
       .number {
         font:
           700 13px/1 'Space Mono',
@@ -244,7 +253,152 @@
         font-weight: 700;
         text-underline-offset: 4px;
       }
+      .eyebrow {
+        font:
+          700 13px/1.4 'Space Mono',
+          monospace;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--muted-foreground);
+        margin: 0 0 16px;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+        gap: 48px;
+        align-items: center;
+      }
+      .hero-parrot {
+        margin: 0;
+      }
+      .hero-parrot .stage {
+        aspect-ratio: 4 / 3;
+      }
+      .section {
+        padding: 56px 0;
+      }
+      .section h2 {
+        font-size: clamp(26px, 3.6vw, 36px);
+        line-height: 1.2;
+        margin: 0 0 24px;
+      }
+      .narrow > * {
+        max-width: 760px;
+      }
+      .entry {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+      }
+      .entry .card {
+        padding: 24px;
+      }
+      .entry h3 {
+        font-size: 20px;
+        line-height: 1.3;
+        margin: 0 0 8px;
+      }
+      .entry p:last-child {
+        margin: 0;
+      }
+      .entry a,
+      .note a,
+      .section p a {
+        color: var(--foreground);
+        font-weight: 700;
+        text-underline-offset: 3px;
+      }
+      .ticks {
+        margin: 0;
+        padding-left: 22px;
+      }
+      .ticks li + li {
+        margin-top: 8px;
+      }
+      .post {
+        padding: 24px;
+      }
+      .post-text {
+        white-space: pre-line;
+        margin: 0 0 20px;
+        font-size: 18px;
+      }
+      .note {
+        font-size: 15px;
+        color: var(--muted-foreground);
+        margin: 16px 0 0;
+      }
+      .discount {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        align-items: center;
+        margin-top: 8px;
+      }
+      .code {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 6px 6px 6px 16px;
+        font:
+          700 18px/1 'Space Mono',
+          monospace;
+      }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font:
+          700 15px/1 Inter,
+          sans-serif;
+        height: 44px;
+        padding: 0 20px;
+        border: 2px solid var(--foreground);
+        border-radius: 0;
+        background: var(--brand-gradient);
+        color: var(--foreground);
+        text-decoration: none;
+        box-shadow: var(--shadow-rect);
+        cursor: pointer;
+        transition: all 75ms;
+      }
+      .button.outline {
+        background: #fff;
+        height: 36px;
+        font-size: 14px;
+      }
+      .button:hover {
+        filter: brightness(0.95);
+        box-shadow: var(--shadow-rect-hover);
+      }
+      .button:active {
+        box-shadow: var(--shadow-rect-active);
+        transform: translate(2px, 2px);
+      }
+      .button:focus-visible {
+        outline: 2px solid transparent;
+        box-shadow:
+          0 0 0 2px #fff,
+          0 0 0 4px var(--orange-200);
+      }
+      #fold .finished {
+        margin-bottom: 32px;
+      }
+      #fold .tips {
+        margin-bottom: 48px;
+      }
+      #fold .tips h3 {
+        font-size: 22px;
+        margin: 0 0 12px;
+      }
       @media (max-width: 760px) {
+        .hero-grid,
+        .entry {
+          grid-template-columns: 1fr;
+        }
         .hero {
           padding-top: 32px;
         }
@@ -271,13 +425,143 @@
 
     <main>
       <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">Tech Women Summit Moldova · 24 October 2026</p>
+            <h1>Fold your <span class="highlight">Little Parrot</span>, and win!</h1>
+            <p class="lead">
+              Picked up a Little Parrot flyer at Tech Women Summit Moldova? Fold it into a parrot,
+              post a photo of it on LinkedIn, and you’re in our raffle for one of three free places
+              on our learning journey, Launch Your App Idea with Lovable.
+            </p>
+            <a class="button" href="#enter">How to enter</a>
+          </div>
+          <figure class="hero-parrot">
+            <div
+              class="stage"
+              data-final="front"
+              role="img"
+              aria-label="The finished parrot, side with the open eye and the LittleParrot.app tail"
+            ></div>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section band" id="enter" aria-labelledby="enter-title">
         <div class="container">
-          <h1>Fold your <span class="highlight">Little Parrot</span></h1>
-          <p class="lead">
-            Your flyer is a 10 cm square, and with the folds below it becomes a parrot: orange head,
-            green tail, an eye on one side and a wink on the other. Every step has an animation that
-            loops, so you can watch it as many times as you need.
+          <h2 id="enter-title">How to enter</h2>
+          <ol class="entry">
+            <li class="card">
+              <p class="number">1</p>
+              <h3>Fold your flyer</h3>
+              <p>
+                The folding steps are further down this page, each with its own animation.
+                <a href="#fold">See the folding steps</a>
+              </p>
+            </li>
+            <li class="card">
+              <p class="number">2</p>
+              <h3>Post a photo on LinkedIn</h3>
+              <p>
+                Share a public post with a photo of your parrot and tag @Little Parrot. You can copy
+                our post below, add your idea and change any of the wording you like.
+              </p>
+            </li>
+            <li class="card">
+              <p class="number">3</p>
+              <h3>Post by 15:00 on Saturday 24 October</h3>
+              <p>
+                We’ll draw three winners in the last hour of the conference and announce them there
+                and on LinkedIn.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="prize-title">
+        <div class="container narrow">
+          <h2 id="prize-title">What the three winners get</h2>
+          <p>
+            A free place on Launch Your App Idea with Lovable, worth €299. You’ll finish with a live
+            app on your own domain that you know how to fix and change, a price you’ve set for it,
+            and a plan to find its first customers.
           </p>
+          <ul class="ticks">
+            <li>
+              All 7 courses for 12 months, plus their toolkit items to use on your own app: prompts
+              to copy, checklists, templates and setup guides
+            </li>
+            <li>Our private community to ask questions and share what you build, for 6 months</li>
+            <li>
+              Monthly office hours for 6 months, where you bring questions about your own app to
+              Kinga, a lead product manager, and Tamas, a principal software engineer
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section band" aria-labelledby="post-title">
+        <div class="container narrow">
+          <h2 id="post-title">A post you can copy</h2>
+          <div class="card post">
+            <p id="post-text" class="post-text">
+              I folded a paper parrot at Tech Women Summit Moldova today 🦜 It’s from @Little
+              Parrot, and it reminded me that I’d like to build something of my own with AI. My
+              idea: [write your idea here]
+            </p>
+            <button type="button" class="button" data-copy="post-text">Copy the post</button>
+          </div>
+          <p class="note">
+            LinkedIn only tags us when you type @Little Parrot and pick our page from the list that
+            appears. Pasted text on its own won’t tag us, so before you post, check that Little
+            Parrot has turned into a link.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="discount-title">
+        <div class="container narrow">
+          <h2 id="discount-title">Didn’t win? You can still get 70% off</h2>
+          <p>
+            Use
+            <a
+              href="https://littleparrot.app/journey-checkout?journey=launch-your-app-idea-with-lovable&coupon=TechWomen70"
+              >this link</a
+            >
+            to get 70% off Launch Your App Idea with Lovable, or enter the code TechWomen70 at
+            checkout. Both work until Saturday 31 October.
+          </p>
+          <div class="discount">
+            <a
+              class="button"
+              href="https://littleparrot.app/journey-checkout?journey=launch-your-app-idea-with-lovable&coupon=TechWomen70"
+              >Get 70% off</a
+            >
+            <span class="code card"
+              ><span id="coupon">TechWomen70</span
+              ><button type="button" class="button outline" data-copy="coupon">
+                Copy code
+              </button></span
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="section band" aria-labelledby="why-title">
+        <div class="container narrow">
+          <h2 id="why-title">Why we’re doing this</h2>
+          <p>
+            We’re running this so women early in their careers can get further. We think the best
+            way to do that is to show something you’ve already built with AI, and building one is
+            what this learning journey helps you do.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="fold" aria-labelledby="how-title">
+        <div class="container">
+          <h2 id="how-title">How to fold it</h2>
           <div class="finished">
             <figure>
               <div
@@ -298,13 +582,8 @@
               <figcaption>This side winks.</figcaption>
             </figure>
           </div>
-        </div>
-      </section>
-
-      <section class="band" aria-labelledby="tips-title">
-        <div class="container">
           <div class="card tips">
-            <h2 id="tips-title">Before you start</h2>
+            <h3 id="tips-title">Before you start</h3>
             <ul>
               <li>
                 Work on a hard, flat table and run a fingernail along every crease. Sharp creases
@@ -321,20 +600,19 @@
               </li>
             </ul>
           </div>
-        </div>
-      </section>
-
-      <section class="how" aria-labelledby="how-title">
-        <div class="container">
-          <h2 id="how-title">How to fold it</h2>
           <ol class="steps">
             <li class="step" id="step-book-folds">
-              <div
-                class="stage"
-                data-step="0"
-                role="img"
-                aria-label="Animation of step 1: Crease it in half both ways"
-              ></div>
+              <div class="stage-wrap">
+                <div
+                  class="stage"
+                  data-step="0"
+                  role="img"
+                  aria-label="Animation of step 1: Crease it in half both ways"
+                ></div>
+                <button type="button" class="toggle" data-step="0" aria-pressed="false">
+                  Pause
+                </button>
+              </div>
               <div class="text">
                 <p class="number">Step 1</p>
                 <h3>Crease it in half both ways</h3>
@@ -343,18 +621,20 @@
                   the sheet in half edge to edge and unfold it. Then fold it in half the other way
                   and unfold it again.
                 </p>
-                <button type="button" class="toggle" data-step="0" aria-pressed="false">
-                  Pause
-                </button>
               </div>
             </li>
             <li class="step" id="step-diagonals">
-              <div
-                class="stage"
-                data-step="1"
-                role="img"
-                aria-label="Animation of step 2: Crease the diagonals"
-              ></div>
+              <div class="stage-wrap">
+                <div
+                  class="stage"
+                  data-step="1"
+                  role="img"
+                  aria-label="Animation of step 2: Crease the diagonals"
+                ></div>
+                <button type="button" class="toggle" data-step="1" aria-pressed="false">
+                  Pause
+                </button>
+              </div>
               <div class="text">
                 <p class="number">Step 2</p>
                 <h3>Crease the diagonals</h3>
@@ -362,18 +642,20 @@
                   Turn the sheet over so the colours face you. Fold it in half corner to corner and
                   unfold, then do the same with the other two corners.
                 </p>
-                <button type="button" class="toggle" data-step="1" aria-pressed="false">
-                  Pause
-                </button>
               </div>
             </li>
             <li class="step" id="step-collapse">
-              <div
-                class="stage"
-                data-step="2"
-                role="img"
-                aria-label="Animation of step 3: Collapse it into a small square"
-              ></div>
+              <div class="stage-wrap">
+                <div
+                  class="stage"
+                  data-step="2"
+                  role="img"
+                  aria-label="Animation of step 3: Collapse it into a small square"
+                ></div>
+                <button type="button" class="toggle" data-step="2" aria-pressed="false">
+                  Pause
+                </button>
+              </div>
               <div class="text">
                 <p class="number">Step 3</p>
                 <h3>Collapse it into a small square</h3>
@@ -386,18 +668,20 @@
                   >
                   If it isn’t, swing one flap across like turning a page.
                 </p>
-                <button type="button" class="toggle" data-step="2" aria-pressed="false">
-                  Pause
-                </button>
               </div>
             </li>
             <li class="step" id="step-kite">
-              <div
-                class="stage"
-                data-step="3"
-                role="img"
-                aria-label="Animation of step 4: Make three guide creases"
-              ></div>
+              <div class="stage-wrap">
+                <div
+                  class="stage"
+                  data-step="3"
+                  role="img"
+                  aria-label="Animation of step 4: Make three guide creases"
+                ></div>
+                <button type="button" class="toggle" data-step="3" aria-pressed="false">
+                  Pause
+                </button>
+              </div>
               <div class="text">
                 <p class="number">Step 4</p>
                 <h3>Make three guide creases</h3>
@@ -405,18 +689,20 @@
                   Fold the lower edges of the top layer in to the centre line. Fold the small
                   triangle at the top down over them. Crease firmly, then unfold all three.
                 </p>
-                <button type="button" class="toggle" data-step="3" aria-pressed="false">
-                  Pause
-                </button>
               </div>
             </li>
             <li class="step" id="step-petal">
-              <div
-                class="stage"
-                data-step="4"
-                role="img"
-                aria-label="Animation of step 5: Lift the top layer up"
-              ></div>
+              <div class="stage-wrap">
+                <div
+                  class="stage"
+                  data-step="4"
+                  role="img"
+                  aria-label="Animation of step 5: Lift the top layer up"
+                ></div>
+                <button type="button" class="toggle" data-step="4" aria-pressed="false">
+                  Pause
+                </button>
+              </div>
               <div class="text">
                 <p class="number">Step 5</p>
                 <h3>Lift the top layer up</h3>
@@ -425,18 +711,20 @@
                   under the triangle. The sides fold inwards along the other two creases. Flatten it
                   into a long diamond.
                 </p>
-                <button type="button" class="toggle" data-step="4" aria-pressed="false">
-                  Pause
-                </button>
               </div>
             </li>
             <li class="step" id="step-repeat">
-              <div
-                class="stage"
-                data-step="5"
-                role="img"
-                aria-label="Animation of step 6: Repeat on the back"
-              ></div>
+              <div class="stage-wrap">
+                <div
+                  class="stage"
+                  data-step="5"
+                  role="img"
+                  aria-label="Animation of step 6: Repeat on the back"
+                ></div>
+                <button type="button" class="toggle" data-step="5" aria-pressed="false">
+                  Pause
+                </button>
+              </div>
               <div class="text">
                 <p class="number">Step 6</p>
                 <h3>Repeat on the back</h3>
@@ -444,18 +732,20 @@
                   Turn it over and repeat the last two steps on this side. The two loose points at
                   the bottom become the neck and the tail.
                 </p>
-                <button type="button" class="toggle" data-step="5" aria-pressed="false">
-                  Pause
-                </button>
               </div>
             </li>
             <li class="step" id="step-neck-tail">
-              <div
-                class="stage"
-                data-step="6"
-                role="img"
-                aria-label="Animation of step 7: Fold up the neck and the tail"
-              ></div>
+              <div class="stage-wrap">
+                <div
+                  class="stage"
+                  data-step="6"
+                  role="img"
+                  aria-label="Animation of step 7: Fold up the neck and the tail"
+                ></div>
+                <button type="button" class="toggle" data-step="6" aria-pressed="false">
+                  Pause
+                </button>
+              </div>
               <div class="text">
                 <p class="number">Step 7</p>
                 <h3>Fold up the neck and the tail</h3>
@@ -464,18 +754,20 @@
                   reverse fold each point up between the wings: open its layers a little, push the
                   point up inside along a slanted crease, then flatten it.
                 </p>
-                <button type="button" class="toggle" data-step="6" aria-pressed="false">
-                  Pause
-                </button>
               </div>
             </li>
             <li class="step" id="step-head">
-              <div
-                class="stage"
-                data-step="7"
-                role="img"
-                aria-label="Animation of step 8: Fold the head"
-              ></div>
+              <div class="stage-wrap">
+                <div
+                  class="stage"
+                  data-step="7"
+                  role="img"
+                  aria-label="Animation of step 8: Fold the head"
+                ></div>
+                <button type="button" class="toggle" data-step="7" aria-pressed="false">
+                  Pause
+                </button>
+              </div>
               <div class="text">
                 <p class="number">Step 8</p>
                 <h3>Fold the head</h3>
@@ -483,18 +775,20 @@
                   Inside reverse fold the tip of the neck down, about 1.5 cm from the end, just
                   above the eye.
                 </p>
-                <button type="button" class="toggle" data-step="7" aria-pressed="false">
-                  Pause
-                </button>
               </div>
             </li>
             <li class="step" id="step-wings">
-              <div
-                class="stage"
-                data-step="8"
-                role="img"
-                aria-label="Animation of step 9: Fold the wings down"
-              ></div>
+              <div class="stage-wrap">
+                <div
+                  class="stage"
+                  data-step="8"
+                  role="img"
+                  aria-label="Animation of step 9: Fold the wings down"
+                ></div>
+                <button type="button" class="toggle" data-step="8" aria-pressed="false">
+                  Pause
+                </button>
+              </div>
               <div class="text">
                 <p class="number">Step 9</p>
                 <h3>Fold the wings down</h3>
@@ -504,9 +798,6 @@
                   gently to spread the wings. One side winks, the other one is looking at you. Lift
                   the wing on that side to find an arrow pointing to the QR code on top.
                 </p>
-                <button type="button" class="toggle" data-step="8" aria-pressed="false">
-                  Pause
-                </button>
               </div>
             </li>
           </ol>
@@ -4196,6 +4487,19 @@
           reverseLayers: back,
         })
         scene.render(0, 1)
+      })
+
+      document.querySelectorAll('[data-copy]').forEach((button) => {
+        const label = button.textContent
+        button.addEventListener('click', async () => {
+          await navigator.clipboard.writeText(
+            document.getElementById(button.dataset.copy).innerText.trim(),
+          )
+          button.textContent = 'Copied'
+          setTimeout(() => {
+            button.textContent = label
+          }, 2000)
+        })
       })
     </script>
   </body>

@@ -345,7 +345,7 @@ const loopedArrow = (points) => {
   return `<path d="${d}" fill="none" stroke="${INK}" stroke-width="0.35" stroke-linecap="round" stroke-linejoin="round"/>`
 }
 
-const qrModules = (url) =>
+export const qrModules = (url) =>
   execFileSync('qrencode', ['-t', 'ASCII', '-m', '0', '-l', 'M', url], { encoding: 'utf8' })
     .trimEnd()
     .split('\n')

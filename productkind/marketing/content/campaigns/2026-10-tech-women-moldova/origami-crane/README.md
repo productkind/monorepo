@@ -7,7 +7,8 @@ A 10 cm square flyer, printed on both sides, that folds into a crane with the Li
 - `crane-flyer-a4.pdf`: four flyers on A4 with cut marks, front on page 1 and back on page 2; print at 100%, double-sided, flipped on the long edge
 - `crane-flyer-10cm.pdf`: one flyer at 100 × 100 mm, front on page 1 and back on page 2
 - `crane-flyer-print-layers.pdf`: print-shop layers, page 1 the gradient alone at 104 × 104 mm (2 mm bleed on every side), page 2 the black artwork alone at 100 × 100 mm, page 3 the back at 100 × 100 mm
-- `fold.html`: the standalone folding page, one looping animation per step
+- `crane-poster-a4.pdf`: an A4 poster for the stand: the three raffle steps, the folded parrot and the QR code (`node poster.mjs`)
+- `fold.html`: the standalone campaign page for littleparrot.app/tech-women-moldova: the raffle first, then the folding steps with one looping animation each. Its copy lives in `campaign.mjs`
 - `preview.png`: the flat flyer and both sides of the folded parrot
 
 ## How it is made

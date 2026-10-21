@@ -1,4 +1,5 @@
 import { animationData } from './animation.mjs'
+import { campaign } from './campaign.mjs'
 import { geometry } from './crane.mjs'
 import { creasePattern } from './creases.mjs'
 import { backDesign, buildDesign, flatSvg } from './design.mjs'
@@ -77,12 +78,14 @@ const data = animationData().map((step) => ({ ...step, ...copy[step.id] }))
 const stepsHtml = data
   .map(
     (step, index) => `<li class="step" id="step-${step.id}">
-  <div class="stage" data-step="${index}" role="img" aria-label="Animation of step ${index + 1}: ${step.title}"></div>
+  <div class="stage-wrap">
+    <div class="stage" data-step="${index}" role="img" aria-label="Animation of step ${index + 1}: ${step.title}"></div>
+    <button type="button" class="toggle" data-step="${index}" aria-pressed="false">Pause</button>
+  </div>
   <div class="text">
     <p class="number">Step ${index + 1}</p>
     <h3>${step.title}</h3>
     <p>${step.body}</p>
-    <button type="button" class="toggle" data-step="${index}" aria-pressed="false">Pause</button>
   </div>
 </li>`,
   )
@@ -152,6 +155,9 @@ const html = `<!doctype html>
   .step { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 40px; align-items: center; }
   .stage { background: var(--gray-900); border: 2px solid var(--foreground); box-shadow: var(--shadow-rect); aspect-ratio: 1 / 1; overflow: hidden; }
   .stage svg { width: 100%; height: 100%; display: block; }
+  /* The play/pause button sits on the animation's bottom-right corner. */
+  .stage-wrap { position: relative; }
+  .stage-wrap .toggle { position: absolute; right: 12px; bottom: 12px; }
   .number { font: 700 13px/1 'Space Mono', monospace; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted-foreground); margin: 0 0 10px; }
   .step h3 { font-size: 24px; line-height: 1.25; margin: 0 0 12px; }
   .step p { margin: 0 0 20px; max-width: 60ch; }
@@ -173,7 +179,41 @@ const html = `<!doctype html>
   footer { background: var(--footer); color: #fff; border-top: 2px solid var(--foreground); padding: 48px 0; text-align: center; }
   footer p { margin: 0; font-size: 18px; }
   footer a { color: #fff; font-weight: 700; text-underline-offset: 4px; }
+  .eyebrow { font: 700 13px/1.4 'Space Mono', monospace; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted-foreground); margin: 0 0 16px; }
+  .hero-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+  .hero-parrot { margin: 0; }
+  .hero-parrot .stage { aspect-ratio: 4 / 3; }
+  .section { padding: 56px 0; }
+  .section h2 { font-size: clamp(26px, 3.6vw, 36px); line-height: 1.2; margin: 0 0 24px; }
+  .narrow > * { max-width: 760px; }
+  .entry { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+  .entry .card { padding: 24px; }
+  .entry h3 { font-size: 20px; line-height: 1.3; margin: 0 0 8px; }
+  .entry p:last-child { margin: 0; }
+  .entry a, .note a, .section p a { color: var(--foreground); font-weight: 700; text-underline-offset: 3px; }
+  .ticks { margin: 0; padding-left: 22px; }
+  .ticks li + li { margin-top: 8px; }
+  .post { padding: 24px; }
+  .post-text { white-space: pre-line; margin: 0 0 20px; font-size: 18px; }
+  .note { font-size: 15px; color: var(--muted-foreground); margin: 16px 0 0; }
+  .discount { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin-top: 8px; }
+  .code { display: inline-flex; align-items: center; gap: 12px; padding: 6px 6px 6px 16px; font: 700 18px/1 'Space Mono', monospace; }
+  .button {
+    display: inline-flex; align-items: center; justify-content: center;
+    font: 700 15px/1 Inter, sans-serif; height: 44px; padding: 0 20px;
+    border: 2px solid var(--foreground); border-radius: 0;
+    background: var(--brand-gradient); color: var(--foreground); text-decoration: none;
+    box-shadow: var(--shadow-rect); cursor: pointer; transition: all 75ms;
+  }
+  .button.outline { background: #fff; height: 36px; font-size: 14px; }
+  .button:hover { filter: brightness(0.95); box-shadow: var(--shadow-rect-hover); }
+  .button:active { box-shadow: var(--shadow-rect-active); transform: translate(2px, 2px); }
+  .button:focus-visible { outline: 2px solid transparent; box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--orange-200); }
+  #fold .finished { margin-bottom: 32px; }
+  #fold .tips { margin-bottom: 48px; }
+  #fold .tips h3 { font-size: 22px; margin: 0 0 12px; }
   @media (max-width: 760px) {
+    .hero-grid, .entry { grid-template-columns: 1fr; }
     .hero { padding-top: 32px; }
     .finished { grid-template-columns: 1fr; }
     .step { grid-template-columns: 1fr; gap: 20px; }
@@ -189,9 +229,70 @@ const html = `<!doctype html>
 
 <main>
   <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">Tech Women Summit Moldova · 24 October 2026</p>
+        <h1>Fold your <span class="highlight">Little Parrot</span>, and win!</h1>
+        <p class="lead">${campaign.lead}</p>
+        <a class="button" href="#enter">How to enter</a>
+      </div>
+      <figure class="hero-parrot">
+        <div class="stage" data-final="front" role="img" aria-label="The finished parrot, side with the open eye and the LittleParrot.app tail"></div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section band" id="enter" aria-labelledby="enter-title">
     <div class="container">
-      <h1>Fold your <span class="highlight">Little Parrot</span></h1>
-      <p class="lead">Your flyer is a 10 cm square, and with the folds below it becomes a parrot: orange head, green tail, an eye on one side and a wink on the other. Every step has an animation that loops, so you can watch it as many times as you need.</p>
+      <h2 id="enter-title">How to enter</h2>
+      <ol class="entry">
+${campaign.entry.map(({ title, body }, i) => `        <li class="card"><p class="number">${i + 1}</p><h3>${title}</h3><p>${body}</p></li>`).join('\n')}
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="prize-title">
+    <div class="container narrow">
+      <h2 id="prize-title">${campaign.prize.title}</h2>
+      <p>${campaign.prize.intro}</p>
+      <ul class="ticks">
+${campaign.prize.items.map((item) => `        <li>${item}</li>`).join('\n')}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section band" aria-labelledby="post-title">
+    <div class="container narrow">
+      <h2 id="post-title">${campaign.post.title}</h2>
+      <div class="card post">
+        <p id="post-text" class="post-text">${campaign.post.text}</p>
+        <button type="button" class="button" data-copy="post-text">Copy the post</button>
+      </div>
+      <p class="note">${campaign.post.note}</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="discount-title">
+    <div class="container narrow">
+      <h2 id="discount-title">${campaign.discount.title}</h2>
+      <p>${campaign.discount.body}</p>
+      <div class="discount">
+        <a class="button" href="${campaign.discount.url}">${campaign.discount.cta}</a>
+        <span class="code card"><span id="coupon">${campaign.discount.code}</span><button type="button" class="button outline" data-copy="coupon">Copy code</button></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band" aria-labelledby="why-title">
+    <div class="container narrow">
+      <h2 id="why-title">${campaign.why.title}</h2>
+      <p>${campaign.why.body}</p>
+    </div>
+  </section>
+
+  <section class="section" id="fold" aria-labelledby="how-title">
+    <div class="container">
+      <h2 id="how-title">How to fold it</h2>
       <div class="finished">
         <figure>
           <div class="stage" data-final="front" role="img" aria-label="The finished parrot, side with the open eye and the LittleParrot.app tail"></div>
@@ -202,25 +303,14 @@ const html = `<!doctype html>
           <figcaption>This side winks.</figcaption>
         </figure>
       </div>
-    </div>
-  </section>
-
-  <section class="band" aria-labelledby="tips-title">
-    <div class="container">
       <div class="card tips">
-        <h2 id="tips-title">Before you start</h2>
+        <h3 id="tips-title">Before you start</h3>
         <ul>
           <li>Work on a hard, flat table and run a fingernail along every crease. Sharp creases make the later steps much easier.</li>
           <li>The <strong>inside reverse fold</strong> in steps 7 and 8 is the trickiest part. Pre-crease the line first by folding the point over both ways, then open the layers and push the point in along that crease.</li>
           <li>If a step goes wrong, unfold it and try again. The creases you already made are still there to guide you.</li>
         </ul>
       </div>
-    </div>
-  </section>
-
-  <section class="how" aria-labelledby="how-title">
-    <div class="container">
-      <h2 id="how-title">How to fold it</h2>
       <ol class="steps">
 ${stepsHtml}
       </ol>
@@ -244,6 +334,14 @@ ${stepsHtml}
 <script>
 const STEPS = ${JSON.stringify(data.map(({ segments, zoom }) => ({ segments, zoom })))};
 ${readFileSync('player.js', 'utf8')}
+document.querySelectorAll('[data-copy]').forEach((button) => {
+  const label = button.textContent
+  button.addEventListener('click', async () => {
+    await navigator.clipboard.writeText(document.getElementById(button.dataset.copy).innerText.trim())
+    button.textContent = 'Copied'
+    setTimeout(() => { button.textContent = label }, 2000)
+  })
+})
 </script>
 </body>
 </html>
