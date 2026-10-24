@@ -97,6 +97,8 @@ course:
               The secret to getting closer to what you want on the first try? A **structured prompt**.
 
               *Prompting Lovable uses credits. On the free plan you get 5 a day, up to 30 a month. A single prompt can use multiple credits depending on how much the AI needs to do.*
+
+              **New to Lovable?** Sign up through [our invite link](https://lovable.dev/invite/11PFP8N) and you get 10 extra credits to build with. If you ever upgrade to a paid Lovable plan, we get some credits too.
           subtitle: The secret to better results
         - type: text
           title: The prompt formula
@@ -236,6 +238,8 @@ course:
           title: 'Your turn: Build your first app'
           content:
             description: |-
+              If you don't have a Lovable account yet, sign up through [our invite link](https://lovable.dev/invite/11PFP8N) to get 10 extra credits.
+
               Open [Lovable](https://lovable.dev/), paste [Dalmie's structured prompt](https://littleparrot.app/nest/toolkit/17e40eb9-e190-40ed-b3d3-44300f2e2b08) (or adapt it for your own idea), and press Enter.
 
               Watch what happens. In a couple of minutes, you'll have a working app.
