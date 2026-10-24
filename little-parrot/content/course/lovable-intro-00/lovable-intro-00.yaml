@@ -159,7 +159,7 @@ course:
 
               Instead, start with one core user flow. Get that working. Then add the next piece.
 
-              If you need help deciding what to build first, look back at the MVP you defined in [Plan Your Vibe Coded App](https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview), the first course in your learning path.
+              If you need help deciding what to build first, look back at the MVP you defined in [Plan Your Vibe Coded App](https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview), the first course in your learning journey.
           subtitle: The mindset that saves time
         - type: text
           title: 'Example: The Book Club Organiser'
@@ -403,7 +403,7 @@ course:
 
               For most apps, Lovable Cloud is the simplest way to add these capabilities.
 
-              If you’re curious about what’s happening under the hood, you’ll learn about it in **Basics of Software for Vibe Coding**, the next course in your learning path. It explains these ideas in simple, non-technical terms.
+              If you’re curious about what’s happening under the hood, you’ll learn about it in **Basics of Software for Vibe Coding**, the next course in your learning journey. It explains these ideas in simple, non-technical terms.
           subtitle: Backend without the complexity
         - type: text
           title: Enable Lovable Cloud
@@ -431,7 +431,7 @@ course:
 
               If you'd like more control, you can ask Lovable to check with you first. Go to **Settings → Your account → Preferences → Agent permissions**, find **Cloud**, and set **Modify database** to **Ask each time**. Lovable then shows a **Modify database** message before each change, and you decide whether to allow it.
 
-              *If you're curious about what databases are and how they work, **Basics of Software for Vibe Coding**, the next course in your learning path, explains them in friendly terms.*
+              *If you're curious about what databases are and how they work, **Basics of Software for Vibe Coding**, the next course in your learning journey, explains them in friendly terms.*
             imageUrl: /courses/lovable-intro-00/modify-database-popup.webp
           subtitle: How Lovable handles your data
         - type: text
@@ -446,7 +446,7 @@ course:
 
               If the error persists or there's no "Try to fix" button, you'll need to investigate further. Debugging is a skill that every builder develops over time.
 
-              *Later in your learning path, **Fix Bugs with Confidence: Debugging Your Lovable App** teaches you how to investigate and fix errors confidently.*
+              *Later in your learning journey, **Fix Bugs with Confidence: Debugging Your Lovable App** teaches you how to investigate and fix errors confidently.*
             imageUrl: /courses/lovable-intro-00/click-try-to-fix.webp
           subtitle: Errors are part of building
         - type: text
@@ -801,7 +801,7 @@ course:
 
               If you do paste a key into the chat by accident, Lovable spots it and swaps the value for a label like `SENDGRID_API_KEY` before your message is sent, then saves the real key as a secret. That's a safety net, not a reason to stop being careful.
 
-              *You'll learn more about API keys and connecting to other services in **Basics of Software for Vibe Coding**, the next course in your learning path.*
+              *You'll learn more about API keys and connecting to other services in **Basics of Software for Vibe Coding**, the next course in your learning journey.*
             imageUrl: /courses/lovable-intro-00/api-key-panel.webp
           subtitle: Connect to other services
         - type: text
@@ -816,7 +816,7 @@ course:
 
               It can happen that new warnings appear after fixing others. Findings are labelled **Critical**, **Warning** or **Info**, and as long as nothing is left marked **Critical**, you are good to publish your app.
 
-              *You'll get more guidance on security later in your learning path, in **Fix Bugs with Confidence: Debugging Your Lovable App**.*
+              *You'll get more guidance on security later in your learning journey, in **Fix Bugs with Confidence: Debugging Your Lovable App**.*
             imageUrl: /courses/lovable-intro-00/security-errors-and-warnings.webp
           subtitle: Stay calm and follow the guidance
         - type: text
@@ -1029,7 +1029,7 @@ course:
 
               Good luck, and happy building! 🚀
             nextModule: |-
-              **Next in your learning path:** [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview). You've built an app, and now you'll learn the words for what's inside it: the parts of an app, design vocabulary, the frontend, the backend and databases. With these words, you can tell Lovable exactly what you want and understand what it builds.
+              **Next in your learning journey:** [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview). You've built an app, and now you'll learn the words for what's inside it: the parts of an app, design vocabulary, the frontend, the backend and databases. With these words, you can tell Lovable exactly what you want and understand what it builds.
   titleSplit:
     - 'Build Your First App'
     - 'with Lovable'

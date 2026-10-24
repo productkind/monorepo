@@ -61,7 +61,7 @@ course:
           title: Before we start
           content:
             body: |-
-              This course uses some technical terms like **frontend**, **backend**, **server**, **database**, and **database table**. If any of them feel fuzzy, look back at [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview), earlier in your learning path, which explains them with everyday analogies.
+              This course uses some technical terms like **frontend**, **backend**, **server**, **database**, and **database table**. If any of them feel fuzzy, look back at [Basics of Software for Vibe Coding](https://littleparrot.app/4794366d-b807-4804-8fd5-64c3a5a03472/course-overview), earlier in your learning journey, which explains them with everyday analogies.
 
               If you're already comfortable with these terms, you're good to go! **Let's dive in.**
           subtitle: A quick heads-up
@@ -1657,7 +1657,7 @@ course:
           title: You can debug with confidence now! 🎉
           content:
             nextModule:
-              "**Your next step:** Return to your project with fresh confidence. When your next bug appears (and it will!), you'll know exactly what to do. Investigate first, find clues, communicate clearly with Lovable, and handle security warnings like a pro.\n\n**Next in your learning path:** [How to Publish a Lovable App: Custom Domain, Legal Pages, SEO and Analytics](https://littleparrot.app/ff736c4f-8ccc-41b6-96c6-68806804c5d8/course-overview). You'll give your app a custom domain, add legal pages that help visitors trust it, make it easy to find through search engines and AI tools, and set up analytics to see how people use it. You've got this! 🤗"
+              "**Your next step:** Return to your project with fresh confidence. When your next bug appears (and it will!), you'll know exactly what to do. Investigate first, find clues, communicate clearly with Lovable, and handle security warnings like a pro.\n\n**Next in your learning journey:** [How to Publish a Lovable App: Custom Domain, Legal Pages, SEO and Analytics](https://littleparrot.app/ff736c4f-8ccc-41b6-96c6-68806804c5d8/course-overview). You'll give your app a custom domain, add legal pages that help visitors trust it, make it easy to find through search engines and AI tools, and set up analytics to see how people use it. You've got this! 🤗"
             description: Look at everything you've learned!
             subDescription: |-
               ✓ **The debugging mindset:** Diagnose before fixing, follow the three-attempt rule, and recognise different types of bugs.
