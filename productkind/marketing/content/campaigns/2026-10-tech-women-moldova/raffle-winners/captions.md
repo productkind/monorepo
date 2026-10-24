@@ -8,7 +8,7 @@ account: little-parrot
 
 **Brand:** Little Parrot. **Posted from:** the Little Parrot company page. **Source:** the "Fold your Little Parrot, and win!" raffle at Tech Women Summit, 24 October 2026 ([tracker](../raffle-posts.md)), and Tamas's photos from the day. **Destination:** https://littleparrot.app/tech-women-moldova (70% off until 31 October, and the free first course).
 
-All four people who posted get a free place on Launch Your App Idea with Lovable, with a personal 100% code sent by LinkedIn message. The codes stay out of this file because the repo is public.
+All four winners get free access to Launch Your App Idea with Lovable, with a personal 100% code sent by LinkedIn message. The codes stay out of this file because the repo is public.
 
 ## Photos
 
@@ -38,15 +38,19 @@ A full room at Tech Women Summit 2026 watching a panel on internships in the age
 
 Type each @ name and pick the person or page from LinkedIn's list, so the tag links.
 
-We had three free places to give away at Tech Women Summit Moldova. Four people folded our flyer into a parrot and posted it, so all four won 🦜
+What app do you wish existed? Three of our raffle winners at Tech Women Summit Moldova asked their networks exactly that. 🦜
 
-Congratulations to @Daniela D., @Sofia Usatii, @Victoria P and @Marina Vinogradova! You each have a free place on our learning journey, Launch Your App Idea with Lovable, and we've sent you a message about how to claim it.
+They folded our flyer into a parrot, and every parrot has a message folded inside it: "Don't just talk about AI, build something with it!" They'd like to, but they don't have an app idea yet, so they asked for one.
 
-Every parrot has a message folded inside it: "Don't just talk about AI, build something with it!" The journey helps you do exactly that with your own app idea. It's seven courses on planning, building, publishing and selling your app, and they stay open for a year. You also get six months in our private community and monthly office hours with Kinga and Tamas, where you can bring questions about your own app.
+We'd planned to pick three winners, but we couldn't leave a single parrot behind, so there are four. Congratulations to @Daniela D., @Sofia Usatii, @Victoria P and @Marina Vinogradova! You each have free access to our self-paced learning journey, Launch Your App Idea with Lovable, and we've sent you a message with the details.
+
+The journey starts by turning an idea into a plan: the problem it solves, who it's for and the smallest first version to build. The next six courses take you through building, publishing and selling it. For six months, you can also bring questions about your own app to monthly office hours with Kinga and Tamas.
 
 Thank you to @Tech Women Moldova for having us as a partner at this year's summit in Chișinău, and to everyone who came to Tamas's workshop, Why Does AI Get It Wrong.
 
-If you were at the summit, you can still join Launch Your App Idea with Lovable for 70% off until Saturday 31 October. The first course, Plan Your Vibe Coded App, is free for everyone: https://littleparrot.app/tech-women-moldova?utm_source=linkedin&utm_medium=social&utm_campaign=tech-women-moldova-oct26&utm_content=raffle-winners
+If you were at the summit, you can still join the journey for 70% off until Saturday 31 October, and the first course is free for everyone: https://littleparrot.app/tech-women-moldova?utm_source=linkedin&utm_medium=social&utm_campaign=tech-women-moldova-oct26&utm_content=raffle-winners
+
+So, back to their question: what app do you wish existed? Tell us in the comments, so our winners have ideas to choose from.
 
 ## Founder comments
 
