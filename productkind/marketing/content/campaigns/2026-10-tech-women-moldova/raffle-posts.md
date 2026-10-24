@@ -37,6 +37,6 @@ Wrote her own post instead of using a template, calling it "the Little Parrot ch
 
 ### 4. Marina Vinogradova
 
-Used the "I don't have one yet" post template, five minutes before the deadline. QA engineer at Appsfactory, and a mentor at Tech Women Moldova 2025. Her photo shows the parrot next to a Tech Women paper bag.
+Used the "I don't have one yet" post template, five minutes before the deadline. QA engineer at Appsfactory, and a mentor at Tech Women Moldova 2025. Her photo shows the parrot next to a Tech Women goodie bag.
 
-> Your parrot found a good spot next to the Tech Women bag, Marina! 🦜 What do the women you mentor ask you for help with most? There might be an app idea in there.
+> Your parrot found a good spot next to the Tech Women goodie bag, Marina! 🦜 What do the women you mentor ask you for help with most? There might be an app idea in there.
