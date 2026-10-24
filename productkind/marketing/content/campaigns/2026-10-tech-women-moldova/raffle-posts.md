@@ -12,6 +12,7 @@ Posting times come from the post ID (its first 41 bits are the creation time), s
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | Daniela D. | Graphic Designer | 12:17 | ✅ | ✅ | ✅ | [link](https://www.linkedin.com/posts/daniela-dn_i-folded-a-little-parrot-flyer-into-a-parrot-ugcPost-7519688469888049152-GzCu/) |
 | 2 | Sofia Usatii | Student at USM | 12:26 | ✅ | ✅ | ✅ | [link](https://www.linkedin.com/posts/sofia-usatii-399769446_i-folded-a-little-parrot-flyer-into-a-parrot-share-7519690775031332865-uRmW/) |
+| 3 | Victoria P | Art Teacher at QSI International School of Chisinau | 13:37 | ✅ | ✅ | ✅ | [link](https://www.linkedin.com/posts/victoria-p-429182105_littleparrot-ai-techcommunity-share-7519708696982155264-ccpL/) |
 
 ## Our comments
 
@@ -26,3 +27,9 @@ Used the "I don't have one yet" post template. Freelance graphic designer in Chi
 Used the "I don't have one yet" post template. Student at USM (Moldova State University).
 
 > Sofia, your parrot looks right at home at the summit! 🦜 A question that might lead you to a product idea: what's something you wish was easier at uni?
+
+### 3. Victoria P
+
+Wrote her own post instead of using a template, calling it "the Little Parrot challenge". Art teacher at QSI International School of Chisinau.
+
+> Thank you for joining the challenge, Victoria! 🦜 We're curious: as an art teacher, what's one part of your week you'd love AI to help with?
