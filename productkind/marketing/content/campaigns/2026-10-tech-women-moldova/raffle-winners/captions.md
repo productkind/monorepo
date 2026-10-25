@@ -8,7 +8,7 @@ account: little-parrot
 
 **Brand:** Little Parrot. **Posted from:** the Little Parrot company page. **Source:** the "Fold your Little Parrot, and win!" raffle at Tech Women Summit, 24 October 2026 ([tracker](../raffle-posts.md)), and Tamas's photos from the day. **Destination:** https://littleparrot.app/tech-women-moldova (70% off until 31 October, and the free first course).
 
-All four winners get free access to Launch Your App Idea with Lovable, with a personal 100% code sent by LinkedIn message. The codes stay out of this file because the repo is public.
+All four winners get free access to Launch Your App Idea with Lovable, with a personal 100% code that Kinga sends by LinkedIn message once they accept her connection request. The codes stay out of this file because the repo is public.
 
 ## Photos
 
@@ -42,7 +42,7 @@ What app do you wish existed? Three of our raffle winners at Tech Women Summit M
 
 They folded our flyer into a parrot, and every parrot has a message folded inside it: "Don't just talk about AI, build something with it!" They'd like to, but they don't have an app idea yet, so they asked for one.
 
-We'd planned to pick three winners, but we couldn't leave a single parrot behind, so there are four. Congratulations to @Daniela D., @Sofia Usatii, @Victoria P and @Marina Vinogradova! You each have free access to our self-paced learning journey, Launch Your App Idea with Lovable, and we've sent you a message with the details.
+We'd planned to pick three winners, but we couldn't leave a single parrot behind, so there are four. Congratulations to @Daniela D., @Sofia Usatii, @Victoria P and @Marina Vinogradova! You each have free access to our self-paced learning journey, Launch Your App Idea with Lovable. @Kinga Magyar has sent you a connection request, and she'll message you the details as soon as you accept.
 
 The journey starts by turning an idea into a plan: the problem it solves, who it's for and the smallest first version to build. The next six courses take you through building, publishing and selling it. For six months, you can also bring questions about your own app to monthly office hours with Kinga and Tamas.
 
@@ -64,7 +64,7 @@ If you came to my workshop, Why Does AI Get It Wrong, the cheat sheet we made fo
 
 ## Posting checklist
 
-- Send the four LinkedIn messages first, so each winner hears it from us before seeing the post.
+- Kinga sends each winner a connection request with the note in `../user-insights/little-parrot/tech-women-moldova-2026-10/winner-dms.md` before the post goes up, and the full message as soon as each one accepts.
 - Upload the photos in order and add each alt text.
 - If LinkedIn won't let the page tag a person, write the name without the tag rather than drop it.
 - Kinga and Thomas post their comments within the first hour, and reply to everyone who comments in that window.
