@@ -7,7 +7,7 @@ type: 'Cheat sheet'
 
 Answers to the questions people ask most about AI chat assistants such as ChatGPT, Claude and Gemini: where their answers come from, when you can trust them, what to keep private, which one to use, and what AI changes for your career. Find your question below, tap it, and read the answer. Most answers end with a prompt or a small step to try in your next chat.
 
-The questions come from what people searched for on Google and YouTube, and asked in AI communities, in October 2026. You don't need a paid plan for anything here.
+Most of the questions come from what people searched for on Google and YouTube, and asked in AI communities, in October 2026. The questions in "Asked at the workshop" are the ones people asked us at Tech Women Summit Moldova. You don't need a paid plan for anything here.
 
 ### Words used in the answers
 
@@ -501,6 +501,208 @@ For a service or a product, the hard part is finding customers, and you'll need 
 </AccordionItem>
 
 </Accordion>
+
+### Asked at the workshop
+
+<Accordion type="single" collapsible>
+
+<AccordionItem value="where-to-start">
+<AccordionTrigger>Where do I start with AI?</AccordionTrigger>
+<AccordionContent>
+
+Pick one AI chat assistant, use the free plan, and try it on a real task from your week: an email you've been putting off, a topic from your course, a document you need to understand. Which one you pick is less important than using it on something real (see "Which AI should I use?").
+
+You don't need to follow every new tool or learn everything at once. Most new releases change very little about how you'd use AI day to day, and the basics on this cheat sheet stay useful whichever app you choose.
+
+</AccordionContent>
+</AccordionItem>
+
+<AccordionItem value="how-is-it-made">
+<AccordionTrigger>How is AI made? Is it coded?</AccordionTrigger>
+<AccordionContent>
+
+Partly. Engineers write the code that trains the model and the app around it, but nobody writes the model's answers or rules by hand. The model learns its behaviour from examples. For an AI chat assistant, it happens in roughly three stages:
+
+1. **Training on text.** The company collects an enormous amount of text: websites, books, articles and code. The model practises predicting the next piece of text, over and over, and after every mistake its parameters (the numbers inside it) are adjusted a tiny bit. This runs on thousands of specialised computer chips for weeks or months.
+2. **Teaching it to be an assistant.** After the first stage, the model can continue text but isn't good at conversation yet. It's trained further on examples of good conversations, and people rate its answers so it learns which kind of reply is preferred.
+3. **Building the app around it.** The company adds the system prompt, tools such as web search, memory and the chat window. The terms at the end of this cheat sheet call this the harness.
+
+So when a model gets something wrong, an engineer can't open it up and fix one line. They change the training, the system prompt or the tools, and test again. The terms in "More AI terms good to know" explain each of these parts.
+
+</AccordionContent>
+</AccordionItem>
+
+<AccordionItem value="gdpr">
+<AccordionTrigger>What does GDPR mean for using AI? How do we protect sensitive data?</AccordionTrigger>
+<AccordionContent>
+
+The safest way to protect sensitive data is to not send it to another company at all. You can do that by running an AI model yourself, on your own computer or on your company's servers. This is called self-hosting.
+
+ChatGPT, Claude and Gemini only run on their companies' servers. But some companies publish their models for anyone to download and run: these are called open-weight models. Examples include Llama from Meta, Mistral from the French company Mistral AI, Gemma from Google, Qwen from Alibaba and gpt-oss from OpenAI. Most of them are available on Hugging Face, a website that hosts AI models.
+
+To try one on your own computer, free apps such as LM Studio and Ollama let you download a model and chat with it, much like ChatGPT. Everything you type stays on your computer.
+
+Self-hosting has trade-offs:
+
+- **You need powerful hardware.** A recent laptop can run smaller models. The largest models need expensive servers with specialised chips.
+- **Smaller models are less capable.** The models that fit on a laptop make more mistakes and know less than the latest ChatGPT, Claude or Gemini models.
+- **Someone has to look after it.** In a company, someone needs to set up the servers, keep them secure and update the models.
+- **The law still applies.** GDPR still covers the personal data you process, even when it stays on your own servers. Self-hosting removes the risk of sharing data with another company, but your other responsibilities stay the same.
+
+For a company, self-hosting is worth considering when the data is too sensitive to send anywhere, such as health records or client files. For most everyday tasks, a business plan of an AI chat assistant that your company has approved is the simpler choice.
+
+</AccordionContent>
+</AccordionItem>
+
+<AccordionItem value="use-more-efficiently">
+<AccordionTrigger>How can I use AI more efficiently?</AccordionTrigger>
+<AccordionContent>
+
+A lot of time with AI goes on correcting answers that were based on too little information, and on chats that have grown too long. A few habits help:
+
+- **Give the context up front.** A complete first prompt saves several rounds of corrections. "How do I write a good prompt?" has a template.
+- **Save what you repeat.** If you explain the same background in every chat, put it in a Project (ChatGPT and Claude) or a Gem (Gemini) once.
+- **Keep a file of prompts that worked,** and reuse them instead of writing from scratch.
+- **Start a new chat for each new topic.** Long chats get worse over time (see "context rot" in the terms at the end) and use up your limits faster.
+
+</AccordionContent>
+</AccordionItem>
+
+<AccordionItem value="learning-and-work">
+<AccordionTrigger>How do I use AI well for learning and at work?</AccordionTrigger>
+<AccordionContent>
+
+For learning, use it as a tutor rather than an answer machine. If AI does the exercise for you, you get the answer without learning how to get there. Ask it to explain, give hints and quiz you, and do the work yourself first (see "Is AI making us think less?").
+
+```
+I'm learning [topic]. Explain it with an example from [your field or daily life]. Then ask me three questions, one at a time, to check I understood, and tell me what I got wrong.
+```
+
+At work, start with tasks you can check quickly and that take you time today: summarising long documents, drafting emails, turning notes into a table, preparing for a meeting. Avoid tasks where a mistake would be hard to spot.
+
+In both cases, you're responsible for the result. Read it before you hand it in or send it.
+
+AI is also useful for seeing a topic from angles you hadn't thought of, and for testing your own ideas. Because it tends to agree with you (see "Why does it always agree with me?"), you have to ask for this directly. Ask it to argue against your idea, to answer as someone with a different job or background, or to list the points of view your thinking leaves out.
+
+```
+Here's my idea: [describe it]. Give me three points of view on it from people who would see it differently, such as a customer, a manager and a sceptic. For each one, say what they'd question first. Then tell me the strongest argument against my idea.
+```
+
+Treat what it says as questions to think about, rather than a verdict. You decide which points are worth acting on.
+
+</AccordionContent>
+</AccordionItem>
+
+<AccordionItem value="when-not-to-trust">
+<AccordionTrigger>How can I trust AI? When should I not trust it?</AccordionTrigger>
+<AccordionContent>
+
+Trust it most for things you can check easily or where a small mistake doesn't cost much: explaining a concept, drafting a text you'll edit, brainstorming, rewording. Trust it least when:
+
+- it gives you **facts, numbers, dates, quotes or sources** without links you can open
+- the topic is **law, health or money**
+- it's about **recent events** and it didn't search the web
+- it **agrees with you** or praises your idea (see "Why does it always agree with me?")
+- it's an **agent taking actions**, such as sending emails or changing files, that you can't undo
+- when it is hard to verify if something is not there in the final answer
+
+"Why does it make things up?" explains why it can sound sure when it's wrong, and has a prompt that separates checked claims from guesses.
+
+</AccordionContent>
+</AccordionItem>
+
+<AccordionItem value="vibe-coding-challenges">
+<AccordionTrigger>What are the challenges of vibe coding, especially as an app grows?</AccordionTrigger>
+<AccordionContent>
+
+Vibe coding means building an app by describing what you want to an AI app builder, such as Lovable, and letting it write the code. The first version comes together quickly. The problems usually start as the app grows:
+
+- **Changes break other parts.** In a bigger app, the AI can change something you didn't ask about while fixing something else. Make one change at a time, test the main features after each one, and use the builder's version history to go back when something breaks.
+- **You lose track of how the app works.** If you can't explain what each part does, every bug takes longer to fix. Ask the AI to explain its plan before it makes a change, and keep a short document describing your app's features.
+- **Security gaps.** An app that works can still expose your users' data, for example if the database lets anyone read every user's records. Run the builder's security check if it has one, and ask someone with technical experience to review the app before real users put their data in.
+- **Costs grow with users.** Hosting, databases, email sending and AI features all charge more as more people use the app. Check the pricing of each service before you launch.
+
+You can build real products this way, with the same planning, testing and review as any other software team. [Launch Your App Idea with Lovable](https://littleparrot.app/journeys/launch-your-app-idea-with-lovable) covers fixing what breaks and publishing safely.
+
+</AccordionContent>
+</AccordionItem>
+
+<AccordionItem value="bubble">
+<AccordionTrigger>Is the AI bubble going to burst?</AccordionTrigger>
+<AccordionContent>
+
+Nobody knows, and people who sound certain either way are guessing. In October 2026, warnings grew louder: the International Monetary Fund warned that financial markets are exposed to an AI-driven correction if the money spent on AI doesn't bring the profits investors expect, and investors such as Ray Dalio and Ken Griffin said parts of the AI market look like a bubble. Others argue that companies are already earning real money from AI.
+
+Personally I feel that whenever I predicted something in the last 3 years it was not entirely true, so I am not self confident enough to do predictions.
+
+</AccordionContent>
+</AccordionItem>
+
+<AccordionItem value="hugging-face-incident">
+<AccordionTrigger>What happened in the Hugging Face incident?</AccordionTrigger>
+<AccordionContent>
+
+[This video](https://www.youtube.com/watch?v=KOpTWx1Eou4) is an amazing resource telling what happened.
+
+</AccordionContent>
+</AccordionItem>
+
+<AccordionItem value="advice-for-beginners">
+<AccordionTrigger>What's the most important advice for beginners?</AccordionTrigger>
+<AccordionContent>
+
+Use it on something real, and check what it gives you.
+
+- **Start with a task you know well,** so you can tell when the answer is wrong.
+- **Give it the context** a new colleague would need.
+- **Check facts, numbers and sources** before you rely on them.
+- **Keep private and confidential data out.**
+- **Ignore the pressure to keep up.** New tools come out every week, and you don't need to try them all. Getting good with one AI chat assistant gives you skills that carry over to the others.
+
+</AccordionContent>
+</AccordionItem>
+
+</Accordion>
+
+### More AI terms good to know
+
+You'll meet these words in AI apps and in articles and videos about AI. You don't need to learn them by heart: come back here when one isn't clear.
+
+| Word | What it means |
+| --- | --- |
+| **AI (artificial intelligence)** | The general name for computers doing things that normally need human intelligence, such as recognising faces in photos, filtering spam or translating text. ChatGPT is one product built on one kind of AI. |
+| **Machine learning** | A way of building AI where the computer learns patterns from lots of examples, instead of following rules a person wrote by hand. A spam filter that learned from millions of emails people marked as spam is an example. Most of today's AI, including AI chat assistants, is built this way. |
+| **Neuron** | The smallest building block of an AI model: a tiny calculation that takes in some numbers, combines them and passes a new number on. The name comes from brain cells, which inspired the idea, but it's far simpler than a real brain cell. Huge numbers of neurons connected in layers make up a **neural network**. |
+| **Parameters** | The numbers inside a model that decide how strongly each neuron affects the next one. Training adjusts them. When you read that a model has "billions of parameters", these are what's being counted. |
+| **Training** | The process that creates a model. The model is shown an enormous amount of examples (for an LLM, text), tries to predict what comes next, and its parameters are adjusted a tiny bit after every mistake. This takes weeks or months of computing and happens before you ever use the model. Chatting with a model doesn't change it, though your chats may be used to train future versions (see "Are my chats used to train it?"). |
+| **Model** | The trained program that does the actual work of writing the reply. One app can offer several models: Claude Sonnet and Claude Opus, for example, are two models you can choose between in the Claude app. Companies release new models every few months. |
+| **Temperature** | A setting that controls how much randomness the model uses when it picks each next word. At a low temperature, it nearly always picks the most likely word, so answers stay similar each time. At a high temperature, it picks less likely words more often, so answers vary more and can be more surprising, and also more likely to go wrong. AI chat assistants set it for you, and you can usually only change it in tools made for developers. "Why do I get a different answer every time I ask?" above explains what this randomness does. |
+| **Token** | The small pieces of text a model reads and writes. A token is often a short word, part of a longer word, or a punctuation mark. Models count everything in tokens: your usage limits, the context window and the price. Text in languages other than English often splits into more tokens. To see how a sentence is split up, paste it into this [token counter](https://smart-hub.academy/tools/token-counter). |
+| **System prompt** | Hidden instructions the company gives the model before your chat starts: how to behave, what tone to use, which tools it has and what to refuse. You don't see it, but it shapes every reply. Anthropic publishes the [system prompts of the Claude apps](https://platform.claude.com/docs/en/release-notes/system-prompts/overview), so you can read what Claude is told before you type anything. |
+| **Context window** | The most the model can see at once, measured in tokens. Everything in the context has to fit inside it. When a chat goes over the limit, the app has to drop or shorten the older parts. |
+| **Context rot** | Answers getting worse as the context fills up, well before it's full. The model follows your instructions less carefully and misses details, especially ones from the middle of a long chat. It's one reason a new chat with a short summary often works better than carrying on. |
+| **Context compression** | What some apps do when a chat gets too long: they replace older messages with a shorter summary to make room. The chat carries on, but details from the summarised part can be lost. |
+| **Memory** | A feature that saves facts about you, such as your job or your preferences, and brings them into new chats. The model itself doesn't change. You can usually see, edit or switch it off in the app's settings. "Does it remember me?" above explains the different kinds of memory. |
+| **Multimodal** | A model that works with more than text: images, audio, video or files. Because the main AI chat assistants are multimodal, you can upload a photo of a form and ask what goes in each box, or talk to them out loud. |
+| **Reasoning (effort)** | Some models can work through a problem step by step before they answer, often shown in the app as "thinking". The effort setting decides how long they think. More effort usually helps with hard problems, such as maths, planning or code, but the reply takes longer and uses more of your limit. |
+| **Tool (MCP)** | An extra ability an app gives the model, such as searching the web, running code or reading your calendar. The model decides when to use it, and the app carries out the action. MCP (Model Context Protocol) is a shared standard for connecting AI apps to other services, so the same connection, to Google Drive or Notion for example, works in many different AI apps. In the Claude app, these connections are called connectors. |
+| **Harness** | The software around a model that turns it into a product you can use: the chat window, the system prompt, the tools, memory, and how it handles long chats. The same model can behave quite differently in different harnesses: the Claude app and Claude Code can run the same model, with different harnesses. |
+| **Skills** | Saved instructions, sometimes with example files, that teach the AI how to do one task your way, such as writing in your company's style or formatting a weekly report. The AI loads a skill only when the task needs it, so you can have many without filling up the context. Claude, for example, lets you add your own. |
+| **Projects and Gems** | A space where you save instructions and files once, so every chat inside it starts with them. Claude and ChatGPT call these Projects, and in Gemini they're called Gems. They're useful for anything you come back to, such as a job search, a course or a client, because you don't have to explain the background again in every chat. |
+
+#### For the curious
+
+You don't need any of these to use AI well. They're here in case you meet them in an article or a video and want to know roughly what they mean.
+
+| Word | What it means |
+| --- | --- |
+| **Supervised learning** | Machine learning from examples that come with the right answer, such as thousands of photos each labelled "cat" or "dog". The model learns to label photos it hasn't seen before. |
+| **Unsupervised learning** | Machine learning from examples without answers. The model finds patterns on its own, for example grouping customers who shop in similar ways. |
+| **RLHF (reinforcement learning from human feedback)** | People rate the model's answers, and the model is trained to give more answers like the highly rated ones. It's a big part of why AI chat assistants are polite and helpful, and also why they tend to agree with you (see "Why does it always agree with me?"). |
+| **Deep learning** | Machine learning with neural networks that have many layers of neurons. "Deep" refers to the number of layers. Today's AI chat assistants are built with deep learning. |
+| **Transformer** | The design today's LLMs are built on, published by Google researchers in 2017. It's the T in GPT. |
+| **Attention** | The part of a transformer that works out which other words in the text help explain each word. In "we sat on the bank of the river", attention links "bank" to "river", so the model reads it as a riverbank rather than a bank that holds money. |
+| **Embedding** | A list of numbers that stands for the meaning of a word or a piece of text. Texts with similar meanings get similar numbers, which lets apps search by meaning: a search for "cheap flights" can find a page about "low-cost airlines". |
 
 ### Where to go from here
 
