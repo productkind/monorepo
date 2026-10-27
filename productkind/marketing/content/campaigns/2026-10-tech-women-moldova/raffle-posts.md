@@ -17,11 +17,17 @@ Posting times come from the post ID (its first 41 bits are the creation time), s
 
 ## Our comments
 
+The first comment is for the day of the summit. The winner comment goes up from Kinga's own account and tells each of them they've won, since LinkedIn wouldn't let the winners post tag everyone.
+
 ### 1. Daniela D.
 
 Used the "I don't have one yet" post template. Freelance graphic designer in Chișinău, designs packaging and brand identities for small businesses.
 
 > Thank you for folding a parrot and posting it, Daniela! 🦜 Here's a question that could help you find your app idea: what do the small businesses you work with struggle with most?
+
+Winner comment from Kinga's account, after the draw:
+
+> Congratulations, Daniela, you're one of the winners of the Little Parrot challenge! 🦜 Once you accept my connection request, I'll send you the details.
 
 ### 2. Sofia Usatii
 
@@ -29,14 +35,28 @@ Used the "I don't have one yet" post template. Student at USM (Moldova State Uni
 
 > Sofia, your parrot looks right at home at the summit! 🦜 A question that might lead you to a product idea: what's something you wish was easier at uni?
 
+Winner comment from Kinga's account, after the draw:
+
+> Congratulations, Sofia! You're one of the winners of the Little Parrot challenge. 🦜 I'll send you the details once you accept my connection request.
+
 ### 3. Victoria P
 
 Wrote her own post instead of using a template, calling it "the Little Parrot challenge". Art teacher at QSI International School of Chisinau.
 
 > Thank you for joining the challenge, Victoria! 🦜 We're curious: as an art teacher, what's one part of your week you'd love AI to help with?
 
+Her reply: she'd love AI to help with planning art lessons in her preparation time on workdays, and with exploring new ideas and trying something different after work and at weekends.
+
+Our reply to her, from the Little Parrot account, which also tells her she's won (so she doesn't need a separate winner comment):
+
+> Thank you for sharing, Victoria! A lesson planner for art teachers sounds like a lovely first thing to build with AI. And good news: you're one of the winners of the Little Parrot challenge! 🦜 @Kinga Magyar will message you the details once you've accepted her connection request.
+
 ### 4. Marina Vinogradova
 
 Used the "I don't have one yet" post template, five minutes before the deadline. QA engineer at Appsfactory, and a mentor at Tech Women Moldova 2025. Her photo shows the parrot next to a Tech Women goodie bag.
 
 > Your parrot found a good spot next to the Tech Women goodie bag, Marina! 🦜 What do the women you mentor ask you for help with most? There might be an app idea in there.
+
+Winner comment from Kinga's account, after the draw:
+
+> Congratulations, Marina! You're one of the winners of the Little Parrot challenge. 🦜 As soon as you accept my connection request, I'll send you the details.
