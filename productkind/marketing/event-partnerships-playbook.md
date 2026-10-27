@@ -2,13 +2,14 @@
 
 How Little Parrot gets visibility and credibility from conferences, meetups, buildathons and other tech events without paying cash. Built on [the October 2026 research](../ai-research/event-sponsorship-research-2026-10.md). Written 6 October 2026; revisit after the first three events have results.
 
-## The strategy in five lines
+## The strategy in six lines
 
 1. **We join events as partners.** We don't buy a logo spot. We bring something useful to attendees (teaching and course access) and the organiser gives us reach in return.
 2. **Every event has to leave something behind that we can measure.** Each event gets its own code, link and QR code, and the organiser gets a results report afterwards.
 3. **Every event also leaves assets we keep:** photos, a recording, a partner listing and quotes from attendees. These build credibility on our site and in the next pitch long after the day is over.
 4. **Lead with proof.** SheBuilds IWD (March 2026): free course access for participants brought 2,603 site visitors and 663 registrations. That number opens doors.
 5. **Teach, never sell, from the stage.** Organisers and attendees both react badly to sales pitches. The workshop earns the trust; the code and QR code do the selling.
+6. **No recap posts.** Every post about an event gives readers something they can use, before and after the day (section 6, What we post).
 
 ## 1. Choosing events
 
@@ -47,7 +48,7 @@ Everything in Community Partner, plus:
 
 - A talk or workshop, in person or online
 - 2 to 3 Open Wings scholarships (lifetime access) for attendees, chosen by the organiser
-- A recap post after the event, tagging the organiser and speakers
+- A post after the event about something we learned there, tagging the organiser and speakers
 
 ### Programme Partner (buildathons and multi-week programmes)
 
@@ -128,13 +129,22 @@ Once the call goes well, send a confirmation email that both sides reply "agreed
 | When | What |
 | --- | --- |
 | Agreement signed | Create the event code, UTM link and QR code (one set per event). Add the event to `calendar.md` and create a campaign folder in `content/campaigns/`. |
-| 4 weeks before | Send the organiser our blurb, logo, speaker photo and bio. Post our first promotion. |
-| 2 weeks before | Check the listing and attendee email went out. Post again. Prepare the workshop. |
+| 4 weeks before | Send the organiser our blurb, logo, speaker photo and bio. Post about something we're making for the event while we make it (below). |
+| 2 weeks before | Check the listing and attendee email went out. Post again, with something from the workshop we're preparing. Prepare the workshop. |
 | 1 week before | Final slides, with the QR code on the first and last slide. Print a few QR cards for in-person events. |
-| On the day | Teach. Get photos and the recording. Collect 2 or 3 short attendee quotes (with permission). Talk to the organiser about next time. |
-| Within 24 hours | Thank-you message to the organiser. Recap post tagging the organiser and speakers. |
-| Within 3 days | Share photos and the recording link (if agreed) with the organiser. |
-| After 14 days | Send the results report (below). Add the organiser's logo and quote to our credibility list. |
+| On the day | Teach. Get photos and the recording. Collect 2 or 3 short attendee quotes (with permission). Talk to the organiser about next time. That evening, write down the questions people asked and one moment that surprised you. |
+| Within 24 hours | Thank-you message to the organiser. Comment on the organiser's, speakers' and attendees' posts about the event. |
+| Within 3 days | Share photos and the recording link (if agreed) with the organiser. Our post about something we learned at the event, tagging the organiser. |
+| After 14 days | Send the results report (below), and ask the organiser to introduce us to one other organiser. Add the organiser's logo and quote to our credibility list, and the event to the LinkedIn Featured sections. |
+| 4 to 8 weeks after | With permission, a post about what an attendee did next. |
+
+### What we post
+
+- **No recap posts.** A post about an event goes out only if readers get something useful from it: a technique, a decision and the reason for it, a mistake, or a thought they can argue with. That we were there is one line in it, with the thanks and the tags. The tags still matter, because they're what gets the organiser to reshare.
+- **Share the making while it happens.** Something we're making for the event, like a flyer or the workshop's main example, is useful to readers and promotes the event at the same time. Post it in progress, not only afterwards (Austin Kleon, _Show Your Work!_). A post about how it was made needs what the files don't show: what we tried first, what went wrong, and what AI did and where we stepped in.
+- **Let other people say it.** Give the room a reason to post about us: the Moldova raffle got four posts in one afternoon. An attendee or organiser saying it is more convincing than us saying it, so we comment on every post about the event.
+- **Keep using it.** After the results report, the event goes where people deciding about us look: the Featured sections, the credibility list and the next pitch. Its best stories come back in later posts.
+- **Close the story.** A post about what an attendee did next shows the event led somewhere. On the day, ask who'd be happy for us to follow up.
 
 ## 7. Measuring results
 

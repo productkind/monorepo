@@ -13,11 +13,12 @@ channels: [linkedin, email, partner]
 
 - **What the summit gave us:** our logo on the partner wall next to Sweden, UN Women, Bolt and Orange; Tamas's workshop, Why Does AI Get It Wrong; four raffle posts tagging Little Parrot; and the workshop participants on our email list.
 - **Four jobs, in this order:**
-  1. **Keep our public promises.** The raffle page says we'll announce the winners on our LinkedIn page and message them, and the playbook gives the organiser a thank-you and a recap post within 24 hours.
+  1. **Keep our public promises.** The raffle page says we'll announce the winners on our LinkedIn page and message them, and the playbook gives the organiser a thank-you within 24 hours and a post tagging them within three days.
   2. **Use the offer window.** Both offers end on Saturday 31 October: 80% off with the code `TechWomenWS` for workshop participants, and 70% off on the raffle page for everyone who folded a parrot. The email and the raffle page do the selling. Personal posts link to the free course.
-  3. **Collect what we keep.** The organiser's photos, a quote, attendance numbers and an invitation for 2027.
+  3. **Collect what we keep.** The organiser's photos, a quote, attendance numbers, an invitation for 2027 and an introduction to one other organiser.
   4. **Report back.** The results report to Tech Women Moldova on 7 November, and the first-run review in the playbook.
-- **Small on purpose.** Marketing gets one day a week, and the technical PM launch has Kinga's LinkedIn slots. This plan adds three LinkedIn posts (company page, Tamas, Kinga), sends the email that's already written, and follows up with the organiser. No new Instagram or TikTok content.
+- **Small on purpose.** Marketing gets one day a week, and the technical PM launch has Kinga's LinkedIn slots. This plan adds three LinkedIn posts this week (company page, Tamas, Kinga) and one in December about what a winner is building, sends the email that's already written, and follows up with the organiser. No new Instagram or TikTok content.
+- **No recaps.** Each post gives readers something they can use, and the thanks and tags are one line in it (playbook section 6, What we post).
 
 ## 1. Tonight, before Tamas leaves Chișinău
 
@@ -33,13 +34,13 @@ None of the five photos so far shows Tamas's workshop or a folded parrot, and th
 ## 2. Decisions for Kinga
 
 1. **The raffle has four entries for three places.** (Agreed on 24 October: all four get a free place, each with a personal 100% code sent by LinkedIn message.)
-2. **Who writes the recap.** (Recommend: Tamas, from his own profile.) He was there, he taught the workshop, and his profile has the bigger following (3,824 against 2,101). Kinga comments, and the company page reposts it.
-3. **Whether Kinga posts this cycle.** (Recommend: one post, on a day without a technical PM series post.) The flyer and the raffle are material you can write about without having been in the room.
+2. **Who writes the workshop post.** (Recommend: Tamas, from his own profile.) He was there, he taught the workshop, and his profile has the bigger following (3,824 against 2,101). Kinga comments, and the company page reposts it.
+3. **Whether Kinga posts this cycle.** (Agreed on 25 October: one post, about how we made the flyer, on a day without a technical PM series post.) It's material Kinga has without having been in the room, and it can give readers who build with AI something to use.
 4. **Where the discount appears.** (Recommend: only in the email and in the company page's raffle post, whose readers are mostly the people who folded a parrot.) Personal posts link to the free course instead. A 70% discount in posts to our wider networks would tell product people and founders that the journey is worth €89.70.
 
 ## 3. Schedule
 
-Owners are suggestions. All week, both of us answer comments on our posts and on the four raffle posts.
+Owners are suggestions. All week, both of us answer comments on our posts and on the four raffle posts, and comment on the organiser's, speakers' and attendees' posts about the summit.
 
 | When | What | Where | Owner | Status |
 | --- | --- | --- | --- | --- |
@@ -48,17 +49,21 @@ Owners are suggestions. All week, both of us answer comments on our posts and on
 | Sat 24 Oct, tonight | Set up the winners' places, then message each winner how to claim theirs, before the public post | LinkedIn messages | Kinga | todo |
 | Sat 24 Oct, tonight, or Sun 25 Oct morning | **Post A:** raffle winners | Little Parrot company page | Kinga | todo |
 | Sun 25 Oct | Send the workshop follow-up email, if it isn't scheduled already (fill the UserID field from the Supabase export first) | EmailOctopus | Kinga | todo |
-| Sun 25 Oct | **Post B:** Tamas's recap | Tamas's LinkedIn | Tamas | todo |
-| Mon 26 Oct | Repost Post B, and Kinga leaves a comment on it | Company page, Kinga's LinkedIn | Kinga | todo |
+| By Tue 27 Oct | **Post B:** Tamas's workshop post | Tamas's LinkedIn | Tamas | todo |
+| The day after Post B | Repost Post B, and Kinga leaves a comment on it | Company page, Kinga's LinkedIn | Kinga | todo |
 | By Tue 27 Oct | Send the organisers our photos. Ask for theirs, a one-line quote, total and workshop attendance, and whether they'd like us back in 2027 | Email | Kinga | todo |
-| Wed 28 or Thu 29 Oct | **Post C:** Kinga's post | Kinga's LinkedIn | Kinga | todo |
+| By Tue 27 Oct | Notes on how we made the flyer: the four questions under Post C | Voice note or notes | Kinga | todo |
+| Wed 28 or Thu 29 Oct | **Post C:** how we made the flyer | Kinga's LinkedIn | Kinga | todo |
 | Fri 30 Oct | If the follow-up email got clicks, send one short reminder that the code ends tomorrow to participants who haven't used it. Otherwise skip it | EmailOctopus | Kinga | todo |
 | Sun 1 Nov | Check the raffle page has switched to its free-course version | littleparrot.app/tech-women-moldova | Tamas | todo |
-| Sat 7 Nov | Results report to the organisers (playbook section 7). Add their logo and quote to our credibility list | Email | Kinga | todo |
+| Sat 7 Nov | Results report to the organisers (playbook section 7), asking for an introduction to one other organiser. Add their logo and quote to our credibility list | Email | Kinga | todo |
+| Sat 7 Nov | Add the summit to the Featured sections | Kinga's, Tamas's and the company page's LinkedIn | Kinga | todo |
 | Sat 7 Nov | Write what happened into the playbook's Tech Women Summit section | [event-partnerships-playbook.md](../../../event-partnerships-playbook.md) | Kinga | todo |
+| Week of 23 Nov | Invite the four winners to a user interview about their first weeks on the journey, and ask whether we can write about what they're building | LinkedIn messages | Kinga | todo |
+| December, a day without a launch post | **Post D:** what a winner is building | Kinga's LinkedIn | Kinga | todo |
 | Wed 23 Dec | 60-day numbers: paid places from the event | This file | Kinga | todo |
 
-## 4. The three posts
+## 4. The posts
 
 ### Post A: raffle winners (company page)
 
@@ -68,23 +73,42 @@ Drafted in [raffle-winners/captions.md](raffle-winners/captions.md): the post, f
 - **Tag:** the four winners and Tech Women Moldova.
 - **Link, in the post body** (the captions skill's rule for LinkedIn): the raffle page.
 
-### Post B: Tamas's recap (Tamas's LinkedIn)
+### Post B: Tamas's workshop post (Tamas's LinkedIn)
 
-- **Job:** reach. This is the playbook's recap post tagging the organiser.
+- **Job:** reach. This is the playbook's post after the event (section 6, What we post): built on something from the workshop, not a recap.
 - **Photo:** a workshop photo if one turns up, otherwise the partner-wall photo (01).
 - **Tag:** Tech Women Moldova, the organisers by name, Little Parrot. Tag the Startup Moldova speaker only if her talk is in the post.
-- **Material:** Tamas's notes from tonight.
-- **First line:** a real moment from the day, such as a question someone asked or something that surprised him. Posts that open on a topic intro or someone else's news sit at the bottom of our LinkedIn data (see the [storytelling playbook](../../../storytelling-playbook/README.md)), and "I ran a workshop at…" reads as both.
+- **Material:** Tamas's notes from the evening of the summit.
+- **Body:** a question someone asked, or a moment where people's idea of AI turned out to be wrong, with Tamas's answer, so readers who weren't there learn something. The thank-you to Tech Women Moldova and the organisers goes at the end.
+- **First line:** a real moment from the day, such as that question or something that surprised him. Posts that open on a topic intro or someone else's news sit at the bottom of our LinkedIn data (see the [storytelling playbook](../../../storytelling-playbook/README.md)), and "I ran a workshop at…" reads as both.
 - **Link, in the first comment:** the free course, Plan Your Vibe Coded App.
 - **Draft with:** Tamas writes the first version in his own words. The linkedin-post skill helps with the first line and the linkedin-critic checks the language. The personal-tone-of-voice skill is Kinga's voice, so don't apply it to Tamas's post.
 
-### Post C: Kinga's post (Kinga's LinkedIn)
+### Post C: how we made the flyer (Kinga's LinkedIn)
 
-- **Job and angle:** Kinga's to decide. The linkedin-post skill asks her before drafting.
-- **Material on file:** [the raffle tracker](raffle-posts.md) (the four posts, which template each person chose, our replies), [the flyer and folding page](origami-crane/), Tamas's notes, and photos 02 to 04 if she wants to respond to the Startup Moldova talk (credit and tag the speaker).
+- **Job:** reach. A post about how something was made (playbook section 6, What we post), which readers who build with AI can take something from for their own build.
+- **What readers take away:** Kinga's to decide. The linkedin-post skill asks her before drafting.
+- **Notes before drafting.** The repo shows what was built, not how it went. The post needs the answers to:
+  - What did we try first, and what went wrong?
+  - How much did AI do, and where did we step in?
+  - How long did it take?
+  - What would we tell someone trying to make something physical with AI?
+- **Material on file:**
+  - [the flyer README](origami-crane/README.md), "How it is made": a small simulator folds the crane step by step and tracks where each part of the sheet ends up, and the colours, eyes and text are placed on the folded parrot and mapped back onto the flat sheet
+  - [`preview.png`](origami-crane/preview.png): the patchy flat flyer next to the folded parrot, a strong first picture
+  - [`fold.html`](origami-crane/fold.html): the folding animation; a screen recording of it can be the post's video
+  - [the raffle tracker](raffle-posts.md): the four people who folded it at the summit and posted it
 - **Tag:** Tech Women Moldova, Tamas.
 - **Link, in the first comment:** the free course.
 - **Date:** a day without a technical PM series post. If that week is full, move it to the following week rather than drop a series post.
+
+### Post D: what a winner is building (Kinga's LinkedIn, December)
+
+- **Job:** community. It closes the story by showing the summit led to a woman building something.
+- **Only with her permission,** asked at the user interview.
+- **Material:** the interview and what she's built so far. Victoria told us in the comments of her raffle post that she'd like AI to help her plan art lessons, but the winner who has made the most progress is the better story.
+- **Tag:** the winner, Tech Women Moldova.
+- **Link, in the first comment:** the free course.
 
 ## 5. Photos
 
@@ -102,8 +126,8 @@ Tamas's photos stay out of the repo. They're the WhatsApp images he sent on 24 O
 
 ## 6. Links and numbers
 
-- **Links:** `?utm_source=linkedin&utm_medium=social&utm_campaign=tech-women-moldova-oct26&utm_content=<post>`, with `utm_content` set to `raffle-winners`, `tamas-recap` or `kinga-post`. The campaign name matches the follow-up email's links. Check the medium against the UTM sheet and add a row for each link.
-- **Destinations:** the raffle page for Post A; the free course, https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview, for Posts B and C.
+- **Links:** `?utm_source=linkedin&utm_medium=social&utm_campaign=tech-women-moldova-oct26&utm_content=<post>`, with `utm_content` set to `raffle-winners`, `tamas-workshop`, `flyer-making` or `winner-build`. The campaign name matches the follow-up email's links. Check the medium against the UTM sheet and add a row for each link.
+- **Destinations:** the raffle page for Post A; the free course, https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview, for Posts B, C and D.
 - **Count on 7 November, for the results report:**
   - places bought with `TechWomenWS` and with the raffle page's 70% offer (Stripe)
   - workshop participants on the list, the follow-up email's opens and clicks, and its yes/no feedback answers
