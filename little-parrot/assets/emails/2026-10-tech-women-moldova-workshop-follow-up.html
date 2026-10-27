@@ -1,9 +1,10 @@
 <!--
-Subject: 🦜 Your AI cheat sheet from the workshop
+Subject: 🦜 Your workshop questions, answered
 Preheader: Plus 80% off our Lovable app-building journey until 31 October.
 Sender name: Little Parrot
 Audience: everyone who joined the "Why Does AI Get It Wrong" workshop (workshop slug ai-explained) at Tech Women Summit Moldova on 24 October 2026, minus anyone who turned emails off. Merge tags are EmailOctopus syntax.
-Feedback: both buttons go to the Tally form https://tally.so/r/PdMkP0, whose hidden fields read the UTMs; utm_content is yes or no, utm_term carries the user ID (issue #456).
+Feedback: the main button goes to the Tally form https://tally.so/r/o99V7O ("How was the workshop?"), whose hidden fields read the UTMs; utm_content is workshop-feedback, utm_term carries the user ID. Publish the form before sending.
+Photo: TW-698 by Yugin Klein, served from little-parrot-awakens/public/newsletter/tech-women-moldova-workshop.jpg. Deploy the site before sending.
 UserID: EmailOctopus custom field holding the Supabase user ID (profiles.id), filled from the Supabase export before each send.
 -->
 <!doctype html>
@@ -18,7 +19,7 @@ UserID: EmailOctopus custom field holding the Supabase user ID (profiles.id), fi
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="color-scheme" content="light dark" />
     <meta name="supported-color-schemes" content="light dark" />
-    <title>Your AI cheat sheet from the workshop</title>
+    <title>Your workshop questions, answered</title>
     <!--[if mso
       ]><noscript
         ><xml
@@ -193,10 +194,21 @@ UserID: EmailOctopus custom field holding the Supabase user ID (profiles.id), fi
             <p style="font-size: 17px; line-height: 1.6; margin: 0 0 18px">Hi {{FirstName}},</p>
             <p style="font-size: 17px; line-height: 1.6; margin: 0 0 18px">
               Thank you for joining Tamas's workshop, <strong>Why Does AI Get It Wrong</strong>, at
-              Tech Women Summit Moldova. Here's the cheat sheet we made to go with it.
+              Tech Women Summit Moldova. We've answered the questions you asked on the day in
+              <a
+                href="https://littleparrot.app/nest/toolkit/9cd107d6-ddd6-45a9-9b80-374031d40077?utm_source=email&amp;utm_medium=workshop&amp;utm_campaign=tech-women-moldova-oct26&amp;utm_content=participants&amp;auth=login"
+                style="
+                  font-size: 17px;
+                  font-weight: 700;
+                  color: #08080a;
+                  text-decoration: underline;
+                "
+                >your AI cheat sheet</a
+              >, under <strong>Asked at the workshop</strong>. Most answers include a prompt or a
+              small step you can try in your next chat.
             </p>
 
-            <!-- Highlight box: the workshop cheat sheet, participants only -->
+            <!-- Highlight box: workshop feedback, the primary CTA -->
             <table
               role="presentation"
               width="100%"
@@ -235,13 +247,11 @@ UserID: EmailOctopus custom field holding the Supabase user ID (profiles.id), fi
                       margin: 0 0 14px;
                     "
                   >
-                    Your questions about AI, answered
+                    How was the workshop?
                   </h2>
                   <p style="font-size: 17px; line-height: 1.6; margin: 0 0 14px">
-                    The questions people ask most about AI chat assistants such as ChatGPT, Claude
-                    and Gemini: where their answers come from, when you can trust them, what to keep
-                    private, which one to use, and what AI changes for your career. It's in your
-                    Toolkit, just for workshop participants.
+                    Please tell us what to keep and what to change, so we can make the next one
+                    better. It takes about two minutes.
                   </p>
                   <table
                     role="presentation"
@@ -274,7 +284,7 @@ UserID: EmailOctopus custom field holding the Supabase user ID (profiles.id), fi
                         "
                       >
                         <a
-                          href="https://littleparrot.app/nest/toolkit/9cd107d6-ddd6-45a9-9b80-374031d40077?utm_source=email&amp;utm_medium=workshop&amp;utm_campaign=tech-women-moldova-oct26&amp;utm_content=participants&amp;auth=login"
+                          href="https://tally.so/r/o99V7O?utm_source=email&amp;utm_medium=workshop&amp;utm_campaign=tech-women-moldova-oct26&amp;utm_content=workshop-feedback&amp;utm_term={{UserID}}"
                           style="
                             display: block;
                             padding: 16px 26px;
@@ -285,7 +295,7 @@ UserID: EmailOctopus custom field holding the Supabase user ID (profiles.id), fi
                             color: #08080a;
                             text-decoration: none;
                           "
-                          >Open the cheat sheet</a
+                          >Rate the workshop</a
                         >
                       </td>
                     </tr>
@@ -294,7 +304,50 @@ UserID: EmailOctopus custom field holding the Supabase user ID (profiles.id), fi
               </tr>
             </table>
 
-            <p style="font-size: 17px; line-height: 1.6; margin: 0 0 18px">
+            <!-- Workshop photo -->
+            <table
+              role="presentation"
+              width="100%"
+              cellpadding="0"
+              cellspacing="0"
+              border="0"
+              style="
+                margin: 0 0 8px;
+                border: 2px solid #08080a;
+                box-shadow: 4px 4px 2px rgba(8, 8, 9, 0.25);
+              "
+            >
+              <tr>
+                <td style="padding: 0; background-color: #fffffe">
+                  <img
+                    src="https://littleparrot.app/newsletter/tech-women-moldova-workshop.jpg"
+                    width="556"
+                    height="371"
+                    alt="Tamas at the workshop, pointing at a slide that shows a neuron turning five numbers into one, with participants watching."
+                    style="display: block; width: 100%; max-width: 556px; height: auto; border: 0"
+                  />
+                </td>
+              </tr>
+            </table>
+            <p
+              style="font-size: 14px; line-height: 1.6; margin: 0 0 32px; color: hsl(245, 3%, 40%)"
+            >
+              Photo: Yugin Klein
+            </p>
+
+            <!-- Section: the participants' discount -->
+            <h2
+              style="
+                font-family: 'Space Mono', monospace;
+                font-size: 18px;
+                line-height: 1.5;
+                color: #08080a;
+                margin: 0 0 12px;
+              "
+            >
+              Your workshop discount: 80%&nbsp;off
+            </h2>
+            <p style="font-size: 17px; line-height: 1.6; margin: 0 0 14px">
               At Little Parrot, we help women build their own products, and their own income, with
               AI. If you have an app idea,
               <a
@@ -307,14 +360,29 @@ UserID: EmailOctopus custom field holding the Supabase user ID (profiles.id), fi
                 "
                 >Launch Your App Idea with Lovable</a
               >
-              is seven courses on planning, building, publishing and selling your app, open to you
-              for a year. It also gives you six months of our private Discord community and monthly
-              office hours with Kinga (Lead Product Manager) and Tamas (Principal Software
-              Engineer).
+              gives you:
             </p>
-            <p style="font-size: 17px; line-height: 1.6; margin: 0 0 18px">
-              As a workshop participant, you get <strong>80% off until 31 October</strong> with the
-              code <strong>TechWomenWS</strong>:
+            <ul style="font-size: 17px; line-height: 1.6; margin: 0 0 14px; padding-left: 22px">
+              <li style="margin-bottom: 8px">
+                <strong>Seven courses</strong> on planning, building, publishing and selling your
+                app, open to you for a year
+              </li>
+              <li style="margin-bottom: 8px">
+                <strong>Toolkit items</strong> to use on your own app: prompts to copy, checklists,
+                templates and setup guides
+              </li>
+              <li style="margin-bottom: 8px">
+                <strong>Our private Discord community</strong> for six months, to ask questions and
+                share what you build
+              </li>
+              <li style="margin-bottom: 0">
+                <strong>Monthly office hours</strong> for six months, where you bring questions
+                about your own app to Kinga (Lead Product Manager) and Tamas (Principal Software
+                Engineer)
+              </li>
+            </ul>
+            <p style="font-size: 17px; line-height: 1.6; margin: 0 0 32px">
+              Use the code <strong>TechWomenWS</strong> until <strong>31 October</strong>:
               <a
                 href="https://littleparrot.app/journey-checkout?journey=launch-your-app-idea-with-lovable&amp;coupon=TechWomenWS&amp;utm_source=email&amp;utm_medium=workshop&amp;utm_campaign=tech-women-moldova-oct26&amp;utm_content=participants"
                 style="
@@ -324,10 +392,24 @@ UserID: EmailOctopus custom field holding the Supabase user ID (profiles.id), fi
                   text-decoration: underline;
                 "
                 >check out with your code</a
-              >. If it's not for you, you can get a refund within 14 days, no questions asked.
+              >. It's a one-time payment, and if it's not for you, you can get a refund within 14
+              days, no questions asked.
             </p>
+
+            <!-- Section: the free first course, and the share ask -->
+            <h2
+              style="
+                font-family: 'Space Mono', monospace;
+                font-size: 18px;
+                line-height: 1.5;
+                color: #08080a;
+                margin: 0 0 12px;
+              "
+            >
+              Try the first course free
+            </h2>
             <p style="font-size: 17px; line-height: 1.6; margin: 0 0 32px">
-              The first course,
+              In
               <a
                 href="https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview?utm_source=email&amp;utm_medium=workshop&amp;utm_campaign=tech-women-moldova-oct26&amp;utm_content=participants"
                 style="
@@ -337,7 +419,8 @@ UserID: EmailOctopus custom field holding the Supabase user ID (profiles.id), fi
                   text-decoration: underline;
                 "
                 >Plan Your Vibe Coded App</a
-              >, is free for everyone. Know someone with an app idea? Pass on
+              >, you define your app's problem, user and first version, and write your first prompt.
+              It's free for everyone. Know someone with an app idea? Pass on
               <a
                 href="https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview?utm_source=email&amp;utm_medium=workshop&amp;utm_campaign=tech-women-moldova-oct26&amp;utm_content=share-participants"
                 style="
@@ -400,106 +483,6 @@ UserID: EmailOctopus custom field holding the Supabase user ID (profiles.id), fi
               line-height: 1.8;
             "
           >
-            <!-- Feedback vote (issue #456): text buttons, so they work with images off -->
-            <table
-              role="presentation"
-              align="center"
-              cellpadding="0"
-              cellspacing="0"
-              border="0"
-              style="margin: 0 auto 24px; border: 2px solid #08080a; background-color: #fffffe"
-            >
-              <tr>
-                <td align="center" style="padding: 18px 24px 20px">
-                  <p
-                    style="
-                      font-family: 'Space Mono', monospace;
-                      font-size: 16px;
-                      line-height: 1.5;
-                      font-weight: 700;
-                      color: #08080a;
-                      margin: 0 0 14px;
-                    "
-                  >
-                    Was this email useful?
-                  </p>
-                  <table
-                    role="presentation"
-                    align="center"
-                    cellpadding="0"
-                    cellspacing="0"
-                    border="0"
-                  >
-                    <tr>
-                      <td style="padding: 0 6px">
-                        <table
-                          role="presentation"
-                          cellpadding="0"
-                          cellspacing="0"
-                          border="0"
-                          style="border: 2px solid #08080a"
-                        >
-                          <tr>
-                            <td
-                              align="center"
-                              bgcolor="#fffffe"
-                              style="background-color: #fffffe; mso-padding-alt: 12px 20px"
-                            >
-                              <a
-                                href="https://tally.so/r/PdMkP0?utm_source=email&amp;utm_medium=workshop&amp;utm_campaign=tech-women-moldova-oct26&amp;utm_content=yes&amp;utm_term={{UserID}}"
-                                style="
-                                  display: block;
-                                  padding: 12px 20px;
-                                  font-family: 'Inter', Arial, sans-serif;
-                                  font-size: 16px;
-                                  line-height: 1.5;
-                                  font-weight: 700;
-                                  color: #08080a;
-                                  text-decoration: none;
-                                "
-                                ><span aria-hidden="true">👍</span> Yes</a
-                              >
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                      <td style="padding: 0 6px">
-                        <table
-                          role="presentation"
-                          cellpadding="0"
-                          cellspacing="0"
-                          border="0"
-                          style="border: 2px solid #08080a"
-                        >
-                          <tr>
-                            <td
-                              align="center"
-                              bgcolor="#fffffe"
-                              style="background-color: #fffffe; mso-padding-alt: 12px 20px"
-                            >
-                              <a
-                                href="https://tally.so/r/PdMkP0?utm_source=email&amp;utm_medium=workshop&amp;utm_campaign=tech-women-moldova-oct26&amp;utm_content=no&amp;utm_term={{UserID}}"
-                                style="
-                                  display: block;
-                                  padding: 12px 20px;
-                                  font-family: 'Inter', Arial, sans-serif;
-                                  font-size: 16px;
-                                  line-height: 1.5;
-                                  font-weight: 700;
-                                  color: #08080a;
-                                  text-decoration: none;
-                                "
-                                ><span aria-hidden="true">👎</span> No</a
-                              >
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
             <table
               role="presentation"
               align="center"
