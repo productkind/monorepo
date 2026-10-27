@@ -4,7 +4,7 @@ Preheader: Plus 80% off our Lovable app-building journey until 31 October.
 Sender name: Little Parrot
 Audience: everyone who joined the "Why Does AI Get It Wrong" workshop (workshop slug ai-explained) at Tech Women Summit Moldova on 24 October 2026, minus anyone who turned emails off. Merge tags are EmailOctopus syntax.
 Feedback: the main button goes to the Tally form https://tally.so/r/o99V7O ("How was the workshop?"), whose hidden fields read the UTMs; utm_content is workshop-feedback, utm_term carries the user ID. Publish the form before sending.
-Photo: TW-698 by Yugin Klein, served from little-parrot-awakens/public/newsletter/tech-women-moldova-workshop.jpg. Deploy the site before sending.
+Photo: TW-698 by Tatiana Sorocean, served from little-parrot-awakens/public/newsletter/tech-women-moldova-workshop.jpg. Deploy the site before sending.
 UserID: EmailOctopus custom field holding the Supabase user ID (profiles.id), filled from the Supabase export before each send.
 -->
 <!doctype html>
@@ -194,7 +194,11 @@ UserID: EmailOctopus custom field holding the Supabase user ID (profiles.id), fi
             <p style="font-size: 17px; line-height: 1.6; margin: 0 0 18px">Hi {{FirstName}},</p>
             <p style="font-size: 17px; line-height: 1.6; margin: 0 0 18px">
               Thank you for joining Tamas's workshop, <strong>Why Does AI Get It Wrong</strong>, at
-              Tech Women Summit Moldova. We've answered the questions you asked on the day in
+              Tech Women Summit Moldova. He had a lovely time discovering Moldovan food after the
+              Summit, so we're sending this email a couple of days later.
+            </p>
+            <p style="font-size: 17px; line-height: 1.6; margin: 0 0 18px">
+              We've answered the questions you asked on the day in
               <a
                 href="https://littleparrot.app/nest/toolkit/9cd107d6-ddd6-45a9-9b80-374031d40077?utm_source=email&amp;utm_medium=workshop&amp;utm_campaign=tech-women-moldova-oct26&amp;utm_content=participants&amp;auth=login"
                 style="
@@ -304,37 +308,6 @@ UserID: EmailOctopus custom field holding the Supabase user ID (profiles.id), fi
               </tr>
             </table>
 
-            <!-- Workshop photo -->
-            <table
-              role="presentation"
-              width="100%"
-              cellpadding="0"
-              cellspacing="0"
-              border="0"
-              style="
-                margin: 0 0 8px;
-                border: 2px solid #08080a;
-                box-shadow: 4px 4px 2px rgba(8, 8, 9, 0.25);
-              "
-            >
-              <tr>
-                <td style="padding: 0; background-color: #fffffe">
-                  <img
-                    src="https://littleparrot.app/newsletter/tech-women-moldova-workshop.jpg"
-                    width="556"
-                    height="371"
-                    alt="Tamas at the workshop, pointing at a slide that shows a neuron turning five numbers into one, with participants watching."
-                    style="display: block; width: 100%; max-width: 556px; height: auto; border: 0"
-                  />
-                </td>
-              </tr>
-            </table>
-            <p
-              style="font-size: 14px; line-height: 1.6; margin: 0 0 32px; color: hsl(245, 3%, 40%)"
-            >
-              Photo: Tatiana Sorocean
-            </p>
-
             <!-- Section: the participants' discount -->
             <h2
               style="
@@ -382,7 +355,8 @@ UserID: EmailOctopus custom field holding the Supabase user ID (profiles.id), fi
               </li>
             </ul>
             <p style="font-size: 17px; line-height: 1.6; margin: 0 0 32px">
-              Use the code <strong>TechWomenWS</strong> until <strong>31 October</strong>:
+              With the code <strong>TechWomenWS</strong>, the journey is
+              <strong>€59.80 instead of €299</strong> until <strong>31 October</strong>:
               <a
                 href="https://littleparrot.app/journey-checkout?journey=launch-your-app-idea-with-lovable&amp;coupon=TechWomenWS&amp;utm_source=email&amp;utm_medium=workshop&amp;utm_campaign=tech-women-moldova-oct26&amp;utm_content=participants"
                 style="
@@ -394,6 +368,37 @@ UserID: EmailOctopus custom field holding the Supabase user ID (profiles.id), fi
                 >check out with your code</a
               >. It's a one-time payment, and if it's not for you, you can get a refund within 14
               days, no questions asked.
+            </p>
+
+            <!-- Workshop photo -->
+            <table
+              role="presentation"
+              width="100%"
+              cellpadding="0"
+              cellspacing="0"
+              border="0"
+              style="
+                margin: 0 0 8px;
+                border: 2px solid #08080a;
+                box-shadow: 4px 4px 2px rgba(8, 8, 9, 0.25);
+              "
+            >
+              <tr>
+                <td style="padding: 0; background-color: #fffffe">
+                  <img
+                    src="https://littleparrot.app/newsletter/tech-women-moldova-workshop.jpg"
+                    width="556"
+                    height="371"
+                    alt="Tamas at the workshop, pointing at a slide that shows a neuron turning five numbers into one, with participants watching."
+                    style="display: block; width: 100%; max-width: 556px; height: auto; border: 0"
+                  />
+                </td>
+              </tr>
+            </table>
+            <p
+              style="font-size: 14px; line-height: 1.6; margin: 0 0 32px; color: hsl(245, 3%, 40%)"
+            >
+              Photo: Tatiana Sorocean
             </p>
 
             <!-- Section: the free first course, and the share ask -->
