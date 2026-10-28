@@ -117,3 +117,6 @@ Recurring shapes, from corrections and from the standing guidance:
 - Abstractions in place of the concrete outcome: _a guessing loop_, _the mental load isn't yours_, _fragmented communication channels_.
 
 - AI: _Add these three and you get something you can use._ Kinga: _Add these three pointers to your prompt and you'll get something you can easily understand._
+- AI: _The next time an engineer explains why something isn't working, you'll be able to tell whether they mean the browser, the server or the database, and you'll have a better idea of what to ask._ Kinga: _The next time an engineer explains why something isn't working, you'll know which questions to ask: did the request reach the server, what does the server log say, and did anything get saved in the database?_
+
+Kinga's note on the first line: "It's one of those AI-generated phrases that seem like something, but in reality doesn't have content." A critic proposed it as a softer, more honest promise, and a second critic passed it. "A better idea of what to ask" promises questions without naming one; the fix names the questions the reader will ask.
