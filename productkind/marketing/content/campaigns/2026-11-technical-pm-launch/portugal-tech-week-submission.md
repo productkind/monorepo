@@ -57,7 +57,7 @@ For listings and social posts:
 > **Then you'll follow the failed save through every part of the app:**
 >
 > 1. Open your browser's developer tools and find the request that failed: what it sent and what came back.
-> 2. Read the server log, where you'll see the same request arrive and fail, just as an engineer would.
+> 2. Read the server log and the database log, just as an engineer would, and find out which one explains the failure.
 > 3. Check the database and confirm nothing was saved.
 > 4. Find the rule that rejected the save, and work out where the bug really is.
 >
