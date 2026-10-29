@@ -385,7 +385,7 @@ Every learner runs their own copy of the product in GitHub Codespaces, a develop
 | Code a beginner can read | Best: small and conventional | Hardest: a very large TypeScript monorepo | Hard: large, in two languages |
 | Work to package for one-click Codespaces | Least: it already ships a development container and runs as one container | Most: no development container (the project decided against one), four services plus the frontend running from source, and nobody publishes how much memory that needs | In between: an official all-in-one preview image, meant for evaluation only, plus an easy-to-miss edition trap (Entry vs Team) |
 | Fits the season's story | Weak: no business customers or integrations | Strong: customers, deals, a renewal, integrations, and sync jobs on a worker with real GitHub issues | Medium |
-| Licence | AGPL-3.0 | AGPL-3.0 core; SSO, row-level permissions and audit logs need a paid key, and the course needs none of them | AGPL-3.0, with MIT-licensed builds |
+| Licence | AGPL-3.0 | AGPL-3.0 core, with some files under Twenty's commercial licence: free to copy and change for development and testing, never to publish (see Risks). SSO, row-level permissions and audit logs need a paid key, and the course needs none of them | AGPL-3.0, with MIT-licensed builds |
 
 **Why Twenty.** It shows what an enterprise PM needs to see: a backend made of several services, two API styles over the same data, signed webhooks, built-in workflows, roles, and a B2B story about customers, deals and integrations. Its email and calendar sync run as jobs on a background worker, and the project has dozens of real, closed GitHub issues about them (a backfill stalling on rate limits, duplicate messages), so the finale argues about a real part of a real codebase. Running it in each learner's own environment makes two missions better as well: in Mission 1 learners start the app and fix a bug in it themselves, in Mission 2 they find out what each service does, and in Mission 5 they deploy a fix to their own copy.
 
@@ -403,16 +403,16 @@ Every learner runs their own copy of the product in GitHub Codespaces, a develop
 
 **What we build**
 
-- Our training repository: one public repository in the productkind organisation, used for the workshops and the whole learning journey (proposed name `twenty-pm-lab`). It holds Twenty's code at the pinned version, without the project's history (about 2.1 GB with it), plus our seeded bugs and story data. Workshop attendees and self-paced learners open the same repository, so its name, README, folders and branches never mention the workshop: everything is named by mission number, such as `mission-1-fix`. Our pipeline builds it into images and publishes them to GitHub's container registry. Mission 5's fix arrives as a new image version.
+- Our training repository, [`productkind/twenty-pm-lab`](https://github.com/productkind/twenty-pm-lab): one public repository in the productkind organisation, used for the workshops and the whole learning journey. It's a GitHub fork of Twenty at the pinned version, plus our setup, seeded bugs and story data. Setup trims the project's history inside each codespace, from about 2 GB to under 200 MB. Workshop attendees and self-paced learners open the same repository, so its name, README, folders and branches never mention the workshop: everything is named by mission number, such as `mission-1-fix`. Because of Twenty's commercial licence (see Risks), we never publish an image or a build made from it, so each codespace builds what it needs. That rules out Mission 5's fix arriving as a new image version (decision 9 in section 15).
 - A development container setup that:
-  - runs the ready-built app's four services from those images;
-  - installs the frontend's dependencies, so learners only start it;
-  - points Twenty's server address at the codespace's forwarded address, and lets the frontend's development server accept that address (by default it blocks addresses other than `localhost`);
-  - asks for the 4-core machine as a minimum, unless the trial shows 2 cores are enough;
+  - runs the ready-built app's four services: the server and the worker from Twenty's own published image, plus the database and Redis. The server shows screens built from our repository during setup, so the ready-built app has the seeded bug too;
+  - installs the frontend's dependencies and builds the frontend during setup, so learners only start it;
+  - points Twenty's server address at the codespace's forwarded address, and lets the frontend's own server accept that address (by default it blocks addresses other than `localhost`);
+  - asks for the 4-core, 16 GB machine as a minimum. With the app and the frontend running, the trial used about 10 GB of memory;
   - switches each mission's problems on with a setting.
-- Short commands with names a PM can read, for starting the app, starting the frontend from source and loading the story data.
+- Short commands with names a PM can read: `start-app`, `load-story` and `start-frontend`, plus `show-log` for each part's log and `use-fix`, which switches a copy to a mission's fix.
 - A branch with Mission 1's fix already in it, for anyone whose Copilot run fails.
-- No prebuilds. We stay on GitHub Free, and prebuilds for an organisation's repository need GitHub Team or Enterprise, plus a payment method and a Codespaces spending limit. So every codespace installs the frontend's dependencies and downloads the images when it's created, and trial check 3 measures how long that takes. If it's too slow, these options work on GitHub Free: install only the frontend's dependencies (`yarn workspaces focus twenty-front`, built into the Yarn 4 that Twenty uses); publish a ready-built development container image to GitHub's container registry; run the install and the image downloads at the same time; and pull every image from GitHub's container registry rather than Docker Hub, which allows 100 pulls per 6 hours from one IP address without an account.
+- No prebuilds. We stay on GitHub Free, and prebuilds for an organisation's repository need GitHub Team or Enterprise, plus a payment method and a Codespaces spending limit. So every codespace installs the frontend's dependencies, builds the frontend and downloads the images when it's created, and trial check 3 measures how long that takes. If it's too slow, these options work on GitHub Free: install only the frontend's dependencies (`yarn workspaces focus twenty-front`, built into the Yarn 4 that Twenty uses); publish a development container image with the dependencies installed, as long as it holds none of Twenty's code; run the install and the image downloads at the same time; and pull the database and Redis images from a registry other than Docker Hub, which allows 100 pulls per 6 hours from one IP address without an account. Twenty's own image has to come from wherever Twenty publishes it, because copying it to our own registry would publish it.
 - A shared fallback copy for each workshop, sized for the group, for attendees whose laptops can't run Codespaces.
 
 **The free allowance.** A personal GitHub account gets 120 core-hours and 15 GB-months of storage a month, with no card, and usage stops at the limit instead of being charged. That's 60 hours on the 2-core machine or 30 hours on the 4-core one. A season needs roughly 3 hours of running time a week, counting the idle time before an automatic stop, so about 13 hours a month: 26 core-hours on 2 cores, 52 on 4. Both fit, with room for a bad week. Storage is the tighter limit: the installed frontend and the images take several gigabytes, and a learner who keeps two codespaces for a whole month could go over. Both numbers are estimates to check in the trial and the founding cohort.
@@ -428,7 +428,7 @@ Every learner runs their own copy of the product in GitHub Codespaces, a develop
 
 | Piece | Where it runs | What the learner needs |
 | --- | --- | --- |
-| The training product | The learner's own codespace: the ready-built app from our images, and the frontend from its source code | A personal GitHub account, and Codespaces reachable from their network |
+| The training product | The learner's own codespace: the ready-built app from Twenty's own images with screens built from our repository, and the frontend from its source code | A personal GitHub account, and Codespaces reachable from their network |
 | The workshop | Each attendee's own codespace, created during the session; a shared fallback copy for laptops that can't run Codespaces | A personal GitHub account with Copilot's free plan turned on, or a partner who has one |
 | Developer tools | Built into Chrome, Edge and Firefox; Safari needs them switched on in its settings | Developer tools not blocked by IT |
 | Request inspector for webhooks | Our domain | A browser |
@@ -466,6 +466,7 @@ The result is green (the work laptop works for everything), amber (developer too
 - **Phone-only learners.** Messages, audio and recall work on a phone; labs don't. The sales page says so.
 - **AI tools blocked at work.** The sandbox is fictional, so a personal account on a personal device is fine for labs. At work, only approved tools, which Mission 7 covers.
 - **The AGPL licence.** It requires us to offer the source of our modified Twenty to anyone we give it to or who uses it over a network, so our fork, seeded bugs included, is public. A determined learner could find a bug in the code, which is also a skill worth having. Check the obligations with someone who knows AGPL before launch; this note isn't legal advice.
+- **Twenty's commercial licence.** 562 of Twenty's files, 56 of them in the frontend, are under Twenty's own commercial licence instead of the AGPL. Production use needs a paid subscription, and anyone may copy and change the files for development and testing without one. We use Twenty only for learning, never as our CRM or with real customer data, so every learner's copy is a development and testing copy. The licence forbids publishing or distributing the files and makes no exception for learning. So our repository is a GitHub fork (GitHub's terms let anyone fork a public repository on GitHub), we never publish an image or a build made from it, and we never copy Twenty's images to another registry. The shared fallback copy is the one grey area: we run it for other people, though only with made-up data and only during a workshop. Ask Twenty to confirm the learning use in writing before launch; this note isn't legal advice either.
 - **Twenty moves fast.** v2.45 came out on 5 October and v2.46 four days later. Pin one version per season, so every learner's copy runs the same one, and upgrade between seasons. VS Code and Copilot change every month, so re-run the Copilot checks a week before each workshop.
 
 ### Trial checks before committing
@@ -482,7 +483,7 @@ The result is green (the work laptop works for everything), amber (developer too
 8. Give Tamas's model bug report to agent mode ten times, on new free accounts. Record how often it fixes the bug, how long it takes, which files it changes and how much of the free allowance it uses. The workshop needs a working fix in at least nine runs out of ten, within five minutes.
 9. Give it the one-line complaint ten times too. The workshop only claims the difference these runs show. If the complaint often works, the point becomes that only the learner with a bug report can tell whether it did.
 10. Check that one command switches a copy to the branch with the fix, and that the frontend reloads with it.
-11. Start 30 codespaces at once, in one region, and time them. Check that the image downloads don't hit Docker Hub's limit of 100 pulls per 6 hours from one IP address; if they do, pull every image from GitHub's container registry.
+11. Start 30 codespaces at once, in one region, and time them. Check that the image downloads don't hit Docker Hub's limit of 100 pulls per 6 hours from one IP address. If they do, pull the database and Redis images from another registry, and check where else Twenty publishes its image, because copying it to our own registry would publish it.
 12. Run the whole workshop over a phone hotspot, to mimic venue wifi, and check the shared fallback copy copes with the expected room size.
 13. On a locked-down work laptop, time creating a GitHub account from scratch, turning on Copilot's free plan and opening a codespace, then the full Mission 1 trail and the fix.
 14. Check whether drawing the map and writing the bug report count as activity in the codespace. If they don't, the codespace could stop in the middle of the session after 30 minutes, so the setup email asks attendees to raise their default idle timeout (it goes up to 240 minutes).
@@ -636,7 +637,7 @@ There are two of you, so build the shared foundation and the first missions befo
 
 **Before launch**
 
-- The one-click environment: our training repository built into images, a development container setup that runs the ready-built app and the frontend from source in Codespaces, the story data, the season's problems behind settings and analytics instrumentation.
+- The one-click environment: our training repository, a development container setup that builds the frontend in each codespace and runs the ready-built app and the frontend from source, the story data, the season's problems behind settings and analytics instrumentation.
 - For each workshop: the setup email, the shared fallback copy, the field guide, a recorded run of the trail, Tamas's model bug report tested as a Copilot prompt, the branch with the fix and a recorded run of the one-line complaint.
 - A request inspector on our own domain.
 - The help-centre repository template, with checks and preview links.
@@ -658,6 +659,7 @@ There are two of you, so build the shared foundation and the first missions befo
 6. **The clinic slot.** One time that works for the UK, Europe and US East, or two alternating slots.
 7. **AI prototyping.** A headline step, as on the waitlist page, or one of five options inside Mission 7, as proposed here.
 8. **Season length.** Eight weeks after the workshop, or a shorter season with fewer missions.
+9. **Mission 5's deploy.** It was planned as a new image version of the product, which Twenty's commercial licence rules out (section 6, Risks). I suggest a `deploy` command instead: it fetches the merged fix, builds it and restarts the ready-built app, so the learner still watches the services stop and start, and sees the app go down for a minute.
 
 ## 16. Where the waitlist page now disagrees with this design
 
