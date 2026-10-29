@@ -1,5 +1,6 @@
 ---
-status: drafted
+status: posted
+date: 2026-10-29
 channels: [linkedin]
 account: kinga-personal
 ---
@@ -8,31 +9,30 @@ account: kinga-personal
 
 Post from: Kinga's personal profile. Tag Tamas Kokeny where his name appears. The Little Parrot company page reshares it, as the launch plan says (section 4.2).
 
-Job: conversion (workshop registrations). Format: lesson from others (what product managers told Kinga), then the outcomes. Kinga's direction (28 October): outcomes (what attendees can do afterwards), not outputs or the workshop's steps, and show it's hands-on.
+Job: conversion (workshop registrations). Format: personal career story and current experience, then a practical workshop invitation.
 
 Don't mention sign-up numbers or who has signed up: Kinga shared those as background only (28 October).
 
 Asset: the featured image, `../workshop-event-images/export/featured-image-1920x1080.png`, alt text in `../workshop-event-images/spec.md`.
 
-utm: `utm_source=linkedin&utm_medium=kinga&utm_campaign=web-apps-workshop-nov26&utm_content=women-in-the-room`. The medium names the profile, so Tamas's posts can use `utm_medium=tamas`.
+utm: `utm_source=linkedin&utm_medium=k&utm_campaign=ptw-workshop-nov26&utm_content=career-story`.
 
 ---
 
-Several product managers have told me a deeper technical understanding would make them more confident talking to developers and managing stakeholder expectations.
+I did a developer bootcamp to get into product management. My first job afterwards was as a junior software engineer.
 
-So Tamas and I are running a free workshop for product managers in Lisbon, and I'd love to see more women in the room.
+About a year later, I was sitting in a tiny meeting room with my product owner and our manager. My product owner suggested I take over his role.
 
-It's two hours of hands-on work, where you set up your own copy of Twenty, a real open-source CRM, and investigate a bug we added to it.
+I've now worked in product for over eight years. Even with that engineering background, there are still so many technical details to learn.
 
-The next time an engineer explains why something isn't working, you'll know which questions to ask: did the request reach the server, what does the server log say, and did anything get saved in the database?
+So on 13 November, Tamas and I are running a free, hands-on workshop in Lisbon for experienced PMs who want a deeper understanding of how their products work. We want to help you draw on that understanding when making decisions, managing stakeholder expectations and discussing implementation with engineers.
 
-You'll also be able to:
+You'll run a real app in your own development environment and investigate why it doesn't save the information you enter. You'll inspect the request and response, read the server log and check the database to work out which rule rejected the save and why.
 
-- explain to stakeholders that a fix working in an engineer's copy of the app hasn't reached customers yet, because you'll have seen a fix work in your own copy while the version customers use still had the bug
-- write a bug report with the evidence engineers ask for, so they know where to start, and give it to GitHub Copilot to fix
+As you investigate, you'll see how the app processes the information you enter, where it checks that information and how a failure in one layer affects what you see in the browser. You'll use the evidence to write a bug report, give it to an AI agent and verify its work.
 
-You don't need an engineering background, and you won't write code yourself. So please don't rule yourself out, especially if you're a woman in product. And if you're not a product manager but it could help you at work, or you're curious and think it could help you build with AI, come along too.
+You don't need an engineering background, and you won't write code yourself. If you're a woman working in product, I'd especially love you to join us.
 
-It's on Friday 13 November at 19:00, at PTW Palace, as part of Portugal Tech Week. It's free and in English. Bring a laptop, and we'll have snacks.
+Friday 13 November, 19:00–21:30 at PTW Palace, Rua Gomes Freire 98, Lisbon, as part of Portugal Tech Week. Bring a laptop; we'll send the account setup instructions beforehand.
 
-You can register here: https://luma.com/0hccxsn4?utm_source=linkedin&utm_medium=kinga&utm_campaign=web-apps-workshop-nov26&utm_content=women-in-the-room
+Register here and let me know if you have any questions: https://luma.com/0hccxsn4?utm_source=linkedin&utm_medium=k&utm_campaign=ptw-workshop-nov26&utm_content=career-story
