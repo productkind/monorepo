@@ -1,10 +1,10 @@
 <!--
 Subject: 🦜 Your 80% discount ends Saturday
-Preheader: Tell us what you'd like to learn, if it isn't building an app.
+Preheader: Tell us something you've wanted to do but haven't managed to yet.
 Sender name: Little Parrot
 Send: Friday 30 October 2026, the day before TechWomenWS expires on 31 October. Check its expires_at in Stripe: "Saturday night" holds if it's 23:59 UTC, like TechWomen70's (about 2am Sunday in Chișinău).
 Audience: the same list as 2026-10-tech-women-moldova-workshop-follow-up.html (everyone who joined the "Why Does AI Get It Wrong" workshop, slug ai-explained, at Tech Women Summit Moldova on 24 October 2026), minus anyone who turned emails off and anyone who has already bought the journey. Check journey_purchases in Supabase on the morning of the send. Merge tags are EmailOctopus syntax.
-Form: the second section links to the Tally form https://tally.so/r/M11Bbp ("What would you like to learn?"), whose hidden fields read the UTMs; utm_content is learn-next, utm_term carries the user ID. Publish the form before sending.
+Form: the second section links to the Tally form https://tally.so/r/M11Bbp (no form title; it opens on the thank-you line, then a required question on what they've wanted to do and an optional one on what got in the way), whose hidden fields read the UTMs; utm_content is learn-next, utm_term carries the user ID. Publish the form before sending.
 UserID: EmailOctopus custom field holding the Supabase user ID (profiles.id), filled from the Supabase export before each send.
 -->
 <!doctype html>
@@ -115,8 +115,8 @@ UserID: EmailOctopus custom field holding the Supabase user ID (profiles.id), fi
         line-height: 1px;
       "
     >
-      Tell us what you'd like to learn, if it isn't building an
-      app.&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      Tell us something you've wanted to do but haven't managed to
+      yet.&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
     </div>
     <div class="email-wrapper">
       <!--[if mso]><table role="presentation" align="center" width="640" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
@@ -298,11 +298,12 @@ UserID: EmailOctopus custom field holding the Supabase user ID (profiles.id), fi
                 margin: 0 0 12px;
               "
             >
-              What would you like to learn?
+              What's something you've wanted to do, but haven't managed to yet?
             </h2>
             <p style="font-size: 17px; line-height: 1.6; margin: 0 0 24px">
-              If building an app isn't it, that's completely understandable, and we'd love to hear
-              what is. It doesn't have to be about AI, and one sentence is enough.
+              We'd love to hear about it, whether it's building an app or something else entirely,
+              at work or for yourself. It doesn't have to be about AI, and there are just two short
+              questions.
             </p>
             <!-- Secondary button: white fill and no shadow, so it doesn't compete with the checkout button -->
             <table
@@ -331,7 +332,7 @@ UserID: EmailOctopus custom field holding the Supabase user ID (profiles.id), fi
                       color: #08080a;
                       text-decoration: none;
                     "
-                    >Tell us what you'd love to learn</a
+                    >Help us build useful courses</a
                   >
                 </td>
               </tr>
