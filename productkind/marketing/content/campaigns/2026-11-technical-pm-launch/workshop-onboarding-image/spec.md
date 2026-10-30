@@ -20,7 +20,7 @@ Visual: the Little Parrot gradient as the background, with the design system's w
 - Under the chat, headline: How web apps work
 - Kicker: A hands-on workshop for product managers
 - Details: Friday 13 November, 19:00 · PTW Palace, Lisbon
-- Sponsor row along the bottom of the card, under a thin grey line: the label "Sponsored by", then the Portuguese Startup Association logo and the Critical Software logo, from `../sponsors/`.
+- Sponsor row along the bottom of the card, under a thin grey line, aligned to the right edge of the card so it lines up with the Free badge: the label "Supported by", then the Portuguese Startup Association logo and the Critical Software logo, from `../sponsors/`.
 
 ## Messages
 
@@ -32,4 +32,4 @@ Visual: the Little Parrot gradient as the background, with the design system's w
 
 ## Alt text
 
-A chat channel called welcome with three messages to a new product manager. Owl from HR welcomes them to the team, Snail the software developer asks them to set up their development environment, and Rabbit from sales reports that a customer clicked Save on a new company, the Save button kept spinning, and the company isn't in the list. Text: How web apps work. A hands-on workshop for product managers. Friday 13 November, 19:00, PTW Palace, Lisbon. Free. Sponsored by the Portuguese Startup Association and Critical Software. LittleParrot.app.
+A chat channel called welcome with three messages to a new product manager. Owl from HR welcomes them to the team, Snail the software developer asks them to set up their development environment, and Rabbit from sales reports that a customer clicked Save on a new company, the Save button kept spinning, and the company isn't in the list. Text: How web apps work. A hands-on workshop for product managers. Friday 13 November, 19:00, PTW Palace, Lisbon. Free. Supported by the Portuguese Startup Association and Critical Software. LittleParrot.app.
