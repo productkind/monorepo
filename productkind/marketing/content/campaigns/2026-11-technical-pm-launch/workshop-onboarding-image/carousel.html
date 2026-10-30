@@ -1,0 +1,341 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Workshop onboarding image (Little Parrot brand)</title>
+    <!-- One 1080x1350 image built from the carousel design system
+         (productkind/carousel-design). The file is called carousel.html so
+         check.py can run on it. Copy comes from spec.md. -->
+    <style>
+      /* Little Parrot brand tokens, inlined from carousel-design/brands/little-parrot.css */
+      @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+      :root {
+        --grad: linear-gradient(120deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70);
+        --grad-wash:
+          linear-gradient(120deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020), #ffffff;
+        --font-display: 'Space Mono', monospace;
+        --font-copy: 'Inter', sans-serif;
+        --ink: #080809;
+        --ink-secondary: #4a4a50;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      section.slide {
+        width: 1080px;
+        height: 1350px;
+        position: relative;
+        overflow: hidden;
+        background: var(--grad);
+        box-sizing: border-box;
+      }
+      .card {
+        position: absolute;
+        top: 56px;
+        left: 56px;
+        width: 954px;
+        height: 1224px;
+        box-sizing: border-box;
+        background: #ffffff;
+        border: 10px solid var(--ink);
+        box-shadow: 14px 14px 0 rgba(8, 8, 9, 0.25);
+        display: flex;
+        flex-direction: column;
+      }
+      .gradbar {
+        flex: none;
+        height: 26px;
+        background: var(--grad);
+      }
+      .inner {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 26px 48px 24px;
+        box-sizing: border-box;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: var(--font-display);
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        color: var(--ink);
+      }
+      .handle {
+        font-size: 36px;
+      }
+      .badge {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 30px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        border: 4px solid var(--ink);
+        box-shadow: 6px 6px 0 rgba(8, 8, 9, 0.25);
+        padding: 2px 22px;
+        background: var(--grad);
+        color: var(--ink);
+      }
+
+      /* The chat channel */
+      .chat {
+        margin-top: 24px;
+        border: 6px solid var(--ink);
+        box-shadow: 10px 10px 0 rgba(8, 8, 9, 0.25);
+        background: #ffffff;
+      }
+      .channelbar {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        height: 54px;
+        padding: 0 22px;
+        background: var(--ink);
+        color: #ffffff;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 30px;
+      }
+      .channelbar .dot {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+      }
+      .channelbar .name {
+        margin-left: 14px;
+      }
+      .msg {
+        display: flex;
+        gap: 20px;
+        padding: 18px 24px 0;
+      }
+      .msg:last-child {
+        padding-bottom: 24px;
+      }
+      .msg.urgent {
+        margin-top: 16px;
+        padding-top: 16px;
+        padding-bottom: 20px;
+        background: var(--grad-wash);
+        border-top: 4px solid #e3e3e6;
+      }
+      .avatar {
+        flex: none;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 4px solid var(--ink);
+        background: #f2f2f4;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+      .avatar svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      .who {
+        font-family: var(--font-copy);
+        font-size: 24px;
+        color: var(--ink-secondary);
+      }
+      .who b {
+        font-weight: 700;
+        font-size: 28px;
+        color: var(--ink);
+        margin-right: 8px;
+      }
+      .msg p {
+        margin: 2px 0 0;
+        font-family: var(--font-copy);
+        font-size: 26px;
+        line-height: 1.38;
+        color: var(--ink);
+      }
+
+      /* Event details under the chat */
+      .event {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+      }
+      .headline {
+        margin: 0;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 76px;
+        line-height: 1.1;
+        color: var(--ink);
+        text-align: center;
+      }
+      .kicker {
+        margin-top: 10px;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 28px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--ink);
+        text-align: center;
+      }
+      .details {
+        margin-top: 18px;
+        font-family: var(--font-copy);
+        font-weight: 600;
+        font-size: 30px;
+        color: var(--ink);
+        text-align: center;
+      }
+
+      .sponsors {
+        flex: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 44px;
+        border-top: 3px solid #e3e3e6;
+        padding-top: 18px;
+      }
+      .sponsorlabel {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 24px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--ink-secondary);
+      }
+      .logo351 {
+        height: 100px;
+      }
+      .logocritical {
+        height: 48px;
+      }
+
+      /* Show one slide at a time when opened with ?slide=N (used for export) */
+      body.single section.slide {
+        display: none;
+      }
+      body.single section.slide.current {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="slide">
+      <div class="card">
+        <div class="gradbar"></div>
+        <div class="inner">
+          <div class="header">
+            <span class="handle">LittleParrot.app</span><span class="badge">Free</span>
+          </div>
+
+          <!-- Avatars crop one pose out of each character's versions sheet in
+               kim-and-tim, whose viewBox is 540 x 270. -->
+          <div class="chat">
+            <div class="channelbar">
+              <span class="dot" style="background: #ffb65b"></span>
+              <span class="dot" style="background: #fbfb00"></span>
+              <span class="dot" style="background: #00ed70"></span>
+              <span class="name"># welcome</span>
+            </div>
+
+            <div class="msg">
+              <div class="avatar">
+                <svg viewBox="209 17 30 30" aria-hidden="true">
+                  <image
+                    href="../../../../../../kim-and-tim/assets/src/characters/owl-versions.svg"
+                    width="540"
+                    height="270"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="who"><b>Owl</b>HR Manager · 09:02</div>
+                <p>
+                  Welcome to the team! 🎉 You're our newest product manager. Your first job this
+                  week is getting to know the product.
+                </p>
+              </div>
+            </div>
+
+            <div class="msg">
+              <div class="avatar">
+                <svg viewBox="17 46 31 31" aria-hidden="true">
+                  <image
+                    href="../../../../../../kim-and-tim/assets/src/characters/snail-versions.svg"
+                    width="540"
+                    height="270"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="who"><b>Snail</b>Software Developer · 09:14</div>
+                <p>
+                  Hi! First thing: set up your development environment. It's where you run the app
+                  and try out changes without our customers seeing them.
+                </p>
+              </div>
+            </div>
+
+            <div class="msg urgent">
+              <div class="avatar">
+                <svg viewBox="116 20 38 38" aria-hidden="true">
+                  <image
+                    href="../../../../../../kim-and-tim/assets/src/characters/rabbit-versions.svg"
+                    width="540"
+                    height="270"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="who"><b>Rabbit</b>Sales Manager · 09:31</div>
+                <p>
+                  Our customer Calder clicked Save on a new company. The Save button kept spinning,
+                  and now the company isn't in the list. Engineering is in planning all day. Can you
+                  take a look before my 3pm call?
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="event">
+            <h1 class="headline">How web apps work</h1>
+            <div class="kicker">A hands-on workshop for product managers</div>
+            <div class="details">Friday 13 November, 19:00 · PTW Palace, Lisbon</div>
+          </div>
+
+          <div class="sponsors">
+            <span class="sponsorlabel">Sponsored by</span>
+            <img
+              class="logo351"
+              src="../sponsors/351_logo_vert_colour.png"
+              alt="Portuguese Startup Association"
+            />
+            <img
+              class="logocritical"
+              src="../sponsors/critical-software.png"
+              alt="Critical Software"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      const n = new URLSearchParams(location.search).get('slide')
+      if (n) {
+        document.body.classList.add('single')
+        document.querySelectorAll('section.slide')[Number(n) - 1].classList.add('current')
+      }
+    </script>
+  </body>
+</html>

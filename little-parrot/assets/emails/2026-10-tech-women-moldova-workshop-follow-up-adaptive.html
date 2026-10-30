@@ -1,0 +1,884 @@
+<!--
+Subject: 🦜 Your workshop questions, answered
+Preheader: Plus 80% off our Lovable app-building journey until 31 October.
+Sender name: Little Parrot
+Audience: everyone who joined the "Why Does AI Get It Wrong" workshop (workshop slug ai-explained) at Tech Women Summit Moldova on 24 October 2026, minus anyone who turned emails off. Merge tags are EmailOctopus syntax.
+Feedback: the main button goes to the Tally form https://tally.so/r/o99V7O ("How was the workshop?"), whose hidden fields read the UTMs; utm_content is workshop-feedback, utm_term carries the user ID. Publish the form before sending.
+Photo: TW-698 by Yugin Klein, served from little-parrot-awakens/public/newsletter/tech-women-moldova-workshop.jpg. Deploy the site before sending.
+UserID: EmailOctopus custom field holding the Supabase user ID (profiles.id), filled from the Supabase export before each send.
+Adaptive version: same copy and links as 2026-10-tech-women-moldova-workshop-follow-up.html. Light by default; clients that report dark mode switch to the -dark.html design (the website's purple #1a0044).
+- Apple Mail, iOS Mail, Outlook for Mac and iOS, Samsung Mail and Thunderbird read the prefers-color-scheme block.
+- Outlook.com and the Outlook apps ignore prefers-color-scheme and flag dark mode with data-ogsc / data-ogsb on an ancestor, so those rules repeat in their own style block. Gmail drops a whole style block when it meets an attribute selector, which is why they are kept apart from the rest.
+- Gmail has no dark-mode query at all; its apps recolour the light design themselves. The logo (logo-little-parrot-email-outlined.png, exported from little-parrot/assets/src/logo-landscape-outlined.svg) has a white outline so the black wordmark stays readable on any background, so the same image serves both modes; Gmail never recolours images.
+- Outlook for Windows never sees the dark images: they sit inside <!--[if !mso]> comments, since it shows display:none images anyway.
+New files in little-parrot-awakens/public, deploy the site before sending: logo-little-parrot-email-outlined.png, icon-{linkedin,instagram,tiktok,youtube,substack}-white.png.
+-->
+<!doctype html>
+<html
+  lang="en-GB"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="supported-color-schemes" content="light dark" />
+    <title>Your workshop questions, answered</title>
+    <!--[if mso
+      ]><noscript
+        ><xml
+          ><o:OfficeDocumentSettings
+            ><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings
+          ></xml
+        ></noscript
+      ><!
+    [endif]-->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap');
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+        color: #08080a;
+        font-family: 'Inter', Arial, sans-serif;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+      .email-wrapper {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 28px 16px;
+      }
+      /* Keep automatically detected address links as muted footer text. */
+      .company-address a {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+      u + #email-body .company-address a {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+      @media only screen and (max-width: 620px) {
+        .email-wrapper {
+          padding: 12px 8px !important;
+        }
+        .content {
+          padding: 26px 22px 4px !important;
+        }
+        .header {
+          padding: 22px !important;
+        }
+        .cta-table {
+          width: 100% !important;
+        }
+        .signoff {
+          padding: 28px 22px !important;
+        }
+        .footer {
+          padding: 20px !important;
+        }
+      }
+      @media (prefers-color-scheme: dark) {
+        body,
+        .email-wrapper {
+          background-color: #0a0024 !important;
+        }
+        .email-container {
+          background-color: #1a0044 !important;
+          color: #fffffe !important;
+          border-color: #1a0044 !important;
+          box-shadow: 4px 4px 2px rgba(255, 255, 255, 0.25) !important;
+        }
+        .header {
+          background-color: #1a0044 !important;
+          background-image: none !important;
+          border-bottom-color: #483369 !important;
+        }
+        .content,
+        .ink,
+        .link {
+          color: #fffffe !important;
+        }
+        .muted,
+        .footer,
+        .footer-link {
+          color: #d1ccda !important;
+        }
+        .card,
+        .card-header {
+          border-color: #fffffe !important;
+        }
+        .card {
+          box-shadow: 4px 4px 2px rgba(255, 255, 255, 0.25) !important;
+        }
+        .card-body {
+          background-color: #1a0044 !important;
+          color: #d1ccda !important;
+        }
+        .cta-table {
+          box-shadow: 4px 4px 2px rgba(255, 255, 255, 0.25) !important;
+        }
+        .photo-frame {
+          border-color: #1a0044 !important;
+          box-shadow: 4px 4px 2px rgba(255, 255, 255, 0.25) !important;
+        }
+        .photo-cell {
+          background-color: #1a0044 !important;
+        }
+        .signoff {
+          background-color: #1a0044 !important;
+          background-image: none !important;
+          border-top-color: #483369 !important;
+        }
+        .footer {
+          border-top-color: #483369 !important;
+        }
+        .icon-box {
+          border-color: #5f4d7c !important;
+          background-color: #1a0044 !important;
+        }
+        .light-img {
+          display: none !important;
+        }
+        .dark-img {
+          display: block !important;
+          max-height: none !important;
+          overflow: visible !important;
+        }
+      }
+    </style>
+    <style>
+      [data-ogsb] body,
+      [data-ogsb] .email-wrapper {
+        background-color: #0a0024 !important;
+      }
+      [data-ogsb] .email-container,
+      [data-ogsb] .card-body,
+      [data-ogsb] .photo-cell,
+      [data-ogsb] .icon-box {
+        background-color: #1a0044 !important;
+      }
+      [data-ogsb] .header,
+      [data-ogsb] .signoff {
+        background-color: #1a0044 !important;
+        background-image: none !important;
+      }
+      [data-ogsc] .content,
+      [data-ogsc] .ink,
+      [data-ogsc] .link {
+        color: #fffffe !important;
+      }
+      [data-ogsc] .muted,
+      [data-ogsc] .footer,
+      [data-ogsc] .footer-link,
+      [data-ogsc] .card-body {
+        color: #d1ccda !important;
+      }
+      [data-ogsc] .card,
+      [data-ogsc] .card-header {
+        border-color: #fffffe !important;
+      }
+      [data-ogsc] .header,
+      [data-ogsc] .signoff,
+      [data-ogsc] .footer {
+        border-color: #483369 !important;
+      }
+      [data-ogsc] .icon-box {
+        border-color: #5f4d7c !important;
+      }
+      [data-ogsc] .photo-frame {
+        border-color: #1a0044 !important;
+      }
+      [data-ogsb] .card-header,
+      [data-ogsb] .cta-cell {
+        background-color: #fdd825 !important;
+      }
+      [data-ogsc] .card-title,
+      [data-ogsc] .cta-label {
+        color: #08080a !important;
+      }
+      [data-ogsc] .light-img {
+        display: none !important;
+      }
+      [data-ogsc] .dark-img {
+        display: block !important;
+        max-height: none !important;
+        overflow: visible !important;
+      }
+    </style>
+    <!--[if mso]>
+      <style>
+        body,
+        table,
+        td,
+        p,
+        a,
+        li,
+        h1,
+        h2,
+        span {
+          font-family: Arial, sans-serif !important;
+        }
+      </style>
+    <![endif]-->
+  </head>
+  <body id="email-body" style="background-color: #f5f5f5">
+    <div
+      style="
+        display: none;
+        max-height: 0;
+        overflow: hidden;
+        mso-hide: all;
+        font-size: 1px;
+        line-height: 1px;
+      "
+    >
+      Plus 80% off our Lovable app-building journey until 31
+      October.&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </div>
+    <div
+      class="email-wrapper"
+      style="width: 100%; box-sizing: border-box; padding: 28px 16px; background-color: #f5f5f5"
+    >
+      <!--[if mso]><table role="presentation" align="center" width="640" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
+      <table
+        role="presentation"
+        class="email-container"
+        align="center"
+        width="100%"
+        cellpadding="0"
+        cellspacing="0"
+        border="0"
+        style="
+          max-width: 640px;
+          margin: 0 auto;
+          background-color: #fffffe;
+          color: #08080a;
+          border: 2px solid #08080a;
+          box-shadow: 4px 4px 2px rgba(8, 8, 9, 0.25);
+        "
+      >
+        <tr>
+          <td
+            class="header"
+            align="center"
+            style="
+              padding: 26px 32px;
+              background-color: #fffbe9;
+              background-image: linear-gradient(
+                120deg,
+                #fff6eb,
+                #fffae4,
+                #ffffe4,
+                #f1ffe4,
+                #e4fff0
+              );
+              border-bottom: 2px solid #08080a;
+            "
+          >
+            <a
+              href="https://littleparrot.app/?utm_source=email&amp;utm_medium=workshop&amp;utm_campaign=tech-women-moldova-oct26&amp;utm_content=participants"
+              class="ink"
+              style="font-size: 17px; color: #08080a; text-decoration: none"
+              ><img
+                src="https://littleparrot.app/logo-little-parrot-email-outlined.png"
+                width="220"
+                height="69"
+                alt="Little Parrot"
+                style="
+                  display: block;
+                  max-width: 220px;
+                  height: auto;
+                  border: 0;
+                  font-family: 'Space Mono', monospace;
+                  font-size: 17px;
+                  font-weight: 700;
+                "
+            /></a>
+            <h1
+              class="muted"
+              style="
+                font-family: 'Space Mono', monospace;
+                font-size: 14px;
+                font-weight: 400;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                color: hsl(245, 3%, 38%);
+                margin: 14px 0 0;
+              "
+            >
+              Tech Women Summit Moldova
+            </h1>
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="content"
+            style="padding: 32px 40px 4px; font-family: 'Inter', Arial, sans-serif; color: #08080a"
+          >
+            <p style="font-size: 17px; line-height: 1.6; margin: 0 0 18px">Hi {{FirstName}},</p>
+            <p style="font-size: 17px; line-height: 1.6; margin: 0 0 18px">
+              Thank you for joining Tamas's workshop, <strong>Why Does AI Get It Wrong</strong>, at
+              Tech Women Summit Moldova. We've answered the questions you asked on the day in
+              <a
+                href="https://littleparrot.app/nest/toolkit/9cd107d6-ddd6-45a9-9b80-374031d40077?utm_source=email&amp;utm_medium=workshop&amp;utm_campaign=tech-women-moldova-oct26&amp;utm_content=participants&amp;auth=login"
+                class="link"
+                style="
+                  font-size: 17px;
+                  font-weight: 700;
+                  color: #08080a;
+                  text-decoration: underline;
+                "
+                >your AI cheat sheet</a
+              >, under <strong>Asked at the workshop</strong>. Most answers include a prompt or a
+              small step you can try in your next chat.
+            </p>
+
+            <!-- Feedback card, the primary CTA: the workshop page's step card -->
+            <table
+              role="presentation"
+              class="card"
+              width="100%"
+              cellpadding="0"
+              cellspacing="0"
+              border="0"
+              style="
+                margin: 28px 0 32px;
+                border: 2px solid #08080a;
+                box-shadow: 4px 4px 2px rgba(8, 8, 9, 0.25);
+              "
+            >
+              <tr>
+                <td
+                  class="card-header"
+                  bgcolor="#fdd825"
+                  style="
+                    padding: 16px 24px;
+                    background-color: #fdd825;
+                    background-image: linear-gradient(
+                      120deg,
+                      #ffb65b,
+                      #fdd825,
+                      #fbfb00,
+                      #8efd23,
+                      #00ed70
+                    );
+                    border-bottom: 2px solid #08080a;
+                  "
+                >
+                  <h2
+                    class="card-title"
+                    style="
+                      font-family: 'Space Mono', monospace;
+                      font-size: 18px;
+                      line-height: 1.5;
+                      color: #08080a;
+                      margin: 0;
+                    "
+                  >
+                    How was the workshop?
+                  </h2>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="card-body"
+                  style="
+                    padding: 24px;
+                    background-color: #fffffe;
+                    color: hsl(245, 3%, 22%);
+                    font-family: 'Inter', Arial, sans-serif;
+                  "
+                >
+                  <p style="font-size: 17px; line-height: 1.6; margin: 0 0 14px">
+                    Please tell us what to keep and what to change, so we can make the next one
+                    better. It takes about two minutes.
+                  </p>
+                  <table
+                    role="presentation"
+                    class="cta-table"
+                    align="center"
+                    cellpadding="0"
+                    cellspacing="0"
+                    border="0"
+                    style="
+                      margin: 10px auto 0;
+                      border: 2px solid #08080a;
+                      box-shadow: 4px 4px 2px rgba(8, 8, 9, 0.25);
+                    "
+                  >
+                    <tr>
+                      <td
+                        class="cta-cell"
+                        align="center"
+                        bgcolor="#fdd825"
+                        style="
+                          background-color: #fdd825;
+                          background-image: linear-gradient(
+                            120deg,
+                            #ffb65b,
+                            #fdd825,
+                            #fbfb00,
+                            #8efd23,
+                            #00ed70
+                          );
+                          mso-padding-alt: 16px 26px;
+                        "
+                      >
+                        <a
+                          class="cta-label"
+                          href="https://tally.so/r/o99V7O?utm_source=email&amp;utm_medium=workshop&amp;utm_campaign=tech-women-moldova-oct26&amp;utm_content=workshop-feedback&amp;utm_term={{UserID}}"
+                          style="
+                            display: block;
+                            padding: 16px 26px;
+                            font-family: 'Inter', Arial, sans-serif;
+                            font-size: 17px;
+                            line-height: 1.5;
+                            font-weight: 700;
+                            color: #08080a;
+                            text-decoration: none;
+                          "
+                          >Rate the workshop</a
+                        >
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+
+            <!-- Workshop photo -->
+            <table
+              role="presentation"
+              class="photo-frame"
+              width="100%"
+              cellpadding="0"
+              cellspacing="0"
+              border="0"
+              style="
+                margin: 0 0 8px;
+                border: 2px solid #08080a;
+                box-shadow: 4px 4px 2px rgba(8, 8, 9, 0.25);
+              "
+            >
+              <tr>
+                <td class="photo-cell" style="padding: 0; background-color: #fffffe">
+                  <img
+                    src="https://littleparrot.app/newsletter/tech-women-moldova-workshop.jpg"
+                    width="556"
+                    height="371"
+                    alt="Tamas at the workshop, pointing at a slide that shows a neuron turning five numbers into one, with participants watching."
+                    style="
+                      display: block;
+                      width: 100%;
+                      max-width: 556px;
+                      height: auto;
+                      border: 0;
+                      font-family: 'Inter', Arial, sans-serif;
+                      font-size: 14px;
+                    "
+                  />
+                </td>
+              </tr>
+            </table>
+            <p
+              class="muted"
+              style="font-size: 14px; line-height: 1.6; margin: 0 0 32px; color: hsl(245, 3%, 40%)"
+            >
+              Photo: Tatiana Sorocean
+            </p>
+
+            <!-- Section: the participants' discount -->
+            <h2
+              class="ink"
+              style="
+                font-family: 'Space Mono', monospace;
+                font-size: 18px;
+                line-height: 1.5;
+                color: #08080a;
+                margin: 0 0 12px;
+              "
+            >
+              Your workshop discount: 80%&nbsp;off
+            </h2>
+            <p style="font-size: 17px; line-height: 1.6; margin: 0 0 14px">
+              At Little Parrot, we help women build their own products, and their own income, with
+              AI. If you have an app idea,
+              <a
+                href="https://littleparrot.app/journeys/launch-your-app-idea-with-lovable?utm_source=email&amp;utm_medium=workshop&amp;utm_campaign=tech-women-moldova-oct26&amp;utm_content=participants"
+                class="link"
+                style="
+                  font-size: 17px;
+                  font-weight: 700;
+                  color: #08080a;
+                  text-decoration: underline;
+                "
+                >Launch Your App Idea with Lovable</a
+              >
+              gives you:
+            </p>
+            <ul style="font-size: 17px; line-height: 1.6; margin: 0 0 14px; padding-left: 22px">
+              <li style="margin-bottom: 8px">
+                <strong>Seven courses</strong> on planning, building, publishing and selling your
+                app, open to you for a year
+              </li>
+              <li style="margin-bottom: 8px">
+                <strong>Toolkit items</strong> to use on your own app: prompts to copy, checklists,
+                templates and setup guides
+              </li>
+              <li style="margin-bottom: 8px">
+                <strong>Our private Discord community</strong> for six months, to ask questions and
+                share what you build
+              </li>
+              <li style="margin-bottom: 0">
+                <strong>Monthly office hours</strong> for six months, where you bring questions
+                about your own app to Kinga (Lead Product Manager) and Tamas (Principal Software
+                Engineer)
+              </li>
+            </ul>
+            <p style="font-size: 17px; line-height: 1.6; margin: 0 0 32px">
+              Use the code <strong>TechWomenWS</strong> until <strong>31 October</strong>:
+              <a
+                href="https://littleparrot.app/journey-checkout?journey=launch-your-app-idea-with-lovable&amp;coupon=TechWomenWS&amp;utm_source=email&amp;utm_medium=workshop&amp;utm_campaign=tech-women-moldova-oct26&amp;utm_content=participants"
+                class="link"
+                style="
+                  font-size: 17px;
+                  font-weight: 700;
+                  color: #08080a;
+                  text-decoration: underline;
+                "
+                >check out with your code</a
+              >. It's a one-time payment, and if it's not for you, you can get a refund within 14
+              days, no questions asked.
+            </p>
+
+            <!-- Section: the free first course, and the share ask -->
+            <h2
+              class="ink"
+              style="
+                font-family: 'Space Mono', monospace;
+                font-size: 18px;
+                line-height: 1.5;
+                color: #08080a;
+                margin: 0 0 12px;
+              "
+            >
+              Try the first course free
+            </h2>
+            <p style="font-size: 17px; line-height: 1.6; margin: 0 0 32px">
+              In
+              <a
+                href="https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview?utm_source=email&amp;utm_medium=workshop&amp;utm_campaign=tech-women-moldova-oct26&amp;utm_content=participants"
+                class="link"
+                style="
+                  font-size: 17px;
+                  font-weight: 700;
+                  color: #08080a;
+                  text-decoration: underline;
+                "
+                >Plan Your Vibe Coded App</a
+              >, you define your app's problem, user and first version, and write your first prompt.
+              It's free for everyone. Know someone with an app idea? Pass on
+              <a
+                href="https://littleparrot.app/e16d932e-ac1f-4514-b5da-42629acf39ae/course-overview?utm_source=email&amp;utm_medium=workshop&amp;utm_campaign=tech-women-moldova-oct26&amp;utm_content=share-participants"
+                class="link"
+                style="
+                  font-size: 17px;
+                  font-weight: 700;
+                  color: #08080a;
+                  text-decoration: underline;
+                "
+                >this link to the free course</a
+              >.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="signoff"
+            align="center"
+            style="
+              padding: 36px 40px;
+              border-top: 2px solid #08080a;
+              background-color: #fffdf2;
+              background-image: linear-gradient(
+                120deg,
+                #ffb65b10,
+                #fdd82510,
+                #fbfb0010,
+                #8efd2310,
+                #00ed7010
+              );
+              font-family: 'Inter', Arial, sans-serif;
+            "
+          >
+            <p
+              class="ink"
+              style="
+                font-family: 'Space Mono', monospace;
+                font-size: 16px;
+                line-height: 1.6;
+                font-weight: 700;
+                color: #08080a;
+                margin: 0;
+              "
+            >
+              Kinga, Tamas &amp; Little Parrot 💛
+            </p>
+            <p
+              class="muted"
+              style="font-size: 12px; line-height: 1.6; margin: 4px 0 0; color: hsl(245, 3%, 40%)"
+            >
+              Little Parrot by productkind
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="footer"
+            align="center"
+            style="
+              padding: 24px 40px;
+              border-top: 1px solid hsl(245, 5%, 89%);
+              font-family: 'Inter', Arial, sans-serif;
+              font-size: 12px;
+              color: hsl(245, 3%, 45%);
+              line-height: 1.8;
+            "
+          >
+            <table
+              role="presentation"
+              align="center"
+              cellpadding="0"
+              cellspacing="0"
+              border="0"
+              style="margin: 0 auto 12px"
+            >
+              <tr>
+                <td style="padding: 0 6px">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td
+                        class="icon-box"
+                        style="padding: 8px; border: 2px solid #fffffe; background-color: #fffffe"
+                      >
+                        <a
+                          href="https://www.linkedin.com/company/littleparrot/"
+                          class="footer-link"
+                          style="font-size: 12px; color: hsl(245, 3%, 40%); text-decoration: none"
+                          ><img
+                            class="light-img"
+                            src="https://littleparrot.app/icon-linkedin.png"
+                            width="20"
+                            height="20"
+                            alt="LinkedIn"
+                            style="display: block; border: 0" /><!--[if !mso
+                          ]><!--><img
+                            class="dark-img"
+                            src="https://littleparrot.app/icon-linkedin-white.png"
+                            width="20"
+                            height="20"
+                            alt="LinkedIn"
+                            style="
+                              display: none;
+                              max-height: 0;
+                              overflow: hidden;
+                              border: 0;
+                            " /><!--<!
+                        [endif]--></a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td style="padding: 0 6px">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td
+                        class="icon-box"
+                        style="padding: 8px; border: 2px solid #fffffe; background-color: #fffffe"
+                      >
+                        <a
+                          href="https://www.instagram.com/by_productkind/"
+                          class="footer-link"
+                          style="font-size: 12px; color: hsl(245, 3%, 40%); text-decoration: none"
+                          ><img
+                            class="light-img"
+                            src="https://littleparrot.app/icon-instagram.png"
+                            width="20"
+                            height="20"
+                            alt="Instagram"
+                            style="display: block; border: 0" /><!--[if !mso
+                          ]><!--><img
+                            class="dark-img"
+                            src="https://littleparrot.app/icon-instagram-white.png"
+                            width="20"
+                            height="20"
+                            alt="Instagram"
+                            style="
+                              display: none;
+                              max-height: 0;
+                              overflow: hidden;
+                              border: 0;
+                            " /><!--<!
+                        [endif]--></a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td style="padding: 0 6px">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td
+                        class="icon-box"
+                        style="padding: 8px; border: 2px solid #fffffe; background-color: #fffffe"
+                      >
+                        <a
+                          href="https://www.tiktok.com/@littleparrot.app"
+                          class="footer-link"
+                          style="font-size: 12px; color: hsl(245, 3%, 40%); text-decoration: none"
+                          ><img
+                            class="light-img"
+                            src="https://littleparrot.app/icon-tiktok.png"
+                            width="20"
+                            height="20"
+                            alt="TikTok"
+                            style="display: block; border: 0" /><!--[if !mso
+                          ]><!--><img
+                            class="dark-img"
+                            src="https://littleparrot.app/icon-tiktok-white.png"
+                            width="20"
+                            height="20"
+                            alt="TikTok"
+                            style="
+                              display: none;
+                              max-height: 0;
+                              overflow: hidden;
+                              border: 0;
+                            " /><!--<!
+                        [endif]--></a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td style="padding: 0 6px">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td
+                        class="icon-box"
+                        style="padding: 8px; border: 2px solid #fffffe; background-color: #fffffe"
+                      >
+                        <a
+                          href="https://www.youtube.com/@productkind"
+                          class="footer-link"
+                          style="font-size: 12px; color: hsl(245, 3%, 40%); text-decoration: none"
+                          ><img
+                            class="light-img"
+                            src="https://littleparrot.app/icon-youtube.png"
+                            width="20"
+                            height="20"
+                            alt="YouTube"
+                            style="display: block; border: 0" /><!--[if !mso
+                          ]><!--><img
+                            class="dark-img"
+                            src="https://littleparrot.app/icon-youtube-white.png"
+                            width="20"
+                            height="20"
+                            alt="YouTube"
+                            style="
+                              display: none;
+                              max-height: 0;
+                              overflow: hidden;
+                              border: 0;
+                            " /><!--<!
+                        [endif]--></a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td style="padding: 0 6px">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td
+                        class="icon-box"
+                        style="padding: 8px; border: 2px solid #fffffe; background-color: #fffffe"
+                      >
+                        <a
+                          href="https://productkind.substack.com/?utm_source=email&amp;utm_medium=workshop&amp;utm_campaign=tech-women-moldova-oct26&amp;utm_content=participants"
+                          class="footer-link"
+                          style="font-size: 12px; color: hsl(245, 3%, 40%); text-decoration: none"
+                          ><img
+                            class="light-img"
+                            src="https://littleparrot.app/icon-substack.png"
+                            width="20"
+                            height="20"
+                            alt="Substack newsletter"
+                            style="display: block; border: 0" /><!--[if !mso
+                          ]><!--><img
+                            class="dark-img"
+                            src="https://littleparrot.app/icon-substack-white.png"
+                            width="20"
+                            height="20"
+                            alt="Substack newsletter"
+                            style="
+                              display: none;
+                              max-height: 0;
+                              overflow: hidden;
+                              border: 0;
+                            " /><!--<!
+                        [endif]--></a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <p
+              class="footer"
+              style="font-size: 12px; line-height: 1.8; margin: 0; color: hsl(245, 3%, 45%)"
+            >
+              You're receiving this because you joined our workshop at Tech Women Summit Moldova.<br />
+              <a
+                href="https://littleparrot.app/?utm_source=email&amp;utm_medium=workshop&amp;utm_campaign=tech-women-moldova-oct26&amp;utm_content=participants"
+                class="footer-link"
+                style="font-size: 12px; color: hsl(245, 3%, 40%); text-decoration: underline"
+                >littleparrot.app</a
+              >
+              <br /><br />
+              <span
+                class="company-address"
+                style="color: inherit; font-size: 12px; line-height: 1.8; text-decoration: none"
+                >{{SenderInfoLine}}</span
+              ><br /><br />
+              <a
+                href="{{UnsubscribeURL}}"
+                class="footer-link"
+                style="font-size: 12px; color: hsl(245, 3%, 40%); text-decoration: underline"
+                >unsubscribe</a
+              ><br /><br />
+              <a
+                href="{{RewardsURL}}"
+                class="footer-link"
+                style="font-size: 12px; color: hsl(245, 3%, 40%); text-decoration: none"
+                >Powered by EmailOctopus</a
+              >
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td style="height: 32px; line-height: 32px; font-size: 1px">&nbsp;</td>
+        </tr>
+      </table>
+      <!--[if mso]></td></tr></table><![endif]-->
+    </div>
+  </body>
+</html>

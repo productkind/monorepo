@@ -221,6 +221,58 @@
         display: flex;
         align-items: center;
       }
+      /* Sponsored variants (slides 3 and 4): the same design, tightened to
+         make room for a row of sponsor logos along the bottom of the card. */
+      .sponsors {
+        flex: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 64px;
+        border-top: 4px solid #e3e3e6;
+        padding-top: 22px;
+      }
+      .sponsorlabel {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 30px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--ink-secondary);
+      }
+      .logo351 {
+        height: 112px;
+      }
+      .logocritical {
+        height: 56px;
+      }
+      .sponsored .inner {
+        padding-top: 32px;
+        padding-bottom: 28px;
+      }
+      .sponsored .headline {
+        font-size: 112px;
+      }
+      .sponsored .kicker {
+        margin-top: 12px;
+        font-size: 40px;
+      }
+      .sponsored .diagram {
+        margin-top: 40px;
+      }
+      .sponsored .part {
+        gap: 12px;
+      }
+      .sponsored .box {
+        height: 180px;
+      }
+      .sponsored .arrows {
+        height: 180px;
+      }
+      .sponsored .label {
+        font-size: 42px;
+      }
+
       /* Show one slide at a time when opened with ?slide=N (used for export) */
       body.single section.slide {
         display: none;
@@ -324,6 +376,51 @@
       .square .box.database svg {
         width: 96px;
         height: 108px;
+      }
+      .square.sponsored .inner {
+        padding: 28px 48px 24px;
+      }
+      .square.sponsored .headline {
+        font-size: 100px;
+      }
+      .square.sponsored .kicker {
+        margin-top: 16px;
+        font-size: 34px;
+      }
+      .square.sponsored .diagram {
+        margin-top: 32px;
+      }
+      .square.sponsored .part {
+        gap: 10px;
+      }
+      .square.sponsored .box {
+        height: 130px;
+      }
+      .square.sponsored .arrows {
+        height: 130px;
+      }
+      .square.sponsored .label {
+        font-size: 34px;
+      }
+      .square.sponsored .box.server {
+        padding: 18px 20px;
+      }
+      .square.sponsored .box.database svg {
+        height: 96px;
+      }
+      .square .sponsors {
+        gap: 44px;
+        padding-top: 18px;
+        border-top-width: 3px;
+      }
+      .square .sponsorlabel {
+        font-size: 24px;
+      }
+      .square .logo351 {
+        height: 96px;
+      }
+      .square .logocritical {
+        height: 46px;
       }
     </style>
   </head>
@@ -531,6 +628,239 @@
                 <div class="label">Database</div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="slide sponsored">
+      <div class="card">
+        <div class="gradbar"></div>
+        <div class="inner">
+          <div class="header">
+            <span class="handle">LittleParrot.app</span><span class="badge">Free</span>
+          </div>
+          <div class="slidebody">
+            <h1 class="headline">How web apps work</h1>
+            <div class="kicker">A hands-on workshop for product managers</div>
+
+            <div class="diagram">
+              <div class="part">
+                <div class="box">
+                  <div class="titlebar">
+                    <span class="dot" style="background: #ffb65b"></span>
+                    <span class="dot" style="background: #fbfb00"></span>
+                    <span class="dot" style="background: #00ed70"></span>
+                  </div>
+                  <div class="browserbody">
+                    <div class="savebtn"><span>Save</span><span class="spinner"></span></div>
+                  </div>
+                </div>
+                <div class="label">Browser</div>
+              </div>
+
+              <div class="arrows">
+                <svg width="140" height="120" viewBox="0 0 140 120" aria-hidden="true">
+                  <line x1="8" y1="36" x2="112" y2="36" stroke="#080809" stroke-width="8" />
+                  <polygon points="104,16 136,36 104,56" fill="#080809" />
+                  <line x1="132" y1="84" x2="28" y2="84" stroke="#080809" stroke-width="8" />
+                  <polygon points="36,64 4,84 36,104" fill="#080809" />
+                </svg>
+              </div>
+
+              <div class="part">
+                <div class="box server">
+                  <div class="logline" style="width: 82%"></div>
+                  <div class="logline" style="width: 58%"></div>
+                  <div class="logline lit" style="width: 74%"></div>
+                  <div class="logline" style="width: 46%"></div>
+                  <div class="logline" style="width: 66%"></div>
+                </div>
+                <div class="label">Server</div>
+              </div>
+
+              <div class="arrows">
+                <svg width="140" height="120" viewBox="0 0 140 120" aria-hidden="true">
+                  <line x1="8" y1="36" x2="112" y2="36" stroke="#080809" stroke-width="8" />
+                  <polygon points="104,16 136,36 104,56" fill="#080809" />
+                  <line x1="132" y1="84" x2="28" y2="84" stroke="#080809" stroke-width="8" />
+                  <polygon points="36,64 4,84 36,104" fill="#080809" />
+                </svg>
+              </div>
+
+              <div class="part">
+                <div class="box database">
+                  <svg width="150" height="168" viewBox="0 0 150 168" aria-hidden="true">
+                    <defs>
+                      <linearGradient id="lpgrad3" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0" stop-color="#ffb65b" />
+                        <stop offset="0.25" stop-color="#fdd825" />
+                        <stop offset="0.5" stop-color="#fbfb00" />
+                        <stop offset="0.75" stop-color="#8efd23" />
+                        <stop offset="1" stop-color="#00ed70" />
+                      </linearGradient>
+                    </defs>
+                    <path
+                      d="M8 28 V140 A67 22 0 0 0 142 140 V28"
+                      fill="url(#lpgrad3)"
+                      stroke="#080809"
+                      stroke-width="7"
+                    />
+                    <ellipse
+                      cx="75"
+                      cy="28"
+                      rx="67"
+                      ry="22"
+                      fill="#ffffff"
+                      stroke="#080809"
+                      stroke-width="7"
+                    />
+                    <path
+                      d="M8 66 A67 22 0 0 0 142 66"
+                      fill="none"
+                      stroke="#080809"
+                      stroke-width="7"
+                    />
+                    <path
+                      d="M8 104 A67 22 0 0 0 142 104"
+                      fill="none"
+                      stroke="#080809"
+                      stroke-width="7"
+                    />
+                  </svg>
+                </div>
+                <div class="label">Database</div>
+              </div>
+            </div>
+          </div>
+          <div class="sponsors">
+            <span class="sponsorlabel">Sponsored by</span>
+            <img
+              class="logo351"
+              src="../sponsors/351_logo_vert_colour.png"
+              alt="Portuguese Startup Association"
+            />
+            <img
+              class="logocritical"
+              src="../sponsors/critical-software.png"
+              alt="Critical Software"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide square sponsored">
+      <div class="card">
+        <div class="gradbar"></div>
+        <div class="inner">
+          <div class="header">
+            <span class="handle">LittleParrot.app</span><span class="badge">Free</span>
+          </div>
+          <div class="slidebody">
+            <h1 class="headline">How web<br />apps work</h1>
+            <div class="kicker">A hands-on workshop<br />for product managers</div>
+
+            <div class="diagram">
+              <div class="part">
+                <div class="box">
+                  <div class="titlebar">
+                    <span class="dot" style="background: #ffb65b"></span>
+                    <span class="dot" style="background: #fbfb00"></span>
+                    <span class="dot" style="background: #00ed70"></span>
+                  </div>
+                  <div class="browserbody">
+                    <div class="savebtn"><span>Save</span><span class="spinner"></span></div>
+                  </div>
+                </div>
+                <div class="label">Browser</div>
+              </div>
+
+              <div class="arrows">
+                <svg width="140" height="120" viewBox="0 0 140 120" aria-hidden="true">
+                  <line x1="8" y1="36" x2="112" y2="36" stroke="#080809" stroke-width="8" />
+                  <polygon points="104,16 136,36 104,56" fill="#080809" />
+                  <line x1="132" y1="84" x2="28" y2="84" stroke="#080809" stroke-width="8" />
+                  <polygon points="36,64 4,84 36,104" fill="#080809" />
+                </svg>
+              </div>
+
+              <div class="part">
+                <div class="box server">
+                  <div class="logline" style="width: 82%"></div>
+                  <div class="logline" style="width: 58%"></div>
+                  <div class="logline lit" style="width: 74%"></div>
+                  <div class="logline" style="width: 46%"></div>
+                  <div class="logline" style="width: 66%"></div>
+                </div>
+                <div class="label">Server</div>
+              </div>
+
+              <div class="arrows">
+                <svg width="140" height="120" viewBox="0 0 140 120" aria-hidden="true">
+                  <line x1="8" y1="36" x2="112" y2="36" stroke="#080809" stroke-width="8" />
+                  <polygon points="104,16 136,36 104,56" fill="#080809" />
+                  <line x1="132" y1="84" x2="28" y2="84" stroke="#080809" stroke-width="8" />
+                  <polygon points="36,64 4,84 36,104" fill="#080809" />
+                </svg>
+              </div>
+
+              <div class="part">
+                <div class="box database">
+                  <svg width="150" height="168" viewBox="0 0 150 168" aria-hidden="true">
+                    <defs>
+                      <linearGradient id="lpgrad4" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0" stop-color="#ffb65b" />
+                        <stop offset="0.25" stop-color="#fdd825" />
+                        <stop offset="0.5" stop-color="#fbfb00" />
+                        <stop offset="0.75" stop-color="#8efd23" />
+                        <stop offset="1" stop-color="#00ed70" />
+                      </linearGradient>
+                    </defs>
+                    <path
+                      d="M8 28 V140 A67 22 0 0 0 142 140 V28"
+                      fill="url(#lpgrad4)"
+                      stroke="#080809"
+                      stroke-width="7"
+                    />
+                    <ellipse
+                      cx="75"
+                      cy="28"
+                      rx="67"
+                      ry="22"
+                      fill="#ffffff"
+                      stroke="#080809"
+                      stroke-width="7"
+                    />
+                    <path
+                      d="M8 66 A67 22 0 0 0 142 66"
+                      fill="none"
+                      stroke="#080809"
+                      stroke-width="7"
+                    />
+                    <path
+                      d="M8 104 A67 22 0 0 0 142 104"
+                      fill="none"
+                      stroke="#080809"
+                      stroke-width="7"
+                    />
+                  </svg>
+                </div>
+                <div class="label">Database</div>
+              </div>
+            </div>
+          </div>
+          <div class="sponsors">
+            <span class="sponsorlabel">Sponsored by</span>
+            <img
+              class="logo351"
+              src="../sponsors/351_logo_vert_colour.png"
+              alt="Portuguese Startup Association"
+            />
+            <img
+              class="logocritical"
+              src="../sponsors/critical-software.png"
+              alt="Critical Software"
+            />
           </div>
         </div>
       </div>
