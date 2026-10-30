@@ -15,7 +15,9 @@ Don't mention sign-up numbers or who has signed up: Kinga shared those as backgr
 
 Asset: the featured image, `../workshop-event-images/export/featured-image-1920x1080.png`, alt text in `../workshop-event-images/spec.md`.
 
-utm: `utm_source=linkedin&utm_medium=k&utm_campaign=ptw-workshop-nov26&utm_content=career-story`.
+Luma can only record utm_source.
+
+utm: `utm_source=linkedin-k`
 
 ---
 
@@ -33,6 +35,8 @@ As you investigate, you'll see how the app processes the information you enter, 
 
 You don't need an engineering background, and you won't write code yourself. If you're a woman working in product, I'd especially love you to join us.
 
-Friday 13 November, 19:00–21:30 at PTW Palace, Rua Gomes Freire 98, Lisbon, as part of Portugal Tech Week. Bring a laptop; we'll send the account setup instructions beforehand.
+🗓️ Friday 13 November, 19:00–21:30 at PTW Palace, Rua Gomes Freire 98, Lisbon, as part of Portugal Tech Week.
 
-Register here and let me know if you have any questions: https://luma.com/0hccxsn4?utm_source=linkedin&utm_medium=k&utm_campaign=ptw-workshop-nov26&utm_content=career-story
+Bring a laptop; we'll send the GitHub setup instructions beforehand.
+
+👩🏽‍💻 Register here and let me know if you have any questions: https://luma.com/0hccxsn4?utm_source=linkedin-k

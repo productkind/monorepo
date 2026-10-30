@@ -1,29 +1,50 @@
 ---
-status: drafted
+status: sent
+date: 2026-10-29
 channels: [email]
-account: little-parrot
+account: kinga
 ---
 
 # Geek Girls email (plain text, sent by hand)
 
 Send to: Geek Girls subscriber list (Portuguese community for women in tech).
 
-utm: `utm_source=email&utm_medium=ggpt&utm_campaign=web-apps-workshop-nov26`
+Luma can only record utm_source.
+
+utm: `utm_source=ggpt`
 
 ---
 
-Subject: A free workshop in Lisbon on how web apps work
+Subject: Free workshop for product managers in Lisbon, 13 November
 
 Hi everyone,
 
-If you're a product manager without an engineering background, you still have to join technical discussions and understand how complex a change is. Several product managers have told me that a deeper technical understanding would make them more confident when they talk to developers.
+I've worked in product for over eight years. Even with a developer bootcamp behind me, there are still so many technical details to learn.
 
-So on Friday 13 November, Tamas Kokeny and I are running a free, hands-on workshop at Portugal Tech Week called "How web apps work", for product managers who want to follow the technical conversation. You'll run a real app in your own development environment, which opens in your browser, and follow what happens when a customer clicks Save, through the browser, the server and the database, to find out why their new record never appears. Then you'll write a bug report with the evidence an engineer needs, and give it to GitHub Copilot, an AI agent, to fix.
+So I'm running a free, hands-on workshop together with a software engineer during Portugal Tech Week: "How web apps work". It's for product managers who want a deeper technical understanding to draw on when making decisions, managing stakeholder expectations and discussing implementation with engineers.
 
-To be honest, so far only men have signed up, and none of them are product managers: they're founders and investors. So please don't rule yourself out. If you think it could help you at work, or you're just curious and think it could help you build with AI, you're very welcome to come.
+We've put product managers in the title, but you're very welcome to join if you work with engineers in a different role too.
 
-It starts at 19:00 at PTW Palace, Rua Gomes Freire 98, and it's in English. Bring a laptop. We'll have snacks, and you can buy drinks at the Palace bar. You can [register for the workshop here](https://luma.com/0hccxsn4?utm_source=email&utm_medium=ggpt&utm_campaign=web-apps-workshop-nov26).
+What we'll do:
 
-Feel free to pass it on to a friend or colleague who'd find it useful.
+- Run a real app in your own development environment and investigate why it doesn't save the information you enter.
+- Inspect the request and response, server log and database to work out which rule rejected the save and why.
+- Write a bug report with the evidence, give it to GitHub Copilot, an AI agent, and test if it fixed the issue.
 
-Warm wishes, Kinga
+You'll see how the app processes and checks information, and how a failure in one layer affects what you see in the browser.
+
+You don't need an engineering background, and you won't write code yourself. I'd especially love to see more women there.
+
+🗓️ When: Friday 13 November, 19:00 to 21:30
+
+📍 Where: PTW Palace, Rua Gomes Freire 98, Lisbon
+
+🎟️ Cost and language: Free, in English
+
+Bring a laptop. We'll email you how to register for GitHub beforehand. We'll have snacks, and you can buy drinks at the Palace bar.
+
+You can [register for the workshop here](https://luma.com/0hccxsn4?utm_source=ggpt).
+
+Feel free to pass it on to a friend or colleague. I hope to see many of you there!
+
+Cheers, Kinga
