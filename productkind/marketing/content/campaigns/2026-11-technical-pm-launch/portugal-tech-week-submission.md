@@ -44,7 +44,7 @@ The workshop itself takes 2 hours. People often arrive late to evening meetups i
 
 For listings and social posts:
 
-> A hands-on workshop for product managers without an engineering background. You'll see how a web app works by running one yourself and following a failed save through the browser, the server and the database. The next time an engineer explains why something isn't working, you'll know which part of the app they mean and what to ask them.
+> A hands-on workshop for product managers without an engineering background. You'll see how a web app works by running one yourself and following a failed save through the browser, the server and the database. You’ll come away better equipped to understand technical discussions, ask useful questions and have productive conversations with engineers.
 
 ## Event content
 
@@ -61,8 +61,6 @@ For listings and social posts:
 > 3. Check the database and confirm nothing was saved.
 > 4. Find the rule that rejected the save, and work out where the bug really is.
 >
-> You'll draw a map of how the browser, the server and the database connect, and write a bug report with the evidence an engineer needs to fix it.
->
 > **Finally, you'll fix the bug with AI.** You'll give your bug report to GitHub Copilot, an AI agent that can change the app's code, and test its fix in your copy of the app. You'll also see why the evidence an engineer asks for helps an AI agent fix the bug too.
 >
 > The app you'll run is Twenty, a real open-source CRM. It has the same parts as most business software: a frontend, an API, a server and a database.
@@ -70,12 +68,12 @@ For listings and social posts:
 > **By the end, you'll be able to:**
 >
 > - explain what happens between clicking Save and the data reaching the database;
-> - run Twenty in your own development environment, and explain how that differs from the live product your customers use;
+> - run an app in your own development environment;
 > - find a request in your browser's network tab and read its status code and response;
 > - tell whether a problem starts in the browser, on the server or in the database;
 > - write a bug report with the evidence engineers ask for, and give it to an AI agent to fix.
 >
-> **Who it's for:** product managers and product owners without an engineering background. You won't write code yourself, and you don't need any technical knowledge.
+> **Who it's for:** product managers and product owners without an engineering background.
 >
 > **What to bring:** a laptop and a free, personal GitHub account. Before the workshop, we'll email you instructions for setting up the account and turning on GitHub Copilot's free plan, plus a short check that your laptop can open your development environment and GitHub Copilot (some company laptops can't).
 >
