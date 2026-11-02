@@ -25,53 +25,6 @@ const contentDir = path.join(absoluteBaseDir, CONTENT_DIR)
 
 const weeks = fsService.readDirSync(contentDir)
 
-weeks.forEach((week) => {
-  const weekPath = path.join(contentDir, week)
-  const days = fsService.readDirSync(weekPath)
-  days.forEach(async (day) => {
-    const dayPath = path.join(weekPath, day)
-    const dailyFiles = fsService.globSync(path.join(dayPath, '*.svg'), { nodir: true }).sort()
-    const distPath = path.join(absoluteBaseDir, ASSETS_DIR, OUTPUT_DIR, week, day)
-    await $`mkdir -p ${distPath}`
-    if (days.length > 1) {
-      await combineSvgFiles(
-        dailyFiles,
-        path.join(distPath, 'strip.svg'),
-        [cols, rows],
-        [imageWidth, imageHeight],
-        [gapX, gapY],
-      )
-    }
-    const namePrefix = `${week}-${day}-`
-    dailyFiles.forEach(async (filePath) => {
-      const outputPngPath = path.join(
-        distPath,
-        namePrefix + path.basename(filePath).replace('.svg', '.png'),
-      )
-      await rasterizeSvg({
-        inputFilePath: filePath,
-        outputFilePath: outputPngPath,
-        size: [imageWidth, imageHeight],
-        background: 'ffffffff',
-      })
-      console.log(`Generated PNG for ${filePath} at ${outputPngPath}`)
-      const texts = await extractTextFromSvg(filePath)
-      console.log('Extracted texts:', texts)
-    })
-    if (days.length > 1) {
-      await rasterizeSvg({
-        inputFilePath: path.join(distPath, 'strip.svg'),
-        outputFilePath: path.join(distPath, namePrefix + 'strip.png'),
-        size: [imageWidth, imageHeight],
-        background: 'ffffffff',
-      })
-    }
-    console.log(
-      `Generated combined PNG for ${day} at ${path.join(distPath, namePrefix + 'strip.png')}`,
-    )
-  })
-})
-
 // Function to recursively update IDs and references
 const updateIdsAndReferences = (element, prefix, idMap) => {
   if (element.nodeType === 1) {
@@ -260,4 +213,52 @@ const combineSvgFiles = async (
 
   const output = serializer.serializeToString(combinedDoc)
   fsService.writeFileSync(outputPath, output, 'utf-8')
+}
+
+for (const week of weeks) {
+  const weekPath = path.join(contentDir, week)
+  const days = fsService.readDirSync(weekPath)
+  for (const day of days) {
+    const dayPath = path.join(weekPath, day)
+    const dailyFiles = fsService.globSync(path.join(dayPath, '*.svg'), { nodir: true }).sort()
+    const distPath = path.join(absoluteBaseDir, ASSETS_DIR, OUTPUT_DIR, week, day)
+    await $`mkdir -p ${distPath}`
+    if (days.length > 1) {
+      await combineSvgFiles(
+        dailyFiles,
+        path.join(distPath, 'strip.svg'),
+        [cols, rows],
+        [imageWidth, imageHeight],
+        [gapX, gapY],
+      )
+    }
+    const namePrefix = `${week}-${day}-`
+    // Running every export at once spawns hundreds of Inkscape processes, and on CI some of them crash with Gio::DBus::Error
+    for (const filePath of dailyFiles) {
+      const outputPngPath = path.join(
+        distPath,
+        namePrefix + path.basename(filePath).replace('.svg', '.png'),
+      )
+      await rasterizeSvg({
+        inputFilePath: filePath,
+        outputFilePath: outputPngPath,
+        size: [imageWidth, imageHeight],
+        background: 'ffffffff',
+      })
+      console.log(`Generated PNG for ${filePath} at ${outputPngPath}`)
+      const texts = extractTextFromSvg(filePath)
+      console.log('Extracted texts:', texts)
+    }
+    if (days.length > 1) {
+      await rasterizeSvg({
+        inputFilePath: path.join(distPath, 'strip.svg'),
+        outputFilePath: path.join(distPath, namePrefix + 'strip.png'),
+        size: [imageWidth, imageHeight],
+        background: 'ffffffff',
+      })
+    }
+    console.log(
+      `Generated combined PNG for ${day} at ${path.join(distPath, namePrefix + 'strip.png')}`,
+    )
+  }
 }
