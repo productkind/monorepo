@@ -1,0 +1,61 @@
+url: https://www.instagram.com/p/DK_iR0KN5mk/
+posted: 2025-06-17
+caption: |-
+  The coach asks thoughtful questions. 🦦
+  The educator explains things (twice). 🦔
+  The client keeps moving the goalpost. 🦒
+
+  And the Product Team? 🐣🐌🐱🤖
+  Focuses on deeply understanding the user pain points, instead of fixating on feature requests.
+alt:
+  panels:
+    - |-
+      An otter wearing a purple jumpsuit.
+      - characters:
+            - name: "Kim"
+          caption: 
+            Kim
+            Product Coach
+
+            Pros:
+              - attention to detail
+              - product mindset
+              - curious
+
+            Cons:
+             - people pleaser
+             - expensive coffee
+               taste
+    - |-
+      A hedgehog wearing a yellow dungaree.
+      - characters:
+            - name: "Tim"
+          caption: 
+            Tim
+            Educator
+
+            Pros:
+              - Enjoys talking
+              - Generous
+              - Good cook
+
+            Cons:
+              - Enjoys talking
+              - Eats a lot
+    - |-
+      A giraffe wearing a purple T-shirt and turquoise trousers.
+      - characters:
+            - name: "Giraffe"
+          caption: 
+            Giraffe
+            Client
+
+            Pros:
+              - interested in new technologies
+              - has the money
+              - loyal customer
+
+            Cons:
+              - doesn't understand product development
+              - doesn't update the browse
+  strip: null

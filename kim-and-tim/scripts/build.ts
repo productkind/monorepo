@@ -1,3 +1,5 @@
+import { describeRelease } from './release.ts'
+
 import { createFileSystemService } from '@dungarees/fs/service.ts'
 import { rasterizeSvg } from '@dungarees/shell/image.ts'
 
@@ -259,6 +261,16 @@ for (const week of weeks) {
     }
     console.log(
       `Generated combined PNG for ${day} at ${path.join(distPath, namePrefix + 'strip.png')}`,
+    )
+    const release = describeRelease({
+      namePrefix,
+      panelFiles: dailyFiles,
+      instagramYaml: fsService.readFileSync(path.join(dayPath, 'instagram.yaml'), 'utf-8'),
+    })
+    fsService.writeFileSync(
+      path.join(distPath, `${week}-${day}.json`),
+      JSON.stringify(release, null, 2),
+      'utf-8',
     )
   }
 }

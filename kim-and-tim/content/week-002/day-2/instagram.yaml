@@ -1,0 +1,34 @@
+url: https://www.instagram.com/p/DLjt2z6SBqB/
+posted: 2025-07-01
+caption: |-
+  Ever caught yourself writing one of those monster user stories with far too many user actions?
+
+  Watch out for the “and”s – each one’s a clue you’re slipping in extra work.
+
+  More “and”s mean more scope creep and more headaches for your devs.
+
+  Keep your stories small. One user action at a time means faster to test, clearer to build, and easier to fix.
+
+  Small stories, happy teams.
+alt:
+  panels:
+    - |-
+      A simple cartoon shows a chick in a green hoodie at a laptop, talking to a smiling otter wearing a green jumpsuit and holding a mug labelled ‘curiosity’.
+
+      The chick says, “Right… so the user should log in and upload a photo and update their profile and…” The otter listens patiently.
+    - The otter says, “Chick, that ‘and’ is a red flag. Each ‘and’ means you’re cramming in extra activities.” The chick replies, “So… I shouldn’t do ‘and, and, and’?”
+    - The otter responds, “Exactly! Break it down. One user activity per story keeps your scope clear and your devs sane.” The chick says, “Got it. One step at a time, no ‘and’ storms.”
+    - |-
+      A close-up shows the chick looking at a screen with a user story: “CHIRA ANML-20481: As Chick, I want to write fewer ‘and’s so my team doesn’t run away.”
+
+      Create by productkind
+  strip: |-
+    A collection of the previous 4 panels.
+    A simple cartoon shows a chick in a green hoodie at a laptop, talking to a smiling otter wearing a green jumpsuit and holding a mug labelled ‘curiosity’.
+
+    Panel 1: The chick says, “Right… so the user should log in and upload a photo and update their profile and…” The otter listens patiently.
+    Panel 2: The otter says, “Chick, that ‘and’ is a red flag. Each ‘and’ means you’re cramming in extra activities.” The chick replies, “So… I shouldn’t do ‘and, and, and’?”
+    Panel 3: The otter responds, “Exactly! Break it down. One user activity per story keeps your scope clear and your devs sane.” The chick says, “Got it. One step at a time, no ‘and’ storms.”
+    Panel 4: A close-up shows the chick looking at a screen with a user story: “CHIRA ANML-20481: As Chick, I want to write fewer ‘and’s so my team doesn’t run away.”
+
+    The comic strip teaches to keep user stories simple and focused — no overloaded ‘and’s.

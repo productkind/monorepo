@@ -1,0 +1,45 @@
+url: https://www.instagram.com/p/DM89UxuKv8P/
+posted: 2025-08-05
+caption: |-
+  ⛓️ Chain-of-thought prompting helps AI reason more effectively by breaking a task into small, logical steps. Just like how we think things through before making a decision.
+
+  Without it, AI may jump to conclusions or give oddly specific (but unhelpful) answers.
+
+  💡 Tip: When prompting, write "Let’s think step by step" or "First... then..." to guide the model through reasoning instead of rushing to a final answer.
+
+  🔖 Read more practical prompting techniques at productkind.substack.com
+alt:
+  panels:
+    - 'A simple, brightly coloured cartoon drawn in a flat, minimal style. A white cartoon bunny with a blank expression wears a white shirt, orange tie, and blue trousers. It holds a pink CrossFit shaker. Standing beside the bunny is a chunky, cheerful purple robot on treads, with an antenna and curved arms. The bunny says, “AI, find the right market for our new product: the umbrella! Where do giraffes live… who might need umbrellas?”'
+    - |-
+      The scene now includes a smiling cartoon otter in a yellow jumpsuit. The robot says, “The London Zoo has four giraffes. One is named Molly. She dislikes overcast mornings.”
+      The bunny looks unimpressed and says, “I feel like you’re technically correct, but deeply unhelpful.”
+      The style remains clean and playful, with bold outlines and expressive poses.
+    - |-
+      The otter gently suggests, “Then use chain-of-thought prompting. Step-by-step. Like using your fingers for arithmetics.”
+      The bunny points at the robot and says, “Then, AI, think step-by-step!”
+    - |-
+      The robot responds, “Tanzania. Seasonal rain. Giraffes get soggy.”
+      The bunny raises an arm excitedly: “That’s it! I can work with soggy.”
+      The otter says, “Just… don’t put that on the slide deck.”
+  strip: |-
+    A four-panel comic in a clean, flat cartoon style with thick outlines and bold, simple colours. The tone is dry and playful. The main characters are:
+    A white cartoon bunny in a business shirt and orange tie, holding a bright pink shaker bottle labelled “CROSSFIT”. Its mouth is drawn as a small “x”, giving it a permanently blank expression.
+    A friendly, smiling otter in a yellow jumpsuit.
+    A squat purple robot with curved arms, an antenna, and a treaded base.
+
+    Panel 1:
+    The bunny stands next to the robot and says, “AI, find the right market for our new product: the umbrella! Where do giraffes live… who might need umbrellas?”
+
+    Panel 2:
+    The otter appears, listening in. The robot replies helpfully but irrelevantly: “The London Zoo has four giraffes. One is named Molly. She dislikes overcast mornings.”
+    The bunny responds flatly, “I feel like you’re technically correct, but deeply unhelpful.”
+
+    Panel 3:
+    The otter offers advice: “Then use chain-of-thought prompting. Step-by-step. Like using your fingers for arithmetics.”
+    The bunny turns to the robot and says, “Then, AI, think step-by-step!”
+
+    Panel 4:
+    The robot answers: “Tanzania. Seasonal rain. Giraffes get soggy.”
+    The bunny, excited, says, “That’s it! I can work with soggy.”
+    The otter says, “Just… don’t put that on the slide deck.”

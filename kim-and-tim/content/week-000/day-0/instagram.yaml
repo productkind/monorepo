@@ -1,0 +1,74 @@
+url: https://www.instagram.com/p/DKyxLAas32o/
+posted: 2025-06-12
+caption: |-
+  Meet the product team 🐣🐌🐱🤖
+
+  A bright-eyed PM, 87 open tabs, 1 existential crisis.
+  A developer who builds flawless systems... in six refactors or less.
+  A designer who perfects pixels no one else notices.
+  And AI that knows everything – except when it doesn’t.
+
+  Together they build valuable products, because they care.
+alt:
+  panels:
+    - |-
+      - characters:
+            - name: "Chick"
+          caption:
+            Chick
+            Junior Product Manager
+
+            Pros:
+              - eager to learn
+              - kind
+              - empathetic
+
+            Cons:
+              - inexperienced
+              - anxious
+    - |-
+      - characters:
+            - name: "Snail"
+          caption:
+            Snail
+            Software Developer
+
+            Pros:
+              - builds the perfect architecture
+              - uses Linux
+              - loves stickers
+
+            Cons:
+              - builds the perfect architecture
+              - uses Linux
+    - |-
+      - characters:
+            - name: "Cat"
+          caption:
+            Cat
+            Product Designer
+
+            Pros:
+              - Figma and Penpot whizz
+              - immaculate style
+              - knows CSS as the back of their paw
+
+            Cons:
+              - likes animations
+              - shopaholic
+    - |-
+      - characters:
+            - name: "AI"
+          caption:
+            AI
+            Polymath
+
+            Pros:
+              - read the whole internet
+              - friendly
+              - eager to please
+
+            Cons:
+              - overconfident
+              - hallucinates
+  strip: null

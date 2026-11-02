@@ -1,0 +1,20 @@
+url: https://www.instagram.com/p/DMe_OblNu-1/
+posted: 2025-07-24
+caption: |-
+  When you give an AI your research and it spirals into nonsense... it’s probably time for a better prompt.
+
+  Here’s a simple technique:
+  🔸 Treat your prompt like an instruction manual.
+  🔸 Break it into parts: role, tone, goal, examples, task...
+  🔸 Use clear separators (Markdown, XML tags, numbered lists) to keep it structured.
+
+  Specific in, helpful out.
+
+  Prompting isn’t magic. It’s just clear communication.
+alt:
+  panels:
+    - A small chick in a green hoodie, covered in sticky notes, looks frustrated. A purple robot beside it is holding another sticky note. The chick says, “I gave it all my research and now it’s just... spiralling into nonsense.” A friendly otter in a magenta jumpsuit stands nearby, listening.
+    - The otter advises, “Break your prompt into sections. Role, tone, goal, examples, task.” The chick asks, “So I prompt it like an instruction manual?” The chick still looks mildly overwhelmed, sticky notes all over.
+    - The otter smiles and says, “Exactly. Markdown headers are your secret weapon.” The chick, now slightly more hopeful, replies, “Okay, I’ll try,” and begins, “# Role * Expert user researcher…” The robot watches attentively.
+    - The robot is now happily arranging sticky notes in neat rows on a whiteboard. The chick, now free of notes, stands nearby with a content expression.
+  strip: A four-panel comic strip shows a chick struggling to get useful output from a robot despite giving it lots of research. With guidance from a helpful otter in a jumpsuit, the chick learns to structure its prompt like an instruction manual using Markdown. In the final panel, the robot is organising the information successfully, and the chick looks pleased.

@@ -1,0 +1,74 @@
+url: https://www.instagram.com/p/DK9EXFio026/
+posted: 2025-06-16
+caption: |-
+  Meet the stakeholders of our product company 🐊🐰🐭🦉
+
+  A CEO who’s regularly running late from meetings, a sales manager who would sell anything, a snack-fuelled marketer, and a well-hydrated HR manager.
+
+  Everyone adds their own strengths (and their own challenges).
+  It still works – because they work together.
+
+  Which one do you work with? Or... are you one of them?
+alt:
+  panels:
+    - |-
+      - characters:
+            - name: "Croc"
+          caption:
+            Croc
+            Chief Executive Officer
+
+            Pros:
+              - amazing storyteller
+              - listens to people
+              - was a tennis champion at uni
+
+            Cons:
+              - always has a "great" idea
+              - often running late
+    - |-
+      - characters:
+            - name: "Rabbit"
+          caption: 
+            Rabbit
+            Sales Manager
+
+            Pros:
+              - could sell anything
+              - CrossFit enthusiast
+              - very social
+
+            Cons:
+              - would sell anything
+              - talks a lot (about CrossFit)
+    - |-
+      - characters:
+            - name: "Mouse"
+          caption: 
+            Mouse
+            Marketing Manager
+
+            Pros:
+              - online analytics expert
+              - knows the latest trends
+              - always has snacks
+
+            Cons:
+              - drinks too much coffee
+              - rushes things
+    - |-
+      - characters:
+            - name: "Owl"
+          caption: 
+            Owl
+            Human Resources Manager
+
+            Pros:
+              - people person
+              - hydrates regularly
+              - creates a safe space
+
+            Cons:
+              - loves paperwork
+              - constantly needs tech support
+  strip: 'A compilation of the previous four images: Croc, Rabbit, Mouse and Owl.'

@@ -18,4 +18,11 @@ export default [
       },
     },
   },
+  {
+    test: {
+      include: 'kim-and-tim/scripts/**/*.test.ts',
+      name: 'kim-and-tim',
+      exclude: ['**/node_modules/**'],
+    },
+  },
 ]

@@ -16,6 +16,8 @@
     "@dungarees/fs": "*",
     "@dungarees/shell": "*",
     "@xmldom/xmldom": "^0.9.8",
+    "yaml": "^2.9.0",
+    "zod": "^4.5.4",
     "zx": "^8.5.5"
   }
 }

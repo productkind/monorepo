@@ -59,5 +59,6 @@ jobs:
           name: Release ${{ steps.tag_version.outputs.new_tag }}
           files: |
             kim-and-tim/assets/dist/**/*.png
+            kim-and-tim/assets/dist/**/*.json
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
