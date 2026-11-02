@@ -1,3 +1,4 @@
+import { createCarouselPdf } from './pdf.ts'
 import { describeRelease } from './release.ts'
 
 import { createFileSystemService } from '@dungarees/fs/service.ts'
@@ -272,5 +273,10 @@ for (const week of weeks) {
       JSON.stringify(release, null, 2),
       'utf-8',
     )
+    const linkedInPdf = await createCarouselPdf({
+      pngs: release.linkedIn.pages.map((page) => fs.readFileSync(path.join(distPath, page))),
+    })
+    fs.writeFileSync(path.join(distPath, release.linkedIn.file), linkedInPdf)
+    console.log(`Generated LinkedIn carousel at ${path.join(distPath, release.linkedIn.file)}`)
   }
 }

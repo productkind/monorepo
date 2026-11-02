@@ -16,6 +16,7 @@
     "@dungarees/fs": "*",
     "@dungarees/shell": "*",
     "@xmldom/xmldom": "^0.9.8",
+    "pdf-lib": "^1.17.1",
     "yaml": "^2.9.0",
     "zod": "^4.5.4",
     "zx": "^8.5.5"

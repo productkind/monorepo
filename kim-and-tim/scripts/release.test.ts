@@ -33,7 +33,31 @@ describe('describeRelease', () => {
         { file: 'week-001-day-0-panel-01.png', alt: 'The otter holds a mug.' },
         { file: 'week-001-day-0-strip.png', alt: 'A 2-panel comic strip.' },
       ],
+      linkedIn: {
+        file: 'week-001-day-0-linkedin.pdf',
+        pages: [
+          'week-001-day-0-panel-00.png',
+          'week-001-day-0-panel-01.png',
+          'week-001-day-0-strip.png',
+        ],
+      },
     })
+  })
+
+  test('leaves the strip out of the LinkedIn carousel of a single-panel comic', () => {
+    const { linkedIn } = describeRelease({
+      namePrefix: 'week-007-day-0-',
+      panelFiles: ['/content/week-007/day-0/panel-00.svg'],
+      instagramYaml: `url: https://www.instagram.com/p/DM2Z0pHtYSa/
+posted: 2025-08-02
+caption: Prompting isn’t a one-shot game.
+alt:
+  panels:
+    - A pie chart.
+  strip: null
+`,
+    })
+    expect(linkedIn.pages).toEqual(['week-007-day-0-panel-00.png'])
   })
 
   test('keeps an image whose alt text was never posted, with a null alt', () => {

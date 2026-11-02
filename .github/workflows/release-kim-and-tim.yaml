@@ -60,5 +60,6 @@ jobs:
           files: |
             kim-and-tim/assets/dist/**/*.png
             kim-and-tim/assets/dist/**/*.json
+            kim-and-tim/assets/dist/**/*.pdf
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
