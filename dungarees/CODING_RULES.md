@@ -827,7 +827,6 @@ app/runtime/hydration-react/  the browser half of the same server-rendered app
 // Good — one delivery, one package; the server entry and the client entry are both part of
 // what "server-rendered React" means
 app/runtime/ssr-react/
-  listen.ts                     what both servers share: listening on the port, and stopping
   entry-server.ts               the production server's services, run from its bundle
   entry-server-development.ts   the development server's services, serving through Vite
   entry-client.ts               the browser's services, the document's entry point

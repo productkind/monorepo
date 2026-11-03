@@ -1,7 +1,7 @@
-import { listen } from './listen.ts'
 import { listTodos } from './todo-repository.ts'
 
 import { createIdGenerator } from '@dungarees/id-generator/service.ts'
+import { listenSsrServer } from '@dungarees/ssr-react/node-http.ts'
 import { createServerSsrHost } from '@dungarees/ssr-react/server-host.ts'
 import { createViteSsrDevelopmentServer } from '@dungarees/ssr-react/vite-development.ts'
 import { baseApplication } from '@dungarees/todo-mvc-base-app-ssr-react/base-app.ts'
@@ -12,16 +12,20 @@ import { fileURLToPath } from 'node:url'
 
 const ROOT = dirname(fileURLToPath(import.meta.url))
 
+const PORT = Number(process.env['PORT'] ?? 5173)
+
 const getServices = (): TodoMvcServices => ({
   idGenerator: createIdGenerator({ generateUuid: () => crypto.randomUUID() }),
   listTodos,
   host: createServerSsrHost({
     serve: async ({ render }) => {
-      const stop = await listen({
+      const { url, stop } = await listenSsrServer({
+        port: PORT,
         root: ROOT,
         createSsrServer: createViteSsrDevelopmentServer,
         render,
       })
+      console.log(`todo-mvc listening on ${url}`)
       // vite-node reruns this module in the same process when a file changes, so the server the
       // last run started has to let go of its ports first. It only disposes a module that accepts
       // its own updates; a plain rerun leaves the old server listening.
