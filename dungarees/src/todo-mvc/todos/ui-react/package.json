@@ -11,6 +11,7 @@
   "dependencies": {
     "@dungarees/id-generator": "*",
     "@dungarees/navigation": "*",
+    "@dungarees/query-cache": "*",
     "@dungarees/react": "*",
     "@dungarees/store": "*",
     "@dungarees/todo-mvc-todos-domain": "*",

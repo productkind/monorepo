@@ -8,9 +8,11 @@ import { createNavigation } from '@dungarees/navigation/feature.ts'
 import { createRouter } from '@dungarees/navigation/router.ts'
 import { createNavigationService } from '@dungarees/navigation/service.ts'
 import { navigationReducer } from '@dungarees/navigation/store.ts'
+import { createQueryCache } from '@dungarees/query-cache/service.ts'
 import { createStore } from '@dungarees/store/service.ts'
 import { createTodosBehavior } from '@dungarees/todo-mvc-todos-domain/behavior.ts'
 import { TODOS_NAMESPACE } from '@dungarees/todo-mvc-todos-domain/config.ts'
+import { createTodosService } from '@dungarees/todo-mvc-todos-domain/service.ts'
 import { todosReducer } from '@dungarees/todo-mvc-todos-domain/store.ts'
 import type { Todo } from '@dungarees/todo-mvc-todos-domain/type.ts'
 
@@ -37,6 +39,10 @@ export const createFakeTodoAppBehaviors = ({
   const todos = createTodosBehavior({
     store,
     idGenerator: createIdGenerator(createFakeIdGeneratorBackend().backend),
+    todosService: createTodosService({
+      queryCache: createQueryCache(),
+      listTodos: async () => items,
+    }),
     filter$: navigation.route$.pipe(map(toTodoFilter)),
   })
   todos.seed(items)

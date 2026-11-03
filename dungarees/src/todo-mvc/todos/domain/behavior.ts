@@ -4,6 +4,7 @@ import {
   filterTodos,
   isSubmittableTitle,
 } from './operations.ts'
+import type { TodosService } from './service.ts'
 import {
   type AppStoreTodosStateSlice,
   createAddTodo,
@@ -46,7 +47,10 @@ export type TodosCommand = {
   setAllCompleted: (completed: boolean) => void
 }
 
-export type TodosBehavior = TodosQuery & TodosCommand
+export type TodosBehavior = TodosQuery &
+  TodosCommand & {
+    load: () => Promise<void>
+  }
 
 export const todosQuery = ({
   store,
@@ -121,14 +125,22 @@ export const todosCommand = ({
 export type TodosBehaviorArgs = {
   store: StateReadable<AppStoreTodosStateSlice> & EventReceiver<TodosEvent>
   idGenerator: IdGenerator
+  todosService: TodosService
   filter$: Observable<TodoFilter>
 }
 
 export const createTodosBehavior = ({
   store,
   idGenerator,
+  todosService,
   filter$,
-}: TodosBehaviorArgs): TodosBehavior => ({
-  ...todosQuery({ store, filter$ }),
-  ...todosCommand({ store, idGenerator }),
-})
+}: TodosBehaviorArgs): TodosBehavior => {
+  const command = todosCommand({ store, idGenerator })
+  return {
+    ...todosQuery({ store, filter$ }),
+    ...command,
+    load: async () => {
+      command.seed(await todosService.list())
+    },
+  }
+}

@@ -1,4 +1,3 @@
-- Main has to many things, maybe a single kickoff that we would need there
 - we dont need base app, app then app again
 - we should not have different args for creating the services
 

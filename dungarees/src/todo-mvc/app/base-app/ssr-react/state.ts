@@ -1,12 +1,6 @@
-import type { Todo } from '@dungarees/todo-mvc-todos-domain/type.ts'
+import type { DehydratedQueryCache } from '@dungarees/query-cache/service.ts'
+import type { SsrRequest } from '@dungarees/ssr-react/host.ts'
 
-import type { History } from 'history'
+export type TodoMvcState = DehydratedQueryCache
 
-export type TodoMvcState = {
-  todos: Todo[]
-}
-
-export type TodoMvcInput = {
-  history: History
-  state: TodoMvcState
-}
+export type TodoMvcInput = SsrRequest

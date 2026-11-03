@@ -1,10 +1,12 @@
 import { createTodosBehavior, todosQuery } from './behavior.ts'
 import { createAppStore, getStateReadable } from './fake.ts'
+import { createTodosService } from './service.ts'
 import type { Todo } from './type.ts'
 
 import { mtest } from '@dungarees/core/marbles-vitest.ts'
 import { createFakeIdGeneratorBackend } from '@dungarees/id-generator/fake.ts'
 import { createIdGenerator } from '@dungarees/id-generator/service.ts'
+import { createQueryCache } from '@dungarees/query-cache/service.ts'
 
 import { of } from 'rxjs'
 import { expect, test } from 'vitest'
@@ -12,7 +14,13 @@ import { expect, test } from 'vitest'
 const WRITE_TESTS: Todo = { id: '1', title: 'Write tests', completed: false }
 const READ_SPEC: Todo = { id: '2', title: 'Read the spec', completed: true }
 
-const createBehavior = (filter: 'all' | 'active' | 'completed' = 'all') => {
+const createBehavior = ({
+  filter = 'all',
+  listTodos = async () => [],
+}: {
+  filter?: 'all' | 'active' | 'completed'
+  listTodos?: () => Promise<Todo[]>
+} = {}) => {
   const { store } = createAppStore()
   const { backend } = createFakeIdGeneratorBackend()
   return {
@@ -20,6 +28,7 @@ const createBehavior = (filter: 'all' | 'active' | 'completed' = 'all') => {
     behavior: createTodosBehavior({
       store,
       idGenerator: createIdGenerator(backend),
+      todosService: createTodosService({ queryCache: createQueryCache(), listTodos }),
       filter$: of(filter),
     }),
   }
@@ -145,9 +154,18 @@ test('the whole list reads out synchronously, which is how the server hands it t
 // What the browser has to start from is every todo, not the slice the current route happens to
 // show, or navigating after hydration would find the rest of them gone.
 test('reading the list out ignores the filter in force', () => {
-  const { behavior } = createBehavior('active')
+  const { behavior } = createBehavior({ filter: 'active' })
   behavior.seed([WRITE_TESTS, READ_SPEC])
 
   expect(behavior.visibleTodos$).toBeDefined()
+  expect(behavior.toTodos()).toEqual([WRITE_TESTS, READ_SPEC])
+})
+
+test('loading replaces the list with the todos the service lists', async () => {
+  const { behavior } = createBehavior({ listTodos: async () => [WRITE_TESTS, READ_SPEC] })
+  behavior.add('Stale todo')
+
+  await behavior.load()
+
   expect(behavior.toTodos()).toEqual([WRITE_TESTS, READ_SPEC])
 })

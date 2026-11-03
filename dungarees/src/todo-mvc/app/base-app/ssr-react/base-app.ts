@@ -1,7 +1,7 @@
 import { fromTodoMvcState, type TodoMvcBehaviors, toTodoMvcState } from './behaviors.ts'
 import { getBehaviors } from './get-behaviors.ts'
 import { getDelivery, type TodoMvcDelivery } from './get-delivery.tsx'
-import { main, type TodoMvcOutput } from './main.tsx'
+import { main, type TodoMvcOutput } from './main.ts'
 import type { TodoMvcIdentity, TodoMvcServices } from './services.ts'
 import type { TodoMvcInput, TodoMvcState } from './state.ts'
 
