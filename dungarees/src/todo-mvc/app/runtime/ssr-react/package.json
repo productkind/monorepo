@@ -12,7 +12,6 @@
   },
   "type": "module",
   "dependencies": {
-    "@dungarees/core": "*",
     "@dungarees/id-generator": "*",
     "@dungarees/ssr-react": "*",
     "@dungarees/todo-mvc-base-app-ssr-react": "*",

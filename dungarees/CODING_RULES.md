@@ -827,11 +827,24 @@ app/runtime/hydration-react/  the browser half of the same server-rendered app
 // Good — one delivery, one package; the server entry and the client entry are both part of
 // what "server-rendered React" means
 app/runtime/ssr-react/
-  app.ts                        the base application with the browser's real services
-  server-services.ts            the server's real services, given how to serve
-  entry-server.ts               the production server, run from its bundle
-  entry-server-development.ts   the same server, serving through Vite's dev server
-  entry-client.ts               the document's entry point
+  listen.ts                     what both servers share: listening on the port, and stopping
+  entry-server.ts               the production server's services, run from its bundle
+  entry-server-development.ts   the development server's services, serving through Vite
+  entry-client.ts               the browser's services, the document's entry point
+```
+
+Every runtime's services are built the same way, `() => Services`, and the entry hands them to the base application as they are. A runtime that needs something another does not gets an implementation of its own, not an argument the others have to be built without.
+
+```ts
+// Bad — one factory per runtime, each with arguments of its own
+getServerServices({ root, createSsrServer, onListening })
+getBrowserServices()
+```
+
+```ts
+// Good — the same signature everywhere; what differs is the implementation
+const getServices = (): TodoMvcServices => ({ idGenerator, listTodos, host: createServerSsrHost(...) })
+await baseApplication.run({ environment: 'prod', runtime: 'server' }, { getServices }).output
 ```
 
 A run lives as long as its runtime: one process on the server, one document in the browser. `getServices` is called once per run. Behaviours and delivery hold the state of one unit of work, so they are built by `createBehaviorsAndDelivery`, which `main` calls as often as the runtime needs: once per request on the server, once in the browser. Neither is built until `main` asks for it.

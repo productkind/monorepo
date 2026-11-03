@@ -1,23 +1,25 @@
-import { getServerServices } from './server-services.ts'
+import { listen } from './listen.ts'
+import { listTodos } from './todo-repository.ts'
 
-import { createApplication } from '@dungarees/core/application.ts'
+import { createIdGenerator } from '@dungarees/id-generator/service.ts'
+import { createServerSsrHost } from '@dungarees/ssr-react/server-host.ts'
 import { createViteSsrProductionServer } from '@dungarees/ssr-react/vite-production.ts'
 import { baseApplication } from '@dungarees/todo-mvc-base-app-ssr-react/base-app.ts'
+import type { TodoMvcServices } from '@dungarees/todo-mvc-base-app-ssr-react/services.ts'
 
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..')
 
-await createApplication(
-  {
-    getServices: [
-      {
-        patternPartial: { runtime: 'server' },
-        value: () =>
-          getServerServices({ root: ROOT, createSsrServer: createViteSsrProductionServer }),
-      },
-    ],
-  },
-  () => baseApplication,
-).run({ environment: 'prod', runtime: 'server' }).output
+const getServices = (): TodoMvcServices => ({
+  idGenerator: createIdGenerator({ generateUuid: () => crypto.randomUUID() }),
+  listTodos,
+  host: createServerSsrHost({
+    serve: async ({ render }) => {
+      await listen({ root: ROOT, createSsrServer: createViteSsrProductionServer, render })
+    },
+  }),
+})
+
+await baseApplication.run({ environment: 'prod', runtime: 'server' }, { getServices }).output
