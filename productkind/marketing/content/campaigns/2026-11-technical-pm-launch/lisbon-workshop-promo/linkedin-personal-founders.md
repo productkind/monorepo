@@ -1,5 +1,6 @@
 ---
-status: drafted
+status: posted
+date: 2026-11-04
 channels: [linkedin]
 account: kinga-personal
 ---
