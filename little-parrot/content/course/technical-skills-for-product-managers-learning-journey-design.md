@@ -2,9 +2,9 @@
 
 **Date:** 9 October 2026, revised 4 and 5 November 2026 **For:** Kinga and Tamas **Builds on:** the PM technical-fluency research in [`productkind/ai-research/pm-technical-fluency/`](../../../productkind/ai-research/pm-technical-fluency/), the research on PMs being told to use AI in [`productkind/ai-research/pm-use-ai/`](../../../productkind/ai-research/pm-use-ai/), and the waitlist page at [littleparrot.app/guides/technical-product-manager](https://littleparrot.app/guides/technical-product-manager) **Status:** a proposal to discuss. Nothing in it is built yet. Times, costs, workloads and completion targets are estimates or hypotheses to test.
 
-**What changed on 4 November 2026.** After the strategy discussion, the eight-week season became **one three-week cohort course with the whole arc**, modelled on the shape of Matt Pocock's two-week cohort courses on aihero.dev: the material is there to work through at your own pace, and the cohort supplies the deadlines, the community and four live sessions. The first run starts on Monday 18 January 2027. Each week has two lanes: a full lane of about four and a half hours and an essentials lane of about two and a half, and both the story's evidence and the Monday move sit in the essentials lane. Mission 7 is no longer a separate mission; its AI workflow is folded into the finale week. The document-style artefacts became lab outputs with worked answers and self-check lists; nothing is submitted or marked. The Monday moves on the learner's own product are applied on their own and never submitted, because that product is confidential; questions about it go to the live sessions. An earlier idea the same day, three separate two-to-three-week courses, was dropped: splitting the content before any cohort has given feedback would be deciding ahead of the evidence, and each slice would carry less value than PMs pay for. Sections 3, 4, 8, 9, 11, 13, 14 and 15 carry the changes; the missions' content is the same.
+**What changed on 4 November 2026.** After the strategy discussion, the eight-week season became **one three-week cohort course with the whole arc**, modelled on the shape of Matt Pocock's two-week cohort courses on aihero.dev: the material is there to work through at your own pace, and the cohort supplies the deadlines, the community and four live sessions. The first run starts on Tuesday 19 January 2027 (the date and the Tuesday slot were set on 5 November; this note first said Monday 18 January). Each week has two lanes: a full lane of about four and a half hours and an essentials lane of about two and a half, and both the story's evidence and the Monday move sit in the essentials lane. Mission 7 is no longer a separate mission; its AI workflow is folded into the finale week. The document-style artefacts became lab outputs with worked answers and self-check lists; nothing is submitted or marked. The Monday moves on the learner's own product are applied on their own and never submitted, because that product is confidential; questions about it go to the live sessions. An earlier idea the same day, three separate two-to-three-week courses, was dropped: splitting the content before any cohort has given feedback would be deciding ahead of the evidence, and each slice would carry less value than PMs pay for. Sections 3, 4, 8, 9, 11, 13, 14 and 15 carry the changes; the missions' content is the same.
 
-**What changed on 5 November 2026.** After reading the revision, Kinga took out personal feedback altogether (asking learners to write a bug report for the two of you to rate is too basic), moved the Monday move into the essentials lane (applying the week's skill at work is the most important thing), made the finale a question-and-discussion session rather than presentations, and removed learning partners and peer review (the self-paced part exists so everyone can do it whenever they have time, and a partner's calendar would get in the way). Later the same day she recut Mission 4: reproducing four bugs was too much hassle for too little excitement, and the important learning is how cookies and local storage work, so the mission is now one "works for me" bug investigated properly, with the sync escalation as a short second ticket. And Mission 6's analytics moved from PostHog to Twenty's own event tables in ClickHouse, read through Grafana, both running inside the learner's codespace: a check of the fork's source showed Twenty ships no third-party analytics, only its own, switched off by default.
+**What changed on 5 November 2026.** After reading the revision, Kinga took out personal feedback altogether (asking learners to write a bug report for the two of you to rate is too basic), moved the Monday move into the essentials lane (applying the week's skill at work is the most important thing), made the finale a question-and-discussion session rather than presentations, and removed learning partners and peer review (the self-paced part exists so everyone can do it whenever they have time, and a partner's calendar would get in the way). Later the same day she recut Mission 4: reproducing four bugs was too much hassle for too little excitement, and the important learning is how cookies and local storage work, so the mission is now one "works for me" bug investigated properly, with the sync escalation as a short second ticket. And Mission 6's analytics moved from PostHog to Twenty's own event tables in ClickHouse, read through Grafana, both running inside the learner's codespace: a check of the fork's source showed Twenty ships no third-party analytics, only its own, switched off by default. Kinga also set the schedule: the course starts on Tuesday 19 January 2027, every live session is on a Tuesday from 17:00 to 18:00 GMT, and the closing session is on Tuesday 9 February.
 
 ## The design on one page
 
@@ -76,7 +76,7 @@ The final decision is hard because of everything before it. That's the design: t
 
 ## 3. The journey at a glance
 
-One course, three weeks, two missions a week, the whole story from the security questionnaire to the final decision. The week's missions open on its Monday (or everything on day one, section 11), so people can work ahead or take it slow. Each week ends on one of the planned peaks.
+One course, three weeks, two missions a week, the whole story from the security questionnaire to the final decision. The week's missions open on its Tuesday, the day of the live session (or everything on day one, section 11), so people can work ahead or take it slow. Each week ends on one of the planned peaks.
 
 | Week | Theme | Missions | What you do | Ends on |
 | --- | --- | --- | --- | --- |
@@ -548,15 +548,15 @@ Re-run checks 7–10 a week before each workshop, because VS Code and Copilot ch
 
 ## 8. Live sessions, feedback and getting unstuck
 
-### Live sessions (60 minutes, Monday evenings, recorded)
+### Live sessions (60 minutes, Tuesdays 17:00–18:00 GMT, recorded)
 
-Four sessions: the kickoff on the first Monday, a clinic on each of the next two Mondays, and the finale on the Monday after week 3 ends. One slot at 18:00 UK covers Europe and lunchtime on the US east coast; a second staggered slot is worth adding only if sign-ups show the US west coast or Asia.
+Four sessions: the kickoff on the first Tuesday, a clinic on each of the next two Tuesdays, and the finale on the Tuesday after week 3 ends. The one slot, 17:00 to 18:00 GMT, is late afternoon in the UK, early evening in central Europe and midday on the US east coast; a second staggered slot is worth adding only if sign-ups show the US west coast or Asia.
 
 - **The kickoff.** The story in two minutes, the two messages that open week 1, the two lanes and how to pick one, how the worked answers and self-check lists work, and learners book their lab slots. Twenty minutes of questions.
-- **The clinics** (Mondays of weeks 2 and 3). **Two cases of 20 minutes each, 15 minutes of open questions, 5 minutes on the week ahead.** Questions can be sent in advance.
+- **The clinics** (Tuesdays of weeks 2 and 3). **Two cases of 20 minutes each, 15 minutes of open questions, 5 minutes on the week ahead.** Questions can be sent in advance.
 - **A case is** a sandbox lab output or a privacy-safe description of a real problem at work, including a Monday move that raised a question: no customer names, no screenshots of real data, no internal links. Learners submit by the Friday before and we pick two. Submitting is how your work gets discussed, which is the reason to submit. The live sessions are also the only place questions about a learner's own product are answered, since that work is never submitted.
 - **How a case runs.** The owner describes it in three minutes. The group asks questions first, which is practice in asking the questions an engineer would ask, and the closest thing in the journey to the skill learners say they want: holding their own in a technical conversation. Tamas answers as an engineer would. Kinga coaches the product decision. The owner finishes by saying what they'll do on Monday.
-- **The finale** (the Monday after week 3). Questions and discussion, no presentations: the two of you walk through your own briefs and why they disagree, then the floor is open for the rest of the hour. The before-and-after self-assessment and the certificate follow.
+- **The finale** (Tuesday 9 February, the Tuesday after week 3). Questions and discussion, no presentations: the two of you walk through your own briefs and why they disagree, then the floor is open for the rest of the hour. The before-and-after self-assessment and the certificate follow.
 - **Recordings have chapters** and transcripts, so people who can't attend can still watch the two cases.
 
 ### No marked work, no partners
@@ -584,7 +584,7 @@ The evidence on getting adults to finish online courses is less encouraging than
 | Starting with progress | Workshop attendees start the course with Mission 1 done, one of seven on the course map | Endowed progress: 34% finished a loyalty card with two stamps already on it, against 19% for a blank card of the same length (Nunes and Drèze). Consumer evidence, not learning |
 | Deciding when, in advance | At the end of the workshop, learners book two recurring 40-minute lab slots and pick their audio moment. We send calendar files | If-then plans have a solid track record (Gollwitzer and Sheeran, d = 0.65). But across 247 MOOCs, planning prompts raised engagement in the first weeks and didn't raise completion (Kizilcec and colleagues, 2020). This gets people started; the rest of the table has to keep them going |
 | A short commitment | Three weeks, with the whole story inside it | Our own judgement, backed by the format of Pocock's two-week cohort courses: three weeks is easier to say yes to than two months. The first run tests whether four hours a week is too much |
-| A weekly rhythm that carries the work | Monday: the live session, and the week's two messages and episodes. Friday: the lab outputs done, the Monday moves planned, cases and questions in for Monday. A shared start date | In Patterson's MOOC experiment, reminders had no effect, while a commitment learners set for themselves raised completion by 40%. So the Monday email is the mission itself, not a nudge, and the booked slots are the learner's own commitment |
+| A weekly rhythm that carries the work | Tuesday: the live session, and the week's two messages and episodes. Friday: the lab outputs done, cases and questions in for Tuesday. Monday: the Monday moves at work, before the next session. A shared start date | In Patterson's MOOC experiment, reminders had no effect, while a commitment learners set for themselves raised completion by 40%. So the Tuesday email is the mission itself, not a nudge, and the booked slots are the learner's own commitment |
 | Low effort to start | No installs, resume where you left off, sittings of 35–40 minutes with save points, and the essentials lane: a busy week costs about two and a half hours, not four and a half, and loses neither the story nor the Monday move | Ability, in Fogg's terms; learner-paced segments (Mayer) |
 | Value at work every week | The Monday move: the same skill on the learner's own product, in the essentials lane because applying it at work is the point; never submitted or reviewed, and how far to take it is the learner's call. A wins thread where learners share what happened (privacy-safe) | Using the skill at work is the point of the course (Baldwin and Ford). Seeing peers succeed is another source of self-efficacy (Bandura) |
 | The manager | A template message for the learner to send: what I'll learn, the time it takes, what I'll show you after week 2 and week 3. Sent with the self-assessment report | In Blume and colleagues' meta-analysis, a supportive work environment predicted whether training got used at work, and supervisor support more than peer support. Voluntary participation predicted it too, so when a company buys seats, joining stays the learner's choice. Also the route to expensing |
@@ -630,25 +630,25 @@ The evidence on getting adults to finish online courses is less encouraging than
 The shape follows Matt Pocock's two-week cohort courses on aihero.dev, as the course page described them on 4 November 2026: all lessons drop on day one so people can "work ahead or take it slow", office hours on three days (kickoff, end of week one, end of week two) with two time-zone slots each, questions sent in advance, recordings and transcripts, a channel in the Discord for the cohort, a free self-guided course before it, and everything "yours to keep forever". His page states no deadlines, no submissions and no weekly hours. What this design borrows is the drop, the few live sessions at the week boundaries, the free pre-course and the keep-forever access. The deadlines, the peer review and the personal feedback come from sections 8 and 9.
 
 - **One course, one price.** The whole arc in one purchase, which is what the research's price range in section 15 is for. Nothing is sliced off to sell separately until a cohort has said what it would pay for.
-- **Release.** The promise is everything on day one. If the build in section 14 can't deliver that for the first run, each week's two missions open on its Monday, and the promise is made from the second run.
-- **Deadlines.** Only one kind: clinic cases and questions are in by the Friday before each session. Lab outputs are never due, and the Monday moves are never submitted. The pace comes from the two missions on the map each week and the Monday session.
+- **Release.** The promise is everything on day one. If the build in section 14 can't deliver that for the first run, each week's two missions open on its Tuesday, and the promise is made from the second run.
+- **Deadlines.** Only one kind: clinic cases and questions are in by the Friday before each session. Lab outputs are never due, and the Monday moves are never submitted. The pace comes from the two missions on the map each week and the Tuesday session.
 - **Keep forever.** The missions, the recordings, the transcripts, the templates and the learner's own repository stay with them after the course.
 
-**The first run: from 18 January 2027**
+**The first run: from 19 January 2027**
 
 | Date | What happens |
 | --- | --- |
 | Wed 13 or Thu 14 January | Free online workshop (Mission 1). Enrolment closes Friday 15 January. |
-| Mon 18 January | **Live:** the kickoff. Week 1 opens: Missions 2 and 3. |
-| Fri 22 January | Cases and questions in for Monday. |
-| Mon 25 January | **Live:** clinic. Week 2 opens: Missions 4 and 5. |
-| Fri 29 January | Cases and questions in for Monday. Merged pull request share moment; first recommendation question. |
-| Mon 1 February | **Live:** clinic. Week 3 opens: Mission 6, then Mission 8. |
+| Tue 19 January, 17:00 GMT | **Live:** the kickoff. Week 1 opens: Missions 2 and 3. |
+| Fri 22 January | Cases and questions in for Tuesday. |
+| Tue 26 January, 17:00 GMT | **Live:** clinic. Week 2 opens: Missions 4 and 5. |
+| Fri 29 January | Cases and questions in for Tuesday. Merged pull request share moment; first recommendation question. |
+| Tue 2 February, 17:00 GMT | **Live:** clinic. Week 3 opens: Mission 6, then Mission 8. |
 | Fri 5 February | Week 3 wraps: the decision brief done and compared with the worked answers. Questions in for the finale. |
-| Mon 8 February | **Live:** the finale. |
-| Wed 10 February | Certificate and one-page portfolio sent. |
+| Tue 9 February, 17:00 GMT | **Live:** the finale, the closing session. |
+| Thu 11 February | Certificate and one-page portfolio sent. |
 
-Three weeks of work, four live sessions of 60 minutes, done by 8 February. Monday evening is the slot because Monday is the fresh-start landmark the completion research points to (section 9) and because a session that opens a week gives its first message a live send-off; Wednesday, the original clinic day, works the same way if Mondays prove hard.
+Three weeks of work, four live sessions of 60 minutes, done by 9 February. Tuesday 17:00 to 18:00 GMT is the slot (Kinga's decision on 5 November): the week's missions open the same day, so the session gives the first message a live send-off, and the Monday before each session is where the Monday move at work falls, so a question it raises is fresh for the clinic.
 
 ## 12. The learning science behind it
 
@@ -701,7 +701,7 @@ Each claim below was checked against the original paper or a reliable summary on
 
 ## 14. What to build first
 
-There are two of you, and the course is three weeks long, so there is no building during the run worth planning on. Aim to have everything built by 18 January, and treat weekly release as the fallback: week 2 by 25 January, week 3 by 1 February, which buys one and two weeks for the later missions. There are ten working weeks between 4 November 2026 and 18 January 2027 with Christmas in the middle, so the list below is the critical path. Folding Mission 7 away and moving four sittings into audio and worked answers is what makes it fit.
+There are two of you, and the course is three weeks long, so there is no building during the run worth planning on. Aim to have everything built by 19 January, and treat weekly release as the fallback: week 2 by 26 January, week 3 by 2 February, which buys one and two weeks for the later missions. There are ten working weeks between 4 November 2026 and 19 January 2027 with Christmas in the middle, so the list below is the critical path. Folding Mission 7 away and moving four sittings into audio and worked answers is what makes it fit.
 
 **Before launch**
 
@@ -713,7 +713,7 @@ There are two of you, and the course is three weeks long, so there is no buildin
 - Mission 1, both the workshop and its self-paced version, and Missions 2 and 3, with their audio.
 - Mission pages, a cohort channel in the Discord, a private podcast feed, calendar files, the lab output templates with their self-check lists.
 
-**By 18 January, or by the weekly fallback dates:** Missions 4 and 5 (25 January at the latest), Mission 6 and Mission 8 with Mission 7's AI step and Monday move folded in (1 February at the latest), with their audio. Then the feedback and the live sessions as they come.
+**By 19 January, or by the weekly fallback dates:** Missions 4 and 5 (26 January at the latest), Mission 6 and Mission 8 with Mission 7's AI step and Monday move folded in (2 February at the latest), with their audio. Then the feedback and the live sessions as they come.
 
 **Later:** the AI lab assistant, a team dashboard for managers, and the deeper track.
 
@@ -724,9 +724,9 @@ There are two of you, and the course is three weeks long, so there is no buildin
 3. **The fictional company and customer names.**
 4. **Price and seats.** The research suggests €400–€800 is a defensible range to test for an applied programme with feedback and a substantial output. One price for the whole course, at a founding discount for the first cohort.
 5. **Where it lives.** Your own site plus a community tool, or a cohort platform such as Maven that handles payments, reimbursement letters and discovery for a fee.
-6. **The live-session slot.** Monday or Wednesday evening, and one slot for the UK, Europe and US East or two staggered ones.
+6. **The live-session slot.** Decided on 5 November: Tuesdays, 17:00 to 18:00 GMT, one slot. A second staggered slot only if sign-ups show the US west coast or Asia.
 7. **AI prototyping.** A headline step, as on the waitlist page, or one of five options in the week 3 Monday move menu, as proposed here.
-8. **The lanes.** About four and a half hours a week on the full lane and two and a half on the essentials is the proposal, with the Monday move in both. If you'd rather promise less, the same content fits four weeks at about three and a half hours, with the finale on 15 February.
+8. **The lanes.** About four and a half hours a week on the full lane and two and a half on the essentials is the proposal, with the Monday move in both. If you'd rather promise less, the same content fits four weeks at about three and a half hours, with the finale on 16 February.
 9. **Mission 5's deploy.** It was planned as a new image version of the product, which Twenty's commercial licence rules out (section 6, Risks). I suggest a `deploy` command instead: it fetches the merged fix, builds it and restarts the ready-built app, so the learner still watches the services stop and start, and sees the app go down for a minute.
 10. **Release.** Everything on day one, as promised, or week by week for the first run if the build slips (section 14).
 
