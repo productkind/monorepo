@@ -233,11 +233,9 @@ I would assess it before a roadmap or delivery commitment whenever a proposed ch
 
 A Product Manager needs enough system context to describe the behaviour, follow the explanation, ask about dependencies and failure cases, and use the answer in a product decision. Engineering still owns production code and the implementation choice.
 
-## Become a Technical Product Manager Without Becoming an Engineer
+## How Your Product Works: Technical Foundations for Product Managers
 
-We're testing interest in an upcoming Little Parrot transformational learning journey called [**Become a Technical Product Manager Without Becoming an Engineer**](/guides/technical-product-manager).
-
-It's for non-technical software Product Managers who want to understand how their product works, investigate questions and contribute to scope and trade-off decisions with clearer evidence. The learning journey isn't available yet. If you'd like us to tell you when it opens, [visit the landing page and register your interest](/guides/technical-product-manager).
+If you'd like to go further, our three-week cohort course [**How Your Product Works: Technical Foundations for Product Managers**](/guides/technical-product-manager) is for software product managers without an engineering background. You spend three weeks inside one real product: trace how its parts work together, investigate a bug, follow a fix to production and answer a data question yourself. The first cohort starts on 19 January 2027.
 
 If you want to try the checklist first, take one roadmap item currently described as “small” and write down the user states, systems, data, dependencies and failure cases it could involve. Which questions do you need an engineer to help you answer?
 

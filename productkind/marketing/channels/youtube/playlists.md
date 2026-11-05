@@ -22,7 +22,7 @@ Titles and descriptions for the productkind YouTube playlists. Titles and descri
 
 ## Playlist 3 — Technical product management
 
-**Title:** Become a Technical Product Manager Without Becoming an Engineer
+**Title:** How Your Product Works: Technical Foundations for Product Managers
 
 **Description:** This technical product management series is for Product Managers without an engineering background.
 

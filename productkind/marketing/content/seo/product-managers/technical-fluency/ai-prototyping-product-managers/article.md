@@ -337,11 +337,9 @@ A prototype can make an interaction easier to inspect than a long description. I
 
 Set a time limit based on the value of the unanswered question. Stop when the prototype can produce the required evidence, when another method becomes more suitable or when the work reaches data, security or production decisions that need specialist input. A prototype that keeps growing can delay the learning it was meant to support.
 
-## Become a Technical Product Manager Without Becoming an Engineer
+## How Your Product Works: Technical Foundations for Product Managers
 
-We're testing interest in an upcoming Little Parrot transformational learning journey called [**Become a Technical Product Manager Without Becoming an Engineer**](/guides/technical-product-manager).
-
-It's for non-technical software Product Managers who want to understand how their product works, investigate questions and contribute to scope and trade-off decisions with clearer evidence. The learning journey isn't available yet. If you'd like us to tell you when it opens, [visit the landing page and register your interest](/guides/technical-product-manager).
+If you'd like to go further, our three-week cohort course [**How Your Product Works: Technical Foundations for Product Managers**](/guides/technical-product-manager) is for software product managers without an engineering background. You spend three weeks inside one real product: trace how its parts work together, investigate a bug, follow a fix to production and answer a data question yourself. The first cohort starts on 19 January 2027.
 
 Before your next prototype, write one sentence beginning _"We need evidence about whether..."_ Then list every feature you can leave out while still answering that question.
 

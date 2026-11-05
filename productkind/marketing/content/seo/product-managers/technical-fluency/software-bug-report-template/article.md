@@ -320,11 +320,9 @@ A screenshot may be enough for a visual defect with an obvious location. A probl
 
 It should contain enough information for another person to reconstruct the problem without guessing. A simple visual defect may need a few lines and a screenshot. An intermittent checkout failure may need conditions, several attempts, a recording and request evidence.
 
-## Become a Technical Product Manager Without Becoming an Engineer
+## How Your Product Works: Technical Foundations for Product Managers
 
-We're testing interest in an upcoming Little Parrot transformational learning journey called [**Become a Technical Product Manager Without Becoming an Engineer**](/guides/technical-product-manager).
-
-It's for non-technical software Product Managers who want to understand how their product works, investigate problems and contribute to technical decisions with better evidence. The learning journey isn't available yet. If you'd like us to tell you when it opens, [visit the landing page and register your interest](/guides/technical-product-manager).
+If you'd like to go further, our three-week cohort course [**How Your Product Works: Technical Foundations for Product Managers**](/guides/technical-product-manager) is for software product managers without an engineering background. You spend three weeks inside one real product: trace how its parts work together, investigate a bug, follow a fix to production and answer a data question yourself. The first cohort starts on 19 January 2027.
 
 The next time you create a bug report, write the title last. Read the completed report, then name the observed behaviour and the condition that produces it. Could another person understand the failure from that title without being told your suspected cause?
 

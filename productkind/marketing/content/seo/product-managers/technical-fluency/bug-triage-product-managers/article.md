@@ -285,11 +285,9 @@ No. Severity describes the effect of the problem. Priority describes when the te
 
 A Product Manager can narrow the conditions, separate facts from hypotheses and assess the user and business effect. Engineering usually needs to verify the root cause through requests, logs, monitoring and code. Working together keeps the technical evidence connected to the customer problem.
 
-## Become a Technical Product Manager Without Becoming an Engineer
+## How Your Product Works: Technical Foundations for Product Managers
 
-We're testing interest in an upcoming Little Parrot transformational learning journey called [**Become a Technical Product Manager Without Becoming an Engineer**](/guides/technical-product-manager).
-
-It's for non-technical software Product Managers who want to understand how their product works, investigate problems and contribute to technical decisions with better evidence. The learning journey isn't available yet. If you'd like us to tell you when it opens, [visit the landing page and register your interest](/guides/technical-product-manager).
+If you'd like to go further, our three-week cohort course [**How Your Product Works: Technical Foundations for Product Managers**](/guides/technical-product-manager) is for software product managers without an engineering background. You spend three weeks inside one real product: trace how its parts work together, investigate a bug, follow a fix to production and answer a data question yourself. The first cohort starts on 19 January 2027.
 
 For your next bug discussion, delay the priority label for five minutes. Ask for the observed effect, reach, frequency, workaround and confidence first. Which answer changes what your team should do next?
 
