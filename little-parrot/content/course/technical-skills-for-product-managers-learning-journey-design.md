@@ -636,6 +636,7 @@ The shape follows Matt Pocock's two-week cohort courses on aihero.dev, as the co
 
 | Date | What happens |
 | --- | --- |
+| Mon 14 December | Early-bird price (€490) ends; the founding price is €590 until enrolment closes. |
 | Wed 13 or Thu 14 January | Free online workshop (Mission 1). Enrolment closes Friday 15 January. |
 | Tue 19 January, 17:00 GMT | **Live:** the kickoff. Week 1 opens: Missions 2 and 3. |
 | Fri 22 January | Questions in for Tuesday's office hours. |
@@ -720,7 +721,7 @@ There are two of you, and the course is three weeks long, so there is no buildin
 1. **The training app.** I recommend Twenty, run by each learner in GitHub Codespaces, with Mealie as the fallback (section 6). Run the trial checks before deciding, above all which machine Twenty needs with the frontend running from source, and whether Copilot fixes Mission 1's bug from the bug report reliably.
 2. **The workshop's length.** Two hours with the setup and the Copilot fix, or the 90-minute version in Mission 1, which moves codespace creation into the setup email and the own-product exercise into homework.
 3. **The fictional company and customer names.**
-4. **Price and seats.** The research suggests €400–€800 is a defensible range to test for an applied programme with feedback and a substantial output. One price for the whole course, at a founding discount for the first cohort.
+4. **Price and seats.** Decided on 5 November 2026: the full price is €800, VAT included, from the second cohort. The first cohort pays on a ladder: €490 early bird until Monday 14 December 2026, €590 until enrolment closes on Friday 15 January 2027. One full price with the saving shown in euros, never two discounts stacked, and the 14-day refund is what makes enrolling early safe. The research's €400–€800 range and the under-€500 approval threshold are where the numbers come from.
 5. **Where it lives.** Your own site plus a community tool, or a cohort platform such as Maven that handles payments, reimbursement letters and discovery for a fee.
 6. **The live-session slot.** Decided on 5 November: Tuesdays, 17:00 to 18:00 GMT, one slot. A second staggered slot only if sign-ups show the US west coast or Asia.
 7. **AI prototyping.** A headline step, as on the waitlist page, or one of five options in the week 3 Monday move menu, as proposed here.

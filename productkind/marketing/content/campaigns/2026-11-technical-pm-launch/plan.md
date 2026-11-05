@@ -166,8 +166,8 @@ The remaining trial checks (15–18) are for the season, so they move to Decembe
 2. **Offer every attendee a 15-minute call.**
    - Enterprise PMs who ask their employer to pay need answers to their manager's questions. A conversation is more likely to lead to a sale than another email.
 3. Keep the series going at two a week.
-4. **Close enrolment on a real date,** e.g. 11 December, so invoices can go out before budgets close for the year and the founding group starts together.
-   - Say why the date exists. Don't use invented deadlines, scarcity or "last chance" pressure.
+4. **The price ladder (decided 5 November 2026, VAT included):** €490 early bird until Monday 14 December, €590 founding price until enrolment closes on Friday 15 January 2027, €800 from the second cohort. One full price with a strike-through and the saving in euros, never two discounts stacked.
+   - Say why each date exists: 14 December is the last realistic date to get an invoice into this year's budget, and 15 January is when the cohort starts. Don't use invented deadlines, scarcity or "last chance" pressure. The 14-day refund is what makes locking in a price early safe.
 
 ### January 2027: the founding season starts
 
@@ -226,21 +226,21 @@ GitHub deletes a codespace after 30 days without use (its default), so most Nove
 
 This builds on the design's Day 1/3/5 emails, adding the teams and objections emails that sold most in Matt's launch. No invented scarcity and no fear.
 
-1. **Day 1:** the recording, the field guide, Tamas's model bug report, and what the season is.
+1. **Day 1:** the recording, the field guide, Tamas's model bug report, and what the course is: 19 January start, three weeks, Tuesday office hours, and the price ladder (€490 until 14 December, €590 until 15 January, €800 from the second cohort, VAT included) with the 14-day refund.
 2. **Day 3:** a full audio briefing from Mission 2 with its transcript.
 3. **Day 5:** two things attendees did at work, quoted with permission.
 4. **Day 7, for your manager:**
    - what the learner will produce;
    - the outcomes in an employer's words;
-   - an invoice;
+   - an invoice, dated this year if the learner enrols by 14 December;
    - the manager message template;
-   - the team price.
+   - the price (€490 early bird, €590 founding, €800 full) and the team price.
 5. **Day 10, honest answers:**
    - "Do I need to code?"
    - "Can I install things on a company laptop?"
    - "What if I fall behind?"
    - "Can I learn this for free?" Yes, if you're self-directed, and say what the season adds.
-6. **Day 14 and the day before enrolment closes:** the real reason for the date (the January start, invoices before year-end), stated once.
+6. **Seven days, two days and the morning before each deadline (14 December, then 15 January):** the real reason for the date (invoices before year-end, then the January start), stated once, with the price that applies and the one it rises to. The last-day email is the one that sells most, so it goes out in the morning.
 
 ## 6. After the launch: making it repeatable
 
