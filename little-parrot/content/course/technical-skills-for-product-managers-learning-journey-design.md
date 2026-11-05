@@ -1,8 +1,10 @@
 # Technical PM learning journey: design proposal
 
-**Date:** 9 October 2026, revised 4 November 2026 **For:** Kinga and Tamas **Builds on:** the PM technical-fluency research in [`productkind/ai-research/pm-technical-fluency/`](../../../productkind/ai-research/pm-technical-fluency/), the research on PMs being told to use AI in [`productkind/ai-research/pm-use-ai/`](../../../productkind/ai-research/pm-use-ai/), and the waitlist page at [littleparrot.app/guides/technical-product-manager](https://littleparrot.app/guides/technical-product-manager) **Status:** a proposal to discuss. Nothing in it is built yet. Times, costs, workloads and completion targets are estimates or hypotheses to test.
+**Date:** 9 October 2026, revised 4 and 5 November 2026 **For:** Kinga and Tamas **Builds on:** the PM technical-fluency research in [`productkind/ai-research/pm-technical-fluency/`](../../../productkind/ai-research/pm-technical-fluency/), the research on PMs being told to use AI in [`productkind/ai-research/pm-use-ai/`](../../../productkind/ai-research/pm-use-ai/), and the waitlist page at [littleparrot.app/guides/technical-product-manager](https://littleparrot.app/guides/technical-product-manager) **Status:** a proposal to discuss. Nothing in it is built yet. Times, costs, workloads and completion targets are estimates or hypotheses to test.
 
-**What changed on 4 November 2026.** After the strategy discussion, the eight-week season became **one three-week cohort course with the whole arc**, modelled on the shape of Matt Pocock's two-week cohort courses on aihero.dev: the material is there to work through at your own pace, and the cohort supplies the deadlines, the community and four live sessions. The first run starts on Monday 18 January 2027. Each week has two lanes: a full lane of about four hours and an essentials lane of about two, and the story's evidence sits in the essentials lane. Mission 7 is no longer a separate mission; its AI workflow is folded into the finale week. The document-style artefacts became lab outputs with worked answers; the bug report and the decision brief get personal feedback. The Monday moves on the learner's own product are applied on their own and never submitted, because that product is confidential; questions about it go to the live sessions. An earlier idea the same day, three separate two-to-three-week courses, was dropped: splitting the content before any cohort has given feedback would be deciding ahead of the evidence, and each slice would carry less value than PMs pay for. Sections 3, 4, 8, 9, 11, 13, 14 and 15 carry the changes; the missions' content is the same.
+**What changed on 4 November 2026.** After the strategy discussion, the eight-week season became **one three-week cohort course with the whole arc**, modelled on the shape of Matt Pocock's two-week cohort courses on aihero.dev: the material is there to work through at your own pace, and the cohort supplies the deadlines, the community and four live sessions. The first run starts on Monday 18 January 2027. Each week has two lanes: a full lane of about four and a half hours and an essentials lane of about two and a half, and both the story's evidence and the Monday move sit in the essentials lane. Mission 7 is no longer a separate mission; its AI workflow is folded into the finale week. The document-style artefacts became lab outputs with worked answers and self-check lists; nothing is submitted or marked. The Monday moves on the learner's own product are applied on their own and never submitted, because that product is confidential; questions about it go to the live sessions. An earlier idea the same day, three separate two-to-three-week courses, was dropped: splitting the content before any cohort has given feedback would be deciding ahead of the evidence, and each slice would carry less value than PMs pay for. Sections 3, 4, 8, 9, 11, 13, 14 and 15 carry the changes; the missions' content is the same.
+
+**What changed on 5 November 2026.** After reading the revision, Kinga took out personal feedback altogether (asking learners to write a bug report for the two of you to rate is too basic), moved the Monday move into the essentials lane (applying the week's skill at work is the most important thing), made the finale a question-and-discussion session rather than presentations, and removed learning partners and peer review (the self-paced part exists so everyone can do it whenever they have time, and a partner's calendar would get in the way).
 
 ## The design on one page
 
@@ -11,9 +13,9 @@
 - **The same rhythm every week.** Predict, investigate in the training product, compare with a worked answer, then make the same move on your own product (the "Monday move"). The sandbox is where the skill is learned and checked; the learner's own product is where they apply it, on their own, and it stays their choice how far they take it.
 - **Audio for the commute.** Each mission has up to three optional 8–10 minute briefings (the product story, an engineer explains, a debate), delivered to the learner's own podcast app, with a question to think about before and after, and a transcript.
 - **The missions add up.** Evidence planted in earlier missions (an escalation the network tab can't explain, a flaky test, a worrying number in the data) all points to the same part of the system. The final mission asks the learner to decide whether to fix it or build the feature a big customer is asking for.
-- **Two lanes every week.** The full lane is about four hours: both sittings of each mission, the audio and the Monday move. The essentials lane is about two: one sitting per mission and its lab output, and every piece of evidence the finale needs is in it. A learner picks the lane week by week.
-- **Personal feedback on two pieces of sandbox work.** The bug report (week 2) and the decision brief (week 3) get written feedback from the two of you against a published rubric. Everything else the labs produce (the system map, the feasibility brief, the triage table, the release update, the data answer) is practice with a worked answer, not a deliverable. The learner's own product is confidential: the Monday moves are never submitted or reviewed, and a learner with a question about their own product brings it to a live session as a privacy-safe description.
-- **Built to be finished.** Three weeks instead of two months; lab slots booked into the calendar during the workshop; a learning partner; a short agreement with the learner's manager; the essentials lane for a busy week; no streaks and no guilt messages.
+- **Two lanes every week.** The essentials lane is about two and a half hours: one sitting per mission, its lab output and the Monday move on your own product, and every piece of evidence the finale needs is in it. The full lane is about four and a half: the second sitting of each mission and the audio as well, an hour of which can happen on a commute. A learner picks the lane week by week.
+- **Worked answers, not marked work.** Everything the labs produce (the system map, the feasibility brief, the triage table, the bug report, the release update, the data answer, the decision brief) is practice: the learner compares it with how Tamas or Kinga did it, using a short self-check list, and nothing is submitted or marked. The time with the two of you is the four live sessions. The learner's own product is confidential: the Monday moves are never submitted or reviewed, and a learner with a question about their own product brings it to a live session as a privacy-safe description.
+- **Built to be finished.** Three weeks instead of two months; lab slots booked into the calendar during the workshop; a short agreement with the learner's manager; the essentials lane for a busy week; no streaks and no guilt messages.
 
 ## 1. What we're designing for
 
@@ -25,14 +27,14 @@ The research also recommended one coherent mechanism for the whole course: learn
 
 ### What people pay for
 
-The willingness-to-pay research found that buyers pay for structured practice, expert feedback, live access, doing the work alongside peers and a finished artefact. The information itself is available free. One caution: in the evidence behind "a finished artefact", the artefact is nearly always a working prototype from an AI-prototyping course, something visible and new. A filled-in template about a fictional company is not that, which is why this design keeps the reviewed sandbox documents to two and treats the rest as practice, and why what the learner takes home is the skill applied to their own product rather than a folder of documents. Maven's case study of Tech for Product says the instructor gives the information away and students pay for the live sessions, follow-up access and doing the work with peers. Skiplevel reports that 61% of its students expense the programme ([willingness to pay](../../../productkind/ai-research/pm-technical-fluency/pm-technical-fluency-willingness-to-pay-2026-08.md)).
+The willingness-to-pay research found that buyers pay for structured practice, expert feedback, live access, doing the work alongside peers and a finished artefact. The information itself is available free. One caution: in the evidence behind "a finished artefact", the artefact is nearly always a working prototype from an AI-prototyping course, something visible and new. A filled-in template about a fictional company is not that, which is why this design treats the sandbox documents as practice with a worked answer rather than deliverables, and why what the learner takes home is the skill applied to their own product rather than a folder of documents. Maven's case study of Tech for Product says the instructor gives the information away and students pay for the live sessions, follow-up access and doing the work with peers. Skiplevel reports that 61% of its students expense the programme ([willingness to pay](../../../productkind/ai-research/pm-technical-fluency/pm-technical-fluency-willingness-to-pay-2026-08.md)). Expert access in this design is the live sessions. It leaves out personal feedback on documents on purpose: rating a bug report is too basic to be worth the learner's money or the two of you's time, and it would cap the cohort at what two people can mark.
 
 So in this design the feedback, the live sessions and the weekly application to the learner's own product are the core of the product, and the route to an employer paying is built in from the first day.
 
 ### Constraints
 
 - **Company laptops.** Many learners can't install software, and some companies restrict developer tools, GitHub or AI tools. Section 6 covers this.
-- **Two of us.** Live time and personal feedback have to be capped per learner, and the labs have to run without us.
+- **Two of us.** Live time has to be capped per learner, and the labs have to run without us.
 - **Busy learners.** The journey has to fit around a full-time job, with weeks when nothing gets done.
 - **The Little Parrot format didn't engage enough for this.** This journey uses hands-on labs at a computer, audio and live sessions, and keeps short phone-sized pieces only for recall questions and reading the mission message.
 
@@ -76,14 +78,14 @@ The final decision is hard because of everything before it. That's the design: t
 
 One course, three weeks, two missions a week, the whole story from the security questionnaire to the final decision. The week's missions open on its Monday (or everything on day one, section 11), so people can work ahead or take it slow. Each week ends on one of the planned peaks.
 
-| Week | Theme | Missions | What you do | Ends on | Feedback |
-| --- | --- | --- | --- | --- | --- |
-| Pre-work | Mission 1, free | Workshop or self-paced | Set up your copy, trace the failed save, fix it with Copilot | A found and fixed bug |  |
-| 1 | How your product works, and what it can do | 2 and 3 | Map everything that runs and every third party; send API requests, catch a webhook, judge the integration | The feasibility brief goes to sales | Peer review of the brief |
-| 2 | From bug report to production | 4 and 5 | Triage the tickets and write the bug report; follow the fix through review and deploy; ship and roll back your own change | Your first merged pull request | Personal feedback on the bug report |
-| 3 | The evidence, then the decision | 6 and 8, with 7 folded in | Check the board-deck number with a funnel and a query; use AI to assemble the evidence pack and check it; decide feature or rebuild | The final decision, and the certificate | Personal feedback on the decision brief |
+| Week | Theme | Missions | What you do | Ends on |
+| --- | --- | --- | --- | --- |
+| Pre-work | Mission 1, free | Workshop or self-paced | Set up your copy, trace the failed save, fix it with Copilot | A found and fixed bug |
+| 1 | How your product works, and what it can do | 2 and 3 | Map everything that runs and every third party; send API requests, catch a webhook, judge the integration | The feasibility brief goes to sales |
+| 2 | From bug report to production | 4 and 5 | Triage the tickets and write the bug report; follow the fix through review and deploy; ship and roll back your own change | Your first merged pull request |
+| 3 | The evidence, then the decision | 6 and 8, with 7 folded in | Check the board-deck number with a funnel and a query; use AI to assemble the evidence pack and check it; decide feature or rebuild | The final decision, and the certificate |
 
-**Two lanes.** Each week has a full lane of about four hours and an essentials lane of about two. The essentials lane is one sitting per mission plus its lab output; the full lane adds the second sitting, the audio and the Monday move. The story's evidence is placed so that the essentials lane carries all of it: the worker in Mission 2's first sitting, the integration's incoming half in Mission 3's worked answer, the sync escalation in Mission 4's fourth ticket, the flaky test in Mission 5's first sitting, the churn number in Mission 6's second sitting. A learner who takes the essentials lane all three weeks still arrives at the finale with everything the decision needs. Each mission in section 5 says what is in which lane, and what moved from a sitting into the audio or the worked answer to make the week fit.
+**Two lanes.** Each week has an essentials lane of about two and a half hours and a full lane of about four and a half. The essentials lane is one sitting per mission, its lab output and the Monday move, because applying the week's skill at work is the most important thing in the course and no busy week should drop it. The full lane adds the second sitting and the audio. The story's evidence is placed so that the essentials lane carries all of it: the worker in Mission 2's first sitting, the integration's incoming half in Mission 3's worked answer, the sync escalation in Mission 4's fourth ticket, the flaky test in Mission 5's first sitting, the churn number in Mission 6's second sitting. A learner who takes the essentials lane all three weeks still arrives at the finale with everything the decision needs. Each mission in section 5 says what is in which lane, and what moved from a sitting into the audio or the worked answer to make the week fit.
 
 Mission 1 stays free and is the pre-work, the way a free self-guided course sits before a paid cohort. It is also the setup step.
 
@@ -94,10 +96,10 @@ Every mission also has a Monday move: the same thing, done on the learner's own 
 | Pre-work: live and free at a workshop, or self-paced | **1. "Saving doesn't work"** (how a web app works, one request deep) | Customer success: Calder clicked Save and the company isn't there | Set up your development environment and start the app; confirm nothing was saved; follow the failed save from the browser through the network and the server to the database; give your bug report to GitHub Copilot and test its fix | A map of how a web app works, a bug report, a tested fix and your own copy of the product |
 | Week 1 | **2. Where does our customers' data go?** (how a web app works, the whole system) | Sales forwards a prospect's security questionnaire | Find everything else that runs (worker, queue, cache) and every third party | A system map and the questionnaire answers |
 | Week 1 | **3. Can we promise the integration?** (APIs, webhooks, integrations) | Sales: "It's just an API, right?" | Send API requests, break them on purpose, catch a webhook | An integration feasibility brief |
-| Week 2 | **4. Four escalations before lunch** (bug triage) | Customer success forwards four tickets | Triage each one: bug or not, where, how bad | A triage table and a bug report on one sandbox ticket (personal feedback) |
+| Week 2 | **4. Four escalations before lunch** (bug triage) | Customer success forwards four tickets | Triage each one: bug or not, where, how bad | A triage table and a bug report on one sandbox ticket |
 | Week 2 | **5. It's merged, so where is it?** (deployment) | The CEO: Calder was promised the fix today | Follow the fix through review and checks, deploy it to your own copy; ship and roll back your own change on GitHub | A stakeholder update and your first merged pull request |
 | Week 3 | **6. Did the onboarding checklist work?** (product analytics) | The head of product questions a board-deck number | Check the events fire, answer with a funnel and a SQL query | A data answer |
-| Week 3 | **8. The renewal feature or the rebuild?** (technical debt or new feature), with Mission 7's AI workflow as its AI step | One sprint, two asks | Use AI to assemble the evidence from every mission and check it; weigh the options | The Calder decision brief (personal feedback), the final session and a certificate |
+| Week 3 | **8. The renewal feature or the rebuild?** (technical debt or new feature), with Mission 7's AI workflow as its AI step | One sprint, two asks | Use AI to assemble the evidence from every mission and check it; weigh the options | The Calder decision brief, the final session and a certificate |
 
 Mission 7 keeps its number so the cross-references in this document still work, but it is no longer a mission of its own: its AI workflow is the AI step of Mission 8, and its menu of workflows is the Monday move for week 3 (section 5). The course map shows seven missions.
 
@@ -117,10 +119,10 @@ Every mission from Mission 2 on has the same eight steps (Mission 1 has its own 
 | 4. Lab | Two sittings of 35–40 min | Laptop browser | Hands-on in your own copy of the product, with a hint ladder | Practice on the whole realistic task (Merrill), in chunks the learner works through at their own pace (Mayer's segmenting principle) |
 | 5. Worked answer | 5–10 min | Laptop | How Tamas or Kinga did it, step by step, then one question: "What did they check that you didn't?" | Worked examples help beginners most; once learners have the basics, trying first and then seeing the expert solution helps them apply it to new problems (productive failure) |
 | 6. Lab output | 15–20 min | Laptop | The lab's document, made from a template and compared with the worked answer. Rehearsal, not a deliverable: nothing is due and nothing is marked | Applying the new skill to produce something, then seeing the expert version (Merrill's application principle) |
-| 7. Monday move | 15–30 min | At work | The same move on your own product. This is where the week's learning gets used, so it's encouraged every week, and it's the learner's choice how far to take it. Their product is confidential, so nothing is submitted or reviewed; questions about it come to the live sessions | Using the skill in your own world (Merrill's integration principle); transfer of training (Baldwin and Ford) |
+| 7. Monday move | 15–30 min | At work | The same move on your own product. This is where the week's learning gets used, so it is in the essentials lane, and it's the learner's choice how far to take it. Their product is confidential, so nothing is submitted or reviewed; questions about it come to the live sessions | Using the skill in your own world (Merrill's integration principle); transfer of training (Baldwin and Ford) |
 | 8. Recall | 3 min | Phone | Three questions from earlier missions, at the start of the next one | Retrieval practice and spacing. Mixing topics helps most where categories are easy to confuse, such as the four kinds of problem in Mission 4 (interleaving) |
 
-**Time.** Two missions a week. On the essentials lane (steps 1, 3, 4 with one sitting, 5, 6 and 8) each mission takes about an hour, so about two hours a week. On the full lane (both sittings, the briefings and the Monday move) each takes about two, so about four hours a week, of which up to an hour is audio that can happen on a commute.
+**Time.** Two missions a week. On the essentials lane (steps 1, 3, 4 with one sitting, 5, 6, 7 and 8) each mission takes about an hour and a quarter, so about two and a half hours a week. On the full lane (both sittings and the briefings as well) each takes about two and a quarter, so about four and a half hours a week, of which up to an hour is audio that can happen on a commute.
 
 **Support fades across the three weeks.** Missions 1 and 2 give every click. By Mission 4, learners get the goal and a hint ladder. By Mission 8, they get the decision and a template. This follows the worked-example research: step-by-step guidance helps beginners and gets in the way once they know the basics (the expertise reversal effect), and removing worked steps gradually works better than removing them all at once (fading). It also settles a real tension in the evidence. Worked examples favour showing first, productive failure favours trying first. The season does both, in that order: shown first while everything is new, tried first once the learner has something to try with.
 
@@ -128,11 +130,11 @@ Every mission from Mission 2 on has the same eight steps (Mission 1 has its own 
 
 **The hint ladder.** Every lab step has three hints: a nudge ("look at the requests shown in red"), a pointer ("open the Payload tab of the graphql request that went out when you clicked Save") and the worked step. Using hints costs nothing. We read which hints get opened most to find the confusing steps and fix them.
 
-**The two lanes.** Each mission marks its essentials: one sitting plus the lab output, about an hour. A learner having a busy week takes the essentials lane for both missions and still completes the week with everything the finale needs. The full lane adds the second sitting, the briefings and the Monday move. The second sitting stays open after the week ends, so a learner can come back to it, and the two lanes are the first thing to measure in the founding cohort (section 13).
+**The two lanes.** Each mission marks its essentials: one sitting, the lab output and the Monday move, about an hour and a quarter. A learner having a busy week takes the essentials lane for both missions and still completes the week with everything the finale needs, and still applies both skills at work. The full lane adds the second sitting and the briefings. The second sitting stays open after the week ends, so a learner can come back to it, and the two lanes are the first thing to measure in the founding cohort (section 13).
 
 ## 5. The missions
 
-Each mission lists the message, what the learner does, the worked answer, the lab output, the Monday move, the AI step, the audio briefings and what it plants for the finale. Each mission also says which sitting is the essentials lane, and what moved from a sitting into the audio or the worked answer when the season became three weeks. The two lab outputs that get personal feedback are in Mission 4 and Mission 8.
+Each mission lists the message, what the learner does, the worked answer, the lab output, the Monday move, the AI step, the audio briefings and what it plants for the finale. Each mission also says which sitting is the essentials lane, and what moved from a sitting into the audio or the worked answer when the season became three weeks. Nothing is submitted or marked: every lab output comes with a worked answer and a self-check list drawn from it.
 
 ### Mission 1: "Saving doesn't work" (live at a free workshop, or self-paced)
 
@@ -248,7 +250,7 @@ Mission 1 followed one request down through four layers. Mission 2 goes wide: ev
 
 **Worked answer.** Kinga's brief, with Tamas's notes on the failure modes she left out.
 
-**Lab output.** An integration feasibility brief: "yes, if…", the open questions and who answers each one. Learning partners swap briefs and review them against the published rubric: is the yes conditional on the right things, are the failure modes named, is each open question addressed to the person who can answer it.
+**Lab output.** An integration feasibility brief: "yes, if…", the open questions and who answers each one. The self-check list: is the yes conditional on the right things, are the failure modes named, is each open question addressed to the person who can answer it.
 
 **Monday move.** Find your product's API documentation (public or internal) and one integration your customers use. Write down which way the data flows, what triggers it, what happens when it fails and who owns it. Together with Mission 2's move, that gives you a first map of your own product, for your own use.
 
@@ -279,7 +281,7 @@ Mission 1 followed one request down through four layers. Mission 2 goes wide: ev
 
 **Worked answer.** Tamas's triage table, then an audio reveal of what was wrong in each case and how an engineer would fix it.
 
-**Lab output.** A triage table for all four tickets and one full bug report on the sandbox ticket of your choice, which gets **personal feedback** from Tamas or Kinga against a rubric published on day one:
+**Lab output.** A triage table for all four tickets and one full bug report on the sandbox ticket of your choice, checked against the list that comes with the template:
 
 - someone else can follow the steps and see the problem;
 - expected and actual behaviour are both stated;
@@ -332,7 +334,7 @@ Mission 1 followed one request down through four layers. Mission 2 goes wide: ev
 
 **Worked answer.** Kinga's data answer and the corrected query.
 
-**Lab output.** A one-page data answer (the question, the definition, the query, the result, your confidence, the caveats and the recommendation). Learning partners swap answers and review them against the rubric.
+**Lab output.** A one-page data answer (the question, the definition, the query, the result, your confidence, the caveats and the recommendation). The self-check list: is the definition stated in one sentence, does the query match it, are the test accounts excluded, is the pricing change named as a caveat.
 
 **Monday move.** Pick one metric your team reports. Find its written definition and the events behind it. Or write the tracking plan for your next feature.
 
@@ -388,13 +390,13 @@ Then listen to the interviews with the engineering lead and the head of sales (a
 
 **Sitting 2: decide.** Lay out the options: (A) the feature first, (B) the rebuild first, (C) fix only the part both depend on (the retry and queue handling the sync and the integration would share), then build a smaller first version of the integration, (D) buy an integration platform. Compare them on the cost of delay (the renewal's value), the cost the debt adds to every change (extra time, the bug rate), risk, how reversible each choice is, and what each would teach the team. Recommend one. Say what engineering decides (how), what Product decides (what and when), and how you'll know it worked.
 
-**Lanes.** Essentials: a shorter sitting 1 (the evidence from the lab outputs and the AI step, without the interviews) and sitting 2. Full lane: the interviews and the week 3 Monday move from Mission 7.
+**Lanes.** Essentials: a shorter sitting 1 (the evidence from the lab outputs and the AI step, without the interviews) and sitting 2. Full lane: the interviews as well. The week 3 Monday move from Mission 7 is in the essentials lane, like every Monday move.
 
 **Worked answer.** Shown after submission, not before: Kinga's and Tamas's briefs, which deliberately recommend different options.
 
-**Lab output.** The Calder decision brief, which gets **personal feedback**, and which the learner brings to the final session. Learners who want to can also write a second brief on a real decision from their job, for their own use; it stays private, and they can bring the dilemma to the final session as a privacy-safe description.
+**Lab output.** The Calder decision brief, compared with the two worked answers, and the source of the questions the learner brings to the final session. Learners who want to can also write a second brief on a real decision from their job, for their own use; it stays private, and they can bring the dilemma to the final session as a privacy-safe description.
 
-**The finale.** The final live session, where small groups present their briefs in five minutes each, with Tamas asking the engineering lead's questions and Kinga the head of product's. Learners retake the confidence self-assessment, get a before-and-after summary for their manager and receive a certificate.
+**The finale.** The final live session is questions and discussion, not presentations. Kinga and Tamas walk through their two briefs and why they disagree, then the floor is open: what learners decided, which evidence swayed them, what they would ask their own engineering lead, and anything else from the three weeks. Learners retake the confidence self-assessment, get a before-and-after summary for their manager and receive a certificate.
 
 **Audio.** The debate: Kinga argues for the feature, Tamas for the rebuild, and they work towards option C together, showing how a PM and an engineer can reach a decision neither started with.
 
@@ -544,22 +546,18 @@ Re-run checks 7–10 a week before each workshop, because VS Code and Copilot ch
 
 Four sessions: the kickoff on the first Monday, a clinic on each of the next two Mondays, and the finale on the Monday after week 3 ends. One slot at 18:00 UK covers Europe and lunchtime on the US east coast; a second staggered slot is worth adding only if sign-ups show the US west coast or Asia.
 
-- **The kickoff.** The story in two minutes, the two messages that open week 1, the two lanes and how to pick one, the rubrics for the bug report and the decision brief, and learners book their lab slots and meet their learning partner. Twenty minutes of questions.
+- **The kickoff.** The story in two minutes, the two messages that open week 1, the two lanes and how to pick one, how the worked answers and self-check lists work, and learners book their lab slots. Twenty minutes of questions.
 - **The clinics** (Mondays of weeks 2 and 3). **Two cases of 20 minutes each, 15 minutes of open questions, 5 minutes on the week ahead.** Questions can be sent in advance.
 - **A case is** a sandbox lab output or a privacy-safe description of a real problem at work, including a Monday move that raised a question: no customer names, no screenshots of real data, no internal links. Learners submit by the Friday before and we pick two. Submitting is how your work gets discussed, which is the reason to submit. The live sessions are also the only place questions about a learner's own product are answered, since that work is never submitted.
-- **How a case runs.** The owner presents in three minutes. The group asks questions first, which is practice in asking the questions an engineer would ask, and the closest thing in the journey to the skill learners say they want: holding their own in a technical conversation. Tamas answers as an engineer would. Kinga coaches the product decision. The owner finishes by saying what they'll do on Monday.
-- **The finale** (the Monday after week 3). Small groups present their decision briefs, the before-and-after self-assessment, the certificate.
+- **How a case runs.** The owner describes it in three minutes. The group asks questions first, which is practice in asking the questions an engineer would ask, and the closest thing in the journey to the skill learners say they want: holding their own in a technical conversation. Tamas answers as an engineer would. Kinga coaches the product decision. The owner finishes by saying what they'll do on Monday.
+- **The finale** (the Monday after week 3). Questions and discussion, no presentations: the two of you walk through your own briefs and why they disagree, then the floor is open for the rest of the hour. The before-and-after self-assessment and the certificate follow.
 - **Recordings have chapters** and transcripts, so people who can't attend can still watch the two cases.
 
-### Personal feedback
+### No marked work, no partners
 
-- **On two lab outputs, both sandbox work:** the bug report (due at the end of week 2) and the decision brief (due at the end of week 3). Written comments or a short screen recording, within three working days of the deadline. Nothing about the learner's own product is ever submitted; it's confidential, and questions about it go to the live sessions.
-- **Rubrics are published on day one**, so learners know what good looks like before they start. Each piece of feedback answers three questions from Hattie and Timperley's feedback model: what was the goal, how close is this, and what's the next step. It's about the work and the method, never the person: in Kluger and DeNisi's review, over a third of feedback interventions made performance worse, and praise or criticism of the person is the least useful kind. Feedback that carries more information works better (Wisniewski, Zierer and Hattie, 2020), which is the case for a specific written comment over a score.
-- **Workload estimate:** 25 learners × 2 outputs × 15 minutes ≈ 12.5 hours per run, in two batches a week apart.
-
-### Peer review
-
-Two lab outputs, the feasibility brief (week 1) and the data answer (week 3), are swapped between learning partners and reviewed against the same rubric as the worked answer. Reviewing someone else's work against clear criteria is practice for the reviewer as well as feedback for the author. Nothing is due; the swap is the pair's joint task.
+- **Nothing a learner makes is submitted, marked or reviewed.** Each lab output comes with a worked answer and a short self-check list drawn from it, so the learner sees what good looks like and where theirs differs. Personal feedback on documents is left out on purpose: asking people to write a bug report for the two of you to rate is too basic for this audience, it would cap the cohort at what two people can mark, and what learners pay for is time with you, which the four live sessions give everyone.
+- **No learning partners and no peer review.** The self-paced part of the course exists so that everyone can do it whenever they have time. A partner puts someone else's calendar in the way, and the one large trial of accountability partners found no effect on completion (section 12). Learners who want company have the cohort channel and the clinics.
+- **The feedback that remains is in the room.** A clinic case gets the group's questions and the two of you's answers, and the finale is an hour of discussion.
 
 ### Getting unstuck between sessions
 
@@ -580,11 +578,10 @@ The evidence on getting adults to finish online courses is less encouraging than
 | Starting with progress | Workshop attendees start the course with Mission 1 done, one of seven on the course map | Endowed progress: 34% finished a loyalty card with two stamps already on it, against 19% for a blank card of the same length (Nunes and Drèze). Consumer evidence, not learning |
 | Deciding when, in advance | At the end of the workshop, learners book two recurring 40-minute lab slots and pick their audio moment. We send calendar files | If-then plans have a solid track record (Gollwitzer and Sheeran, d = 0.65). But across 247 MOOCs, planning prompts raised engagement in the first weeks and didn't raise completion (Kizilcec and colleagues, 2020). This gets people started; the rest of the table has to keep them going |
 | A short commitment | Three weeks, with the whole story inside it | Our own judgement, backed by the format of Pocock's two-week cohort courses: three weeks is easier to say yes to than two months. The first run tests whether four hours a week is too much |
-| A weekly rhythm that carries the work | Monday: the live session, and the week's two messages and episodes. Friday: the lab outputs done, the reviewed one submitted, the move on your own product planned, cases in for Monday. A shared start date | In Patterson's MOOC experiment, reminders had no effect, while a commitment learners set for themselves raised completion by 40%. So the Monday email is the mission itself, not a nudge, and the booked slots are the learner's own commitment |
-| Low effort to start | No installs, resume where you left off, sittings of 35–40 minutes with save points, and the essentials lane: a busy week costs two hours, not four, and loses none of the story | Ability, in Fogg's terms; learner-paced segments (Mayer) |
-| Value at work every week | The Monday move: the same skill on the learner's own product, encouraged every week, never required or reviewed; whether they apply it is the learner's call. A wins thread where learners share what happened (privacy-safe) | Using the skill at work is the point of the course (Baldwin and Ford). Seeing peers succeed is another source of self-efficacy (Bandura) |
+| A weekly rhythm that carries the work | Monday: the live session, and the week's two messages and episodes. Friday: the lab outputs done, the Monday moves planned, cases and questions in for Monday. A shared start date | In Patterson's MOOC experiment, reminders had no effect, while a commitment learners set for themselves raised completion by 40%. So the Monday email is the mission itself, not a nudge, and the booked slots are the learner's own commitment |
+| Low effort to start | No installs, resume where you left off, sittings of 35–40 minutes with save points, and the essentials lane: a busy week costs about two and a half hours, not four and a half, and loses neither the story nor the Monday move | Ability, in Fogg's terms; learner-paced segments (Mayer) |
+| Value at work every week | The Monday move: the same skill on the learner's own product, in the essentials lane because applying it at work is the point; never submitted or reviewed, and how far to take it is the learner's call. A wins thread where learners share what happened (privacy-safe) | Using the skill at work is the point of the course (Baldwin and Ford). Seeing peers succeed is another source of self-efficacy (Bandura) |
 | The manager | A template message for the learner to send: what I'll learn, the time it takes, what I'll show you after week 2 and week 3. Sent with the self-assessment report | In Blume and colleagues' meta-analysis, a supportive work environment predicted whether training got used at work, and supervisor support more than peer support. Voluntary participation predicted it too, so when a company buys seats, joining stays the learner's choice. Also the route to expensing |
-| A learning partner, as an experiment | We pair learners by time zone and, where possible, industry, and give each pair a concrete joint task: swapping peer reviews of two lab outputs. Colleagues from the same company pair up | Weak evidence: prompting online learners to find an accountability partner had no average effect on completion in a 1,259-person trial (Li and colleagues, 2025). Relatedness is the hardest of the three self-determination needs to meet online. Worth trying with a real task attached, and worth dropping if the founding cohort shows no difference |
 | Choice | The Monday move, the AI workflow, and the option to write the final brief about a real decision from work | Of the three self-determination needs, autonomy is the one most consistently linked to outcomes in online-course research |
 | A way back after a bad week | The essentials lane; second sittings stay open after their week; Monday messages that say "start from here"; one free move to the next run | People start new goals more often after time landmarks such as a new week or month (Dai, Milkman and Riis). Archival evidence on diets and gym visits |
 | A visible finish line | A course map with the three weeks and the finale on it, shown on day one; in week 3, "two missions to your certificate" | People speed up as a reward gets closer (Kivetz, Urminsky and Zheng). Consumer evidence |
@@ -597,7 +594,7 @@ The evidence on getting adults to finish online courses is less encouraging than
 
 - **Templates that travel at work.** The bug report, the feasibility brief, the stakeholder update and the decision brief are formats a learner will reuse on their own product the following week. When a colleague asks where the format came from, that's a recommendation. The templates carry a small footer with the course name.
 - **Share moments at the peaks.** Each week ends on one: the feasibility brief that goes to sales, the learner's first merged pull request, the final decision. At the finale, the certificate and a one-page portfolio (the learner's own system map and a summary of the decision brief) that works as a LinkedIn post.
-- **Bring a colleague.** A second-seat discount for people from the same company, who then become learning partners. When a learner finishes, their manager gets the before-and-after summary and an offer for a team run.
+- **Bring a colleague.** A second-seat discount for people from the same company. When a learner finishes, their manager gets the before-and-after summary and an offer for a team run.
 - **Ask at the right moment.** A recommendation question after Mission 5 and at the finale. Learners who score 9 or 10 get a direct ask with a link to the next free workshop.
 - **Alumni clinics.** A monthly open clinic for past learners keeps them close, gives them a reason to bring colleagues and gives us a steady supply of real cases.
 
@@ -628,7 +625,7 @@ The shape follows Matt Pocock's two-week cohort courses on aihero.dev, as the co
 
 - **One course, one price.** The whole arc in one purchase, which is what the research's price range in section 15 is for. Nothing is sliced off to sell separately until a cohort has said what it would pay for.
 - **Release.** The promise is everything on day one. If the build in section 14 can't deliver that for the first run, each week's two missions open on its Monday, and the promise is made from the second run.
-- **Deadlines.** The bug report is due on the Friday of week 2 and the decision brief on the Friday of week 3; clinic cases are due on the Friday before each session. The other lab outputs are never due, and the Monday moves are never submitted.
+- **Deadlines.** Only one kind: clinic cases and questions are in by the Friday before each session. Lab outputs are never due, and the Monday moves are never submitted. The pace comes from the two missions on the map each week and the Monday session.
 - **Keep forever.** The missions, the recordings, the transcripts, the templates and the learner's own repository stay with them after the course.
 
 **The first run: from 18 January 2027**
@@ -637,14 +634,13 @@ The shape follows Matt Pocock's two-week cohort courses on aihero.dev, as the co
 | --- | --- |
 | Wed 13 or Thu 14 January | Free online workshop (Mission 1). Enrolment closes Friday 15 January. |
 | Mon 18 January | **Live:** the kickoff. Week 1 opens: Missions 2 and 3. |
-| Fri 22 January | Feasibility briefs swapped with learning partners; cases in for Monday. |
+| Fri 22 January | Cases and questions in for Monday. |
 | Mon 25 January | **Live:** clinic. Week 2 opens: Missions 4 and 5. |
-| Fri 29 January | Due: the bug report, and cases. Merged pull request share moment; first recommendation question. |
+| Fri 29 January | Cases and questions in for Monday. Merged pull request share moment; first recommendation question. |
 | Mon 1 February | **Live:** clinic. Week 3 opens: Mission 6, then Mission 8. |
-| Wed 3 February | Bug report feedback back. |
-| Fri 5 February | Due: the decision brief. Data answers swapped with learning partners. |
+| Fri 5 February | Week 3 wraps: the decision brief done and compared with the worked answers. Questions in for the finale. |
 | Mon 8 February | **Live:** the finale. |
-| Wed 10 February | Decision brief feedback, certificate and one-page portfolio sent. |
+| Wed 10 February | Certificate and one-page portfolio sent. |
 
 Three weeks of work, four live sessions of 60 minutes, done by 8 February. Monday evening is the slot because Monday is the fresh-start landmark the completion research points to (section 9) and because a session that opens a week gives its first message a live send-off; Wednesday, the original clinic day, works the same way if Mondays prove hard.
 
@@ -664,12 +660,12 @@ Each claim below was checked against the original paper or a reliable summary on
 | Generation effect (Slamecka and Graf, 1978; Bertsch and colleagues, 2007) | Producing material yourself beats reading it, by about 0.40 of a standard deviation | Predictions, artefacts, writing the bug report before seeing ours | Varies a lot by material |
 | Multimedia principles (Mayer, 2017) | Learner-paced segments help (d = 0.70); so does signalling the structure | Sittings with save points; the same eight steps every week | Mostly short lab lessons with immediate tests |
 | Learning from audio (Daniel and Woody, 2010; Clinton-Lisell meta-analysis; Leahy and Sweller, 2011) | Mixed: reading beat a podcast in one classroom study; across 46 studies, reading and listening came out about equal, with reading ahead for inference; long, complex spoken explanations do worse than written ones | Briefings are short, optional and transcribed, and never carry anything the lab needs | No direct study of conceptual against procedural audio; our split is an inference |
-| Feedback (Hattie and Timperley, 2007; Wisniewski, Zierer and Hattie, 2020; Kluger and DeNisi, 1996) | Feedback helps on average (d = 0.48), more when it carries more information, and over a third of interventions made things worse, especially feedback aimed at the person | Rubric-based personal feedback on two artefacts; worked answers after every lab | High variation between studies |
+| Feedback (Hattie and Timperley, 2007; Wisniewski, Zierer and Hattie, 2020; Kluger and DeNisi, 1996) | Feedback helps on average (d = 0.48), more when it carries more information, and over a third of interventions made things worse, especially feedback aimed at the person | Worked answers and self-check lists after every lab, no marked work, so the person-directed feedback that made things worse in Kluger and DeNisi's review can't happen | High variation between studies |
 | Transfer of training (Baldwin and Ford, 1988; Blume and colleagues, 2010) | Whether training gets used at work depends on the learner, the training design and the work environment; supervisor support and voluntary participation both predicted transfer | Monday moves, the manager message, voluntary team seats | The authors flag inconsistent ways of measuring transfer |
 | Self-efficacy (Bandura, 1977) | Belief in your ability to do a task comes mainly from doing it successfully, then from seeing peers do it | Mission 1's bug, found and then fixed with Copilot; the wins thread |  |
 | Self-determination theory (Deci and Ryan; Ryan and Deci, 2000) | Autonomy, competence and relatedness support motivation; autonomy is the one most consistently linked to outcomes in online-course research | Choice of Monday move, AI workflow and final brief; clinics; partners | Mostly self-report surveys; few studies measure actual completion |
 | Implementation intentions (Gollwitzer and Sheeran, 2006; Kizilcec and colleagues, 2020) | If-then plans help people act (d = 0.65), but planning prompts across 247 MOOCs raised early engagement and not completion | Booking lab slots at the workshop | Expect it to help the start, not the finish |
-| Commitment and accountability (Patterson, 2018; Li and colleagues, 2025) | A self-set commitment raised MOOC completion by 40%; reminders alone did nothing; prompting people to find an accountability partner had no average effect | Booked slots as the learner's own commitment; partners only with a real joint task | One course and one trial each |
+| Commitment and accountability (Patterson, 2018; Li and colleagues, 2025) | A self-set commitment raised MOOC completion by 40%; reminders alone did nothing; prompting people to find an accountability partner had no average effect | Booked slots as the learner's own commitment; no partners, because the trial found no effect and a partner's calendar works against self-pacing | One course and one trial each |
 | Endowed progress, goal gradient, fresh start (Nunes and Drèze, 2006; Kivetz and colleagues, 2006; Dai, Milkman and Riis, 2014) | Pre-filled progress, a close finish line and time landmarks all increase effort | A workshop's Mission 1 counts; the journey map; Monday restarts | Consumer and health settings, not learning |
 | Peak-end rule (Kahneman and colleagues, 1993; Finn, 2010) | Experiences are remembered largely by their peak and their end; a better ending makes people more willing to repeat | Planned peaks and the final clinic | Shapes willingness to come back and recommend, not learning |
 | Curiosity (Loewenstein, 1994) and the Ovsiankina effect (Ghibellini and Meier, 2025) | Noticing a gap in what you know creates curiosity; people tend to go back to unfinished tasks | The mission message; the teaser at the end of each worked answer | The Zeigarnik effect (better memory for unfinished tasks) didn't hold up in the same meta-analysis |
@@ -682,7 +678,6 @@ Each claim below was checked against the original paper or a reliable summary on
 - **We use analytics on ourselves.** The course teaches product analytics, so it should be instrumented properly:
   - per mission: started, lab finished, lab output compared with the worked answer, Monday move reported, which shows exactly where people stop;
   - per week: which lane each learner took, and whether essentials-lane learners come back for the second sittings;
-  - the bug report and the decision brief submitted;
   - a one-question weekly pulse: "How useful was this week for your actual work? 1–5, and why?". Since nothing about the learner's own product is ever submitted, this is the only measure of whether the Monday moves are landing, and the first thing to read each week;
   - live-session attendance and recording views;
   - hint use per lab step, to find confusing steps;
@@ -693,8 +688,8 @@ Each claim below was checked against the original paper or a reliable summary on
   - the before-and-after self-assessment;
   - wins reported, counted and kept as stories.
 - **Targets to test, not promises:** 80% finish Mission 2, 70% submit a bug report, 60% submit a decision brief. For comparison, and none of these is a like-for-like benchmark: on MIT and Harvard's edX courses in 2017–18, 46% of paying learners completed, against 3% of all participants (Reich and Ruipérez-Valiente, 2019). A course platform's own data shows scheduled cohorts completing at 53% and open self-paced courses at 42% (Ruzuku, 2026, observational). HBS Online reported 85% for its paid, application-based CORe programme. Price, selection and different definitions of "completed" muddy every one of these, and the 90%-plus figures quoted for altMBA have no primary source.
-- **Partners and planning prompts get a test of their own.** The evidence for both is weak (section 9), so compare completion between learners who did and didn't book their slots, and pairs who did and didn't swap reviews. Learners choose these themselves, so read the result as a signal, not proof.
-- **The lanes are the first thing to read.** If most learners take the essentials lane every week, four hours was the wrong promise and the next run is four weeks at three hours. If most take the full lane and finish, three weeks holds.
+- **Planning prompts get a test of their own.** The evidence is weak (section 9), so compare completion between learners who did and didn't book their slots. Learners choose this themselves, so read the result as a signal, not proof.
+- **The lanes are the first thing to read.** If most learners take the essentials lane every week, four and a half hours was the wrong promise and the next run is four weeks at about three and a half. If most take the full lane and finish, three weeks holds.
 - **The Monday moves get the same treatment.** Compare pulse scores between learners who report doing their Monday moves and learners who don't. Whether PMs will apply the week's skill to their own product between sessions is the open question this design rests on; the user interviews should ask it before the first run and the pulse answers it during.
 - **Interviews:** five learners who finished, and every learner who stopped and is willing to talk.
 
@@ -710,7 +705,7 @@ There are two of you, and the course is three weeks long, so there is no buildin
 - The help-centre repository template, with checks and preview links.
 - The cohort's analytics project with three months of made-up usage.
 - Mission 1, both the workshop and its self-paced version, and Missions 2 and 3, with their audio.
-- Mission pages, a cohort channel in the Discord, a private podcast feed, calendar files, the lab output templates, and the rubrics for the bug report and the decision brief.
+- Mission pages, a cohort channel in the Discord, a private podcast feed, calendar files, the lab output templates with their self-check lists.
 
 **By 18 January, or by the weekly fallback dates:** Missions 4 and 5 (25 January at the latest), Mission 6 and Mission 8 with Mission 7's AI step and Monday move folded in (1 February at the latest), with their audio. Then the feedback and the live sessions as they come.
 
@@ -725,7 +720,7 @@ There are two of you, and the course is three weeks long, so there is no buildin
 5. **Where it lives.** Your own site plus a community tool, or a cohort platform such as Maven that handles payments, reimbursement letters and discovery for a fee.
 6. **The live-session slot.** Monday or Wednesday evening, and one slot for the UK, Europe and US East or two staggered ones.
 7. **AI prototyping.** A headline step, as on the waitlist page, or one of five options in the week 3 Monday move menu, as proposed here.
-8. **The lanes.** Four hours a week on the full lane and two on the essentials is the proposal. If you'd rather promise less, the same content fits four weeks at about three hours, with the finale on 15 February.
+8. **The lanes.** About four and a half hours a week on the full lane and two and a half on the essentials is the proposal, with the Monday move in both. If you'd rather promise less, the same content fits four weeks at about three and a half hours, with the finale on 15 February.
 9. **Mission 5's deploy.** It was planned as a new image version of the product, which Twenty's commercial licence rules out (section 6, Risks). I suggest a `deploy` command instead: it fetches the merged fix, builds it and restarts the ready-built app, so the learner still watches the services stop and start, and sees the app go down for a minute.
 10. **Release.** Everything on day one, as promised, or week by week for the first run if the build slips (section 14).
 
@@ -735,8 +730,8 @@ The waitlist page at [littleparrot.app/guides/technical-product-manager](https:/
 
 - **The page describes one eight-step path.** This design is a free workshop followed by one three-week course of seven missions.
 - **"How the learning path works"** says every step is "in short cards you can work through on your phone". The labs here need a laptop browser; only the audio, the messages and the recall questions work on a phone.
-- **The FAQ "How long does it take?"** says each step "takes under an hour, in short cards you can work through on your phone". The course here is three weeks at about four hours a week, with an essentials lane of about two.
-- **The page doesn't mention** the free workshop, the live sessions, personal feedback, or the audio briefings, which the research says are what people pay for.
+- **The FAQ "How long does it take?"** says each step "takes under an hour, in short cards you can work through on your phone". The course here is three weeks at about four and a half hours a week, with an essentials lane of about two and a half.
+- **The page doesn't mention** the free workshop, the live sessions or the audio briefings, which the research says are what people pay for.
 - **The step order.** Bug triage now comes before deployment. The page already says the order may change.
 - **Step 7, "AI prototyping for product managers".** Your new topic list says "Using AI for product management workflows". This design makes prototyping one option in the week 3 Monday move menu.
 - **Step 5, "SQL and product analytics".** Still covered, with tracking plans and checking events added, as in your topic list.
