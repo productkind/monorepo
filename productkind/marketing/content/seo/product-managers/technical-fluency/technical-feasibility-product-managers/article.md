@@ -235,7 +235,7 @@ A Product Manager needs enough system context to describe the behaviour, follow 
 
 ## How Your Product Works: Technical Foundations for Product Managers
 
-If you'd like to go further, our three-week cohort course [**How Your Product Works: Technical Foundations for Product Managers**](/guides/technical-product-manager) is for software product managers without an engineering background. You spend three weeks inside one real product: trace how its parts work together, investigate a bug, follow a fix to production and answer a data question yourself. The first cohort starts on 19 January 2027.
+If you'd like to go further, our three-week cohort-based course [**How Your Product Works: Technical Foundations for Product Managers**](/guides/technical-product-manager) is for software product managers without an engineering background. You spend three weeks inside one real product: trace how its parts work together, investigate a bug, follow a fix to production and answer a data question yourself. The first cohort starts on 19 January 2027.
 
 If you want to try the checklist first, take one roadmap item currently described as “small” and write down the user states, systems, data, dependencies and failure cases it could involve. Which questions do you need an engineer to help you answer?
 

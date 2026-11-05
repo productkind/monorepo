@@ -339,7 +339,7 @@ Set a time limit based on the value of the unanswered question. Stop when the pr
 
 ## How Your Product Works: Technical Foundations for Product Managers
 
-If you'd like to go further, our three-week cohort course [**How Your Product Works: Technical Foundations for Product Managers**](/guides/technical-product-manager) is for software product managers without an engineering background. You spend three weeks inside one real product: trace how its parts work together, investigate a bug, follow a fix to production and answer a data question yourself. The first cohort starts on 19 January 2027.
+If you'd like to go further, our three-week cohort-based course [**How Your Product Works: Technical Foundations for Product Managers**](/guides/technical-product-manager) is for software product managers without an engineering background. You spend three weeks inside one real product: trace how its parts work together, investigate a bug, follow a fix to production and answer a data question yourself. The first cohort starts on 19 January 2027.
 
 Before your next prototype, write one sentence beginning _"We need evidence about whether..."_ Then list every feature you can leave out while still answering that question.
 

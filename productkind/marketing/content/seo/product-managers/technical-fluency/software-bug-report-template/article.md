@@ -322,7 +322,7 @@ It should contain enough information for another person to reconstruct the probl
 
 ## How Your Product Works: Technical Foundations for Product Managers
 
-If you'd like to go further, our three-week cohort course [**How Your Product Works: Technical Foundations for Product Managers**](/guides/technical-product-manager) is for software product managers without an engineering background. You spend three weeks inside one real product: trace how its parts work together, investigate a bug, follow a fix to production and answer a data question yourself. The first cohort starts on 19 January 2027.
+If you'd like to go further, our three-week cohort-based course [**How Your Product Works: Technical Foundations for Product Managers**](/guides/technical-product-manager) is for software product managers without an engineering background. You spend three weeks inside one real product: trace how its parts work together, investigate a bug, follow a fix to production and answer a data question yourself. The first cohort starts on 19 January 2027.
 
 The next time you create a bug report, write the title last. Read the completed report, then name the observed behaviour and the condition that produces it. Could another person understand the failure from that title without being told your suspected cause?
 
