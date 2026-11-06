@@ -357,7 +357,7 @@ const Home = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.youtube.com/xPEmvEMcxk0">
+                  <a href="https://www.youtube.com/watch?v=xPEmvEMcxk0">
                     The Infrastructure Gap: Where AI Falls Short in Product Development
                   </a>
                 </li>
