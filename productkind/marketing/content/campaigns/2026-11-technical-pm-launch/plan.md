@@ -14,7 +14,7 @@ channels: [linkedin, email, communities, events, partners]
 - [the September validation campaign](../2026-09-pm-technical-fluency-validation/brief.md)
 - [the content ideas planned to feed the waitlist](../2026-09-waitlist-value-content/README.md)
 
-**Waitlist page:** https://littleparrot.app/guides/technical-product-manager
+**Waitlist page:** https://littleparrot.app/courses/technical-foundations-for-product-managers
 
 Numbers marked _target_ are guesses to test, not forecasts.
 

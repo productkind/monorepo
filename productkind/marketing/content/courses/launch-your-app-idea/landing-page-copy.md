@@ -2,8 +2,8 @@
 status: drafted
 brand: little-parrot
 page_type: learning-journey
-url: https://littleparrot.app/guides/launch-your-app-idea-with-lovable
-redirect_from: https://littleparrot.app/guides/building-apps-with-ai
+url: https://littleparrot.app/courses/build-an-app-with-lovable-that-people-pay-for
+redirect_from: https://littleparrot.app/journeys/launch-your-app-idea-with-lovable, https://littleparrot.app/guides/building-apps-with-ai
 ---
 
 # Landing page copy: Build an App with Lovable That People Pay For

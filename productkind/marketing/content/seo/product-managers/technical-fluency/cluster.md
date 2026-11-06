@@ -11,7 +11,7 @@ campaign: pm-technical-fluency-validation-2026-09
 
 This cluster is for practising, generalist software Product Managers who want to make better technical product decisions without taking over an engineer's job. The content should help a reader do one piece of real PM work: question a rough scope, inspect evidence, investigate an issue, pull product data or build a bounded prototype.
 
-The conversion destination is the existing [`/guides/technical-product-manager`](https://littleparrot.app/guides/technical-product-manager) landing page. It sells the three-week cohort-based course **How Your Product Works: Technical Foundations for Product Managers**, first cohort from 19 January 2027. Supporting articles should serve their query completely before inviting an interested reader to visit the landing page and register their interest.
+The conversion destination is the existing [`/guides/technical-product-manager`](https://littleparrot.app/courses/technical-foundations-for-product-managers) landing page. It sells the three-week cohort-based course **How Your Product Works: Technical Foundations for Product Managers**, first cohort from 19 January 2027. Supporting articles should serve their query completely before inviting an interested reader to visit the landing page and register their interest.
 
 ## Strategic decision
 
