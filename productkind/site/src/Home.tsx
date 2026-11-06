@@ -351,7 +351,7 @@ const Home = () => {
             <dd>
               <ul>
                 <li>
-                  <a href="https://www.weyweyweb.com/workshops/build-your-ai-product-coach/">
+                  <a href="https://2025.weyweyweb.com/workshops/build-your-ai-product-coach/">
                     Build Your AI Product Coach: A Hands-on Workshop for Writing Impactful User
                     Stories
                   </a>
