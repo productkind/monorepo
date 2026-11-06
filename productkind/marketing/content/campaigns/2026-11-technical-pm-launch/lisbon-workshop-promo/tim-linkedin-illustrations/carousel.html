@@ -1,0 +1,1758 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Technical Skills in the AI Era: LinkedIn illustrations (Little Parrot)</title>
+    <!-- Little Parrot-branded twin of productkind.html (keep the two in sync).
+     BRAND: swap this link to re-brand the whole carousel.
+     Fonts load via @import inside the brand file (needs a network connection). -->
+    <style>
+      /* Little Parrot brand tokens for the carousel design system.
+         Link this file from a carousel to render it in the Little Parrot brand.
+
+         Non-CSS brand facts (set these in the HTML):
+         - Header handle text:  LittleParrot.app
+         - Mascots:             assets/little-parrot/ (parrot-with-computer.png,
+                                little-parrot-wave.png)
+         - Accent stops for partial gradients (window dots, dial cards, charts):
+           #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70
+      */
+      @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+      :root {
+        --grad: linear-gradient(120deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70);
+        --grad-wash:
+          linear-gradient(120deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020), #ffffff;
+
+        --font-display:
+          'Space Mono', monospace; /* headlines, header row, kickers, labels, badges */
+        --font-copy: 'Inter', sans-serif; /* body copy on slides */
+        --font-plain: 'Inter', sans-serif; /* supporting/secondary text */
+        --font-mono: 'Space Mono', monospace; /* prompt windows, chart labels */
+
+        --weight-headline: 700; /* Space Mono only has 400 and 700 */
+        --weight-copy: 400;
+
+        --ink: #080809;
+        --ink-secondary: #4a4a50;
+      }
+    </style>
+    <style>
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      body.single {
+        overflow: hidden;
+      }
+      body.single #strip {
+        padding: 0 !important;
+        gap: 0 !important;
+        background: none !important;
+        min-height: 0 !important;
+      }
+      body.single section {
+        display: none;
+      }
+      body.single section.current {
+        display: block;
+      }
+      body:not(.crop) .cropguide {
+        display: none;
+      }
+      @media print {
+        #strip {
+          padding: 0 !important;
+          gap: 0 !important;
+          background: none !important;
+          min-height: 0 !important;
+          display: block !important;
+        }
+        section {
+          page-break-after: always;
+          break-after: page;
+        }
+        @page {
+          size: 1080px 1350px;
+          margin: 0;
+        }
+      }
+
+      /* ========================================================================
+     Shared carousel design system (Little Parrot + productkind).
+     Everything brand-specific comes from the CSS variables defined in
+     brands/<brand>.css: --grad, --grad-wash, --font-display, --font-copy,
+     --font-plain, --font-mono, --weight-headline, --weight-copy, --ink,
+     --ink-secondary.
+     ======================================================================== */
+
+      /* Slide and card */
+      section.slide {
+        flex: none;
+        width: 1080px;
+        height: 1350px;
+        position: relative;
+        overflow: hidden;
+        background: var(--grad-wash);
+        box-sizing: border-box;
+      }
+      .card {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        width: 880px;
+        height: 1150px;
+        box-sizing: border-box;
+        background: #ffffff;
+        border: 12px solid var(--ink);
+        box-shadow: 12px 12px 0 rgba(8, 8, 9, 0.25);
+        display: flex;
+        flex-direction: column;
+      }
+      .gradbar {
+        flex: none;
+        height: 24px;
+        background: var(--grad);
+      }
+      .inner {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 56px 72px 64px;
+        box-sizing: border-box;
+      }
+      /* Vertically centre a slide's body while the header stays at the top:
+     keep .header as the first child of .inner, then wrap the rest in
+     <div class="slidebody">…</div>. Use this instead of the space-between
+     default whenever a slide has no bottom-anchored element, so content
+     sits centred rather than pushed to the top with a gap below. */
+      .slidebody {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      /* Header row: handle left, page count right */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: var(--font-display);
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        color: var(--ink);
+      }
+      .header .handle {
+        font-size: 32px;
+      }
+      .header .page {
+        font-size: 24px;
+      }
+
+      /* Voiced text */
+      .headline {
+        margin: 0;
+        font-family: var(--font-display);
+        font-weight: var(--weight-headline);
+        line-height: 1.45;
+        color: var(--ink);
+        text-wrap: pretty;
+      }
+      .copy {
+        margin: 0;
+        font-family: var(--font-copy);
+        font-weight: var(--weight-copy);
+        font-size: 34px;
+        line-height: 1.45;
+        color: var(--ink);
+        text-wrap: pretty;
+      }
+      .kicker {
+        font-family: var(--font-display);
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        color: var(--ink);
+      }
+      /* Little Parrot carousels centre their display text; mockup/chat content
+     (prompt windows, Slack cards, quote cards) stays left-aligned. */
+      .headline,
+      .copy,
+      .kicker {
+        text-align: center;
+      }
+      /* Keep line-height ≥ 1.45 on any block whose .hl wraps across lines, so
+     the strips of adjacent lines don't cover each other. The background-size
+     trick below also trims the strip to 90% of the line's glyph box,
+     vertically centred. */
+      /* The gradient wash is the emphasis; the highlight keeps its paragraph's
+     own font family and weight (no forced bold), so a headline highlight
+     stays headline-weight and a body highlight stays body-weight. */
+      .hl {
+        background: var(--grad);
+        background-position: 0 50%;
+        background-size: 100% 90%;
+        background-repeat: no-repeat;
+        padding: 0 0.12em;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+      }
+
+      /* Framed content box (photos, charts, quote cards, mockups) */
+      .frame {
+        border: 4px solid var(--ink);
+        box-shadow: 12px 12px 0 rgba(8, 8, 9, 0.25);
+        background: #ffffff;
+        position: relative;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+      .frame.muted {
+        background: #e8e8ea;
+      }
+      .frame.muted p,
+      .muted-copy {
+        color: var(--ink-secondary);
+      }
+
+      /* Inverse (black) statement card */
+      .inverse {
+        background: var(--ink);
+        padding: 34px 40px;
+      }
+      .inverse p {
+        margin: 0;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 1.3;
+        color: #ffffff;
+        text-wrap: pretty;
+      }
+      .inverse .hl-text {
+        background: var(--grad);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Badge (bordered label box, e.g. the CTA URL) */
+      .badge {
+        font-family: var(--font-display);
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        border: 4px solid var(--ink);
+        box-shadow: 12px 12px 0 rgba(8, 8, 9, 0.25);
+        padding: 20px 36px;
+        color: var(--ink);
+        background: #ffffff;
+      }
+
+      /* Prompt window: the chat-input mockup for anything the reader literally
+     types. Monospace, cursor, send arrow. Markdown symbols inside it are
+     typed text, never decoration. */
+      .promptlabel {
+        font-family: var(--font-mono);
+        font-weight: 700;
+        font-size: 20px;
+        letter-spacing: 0.08em;
+        color: var(--ink-secondary);
+      }
+      .promptwin {
+        background: #ffffff;
+        border: 4px solid var(--ink);
+        border-radius: 28px;
+        box-shadow: 12px 12px 0 rgba(8, 8, 9, 0.25);
+        position: relative;
+      }
+      .promptwin pre {
+        margin: 0;
+        font-family: var(--font-mono);
+        white-space: pre-wrap;
+        color: var(--ink);
+      }
+      .send {
+        position: absolute;
+        right: 28px;
+        bottom: 24px;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: var(--ink);
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+      }
+      .cursor {
+        display: inline-block;
+        width: 4px;
+        height: 1.1em;
+        background: var(--ink);
+        vertical-align: text-bottom;
+      }
+
+      /* Slack-style message mockup */
+      .slack {
+        background: #ffffff;
+        border: 4px solid var(--ink);
+        box-shadow: 8px 8px 0 rgba(8, 8, 9, 0.25);
+        padding: 28px 34px;
+        display: flex;
+        gap: 20px;
+        font-family: var(--font-plain);
+      }
+      .slack .avatar {
+        flex: none;
+        width: 56px;
+        height: 56px;
+        border: 4px solid var(--ink);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-mono);
+        font-weight: 700;
+        font-size: 28px;
+        color: var(--ink);
+        box-sizing: border-box;
+      }
+      .slack .msghead {
+        font-weight: 700;
+        font-size: 24px;
+        color: var(--ink);
+      }
+      .slack .msghead .time {
+        font-weight: 400;
+        font-size: 19px;
+        color: #9a9aa3;
+        margin-left: 10px;
+      }
+      .slack .msgbody {
+        font-size: 23px;
+        line-height: 1.5;
+        color: var(--ink);
+        margin-top: 6px;
+      }
+
+      /* Instagram post mockup: a visual-only stand-in for a carousel post
+     (avatar, image area, "multiple slides" glyph, carousel dots, caption
+     bars). Holds no text, so it never needs spec coverage. Mark the active
+     carousel dot with class "on". */
+      .igpost {
+        border: 4px solid var(--ink);
+        box-shadow: 12px 12px 0 rgba(8, 8, 9, 0.25);
+        background: #ffffff;
+        box-sizing: border-box;
+      }
+      .igpost .ighead {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 18px 20px;
+      }
+      .igpost .igavatar {
+        flex: none;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: 3px solid var(--ink);
+        background: var(--grad);
+        box-sizing: border-box;
+      }
+      .igpost .igbar {
+        height: 13px;
+        border-radius: 7px;
+        background: var(--ink);
+      }
+      .igpost .igbar.sub {
+        height: 11px;
+        background: #c9c9cf;
+        margin-top: 8px;
+      }
+      .igpost .igimage {
+        position: relative;
+        height: 320px;
+        border-top: 3px solid var(--ink);
+        border-bottom: 3px solid var(--ink);
+        background: var(--grad-wash);
+      }
+      .igpost .igstack {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 34px;
+        height: 34px;
+      }
+      .igpost .igstack span {
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        border: 3px solid var(--ink);
+        background: #ffffff;
+        box-sizing: border-box;
+      }
+      .igpost .igstack span:first-child {
+        top: 0;
+        right: 0;
+      }
+      .igpost .igstack span:last-child {
+        bottom: 0;
+        left: 0;
+      }
+      .igpost .igdots {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+      }
+      .igpost .igdots span {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #ffffff;
+        border: 2px solid var(--ink);
+        box-sizing: border-box;
+      }
+      .igpost .igdots span.on {
+        background: var(--ink);
+      }
+      .igpost .igcaption {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 18px 20px;
+      }
+      .igpost .igcaption span {
+        display: block;
+        height: 12px;
+        border-radius: 6px;
+        background: #e8e8ea;
+      }
+
+      /* iPhone mockup: a device frame for app screenshots. Put an
+     <img class="photo"> (or an .imgslot placeholder) inside .phonescreen;
+     the metal rail, the black bezel, the dynamic island and the side
+     buttons are drawn in CSS. Scale the whole device with --phone-w on the
+     .phone element; every other measurement is derived from it.
+     A screenshot taken on an iPhone already carries its own status bar and
+     home indicator, so those two are opt-in: add .statusbar for a drawn
+     status bar (web screenshots, or images cropped above the clock) and
+     .homebar for the home indicator. Set --phone-ink to #ffffff when the
+     screenshot behind them is dark. */
+      .phone {
+        --phone-w: 420px;
+        --phone-ink: #08080f;
+        position: relative;
+        flex: none;
+        width: var(--phone-w);
+        aspect-ratio: 393 / 852;
+        box-sizing: border-box;
+        padding: calc(var(--phone-w) * 0.034);
+        border-radius: calc(var(--phone-w) * 0.142);
+        background: linear-gradient(
+          148deg,
+          #6e6e78 0%,
+          #2c2c31 16%,
+          #8b8b95 38%,
+          #26262b 58%,
+          #5b5b65 78%,
+          #2f2f35 100%
+        );
+        box-shadow:
+          0 24px 48px rgba(8, 8, 9, 0.3),
+          0 6px 14px rgba(8, 8, 9, 0.18);
+      }
+      /* side buttons: left volume rocker, right power */
+      .phone::before,
+      .phone::after {
+        content: '';
+        position: absolute;
+        width: calc(var(--phone-w) * 0.011);
+        border-radius: calc(var(--phone-w) * 0.006);
+        background: linear-gradient(180deg, #33333a, #74747e);
+      }
+      .phone::before {
+        left: calc(var(--phone-w) * -0.009);
+        top: 24%;
+        height: 13%;
+      }
+      .phone::after {
+        right: calc(var(--phone-w) * -0.009);
+        top: 26%;
+        height: 9%;
+      }
+      .phone .phonescreen {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #ffffff;
+        border-radius: calc(var(--phone-w) * 0.108);
+        box-shadow: 0 0 0 calc(var(--phone-w) * 0.016) #0a0a0c;
+      }
+      .phone .island {
+        position: absolute;
+        z-index: 3;
+        top: calc(var(--phone-w) * 0.028);
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(var(--phone-w) * 0.31);
+        height: calc(var(--phone-w) * 0.094);
+        border-radius: 999px;
+        background: #08080a;
+      }
+      .phone .statusbar {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: calc(var(--phone-w) * 0.137);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: calc(var(--phone-w) * 0.022) calc(var(--phone-w) * 0.075) 0;
+        font-family: var(--font-plain);
+        font-weight: 600;
+        color: var(--phone-ink);
+        box-sizing: border-box;
+      }
+      .phone .statusbar .clock {
+        font-size: calc(var(--phone-w) * 0.043);
+        letter-spacing: 0.01em;
+      }
+      .phone .statusbar .icons {
+        display: flex;
+        align-items: center;
+        gap: calc(var(--phone-w) * 0.016);
+      }
+      .phone .statusbar .signal {
+        display: flex;
+        align-items: flex-end;
+        gap: calc(var(--phone-w) * 0.005);
+      }
+      .phone .statusbar .signal span {
+        width: calc(var(--phone-w) * 0.009);
+        background: currentColor;
+        border-radius: calc(var(--phone-w) * 0.003);
+      }
+      .phone .statusbar .signal span:nth-child(1) {
+        height: calc(var(--phone-w) * 0.012);
+      }
+      .phone .statusbar .signal span:nth-child(2) {
+        height: calc(var(--phone-w) * 0.019);
+      }
+      .phone .statusbar .signal span:nth-child(3) {
+        height: calc(var(--phone-w) * 0.026);
+      }
+      .phone .statusbar .signal span:nth-child(4) {
+        height: calc(var(--phone-w) * 0.033);
+      }
+      .phone .statusbar svg {
+        display: block;
+        width: calc(var(--phone-w) * 0.042);
+        height: auto;
+        fill: currentColor;
+      }
+      .phone .statusbar .battery {
+        position: relative;
+        width: calc(var(--phone-w) * 0.062);
+        height: calc(var(--phone-w) * 0.031);
+        border: calc(var(--phone-w) * 0.004) solid currentColor;
+        border-radius: calc(var(--phone-w) * 0.01);
+        opacity: 0.95;
+        box-sizing: border-box;
+      }
+      .phone .statusbar .battery::before {
+        content: '';
+        position: absolute;
+        inset: calc(var(--phone-w) * 0.004);
+        right: 30%;
+        background: currentColor;
+        border-radius: calc(var(--phone-w) * 0.004);
+      }
+      .phone .statusbar .battery::after {
+        content: '';
+        position: absolute;
+        left: 100%;
+        top: 30%;
+        bottom: 30%;
+        width: calc(var(--phone-w) * 0.006);
+        background: currentColor;
+        opacity: 0.5;
+        border-radius: 0 calc(var(--phone-w) * 0.004) calc(var(--phone-w) * 0.004) 0;
+      }
+      .phone .homebar {
+        position: absolute;
+        z-index: 3;
+        bottom: calc(var(--phone-w) * 0.02);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 35%;
+        height: calc(var(--phone-w) * 0.013);
+        border-radius: 999px;
+        background: var(--phone-ink);
+        opacity: 0.85;
+      }
+
+      /* Placeholder for a photo drop (replace the div with an <img>) */
+      .imgslot {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: repeating-linear-gradient(
+          45deg,
+          #f4f4f6,
+          #f4f4f6 24px,
+          #ececef 24px,
+          #ececef 48px
+        );
+      }
+      .imgslot span {
+        font-family: var(--font-plain);
+        font-weight: 600;
+        font-size: 24px;
+        color: var(--ink-secondary);
+        text-align: center;
+        max-width: 70%;
+      }
+      .imgslot img,
+      img.photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* 1080x1080 centre-square crop guide (?crop=1 to show). Keep anything
+     essential inside it for TikTok/square crops. */
+      .cropguide {
+        position: absolute;
+        left: 0;
+        top: 135px;
+        width: 1080px;
+        height: 1080px;
+        border-top: 2px dashed rgba(8, 8, 9, 0.5);
+        border-bottom: 2px dashed rgba(8, 8, 9, 0.5);
+        pointer-events: none;
+        box-sizing: border-box;
+      }
+    </style>
+    <style>
+      /* Shared by all five images: runner, title, footer with the peeking parrot */
+      .inner.diag {
+        padding: 40px 44px 30px;
+        justify-content: flex-start;
+        gap: 0;
+      }
+      .runner {
+        margin: 0;
+        font-family: var(--font-mono);
+        font-weight: 700;
+        font-size: 20px;
+        letter-spacing: 0.08em;
+        text-align: center;
+        color: #8a8a93;
+      }
+      .dtitle {
+        margin: 14px 0 0;
+        font-family: var(--font-display);
+        font-weight: var(--weight-headline);
+        font-size: 46px;
+        line-height: 1.25;
+        text-align: center;
+        color: var(--ink);
+        text-wrap: balance;
+      }
+      .dsub {
+        margin: 14px 0 0;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 24px;
+        letter-spacing: 0.04em;
+        text-align: center;
+        color: var(--ink);
+      }
+      .dbody {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 0;
+      }
+      .foot {
+        margin: 0;
+        font-family: var(--font-copy);
+        font-size: 24px;
+        line-height: 1.45;
+        text-align: center;
+        color: var(--ink-secondary);
+        text-wrap: balance;
+      }
+      .brandrow {
+        flex: none;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 26px;
+        letter-spacing: 0.06em;
+        color: var(--ink);
+      }
+      .mascot {
+        position: absolute;
+        right: -18px;
+        bottom: -154px;
+        width: 170px;
+        height: auto;
+      }
+      .ico {
+        display: block;
+        color: var(--ink);
+      }
+      .ttl {
+        display: block;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 1.25;
+        color: var(--ink);
+      }
+      .note {
+        display: block;
+        margin-top: 8px;
+        font-family: var(--font-copy);
+        font-size: 24px;
+        line-height: 1.4;
+        color: var(--ink-secondary);
+      }
+
+      /* 1: four-area grid */
+      .grid4 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 34px;
+        padding-right: 12px;
+      }
+      .grid4 .frame {
+        padding: 34px 28px 36px;
+        min-height: 300px;
+      }
+      .grid4 .ico {
+        width: 84px;
+        height: 84px;
+        margin-bottom: 22px;
+      }
+      .grid4 .num {
+        display: inline-block;
+        margin-bottom: 14px;
+        font-family: var(--font-mono);
+        font-weight: 700;
+        font-size: 22px;
+        color: var(--ink);
+      }
+
+      /* 2: stacked environments */
+      .envs {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 40px;
+        padding-right: 12px;
+      }
+      .env {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        padding: 26px 30px;
+      }
+      .env .ico {
+        flex: none;
+        width: 110px;
+        height: 110px;
+      }
+
+      /* 3: tool rows */
+      .tools {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        padding-right: 12px;
+      }
+      .tool {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+        padding: 18px 26px;
+      }
+      .tool .ico {
+        flex: none;
+        width: 72px;
+        height: 72px;
+      }
+      .tool .ttl {
+        font-size: 28px;
+      }
+      .tool .note {
+        margin-top: 4px;
+        font-size: 23px;
+      }
+
+      /* 4: sequence diagram */
+      .promptwin {
+        margin: 0 12px 0 0;
+        padding: 26px 100px 26px 32px;
+      }
+      .promptwin pre {
+        font-size: 28px;
+      }
+      .panel {
+        margin-top: 34px;
+        margin-right: 12px;
+        padding: 28px 22px;
+      }
+      .exch {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .actor {
+        flex: none;
+        width: 150px;
+        text-align: center;
+      }
+      .actor .ico {
+        width: 88px;
+        height: 88px;
+        margin: 0 auto;
+      }
+      .actor .aname {
+        display: block;
+        margin-top: 10px;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.25;
+        color: var(--ink);
+      }
+      .wires {
+        flex: 1;
+        min-width: 0;
+      }
+      .arw + .arw {
+        margin-top: 18px;
+      }
+      .atag {
+        margin: 0;
+        font-family: var(--font-mono);
+        font-size: 19px;
+        letter-spacing: 0.06em;
+        text-align: center;
+        color: #8a8a93;
+      }
+      .apay {
+        margin: 2px 0 8px;
+        font-family: var(--font-mono);
+        font-size: 22px;
+        line-height: 1.3;
+        text-align: center;
+        color: var(--ink);
+      }
+      .line {
+        position: relative;
+        height: 5px;
+        background: var(--ink);
+      }
+      .line.fwd::after,
+      .line.back::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        border: 12px solid transparent;
+      }
+      .line.fwd::after {
+        right: -2px;
+        border-right: 0;
+        border-left-color: var(--ink);
+      }
+      .line.back::before {
+        left: -2px;
+        border-left: 0;
+        border-right-color: var(--ink);
+      }
+      .mtag {
+        margin: 22px 0 20px;
+        padding-top: 20px;
+        border-top: 3px dashed #c9c9cf;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 19px;
+        letter-spacing: 0.06em;
+        text-align: center;
+        color: var(--ink-secondary);
+      }
+
+      /* 5: spec first vs small steps */
+      .pkicker {
+        margin: 0 0 28px;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 26px;
+        letter-spacing: 0.08em;
+        text-align: center;
+        color: var(--ink);
+      }
+      .vs .frame {
+        margin-right: 12px;
+        padding: 30px 30px 32px;
+      }
+      .vs .frame + .frame {
+        margin-top: 36px;
+      }
+      .tl {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .seg {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .seg .bar {
+        width: 100%;
+        height: 40px;
+        border: 4px solid var(--ink);
+        box-sizing: border-box;
+      }
+      .seg .bar.doc {
+        background: repeating-linear-gradient(90deg, #ffffff 0 14px, #e8e8ea 14px 28px);
+      }
+      .seg .bar.build {
+        background: var(--ink);
+      }
+      .seg .q {
+        height: 40px;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 44px;
+        line-height: 40px;
+        color: var(--ink);
+      }
+      .slabel {
+        display: block;
+        margin-top: 14px;
+        font-family: var(--font-mono);
+        font-size: 21px;
+        line-height: 1.3;
+        color: var(--ink);
+      }
+      .loops {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .loops svg {
+        width: 104px;
+        height: 104px;
+        color: var(--ink);
+      }
+      .legend {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+        margin-bottom: 24px;
+        font-family: var(--font-mono);
+        font-size: 22px;
+        color: var(--ink);
+      }
+      .legend .pill {
+        padding: 8px 16px;
+        border: 3px solid var(--ink);
+      }
+      .legend .arrowr {
+        position: relative;
+        width: 46px;
+        height: 4px;
+        background: var(--ink);
+      }
+      .legend .arrowr::after {
+        content: '';
+        position: absolute;
+        right: -2px;
+        top: -8px;
+        border: 10px solid transparent;
+        border-right: 0;
+        border-left-color: var(--ink);
+      }
+      .result {
+        margin: 22px 0 0;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 24px;
+        text-align: center;
+        color: var(--ink);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="strip"
+      style="
+        min-height: 100vh;
+        background: #c9c9cf;
+        display: flex;
+        gap: 64px;
+        padding: 64px;
+        overflow-x: auto;
+        align-items: flex-start;
+        box-sizing: border-box;
+        font-family: var(--font-plain);
+      "
+    >
+      <!-- ============ 1: four areas ============ -->
+      <section class="slide" data-screen-label="01 Four areas">
+        <div class="card" style="overflow: hidden">
+          <div class="gradbar"></div>
+          <div class="inner diag">
+            <p class="runner">Tech skills in the AI era · 1/5</p>
+            <h2 class="dtitle">Tech skills PMs and founders still need</h2>
+            <div class="dbody">
+              <div class="grid4">
+                <div class="frame">
+                  <svg class="ico" viewBox="0 0 48 48" aria-hidden="true">
+                    <rect
+                      x="6"
+                      y="9"
+                      width="36"
+                      height="13"
+                      rx="3"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.4"
+                    />
+                    <rect
+                      x="6"
+                      y="26"
+                      width="36"
+                      height="13"
+                      rx="3"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.4"
+                    />
+                    <circle cx="12.5" cy="15.5" r="1.9" fill="currentColor" />
+                    <circle cx="12.5" cy="32.5" r="1.9" fill="currentColor" />
+                    <path d="M20 15.5 H36 M20 32.5 H36" stroke="currentColor" stroke-width="2.6" />
+                  </svg>
+                  <span class="ttl"><span class="hl">Environments</span></span>
+                  <span class="note">where your code runs</span>
+                </div>
+                <div class="frame">
+                  <svg class="ico" viewBox="0 0 48 48" aria-hidden="true">
+                    <rect
+                      x="4"
+                      y="8"
+                      width="40"
+                      height="32"
+                      rx="3"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.4"
+                    />
+                    <path
+                      d="M12 18 L19 24 L12 30"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.4"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M23 31 H34"
+                      stroke="currentColor"
+                      stroke-width="3.4"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <span class="ttl"><span class="hl">Developer tools</span></span>
+                  <span class="note">Git, GitHub, the command line, databases</span>
+                </div>
+                <div class="frame">
+                  <svg class="ico" viewBox="0 0 48 48" aria-hidden="true">
+                    <path
+                      d="M6 9 H42 V33 H22 L13 41 V33 H6 Z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.4"
+                      stroke-linejoin="round"
+                    />
+                    <circle cx="16" cy="21" r="2.4" fill="currentColor" />
+                    <circle cx="24" cy="21" r="2.4" fill="currentColor" />
+                    <circle cx="32" cy="21" r="2.4" fill="currentColor" />
+                  </svg>
+                  <span class="ttl"><span class="hl">How AI tools work</span></span>
+                  <span class="note">what they're good at and where they struggle</span>
+                </div>
+                <div class="frame">
+                  <svg class="ico" viewBox="0 0 48 48" aria-hidden="true">
+                    <rect
+                      x="8"
+                      y="5"
+                      width="32"
+                      height="38"
+                      rx="3"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.4"
+                    />
+                    <path
+                      d="M14 16 L17 19 L22 13 M14 28 L17 31 L22 25"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M26 16 H34 M26 28 H34"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <span class="ttl"><span class="hl">Rules of thumb</span></span>
+                  <span class="note">from software engineering</span>
+                </div>
+              </div>
+            </div>
+            <div class="brandrow"><span>LittleParrot.app</span></div>
+          </div>
+          <img class="mascot" src="uploads/little-parrot-wave.png" alt="Little Parrot mascot" />
+        </div>
+        <div class="cropguide"></div>
+      </section>
+
+      <!-- ============ 2: environments ============ -->
+      <section class="slide" data-screen-label="02 Where your code runs">
+        <div class="card" style="overflow: hidden">
+          <div class="gradbar"></div>
+          <div class="inner diag">
+            <p class="runner">Tech skills in the AI era · 2/5</p>
+            <h2 class="dtitle">Where your code runs</h2>
+            <p class="dsub"><span class="hl">The part AI agents still struggle with</span></p>
+            <div class="dbody">
+              <div class="envs">
+                <div class="frame env">
+                  <svg class="ico" viewBox="0 0 48 48" aria-hidden="true">
+                    <rect
+                      x="7"
+                      y="9"
+                      width="34"
+                      height="22"
+                      rx="2"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.4"
+                    />
+                    <path
+                      d="M3 37 H45 L41 31 H7 Z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.4"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M13 16 L17 20 L13 24 M20 24 H26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <div>
+                    <span class="ttl">Development</span>
+                    <span class="note">your own copy to debug and experiment with</span>
+                  </div>
+                </div>
+                <div class="frame env">
+                  <svg class="ico" viewBox="0 0 48 48" aria-hidden="true">
+                    <rect
+                      x="4"
+                      y="6"
+                      width="40"
+                      height="36"
+                      rx="3"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.4"
+                      stroke-dasharray="6 4"
+                    />
+                    <rect
+                      x="15"
+                      y="17"
+                      width="18"
+                      height="15"
+                      rx="3"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                    />
+                    <path
+                      d="M24 17 V12"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                    />
+                    <circle cx="24" cy="11" r="2" fill="currentColor" />
+                    <circle cx="20.5" cy="24" r="1.9" fill="currentColor" />
+                    <circle cx="27.5" cy="24" r="1.9" fill="currentColor" />
+                    <path
+                      d="M21 28.5 H27"
+                      stroke="currentColor"
+                      stroke-width="2.4"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <div>
+                    <span class="ttl">Sandbox</span>
+                    <span class="note"
+                      >where AI agents can keep working when your laptop is closed</span
+                    >
+                  </div>
+                </div>
+                <div class="frame env">
+                  <svg class="ico" viewBox="0 0 48 48" aria-hidden="true">
+                    <circle
+                      cx="24"
+                      cy="24"
+                      r="18"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.4"
+                    />
+                    <ellipse
+                      cx="24"
+                      cy="24"
+                      rx="8"
+                      ry="18"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.6"
+                    />
+                    <path d="M7 18 H41 M7 30 H41" stroke="currentColor" stroke-width="2.6" />
+                  </svg>
+                  <div>
+                    <span class="ttl">Production</span>
+                    <span class="note">what your end users use</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="brandrow"><span>LittleParrot.app</span></div>
+          </div>
+          <img class="mascot" src="uploads/little-parrot-wave.png" alt="Little Parrot mascot" />
+        </div>
+        <div class="cropguide"></div>
+      </section>
+
+      <!-- ============ 3: developer tools ============ -->
+      <section class="slide" data-screen-label="03 Developer tools">
+        <div class="card" style="overflow: hidden">
+          <div class="gradbar"></div>
+          <div class="inner diag">
+            <p class="runner">Tech skills in the AI era · 3/5</p>
+            <h2 class="dtitle">The tools developers and AI agents share</h2>
+            <div class="dbody">
+              <div class="tools">
+                <div class="frame tool">
+                  <svg class="ico" viewBox="0 0 48 48" aria-hidden="true">
+                    <circle
+                      cx="14"
+                      cy="10"
+                      r="5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <circle
+                      cx="14"
+                      cy="38"
+                      r="5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <circle
+                      cx="34"
+                      cy="18"
+                      r="5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M14 15 V33 M34 23 C 34 30, 14 27, 14 33"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <div>
+                    <span class="ttl">Git</span>
+                    <span class="note"
+                      >go back to the last working version, and let agents work in parallel</span
+                    >
+                  </div>
+                </div>
+                <div class="frame tool">
+                  <svg class="ico" viewBox="0 0 48 48" aria-hidden="true">
+                    <path
+                      d="M10 6 H36 A4 4 0 0 1 40 10 V42 H14 A4 4 0 0 1 10 38 Z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M10 34 A4 4 0 0 1 14 30 H40"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M18 14 H32 M18 21 H28"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <div>
+                    <span class="ttl">GitHub</span>
+                    <span class="note">access your organisation's codebases</span>
+                  </div>
+                </div>
+                <div class="frame tool">
+                  <svg class="ico" viewBox="0 0 48 48" aria-hidden="true">
+                    <rect
+                      x="4"
+                      y="8"
+                      width="40"
+                      height="32"
+                      rx="3"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M12 18 L19 24 L12 30 M23 31 H34"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <div>
+                    <span class="ttl">The command line</span>
+                    <span class="note">build tools and automations on your own computer</span>
+                  </div>
+                </div>
+                <div class="frame tool">
+                  <svg class="ico" viewBox="0 0 48 48" aria-hidden="true">
+                    <ellipse
+                      cx="24"
+                      cy="10"
+                      rx="16"
+                      ry="6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8 10 V38 C 8 46, 40 46, 40 38 V10 M8 24 C 8 32, 40 32, 40 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <div>
+                    <span class="ttl">Databases</span>
+                    <span class="note">prototype admin features and read user metrics</span>
+                  </div>
+                </div>
+                <div class="frame tool">
+                  <svg class="ico" viewBox="0 0 48 48" aria-hidden="true">
+                    <rect
+                      x="4"
+                      y="7"
+                      width="40"
+                      height="34"
+                      rx="3"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M4 15 H44"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M17 23 L11 28 L17 33 M31 23 L37 28 L31 33 M26 21 L22 35"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <div>
+                    <span class="ttl">VS Code</span>
+                    <span class="note">see exactly what an agent changed</span>
+                  </div>
+                </div>
+              </div>
+              <p class="foot" style="margin-top: 30px">AI agents like Claude Code use them too.</p>
+            </div>
+            <div class="brandrow"><span>LittleParrot.app</span></div>
+          </div>
+          <img class="mascot" src="uploads/little-parrot-wave.png" alt="Little Parrot mascot" />
+        </div>
+        <div class="cropguide"></div>
+      </section>
+
+      <!-- ============ 4: what happens when you ask an agent ============ -->
+      <section class="slide" data-screen-label="04 Agent and model">
+        <div class="card" style="overflow: hidden">
+          <div class="gradbar"></div>
+          <div class="inner diag">
+            <p class="runner">Tech skills in the AI era · 4/5</p>
+            <h2 class="dtitle">What happens when you ask an AI agent</h2>
+            <div class="dbody">
+              <div class="promptwin">
+                <pre>fix the login bug<span class="cursor"></span></pre>
+                <div class="send">↑</div>
+              </div>
+              <div class="frame panel">
+                <div class="exch">
+                  <div class="actor">
+                    <svg class="ico" viewBox="0 0 48 48" aria-hidden="true">
+                      <rect
+                        x="4"
+                        y="7"
+                        width="40"
+                        height="34"
+                        rx="3"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="3.4"
+                      />
+                      <path d="M4 16 H44" stroke="currentColor" stroke-width="3.4" />
+                      <circle cx="10" cy="11.5" r="1.8" fill="currentColor" />
+                      <circle cx="16" cy="11.5" r="1.8" fill="currentColor" />
+                      <path
+                        d="M12 24 L17 28.5 L12 33 M21 33 H30"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span class="aname">the agent app</span>
+                  </div>
+                  <div class="wires">
+                    <div class="arw">
+                      <p class="atag">sends</p>
+                      <p class="apay">your message + chat history + saved notes</p>
+                      <div class="line fwd"></div>
+                    </div>
+                    <div class="arw">
+                      <p class="atag">replies</p>
+                      <p class="apay">use tool: read login.ts</p>
+                      <div class="line back"></div>
+                    </div>
+                    <p class="mtag">THE APP RUNS THE TOOL</p>
+                    <div class="arw">
+                      <p class="atag">sends</p>
+                      <p class="apay">the file + the whole conversation so far</p>
+                      <div class="line fwd"></div>
+                    </div>
+                    <div class="arw">
+                      <p class="atag">replies</p>
+                      <p class="apay">here's the fix</p>
+                      <div class="line back"></div>
+                    </div>
+                  </div>
+                  <div class="actor">
+                    <svg class="ico" viewBox="0 0 48 48" aria-hidden="true">
+                      <path
+                        d="M24 4 C 26 16, 32 22, 44 24 C 32 26, 26 32, 24 44 C 22 32, 16 26, 4 24 C 16 22, 22 16, 24 4 Z"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="3.2"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span class="aname">the model</span>
+                  </div>
+                </div>
+              </div>
+              <p class="foot" style="margin-top: 30px">
+                The model only writes text. The app runs the tools and sends the chat history and
+                saved notes with every message.
+              </p>
+            </div>
+            <div class="brandrow"><span>LittleParrot.app</span></div>
+          </div>
+          <img class="mascot" src="uploads/little-parrot-wave.png" alt="Little Parrot mascot" />
+        </div>
+        <div class="cropguide"></div>
+      </section>
+
+      <!-- ============ 5: spec first vs small steps ============ -->
+      <section class="slide" data-screen-label="05 Spec first vs small steps">
+        <div class="card" style="overflow: hidden">
+          <div class="gradbar"></div>
+          <div class="inner diag">
+            <p class="runner">Tech skills in the AI era · 5/5</p>
+            <h2 class="dtitle">Spec first vs small steps</h2>
+            <div class="dbody vs">
+              <div class="frame">
+                <p class="pkicker"><span class="hl">BIG SPEC UP FRONT</span></p>
+                <div class="tl">
+                  <div class="seg" style="flex: 3">
+                    <div class="bar doc"></div>
+                    <span class="slabel">write the whole spec</span>
+                  </div>
+                  <div class="seg" style="flex: 4">
+                    <div class="bar build"></div>
+                    <span class="slabel">the agent builds everything</span>
+                  </div>
+                  <div class="seg" style="flex: 2.4">
+                    <div class="q">?</div>
+                    <span class="slabel">find out what's wrong at the end</span>
+                  </div>
+                </div>
+              </div>
+              <div class="frame">
+                <p class="pkicker"><span class="hl">SMALL STEPS</span></p>
+                <div class="legend">
+                  <span class="pill">one small change</span>
+                  <span class="arrowr"></span>
+                  <span class="pill">test it</span>
+                </div>
+                <div class="loops">
+                  <svg viewBox="0 0 48 48" aria-hidden="true">
+                    <path
+                      d="M38 17 A 15 15 0 1 0 39 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M39 8 V18 H29"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M17 24 L22 29 L31 19"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg viewBox="0 0 48 48" aria-hidden="true">
+                    <path
+                      d="M38 17 A 15 15 0 1 0 39 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M39 8 V18 H29"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M17 24 L22 29 L31 19"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg viewBox="0 0 48 48" aria-hidden="true">
+                    <path
+                      d="M38 17 A 15 15 0 1 0 39 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M39 8 V18 H29"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M17 24 L22 29 L31 19"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg viewBox="0 0 48 48" aria-hidden="true">
+                    <path
+                      d="M38 17 A 15 15 0 1 0 39 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M39 8 V18 H29"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M17 24 L22 29 L31 19"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg viewBox="0 0 48 48" aria-hidden="true">
+                    <path
+                      d="M38 17 A 15 15 0 1 0 39 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M39 8 V18 H29"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M17 24 L22 29 L31 19"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg viewBox="0 0 48 48" aria-hidden="true">
+                    <path
+                      d="M38 17 A 15 15 0 1 0 39 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M39 8 V18 H29"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M17 24 L22 29 L31 19"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <p class="result">find out what's wrong after every step</p>
+              </div>
+              <p class="foot" style="margin-top: 30px">Ideas from XP and agile</p>
+            </div>
+            <div class="brandrow"><span>LittleParrot.app</span></div>
+          </div>
+          <img class="mascot" src="uploads/little-parrot-wave.png" alt="Little Parrot mascot" />
+        </div>
+        <div class="cropguide"></div>
+      </section>
+    </div>
+    <script>
+      const params = new URLSearchParams(location.search)
+      const n = parseInt(params.get('slide'), 10)
+      const slides = document.querySelectorAll('#strip > section')
+      if (n >= 1 && n <= slides.length) {
+        document.body.classList.add('single')
+        slides[n - 1].classList.add('current')
+      }
+      if (params.get('crop') === '1') document.body.classList.add('crop')
+    </script>
+  </body>
+</html>
