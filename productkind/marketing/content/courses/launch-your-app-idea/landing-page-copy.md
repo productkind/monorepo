@@ -6,7 +6,9 @@ url: https://littleparrot.app/guides/launch-your-app-idea-with-lovable
 redirect_from: https://littleparrot.app/guides/building-apps-with-ai
 ---
 
-# Landing page copy: Launch Your App Idea with Lovable
+# Landing page copy: Build an App with Lovable That People Pay For
+
+_Renamed from "Launch Your App Idea with Lovable" on 6 November 2026. The sections below still carry the old name and the old promise; rewrite them before reuse._
 
 The page for the learning journey made of our seven Lovable courses. The journey is open now and sold at its own price. It replaces the September waitlist page in `../../campaigns/2026-09-vibe-coder-validation/landing-page-copy.md`. The name, title tag and FAQ questions come from the keyword research in `productkind/ai-research/vibe-coder/`.
 
