@@ -47,7 +47,7 @@ The plan depends on these. My recommendation is in brackets.
    - (Agreed on 16 October: PTW Palace, the festival's central venue, at R. Gomes Freire 98.)
    - A co-host is still worth asking for: Product Management Society Lisbon or the Volkswagen contacts would bring their own PMs into the room.
 3. **What the workshop runs on.**
-   - The design now has attendees set up their own copy of the product in GitHub Codespaces during the workshop, start the app themselves, and end by giving their bug report to GitHub Copilot and testing its fix in their copy. A shared fallback copy covers laptops that can't run it. None of it is built yet, and four weeks of evenings is tight.
+   - The design now has attendees set up the product in GitHub Codespaces during the workshop, start the app themselves, and end by giving their bug report to GitHub Copilot and testing its fix in their copy. A shared fallback copy covers laptops that can't run it. None of it is built yet, and four weeks of evenings is tight.
    - (Agreed on 11 October: run the Codespaces trial checks in the week of 12 October and decide on Friday 16 October.)
    - (Agreed on 16 October: stay on GitHub Free, so there are no prebuilds and each codespace installs what the app needs when it's created. The install test (trial check 3) decides whether attendees create their codespace in the room or from the setup email. One repository in the productkind organisation serves the workshops and the learning journey, so nothing in it mentions the workshop.)
    - If the checks pass, both workshops run on Codespaces.

@@ -12,13 +12,13 @@ A hands-on card course for software PMs without an engineering background. They 
 
 The learner joins **Animal Inc.**, a company that sells a CRM (a customer relationship management app: companies, people, deals) to business customers. On their second week as the PM for integrations, Rabbit from sales forwards a complaint: Calder Freight, a customer, clicked _Save_ on a new company, it spun, and the company isn't there. Engineering is in planning all day.
 
-The learner follows that one failed save through every layer of a real web app, in their own copy of the product: they set up the development environment and start the app, confirm the problem in the database, find the request in the browser's network tab, read the server and database logs, find the rule that rejected the save, draw the map, write a bug report with evidence from each layer, give the report to GitHub Copilot and test the fix. Then they see that the version customers use still spins, because a fix in development hasn't reached anyone yet.
+The learner follows that one failed save through every layer of a real web app: they set up the development environment and start the app, confirm the problem in the database, find the request in the browser's network tab, read the server and database logs, find the rule that rejected the save, draw the map, write a bug report with evidence from each layer, give the report to GitHub Copilot and test the fix. Then they see that the version customers use still spins, because a fix in development hasn't reached anyone yet.
 
 **GitHub Copilot is with them from the moment the codespace opens,** not only for the fix. As soon as they have a terminal and the code in front of them, they turn Copilot on and use it to find their way around the code and to ask about anything they meet: a file, a log line, a response, a term an engineer would use. Until challenge 8 they use it only to ask, and it changes nothing. In challenge 8 they give it the bug report and let it change the code. Every challenge practises the same habit: **predict, ask, check.** Make your own guess, ask Copilot, then check its answer against something you can see in your copy.
 
 The cards are read in the Little Parrot app; the lab runs in GitHub Codespaces in a laptop browser, so nothing gets installed. The product is Twenty, a real open-source CRM, from [`productkind/twenty-pm-lab`](https://github.com/productkind/twenty-pm-lab), seeded with the Calder story data.
 
-**What the learner walks away with:** a map of how a web app works drawn from a trail they followed themselves, a bug report with evidence from each layer, a fix they tested (and know isn't released), their own copy of the product, a set of questions to ask AI about unfamiliar code, and the habit of starting in the network tab of their own product the next day.
+**What the learner walks away with:** a map of how a web app works drawn from a trail they followed themselves, a bug report with evidence from each layer, a fix they tested (and know isn't released), the product running in their development environment, a set of questions to ask AI about unfamiliar code, and the habit of starting in the network tab of their own product the next day.
 
 **What it doesn't do:** teach the learner to code, or cover where the app runs (cloud, regions, services beyond the four the trail touches). Those are later courses in the journey.
 
@@ -52,9 +52,9 @@ Every lab step has a **"Stuck?"** step straight after it: a nudge, then a pointe
 - **What you'll walk away with:** the outcomes above, as outcomes, not topics.
 - **Before you start:** a laptop, a personal GitHub account (not one your employer manages), and about two and a quarter hours in total across the challenges. Link to the setup guide toolkit item.
 
-### 1. Your own copy of the product
+### 1. A real product in a development environment
 
-**After this challenge, you'll have your own copy of the product running in a development environment.**
+**After this challenge, you'll have the product running in a development environment.**
 
 - Open the repository and click _Open in GitHub Codespaces_. The first build takes several minutes, and the next cards are written to read while it builds.
 - **What a development environment is:** a copy of the app on a computer the team controls, with made-up data, where engineers run and change it without affecting customers.
@@ -172,7 +172,7 @@ Every lab step has a **"Stuck?"** step straight after it: a nudge, then a pointe
 ## Narrative arc
 
 1. **The pain:** a customer complaint, a deadline, engineering unavailable, and no idea where to look.
-2. **Your own copy, and Copilot beside you:** set up and start the app, see its parts start one by one, and start asking.
+2. **The product running, and Copilot beside you:** set up and start the app, see its parts start one by one, and start asking.
 3. **The trail:** database, browser, logs, database again. Each layer adds one piece of evidence.
 4. **The answer:** the data was there; the app hid why the save was rejected.
 5. **The report:** evidence an engineer, or an AI agent, can act on.
@@ -253,7 +253,7 @@ Challenges 1, 4, 7 and 8 run at or over the rubric's 15-minute maximum, which is
 - **Claims to verify:** Copilot Free isn't available on accounts an employer manages or that already get Copilot from an employer; where the training setting is and what it's called; the free Codespaces allowance (120 core-hours, 15 GB-months a month for personal accounts, stops at the limit without charge); the codespace idle timeout default (30 minutes) and maximum (240 minutes) and where to change it; deletion after 30 days without use.
 - **Premise risk:** the whole course needs Codespaces and Copilot Free reachable from the learner's network. If either is often blocked, the laptop check and the personal-laptop fallback carry more weight.
 
-### Challenge 1: Your own copy of the product
+### Challenge 1: A real product in a development environment
 
 - **Tools taught:** GitHub Codespaces: create a codespace from the _Open in GitHub Codespaces_ button on `productkind/twenty-pm-lab`. GitHub Copilot in the codespace: open the chat, turn on the free plan, switch off training on prompts, ask in ask mode.
 - **Claims to verify:** the exact button label and what the learner sees while it builds; the build time on a new free account (trial check 3); the machine type it asks for and whether the free account can create it; the name and location of the file that lists the app's parts (`lab/docker-compose.yml`?) and that it names the database, server, worker and Redis; Copilot is already in a browser codespace without adding it, and how a new free account turns on the free plan from there; the current chat mode names and labels (ask, agent, and any others) and that ask mode changes no files; that Copilot answers "which file lists the parts of the app that run?" correctly on the Twenty repository.
