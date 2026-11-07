@@ -50,10 +50,10 @@ Finish with a live app on your own domain, one you can fix and change yourself w
 
 ### Four outcomes
 
-- Turn your idea into a first version small enough to build in one sitting, then build it in Lovable with a database and a login
-- Fix a bug by finding its cause before you ask Lovable for a fix, and make small changes yourself without spending credits
-- Publish on your own domain, with the legal pages and analytics a real product needs, and SEO so Google and AI search tools can find your app
-- Set a price, take payments and bring in your first visitors and customers
+- Plan a first version you can build in one sitting
+- Find a bug's cause before you ask Lovable for a fix
+- Make small changes yourself, without spending Lovable credits
+- Launch on your own domain and find your first paying customers
 
 ### Credibility strip
 
