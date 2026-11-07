@@ -2,11 +2,11 @@
 
 ## 1
 
-One question I think about a lot nowadays: which tech skills do product managers and founders who aren’t developers still need in the AI era?
+Technical Skills in the AI Era (1/5)
 
-As coding agents can do more and more every day, the answer keeps changing.
+One question I think about a lot nowadays: which tech skills do product managers and founders without a technical background still need in the AI era?
 
-Right now, I see four areas of technical knowledge that can give you more confidence and also let you automate more with AI.
+As coding agents can do more and more every day, the answer keeps changing. Right now, I see four areas of technical knowledge that can give you more confidence and also let you automate more with AI.
 
 1. Setting up and understanding environments
 
@@ -14,7 +14,7 @@ AI agents have become awesome at writing code, but they still lag behind at sett
 
 2. The tools developers and AI agents share
 
-Developers use Git, GitHub, the command line, databases and VS Code every day, and so do AI agents like Claude Code. Knowing the basics lets you access your organisation’s codebases and build tools on your computer that automate a much wider variety of tasks than you could with just an AI chat assistant.
+Developers use Git, GitHub, the command line, databases, and code editor every day, and so do AI agents like Claude Code. Knowing the basics lets you access your organisation’s codebases and build tools on your computer that automate a much wider variety of tasks than you could with just an AI chat assistant.
 
 3. Knowing how AI tools work
 
@@ -26,15 +26,17 @@ For example, make one small change, test it, then move on to the next. When some
 
 This is the first of five posts in my Technical Skills in the AI Era series. I’ll go through each area in the next four.
 
-We’re building the technical PM learning journey around these four areas. It starts with our new course, How Your Product Works: Technical Foundations for Product Managers, on 19 January.
+Our new cohort-based course, How Your Product Works: Technical Foundations for Product Managers, covers these four areas. It starts on 19 January.
 
-If you want to start for free, we’re running a workshop in Lisbon on 13 November, where you’ll run a real web application and investigate how it works.
+If you want to start for free, we’re running a workshop in Lisbon on 13 November, where you’ll run a real web application in your development environment and explore how it works.
 
 Course: https://littleparrot.app/courses/technical-foundations-for-product-managers?utm_source=linkedin&utm_medium=t&utm_campaign=tech-fundations-for-pms&utm_content=1p5
 
 Free workshop: https://luma.com/0hccxsn4?utm_source=linkedin-t-tf-1p5
 
 ## 2
+
+Technical Skills in the AI Era (2/5)
 
 Setting up a development environment can make you lose a lot of hair. It's also the part AI agents still struggle with.
 
@@ -54,7 +56,7 @@ Of course, setting up environments can be frustrating, especially the first few 
 
 This is post 2 of 5 in my Technical Skills in the AI Era series. Next, I'll write about the developer tools, like Git, the command line and databases, that are useful for product managers and founders too.
 
-We're building the technical PM learning journey around these skills. It starts with our new course, How Your Product Works: Technical Foundations for Product Managers, on 19 January.
+Our new course, How Your Product Works: Technical Foundations for Product Managers, covers these skills. It starts on 19 January.
 
 If you want to try this for free first, we're running a workshop in Lisbon on 13 November, where you'll set up and run a real web application and investigate how it works.
 
@@ -63,6 +65,8 @@ Course: https://littleparrot.app/courses/technical-foundations-for-product-manag
 Free workshop: https://luma.com/0hccxsn4?utm_source=linkedin-t-tf-2p5
 
 ## 3
+
+Technical Skills in the AI Era (3/5)
 
 When an AI coding agent breaks something that was working, Git is how you get the working version back.
 
@@ -86,7 +90,7 @@ Knowing the basics of these tools, without learning to code, is enough to check 
 
 This is post 3 of 5 in my Technical Skills in the AI Era series. Next, I'll write about why understanding how AI works is just as useful as knowing these tools.
 
-We're building the technical PM learning journey around these skills. It starts with our new course, How Your Product Works: Technical Foundations for Product Managers, on 19 January.
+Our new course, How Your Product Works: Technical Foundations for Product Managers, covers these skills. It starts on 19 January.
 
 If you want to get started for free, we're running a workshop in Lisbon on 13 November, where you'll use Git, GitHub and an AI coding agent while working with a real application.
 
@@ -95,6 +99,8 @@ Course: https://littleparrot.app/courses/technical-foundations-for-product-manag
 Free workshop: https://luma.com/0hccxsn4?utm_source=linkedin-t-tf-3p5
 
 ## 4
+
+Technical Skills in the AI Era (4/5)
 
 I promise you, understanding how AI agents work doesn't need maths beyond the level of a 9- or 10-year-old. It's mostly about how these systems are designed.
 
@@ -114,7 +120,7 @@ I think the goal is to understand these systems well enough to make conscious de
 
 This is post 4 of 5 in my Technical Skills in the AI Era series. In the last one, I'll share a few simple software engineering rules of thumb that make working with AI more reliable.
 
-We're building the technical PM learning journey around these skills. It starts with our new course, How Your Product Works: Technical Foundations for Product Managers, on 19 January.
+Our new course, How Your Product Works: Technical Foundations for Product Managers, covers these skills. It starts on 19 January.
 
 If you want to get started for free, we're running a workshop in Lisbon on 13 November, where you'll work with a real application and use an AI coding agent to investigate and fix a problem.
 
@@ -123,6 +129,8 @@ Course: https://littleparrot.app/courses/technical-foundations-for-product-manag
 Free workshop: https://luma.com/0hccxsn4?utm_source=linkedin-t-tf-4p5
 
 ## 5
+
+Technical Skills in the AI Era (5/5)
 
 Writing a detailed spec or PRD before you let an AI agent build anything feels like the responsible thing to do. I think it often works against you.
 
@@ -144,7 +152,7 @@ They can feel unnatural at first, especially when an AI agent makes it so easy t
 
 This is the last post in my Technical Skills in the AI Era series, about environments, developer tools, how AI works and rules of thumb like these.
 
-We're building the technical PM learning journey around all four areas. It starts with our new course, How Your Product Works: Technical Foundations for Product Managers, on 19 January.
+Our new course, How Your Product Works: Technical Foundations for Product Managers, covers all four areas. It starts on 19 January.
 
 If you want to get started for free, we're running a workshop in Lisbon on 13 November, where you'll work with a real web application and use an AI coding agent to investigate and fix a problem.
 
