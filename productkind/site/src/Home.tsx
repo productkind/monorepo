@@ -347,10 +347,11 @@ const Home = () => {
         </div>
         <div className="box top our-talks-description">
           <dl>
-            <dt>Tech Women Summit, 2026</dt>
+            <dt>Tech Women Summit, Chișinău, Oct 2026</dt>
             <dd>
               <a href="https://www.instagram.com/reel/De1CnpDosbR/" target="_blank">
-                Tamas&apos;s workshop at Tech Women Summit
+                Why Does AI Get It Wrong? Workshop on How Models Actually Work and How to Get Better
+                Answers
               </a>
             </dd>
             <dt>Wey Wey Web, Málaga, Nov 2025</dt>
