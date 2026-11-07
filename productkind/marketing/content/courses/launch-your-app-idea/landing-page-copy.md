@@ -51,9 +51,9 @@ Finish with a live app on your own domain, one you can fix and change yourself w
 ### Four outcomes
 
 - Break your idea into buildable pieces and know what to build first
-- Find a bug's cause before you ask Lovable for a fix
-- Make small changes yourself, without spending Lovable credits
-- Launch on your own domain and find your first paying customers
+- Know what the frontend, backend and database do, so you can judge what Lovable is doing
+- Fix bugs without the fix-break loop, and make small changes yourself without spending credits
+- Launch an app that's ready for real customers and their payments, and find the first ones who pay
 
 ### Credibility strip
 
