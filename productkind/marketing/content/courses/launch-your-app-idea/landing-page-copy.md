@@ -50,7 +50,7 @@ Finish with a live app on your own domain, one you can fix and change yourself w
 
 ### Four outcomes
 
-- Plan a first version you can build in one sitting
+- Break your idea into buildable pieces and know what to build first
 - Find a bug's cause before you ask Lovable for a fix
 - Make small changes yourself, without spending Lovable credits
 - Launch on your own domain and find your first paying customers
