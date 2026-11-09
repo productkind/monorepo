@@ -78,7 +78,7 @@ Every lab step has a **"Stuck?"** step straight after it: a nudge, then a pointe
 - Open the app from the _Ports_ tab at your own private address and sign in as PM: the form is already filled in with `pm@animal.inc`.
 - **Ask about the output:** pick a start-up line you don't understand, ask Copilot what it means and which part of the app wrote it, and check it against the list of parts from challenge 1.
 - Quiz (scenario): a log line mentions the database starting. Which part of the app is it about?
-- **Reproduce Tall Order Co.'s save:** a development environment has Animal Inc.'s own test data, never customers', so you can't see what Giraffe typed, and you don't need to. Add any new company: it spins too, and nothing says why. You've reproduced the bug, the first thing engineers ask for.
+- **Reproduce Tall Order Co.'s save:** a development environment has Animal Inc.'s own test data, never customers', so you can't see what Giraffe typed, and you don't need to. Add a new company with only a name, and leave the other fields empty: it spins too, and nothing says why. You've reproduced the bug, the first thing engineers ask for.
 - Exercise: write the reproduction steps (what you did, what you expected, what happened). The first part of the bug report.
 
 ### 3. Is the customer right?
@@ -263,7 +263,7 @@ Challenges 1, 4, 7 and 8 run at or over the rubric's 15-minute maximum, which is
 ### Challenge 2: Start the app and watch the parts start
 
 - **Tools taught:** the lab commands `start-app`, `load-story`, `start-frontend`; the VS Code terminal (opening a new one with **+**); the _Ports_ tab; signing in.
-- **Claims to verify:** the exact output each command prints (_Setup is finished_, _Twenty is ready_, the frontend's "open the page" and "reload" messages); which port the learner opens (3001 for the frontend built from source?) and the ready-built app's port; that the sign-in form is filled in with `pm@animal.inc`; that adding any new company produces the spinner in the seeded version; how to ask Copilot about terminal output (selecting it and adding it to the chat, or a terminal command for it) and its current labels.
+- **Claims to verify:** the exact output each command prints (_Setup is finished_, _Twenty is ready_, the frontend's "open the page" and "reload" messages); which port the learner opens (3001 for the frontend built from source?) and the ready-built app's port; that the sign-in form is filled in with `pm@animal.inc`; that adding a new company with only a name produces the spinner in the seeded version (picking an Account Owner lets it save); how to ask Copilot about terminal output (selecting it and adding it to the chat, or a terminal command for it) and its current labels.
 - **Premise risk:** none.
 
 ### Challenge 3: Is the customer right?
