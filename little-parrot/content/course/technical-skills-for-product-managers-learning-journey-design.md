@@ -171,6 +171,16 @@ Each mission lists the message, what the learner does, the worked answer, the la
 7. **Fix it with AI.** First, on the big screen, see what Copilot does with "Saving a company doesn't work. Fix it." Then paste your bug report into Copilot's agent mode in your codespace. It finds the code that hides the error, changes it and shows which file it changed; ask it to explain the change in product terms. The frontend rebuilds in about a minute and a half and says when to reload the page. Test the fix against your bug report: a new company now saves, with you as its account owner, and a save that fails for another reason now shows a message saying why (try a company with the same web address as one already in the list). Then open the ready-built app at its own address and try the same save: it still spins, because that's the version customers have, and your fix hasn't been reviewed, tested or released.
 8. **Try it on your own product**, or any web app you use: do one action, find its request and name the parts. It needs no sandbox, so it works at their desk the next day.
 
+**The bug report template.** Attendees fill it in at step 6, and the field guide has it too:
+
+```markdown
+## Steps to reproduce
+
+## Expected behaviour
+
+## Actual behaviour
+```
+
 **Run of show, in person (2 hours)**
 
 | Minutes | What happens |
@@ -180,7 +190,7 @@ Each mission lists the message, what the learner does, the worked answer, the la
 | 30–35 | Predict: a phone poll on where the save got lost. |
 | 35–60 | Steps 1–4 of the trail, guided. Tamas narrates each layer the way an engineer would, and Kinga asks the questions a PM would ask. |
 | 60–70 | Step 5: draw the map together. |
-| 70–85 | Step 6: write the bug report, compare it with Tamas's, and give live feedback on two volunteers' reports. |
+| 70–85 | Step 6: write the bug report, in whatever way works for each attendee, and give live feedback on two volunteers' reports. Kinga's model bug report is there as an example for anyone who wants one. |
 | 85–105 | Step 7: the one-line complaint on the big screen, then each pair gives Copilot their bug report, reads what it changed and tests the fix, in their copy and then in the ready-built app. |
 | 105–120 | Step 8 on their own products. Close on the open question (the fix works in your copy, so what would it take to reach Tall Order Co.?), then the QR code for the field guide and the recording. |
 
@@ -193,12 +203,12 @@ Section 11 has the online, talk and company-session versions of the same trail.
 **The self-paced version (about two hours, in two sittings).** For learners who didn't come to a workshop, done before the course starts or whenever they join.
 
 - **Sitting 1: set up, then steps 1–4.** One click creates the codespace. A short video stands in for Tamas's explanation while it builds, and the hint ladder stands in for help in the room while the learner starts the app. The predict step is a question on the mission page. Then the trail, guided click by click. After each step, the matching chapter of a workshop recording is the worked answer: Tamas narrating the layer, Kinga asking the PM's questions.
-- **Sitting 2: steps 5–8.** Draw the map, write the bug report and compare it with Tamas's, then give it to Copilot and test the fix. A recorded run of the one-line complaint stands in for the big screen. Then the own-product exercise. The recorded feedback on two volunteers' reports stands in for the feedback in the room, and learners can bring their own report to the kickoff office hours.
+- **Sitting 2: steps 5–8.** Draw the map and write the bug report, with Kinga's model bug report as an example if it helps, then give it to Copilot and test the fix. A recorded run of the one-line complaint stands in for the big screen. Then the own-product exercise. The recorded feedback on two volunteers' reports stands in for the feedback in the room, and learners can bring their own report to the kickoff office hours.
 - **The field guide and the self-assessment** are on the mission page instead of behind a QR code.
 
 **Before the session.** A setup email a week ahead, about ten minutes: create a free personal GitHub account, turn on GitHub Copilot's free plan and switch off its use of their data for training, and run the laptop check (section 6), which opens a small test codespace. The workshop's own codespace is created in the room. Plan for a good share of people not doing the email, which is why attendees work in pairs: only half the room needs a working account.
 
-**The fallbacks.** Laptops that can't run Codespaces (a corporate VPN or proxy that breaks it, or no personal GitHub sign-in on a work laptop) use a shared copy of the product we run for the day. Those attendees do the browser steps themselves and follow the setup, the logs, the database and the fix on the presenters' screen. If Copilot fails, or isn't available on someone's account, one command switches their copy to a branch with the fix already in it, so everyone still tests a fix. If the venue wifi fails, Kinga and Tamas switch to a recorded run of the trail and printed screenshots.
+**The fallbacks.** Laptops that can't run Codespaces (a corporate VPN or proxy that breaks it, or no personal GitHub sign-in on a work laptop) use a shared copy of the product we run for the day. Those attendees do the browser steps themselves and follow the setup, the logs, the database and the fix on the presenters' screen. If Copilot fails, or isn't available on someone's account, one command switches their copy to a branch with the fix already in it, so everyone still tests a fix.
 
 **Leaves with**
 
@@ -525,11 +535,11 @@ The result is green (the work laptop works for everything), amber (developer too
    The status and the server log are Twenty's own behaviour and can't change without building our own server image, so the trail teaches both.
 
 7. Open Copilot in a browser codespace with a new free account. Check that it's already there, what turning on the free plan looks like, and that it works on a network that blocks Copilot's own addresses. It should, because in a browser codespace Copilot runs on the codespace's machine, but GitHub doesn't say so directly.
-8. Give Tamas's model bug report to agent mode ten times, on new free accounts. Record how often it fixes the bug, how long it takes, which files it changes and how much of the free allowance it uses. The workshop needs a working fix in at least nine runs out of ten, within five minutes.
-9. Give it the one-line complaint ten times too. The workshop only claims the difference these runs show. If the complaint often works, the point becomes that only the learner with a bug report can tell whether it did.
+8. Give Kinga's model bug report to agent mode once, on a free account, and check that it fixes the bug. Record how long it takes and which files it changes. Decided on 9 November: one run is enough to know it works, and `use-fix` covers anyone whose run fails in the room.
+9. Give it the one-line complaint once too. Copilot may well fix the bug from it, so the workshop doesn't claim the vague prompt fails. The point is what each prompt gives: with "Saving a company doesn't work. Fix it.", Copilot has to guess where to look, and you have no expected result to test its change against; the bug report gives Copilot the evidence and gives you the test cases. Watch for a partial fix: the bug has two parts, the wrong ID and the hidden error, and a vague prompt may fix only the hidden error, so the save still fails but now says why. If that happens, show it on the big screen.
 10. Check that one command switches a copy to the branch with the fix, and that the frontend reloads with it.
 11. Start 30 codespaces at once, in one region, and time them. Check that the image downloads don't hit Docker Hub's limit of 100 pulls per 6 hours from one IP address. If they do, pull the database and Redis images from another registry, and check where else Twenty publishes its image, because copying it to our own registry would publish it.
-12. Run the whole workshop over a phone hotspot, to mimic venue wifi, and check the shared fallback copy copes with the expected room size.
+12. Check the shared fallback copy copes with the expected room size.
 13. On a locked-down work laptop, time creating a GitHub account from scratch, turning on Copilot's free plan and opening a codespace, then the full Mission 1 trail and the fix.
 14. Check whether drawing the map and writing the bug report count as activity in the codespace. If they don't, the codespace could stop in the middle of the session after 30 minutes, so the setup email asks attendees to raise their default idle timeout (it goes up to 240 minutes).
 
@@ -626,7 +636,7 @@ The evidence on getting adults to finish online courses is less encouraging than
 - **The course comes after the value.** At the online workshop, the last five minutes say what the journey covers. At conferences, the follow-up email does it.
 - **The bridge is the copy attendees already have.** "Your copy is still in your GitHub account, and Mission 2 starts from it." The offer is the course: the start date, the price and what's included, framed as momentum ("Keep going: three weeks, the whole story"). Unused codespaces are deleted after 30 days by default, so when the course starts later than that, the bridge is the same one-click setup rather than the copy itself.
 - **The expense route.** The manager message template, an invoice and the outcomes written in an employer's language.
-- **Follow-up emails.** Day 1: the recording, the field guide and Tamas's model bug report. Day 3: a full audio briefing from Mission 2 with its transcript. Day 5: what two attendees found on their own products, with permission. Then the course offer, closing before the start date.
+- **Follow-up emails.** Day 1: the recording, the field guide and Kinga's model bug report. Day 3: a full audio briefing from Mission 2 with its transcript. Day 5: what two attendees found on their own products, with permission. Then the course offer, closing before the start date.
 - **The self-paced Mission 1** (section 5) is for anyone who can't attend live or joins later, so sign-up can stay open between runs and nobody has to wait for the next event to start. It uses chapters of a workshop recording as its worked answers, so the first online workshop on 17 November needs recording.
 - **Size.** Up to about 40–60 people in person, with Tamas and one helper going round and pairs halving the number of setups. Online, the same, with Tamas in the chat.
 - **Choosing events.** The event playbook scores audience fit for non-technical women who build with AI. For this workshop the fit row should score non-technical software PMs, and the event list should add product events (Mind the Product, ProductTank meetups, Women in Product) and in-company sessions.
@@ -670,7 +680,7 @@ Each claim below was checked against the original paper or a reliable summary on
 | Retrieval practice and spacing (Roediger and Karpicke, 2006; Cepeda and colleagues, 2006) | Testing yourself beats rereading at a week's delay. Spreading practice out beats cramming, and the best gap grows with how long you need to remember | Recall questions at the start of each mission, drawn from all earlier ones | Mostly lab studies over days or weeks |
 | Interleaving (Rohrer and Taylor, 2007; Brunmair and Richter, 2019) | Mixing problem types helps when the types are easy to confuse (g = 0.42 overall) | Mixed recall questions, and Mission 4 keeping the server, a cookie and local storage apart; the four-ticket sort was cut on 5 November, so this now leans on recall | Didn't help for expository text, and hurt for word lists |
 | Pretesting (Richland, Kornell and Kao, 2009; St. Hilaire and colleagues, 2024) | Trying to answer before studying improves learning of the questioned content (g = 0.54), with almost no benefit to other content (g = 0.04) | The predict step; one question before each briefing | Write the question about exactly what you want learned |
-| Generation effect (Slamecka and Graf, 1978; Bertsch and colleagues, 2007) | Producing material yourself beats reading it, by about 0.40 of a standard deviation | Predictions, artefacts, writing the bug report before seeing ours | Varies a lot by material |
+| Generation effect (Slamecka and Graf, 1978; Bertsch and colleagues, 2007) | Producing material yourself beats reading it, by about 0.40 of a standard deviation | Predictions, artefacts, writing the bug report yourself | Varies a lot by material |
 | Multimedia principles (Mayer, 2017) | Learner-paced segments help (d = 0.70); so does signalling the structure | Sittings with save points; the same eight steps every week | Mostly short lab lessons with immediate tests |
 | Learning from audio (Daniel and Woody, 2010; Clinton-Lisell meta-analysis; Leahy and Sweller, 2011) | Mixed: reading beat a podcast in one classroom study; across 46 studies, reading and listening came out about equal, with reading ahead for inference; long, complex spoken explanations do worse than written ones | Briefings are short, optional and transcribed, and never carry anything the lab needs | No direct study of conceptual against procedural audio; our split is an inference |
 | Feedback (Hattie and Timperley, 2007; Wisniewski, Zierer and Hattie, 2020; Kluger and DeNisi, 1996) | Feedback helps on average (d = 0.48), more when it carries more information, and over a third of interventions made things worse, especially feedback aimed at the person | Worked answers and self-check lists after every lab, no marked work, so the person-directed feedback that made things worse in Kluger and DeNisi's review can't happen | High variation between studies |
@@ -713,7 +723,7 @@ There are two of you, and the course is three weeks long, so there is no buildin
 **Before launch**
 
 - The one-click environment: our training repository, a development container setup that builds the frontend in each codespace and runs the ready-built app and the frontend from source, the story data, the missions' problems behind settings and analytics instrumentation.
-- For each workshop: the setup email, the shared fallback copy, the field guide, a recorded run of the trail, Tamas's model bug report tested as a Copilot prompt, the branch with the fix and a recorded run of the one-line complaint.
+- For each workshop: the setup email, the shared fallback copy, the field guide, Kinga's model bug report tested as a Copilot prompt, the branch with the fix and a recorded run of the one-line complaint.
 - A request inspector on our own domain.
 - The help-centre repository template, with checks and preview links.
 - ClickHouse and Grafana in the devcontainer, the provisioned dashboards, the onboarding checklist and its events in the frontend, and three months of made-up usage seeded into the event tables.
