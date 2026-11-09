@@ -64,7 +64,7 @@ The plan depends on these. My recommendation is in brackets.
    - (Recommend: self-paced missions with two fixed office-hour slots a week, a suggested pace, and a start date in January so the founding group moves through together.)
 6. **What the session says about the paid season.**
    - Portugal Tech Week rejects side events that "try to sell products and services".
-   - (Recommend: the Lisbon session only teaches. At the end, people are told they'll get an email with the field guide, the bug report template and details of what comes next. The online session on 17 November ends with five minutes on what the course covers, after the teaching, as the design now describes.)
+   - (Recommend: the Lisbon session only teaches. At the end, people are told they'll get an email with the "Investigate a Bug in the Network Tab" toolkit item, which includes the bug report template, and details of what comes next. The online session on 17 November ends with five minutes on what the course covers, after the teaching, as the design now describes.)
 
 ## 2. Targets
 
@@ -90,7 +90,7 @@ The marketing days don't include building. This is the build track that has to k
 | --- | --- | --- |
 | From 12 October | The workshop trial checks, 1–14: the machine Twenty needs with the frontend running from source, setup as a short lesson, start times, signing in through the forwarded addresses, the story data, the bug seeded across all four layers, Copilot in a codespace, ten Copilot runs with the bug report and ten with a one-line complaint, the branch with the fix, 30 codespaces at once, a phone hotspot, a locked-down work laptop and idle stops | The decision on Friday 16 October |
 | From 19 October | If the checks passed: the development container (no prebuild, since we stay on GitHub Free), the seeded bug, the story data and the branch with the fix. If not: the one-page shared copy | The whole trail and the fix work on one laptop |
-| From 26 October | The shared fallback copy, the field guide, the recorded run of the one-line complaint, and a small test codespace for the laptop check | Everything in place by Friday 30 October |
+| From 26 October | The shared fallback copy, the "Investigate a Bug in the Network Tab" toolkit item, the recorded run of the one-line complaint, and a small test codespace for the laptop check | Everything in place by Friday 30 October |
 | From 2 November | Re-run the Copilot checks (7–10), then a full rehearsal with two or three testers, one of them on a locked-down work laptop. Fix what breaks, then send the setup email | Setup email out by Tuesday 3 November, ten days before Lisbon |
 
 The remaining trial checks (15–18) are for the season, so they move to December.
@@ -226,7 +226,7 @@ GitHub deletes a codespace after 30 days without use (its default), so most Nove
 
 This builds on the design's Day 1/3/5 emails, adding the teams and objections emails that sold most in Matt's launch. No invented scarcity and no fear.
 
-1. **Day 1:** the field guide, Kinga's model bug report, and what the course is: 19 January start, three weeks, Tuesday office hours, and the price ladder (€490 until 14 December, €590 until 15 January, €800 from the second cohort, VAT included) with the 14-day refund.
+1. **Day 1:** the "Investigate a Bug in the Network Tab" toolkit item, Kinga's model bug report, and what the course is: 19 January start, three weeks, Tuesday office hours, and the price ladder (€490 until 14 December, €590 until 15 January, €800 from the second cohort, VAT included) with the 14-day refund.
 2. **Day 3:** a full audio briefing from Mission 2 with its transcript.
 3. **Day 5:** two things attendees did at work, quoted with permission.
 4. **Day 7, for your manager:**
