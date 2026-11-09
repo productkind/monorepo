@@ -29,7 +29,7 @@ The cards are read in the Little Parrot app; the lab runs in GitHub Codespaces i
 Animal Inc.'s staff are the Kim and Tim characters. **The learner has no persona.** They're the new PM, and the characters talk to them directly, facing the camera in the comics and addressing "you" in the text. No character stands in for the learner, and no character does the lab for them.
 
 - **Rhino**, customer success lead: sends the opening message on Slack, and needs an answer before a 3pm call with Tall Order Co.
-- **Snail**, software developer: in planning all day. Snail's model bug report and "how an engineer would check it" notes are the worked answers.
+- **Snail**, software developer: in planning all day. Snail's bug report is the optional example in challenge 7, and Snail's "how an engineer would check it" notes are the worked answers.
 - **Kim**, product coach: the guide who suggests following the save layer by layer and asks the PM questions.
 - **Giraffe**, Tall Order Co.'s contact (the "Client" character): the person who clicked _Save_.
 - **AI**: appears in the comics where Copilot is used. Copilot is always named as the real tool in the text.
@@ -140,7 +140,7 @@ Every lab step has a **"Stuck?"** step straight after it: a nudge, then a pointe
 - What makes a bug report useful: the steps, the expected result, the actual result, and the evidence from each layer. The bug report template (toolkit item).
 - Exercise: write yours, starting from the reproduction steps in challenge 2.
 - **Ask:** give Copilot your report and ask what an engineer would still need to ask you. Add only what you can back with evidence you saw.
-- **Worked answer:** Snail's bug report, annotated. Then one question: "What did Snail include that you didn't?"
+- **An example, if it helps:** Snail's bug report, annotated. Yours can look different: it works if an engineer could act on it without asking you anything.
 - Quiz (evaluate someone's work): a one-line report ("Saving doesn't work, please fix"). What would the engineer need to ask?
 - Where it comes back: in challenge 8 the same report becomes the prompt for an AI agent.
 
@@ -225,7 +225,7 @@ Challenges 1, 4, 7 and 8 run at or over the rubric's 15-minute maximum, which is
 - **Predict where the save got lost:** challenge 3, revisited in 6. The workshop's phone poll becomes a reflection step.
 - **Trail steps 1–4 (database, browser, logs, database):** challenges 3, 4, 5 and 6.
 - **Draw the map:** challenge 6.
-- **Write the bug report and compare with the model:** challenge 7, with Snail's report as the model answer.
+- **Write the bug report:** challenge 7, with Snail's report as an optional example.
 - **Fix it with AI, one-line complaint vs bug report:** challenge 8, with the comparison as the one video.
 - **Added beyond the source:** Copilot in ask mode from challenge 1, to explore the repository and explain what the learner finds. The design doc only uses Copilot for the fix, and asks for questions about the code in later missions.
 - **Try it on your own product:** challenge 9.
