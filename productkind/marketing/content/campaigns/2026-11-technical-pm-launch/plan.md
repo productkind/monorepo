@@ -64,7 +64,7 @@ The plan depends on these. My recommendation is in brackets.
    - (Recommend: self-paced missions with two fixed office-hour slots a week, a suggested pace, and a start date in January so the founding group moves through together.)
 6. **What the session says about the paid season.**
    - Portugal Tech Week rejects side events that "try to sell products and services".
-   - (Recommend: the Lisbon session only teaches. At the end, people are told they'll get an email with the field guide, the bug report template, the recording and details of what comes next. The online session on 17 November ends with five minutes on what the course covers, after the teaching, as the design now describes.)
+   - (Recommend: the Lisbon session only teaches. At the end, people are told they'll get an email with the field guide, the bug report template and details of what comes next. The online session on 17 November ends with five minutes on what the course covers, after the teaching, as the design now describes.)
 
 ## 2. Targets
 
@@ -173,7 +173,7 @@ The remaining trial checks (15–18) are for the season, so they move to Decembe
 
 Build the self-paced version of Mission 1 and Missions 2 and 3 in December, run the remaining trial checks, and build the later missions one week ahead during the season, as the design proposes.
 
-Founding learners who didn't attend a workshop do the self-paced Mission 1 in the week before the season starts. It uses chapters of the 17 November recording as its worked answers, so record that session.
+Founding learners who didn't attend a workshop do the self-paced Mission 1 in the week before the season starts. There's no workshop recording, so its worked answers are written for it.
 
 GitHub deletes a codespace after 30 days without use (its default), so most November attendees' copies will be gone by January. The follow-up emails say Mission 2 starts with the same one-click setup, instead of promising their copy is still there.
 
@@ -226,7 +226,7 @@ GitHub deletes a codespace after 30 days without use (its default), so most Nove
 
 This builds on the design's Day 1/3/5 emails, adding the teams and objections emails that sold most in Matt's launch. No invented scarcity and no fear.
 
-1. **Day 1:** the recording, the field guide, Kinga's model bug report, and what the course is: 19 January start, three weeks, Tuesday office hours, and the price ladder (€490 until 14 December, €590 until 15 January, €800 from the second cohort, VAT included) with the 14-day refund.
+1. **Day 1:** the field guide, Kinga's model bug report, and what the course is: 19 January start, three weeks, Tuesday office hours, and the price ladder (€490 until 14 December, €590 until 15 January, €800 from the second cohort, VAT included) with the 14-day refund.
 2. **Day 3:** a full audio briefing from Mission 2 with its transcript.
 3. **Day 5:** two things attendees did at work, quoted with permission.
 4. **Day 7, for your manager:**
@@ -246,7 +246,7 @@ This builds on the design's Day 1/3/5 emails, adding the teams and objections em
 
 What we want is a system that keeps bringing paying learners, so we don't depend on other people's audiences. Once the founding season is running:
 
-- **The free workshop every month,** online, plus a recorded self-serve version, so registrations can open at any time. Matt's free tutorial grew his email list more than anything else he did.
+- **The free workshop every month,** online, plus the self-paced version, so registrations can open at any time. Matt's free tutorial grew his email list more than anything else he did.
 - **The numbered series every week,** with roundups. It feeds the workshop, and the workshop feeds the season.
 - **One partner audience a month:** a community talk, a guest post or a podcast. Choose by how many people from that audience register for a workshop, not by how big the audience is.
 - **Every founding learner's company as a lead for a team purchase,** and every learner's work story, with permission, as material for the next season.
