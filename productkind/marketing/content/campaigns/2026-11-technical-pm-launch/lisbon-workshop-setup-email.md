@@ -1,5 +1,5 @@
 ---
-status: drafted
+status: sent
 channels: [email]
 account: little-parrot
 ---
