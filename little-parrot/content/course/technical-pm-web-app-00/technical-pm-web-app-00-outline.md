@@ -162,7 +162,7 @@ Every lab step has a **"Stuck?"** step straight after it: a nudge, then a pointe
 **After this challenge, you'll be able to find the request behind one action in your own product.**
 
 - No codespace needed: open the network tab on your own product, or any web app you use, do one action, find its request, read its status and response, and name the parts.
-- How to share evidence safely: what not to paste into a ticket (HAR files contain login cookies), and what the browser can't show.
+- How to share evidence safely: what not to paste into a ticket (a HAR file holds every request and response, including customer data, and some browsers include login cookies), and what the browser can't show.
 - **Predict, ask, check at work:** use only the AI tool your company approves, and remove customer data and anything secret before you paste. The personal Copilot account was fine for the made-up data in your copy, not for your product's data.
 - **Questions to ask AI about unfamiliar code:** the questions from this course, collected for your own product's repository if you can read it (toolkit item).
 - The Technical Product Confidence self-assessment and its manager-ready report.
@@ -306,5 +306,5 @@ Challenges 1, 4, 7 and 8 run at or over the rubric's 15-minute maximum, which is
 ### Challenge 9: Try it on your own product
 
 - **Tools taught:** browser developer tools on any web app.
-- **Claims to verify:** HAR files contain cookies and auth headers by default in current Chrome (Chrome changed its HAR export defaults, so check what it includes now).
+- **Claims to verify:** checked on 9 November 2026: in Chrome and Edge, the default **Export HAR (sanitized)** leaves out cookies and the `Authorization` header, but keeps every request and response; Firefox's **Save All As HAR** may include cookies. Safari's tab names aren't checked yet.
 - **Premise risk:** none.

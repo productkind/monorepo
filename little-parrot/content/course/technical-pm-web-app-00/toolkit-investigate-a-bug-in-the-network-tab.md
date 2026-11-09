@@ -1,0 +1,158 @@
+---
+challenge: '9 - Try It on Your Own Product'
+type: 'Cheat sheet'
+---
+
+## Investigate a Bug in the Network Tab
+
+This shows you how to find the request behind any click in your product, read what it sent and what came back, and turn that into a bug report that shows an engineer what failed and where to start looking. It uses the network tab in your browser's developer tools, which records every request a page sends to its server, so you don't need any access to the code.
+
+You need a laptop with Chrome, Edge, Firefox or Safari. If the developer tools don't open on a work laptop, your company has probably switched them off, so ask your IT team whether they can turn them on for you.
+
+### Open the network tab before you click
+
+The network tab only records requests while it's open, so open it first, then do whatever causes the bug.
+
+| Browser | Open the developer tools |
+| --- | --- |
+| Chrome or Edge | Press F12 (or Ctrl+Shift+I) on Windows, or Cmd+Option+I on a Mac. |
+| Firefox | Press F12 (or Ctrl+Shift+I) on Windows, or Cmd+Option+I on a Mac. |
+| Safari | Go to **Safari** → **Settings** → **Advanced** and tick **Show features for web developers** (once). Then press Cmd+Option+I. |
+
+Then click the **Network** tab, and:
+
+1. **Clear the list** with the clear button (a circle with a line through it), so only the requests from your action are left.
+2. **Keep requests across page loads** if the action opens a new page: tick **Preserve log** in Chrome or Edge, or turn on **Persist Logs** in Firefox's network settings (the gear icon). Otherwise the list empties when the page changes.
+3. **Show only data requests** with the **Fetch/XHR** filter in Chrome or Edge, or **XHR** in Firefox. This hides images, fonts and styles, which are rarely the problem.
+4. **Do the action once**, such as clicking Save, and watch which requests appear.
+
+### Find the request behind the click
+
+The **Name** column shows the address each request went to. Look for the one that appeared right after you clicked.
+
+Some apps send most of their requests to the same address, often called `graphql`. To tell them apart, click each one and open **Payload**: its operation name says what it does, such as `CreateOneCompany`.
+
+Click a request to see its details:
+
+| Tab | What it tells you |
+| --- | --- |
+| **Headers** | Where the request went, and its status code. |
+| **Payload** (called **Request** in Firefox) | What the browser sent: the fields and values from the form. Look for values you didn't enter. |
+| **Response** or **Preview** | What came back from the server. **Preview** shows the same thing, formatted so it's easier to read. |
+| **Timing** (called **Timings** in Firefox) | How long each part of the request took. |
+
+Safari shows the same information, with some tabs named differently.
+
+### The status codes you'll see
+
+The **Status** column shows a number for every request. These are the ones you're most likely to come across:
+
+| Status | What it usually means |
+| --- | --- |
+| 200 | The server answered. Check the response too: some apps send a 200 even when the action failed (see below). |
+| 201 | Something new was created, such as a record. |
+| 304 | Nothing has changed since the browser last loaded it, so it used its saved copy. |
+| 400 | The browser sent something the server couldn't accept, such as a missing or badly formatted field. |
+| 401 | You're not signed in, or your session has run out. |
+| 403 | You're signed in, but your account isn't allowed to do this. |
+| 404 | What the request asked for doesn't exist, or the address is wrong. |
+| 409 | The request clashes with data that's already saved, such as a duplicate record. |
+| 429 | The browser sent too many requests in a short time, so the server is refusing some of them. |
+| 500 | Something went wrong on the server. |
+| 502, 503, 504 | A server, or a service it depends on, is down, overloaded or too slow to answer. |
+
+Some failed requests show a word instead of a number, such as **(failed)**, **CORS error** or **(blocked)**. That means the request didn't get a normal answer from the server at all, because the network, the browser or an extension stopped it.
+
+**A 200 doesn't always mean it worked.** Apps that use GraphQL usually answer 200 even when the action failed, and put the error inside the response. So always open the response and look for the word `error`. This response came back with a 200, but the save had failed:
+
+```json
+{
+  "data": { "createCompany": null },
+  "errors": [
+    {
+      "message": "insert or update on table \"company\" violates foreign key constraint",
+      "extensions": {
+        "userFriendlyMessage": "This operation references a record that does not exist or cannot be modified due to existing relationships.",
+        "code": "BAD_USER_INPUT"
+      }
+    }
+  ]
+}
+```
+
+### Spot a slow request
+
+- Click the **Time** column header to sort by it: the slowest requests move to the top.
+- Click the slow request and open **Timing**. If most of the time is spent waiting for the server's first response, the server is slow. If most of it is spent downloading, the response is large.
+- Try the action a few times and write down how long the request took each time. A request that's slow once may be a one-off; one that's slow every time is worth a bug report.
+
+### Red lines that aren't the problem
+
+Not every red line comes from your bug. The request behind your bug is usually the one that appeared right after you clicked and went to your product's own address.
+
+| What you see | What it is |
+| --- | --- |
+| `manifest.json` marked **CORS error**, in a GitHub codespace | The file that gives the browser the app's name and icons. GitHub's sign-in check on your codespace's private address blocks it, and the app works without it. |
+| A request to an analytics or advertising address, marked as blocked | Your ad blocker or another browser extension stopped it. It's only a problem if your bug is about analytics. |
+| A request shown as cancelled after you moved to another page | The browser stopped it because you left the page. |
+| `favicon.ico` with a 404 | The site has no small icon for the browser tab. It doesn't affect anything else. |
+
+### Share evidence safely
+
+What you capture in the network tab can include your login details and your customers' data, so remove both before you paste anything into a ticket or a chat.
+
+- **Take screenshots** of the request with its **Status** and **Response** showing, and blur names, email addresses and anything else about customers.
+- **Copy the response text** rather than the whole request. The request's headers can hold your login details.
+- **Don't use "Copy as cURL" or "Copy as fetch" to paste a request into a ticket.** Both copy your login cookies along with the request.
+- **Only send a HAR file (a saved copy of the whole network log) when an engineer asks for one**, and only through a tool your company approves. In Chrome and Edge, **Export HAR (sanitized)** leaves out your login cookies, but the file still holds every request and response from the page, including customer data. Other browsers may include your login cookies too.
+- **If you paste a response into an AI chat assistant to help you read it, only use the one your company has approved**, and remove customer data, passwords and other login details first.
+
+### What the network tab can't show
+
+The network tab only shows what your browser asked for and what came back, while the tab was open. It can't show:
+
+- what happens on the server after the request, such as background jobs that sync email, run imports or send notifications;
+- the server's logs or the database's logs;
+- what's saved in the database;
+- requests between other systems, such as a webhook from another tool, or one service calling another;
+- what other users see in their own browsers.
+
+For these, ask an engineer to check, and give them what you have: the time it happened, the account you used, and the request you found.
+
+### Write the bug report
+
+Copy this template into your ticket:
+
+```markdown
+## Steps to reproduce
+
+## Expected behaviour
+
+## Actual behaviour
+```
+
+- **Steps to reproduce:** numbered steps that get someone else to the same problem, starting from signing in. Name the account or role you used, and the exact values you typed.
+- **Expected behaviour:** what should have happened, in one or two sentences. This is also how you'll test the fix.
+- **Actual behaviour:** what happened instead, then your evidence: the request's name, its status, the error in the response, and when you tried it, with which browser. Add what you couldn't check, so the engineer knows where to start.
+
+A filled-in example:
+
+```markdown
+## Steps to reproduce
+
+1. Sign in with a test account that has the Finance role.
+2. Go to Billing → Invoices and open invoice INV-2041.
+3. Click Download PDF.
+
+## Expected behaviour
+
+The PDF downloads within a few seconds.
+
+## Actual behaviour
+
+Nothing downloads, and no message appears. I tried three times on 12 November between 10:40 and 10:50, in Chrome.
+
+In the network tab, the request to `invoices/INV-2041/pdf` takes about 30 seconds each time and comes back with status 504. Screenshot attached, with the customer's name blurred.
+
+I couldn't check the server logs, so I don't know whether the PDF is being created and arrives too late, or isn't created at all.
+```
