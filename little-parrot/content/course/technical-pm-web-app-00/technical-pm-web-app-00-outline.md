@@ -56,7 +56,7 @@ Every lab step has a **"Stuck?"** step straight after it: a nudge, then a pointe
 
 **After this challenge, you'll have the product running in a development environment.**
 
-- Open the repository and click _Open in GitHub Codespaces_. The first build takes several minutes, and the next cards are written to read while it builds.
+- Open the repository, click the green _Code_ button, choose the _Codespaces_ tab and click _Create codespace on main_. The first build takes about 16 minutes, and the next cards are written to read while it builds. After about 2 minutes, VS Code asks whether you trust the authors of the files: click _Trust Folder & Continue_, and ignore the pop-up about recommended extensions.
 - **What a development environment is:** a copy of the app on a computer the team controls, with made-up data, where engineers run and change it without affecting customers.
 - **Three places a product lives:** development, staging, production. One line each, with what a PM hears about each one ("it works on my machine", "it's on staging", "it's in prod"). This is the reusable tool: **"Which copy am I looking at?"**, a question that comes back in challenges 8 and 9.
 - Quiz (scenario): an engineer says a fix "works locally" and the customer still sees the bug. Which copy has the fix?
@@ -78,7 +78,8 @@ Every lab step has a **"Stuck?"** step straight after it: a nudge, then a pointe
 - Open the app from the _Ports_ tab at your own private address and sign in as PM: the form is already filled in with `pm@animal.inc`.
 - **Ask about the output:** pick a start-up line you don't understand, ask Copilot what it means and which part of the app wrote it, and check it against the list of parts from challenge 1.
 - Quiz (scenario): a log line mentions the database starting. Which part of the app is it about?
-- **Reproduce Tall Order Co.'s save:** a development environment has Animal Inc.'s own test data, never customers', so you can't see what Giraffe typed, and you don't need to. Add a new company with only a name, and leave the other fields empty: it spins too, and nothing says why. You've reproduced the bug, the first thing engineers ask for.
+- **Reproduce Tall Order Co.'s save:** a development environment has Animal Inc.'s own test data, never customers', so you can't see what Giraffe typed, and you don't need to. Click _Companies_, then _+ Create_ at the top right, type a name in the _Create Company_ panel, leave the other fields empty, and click _Create_: it spins too, and nothing says why. You've reproduced the bug, the first thing engineers ask for.
+- **Stuck?** It saved: you probably picked an Account Owner, so try again with only a name. Twenty jumped to another page while you typed: you typed outside the _Name_ field, and Twenty uses some letters as shortcuts. The panel is still spinning: close it with the _×_ and click _+ Create_ again.
 - Exercise: write the reproduction steps (what you did, what you expected, what happened). The first part of the bug report.
 
 ### 3. Is the customer right?
@@ -87,7 +88,9 @@ Every lab step has a **"Stuck?"** step straight after it: a nudge, then a pointe
 
 - **Predict first:** where do you think the save got lost? The browser, the network, the server, the database? (Reflection step, kept for challenge 6.)
 - **What a database is:** tables, rows, columns, with the CRM's companies table as the example.
-- Open the database table view and look for the company you added: it isn't there. The customer is right, so the question becomes where the save got lost.
+- Open the database in VS Code's _PostgreSQL_ panel (the elephant icon). The first time, click the pencil next to _Twenty database_, type `postgres` in _Password_ and click _Save & Connect_. Then open _Databases_, _default_, _Schemas_, the schema starting with `workspace_` and _Tables_, right-click _company_ and click _Select Top 1000_.
+- Search the _name_ column's filter for the company you added: it isn't there. The customer is right, so the question becomes where the save got lost.
+- **Stuck?** You can't see the _name_ column: scroll the results to the right. You're not sure the search works: type `Goo`, and Google comes up.
 - **Ask:** what do the columns in the companies table hold? Check one answer against a company you can see in the app.
 - **Why not ask Copilot why the save fails?** You could, and it might guess well. But you'd have no way to tell a good guess from a bad one, and no evidence to put in front of an engineer. In this course Copilot explains what you find, and you follow the trail.
 - Quiz (judge a scenario): a customer says their change disappeared and you find it in the database. What does that tell you?
@@ -98,8 +101,9 @@ Every lab step has a **"Stuck?"** step straight after it: a nudge, then a pointe
 **After this challenge, you'll be able to find the request behind a click and read what came back.**
 
 - **Request and response:** what the browser sends to the server and what it gets back, with the save as the example. The **API** as the agreed way the frontend and the server talk.
-- Open developer tools, go to _Network_, click _Save_ again, find the request.
-- **Most of this app's requests go to one address, `graphql`:** open _Payload_ to see which one is the save. One sentence on GraphQL as one style of API.
+- Open developer tools, go to _Network_, choose _Fetch/XHR_ and clear the list. Then add a company with only a name again and find the request.
+- **Most of this app's requests go to one address, `graphql`:** open _Payload_ to see which one is the save, `CreateOneCompany`. `FindManyValidationRules` appears when the panel opens, and `AggregateCompanies` after the save. One sentence on GraphQL as one style of API.
+- **Stuck?** The list is empty: the network tab only records while it's open, so leave it open and save again.
 - **Read the Payload:** the name you typed, and an `accountOwnerId` you never picked. Note it down for challenge 6.
 - **Status codes:** what they're for, the handful PMs meet. This one is 200, which usually means it worked.
 - Open the response: "This operation references a record that does not exist". Here the status only says the server answered; the response says whether the save worked. Other apps that use GraphQL do the same.
@@ -113,8 +117,9 @@ Every lab step has a **"Stuck?"** step straight after it: a nudge, then a pointe
 **After this challenge, you'll be able to check a log for the reason behind a failure.**
 
 - **What a log is:** a record the software writes while it runs.
-- The server log is already running in a terminal: it shows nothing about the save. Why: this server only logs its own faults, and it counts this as a problem with what the browser sent (`BAD_USER_INPUT` in the response).
-- Run `show-log db`: the database log has the answer. The new company's `accountOwnerId`, the one you never picked, "is not present in table workspaceMember".
+- The server log is already running in the terminal where you ran `start-app` (the first one called _docker_ in the list of terminals): it shows nothing about the save. Why: this server only logs its own faults, and it counts this as a problem with what the browser sent (`BAD_USER_INPUT` in the response).
+- Run `show-log db` in a new terminal: the database log has the answer. Its `ERROR` and `DETAIL` lines say the new company's `accountOwnerId`, the one you never picked, "is not present in table workspaceMember".
+- **Stuck?** The last lines are about something else, such as `checkpoint complete`: scroll up to `ERROR` and `DETAIL`. The error isn't there: `show-log db` starts with the last 50 lines, so leave it running and save again.
 - **Ask:** what does "violates foreign key constraint" mean, and which two tables is this line talking about? Then predict whose ID the app sent, for challenge 6.
 - **One log doesn't always explain a failure, and engineers check the next one.** Name the difficulty: logs look intimidating; you only need the one line.
 - Quiz (scenario): the server log is silent after a failed action. What does that tell you, and what doesn't it?
@@ -124,7 +129,8 @@ Every lab step has a **"Stuck?"** step straight after it: a nudge, then a pointe
 
 **After this challenge, you'll be able to explain which layer rejected the save and draw the path it took.**
 
-- Back to the database: find yourself among the workspace members. Your ID there doesn't match the `accountOwnerId` the app sent. The app sent your account's ID, the one you sign in with, which is kept in a different table, so it points to nobody in the workspace.
+- Back to the database: right-click _workspaceMember_, the last table in the list, and click _Select Top 1000_. Row 1 is you, PM. Your `id` there doesn't match the `accountOwnerId` the app sent, but your `userId`, further right in the same row, does. The app sent your account's ID, the one you sign in with, instead of your workspace member ID, so it points to nobody in the workspace.
+- **Stuck?** You can't find _workspaceMember_: it's the last table, so scroll to the bottom of _Tables_.
 - **The rule:** a company's account owner has to be someone in the workspace, so the database checks that the ID points to an existing member. Engineers call this a foreign key.
 - **Find where the ID comes from:** ask Copilot which code sets `accountOwnerId` when a company is created. Open the file it names. You don't need to read the code: find the line, and check which of your two IDs it uses.
 - So the database did its job. **The bug is in the frontend: it sends the wrong one of your two IDs, and it shows a spinner instead of the error.**
@@ -152,8 +158,10 @@ Every lab step has a **"Stuck?"** step straight after it: a nudge, then a pointe
 - **Why the bug report is also the prompt:** what lets an engineer fix a bug quickly is what an AI agent needs too.
 - **From asking to changing:** until now Copilot has only answered. Agent mode changes files and can run commands, so this is the first time it touches the code.
 - Switch the chat to agent mode and paste your bug report. Read which file it changed, and ask it to explain the change in product terms.
+- The terminal running `start-frontend` says when the screens have rebuilt, about a minute and a half after the change: then reload the page.
 - If Copilot fails or isn't available on your account: `use-fix` switches your copy to the fix, so you still test one.
-- **Test it** with specific cases: 1. Save a new company: it saves, with you as its account owner. 2. Save a company with the same web address as one already in the list: it can't be saved, and a message now says why instead of a spinner.
+- **Stuck?** After `use-fix`, `start-frontend` rebuilds twice, about 3 minutes in total: reload after the second _Rebuilt_. A box asks whether to pull and push commits: click _Cancel_.
+- **Test it** with specific cases: 1. Save a new company: it saves, with you as its account owner. 2. Save a company with the same web address as one already in the list, such as `goo.gle`, Google's: it can't be saved, and a message now says "This record already exists. Please check your data and try again." instead of a spinner.
 - Then open the ready-built app at its own address and try the same save: **it still spins.** Callback to "Which copy am I looking at?": your fix hasn't been reviewed, tested or released. What it takes to reach Tall Order Co. is the deployment course later in the journey.
 - Quiz (scenario): an engineer says the fix is done. What do you check before telling Rhino it's fixed?
 
