@@ -28,7 +28,7 @@ Visual: the Little Parrot gradient as the background, with the design system's w
 
 **Snail** · Software Developer · 09:14 Hi! First thing: set up your development environment. It's where you run the app and try out changes without our customers seeing them.
 
-**Rabbit** · Sales Manager · 09:31 Our customer Calder clicked Save on a new company. The Save button kept spinning, and now the company isn't in the list. Engineering is in planning all day. Can you take a look before my 3pm call?
+**Rabbit** · Sales Manager · 09:31 Our customer Tall Order Co. clicked Save on a new company. The Save button kept spinning, and now the company isn't in the list. Engineering is in planning all day. Can you take a look before my 3pm call?
 
 ## Alt text
 
