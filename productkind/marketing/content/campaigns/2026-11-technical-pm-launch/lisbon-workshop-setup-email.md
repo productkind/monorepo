@@ -20,7 +20,9 @@ Hi there,
 
 Thank you for signing up for How web apps work! We're really glad you're coming, and we're looking forward to meeting you on Friday 13 November at PTW Palace, Rua Gomes Freire 98, Lisbon. We'll start at 19:00.
 
-In the workshop, you'll run a real app in your own development environment in GitHub Codespaces, which opens in your browser. Before Friday, please take about 15 minutes to set up a free GitHub account and check that your laptop can open the tools we'll use. None of it needs any technical knowledge, and if something doesn't work, the end of this email says what to do.
+In the workshop, you'll run a real app in your own development environment in GitHub Codespaces, which opens in your browser.
+
+Before Friday, please take about 15 minutes to set up a free GitHub account and check that your laptop can open the tools we'll use. If you get stuck, just email Kinga at `kinga@littleparrot.app`.
 
 1. Create a free GitHub account
 
@@ -57,8 +59,8 @@ If a check doesn't work
 
 That's fine, and it happens with some company laptops. If step 3 or 4 doesn't work on a work laptop, please bring a personal laptop if you can. If you can't, please come anyway: you can pair up with someone on the day and work through the whole workshop together.
 
-On Friday, bring your laptop and its charger. We'll have snacks too.
+On Friday, bring your laptop and its charger. We'll have snacks and you can buy drinks from the Palace bar.
 
 We can't wait to see you on Friday!
 
-Kinga, Tamas & Little Parrot 💛
+Kinga & Tamas
