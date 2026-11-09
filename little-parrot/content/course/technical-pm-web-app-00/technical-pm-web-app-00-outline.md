@@ -106,7 +106,7 @@ Every lab step has a **"Stuck?"** step straight after it: a nudge, then a pointe
 - **Ask:** copy the response into Copilot and ask what it says in plain words. Check: which word in the response says the save was rejected?
 - The red line you can ignore: `manifest.json` marked as a CORS error, always there in a codespace, and why it isn't the problem.
 - Quiz (scenario): a request is 200 and the user says it failed. Where do you look next?
-- Where it comes back: the [network tab field guide] toolkit item, used in challenges 7 and 9.
+- Where it comes back: the [Investigate a Bug in the Network Tab] toolkit item, used in challenges 7 and 9.
 
 ### 5. Go deeper: the logs
 
@@ -137,7 +137,7 @@ Every lab step has a **"Stuck?"** step straight after it: a nudge, then a pointe
 
 **After this challenge, you'll be able to write a bug report an engineer can act on without asking you anything.**
 
-- What makes a bug report useful: the steps, the expected result, the actual result, and the evidence from each layer. The bug report template (toolkit item).
+- What makes a bug report useful: the steps, the expected result, the actual result, and the evidence from each layer. The bug report template, from the [Investigate a Bug in the Network Tab] toolkit item.
 - Exercise: write yours, starting from the reproduction steps in challenge 2.
 - **Ask:** give Copilot your report and ask what an engineer would still need to ask you. Add only what you can back with evidence you saw.
 - **An example, if it helps:** Snail's bug report, annotated. Yours can look different: it works if an engineer could act on it without asking you anything.
@@ -188,8 +188,7 @@ Every lab step has a **"Stuck?"** step straight after it: a nudge, then a pointe
 None of these exist yet in `toolkit-links.md`, so the course names them without links until they're created:
 
 - **Setup guide:** creating a personal GitHub account, turning on Copilot's free plan and switching off its use of your data for training, the laptop check (green, amber, red) with the message to send to IT, raising the codespace idle timeout, and what to do when setup fails.
-- **Network tab field guide:** where to click, which columns to read, the status codes PMs meet (including a 200 with an error in the response), how to spot a slow request, red lines that aren't the problem, sharing evidence safely, what the browser can't show.
-- **Bug report template.**
+- **Investigate a Bug in the Network Tab** (drafted as `toolkit-investigate-a-bug-in-the-network-tab.md`, with the bug report template in it): where to click, which columns to read, the status codes PMs meet (including a 200 with an error in the response), how to spot a slow request, red lines that aren't the problem, sharing evidence safely, what the browser can't show.
 - **Questions to ask AI about unfamiliar code:** the predict, ask, check habit and the questions used in the course (what is this repository, which file lists the parts, what does this log line mean, what does this response say, where is this rule defined, what would an engineer still ask about this report), worded so they work on any repository.
 - **Technical Product Confidence self-assessment** and its manager-ready report.
 
@@ -229,7 +228,7 @@ Challenges 1, 4, 7 and 8 run at or over the rubric's 15-minute maximum, which is
 - **Fix it with AI, one-line complaint vs bug report:** challenge 8, with the comparison as the one video.
 - **Added beyond the source:** Copilot in ask mode from challenge 1, to explore the repository and explain what the learner finds. The design doc only uses Copilot for the fix, and asks for questions about the code in later missions.
 - **Try it on your own product:** challenge 9.
-- **Field guide, self-assessment:** toolkit items, linked in 4 and 9.
+- **Investigate a Bug in the Network Tab, self-assessment:** toolkit items, linked in 4 and 9.
 - **Dropped, because it's workshop-only:** pairs, the phone poll, the run of show, the big screen, the QR code, the shared fallback copy, the wifi fallback, live feedback on volunteers' reports.
 - **Dropped, as you asked:** workshop recordings as worked answers; any mention of the workshop.
 - **Dropped, season-only:** the case clinics, and "Mission 2 starts from your copy". The course end points to the next course without promising the codespace is still there (GitHub deletes it after 30 days without use).
