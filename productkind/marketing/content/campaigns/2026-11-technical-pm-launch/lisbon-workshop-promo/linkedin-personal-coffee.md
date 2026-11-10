@@ -24,7 +24,7 @@ We all have unconscious biases, and LLMs can reproduce them too. Most recently, 
 
 Claude Code knows I'm a product manager, and it knows I build software with it every week. Still, in our planning documents, it kept assigning the technical tasks to Tamas, who's a software engineer.
 
-The most insulting part? It proposed that **"Tamas and a helper go round"** to help participants at a workshop I was organising.
+The most insulting part? It proposed that **"Tamas and a helper go round"** to help participants at a workshop I was working on.
 
 A helper?!
 
