@@ -1,0 +1,306 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Workshop slide images: Slack messages from Animal Inc. (Little Parrot brand)</title>
+    <!-- Five 1080x1350 images for the workshop slides, in the chat style of
+         ../workshop-onboarding-image. The file is called carousel.html so
+         check.py can run on it. Copy comes from spec.md. -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+      :root {
+        --grad: linear-gradient(120deg, #ffb65b, #fdd825, #fbfb00, #8efd23, #00ed70);
+        --grad-wash:
+          linear-gradient(120deg, #ffb65b20, #fdd82520, #fbfb0020, #8efd2320, #00ed7020), #ffffff;
+        --font-display: 'Space Mono', monospace;
+        --font-copy: 'Inter', sans-serif;
+        --ink: #080809;
+        --ink-secondary: #4a4a50;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      section.slide {
+        width: 1080px;
+        height: 1350px;
+        position: relative;
+        overflow: hidden;
+        background: transparent;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 56px;
+      }
+
+      .chat {
+        width: 100%;
+        border: 10px solid var(--ink);
+        box-shadow: 14px 14px 0 rgba(8, 8, 9, 0.25);
+        background: #ffffff;
+      }
+      .channelbar {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        height: 84px;
+        padding: 0 30px;
+        background: var(--ink);
+        color: #ffffff;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 38px;
+      }
+      .channelbar .dot {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+      }
+      .channelbar .name {
+        margin-left: 16px;
+      }
+      .channelbar .workspace {
+        margin-left: auto;
+        font-size: 26px;
+        color: #c6c6cb;
+      }
+      .msg {
+        display: flex;
+        gap: 26px;
+        padding: 36px 36px 40px;
+      }
+      .msg + .msg {
+        border-top: 4px solid #e3e3e6;
+      }
+      .msg.faded {
+        opacity: 0.45;
+      }
+      .avatar {
+        flex: none;
+        width: 112px;
+        height: 112px;
+        border-radius: 50%;
+        border: 5px solid var(--ink);
+        background: #f2f2f4;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+      .avatar svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      .avatar.you {
+        background: var(--grad);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 36px;
+        color: var(--ink);
+      }
+      .who {
+        font-family: var(--font-copy);
+        font-size: 30px;
+        color: var(--ink-secondary);
+      }
+      .who b {
+        font-weight: 700;
+        font-size: 38px;
+        color: var(--ink);
+        margin-right: 10px;
+      }
+      .msg p {
+        margin: 8px 0 0;
+        font-family: var(--font-copy);
+        font-size: 38px;
+        line-height: 1.4;
+        color: var(--ink);
+      }
+      .msg a {
+        color: #1264a3;
+        text-decoration: underline;
+      }
+      .reactions {
+        margin-top: 18px;
+        display: flex;
+        gap: 12px;
+      }
+      .reactions span {
+        font-family: var(--font-copy);
+        font-size: 28px;
+        border: 3px solid #c6c6cb;
+        border-radius: 999px;
+        padding: 4px 18px;
+        background: #f5f5f6;
+        color: var(--ink);
+      }
+      .solo svg {
+        display: block;
+        height: 1180px;
+      }
+
+      /* Show one slide at a time when opened with ?slide=N (used for export) */
+      body.single section.slide {
+        display: none;
+      }
+      body.single section.slide.current {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Avatars crop one pose out of each character's versions sheet in
+         kim-and-tim, whose viewBox is 540 x 270. -->
+
+    <!-- 1. The welcome -->
+    <section class="slide">
+      <div class="chat">
+        <div class="channelbar">
+          <span class="dot" style="background: #ffb65b"></span>
+          <span class="dot" style="background: #fbfb00"></span>
+          <span class="dot" style="background: #00ed70"></span>
+          <span class="name"># welcome</span>
+          <span class="workspace">Animal Inc.</span>
+        </div>
+        <div class="msg">
+          <div class="avatar">
+            <svg viewBox="209 17 30 30" aria-hidden="true">
+              <image
+                href="../../../../../../kim-and-tim/assets/src/characters/owl-versions.svg"
+                width="540"
+                height="270"
+              />
+            </svg>
+          </div>
+          <div>
+            <div class="who"><b>Owl</b>HR Manager · 09:02</div>
+            <p>
+              Welcome to the team! 🎉 You're our newest product manager. Your first job this week is
+              getting to know the product.
+            </p>
+            <div class="reactions"><span>🎉 6</span><span>👋 4</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. The bug report from customer success -->
+    <section class="slide">
+      <div class="chat">
+        <div class="channelbar">
+          <span class="dot" style="background: #ffb65b"></span>
+          <span class="dot" style="background: #fbfb00"></span>
+          <span class="dot" style="background: #00ed70"></span>
+          <span class="name">Rhino</span>
+          <span class="workspace">Animal Inc.</span>
+        </div>
+        <div class="msg">
+          <div class="avatar">
+            <svg viewBox="26 21 26 26" aria-hidden="true">
+              <image
+                href="../../../../../../kim-and-tim/assets/src/characters/rhino-versions.svg"
+                width="540"
+                height="270"
+              />
+            </svg>
+          </div>
+          <div>
+            <div class="who"><b>Rhino</b>Customer Success Lead · 09:31</div>
+            <p>
+              Our customer, Tall Order Co., tried to save a new company. The Save button kept
+              spinning, and now the company isn't in the list. Engineering is in planning all day.
+              Can you take a look before my 3pm call?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Giraffe, sad: the second pose on the giraffe sheet -->
+    <section class="slide solo">
+      <svg viewBox="110 8 46 86" aria-label="Giraffe from Tall Order Co., looking sad">
+        <image
+          href="../../../../../../kim-and-tim/assets/src/characters/giraffe-versions.svg"
+          width="540"
+          height="270"
+        />
+      </svg>
+    </section>
+
+    <!-- 4. The PM asks Snail -->
+    <section class="slide">
+      <div class="chat">
+        <div class="channelbar">
+          <span class="dot" style="background: #ffb65b"></span>
+          <span class="dot" style="background: #fbfb00"></span>
+          <span class="dot" style="background: #00ed70"></span>
+          <span class="name">Snail</span>
+          <span class="workspace">Animal Inc.</span>
+        </div>
+        <div class="msg">
+          <div class="avatar you">PM</div>
+          <div>
+            <div class="who"><b>PM</b>Product Manager · 09:40</div>
+            <p>Hi Snail! How do I set up the local development environment?</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Snail answers with a link and nothing else -->
+    <section class="slide">
+      <div class="chat">
+        <div class="channelbar">
+          <span class="dot" style="background: #ffb65b"></span>
+          <span class="dot" style="background: #fbfb00"></span>
+          <span class="dot" style="background: #00ed70"></span>
+          <span class="name">Snail</span>
+          <span class="workspace">Animal Inc.</span>
+        </div>
+        <div class="msg faded">
+          <div class="avatar you">PM</div>
+          <div>
+            <div class="who"><b>PM</b>Product Manager · 09:40</div>
+            <p>Hi Snail! How do I set up the local development environment?</p>
+          </div>
+        </div>
+        <div class="msg">
+          <div class="avatar">
+            <svg viewBox="17 46 31 31" aria-hidden="true">
+              <image
+                href="../../../../../../kim-and-tim/assets/src/characters/snail-versions.svg"
+                width="540"
+                height="270"
+              />
+            </svg>
+          </div>
+          <div>
+            <div class="who"><b>Snail</b>🗓️ Software Developer · 09:52</div>
+            <p>
+              <a
+                >https://github.com/productkind/<wbr /><span style="white-space: nowrap"
+                  >twenty-pm-lab</span
+                ></a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const n = new URLSearchParams(location.search).get('slide')
+      if (n) {
+        document.body.classList.add('single')
+        document.querySelectorAll('section.slide')[Number(n) - 1].classList.add('current')
+      }
+    </script>
+  </body>
+</html>

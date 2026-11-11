@@ -25,4 +25,12 @@ export default [
       exclude: ['**/node_modules/**'],
     },
   },
+  {
+    test: {
+      include: 'little-parrot/src/**/*.test.{ts,tsx}',
+      name: 'little-parrot',
+      exclude: ['**/node_modules/**'],
+      setupFiles: ['./vitestSetup.ts'],
+    },
+  },
 ]

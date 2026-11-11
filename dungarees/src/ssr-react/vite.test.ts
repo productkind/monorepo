@@ -1,7 +1,7 @@
 import type { SsrNodeServer } from './node-http.ts'
 import type { SsrTemplateRender } from './responder.ts'
-import { createViteSsrDevelopmentServer } from './vite-development.ts'
-import { createViteSsrProductionServer } from './vite-production.ts'
+import { createViteSsrDevelopmentServer, serveViteSsrDevelopment } from './vite-development.ts'
+import { createViteSsrProductionServer, serveViteSsrProduction } from './vite-production.ts'
 
 import { mkdir, mkdtemp, rm, writeFile } from 'node:fs/promises'
 import { createServer } from 'node:http'
@@ -218,4 +218,86 @@ test('in production the policy allows neither inline code nor a websocket', asyn
 
   expect(policy).not.toContain("'unsafe-inline'")
   expect(policy).not.toContain('ws:')
+})
+
+// Stands in for vite-node's hot context, which runs every disposer and waits for each before it
+// reruns the module.
+const createRerunningHotContext = () => {
+  const disposers: (() => Promise<void>)[] = []
+  return {
+    hot: {
+      dispose: (dispose: () => Promise<void>) => {
+        disposers.push(dispose)
+      },
+    },
+    rerun: async () => {
+      for (const dispose of disposers.splice(0)) {
+        await dispose()
+      }
+    },
+  }
+}
+
+type Listening = { url: string; stop: () => Promise<void> }
+
+const recordListening = (): { listening: Listening[]; onListening: (args: Listening) => void } => {
+  const listening: Listening[] = []
+  return { listening, onListening: (args) => listening.push(args) }
+}
+
+const onlyListening = (listening: Listening[]): Listening => {
+  const [only] = listening
+  if (only === undefined || listening.length !== 1) {
+    throw new Error(`Expected the server to report listening once, not ${listening.length} times`)
+  }
+  return only
+}
+
+test('serveViteSsrDevelopment renders through Vite on the port it was given and reports where', async () => {
+  const { listening, onListening } = recordListening()
+  const root = await createProjectRoot({ 'index.html': TEMPLATE, 'client.ts': 'export {}' })
+
+  await serveViteSsrDevelopment({ port: 0, root, hot: undefined, onListening })({ render })
+  const { url, stop } = onlyListening(listening)
+  cleanups.push(stop)
+
+  const html = await (await fetch(`${url}/active`)).text()
+  expect(html).toContain('<p>/active</p>')
+  expect(html).toContain('/@vite/client')
+})
+
+test('serveViteSsrDevelopment has the server closed by the time vite-node reruns the module', async () => {
+  const { listening, onListening } = recordListening()
+  const { hot, rerun } = createRerunningHotContext()
+  const root = await createProjectRoot({ 'index.html': TEMPLATE, 'client.ts': 'export {}' })
+
+  await serveViteSsrDevelopment({ port: 0, root, hot, onListening })({ render })
+  await rerun()
+
+  await expect(fetch(onlyListening(listening).url)).rejects.toThrow()
+})
+
+test('serveViteSsrProduction serves the build and the render on the port it was given and reports where', async () => {
+  const { listening, onListening } = recordListening()
+
+  await serveViteSsrProduction({ port: 0, root: await createProjectRoot(BUILD), onListening })({
+    render,
+  })
+  const { url, stop } = onlyListening(listening)
+  cleanups.push(stop)
+
+  expect(await (await fetch(`${url}/assets/app.js`)).text()).toBe('console.log("client")')
+  expect(await (await fetch(`${url}/active`)).text()).toContain('<p>/active</p>')
+})
+
+test('the stop serveViteSsrProduction reports closes the port', async () => {
+  const { listening, onListening } = recordListening()
+
+  await serveViteSsrProduction({ port: 0, root: await createProjectRoot(BUILD), onListening })({
+    render,
+  })
+  const { url, stop } = onlyListening(listening)
+  await stop()
+
+  await expect(fetch(url)).rejects.toThrow()
 })

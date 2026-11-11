@@ -1,10 +1,30 @@
 import { createBuiltSsrResponder } from './built-responder.ts'
-import { type SsrNodeServer, toRequestListener } from './node-http.ts'
+import {
+  type ListeningSsrServer,
+  listenSsrServer,
+  type SsrNodeServer,
+  toRequestListener,
+} from './node-http.ts'
 import type { SsrTemplateRender } from './responder.ts'
+import type { SsrServe } from './server-host.ts'
 
 import { readFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
 import sirv from 'sirv'
+
+export type ServeViteSsrProductionArgs = {
+  port: number
+  root: string
+  onListening?: (listening: ListeningSsrServer) => void
+}
+
+export const serveViteSsrProduction =
+  ({ port, root, onListening = () => {} }: ServeViteSsrProductionArgs): SsrServe =>
+  async ({ render }) => {
+    onListening(
+      await listenSsrServer({ port, root, createSsrServer: createViteSsrProductionServer, render }),
+    )
+  }
 
 export type CreateViteSsrProductionServerArgs = {
   root: string

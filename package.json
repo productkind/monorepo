@@ -39,7 +39,9 @@
     "dungarees/e2e/",
     "productkind/scripts/",
     "seminars/scripts/",
-    "kim-and-tim/scripts/"
+    "kim-and-tim/scripts/",
+    "little-parrot/src/infra-game/*",
+    "little-parrot/src/app/runtime/*"
   ],
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
