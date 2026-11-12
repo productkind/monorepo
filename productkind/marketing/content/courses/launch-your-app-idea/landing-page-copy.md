@@ -69,7 +69,7 @@ There are seven missions, in the order you'll need them, and each one carries on
 
 **Course:** Plan Your Vibe Coded App: Define the Problem, User, MVP and First Prompt
 
-You'll write down the problem your app solves, describe the person you're building it for and check that the problem is worth solving. Then you'll map what people will do in your app, cut it down to a first version you can build in one sitting and turn your plan into your first prompt. You'll finish with a plan you can hand to Lovable, and a plan for showing your app to your first real user and deciding what to change next.
+Before you spend any time or Lovable credits on building, you'll check that the problem your app solves is worth solving and decide who you're building it for, so you know which features they need and which to leave out. Then you'll map what people will do in your app and cut it down to a first version you can build in one sitting, so you can show people a working app soon. You'll finish with your first prompt, ready to give Lovable, and a plan for showing your app to your first real user and deciding what to change next.
 
 ### Mission 2 · Build it
 
@@ -187,10 +187,10 @@ About ten hours across the seven missions, in challenges of 10 to 15 minutes. Th
 
 ### Heading
 
-Start with the problem your app solves
+Plan your app before you spend any credits
 
 ### Text
 
-The first mission is free. You'll identify the problem your app solves and who has it, and finish with the first prompt to build it.
+The first mission is free. You'll check that your idea solves a problem worth solving, decide what your first version needs and what to leave out, and finish with your first prompt, ready to give Lovable.
 
 **Button:** Start with the free mission
