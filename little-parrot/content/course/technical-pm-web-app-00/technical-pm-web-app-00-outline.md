@@ -196,7 +196,7 @@ Every lab step has a **"Stuck?"** step straight after it: a nudge, then a pointe
 None of these exist yet in `toolkit-links.md`, so the course names them without links until they're created:
 
 - **Setup guide:** creating a personal GitHub account, turning on Copilot's free plan and switching off its use of your data for training, the laptop check (green, amber, red) with the message to send to IT, raising the codespace idle timeout, and what to do when setup fails.
-- **Investigate a Bug in the Network Tab** (drafted as `toolkit-investigate-a-bug-in-the-network-tab.md`, with the bug report template in it): where to click, which columns to read, the status codes PMs meet (including a 200 with an error in the response), how to spot a slow request, red lines that aren't the problem, sharing evidence safely, what the browser can't show.
+- **Investigate a Bug in the Network Tab** (drafted as `toolkit-investigate-a-bug-in-the-network-tab.mdx`, with the bug report template in it): where to click, which columns to read, the status codes PMs meet (including a 200 with an error in the response), how to spot a slow request, red lines that aren't the problem, sharing evidence safely, what the browser can't show.
 - **Questions to ask AI about unfamiliar code:** the predict, ask, check habit and the questions used in the course (what is this repository, which file lists the parts, what does this log line mean, what does this response say, where is this rule defined, what would an engineer still ask about this report), worded so they work on any repository.
 - **Technical Product Confidence self-assessment** and its manager-ready report.
 

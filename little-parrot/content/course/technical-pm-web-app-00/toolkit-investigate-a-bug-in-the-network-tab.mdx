@@ -19,12 +19,20 @@ The network tab only records requests while it's open, so open it first, then do
 | Firefox | Press F12 (or Ctrl+Shift+I) on Windows, or Cmd+Option+I on a Mac. |
 | Safari | Go to **Safari** → **Settings** → **Advanced** and tick **Show features for web developers** (once). Then press Cmd+Option+I. |
 
+In Chrome or Edge, you can also right-click anywhere on the page and click **Inspect**.
+
+![Right-clicking a page in Chrome, with Inspect at the bottom of the menu](/workshops/how-web-apps-work/inspect-menu.webp)
+
 Then click the **Network** tab, and:
 
 1. **Clear the list** with the clear button (a circle with a line through it), so only the requests from your action are left.
-2. **Keep requests across page loads** if the action opens a new page: tick **Preserve log** in Chrome or Edge, or turn on **Persist Logs** in Firefox's network settings (the gear icon). Otherwise the list empties when the page changes.
+2. **Keep requests across page loads** if the action opens a new page: tick **Keep log** in Chrome or Edge (called **Preserve log** in older versions), or turn on **Persist Logs** in Firefox's network settings (the gear icon). Otherwise the list empties when the page changes.
 3. **Show only data requests** with the **Fetch/XHR** filter in Chrome or Edge, or **XHR** in Firefox. This hides images, fonts and styles, which are rarely the problem.
 4. **Do the action once**, such as clicking Save, and watch which requests appear.
+
+![Chrome's network tab, with the filter buttons above the list and one line per request, showing its Status, Type and Time](/workshops/how-web-apps-work/network-tab.webp)
+
+Here the **All** filter is on, so images show too. **Fetch/XHR** is the next button along.
 
 ### Find the request behind the click
 
@@ -89,6 +97,8 @@ Some failed requests show a word instead of a number, such as **(failed)**, **CO
 ### Red lines that aren't the problem
 
 Not every red line comes from your bug. The request behind your bug is usually the one that appeared right after you clicked and went to your product's own address.
+
+In the screenshot of the network tab above, two lines are red, and neither is a bug: a company logo the app couldn't find (`ptc.co`, with a 404), and a `graphql` request that was cancelled.
 
 | What you see | What it is |
 | --- | --- |
