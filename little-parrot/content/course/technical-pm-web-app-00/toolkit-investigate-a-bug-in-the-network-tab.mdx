@@ -145,24 +145,33 @@ Copy this template into your ticket:
 - **Expected behaviour:** what should have happened, in one or two sentences. This is also how you'll test the fix.
 - **Actual behaviour:** what happened instead, then your evidence: the request's name, its status, the error in the response, and when you tried it, with which browser. Add what you couldn't check, so the engineer knows where to start.
 
-A filled-in example:
+A filled-in example, for the failed save in Twenty, the CRM you investigate in the course:
 
 ```markdown
 ## Steps to reproduce
 
-1. Sign in with a test account that has the Finance role.
-2. Go to Billing → Invoices and open invoice INV-2041.
-3. Click Download PDF.
+1. Sign in to Twenty.
+2. Go to Companies and click + Create.
+3. In Name, type `Savannah Ltd.`.
+4. In website type `savannah.com`.
+5. Leave every other field empty.
+6. Click Create.
 
 ## Expected behaviour
 
-The PDF downloads within a few seconds.
+Savannah Ltd. is saved, with me as its Account Owner, and appears in the Companies list. If a save fails, a message says why.
 
 ## Actual behaviour
 
-Nothing downloads, and no message appears. I tried three times on 12 November between 10:40 and 10:50, in Chrome.
+The Create button keeps spinning, and no message appears. The company isn't saved: it isn't in the list. I tried on 13 November, in Chrome.
 
-In the network tab, the request to `invoices/INV-2041/pdf` takes about 30 seconds each time and comes back with status 504. Screenshot attached, with the customer's name blurred.
+## Evidence I found
 
-I couldn't check the server logs, so I don't know whether the PDF is being created and arrives too late, or isn't created at all.
+The company isn't saved: it isn't in the `company` table in the database.
+
+In the network tab, the `CreateOneCompany` request to `graphql` comes back with status 200, but its response has `"createCompany": null` and the error `insert or update on table "company" violates foreign key constraint`, with the code `BAD_USER_INPUT`. Its Payload includes `"accountOwnerId": "20202020-9e3b-46d4-a556-88b9ddc2b034"`, even though I left Account Owner empty.
+
+The server log shows nothing about the save. The database log says `Key (accountOwnerId)=(20202020-9e3b-46d4-a556-88b9ddc2b034) is not present in table "workspaceMember"`.
+
+In the `workspaceMember` table, my row's `id` is `20202020-0687-4c41-b707-ed1bfca972a7`, and the ID the request sent, `20202020-9e3b-46d4-a556-88b9ddc2b034`, is my `userId`, the ID of the account I sign in with. So the app seems to send my account's ID as the account owner instead of my workspace member ID, and it never shows the error: the Create button keeps spinning.
 ```
