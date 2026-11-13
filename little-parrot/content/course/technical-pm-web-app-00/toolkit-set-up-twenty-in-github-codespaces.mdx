@@ -1,0 +1,118 @@
+---
+challenge: '2 - Start the App and Watch the Parts Start'
+type: 'Guide'
+---
+
+## Set Up Twenty in GitHub Codespaces
+
+In this guide, you'll get your own copy of Twenty, a real open-source CRM, running in GitHub Codespaces, where you can investigate it, break it and test a fix without affecting anyone else. A codespace is a computer in GitHub's cloud that opens in your browser, so nothing gets installed on your laptop and you don't need admin rights. It's the same kind of development environment engineers use: a copy of the app with made-up data, where your changes don't reach customers.
+
+_You'll need a free personal GitHub account, and a laptop with an up-to-date Chrome, Edge or Firefox on a network that lets Codespaces through. The first setup takes about 16 minutes, and most of it is waiting._
+
+### Before you start
+
+- **Use a personal GitHub account.** Sign up free at [github.com/signup](https://github.com/signup). The course also uses GitHub Copilot's free plan, and accounts an employer manages can't use it.
+- **Turn on GitHub Copilot Free.** Go to [github.com/settings/copilot](https://github.com/settings/copilot). If you see a button to start using Copilot Free, click it. You're set up when the page says **GitHub Copilot Free** at the top. On the same page, under **Privacy**, set **Allow GitHub to use my data for AI model training** to **Disabled**, so GitHub doesn't train its AI models on what you type.
+- **On a work laptop, check the network first.** Some company VPNs and proxies block Codespaces. Open [this GitHub test address](https://global.rel.tunnels.api.visualstudio.com/api/version): if the page doesn't load or shows no data, your network is blocking Codespaces. Use a personal laptop, or ask your IT team to let `*.visualstudio.com` through.
+- **It's free within a monthly allowance.** A free GitHub account includes 120 core-hours of Codespaces a month, plus 15 GB-months of storage. Twenty runs on a 4-core machine, so that's about 30 hours of running time a month. If your account has no payment method on file, Codespaces stops working when you reach the limit, and GitHub doesn't charge you anything. The allowance resets every month.
+
+### 1. Create your codespace
+
+Sign in to GitHub and go to [github.com/productkind/twenty-pm-lab](https://github.com/productkind/twenty-pm-lab). Click the green **Code** button, choose the **Codespaces** tab in the menu that opens, then click **Create codespace on main**. Your codespace opens in a new tab.
+
+![The twenty-pm-lab repository on GitHub, with the green Code button at the top right](/workshops/how-web-apps-work/lab-repo.webp)
+
+### 2. Trust the folder, then wait while it builds
+
+The new tab shows VS Code, the code editor engineers use, running in your browser. The first time, your codespace installs everything the app needs, which takes about 16 minutes. Leave the tab open the whole time.
+
+After about 2 minutes, VS Code asks **Do you trust the authors of the files in this folder?** Click **Trust Folder & Continue**. It's our repository, and VS Code won't open a terminal until you trust it.
+
+![VS Code asking Do you trust the authors of the files in this folder?, with the Trust Folder & Continue button](/workshops/how-web-apps-work/next-step.webp)
+
+If a pop-up in the bottom right asks whether you want to install the recommended extensions, close it: the lab doesn't need them. Then keep waiting until the terminal along the bottom says setup is finished. That terminal only shows the setup, so you can't type in it.
+
+![The setup running in the terminal, with the recommended extensions pop-up in the bottom right](/workshops/how-web-apps-work/ignore-this.webp)
+
+While you wait, look around: the files are on the left, and `docker-compose.yml` is open in the middle. It's the file that lists the parts the app runs on, such as the database and the server.
+
+### 3. Start the app
+
+Open a new terminal with the **+** at the top right of the terminal panel, type `start-app` and press Enter. You'll see the parts start one after another: the database, Redis, the server and the worker. The first time takes 2 to 5 minutes. It's ready when the last line says **Nest application successfully started**.
+
+![The server's log in the terminal, ending with Nest application successfully started](/workshops/how-web-apps-work/start-app.webp)
+
+Leave this terminal running: it's the server's log, and you'll come back to it when you investigate the bug. To see another part's log, run `show-log worker`, `show-log db` or `show-log redis` in a new terminal.
+
+### 4. Load the story data
+
+Open another new terminal with the **+**, type `load-story` and press Enter. It adds made-up companies, deals and people for the course's Animal Inc. story, because development environments shouldn't use real customers' data. It's done when it says **The story data is loaded** and the prompt comes back. You only need to run it once in each codespace.
+
+![load-story finished in the terminal, saying The story data is loaded](/workshops/how-web-apps-work/load-story-done.webp)
+
+### 5. Start the frontend from its source code
+
+Open one more terminal the same way, type `start-frontend` and press Enter. It builds Twenty's screens from the code in your codespace, the same code engineers change, so this is the version you'll test your fix in. It's ready in a few seconds, when it says **The frontend is running on port 3001**. When the code changes, it rebuilds the screens in about a minute and a half, then tells you to reload the page.
+
+![start-frontend in the terminal, saying The frontend is running on port 3001, followed by its address](/workshops/how-web-apps-work/frontend-running.webp)
+
+### 6. Open Twenty in your browser
+
+Click the **Ports** tab next to **Terminal**. Hover over the address for port 3001 in the **Forwarded Address** column, then click the globe icon. Twenty opens in a new tab at an address ending in `.app.github.dev`. It's private: only you can open it, and only while you're signed in to GitHub.
+
+If VS Code shows a pop-up saying your application on port 3001 is available, its **Open in Browser** button opens the same address. Don't click **Make Public**: it would let anyone with the address open your copy.
+
+![The pop-up for port 3001, with the Open in Browser and Make Public buttons](/workshops/how-web-apps-work/port-forward.webp)
+
+### 7. Sign in
+
+The form is already filled in: the email and the password are both `pm@animal.inc`, your made-up account as Animal Inc.'s new PM. Click **Continue**, then **Sign in**. If the form is empty, type `pm@animal.inc` in both. You're in when you see Twenty's menu on the left, with **Companies**, **People** and **Opportunities**.
+
+![Twenty's sign-in page saying Welcome, Animal Inc., with pm@animal.inc filled in](/workshops/how-web-apps-work/sign-in.webp)
+
+### How to tell when a command has finished
+
+- **Commands that do one job, like `load-story`,** have finished when the prompt comes back: the line ending in `$`, such as `@yourname → /workspaces/twenty-pm-lab (main) $`. You can then type in that terminal again.
+- **Commands that start part of the app, like `start-app` and `start-frontend`,** never finish. They keep running on purpose, because that part of the app runs inside them, so closing their terminal stops it. Wait until they're ready instead: `start-app` when the server's log says **Nest application successfully started**, and `start-frontend` when it says the frontend is running on port 3001.
+
+### What's on each port
+
+Your codespace runs two versions of the app at the same time, and the **Ports** tab lists both. They share the same server and database, so you sign in with the same account on both, and a company you add on one shows up on the other. The difference is where the screens come from.
+
+| Port | Where the screens come from | When you use it |
+| --- | --- | --- |
+| 3001 | The code in your codespace, the copy engineers change. When the code changes, the screens are rebuilt in about a minute and a half, and you reload the page to see the change. | Most of the course, and testing your fixes |
+| 3000 | Twenty's ready-built package, the same one a company runs on its own servers. Its screens were built in advance, so changes to the code in your codespace don't reach them. It isn't production: it runs in your codespace, with made-up data, and only you can open it. | Checking your fix against the version customers have |
+
+### When you're done, and coming back
+
+**Stop it.** Go to [github.com/codespaces](https://github.com/codespaces), click the **...** to the right of your codespace, then click **Stop codespace**, so it stops using your free hours. Your data stays in it for next time. If you forget, it stops by itself after 30 minutes with no typing, clicking or terminal output.
+
+![The menu for a codespace on github.com/codespaces, with Stop codespace and Delete](/workshops/how-web-apps-work/close-codespace.webp)
+
+**Come back to it.** Go to [github.com/codespaces](https://github.com/codespaces) and click your codespace's name. The app stopped when the codespace did, so run `start-app` and `start-frontend` again, each in its own terminal. Your story data and anything you saved are still there, so you don't need to run `load-story` again.
+
+**It's kept for 30 days.** GitHub deletes a stopped codespace after 30 days without use, and emails you the day before. If yours is gone, create a new one as in step 1 and follow the steps again, including `load-story`.
+
+**Delete it when you've finished with it.** A stopped codespace still uses your storage allowance. Go to [github.com/codespaces](https://github.com/codespaces), click the **...** next to it, then click **Delete**.
+
+**To make it wait longer than 30 minutes before stopping,** open GitHub's **Settings**, click **Codespaces** and change **Default idle timeout** (up to 240 minutes). It only applies to codespaces you create after changing it, and a longer timeout uses more of your free hours when you walk away.
+
+### ⚠️ If something goes wrong
+
+At a workshop, put your hand up and work with your partner's codespace while we sort yours out. If you're on your own, look for the message or problem you're seeing in the table below.
+
+| What you see | What to do |
+| --- | --- |
+| The codespace never opens, or VS Code can't connect, on a work laptop | Your network may block Codespaces. Open [this GitHub test address](https://global.rel.tunnels.api.visualstudio.com/api/version): if the page doesn't load or shows no data, use a personal laptop, or ask your IT team to let `*.visualstudio.com` through. |
+| "Oh no, it looks like you are offline" | Check your wifi, then reload the page. |
+| VS Code shows **Restricted Mode**, or a new terminal won't open | You haven't trusted the folder yet. Click the **+** in the terminal panel again, and click **Trust Folder & Continue** when VS Code asks. |
+| "This codespace is currently running in recovery mode due to a container error." | The setup failed. Delete the codespace at [github.com/codespaces](https://github.com/codespaces) and create a new one as in step 1. If it happens again, ask us in the Discord community. |
+| You can't create a codespace at all | You may have used up this month's free hours. Check your Codespaces usage in your GitHub billing settings. |
+| You open your codespace and it says **Stopping codespace** | It's still stopping from last time. Wait until [github.com/codespaces](https://github.com/codespaces) shows it as stopped, then open it again. |
+| Port 3001 isn't in the **Ports** tab | The frontend may still be starting. Wait a minute, then check the terminal running `start-frontend` for an error. |
+| Twenty shows an error or a blank page | Check that the terminal running `start-app` is still running. Then wait a minute and reload the page. |
+| Sign-in fails, or sends you back to the sign-in page | Close the tab and open the address again from the **Ports** tab. It should end in `.app.github.dev`, not `localhost`. |
+| Your codespace stopped while you were working in it | Open it again from [github.com/codespaces](https://github.com/codespaces), and run `start-app` and `start-frontend` again. |
+
+GitHub's own [connection troubleshooting page](https://docs.github.com/en/codespaces/troubleshooting/troubleshooting-your-connection-to-github-codespaces) covers rarer errors.

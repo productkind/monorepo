@@ -50,7 +50,7 @@ Every lab step has a **"Stuck?"** step straight after it: a nudge, then a pointe
 - **Comics (four panels, each character facing the camera and talking to the learner):** Rhino, phone in hand: Tall Order Co. clicked _Save_ on a new company, it spun, and the company isn't there, so can you take a look before the 3pm call?; Snail, on the way into planning: "I'm in planning all day, sorry!"; a close-up of the spinning _Save_ button on the screen, from the learner's point of view; Kim: "Let's follow the save and see where it got lost."
 - **Biggest fear first:** "You don't need to code to find where a problem lives." The learner reads, clicks and asks, and Copilot is there for every question they'd hesitate to ask an engineer. The code change at the end is made by Copilot too, and their part is the PM's part: give it evidence, then check the result.
 - **What you'll walk away with:** the outcomes above, as outcomes, not topics.
-- **Before you start:** a laptop, a personal GitHub account (not one your employer manages), and about two and a quarter hours in total across the challenges. Link to the setup guide toolkit item.
+- **Before you start:** a laptop, a personal GitHub account (not one your employer manages), and about two and a quarter hours in total across the challenges. Link to the [Set Up Twenty in GitHub Codespaces] toolkit item.
 
 ### 1. A real product in a development environment
 
@@ -61,7 +61,7 @@ Every lab step has a **"Stuck?"** step straight after it: a nudge, then a pointe
 - **Three places a product lives:** development, staging, production. One line each, with what a PM hears about each one ("it works on my machine", "it's on staging", "it's in prod"). This is the reusable tool: **"Which copy am I looking at?"**, a question that comes back in challenges 8 and 9.
 - Quiz (scenario): an engineer says a fix "works locally" and the customer still sees the bug. Which copy has the fix?
 - **The codespace is open:** the code on the left, a terminal at the bottom. The terminal and Git are already there, so this is the moment to bring in Copilot.
-- **Turn on Copilot:** open the chat, turn on the free plan, and switch off GitHub's use of your prompts for training. The details are in the setup guide.
+- **Turn on Copilot:** open the chat, turn on the free plan, and switch off GitHub's use of your prompts for training. The details are in the [Set Up Twenty in GitHub Codespaces] toolkit item.
 - **Ask, don't change:** the chat can only answer in ask mode, so nothing in the code moves until challenge 8.
 - **Your first question:** "What is this repository, and which file lists the parts of the app that run?" Then **check:** open the file it names and find the database, the server and the frontend yourself. Name the two other services in it (a background worker and Redis) and say a later course covers them.
 - **Predict, ask, check:** why the order matters. Copilot sounds just as sure when it's wrong, so its answer is a lead to follow, and what you see in your copy is the evidence.
@@ -195,7 +195,7 @@ Every lab step has a **"Stuck?"** step straight after it: a nudge, then a pointe
 
 None of these exist yet in `toolkit-links.md`, so the course names them without links until they're created:
 
-- **Setup guide:** creating a personal GitHub account, turning on Copilot's free plan and switching off its use of your data for training, the laptop check (green, amber, red) with the message to send to IT, raising the codespace idle timeout, and what to do when setup fails.
+- **Set Up Twenty in GitHub Codespaces** (drafted as `toolkit-set-up-twenty-in-github-codespaces.mdx`, from the workshop's setup guide, with the workshop's screenshots): a personal GitHub account, turning on Copilot's free plan and switching off its use of your data for training, a network check for work laptops, creating the codespace, trusting the folder, starting the app, loading the story data, starting the frontend, signing in, the two ports, stopping and coming back, raising the idle timeout, and what to do when something goes wrong. Not in it yet: the laptop check (green, amber, red) with the message to send to IT.
 - **Investigate a Bug in the Network Tab** (drafted as `toolkit-investigate-a-bug-in-the-network-tab.mdx`, with the bug report template in it): where to click, which columns to read, the status codes PMs meet (including a 200 with an error in the response), how to spot a slow request, red lines that aren't the problem, sharing evidence safely, what the browser can't show.
 - **Questions to ask AI about unfamiliar code:** the predict, ask, check habit and the questions used in the course (what is this repository, which file lists the parts, what does this log line mean, what does this response say, where is this rule defined, what would an engineer still ask about this report), worded so they work on any repository.
 - **Technical Product Confidence self-assessment** and its manager-ready report.
