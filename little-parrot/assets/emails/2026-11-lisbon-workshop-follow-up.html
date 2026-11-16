@@ -1,0 +1,722 @@
+<!--
+Subject: 🦜 Your guides from How web apps work
+Preheader: Plus one thing to try on your own product this week, in about 15 minutes.
+Sender name: Little Parrot
+Audience: everyone who joined How web apps work at PTW Palace, Lisbon, on Friday 13 November 2026 (workshop slug how-web-apps-work, in workshop_participants), minus anyone who turned emails off. Merge tags are EmailOctopus syntax. Check the import for contacts with no first name, or give FirstName a default ("there").
+Links: utm_medium=workshop and utm_campaign=ptw-workshop-nov26, the same campaign as the Luma setup, reminder and day-of emails. utm_content is participants-follow-up, and participants-follow-up-monday-move on the primary button, so the button's clicks can be told apart from the inline link to the same guide. Both toolkit items are free and published (is_free, checked 16 November 2026), and their links carry auth=login.
+Feedback: both buttons go to the Tally form https://tally.so/r/PdMkP0, whose hidden fields read the UTMs; utm_content is yes or no, utm_term carries the user ID (issue #456). The Luma emails had no vote, so the campaign still identifies this email.
+UserID: EmailOctopus custom field holding the Supabase user ID (profiles.id), filled from the Supabase export before each send.
+-->
+<!doctype html>
+<html
+  lang="en-GB"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="supported-color-schemes" content="light dark" />
+    <title>Your guides from How web apps work</title>
+    <!--[if mso
+      ]><noscript
+        ><xml
+          ><o:OfficeDocumentSettings
+            ><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings
+          ></xml
+        ></noscript
+      ><!
+    [endif]-->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap');
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+        color: #08080a;
+        font-family: 'Inter', Arial, sans-serif;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+      .email-wrapper {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 28px 16px;
+      }
+      /* Keep automatically detected address links as muted footer text. */
+      .company-address a {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+      /* Keep this separate: Gmail can discard rules with attribute selectors. */
+      .company-address a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+      u + #email-body .company-address a {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+      @media only screen and (max-width: 620px) {
+        .email-wrapper {
+          padding: 12px 8px !important;
+        }
+        .content {
+          padding: 26px 22px 4px !important;
+        }
+        .header {
+          padding: 22px !important;
+        }
+        .cta-table {
+          width: 100% !important;
+        }
+        .cta-section {
+          padding: 28px 22px !important;
+        }
+        .footer {
+          padding: 20px !important;
+        }
+      }
+      @media (prefers-color-scheme: dark) {
+        body,
+        .email-wrapper {
+          background-color: #202024 !important;
+        }
+        .email-container,
+        .panel {
+          background-color: #fffffe !important;
+          color: #08080a !important;
+        }
+      }
+    </style>
+  </head>
+  <body id="email-body">
+    <div
+      style="
+        display: none;
+        max-height: 0;
+        overflow: hidden;
+        mso-hide: all;
+        font-size: 1px;
+        line-height: 1px;
+      "
+    >
+      Plus one thing to try on your own product this week, in about 15
+      minutes.&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </div>
+    <div class="email-wrapper">
+      <!--[if mso]><table role="presentation" align="center" width="640" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
+      <table
+        role="presentation"
+        class="email-container"
+        align="center"
+        width="100%"
+        cellpadding="0"
+        cellspacing="0"
+        border="0"
+        style="
+          max-width: 640px;
+          margin: 0 auto;
+          background-color: #fffffe;
+          color: #08080a;
+          border: 2px solid #08080a;
+          box-shadow: 4px 4px 2px rgba(8, 8, 9, 0.25);
+        "
+      >
+        <tr>
+          <td
+            class="header"
+            align="center"
+            style="
+              padding: 26px 32px;
+              background-color: #fffbe9;
+              background-image: linear-gradient(
+                120deg,
+                #fff6eb,
+                #fffae4,
+                #ffffe4,
+                #f1ffe4,
+                #e4fff0
+              );
+              border-bottom: 2px solid #08080a;
+            "
+          >
+            <a
+              href="https://littleparrot.app/?utm_source=email&amp;utm_medium=workshop&amp;utm_campaign=ptw-workshop-nov26&amp;utm_content=participants-follow-up"
+              style="font-size: 17px; text-decoration: none"
+              ><img
+                src="https://littleparrot.app/logo-little-parrot-email.png"
+                width="220"
+                height="63"
+                alt="Little Parrot"
+                style="
+                  display: block;
+                  max-width: 220px;
+                  height: auto;
+                  border: 0;
+                  background-color: #fffbe9;
+                "
+            /></a>
+            <h1
+              style="
+                font-family: 'Space Mono', monospace;
+                font-size: 14px;
+                font-weight: 400;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                color: hsl(245, 3%, 38%);
+                margin: 14px 0 0;
+              "
+            >
+              How web apps work, Lisbon
+            </h1>
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="content"
+            style="padding: 32px 40px 4px; font-family: 'Inter', Arial, sans-serif; color: #08080a"
+          >
+            <p style="font-size: 17px; line-height: 1.6; margin: 0 0 18px">Hi {{FirstName}},</p>
+            <p style="font-size: 17px; line-height: 1.6; margin: 0 0 32px">
+              Thank you for coming to <strong>How web apps work</strong> at PTW Palace on Friday,
+              laptop on your lap and all. We loved meeting you!
+            </p>
+
+            <!-- Section: the two toolkit items -->
+            <h2
+              style="
+                font-family: 'Space Mono', monospace;
+                font-size: 18px;
+                line-height: 1.5;
+                color: #08080a;
+                margin: 0 0 12px;
+              "
+            >
+              Your two workshop guides
+            </h2>
+            <p style="font-size: 17px; line-height: 1.6; margin: 0 0 14px">
+              Both are in your
+              <a
+                href="https://littleparrot.app/nest/toolkit?utm_source=email&amp;utm_medium=workshop&amp;utm_campaign=ptw-workshop-nov26&amp;utm_content=participants-follow-up&amp;auth=login"
+                style="
+                  font-size: 17px;
+                  font-weight: 700;
+                  color: #08080a;
+                  text-decoration: underline;
+                "
+                >Little Parrot toolkit</a
+              >, so you can come back to them any time:
+            </p>
+            <ul style="font-size: 17px; line-height: 1.6; margin: 0 0 32px; padding-left: 22px">
+              <li style="margin-bottom: 10px">
+                <a
+                  href="https://littleparrot.app/nest/toolkit/deee33c3-bd05-4d72-873a-fe417c602007?utm_source=email&amp;utm_medium=workshop&amp;utm_campaign=ptw-workshop-nov26&amp;utm_content=participants-follow-up&amp;auth=login"
+                  style="
+                    font-size: 17px;
+                    font-weight: 700;
+                    color: #08080a;
+                    text-decoration: underline;
+                  "
+                  >Set Up Twenty in GitHub Codespaces</a
+                >: every step to get your own copy of Twenty running again, with the screenshots
+                from the workshop. GitHub deletes a codespace after 30 days without use, so this is
+                how you start a fresh one.
+              </li>
+              <li style="margin-bottom: 0">
+                <a
+                  href="https://littleparrot.app/nest/toolkit/c1d08723-4df8-4e55-bff5-1fadd654da70?utm_source=email&amp;utm_medium=workshop&amp;utm_campaign=ptw-workshop-nov26&amp;utm_content=participants-follow-up&amp;auth=login"
+                  style="
+                    font-size: 17px;
+                    font-weight: 700;
+                    color: #08080a;
+                    text-decoration: underline;
+                  "
+                  >Investigate a Bug in the Network Tab</a
+                >: find the request behind any click in your own product, read what came back, and
+                turn it into a bug report an engineer can start from.
+              </li>
+            </ul>
+
+            <!-- Highlight box: the Monday move, the primary CTA -->
+            <table
+              role="presentation"
+              width="100%"
+              cellpadding="0"
+              cellspacing="0"
+              border="0"
+              style="
+                margin: 0 0 32px;
+                border: 2px solid #08080a;
+                box-shadow: 4px 4px 2px rgba(8, 8, 9, 0.25);
+              "
+            >
+              <tr>
+                <td
+                  style="
+                    padding: 24px;
+                    background-color: #fffbe9;
+                    background: linear-gradient(
+                      120deg,
+                      #ffb65b20,
+                      #fdd82520,
+                      #fbfb0020,
+                      #8efd2320,
+                      #00ed7020
+                    );
+                    color: hsl(245, 3%, 22%);
+                    font-family: 'Inter', Arial, sans-serif;
+                  "
+                >
+                  <h2
+                    style="
+                      font-family: 'Space Mono', monospace;
+                      font-size: 18px;
+                      line-height: 1.5;
+                      color: #08080a;
+                      margin: 0 0 14px;
+                    "
+                  >
+                    Your Monday move: the network tab at work
+                  </h2>
+                  <p style="font-size: 17px; line-height: 1.6; margin: 0 0 14px">
+                    In the course, every mission ends with a Monday move: the same skill, used on
+                    your own product at work. Here's the one for the workshop. It takes about 15
+                    minutes, and you don't need access to the code.
+                  </p>
+                  <ol
+                    style="font-size: 17px; line-height: 1.6; margin: 0 0 14px; padding-left: 22px"
+                  >
+                    <li style="margin-bottom: 8px">
+                      <strong>Open your product</strong> in your browser, then open the network tab
+                      before you click anything.
+                    </li>
+                    <li style="margin-bottom: 8px">
+                      <strong>Do one action</strong>, such as saving a form, and find the request it
+                      sent.
+                    </li>
+                    <li style="margin-bottom: 0">
+                      <strong>Read its status and its response.</strong> A 200 can still hide an
+                      error, as Twenty's did, so look inside the response too.
+                    </li>
+                  </ol>
+                  <p style="font-size: 17px; line-height: 1.6; margin: 0 0 14px">
+                    If you find something that looks wrong, the bug report template in the guide is
+                    ready to copy. Read its <strong>Share evidence safely</strong> section before
+                    you paste anything into a ticket: the network tab can show your login details
+                    and your customers' data.
+                  </p>
+                  <table
+                    role="presentation"
+                    class="cta-table"
+                    align="center"
+                    cellpadding="0"
+                    cellspacing="0"
+                    border="0"
+                    style="
+                      margin: 10px auto 0;
+                      border: 2px solid #08080a;
+                      box-shadow: 4px 4px 2px rgba(8, 8, 9, 0.25);
+                    "
+                  >
+                    <tr>
+                      <td
+                        align="center"
+                        bgcolor="#fdd825"
+                        style="
+                          background-color: #fdd825;
+                          background-image: linear-gradient(
+                            120deg,
+                            #ffb65b,
+                            #fdd825,
+                            #fbfb00,
+                            #8efd23,
+                            #00ed70
+                          );
+                          mso-padding-alt: 16px 26px;
+                        "
+                      >
+                        <a
+                          href="https://littleparrot.app/nest/toolkit/c1d08723-4df8-4e55-bff5-1fadd654da70?utm_source=email&amp;utm_medium=workshop&amp;utm_campaign=ptw-workshop-nov26&amp;utm_content=participants-follow-up-monday-move&amp;auth=login"
+                          style="
+                            display: block;
+                            padding: 16px 26px;
+                            font-family: 'Inter', Arial, sans-serif;
+                            font-size: 17px;
+                            line-height: 1.5;
+                            font-weight: 700;
+                            color: #08080a;
+                            text-decoration: none;
+                          "
+                          >Open the network tab guide</a
+                        >
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+
+            <!-- Section: the cohort-based course -->
+            <h2
+              style="
+                font-family: 'Space Mono', monospace;
+                font-size: 18px;
+                line-height: 1.5;
+                color: #08080a;
+                margin: 0 0 12px;
+              "
+            >
+              Follow your team's technical discussions with confidence
+            </h2>
+            <p style="font-size: 17px; line-height: 1.6; margin: 0 0 14px">
+              The workshop was the first mission of our cohort-based course,
+              <strong>How Your Product Works: Technical Foundations for Product Managers</strong>,
+              so you've already done its pre-work. Over three weeks, you work through six more
+              missions in Twenty with a small group of product managers, and use each one on your
+              own product at work. By the end, you'll have an overview of the technical setup of
+              your product, and a solid technical foundation to dig deeper. You'll be able to:
+            </p>
+            <ul style="font-size: 17px; line-height: 1.6; margin: 0 0 14px; padding-left: 22px">
+              <li style="margin-bottom: 8px">
+                <strong>Size a feature or an integration</strong> before it's promised: how much
+                work it is, and where it could fail
+              </li>
+              <li style="margin-bottom: 8px">
+                <strong>Ask an AI agent how your product works</strong>, such as whether your API
+                supports something, and get a pointer to the code you can check
+              </li>
+              <li style="margin-bottom: 8px">
+                <strong>Prototype a new feature with an AI agent</strong>, as a starting point your
+                team can turn into a real feature in your product
+              </li>
+              <li style="margin-bottom: 0">
+                <strong>Decide between technical debt and a new feature</strong> on evidence, and
+                defend it in planning
+              </li>
+            </ul>
+            <p style="font-size: 17px; line-height: 1.6; margin: 0 0 14px">
+              The first cohort starts on <strong>Tuesday 19 January 2027</strong>, and it takes 2.5
+              to 4.5 hours a week. You work through the missions at your own pace, ask us questions
+              during the week in our private Discord channel, and join an hour of live office hours
+              with Kinga and Tamas every Tuesday from 5pm to 6pm GMT, recorded in case you can't
+              make it.
+            </p>
+            <p style="font-size: 17px; line-height: 1.6; margin: 0 0 22px">
+              It's <strong>€490 if you enrol by Monday 14 December</strong>, then €590 until
+              enrolment closes on 15 January, VAT included. You can ask for a full refund up to 14
+              days after the cohort starts. If your company pays, we invoice them: use the
+              <strong>Ask your employer to pay</strong> link on the course page, which opens a
+              ready-to-send email for your manager.
+            </p>
+            <table
+              role="presentation"
+              class="cta-table"
+              align="center"
+              cellpadding="0"
+              cellspacing="0"
+              border="0"
+              style="margin: 0 auto 32px; border: 2px solid #08080a"
+            >
+              <tr>
+                <td
+                  align="center"
+                  bgcolor="#fffffe"
+                  style="background-color: #fffffe; mso-padding-alt: 14px 24px"
+                >
+                  <a
+                    href="https://littleparrot.app/courses/technical-foundations-for-product-managers?utm_source=email&amp;utm_medium=workshop&amp;utm_campaign=ptw-workshop-nov26&amp;utm_content=participants-follow-up"
+                    style="
+                      display: block;
+                      padding: 14px 24px;
+                      font-family: 'Inter', Arial, sans-serif;
+                      font-size: 17px;
+                      line-height: 1.5;
+                      font-weight: 700;
+                      color: #08080a;
+                      text-decoration: none;
+                    "
+                    >See the course</a
+                  >
+                </td>
+              </tr>
+            </table>
+            <p style="font-size: 17px; line-height: 1.6; margin: 0 0 32px">
+              If you have a question about the course, or about what you found in your own product,
+              reply to this email. Please leave out any sensitive customer details. We'd love to
+              hear how your Monday move went.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="cta-section"
+            align="center"
+            style="
+              padding: 36px 40px;
+              border-top: 2px solid #08080a;
+              background-color: #fffdf2;
+              background: linear-gradient(
+                120deg,
+                #ffb65b10,
+                #fdd82510,
+                #fbfb0010,
+                #8efd2310,
+                #00ed7010
+              );
+              font-family: 'Inter', Arial, sans-serif;
+            "
+          >
+            <p
+              style="
+                font-family: 'Space Mono', monospace;
+                font-size: 16px;
+                line-height: 1.6;
+                font-weight: 700;
+                color: #08080a;
+                margin: 0;
+              "
+            >
+              Kinga, Tamas &amp; Little Parrot 💛
+            </p>
+            <p style="font-size: 12px; line-height: 1.6; margin: 4px 0 0; color: hsl(245, 3%, 40%)">
+              Little Parrot by productkind
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="footer"
+            align="center"
+            style="
+              padding: 24px 40px;
+              border-top: 1px solid hsl(245, 5%, 89%);
+              font-family: 'Inter', Arial, sans-serif;
+              font-size: 12px;
+              color: hsl(245, 3%, 45%);
+              line-height: 1.8;
+            "
+          >
+            <table
+              role="presentation"
+              align="center"
+              cellpadding="0"
+              cellspacing="0"
+              border="0"
+              style="margin: 0 auto 24px; border: 2px solid #08080a; background-color: #fffffe"
+            >
+              <tr>
+                <td align="center" style="padding: 18px 24px 20px">
+                  <p
+                    style="
+                      font-family: 'Space Mono', monospace;
+                      font-size: 16px;
+                      line-height: 1.5;
+                      font-weight: 700;
+                      color: #08080a;
+                      margin: 0 0 14px;
+                    "
+                  >
+                    Was this email useful?
+                  </p>
+                  <table
+                    role="presentation"
+                    align="center"
+                    cellpadding="0"
+                    cellspacing="0"
+                    border="0"
+                  >
+                    <tr>
+                      <td style="padding: 0 6px">
+                        <table
+                          role="presentation"
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                          style="border: 2px solid #08080a"
+                        >
+                          <tr>
+                            <td
+                              align="center"
+                              bgcolor="#fffffe"
+                              style="background-color: #fffffe; mso-padding-alt: 12px 20px"
+                            >
+                              <a
+                                href="https://tally.so/r/PdMkP0?utm_source=email&amp;utm_medium=workshop&amp;utm_campaign=ptw-workshop-nov26&amp;utm_content=yes&amp;utm_term={{UserID}}"
+                                style="
+                                  display: block;
+                                  padding: 12px 20px;
+                                  font-family: 'Inter', Arial, sans-serif;
+                                  font-size: 16px;
+                                  line-height: 1.5;
+                                  font-weight: 700;
+                                  color: #08080a;
+                                  text-decoration: none;
+                                "
+                                ><span aria-hidden="true">👍</span> Yes</a
+                              >
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td style="padding: 0 6px">
+                        <table
+                          role="presentation"
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                          style="border: 2px solid #08080a"
+                        >
+                          <tr>
+                            <td
+                              align="center"
+                              bgcolor="#fffffe"
+                              style="background-color: #fffffe; mso-padding-alt: 12px 20px"
+                            >
+                              <a
+                                href="https://tally.so/r/PdMkP0?utm_source=email&amp;utm_medium=workshop&amp;utm_campaign=ptw-workshop-nov26&amp;utm_content=no&amp;utm_term={{UserID}}"
+                                style="
+                                  display: block;
+                                  padding: 12px 20px;
+                                  font-family: 'Inter', Arial, sans-serif;
+                                  font-size: 16px;
+                                  line-height: 1.5;
+                                  font-weight: 700;
+                                  color: #08080a;
+                                  text-decoration: none;
+                                "
+                                ><span aria-hidden="true">👎</span> No</a
+                              >
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <table
+              role="presentation"
+              align="center"
+              cellpadding="0"
+              cellspacing="0"
+              border="0"
+              style="margin: 0 auto 12px"
+            >
+              <tr>
+                <td style="padding: 0 6px">
+                  <a
+                    href="https://www.linkedin.com/company/littleparrot/"
+                    style="font-size: 12px; text-decoration: none"
+                    ><img
+                      src="https://littleparrot.app/icon-linkedin.png"
+                      width="24"
+                      height="24"
+                      alt="LinkedIn"
+                      style="border: 0; vertical-align: middle; background-color: #fffffe"
+                  /></a>
+                </td>
+                <td style="padding: 0 6px">
+                  <a
+                    href="https://www.instagram.com/by_productkind/"
+                    style="font-size: 12px; text-decoration: none"
+                    ><img
+                      src="https://littleparrot.app/icon-instagram.png"
+                      width="24"
+                      height="24"
+                      alt="Instagram"
+                      style="border: 0; vertical-align: middle; background-color: #fffffe"
+                  /></a>
+                </td>
+                <td style="padding: 0 6px">
+                  <a
+                    href="https://www.tiktok.com/@littleparrot.app"
+                    style="font-size: 12px; text-decoration: none"
+                    ><img
+                      src="https://littleparrot.app/icon-tiktok.png"
+                      width="24"
+                      height="24"
+                      alt="TikTok"
+                      style="border: 0; vertical-align: middle; background-color: #fffffe"
+                  /></a>
+                </td>
+                <td style="padding: 0 6px">
+                  <a
+                    href="https://www.youtube.com/@productkind"
+                    style="font-size: 12px; text-decoration: none"
+                    ><img
+                      src="https://littleparrot.app/icon-youtube.png"
+                      width="24"
+                      height="24"
+                      alt="YouTube"
+                      style="border: 0; vertical-align: middle; background-color: #fffffe"
+                  /></a>
+                </td>
+                <td style="padding: 0 6px">
+                  <a
+                    href="https://productkind.substack.com/?utm_source=email&amp;utm_medium=workshop&amp;utm_campaign=ptw-workshop-nov26&amp;utm_content=participants-follow-up"
+                    style="font-size: 12px; text-decoration: none"
+                    ><img
+                      src="https://littleparrot.app/icon-substack.png"
+                      width="24"
+                      height="24"
+                      alt="Substack newsletter"
+                      style="border: 0; vertical-align: middle; background-color: #fffffe"
+                  /></a>
+                </td>
+              </tr>
+            </table>
+            <p style="font-size: 12px; line-height: 1.8; margin: 0; color: hsl(245, 3%, 45%)">
+              You're receiving this because you joined How web apps work in Lisbon.<br />
+              <a
+                href="https://littleparrot.app/?utm_source=email&amp;utm_medium=workshop&amp;utm_campaign=ptw-workshop-nov26&amp;utm_content=participants-follow-up"
+                style="font-size: 12px; color: hsl(245, 3%, 40%); text-decoration: underline"
+                >littleparrot.app</a
+              >
+              <br /><br />
+              <span
+                class="company-address"
+                style="
+                  color: hsl(245, 3%, 45%);
+                  font-size: 12px;
+                  line-height: 1.8;
+                  text-decoration: none;
+                "
+                >{{SenderInfoLine}}</span
+              ><br /><br />
+              <a
+                href="{{UnsubscribeURL}}"
+                style="font-size: 12px; color: hsl(245, 3%, 40%); text-decoration: underline"
+                >unsubscribe</a
+              ><br /><br />
+              <a
+                href="{{RewardsURL}}"
+                style="font-size: 12px; color: hsl(245, 3%, 40%); text-decoration: none"
+                >Powered by EmailOctopus</a
+              >
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td style="height: 32px; line-height: 32px; font-size: 1px">&nbsp;</td>
+        </tr>
+      </table>
+      <!--[if mso]></td></tr></table><![endif]-->
+    </div>
+  </body>
+</html>
