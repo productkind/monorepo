@@ -257,7 +257,10 @@ Each week names its part at the moment it comes up, so the learner sees what's a
 
 ## Progress and reminders (MVP features)
 
-- **Setup answers** are stored per learner and choose which variant of each task they see (OS, coding agent).
+- **Setup questions are mandatory and come first.** They come from the course YAML and run in the app's existing onboarding page (`/:courseId/onboarding`), after the comics and the "you won't need to code" step, before challenge 1. Every question has a way out ("Not sure", "None", "Answer later" for the employer's laptop), so mandatory means answering something, not knowing the answer. The last screen shows the learner's path, for example "Mac, Claude Code, Git already installed: Week 2 has 3 tasks for you instead of 5".
+- **Answers are stored per learner, with the course they came from.** One row per answer: key, value, course, question, when. The latest answer per key wins, and every course reads it, so the paid course doesn't ask again. Changing an answer adds a row and keeps the old one.
+- **Steps say who they're for** with `showIf` (within a key any value matches; across keys all must). Every step stays in the course so step numbers and progress don't shift; the challenge page skips the ones that don't apply and marks them complete as the learner passes. A question added after a learner finished setup is asked the next time they open the course, and until then they see every version, labelled.
+- **"Your setup" panel** reopens the questions with the current answers filled in. Steps already passed as hidden stay complete.
 - **Tasks are ticked by the learner**, per week. Nothing checks them, and nothing is marked.
 - **Weekly email**, one per week when the new challenge opens. Three versions by progress:
   - **All done:** the new week, and what last week unlocked.
