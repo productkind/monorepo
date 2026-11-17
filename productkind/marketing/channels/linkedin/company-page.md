@@ -16,17 +16,17 @@ AI can write the code. You still need to know how your product works. Hands-on t
 
 ## Overview
 
-Without knowing how your product works, it's hard to weigh technical trade-offs, discuss implementation with engineers or check what an AI agent has built.
+AI can write the code now, but product managers and founders still need to understand how their product works. Without that, it’s hard to weigh technical trade-offs, discuss implementation with engineers or guide an AI agent effectively.
 
-At Little Parrot, you learn these technical foundations hands-on, in a real app. You run it in your own development environment, follow a request from the browser to the database, send API requests, ship a change through code review and CI checks, and query the data with SQL. You'll understand how a web app works end to end, so the next time a conversation with your engineers or your AI agent gets technical, you'll know what to ask next.
+At Little Parrot, you learn hands-on, in a real app, and you don’t need an engineering background. You’ll understand how software works end to end, so the next time a conversation with your engineers or your AI agent gets technical, you’ll know what to ask next.
 
-→ How Your Product Works: Technical Foundations for Product Managers, our three-week cohort-based course. The founding cohort starts on 19 January 2027: littleparrot.app/courses/technical-foundations-for-product-managers
+→ How Your Product Works: Technical Foundations for Product Managers, our three-week cohort-based course. You run an app in your own development environment, follow a request from the browser to the database, send API requests, ship a change through code review and CI checks, and query the data with SQL. The founding cohort starts on 19 January 2027: littleparrot.app/courses/technical-foundations-for-product-managers
 
-→ Build an App with Lovable That People Pay For, our self-paced course, where you learn how software works by shipping your own app. The first mission is free: littleparrot.app/courses/build-an-app-with-lovable-that-people-pay-for
+→ Build an App with Lovable That People Pay For, our self-paced course, where you learn by building and launching your own app. The first mission is free: littleparrot.app/courses/build-an-app-with-lovable-that-people-pay-for
 
-Kinga Magyar, a lead product manager, and Tamas Kokeny, a principal software engineer with technical roles at Datadog and Cloudera behind him, teach both.
+Both courses are created by Little Parrot’s co-founders: Kinga, a product leader with 8 years of building software products, most recently as lead product manager at Volkswagen, and Tamas, a software engineer and engineering leader of 15+ years who co-founded Green Fox Academy, a coding bootcamp with over 3,000 graduates.
 
-The people who build technology decide which problems are worth solving and whose needs come first. We especially want more women in product to have the technical confidence to shape those decisions.
+The people who build technology decide which problems are worth solving and whose needs come first. We especially want more women to have the technical confidence to shape those decisions.
 
 ---
 
