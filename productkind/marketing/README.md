@@ -12,6 +12,7 @@ All outbound marketing for every product and publication lives here. The only ex
   - `idea-backlog.md` - seeds for future content batches.
 - `channels/` - everything specific to one channel: bio copy, profile assets, community norms (posting rules, contacts), platform research, and channel-specific writing guidance (e.g. `linkedin/how-to-be-authentic.md`). Cross-channel tone and generation workflows live in `.claude/skills/`. Create a channel folder the first time there is a real file for it, not before.
 - `calendar.md` - the single time view: planned and posted content across all of `content/`.
+- `post-ideas/` - how Claude brings post ideas from our recorded (Hungarian) conversations: record, transcribe on the Mac with whisper.cpp, get ideas, write with the linkedin-post skill. Start here when it is time to post.
 - `fanout.md` - how one campaign brief becomes channel-ready drafts via the promo-fanout skill.
 - `brief-template.md` - the 5-minute campaign brief the fanout runs on; copy it into the campaign folder as `brief.md`.
 
