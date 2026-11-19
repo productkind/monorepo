@@ -1,15 +1,18 @@
 course:
   id: ae15a492-5564-45dd-a136-36e2f4b9c686
-  title: 'Your Product on Your Laptop: Set Up a Development Environment, Week by Week'
+  title: 'Run Your Product on Your Laptop: A Development Environment for Product Managers'
+  titleSplit:
+    - 'Run Your Product on Your Laptop:'
+    - A Development Environment for Product Managers
   description: |-
-    Get Twenty, an open-source CRM (a customer relationship management app with public code), running on your own laptop, then try the same with your own product's code, so you can check things for yourself instead of waiting for an engineer. Engineers call this setup a development environment: the tools that let you run an app and change it on your laptop. One short challenge a week: cards you can read on your phone, and a few tasks for your laptop that you tick off yourself. From Week 2, an AI agent (an AI tool that works on the files on your laptop) can do most of the typing.
+    **Get a copy of your product running on your laptop, where you can see how it works and it's safe to try things out.** In four challenges, you'll set up a development environment like the one your engineers use, with an AI agent that can tell you what your product is made of. You'll practise on a real open-source CRM until it runs and you can look at its data. Then you'll try the same with your own product's code, and if it won't start, you'll know what it needs and who to ask. **You won't have to learn to code:** from the second challenge, the AI agent does most of the typing. Each challenge is cards you read on your phone and a few tasks on your laptop.
   note: |-
-    *You'll need a Mac or Windows laptop for the weekly tasks. On an employer's laptop, you may need IT's help to install things, and the first challenge shows you what to ask.*
+    *You'll need a Mac or Windows laptop for the tasks. On an employer's laptop, you may need IT's help to install things, and the first challenge shows you what to ask.*
   unlockEveryDays: 7
   learningOutcomes:
-    - Copy a product's code to your laptop with VS Code, including every repository (folder of code with its history) it needs
+    - Copy a product's code to your laptop with VS Code, including every repository it needs
     - Use an AI agent to list everything an app needs to run on your laptop
-    - Start Twenty on your laptop and see a change you made show up in it
+    - Start a real open-source CRM on your laptop and see a change you made show up in it
     - Try starting your own product, and send your engineers a clear request for help when it doesn't start
   challenges:
     - title: "Your Laptop's Toolbox, and Twenty's Code on It"
@@ -22,26 +25,26 @@ course:
       completionTime: '15:00'
       steps:
         - type: text
-          title: Your product, on your laptop
+          title: Your product, running on your laptop
           subtitle: What you'll walk away with
           content:
             body: |-
-              Checking how your product really behaves usually means asking an engineer and waiting. This course puts a real app on **your own laptop**, so you can check for yourself. First **Twenty**, an open-source CRM (a customer relationship management app whose code is public, so anyone can copy it). Then **your own product**.
+              This course gets a copy of a real app running on **your own laptop**, where you can see how it works and it's safe to try things out. First **Twenty**, an open-source CRM (a customer relationship management app whose code is public, so anyone can copy it). Then **your own product**.
 
-              Engineers call this setup a **development environment**: the tools that let you run an app and change it on your own laptop. Over four weeks, you'll walk away with:
+              Engineers call this setup a **development environment**: the tools that let you run an app and change it on your own laptop. Over four challenges, you'll walk away with:
 
               - **Twenty running on your laptop**, with a change you made showing up in it
               - **Your own product's code on your laptop**, and a list of what it needs to run
-              - **An AI agent** you've used to list what each app needs to run
+              - **An AI agent** you've used to find your way around the code
               - **Your own product running too**, as far as you get
 
-              You'll be the PM who can open the code and start an app on their own laptop. When it doesn't start, you can ask engineers for what's missing, or for 20 minutes to look at the error together.
+              If your product doesn't start, you'll know what it needs. Then you can ask an engineer for what's missing, or for 20 minutes to look at the error together.
         - type: text
           title: You won't have to learn to code
           subtitle: And the honest part
           content:
             body: |-
-              Installing tools and starting an app means **following steps, reading what the screen says, and asking when it doesn't work**. You won't write code. From Week 2, an **AI agent** can do most of the typing for you: it reads the files on your laptop, runs commands and can change files.
+              Installing tools and starting an app means **following steps, reading what the screen says, and asking when it doesn't work**. You won't write code. From the second challenge, an **AI agent** can do most of the typing for you: it reads the files on your laptop, runs commands and can change files.
 
               The honest part: **running a company's product on a laptop is often hard**, even for engineers joining the team. We've prepared Twenty to run on a laptop. Your own product may not start, and getting as far as *"I know what it needs and who to ask"* still counts.
 
@@ -98,7 +101,7 @@ course:
           content:
             key: tools
             multiple: true
-            description: "*Not sure* is a fine answer: this week's tasks include a check."
+            description: "*Not sure* is a fine answer: this challenge's tasks include a check."
             options:
               - value: git
                 label: Git
@@ -119,7 +122,7 @@ course:
           content:
             key: ai
             multiple: true
-            description: From Week 2, an AI agent helps you. If you pay for none of these, you'll use **GitHub Copilot's free plan** in VS Code, which has monthly limits.
+            description: From the second challenge, an AI agent helps you. If you pay for none of these, you'll use **GitHub Copilot's free plan** in VS Code, which has monthly limits.
             options:
               - value: chatgpt
                 label: ChatGPT
@@ -140,7 +143,7 @@ course:
           content:
             key: agent
             multiple: true
-            description: An **AI agent** works on the files on your laptop. It reads them, runs commands and can change files. You'll set one up in Week 2.
+            description: An **AI agent** works on the files on your laptop. It reads them, runs commands and can change files. You'll set one up in the second challenge.
             options:
               - value: claude-code
                 label: Claude Code (in the terminal)
@@ -161,27 +164,27 @@ course:
               - value: not-sure
                 label: Not sure
         - type: text
-          title: How the four weeks work
-          subtitle: One challenge a week
+          title: How the four challenges work
+          subtitle: One challenge at a time
           content:
             body: |-
               Thanks! From here on, the steps fit your laptop and your tools. Here's the rhythm:
 
-              - **One challenge a week**, about 10 minutes of cards you can read on your phone.
+              - **Four challenges**, each about 10 minutes of cards you can read on your phone.
               - **A short list of tasks** for your laptop, which you tick off yourself. Nothing checks them, and nothing is marked.
-              - **One email when the next challenge opens**, a week after this one.
+              - **One email when the next challenge opens.**
 
-              **A week can wait.** If life gets busy, the course stays open, and you pick up where you left off.
+              **A challenge can wait.** If life gets busy, the course stays open, and you pick up where you left off.
         - type: text
           title: Ask for access first
           subtitle: "Kim's first piece of advice"
           content:
             body: |-
-              Kim, the product coach, opens each week with one piece of advice. This week's: **ask for access today**, because it's the slowest step. In Week 4, you'll try running your own product, and for that you need its code.
+              Kim, the product coach, opens each challenge with one piece of advice. Her first: **ask for access today**, because it's the slowest step. In the fourth challenge, you'll try running your own product, and for that you need its code.
 
               Your product's code lives in a **repository**: the folder of an app's code, together with its history. Companies keep their repositories on **GitHub**, **GitLab**, **Bitbucket** or **Azure DevOps**. They all store repositories in much the same way. What changes is how you sign in and where you find the list.
 
-              It's normal for access to take **a week or more**. Weeks 2 and 3 use Twenty, so nothing waits on it.
+              It's normal for access to take **a week or more**. The second and third challenges use Twenty, so nothing waits on it.
         - type: text
           title: Your access message
           subtitle: Copy it, fill in the brackets, send it
@@ -220,26 +223,26 @@ course:
           showIf: { laptop: [employer, not-sure], os: [mac] }
           content:
             body: |-
-              Some work laptops don't let you install anything. Over the four weeks you'll install a few free tools, so ask once for all of them. Add this to your message, or send it to IT:
+              Some work laptops don't let you install anything. Over the four challenges you'll install a few free tools, so ask once for all of them. Add this to your message, or send it to IT:
 
               ```
               So I can run our product on my laptop, I'd like to install a few developer tools on my work laptop: VS Code, Git (Apple's Command Line Tools), Node.js and Docker Desktop. Can I install them myself, or could IT help?
               ```
 
-              *Node.js* and *Docker Desktop* are what Twenty needs to run, and you'll install them in Week 3. Until the answer comes, use a personal laptop for Twenty if you have one. Your own product can wait for the work laptop.
+              *Node.js* and *Docker Desktop* are what Twenty needs to run, and you'll install them in the third challenge. Until the answer comes, use a personal laptop for Twenty if you have one. Your own product can wait for the work laptop.
         - type: text
           title: On your employer's laptop
           subtitle: Add a line for IT
           showIf: { laptop: [employer, not-sure], os: [windows] }
           content:
             body: |-
-              Some work laptops don't let you install anything. On Windows, this week starts with **WSL** (a way to run Linux, another operating system, inside Windows; there's more on it in a moment), which needs **administrator rights** (permission to change the laptop's system settings) and a restart. Over the four weeks you'll install a few free tools, so ask once for all of them. Add this to your message, or send it to IT:
+              Some work laptops don't let you install anything. On Windows, this challenge starts with **WSL** (a way to run Linux, another operating system, inside Windows; there's more on it in a moment), which needs **administrator rights** (permission to change the laptop's system settings) and a restart. Over the four challenges you'll install a few free tools, so ask once for all of them. Add this to your message, or send it to IT:
 
               ```
               So I can run our product on my laptop, I'd like to install a few developer tools on my work laptop: WSL with Ubuntu, VS Code, Node.js and Docker Desktop. WSL needs administrator rights and a restart. Can I install them myself, or could IT help?
               ```
 
-              *Node.js* and *Docker Desktop* are what Twenty needs to run, and you'll install them in Week 3. Until the answer comes, use a personal laptop for Twenty if you have one. Your own product can wait for the work laptop.
+              *Node.js* and *Docker Desktop* are what Twenty needs to run, and you'll install them in the third challenge. Until the answer comes, use a personal laptop for Twenty if you have one. Your own product can wait for the work laptop.
         - type: text
           title: Your laptop's toolbox
           subtitle: Three tools engineers use every day
@@ -362,13 +365,13 @@ course:
             description: |-
               Write down the repositories you think your product needs to run, with a few words on what each one is.
 
-              Can't see them yet? Write *"waiting for access"*, and what you asked for. You'll come back to this list in Week 2, when your AI agent helps you find out what each one needs.
+              Can't see them yet? Write *"waiting for access"*, and what you asked for. You'll come back to this list in the second challenge, when your AI agent helps you find out what each one needs.
             subDescription: You'll get quick feedback on whether your list has a frontend and a backend, and on anything you probably don't need.
             placeholder: 'e.g. web-app (the screens customers use), api (saves the data). Or: waiting for access'
-            systemPrompt: "You are a friendly mentor for a product manager who is learning to run their company's product on their own laptop. The learner lists the code repositories they think their product needs to run, or says they are waiting for access. If they list repositories, give warm, concise feedback in British English (max 4 short bullet points): check whether the list seems to cover a frontend (the screens) and a backend (the part that saves data), point out anything that looks like a separate product (a marketing site, documentation) that they probably do not need, and suggest confirming the list with their engineering lead or the README. If they are waiting for access, reassure them this is normal and can take a week or more, and remind them that Weeks 2 and 3 use Twenty, so nothing waits on it. Do not invent repository names. Do not use em dashes. End encouragingly. Reply in a markdown format."
+            systemPrompt: "You are a friendly mentor for a product manager who is learning to run their company's product on their own laptop. The learner lists the code repositories they think their product needs to run, or says they are waiting for access. If they list repositories, give warm, concise feedback in British English (max 4 short bullet points): check whether the list seems to cover a frontend (the screens) and a backend (the part that saves data), point out anything that looks like a separate product (a marketing site, documentation) that they probably do not need, and suggest confirming the list with their engineering lead or the README. If they are waiting for access, reassure them this is normal and can take a week or more, and remind them that the second and third challenges use Twenty, so nothing waits on it. Do not invent repository names. Do not use em dashes. End encouragingly. Reply in a markdown format."
             checkerPrompt: 'The learner lists the repositories they think their product needs, or says they are waiting for access. Accept any list of repository names or descriptions, and accept "waiting for access" or similar. Only flag clearly empty or nonsense input. This is their answer:'
         - type: tasks
-          title: This week's tasks
+          title: Your tasks for this challenge
           content:
             description: |-
               About **30 minutes** at your laptop (45 on Windows). Tick each one when it's done. Nothing checks them.
@@ -381,7 +384,7 @@ course:
               - id: create-github-account
                 label: Create a free GitHub account
                 showIf: { github: [none] }
-                details: Go to [github.com](https://github.com) and click **Sign up**. You'll need it in Week 2 if you use GitHub Copilot, and your engineering lead may ask for your username to give you access.
+                details: Go to [github.com](https://github.com) and click **Sign up**. You'll need it in the second challenge if you use GitHub Copilot, and your engineering lead may ask for your username to give you access.
               - id: install-wsl
                 label: Install WSL with Ubuntu
                 showIf: { os: [windows] }
@@ -421,7 +424,7 @@ course:
                   - If you see a **Clone Repository** button, Git is installed. Tick this one.
                   - If you see *Install Git, a popular source control system...*, choose **Terminal > New Terminal** from the menu at the top, paste `xcode-select --install` and press Enter. In the window that opens (it may hide behind VS Code), click **Install** and agree to the licence. It may ask for your Mac's password, and it can take several minutes. When it's done, quit VS Code and open it again. If it says the tools are already installed but VS Code still shows *Install Git*, tell us in Discord.
 
-                  That's the only command you'll type this week.
+                  That's the only command you'll type in this challenge.
               - id: products-folder-mac
                 label: Create your Products folder
                 showIf: { os: [mac] }
@@ -440,7 +443,7 @@ course:
                   4. Choose your **Products** folder and click **Select as Repository Destination**. On Windows, the picker shows your Ubuntu folders: open your home folder (named after your Ubuntu username), then **Products**.
                   5. Wait while it clones (it can take a few minutes). When VS Code asks *Would you like to open the repository?*, click **Open**. If it opens by itself, skip this.
 
-                  If VS Code asks whether you trust the authors of the files, choose **Yes**. If it offers to reopen the folder in a container or to install extensions, close that message: you'll need neither this week.
+                  If VS Code asks whether you trust the authors of the files, choose **Yes**. If it offers to reopen the folder in a container or to install extensions, close that message: you'll need neither in this challenge.
 
                   You'll see Twenty's folders on the left, including **lab** and **packages**. You don't need to sign in: Twenty's code is public.
               - id: clone-own
@@ -453,8 +456,8 @@ course:
 
                   Clone each repository your product needs into **Products**, and answer the same trust question as for Twenty. When a clone finishes, its folder shows up there. If the sign-in doesn't appear, ask us in Discord. Still waiting for access? Leave this one for later.
         - type: challenge-end
-          title: "That's Week 1's cards done ✅"
+          title: "The first challenge's cards are done ✅"
           content:
             description: You know what access to ask for, what Git, VS Code and the terminal each do, and how to clone a repository into your Products folder. Your tasks stay in this challenge, so come back and tick them when you're at your laptop.
-            subDescription: 'Your access message is on its way or ready to send, which gives it three weeks to come through before Week 4. Every repository you copy goes in your Products folder.'
-            nextModule: "**In a week:** an AI agent that reads the code on your laptop, and a list of everything Twenty needs to run. We'll email you when it opens."
+            subDescription: 'Your access message is on its way or ready to send, so it has time to come through before the fourth challenge. Every repository you copy goes in your Products folder.'
+            nextModule: '**Next:** an AI agent that reads the code on your laptop, and a list of everything Twenty needs to run.'

@@ -1,6 +1,6 @@
-# Course Outline: Your Product on Your Laptop
+# Course Outline: Run Your Product on Your Laptop
 
-**Full title (working):** Your Product on Your Laptop: Set Up a Development Environment, Week by Week
+**Full title:** Run Your Product on Your Laptop: A Development Environment for Product Managers
 
 **Where it fits:** after the free "How web apps work" workshop and before the paid [How Your Product Works: Technical Foundations for Product Managers](https://littleparrot.app/courses/technical-foundations-for-product-managers) cohort, which starts on Tuesday 19 January 2027. Free.
 
@@ -17,6 +17,8 @@ Every week has the same shape:
 1. **First Twenty, then yours.** Each step is shown on Twenty first, where we know exactly what happens. Then comes the general advice for the learner's own product, where we don't.
 2. **Cards for the phone, tasks for the laptop.** Each week's challenge is cards they can read on the phone in about 10 minutes: what the step is, why engineers do it, a scenario quiz. The laptop work is a short list of **tasks** (install this, clone that, start this), which the learner ticks off themselves.
 3. **One email a week.** It announces the new challenge and its tasks. Its content changes with what the learner has ticked (see "Progress and reminders").
+
+**"Challenge" in the course, "week" only in the emails (decided 19 November 2026).** The course stays open after launch, so someone may find it and work through it at their own pace. The course text, including the description, says "the second challenge" and never "Week 2". The emails go out weekly, so they can say "week". The outline keeps "Week 1" to "Week 4" as working names.
 
 The learner answers a few setup questions at the start (AI subscription, coding agent, OS, what's installed). The tasks then show only the steps for their OS and tools.
 
