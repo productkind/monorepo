@@ -48,8 +48,8 @@ The same as the workshop: the learner has no persona, and the characters talk to
 These decide which steps the learner sees. Each answer can be changed later.
 
 1. **Which AI tools do you pay for?** (multiple) ChatGPT, Claude, Gemini, Microsoft Copilot, GitHub Copilot, Cursor, none.
-2. **Is a coding tool from it installed?** (multiple) Claude Code (terminal), Claude desktop app's code tab, Codex, GitHub Copilot in VS Code, Cursor, Microsoft Copilot desktop app's code tab, Gemini CLI, none, not sure.
-3. **Which of these are on your laptop?** (multiple) Git, VS Code, Cursor, Docker, Node.js, none, not sure. "Not sure" leads to the check in Week 2.
+2. **Is a coding tool from it installed?** (multiple) Claude Code (terminal), Claude desktop app's _Code_ tab (paid Claude plans only), Codex, GitHub Copilot in VS Code, Cursor, Microsoft Copilot desktop app's _Code_ tab (a preview, billed by usage), Gemini CLI, none, not sure.
+3. **Which of these are on your laptop?** (multiple) Git, VS Code, Cursor, Docker, Node.js, none, not sure. "Not sure" leads to the check in Week 1.
 4. **Do you have a GitHub account?** Yes, personal / yes, my employer's / no.
 5. **Which laptop will you use?** Mac / Windows. Then: is it your own or your employer's? An employer's laptop may not let you install things, and Week 1 says what to do about that.
 
@@ -63,91 +63,73 @@ The personal GitHub account is possibly better for Twenty. The employer's accoun
 
 ## Structure
 
-Five weeks, one challenge each. A challenge is about 10 minutes of cards. Each week's tasks take 20 to 60 minutes on the laptop, more in Week 5 if the learner's own product is hard to start.
+Four weeks, one challenge each. A challenge is about 10 minutes of cards (Week 1's about 15, with the opening and the setup questions). Each week's tasks take 20 to 60 minutes on the laptop, more in Week 4 if the learner's own product is hard to start.
 
-### Opening: comics and the setup questions
+### Opening: the course intro and the setup questions
 
-- **Comics:**
-  1. Rhino: "Can you check whether it's fixed in the new version?"
-  2. The learner's codespace from the workshop, with "This codespace has been deleted after 30 days" (GitHub's default).
-  3. Snail at a desk with three terminals open: "It runs on my machine."
-  4. Kim: "Let's make it run on yours too."
+**No comics in this version (decided 19 November 2026).** Comics can't be added after publishing without shifting step numbers, so the opening is text.
+
+- **What you'll walk away with:** the outcomes, in one short step.
 - **Biggest fear first:** "You won't have to learn to code to do this." Installing tools and starting an app means following steps, reading what the screen says and asking when it doesn't work. A coding agent can do most of the typing for you.
-- **What a laptop setup gives you that a codespace doesn't:**
-  - It stays.
-  - It costs nothing.
-  - It works with your own product's code, which you may not be allowed to put in a codespace on your personal account.
+- **Why your laptop (the one step that mentions the workshop):** the workshop's codespace is deleted once it has been stopped and unused for 30 days. A laptop setup:
+  - stays;
+  - costs nothing;
+  - works with your own product's code, which you may not be allowed to put in a codespace on your personal account.
+- **How the four weeks work:** one challenge and one set of tasks a week, one email when the next one opens. Tick the tasks yourself. Nothing is marked, and a week can wait.
 - **The setup questions** (above).
-- **How the five weeks work:** one challenge and one set of tasks a week, one email when the next one opens. Tick the tasks yourself. Nothing is marked, and a week can wait.
 
-### Week 1. Read the code without installing anything
-
-**After this challenge, you'll be able to find out what an app is made of from its code repository.**
-
-All on the phone or in a browser, so the learner gets something useful before installing anything.
-
-- **What a repository is:** the folder of an app's code, together with its history. GitHub is one of the places repositories live. The learner saw Twenty's in the workshop, and now they read it from the outside.
-- **Twenty first:**
-  - Open [`productkind/twenty-pm-lab`](https://github.com/productkind/twenty-pm-lab) in the browser.
-  - Read the README: what it says the app needs.
-  - Look at the top-level folders.
-- **Ask your AI chat about it.** A copy-paste prompt (the reusable tool), written for the learner's own AI tool, that asks what the app is made of and what you'd need to install to run it. Then **check:** find two of its answers in the repository yourself (for example `.nvmrc` for the Node.js version, and `lab/docker-compose.yml` for the database).
-  - Predict, ask, check, the workshop habit, now outside the codespace.
-- Quiz (scenario): the AI says the app needs MySQL, and the repository has a file starting a Postgres database. Which do you trust, and what do you do?
-- **Then yours:** where does your product's code live? GitHub, GitLab, Bitbucket or Azure DevOps, and the one-line difference that matters (they all hold repositories; only the sign-in differs).
-  - Can you already see it? If yes, read its README and top-level folders, and use only the AI tool your company approves for its code.
-- **Ask for access now, because it takes time.** A ready-made message to send to your engineering lead (the second reusable tool). It asks for read access to the repositories, the setup document if there is one, and whether you're allowed to run the product on your laptop.
-  - **It's normal for this to take a week or more.** Weeks 2 to 4 don't need it.
-- **Employer's laptop:** if you can't install things, the message also asks IT. Until then, do Weeks 2 to 4 on a personal laptop with Twenty, and your own product waits for the company laptop.
-- Exercise: send the access message (or note that you already have access).
-
-**Tasks (ticked by the learner):**
-
-- [ ] Ask your AI chat about Twenty's repository and check two answers.
-- [ ] Find where your product's code lives.
-- [ ] Send the access message (or confirm you have access).
-
-**Left for the paid course:** what each part in Twenty's list does (the worker and Redis) is Mission 2. This week only names them.
-
-### Week 2. Your laptop's toolbox, and Twenty's code on it
+### Week 1. Your laptop's toolbox, and Twenty's code on it
 
 **After this challenge, you'll be able to copy a repository to your laptop.**
 
+**Why there's no "read the code from the outside" week (decided 19 November 2026):** the first draft spent Week 1 reading Twenty's repository on GitHub with an AI chat. Week 2's coding agent does the same on the clone, with files it can open, so that interim step was cut. The access request it carried moves here, at the start of Week 1, because it takes the longest.
+
+- **Ask for access first, because it takes time:**
+  - Where does your product's code live? GitHub, GitLab, Bitbucket or Azure DevOps: they all hold repositories; only the sign-in differs. A **repository** is the folder of an app's code, together with its history.
+  - A ready-made message to your engineering lead (the reusable tool). It asks for read access to the repositories, the setup document if there is one, and whether you're allowed to run the product on your laptop.
+  - **It's normal for this to take a week or more.** Weeks 2 and 3 work on Twenty, so they don't need it.
+  - **Employer's laptop:** if you can't install things, the message also asks IT. Until then, use a personal laptop for Twenty, and your own product waits for the company laptop.
 - **Why engineers have these three:**
   - **Git** keeps a repository's history and copies it. You'll use it through VS Code's buttons (the _Source Control_ view), not by typing Git commands: that's how many engineers use it too.
   - **An editor** (VS Code or Cursor) is where code is read and changed.
   - **A terminal** is where you type commands. The workshop's terminal, now on your own laptop.
-- **Check what you have:** VS Code's _Source Control_ view tells you whether Git is installed, and offers to install it if it isn't.
+- **Check what you have:** VS Code's _Source Control_ view says whether Git is installed. If _Clone Repository_ is missing, Git is missing.
+  - **Mac:** VS Code doesn't install Git itself. The install is one pasted command in VS Code's terminal (`xcode-select --install`), then Apple's own install window, then restart VS Code. The only terminal step in the week.
+  - **Windows:** Ubuntu in WSL already has Git.
 - **Make a home for your products:** one folder (for example `Products` in your home folder), so every repository you clone has the same place. Snail's laptop as the worked example.
-- **Clone:** copying a repository to your laptop, with its history. **Clone vs download ZIP:** the ZIP has no history and can't receive updates.
+- **Clone:** copying a repository to your laptop, with its history. **Clone vs download ZIP:** the ZIP has no history, so it can't receive the team's later changes.
 - Quiz (scenario): a colleague sends you a ZIP of the code. What can't you do with it that you could with a clone?
 - **One repository or several?**
-  - Twenty keeps everything in one, with a `packages` folder (frontend, server and more).
+  - Twenty keeps everything in one, with a `packages` folder (`twenty-front`, `twenty-server` and more).
   - Many products split it: a frontend repository, a backend repository, sometimes more.
   - The checklist for telling which yours is: the README, the organisation's list of repositories, and asking the engineering lead.
 - Quiz (judge a scenario): your company has `web-app`, `api` and `design-system` repositories. Which do you probably need to run the product?
+- **Signing in to GitHub:** Twenty's repository is public, so cloning it needs no sign-in. Your own product's private repositories do.
 - Exercise: write down which repositories your product needs, or "waiting for access".
 
 **Tasks (steps by OS):**
 
-- [ ] Install VS Code (skip if you use Cursor).
-- [ ] Make sure Git is installed, from VS Code's _Source Control_ view.
+- [ ] Send the access message (or confirm you have access).
+- [ ] Windows: install WSL with Ubuntu.
+- [ ] Install VS Code (skip if you use Cursor). Windows: with its WSL extension, connected to Ubuntu.
+- [ ] Mac: make sure Git is installed, from VS Code's _Source Control_ view.
 - [ ] Create your products folder.
-- [ ] Sign in to GitHub in VS Code.
 - [ ] Clone `twenty-pm-lab` into your products folder from VS Code.
-- [ ] If you have access: clone your product's repository (or repositories).
+- [ ] If you have access: sign in and clone your product's repository (or repositories).
 
-**Windows: everything happens in WSL.** WSL (Windows Subsystem for Linux) is a Linux computer running inside Windows. The lab commands are written for Linux and Mac, and Docker Desktop on Windows runs on WSL anyway, so Windows learners work inside it from Week 2 on:
+**Windows: everything happens in WSL.** WSL (Windows Subsystem for Linux) is a Linux computer running inside Windows. The lab commands are written for Linux and Mac, and Docker Desktop on Windows runs on WSL anyway, so Windows learners work inside it from Week 1 on:
 
 - One card for Windows learners only: what WSL is, and why engineers on Windows use it too. Two places on one laptop, so "which copy am I looking at?" now has a Windows-sized cousin: "am I in Windows or in Linux?"
-- The Windows tasks start with **installing WSL with Ubuntu** (it needs admin rights and a restart, so an employer's laptop may block it; Week 1's message to IT covers this).
-- Then VS Code on Windows with its **WSL extension**, and Git inside Ubuntu, not Git for Windows.
-- The products folder lives in the Linux home folder (`~/Products`), not on the `C:` drive, because files on the Windows side are slow to reach from Linux.
+- The Windows tasks start with **installing WSL with Ubuntu** (`wsl --install` in PowerShell as administrator, then a restart; an employer's laptop may block it, and the access message's IT line covers this). When Ubuntu asks for a password, nothing shows as you type; that's normal.
+- Then VS Code on Windows (the _User setup_, which needs no admin rights) with its **WSL extension**, and Git inside Ubuntu, not Git for Windows.
+- The products folder lives in the Linux home folder (`~/Products`), not on the `C:` drive, because Microsoft recommends keeping project files in the Linux file system for speed.
 - The clone happens from VS Code connected to WSL.
 
-Windows learners get one or two extra tasks this week, so Week 2 takes them about 45 minutes instead of 30.
+Windows learners get one or two extra tasks this week, so Week 1 takes them about 45 minutes instead of 30.
 
-### Week 3. A coding agent that knows the code on your laptop
+**Left for the paid course:** what each part of Twenty does (the worker and Redis) is Mission 2.
+
+### Week 2. A coding agent that knows the code on your laptop
 
 **After this challenge, you'll be able to use a coding agent to find out what your product needs to run.**
 
@@ -159,7 +141,8 @@ Windows learners get one or two extra tasks this week, so Week 2 takes them abou
   - GitHub Copilot's free plan in VS Code if you have no subscription.
   - Otherwise the coding tool your subscription includes (Claude Code or the Claude desktop app's code tab, Codex, Cursor's agent, the Microsoft Copilot desktop app's code tab).
   - One line on why **ask mode first**: nothing changes until you decide.
-- **Twenty first:** open the clone in the agent and ask the same questions as in Week 1. Notice the agent can now open the files itself, so its answers point to files you can check.
+- **Twenty first:** open the clone in the agent and ask what the app is made of and what you'd need to install to run it. The agent can open the files itself, so its answers point to files you can check: for example `.nvmrc` for the Node.js version, and `lab/docker-compose.yml` for the database. Predict, ask, check, the workshop habit, now on your laptop.
+- Quiz (scenario): the agent says the app needs MySQL, and the repository has a file starting a Postgres database. Which do you trust, and what do you do? (Moved from the cut reading week.)
 - **The run-list (the reusable tool):** a prompt that asks the agent to list everything the app needs on the laptop to run. It covers:
   - the runtime and its version;
   - the package manager;
@@ -173,7 +156,7 @@ Windows learners get one or two extra tasks this week, so Week 2 takes them abou
 - Quiz (scenario): the agent says your product needs Node.js 18, and you have Node.js 24 installed. Is that fine?
 - **Then yours:** run the same prompt on your product's clone, then check two items against the README or the setup document.
 - **Company rules:** use the coding agent your company approves for its code. If none is approved, do Twenty only and ask.
-- Exercise: save your product's run-list. Week 5 starts from it.
+- Exercise: save your product's run-list. Week 4 starts from it.
 
 **Tasks:**
 
@@ -183,7 +166,7 @@ Windows learners get one or two extra tasks this week, so Week 2 takes them abou
 
 **Left for the paid course:** using the agent to change code safely and take a fix through review (Missions 4 and 5).
 
-### Week 4. Twenty running on your laptop
+### Week 3. Twenty running on your laptop
 
 **After this challenge, you'll be able to start an app on your laptop and see a change you made in it.**
 
@@ -195,10 +178,10 @@ Windows learners get one or two extra tasks this week, so Week 2 takes them abou
   - Optionally repeat the workshop bug and fix: the bug is still in `main`, and `use-fix` still works.
 - **Look at the data:** connect VS Code's PostgreSQL extension to the database, the same panel as in the workshop, now set up by hand.
   - The data stays when you stop and start the app, because Docker keeps it in a volume.
-  - Other database tools exist (TablePlus, DBeaver, pgAdmin). Which one you'll need for your own product depends on its database (Week 5).
+  - Other database tools exist (TablePlus, DBeaver, pgAdmin). Which one you'll need for your own product depends on its database (Week 4).
 - Quiz (scenario): Twenty doesn't open, and the terminal says Docker isn't running. What's the first thing you check?
 - **When it doesn't start:** a prompt that gives the error to the coding agent and asks what it means before changing anything. Predict, ask, check again.
-- Exercise: write down the order you start things in. That's your start-up checklist, and Week 5 needs one for your product.
+- Exercise: write down the order you start things in. That's your start-up checklist, and Week 4 needs one for your product.
 
 **Tasks:**
 
@@ -210,12 +193,12 @@ Windows learners get one or two extra tasks this week, so Week 2 takes them abou
 
 **Left for the paid course:** the server is the ready-built one, so only frontend changes show up. Building the server from source too, and a pull request with checks, is the paid course's deeper track. Where this copy sits next to staging and production is Missions 2 and 5.
 
-### Week 5. Try it on your own product
+### Week 4. Try it on your own product
 
 **After this challenge, you'll be able to try starting your own product on your laptop, with a coding agent's help.**
 
 - **Name the difficulty first:** this can take an afternoon, or longer. Getting to "I know what's missing and who to ask" is a real result.
-- **From the run-list to a running app:** the same order as Twenty, using the run-list from Week 3:
+- **From the run-list to a running app:** the same order as Twenty, using the run-list from Week 2:
   - the runtime;
   - the database;
   - the settings file;
@@ -226,7 +209,7 @@ Windows learners get one or two extra tasks this week, so Week 2 takes them abou
 
   A copy-paste prompt for each (the reusable tools). The rule from the workshop holds: you check the result in the app, not in what the agent says.
 
-- **The database your product needs:** Postgres, MySQL, SQL Server, MongoDB. How to install it, either directly or in Docker as in Twenty. Then a tool to look at it (the VS Code extension for it, or one of the tools from Week 4).
+- **The database your product needs:** Postgres, MySQL, SQL Server, MongoDB. How to install it, either directly or in Docker as in Twenty. Then a tool to look at it (the VS Code extension for it, or one of the tools from Week 3).
 - **Settings and secrets:** most products need a settings file (often `.env`) with keys you don't have. **Never paste a real key into an AI chat.** Ask an engineer for development keys. A ready-made message for it.
 - Quiz (scenario): the agent suggests copying the production database address into your settings file. What do you do?
 - **When to stop and ask:** a ready-made message asking an engineer for 20 minutes to pair on it. It includes your run-list, what worked, the error and what you tried.
@@ -246,18 +229,18 @@ Windows learners get one or two extra tasks this week, so Week 2 takes them abou
 Each week names its part at the moment it comes up, so the learner sees what's ahead without a sales list at the end:
 
 - **Week 1:** the worker and Redis, what everything in the app does → Mission 2.
-- **Week 3:** changing code with an agent and taking it through review → Missions 4 and 5.
-- **Week 4:**
+- **Week 2:** changing code with an agent and taking it through review → Missions 4 and 5.
+- **Week 3:**
   - development vs staging vs production in practice → Missions 2 and 5;
   - building the server from source and opening a pull request → the deeper track;
   - Twenty's own analytics events in Grafana → Mission 6.
-- **Week 5:** turning your own product's setup into the map of your product → Missions 2 and 3's Monday moves.
+- **Week 4:** turning your own product's setup into the map of your product → Missions 2 and 3's Monday moves.
 
 ---
 
 ## Progress and reminders (MVP features)
 
-- **Setup questions are mandatory and come first.** They come from the course YAML and run in the app's existing onboarding page (`/:courseId/onboarding`), after the comics and the "you won't need to code" step, before challenge 1. Every question has a way out ("Not sure", "None", "Answer later" for the employer's laptop), so mandatory means answering something, not knowing the answer. The last screen shows the learner's path, for example "Mac, Claude Code, Git already installed: Week 2 has 3 tasks for you instead of 5".
+- **Setup questions are mandatory and come first.** They are `setup-question` steps at the start of challenge 1, after the course intro and the "you won't need to code" step. Every question has a way out ("Not sure", "None", "Answer later" for the employer's laptop), so mandatory means answering something, not knowing the answer. The last screen shows the learner's path, for example "Mac, Claude Code, Git already installed: Week 1 has 4 tasks for you instead of 7".
 - **Answers are stored per learner, with the course they came from.** One row per answer: key, value, course, question, when. The latest answer per key wins, and every course reads it, so the paid course doesn't ask again. Changing an answer adds a row and keeps the old one.
 - **Steps say who they're for** with `showIf` (within a key any value matches; across keys all must). Every step stays in the course so step numbers and progress don't shift; the challenge page skips the ones that don't apply and marks them complete as the learner passes. A question added after a learner finished setup is asked the next time they open the course, and until then they see every version, labelled.
 - **"Your setup" panel** reopens the questions with the current answers filled in. Steps already passed as hidden stay complete.
@@ -265,7 +248,7 @@ Each week names its part at the moment it comes up, so the learner sees what's a
 - **Weekly email**, one per week when the new challenge opens. Three versions by progress:
   - **All done:** the new week, and what last week unlocked.
   - **Some done:** the new week. The one task left is often the one that's still worth doing, so name it, with the "Stuck?" link.
-  - **Not started:** the new week, and the shortest path in (Week 1's cards take 10 minutes on the phone).
+  - **Not started:** the new week, and the shortest path in (this week's cards take 10 minutes on the phone).
 - **No streaks, no guilt messages, no "you're behind".** Following the course design, a week can wait, and the course stays open.
 
 ---
@@ -273,11 +256,10 @@ Each week names its part at the moment it comes up, so the learner sees what's a
 ## Narrative arc
 
 1. **The loss:** the workshop codespace is gone, and checking anything means waiting for someone.
-2. **Reading:** find out what an app is made of without installing anything, and start the access request early.
-3. **The toolbox:** Git, an editor, a terminal, and the code on the laptop.
-4. **A helper:** a coding agent that reads the code, and the run-list.
-5. **It runs:** Twenty on the laptop, with a change you made.
-6. **Yours:** as far as your own product goes, and an honest place to stop.
+2. **The toolbox:** start the access request early, then Git, an editor, a terminal, and the code on the laptop.
+3. **A helper:** a coding agent that reads the code, and the run-list.
+4. **It runs:** Twenty on the laptop, with a change you made.
+5. **Yours:** as far as your own product goes, and an honest place to stop.
 
 ---
 
@@ -291,7 +273,7 @@ None exist yet in `toolkit-links.md`, so the course names them without links:
   - the development keys request;
   - the pairing request.
 - **Prompts for Getting Your Product Running:**
-  - the Week 1 repository question;
+  - "what is this app made of?" (Week 2, on the clone);
   - the run-list;
   - the "explain this error" prompt;
   - "guide me";
@@ -316,11 +298,10 @@ None exist yet in `toolkit-links.md`, so the course names them without links:
 
 - **Cards:** about 10 minutes a week, 50 minutes in total.
 - **Laptop tasks:**
-  - Week 1: about 15 minutes.
-  - Week 2: about 30.
-  - Week 3: about 20.
-  - Week 4: about 60, most of it downloads.
-  - Week 5: anything from 30 minutes to an afternoon.
+  - Week 1: about 30 minutes (45 on Windows), plus sending the access message.
+  - Week 2: about 20.
+  - Week 3: about 60, most of it downloads.
+  - Week 4: anything from 30 minutes to an afternoon.
 
 ---
 
@@ -329,20 +310,20 @@ None exist yet in `toolkit-links.md`, so the course names them without links:
 - **Setup questions:**
   - AI tool, coding agent, installed tools, GitHub account, OS: all in the opening.
   - Laptop ownership added, because it decides whether installing is possible.
-- **Install Git; install VS Code unless Cursor is installed; create the products folder:** Week 2.
+- **Install Git; install VS Code unless Cursor is installed; create the products folder:** Week 1.
 - **Sign into GitHub, ask for access to the repositories:**
-  - Sign-in is in Week 2.
-  - The access request moved to **Week 1**, because it can take a week or more.
-- **Single repository or several; clone with VS Code:** Week 2.
-- **Install a coding agent, GitHub Copilot if there's no subscription:** Week 3.
-- **Ask questions about the repository:** Week 1 (chat, from the outside) and Week 3 (agent, on the clone).
-- **Install the runtime (Node.js for Twenty); install Docker; run Twenty and try what the workshop did:** Week 4.
-- **Install Postgres locally and compare it with Docker:** **dropped as agreed.** Twenty's Docker Postgres keeps its data in a volume, so the comparison wouldn't hold. A database install stays, for the learner's own product, in Week 5.
-- **Database tool, a VS Code extension, other options for other databases:** Week 4 for Twenty, Week 5 for the learner's own product.
-- **Try running your own product with AI prompts, and say it may take time:** Week 5.
+  - Sign-in is in Week 1, for the learner's own private repositories (Twenty's is public).
+  - The access request opens **Week 1**, because it can take a week or more.
+- **Single repository or several; clone with VS Code:** Week 1.
+- **Install a coding agent, GitHub Copilot if there's no subscription:** Week 2.
+- **Ask questions about the repository:** Week 2 (agent, on the clone). The "from the outside with an AI chat" version was cut on 19 November 2026.
+- **Install the runtime (Node.js for Twenty); install Docker; run Twenty and try what the workshop did:** Week 3.
+- **Install Postgres locally and compare it with Docker:** **dropped as agreed.** Twenty's Docker Postgres keeps its data in a volume, so the comparison wouldn't hold. A database install stays, for the learner's own product, in Week 4.
+- **Database tool, a VS Code extension, other options for other databases:** Week 3 for Twenty, Week 4 for the learner's own product.
+- **Try running your own product with AI prompts, and say it may take time:** Week 4.
 - **Ready-made tools for every social step:** access, keys and pairing messages.
 - **Leave things out on purpose and say they're in the paid course:** "What we leave for the paid course".
-- **Week 1 gives value, not just questions:** reading Twenty's repository with an AI chat, no installs.
+- **Week 1 gives value, not just questions:** Twenty's code on the learner's laptop, and the access request on its way.
 - **Docker licensing and company AI policy:** not built in, as agreed. Two exceptions:
   - The workshop's "use only the AI tool your company approves" line stays, because the learner's own code is involved.
   - Docker Desktop's licence is not mentioned unless learners ask.
@@ -355,17 +336,17 @@ None exist yet in `toolkit-links.md`, so the course names them without links:
    - It reads `/proc/meminfo` and uses GNU `date`, which fail on a Mac.
    - The PostgreSQL panel's connection lives in `devcontainer.json`, which a local VS Code doesn't read.
 
-   Before Week 4, the fork needs:
+   Before Week 3, the fork needs:
    - a local install script for Mac and for Ubuntu on WSL;
    - the connection in `.vscode/settings.json`;
    - a check that `start-frontend` works without `CODESPACE_NAME`.
 
-2. **Windows uses WSL (decided 17 November 2026).** Windows learners work inside WSL with Ubuntu from Week 2 on: Git, Node.js and the clones live there, VS Code connects to it with the WSL extension, and Docker Desktop's WSL integration is turned on for Ubuntu in Week 4. The fork's local setup script therefore only needs to support Mac and Linux (Ubuntu in WSL).
-3. **Memory.** The codespace asks for 16 GB, and the frontend build gives Node.js 8 GB. On an 8 GB laptop Week 4 may not work. We need to measure on a real 8 GB and 16 GB Mac, and decide whether to:
+2. **Windows uses WSL (decided 17 November 2026).** Windows learners work inside WSL with Ubuntu from Week 1 on: Git, Node.js and the clones live there, VS Code connects to it with the WSL extension, and Docker Desktop's WSL integration is turned on for Ubuntu in Week 3. The fork's local setup script therefore only needs to support Mac and Linux (Ubuntu in WSL).
+3. **Memory.** The codespace asks for 16 GB, and the frontend build gives Node.js 8 GB. On an 8 GB laptop Week 3 may not work. We need to measure on a real 8 GB and 16 GB Mac, and decide whether to:
    - say "16 GB recommended" in the opening;
    - or offer a lighter path (the ready-built app on port 3000 only, with no change from source).
 4. **The opening mentions the workshop.** Keep that to one step, so the non-attendee version swaps it for the workshop's missions.
-5. **Week 1 for learners whose company code isn't on GitHub.** The steps are written for GitHub first. GitLab, Bitbucket and Azure DevOps get a short "where to find it" note each. Confirm these are the "most popular" set.
+5. **The access request for learners whose company code isn't on GitHub.** The steps are written for GitHub first. GitLab, Bitbucket and Azure DevOps get a short "where to find it" note each. Confirm these are the "most popular" set.
 
 ---
 
@@ -379,19 +360,13 @@ None exist yet in `toolkit-links.md`, so the course names them without links:
   - Microsoft Copilot's desktop app has a code tab that works on files on the laptop: what it's called, which plans have it, Mac and Windows.
   - The Claude desktop app's code tab: what it's called, which plans have it.
 - **Premise risk:** none.
+- **Researched 19 November 2026** (facts sheet): a codespace is deleted after 30 days stopped and inactive; the Claude desktop app's _Code_ tab needs a paid plan; the Microsoft Copilot desktop app's _Code_ tab is a Frontier preview, billed by usage.
 
-### Week 1
+### Cut reading week (researched 19 November 2026, then cut)
 
-- **Tools taught:**
-  - GitHub in the browser: read a repository's README and folders.
-  - ChatGPT, Claude, Gemini, Microsoft Copilot (and GitHub Copilot on github.com): ask about a public repository by its link.
-- **Claims to verify:**
-  - Which of these AI chats can read a public GitHub repository from its link today, and on which plans (free vs paid). Name the exact feature (for example a GitHub connector, or web browsing).
-  - Whether GitHub Copilot's free plan includes chat on github.com about a repository.
-  - How a learner finds an organisation's repositories on GitHub, GitLab, Bitbucket and Azure DevOps.
-- **Premise risk:** the week's value depends on the learner's AI chat reading the repository by link. If some free plans can't, those learners need a fallback (pasting the README and the folder list into the chat). Confirm per tool.
+- Researched in the facts sheet's "Week 1" section before the week was cut. Still useful later: GitHub Copilot's free plan includes Copilot Chat on github.com; no AI chat documents reading a repository from a pasted link.
 
-### Week 2
+### Week 1 (toolbox and clone; researched 19 November 2026)
 
 - **Tools taught:**
   - Git: installed and checked from VS Code's _Source Control_ view, not the command line, on Mac and in WSL.
@@ -405,7 +380,7 @@ None exist yet in `toolkit-links.md`, so the course names them without links:
   - VS Code's current clone flow and its exact labels, on Mac and in WSL.
 - **Premise risk:** WSL needs admin rights; learners on locked employer laptops can't do the Windows path until IT helps.
 
-### Week 3
+### Week 2
 
 - **Tools taught:**
   - GitHub Copilot in VS Code: turn on the free plan, switch off training on your data, ask mode vs agent mode.
@@ -415,9 +390,9 @@ None exist yet in `toolkit-links.md`, so the course names them without links:
   - GitHub Copilot free plan limits (chat and agent requests per month), and the current setting name for training on your data.
   - The current mode names in GitHub Copilot's chat (ask, edit, agent, plan).
   - Which Claude plans include Claude Code and the desktop app's code tab.
-- **Premise risk:** none, beyond free-plan limits being enough for Weeks 3 to 5.
+- **Premise risk:** none, beyond free-plan limits being enough for Weeks 2 to 4.
 
-### Week 4
+### Week 3
 
 - **Tools taught:**
   - Node.js: install the version in `.nvmrc` (24.16.0) on Mac and Windows. Decide between the installer and a version manager (nvm, fnm, Volta).
@@ -432,9 +407,9 @@ None exist yet in `toolkit-links.md`, so the course names them without links:
   - Memory needed, measured (open point 3).
   - How long the first `docker compose pull` and `yarn install` take on a home connection.
   - That the frontend rebuild picks up a code change locally, and how long it takes.
-- **Premise risk:** the whole week depends on the fork running locally, which it doesn't yet. This must be built and tested before Week 4's email.
+- **Premise risk:** the whole week depends on the fork running locally, which it doesn't yet. This must be built and tested before Week 3's email.
 
-### Week 5
+### Week 4
 
 - **Tools taught:** the learner's own product's stack, through a coding agent. Database installs: Postgres, MySQL, SQL Server, MongoDB (directly or in Docker), and a tool to look at each.
 - **Claims to verify:**

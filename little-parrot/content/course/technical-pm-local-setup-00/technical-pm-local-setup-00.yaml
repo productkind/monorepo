@@ -1,0 +1,460 @@
+course:
+  id: ae15a492-5564-45dd-a136-36e2f4b9c686
+  title: 'Your Product on Your Laptop: Set Up a Development Environment, Week by Week'
+  description: |-
+    Get Twenty, an open-source CRM (a customer relationship management app with public code), running on your own laptop, then try the same with your own product's code, so you can check things for yourself instead of waiting for an engineer. Engineers call this setup a development environment: the tools that let you run an app and change it on your laptop. One short challenge a week: cards you can read on your phone, and a few tasks for your laptop that you tick off yourself. From Week 2, an AI agent (an AI tool that works on the files on your laptop) can do most of the typing.
+  note: |-
+    *You'll need a Mac or Windows laptop for the weekly tasks. On an employer's laptop, you may need IT's help to install things, and the first challenge shows you what to ask.*
+  unlockEveryDays: 7
+  learningOutcomes:
+    - Copy a product's code to your laptop with VS Code, including every repository (folder of code with its history) it needs
+    - Use an AI agent to list everything an app needs to run on your laptop
+    - Start Twenty on your laptop and see a change you made show up in it
+    - Try starting your own product, and send your engineers a clear request for help when it doesn't start
+  challenges:
+    - title: "Your Laptop's Toolbox, and Twenty's Code on It"
+      isFree: true
+      skills:
+        - Git
+        - VS Code
+        - Repositories
+      description: Ask for access to your own product's code, then copy Twenty's code to your laptop with VS Code.
+      completionTime: '15:00'
+      steps:
+        - type: text
+          title: Your product, on your laptop
+          subtitle: What you'll walk away with
+          content:
+            body: |-
+              Checking how your product really behaves usually means asking an engineer and waiting. This course puts a real app on **your own laptop**, so you can check for yourself. First **Twenty**, an open-source CRM (a customer relationship management app whose code is public, so anyone can copy it). Then **your own product**.
+
+              Engineers call this setup a **development environment**: the tools that let you run an app and change it on your own laptop. Over four weeks, you'll walk away with:
+
+              - **Twenty running on your laptop**, with a change you made showing up in it
+              - **Your own product's code on your laptop**, and a list of what it needs to run
+              - **An AI agent** you've used to list what each app needs to run
+              - **Your own product running too**, as far as you get
+
+              You'll be the PM who can open the code and start an app on their own laptop. When it doesn't start, you can ask engineers for what's missing, or for 20 minutes to look at the error together.
+        - type: text
+          title: You won't have to learn to code
+          subtitle: And the honest part
+          content:
+            body: |-
+              Installing tools and starting an app means **following steps, reading what the screen says, and asking when it doesn't work**. You won't write code. From Week 2, an **AI agent** can do most of the typing for you: it reads the files on your laptop, runs commands and can change files.
+
+              The honest part: **running a company's product on a laptop is often hard**, even for engineers joining the team. We've prepared Twenty to run on a laptop. Your own product may not start, and getting as far as *"I know what it needs and who to ask"* still counts.
+
+              If you get stuck, ask Kinga and Tamas in the [Little Parrot Discord](https://discord.gg/sMBYQ6HFNw).
+        - type: text
+          title: Why your laptop?
+          subtitle: The workshop's codespace won't last
+          content:
+            body: |-
+              In the workshop, Rhino, the customer success lead, asked whether you could check things without waiting for engineering. In a **codespace** (a computer GitHub lent you, in your browser), you could. But GitHub deletes a codespace once it's been **stopped and unused for 30 days**, so yours may already be gone.
+
+              A setup on your laptop:
+
+              - **stays** for as long as you want it
+              - **costs nothing** to keep
+              - **works with your own product's code**, which you may not be allowed to put in a codespace on your personal GitHub account
+        - type: setup-question
+          title: Which laptop will you use for this course?
+          content:
+            key: os
+            description: A few quick questions first, so the steps fit your laptop and your tools. You can change any answer later from **Your setup** on the course page.
+            options:
+              - value: mac
+                label: Mac
+              - value: windows
+                label: Windows
+        - type: setup-question
+          title: Is it your own laptop, or your employer's?
+          content:
+            key: laptop
+            description: An employer's laptop may not let you install things. If that's yours, we'll show you what to ask IT.
+            options:
+              - value: own
+                label: My own
+              - value: employer
+                label: My employer's
+              - value: not-sure
+                label: Not sure yet
+        - type: setup-question
+          title: Do you have a GitHub account?
+          content:
+            key: github
+            multiple: true
+            description: Twenty's code is public, so you can copy it without an account. Your own product's code usually needs one.
+            options:
+              - value: personal
+                label: Yes, a personal one
+              - value: employer
+                label: Yes, my employer's
+              - value: none
+                label: 'No'
+        - type: setup-question
+          title: Which of these are already on your laptop?
+          content:
+            key: tools
+            multiple: true
+            description: "*Not sure* is a fine answer: this week's tasks include a check."
+            options:
+              - value: git
+                label: Git
+              - value: vscode
+                label: VS Code
+              - value: cursor
+                label: Cursor
+              - value: docker
+                label: Docker
+              - value: nodejs
+                label: Node.js
+              - value: none
+                label: None of these
+              - value: not-sure
+                label: Not sure
+        - type: setup-question
+          title: Which AI tools do you pay for?
+          content:
+            key: ai
+            multiple: true
+            description: From Week 2, an AI agent helps you. If you pay for none of these, you'll use **GitHub Copilot's free plan** in VS Code, which has monthly limits.
+            options:
+              - value: chatgpt
+                label: ChatGPT
+              - value: claude
+                label: Claude
+              - value: gemini
+                label: Gemini
+              - value: microsoft-copilot
+                label: Microsoft Copilot
+              - value: github-copilot
+                label: GitHub Copilot
+              - value: cursor
+                label: Cursor
+              - value: none
+                label: None
+        - type: setup-question
+          title: Have you installed an AI agent?
+          content:
+            key: agent
+            multiple: true
+            description: An **AI agent** works on the files on your laptop. It reads them, runs commands and can change files. You'll set one up in Week 2.
+            options:
+              - value: claude-code
+                label: Claude Code (in the terminal)
+              - value: claude-desktop-code
+                label: The Code tab in the Claude desktop app
+              - value: codex
+                label: Codex
+              - value: github-copilot-vscode
+                label: GitHub Copilot in VS Code
+              - value: cursor
+                label: Cursor's agent
+              - value: microsoft-copilot-desktop
+                label: The Code tab in the Microsoft Copilot app (preview, paid per use, needs sign-up)
+              - value: gemini-cli
+                label: Gemini CLI
+              - value: none
+                label: None
+              - value: not-sure
+                label: Not sure
+        - type: text
+          title: How the four weeks work
+          subtitle: One challenge a week
+          content:
+            body: |-
+              Thanks! From here on, the steps fit your laptop and your tools. Here's the rhythm:
+
+              - **One challenge a week**, about 10 minutes of cards you can read on your phone.
+              - **A short list of tasks** for your laptop, which you tick off yourself. Nothing checks them, and nothing is marked.
+              - **One email when the next challenge opens**, a week after this one.
+
+              **A week can wait.** If life gets busy, the course stays open, and you pick up where you left off.
+        - type: text
+          title: Ask for access first
+          subtitle: "Kim's first piece of advice"
+          content:
+            body: |-
+              Kim, the product coach, opens each week with one piece of advice. This week's: **ask for access today**, because it's the slowest step. In Week 4, you'll try running your own product, and for that you need its code.
+
+              Your product's code lives in a **repository**: the folder of an app's code, together with its history. Companies keep their repositories on **GitHub**, **GitLab**, **Bitbucket** or **Azure DevOps**. They all store repositories in much the same way. What changes is how you sign in and where you find the list.
+
+              It's normal for access to take **a week or more**. Weeks 2 and 3 use Twenty, so nothing waits on it.
+        - type: text
+          title: Your access message
+          subtitle: Copy it, fill in the brackets, send it
+          content:
+            body: |-
+              Send this to your **engineering lead**, or whoever runs your engineering team:
+
+              ```
+              Hi [name],
+
+              I'm learning to run our product on my laptop, so I can check things myself before asking the team. Could you help me with three things?
+
+              1. Read access to the repositories I'd need to run [product name], and their names, so I know which ones they are.
+              2. The setup document for running it on a laptop, if there is one.
+              3. A yes or no on whether I'm allowed to run it on my laptop.
+
+              I only need to read the code, not change it. Thanks!
+              ```
+
+              **Read access** lets you see and copy the code without being able to change the team's copy. It's the smallest access that does the job, which makes it easier to say yes to.
+        - type: quiz-question
+          title: Which message gets a yes fastest?
+          content:
+            question: Four PMs asked their engineering lead for access. Which message can the lead act on without writing back?
+            options:
+              - Could I get access to our code at some point? Thanks so much for your help!
+              - Could I get read access to the billing app's repositories, and its setup document?
+              - Could I get full admin access to every repository we have, just in case I need it?
+              - Could someone walk me through all of our code when there's some time next week?
+            correctAnswer: 1
+            explanation: |-
+              The second one names **which code** and **which kind of access**, so the lead can act on it straight away. The first leaves both open, so the lead has to write back and ask. The third asks for far more than you need: admin access lets you change and delete things, so it needs a careful yes. The fourth asks for someone's time, which is harder to find than a few clicks of access. **Ask for the least access that does the job.**
+        - type: text
+          title: On your employer's laptop
+          subtitle: Add a line for IT
+          showIf: { laptop: [employer, not-sure], os: [mac] }
+          content:
+            body: |-
+              Some work laptops don't let you install anything. Over the four weeks you'll install a few free tools, so ask once for all of them. Add this to your message, or send it to IT:
+
+              ```
+              So I can run our product on my laptop, I'd like to install a few developer tools on my work laptop: VS Code, Git (Apple's Command Line Tools), Node.js and Docker Desktop. Can I install them myself, or could IT help?
+              ```
+
+              *Node.js* and *Docker Desktop* are what Twenty needs to run, and you'll install them in Week 3. Until the answer comes, use a personal laptop for Twenty if you have one. Your own product can wait for the work laptop.
+        - type: text
+          title: On your employer's laptop
+          subtitle: Add a line for IT
+          showIf: { laptop: [employer, not-sure], os: [windows] }
+          content:
+            body: |-
+              Some work laptops don't let you install anything. On Windows, this week starts with **WSL** (a way to run Linux, another operating system, inside Windows; there's more on it in a moment), which needs **administrator rights** (permission to change the laptop's system settings) and a restart. Over the four weeks you'll install a few free tools, so ask once for all of them. Add this to your message, or send it to IT:
+
+              ```
+              So I can run our product on my laptop, I'd like to install a few developer tools on my work laptop: WSL with Ubuntu, VS Code, Node.js and Docker Desktop. WSL needs administrator rights and a restart. Can I install them myself, or could IT help?
+              ```
+
+              *Node.js* and *Docker Desktop* are what Twenty needs to run, and you'll install them in Week 3. Until the answer comes, use a personal laptop for Twenty if you have one. Your own product can wait for the work laptop.
+        - type: text
+          title: Your laptop's toolbox
+          subtitle: Three tools engineers use every day
+          content:
+            body: |-
+              - **Git** keeps a repository's history and copies it. You'll use it through buttons in VS Code (the *Source Control* view), so you don't need to learn Git commands.
+              - **An editor** is where code is read and changed. You'll use **VS Code**, a free editor from Microsoft. Even if you use **Cursor** day to day, install VS Code for this course: the steps are written for VS Code.
+              - **A terminal** is where you type commands. VS Code has one built in, so everything happens in one window.
+        - type: text
+          title: On Windows, you'll work in WSL
+          subtitle: A Linux computer inside Windows
+          showIf: { os: [windows] }
+          content:
+            body: |-
+              **WSL** (Windows Subsystem for Linux), made by Microsoft, runs **Linux** inside Windows. Linux is a different operating system from Windows, the way macOS is. The commands we wrote for running Twenty are for Linux and Mac, so on Windows you'll run them inside WSL, with **Ubuntu** (a popular version of Linux).
+
+              That gives your laptop **two places**: Windows and Linux. VS Code runs in Windows and connects to Linux. When it's connected, its bottom-left corner says *WSL: Ubuntu*. Your code and Git live on the Linux side.
+
+              So whenever something looks wrong, the first question is: ***am I in Windows or in Linux?***
+        - type: quiz-question
+          title: Where did the code go?
+          showIf: { os: [windows] }
+          content:
+            question: A colleague on Windows says the code they copied to their laptop yesterday has vanished from VS Code. The bottom-left corner shows no WSL label. What's most likely?
+            options:
+              - VS Code is in Windows, and the code is on the Linux side
+              - The code was deleted when the laptop restarted overnight
+              - They need to copy the code again, from the beginning
+              - Their access to the company's code has been taken away
+            correctAnswer: 0
+            explanation: |-
+              Nothing is lost. VS Code opens on the **Windows side** unless you connect it to Linux, and the code lives on the **Linux side**. Press F1, run *WSL: Connect to WSL*, and when the corner says *WSL: Ubuntu*, open the folder again from *File > Open Recent*. Files in Ubuntu stay there through a restart. Whenever something on Windows looks wrong, ask first: **am I in Windows or in Linux?**
+        - type: text
+          title: 'Clone: copy a repository with its history'
+          subtitle: Why not a ZIP?
+          content:
+            body: |-
+              To get code onto your laptop, you **clone** the repository: Git copies its files **and their whole history** into a folder on your laptop.
+
+              GitHub also offers *Download ZIP* under its *Code* button. A ZIP has the files as they are today, **with no history**. GitHub's own help says it: to get the full history, you clone.
+
+              The history is what lets you **pull** later: bring your copy up to date with the team's latest changes. You do it from VS Code's *Source Control* view. A ZIP has no history to update from, so you'd need a new ZIP every time.
+        - type: quiz-question
+          title: A ZIP from a colleague
+          content:
+            question: A colleague emails you a ZIP of your product's code, to save you waiting for access. What can't you do with it that you could with a clone?
+            options:
+              - Open the files in VS Code and read them
+              - Search all the files for a word you need
+              - Ask an AI agent what a file does
+              - Get the team's changes from next week
+            correctAnswer: 3
+            explanation: |-
+              Reading, searching and asking an AI agent all work on plain files, so a ZIP does those fine. It can't **get the team's changes**: it has no history, so next week's changes can't reach it, and it gets more out of date every week. A clone stays connected to the repository, so a pull brings you up to date. That's why the access request is still worth sending.
+        - type: text
+          title: Make a home for your products
+          subtitle: How Snail keeps track
+          content:
+            body: |-
+              Before you clone, make **one folder** to hold every repository you'll copy. Call it **Products** and put it in your home folder (the folder with your name on it).
+
+              Snail, the developer at Animal Inc., keeps theirs like this:
+
+              ```
+              Products/
+                animal-crm-web/
+                animal-crm-api/
+                twenty-pm-lab/
+              ```
+
+              Snail started it after an afternoon spent fixing a bug in the wrong copy of a repository: one copy was in *Downloads*, the other on the desktop. With one folder, the answer to *"which copy am I looking at?"* is always *the one in Products*.
+        - type: text
+          title: Your Products folder on Windows
+          subtitle: On the Linux side
+          showIf: { os: [windows] }
+          content:
+            body: |-
+              On Windows, your Products folder goes on the **Linux side**, in your Ubuntu home folder (`~/Products`, where `~` means *your home folder*). Don't put it on the `C:` drive.
+
+              **Microsoft recommends keeping project files on the Linux side**, because Linux tools run faster on files stored there. Your clones will live there too.
+        - type: text
+          title: One repository or several?
+          subtitle: Twenty has one, your product may have more
+          content:
+            body: |-
+              **Twenty keeps everything in one repository.** Its *packages* folder holds each part: *twenty-front* is the **frontend** (the screens you see in the browser), *twenty-server* is the **backend** (the part that checks and saves data), and there are more.
+
+              **Many products split it** into a frontend repository, a backend repository, and sometimes more. To run the product, you usually need **each repository that makes up the app you use**.
+
+              What Twenty's other parts do, like its worker (the part that runs jobs in the background), comes in Mission 2 of our cohort-based course, [How Your Product Works](https://littleparrot.app/courses/technical-foundations-for-product-managers).
+        - type: quiz-question
+          title: Which repositories do you need?
+          content:
+            question: Your company's repositories are web-app, api, design-system and marketing-site. You want to run the product customers sign in to. Which do you probably need?
+            options:
+              - Only web-app, because that's the part customers see
+              - All four of them, because they're on the same list
+              - web-app and api, and maybe design-system, to check
+              - Only api, because that's where all the data is saved
+            correctAnswer: 2
+            explanation: |-
+              The product customers sign in to needs its **frontend** (web-app) and its **backend** (api). Without the api, the screens may load, but nothing saves. A **design system** is a shared set of buttons and styles, and web-app often downloads it automatically when it's set up, so you may not need to clone it. The marketing site is a separate website. When it's not clear, **the README (the page shown under a repository's list of files) or your engineering lead can tell you**, which is why the access message asks for the names.
+        - type: text
+          title: How to tell which repositories your product needs
+          subtitle: Three places to look
+          content:
+            body: |-
+              1. **The README** of a repository you know. It often says what else the app needs.
+              2. **Your company's list of repositories:**
+                 - **GitHub:** open *github.com/your-company* and click *Repositories*.
+                 - **GitLab** (it calls repositories **projects**): click *Search or go to*, then *View all my groups*, and open your company's group.
+                 - **Bitbucket:** choose your **workspace**, then *Repositories*.
+                 - **Azure DevOps:** ask your engineering lead for the link.
+              3. **Your engineering lead**, who you've already asked.
+
+              If a repository you expected isn't there, you may be signed in with a different account, or your access may not have come through yet.
+        - type: free-text-exercise
+          title: Which repositories does your product need?
+          content:
+            description: |-
+              Write down the repositories you think your product needs to run, with a few words on what each one is.
+
+              Can't see them yet? Write *"waiting for access"*, and what you asked for. You'll come back to this list in Week 2, when your AI agent helps you find out what each one needs.
+            subDescription: You'll get quick feedback on whether your list has a frontend and a backend, and on anything you probably don't need.
+            placeholder: 'e.g. web-app (the screens customers use), api (saves the data). Or: waiting for access'
+            systemPrompt: "You are a friendly mentor for a product manager who is learning to run their company's product on their own laptop. The learner lists the code repositories they think their product needs to run, or says they are waiting for access. If they list repositories, give warm, concise feedback in British English (max 4 short bullet points): check whether the list seems to cover a frontend (the screens) and a backend (the part that saves data), point out anything that looks like a separate product (a marketing site, documentation) that they probably do not need, and suggest confirming the list with their engineering lead or the README. If they are waiting for access, reassure them this is normal and can take a week or more, and remind them that Weeks 2 and 3 use Twenty, so nothing waits on it. Do not invent repository names. Do not use em dashes. End encouragingly. Reply in a markdown format."
+            checkerPrompt: 'The learner lists the repositories they think their product needs, or says they are waiting for access. Accept any list of repository names or descriptions, and accept "waiting for access" or similar. Only flag clearly empty or nonsense input. This is their answer:'
+        - type: tasks
+          title: This week's tasks
+          content:
+            description: |-
+              About **30 minutes** at your laptop (45 on Windows). Tick each one when it's done. Nothing checks them.
+
+              Stuck? Ask in the [Little Parrot Discord](https://discord.gg/sMBYQ6HFNw).
+            items:
+              - id: send-access-message
+                label: Send your access message
+                details: The message is a few cards back. If you already have access to your product's code, tick this one.
+              - id: create-github-account
+                label: Create a free GitHub account
+                showIf: { github: [none] }
+                details: Go to [github.com](https://github.com) and click **Sign up**. You'll need it in Week 2 if you use GitHub Copilot, and your engineering lead may ask for your username to give you access.
+              - id: install-wsl
+                label: Install WSL with Ubuntu
+                showIf: { os: [windows] }
+                details: |-
+                  This needs Windows 11, or Windows 10 version 2004 or later.
+
+                  1. Open the Start menu, type **PowerShell**, right-click it and choose **Run as administrator**. When Windows asks whether to allow this app to make changes, click **Yes**.
+                  2. Type `wsl --install` and press Enter. If you see a list of options instead of an installation, WSL is already there: type `wsl --install -d Ubuntu` and press Enter.
+                  3. When it's finished, restart your laptop.
+                  4. Open **Ubuntu** from the Start menu (or use the Ubuntu window if one opened by itself after the restart). The first time, it takes a minute to set itself up.
+                  5. Create a **username** (lowercase letters only) and a **password**. Nothing shows on screen while you type the password, and that's normal. Write it down: you'll need it again.
+
+                  If you see *0x800704ec* ("blocked by group policy"), your employer's laptop blocks it, so send IT the message from earlier. If you see *0x80370102* or *0x80070003*, virtualisation (the setting that lets your laptop run another system inside it, like WSL) is switched off: follow [Microsoft's guide to turning it on](https://support.microsoft.com/windows/c5578302-6e43-4b4b-a449-8ced115f58e1).
+              - id: install-vscode-mac
+                label: Install VS Code
+                showIf: { os: [mac] }
+                details: Download it from [code.visualstudio.com](https://code.visualstudio.com), open the downloaded file, and drag **Visual Studio Code** into your **Applications** folder. Open it from there, and if your Mac asks whether to open an app downloaded from the internet, click **Open**. Already have VS Code? Tick this one.
+              - id: install-vscode-windows
+                label: Install VS Code
+                showIf: { os: [windows] }
+                details: Download it from [code.visualstudio.com](https://code.visualstudio.com) and run the installer. If you're offered a choice, pick the **User** installer, which needs no administrator rights. Leave **Add to PATH** ticked. Already have VS Code? Tick this one.
+              - id: connect-wsl
+                label: Connect VS Code to Ubuntu
+                showIf: { os: [windows] }
+                details: |-
+                  1. In VS Code, open the **Extensions** view (the four squares on the left), search for **WSL**, and install the one made by **Microsoft**.
+                  2. Press **F1**, type **WSL: Connect to WSL**, and press Enter.
+                  3. A new window opens. The first time, it takes a minute while VS Code sets itself up in Ubuntu. When the bottom-left corner says **WSL: Ubuntu**, you're in Linux. Do the next tasks in this window.
+
+                  Git already comes with Ubuntu, so there's nothing to install for it.
+              - id: check-git-mac
+                label: Make sure Git is installed
+                showIf: { os: [mac] }
+                details: |-
+                  In VS Code, with no folder open, open the **Source Control** view (the branch icon on the left).
+
+                  - If you see a **Clone Repository** button, Git is installed. Tick this one.
+                  - If you see *Install Git, a popular source control system...*, choose **Terminal > New Terminal** from the menu at the top, paste `xcode-select --install` and press Enter. In the window that opens (it may hide behind VS Code), click **Install** and agree to the licence. It may ask for your Mac's password, and it can take several minutes. When it's done, quit VS Code and open it again. If it says the tools are already installed but VS Code still shows *Install Git*, tell us in Discord.
+
+                  That's the only command you'll type this week.
+              - id: products-folder-mac
+                label: Create your Products folder
+                showIf: { os: [mac] }
+                details: In Finder, choose **Go > Home**, then **File > New Folder**, and name it **Products**.
+              - id: products-folder-windows
+                label: Create your Products folder in Ubuntu
+                showIf: { os: [windows] }
+                details: |-
+                  In the VS Code window that says **WSL: Ubuntu**, choose **Terminal > New Terminal**, type `mkdir ~/Products` and press Enter. (`mkdir` means *make directory*, which is another word for folder.)
+              - id: clone-twenty
+                label: Clone Twenty into your Products folder
+                details: |-
+                  1. If a folder is open in VS Code (its name shows at the top of the **Explorer** view), choose **File > Close Folder**.
+                  2. Open the **Source Control** view and click **Clone Repository**.
+                  3. Choose **Clone from URL**, paste `https://github.com/productkind/twenty-pm-lab` and press Enter.
+                  4. Choose your **Products** folder and click **Select as Repository Destination**. On Windows, the picker shows your Ubuntu folders: open your home folder (named after your Ubuntu username), then **Products**.
+                  5. Wait while it clones (it can take a few minutes). When VS Code asks *Would you like to open the repository?*, click **Open**. If it opens by itself, skip this.
+
+                  If VS Code asks whether you trust the authors of the files, choose **Yes**. If it offers to reopen the folder in a container or to install extensions, close that message: you'll need neither this week.
+
+                  You'll see Twenty's folders on the left, including **lab** and **packages**. You don't need to sign in: Twenty's code is public.
+              - id: clone-own
+                label: 'If you have access: clone your product'
+                details: |-
+                  Close the folder and click **Clone Repository** again.
+
+                  - **On GitHub:** choose **Clone from GitHub**, sign in when your browser opens, and pick the repository.
+                  - **On GitLab, Bitbucket or Azure DevOps:** ask your engineering lead for the clone link and how to sign in. Many companies need you to create an access token (a password just for tools like Git) first.
+
+                  Clone each repository your product needs into **Products**, and answer the same trust question as for Twenty. When a clone finishes, its folder shows up there. If the sign-in doesn't appear, ask us in Discord. Still waiting for access? Leave this one for later.
+        - type: challenge-end
+          title: "That's Week 1's cards done ✅"
+          content:
+            description: You know what access to ask for, what Git, VS Code and the terminal each do, and how to clone a repository into your Products folder. Your tasks stay in this challenge, so come back and tick them when you're at your laptop.
+            subDescription: 'Your access message is on its way or ready to send, which gives it three weeks to come through before Week 4. Every repository you copy goes in your Products folder.'
+            nextModule: "**In a week:** an AI agent that reads the code on your laptop, and a list of everything Twenty needs to run. We'll email you when it opens."
