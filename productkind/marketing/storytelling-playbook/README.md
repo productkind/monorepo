@@ -14,6 +14,7 @@ It's built from seven expert sources recommended by Nicholas Mlakar (full transc
 - [research/00-synthesis.md](research/00-synthesis.md): all principles across sources, with who says what.
 - [research/01-diagnosis.md](research/01-diagnosis.md): our September videos and 20 LinkedIn posts checked against those principles.
 - `research/1-...md` to `research/7-...md`: per-source notes with timestamps.
+- [conference-talks/README.md](conference-talks/README.md): a separate playbook for conference talks, built from 11 Lenny & Friends Summit 2026 sessions (2026-11-21).
 - [storytelling-formats.md](storytelling-formats.md): 15 story shapes (Kallaway's ten storytelling formats plus five teaching formats), each with a beat table mapped to Kallaway's loop.
 
 **Where it's applied:** the `video-script`, `production-script`, `linkedin-post` and `captions` skills and their critics (`video-script-critic`, `production-script-critic`, `linkedin-critic`, `caption-critic`) in `.claude/`.
